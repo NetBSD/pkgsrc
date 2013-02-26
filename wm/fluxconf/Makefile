@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/02/16 11:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/02/26 11:00:04 joerg Exp $
 #
 
 DISTNAME=	fluxconf-0.9.9
@@ -19,7 +19,7 @@ USE_TOOLS+=		msgfmt pkg-config
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-Wno-error=invalid-source-encoding
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=invalid-source-encoding -Wno-error=format-security -Wno-error=self-assign
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
