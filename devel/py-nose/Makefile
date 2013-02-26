@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:33 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/26 10:24:27 joerg Exp $
 #
 
 DISTNAME=	nose-1.1.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 #MASTER_SITES=	http://python-nose.googlecode.com/files/
 #MASTER_SITES=	http://somethingaboutorange.com/mrl/projects/nose/
 MASTER_SITES=	http://pypi.python.org/packages/source/n/nose/
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/python-nose/
