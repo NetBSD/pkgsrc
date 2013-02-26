@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2013/02/16 11:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2013/02/26 11:15:43 joerg Exp $
 
 DISTNAME=	wesnoth-1.10.5
 PKGREVISION=	2
@@ -55,6 +55,11 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.*)
 USE_TOOLS+=		gmake
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
 .endif
 
 PLIST_VARS+=		icons
