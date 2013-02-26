@@ -1,0 +1,36 @@
+$NetBSD: patch-tests_Makefile.in,v 1.1 2013/02/26 11:00:59 joerg Exp $
+
+--- tests/Makefile.in.orig	2008-05-25 08:00:34.000000000 +0000
++++ tests/Makefile.in
+@@ -74,13 +74,13 @@ fdpassing_SOURCES = fdpassing.c
+ fdpassing_OBJECTS = fdpassing.$(OBJEXT)
+ fdpassing_LDADD = $(LDADD)
+ am__DEPENDENCIES_1 =
+-fdpassing_DEPENDENCIES = ../src/libassuan.a $(am__DEPENDENCIES_1)
++fdpassing_DEPENDENCIES = ../src/libassuan.la $(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(top_builddir)@am__isrc@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-CCLD = $(CC)
++CCLD = libtool --mode=link $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = fdpassing.c
+ DIST_SOURCES = fdpassing.c
+@@ -199,7 +199,7 @@ BUILT_SOURCES = 
+ CLEANFILES = 
+ AM_CFLAGS = # $(GPG_ERROR_CFLAGS)
+ noinst_HEADERS = common.h
+-LDADD = ../src/libassuan.a  $(NETLIBS) # $(GPG_ERROR_LIBS)
++LDADD = ../src/libassuan.la  $(NETLIBS) # $(GPG_ERROR_LIBS)
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
+ 
+@@ -518,3 +518,6 @@ uninstall-am:
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
++
++fdpassing$(EXEEXT): fdpassing.$(OBJEXT)
++	$(CCLD) fdpassing.$(OBJEXT) -o fdpassing$(EXEEXT) $(LDADD)
