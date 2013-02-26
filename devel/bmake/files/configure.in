@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.11 2011/06/18 22:39:46 bsiegert Exp $
+dnl	$Id: configure.in,v 1.12 2013/02/26 00:50:14 christos Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -143,6 +143,8 @@ AC_CHECK_FUNCS( \
 	putenv \
 	select \
 	setenv \
+	setpgid \
+	setrlimit \
 	sigaction \
 	sigvec \
 	snprintf \
