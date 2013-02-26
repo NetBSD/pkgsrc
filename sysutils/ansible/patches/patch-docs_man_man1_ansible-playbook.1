@@ -1,0 +1,37 @@
+$NetBSD: patch-docs_man_man1_ansible-playbook.1,v 1.1 2013/02/26 17:42:59 riz Exp $
+
+--- docs/man/man1/ansible-playbook.1.orig	2013-02-01 19:15:13.000000000 -0800
++++ docs/man/man1/ansible-playbook.1	2013-02-25 11:45:48.000000000 -0800
+@@ -44,7 +44,7 @@
+ The
+ \fIPATH\fR
+ to the inventory hosts file, which defaults to
+-\fI/etc/ansible/hosts\fR\&.
++\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&.
+ .RE
+ .PP
+ \fB\-M\fR \fIDIRECTORY\fR, \fB\-\-module\-path=\fR\fIDIRECTORY\fR
+@@ -52,7 +52,7 @@
+ The
+ \fIDIRECTORY\fR
+ to load modules from\&. The default is
+-\fI/usr/share/ansible\fR\&.
++\fI@PREFIX@/share/ansible\fR\&.
+ .RE
+ .PP
+ \fB\-e\fR \fIVARS\fR, \fB\-\-extra\-vars=\fR\fIVARS\fR
+@@ -122,11 +122,11 @@
+ ANSIBLE_LIBRARY \(em Override the default ansible module library path
+ .SH "FILES"
+ .sp
+-/etc/ansible/hosts \(em Default inventory file
++@PKG_SYSCONFDIR@/ansible/hosts \(em Default inventory file
+ .sp
+-/usr/share/ansible/ \(em Default module library
++@PREFIX@/share/ansible/ \(em Default module library
+ .sp
+-/etc/ansible/ansible\&.cfg \(em Config file, used if present
++@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present
+ .sp
+ ~/\&.ansible\&.cfg \(em User config file, overrides the default config if present
+ .SH "AUTHOR"
