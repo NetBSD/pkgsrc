@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.3 2013/02/10 23:22:36 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2013/02/27 15:19:02 ryoon Exp $
 
-SHA1 (oiio-Release-1.1.5.tar.gz) = 6d1577ae9997a4287617c922dcba4111d13fa154
-RMD160 (oiio-Release-1.1.5.tar.gz) = 8e42a14e66c72520f376878f989d38cdf0728e8a
-Size (oiio-Release-1.1.5.tar.gz) = 8248495 bytes
+SHA1 (oiio-Release-1.1.7.tar.gz) = 435286ffad18169fd615cd33d95c2b49d3e4ec17
+RMD160 (oiio-Release-1.1.7.tar.gz) = dfe15e32ff0c821165079bf517cf11dd87146ccc
+Size (oiio-Release-1.1.7.tar.gz) = 8300700 bytes
 SHA1 (patch-CMakeLists.txt) = 2923ca84d7981aaaf6494588392444e5ee07f74a
 SHA1 (patch-cmake_modules_FindOpenJpeg.cmake) = 20d15c8ee0a25ab631ed39910b6e441d069760c5
 SHA1 (patch-cmake_oiio__macros.cmake) = 016c4792c1dc85a903477f4c72af26577e1b2bb9
-SHA1 (patch-cmake_platform.cmake) = 841295fbd0ba47dda7224e6536b0a7e6f6ea9558
+SHA1 (patch-cmake_platform.cmake) = bb3ef743bdb04a76efcabb745af62473205e01ae
 SHA1 (patch-dpx.imageio_libdpx_DPXColorConverter.cpp) = 595415e7e2897798df76474dd906e25cdf3a929e
 SHA1 (patch-include_tbb_tbb__machine.h) = 7d9a196397315e0d39dd2f16139e011ab84c5630
 SHA1 (patch-include_tbb_tbb__misc.h) = 27995a9cdb72b182e352b2a649756af2d60fec86
