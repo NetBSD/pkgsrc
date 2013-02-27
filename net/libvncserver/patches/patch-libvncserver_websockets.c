@@ -1,10 +1,10 @@
-$NetBSD: patch-libvncserver_websockets.c,v 1.1 2012/05/06 09:08:36 obache Exp $
+$NetBSD: patch-libvncserver_websockets.c,v 1.2 2013/02/27 18:24:51 jperkin Exp $
 
 * byte-order handling for !Linux.
 
 --- libvncserver/websockets.c.orig	2012-05-04 14:19:00.000000000 +0000
 +++ libvncserver/websockets.c
-@@ -31,12 +31,34 @@
+@@ -31,12 +31,41 @@
  /* errno */
  #include <errno.h>
  
@@ -35,12 +35,19 @@ $NetBSD: patch-libvncserver_websockets.c,v 1.1 2012/05/06 09:08:36 obache Exp $
 +#define WS_NTOH16(n) OSSwapBigToHostInt16(n)
 +#define WS_HTON64(n) OSSwapHostToBigInt64(n)
 +#define WS_HTON16(n) OSSwapHostToBitInt16(n)
++#elif defined(__sun)
++#include <sys/byteorder.h>
++#define WS_NTOH64(n) ntohll(n)
++#define WS_NTOH32(n) ntohl(n)
++#define WS_NTOH16(n) ntohs(n)
++#define WS_HTON64(n) htonll(n)
++#define WS_HTON16(n) htons(n)
 +#else
 +#include <byteswap.h>
  #if defined(__BYTE_ORDER) && defined(__BIG_ENDIAN) && __BYTE_ORDER == __BIG_ENDIAN
  #define WS_NTOH64(n) (n)
  #define WS_NTOH32(n) (n)
-@@ -50,6 +72,7 @@
+@@ -50,6 +79,7 @@
  #define WS_HTON64(n) bswap_64(n)
  #define WS_HTON16(n) bswap_16(n)
  #endif
