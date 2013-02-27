@@ -1,0 +1,17 @@
+$NetBSD: patch-libcdb.pc,v 1.1 2013/02/27 12:38:12 ryoon Exp $
+
+--- libcdb.pc.orig	2012-12-19 17:50:14.000000000 +0000
++++ libcdb.pc
+@@ -0,0 +1,12 @@
++# Package Information for pkg-config
++
++prefix=@PREFIX@
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: libcdb
++Description: tinycdb - Constant Data Base library
++Version: 0.78
++Libs: -L${libdir} -lcdb
++Cflags: -I${includedir}
