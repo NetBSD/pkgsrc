@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+$NetBSD: patch-ag,v 1.1.1.1.6.1 2013/02/27 09:37:43 tron Exp $
 
---- support/Makefile.in.orig	2011-12-20 14:57:46.000000000 +0000
+--- support/Makefile.in.orig	2012-12-11 10:37:25.000000000 +0000
 +++ support/Makefile.in
 @@ -31,9 +31,11 @@ install:
  	done
@@ -13,4 +13,4 @@ $NetBSD: patch-ag,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
 +	    fi ; \
  	fi
  
- htpasswd_OBJECTS = htpasswd.lo
+ htpasswd.lo: passwd_common.h
