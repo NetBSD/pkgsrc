@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/24 16:01:18 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/27 22:19:09 khorben Exp $
 #
 
 DISTNAME=	Terminal-0.0.0
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
+
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
