@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.36 2013/02/25 16:57:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.37 2013/02/27 09:49:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -231,3 +231,7 @@ Pullup ticket #4079 - requested by taca
 www/geeklog: security update
 Pullup ticket #4080 - requested by taca
 lang/ruby193-base: security update
+Pullup ticket #4081 - requested by ryoon
+www/apache24: security update
+Pullup ticket #4083 - requested by obache
+emulators/suse121_openssl: security update
