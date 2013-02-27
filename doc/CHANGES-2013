@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.718 2013/02/27 08:40:45 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.719 2013/02/27 09:19:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1033,3 +1033,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/php-sugarcrm version 6.5.10 [ryoon 2013-02-26]
 	Updated misc/ruby-launchy to 2.2.0nb1 [taca 2013-02-27]
 	Updated sysutils/cdrtools to 3.01alpha13 [wiz 2013-02-27]
+	Updated x11/xterm to 291 [wiz 2013-02-27]
