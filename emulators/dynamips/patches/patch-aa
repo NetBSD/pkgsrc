@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/05/23 05:13:22 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2013/02/27 19:33:11 markd Exp $
 
 --- Makefile.orig	2007-10-14 08:43:07.000000000 +0000
 +++ Makefile
@@ -30,19 +30,19 @@ $NetBSD: patch-aa,v 1.4 2012/05/23 05:13:22 dholland Exp $
 +ifeq ($(shell uname -s), NetBSD)
 +   PTHREAD_LIBS?=-pthread
 +   CFLAGS+=-I${LOCALBASE}/include -I${LOCALBASE}/include/libelf ${PTHREAD_CFLAGS}
-+   LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} -R${LOCALBASE}/lib
++   LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 +else
 +ifeq ($(shell uname -s), DragonFly)
 +   PTHREAD_LIBS?=-pthread
 +   CFLAGS+=-I${LOCALBASE}/include -I${LOCALBASE}/include/libelf ${PTHREAD_CFLAGS}
-+   LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} -R${LOCALBASE}/lib
++   LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS} ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 +else
  ifeq ($(shell uname), Linux)
     PTHREAD_LIBS?=-lpthread
  #   PCAP_LIB=-lpcap
     CFLAGS+=-I/usr/include -I. $(PTHREAD_CFLAGS)
 -   LIBS=-L/usr/lib -L. -ldl /usr/lib/libelf.a $(PTHREAD_LIBS)
-+   LIBS=-L/usr/lib -L. -ldl -lelf $(PTHREAD_LIBS)
++   LIBS=-L${LOCALBASE}/lib -L. -ldl -lelf $(PTHREAD_LIBS) ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
     DESTDIR=/usr
  else
  ifeq ($(shell uname -s), Darwin)
