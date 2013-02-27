@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.8 2013/02/27 10:59:33 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.9 2013/02/27 12:03:49 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -40,6 +40,7 @@ ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 X11_TYPE?=		native
 
+_OPSYS_EXE_SUFFIX=	.exe	# executables may have suffix
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
