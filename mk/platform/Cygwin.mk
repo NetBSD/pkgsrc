@@ -1,29 +1,6 @@
-# $NetBSD: Cygwin.mk,v 1.7 2013/02/23 05:41:04 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.8 2013/02/27 10:59:33 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
-
-###
-### Overrides to standard BSD .mk files
-###
-
-# "catinstall" not yet supported as there's no shipped [gn]roff
-MANINSTALL=	maninstall
-MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
-
-###
-### Alternate defaults to global pkgsrc settings, to help avoid
-### some of the excessive Interix fork(2) overhead, and reduce the
-### amount of settings required in the user's mk.conf
-###
-
-INSTALL?=		${PREFIX}/bin/install-sh
-PAX?=			${PREFIX}/bin/nbpax
-
-.if defined(BATCH)
-BULK_PREREQ+=		lang/perl5
-USE_BULK_BROKEN_CHECK?=	no
-USE_BULK_TIMESTAMPS?=	no
-.endif
 
 ###
 ### Platform definitions common to pkgsrc/mk/platform/*.mk
