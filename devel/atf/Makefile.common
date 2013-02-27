@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/02/14 18:36:12 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/02/27 22:21:14 jperkin Exp $
 #
 # used by devel/atf/Makefile
 # used by devel/atf-libs/Makefile
@@ -13,6 +13,7 @@ COMMENT=	Automated testing framework
 LICENSE=	2-clause-bsd
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/atf/distinfo
+PATCHDIR=		${.CURDIR}/../../devel/atf/patches
 
 MAKE_JOBS_SAFE=		yes
 
