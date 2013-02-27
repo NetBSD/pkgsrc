@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2013/01/17 13:29:59 manu Exp $
+# $NetBSD: Makefile,v 1.195 2013/02/27 14:02:22 obache Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -40,6 +40,13 @@ PERL5_API_VERS_cmd=	\
 	fi
 
 .include "dirs.mk"
+
+#
+# ld='g++' in hints/cygwin.sh
+#
+.if ${OPSYS} == "Cygwin"
+USE_LANGUAGES=	c c++
+.endif
 
 .include "../../mk/compiler.mk"
 
