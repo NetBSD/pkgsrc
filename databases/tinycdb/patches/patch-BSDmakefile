@@ -1,0 +1,62 @@
+$NetBSD: patch-BSDmakefile,v 1.1 2013/02/27 12:38:12 ryoon Exp $
+
+--- BSDmakefile.orig	2012-12-19 17:49:56.000000000 +0000
++++ BSDmakefile
+@@ -0,0 +1,57 @@
++# Makefile for libtoolized tinycdb
++# based on tinycdb's Makefile
++
++VERSION=        0.78
++
++CFLAGS+=	-D_FILE_OFFSET_BITS=64
++
++
++OBJS=		cdb_init.o cdb_find.o cdb_findnext.o cdb_seq.o cdb_seek.o \
++		cdb_unpack.o \
++		cdb_make_add.o cdb_make_put.o cdb_make.o cdb_hash.o
++LOBJS=		${OBJS:R:S/$/.lo/g}
++
++
++all: libcdb.la libcdb_pic.la cdb
++install: install-man install-prog install-lib install-header
++
++.SUFFIXES: .c .lo
++
++.c.lo:
++	${LIBTOOL} --tag=CC --mode=compile ${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
++
++libcdb.la: ${LOBJS}
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
++		${LOBJS} -version-info 1 -rpath ${PREFIX}/lib
++
++libcdb_pic.la: ${LOBJS}
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -fPIC -o ${.TARGET} \
++		${LOBJS} -version-info 1 -rpath ${PREFIX}/lib
++
++cdb: cdb.lo libcdb.la
++	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
++		cdb.lo libcdb.la -rpath ${PREFIX}/lib
++
++install-man:
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
++	${BSD_INSTALL_MAN} cdb.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} cdb.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
++	${BSD_INSTALL_MAN} cdb.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
++
++install-prog:
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} cdb \
++		${DESTDIR}${PREFIX}/bin
++
++install-lib:
++	${BSD_INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcdb.la \
++		${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcdb_pic.la \
++		${DESTDIR}${PREFIX}/lib
++
++install-header:
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} cdb.h ${DESTDIR}${PREFIX}/include
