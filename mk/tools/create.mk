@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.4 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: create.mk,v 1.5 2013/02/27 12:09:39 obache Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -186,4 +186,9 @@ ${TOOLS_CMD.${_t_}}:
 	${TEST} ${.TARGET:Q} = ${.TARGET:H:Q}/${_a_} ||			\
 		${LN} -fs ${.TARGET:T:Q} ${.TARGET:H:Q}/${_a_}
 .  endfor
+.  if defined(_OPSYS_EXE_SUFFIX) && !empty(_OPSYS_EXE_SUFFIX)
+	${RUN}								\
+	${TEST} ${.TARGET:E:Q} = ${_OPSYS_EXE_SUFFIX:E:Q} ||		\
+		${LN} -fs ${.TARGET:T:Q} ${.TARGET:Q}${_OPSYS_EXE_SUFFIX}
+.  endif
 .endfor
