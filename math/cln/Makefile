@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/11 23:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/27 16:09:27 jperkin Exp $
 
 DISTNAME=	cln-1.3.2
 PKGREVISION=	1
@@ -19,6 +19,13 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	cln.pc.in
 INFO_FILES=		yes
 TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+# Work around broken configure test
+CONFIGURE_ENV+=		cl_cv_proto_perror=yes
+.endif
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
