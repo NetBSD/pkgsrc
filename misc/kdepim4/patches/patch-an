@@ -1,11 +1,27 @@
-$NetBSD: patch-an,v 1.1 2010/09/01 13:45:25 wiz Exp $
+$NetBSD: patch-an,v 1.2 2013/02/27 19:29:33 markd Exp $
 
 libassuan2 support from
 http://websvn.kde.org/?view=revision&revision=1078528
 
---- kleopatra/uiserver/assuanserverconnection.cpp.orig	2009-11-21 09:45:01.000000000 +0000
+Work around moc inability to parse a boost macro
+
+--- kleopatra/uiserver/assuanserverconnection.cpp.orig	2011-04-20 20:03:31.000000000 +0000
 +++ kleopatra/uiserver/assuanserverconnection.cpp
-@@ -116,13 +116,18 @@ static const unsigned int INIT_SOCKET_FL
+@@ -77,11 +77,13 @@
+ 
+ #include <kleo-assuan.h>
+ 
++#ifndef Q_MOC_RUN
+ #include <boost/type_traits/remove_pointer.hpp>
+ #include <boost/lexical_cast.hpp>
+ #include <boost/bind.hpp>
+ #include <boost/mem_fn.hpp>
+ #include <boost/mpl/if.hpp>
++#endif
+ 
+ #include <vector>
+ #include <map>
+@@ -116,13 +118,18 @@ static const unsigned int INIT_SOCKET_FL
  static const int FOR_READING = 0;
  static const unsigned int MAX_ACTIVE_FDS = 32;
  
@@ -26,7 +42,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
  };
  
  static inline gpg_error_t assuan_process_done_msg( assuan_context_t ctx, gpg_error_t err, const char * err_msg ) {
-@@ -240,7 +245,8 @@ Q_SIGNALS:
+@@ -240,7 +247,8 @@ Q_SIGNALS:
  public Q_SLOTS:
      void slotReadActivity( int ) {
          assert( ctx );
@@ -36,7 +52,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
              //if ( err == -1 || gpg_err_code(err) == GPG_ERR_EOF ) {
                  topHalfDeletion();
                  if ( nohupedCommands.empty() )
-@@ -296,15 +302,17 @@ private:
+@@ -296,15 +304,17 @@ private:
      }
  
  private:
@@ -56,7 +72,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
  
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
-@@ -317,7 +325,7 @@ private:
+@@ -317,7 +327,7 @@ private:
          //return gpg_error( GPG_ERR_UNKNOWN_OPTION );
      }
  
@@ -65,7 +81,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -344,7 +352,7 @@ private:
+@@ -344,7 +354,7 @@ private:
          return assuan_process_done( ctx_, 0 );
      }
  
@@ -74,7 +90,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          if ( !QByteArray( line ).trimmed().isEmpty() ) {
              static const QString errorString = i18n("CAPABILITIES does not take arguments");
              return assuan_process_done_msg( ctx_, gpg_error( GPG_ERR_ASS_PARAMETER ), errorString );
-@@ -357,7 +365,7 @@ private:
+@@ -357,7 +367,7 @@ private:
          return assuan_process_done( ctx_, assuan_send_data( ctx_, capabilities, sizeof capabilities - 1 ) );
      }
  
@@ -83,7 +99,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -386,7 +394,7 @@ private:
+@@ -386,7 +396,7 @@ private:
          return assuan_process_done( ctx_, assuan_send_data( ctx_, ba.constData(), ba.size() ) );
      }
  
@@ -92,7 +108,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -400,7 +408,7 @@ private:
+@@ -400,7 +410,7 @@ private:
          return assuan_process_done( ctx_, 0 );
      }
  
@@ -101,7 +117,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -418,7 +426,7 @@ private:
+@@ -418,7 +428,7 @@ private:
  
      // format: TAG (FD|FD=\d+|FILE=...)
      template <bool in, typename T_memptr>
@@ -110,7 +126,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -498,19 +506,19 @@ private:
+@@ -498,19 +508,19 @@ private:
  
      }
  
@@ -134,7 +150,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -572,7 +580,7 @@ private:
+@@ -572,7 +582,7 @@ private:
      }
  
      template <typename T_memptr, typename T_memptr2>
@@ -143,7 +159,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          assert( assuan_get_pointer( ctx ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx ) );
  
-@@ -656,11 +664,11 @@ private:
+@@ -656,11 +666,11 @@ private:
          return assuan_process_done( ctx, 0 );
      }
  
@@ -157,7 +173,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          return recipient_sender_handler( &Private::senders, &Private::informativeSenders, ctx, line, true );
      }
  
-@@ -792,11 +800,15 @@ AssuanServerConnection::Private::Private
+@@ -792,11 +802,15 @@ AssuanServerConnection::Private::Private
      if ( fd == ASSUAN_INVALID_FD )
          throw Exception( gpg_error( GPG_ERR_INV_ARG ), "pre-assuan_init_socket_server_ext" );
  
@@ -176,7 +192,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
  
      // for callbacks, associate the context with this connection:
      assuan_set_pointer( ctx.get(), this );
-@@ -824,34 +836,34 @@ AssuanServerConnection::Private::Private
+@@ -824,34 +838,34 @@ AssuanServerConnection::Private::Private
  
  
      // register our INPUT/OUTPUT/MESSGAE/FILE handlers:
@@ -223,7 +239,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
          throw Exception( err, "register \"CAPABILITIES\" handler" );
  
      assuan_set_hello_line( ctx.get(), "GPG UI server (Kleopatra/" KLEOPATRA_VERSION_STRING ") ready to serve" );
-@@ -904,20 +916,14 @@ class InquiryHandler : public QObject {
+@@ -904,20 +918,14 @@ class InquiryHandler : public QObject {
      Q_OBJECT
  public:
  
@@ -245,7 +261,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
      {
          assert( cb_data );
          InquiryHandler * this_ = static_cast<InquiryHandler*>(cb_data);
-@@ -926,26 +932,9 @@ public:
+@@ -926,26 +934,9 @@ public:
          delete this_;
          return 0;
      }
@@ -272,7 +288,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
  
  Q_SIGNALS:
      void signal( int rc, const QByteArray & data, const QByteArray & keyword );
-@@ -1157,20 +1146,13 @@ int AssuanCommand::inquire( const char *
+@@ -1157,20 +1148,13 @@ int AssuanCommand::inquire( const char *
      if ( d->nohup )
          return makeError( GPG_ERR_INV_OP );
  
@@ -293,7 +309,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
  }
  
  void AssuanCommand::done( const GpgME::Error& err, const QString & details ) {
-@@ -1262,7 +1244,7 @@ const std::vector<KMime::Types::Mailbox>
+@@ -1262,7 +1246,7 @@ const std::vector<KMime::Types::Mailbox>
      return d->senders;
  }
  
