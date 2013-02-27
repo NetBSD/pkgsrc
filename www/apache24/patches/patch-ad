@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+$NetBSD: patch-ad,v 1.1.1.1.6.1 2013/02/27 09:37:43 tron Exp $
 
---- config.layout.orig	2012-02-02 12:05:28.000000000 +0000
+--- config.layout.orig	2012-04-17 14:01:41.000000000 +0000
 +++ config.layout
-@@ -347,3 +347,26 @@
+@@ -347,6 +347,29 @@
      proxycachedir: ${localstatedir}/proxy
  </Layout>
  
@@ -29,3 +29,6 @@ $NetBSD: patch-ad,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
 +    proxycachedir: ${localstatedir}/db/httpd/proxy
 +</Layout>
 +
+ # FHS layout
+ <Layout Slackware-FHS>
+     prefix:          /usr
