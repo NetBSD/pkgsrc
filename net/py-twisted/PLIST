@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/02/17 14:53:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/02/27 15:59:07 gdt Exp $
 bin/cftp
 bin/ckeygen
 bin/conch
@@ -1252,6 +1252,7 @@ ${PYSITELIB}/twisted/python/__init__.pyo
 ${PYSITELIB}/twisted/python/_epoll.c
 ${PYSITELIB}/twisted/python/_epoll.pyx
 ${PYSITELIB}/twisted/python/_initgroups.c
+${PLIST.initgroups}${PYSITELIB}/twisted/python/_initgroups.so
 ${PYSITELIB}/twisted/python/_inotify.py
 ${PYSITELIB}/twisted/python/_inotify.pyc
 ${PYSITELIB}/twisted/python/_inotify.pyo
