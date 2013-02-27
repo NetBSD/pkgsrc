@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/02/27 15:59:07 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2013/02/27 15:59:59 gdt Exp $
 
 PKGNAME=	${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
 PKGREVISION=	1
@@ -23,7 +23,7 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=1 -D_XOPEN_SOURCE_EXTENDED=1 -Du_int=uint32_t
 # .orig files from patches.  This is done pre-install rather than
 # post-patch so that mkpatches(1) will still work.
 pre-install:
-	rm ${WRKSRC}/twisted/runner/portmap.c.orig
+	rm -f ${WRKSRC}/twisted/runner/portmap.c.orig
 
 # Do not "make package" after running "make test"; this will result in files
 # being installed that should not be.
