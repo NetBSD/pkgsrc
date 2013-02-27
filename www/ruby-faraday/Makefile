@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/02/26 10:46:35 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/27 01:30:32 obache Exp $
 
 DISTNAME=	faraday-0.8.6
 CATEGORIES=	www
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://github.com/lostsland/faraday
+HOMEPAGE=	https://github.com/lostisland/faraday
 COMMENT=	HTTP/REST API client library
 LICENSE=	mit
 
