@@ -1,4 +1,4 @@
-$NetBSD: patch-library_service,v 1.1 2013/02/26 00:13:00 hubertf Exp $
+$NetBSD: patch-library_service,v 1.2 2013/02/27 12:32:06 hubertf Exp $
 
 --- library/service.orig	2013-02-09 19:55:06.000000000 +0000
 +++ library/service
@@ -61,7 +61,7 @@ $NetBSD: patch-library_service,v 1.1 2013/02/26 00:13:00 hubertf Exp $
 +            self.action = "onestop"
 +
 +        self.svc_cmd = "%s" % self.svc_initscript
-+        return self.execute_command("%s %s" % (self.svc_cmd, self.action))
++        return self.execute_command("%s %s" % (self.svc_cmd, self.action), daemonize=True)
 +
 +
 +# ===========================================
