@@ -1,11 +1,11 @@
-$NetBSD: patch-modules_ssl_ssl__private.h,v 1.2 2012/07/05 13:11:24 ryoon Exp $
+$NetBSD: patch-modules_ssl_ssl__private.h,v 1.2.6.1 2013/02/27 09:37:43 tron Exp $
 
 Exclude OpenSSL shipped with NetBSD current and 6.0.
 It is pre-beta snapshot of 1.0.1.
 
 https://issues.apache.org/bugzilla/show_bug.cgi?id=53512
 
---- modules/ssl/ssl_private.h.orig	2012-04-03 12:37:57.000000000 +0000
+--- modules/ssl/ssl_private.h.orig	2012-12-11 09:55:03.000000000 +0000
 +++ modules/ssl/ssl_private.h
 @@ -83,7 +83,7 @@
  
