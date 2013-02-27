@@ -1,35 +1,34 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 21:25:54 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/27 12:38:12 ryoon Exp $
 #
 
-DISTNAME=		tinycdb_0.77
-PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
+DISTNAME=		tinycdb-0.78
 CATEGORIES=		databases
 MASTER_SITES=		http://www.corpit.ru/mjt/tinycdb/
 
-MAINTAINER=		schmonz@NetBSD.org
+MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.corpit.ru/mjt/tinycdb.html
 COMMENT=		Create and read constant databases
+LICENSE=		public-domain
 
 CONFLICTS+=		cdb-[0-9]*
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c
 
-BUILD_TARGET=		all sharedlib piclib
-INSTALL_TARGET=		install install-piclib install-sharedlib
+MAKE_FILE=		BSDmakefile
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	do-configure
-SUBST_FILES.paths=	Makefile debian/libcdb.pc
-SUBST_VARS.paths=	PREFIX PKG_SYSCONFDIR PKGMANDIR
-SUBST_MESSAGE.paths=	Configuring pkgsrc paths.
-
-PKGCONFIG_OVERRIDE+=	debian/libcdb.pc
+PKGCONFIG_OVERRIDE+=	libcdb.pc
 
 INSTALLATION_DIRS+=	lib/pkgconfig
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	libcdb.pc
+SUBST_VARS.paths=	PREFIX
+SUBST_MESSAGE.paths=	Configuring pkgsrc paths.
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/debian/libcdb.pc \
+	${INSTALL_DATA} ${WRKSRC}/libcdb.pc \
 			${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
