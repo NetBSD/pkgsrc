@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/02/26 23:36:17 joerg Exp $
+# $NetBSD: Makefile,v 1.72 2013/02/28 07:18:15 asau Exp $
 
 DISTNAME=	mpich2-1.4.1p1
 PKGREVISION=	1
@@ -8,9 +8,6 @@ MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
 COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
-
-CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
-CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 
 MAKE_JOBS_SAFE=		no
 
