@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/11/08 10:58:07 sborrill Exp $
+# $NetBSD: Makefile,v 1.49 2013/02/28 01:21:56 jperkin Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -57,7 +57,16 @@ SUBST_STAGE.paths=	pre-configure
 INSTALLATION_DIRS=	bin share/doc/vnc
 
 .if ${OPSYS} == "SunOS"
+_WRAP_EXTRA_ARGS.CC+=	-D_POSIX_SOURCE
 SPECIAL_PERMS+=	bin/Xvnc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
+.endif
+
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		smartos
+SUBST_STAGE.smartos=	pre-configure
+SUBST_FILES.smartos=	Xvnc/config/cf/svr4.cf
+SUBST_SED.smartos+=	-e 's,/usr/ccs/bin/ar,/usr/bin/ar,g'
+SUBST_SED.smartos+=	-e 's,/usr/ccs/bin/make,${MAKE},g'
 .endif
 
 post-install:
