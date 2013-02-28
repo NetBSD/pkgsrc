@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.731 2013/02/28 19:24:48 is Exp $
+$NetBSD: CHANGES-2013,v 1.732 2013/02/28 19:33:01 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1050,3 +1050,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/libsodium version 0.3 [agc 2013-02-28]
 	Updated geography/geos to 3.3.8 [gdt 2013-02-28]
 	Updated mail/mutt-devel to 1.5.21nb8 [is 2013-02-28]
+	Updated shells/rssh to rssh-2.3.4nb1 [darcy 2013-02-28]
