@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2013/02/22 03:06:16 taca Exp $
+$NetBSD: distinfo,v 1.59 2013/02/28 21:28:20 imil Exp $
 
 SHA1 (php-5.3.22.tar.bz2) = 8a0948040d70bd7ebf1f3001c4462649b43d5ab0
 RMD160 (php-5.3.22.tar.bz2) = dc51c94f4201aeb3bef03df8d1def780a1ab60f5
@@ -21,4 +21,4 @@ SHA1 (patch-ext_standard_basic__functions.c) = 18596d281017760293189d87d19de9c5c
 SHA1 (patch-main_main.c) = 3e8f62eed3daadf2c93adeade234e378e792be04
 SHA1 (patch-main_streams_cast.c) = c169ccb73dc660e40eff9f9e168374f35eedadad
 SHA1 (patch-php__mssql.c) = b46c688ff2d8da33ca2f9beb0eb9182b6edf7e23
-SHA1 (patch-sapi_fpm_fpm__fpm_sockets.h) = 59b3afaef3ab5931ff51df4c2042ee3983f0489a
+SHA1 (patch-sapi_fpm_php-fpm.conf.in) = 6453d0cea05c0f86dcabc95a656532a0ed084aed
