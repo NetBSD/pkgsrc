@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2012/11/26 16:25:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2013/02/28 23:03:58 jperkin Exp $
 
-DISTNAME=	jdk-6u37-linux-${DIST_ARCH}
+DISTNAME=	jdk-6u37-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk6-6.0.37
 MASTER_SITES=	# empty
 
@@ -20,7 +20,13 @@ MAKE_JOBS_SAFE=	no
 CHECK_SHLIBS_SUPPORTED=	no
 .endif
 
-PLIST_SRC=	PLIST.linux-${EMUL_ARCH}
+# The 64-bit Solaris downloads for some inexplicable reason only contain
+# the additional 64-bit files, and you need the main 32-bit file too.
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "x86_64"
+DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/x64/i586/}
+.endif
+
+PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 
 # Remove parts that are in common with the JRE
 #
