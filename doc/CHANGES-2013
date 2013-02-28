@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.734 2013/02/28 21:51:50 imil Exp $
+$NetBSD: CHANGES-2013,v 1.735 2013/02/28 21:52:12 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1053,3 +1053,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/rssh to rssh-2.3.4nb1 [darcy 2013-02-28]
 	Updated www/php-fpm to 5.4.12nb1 [imil 2013-02-28]
 	Updated lang/php53 to 5.3.22nb1 [imil 2013-02-28]
+	Updated lang/php54 to 5.4.12nb1 [imil 2013-02-28]
