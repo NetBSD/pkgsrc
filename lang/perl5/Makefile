@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2013/02/27 14:02:22 obache Exp $
+# $NetBSD: Makefile,v 1.196 2013/02/28 00:50:44 obache Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -83,12 +83,13 @@ SUBST_VARS.policysh+=	PKGMANDIR
 SUBST_VARS.policysh+=	LOCALBASE
 SUBST_VARS.policysh+=	PTHREAD_LDFLAGS
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Cygwin"
 #
 # The Perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
 USE_TOOLS+=	gmake
+MAKE_FILE=	GNUmakefile
 .endif
 
 #
