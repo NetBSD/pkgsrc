@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/24 01:22:36 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/28 07:18:16 asau Exp $
 
 DISTNAME=	openmpi-1.6.4
 CATEGORIES=	parallel
@@ -8,9 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.open-mpi.org/
 COMMENT=	Open source MPI-2 implementation
-
-CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
-CONFLICTS+=	mpich2-[0-9]*	# installs bin/mpicc & other wrappers
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77
