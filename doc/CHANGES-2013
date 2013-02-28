@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.728 2013/02/28 14:21:43 tez Exp $
+$NetBSD: CHANGES-2013,v 1.729 2013/02/28 15:45:45 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1047,3 +1047,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/py-mecab to 0.996 [obache 2013-02-28]
 	Updated security/mit-krb5 to 1.10.3nb4 [tez 2013-02-28]
 	Updated textproc/ruby-mecab to 0.996 [obache 2013-02-28]
+	Added security/libsodium version 0.3 [agc 2013-02-28]
