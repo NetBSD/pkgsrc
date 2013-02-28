@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.726 2013/02/28 12:34:36 obache Exp $
+$NetBSD: CHANGES-2013,v 1.727 2013/02/28 13:49:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1034,7 +1034,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/ruby-launchy to 2.2.0nb1 [taca 2013-02-27]
 	Updated sysutils/cdrtools to 3.01alpha13 [wiz 2013-02-27]
 	Updated x11/xterm to 291 [wiz 2013-02-27]
-	Updated databases/tinycdb version 0.78 [ryoon 2013-02-27]
+	Updated databases/tinycdb to 0.78 [ryoon 2013-02-27]
 	Updated graphics/openimageio to 1.1.7 [ryoon 2013-02-27]
 	Updated graphics/blender to 2.66 [ryoon 2013-02-27]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.67 [obache 2013-02-28]
