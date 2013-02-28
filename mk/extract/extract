@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.14 2012/10/06 22:24:45 ryoon Exp $
+# $NetBSD: extract,v 1.15 2013/02/28 18:26:22 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -219,7 +219,7 @@ case "$distfile" in
 *.zoo)		_format=zoo ;;
 *.rar)		_format=rar ;;
 *.rpm)		_format=rpm ;;
-*.bin)		_format=jre-bin ;;
+*.bin|*.sh)	_format=jre-bin ;;
 *.gem)		_format=gem ;;
 *.7z)		_format=7z ;;
 *)		_format=none ;;
