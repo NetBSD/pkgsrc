@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.727 2013/02/28 13:49:16 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.728 2013/02/28 14:21:43 tez Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1045,4 +1045,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/java-mecab to 0.996 [obache 2013-02-28]
 	Updated textproc/p5-mecab to 0.996 [obache 2013-02-28]
 	Updated textproc/py-mecab to 0.996 [obache 2013-02-28]
+	Updated security/mit-krb5 to 1.10.3nb4 [tez 2013-02-28]
 	Updated textproc/ruby-mecab to 0.996 [obache 2013-02-28]
