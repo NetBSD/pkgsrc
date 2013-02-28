@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.954 2013/02/26 12:46:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.955 2013/02/28 07:29:32 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -661,8 +661,8 @@ SUBDIR+=	screws
 SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-l10n
 SUBDIR+=	sencha-sns
-SUBDIR+=	serf0
 SUBDIR+=	serf
+SUBDIR+=	serf0
 SUBDIR+=	shibboleth-sp
 SUBDIR+=	sitecopy
 SUBDIR+=	snarf
