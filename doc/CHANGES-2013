@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.730 2013/02/28 17:08:57 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.731 2013/02/28 19:24:48 is Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1049,3 +1049,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-mecab to 0.996 [obache 2013-02-28]
 	Added security/libsodium version 0.3 [agc 2013-02-28]
 	Updated geography/geos to 3.3.8 [gdt 2013-02-28]
+	Updated mail/mutt-devel to 1.5.21nb8 [is 2013-02-28]
