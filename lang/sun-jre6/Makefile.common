@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2012/10/02 20:11:55 asau Exp $
+# $NetBSD: Makefile.common,v 1.19 2013/02/28 18:29:13 jperkin Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -17,13 +17,19 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-EMUL_PLATFORMS=		linux-i386 linux-x86_64
-
 USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+DIST_OS=		solaris
+EMUL_ARCH=		${MACHINE_ARCH}	# XXX: re-use EMUL_ARCH as it is simpler
+EXTRACT_SUFX=		.sh
+.else
+DIST_OS=		linux
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	compat locale x11
+.endif
 
 DIST_ARCH.i386=		i586
 DIST_ARCH.x86_64=	x64
@@ -34,6 +40,7 @@ DIST_ARCH=		${DIST_ARCH.${EMUL_ARCH}}
 DIST_ARCH=		${EMUL_ARCH}
 .endif
 
+JAVA_ARCH.i386=		i386
 JAVA_ARCH.x86_64=	amd64
 
 .if defined(JAVA_ARCH.${EMUL_ARCH})
@@ -45,8 +52,6 @@ FILES_SUBST+=		JAVA_ARCH=${JAVA_ARCH:Q}
 
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# empty
-
-.include "../../mk/bsd.prefs.mk"
 
 JAVA_HOME=		${PREFIX}/java/sun-6
 JAVA_NAME=		sun6
@@ -69,12 +74,14 @@ FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
 FETCH_MESSAGE+=	" from:"
 FETCH_MESSAGE+=	"	${DOWNLOAD}"
 FETCH_MESSAGE+=	"	or ${ARCHIVE}"
+.if ${DIST_OS} == "linux"
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose 'Linux self-extracting file'."
+.endif
 
 post-fetch:
-	if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+	@if ${TEST} ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}; then	\
 		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
 	fi
 

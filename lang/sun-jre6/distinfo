@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2012/11/26 16:25:34 ryoon Exp $
+$NetBSD: distinfo,v 1.25 2013/02/28 18:29:13 jperkin Exp $
 
 SHA1 (jce_policy-6.zip) = 7b1b021bd63152b93a16c96bb3a64f0e685fc425
 RMD160 (jce_policy-6.zip) = 6f45ce5f3c067e186554f79b3f1a61e4d7d22aae
@@ -9,3 +9,9 @@ Size (jre-6u37-linux-i586.bin) = 21704353 bytes
 SHA1 (jre-6u37-linux-x64.bin) = ac9dadca21c2adff4095fb4c4e70bae35620ed71
 RMD160 (jre-6u37-linux-x64.bin) = 9fc5509730550b25ac0bc661b115ea69f99b490d
 Size (jre-6u37-linux-x64.bin) = 21311066 bytes
+SHA1 (jre-6u37-solaris-i586.sh) = 58b6e2c17ff26092b3ed2d2f850e905ea05352b9
+RMD160 (jre-6u37-solaris-i586.sh) = 9d4c9aaf9bfd93a87c516dc4e334196c449d1241
+Size (jre-6u37-solaris-i586.sh) = 21332581 bytes
+SHA1 (jre-6u37-solaris-x64.sh) = dee449f7bb60809d5d3c5216ed9ae71e0e761396
+RMD160 (jre-6u37-solaris-x64.sh) = f686530cddb8a1504e2848a6b4b5bfdfba8eee2d
+Size (jre-6u37-solaris-x64.sh) = 7860286 bytes
