@@ -1,0 +1,13 @@
+$NetBSD: patch-Xvnc_config_cf_vnc.def,v 1.1 2013/02/28 01:21:57 jperkin Exp $
+
+--- Xvnc/config/cf/vnc.def.orig	2000-10-26 11:31:46.000000000 +0000
++++ Xvnc/config/cf/vnc.def
+@@ -105,7 +105,7 @@
+ 
+ #define XVendorString		"AT&T Laboratories Cambridge"
+ #define XVendorRelease		3332
+-#define XvncRelease		"3r2"
++#define XvncRelease "3r2"
+ 
+ 
+ /*****************************************************************************/
