@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.729 2013/02/28 15:45:45 agc Exp $
+$NetBSD: CHANGES-2013,v 1.730 2013/02/28 17:08:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1048,3 +1048,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/mit-krb5 to 1.10.3nb4 [tez 2013-02-28]
 	Updated textproc/ruby-mecab to 0.996 [obache 2013-02-28]
 	Added security/libsodium version 0.3 [agc 2013-02-28]
+	Updated geography/geos to 3.3.8 [gdt 2013-02-28]
