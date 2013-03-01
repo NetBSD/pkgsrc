@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.740 2013/03/01 14:50:13 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.741 2013/03/01 15:26:02 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1059,3 +1059,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gimp-ufraw to 0.19 [gdt 2013-03-01]
 	Updated graphics/lensfun to 0.2.6 [gdt 2013-03-01]
 	Updated graphics/lensfun to 0.2.7 [gdt 2013-03-01]
+	Updated lang/gcc47 to 4.7.2nb2 [jperkin 2013-03-01]
+	Updated lang/gcc47-libs to 4.7.2nb3 [jperkin 2013-03-01]
