@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/02/17 19:18:06 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2013/03/01 21:15:38 markd Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -35,7 +35,7 @@ PIXMAPDIR.emacs=	${EMACS_LISPPREFIX}/vm/pixmaps
 PIXMAPDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/vm
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_DATA} *.el* ${DESTDIR}${EMACS_LISPPREFIX}/vm
+	cd ${WRKSRC} && ${INSTALL_DATA} *.el *.elc ${DESTDIR}${EMACS_LISPPREFIX}/vm
 	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
