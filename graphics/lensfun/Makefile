@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/02/16 11:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/03/01 14:33:51 gdt Exp $
 #
 
-DISTNAME=	lensfun-0.2.5
-PKGREVISION=	11
+DISTNAME=	lensfun-0.2.6
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/lensfun/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +16,9 @@ BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--vectorization=
-CONFIG_SHELL=		${PYTHONBIN}
 MAKE_FILE=		GNUmakefile
+
+CONFIG_SHELL=		${PYTHONBIN}
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON=		configure
 USE_LANGUAGES=		c c++
@@ -27,8 +27,8 @@ PKGCONFIG_OVERRIDE=	libs/lensfun/lensfun.pc.in
 
 # Why three copys of the file?
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/lib/liblensfun.so
-	${RM} -f ${DESTDIR}${PREFIX}/lib/liblensfun.so.0
+	${MV} ${DESTDIR}${PREFIX}/lib/liblensfun.so \
+		${DESTDIR}${PREFIX}/lib/liblensfun.so.${PKGVERSION:C/nb[0-9]*//}
 	${LN} -s liblensfun.so.${PKGVERSION:C/nb[0-9]*//} \
 		${DESTDIR}${PREFIX}/lib/liblensfun.so.0
 	${LN} -s liblensfun.so.${PKGVERSION:C/nb[0-9]*//} \
