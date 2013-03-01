@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/01/31 20:07:17 marino Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/01 15:24:42 jperkin Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"../../lang/${GCC_PKGNAME}/version.mk"
@@ -8,7 +8,7 @@ PKGNAME=		${GCC_PKGNAME}-libs-${GCC_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc47 package so that with the dependence pattern 
 ## '{gcc47,gcc47-libs}>=4.7.*' pkg_all will choose gcc47-libs over gcc47.
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		# empty
 DISTFILES=		# empty
