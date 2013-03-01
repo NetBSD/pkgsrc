@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.87 2012/07/08 19:57:10 marino Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.88 2013/03/01 13:27:38 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -177,7 +177,7 @@ _WRAP_ALIASES.AS=	as
 _WRAP_ALIASES.CC=	cc gcc ada
 _WRAP_ALIASES.CXX=	c++ g++ CC cxx
 _WRAP_ALIASES.CPP=	cpp
-_WRAP_ALIASES.FC=	f77 g77
+_WRAP_ALIASES.FC=	f77 g77 gfortran
 _WRAP_ALIASES.IMAKE=	imake
 _WRAP_ALIASES.LD=	ld
 
