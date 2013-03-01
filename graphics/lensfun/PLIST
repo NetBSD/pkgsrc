@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2012/02/15 08:50:18 sbd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/03/01 14:33:51 gdt Exp $
 include/lensfun.h
 lib/liblensfun.so
 lib/liblensfun.so.0
 lib/liblensfun.so.${PKGVERSION}
 lib/pkgconfig/lensfun.pc
-share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/cc-by-sa-3.0.txt
-share/doc/${PKGNAME}/gpl-3.0.txt
-share/doc/${PKGNAME}/lgpl-3.0.txt
+@comment lensfun inexplicably uses an extra .0 in the doc dir
+share/doc/${PKGNAME}.0/README
+share/doc/${PKGNAME}.0/cc-by-sa-3.0.txt
+share/doc/${PKGNAME}.0/gpl-3.0.txt
+share/doc/${PKGNAME}.0/lgpl-3.0.txt
 share/lensfun/6x6.xml
 share/lensfun/compact-canon.xml
 share/lensfun/compact-casio.xml
@@ -23,6 +24,10 @@ share/lensfun/compact-ricoh.xml
 share/lensfun/compact-sigma.xml
 share/lensfun/compact-sony.xml
 share/lensfun/generic.xml
+share/lensfun/mil-olympus.xml
+share/lensfun/mil-panasonic.xml
+share/lensfun/mil-samsung.xml
+share/lensfun/mil-sony.xml
 share/lensfun/rf-leica.xml
 share/lensfun/slr-canon.xml
 share/lensfun/slr-contax.xml
