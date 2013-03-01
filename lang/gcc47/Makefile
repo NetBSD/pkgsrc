@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/02/05 07:12:23 adam Exp $
+# $NetBSD: Makefile,v 1.15 2013/03/01 15:22:25 jperkin Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -32,11 +32,17 @@ CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 
