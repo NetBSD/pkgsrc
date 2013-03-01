@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.738 2013/03/01 12:52:09 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.739 2013/03/01 14:34:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 3.87 [mspo 2013-03-01]
 	Added databases/php-pdo_odbc version 5.2.9.99 [jperkin 2013-03-01]
 	Updated graphics/gimp-ufraw to 0.19 [gdt 2013-03-01]
+	Updated graphics/lensfun to 0.2.6 [gdt 2013-03-01]
