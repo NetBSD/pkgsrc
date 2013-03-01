@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2013/02/28 18:29:13 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.20 2013/03/01 09:54:12 jperkin Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -19,15 +19,17 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 USE_TOOLS+=	pax
 
+EMUL_PLATFORMS=	linux-i386 linux-x86_64
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 DIST_OS=		solaris
 EMUL_ARCH=		${MACHINE_ARCH}	# XXX: re-use EMUL_ARCH as it is simpler
+EMUL_PLATFORMS=		# empty, uses native binaries
 EXTRACT_SUFX=		.sh
 .else
 DIST_OS=		linux
-EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	compat locale x11
 .endif
 
