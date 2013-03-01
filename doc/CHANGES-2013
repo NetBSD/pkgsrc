@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.736 2013/03/01 02:49:54 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.737 2013/03/01 10:40:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1055,3 +1055,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php53 to 5.3.22nb1 [imil 2013-02-28]
 	Updated lang/php54 to 5.4.12nb1 [imil 2013-02-28]
 	Updated www/p5-Mojolicious to 3.87 [mspo 2013-03-01]
+	Added databases/php-pdo_odbc version 5.2.9.99 [jperkin 2013-03-01]
