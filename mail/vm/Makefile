@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2013/03/01 21:15:38 markd Exp $
+# $NetBSD: Makefile,v 1.41 2013/03/01 21:16:11 markd Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://tug.org/vm/ \
