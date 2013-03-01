@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11960 2013/02/27 16:20:57 shattered Exp $
+$NetBSD: TODO,v 1.11961 2013/03/01 10:24:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -414,7 +414,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-plugins-2.4.4
 	o audacity-2.0.2 [wip (audacity-devel)]
 	o autoconvert-0.3.16
-	o autogen-5.17.1
+	o autogen-5.17.2
 	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
@@ -439,7 +439,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o boson-0.13
 	o botan-1.10.3
 	o brasero-3.4.0
-	o bugzilla-3.6
+	o bugzilla-3.6.12
 	o byacc-20121003
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
@@ -537,7 +537,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elm-me-2.5plalpha32
+	o elm-me-2.5plalpha33
 	o emacs-muse-3.20
 	o emerillon-0.1.90
 	o enlightenment-1.0.9
@@ -627,6 +627,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghostscript-9.07
 	o giflib-5.0.3
 	o gifsicle-1.48
+	o gimp-ufraw-0.19
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -634,6 +635,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.3 [GNOME 2.34]
 	o glade3-3.14.2
 	o gle-4.2.4
+	o global-6.2.8
 	o glom-1.14.2 [GNOME 2.26]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -813,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.6.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgsf-1.14.26
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
@@ -872,6 +875,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.1.4
 	o mdds-0.7.0
 	o mdocml-1.12.1
+	o meld-1.7.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
@@ -899,7 +903,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.5.1
 	o mp3splt-gtk-0.7.3
 	o mpeg4ip-1.6.1
-	o mpg123-1.14.4
+	o mpg123-1.15.1
 	o mpich-1.8
 	o mpop-1.0.27
 	o mserv-devel-0.41
@@ -945,7 +949,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
-	o opendkim-2.7.4
+	o opendkim-2.8.0
 	o opengrok-0.11.1
 	o openmortal-0.7.1
 	o openoffice-3.4
@@ -1024,7 +1028,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-3.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9751
+	o puzzles-9765
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1033,6 +1037,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cairo-1.10.0
 	o py-carddav-0.4
 	o py-distribute-0.6.35
+	o py-django-1.5
 	o py-docutils-0.10 [pkg/47372]
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
@@ -1145,7 +1150,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o sudo-1.8.6p6
+	o sudo-1.8.6p7
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
 	o sysinfo-4.2.2
@@ -1217,6 +1222,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vera-1.17
 	o vfu-4.09
 	o vicq-0.4.2
+	o viewvc-1.1.18
 	o vifm-0.7.4b
 	o viking-1.4
 	o vinagre-3.6.2
