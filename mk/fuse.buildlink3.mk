@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.15 2012/08/17 12:50:15 marino Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.16 2013/03/01 00:08:31 tcort Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -44,7 +44,7 @@ PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install libfuse."
 .    endif
 .    include "../../filesystems/fuse/buildlink3.mk"
 
-.  elif ${OPSYS} == "NetBSD" || \
+.  elif ${OPSYS} == "NetBSD" || ${OPSYS} == "Minix" || \
         !empty(MACHINE_PLATFORM:MDragonFly-[3-9]*-*)
 .     if !exists(/usr/include/fuse.h)
 PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install librefuse."
