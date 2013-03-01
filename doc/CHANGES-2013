@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.735 2013/02/28 21:52:12 imil Exp $
+$NetBSD: CHANGES-2013,v 1.736 2013/03/01 02:49:54 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-fpm to 5.4.12nb1 [imil 2013-02-28]
 	Updated lang/php53 to 5.3.22nb1 [imil 2013-02-28]
 	Updated lang/php54 to 5.4.12nb1 [imil 2013-02-28]
+	Updated www/p5-Mojolicious to 3.87 [mspo 2013-03-01]
