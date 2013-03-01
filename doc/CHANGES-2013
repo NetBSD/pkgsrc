@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.739 2013/03/01 14:34:07 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.740 2013/03/01 14:50:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1058,3 +1058,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/php-pdo_odbc version 5.2.9.99 [jperkin 2013-03-01]
 	Updated graphics/gimp-ufraw to 0.19 [gdt 2013-03-01]
 	Updated graphics/lensfun to 0.2.6 [gdt 2013-03-01]
+	Updated graphics/lensfun to 0.2.7 [gdt 2013-03-01]
