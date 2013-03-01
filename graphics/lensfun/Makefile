@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/03/01 14:33:51 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2013/03/01 14:34:38 gdt Exp $
 #
 
 DISTNAME=	lensfun-0.2.6
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/lensfun/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://lensfun.berlios.de/
 COMMENT=	Library for rectifying defects introduced by photographic equipment
 LICENSE=	gnu-lgpl-v3
