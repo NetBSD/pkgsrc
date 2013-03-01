@@ -1,8 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/01/02 22:55:09 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2013/03/01 15:02:00 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc47-libs
 
-.if !defined(GCC47_LIBS_BUILDLINK3_MK) && !defined(GCC47_BUILDLINK3_MK)
+.if !defined(GCC47_LIBS_BUILDLINK3_MK)
 GCC47_LIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc47-libs+=	{gcc47,gcc47-libs}>=4.7.0
