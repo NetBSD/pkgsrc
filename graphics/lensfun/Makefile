@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/03/01 14:34:38 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2013/03/01 14:35:53 gdt Exp $
 #
 
 DISTNAME=	lensfun-0.2.6
@@ -25,7 +25,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config gsed
 PKGCONFIG_OVERRIDE=	libs/lensfun/lensfun.pc.in
 
-# Why three copys of the file?
+# Starting in 0.2.6, the library is misinstalled as liblensfun.so,
+# with no .0 variant.  Manually fix it, because that's easier than
+# understanding the build, and upstream is moving to cmake anyway.
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/lib/liblensfun.so \
 		${DESTDIR}${PREFIX}/lib/liblensfun.so.${PKGVERSION:C/nb[0-9]*//}
