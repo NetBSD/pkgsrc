@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/03/01 14:38:51 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2013/03/01 14:49:53 gdt Exp $
 #
 
-DISTNAME=	lensfun-0.2.6
-PKGREVISION=	1
+DISTNAME=	lensfun-0.2.7
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/lensfun/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +11,8 @@ HOMEPAGE=	http://lensfun.berlios.de/
 COMMENT=	Library for rectifying defects introduced by photographic equipment
 LICENSE=	gnu-lgpl-v3
 
+# But, the build system looks for makedep, not makedepend.
+# Defer, because cmake is coming.
 BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 
 HAS_CONFIGURE=		yes
@@ -43,3 +44,4 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
+# DO NOT DELETE
