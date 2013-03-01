@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.333 2013/02/23 02:59:56 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.334 2013/03/01 00:07:46 tcort Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -292,6 +292,11 @@ _UNAME_V!=		${UNAME} -v
 .  if !empty(_UNAME_V:Mjoyent_*)
 OS_VARIANT=		SmartOS
 .  endif
+
+.elif ${OPSYS} == "Minix"
+LOWER_VENDOR?=		pc
+LOWER_OPSYS:=		${OPSYS:tl}
+LDFLAGS+=		-lcompat_minix -lminlib
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS:=		${OPSYS:tl}
