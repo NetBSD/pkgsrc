@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/02/24 06:55:29 obache Exp $
+# $NetBSD: Makefile,v 1.65 2013/03/01 16:10:23 jperkin Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -38,10 +38,13 @@ LIBSO_LIBS.SunOS+=	-lnsl -lrt
 CONFIGURE_ENV+=		LIBSO_LIBS=${LIBSO_LIBS:Q}
 
 .include "../../mk/bsd.prefs.mk"
+
 PLIST_VARS+=		norm_so
 .if ${OPSYS} != "Cygwin"
 PLIST.norm_so=		yes
 .endif
+
+.include "options.mk"
 
 # DB4 only want pthreads because it's really after POSIX 1003.1
 # inter-process mutexes.  In this case, we only care to use the native
