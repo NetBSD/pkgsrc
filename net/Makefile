@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.955 2013/02/10 05:58:27 manu Exp $
+# $NetBSD: Makefile,v 1.956 2013/03/02 04:09:01 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -196,6 +196,7 @@ SUBDIR+=	hping3
 SUBDIR+=	httping
 SUBDIR+=	httptunnel
 SUBDIR+=	iana-etc
+SUBDIR+=	icinga-base
 SUBDIR+=	icsi-finger
 SUBDIR+=	iftop
 SUBDIR+=	inadyn
