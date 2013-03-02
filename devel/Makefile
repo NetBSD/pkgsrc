@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1712 2013/02/26 07:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.1713 2013/03/02 07:45:34 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -420,6 +420,7 @@ SUBDIR+=	libusb-compat
 SUBDIR+=	libusb1
 SUBDIR+=	libusbx
 SUBDIR+=	libuuid
+SUBDIR+=	libuv
 SUBDIR+=	libuxre
 SUBDIR+=	libview
 SUBDIR+=	libvolume_id
