@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/25 21:04:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/02 23:41:07 ryoon Exp $
 bin/gitolite
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Common.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Conf.pm
@@ -15,8 +15,10 @@ ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Test.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Test/Tsh.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Alias.pm
+${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/AutoCreate.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/CpuTime.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Mirroring.pm
+${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/RefexExpr.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/RepoUmask.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Shell.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Triggers/Writable.pm
@@ -28,8 +30,10 @@ libexec/gitolite/VREF/MERGE-CHECK
 libexec/gitolite/VREF/VOTES
 libexec/gitolite/VREF/lock
 libexec/gitolite/VREF/partial-copy
+libexec/gitolite/VREF/refex-expr
 libexec/gitolite/commands/D
 libexec/gitolite/commands/access
+libexec/gitolite/commands/create
 libexec/gitolite/commands/creator
 libexec/gitolite/commands/desc
 libexec/gitolite/commands/fork
@@ -43,22 +47,29 @@ libexec/gitolite/commands/mirror
 libexec/gitolite/commands/perms
 libexec/gitolite/commands/print-default-rc
 libexec/gitolite/commands/push
+libexec/gitolite/commands/rsync
 libexec/gitolite/commands/sshkeys-lint
 libexec/gitolite/commands/sskm
 libexec/gitolite/commands/sudo
 libexec/gitolite/commands/svnserve
 libexec/gitolite/commands/symbolic-ref
+libexec/gitolite/commands/who-pushed
 libexec/gitolite/commands/writable
 libexec/gitolite/gitolite
 libexec/gitolite/gitolite-shell
 libexec/gitolite/syntactic-sugar/continuation-lines
 libexec/gitolite/syntactic-sugar/keysubdirs-as-groups
+libexec/gitolite/syntactic-sugar/macros
+libexec/gitolite/triggers/bg
 libexec/gitolite/triggers/partial-copy
 libexec/gitolite/triggers/post-compile/ssh-authkeys
 libexec/gitolite/triggers/post-compile/ssh-authkeys-shell-users
+libexec/gitolite/triggers/post-compile/ssh-authkeys-split
+libexec/gitolite/triggers/post-compile/update-description-file
 libexec/gitolite/triggers/post-compile/update-git-configs
 libexec/gitolite/triggers/post-compile/update-git-daemon-access-list
 libexec/gitolite/triggers/post-compile/update-gitweb-access-list
+libexec/gitolite/triggers/post-compile/update-gitweb-daemon-from-options
 libexec/gitolite/triggers/renice
 libexec/gitolite/triggers/upstream
 share/gitolite
