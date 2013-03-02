@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2005/12/27 13:48:56 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2013/03/02 18:29:48 joerg Exp $
 
---- lib/Rconnect.c.orig	2005-12-18 19:23:30.000000000 +0000
+--- lib/Rconnect.c.orig	1995-09-07 02:23:42.000000000 +0000
 +++ lib/Rconnect.c
 @@ -2,7 +2,7 @@
  #include <sys/time.h>
@@ -19,3 +19,31 @@ $NetBSD: patch-ah,v 1.1 2005/12/27 13:48:56 joerg Exp $
  extern char	*getenv();
  extern char	*getlogin();
  static struct sockaddr_in	cursin;
+@@ -91,8 +90,7 @@ char code;
+ 	SOCKSinit() must be called once in the application program.
+  */
+ 
+-SOCKSinit(Progname)
+-char *Progname; /* name of the calling program, "rfinger", "rftp", etc. */
++int SOCKSinit(char *Progname)
+ {
+ #ifdef SOCKS_DEFAULT_NS
+ 	static char	*defaultNS = SOCKS_DEFAULT_NS;
+@@ -108,7 +106,7 @@ char *Progname; /* name of the calling p
+ 
+ /* >>> YDL 94/01/25 */
+ 	if (socks_init_done)
+-		return;
++		return 1;
+ 	socks_init_done = 1;
+ /* <<< YDL 94/01/25 */
+ 	socks_port = htons(SOCKS_DEF_PORT);
+@@ -227,7 +225,7 @@ char *Progname; /* name of the calling p
+ 	socks_nsin.sin_family = AF_INET;
+ 	socks_nsin.sin_port = socks_port;
+ 	socks_nsin.sin_addr.s_addr = SocksHost;
+-	
++	return 0;
+ }
+ 
+ 
