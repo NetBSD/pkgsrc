@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2013/03/02 08:36:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/02 08:37:50 ryoon Exp $
 
-# Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
+# Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
 # Note: This needs to be kept in sync with the sun-jdk7 package
 # Note: If you make makesum, make sure that you include both archs in distinfo
