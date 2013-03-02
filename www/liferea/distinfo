@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2009/07/09 19:08:47 drochner Exp $
+$NetBSD: distinfo,v 1.59 2013/03/02 17:53:07 joerg Exp $
 
 SHA1 (liferea-1.4.28.tar.gz) = 5c40c9a20eb94d5e0bc5e9b41af51389bc364daf
 RMD160 (liferea-1.4.28.tar.gz) = 044d0f771ea06c7d35fb70afc2ebe8d64bd96ef0
@@ -6,3 +6,5 @@ Size (liferea-1.4.28.tar.gz) = 1697036 bytes
 SHA1 (patch-ae) = 91c32840150a33d2162301c17bd5c35edc6264ba
 SHA1 (patch-af) = 6376c278cc5fa1fd2f353e056d9e135fbf9e0bef
 SHA1 (patch-ag) = 49eaef5dd44397d5dda30d7b750cce3a26d5029d
+SHA1 (patch-src_feedlist.c) = 3c6e18f852726532686c54fc658fd0be961d9bdb
+SHA1 (patch-src_rule.c) = b6de3509c604a570258b5ee04b5576c386751edd
