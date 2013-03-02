@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2005/12/27 13:48:56 joerg Exp $
+$NetBSD: patch-af,v 1.4 2013/03/02 18:29:48 joerg Exp $
 
 --- rftp/ftp.c.orig	1995-09-07 02:24:03.000000000 +0000
 +++ rftp/ftp.c
@@ -26,16 +26,17 @@ $NetBSD: patch-af,v 1.3 2005/12/27 13:48:56 joerg Exp $
  
  /* >>> YDL */
  #if	!defined(BSD) || (BSD - 43 <= 0)
-@@ -158,6 +158,8 @@ herror(s)
+@@ -158,6 +158,9 @@ herror(s)
  
  #endif /* !defined(SVR3) && !defined(BIND_RESOLVER) && !defined(LINUX) */
  
 +int command(char *fmt, ...);
++void proxtrans(char *cmd, char *local, char *remote);
 +
  
  char *
  hookup(host, port)
-@@ -358,11 +360,10 @@ cmdabort()
+@@ -358,11 +361,10 @@ cmdabort()
  }
  
  /*VARARGS*/
@@ -49,7 +50,7 @@ $NetBSD: patch-af,v 1.3 2005/12/27 13:48:56 joerg Exp $
  	int r;
  	sig_t oldintr;
  	void cmdabort();
-@@ -370,8 +371,7 @@ va_dcl
+@@ -370,8 +372,7 @@ va_dcl
  	abrtflag = 0;
  	if (debug) {
  		printf("---> ");
@@ -59,7 +60,7 @@ $NetBSD: patch-af,v 1.3 2005/12/27 13:48:56 joerg Exp $
  		if (strncmp("PASS ", fmt, 5) == 0)
  			printf("PASS XXXX");
  		else 
-@@ -386,8 +386,7 @@ va_dcl
+@@ -386,8 +387,7 @@ va_dcl
  		return (0);
  	}
  	oldintr = signal(SIGINT, cmdabort);
@@ -69,3 +70,44 @@ $NetBSD: patch-af,v 1.3 2005/12/27 13:48:56 joerg Exp $
  	vfprintf(cout, fmt, ap);
  	va_end(ap);
  	fprintf(cout, "\r\n");
+@@ -533,9 +533,7 @@ abortsend()
+ 
+ #define HASHBYTES 1024
+ 
+-sendrequest(cmd, local, remote, printnames)
+-	char *cmd, *local, *remote;
+-	int printnames;
++void sendrequest(char *cmd, char *local, char *remote, int printnames)
+ {
+ 	struct stat st;
+ 	struct timeval start, stop;
+@@ -792,8 +790,7 @@ abortrecv()
+ 	longjmp(recvabort, 1);
+ }
+ 
+-recvrequest(cmd, local, remote, lmode, printnames)
+-	char *cmd, *local, *remote, *lmode;
++void recvrequest(char *cmd, char *local, char *remote, char *lmode, char *printnames)
+ {
+ 	FILE *fout, *din = 0, *popen();
+ 	int (*closefunc)(), pclose(), fclose();
+@@ -1320,8 +1317,7 @@ psabort()
+ 	abrtflag++;
+ }
+ 
+-pswitch(flag)
+-	int flag;
++void pswitch(int flag)
+ {
+ 	extern int proxy, abrtflag;
+ 	sig_t oldintr;
+@@ -1427,8 +1423,7 @@ abortpt()
+ 	longjmp(ptabort, 1);
+ }
+ 
+-proxtrans(cmd, local, remote)
+-	char *cmd, *local, *remote;
++void proxtrans(char *cmd, char *local, char *remote)
+ {
+ 	sig_t oldintr;
+ 	int secndflag = 0, prox_type, nfnd;
