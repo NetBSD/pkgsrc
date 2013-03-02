@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.742 2013/03/01 21:33:10 markd Exp $
+$NetBSD: CHANGES-2013,v 1.743 2013/03/02 02:30:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc47-libs to 4.7.2nb3 [jperkin 2013-03-01]
 	Updated devel/rapidsvn to 0.12.1 [markd 2013-03-01]
 	Updated emulators/gns3 to 0.8.3.1 [markd 2013-03-01]
+	Updated textproc/ruby-tilt to 1.3.4 [obache 2013-03-02]
