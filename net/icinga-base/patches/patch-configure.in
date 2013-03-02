@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+
+--- configure.in.orig	2013-01-13 22:18:37.000000000 +0000
++++ configure.in
+@@ -305,7 +305,7 @@ dnl Location of check result path
+ CHECKRESULTDIR=no
+ AC_ARG_WITH(checkresult-dir,AC_HELP_STRING([--with-checkresult-dir=<path>],[sets path to check results spool directory]),CHECKRESULTDIR=$withval,CHECKRESULTDIR=no)
+ if test x$CHECKRESULTDIR = xno; then
+-	CHECKRESULTDIR="$localstatedir/spool/checkresults"
++	CHECKRESULTDIR="$localstatedir/checkresults"
+ fi
+ AC_SUBST(CHECKRESULTDIR)
+ 
+@@ -827,6 +827,11 @@ if test x$USE_EVENTBROKER = xyes; then
+ 			MOD_CFLAGS="-fPIC"
+ 			INIT_OPTS="-o root -g wheel"
+ 		;;
++		netbsd*)
++			MOD_LDFLAGS="-shared"
++			MOD_CFLAGS="-fPIC"
++			INIT_OPTS="-o root -g wheel"
++		;;
+ 		*)
+ 			# assume GNU linker and ELF
+ 			MOD_LDFLAGS="-shared"
