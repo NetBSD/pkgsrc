@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/03/02 07:43:40 agc Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/02 08:19:36 agc Exp $
 #
 
 DISTNAME=	master
@@ -18,8 +18,14 @@ WRKSRC=		${WRKDIR}/libuv-master
 USE_TOOLS+=	gmake
 AUTO_MKDIRS=	yes
 
+HEADERS=	ngx-queue.h stdint-msvc2008.h tree.h uv-bsd.h uv-darwin.h
+HEADERS+=	uv-linux.h uv-sunos.h uv-unix.h uv-win.h
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/uv.h ${DESTDIR}${PREFIX}/include/uv.h
+	for f in ${HEADERS}; do						\
+		${INSTALL_DATA} ${WRKSRC}/include/uv-private/$$f ${DESTDIR}${PREFIX}/include/uv-private/$$f; \
+	done
 	${INSTALL_LIB} ${WRKSRC}/libuv.a ${DESTDIR}${PREFIX}/lib/libuv.a
 
 .include "../../mk/bsd.pkg.mk"
