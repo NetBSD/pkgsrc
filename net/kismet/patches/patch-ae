@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2008/10/28 11:06:38 adam Exp $
+$NetBSD: patch-ae,v 1.3 2013/03/02 17:59:10 joerg Exp $
 
---- Makefile.in.orig	2008-05-29 21:18:26.000000000 +0200
+--- Makefile.in.orig	2008-05-29 19:18:26.000000000 +0000
 +++ Makefile.in
 @@ -139,52 +139,36 @@ checkuiconfig:
  	fi
@@ -109,3 +109,12 @@ $NetBSD: patch-ae,v 1.2 2008/10/28 11:06:38 adam Exp $
  	@echo "Installed kismet into $(BIN)/."
  	@echo "If you have not done so already, read the README file and the FAQ file.  Additional"
  	@echo "documentation is in the docs/ directory.  You MUST edit $(ETC)/kismet.conf "
+@@ -374,7 +335,7 @@ $(DEPEND):
+ 	@-rm -f $(DEPEND)
+ 	@echo "Generating dependencies... "
+ 	@echo > $(DEPEND)
+-	@$(CXX) $(CFLAGS) -MM \
++	@$(CXX) $(CFLAGS) $(CPPFLAGS) -MM \
+ 		`echo $(PSO) $(DRONEO) $(GPSLO) $(NCO) | sed -e "s/\.o/\.cc/g" | sed -e "s/\.mo/\.m/g"` >> $(DEPEND)
+ 
+ include $(DEPEND)
