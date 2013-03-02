@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2010/03/08 12:10:06 sborrill Exp $
+$NetBSD: distinfo,v 1.4 2013/03/02 18:01:05 joerg Exp $
 
 SHA1 (vic-2.8ucl1.4.0_ov511.diff.gz) = 46faceb1d926820e41ffda71228f63959747a73e
 RMD160 (vic-2.8ucl1.4.0_ov511.diff.gz) = b60a9d3f5764cc4528dffbf5e9465301d71723de
@@ -12,5 +12,6 @@ SHA1 (patch-configure) = 509e31f0e0c1037701d7f012569ac5e5e1e4c033
 SHA1 (patch-crypt-rijndael.cpp) = 5dfda8c17c91fa5f6b2df24d4e1ed93bc4ae5b87
 SHA1 (patch-grabber-v4l2.cpp) = e9ef03d31f336976e220291646028916712e71a7
 SHA1 (patch-main.cpp) = 671cda41595f1f5c001b089ee04b5c84f559330a
+SHA1 (patch-tcl_tcl2cpp_tcl2cpp.c) = 90d7f66a06dfdefebb058da6e688aecb965e3925
 SHA1 (patch-ui-ctrlmenu.tcl) = b81763c2642f3d1eb828cbac4e687c7bf9bc1ba2
 SHA1 (patch-ui-resource.tcl) = 1763779af32de2d19b4352eb7174f9edd9f7be16
