@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/07/03 18:06:38 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/03/02 18:06:22 joerg Exp $
 
 SHA1 (linpsk-0.8.1.tar.gz) = d55d8c793ecd3a4395603ebdd8e795f1dc4d20f9
 RMD160 (linpsk-0.8.1.tar.gz) = 975bbdfc0b63e516f1d5fdfe6baf10fa12899219
@@ -10,3 +10,6 @@ SHA1 (patch-ad) = d9a62afada11b17730e4457e73fef7e21b8bee62
 SHA1 (patch-af) = 785bf818f14b1e733321a8e6cc0f998883cffe4a
 SHA1 (patch-ag) = 490d53c18ec1cb3961e7d49ec8f551c386bcec6a
 SHA1 (patch-ai) = 192112a67a4ad8d70d4f71fbb1390a1fb26d7496
+SHA1 (patch-src_csound.cpp) = 38897d8b3b07bb3e05215a2b5d49f7aa1d02c451
+SHA1 (patch-src_textinput.cpp) = e9a3881bad34d56da61881d23a7ee2b6cc52f6bb
+SHA1 (patch-src_waveinput.cpp) = 0cd36c07772448dd203108796a0c605df2b251a5
