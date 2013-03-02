@@ -1,8 +1,41 @@
-$NetBSD: distinfo,v 1.4 2006/03/22 23:33:47 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/03/02 17:59:40 joerg Exp $
 
 SHA1 (llnlxftp2.1.tar.Z) = bd7a2b1e9a53ae139559f09bfa5c4b590fa0cd5e
 RMD160 (llnlxftp2.1.tar.Z) = 8db89d902538b8b589a50c3e24b975395e072b1b
 Size (llnlxftp2.1.tar.Z) = 359401 bytes
-SHA1 (patch-aa) = 024290d06835ac3d2e52e89461657a5467c4eb8a
+SHA1 (patch-aa) = 9bb4790727b80dd1383f14765e7a498f3200b7c6
 SHA1 (patch-ab) = f43adf13f0cd6f16eb9df0756d033ff5586227f6
+SHA1 (patch-abort.c) = 1cbbe6113716d61a2945b853c7f7680bfaa738e5
 SHA1 (patch-ac) = cb33729e4cdde21d8a943eedc6c694c8c857f389
+SHA1 (patch-account.c) = ea8e186871aea684e2c7fa376bb0b77aca05d959
+SHA1 (patch-aconnect.c) = 7c217015f86defb4207e685c17762f89cc4798fe
+SHA1 (patch-cache.c) = 846d09f2f1f5c1b229e1e30ca7f7fba690072a19
+SHA1 (patch-changedir.c) = 4bb8f2219b354bb8b45878552f20bdf5bc06d57f
+SHA1 (patch-color.c) = 3c275de98ae25810a6d4ea72609d1bb6f8f0820b
+SHA1 (patch-cursor.c) = 0ac07f87bcfbdd95ddc1c363d3c818bf4455536c
+SHA1 (patch-delete.c) = 505d340887c436fb10638fd1c1b854abbec60df9
+SHA1 (patch-destdir.c) = 06909659277f4300b81af3b58714adb748b84d92
+SHA1 (patch-dirlong.c) = a3f4084df83c72a7b4da9bea017e95ac0d2f4929
+SHA1 (patch-dirname.c) = 4ed67fc27da0216568ffd889cee44cfa69fe6b07
+SHA1 (patch-dirpath.c) = 2973100ce95bb0e41bbbafeb9a085c543e382007
+SHA1 (patch-dirtable.c) = 060d066b1ef0790282ac80732bbc9facf25f8aa3
+SHA1 (patch-goto.c) = 7d3a5608e05928cc5a3a944eb2cb8618e44e1713
+SHA1 (patch-host.c) = 7443e52e2a15160bfbbf58653b5a3f5fb4eaf364
+SHA1 (patch-misc.c) = add4009410f9a7f050bc8af1c72e9aea562f2597
+SHA1 (patch-mkdir.c) = 779ad3ded5478dcce4f2a8d14d88cb762f5ee48c
+SHA1 (patch-mpmonitor.c) = ef913324e490160f44eb2764a29813901266f766
+SHA1 (patch-password.c) = 48fa368dd6686a5da1948478e783569c585dfa36
+SHA1 (patch-path.c) = 60753f54d158c5d89b8257a691d41a23ea820419
+SHA1 (patch-prefs.c) = 8f9a50c56409ba82c6ea1875b957bc23a23488ce
+SHA1 (patch-qidialogs.c) = 660aed4f8d49ce2263d4582708a4c31c19688ec1
+SHA1 (patch-quote.c) = c05c03e7de26f5487975698a616c4e62d7e366bb
+SHA1 (patch-rconnect.c) = 8a5353c9e7e196a8a0406764ddc2ab8aa767767a
+SHA1 (patch-rename.c) = e4c21e271d4f0616f5dacaa6d6183c27f64f649d
+SHA1 (patch-select.c) = 603bd39d5c8805b4d9541ec1dac76fd9e8ffd240
+SHA1 (patch-server.c) = c6965e626793a0691101e445c8d8614703e041d3
+SHA1 (patch-verify.c) = 6771bbf4941f8f73442fcb697a0bb3bfb8a1ad32
+SHA1 (patch-view2.c) = d69824596901d7d5354be822b3bd265dcfa1b4ea
+SHA1 (patch-viewprefs.c) = d82800f41c397095571520f9419da7dc5c66c0a8
+SHA1 (patch-xfer1.c) = 0080535ae9c10ed1663d74023de33e5b79d250ea
+SHA1 (patch-xfermon.c) = 0572e335875b8f795ca1041704e55852a0d2c9ae
+SHA1 (patch-xftp.c) = 92ce365d69cb36299cea4417c8c25d1a3fce4518
