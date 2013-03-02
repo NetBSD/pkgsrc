@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/12/06 13:09:04 wen Exp $
+# $NetBSD: Makefile,v 1.50 2013/03/02 10:44:38 tron Exp $
 
 DISTNAME=		Net-DNS-0.69
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}		\
 			http://www.net-dns.org/download/
 
-MAINTAINER=		heinz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.net-dns.org/
 COMMENT=		Perl5 module for DNS resolution
 LICENSE=		${PERL5_LICENSE}

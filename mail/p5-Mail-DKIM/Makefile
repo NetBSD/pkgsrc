@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 12:19:23 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/03/02 10:44:36 tron Exp $
 #
 
 DISTNAME=		Mail-DKIM-0.38
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		p5mdk
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
 
-MAINTAINER=		heinz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Mail-DKIM/
 COMMENT=		Perl5 module for DKIM-based mail-signing and -verifying
 LICENSE=		${PERL5_LICENSE}

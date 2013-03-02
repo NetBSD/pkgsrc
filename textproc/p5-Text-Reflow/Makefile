@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:28 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/02 10:44:44 tron Exp $
 #
 
 DISTNAME=		Text-Reflow-1.09
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		p5rfl
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
-MAINTAINER=		heinz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Text-Reflow/
 COMMENT=		Reflowing of text using Knuth's paragraphing algorithm
 LICENSE=		${PERL5_LICENSE}

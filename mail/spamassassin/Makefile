@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2013/02/25 18:41:45 gdt Exp $
+# $NetBSD: Makefile,v 1.106 2013/03/02 10:44:36 tron Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.3.2
 PKGNAME=	spamassassin-3.3.2
@@ -12,7 +12,7 @@ DISTFILES+=	${RULESARCHIVEASC}
 DISTFILES+=	${RULESARCHIVESHA}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	heinz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam
 LICENSE=	apache-2.0
