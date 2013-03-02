@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/11/27 14:20:42 drochner Exp $
+$NetBSD: distinfo,v 1.8 2013/03/02 18:09:30 joerg Exp $
 
 SHA1 (geomview-1.8.1.tar.gz) = 026a22ecba471f7d55c407de4fc409213d166477
 RMD160 (geomview-1.8.1.tar.gz) = 4c42b928376517115e1bba16c978b80ff41b7b45
@@ -8,9 +8,13 @@ SHA1 (patch-ab) = 706b10ccfb3ba02baa48b461123707cdd9cbfdff
 SHA1 (patch-ac) = 55d2297e8a31203fc5f21b2800f4a2948ee07f9c
 SHA1 (patch-ad) = 9db6fb9ffae5939f80bfcae8aa5da389437d627c
 SHA1 (patch-ae) = f9b721883520a701ae66ab28f4e4b7e6e307fea7
-SHA1 (patch-af) = a9eab9b45dfaed20d08472b56d1b1fb880081a0e
+SHA1 (patch-af) = c4fce66c7dd58c3990770919633221b1097bed65
 SHA1 (patch-ag) = 427d9d114d581b0bcbfbba9ca1122bd384aa79a6
 SHA1 (patch-ah) = 458e2e764acf83309104c74fcfbf3dfba8251d29
 SHA1 (patch-ai) = 44b8fe3c228d5761cc1578c0418c358101ec3adc
 SHA1 (patch-aj) = 8c04229693165b471228c8bcb0b092afcdd6d890
 SHA1 (patch-ak) = 8d62f3a0da7c03567ef0ab5bc30b95d97c4e7254
+SHA1 (patch-src_bin_animate_glob.c) = b4f72c1bf1f7af6dce97bfb74f24a4a8f2033ca7
+SHA1 (patch-src_bin_geomutil_plutil_polymerge.c) = ec6bcd207d990f0eaf63af520787bb7cfb9ddd03
+SHA1 (patch-src_bin_geomutil_ucd_anytoucd.c) = be50bb45536e0791ac6f14bd347e205e66a4b906
+SHA1 (patch-src_bin_geomview_x11_gvmain.c) = b58d8da8695dea6c26a9684903662bc81e8a02a1
