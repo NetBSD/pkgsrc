@@ -1,0 +1,14 @@
+$NetBSD: patch-imlib2-config.in,v 1.1 2013/03/02 18:07:14 joerg Exp $
+
+--- imlib2-config.in.orig	2013-03-01 19:12:59.000000000 +0000
++++ imlib2-config.in
+@@ -45,8 +45,7 @@ while test $# -gt 0; do
+       echo $includes
+       ;;
+     --libs)
+-      libdirs=-L@libdir@
+-      echo $libdirs -lImlib2 @my_libs@
++      echo -L@libdir@ @COMPILER_RPATH_FLAG@@libdir@ -lImlib2 @my_libs@
+       ;;
+     *)
+       echo "${usage}" 1>&2
