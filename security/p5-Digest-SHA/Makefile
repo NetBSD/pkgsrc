@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2013/01/15 10:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/03/02 10:44:42 tron Exp $
 
 DISTNAME=	Digest-SHA-5.81
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
 
-MAINTAINER=	heinz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-SHA/
 COMMENT=	Perl module for SHA-1/224/256/384/512 algorithms
 LICENSE=	${PERL5_LICENSE}
