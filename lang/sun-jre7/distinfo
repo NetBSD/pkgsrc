@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.6 2013/02/25 17:25:10 christos Exp $
+$NetBSD: distinfo,v 1.7 2013/03/02 08:36:41 ryoon Exp $
 
-SHA1 (jre-7u15-linux-x64.gz) = cfd274e6a18c135f3f16955388127fb48ebecb37
-RMD160 (jre-7u15-linux-x64.gz) = b453d346173c7583d948856e54c61a02fa6893fe
-Size (jre-7u15-linux-x64.gz) = 46794487 bytes
-SHA1 (jre-7u15-linux-i586.gz) = 9d2680eb7cb07524f1ac43d517d221caa5aa08da
-RMD160 (jre-7u15-linux-i586.gz) = 0f588dc329d70bb1e5b9c95e208df8d85bf01569
-Size (jre-7u15-linux-i586.gz) = 48129053 bytes
+SHA1 (UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
+RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
+Size (UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
+SHA1 (jre-7u15-linux-i586.tar.gz) = 9d2680eb7cb07524f1ac43d517d221caa5aa08da
+RMD160 (jre-7u15-linux-i586.tar.gz) = 0f588dc329d70bb1e5b9c95e208df8d85bf01569
+Size (jre-7u15-linux-i586.tar.gz) = 48129053 bytes
+SHA1 (jre-7u15-linux-x64.tar.gz) = cfd274e6a18c135f3f16955388127fb48ebecb37
+RMD160 (jre-7u15-linux-x64.tar.gz) = b453d346173c7583d948856e54c61a02fa6893fe
+Size (jre-7u15-linux-x64.tar.gz) = 46794487 bytes
