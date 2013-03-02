@@ -1,8 +1,20 @@
-$NetBSD: patch-am,v 1.1 2005/12/27 13:48:56 joerg Exp $
+$NetBSD: patch-am,v 1.2 2013/03/02 18:29:48 joerg Exp $
 
---- rftp/cmds.c.orig	2005-12-18 19:30:53.000000000 +0000
+--- rftp/cmds.c.orig	1994-08-22 19:51:06.000000000 +0000
 +++ rftp/cmds.c
-@@ -80,7 +80,6 @@ extern	char *getenv();
+@@ -72,6 +72,11 @@ extern char *getwd();
+ #include "ftp_var.h"
+ #include "pathnames.h"
+ 
++void sendrequest(char *cmd, char *local, char *remote, int printnames);
++void recvrequest(char *cmd, char *local, char *remote, char *lmode, char *printnames);
++void pswitch(int flag);
++void disconnect(void);
++
+ extern	char *globerr;
+ extern	char **ftpglob();
+ extern	char *home;
+@@ -80,7 +85,6 @@ extern	char *getenv();
  extern	char *index();
  extern	char *rindex();
  extern	char *strerror();
@@ -10,3 +22,477 @@ $NetBSD: patch-am,v 1.1 2005/12/27 13:48:56 joerg Exp $
  extern off_t restart_point;
  extern char reply_string[];
  
+@@ -124,9 +128,7 @@ another(pargc, pargv, prompt)
+  * Connect to peer server and
+  * auto-login, if possible.
+  */
+-setpeer(argc, argv)
+-	int argc;
+-	char *argv[];
++void setpeer(int argc, char *argv[])
+ {
+ 	char *host, *hookup();
+ 	short port;
+@@ -248,9 +250,7 @@ struct	types {
+ /*
+  * Set transfer type.
+  */
+-settype(argc, argv)
+-	int argc;
+-	char *argv[];
++void settype(int argc, char *argv[])
+ {
+ 	register struct types *p;
+ 	int comret;
+@@ -296,8 +296,7 @@ settype(argc, argv)
+  * without changing our notion of the type for data transfers.
+  * Used to change to and from ascii for listings.
+  */
+-changetype(newtype, show)
+-	int newtype, show;
++void changetype(int newtype, int show)
+ {
+ 	register struct types *p;
+ 	int comret, oldverbose = verbose;
+@@ -334,7 +333,7 @@ char *stype[] = {
+  * Set binary transfer type.
+  */
+ /*VARARGS*/
+-setbinary()
++void setbinary(int argc, char *argv[])
+ {
+ 	stype[1] = "binary";
+ 	settype(2, stype);
+@@ -344,7 +343,7 @@ setbinary()
+  * Set ascii transfer type.
+  */
+ /*VARARGS*/
+-setascii()
++void setascii(int argc, char *argv[])
+ {
+ 	stype[1] = "ascii";
+ 	settype(2, stype);
+@@ -354,7 +353,7 @@ setascii()
+  * Set tenex transfer type.
+  */
+ /*VARARGS*/
+-settenex()
++void settenex(int argc, char *argv[])
+ {
+ 	stype[1] = "tenex";
+ 	settype(2, stype);
+@@ -364,9 +363,7 @@ settenex()
+  * Set file transfer mode.
+  */
+ /*ARGSUSED*/
+-setmode(argc, argv)
+-	int argc;
+-	char *argv[];
++void setmode(int argc, char *argv[])
+ {
+ 
+ 	printf("We only support %s mode, sorry.\n", modename);
+@@ -377,9 +374,7 @@ setmode(argc, argv)
+  * Set file transfer format.
+  */
+ /*ARGSUSED*/
+-setform(argc, argv)
+-	int argc;
+-	char *argv[];
++void setform(int argc, char *argv[])
+ {
+ 
+ 	printf("We only support %s format, sorry.\n", formname);
+@@ -390,9 +385,7 @@ setform(argc, argv)
+  * Set file transfer structure.
+  */
+ /*ARGSUSED*/
+-setstruct(argc, argv)
+-	int argc;
+-	char *argv[];
++void setstruct(int argc, char *argv[])
+ {
+ 
+ 	printf("We only support %s structure, sorry.\n", structname);
+@@ -402,9 +395,7 @@ setstruct(argc, argv)
+ /*
+  * Send a single file.
+  */
+-put(argc, argv)
+-	int argc;
+-	char *argv[];
++void put(int argc, char *argv[])
+ {
+ 	char *cmd;
+ 	int loc = 0;
+@@ -450,9 +441,7 @@ usage:
+ /*
+  * Send multiple files.
+  */
+-mput(argc, argv)
+-	int argc;
+-	char **argv;
++void mput(int argc, char *argv[])
+ {
+ 	extern jmp_buf jabort;
+ 	register int i;
+@@ -573,9 +562,7 @@ mput(argc, argv)
+ 	mflag = 0;
+ }
+ 
+-reget(argc, argv)
+-	int argc;
+-	char *argv[];
++void reget(int argc, char *argv[])
+ {
+ 	(void) getit(argc, argv, 1, "r+w");
+ }
+@@ -702,7 +689,7 @@ usage:
+ }
+ 
+ void
+-mabort()
++mabort(int argc, char *argv[])
+ {
+ 	int ointer;
+ 	extern jmp_buf jabort;
+@@ -725,9 +712,7 @@ mabort()
+ /*
+  * Get multiple files.
+  */
+-mget(argc, argv)
+-	int argc;
+-	char **argv;
++void mget(int argc, char *argv[])
+ {
+ 	extern jmp_buf jabort;
+ 	sig_t oldintr;
+@@ -863,9 +848,7 @@ onoff(bool)
+  * Show status.
+  */
+ /*ARGSUSED*/
+-status(argc, argv)
+-	int argc;
+-	char *argv[];
++void status(int argc, char *argv[])
+ {
+ 	int i;
+ 
+@@ -1008,9 +991,7 @@ setglob()
+  * set level of debugging.
+  */
+ /*VARARGS*/
+-setdebug(argc, argv)
+-	int argc;
+-	char *argv[];
++void setdebug(int argc, char *argv[])
+ {
+ 	int val;
+ 
+@@ -1036,9 +1017,7 @@ setdebug(argc, argv)
+  * Set current working directory
+  * on remote machine.
+  */
+-cd(argc, argv)
+-	int argc;
+-	char *argv[];
++void cd(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "remote-directory")) {
+@@ -1057,9 +1036,7 @@ cd(argc, argv)
+  * Set current working directory
+  * on local machine.
+  */
+-lcd(argc, argv)
+-	int argc;
+-	char *argv[];
++void lcd(int argc, char *argv[])
+ {
+ 	char buf[MAXPATHLEN];
+ #ifndef GETCWD
+@@ -1093,9 +1070,7 @@ lcd(argc, argv)
+ /*
+  * Delete a single file.
+  */
+-delete(argc, argv)
+-	int argc;
+-	char *argv[];
++void delete(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "remote-file")) {
+@@ -1109,9 +1084,7 @@ delete(argc, argv)
+ /*
+  * Delete multiple files.
+  */
+-mdelete(argc, argv)
+-	int argc;
+-	char **argv;
++void mdelete(int argc, char **argv)
+ {
+ 	extern jmp_buf jabort;
+ 	sig_t oldintr;
+@@ -1152,9 +1125,7 @@ mdelete(argc, argv)
+ /*
+  * Rename a remote file.
+  */
+-renamefile(argc, argv)
+-	int argc;
+-	char *argv[];
++void renamefile(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "from-name"))
+@@ -1173,9 +1144,7 @@ usage:
+  * Get a directory listing
+  * of remote files.
+  */
+-ls(argc, argv)
+-	int argc;
+-	char *argv[];
++void ls(int argc, char *argv[])
+ {
+ 	char *cmd;
+ 
+@@ -1205,9 +1174,7 @@ ls(argc, argv)
+  * Get a directory listing
+  * of multiple remote files.
+  */
+-mls(argc, argv)
+-	int argc;
+-	char **argv;
++void mls(int argc, char **argv)
+ {
+ 	extern jmp_buf jabort;
+ 	sig_t oldintr;
+@@ -1256,9 +1223,7 @@ usage:
+  * Do a shell escape
+  */
+ /*ARGSUSED*/
+-shell(argc, argv)
+-	int argc;
+-	char **argv;
++void shell(int argc, char **argv)
+ {
+ 	int pid;
+ 	sig_t old1, old2;
+@@ -1315,15 +1280,13 @@ shell(argc, argv)
+ 	else {
+ 		code = 0;
+ 	}
+-	return (0);
++	return;
+ }
+ 
+ /*
+  * Send new user information (re-login)
+  */
+-user(argc, argv)
+-	int argc;
+-	char **argv;
++void user(int argc, char **argv)
+ {
+ 	char acct[80], *getpass();
+ 	int n, aflag = 0;
+@@ -1333,7 +1296,7 @@ user(argc, argv)
+ 	if (argc < 2 || argc > 4) {
+ 		printf("usage: %s username [password] [account]\n", argv[0]);
+ 		code = -1;
+-		return (0);
++		return;
+ 	}
+ 	n = command("USER %s", argv[1]);
+ 	if (n == CONTINUE) {
+@@ -1361,19 +1324,19 @@ user(argc, argv)
+ 	}
+ 	if (n != COMPLETE) {
+ 		fprintf(stdout, "Login failed.\n");
+-		return (0);
++		return;
+ 	}
+ 	if (!aflag && argc == 4) {
+ 		(void) command("ACCT %s", argv[3]);
+ 	}
+-	return (1);
++	return;
+ }
+ 
+ /*
+  * Print working directory.
+  */
+ /*VARARGS*/
+-pwd()
++void pwd(int argc, char *argv[])
+ {
+ 	int oldverbose = verbose;
+ 
+@@ -1391,9 +1354,7 @@ pwd()
+ /*
+  * Make a directory.
+  */
+-makedir(argc, argv)
+-	int argc;
+-	char *argv[];
++void makedir(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "directory-name")) {
+@@ -1411,9 +1372,7 @@ makedir(argc, argv)
+ /*
+  * Remove a directory.
+  */
+-removedir(argc, argv)
+-	int argc;
+-	char *argv[];
++void removedir(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "directory-name")) {
+@@ -1431,9 +1390,7 @@ removedir(argc, argv)
+ /*
+  * Send a line, verbatim, to the remote machine.
+  */
+-quote(argc, argv)
+-	int argc;
+-	char *argv[];
++void quote(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "command line to send")) {
+@@ -1449,9 +1406,7 @@ quote(argc, argv)
+  * is sent verbatim to the remote machine, except that the
+  * word "SITE" is added at the front.
+  */
+-site(argc, argv)
+-	int argc;
+-	char *argv[];
++void site(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "arguments to SITE command")) {
+@@ -1488,9 +1443,7 @@ quote1(initial, argc, argv)
+ 	}
+ }
+ 
+-do_chmod(argc, argv)
+-	int argc;
+-	char *argv[];
++void do_chmod(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "mode"))
+@@ -1504,9 +1457,7 @@ usage:
+ 	(void) command("SITE CHMOD %s %s", argv[1], argv[2]);
+ }
+ 
+-do_umask(argc, argv)
+-	int argc;
+-	char *argv[];
++void do_umask(int argc, char *argv[])
+ {
+ 	int oldverbose = verbose;
+ 
+@@ -1559,7 +1510,7 @@ quit()
+ /*
+  * Terminate session, but don't exit.
+  */
+-disconnect()
++void disconnect(void)
+ {
+ 	extern FILE *cout;
+ 	extern int data;
+@@ -1677,9 +1628,7 @@ proxabort()
+ 	longjmp(abortprox,1);
+ }
+ 
+-doproxy(argc,argv)
+-	int argc;
+-	char *argv[];
++void doproxy(int argc, char *argv[])
+ {
+ 	extern struct cmd cmdtab[];
+ 	extern jmp_buf abortprox;
+@@ -1751,9 +1700,7 @@ setcr()
+ 	code = crflag;
+ }
+ 
+-setntrans(argc,argv)
+-	int argc;
+-	char *argv[];
++void setntrans(int argc, char *argv[])
+ {
+ 	if (argc == 1) {
+ 		ntflag = 0;
+@@ -1801,9 +1748,7 @@ dotrans(name)
+ 	return(new);
+ }
+ 
+-setnmap(argc, argv)
+-	int argc;
+-	char *argv[];
++void setnmap(int argc, char *argv[])
+ {
+ 	char *cp;
+ 
+@@ -2027,9 +1972,7 @@ cdup()
+ }
+ 
+ /* restart transfer at specific point */
+-restart(argc, argv)
+-	int argc;
+-	char *argv[];
++void restart(int argc, char *argv[])
+ {
+ 	extern long atol();
+ 	if (argc != 2)
+@@ -2042,14 +1985,12 @@ restart(argc, argv)
+ }
+ 
+ /* show remote system type */
+-syst()
++void syst(int argc, char *argv[])
+ {
+ 	(void) command("SYST");
+ }
+ 
+-macdef(argc, argv)
+-	int argc;
+-	char *argv[];
++void macdef(int argc, char *argv[])
+ {
+ 	char *tmp;
+ 	int c;
+@@ -2110,9 +2051,7 @@ macdef(argc, argv)
+ /*
+  * get size of file on remote machine
+  */
+-sizecmd(argc, argv)
+-	int argc;
+-	char *argv[];
++void sizecmd(int argc, char *argv[])
+ {
+ 
+ 	if (argc < 2 && !another(&argc, &argv, "filename")) {
+@@ -2126,9 +2065,7 @@ sizecmd(argc, argv)
+ /*
+  * get last modification time of file on remote machine
+  */
+-modtime(argc, argv)
+-	int argc;
+-	char *argv[];
++void modtime(int argc, char *argv[])
+ {
+ 	int overbose;
+ 
+@@ -2155,9 +2092,7 @@ modtime(argc, argv)
+ /*
+  * show status on reomte machine
+  */
+-rmtstatus(argc, argv)
+-	int argc;
+-	char *argv[];
++void rmtstatus(int argc, char *argv[])
+ {
+ 	(void) command(argc > 1 ? "STAT %s" : "STAT" , argv[1]);
+ }
