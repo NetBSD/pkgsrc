@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
+$NetBSD: patch-am,v 1.3 2013/03/02 17:51:49 joerg Exp $
 
---- src/lib/fte/x11.c.orig	1993-04-14 21:44:56.000000000 +0200
+--- src/lib/fte/x11.c.orig	1993-04-14 19:44:56.000000000 +0000
 +++ src/lib/fte/x11.c
 @@ -12,6 +12,7 @@ Author: 1988 Jeffrey M. Hsu
  #ifdef HAS_X11
@@ -10,7 +10,16 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
  
  #  include "util.h"
  
-@@ -62,6 +63,10 @@ typedef struct x11info {
+@@ -39,7 +40,7 @@ extern int _Xdebug;
+ /* forward declarations */
+ extern void handlebuttonev(), handlekeypressed(), killwin(), hardcopy(),
+ 	    redraw(), resize();
+-int errorhandler();
++static void errorhandler(Display *display, XErrorEvent *errorev);
+ 
+ #define RAD_TO_DEG	(180.0 / M_PI)
+ 
+@@ -62,6 +63,12 @@ typedef struct x11info {
  #define DEVDEP(g) (*((X11devdep *) (g)->devdep))
  
  static void linear_arc( );
@@ -18,9 +27,24 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
 +static void initcolors( );
 +static void X_ScreentoData( );
 +
++static void slopelocation(GRAPH *graph, int x0, int y0);
++
  static Display *display;
  static GC xorgc;
  static char *xlinestyles[NUMLINESTYLES] = {	/* test patterns XXX */
+@@ -145,10 +152,8 @@ X11_Init()
+ 
+ }
+ 
+-int
+-errorhandler(display, errorev)
+-Display *display;
+-XErrorEvent *errorev;
++static void
++errorhandler(Display *display, XErrorEvent *errorev)
+ {
+ 	XGetErrorText(display, errorev->error_code, ErrorMessage, 1024);
+ 	externalerror(ErrorMessage);
 @@ -302,7 +307,7 @@ GRAPH *graph;
  	return (0);
  }
@@ -39,7 +63,29 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
  initcolors(graph)
      GRAPH *graph;
  {
-@@ -773,12 +778,15 @@ GRAPH *graph;
+@@ -405,9 +410,7 @@ int x1, y1, x2, y2;
+ }
+ 
+ /*ARGSUSED*/
+-X11_Arc(x0, y0, radius, theta1, theta2)
+-int x0, y0, radius;
+-double theta1, theta2;
++void X11_Arc(int x0, int y0, int radius, double theta1, double theta2)
+ {
+ 
+     int	t1, t2;
+@@ -612,9 +615,7 @@ caddr_t clientdata, calldata;
+ }
+ #  endif
+ 
+-slopelocation(graph, x0, y0)
+-GRAPH *graph;
+-int x0, y0;         /* initial position of mouse */
++static void slopelocation(GRAPH *graph, int x0, int y0)
+ {
+ 
+ 	int x1, y1;
+@@ -773,12 +774,15 @@ GRAPH *graph;
  	        graph->commandline, fx0, fx1, fy0, fy1);
  	}
  
@@ -55,7 +101,14 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
  
  	(void) cp_evloop(buf);
  
-@@ -921,7 +929,8 @@ X11_Input(request, response)
+@@ -915,13 +919,12 @@ static int inchar(fp)
+ }
+ #  endif
+ 
+-X11_Input(request, response)
+-    REQUEST *request;
+-    RESPONSE *response;
++void X11_Input(REQUEST *request, RESPONSE *response)
  {
  
  	XEvent ev;
@@ -65,7 +118,7 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
  
  	switch (request->option) {
  	  case char_option:
-@@ -938,14 +947,15 @@ X11_Input(request, response)
+@@ -938,14 +941,15 @@ X11_Input(request, response)
  	        XtDispatchEvent(&ev);
  	      }
  
@@ -85,7 +138,7 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
  		    /* handle ALL X events */
  		    while (XtPending()) {
  			  XtNextEvent(&ev);
-@@ -953,7 +963,7 @@ X11_Input(request, response)
+@@ -953,7 +957,7 @@ X11_Input(request, response)
  		    }
  	      }
  
@@ -94,7 +147,7 @@ $NetBSD: patch-am,v 1.2 2006/10/09 20:04:38 mlelstv Exp $
  		    response->reply.ch = inchar(request->fp);
  		    goto out;
  	      }
-@@ -995,10 +1005,11 @@ out:
+@@ -995,10 +999,11 @@ out:
  
  }
  
