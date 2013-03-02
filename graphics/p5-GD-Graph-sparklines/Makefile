@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/06 14:11:10 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/02 10:44:35 tron Exp $
 #
 
 DISTNAME=	GD-Graph-sparklines-0.2
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 
-MAINTAINER=	heinz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/GD-Graph-sparklines/
 COMMENT=	Perl module for creating sparklines
 
