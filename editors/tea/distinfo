@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/14 04:49:08 reed Exp $
+$NetBSD: distinfo,v 1.2 2013/03/02 18:13:49 joerg Exp $
 
 SHA1 (tea-16.0.5.tar.bz2) = d1c38a7dec406a5a935373fea35b650f04a0331c
 RMD160 (tea-16.0.5.tar.bz2) = 16ee63c77486b000d322704607af1e8354bc5015
 Size (tea-16.0.5.tar.bz2) = 443526 bytes
 SHA1 (patch-aa) = 6d92c32956d46304703d0267c99b97075b1a349c
 SHA1 (patch-ab) = d9643f3fc1469744406a4c6de6aeb96f4709cbbb
+SHA1 (patch-src_image__browser.c) = a31f4e1d9cfaa691c5c1f7a86c81cc8b8cef4e84
+SHA1 (patch-src_rox__strings.c) = 7f50cf35d66b2529a2a19ca9628824f70c9c0ffa
+SHA1 (patch-src_tea__text__document.c) = 8c4cf064f10a1fa87ac2b0fb1ac9dbf0a609b410
