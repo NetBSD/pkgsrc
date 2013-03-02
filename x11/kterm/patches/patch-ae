@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2005/11/29 06:18:52 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2013/03/02 17:54:52 joerg Exp $
 
---- charproc.c.orig	2005-11-29 06:09:50.000000000 +0000
+--- charproc.c.orig	2013-03-01 13:07:29.000000000 +0000
 +++ charproc.c
 @@ -71,6 +71,7 @@ in this Software without prior written a
  #define Select select
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.1 2005/11/29 06:18:52 joerg Exp $
  #include <errno.h>
  #include <setjmp.h>
  #include <ctype.h>
-@@ -101,9 +102,6 @@ extern jmp_buf VTend;
+@@ -102,9 +103,6 @@ extern jmp_buf VTend;
  
  extern XtAppContext app_con;
  extern Widget toplevel;
@@ -20,3 +20,92 @@ $NetBSD: patch-ae,v 1.1 2005/11/29 06:18:52 joerg Exp $
  extern fd_set Select_mask;
  extern fd_set X_mask;
  extern fd_set pty_mask;
+@@ -350,12 +348,22 @@ extern void HandleBeginConversion();
+ extern Boolean SendMousePosition();
+ extern void ScrnSetAttributes();
+ 
++void RevIndex(TScreen *screen, int amount);
++void Index(TScreen *screen, int amount);
++
+ /*
+  * NOTE: VTInitialize zeros out the entire ".screen" component of the 
+  * XtermWidget, so make sure to add an assignment statement in VTInitialize() 
+  * for each new ".screen" field added to this resource list.
+  */
+ 
++static void FromStatus(void);
++void ShowStatus(void);
++void HideStatus(void);
++void EraseStatus(void);
++void HideCursor(void);
++void ShowCursor(void);
++
+ /* Defaults */
+ static  Boolean	defaultFALSE	   = FALSE;
+ static  Boolean	defaultTRUE	   = TRUE;
+@@ -4333,9 +4341,9 @@ static Boolean VTSetValues (cur, request
+     }
+     if (curvt->misc.statusline != newvt->misc.statusline) {
+ 	if (newvt->misc.statusline) {
+-	    ShowStatus(&newvt->screen);
++	    ShowStatus();
+ 	} else {
+-	    HideStatus(&newvt->screen);
++	    HideStatus();
+ 	}
+ 	update_statusline();
+     }
+@@ -4347,7 +4355,7 @@ static Boolean VTSetValues (cur, request
+ /*
+  * Shows cursor at new cursor position in screen.
+  */
+-ShowCursor()
++void ShowCursor(void)
+ {
+ 	register TScreen *screen = &term->screen;
+ 	register int x, y, flags;
+@@ -4471,7 +4479,7 @@ ShowCursor()
+ /*
+  * hide cursor at previous cursor position in screen.
+  */
+-HideCursor()
++void HideCursor(void)
+ {
+ 	register TScreen *screen = &term->screen;
+ #ifndef KTERM
+@@ -4667,7 +4675,7 @@ int col;
+ 	screen->cur_col = col;
+ }
+ 
+-FromStatus()
++static void FromStatus(void)
+ {
+ 	register TScreen *screen = &term->screen;
+ 
+@@ -4677,7 +4685,7 @@ FromStatus()
+ 	CursorRestore(term, &screen->statussc);
+ }
+ 
+-ShowStatus()
++void ShowStatus(void)
+ {
+ 	register TScreen *screen = &term->screen;
+ 
+@@ -4690,7 +4698,7 @@ ShowStatus()
+ 		  Height(screen) + screen->border * 2 + screen->statusheight);
+ }
+ 
+-HideStatus()
++void HideStatus(void)
+ {
+ 	register TScreen *screen = &term->screen;
+ # ifndef KTERM
+@@ -4716,7 +4724,7 @@ HideStatus()
+ 		  Height(screen) + screen->border * 2);
+ }
+ 
+-EraseStatus()
++void EraseStatus(void)
+ {
+ 	register TScreen *screen = &term->screen;
+ 	register int j, pix;

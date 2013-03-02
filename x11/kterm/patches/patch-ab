@@ -1,37 +1,87 @@
-$NetBSD: patch-ab,v 1.1 2001/04/23 04:44:21 toshii Exp $
+$NetBSD: patch-ab,v 1.2 2013/03/02 17:54:52 joerg Exp $
 
---- misc.c.orig	Fri Jul 12 14:01:43 1996
+--- misc.c.orig	2013-03-01 13:15:57.000000000 +0000
 +++ misc.c
-@@ -242,9 +242,7 @@
- 					(Widget)tekWidget : (Widget)term)))
- # endif /* !KTERM_NOTEK */
- #endif
--      if (((ev->detail) != NotifyInferior) &&
--	  ev->focus &&
--	  !(screen->select & FOCUS))
-+      if (((ev->detail) != NotifyInferior) && ev->focus)
- 	selectwindow(screen, INWINDOW);
- }
+@@ -48,6 +48,10 @@
+ #include "error.h"
+ #include "menu.h"
  
-@@ -271,9 +269,7 @@
- 					(Widget)tekWidget : (Widget)term)))
- # endif /* !KTERM_NOTEK */
- #endif
--      if (((ev->detail) != NotifyInferior) &&
--	  ev->focus &&
--	  !(screen->select & FOCUS))
-+      if (((ev->detail) != NotifyInferior) && ev->focus)
- 	unselectwindow(screen, INWINDOW);
- }
++void Bell(int which, int percent);
++void selectwindow(TScreen *screen, int flag);
++void unselectwindow(TScreen *screen, int flag);
++
+ extern jmp_buf Tekend;
+ extern jmp_buf VTend;
  
-@@ -358,8 +354,8 @@
- 	if(!Ttoggled) TCursorToggle(TOGGLE);
-     } else {
+@@ -61,7 +65,7 @@ extern char *getenv();
+ static void DoSpecialEnterNotify();
+ static void DoSpecialLeaveNotify();
+ 
+-xevents()
++void xevents(void)
+ {
+ 	XEvent event;
+ 	register TScreen *screen = &term->screen;
+@@ -311,9 +315,7 @@ caddr_t eventdata;
+ 
+ 
+ 
+-selectwindow(screen, flag)
+-register TScreen *screen;
+-register int flag;
++void selectwindow(TScreen *screen, int flag)
+ {
+ #ifndef KTERM_NOTEK
+ 	if(screen->TekEmu) {
+@@ -341,9 +343,7 @@ register int flag;
  #endif /* !KTERM_NOTEK */
--	if (screen->xic)
--	    XUnsetICFocus(screen->xic);
-+ 	if (screen->xic && screen->select == 0)
-+ 	    XUnsetICFocus(screen->xic);
- 	screen->select &= ~flag;
- 	if(screen->cursor_state &&
- 	   (screen->cursor_col != screen->cur_col ||
+ }
+ 
+-unselectwindow(screen, flag)
+-register TScreen *screen;
+-register int flag;
++void unselectwindow(TScreen *screen, int flag)
+ {
+     if (screen->always_highlight) return;
+ 
+@@ -370,9 +370,7 @@ register int flag;
+ 
+ static long lastBellTime;	/* in milliseconds */
+ 
+-Bell(which,percent)
+-     int which;
+-     int percent;
++void Bell(int which, int percent)
+ {
+     extern XtermWidget term;
+     register TScreen *screen = &term->screen;
+@@ -596,8 +594,7 @@ creat_as(uid, gid, pathname, mode)
+  * by default.
+  */ 
+ 
+-StartLog(screen)
+-register TScreen *screen;
++void StartLog(TScreen *screen)
+ {
+ 	register char *cp;
+ 	register int i;
+@@ -706,8 +703,7 @@ register TScreen *screen;
+ 	update_logging();
+ }
+ 
+-CloseLog(screen)
+-register TScreen *screen;
++void CloseLog(TScreen *screen)
+ {
+ 	if(!screen->logging || (screen->inhibit & I_LOG))
+ 		return;
+@@ -911,8 +907,7 @@ int code;
+  * was allocated using calloc, with enough extra room at the end so not
+  * to have to do a realloc().
+  */
+-Setenv (var, value)
+-register char *var, *value;
++void Setenv (char *var, char *value)
+ {
+ 	extern char **environ;
+ 	register int envindex = 0;
