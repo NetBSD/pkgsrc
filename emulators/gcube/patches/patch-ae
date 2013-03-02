@@ -1,9 +1,18 @@
-$NetBSD: patch-ae,v 1.1 2006/06/26 10:56:57 rillig Exp $
+$NetBSD: patch-ae,v 1.2 2013/03/02 18:13:14 joerg Exp $
 
 Thou shalt not use reserved identifiers.
 
---- gx_transform.c.orig	2005-01-12 02:23:37.000000000 +0100
-+++ gx_transform.c	2006-06-26 12:46:19.000000000 +0200
+--- gx_transform.c.orig	2005-01-12 01:23:37.000000000 +0000
++++ gx_transform.c
+@@ -34,7 +34,7 @@ float vdq, ndq, tdq[8];
+ 
+ 
+ 
+-inline __u32 color_unpack_rgb565 (__u32 X)
++__u32 color_unpack_rgb565 (__u32 X)
+ {
+ #ifdef LIL_ENDIAN
+ 	return (((X & 0xf800) >>  8)  | ((X & 0xe000) >> 13)  |
 @@ -52,15 +52,15 @@ inline __u32 color_unpack_rgb565 (__u32 
  
  inline __u32 color_unpack_rgba4 (__u32 X)
@@ -24,3 +33,39 @@ Thou shalt not use reserved identifiers.
  }
  
  
+@@ -111,7 +111,7 @@ inline __u32 color_unpack_rgb4a3 (__u32 
+ }
+ 
+ 
+-inline __u32 color_unpack_rgb5a3 (__u32 X)
++__u32 color_unpack_rgb5a3 (__u32 X)
+ {
+ 	if (X & 0x8000)
+ 		return (color_unpack_rgb555 (X) | MASK_ALPHA);
+@@ -128,7 +128,7 @@ inline __u32 color_unpack_i4 (__u32 X)
+ }
+ 
+ 
+-inline __u32 color_unpack_i8 (__u32 X)
++__u32 color_unpack_i8 (__u32 X)
+ {
+ 	X |= X << 8;
+ 	return (X | (X << 16));
+@@ -151,7 +151,7 @@ inline __u32 color_unpack_ia4 (__u32 X)
+ }
+ 
+ 
+-inline __u32 color_unpack_ia8 (__u32 X)
++__u32 color_unpack_ia8 (__u32 X)
+ {
+ 	__u32 a = X & 0xff00;
+ 
+@@ -5663,7 +5663,7 @@ inline GXLight *xf_get_light (int i)
+ }
+ 
+ 
+-inline void calc_color (float outcolor[4], float incolor[4], int chn, float pos[3], float normal[3])
++static inline void calc_color (float outcolor[4], float incolor[4], int chn, float pos[3], float normal[3])
+ {
+ 	float lightsum[4], lcolor[4], tcolor[4];
+ 	__u32 lmask;

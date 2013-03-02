@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.1 2006/06/26 10:56:57 rillig Exp $
+$NetBSD: patch-ag,v 1.2 2013/03/02 18:13:14 joerg Exp $
 
 Thou shalt not use reserved identifiers.
 
---- tplx.c.orig	2004-12-27 16:57:42.000000000 +0100
-+++ tplx.c	2006-06-26 12:50:49.000000000 +0200
+--- tplx.c.orig	2004-12-27 15:57:42.000000000 +0000
++++ tplx.c
 @@ -37,13 +37,13 @@
  
  # define BSWAP_16(B)\
@@ -22,9 +22,41 @@ Thou shalt not use reserved identifiers.
  	})
  
  #ifdef LIL_ENDIAN
-@@ -135,15 +135,15 @@ inline __u32 color_unpack_rgb565 (__u32 
+@@ -103,21 +103,17 @@ typedef struct
+ 	__u32 offset;
+ } TPLPaletteHeader;
  
- inline __u32 color_unpack_rgba4 (__u32 X)
+-
+-#define TPLHeader(n) \
+-			struct\
+-			{\
+-				__u32 magic;\
+-				__u32 ntextures;\
+-				__u32 texture_size;\
+-				TPLTexture textures[n];\
+-			}\
+-
++struct tplheader {
++	__u32 magic;
++	__u32 ntextures;
++	__u32 texture_size;
++	TPLTexture textures[];
++};
+ 
+ __u8 texbuff[1024*1024*4];
+ 
+ 
+-inline __u32 color_unpack_rgb565 (__u32 X)
++__u32 color_unpack_rgb565 (__u32 X)
+ {
+ #ifdef LIL_ENDIAN
+ 	return (((X & 0xf800) >>  8)  | ((X & 0xe000) >> 13)  |
+@@ -133,21 +129,21 @@ inline __u32 color_unpack_rgb565 (__u32 
+ }
+ 
+ 
+-inline __u32 color_unpack_rgba4 (__u32 X)
++__u32 color_unpack_rgba4 (__u32 X)
  {
 -	__u32 _X = X;
 +	__u32 m_X = X;
@@ -41,4 +73,89 @@ Thou shalt not use reserved identifiers.
 +	return (m_X | (m_X << 4));
  }
  
+ 
+-inline __u32 color_unpack_rgba6 (__u32 X)
++__u32 color_unpack_rgba6 (__u32 X)
+ {
+ #ifdef LIL_ENDIAN
+ 	return ((X & 0xfc0000) >> 16) | ((X & 0xc00000) >> 22) |
+@@ -163,7 +159,7 @@ inline __u32 color_unpack_rgba6 (__u32 X
+ }
+ 
+ // RGB5 1rrr rrgg gggb bbbb
+-inline __u32 color_unpack_rgb555 (__u32 X)
++__u32 color_unpack_rgb555 (__u32 X)
+ {
+ #ifdef LIL_ENDIAN
+ 	return ((X & 0x7c00) >>  7) | ((X & 0x7000) >> 12) |
+@@ -178,7 +174,7 @@ inline __u32 color_unpack_rgb555 (__u32 
+ 
+ 
+ // RGB4A3  0aaa rrrr gggg bbbb
+-inline __u32 color_unpack_rgb4a3 (__u32 X)
++__u32 color_unpack_rgb4a3 (__u32 X)
+ {
+ #ifdef LIL_ENDIAN
+ 	return ((X & 0x0f00) >>  4) | ((X & 0x0f00) >>  8) |
+@@ -194,7 +190,7 @@ inline __u32 color_unpack_rgb4a3 (__u32 
+ }
+ 
+ 
+-inline __u32 color_unpack_rgb5a3 (__u32 X)
++__u32 color_unpack_rgb5a3 (__u32 X)
+ {
+ 	if (X & 0x8000)
+ 		return (color_unpack_rgb555 (X) | MASK_ALPHA);
+@@ -203,7 +199,7 @@ inline __u32 color_unpack_rgb5a3 (__u32 
+ }
+ 
+ 
+-inline __u32 color_unpack_i4 (__u32 X)
++__u32 color_unpack_i4 (__u32 X)
+ {
+ 	X |= X << 4;
+ 	X |= X << 8;
+@@ -211,14 +207,14 @@ inline __u32 color_unpack_i4 (__u32 X)
+ }
+ 
+ 
+-inline __u32 color_unpack_i8 (__u32 X)
++__u32 color_unpack_i8 (__u32 X)
+ {
+ 	X |= X << 8;
+ 	return (X | (X << 16));
+ }
+ 
+ 
+-inline __u32 color_unpack_ia4 (__u32 X)
++__u32 color_unpack_ia4 (__u32 X)
+ {
+ 	__u32 a = X & 0xf0;
+ 
+@@ -234,7 +230,7 @@ inline __u32 color_unpack_ia4 (__u32 X)
+ }
+ 
+ 
+-inline __u32 color_unpack_ia8 (__u32 X)
++__u32 color_unpack_ia8 (__u32 X)
+ {
+ 	__u32 a = X & 0xff00;
+ 
+@@ -826,7 +822,7 @@ int extract_textures (char *buff)
+ {
+ 	char temp[256];
+ 	int i;
+-	TPLHeader (1) *hdr = (void *)buff;
++	struct tplheader *hdr = (void *)buff;
+ 
+ 
+ 	if (BSWAP32 (hdr->magic) != TPL_MAGIC)
+@@ -839,7 +835,7 @@ int extract_textures (char *buff)
+ 	{
+ 		int n = BSWAP32 (((__u32 *)buff)[1]);
+ 		// using variable length array
+-		TPLHeader (n) *hdr = (void *) buff;
++		struct tplheader *hdr = (void *)buff;
+ 		TPLTextureHeader *texhdr = (void *) &buff[BSWAP32 (hdr->textures[0].texture_header_offset)];
+ 		TPLPaletteHeader *palhdr;
  
