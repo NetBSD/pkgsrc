@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/06 02:07:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/03/02 18:11:32 joerg Exp $
 
 SHA1 (gamazons-0.83.tar.gz) = 62ef6bfaeaaf36a31f00377599feb286d489bb27
 RMD160 (gamazons-0.83.tar.gz) = 2fd9433846173a7bc53eb7abd9dfbf367460df5e
 Size (gamazons-0.83.tar.gz) = 258614 bytes
 SHA1 (patch-aa) = 9f2db32d979eace078aa0b871142d1c6c13e1d5b
+SHA1 (patch-src_callbacks.c) = cb3b8c77d9c49c1517020e25e740d632d88c7305
