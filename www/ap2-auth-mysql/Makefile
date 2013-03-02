@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2012/10/28 06:30:06 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/03/02 20:33:33 wiz Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
 PKGNAME=		${APACHE_PKG_PREFIX}-auth-mysql-1.11.12
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		www databases
 MASTER_SITES=		ftp://ftp.kcilink.com/pub/
 DISTFILES=		${DISTNAME}.gz mysql-group-auth.txt
