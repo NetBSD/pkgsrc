@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/23 02:35:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/02 18:00:14 joerg Exp $
 
 DISTNAME=		MediaInfo_CLI_0.7.62_GNU_FromSource
 PKGNAME=		mediainfo-0.7.62
@@ -15,6 +15,8 @@ WRKSRC=			${WRKDIR}/MediaInfo_CLI_GNU_FromSource
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+
+MAKE_JOBS_SAFE=		no
 
 OVERRIDE_DIRDEPTH=	4
 INSTALLATION_DIRS=	bin
