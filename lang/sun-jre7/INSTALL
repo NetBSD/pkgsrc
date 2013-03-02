@@ -1,7 +1,7 @@
-# $NetBSD: INSTALL,v 1.1 2012/12/11 14:47:17 ryoon Exp $
+# $NetBSD: INSTALL,v 1.2 2013/03/02 18:04:31 joerg Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	${PREFIX}/bin/sun7-java -Xshare:dump
+	${PREFIX}/bin/sun7-java -Xshare:dump -mx128m
 	;;
 esac
