@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/19 14:58:31 taca Exp $
+# $NetBSD: Makefile,v 1.18 2013/03/02 20:33:23 wiz Exp $
 
 MODNAME=		mysql
+PKGREVISION=		1
 CATEGORIES+=		databases
 COMMENT=		PHP extension for MySQL databases
 
