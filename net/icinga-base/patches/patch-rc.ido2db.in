@@ -1,0 +1,13 @@
+$NetBSD: patch-rc.ido2db.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+
+--- rc.ido2db.in.orig	2013-01-13 22:18:37.000000000 +0000
++++ rc.ido2db.in
+@@ -104,7 +104,7 @@ printstatus_ido2db()
+ {
+ 	if status_ido2db $1 $2; then
+ 		echo "$servicename (pid $Ido2dbPID) is running..."
+-	elif test $? == 2; then
++	elif test $? = 2; then
+ 		echo "$servicename is not running but subsystem locked"
+ 	else
+ 		echo "$servicename is not running"
