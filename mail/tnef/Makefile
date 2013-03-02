@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 12:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/03/02 10:44:37 tron Exp $
 #
 
 DISTNAME=	tnef-1.4.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tnef/}
 
-MAINTAINER=	heinz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Decode MS-TNEF MIME attachments
 

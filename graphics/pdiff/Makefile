@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/16 11:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/03/02 10:44:35 tron Exp $
 #
 
 DISTNAME=		PerceptualDiff-1.0.1
@@ -7,7 +7,7 @@ PKGREVISION=		7
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pdiff/}
 
-MAINTAINER=		heinz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pdiff.sourceforge.net/
 COMMENT=		Image comparison through perceptually based image metric
 
