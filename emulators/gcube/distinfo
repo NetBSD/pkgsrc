@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/11/29 06:17:57 sbd Exp $
+$NetBSD: distinfo,v 1.6 2013/03/02 18:13:14 joerg Exp $
 
 SHA1 (gcube-0.4-src.tar.bz2) = dae967f8aedfc2115c3720dfe2c523128fddc8b6
 RMD160 (gcube-0.4-src.tar.bz2) = 9a7c13ed611da22705f960686eea225e30b61dc6
@@ -7,6 +7,9 @@ SHA1 (patch-aa) = 6568ce5f29e26c80f8537f20a5babaa212a9a3f8
 SHA1 (patch-ab) = 8907f650214bec5cdbf032464a1be39cccea5d81
 SHA1 (patch-ac) = 24e52c1b863d858863317de1c34fe9a917f83599
 SHA1 (patch-ad) = 2d21a509b768d6aa269cb30e1adf01279d98bc41
-SHA1 (patch-ae) = ca03b45a7e2e05371b3a495c55af8268d17f80c3
+SHA1 (patch-ae) = 2f0d6ff8e3e7937c48990822b692cc2532789c34
 SHA1 (patch-af) = 295f3c06b5942d19b8e9ad41c220fac42c3fb7f5
-SHA1 (patch-ag) = c84e395b61a849ca3cb6318a2c15aa8b5346a0bc
+SHA1 (patch-ag) = 886676b737029566b4e314465750fcd0db4c176c
+SHA1 (patch-general.c) = 05bf7b82fa224f68fc63ba63116746442218e9d7
+SHA1 (patch-general.h) = 0d6a737c5967179faeb94105592285dc7bf9638a
+SHA1 (patch-gx__transform.h) = 8b0e3b4f202f0a998cdd712eecad4c664d1b0dda
