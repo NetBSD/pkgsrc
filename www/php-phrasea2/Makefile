@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:57 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/02 20:33:34 wiz Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
 
 MODNAME=		phrasea2
-PKGREVISION=		1
+PKGREVISION=		2
 PECL_VERSION=		${VERS}
 PECL_LEGACY_VERSION_SCHEME=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/bin/src/php_phrasea2
