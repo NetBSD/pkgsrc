@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:55 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/02 10:44:35 tron Exp $
 #
 
 DISTNAME=		sudoku-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.laurasia.com.au/downloads/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		heinz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.laurasia.com.au/downloads/
 COMMENT=		Commandline version of sudoku board game
 LICENSE=		public-domain
