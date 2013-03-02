@@ -1,0 +1,33 @@
+# $NetBSD: Makefile.common,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+#
+# used by net/icinga-base/Makefile
+
+# The following variables can be override in mk.conf.
+ICINGA_GROUP?=		icinga
+ICINGA_USER?=		icinga
+ICINGACMD_GROUP?=	${APACHE_GROUP}
+ICINGADIR?=		${VARBASE}/spool/icinga
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_GROUPS_VARS+=	ICINGA_GROUP ICINGACMD_GROUP
+PKG_USERS_VARS+=	ICINGA_USER
+
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		autoconf gmake
+
+PKG_SYSCONFSUBDIR=	icinga
+
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/icinga
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${ICINGADIR}
+CONFIGURE_ARGS+=	--with-cgi-log-dir=${PREFIX}/share/icinga/log
+
+CONFIGURE_ARGS+=	--with-cgiurl=/icinga/cgi-bin
+CONFIGURE_ARGS+=	--with-htmurl=/icinga
+
+BUILD_DEFS+=		ICINGADIR
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
