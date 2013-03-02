@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2011/11/24 13:43:11 joerg Exp $
+$NetBSD: distinfo,v 1.8 2013/03/02 17:59:10 joerg Exp $
 
 SHA1 (kismet-2008-05-R1.tar.gz) = 8355aeb0374a39549dfdc0c73160125eadd7c6e2
 RMD160 (kismet-2008-05-R1.tar.gz) = 5613207b45f85fa72d146009434df984f721ccdc
 Size (kismet-2008-05-R1.tar.gz) = 655362 bytes
 SHA1 (patch-aa) = 84bd0905299e75eb885a299c65752825e85b3234
 SHA1 (patch-ac) = 5e267a8915872f6c1d5d58bd0a6c15223292c4ca
-SHA1 (patch-ae) = eaaf5c5498a38d7b2a6121defdf879622f430003
+SHA1 (patch-ae) = 5c6e69e7c7490d27433e67c0fc15a4352ff2b99d
 SHA1 (patch-af) = e4e176998e78a657178b3e14e614adf27b517eb6
 SHA1 (patch-ag) = cb1e1eaf07ae40128fbe9760c95cfdecc200d22c
 SHA1 (patch-ah) = 67dfa5a2aedb1b651671863177baace4a65c6f26
