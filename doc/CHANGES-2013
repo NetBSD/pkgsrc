@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.751 2013/03/03 07:22:07 obache Exp $
+$NetBSD: CHANGES-2013,v 1.752 2013/03/03 07:31:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/pidgin to 2.10.7 [obache 2013-03-03]
 	Updated chat/pidgin-sametime to 2.10.7 [obache 2013-03-03]
 	Updated chat/pidgin-silc to 2.10.7 [obache 2013-03-03]
+	Updated textproc/py-pygments to 1.6 [obache 2013-03-03]
