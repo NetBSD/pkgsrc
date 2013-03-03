@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11966 2013/03/03 10:25:48 shattered Exp $
+$NetBSD: TODO,v 1.11967 2013/03/03 10:40:47 shattered Exp $
 
 Suggested new packages
 ======================
@@ -988,7 +988,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
-	o photopc-3.05
 	o php-jpgraph-3.0.6
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1193,7 +1192,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tpb-0.6.4
 	o trac-1.0.1
 	o tree-1.6.0
-	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o turba-4.0.3

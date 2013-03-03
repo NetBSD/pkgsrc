@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.753 2013/03/03 10:25:48 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.754 2013/03/03 10:40:47 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1083,3 +1083,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/py-pygments to 1.6 [obache 2013-03-03]
 	Updated audio/abcmidi to 2012-12-01 [shattered 2013-03-03]
 	Updated chat/zircon to 1.18.256 [shattered 2013-03-03]
+	Updated devel/trio to 1.12 [shattered 2013-03-03]
+	Updated graphics/photopc to 3.05 [shattered 2013-03-03]
