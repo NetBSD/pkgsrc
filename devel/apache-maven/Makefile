@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/02/17 17:37:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/03 16:53:42 yyamano Exp $
 #
 
-DISTNAME=	apache-maven-3.0.4
+DISTNAME=	apache-maven-3.0.5
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -25,6 +25,7 @@ SUBST_SED.maven+=	-e 's,@PREFIX@,${PREFIX},g'
 INSTALLATION_DIRS=	bin etc/maven lib/java/maven lib/java/maven/boot
 INSTALLATION_DIRS+=	share/doc/java/maven share/examples/maven
 
+PKG_SYSCONFSUBDIR=	maven
 CONF_FILES+=	share/examples/maven/m2.conf ${PKG_SYSCONFDIR}/m2.conf
 CONF_FILES+=	share/examples/maven/settings.xml ${PKG_SYSCONFDIR}/settings.xml
 
