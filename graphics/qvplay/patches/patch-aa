@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2010/02/03 22:24:06 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2013/03/03 10:53:31 shattered Exp $
 --- Makefile.in.orig	Wed May  5 10:24:39 1999
 +++ Makefile.in	Sun Jun 20 19:21:55 1999
 @@ -10,8 +10,8 @@
@@ -16,9 +16,9 @@ $NetBSD: patch-aa,v 1.2 2010/02/03 22:24:06 joerg Exp $
  # some BSD environment /dev/tty is uucp/bin
  
  install:	all
--	$(INSTALL_PROGRAM) -s -o root -g uucp -m 4755 $(PROG1) $(bindir)/$(PROG1)
--	$(INSTALL_PROGRAM) -s -o root -g uucp -m 4755 $(PROG2) $(bindir)/$(PROG2)
--	$(INSTALL_PROGRAM) -s -o root -g uucp -m 4755 $(PROG3) $(bindir)/$(PROG3)
+-	$(INSTALL_PROGRAM) -s -o root -g uucp -m 2755 $(PROG1) $(bindir)/$(PROG1)
+-	$(INSTALL_PROGRAM) -s -o root -g uucp -m 2755 $(PROG2) $(bindir)/$(PROG2)
+-	$(INSTALL_PROGRAM) -s -o root -g uucp -m 2755 $(PROG3) $(bindir)/$(PROG3)
 -	$(INSTALL_PROGRAM) -o root -g bin -m 444 $(MAN1) $(mandir)/$(MAN1)
 -	$(INSTALL_PROGRAM) -o root -g bin -m 444 $(MAN2) $(mandir)/$(MAN2)
 -	$(INSTALL_PROGRAM) -o root -g bin -m 444 $(MAN3) $(mandir)/$(MAN3)
