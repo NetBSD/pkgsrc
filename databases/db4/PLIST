@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/03/01 16:10:23 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/03/03 11:55:12 obache Exp $
 bin/db4_archive
 bin/db4_checkpoint
 bin/db4_deadlock
@@ -15,10 +15,10 @@ include/db4/db.h
 include/db4/db_185.h
 include/db4/db_cxx.h
 lib/libdb4-4.8.la
-${PLIST.norm_so}lib/libdb4-4.so
+lib/libdb4-4.so
 lib/libdb4.a
-${PLIST.norm_so}lib/libdb4.so
+lib/libdb4.so
 lib/libdb4_cxx-4.8.la
-${PLIST.norm_so}lib/libdb4_cxx-4.so
+lib/libdb4_cxx-4.so
 lib/libdb4_cxx.a
-${PLIST.norm_so}lib/libdb4_cxx.so
+lib/libdb4_cxx.so
