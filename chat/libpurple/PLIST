@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/08/26 13:14:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.27 2013/03/03 07:17:24 obache Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -184,6 +184,7 @@ share/locale/zh_TW/LC_MESSAGES/pidgin.mo
 share/purple/ca-certs/AOL_Member_CA.pem
 share/purple/ca-certs/AddTrust_External_Root.pem
 share/purple/ca-certs/America_Online_Root_Certification_Authority_1.pem
+share/purple/ca-certs/Baltimore_CyberTrust_Root.pem
 share/purple/ca-certs/CAcert_Class3.pem
 share/purple/ca-certs/CAcert_Root.pem
 share/purple/ca-certs/Deutsche_Telekom_Root_CA_2.pem
