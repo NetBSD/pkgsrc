@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2013/02/17 17:37:41 fhajny Exp $
+$NetBSD: patch-bin_mvn,v 1.1 2013/03/03 16:53:42 yyamano Exp $
 
---- bin/mvn.orig	2012-01-17 08:47:39.000000000 +0000
+Follow pkgsrc path convention.
+
+--- bin/mvn.orig	2013-02-19 13:54:21.000000000 +0000
 +++ bin/mvn
 @@ -69,6 +69,15 @@ if [ -z "$JAVA_HOME" ] ; then
    fi
@@ -27,6 +29,8 @@ $NetBSD: patch-ab,v 1.2 2013/02/17 17:37:41 fhajny Exp $
 +  -classpath "${M2_HOME}"/lib/java/maven/boot/plexus-classworlds-*.jar \
 +  "-Dclassworlds.conf=${M2_HOME}/etc/maven/m2.conf" \
    "-Dmaven.home=${M2_HOME}"  \
+-  ${CLASSWORLDS_LAUNCHER} "$@"
+\ No newline at end of file
 +  "-Dorg.apache.maven.global-settings=${M2_HOME}/etc/maven/settings.xml" \
 +  "-Dorg.apache.maven.global-plugin-registry=${M2_HOME}/etc/maven/plugin-registry.xml" \
-   ${CLASSWORLDS_LAUNCHER} "$@"
++  ${CLASSWORLDS_LAUNCHER} "$@"
