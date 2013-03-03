@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/03/03 11:15:11 shattered Exp $
 
-SHA1 (hackbot-2.15.tgz) = 9fbb613ef8a260414f6336b325b16dae388d59fb
-RMD160 (hackbot-2.15.tgz) = 8f2936b575679884a05021312c7b110128c81e72
-Size (hackbot-2.15.tgz) = 40298 bytes
+SHA1 (hackbot-2.21.tgz) = 20d8545ae1cb17cf98fb18682b351283ef3a8ff4
+RMD160 (hackbot-2.21.tgz) = b4495a03cfa73adffd6e67382b730c02cfe3cc7f
+Size (hackbot-2.21.tgz) = 42688 bytes
