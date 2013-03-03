@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:13 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/03/03 10:59:08 shattered Exp $
 #
 
-DISTNAME=	ifile-1.3.4
-PKGREVISION=	1
+DISTNAME=	ifile-1.3.8
 CATEGORIES=	mail
-MASTER_SITES=	http://www.nongnu.org/ifile/	\
-		http://www.nongnu.org/ifile/old/
+MASTER_SITES=	http://qwone.com/~jason/ifile/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/ifile/
+HOMEPAGE=	http://qwone.com/~jason/ifile/
 COMMENT=	Intelligent mail filtering system
 
 GNU_CONFIGURE=	YES
