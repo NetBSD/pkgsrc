@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2012/10/06 17:54:53 christos Exp $
+# $NetBSD: Makefile.common,v 1.60 2013/03/03 23:53:45 wiz Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -15,7 +15,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
 COMMENT?=		The Network Backup Solution
-LICENSE=		gnu-agpl-v3
+LICENSE=		gnu-agpl-v3-license
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
