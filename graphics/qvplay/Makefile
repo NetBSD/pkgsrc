@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 14:11:18 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/03/03 10:53:31 shattered Exp $
 #
 
-DISTNAME=	qvplay-0.94
+DISTNAME=	qvplay-0.95
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.asahi-net.or.jp/~xg2k-hys/
 
@@ -16,7 +16,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=		${WRKDIR}/QVplay094/src
+WRKSRC=		${WRKDIR}/QVplay095/src
 GNU_CONFIGURE=	yes
 CONFIGURE_HAS_MANDIR=	NO
 
