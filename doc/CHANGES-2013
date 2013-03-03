@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.755 2013/03/03 11:04:24 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.756 2013/03/03 11:21:16 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1088,3 +1088,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/qvplay to 0.95 [shattered 2013-03-03]
 	Updated mail/ifile to 1.3.8 [shattered 2013-03-03]
 	Updated misc/granulate to 0.2 [shattered 2013-03-03]
+	Updated parallel/parallel to 20130122 [shattered 2013-03-03]
+	Updated security/hackbot to 2.21 [shattered 2013-03-03]
+	Updated sysutils/ddrescue to 1.16 [shattered 2013-03-03]
