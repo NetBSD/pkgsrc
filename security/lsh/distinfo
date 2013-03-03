@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/12/16 12:54:41 drochner Exp $
+$NetBSD: distinfo,v 1.10 2013/03/03 01:09:34 joerg Exp $
 
 SHA1 (lsh-2.0.4.tar.gz) = c4e2a0b6a0e20dcba7fe02a0d5605bc00960106a
 RMD160 (lsh-2.0.4.tar.gz) = 24f16d6945f7c801aac190fd0109cad608a317de
@@ -7,3 +7,5 @@ SHA1 (patch-aa) = ae43022c180e9f8ee2bb95fe424f371e834fdf07
 SHA1 (patch-ab) = e241831267630ffcf0b7079627e91c58482427c3
 SHA1 (patch-ac) = a47ceb727fba55ab914d08cb440627a38965edcd
 SHA1 (patch-ad) = 6b20cfebe3b83aad399bd0a1c772d94328be7247
+SHA1 (patch-src_argp_argp-fmtstream.c) = 2a57132fcd1300c5cb2f7285ebb375d347988192
+SHA1 (patch-src_argp_argp-fmtstream.h) = 4b7a6bdde195aff4ae8c49a651d0f4b7fda9f227
