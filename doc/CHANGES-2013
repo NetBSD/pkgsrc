@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.756 2013/03/03 11:21:16 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.757 2013/03/03 12:00:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1091,3 +1091,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/parallel to 20130122 [shattered 2013-03-03]
 	Updated security/hackbot to 2.21 [shattered 2013-03-03]
 	Updated sysutils/ddrescue to 1.16 [shattered 2013-03-03]
+	Updated meta-pkgs/desktop-gnome to 0.5 [wiz 2013-03-03]
