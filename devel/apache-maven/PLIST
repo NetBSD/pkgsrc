@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/17 17:37:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/03/03 16:53:42 yyamano Exp $
 bin/mvn
 lib/java/maven/aether-api-1.13.1.jar
 lib/java/maven/aether-connector-wagon-1.13.1.jar
@@ -27,9 +27,9 @@ lib/java/maven/sisu-guava-0.9.9.jar
 lib/java/maven/sisu-guice-3.1.0-no_aop.jar
 lib/java/maven/sisu-inject-bean-2.3.0.jar
 lib/java/maven/sisu-inject-plexus-2.3.0.jar
-lib/java/maven/wagon-file-2.2.jar
-lib/java/maven/wagon-http-2.2-shaded.jar
-lib/java/maven/wagon-provider-api-2.2.jar
+lib/java/maven/wagon-file-2.4.jar
+lib/java/maven/wagon-http-2.4-shaded.jar
+lib/java/maven/wagon-provider-api-2.4.jar
 share/doc/java/maven/LICENSE.txt
 share/doc/java/maven/NOTICE.txt
 share/doc/java/maven/README.txt
