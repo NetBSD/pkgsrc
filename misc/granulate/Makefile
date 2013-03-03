@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:24 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/03 11:03:29 shattered Exp $
 #
 
-DISTNAME=	granulate-0.1
+DISTNAME=	granulate-0.2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://134.74.16.12/pub/
 
