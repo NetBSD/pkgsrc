@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.758 2013/03/03 17:33:44 yyamano Exp $
+$NetBSD: CHANGES-2013,v 1.759 2013/03/03 20:05:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1093,3 +1093,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/ddrescue to 1.16 [shattered 2013-03-03]
 	Updated meta-pkgs/desktop-gnome to 0.5 [wiz 2013-03-03]
 	Updated devel/apache-maven to 3.0.5 [yyamano 2013-03-03]
+	Updated www/apache22 to 2.2.24 [tron 2013-03-03]
