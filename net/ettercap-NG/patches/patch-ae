@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2011/12/22 22:11:41 marino Exp $
+$NetBSD: patch-ae,v 1.5 2013/03/03 04:52:39 joerg Exp $
 
 --- configure.orig	2005-05-27 15:11:45.000000000 +0000
 +++ configure
@@ -20,7 +20,22 @@ $NetBSD: patch-ae,v 1.4 2011/12/22 22:11:41 marino Exp $
  if test "$gentoo_lt_version" != "$gentoo_ltmain_version"; then
    echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
-@@ -31721,11 +31721,11 @@ echo "$as_me: error: \"*** ettercap cann
+@@ -28261,14 +28261,8 @@ int
+ main ()
+ {
+ 
+-            int main(int argc, char **argv)
+-            {
+                pthread_create(NULL, NULL, NULL, NULL);
+                return 0;
+-            }
+-
+-  ;
+-  return 0;
+ }
+ _ACEOF
+ rm -f conftest.$ac_objext conftest$ac_exeext
+@@ -31721,11 +31715,11 @@ echo "$as_me: error: \"*** ettercap cann
          ac_ec_libnet=$withval
          echo "$as_me:$LINENO: result: $withval" >&5
  echo "${ECHO_T}$withval" >&6
