@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:51 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/03 10:35:07 shattered Exp $
 #
 
-DISTNAME=	trio-1.11
+DISTNAME=	trio-1.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctrio/}
 
