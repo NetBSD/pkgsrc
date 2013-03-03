@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.757 2013/03/03 12:00:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.758 2013/03/03 17:33:44 yyamano Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1092,3 +1092,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/hackbot to 2.21 [shattered 2013-03-03]
 	Updated sysutils/ddrescue to 1.16 [shattered 2013-03-03]
 	Updated meta-pkgs/desktop-gnome to 0.5 [wiz 2013-03-03]
+	Updated devel/apache-maven to 3.0.5 [yyamano 2013-03-03]
