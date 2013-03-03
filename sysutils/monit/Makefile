@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/03/02 10:44:43 tron Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/03 01:09:55 joerg Exp $
 #
 
 DISTNAME=		monit-4.10.1
@@ -55,6 +55,8 @@ SUBST_MESSAGE.monit=	Setting daemon interval
 SUBST_FILES.monit=	monitrc
 SUBST_SED.monit=	-e "s|^\# *set *daemon|set daemon|"
 SUBST_SED.monit+=	-e "s|include */etc/monit.d|include ${PKG_SYSCONFDIR}/monit.d|"
+
+CPPFLAGS.NetBSD+=	-D_KMEMUSER
 
 post-extract:
 	cd ${WRKSRC}/contrib && gzcat monit-OSX-startup.tar.gz | pax -r
