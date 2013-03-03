@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.2 2012/09/09 19:35:20 dholland Exp $
+$NetBSD: patch-al,v 1.3 2013/03/03 01:07:24 joerg Exp $
 
 --- portmon/portmon.c.orig	2000-04-06 19:32:26.000000000 +0000
 +++ portmon/portmon.c
@@ -16,6 +16,13 @@ $NetBSD: patch-al,v 1.2 2012/09/09 19:35:20 dholland Exp $
 +		       /* value */ (u_long)(harray[i]->elapsedsecs),
  		       harray[i]->testseverity) ;
  	  lseek(fdout, -(off_t)sizeof(v), SEEK_CUR);
+@@ -221,5 +223,5 @@ checkports(hv, nhosts)
+   fd_set rset, wset;
+ 
+-  if (nhosts <= 0) return;
++  if (nhosts <= 0) return -1;
+ 
+   FD_ZERO(&rset); FD_ZERO(&wset);
 @@ -659,14 +661,19 @@ static char *Strcasestr(haystack, needle
      do
      {
