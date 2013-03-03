@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:51 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/03 07:31:30 obache Exp $
 #
 
-DISTNAME=	Pygments-1.5
+DISTNAME=	Pygments-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/P/Pygments/
