@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.36 2012/08/01 15:23:46 drochner Exp $
+$NetBSD: distinfo,v 1.37 2013/03/03 07:17:24 obache Exp $
 
-SHA1 (pidgin-2.10.6.tar.bz2) = a0532e7ba2acd205d6a5a4e3624156a980fe3d43
-RMD160 (pidgin-2.10.6.tar.bz2) = 507d64cb719129196c887953edef552db326e805
-Size (pidgin-2.10.6.tar.bz2) = 10007092 bytes
+SHA1 (pidgin-2.10.7.tar.bz2) = 01bc06e3a5712dded3ad4a4913ada12a3cd01e15
+RMD160 (pidgin-2.10.7.tar.bz2) = 51827270c7b55ae134d4b70fc5a5845681d9c1d1
+Size (pidgin-2.10.7.tar.bz2) = 10069279 bytes
 SHA1 (patch-aa) = a41353bbcb742b4127a33b3026f87a79f406da29
 SHA1 (patch-libpurple_protocols_gg_lib_libgadu.h) = 5756134e17ae2ce28d3555cd40354245e22a5bd6
