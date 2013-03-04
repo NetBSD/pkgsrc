@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.763 2013/03/04 17:32:10 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.764 2013/03/04 19:13:27 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Git-Repository to 1.302 [wen 2013-03-04]
 	Updated net/freeDiameter to 1.1.6 [wiz 2013-03-04]
 	Updated mail/libspf2 to 1.2.9nb2 [jperkin 2013-03-04]
+	Updated www/emacs-w3m-snapshot to 1.4.483.20120614 [hiramatsu 2013-03-04]
