@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2013/02/08 23:52:37 pettai Exp $
+# $NetBSD: Makefile,v 1.63 2013/03/04 20:33:15 jperkin Exp $
 
 DISTNAME=	nsd-3.2.15
 CATEGORIES=	net
@@ -54,6 +54,8 @@ PKG_USERS=	${NSD_USER}:${NSD_GROUP}
 CONF_FILES+=	share/examples/nsd/nsd.conf ${PKG_SYSCONFDIR}/nsd.conf
 
 INSTALLATION_DIRS=	share/examples/nsd
+
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/nsd.zones2nsd.conf ${DESTDIR}${PREFIX}/share/examples/nsd
