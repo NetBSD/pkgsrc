@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/04 23:10:50 khorben Exp $
+bin/camera
+bin/gallery
+man/man1/camera.1
+man/man1/gallery.1
+share/applications/camera.desktop
+share/applications/gallery.desktop
+share/doc/html/Camera/camera.html
+share/doc/html/Camera/gallery.html
+share/locale/fr/LC_MESSAGES/Camera.mo
