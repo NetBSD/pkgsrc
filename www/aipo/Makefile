@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/03/03 23:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/04 21:57:21 wiz Exp $
 #
 
 DISTNAME=	aipo${VERSION:S/.//g}0ja_linux32
@@ -10,7 +10,7 @@ MASTER_SITES=	http://aipo.googlecode.com/files/
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.aipo.com/
 COMMENT=	Web-based groupware that supports Japanese interface
-LICENSE=	gnu-agpl-v3-license
+LICENSE=	gnu-agpl-v3
 
 DEPENDS=	jdbc-postgresql92-[0-9]*:../../databases/jdbc-postgresql92
 
