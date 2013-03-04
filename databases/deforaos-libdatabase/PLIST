@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/04 22:04:48 khorben Exp $
+include/Database.h
+include/Database/database.h
+include/Database/engine.h
+lib/Database/engine/pdo.so
+lib/Database/engine/pgsql.so
+lib/Database/engine/sqlite2.so
+lib/Database/engine/sqlite3.so
+lib/libDatabase.a
+lib/libDatabase.so
+lib/libDatabase.so.0
+lib/libDatabase.so.0.0
+lib/pkgconfig/libDatabase.pc
+share/gtk-doc/html/libDatabase/api-index-full.html
+share/gtk-doc/html/libDatabase/ch01.html
+share/gtk-doc/html/libDatabase/deprecated-api-index.html
+share/gtk-doc/html/libDatabase/home.png
+share/gtk-doc/html/libDatabase/index.html
+share/gtk-doc/html/libDatabase/index.sgml
+share/gtk-doc/html/libDatabase/left.png
+share/gtk-doc/html/libDatabase/libDatabase-database.html
+share/gtk-doc/html/libDatabase/libDatabase.devhelp2
+share/gtk-doc/html/libDatabase/right.png
+share/gtk-doc/html/libDatabase/style.css
+share/gtk-doc/html/libDatabase/up.png
