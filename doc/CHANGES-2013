@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.764 2013/03/04 19:13:27 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.765 2013/03/04 19:39:50 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1099,3 +1099,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/freeDiameter to 1.1.6 [wiz 2013-03-04]
 	Updated mail/libspf2 to 1.2.9nb2 [jperkin 2013-03-04]
 	Updated www/emacs-w3m-snapshot to 1.4.483.20120614 [hiramatsu 2013-03-04]
+	Updated filesystems/openafs to 1.6.2 [jakllsch 2013-03-04]
