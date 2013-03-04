@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.760 2013/03/04 11:46:07 wen Exp $
+$NetBSD: CHANGES-2013,v 1.761 2013/03/04 13:01:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1095,3 +1095,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apache-maven to 3.0.5 [yyamano 2013-03-03]
 	Updated www/apache22 to 2.2.24 [tron 2013-03-03]
 	Updated net/p5-Test-TCP to 0.21 [wen 2013-03-04]
+	Updated devel/p5-Git-Repository to 1.302 [wen 2013-03-04]
