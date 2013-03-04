@@ -1,15 +1,17 @@
-$NetBSD: patch-ae,v 1.3 2012/09/17 09:42:47 fhajny Exp $
+$NetBSD: patch-ae,v 1.4 2013/03/04 14:12:40 fhajny Exp $
 
 Use proper installer for script files.
 
---- src/couchdb/priv/Makefile.in.orig	2012-03-29 21:05:38.000000000 +0000
-+++ src/couchdb/priv/Makefile.in
-@@ -85,7 +85,7 @@ couch_icu_driver_la_OBJECTS = $(am_couch
- couch_icu_driver_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
- 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
- 	$(couch_icu_driver_la_LDFLAGS) $(LDFLAGS) -o $@
--couchprivPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-+couchprivPROGRAMS_INSTALL = $(INSTALL_SCRIPT)
- locallibbinPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
- PROGRAMS = $(couchpriv_PROGRAMS) $(locallibbin_PROGRAMS)
- am__objects_1 = couchjs-http.$(OBJEXT) couchjs-main.$(OBJEXT) \
+--- src/couchdb/priv/Makefile.in.orig	2012-12-20 21:28:49.000000000 +0000
++++ src/couchdb/priv/Makefile.in	2013-03-04 13:13:06.147877580 +0000
+@@ -447,8 +447,8 @@ install-couchprivPROGRAMS: $(couchpriv_P
+ 	while read type dir files; do \
+ 	    if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	    test -z "$$files" || { \
+-	    echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL_PROGRAM) $$files '$(DESTDIR)$(couchprivdir)$$dir'"; \
+-	    $(INSTALL_PROGRAM_ENV) $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL_PROGRAM) $$files "$(DESTDIR)$(couchprivdir)$$dir" || exit $$?; \
++	    echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(couchprivdir)$$dir'"; \
++	    $(INSTALL_PROGRAM_ENV) $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(couchprivdir)$$dir" || exit $$?; \
+ 	    } \
+ 	; done
+ 
