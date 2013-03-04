@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2013/03/01 10:35:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.425 2013/03/04 22:05:38 khorben Exp $
 
 COMMENT=	Databases
 
@@ -20,6 +20,7 @@ SUBDIR+=	db4
 SUBDIR+=	db46
 SUBDIR+=	db5
 SUBDIR+=	dbh
+SUBDIR+=	deforaos-libdatabase
 SUBDIR+=	edb
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
