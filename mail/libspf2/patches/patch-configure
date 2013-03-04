@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2013/02/22 11:48:16 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2013/03/04 17:31:56 jperkin Exp $
 
-Don't decend into libreplace, it is an empty library.
+Ensure that libreplace contains at least one symbol.
 
 --- configure.orig	2008-11-04 15:32:56.000000000 +0000
 +++ configure
-@@ -25855,7 +25855,7 @@ done
+@@ -25648,7 +25648,7 @@ done
  
  
  
--ac_config_files="$ac_config_files Makefile Doxyfile src/Makefile src/include/Makefile src/libreplace/Makefile src/libspf2/Makefile src/spfquery/Makefile src/spftest/Makefile src/spfd/Makefile src/spf_example/Makefile"
-+ac_config_files="$ac_config_files Makefile Doxyfile src/Makefile src/include/Makefile src/libspf2/Makefile src/spfquery/Makefile src/spftest/Makefile src/spfd/Makefile src/spf_example/Makefile"
- 
- cat >confcache <<\_ACEOF
- # This file is a shell script that caches the results of configure
+-for ac_func in getopt_long_only strncasecmp
++for ac_func in ensure_libreplace_symbol getopt_long_only strncasecmp
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { echo "$as_me:$LINENO: checking for $ac_func" >&5
