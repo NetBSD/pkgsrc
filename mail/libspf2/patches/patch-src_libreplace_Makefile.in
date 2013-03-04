@@ -1,0 +1,22 @@
+$NetBSD: patch-src_libreplace_Makefile.in,v 1.1 2013/03/04 17:31:56 jperkin Exp $
+
+Ensure libreplace contains at least one symbol.
+
+--- src/libreplace/Makefile.in.orig	2008-11-04 15:33:01.000000000 +0000
++++ src/libreplace/Makefile.in
+@@ -60,6 +60,7 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	$(DEPDIR)/__ns_initparse.Plo \
+ @AMDEP_TRUE@	$(DEPDIR)/__ns_msg_getflag.Plo \
+ @AMDEP_TRUE@	$(DEPDIR)/__ns_name_uncompress.Plo \
++@AMDEP_TRUE@	$(DEPDIR)/ensure_libreplace_symbol.Plo \
+ @AMDEP_TRUE@	$(DEPDIR)/getopt_long_only.Plo \
+ @AMDEP_TRUE@	$(DEPDIR)/malloc.Plo $(DEPDIR)/memcmp.Plo \
+ @AMDEP_TRUE@	$(DEPDIR)/realloc.Plo $(DEPDIR)/strncasecmp.Plo
+@@ -255,6 +256,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/__ns_initparse.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/__ns_msg_getflag.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/__ns_name_uncompress.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ensure_libreplace_symbol.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/getopt_long_only.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/malloc.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/memcmp.Plo@am__quote@
