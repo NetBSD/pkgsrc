@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/04 23:42:06 khorben Exp $
+bin/coder
+bin/sequel
+bin/simulator
+man/man1/coder.1
+man/man1/sequel.1
+man/man1/simulator.1
+share/Coder/Simulator/models/nokia-n800.conf
+share/Coder/Simulator/models/nokia-n9.conf
+share/Coder/Simulator/models/nokia-n900.conf
+share/Coder/Simulator/models/openmoko-gta01.conf
+share/Coder/Simulator/models/openmoko-gta02.conf
+share/applications/coder.desktop
+share/applications/sequel.desktop
+share/applications/simulator.desktop
+share/doc/html/Coder/coder.html
+share/doc/html/Coder/sequel.html
+share/doc/html/Coder/simulator.html
+share/locale/fr/LC_MESSAGES/Coder.mo
