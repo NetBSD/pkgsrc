@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.39 2013/03/02 10:36:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.40 2013/03/04 23:36:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -241,3 +241,5 @@ Pullup ticket #4084 - requested by obache
 multimedia/adobe-flash-plugin10.1: security update
 Pullup ticket #4085 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4087 - requested by tez
+security/mit-krb5: security patch
