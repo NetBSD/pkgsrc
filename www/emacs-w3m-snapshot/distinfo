@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/12/01 17:53:58 minskim Exp $
+$NetBSD: distinfo,v 1.6 2013/03/04 19:12:22 hiramatsu Exp $
 
-SHA1 (w3m-el-snapshot_1.4.442+0.20110729.orig.tar.gz) = 6ef7b01891142ec8c0c8c6f9522d67540fab244d
-RMD160 (w3m-el-snapshot_1.4.442+0.20110729.orig.tar.gz) = b8c21021aa1c3f46554934a82223455b3cdd7cc5
-Size (w3m-el-snapshot_1.4.442+0.20110729.orig.tar.gz) = 983801 bytes
-SHA1 (patch-w3m.el) = 536f58f3ef4c4fda546715d2bf07191d4a3eee5f
+SHA1 (w3m-el-snapshot_1.4.483+0.20120614.orig.tar.gz) = a7a9ce6b664c9b3e4c4b23f8f3ebd8b558c94dac
+RMD160 (w3m-el-snapshot_1.4.483+0.20120614.orig.tar.gz) = 591afd134c6e22af9a3e7b93475f62a0dac61f4e
+Size (w3m-el-snapshot_1.4.483+0.20120614.orig.tar.gz) = 995591 bytes
+SHA1 (patch-Makefile.in) = b580cf5969febf3e4bb3b4229369d601b7444638
+SHA1 (patch-w3m.el) = a4c14deed274e984f854255513ce49dbd320eb83
+SHA1 (patch-w3mhack.el) = ecb7448d7f79b37e2b3229e11f9079062728ebf7

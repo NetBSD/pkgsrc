@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/03/04 19:12:23 hiramatsu Exp $
+
+Compile mew-shimbun.el and mew-w3m.el when
+emacs-w3m-mew option is set.
+
+--- Makefile.in.orig	2013-02-27 14:07:25.000000000 +0900
++++ Makefile.in	2013-02-27 14:07:38.000000000 +0900
+@@ -40,7 +40,7 @@
+ lisp: Makefile
+ 	env test ! -f w3m-util.elc -o w3m-util.elc -nt w3m-util.el || $(MAKE) clean
+ 	env test ! -f w3m-proc.elc -o w3m-proc.elc -nt w3m-proc.el || $(MAKE) clean
+-	$(XEMACSDEBUG)$(EMACS) $(FLAGS) -f w3mhack-compile
++	$(MAKE_ENV) $(XEMACSDEBUG)$(EMACS) $(FLAGS) -f w3mhack-compile
+ 
+ # `w3mhack-what-where' respects DESTDIR
+ what-where:
