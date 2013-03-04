@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/03/03 23:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/03/04 21:57:21 wiz Exp $
 #
 
 DISTNAME=	fengoffice_2.2.0
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://fengoffice.com/web/community/community_index.php
 COMMENT=	Easy to use Open Source Web Office
-LICENSE=	gnu-agpl-v3-license
+LICENSE=	gnu-agpl-v3
 
 CONFLICTS+=	opengoo-[0-9]*
 
