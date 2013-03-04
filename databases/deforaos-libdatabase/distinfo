@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/04 22:04:48 khorben Exp $
+
+SHA1 (libDatabase-0.0.0.tar.gz) = cde77d40a2046109a93527ba061db1fc160c665b
+RMD160 (libDatabase-0.0.0.tar.gz) = 71996997cd9e37767f01ce441ce4da855d5f5d07
+Size (libDatabase-0.0.0.tar.gz) = 14614 bytes
