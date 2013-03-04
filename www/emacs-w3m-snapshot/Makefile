@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/02/17 19:18:10 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/04 19:12:22 hiramatsu Exp $
 
-DISTNAME=	w3m-el-snapshot_1.4.442+0.20110729.orig
-PKGREVISION=	2
+DISTNAME=	w3m-el-snapshot_1.4.483+0.20120614.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/w3m-el-snapshot_/emacs-w3m-/:S/+0//:S/.orig//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/w3m-el-snapshot/}
@@ -9,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/w3m-el-snapshot/}
 MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Emacs frontend for w3m browser
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	makeinfo gzip autoconf
 INFO_FILES=	yes
@@ -18,9 +18,9 @@ DEPENDS+=	w3m{,-img}>=0.5.2nb3:../../www/w3m
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN}
+CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
 BUILD_TARGET=
-WRKSRC=			${WRKDIR}/emacs-w3m
+WRKSRC=			${WRKDIR}/w3m-el-snapshot-1.4.483+0.20120614.orig
 
 EVAL_PREFIX+=	W3M_PREFIX=w3m
 
@@ -30,13 +30,8 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	w3m.el
 SUBST_SED.paths=	-e 's|@W3M@|${W3M_PREFIX}/bin/w3m|g'
 
-INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
-			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
-
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
-
-PLIST_SRC+=		PLIST
 
 .include "options.mk"
 
