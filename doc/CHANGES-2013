@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.759 2013/03/03 20:05:24 tron Exp $
+$NetBSD: CHANGES-2013,v 1.760 2013/03/04 11:46:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1094,3 +1094,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/desktop-gnome to 0.5 [wiz 2013-03-03]
 	Updated devel/apache-maven to 3.0.5 [yyamano 2013-03-03]
 	Updated www/apache22 to 2.2.24 [tron 2013-03-03]
+	Updated net/p5-Test-TCP to 0.21 [wen 2013-03-04]
