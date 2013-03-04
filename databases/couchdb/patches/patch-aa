@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2012/09/17 09:42:47 fhajny Exp $
+$NetBSD: patch-aa,v 1.4 2013/03/04 14:12:40 fhajny Exp $
 
 Set pkgsrc standard paths.
 
---- configure.orig	2012-03-29 21:05:41.000000000 +0000
-+++ configure
-@@ -814,6 +814,7 @@ bug_uri
- localconfdir
- localdatadir
+--- configure.orig	2012-12-20 21:28:51.000000000 +0000
++++ configure	2013-03-04 13:05:12.523266279 +0000
+@@ -757,6 +757,7 @@ localstatelogdir
+ localstatelibdir
+ locallibdir
  localdocdir
 +localegdir
- locallibdir
- localstatelibdir
- localstatelogdir
-@@ -18661,13 +18662,15 @@ localdatadir=${datadir}/${package_identi
+ localdatadir
+ localconfdir
+ bug_uri
+@@ -18159,13 +18160,15 @@ localdatadir=${datadir}/${package_identi
  
  localdocdir=${datadir}/doc/${package_identifier}
  
@@ -30,7 +30,7 @@ Set pkgsrc standard paths.
  
  
  # On Windows we install directly into our erlang distribution.
-@@ -18677,9 +18680,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+@@ -18175,9 +18178,9 @@ if test x${IS_WINDOWS} = xTRUE; then
      localerlanglibdir=${libdir}
  
  else
@@ -42,20 +42,3 @@ Set pkgsrc standard paths.
  
  fi
  
-@@ -20087,6 +20090,7 @@ bug_uri!$bug_uri$ac_delim
- localconfdir!$localconfdir$ac_delim
- localdatadir!$localdatadir$ac_delim
- localdocdir!$localdocdir$ac_delim
-+localegdir!$localegdir$ac_delim
- locallibdir!$locallibdir$ac_delim
- localstatelibdir!$localstatelibdir$ac_delim
- localstatelogdir!$localstatelogdir$ac_delim
-@@ -20099,7 +20103,7 @@ LIBOBJS!$LIBOBJS$ac_delim
- LTLIBOBJS!$LTLIBOBJS$ac_delim
- _ACEOF
- 
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 91; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 92; then
-     break
-   elif $ac_last_try; then
-     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5

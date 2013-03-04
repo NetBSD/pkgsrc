@@ -1,9 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/09/21 12:11:39 fhajny Exp $
+$NetBSD: patch-ac,v 1.2 2013/03/04 14:12:40 fhajny Exp $
 
 Remove logrotate files.
---- etc/Makefile.in.orig	2010-08-11 18:18:52.000000000 +0000
-+++ etc/Makefile.in
-@@ -277,15 +277,15 @@ version_minor = @version_minor@
+
+--- etc/Makefile.in.orig	2012-12-20 21:28:48.000000000 +0000
++++ etc/Makefile.in	2013-03-04 13:01:29.096858946 +0000
+@@ -296,15 +296,15 @@ version_minor = @version_minor@
  version_release = @version_release@
  version_revision = @version_revision@
  version_stage = @version_stage@
@@ -22,7 +23,7 @@ Remove logrotate files.
  couchdb_command_name = `echo couchdb | sed '$(transform)'`
  all: all-recursive
  
-@@ -721,9 +721,6 @@ init/couchdb: init/couchdb.tpl
+@@ -740,9 +740,6 @@ init/couchdb: init/couchdb.tpl
  	    -e "s|%couchdb_command_name%|$(couchdb_command_name)|" \
  	< $< > $@
  
