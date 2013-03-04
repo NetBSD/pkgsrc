@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/03 23:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/04 21:57:22 wiz Exp $
 #
 
 SCVER=		6.5.10
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.sugarcrm.com/
 COMMENT=	Open source CRM
-LICENSE=	gnu-agpl-v3-license
+LICENSE=	gnu-agpl-v3
 
 WRKSRC=		${WRKDIR}/SugarCE-Full-${SCVER}
 USE_LANGUAGES=	# none
