@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.766 2013/03/04 22:06:39 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.767 2013/03/04 23:12:37 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1101,3 +1101,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/emacs-w3m-snapshot to 1.4.483.20120614 [hiramatsu 2013-03-04]
 	Updated filesystems/openafs to 1.6.2 [jakllsch 2013-03-04]
 	Added databases/deforaos-libdatabase version 0.0.0 [khorben 2013-03-04]
+	Added graphics/deforaos-camera version 0.0.1 [khorben 2013-03-05]
