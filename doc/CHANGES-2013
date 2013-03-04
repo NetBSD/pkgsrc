@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.761 2013/03/04 13:01:31 wen Exp $
+$NetBSD: CHANGES-2013,v 1.762 2013/03/04 16:28:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1096,3 +1096,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/apache22 to 2.2.24 [tron 2013-03-03]
 	Updated net/p5-Test-TCP to 0.21 [wen 2013-03-04]
 	Updated devel/p5-Git-Repository to 1.302 [wen 2013-03-04]
+	Updated net/freeDiameter to 1.1.6 [wiz 2013-03-04]
