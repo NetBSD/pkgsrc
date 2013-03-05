@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.955 2013/02/28 07:29:32 wiz Exp $
+# $NetBSD: Makefile,v 1.956 2013/03/05 19:39:57 darcy Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -583,6 +583,7 @@ SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
 SUBDIR+=	py-pendrell
+SUBDIR+=	py-recaptcha
 SUBDIR+=	py-rss2gen
 SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
