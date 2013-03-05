@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11970 2013/03/03 15:29:29 wiz Exp $
+$NetBSD: TODO,v 1.11971 2013/03/05 07:47:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -349,7 +349,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o RealPlayer-11
 	o SDL_gfx-2.0.24
 	o SOGo-2.0.4
-	o Sigil-0.7.0 [needs qt5]
+	o Sigil-0.7.1 [needs qt5]
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.18
 	o TiffIO-130e
@@ -435,7 +435,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o botan-1.10.5
 	o brasero-3.4.0
 	o bugzilla-3.6.12
-	o byacc-20121003
+	o byacc-20130304
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
@@ -542,7 +542,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
-	o eric5-5.3.0
+	o eric4-4.5.9
+	o eric5-5.3.1
 	o erlang-16a
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -944,6 +945,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o open-vm-tools-2010.09.19.301124
 	o opendkim-2.8.0
 	o opengrok-0.11.1
+	o openldap-2.4.34
 	o openmortal-0.7.1
 	o openoffice-3.4
 	o openoffice3-3.3
@@ -1034,17 +1036,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-lxml-3.1.0
-	o py-qt4-4.9.6
+	o py-qt4-4.10
 	o py-simplejson-3.1.0
-	o py-sip-4.14.3
+	o py-sip-4.14.4
 	o py-sybase-0.37
 	o py-sympy-0.7.2
 	o py-trueskill-0.2.1
 	o py-urwid-1.1.0
 	o qbrew-0.3.9
 	o qemu-1.4.0
-	o qnetwalk-1.3
-	o qt4-qscintilla-2.7
+	o qnetwalk-1.4
+	o qt4-qscintilla-2.7.1
 	o qt5-libs-5.0.1
 	o quilt-0.60
 	o radiance-3.7.2
@@ -1132,7 +1134,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stalin-0.11
 	o star-1.5.2
 	o statist-1.3.0
-	o stella-3.8
+	o stella-3.8.1
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.0
@@ -1172,7 +1174,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tig-1.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
-	o tinc-1.0.19
+	o tinc-1.0.20
 	o tk-8.6
 	o tkcvs-8.2.3
 	o tkdiff-4.2
@@ -1252,6 +1254,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
+	o xboard-4.7.0
 	o xchm-1.21
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.4 [unpackaged]
