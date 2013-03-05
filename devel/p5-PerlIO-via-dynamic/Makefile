@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/10/31 11:18:50 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/03/05 16:17:36 apb Exp $
 
-DISTNAME=	PerlIO-via-dynamic-0.13
+DISTNAME=	PerlIO-via-dynamic-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AL/ALEXMV/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PerlIO-via-dynamic/
