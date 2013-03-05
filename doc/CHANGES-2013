@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.768 2013/03/04 23:43:52 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.769 2013/03/05 00:08:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/deforaos-libdatabase version 0.0.0 [khorben 2013-03-04]
 	Added graphics/deforaos-camera version 0.0.1 [khorben 2013-03-05]
 	Added devel/deforaos-coder version 0.0.0 [khorben 2013-03-05]
+	Updated sysutils/deforaos-browser to 0.4.10 [khorben 2013-03-05]
