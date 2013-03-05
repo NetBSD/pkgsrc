@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.773 2013/03/05 13:59:40 taca Exp $
+$NetBSD: CHANGES-2013,v 1.774 2013/03/05 15:34:30 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1108,3 +1108,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_46 to 4.6.16 [taca 2013-03-05]
 	Updated www/typo3_45 to 4.5.23 [taca 2013-03-05]
 	Updated www/typo3_47 to 4.7.8 [taca 2013-03-05]
+	Updated www/nginx-devel to 1.3.14 [imil 2013-03-05]
