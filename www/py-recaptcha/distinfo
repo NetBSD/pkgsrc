@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/05 19:20:20 darcy Exp $
+
+SHA1 (recaptcha-client-1.0.6.tar.gz) = 661317355af7a2985c9011b6efa026b7178e9917
+RMD160 (recaptcha-client-1.0.6.tar.gz) = 7dffe66b7fd37f5be2a7d7b2bf24c3978f46c8e9
+Size (recaptcha-client-1.0.6.tar.gz) = 7389 bytes
