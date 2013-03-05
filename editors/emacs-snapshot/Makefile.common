@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2013/02/17 06:18:01 dholland Exp $
+# $NetBSD: Makefile.common,v 1.56 2013/03/05 17:38:31 dholland Exp $
 
 DISTNAME=	emacs-snapshot_20130207.orig
 SNAPDATE=	${DISTNAME:S/emacs-snapshot_//:S/.orig//}
@@ -74,7 +74,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_VERSION}/, "$${EMACS_VERSION}"); \
 			print; next; }
 
 post-extract:
-	cp ${.CURDIR}/../../editors/emacs/files/site-init.el ${WRKSRC}/lisp
+	cp ${.CURDIR}/../../editors/emacs23/files/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
 	${CHMOD} ugo+rx ${WRKSRC}/leim/ja-dic ${WRKSRC}/leim/quail
