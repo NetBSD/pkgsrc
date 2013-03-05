@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/02/19 19:38:27 adam Exp $
+# $NetBSD: options.mk,v 1.3 2013/03/05 01:59:51 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-diskd squid-backend-null \
@@ -12,10 +12,10 @@ PKG_OPTIONS_LEGACY_OPTS=	diskd:squid-backend-diskd \
 
 PLIST_VARS+=	diskd snmp unlinkd
 PLIST_VARS+=	ba_LDAP ba_MSNT ba_NCSA ba_NIS ba_PAM ba_getpwnam
-PLIST_VARS+=	da_ldap
+PLIST_VARS+=	da_LDAP
 PLIST_VARS+=	na_SMB
 PLIST_VARS+=	ta_kerberos
-PLIST_VARS+=	eacl_ip_user eacl_ldap_group eacl_unix_group
+PLIST_VARS+=	eacl_ip_user eacl_LDAP_group eacl_unix_group
 
 PKG_SUGGESTED_OPTIONS=	inet6 snmp ssl squid-backend-diskd squid-carp \
 		squid-pam-helper squid-unlinkd
@@ -96,8 +96,8 @@ SQUID_NEGOTIATE_AUTH_HELPERS+=	kerberos
 .if !empty(PKG_OPTIONS:Msquid-ldap-helper)
 .include "../../databases/openldap-client/buildlink3.mk"
 SQUID_BASIC_AUTH_HELPERS+=	LDAP
-SQUID_DIGEST_AUTH_HELPERS+=	ldap
-SQUID_EXTERNAL_ACL_HELPERS+=	ldap_group
+SQUID_DIGEST_AUTH_HELPERS+=	LDAP
+SQUID_EXTERNAL_ACL_HELPERS+=	LDAP_group
 .endif
 
 .if !empty(PKG_OPTIONS:Msquid-pam-helper)
