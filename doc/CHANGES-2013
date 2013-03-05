@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.774 2013/03/05 15:34:30 imil Exp $
+$NetBSD: CHANGES-2013,v 1.775 2013/03/05 16:19:06 apb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1109,3 +1109,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_45 to 4.5.23 [taca 2013-03-05]
 	Updated www/typo3_47 to 4.7.8 [taca 2013-03-05]
 	Updated www/nginx-devel to 1.3.14 [imil 2013-03-05]
+	Updated devel/p5-PerlIO-via-dynamic to 0.14 [apb 2013-03-05]
