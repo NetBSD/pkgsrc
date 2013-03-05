@@ -1,0 +1,3 @@
+This is a module that can read the Mozilla URL history file
+(normally $HOME/.mozilla/default/*.slt/history.dat) and extract the id,
+url, name, hostname, first visted dat, last visited date and visit count.
