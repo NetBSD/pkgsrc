@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.780 2013/03/05 22:22:48 imil Exp $
+$NetBSD: CHANGES-2013,v 1.781 2013/03/05 23:42:47 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1116,3 +1116,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added converters/p5-Data-Hexify version 1.00 [pettai 2013-03-05]
 	Added www/p5-File-Mork version 0.3 [pettai 2013-03-05]
 	Added www/php-zendoptimizerplus version 7.0.0 [imil 2013-03-05]
+	Added misc/p5-Mac-PropertyList version 1.38 [pettai 2013-03-05]
