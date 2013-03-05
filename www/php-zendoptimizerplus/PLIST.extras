@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.extras,v 1.1 2013/03/05 22:18:37 imil Exp $
+share/doc/${PKGBASE}/README
