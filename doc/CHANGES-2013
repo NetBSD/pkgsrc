@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.771 2013/03/05 13:56:56 taca Exp $
+$NetBSD: CHANGES-2013,v 1.772 2013/03/05 13:58:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1106,3 +1106,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/deforaos-browser to 0.4.10 [khorben 2013-03-05]
 	Updated meta-pkgs/deforaos-desktop to 0.0.2 [khorben 2013-03-05]
 	Updated www/typo3_46 to 4.6.16 [taca 2013-03-05]
+	Updated www/typo3_45 to 4.5.23 [taca 2013-03-05]
