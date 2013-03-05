@@ -1,0 +1,4 @@
+Data::Hexify - Perl extension for hexdumping arbitrary data.
+This module exports one subroutine: Hexify.
+Hexify formats arbitrary (possible binary) data into a format
+suitable for hex dumps in the style of xd or hexl.
