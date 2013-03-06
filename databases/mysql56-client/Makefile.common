@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2013/02/26 11:32:57 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2013/03/06 10:03:13 jperkin Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -63,6 +63,8 @@ CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
 # always use our own readline, not MySQL bundled one
 CMAKE_ARGS+=		-DWITH_LIBEDIT=OFF
+CMAKE_ARGS+=		-DUSE_NEW_READLINE_INTERFACE=ON
+CMAKE_ARGS+=		-DREADLINE_LIBRARY=readline
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
