@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2013/02/26 00:19:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.566 2013/03/06 12:38:41 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -428,6 +428,7 @@ SUBDIR+=	ups-nut-cgi
 SUBDIR+=	ups-nut-snmp
 SUBDIR+=	ups-nut-usb
 SUBDIR+=	usbutil
+SUBDIR+=	user_cygwin
 SUBDIR+=	user_darwin
 SUBDIR+=	user_interix
 SUBDIR+=	user_irix
