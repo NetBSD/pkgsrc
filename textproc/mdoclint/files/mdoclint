@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.23 2013/03/06 21:43:43 wiz Exp $
+# $NetBSD: mdoclint,v 1.24 2013/03/06 22:09:01 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -542,7 +542,7 @@ sub process_line
 	if (/^\./o and /Ns [\.();,\[\]\{\}:]/o) {
 		$s->warning("possible Ns abuse: `$_'") if $opt_p;
 	}
-	if (/(\w+)\(\)/o) {
+	if ((/^([^\.]\w+)\(\)/o or /^[^\.].*\s(\w+)\(\)/o) and not $s->{inliteral}) {
 		$s->warning("use .Fn or .Xr for functions: `$1()'") if $opt_p;
 	}
 
