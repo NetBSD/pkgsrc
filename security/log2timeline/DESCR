@@ -1,0 +1,8 @@
+log2timeline is a framework built to automatically create a super
+timeline using information found within various log files and other
+files that contain timestamps.  The tool can be used to augment
+traditional timeline analysis where the focus has generally been on
+solely the timestamps found within the filesystem itself.
+The tool is also capable of outputting into various formats that
+can be used to either import into analysis tools or to read directly
+using whatevery suits you (spreadsheet/vim/less/...)
