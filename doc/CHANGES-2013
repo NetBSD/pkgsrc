@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.788 2013/03/06 22:51:26 jym Exp $
+$NetBSD: CHANGES-2013,v 1.789 2013/03/06 22:53:05 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1127,3 +1127,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/mutt-devel to 1.5.21nb10 [is 2013-03-06]
 	Updated textproc/mdoclint to 1.19 [wiz 2013-03-06]
 	Updated security/stunnel to 4.55 [jym 2013-03-06]
+	Added misc/p5-Parse-Win32Registry version 1.0 [pettai 2013-03-06]
