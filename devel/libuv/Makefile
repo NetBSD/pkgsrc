@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/02 08:19:36 agc Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/06 17:32:08 gdt Exp $
 #
 
 DISTNAME=	master
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	agc@pkgsrc.org
 HOMEPAGE=	http://nikhilm.github.com/uvbook/
 COMMENT=	Asynchronous event library, platform layer of node.js
-LICENSE=	joyent
+LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}/libuv-master
