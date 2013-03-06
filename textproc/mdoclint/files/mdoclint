@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.22 2013/03/06 21:26:45 wiz Exp $
+# $NetBSD: mdoclint,v 1.23 2013/03/06 21:43:43 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -121,6 +121,7 @@ my %libraries = (
     "libm" => 1,
     "libm68k" => 1,
     "libmagic" => 1,
+    "libmandoc" => 1,
     "libmenu" => 1,
     "libnetpgp" => 1,
     "libossaudio" => 1,
