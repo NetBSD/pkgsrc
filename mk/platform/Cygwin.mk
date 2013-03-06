@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.9 2013/02/27 12:03:49 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.10 2013/03/06 12:41:44 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -17,7 +17,7 @@ TYPE?=		type				# Shell builtin
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 _PKG_USER_HOME?=	# empty by default
-_USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
+_USER_DEPENDS=		user>=20130306:../../sysutils/user_cygwin
 
 CPP_PRECOMP_FLAGS?=	# unset
 CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
