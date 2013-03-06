@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.781 2013/03/05 23:42:47 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.782 2013/03/06 11:07:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1117,3 +1117,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-File-Mork version 0.3 [pettai 2013-03-05]
 	Added www/php-zendoptimizerplus version 7.0.0 [imil 2013-03-05]
 	Added misc/p5-Mac-PropertyList version 1.38 [pettai 2013-03-05]
+	Updated inputmethod/uim to 1.8.4 [obache 2013-03-06]
+	Updated inputmethod/uim-elisp to 1.8.4 [obache 2013-03-06]
