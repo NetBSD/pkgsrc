@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2013/03/02 08:37:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/06 16:58:57 jperkin Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
 # in distinfo (make makesum will eat one of them)
 
-DISTNAME=	jdk-7u15-linux-${DIST_ARCH}
+DISTNAME=	jdk-7u15-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk7-7.0.15
 MASTER_SITES=	# empty
 
@@ -26,7 +26,19 @@ MAKE_JOBS_SAFE=	no
 CHECK_SHLIBS_SUPPORTED=	no
 .endif
 
-PLIST_SRC=	PLIST.linux-${EMUL_ARCH}
+# XXX: The download page says .tar.gz but sends the file as .gz
+.if ${OPSYS} == "SunOS"
+EXTRACT_OPTS=	-f tar
+EXTRACT_SUFX=	.gz
+.endif
+
+# The 64-bit Solaris downloads for some inexplicable reason only contain
+# the additional 64-bit files, and you need the main 32-bit file too.
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "x86_64"
+DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/x64/i586/}
+.endif
+
+PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 
 # Remove parts that are in common with the JRE
 #
