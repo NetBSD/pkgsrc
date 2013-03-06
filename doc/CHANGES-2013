@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.782 2013/03/06 11:07:36 obache Exp $
+$NetBSD: CHANGES-2013,v 1.783 2013/03/06 12:37:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added misc/p5-Mac-PropertyList version 1.38 [pettai 2013-03-05]
 	Updated inputmethod/uim to 1.8.4 [obache 2013-03-06]
 	Updated inputmethod/uim-elisp to 1.8.4 [obache 2013-03-06]
+	Added sysutils/user_cygwin version 20130306 [obache 2013-03-06]
