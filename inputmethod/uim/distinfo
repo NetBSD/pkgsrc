@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2012/09/15 12:05:00 obache Exp $
+$NetBSD: distinfo,v 1.24 2013/03/06 11:06:55 obache Exp $
 
-SHA1 (uim-1.8.2.tar.bz2) = 838807d016e3540d8ffb302a0b53f71de2b5e3ca
-RMD160 (uim-1.8.2.tar.bz2) = 21fd64dbda8372a4c27188e71f3be03a7c2aa8ed
-Size (uim-1.8.2.tar.bz2) = 6480613 bytes
-SHA1 (patch-ab) = d5bf71cf3ecea94bed70e05c1b0e6f77ac5766c5
-SHA1 (patch-ac) = 3b3dfd09ed84c9d228836783e18df747ecaa5791
-SHA1 (patch-ad) = e1d14a5455a6db1087c5e64d57d68b1d19f79f98
+SHA1 (uim-1.8.4.tar.bz2) = d2c699ce7a6037accc6f3342db1de8d696f361e9
+RMD160 (uim-1.8.4.tar.bz2) = 9722ae76020db093e0a8f8aa0f146caddcf3fff5
+Size (uim-1.8.4.tar.bz2) = 6494902 bytes
+SHA1 (patch-ab) = 56a7d5aadd2339f5bacae80b28ce520e6df3d1ab
+SHA1 (patch-ac) = 7c36bc67764925c9d87ad0aa963a53cfd1948224
+SHA1 (patch-ad) = 9c47fa28b6478bf2e720c1c0e7bf7793eb71fbab
 SHA1 (patch-ae) = 59944fc9c7256056125fa3a623aecf6a2e9dfe42
 SHA1 (patch-af) = 9f543b90bfefc5f560e1eaac97d60af70ffed5cc
