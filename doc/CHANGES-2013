@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.787 2013/03/06 21:26:55 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.788 2013/03/06 22:51:26 jym Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1126,3 +1126,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.52 [adam 2013-03-06]
 	Updated mail/mutt-devel to 1.5.21nb10 [is 2013-03-06]
 	Updated textproc/mdoclint to 1.19 [wiz 2013-03-06]
+	Updated security/stunnel to 4.55 [jym 2013-03-06]
