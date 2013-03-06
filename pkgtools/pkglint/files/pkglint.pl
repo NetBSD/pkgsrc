@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.849 2013/01/20 02:57:36 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.850 2013/03/06 12:30:01 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5043,7 +5043,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value =~ m"^(\w+)-(\w+)$") {
 			my ($opsys, $arch) = ($1, $2);
 
-			if ($opsys !~ m"^(?:bsdos|darwin|dragonfly|freebsd|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos)$") {
+			if ($opsys !~ m"^(?:bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos)$") {
 				$line->log_warning("Unknown operating system: ${opsys}");
 			}
 			# no check for $os_version
@@ -5283,7 +5283,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value =~ m"^(${part})-(${part})-(${part})$") {
 			my ($opsys, $os_version, $arch) = ($1, $2, $3);
 
-			if ($opsys !~ m"^(?:\*|BSDOS|Darwin|DragonFly|FreeBSD|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|SunOS)$") {
+			if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|SunOS)$") {
 				$line->log_warning("Unknown operating system: ${opsys}");
 			}
 			# no check for $os_version
