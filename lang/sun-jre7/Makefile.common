@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/12/11 14:47:17 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/03/06 16:21:13 jperkin Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -22,7 +22,14 @@ USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+DIST_OS=		solaris
+EMUL_ARCH=		${MACHINE_ARCH}	# XXX: re-use EMUL_ARCH as it is simpler
+EMUL_PLATFORMS=		# empty, uses native binaries
+.else
+DIST_OS=		linux
 EMUL_MODULES.linux=	compat locale x11
+.endif
 
 DIST_ARCH.i386=		i586
 DIST_ARCH.x86_64=	x64
@@ -33,6 +40,7 @@ DIST_ARCH=		${DIST_ARCH.${EMUL_ARCH}}
 DIST_ARCH=		${EMUL_ARCH}
 .endif
 
+JAVA_ARCH.i386=		i386
 JAVA_ARCH.x86_64=	amd64
 
 .if defined(JAVA_ARCH.${EMUL_ARCH})
@@ -44,8 +52,6 @@ FILES_SUBST+=		JAVA_ARCH=${JAVA_ARCH:Q}
 
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# empty
-
-.include "../../mk/bsd.prefs.mk"
 
 JAVA_HOME=		${PREFIX}/java/sun-7
 JAVA_NAME=		sun7
@@ -68,9 +74,11 @@ FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
 FETCH_MESSAGE+=	" from:"
 FETCH_MESSAGE+=	"	${DOWNLOAD}"
 FETCH_MESSAGE+=	"	or ${ARCHIVE}"
+.if ${DIST_OS} == "linux"
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose 'Linux tar.gz file'."
+.endif
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
