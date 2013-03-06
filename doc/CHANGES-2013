@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.784 2013/03/06 14:26:11 taca Exp $
+$NetBSD: CHANGES-2013,v 1.785 2013/03/06 16:11:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1123,3 +1123,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_45 to 4.5.24 [taca 2013-03-06]
 	Updated www/typo3_46 to 4.6.17 [taca 2013-03-06]
 	Updated www/typo3_47 to 4.7.9 [taca 2013-03-06]
+	Updated graphics/pngcrush to 1.7.52 [adam 2013-03-06]
