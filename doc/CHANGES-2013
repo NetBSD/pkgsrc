@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.783 2013/03/06 12:37:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.784 2013/03/06 14:26:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1120,3 +1120,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/uim to 1.8.4 [obache 2013-03-06]
 	Updated inputmethod/uim-elisp to 1.8.4 [obache 2013-03-06]
 	Added sysutils/user_cygwin version 20130306 [obache 2013-03-06]
+	Updated www/typo3_45 to 4.5.24 [taca 2013-03-06]
+	Updated www/typo3_46 to 4.6.17 [taca 2013-03-06]
+	Updated www/typo3_47 to 4.7.9 [taca 2013-03-06]
