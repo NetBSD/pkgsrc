@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/02/06 23:22:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/06 12:02:14 jperkin Exp $
 #
 
 DISTNAME=	libSystem-0.1.5
@@ -15,6 +15,16 @@ LICENSE=	gnu-gpl-v3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	INSTALL=${INSTALL}
+
+# Don't use non-portable ${INSTALL} arguments
+SUBST_CLASSES+=		nodashes
+SUBST_STAGE.nodashes=	pre-configure
+SUBST_FILES.nodashes=	include/Makefile include/System/Makefile
+SUBST_FILES.nodashes+=	src/Makefile tools/Makefile
+SUBST_SED.nodashes=	-e '/INSTALL/s/ -- / /'
+
+LDFLAGS.SunOS+=	-lresolv
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
