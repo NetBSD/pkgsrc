@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/03/05 13:59:04 taca Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/06 14:25:27 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-VER=		4.7.8
+VER=		4.7.9
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
