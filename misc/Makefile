@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2013/03/05 23:41:56 pettai Exp $
+# $NetBSD: Makefile,v 1.392 2013/03/06 21:58:29 pettai Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -211,6 +211,7 @@ SUBDIR+=	p5-Locale-libintl
 SUBDIR+=	p5-Mac-Macbinary
 SUBDIR+=	p5-Mac-PropertyList
 SUBDIR+=	p5-Msgcat
+SUBDIR+=	p5-Parse-Win32Registry
 SUBDIR+=	p5-Search
 SUBDIR+=	p5-Vroom
 SUBDIR+=	parchive
