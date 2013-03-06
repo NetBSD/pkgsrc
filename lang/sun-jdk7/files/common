@@ -1,10 +1,20 @@
-# $NetBSD: common,v 1.1 2012/12/11 14:51:33 ryoon Exp $
+# $NetBSD: common,v 1.2 2013/03/06 16:58:57 jperkin Exp $
 
 COPYRIGHT
 LICENSE
 THIRDPARTYLICENSEREADME.txt
 THIRDPARTYLICENSEREADME-JAVAFX.txt
 bin/ControlPanel
+bin/amd64/java
+bin/amd64/keytool
+bin/amd64/orbd
+bin/amd64/pack200
+bin/amd64/policytool
+bin/amd64/rmid
+bin/amd64/rmiregistry
+bin/amd64/servertool
+bin/amd64/tnameserv
+bin/amd64/unpack200
 bin/java
 bin/javaws
 bin/jcontrol
@@ -20,6 +30,17 @@ bin/unpack200
 jre
 lib/jexec
 man/ja
+man/ja_JP.PCK/man1/java.1
+man/ja_JP.PCK/man1/javaws.1
+man/ja_JP.PCK/man1/keytool.1
+man/ja_JP.PCK/man1/orbd.1
+man/ja_JP.PCK/man1/pack200.1
+man/ja_JP.PCK/man1/policytool.1
+man/ja_JP.PCK/man1/rmid.1
+man/ja_JP.PCK/man1/rmiregistry.1
+man/ja_JP.PCK/man1/servertool.1
+man/ja_JP.PCK/man1/tnameserv.1
+man/ja_JP.PCK/man1/unpack200.1
 man/ja_JP.UTF-8/man1/java.1
 man/ja_JP.UTF-8/man1/javaws.1
 man/ja_JP.UTF-8/man1/keytool.1
