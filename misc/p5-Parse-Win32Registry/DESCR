@@ -1,0 +1,18 @@
+Parse::Win32Registry is a module for parsing Windows Registry files,
+allowing you to read the keys and values of a registry file without
+going through the Windows API.
+
+It provides an object-oriented interface to the keys and values in
+a registry file. Registry files are structured as trees of keys,
+with each key containing further subkeys or values.
+
+The module is intended to be cross-platform, and run on those
+platforms where Perl will run.
+
+It supports both Windows NT registry files (Windows NT, 2000, XP, 2003,
+Vista, 7) and Windows 95 registry files (Windows 95, 98, Millennium).
+
+It is intended to be used to parse offline registry files. If a registry
+file is currently in use, you will not be able to open it. However,
+you can save part or all of a currently loaded registry file using the
+Windows reg command if you have the appropriate administrative access.
