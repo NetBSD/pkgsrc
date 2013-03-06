@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.24 2013/03/06 22:09:01 wiz Exp $
+# $NetBSD: mdoclint,v 1.25 2013/03/06 22:21:36 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -531,8 +531,10 @@ sub process_line
 		$s->warning(".Nd ends with a dot: `$_'") if $opt_n;
 	}
 
-	if (/\w\w\.\s+[A-Z]/o) {
-		$s->warning("new sentence, new line: `$_'") if $opt_p;
+	if (/(\w\w)\.\s+[A-Z]/o and not /^.%T/ and not $s->{inliteral}) {
+		if ("$1" ne "St") {
+			$s->warning("new sentence, new line: `$_'") if $opt_p;
+		}
 	}
 	if (/^\... .*[^\s][\.();,\[\]\{\}:]$/o
 	    and not /\s\.\.\.$/o and not /\\&.$/o) {
