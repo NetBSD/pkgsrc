@@ -1,0 +1,11 @@
+$NetBSD: patch-usbprog_Makefile.am,v 1.1 2013/03/07 22:03:42 joerg Exp $
+
+--- usbprog/Makefile.am.orig	2013-03-06 20:33:44.000000000 +0000
++++ usbprog/Makefile.am
+@@ -23,5 +23,5 @@ libusbprog_la_SOURCES  = inifile.cc \
+ 			 optionparser.cc \
+ 			 digest.cc \
+ 			 stringutil.cc
+-libusbprog_la_LIBADD   = ../md5/libmd5.a
++libusbprog_la_LIBADD   = ../md5/md5.lo
+ libusbprog_la_LDFLAGS  = -version-info 3:0:3
