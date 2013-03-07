@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.791 2013/03/07 05:19:14 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.792 2013/03/07 05:49:27 tcort Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1130,3 +1130,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added misc/p5-Parse-Win32Registry version 1.0 [pettai 2013-03-06]
 	Added security/log2timeline version 0.64 [pettai 2013-03-06]
 	Updated devel/mercurial to 2.5.2 [wiz 2013-03-07]
+	Added editors/se version 3.0 [tcort 2013-03-07]
