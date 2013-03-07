@@ -1,0 +1,13 @@
+$NetBSD: patch-md5_Makefile.in,v 1.1 2013/03/07 22:03:42 joerg Exp $
+
+--- md5/Makefile.in.orig	2010-01-05 15:24:18.000000000 +0000
++++ md5/Makefile.in
+@@ -216,7 +216,7 @@ libmd5_a_CFLAGS = -fPIC
+ libmd5_a_SOURCES = md5.c \
+ 			  md5.h
+ 
+-all: all-am
++all: md5.lo
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c .lo .o .obj

@@ -1,0 +1,22 @@
+$NetBSD: patch-usbprog_Makefile.in,v 1.1 2013/03/07 22:03:42 joerg Exp $
+
+--- usbprog/Makefile.in.orig	2013-03-06 20:33:42.000000000 +0000
++++ usbprog/Makefile.in
+@@ -71,7 +71,7 @@ am__base_list = \
+   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgincludedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libusbprog_la_DEPENDENCIES = ../md5/libmd5.a
++libusbprog_la_DEPENDENCIES = ../md5/md5.lo
+ am_libusbprog_la_OBJECTS = inifile.lo util.lo downloader.lo date.lo \
+ 	firmwarepool.lo devices.lo usbprog.lo optionparser.lo \
+ 	digest.lo stringutil.lo
+@@ -262,7 +262,7 @@ libusbprog_la_SOURCES = inifile.cc \
+ 			 digest.cc \
+ 			 stringutil.cc
+ 
+-libusbprog_la_LIBADD = ../md5/libmd5.a
++libusbprog_la_LIBADD = ../md5/md5.lo
+ libusbprog_la_LDFLAGS = -version-info 3:0:3
+ all: all-am
+ 

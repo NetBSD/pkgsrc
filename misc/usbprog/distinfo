@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/21 11:25:42 drochner Exp $
+$NetBSD: distinfo,v 1.2 2013/03/07 22:03:41 joerg Exp $
 
 SHA1 (usbprog-0.2.0.tar.bz2) = f025c42c0d43f14471a15bc3868efaea46284693
 RMD160 (usbprog-0.2.0.tar.bz2) = 7d096717217d1ae426a8187cedd6c8fd87dd6139
 Size (usbprog-0.2.0.tar.bz2) = 4388629 bytes
 SHA1 (patch-aa) = f76d7f18471b10a11b1073df1b88b8421960d5e0
 SHA1 (patch-ab) = a336e677be50385c522c1b82c92f5fc85408dde8
-SHA1 (patch-ac) = fe0c9cdbaacbc325ed205be7873347b343bd08f6
-SHA1 (patch-ad) = 9634874d725628070bba635eeb66ae62a23cec56
+SHA1 (patch-ac) = 135639c97ffd8f755c00b31ab3641b9f63c94868
+SHA1 (patch-ad) = b8046699af3f341e8342c43e2c4887df4a6c0fd1
+SHA1 (patch-md5_Makefile.in) = afb069637d8811c4b9f2f4d5ff60d9e30947dd1c
+SHA1 (patch-usbprog_Makefile.am) = d4bff3c2c1d9de347d849ec0486de3f2a727c152
+SHA1 (patch-usbprog_Makefile.in) = c52a94cc6cefd20206edff792deed700f3affab2
