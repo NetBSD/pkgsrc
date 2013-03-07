@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.13 2013/03/07 16:50:51 taca Exp $
+# $NetBSD: rdoc.mk,v 1.14 2013/03/07 16:53:01 taca Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
@@ -11,6 +11,7 @@ _RUBY_RDOC_MK=	# defined
 #
 #		ruby18-base:	rdoc 1.0.1 - 20041108
 #		ruby193-base:	rdoc 3.9.4
+#		ruby200-base:	rdoc 4.0.0
 #
 #	If a package has a trouble with these version, please specify the
 #	version of rdoc to RDOC_REQD.
@@ -25,6 +26,7 @@ RUBY_RDOC_VERSION=	3.12.2
 
 RUBY18_RDOC_VERS=	1.0.1
 RUBY193_RDOC_VERS=	3.9.4
+RUBY200_RDOC_VERS=	4.0.0
 
 _RDOC_REQD_MAJOR=	${RUBY_RDOC_REQD:C/\.[0-9\.]+$//}
 _RDOC_REQD_MINORS=	${RUBY_RDOC_REQD:C/^([0-9]+)\.*//}
@@ -35,6 +37,9 @@ _RUBY_RDOC_MINORS=	${RUBY18_RDOC_VERS:C/^([0-9]+)\.*//}
 .elif ${RUBY_VER} == "193"
 _RUBY_RDOC_MAJOR=	${RUBY193_RDOC_VERS:C/\.[0-9\.]+$//}
 _RUBY_RDOC_MINORS=	${RUBY193_RDOC_VERS:C/^([0-9]+)\.*//}
+.elif ${RUBY_VER} == "200"
+_RUBY_RDOC_MAJOR=	${RUBY200_RDOC_VERS:C/\.[0-9\.]+$//}
+_RUBY_RDOC_MINORS=	${RUBY200_RDOC_VERS:C/^([0-9]+)\.*//}
 .else
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 . endif
