@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.790 2013/03/06 22:53:39 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.791 2013/03/07 05:19:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/stunnel to 4.55 [jym 2013-03-06]
 	Added misc/p5-Parse-Win32Registry version 1.0 [pettai 2013-03-06]
 	Added security/log2timeline version 0.64 [pettai 2013-03-06]
+	Updated devel/mercurial to 2.5.2 [wiz 2013-03-07]
