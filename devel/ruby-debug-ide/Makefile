@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/04 03:55:29 taca Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/07 15:09:45 taca Exp $
 
 DISTNAME=	ruby-debug-ide-0.4.16
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -15,6 +15,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-debug-base-[0-9]*:../../devel/ruby-debug-base
 # for 1.9, need ruby-debug-base-19
 #
 RUBY_VERSION_SUPPORTED= 18
+
+OVERRIDE_GEMSPEC=	:extensions ext/mkrf_conf.rb= :files ext/mkrf_conf.rb=
 
 pre-configure:
 	${RM} -fr ${WRKSRC}/ext
