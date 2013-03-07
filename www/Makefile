@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.957 2013/03/05 22:19:51 imil Exp $
+# $NetBSD: Makefile,v 1.958 2013/03/07 06:47:23 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -324,6 +324,7 @@ SUBDIR+=	p5-Data-URIEncode
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-Client
 SUBDIR+=	p5-FCGI-ProcManager
+SUBDIR+=	p5-File-Mork
 SUBDIR+=	p5-HTML-Clean
 SUBDIR+=	p5-HTML-Element-Extended
 SUBDIR+=	p5-HTML-Email-Obfuscate
