@@ -1,5 +1,5 @@
 #!/bin/bash
-# $NetBSD: userdel.sh,v 1.1 2013/03/06 12:37:16 obache Exp $
+# $NetBSD: userdel.sh,v 1.2 2013/03/07 12:25:06 obache Exp $
 
 export PATH=/bin:$PATH
 
@@ -15,6 +15,7 @@ run_cmd () {
 }
 
 remove_home_dir=false
+user_is_group=false
 
 while getopts 'prv' f; do
 	case $f in
@@ -30,7 +31,11 @@ if [ $# -ne 1 ]; then show_usage; fi
 $verbose || exec >/dev/null
 
 if ! net user $1 >/dev/null 2>&1; then
-	echo "$0: user $1 does not exist" >&2; exit 1
+	if ! net localgroup $1 >/dev/null 2>&1; then
+		echo "$0: user $1 does not exist" >&2; exit 1
+	else
+		user_is_group=true
+	fi
 fi
 
 if $remove_home_dir; then
@@ -43,5 +48,5 @@ if $remove_home_dir; then
 	esac
 fi
 
-run_cmd net user $1 /delete
+$user_is_group || run_cmd net user $1 /delete
 /bin/sed -i -e "/^$1.*/d" /etc/passwd
