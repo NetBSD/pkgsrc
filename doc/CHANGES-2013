@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.798 2013/03/07 16:51:21 taca Exp $
+$NetBSD: CHANGES-2013,v 1.799 2013/03/07 16:54:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1137,3 +1137,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/user_cygwin to 20130307 [obache 2013-03-07]
 	Updated sysutils/logrotate to 3.8.3 [obache 2013-03-07]
 	Updated devel/ruby-rdoc to 3.12.2 [taca 2013-03-07]
+	Updated www/drupal7 to 7.21 [taca 2013-03-07]
