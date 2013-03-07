@@ -1,9 +1,9 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.4 2012/03/02 03:46:09 taca Exp $
+# $NetBSD: update-gemspec.rb,v 1.5 2013/03/07 16:42:53 taca Exp $
 #
-# Copyright (c) 2011, 2012 The NetBSD Foundation, Inc.
+# Copyright (c) 2011, 2012, 2013 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -39,45 +39,43 @@ require 'rubygems'
 require 'fileutils'
 require 'optparse'
 
-begin
-  # Since newer rubygems load psych instead of syck, don't load yaml directly.
-  Gem.load_yaml
-rescue NoMethodError
-  # Older rubygems don't have load_yaml() and don't know about psych.
-end
-
 class GemSpecUpdater
   OrigSuffix = '.orig_gemspec'
 
   def initialize(file)
     @file = file
-    open(file) { |f|
-      @spec = Gem::Specification.from_yaml(f)
-    }
+    @spec = Gem::Specification.load(@file)
     @requirements = {}
     @attr = {}
   end
 
   #
   # rule should be:
-  #	rule ::= [ dependecy_specs ] [ attr_specs ]
-  #	dependency_specs ::= dependency_spec [ dependency_spec ]
+  #	rule ::= dependecy_specs | attr_specs
+  #	dependency_specs ::= dependency_spec [ SPACE dependency_spec ]
   #	dependency_spec ::= name_spec [ dependency ]
   #	name_spec ::= name [ ":" new_name ]
-  #	dependency ::= "pkgsrc's dependecy operator and version string"
-  #	command ::= ":" attr_name" attr_operations
-  #	attr_operations ::= attr_op [ attr_op ]
+  #	dependency ::= <Rubygem's dependecy operator and version string>
+  #	attr_specs ::= ":" attr_name attr_operations
+  #	attr_operations ::= assign_operation | array_operation
+  #	assign_operation ::= "=" [ new_value ]
+  #	array_operations ::= attr_op [ attr_op ]
   #	attr_op ::= new | old=new | old=
   #
   def parse_rules(rules)
     key = nil
     rules.each do |s|
       s.split.each do |ru|
-        if /^:([a-z_]+)+/ =~ ru
+        if /^:([a-z_]+)=*(\S+)*/ =~ ru
+          key = $1
+          var = $2
+          @attr[key] = var
+          key = nil
+        elsif /^:([a-z_]+)+/ =~ ru
           key = $1
           @attr[key] = []
         elsif not key.nil?
-          @attr[key].push ru
+          @attr[key].push ru unless key.nil?
         else
           if /([a-z0-9_:-]+)([=!><\~][=>]*)(.*)/ =~ ru
             names = $1
@@ -104,7 +102,6 @@ class GemSpecUpdater
 
   def modify
     dependencies = @spec.instance_variable_get(:@dependencies)
-
     dependencies.each do |dep|
       next if dep.type != :runtime
       update = @requirements[dep.name]
@@ -122,23 +119,39 @@ class GemSpecUpdater
       update = @requirements[dep.name]
       not update.nil? and update[:method] == :delete
     }
+
     @attr.keys.each do |name|
-      av = @spec.instance_variable_get('@' + name)
-      if av.class == Array
+      modified = false
+      av = eval "@spec.#{name}"
+      if av.class == String
+        nv = @attr[name]
+        av = nv
+        modified = true
+      elsif av.class == Array
         operation = @attr[name]
         operation.each do |op|
           if /^([^=]+)=([^=]+)$/ =~ op
             ov = $1
             nv = $2
-            av.delete_if {|a| a == ov}
-            av.push nv unless av.include? nv
+            if av.include? ov
+              av.delete ov
+              modified = true
+            end
+            unless av.include? nv
+              av.push nv
+              modified = true
+            end
           elsif /^([^=]+)=$/ =~ op
             ov = $1
-            av.delete_if {|a| a == ov}
-          else
-            av.push op unless av.include? op
+            if av.include? ov
+              av.delete(ov)
+              modified = true
+            end
           end
         end
+      end
+      if modified
+        eval "@spec.#{name} = av"
       end
     end
   end
@@ -147,7 +160,7 @@ class GemSpecUpdater
     FileUtils.cp(@file, @file + OrigSuffix, :preserve => true)
 
     open(@file, "w") { |f|
-      f.print YAML.dump(@spec) + "\n"
+      f.print @spec.to_ruby
     }
   end
 
