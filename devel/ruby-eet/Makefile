@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/02/06 23:22:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/07 17:00:44 taca Exp $
 
 DISTNAME=	ruby-eet-0.1.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	ftp://code-monkey.de/pub/ruby-eet/
 
@@ -13,11 +13,9 @@ LICENSE=	mit
 
 RUBY_VERSION_SUPPORTED= 18
 
+RUBY_RDOC_REQD=	2.0.0
 USE_RAKE=	YES
 USE_TOOLS+=	pkg-config
-
-.include "../../devel/eet/buildlink3.mk"
-.include "../../lang/ruby/modules.mk"
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE}
@@ -25,4 +23,6 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${RAKE} install
 
+.include "../../lang/ruby/modules.mk"
+.include "../../devel/eet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
