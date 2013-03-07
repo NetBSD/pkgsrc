@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/01/21 13:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/03/07 06:36:28 wiz Exp $
 #
 
-DISTNAME=		libXi-1.6.2
+DISTNAME=		libXi-1.7
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
