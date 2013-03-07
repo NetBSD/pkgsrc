@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.16 2012/10/03 12:58:34 asau Exp $
+# $NetBSD: gem.mk,v 1.17 2013/03/07 16:42:53 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -10,6 +10,7 @@
 #
 #		ruby18-base:	none
 #		ruby193-base:	1.8.11
+#		ruby200-base:	2.0.0
 #
 #	If newer version of rubygems is resuiqred, set RUBYGEMS_REQD to
 #	minimum version.
@@ -37,7 +38,12 @@
 #	
 #			OVERRIDE_GEMSPEC+= json:
 #
-#	(2) Modify files in gemspec.
+#	(2) Modify instance of gemspec.
+#
+#		Example:
+#			Rename gem's name to "foo" (setting instance @name):
+#
+#			OVERRIDE_GEMSPEC+= :name=foo
 #
 #		Example:
 #			Remove files (a.rb and b.rb) from 'files':
@@ -163,6 +169,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
 . if defined(RUBYGEMS_REQD)
 
 RUBY193_RUBYGEMS_VERS=	1.8.11
+RUBY200_RUBYGEMS_VERS=	2.0.0
 
 _RUBYGEMS_REQD_MAJOR=	${RUBYGEMS_REQD:C/\.[0-9\.]+$//}
 _RUBYGEMS_REQD_MINORS=	${RUBYGEMS_REQD:C/^([0-9]+)\.*//}
@@ -170,6 +177,9 @@ _RUBYGEMS_REQD_MINORS=	${RUBYGEMS_REQD:C/^([0-9]+)\.*//}
 .  if ${RUBY_VER} == "193"
 _RUBYGEMS_MAJOR=	${RUBY193_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
 _RUBYGEMS_MINORS=	${RUBY193_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
+.  elif ${RUBY_VER} == "200"
+_RUBYGEMS_MAJOR=	${RUBY200_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
+_RUBYGEMS_MINORS=	${RUBY200_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
 .  else
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 .  endif
@@ -244,11 +254,10 @@ post-extract: gem-extract
 gem-extract: fake-home
 .  for _gem_ in ${DISTFILES:M*.gem}
 	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
-		${RUBYGEM} unpack ${RUBYGEM_INSTALL_ROOT_OPTION} \
-			${_DISTDIR:Q}/${_gem_:Q}
+		${RUBYGEM} unpack ${_DISTDIR:Q}${_gem_:Q}
 	${RUN} cd ${WRKDIR} && \
 		${SETENV} ${MAKE_ENV} TZ=UTC ${RUBYGEM_ENV} \
-		${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
+		${RUBYGEM} spec --ruby ${_DISTDIR:Q}${_gem_:Q} > ${_gem_}spec
 .  endfor
 .endif
 
@@ -321,7 +330,7 @@ RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
 _gem-build-install-root:
 	@${STEP_MSG} "Installing gem into installation root"
 	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
-		${RUBYGEM} install ${RUBYGEM_OPTIONS} ${_RUBYGEM_OPTIONS}
+		${RUBYGEM} install --backtrace ${RUBYGEM_OPTIONS} ${_RUBYGEM_OPTIONS}
 
 # The ``gem'' command doesn't exit with a non-zero result even if the
 # install of the gem failed, so we do the check and return the proper exit
