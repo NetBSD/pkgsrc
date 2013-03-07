@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.4 2013/02/10 12:07:50 obache Exp $
+# $NetBSD: metadata.mk,v 1.5 2013/03/07 13:15:29 obache Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -86,7 +86,7 @@ ${_BUILD_INFO_FILE}: plist
 	PE)								\
 		libs=`${AWK} '/\/.+\.dll$$/ { print "${DESTDIR}${PREFIX}/" $$0 } END { exit 0 }' ${_PLIST_NOKEYWORDS}`; \
 		if ${TEST} -n "$$bins" -o -n "$$libs"; then		\
-			requires=`(${PKGSRC_SETENV} ${LDD_ENV:U} $$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SED} -e 's,^${DESTDIR},,' | ${SORT} -u`; \
+			requires=`(${TRUE} || ${PKGSRC_SETENV} ${LDD_ENV:U} $$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SED} -e 's,^${DESTDIR},,' | ${SORT} -u`; \
 		fi;							\
 		linklibs=`${AWK} '/.+\.dll$$/ { print "${DESTDIR}${PREFIX}/" $$0 }' ${_PLIST_NOKEYWORDS}`; \
 		for i in $$linklibs; do					\
