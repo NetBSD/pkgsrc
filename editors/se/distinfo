@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/07 05:38:27 tcort Exp $
+
+SHA1 (se-3.0.tar.gz) = b41bc99da14883e0887abc17fcfd80e5c87d2e52
+RMD160 (se-3.0.tar.gz) = 82b398b0a8cf7c940db9d6a0f46536bac3a23ebd
+Size (se-3.0.tar.gz) = 168238 bytes
