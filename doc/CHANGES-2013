@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.792 2013/03/07 05:49:27 tcort Exp $
+$NetBSD: CHANGES-2013,v 1.793 2013/03/07 06:36:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1131,3 +1131,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/log2timeline version 0.64 [pettai 2013-03-06]
 	Updated devel/mercurial to 2.5.2 [wiz 2013-03-07]
 	Added editors/se version 3.0 [tcort 2013-03-07]
+	Updated x11/inputproto to 2.3 [wiz 2013-03-07]
