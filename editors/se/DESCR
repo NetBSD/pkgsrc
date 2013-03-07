@@ -1,0 +1,4 @@
+se is a screen oriented version of the classic UNIX text editor ed. The se
+editor implements many of the familiar ed commands, but instead of being
+line oriented, se is screen oriented. se has a built-in help system and
+many configurable options that can be set in a start-up file.
