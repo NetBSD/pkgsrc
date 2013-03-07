@@ -1,0 +1,24 @@
+$NetBSD: patch-Rakefile,v 1.1 2013/03/07 17:05:42 taca Exp $
+
+* Require modern rule from rubygems and class.
+
+--- Rakefile.orig	2013-03-07 14:46:35.000000000 +0000
++++ Rakefile
+@@ -21,7 +21,7 @@ end
+ 
+ require 'rake'
+ require 'rake/clean'
+-require 'rake/gempackagetask'
++require 'rubygems/package_task'
+ require 'rake/testtask'
+ 
+ require 'mkrf/rakehelper'
+@@ -162,7 +162,7 @@ spec = Gem::Specification.new do |s|
+ end
+ 
+ # Create a task for creating a ruby gem
+-Rake::GemPackageTask.new(spec) do |pkg|
++Gem::PackageTask.new(spec) do |pkg|
+     pkg.gem_spec = spec
+     pkg.need_tar = true
+ end
