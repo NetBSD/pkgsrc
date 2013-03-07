@@ -1,0 +1,15 @@
+$NetBSD: patch-Rakefile,v 1.1 2013/03/07 17:00:44 taca Exp $
+
+* Require modern task rule from rdoc.
+
+--- Rakefile.orig	2007-03-23 11:32:09.000000000 +0000
++++ Rakefile
+@@ -1,7 +1,7 @@
+ require "rbconfig"
+ require "rake/clean"
+ require "rake/testtask"
+-require "rake/rdoctask"
++require "rdoc/task"
+ require "rake/packagetask"
+ require "rake/contrib/compositepublisher"
+ require "rake/contrib/sshpublisher"
