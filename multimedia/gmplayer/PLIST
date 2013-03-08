@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/06/16 22:28:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/03/08 11:41:50 obache Exp $
 bin/gmplayer
 share/mplayer/skins/AlienMind/README
 share/mplayer/skins/AlienMind/VERSION
@@ -327,8 +327,12 @@ share/mplayer/skins/hwswskin/button-stop.png
 share/mplayer/skins/hwswskin/font.fnt
 share/mplayer/skins/hwswskin/font.png
 share/mplayer/skins/hwswskin/main.png
+share/mplayer/skins/hwswskin/main1.png
+share/mplayer/skins/hwswskin/main2.png
 share/mplayer/skins/hwswskin/pos.png
 share/mplayer/skins/hwswskin/skin
+share/mplayer/skins/hwswskin/skin1
+share/mplayer/skins/hwswskin/skin2
 share/mplayer/skins/hwswskin/sub.png
 share/mplayer/skins/hwswskin/vol.png
 share/mplayer/skins/mentalic/README

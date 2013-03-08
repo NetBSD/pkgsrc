@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.80 2013/01/12 11:55:35 jmcneill Exp $
+$NetBSD: distinfo,v 1.81 2013/03/08 11:41:50 obache Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
 Size (mplayer/AlienMind-1.2.tar.bz2) = 131295 bytes
-SHA1 (mplayer/Blue-1.7.tar.bz2) = 45e5ee7a5541a5f1cfd2678a6c9b5911ca473cb9
-RMD160 (mplayer/Blue-1.7.tar.bz2) = 1f8c539ccadc54eea5e6678839bcc8ae1e16e6eb
-Size (mplayer/Blue-1.7.tar.bz2) = 222567 bytes
+SHA1 (mplayer/Blue-1.8.tar.bz2) = 0250d0b468b36ee13f160a814297afcb77f97e1d
+RMD160 (mplayer/Blue-1.8.tar.bz2) = 08b8d15a1c39a74898aec0927f6c9cfbc6064147
+Size (mplayer/Blue-1.8.tar.bz2) = 223118 bytes
 SHA1 (mplayer/BlueHeart-1.5.tar.bz2) = 157aca7420e8003ced2f4f1cb38a33c1bfd0db13
 RMD160 (mplayer/BlueHeart-1.5.tar.bz2) = 39e139b5428a695e5eb56e72e0e626cb3a5a2eea
 Size (mplayer/BlueHeart-1.5.tar.bz2) = 281051 bytes
@@ -36,9 +36,9 @@ Size (mplayer/gnome-1.1.tar.bz2) = 368649 bytes
 SHA1 (mplayer/hayraphon-1.0.tar.bz2) = c16b379a202e477e68f18003cd868a760daa0605
 RMD160 (mplayer/hayraphon-1.0.tar.bz2) = 2104981d6abdb89436e1f6ccd9ca9260a4cb4394
 Size (mplayer/hayraphon-1.0.tar.bz2) = 77577 bytes
-SHA1 (mplayer/hwswskin-1.1.tar.bz2) = 1637293c9b9b8f8ab1055f838ddd6409d035e3de
-RMD160 (mplayer/hwswskin-1.1.tar.bz2) = ca8d39bfc03dc18c927ff8d6592bd95974a9b354
-Size (mplayer/hwswskin-1.1.tar.bz2) = 20331 bytes
+SHA1 (mplayer/hwswskin-1.3.tar.bz2) = eaacadd605e9263bb3269b5853422d32535edb10
+RMD160 (mplayer/hwswskin-1.3.tar.bz2) = eb04b5b5ebb1ff6818f1748d563da4bf7cbad35c
+Size (mplayer/hwswskin-1.3.tar.bz2) = 21426 bytes
 SHA1 (mplayer/mentalic-1.2.tar.bz2) = 47a0c7f8cebba83b50b381ff923d91904cc5b514
 RMD160 (mplayer/mentalic-1.2.tar.bz2) = d561f0c1c3396c2776175f58f0d69b39623e9fee
 Size (mplayer/mentalic-1.2.tar.bz2) = 166570 bytes

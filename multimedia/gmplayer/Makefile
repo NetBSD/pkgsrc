@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2013/02/16 11:23:32 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2013/03/08 11:41:50 obache Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -28,7 +28,7 @@ BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 COMMENT=	Fast, cross-platform movie player with GTK2+ interface
 
 SKINS+=		AlienMind-1.2${SKIN_EXTRACT_SUFX}		\
-		Blue-1.7${SKIN_EXTRACT_SUFX}			\
+		Blue-1.8${SKIN_EXTRACT_SUFX}			\
 		BlueHeart-1.5${SKIN_EXTRACT_SUFX}		\
 		CornerMP-1.2${SKIN_EXTRACT_SUFX}		\
 		CornerMP-aqua-1.4${SKIN_EXTRACT_SUFX}		\
@@ -38,7 +38,7 @@ SKINS+=		AlienMind-1.2${SKIN_EXTRACT_SUFX}		\
 		avifile-1.6${SKIN_EXTRACT_SUFX}			\
 		gnome-1.1${SKIN_EXTRACT_SUFX}			\
 		hayraphon-1.0${SKIN_EXTRACT_SUFX}		\
-		hwswskin-1.1${SKIN_EXTRACT_SUFX}		\
+		hwswskin-1.3${SKIN_EXTRACT_SUFX}		\
 		mentalic-1.2${SKIN_EXTRACT_SUFX}		\
 		neutron-1.5${SKIN_EXTRACT_SUFX}			\
 		phony-1.1${SKIN_EXTRACT_SUFX}			\
