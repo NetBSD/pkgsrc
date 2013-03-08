@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.818 2013/03/08 20:46:36 adam Exp $
+$NetBSD: CHANGES-2013,v 1.819 2013/03/08 21:30:27 tez Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1159,3 +1159,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/sysbuild to 2.5 [jmmv 2013-03-08]
 	Updated sysutils/sysbuild-user to 1.1 [jmmv 2013-03-08]
 	Updated print/ghostscript to 9.07 [adam 2013-03-08]
+	Updated lang/perl5 to 5.16.2nb4 [tez 2013-03-08]
