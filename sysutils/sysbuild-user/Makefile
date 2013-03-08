@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/08 17:49:30 jmmv Exp $
 
-DISTNAME=	sysbuild-user-1.0
+DISTNAME=	sysbuild-user-1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS=		sysbuild>=2.0:../../sysutils/sysbuild
+DEPENDS=		sysbuild>=2.5:../../sysutils/sysbuild
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		YES
