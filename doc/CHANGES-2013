@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.809 2013/03/08 13:55:54 wen Exp $
+$NetBSD: CHANGES-2013,v 1.810 2013/03/08 14:23:24 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1148,3 +1148,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mk-configure to 0.24.0 [cheusov 2013-03-08]
 	Updated pkgtools/nih to 0.11.0 [cheusov 2013-03-08]
 	Updated time/p5-DateTime-TimeZone to 1.57 [wen 2013-03-08]
+	Updated pkgtools/pkg_summary-utils to 0.61.0 [cheusov 2013-03-08]
