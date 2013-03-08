@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11975 2013/03/07 12:58:30 obache Exp $
+$NetBSD: TODO,v 1.11976 2013/03/08 08:06:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o clutter-1.12.2
-	o clutter-gst-1.6.0
+	o clutter-gst-2.0.2
 	o cmake-fedora-1.0.5
 	o cmus-2.5.0
 	o coccigrep-1.12
@@ -616,6 +616,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.16
 	o gentoo-0.19.13
+	o gettext-0.18.2.1
 	o gfract-0.33
 	o ghc-7.6
 	o ghostscript-9.06 [wip]
@@ -640,7 +641,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.6.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.6.2
+	o gnome-keyring-3.6.3
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
@@ -679,7 +680,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gsharutils-4.13.3
 	o gss-1.0.2
-	o gssdp-0.14.1
+	o gssdp-0.14.2
 	o gst123-0.3.2
 	o gtexinfo-5.0
 	o gthumb-3.0.2
@@ -695,7 +696,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtranslator-1.9.6
 	o guile-2.0.7
 	o guile-gtk-2.0
-	o gupnp-0.20.0
+	o gupnp-0.20.1
 	o gupnp-av-0.12.0
 	o gupnp-dlna-0.10.0
 	o gvfs-1.6.7
@@ -759,7 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.2
-	o kde-4.9.4
+	o kde-4.10.1
 	o kde4-4.10
 	o kde4-4.9
 	o kdenlive-0.9.2
@@ -801,7 +802,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
-	o libgee-0.8.4
+	o libgee-0.8.5
 	o libgee0.8-0.8.3
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.6.0
@@ -857,6 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o luit-2.0.20130217
 	o lwm-1.2.2
 	o lyx-2.0.3
+	o lzip-1.14
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
@@ -873,6 +875,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
+	o milter-manager-1.8.6
 	o mined-2012.22
 	o miniupnpd-1.8
 	o minivmac-3.2.3
@@ -885,7 +888,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mnemosyne-2.2
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
-	o modular-xorg-server-1.13.2
+	o modular-xorg-server-1.14.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-3.0.6
@@ -971,6 +974,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
+	o paexec-0.18.0
 	o pam-passwdqc-1.2.2
 	o pango-1.32.6 [wants fontconfig-2.10.91; also backout commits for parts were noted, wait for next release]
 	o paprefs-0.9.8
@@ -1117,7 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o smproxy-1.0.3
 	o snd-10.6
 	o snes9x-1.53
-	o snort-2.9.4.0
+	o snort-2.9.4.1
 	o socat-1.7.2.1 [security]
 	o solfege-3.20.7
 	o sope-4.6
@@ -1237,6 +1241,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.5.25 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wireshark-1.8.6
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
