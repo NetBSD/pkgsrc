@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2012/10/07 14:19:18 mef Exp $
+# $NetBSD: options.mk,v 1.13 2013/03/08 20:45:25 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libXext/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
 PLIST_VARS+=		cups
@@ -50,7 +49,6 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../fonts/fontconfig/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-fontconfig
-CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
 # Please note the same if condition is in post-extract: target in Makefile
