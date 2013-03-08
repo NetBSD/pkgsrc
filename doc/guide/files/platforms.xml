@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.80 2013/03/02 14:16:04 obache Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.81 2013/03/08 12:08:08 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -81,6 +81,18 @@
       because it will be required to use libtool.
       If it is not installed (or too old), Fortran compiler will be
       installed with pkgsrc automatically.</para>
+
+      <para>As noted in
+      <ulink url="http://cygwin.com/faq-nochunks.html#faq.using.su">Cygwin FAQ: `Why doesn't su work?'</ulink>,
+      su(1) command has been in Cygwin distribution, but it has never worked.
+      Unless you bootstrap pkgsrc with the --unprivileged option, workaround is:
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>Right click "Cygwin Terminal" in your Start Menu,
+          then pick "Run as administrator".</para>
+        </listitem>
+      </itemizedlist>
     </sect2>
 
     <sect2 id="darwin">
