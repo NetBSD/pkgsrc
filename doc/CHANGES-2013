@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.803 2013/03/08 11:42:47 obache Exp $
+$NetBSD: CHANGES-2013,v 1.804 2013/03/08 12:34:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/libaudiofile to 0.3.6 [adam 2013-03-07]
 	Updated www/mediawiki to 1.20.3 [wen 2013-03-08]
 	Updated multimedia/gmplayer to 1.1nb9 [obache 2013-03-08]
+	Updated net/p5-Net-DHCP to 0.69.3 [wiz 2013-03-08]
