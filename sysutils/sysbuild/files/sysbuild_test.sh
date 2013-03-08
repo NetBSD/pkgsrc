@@ -508,6 +508,117 @@ EOF
 }
 
 
+atf_test_case build__hooks__ok
+build__hooks__ok_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+
+    create_mock_binary cvs yes
+    PATH="$(pwd):${PATH}"
+
+    cat >test.conf <<EOF
+CVSROOT="${MOCK_CVSROOT}"
+MACHINES="one two"  # Build hooks are only supposed to be called once.
+SRCDIR="$(pwd)/checkout/src"
+
+pre_fetch_hook() {
+    echo "Hook before fetch: \${SRCDIR}"
+}
+
+post_fetch_hook() {
+    echo "Hook after fetch"
+}
+
+pre_build_hook() {
+    echo "Hook before build: \${MACHINES}"
+}
+
+post_build_hook() {
+    echo "Hook after build"
+}
+EOF
+
+    atf_check -o save:stdout -e save:stderr sysbuild -c test.conf build
+    grep 'Command: build.sh' commands.log || atf_fail "build.sh not run"
+
+    cat >exp_order <<EOF
+Hook before fetch: $(pwd)/checkout/src
+Hook after fetch
+Hook before build: one two
+Hook after build
+EOF
+    atf_check -o file:exp_order grep '^Hook' stdout
+}
+
+
+atf_test_case build__hooks__pre_fail
+build__hooks__pre_fail_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+    cat >test.conf <<EOF
+CVSROOT="${MOCK_CVSROOT}"
+SRCDIR="$(pwd)/checkout/src"
+
+pre_fetch_hook() {
+    echo "Hook before fetch"
+}
+
+post_fetch_hook() {
+    echo "Hook after fetch"
+}
+
+pre_build_hook() {
+    echo "Hook before build"
+    false
+}
+
+post_build_hook() {
+    echo "Hook after build"
+}
+EOF
+
+    atf_check -s exit:1 -o save:stdout -e save:stderr \
+        sysbuild -c test.conf build
+    if grep 'Command: build.sh' commands.log; then
+        atf_fail "build.sh should not have been run"
+    fi
+
+    cat >exp_order <<EOF
+Hook before fetch
+Hook after fetch
+Hook before build
+EOF
+    atf_check -o file:exp_order grep '^Hook' stdout
+}
+
+
+atf_test_case build__hooks__post_fail
+build__hooks__post_fail_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+    cat >test.conf <<EOF
+CVSROOT="${MOCK_CVSROOT}"
+SRCDIR="$(pwd)/checkout/src"
+
+pre_build_hook() {
+    echo "Hook before build"
+}
+
+post_build_hook() {
+    echo "Hook after build"
+    false
+}
+EOF
+
+    atf_check -s exit:1 -o save:stdout -e save:stderr \
+        sysbuild -c test.conf build
+    grep 'Command: build.sh' commands.log || atf_fail "build.sh not run"
+
+    cat >exp_order <<EOF
+Hook before build
+Hook after build
+EOF
+    atf_check -o file:exp_order grep '^Hook' stdout
+}
+
+
 atf_test_case config__builtins
 config__builtins_body() {
     cat >expout <<EOF
@@ -853,6 +964,102 @@ EOF
 }
 
 
+atf_test_case fetch__hooks__ok
+fetch__hooks__ok_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+    cat >test.conf <<EOF
+CVSROOT="${MOCK_CVSROOT}"
+SRCDIR="$(pwd)/checkout/src"
+XSRCDIR="$(pwd)/checkout/xsrc"
+
+pre_fetch_hook() {
+    echo "Hook before fetch: \${CVSROOT}"
+    test ! -d "${SRCDIR}"
+}
+
+post_fetch_hook() {
+    test -d "${SRCDIR}"
+    echo "Hook after fetch"
+}
+EOF
+
+    atf_check -o save:stdout -e ignore sysbuild -c test.conf fetch
+    test -f checkout/src/file-in-src || atf_fail "src not checked out"
+    test -f checkout/xsrc/file-in-xsrc || atf_fail "xsrc not checked out"
+
+    cat >exp_order <<EOF
+Hook before fetch: ${MOCK_CVSROOT}
+Hook after fetch
+EOF
+    atf_check -o file:exp_order grep '^Hook' stdout
+}
+
+
+atf_test_case fetch__hooks__pre_fail
+fetch__hooks__pre_fail_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+    cat >test.conf <<EOF
+CVSROOT="${MOCK_CVSROOT}"
+SRCDIR="$(pwd)/checkout/src"
+XSRCDIR="$(pwd)/checkout/xsrc"
+
+pre_fetch_hook() {
+    echo "Hook before fetch"
+    false
+}
+
+post_fetch_hook() {
+    echo "Hook after fetch"
+}
+EOF
+
+    atf_check -s exit:1 -o save:stdout -e save:stderr \
+        sysbuild -c test.conf fetch
+    grep 'pre_fetch_hook returned an error' stderr || \
+        atf_fail "pre_fetch_hook didn't seem to fail"
+    test ! -f checkout/src/file-in-src || atf_fail "src checked out"
+    test ! -f checkout/xsrc/file-in-xsrc || atf_fail "xsrc checked out"
+
+    cat >exp_order <<EOF
+Hook before fetch
+EOF
+    atf_check -o file:exp_order grep '^Hook' stdout
+}
+
+
+atf_test_case fetch__hooks__post_fail
+fetch__hooks__post_fail_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+    cat >test.conf <<EOF
+CVSROOT="${MOCK_CVSROOT}"
+SRCDIR="$(pwd)/checkout/src"
+XSRCDIR="$(pwd)/checkout/xsrc"
+
+pre_fetch_hook() {
+    echo "Hook before fetch"
+}
+
+post_fetch_hook() {
+    echo "Hook after fetch"
+    false
+}
+EOF
+
+    atf_check -s exit:1 -o save:stdout -e save:stderr \
+        sysbuild -c test.conf fetch
+    test -f checkout/src/file-in-src || atf_fail "src not checked out"
+    test -f checkout/xsrc/file-in-xsrc || atf_fail "xsrc not checked out"
+    grep 'post_fetch_hook returned an error' stderr || \
+        atf_fail "post_fetch_hook didn't seem to fail"
+
+    cat >exp_order <<EOF
+Hook before fetch
+Hook after fetch
+EOF
+    atf_check -o file:exp_order grep '^Hook' stdout
+}
+
+
 atf_test_case fetch__too_many_args
 fetch__too_many_args_body() {
     cat >experr <<EOF
@@ -904,6 +1111,9 @@ atf_init_test_cases() {
     atf_add_test_case build__mkvars
     atf_add_test_case build__with_x11
     atf_add_test_case build__some_args
+    atf_add_test_case build__hooks__ok
+    atf_add_test_case build__hooks__pre_fail
+    atf_add_test_case build__hooks__post_fail
 
     atf_add_test_case config__builtins
     atf_add_test_case config__path__components
@@ -925,6 +1135,9 @@ atf_init_test_cases() {
     atf_add_test_case fetch__checkout__src_and_xsrc
     atf_add_test_case fetch__update__src_only
     atf_add_test_case fetch__update__src_and_xsrc
+    atf_add_test_case fetch__hooks__ok
+    atf_add_test_case fetch__hooks__pre_fail
+    atf_add_test_case fetch__hooks__post_fail
     atf_add_test_case fetch__too_many_args
 
     atf_add_test_case no_command
