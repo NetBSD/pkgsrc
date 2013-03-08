@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.807 2013/03/08 12:48:56 cheusov Exp $
+$NetBSD: CHANGES-2013,v 1.808 2013/03/08 13:04:45 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1146,3 +1146,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-Net-Write to 1.07 [wiz 2013-03-08]
 	Updated parallel/paexec to 0.18.0 [cheusov 2013-03-08]
 	Updated devel/mk-configure to 0.24.0 [cheusov 2013-03-08]
+	Updated pkgtools/nih to 0.11.0 [cheusov 2013-03-08]
