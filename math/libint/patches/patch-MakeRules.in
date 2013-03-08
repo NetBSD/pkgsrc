@@ -1,0 +1,37 @@
+$NetBSD: patch-MakeRules.in,v 1.1.1.1 2013/03/08 07:09:04 asau Exp $
+
+--- MakeRules.in.orig	2011-08-31 00:35:09.000000000 +0000
++++ MakeRules.in
+@@ -4,20 +4,20 @@ default:: $(TOPDIR)/lib/$(TARGET)
+ install:: install_inc install_target
+ 
+ install_inc:: $(TOPDIR)/lib/$(TARGET)
+-	$(INSTALL) $(INSTALLDIROPT) $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_intrinsic_types.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_iface.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_params.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_types.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_params.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/cgshellinfo.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/cgshell_ordering.h $(includedir)/$(NAME)$(VERSION)
+-	-$(INSTALL) $(INSTALLLIBOPT) $(TOPDIR)/include/libint2_config.h $(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLDIROPT) $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_intrinsic_types.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_iface.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_params.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_types.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/libint2_params.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/cgshellinfo.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(SRCTOPDIR)/include/cgshell_ordering.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
++	$(INSTALL) $(INSTALLLIBOPT) $(TOPDIR)/include/libint2_config.h $(DESTDIR)$(includedir)/$(NAME)$(VERSION)
+ 
+ install_target:: $(TOPDIR)/lib/$(TARGET)
+-	$(INSTALL) $(INSTALLDIROPT) $(libdir)
+-	$(LTINST) $(INSTALL) $(INSTALLLIBOPT) $< $(libdir)
++	$(INSTALL) $(INSTALLDIROPT) $(DESTDIR)$(libdir)
++	$(LTINST) $(INSTALL) $(INSTALLLIBOPT) $< $(DESTDIR)$(libdir)
+ 
+ clean:: oclean targetclean
+ 
