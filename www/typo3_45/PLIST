@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/11/08 13:48:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2013/03/08 20:06:41 spz Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -1681,7 +1681,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/insert3.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/insert4.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/insert5.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/installbackground.jpg
-${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/installlogo.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/legend.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/lightning.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/lightning_green.png
@@ -2250,7 +2249,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/res/t3grid-tabledown.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/res/t3grid-tableleft.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/res/t3grid-tableright.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/res/t3grid-tableup.png
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/res/typo3.pageModule.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/wizard_backend_layout.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/layout/wizard_backend_layout.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/locallang_csh_webinfo.xml
@@ -3970,6 +3968,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/FileStor
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/HMAC.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/Interface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/KVForm.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/MDB2Store.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/MemcachedStore.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/Message.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/lib/php-openid/Auth/OpenID/MySQLStore.php
