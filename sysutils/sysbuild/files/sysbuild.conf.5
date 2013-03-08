@@ -1,4 +1,4 @@
-.\" $NetBSD: sysbuild.conf.5,v 1.1 2012/10/13 18:40:33 jmmv Exp $
+.\" $NetBSD: sysbuild.conf.5,v 1.2 2013/03/08 17:47:26 jmmv Exp $
 .\" Copyright 2012 Google Inc.
 .\" All rights reserved.
 .\"
@@ -26,7 +26,7 @@
 .\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 .\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 .\" OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-.Dd October 13, 2012
+.Dd March 8, 2013
 .Dt SYSBUILD.CONF 5
 .Os
 .Sh NAME
@@ -35,10 +35,11 @@
 .Sh DESCRIPTION
 Configuration files for
 .Xr sysbuild 1
-are plain shell scripts that define a set of recognized variables.
-.Pp
-As scripts, they can perform any magic they desire to deduce the value of
-the configuration variables.
+are plain shell scripts that define a set of recognized variables and can
+optionally fill in a set of hooks provided as shell functions.
+.Ss Configuration variables
+As scripts, configuration files can perform any magic they desire to deduce
+the value of configuration variables.
 For example, the default configuration file shipped with
 .Xr sysbuild 1
 automatically deduces the value of the
@@ -156,6 +157,36 @@ If not set, disables parallel builds (which, due to
 semantics, is not the same as setting this to 1).
 .Pp
 Default: not defined.
+.El
+.Ss Hooks
+Hooks are user-provided routines invoked at particular points during the
+build process.
+These are defined as shell functions and have access to the configuration
+variables in the file.
+Hooks must return a success error code and they cannot contain unprotected
+shell commands.
+In other words, they are run under a shell configured with
+.Sq set -e .
+.Pp
+The following hooks can be defined:
+.Bl -tag -width post_build_hookXX
+.It Fn pre_build_hook
+Function executed before invoking
+.Nm build.sh
+for any of the provided build targets and platforms.
+.It Fn post_build_hook
+Function executed at the end of all build operations.
+In other words: if the system is being built for multiple machine targets,
+this hook will only be run once.
+.It Fn pre_fetch_hook
+Function executed at the beginning of the
+.Sq fetch
+command before any operations are performed.
+This cannot assume that the source directories exist yet.
+.It Fn post_fetch_hook
+Function executed right after all source trees have been updated by the
+.Sq fetch
+command.
 .El
 .Sh SEE ALSO
 .Xr sysbuild 1
