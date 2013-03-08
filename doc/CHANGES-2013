@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.813 2013/03/08 14:34:04 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.814 2013/03/08 14:36:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1152,3 +1152,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-HTTP-Tiny to 0.028 [wen 2013-03-08]
 	Updated devel/p5-CPAN-Perl-Releases to 1.02 [wen 2013-03-08]
 	Updated net/mtr to 0.84 [wiz 2013-03-08]
+	Updated www/p5-PSGI to 1.101 [wen 2013-03-08]
