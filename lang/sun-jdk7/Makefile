@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/03/06 16:58:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/08 15:08:50 jperkin Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -24,12 +24,6 @@ MAKE_JOBS_SAFE=	no
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 CHECK_SHLIBS_SUPPORTED=	no
-.endif
-
-# XXX: The download page says .tar.gz but sends the file as .gz
-.if ${OPSYS} == "SunOS"
-EXTRACT_OPTS=	-f tar
-EXTRACT_SUFX=	.gz
 .endif
 
 # The 64-bit Solaris downloads for some inexplicable reason only contain
