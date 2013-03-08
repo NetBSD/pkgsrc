@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.814 2013/03/08 14:36:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.815 2013/03/08 15:26:53 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1153,3 +1153,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-CPAN-Perl-Releases to 1.02 [wen 2013-03-08]
 	Updated net/mtr to 0.84 [wiz 2013-03-08]
 	Updated www/p5-PSGI to 1.101 [wen 2013-03-08]
+	Added math/libint version 2.0.0 [asau 2013-03-08]
