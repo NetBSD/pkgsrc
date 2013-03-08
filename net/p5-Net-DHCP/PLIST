@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/27 20:09:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/08 12:34:08 wiz Exp $
 share/examples/p5-Net-DHCP/dhcp_sniffer.pl
 share/examples/p5-Net-DHCP/dhcpd.pl
 share/examples/p5-Net-DHCP/dhcpd_test.pl
+share/examples/p5-Net-DHCP/dumpianatoxml.pl
+share/examples/p5-Net-DHCP/l2tp-dhcp-inform
 share/examples/p5-Net-DHCP/lease_query.pl
+share/examples/p5-Net-DHCP/list_dho.pl
 share/examples/p5-Net-DHCP/send_packet.pl
