@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.802 2013/03/08 07:58:46 wen Exp $
+$NetBSD: CHANGES-2013,v 1.803 2013/03/08 11:42:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1141,3 +1141,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-eet to 0.1.4nb7 [taca 2013-03-07]
 	Updated audio/libaudiofile to 0.3.6 [adam 2013-03-07]
 	Updated www/mediawiki to 1.20.3 [wen 2013-03-08]
+	Updated multimedia/gmplayer to 1.1nb9 [obache 2013-03-08]
