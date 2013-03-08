@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/03/08 07:09:04 asau Exp $
+include/libint2/cgshell_ordering.h
+include/libint2/cgshellinfo.h
+include/libint2/libint2.h
+include/libint2/libint2_config.h
+include/libint2/libint2_iface.h
+include/libint2/libint2_intrinsic_types.h
+include/libint2/libint2_params.h
+include/libint2/libint2_types.h
+lib/libint2.a
