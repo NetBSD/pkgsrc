@@ -51,7 +51,7 @@ SYSBUILD_CONFIG_VARS="BUILD_ROOT BUILD_TARGETS CVSROOT CVSTAG INCREMENTAL_BUILD
 : ${SYSBUILD_SHAREDIR="@SYSBUILD_SHAREDIR@"}
 
 
-# Sets defaults for configuration variables that need a value.
+# Sets defaults for configuration variables and hooks that need to exist.
 #
 # This function should be before the configuration file has been loaded.  This
 # means that the user can undefine a required configuration variable, but we let
@@ -66,6 +66,11 @@ sysbuild_set_defaults() {
     shtk_config_set RELEASEDIR "${HOME}/sysbuild/release"
     shtk_config_set SRCDIR "${HOME}/sysbuild/src"
     shtk_config_set UPDATE_SOURCES "true"
+
+    pre_build_hook() { true; }
+    post_build_hook() { true; }
+    pre_fetch_hook() { true; }
+    post_fetch_hook() { true; }
 }
 
 
@@ -195,9 +200,11 @@ sysbuild_build() {
         sysbuild_fetch
     fi
 
+    shtk_config_run_hook pre_build_hook
     for machine in ${machines}; do
         do_one_build "${machine}"
     done
+    shtk_config_run_hook post_build_hook
 }
 
 
@@ -268,6 +275,8 @@ EOF
 sysbuild_fetch() {
     [ ${#} -eq 0 ] || shtk_cli_usage_error "fetch does not take any arguments"
 
+    shtk_config_run_hook pre_fetch_hook
+
     local cvsroot="$(shtk_config_get CVSROOT)"
 
     shtk_cli_info "Updating base source tree"
@@ -279,6 +288,8 @@ sysbuild_fetch() {
         shtk_cvs_fetch "${cvsroot}" xsrc \
             "$(shtk_config_get_default CVSTAG '')" "$(shtk_config_get XSRCDIR)"
     fi
+
+    shtk_config_run_hook post_fetch_hook
 }
 
 
