@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/10/07 14:19:18 mef Exp $
-bin/dumphint
+@comment $NetBSD: PLIST,v 1.18 2013/03/08 20:45:25 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
@@ -15,7 +14,6 @@ bin/gsx
 bin/lprsetup.sh
 bin/pdf2dsc
 bin/pdf2ps
-bin/pdfopt
 bin/pf2afm
 bin/pfbtopfa
 bin/pphs
@@ -371,7 +369,9 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/GB1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/Japan1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/Korea1-WMode
 share/ghostscript/${PKGVERSION}/doc/API.htm
+share/ghostscript/${PKGVERSION}/doc/AUTHORS
 share/ghostscript/${PKGVERSION}/doc/C-style.htm
+share/ghostscript/${PKGVERSION}/doc/COPYING
 share/ghostscript/${PKGVERSION}/doc/Changes.htm
 share/ghostscript/${PKGVERSION}/doc/Commprod.htm
 share/ghostscript/${PKGVERSION}/doc/DLL.htm
@@ -383,6 +383,8 @@ share/ghostscript/${PKGVERSION}/doc/Develop.htm
 share/ghostscript/${PKGVERSION}/doc/Devices.htm
 share/ghostscript/${PKGVERSION}/doc/Drivers.htm
 share/ghostscript/${PKGVERSION}/doc/Fonts.htm
+share/ghostscript/${PKGVERSION}/doc/GS9_Color_Management.pdf
+share/ghostscript/${PKGVERSION}/doc/GS9_Color_Management.tex
 share/ghostscript/${PKGVERSION}/doc/Helpers.htm
 share/ghostscript/${PKGVERSION}/doc/Hershey.htm
 share/ghostscript/${PKGVERSION}/doc/History1.htm
@@ -404,15 +406,21 @@ share/ghostscript/${PKGVERSION}/doc/Projects.htm
 share/ghostscript/${PKGVERSION}/doc/Ps-style.htm
 share/ghostscript/${PKGVERSION}/doc/Ps2epsi.htm
 share/ghostscript/${PKGVERSION}/doc/Ps2pdf.htm
+share/ghostscript/${PKGVERSION}/doc/Ps2ps2.htm
 share/ghostscript/${PKGVERSION}/doc/Psfiles.htm
 share/ghostscript/${PKGVERSION}/doc/Readme.htm
 share/ghostscript/${PKGVERSION}/doc/Release.htm
 share/ghostscript/${PKGVERSION}/doc/Source.htm
 share/ghostscript/${PKGVERSION}/doc/Unix-lpr.htm
 share/ghostscript/${PKGVERSION}/doc/Use.htm
+share/ghostscript/${PKGVERSION}/doc/WhatIsGS.htm
 share/ghostscript/${PKGVERSION}/doc/Xfonts.htm
+share/ghostscript/${PKGVERSION}/doc/gs-vms.hlp
 share/ghostscript/${PKGVERSION}/doc/gs.css
+share/ghostscript/${PKGVERSION}/doc/gsdoc.el
 share/ghostscript/${PKGVERSION}/doc/index.html
+share/ghostscript/${PKGVERSION}/doc/pscet_status.txt
+share/ghostscript/${PKGVERSION}/doc/thirdparty.htm
 share/ghostscript/${PKGVERSION}/examples/alphabet.ps
 share/ghostscript/${PKGVERSION}/examples/annots.pdf
 share/ghostscript/${PKGVERSION}/examples/chess.ps
@@ -435,7 +443,10 @@ share/ghostscript/${PKGVERSION}/examples/golfer.eps
 share/ghostscript/${PKGVERSION}/examples/grayalph.ps
 share/ghostscript/${PKGVERSION}/examples/ridt91.eps
 share/ghostscript/${PKGVERSION}/examples/snowflak.ps
+share/ghostscript/${PKGVERSION}/examples/text_graph_image_cmyk_rgb.pdf
+share/ghostscript/${PKGVERSION}/examples/text_graphic_image.pdf
 share/ghostscript/${PKGVERSION}/examples/tiger.eps
+share/ghostscript/${PKGVERSION}/examples/transparency_example.ps
 share/ghostscript/${PKGVERSION}/examples/vasarely.ps
 share/ghostscript/${PKGVERSION}/examples/waterfal.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_cmyk.icc
@@ -509,7 +520,6 @@ share/ghostscript/${PKGVERSION}/lib/dmp_site.ps
 share/ghostscript/${PKGVERSION}/lib/dnj750c.upp
 share/ghostscript/${PKGVERSION}/lib/dnj750m.upp
 share/ghostscript/${PKGVERSION}/lib/docie.ps
-share/ghostscript/${PKGVERSION}/lib/dumphint.ps
 share/ghostscript/${PKGVERSION}/lib/escp_24.src
 share/ghostscript/${PKGVERSION}/lib/font2c.ps
 share/ghostscript/${PKGVERSION}/lib/font2pcl.ps
@@ -556,7 +566,6 @@ share/ghostscript/${PKGVERSION}/lib/necp2x6.upp
 share/ghostscript/${PKGVERSION}/lib/packfile.ps
 share/ghostscript/${PKGVERSION}/lib/pcharstr.ps
 share/ghostscript/${PKGVERSION}/lib/pdf2dsc.ps
-share/ghostscript/${PKGVERSION}/lib/pdfopt.ps
 share/ghostscript/${PKGVERSION}/lib/pdfwrite.ps
 share/ghostscript/${PKGVERSION}/lib/pf2afm.ps
 share/ghostscript/${PKGVERSION}/lib/pfbtopfa.ps
