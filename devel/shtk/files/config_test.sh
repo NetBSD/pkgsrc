@@ -383,6 +383,60 @@ override__unknown_variable_body() {
 }
 
 
+atf_test_case run_hook__ok
+run_hook__ok_body() {
+    shtk_config_init VAR1 VAR2 VAR3
+    shtk_config_set VAR1 "first"
+    shtk_config_set VAR3 "third"
+
+    test_hook() {
+        echo "ARGS=${*}"
+        echo "VAR1=${VAR1:-unset}"
+        echo "VAR2=${VAR2:-unset}"
+        echo "VAR3=${VAR3:-unset}"
+    }
+
+    VAR1=ignore-this; VAR2=ignore-this; VAR3=ignore-this
+    shtk_config_run_hook test_hook arg1 arg2 >out 2>err
+
+    cat >expout <<EOF
+ARGS=arg1 arg2
+VAR1=first
+VAR2=unset
+VAR3=third
+EOF
+    atf_check -o file:expout cat out
+    atf_check -o empty cat err
+}
+
+
+atf_test_case run_hook__fail
+run_hook__fail_body() {
+    shtk_config_init VAR1
+    shtk_config_set VAR1 "first"
+
+    test_hook() {
+        echo "VAR1=${VAR1:-unset}"
+        false
+    }
+
+    (
+        if shtk_config_run_hook test_hook >out 2>err; then
+            atf_fail "Hook failure did not report an error"
+        fi
+    )
+
+    cat >expout <<EOF
+VAR1=first
+EOF
+    cat >experr <<EOF
+EOF
+    atf_check -o file:expout cat out
+    grep "The hook test_hook returned an error" err >/dev/null \
+        || atf_fail "Expected error message not found"
+}
+
+
 atf_init_test_cases() {
     atf_add_test_case is_valid__true
     atf_add_test_case is_valid__false
@@ -421,4 +475,7 @@ atf_init_test_cases() {
     atf_add_test_case override__not_ok_after_load
     atf_add_test_case override__invalid_format
     atf_add_test_case override__unknown_variable
+
+    atf_add_test_case run_hook__ok
+    atf_add_test_case run_hook__fail
 }
