@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2012/09/16 03:33:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.21.4.1 2013/03/08 18:36:42 spz Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -741,6 +741,7 @@ share/httpd/manual/mod/mod_authz_groupfile.html.ja.utf8
 share/httpd/manual/mod/mod_authz_groupfile.html.ko.euc-kr
 share/httpd/manual/mod/mod_authz_host.html
 share/httpd/manual/mod/mod_authz_host.html.en
+share/httpd/manual/mod/mod_authz_host.html.fr
 share/httpd/manual/mod/mod_authz_host.html.ja.utf8
 share/httpd/manual/mod/mod_authz_host.html.ko.euc-kr
 share/httpd/manual/mod/mod_authz_owner.html
