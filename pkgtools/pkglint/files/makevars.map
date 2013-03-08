@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.231 2013/03/04 16:28:18 wiz Exp $
+# $NetBSD: makevars.map,v 1.232 2013/03/08 12:35:43 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -702,6 +702,7 @@ TOOLS_NOOP		List of Tool [$system]
 TOOLS_PATH.*		Pathname [$system]
 TOOLS_PLATFORM.*	ShellCommand [$system]
 TOUCH_FLAGS		List of ShellWord [$system]
+UAC_REQD_EXECS		List of PrefixPathname [$package_list]
 UNLIMIT_RESOURCES	List of { datasize stacksize memorysize } [m:as,c:a]
 UNPRIVILEGED_USER	UserGroupName [$user]
 UNPRIVILEGED_GROUP	UserGroupName [$user]
