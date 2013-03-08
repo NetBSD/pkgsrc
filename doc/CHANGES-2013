@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.815 2013/03/08 15:26:53 asau Exp $
+$NetBSD: CHANGES-2013,v 1.816 2013/03/08 17:25:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1154,3 +1154,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mtr to 0.84 [wiz 2013-03-08]
 	Updated www/p5-PSGI to 1.101 [wen 2013-03-08]
 	Added math/libint version 2.0.0 [asau 2013-03-08]
+	Updated www/squid3 to 3.3.2 [adam 2013-03-08]
