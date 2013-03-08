@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2013/02/16 11:17:57 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2013/03/08 20:45:24 adam Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
-PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	http://ghostscript.com/releases/
@@ -22,9 +21,10 @@ CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
-USE_TOOLS+=		gmake perl:run lex pkg-config
 USE_LANGUAGES+=		c c++
+USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-system-libtiff
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
@@ -86,12 +86,12 @@ CONFIGURE_ENV+=	LPLIBDIR=${PREFIX}/lib
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
-#	${RM} -rf ${WRKSRC}/jasper
-	${RM} -rf ${WRKSRC}/libpng
-#	${RM} -rf ${WRKSRC}/tiff
-#	${RM} -rf ${WRKSRC}/zlib
 	${RM} -rf ${WRKSRC}/freetype
-#
+	${RM} -rf ${WRKSRC}/jpeg
+#	${RM} -rf ${WRKSRC}/lcms2
+	${RM} -rf ${WRKSRC}/libpng
+	${RM} -rf ${WRKSRC}/zlib
+
 #  To allow outside customization, rename cidfmap
 #	 (if you look at inside of the file, it is logically empty)
 .if !empty(PKG_OPTIONS:Mdisable-compile-inits)
@@ -101,11 +101,10 @@ post-extract:
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
 
-.include "../../print/libpaper/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-# pkgsrc jasper is too new
-#.include "../../graphics/jasper/buildlink3.mk"
+#.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
