@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.811 2013/03/08 14:25:01 wen Exp $
+$NetBSD: CHANGES-2013,v 1.812 2013/03/08 14:29:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1150,3 +1150,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-TimeZone to 1.57 [wen 2013-03-08]
 	Updated pkgtools/pkg_summary-utils to 0.61.0 [cheusov 2013-03-08]
 	Updated www/p5-HTTP-Tiny to 0.028 [wen 2013-03-08]
+	Updated devel/p5-CPAN-Perl-Releases to 1.02 [wen 2013-03-08]
