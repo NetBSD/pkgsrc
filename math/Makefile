@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2013/02/17 22:11:31 wiz Exp $
+# $NetBSD: Makefile,v 1.246 2013/03/08 15:21:54 asau Exp $
 
 COMMENT=	Mathematics
 
@@ -120,6 +120,7 @@ SUBDIR+=	kcalc
 SUBDIR+=	kseg
 SUBDIR+=	lapack
 SUBDIR+=	libffm
+SUBDIR+=	libint
 SUBDIR+=	libmatheval
 SUBDIR+=	linpack
 SUBDIR+=	lp_solve
