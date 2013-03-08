@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.28 2012/05/22 07:59:31 marino Exp $
+# $NetBSD: check-files.mk,v 1.29 2013/03/08 15:32:52 wiz Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -310,14 +310,14 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_REAL}; then	\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in the"		\
-			"PLIST but not in ${PREFIX}:";			\
+			"PLIST but not in ${DESTDIR}${PREFIX}:";			\
 		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_REAL};	\
 	fi >> ${.TARGET}
 	${RUN}					\
 	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_EXTRA}; then		\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in"			\
-			"${PREFIX} but not in the PLIST:";		\
+			"${DESTDIR}${PREFIX} but not in the PLIST:";		\
 		${SED} "s|^|        |" ${_CHECK_FILES_EXTRA};		\
 	fi >> ${.TARGET}
 	${RUN}					\
