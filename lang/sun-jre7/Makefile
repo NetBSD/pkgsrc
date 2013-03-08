@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/03/06 16:21:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/08 15:08:50 jperkin Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -7,8 +7,6 @@
 
 DISTNAME=	jre-7u15-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jre7-7.0.15
-EXTRACT_OPTS=-f tar
-EXTRACT_SUFX=.gz
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
