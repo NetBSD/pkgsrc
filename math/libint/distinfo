@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/03/08 07:09:04 asau Exp $
+
+SHA1 (libint-2.0.0-stable.tgz) = b658778f8c9d0be42e2663abb1e40a49d3f2dd30
+RMD160 (libint-2.0.0-stable.tgz) = 763bcd528d75a147b261cd4793e33ee648d11b69
+Size (libint-2.0.0-stable.tgz) = 7875292 bytes
+SHA1 (patch-MakeRules.in) = c83d8e36b46aabd82f6395a5e96e502871bf4e1a
