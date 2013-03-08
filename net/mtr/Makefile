@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2013/02/16 11:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2013/03/08 14:33:54 wiz Exp $
 
-DISTNAME=	mtr-0.82
-PKGREVISION=	7
+DISTNAME=	mtr-0.84
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bitwizard.nl/mtr/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 
 .include "options.mk"
@@ -41,4 +40,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${DESTDIR}${PREFIX}/share/doc/mtr
 
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
