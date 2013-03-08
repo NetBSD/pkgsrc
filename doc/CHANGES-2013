@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.805 2013/03/08 12:37:30 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.806 2013/03/08 12:48:38 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1144,3 +1144,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/gmplayer to 1.1nb9 [obache 2013-03-08]
 	Updated net/p5-Net-DHCP to 0.69.3 [wiz 2013-03-08]
 	Updated net/p5-Net-Write to 1.07 [wiz 2013-03-08]
+	Updated parallel/paexec to 0.18.0 [cheusov 2013-03-08]
