@@ -299,3 +299,29 @@ shtk_config_override() {
         _Shtk_ConfigOverrides="${_Shtk_ConfigOverrides} unset:${var}"
     fi
 }
+
+
+# Executes a hook in the context of a configuration file.
+#
+# The caller should not invoke the hook directly because then the hook would
+# not have access to the configuration variables defined in the same file.
+# Requiring the hook to use the various shtk_config_* methods would be weird.
+#
+# \post Any errors in the execution of the hook terminate the script.
+#
+# \param hook Name of the function to invoke.
+# \param ... Arguments to pass to the hook.
+shtk_config_run_hook() {
+    local hook="${1}"; shift
+
+    (
+        for var in ${_Shtk_ConfigVars}; do
+            if shtk_config_has "${var}"; then
+                eval "${var}"=\"$(shtk_config_get "${var}")\"
+            else
+                unset "${var}"
+            fi
+        done
+        "${hook}" "${@}"
+    ) || shtk_cli_error "The hook ${hook} returned an error"
+}
