@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/21 17:17:01 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/03/08 11:35:14 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -170,10 +170,6 @@ share/examples/mk-configure/hello_progs2/common.c
 share/examples/mk-configure/hello_progs2/expect.out
 share/examples/mk-configure/hello_progs2/server.c
 share/examples/mk-configure/hello_progs2/test.mk
-share/examples/mk-configure/hello_reqd/Makefile
-share/examples/mk-configure/hello_reqd/expect.out
-share/examples/mk-configure/hello_reqd/hello
-share/examples/mk-configure/hello_reqd/test.mk
 share/examples/mk-configure/hello_require_tools/Makefile
 share/examples/mk-configure/hello_require_tools/fake
 share/examples/mk-configure/hello_requirements/Makefile
@@ -264,6 +260,23 @@ share/examples/mk-configure/subprojects/libhello2/include/hello2.h
 share/examples/mk-configure/subprojects/libhello2/linkme.mk
 share/examples/mk-configure/subprojects/test.mk
 share/examples/mk-configure/subprojects/version.mk
+share/examples/mk-configure/tools/Makefile
+share/examples/mk-configure/tools/expect.out
+share/examples/mk-configure/tools/libs/bar/Makefile
+share/examples/mk-configure/tools/libs/bar/bar.c
+share/examples/mk-configure/tools/libs/bar/bar.h
+share/examples/mk-configure/tools/libs/bar/linkme.mk
+share/examples/mk-configure/tools/libs/foo/Makefile
+share/examples/mk-configure/tools/libs/foo/foo.c
+share/examples/mk-configure/tools/libs/foo/foo.h
+share/examples/mk-configure/tools/libs/foo/linkme.mk
+share/examples/mk-configure/tools/test.mk
+share/examples/mk-configure/tools/tools/prog1/Makefile
+share/examples/mk-configure/tools/tools/prog1/prog1.c
+share/examples/mk-configure/tools/tools/prog2/Makefile
+share/examples/mk-configure/tools/tools/prog2/prog2.c
+share/examples/mk-configure/tools/tools/prog3/Makefile
+share/examples/mk-configure/tools/tools/prog3/prog3.c
 share/mk-configure/custom/endianess
 share/mk-configure/custom/prog_bison
 share/mk-configure/custom/prog_flex
