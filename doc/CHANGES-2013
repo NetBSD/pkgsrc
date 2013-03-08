@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.801 2013/03/07 17:04:05 adam Exp $
+$NetBSD: CHANGES-2013,v 1.802 2013/03/08 07:58:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1140,3 +1140,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/drupal7 to 7.21 [taca 2013-03-07]
 	Updated devel/ruby-eet to 0.1.4nb7 [taca 2013-03-07]
 	Updated audio/libaudiofile to 0.3.6 [adam 2013-03-07]
+	Updated www/mediawiki to 1.20.3 [wen 2013-03-08]
