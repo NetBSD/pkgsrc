@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.821 2013/03/09 00:24:04 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.822 2013/03/09 15:29:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/perl5 to 5.16.2nb4 [tez 2013-03-08]
 	Updated textproc/libxml2 to 2.9.0nb2 [tez 2013-03-08]
 	Updated devel/clib to 0.3 [tonnerre 2013-03-09]
+	Updated graphics/gimp-ufraw to 0.19.1 [gdt 2013-03-09]
