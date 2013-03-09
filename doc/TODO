@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11980 2013/03/08 20:46:36 adam Exp $
+$NetBSD: TODO,v 1.11981 2013/03/09 09:44:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,6 +426,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o biew-6.1.0
 	o binutils-2.23.1
 	o bioperl-1.5.0
+	o blender-2.66a
 	o bluefish-2.2.4
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -439,7 +440,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.9.19
+	o calibre-0.9.22
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
@@ -621,6 +622,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-7.6
 	o giflib-5.0.3
 	o gifsicle-1.48
+	o gimp-ufraw-0.19.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -1169,7 +1171,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o texlive-2012
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-3.5.2
+	o texmaker-4.0
 	o tfmxplay-1.1.6
 	o tig-1.0
 	o tightvnc-2.0.95
