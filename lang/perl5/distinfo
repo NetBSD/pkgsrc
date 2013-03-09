@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.95 2013/03/08 21:28:18 tez Exp $
+$NetBSD: distinfo,v 1.96 2013/03/09 03:19:10 obache Exp $
 
 SHA1 (perl-5.16.2.tar.gz) = 9e20e38e3460ebbac895341fd70a02189d03a490
 RMD160 (perl-5.16.2.tar.gz) = 84f0233ac48059b4636661b023dd8a3389f9ae64
 Size (perl-5.16.2.tar.gz) = 16933974 bytes
 SHA1 (patch-CVE-2013-1667) = cabd5bf87301567266715c09483a13745116c6e0
 SHA1 (patch-aa) = 9066746c6e6ed0d58962f52de1ae773e210cfcb5
-SHA1 (patch-ab) = a9c674c5b09700d13fa885f11a3525d6d54899b5
+SHA1 (patch-ab) = ddddf24cfa96c3b95202c2081006e0c7216afa1d
 SHA1 (patch-ac) = cd918ae7aedddfcd3d555a1d1388c4c8719ccd12
 SHA1 (patch-ah) = f66b496ba8f7b7d3e5a1f0c6f03d051a652f426e
 SHA1 (patch-aq) = 4bf5a76f0277b0939b2ca7720f4bb045a788b5cc
