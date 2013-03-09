@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.42 2013/03/08 19:26:30 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.43 2013/03/09 07:36:32 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -249,3 +249,9 @@ Pullup ticket #4088 - requested by tron
 www/apache22: security update
 Pullup ticket #4090 - requested by tron
 net/wireshark: security update
+Pullup ticket #4091 - requested by taca
+www/typo3_45: security update
+Pullup ticket #4092 - requested by taca
+www/typo3_46: security update
+Pullup ticket #4093 - requested by taca
+www/typo3_47: security update
