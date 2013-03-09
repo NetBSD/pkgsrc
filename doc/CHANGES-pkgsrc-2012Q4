@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.43 2013/03/09 07:36:32 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.44 2013/03/09 09:11:44 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -255,3 +255,5 @@ Pullup ticket #4092 - requested by taca
 www/typo3_46: security update
 Pullup ticket #4093 - requested by taca
 www/typo3_47: security update
+Pullup ticket #4094 - requested by wen
+www/mediawiki: security update
