@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.28 2013/03/08 08:28:41 wiz Exp $
+# $NetBSD: mdoclint,v 1.29 2013/03/10 22:14:40 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -288,8 +288,7 @@ sub verify_xref
 	for my $dir ("/usr/share/man",
 	    OPENBSD ? "/usr/X11R6/man" : "/usr/X11R7/man") {
 		for my $a ("", $arch) {
-			for my $page ("cat$section/$a/$page.0",
-			    "man$section/$a/$page.$section") {
+			for my $page ("man$section/$a/$page.$section") {
 				return 1 if -f "$dir/$page";
 			}
 		}
