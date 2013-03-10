@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/02/09 15:41:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/03/10 13:14:00 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -80,6 +80,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.41.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.42.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.43.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.44.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.45.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.7.0.txt
@@ -281,6 +282,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/timestamps.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/touch.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/tree.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/typecast_on_load.rb
+${GEM_LIBDIR}/lib/sequel/plugins/unlimited_update.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_primary_key.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
@@ -398,6 +400,7 @@ ${GEM_LIBDIR}/spec/extensions/to_dot_spec.rb
 ${GEM_LIBDIR}/spec/extensions/touch_spec.rb
 ${GEM_LIBDIR}/spec/extensions/tree_spec.rb
 ${GEM_LIBDIR}/spec/extensions/typecast_on_load_spec.rb
+${GEM_LIBDIR}/spec/extensions/unlimited_update_spec.rb
 ${GEM_LIBDIR}/spec/extensions/update_primary_key_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_helpers_spec.rb
@@ -472,6 +475,7 @@ ${GEM_LIBDIR}/spec/model/record_spec.rb
 ${GEM_LIBDIR}/spec/model/spec_helper.rb
 ${GEM_LIBDIR}/spec/model/validations_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
+${GEM_LIBDIR}/spec/sequel_coverage.rb
 ${GEM_LIBDIR}/spec/spec_config.rb
 ${GEM_LIBDIR}/spec/spec_config.rb.example
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
