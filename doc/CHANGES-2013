@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.823 2013/03/09 15:47:10 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.824 2013/03/10 00:27:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1164,3 +1164,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/clib to 0.3 [tonnerre 2013-03-09]
 	Updated graphics/gimp-ufraw to 0.19.1 [gdt 2013-03-09]
 	Updated security/py-paramiko to 1.10.0 [gdt 2013-03-09]
+	Updated devel/xulrunner to 19.0.2 [ryoon 2013-03-10]
+	Updated www/firefox to 19.0.2 [ryoon 2013-03-10]
