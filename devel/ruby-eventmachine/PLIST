@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2012/09/16 06:18:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/03/10 13:19:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/GNU
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -132,6 +134,7 @@ ${GEM_LIBDIR}/tests/test_httpclient2.rb
 ${GEM_LIBDIR}/tests/test_idle_connection.rb
 ${GEM_LIBDIR}/tests/test_inactivity_timeout.rb
 ${GEM_LIBDIR}/tests/test_kb.rb
+${GEM_LIBDIR}/tests/test_line_protocol.rb
 ${GEM_LIBDIR}/tests/test_ltp.rb
 ${GEM_LIBDIR}/tests/test_ltp2.rb
 ${GEM_LIBDIR}/tests/test_next_tick.rb
@@ -157,6 +160,8 @@ ${GEM_LIBDIR}/tests/test_spawn.rb
 ${GEM_LIBDIR}/tests/test_ssl_args.rb
 ${GEM_LIBDIR}/tests/test_ssl_methods.rb
 ${GEM_LIBDIR}/tests/test_ssl_verify.rb
+${GEM_LIBDIR}/tests/test_stomp.rb
+${GEM_LIBDIR}/tests/test_system.rb
 ${GEM_LIBDIR}/tests/test_threaded_resource.rb
 ${GEM_LIBDIR}/tests/test_tick_loop.rb
 ${GEM_LIBDIR}/tests/test_timers.rb
