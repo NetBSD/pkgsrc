@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.841 2013/03/10 13:19:41 taca Exp $
+$NetBSD: CHANGES-2013,v 1.842 2013/03/10 13:21:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-sequel to 3.45.0 [taca 2013-03-10]
 	Updated devel/hoe to 3.5.1 [taca 2013-03-10]
 	Updated devel/ruby-eventmachine to 1.0.3 [taca 2013-03-10]
+	Updated www/curl to 7.29.0nb1 [obache 2013-03-10]
