@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/17 16:06:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/03/10 08:07:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Dependencies.txt
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO.rdoc
 ${GEM_LIBDIR}/lib/VERSION
+${GEM_LIBDIR}/lib/load_parsers.rb
 ${GEM_LIBDIR}/lib/mail.rb
 ${GEM_LIBDIR}/lib/mail/attachments_list.rb
 ${GEM_LIBDIR}/lib/mail/body.rb
+${GEM_LIBDIR}/lib/mail/check_delivery_params.rb
 ${GEM_LIBDIR}/lib/mail/configuration.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/nil.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/object.rb
@@ -135,6 +136,7 @@ ${GEM_LIBDIR}/lib/mail/part.rb
 ${GEM_LIBDIR}/lib/mail/parts_list.rb
 ${GEM_LIBDIR}/lib/mail/patterns.rb
 ${GEM_LIBDIR}/lib/mail/utilities.rb
+${GEM_LIBDIR}/lib/mail/values/unicode_tables.dat
 ${GEM_LIBDIR}/lib/mail/version.rb
 ${GEM_LIBDIR}/lib/mail/version_specific/ruby_1_8.rb
 ${GEM_LIBDIR}/lib/mail/version_specific/ruby_1_9.rb
