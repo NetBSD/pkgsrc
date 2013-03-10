@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2013/02/24 14:39:58 taca Exp $
+# $NetBSD: Makefile,v 1.430 2013/03/10 08:02:52 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -285,6 +285,7 @@ SUBDIR+=	roundcube
 SUBDIR+=	rss2email
 SUBDIR+=	ruby-actionmailer32
 SUBDIR+=	ruby-mail
+SUBDIR+=	ruby-mail24
 SUBDIR+=	ruby-mailfactory
 SUBDIR+=	ruby-mime-types
 SUBDIR+=	ruby-tmail
