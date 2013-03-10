@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.95 2013/02/24 22:48:59 dholland Exp $
+$NetBSD: distinfo,v 1.96 2013/03/10 00:22:16 ryoon Exp $
 
-SHA1 (firefox-19.0.source.tar.bz2) = 816d64e8c9432349cd208fd181d210c54f985351
-RMD160 (firefox-19.0.source.tar.bz2) = 54156ae25cb260d42319d1aad5bc9d8b69ea473c
-Size (firefox-19.0.source.tar.bz2) = 98837382 bytes
+SHA1 (firefox-19.0.2.source.tar.bz2) = d108d356225379a86d69a4906c706289135f6342
+RMD160 (firefox-19.0.2.source.tar.bz2) = 37518c9d64f4b441d9601debd0aa440b5af66d20
+Size (firefox-19.0.2.source.tar.bz2) = 99155868 bytes
 SHA1 (patch-aa) = 115ed7c263cbf213d608761ae1f5b14a3b10df90
 SHA1 (patch-ab) = b60129618bb0945b65636f99980bdc026ec16fd9
 SHA1 (patch-ac) = 609a094d01878da0bdfb008a0cb30b96bdb4c6ce
