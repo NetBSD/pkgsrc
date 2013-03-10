@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.826 2013/03/10 08:08:13 taca Exp $
+$NetBSD: CHANGES-2013,v 1.827 2013/03/10 08:13:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1169,3 +1169,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added mail/ruby-mail24 version 2.4.4 [taca 2013-03-10]
 	Updated mail/ruby-actionmailer32 to 3.2.12nb1 [taca 2013-03-10]
 	Updated mail/ruby-mail to 2.5.3 [taca 2013-03-10]
+	Removed misc/ruby-sprockets21 [taca 2013-03-10]
