@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.824 2013/03/10 00:27:05 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.825 2013/03/10 08:06:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1166,3 +1166,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/py-paramiko to 1.10.0 [gdt 2013-03-09]
 	Updated devel/xulrunner to 19.0.2 [ryoon 2013-03-10]
 	Updated www/firefox to 19.0.2 [ryoon 2013-03-10]
+	Added mail/ruby-mail24 version 2.4.4 [taca 2013-03-10]
+	Updated mail/ruby-actionmailer32 to 3.2.12nb1 [taca 2013-03-10]
