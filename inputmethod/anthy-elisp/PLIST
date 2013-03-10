@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/03/10 13:40:37 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/03/10 14:14:31 obache Exp $
 ${EMACS_LISPPREFIX}/anthy/anthy-azik.el
 ${EMACS_LISPPREFIX}/anthy/anthy-azik.elc
 ${EMACS_LISPPREFIX}/anthy/anthy-conf.el
@@ -12,4 +12,4 @@ ${EMACS_LISPPREFIX}/anthy/anthy-kyuri.elc
 ${EMACS_LISPPREFIX}/anthy/anthy.el
 ${EMACS_LISPPREFIX}/anthy/anthy.elc
 ${EMACS_LISPPREFIX}/anthy/leim-list.el
-${NOTFOR_emacs24}${NOTFOR_emacs23}${NOTFOR_emacs22}${NOTFOR_emacs22nox}${EMACS_LISPPREFIX}/anthy/leim-list.elc
+${FOR_emacs_no_byte_compile}${EMACS_LISPPREFIX}/anthy/leim-list.elc
