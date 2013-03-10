@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.835 2013/03/10 13:07:36 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.836 2013/03/10 13:08:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1184,3 +1184,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox17 to 17.0.4 [ryoon 2013-03-10]
 	Updated www/firefox17-l10n to 17.0.4 [ryoon 2013-03-10]
 	Updated mail/thunderbird to 17.0.4 [ryoon 2013-03-10]
+	Updated www/ruby-rack-protection to 1.4.0 [taca 2013-03-10]
