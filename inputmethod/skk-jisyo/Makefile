@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 14:25:18 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/10 10:40:50 hiramatsu Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -10,12 +10,13 @@ EXTRACT_SUFX=	.bz2
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/wiki/wiki.cgi?page=SKK%BC%AD%BD%F1
 COMMENT=	Dictionary collection for SKK
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	skkserv<3.9.4nb7
 
 NO_BUILD=	yes
 
-SKKJISYO_VERS=	200708
+SKKJISYO_VERS=	201212
 
 INSTALLATION_DIRS+=	${PREFIX}/share/skk
 
