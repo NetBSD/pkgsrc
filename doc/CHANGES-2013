@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.842 2013/03/10 13:21:27 obache Exp $
+$NetBSD: CHANGES-2013,v 1.843 2013/03/10 16:14:03 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/hoe to 3.5.1 [taca 2013-03-10]
 	Updated devel/ruby-eventmachine to 1.0.3 [taca 2013-03-10]
 	Updated www/curl to 7.29.0nb1 [obache 2013-03-10]
+	Updated x11/mlterm to 3.1.8 [tsutsui 2013-03-10]
