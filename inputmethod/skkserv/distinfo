@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2010/07/17 08:57:18 obache Exp $
+$NetBSD: distinfo,v 1.6 2013/03/10 18:53:31 hiramatsu Exp $
 
 SHA1 (skk/skk9.6.tar.gz) = f462b4586dff6e36bfe331a526e054c3f6c3aad9
 RMD160 (skk/skk9.6.tar.gz) = af182063e92f993cd2d9a69d7f89109ef0631526
@@ -7,6 +7,5 @@ SHA1 (patch-ab) = 5103484679c5d82a8d79460cc24e8857fc89460a
 SHA1 (patch-ac) = 3a1818c3bb453b69eb23154ed0daa6909275774b
 SHA1 (patch-ad) = 27abe12b627e8e5c5de0a78fab3a5f4551f3c0f7
 SHA1 (patch-ae) = 356b3bab93365bb769a340b99979161f07f60de4
-SHA1 (patch-af) = 010ee51ad8b8e078fc14e7297fbcdf7259245014
 SHA1 (patch-ai) = 38f6169507d12c500298cba555a57b77cafa19c4
-SHA1 (patch-bsearch) = 32a0ab43b6695e19748abed250dd0e1ad632260b
+SHA1 (patch-skkserv_skkserv.c) = eacd2ad95f1288301ef09d4b2dd9e73a7d3ef576
