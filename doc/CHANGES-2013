@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.829 2013/03/10 09:18:42 taca Exp $
+$NetBSD: CHANGES-2013,v 1.830 2013/03/10 09:26:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1176,3 +1176,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rack-ssl to 1.3.3nb1 [taca 2013-03-10]
 	Updated www/ruby-rack-test to 0.6.2nb1 [taca 2013-03-10]
 	Updated www/ruby-actionpack32 to 3.2.12nb1 [taca 2013-03-10]
+	Updated www/ruby-rack to 1.5.2 [taca 2013-03-10]
