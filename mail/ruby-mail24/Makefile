@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/03/10 08:00:25 taca Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/10 08:02:08 taca Exp $
 
 DISTNAME=	mail-2.4.4
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/mail/mail24/}
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
