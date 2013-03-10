@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.839 2013/03/10 13:14:34 taca Exp $
+$NetBSD: CHANGES-2013,v 1.840 2013/03/10 13:16:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/ruby-unf_ext to 0.0.6 [taca 2013-03-10]
 	Updated mail/thunderbird-l10n to 17.0.4 [ryoon 2013-03-10]
 	Updated databases/ruby-sequel to 3.45.0 [taca 2013-03-10]
+	Updated devel/hoe to 3.5.1 [taca 2013-03-10]
