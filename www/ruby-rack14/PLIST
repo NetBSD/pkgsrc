@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/10 09:11:12 taca Exp $
-bin/rackup
+@comment $NetBSD: PLIST,v 1.2 2013/03/10 09:13:12 taca Exp $
+bin/rackup14
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/KNOWN-ISSUES
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SPEC
-${GEM_LIBDIR}/bin/rackup
+${GEM_LIBDIR}/bin/rackup14
 ${GEM_LIBDIR}/contrib/rack.png
 ${GEM_LIBDIR}/contrib/rack.svg
 ${GEM_LIBDIR}/contrib/rack_logo.svg
