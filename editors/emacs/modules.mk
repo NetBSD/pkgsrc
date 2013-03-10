@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.17 2013/02/17 07:33:28 dholland Exp $
+# $NetBSD: modules.mk,v 1.18 2013/03/10 14:12:05 obache Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -199,6 +199,11 @@
 #		Possible values:
 #			"", "@comment"
 #
+#	FOR_emacs_no_byte_compile
+#		Description:
+#			For .elc file of .el file marked as "no-byte-compile: t"
+#		Possible values:
+#			"", "@comment"
 
 .if !defined(EMACS_MK)
 EMACS_MK=	# defined
@@ -332,6 +337,8 @@ _EMACS_PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_MAJOR:Q}.${_EMACS_VERSION_MI
 _EMACS_PLIST_SUBST+=	EMACS_ETCPREFIX=${EMACS_ETCPREFIX:C|^${PREFIX}/||}
 _EMACS_PLIST_SUBST+=	EMACS_INFOPREFIX=${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 _EMACS_PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
+
+_EMACS_PLIST_SUBST+=	FOR_emacs_no_byte_compile="${${EMACS_VERSION_MAJOR}>22:?@comment :}"
 
 PLIST_SUBST+=		${_EMACS_PLIST_SUBST}
 
