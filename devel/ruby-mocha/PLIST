@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/02/11 02:54:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/03/11 07:37:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.yardopts
@@ -201,6 +201,7 @@ ${GEM_LIBDIR}/test/unit/exception_raiser_test.rb
 ${GEM_LIBDIR}/test/unit/expectation_list_test.rb
 ${GEM_LIBDIR}/test/unit/expectation_test.rb
 ${GEM_LIBDIR}/test/unit/hash_inspect_test.rb
+${GEM_LIBDIR}/test/unit/hooks_test.rb
 ${GEM_LIBDIR}/test/unit/in_state_ordering_constraint_test.rb
 ${GEM_LIBDIR}/test/unit/method_matcher_test.rb
 ${GEM_LIBDIR}/test/unit/mock_test.rb
