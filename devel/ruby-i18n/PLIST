@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/09/16 06:19:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/11 08:05:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.textile
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/test/test_data/locales/de.po
 ${GEM_LIBDIR}/test/test_data/locales/en.rb
 ${GEM_LIBDIR}/test/test_data/locales/en.yml
 ${GEM_LIBDIR}/test/test_data/locales/invalid/empty.yml
+${GEM_LIBDIR}/test/test_data/locales/invalid/syntax.yml
 ${GEM_LIBDIR}/test/test_data/locales/plurals.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
