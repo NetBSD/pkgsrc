@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.859 2013/03/11 12:35:59 taca Exp $
+$NetBSD: CHANGES-2013,v 1.860 2013/03/11 12:49:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1213,3 +1213,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-TreeBuilder to 4.1 [obache 2013-03-11]
 	Added math/ruby-gsl version 1.15.3 [taca 2013-03-11]
 	Removed math/ruby-rb-gsl [taca 2013-03-11]
+	Updated graphics/p5-Image-Info to 1.34 [obache 2013-03-11]
