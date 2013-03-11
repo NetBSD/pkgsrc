@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11985 2013/03/11 19:50:43 bsiegert Exp $
+$NetBSD: TODO,v 1.11986 2013/03/11 19:57:57 adam Exp $
 
 Suggested new packages
 ======================
@@ -619,7 +619,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.16
 	o gentoo-0.19.13
-	o gettext-0.18.2.1
 	o gfract-0.33
 	o ghc-7.6
 	o giflib-5.0.3
@@ -964,7 +963,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
 	o p5-Perl-Tidy-20121207
-	o p5-PerlMagick-6.7.9.7
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
 	o p5-clutter-1.110
