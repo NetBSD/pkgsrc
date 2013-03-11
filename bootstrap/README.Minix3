@@ -1,0 +1,8 @@
+$NetBSD: README.Minix3,v 1.1 2013/03/11 22:48:23 tcort Exp $
+
+Please read the general README file as well.
+
+==========================================================================
+
+Most users will not need to run the bootstrap script as all supported 
+versions of Minix3 come with pkgsrc pre-bootstrapped.

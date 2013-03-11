@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.190 2013/02/22 13:39:31 obache Exp $
+# $NetBSD: bootstrap,v 1.191 2013/03/11 22:48:23 tcort Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -625,6 +625,15 @@ Linux)
 	set_opsys=no
 	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
 	;;
+Minix)
+	root_group=operator
+	need_bsd_install=yes
+	need_awk=no
+	need_sed=no
+	set_opsys=no
+	machine_arch=`uname -p`
+	LDFLAGS="-lcompat_minix -lminlib"
+	;;	
 MirBSD)
 	root_group=wheel
 	need_pax=yes
