@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:43:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/03/11 07:46:45 taca Exp $
 bin/autospec
 bin/rspec
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -25,10 +25,19 @@ ${GEM_LIBDIR}/features/command_line/rake_task.feature
 ${GEM_LIBDIR}/features/command_line/ruby.feature
 ${GEM_LIBDIR}/features/command_line/tag.feature
 ${GEM_LIBDIR}/features/configuration/alias_example_to.feature
+${GEM_LIBDIR}/features/configuration/backtrace_clean_patterns.feature
 ${GEM_LIBDIR}/features/configuration/custom_settings.feature
 ${GEM_LIBDIR}/features/configuration/default_path.feature
 ${GEM_LIBDIR}/features/configuration/fail_fast.feature
+${GEM_LIBDIR}/features/configuration/failure_exit_code.feature
+${GEM_LIBDIR}/features/configuration/order_and_seed.feature
+${GEM_LIBDIR}/features/configuration/output_stream.feature
+${GEM_LIBDIR}/features/configuration/pattern.feature
+${GEM_LIBDIR}/features/configuration/profile.feature
 ${GEM_LIBDIR}/features/configuration/read_options_from_file.feature
+${GEM_LIBDIR}/features/configuration/run_all_when_everything_filtered.feature
+${GEM_LIBDIR}/features/configuration/show_failures_in_pending_blocks.feature
+${GEM_LIBDIR}/features/configuration/treat_symbols_as_metadata_keys_with_true_values.feature
 ${GEM_LIBDIR}/features/example_groups/basic_structure.feature
 ${GEM_LIBDIR}/features/example_groups/shared_context.feature
 ${GEM_LIBDIR}/features/example_groups/shared_examples.feature
@@ -37,6 +46,7 @@ ${GEM_LIBDIR}/features/filtering/exclusion_filters.feature
 ${GEM_LIBDIR}/features/filtering/if_and_unless.feature
 ${GEM_LIBDIR}/features/filtering/inclusion_filters.feature
 ${GEM_LIBDIR}/features/filtering/run_all_when_everything_filtered.feature
+${GEM_LIBDIR}/features/formatters/configurable_colors.feature
 ${GEM_LIBDIR}/features/formatters/custom_formatter.feature
 ${GEM_LIBDIR}/features/formatters/json_formatter.feature
 ${GEM_LIBDIR}/features/formatters/text_formatter.feature
@@ -93,8 +103,8 @@ ${GEM_LIBDIR}/lib/rspec/core/formatters/progress_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/snippet_extractor.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/text_mate_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/hooks.rb
-${GEM_LIBDIR}/lib/rspec/core/let.rb
 ${GEM_LIBDIR}/lib/rspec/core/load_path.rb
+${GEM_LIBDIR}/lib/rspec/core/memoized_helpers.rb
 ${GEM_LIBDIR}/lib/rspec/core/metadata.rb
 ${GEM_LIBDIR}/lib/rspec/core/metadata_hash_builder.rb
 ${GEM_LIBDIR}/lib/rspec/core/mocking/with_absolutely_nothing.rb
@@ -111,7 +121,6 @@ ${GEM_LIBDIR}/lib/rspec/core/ruby_project.rb
 ${GEM_LIBDIR}/lib/rspec/core/runner.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_context.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_example_group.rb
-${GEM_LIBDIR}/lib/rspec/core/subject.rb
 ${GEM_LIBDIR}/lib/rspec/core/version.rb
 ${GEM_LIBDIR}/lib/rspec/core/world.rb
 ${GEM_LIBDIR}/spec/autotest/discover_spec.rb
@@ -136,11 +145,11 @@ ${GEM_LIBDIR}/spec/rspec/core/formatters/helpers_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.8.7-jruby.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.8.7-rbx.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.8.7.html
-${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.9.2-jruby.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.9.2.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.9.3-jruby.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.9.3-rbx.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-1.9.3.html
+${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatted-2.0.0.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/html_formatter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/json_formatter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/progress_formatter_spec.rb
@@ -148,16 +157,16 @@ ${GEM_LIBDIR}/spec/rspec/core/formatters/snippet_extractor_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.8.7-jruby.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.8.7-rbx.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.8.7.html
-${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.9.2-jruby.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.9.2.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.9.3-jruby.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.9.3-rbx.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-1.9.3.html
+${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatted-2.0.0.html
 ${GEM_LIBDIR}/spec/rspec/core/formatters/text_mate_formatter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/hooks_filtering_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/hooks_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/kernel_extensions_spec.rb
-${GEM_LIBDIR}/spec/rspec/core/let_spec.rb
+${GEM_LIBDIR}/spec/rspec/core/memoized_helpers_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/metadata_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/option_parser_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/pending_example_spec.rb
@@ -175,7 +184,6 @@ ${GEM_LIBDIR}/spec/rspec/core/ruby_project_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/runner_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/shared_context_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/shared_example_group_spec.rb
-${GEM_LIBDIR}/spec/rspec/core/subject_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/world_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
