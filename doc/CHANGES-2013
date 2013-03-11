@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.856 2013/03/11 09:28:38 taca Exp $
+$NetBSD: CHANGES-2013,v 1.857 2013/03/11 11:18:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1209,3 +1209,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ruby-oily_png to 1.1.0 [taca 2013-03-11]
 	Updated lang/ruby-coffee-script-source to 1.6.1 [taca 2013-03-11]
 	Added math/ruby-narray version 0.6.0.8 [taca 2013-03-11]
+	Updated graphics/pngcrush to 1.7.53 [adam 2013-03-11]
