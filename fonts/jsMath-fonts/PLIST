@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/11 18:48:02 wiz Exp $
+lib/X11/fonts/TTF/jsMath-cmbx10.ttf
+lib/X11/fonts/TTF/jsMath-cmex10.ttf
+lib/X11/fonts/TTF/jsMath-cmmi10.ttf
+lib/X11/fonts/TTF/jsMath-cmr10.ttf
+lib/X11/fonts/TTF/jsMath-cmsy10.ttf
+lib/X11/fonts/TTF/jsMath-cmti10.ttf
