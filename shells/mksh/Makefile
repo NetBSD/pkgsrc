@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2012/09/11 23:25:08 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/03/11 19:47:38 bsiegert Exp $
 
-DISTNAME=			mksh-R40f
+DISTNAME=			mksh-R44
 PKGNAME=			${DISTNAME:S/-R/-/}
 CATEGORIES=			shells
 MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
 				http://pub.allbsd.org/MirOS/dist/mir/mksh/
-EXTRACT_SUFX=			.cpio.gz
+SITES.${DISTNAME}.cat1.gz=	${MASTER_SITES:S/dist/cats/}
+
+EXTRACT_SUFX=			.tgz
+DISTFILES=			${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}.cat1.gz
 
 MAINTAINER=			ahoka@NetBSD.org
 HOMEPAGE=			http://mirbsd.de/mksh
@@ -27,10 +30,12 @@ do-build:
 	cd ${WRKBUILD} && LIBS=${LIBS:Q} CC=${CC:Q} CFLAGS=${CFLAGS:Q} \
 	    CPPFLAGS=${CPPFLAGS:Q} LDFLAGS=${LDFLAGS:Q} \
 	    ${TOOLS_SHELL} ${WRKSRC}/Build.sh -r
+	${GZCAT} ${DISTDIR}/${DISTNAME}.cat1.gz > ${WRKSRC}/mksh.0
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKBUILD}/mksh ${DESTDIR}${PREFIX}/bin/mksh
-	${INSTALL_MAN} ${WRKSRC}/mksh.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/
+	${INSTALL_MAN} ${WRKSRC}/mksh.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/
 	${INSTALL_DATA} ${WRKSRC}/dot.mkshrc ${DESTDIR}${PREFIX}/share/examples/mksh/
 
 # Uncomment this if you want to run the regression tests
