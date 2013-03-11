@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.845 2013/03/10 16:44:42 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.846 2013/03/11 07:33:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1194,3 +1194,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/mlterm to 3.1.8 [tsutsui 2013-03-10]
 	Updated games/onscripter to 20130223 [tsutsui 2013-03-10]
 	Updated mail/getmail to 4.39.1 [schmonz 2013-03-10]
+	Updated devel/ruby-ffi to 1.4.0 [taca 2013-03-11]
