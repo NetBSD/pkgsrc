@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/01/14 05:54:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/03/11 07:32:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/COPYING.LESSER
@@ -335,7 +335,6 @@ ${GEM_LIBDIR}/ext/ffi_c/rbffi_endian.h
 ${GEM_LIBDIR}/ext/ffi_c/win32/stdint.h
 ${GEM_LIBDIR}/ffi.gemspec
 ${GEM_LIBDIR}/gen/Rakefile
-${GEM_LIBDIR}/lib/Lib.iml
 ${GEM_LIBDIR}/lib/ffi.rb
 ${GEM_LIBDIR}/lib/ffi/autopointer.rb
 ${GEM_LIBDIR}/lib/ffi/buffer.rb
@@ -349,6 +348,7 @@ ${GEM_LIBDIR}/lib/ffi/managedstruct.rb
 ${GEM_LIBDIR}/lib/ffi/memorypointer.rb
 ${GEM_LIBDIR}/lib/ffi/platform.rb
 ${GEM_LIBDIR}/lib/ffi/platform/arm-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-cygwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-freebsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-linux/types.conf
