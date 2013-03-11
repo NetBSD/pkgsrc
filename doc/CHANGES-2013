@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.849 2013/03/11 07:37:45 taca Exp $
+$NetBSD: CHANGES-2013,v 1.850 2013/03/11 07:51:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1198,3 +1198,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-flexmock to 1.3.1 [taca 2013-03-11]
 	Updated devel/ruby-inline to 3.12.1 [taca 2013-03-11]
 	Updated devel/ruby-mocha to 0.13.3 [taca 2013-03-11]
+	Updated devel/ruby-rspec-core to 2.13.0 [taca 2013-03-11]
+	Updated devel/ruby-rspec-expectations to 2.13.0 [taca 2013-03-11]
+	Updated devel/ruby-rspec-mocks to 2.13.0 [taca 2013-03-11]
+	Updated devel/ruby-rspec to 2.13.0 [taca 2013-03-11]
+	Updated devel/ruby-rspec-rails to 2.13.0 [taca 2013-03-11]
