@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/12/16 16:44:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/03/11 07:47:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -109,6 +109,7 @@ ${GEM_LIBDIR}/spec/rspec/matchers/equal_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/exist_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/has_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/have_spec.rb
+${GEM_LIBDIR}/spec/rspec/matchers/include_matcher_integration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/include_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/match_array_spec.rb
 ${GEM_LIBDIR}/spec/rspec/matchers/match_spec.rb
