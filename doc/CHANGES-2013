@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.853 2013/03/11 09:17:45 taca Exp $
+$NetBSD: CHANGES-2013,v 1.854 2013/03/11 09:18:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1206,3 +1206,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-sexp-processor to 4.1.5 [taca 2013-03-11]
 	Updated devel/ruby-i18n to 0.6.4 [taca 2013-03-11]
 	Updated graphics/ruby-mini-magick to 3.5.0 [taca 2013-03-11]
+	Updated graphics/ruby-oily_png to 1.1.0 [taca 2013-03-11]
