@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.855 2013/03/11 09:25:21 taca Exp $
+$NetBSD: CHANGES-2013,v 1.856 2013/03/11 09:28:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ruby-mini-magick to 3.5.0 [taca 2013-03-11]
 	Updated graphics/ruby-oily_png to 1.1.0 [taca 2013-03-11]
 	Updated lang/ruby-coffee-script-source to 1.6.1 [taca 2013-03-11]
+	Added math/ruby-narray version 0.6.0.8 [taca 2013-03-11]
