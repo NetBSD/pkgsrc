@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.858 2013/03/11 12:26:31 obache Exp $
+$NetBSD: CHANGES-2013,v 1.859 2013/03/11 12:35:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1211,3 +1211,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/ruby-narray version 0.6.0.8 [taca 2013-03-11]
 	Updated graphics/pngcrush to 1.7.53 [adam 2013-03-11]
 	Updated textproc/p5-XML-TreeBuilder to 4.1 [obache 2013-03-11]
+	Added math/ruby-gsl version 1.15.3 [taca 2013-03-11]
+	Removed math/ruby-rb-gsl [taca 2013-03-11]
