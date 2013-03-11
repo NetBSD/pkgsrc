@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2013/02/11 08:56:24 taca Exp $
+# $NetBSD: Makefile,v 1.233 2013/03/11 18:48:14 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -121,6 +121,7 @@ SUBDIR+=	jisx0208fonts
 SUBDIR+=	jisx0212fonts
 SUBDIR+=	jisx0213fonts
 SUBDIR+=	jmk-fonts
+SUBDIR+=	jsMath-fonts
 SUBDIR+=	kanjistrokeorders-ttf
 SUBDIR+=	kcfonts
 SUBDIR+=	kiloji-ttf
