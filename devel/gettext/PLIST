@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2013/01/31 21:45:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/03/11 16:55:19 adam Exp $
 lib/gettext/hostname
 lib/gettext/project-id
 lib/gettext/urlget
 lib/gettext/user-email
 share/gettext/ABOUT-NLS
 share/gettext/config.rpath
+share/gettext/intl/COPYING.LIB
 share/gettext/intl/ChangeLog
 share/gettext/intl/Makefile.in
 share/gettext/intl/VERSION
@@ -68,6 +69,7 @@ share/gettext/intl/vasnwprintf.h
 share/gettext/intl/verify.h
 share/gettext/intl/version.c
 share/gettext/intl/wprintf-parse.h
+share/gettext/intl/xsize.c
 share/gettext/intl/xsize.h
 share/gettext/msgunfmt.tcl
 share/gettext/projects/GNOME/team-address
