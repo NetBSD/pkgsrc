@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2011/05/10 11:23:48 taca Exp $
-
-SHA1 (rb-gsl-1.14.7.tgz) = 2ce82d5e6d03dea2e0b27165fb91a8981e190f7a
-RMD160 (rb-gsl-1.14.7.tgz) = 90661a3eae170c70fe4994ef87a0199d95fd4aed
-Size (rb-gsl-1.14.7.tgz) = 614583 bytes
-SHA1 (patch-ext_matrix__complex.c) = 97c93f34b794866366f74269b14e2b7179e6440e
-SHA1 (patch-ext_vector__complex.c) = 83913d55f40ca6539344acf7a60a88e312eab9c7
