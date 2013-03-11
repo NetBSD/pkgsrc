@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.861 2013/03/11 13:11:26 obache Exp $
+$NetBSD: CHANGES-2013,v 1.862 2013/03/11 13:20:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1215,3 +1215,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed math/ruby-rb-gsl [taca 2013-03-11]
 	Updated graphics/p5-Image-Info to 1.34 [obache 2013-03-11]
 	Added devel/p5-IO-Prompter version 0.004003 [obache 2013-03-11]
+	Updated net/mikutter to 0.2.1.1132 [obache 2013-03-11]
