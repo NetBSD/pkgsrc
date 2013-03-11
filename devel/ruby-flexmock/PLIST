@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/02/11 02:51:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/03/11 07:33:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -35,6 +35,7 @@ ${GEM_LIBDIR}/doc/releases/flexmock-1.0.4.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-1.1.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-1.2.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-1.3.0.rdoc
+${GEM_LIBDIR}/doc/releases/flexmock-1.3.1.rdoc
 ${GEM_LIBDIR}/flexmock.blurb
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/flexmock.rb
@@ -74,6 +75,7 @@ ${GEM_LIBDIR}/lib/flexmock/version.rb
 ${GEM_LIBDIR}/test/aliasing_test.rb
 ${GEM_LIBDIR}/test/assert_spy_called_test.rb
 ${GEM_LIBDIR}/test/base_class_test.rb
+${GEM_LIBDIR}/test/based_partials_test.rb
 ${GEM_LIBDIR}/test/container_methods_test.rb
 ${GEM_LIBDIR}/test/default_framework_adapter_test.rb
 ${GEM_LIBDIR}/test/demeter_mocking_test.rb
