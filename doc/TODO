@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11983 2013/03/10 21:41:41 wiz Exp $
+$NetBSD: TODO,v 1.11984 2013/03/11 11:18:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o planner-0.14.6
 	o ploticus-2.41
 	o ploticus-examples-230
-	o pngcrush-1.7.53
 	o po4a-0.41
 	o podofo-0.9.2
 	o pokerth-0.9.3
