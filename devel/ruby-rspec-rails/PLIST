@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/01/12 09:17:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/03/11 07:50:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -53,7 +53,7 @@ ${GEM_LIBDIR}/lib/generators/rspec/helper/helper_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/templates/helper_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/install_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/templates/.rspec
-${GEM_LIBDIR}/lib/generators/rspec/install/templates/spec/spec_helper.rb
+${GEM_LIBDIR}/lib/generators/rspec/install/templates/spec/spec_helper.rb.tt
 ${GEM_LIBDIR}/lib/generators/rspec/integration/integration_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/integration/templates/request_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/mailer_generator.rb
@@ -93,6 +93,7 @@ ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_a_new.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_new_record.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/be_valid.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/have_extension.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/have_rendered.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/redirect_to.rb
@@ -135,6 +136,7 @@ ${GEM_LIBDIR}/spec/rspec/rails/fixture_support_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_a_new_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_new_record_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/be_routable_spec.rb
+${GEM_LIBDIR}/spec/rspec/rails/matchers/be_valid_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/errors_on_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/has_spec.rb
 ${GEM_LIBDIR}/spec/rspec/rails/matchers/have_rendered_spec.rb
