@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/24 09:34:10 seb Exp $
+$NetBSD: distinfo,v 1.2 2013/03/11 12:26:13 obache Exp $
 
-SHA1 (XML-TreeBuilder-3.09.tar.gz) = 99362844b8400162fa344bb765b37dab30bed031
-RMD160 (XML-TreeBuilder-3.09.tar.gz) = 0d49a47172e13107e6ae564d867efe4cc1670ca7
-Size (XML-TreeBuilder-3.09.tar.gz) = 6546 bytes
+SHA1 (XML-TreeBuilder-4.1.tar.gz) = 06340750f95fc99d274ec388c40e715bd2e46628
+RMD160 (XML-TreeBuilder-4.1.tar.gz) = e142bfcb21af83d9ffa529e9a201f0f8a7e45f79
+Size (XML-TreeBuilder-4.1.tar.gz) = 9782 bytes
