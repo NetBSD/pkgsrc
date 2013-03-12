@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2013/03/07 06:36:28 wiz Exp $
+$NetBSD: distinfo,v 1.18 2013/03/12 11:39:49 wiz Exp $
 
 SHA1 (libXi-1.7.tar.bz2) = 1c4e992094f71103660f16329b228b081f48d48c
 RMD160 (libXi-1.7.tar.bz2) = 368ed28a1562dff67ebdb6e7433205e04c62c0a0
 Size (libXi-1.7.tar.bz2) = 433745 bytes
+SHA1 (patch-include_X11_extensions_XInput2.h) = 6e1e5dd3aa8c4b0507aca44c8b7ae51a45cf1b69
