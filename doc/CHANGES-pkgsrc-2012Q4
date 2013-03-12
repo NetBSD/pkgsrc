@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.45 2013/03/09 10:43:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.46 2013/03/12 20:03:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -259,3 +259,5 @@ Pullup ticket #4094 - requested by wen
 www/mediawiki: security update
 Pullup ticket #4089 - requested by jym
 security/stunnel: security update
+Pullup ticket #4096 - requested by obache
+emulators/suse121_qt4: security update
