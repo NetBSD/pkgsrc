@@ -1,7 +1,7 @@
 #!/bin/bash
-# $NetBSD: useradd.sh,v 1.2 2013/03/07 12:25:06 obache Exp $
+# $NetBSD: useradd.sh,v 1.3 2013/03/12 05:41:39 obache Exp $
 
-export PATH=/bin:$PATH
+export PATH=/bin:"$(/bin/cygpath -S)"
 
 show_usage () {
 	echo "usage: $0 [-mv] [-G secondary-group] [-b base-dir] [-c comment] [-d home-dir] [-g group|=uid] user" >&2
