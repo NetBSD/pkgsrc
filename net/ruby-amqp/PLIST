@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/17 12:44:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/03/12 13:26:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -227,6 +227,7 @@ ${GEM_LIBDIR}/spec/integration/redelivery_of_unacknowledged_messages_spec.rb
 ${GEM_LIBDIR}/spec/integration/regressions/concurrent_publishing_on_the_same_channel_spec.rb
 ${GEM_LIBDIR}/spec/integration/regressions/empty_message_body_spec.rb
 ${GEM_LIBDIR}/spec/integration/regressions/issue66_spec.rb
+${GEM_LIBDIR}/spec/integration/remove_individual_binding_spec.rb
 ${GEM_LIBDIR}/spec/integration/reply_queue_communication_spec.rb
 ${GEM_LIBDIR}/spec/integration/store_and_forward_spec.rb
 ${GEM_LIBDIR}/spec/integration/stress/publishing_of_messages_with_incrementing_sizes_spec.rb
