@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2012/06/12 15:46:00 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2013/03/12 03:00:38 garbled Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem perl
@@ -56,5 +56,5 @@ CONFIGURE_ENV+=		PERLPROG=${PERL5:Q}
 CONFIGURE_ARGS+=	--disable-perl-cc-checks
 CONFIGURE_ARGS+=	--with-perl-modules=no
 CONFIGURE_ENV+=		ac_cv_path_PERLPROG=""
-.endif
 CONFIGURE_ARGS+=	--disable-embedded-perl
+.endif
