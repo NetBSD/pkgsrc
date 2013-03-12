@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.869 2013/03/12 11:25:35 obache Exp $
+$NetBSD: CHANGES-2013,v 1.870 2013/03/12 11:39:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1230,3 +1230,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/jabberd2 to 2.2.17nb7 [wiz 2013-03-11]
 	Updated sysutils/user_cygwin to 20130312 [obache 2013-03-12]
 	Updated emulators/suse121_qt4 to 12.1nb3 [obache 2013-03-12]
+	Updated x11/libXi to 1.7nb1 [wiz 2013-03-12]
