@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.871 2013/03/12 13:14:23 taca Exp $
+$NetBSD: CHANGES-2013,v 1.872 2013/03/12 13:27:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1232,3 +1232,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/suse121_qt4 to 12.1nb3 [obache 2013-03-12]
 	Updated x11/libXi to 1.7nb1 [wiz 2013-03-12]
 	Updated net/ruby-addressable to 2.3.3 [taca 2013-03-12]
+	Updated net/ruby-amq-protocol to 1.2.0 [taca 2013-03-12]
+	Updated net/ruby-amq-client to 0.9.12 [taca 2013-03-12]
+	Updated net/ruby-amqp to 0.9.10 [taca 2013-03-12]
