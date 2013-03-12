@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.68 2013/03/12 14:56:13 garbled Exp $
+$NetBSD: distinfo,v 1.69 2013/03/12 17:14:48 kim Exp $
 
 SHA1 (net-snmp-5.6.1.1.tar.gz) = ec88ba3e0dff4d1b3d342ccebb48ea84c9fa6fa9
 RMD160 (net-snmp-5.6.1.1.tar.gz) = 9a4a83f7fe9431a0694b5fee33866ccea80fcab4
 Size (net-snmp-5.6.1.1.tar.gz) = 5937279 bytes
-SHA1 (patch-agent_mibgroup_agent_extend.c) = b3b04c51e7059426963fdb4712a711e2da053a28
-SHA1 (patch-agent_mibgroup_host_data__access_swrun__kinfo.c) = ef82011e34f61e0bd606ee497647a605d9c81d23
 SHA1 (patch-aa) = 699f6a6770c51c8976d8ec352ad213893e749032
 SHA1 (patch-ab) = d23ddbce52b54462ea2f7c695533a41eaf0046ee
 SHA1 (patch-ac) = f947f2fb88cee7bf92b5aa8cfe94ade079df1a66
@@ -13,6 +11,7 @@ SHA1 (patch-af) = d7641e502fd0a2969fa838fc67244cdfc6995369
 SHA1 (patch-ag) = 8f9dedcf741c4b0ea2c0150c8b0a22747ca8a313
 SHA1 (patch-agent_mibgroup_agent_extend.c) = b3b04c51e7059426963fdb4712a711e2da053a28
 SHA1 (patch-agent_mibgroup_host_data__access_swrun__kinfo.c) = ef82011e34f61e0bd606ee497647a605d9c81d23
+SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = 1dc4f353d042fe8ceb31ab2ad66a7661790ac458
 SHA1 (patch-ah) = 7cea4194c858d7a8a9093eaf4426404e9202c3f1
 SHA1 (patch-ai) = 1eb3b72dcfff90c8e973590265bdb1c07b717eaa
 SHA1 (patch-aj) = e3337d01e96cc0739dbf3b1c7bde44d1126c32ae
