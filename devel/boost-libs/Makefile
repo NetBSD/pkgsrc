@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:16:42 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/03/12 19:28:08 martin Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -10,8 +10,16 @@ BOOST_INSTALL_LIBS=	yes
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
+PLIST_VARS+=		context
+
 .if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Msparc64)
 BJAM_ARGS+=		pch=off
+.elif !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k)
+BJAM_ARGS+=		--without-context
+.endif
+
+.if empty(BJAM_ARGS:M--without-context)
+PLIST.context=		yes
 .endif
 
 UNLIMIT_RESOURCES+=	stacksize
