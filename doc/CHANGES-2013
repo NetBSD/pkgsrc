@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.876 2013/03/12 15:39:05 taca Exp $
+$NetBSD: CHANGES-2013,v 1.877 2013/03/12 20:13:16 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1239,3 +1239,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-coderay to 1.0.9 [taca 2013-03-12]
 	Updated textproc/ruby-haml to 4.0.0 [taca 2013-03-12]
 	Updated textproc/ruby-libxml to 2.6.0 [taca 2013-03-12]
+	Updated lang/chicken to 4.8.0.3 [asau 2013-03-12]
