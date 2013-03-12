@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.20 2013/02/17 11:21:11 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/03/12 19:28:08 martin Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${BOOST_VERSION}
 lib/libboost_chrono.a
 lib/libboost_chrono.so
 lib/libboost_chrono.so.${BOOST_VERSION}
-lib/libboost_context.a
-lib/libboost_context.so
-lib/libboost_context.so.${BOOST_VERSION}
+${PLIST.context}lib/libboost_context.a
+${PLIST.context}lib/libboost_context.so
+${PLIST.context}lib/libboost_context.so.${BOOST_VERSION}
 lib/libboost_date_time.a
 lib/libboost_date_time.so
 lib/libboost_date_time.so.${BOOST_VERSION}
