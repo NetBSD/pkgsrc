@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.873 2013/03/12 13:42:47 taca Exp $
+$NetBSD: CHANGES-2013,v 1.874 2013/03/12 15:34:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1236,3 +1236,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-amq-client to 0.9.12 [taca 2013-03-12]
 	Updated net/ruby-amqp to 0.9.10 [taca 2013-03-12]
 	Updated print/ruby-pdf-reader to 1.3.2 [taca 2013-03-12]
+	Updated textproc/ruby-coderay to 1.0.9 [taca 2013-03-12]
