@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/02/28 10:32:36 obache Exp $
+# $NetBSD: Makefile,v 1.14 2013/03/13 13:07:40 obache Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.${FLASH_ARCH}
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
@@ -30,7 +30,7 @@ EMUL_PLATFORMS=		linux-i386 #linux-x86_64
 EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl
 EMUL_REQD=		suse>=11.3
 
-FLASH_VERSION=		11.2.202.273
+FLASH_VERSION=		11.2.202.275
 
 .include "../../mk/bsd.prefs.mk"
 
