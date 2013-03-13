@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2013/02/27 15:25:28 ryoon Exp $
+$NetBSD: distinfo,v 1.37 2013/03/13 20:28:48 ryoon Exp $
 
-SHA1 (blender-2.66.tar.gz) = b877ec88e342abae8b16cba9b46ca58ebf8b7d3e
-RMD160 (blender-2.66.tar.gz) = 8e57ce63030eff4c1495bcef796bc770cab16082
-Size (blender-2.66.tar.gz) = 36914318 bytes
+SHA1 (blender-2.66a.tar.gz) = f48555f3840f6ebde78603919d686672163c36ea
+RMD160 (blender-2.66a.tar.gz) = b0251067f6a6273ba1889cefafa7f8dd283e622e
+Size (blender-2.66a.tar.gz) = 36911037 bytes
 SHA1 (patch-SConstruct) = 4e3e81d3f4d8bf53a26102cb489ad507d14dd086
 SHA1 (patch-ab) = 5669f269c922f9bd521d15fdb1b21ba1e58ac7f6
 SHA1 (patch-am) = d023b35fe2355e2e53e11a3c91730ebe21da6de8
@@ -17,5 +17,4 @@ SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef05
 SHA1 (patch-intern_ghost_SConscript) = 84dad76663e6dfc3bd6636fe8924921fe04caa2f
 SHA1 (patch-intern_guardedalloc_MEM__sys__types.h) = 7b3ee6dc5d1b66a785a838c07507b8d93f7f1d1d
 SHA1 (patch-intern_opennl_superlu_superlu__sys__types.h) = 99fa9ffa655914067173481d5fe6c498ad069717
-SHA1 (patch-intern_smoke_intern_WAVELET__NOISE.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-user-config.py) = a3cf1a22185496f13b068a31d4b9638c8821f941
