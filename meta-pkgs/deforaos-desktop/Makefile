@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/03/05 00:15:35 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/13 20:28:35 khorben Exp $
 #
 
 
-DISTNAME=	deforaos-desktop-0.0.2
+DISTNAME=	deforaos-desktop-0.0.3
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 META_PACKAGE=	yes
 
-DEPENDS+=	deforaos-browser>=0.4.10:../../sysutils/deforaos-browser
+DEPENDS+=	deforaos-browser>=0.4.11:../../sysutils/deforaos-browser
 DEPENDS+=	deforaos-camera>=0.0.1:../../graphics/deforaos-camera
 DEPENDS+=	deforaos-coder>=0.0.0:../../devel/deforaos-coder
 DEPENDS+=	deforaos-editor>=0.2.1:../../editors/deforaos-editor
