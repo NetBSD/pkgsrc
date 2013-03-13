@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2013/01/15 10:47:16 wiz Exp $
+$NetBSD: distinfo,v 1.15 2013/03/13 14:56:35 wen Exp $
 
-SHA1 (Digest-SHA-5.81.tar.gz) = 341fd50ef766d7ef8af6b7de4d0c8cd4bd09745c
-RMD160 (Digest-SHA-5.81.tar.gz) = f38290f7e3e3d6d9a27e71bd7e10301f0db2d724
-Size (Digest-SHA-5.81.tar.gz) = 42954 bytes
+SHA1 (Digest-SHA-5.84.tar.gz) = 474b2979de5dd044d0977db7ff3d9ae9659bc851
+RMD160 (Digest-SHA-5.84.tar.gz) = df47755f8d4f9eaede86b3129e49f4aed0c6b441
+Size (Digest-SHA-5.84.tar.gz) = 42166 bytes
