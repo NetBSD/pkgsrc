@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/03/13 15:07:38 ryoon Exp $
+
+To activate mozc on emacs, you will need to add the following lines to
+your .emacs or ${EMACS_LISPPREFIX}/site-start.el:
+
+	(set-language-environment "Japanese")
+	(require 'mozc)
+	(setq default-input-method "japanese-mozc")
+
+===========================================================================
