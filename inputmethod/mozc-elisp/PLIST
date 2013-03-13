@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/13 15:07:38 ryoon Exp $
+bin/mozc_emacs_helper
+${EMACS_LISPPREFIX}/mozc.el
+${EMACS_LISPPREFIX}/mozc.elc
