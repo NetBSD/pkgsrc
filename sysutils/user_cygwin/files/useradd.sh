@@ -1,17 +1,17 @@
 #!/bin/bash
-# $NetBSD: useradd.sh,v 1.3 2013/03/12 05:41:39 obache Exp $
+# $NetBSD: useradd.sh,v 1.4 2013/03/13 12:35:16 obache Exp $
 
 export PATH=/bin:"$(/bin/cygpath -S)"
 
 show_usage () {
-	echo "usage: $0 [-mv] [-G secondary-group] [-b base-dir] [-c comment] [-d home-dir] [-g group|=uid] user" >&2
+	echo "usage: $0 [-mv] [-G secondary-group] [-b base-dir] [-c comment] [-d home-dir] [-g group|=uid] [-k skel-dir] user" >&2
 	echo "       $0 -D" >&2
 	exit 1
 }
 
 verbose=false
 run_cmd () {
-	if $verbose; then printf '%s\n' "+ $*"; fi
+	if $verbose; then printf '%s\n' "+ $*" >&2; fi
 	"$@"
 }
 
@@ -22,10 +22,12 @@ create_homedir=false
 gecos=
 group=Users
 home_dir=
+skel_dir=/etc/skel
 user_is_group=false
 
 show_defaults () {
 	printf 'base_dir\t%s\n' "$base_dir"
+	printf 'skel_dir\t%s\n' "$skel_dir"
 	printf 'comment\t\t%s\n' "$gecos"
 	printf 'group\t\t%s\n' "$group"
 	exit 0
@@ -42,7 +44,7 @@ while getopts 'DG:L:b:c:d:e:f:g:k:mp:or:s:u:v' f; do
 	e)	echo "$0: expiry time not yet supported; ignoring" >&2;;
 	f)	echo "$0: inactive time not yet supported; ignoring" >&2;;
 	g)	group="$OPTARG";;
-	k)	echo "$0: skeleton files not yet supported; ignoring" >&22;;
+	k)	skel_dir="$OPTARG";;
 	m)	create_homedir=true;;
 	p)	echo "$0: cannot set password from command line; aborting" >&2; exit 1;;
 	o)	echo "$0: cannot reuse numeric uid of another user; aborting" >&2; exit 1;;
@@ -61,9 +63,11 @@ $verbose || exec >/dev/null
 ### check for existence of desired groups
 
 if [ "$group" != "=uid" ]; then
-	if ! net localgroup "${group#+}" >/dev/null 2>&1; then
+	if ! net localgroup "${group}" >/dev/null 2>&1; then
 		echo "$0: group '$group' does not exist" >&2; exit 1
 	fi
+else
+	group="$1"
 fi
 
 for g in "${extra_groups[@]}"; do
@@ -78,9 +82,12 @@ if $create_homedir && [ "$home_dir" = "" ]; then
 	if [ ! -d "$base_dir" ]; then
 		echo "$0: base dir '$base_dir' does not exist" >&2; exit 1
 	fi
+fi
 
+if [ "$home_dir" = "" ]; then
 	home_dir="$base_dir/$1"
 fi
+home_dir_nt="$(/bin/cygpath -m "$home_dir")"
 
 if $create_homedir && [ -d "$home_dir" ]; then
 	echo "$0: home dir '$home_dir' already exists; not clobbering" >&2
@@ -90,22 +97,23 @@ fi
 ### add the user if it same name one is not in groups
 
 if ! net localgroup "$1" >/dev/null 2>&1; then
-	run_cmd net user $1 /add /fullname:"$gecos" /comment:"User added by Cygwin useradd command" || exit 1
-	(/bin/flock -x -n 9 || exit 1; /bin/mkpasswd -l -u "$1" >&9 ) 9>> /etc/passwd
+	run_cmd net user $1 /add /fullname:"$gecos" /comment:"User added by Cygwin useradd command" /homedir:"$home_dir_nt" || exit 1
+	run_cmd /bin/mkpasswd -l -u "$1" >> /etc/passwd || exit 1
 else
 	user_is_group=true;
-	(/bin/flock -x -n 9 || exit 1; /bin/mkgroup -l -g "$1" | /bin/awk -F : -v home_dir=$home_dir '{printf "%s:*:%d:%d:,%s:%s:\n",$1,$3,$3,$2,home_dir}' >&9 ) 9>> /etc/passwd
+	run_cmd /bin/mkgroup -l -g "$1" | /bin/awk -F : -v home_dir=$home_dir '{printf "%s:*:%d:%d:,%s:%s:\n",$1,$3,$3,$2,home_dir}' >> /etc/passwd || exit 1
 fi
 
 ### put user in groups
 
 if [ "${group}" != "Users" ]; then
-	# "Users" added by default; remove and add the real one here:
-	run_cmd net localgroup "Users" $1 /delete || exit 1
-
-	# Under Windows, a user *is* a group.  Do nothing if =uid is given.
-	if [ "$group" != "=uid" -a "$group" != "$1" ]; then
+	# Under Windows, a user *is* a group.  Do nothing if uid=group.
+	if [ "$group" != "$1" ]; then
 		run_cmd net localgroup "${group}" $1 /add || exit 1
+	fi
+	# "Users" added by default; remove and add the real one here:
+	if [ ! $user_is_group ]; then
+		run_cmd net localgroup "Users" $1 /delete || exit 1
 	fi
 fi
 
@@ -123,11 +131,20 @@ if [ "$home_dir" != "" ]; then
 
 	if $create_homedir; then
 		run_cmd /bin/mkdir -p "$home_dir" || exit 1
-		run_cmd /bin/chown "$1" "$home_dir" || exit 1
+		run_cmd /bin/chown "$1":"${group}" "$home_dir" || exit 1
 
 		run_cmd /bin/setfacl -r -m d:u:"$1":rwx,u:SYSTEM:rwx,u:Administrators:rwx "$home_dir" || exit 1
+		if cd "$skel_dir"; then
+			/bin/find . -type f | while read f; do
+				fdest=${f#.}
+				if [ ! -e "${home_dir}${fdest}" -a ! -L "${home_dir}${fdest}" ]; then
+					run_cmd /bin/install -D -p -o "$1" -g "${group}" "${f}" "${home_dir}${fdest}"
+				fi
+			done
+			unset fdest
+		else
+			echo "WARNING: Failed to cd skeltone directory $_skel_dir" >&2
+		fi
 	fi
-
-	$user_is_group || run_cmd net user "$1" /homedir:"$home_dir_nt" || exit 1
 fi
 
