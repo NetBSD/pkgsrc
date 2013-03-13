@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2012/12/20 22:52:37 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2013/03/13 03:31:40 obache Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -8,21 +8,7 @@ COMMENT=	Simple Authentication and Security Layer
 
 CPPFLAGS+=	-DPIC -fPIC
 
-.if exists(/usr/include/ndbm.h) && ${OPSYS} != "Linux"
-SASL_DBTYPE?=		ndbm
-.else
-SASL_DBTYPE?=		berkeley
-.endif
-BUILD_DEFS+=		SASL_DBTYPE
-
-.if ${SASL_DBTYPE} == "berkeley"
-BDB_ACCEPTED=		db3 db4 db5
-.  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ENV+=		with_bdb=${BDB_TYPE}
-.endif
-
-CONFIGURE_ARGS+=	--with-dblib=${SASL_DBTYPE:Q}
-CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
+.include "options.mk"
 
 BUILD_DEFS+=		VARBASE
 
