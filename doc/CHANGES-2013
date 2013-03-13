@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.889 2013/03/13 14:57:33 wen Exp $
+$NetBSD: CHANGES-2013,v 1.890 2013/03/13 15:09:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1255,3 +1255,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-TimeZone to 1.58 [wen 2013-03-13]
 	Updated converters/p5-JSON-PP to 2.27202 [wen 2013-03-13]
 	Updated security/p5-Digest-SHA to 5.84 [wen 2013-03-13]
+	Added inputmethod/mozc-elisp version 1.6.1187.102 [ryoon 2013-03-13]
