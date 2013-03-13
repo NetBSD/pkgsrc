@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.891 2013/03/13 16:34:02 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.892 2013/03/13 17:11:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1257,3 +1257,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Digest-SHA to 5.84 [wen 2013-03-13]
 	Added inputmethod/mozc-elisp version 1.6.1187.102 [ryoon 2013-03-13]
 	Updated editors/OmegaT to 2.6.3 [ryoon 2013-03-13]
+	Updated www/squid3 to 3.3.3nb1 [taca 2013-03-13]
