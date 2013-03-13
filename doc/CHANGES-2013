@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.884 2013/03/13 12:39:24 adam Exp $
+$NetBSD: CHANGES-2013,v 1.885 2013/03/13 13:07:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1250,3 +1250,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/user_cygwin to 20130313 [obache 2013-03-13]
 	Updated security/mit-krb5 to 1.10.4 [adam 2013-03-13]
 	Updated www/squid3 to 3.3.3 [adam 2013-03-13]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.275 [obache 2013-03-13]
