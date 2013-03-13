@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2013/03/08 20:45:24 adam Exp $
+# $NetBSD: Makefile,v 1.96 2013/03/13 09:37:11 adam Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -11,7 +11,7 @@ HOMEPAGE=	http://ghostscript.sourceforge.net/
 COMMENT=	Postscript interpreter
 
 # Plus adobe verbatim for Resources/CMap.
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-agpl-v3
 
 .include	"Makefile.common"
 
