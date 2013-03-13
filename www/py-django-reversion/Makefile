@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/11/25 08:46:23 adam Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/13 07:25:42 adam Exp $
 
-DISTNAME=	django-reversion-1.6.4
+DISTNAME=	django-reversion-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-reversion/
