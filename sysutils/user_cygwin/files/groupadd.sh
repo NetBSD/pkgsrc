@@ -1,5 +1,5 @@
 #!/bin/bash
-# $NetBSD: groupadd.sh,v 1.2 2013/03/12 05:41:39 obache Exp $
+# $NetBSD: groupadd.sh,v 1.3 2013/03/13 12:35:16 obache Exp $
 
 export PATH=/bin:"$(/bin/cygpath -S)"
 
@@ -10,7 +10,7 @@ show_usage () {
 
 verbose=false
 run_cmd () {
-	if $verbose; then printf '%s\n' "+ $*"; fi
+	if $verbose; then printf '%s\n' "+ $*" >&2; fi
 	"$@"
 }
 
@@ -29,4 +29,4 @@ $verbose || exec >/dev/null
 
 run_cmd net localgroup $1 /add /comment:"Group added by Cygwin groupadd command" || exit 1
 ### regenerate cygwin /etc/group
-(/bin/flock -x -n 9 || exit 1; /bin/mkgroup -l -g "$1" >&9 ) 9>> /etc/group
+run_cmd /bin/mkgroup -l -g "$1" >> /etc/group || exit 1
