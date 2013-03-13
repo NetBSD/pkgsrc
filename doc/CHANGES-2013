@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.885 2013/03/13 13:07:57 obache Exp $
+$NetBSD: CHANGES-2013,v 1.886 2013/03/13 13:08:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1251,3 +1251,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/mit-krb5 to 1.10.4 [adam 2013-03-13]
 	Updated www/squid3 to 3.3.3 [adam 2013-03-13]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.275 [obache 2013-03-13]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.68 [obache 2013-03-13]
