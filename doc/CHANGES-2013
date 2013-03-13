@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.894 2013/03/13 20:29:26 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.895 2013/03/13 20:31:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1260,3 +1260,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.3.3nb1 [taca 2013-03-13]
 	Updated sysutils/deforaos-browser to 0.4.11 [khorben 2013-03-13]
 	Updated meta-pkgs/deforaos-desktop to 0.0.3 [khorben 2013-03-13]
+	Updated graphics/blender to 2.66a [ryoon 2013-03-13]
