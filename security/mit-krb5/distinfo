@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.39 2013/02/28 14:19:36 tez Exp $
+$NetBSD: distinfo,v 1.40 2013/03/13 12:35:40 adam Exp $
 
-SHA1 (krb5-1.10.3-signed.tar) = 04ab9837e5d1958158bcb30bd6480201089a0cbb
-RMD160 (krb5-1.10.3-signed.tar) = a1c370c8d39106e8e27651f78520e1cc93154731
-Size (krb5-1.10.3-signed.tar) = 11530240 bytes
+SHA1 (krb5-1.10.4-signed.tar) = 2b4a0743b95b09cb433d25909e599de27c352f10
+RMD160 (krb5-1.10.4-signed.tar) = 1dbf18f1a02744941ebde3b1db93b2e63e59afcd
+Size (krb5-1.10.4-signed.tar) = 11632640 bytes
 SHA1 (patch-aa) = 941848a1773dfbe51dff3134d4b8504a850a958d
 SHA1 (patch-ad) = b56a7218007560470179dd811c84b8c690c966ac
 SHA1 (patch-ae) = c7395b9de5baf6612b8787fad55dbc051a680bfd
@@ -20,7 +20,4 @@ SHA1 (patch-cj) = 78342f649f8e9d3a3b5a4f83e65b6c46f589586b
 SHA1 (patch-ck) = 37bfef80329f8ae0fb35c35e70032a0040ba5591
 SHA1 (patch-kadmin_dbutil_dump.c) = 4b49c116dbed9e6be4a0bf0a731c3ae82808d82e
 SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = a1e46ca9256aea4facc1d41841b1707b044a69e7
-SHA1 (patch-lib_krb5_krb_deltat.c) = 149f4301d2a2ceff17a038c318c2f2f64a2621e4
-SHA1 (patch-lib_krb5_krb_x-deltat.y) = 7857c9f374d747f494ebb248f34a17599ccf791f
-SHA1 (patch-util_k5ev_verto-k5ev.c) = e8f78ec46543793b284c321a6b7362af9f527489
-SHA1 (patch-plugins_preauth_pkinit_pkinit_crypto_openssl.c) = 9aee85446b80dcc7b54cad27364bebff90c7751b
+SHA1 (patch-util_k5ev_verto-k5ev.c) = 79a2be64fa4f9b0dc3a333271e8a3ff7944e5c18
