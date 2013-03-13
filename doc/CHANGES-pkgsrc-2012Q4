@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.46 2013/03/12 20:03:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.47 2013/03/13 18:42:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -261,3 +261,7 @@ Pullup ticket #4089 - requested by jym
 security/stunnel: security update
 Pullup ticket #4096 - requested by obache
 emulators/suse121_qt4: security update
+Pullup ticket #4097 - requested by obache
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4098 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
