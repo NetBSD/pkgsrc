@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2013/03/05 01:59:51 taca Exp $
+# $NetBSD: options.mk,v 1.4 2013/03/13 17:11:25 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
-PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-diskd squid-backend-null \
-		squid-backend-ufs squid-carp squid-unlinkd \
+PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
+		squid-backend-rock squid-backend-ufs squid-carp squid-unlinkd \
 		squid-kerberos-helper squid-ldap-helper squid-pam-helper
 PKG_OPTIONS_LEGACY_OPTS=	diskd:squid-backend-diskd \
 	null:squid-backend-null ufs:squid-backend-ufs \
@@ -56,7 +56,7 @@ PKG_SUPPORTED_OPTIONS+=	squid-arp-acl
 
 .include "../../mk/bsd.options.mk"
 
-SQUID_BACKENDS?=		ufs null
+SQUID_BACKENDS?=		ufs
 SQUID_BASIC_AUTH_HELPERS?=	MSNT NCSA NIS getpwnam
 SQUID_DIGEST_AUTH_HELPERS?=	password
 SQUID_NTLM_AUTH_HELPERS?=	SMB
@@ -117,9 +117,18 @@ CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
+.if !empty(PKG_OPTIONS:Msquid-backend-aufs)
+SQUID_BACKENDS+=	aufs
+.  include "../../mk/pthread.buildlink3.mk"
+.endif
+
 .if !empty(PKG_OPTIONS:Msquid-backend-diskd)
 SQUID_BACKENDS+=	diskd
 PLIST.diskd=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Msquid-backend-rock)
+SQUID_BACKENDS+=	rock
 .endif
 
 .if empty(PKG_OPTIONS:Msquid-unlinkd)
