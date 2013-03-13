@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 07:49:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/13 07:08:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,6 +29,35 @@ ${PYSITELIB}/sekizai/templatetags/__init__.pyo
 ${PYSITELIB}/sekizai/templatetags/sekizai_tags.py
 ${PYSITELIB}/sekizai/templatetags/sekizai_tags.pyc
 ${PYSITELIB}/sekizai/templatetags/sekizai_tags.pyo
+${PYSITELIB}/sekizai/test_templates/basic.html
+${PYSITELIB}/sekizai/test_templates/css.html
+${PYSITELIB}/sekizai/test_templates/css2.html
+${PYSITELIB}/sekizai/test_templates/easy_base.html
+${PYSITELIB}/sekizai/test_templates/easy_inherit.html
+${PYSITELIB}/sekizai/test_templates/eat.html
+${PYSITELIB}/sekizai/test_templates/errors/failadd.html
+${PYSITELIB}/sekizai/test_templates/errors/failbase.html
+${PYSITELIB}/sekizai/test_templates/errors/failbase2.html
+${PYSITELIB}/sekizai/test_templates/errors/failinc.html
+${PYSITELIB}/sekizai/test_templates/errors/failrender.html
+${PYSITELIB}/sekizai/test_templates/inherit/base.html
+${PYSITELIB}/sekizai/test_templates/inherit/baseinc.html
+${PYSITELIB}/sekizai/test_templates/inherit/chain.html
+${PYSITELIB}/sekizai/test_templates/inherit/extend.html
+${PYSITELIB}/sekizai/test_templates/inherit/extinc.html
+${PYSITELIB}/sekizai/test_templates/inherit/nullbase.html
+${PYSITELIB}/sekizai/test_templates/inherit/nullext.html
+${PYSITELIB}/sekizai/test_templates/inherit/spacechain.html
+${PYSITELIB}/sekizai/test_templates/inherit/subvarchain.html
+${PYSITELIB}/sekizai/test_templates/inherit/super_blocks.html
+${PYSITELIB}/sekizai/test_templates/inherit/varchain.html
+${PYSITELIB}/sekizai/test_templates/named_end.html
+${PYSITELIB}/sekizai/test_templates/namespaces.html
+${PYSITELIB}/sekizai/test_templates/processors/namespace.html
+${PYSITELIB}/sekizai/test_templates/processors/null.html
+${PYSITELIB}/sekizai/test_templates/unique.html
+${PYSITELIB}/sekizai/test_templates/variables.html
+${PYSITELIB}/sekizai/test_templates/with_data.html
 ${PYSITELIB}/sekizai/tests.py
 ${PYSITELIB}/sekizai/tests.pyc
 ${PYSITELIB}/sekizai/tests.pyo
