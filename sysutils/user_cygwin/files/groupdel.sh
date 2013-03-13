@@ -1,5 +1,5 @@
 #!/bin/bash
-# $NetBSD: groupdel.sh,v 1.2 2013/03/12 05:41:39 obache Exp $
+# $NetBSD: groupdel.sh,v 1.3 2013/03/13 12:35:16 obache Exp $
 
 export PATH=/bin:"$(/bin/cygpath -S)"
 
@@ -10,7 +10,7 @@ show_usage () {
 
 verbose=false
 run_cmd () {
-	if $verbose; then printf '%s\n' "+ $*"; fi
+	if $verbose; then printf '%s\n' "+ $*" >&2; fi
 	"$@"
 }
 
