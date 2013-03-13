@@ -595,9 +595,12 @@ squid-backend-aufs	Enable use of with Posix AIO.
 squid-backend-coss	Enable use of COSS I/O with Posix AIO.
 squid-backend-diskd	Enable use of diskd process to write to cache.
 squid-backend-null	Enable use of null backend; using only memory.
+squid-backend-rock	Enable use of rock backend; database-style storage.
 squid-backend-ufs	Enable use of UFS (Unix File System).
 squid-carp		Enable use of CARP (Cache Array Routing Protocol).
 squid-ipf		Enable use of transparent proxy with IP Filter.
+squid-ipfw		Enable use of transparent proxy with IPFW.
+squid-kerberos-helper	Enable use of Kerberos helper support.
 squid-ldap-helper	Enable use of LDAP helper support.
 squid-netfilter		Enable use of transparent proxy with Linux Net Filter.
 squid-pam-helper	Enable use of PAM helper support.
