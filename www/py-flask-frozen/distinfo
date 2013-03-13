@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/01/08 19:09:03 kleink Exp $
+$NetBSD: distinfo,v 1.2 2013/03/13 09:29:51 kleink Exp $
 
-SHA1 (Frozen-Flask-0.9.tar.gz) = 39adeac3d66402cacc8c91a288fed3cebfccac7c
-RMD160 (Frozen-Flask-0.9.tar.gz) = d46f686cf18f61a9e59ee5cda5854af5c4e7de04
-Size (Frozen-Flask-0.9.tar.gz) = 73608 bytes
+SHA1 (Frozen-Flask-0.10.tar.gz) = 417244a42d7fe570f976a9f13ede174cb033155b
+RMD160 (Frozen-Flask-0.10.tar.gz) = e343ee5c59856d757268d607c823d446da0871de
+Size (Frozen-Flask-0.10.tar.gz) = 105667 bytes
