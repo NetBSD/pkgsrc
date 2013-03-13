@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.892 2013/03/13 17:11:53 taca Exp $
+$NetBSD: CHANGES-2013,v 1.893 2013/03/13 20:16:59 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1258,3 +1258,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added inputmethod/mozc-elisp version 1.6.1187.102 [ryoon 2013-03-13]
 	Updated editors/OmegaT to 2.6.3 [ryoon 2013-03-13]
 	Updated www/squid3 to 3.3.3nb1 [taca 2013-03-13]
+	Updated sysutils/deforaos-browser to 0.4.11 [khorben 2013-03-13]
