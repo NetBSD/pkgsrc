@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.896 2013/03/13 20:36:49 gls Exp $
+$NetBSD: CHANGES-2013,v 1.897 2013/03/13 23:31:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1262,3 +1262,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/deforaos-desktop to 0.0.3 [khorben 2013-03-13]
 	Updated graphics/blender to 2.66a [ryoon 2013-03-13]
 	Updated sysutils/fabric to 1.6.0 [gls 2013-03-13]
+	Updated databases/guile-pg to 0.45 [gdt 2013-03-13]
