@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/08 19:09:03 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/13 09:29:51 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,6 +15,8 @@ ${PYSITELIB}/flask_frozen/test_app/admin/__init__.py
 ${PYSITELIB}/flask_frozen/test_app/admin/__init__.pyc
 ${PYSITELIB}/flask_frozen/test_app/admin/__init__.pyo
 ${PYSITELIB}/flask_frozen/test_app/admin/admin_static/style.css
+${PYSITELIB}/flask_frozen/test_app/admin/templates/admin.html
+${PYSITELIB}/flask_frozen/test_app/static/favicon.ico
 ${PYSITELIB}/flask_frozen/test_app/static/style.css
 ${PYSITELIB}/flask_frozen/tests.py
 ${PYSITELIB}/flask_frozen/tests.pyc
