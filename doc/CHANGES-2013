@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.881 2013/03/13 07:38:30 adam Exp $
+$NetBSD: CHANGES-2013,v 1.882 2013/03/13 09:31:04 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1246,3 +1246,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django-classy-tags to 0.4 [adam 2013-03-13]
 	Updated www/py-django-reversion to 1.7 [adam 2013-03-13]
 	Updated www/py-django-sekizai to 0.7 [adam 2013-03-13]
+	Updated www/py-flask-frozen to 0.10 [kleink 2013-03-13]
