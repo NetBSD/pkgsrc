@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.888 2013/03/13 14:49:31 wen Exp $
+$NetBSD: CHANGES-2013,v 1.889 2013/03/13 14:57:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1254,3 +1254,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.68 [obache 2013-03-13]
 	Updated time/p5-DateTime-TimeZone to 1.58 [wen 2013-03-13]
 	Updated converters/p5-JSON-PP to 2.27202 [wen 2013-03-13]
+	Updated security/p5-Digest-SHA to 5.84 [wen 2013-03-13]
