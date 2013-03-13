@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/26 13:32:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/13 07:25:42 adam Exp $
 ${PYSITELIB}/reversion/__init__.py
 ${PYSITELIB}/reversion/__init__.pyc
 ${PYSITELIB}/reversion/__init__.pyo
@@ -20,6 +20,8 @@ ${PYSITELIB}/reversion/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/nb/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/nb/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/nl/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/nl/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/pl/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/pl/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/pt_BR/LC_MESSAGES/django.mo
@@ -75,9 +77,6 @@ ${PYSITELIB}/reversion/templates/reversion/revision_form.html
 ${PYSITELIB}/reversion/tests.py
 ${PYSITELIB}/reversion/tests.pyc
 ${PYSITELIB}/reversion/tests.pyo
-${PYSITELIB}/reversion/tests_deprecated.py
-${PYSITELIB}/reversion/tests_deprecated.pyc
-${PYSITELIB}/reversion/tests_deprecated.pyo
 ${PYSITELIB}/reversion/version.py
 ${PYSITELIB}/reversion/version.pyc
 ${PYSITELIB}/reversion/version.pyo
