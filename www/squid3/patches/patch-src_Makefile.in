@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2013/02/10 18:16:53 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2013/03/13 17:11:26 taca Exp $
+
+Don't install squid.conf.
 
 --- src/Makefile.in.orig	2013-02-09 07:30:35.000000000 +0000
 +++ src/Makefile.in
