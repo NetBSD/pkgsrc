@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/01/08 07:54:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/13 07:12:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/classytags/arguments.pyo
 ${PYSITELIB}/classytags/blocks.py
 ${PYSITELIB}/classytags/blocks.pyc
 ${PYSITELIB}/classytags/blocks.pyo
+${PYSITELIB}/classytags/compat.py
+${PYSITELIB}/classytags/compat.pyc
+${PYSITELIB}/classytags/compat.pyo
 ${PYSITELIB}/classytags/core.py
 ${PYSITELIB}/classytags/core.pyc
 ${PYSITELIB}/classytags/core.pyo
@@ -55,3 +58,4 @@ ${PYSITELIB}/classytags/utils.pyo
 ${PYSITELIB}/classytags/values.py
 ${PYSITELIB}/classytags/values.pyc
 ${PYSITELIB}/classytags/values.pyo
+${PYSITELIB}/django_classy_tags-0.4-py2.7.egg-info/requires.txt
