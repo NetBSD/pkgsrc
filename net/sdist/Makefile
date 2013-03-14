@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/14 15:49:10 kim Exp $
+# $NetBSD: Makefile,v 1.18 2013/03/14 17:23:12 kim Exp $
 #
 
 DISTNAME=		sdist-1.9
@@ -21,8 +21,8 @@ BUILD_DEFS+=		SDIST_PAWD
 
 EGDIR=			share/examples/${PKGBASE}
 
-CONF_FILES=		${PREFIX}/${EGDIR}/sdist.conf \
-			${PKG_SYSCONFDIR}/sdist.conf
+CONF_FILES=		${PREFIX}/${EGDIR}/${PKGBASE}.conf \
+			${PKG_SYSCONFDIR}/${PKGBASE}.conf
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 ${EGDIR}
 NO_CONFIGURE=		yes
