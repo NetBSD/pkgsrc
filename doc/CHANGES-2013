@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.927 2013/03/14 18:55:47 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.928 2013/03/14 19:02:04 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1297,3 +1297,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/urlget to 1.5 [kim 2013-03-14]
 	Updated textproc/mdoclint to 1.20 [wiz 2013-03-14]
 	Updated devel/gitolite to 3.4 [ryoon 2013-03-14]
+	Updated www/py-flask-wtf to 0.8.3 [kleink 2013-03-14]
