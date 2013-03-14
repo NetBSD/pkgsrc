@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.14 2012/10/11 19:37:48 drochner Exp $
+$NetBSD: patch-aa,v 1.15 2013/03/14 19:56:41 drochner Exp $
 
 Extend which ports we accept to deal with.
 
---- configure.orig	2012-04-12 03:13:17.000000000 +0000
+--- configure.orig	2013-02-11 19:24:24.000000000 +0000
 +++ configure
-@@ -13158,7 +13158,7 @@ case "$host" in
+@@ -13329,7 +13329,7 @@ case "$host" in
  	TARGET=FRV; TARGETDIR=frv
  	;;
  
@@ -13,7 +13,7 @@ Extend which ports we accept to deal with.
  	TARGET=PA_LINUX; TARGETDIR=pa
  	;;
    hppa*64-*-hpux*)
-@@ -13208,7 +13208,7 @@ case "$host" in
+@@ -13422,7 +13422,7 @@ case "$host" in
    mips-sgi-irix5.* | mips-sgi-irix6.* | mips*-*-rtems*)
  	TARGET=MIPS; TARGETDIR=mips
  	;;
@@ -22,7 +22,7 @@ Extend which ports we accept to deal with.
  	# Support 128-bit long double for NewABI.
  	HAVE_LONG_DOUBLE='defined(__mips64)'
  	TARGET=MIPS; TARGETDIR=mips
-@@ -13233,7 +13233,7 @@ case "$host" in
+@@ -13443,7 +13443,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
@@ -31,7 +31,7 @@ Extend which ports we accept to deal with.
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
  	;;
    powerpc64-*-freebsd*)
-@@ -13247,7 +13247,7 @@ case "$host" in
+@@ -13457,7 +13457,7 @@ case "$host" in
  	TARGET=S390; TARGETDIR=s390
  	;;
  
@@ -40,16 +40,16 @@ Extend which ports we accept to deal with.
  	TARGET=SH; TARGETDIR=sh
  	;;
    sh64-*-* | sh5*-*-*)
-@@ -14402,7 +14402,7 @@ case "$target" in
+@@ -14647,7 +14647,7 @@ case "$target" in
  $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
--     *-apple-darwin1[10]* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris*)
-+     *-apple-darwin1[10]* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* | *-*-openbsd* | *-pc-solaris*)
+-     *-apple-darwin1* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris*)
++     *-apple-darwin1* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* | *-*-openbsd* | *-pc-solaris*)
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -16446,13 +16448,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -16716,13 +16716,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
