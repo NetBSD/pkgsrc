@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.924 2013/03/14 16:48:18 taca Exp $
+$NetBSD: CHANGES-2013,v 1.925 2013/03/14 17:24:40 kim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ruby-color to 1.4.1nb1 [taca 2013-03-14]
 	Updated net/ssync to 1.9.1 [kim 2013-03-14]
 	Updated www/ruby-liquid to 2.5.0 [taca 2013-03-14]
+	Updated www/urlget to 1.5 [kim 2013-03-14]
