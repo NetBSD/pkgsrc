@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.897 2013/03/13 23:31:03 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.898 2013/03/14 12:00:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1263,3 +1263,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/blender to 2.66a [ryoon 2013-03-13]
 	Updated sysutils/fabric to 1.6.0 [gls 2013-03-13]
 	Updated databases/guile-pg to 0.45 [gdt 2013-03-13]
+	Updated math/ruby-spreadsheet to 0.8.3 [obache 2013-03-14]
