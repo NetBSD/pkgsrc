@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/03/14 22:27:15 asau Exp $
+include/execinfo.h
+lib/libexecinfo.a
+lib/libexecinfo.so
+lib/libexecinfo.so.1
+lib/libexecinfo.so.1.0
+lib/libexecinfo_pic.a
