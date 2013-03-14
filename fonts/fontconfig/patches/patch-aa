@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.15 2012/07/31 18:12:28 drochner Exp $
+$NetBSD: patch-aa,v 1.16 2013/03/14 19:32:32 drochner Exp $
 
---- Makefile.in.orig	2012-07-27 02:24:51.000000000 +0000
+--- Makefile.in.orig	2013-01-10 08:59:03.000000000 +0000
 +++ Makefile.in
-@@ -317,6 +317,7 @@ top_build_prefix = @top_build_prefix@
+@@ -357,6 +357,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  xmldir = $(XMLDIR)
 +egdir = $(prefix)/share/examples/fontconfig
- SUBDIRS = fontconfig fc-case fc-lang fc-glyphname src \
- 	fc-cache fc-cat fc-list fc-match fc-pattern fc-query fc-scan \
- 	conf.d $(DOCSRC) test
-@@ -340,6 +341,7 @@ pkgconfig_DATA = fontconfig.pc
- xml_DATA = fonts.dtd
+ SUBDIRS = fontconfig fc-case fc-lang fc-glyphname src fc-cache fc-cat \
+ 	fc-list fc-match fc-pattern fc-query fc-scan fc-validate \
+ 	conf.d test $(am__append_1)
+@@ -383,6 +384,7 @@ xml_DATA = fonts.dtd
  @CROSS_COMPILING_FALSE@RUN_FC_CACHE_TEST = test -z "$(DESTDIR)"
  @CROSS_COMPILING_TRUE@RUN_FC_CACHE_TEST = false
+ DISTCHECK_CONFIGURE_FLAGS = 
 +RUN_FC_CACHE_TEST = false
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
-@@ -932,17 +934,13 @@ fonts.conf: fonts.conf.in Makefile
+@@ -974,17 +976,13 @@ fonts.conf: fonts.conf.in Makefile
  	mv $@.tmp $@
  
  install-data-local: fonts.conf

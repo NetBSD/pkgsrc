@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2012/12/16 11:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2013/03/14 19:32:31 drochner Exp $
 
-DISTNAME=	fontconfig-2.10.2
+DISTNAME=	fontconfig-2.10.91
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -53,8 +53,9 @@ CONF_FILES+=	${EGDIR}/conf.d/README ${PKG_SYSCONFDIR}/conf.d/README
 TMPLDIR=	${PREFIX}/share/fontconfig/conf.avail
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
-FC_STDCONF=	20-unhint-small-vera.conf 30-metric-aliases.conf 30-urw-aliases.conf \
-	40-nonlatin.conf 45-latin.conf 49-sansserif.conf 50-user.conf 51-local.conf \
+FC_STDCONF=	10-scale-bitmap-fonts.conf 20-unhint-small-vera.conf \
+	30-metric-aliases.conf 30-urw-aliases.conf 40-nonlatin.conf \
+	45-latin.conf 49-sansserif.conf 50-user.conf 51-local.conf \
 	60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
 	80-delicious.conf 90-synthetic.conf
 # pkgsrc addition
