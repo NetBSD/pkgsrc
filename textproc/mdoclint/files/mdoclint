@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.30 2013/03/14 18:01:13 wiz Exp $
+# $NetBSD: mdoclint,v 1.31 2013/03/14 19:37:33 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -55,7 +55,7 @@ my $options="AaDdeFfHhlmnOoPprSsvwXx";
 
 sub usage
 	{
-	my $default = OPENBSD ? "-aDdfmnoPprSsXx" : "-aDdefmnoPprSsXx";
+	my $default = OPENBSD ? "-aDdfmnoPprSsXx" : "-aDdeflmnoPprSsXx";
 	
 	print STDERR <<"EOF";
 mdoclint: verify man page correctness
