@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.931 2013/03/14 21:53:41 gls Exp $
+$NetBSD: CHANGES-2013,v 1.932 2013/03/14 22:31:23 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1307,3 +1307,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libffi to 3.0.12 [drochner 2013-03-14]
 	Updated devel/reposurgeon to 2.26 [ryoon 2013-03-14]
 	Removed security/py-ssh [gls 2013-03-14]
+	Added devel/libexecinfo version 1.1 [asau 2013-03-15]
