@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/03/14 17:04:27 kim Exp $
 
-SHA1 (urlget-1.4.tar.gz) = 063a3e5085172a88465a12bdf226c31676825972
-RMD160 (urlget-1.4.tar.gz) = 621f3069c2830dd6c36a43ec9b22443c9556aea3
-Size (urlget-1.4.tar.gz) = 4824 bytes
+SHA1 (urlget-1.5.tar.gz) = 0427a3a9c53416225f91225d07aeebc59abc9d60
+RMD160 (urlget-1.5.tar.gz) = 7afea8d415dbc3dfec9fafbc4e4bc15d38d35d52
+Size (urlget-1.5.tar.gz) = 6832 bytes
+SHA1 (patch-aa) = fb5e81415269c2ba54a41d1a3b993a8a5f960585
