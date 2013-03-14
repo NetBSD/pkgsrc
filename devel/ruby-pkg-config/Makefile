@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:42 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/14 13:42:57 obache Exp $
 
-DISTNAME=	pkg-config-1.1.3
+DISTNAME=	pkg-config-1.1.4
 CATEGORIES=	devel
-MASTER_SITES=	http://rubygems.org/gems/ \
-		http://gems.rubyforge.org/gems/
+MASTER_SITES=	${MASTER_SITE_RUBYGEMS}
 EXTRACT_SUFX=	.gem
 
 MAINTAINER=	obache@NetBSD.org
@@ -14,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 CONFLICTS+=	${RUBY_PKGPREFIX}-gnome2-glib<0.90.0
 
 USE_RUBY_SETUP=		yes
+USE_RUBY_SETUP_PKG=	yes
 
 CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
 			--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
