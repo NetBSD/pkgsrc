@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/08 23:20:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/14 19:26:54 drochner Exp $
 include/gee-0.8/gee.h
 lib/girepository-1.0/Gee-0.8.typelib
 lib/libgee-0.8.la
