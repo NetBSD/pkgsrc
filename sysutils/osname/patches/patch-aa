@@ -1,14 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2007/12/27 11:55:51 obache Exp $
+$NetBSD: patch-aa,v 1.3 2013/03/14 13:03:47 kim Exp $
 
---- Makefile.orig	1999-07-05 04:55:02.000000000 +0000
-+++ Makefile
-@@ -7,8 +7,8 @@ CMD=osname
- all: $(CMD)
+--- Makefile.orig	2011-09-02 03:13:28.000000000 +0300
++++ Makefile	2013-03-14 14:50:54.000000000 +0200
+@@ -23,10 +23,10 @@
+ install: install-bin install-man
  
- install: $(CMD)
+ install-bin: $(CMD)
 -	install -c $(CMD) ${PREFIX}/bin/$(CMD)
--	install -m 664 $(CMD).1 ${PREFIX}/man/man1
 +	${BSD_INSTALL_SCRIPT} $(CMD) ${DESTDIR}${PREFIX}/bin/$(CMD)
+ 
+ install-man:
+-	install -m 664 $(CMD).1 ${PREFIX}/man/man1
 +	${BSD_INSTALL_MAN} $(CMD).1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$(CMD).1
  
  clean:
