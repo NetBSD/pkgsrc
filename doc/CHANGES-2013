@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.912 2013/03/14 16:15:29 taca Exp $
+$NetBSD: CHANGES-2013,v 1.913 2013/03/14 16:18:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1278,3 +1278,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-multi_json to 1.6.1 [taca 2013-03-14]
 	Updated textproc/ruby-textpow to 1.3.1 [taca 2013-03-14]
 	Updated textproc/ruby-tilt to 1.3.5 [taca 2013-03-14]
+	Updated www/camping to 2.1.531 [taca 2013-03-14]
