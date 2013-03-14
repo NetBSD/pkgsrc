@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.898 2013/03/14 12:00:02 obache Exp $
+$NetBSD: CHANGES-2013,v 1.899 2013/03/14 12:30:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1264,3 +1264,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/fabric to 1.6.0 [gls 2013-03-13]
 	Updated databases/guile-pg to 0.45 [gdt 2013-03-13]
 	Updated math/ruby-spreadsheet to 0.8.3 [obache 2013-03-14]
+	Updated mail/milter-manager to 1.8.6 [obache 2013-03-14]
