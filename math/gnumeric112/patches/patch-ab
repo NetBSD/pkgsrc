@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2013/03/14 19:00:45 drochner Exp $
+
+--- plugins/excelplugins/Makefile.in.orig	2013-03-01 23:01:25.000000000 +0000
++++ plugins/excelplugins/Makefile.in
+@@ -93,7 +93,7 @@ am__uninstall_files_from_dir = { \
+ am__installdirs = "$(DESTDIR)$(gnumeric_plugin_excelpluginsdir)" \
+ 	"$(DESTDIR)$(xmldir)"
+ LTLIBRARIES = $(gnumeric_plugin_excelplugins_LTLIBRARIES)
+-plugin_la_DEPENDENCIES = ../../src/.libs/libspreadsheet.la
++plugin_la_DEPENDENCIES = ../../src/libspreadsheet.la
+ am_plugin_la_OBJECTS = excelplugins.lo
+ plugin_la_OBJECTS = $(am_plugin_la_OBJECTS)
+ AM_V_lt = $(am__v_lt_@AM_V@)
+@@ -376,7 +376,7 @@ gnumeric_plugin_excelpluginsdir = $(gnum
+ xmldir = $(gnumeric_plugin_excelpluginsdir)
+ gnumeric_plugin_excelplugins_LTLIBRARIES = plugin.la xlcall32.la
+ plugin_la_LDFLAGS = -module $(GNUMERIC_PLUGIN_LDFLAGS)
+-plugin_la_LIBADD = ../../src/.libs/libspreadsheet.la
++plugin_la_LIBADD = ../../src/libspreadsheet.la
+ plugin_la_SOURCES = excelplugins.c
+ xlcall32_la_LDFLAGS = -module $(GNUMERIC_PLUGIN_LDFLAGS)
+ xlcall32_la_SOURCES = xlcall32_emulation.c win32replacements.h xlcall.h
