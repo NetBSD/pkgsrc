@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.30 2013/02/16 11:19:38 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/03/14 13:26:20 obache Exp $
 
-DISTNAME=		rcairo-1.12.2
+DISTNAME=		rcairo-1.12.4
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		graphics
-MASTER_SITES=		http://cairographics.org/releases/
+MASTER_SITES=		-http://nodeload.github.com/rcairo/rcairo/zip/v${PKGVERSION_NOREV}
+EXTRACT_SUFX=		.zip
 
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://cairographics.org/rcairo/
 COMMENT=		Ruby bindings for cairo
 LICENSE=		ruby-license OR gnu-gpl-v2
-
-USE_TOOLS+=		pkg-config
 
 USE_RUBY_EXTCONF=	yes
 
