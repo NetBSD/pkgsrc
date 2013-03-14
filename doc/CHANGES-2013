@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.917 2013/03/14 16:24:44 taca Exp $
+$NetBSD: CHANGES-2013,v 1.918 2013/03/14 16:27:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1283,3 +1283,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-jekyll to 0.12.1 [taca 2013-03-14]
 	Updated www/ruby-sass to 3.2.7 [taca 2013-03-14]
 	Updated www/ruby-unicorn to 4.6.2 [taca 2013-03-14]
+	Updated www/ruby-webrobots to 0.1.0 [taca 2013-03-14]
