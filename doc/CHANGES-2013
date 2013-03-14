@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.910 2013/03/14 16:13:08 taca Exp $
+$NetBSD: CHANGES-2013,v 1.911 2013/03/14 16:14:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1276,3 +1276,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/srsh to 1.3 [kim 2013-03-14]
 	Updated textproc/ruby-mab to 0.0.3 [taca 2013-03-14]
 	Updated textproc/ruby-multi_json to 1.6.1 [taca 2013-03-14]
+	Updated textproc/ruby-textpow to 1.3.1 [taca 2013-03-14]
