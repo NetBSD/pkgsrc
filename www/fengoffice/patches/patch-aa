@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2010/12/02 13:35:24 taca Exp $
+$NetBSD: patch-aa,v 1.4 2013/03/14 16:33:15 taca Exp $
 
 Unofficial patch to avoid iconv(GNU or gnu libc) portability problem.
 (mb-iconv.patch from http://www.fengoffice.com/web/bugs/view.php?id=6)
 
---- environment/classes/encoding/EncodingConverter.class.php.orig	2010-12-01 12:33:32.000000000 +0000
+--- environment/classes/encoding/EncodingConverter.class.php.orig	2013-02-06 11:30:10.000000000 +0000
 +++ environment/classes/encoding/EncodingConverter.class.php
 @@ -6,6 +6,16 @@ class EncodingConverter
  	var $_last_err_filename;
  	var $_last_err_line;
  	var $_last_err_func;
-+	private static $gnu_iconv = NULL;
++	private static $gnu_iconv = null;
 +
 +	static function iconv_error($errno, $errstr) {
 +		if (preg_match("/Wrong charset/", $errstr) > 0) {
@@ -22,7 +22,7 @@ Unofficial patch to avoid iconv(GNU or gnu libc) portability problem.
  
  	function _handleError($err, $msg, $errfile, $errline, $errcontext) {
  		$trace = debug_backtrace();
-@@ -25,12 +35,29 @@ class EncodingConverter
+@@ -25,6 +35,19 @@ class EncodingConverter
  	}
  
  	function convert($in_enc, $out_enc, $str, $return_original_on_error = true, $ignore_non_compatible = true) {
@@ -41,18 +41,4 @@ Unofficial patch to avoid iconv(GNU or gnu libc) portability problem.
 +
  		$this->_last_err = null;
  		set_error_handler(array(&$this, '_handleError'));
--		
--		if ($ignore_non_compatible) $out_enc .= "//IGNORE//TRANSLIT";
--		
--		$retval = iconv($in_enc, $out_enc, $str);
-+
-+		if(!$mbflag) {
-+			if (self::$gnu_iconv)
-+				if ($ignore_non_compatible) $out_enc .= "//IGNORE//TRANSLIT";
-+			$retval = iconv($in_enc, $out_enc, $str);
-+		} else { 
-+			$retval = mb_convert_encoding($str, $out_enc, $in_enc);
-+		}
  		
- 		restore_error_handler();
- 		if ($this->hasError()) {
