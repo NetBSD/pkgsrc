@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.915 2013/03/14 16:21:34 taca Exp $
+$NetBSD: CHANGES-2013,v 1.916 2013/03/14 16:23:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1281,3 +1281,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/camping to 2.1.531 [taca 2013-03-14]
 	Updated www/ruby-innate to 2013.02.21 [taca 2013-03-14]
 	Updated www/ruby-jekyll to 0.12.1 [taca 2013-03-14]
+	Updated www/ruby-sass to 3.2.7 [taca 2013-03-14]
