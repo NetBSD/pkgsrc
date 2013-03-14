@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/14 13:42:06 wiz Exp $
+
+SHA1 (py-musicbrainz-ngs/v0.3.tar.gz) = 09c6221e94f081add1af8acbf9f9e97197266f96
+RMD160 (py-musicbrainz-ngs/v0.3.tar.gz) = e5b221ef5de7833881923cc215aee0b2bd963cc4
+Size (py-musicbrainz-ngs/v0.3.tar.gz) = 49246 bytes
