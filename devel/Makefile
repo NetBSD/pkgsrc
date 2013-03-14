@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1714 2013/03/04 23:42:41 khorben Exp $
+# $NetBSD: Makefile,v 1.1715 2013/03/14 04:08:02 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -841,6 +841,7 @@ SUBDIR+=	p5-IO-Null
 SUBDIR+=	p5-IO-Pager
 SUBDIR+=	p5-IO-Pipeline
 SUBDIR+=	p5-IO-Prompt
+SUBDIR+=	p5-IO-Prompter
 SUBDIR+=	p5-IO-String
 SUBDIR+=	p5-IO-Stty
 SUBDIR+=	p5-IO-Tee
