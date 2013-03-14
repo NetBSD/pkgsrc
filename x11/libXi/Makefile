@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/03/12 11:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/03/14 17:37:51 drochner Exp $
 #
 
 DISTNAME=		libXi-1.7
@@ -32,7 +32,7 @@ SUBST_SED.sosubdir=	-e 's|\.so X|.so manlibmansuffix/X|'
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
-BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.2
+BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.3
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.5
 BUILDLINK_API_DEPENDS.libXext+=		libXext>=1.1
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.3
