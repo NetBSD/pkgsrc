@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:16 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/14 13:03:47 kim Exp $
 #
 
-DISTNAME=		osname-1.1
-PKGREVISION=		1
+DISTNAME=		osname-2.0
 CATEGORIES=		sysutils
-MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
+MASTER_SITES=		http://oss.gw.com/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Print canonical name of operating system
