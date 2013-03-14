@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2013/03/14 19:00:45 drochner Exp $
+
+--- plugins/fn-numtheory/numtheory.c.orig	2009-09-07 02:03:35.000000000 +0000
++++ plugins/fn-numtheory/numtheory.c
+@@ -38,7 +38,10 @@ GNM_PLUGIN_MODULE_HEADER;
+  * represented in a gnm_float _and_ in a guint64.  (For regular "double",
+  * the latter part is irrelevant.)
+  */
+-static const double bit_max = MIN (1 / GNM_EPSILON, (gnm_float)G_MAXUINT64);
++static inline double bit_max_fn(void) {
++	return MIN (1 / GNM_EPSILON, (gnm_float)G_MAXUINT64);
++}
++#define bit_max (bit_max_fn())
+ 
+ /* ------------------------------------------------------------------------- */
+ 
