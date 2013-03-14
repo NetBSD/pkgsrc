@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2010/06/16 22:27:04 taca Exp $
+$NetBSD: patch-aa,v 1.3 2013/03/14 16:35:32 taca Exp $
 
---- mailtools/scan-mail.pl.orig	2010-04-12 14:18:39.000000000 +0000
+--- mailtools/scan-mail.pl.orig	2012-12-12 08:12:57.000000000 +0000
 +++ mailtools/scan-mail.pl
 @@ -81,11 +81,6 @@
  
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.2 2010/06/16 22:27:04 taca Exp $
  	SCANMAIL_BANLIST  => ['file_list_2 =','file_list_2_policy=drop', 'file_list_2_scanner=0'],
  	SCANMAIL_STOPLIST => ['file_list_3 =','file_list_3_policy=save', 'file_list_3_scanner=0']
  );
-@@ -201,6 +196,7 @@ if (my $val = $conf->{SCANMAIL_LOGLEVEL}
+@@ -217,6 +212,7 @@ if (my $val = $conf->{SCANMAIL_LOGLEVEL}
  # script, this is fugly
  #
  
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.2 2010/06/16 22:27:04 taca Exp $
  my $debug           = 0;
  my $verbose         = 0;
  my $quarantine      = 0;
-@@ -210,7 +206,7 @@ my $milter_cf       = '/etc/mail/sendmai
+@@ -226,7 +222,7 @@ my $milter_cf       = '/etc/mail/sendmai
  my $milter_conn     = undef;
  my $milter_name     = 'fp-milter';
  my $milter_pid      = undef;
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.2 2010/06/16 22:27:04 taca Exp $
  my $postfix         = 0;
  my $postfix_ret     = undef;
  my $server          = 0;
-@@ -219,7 +215,8 @@ my $proxy           = 0;
+@@ -235,7 +231,8 @@ my $proxy           = 0;
  my $proxy_addr      = '0.0.0.0:25';
  my $smtp_addr       = '127.0.0.1:26';
  my $backup          = 0;
@@ -50,20 +50,20 @@ $NetBSD: patch-aa,v 1.2 2010/06/16 22:27:04 taca Exp $
  
  # use this for really complex configuration of
  # scan-mail. /etc/f-prot.conf should take care of the simple things
-@@ -441,9 +438,11 @@ if ($daemon)
+@@ -467,9 +464,10 @@ if ($daemon)
      defined(my $pid = fork)    or die "Can't fork: $!";
      exit if $pid;
      setsid                     or die "Can't start a new session: $!";
 -    open PID_FILE, '>/var/run/scan-mail.pid' or die "Can't open pid file: $!";
+-    print PID_FILE $$;
 +    open PID_FILE, ">$pid_file" or die "Can't open pid file: $!";
 +    print PID_FILE "$$\n";
-     print PID_FILE $$;
      close PID_FILE;
 +    $SIG{'TERM'} = $SIG{'HUP'} = \&clean_up;
      open STDERR, '>&STDOUT'    or die "Can't dup stdout: $!";
  }
  
-@@ -602,6 +601,12 @@ else
+@@ -628,6 +626,12 @@ else
  
  ##[ Subroutines ]##############################################################
  
@@ -76,39 +76,12 @@ $NetBSD: patch-aa,v 1.2 2010/06/16 22:27:04 taca Exp $
  # proxy address, smtp address
  sub run_smtp_proxy
  {
-@@ -1020,7 +1025,7 @@ sub do_scan
-         my $subdir = "/".$m.$d."/";
-         unless (-d $backup_location)
-         {
--            unless (mkdir($backup_location,1777))
-+            unless (mkdir($backup_location,1777) or $!{'EEXIST'})
-             {
-                 my $err = "Unable to create backup basedir $backup_location: $!";
-                 syslog err => $err;
-@@ -1032,7 +1037,7 @@ sub do_scan
+@@ -1058,7 +1062,7 @@ sub do_scan
  
          unless(-d $pathto)
          {
--              unless (mkdir($pathto,1777))
+-              unless (mkdir($pathto,1777) or $!{'EEXIST'})
 +	    unless (mkdir($pathto,1777) or $!{'EEXIST'})
              {
                  my $err = "Unable to create backup subdir $pathto: $!";
                  syslog err => $err;
-@@ -1080,7 +1085,16 @@ sub do_scan
- 	}
- 
-         # Try to delete the directory. Will fail unless it's empty.
--        rmdir($pathto);
-+	# rmdir($pathto);
-+	#
-+	# But it cause some race, keep the directory and remove it by
-+	# another script using find command or execute same functionality
-+	# in this script.
-+	#
-+	# #!/bin/sh
-+	# cd $backup_location
-+	# find . -type d -name '[0-1]*' -mtime +7 rmdir {} \; >/dev/null 2>&1
-+	#
-     }
-     else
-     {
