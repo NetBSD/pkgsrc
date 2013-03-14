@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11991 2013/03/14 16:51:42 wiz Exp $
+$NetBSD: TODO,v 1.11992 2013/03/14 19:57:17 drochner Exp $
 
 Suggested new packages
 ======================
@@ -799,20 +799,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcares-1.8.0
 	o libchamplain08-0.12.3
 	o libextractor-1.0.0
-	o libffi-3.0.12
 	o libflash-0.4.13
 	o libfolks-0.8.0
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
 	o libgee-0.8.5
-	o libgee0.8-0.8.3
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.6.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libgpg-error-1.11
-	o libgsf-1.14.26
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
