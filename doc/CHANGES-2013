@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.918 2013/03/14 16:27:57 taca Exp $
+$NetBSD: CHANGES-2013,v 1.919 2013/03/14 16:32:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1284,3 +1284,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-sass to 3.2.7 [taca 2013-03-14]
 	Updated www/ruby-unicorn to 4.6.2 [taca 2013-03-14]
 	Updated www/ruby-webrobots to 0.1.0 [taca 2013-03-14]
+	Updated www/typo3_46 to 4.6.18 [taca 2013-03-14]
+	Updated www/typo3_45 to 4.5.25 [taca 2013-03-14]
+	Updated www/typo3_47 to 4.7.10 [taca 2013-03-14]
