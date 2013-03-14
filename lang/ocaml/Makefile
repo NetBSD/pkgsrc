@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2013/03/14 14:37:56 is Exp $
+# $NetBSD: Makefile,v 1.85 2013/03/14 14:44:58 wiz Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		2
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ARGS+=	-cc ${CC}
