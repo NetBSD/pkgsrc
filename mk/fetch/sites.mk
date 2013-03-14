@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.96 2013/01/20 09:37:19 ryoon Exp $
+# $NetBSD: sites.mk,v 1.97 2013/03/14 12:57:42 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -392,6 +392,10 @@ MASTER_SITE_NETLIB+= \
 	http://netlib.sandia.gov/ \
 	http://www.netlib.no/netlib/ \
 	http://www.mirrorservice.org/sites/netlib.bell-labs.com/netlib/
+
+MASTER_SITE_RUBYGEMS+= \
+	http://rubygems.org/gems/ \
+	http://gems.rubyforge.org/gems/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
