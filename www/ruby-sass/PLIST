@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/12/17 15:52:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/03/14 16:23:19 taca Exp $
 bin/sass
 bin/sass-convert
 bin/scss
@@ -240,6 +240,7 @@ ${GEM_LIBDIR}/test/sass/util/subset_map_test.rb
 ${GEM_LIBDIR}/test/sass/util_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/vendor/listen/CHANGELOG.md
+${GEM_LIBDIR}/vendor/listen/CONTRIBUTING.md
 ${GEM_LIBDIR}/vendor/listen/Gemfile
 ${GEM_LIBDIR}/vendor/listen/Guardfile
 ${GEM_LIBDIR}/vendor/listen/LICENSE
@@ -248,10 +249,12 @@ ${GEM_LIBDIR}/vendor/listen/Rakefile
 ${GEM_LIBDIR}/vendor/listen/Vagrantfile
 ${GEM_LIBDIR}/vendor/listen/lib/listen.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/adapter.rb
+${GEM_LIBDIR}/vendor/listen/lib/listen/adapters/bsd.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/adapters/darwin.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/adapters/linux.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/adapters/polling.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/adapters/windows.rb
+${GEM_LIBDIR}/vendor/listen/lib/listen/dependency_manager.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/directory_record.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/listener.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/multi_listener.rb
@@ -259,10 +262,12 @@ ${GEM_LIBDIR}/vendor/listen/lib/listen/turnstile.rb
 ${GEM_LIBDIR}/vendor/listen/lib/listen/version.rb
 ${GEM_LIBDIR}/vendor/listen/listen.gemspec
 ${GEM_LIBDIR}/vendor/listen/spec/listen/adapter_spec.rb
+${GEM_LIBDIR}/vendor/listen/spec/listen/adapters/bsd_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/adapters/darwin_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/adapters/linux_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/adapters/polling_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/adapters/windows_spec.rb
+${GEM_LIBDIR}/vendor/listen/spec/listen/dependency_manager_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/directory_record_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/listener_spec.rb
 ${GEM_LIBDIR}/vendor/listen/spec/listen/multi_listener_spec.rb
