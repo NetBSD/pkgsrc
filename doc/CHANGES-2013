@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.903 2013/03/14 13:52:27 kim Exp $
+$NetBSD: CHANGES-2013,v 1.904 2013/03/14 13:53:37 kim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added audio/py-musicbrainz-ngs version 0.3 [wiz 2013-03-14]
 	Updated devel/ruby-pkg-config to 1.1.4 [obache 2013-03-14]
 	Updated net/netname to 2.2 [kim 2013-03-14]
+	Updated sysutils/osname to 2.0 [kim 2013-03-14]
