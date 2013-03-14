@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2012/07/31 18:12:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/03/14 19:32:32 drochner Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -6,6 +6,7 @@ bin/fc-match
 bin/fc-pattern
 bin/fc-query
 bin/fc-scan
+bin/fc-validate
 include/fontconfig/fcfreetype.h
 include/fontconfig/fcprivate.h
 include/fontconfig/fontconfig.h
@@ -18,6 +19,7 @@ man/man1/fc-match.1
 man/man1/fc-pattern.1
 man/man1/fc-query.1
 man/man1/fc-scan.1
+man/man1/fc-validate.1
 man/man3/FcAtomicCreate.3
 man/man3/FcAtomicDeleteNew.3
 man/man3/FcAtomicDestroy.3
@@ -121,6 +123,7 @@ man/man3/FcInitReinitialize.3
 man/man3/FcIsLower.3
 man/man3/FcIsUpper.3
 man/man3/FcLangGetCharSet.3
+man/man3/FcLangNormalize.3
 man/man3/FcLangSetAdd.3
 man/man3/FcLangSetCompare.3
 man/man3/FcLangSetContains.3
@@ -308,6 +311,7 @@ share/doc/fontconfig/fontconfig-devel/fcinitreinitialize.html
 share/doc/fontconfig/fontconfig-devel/fcislower.html
 share/doc/fontconfig/fontconfig-devel/fcisupper.html
 share/doc/fontconfig/fontconfig-devel/fclanggetcharset.html
+share/doc/fontconfig/fontconfig-devel/fclangnormalize.html
 share/doc/fontconfig/fontconfig-devel/fclangsetadd.html
 share/doc/fontconfig/fontconfig-devel/fclangsetcompare.html
 share/doc/fontconfig/fontconfig-devel/fclangsetcontains.html
@@ -401,6 +405,7 @@ share/examples/fontconfig/conf.d/README
 share/examples/fontconfig/fonts.conf
 share/fontconfig/conf.avail/10-autohint.conf
 share/fontconfig/conf.avail/10-no-sub-pixel.conf
+share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
 share/fontconfig/conf.avail/10-sub-pixel-bgr.conf
 share/fontconfig/conf.avail/10-sub-pixel-rgb.conf
 share/fontconfig/conf.avail/10-sub-pixel-vbgr.conf
