@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.53 2012/12/13 00:19:11 gdt Exp $
+# $NetBSD: license.mk,v 1.54 2013/03/14 16:18:54 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -104,34 +104,38 @@
 # XXX open-font-license should perhaps be changed to open-font
 
 DEFAULT_ACCEPTABLE_LICENSES= \
-	public-domain unlicense \
+	apache-1.1 apache-2.0 \
+	artistic artistic-2.0 \
+	boost-license \
+	cc-by-sa-v3.0 \
+	cddl-1.0 \
+	cpl-1.0 \
+	epl-v1.0 \
 	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 \
 	gnu-gpl-v1 \
 	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
 	gnu-gpl-v3 gnu-lgpl-v3 \
-	original-bsd modified-bsd 2-clause-bsd \
-	x11 mit miros \
-	apache-1.1 apache-2.0 \
-	artistic artistic-2.0 \
-	cddl-1.0 \
-	cpl-1.0 \
-	open-font-license \
-	mpl-1.0 mpl-1.1 mpl-2.0 \
-	php png-license \
-	postgresql-license \
-	zlib \
-	zpl \
-	python-software-foundation \
-	ipafont \
 	ibm-public-license-1.0 \
+	ipafont \
 	isc \
-	boost-license \
-	mplusfont \
-	cc-by-sa-v3.0 \
 	lppl-1.3c \
 	lucent \
-	epl-v1.0 \
-	sleepycat-public
+	miros \
+	mit \
+	mpl-1.0 mpl-1.1 mpl-2.0 \
+	mplusfont \
+	open-font-license \
+	original-bsd modified-bsd 2-clause-bsd \
+	php \
+	png-license \
+	postgresql-license \
+	public-domain \
+	python-software-foundation \
+	sleepycat-public \
+	unlicense \
+	x11 \
+	zlib \
+	zpl
 
 # not approved by OSI, derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
