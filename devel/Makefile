@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1715 2013/03/14 04:08:02 obache Exp $
+# $NetBSD: Makefile,v 1.1716 2013/03/14 22:29:47 asau Exp $
 #
 
 COMMENT=	Development utilities
@@ -342,6 +342,7 @@ SUBDIR+=	libelf
 SUBDIR+=	libetm
 SUBDIR+=	libev
 SUBDIR+=	libevent
+SUBDIR+=	libexecinfo
 SUBDIR+=	libextractor
 SUBDIR+=	libf2c
 SUBDIR+=	libffi
