@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/09/16 13:37:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/14 16:47:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -14,14 +14,17 @@ ${GEM_LIBDIR}/lib/liquid/errors.rb
 ${GEM_LIBDIR}/lib/liquid/extensions.rb
 ${GEM_LIBDIR}/lib/liquid/file_system.rb
 ${GEM_LIBDIR}/lib/liquid/htmltags.rb
+${GEM_LIBDIR}/lib/liquid/interrupts.rb
 ${GEM_LIBDIR}/lib/liquid/module_ex.rb
 ${GEM_LIBDIR}/lib/liquid/standardfilters.rb
 ${GEM_LIBDIR}/lib/liquid/strainer.rb
 ${GEM_LIBDIR}/lib/liquid/tag.rb
 ${GEM_LIBDIR}/lib/liquid/tags/assign.rb
+${GEM_LIBDIR}/lib/liquid/tags/break.rb
 ${GEM_LIBDIR}/lib/liquid/tags/capture.rb
 ${GEM_LIBDIR}/lib/liquid/tags/case.rb
 ${GEM_LIBDIR}/lib/liquid/tags/comment.rb
+${GEM_LIBDIR}/lib/liquid/tags/continue.rb
 ${GEM_LIBDIR}/lib/liquid/tags/cycle.rb
 ${GEM_LIBDIR}/lib/liquid/tags/decrement.rb
 ${GEM_LIBDIR}/lib/liquid/tags/for.rb
@@ -50,6 +53,8 @@ ${GEM_LIBDIR}/test/liquid/regexp_test.rb
 ${GEM_LIBDIR}/test/liquid/security_test.rb
 ${GEM_LIBDIR}/test/liquid/standard_filter_test.rb
 ${GEM_LIBDIR}/test/liquid/strainer_test.rb
+${GEM_LIBDIR}/test/liquid/tags/break_tag_test.rb
+${GEM_LIBDIR}/test/liquid/tags/continue_tag_test.rb
 ${GEM_LIBDIR}/test/liquid/tags/for_tag_test.rb
 ${GEM_LIBDIR}/test/liquid/tags/html_tag_test.rb
 ${GEM_LIBDIR}/test/liquid/tags/if_else_tag_test.rb
