@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/14 13:57:54 wiz Exp $
-bin/beet2.7
+@comment $NetBSD: PLIST,v 1.2 2013/03/14 21:36:19 drochner Exp $
+bin/beet${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
