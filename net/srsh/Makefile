@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 17:19:10 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/03/14 16:02:39 kim Exp $
 #
 
-DISTNAME=		srsh-1.2
-PKGREVISION=		1
+DISTNAME=		srsh-1.3
 CATEGORIES=		net
-MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
+MASTER_SITES=		http://oss.gw.com/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Emulate rsh client behavior using ssh
@@ -15,12 +14,6 @@ DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 NO_CONFIGURE=		yes
-BUILD_MAKE_FLAGS+=	PREFIX=${PREFIX}
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
-
-SUBST_CLASSES+=		manpath
-SUBST_STAGE.manpath=	post-extract
-SUBST_FILES.manpath=	Makefile
-SUBST_SED.manpath=	-e 's,/man/,/${PKGMANDIR}/,'
+MAKE_FLAGS+=		PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
