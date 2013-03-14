@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2010/06/16 22:27:04 taca Exp $
+$NetBSD: patch-ab,v 1.3 2013/03/14 16:35:32 taca Exp $
 
 use /var/tmp instead of /tmp.
 
---- perl/lib/Anomy/Sanitizer.pm.orig	2008-01-19 23:53:47.000000000 +0900
+--- perl/lib/Anomy/Sanitizer.pm.orig	2012-12-12 08:12:57.000000000 +0000
 +++ perl/lib/Anomy/Sanitizer.pm
-@@ -189,7 +189,7 @@ my $default_config = 
+@@ -190,7 +190,7 @@ my $default_config = 
      # So if you are using random directory hashing make sure to create 
      # all the directories ahead of time!
      #
