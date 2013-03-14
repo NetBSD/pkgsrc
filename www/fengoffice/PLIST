@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/10/18 14:31:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/03/14 16:33:15 taca Exp $
 ${FO_DIR}/.htaccess
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
@@ -688,6 +688,8 @@ ${FO_DIR}/application/widgets/activity_feed/index.php
 ${FO_DIR}/application/widgets/activity_feed/template.php
 ${FO_DIR}/application/widgets/calendar/index.php
 ${FO_DIR}/application/widgets/calendar/template.php
+${FO_DIR}/application/widgets/completed_tasks_list/index.php
+${FO_DIR}/application/widgets/completed_tasks_list/template.php
 ${FO_DIR}/application/widgets/documents/index.php
 ${FO_DIR}/application/widgets/documents/template.php
 ${FO_DIR}/application/widgets/messages/index.php
@@ -1152,6 +1154,7 @@ ${FO_DIR}/language/pt_br/_config.php
 ${FO_DIR}/language/pt_br/actions.php
 ${FO_DIR}/language/pt_br/administration.php
 ${FO_DIR}/language/pt_br/calendar.php
+${FO_DIR}/language/pt_br/core_dimensions
 ${FO_DIR}/language/pt_br/countries.php
 ${FO_DIR}/language/pt_br/emails.php
 ${FO_DIR}/language/pt_br/errors.php
@@ -2250,7 +2253,9 @@ ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.M
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/info.ini
+${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/CSS/4.1.1,801ad73acbcf9d3127e1d01768d26453,1.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/HTML/4.1.1,ddc9b993d7fc8d4a185e8dbf5b9a0996,1.ser
+${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/URI/4.1.1,05c766101e813c246917b022f97b5e6e,1.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/dummy.php
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/EntityLookup/entities.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/Filter/ExtractStyleBlocks.php
@@ -3020,7 +3025,6 @@ ${FO_DIR}/plugins/core_dimensions/language/zh_tw/lang.php
 ${FO_DIR}/plugins/core_dimensions/public/assets/javascript/core_dimensions.js
 ${FO_DIR}/plugins/core_dimensions/templates/quickadd_extra_fields.php
 ${FO_DIR}/plugins/core_dimensions/update.php
-${FO_DIR}/plugins/index.html
 ${FO_DIR}/plugins/mail/CHANGELOG.txt
 ${FO_DIR}/plugins/mail/application/controllers/MailController.class.php
 ${FO_DIR}/plugins/mail/application/helpers/MailUtilities.class.php
@@ -5476,6 +5480,7 @@ ${FO_DIR}/public/webservices/TagsServices.php
 ${FO_DIR}/public/webservices/WebServicesBase.php
 ${FO_DIR}/public/webservices/WorkspaceServices.php
 ${FO_DIR}/readme.txt
+${FO_DIR}/rebuild_sharing_table.php
 ${FO_DIR}/revision.php
 ${FO_DIR}/robots.txt
 ${FO_DIR}/s.gif
