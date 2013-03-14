@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/02 02:30:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/03/14 16:15:02 taca Exp $
 bin/tilt${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/HACKING
