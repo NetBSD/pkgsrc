@@ -1,0 +1,41 @@
+$NetBSD: patch-tools_ocamlmklib,v 1.1 2013/03/14 14:29:49 is Exp $
+
+--- tools/ocamlmklib.mlp.orig	2012-07-17 18:25:54.000000000 +0000
++++ tools/ocamlmklib.mlp
+@@ -26,6 +26,7 @@ and c_objs = ref []         (* .o, .a, .
+ and caml_libs = ref []      (* -cclib to pass to ocamlc, ocamlopt *)
+ and caml_opts = ref []      (* -ccopt to pass to ocamlc, ocamlopt *)
+ and dynlink = ref supports_shared_libraries
++and elfmode = ref false     (* do not add C link lib path to run-time path *)
+ and failsafe = ref false    (* whether to fall back on static build only *)
+ and c_libs = ref []         (* libs to pass to mksharedlib and ocamlc -cclib *)
+ and c_Lopts = ref []      (* options to pass to mksharedlib and ocamlc -cclib *)
+@@ -95,8 +96,9 @@ let parse_arguments argv =
+       c_libs := s :: !c_libs
+     else if starts_with s "-L" then
+      (c_Lopts := s :: !c_Lopts;
+-      let l = chop_prefix s "-L" in
+-      if not (Filename.is_relative l) then rpath := l :: !rpath)
++      if not !elfmode then
++      (let l = chop_prefix s "-L" in
++       if not (Filename.is_relative l) then rpath := l :: !rpath))
+     else if s = "-ocamlc" then
+       ocamlc := next_arg ()
+     else if s = "-ocamlopt" then
+@@ -107,6 +109,8 @@ let parse_arguments argv =
+       output_c := next_arg()
+     else if s = "-dllpath" || s = "-R" || s = "-rpath" then
+       rpath := next_arg() :: !rpath
++    else if s = "-elfmode" then
++      elfmode := true
+     else if starts_with s "-R" then
+       rpath := chop_prefix s "-R" :: !rpath
+     else if s = "-Wl,-rpath" then
+@@ -150,6 +154,7 @@ Usage: ocamlmklib [options] <.cmo|.cma|.
+ \n  -ccopt <opt>   C option passed to ocamlc -a or ocamlopt -a only\
+ \n  -custom        disable dynamic loading\
+ \n  -dllpath <dir> Add <dir> to the run-time search path for DLLs\
++\n  -elfmode       Do not add link-time search path to run-time path\
+ \n  -F<dir>        Specify a framework directory (MacOSX)\
+ \n  -framework <name>    Use framework <name> (MacOSX)\
+ \n  -help          Print this help message and exit\
