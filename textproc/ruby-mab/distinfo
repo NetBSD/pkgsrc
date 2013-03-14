@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/09/16 14:46:28 taca Exp $
+$NetBSD: distinfo,v 1.2 2013/03/14 16:11:30 taca Exp $
 
-SHA1 (mab-0.0.2.gem) = edfcb561adc2662fdc97ff54dc28ec40a7aca497
-RMD160 (mab-0.0.2.gem) = 703abe148de24b0d9258c14e0caef1bc50553f78
-Size (mab-0.0.2.gem) = 72704 bytes
+SHA1 (mab-0.0.3.gem) = 078ce717e497ded0ba82140673d191a5e476b3da
+RMD160 (mab-0.0.3.gem) = 9c006c3fb32a7981faae75b3e606b990164a18f6
+Size (mab-0.0.3.gem) = 25088 bytes
