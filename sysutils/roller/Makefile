@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2012/10/23 19:51:22 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/03/14 12:36:18 kim Exp $
 #
 
 DISTNAME=		roller-1.20
-#PKGREVISION=		1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
-MASTER_SITES=		# ftp://ftp.gw.com/pub/people/kim/
+MASTER_SITES=		http://oss.gw.com/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Roll log files
@@ -19,7 +18,9 @@ DEPENDS+=		pflogsumm-[0-9]*:../../sysutils/pflogsumm
 NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 
-MAKE_FLAGS+=		PREFIX=${DESTDIR}${PREFIX}
+BUILD_MAKE_FLAGS+=	PREFIX=${PREFIX}
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
 MAKE_FLAGS+=		GAWK=${AWK}
 MAKE_FLAGS+=		PERL=${PERL5}
 MAKE_FLAGS+=		SH=${SH}
