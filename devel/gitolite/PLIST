@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/03/02 23:41:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/14 18:55:02 ryoon Exp $
 bin/gitolite
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Common.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Conf.pm
@@ -60,6 +60,7 @@ libexec/gitolite/gitolite-shell
 libexec/gitolite/syntactic-sugar/continuation-lines
 libexec/gitolite/syntactic-sugar/keysubdirs-as-groups
 libexec/gitolite/syntactic-sugar/macros
+libexec/gitolite/syntactic-sugar/refex-expr
 libexec/gitolite/triggers/bg
 libexec/gitolite/triggers/partial-copy
 libexec/gitolite/triggers/post-compile/ssh-authkeys
