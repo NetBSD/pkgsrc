@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/03/14 12:45:52 kim Exp $
+# $NetBSD: Makefile,v 1.14 2013/03/14 14:15:00 kim Exp $
 #
 
 DISTNAME=	netname-2.2
@@ -20,5 +20,10 @@ INSTALL_TARGET=	inst-all
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 MAKE_ENV+=	INSTALL=${TOOLS_PATH.install:Q}
+
+SUBST_CLASSES+=		manpath
+SUBST_STAGE.manpath=	post-extract
+SUBST_FILES.manpath=	Makefile
+SUBST_SED.manpath=	-e 's,/man/,/${PKGMANDIR}/,'
 
 .include "../../mk/bsd.pkg.mk"
