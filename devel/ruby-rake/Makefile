@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/17 16:52:48 taca Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/14 16:42:13 taca Exp $
 
 DISTNAME=	rake-10.0.3
 CATEGORIES=	devel
@@ -27,10 +27,8 @@ OVERRIDE_GEMSPEC+= :executables rake=${RAKEBIN} \
 RAKEBIN=rake${RUBY_VER}
 .else
 RAKEBIN=rake${RUBY_VER}-${PKGVERSION_NOREV}
-.if ${RUBY_VER} == 193
 RAKE_HACK=	.${PKGVERSION_NOREV}
 RAKE_SPEC=	${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-.endif
 .endif
 
 # rake.1.gz has one extra byte at EOF.
