@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/12/08 23:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/14 19:26:54 drochner Exp $
 
-DISTNAME=	libgee-0.8.2
+DISTNAME=	libgee-0.8.5
 PKGNAME=	${DISTNAME:S/libgee/libgee0.8/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/0.8/}
