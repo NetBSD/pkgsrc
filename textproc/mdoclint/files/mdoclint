@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.29 2013/03/10 22:14:40 wiz Exp $
+# $NetBSD: mdoclint,v 1.30 2013/03/14 18:01:13 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -424,12 +424,16 @@ sub process_line
 	}
 	if (/\$OpenBSD\b.*\$/o) {
 		$s->{oxrcsidseen}++;
-		# nothing else to do
+		if (OPENBSD and ($s->{oxrcsidseen} > 1)) {
+		    $s->warning("RCS Id seen twice") if $opt_r;
+		}
 		return "$_\n";
 	}
 	if (/[\$]NetBSD\b.*\$/o) {
 		$s->{nxrcsidseen}++;
-		# nothing else to do
+		if (NETBSD and ($s->{nxrcsidseen} > 1)) {
+		    $s->warning("RCS Id seen twice") if $opt_r;
+		}
 		return "$_\n";
 	}
 	# comments
@@ -632,14 +636,8 @@ sub finish
 	if (NETBSD and not $s->{nxrcsidseen}) {
 		$s->warning("Missing RCS Id") if $opt_r;
 	}
-	if (NETBSD and ($s->{nxrcsidseen} > 1)) {
-		$s->warning("RCS Id seen twice") if $opt_r;
-	}
 	if (OPENBSD and not $s->{oxrcsidseen}) {
 		$s->warning("Missing RCS Id") if $opt_r;
-	}
-	if (OPENBSD and ($s->{oxrcsidseen} > 1)) {
-		$s->warning("RCS Id seen twice") if $opt_r;
 	}
 
 	if ($s->{lastline} =~ /^\.Pp/o) {
