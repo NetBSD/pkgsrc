@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2012/11/23 17:38:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/14 19:10:29 drochner Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
-bin/hb-view
 include/harfbuzz/hb-blob.h
 include/harfbuzz/hb-buffer.h
 include/harfbuzz/hb-common.h
