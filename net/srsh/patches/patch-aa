@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2013/03/14 16:02:39 kim Exp $
+
+--- Makefile.orig	2011-09-02 02:43:42.000000000 +0300
++++ Makefile	2013-03-14 17:57:09.000000000 +0200
+@@ -12,10 +12,10 @@
+ install: install-bin install-man
+ 
+ install-bin: ${CMD}
+-	install -c -m 755 ${CMD} ${PREFIX}/bin
++	${BSD_INSTALL_SCRIPT} ${CMD} ${DESTDIR}${PREFIX}/bin
+ 
+ install-man:
+-	install -c -m 444 ${CMD}.man ${PREFIX}/man/man${MAN}/${CMD}.${MAN}
++	${BSD_INSTALL_MAN} ${CMD}.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man${MAN}/${CMD}.${MAN}
+ 
+ clean:
+ 	rm -f ${CMD}
