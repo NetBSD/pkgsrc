@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.921 2013/03/14 16:37:00 taca Exp $
+$NetBSD: CHANGES-2013,v 1.922 2013/03/14 16:39:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/f-prot-antivirus6-fs-bin to 6.2.3 [taca 2013-03-14]
 	Updated security/f-prot-antivirus6-ms-bin to 6.2.3 [taca 2013-03-14]
 	Updated security/f-prot-antivirus6-ws-bin to 6.2.3 [taca 2013-03-14]
+	Updated graphics/ruby-color to 1.4.1nb1 [taca 2013-03-14]
