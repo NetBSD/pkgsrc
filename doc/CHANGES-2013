@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.904 2013/03/14 13:53:37 kim Exp $
+$NetBSD: CHANGES-2013,v 1.905 2013/03/14 13:58:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1270,3 +1270,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-pkg-config to 1.1.4 [obache 2013-03-14]
 	Updated net/netname to 2.2 [kim 2013-03-14]
 	Updated sysutils/osname to 2.0 [kim 2013-03-14]
+	Added audio/py-beets version 1.0.0 [wiz 2013-03-14]
