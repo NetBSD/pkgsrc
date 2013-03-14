@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2013/03/14 16:36:48 kim Exp $
+
+--- Makefile.orig	2013-03-14 18:20:27.000000000 +0200
++++ Makefile	2013-03-14 18:27:07.000000000 +0200
+@@ -24,16 +24,16 @@
+ 	chmod a+rx $@
+ 
+ .PHONY: install
+-install: install-bin install-man
++install: install-bin install-conf install-man
+ 
+ install-bin: ${CMD}
+-	install -c -m 755 ${CMD} ${PREFIX}/${BIN}/${CMD}
++	${BSD_INSTALL_SCRIPT} $(CMD) ${DESTDIR}${PREFIX}/${BIN}/$(CMD)
+ 
+ install-conf:
+-	install -c -m 644 ${CMD}.conf ${PREFIX}/etc/${CMD}.conf
++	${BSD_INSTALL_DATA} ${CMD}.conf ${DESTDIR}${PREFIX}/${EGDIR}/${CMD}.conf
+ 
+ install-man:
+-	install -c -m 444 ${CMD}.man ${PREFIX}/man/man${MAN}/${CMD}.${MAN}
++	${BSD_INSTALL_MAN} $(CMD).man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man${MAN}/$(CMD).${MAN}
+ 
+ clean:
+ 	rm -f ${CMD}
