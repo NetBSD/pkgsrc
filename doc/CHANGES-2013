@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.905 2013/03/14 13:58:29 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.906 2013/03/14 14:39:40 is Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1271,3 +1271,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/netname to 2.2 [kim 2013-03-14]
 	Updated sysutils/osname to 2.0 [kim 2013-03-14]
 	Added audio/py-beets version 1.0.0 [wiz 2013-03-14]
+	Updated lang/ocaml to 4.00.1nb2 [is 2013-03-14]
