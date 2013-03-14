@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.900 2013/03/14 13:26:31 obache Exp $
+$NetBSD: CHANGES-2013,v 1.901 2013/03/14 13:42:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1266,3 +1266,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/ruby-spreadsheet to 0.8.3 [obache 2013-03-14]
 	Updated mail/milter-manager to 1.8.6 [obache 2013-03-14]
 	Updated graphics/ruby-rcairo to 1.12.4 [obache 2013-03-14]
+	Added audio/py-musicbrainz-ngs version 0.3 [wiz 2013-03-14]
