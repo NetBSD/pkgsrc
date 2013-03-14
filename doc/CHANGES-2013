@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.929 2013/03/14 19:57:17 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.930 2013/03/14 21:21:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1305,3 +1305,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/wxsvg to 1.1.13 [drochner 2013-03-14]
 	Updated fonts/fontconfig to 2.10.91 [drochner 2013-03-14]
 	Updated devel/libffi to 3.0.12 [drochner 2013-03-14]
+	Updated devel/reposurgeon to 2.26 [ryoon 2013-03-14]
