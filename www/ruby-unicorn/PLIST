@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/12/17 15:55:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/14 16:24:21 taca Exp $
 bin/unicorn
 bin/unicorn_rails
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -78,6 +78,7 @@ ${GEM_LIBDIR}/lib/unicorn/stream_input.rb
 ${GEM_LIBDIR}/lib/unicorn/tee_input.rb
 ${GEM_LIBDIR}/lib/unicorn/tmpio.rb
 ${GEM_LIBDIR}/lib/unicorn/util.rb
+${GEM_LIBDIR}/lib/unicorn/version.rb
 ${GEM_LIBDIR}/lib/unicorn/worker.rb
 ${GEM_LIBDIR}/lib/unicorn_http.${RUBY_DLEXT}
 ${GEM_LIBDIR}/local.mk.sample
@@ -91,11 +92,11 @@ ${GEM_LIBDIR}/t/README
 ${GEM_LIBDIR}/t/bin/content-md5-put
 ${GEM_LIBDIR}/t/bin/sha1sum.rb
 ${GEM_LIBDIR}/t/bin/unused_listen
-${GEM_LIBDIR}/t/bin/utee
 ${GEM_LIBDIR}/t/broken-app.ru
 ${GEM_LIBDIR}/t/detach.ru
 ${GEM_LIBDIR}/t/env.ru
 ${GEM_LIBDIR}/t/heartbeat-timeout.ru
+${GEM_LIBDIR}/t/hijack.ru
 ${GEM_LIBDIR}/t/listener_names.ru
 ${GEM_LIBDIR}/t/my-tap-lib.sh
 ${GEM_LIBDIR}/t/oob_gc.ru
@@ -136,6 +137,7 @@ ${GEM_LIBDIR}/t/t0022-listener_names-preload_app.sh
 ${GEM_LIBDIR}/t/t0100-rack-input-tests.sh
 ${GEM_LIBDIR}/t/t0116-client_body_buffer_size.sh
 ${GEM_LIBDIR}/t/t0116.ru
+${GEM_LIBDIR}/t/t0200-rack-hijack.sh
 ${GEM_LIBDIR}/t/t0600-https-server-basic.sh
 ${GEM_LIBDIR}/t/t9000-preread-input.sh
 ${GEM_LIBDIR}/t/t9001-oob_gc.sh
