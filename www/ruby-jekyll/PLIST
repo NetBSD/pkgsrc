@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/03 01:47:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/14 16:21:11 taca Exp $
 bin/jekyll
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -34,10 +34,12 @@ ${GEM_LIBDIR}/lib/jekyll/layout.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/csv.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/drupal.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/enki.rb
+${GEM_LIBDIR}/lib/jekyll/migrators/joomla.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/marley.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/mephisto.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/mt.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/posterous.rb
+${GEM_LIBDIR}/lib/jekyll/migrators/rss.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/textpattern.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/tumblr.rb
 ${GEM_LIBDIR}/lib/jekyll/migrators/typo.rb
@@ -50,6 +52,9 @@ ${GEM_LIBDIR}/lib/jekyll/site.rb
 ${GEM_LIBDIR}/lib/jekyll/static_file.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/highlight.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/include.rb
+${GEM_LIBDIR}/lib/jekyll/tags/post_url.rb
+${GEM_LIBDIR}/test/fixtures/broken_front_matter1.erb
+${GEM_LIBDIR}/test/fixtures/front_matter.erb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/source/.htaccess
 ${GEM_LIBDIR}/test/source/_includes/sig.markdown
@@ -92,6 +97,7 @@ ${GEM_LIBDIR}/test/source/win/_posts/2009-05-24-yaml-linebreak.markdown
 ${GEM_LIBDIR}/test/source/z_category/_posts/2008-9-23-categories.textile
 ${GEM_LIBDIR}/test/suite.rb
 ${GEM_LIBDIR}/test/test_configuration.rb
+${GEM_LIBDIR}/test/test_convertible.rb
 ${GEM_LIBDIR}/test/test_core_ext.rb
 ${GEM_LIBDIR}/test/test_filters.rb
 ${GEM_LIBDIR}/test/test_generated_site.rb
@@ -101,6 +107,7 @@ ${GEM_LIBDIR}/test/test_pager.rb
 ${GEM_LIBDIR}/test/test_post.rb
 ${GEM_LIBDIR}/test/test_rdiscount.rb
 ${GEM_LIBDIR}/test/test_redcarpet.rb
+${GEM_LIBDIR}/test/test_redcloth.rb
 ${GEM_LIBDIR}/test/test_site.rb
 ${GEM_LIBDIR}/test/test_tags.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
