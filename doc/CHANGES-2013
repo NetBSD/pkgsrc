@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.925 2013/03/14 17:24:40 kim Exp $
+$NetBSD: CHANGES-2013,v 1.926 2013/03/14 18:01:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1295,3 +1295,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ssync to 1.9.1 [kim 2013-03-14]
 	Updated www/ruby-liquid to 2.5.0 [taca 2013-03-14]
 	Updated www/urlget to 1.5 [kim 2013-03-14]
+	Updated textproc/mdoclint to 1.20 [wiz 2013-03-14]
