@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.919 2013/03/14 16:32:16 taca Exp $
+$NetBSD: CHANGES-2013,v 1.920 2013/03/14 16:33:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1287,3 +1287,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_46 to 4.6.18 [taca 2013-03-14]
 	Updated www/typo3_45 to 4.5.25 [taca 2013-03-14]
 	Updated www/typo3_47 to 4.7.10 [taca 2013-03-14]
+	Updated www/fengoffice to 2.2.3.1 [taca 2013-03-14]
