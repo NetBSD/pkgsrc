@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/09/16 11:35:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/14 16:13:52 taca Exp $
 bin/plist2syntax
 bin/plist2yaml
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -184,6 +184,7 @@ ${GEM_LIBDIR}/lib/textpow/syntax/text.xml.syntax
 ${GEM_LIBDIR}/lib/textpow/syntax/text.xml.xsl.syntax
 ${GEM_LIBDIR}/lib/textpow/version.rb
 ${GEM_LIBDIR}/spec/fixtures/objeck.plist
+${GEM_LIBDIR}/spec/fixtures/objeck.tmSyntax
 ${GEM_LIBDIR}/spec/fixtures/utf8.txt
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/textpow/score_manager_spec.rb
