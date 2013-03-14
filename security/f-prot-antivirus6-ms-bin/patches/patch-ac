@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2010/06/16 22:27:04 taca Exp $
+$NetBSD: patch-ac,v 1.2 2013/03/14 16:35:32 taca Exp $
 
 Avoid strip 8bit character unconditionally.
 
---- perl/lib/Anomy/MIMEStream.pm.orig	2010-04-12 14:18:39.000000000 +0000
+--- perl/lib/Anomy/MIMEStream.pm.orig	2012-12-12 08:12:57.000000000 +0000
 +++ perl/lib/Anomy/MIMEStream.pm
-@@ -1388,6 +1388,12 @@ sub Encode7bit
+@@ -1387,6 +1387,12 @@ sub Encode7bit
  	my $writer = shift;
  	my $line = shift;
  
