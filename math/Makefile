@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.248 2013/03/11 12:29:47 taca Exp $
+# $NetBSD: Makefile,v 1.249 2013/03/14 19:00:44 drochner Exp $
 
 COMMENT=	Mathematics
 
@@ -99,6 +99,7 @@ SUBDIR+=	genius
 SUBDIR+=	glpk
 SUBDIR+=	gnumeric
 SUBDIR+=	gnumeric110
+SUBDIR+=	gnumeric112
 SUBDIR+=	gp-autpgrp
 SUBDIR+=	gp-factint
 SUBDIR+=	gp-fplsa
