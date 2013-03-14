@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/10/28 06:31:09 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/14 17:06:12 kim Exp $
 #
 
 DISTNAME=		webnew-1.3
 PKGREVISION=		1
 CATEGORIES=		www
-MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
+MASTER_SITES=		http://oss.gw.com/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://kimmo.suominen.com/sw/webnew/
