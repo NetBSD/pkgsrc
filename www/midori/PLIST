@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.24 2012/10/11 14:55:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/03/15 18:28:50 drochner Exp $
 bin/midori
 include/midori-0.4/extensions/delayed-load.h
 include/midori-0.4/extensions/external-download-manager.h
 include/midori-0.4/extensions/history-list.h
+include/midori-0.4/extensions/nsplugin-manager.h
 lib/midori/libadblock.so
 lib/midori/libaddons.so
 lib/midori/libcolorful-tabs.so
@@ -14,6 +15,7 @@ lib/midori/libfeed-panel.so
 lib/midori/libformhistory.so
 lib/midori/libhistory-list.so
 lib/midori/libmouse-gestures.so
+lib/midori/libnsplugin-manager.so
 lib/midori/libshortcuts.so
 lib/midori/libstatus-clock.so
 lib/midori/libstatusbar-features.so
@@ -53,6 +55,7 @@ share/icons/hicolor/scalable/status/internet-news-reader.svg
 share/locale/ar/LC_MESSAGES/midori.mo
 share/locale/ast/LC_MESSAGES/midori.mo
 share/locale/be/LC_MESSAGES/midori.mo
+share/locale/bg/LC_MESSAGES/midori.mo
 share/locale/ca/LC_MESSAGES/midori.mo
 share/locale/cs/LC_MESSAGES/midori.mo
 share/locale/da/LC_MESSAGES/midori.mo
@@ -105,3 +108,5 @@ share/vala/vapi/external-download-manager.deps
 share/vala/vapi/external-download-manager.vapi
 share/vala/vapi/history-list.deps
 share/vala/vapi/history-list.vapi
+share/vala/vapi/nsplugin-manager.deps
+share/vala/vapi/nsplugin-manager.vapi

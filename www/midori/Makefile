@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2013/02/16 11:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/03/15 18:28:50 drochner Exp $
 
-DISTNAME=	midori-0.4.7
-PKGREVISION=	2
+DISTNAME=	midori-0.4.9
 CATEGORIES=	www
 MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
 
@@ -15,6 +14,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--disable-zeitgeist
 
 CHECK_PORTABILITY_SKIP+= win32/x86-mingw32-opensuse/install.sh
 CHECK_PORTABILITY_SKIP+= win32/makedist/makedist.midori
