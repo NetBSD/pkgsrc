@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.947 2013/03/15 21:55:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.948 2013/03/15 22:01:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1337,3 +1337,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/raptor2 to 2.0.9 [wiz 2013-03-15]
 	Updated devel/py-virtualenv to 1.9.1 [wiz 2013-03-15]
 	Updated devel/global to 6.2.8 [wiz 2013-03-15]
+	Updated devel/meld to 1.7.1 [wiz 2013-03-15]
