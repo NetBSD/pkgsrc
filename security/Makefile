@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2013/03/06 22:54:51 pettai Exp $
+# $NetBSD: Makefile,v 1.458 2013/03/15 02:05:03 dsainty Exp $
 #
 
 COMMENT=	Security tools
@@ -405,5 +405,6 @@ SUBDIR+=	ykclient
 SUBDIR+=	ykpers
 SUBDIR+=	zebedee
 SUBDIR+=	zkt
+SUBDIR+=	zoneminder
 
 .include "../mk/misc/category.mk"
