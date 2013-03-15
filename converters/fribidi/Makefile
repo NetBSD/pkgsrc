@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/01/10 06:59:55 mef Exp $
+# $NetBSD: Makefile,v 1.19 2013/03/15 18:40:53 drochner Exp $
 #
 
 DISTNAME=		fribidi-0.19.5
@@ -18,7 +18,7 @@ REPLACE_FILES.bash=	run.tests
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE=	fribidi.pc.in
 
