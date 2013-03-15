@@ -1,0 +1,15 @@
+$NetBSD: patch-src_gpg-error-config.in,v 1.1 2013/03/15 22:06:02 wiz Exp $
+
+Add rpath to config script output.
+
+--- src/gpg-error-config.in.orig	2013-02-23 16:38:49.000000000 +0000
++++ src/gpg-error-config.in
+@@ -72,7 +72,7 @@ while test $# -gt 0; do
+ 	    case "$libdir" in
+ 		/usr/lib|/usr/lib64|/lib|/lib64) ;;
+ 		*)
+-		    output="$output -L$libdir"
++		    output="$output -Wl,-R$libdir -L$libdir"
+ 		    ;;
+ 	    esac
+ 	    output="$output @GPG_ERROR_CONFIG_LIBS@"
