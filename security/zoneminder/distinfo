@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+SHA1 (ZoneMinder-1.25.0.tar.gz) = a93a976a5cd82f1e197f4d7bd626d3f0387c4231
+RMD160 (ZoneMinder-1.25.0.tar.gz) = 32a4f503770103e55bfe592864c1cab82e7395a6
+Size (ZoneMinder-1.25.0.tar.gz) = 1119091 bytes
+SHA1 (patch-Makefile_am) = a66d11a5743a945801bec23c0611e1ec34b9e207
+SHA1 (patch-configure_ac) = 5f839d3f619096f843620079f491393d74d751ad
+SHA1 (patch-scripts_zm_in) = e8dd80bb6d00f17199a0e44d0b6490567bc005eb
+SHA1 (patch-src_Makefile_am) = 54ed8c43b964cc549ee6b78a569de552f617f5a7
+SHA1 (patch-src_zm_comms_cpp) = 8b786fa7c0a61ce94b9310df4ff14b4daec785c8
+SHA1 (patch-src_zm_comms_h) = 3436a563a8c1fedfca6daa325c017b9d2ed22f21
+SHA1 (patch-src_zm_logger_cpp) = 486f9ae99623ed4a8b20ddc0543f83217d85805d
+SHA1 (patch-src_zm_remote_camera_h) = b02a58a2422007aa6ab23338d4ffa9bb7679f165
+SHA1 (patch-src_zm_signal_h) = c40fb8c3265e042771058794c2f13f7a519a7390
+SHA1 (patch-src_zm_thread_cpp) = f1957ab1ea7bc80a1f8c2c129fddb7e4b541b87b
+SHA1 (patch-src_zmc_cpp) = bf8e745ceda9dc61c2d11c92e2ea9a9eb242a3b6
+SHA1 (patch-src_zmf_cpp) = 23707dd6493b11fd2b79dcbf9e09598ce286c07f
+SHA1 (patch-web_ajax_stream_php) = a3be6ae58c98c90807c764937ffe0f9a782a9de2
