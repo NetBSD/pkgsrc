@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2011/09/08 20:22:13 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/03/15 18:22:03 drochner Exp $
 
-SHA1 (nettle-2.4.tar.gz) = 1df0cd013e83f73b78a5521411a67e331de3dfa6
-RMD160 (nettle-2.4.tar.gz) = 8480e10ce718db1a280d57a808a78a4cfa940d1c
-Size (nettle-2.4.tar.gz) = 1075789 bytes
-SHA1 (patch-Makefile.in) = cf1f0fb4e23657f493f381c80b31e7c6294b67e7
+SHA1 (nettle-2.6.tar.gz) = 401f982a0b365e04c8c38c4da42afdd7d2d51d80
+RMD160 (nettle-2.6.tar.gz) = 898483350285468fe66b3fad4e7891583b08e15e
+Size (nettle-2.6.tar.gz) = 1385695 bytes
+SHA1 (patch-Makefile.in) = 39e4eba0a984cd2cd3037b1c46b65785deb3feb6
+SHA1 (patch-aa) = 509b333e80d88c9fab75c0bc3e4edde862595d0d
 SHA1 (patch-config.make.in) = 0bf3d2729b97883b41374a1ea3d5286fd2554e98
-SHA1 (patch-testsuite_Makefile.in) = f73c6af3fc2ae63174406df4ff89892f7b5634d7
-SHA1 (patch-tools_Makefile.in) = 5eca9e6d806cea894493122f7e1c79d6a26f2c88
-SHA1 (patch-x86_camellia-crypt-internal.asm) = 0dd04f76ccca63f0c3e7260269fa8f74d01ddda3
+SHA1 (patch-testsuite_Makefile.in) = a1363d21af5371d36629797a413129850af9ee87
+SHA1 (patch-tools_Makefile.in) = f074fc1bf0e2b7ded88fd65ec303e2be407f0217

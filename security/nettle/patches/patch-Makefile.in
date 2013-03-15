@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.3 2011/08/22 15:09:21 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2013/03/15 18:22:03 drochner Exp $
 
 Use LIBTOOL.
 
---- Makefile.in.orig	2011-07-11 13:59:25.000000000 +0000
+--- Makefile.in.orig	2013-01-14 21:44:12.000000000 +0000
 +++ Makefile.in
 @@ -14,13 +14,13 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
  INSTALL_STRIP_PROGRAM = $(INSTALL_PROGRAM) -s
@@ -15,12 +15,12 @@ Use LIBTOOL.
  
  PRE_CPPFLAGS = -I.
  # FIXME: Add configuration of LIBEXT?
--LIBTARGETS = libnettle.a @IF_HOGWEED@ libhogweed.a
-+LIBTARGETS = libnettle.la @IF_HOGWEED@ libhogweed.la
- SHLIBTARGETS = $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
+-LIBTARGETS = @IF_STATIC@ libnettle.a @IF_HOGWEED@ libhogweed.a
++LIBTARGETS = @IF_STATIC@ libnettle.la @IF_HOGWEED@ libhogweed.la
+ SHLIBTARGETS = @IF_SHARED@ $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
  
- TARGETS = aesdata$(EXEEXT) desdata$(EXEEXT) shadata$(EXEEXT) gcmdata$(EXEEXT)\
-@@ -141,18 +141,18 @@ nettle_PURE_OBJS = $(nettle_OBJS:.$(OBJE
+ getopt_SOURCES = getopt.c getopt1.c
+@@ -169,18 +169,18 @@ nettle_PURE_OBJS = $(nettle_OBJS:.$(OBJE
  hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT))
  hogweed_PURE_OBJS = $(hogweed_OBJS:.$(OBJEXT)=.p$(OBJEXT))
  
@@ -48,8 +48,8 @@ Use LIBTOOL.
 +	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) $(CCPIC_MAYBE) -c $< \
  	&& $(DEP_PROCESS)
  
- # Rules building shared libraries
-@@ -205,7 +205,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
+ # Rules building shared libraries.
+@@ -244,7 +244,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
  .asm.$(OBJEXT):
  	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
  		$< >$*.s
@@ -58,7 +58,7 @@ Use LIBTOOL.
  	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
  
  .asm.p$(OBJEXT):
-@@ -271,7 +271,7 @@ install-here: install-info install-heade
+@@ -317,7 +317,7 @@ install-here: install-doc install-header
  install-static: $(LIBTARGETS)
  	$(MKDIR_P) $(DESTDIR)$(libdir)
  	for f in $(LIBTARGETS); do \
@@ -66,4 +66,4 @@ Use LIBTOOL.
 +	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir) ; \
  	done
  
- install-shared-nettle: $(LIBNETTLE_FORLINK)
+ install-dll-nettle:
