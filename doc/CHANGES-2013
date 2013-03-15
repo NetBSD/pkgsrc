@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.936 2013/03/15 13:35:23 kim Exp $
+$NetBSD: CHANGES-2013,v 1.937 2013/03/15 15:11:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/jpegoptim to 1.2.5 [adam 2013-03-15]
 	Updated security/clamav to 0.97.7 [adam 2013-03-15]
 	Updated net/proftpd to 1.3.4c [kim 2013-03-15]
+	Updated security/p5-Digest-MD4 to 1.8 [wen 2013-03-15]
