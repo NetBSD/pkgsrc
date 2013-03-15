@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2013/01/26 21:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.19 2013/03/15 18:13:46 drochner Exp $
 #
 
-DISTNAME=	gupnp-igd-0.2.1
-PKGREVISION=	1
+DISTNAME=	gupnp-igd-0.2.2
 CATEGORIES=	net devel
-#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-igd/0.2/}
-MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/gupnp-igd/gupnp-igd-0.2.1.tar.gz/03be8a80e2862cf72b2c50d65043828c/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-igd/0.2/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
@@ -20,11 +19,6 @@ PKGCONFIG_OVERRIDE+=	gupnp-igd-1.0.pc.in
 PY_PATCHPLIST=	yes
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
-
-SUBST_CLASSES+=		pyconfig
-SUBST_STAGE.pyconfig=	pre-configure
-SUBST_VARS.pyconfig=	PYTHONCONFIG
-SUBST_FILES.pyconfig=	python/Makefile.in
 
 TEST_TARGET=	check
 
