@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12005 2013/03/15 22:09:21 wiz Exp $
+$NetBSD: TODO,v 1.12006 2013/03/15 22:13:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openslp-2.0.0
 	o openssh-6.1p1
 	o openttd-1.2.3
-	o orc-0.4.17
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
