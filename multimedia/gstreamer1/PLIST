@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/29 08:21:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/15 18:34:47 drochner Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-typefind-1.0
@@ -261,6 +261,7 @@ share/locale/eu/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/fi/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/fr/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/gl/LC_MESSAGES/gstreamer-1.0.mo
+share/locale/hr/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/hu/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/id/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/it/LC_MESSAGES/gstreamer-1.0.mo

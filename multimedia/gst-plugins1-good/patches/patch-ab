@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2012/11/29 08:24:42 ryoon Exp $
+$NetBSD: patch-ab,v 1.2 2013/03/15 18:34:47 drochner Exp $
 
---- configure.orig	2012-11-20 23:47:00.000000000 +0000
+--- configure.orig	2013-01-04 13:27:01.000000000 +0000
 +++ configure
-@@ -23417,6 +23417,9 @@ main ()
+@@ -23413,6 +23413,9 @@ main ()
  #error GCC before 3.4 has critical bugs compiling inline assembly
  #endif
  #endif
@@ -12,21 +12,19 @@ $NetBSD: patch-ab,v 1.1 2012/11/29 08:24:42 ryoon Exp $
  __asm__ (""::)
    ;
    return 0;
-@@ -29386,6 +29389,10 @@ $as_echo_n "checking Checking for up to 
- #ifdef __sun /* Solaris */
- #include <sys/types.h>
+@@ -29384,6 +29387,8 @@ $as_echo_n "checking Checking for up to 
  #include <sys/videodev2.h>
-+#elif defined(__NetBSD__)
-+#include <sys/videoio.h>
+ #elif __FreeBSD__
+ #include <linux/videodev2.h>
 +#elif defined(__NetBSD__)
 +#include <sys/videoio.h>
  #else /* Linux */
  #include <linux/types.h>
  #define _LINUX_TIME_H
-@@ -29459,6 +29466,8 @@ $as_echo_n "checking struct v4l2_buffer 
- #ifdef __sun /* Solaris */
- #include <sys/types.h>
+@@ -29459,6 +29464,8 @@ $as_echo_n "checking struct v4l2_buffer 
  #include <sys/videodev2.h>
+ #elif __FreeBSD__
+ #include <linux/videodev2.h>
 +#elif defined(__NetBSD__)
 +#include <sys/videoio.h>
  #else /* Linux */

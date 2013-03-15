@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/11/29 08:26:09 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/03/15 18:34:46 drochner Exp $
 #
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
@@ -12,7 +12,7 @@
 #
 
 GST_PLUGINS1_TYPE=	bad
-GST_PLUGINS1_VER=	1.0.3
+GST_PLUGINS1_VER=	1.0.5
 
 # Disable all drivers and features by default.
 .for driver in	cdaudio \
