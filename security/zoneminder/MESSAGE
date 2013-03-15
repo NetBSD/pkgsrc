@@ -1,9 +1,17 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/03/15 02:03:36 dsainty Exp $
+$NetBSD: MESSAGE,v 1.2 2013/03/15 02:56:56 dsainty Exp $
 
 All documentation for ZoneMinder is now online at:
 
-http://www.zoneminder.com/wiki/index.php/Documentation
+  http://www.zoneminder.com/wiki/index.php/Documentation
+
+
+Performance:
+
+  ZoneMinder benefits dramatically from using libjpeg-turbo.  Consider
+  building from Pkgsrc with:
+
+  JPEG_DEFAULT=libjpeg-turbo
 
 
 To get ZoneMinder started a MySQL database is required.
@@ -18,17 +26,17 @@ update ZM_DB_PASS in ${PKG_SYSCONFDIR}/zm.conf.
 
 Create the initial database via:
 
-mysql -u root < ${PREFIX}/share/zoneminder/db/zm_create.sql
+  mysql -u root < ${PREFIX}/share/zoneminder/db/zm_create.sql
 
 
 Assign rights to the "zmuser" user via:
 
-echo "grant all on * to 'zmuser';" | mysql -u root zm
+  echo "grant all on * to 'zmuser';" | mysql -u root zm
 
 
 Upgrade a database from an older version of ZoneMinder via:
 
-zmupdate.pl -u root [-p <password>]
+  zmupdate.pl -u root [-p <password>]
 
 
 To enable the web interface via Apache, add the following line to httpd.conf:
