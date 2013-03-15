@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.943 2013/03/15 21:24:43 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.944 2013/03/15 21:50:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Test-More-Behaviour version 1.0.0 [schmonz 2013-03-15]
 	Updated security/KeePass to 2.21 [wiz 2013-03-15]
 	Updated security/kpcli to 1.6 [wiz 2013-03-15]
+	Updated databases/shared-mime-info to 1.1 [wiz 2013-03-15]
