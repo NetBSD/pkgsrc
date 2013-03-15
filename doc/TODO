@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11993 2013/03/15 08:50:04 adam Exp $
+$NetBSD: TODO,v 1.11994 2013/03/15 09:57:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -663,7 +663,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.2
 	o gnuchess-6.0.3
-	o gnumeric-1.12
 	o gnutls-3.1.9 [needs nettle-2.5]
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
