@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.937 2013/03/15 15:11:16 wen Exp $
+$NetBSD: CHANGES-2013,v 1.938 2013/03/15 15:18:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1315,3 +1315,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/clamav to 0.97.7 [adam 2013-03-15]
 	Updated net/proftpd to 1.3.4c [kim 2013-03-15]
 	Updated security/p5-Digest-MD4 to 1.8 [wen 2013-03-15]
+	Updated www/p5-HTTP-Proxy to 0.28 [wen 2013-03-15]
