@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.946 2013/03/15 21:54:09 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.947 2013/03/15 21:55:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1336,3 +1336,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/shared-mime-info to 1.1 [wiz 2013-03-15]
 	Updated textproc/raptor2 to 2.0.9 [wiz 2013-03-15]
 	Updated devel/py-virtualenv to 1.9.1 [wiz 2013-03-15]
+	Updated devel/global to 6.2.8 [wiz 2013-03-15]
