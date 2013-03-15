@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/04/14 13:28:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/03/15 19:10:40 drochner Exp $
 bin/genius
 ${PLIST.x11}bin/gnome-genius
 include/genius/compil.h
@@ -105,6 +105,13 @@ share/gnome/help/genius/fr/figures/parametric.png
 share/gnome/help/genius/fr/figures/parametric_graph.png
 share/gnome/help/genius/fr/figures/surface_graph.png
 share/gnome/help/genius/fr/genius.xml
+share/gnome/help/genius/ru/figures/genius_window.png
+share/gnome/help/genius/ru/figures/line_plot.png
+share/gnome/help/genius/ru/figures/line_plot_graph.png
+share/gnome/help/genius/ru/figures/parametric.png
+share/gnome/help/genius/ru/figures/parametric_graph.png
+share/gnome/help/genius/ru/figures/surface_graph.png
+share/gnome/help/genius/ru/genius.xml
 share/icons/hicolor/32x32/apps/genius-stock-plot.png
 share/icons/hicolor/32x32/apps/gnome-genius.png
 share/icons/hicolor/48x48/apps/genius-stock-plot.png
@@ -126,6 +133,7 @@ share/locale/ga/LC_MESSAGES/genius.mo
 share/locale/gl/LC_MESSAGES/genius.mo
 share/locale/hi/LC_MESSAGES/genius.mo
 share/locale/hr/LC_MESSAGES/genius.mo
+share/locale/id/LC_MESSAGES/genius.mo
 share/locale/it/LC_MESSAGES/genius.mo
 share/locale/ja/LC_MESSAGES/genius.mo
 share/locale/ko/LC_MESSAGES/genius.mo
@@ -141,6 +149,7 @@ share/locale/pl/LC_MESSAGES/genius.mo
 share/locale/pt/LC_MESSAGES/genius.mo
 share/locale/pt_BR/LC_MESSAGES/genius.mo
 share/locale/ro/LC_MESSAGES/genius.mo
+share/locale/ru/LC_MESSAGES/genius.mo
 share/locale/rw/LC_MESSAGES/genius.mo
 share/locale/sl/LC_MESSAGES/genius.mo
 share/locale/sq/LC_MESSAGES/genius.mo
@@ -157,3 +166,4 @@ share/omf/genius/genius-cs.omf
 share/omf/genius/genius-de.omf
 share/omf/genius/genius-es.omf
 share/omf/genius/genius-fr.omf
+share/omf/genius/genius-ru.omf
