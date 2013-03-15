@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/10/11 10:56:48 drochner Exp $
+$NetBSD: distinfo,v 1.7 2013/03/15 18:07:48 drochner Exp $
 
-SHA1 (gssdp-0.12.2.1.tar.xz) = d3b7dc2512835ff73709d95c218341fe8911d64c
-RMD160 (gssdp-0.12.2.1.tar.xz) = af460625d0869be8332129ee05c5f2d328a649af
-Size (gssdp-0.12.2.1.tar.xz) = 271976 bytes
-SHA1 (patch-aa) = 371db0b699393b81301117c4cd8e13b821b14b60
+SHA1 (gssdp-0.14.2.tar.xz) = 885e4043a70e0dc9a890cd250a3c50b0cee64512
+RMD160 (gssdp-0.14.2.tar.xz) = 16c7a4cdb93baef3bce150f279c4ac4e546b9312
+Size (gssdp-0.14.2.tar.xz) = 274208 bytes
 SHA1 (patch-ab) = 16088d79afd534ec44b47f26ee30d3f9be126897
