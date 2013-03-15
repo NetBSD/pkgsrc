@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.939 2013/03/15 16:21:48 is Exp $
+$NetBSD: CHANGES-2013,v 1.940 2013/03/15 19:14:58 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1317,3 +1317,16 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Digest-MD4 to 1.8 [wen 2013-03-15]
 	Updated www/p5-HTTP-Proxy to 0.28 [wen 2013-03-15]
 	Updated sysutils/xentools41 to 4.1.4nb2 [is 2013-03-15]
+	Updated net/libsoup24 to 2.40.3 [drochner 2013-03-15]
+	Updated audio/py-mutagen to 1.21 [drochner 2013-03-15]
+	Updated net/gssdp to 0.14.2 [drochner 2013-03-15]
+	Updated net/gupnp to 0.20.1 [drochner 2013-03-15]
+	Updated net/gupnp-av to 0.12.0 [drochner 2013-03-15]
+	Updated net/gupnp-igd to 0.2.2 [drochner 2013-03-15]
+	Updated security/nettle to 2.6 [drochner 2013-03-15]
+	Updated www/liferea-current to 1.8.12 [drochner 2013-03-15]
+	Updated www/midori to 0.4.9 [drochner 2013-03-15]
+	Updated www/bluefish to 2.2.4 [drochner 2013-03-15]
+	Updated graphics/feh to 2.9.1 [drochner 2013-03-15]
+	Updated math/genius to 1.0.16 [drochner 2013-03-15]
+	Updated graphics/darktable to 1.1.3 [drochner 2013-03-15]
