@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.938 2013/03/15 15:18:20 wen Exp $
+$NetBSD: CHANGES-2013,v 1.939 2013/03/15 16:21:48 is Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1316,3 +1316,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/proftpd to 1.3.4c [kim 2013-03-15]
 	Updated security/p5-Digest-MD4 to 1.8 [wen 2013-03-15]
 	Updated www/p5-HTTP-Proxy to 0.28 [wen 2013-03-15]
+	Updated sysutils/xentools41 to 4.1.4nb2 [is 2013-03-15]
