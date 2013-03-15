@@ -1,0 +1,23 @@
+$NetBSD: patch-src_zm_thread_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+pthread_mutex_timedlock() is not available on NetBSD 5.0, and not required
+in ZoneMinder.
+
+--- src/zm_thread.cpp.orig	2013-03-08 11:32:29.000000000 +1300
++++ src/zm_thread.cpp	2013-03-08 11:32:58.000000000 +1300
+@@ -72,6 +72,7 @@
+         throw ThreadException( stringtf( "Unable to lock pthread mutex: %s", strerror(errno) ) );
+ }
+ 
++#if 0
+ void Mutex::lock( int secs )
+ {
+     struct timespec timeout = getTimeout( secs );
+@@ -85,6 +86,7 @@
+     if ( pthread_mutex_timedlock( &mMutex, &timeout ) < 0 )
+         throw ThreadException( stringtf( "Unable to timedlock pthread mutex: %s", strerror(errno) ) );
+ }
++#endif
+ 
+ void Mutex::unlock()
+ {

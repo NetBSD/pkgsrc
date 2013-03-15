@@ -1,0 +1,16 @@
+$NetBSD: patch-src_zm_comms_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+Don't attempt to include headers that don't exist.
+
+--- src/zm_comms.cpp.orig	2013-03-08 08:26:27.000000000 +1300
++++ src/zm_comms.cpp	2013-03-08 08:27:10.000000000 +1300
+@@ -25,7 +25,9 @@
+ #include <fcntl.h>
+ #include <stdarg.h>
+ //#include <memory.h>
++#ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
++#endif
+ #include <string.h>
+ //#include <unistd.h>
+ #include <sys/ioctl.h>
