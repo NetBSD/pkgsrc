@@ -1,23 +1,13 @@
-$NetBSD: patch-ba,v 1.1 2012/11/29 08:24:42 ryoon Exp $
+$NetBSD: patch-ba,v 1.2 2013/03/15 18:34:47 drochner Exp $
 
---- sys/v4l2/gstv4l2object.h.orig	2012-10-25 10:55:59.000000000 +0000
+--- sys/v4l2/gstv4l2object.h.orig	2012-12-18 00:07:47.000000000 +0000
 +++ sys/v4l2/gstv4l2object.h
-@@ -38,13 +38,17 @@
-  */
- #include <sys/ioctl.h>
- #include <sys/types.h>
--#ifndef __sun
-+#if !defined(__sun) && !defined(__NetBSD__)
+@@ -42,6 +42,8 @@
+ #include <sys/videodev2.h>
+ #elif defined(__FreeBSD__)
+ #include <linux/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
+ #else /* linux */
  #include <linux/types.h>
  #define _LINUX_TIME_H
- #define __user
- #include <linux/videodev2.h>
- #else
-+#ifdef __sun
- #include <sys/videodev2.h>
-+#else
-+#include <sys/videoio.h>
-+#endif
- #endif
- 
- #include <gst/gst.h>
