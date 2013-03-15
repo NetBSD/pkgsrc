@@ -1,36 +1,32 @@
-# $NetBSD: Makefile,v 1.17 2013/02/22 19:59:05 shattered Exp $
+# $NetBSD: Makefile,v 1.18 2013/03/15 08:18:43 plunky Exp $
 #
 
-DISTNAME=	obexftp-0.20
-PKGREVISION=	3
+DISTNAME=	obexftp-0.24-Source
+PKGNAME=	obexftp-0.24
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dev.zuckschwerdt.org/openobex/
+HOMEPAGE=	https://gitorious.org/obexftp
 COMMENT=	File copying over the Object Exchange (OBEX) protocol
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoconf gmake pkg-config
-USE_LIBTOOL=	yes
+USE_CMAKE=	yes
+USE_TOOLS+=	cmake pkg-config
 
-CONFIGURE_ARGS+=	--disable-perl
-CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--disable-swig
+CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PREFIX}/${PKGMANDIR}
+CMAKE_ARGS+=	-DENABLE_PERL:BOOL=OFF
+CMAKE_ARGS+=	-DENABLE_PYTHON:BOOL=OFF
+CMAKE_ARGS+=	-DENABLE_RUBY:BOOL=OFF
+CMAKE_ARGS+=	-DENABLE_TCL:BOOL=OFF
 
-LIBS.SunOS+=		-lsocket -lnsl -liconv
+BUILD_DEPENDS+=	asciidoc>=8.6.6:../../textproc/asciidoc
+BUILD_DEPENDS+=	xmlto>=0.0.25:../../textproc/xmlto
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ((${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h)) || ${OPSYS} == "DragonFly")
-CPPFLAGS+=		-DCOMPAT_BLUEZ -DSDP_COMPAT
-.endif
-
-post-patch:
-	cd ${WRKSRC} && autoconf
+BUILD_TARGET=	all doc
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
