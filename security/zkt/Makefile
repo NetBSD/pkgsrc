@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/24 16:05:15 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/15 23:34:44 pettai Exp $
 #
 
-DISTNAME=	zkt-1.1.0
+DISTNAME=	zkt-1.1.2
 CATEGORIES=	security
 MASTER_SITES=	http://www.hznet.de/dns/zkt/
 
