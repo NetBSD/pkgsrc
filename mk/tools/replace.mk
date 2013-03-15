@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.252 2012/10/01 10:45:16 ryoon Exp $
+# $NetBSD: replace.mk,v 1.253 2013/03/15 12:35:03 fhajny Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -655,6 +655,15 @@ TOOLS_PATH.mtree=		${TOOLS_PREFIX.mtree}/bin/mtree
 .endif
 
 .if !defined(TOOLS_IGNORE.openssl) && !empty(_USE_TOOLS:Mopenssl)
+#
+# Ensure we use pkgsrc openssl if we're not using builtin.
+#
+CHECK_BUILTIN.openssl:=		yes
+.  include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl:=		no
+.  if !empty(USE_BUILTIN.openssl:M[nN][oO])
+_TOOLS_USE_PKGSRC.openssl=	yes
+.  endif
 .  if !empty(PKGPATH:Msecurity/openssl)
 MAKEFLAGS+=			TOOLS_IGNORE.openssl=
 .  elif !empty(_TOOLS_USE_PKGSRC.openssl:M[yY][eE][sS])
