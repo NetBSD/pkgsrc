@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2013/02/18 11:51:21 drochner Exp $
+$NetBSD: distinfo,v 1.16 2013/03/15 22:09:12 wiz Exp $
 
-SHA1 (dbus-glib-0.100.1.tar.gz) = 5fb84e6a6b5b1957d8023de24a768cbdfa01ae48
-RMD160 (dbus-glib-0.100.1.tar.gz) = 367258b4d8c60ed232b633a1cb785c06923cbe84
-Size (dbus-glib-0.100.1.tar.gz) = 730741 bytes
+SHA1 (dbus-glib-0.100.2.tar.gz) = 506c3ee32b45b565c3e81685af2510a50bf60b33
+RMD160 (dbus-glib-0.100.2.tar.gz) = 1e9e259ea8b0881015445ea7d70457f9c7b123df
+Size (dbus-glib-0.100.2.tar.gz) = 748836 bytes
 SHA1 (patch-aa) = 4b77f6d86f636d1e0bcdb1f2e0ad9d3bc438b07c
