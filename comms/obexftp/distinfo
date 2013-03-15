@@ -1,17 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/02/16 17:40:29 hans Exp $
+$NetBSD: distinfo,v 1.9 2013/03/15 08:18:43 plunky Exp $
 
-SHA1 (obexftp-0.20.tar.bz2) = 0b3a7d2aeb0dbd24d75761a7e59f42f46ea5ef82
-RMD160 (obexftp-0.20.tar.bz2) = ded5cf4d95eac77d5f6ee0a39f3789eb962534ed
-Size (obexftp-0.20.tar.bz2) = 351641 bytes
-SHA1 (patch-aa) = 65925a0df323cd391dab48f45fcf6c99dbcc8fbb
-SHA1 (patch-ab) = 0a0c2cbcfc9449df48e8340dba1593d5593129f5
-SHA1 (patch-ac) = 6b44406a04ea81eb615d6ed9ffebf2db27008e35
-SHA1 (patch-ad) = 00ada8c88756d3201b02e5a0b9467a7ee1ad0f50
-SHA1 (patch-ae) = d08fd3b4aa5e2f61eda5ea6d3f6656f8b036af30
-SHA1 (patch-af) = f1e96b8a15a4fec69b81d19635a674ee307d31c1
-SHA1 (patch-ag) = 7a3f10354e8a86022cac360b8a36198d9e7449ab
-SHA1 (patch-ah) = c0fe5bd78e7614a7eb6adb7154676fd9bde7a31c
-SHA1 (patch-ai) = dca54c345dba0977f1bf90778e15cdd4676749ca
-SHA1 (patch-aj) = 26f6509d26aaa893fe6018bd048135fb077e0b9c
-SHA1 (patch-ak) = bdef026206a0dca2c4781b06bbdfdd90f1c934f6
-SHA1 (patch-al) = 1f2dd6ed302711f17e33584cc34f6f674a6973c7
+SHA1 (obexftp-0.24-Source.tar.gz) = c82260d7f44519a1b0aaa0eae3ff0809f321f486
+RMD160 (obexftp-0.24-Source.tar.gz) = 99fb5fac2460398cd3ab377426fe7b1050b0a6ea
+Size (obexftp-0.24-Source.tar.gz) = 88154 bytes
