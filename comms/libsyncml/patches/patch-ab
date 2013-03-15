@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
+$NetBSD: patch-ab,v 1.2 2013/03/15 08:25:15 plunky Exp $
 
---- libsyncml/transports/obex_client.c.orig	2007-10-16 15:25:31.000000000 +0200
+--- libsyncml/transports/obex_client.c.orig	2007-10-16 13:25:31.000000000 +0000
 +++ libsyncml/transports/obex_client.c
 @@ -26,7 +26,12 @@
  #include <libsyncml/sml_transport_internals.h>
@@ -15,3 +15,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
  #endif
  
  #include "obex_client.h"
+@@ -326,7 +331,7 @@ static void smlTransportObexClientConnec
+ 	} else if (env->type == SML_OBEX_TYPE_USB) {
+ 		smlTrace(TRACE_INTERNAL, "connecting to usb interface %i", env->port);
+ 		
+-		obex_intf_cnt = OBEX_FindInterfaces(env->obexhandle, &obex_intf);
++		obex_intf_cnt = OBEX_EnumerateInterfaces(env->obexhandle);
+ 		smlTrace(TRACE_INTERNAL, "found %i interfaces", obex_intf_cnt);
+ 		
+ 		if (obex_intf_cnt <= 0) {
+@@ -336,7 +341,8 @@ static void smlTransportObexClientConnec
+ 			smlErrorSet(&error, SML_ERROR_GENERIC, "Unable to find the USB interface number %i", env->port);
+ 			goto error;
+ 		} else {
+-			if (OBEX_InterfaceConnect(env->obexhandle, &obex_intf[env->port]) < 0) {
++			obex_intf = OBEX_GetInterfaceByIndex(env->obexhandle, env->port);
++			if (OBEX_InterfaceConnect(env->obexhandle, obex_intf) < 0) {
+ 				smlErrorSet(&error, SML_ERROR_GENERIC, "Unable to connect to the interface");
+ 				goto error;
+ 			}

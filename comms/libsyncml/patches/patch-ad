@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
+$NetBSD: patch-ad,v 1.2 2013/03/15 08:25:15 plunky Exp $
 
 Regen for patch-aa (hand trimmed).
 
---- configure.orig	2008-01-08 00:58:11.000000000 +0100
+--- configure.orig	2007-10-16 13:55:17.000000000 +0000
 +++ configure
 @@ -884,6 +884,7 @@ ENABLE_OBEX_TRUE
  ENABLE_OBEX_FALSE
@@ -12,7 +12,7 @@ Regen for patch-aa (hand trimmed).
  ENABLE_BLUETOOTH
  ENABLE_BLUETOOTH_TRUE
  ENABLE_BLUETOOTH_FALSE
-@@ -20785,15 +20770,154 @@ fi
+@@ -20785,15 +20786,154 @@ fi
  
  	{ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6; }
@@ -169,7 +169,7 @@ Regen for patch-aa (hand trimmed).
  fi
  if test "x${HAVE_BLUETOOTH}" = "xyes"; then
  	if test "x${WANT_BLUETOOTH}" = "xno"; then
-@@ -20811,8 +20934,8 @@ _ACEOF
+@@ -20811,8 +20951,8 @@ _ACEOF
  	fi
  else
  	if test "x${WANT_BLUETOOTH}" = "xyes"; then
@@ -180,7 +180,7 @@ Regen for patch-aa (hand trimmed).
     { (exit 1); exit 1; }; }
  	else
  		ENABLE_BLUETOOTH=no
-@@ -22531,6 +22650,7 @@ ENABLE_OBEX_TRUE!$ENABLE_OBEX_TRUE$ac_de
+@@ -22531,6 +22673,7 @@ ENABLE_OBEX_TRUE!$ENABLE_OBEX_TRUE$ac_de
  ENABLE_OBEX_FALSE!$ENABLE_OBEX_FALSE$ac_delim
  LIBBLUETOOTH_CFLAGS!$LIBBLUETOOTH_CFLAGS$ac_delim
  LIBBLUETOOTH_LIBS!$LIBBLUETOOTH_LIBS$ac_delim
@@ -188,7 +188,7 @@ Regen for patch-aa (hand trimmed).
  ENABLE_BLUETOOTH!$ENABLE_BLUETOOTH$ac_delim
  ENABLE_BLUETOOTH_TRUE!$ENABLE_BLUETOOTH_TRUE$ac_delim
  ENABLE_BLUETOOTH_FALSE!$ENABLE_BLUETOOTH_FALSE$ac_delim
-@@ -22554,7 +22674,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+@@ -22554,7 +22697,7 @@ LIBOBJS!$LIBOBJS$ac_delim
  LTLIBOBJS!$LTLIBOBJS$ac_delim
  _ACEOF
  
