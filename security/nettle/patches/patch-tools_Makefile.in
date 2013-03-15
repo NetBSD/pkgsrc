@@ -1,13 +1,13 @@
-$NetBSD: patch-tools_Makefile.in,v 1.2 2011/08/22 15:09:21 wiz Exp $
+$NetBSD: patch-tools_Makefile.in,v 1.3 2013/03/15 18:22:03 drochner Exp $
 
 Use LIBTOOL.
 
---- tools/Makefile.in.orig	2011-07-11 13:59:25.000000000 +0000
+--- tools/Makefile.in.orig	2013-01-14 21:44:12.000000000 +0000
 +++ tools/Makefile.in
-@@ -33,19 +33,19 @@ SOURCES = $(sexp_conv_SOURCES) nettle-ha
- DISTFILES = $(SOURCES) Makefile.in getopt.h input.h misc.h output.h parse.h
+@@ -34,20 +34,20 @@ SOURCES = $(sexp_conv_SOURCES) nettle-ha
+ DISTFILES = $(SOURCES) Makefile.in input.h misc.h output.h parse.h
  
- sexp_conv_OBJS = $(sexp_conv_SOURCES:.c=.$(OBJEXT))
+ sexp_conv_OBJS = $(sexp_conv_SOURCES:.c=.$(OBJEXT)) $(getopt_OBJS)
 -sexp-conv$(EXEEXT): $(sexp_conv_OBJS) ../libnettle.a
 -	$(LINK) $(sexp_conv_OBJS) -lnettle $(LIBS) -o $@
 +sexp-conv$(EXEEXT): $(sexp_conv_OBJS) ../libnettle.la
@@ -18,20 +18,22 @@ Use LIBTOOL.
 +nettle-lfib-stream$(EXEEXT): nettle-lfib-stream.$(OBJEXT) ../libnettle.la
 +	$(LINK) nettle-lfib-stream.$(OBJEXT) ../libnettle.la $(LIBS) -o $@
  
- pkcs1_conv_OBJS = $(pkcs1_conv_SOURCES:.c=.$(OBJEXT))
+ pkcs1_conv_OBJS = $(pkcs1_conv_SOURCES:.c=.$(OBJEXT)) $(getopt_OBJS)
 -pkcs1-conv$(EXEEXT): $(pkcs1_conv_OBJS) ../libnettle.a ../libhogweed.a
 -	$(LINK) $(pkcs1_conv_OBJS) -lhogweed -lnettle $(LIBS) -o $@
 +pkcs1-conv$(EXEEXT): $(pkcs1_conv_OBJS) ../libnettle.la ../libhogweed.la
 +	$(LINK) $(pkcs1_conv_OBJS) ../libhogweed.la ../libnettle.la $(LIBS) -o $@
  
  # FIXME: Avoid linking with gmp
- nettle_hash_OBJS = $(nettle_hash_SOURCES:.c=.$(OBJEXT))
+ nettle_hash_OBJS = $(nettle_hash_SOURCES:.c=.$(OBJEXT)) $(getopt_OBJS)
 -nettle-hash$(EXEEXT): $(nettle_hash_OBJS) ../libnettle.a
+-	$(LINK) $(nettle_hash_OBJS) -lnettle $(LIBS) -o $@
 +nettle-hash$(EXEEXT): $(nettle_hash_OBJS) ../libnettle.la
- 	$(LINK) $(nettle_hash_OBJS) -lnettle $(LIBS) -o $@
++	$(LINK) $(nettle_hash_OBJS) ../libnettle.la $(LIBS) -o $@
  
  
-@@ -62,7 +62,7 @@ check:
+ .c.$(OBJEXT):
+@@ -69,7 +69,7 @@ check:
  install: $(TARGETS)
  	$(MKDIR_P) $(DESTDIR)$(bindir)
  	for f in $(TARGETS) ; do \

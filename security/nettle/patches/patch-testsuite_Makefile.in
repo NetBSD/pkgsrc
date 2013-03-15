@@ -1,26 +1,27 @@
-$NetBSD: patch-testsuite_Makefile.in,v 1.2 2011/08/22 15:09:21 wiz Exp $
+$NetBSD: patch-testsuite_Makefile.in,v 1.3 2013/03/15 18:22:03 drochner Exp $
 
 Use LIBTOOL.
 
---- testsuite/Makefile.in.orig	2011-07-11 13:59:25.000000000 +0000
+--- testsuite/Makefile.in.orig	2013-01-14 21:44:13.000000000 +0000
 +++ testsuite/Makefile.in
-@@ -64,8 +64,8 @@ all: $(TARGETS) $(EXTRA_TARGETS)
+@@ -70,9 +70,9 @@ all: $(TARGETS) $(EXTRA_TARGETS)
  # to use suffix rules to build the test executables. So we use an
  # explicit rule for each and every executable.
  
 -LIB_HOGWEED = @IF_HOGWEED@ -lhogweed
--TEST_OBJS = testutils.$(OBJEXT) $(LIB_HOGWEED) -lnettle $(LIBS)
 +LIB_HOGWEED = @IF_HOGWEED@ ../libhogweed.la
-+TEST_OBJS = testutils.$(OBJEXT) $(LIB_HOGWEED) ../libnettle.la $(LIBS)
+ TEST_OBJS = testutils.$(OBJEXT) ../nettle-internal.$(OBJEXT) \
+-	    $(LIB_HOGWEED) -lnettle $(LIBS)
++	    $(LIB_HOGWEED) ../libnettle.la $(LIBS)
  
- .PHONY: test-rules
- test-rules:
-@@ -83,7 +83,7 @@ test-rules:
+ ../nettle-internal.$(OBJEXT):
+ 	( cd .. && $(MAKE) nettle-internal.$(OBJEXT) )
+@@ -93,7 +93,7 @@ test-rules:
  include $(srcdir)/.test-rules.make
  
- $(TARGETS) $(EXTRA_TARGETS): testutils.$(OBJEXT) \
+ $(TARGETS) $(EXTRA_TARGETS): testutils.$(OBJEXT) ../nettle-internal.$(OBJEXT) \
 -	../libnettle.a @IF_HOGWEED@ ../libhogweed.a
 +	../libnettle.la @IF_HOGWEED@ ../libhogweed.la
  
- # The PATH update is for locating dlls on w*ndows.
- check: $(TS_ALL) $(srcdir)/run-tests
+ # For use as, e.g.,
+ #
