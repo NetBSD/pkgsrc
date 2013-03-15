@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.941 2013/03/15 21:00:55 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.942 2013/03/15 21:21:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1331,3 +1331,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/genius to 1.0.16 [drochner 2013-03-15]
 	Updated graphics/darktable to 1.1.3 [drochner 2013-03-15]
 	Added devel/p5-Test-More-Behaviour version 1.0.0 [schmonz 2013-03-15]
+	Updated security/KeePass to 2.21 [wiz 2013-03-15]
