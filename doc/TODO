@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12007 2013/03/15 22:47:06 wiz Exp $
+$NetBSD: TODO,v 1.12008 2013/03/15 22:56:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
-	o harfbuzz-0.9.13
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o help2man-1.41.1
