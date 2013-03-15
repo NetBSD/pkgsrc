@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2008/06/23 15:58:05 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2013/03/15 21:50:15 wiz Exp $
+
+Adapt for pkgsrc.
 
 --- update-mime-database.c.orig	2007-06-27 21:46:53.000000000 +0200
 +++ update-mime-database.c
