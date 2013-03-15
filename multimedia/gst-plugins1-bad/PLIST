@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/29 08:26:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/15 18:34:46 drochner Exp $
 include/gstreamer-1.0/gst/basecamerabinsrc/gstbasecamerasrc.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabin-enum.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabinpreview.h
@@ -39,6 +39,7 @@ lib/gstreamer-1.0/libgstinterlace.la
 lib/gstreamer-1.0/libgstjpegformat.la
 lib/gstreamer-1.0/libgstliveadder.la
 lib/gstreamer-1.0/libgstmpegpsdemux.la
+lib/gstreamer-1.0/libgstmpegpsmux.la
 lib/gstreamer-1.0/libgstmpegtsdemux.la
 lib/gstreamer-1.0/libgstmpegtsmux.la
 lib/gstreamer-1.0/libgstpcapparse.la
@@ -106,6 +107,7 @@ share/locale/eu/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/fi/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/fr/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/gl/LC_MESSAGES/gst-plugins-bad-1.0.mo
+share/locale/hr/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/hu/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/id/LC_MESSAGES/gst-plugins-bad-1.0.mo
 share/locale/it/LC_MESSAGES/gst-plugins-bad-1.0.mo
