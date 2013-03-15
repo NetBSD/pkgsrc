@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.935 2013/03/15 08:50:03 adam Exp $
+$NetBSD: CHANGES-2013,v 1.936 2013/03/15 13:35:23 kim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1313,3 +1313,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/obexftp to 0.24 [plunky 2013-03-15]
 	Updated graphics/jpegoptim to 1.2.5 [adam 2013-03-15]
 	Updated security/clamav to 0.97.7 [adam 2013-03-15]
+	Updated net/proftpd to 1.3.4c [kim 2013-03-15]

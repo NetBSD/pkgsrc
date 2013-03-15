@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.23 2011/01/12 07:31:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2013/03/15 13:34:32 kim Exp $
+bin/ftpasswd
 bin/ftpcount
 bin/ftpdctl
+bin/ftpmail
+bin/ftpquota
 bin/ftptop
 bin/ftpwho
 bin/prxs
@@ -31,6 +34,7 @@ include/proftpd/help.h
 include/proftpd/inet.h
 include/proftpd/libsupp.h
 include/proftpd/log.h
+include/proftpd/memcache.h
 include/proftpd/mkhome.h
 include/proftpd/mod_ctrls.h
 ${PLIST.quota}include/proftpd/mod_quotatab.h
@@ -53,17 +57,22 @@ include/proftpd/response.h
 include/proftpd/scoreboard.h
 include/proftpd/session.h
 include/proftpd/sets.h
+include/proftpd/stash.h
 include/proftpd/str.h
 include/proftpd/support.h
 include/proftpd/table.h
 include/proftpd/throttle.h
 include/proftpd/timers.h
+include/proftpd/tpl.h
 include/proftpd/trace.h
 include/proftpd/var.h
 include/proftpd/version.h
 include/proftpd/xferlog.h
 lib/pkgconfig/proftpd.pc
+man/man1/ftpasswd.1
 man/man1/ftpcount.1
+man/man1/ftpmail.1
+man/man1/ftpquota.1
 man/man1/ftptop.1
 man/man1/ftpwho.1
 man/man5/xferlog.5
@@ -97,6 +106,7 @@ share/examples/proftpd/virtual.conf
 share/examples/rc.d/proftpd
 share/locale/bg_BG/LC_MESSAGES/proftpd.mo
 share/locale/en_US/LC_MESSAGES/proftpd.mo
+share/locale/es_ES/LC_MESSAGES/proftpd.mo
 share/locale/fr_FR/LC_MESSAGES/proftpd.mo
 share/locale/it_IT/LC_MESSAGES/proftpd.mo
 share/locale/ja_JP/LC_MESSAGES/proftpd.mo
