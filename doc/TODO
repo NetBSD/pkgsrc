@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11992 2013/03/14 19:57:17 drochner Exp $
+$NetBSD: TODO,v 1.11993 2013/03/15 08:50:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -755,7 +755,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jed-0.99-18
 	o john-1.7.9jumbo7
 	o jools-1.0
-	o jpegoptim-1.2.5
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
