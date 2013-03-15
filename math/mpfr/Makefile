@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.25 2012/09/13 17:51:01 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/03/15 19:09:06 drochner Exp $
 #
 
-DISTNAME=		mpfr-3.1.1
-PKGNAME=		${DISTNAME}p2	# append patch level
+DISTNAME=		mpfr-3.1.2
+#PKGNAME=		${DISTNAME}p2	# append patch level
 CATEGORIES=		math
-MASTER_SITES=		http://www.mpfr.org/mpfr-3.1.1/
+MASTER_SITES=		http://www.mpfr.org/mpfr-3.1.2/
 EXTRACT_SUFX=		.tar.bz2
 
-DIST_SUBDIR=		${DISTNAME}
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		patch01 patch02
-PATCH_DIST_STRIP=	-p1
+#DIST_SUBDIR=		${DISTNAME}
+#PATCH_SITES=		${MASTER_SITES}
+#PATCHFILES=		patch01 patch02
+#PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.mpfr.org/
