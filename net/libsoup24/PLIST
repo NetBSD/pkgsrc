@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/11/15 14:50:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/03/15 17:41:27 drochner Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -62,7 +62,6 @@ share/gtk-doc/html/libsoup-2.4/SoupContentDecoder.html
 share/gtk-doc/html/libsoup-2.4/SoupContentSniffer.html
 share/gtk-doc/html/libsoup-2.4/SoupCookie.html
 share/gtk-doc/html/libsoup-2.4/SoupCookieJar.html
-share/gtk-doc/html/libsoup-2.4/SoupCookieJarSqlite.html
 share/gtk-doc/html/libsoup-2.4/SoupCookieJarText.html
 share/gtk-doc/html/libsoup-2.4/SoupLogger.html
 share/gtk-doc/html/libsoup-2.4/SoupMessage.html
@@ -76,7 +75,6 @@ share/gtk-doc/html/libsoup-2.4/SoupRequest.html
 share/gtk-doc/html/libsoup-2.4/SoupRequestData.html
 share/gtk-doc/html/libsoup-2.4/SoupRequestFile.html
 share/gtk-doc/html/libsoup-2.4/SoupRequestHTTP.html
-share/gtk-doc/html/libsoup-2.4/SoupRequester.html
 share/gtk-doc/html/libsoup-2.4/SoupServer.html
 share/gtk-doc/html/libsoup-2.4/SoupSession.html
 share/gtk-doc/html/libsoup-2.4/SoupSessionAsync.html
@@ -100,6 +98,8 @@ share/gtk-doc/html/libsoup-2.4/left.png
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-GValue-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-HTML-Form-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Soup-Miscellaneous-Utilities.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupCookieJarSqlite.html
+share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupRequester.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Top-Level-Domain-utils.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-XMLRPC-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-soup-gnome-features.html
@@ -128,6 +128,7 @@ share/locale/es/LC_MESSAGES/libsoup.mo
 share/locale/et/LC_MESSAGES/libsoup.mo
 share/locale/fa/LC_MESSAGES/libsoup.mo
 share/locale/fr/LC_MESSAGES/libsoup.mo
+share/locale/fur/LC_MESSAGES/libsoup.mo
 share/locale/gl/LC_MESSAGES/libsoup.mo
 share/locale/gu/LC_MESSAGES/libsoup.mo
 share/locale/he/LC_MESSAGES/libsoup.mo
@@ -136,12 +137,14 @@ share/locale/hu/LC_MESSAGES/libsoup.mo
 share/locale/id/LC_MESSAGES/libsoup.mo
 share/locale/it/LC_MESSAGES/libsoup.mo
 share/locale/ja/LC_MESSAGES/libsoup.mo
+share/locale/kn/LC_MESSAGES/libsoup.mo
 share/locale/ko/LC_MESSAGES/libsoup.mo
 share/locale/lt/LC_MESSAGES/libsoup.mo
 share/locale/lv/LC_MESSAGES/libsoup.mo
 share/locale/ml/LC_MESSAGES/libsoup.mo
 share/locale/mr/LC_MESSAGES/libsoup.mo
 share/locale/nb/LC_MESSAGES/libsoup.mo
+share/locale/or/LC_MESSAGES/libsoup.mo
 share/locale/pa/LC_MESSAGES/libsoup.mo
 share/locale/pl/LC_MESSAGES/libsoup.mo
 share/locale/pt/LC_MESSAGES/libsoup.mo
