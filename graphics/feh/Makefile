@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2013/02/16 11:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2013/03/15 18:43:16 drochner Exp $
 #
 
-DISTNAME=	feh-2.7
-PKGREVISION=	4
+DISTNAME=	feh-2.9.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +25,7 @@ BUILDLINK_API_DEPENDS.giblib+=	giblib>=1.2.4
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/giblib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
