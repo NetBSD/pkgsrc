@@ -1,0 +1,8 @@
+Test::More::Behaviour is a Behaviour-Driven Development module for
+Perl programmers. It is modeled after Rspec (http://rspec.info),
+the BDD tool for Ruby programmers. Test::More::Behaviour uses the
+words `describe` and `it` so we can express concepts of the application
+as we would in conversation.
+
+Because Test::More::Behaviour uses Test::More as its 'base', you
+can treat every Test::More::Behaviour test as if it were Test::More!
