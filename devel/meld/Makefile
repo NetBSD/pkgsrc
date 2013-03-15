@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2012/10/31 11:17:28 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/03/15 22:00:57 wiz Exp $
 #
 
-DISTNAME=		meld-1.6.1
+DISTNAME=		meld-1.7.1
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/1.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/1.7/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		dieter.NetBSD@pandora.be
@@ -27,5 +27,6 @@ post-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
