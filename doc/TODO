@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12003 2013/03/15 22:01:07 wiz Exp $
+$NetBSD: TODO,v 1.12004 2013/03/15 22:06:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -794,7 +794,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.6.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
-	o libgpg-error-1.11
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0

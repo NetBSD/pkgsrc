@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.948 2013/03/15 22:01:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.949 2013/03/15 22:06:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1338,3 +1338,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-virtualenv to 1.9.1 [wiz 2013-03-15]
 	Updated devel/global to 6.2.8 [wiz 2013-03-15]
 	Updated devel/meld to 1.7.1 [wiz 2013-03-15]
+	Updated security/libgpg-error to 1.11 [wiz 2013-03-15]
