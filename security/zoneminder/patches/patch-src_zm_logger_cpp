@@ -1,0 +1,16 @@
+$NetBSD: patch-src_zm_logger_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+If the system has syscall() but not SYS_gettid [E.g. NetBSD], don't attempt
+to use SYS_gettid.
+
+--- src/zm_logger.cpp.orig	2013-03-08 10:51:36.000000000 +1300
++++ src/zm_logger.cpp	2013-03-08 10:52:17.000000000 +1300
+@@ -515,7 +515,7 @@
+     #endif
+ 
+         pid_t tid;
+-#ifdef HAVE_SYSCALL
++#if defined(HAVE_SYSCALL) && defined(SYS_gettid)
+         if ( (tid = syscall(SYS_gettid)) < 0 ) // Thread/Process id
+ #endif // HAVE_SYSCALL
+         tid = getpid(); // Process id

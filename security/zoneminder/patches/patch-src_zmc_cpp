@@ -1,0 +1,25 @@
+$NetBSD: patch-src_zmc_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+Use a more appropriate initialisation for a long, and use the definition out
+of <limits.h>, for portability.
+
+--- src/zmc.cpp.orig	2010-11-08 23:51:08.000000000 +1300
++++ src/zmc.cpp	2010-11-08 23:51:45.000000000 +1300
+@@ -19,7 +19,7 @@
+ 
+ #include <getopt.h>
+ #include <signal.h>
+-#include <values.h>
++#include <limits.h>
+ 
+ #include "zm.h"
+ #include "zm_db.h"
+@@ -224,7 +224,7 @@
+ 		sigprocmask( SIG_BLOCK, &block_set, 0 );
+ 		for ( int i = 0; i < n_monitors; i++ )
+ 		{
+-			long min_delay = MAXINT;
++			long min_delay = LONG_MAX;
+ 
+ 			gettimeofday( &now, NULL );
+ 			for ( int j = 0; j < n_monitors; j++ )

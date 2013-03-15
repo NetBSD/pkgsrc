@@ -1,0 +1,15 @@
+$NetBSD: patch-web_ajax_stream_php,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+http://www.zoneminder.com/forums/viewtopic.php?t=13322
+
+--- web/ajax/stream.php	2010-10-31 14:54:06.262326001 +1300
++++ web/ajax/stream.php	2010-11-18 22:21:34.802226529 +1300
+@@ -60,7 +60,7 @@
+ $eSockets = NULL;
+ $numSockets = @socket_select( $rSockets, $wSockets, $eSockets, intval(MSG_TIMEOUT/1000), (MSG_TIMEOUT%1000)*1000 );
+ 
+-if ( $numSockets === false )
++if ( $numSockets === false || $numSockets < 0)
+ {
+     ajaxError( "socket_select failed: ".socket_strerror(socket_last_error()) );
+ }

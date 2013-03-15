@@ -1,0 +1,14 @@
+$NetBSD: patch-src_zm_signal_h,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+Don't include <execinfo.h> for lack of portability.
+
+--- src/zm_signal.h.orig	2010-11-09 00:11:24.876121001 +1300
++++ src/zm_signal.h	2010-11-09 00:11:32.692121001 +1300
+@@ -21,7 +21,6 @@
+ #define ZM_SIGNAL_H
+ 
+ #include <signal.h>
+-#include <execinfo.h>
+ 
+ #include "zm.h"
+ 

@@ -1,0 +1,128 @@
+$NetBSD: patch-configure_ac,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+Set PATH_BUILD to PREFIX/share/zoneminder, so that zmupdate.pl can locate the
+database build scripts as installed files, not out of a probably non-existent
+build directory.  Correct shell syntax.  Allow Pkgsrc to manage dlopen()
+support.
+
+--- configure.ac.orig	2011-08-24 03:10:32.000000000 +1200
++++ configure.ac	2013-02-13 14:09:57.143689856 +1300
+@@ -2,9 +2,9 @@
+ AC_INIT(zm,1.25.0,[http://www.zoneminder.com/forums/ - Please check FAQ first],ZoneMinder,http://www.zoneminder.com/downloads.html)
+ AM_INIT_AUTOMAKE
+ AC_CONFIG_SRCDIR(src/zm.h)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+-PATH_BUILD=`pwd`
++AC_DEFINE_DIR([DATA_ROOT_DIR],[datarootdir],[Expanded data directory])
+-AC_SUBST(PATH_BUILD)
++AC_SUBST(PATH_BUILD, "$DATA_ROOT_DIR/zoneminder")
+ TIME_BUILD=`date +'%s'`
+ AC_SUBST(TIME_BUILD)
+@@ -19,31 +19,31 @@
+ AC_ARG_VAR(ZM_TMPDIR,[Location of temporary files, default /tmp/zm])
+ AC_ARG_VAR(ZM_LOGDIR,[Location of generated log files, default /var/log/zm])
+ 
+-if test "$ZM_DB_HOST" == ""; then
++if test "$ZM_DB_HOST" = ""; then
+ 	AC_SUBST(ZM_DB_HOST,[localhost])
+ fi
+-if test "$ZM_DB_NAME" == ""; then
++if test "$ZM_DB_NAME" = ""; then
+ 	AC_SUBST(ZM_DB_NAME,[zm])
+ fi
+-if test "$ZM_DB_USER" == ""; then
++if test "$ZM_DB_USER" = ""; then
+ 	AC_SUBST(ZM_DB_USER,[zmuser])
+ fi
+-if test "$ZM_DB_PASS" == ""; then
++if test "$ZM_DB_PASS" = ""; then
+ 	AC_SUBST(ZM_DB_PASS,[zmpass])
+ fi
+-if test "$ZM_SSL_LIB" == ""; then
++if test "$ZM_SSL_LIB" = ""; then
+ 	AC_SUBST(ZM_SSL_LIB,gnutls)
+ fi
+-if test "$ZM_MYSQL_ENGINE" == ""; then
++if test "$ZM_MYSQL_ENGINE" = ""; then
+ 	AC_SUBST(ZM_MYSQL_ENGINE,MyISAM)
+ fi
+-if test "$ZM_RUNDIR" == ""; then
++if test "$ZM_RUNDIR" = ""; then
+ 	AC_SUBST(ZM_RUNDIR,[/var/run/zm])
+ fi
+-if test "$ZM_TMPDIR" == ""; then
++if test "$ZM_TMPDIR" = ""; then
+ 	AC_SUBST(ZM_TMPDIR,[/tmp/zm])
+ fi
+-if test "$ZM_LOGDIR" == ""; then
++if test "$ZM_LOGDIR" = ""; then
+ 	AC_SUBST(ZM_LOGDIR,[/var/log/zm])
+ fi
+ 
+@@ -203,7 +203,7 @@
+     filesystem which will normally be the case by default.
+     e.g. --enable-mmap=yes or --disable-mmap])
+ )
+-if test "$ENABLE_MMAP" == "yes"; then
++if test "$ENABLE_MMAP" = "yes"; then
+   AC_DEFINE(ZM_MEM_MAPPED,1,"Whether to use mapped rather than shared memory")
+ else
+   AC_DEFINE(ZM_MEM_MAPPED,0,"Whether to use mapped rather than shared memory")
+@@ -254,7 +254,7 @@
+ AC_PATH_PROG(PATH_FFMPEG,ffmpeg)
+ AC_CHECK_PROG(OPT_NETPBM,pnmscale,yes,no)
+ AC_PATH_PROG(PATH_NETPBM,pnmscale)
+-if test "$OPT_NETPBM" == "yes"; then
++if test "$OPT_NETPBM" = "yes"; then
+ PATH_NETPBM=`dirname $PATH_NETPBM`
+ fi
+ 
+@@ -262,8 +262,8 @@
+ AC_CHECK_LIB(mysqlclient,mysql_init,,AC_MSG_ERROR(zm requires libmysqlclient.a))
+ AC_CHECK_LIB(jpeg,jpeg_start_compress,,AC_MSG_ERROR(zm requires libjpeg.a))
+ AC_CHECK_LIB(pthread,pthread_create,,AC_MSG_ERROR(zm requires libpthread.a))
+-AC_CHECK_LIB(dl,dlsym,,AC_MSG_ERROR(zm requires libdl.a))
+-if test "$ZM_SSL_LIB" == "openssl"; then
++#AC_CHECK_LIB(dl,dlsym,,AC_MSG_ERROR(zm requires libdl.a))
++if test "$ZM_SSL_LIB" = "openssl"; then
+ AC_CHECK_LIB(crypto,MD5,,AC_MSG_WARN([libcrypto.a is required for authenticated streaming - use ZM_SSL_LIB option to select gnutls instead]))
+ else
+ AC_CHECK_HEADERS(gcrypt.h,,AC_MSG_WARN(zm requires libgcrypt headers to be installed for gnutls),)
+@@ -293,7 +293,7 @@
+ AC_CHECK_HEADERS(pthread.h,,,)
+ AC_CHECK_HEADERS(linux/videodev.h,AC_SUBST(ZM_HAS_V4L1,1),AC_SUBST(ZM_HAS_V4L1,0),)
+ AC_CHECK_HEADERS(linux/videodev2.h,AC_SUBST(ZM_HAS_V4L2,1),AC_SUBST(ZM_HAS_V4L2,0),)
+-if test "$ZM_HAS_V4L1" == "1" || test "$ZM_HAS_V4L2" == "1"; then
++if test "$ZM_HAS_V4L1" = "1" || test "$ZM_HAS_V4L2" = "1"; then
+ AC_SUBST(ZM_HAS_V4L,1)
+ else
+ AC_SUBST(ZM_HAS_V4L,0)
+@@ -307,7 +307,7 @@
+ AC_CHECK_HEADERS(libswscale/swscale.h,,,)
+ AC_CHECK_HEADERS(pcre/pcre.h,AC_SUBST(ZM_PCRE,"1"),,)
+ AC_CHECK_HEADERS(pcre.h,AC_SUBST(ZM_PCRE,"1"),,)
+-if test "$ENABLE_MMAP" == "yes"; then
++if test "$ENABLE_MMAP" = "yes"; then
+ AC_CHECK_HEADERS(sys/mman.h,,,)
+ AC_CHECK_HEADERS(fcntl.h,,,)
+ else
+@@ -317,7 +317,7 @@
+ AC_CHECK_HEADERS(zlib.h,,,)
+ 
+ AC_CHECK_DECLS(round,,,[#include <math.h>])
+-if test "$ZM_SSL_LIB" == "openssl"; then
++if test "$ZM_SSL_LIB" = "openssl"; then
+ AC_CHECK_DECLS(MD5,,AC_MSG_ERROR([zm requires openssl/md5.h - use ZM_SSL_LIB option to select gnutls instead]),[#include <stdlib.h>
+ #include <openssl/md5.h>])
+ else
+@@ -339,7 +339,7 @@
+ AC_PROG_PERL_MODULES(Date::Manip,,AC_MSG_ERROR(zm requires Date::Manip))
+ AC_PROG_PERL_MODULES(LWP::UserAgent,,AC_MSG_ERROR(zm requires LWP::UserAgent))
+ AC_PROG_PERL_MODULES(ExtUtils::MakeMaker,,AC_MSG_ERROR(zm requires ExtUtils::MakeMaker))
+-if test "$ENABLE_MMAP" == "yes"; then
++if test "$ENABLE_MMAP" = "yes"; then
+ AC_PROG_PERL_MODULES(Sys::Mmap,,AC_MSG_ERROR(zm requires Sys::Mmap for mapped memory - set --enable-mmap=no to use IPC shared memory instead))
+ fi
+ 
