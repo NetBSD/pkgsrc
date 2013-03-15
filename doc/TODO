@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12008 2013/03/15 22:56:54 wiz Exp $
+$NetBSD: TODO,v 1.12009 2013/03/15 23:21:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -981,7 +981,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
-	o potrace-1.11
 	o powermanga-0.91
 	o powwow-1.2.16
 	o prboom-2.5.0.8
