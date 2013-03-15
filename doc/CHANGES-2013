@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.934 2013/03/15 08:19:45 plunky Exp $
+$NetBSD: CHANGES-2013,v 1.935 2013/03/15 08:50:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1311,3 +1311,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/zoneminder version 1.25.0 [dsainty 2013-03-15]
 	Updated comms/openobex to 1.7 [plunky 2013-03-15]
 	Updated comms/obexftp to 0.24 [plunky 2013-03-15]
+	Updated graphics/jpegoptim to 1.2.5 [adam 2013-03-15]
+	Updated security/clamav to 0.97.7 [adam 2013-03-15]
