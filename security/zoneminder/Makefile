@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/15 03:47:51 dsainty Exp $
 #
 
 DISTNAME=	ZoneMinder-1.25.0
@@ -180,16 +180,13 @@ post-install:
 	${LN} -s ${ZM_CACHE}/images ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images
 
 
-#DL_AUTO_VARS=		yes
 .include "../../mk/dlopen.buildlink3.mk"
-
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-#.include "../../graphics/libv4l/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
