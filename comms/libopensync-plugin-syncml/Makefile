@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/01/26 21:37:13 adam Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/15 08:25:56 plunky Exp $
 #
 
 DISTNAME=	libopensync-plugin-syncml-0.22
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	comms
 MASTER_SITES=	http://www.opensync.org/download/releases/0.22/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/download/releases/0.22/
 COMMENT=	Platform independent synchronization framework, SyncML plugin
+LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
