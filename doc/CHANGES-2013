@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.954 2013/03/15 23:21:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.955 2013/03/15 23:36:13 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1344,3 +1344,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs24 to 24.3 [wiz 2013-03-15]
 	Updated fonts/harfbuzz to 0.9.13 [wiz 2013-03-15]
 	Updated graphics/potrace to 1.11 [wiz 2013-03-15]
+	Updated security/zkt to 1.1.2 [pettai 2013-03-15]
