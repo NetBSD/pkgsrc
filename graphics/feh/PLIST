@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/07 12:26:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/03/15 18:43:16 drochner Exp $
 bin/feh
 bin/feh-cam
 bin/gen-cam-menu
 man/man1/feh-cam.1
 man/man1/feh.1
 man/man1/gen-cam-menu.1
+share/applications/feh.desktop
 share/doc/feh/AUTHORS
 share/doc/feh/ChangeLog
 share/doc/feh/README
