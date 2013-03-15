@@ -1,0 +1,16 @@
+$NetBSD: patch-ba,v 1.1 2013/03/15 16:20:14 drochner Exp $
+
+--- configure.orig	2013-01-10 08:59:05.000000000 +0000
++++ configure
+@@ -15017,6 +15017,11 @@ case ${host_os} in
+         darwin*)
+         ax_pthread_flags="-pthread $ax_pthread_flags"
+         ;;
++	netbsd*)
++	# use libc stubs, don's link against libpthread, to allow
++	# dynamic loading
++	ax_pthread_flags=""
++	;;
+ esac
+ 
+ if test x"$ax_pthread_ok" = xno; then
