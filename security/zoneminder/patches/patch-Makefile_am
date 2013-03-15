@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile_am,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+
+Disable the hacks around ownership setup so Pkgsrc can take responsibility.
+Don't install zm.conf at all - let Pkgsrc install it into EGDIR.
+
+--- Makefile.am.orig	2009-03-21 01:07:10.000000000 +1300
++++ Makefile.am	2010-11-23 00:34:37.003586001 +1300
+@@ -4,8 +4,8 @@
+ webuser = @WEB_USER@
+ webgroup = @WEB_GROUP@
+ 
+-sysconf_DATA = \
+-	zm.conf
++#sysconf_DATA = \
++#	zm.conf
+ 
+ SUBDIRS = \
+ 	src \
+@@ -19,7 +19,7 @@
+ 	zmconfgen.pl.in
+ 
+ # Yes, you are correct. This is a HACK!
+-install-data-hook:
++pkgsrc-disabled-install-data-hook:
+ 	( cd $(DESTDIR)$(sysconfdir); chown $(webuser):$(webgroup) $(sysconf_DATA); chmod 600 $(sysconf_DATA) )
+ 	( if ! test -e $(ZM_RUNDIR); then mkdir -p $(ZM_RUNDIR); fi; if test "$(ZM_RUNDIR)" != "/var/run"; then chown $(webuser):$(webgroup) $(ZM_RUNDIR); chmod u+w $(ZM_RUNDIR); fi )
+ 	( if ! test -e $(ZM_TMPDIR); then mkdir -m 700 -p $(ZM_TMPDIR); fi; if test "$(ZM_TMPDIR)" != "/tmp"; then chown $(webuser):$(webgroup) $(ZM_TMPDIR); chmod u+w $(ZM_TMPDIR); fi )
