@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2012/05/03 22:58:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/03/15 22:00:58 wiz Exp $
 bin/meld
 lib/meld/meld/__init__.py
 lib/meld/meld/__init__.pyc
 lib/meld/meld/__init__.pyo
+lib/meld/meld/dbus_service.py
+lib/meld/meld/dbus_service.pyc
+lib/meld/meld/dbus_service.pyo
 lib/meld/meld/diffmap.py
 lib/meld/meld/diffmap.pyc
 lib/meld/meld/diffmap.pyo
@@ -18,6 +21,9 @@ lib/meld/meld/filediff.pyo
 lib/meld/meld/filemerge.py
 lib/meld/meld/filemerge.pyc
 lib/meld/meld/filemerge.pyo
+lib/meld/meld/filters.py
+lib/meld/meld/filters.pyc
+lib/meld/meld/filters.pyo
 lib/meld/meld/linkmap.py
 lib/meld/meld/linkmap.pyc
 lib/meld/meld/linkmap.pyo
@@ -27,6 +33,9 @@ lib/meld/meld/matchers.pyo
 lib/meld/meld/meldapp.py
 lib/meld/meld/meldapp.pyc
 lib/meld/meld/meldapp.pyo
+lib/meld/meld/meldbuffer.py
+lib/meld/meld/meldbuffer.pyc
+lib/meld/meld/meldbuffer.pyo
 lib/meld/meld/melddoc.py
 lib/meld/meld/melddoc.pyc
 lib/meld/meld/melddoc.pyo
@@ -39,6 +48,9 @@ lib/meld/meld/merge.pyo
 lib/meld/meld/misc.py
 lib/meld/meld/misc.pyc
 lib/meld/meld/misc.pyo
+lib/meld/meld/newdifftab.py
+lib/meld/meld/newdifftab.pyc
+lib/meld/meld/newdifftab.pyo
 lib/meld/meld/patchdialog.py
 lib/meld/meld/patchdialog.pyc
 lib/meld/meld/patchdialog.pyo
@@ -48,6 +60,9 @@ lib/meld/meld/paths.pyo
 lib/meld/meld/preferences.py
 lib/meld/meld/preferences.pyc
 lib/meld/meld/preferences.pyo
+lib/meld/meld/recent.py
+lib/meld/meld/recent.pyc
+lib/meld/meld/recent.pyo
 lib/meld/meld/task.py
 lib/meld/meld/task.pyc
 lib/meld/meld/task.pyo
@@ -81,6 +96,9 @@ lib/meld/meld/ui/msgarea.pyo
 lib/meld/meld/ui/notebooklabel.py
 lib/meld/meld/ui/notebooklabel.pyc
 lib/meld/meld/ui/notebooklabel.pyo
+lib/meld/meld/ui/statusbar.py
+lib/meld/meld/ui/statusbar.pyc
+lib/meld/meld/ui/statusbar.pyo
 lib/meld/meld/ui/wraplabel.py
 lib/meld/meld/ui/wraplabel.pyc
 lib/meld/meld/ui/wraplabel.pyo
@@ -90,9 +108,9 @@ lib/meld/meld/undo.pyo
 lib/meld/meld/util/__init__.py
 lib/meld/meld/util/__init__.pyc
 lib/meld/meld/util/__init__.pyo
-lib/meld/meld/util/namedtuple.py
-lib/meld/meld/util/namedtuple.pyc
-lib/meld/meld/util/namedtuple.pyo
+lib/meld/meld/util/compat.py
+lib/meld/meld/util/compat.pyc
+lib/meld/meld/util/compat.pyo
 lib/meld/meld/util/prefs.py
 lib/meld/meld/util/prefs.pyc
 lib/meld/meld/util/prefs.pyo
@@ -154,6 +172,7 @@ share/applications/meld.desktop
 share/gnome/help/meld/C/meld.xml
 share/gnome/help/meld/es/meld.xml
 share/gnome/help/meld/fr/meld.xml
+share/icons/HighContrast/scalable/apps/meld.svg
 share/icons/hicolor/16x16/apps/meld.png
 share/icons/hicolor/22x22/apps/meld.png
 share/icons/hicolor/32x32/apps/meld.png
@@ -198,6 +217,7 @@ share/locale/sv/LC_MESSAGES/meld.mo
 share/locale/vi/LC_MESSAGES/meld.mo
 share/locale/zh_CN/LC_MESSAGES/meld.mo
 share/locale/zh_TW/LC_MESSAGES/meld.mo
+share/meld/gtkrc
 share/meld/icons/button_apply0.xpm
 share/meld/icons/button_apply1.xpm
 share/meld/icons/button_copy0.xpm
@@ -227,8 +247,10 @@ share/meld/ui/meldapp-ui.xml
 share/meld/ui/meldapp.ui
 share/meld/ui/patch-dialog.ui
 share/meld/ui/preferences.ui
+share/meld/ui/tab-placeholder.ui
 share/meld/ui/vcview-ui.xml
 share/meld/ui/vcview.ui
+share/mime/packages/meld.xml
 share/omf/meld/meld-C.omf
 share/omf/meld/meld-es.omf
 share/omf/meld/meld-fr.omf
