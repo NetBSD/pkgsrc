@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.955 2013/03/15 23:36:13 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.956 2013/03/15 23:49:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1345,3 +1345,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/harfbuzz to 0.9.13 [wiz 2013-03-15]
 	Updated graphics/potrace to 1.11 [wiz 2013-03-15]
 	Updated security/zkt to 1.1.2 [pettai 2013-03-15]
+	Added www/ruby-pygments.rb version 0.3.7 [taca 2013-03-15]
