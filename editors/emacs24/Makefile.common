@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/02/17 06:07:25 dholland Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/03/15 22:44:59 wiz Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -20,7 +20,7 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
-USE_TOOLS+=	gmake makeinfo gzip
+USE_TOOLS+=	autoconf automake gmake makeinfo gzip
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -74,6 +74,5 @@ CPPFLAGS+=	-DTERMINFO
 
 post-extract:
 	cp ${.CURDIR}/../../editors/emacs23/files/site-init.el ${WRKSRC}/lisp
-	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
 	${CHMOD} ugo+rx ${WRKSRC}/leim/ja-dic ${WRKSRC}/leim/quail

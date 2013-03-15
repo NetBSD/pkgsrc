@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/02/17 06:07:25 dholland Exp $
-
-PKGREVISION=	6
+# $NetBSD: Makefile,v 1.14 2013/03/15 22:44:59 wiz Exp $
 
 CONFLICTS+=	emacs24-nox11-[0-9]*
 

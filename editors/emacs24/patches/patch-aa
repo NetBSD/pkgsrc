@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2012/12/15 12:27:45 marino Exp $
+$NetBSD: patch-aa,v 1.6 2013/03/15 22:45:00 wiz Exp $
 
 Add DragonFly
 
---- configure.in.orig	2012-08-23 05:33:42.000000000 +0000
-+++ configure.in
-@@ -469,6 +469,14 @@ case "${canonical}" in
-       vax-*)       machine=vax ;;
-     esac
+--- configure.ac.orig	2013-03-05 08:24:59.000000000 +0000
++++ configure.ac
+@@ -476,6 +476,14 @@ case "${canonical}" in
+   powerpc-ibm-aix[56]*  )
+     opsys=aix4-2
    ;;
 +  ## DragonFly ports
 +  *-*-dragonfly*)
@@ -17,9 +17,9 @@ Add DragonFly
 +    esac
 +  ;;
  
-   ## OpenBSD ports
-   *-*-openbsd* )
-@@ -955,7 +955,7 @@
+   ## Silicon Graphics machines
+   ## Iris 4D
+@@ -992,7 +1000,7 @@ case "$opsys" in
    ## IBM's X11R5 uses -lIM and -liconv in AIX 3.2.2.
    aix4-2) LIBS_SYSTEM="-lrts -lIM -liconv" ;;
  
@@ -28,7 +28,7 @@ Add DragonFly
  
    hpux*) LIBS_SYSTEM="-l:libdld.sl" ;;
  
-@@ -999,6 +1007,11 @@ case $opsys in
+@@ -1038,6 +1046,11 @@ case $opsys in
      LIB_MATH=
      START_FILES='pre-crt0.o'
      ;;
@@ -38,9 +38,9 @@ Add DragonFly
 +    START_FILES='$(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o'
 +    ;;
    freebsd )
-     LIB_STANDARD='-lgcc -lc -lgcc $(CRT_DIR)/crtend.o $(CRT_DIR)/crtn.o'
-     START_FILES='pre-crt0.o $(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o $(CRT_DIR)/crtbegin.o'
-@@ -1095,6 +1108,28 @@ fi                              # crt_fi
+     LIB_STANDARD='-lgcc -lc -lgcc $(CRT_DIR)/crtn.o'
+     START_FILES='pre-crt0.o $(CRT_DIR)/crt1.o $(CRT_DIR)/crti.o'
+@@ -1143,6 +1156,28 @@ fi                              # crt_fi
  AC_SUBST(CRT_DIR)
  
  case $opsys in
