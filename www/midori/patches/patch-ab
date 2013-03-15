@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2013/03/15 18:28:51 drochner Exp $
+
+--- midori/midori-privatedata.c.orig	2013-03-07 17:44:14.000000000 +0000
++++ midori/midori-privatedata.c
+@@ -11,7 +11,7 @@
+ 
+ #include "midori-privatedata.h"
+ 
+-#include "marshal.h"
++#include "marshallocal.h"
+ #include "midori-platform.h"
+ #include "midori-core.h"
+ 
