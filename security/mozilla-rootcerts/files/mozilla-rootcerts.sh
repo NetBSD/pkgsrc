@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.4 2011/09/08 19:46:01 drochner Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.5 2013/03/15 16:14:55 bsiegert Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -14,15 +14,18 @@
 : ${EXPR=@EXPR@}
 : ${LN=@LN@}
 : ${LS=@LS@}
+: ${MKDIR=@MKDIR@}
 : ${OPENSSL=@OPENSSL@}
+: ${SSLDIR=@SSLDIR@}
 : ${RM=@RM@}
 
 self="mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
+certdir="/etc/ssl/certs"
 
 usage()
 {
-	${ECHO} 1>&2 "usage: $self [-f certfile] extract|rehash"
+	${ECHO} 1>&2 "usage: $self [-f certfile] extract|rehash|install"
 	exit $1
 }
 
@@ -173,4 +176,25 @@ extract)
 		}
 	}'
 	;;
+install)
+	if [ ! -d $SSLDIR ]; then
+		${ECHO} 1>&2 "ERROR: $SSLDIR does not exist, aborting."
+		exit 1
+	fi
+	cd $SSLDIR
+	if [ -n "`${LS}`" ]; then
+		${ECHO} 1>&2 "ERROR: $SSLDIR already contains certificates, aborting."
+		exit 1
+	fi
+	set -e
+	$self extract
+	$self rehash
+	set +e
+	if [ -d $certdir ]; then
+		${ECHO} 1>&2 "ERROR: $certdir already exists, aborting."
+		exit 1
+	fi
+	set -e
+	$MKDIR $certdir
+	cat $SSLDIR/*.pem > $certdir/ca-certificates.crt
 esac
