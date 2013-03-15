@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2013/03/15 18:22:03 drochner Exp $
+
+--- configure.orig	2013-01-14 21:44:12.000000000 +0000
++++ configure
+@@ -6886,7 +6886,7 @@ fi
+     enable_documentation=yes
+ 
+   else
+-    if test "x$enable_documentation" == "xauto" ; then
++    if test "x$enable_documentation" = "xauto" ; then
+       enable_documentation=no
+     else
+       as_fn_error $? "Cannot find 'makeinfo', required for documentation." "$LINENO" 5
