@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2012/09/29 23:34:11 dholland Exp $
+# $NetBSD: options.mk,v 1.17 2013/03/16 22:41:50 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk guile lua ocaml pangocairo rsvg tcl x11 perl
@@ -30,7 +30,7 @@ PLIST.x11=		yes
 PLIST.pangocairo=	yes
 
 .    if !empty(PKG_OPTIONS:Mghostscript)
-.    include "../../print/ghostscript/buildlink3.mk"
+.    include "../../print/ghostscript/ghostscript.buildlink3.mk"
 PLIST.ghostscript=	yes
 .    else
 CONFIGURE_ARGS+=	--without-ghostscript
