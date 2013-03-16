@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.989 2013/03/16 22:26:19 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.990 2013/03/16 23:02:54 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1407,3 +1407,21 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/oath-toolkit to 2.0.2 [pettai 2013-03-16]
 	Added print/ghostscript-gpl version 9.05nb3 [dholland 2013-03-16]
 	Added print/ghostscript-agpl version 9.07nb1 [dholland 2013-03-16]
+	Updated print/libspectre to 0.2.7nb4 [dholland 2013-03-16]
+	Updated graphics/GraphicsMagick to 1.3.18nb1 [dholland 2013-03-16]
+	Updated graphics/ImageMagick to 6.8.3.7nb1 [dholland 2013-03-16]
+	Updated graphics/graphviz to 2.26.3nb22 [dholland 2013-03-16]
+	Updated print/cups-drivers-Magicolor5440DL to 1.2.1nb8 [dholland 2013-03-16]
+	Updated print/hplip to 3.12.11nb3 [dholland 2013-03-16]
+	Updated print/p5-LaTeX-Driver to 0.10nb2 [dholland 2013-03-16]
+	Updated print/tex-musixtex to 1.15nb2 [dholland 2013-03-16]
+	Updated print/xdvik to 22.84.16nb3 [dholland 2013-03-16]
+	Updated graphics/asymptote to 2.15nb2 [dholland 2013-03-16]
+	Updated graphics/camlimages to 4.0.1nb21 [dholland 2013-03-16]
+	Updated graphics/tex-pst-pdf to 1.1vnb1 [dholland 2013-03-16]
+	Updated math/R-CGIwithR to 0.73.0nb6 [dholland 2013-03-16]
+	Updated meta-pkgs/netbsd-www to 1.8 [dholland 2013-03-16]
+	Updated meta-pkgs/bulk-small to 20130316 [dholland 2013-03-16]
+	Updated fonts/ghostscript-cidfonts to 20000901nb4 [dholland 2013-03-16]
+	Updated fonts/ghostscript-cidfonts-ryumin to 9.05nb4 [dholland 2013-03-16]
+	Updated meta-pkgs/netbsd-www to 1.8 [dholland 2013-03-16]
