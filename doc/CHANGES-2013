@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.984 2013/03/16 19:56:33 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.985 2013/03/16 20:08:23 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1402,3 +1402,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated geography/gpsbabel to 1.4.4 [gdt 2013-03-16]
 	Added security/stud version 0.3p53 [jym 2013-03-16]
 	Updated security/libyubikey to 1.10 [pettai 2013-03-16]
+	Updated security/ykpers to 1.11.3 [pettai 2013-03-16]
