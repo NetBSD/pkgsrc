@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/16 13:28:10 obache Exp $
+bin/rabbiter
+${RUBY_VENDORLIB}/rabbiter.rb
+${RUBY_VENDORLIB}/rabbiter/gettext.rb
+${RUBY_VENDORLIB}/rabbiter/version.rb
