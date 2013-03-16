@@ -1,13 +1,13 @@
-$NetBSD: patch-liboath_gl_fflush.c,v 1.2 2012/11/10 18:07:44 pettai Exp $
+$NetBSD: patch-liboath_gl_fflush.c,v 1.3 2013/03/16 20:52:38 pettai Exp $
 
---- liboath/gl/fflush.c.orig	2012-08-07 07:13:22.000000000 +0000
+--- liboath/gl/fflush.c.orig	2013-01-03 22:33:04.000000000 +0000
 +++ liboath/gl/fflush.c
-@@ -94,7 +94,7 @@ update_fpos_cache (FILE *fp _GL_UNUSED_P
+@@ -96,7 +96,7 @@ update_fpos_cache (FILE *fp _GL_UNUSED_P
                     off_t pos _GL_UNUSED_PARAMETER)
  {
- #if defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, Mac OS X, Cygwin */
--# if defined __CYGWIN__
-+# if defined(__CYGWIN__) || defined(__NetBSD__)
+ #  if defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, Mac OS X, Cygwin */
+-#   if defined __CYGWIN__
++#   if defined(__CYGWIN__) || defined(__NetBSD__)
    /* fp_->_offset is typed as an integer.  */
    fp_->_offset = pos;
- # else
+ #   else
