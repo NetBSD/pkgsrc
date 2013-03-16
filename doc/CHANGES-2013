@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.958 2013/03/16 00:07:30 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.959 2013/03/16 02:03:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1348,3 +1348,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-pygments.rb version 0.3.7 [taca 2013-03-15]
 	Updated devel/userspace-rcu to 0.7.6 [pettai 2013-03-15]
 	Updated mail/opendkim to 2.7.4 [pettai 2013-03-16]
+	Updated lang/php53 to 5.3.23 [taca 2013-03-16]
+	Updated lang/php54 to 5.4.13 [taca 2013-03-16]
