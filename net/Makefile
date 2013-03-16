@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.957 2013/03/02 19:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.958 2013/03/16 13:29:51 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -544,6 +544,7 @@ SUBDIR+=	quagga
 SUBDIR+=	queryperf
 SUBDIR+=	quvi
 SUBDIR+=	ra-rtsp-proxy
+SUBDIR+=	rabbiter
 SUBDIR+=	rabbitmq
 SUBDIR+=	radiusclient-ng
 SUBDIR+=	radiusd-cistron
