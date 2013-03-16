@@ -1,9 +1,8 @@
-$NetBSD: patch-SoObjects_SOGo_NSData+Crypto.m,v 1.1 2012/11/24 14:06:44 manu Exp $
+$NetBSD: patch-SoObjects_SOGo_NSData+Crypto.m,v 1.2 2013/03/16 15:12:57 taca Exp $
 
---- SoObjects/SOGo/NSData+Crypto.m.orig	2012-11-22 18:43:09.000000000 +0100
-+++ SoObjects/SOGo/NSData+Crypto.m	2012-11-22 18:43:47.000000000 +0100
-@@ -22,9 +22,9 @@
-  * the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+--- SoObjects/SOGo/NSData+Crypto.m.orig	2013-02-04 20:13:13.000000000 +0000
++++ SoObjects/SOGo/NSData+Crypto.m
+@@ -23,7 +23,7 @@
   * Boston, MA 02111-1307, USA.
   */
  
@@ -12,4 +11,3 @@ $NetBSD: patch-SoObjects_SOGo_NSData+Crypto.m,v 1.1 2012/11/24 14:06:44 manu Exp
  #include <crypt.h>
  #endif
  
- #include <sys/types.h>
