@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/02/23 02:53:59 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/16 22:58:52 dholland Exp $
 
-DISTNAME=	bulk-small-20130223
+DISTNAME=	bulk-small-20130316
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -67,7 +67,7 @@ BUILD_DEPENDS+=	pkg_chk-[0-9]*:../../pkgtools/pkg_chk
 BUILD_DEPENDS+=	pkg_rolling-replace-[0-9]*:../../pkgtools/pkg_rolling-replace
 BUILD_DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 BUILD_DEPENDS+=	enscript-[0-9]*:../../print/enscript
-BUILD_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
+BUILD_DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 BUILD_DEPENDS+=	papersize-[0-9]*:../../print/papersize
 BUILD_DEPENDS+=	psutils-[0-9]*:../../print/psutils
 BUILD_DEPENDS+=	sudo-[0-9]*:../../security/sudo
