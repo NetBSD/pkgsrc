@@ -1,0 +1,35 @@
+$NetBSD: patch-ah,v 1.1 2013/03/16 22:25:21 dholland Exp $
+
+(1) First chunk to fix the X11_TYPE=native problem, which
+    freetype2 in /usr/X11R7/ is way old, and work around to 
+    use ghostscript-provided freetype2.
+
+(2) Second chunk existed from old days, and no idea, sorry (mef@).
+
+--- configure.orig	2012-08-08 17:04:57.000000000 +0900
++++ configure
+@@ -3786,13 +3786,13 @@
+         ;;
+         *BSD)
+         if test $ac_cv_c_compiler_gnu = yes; then
+-            CC_OPT_FLAGS_TO_TRY="-O2"
++            CC_OPT_FLAGS_TO_TRY="-O2 -I./freetype/include"
+             CC_DBG_FLAGS_TO_TRY="-g -O0"
+         fi
+         ;;
+         Darwin*)
+         if test $ac_cv_c_compiler_gnu = yes; then
+-            CC_OPT_FLAGS_TO_TRY="-O2"
++            CC_OPT_FLAGS_TO_TRY="-O2 -I./freetype/include"
+             CC_DBG_FLAGS_TO_TRY="-g -O0"
+         fi
+         SET_DT_SONAME=""
+@@ -5331,7 +5331,7 @@
+ fi
+ 
+ if test x$with_libpaper != xno; then
+-    LIBS="$LIBS -lpaper"
++    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"
+ 
+ $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
+ 
