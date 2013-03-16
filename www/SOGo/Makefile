@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/02/06 23:23:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/16 15:12:57 taca Exp $
 #
 
-DISTNAME=	SOGo-2.0.2a
-PKGREVISION=	3
+DISTNAME=	SOGo-2.0.4b
 CATEGORIES=	www
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
@@ -19,12 +18,14 @@ CONFIGURE_ARGS= --enable-debug --disable-strip
 
 SOGOUSER?=	sogo
 SOGOGROUP?=	sogo
-SOGOETCDIR?=	${PKG_SYSCONFDIR}/sogo
+SOGOETCDIR?=	${PKG_SYSCONFDIR}
 SOGORUNDIR?=	${VARBASE}/sogo
+
 INSTALLATION_DIRS+=	share/examples/SOGo
-CONF_FILES+=	${DESTDIR}${PREFIX}/share/examples/SOGo/sogo-conf.sh \
+
+CONF_FILES+=	share/examples/SOGo/sogo-conf.sh \
 		${PKG_SYSCONFDIR}/sogo-conf.sh
-CONF_FILES+=	${DESTDIR}${PREFIX}/share/examples/SOGo/SOGo.conf \
+CONF_FILES+=	share/examples/SOGo/SOGo.conf \
 		${PKG_SYSCONFDIR}/SOGo.conf
 OWN_DIRS+=	${SOGOETCDIR}
 OWN_DIRS+=	${SOGORUNDIR}
@@ -37,6 +38,8 @@ PKG_USERS+=	${SOGOUSER}:${SOGOGROUP}
 PKG_HOME.${SOGOUSER}=	${SOGOETCDIR}
 PKG_SHELL.${SOGOUSER}=	${SH}
 PKG_GECOS.${SOGOUSER}=	SOGo daemon user
+
+PKG_SYSCONFSUBDIR=	sogo
 
 FILES_SUBST+=	SOGORUNDIR=${SOGORUNDIR}
 FILES_SUBST+=	SOGOETCDIR=${SOGOETCDIR}
