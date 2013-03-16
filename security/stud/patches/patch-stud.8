@@ -1,0 +1,15 @@
+$NetBSD: patch-stud.8,v 1.1 2013/03/16 19:41:36 jym Exp $
+Give correct man page name for ciphers(1) and dhparam(1).
+--- stud.8.orig	2012-08-10 23:40:19.000000000 +0000
++++ stud.8
+@@ -119,8 +119,8 @@ Write HaProxy's PROXY (IPv4 or IPv6) pro
+ before actual data.
+ .El
+ .Sh SEE ALSO
+-.Xr ciphers 1SSL ,
+-.Xr dhparam 1SSL ,
++.Xr openssl_ciphers 1 ,
++.Xr openssl_dhparam 1 ,
+ .Xr haproxy 1
+ .Sh AUTHORS
+ .Nm

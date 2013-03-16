@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/03/16 19:41:35 jym Exp $
+
+SHA1 (bumptech-stud-0.3-51-g0b88039.tar.gz) = fad22d9cf008b7db8f30d8d7ca0a6fcc177714de
+RMD160 (bumptech-stud-0.3-51-g0b88039.tar.gz) = 66a186e1095fd127945802ab681f5948ee1d4011
+Size (bumptech-stud-0.3-51-g0b88039.tar.gz) = 41000 bytes
+SHA1 (patch-Makefile) = c0794c6ebb3bdc3d55b473acec674a9f98b03ffb
+SHA1 (patch-configuration.c) = 886226a104f84bac6902bb8a8593d37a25653563
+SHA1 (patch-stud.8) = a6b36ab6ac8c65cbc70172a9c230b22965cbdc3d
+SHA1 (patch-stud.c) = 9b11693619291925376f35f1443bbec83a1d798b
