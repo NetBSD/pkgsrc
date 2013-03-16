@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.981 2013/03/16 18:52:05 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.982 2013/03/16 18:53:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1399,3 +1399,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-owncloud to 4.5.7nb1 [bouyer 2013-03-16]
 	Updated mail/poppy to 4.0.1 [shattered 2013-03-16]
 	Updated www/calamaris to 2.59 [shattered 2013-03-16]
+	Updated geography/gpsbabel to 1.4.4 [gdt 2013-03-16]
