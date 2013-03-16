@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2012/10/04 09:19:17 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/16 18:52:58 gdt Exp $
 #
 
-DISTNAME=	gpsbabel-1.4.2
+DISTNAME=	gpsbabel-1.4.4
 CATEGORIES=	geography
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsbabel/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsbabel/}
 # Download from official site apparently only via interactive form,
-# but code is gnu-gpl-v2 so hosted elsewhere as a convenience to
-# pkgsrc users.
-MASTER_SITES+=	http://www.lexort.com/pkgsrc/distfiles/
+# but code is gnu-gpl-v2 so hosted elsewhere.
 MASTER_SITES+=	http://archlinux-stuff.googlecode.com/files/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gpsbabel.org/
 COMMENT=	Utility to convert and fetch GPS related data
 LICENSE=	gnu-gpl-v2
+
+TEST_TARGET=	check
 
 LIBS.Darwin+=	-lexpat
 
