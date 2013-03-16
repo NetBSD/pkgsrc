@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/10/28 06:31:09 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/03/16 07:21:26 obache Exp $
 #
 
 DISTNAME=	websvn-2.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/45918/
 
