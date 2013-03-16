@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2012/02/23 11:04:09 obache Exp $
+# $NetBSD: Makefile,v 1.59 2013/03/16 07:21:20 obache Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
 		ftp://ftp.horde.org/pub/imp/

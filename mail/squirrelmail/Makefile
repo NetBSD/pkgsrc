@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2012/12/28 04:03:34 taca Exp $
+# $NetBSD: Makefile,v 1.123 2013/03/16 07:21:21 obache Exp $
 
 DISTNAME=	squirrelmail-webmail-1.4.23pre14345
 PKGNAME=	${DISTNAME:S/-webmail//}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
