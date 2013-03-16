@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/16 04:04:30 taca Exp $
+
+SHA1 (pear/Math_BigInteger-1.0.0.tgz) = dd05455ecc51eca55d844e42422db32f7e9edf95
+RMD160 (pear/Math_BigInteger-1.0.0.tgz) = 322e74f0f6083ebe1d53ea4101dd809017d1842a
+Size (pear/Math_BigInteger-1.0.0.tgz) = 26138 bytes
