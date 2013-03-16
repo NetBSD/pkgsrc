@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.980 2013/03/16 17:28:40 bouyer Exp $
+$NetBSD: CHANGES-2013,v 1.981 2013/03/16 18:52:05 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1397,3 +1397,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/SOGo to 2.0.4b [taca 2013-03-16]
 	Updated devel/gitolite to 3.4nb1 [ryoon 2013-03-16]
 	Updated www/php-owncloud to 4.5.7nb1 [bouyer 2013-03-16]
+	Updated mail/poppy to 4.0.1 [shattered 2013-03-16]
+	Updated www/calamaris to 2.59 [shattered 2013-03-16]
