@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:29 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/03/16 18:43:44 shattered Exp $
 
-SHA1 (calamaris-2.58.tar.gz) = e35eac86c498983b85e176e5879fcfce7a4a25c1
-RMD160 (calamaris-2.58.tar.gz) = d42d92ffdf5ff492e6707a93e377d63e6b4f20fe
-Size (calamaris-2.58.tar.gz) = 53673 bytes
+SHA1 (calamaris-2.59.tar.gz) = 5dc703e247b707482ce28d4612598aa51b101c31
+RMD160 (calamaris-2.59.tar.gz) = f1050e0b896eb851412e754b8137484113ddb19b
+Size (calamaris-2.59.tar.gz) = 56168 bytes
