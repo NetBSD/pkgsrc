@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2013/03/15 07:34:27 wiz Exp $
+# $NetBSD: Makefile,v 1.460 2013/03/16 19:42:34 jym Exp $
 #
 
 COMMENT=	Security tools
@@ -386,6 +386,7 @@ SUBDIR+=	ssss
 SUBDIR+=	starttls
 SUBDIR+=	steghide
 SUBDIR+=	stegtunnel
+SUBDIR+=	stud
 SUBDIR+=	stunnel
 SUBDIR+=	sudo
 SUBDIR+=	systrace-policies
