@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/03/04 21:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/03/16 17:27:27 bouyer Exp $
 #
 
 DISTNAME=	owncloud-4.5.7
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://owncloud.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.0:../../databases/php-pdo
 
 .include "options.mk"
 
