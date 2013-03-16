@@ -1,0 +1,45 @@
+$NetBSD: patch-configure.in,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
+
+--- configure.in.orig	2006-03-22 18:04:54.000000000 +0000
++++ configure.in
+@@ -488,7 +488,7 @@ AC_ARG_WITH(cca-chem-config,
+   CCA_CHEM_CONFIG=$withval
+   echo Using cca-chem-config: $withval
+ ],[
+-  if test "$components" == "yes"; then
++  if test "$components" = "yes"; then
+     AC_PATH_PROG(CCA_CHEM_CONFIG,cca-chem-config,"not-found")
+   fi
+ ]
+@@ -747,7 +747,7 @@ case $target_cpu in
+      ;;
+ esac
+ 
+-if test X$GXX == Xyes; then
++if test X$GXX = Xyes; then
+   AC_MSG_CHECKING([for C++ cpu tuning flag])
+   AC_LANG_SAVE
+   AC_LANG_CPLUSPLUS
+@@ -759,7 +759,7 @@ if test X$GXX == Xyes; then
+   AC_MSG_RESULT($cxx_tuneflag)
+ fi
+ 
+-if test X$GCC == Xyes; then
++if test X$GCC = Xyes; then
+   AC_MSG_CHECKING([for C cpu tuning flag])
+   CFLAGS_SAV=$CFLAGS
+   CFLAGS="-mtune=$opt_target_cpu $CFLAGS_SAV"
+@@ -1769,10 +1769,10 @@ AC_SUBST(ENABLESHARED)
+ 
+ dnl --------- CCA component configuration ---------
+ 
+-if test $components == "yes"; then
++if test $components = "yes"; then
+ 
+-  if test $HAVE_MPI == "yes" &&
+-     test $HAVE_MPIPP == "no"; then
++  if test $HAVE_MPI = "yes" &&
++     test $HAVE_MPIPP = "no"; then
+     AC_MSG_ERROR([libmpi++ needed for mpi cca components])
+   fi
+ 
