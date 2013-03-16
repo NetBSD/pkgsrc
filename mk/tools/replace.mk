@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.254 2013/03/16 21:47:14 dholland Exp $
+# $NetBSD: replace.mk,v 1.255 2013/03/16 23:03:33 dholland Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1075,13 +1075,13 @@ GHOSTSCRIPT_REQD?=	6.01
 #
 .if !defined(TOOLS_DEPENDS.ghostscript)
 _TOOLS_DEP.ghostscript:=	ghostscript-gpl
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-agpl
 #
 # Determine the default Ghostscript package to build based on
 # ACCEPTABLE_LICENSES.
 #
 .  if !empty(ACCEPTABLE_LICENSES:Mgnu-agpl-*)
-_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-agpl
 .  else
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gpl
 .  endif
