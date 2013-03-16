@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2010/07/05 00:05:23 gdt Exp $
+$NetBSD: patch-ad,v 1.4 2013/03/16 18:52:58 gdt Exp $
 
 This patch was rejected by upstream.  There is a comment in upstream
 Makefile.in that explains why there is no space, and output flag is
@@ -8,7 +8,7 @@ On NetBSD, the upstream versoni works, but there is some mysterious
 failure on Mac OS X.  This patch therefore needs investigation and
 resolution to be filed with upstream.
 
---- Makefile.in.orig	2010-06-20 04:16:20.000000000 +0000
+--- Makefile.in.orig	2012-03-29 00:19:29.000000000 +0000
 +++ Makefile.in
 @@ -102,7 +102,7 @@ LIBOBJS = queue.o route.o waypt.o filter
  OBJS = main.o globals.o $(LIBOBJS) @FILEINFO@
