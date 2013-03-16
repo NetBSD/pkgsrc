@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2013/01/05 12:18:26 obache Exp $
+$NetBSD: distinfo,v 1.9 2013/03/16 10:50:12 obache Exp $
 
-SHA1 (gecko-mediaplayer-1.0.7.tar.gz) = e5a3d9722bbaa5578cb8b0365c5ded41d94634af
-RMD160 (gecko-mediaplayer-1.0.7.tar.gz) = c70994696b653c2e63ad6a41154be42ec84084ec
-Size (gecko-mediaplayer-1.0.7.tar.gz) = 266427 bytes
+SHA1 (gecko-mediaplayer-1.0.8.tar.gz) = d236768fc2ebf970d9c730ee6fc9e93070860d66
+RMD160 (gecko-mediaplayer-1.0.8.tar.gz) = d286a8297d3026fc38313066a5d4ea030abe69e8
+Size (gecko-mediaplayer-1.0.8.tar.gz) = 269970 bytes
 SHA1 (patch-Makefile.in) = 74480fe38a7e4f679871488451ad0630ebc803e0
