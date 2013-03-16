@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/11/01 04:08:03 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/03/16 12:45:33 asau Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -21,6 +21,7 @@ SUBDIR+=	gromacs
 SUBDIR+=	hmmer
 SUBDIR+=	lucy
 SUBDIR+=	mopac
+SUBDIR+=	mpqc
 SUBDIR+=	mummer
 SUBDIR+=	nut
 SUBDIR+=	openbabel
