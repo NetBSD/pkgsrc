@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/11/18 02:25:38 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/16 20:52:38 pettai Exp $
 #
 
-DISTNAME=	oath-toolkit-1.12.6
+DISTNAME=	oath-toolkit-2.0.2
 CATEGORIES=	security
 MASTER_SITES=	http://download.savannah.gnu.org/releases/oath-toolkit/
 
@@ -16,5 +16,7 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	liboath/liboath.pc.in
 
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../security/xmlsec1/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
