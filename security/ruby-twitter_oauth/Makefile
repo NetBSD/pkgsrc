@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/12/23 07:09:36 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/16 12:52:10 obache Exp $
 
 DISTNAME=	twitter_oauth-0.4.4
 CATEGORIES=	security
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://github.com/moonmerman/twitter-oauth
+HOMEPAGE=	http://github.com/moomerman/twitter_oauth
 COMMENT=	Ruby client for the Twitter API using OAuth
 LICENSE=	mit
 
