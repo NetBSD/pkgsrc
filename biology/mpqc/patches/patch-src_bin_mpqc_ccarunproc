@@ -1,0 +1,19 @@
+$NetBSD: patch-src_bin_mpqc_ccarunproc,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
+
+--- src/bin/mpqc/ccarunproc.orig	2005-07-28 17:52:36.000000000 +0000
++++ src/bin/mpqc/ccarunproc
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # This script starts up a single MPI process.
+ # It is used in parallel environments where it
+@@ -13,7 +13,7 @@ memorygrp=$1 && shift
+ integral=$1 && shift
+ results=$1 && shift
+ 
+-function isodecode() {
++isodecode() {
+   str=$1 && shift
+   echo $str | sed -e 's/%20/ /g' \
+                   -e 's/%3c/</g' -e 's/%3e/>/g' \

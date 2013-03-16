@@ -1,0 +1,19 @@
+$NetBSD: patch-src_bin_mpqc_mpqcrunproc,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
+
+--- src/bin/mpqc/mpqcrunproc.orig	2005-03-17 05:56:57.000000000 +0000
++++ src/bin/mpqc/mpqcrunproc
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # This script starts up a single MPI process.
+ # It is used in parallel environments where it
+@@ -12,7 +12,7 @@ threadgrp=$1 && shift
+ memorygrp=$1 && shift
+ integral=$1 && shift
+ 
+-function isodecode() {
++isodecode() {
+   str=$1 && shift
+   echo $str | sed -e 's/%20/ /g' \
+                   -e 's/%3c/</g' -e 's/%3e/>/g' \
