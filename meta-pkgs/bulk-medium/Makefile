@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/02/23 02:53:59 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/16 22:59:06 dholland Exp $
 
-DISTNAME=	bulk-medium-20130223
+DISTNAME=	bulk-medium-20130316
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -117,6 +117,7 @@ BUILD_DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
 BUILD_DEPENDS+=	youtube-dl-[0-9]*:../../net/youtube-dl
 BUILD_DEPENDS+=	lintpkgsrc-[0-9]*:../../pkgtools/lintpkgsrc
 BUILD_DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
+BUILD_DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 BUILD_DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 BUILD_DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 BUILD_DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
