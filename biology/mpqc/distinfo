@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
+
+SHA1 (mpqc-2.3.1.tar.bz2) = f89fcbe6e07e90abe02fc21dbce045a2a749f65d
+RMD160 (mpqc-2.3.1.tar.bz2) = 0e3b395e9ed663b9c3de120fb4f5a00bc40c7e0f
+Size (mpqc-2.3.1.tar.bz2) = 2521392 bytes
+SHA1 (patch-configure) = ee1259c038c7a3eeadea1e71c803e6fa2e7972cc
+SHA1 (patch-configure.in) = 6c72b054c278b3ea10bbe30ba16c480afe08dc3c
+SHA1 (patch-src_bin_mpqc_ccarunproc) = 3ba0297fcda9b0a105bd1f04dea6345569a47ffe
+SHA1 (patch-src_bin_mpqc_mpqcrunproc) = f005f8eef684f2b12e27211865f726faabd59ee9
