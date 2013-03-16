@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2013/02/25 21:30:18 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2013/03/16 17:27:27 bouyer Exp $
 
 SHA1 (owncloud-4.5.7.tar.bz2) = 12c5140e3e6c68ae2e9d19da038c1097892a5310
 RMD160 (owncloud-4.5.7.tar.bz2) = 395c7cc5f3a4dee415dec9801f9a0d581907ebeb
 Size (owncloud-4.5.7.tar.bz2) = 9126728 bytes
+SHA1 (patch-apps_user_ldap_lib_access.php) = b4560578e913c27485aa8c4dc27c3192be8704b0
