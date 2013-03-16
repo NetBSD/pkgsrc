@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.965 2013/03/16 07:34:30 agc Exp $
+$NetBSD: CHANGES-2013,v 1.966 2013/03/16 10:43:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/pear-Math_BigInteger version 1.0.0 [taca 2013-03-16]
 	Updated www/php-apc to 3.1.14 [taca 2013-03-16]
 	Updated security/netpgpverify to 20130316 [agc 2013-03-16]
+	Updated devel/gmtk to 1.0.8 [obache 2013-03-16]
