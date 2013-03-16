@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2010/12/22 15:29:34 taca Exp $
+$NetBSD: patch-aa,v 1.6 2013/03/16 03:33:45 taca Exp $
 
---- ../package.xml.orig	2010-08-29 12:22:53.000000000 +0000
-+++ ../package.xml
-@@ -80,9 +80,6 @@ open todo items:
+--- ../package.xml.orig	2012-10-24 03:12:26.000000000 +0900
++++ ../package.xml	2012-11-15 14:04:40.000000000 +0900
+@@ -95,9 +95,6 @@
      <channel>pear.php.net</channel>
-     <min>1.5.0b3</min>
+     <min>2.5.0b4</min>
     </package>
 -   <extension>
 -    <name>mysql</name>
