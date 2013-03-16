@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.bsd,v 1.1 2013/03/16 07:32:34 agc Exp $
+
+PROG=netpgpverify
+
+SRCS= b64.c bignum.c digest.c
+SRCS+= libverify.c main.c misc.c
+SRCS+= pgpsum.c rsa.c
+SRCS+= tiger.c
+
+SRCS+= bzlib.c zlib.c
+
+SRCS+= sha1.c sha2.c md5c.c rmd160.c
+
+MAN=netpgpverify.1
+
+WARNS=5
+
+.include <bsd.prog.mk>
+
+t: ${PROG}
+	./${PROG} -k pubring.gpg NetBSD-6.0_RC1_hashes.asc
+	./${PROG} -k pubring.gpg NetBSD-6.0_RC1_hashes.gpg
+	./${PROG} -v
