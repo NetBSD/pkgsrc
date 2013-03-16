@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/03/14 18:55:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/16 15:56:17 ryoon Exp $
 #
 
 GLVER=		3.4
 DISTNAME=	gitolite-${GLVER}
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v${GLVER}.tar.gz
 
@@ -23,9 +24,15 @@ FETCH_USING=	curl
 NO_BUILD=	yes
 
 REPLACE_PERL=	src/lib/* src/VREF/* src/triggers/* src/triggers/*/* \
-		src/commands/* src/gitolite* src/lib/Gitolite/Test/*
+		src/commands/* src/gitolite* src/lib/Gitolite/*/*
 REPLACE_SH=	src/VREF/* src/triggers/* src/triggers/post-compile/* \
 		src/commands/*
+
+SUBST_CLASSES+=         perl
+SUBST_STAGE.perl=       pre-configure
+SUBST_MESSAGE.perl=     Set PERL5
+SUBST_FILES.perl+=      src/lib/Gitolite/Hooks/*
+SUBST_SED.perl+=        -e 's,/usr/bin/perl,${PERL5},g'
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
