@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/16 23:21:14 dholland Exp $
+$NetBSD: distinfo,v 1.4 2013/03/16 20:19:02 pettai Exp $
 
-SHA1 (pam_yubico-2.12.tar.gz) = 37bc2c19b3aaa43f2394eb33241ce95fe37c24c6
-RMD160 (pam_yubico-2.12.tar.gz) = 81aac096d20dd992edf06d8135a6fdb878c77e81
-Size (pam_yubico-2.12.tar.gz) = 367164 bytes
+SHA1 (pam_yubico-2.13.tar.gz) = 63de5cc19aa89122709eede7f4f272a00945535d
+RMD160 (pam_yubico-2.13.tar.gz) = 9f9280a5c4aea20e6c8b0a66c8fba2ba8fc6365b
+Size (pam_yubico-2.13.tar.gz) = 375151 bytes
 SHA1 (patch-Makefile_in) = 7981018066034283ae7fb67c5d502b0ac89191b6
