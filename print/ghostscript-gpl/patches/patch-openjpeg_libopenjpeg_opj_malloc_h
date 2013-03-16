@@ -1,0 +1,19 @@
+$NetBSD: patch-openjpeg_libopenjpeg_opj_malloc_h,v 1.1 2013/03/16 21:32:01 dholland Exp $
+
+To avoid following problem:
+| gcc .. (omitted).. g -o ./sobin/gsc ./psi/dxmainc.c \
+| -L./sobin -Wl,-R/usr/pkg/lib -lgs
+| ./sobin/libgs.so: undefined reference to `memalign'
+| gmake[2]: *** [sobin/gsc] Error 1
+
+--- openjpeg/libopenjpeg/opj_malloc.h.orig	2012-04-18 22:36:57.000000000 +0900
++++ openjpeg/libopenjpeg/opj_malloc.h	2012-04-18 22:54:13.000000000 +0900
+@@ -84,7 +84,7 @@
+ 	#if defined(__sun)
+ 		#define HAVE_MEMALIGN
+ 	/* Linux x86_64 and OSX always align allocations to 16 bytes */
+-	#elif !defined(__amd64__) && !defined(__APPLE__)	
++	#elif !defined(__amd64__) && !defined(__APPLE__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__OpenBSD__)
+ 		#define HAVE_MEMALIGN
+ 		#include <malloc.h>			
+ 	#endif
