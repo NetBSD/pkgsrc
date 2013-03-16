@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.959 2013/03/16 02:03:27 taca Exp $
+$NetBSD: CHANGES-2013,v 1.960 2013/03/16 03:41:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1350,3 +1350,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/opendkim to 2.7.4 [pettai 2013-03-16]
 	Updated lang/php53 to 5.3.23 [taca 2013-03-16]
 	Updated lang/php54 to 5.4.13 [taca 2013-03-16]
+	Updated databases/pear-MDB2 to 2.5.0b5 [taca 2013-03-16]
+	Updated databases/pear-MDB2_Driver_mysql to 1.5.0b4 [taca 2013-03-16]
+	Updated databases/pear-MDB2_Driver_mysqli to 1.5.0b4 [taca 2013-03-16]
+	Updated databases/pear-MDB2_Driver_pgsql to 1.5.0b4 [taca 2013-03-16]
+	Updated databases/pear-MDB2_Driver_sqlite to 1.5.0b4 [taca 2013-03-16]
