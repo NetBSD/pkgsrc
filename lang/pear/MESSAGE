@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2008/12/20 14:42:50 adrianp Exp $
+$NetBSD: MESSAGE,v 1.4 2013/03/16 02:06:20 taca Exp $
 
 In order to use PEAR packages you may want to alter the default
 include_path of PHP to include the PEAR installation directory where the
@@ -12,6 +12,5 @@ Change the "include_path" directive to read as follows:
 
 	include_path = ".:${PREFIX}/lib/php"
 
-This is done automatically if you are running either php>=4.4.9 or
-php>=5.2.6nb2.
+It should be done automatically.
 ===========================================================================
