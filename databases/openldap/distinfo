@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.88 2012/10/13 11:47:19 adam Exp $
+$NetBSD: distinfo,v 1.89 2013/03/16 12:49:54 adam Exp $
 
-SHA1 (openldap-2.4.33.tgz) = 0cea642ba2dae1eb719da41bfedb9eba72ad504d
-RMD160 (openldap-2.4.33.tgz) = 6ec75c4af25e7afd2b5dbba397710d72791c5a94
-Size (openldap-2.4.33.tgz) = 5463850 bytes
+SHA1 (openldap-2.4.34.tgz) = 39c81f32b8c7af1e20047535f0b9ea894235c588
+RMD160 (openldap-2.4.34.tgz) = 87e8d3a41b5e708e31eb29bb8b936d519a0374d3
+Size (openldap-2.4.34.tgz) = 5485028 bytes
 SHA1 (patch-ac) = 2995c518278b363bf9657e181c2340d3024d5980
 SHA1 (patch-ad) = 24e7ec27d592dd76bdec1e4805801c5304951daf
 SHA1 (patch-af) = 2e00b01bd813e73bdc1fb764a02e98d7755703de
@@ -12,7 +12,9 @@ SHA1 (patch-aj) = 857bbf14855d7d2a2911457bc6373d8beb69b751
 SHA1 (patch-am) = fb8f3e7699f8b2ef55c066cdc6216522c101c7f3
 SHA1 (patch-an) = 3e904d05a3e69930259329ca821d3bbf7dd54eb2
 SHA1 (patch-ao) = 4fcbbfd4d6be792392e3646123022aeaf25923e3
+SHA1 (patch-contrib_slapd-modules_cloak_Makefile) = 36c416f21982235270ca9f0e4b54f677c4deb1ea
+SHA1 (patch-contrib_slapd-modules_nops_Makefile) = 22a39eda3e9375e35cec4be57d92a8eafca130a5
 SHA1 (patch-contrib_slapd-modules_nops_slapo-nops.5) = f32352f19361b7e9aa5b038ae8578def7c08fa47
-SHA1 (patch-da) = 49c267f09ba7d1a3290bb0b6b273e85296962c0d
+SHA1 (patch-da) = 880b25a9266ee057f7269c5be46ef3c3fecf16b4
 SHA1 (patch-dd) = 9c74118ff0b2232bda729c9917082fceef41dd16
 SHA1 (patch-de) = be3833817205483b62cf3216b27f53a951621198
