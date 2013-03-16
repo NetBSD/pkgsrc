@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:11 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/03/16 07:21:23 obache Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://www.blursoft.com/releases/
 
