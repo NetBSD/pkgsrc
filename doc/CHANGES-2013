@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.979 2013/03/16 16:26:29 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.980 2013/03/16 17:28:40 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/SOPE to 2.0.4b [taca 2013-03-16]
 	Updated www/SOGo to 2.0.4b [taca 2013-03-16]
 	Updated devel/gitolite to 3.4nb1 [ryoon 2013-03-16]
+	Updated www/php-owncloud to 4.5.7nb1 [bouyer 2013-03-16]
