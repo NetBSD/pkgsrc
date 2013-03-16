@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.977 2013/03/16 15:04:39 taca Exp $
+$NetBSD: CHANGES-2013,v 1.978 2013/03/16 15:13:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1394,3 +1394,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/rabbiter version 2.0.0 [obache 2013-03-16]
 	Updated inputmethod/skk to 15.1 [ryoon 2013-03-16]
 	Updated devel/SOPE to 2.0.4b [taca 2013-03-16]
+	Updated www/SOGo to 2.0.4b [taca 2013-03-16]
