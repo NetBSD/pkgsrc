@@ -22,9 +22,10 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+#include "config.h"
+
 #include <sys/types.h>
 
-#include <err.h>
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,7 +33,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "netpgp/verify.h"
+#include "verify.h"
 
 #include "array.h"
 
@@ -109,9 +110,9 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 			pentry(pgp, ARRAY_ELEMENT(cursor.found, 0));
 			return 1;
 		}
-		warnx("Signature did not match contents -- %s", cursor.why);
+		fprintf(stderr, "Signature did not match contents -- %s", cursor.why);
 	} else {
-		warnx("unrecognised command \"%s\"", cmd);
+		fprintf(stderr, "unrecognised command \"%s\"", cmd);
 	}
 	return 0;
 }
@@ -129,10 +130,10 @@ main(int argc, char **argv)
 	int		 i;
 
 	memset(&pgp, 0x0, sizeof(pgp));
-	cmd = NULL;
 	keyring = NULL;
 	ok = 1;
-	while ((i = getopt(argc, argv, "c:k:")) != -1) {
+	cmd = "verify";
+	while ((i = getopt(argc, argv, "c:k:v")) != -1) {
 		switch(i) {
 		case 'c':
 			cmd = optarg;
@@ -140,12 +141,12 @@ main(int argc, char **argv)
 		case 'k':
 			keyring = optarg;
 			break;
+		case 'v':
+			printf("%s\n", NETPGPVERIFY_VERSION);
+			exit(EXIT_SUCCESS);
 		default:
 			break;
 		}
-	}
-	if (cmd == NULL) {
-		cmd = "verify";
 	}
 	if (!pgpv_read_pubring(&pgp, keyring, -1)) {
 		errx(EXIT_FAILURE, "can't read keyring");
