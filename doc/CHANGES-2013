@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.972 2013/03/16 12:46:54 asau Exp $
+$NetBSD: CHANGES-2013,v 1.973 2013/03/16 12:51:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1383,3 +1383,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-vte to 1.2.2 [obache 2013-03-16]
 	Updated www/ruby-sinatra to 1.3.6 [obache 2013-03-16]
 	Added biology/mpqc version 2.3.1 [asau 2013-03-16]
+	Updated databases/openldap to 2.4.34 [adam 2013-03-16]
+	Updated databases/openldap-client to 2.4.34 [adam 2013-03-16]
+	Updated databases/openldap-server to 2.4.34 [adam 2013-03-16]
+	Updated databases/openldap-doc to 2.4.34 [adam 2013-03-16]
+	Updated databases/openldap-cloak to 2.4.34 [adam 2013-03-16]
+	Updated databases/openldap-nops to 2.4.34 [adam 2013-03-16]
+	Updated databases/openldap-smbk5pwd to 2.4.34 [adam 2013-03-16]
