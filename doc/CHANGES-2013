@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.976 2013/03/16 15:00:25 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.977 2013/03/16 15:04:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-twitter-stream to 0.1.16nb1 [obache 2013-03-16]
 	Added net/rabbiter version 2.0.0 [obache 2013-03-16]
 	Updated inputmethod/skk to 15.1 [ryoon 2013-03-16]
+	Updated devel/SOPE to 2.0.4b [taca 2013-03-16]
