@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2013/01/05 17:05:07 pettai Exp $
+$NetBSD: distinfo,v 1.10 2013/03/16 00:07:03 pettai Exp $
 
-SHA1 (opendkim-2.7.3.tar.gz) = abaab329ccea5f27166d99030a6e3cac3db63d76
-RMD160 (opendkim-2.7.3.tar.gz) = 83270cc71246b21806e6c3ca83f3e2dcdae6c845
-Size (opendkim-2.7.3.tar.gz) = 1157432 bytes
+SHA1 (opendkim-2.7.4.tar.gz) = e21218d1da441c9a97bd65a566dc33dd3a331609
+RMD160 (opendkim-2.7.4.tar.gz) = d9bb2ea541cb2977cfffde102152c89332ed297d
+Size (opendkim-2.7.4.tar.gz) = 1158496 bytes
 SHA1 (patch-configure) = 8e635d41c213f899b31b392b1cdb96c8d5113ca4
