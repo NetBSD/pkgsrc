@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 13:45:48 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/16 22:49:06 dholland Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvik-22.84.16
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,6 @@ CONFLICTS+=	teTeX-bin<3.0nb25
 BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 BUILD_DEPENDS+=	tex-xdvi-[0-9]*:../../print/tex-xdvi
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
@@ -84,4 +83,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/texmf/xdvi/XDvi \
 		${DESTDIR}${PREFIX}/share/texmf-dist/xdvi
 
+.include "../../print/ghostscript/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
