@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/03/16 16:02:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/16 16:11:16 ryoon Exp $
 #
 
 GLVER=		3.4
@@ -32,7 +32,7 @@ SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
 SUBST_MESSAGE.perl=	Set PERL5
 SUBST_FILES.perl=	src/gitolite
-SUBST_FILES.perl+=	src/lib/Gitolite/Hooks/PostUpdate.pm
+SUBST_FILES.perl+=	src/lib/Gitolite/Hooks/*
 SUBST_SED.perl=		-e 's,/usr/bin/perl,${PERL5},g'
 
 INSTALLATION_DIRS+=	bin lib \
