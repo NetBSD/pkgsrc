@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/27 18:24:57 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/16 22:53:52 dholland Exp $
 
 DISTNAME=	pst-pdf
 PKGNAME=	tex-${DISTNAME}-1.1v
 TEXLIVE_REV=	15878
+PKGREVISION=	1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Make PDF versions of graphics by processing between runs
 
 CONFLICTS=	texlive-pdftools<2011
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=	tex-environ-[0-9]*:../../print/tex-environ
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
@@ -47,4 +47,5 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/scripts/pst-pdf/ps4pdf ${WRKSRC}/bin/
 
+.include "../../print/ghostscript/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
