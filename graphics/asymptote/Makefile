@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/06 14:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/16 22:51:54 dholland Exp $
 #
 
 DISTNAME=	asymptote-2.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz
@@ -16,7 +16,8 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 BUILD_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
-BUILD_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
+#BUILD_DEPENDS+=ghostscript-[0-9]*:../../print/ghostscript
+USE_TOOLS+=	gs
 
 UNLIMIT_RESOURCES=	datasize
 
