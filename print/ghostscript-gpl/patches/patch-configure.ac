@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/03/16 21:32:01 dholland Exp $
+
+See patch-ah (configure)
+
+--- base/configure.ac.orig	2011-08-05 20:12:20.000000000 +0900
++++ base/configure.ac	2011-08-22 19:10:30.000000000 +0900
+@@ -404,7 +404,7 @@
+ fi
+ 
+ if test x$with_libpaper != xno; then
+-    LIBS="$LIBS -lpaper"
++    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"
+     AC_DEFINE(USE_LIBPAPER, 1, [Using libpaper])
+     CFLAGS="$CFLAGS -DUSE_LIBPAPER"
+ fi
