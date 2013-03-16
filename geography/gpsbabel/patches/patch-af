@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.3 2010/07/05 00:05:23 gdt Exp $
+$NetBSD: patch-af,v 1.4 2013/03/16 18:52:58 gdt Exp $
 
 From Giles Lean, who places it in the public domain.  Workarounds for
 problems with buggy USB serial adapators.  Not applied by upstream
 2009-02-21 because it's too dangerous to work around problems without
 understanding them.
 
---- jeeps/gpsread.c.orig	2010-03-26 03:09:20.000000000 +0000
+--- jeeps/gpsread.c.orig	2011-07-26 01:56:33.000000000 +0000
 +++ jeeps/gpsread.c
-@@ -103,6 +103,36 @@ int32 GPS_Serial_Packet_Read(gpsdevh *fd
+@@ -98,6 +98,36 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
+       GPS_Diag("%02x ", u);
  
- 	    if(!len)
- 	    {
+       if (!len) {
 +                /*
 +                 * Missed DLE characters have been observed with Geko
 +                 * 201 and Legend GPSRs with Prolific USB-serial
@@ -41,35 +41,35 @@ understanding them.
 +                    goto dle_missed;
 +                }
 +
- 		if(u != DLE)
- 		{
- 		    (void) fprintf(stderr,"GPS_Packet_Read: No DLE.  Data received, but probably not a garmin packet.\n");
-@@ -113,6 +143,7 @@ int32 GPS_Serial_Packet_Read(gpsdevh *fd
- 		continue;
- 	    }
+         if (u != DLE) {
+           (void) fprintf(stderr,"GPS_Packet_Read: No DLE.  Data received, but probably not a garmin packet.\n");
+           (void) fflush(stderr);
+@@ -107,6 +137,7 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
+         continue;
+       }
  
 +dle_missed:
- 	    if(len==1)
- 	    {
- 		(*packet)->type = u;
-@@ -215,6 +246,20 @@ int32 GPS_Serial_Get_Ack(gpsdevh *fd, GP
-     
-     if(*(*rec)->data != (*tra)->type)
-     {
-+        /*
-+         * When used with a buggy Prolific USB-serial converter the
-+         * calling sequence GPS_A000() -> GPS_Get_Ack() sometimes
-+         * returns data != type causing this routine to fail and the
-+         * following error message to be emitted:
-+         *
-+         *   GARMIN:Can't init /dev/cu.usbserial
-+         *
-+         * Manually retrying usually works, and subsequent
-+         * investigation shows that the call that fails is made from
-+         * GPS_Init() which in this case is GPS_Serial_Init().  Simply
-+         * retrying the call a workaround: see note and retry loop in
-+         * gpsapp.c:GPS_Init().
-+         */
- 	gps_error = FRAMING_ERROR;
- 	return 0;
-     }
+       if (len==1) {
+         (*packet)->type = u;
+         ++len;
+@@ -130,6 +161,20 @@ int32 GPS_Serial_Packet_Read(gpsdevh* fd
+       if (u == ETX)
+         if (isDLE) {
+           if (p-(*packet)->data-2 != (*packet)->n) {
++	    /*
++	     * When used with a buggy Prolific USB-serial converter the
++	     * calling sequence GPS_A000() -> GPS_Get_Ack() sometimes
++	     * returns data != type causing this routine to fail and the
++	     * following error message to be emitted:
++	     *
++	     *   GARMIN:Can't init /dev/cu.usbserial
++	     *
++	     * Manually retrying usually works, and subsequent
++	     * investigation shows that the call that fails is made from
++	     * GPS_Init() which in this case is GPS_Serial_Init().  Simply
++	     * retrying the call a workaround: see note and retry loop in
++	     * gpsapp.c:GPS_Init().
++	     */
+             GPS_Error("GPS_Packet_Read: Bad count");
+             gps_errno = FRAMING_ERROR;
+             return 0;
