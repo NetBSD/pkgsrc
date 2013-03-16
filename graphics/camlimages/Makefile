@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2013/02/16 11:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2013/03/16 22:52:56 dholland Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
-PKGREVISION=		20
+PKGREVISION=		21
 CATEGORIES=		graphics
 MASTER_SITES=		https://bitbucket.org/camlspotter/camlimages/get/
 DISTNAME=		v${VERSION}
@@ -51,7 +51,7 @@ BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11.0
 .include "../../mk/giflib.buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../print/ghostscript/buildlink3.mk"
+.include "../../print/ghostscript/ghostscript.buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
