@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2010/12/22 15:22:26 taca Exp $
+$NetBSD: patch-aa,v 1.5 2013/03/16 03:38:39 taca Exp $
 
---- ../package.xml.orig	2010-08-29 12:16:21.000000000 +0000
-+++ ../package.xml
-@@ -88,9 +88,6 @@ open todo items:
+--- ../package.xml.orig	2012-10-24 03:12:26.000000000 +0900
++++ ../package.xml	2012-11-15 14:08:27.000000000 +0900
+@@ -101,9 +101,6 @@
      <channel>pear.php.net</channel>
-     <min>2.5.0b3</min>
+     <min>2.5.0b4</min>
     </package>
 -   <extension>
 -    <name>pgsql</name>
