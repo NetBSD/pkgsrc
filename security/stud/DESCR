@@ -1,0 +1,5 @@
+stud is a network proxy that terminates TLS/SSL connections and forwards
+the unencrypted traffic to some backend. It's designed to handle 10s
+of thousands of connections efficiently on multicore machines.
+stud has very few features. It is designed to be paired with an
+intelligent backend like haproxy or nginx.
