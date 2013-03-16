@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.960 2013/03/16 03:41:39 taca Exp $
+$NetBSD: CHANGES-2013,v 1.961 2013/03/16 03:46:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1355,3 +1355,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/pear-MDB2_Driver_mysqli to 1.5.0b4 [taca 2013-03-16]
 	Updated databases/pear-MDB2_Driver_pgsql to 1.5.0b4 [taca 2013-03-16]
 	Updated databases/pear-MDB2_Driver_sqlite to 1.5.0b4 [taca 2013-03-16]
+	Updated mail/pear-Mail_Mime to 1.8.7 [taca 2013-03-16]
