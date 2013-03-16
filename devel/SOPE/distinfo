@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/11/24 14:06:43 manu Exp $
+$NetBSD: distinfo,v 1.5 2013/03/16 15:04:10 taca Exp $
 
-SHA1 (SOPE-2.0.2a.tar.gz) = 8dcb2a1ea3b90b860969878bdca5a2685eb37296
-RMD160 (SOPE-2.0.2a.tar.gz) = f9fd9ba7ed6ea550e86343f784fd64beac008df8
-Size (SOPE-2.0.2a.tar.gz) = 2243113 bytes
+SHA1 (SOPE-2.0.4b.tar.gz) = c2443b39f152c201d8e34a9f2dbee2fda8753ad3
+RMD160 (SOPE-2.0.4b.tar.gz) = 8703bbd079de91f59a9ddd2b42c38dafb17bacf3
+Size (SOPE-2.0.4b.tar.gz) = 2248548 bytes
 SHA1 (patch-sope-core_NGStreams_NGInternetSocketAddress.m) = 5309786f9208e3799d3b659b912f1c263c63427c
 SHA1 (patch-sope-core_NGStreams_NGLocalSocketAddress.m) = f5c6cb90d64ea48316175390d973ba59e44f29b9
 SHA1 (patch-sope-core_NGStreams_NGLocalSocketDomain.m) = 23dfa6732f3af2165b1adcf2637fc77bfeadfe3c
