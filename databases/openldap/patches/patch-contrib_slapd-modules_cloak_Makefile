@@ -1,0 +1,19 @@
+$NetBSD: patch-contrib_slapd-modules_cloak_Makefile,v 1.1 2013/03/16 12:49:54 adam Exp $
+
+--- contrib/slapd-modules/cloak/Makefile.orig	2013-03-16 12:37:06.000000000 +0000
++++ contrib/slapd-modules/cloak/Makefile
+@@ -3,12 +3,10 @@
+ LDAP_SRC = ../../..
+ LDAP_BUILD = ../../..
+ LDAP_INC = -I$(LDAP_BUILD)/include -I$(LDAP_SRC)/include -I$(LDAP_SRC)/servers/slapd
+-LDAP_LIB = $(LDAP_BUILD)/libraries/libldap_r/libldap_r.la \
+-	$(LDAP_BUILD)/libraries/liblber/liblber.la
++LDAP_LIB = -lldap_r -llber
+ 
+ LIBTOOL = $(LDAP_BUILD)/libtool
+-CC = gcc
+-OPT = -g -O2 -Wall
++OPT = ${CFLAGS} ${CPPFLAGS}
+ DEFS = -DSLAPD_OVER_CLOAK=SLAPD_MOD_DYNAMIC
+ INCS = $(LDAP_INC)
+ LIBS = $(LDAP_LIB)
