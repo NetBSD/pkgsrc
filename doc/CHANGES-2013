@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.988 2013/03/16 21:32:50 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.989 2013/03/16 22:26:19 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1406,3 +1406,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/pam-yubico to 2.13 [pettai 2013-03-16]
 	Updated security/oath-toolkit to 2.0.2 [pettai 2013-03-16]
 	Added print/ghostscript-gpl version 9.05nb3 [dholland 2013-03-16]
+	Added print/ghostscript-agpl version 9.07nb1 [dholland 2013-03-16]
