@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.968 2013/03/16 10:50:23 obache Exp $
+$NetBSD: CHANGES-2013,v 1.969 2013/03/16 11:11:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/gmtk to 1.0.8 [obache 2013-03-16]
 	Updated multimedia/gnome-mplayer to 1.0.8 [obache 2013-03-16]
 	Updated multimedia/gecko-mediaplayer to 1.0.8 [obache 2013-03-16]
+	Updated inputmethod/ibus-qt to 1.3.2 [obache 2013-03-16]
