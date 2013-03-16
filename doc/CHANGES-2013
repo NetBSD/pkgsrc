@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.982 2013/03/16 18:53:11 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.983 2013/03/16 19:44:08 jym Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/poppy to 4.0.1 [shattered 2013-03-16]
 	Updated www/calamaris to 2.59 [shattered 2013-03-16]
 	Updated geography/gpsbabel to 1.4.4 [gdt 2013-03-16]
+	Added security/stud version 0.3p53 [jym 2013-03-16]
