@@ -1,0 +1,13 @@
+$NetBSD: patch-scripts_xdg-open,v 1.1 2013/03/17 19:56:43 markd Exp $
+
+--- scripts/xdg-open.orig	2011-01-01 10:03:14.000000000 +0000
++++ scripts/xdg-open
+@@ -307,7 +307,7 @@ detectDE()
+     elif [ x"$GNOME_DESKTOP_SESSION_ID" != x"" ]; then DE=gnome;
+     elif `dbus-send --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.GetNameOwner string:org.gnome.SessionManager > /dev/null 2>&1` ; then DE=gnome;
+     elif xprop -root _DT_SAVE_MODE 2> /dev/null | grep ' = \"xfce4\"$' >/dev/null 2>&1; then DE=xfce;
+-    elif [ x"$DESKTOP_SESSION" == x"LXDE" ]; then DE=lxde;
++    elif [ x"$DESKTOP_SESSION" = x"LXDE" ]; then DE=lxde;
+     else DE=""
+     fi
+ }
