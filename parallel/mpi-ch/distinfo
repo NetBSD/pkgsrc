@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.20 2013/02/26 23:36:17 joerg Exp $
+$NetBSD: distinfo,v 1.21 2013/03/17 17:08:51 asau Exp $
 
-SHA1 (mpich2-1.4.1p1.tar.gz) = 8dcc8888fb27232eb8f76c11cc890f1c3c483804
-RMD160 (mpich2-1.4.1p1.tar.gz) = 1d355cc07b8675af77b1c255fd10696844447298
-Size (mpich2-1.4.1p1.tar.gz) = 19502854 bytes
-SHA1 (patch-Makefile.in) = c7e8398952d3b60d1325661ef0055c72930c70f9
-SHA1 (patch-aa) = f7d5fc3be6b2679ef0937615cc9c5b4229acb22a
-SHA1 (patch-ac) = b956a355ef381d759077288916c40e32b022f178
-SHA1 (patch-src_mpe2_Makefile_in) = a72b4edea6e59b0b4e59454e4d5910e01e689548
-SHA1 (patch-src_mpe2_src_callstack_src_Makefile.in) = 4f46ffad18f7d18ffeed7b703a57056a202e745a
-SHA1 (patch-src_mpe2_src_logging_src_Makefile.in) = e266eea99bc88ec93f892cbcb64e1560236b1b2d
-SHA1 (patch-src_pm_hydra_configure) = 9d42c909464fa24af7a079c03a75ae03aa3f8ee5
+SHA1 (mpich-3.0.1.tar.gz) = 61ed0b9fac26e1d102d93503bd8e1ac73f246b5a
+RMD160 (mpich-3.0.1.tar.gz) = a30aa14f9360b9cf2e88f9cd4f06b24b8800c55d
+Size (mpich-3.0.1.tar.gz) = 10934260 bytes
+SHA1 (patch-Makefile.in) = 32a78a384ecb94a30631a8a756e746edbe6e0060
+SHA1 (patch-src_pm_hydra_configure) = c8d25676499386e4a2616db5ab2d86443f29b1f7
