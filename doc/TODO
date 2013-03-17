@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12017 2013/03/17 16:10:57 taca Exp $
+$NetBSD: TODO,v 1.12018 2013/03/17 17:09:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,6 +545,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
+	o etm2-2.1.0 [etm successor]
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evolution-3.0.0
@@ -594,6 +595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gaupol-0.21.1
+	o gcc-4.8.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
@@ -650,7 +652,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.2
 	o gnuchess-6.0.3
-	o gnutls-3.1.9 [needs nettle-2.5]
+	o gnutls-3.1.9
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -714,6 +716,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icewm-1.3.7
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
+	o ilmbase-2.0.0
 	o imapfilter-2.5.3
 	o imapsync-1.452
 	o imp-6.0.4
@@ -914,6 +917,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o opendkim-2.8.0
+	o openexr-2.0.0
 	o opengrok-0.11.1
 	o openmortal-0.7.1
 	o openoffice-3.4
@@ -954,6 +958,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pgadmin3-1.16.1 [pkg/47261]
 	o php-jpgraph-3.0.6
 	o php-owncloud-5.0
+	o php-tt-rss-1.7.6
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -972,7 +977,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.22.1
+	o poppler-0.22.2
 	o posh-0.5.5
 	o postal-0.72
 	o powermanga-0.91
@@ -1130,7 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o texlive-2012
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-4.0
+	o texmaker-4.0.1
 	o tfmxplay-1.1.6
 	o tig-1.0
 	o tightvnc-2.0.95
@@ -1196,7 +1201,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.5.25 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.5.26 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1208,7 +1213,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130302
+	o x264-devel-20130316
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
