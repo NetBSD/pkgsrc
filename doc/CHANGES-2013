@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.994 2013/03/17 13:57:08 asau Exp $
+$NetBSD: CHANGES-2013,v 1.995 2013/03/17 14:15:46 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1427,3 +1427,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed print/ghostscript successor print/ghostscript-gpl [dholland 2013-03-16]
 	Updated net/net-snmp to 5.7.2 [gdt 2013-03-17]
 	Added security/pam-pgsql version 0.7.3.1 [asau 2013-03-17]
+	Added databases/nss-pgsql version 1.5.0b [asau 2013-03-17]
