@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.995 2013/03/17 14:15:46 asau Exp $
+$NetBSD: CHANGES-2013,v 1.996 2013/03/17 14:44:13 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1428,3 +1428,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/net-snmp to 5.7.2 [gdt 2013-03-17]
 	Added security/pam-pgsql version 0.7.3.1 [asau 2013-03-17]
 	Added databases/nss-pgsql version 1.5.0b [asau 2013-03-17]
+	Updated parallel/openpa to 1.0.4 [asau 2013-03-17]
