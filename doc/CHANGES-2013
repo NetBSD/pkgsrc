@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1001 2013/03/17 15:29:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1002 2013/03/17 15:32:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1434,3 +1434,20 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ImageMagick to 6.8.3.9 [wiz 2013-03-17]
 	Updated multimedia/ffmpeg to 20130315.1.2 [wiz 2013-03-17]
 	Updated net/transmission to 2.77 [wiz 2013-03-17]
+	Updated meta-pkgs/ruby-gnome2 to 1.2.3 [obache 2013-03-17]
+	Updated devel/ruby-gnome2-atk to 1.2.3 [obache 2013-03-17]
+	Updated devel/ruby-gnome2-gio to 1.2.3 [obache 2013-03-17]
+	Added devel/ruby-gnome2-gobject-introspection version 1.2.3 [obache 2013-03-17]
+	Updated devel/ruby-gnome2-glib to 1.2.3 [obache 2013-03-17]
+	Updated devel/ruby-gnome2-pango to 1.2.3 [obache 2013-03-17]
+	Updated graphics/ruby-gnome2-gdk3 to 1.2.3 [obache 2013-03-17]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 1.2.3 [obache 2013-03-17]
+	Updated graphics/ruby-gnome2-goocanvas to 1.2.3 [obache 2013-03-17]
+	Updated graphics/ruby-gnome2-rsvg to 1.2.2 [obache 2013-03-17]
+	Updated multimedia/ruby-gnome2-gstreamer to 1.2.3 [obache 2013-03-17]
+	Updated print/ruby-gnome2-poppler to 1.2.3 [obache 2013-03-17]
+	Updated x11/ruby-gnome2-gtk to 1.2.2 [obache 2013-03-17]
+	Updated x11/ruby-gnome2-gtk3 to 1.2.3 [obache 2013-03-17]
+	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.3 [obache 2013-03-17]
+	Updated x11/ruby-gnome2-gtksourceview3 to 1.2.3 [obache 2013-03-17]
+	Updated x11/ruby-gnome2-vte to 1.2.3 [obache 2013-03-17]
