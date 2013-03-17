@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1019 2013/03/17 19:41:24 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1020 2013/03/17 19:59:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1468,3 +1468,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-multi_json to 1.7.0 [taca 2013-03-17]
 	Updated parallel/mpi-ch to 3.0.1 [asau 2013-03-17]
 	Added math/eigen3 version 3.1.2 [markd 2013-03-17]
+	Updated misc/xdg-utils to 1.1.0rc1 [markd 2013-03-17]
