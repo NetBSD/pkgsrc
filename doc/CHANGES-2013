@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1017 2013/03/17 16:25:46 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1018 2013/03/17 17:10:09 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1466,3 +1466,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rack-protection to 1.5.0 [taca 2013-03-17]
 	Updated devel/ruby-highline to 1.6.16 [taca 2013-03-17]
 	Updated textproc/ruby-multi_json to 1.7.0 [taca 2013-03-17]
+	Updated parallel/mpi-ch to 3.0.1 [asau 2013-03-17]
