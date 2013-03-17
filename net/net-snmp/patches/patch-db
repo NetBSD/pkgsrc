@@ -1,6 +1,6 @@
-$NetBSD: patch-db,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-db,v 1.2 2013/03/17 00:15:29 gdt Exp $
 
---- ov/oid_to_type.in.orig	2006-03-19 18:20:47.000000000 +0000
+--- ov/oid_to_type.in.orig	2012-10-09 22:28:58.000000000 +0000
 +++ ov/oid_to_type.in
 @@ -6,6 +6,7 @@ EXTENSIBLEDOTMIB.AGENTID.OSFID:DEC:UCD O
  EXTENSIBLEDOTMIB.AGENTID.ULTRIXID:DEC:UCD Ultrix

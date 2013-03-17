@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.11 2011/05/27 10:55:25 adam Exp $
+$NetBSD: patch-ag,v 1.12 2013/03/17 00:15:29 gdt Exp $
 
---- agent/mibgroup/host/hr_storage.c.orig	2006-10-12 11:54:57.000000000 +0200
+--- agent/mibgroup/host/hr_storage.c.orig	2012-10-09 22:28:58.000000000 +0000
 +++ agent/mibgroup/host/hr_storage.c
 @@ -69,6 +69,13 @@
  #endif
@@ -16,7 +16,7 @@ $NetBSD: patch-ag,v 1.11 2011/05/27 10:55:25 adam Exp $
  #if defined(HAVE_UVM_UVM_PARAM_H) && defined(HAVE_UVM_UVM_EXTERN_H)
  #include <uvm/uvm_param.h>
  #include <uvm/uvm_extern.h>
-@@ -82,20 +89,13 @@
+@@ -76,20 +83,13 @@
  #include <vm/vm_param.h>
  #include <vm/vm_extern.h>
  #endif
