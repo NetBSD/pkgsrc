@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/01/16 20:55:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/03/17 15:18:11 wiz Exp $
 bin/ffmpeg
 bin/ffprobe
 bin/ffserver
@@ -45,6 +45,7 @@ include/libavutil/error.h
 include/libavutil/eval.h
 include/libavutil/fifo.h
 include/libavutil/file.h
+include/libavutil/hmac.h
 include/libavutil/imgutils.h
 include/libavutil/intfloat.h
 include/libavutil/intfloat_readwrite.h
@@ -78,23 +79,23 @@ include/libswscale/version.h
 lib/libavcodec.a
 lib/libavcodec.so
 lib/libavcodec.so.54
-lib/libavcodec.so.54.86.100
+lib/libavcodec.so.54.92.100
 lib/libavdevice.a
 lib/libavdevice.so
 lib/libavdevice.so.54
-lib/libavdevice.so.54.3.102
+lib/libavdevice.so.54.3.103
 lib/libavfilter.a
 lib/libavfilter.so
 lib/libavfilter.so.3
-lib/libavfilter.so.3.32.100
+lib/libavfilter.so.3.42.103
 lib/libavformat.a
 lib/libavformat.so
 lib/libavformat.so.54
-lib/libavformat.so.54.59.106
+lib/libavformat.so.54.63.104
 lib/libavutil.a
 lib/libavutil.so
 lib/libavutil.so.52
-lib/libavutil.so.52.13.100
+lib/libavutil.so.52.18.100
 lib/libpostproc.a
 lib/libpostproc.so
 lib/libpostproc.so.52
@@ -106,7 +107,7 @@ lib/libswresample.so.0.17.102
 lib/libswscale.a
 lib/libswscale.so
 lib/libswscale.so.2
-lib/libswscale.so.2.1.103
+lib/libswscale.so.2.2.100
 lib/pkgconfig/libavcodec.pc
 lib/pkgconfig/libavdevice.pc
 lib/pkgconfig/libavfilter.pc
