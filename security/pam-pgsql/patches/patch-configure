@@ -1,0 +1,30 @@
+$NetBSD: patch-configure,v 1.1.1.1 2013/03/17 13:52:38 asau Exp $
+
+--- configure.orig	2011-03-27 07:08:25.000000000 +0000
++++ configure
+@@ -1136,6 +1136,9 @@ do
+   | --oldin=* | --oldi=* | --old=* | --ol=* | --o=*)
+     oldincludedir=$ac_optarg ;;
+ 
++  -pammoddir=* | --pammoddir=* | pammoddir=*)
++    pammoddir=$ac_optarg ;;
++
+   -prefix | --prefix | --prefi | --pref | --pre | --pr | --p)
+     ac_prev=prefix ;;
+   -prefix=* | --prefix=* | --prefi=* | --pref=* | --pre=* | --pr=* | --p=*)
+@@ -11390,6 +11393,7 @@ if test "x$ac_cv_header_security_pam_mod
+ 
+ fi
+ 
++if test "x$pammoddir" = "x"; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking where to install the PAM module" >&5
+ $as_echo_n "checking where to install the PAM module... " >&6; }
+ if test "x$ac_cv_header_security_openpam_h" = "xyes"; then :
+@@ -11402,6 +11406,7 @@ else
+ $as_echo "$as_me: WARNING: Unknown PAM implementation, defaulting to something safe" >&2;}
+ 
+ fi
++fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $pammoddir" >&5
+ $as_echo "$pammoddir" >&6; }
+ 

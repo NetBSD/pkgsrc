@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/03/17 13:52:38 asau Exp $
+
+SHA1 (pam-pgsql-0.7.3.1.tar.gz) = 55bef9c5159898897710d4d67f6092a48ce38b73
+RMD160 (pam-pgsql-0.7.3.1.tar.gz) = f55afb7f238d84c7fec98de4469d85e098a10552
+Size (pam-pgsql-0.7.3.1.tar.gz) = 301678 bytes
+SHA1 (patch-configure) = 9c3d61cf2bf5eeb56c8366eb43de75b7627d992b
