@@ -1,6 +1,6 @@
-$NetBSD: patch-da,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-da,v 1.2 2013/03/17 00:15:29 gdt Exp $
 
---- ov/UCD-fields.orig	2006-03-19 18:20:29.000000000 +0000
+--- ov/UCD-fields.orig	2012-10-09 22:28:58.000000000 +0000
 +++ ov/UCD-fields
 @@ -11,6 +11,7 @@ Field "SNMPAgent" {
  		"UCD Ultrix",
