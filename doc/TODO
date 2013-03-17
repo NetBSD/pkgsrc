@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12016 2013/03/17 15:47:24 wiz Exp $
+$NetBSD: TODO,v 1.12017 2013/03/17 16:10:57 taca Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SDL_gfx-2.0.24
-	o SOGo-2.0.4
 	o Sigil-0.7.1 [needs qt5]
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.18
@@ -1035,6 +1034,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rpm-5.3.6 [rpm5.org]
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
+	o ruby-2.0.0p0
 	o rudiments-0.41
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
