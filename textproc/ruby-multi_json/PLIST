@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/13 16:17:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/03/17 16:25:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.rspec
@@ -11,7 +11,9 @@ ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/multi_json.rb
+${GEM_LIBDIR}/lib/multi_json/adapter.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/gson.rb
+${GEM_LIBDIR}/lib/multi_json/adapters/jrjackson.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_common.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_gem.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_pure.rb
@@ -19,10 +21,13 @@ ${GEM_LIBDIR}/lib/multi_json/adapters/nsjsonserialization.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/oj.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/ok_json.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/yajl.rb
+${GEM_LIBDIR}/lib/multi_json/convertible_hash_keys.rb
+${GEM_LIBDIR}/lib/multi_json/options.rb
 ${GEM_LIBDIR}/lib/multi_json/vendor/okjson.rb
 ${GEM_LIBDIR}/lib/multi_json/version.rb
 ${GEM_LIBDIR}/multi_json.gemspec
 ${GEM_LIBDIR}/spec/adapter_shared_example.rb
+${GEM_LIBDIR}/spec/has_options.rb
 ${GEM_LIBDIR}/spec/helper.rb
 ${GEM_LIBDIR}/spec/json_common_shared_example.rb
 ${GEM_LIBDIR}/spec/multi_json_spec.rb
