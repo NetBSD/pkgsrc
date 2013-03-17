@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.69 2012/12/16 01:52:30 obache Exp $
+# $NetBSD: Makefile,v 1.69.2.1 2013/03/17 11:45:23 tron Exp $
 
-DISTNAME=	proftpd-1.3.3g
-PKGREVISION=	3
+DISTNAME=	proftpd-1.3.4c
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
 		ftp://ftp.fsn.hu/pub/proftpd/distrib/source/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.proftpd.org/
@@ -29,6 +28,8 @@ BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		proftpd
 REPLACE_PERL+=		contrib/ftpasswd
+REPLACE_PERL+=		contrib/ftpmail
+REPLACE_PERL+=		contrib/ftpquota
 REPLACE_PERL+=		src/prxs.in
 
 CONF_FILES=		${PREFIX}/share/examples/proftpd/basic.conf \
