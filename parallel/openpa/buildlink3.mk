@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/10/23 21:57:20 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/03/17 14:43:48 asau Exp $
 
 BUILDLINK_TREE+=	openpa
 
@@ -7,7 +7,6 @@ OPENPA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openpa+=	openpa>=1.0.1
 BUILDLINK_PKGSRCDIR.openpa?=	../../parallel/openpa
-BUILDLINK_DEPMETHOD.openpa?=	build
 .endif	# OPENPA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-openpa
