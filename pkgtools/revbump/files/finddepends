@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.6 2012/06/13 11:39:33 obache Exp $
+# $NetBSD: finddepends,v 1.7 2013/03/17 15:27:18 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 #
@@ -77,7 +77,7 @@ foreach $bl3 (@bl3files) {
     $content = "";
     while (<OUT>) {
 	chomp($_);
-	$content .= $_;
+	$content .= $_ unless $_ =~ m"^#";
     }
     close OUT;
     $bl3content{$bl3} = $content;
