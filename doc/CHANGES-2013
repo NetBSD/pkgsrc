@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1002 2013/03/17 15:32:16 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1003 2013/03/17 15:47:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1451,3 +1451,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.3 [obache 2013-03-17]
 	Updated x11/ruby-gnome2-gtksourceview3 to 1.2.3 [obache 2013-03-17]
 	Updated x11/ruby-gnome2-vte to 1.2.3 [obache 2013-03-17]
+	Updated textproc/py-lxml to 3.1.0 [wiz 2013-03-17]
