@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.991 2013/03/16 23:05:00 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.992 2013/03/17 00:32:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/ghostscript-cidfonts-ryumin to 9.05nb4 [dholland 2013-03-16]
 	Updated meta-pkgs/netbsd-www to 1.8 [dholland 2013-03-16]
 	Removed print/ghostscript successor print/ghostscript-gpl [dholland 2013-03-16]
+	Updated net/net-snmp to 5.7.2 [gdt 2013-03-17]
