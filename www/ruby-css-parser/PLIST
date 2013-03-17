@@ -1,22 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2011/03/23 15:31:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/17 15:56:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/css_parser.rb
 ${GEM_LIBDIR}/lib/css_parser/parser.rb
 ${GEM_LIBDIR}/lib/css_parser/regexps.rb
 ${GEM_LIBDIR}/lib/css_parser/rule_set.rb
-${GEM_LIBDIR}/test/fixtures/import-circular-reference.css
-${GEM_LIBDIR}/test/fixtures/import-with-media-types.css
-${GEM_LIBDIR}/test/fixtures/import1.css
-${GEM_LIBDIR}/test/fixtures/simple.css
-${GEM_LIBDIR}/test/fixtures/subdir/import2.css
-${GEM_LIBDIR}/test/test_css_parser_basic.rb
-${GEM_LIBDIR}/test/test_css_parser_loading.rb
-${GEM_LIBDIR}/test/test_css_parser_media_types.rb
-${GEM_LIBDIR}/test/test_css_parser_misc.rb
-${GEM_LIBDIR}/test/test_css_parser_regexps.rb
-${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/test_merging.rb
-${GEM_LIBDIR}/test/test_rule_set.rb
-${GEM_LIBDIR}/test/test_rule_set_creating_shorthand.rb
-${GEM_LIBDIR}/test/test_rule_set_expanding_shorthand.rb
+${GEM_LIBDIR}/lib/css_parser/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
