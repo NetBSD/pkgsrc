@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/08 15:37:33 taca Exp $
-${GEM_HOME}/cache/rbtree-${PKGVERSION}.gem
-${GEM_LIBDIR}/ChangeLog
+@comment $NetBSD: PLIST,v 1.5 2013/03/17 16:06:49 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README
@@ -8,7 +7,8 @@ ${GEM_LIBDIR}/depend
 ${GEM_LIBDIR}/dict.c
 ${GEM_LIBDIR}/dict.h
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/rbtree.${RUBY_DLEXT}
 ${GEM_LIBDIR}/rbtree.c
 ${GEM_LIBDIR}/rbtree.${RUBY_DLEXT}
 ${GEM_LIBDIR}/test.rb
-${GEM_HOME}/specifications/rbtree-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
