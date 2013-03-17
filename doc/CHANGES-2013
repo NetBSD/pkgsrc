@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1013 2013/03/17 16:07:16 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1014 2013/03/17 16:10:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1462,3 +1462,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/ruby-bundler to 1.3.4 [taca 2013-03-17]
 	Updated devel/ruby-rspec-core to 2.13.1 [taca 2013-03-17]
 	Updated devel/ruby-rbtree to 0.4.0 [taca 2013-03-17]
+	Updated devel/ruby-daemon_controller to 1.1.2 [taca 2013-03-17]
