@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL
+
+case ${STAGE} in
+POST-INSTALL)
+	ln -sf ${PREFIX}/lib/libnss_pgsql.so.2 /usr/lib/libnss_pgsql.so.2
+	;;
+esac

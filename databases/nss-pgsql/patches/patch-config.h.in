@@ -1,0 +1,30 @@
+# $NetBSD: patch-config.h.in,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+
+Defines NSSWITCH_H and SHADOW_H variables
+
+--- config.h.in.orig	2008-08-19 10:10:55.000000000 +0000
++++ config.h.in
+@@ -25,10 +25,14 @@
+ /* Define to 1 if you have the <nss.h> header file. */
+ #undef HAVE_NSS_H
+ 
++#undef HAVE_NSSWITCH_H
++
+ /* Define to 1 if your system has a GNU libc compatible `realloc' function,
+    and to 0 otherwise. */
+ #undef HAVE_REALLOC
+ 
++#undef HAVE_SHADOW_H
++
+ /* Define to 1 if you have the <stdint.h> header file. */
+ #undef HAVE_STDINT_H
+ 
+@@ -106,3 +110,8 @@
+ 
+ /* Define to `int' if <sys/types.h> doesn't define. */
+ #undef uid_t
++
++#ifdef __NetBSD__
++#include "netbsd.h"
++#endif
++

@@ -1,0 +1,15 @@
+# $NetBSD: patch-src_Makefile.in,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+
+Adds netbsd.c to source list - should we make it only used by NetBSD?
+
+--- src/Makefile.in.orig	2008-08-19 10:10:56.000000000 +0000
++++ src/Makefile.in
+@@ -86,7 +86,7 @@ VERSION = @VERSION@
+ docdir = @docdir@
+ 
+ lib_LTLIBRARIES = libnss_pgsql.la
+-libnss_pgsql_la_SOURCES = interface.c config.c backend.c util.c
++libnss_pgsql_la_SOURCES = interface.c config.c backend.c util.c netbsd.c
+ libnss_pgsql_la_LDFLAGS = -module -version-info 2
+ EXTRA_DIST = nss-pgsql.h
+ mkinstalldirs = $(SHELL) $(top_srcdir)/autoconf/mkinstalldirs

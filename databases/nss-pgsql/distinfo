@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+
+SHA1 (libnss-pgsql-1.5.0-beta.tgz) = 69cc58a849a58226a6321c0cd02e150f2d4a81ad
+RMD160 (libnss-pgsql-1.5.0-beta.tgz) = 9a81a636d69211a27e07084a3303f55e76e9786f
+Size (libnss-pgsql-1.5.0-beta.tgz) = 305543 bytes
+SHA1 (patch-config.h.in) = 988a8f524d73b053b15617dfe83eeb80851fd941
+SHA1 (patch-src_Makefile.in) = 416c72f8ccdeeee6e832245097ee34890684e5fe
+SHA1 (patch-src_backend.c) = 7a718b1419b39adbe657c82ece62d0e538ef0059
+SHA1 (patch-src_nss-pgsql.h) = 5e77c19649be46cdefbdfe307aca90eb10453fc7
