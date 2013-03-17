@@ -2,8 +2,6 @@ Ghostscript is the well-known PostScript interpreter which is available for
 all common and most esoteric platforms and supports many different printers
 and some displays.
 
-This is the latest version of Ghostscript, formerly being distributed
-under Aladdin Free Public License and released under GPL.  The main
-ghostscript version now includes support for cups, enabled by the
-"cups" option (which is off by default), and thus it is no longer
-necessary to use ghostscript-esp.
+Support for Cups is enabled by the "cups" option (off by default).
+
+This package contains Ghostscript 9.05, released under the GPL.
