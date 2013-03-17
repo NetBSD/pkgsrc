@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+lib/libnss_pgsql.la
+share/doc/nss-pgsql/AUTHORS
+share/doc/nss-pgsql/COPYING
+share/doc/nss-pgsql/INSTALL
+share/doc/nss-pgsql/NEWS
+share/doc/nss-pgsql/README
+share/doc/nss-pgsql/TODO
+share/doc/nss-pgsql/caution.png
+share/doc/nss-pgsql/nss-pgsql.html
+share/examples/nss-pgsql/dbschema.sql
+share/examples/nss-pgsql/nss-pgsql-root.conf
+share/examples/nss-pgsql/nss-pgsql.conf
+share/examples/nss-pgsql/nsswitch.conf
