@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12012 2013/03/17 00:32:41 gdt Exp $
+$NetBSD: TODO,v 1.12013 2013/03/17 14:50:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -982,7 +982,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o prboom-2.5.0.8
 	o profit-2.5.3
 	o projclock-0.9
-	o protobuf-2.5.0
 	o proxsmtp-1.10
 	o psmisc-22.18
 	o pstoedit-3.61
