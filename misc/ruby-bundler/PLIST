@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/03/11 15:12:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/03/17 16:04:37 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -176,6 +176,7 @@ ${GEM_LIBDIR}/spec/install/gemspec_spec.rb
 ${GEM_LIBDIR}/spec/install/git_spec.rb
 ${GEM_LIBDIR}/spec/install/invalid_spec.rb
 ${GEM_LIBDIR}/spec/install/path_spec.rb
+${GEM_LIBDIR}/spec/install/post_bundle_message_spec.rb
 ${GEM_LIBDIR}/spec/install/security_policy_spec.rb
 ${GEM_LIBDIR}/spec/install/upgrade_spec.rb
 ${GEM_LIBDIR}/spec/integration/inject.rb
