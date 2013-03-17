@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/12/16 16:15:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/03/17 15:47:15 wiz Exp $
 #
 
-DISTNAME=	lxml-3.0.2
+DISTNAME=	lxml-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://lxml.de/files/
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 TEST_TARGET=	test_inplace
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.7.8
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.26
