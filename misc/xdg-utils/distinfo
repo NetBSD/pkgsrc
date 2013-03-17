@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.3 2011/04/05 12:05:01 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/03/17 19:56:43 markd Exp $
 
-SHA1 (xdg-utils-1.0.2.tgz) = e41a04cbf9ff8d743397a2bc23c6ca82e8b59d2c
-RMD160 (xdg-utils-1.0.2.tgz) = 344482917e8c780613ec20b103f8e51322540c04
-Size (xdg-utils-1.0.2.tgz) = 282262 bytes
+SHA1 (xdg-utils-1.1.0-rc1.tar.gz) = 5bd5e2fe10e3055ccec347e8608476fab2d3eaca
+RMD160 (xdg-utils-1.1.0-rc1.tar.gz) = a3cbf8b6a71225933188efbd386f534b12c004e9
+Size (xdg-utils-1.1.0-rc1.tar.gz) = 300546 bytes
+SHA1 (patch-scripts_xdg-desktop-icon) = 306fadef265e310c8ce105bd92fe75ffbc69a74a
+SHA1 (patch-scripts_xdg-desktop-menu) = 28f4d6d872d9667cc891776b53d7409a0ab40ccb
+SHA1 (patch-scripts_xdg-email) = 3f233616c1dd81749bbab19d62c87c58db91a2fb
+SHA1 (patch-scripts_xdg-icon-resource) = 7ed65c902aa00823162f71c468b3c6bf499ac86c
+SHA1 (patch-scripts_xdg-mime) = 09b6040ca1fc448bdba3678c7d8c4b269073e115
+SHA1 (patch-scripts_xdg-open) = a6c1db8eff7b64b8b43676f2801bc93081abe7ff
+SHA1 (patch-scripts_xdg-screensaver) = e6efae6e52ea300d68d0486a651bed7a904c9694
+SHA1 (patch-scripts_xdg-settings) = fe8a89b2e5cb7b37f0b139305fda0eaebeede02f
