@@ -1,0 +1,15 @@
+$NetBSD: patch-gtest_configure,v 1.1 2013/03/17 14:50:14 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- gtest/configure.orig	2013-03-17 14:48:21.000000000 +0000
++++ gtest/configure
+@@ -15556,7 +15556,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+        have_pthreads="$acx_pthread_ok"
+ fi
+- if test "x$have_pthreads" == "xyes"; then
++ if test "x$have_pthreads" = "xyes"; then
+   HAVE_PTHREADS_TRUE=
+   HAVE_PTHREADS_FALSE='#'
+ else
