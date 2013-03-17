@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/03/17 13:52:38 asau Exp $
+lib/security/pam_pgsql.la
+share/doc/pam-pgsql/CHANGELOG
+share/doc/pam-pgsql/COPYRIGHT
+share/doc/pam-pgsql/CREDITS
+share/doc/pam-pgsql/README
+share/doc/pam-pgsql/sample.sql
