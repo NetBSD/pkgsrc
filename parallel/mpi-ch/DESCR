@@ -1,5 +1,5 @@
-MPICH is a freely available, portable implementation of MPI and MPI-2
-standard message-passing interface.
+MPICH is a freely available, portable implementation of MPI, MPI-2,
+and MPI-3 standard message-passing interface.
 
 Documentation on installing and using MPICH is available, as well as
 manual pages for the routines and commands.
