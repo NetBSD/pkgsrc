@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/02 19:33:29 wiz Exp $
-
-PKGREVISION=		1
+# $NetBSD: Makefile,v 1.2 2013/03/17 15:29:24 wiz Exp $
 
 CONFLICTS+=	Transmission-[0-9]*
 
