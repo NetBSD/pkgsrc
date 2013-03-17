@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/03/16 23:02:18 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/17 08:42:55 obache Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
@@ -56,7 +56,7 @@ NO_CONFIGURE=	yes
 
 .include "../../print/ghostscript-gpl/buildlink3.mk"
 
-.if empty(PKG_BUILD_OPTIONS.ghostscript:Mdisable-compile-inits)
+.if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits)
 PKG_FAIL_REASON+=	'You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
 .endif
 
