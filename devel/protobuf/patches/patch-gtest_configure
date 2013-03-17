@@ -1,6 +1,7 @@
-$NetBSD: patch-gtest_configure,v 1.1 2013/03/17 14:50:14 wiz Exp $
+$NetBSD: patch-gtest_configure,v 1.2 2013/03/17 14:54:36 wiz Exp $
 
 Fix unportable test(1) construct.
+http://code.google.com/p/protobuf/issues/detail?id=483
 
 --- gtest/configure.orig	2013-03-17 14:48:21.000000000 +0000
 +++ gtest/configure
