@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/01/14 11:34:52 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/03/17 16:03:14 taca Exp $
 
-SHA1 (domain_name-0.5.7.gem) = 396ef4451cdcd4129fde0b3fd36130008fecb48f
-RMD160 (domain_name-0.5.7.gem) = 6701ad425fc2e8b6b37c480b36e735fe4d18d23f
-Size (domain_name-0.5.7.gem) = 79360 bytes
+SHA1 (domain_name-0.5.8.gem) = fe9ba7e261fbca698fe0614b75aefb91e76f1bda
+RMD160 (domain_name-0.5.8.gem) = 5f62c20ef64e9b0036f6f198fd61b28bf01c9163
+Size (domain_name-0.5.8.gem) = 79360 bytes
