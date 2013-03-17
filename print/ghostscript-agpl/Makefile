@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/16 22:25:21 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/17 10:13:09 wiz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -31,7 +31,7 @@ UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
 INSTALL_TARGET=		soinstall
-CONFIGURE_ARGS+=	-with-omni=no	# otherwise pulls in libstdc++
+CONFIGURE_ARGS+=	--with-omni=no	# otherwise pulls in libstdc++
 
 REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
 REPLACE_PERL+=		toolbin/checkdeps.pl
