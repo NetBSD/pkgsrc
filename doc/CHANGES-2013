@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1009 2013/03/17 16:01:39 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1010 2013/03/17 16:03:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/heel to 3.0.2 [taca 2013-03-17]
 	Updated sysutils/ruby-facter to 1.6.18 [taca 2013-03-17]
 	Updated net/ruby-snmp to 1.1.1 [taca 2013-03-17]
+	Updated net/ruby-domain_name to 0.5.8 [taca 2013-03-17]
