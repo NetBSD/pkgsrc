@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 15:04:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/17 19:56:43 markd Exp $
 bin/xdg-desktop-icon
 bin/xdg-desktop-menu
 bin/xdg-email
@@ -6,6 +6,7 @@ bin/xdg-icon-resource
 bin/xdg-mime
 bin/xdg-open
 bin/xdg-screensaver
+bin/xdg-settings
 man/man1/xdg-desktop-icon.1
 man/man1/xdg-desktop-menu.1
 man/man1/xdg-email.1
@@ -13,3 +14,4 @@ man/man1/xdg-icon-resource.1
 man/man1/xdg-mime.1
 man/man1/xdg-open.1
 man/man1/xdg-screensaver.1
+man/man1/xdg-settings.1
