@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.998 2013/03/17 14:51:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.999 2013/03/17 15:06:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1431,3 +1431,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/openpa to 1.0.4 [asau 2013-03-17]
 	Updated devel/protobuf to 2.5.0 [wiz 2013-03-17]
 	Updated devel/py-distribute to 0.6.35 [wiz 2013-03-17]
+	Updated graphics/ImageMagick to 6.8.3.9 [wiz 2013-03-17]
