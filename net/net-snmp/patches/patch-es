@@ -1,6 +1,6 @@
-$NetBSD: patch-es,v 1.2 2011/05/27 10:55:26 adam Exp $
+$NetBSD: patch-es,v 1.3 2013/03/17 00:15:29 gdt Exp $
 
---- agent/mibgroup/ucd-snmp/memory_netbsd1.c.orig	2008-10-21 21:10:43.000000000 +0000
+--- agent/mibgroup/ucd-snmp/memory_netbsd1.c.orig	2012-10-09 22:28:58.000000000 +0000
 +++ agent/mibgroup/ucd-snmp/memory_netbsd1.c
 @@ -165,7 +165,7 @@ var_extensible_mem(struct variable *vp,
      static char     errmsg[1024];

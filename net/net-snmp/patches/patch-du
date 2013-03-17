@@ -1,6 +1,6 @@
-$NetBSD: patch-du,v 1.2 2008/09/08 12:58:09 adam Exp $
+$NetBSD: patch-du,v 1.3 2013/03/17 00:15:29 gdt Exp $
 
---- agent/mibgroup/hardware/memory/memory_freebsd.c.orig	2008-05-28 13:48:46.000000000 +0200
+--- agent/mibgroup/hardware/memory/memory_freebsd.c.orig	2012-10-09 22:28:58.000000000 +0000
 +++ agent/mibgroup/hardware/memory/memory_freebsd.c
 @@ -36,6 +36,12 @@ int netsnmp_mem_arch_load( netsnmp_cache
      long           pagesize;
@@ -12,11 +12,11 @@ $NetBSD: patch-du,v 1.2 2008/09/08 12:58:09 adam Exp $
 +    size_t vmem_size = sizeof(struct vmmeter);
 +#endif
 +
-     struct vmmeter vmem;
      struct vmtotal total;
      size_t         total_size  = sizeof(total);
-@@ -58,12 +64,18 @@ int netsnmp_mem_arch_load( netsnmp_cache
-     sysctl(user_mem_mib, 2, &user_mem, &mem_size,      NULL, 0);
+     int            total_mib[] = { CTL_VM, VM_METER };
+@@ -65,11 +71,17 @@ int netsnmp_mem_arch_load( netsnmp_cache
+     sysctlbyname("vm.stats.vm.v_inactive_count", &inact_count, &inact_size, NULL, 0);
      sysctlbyname("vfs.bufspace",    &bufspace,    &buf_size, NULL, 0);
      sysctlbyname("vfs.maxbufspace", &maxbufspace, &buf_size, NULL, 0);
 +#ifdef dragonfly
@@ -24,7 +24,6 @@ $NetBSD: patch-du,v 1.2 2008/09/08 12:58:09 adam Exp $
 +    sysctlbyname("vm.vmstats", &vms, &vms_size, NULL, 0);
 +    sysctlbyname("vm.vmmeter", &vmem, &vmem_size, NULL, 0);
 +#else
-     auto_nlist(SUM_SYMBOL,      (char *) &vmem,     sizeof(vmem));
  #ifndef freebsd4
      pagesize = 1024;
  #else
@@ -34,19 +33,19 @@ $NetBSD: patch-du,v 1.2 2008/09/08 12:58:09 adam Exp $
  
      /*
       * ... and save this in a standard form.
-@@ -129,9 +141,15 @@ int netsnmp_mem_arch_load( netsnmp_cache
+@@ -80,9 +92,15 @@ int netsnmp_mem_arch_load( netsnmp_cache
      } else {
          if (!mem->descr)
-              mem->descr = strdup("Cached memory");
+              mem->descr = strdup("Physical memory");
 +#ifdef dragonfly
 +        mem->units = vms.v_page_size;
 +        mem->size  = vms.v_cache_max;
 +        mem->free  = vms.v_cache_max - vms.v_cache_count;
 +#else
-         mem->units = vmem.v_page_size;
-         mem->size  = vmem.v_cache_max;
-         mem->free  = vmem.v_cache_max - vmem.v_cache_count;
+         mem->units = pagesize;
+         mem->size  = phys_mem/pagesize;
+         mem->free  = total.t_free;
 +#endif
      }
  
-     nswap = swapmode(pagesize);
+     mem = netsnmp_memory_get_byIdx( NETSNMP_MEM_TYPE_USERMEM, 1 );

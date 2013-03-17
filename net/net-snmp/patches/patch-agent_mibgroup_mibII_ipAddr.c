@@ -1,8 +1,8 @@
-$NetBSD: patch-agent_mibgroup_mibII_ipAddr.c,v 1.1 2013/03/12 17:14:49 kim Exp $
+$NetBSD: patch-agent_mibgroup_mibII_ipAddr.c,v 1.2 2013/03/17 00:15:29 gdt Exp $
 
---- agent/mibgroup/mibII/ipAddr.c.orig	2010-01-23 17:07:35.000000000 +0200
-+++ agent/mibgroup/mibII/ipAddr.c	2013-03-12 17:48:01.000000000 +0200
-@@ -218,6 +218,10 @@
+--- agent/mibgroup/mibII/ipAddr.c.orig	2012-10-09 22:28:58.000000000 +0000
++++ agent/mibgroup/mibII/ipAddr.c
+@@ -221,6 +221,10 @@ var_ipAddrEntry(struct variable *vp,
          if (Interface_Scan_Next(&interface, NULL, &ifnet, &in_ifaddr) == 0)
              break;
  #ifdef HAVE_STRUCT_IFNET_IF_ADDRLIST

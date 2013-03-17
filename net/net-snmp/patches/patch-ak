@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2011/05/27 10:55:25 adam Exp $
+$NetBSD: patch-ak,v 1.6 2013/03/17 00:15:29 gdt Exp $
 
---- agent/mibgroup/mibII/icmp.c.orig	2007-07-16 19:59:44.000000000 -0400
-+++ agent/mibgroup/mibII/icmp.c	2008-06-04 19:42:01.000000000 -0400
-@@ -455,6 +455,13 @@
+--- agent/mibgroup/mibII/icmp.c.orig	2012-10-09 22:28:58.000000000 +0000
++++ agent/mibgroup/mibII/icmp.c
+@@ -621,6 +621,13 @@ bail:
  #define USES_TRADITIONAL_ICMPSTAT
  #endif
  

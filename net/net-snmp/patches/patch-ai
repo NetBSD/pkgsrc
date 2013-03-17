@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2011/05/27 10:55:25 adam Exp $
+$NetBSD: patch-ai,v 1.7 2013/03/17 00:15:29 gdt Exp $
 
---- agent/mibgroup/mibII/ip.c.orig	2008-06-06 15:51:31.000000000 +0100
-+++ agent/mibgroup/mibII/ip.c	2008-06-06 15:55:38.000000000 +0100
-@@ -241,6 +241,18 @@
+--- agent/mibgroup/mibII/ip.c.orig	2012-10-09 22:28:58.000000000 +0000
++++ agent/mibgroup/mibII/ip.c
+@@ -255,6 +255,18 @@ long            ipTTL, oldipTTL;
  #define	USES_TRADITIONAL_IPSTAT
  #endif
  

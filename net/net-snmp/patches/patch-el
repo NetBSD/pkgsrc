@@ -1,8 +1,8 @@
-$NetBSD: patch-el,v 1.3 2011/05/27 10:55:26 adam Exp $
+$NetBSD: patch-el,v 1.4 2013/03/17 00:15:29 gdt Exp $
 
---- perl/OID/OID.xs.orig	2011-02-01 14:34:03.000000000 +0000
+--- perl/OID/OID.xs.orig	2012-10-09 22:28:58.000000000 +0000
 +++ perl/OID/OID.xs
-@@ -156,17 +156,22 @@ MODULE = NetSNMP::OID		PACKAGE = NetSNMP
+@@ -157,17 +157,22 @@ MODULE = NetSNMP::OID		PACKAGE = NetSNMP
  netsnmp_oid *
  nso_newptr(initstring)
      char *initstring
