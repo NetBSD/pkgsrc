@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/13 15:42:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/03/17 15:57:46 taca Exp $
 bin/heel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/HISTORY.rdoc
+${GEM_LIBDIR}/HISTORY.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/heel
 ${GEM_LIBDIR}/data/css/coderay-alpha.css
 ${GEM_LIBDIR}/data/css/coderay-cycnus.css
