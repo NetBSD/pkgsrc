@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.992 2013/03/17 00:32:41 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.993 2013/03/17 10:47:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1358,7 +1358,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/pear-Mail_Mime to 1.8.7 [taca 2013-03-16]
 	Updated textproc/pear-Console_Table to 1.1.5 [taca 2013-03-16]
 	Added math/pear-Math_BigInteger version 1.0.0 [taca 2013-03-16]
-	Updated www/php-apc to 3.1.14 [taca 2013-03-16]
 	Updated security/netpgpverify to 20130316 [agc 2013-03-16]
 	Updated devel/gmtk to 1.0.8 [obache 2013-03-16]
 	Updated multimedia/gnome-mplayer to 1.0.8 [obache 2013-03-16]
