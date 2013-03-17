@@ -1,4 +1,4 @@
-$NetBSD: README.Haiku,v 1.2 2010/09/30 12:01:09 obache Exp $
+$NetBSD: README.Haiku,v 1.3 2013/03/17 15:19:11 obache Exp $
 
 Please read the general README file as well.
 
@@ -9,4 +9,4 @@ Known problems:
  * Only tested with --unprivileged.
  * With gcc2, need to patch for system header files
    http://dev.haiku-os.org/ticket/5784
-   (It was fixed in r38711, so future release will not require the patch)
+   (It was fixed in r38711, so R1 alpha3 or later does not require the patch)
