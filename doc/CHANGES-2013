@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1021 2013/03/17 21:29:07 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.1022 2013/03/17 21:42:52 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1470,3 +1470,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/eigen3 version 3.1.2 [markd 2013-03-17]
 	Updated misc/xdg-utils to 1.1.0rc1 [markd 2013-03-17]
 	Updated games/onscripter to 20130316 [tsutsui 2013-03-17]
+	Updated www/curl to 7.29.0nb2 [tsutsui 2013-03-17]
+	Updated misc/openoffice3 to 3.1.1nb41 [tsutsui 2013-03-17]
