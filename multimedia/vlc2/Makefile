@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/02/16 11:23:44 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/03/18 09:18:16 sbd Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -27,7 +27,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
-PLIST_VARS+=		x86simd altivec v4l2
+PLIST_VARS+=		x86simd altivec v4l2 oss
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -52,6 +52,11 @@ CONFIGURE_ARGS+=	--enable-mmx \
 .if ${MACHINE_ARCH} == "powerpc"
 PLIST.altivec=		yes
 CONFIGURE_ARGS+=	--enable-altivec
+.endif
+
+# Linux uses alsa
+.if "${OPSYS}" != "Linux"
+PLIST.oss=		yes
 .endif
 
 # Enable when cleanly builds
@@ -146,6 +151,9 @@ BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .include "../../net/libupnp/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.if "${OPSYS}" == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
