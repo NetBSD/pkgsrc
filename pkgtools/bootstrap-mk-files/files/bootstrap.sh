@@ -14,9 +14,9 @@
 
 : ${CP:=cp}
 : ${SED:=sed}
-: ${OPSYS:=$(uname)}
-: ${ROOT_USER:=$(id -un 0)}
-: ${ROOT_GROUP:=$(id -gn "${ROOT_USER}")}
+: ${OPSYS:=`uname`}
+: ${ROOT_USER:=`id -un 0`}
+: ${ROOT_GROUP:=`id -gn "${ROOT_USER}"`}
 : ${MK_DST:=/usr/local/share/mk}
 : ${SYSCONFDIR:=/usr/local/etc}
 
