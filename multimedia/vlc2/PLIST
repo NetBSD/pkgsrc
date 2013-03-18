@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/01/20 15:31:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/03/18 09:18:16 sbd Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -105,7 +105,7 @@ ${PLIST.gnome}lib/vlc/plugins/access/libaccess_gnomevfs_plugin.la
 lib/vlc/plugins/access/libaccess_http_plugin.la
 lib/vlc/plugins/access/libaccess_imem_plugin.la
 lib/vlc/plugins/access/libaccess_mms_plugin.la
-lib/vlc/plugins/access/libaccess_oss_plugin.la
+${PLIST.oss}lib/vlc/plugins/access/libaccess_oss_plugin.la
 lib/vlc/plugins/access/libaccess_rar_plugin.la
 lib/vlc/plugins/access/libaccess_shm_plugin.la
 lib/vlc/plugins/access/libaccess_tcp_plugin.la
@@ -155,7 +155,7 @@ lib/vlc/plugins/audio_mixer/libfloat32_mixer_plugin.la
 lib/vlc/plugins/audio_output/libadummy_plugin.la
 lib/vlc/plugins/audio_output/libamem_plugin.la
 lib/vlc/plugins/audio_output/libaout_file_plugin.la
-lib/vlc/plugins/audio_output/liboss_plugin.la
+${PLIST.oss}lib/vlc/plugins/audio_output/liboss_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/audio_output/libpulse_plugin.la
 lib/vlc/plugins/codec/liba52_plugin.la
 lib/vlc/plugins/codec/libadpcm_plugin.la
