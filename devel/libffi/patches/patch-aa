@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2013/03/14 19:56:41 drochner Exp $
+$NetBSD: patch-aa,v 1.16 2013/03/18 10:04:11 jperkin Exp $
 
 Extend which ports we accept to deal with.
+
+Disable multilib directories.
 
 --- configure.orig	2013-02-11 19:24:24.000000000 +0000
 +++ configure
@@ -49,7 +51,19 @@ Extend which ports we accept to deal with.
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -16716,13 +16716,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -14826,11 +14826,6 @@ if test "x$GCC" = "xyes"; then
+     toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
+     toolexeclibdir='$(libdir)'
+   fi
+-  multi_os_directory=`$CC -print-multi-os-directory`
+-  case $multi_os_directory in
+-    .) ;; # Avoid trailing /.
+-    *) toolexeclibdir=$toolexeclibdir/$multi_os_directory ;;
+-  esac
+ 
+ else
+   toolexeclibdir='$(libdir)'
+@@ -16716,13 +16711,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
