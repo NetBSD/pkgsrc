@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12020 2013/03/17 19:41:23 markd Exp $
+$NetBSD: TODO,v 1.12021 2013/03/19 14:35:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -392,6 +392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
+	o aria2-1.16.4
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -477,7 +478,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cryptopp-5.6.0
 	o csound5-5.13
 	o ctwm-3.8.1
-	o cups-1.6.1
+	o cups-1.6.2
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsps-3.10
 	o cwm-5.1
@@ -504,11 +505,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o digikam-3.0.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
-	o doclifter-2.9
+	o doclifter-2.10
 	o dpkg-1.16.9 [pkg/47234]
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
-	o dvdstyler-2.4.1
+	o dvdstyler-2.4.2
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o echinus-0.4.9
@@ -683,7 +684,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtranslator-1.9.6
 	o guile-2.0.7
 	o guile-gtk-2.0
+	o gupnp-av-0.12.1
 	o gupnp-dlna-0.10.0
+	o gv-3.7.4
 	o gvfs-1.6.7
 	o gwaei-3.6.2
 	o gxine-0.5.907
@@ -846,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o manedit-1.2.1
 	o matchbox-panel-0.9.3
 	o mc-4.8.1.4
+	o mcsim-5.5.0
 	o mdds-0.7.0
 	o mdocml-1.12.1
 	o mergeant-0.67
@@ -890,7 +894,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ncview-2.1.1
 	o ne-2.01
 	o nessus-4.4.1
-	o netatalk-3.0.1
+	o netatalk-3.0.2
 	o netcdf-4.2.1.1
 	o netramet-50
 	o newmail-1.0.2
@@ -952,10 +956,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
 	o pen-0.17.3
+	o perl-5.16.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
 	o php-jpgraph-3.0.6
-	o php-owncloud-5.0
 	o php-tt-rss-1.7.6
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1002,6 +1006,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
+	o py-moin-1.9.7
 	o py-qt4-4.10
 	o py-simplejson-3.1.0
 	o py-sip-4.14.4
@@ -1041,7 +1046,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.41
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.0.3
+	o samba-3.6.13
+	o samba-4.0.4
 	o sarg-2.2.5
 	o sawfish-1.9.1
 	o saxon-9.2
@@ -1091,6 +1097,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spectrwm-2.1.1 [was scrotwm]
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
+	o sqlite-3.7.16
 	o squidclamav-6.10
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
