@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1025 2013/03/19 11:14:53 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1026 2013/03/19 14:30:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1475,3 +1475,4 @@ Changes to the packages collection and infrastructure in 2013:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q1 branch [wiz 2012-03-17]
 	Updated www/php-tt-rss to 1.6.2nb1 [wiz 2013-03-19]
 	Updated mail/milter-greylist to 4.4.3 [tron 2013-03-19]
+	Updated www/php-owncloud to 5.0.0 [ryoon 2013-03-19]
