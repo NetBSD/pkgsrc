@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1029 2013/03/19 15:37:18 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1030 2013/03/19 15:38:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-tt-rss to 1.7.4 [ryoon 2013-03-19]
 	Updated www/typo3_45 to 4.5.25nb2 [taca 2013-03-19]
 	Updated www/typo3_46 to 4.6.18nb2 [taca 2013-03-19]
+	Updated www/typo3_47 to 4.7.10nb2 [taca 2013-03-19]
