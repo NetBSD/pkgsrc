@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/03/19 14:29:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/03/19 15:10:09 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -3057,7 +3057,6 @@ share/owncloud/apps/user_ldap/l10n/zh_CN.GB2312.php
 share/owncloud/apps/user_ldap/l10n/zh_CN.php
 share/owncloud/apps/user_ldap/l10n/zh_TW.php
 share/owncloud/apps/user_ldap/lib/access.php
-share/owncloud/apps/user_ldap/lib/access.php.orig
 share/owncloud/apps/user_ldap/lib/connection.php
 share/owncloud/apps/user_ldap/lib/helper.php
 share/owncloud/apps/user_ldap/lib/jobs.php
