@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1023 2013/03/18 15:21:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1024 2013/03/19 08:51:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1473,3 +1473,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/curl to 7.29.0nb2 [tsutsui 2013-03-17]
 	Updated misc/openoffice3 to 3.1.1nb41 [tsutsui 2013-03-17]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q1 branch [wiz 2012-03-17]
+	Updated www/php-tt-rss to 1.6.2nb1 [wiz 2013-03-19]
