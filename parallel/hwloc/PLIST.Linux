@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2013/03/19 20:06:10 sbd Exp $
+bin/hwloc-gather-topology
+include/hwloc/glibc-sched.h
+include/hwloc/linux-libnuma.h
+include/hwloc/linux.h
+man/man1/hwloc-gather-topology.1
