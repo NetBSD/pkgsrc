@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/01/03 13:59:44 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/03/19 15:24:37 ryoon Exp $
 
-SHA1 (tt-rss-1.6.2.tar.gz) = b0dd38e0b32aeca55ca276fc3c24dacb61746341
-RMD160 (tt-rss-1.6.2.tar.gz) = 6aa7c5208f0811530be5a1e633f675c998f5f2db
-Size (tt-rss-1.6.2.tar.gz) = 2078889 bytes
+SHA1 (Tiny-Tiny-RSS-1.7.4.tar.gz) = 2e73ebbf2ef0518ef0f146547ba61eaf17050239
+RMD160 (Tiny-Tiny-RSS-1.7.4.tar.gz) = 88a3c193d98d01857aedd833cd7da536b8930474
+Size (Tiny-Tiny-RSS-1.7.4.tar.gz) = 2087145 bytes
