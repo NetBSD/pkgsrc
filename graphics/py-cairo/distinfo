@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.14 2011/06/30 22:50:21 alnsn Exp $
+$NetBSD: distinfo,v 1.15 2013/03/19 12:19:39 drochner Exp $
 
 SHA1 (py2cairo-1.8.10.tar.gz) = 6bb0b3e0249bce9fc0480aadad0c602d32f26ec1
 RMD160 (py2cairo-1.8.10.tar.gz) = 932e19f2f582bdf5735bdc92720b76edfb0a0c8e
 Size (py2cairo-1.8.10.tar.gz) = 588459 bytes
-SHA1 (patch-aa) = d999b96f0ece317bf39394734079ec1695d2ea9e
-SHA1 (patch-ab) = fea4d5ff3f03414e2014d32fd4a7fb7b5a379100
-SHA1 (patch-ac) = 9047c33f8bd7cdc1e537d3b083b33601bcbe8954
