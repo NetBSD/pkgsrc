@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/01/03 13:59:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/19 08:51:43 wiz Exp $
 #
 
 DISTNAME=	tt-rss-1.6.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://tt-rss.org/download/
 
@@ -10,6 +11,10 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://tt-rss.org/
 COMMENT=	Tiny Tiny RSS is an open source web-based RSS feed reader
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 
 .include "options.mk"
 
