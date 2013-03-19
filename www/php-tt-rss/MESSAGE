@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/03/19 08:51:43 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2013/03/19 15:24:37 ryoon Exp $
 
 To use php-tt-rss with Apache 2.4 and php 5.4, you will need to perform
 the following steps.
@@ -38,7 +38,7 @@ the following steps.
 
 7. Check created database
 
-	$ psql -l
+	$ psql -U pgsql -l
                           List of databases
    Name    | Owner | Encoding  | Collate | Ctype | Access privileges
 -----------+-------+-----------+---------+-------+-------------------
