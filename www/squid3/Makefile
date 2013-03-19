@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/03/13 17:11:25 taca Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/19 01:43:05 obache Exp $
 
 DISTNAME=	squid-3.3.3
 PKGREVISION=	1
@@ -32,6 +32,11 @@ CONF_FILES+=	${PREFIX}/${EGDIR}/errorpage.css ${PKG_SYSCONFDIR}/errorpage.css
 SQUID_BACKENDS?=	ufs
 SQUID_NTLM_AUTH_HELPERS?= fakeauth
 .include "options.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5]*-i386)
+GNU_ARCH.i386=	i486
+CFLAGS+=	-march=i486
+.endif
 
 post-build:
 	cd ${WRKSRC}/src && ${CP} -pf squid.conf.documented squid.conf.default
