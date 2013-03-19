@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/01/03 13:59:44 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2013/03/19 08:51:43 wiz Exp $
 
-To use itt-rss with Apache 2.4 and php 5.4, you will need to perform
+To use php-tt-rss with Apache 2.4 and php 5.4, you will need to perform
 the following steps.
 
 1. Install www/apache24 and www/ap-php
@@ -17,14 +17,14 @@ the following steps.
 
 4. Add PostgreSQL user, ttrss
 
-	$ sudo -u pgsql createuser ttrss
+	$ createuser -U pgsql ttrss
 	Shall the new role be a superuser? (y/n) n
 	Shall the new role be allowed to create databases? (y/n) y
 	Shall the new role be allowed to create more new roles? (y/n) n
 
 5. Set password for ttrss user
 
-	$ sudo -u pgsql psql template1
+	$ psql -U pgsql template1
 	psql (9.1.7)
 	Type "help" for help.
 
@@ -34,11 +34,11 @@ the following steps.
 
 6. Create database for ttrss, ttrss_db
 
-	$ sudo -u pgsql createdb ttrss_db -O ttrss -U ttrss
+	$ createdb ttrss_db -O ttrss -U ttrss
 
 7. Check created database
 
-	$ sudo -u pgsql psql -l
+	$ psql -l
                           List of databases
    Name    | Owner | Encoding  | Collate | Ctype | Access privileges
 -----------+-------+-----------+---------+-------+-------------------
@@ -47,7 +47,7 @@ the following steps.
 
 8. Initialize database
 
-	$ sudo -u pgsql psql -U ttrss -d ttrss_db -p 5432 -f \
+	$ psql -U ttrss -d ttrss_db -p 5432 -f \
 		${PREFIX}/share/tt-rss/schema/ttrss_schema_pgsql.sql
 
 9. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
@@ -86,4 +86,5 @@ the following steps.
 
 11. Access http://localhost/ , and login with
     login/password = "admin"/"password".
+
 ===========================================================================
