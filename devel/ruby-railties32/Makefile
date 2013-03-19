@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/12 14:33:08 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/19 16:17:50 taca Exp $
 
 DISTNAME=	railties-${RUBY_RAILS_VERSION}
 CATEGORIES=	databases
@@ -9,7 +9,7 @@ COMMENT=	Tools for creating, working with, and running Rails 3.2
 LICENSE=	mit
 
 # Comment out dependency in gemspec but already depends indirectly one.
-DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.14.6:../../devel/ruby-thor
+DEPENDS+=	${RUBY_PKGPREFIX}-thor<2.0:../../devel/ruby-thor
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-ssl>=1.3.2<1.4:../../www/ruby-rack-ssl
 #DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/05 14:22:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/19 16:17:50 taca Exp $
 bin/rails
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -225,7 +225,6 @@ ${GEM_LIBDIR}/guides/source/active_record_querying.textile
 ${GEM_LIBDIR}/guides/source/active_record_validations_callbacks.textile
 ${GEM_LIBDIR}/guides/source/active_resource_basics.textile
 ${GEM_LIBDIR}/guides/source/active_support_core_extensions.textile
-${GEM_LIBDIR}/guides/source/ajax_on_rails.textile
 ${GEM_LIBDIR}/guides/source/api_documentation_guidelines.textile
 ${GEM_LIBDIR}/guides/source/asset_pipeline.textile
 ${GEM_LIBDIR}/guides/source/association_basics.textile
