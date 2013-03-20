@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.30 2012/08/05 21:29:46 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.31 2013/03/20 01:29:24 obache Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -117,10 +117,12 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
       <listitem>
 	<para><filename>motif.buildlink3.mk</filename> checks for a
 	system-provided Motif installation or adds a dependency on
-	<filename role="pkg">x11/lesstif</filename> or <filename
+	<filename role="pkg">x11/lesstif</filename>, <filename
+	role="pkg">x11/motif</filename> or <filename
 	role="pkg">x11/openmotif</filename>.  The user can set
 	<varname>MOTIF_TYPE</varname> to <quote>dt</quote>,
-	<quote>lesstif</quote>, or <quote>openmotif</quote> to choose
+	<quote>lesstif</quote>, <quote>motif</quote> or
+	<quote>openmotif</quote> to choose
 	which Motif version will be used.</para>
       </listitem>
 
