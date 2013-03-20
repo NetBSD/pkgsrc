@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/02/16 11:22:46 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/03/20 05:59:01 obache Exp $
 #
 
 DISTNAME=		scim-ccinput-0.3.1
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		inputmethod chinese
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,14 @@ USE_TOOLS+=		pkg-config bash msgfmt
 CONFIG_SHELL=		${BASH}
 
 USE_SCIM_GTKUTILS=	yes
+
+SUBST_CLASSES+=		localedir
+SUBST_STAGE.localedir=	pre-configure
+SUBST_SED.localedir+=	-e 's,\$$(datadir)/locale,@prefix@/${PKGLOCALEDIR}/locale,'
+SUBST_SED.localedir+=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,'
+SUBST_FILES.localedir=	po/Makefile.am po/Makefile.in
+SUBST_FILES.localedir+= scim/IMEngine/scim_ccin_imengine.cpp
+SUBST_FILES.localedir+=	scim/SetupUI/scim_ccin_imengine_setup.cpp
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
