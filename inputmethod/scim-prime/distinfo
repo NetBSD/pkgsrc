@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:04:46 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/03/20 06:54:41 obache Exp $
 
 SHA1 (scim-prime-1.0.1.tar.gz) = d4f9cef3a2bc665a515152429a5a30de338bb73d
 RMD160 (scim-prime-1.0.1.tar.gz) = 1510d16b30e4ee46198506928b4e69fba7fa07a0
 Size (scim-prime-1.0.1.tar.gz) = 556999 bytes
+SHA1 (patch-src_prime__connection.cpp) = b1fe74fb3acbe5d90cb189c4f81d9ed8de8244b8
