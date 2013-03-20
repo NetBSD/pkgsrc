@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12022 2013/03/19 15:49:48 ryoon Exp $
+$NetBSD: TODO,v 1.12023 2013/03/20 09:13:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o MAMEDiff-2.30
-	o Mesa-9.1
+	o Mesa-9.1.1
 	o MesaLib-9.1
 	o PAM-0.99.7.1
 	o REminiscence-0.1.9
@@ -706,7 +706,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htop-1.0.2
-	o httping-1.5.8
+	o httping-2.0
 	o httptunnel-3.3
 	o hugin-2012.0.0
 	o hylafax-6.0.5
@@ -784,6 +784,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.0.0
 	o libflash-0.4.13
 	o libfolks-0.8.0
+	o libgcrypt-1.5.1
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
@@ -876,6 +877,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.5.1
 	o mp3splt-gtk-0.7.3
 	o mpeg4ip-1.6.1
+	o mpfr-3.1.2
 	o mpg123-1.15.1
 	o mpop-1.0.27
 	o mserv-devel-0.41
