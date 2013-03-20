@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/08/19 09:04:17 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/03/20 06:15:58 obache Exp $
 
 SHA1 (scim-hangul-0.4.0.tar.gz) = 2ba06a6d851a1d86c5a9b659c573bfd87e6a7555
 RMD160 (scim-hangul-0.4.0.tar.gz) = 7c03cb5461e05f1d4944bef06ebf25005ee0e403
 Size (scim-hangul-0.4.0.tar.gz) = 456953 bytes
+SHA1 (patch-src_scim__hangul__imengine.cpp) = ee684faefa3d9a54d44edc92d1559172774bcf06
 SHA1 (patch-src_scim__hangul__imengine__setup.cpp) = ef01740a3e28cff8c6aa60036c53772f95fb7a19
