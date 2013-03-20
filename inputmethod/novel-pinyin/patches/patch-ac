@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/11/24 12:13:02 obache Exp $
+$NetBSD: patch-ac,v 1.2 2013/03/20 05:25:58 obache Exp $
 
-Use C++ way for getline(3) less platforms.
+* Use C++ way for getline(3) less platforms.
+* fixes bogus NULL usage as Integer 0.
 
 --- tests/lookup/test_simple_lookup.cpp.orig	2008-07-21 12:39:27.000000000 +0000
 +++ tests/lookup/test_simple_lookup.cpp
@@ -19,3 +20,12 @@ Use C++ way for getline(3) less platforms.
          linebuf[strlen(linebuf)-1] = '\0';
  	if ( strcmp ( linebuf, "quit" ) == 0)
  	    break;
+@@ -91,7 +93,7 @@ int main( int argc, char * argv[]){
+ 	print_time(start_time, times);
+ 	for ( size_t i = 0; i < results->len; ++i){
+ 	    phrase_token_t * token = &g_array_index(results, phrase_token_t, i);
+-	    if ( NULL == *token)
++	    if ( 0 == *token)
+ 		continue;
+ 	    printf("pos:%d,token:%d\t", i, *token);
+ 	}
