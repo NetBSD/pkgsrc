@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2012/02/01 10:38:18 obache Exp $
+$NetBSD: patch-ac,v 1.3 2013/03/20 07:25:37 obache Exp $
 
 * Not to be unwanted CFLAGS modification. 
 * Use pkgsrc's PTHREAD related compiler flags.
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.2 2012/02/01 10:38:18 obache Exp $
  CFLAGS="$CFLAGS -std=gnu99 -Wall -Wextra"
 -CPPFLAGS="$CPPFLAGS -I$includedir -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
 -LDFLAGS="$LDFLAGS -L$libdir -lpthread"
-+CPPFLAGS="$CPPFLAGS -I$includedir $PTHREAD_CFLAGS"
++CPPFLAGS="$CPPFLAGS -I$includedir $PTHREAD_CFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
 +LDFLAGS="$LDFLAGS -L$libdir $PTHREAD_LDFLAGS $PTHREAD_LIBS"
  
  
