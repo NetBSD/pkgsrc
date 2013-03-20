@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2013/03/20 05:33:24 asau Exp $
+include/hwloc/solaris-chiptype.h
