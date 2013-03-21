@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/03/15 08:10:04 plunky Exp $
+$NetBSD: distinfo,v 1.8 2013/03/21 06:49:12 sbd Exp $
 
 SHA1 (openobex-1.7-Source.tar.gz) = 9fb8de31b551fd116991641f296d64be98f84b27
 RMD160 (openobex-1.7-Source.tar.gz) = f4b80ac9533953312c0482e83ec5445550100eb6
 Size (openobex-1.7-Source.tar.gz) = 130372 bytes
+SHA1 (patch-lib_api.c) = 4ea3f2b8179a52a4d1266395a4f20b572582903f
