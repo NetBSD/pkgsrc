@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1034 2013/03/20 05:59:42 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1035 2013/03/21 00:14:04 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rails32 to 3.2.13 [taca 2013-03-19]
 	Updated parallel/hwloc to 1.5nb2 [sbd 2013-03-19]
 	Updated inputmethod/scim-ccinput to 0.3.1nb15 [obache 2013-03-20]
+	Updated editors/sandy to 0.4 [mspo 2013-03-21]
