@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/21 00:11:06 mspo Exp $
-bin/sandy
-man/man1/sandy.1
