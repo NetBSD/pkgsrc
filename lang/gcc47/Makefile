@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/03/01 15:24:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2013/03/21 11:17:11 wiz Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -75,6 +75,9 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
+.endif
+.if !empty(LOWER_ARCH:Mi386)
+CONFIGURE_ARGS+= --with-arch=i486 --with-tune=i486
 .endif
 
 .include "options.mk"
