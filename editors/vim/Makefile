@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2012/10/03 11:43:46 asau Exp $
+# $NetBSD: Makefile,v 1.73 2013/03/21 00:29:05 mspo Exp $
 
 PKGNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -26,5 +26,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
+#.include "../../mk/termcap.buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
