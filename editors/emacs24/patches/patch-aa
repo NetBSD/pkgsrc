@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2013/03/15 22:45:00 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2013/03/22 18:05:10 marino Exp $
 
 Add DragonFly
 
@@ -19,6 +19,15 @@ Add DragonFly
  
    ## Silicon Graphics machines
    ## Iris 4D
+@@ -906,7 +914,7 @@ esac
+ 
+ LD_SWITCH_SYSTEM=
+ case "$opsys" in
+-  freebsd)
++  dragonfly|freebsd)
+    ## Let `ld' find image libs and similar things in /usr/local/lib.
+    ## The system compiler, GCC, has apparently been modified to not
+    ## look there, contrary to what a stock GCC would do.
 @@ -992,7 +1000,7 @@ case "$opsys" in
    ## IBM's X11R5 uses -lIM and -liconv in AIX 3.2.2.
    aix4-2) LIBS_SYSTEM="-lrts -lIM -liconv" ;;
@@ -69,3 +78,98 @@ Add DragonFly
    netbsd | openbsd )
      if test -f $CRT_DIR/crti.o; then
  
+@@ -2834,7 +2869,7 @@ mail_lock=no
+ case "$opsys" in
+   aix4-2) mail_lock="lockf" ;;
+ 
+-  gnu|freebsd|netbsd|openbsd|darwin|irix6-5) mail_lock="flock" ;;
++  gnu|dragonfly|freebsd|netbsd|openbsd|darwin|irix6-5) mail_lock="flock" ;;
+ 
+   ## On GNU/Linux systems, both methods are used by various mail programs.
+   ## I assume most people are using newer mailers that have heard of flock.
+@@ -2988,6 +3023,11 @@ case "$opsys" in
+   ##  option to use it.
+   darwin) LIBS_TERMCAP="-lncurses" ;;
+ 
++  dragonfly)
++    TERMINFO=yes
++    LIBS_TERMCAP="-lncurses"
++    ;;
++
+   gnu*) test -z "$LIBS_TERMCAP" && LIBS_TERMCAP="-lncurses" ;;
+ 
+   freebsd)
+@@ -3439,7 +3479,7 @@ case $opsys in
+ esac
+ 
+ case $opsys in
+-  darwin | freebsd | netbsd | openbsd )
++  darwin | dragonfly | freebsd | netbsd | openbsd )
+     AC_DEFINE(DONT_REOPEN_PTY, 1, [Define if process.c does not need to
+       close a pty to make it a controlling terminal (it is already a
+       controlling terminal of the subprocess, because we did ioctl TIOCSCTTY).])
+@@ -3545,7 +3585,7 @@ case $opsys in
+     AC_DEFINE(FIRST_PTY_LETTER, ['p'])
+     ;;
+ 
+-  gnu-linux | gnu-kfreebsd | freebsd | netbsd )
++  gnu-linux | gnu-kfreebsd | dragonfly | freebsd | netbsd )
+     dnl if HAVE_GRANTPT
+     if test "x$ac_cv_func_grantpt" = xyes; then
+       AC_DEFINE(UNIX98_PTYS, 1, [Define if the system has Unix98 PTYs.])
+@@ -3628,7 +3668,7 @@ AH_TEMPLATE(SIGNALS_VIA_CHARACTERS, [Mak
+ case $opsys in
+   dnl Perry Smith <pedz@ddivt1.austin.ibm.com> says this is correct for AIX.
+   dnl thomas@mathematik.uni-bremen.de says this is needed for IRIX.
+-  aix4-2 | cygwin | gnu | irix6-5 | freebsd | netbsd | openbsd | darwin )
++  aix4-2 | cygwin | gnu | irix6-5 | dragonfly | freebsd | netbsd | openbsd | darwin )
+     AC_DEFINE(SIGNALS_VIA_CHARACTERS, 1)
+     ;;
+ 
+@@ -3725,6 +3765,10 @@ else                            dnl !ema
+       AC_DEFINE(PENDING_OUTPUT_COUNT(FILE), [((FILE)->_p - (FILE)->_bf._base)])
+       ;;
+ 
++    dragonfly)
++      AC_DEFINE(PENDING_OUTPUT_COUNT(FILE), [__fpending (FILE)])
++      ;;
++
+     unixware)
+       AC_DEFINE(PENDING_OUTPUT_COUNT(FILE), [((FILE)->__ptr - (FILE)->__base)])
+       ;;
+@@ -3782,7 +3826,7 @@ AH_TEMPLATE(TAB3, [Undocumented.])
+ case $opsys in
+   darwin) AC_DEFINE(TAB3, OXTABS) ;;
+ 
+-  gnu | freebsd | netbsd | openbsd )
++  gnu | dragonfly | freebsd | netbsd | openbsd )
+     AC_DEFINE(TABDLY, OXTABS, [Undocumented.])
+     AC_DEFINE(TAB3, OXTABS)
+     ;;
+@@ -3859,7 +3903,7 @@ if test x$GCC = xyes; then
+ else
+   case $opsys in
+     dnl irix: Tested on Irix 6.5.  SCM worked on earlier versions.
+-    freebsd | netbsd | openbsd | irix6-5 | sol2* )
++    dragonfly | freebsd | netbsd | openbsd | irix6-5 | sol2* )
+       AC_DEFINE(GC_SETJMP_WORKS, 1)
+       ;;
+   esac
+@@ -3959,7 +4003,7 @@ case $opsys in
+     AC_DEFINE(BSD_SYSTEM_AHB, 1, [Define if AH_BOTTOM should change BSD_SYSTEM.])
+     ;;
+ 
+-  gnu | netbsd | openbsd )
++  gnu | dragonfly | netbsd | openbsd )
+     AC_DEFINE(BSD4_2, [])
+     AC_PREPROC_IFELSE([AC_LANG_PROGRAM([[
+ #ifndef BSD_SYSTEM
+@@ -4415,7 +4459,7 @@ LIB_GCC=
+ if test "x$GCC" = "xyes" && test "x$ORDINARY_LINK" != "xyes"; then
+ 
+   case "$opsys" in
+-    freebsd|netbsd|openbsd) LIB_GCC= ;;
++    dragonfly|freebsd|netbsd|openbsd) LIB_GCC= ;;
+ 
+     gnu-*)
+       ## armin76@gentoo.org reported that the lgcc_s flag is necessary to
