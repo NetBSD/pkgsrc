@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2013/03/15 22:45:00 wiz Exp $
+$NetBSD: distinfo,v 1.10 2013/03/22 18:05:09 marino Exp $
 
 SHA1 (emacs-24.3.tar.gz) = 3c672a176df06e20d2661058ad49893f184b4956
 RMD160 (emacs-24.3.tar.gz) = b67e847861002bbb76ae6588ff659408763313cf
 Size (emacs-24.3.tar.gz) = 52543898 bytes
-SHA1 (patch-aa) = 0a7b298996c482f6c736597f66b34c992421e3ce
-SHA1 (patch-ab) = 043e6bb77ef2623424b4142cd137101ab2c8a295
+SHA1 (patch-aa) = 9c1c68344f446b85eba7d3bdc244ffa7c1983b67
+SHA1 (patch-ab) = 1143637a0fdc6ebc9503691f6e90c630c98532d2
 SHA1 (patch-ad) = 2dcb0f4b43c599d0c4af83b5f7e1f2797f96bdac
 SHA1 (patch-ag) = 407d34e97356c2e8bee26f0fd90f116dd194afcb
 SHA1 (patch-lib-careadlinkat.h) = f236d182e609bf7111c70e83e10806a75a220c29
