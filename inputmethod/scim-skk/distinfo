@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:06:33 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/03/22 13:37:21 obache Exp $
 
 SHA1 (scim-skk-0.5.2.tar.gz) = 0ddcad937bbed9d94a0076fded26e197e7d24d21
 RMD160 (scim-skk-0.5.2.tar.gz) = 9afa61e0316bef6348186a9c1d4671ff7462546e
 Size (scim-skk-0.5.2.tar.gz) = 534157 bytes
 SHA1 (patch-aa) = bc95f98da2ca4942ee818b3087e4b4c7f6be648a
+SHA1 (patch-src_scim__skk__imengine__setup.cpp) = 3fc83d4dc4f1ca8e67f0f9ba3b2bdb61b26a59ad
