@@ -1,15 +1,20 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+$NetBSD: patch-ac,v 1.2 2013/03/22 13:29:42 obache Exp $
 
-add wanted convert.
+* let to cast with appropriate type.
 
 --- src/scim-python-factory.cpp.orig	2008-07-11 04:16:15.000000000 +0000
 +++ src/scim-python-factory.cpp
-@@ -134,14 +134,14 @@ PyIMEngineFactory::get_attr_unicode (cha
+@@ -130,18 +130,18 @@ PyIMEngineFactory::get_attr_unicode (cha
+ 	if (pValue) {
+ 		if (PyUnicode_Check (pValue)) {
+ 		#if Py_UNICODE_SIZE == 4
+-			result = (wchar_t *)PyUnicode_AS_UNICODE (pValue);
++			result = (scim::ucs4_t *)PyUnicode_AS_UNICODE (pValue);
  		#else
  			gunichar *unistr = g_utf16_to_ucs4 (PyUnicode_AS_UNICODE (pValue),
  						PyUnicode_GET_SIZE (pValue), NULL, NULL, NULL);
 -			result = (wchar_t *) unistr;
-+			result = WideString(unistr);
++			result = WideString((scim::ucs4_t *)unistr);
  			g_free (unistr);
  		#endif
  		}
@@ -17,7 +22,7 @@ add wanted convert.
  			gunichar *unistr = g_utf8_to_ucs4 (PyString_AsString (pValue),
  						PyString_GET_SIZE (pValue), NULL, NULL, NULL);
 -			result = (wchar_t *)unistr;
-+			result = WideString(unistr);
++			result = WideString((scim::ucs4_t *)unistr);
  			g_free (unistr);
  		}
  		Py_DECREF (pValue);
