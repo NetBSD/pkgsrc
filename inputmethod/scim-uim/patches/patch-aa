@@ -1,11 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/11/24 12:10:25 obache Exp $
+$NetBSD: patch-aa,v 1.2 2013/03/22 13:41:32 obache Exp $
 
-UIM 1.4.x / 1.5.x API changes
+* require <cstring> for strncmp()
+* UIM 1.4.x / 1.5.x API changes
 
 --- src/scim_uim_imengine.cpp.orig	2007-04-10 05:43:59.000000000 +0000
 +++ src/scim_uim_imengine.cpp
-@@ -34,7 +34,8 @@
+@@ -32,9 +32,11 @@
+   #include <config.h>
+ #endif
  
++#include <cstring>
  #include <scim.h>
  #include "scim_uim_imengine.h"
 -#include <uim/uim-compat-scm.h>
