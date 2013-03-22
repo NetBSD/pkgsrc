@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:10:25 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/03/22 13:41:32 obache Exp $
 
 SHA1 (scim-uim-0.2.0.tar.gz) = 456621d5969b6552c3c33c83cf295aa4134fff0a
 RMD160 (scim-uim-0.2.0.tar.gz) = 4cb0261742e4d67317535da1a01de7fa803139ca
 Size (scim-uim-0.2.0.tar.gz) = 344389 bytes
-SHA1 (patch-aa) = e97ef47ab14eb68cf16c627fe612fc0b56485bc5
+SHA1 (patch-aa) = 0a3df65705bdace3ef6bcea61e46d801611d206f
