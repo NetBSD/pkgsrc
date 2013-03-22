@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2013/02/18 20:02:38 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.69 2013/03/22 08:43:31 sbd Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -86,7 +86,7 @@ _ZSH_OPSYS_VARS.notcsetpgrp=	--without-tcsetpgrp
 ### terminfo
 CHECK_BUILTIN.terminfo=	yes
 .include "../../mk/terminfo.builtin.mk"
-.if !empty(USE_BUILTIN.terminfo:M[Yy][Ee][Ss])
+.if !empty(USE_BUILTIN.terminfo:M[Yy][Ee][Ss]) || ${OPSYS} == "Linux"
 PLIST.terminfo=	yes
 .endif
 
@@ -94,7 +94,7 @@ PLIST.terminfo=	yes
 .if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*)
 CHECK_BUILTIN.curses=	yes
 .include "../../mk/curses.builtin.mk"
-.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS"
+.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 PLIST.curses=	yes
 .endif
 .endif
