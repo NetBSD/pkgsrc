@@ -1,8 +1,8 @@
-$NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:55:30 ryoon Exp $
+$NetBSD: patch-aa-toplevel,v 1.11 2013/03/22 21:02:46 ryoon Exp $
 
---- configure.in.orig	2012-11-18 10:14:23.000000000 +0000
+--- configure.in.orig	2013-02-18 03:58:37.000000000 +0000
 +++ configure.in
-@@ -1797,7 +1797,7 @@ ld.])
+@@ -1573,7 +1573,7 @@ ld.])
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:55:30 ryoon Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1805,6 +1805,9 @@ ld.])
+@@ -1581,6 +1581,9 @@ ld.])
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:55:30 ryoon Exp $
      ;; 
  
  ia64*-hpux*)
-@@ -3019,6 +3022,9 @@ dnl ====================================
+@@ -2511,6 +2514,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,3 +31,13 @@ $NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:55:30 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
+@@ -2821,6 +2827,9 @@ AC_CACHE_CHECK(
+         #ifdef linux
+         #define _BSD_SOURCE 1
+         #endif
++        #ifdef __NetBSD__
++        #error use of global _res variable in threaded programs is not portable
++        #endif
+         #include <resolv.h>
+         ],
+         [int foo = res_ninit(&_res);],

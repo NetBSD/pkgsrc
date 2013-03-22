@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2013/02/23 23:54:02 ryoon Exp $
+$NetBSD: distinfo,v 1.95 2013/03/22 21:02:46 ryoon Exp $
 
 SHA1 (enigmail-1.5.1.tar.gz) = fec4c169731a9f0f47d1e443ea6f427196f759a7
 RMD160 (enigmail-1.5.1.tar.gz) = b7e3adc5f09d7671ac8c419a3cdd73f567351c79
@@ -7,7 +7,7 @@ SHA1 (seamonkey-2.16.source.tar.bz2) = d9ac2d6a808ad4ded592fd595a3f67d32a04eb38
 RMD160 (seamonkey-2.16.source.tar.bz2) = ba56e4df84473ca8ecc229454b005bff5891dd6c
 Size (seamonkey-2.16.source.tar.bz2) = 121957357 bytes
 SHA1 (patch-aa) = 01abb03b890db1b4c69cdc0851fc4004fe25306c
-SHA1 (patch-aa-toplevel) = 74648cc7c80310aa506fe8196730cac25dd64c9e
+SHA1 (patch-aa-toplevel) = fe60b8b841eae442269993facb2680d13cefd457
 SHA1 (patch-ab) = 9cca7b0b97c4c38b30a125a6daf116b4064d451e
 SHA1 (patch-ac) = 7f8ebe176cc3674a659c0c9b84bc4c84bb15f7b1
 SHA1 (patch-ae) = bc047f107ecc4f57d6f0073c6d86061280ba54f3
