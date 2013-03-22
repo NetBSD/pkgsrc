@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/08/08 01:05:04 obache Exp $
+$NetBSD: patch-ab,v 1.2 2013/03/22 13:29:42 obache Exp $
 
-remove unwanted cast.
+* let to cast with appropriate type.
 
 --- src/scim-python-engine.cpp.orig	2008-07-11 04:16:15.000000000 +0000
 +++ src/scim-python-engine.cpp
@@ -9,7 +9,7 @@ remove unwanted cast.
  	unistr = g_utf16_to_ucs4 (str, size, NULL, NULL, NULL);
  
 -	self->engine.update_preedit_string (WideString ((wchar_t *)unistr), 
-+	self->engine.update_preedit_string (WideString (unistr), 
++	self->engine.update_preedit_string (WideString ((scim::ucs4_t *)unistr), 
  								Attributes_FromTupleOrList (pAttrs));
  	g_free (unistr);
  
@@ -18,7 +18,7 @@ remove unwanted cast.
  
  	unistr = g_utf16_to_ucs4 (str, size, NULL, NULL, NULL);
 -	self->engine.update_aux_string (WideString ((wchar_t *)unistr),
-+	self->engine.update_aux_string (WideString (unistr),
++	self->engine.update_aux_string (WideString ((scim::ucs4_t *)unistr),
  								Attributes_FromTupleOrList (pAttrs));
  	g_free (unistr);
  #endif
@@ -27,7 +27,7 @@ remove unwanted cast.
  
  	unistr = g_utf16_to_ucs4 (str, size, NULL, NULL, NULL);
 -	self->engine.commit_string (WideString ((wchar_t *)unistr));
-+	self->engine.commit_string (WideString (unistr));
++	self->engine.commit_string (WideString ((scim::ucs4_t *)unistr));
  	g_free (unistr);
  #endif
  
