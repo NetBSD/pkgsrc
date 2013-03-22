@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1036 2013/03/21 00:29:48 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.1037 2013/03/22 12:18:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rails32 to 3.2.13 [taca 2013-03-19]
 	Updated parallel/hwloc to 1.5nb2 [sbd 2013-03-19]
 	Updated inputmethod/scim-ccinput to 0.3.1nb15 [obache 2013-03-20]
+	Updated net/mikutter to 0.2.1.1137 [obache 2013-03-22]
