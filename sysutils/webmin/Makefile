@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/02/06 23:23:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2013/03/23 10:17:18 joerg Exp $
 
 .include "version.mk"
 
@@ -65,6 +65,8 @@ RCD_SCRIPTS=		webmin
 
 CHECK_INTERPRETER_SKIP+=	share/webmin/webmin-gentoo-init
 
+ALL_ENV+=	tempdir=${WRKDIR}/.tmp
+
 .include "../../security/openssl/buildlink3.mk"
 
 post-extract:
@@ -104,7 +106,8 @@ do-configure:
 # files.
 #
 do-install:
-	${SH} ${WRKSRC}/setup.sh ${DESTDIR}${WEBMIN_DIR}
+	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+		${SH} ${WRKSRC}/setup.sh ${DESTDIR}${WEBMIN_DIR}
 	sed	-e "/^env_WEBMIN_CONFIG=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR}," \
 		-e "/^logout=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
 		-e "/^userfile=/s,${DESTDIR}${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
