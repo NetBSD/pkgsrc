@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2012/06/30 08:30:35 dholland Exp $
+$NetBSD: distinfo,v 1.52 2013/03/23 10:15:26 joerg Exp $
 
 SHA1 (koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff) = a3d1d85567ccf729a2237f4aa837f7e025ce00ae
 RMD160 (koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff) = ab6ec62b1ee7c369e8a6f44ba285a56b8c5439b4
@@ -26,14 +26,19 @@ SHA1 (patch-kexi_plugins_forms_widgets_kexiframe_cpp) = 8a19ef7efc3a15d0e54ae84c
 SHA1 (patch-kexi_plugins_importexport_csv_kexicsvexport_cpp) = d8e82dd72e29fcd50f0670d70cbf48550fa5d2be
 SHA1 (patch-kexi_plugins_importexport_csv_kexicsvimportdialog_cpp) = b25cd22aecb32ae9f9a95725c68a335083da0fa4
 SHA1 (patch-kplato_kduration_cc) = 71e1f3a01a365665429831434afff364b465ea44
+SHA1 (patch-krita_core_kis__exif__value.cc) = 6374644e9dc452dd9d8b140909412a384c59dd12
 SHA1 (patch-krita_core_kis__perspective__math.cpp) = 10aaf4139f8e0ff28eeabbb0ec37476ef3e0af3d
 SHA1 (patch-krita_plugins_filters_colorsfilters_kis__brightness__contrast__filter.cc) = 9aad3be4f47d3f51e1c6ba57880111672f62e39a
 SHA1 (patch-krita_plugins_filters_colorsfilters_kis__perchannel__filter.cc) = c1cf879ef38b86d0c10d12e7997934bfd17a5d43
 SHA1 (patch-krita_plugins_filters_levelfilter_kgradientslider.cc) = d821bc51bbedd6f8fe3e24995f1d6ac28452cd32
 SHA1 (patch-krita_plugins_filters_levelfilter_kis__level__filter.cc) = ab06f83a1d754d33f2da0618499403909ea3b25f
+SHA1 (patch-krita_plugins_viewplugins_scripting_kritacore_krs__iterator.h) = f855b2218d3fc1509cb339d3d7fc3539b3208ae4
+SHA1 (patch-krita_plugins_viewplugins_scripting_kritacore_krs__painter.cpp) = 39647e55b3b7b50e084ae5fc3fe0f8df220f774f
 SHA1 (patch-krita_ui_kcurve.cc) = 35fb18ba3a6861dbb279383e96fa83339cf435aa
 SHA1 (patch-kspread_digest.cc) = 378d86e2f406cb520aa1215100585488e64a68b1
 SHA1 (patch-kspread_plugins_scripting_kspreadcore_krs__cell_cpp) = 1d6a06cd0ab3e3d83fa5f79c755e35ed4a57d93b
 SHA1 (patch-kspread_plugins_scripting_kspreadcore_krs__cell_h) = 9ce39191d28092ce26d12b2a8f7a2b5c66ea82a8
 SHA1 (patch-kword_KWView_cpp) = 72a2a375ca974b39484c705b19187a1fc4581232
+SHA1 (patch-lib_kformula_creationstrategy.h) = 7f11e46b38bb169c33692967ad673b18d9f5f94b
+SHA1 (patch-lib_kross_api_object.h) = e359a6bf839c9297b47e20cc8c01b44a876d01b5
 SHA1 (patch-lib_kwmf_kwmf_cc) = f260a63e1408f144c7ac71b5a7c5aea1ab452a60
