@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.24 2013/02/26 23:35:24 joerg Exp $
+$NetBSD: distinfo,v 1.25 2013/03/23 12:20:43 joerg Exp $
 
 SHA1 (gnustep-gui-0.22.0.tar.gz) = dc9654ea3437810a9b4bfd3d2193a25628a88b41
 RMD160 (gnustep-gui-0.22.0.tar.gz) = 20153480d712a148e9e504f09273f70e1ba2f6d2
 Size (gnustep-gui-0.22.0.tar.gz) = 2734733 bytes
+SHA1 (patch-Headers_AppKit_NSNibDeclarations.h) = 6195f4771b515b20a7bdf998c2f2eec37b5fb856
 SHA1 (patch-Source_NSBitmapImageRep+PNG.m) = 089f3bbb54f1fb3449cf34d69e09a82fb4dffc59
