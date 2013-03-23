@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2013/03/17 00:17:34 gdt Exp $
+$NetBSD: distinfo,v 1.72 2013/03/23 12:23:24 joerg Exp $
 
 SHA1 (net-snmp-5.7.2.tar.gz) = c493027907f32400648244d81117a126aecd27ee
 RMD160 (net-snmp-5.7.2.tar.gz) = 392d643e9f2f42ee4fa688b4702329ad005ee12e
@@ -6,6 +6,7 @@ Size (net-snmp-5.7.2.tar.gz) = 6281352 bytes
 SHA1 (patch-ac) = 59987ecb9467b1cead9af3d4432a4dd69be93480
 SHA1 (patch-af) = 4fb96b79f9126dedb8a132d44894ea23c9e8c101
 SHA1 (patch-ag) = d9595eceeb5ee986ab4365f62e3c3ab339e605aa
+SHA1 (patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c) = 94ecee1ce97a04c162f4b48199fd46e2f39ff474
 SHA1 (patch-agent_mibgroup_hardware_memory_memory__netbsd.c) = fe812fa13dffb4c3716d008381211dda9746c11e
 SHA1 (patch-agent_mibgroup_host_data__access_swrun__kinfo.c) = 054866e7c3ac90f183fd4a6d53763a5bba50572c
 SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a55b1e
