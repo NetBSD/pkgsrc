@@ -1,0 +1,35 @@
+$NetBSD: patch-mksh.1,v 1.1 2013/03/23 12:18:20 joerg Exp $
+
+--- mksh.1.orig	2013-03-23 12:06:12.000000000 +0000
++++ mksh.1
+@@ -62,29 +62,15 @@
+ .\"
+ .\" Implement .Dd with the Mdocdate RCS keyword
+ .\"
+-.rn Dd xD
+-.de Dd
+-.ie \\$1$Mdocdate: \{\
+-.	xD \\$2 \\$3, \\$4
+-.\}
+-.el .xD \\$1 \\$2 \\$3 \\$4 \\$5 \\$6 \\$7 \\$8
+-..
+ .\"
+ .\" .Dd must come before definition of .Mx, because when called
+ .\" with -mandoc, it might implement .Mx itself, but we want to
+ .\" use our own definition. And .Dd must come *first*, always.
+ .\"
+-.Dd $Mdocdate: February 19 2013 $
++.Dd February 19, 2013
+ .\"
+ .\" Check which macro package we use, and do other -mdoc setup.
+ .\"
+-.ie \n(.g \{\
+-.	if \*[.T]utf8 .tr \[la]\*(Lt
+-.	if \*[.T]utf8 .tr \[ra]\*(Gt
+-.	ie d volume-ds-1 .ds tT gnu
+-.	el .ds tT bsd
+-.\}
+-.el .ds tT ucb
+ .\"
+ .\" Implement .Mx (MirBSD)
+ .\"
