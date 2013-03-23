@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/09/04 12:17:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/03/23 19:00:31 spz Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -101,7 +101,7 @@ man/man1/git-reflog.1
 man/man1/git-relink.1
 man/man1/git-remote-ext.1
 man/man1/git-remote-fd.1
-man/man1/git-remote-helpers.1
+man/man1/gitremote-helpers.1
 man/man1/git-remote-testgit.1
 man/man1/git-remote.1
 man/man1/git-repack.1
