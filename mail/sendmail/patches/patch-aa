@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.19 2009/12/16 13:41:41 jnemeth Exp $
+$NetBSD: patch-aa,v 1.20 2013/03/23 10:06:12 joerg Exp $
 
 --- devtools/OS/NetBSD.orig	2004-06-16 17:50:00.000000000 +0000
 +++ devtools/OS/NetBSD
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.19 2009/12/16 13:41:41 jnemeth Exp $
  define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
  define(`confLIBS', `-lutil')
 -define(`confENVDEF', ` -DNETISO')
-+define(`confENVDEF', ` -DNETISO -DSM_CONF_STDBOOL_H=1')
++define(`confENVDEF', ` -DSM_CONF_STDBOOL_H=1')
  define(`confDEPEND_TYPE', `CC-M')
 -define(`confSBINGRP', `wheel')
 -define(`confUBINOWN', `root')
