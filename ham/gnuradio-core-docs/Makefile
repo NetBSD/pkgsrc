@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2013/02/15 11:54:05 obache Exp $
+# $NetBSD: Makefile,v 1.20 2013/03/23 10:04:35 joerg Exp $
 
 PKGNAME=	gnuradio-core-docs-${VERSION}
 COMMENT=	GNU Radio core module documentation
-PKGREVISION=	14
+PKGREVISION=	15
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
 CONFIGURE_ARGS+=--enable-doxygen
 
-BUILD_DEPENDS+=doxygen>=1.8.2:../../devel/doxygen
+BUILD_DEPENDS+=doxygen>=1.8.3.1:../../devel/doxygen
 
 BUILD_DIRS=	docs
 
