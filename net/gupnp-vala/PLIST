@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/11 11:23:11 drochner Exp $
-lib/pkgconfig/gupnp-vala-1.0.pc
-share/vala/vapi/gupnp-1.0.deps
-share/vala/vapi/gupnp-1.0.vapi
-share/vala/vapi/gupnp-av-1.0.deps
-share/vala/vapi/gupnp-av-1.0.vapi
-share/vala/vapi/gupnp-dlna-1.0.deps
-share/vala/vapi/gupnp-dlna-1.0.vapi
