@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2013/02/28 01:21:56 jperkin Exp $
+$NetBSD: distinfo,v 1.15 2013/03/24 16:49:44 joerg Exp $
 
 SHA1 (vnc-3.3.3r2_unixsrc.tgz) = 98e9d2e2c2d0f4f9cb9cafee22d21a868189b176
 RMD160 (vnc-3.3.3r2_unixsrc.tgz) = 3c70c386065d8b0254b1a0627455fb7bc03846ae
@@ -22,3 +22,4 @@ SHA1 (patch-aj) = 46f177a1dd199e72a0a8f02801941ab99e6f55d1
 SHA1 (patch-ba) = d179bade6870ff5abbe2322d918e9384fed519d3
 SHA1 (patch-bb) = 5601ee04f2287b67dbf94d27ec8706f484ea6ca9
 SHA1 (patch-bc) = 134930ca6c3034490ca99f4efb5a22c6afb5631c
+SHA1 (patch-vncpasswd_vncpasswd.c) = 7dbbc87c25eca706b52adf7b304759ca38abc62a
