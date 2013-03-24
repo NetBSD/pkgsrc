@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2012/04/13 07:34:53 dholland Exp $
-
-SHA1 (ocaml-3.12.1.tar.bz2) = 29b44117b116b1a5bc54a8b4514af483793a769f
-RMD160 (ocaml-3.12.1.tar.bz2) = 61d38c0785491c8790ac02ab78fb2f26ea490fc1
-Size (ocaml-3.12.1.tar.bz2) = 2949124 bytes
-SHA1 (ocamlduce-3.12.1.0.tar.gz) = c5006c36071a1e22736ccd5bb96024f13e575302
-RMD160 (ocamlduce-3.12.1.0.tar.gz) = 33078e31c4cffade2f6d762fa9e9e4023f96fec4
-Size (ocamlduce-3.12.1.0.tar.gz) = 140291 bytes
-SHA1 (patch-aa) = 7ba89169cf1d10f9c2767019cccae1e4682d1c70
