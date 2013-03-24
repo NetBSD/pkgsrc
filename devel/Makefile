@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1717 2013/03/15 21:00:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.1718 2013/03/24 17:02:11 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -510,11 +510,6 @@ SUBDIR+=	opencm
 SUBDIR+=	opengrok
 SUBDIR+=	orc
 SUBDIR+=	ossp-uuid
-SUBDIR+=	p4
-SUBDIR+=	p4-docs
-SUBDIR+=	p4d
-SUBDIR+=	p4pr
-SUBDIR+=	p4web
 SUBDIR+=	p5-Acme-PlayCode
 SUBDIR+=	p5-Algorithm-Annotate
 SUBDIR+=	p5-Algorithm-C3
