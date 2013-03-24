@@ -1,0 +1,12 @@
+$NetBSD: patch-config_auto-aux_hasgot,v 1.1 2013/03/24 16:55:49 joerg Exp $
+
+--- config/auto-aux/hasgot.orig	2013-03-23 15:54:44.000000000 +0000
++++ config/auto-aux/hasgot
+@@ -1,5 +1,6 @@
+ #!/bin/sh
+-(echo "main() {"
++(for f in $*; do echo "extern int $f();"; done
++ echo "main() {"
+  for f in $*; do echo "  $f();"; done
+  echo "}") > hasgot.c
+ exec $cc -o tst hasgot.c > /dev/null 2>/dev/null
