@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1043 2013/03/24 16:08:01 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1044 2013/03/24 16:10:45 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1496,5 +1496,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/poppler to 0.22.2 [spz 2013-03-24]
 	Updated www/py-flask-admin to 1.0.5 [kleink 2013-03-24]
 	Updated x11/mlterm to 3.1.9 [tsutsui 2013-03-24]
-	Updated net/wpa_supplicant to 2.0 [pkgsrc 2013-03-24]
-	Updated net/wpa_gui to 2.0 [pkgsrc 2013-03-24]
+	Updated net/wpa_supplicant to 2.0 [rodent 2013-03-24]
+	Updated net/wpa_gui to 2.0 [rodent 2013-03-24]
