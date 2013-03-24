@@ -1,5 +1,19 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/10 14:50:50 hasso Exp $
+$NetBSD: distinfo,v 1.2 2013/03/24 16:58:28 joerg Exp $
 
 SHA1 (xsd-3.2.0+dep.tar.bz2) = d57fd3b326dcfab3af8fdc40fc3cf27fb9d7c7c5
 RMD160 (xsd-3.2.0+dep.tar.bz2) = da02eb15e607ee9b434f2a729c6f8a3da0981348
 Size (xsd-3.2.0+dep.tar.bz2) = 1054603 bytes
+SHA1 (patch-libcult-1.4.2_cult_mm_bits_evptr.hxx) = c0665ef9f6ee3c5ad1714988388d8c92cd9818ae
+SHA1 (patch-libcult-1.4.2_cult_mm_evptr.hxx) = d7aba021918d29ad5b5f4d5ea23e435b7d908e65
+SHA1 (patch-libcult-1.4.2_cult_mm_shptr.hxx) = b8f2d82601f43af706a65aedfcd7c1567e061db9
+SHA1 (patch-libcult-1.4.2_cult_mm_static-ptr.hxx) = 76225963ff8b710eafada502d4c0c918ffef416e
+SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_parser.cxx) = 30a9b0aecf5605b6c37e72f1a3c8fbfce01140da
+SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_elements.cxx) = 717fca1076c9c4e33a3577cb6c23fa0a9ec1ceab
+SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_schema.hxx) = cbf09aa1272f6f163ce002db9f4578e5795eaaf3
+SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_anonymous.cxx) = cfe1f7d86725ef2736e6198f5f8780e3656ce6f4
+SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_schema-per-type.cxx) = 0ed23703a8f11984dc51e2bbdcc744b32a5be369
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_elements.cxx) = 8006dc3a16d945a9c256e0fd2a4c412ad63e8919
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_elements.cxx) = 06702b980f04c5718b7c0aefb8d629466501f0d2
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx) = b6263becce71dd133a6db5c0c23467c441c8da1e
+SHA1 (patch-xsd-3.2.0-2_xsd_xsd.cxx) = e89a36f5616416ad31fa47b1bba2018cb3fbaec9
+SHA1 (patch-xsd-3.2.0-2_xsd_xsd.hxx) = 9e64ecb2e5560bb21b7dcf324c1831a59b26f07d
