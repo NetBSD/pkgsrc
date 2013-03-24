@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
+$NetBSD: patch-aj,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
---- gfx/src/freetype/nsFreeType.h.orig	2005-05-01 19:36:19.000000000 +0200
+--- gfx/src/freetype/nsFreeType.h.orig	2004-04-16 21:31:42.000000000 +0000
 +++ gfx/src/freetype/nsFreeType.h
-@@ -120,13 +120,13 @@ typedef FT_Error (*FT_Outline_Decompose_
+@@ -104,13 +104,13 @@ typedef FT_Error (*FT_Outline_Decompose_
  typedef FT_Error (*FT_New_Face_t)(FT_Library, const char*, FT_Long, FT_Face*);
  typedef FT_Error (*FT_Set_Charmap_t)(FT_Face face, FT_CharMap  charmap);
  typedef FT_Error (*FTC_Image_Cache_Lookup_t)
@@ -20,7 +20,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
  // #ifdef MOZ_SVG
  typedef FT_Error (*FT_Glyph_Transform_t)(FT_Glyph, FT_Matrix*, FT_Vector*);
  typedef FT_Error (*FT_Get_Kerning_t)
-@@ -181,7 +181,7 @@ protected:
+@@ -165,7 +165,7 @@ protected:
    FT_Outline_Decompose_t    nsFT_Outline_Decompose;
    FT_Set_Charmap_t          nsFT_Set_Charmap;
    FTC_Image_Cache_Lookup_t  nsFTC_Image_Cache_Lookup;
@@ -29,7 +29,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
    FTC_Manager_Done_t        nsFTC_Manager_Done;
    FTC_Manager_New_t         nsFTC_Manager_New;
    FTC_Image_Cache_New_t     nsFTC_Image_Cache_New;
-@@ -229,7 +229,7 @@ protected:
+@@ -213,7 +213,7 @@ protected:
    PRLibrary      *mSharedLib;
    FT_Library      mFreeTypeLibrary;
    FTC_Manager     mFTCacheManager;

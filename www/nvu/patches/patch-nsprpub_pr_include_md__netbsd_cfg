@@ -1,8 +1,8 @@
-$NetBSD: patch-nsprpub_pr_include_md__netbsd_cfg,v 1.1 2011/08/13 22:20:14 dholland Exp $
+$NetBSD: patch-nsprpub_pr_include_md__netbsd_cfg,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
 Build on amd64.
 
---- nsprpub/pr/include/md/_netbsd.cfg~	2000-12-01 21:29:17.000000000 +0000
+--- nsprpub/pr/include/md/_netbsd.cfg.orig	2000-12-01 21:29:17.000000000 +0000
 +++ nsprpub/pr/include/md/_netbsd.cfg
 @@ -137,7 +137,7 @@
  #define PR_ALIGN_OF_DOUBLE  8
