@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
+$NetBSD: patch-ak,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
---- gfx/src/freetype/nsFreeType.cpp.orig	2005-07-13 20:21:10.000000000 +0200
+--- gfx/src/freetype/nsFreeType.cpp.orig	2004-02-07 15:22:30.000000000 +0000
 +++ gfx/src/freetype/nsFreeType.cpp
 @@ -110,11 +110,11 @@ FtFuncList nsFreeType2::FtFuncs [] = {
    {"FT_New_Face",             NS_FT2_OFFSET(nsFT_New_Face),             PR_TRUE},
@@ -17,7 +17,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
  // #ifdef MOZ_SVG
    {"FT_Glyph_Transform",      NS_FT2_OFFSET(nsFT_Glyph_Transform),      PR_TRUE},
    {"FT_Get_Kerning",          NS_FT2_OFFSET(nsFT_Get_Kerning),          PR_TRUE},
-@@ -288,7 +288,7 @@ nsFreeType2::SetCharmap(FT_Face face, FT
+@@ -282,7 +282,7 @@ nsFreeType2::SetCharmap(FT_Face face, FT
  } 
   
  NS_IMETHODIMP
@@ -26,7 +26,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
                                FT_UInt glyphID, FT_Glyph *glyph)
  { 
    // call the FreeType2 function via the function pointer
-@@ -297,11 +297,11 @@ nsFreeType2::ImageCacheLookup(FTC_Image_
+@@ -291,11 +291,11 @@ nsFreeType2::ImageCacheLookup(FTC_Image_
  } 
   
  NS_IMETHODIMP
@@ -41,7 +41,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
    return error ? NS_ERROR_FAILURE : NS_OK;
  } 
   
-@@ -326,7 +326,7 @@ nsFreeType2::ManagerNew(FT_Library libra
+@@ -320,7 +320,7 @@ nsFreeType2::ManagerNew(FT_Library libra
  } 
   
  NS_IMETHODIMP
@@ -50,7 +50,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
  { 
    // call the FreeType2 function via the function pointer
    FT_Error error = nsFTC_Image_Cache_New(manager, cache);
-@@ -395,7 +395,7 @@ nsFreeType2::SupportsExtFunc(PRBool *res
+@@ -389,7 +389,7 @@ nsFreeType2::SupportsExtFunc(PRBool *res
  } 
   
  NS_IMETHODIMP

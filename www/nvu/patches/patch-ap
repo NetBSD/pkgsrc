@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1 2007/12/01 21:29:53 rillig Exp $
+$NetBSD: patch-ap,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
 --- security/nss/lib/pki1/oiddata.h.orig	2002-01-04 05:22:07.000000000 +0000
-+++ security/nss/lib/pki1/oiddata.h	2007-12-01 21:16:59.000000000 +0000
++++ security/nss/lib/pki1/oiddata.h
 @@ -43,7 +43,6 @@ static const char OIDDATA_CVS_ID[] = "@(
  #include "nsspki1t.h"
  #endif /* NSSPKI1T_H */

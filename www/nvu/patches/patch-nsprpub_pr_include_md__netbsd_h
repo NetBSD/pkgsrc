@@ -1,8 +1,8 @@
-$NetBSD: patch-nsprpub_pr_include_md__netbsd_h,v 1.1 2011/08/13 22:20:14 dholland Exp $
+$NetBSD: patch-nsprpub_pr_include_md__netbsd_h,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
 Build on amd64.
 
---- nsprpub/pr/include/md/_netbsd.h~	2003-09-11 17:24:53.000000000 +0000
+--- nsprpub/pr/include/md/_netbsd.h.orig	2003-09-11 17:24:53.000000000 +0000
 +++ nsprpub/pr/include/md/_netbsd.h
 @@ -42,6 +42,8 @@
  #define _PR_SI_SYSNAME  "NetBSD"

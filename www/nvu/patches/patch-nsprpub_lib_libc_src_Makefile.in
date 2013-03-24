@@ -1,0 +1,13 @@
+$NetBSD: patch-nsprpub_lib_libc_src_Makefile.in,v 1.1 2013/03/24 16:45:55 joerg Exp $
+
+--- nsprpub/lib/libc/src/Makefile.in.orig	2013-03-24 14:43:01.000000000 +0000
++++ nsprpub/lib/libc/src/Makefile.in
+@@ -146,6 +146,8 @@ else
+ 	SUF = LL
+ endif
+ 
++MKSHLIB += -Wl,-rpath,${PREFIX}/lib/nvu-1.0
++
+ GARBAGE += $(TINC)
+ 
+ $(TINC):

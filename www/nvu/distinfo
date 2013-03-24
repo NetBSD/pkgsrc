@@ -1,18 +1,28 @@
-$NetBSD: distinfo,v 1.5 2011/08/16 01:30:59 dholland Exp $
+$NetBSD: distinfo,v 1.6 2013/03/24 16:45:55 joerg Exp $
 
 SHA1 (nvu-1.0-sources.tar.bz2) = 438b1633cb820bbede503ef2da90f46d4e96bee8
 RMD160 (nvu-1.0-sources.tar.bz2) = 6d6fdb747d79e8602a4757e8eff8bbb21db6df8c
 Size (nvu-1.0-sources.tar.bz2) = 29687976 bytes
-SHA1 (patch-ah) = 8f92f4294ead04ddc5b719ff66b4aada912dcc01
-SHA1 (patch-ai) = c702ee4ed7e78efae8dfde676de9d556cb4ccdad
-SHA1 (patch-aj) = 951b5ea63116d876a6fcef586256a5728a2df2cf
-SHA1 (patch-ak) = f867ca0973fb4d0ca325b25f83586f10f6e85e32
-SHA1 (patch-al) = 57a15074fca3ddba756d0b3898ad9bf06a6e130a
-SHA1 (patch-an) = 99ac2da44322db96f8d65fbfdb380727b9da96fe
-SHA1 (patch-ao) = 617d232bd335bc988388f2004ca919c829e371da
-SHA1 (patch-ap) = 82a85df0b172f949509561f83ae7849e177babee
+SHA1 (patch-ah) = 6d4805a719d2ba5347d283b85ddf0b65e8c536af
+SHA1 (patch-ai) = 74e87e7bfb098cd598ec30d21e9dc28fb4b99b7e
+SHA1 (patch-aj) = ebb3b4f8700dc179dfae31740e35984f58a5b638
+SHA1 (patch-ak) = 6f86b60fbe29db5d984fda06de0eff3ebf4de307
+SHA1 (patch-al) = 5fe0093d2fa0691e9db035ce224265b438eedd3a
+SHA1 (patch-an) = 090e62c11b8d1f4d6779f5b1e1221efb43f9460e
+SHA1 (patch-ao) = eb220c4c30838216e709179cf953b9cbb9696421
+SHA1 (patch-ap) = 35a193158e43d57a1c31270214140afbb3cebb56
 SHA1 (patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp) = 5b14d68932a3dd2be9e57f130e825150de8cc8dd
 SHA1 (patch-nsprpub_config_Makefile.in) = daf6423b53385c32e658fa5d93e33a0c5f31ca91
-SHA1 (patch-nsprpub_pr_include_md__netbsd_cfg) = 4f65863a7516ed8c37a752e040ef1e3d4b881f29
-SHA1 (patch-nsprpub_pr_include_md__netbsd_h) = 059df4799777743947b74ae39ed250c17c78ad37
-SHA1 (patch-nsprpub_pr_src_io_prprf_c) = fabb1a52ced70a7640dd8a8d91e20e9672b22b76
+SHA1 (patch-nsprpub_lib_ds_Makefile.in) = 3620eee6be375bfa3afc2008fbe714bbbb670a27
+SHA1 (patch-nsprpub_lib_libc_src_Makefile.in) = c2d2a951b475c44a6ed5bf3bba6a53fc0b1a77d5
+SHA1 (patch-nsprpub_pr_include_md__netbsd_cfg) = 5a310a520f1168c4b5fe72c0603268d6b0b82c61
+SHA1 (patch-nsprpub_pr_include_md__netbsd_h) = 5eaddf0bb6e4daf3308d5167fdfd97bae10dd894
+SHA1 (patch-nsprpub_pr_src_io_prprf_c) = a18f1b0fbd699858628474cafd676f702c1a574e
+SHA1 (patch-security_nss_lib_nss_config.mk) = 870321ea256dbb3d5bf187460f7b6b4329cde2a7
+SHA1 (patch-security_nss_lib_smime_config.mk) = e7b89c537574af70e3e14f334d46a77e1dbc4bc0
+SHA1 (patch-security_nss_lib_softoken_config.mk) = c1110bad9779d241582d14c62a14b564664ecaa3
+SHA1 (patch-security_nss_lib_ssl_config.mk) = 9c428af47fcdd3d879dab41297d2714e40587bb7
+SHA1 (patch-xpcom_ds_nsBaseHashtable.h) = 72af3045b04104fcf9cb8b5e0c278ccbec9680ca
+SHA1 (patch-xpcom_ds_nsClassHashtable.h) = 6ebed99e3ee8709cee2cfd9ed61a2a6197fe8595
+SHA1 (patch-xpcom_ds_nsInterfaceHashtable.h) = a1922d87d364e2b8f592ac49098b23ab744e8930
+SHA1 (patch-xpcom_ds_nsRefPtrHashtable.h) = ccfd991c49243fc73957a49ed043c6f1e4ad96d4
