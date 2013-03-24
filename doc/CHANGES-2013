@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1046 2013/03/24 17:18:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1047 2013/03/24 18:09:45 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1503,3 +1503,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/p4d [wiz 2013-03-24]
 	Removed devel/p4web [wiz 2013-03-24]
 	Removed emulators/ski-bin successors emulators/ski [wiz 2013-03-24]
+	Updated x11/x3270 to 3.3.12ga12 [gsl 2013-03-24]
