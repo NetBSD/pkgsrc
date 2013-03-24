@@ -1,0 +1,19 @@
+$NetBSD: patch-gnats_configure,v 1.1 2013/03/24 17:04:02 joerg Exp $
+
+--- gnats/configure.orig	2013-03-23 15:01:13.000000000 +0000
++++ gnats/configure
+@@ -4005,12 +4005,12 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++const char *foo(const char *x) { return x; }
++int bar(const char *x) { return x == foo(x); }
+ 
+ int
+ main ()
+ {
+-const char *foo(const char *x) { return x; }
+-                int bar(const char *x) { return x == foo(x); }
+   ;
+   return 0;
+ }
