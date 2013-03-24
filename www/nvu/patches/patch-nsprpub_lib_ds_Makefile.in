@@ -1,0 +1,13 @@
+$NetBSD: patch-nsprpub_lib_ds_Makefile.in,v 1.1 2013/03/24 16:45:55 joerg Exp $
+
+--- nsprpub/lib/ds/Makefile.in.orig	2013-03-24 14:48:57.000000000 +0000
++++ nsprpub/lib/ds/Makefile.in
+@@ -95,6 +95,8 @@ MKSHLIB += -M $(MAPFILE)
+ endif
+ endif
+ 
++MKSHLIB += -Wl,-rpath,${PREFIX}/lib/nvu-1.0
++
+ ifeq ($(OS_ARCH),OS2)
+ MAPFILE = $(OBJDIR)/$(LIBRARY_NAME)$(LIBRARY_VERSION).def
+ GARBAGE += $(MAPFILE)

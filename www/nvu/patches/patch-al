@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
+$NetBSD: patch-al,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
---- gfx/src/ps/nsFontMetricsPS.h.orig	2003-04-22 18:25:09.000000000 +0200
-+++ gfx/src/ps/nsFontMetricsPS.h	2006-10-21 20:34:01.000000000 +0200
+--- gfx/src/ps/nsFontMetricsPS.h.orig	2003-04-22 16:25:09.000000000 +0000
++++ gfx/src/ps/nsFontMetricsPS.h
 @@ -320,7 +320,7 @@ protected:
    nsCOMPtr<nsITrueTypeFontCatalogEntry> mFaceID;
    nsCOMPtr<nsIFreeType2> mFt2;
