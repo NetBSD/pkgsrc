@@ -1,0 +1,13 @@
+$NetBSD: patch-ext_Makefile.in,v 1.1 2013/03/24 17:06:06 joerg Exp $
+
+--- ext/Makefile.in.orig	2013-03-23 15:38:08.000000000 +0000
++++ ext/Makefile.in
+@@ -273,7 +273,7 @@ libaubioext_la_SOURCES = aubioext.h \
+ 	midi/midi_driver.c
+ 
+ AM_CFLAGS = -I$(top_srcdir)/src @AUBIO_CFLAGS@ @SNDLIB_CFLAGS@ @JACK_CFLAGS@ @FFTWLIB_CFLAGS@ @SAMPLERATE_CFLAGS@ @ALSA_CFLAGS@
+-libaubioext_la_LIBADD = -laubio -L${top_builddir}/src @SNDLIB_LIBS@ @JACK_LIBS@ @FFTWLIB_LIBS@ @SAMPLERATE_LIBS@ @ALSA_LIBS@ @LTLIBOBJS@
++libaubioext_la_LIBADD = ../src/libaubio.la -L${top_builddir}/src @SNDLIB_LIBS@ @JACK_LIBS@ @FFTWLIB_LIBS@ @SAMPLERATE_LIBS@ @ALSA_LIBS@ @LTLIBOBJS@
+ libaubioext_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@
+ all: all-am
+ 
