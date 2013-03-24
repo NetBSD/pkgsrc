@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/07 21:56:38 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/24 13:24:27 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -151,11 +151,13 @@ ${PYSITELIB}/flask_admin/static/select2/select2.png
 ${PYSITELIB}/flask_admin/static/select2/select2x2.png
 ${PYSITELIB}/flask_admin/static/select2/spinner.gif
 ${PYSITELIB}/flask_admin/templates/admin/actions.html
+${PYSITELIB}/flask_admin/templates/admin/base.html
 ${PYSITELIB}/flask_admin/templates/admin/file/edit.html
 ${PYSITELIB}/flask_admin/templates/admin/file/form.html
 ${PYSITELIB}/flask_admin/templates/admin/file/list.html
 ${PYSITELIB}/flask_admin/templates/admin/file/rename.html
 ${PYSITELIB}/flask_admin/templates/admin/index.html
+${PYSITELIB}/flask_admin/templates/admin/layout.html
 ${PYSITELIB}/flask_admin/templates/admin/lib.html
 ${PYSITELIB}/flask_admin/templates/admin/master.html
 ${PYSITELIB}/flask_admin/templates/admin/model/create.html
@@ -163,6 +165,7 @@ ${PYSITELIB}/flask_admin/templates/admin/model/edit.html
 ${PYSITELIB}/flask_admin/templates/admin/model/inline_field_list.html
 ${PYSITELIB}/flask_admin/templates/admin/model/inline_form.html
 ${PYSITELIB}/flask_admin/templates/admin/model/inline_list_base.html
+${PYSITELIB}/flask_admin/templates/admin/model/layout.html
 ${PYSITELIB}/flask_admin/templates/admin/model/list.html
 ${PYSITELIB}/flask_admin/tests/__init__.py
 ${PYSITELIB}/flask_admin/tests/__init__.pyc
@@ -191,17 +194,22 @@ ${PYSITELIB}/flask_admin/tests/sqlamodel/test_basic.pyo
 ${PYSITELIB}/flask_admin/tests/sqlamodel/test_inlineform.py
 ${PYSITELIB}/flask_admin/tests/sqlamodel/test_inlineform.pyc
 ${PYSITELIB}/flask_admin/tests/sqlamodel/test_inlineform.pyo
+${PYSITELIB}/flask_admin/tests/templates/method.html
+${PYSITELIB}/flask_admin/tests/templates/mock.html
 ${PYSITELIB}/flask_admin/tests/test_base.py
 ${PYSITELIB}/flask_admin/tests/test_base.pyc
 ${PYSITELIB}/flask_admin/tests/test_base.pyo
 ${PYSITELIB}/flask_admin/tests/test_model.py
 ${PYSITELIB}/flask_admin/tests/test_model.pyc
 ${PYSITELIB}/flask_admin/tests/test_model.pyo
+${PYSITELIB}/flask_admin/tests/test_sqlamodel.pyc
 ${PYSITELIB}/flask_admin/tools.py
 ${PYSITELIB}/flask_admin/tools.pyc
 ${PYSITELIB}/flask_admin/tools.pyo
 ${PYSITELIB}/flask_admin/translations/__init__.py
 ${PYSITELIB}/flask_admin/translations/__init__.pyc
 ${PYSITELIB}/flask_admin/translations/__init__.pyo
+${PYSITELIB}/flask_admin/translations/de/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/de/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.po
