@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/16 07:21:22 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/24 16:47:47 joerg Exp $
 #
 
 DISTNAME=	ZoneMinder-1.25.0
@@ -173,9 +173,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder
 	${INSTALL_DATA} ${WRKSRC}/db/*.sql ${DESTDIR}${PREFIX}/share/zoneminder/db/
-	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/temp
-	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events
-	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images
+	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events || true
+	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images || true
 	${LN} -s ${ZM_CACHE}/temp ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/temp
 	${LN} -s ${ZM_CACHE}/events ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events
 	${LN} -s ${ZM_CACHE}/images ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images

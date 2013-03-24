@@ -1,10 +1,10 @@
-$NetBSD: patch-src_zmc_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-src_zmc_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 Use a more appropriate initialisation for a long, and use the definition out
 of <limits.h>, for portability.
 
---- src/zmc.cpp.orig	2010-11-08 23:51:08.000000000 +1300
-+++ src/zmc.cpp	2010-11-08 23:51:45.000000000 +1300
+--- src/zmc.cpp.orig	2011-06-21 09:19:11.000000000 +0000
++++ src/zmc.cpp
 @@ -19,7 +19,7 @@
  
  #include <getopt.h>
@@ -14,7 +14,7 @@ of <limits.h>, for portability.
  
  #include "zm.h"
  #include "zm_db.h"
-@@ -224,7 +224,7 @@
+@@ -224,7 +224,7 @@ int main( int argc, char *argv[] )
  		sigprocmask( SIG_BLOCK, &block_set, 0 );
  		for ( int i = 0; i < n_monitors; i++ )
  		{
