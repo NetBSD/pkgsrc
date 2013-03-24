@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1044 2013/03/24 16:10:45 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1045 2013/03/24 17:05:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1498,3 +1498,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/mlterm to 3.1.9 [tsutsui 2013-03-24]
 	Updated net/wpa_supplicant to 2.0 [rodent 2013-03-24]
 	Updated net/wpa_gui to 2.0 [rodent 2013-03-24]
+	Removed devel/p4 [wiz 2013-03-24]
+	Removed devel/p4-docs [wiz 2013-03-24]
+	Removed devel/p4d [wiz 2013-03-24]
+	Removed devel/p4web [wiz 2013-03-24]
