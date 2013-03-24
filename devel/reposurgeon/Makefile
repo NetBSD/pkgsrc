@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/03/14 21:20:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/24 16:21:56 dholland Exp $
 #
 
 DISTNAME=	reposurgeon-2.26
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.catb.org/~esr/reposurgeon/
 
@@ -10,7 +11,8 @@ HOMEPAGE=	http://www.catb.org/~esr/reposurgeon/
 COMMENT=	Tool for editing version-control repository history
 LICENSE=	modified-bsd
 
-DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_LANGUAGES=	# none
 
