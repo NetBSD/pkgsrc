@@ -1,13 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2009/08/22 06:33:40 dsainty Exp $
+$NetBSD: patch-aa,v 1.3 2013/03/24 14:33:14 rodent Exp $
 
---- wpa_supplicant/Makefile.orig	2006-10-22 19:05:39.000000000 -0400
-+++ wpa_supplicant/Makefile	2006-10-22 19:05:53.000000000 -0400
-@@ -1163,7 +1163,7 @@ windows-bin: $(WINALL)
- 	$(STRIP) $(WINALL)
+Don't hardcode QMAKE or LRELEASE.
+
+--- wpa_supplicant/Makefile.orig	2013-01-12 15:42:53.000000000 +0000
++++ wpa_supplicant/Makefile
+@@ -1596,10 +1596,10 @@ wpa_gui:
+ 	@echo "wpa_gui has been removed - see wpa_gui-qt4 for replacement"
  
- wpa_gui/Makefile:
--	qmake -o wpa_gui/Makefile wpa_gui/wpa_gui.pro 
-+	$(QMAKE) -o wpa_gui/Makefile wpa_gui/wpa_gui.pro 
+ wpa_gui-qt4/Makefile:
+-	qmake -o wpa_gui-qt4/Makefile wpa_gui-qt4/wpa_gui.pro 
++	$(QMAKE) -o wpa_gui-qt4/Makefile wpa_gui-qt4/wpa_gui.pro 
  
- wpa_gui: wpa_gui/Makefile
- 	$(MAKE) -C wpa_gui
+ wpa_gui-qt4/lang/wpa_gui_de.qm: wpa_gui-qt4/lang/wpa_gui_de.ts
+-	lrelease wpa_gui-qt4/wpa_gui.pro
++	$(LRELEASE) wpa_gui-qt4/wpa_gui.pro
+ 
+ wpa_gui-qt4: wpa_gui-qt4/Makefile wpa_gui-qt4/lang/wpa_gui_de.qm
+ 	$(MAKE) -C wpa_gui-qt4

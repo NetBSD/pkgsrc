@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/02/16 11:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/03/24 14:33:14 rodent Exp $
 
-DISTNAME=	wpa_supplicant-0.7.3
+DISTNAME=	wpa_supplicant-2.0
 PKGNAME=	${DISTNAME:S/supplicant/gui/}
-PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 
@@ -13,14 +12,18 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 BUILD_DIRS=	wpa_supplicant
-BUILD_TARGET=	wpa_gui
+BUILD_TARGET=	wpa_gui-qt4
 USE_TOOLS+=	gmake
+
+LRELEASE=	${QTDIR}/bin/lrelease 
+MAKE_ENV+=	LRELEASE=${LRELEASE}
 
 INSTALLATION_DIRS=	sbin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wpa_supplicant/wpa_gui/wpa_gui ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/wpa_supplicant/wpa_gui-qt4/wpa_gui \
+		${DESTDIR}${PREFIX}/sbin
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
