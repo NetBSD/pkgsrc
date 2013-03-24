@@ -1,11 +1,11 @@
-$NetBSD: patch-src_zm_thread_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-src_zm_thread_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 pthread_mutex_timedlock() is not available on NetBSD 5.0, and not required
 in ZoneMinder.
 
---- src/zm_thread.cpp.orig	2013-03-08 11:32:29.000000000 +1300
-+++ src/zm_thread.cpp	2013-03-08 11:32:58.000000000 +1300
-@@ -72,6 +72,7 @@
+--- src/zm_thread.cpp.orig	2011-06-21 09:19:11.000000000 +0000
++++ src/zm_thread.cpp
+@@ -72,6 +72,7 @@ void Mutex::lock()
          throw ThreadException( stringtf( "Unable to lock pthread mutex: %s", strerror(errno) ) );
  }
  
@@ -13,7 +13,7 @@ in ZoneMinder.
  void Mutex::lock( int secs )
  {
      struct timespec timeout = getTimeout( secs );
-@@ -85,6 +86,7 @@
+@@ -85,6 +86,7 @@ void Mutex::lock( double secs )
      if ( pthread_mutex_timedlock( &mMutex, &timeout ) < 0 )
          throw ThreadException( stringtf( "Unable to timedlock pthread mutex: %s", strerror(errno) ) );
  }
@@ -21,3 +21,10 @@ in ZoneMinder.
  
  void Mutex::unlock()
  {
+@@ -336,4 +338,5 @@ void Thread::kill( int signal )
+ }
+ 
+ // Some explicit template instantiations
+-#include "zm_threaddata.cpp"
++template class ThreadData<bool>;
++template class ThreadData<int>;

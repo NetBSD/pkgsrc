@@ -1,12 +1,12 @@
-$NetBSD: patch-scripts_zm_in,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-scripts_zm_in,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 /etc/rc.d/init.d/functions doesn't commonly exist.
 
 The LOCKFILE feature appears unused, and requires a /var/lock/subsys directory
 we don't have.
 
---- scripts/zm.in.orig	2010-11-23 01:26:38.000000000 +1300
-+++ scripts/zm.in	2010-11-23 01:26:46.000000000 +1300
+--- scripts/zm.in.orig	2011-06-22 10:42:16.000000000 +0000
++++ scripts/zm.in
 @@ -4,12 +4,12 @@
  # processname: zmpkg.pl
  
@@ -22,7 +22,7 @@ we don't have.
  
  loadconf()
  {
-@@ -50,7 +50,7 @@
+@@ -50,7 +50,7 @@ start()
  	RETVAL=$?
  	[ $RETVAL = 0 ] && success || failure
  	echo
@@ -31,7 +31,7 @@ we don't have.
  	return $RETVAL
  }
  
-@@ -62,7 +62,7 @@
+@@ -62,7 +62,7 @@ stop()
  	RETVAL=$?
  	[ $RETVAL = 0 ] && success || failure
  	echo
@@ -40,7 +40,7 @@ we don't have.
  }
  
  zmstatus()
-@@ -103,7 +103,7 @@
+@@ -103,7 +103,7 @@ case "$1" in
  		result=`$ZM_PATH_BIN/zmdc.pl check`
  		if [ "$result" = "running" ]; then
  			$ZM_PATH_BIN/zmdc.pl shutdown > /dev/null
