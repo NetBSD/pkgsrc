@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:24 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/03/24 16:45:54 joerg Exp $
 #
 
 DISTNAME=	nvu-1.0-sources
@@ -27,6 +27,8 @@ PKGCONFIG_OVERRIDE+=	build/unix/mozilla-xpcom.pc.in
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
 BUILDLINK_TRANSFORM+=	l:IDL:IDL-2
+
+LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib/nvu-1.0
 
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
