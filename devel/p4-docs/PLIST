@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:01 joerg Exp $
-man/man1/p4.1
-man/man1/p4d.1
-${DOCDIR}/cmdref.pdf
-${DOCDIR}/p4ftp.pdf
-${DOCDIR}/p4guide.pdf
-${DOCDIR}/p4sag.pdf
-${DOCDIR}/platformnotes.html
-${DOCDIR}/relnotes.txt
