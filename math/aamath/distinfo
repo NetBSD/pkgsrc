@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/12/16 22:31:46 sbd Exp $
+$NetBSD: distinfo,v 1.4 2013/03/24 16:52:35 joerg Exp $
 
 SHA1 (aamath-0.3.tar.gz) = dc68abaf2131c73ddb1a520c95d65596e30f1b0a
 RMD160 (aamath-0.3.tar.gz) = 396ce7213a30a5c133dc964e2a531fe28a24b6c0
 Size (aamath-0.3.tar.gz) = 21894 bytes
 SHA1 (patch-Makefile) = cafb2a32db8fa0e93e0e177c2e67fdc6790c4390
-SHA1 (patch-expr.cc) = efe3ee16970325c770c8e8e2fe200bbfada0cc1c
+SHA1 (patch-expr.cc) = 0fe3c8c543bb7fbb2b3e1d64f50b99cf4d5b717f
 SHA1 (patch-expr.h) = 3d0382a90b8c88f18a639d87e7cc1253fafda4fb
