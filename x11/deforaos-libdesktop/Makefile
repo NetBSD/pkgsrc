@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/02/16 11:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/24 10:55:07 jperkin Exp $
 #
 
 DISTNAME=	libDesktop-0.0.8
@@ -17,6 +17,14 @@ USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	INSTALL=${INSTALL}
+
+# Don't use non-portable ${INSTALL} arguments
+SUBST_CLASSES+=		nodashes
+SUBST_STAGE.nodashes=	pre-configure
+SUBST_FILES.nodashes=	include/Makefile include/Desktop/Makefile
+SUBST_FILES.nodashes+=	src/Makefile
+SUBST_SED.nodashes=	-e '/INSTALL/s/ -- / /'
 
 .include "../../devel/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
