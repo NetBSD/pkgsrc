@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/05 19:20:20 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/24 16:44:37 joerg Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/recaptcha/client/__init__.py
 ${PYSITELIB}/recaptcha/client/__init__.pyc
 ${PYSITELIB}/recaptcha/client/__init__.pyo
@@ -8,10 +15,3 @@ ${PYSITELIB}/recaptcha/client/captcha.pyo
 ${PYSITELIB}/recaptcha/client/mailhide.py
 ${PYSITELIB}/recaptcha/client/mailhide.pyc
 ${PYSITELIB}/recaptcha/client/mailhide.pyo
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7-nspkg.pth
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7.egg-info/namespace_packages.txt
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7.egg-info/requires.txt
-${PYSITELIB}/recaptcha_client-${PKGVERSION}-py2.7.egg-info/top_level.txt
