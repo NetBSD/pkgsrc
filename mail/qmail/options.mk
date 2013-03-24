@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2011/06/07 02:53:42 schmonz Exp $
+# $NetBSD: options.mk,v 1.32 2013/03/24 20:10:31 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -82,7 +82,7 @@ VIRUSCAN_PATCH=		qmail-smtpd-viruscan-1.3.patch
 VIRUSCAN_LOG_PATCH=	qmail-smtpd-viruscan-logging.patch
 PATCHFILES+=		${VIRUSCAN_PATCH} ${VIRUSCAN_LOG_PATCH}
 SITES.${VIRUSCAN_PATCH}=	http://www.qmail.org/
-SITES.${VIRUSCAN_LOG_PATCH}=	http://scriptkitchen.com/qmail/
+SITES.${VIRUSCAN_LOG_PATCH}=	${MASTER_SITE_LOCAL}
 PATCH_DIST_STRIP.${VIRUSCAN_PATCH}=	-p1
 PATCH_DIST_STRIP.${VIRUSCAN_LOG_PATCH}=	-p1
 SUBST_CLASSES+=		viruscan
