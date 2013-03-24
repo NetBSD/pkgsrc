@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2012/04/17 17:39:47 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/03/24 17:04:57 joerg Exp $
 
 SHA1 (mxcl-liblastfm-0.3.3-0-gf0b3239.tar.gz) = f2e9705c9c2cbeaa14f46da9bd35ab36fe710392
 RMD160 (mxcl-liblastfm-0.3.3-0-gf0b3239.tar.gz) = 690931075f38fda78c69015ca5088c166f6e1013
 Size (mxcl-liblastfm-0.3.3-0-gf0b3239.tar.gz) = 111700 bytes
 SHA1 (patch-aa) = 2e25caf9c7e15f1c2c5a6b1d3e1ae3539710ac86
 SHA1 (patch-ab) = f9d88de85576479c903ebd165df077050f35c70e
+SHA1 (patch-src_fingerprint_fingerprint.pro) = 57d2bac371b7ff82722ef67cbe7ec5f73cfc074b
 SHA1 (patch-src_fingerprint_fplib_FloatingAverage.h) = c94e81ded3df1f3f9d8e156275524d3cdc6fd926
