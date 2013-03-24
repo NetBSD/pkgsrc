@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.1.1.1 2006/10/21 21:54:13 rillig Exp $
+$NetBSD: patch-ao,v 1.2 2013/03/24 16:45:55 joerg Exp $
 
 diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11shared/nsFontFreeType.cpp
---- ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp	2003-12-25 17:24:52.000000000 +0900
-+++ ./gfx/src/x11shared/nsFontFreeType.cpp	2004-06-10 23:06:38.000000000 +0900
-@@ -177,7 +177,7 @@
+--- gfx/src/x11shared/nsFontFreeType.cpp.orig	2003-12-25 08:24:52.000000000 +0000
++++ gfx/src/x11shared/nsFontFreeType.cpp
+@@ -177,7 +177,7 @@ nsFreeTypeFont::getFTFace()
    FTC_Manager mgr;
    nsresult rv;
    mFt2->GetFTCacheManager(&mgr);
@@ -12,7 +12,7 @@ diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11share
    NS_ASSERTION(NS_SUCCEEDED(rv), "failed to get face/size");
    if (NS_FAILED(rv))
      return nsnull;
-@@ -191,22 +191,15 @@
+@@ -191,22 +191,15 @@ nsFreeTypeFont::nsFreeTypeFont(nsITrueTy
    PRBool embedded_bimap = PR_FALSE;
    mFaceID = aFaceID;
    mPixelSize = aPixelSize;
@@ -39,7 +39,7 @@ diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11share
    PRUint32  num_embedded_bitmaps, i;
    PRInt32*  embedded_bitmapheights;
    mFaceID->GetEmbeddedBitmapHeights(&num_embedded_bitmaps,
-@@ -218,7 +211,6 @@
+@@ -218,7 +211,6 @@ nsFreeTypeFont::nsFreeTypeFont(nsITrueTy
          if (embedded_bitmapheights[i] == aPixelSize) {
            embedded_bimap = PR_TRUE;
            // unhinted must be set for embedded bitmaps to be used
@@ -47,7 +47,7 @@ diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11share
            break;
          }
        }
-@@ -312,7 +304,7 @@
+@@ -312,7 +304,7 @@ nsFreeTypeFont::doGetBoundingMetrics(con
    if (!face)
      return NS_ERROR_FAILURE;
  
@@ -56,7 +56,7 @@ diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11share
    mFt2->GetImageCache(&icache);
    if (!icache)
      return NS_ERROR_FAILURE;
-@@ -401,7 +393,7 @@
+@@ -401,7 +393,7 @@ nsFreeTypeFont::GetWidth(const PRUnichar
    if (!face)
      return 0;
  
@@ -65,7 +65,7 @@ diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11share
    mFt2->GetImageCache(&icache);
    if (!icache)
      return 0;
-@@ -723,7 +715,7 @@
+@@ -723,7 +715,7 @@ nsFreeTypeXImage::DrawString(nsRendering
      if (y%4==0) (*blendPixelFunc)(sub_image, y, ascent-1, black, 255/2);
  #endif
  
