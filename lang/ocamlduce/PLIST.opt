@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.opt,v 1.3 2012/04/13 07:34:53 dholland Exp $
-bin/ocamlducec.opt
-bin/ocamlducedep.opt
-bin/ocamlduceopt
-bin/ocamlduceopt.opt
-lib/ocaml/site-lib/ocamlduce/ocamlduce.a
-lib/ocaml/site-lib/ocamlduce/ocamlduce.cmxa
-lib/ocaml/site-lib/ocamlduce/ocamlduce.cmxs
