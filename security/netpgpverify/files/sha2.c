@@ -1,4 +1,4 @@
-/* $NetBSD: sha2.c,v 1.1 2013/03/16 07:32:35 agc Exp $ */
+/* $NetBSD: sha2.c,v 1.2 2013/03/24 16:48:17 joerg Exp $ */
 /*	$KAME: sha2.c,v 1.9 2003/07/20 00:28:38 itojun Exp $	*/
 
 /*
@@ -280,30 +280,6 @@ static const uint64_t sha512_initial_hash_value[8] = {
 	0x1f83d9abfb41bd6bULL,
 	0x5be0cd19137e2179ULL
 };
-
-#if !defined(_KERNEL) && !defined(_STANDALONE)
-#if defined(__weak_alias)
-__weak_alias(SHA224_Init,_SHA224_Init) 
-__weak_alias(SHA224_Update,_SHA224_Update)
-__weak_alias(SHA224_Final,_SHA224_Final)
-__weak_alias(SHA224_Transform,_SHA224_Transform)
-
-__weak_alias(SHA256_Init,_SHA256_Init) 
-__weak_alias(SHA256_Update,_SHA256_Update)
-__weak_alias(SHA256_Final,_SHA256_Final)
-__weak_alias(SHA256_Transform,_SHA256_Transform)
-
-__weak_alias(SHA384_Init,_SHA384_Init) 
-__weak_alias(SHA384_Update,_SHA384_Update)
-__weak_alias(SHA384_Final,_SHA384_Final)
-__weak_alias(SHA384_Transform,_SHA384_Transform)
-
-__weak_alias(SHA512_Init,_SHA512_Init) 
-__weak_alias(SHA512_Update,_SHA512_Update)
-__weak_alias(SHA512_Final,_SHA512_Final)
-__weak_alias(SHA512_Transform,_SHA512_Transform)
-#endif
-#endif
 
 /*** SHA-256: *********************************************************/
 int
