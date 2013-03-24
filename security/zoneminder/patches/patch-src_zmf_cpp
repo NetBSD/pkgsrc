@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zmf_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-src_zmf_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 http://www.zoneminder.com/wiki/index.php/1.24.2_Patches
 
@@ -11,9 +11,9 @@ image frame from the socket, all the data had not yet been written to the
 socket by the writer, so the reader thought there was a problem.  The loop
 reads from the socket until a full image frame is read, or there is an error.
 
---- src/zmf.cpp.orig	2010-11-04 12:10:08.824894001 +1300
-+++ src/zmf.cpp	2010-11-04 12:10:15.992894001 +1300
-@@ -231,16 +231,39 @@
+--- src/zmf.cpp.orig	2011-06-21 09:19:11.000000000 +0000
++++ src/zmf.cpp
+@@ -231,16 +231,39 @@ int main( int argc, char *argv[] )
  		}
  		Debug( 1, "Read frame header, expecting %ld bytes of image", frame_header.image_length );
  		static unsigned char image_data[ZM_MAX_IMAGE_SIZE];
@@ -59,7 +59,7 @@ reads from the socket until a full image frame is read, or there is an error.
  			}
  			else
  			{
-@@ -249,16 +272,18 @@
+@@ -249,16 +272,18 @@ int main( int argc, char *argv[] )
  			ReopenSocket( sd, monitor->Id() );
  			continue;
  		}

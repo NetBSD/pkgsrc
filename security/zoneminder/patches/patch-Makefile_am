@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile_am,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-Makefile_am,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 Disable the hacks around ownership setup so Pkgsrc can take responsibility.
 Don't install zm.conf at all - let Pkgsrc install it into EGDIR.
 
---- Makefile.am.orig	2009-03-21 01:07:10.000000000 +1300
-+++ Makefile.am	2010-11-23 00:34:37.003586001 +1300
-@@ -4,8 +4,8 @@
+--- Makefile.am.orig	2011-05-20 09:39:37.000000000 +0000
++++ Makefile.am
+@@ -4,8 +4,8 @@ AUTOMAKE_OPTIONS = gnu
  webuser = @WEB_USER@
  webgroup = @WEB_GROUP@
  
@@ -16,7 +16,7 @@ Don't install zm.conf at all - let Pkgsrc install it into EGDIR.
  
  SUBDIRS = \
  	src \
-@@ -19,7 +19,7 @@
+@@ -19,7 +19,7 @@ EXTRA_DIST = \
  	zmconfgen.pl.in
  
  # Yes, you are correct. This is a HACK!
