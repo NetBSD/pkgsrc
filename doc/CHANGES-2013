@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1039 2013/03/24 07:11:19 spz Exp $
+$NetBSD: CHANGES-2013,v 1.1040 2013/03/24 13:27:13 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mikutter to 0.2.1.1137 [obache 2013-03-22]
 	Updated www/seamonkey to 2.16nb1 [ryoon 2013-03-22]
 	Updated print/poppler to 0.22.2 [spz 2013-03-24]
+	Updated www/py-flask-admin to 1.0.5 [kleink 2013-03-24]
