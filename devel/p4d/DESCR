@@ -1,4 +1,0 @@
-P4D, the Perforce Server, manages the Perforce central file repository
-(the "depot"), tracks Perforce user operations, and records activity
-in the Perforce SCM database. You need one Perforce Server to
-support all of the users in your enterprise.
