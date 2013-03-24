@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/27 09:20:57 cherry Exp $
-bin/ski
-bin/xski
-bin/bski
-bin/bskinc
-man/man1/ski.1
-man/man1/xski.1
-man/man1/bskinc.1
-lib/X11/app-defaults/XSki
