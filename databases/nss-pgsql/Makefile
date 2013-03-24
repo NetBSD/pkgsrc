@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/24 16:12:33 dholland Exp $
 
 DISTNAME=	libnss-pgsql-1.5.0-beta
 PKGNAME=	nss-pgsql-1.5.0b
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/nss-pgsql/
 
