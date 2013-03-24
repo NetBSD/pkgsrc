@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/12/18 19:51:33 dholland Exp $
+$NetBSD: distinfo,v 1.6 2013/03/24 16:57:12 joerg Exp $
 
 SHA1 (simulavr-0.1.2.1.tar.bz2) = 276580f05ae57523684f6a61528cd3170858a3a4
 RMD160 (simulavr-0.1.2.1.tar.bz2) = 0728f35617629c382157f6657b2cf0f7418bd071
@@ -6,6 +6,8 @@ Size (simulavr-0.1.2.1.tar.bz2) = 359233 bytes
 SHA1 (patch-aa) = 4989d86dd551eccaac1fab0769d53feea90cc1e7
 SHA1 (patch-src_avrcore_h) = 7b19e59a68f25bbf09a2ea3685782cea94a3b12c
 SHA1 (patch-src_decoder_h) = 2b3b4627c4184672fbd33ad01314e3584f61eeb1
+SHA1 (patch-src_disp-vcd_vcd.c) = dccf71e90b6647dd459ad32c48ad86b05e48ef67
+SHA1 (patch-src_disp-vcd_vcd.h) = 802f0ed9e622a9aaf49c9f1cb6c36297d2c8c913
 SHA1 (patch-src_flash_h) = f559b2c865789c031951fccfac46019dbcd101ff
 SHA1 (patch-src_register_h) = 163b631c75680a9415c7ec6f4e01ed4b0f8407d9
 SHA1 (patch-src_storage_h) = 8fe5d7342f3db9b136569a7d2a753ca37f1dfb24
