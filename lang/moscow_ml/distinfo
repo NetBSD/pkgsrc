@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/11/08 12:41:30 dholland Exp $
+$NetBSD: distinfo,v 1.7 2013/03/24 16:55:48 joerg Exp $
 
 SHA1 (mos201src.tar.gz) = eba58486b10f0359fafba488fa1bf366b2aabf8a
 RMD160 (mos201src.tar.gz) = b2a9582d8c0bfdad2b8a74740e54ab33d3856637
@@ -16,4 +16,5 @@ SHA1 (patch-be) = 4742e5391e5ac9d7c5339c69b6d47d237659feed
 SHA1 (patch-bf) = 3bafc00ea7b2fd8c7992f0dc36cb4467e6815de6
 SHA1 (patch-bg) = 6ca89fb870ef066a2929b9cd7e38257c9380cd11
 SHA1 (patch-bh) = e9a12cf9804e46379c9e97c567eef974a2f7ca62
+SHA1 (patch-config_auto-aux_hasgot) = 19120011fa3ec592fed1eebc443b9b94c81daf5b
 SHA1 (patch-mosmlyac_main_c) = d9d6a624c33f96a25e866c64944d0f20cedea526
