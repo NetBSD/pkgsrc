@@ -1,11 +1,11 @@
-$NetBSD: patch-src_zm_logger_cpp,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-src_zm_logger_cpp,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 If the system has syscall() but not SYS_gettid [E.g. NetBSD], don't attempt
 to use SYS_gettid.
 
---- src/zm_logger.cpp.orig	2013-03-08 10:51:36.000000000 +1300
-+++ src/zm_logger.cpp	2013-03-08 10:52:17.000000000 +1300
-@@ -515,7 +515,7 @@
+--- src/zm_logger.cpp.orig	2011-06-28 11:07:35.000000000 +0000
++++ src/zm_logger.cpp
+@@ -515,7 +515,7 @@ void Logger::logPrint( bool hex, const c
      #endif
  
          pid_t tid;

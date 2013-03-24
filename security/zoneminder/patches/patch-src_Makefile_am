@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile_am,v 1.1 2013/03/15 02:01:47 dsainty Exp $
+$NetBSD: patch-src_Makefile_am,v 1.2 2013/03/24 16:47:47 joerg Exp $
 
 Don't pointlessly chown zms.  Don't setuid zmfix here, let Pkgsrc deal with
 that.
 
---- src/Makefile.am.orig	2010-11-23 01:57:40.000000000 +1300
-+++ src/Makefile.am	2010-11-23 01:58:47.000000000 +1300
-@@ -124,8 +124,8 @@
+--- src/Makefile.am.orig	2011-06-21 07:40:14.000000000 +0000
++++ src/Makefile.am
+@@ -125,8 +125,8 @@ dist-hook:
  # Yes, you are correct. This is a HACK!
  install-exec-hook:
  	( cd $(DESTDIR)@bindir@; mkdir -p $(DESTDIR)$(cgidir); mv zms $(DESTDIR)$(cgidir) )
