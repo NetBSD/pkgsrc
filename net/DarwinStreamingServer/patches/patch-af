@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2007/03/07 18:22:43 joerg Exp $
---- PlaylistBroadcaster.tproj/BroadcasterSession.cpp.orig	2004-09-30 16:40:54.000000000 +0200
-+++ PlaylistBroadcaster.tproj/BroadcasterSession.cpp	2005-12-17 22:20:45.000000000 +0100
-@@ -350,7 +350,7 @@
+$NetBSD: patch-af,v 1.3 2013/03/24 16:51:08 joerg Exp $
+--- PlaylistBroadcaster.tproj/BroadcasterSession.cpp.orig	2004-09-30 14:40:54.000000000 +0000
++++ PlaylistBroadcaster.tproj/BroadcasterSession.cpp
+@@ -350,7 +350,7 @@ SInt64 BroadcasterSession::Run()
  #if BROADCAST_SESSION_DEBUG
          qtss_printf("Session timing out.\n");
  #endif
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.2 2007/03/07 18:22:43 joerg Exp $
          if (fTransportType != kTCPTransportType)
          {
              fTimeoutTask.RefreshTimeout();
-@@ -554,7 +554,7 @@
+@@ -554,7 +554,7 @@ SInt64 BroadcasterSession::Run()
                  }
                  break;
              }

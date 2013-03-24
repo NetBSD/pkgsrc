@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2007/03/07 18:22:43 joerg Exp $
---- RTSPClientLib/ClientSocket.cpp.orig	2003-08-16 01:53:20.000000000 +0200
-+++ RTSPClientLib/ClientSocket.cpp	2005-12-17 22:20:45.000000000 +0100
-@@ -69,7 +69,7 @@
+$NetBSD: patch-ac,v 1.3 2013/03/24 16:51:08 joerg Exp $
+--- RTSPClientLib/ClientSocket.cpp.orig	2003-08-15 23:53:20.000000000 +0000
++++ RTSPClientLib/ClientSocket.cpp
+@@ -69,7 +69,7 @@ OS_Error ClientSocket::Open(TCPSocket* i
              return theErr;
              
          inSocket->NoDelay();
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.2 2007/03/07 18:22:43 joerg Exp $
      // no KeepAlive -- probably should be off for all platforms.
  #else
          inSocket->KeepAlive();
-@@ -162,7 +162,7 @@
+@@ -162,7 +162,7 @@ void TCPClientSocket::SetOptions(int snd
      err = ::setsockopt(fSocket.GetSocketFD(), SOL_SOCKET, SO_RCVBUF, (char*)&rcvBufSize, sizeof(int));
      AssertV(err == 0, OSThread::GetErrno());
  
