@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:07 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/24 16:51:07 joerg Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -11,6 +11,8 @@ HOMEPAGE=	http://dss.macosforge.org/
 COMMENT=	Open source version of Apple QuickTime Streaming Server
 LICENSE=	apple-public-source-license
 
+MAKE_JOBS_SAFE=	no
+
 RESTRICTED=	Under APSL (see http://www.opensource.apple.com/apsl/).
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
@@ -20,7 +22,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=	c c++
 
 MAKE_FILE=	Makefile.POSIX
-MAKE_ENV+=	CCOMP=${CC:Q} CPLUS=${CXX:Q} LINKER=${CXX:Q}
+MAKE_ENV+=	CCOMP=${CC:Q} CPLUS=${CXX:Q}\ -fPIC LINKER=${CXX:Q}
 MAKE_ENV+=	COMPILER_FLAGS=${CFLAGS:Q} INCLUDE_FLAG="-include"
 MAKE_ENV+=	CORE_LINK_LIBS="-pthread -lm -lcrypt -lstdc++"
 MAKE_ENV+=	SHARED="-shared" MODULE_LIBS="-lgcc -lstdc++"
@@ -46,6 +48,7 @@ BUILD_DIRS+=	QTFileTools/QTSDPGen.tproj
 BUILD_DIRS+=	QTFileTools/QTSampleLister.tproj
 BUILD_DIRS+=	QTFileTools/QTTrackInfo.tproj
 
+INSTALLATION_DIRS+=	bin sbin
 INSTALLATION_DIRS+=	libexec/StreamingServerModules
 INSTALLATION_DIRS+=	share/examples/streaming
 INSTALLATION_DIRS+=	share/streaming
@@ -60,15 +63,6 @@ PKG_USERS=	qtss:qtss
 PKG_GROUPS=	qtss
 PKG_GECOS.qtss=	Darwin Streaming Server user
 
-INTERACTIVE_STAGE=	fetch build
-
-FETCH_MESSAGE=	"Darwin Streaming Server is available as a free download"
-FETCH_MESSAGE+=	"under the APSL. Downloading the source code components"
-FETCH_MESSAGE+=	"requires APSL registration."
-FETCH_MESSAGE+=	"You should fetch the source code manually from"
-FETCH_MESSAGE+=	"${MASTER_SITES}${DISTFILES} and put into"
-FETCH_MESSAGE+=	"${DISTDIR}/${DISTFILES} directory."
-
 REPLACE_PERL+=	WebAdmin/WebAdminHtml/broadcaster_lib.pl
 REPLACE_PERL+=	WebAdmin/WebAdminHtml/parse_xml.cgi
 REPLACE_PERL+=	WebAdmin/WebAdminHtml/playlist-lib.pl
@@ -78,11 +72,11 @@ REPLACE_PERL+=	WebAdmin/WebAdminHtml/view_broadcast.cgi
 REPLACE_PERL+=	WebAdmin/src/streamingadminserver.pl
 REPLACE_PERL+=	WinNTSupport/WinPasswdAssistant.pl
 
-CONF_FILES=	${PKG_SYSCONFDIR:Q}/streaming/qtgroups ${PKG_SYSCONFDIR:Q}/streaming/qtgroups
-CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/qtusers ${PKG_SYSCONFDIR:Q}/streaming/qtusers
-CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR:Q}/streaming/relayconfig.xml
-CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/streamingloadtool.conf ${PKG_SYSCONFDIR:Q}/streaming/streamingloadtool.conf
-CONF_FILES+=	${PKG_SYSCONFDIR:Q}/streaming/streamingserver.xml-POSIX ${PKG_SYSCONFDIR:Q}/streaming/streamingserver.xml
+REQUIRE_DIRS+=	${PKG_SYSCONFDIR}/streaming
+CONF_FILES=	share/examples/streaming/qtgroups ${PKG_SYSCONFDIR}/streaming/qtgroups
+CONF_FILES+=	share/examples/streaming/qtusers ${PKG_SYSCONFDIR}/streaming/qtusers
+CONF_FILES+=	share/examples/streaming/relayconfig.xml-Sample ${PKG_SYSCONFDIR}/streaming/relayconfig.xml
+CONF_FILES+=	share/examples/streaming/streamingserver.xml-POSIX ${PKG_SYSCONFDIR}/streaming/streamingserver.xml
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
