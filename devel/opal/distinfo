@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.12 2013/01/19 20:29:24 riastradh Exp $
+$NetBSD: distinfo,v 1.13 2013/03/24 16:59:42 joerg Exp $
 
 SHA1 (opal-3.6.6.tar.bz2) = bd5e3907faf96db884a64dacdedb2259aca30cd3
 RMD160 (opal-3.6.6.tar.bz2) = b639709f7e28ce607478bddc41d171e0e54bee9f
 Size (opal-3.6.6.tar.bz2) = 7062422 bytes
 SHA1 (patch-configure) = e478024b9f80d08e5d3cfb85f9a825a12a7a4ec2
 SHA1 (patch-configure.ac) = 0ca73eeab0cb4cd8b1da85cf285e1e6edb596820
+SHA1 (patch-include_opal_opalmixer.h) = 767e4139ca0ff80676d2c753ae176ea0d82d664f
 SHA1 (patch-plugins_configure) = dcddc6200e457e0a2d1434036f5ad029dca5fbcf
 SHA1 (patch-plugins_configure.ac) = 559fd67e0813a56b1ed13a020acb600ac706d81d
 SHA1 (patch-plugins_video_H.263-1998_h263-1993.cxx) = 4af35a91f97aec8883fa26dd11e0dac655e9dc3a
