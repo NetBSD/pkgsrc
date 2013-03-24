@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/03/15 22:44:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/03/24 15:15:09 dholland Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
 MAKE_JOBS_SAFE=		no
-
-CONFLICTS+=	emacs-nox11-[0-9]*
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
