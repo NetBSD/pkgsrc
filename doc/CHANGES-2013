@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1040 2013/03/24 13:27:13 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.1041 2013/03/24 16:02:56 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey to 2.16nb1 [ryoon 2013-03-22]
 	Updated print/poppler to 0.22.2 [spz 2013-03-24]
 	Updated www/py-flask-admin to 1.0.5 [kleink 2013-03-24]
+	Updated x11/mlterm to 3.1.9 [tsutsui 2013-03-24]
