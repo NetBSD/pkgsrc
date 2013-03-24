@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/03/16 22:25:21 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/03/24 21:10:50 dsainty Exp $
 
 BUILDLINK_TREE+=	ghostscript-agpl
 
@@ -15,15 +15,15 @@ BUILDLINK_PKGSRCDIR.ghostscript-agpl?=		../../print/ghostscript-agpl
 pkgbase := ghostscript-agpl
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.ghostscript:Mcups)
+.if !empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mcups)
 .include "../../print/cups/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ghostscript:Mfontconfig)
+.if !empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mfontconfig)
 .include "../../fonts/fontconfig/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ghostscript:Mx11)
+.if !empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mx11)
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
