@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2012/07/05 10:23:23 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2013/03/24 17:00:30 spz Exp $
 
-Fix build with poppler-0.20.
+Fix build with poppler-0.22
 
 --- texk/web2c/luatexdir/lua/lepdflib.cc.orig	2011-05-19 05:38:37.000000000 +0000
 +++ texk/web2c/luatexdir/lua/lepdflib.cc
@@ -28,7 +28,7 @@ Fix build with poppler-0.20.
      uout = new_Annots_userdata(L);
      uout->d =
 -        new Annots((XRef *) uxref->d, (Catalog *) ucatalog->d,
-+        new Annots((PDFDoc *) uxref->d,
++        new Annots((PDFDoc *) uxref->d, (int) 0,
                     (Object *) uannotsobj->d);
      uout->atype = ALLOC_LEPDF;
      uout->pc = uxref->pc;
