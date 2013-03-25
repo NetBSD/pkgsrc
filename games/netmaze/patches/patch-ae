@@ -1,7 +1,13 @@
-$NetBSD: patch-ae,v 1.2 2005/05/01 10:34:49 jdc Exp $
---- netserv.c.dist	1994-04-10 11:07:23.000000000 +0100
-+++ netserv.c	2005-04-05 15:25:17.000000000 +0100
-@@ -106,7 +106,11 @@
+$NetBSD: patch-ae,v 1.3 2013/03/25 01:59:03 dholland Exp $
+
+- fd_set is not (necessarily) a struct
+- change around handling of signal masks (XXX: it is still wrong)
+- don't crash on remote machines that aren't in DNS
+- use socklen_t witih accept()
+
+--- netserv.c.orig	1994-04-10 10:07:23.000000000 +0000
++++ netserv.c
+@@ -106,7 +106,11 @@ struct pqueue *find_player(char*);
  
  
  #ifdef HAVE_FDSET
@@ -13,7 +19,7 @@ $NetBSD: patch-ae,v 1.2 2005/05/01 10:34:49 jdc Exp $
  #else
    struct fd_mask readmask;
  #endif
-@@ -629,7 +633,7 @@
+@@ -629,7 +633,7 @@ void start_signal(void)
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&vec1.sa_mask);
   #else
@@ -22,7 +28,7 @@ $NetBSD: patch-ae,v 1.2 2005/05/01 10:34:49 jdc Exp $
   #endif
    vec1.sa_flags = 0;
    if ( sigaction(SIGALRM, &vec1, (struct sigaction *) 0) == -1) perror("SIGALRM\n");
-@@ -652,7 +656,7 @@
+@@ -652,7 +656,7 @@ void setup_sigchild(void) /* for externa
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&svec1.sa_mask);
   #else
@@ -31,7 +37,7 @@ $NetBSD: patch-ae,v 1.2 2005/05/01 10:34:49 jdc Exp $
   #endif
    svec1.sa_flags = 0;
    if(sigaction(SIGCHLD,&svec1,(struct sigaction *)0) == -1) perror("SIGCHLD\n");
-@@ -779,7 +783,11 @@
+@@ -779,7 +783,11 @@ void do_timer(int nowaitgroup)
  void io_cntl(void)
  {
  #ifdef HAVE_FDSET
@@ -43,7 +49,16 @@ $NetBSD: patch-ae,v 1.2 2005/05/01 10:34:49 jdc Exp $
  #else
    struct fd_mask readmask1;
  #endif
-@@ -914,7 +922,7 @@
+@@ -881,7 +889,7 @@ void io_cntl(void)
+ 
+ void accept_socket(void)
+ {
+-  int addrlen = sizeof(struct sockaddr);
++  socklen_t addrlen = sizeof(struct sockaddr);
+   struct cqueue *q;
+ 
+   q = calloc(1,sizeof(struct cqueue)); /* alloc a new node */
+@@ -914,7 +922,7 @@ char *get_hostname(struct cqueue *q,char
    char *saddr = (char *) &(((struct sockaddr_in *) &(q->remoteaddr))->sin_addr.s_addr);
    hp = gethostbyaddr(saddr,4,AF_INET);
  
