@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2010/03/24 14:12:44 lukem Exp $
+$NetBSD: distinfo,v 1.13 2013/03/25 04:11:25 agc Exp $
 
-SHA1 (tnftpd-20100324.tar.gz) = f42c52fab3963f7fdef9c1dfd0e48ecd491ac9d9
-RMD160 (tnftpd-20100324.tar.gz) = 8bad2791e14868f037305e7ca1e2943f8120caf8
-Size (tnftpd-20100324.tar.gz) = 511110 bytes
+SHA1 (tnftpd-20130325.tar.gz) = 7e15aeffe883eede0dea085fface02061454b7d8
+RMD160 (tnftpd-20130325.tar.gz) = e5eea84e187fe52a1f839b3375140275202350f5
+Size (tnftpd-20130325.tar.gz) = 518350 bytes
