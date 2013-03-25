@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1049 2013/03/25 04:12:41 agc Exp $
+$NetBSD: CHANGES-2013,v 1.1050 2013/03/25 10:19:20 tcort Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1510,3 +1510,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed emulators/ski-bin successors emulators/ski [wiz 2013-03-24]
 	Updated x11/x3270 to 3.3.12ga12 [gsl 2013-03-24]
 	Updated net/tnftpd to 20130325 [agc 2013-03-25]
+	Updated editors/se to 3.0.1 [tcort 2013-03-25]
