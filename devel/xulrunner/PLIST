@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2013/03/25 06:13:32 sbd Exp $
+@comment $NetBSD: PLIST,v 1.53 2013/03/25 08:47:13 sbd Exp $
 bin/xulrunner
 include/xulrunner/AccEvent.h
 include/xulrunner/AnimationCommon.h
@@ -2627,9 +2627,6 @@ lib/pkgconfig/libxul-embedding.pc
 lib/pkgconfig/libxul.pc
 lib/pkgconfig/mozilla-js.pc
 lib/pkgconfig/mozilla-plugin.pc
-lib/xulrunner-sdk/lib
-lib/xulrunner-sdk/sdk/bin/xpt.py
-lib/xulrunner-sdk/sdk/lib/libmozglue.a
 lib/xulrunner/LICENSE
 lib/xulrunner/README.xulrunner
 lib/xulrunner/bin
