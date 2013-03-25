@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/03/07 05:38:26 tcort Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/25 10:15:08 tcort Exp $
 #
 
-DISTNAME=	se-3.0
+DISTNAME=	se-3.0.1
 CATEGORIES=	editors
 MASTER_SITES=	http://se-editor.org/dist/
 
