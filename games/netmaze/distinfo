@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/02/26 11:25:12 joerg Exp $
+$NetBSD: distinfo,v 1.8 2013/03/25 01:59:03 dholland Exp $
 
 SHA1 (netmaze0.81.tar.gz) = 61c3e1dc00372b18a622cd330c322817e73a6cf4
 RMD160 (netmaze0.81.tar.gz) = fe30487c441d0789a1526e4ec2f4cd2cf57a416a
@@ -6,8 +6,8 @@ Size (netmaze0.81.tar.gz) = 281463 bytes
 SHA1 (patch-aa) = 9bf19e360d54fe8130f93252e82f7c22773884a4
 SHA1 (patch-ab) = 1624eade859ee18e2f568fde98187514ae750e95
 SHA1 (patch-ac) = 54f3c411a252dcfc0f7fac92f7f047f00b6fb5e0
-SHA1 (patch-ad) = 9fd31fa10618f76eb705fe1f77895889019e07b8
-SHA1 (patch-ae) = 28437adbcab2c57a81581e5fd2cf98447fb60447
+SHA1 (patch-ad) = 532248ccd72f3b8b35b40e2c1a1b79cbce631458
+SHA1 (patch-ae) = d9b122b0346a0f1fff00d06b73e1a5371484a7e4
 SHA1 (patch-af) = 356d3ebbf8a8ddbd3cf5056670d274c0b0310545
 SHA1 (patch-ag) = 8370210cfbeca003e942e60afa02c7df47fc8a4a
 SHA1 (patch-ah) = e291a07a14372eb440e4dc2ed955404fda409452
@@ -18,4 +18,7 @@ SHA1 (patch-al) = 17c66e5dda796258b935ebee974df8a092f38c4f
 SHA1 (patch-am) = af29aa8ed0955cf314fa27117457daf57078ddfb
 SHA1 (patch-an) = 28a25e4d493f6c24d6fb9499a939f659a51c436c
 SHA1 (patch-ao) = 37ede535ccda7ffb267ea1927a197590f1088b37
-SHA1 (patch-better.c) = d0b08ff9dcb43d4e5acc806b1cb961505d9f0778
+SHA1 (patch-better.c) = c06be9fe774be2d8437abd3836091ce963ff524c
+SHA1 (patch-draw_3d.c) = 20af028b362dc330ba9243a89748d3e193ac1fdb
+SHA1 (patch-follower.c) = aa985ec2f2811942a1ef955777b7d7f11f33bcad
+SHA1 (patch-x11gfx.c) = 392d1e42073d6415dfc06d44fd4f49a9d2506863

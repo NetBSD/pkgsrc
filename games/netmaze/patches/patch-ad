@@ -1,6 +1,10 @@
-$NetBSD: patch-ad,v 1.2 2004/05/07 02:16:05 danw Exp $
+$NetBSD: patch-ad,v 1.3 2013/03/25 01:59:03 dholland Exp $
 
---- netmaze.c.orig	Fri Apr 15 16:34:04 1994
+- use standard headers
+- fix void main
+- change around handling of signal masks (XXX: it is still wrong)
+
+--- netmaze.c.orig	1994-04-15 20:34:04.000000000 +0000
 +++ netmaze.c
 @@ -23,16 +23,12 @@
   *
@@ -20,7 +24,24 @@ $NetBSD: patch-ad,v 1.2 2004/05/07 02:16:05 danw Exp $
  #include <sys/time.h>
  #include <sys/ioctl.h>
  #include <sys/types.h>
-@@ -383,7 +379,7 @@ static void start_signal(void)
+@@ -96,7 +92,7 @@ struct sigaction vec,ovec,vecio,ovecio;
+ extern struct timeval notimeout;
+ extern struct fd_mask readmask;
+ 
+-void main(int argc,char **argv)
++int main(int argc,char **argv)
+ {
+   int i,nowait=FALSE;
+ 
+@@ -293,6 +289,7 @@ void main(int argc,char **argv)
+   }
+ 
+   XCloseDisplay(sm->grafix.display);
++  return 0;
+ }
+ 
+ /***************************/
+@@ -383,7 +380,7 @@ static void start_signal(void)
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&vec.sa_mask);
   #else
@@ -29,7 +50,7 @@ $NetBSD: patch-ad,v 1.2 2004/05/07 02:16:05 danw Exp $
   #endif
    vec.sa_flags = 0;
    if ( sigaction(SIGALRM, &vec, &ovec) == -1) perror("SIGALRM\n");
-@@ -412,7 +408,7 @@ static void setup_sigchild(void)
+@@ -412,7 +409,7 @@ static void setup_sigchild(void)
   #ifdef RS6000 /* ibm rs/6000 */
     sigemptyset(&vec.sa_mask);
   #else
