@@ -1,7 +1,6 @@
 This module a simple file-based database.  This database simply contains IP
 blocks as keys, and countries as values.  The data contains all public IP
-addresses and should be more complete and accurate than reverse complete
-COMPLETE and accurate than reverse DNS lookups.
+addresses and should be more complete and accurate than reverse DNS lookups.
 
 This module can be used to automatically select the geographically closest
 mirror, or to analyze your web server logs to determine the countries of
