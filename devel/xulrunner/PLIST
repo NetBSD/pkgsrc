@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2013/02/22 14:48:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.52 2013/03/25 06:13:32 sbd Exp $
 bin/xulrunner
 include/xulrunner/AccEvent.h
 include/xulrunner/AnimationCommon.h
@@ -61,7 +61,6 @@ include/xulrunner/MediaDecoderReader.h
 include/xulrunner/MediaDecoderStateMachine.h
 include/xulrunner/MediaEngine.h
 include/xulrunner/MediaEngineDefault.h
-${PLIST.webrtc}include/xulrunner/MediaEngineWebRTC.h
 include/xulrunner/MediaResource.h
 include/xulrunner/MediaSegment.h
 include/xulrunner/MediaStreamGraph.h
@@ -200,7 +199,6 @@ include/xulrunner/jinclude.h
 include/xulrunner/jmorecfg.h
 include/xulrunner/jpegint.h
 include/xulrunner/jpeglib.h
-${PLIST.jemalloc}include/xulrunner/jemalloc.h
 ${PLIST.jemalloc}include/xulrunner/jemalloc_types.h
 include/xulrunner/js-config.h
 include/xulrunner/js.msg
@@ -1882,7 +1880,6 @@ include/xulrunner/nsIProfile.h
 include/xulrunner/nsIProfileChangeStatus.h
 include/xulrunner/nsIProfileMigrator.h
 include/xulrunner/nsIProfileUnlocker.h
-${PLIST.sps}include/xulrunner/nsIProfiler.h
 include/xulrunner/nsIProgrammingLanguage.h
 include/xulrunner/nsIProgressEventSink.h
 include/xulrunner/nsIPrompt.h
@@ -2316,9 +2313,6 @@ include/xulrunner/nsQuickSort.h
 include/xulrunner/nsRDFCID.h
 include/xulrunner/nsRDFResource.h
 include/xulrunner/nsRange.h
-${PLIST.webrtc}include/xulrunner/nsRawDecoder.h
-${PLIST.webrtc}include/xulrunner/nsRawReader.h
-${PLIST.webrtc}include/xulrunner/nsRawStructs.h
 include/xulrunner/nsReadLine.h
 include/xulrunner/nsReadableUtils.h
 include/xulrunner/nsRect.h
@@ -2494,7 +2488,6 @@ include/xulrunner/rdfISerializer.h
 include/xulrunner/rdfITripleVisitor.h
 include/xulrunner/readstrings.h
 include/xulrunner/sampler.h
-${PLIST.sps}include/xulrunner/shared-libraries.h
 include/xulrunner/skia/Sk64.h
 include/xulrunner/skia/SkAdvancedTypefaceMetrics.h
 include/xulrunner/skia/SkBitmap.h
@@ -2591,7 +2584,6 @@ include/xulrunner/snappy/snappy-c.h
 include/xulrunner/snappy/snappy-stubs-public.h
 include/xulrunner/snappy/snappy.h
 include/xulrunner/speex/speex_resampler.h
-${PLIST.sps}include/xulrunner/sps_sampler.h
 include/xulrunner/string-template-def-char.h
 include/xulrunner/string-template-def-unichar.h
 include/xulrunner/string-template-undef.h
@@ -2601,7 +2593,6 @@ include/xulrunner/theora/theora.h
 include/xulrunner/theora/theoradec.h
 include/xulrunner/theora/theoraenc.h
 ${PLIST.tremor}include/xulrunner/tremor/ivorbiscodec.h
-include/xulrunner/tremor/ivorbiscodec.h
 include/xulrunner/txIEXSLTRegExFunctions.h
 include/xulrunner/txIFunctionEvaluationContext.h
 include/xulrunner/txINodeSet.h
@@ -3600,7 +3591,6 @@ lib/xulrunner/modules/PluginProvider.jsm
 lib/xulrunner/modules/PluralForm.jsm
 lib/xulrunner/modules/PopupNotifications.jsm
 lib/xulrunner/modules/PrivateBrowsingUtils.jsm
-${PLIST.sps}lib/xulrunner/modules/Profiler.jsm
 lib/xulrunner/modules/PropertyListUtils.jsm
 lib/xulrunner/modules/SafeBrowsing.jsm
 lib/xulrunner/modules/Services.jsm
@@ -4653,7 +4643,6 @@ share/idl/xulrunner/nsIProfile.idl
 share/idl/xulrunner/nsIProfileChangeStatus.idl
 share/idl/xulrunner/nsIProfileMigrator.idl
 share/idl/xulrunner/nsIProfileUnlocker.idl
-${PLIST.sps}share/idl/xulrunner/nsIProfiler.idl
 share/idl/xulrunner/nsIProgrammingLanguage.idl
 share/idl/xulrunner/nsIProgressEventSink.idl
 share/idl/xulrunner/nsIPrompt.idl
