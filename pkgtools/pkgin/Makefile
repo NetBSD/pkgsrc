@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/02/25 19:35:38 imil Exp $
+# $NetBSD: Makefile,v 1.35 2013/03/25 10:09:04 sbd Exp $
 #
 
 DISTNAME=		pkgin-0.6.3.1.1
@@ -29,6 +29,10 @@ SUBST_SED.path+=	-e "s|/var|${VARBASE}|g"
 SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|!=.*uname -p|=	${MACHINE_ARCH}|g"
 
+GNU_CONFIGURE=		yes
+USE_FEATURES=		nbcompat
+USE_TOOLS+=		nroff
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
@@ -38,10 +42,6 @@ SUBST_MESSAGE.osrel=	Adjusting repository OS release
 SUBST_FILES.osrel=	REPOSITORIES
 SUBST_SED.osrel=	-e "s|@OSREL@|${OS_VERSION:C/_.*//}|"
 .endif
-
-GNU_CONFIGURE=		yes
-USE_FEATURES=		nbcompat
-USE_TOOLS+=		nroff
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
