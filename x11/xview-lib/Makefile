@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/29 05:07:24 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/03/25 07:46:41 sbd Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
@@ -17,6 +17,7 @@ LICENSE=		sun-openlook-license
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 # builds, but binaries in../xview-clients all crash
 NOT_FOR_PLATFORM=	*-*-alpha
+NOT_FOR_PLATFORM+=	Linux-*-*
 
 USE_IMAKE=		yes
 
