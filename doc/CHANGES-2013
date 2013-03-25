@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1050 2013/03/25 10:19:20 tcort Exp $
+$NetBSD: CHANGES-2013,v 1.1051 2013/03/25 14:09:17 dholland Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1503,11 +1503,14 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/mlterm to 3.1.9 [tsutsui 2013-03-24]
 	Updated net/wpa_supplicant to 2.0 [rodent 2013-03-24]
 	Updated net/wpa_gui to 2.0 [rodent 2013-03-24]
+	Updated devel/reposurgeon to 2.26nb1 [dholland 2013-03-24]
+	Removed lang/ocamlduce [dholland 2013-03-24]
 	Removed devel/p4 [wiz 2013-03-24]
 	Removed devel/p4-docs [wiz 2013-03-24]
 	Removed devel/p4d [wiz 2013-03-24]
 	Removed devel/p4web [wiz 2013-03-24]
 	Removed emulators/ski-bin successors emulators/ski [wiz 2013-03-24]
 	Updated x11/x3270 to 3.3.12ga12 [gsl 2013-03-24]
+	Updated games/netmaze to 0.81nb4 [dholland 2013-03-25]
 	Updated net/tnftpd to 20130325 [agc 2013-03-25]
 	Updated editors/se to 3.0.1 [tcort 2013-03-25]
