@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2013/03/25 06:13:32 sbd Exp $
+# $NetBSD: Makefile,v 1.101 2013/03/25 08:47:13 sbd Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
@@ -55,26 +55,18 @@ pre-configure:
 	mkdir ${WRKSRC}/js/src/.deps
 
 post-install:
-	# XXX fix the pkg-config files instead
-	mkdir ${DESTDIR}${PREFIX}/lib/xulrunner-sdk/sdk/lib
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue.a
-	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libxpcomglue.a	\
+	ln -s sdk/lib/libxpcomglue.a 					\
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue.a
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
-	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libxpcomglue_s.a	\
+	ln -s sdk/lib/libxpcomglue_s.a 					\
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libunicharutil_external_s.a
-	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libunicharutil_external_s.a \
+	ln -s sdk/lib/libunicharutil_external_s.a 			\
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libunicharutil_external_s.a
+	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libmozglue.a
+	ln -s sdk/lib/libmozglue.a 					\
+	  ${DESTDIR}${PREFIX}/lib/xulrunner/libmozglue.a
 	${TOUCH} ${TOUCH_FLAGS} ${DESTDIR}${PREFIX}/include/xulrunner/mozilla/throw_gcc.h
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/xulrunner-sdk/sdk/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/dist/sdk/bin/xpt.py			\
-	  ${DESTDIR}${PREFIX}/lib/xulrunner-sdk/sdk/bin
-	${INSTALL_LIB} ${WRKSRC}/mozglue/build/libmozglue.a		\
-		${DESTDIR}${PREFIX}/lib/xulrunner
-	${INSTALL_LIB} ${WRKSRC}/mozglue/build/libmozglue.a		\
-		${DESTDIR}${PREFIX}/lib/xulrunner-sdk/sdk/lib
-	ln -s ${PREFIX}/lib/xulrunner/lib \
-	  ${DESTDIR}${PREFIX}/lib/xulrunner-sdk/lib
 
 .include "../../mk/bsd.pkg.mk"
