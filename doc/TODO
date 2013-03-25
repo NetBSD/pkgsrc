@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12024 2013/03/24 17:05:03 wiz Exp $
+$NetBSD: TODO,v 1.12025 2013/03/25 21:58:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -694,6 +694,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
+	o harfbuzz-0.9.14
 	o haskell-mode-1.45
 	o hdf-4.2.7
 	o help2man-1.41.1
@@ -783,7 +784,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.8.0
 	o libchamplain08-0.12.3
+	o libebml-1.3.0
 	o libextractor-1.0.0
+	o libffi-3.0.13
 	o libflash-0.4.13
 	o libfolks-0.8.0
 	o libgcrypt-1.5.1
@@ -799,6 +802,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
 	o libltdl-2.4.2
+	o libmatroska-1.4.0
 	o libmcs-0.7.2
 	o libmemcached-1.0.16
 	o libmms-0.6.2
@@ -871,7 +875,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-server-1.14.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-3.0.6
+	o mono-3.0.7
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.6.0
@@ -1010,8 +1014,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-moin-1.9.7
+	o py-pytz-2013b
 	o py-qt4-4.10
-	o py-simplejson-3.1.0
+	o py-simplejson-3.1.2
 	o py-sip-4.14.4
 	o py-sybase-0.37
 	o py-trueskill-0.3.1
@@ -1221,7 +1226,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130316
+	o x264-devel-20130323
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
