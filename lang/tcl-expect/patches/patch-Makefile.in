@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/08/21 21:33:58 marino Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/03/26 11:41:01 jperkin Exp $
 
 New Makefile.in patch, no libtool
 
@@ -36,9 +36,9 @@ New Makefile.in patch, no libtool
  
  libraries:
  
-+${PKG_LIB_A_FILE}: ${OBJS}
++${PKG_LIB_A_FILE}: $(PKG_OBJECTS)
 +	rm -rf $@
-+	ar cr $@ ${OBJS}
++	ar cr $@ $(PKG_OBJECTS)
 +	$(RANLIB) $@
 +
  doc:
