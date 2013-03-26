@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/11/24 13:40:05 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/03/26 23:34:34 joerg Exp $
 
 SHA1 (openwbem-3.2.2.tar.gz) = 3272e5cbcfb2a864cccf71e15e0da0f6623420bb
 RMD160 (openwbem-3.2.2.tar.gz) = 31ce8c80d47ff7539315e3978b8c1c493bd17f35
@@ -9,7 +9,23 @@ SHA1 (patch-ac) = ea2f928b13eaef464e133b0e510fa4b8cfee95b9
 SHA1 (patch-ad) = e8b7c3a3b7fbab6052a9e866c8a1c9f1653db590
 SHA1 (patch-ae) = a9d923bdf6e52acff83588605f2913b196c92038
 SHA1 (patch-src_cim_OW__CIMDateTime.cpp) = 186db29470cbe526c4e18aca13604ab578b3bad3
+SHA1 (patch-src_cimom_server_OW__Platform.cpp) = f7a2f848f565c0c33810bc90ff1455598c024769
+SHA1 (patch-src_cimom_server_OW__PlatformSignal.cpp) = f6d2427d1a2f0bce8cbbc558583bd7d429cfc515
+SHA1 (patch-src_common_OW__COWReference.hpp) = f67f64de56a8745d24a0d738b9c546f5edf249d8
+SHA1 (patch-src_common_OW__HashMap.hpp) = 37475181bf6e979bde55ef717f14ce62ab730aed
+SHA1 (patch-src_common_OW__HashMultiMap.hpp) = 3d94543356bf0837996a9faf4075ccc6965bd462
+SHA1 (patch-src_common_OW__List.hpp) = e106aca83db05b484ad573cb8da889453321836f
 SHA1 (patch-src_common_OW__LogMessagePatternFormatter.cpp) = 8566874493e1c5def31dd0e27d42b65c6f3f3ff8
 SHA1 (patch-src_common_OW__PosixFile.cpp) = 865435218984a3106229cb74e72af1d6b29625db
+SHA1 (patch-src_common_OW__SharedLibraryReference.hpp) = 3b3ebb250fe602a93ef53915a232fa9919bec7b2
+SHA1 (patch-src_common_OW__Stack.hpp) = d63effa7cd81e6671611929edf46f8ba206d9588
 SHA1 (patch-src_common_OW__StackTrace.cpp) = 14e3dbdaea069c5ae47d9e06f7e337dd74110b88
 SHA1 (patch-src_common_socket_OW__SocketAddress.cpp) = 64af2ecb1f5164bacef823d5769a52c513470db1
+SHA1 (patch-src_mof_OW__MOFCompiler.cpp) = bc90a3864f40c535785100e911204221da51403b
+SHA1 (patch-src_mof_OW__MOFCompiler.hpp) = 520e8cadaa586a4c4ab17b10d099b33fb539f893
+SHA1 (patch-src_providerifcs_cmpi_common_cmpiBrokerEnc.cpp) = c5cf33a0c9be47f064d3300e067fc1aa08609145
+SHA1 (patch-src_providerifcs_cmpi_common_cmpiInstance.cpp) = 98d65bcc930c10125d709077f5cb5156f22653fb
+SHA1 (patch-src_providerifcs_npi_OW__FTABLERef.hpp) = b05ffdf130bfd4fe94e818ad4a66bb763afea1e7
+SHA1 (patch-src_providerifcs_npi_common_NPIExternal.hpp) = 7b719d1111b2a2f8da8a12fc1da169645ffcf45a
+SHA1 (patch-src_providerifcs_remote_OW__RemoteProviderInterface.cpp) = c786b848ca905cd5a7cc664597b9836ac3e09cda
+SHA1 (patch-src_repositories_hdb_OW__AssocDb.hpp) = a25f7372b2fc0f28f5eb994a705de5c61b519627
