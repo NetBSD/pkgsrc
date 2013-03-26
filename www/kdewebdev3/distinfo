@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2013/01/17 16:04:49 joerg Exp $
+$NetBSD: distinfo,v 1.23 2013/03/26 23:30:46 joerg Exp $
 
 SHA1 (kdewebdev-3.5.10.tar.bz2) = 71af1a5f3e835b3021b180271f8a4c1879b55b82
 RMD160 (kdewebdev-3.5.10.tar.bz2) = 210665120b13431f18a4070f2b5a9e24cb58920d
@@ -6,3 +6,5 @@ Size (kdewebdev-3.5.10.tar.bz2) = 6249632 bytes
 SHA1 (patch-aa) = 2ae1f420dfd7cbe841eaae29730bc087ec77f598
 SHA1 (patch-quanta_parsers_tag.h) = 72135e8b222187a2757119b01b407cfd61b861ee
 SHA1 (patch-quanta_parts_kafka_kafkacommon.cpp) = 077024b5955f78a300e692987115ac7441ba6040
+SHA1 (patch-quanta_src_quanta.h) = 18184b72c06293cc24d945335bb4a130482c27bb
+SHA1 (patch-quanta_treeviews_projecttreeview.h) = c2f4300852ad04c2ee5b76feee157c5e60727315
