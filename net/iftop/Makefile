@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/02/06 19:30:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2013/03/26 20:22:49 bsiegert Exp $
 #
 
 DISTNAME=	iftop-0.17
@@ -12,6 +12,7 @@ COMMENT=	Display bandwidth usage on an interface
 
 USE_NCURSES=		chgat
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-resolver=netdb_1thread
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
