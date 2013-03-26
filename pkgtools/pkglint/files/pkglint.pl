@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.853 2013/03/26 15:10:57 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.854 2013/03/26 15:11:20 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -649,10 +649,7 @@ sub get_vartypes_basictypes() {
 	my $types = {};
 	assert($lines, "Couldn't load pkglint.pl from $program");
 	foreach my $line (@$lines) {
-		if ($line->text =~ m"^\s+\} elsif \(\$type eq \"(\w+)\"\) \{$") {
-			# still finds "ARRAY" -- probably unintentional!
-			$types->{$1} = 1;
-		} elsif ($line->text =~ m"^\s+(\w+) => sub \{$") {
+		if ($line->text =~ m"^\s+(\w+) => sub \{$") {
 			# XXX lookup in %type_dispatch instead
 			$types->{$1} = 1;
 		}
