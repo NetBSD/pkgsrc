@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2013/01/15 15:20:44 joerg Exp $
+$NetBSD: distinfo,v 1.43 2013/03/26 23:30:44 joerg Exp $
 
 SHA1 (kdevelop_3.5.5.orig.tar.gz) = a28c7e4e9b5a7244a5a7063593c9713178a54bcd
 RMD160 (kdevelop_3.5.5.orig.tar.gz) = 5426fdff33ce32908141c098c8dfd5e4223c928a
@@ -18,4 +18,7 @@ SHA1 (patch-languages_perl_perlsupportpart.cpp) = 87128f0a2714368e41400dfa341a06
 SHA1 (patch-languages_python_pythonsupportpart.cpp) = 2f9f6c3d96e9c02ba554fff9e3861ff47999c5c9
 SHA1 (patch-languages_ruby_rubysupport__part.cpp) = c6c78b777ac6f4826ec490d496d6bcc70934edaf
 SHA1 (patch-lib_cppparser_lexer.h) = d4d787360ab8ae65b687139ca2924401920e381d
+SHA1 (patch-lib_widgets_kdevhtmlpart.h) = 4c88e2755af66897d3f26479e756049778532d31
 SHA1 (patch-parts_tools_tools__part.cpp) = 0fb3510c498fc2a8844f0c2f8ef186b7697c32fe
+SHA1 (patch-vcs_cvsservice_cvspart.h) = 0859d15445eaafa907c184fbfbc2c85b30513162
+SHA1 (patch-vcs_cvsservice_cvspartimpl.h) = ba6f66f6581be20e1585d4102306424811d62473
