@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/23 18:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/26 08:02:51 sbd Exp $
 #
 
 DISTNAME=	xfd-1.1.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Display all the characters in an X font
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config xgettext
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
