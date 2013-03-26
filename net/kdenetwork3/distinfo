@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2013/01/15 15:30:00 joerg Exp $
+$NetBSD: distinfo,v 1.53 2013/03/26 23:30:46 joerg Exp $
 
 SHA1 (kdenetwork-3.5.10.tar.bz2) = eb280bffaf4642bfda442cc6a9fb38dc4163b720
 RMD160 (kdenetwork-3.5.10.tar.bz2) = f888f53746f1e734d3c15c09eac1c2b9c0564b20
@@ -18,6 +18,10 @@ SHA1 (patch-bc) = 8e6349eb5680fa7ac807c09d38816e744aa359c2
 SHA1 (patch-bd) = 05c285a1965f5a9af03b0570ac51a1ea19d7fed0
 SHA1 (patch-be) = 69eee4103409cd10dc673c3f7da3736c9505e927
 SHA1 (patch-filesharing_advanced_kcm__sambaconf_qmultichecklistitem.cpp) = 46bb9a2788fc03651a0740b4c070246e18422bf4
+SHA1 (patch-kopete_libkopete_kopetepasswordedaccount.h) = 65ba4a13c9933d2a8629daeadcf1e1516e8a80eb
 SHA1 (patch-kopete_libkopete_kopeteproperties.h) = 3428271a6840fdfb57d7aece2c6e68047c9db422
+SHA1 (patch-kopete_libkopete_ui_metacontactselectorwidget.h) = f3369979ef50bfcee1ea30be4fe687b991df8c8b
+SHA1 (patch-kopete_protocols_gadu_gadueditcontact.h) = 507b2d22d09cfb8f7055c8ced2e4a78d91bdc5f2
+SHA1 (patch-kopete_protocols_groupwise_libgroupwise_qcatlshandler.h) = 4c87cec82d736586c107a982c73dcd7a6c688017
 SHA1 (patch-krdc_vnc_rfbproto.c) = 0a48d5244638a592cd000231c4b97cd669300138
 SHA1 (patch-krfb_krfb_configuration_h) = ef3c84a02c03a9c24341cab9b691b68ef3c4f0cc
