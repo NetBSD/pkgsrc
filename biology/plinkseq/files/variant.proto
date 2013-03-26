@@ -1,0 +1,53 @@
+
+message VariantMetaUnit {
+	enum Type { INT = 1; FLOAT = 2; TEXT = 3; BOOL = 4; }
+	     	
+        required Type   type = 1;
+	required string name = 2;
+
+	repeated int32   int_value     = 3 [packed=true];
+	repeated double  double_value  = 4 [packed=true];
+	repeated string  string_value  = 5;
+	repeated bool    bool_value    = 6 [packed=true];
+}
+
+
+message GenotypeMetaUnit {
+
+	enum Type { INT = 1; FLOAT = 2; TEXT = 3; BOOL = 4; }
+	     	
+        required Type    type          = 1;
+	required string  name          = 2;
+	
+        optional int32   fixed_len     = 3;
+	repeated int32   len           = 4 [packed=true];
+
+	repeated int32   int_value     = 5 [packed=true];
+	repeated double  double_value  = 6 [packed=true];
+	repeated string  string_value  = 7;
+	repeated bool    bool_value    = 8 [packed=true];
+
+        optional int32   fixed_indiv   = 9;
+	repeated int32   indiv_index   = 10 [packed=true];
+	repeated int32   missing_index = 11 [packed=true];
+}
+
+
+message VariantBuffer {
+	optional string ref = 1;
+	optional string alt = 2;
+	optional double quality = 3;
+	repeated string filter  = 4;
+}
+
+message VariantMetaBuffer { 	
+	repeated VariantMetaUnit vmeta = 1;
+}
+
+message GenotypeBuffer {
+	repeated uint32  geno     = 1 [packed=true];
+}
+
+message GenotypeMetaBuffer {
+	repeated GenotypeMetaUnit gmeta = 1;
+}
