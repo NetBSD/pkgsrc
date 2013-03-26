@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1051 2013/03/25 14:09:17 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.1052 2013/03/26 11:41:16 jperkin Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1514,3 +1514,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/netmaze to 0.81nb4 [dholland 2013-03-25]
 	Updated net/tnftpd to 20130325 [agc 2013-03-25]
 	Updated editors/se to 3.0.1 [tcort 2013-03-25]
+	Updated lang/tcl-expect to 5.45.0nb1 [jperkin 2013-03-26]
