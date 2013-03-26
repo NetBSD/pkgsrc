@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1052 2013/03/26 11:41:16 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.1053 2013/03/26 12:22:56 gdt Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1515,3 +1515,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/tnftpd to 20130325 [agc 2013-03-25]
 	Updated editors/se to 3.0.1 [tcort 2013-03-25]
 	Updated lang/tcl-expect to 5.45.0nb1 [jperkin 2013-03-26]
+	Updated graphics/gimp-ufraw to 0.19.2 [gdt 2013-03-26]
