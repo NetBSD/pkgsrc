@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1055 2013/03/26 13:54:53 martin Exp $
+$NetBSD: CHANGES-2013,v 1.1056 2013/03/26 14:02:40 tsutsui Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1517,3 +1517,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/tcl-expect to 5.45.0nb1 [jperkin 2013-03-26]
 	Updated graphics/gimp-ufraw to 0.19.2 [gdt 2013-03-26]
 	Updated emulators/simh to 3.9.0nb4 [martin 2013-03-26]
+	Updated games/onscripter to 20130317 [tsutsui 2013-03-26]
