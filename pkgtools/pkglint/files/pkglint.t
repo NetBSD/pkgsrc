@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.7 2013/03/26 15:10:32 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.8 2013/03/26 15:11:20 schmonz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -71,7 +71,7 @@ sub test_get_vartypes_basictypes {
 	my %types = %{$results[0]};
 
 	my @all_vartypes_basictypes = qw(
-		ARRAY AwkCommand BrokenIn
+		AwkCommand BrokenIn
 		BuildlinkDepmethod BuildlinkDepth BuildlinkPackages
 		CFlag Category Comment
 		Dependency DependencyWithPath
