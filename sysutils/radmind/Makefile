@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/03/26 14:35:00 hauke Exp $
+# $NetBSD: Makefile,v 1.32 2013/03/26 14:38:11 hauke Exp $
 #
 
 DISTNAME=	radmind-1.14.1
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 # Not yet 64 bit time_t safe, see PR pkg/46555
 NOT_FOR_PLATFORM=      NetBSD-5.99.*-* NetBSD-[6-9]*-*
-
-.include "options.mk"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
