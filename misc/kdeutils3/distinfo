@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2013/01/15 15:25:21 joerg Exp $
+$NetBSD: distinfo,v 1.53 2013/03/26 23:30:46 joerg Exp $
 
 SHA1 (kdeutils-3.5.10.tar.bz2) = dfa440253fd9802d1a9665d339c20d903ea676af
 RMD160 (kdeutils-3.5.10.tar.bz2) = 98edf87a92c6baf2a3dcd119659cead1110d5789
@@ -9,4 +9,5 @@ SHA1 (patch-ai) = 6a4b3d3d77ba2756a7ee71d923d8bfe78c735bce
 SHA1 (patch-an) = be425dd332ec5293fe472bba48496c10ec84c7ad
 SHA1 (patch-ao) = ef89fd10177e3164a1b3c0dcaccd104f1079ec6a
 SHA1 (patch-aq) = a76ff5042c3dec821026f512f6e83f5a3eaa3d91
+SHA1 (patch-superkaramba_src_imagelabel.h) = 4184b621772a27ec3e0eaa4cf77e951062db2692
 SHA1 (patch-superkaramba_src_memsensor.cpp) = 148c897bcd37e0962a5b476d95f2ad6dee5a44fe

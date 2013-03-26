@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.30 2009/05/21 16:06:35 wiz Exp $
+$NetBSD: distinfo,v 1.31 2013/03/26 23:30:45 joerg Exp $
 
 SHA1 (dasher-4.10.1.tar.bz2) = bc2bd8c8c8f078f5290527f1525563d098f53b5d
 RMD160 (dasher-4.10.1.tar.bz2) = 0ed314ba5717f129168e315e02389259dc28532c
 Size (dasher-4.10.1.tar.bz2) = 6679084 bytes
+SHA1 (patch-Src_DasherCore_DasherViewSquare.h) = 3bd8b1d06c837b1c704eb9b9592c070eeff8dda6
+SHA1 (patch-Src_DasherCore_SettingsStore.h) = b56d4480ef6a2da6ac9bfd0f0c5230486efdc8b2
+SHA1 (patch-Src_DasherCore_View_DelayedDraw.h) = e56cc2be5f36f7a9a6be26bc53939fa679d116f3
