@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2013/02/10 05:57:42 manu Exp $
+$NetBSD: patch-aa,v 1.2 2013/03/26 23:32:50 joerg Exp $
 
---- Makefile.orig	2013-02-09 06:44:43.000000000 +0100
-+++ Makefile	2013-02-09 18:41:18.000000000 +0100
-@@ -1,9 +1,9 @@
+--- Makefile.orig	2013-02-09 05:44:43.000000000 +0000
++++ Makefile
+@@ -1,8 +1,8 @@
 -prefix=/usr/pkg
 -PLUGINDIR=$(prefix)/lib/openvpn
 -bindir=/usr/local/bin
@@ -15,14 +15,13 @@ $NetBSD: patch-aa,v 1.1 2013/02/10 05:57:42 manu Exp $
  CFLAGS= -Wall -Werror -ansi -g -I$(OPENVPN_SRC)/include -DBINDIR=\"$(bindir)\"
  OPENVPN_GROUP=nobody
  
- LIBTOOL=libtool
-@@ -19,8 +19,9 @@
- 	$(LIBTOOL) --mode=link --tag CC  $(CC) -version-info 0:0:0 \
+@@ -20,8 +20,8 @@ openvpn-nagios.la:  openvpn-nagios.lo
  		   -rpath $(PLUGINDIR) -module -o $@ $? -lc -lutil
  
  install:	openvpn-nagios.la
 +	$(INSTALL) -d -m 0755 $(PLUGINDIR)
  	$(LIBTOOL) --mode=install cp openvpn-nagios.la $(PLUGINDIR)/
- 	$(LIBTOOL) --mode=finish
+-	$(LIBTOOL) --mode=finish
  
  clean:
+ 	rm -rf *.o *.so *.la *.lo .libs
