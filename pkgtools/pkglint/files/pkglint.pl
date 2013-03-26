@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.851 2013/03/26 15:08:29 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.852 2013/03/26 15:10:03 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -45,7 +45,7 @@ use PkgLint::SubstContext;
 use PkgLint::CVS_Entry;
 use PkgLint::Change;
 
-package main;
+package pkglint;
 #==========================================================================
 # This package contains the application-specific code of pkglint.
 # Most subroutines in this package follow a strict naming convention:
