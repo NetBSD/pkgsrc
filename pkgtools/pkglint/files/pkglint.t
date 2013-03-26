@@ -1,11 +1,9 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.5 2013/03/26 15:05:27 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.6 2013/03/26 15:10:03 schmonz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
-$main::program = 'pkglint.pl';		# because it self-greps for vartypes
-
-package PkgLint::Test;			# pkglint.pl uses 'main', so we mustn't
+$pkglint::program = 'pkglint.pl';	# because it self-greps for vartypes
 
 use Test::More tests => 37;
 use Test::Trap;
@@ -66,7 +64,7 @@ sub test_program {
 }
 
 sub test_get_vartypes_basictypes {
-	my $unit = \&main::get_vartypes_basictypes;
+	my $unit = \&pkglint::get_vartypes_basictypes;
 
 	my @results = test_unit($unit);
 	my %types = %{$results[0]};
@@ -75,7 +73,7 @@ sub test_get_vartypes_basictypes {
 }
 
 sub test_get_vartypes_map {
-	my $unit = \&main::get_vartypes_map;
+	my $unit = \&pkglint::get_vartypes_map;
 
 	my @results = test_unit($unit);
 	my %map = %{$results[0]};
@@ -96,11 +94,11 @@ sub test_checkline_mk_vartype_basic {
 	# (type='Restricted', value='RESTRICTED')
 	# (type='SedCommands', a few different values')
 	# once test coverage is persuasive, refactor to a dispatch table
-	# once refactored, get rid of the $main::program global
+	# once refactored, get rid of the $pkglint::program global
 }
 
-sub test_main {
-	my $unit = \&main::main;
+sub test_pkglint_main {
+	my $unit = \&pkglint::main;
 
 	@ARGV = ('-h');
 	test_unit($unit, undef, 0, '^usage: pkglint ', '^$');
@@ -171,7 +169,7 @@ sub main {
 	test_get_vartypes_basictypes();
 	test_get_vartypes_map();
 	test_checkline_mk_vartype_basic();
-	test_main();
+	test_pkglint_main();
 	test_lint_some_reference_packages();
 }
 
