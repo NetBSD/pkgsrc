@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1056 2013/03/26 14:02:40 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.1057 2013/03/26 16:29:43 taca Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1518,3 +1518,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gimp-ufraw to 0.19.2 [gdt 2013-03-26]
 	Updated emulators/simh to 3.9.0nb4 [martin 2013-03-26]
 	Updated games/onscripter to 20130317 [tsutsui 2013-03-26]
+	Updated net/isc-dhcp4 to 4.2.5p1 [taca 2013-03-26]
+	Updated net/isc-dhclient4 to 4.2.5p1 [taca 2013-03-26]
+	Updated net/isc-dhcpd4 to 4.2.5p1 [taca 2013-03-26]
+	Updated net/isc-dhcrelay4 to 4.2.5p1 [taca 2013-03-26]
