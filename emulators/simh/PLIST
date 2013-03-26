@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/05/04 09:38:23 hans Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/03/26 13:43:19 martin Exp $
 bin/simh-altair
 bin/simh-altairz80
 bin/simh-eclipse
@@ -46,3 +46,5 @@ share/doc/simh/sds_diag.txt
 share/doc/simh/system3.txt
 share/doc/simh/vax780_bug_history.txt
 share/simh/ka655x.bin
+share/simh/vmb.exe
+
