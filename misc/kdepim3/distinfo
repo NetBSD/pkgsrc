@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2012/12/19 17:21:48 jperkin Exp $
+$NetBSD: distinfo,v 1.66 2013/03/26 23:30:45 joerg Exp $
 
 SHA1 (kdepim-3.5.10.tar.bz2) = 537da60fe3564ecc0ed2802e744fbf96386909a9
 RMD160 (kdepim-3.5.10.tar.bz2) = 52a834dc8eb377d397404a16a09c8a59b568b305
@@ -7,6 +7,8 @@ SHA1 (patch-aa) = d9eef6f9f0301cc19897e84d632ccb3127761a4f
 SHA1 (patch-ab) = bc6a6bf4dd389cb3c1ae95c2a95ec9e54509e51c
 SHA1 (patch-ac) = d4e7b3281f81afc1e3ba383d78ab5bb64af5ee85
 SHA1 (patch-ak) = cac11150a708f2f4258b9371f9aaa72b133a821d
+SHA1 (patch-akregator_src_akregator__part.h) = 02d38a4cb9ef55b9110ef94ba5afe4c22bc12b4a
+SHA1 (patch-akregator_src_mainwindow.h) = 6554e50d133a399b57ca9f031b4dea3c63b00149
 SHA1 (patch-al) = 723424b7c39c5e0e0899b340a30e5a3f32c90a6a
 SHA1 (patch-am) = 29066a35ac983764a8cfa9392b9d67df581b35d3
 SHA1 (patch-ao) = f3760617e77fe74d80733613a18905971ee4c5f9
@@ -16,6 +18,9 @@ SHA1 (patch-ar) = d1a2ef8db72a1156beff5f925a262c217fd6eb83
 SHA1 (patch-as) = bfcde6d85ca844ebe4cff93ca0ed42deb2cefbff
 SHA1 (patch-at) = 670b61b45eed92c854808991e6241f29bee47554
 SHA1 (patch-configure) = c25992299b78b3c45f9f5f3dfcbd5f92a4df89ac
+SHA1 (patch-karm_karmstorage.h) = e30049edeef91dd365138d545bd744a4556cbbdc
+SHA1 (patch-karm_task.h) = 6a87ec8898ed41f330a8b5aea556237f17dfbc68
+SHA1 (patch-kitchensync_src_configguildap.h) = a08a79894d08757fd315bec83033f49e3f41f3c6
 SHA1 (patch-kmail_editorwatcher.cpp) = e66a40ea73810c59d23f52f6953c09b85d4e1deb
 SHA1 (patch-kmail_imapaccountbase.h) = 362d8445597c869b9ee8366a4b9a698773579512
 SHA1 (patch-kmail_kmsystemtray.cpp) = 1d658e1e1ee3d17d0f38955e5399505d61fdb402
