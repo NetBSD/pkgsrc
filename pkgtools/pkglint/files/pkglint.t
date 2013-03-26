@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.3 2013/01/20 03:50:05 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.4 2013/03/26 15:04:30 schmonz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -15,6 +15,8 @@ use strict;
 
 sub test_unit {
 	my ($unit, $params, $exitcode, $stdout_re, $stderr_re) = @_;
+	$stdout_re ||= '^$';
+	$stderr_re ||= '^$';
 
 	my @results = trap { $unit->(@{$params}) };
 
@@ -32,7 +34,7 @@ sub test_unit {
 sub test_get_vartypes_basictypes {
 	my $unit = \&main::get_vartypes_basictypes;
 
-	my @results = test_unit($unit, undef, undef, '^$', '^$');
+	my @results = test_unit($unit);
 	my %types = %{$results[0]};
 	is($types{BuildlinkDepmethod}, 1, q{a couple expected types are here});
 	is($types{YesNo_Indirectly}, 1, q{a couple expected types are here});
@@ -41,7 +43,7 @@ sub test_get_vartypes_basictypes {
 sub test_get_vartypes_map {
 	my $unit = \&main::get_vartypes_map;
 
-	my @results = test_unit($unit, undef, undef, '^$', '^$');
+	my @results = test_unit($unit);
 	my %map = %{$results[0]};
 	is($map{'BSD_MAKE_ENV'}->basic_type(), 'ShellWord',
 	   q{a couple expected vars are typed right});
