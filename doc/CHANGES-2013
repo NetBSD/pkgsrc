@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1057 2013/03/26 16:29:43 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1058 2013/03/26 22:13:47 taca Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1522,3 +1522,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/isc-dhclient4 to 4.2.5p1 [taca 2013-03-26]
 	Updated net/isc-dhcpd4 to 4.2.5p1 [taca 2013-03-26]
 	Updated net/isc-dhcrelay4 to 4.2.5p1 [taca 2013-03-26]
+	Updated net/bind99 to 9.9.2pl2 [taca 2013-03-26]
+	Updated net/bind98 to 9.8.4pl2 [taca 2013-03-26]
