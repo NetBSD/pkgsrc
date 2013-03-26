@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2013/02/10 05:55:08 manu Exp $
+$NetBSD: patch-aa,v 1.4 2013/03/26 23:31:49 joerg Exp $
 
 --- Makefile.orig	2009-11-07 05:12:24.000000000 +0100
 +++ Makefile	2013-02-09 18:22:49.000000000 +0100
@@ -24,14 +24,14 @@ $NetBSD: patch-aa,v 1.3 2013/02/10 05:55:08 manu Exp $
  
  all: openvpn-acct-wtmpx.la logwtmpx
  
-@@ -22,10 +22,12 @@
+@@ -22,10 +22,11 @@
  logwtmpx:	logwtmpx.o
  	$(CC) -o $@ -lutil $?
  
  install:	openvpn-acct-wtmpx.la logwtmpx
 +	$(INSTALL) -d -m 0755 $(PLUGINDIR)
  	$(LIBTOOL) --mode=install cp openvpn-acct-wtmpx.la $(PLUGINDIR)/
- 	$(LIBTOOL) --mode=finish
+-	$(LIBTOOL) --mode=finish
 -	$(INSTALL) -c -m 4754 -o root -g $(OPENVPN_GROUP) logwtmpx $(bindir)/
 +	$(INSTALL) -d -m 0755 $(bindir)
 +	$(INSTALL) -c -m 0555 logwtmpx $(bindir)/
