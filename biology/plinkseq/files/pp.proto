@@ -1,0 +1,15 @@
+
+message PolyPhen2Buffer {
+
+	enum pred_t { UNKNOWN = 0; BENIGN = 1; POSS = 2; PROB = 3; }
+
+	required string transcript_name     = 1;
+	required string protein_name        = 2;
+
+	repeated int32  position    = 3 [packed=true];
+	repeated string reference   = 4;
+	repeated string alternate   = 5;
+	repeated double score       = 6 [packed=true];
+	repeated pred_t prediction  = 7 [packed=true];
+
+}
