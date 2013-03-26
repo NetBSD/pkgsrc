@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2013/01/17 15:54:36 joerg Exp $
+$NetBSD: distinfo,v 1.57 2013/03/26 23:30:45 joerg Exp $
 
 SHA1 (kdegraphics-3.5.10.tar.bz2) = 9634e3ab364d017152fb6d636efad8811aeec6c3
 RMD160 (kdegraphics-3.5.10.tar.bz2) = 94278e4419ab99885fc9efae9b6ba5ba787f831e
@@ -10,6 +10,7 @@ SHA1 (patch-ad) = 39f9af23006d6b8d09d0ecbb83a382df6b125152
 SHA1 (patch-ae) = e1984e4441f2b96697ae7a17028bd59bacb7cc73
 SHA1 (patch-af) = ab3eff6677c889dfd48b5aa6cc116a0da18dd925
 SHA1 (patch-kmrml_kmrml_mrml__elements.h) = f832e7e0a83cec5214630fd871f2d7132b5219d9
+SHA1 (patch-kooka_thumbview.h) = 8c58202c5c68f27f4a5221541c20e20016b2f76f
 SHA1 (patch-ksvg_impl_libs_libtext2path_src_Converter.cpp) = 4a1588c91e94c09862e2b702c357b8c478d19add
 SHA1 (patch-kviewshell_documentWidget.cpp) = 605f44f574f8391b9947424d0fee926bc2f7a494
 SHA1 (patch-kviewshell_plugins_djvu_libdjvu_GContainer.h) = ba805be065c9eb38b865d969e291ab5bb49b1798
