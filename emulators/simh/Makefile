@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/02/06 19:30:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2013/03/26 13:43:19 martin Exp $
 
 DISTNAME=	simhv39-0
 PKGNAME=	simh-3.9.0
@@ -44,7 +44,9 @@ do-install:
 		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN; \
 		fi ;							\
 	done)
+
 	${INSTALL_DATA} ${WRKSRC}/VAX/ka655x.bin ${DESTDIR}${PREFIX}/share/simh
+	${INSTALL_DATA} ${WRKSRC}/VAX/vmb.exe ${DESTDIR}${PREFIX}/share/simh
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
 		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)
