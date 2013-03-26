@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.852 2013/03/26 15:10:03 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.853 2013/03/26 15:10:57 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -650,6 +650,10 @@ sub get_vartypes_basictypes() {
 	assert($lines, "Couldn't load pkglint.pl from $program");
 	foreach my $line (@$lines) {
 		if ($line->text =~ m"^\s+\} elsif \(\$type eq \"(\w+)\"\) \{$") {
+			# still finds "ARRAY" -- probably unintentional!
+			$types->{$1} = 1;
+		} elsif ($line->text =~ m"^\s+(\w+) => sub \{$") {
+			# XXX lookup in %type_dispatch instead
 			$types->{$1} = 1;
 		}
 	}
@@ -3774,364 +3778,380 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		}
 	}
 
-	if (ref($type) eq "HASH") {
-		if (!exists($type->{$value})) {
-			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of { ".join(" ", sort(keys(%{$type})))." } instead.");
-		}
+	my %type_dispatch = (
+		AwkCommand => sub {
+			$opt_debug_unchecked and $line->log_debug("Unchecked AWK command: ${value}");
+		},
 
-	} elsif ($type eq "AwkCommand") {
-		$opt_debug_unchecked and $line->log_debug("Unchecked AWK command: ${value}");
+		BrokenIn => sub {
+			if ($value ne $value_novar) {
+				$line->log_error("${varname} must not refer to other variables.");
 
-	} elsif ($type eq "BrokenIn") {
-		if ($value ne $value_novar) {
-			$line->log_error("${varname} must not refer to other variables.");
+			} elsif ($value =~ m"^pkgsrc-(\d\d\d\d)Q(\d)$") {
+				my ($year, $quarter) = ($1, $2);
 
-		} elsif ($value =~ m"^pkgsrc-(\d\d\d\d)Q(\d)$") {
-			my ($year, $quarter) = ($1, $2);
+				# Fine.
 
-			# Fine.
+			} else {
+				$line->log_warning("Invalid value \"${value}\" for ${varname}.");
+			}
+			$line->log_note("Please remove this line if the package builds for you.");
+		},
 
-		} else {
-			$line->log_warning("Invalid value \"${value}\" for ${varname}.");
-		}
-		$line->log_note("Please remove this line if the package builds for you.");
+		BuildlinkDepmethod => sub {
+			# Note: this cannot be replaced with { build full } because
+			# enumerations may not contain references to other variables.
+			if ($value ne $value_novar) {
+				# No checks yet.
+			} elsif ($value ne "build" && $value ne "full") {
+				$line->log_warning("Invalid dependency method \"${value}\". Valid methods are \"build\" or \"full\".");
+			}
+		},
 
-	} elsif ($type eq "BuildlinkDepmethod") {
-		# Note: this cannot be replaced with { build full } because
-		# enumerations may not contain references to other variables.
-		if ($value ne $value_novar) {
-			# No checks yet.
-		} elsif ($value ne "build" && $value ne "full") {
-			$line->log_warning("Invalid dependency method \"${value}\". Valid methods are \"build\" or \"full\".");
-		}
+		BuildlinkDepth => sub {
+			if (!($op eq "use" && $value eq "+")
+			    && $value ne "\${BUILDLINK_DEPTH}+"
+			    && $value ne "\${BUILDLINK_DEPTH:S/+\$//}") {
+				$line->log_warning("Invalid value for ${varname}.");
+			}
+		},
 
-	} elsif ($type eq "BuildlinkDepth") {
-		if (!($op eq "use" && $value eq "+")
-		    && $value ne "\${BUILDLINK_DEPTH}+"
-		    && $value ne "\${BUILDLINK_DEPTH:S/+\$//}") {
-			$line->log_warning("Invalid value for ${varname}.");
-		}
+		BuildlinkPackages => sub {
+			my $re_del = qr"\$\{BUILDLINK_PACKAGES:N(?:[+\-.0-9A-Z_a-z]|\$\{[^\}]+\})+\}";
+			my $re_add = qr"(?:[+\-.0-9A-Z_a-z]|\$\{[^\}]+\})+";
 
-	} elsif ($type eq "BuildlinkPackages") {
-		my $re_del = qr"\$\{BUILDLINK_PACKAGES:N(?:[+\-.0-9A-Z_a-z]|\$\{[^\}]+\})+\}";
-		my $re_add = qr"(?:[+\-.0-9A-Z_a-z]|\$\{[^\}]+\})+";
+			if (($op eq ":=" && $value =~ m"^${re_del}$") ||
+			    ($op eq ":=" && $value =~ m"^${re_del}\s+${re_add}$") ||
+			    ($op eq "+=" && $value =~ m"^${re_add}$")) {
+				# Fine.
 
-		if (($op eq ":=" && $value =~ m"^${re_del}$") ||
-		    ($op eq ":=" && $value =~ m"^${re_del}\s+${re_add}$") ||
-		    ($op eq "+=" && $value =~ m"^${re_add}$")) {
-			# Fine.
+			} else {
+				$line->log_warning("Invalid value for ${varname}.");
+			}
+		},
 
-		} else {
-			$line->log_warning("Invalid value for ${varname}.");
-		}
+		Category => sub {
+			my $allowed_categories = join("|", qw(
+				archivers audio
+				benchmarks biology
+				cad chat chinese comms converters cross crosspkgtools
+				databases devel
+				editors emulators
+				filesystems finance fonts
+				games geography gnome gnustep graphics
+				ham
+				inputmethod
+				japanese java
+				kde korean
+				lang linux local
+				mail math mbone meta-pkgs misc multimedia
+				net news
+				packages parallel perl5 pkgtools plan9 print python
+				ruby
+				scm security shells sysutils
+				tcl textproc time tk
+				windowmaker wm www
+				x11 xmms
+			));
+			if ($value !~ m"^(?:${allowed_categories})$") {
+				$line->log_error("Invalid category \"${value}\".");
+			}
+		},
 
-	} elsif ($type eq "Category") {
-		my $allowed_categories = join("|", qw(
-			archivers audio
-			benchmarks biology
-			cad chat chinese comms converters cross crosspkgtools
-			databases devel
-			editors emulators
-			filesystems finance fonts
-			games geography gnome gnustep graphics
-			ham
-			inputmethod
-			japanese java
-			kde korean
-			lang linux local
-			mail math mbone meta-pkgs misc multimedia
-			net news
-			packages parallel perl5 pkgtools plan9 print python
-			ruby
-			scm security shells sysutils
-			tcl textproc time tk
-			windowmaker wm www
-			x11 xmms
-		));
-		if ($value !~ m"^(?:${allowed_categories})$") {
-			$line->log_error("Invalid category \"${value}\".");
-		}
+		CFlag => sub {
+			if ($value =~ m"^-D([0-9A-Z_a-z]+)=(.*)") {
+				my ($macname, $macval) = ($1, $2);
 
-	} elsif ($type eq "CFlag") {
-		if ($value =~ m"^-D([0-9A-Z_a-z]+)=(.*)") {
-			my ($macname, $macval) = ($1, $2);
+				# No checks needed, since the macro definitions
+				# are usually directory names, which don't need
+				# any quoting.
 
-			# No checks needed, since the macro definitions
-			# are usually directory names, which don't need
-			# any quoting.
+			} elsif ($value =~ m"^-[DU]([0-9A-Z_a-z]+)") {
+				my ($macname) = ($1);
 
-		} elsif ($value =~ m"^-[DU]([0-9A-Z_a-z]+)") {
-			my ($macname) = ($1);
+				$opt_debug_unchecked and $line->log_debug("Unchecked macro ${macname} in ${varname}.");
 
-			$opt_debug_unchecked and $line->log_debug("Unchecked macro ${macname} in ${varname}.");
+			} elsif ($value =~ m"^-I(.*)") {
+				my ($dirname) = ($1);
 
-		} elsif ($value =~ m"^-I(.*)") {
-			my ($dirname) = ($1);
+				$opt_debug_unchecked and $line->log_debug("Unchecked directory ${dirname} in ${varname}.");
 
-			$opt_debug_unchecked and $line->log_debug("Unchecked directory ${dirname} in ${varname}.");
+			} elsif ($value eq "-c99") {
+				# Only works on IRIX, but is usually enclosed with
+				# the proper preprocessor conditional.
 
-		} elsif ($value eq "-c99") {
-			# Only works on IRIX, but is usually enclosed with
-			# the proper preprocessor conditional.
+			} elsif ($value =~ m"^-[OWfgm]") {
+				$opt_debug_unchecked and $line->log_debug("Unchecked compiler flag ${value} in ${varname}.");
 
-		} elsif ($value =~ m"^-[OWfgm]") {
-			$opt_debug_unchecked and $line->log_debug("Unchecked compiler flag ${value} in ${varname}.");
+			} elsif ($value =~ m"^-.*") {
+				$line->log_warning("Unknown compiler flag \"${value}\".");
 
-		} elsif ($value =~ m"^-.*") {
-			$line->log_warning("Unknown compiler flag \"${value}\".");
+			} elsif ($value =~ regex_unresolved) {
+				$opt_debug_unchecked and $line->log_debug("Unchecked CFLAG: ${value}");
 
-		} elsif ($value =~ regex_unresolved) {
-			$opt_debug_unchecked and $line->log_debug("Unchecked CFLAG: ${value}");
+			} else {
+				$line->log_warning("Compiler flag \"${value}\" does not start with a dash.");
+			}
+		},
 
-		} else {
-			$line->log_warning("Compiler flag \"${value}\" does not start with a dash.");
-		}
+		Comment => sub {
+			if ($value eq "SHORT_DESCRIPTION_OF_THE_PACKAGE") {
+				$line->log_error("COMMENT must be set.");
+			}
+			if ($value =~ m"^(a|an)\s+"i) {
+				$line->log_warning("COMMENT should not begin with '$1'.");
+			}
+			if ($value =~ m"^[a-z]") {
+				$line->log_warning("COMMENT should start with a capital letter.");
+			}
+			if ($value =~ m"\.$") {
+				$line->log_warning("COMMENT should not end with a period.");
+			}
+			if (length($value) > 70) {
+				$line->log_warning("COMMENT should not be longer than 70 characters.");
+			}
+		},
 
-	} elsif ($type eq "Comment") {
-		if ($value eq "SHORT_DESCRIPTION_OF_THE_PACKAGE") {
-			$line->log_error("COMMENT must be set.");
-		}
-		if ($value =~ m"^(a|an)\s+"i) {
-			$line->log_warning("COMMENT should not begin with '$1'.");
-		}
-		if ($value =~ m"^[a-z]") {
-			$line->log_warning("COMMENT should start with a capital letter.");
-		}
-		if ($value =~ m"\.$") {
-			$line->log_warning("COMMENT should not end with a period.");
-		}
-		if (length($value) > 70) {
-			$line->log_warning("COMMENT should not be longer than 70 characters.");
-		}
+		Dependency => sub {
+			if ($value =~ m"^(${regex_pkgbase})(<|=|>|<=|>=|!=)(${regex_pkgversion})$") {
+				my ($depbase, $depop, $depversion) = ($1, $2, $3);
 
-	} elsif ($type eq "Dependency") {
-		if ($value =~ m"^(${regex_pkgbase})(<|=|>|<=|>=|!=)(${regex_pkgversion})$") {
-			my ($depbase, $depop, $depversion) = ($1, $2, $3);
+			} elsif ($value =~ m"^(${regex_pkgbase})-(?:\[(.*)\]\*|(\d+(?:\.\d+)*(?:\.\*)?)(\{,nb\*\}|\*|)|(.*))?$") {
+				my ($depbase, $bracket, $version, $version_wildcard, $other) = ($1, $2, $3, $4, $5);
 
-		} elsif ($value =~ m"^(${regex_pkgbase})-(?:\[(.*)\]\*|(\d+(?:\.\d+)*(?:\.\*)?)(\{,nb\*\}|\*|)|(.*))?$") {
-			my ($depbase, $bracket, $version, $version_wildcard, $other) = ($1, $2, $3, $4, $5);
+				if (defined($bracket)) {
+					if ($bracket ne "0-9") {
+						$line->log_warning("Only [0-9]* is allowed in the numeric part of a dependency.");
+					}
 
-			if (defined($bracket)) {
-				if ($bracket ne "0-9") {
-					$line->log_warning("Only [0-9]* is allowed in the numeric part of a dependency.");
-				}
+				} elsif (defined($version) && defined($version_wildcard) && $version_wildcard ne "") {
+					# Great.
 
-			} elsif (defined($version) && defined($version_wildcard) && $version_wildcard ne "") {
-				# Great.
-
-			} elsif (defined($version)) {
-				$line->log_warning("Please append {,nb*} to the version number of this dependency.");
-				$line->explain_warning(
+				} elsif (defined($version)) {
+					$line->log_warning("Please append {,nb*} to the version number of this dependency.");
+					$line->explain_warning(
 "Usually, a dependency should stay valid when the PKGREVISION is",
 "increased, since those changes are most often editorial. In the",
 "current form, the dependency only matches if the PKGREVISION is",
 "undefined.");
 
-			} elsif ($other eq "*") {
-				$line->log_warning("Please use ${depbase}-[0-9]* instead of ${depbase}-*.");
-				$line->explain_warning(
+				} elsif ($other eq "*") {
+					$line->log_warning("Please use ${depbase}-[0-9]* instead of ${depbase}-*.");
+					$line->explain_warning(
 "If you use a * alone, the package specification may match other",
 "packages that have the same prefix, but a longer name. For example,",
 "foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.");
 
+				} else {
+					$line->log_warning("Unknown dependency pattern \"${value}\".");
+				}
+
+			} elsif ($value =~ m"\{") {
+				# Dependency patterns containing alternatives
+				# are just too hard to check.
+				$opt_debug_unchecked and $line->log_debug("Unchecked dependency pattern: ${value}");
+
+			} elsif ($value ne $value_novar) {
+				$opt_debug_unchecked and $line->log_debug("Unchecked dependency: ${value}");
+
 			} else {
-				$line->log_warning("Unknown dependency pattern \"${value}\".");
-			}
-
-		} elsif ($value =~ m"\{") {
-			# Dependency patterns containing alternatives
-			# are just too hard to check.
-			$opt_debug_unchecked and $line->log_debug("Unchecked dependency pattern: ${value}");
-
-		} elsif ($value ne $value_novar) {
-			$opt_debug_unchecked and $line->log_debug("Unchecked dependency: ${value}");
-
-		} else {
-			$line->log_warning("Unknown dependency format: ${value}");
-			$line->explain_warning(
+				$line->log_warning("Unknown dependency format: ${value}");
+				$line->explain_warning(
 "Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
 "or \"package-3.141\".");
-		}
-
-	} elsif ($type eq "DependencyWithPath") {
-		if ($value =~ regex_unresolved) {
-			# don't even try to check anything
-		} elsif ($value =~ m"(.*):(\.\./\.\./([^/]+)/([^/]+))$") {
-			my ($pattern, $relpath, $cat, $pkg) = ($1, $2, $3, $4);
-
-			checkline_relative_pkgdir($line, $relpath);
-
-			if ($pkg eq "msgfmt" || $pkg eq "gettext") {
-				$line->log_warning("Please use USE_TOOLS+=msgfmt instead of this dependency.");
-
-			} elsif ($pkg =~ m"^perl\d+") {
-				$line->log_warning("Please use USE_TOOLS+=perl:run instead of this dependency.");
-
-			} elsif ($pkg eq "gmake") {
-				$line->log_warning("Please use USE_TOOLS+=gmake instead of this dependency.");
-
 			}
+		},
 
-			if ($pattern =~ regex_dependency_gt) {
+		DependencyWithPath => sub {
+			if ($value =~ regex_unresolved) {
+				# don't even try to check anything
+			} elsif ($value =~ m"(.*):(\.\./\.\./([^/]+)/([^/]+))$") {
+				my ($pattern, $relpath, $cat, $pkg) = ($1, $2, $3, $4);
+
+				checkline_relative_pkgdir($line, $relpath);
+
+				if ($pkg eq "msgfmt" || $pkg eq "gettext") {
+					$line->log_warning("Please use USE_TOOLS+=msgfmt instead of this dependency.");
+
+				} elsif ($pkg =~ m"^perl\d+") {
+					$line->log_warning("Please use USE_TOOLS+=perl:run instead of this dependency.");
+
+				} elsif ($pkg eq "gmake") {
+					$line->log_warning("Please use USE_TOOLS+=gmake instead of this dependency.");
+
+				}
+
+				if ($pattern =~ regex_dependency_gt) {
 #				($abi_pkg, $abi_version) = ($1, $2);
-			} elsif ($pattern =~ regex_dependency_wildcard) {
+				} elsif ($pattern =~ regex_dependency_wildcard) {
 #				($abi_pkg) = ($1);
+				} else {
+					$line->log_warning("Unknown dependency pattern \"${pattern}\".");
+				}
+
+			} elsif ($value =~ m":\.\./[^/]+$") {
+				$line->log_warning("Dependencies should have the form \"../../category/package\".");
+				$line->explain_warning(expl_relative_dirs);
+
 			} else {
-				$line->log_warning("Unknown dependency pattern \"${pattern}\".");
-			}
-
-		} elsif ($value =~ m":\.\./[^/]+$") {
-			$line->log_warning("Dependencies should have the form \"../../category/package\".");
-			$line->explain_warning(expl_relative_dirs);
-
-		} else {
-			$line->log_warning("Unknown dependency format.");
-			$line->explain_warning(
+				$line->log_warning("Unknown dependency format.");
+				$line->explain_warning(
 "Examples for valid dependencies are:",
 "  package-[0-9]*:../../category/package",
 "  package>=3.41:../../category/package",
 "  package-2.718:../../category/package");
-		}
-
-	} elsif ($type eq "DistSuffix") {
-		if ($value eq ".tar.gz") {
-			$line->log_note("${varname} is \".tar.gz\" by default, so this definition may be redundant.");
-		}
-
-	} elsif ($type eq "EmulPlatform") {
-		if ($value =~ m"^(\w+)-(\w+)$") {
-			my ($opsys, $arch) = ($1, $2);
-
-			if ($opsys !~ m"^(?:bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos)$") {
-				$line->log_warning("Unknown operating system: ${opsys}");
 			}
-			# no check for $os_version
-			if ($arch !~ m"^(?:i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$") {
-				$line->log_warning("Unknown hardware architecture: ${arch}");
-			}
+		},
 
-		} else {
-			$line->log_warning("\"${value}\" is not a valid emulation platform.");
-			$line->explain_warning(
+		DistSuffix => sub {
+			if ($value eq ".tar.gz") {
+				$line->log_note("${varname} is \".tar.gz\" by default, so this definition may be redundant.");
+			}
+		},
+
+		EmulPlatform => sub {
+			if ($value =~ m"^(\w+)-(\w+)$") {
+				my ($opsys, $arch) = ($1, $2);
+
+				if ($opsys !~ m"^(?:bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos)$") {
+					$line->log_warning("Unknown operating system: ${opsys}");
+				}
+				# no check for $os_version
+				if ($arch !~ m"^(?:i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$") {
+					$line->log_warning("Unknown hardware architecture: ${arch}");
+				}
+
+			} else {
+				$line->log_warning("\"${value}\" is not a valid emulation platform.");
+				$line->explain_warning(
 "An emulation platform has the form <OPSYS>-<MACHINE_ARCH>.",
 "OPSYS is the lower-case name of the operating system, and MACHINE_ARCH",
 "is the hardware architecture.",
 "",
 "Examples: linux-i386, irix-mipsel.");
-		}
-
-
-
-	} elsif ($type eq "Filename") {
-		if ($value_novar =~ m"/") {
-			$line->log_warning("A filename should not contain a slash.");
-
-		} elsif ($value_novar !~ m"^[-0-9\@A-Za-z.,_~+%]*$") {
-			$line->log_warning("\"${value}\" is not a valid filename.");
-		}
-
-	} elsif ($type eq "Filemask") {
-		if ($value_novar !~ m"^[-0-9A-Za-z._~+%*?]*$") {
-			$line->log_warning("\"${value}\" is not a valid filename mask.");
-		}
-
-	} elsif ($type eq "FileMode") {
-		if ($value ne "" && $value_novar eq "") {
-			# Fine.
-		} elsif ($value =~ m"^[0-7]{3,4}") {
-			# Fine.
-		} else {
-			$line->log_warning("Invalid file mode ${value}.");
-		}
-
-	} elsif ($type eq "Identifier") {
-		if ($value ne $value_novar) {
-			#$line->log_warning("Identifiers should be given directly.");
-		}
-		if ($value_novar =~ m"^[+\-.0-9A-Z_a-z]+$") {
-			# Fine.
-		} elsif ($value ne "" && $value_novar eq "") {
-			# Don't warn here.
-		} else {
-			$line->log_warning("Invalid identifier \"${value}\".");
-		}
-
-	} elsif ($type eq "Integer") {
-		if ($value !~ m"^\d+$") {
-			$line->log_warning("${varname} must be a valid integer.");
-		}
-
-	} elsif ($type eq "LdFlag") {
-		if ($value =~ m"^-L(.*)") {
-			my ($dirname) = ($1);
-
-			$opt_debug_unchecked and $line->log_debug("Unchecked directory ${dirname} in ${varname}.");
-
-		} elsif ($value =~ m"^-l(.*)") {
-			my ($libname) = ($1);
-
-			$opt_debug_unchecked and $line->log_debug("Unchecked library name ${libname} in ${varname}.");
-
-		} elsif ($value =~ m"^(?:-static)$") {
-			# Assume that the wrapper framework catches these.
-
-		} elsif ($value =~ m"^(-Wl,(?:-R|-rpath|--rpath))") {
-			my ($rpath_flag) = ($1);
-			$line->log_warning("Please use \${COMPILER_RPATH_FLAG} instead of ${rpath_flag}.");
-
-		} elsif ($value =~ m"^-.*") {
-			$line->log_warning("Unknown linker flag \"${value}\".");
-
-		} elsif ($value =~ regex_unresolved) {
-			$opt_debug_unchecked and $line->log_debug("Unchecked LDFLAG: ${value}");
-
-		} else {
-			$line->log_warning("Linker flag \"${value}\" does not start with a dash.");
-		}
-
-	} elsif ($type eq "License") {
-
-		use constant deprecated_licenses => array_to_hash(qw(
-			fee-based-commercial-use
-			no-commercial-use no-profit no-redistribution
-			shareware
-		));
-
-		my $licenses = parse_licenses($value);
-		foreach my $license (@$licenses) {
-			my $license_file = "${cwd_pkgsrcdir}/licenses/${license}";
-			if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"})) {
-				my $license_file_line = $pkgctx_vardef->{"LICENSE_FILE"};
-
-				$license_file = "${current_dir}/" . resolve_relative_path($license_file_line->get("value"), false);
 			}
-			if (!-f $license_file) {
-				$line->log_warning("License file ".normalize_pathname($license_file)." does not exist.");
-			}
+		},
 
-			if (exists(deprecated_licenses->{$license})) {
-				$line->log_warning("License ${license} is deprecated.");
-			}
-		}
 
-	} elsif ($type eq "Mail_Address") {
-		if ($value =~ m"^([+\-.0-9A-Z_a-z]+)\@([-\w\d.]+)$") {
-			my ($localpart, $domain) = ($1, $2);
-			if ($domain =~ m"^NetBSD.org"i && $domain ne "NetBSD.org") {
-				$line->log_warning("Please write NetBSD.org instead of ${domain}.");
-			}
-			if ("${localpart}\@${domain}" =~ m"^(tech-pkg|packages)\@NetBSD\.org$"i) {
-				$line->log_warning("${localpart}\@${domain} is deprecated. Use pkgsrc-users\@NetBSD.org instead.");
-			}
 
-		} else {
-			$line->log_warning("\"${value}\" is not a valid mail address.");
-		}
+		Filename => sub {
+			if ($value_novar =~ m"/") {
+				$line->log_warning("A filename should not contain a slash.");
 
-	} elsif ($type eq "Message") {
-		if ($value =~ m"^[\"'].*[\"']$") {
-			$line->log_warning("${varname} should not be quoted.");
-			$line->explain_warning(
+			} elsif ($value_novar !~ m"^[-0-9\@A-Za-z.,_~+%]*$") {
+				$line->log_warning("\"${value}\" is not a valid filename.");
+			}
+		},
+
+		Filemask => sub {
+			if ($value_novar !~ m"^[-0-9A-Za-z._~+%*?]*$") {
+				$line->log_warning("\"${value}\" is not a valid filename mask.");
+			}
+		},
+
+		FileMode => sub {
+			if ($value ne "" && $value_novar eq "") {
+				# Fine.
+			} elsif ($value =~ m"^[0-7]{3,4}") {
+				# Fine.
+			} else {
+				$line->log_warning("Invalid file mode ${value}.");
+			}
+		},
+
+		Identifier => sub {
+			if ($value ne $value_novar) {
+				#$line->log_warning("Identifiers should be given directly.");
+			}
+			if ($value_novar =~ m"^[+\-.0-9A-Z_a-z]+$") {
+				# Fine.
+			} elsif ($value ne "" && $value_novar eq "") {
+				# Don't warn here.
+			} else {
+				$line->log_warning("Invalid identifier \"${value}\".");
+			}
+		},
+
+		Integer => sub {
+			if ($value !~ m"^\d+$") {
+				$line->log_warning("${varname} must be a valid integer.");
+			}
+		},
+
+		LdFlag => sub {
+			if ($value =~ m"^-L(.*)") {
+				my ($dirname) = ($1);
+
+				$opt_debug_unchecked and $line->log_debug("Unchecked directory ${dirname} in ${varname}.");
+
+			} elsif ($value =~ m"^-l(.*)") {
+				my ($libname) = ($1);
+
+				$opt_debug_unchecked and $line->log_debug("Unchecked library name ${libname} in ${varname}.");
+
+			} elsif ($value =~ m"^(?:-static)$") {
+				# Assume that the wrapper framework catches these.
+
+			} elsif ($value =~ m"^(-Wl,(?:-R|-rpath|--rpath))") {
+				my ($rpath_flag) = ($1);
+				$line->log_warning("Please use \${COMPILER_RPATH_FLAG} instead of ${rpath_flag}.");
+
+			} elsif ($value =~ m"^-.*") {
+				$line->log_warning("Unknown linker flag \"${value}\".");
+
+			} elsif ($value =~ regex_unresolved) {
+				$opt_debug_unchecked and $line->log_debug("Unchecked LDFLAG: ${value}");
+
+			} else {
+				$line->log_warning("Linker flag \"${value}\" does not start with a dash.");
+			}
+		},
+
+		License => sub {
+
+			use constant deprecated_licenses => array_to_hash(qw(
+				fee-based-commercial-use
+				no-commercial-use no-profit no-redistribution
+				shareware
+			));
+
+			my $licenses = parse_licenses($value);
+			foreach my $license (@$licenses) {
+				my $license_file = "${cwd_pkgsrcdir}/licenses/${license}";
+				if (defined($pkgctx_vardef) && exists($pkgctx_vardef->{"LICENSE_FILE"})) {
+					my $license_file_line = $pkgctx_vardef->{"LICENSE_FILE"};
+
+					$license_file = "${current_dir}/" . resolve_relative_path($license_file_line->get("value"), false);
+				}
+				if (!-f $license_file) {
+					$line->log_warning("License file ".normalize_pathname($license_file)." does not exist.");
+				}
+
+				if (exists(deprecated_licenses->{$license})) {
+					$line->log_warning("License ${license} is deprecated.");
+				}
+			}
+		},
+
+		Mail_Address => sub {
+			if ($value =~ m"^([+\-.0-9A-Z_a-z]+)\@([-\w\d.]+)$") {
+				my ($localpart, $domain) = ($1, $2);
+				if ($domain =~ m"^NetBSD.org"i && $domain ne "NetBSD.org") {
+					$line->log_warning("Please write NetBSD.org instead of ${domain}.");
+				}
+				if ("${localpart}\@${domain}" =~ m"^(tech-pkg|packages)\@NetBSD\.org$"i) {
+					$line->log_warning("${localpart}\@${domain} is deprecated. Use pkgsrc-users\@NetBSD.org instead.");
+				}
+
+			} else {
+				$line->log_warning("\"${value}\" is not a valid mail address.");
+			}
+		},
+
+		Message => sub {
+			if ($value =~ m"^[\"'].*[\"']$") {
+				$line->log_warning("${varname} should not be quoted.");
+				$line->explain_warning(
 "The quoting is only needed for variables which are interpreted as",
 "multiple words (or, generally speaking, a list of something). A single",
 "text message does not belong to this class, since it is only printed",
@@ -4139,183 +4159,199 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 "",
 "On the other hand, PKG_FAIL_REASON is a _list_ of text messages, so in",
 "that case, the quoting has to be done.");
-		}
+			}
+		},
 
-	} elsif ($type eq "Option") {
-		if ($value ne $value_novar) {
-			$opt_debug_unchecked and $line->log_debug("Unchecked option name \"${value}\".");
+		Option => sub {
+			if ($value ne $value_novar) {
+				$opt_debug_unchecked and $line->log_debug("Unchecked option name \"${value}\".");
 
-		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z\+]*)$") {
-			my ($optname) = ($1);
+			} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z\+]*)$") {
+				my ($optname) = ($1);
 
-			if (!exists(get_pkg_options()->{$optname})) {
-				$line->log_warning("Unknown option \"${value}\".");
-				$line->explain_warning(
+				if (!exists(get_pkg_options()->{$optname})) {
+					$line->log_warning("Unknown option \"${value}\".");
+					$line->explain_warning(
 "This option is not documented in the mk/defaults/options.description",
 "file. If this is not a typo, please think of a brief but precise",
 "description and either update that file yourself or ask on the",
 "tech-pkg\@NetBSD.org mailing list.");
-			}
-
-		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z_\+]*)$") {
-			my ($optname) = ($1);
-
-			$line->log_warning("Use of the underscore character in option names is deprecated.");
-
-		} else {
-			$line->log_error("\"${value}\" is not a valid option name.");
-		}
-
-	} elsif ($type eq "Pathlist") {
-
-		if ($value !~ m":" && $is_guessed) {
-			checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $value, $comment, $list_context, $is_guessed);
-
-		} else {
-
-			# XXX: The splitting will fail if $value contains any
-			# variables with modifiers, for example :Q or :S/././.
-			foreach my $p (split(qr":", $value)) {
-				my $p_novar = remove_variables($p);
-
-				if ($p_novar !~ m"^[-0-9A-Za-z._~+%/]*$") {
-					$line->log_warning("\"${p}\" is not a valid pathname.");
 				}
 
-				if ($p !~ m"^[\$/]") {
-					$line->log_warning("All components of ${varname} (in this case \"${p}\") should be an absolute path.");
+			} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z_\+]*)$") {
+				my ($optname) = ($1);
+
+				$line->log_warning("Use of the underscore character in option names is deprecated.");
+
+			} else {
+				$line->log_error("\"${value}\" is not a valid option name.");
+			}
+		},
+
+		Pathlist => sub {
+
+			if ($value !~ m":" && $is_guessed) {
+				checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $value, $comment, $list_context, $is_guessed);
+
+			} else {
+
+				# XXX: The splitting will fail if $value contains any
+				# variables with modifiers, for example :Q or :S/././.
+				foreach my $p (split(qr":", $value)) {
+					my $p_novar = remove_variables($p);
+
+					if ($p_novar !~ m"^[-0-9A-Za-z._~+%/]*$") {
+						$line->log_warning("\"${p}\" is not a valid pathname.");
+					}
+
+					if ($p !~ m"^[\$/]") {
+						$line->log_warning("All components of ${varname} (in this case \"${p}\") should be an absolute path.");
+					}
 				}
 			}
-		}
+		},
 
-	} elsif ($type eq "Pathmask") {
-		if ($value_novar !~ m"^[#\-0-9A-Za-z._~+%*?/\[\]]*$") {
-			$line->log_warning("\"${value}\" is not a valid pathname mask.");
-		}
-		checkline_mk_absolute_pathname($line, $value);
+		Pathmask => sub {
+			if ($value_novar !~ m"^[#\-0-9A-Za-z._~+%*?/\[\]]*$") {
+				$line->log_warning("\"${value}\" is not a valid pathname mask.");
+			}
+			checkline_mk_absolute_pathname($line, $value);
+		},
 
-	} elsif ($type eq "Pathname") {
-		if ($value_novar !~ m"^[#\-0-9A-Za-z._~+%/]*$") {
-			$line->log_warning("\"${value}\" is not a valid pathname.");
-		}
-		checkline_mk_absolute_pathname($line, $value);
+		Pathname => sub {
+			if ($value_novar !~ m"^[#\-0-9A-Za-z._~+%/]*$") {
+				$line->log_warning("\"${value}\" is not a valid pathname.");
+			}
+			checkline_mk_absolute_pathname($line, $value);
+		},
 
-	} elsif ($type eq "Perl5Packlist") {
-		if ($value ne $value_novar) {
-			$line->log_warning("${varname} should not depend on other variables.");
-		}
+		Perl5Packlist => sub {
+			if ($value ne $value_novar) {
+				$line->log_warning("${varname} should not depend on other variables.");
+			}
+		},
 
-	} elsif ($type eq "PkgName") {
-		if ($value eq $value_novar && $value !~ regex_pkgname) {
-			$line->log_warning("\"${value}\" is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.");
-		}
+		PkgName => sub {
+			if ($value eq $value_novar && $value !~ regex_pkgname) {
+				$line->log_warning("\"${value}\" is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.");
+			}
+		},
 
-	} elsif ($type eq "PkgPath") {
-		checkline_relative_pkgdir($line, "$cur_pkgsrcdir/$value");
+		PkgPath => sub {
+			checkline_relative_pkgdir($line, "$cur_pkgsrcdir/$value");
+		},
 
-	} elsif ($type eq "PkgOptionsVar") {
-		checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment, false, $is_guessed);
-		if ($value =~ m"\$\{PKGBASE[:\}]") {
-			$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
-			$line->explain_error(
+		PkgOptionsVar => sub {
+			checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment, false, $is_guessed);
+			if ($value =~ m"\$\{PKGBASE[:\}]") {
+				$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
+				$line->explain_error(
 "PKGBASE is defined in bsd.pkg.mk, which is included as the",
 "very last file, but PKG_OPTIONS_VAR is evaluated earlier.",
 "Use \${PKGNAME:C/-[0-9].*//} instead.");
-		}
+			}
+		},
 
-	} elsif ($type eq "PkgRevision") {
-		if ($value !~ m"^[1-9]\d*$") {
-			$line->log_warning("${varname} must be a positive integer number.");
-		}
-		if ($line->fname !~ m"(?:^|/)Makefile$") {
-			$line->log_error("${varname} must not be set outside the package Makefile.");
-			$line->explain_error(
+		PkgRevision => sub {
+			if ($value !~ m"^[1-9]\d*$") {
+				$line->log_warning("${varname} must be a positive integer number.");
+			}
+			if ($line->fname !~ m"(?:^|/)Makefile$") {
+				$line->log_error("${varname} must not be set outside the package Makefile.");
+				$line->explain_error(
 "Usually, different packages using the same Makefile.common have",
 "different dependencies and will be bumped at different times (e.g. for",
 "shlib major bumps) and thus the PKGREVISIONs must be in the separate",
 "Makefiles. There is no practical way of having this information in a",
 "commonly used Makefile.");
-		}
-
-	} elsif ($type eq "PlatformTriple") {
-		my $part = qr"(?:\[[^\]]+\]|[^-\[])+";
-		if ($value =~ m"^(${part})-(${part})-(${part})$") {
-			my ($opsys, $os_version, $arch) = ($1, $2, $3);
-
-			if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|SunOS)$") {
-				$line->log_warning("Unknown operating system: ${opsys}");
 			}
-			# no check for $os_version
-			if ($arch !~ m"^(?:\*|i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$") {
-				$line->log_warning("Unknown hardware architecture: ${arch}");
-			}
+		},
 
-		} else {
-			$line->log_warning("\"${value}\" is not a valid platform triple.");
-			$line->explain_warning(
+		PlatformTriple => sub {
+			my $part = qr"(?:\[[^\]]+\]|[^-\[])+";
+			if ($value =~ m"^(${part})-(${part})-(${part})$") {
+				my ($opsys, $os_version, $arch) = ($1, $2, $3);
+
+				if ($opsys !~ m"^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|SunOS)$") {
+					$line->log_warning("Unknown operating system: ${opsys}");
+				}
+				# no check for $os_version
+				if ($arch !~ m"^(?:\*|i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$") {
+					$line->log_warning("Unknown hardware architecture: ${arch}");
+				}
+
+			} else {
+				$line->log_warning("\"${value}\" is not a valid platform triple.");
+				$line->explain_warning(
 "A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
 "Each of these components may be a shell globbing expression.",
 "Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
-		}
+			}
+		},
 
-	} elsif ($type eq "PrefixPathname") {
-		if ($value =~ m"^man/(.*)") {
-			my ($mansubdir) = ($1);
+		PrefixPathname => sub {
+			if ($value =~ m"^man/(.*)") {
+				my ($mansubdir) = ($1);
 
-			$line->log_warning("Please use \"\${PKGMANDIR}/${mansubdir}\" instead of \"${value}\".");
-		}
+				$line->log_warning("Please use \"\${PKGMANDIR}/${mansubdir}\" instead of \"${value}\".");
+			}
+		},
 
-	} elsif ($type eq "RelativePkgDir") {
-		checkline_relative_pkgdir($line, $value);
+		RelativePkgDir => sub {
+			checkline_relative_pkgdir($line, $value);
+		},
 
-	} elsif ($type eq "RelativePkgPath") {
-		checkline_relative_path($line, $value, true);
+		RelativePkgPath => sub {
+			checkline_relative_path($line, $value, true);
+		},
 
-	} elsif ($type eq "Restricted") {
-		if ($value ne "\${RESTRICTED}") {
-			$line->log_warning("The only valid value for ${varname} is \${RESTRICTED}.");
-			$line->explain_warning(
+		Restricted => sub {
+			if ($value ne "\${RESTRICTED}") {
+				$line->log_warning("The only valid value for ${varname} is \${RESTRICTED}.");
+				$line->explain_warning(
 "These variables are used to control which files may be mirrored on FTP",
 "servers or CD-ROM collections. They are not intended to mark packages",
 "whose only MASTER_SITES are on ftp.NetBSD.org.");
-		}
+			}
+		},
 
-	} elsif ($type eq "SVR4PkgName") {
-		if ($value =~ regex_unresolved) {
-			$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
-		} elsif (length($value) > 5) {
-			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
-		}
+		SVR4PkgName => sub {
+			if ($value =~ regex_unresolved) {
+				$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
+			} elsif (length($value) > 5) {
+				$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
+			}
+		},
 
-	} elsif ($type eq "SedCommand") {
-		
+		SedCommand => sub {
+		},
 
-	} elsif ($type eq "SedCommands") {
-		my $words = shell_split($value);
-		if (!$words) {
-			$line->log_error("Invalid shell words in sed commands.");
-			$line->explain_error(
+		SedCommands => sub {
+			my $words = shell_split($value);
+			if (!$words) {
+				$line->log_error("Invalid shell words in sed commands.");
+				$line->explain_error(
 "If your sed commands have embedded \"#\" characters, you need to escape",
 "them with a backslash, otherwise make(1) will interpret them as a",
 "comment, no matter if they occur in single or double quotes or",
 "whatever.");
 
-		} else {
-			my $nwords = scalar(@{$words});
-			my $ncommands = 0;
+			} else {
+				my $nwords = scalar(@{$words});
+				my $ncommands = 0;
 
-			for (my $i = 0; $i < $nwords; $i++) {
-				my $word = $words->[$i];
-				checkline_mk_shellword($line, $word, true);
+				for (my $i = 0; $i < $nwords; $i++) {
+					my $word = $words->[$i];
+					checkline_mk_shellword($line, $word, true);
 
-				if ($word eq "-e") {
-					if ($i + 1 < $nwords) {
-						# Check the real sed command here.
-						$i++;
-						$ncommands++;
-						if ($ncommands > 1) {
-							$line->log_warning("Each sed command should appear in an assignment of its own.");
-							$line->explain_warning(
+					if ($word eq "-e") {
+						if ($i + 1 < $nwords) {
+							# Check the real sed command here.
+							$i++;
+							$ncommands++;
+							if ($ncommands > 1) {
+								$line->log_warning("Each sed command should appear in an assignment of its own.");
+								$line->explain_warning(
 "For example, instead of",
 "    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",
 "use",
@@ -4323,197 +4359,224 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 "    SUBST_SED.foo+=        -e s,command2,,",
 "",
 "This way, short sed commands cannot be hidden at the end of a line.");
+							}
+							checkline_mk_shellword($line, $words->[$i - 1], true);
+							checkline_mk_shellword($line, $words->[$i], true);
+							checkline_mk_vartype_basic($line, $varname, "SedCommand", $op, $words->[$i], $comment, $list_context, $is_guessed);
+						} else {
+							$line->log_error("The -e option to sed requires an argument.");
 						}
-						checkline_mk_shellword($line, $words->[$i - 1], true);
-						checkline_mk_shellword($line, $words->[$i], true);
-						checkline_mk_vartype_basic($line, $varname, "SedCommand", $op, $words->[$i], $comment, $list_context, $is_guessed);
+					} elsif ($word eq "-E") {
+						# Switch to extended regular expressions mode.
+
+					} elsif ($word eq "-n") {
+						# Don't print lines per default.
+
+					} elsif ($i == 0 && $word =~ m"^([\"']?)(?:\d*|/.*/)s(.).*\2g?\1$") {
+						$line->log_warning("Please always use \"-e\" in sed commands, even if there is only one substitution.");
+
 					} else {
-						$line->log_error("The -e option to sed requires an argument.");
+						$line->log_warning("Unknown sed command ${word}.");
 					}
-				} elsif ($word eq "-E") {
-					# Switch to extended regular expressions mode.
+				}
+			}
+		},
 
-				} elsif ($word eq "-n") {
-					# Don't print lines per default.
+		ShellCommand => sub {
+			checkline_mk_shelltext($line, $value);
+		},
 
-				} elsif ($i == 0 && $word =~ m"^([\"']?)(?:\d*|/.*/)s(.).*\2g?\1$") {
-					$line->log_warning("Please always use \"-e\" in sed commands, even if there is only one substitution.");
+		ShellWord => sub {
+			if (!$list_context) {
+				checkline_mk_shellword($line, $value, true);
+			}
+		},
+
+		Stage => sub {
+			if ($value !~ m"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
+				$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{extract,patch,configure,build,install}.");
+			}
+		},
+
+		String => sub {
+			# No further checks possible.
+		},
+
+		Tool => sub {
+			if ($value =~ m"^([-\w]+|\[)(?::(\w+))?$") {
+				my ($toolname, $tooldep) = ($1, $2);
+				if (!exists(get_tool_names()->{$toolname})) {
+					$line->log_error("Unknown tool \"${toolname}\".");
+				}
+				if (defined($tooldep) && $tooldep !~ m"^(?:bootstrap|build|pkgsrc|run)$") {
+					$line->log_error("Unknown tool dependency \"${tooldep}\". Use one of \"build\", \"pkgsrc\" or \"run\".");
+				}
+			} else {
+				$line->log_error("Invalid tool syntax: \"${value}\".");
+			}
+		},
+
+		Unchecked => sub {
+			# Do nothing, as the name says.
+		},
+
+		URL => sub {
+			if ($value eq "" && defined($comment) && $comment =~ m"^#") {
+				# Ok
+
+			} elsif ($value =~ m"\$\{(MASTER_SITE_[^:]*).*:=(.*)\}$") {
+				my ($name, $subdir) = ($1, $2);
+
+				if (!exists(get_dist_sites_names()->{$name})) {
+					$line->log_error("${name} does not exist.");
+				}
+				if ($subdir !~ m"/$") {
+					$line->log_error("The subdirectory in ${name} must end with a slash.");
+				}
+
+			} elsif ($value =~ regex_unresolved) {
+				# No further checks
+
+			} elsif ($value =~ m"^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:=?\@A-Z_a-z~]|#)*$") {
+				my ($proto, $host, $port, $path) = ($1, $2, $3, $4);
+				my $sites = get_dist_sites();
+
+				if ($host =~ m"\.NetBSD\.org$"i && $host !~ m"\.NetBSD\.org$") {
+					$line->log_warning("Please write NetBSD.org instead of ${host}.");
+				}
+
+				foreach my $site (keys(%{$sites})) {
+					if (index($value, $site) == 0) {
+						my $subdir = substr($value, length($site));
+						$line->log_warning(sprintf("Please use \${%s:=%s} instead of \"%s\".", $sites->{$site}, $subdir, $value));
+						last;
+					}
+				}
+
+			} elsif ($value =~ m"^([0-9A-Za-z]+)://([^/]+)(.*)$") {
+				my ($scheme, $host, $abs_path) = ($1, $2, $3);
+
+				if ($scheme ne "ftp" && $scheme ne "http" && $scheme ne "gopher") {
+					$line->log_warning("\"${value}\" is not a valid URL. Only http, ftp and gopher URLs are allowed here.");
+
+				} elsif ($abs_path eq "") {
+					$line->log_note("For consistency, please add a trailing slash to \"${value}\".");
 
 				} else {
-					$line->log_warning("Unknown sed command ${word}.");
+					$line->log_warning("\"${value}\" is not a valid URL.");
 				}
-			}
-		}
-
-	} elsif ($type eq "ShellCommand") {
-		checkline_mk_shelltext($line, $value);
-
-	} elsif ($type eq "ShellWord") {
-		if (!$list_context) {
-			checkline_mk_shellword($line, $value, true);
-		}
-
-	} elsif ($type eq "Stage") {
-		if ($value !~ m"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
-			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{extract,patch,configure,build,install}.");
-		}
-
-	} elsif ($type eq "String") {
-		# No further checks possible.
-
-	} elsif ($type eq "Tool") {
-		if ($value =~ m"^([-\w]+|\[)(?::(\w+))?$") {
-			my ($toolname, $tooldep) = ($1, $2);
-			if (!exists(get_tool_names()->{$toolname})) {
-				$line->log_error("Unknown tool \"${toolname}\".");
-			}
-			if (defined($tooldep) && $tooldep !~ m"^(?:bootstrap|build|pkgsrc|run)$") {
-				$line->log_error("Unknown tool dependency \"${tooldep}\". Use one of \"build\", \"pkgsrc\" or \"run\".");
-			}
-		} else {
-			$line->log_error("Invalid tool syntax: \"${value}\".");
-		}
-
-	} elsif ($type eq "Unchecked") {
-		# Do nothing, as the name says.
-
-	} elsif ($type eq "URL") {
-		if ($value eq "" && defined($comment) && $comment =~ m"^#") {
-			# Ok
-
-		} elsif ($value =~ m"\$\{(MASTER_SITE_[^:]*).*:=(.*)\}$") {
-			my ($name, $subdir) = ($1, $2);
-
-			if (!exists(get_dist_sites_names()->{$name})) {
-				$line->log_error("${name} does not exist.");
-			}
-			if ($subdir !~ m"/$") {
-				$line->log_error("The subdirectory in ${name} must end with a slash.");
-			}
-
-		} elsif ($value =~ regex_unresolved) {
-			# No further checks
-
-		} elsif ($value =~ m"^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:=?\@A-Z_a-z~]|#)*$") {
-			my ($proto, $host, $port, $path) = ($1, $2, $3, $4);
-			my $sites = get_dist_sites();
-
-			if ($host =~ m"\.NetBSD\.org$"i && $host !~ m"\.NetBSD\.org$") {
-				$line->log_warning("Please write NetBSD.org instead of ${host}.");
-			}
-
-			foreach my $site (keys(%{$sites})) {
-				if (index($value, $site) == 0) {
-					my $subdir = substr($value, length($site));
-					$line->log_warning(sprintf("Please use \${%s:=%s} instead of \"%s\".", $sites->{$site}, $subdir, $value));
-					last;
-				}
-			}
-
-		} elsif ($value =~ m"^([0-9A-Za-z]+)://([^/]+)(.*)$") {
-			my ($scheme, $host, $abs_path) = ($1, $2, $3);
-
-			if ($scheme ne "ftp" && $scheme ne "http" && $scheme ne "gopher") {
-				$line->log_warning("\"${value}\" is not a valid URL. Only http, ftp and gopher URLs are allowed here.");
-
-			} elsif ($abs_path eq "") {
-				$line->log_note("For consistency, please add a trailing slash to \"${value}\".");
 
 			} else {
 				$line->log_warning("\"${value}\" is not a valid URL.");
 			}
+		},
 
-		} else {
-			$line->log_warning("\"${value}\" is not a valid URL.");
-		}
+		UserGroupName => sub {
+			if ($value ne $value_novar) {
+				# No checks for now.
+			} elsif ($value !~ m"^[0-9_a-z]+$") {
+				$line->log_warning("Invalid user or group name \"${value}\".");
+			}
+		},
 
-	} elsif ($type eq "UserGroupName") {
-		if ($value ne $value_novar) {
-			# No checks for now.
-		} elsif ($value !~ m"^[0-9_a-z]+$") {
-			$line->log_warning("Invalid user or group name \"${value}\".");
-		}
+		Varname => sub {
+			if ($value ne "" && $value_novar eq "") {
+				# The value of another variable
 
-	} elsif ($type eq "Varname") {
-		if ($value ne "" && $value_novar eq "") {
-			# The value of another variable
+			} elsif ($value_novar !~ m"^[A-Z_][0-9A-Z_]*(?:[.].*)?$") {
+				$line->log_warning("\"${value}\" is not a valid variable name.");
+			}
+		},
 
-		} elsif ($value_novar !~ m"^[A-Z_][0-9A-Z_]*(?:[.].*)?$") {
-			$line->log_warning("\"${value}\" is not a valid variable name.");
-		}
+		Version => sub {
+			if ($value !~ m"^([\d.])+$") {
+				$line->log_warning("Invalid version number \"${value}\".");
+			}
+		},
 
-	} elsif ($type eq "Version") {
-		if ($value !~ m"^([\d.])+$") {
-			$line->log_warning("Invalid version number \"${value}\".");
-		}
+		WrapperReorder => sub {
+			if ($value =~ m"^reorder:l:([\w\-]+):([\w\-]+)$") {
+				my ($lib1, $lib2) = ($1, $2);
+				# Fine.
+			} else {
+				$line->log_warning("Unknown wrapper reorder command \"${value}\".");
+			}
+		},
 
-	} elsif ($type eq "WrapperReorder") {
-		if ($value =~ m"^reorder:l:([\w\-]+):([\w\-]+)$") {
-			my ($lib1, $lib2) = ($1, $2);
-			# Fine.
-		} else {
-			$line->log_warning("Unknown wrapper reorder command \"${value}\".");
-		}
+		WrapperTransform => sub {
+			if ($value =~ m"^rm:(?:-[DILOUWflm].*|-std=.*)$") {
+				# Fine.
 
-	} elsif ($type eq "WrapperTransform") {
-		if ($value =~ m"^rm:(?:-[DILOUWflm].*|-std=.*)$") {
-			# Fine.
+			} elsif ($value =~ m"^l:([^:]+):(.+)$") {
+				my ($lib, $replacement_libs) = ($1, $2);
+				# Fine.
 
-		} elsif ($value =~ m"^l:([^:]+):(.+)$") {
-			my ($lib, $replacement_libs) = ($1, $2);
-			# Fine.
+			} elsif ($value =~ m"^'?(?:opt|rename|rm-optarg|rmdir):.*$") {
+				# FIXME: This is cheated.
+				# Fine.
 
-		} elsif ($value =~ m"^'?(?:opt|rename|rm-optarg|rmdir):.*$") {
-			# FIXME: This is cheated.
-			# Fine.
+			} elsif ($value eq "-e" || $value =~ m"^\"?'?s[|:,]") {
+				# FIXME: This is cheated.
+				# Fine.
 
-		} elsif ($value eq "-e" || $value =~ m"^\"?'?s[|:,]") {
-			# FIXME: This is cheated.
-			# Fine.
+			} else {
+				$line->log_warning("Unknown wrapper transform command \"${value}\".");
+			}
+		},
 
-		} else {
-			$line->log_warning("Unknown wrapper transform command \"${value}\".");
-		}
+		WrkdirSubdirectory => sub {
+			checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $value, $comment, $list_context, $is_guessed);
+			if ($value eq "\${WRKDIR}") {
+				# Fine.
+			} else {
+				$opt_debug_unchecked and $line->log_debug("Unchecked subdirectory \"${value}\" of \${WRKDIR}.");
+			}
+		},
 
-	} elsif ($type eq "WrkdirSubdirectory") {
-		checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $value, $comment, $list_context, $is_guessed);
-		if ($value eq "\${WRKDIR}") {
-			# Fine.
-		} else {
-			$opt_debug_unchecked and $line->log_debug("Unchecked subdirectory \"${value}\" of \${WRKDIR}.");
-		}
+		WrksrcSubdirectory => sub {
+			if ($value =~ m"^(\$\{WRKSRC\})(?:/(.*))?") {
+				my ($prefix, $rest) = ($1, $2);
+				$line->log_note("You can use \"" . (defined($rest) ? $rest : ".") . "\" instead of \"${value}\".");
 
-	} elsif ($type eq "WrksrcSubdirectory") {
-		if ($value =~ m"^(\$\{WRKSRC\})(?:/(.*))?") {
-			my ($prefix, $rest) = ($1, $2);
-			$line->log_note("You can use \"" . (defined($rest) ? $rest : ".") . "\" instead of \"${value}\".");
+			} elsif ($value ne "" && $value_novar eq "") {
+				# The value of another variable
 
-		} elsif ($value ne "" && $value_novar eq "") {
-			# The value of another variable
+			} elsif ($value_novar !~ m"^(?:\.|[0-9A-Za-z_\@][-0-9A-Za-z_\@./+]*)$") {
+				$line->log_warning("\"${value}\" is not a valid subdirectory of \${WRKSRC}.");
+			}
+		},
 
-		} elsif ($value_novar !~ m"^(?:\.|[0-9A-Za-z_\@][-0-9A-Za-z_\@./+]*)$") {
-			$line->log_warning("\"${value}\" is not a valid subdirectory of \${WRKSRC}.");
-		}
-
-	} elsif ($type eq "Yes") {
-		if ($value !~ m"^(?:YES|yes)(?:\s+#.*)?$") {
-			$line->log_warning("${varname} should be set to YES or yes.");
-			$line->explain_warning(
+		Yes => sub {
+			if ($value !~ m"^(?:YES|yes)(?:\s+#.*)?$") {
+				$line->log_warning("${varname} should be set to YES or yes.");
+				$line->explain_warning(
 "This variable means \"yes\" if it is defined, and \"no\" if it is",
 "undefined. Even when it has the value \"no\", this means \"yes\".",
 "Therefore when it is defined, its value should correspond to its",
 "meaning.");
+			}
+		},
+
+		YesNo => sub {
+			if ($value !~ m"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
+				$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
+			}
+		},
+
+		YesNo_Indirectly => sub {
+			if ($value_novar ne "" && $value !~ m"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
+				$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
+			}
+		},
+	);
+
+	if (ref($type) eq "HASH") {
+		if (!exists($type->{$value})) {
+			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of { ".join(" ", sort(keys(%{$type})))." } instead.");
 		}
 
-	} elsif ($type eq "YesNo") {
-		if ($value !~ m"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
-			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
-		}
-
-	} elsif ($type eq "YesNo_Indirectly") {
-		if ($value_novar ne "" && $value !~ m"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
-			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
-		}
+	} elsif (defined $type_dispatch{$type}) {
+		$type_dispatch{$type}->();
 
 	} else {
 		$line->log_fatal("Type ${type} unknown.");
