@@ -1,11 +1,12 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.6 2013/03/26 15:10:03 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.7 2013/03/26 15:10:32 schmonz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
 $pkglint::program = 'pkglint.pl';	# because it self-greps for vartypes
 
-use Test::More tests => 37;
+use Test::More tests => 36;
+use Test::Deep;
 use Test::Trap;
 
 use Config;
@@ -31,7 +32,7 @@ sub test_unit {
 	}
 	like($trap->stdout, qr/$stdout_re/sm, qq{stdout matches $stdout_re});
 	like($trap->stderr, qr/$stderr_re/sm, qq{stderr matches $stderr_re});
-	
+
 	return @results;
 }
 
@@ -68,8 +69,34 @@ sub test_get_vartypes_basictypes {
 
 	my @results = test_unit($unit);
 	my %types = %{$results[0]};
-	is($types{BuildlinkDepmethod}, 1, q{a couple expected types are here});
-	is($types{YesNo_Indirectly}, 1, q{a couple expected types are here});
+
+	my @all_vartypes_basictypes = qw(
+		ARRAY AwkCommand BrokenIn
+		BuildlinkDepmethod BuildlinkDepth BuildlinkPackages
+		CFlag Category Comment
+		Dependency DependencyWithPath
+		DistSuffix EmulPlatform
+		FileMode Filemask Filename
+		Identifier Integer LdFlag License Mail_Address Message Option
+		Pathlist Pathmask Pathname
+		Perl5Packlist
+		PkgName PkgOptionsVar PkgPath PkgRevision
+		PlatformTriple PrefixPathname
+		RelativePkgDir RelativePkgPath
+		Restricted SVR4PkgName
+		SedCommand SedCommands
+		ShellCommand ShellWord
+		Stage String Tool URL Unchecked UserGroupName Varname Version
+		WrapperReorder WrapperTransform
+		WrkdirSubdirectory WrksrcSubdirectory
+		Yes YesNo YesNo_Indirectly
+	);
+
+	cmp_bag(
+		[ keys %types ],
+		\@all_vartypes_basictypes,
+		q{types contains all expected and no unexpected types},
+	);
 }
 
 sub test_get_vartypes_map {

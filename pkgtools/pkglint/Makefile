@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2013/03/26 15:09:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.427 2013/03/26 15:10:31 schmonz Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
@@ -16,6 +16,7 @@ DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-enum>=1.016:../../devel/p5-enum
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
 
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
