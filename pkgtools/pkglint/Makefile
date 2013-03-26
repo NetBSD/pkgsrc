@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2013/01/19 22:51:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.425 2013/03/26 15:08:28 schmonz Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
@@ -22,7 +22,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_BUILD=	yes
 USE_LANGUAGES=	# none
 AUTO_MKDIRS=	yes
 
@@ -30,8 +29,7 @@ AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
-SUBST_FILES.pkglint+=	pkglint.pl pkglint.t
-SUBST_FILES.pkglint+=	plist-clash.pl
+SUBST_FILES.pkglint+=	build.pl pkglint.pl pkglint.t plist-clash.pl
 .if defined(BATCH)
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
 .else
@@ -49,10 +47,16 @@ SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX}/share/pkglint\|g
 quick-install:
 	${RM} -rf ${WRKSRC}
 	${MKDIR} ${WRKSRC}
-	${MAKE} do-extract subst-pkglint do-install selftest clean
+	${MAKE} do-extract subst-pkglint do-build do-install selftest clean
 
 do-extract:
-	cd ${FILESDIR} && ${CP} pkglint.0 pkglint.1 pkglint.pl pkglint.t plist-clash.pl ${WRKSRC}
+	cd ${FILESDIR} && ${CP} build.pl pkglint.0 pkglint.1 pkglint.pl pkglint.t plist-clash.pl ${WRKSRC}
+	mkdir ${WRKSRC}/PkgLint
+	cd ${FILESDIR} && ${CP} PkgLint/*.pm ${WRKSRC}/PkgLint
+
+do-build:
+	cd ${WRKSRC} && ${PERL5} build.pl < pkglint.pl > pkglint.pl.inlined \
+		&& mv pkglint.pl.inlined pkglint.pl
 
 do-test:
 	cd ${WRKSRC} && prove pkglint.t
