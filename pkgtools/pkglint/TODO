@@ -1,8 +1,10 @@
-$NetBSD: TODO,v 1.74 2012/09/15 10:55:15 wiz Exp $
+$NetBSD: TODO,v 1.75 2013/03/26 15:08:53 schmonz Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
 
+* When you understand some behavior of the code, document it by
+  adding automated tests to pkglint.t!
 * fix false positive warnings
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
