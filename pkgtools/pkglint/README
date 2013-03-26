@@ -1,6 +1,10 @@
-$NetBSD: README,v 1.4 2006/02/28 23:32:47 rillig Exp $
+$NetBSD: README,v 1.5 2013/03/26 15:08:53 schmonz Exp $
 
 == Current problems ==
+
+There are finally some automated tests that document a few intended
+and actual behaviors. There is still plenty of poorly expressed
+code not yet under test and therefore not yet safe to refactor.
 
 The current pkglint architecture will not scale much further. What is
 needed next are parsers for nested, non-context-free languages (make(1),
