@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.t,v 1.8 2013/03/26 15:11:20 schmonz Exp $
+# $NetBSD: pkglint.t,v 1.9 2013/03/26 15:11:36 schmonz Exp $
 #
 
 require 'pkglint.pl';			# so we can test its internals
@@ -150,7 +150,7 @@ sub test_lint_some_reference_packages {
 	my %reference_packages = (
 		'mail/qmail-run' => {
 			stdout_re => <<EOT,
-^WARN: .*distinfo: File not found\. Please run '.+make makesum'\.
+^WARN: .*distinfo: File not found\. Please run '.*make makesum'\.
 ERROR: .*Makefile: All packages must define their LICENSE\.
 WARN: .*Makefile:[0-9]+: Unknown dependency pattern \"qmail-qfilter-1\.5nb1\"\.
 WARN: .*Makefile:[0-9]+: The LOCALBASE variable should not be used by packages\.
@@ -183,7 +183,7 @@ EOT
 	my $pkglint = "$dirprefix/pkglint.pl";
 	my $perl = $Config{perlpath};
 	for my $package (keys %reference_packages) {
-		test_program($perl, [ $pkglint, "../../../$package" ],
+		test_program($perl, [ $pkglint, "@PKGSRCDIR@/$package" ],
 			$reference_packages{$package}->{exitcode},
 			$reference_packages{$package}->{stdout_re},
 			$reference_packages{$package}->{stderr_re});
