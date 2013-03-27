@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2012/12/22 02:22:44 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2013/03/27 09:33:01 sbd Exp $
 
 --- configure.in.orig	2012-11-15 18:24:02.000000000 +0000
 +++ configure.in
@@ -51,21 +51,6 @@ $NetBSD: patch-aa,v 1.3 2012/12/22 02:22:44 joerg Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -4330,6 +4342,14 @@ if test -n "$YASM"; then
-   _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
- fi
- 
-+if test -n "${LIBXUL_SDK_DIR}"; then
-+    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
-+    NSPR_CFLAGS="-I${prefix}/include/xulrunner10/unstable `pkg-config --cflags mozilla-nspr`"
-+    NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
-+    NSS_CFLAGS="`pkg-config --cflags mozilla-nss`"
-+    NSS_LIBS="`pkg-config --libs mozilla-nss`"
-+fi
-+
- if test -z "$SKIP_LIBRARY_CHECKS"; then
- dnl system JPEG support
- dnl ========================================================
 @@ -5616,20 +5636,20 @@ if test -n "$MOZ_WEBM"; then
                       [MOZ_NATIVE_LIBVPX_DEC_TEST=1],
                       ([--with-system-libvpx requested but symbol vpx_codec_dec_init_ver not found]))
