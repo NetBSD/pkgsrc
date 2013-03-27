@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2013/01/10 16:17:10 ryoon Exp $
+$NetBSD: patch-aa,v 1.2 2013/03/27 10:16:11 sbd Exp $
 
---- configure.in.orig	2012-11-29 04:43:55.000000000 +0000
+--- configure.in.orig	2013-03-07 18:17:33.000000000 +0000
 +++ configure.in
 @@ -2080,6 +2080,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
@@ -72,6 +72,15 @@ $NetBSD: patch-aa,v 1.1 2013/01/10 16:17:10 ryoon Exp $
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
+@@ -5516,7 +5533,7 @@ dnl ====================================
+ 
+ dnl If using sydneyaudio with Linux, ensure that the alsa library is available
+ if test -n "$MOZ_SYDNEYAUDIO" -a "$OS_TARGET" = "Linux"; then
+-    PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
++    PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi
 @@ -8544,6 +8561,7 @@ AC_SUBST(MOZ_VP8_ERROR_CONCEALMENT)
  AC_SUBST(MOZ_VP8_ENCODER)
  AC_SUBST(MOZ_VP8)
