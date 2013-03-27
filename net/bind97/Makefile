@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/03/02 20:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/03/27 00:34:32 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/ \
 		http://ftp.belnet.be/pub/mirror/ftp.isc.org/isc/bind9/${BIND_VERSION}/
@@ -27,6 +27,9 @@ USE_TOOLS+=		pax perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 #CONFIG_SHELL=		sh -x
+
+# workaround for CVE-2013-2266
+CONFIGURE_ENV+=		ac_cv_header_regex_h=no
 
 CONFIGURE_ARGS+=	--with-libtool
 CONFIGURE_ARGS+=	--sysconfdir=/etc
