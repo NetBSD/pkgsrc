@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.20 2013/03/23 12:18:19 joerg Exp $
+$NetBSD: distinfo,v 1.21 2013/03/27 16:36:42 hiramatsu Exp $
 
 SHA1 (mksh-R44.tgz) = 2e575f8de79305e42fc1c7fdda2c8051482a4758
 RMD160 (mksh-R44.tgz) = 4cf1525c477c4bece519c024cc73ee6ca064d34a
 Size (mksh-R44.tgz) = 346239 bytes
+SHA1 (patch-mksh.1) = dc76beab0bf95ab3f65841b5308a40126c128615
