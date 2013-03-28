@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 21:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/28 21:30:49 joerg Exp $
 #
 
 DISTNAME=	see-3.0.1376
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	http://users.tpg.com.au/dle0nard/software/
 
@@ -22,12 +22,13 @@ CONFIGURE_ARGS+=	--with-readline
 PKGCONFIG_OVERRIDE+=	libsee/see.pc.in
 
 pre-configure:
+	rm -rf ${WRKSRC}/libltdl
 	cd ${WRKSRC} && autoreconf -vif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/USAGE.html ${DESTDIR}${PREFIX}/share/doc/see/
 
-.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

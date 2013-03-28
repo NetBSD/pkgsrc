@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/03/28 21:30:49 joerg Exp $
+
+--- Makefile.am.orig	2007-09-13 22:01:46.000000000 +0000
++++ Makefile.am
+@@ -3,7 +3,7 @@
+ 
+ AUTOMAKE_OPTIONS= foreign
+ 
+-SUBDIRS = include libsee libltdl shell doc
++SUBDIRS = include libsee shell doc
+ if SSP
+ SUBDIRS += ssp
+ endif
