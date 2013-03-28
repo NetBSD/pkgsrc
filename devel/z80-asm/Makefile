@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:55 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/28 23:59:03 joerg Exp $
 #
 
 DISTNAME=	z80-asm-1.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://virtus.ath.cx/z80/
 
-MAINTAINER=	virtus@wanadoo.nl
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/
 COMMENT=	Z80 assembly code assembler and disassembler
 
