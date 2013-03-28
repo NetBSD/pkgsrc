@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/03/24 16:58:28 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/03/28 21:20:15 joerg Exp $
 
 SHA1 (xsd-3.2.0+dep.tar.bz2) = d57fd3b326dcfab3af8fdc40fc3cf27fb9d7c7c5
 RMD160 (xsd-3.2.0+dep.tar.bz2) = da02eb15e607ee9b434f2a729c6f8a3da0981348
@@ -14,6 +14,8 @@ SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_anonymous.cxx) =
 SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_schema-per-type.cxx) = 0ed23703a8f11984dc51e2bbdcc744b32a5be369
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_elements.cxx) = 8006dc3a16d945a9c256e0fd2a4c412ad63e8919
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_elements.cxx) = 06702b980f04c5718b7c0aefb8d629466501f0d2
-SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx) = b6263becce71dd133a6db5c0c23467c441c8da1e
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx) = e56dce412f315f1b88f426480dc794a7f69e569a
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_tree_elements.cxx) = df8759581d58e9b230dc4569d0bce3d23d5ab8ec
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_tree_generator.cxx) = 79c5927337f1a35e1d6ac53fbba429f1fc0350de
 SHA1 (patch-xsd-3.2.0-2_xsd_xsd.cxx) = e89a36f5616416ad31fa47b1bba2018cb3fbaec9
 SHA1 (patch-xsd-3.2.0-2_xsd_xsd.hxx) = 9e64ecb2e5560bb21b7dcf324c1831a59b26f07d
