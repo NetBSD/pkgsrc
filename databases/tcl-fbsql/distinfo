@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/08/19 07:01:09 marino Exp $
+$NetBSD: distinfo,v 1.7 2013/03/28 21:16:41 joerg Exp $
 
 SHA1 (tcl-fbsql-1.06/fbsql.c) = c67315d94c80b808246b0a4075b1bcc0b3663a4f
 RMD160 (tcl-fbsql-1.06/fbsql.c) = 63519af1fa293f5f75d6150efceff70ba6effde9
 Size (tcl-fbsql-1.06/fbsql.c) = 22965 bytes
-SHA1 (patch-Makefile) = 689988f2a07bea3ad9bf8c59fdf56673d84e1fc8
