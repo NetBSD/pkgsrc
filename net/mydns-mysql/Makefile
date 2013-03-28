@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/03/02 20:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/03/28 21:35:48 joerg Exp $
 
 PKGNAME=		${DISTNAME:S/-/-mysql-/}
 PKGREVISION=		8
@@ -11,8 +11,8 @@ PATCHDIR=		${.CURDIR}/../../net/mydns-pgsql/patches
 FILESDIR=		${.CURDIR}/../../net/mydns-pgsql/files
 
 CONFIGURE_ARGS+=	--without-pgsql
-CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-CONFIGURE_ARGS+=	--with-mysql-include=${BUILDLINK_PREFIX.mysql-client}/include/mysql
+CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/${BUILDLINK_LIBDIRS.mysql-client}
+CONFIGURE_ARGS+=	--with-mysql-include=${BUILDLINK_PREFIX.mysql-client}/${BUILDLINK_INCDIRS.mysql-client}
 
 INFO_FILES=		# PLIST
 
