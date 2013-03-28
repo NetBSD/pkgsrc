@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1059 2013/03/27 00:35:10 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1060 2013/03/28 17:25:07 taca Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1525,3 +1525,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind99 to 9.9.2pl2 [taca 2013-03-26]
 	Updated net/bind98 to 9.8.4pl2 [taca 2013-03-26]
 	Updated net/bind97 to 9.7.7nb5 [taca 2013-03-27]
+	Updated mail/roundcube to 0.8.6 [taca 2013-03-28]
