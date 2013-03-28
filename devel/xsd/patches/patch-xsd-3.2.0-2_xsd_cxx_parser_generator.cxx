@@ -1,6 +1,6 @@
-$NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx,v 1.1 2013/03/24 16:58:29 joerg Exp $
+$NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx,v 1.2 2013/03/28 21:20:15 joerg Exp $
 
---- xsd-3.2.0-2/xsd/cxx/parser/generator.cxx.orig	2013-03-23 20:02:16.000000000 +0000
+--- xsd-3.2.0-2/xsd/cxx/parser/generator.cxx.orig	2008-07-28 12:00:51.000000000 +0000
 +++ xsd-3.2.0-2/xsd/cxx/parser/generator.cxx
 @@ -539,7 +539,7 @@ namespace CXX
      {
@@ -20,75 +20,33 @@ $NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx,v 1.1 2013/03/24 16:58:2
              generate_xml_schema = false;
          }
        }
-@@ -692,12 +692,12 @@ namespace CXX
-         String char_type (ops.value<CLI::char_type> ());
-         String string_type;
+@@ -689,8 +689,8 @@ namespace CXX
  
--        if (char_type == L"char")
--          string_type = L"::std::string";
--        else if (char_type == L"wchar_t")
--          string_type = L"::std::wstring";
-+        if (char_type == "char")
-+          string_type = "::std::string";
-+        else if (char_type == "wchar_t")
-+          string_type = "::std::wstring";
+         // String-based types.
+         //
+-        String char_type (ops.value<CLI::char_type> ());
+-        String string_type;
++        WideString char_type (ops.value<CLI::char_type> ());
++        WideString string_type;
+ 
+         if (char_type == L"char")
+           string_type = L"::std::string";
+@@ -699,13 +699,13 @@ namespace CXX
          else
--          string_type = L"::std::basic_string< " + char_type + L" >";
-+          string_type = "::std::basic_string< " + char_type + " >";
+           string_type = L"::std::basic_string< " + char_type + L" >";
  
-         String xns;
+-        String xns;
++        WideString xns;
          {
-@@ -705,7 +705,7 @@ namespace CXX
+           Context ctx (std::wcerr, schema, ops, 0, 0, 0);
            xns = ctx.xs_ns_name ();
          }
  
 -        String buffer (L"::std::auto_ptr< " + xns + L"::buffer >");
-+        String buffer ("::std::auto_ptr< " + xns + "::buffer >");
++        WideString buffer (L"::std::auto_ptr< " + xns + L"::buffer >");
          TypeMap::Namespace xsd ("http://www\\.w3\\.org/2001/XMLSchema");
  
          xsd.types_push_back ("string", string_type);
-@@ -713,29 +713,29 @@ namespace CXX
-         xsd.types_push_back ("token", string_type);
-         xsd.types_push_back ("Name", string_type);
-         xsd.types_push_back ("NMTOKEN", string_type);
--        xsd.types_push_back ("NMTOKENS", xns + L"::string_sequence");
-+        xsd.types_push_back ("NMTOKENS", xns + "::string_sequence");
-         xsd.types_push_back ("NCName", string_type);
- 
-         xsd.types_push_back ("ID", string_type);
-         xsd.types_push_back ("IDREF", string_type);
--        xsd.types_push_back ("IDREFS", xns + L"::string_sequence");
-+        xsd.types_push_back ("IDREFS", xns + "::string_sequence");
- 
-         xsd.types_push_back ("language", string_type);
-         xsd.types_push_back ("anyURI", string_type);
--        xsd.types_push_back ("QName", xns + L"::qname");
-+        xsd.types_push_back ("QName", xns + "::qname");
- 
-         xsd.types_push_back ("base64Binary", buffer, buffer);
-         xsd.types_push_back ("hexBinary", buffer, buffer);
- 
--        xsd.types_push_back ("gDay", xns + L"::gday");
--        xsd.types_push_back ("gMonth", xns + L"::gmonth");
--        xsd.types_push_back ("gYear", xns + L"::gyear");
--        xsd.types_push_back ("gMonthDay", xns + L"::gmonth_day");
--        xsd.types_push_back ("gYearMonth", xns + L"::gyear_month");
--        xsd.types_push_back ("date", xns + L"::date");
--        xsd.types_push_back ("time", xns + L"::time");
--        xsd.types_push_back ("dateTime", xns + L"::date_time");
--        xsd.types_push_back ("duration", xns + L"::duration");
-+        xsd.types_push_back ("gDay", xns + "::gday");
-+        xsd.types_push_back ("gMonth", xns + "::gmonth");
-+        xsd.types_push_back ("gYear", xns + "::gyear");
-+        xsd.types_push_back ("gMonthDay", xns + "::gmonth_day");
-+        xsd.types_push_back ("gYearMonth", xns + "::gyear_month");
-+        xsd.types_push_back ("date", xns + "::date");
-+        xsd.types_push_back ("time", xns + "::time");
-+        xsd.types_push_back ("dateTime", xns + "::date_time");
-+        xsd.types_push_back ("duration", xns + "::duration");
- 
-         // Fundamental C++ types.
-         //
 @@ -800,7 +800,7 @@ namespace CXX
  
        // Generate code.
@@ -195,3 +153,21 @@ $NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx,v 1.1 2013/03/24 16:58:2
  
        if (guard_prefix)
          guard_prefix += '_';
+@@ -1148,7 +1148,7 @@ namespace CXX
+ 
+         Indentation::Clip<Indentation::SLOC, WideChar> hxx_sloc (hxx);
+ 
+-        String guard (guard_expr.merge (guard_prefix + hxx_name));
++        WideString guard (guard_expr.merge (guard_prefix + hxx_name));
+         guard = ctx.escape (guard); // Make it a C++ id.
+         std::transform (guard.begin (), guard.end(), guard.begin (), upcase);
+ 
+@@ -1354,7 +1354,7 @@ namespace CXX
+         Context ctx (hxx_impl, schema, ops,
+                      &hxx_expr, &ixx_expr, &hxx_impl_expr);
+ 
+-        String guard (guard_expr.merge (guard_prefix + hxx_impl_name));
++        WideString guard (guard_expr.merge (guard_prefix + hxx_impl_name));
+         guard = ctx.escape (guard); // Make it a C++ id.
+         std::transform (guard.begin (), guard.end(), guard.begin (), upcase);
+ 
