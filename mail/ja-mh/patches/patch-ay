@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.2 2010/09/27 12:01:49 taca Exp $
+$NetBSD: patch-ay,v 1.3 2013/03/28 21:31:25 joerg Exp $
 
 * Don't declare errno.
 
---- uip/mhn.c.orig	2006-04-11 14:27:13.000000000 +0000
+--- uip/mhn.c.orig	2001-08-30 02:57:33.000000000 +0000
 +++ uip/mhn.c
 @@ -219,7 +219,6 @@ static	char   *errs = NULL;
  static	char   *tmp;
@@ -12,3 +12,83 @@ $NetBSD: patch-ay,v 1.2 2010/09/27 12:01:49 taca Exp $
  #if !defined(BSD44) && !defined(__GNU_LIBRARY__)
  extern	int	sys_nerr;
  extern	char   *sys_errlist[];
+@@ -342,7 +341,7 @@ typedef struct Content {
+ 
+ static CT	get_content ();
+ static int	list_content (), show_content (), store_content ();
+-static int	cache_content ();
++static void cache_content (CT ct);
+ static int	user_content (), compose_content (), output_content ();
+ static void	free_content (), flush_errors (), set_id ();
+ 
+@@ -3190,8 +3189,7 @@ static struct k2v	Charset[] = {
+     NULL,	    CHARSET_UNKNOWN		/* this one must be last! */
+ };
+ 
+-static int  free_text (ct)
+-register CT	ct;
++static void free_text (CT ct)
+ {
+     register struct text *t = (struct text *) ct -> c_ctparams;
+ 
+@@ -3678,8 +3676,7 @@ char   *unused;
+ }
+ 
+ 
+-static int  free_multi (ct)
+-register CT	ct;
++static void free_multi (CT ct)
+ {
+     register struct multipart *m = (struct multipart *) ct -> c_ctparams;
+     register struct part   *part,
+@@ -4095,8 +4092,7 @@ losing: ;
+ }
+ 
+ 
+-static int  free_partial (ct)
+-register CT	ct;
++static void free_partial (CT ct)
+ {
+     register struct partial *p = (struct partial *) ct -> c_ctparams;
+ 
+@@ -4301,8 +4297,7 @@ register CT	ct;
+ }
+ 
+ 
+-static int  free_external (ct)
+-register CT	ct;
++static void free_external (CT ct)
+ {
+     register struct exbody *e = (struct exbody *) ct -> c_ctparams;
+ 
+@@ -4699,8 +4694,7 @@ register CT	ct;
+ }
+ 
+ 
+-static int  close_encoding (ct)
+-register CT	ct;
++static void close_encoding (CT ct)
+ {
+     register struct cefile *ce = (struct cefile *) ct -> c_ceparams;
+ 
+@@ -4750,9 +4744,7 @@ estimate: ;
+ }
+ 
+ 
+-static int  free_encoding (ct, toplevel)
+-register CT	ct;
+-int	toplevel;
++static void free_encoding (CT ct, int toplevel)
+ {
+     register struct cefile *ce = (struct cefile *) ct -> c_ceparams;
+ 
+@@ -6152,8 +6144,7 @@ char   *mapfile,
+ 
+ /*  */
+ 
+-static int  cache_content (ct)
+-register CT    ct;
++static void cache_content (CT ct)
+ {
+     int	    cachetype;
+     char   *file,
