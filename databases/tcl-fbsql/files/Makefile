@@ -1,11 +1,6 @@
-MYSQLLIBDIR = ${PREFIX}/lib/mysql
-MYSQLINCDIR = ${PREFIX}/include/mysql
+CFLAGS += -Wall -I${PREFIX}/include/tcl -I$(MYSQLINCDIR)
 
-PIC = -fPIC
-INCLUDES = -I${PREFIX}/include/tcl -I$(MYSQLINCDIR)
-CFLAGS += -Wall $(PIC) $(INCLUDES)
-
-LDFLAGS =  -lz $(MYSQLLIBDIR)/libmysqlclient.la -L$(PREFIX)/lib -ltcl
+LDFLAGS = -Wl,-rpath,$(MYSQLLIBDIR) -L$(MYSQLLIBDIR) -lmysqlclient -L$(PREFIX)/lib -Wl,-rpath,$(PREFIX)/lib -ltcl -lz
 
 all:	fbsql.la
 
