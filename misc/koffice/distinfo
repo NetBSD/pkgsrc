@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2013/03/26 23:27:09 joerg Exp $
+$NetBSD: distinfo,v 1.54 2013/03/28 21:43:09 joerg Exp $
 
 SHA1 (koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff) = a3d1d85567ccf729a2237f4aa837f7e025ce00ae
 RMD160 (koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff) = ab6ec62b1ee7c369e8a6f44ba285a56b8c5439b4
@@ -20,8 +20,9 @@ SHA1 (patch-ak) = 5738bb6b043f8657c473c4d14e2c74d97d4974f8
 SHA1 (patch-al) = 806334757d3ebca4515738e87454a30d9dd26e53
 SHA1 (patch-am) = 022be8c44e0eaa3cab3404da48a4259f1dc3499c
 SHA1 (patch-ao) = 7d976c4f3094635f984fc70964589a863e914be7
-SHA1 (patch-filters_krita_png_kis__png__converter.h) = f19ed6af46344b3516580ca91974d0d8382e5201
 SHA1 (patch-filters_kword_msword_graphicshandler.cpp) = a49e22d237c3b968b066ba56fa98fe34e67893dd
+SHA1 (patch-filters_kword_mswrite_mswriteimport.h) = b2ca756c351aad2ce4b41c3badebb87c896e3a6f
+SHA1 (patch-filters_krita_png_kis__png__converter.h) = f19ed6af46344b3516580ca91974d0d8382e5201
 SHA1 (patch-kexi_plugins_forms_widgets_kexidblabel_cpp) = 39bf8dcc00a024461cc54b4991f1dfb8a7bdc41b
 SHA1 (patch-kexi_plugins_forms_widgets_kexiframe_cpp) = 8a19ef7efc3a15d0e54ae84c0df822a8c12caba6
 SHA1 (patch-kexi_plugins_importexport_csv_kexicsvexport_cpp) = d8e82dd72e29fcd50f0670d70cbf48550fa5d2be

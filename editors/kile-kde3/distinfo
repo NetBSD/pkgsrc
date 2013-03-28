@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 22:55:07 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/03/28 21:43:05 joerg Exp $
 
 SHA1 (kile-2.0.2.tar.bz2) = 6666470d41beff4a26b3e85a161da276ebc30d76
 RMD160 (kile-2.0.2.tar.bz2) = 736107cc5a676df91e2b9f8f158ca58ec4697237
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = b8705f330e7601e2af6ee7db2e8c3cc7aac9f175
 SHA1 (patch-ac) = 15f9ff76688923eadae8844cc31845bdfc75be8e
 SHA1 (patch-ad) = 33225c1a7284ba654d8ba23ae5029ce8f4a39181
 SHA1 (patch-ae) = 18f982fe814cc747f8a8c0633ed191fcc19d4bb7
+SHA1 (patch-src_kile_kileprojectview.h) = 283fe984714c1edd577bada134a211ea03a0ca3a
