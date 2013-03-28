@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:55 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/03/28 23:59:03 joerg Exp $
 #
 
 DISTNAME=	elf-0.5.3
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_BACKUP} \
 		http://www.kerneled.com/projects/elf/
 
-MAINTAINER=	virtus@wanadoo.nl
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kerneled.com/projects/elf/
 COMMENT=	ELF header analyzer
 
