@@ -1,8 +1,16 @@
-$NetBSD: patch-ai,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2013/03/28 21:40:11 joerg Exp $
 
---- winframe.c.orig	Sat Jan  8 00:38:12 2000
-+++ winframe.c	Sat Jan  8 00:38:49 2000
-@@ -84,6 +84,7 @@
+--- winframe.c.orig	2000-03-02 21:41:53.000000000 +0000
++++ winframe.c
+@@ -51,6 +51,7 @@ extern Atom AtomRightIMStatus;
+ extern int Resize_height, Resize_width;
+ 
+ extern Time TimeFresh();
++void PaintVirtualWindow(WinGenericFrame *win);
+ 
+ /***************************************************************************
+ * private data
+@@ -84,6 +85,7 @@ void FrameUpdateShape();
  static void setIMStatusText();
  #endif
  static void updateResizePositions();
@@ -10,3 +18,18 @@ $NetBSD: patch-ai,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
  
  /***************************************************************************
  * sizing and decoration positioning functions
+@@ -484,12 +486,8 @@ WinPaneFrame *frameInfo;
+  * the focus.  Also, unset the warp-back flag if the pointer has gone outside 
+  * the frame.
+  */
+-static int
+-/* ARGSUSED */
+-eventLeaveNotify(dpy, event, frameInfo)
+-Display	*dpy;
+-XEvent	*event;
+-WinPaneFrame *frameInfo;
++static void
++eventLeaveNotify(Display *dpy, XEvent *event, WinPaneFrame *frameInfo)
+ {
+     /* ignore events caused by grabs */
+     if (event->xcrossing.mode != NotifyNormal)
