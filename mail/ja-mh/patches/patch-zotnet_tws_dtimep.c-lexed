@@ -1,0 +1,14 @@
+$NetBSD: patch-zotnet_tws_dtimep.c-lexed,v 1.1 2013/03/28 21:31:27 joerg Exp $
+
+--- zotnet/tws/dtimep.c-lexed.orig	2013-03-28 18:10:08.000000000 +0000
++++ zotnet/tws/dtimep.c-lexed
+@@ -115,8 +115,7 @@ static	int day_map[] = {
+ #endif	/* BSD42 */
+ #endif
+ 
+-static	zonehack (tw)
+-register struct tws *tw;
++static void zonehack (struct tws *tw)
+ {
+     register struct tm *tm;
+ 
