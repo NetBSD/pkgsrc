@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.10 2012/04/19 13:07:45 hans Exp $
+$NetBSD: distinfo,v 1.11 2013/03/28 21:34:51 joerg Exp $
 
 SHA1 (ekiga-3.2.6.tar.bz2) = 1c9d2004aa57643a951c1d454e9cfb207143c021
 RMD160 (ekiga-3.2.6.tar.bz2) = f53fe740856e4a4c5b6141086ba25288aabe51ac
 Size (ekiga-3.2.6.tar.bz2) = 8257285 bytes
 SHA1 (patch-configure) = 2aa9145b6b790dcc4dbb63de47ebf663d059c26e
 SHA1 (patch-configure.ac) = a27f2712f9b3f2fa9020d85de87cae78d30ad9bb
+SHA1 (patch-lib_engine_account_bank-impl.h) = 2cc4906ce966e5a8840ec5284433c3a9396c5911
+SHA1 (patch-lib_engine_addressbook_book-impl.h) = 2259de4d6b4450180a0a2a60866eaf3f3e04f3eb
+SHA1 (patch-lib_engine_addressbook_source-impl.h) = ca0d25740c4b37768e15179e4980d4559cf392a8
+SHA1 (patch-lib_engine_presence_cluster-impl.h) = bbdb345cbcb5eae14737021960434343b87bf5fe
+SHA1 (patch-lib_engine_presence_heap-impl.h) = 7a28aa97722d3d81653a2eb98b9d92acc80a6f79
 SHA1 (patch-src_Makefile.am) = 54a6fd59b640c118b928af19fe3aa9943550a3dc
 SHA1 (patch-src_Makefile.in) = dab0e316da9ba7eb2286d104018d59dc85c1ed5b
