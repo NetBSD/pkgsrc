@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2013/03/25 02:55:59 sbd Exp $
+$NetBSD: distinfo,v 1.99 2013/03/28 14:11:34 ryoon Exp $
 
 SHA1 (firefox-19.0.2.source.tar.bz2) = d108d356225379a86d69a4906c706289135f6342
 RMD160 (firefox-19.0.2.source.tar.bz2) = 37518c9d64f4b441d9601debd0aa440b5af66d20
@@ -64,5 +64,5 @@ SHA1 (patch-xl) = e7dbe631e8d1fcee48054c0cb8ff01169cfcb744
 SHA1 (patch-xm) = 81e02e410c00175cbb98c646dda90c7adf199657
 SHA1 (patch-xn) = c042e39d93706934ec03c78be3dc6e224ac62c0e
 SHA1 (patch-xo) = aae6107dcfaf731bd3e9962d953fb8701fc5f163
-SHA1 (patch-xpcom_Makefile.in) = 08e50b00af1a6d1ab6ac02e5f273896a355a4372
+SHA1 (patch-xpcom_Makefile.in) = e5f77ed56ed4ad26a08a67085e3dfec0e7af3fa6
 SHA1 (patch-xpcom_ds_TimeStamp.h) = a1fb060f91720eb330f102b28d9373bbdbe96e30
