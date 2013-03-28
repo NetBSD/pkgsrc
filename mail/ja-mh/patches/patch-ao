@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.4 2010/09/27 12:01:49 taca Exp $
+$NetBSD: patch-ao,v 1.5 2013/03/28 21:31:25 joerg Exp $
 
 * Don't declare errno but include <errno.h>.
 
---- zotnet/mts/lock.c.orig	2006-04-11 13:49:57.000000000 +0000
+--- zotnet/mts/lock.c.orig	2001-04-03 07:22:46.000000000 +0000
 +++ zotnet/mts/lock.c
 @@ -77,10 +77,7 @@ static char ident[] = "@(#)$Id: lock.c,v
  #define	FLOCK		/* LOCKF will override this, if defined */
@@ -15,3 +15,34 @@ $NetBSD: patch-ao,v 1.4 2010/09/27 12:01:49 taca Exp $
  
  #ifdef	LOCKONLY
  #ifndef	MMDFONLY
+@@ -103,7 +100,13 @@ char *lockname_from_fd();
+ #endif /* MAILLOCK */
+ 
+ static int	b_lkopen(), lockit(), f_lkopen();
+-static		lockname(), timerON(), timerOFF();
++static		lockname(), timerOFF();
++
++#ifdef LIBLOCKFILE
++static void timerON (char  *lock, int fd, int ltype);
++#else
++static void timerON (char *lock, int fd);
++#endif
+ 
+ time_t	time ();
+ char   *mktemp ();
+@@ -620,13 +623,10 @@ int	sig;
+ /*  */
+ 
+ #ifdef LIBLOCKFILE
+-static timerON (lock, fd, ltype)
+-int 	ltype;
++static void timerON (char  *lock, int fd, int ltype)
+ #else
+-static timerON (lock, fd)
++static void timerON (char *lock, int fd)
+ #endif
+-char   *lock;
+-int	fd;
+ {
+     register struct lock   *lp;
+ 

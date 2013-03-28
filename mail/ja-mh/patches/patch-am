@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.4 2010/09/27 12:01:49 taca Exp $
+$NetBSD: patch-am,v 1.5 2013/03/28 21:31:25 joerg Exp $
 
 * Don't declare errno but include <errno.h>.
 
@@ -15,3 +15,13 @@ $NetBSD: patch-am,v 1.4 2010/09/27 12:01:49 taca Exp $
  
  static char   *tailor_value ();
  
+@@ -256,8 +253,7 @@ static  struct bind {
+ 
+ /* ARGSUSED */
+ 
+-mts_init (name)
+-char    *name;
++void mts_init (char *name)
+ {
+     register char  *bp,
+                    *cp;

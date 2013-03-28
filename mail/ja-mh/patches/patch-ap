@@ -1,10 +1,21 @@
-$NetBSD: patch-ap,v 1.4 2010/09/27 12:01:49 taca Exp $
+$NetBSD: patch-ap,v 1.5 2013/03/28 21:31:25 joerg Exp $
 
 * Add Dragonfly support.
 
---- uip/folder.c.orig	2006-04-11 14:21:12.000000000 +0000
+--- uip/folder.c.orig	2001-04-02 10:35:24.000000000 +0000
 +++ uip/folder.c
-@@ -74,8 +74,6 @@ static struct swit switches[] = {
+@@ -11,7 +11,9 @@ static char ident[] = "@(#)$Id: folder.c
+ #include	<locale.h>
+ #endif
+ 
+-static		dodir(), addir(), addfold(), dother();
++static void addfold (char *fold);
++static void addir (char *name);
++static		dodir(), dother();
+ static int	pfold(), sfold(), compare();
+ /*  */
+ 
+@@ -74,8 +76,6 @@ static struct swit switches[] = {
  
  /*  */
  
@@ -13,7 +24,17 @@ $NetBSD: patch-ap,v 1.4 2010/09/27 12:01:49 taca Exp $
  static int  fshort = 0;
  static int  fcreat = 0;
  static int  fpack = 0;
-@@ -572,7 +570,7 @@ register char   *name;
+@@ -542,8 +542,7 @@ register struct msgs   *mp;
+ 
+ /*  */
+ 
+-static	addir (name)
+-register char   *name;
++static void addir (char *name)
+ {
+     register char  *base,
+                    *cp;
+@@ -572,7 +571,7 @@ register char   *name;
      }
      while (dp = readdir (dd))
  	if (strcmp (dp -> d_name, ".") && strcmp (dp -> d_name, "..")) {
@@ -22,3 +43,13 @@ $NetBSD: patch-ap,v 1.4 2010/09/27 12:01:49 taca Exp $
  	    if (cp + dp -> d_reclen + 2 >= name + BUFSIZ)
  #else /* SYS5DIR && !hpux && !__CYGWIN32__ */
  	    if (cp + strlen (dp -> d_name) + 2 >= name + BUFSIZ)
+@@ -589,8 +588,7 @@ register char   *name;
+ 
+ /*  */
+ 
+-static	addfold (fold)
+-register char   *fold;
++static void addfold (char *fold)
+ {
+     register int    i,
+                     j;
