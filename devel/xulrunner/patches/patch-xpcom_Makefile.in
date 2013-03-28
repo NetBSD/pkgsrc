@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_Makefile.in,v 1.4 2013/01/10 15:01:32 ryoon Exp $
+$NetBSD: patch-xpcom_Makefile.in,v 1.5 2013/03/28 14:10:45 ryoon Exp $
 
 --- xpcom/Makefile.in.orig	2013-01-04 23:44:47.000000000 +0000
 +++ xpcom/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-xpcom_Makefile.in,v 1.4 2013/01/10 15:01:32 ryoon Exp $
  endif
  
 +ifeq ($(OS_ARCH),NetBSD)
-+EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/xulrunner-sdk/sdk/lib
++EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/xulrunner/sdk/lib
 +endif
 +
  ifdef ENABLE_TESTS
