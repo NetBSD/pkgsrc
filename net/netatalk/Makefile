@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2013/02/16 11:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2013/03/28 21:36:21 joerg Exp $
 
 DISTNAME=	netatalk-2.2.1
 PKGREVISION=	11
@@ -69,7 +69,7 @@ PLIST.rcd=		yes
 .endif
 
 PLIST_VARS+=		ea
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
 PLIST.ea=		yes
 .endif
 
