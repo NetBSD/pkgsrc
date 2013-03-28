@@ -1,8 +1,17 @@
-$NetBSD: distinfo,v 1.8 2009/12/10 21:19:16 asau Exp $
+$NetBSD: distinfo,v 1.9 2013/03/28 21:37:23 joerg Exp $
 
 SHA1 (DQS-3.3.2.tgz) = fbb165cc058dcbda8bcfa6dbead78e2f1a4f031e
 RMD160 (DQS-3.3.2.tgz) = eb32ef1cd8243b508fbee91710982637de185b7a
 Size (DQS-3.3.2.tgz) = 1498996 bytes
+SHA1 (patch-SRC_dqs__parse.c) = d25940416e918238a034ac7a663d1ce1fed743fb
+SHA1 (patch-SRC_dqs__parse__qconf.c) = 7446f326d433a70c81ee9521e9f69cbb89451f78
+SHA1 (patch-SRC_dqs__select__queue.c) = 5a2d7a943bf3d1aa111ce8363380209a640982b9
+SHA1 (patch-SRC_dqs__setenv.c) = 2e0fe74fdafd2eafa0097d9d72752226659a930f
+SHA1 (patch-SRC_dqs__show.c) = 11c559b3a3272a0b9a76d335e53985b8e61a31df
+SHA1 (patch-SRC_dqs__sig__handlers.c) = 335c45fb5cb213ccb141cfee17c6c13fc1778f26
+SHA1 (patch-SRC_dqs__utility.c) = 169d92683573739c99215635b9724a1b9763fe71
+SHA1 (patch-SRC_func.h) = 1e23b0a3a200487ac3adbc75952494e8e0ec31b7
+SHA1 (patch-SRC_qstat.c) = c8c4d5a3383521bb0427ce7ebcbb517bcd37a99d
 SHA1 (patch-aa) = f5c4ec9c4be1b55edd82dabfe75445bcf76e62b2
 SHA1 (patch-ab) = 8cb54cb86c7558da60ff6fb329ca71a671a0dded
 SHA1 (patch-ac) = c72be633789525f73bb0e1415ff7b300b7576e7e
