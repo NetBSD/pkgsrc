@@ -1,17 +1,21 @@
-$NetBSD: patch-al,v 1.3 2003/02/27 21:43:36 fredb Exp $
+$NetBSD: patch-al,v 1.4 2013/03/28 21:17:57 joerg Exp $
 
---- utmp.c.orig	2001-12-17 16:43:25.000000000 -0600
+--- utmp.c.orig	2001-12-17 22:43:25.000000000 +0000
 +++ utmp.c
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,11 @@
  
  #include "mgetty.h"
  
 -#if defined(sunos4) || defined(BSD)
++#ifdef __NetBSD__
++#include <utmpx.h>
++#endif
++
 +#if defined(sunos4) || ( defined(BSD) && !defined(NETBSD_UTMPX) )
  
  #include <stdio.h>
  #include <string.h>
-@@ -20,10 +20,11 @@
+@@ -20,10 +24,11 @@
  #include <time.h>
  #include <string.h>
  #include <sys/types.h>
@@ -27,7 +31,7 @@ $NetBSD: patch-al,v 1.3 2003/02/27 21:43:36 fredb Exp $
  #endif
  
  #if defined(_3B1_) || defined(MEIBE) || defined(ISC)
-@@ -42,8 +43,14 @@
+@@ -42,8 +47,14 @@ typedef short pid_t;
  # endif
  #endif
  
@@ -43,7 +47,7 @@ $NetBSD: patch-al,v 1.3 2003/02/27 21:43:36 fredb Exp $
  /* on SunOS (and other BSD-derived systems), the getty process does *
   * not have to care for the utmp entries, login and init do all the work
   * Anyway, we have to _read_ it to get the number of users logged in.
-@@ -109,26 +116,74 @@
+@@ -109,26 +120,74 @@ void make_utmp_wtmp _P4( (line, ut_type,
  {
  struct utmp *utmp;
  pid_t	pid;
@@ -123,7 +127,7 @@ $NetBSD: patch-al,v 1.3 2003/02/27 21:43:36 fredb Exp $
  	    if (ut_host != NULL)
  	    {
  	    	strncpy( utmp->ut_host, ut_host, sizeof( utmp->ut_host ) - 1);
-@@ -138,7 +193,7 @@
+@@ -138,7 +197,7 @@ FILE *	fp;
  	    }
  #endif		/* SVR4 */
  
@@ -132,7 +136,7 @@ $NetBSD: patch-al,v 1.3 2003/02/27 21:43:36 fredb Exp $
  	    if ( pututline(utmp) == NULL )
  	    {
  		lprintf( L_ERROR, "cannot create utmp entry" );
-@@ -151,7 +206,7 @@
+@@ -151,7 +210,7 @@ FILE *	fp;
  	    /* write same record to end of wtmp
  	     * if wtmp file exists
  	     */
