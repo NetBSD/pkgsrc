@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/02/26 11:12:53 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/03/28 21:43:07 joerg Exp $
 
 SHA1 (kipi-plugins-0.1.7.tar.bz2) = 520b6b9d36a8c5b8893c3a6b5a1a14f6b9cbd216
 RMD160 (kipi-plugins-0.1.7.tar.bz2) = f66473c11e66f9e06aa6772c7952b640b565def9
@@ -8,7 +8,11 @@ SHA1 (patch-ab) = 777834238d49c0b02c7e1d5c63dbdf0d27f13e24
 SHA1 (patch-ac) = 0022166061696e3db820c97be64e2780a63e8b4c
 SHA1 (patch-ad) = b33efd502e1bd305242debe0e9837903ab34021f
 SHA1 (patch-ae) = 6e12d87f6169d3ba1687eaa202c2edb1ac5ec7a4
+SHA1 (patch-kipi-plugins_batchprocessimages_plugin__batchprocessimages.h) = 699e11538538ae06232ecdd495cce0ce59240dd1
 SHA1 (patch-kipi-plugins_flickrexport_imageslist.cpp) = 43b3a56f1b686253e94eab921670447822c1695b
 SHA1 (patch-kipi-plugins_imageviewer_viewerwidget.cpp) = 173a70306d89fec21e27bb3cf6a14198b4eeffca
+SHA1 (patch-kipi-plugins_mpegencoder_kimg2mpg.h) = 8a594ee6610e2cb3726dd4179505c0450c1443ef
 SHA1 (patch-kipi-plugins_printwizard_cropframe.cpp) = 308813ad515ef0f9e9d7f863c456dd968ca78d39
 SHA1 (patch-kipi-plugins_rawconverter_rawdecodingiface.cpp) = 2105ef9bee4f4c64f1205ff40431fec2ef1517a5
+SHA1 (patch-kipi-plugins_sendimages_listimageserrordialog.h) = 0763f257034d7aa7f59129743b5a1b98cefae529
+SHA1 (patch-kipi-plugins_sendimages_plugin__sendimages.h) = 1340bc3e8d9c6972ae622bcb9592b5d3aaecec74

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.5 2011/01/29 22:00:59 markd Exp $
+$NetBSD: distinfo,v 1.6 2013/03/28 21:43:08 joerg Exp $
 
 SHA1 (showimg-0.9.5.tar.bz2) = 59d3a1f1a22761e0576d98e6cc6f430cc3822643
 RMD160 (showimg-0.9.5.tar.bz2) = 150dc74f400b72a22f6a117aa3acd8201a059a39
 Size (showimg-0.9.5.tar.bz2) = 4117897 bytes
 SHA1 (patch-aa) = 90d10f0989e66c29e8a9bae4ee51527818bc0cb1
 SHA1 (patch-ab) = 0d90531ac8edc44cff1d6533548f5d564e2e373f
+SHA1 (patch-showimg_showimg_listitemview.h) = 50b54d099ce66fc25ef76311df30d5e97fe8a7cf
+SHA1 (patch-showimg_showimg_mainwindow.h) = a8f2e37f1e3d6c2455f5417a0ab4b70bac669c2f

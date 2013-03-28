@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/01/17 16:03:01 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/03/28 21:43:11 joerg Exp $
 
 SHA1 (k3b-1.0.5.tar.bz2) = c45d6f2a36b1bc7ea14101d444149c40fd4b700e
 RMD160 (k3b-1.0.5.tar.bz2) = b562746015cc2e4226652402725b4e69eb846822
@@ -7,4 +7,15 @@ SHA1 (patch-ab) = 4f382751e9a7ade09aad6f8d594e76f9e5bfa5d5
 SHA1 (patch-ac) = 38902921193ff0219c1769ffa3b793de6f3f4c0c
 SHA1 (patch-ad) = 895ec31a9a05f0168daba78bcb3ff8969f98637b
 SHA1 (patch-ae) = d5fb26c88710b9cdf14e19aa530f60e429b47941
+SHA1 (patch-libk3b_jobs_k3bblankingjob.h) = 72eccf567c0128663e99ce19a70513683b30df47
+SHA1 (patch-libk3b_projects_audiocd_k3baudiojob.h) = 79d6a522ac6f81645f2b48e576d331d5de94d081
+SHA1 (patch-libk3b_projects_datacd_k3bisoimager.h) = f71aae547bb2de3e5293ffc4235082eb5cbae51b
+SHA1 (patch-libk3b_projects_k3babstractwriter.h) = 84170eaceb60daf620a7a5d57dbc509882c7b06d
+SHA1 (patch-libk3b_projects_k3bcdrdaowriter.h) = 041381c22145e5a2e74cb90643fbc6f2489eb354
+SHA1 (patch-libk3b_projects_k3bcdrecordwriter.h) = 3425d02750306ef7f12ee87a5f5f135107e12653
+SHA1 (patch-libk3b_projects_k3bdvdrecordwriter.h) = a91530f2d747a1d9894d6da447c5288f01f8e368
+SHA1 (patch-libk3b_projects_mixedcd_k3bmixedjob.h) = 4b16bc79512f353f9098aa3d61aaa9b9361f46f2
+SHA1 (patch-libk3b_projects_movixcd_k3bmovixjob.h) = 86b21043b5f82b38a1b5720d8b404652b1b220dc
+SHA1 (patch-libk3b_projects_movixdvd_k3bmovixdvdjob.h) = 992799fba5298d82e51e47c433b81f1258ade0db
+SHA1 (patch-libk3b_projects_videocd_k3bvcdjob.h) = 231e05aa5e6d6996ee2f76f2ab159e921854d483
 SHA1 (patch-src_projects_k3baudioeditorwidget.cpp) = 4f4ca910596b75b656bd844290cd899659feb3cb
