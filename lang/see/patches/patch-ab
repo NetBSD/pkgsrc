@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2013/01/26 23:15:44 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2013/03/28 21:30:49 joerg Exp $
 
 First chunk: automake-1.13 compat.
 Rest: ?
@@ -14,6 +14,20 @@ Rest: ?
  AC_CONFIG_FILES([Makefile
  		 include/Makefile
  		 include/see/Makefile
+@@ -29,11 +29,11 @@ dnl
+ AC_PROG_CC
+ AC_PROG_SED
+ 
+-AC_LIBLTDL_CONVENIENCE([libltdl])
+ AC_LIBTOOL_DLOPEN
+ AC_PROG_LIBTOOL
+ dnl AC_LIB_LTDL
+-AC_CONFIG_SUBDIRS([libltdl])
++LIBLTDL=-lltdl
++LTDLINCL=
+ AC_SUBST([LIBLTDL])
+ AC_SUBST([LTDLINCL])
+ AC_SUBST([LIBSEE_LIBS])
 @@ -206,11 +206,12 @@ SEE_ARG_ENABLE(longjmperror,[yes],
          [Define if you want SEE to catch longjmp corruption])
  ])
