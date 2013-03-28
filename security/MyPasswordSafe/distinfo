@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/03/02 15:07:16 hans Exp $
+$NetBSD: distinfo,v 1.12 2013/03/28 21:43:10 joerg Exp $
 
 SHA1 (MyPasswordSafe-20061216.src.tgz) = 37bb3f7491b42c8aac5d71cc6546ced018a15119
 RMD160 (MyPasswordSafe-20061216.src.tgz) = b61f1525aed3160b88c1ef6c6922ff131ad2248c
@@ -12,3 +12,4 @@ SHA1 (patch-src-crypto-bfproxy.cpp) = cb84b4c5f474f057f0b702ff541d0587369a21e8
 SHA1 (patch-src-encryptedstring.cpp) = 715f7918fce45d3c4516acbcadd99e87f58a6492
 SHA1 (patch-src-pwsafe-Util.cpp) = 81b660bfbaa1472071c2ff6d859e5489b133596e
 SHA1 (patch-src-safeserializer.cpp) = e63997bc2ebb452056831bf5c147435a3edb2a14
+SHA1 (patch-src_xmlserializer.hpp) = 49c91a388b521c5efe5d511adee9a2bd0479ed2e
