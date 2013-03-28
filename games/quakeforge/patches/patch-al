@@ -1,29 +1,109 @@
-$NetBSD: patch-al,v 1.1 2008/01/23 04:59:36 tnn Exp $
+$NetBSD: patch-al,v 1.2 2013/03/28 21:25:52 joerg Exp $
 
 --- libs/gib/gib_classes.c.orig	2003-11-29 02:01:31.000000000 +0000
 +++ libs/gib/gib_classes.c
-@@ -192,7 +192,7 @@ Object_Class_Children_f (gib_object_t *o
+@@ -184,26 +184,32 @@ Object_Class_New_f (gib_object_t *obj, g
+ 	return 0;
+ }
+ 
++struct child_data {
++	const char **reply;
++	unsigned i;
++};
++
++static qboolean
++iterator (void *data_, gib_class_t *class, void *unused)
++{
++	struct child_data *data = data_;
++	data->reply[data->i++] = class->name;
++	return false;
++}
++
+ static int
+ Object_Class_Children_f (gib_object_t *obj, gib_method_t *method, void *data,
+ 		gib_object_t *sender, gib_message_t mesg)
+ {
+-	const char **reply;
++	struct child_data cb_data;
  	unsigned int size;
- 	unsigned int i = 0;
- 	
+-	unsigned int i = 0;
+-	
 -	static qboolean
-+	qboolean
- 	iterator (gib_class_t *class, void *unused)
- 	{
- 		reply[i++] = class->name;
-@@ -610,13 +610,13 @@ GIB_Classes_Build_Scripted (const char *
+-	iterator (gib_class_t *class, void *unused)
+-	{
+-		reply[i++] = class->name;
+-		return false;
+-	}
+-	
++
+ 	size = llist_size (obj->class->children);
+ 	if (size) {
+-		reply = malloc (sizeof (char *) * size);
+-		llist_iterate (obj->class->children, LLIST_ICAST (iterator));
+-		GIB_Reply (obj, mesg, size, reply);
++		cb_data.reply = malloc (sizeof (char *) * size);
++		cb_data.i = 0;
++		llist_iterate (obj->class->children, iterator, &cb_data);
++		GIB_Reply (obj, mesg, size, cb_data.reply);
+ 	} else
+ 		GIB_Reply (obj, mesg, 0, NULL);
+ 	return 0;
+@@ -600,6 +606,12 @@ Scrobj_Method_f (gib_object_t *obj, gib_
+ 	return 0;
+ }
+ 
++static void
++mtabfree (void *mtab, void *unused)
++{
++	free (mtab);
++}
++
+ void
+ GIB_Classes_Build_Scripted (const char *name, const char *parentname,
+ 		gib_tree_t *tree, gib_script_t *script)
+@@ -610,21 +622,6 @@ GIB_Classes_Build_Scripted (const char *
  	gib_classdesc_t desc;
  	enum {CLASS, INSTANCE} mode = INSTANCE;
  	
 -	static void
-+	void
- 	mtabfree (void *mtab, void *unused)
- 	{
- 		free (mtab);
- 	}
- 
+-	mtabfree (void *mtab, void *unused)
+-	{
+-		free (mtab);
+-	}
+-
 -	static const char *
-+	const char *
- 	fname (const char *str)
- 	{
- 		if (mode == INSTANCE)
+-	fname (const char *str)
+-	{
+-		if (mode == INSTANCE)
+-			return va ("__%s_%s__", name, str);
+-		else
+-			return va ("%s::%s", name, str);
+-	}
+-	
+ 	methods = llist_new (mtabfree, NULL, NULL);
+ 	cmethods = llist_new (mtabfree, NULL, NULL);
+ 
+@@ -640,6 +637,7 @@ GIB_Classes_Build_Scripted (const char *
+ 				if (!strcmp (line->children->str,
+ 							"function")) {
+ 					gib_tree_t *cur, *last;
++					char *fname;
+ 					gib_methodtab_t *new = malloc (sizeof
+ 							(gib_methodtab_t));
+ 					Scrobj_method_t *data = malloc (sizeof
+@@ -648,9 +646,13 @@ GIB_Classes_Build_Scripted (const char *
+ 							line->children->next->next;
+ 							last->next; last =
+ 							last->next);
++					
++					if (mode == INSTANCE)
++						fname = va("__%s_%s__", name, line->children->next->str);
++					else
++						fname = va("%s::%s", name, line->children->next->str);
+ 					data->func = GIB_Function_Define
+-						(fname
+-						 (line->children->next->str),
++						(fname,
+ 						 last->str,
+ 						 last->children,
+ 						 script, NULL);

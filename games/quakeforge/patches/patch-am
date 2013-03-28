@@ -1,22 +1,164 @@
-$NetBSD: patch-am,v 1.1 2008/01/23 04:59:36 tnn Exp $
+$NetBSD: patch-am,v 1.2 2013/03/28 21:25:52 joerg Exp $
 
 --- libs/gib/gib_function.c.orig	2004-04-09 18:18:19.000000000 +0000
 +++ libs/gib/gib_function.c
-@@ -169,7 +169,7 @@ GIB_Function_Prepare_Args (cbuf_t * cbuf
- 	gib_var_t  *var;
+@@ -160,79 +160,108 @@ GIB_Function_Find (const char *name)
+ 	return (gib_function_t *) Hash_Find (gib_functions, name);
+ }
+ 
++struct prepare_args_data {
++	gib_var_t *var;
++	hashtab_t **zero;
++	unsigned int i, ind;
++	unsigned int argc;
++	const char **args;
++	cbuf_t *cbuf;
++};
++
++static qboolean 
++prepare_args_iterate (void *data_, void *arg_, llist_node_t *node)
++{
++	char *arg = arg_;
++	struct prepare_args_data *data = data_;
++	data->var = GIB_Var_Get_Complex (&GIB_DATA(data->cbuf)->locals, data->zero,
++		arg, &data->ind, true);
++	if (!data->var->array[0].value)
++		data->var->array[0].value = dstring_newstr ();
++	dstring_copystr (data->var->array[0].value, data->args[data->i]);
++	data->i++;
++	return data->i < data->argc;
++}
++
+ static void
+ GIB_Function_Prepare_Args (cbuf_t * cbuf, const char **args, unsigned int
+ 		argc, llist_t *arglist)
+ {
+ 	static hashtab_t *zero = 0;
+-	unsigned int i, ind;
+-	gib_var_t  *var;
++	struct prepare_args_data data;
  	static char argss[] = "args";
  
 -	static qboolean 
-+	qboolean 
- 	iterate (char *arg, llist_node_t *node)
- 	{	
- 		var = GIB_Var_Get_Complex (&GIB_DATA(cbuf)->locals, &zero,
-@@ -207,7 +207,7 @@ GIB_Function_Prepare_Args_D (cbuf_t * cb
- 	gib_var_t  *var;
+-	iterate (char *arg, llist_node_t *node)
+-	{	
+-		var = GIB_Var_Get_Complex (&GIB_DATA(cbuf)->locals, &zero,
+-			arg, &ind, true);
+-		if (!var->array[0].value)
+-			var->array[0].value = dstring_newstr ();
+-		dstring_copystr (var->array[0].value, args[i]);
+-		i++;
+-		return i < argc;
+-	}
++	data.cbuf = cbuf;
++	data.argc = argc;
++	data.args = args;
++	data.i = 1;
++	data.zero = &zero;
++	llist_iterate (arglist, prepare_args_iterate, &data);
+ 	
+-	i = 1; llist_iterate (arglist, LLIST_ICAST (iterate));
+-	
+-	var =
++	data.var =
+ 		GIB_Var_Get_Complex (&GIB_DATA (cbuf)->locals, &zero, argss,
+-			&ind, true);
+-	var->array = realloc (var->array, sizeof (struct gib_varray_s) * argc);
+-	memset (var->array + 1, 0, (argc - 1) * sizeof (struct gib_varray_s));
+-	var->size = argc;
+-	for (i = 0; i < argc; i++) {
+-		if (var->array[i].value)
+-			dstring_clearstr (var->array[i].value);
++			&data.ind, true);
++	data.var->array = realloc (data.var->array, sizeof (struct gib_varray_s) * argc);
++	memset (data.var->array + 1, 0, (argc - 1) * sizeof (struct gib_varray_s));
++	data.var->size = argc;
++	for (data.i = 0; data.i < argc; data.i++) {
++		if (data.var->array[data.i].value)
++			dstring_clearstr (data.var->array[data.i].value);
+ 		else
+-			var->array[i].value = dstring_newstr ();
+-		dstring_appendstr (var->array[i].value, args[i]);
++			data.var->array[data.i].value = dstring_newstr ();
++		dstring_appendstr (data.var->array[data.i].value, args[data.i]);
+ 	}
+ }
+ 
++struct prepare_args_d_data {
++	gib_var_t  *var;
++	unsigned i, ind, argc;
++	hashtab_t **zero;
++	dstring_t **args;
++	cbuf_t *cbuf;
++};
++
++static qboolean 
++iterate (void *data_, void *arg_, llist_node_t *node)
++{
++	char *arg = arg_;
++	struct prepare_args_d_data *data = data_;
++	data->var = GIB_Var_Get_Complex (&GIB_DATA(data->cbuf)->locals, data->zero,
++		arg, &data->ind, true);
++	if (!data->var->array[0].value)
++		data->var->array[0].value = dstring_newstr ();
++	dstring_copystr (data->var->array[0].value, data->args[data->i]->str);
++	data->i++;
++	return data->i < data->argc;
++}
++
+ static void
+ GIB_Function_Prepare_Args_D (cbuf_t * cbuf, dstring_t **args, unsigned int
+ 		argc, llist_t *arglist)
+ {
++	struct prepare_args_d_data data;
+ 	static hashtab_t *zero = 0;
+-	unsigned int i, ind;
+-	gib_var_t  *var;
  	static char argss[] = "args";
  
 -	static qboolean 
-+	qboolean 
- 	iterate (char *arg, llist_node_t *node)
- 	{	
- 		var = GIB_Var_Get_Complex (&GIB_DATA(cbuf)->locals, &zero,
+-	iterate (char *arg, llist_node_t *node)
+-	{	
+-		var = GIB_Var_Get_Complex (&GIB_DATA(cbuf)->locals, &zero,
+-			arg, &ind, true);
+-		if (!var->array[0].value)
+-			var->array[0].value = dstring_newstr ();
+-		dstring_copystr (var->array[0].value, args[i]->str);
+-		i++;
+-		return i < argc;
+-	}
+-	
+-	i = 1; llist_iterate (arglist, LLIST_ICAST (iterate));
+-	
+-	var =
++	data.cbuf = cbuf;
++	data.argc = argc;
++	data.args = args;
++	data.zero = &zero;
++	data.i = 1;
++	llist_iterate (arglist, iterate, &data);
++
++	data.var =
+ 		GIB_Var_Get_Complex (&GIB_DATA (cbuf)->locals, &zero, argss,
+-				&ind, true);
+-	var->array = realloc (var->array, sizeof (struct gib_varray_s) * argc);
+-	memset (var->array + 1, 0, (argc - 1) * sizeof (struct gib_varray_s));
+-	var->size = argc;
+-	for (i = 0; i < argc; i++) {
+-		if (var->array[i].value)
+-			dstring_clearstr (var->array[i].value);
++				&data.ind, true);
++	data.var->array = realloc (data.var->array, sizeof (struct gib_varray_s) * argc);
++	memset (data.var->array + 1, 0, (argc - 1) * sizeof (struct gib_varray_s));
++	data.var->size = argc;
++	for (data.i = 0; data.i < argc; data.i++) {
++		if (data.var->array[data.i].value)
++			dstring_clearstr (data.var->array[data.i].value);
+ 		else
+-			var->array[i].value = dstring_newstr ();
+-		dstring_appendstr (var->array[i].value, args[i]->str);
++			data.var->array[data.i].value = dstring_newstr ();
++		dstring_appendstr (data.var->array[data.i].value, args[data.i]->str);
+ 	}
+ }
+ 
