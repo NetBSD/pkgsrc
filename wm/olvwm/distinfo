@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2007/08/08 20:40:48 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/03/28 21:40:10 joerg Exp $
 
 SHA1 (olvwm4.src4.tar.gz) = d8900f1aeccfc75924e922d9e86008462de12e62
 RMD160 (olvwm4.src4.tar.gz) = 6523adb9a2f08829dbe6099e88ac031b1dd232a4
@@ -6,14 +6,32 @@ Size (olvwm4.src4.tar.gz) = 386560 bytes
 SHA1 (patch-aa) = e0a4eaab392555e9e5adb3b7376a21e70f8fadb1
 SHA1 (patch-ab) = c9e045f8dbc966feac732adb2ab53c531bdfa8cf
 SHA1 (patch-ac) = 157710147ecef7ff4ce3b167c7c6cdaa2449cf33
-SHA1 (patch-ad) = d33f6afd90cfd21e038dfea456eb2d9e34ac8fc6
-SHA1 (patch-ae) = 537fa9aed7555eede44b3b13cf2ef2ee5378dd3a
-SHA1 (patch-af) = 2a6d5ba368b91ac829b03f9c3b2d92073a0aaf26
-SHA1 (patch-ag) = 9651a2a6acd3bc7acf04517f4eaf32b795c519f4
-SHA1 (patch-ah) = c3ed0d792a9cdaba4ae69fcd4482e0d612bc1cc7
-SHA1 (patch-ai) = 186f9283f7eb31bf2c3ac296b505bdb487398107
+SHA1 (patch-ad) = 28b4f4cac1c94e787e68bbdb8ce859545f898528
+SHA1 (patch-ae) = feb9b4effe6066021ac16e20b982a52211d1c7ba
+SHA1 (patch-af) = 14d28f23cbf6cb37aeff124124bef3aa79d3e1a8
+SHA1 (patch-ag) = 07a2294c9a42c047aff203844f1535766bc13a6f
+SHA1 (patch-ah) = d3b1ed50b35d9c27bf6825474a36f9f94037f094
+SHA1 (patch-ai) = cb6dc2f0ccfcfe82aebc35baa4c8ad8359419d37
 SHA1 (patch-aj) = ca38388a38ae00f3085dccf7933517cb07a070bf
-SHA1 (patch-ak) = 2b5caceb2022dd769cf3ad1eefbb25a924ade012
+SHA1 (patch-ak) = c6898b31d134b72fb2c07dae0451d714fdad88de
 SHA1 (patch-al) = 76e0eccf43e6a103ffdafad2692b5817ec138d14
 SHA1 (patch-am) = 801152c57c9e5b50a48f9091464d8cff3b4db0f5
 SHA1 (patch-an) = 5e6e28b8f07184ec13420b3c2e24d9e7cc81957e
+SHA1 (patch-events.c) = bea715d047938cfc1d7abddb016be8e238a272c8
+SHA1 (patch-olwm.h) = 54a75c473fa4978170e5f606cb03fc9359bd97c9
+SHA1 (patch-selection.c) = c18c1d39b3b81a976b120d5bd609132b4521d854
+SHA1 (patch-selection.h) = d38718ecc7e606f72ef90249a7485b908d22fa48
+SHA1 (patch-slots.c) = 107a5795ea4edb8dbf18571c1ef004474df4427d
+SHA1 (patch-slots.h) = 8c12e3c02142bd4899fc49bf1f857676e7db24ff
+SHA1 (patch-st.h) = 8425fc18906edfba6c79b51db774d84e34702e9a
+SHA1 (patch-win.h) = c76ad39d1f2a53ce1652a155dad11d7d780b14b3
+SHA1 (patch-winbusy.c) = e6fc21ee47a37c3630d9ed697f4e5c8f814e3f26
+SHA1 (patch-winbutton.c) = aa9fcc005ee13c3b0605bd2a2aeb83913a5f6a31
+SHA1 (patch-wingframe.c) = 38d12809953a567105b865b6c2f5916fd718287e
+SHA1 (patch-winipane.c) = eea35770b3c15903b75e6d006765c1fc298c36ec
+SHA1 (patch-winnofoc.c) = bc8dfb61c726e2aca04959aa3de74b64ed88c443
+SHA1 (patch-winpane.c) = db8dd3ff760e333976acd6fa362325ddcfbe792e
+SHA1 (patch-winpinmenu.c) = fdae4ac8081fffa45adf2967fcb6849af5fc3923
+SHA1 (patch-winpush.c) = 13188fcc22d80185e6757137076449bff8a2790d
+SHA1 (patch-winresize.c) = a96aea080330eeec4f84f37394ebb485670aa707
+SHA1 (patch-winroot.c) = e9d71732e0c11fc295bbc64cd0c228b8a6018b1d
