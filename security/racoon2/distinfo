@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/12/15 08:10:59 marino Exp $
+$NetBSD: distinfo,v 1.3 2013/03/29 13:52:45 joerg Exp $
 
 SHA1 (racoon2-20100526a.tgz) = 268429af8a031dbbc279580cf98ea18331f0e2d9
 RMD160 (racoon2-20100526a.tgz) = 014cdcf78cc82ab21235a21491850cdcd1f883bf
@@ -8,5 +8,6 @@ SHA1 (patch-ab) = eb6d901108ebcca90571851817137b4b3f3c594b
 SHA1 (patch-ac) = 081a2d3d694d4c20cf1fa2d9718577577280288e
 SHA1 (patch-ad) = 0d04dc7027c100de6bc04db00eddb30a12fd8715
 SHA1 (patch-ae) = 937cf84a2b6f1e8f8d288703a0556faf500bab95
+SHA1 (patch-lib_cfparse.y) = 9e0b8ec9c09c315edde171103b97a8c403ba748e
 SHA1 (patch-lib_cfsetup.c) = 70c2409bc69ff85cef6d2e2b4e222e12537c323e
 SHA1 (patch-lib_if__pfkeyv2.c) = 9eb969ff0f289bc7c4aa1fa234c221b4d70d1da7
