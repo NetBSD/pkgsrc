@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1 2013/02/11 01:13:20 dsainty Exp $
+$NetBSD: distinfo,v 1.2 2013/03/29 12:40:24 dsainty Exp $
 
 SHA1 (rxtx-2.1-7r2.zip) = 1d9ef2f80b23bc08b8fdeaa547ee78cb5f76e613
 RMD160 (rxtx-2.1-7r2.zip) = dc569a654fbef58aa521013e170c0200b8b3668f
 Size (rxtx-2.1-7r2.zip) = 1345757 bytes
 SHA1 (patch-Makefile_am) = a0f4bdf62bab3c21bfe062cd489b5f9b8941194c
-SHA1 (patch-configure_in) = 9c8d4c8b49e7748656296028095389922b4296d0
+SHA1 (patch-configure_in) = 3a7917c8e418af2df3ae38fae24ab479d3b0f7f9
 SHA1 (patch-src_I2CImp_c) = 2d6bba8aa2f1460722dc69d17da091cb55f5c844
 SHA1 (patch-src_RS485Imp_c) = 6606b79c629556fd010e8d38ec3a0f88c2d8ecfd
 SHA1 (patch-src_RawImp_c) = eedc53a9f30e77a8a5437003177e9b20adf64f28

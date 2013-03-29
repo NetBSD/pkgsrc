@@ -1,4 +1,4 @@
-$NetBSD: patch-configure_in,v 1.1 2013/02/11 01:13:20 dsainty Exp $
+$NetBSD: patch-configure_in,v 1.2 2013/03/29 12:40:25 dsainty Exp $
 
 AM_CONFIG_HEADER is obsolete.
 
@@ -6,8 +6,12 @@ UTS_RELEASE isn't even reliably available on Linux, let alone portable.
 
 Recognise Java 1.6, and openjdk7 as 1.7.
 
+The printer port support is experimental, and only supported on some
+platforms.  Disable it for consistency, using a patch since
+--disable-PRINTER only works on Linux.
+
 --- configure.in.orig	2006-01-30 17:37:47.000000000 +1300
-+++ configure.in	2013-01-30 15:15:04.159793907 +1300
++++ configure.in	2013-03-30 01:16:29.425838439 +1300
 @@ -17,7 +17,7 @@
  #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  #-------------------------------------------------------------------------
@@ -50,3 +54,12 @@ Recognise Java 1.6, and openjdk7 as 1.7.
  		RXTX_PATH="\$(JPATH)/jre/lib/\$(OS_ARCH)"
  	;;
  	1.1*)
+@@ -816,6 +816,8 @@
+ ;;
+ esac ]
+ 
++TARGETLIB="\$(target_triplet)/librxtxSerial.la"
++
+ AC_OUTPUT(Makefile)
+ 
+ 
