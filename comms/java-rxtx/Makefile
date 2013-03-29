@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/03/06 08:30:40 dsainty Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/29 12:40:24 dsainty Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
 PKGNAME=	java-rxtx-2.1.7r2
+PKGREVISION=	1
 CATEGORIES=	comms java
 MASTER_SITES=	http://rxtx.qbang.org/pub/rxtx/
 EXTRACT_SUFX=	.zip
@@ -24,10 +25,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_JVMS_ACCEPTED= openjdk7 sun-jdk7 sun-jdk6 sun-jdk15 sun-jdk14
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
-
-# The printer port support is experimental, and only supported on some
-# platforms.  Disable it for consistency.
-CONFIGURE_ARGS+=	--disable-PRINTER
 
 JAVA_MACHINE_ARCH=	${MACHINE_ARCH:S/x86_64/amd64/}
 
