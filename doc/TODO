@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12026 2013/03/26 09:19:58 wiz Exp $
+$NetBSD: TODO,v 1.12027 2013/03/30 11:26:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o REminiscence-0.1.9
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
-	o RealPlayer-11
 	o SDL_gfx-2.0.24
 	o Sigil-0.7.1 [needs qt5]
 	o SmartEiffel-2.3
