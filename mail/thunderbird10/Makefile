@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/02/16 11:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/03/30 22:07:00 tron Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}esr.source
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-application=mail
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird10
 
 # workround for link of xulrunner-bin etc.
-LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/thunderbird10
+LDFLAGS+=		-Wl,-R${PREFIX}/lib/thunderbird10
 LDFLAGS.DragonFly=	-lplc4 -lplds4 -lnspr4 -lnssutil3
 
 .include "../../mk/bsd.prefs.mk"
