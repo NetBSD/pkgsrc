@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/07/07 21:20:37 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/03/30 22:28:55 tron Exp $
 
 SHA1 (iftop-0.17.tar.gz) = 75ce6afc8c0bf851278b0a15e66f523af90cfda9
 RMD160 (iftop-0.17.tar.gz) = 0111fdd3d2ba068acd41d9279c987d6699840736
 Size (iftop-0.17.tar.gz) = 160381 bytes
 SHA1 (patch-aa) = 1c0c12967ba01d18f2826f874a8f5a076d88c31b
+SHA1 (patch-dlcommon.h) = 787296f9d337a6b6a5ef080452cd14a3580a5fc3
