@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:29 asau Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2013/03/30 13:38:50 tron Exp $
 #
 
 PKGNAME=	isc-dhclient-${DHVER}
@@ -16,7 +16,8 @@ FILES_SUBST+=	DHCP_HOME=${DHCP_HOME}
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/client/dhclient.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/client/dhclient.conf.example \
+		${DESTDIR}${EGDIR}/dhclient.conf
 
 .include "../../net/isc-dhcp4/Makefile.common"
 .include "../../net/isc-dhcp4/buildlink3.mk"
