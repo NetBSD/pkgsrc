@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1064 2013/03/30 20:03:48 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1065 2013/03/30 21:58:44 dholland Exp $
 
 # PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
 # pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
@@ -1530,3 +1530,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/suse121_libxml2 to 12.1nb5 [obache 2013-03-30]
 	Updated net/mikutter to 0.2.1.1141 [obache 2013-03-30]
 	Updated devel/xulrunner to 19.0.2nb1 [ryoon 2013-03-30]
+	Updated editors/easyedit to 1.4.6nb1 [dholland 2013-03-30]
