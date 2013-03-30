@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.44 2013/03/24 09:11:01 sbd Exp $
+# $NetBSD: mozilla-common.mk,v 1.45 2013/03/30 20:03:08 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -11,6 +11,15 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
+
+.include "../../mk/bsd.prefs.mk"
+# gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
+# but gcc 4.5.4 of NetBSD 7 generates working binary.
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+GCC_REQD+=		4.6
+.else
+GCC_REQD+=		4.5
+.endif
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
