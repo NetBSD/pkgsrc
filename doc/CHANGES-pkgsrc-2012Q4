@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.49 2013/03/30 13:41:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q4,v 1.1.2.50 2013/03/30 17:54:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2012Q4 branch:
@@ -280,3 +280,7 @@ net/isc-dhcpd4: security update
 net/isc-dhcrelay4: security update
 Pullup ticket #4107 - requested by obache
 emulators/suse121_libxml2: security update
+Pullup ticket #4103 - requested by taca
+net/bind99: security update
+Pullup ticket #4104 - requested by taca
+net/bind98: security update
