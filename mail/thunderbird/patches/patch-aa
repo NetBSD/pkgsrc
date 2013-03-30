@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2012/11/23 07:17:54 ryoon Exp $
+$NetBSD: patch-aa,v 1.14 2013/03/30 23:31:36 tron Exp $
 
---- mozilla/configure.in.orig	2012-11-19 22:42:12.000000000 +0000
-+++ mozilla/configure.in
-@@ -2080,6 +2080,9 @@ ia64*-hpux*)
+--- mozilla/configure.in.orig	Fri Mar  8 07:13:08 2013
++++ mozilla/configure.in	Sat Mar 30 22:29:06 2013
+@@ -2080,6 +2080,9 @@
      if test -z "$MC"; then
          MC=mc.exe
      fi
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.13 2012/11/23 07:17:54 ryoon Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -2979,6 +2982,9 @@ dnl ====================================
+@@ -2979,6 +2982,9 @@
  case $target in
  *-hpux11.*)
  	;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.13 2012/11/23 07:17:54 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3279,6 +3285,9 @@ AC_CACHE_CHECK(
+@@ -3279,6 +3285,9 @@
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -32,7 +32,16 @@ $NetBSD: patch-aa,v 1.13 2012/11/23 07:17:54 ryoon Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -3947,6 +3956,14 @@ if test -n "$YASM"; then
+@@ -3937,7 +3946,7 @@
+ if test -n "$YASM"; then
+   dnl Pull out yasm's version string
+   changequote(,)
+-  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
++  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
+   changequote([,])
+ 
+   YASM_VERSION=`yasm --version | sed -ne "$_YASM_VER_FILTER"`
+@@ -3947,6 +3956,14 @@
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -47,7 +56,7 @@ $NetBSD: patch-aa,v 1.13 2012/11/23 07:17:54 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5158,8 +5175,8 @@ fi
+@@ -5158,8 +5175,8 @@
  
  AC_SUBST(MOZ_WEBRTC)
  
@@ -58,7 +67,7 @@ $NetBSD: patch-aa,v 1.13 2012/11/23 07:17:54 ryoon Exp $
      MOZ_SAMPLE_TYPE_S16LE=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16LE)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16LE)
-@@ -5356,11 +5373,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
+@@ -5356,11 +5373,11 @@
  
      dnl See if we have assembly on this platform.
      case "$OS_ARCH:$CPU_ARCH" in
