@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.111 2012/11/28 20:36:15 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.112 2013/03/31 08:24:55 obache Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1144,6 +1144,8 @@ Linux       linux, __linux, __linux__
 NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__
 Solaris     sun, __sun
+Haiku       __HAIKU__
+Cygwin      __CYGWIN__
 </programlisting>
 
 </sect3>
