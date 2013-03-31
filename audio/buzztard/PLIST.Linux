@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2013/03/31 08:22:24 sbd Exp $
+include/libbuzztard-ic/input-device-methods.h
+include/libbuzztard-ic/input-device.h
