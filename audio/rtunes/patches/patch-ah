@@ -1,13 +1,15 @@
-$NetBSD: patch-ah,v 1.1.1.1 2007/11/23 00:18:41 bjs Exp $
+$NetBSD: patch-ah,v 1.2 2013/03/31 08:31:49 sbd Exp $
 
---- rtunes/GNUmakefile.orig	2006-05-06 10:02:13.000000000 -0400
+--- rtunes/GNUmakefile.orig	2006-05-06 14:02:13.000000000 +0000
 +++ rtunes/GNUmakefile
-@@ -3,31 +3,31 @@
+@@ -2,31 +2,32 @@
+ 
  CCFLAGS = -O2 -pipe -Wall -Wstrict-prototypes -c
++CCFLAGS += ${CFLAGS} ${LDFLAGS}
  
  rtunes:		rtunes.o cipher.o mp4.o rtsp.o sys.o parse.o scan.o
 -		cc -L../libbsd -o rtunes rtunes.o cipher.o mp4.o rtsp.o sys.o parse.o scan.o -lbsd -lcrypto
-+		${CC} -L../libbsd -o rtunes rtunes.o cipher.o mp4.o rtsp.o sys.o parse.o scan.o -lbsd -lcrypto
++		${CC} ${CFLAGS} ${LDFLAGS} -L../libbsd -o rtunes rtunes.o cipher.o mp4.o rtsp.o sys.o parse.o scan.o -lbsd -lcrypto
  		strip rtunes
  
  rtunes.o:	rtunes.c
@@ -41,4 +43,3 @@ $NetBSD: patch-ah,v 1.1.1.1 2007/11/23 00:18:41 bjs Exp $
 +		${CC} ${CCFLAGS} -o scan.o lex.yy.c
  
  clean:
- 		rm -f rtunes y.tab.c y.tab.h lex.yy.c *.o
