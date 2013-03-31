@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2013/03/28 21:43:05 joerg Exp $
+$NetBSD: distinfo,v 1.19 2013/03/31 08:18:58 sbd Exp $
 
 SHA1 (bmpx-0.40.14.tar.bz2) = 3284843c45cab302f414663a5cb31eb4373d07c7
 RMD160 (bmpx-0.40.14.tar.bz2) = 12a9939d53b58a43ee9deefa43188ac6b33dae72
@@ -33,5 +33,6 @@ SHA1 (patch-src_shell.cc) = f428d07ddbadf33fd9666b4b8e1bf757cb21a5aa
 SHA1 (patch-src_shell_hh) = b799ea9358b182ccc40c9c104be8fd6548b4c9dc
 SHA1 (patch-src_ui-part-cdda.hh) = 748a43c39ca720009af14affac6eb0b3b658e041
 SHA1 (patch-src_ui-part-podcasts_hh) = 0b73330a4ae7e3bd7d3b6d84817482916ee291ea
+SHA1 (patch-src_uri.cc) = 4fe811e8bebbabc61ef88ab2db2d0c2b8a5a2c61
 SHA1 (patch-src_urihandler_hh) = 01f4ecf27e351553ec7259deb88e91dbd1d9fd0e
 SHA1 (patch-src_util-file.cc) = e5a6eb49dc26670fae6388d8ad8476afb9d56f90
