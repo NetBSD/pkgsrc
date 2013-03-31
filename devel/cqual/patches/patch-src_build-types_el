@@ -1,0 +1,15 @@
+$NetBSD: patch-src_build-types_el,v 1.1 2013/03/31 14:13:28 dholland Exp $
+
+Fix elisp for emacs24.
+
+--- src/build-types.el~	2002-07-03 17:39:30.000000000 +0000
++++ src/build-types.el
+@@ -109,7 +109,7 @@
+   (if (type-super-type type)
+       (write-fields (assoc (type-super-type type) types))
+     (insert "  ast_kind kind;\n"))
+-  (mapc '(lambda (field-name)
++  (mapc #'(lambda (field-name)
+ 	   (let ((field (assoc field-name fields)))
+ 	     (insert "  "
+ 	      (if (assoc 'format (field-attributes field))
