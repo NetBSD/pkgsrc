@@ -1,0 +1,24 @@
+$NetBSD: patch-src_build-basics_el,v 1.1 2013/03/31 14:13:28 dholland Exp $
+
+Fix elisp for emacs24.
+
+--- src/build-basics.el~	2002-07-03 17:39:29.000000000 +0000
++++ src/build-basics.el
+@@ -61,7 +61,7 @@
+ (setq legal-attributes '(init tree nodump noprint default dump-special print-special format))
+ 
+ (defun attributes-ok (field-name attrs)
+-  (mapcar '(lambda (attr)
++  (mapcar #'(lambda (attr)
+ 	     (let* ((realattr (if (listp attr) attr (list attr)))
+ 		    (aname (car realattr)))
+ 	       (if (not (member aname legal-attributes))
+@@ -79,7 +79,7 @@
+   (mapcar #'check-type types))
+ 
+ (defun check-type (type)
+-  (mapcar '(lambda (field-name)
++  (mapcar #'(lambda (field-name)
+ 	     (if (not (assoc field-name fields))
+ 		 (message (format "Unknown field %s in %s" field-name (car type)))))
+ 	  (type-fields type))
