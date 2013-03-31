@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.113 2013/03/31 08:38:07 obache Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.114 2013/03/31 09:10:39 obache Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1145,6 +1145,7 @@ NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__
 Solaris     sun, __sun
 MirBSD      __MirBSD__ (__OpenBSD__ is also defined)
+Minix3      __minix
 Haiku       __HAIKU__
 Cygwin      __CYGWIN__
 </programlisting>
