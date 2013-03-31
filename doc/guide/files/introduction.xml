@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.26 2013/03/07 13:17:12 obache Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.27 2013/03/31 08:50:26 obache Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -187,6 +187,10 @@ minutes!</para>
       <row>
         <entry><ulink url="http://www.haiku-os.org/">Haiku</ulink></entry>
         <entry align="center">Sep 2010</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.mirbsd.org/">MirBSD</ulink></entry>
+        <entry align="center">Aug 2011</entry>
       </row>
       <row>
         <entry><ulink url="http://cygwin.com/">Cygwin</ulink></entry>
