@@ -1,9 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1068 2013/04/01 08:48:55 sbd Exp $
-
-# PLEASE NOTE THAT PKGSRC IS IN A FREEZE IN PREPARATION FOR THE
-# pkgsrc-2013Q1 BRANCH. PLEASE DO NOT ADD ANY NEW PACKAGES, AND
-# ONLY UPDATE LEAF PACKAGES. IF IN DOUBT, PLEASE ASK FOR ADVICE.
-# THANKS IN ADVANCE!
+$NetBSD: CHANGES-2013,v 1.1069 2013/04/01 15:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1534,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/buzztard to 0.5.0nb21 [sbd 2013-03-31]
 	Updated www/moodle to 2.4.3 [wen 2013-03-31]
 	Updated biology/openbabel to 2.3.0nb11 [sbd 2013-04-01]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q1 branch [wiz 2013-04-01]
