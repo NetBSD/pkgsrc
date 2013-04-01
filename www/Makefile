@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.960 2013/03/15 23:49:06 taca Exp $
+# $NetBSD: Makefile,v 1.961 2013/04/01 17:41:16 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -567,6 +567,7 @@ SUBDIR+=	py-django-tagging
 SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
+SUBDIR+=	py-flask-babelex
 SUBDIR+=	py-flask-flatpages
 SUBDIR+=	py-flask-frozen
 SUBDIR+=	py-flask-login
