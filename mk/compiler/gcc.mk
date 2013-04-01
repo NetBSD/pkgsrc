@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.131 2013/04/01 19:07:40 wiz Exp $
+# $NetBSD: gcc.mk,v 1.132 2013/04/01 21:06:57 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -109,7 +109,7 @@ GCC_REQD+=	20120614
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
 #
-.include "../../lang/gcc47/version.mk"
+.include "../../lang/gcc48/version.mk"
 _GCC_DIST_VERSION:=	${GCC_DIST_VERSION}
 
 # _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
@@ -132,8 +132,11 @@ _GCC45_PATTERNS= 4.5 4.5.*
 # _GCC46_PATTERNS matches N s.t. 4.6 <= N < 4.7.
 _GCC46_PATTERNS= 4.6 4.6.*
 
-# _GCC47_PATTERNS matches N s.t. 4.7 <= N.
-_GCC47_PATTERNS= 4.[7-9] 4.[7-9].* 4.[1-9][0-9]* [5-9]*
+# _GCC47_PATTERNS matches N s.t. 4.7 <= N < 4.8.
+_GCC47_PATTERNS= 4.7 4.7.*
+
+# _GCC48_PATTERNS matches N s.t. 4.8 <= N.
+_GCC48_PATTERNS= 4.[8-9] 4.[8-9].* 4.[1-9][0-9]* [5-9]*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
@@ -263,6 +266,12 @@ _NEED_GCC47?=	no
 _NEED_GCC47=	yes
 .  endif
 .endfor
+_NEED_GCC48?=	no
+.for _pattern_ in ${_GCC48_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+_NEED_GCC48=	yes
+.  endif
+.endfor
 _NEED_GCC_AUX?=	no
 .for _pattern_ in ${_GCC_AUX_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
@@ -273,8 +282,9 @@ _NEED_NEWER_GCC=NO
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
     !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GCC44:M[nN][oO]) && \
     !empty(_NEED_GCC45:M[nN][oO]) && !empty(_NEED_GCC46:M[nN][oO]) && \
-    !empty(_NEED_GCC47:M[nN][oO]) && !empty(_NEED_GCC_AUX:M[nN][oO])
-_NEED_GCC47=	yes
+    !empty(_NEED_GCC47:M[nN][oO]) && !empty(_NEED_GCC48:M[nN][oO]) && \
+    !empty(_NEED_GCC_AUX:M[nN][oO])
+_NEED_GCC48=	yes
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
@@ -292,6 +302,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 .elif !empty(_NEED_GCC46:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 .elif !empty(_NEED_GCC47:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
+.elif !empty(_NEED_GCC48:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
@@ -438,6 +450,27 @@ _GCC_DEPENDENCY=	gcc47>=${_GCC_REQD}:../../lang/gcc47
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mgo) || \
+        !empty(_LANGUAGES.gcc:Mobjc) || \
+        !empty(_LANGUAGES.gcc:Mobj-c++)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC48:M[yY][eE][sS])
+#
+# We require gcc-4.8.x in the lang/gcc48 directory.
+#
+_GCC_PKGBASE=		gcc48
+.  if !empty(PKGPATH:Mlang/gcc48)
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc48
+_GCC_DEPENDENCY=	gcc48>=${_GCC_REQD}:../../lang/gcc48
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran88) || \
         !empty(_LANGUAGES.gcc:Mgo) || \
         !empty(_LANGUAGES.gcc:Mobjc) || \
         !empty(_LANGUAGES.gcc:Mobj-c++)
