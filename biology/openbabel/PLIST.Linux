@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2013/04/01 08:48:46 sbd Exp $
+lib/openbabel/${PKGVERSION}/xtcformat.so
