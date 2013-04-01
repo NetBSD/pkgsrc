@@ -1,0 +1,39 @@
+$NetBSD: patch-guestd_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- guestd/Makefile.am.orig	2008-08-08 07:01:56.000000000 +0000
++++ guestd/Makefile.am
+@@ -50,8 +50,8 @@ vmware_guestd_LDADD += ../lib/system/lib
+ vmware_guestd_LDADD += ../lib/user/libUser.a
+ vmware_guestd_LDADD += ../lib/vixTools/libVixTools.a
+ vmware_guestd_LDADD += ../lib/vmBackupLib/libVmBackupLib.a
+-vmware_guestd_LDADD += ../lib/vmCheck/libVmCheck.a
+-vmware_guestd_LDADD += ../lib/vmSignal/libVmSignal.a
++vmware_guestd_LDADD += ../lib/vmCheck/libVmCheck.la
++vmware_guestd_LDADD += ../lib/vmSignal/libVmSignal.la
+ vmware_guestd_LDADD += ../lib/wiper/libWiper.a
+ # In the absence of the linker options --start-group and --end-group (which
+ # can't be put in LDADD), we need to bring the following libraries out of the
+@@ -92,19 +92,11 @@ else
+    vmware_guestd_LINK = $(LINK)
+ endif
+ 
+-if LINUX
+-if PAMD
+-if THIRTY_TWO_BIT_USERSPACE
+-pam_SCRIPTS = ../scripts/linux/pam.d/vmware-guestd
+-else
+-pam_SCRIPTS = ../scripts/linux/pam.d/vmware-guestd-x64
+-endif !THIRTY_TWO_BIT_USERSPACE
+-endif PAMD
+-endif LINUX
++EGDIR = @datarootdir@/examples
+ 
+ install-exec-hook:
+-	$(INSTALL) -d $(DESTDIR)/etc/vmware-tools
+-	echo 'disable-tools-version = "true"' > $(DESTDIR)/etc/vmware-tools/tools.conf
++	$(INSTALL) -d $(DESTDIR)${EGDIR}/vmware-tools
++	echo 'disable-tools-version = "true"' > $(DESTDIR)${EGDIR}/vmware-tools/tools.conf
+ 
+ uninstall-hook:
+-	$(RM) -rf $(DESTDIR)/etc/vmware-tools
++	$(RM) -rf $(DESTDIR)${EGDIR}/vmware-tools

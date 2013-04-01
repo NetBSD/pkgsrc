@@ -1,0 +1,15 @@
+$NetBSD: patch-hgfsclient_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- hgfsclient/Makefile.am.orig	2008-08-08 07:01:57.000000000 +0000
++++ hgfsclient/Makefile.am
+@@ -25,8 +25,8 @@ vmware_hgfsclient_LDADD += ../lib/hgfsBd
+ vmware_hgfsclient_LDADD += ../lib/rpcOut/libRpcOut.a
+ vmware_hgfsclient_LDADD += ../lib/string/libString.a
+ vmware_hgfsclient_LDADD += ../lib/toolsLogger/libToolsLogger.a
+-vmware_hgfsclient_LDADD += ../lib/vmCheck/libVmCheck.a
+-vmware_hgfsclient_LDADD += ../lib/vmSignal/libVmSignal.a
++vmware_hgfsclient_LDADD += ../lib/vmCheck/libVmCheck.la
++vmware_hgfsclient_LDADD += ../lib/vmSignal/libVmSignal.la
+ # In the absence of the linker options --start-group and --end-group (which can't
+ # be put in LDADD), we need to bring the following libraries out of the alphebetical
+ # order so their symbols are properly resolved.

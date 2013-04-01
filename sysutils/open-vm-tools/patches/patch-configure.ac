@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- configure.ac.orig	2008-08-08 07:01:58.000000000 +0000
++++ configure.ac
+@@ -111,6 +111,9 @@ case "$host_os" in
+    [linux*])
+       os="linux"
+       ;;
++   [netbsd*])
++      os="netbsd"
++      ;;
+    [freebsd*])
+       os="freebsd"
+       ;;
+@@ -573,7 +576,7 @@ if test "$with_dnet" = "yes"; then
+ 
+ 		GUESTD_LDADD="$GUESTD_LDADD $DNET_LIBS"
+ 		VMWARE_USER_LDADD="$VMWARE_USER_LDADD $DNET_LIBS"
+-		if test "$DNET_CONFIG" == dumbnet-config; then
++		if test "$DNET_CONFIG" = dumbnet-config; then
+ 		AC_DEFINE([DNET_IS_DUMBNET], 1, [Define to 1 if substituting Debian's libdumbnet for libdnet.])
+ 		fi
+ 	else

@@ -1,0 +1,14 @@
+$NetBSD: patch-lib_vmCheck_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- lib/vmCheck/Makefile.am.orig	2008-08-08 07:01:50.000000000 +0000
++++ lib/vmCheck/Makefile.am
+@@ -15,7 +15,6 @@
+ ### Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ ################################################################################
+ 
+-noinst_LIBRARIES = libVmCheck.a
++noinst_LTLIBRARIES = libVmCheck.la
+ 
+-libVmCheck_a_SOURCES =
+-libVmCheck_a_SOURCES += vmcheck.c
++libVmCheck_la_SOURCES = vmcheck.c
