@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/01 18:39:05 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/01 22:23:17 asau Exp $
 
 DISTNAME=	mpqc-2.3.1
 CATEGORIES=	biology
@@ -24,7 +24,10 @@ BUILD_TARGET=	default
 INSTALL_MAKE_FLAGS=	installroot=$(DESTDIR)
 
 REPLACE_PERL=	src/bin/mpqc/ccarun.in src/bin/mpqc/mpqcrun.in
+
+# Don't introduce Tk dependency for minor things, just leave a hook:
 REPLACE_WISH=	src/bin/molrender/tkmolrender.in
+CHECK_INTERPRETER_SKIP=	bin/tkmolrender
 
 # optional:
 # MPI, niama-config, libr12, libderiv
