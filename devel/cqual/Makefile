@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/02/17 19:17:57 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/01 15:26:26 dholland Exp $
 #
 
 DISTNAME=		cqual-0.991
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.umd.edu/~jfoster/cqual/
 COMMENT=		Tool for adding type qualifiers to C
 
+MAKE_JOBS_SAFE=		no
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run bison m4
