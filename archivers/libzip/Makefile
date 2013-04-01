@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/12/12 10:43:30 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2013/04/01 16:03:31 wiz Exp $
 
-DISTNAME=		libzip-0.10.1
+DISTNAME=		libzip-0.11
 CATEGORIES=		archivers devel
 MASTER_SITES=		http://www.nih.at/libzip/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.nih.at/libzip/
