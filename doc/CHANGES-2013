@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1070 2013/04/01 16:03:39 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1071 2013/04/01 16:18:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1531,3 +1531,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated biology/openbabel to 2.3.0nb11 [sbd 2013-04-01]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q1 branch [wiz 2013-04-01]
 	Updated archivers/libzip to 0.11 [wiz 2013-04-01]
+	Updated time/py-pytz to 2013b [wiz 2013-04-01]
