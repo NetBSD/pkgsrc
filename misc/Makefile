@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.395 2013/03/21 04:09:17 jnemeth Exp $
+# $NetBSD: Makefile,v 1.396 2013/04/01 21:03:05 jmcneill Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -230,6 +230,7 @@ SUBDIR+=	py-carddav
 SUBDIR+=	py-libanki
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
+SUBDIR+=	raspberrypi-userland
 SUBDIR+=	reed
 SUBDIR+=	rlwrap
 SUBDIR+=	rocs
