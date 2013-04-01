@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12033 2013/04/01 20:53:55 adam Exp $
+$NetBSD: TODO,v 1.12034 2013/04/01 21:14:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -604,7 +604,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gated-3.6
 	o gaupol-0.21.1
 	o gcal-3.6.3
-	o gcc-4.8.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
