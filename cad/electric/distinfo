@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2012/03/02 15:32:02 hans Exp $
+$NetBSD: distinfo,v 1.7 2013/04/01 09:26:07 sbd Exp $
 
 SHA1 (electric-7.00.tar.gz) = 782652b078e81060928eadfae364cd74da07788e
 RMD160 (electric-7.00.tar.gz) = c57a2e0a32e40d435e125cad6dfc5c1b98e9067b
 Size (electric-7.00.tar.gz) = 4474722 bytes
 SHA1 (patch-aa) = ca3aa5c28eef818dce61055daeedc1b7d2e9a8a7
-SHA1 (patch-ab) = 368810e1dfc1a25cd450f7a3efa74a64b33d9c33
+SHA1 (patch-ab) = 088f1318a39692534ebbf7313893a6420d49523f
 SHA1 (patch-ac) = fac49d88feab792ff665686e9e4fc8a29caab471
 SHA1 (patch-ad) = 6be5c47ead4bf023ef6215d7bce496a2f7abb5b0
 SHA1 (patch-ae) = 095e56c085ae77d0615134b070082f6599a95280
