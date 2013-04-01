@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/01 08:30:06 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/01 18:39:05 asau Exp $
 
 DISTNAME=	mpqc-2.3.1
 CATEGORIES=	biology
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libdirs="$(COMPILER_RPATH_FLAG)$(PREFIX)/lib"	# fixme
 #CONFIGURE_ARGS=	-without-f77	# this doesn't work out of the box
 CONFIGURE_ENV=	ac_cv_prog_WISH=$(REPLACE.wish.new)
-USE_TOOLS+=	perl:run wish:run
+USE_TOOLS+=	perl:run
 USE_LIBTOOL=	yes
 
 USE_TOOLS+=	gmake
