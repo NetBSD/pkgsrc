@@ -1,7 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.1 2013/04/01 15:45:48 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.2 2013/04/01 21:27:30 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
 
 Created pkgsrc-2013Q1 branch [wiz Mon Apr  1 17:45:18 CEST 2013]
 
+Pullup ticket #4108 - requested by dholland
+critical bulk build fix
