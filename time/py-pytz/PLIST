@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/03/12 15:51:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/04/01 16:18:40 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -292,6 +292,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Karachi
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kashgar
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kathmandu
 ${PYSITELIB}/pytz/zoneinfo/Asia/Katmandu
+${PYSITELIB}/pytz/zoneinfo/Asia/Khandyga
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kolkata
 ${PYSITELIB}/pytz/zoneinfo/Asia/Krasnoyarsk
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kuala_Lumpur
@@ -336,6 +337,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Ujung_Pandang
 ${PYSITELIB}/pytz/zoneinfo/Asia/Ulaanbaatar
 ${PYSITELIB}/pytz/zoneinfo/Asia/Ulan_Bator
 ${PYSITELIB}/pytz/zoneinfo/Asia/Urumqi
+${PYSITELIB}/pytz/zoneinfo/Asia/Ust-Nera
 ${PYSITELIB}/pytz/zoneinfo/Asia/Vientiane
 ${PYSITELIB}/pytz/zoneinfo/Asia/Vladivostok
 ${PYSITELIB}/pytz/zoneinfo/Asia/Yakutsk
@@ -444,6 +446,7 @@ ${PYSITELIB}/pytz/zoneinfo/Europe/Bratislava
 ${PYSITELIB}/pytz/zoneinfo/Europe/Brussels
 ${PYSITELIB}/pytz/zoneinfo/Europe/Bucharest
 ${PYSITELIB}/pytz/zoneinfo/Europe/Budapest
+${PYSITELIB}/pytz/zoneinfo/Europe/Busingen
 ${PYSITELIB}/pytz/zoneinfo/Europe/Chisinau
 ${PYSITELIB}/pytz/zoneinfo/Europe/Copenhagen
 ${PYSITELIB}/pytz/zoneinfo/Europe/Dublin
