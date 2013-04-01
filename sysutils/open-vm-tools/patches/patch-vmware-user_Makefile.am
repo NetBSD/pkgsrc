@@ -1,0 +1,15 @@
+$NetBSD: patch-vmware-user_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- vmware-user/Makefile.am.orig	2013-03-31 21:25:01.000000000 +0000
++++ vmware-user/Makefile.am
+@@ -60,8 +60,8 @@ else
+ endif
+ vmware_user_LDADD += ../lib/user/libUser.a
+ vmware_user_LDADD += ../lib/vixTools/libVixTools.a
+-vmware_user_LDADD += ../lib/vmCheck/libVmCheck.a
+-vmware_user_LDADD += ../lib/vmSignal/libVmSignal.a
++vmware_user_LDADD += ../lib/vmCheck/libVmCheck.la
++vmware_user_LDADD += ../lib/vmSignal/libVmSignal.la
+ vmware_user_LDADD += ../lib/wiper/libWiper.a
+ # In the absence of the linker options --start-group and --end-group (which
+ # can't be put in LDADD), we need to bring the following libraries out of

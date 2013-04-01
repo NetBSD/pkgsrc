@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_vmSignal_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- lib/vmSignal/Makefile.am.orig	2013-03-31 21:45:43.000000000 +0000
++++ lib/vmSignal/Makefile.am
+@@ -15,7 +15,7 @@
+ ### Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ ################################################################################
+ 
+-noinst_LIBRARIES = libVmSignal.a
++noinst_LTLIBRARIES = libVmSignal.la
+ 
+-libVmSignal_a_SOURCES =
+-libVmSignal_a_SOURCES += vmsignal.c
++libVmSignal_la_SOURCES =
++libVmSignal_la_SOURCES += vmsignal.c

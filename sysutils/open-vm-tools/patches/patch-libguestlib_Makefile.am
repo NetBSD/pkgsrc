@@ -1,0 +1,20 @@
+$NetBSD: patch-libguestlib_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- libguestlib/Makefile.am.orig	2008-08-08 07:01:57.000000000 +0000
++++ libguestlib/Makefile.am
+@@ -26,12 +26,14 @@ libguestlib_la_LIBADD += ../lib/stubs/sh
+ # order so their symbols are properly resolved.
+ libguestlib_la_LIBADD += ../lib/message/shared/libMessage.la
+ libguestlib_la_LIBADD += ../lib/backdoor/shared/libBackdoor.la
++libguestlib_la_LIBADD += ../lib/vmCheck/libVmCheck.la
++libguestlib_la_LIBADD += ../lib/vmSignal/libVmSignal.la
+ 
+ libguestlib_la_SOURCES =
+ libguestlib_la_SOURCES += vmGuestLib.c
+ libguestlib_la_SOURCES += vmGuestLibPanic.c
+ 
+-libguestlib_la_LDFLAGS =
++libguestlib_la_LDFLAGS = -no-undefined
+ # We require GCC, so we're fine passing compiler-specific flags.
+ # Needed for OS's that don't link shared libraries against libc by default, e.g. FreeBSD
+ libguestlib_la_LDFLAGS += -Wl,-lc
