@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/08/10 15:44:42 drochner Exp $
+$NetBSD: distinfo,v 1.7 2013/04/01 20:34:33 adam Exp $
 
-SHA1 (libdvdcss-1.2.12.tar.bz2) = f0977374f12fadbbeb45e1ff493adc259247bb09
-RMD160 (libdvdcss-1.2.12.tar.bz2) = 6cb95c4ee3d3f2817cc6ba10210776648b687e91
-Size (libdvdcss-1.2.12.tar.bz2) = 331764 bytes
+SHA1 (libdvdcss-1.2.13.tar.bz2) = 1a4a5e55c7529da46386c1c333340eee2c325a77
+RMD160 (libdvdcss-1.2.13.tar.bz2) = 822e00c8a3ce158932634b72e43afa39a5d8b6a2
+Size (libdvdcss-1.2.13.tar.bz2) = 338588 bytes
