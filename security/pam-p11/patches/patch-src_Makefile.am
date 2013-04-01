@@ -1,0 +1,37 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2013/04/01 12:23:52 joerg Exp $
+
+--- src/Makefile.am.orig	2008-07-31 13:23:47.000000000 +0000
++++ src/Makefile.am
+@@ -3,7 +3,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+ AM_CFLAGS = -Wall -fno-strict-aliasing $(OPENSSL_CFLAGS) $(LIBP11_CFLAGS)
+-AM_LDFLAGS = -module -avoid-version
++AM_LDFLAGS = -module -avoid-version -shared
+ 
+ lib_LTLIBRARIES = pam_p11_openssh.la  pam_p11_opensc.la 
+ 
+@@ -13,7 +13,7 @@ pam_p11_openssh_la_LIBADD = $(OPENSSL_LI
+ pam_p11_opensc_la_SOURCES =  pam_p11.c match_opensc.c
+ pam_p11_opensc_la_LIBADD = $(OPENSSL_LIBS) $(LIBP11_LIBS) 
+ 
+-noinst_PROGRAMS= test
++noinst_PROGRAMS=
+ 
+ test_SOURCES=test.c
+ test_LDADD=pam_p11_openssh.la
+@@ -21,12 +21,5 @@ test_LDADD=pam_p11_openssh.la
+ format:
+ 	indent -kr -i8 -ts8 -sob -l80 -ss -ncs *.c *.h
+ 
+-install:       
+-	$(mkinstalldirs) $(DESTDIR)/$(libdir)/security
+-	$(libLTLIBRARIES_INSTALL) $(top_builddir)/src/.libs/pam_p11_openssh.so $(DESTDIR)/$(libdir)/security
+-	$(libLTLIBRARIES_INSTALL) $(top_builddir)/src/.libs/pam_p11_opensc.so $(DESTDIR)/$(libdir)/security
+-
+-uninstall:       
+-	$(RM) $(DESTDIR)/$(libdir)/security/pam_p11_openssh.so 
+-	$(RM) $(DESTDIR)/$(libdir)/security/pam_p11_opensc.so 
+-	@ rmdir $(DESTDIR)/$(libdir)/security
++libdir = @libdir@/security
++
