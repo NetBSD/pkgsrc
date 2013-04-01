@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/12/25 21:02:14 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/04/01 12:25:16 joerg Exp $
 
 SHA1 (open-vm-tools-2008.08.08-109361.tar.gz) = 1c44c3524cd9cbc5870f1c6065b03a6b31859a25
 RMD160 (open-vm-tools-2008.08.08-109361.tar.gz) = 4ea0a6aa2edda2bc404c865dc5b58f3a177ae411
 Size (open-vm-tools-2008.08.08-109361.tar.gz) = 2971141 bytes
-SHA1 (patch-aa) = 113fdbeafe3131558167fb6c4abc9c44786d420b
-SHA1 (patch-ab) = 66ab38809e1ab7b1b0dfd51b88d93a8f0faa2fad
 SHA1 (patch-ac) = 141db2136d1068408ca3470e11d35233f936a11c
 SHA1 (patch-ad) = 4ec9292667918c23ef182ae05d5f8417d9af7673
 SHA1 (patch-ae) = 785a5d5d27ce6f8281caa56a27f90a3b200ac082
@@ -55,9 +53,18 @@ SHA1 (patch-bw) = c242890caa3cc720d18eec612aca6e46c69c5b04
 SHA1 (patch-bx) = deeea5eefae750b046d7a9c81679125e26fb82fa
 SHA1 (patch-by) = c6018a330fdabefd3fc60d3e6e6c95bdf4f7f2bc
 SHA1 (patch-checkvm_checkvm.c) = 142e34b40937add51db4f2255f47da23402a3720
+SHA1 (patch-configure.ac) = d39767cc2006088203341782fca7895c2710fd55
+SHA1 (patch-guestd_Makefile.am) = 4855efa62b6633e23c11e3ea184f60f4c6952244
+SHA1 (patch-hgfsclient_Makefile.am) = 3b6adf9e4d88bcce2c191260b669615537927e28
 SHA1 (patch-lib_hgfsServer_hgfsServer.c) = 68a3102d4f53626717f64284eb5e51bfb584e783
 SHA1 (patch-lib_hgfsServer_hgfsServerLinux.c) = ef5a3135a8e4dc9f16d93d6eb7d88b8194aa0907
 SHA1 (patch-lib_panic_panic.c) = f784479ef9000e67389c04ca80ad22da5e3a2165
+SHA1 (patch-lib_vmCheck_Makefile.am) = 5956c6e81d6ea5679d949083fcf60066d8374672
+SHA1 (patch-lib_vmSignal_Makefile.am) = 6c562e558f846666ed9da3298f15a9cd489bd75f
+SHA1 (patch-libguestlib_Makefile.am) = d46ae6b600831b3f7ecd39f675fbf480a7882e60
+SHA1 (patch-scripts_Makefile.am) = 18bac57a5bfed9883734fdc58a4d6214b6614d92
+SHA1 (patch-toolbox_Makefile.am) = cc0d0f3a0b2b269da903ff6918d329ce74158d17
 SHA1 (patch-toolbox_toolboxcmd-stat.c) = 17d1188de53cea4897fc1d08a02d9db06f6bbc28
+SHA1 (patch-vmware-user_Makefile.am) = 20c389aa42c5419106e1d6619e812725602ead6c
 SHA1 (patch-vmware-user_copyPaste.c) = 58286d54e72d9290fc9392212d37c0c406a4e6f8
 SHA1 (patch-vmware-user_dnd.c) = 9d2b242b5e5042f12440ccbf44b10367a8184b0b
