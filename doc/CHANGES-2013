@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1072 2013/04/01 16:53:52 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.1073 2013/04/01 17:19:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1506,6 +1506,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/p4web [wiz 2013-03-24]
 	Removed emulators/ski-bin successor emulators/ski [wiz 2013-03-24]
 	Updated x11/x3270 to 3.3.12ga12 [gsl 2013-03-24]
+	Removed net/gupnp-vala [drochner 2013-03-24]
 	Updated games/netmaze to 0.81nb4 [dholland 2013-03-25]
 	Updated net/tnftpd to 20130325 [agc 2013-03-25]
 	Updated editors/se to 3.0.1 [tcort 2013-03-25]
