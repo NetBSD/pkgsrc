@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/17 19:37:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/01 12:14:33 joerg Exp $
 include/eigen3/Eigen/Array
 include/eigen3/Eigen/Cholesky
 include/eigen3/Eigen/CholmodSupport
@@ -323,4 +323,4 @@ include/eigen3/unsupported/Eigen/src/SparseExtra/RandomSetter.h
 include/eigen3/unsupported/Eigen/src/Splines/Spline.h
 include/eigen3/unsupported/Eigen/src/Splines/SplineFitting.h
 include/eigen3/unsupported/Eigen/src/Splines/SplineFwd.h
-share/pkgconfig/eigen3.pc
+lib/pkgconfig/eigen3.pc
