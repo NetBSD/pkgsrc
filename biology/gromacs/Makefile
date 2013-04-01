@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 21:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/01 08:01:29 sbd Exp $
 #
 
 DISTNAME=		gromacs-4.5.5
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--disable-gcc41-check
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		scripts/demux.pl scripts/xplor2gmx.pl
+
+CHECK_INTERPRETER_SKIP+= share/gromacs/tutor/gmxdemo/demo
 
 .include "../../mk/bsd.prefs.mk"
 
