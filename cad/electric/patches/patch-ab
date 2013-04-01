@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2012/03/02 15:32:02 hans Exp $
+$NetBSD: patch-ab,v 1.4 2013/04/01 09:26:07 sbd Exp $
 
 - not all !sparcs are little endian.
 
 - don't assume /usr/local
 
---- src/include/config.h.orig	Fri Jul 16 01:59:53 2004
+--- src/include/config.h.orig	2004-07-16 01:59:53.000000000 +0000
 +++ src/include/config.h
-@@ -32,6 +32,19 @@
+@@ -32,6 +32,21 @@
  #ifndef _CONFIG_H_
  #define _CONFIG_H_ 1
  
@@ -19,6 +19,8 @@ $NetBSD: patch-ab,v 1.3 2012/03/02 15:32:02 hans Exp $
 +#else
 +#define BYTE_ORDER LITTLE_ENDIAN
 +#endif
++#elif defined(__linux__)
++#include <endian.h>
 +#else
 +#include <sys/endian.h>
 +#endif
@@ -26,7 +28,7 @@ $NetBSD: patch-ab,v 1.3 2012/03/02 15:32:02 hans Exp $
  /********************* MACHINE DETERMINATION *********************/
  
  /* determine if it is Macintosh OS */
-@@ -135,7 +148,7 @@
+@@ -135,7 +150,7 @@
  #  ifndef USEQT
  #    include <X11/Intrinsic.h>
  #  endif
@@ -35,7 +37,7 @@ $NetBSD: patch-ab,v 1.3 2012/03/02 15:32:02 hans Exp $
  #    define BYTES_SWAPPED  1								/* bytes are MSB first */
  #  endif
  #  define DIRSEP           '/'								/* directory separator */
-@@ -143,31 +145,19 @@
+@@ -143,31 +158,19 @@
  #  define MACFSTAG(x)      0
  #  define NONFILECH        '?'								/* character that cannot be in file name */
  #  define CADRCFILENAME    x_(".cadrc")						/* CAD startup file */
