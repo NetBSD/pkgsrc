@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1079 2013/04/01 21:11:16 jmcneill Exp $
+$NetBSD: CHANGES-2013,v 1.1080 2013/04/01 21:14:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1546,3 +1546,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django to 1.5.1 [adam 2013-04-01]
 	Added misc/raspberrypi-userland version 20130128 [jmcneill 2013-04-01]
 	Added multimedia/libhdhomerun version 20130328 [jmcneill 2013-04-01]
+	Added lang/gcc48 version 4.8.0 [wiz 2013-04-01]
+	Added lang/gcc48-libs version 4.8.0nb1 [wiz 2013-04-01]
