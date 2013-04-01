@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/02/16 11:24:34 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/04/01 12:25:16 joerg Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-vm-tools/}
 
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoconf automake
 
 PLIST_SRC=	PLIST.common
 
@@ -32,12 +32,8 @@ CONF_FILES_PERMS+=		${EGDIR}/suspend-vm-default ${PKG_SYSCONFDIR}/suspend-vm-def
 CONF_FILES_PERMS+=		${EGDIR}/tools.conf ${PKG_SYSCONFDIR}/tools.conf ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 RCD_SCRIPTS=			vmtools
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		scripts/Makefile.in
-SUBST_SED.fix-paths=		-e 's|/etc/vmware-tools|${EGDIR}|g'
-SUBST_SED.fix-paths+=		-e '/^conf_SCRIPTS/s|./common/vm-support ||'
+pre-configure:
+	cd ${WRKSRC} && autoreconf -f
 
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-toolbox_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+
+--- toolbox/Makefile.am.orig	2008-08-08 07:01:57.000000000 +0000
++++ toolbox/Makefile.am
+@@ -26,8 +26,8 @@ COMMON += ../lib/rpcOut/libRpcOut.a
+ COMMON += ../lib/string/libString.a
+ COMMON += ../lib/system/libSystem.a
+ COMMON += ../lib/user/libUser.a
+-COMMON += ../lib/vmCheck/libVmCheck.a
+-COMMON += ../lib/vmSignal/libVmSignal.a
++COMMON += ../lib/vmCheck/libVmCheck.la
++COMMON += ../lib/vmSignal/libVmSignal.la
+ COMMON += ../lib/wiper/libWiper.a
+ # In the absence of the linker options --start-group and --end-group (which
+ # can't be put in LDADD), we need to bring the following libraries out of
