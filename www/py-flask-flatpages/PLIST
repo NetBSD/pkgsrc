@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/08 18:55:54 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/01 16:52:47 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,9 +9,10 @@ ${PYSITELIB}/flask_flatpages/__init__.py
 ${PYSITELIB}/flask_flatpages/__init__.pyc
 ${PYSITELIB}/flask_flatpages/__init__.pyo
 ${PYSITELIB}/flask_flatpages/pages/foo.html
+${PYSITELIB}/flask_flatpages/pages/foo/42/not_a_page.txt
 ${PYSITELIB}/flask_flatpages/pages/foo/bar.html
 ${PYSITELIB}/flask_flatpages/pages/foo/lorem/ipsum.html
-${PYSITELIB}/flask_flatpages/pages/foo/42/not_a_page.txt
+${PYSITELIB}/flask_flatpages/pages/headerid.html
 ${PYSITELIB}/flask_flatpages/pages/hello.html
 ${PYSITELIB}/flask_flatpages/pages/not_a_page.txt
 ${PYSITELIB}/flask_flatpages/pages_shift_jis/hello.html
