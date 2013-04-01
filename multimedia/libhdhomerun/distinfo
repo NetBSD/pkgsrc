@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/01 21:08:38 jmcneill Exp $
+
+SHA1 (libhdhomerun_20130328.tgz) = 005b0771a94bf2f1a2ce4765b16a1fa636df77cb
+RMD160 (libhdhomerun_20130328.tgz) = ad1b01b9673e125af6e8f2b1f4990b4b5d796ef3
+Size (libhdhomerun_20130328.tgz) = 41931 bytes
