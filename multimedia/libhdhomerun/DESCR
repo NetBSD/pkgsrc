@@ -1,0 +1,3 @@
+The Silicon Dust HDHomeRun is a networked, dual-tuner digital TV tuner. This
+package includes a configuration utility and library for discovering and
+communicating with HDHomeRun devices.
