@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2013/03/12 20:47:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2013/04/01 20:52:44 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
@@ -1535,6 +1535,9 @@ ${PYSITELIB}/django/contrib/auth/tests/tokens.pyo
 ${PYSITELIB}/django/contrib/auth/tests/urls.py
 ${PYSITELIB}/django/contrib/auth/tests/urls.pyc
 ${PYSITELIB}/django/contrib/auth/tests/urls.pyo
+${PYSITELIB}/django/contrib/auth/tests/urls_admin.py
+${PYSITELIB}/django/contrib/auth/tests/urls_admin.pyc
+${PYSITELIB}/django/contrib/auth/tests/urls_admin.pyo
 ${PYSITELIB}/django/contrib/auth/tests/utils.py
 ${PYSITELIB}/django/contrib/auth/tests/utils.pyc
 ${PYSITELIB}/django/contrib/auth/tests/utils.pyo
