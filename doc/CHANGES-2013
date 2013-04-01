@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1076 2013/04/01 20:41:41 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1077 2013/04/01 20:53:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1543,3 +1543,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3-tcl to 3.7.16.1 [adam 2013-04-01]
 	Updated multimedia/libdvdcss to 1.2.13 [adam 2013-04-01]
 	Updated multimedia/dvdbackup to 0.4.2 [adam 2013-04-01]
+	Updated www/py-django to 1.5.1 [adam 2013-04-01]
