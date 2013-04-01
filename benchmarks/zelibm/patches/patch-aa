@@ -1,78 +1,107 @@
-$NetBSD: patch-aa,v 1.2 2005/08/02 14:53:25 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2013/04/01 07:35:04 sbd Exp $
 
---- dbl2mpq.c.orig	1998-11-24 06:06:54.000000000 +0100
+--- dbl2mpq.c.orig	1998-11-24 05:06:54.000000000 +0000
 +++ dbl2mpq.c
-@@ -5,7 +5,8 @@
+@@ -5,7 +5,12 @@
  
  #include <float.h>
  #include <gmp.h>
--#include <ieee754.h>
++#ifdef __linux__
+ #include <ieee754.h>
++#else
 +#include <sys/types.h>
 +#include <machine/ieee.h>
++#endif
  #include <stdlib.h>
  
  #include "zelibm.h"
-@@ -14,50 +15,50 @@
+@@ -14,50 +19,89 @@
  void
  extract_double (mpq_t r, double d)
  {
--  union ieee754_double u;
++#ifdef __linux__
+   union ieee754_double u;
++#else
 +  union ieee_double_u u;
++#endif
    unsigned int val;
  
    /* Make the floating point value available in the broken down form.  We
       cannot use casting of pointers and other ugly ways to access the bits.
       Using the union is the only half-way clean method.  */
--  u.d = d;
++#ifdef __linux__
+   u.d = d;
++#else
 +  u.dblu_d = d;
++#endif
  
    mpq_init (r);
  
    /* Set the high word and the denominator to 1.  */
--  val = u.ieee.mantissa0;
--  if (u.ieee.exponent != 0)
++#ifdef __linux__
+   val = u.ieee.mantissa0;
+   if (u.ieee.exponent != 0)
++#else
 +  val = u.dblu_dbl.dbl_frach;
 +  if (u.dblu_dbl.dbl_exp != 0)
++#endif
      val |= 1 << (DBL_MANT_DIG - 32 - 1);
    mpq_set_ui (r, val, 1);
    /* Shift in the right position.  */
    mpz_mul_2exp (mpq_numref (r), mpq_numref (r), 32);
    /* Add the lower word.  */
--  mpz_add_ui (mpq_numref (r), mpq_numref (r), u.ieee.mantissa1);
-+  mpz_add_ui (mpq_numref (r), mpq_numref (r), u.dblu_dbl.dbl_fracl);
++#ifdef __linux__
+   mpz_add_ui (mpq_numref (r), mpq_numref (r), u.ieee.mantissa1);
  
--  if (u.ieee.exponent == 0)
-+  if (u.dblu_dbl.dbl_exp == 0)
+   if (u.ieee.exponent == 0)
      {
--      if (u.ieee.mantissa0 != 0 && u.ieee.mantissa1 != 0)
+       if (u.ieee.mantissa0 != 0 && u.ieee.mantissa1 != 0)
++#else
++  mpz_add_ui (mpq_numref (r), mpq_numref (r), u.dblu_dbl.dbl_fracl);
++
++  if (u.dblu_dbl.dbl_exp == 0)
++    {
 +      if (u.dblu_dbl.dbl_frach != 0 && u.dblu_dbl.dbl_fracl != 0)
++#endif
  	{
  	  /* The number is a denormalized.  */
  	  mpz_mul_2exp (mpq_denref (r), mpq_denref (r),
  			-DBL_MIN_EXP + DBL_MANT_DIG + 1);
  	}
      }
--  else if (u.ieee.exponent >= IEEE754_DOUBLE_BIAS + DBL_MANT_DIG)
++#ifdef __linux__
+   else if (u.ieee.exponent >= IEEE754_DOUBLE_BIAS + DBL_MANT_DIG)
++#else
 +  else if (u.dblu_dbl.dbl_exp >= DBL_EXP_BIAS + DBL_MANT_DIG)
++#endif
      {
        /* We have to multiply the numerator with the exponent.  */
        mpz_mul_2exp (mpq_numref (r), mpq_numref (r),
--		    (u.ieee.exponent
--		     - (IEEE754_DOUBLE_BIAS + DBL_MANT_DIG - 1)));
++#ifdef __linux__
+ 		    (u.ieee.exponent
+ 		     - (IEEE754_DOUBLE_BIAS + DBL_MANT_DIG - 1)));
++#else
 +		    (u.dblu_dbl.dbl_exp
 +		     - (DBL_EXP_BIAS + DBL_MANT_DIG - 1)));
++#endif
      }
    else
      {
        /* Set denominator to the appropriate power of 2.  */
        mpz_mul_2exp (mpq_denref (r), mpq_denref (r),
--		    ((IEEE754_DOUBLE_BIAS + DBL_MANT_DIG - 1)
--		     - u.ieee.exponent));
++#ifdef __linux__
+ 		    ((IEEE754_DOUBLE_BIAS + DBL_MANT_DIG - 1)
+ 		     - u.ieee.exponent));
++#else
 +		    ((DBL_EXP_BIAS + DBL_MANT_DIG - 1)
 +		     - u.dblu_dbl.dbl_exp));
++#endif
      }
  
--  if (u.ieee.negative)
++#ifdef __linux__
+   if (u.ieee.negative)
++#else
 +  if (u.dblu_dbl.dbl_sign)
++#endif
      mpq_neg (r, r);
  }
