@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/01/29 02:48:30 jakllsch Exp $
+$NetBSD: distinfo,v 1.5 2013/04/01 20:37:50 adam Exp $
 
-SHA1 (dvdbackup-0.4.1.tar.bz2) = d40b738917cac62a46405f6566a66359504f9a73
-RMD160 (dvdbackup-0.4.1.tar.bz2) = a302bbdf6cb3b169784c326e095b1345e5f56538
-Size (dvdbackup-0.4.1.tar.bz2) = 188496 bytes
-SHA1 (patch-src_dvdbackup.c) = f270dd1fdbc33dedbe7b5236fc3e4ffe5db942b7
+SHA1 (dvdbackup-0.4.2.tar.xz) = cf10f2e2d1d8df23ecda96e867b9a39ce6b6f884
+RMD160 (dvdbackup-0.4.2.tar.xz) = f329083761672932b38e61c0343935199e08b067
+Size (dvdbackup-0.4.2.tar.xz) = 178660 bytes
