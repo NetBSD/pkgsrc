@@ -1,35 +1,45 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/07/27 17:06:53 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2013/04/01 07:35:04 sbd Exp $
 
---- zerandom.c.orig	2004-04-16 21:53:15.000000000 +0200
-+++ zerandom.c	2004-04-16 21:57:46.000000000 +0200
-@@ -3,7 +3,7 @@
+--- zerandom.c.orig	1998-11-24 05:08:12.000000000 +0000
++++ zerandom.c
+@@ -3,7 +3,11 @@
     As a special restriction the file must not be used in this or a modified
     form on Microsoft and Be systems.  */
  
--#include <ieee754.h>
++#ifdef __linux__
+ #include <ieee754.h>
++#else
 +#include <machine/ieee.h>
++#endif
  #include <stdlib.h>
  
  #include "zelibm.h"
-@@ -15,15 +15,15 @@
+@@ -15,15 +19,28 @@ zerandom (double low, double high)
    /* Get two 31 bit random numbers for the initial mantissa.  */
    unsigned int r1 = random ();
    unsigned int r2 = random ();
--  union ieee754_double u;
++#ifdef __linux__
+   union ieee754_double u;
++#else
 +  union ieee_double_u u;
++#endif
    double res;
  
--  u.ieee.negative = 0;
--  u.ieee.exponent = IEEE754_DOUBLE_BIAS - 1;
--  u.ieee.mantissa0 = r1 >> 1;
--  u.ieee.mantissa1 = r2 | r1 << 31;
++#ifdef __linux__
+   u.ieee.negative = 0;
+   u.ieee.exponent = IEEE754_DOUBLE_BIAS - 1;
+   u.ieee.mantissa0 = r1 >> 1;
+   u.ieee.mantissa1 = r2 | r1 << 31;
+ 
+   res = low + 2 * (u.d - 0.5) * (high - low);
++#else
 +  u.dblu_dbl.dbl_sign = 0;
 +  u.dblu_dbl.dbl_exp = DBL_EXP_BIAS - 1;
 +  u.dblu_dbl.dbl_frach = r1 >> 1;
 +  u.dblu_dbl.dbl_fracl = r2 | r1 << 31;
- 
--  res = low + 2 * (u.d - 0.5) * (high - low);
++
 +  res = low + 2 * (u.dblu_d - 0.5) * (high - low);
++#endif
  
    while (res > high)
      res /= 2.0;
