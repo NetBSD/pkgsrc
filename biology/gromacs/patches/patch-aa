@@ -1,12 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2010/09/03 20:52:39 asau Exp $
+$NetBSD: patch-aa,v 1.3 2013/04/01 08:00:16 sbd Exp $
 
 Allow flags to contain commas.
 
---- share/template/Makefile.in.orig	2010-08-10 22:56:17.000000000 +0400
-+++ share/template/Makefile.in	2010-08-11 00:14:07.000000000 +0400
-@@ -569,9 +569,9 @@
+--- share/template/Makefile.in.orig	2011-09-21 12:38:30.000000000 +0000
++++ share/template/Makefile.in
+@@ -250,11 +250,11 @@ XLIBS = -lmd@LIBSUFFIX@ -lgmx@LIBSUFFIX@
+ XCC = @CC@
+ @GMX_DOUBLE_FALSE@MYCFLAGS = @CFLAGS@ @INCLUDES@ -I@includedir@
+ @GMX_DOUBLE_TRUE@MYCFLAGS = @CFLAGS@ @INCLUDES@ -I@includedir@ -DGMX_DOUBLE
+-@GMX_DOUBLE_FALSE@template_DATA = template.c README Makefile.@host@ Makefile.pkg
+-@GMX_DOUBLE_TRUE@template_DATA = template.c README Makefile.@host@_double Makefile.pkg
++@GMX_DOUBLE_FALSE@template_DATA = template.c README Makefile.@host_alias@ Makefile.pkg
++@GMX_DOUBLE_TRUE@template_DATA = template.c README Makefile.@host_alias@_double Makefile.pkg
+ EXTRA_DIST = template.c README Template.mak Makefile.pkg CMakeLists.txt.template
+ BUILT_SOURCES = gromacs
+-CLEANFILES = Makefile.@host@ Makefile.@host@_double *~ \\\#*
++CLEANFILES = Makefile.@host_alias@ Makefile.@host_alias@_double *~ \\\#*
+ template_SOURCES = template.c
+ LDADD = ../../src/mdlib/libmd@LIBSUFFIX@.la ../../src/gmxlib/libgmx@LIBSUFFIX@.la
+ all: $(BUILT_SOURCES)
+@@ -569,13 +569,13 @@ uninstall-am: uninstall-templateDATA
+ gromacs:
+ 	$(LN_S) $(top_srcdir)/include gromacs
  
- Makefile.@host@ Makefile.@host@_double: Template.mak Makefile 
+-Makefile.@host@ Makefile.@host@_double: Template.mak Makefile 
++Makefile.@host_alias@ Makefile.@host_alias@_double: Template.mak Makefile 
  	cat $(srcdir)/Template.mak | \
 -	sed 's,@LDFLAGS\@,$(XLDFLAGS),' | \
 -	sed 's,@LIBS\@,$(XLIBS),' | \
@@ -15,5 +33,8 @@ Allow flags to contain commas.
 +	sed 's|@LIBS\@|$(XLIBS)|' | \
 +	sed 's|@CFLAGS\@|$(MYCFLAGS)|' | \
  	sed 's,@CC\@,$(XCC),' | \
- 	sed 's,@host\@,@host@,' >$@
+-	sed 's,@host\@,@host@,' >$@
++	sed 's,@host\@,@host_alias@,' >$@
  #template.$(OBJEXT): gromacs
+ 
+ clean-local:
