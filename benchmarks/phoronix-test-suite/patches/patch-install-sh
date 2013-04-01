@@ -1,4 +1,4 @@
-$NetBSD: patch-install-sh,v 1.2 2012/08/15 22:08:16 marino Exp $
+$NetBSD: patch-install-sh,v 1.3 2013/04/01 06:13:13 sbd Exp $
 
 * Handle pkgsrc hierarchy, especially paths to man pages.
 * Do not execute xdg-* during installation, let the shared-mime-info
@@ -16,7 +16,7 @@ $NetBSD: patch-install-sh,v 1.2 2012/08/15 22:08:16 marino Exp $
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/applications/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/
 -mkdir -p $DESTDIR$INSTALL_PREFIX/share/man/man1/
-+mkdir -p $DESTDIR$INSTALL_PREFIX/man/man1/
++mkdir -p $DESTDIR$INSTALL_PREFIX/$PKGMANDIR/man1/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
 -mkdir -p $DESTDIR$INSTALL_PREFIX/../etc/bash_completion.d/
@@ -33,7 +33,7 @@ $NetBSD: patch-install-sh,v 1.2 2012/08/15 22:08:16 marino Exp $
  
 -cp documentation/man-pages/*.1 $DESTDIR$INSTALL_PREFIX/share/man/man1/
 -cp pts-core/static/bash_completion $DESTDIR$INSTALL_PREFIX/../etc/bash_completion.d/phoronix-test-suite
-+cp documentation/man-pages/*.1 $DESTDIR$INSTALL_PREFIX/man/man1/
++cp documentation/man-pages/*.1 $DESTDIR$INSTALL_PREFIX/$PKGMANDIR/man1/
 +cp pts-core/static/bash_completion $DESTDIR$INSTALL_PREFIX/share/bash-completion.d
  cp pts-core/static/images/phoronix-test-suite.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/phoronix-test-suite.png
  cp pts-core/static/images/openbenchmarking.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/64x64/apps/openbenchmarking.png
