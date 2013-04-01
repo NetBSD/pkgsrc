@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1073 2013/04/01 17:19:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1074 2013/04/01 17:43:58 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1534,3 +1534,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/libzip to 0.11 [wiz 2013-04-01]
 	Updated time/py-pytz to 2013b [wiz 2013-04-01]
 	Updated www/py-flask-flatpages to 0.4 [kleink 2013-04-01]
+	Added devel/py-speaklater version 1.3 [kleink 2013-04-01]
+	Added www/py-flask-babelex version 0.8.1 [kleink 2013-04-01]
