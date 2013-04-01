@@ -1,0 +1,29 @@
+$NetBSD: patch-gcc_configure,v 1.1 2013/04/01 21:06:17 wiz Exp $
+
+Add dl_iterate_phdr detection for FreeBSD and DragonFly.
+Detection for NetBSD and OpenBSD is added but commented out in case this
+error handling mechanism is activated for these platforms later.
+
+--- gcc/configure.orig	2012-03-08 13:54:54.000000000 +0000
++++ gcc/configure
+@@ -26802,6 +26802,20 @@ case "$target" in
+       gcc_cv_target_dl_iterate_phdr=no
+     fi
+     ;;
++  *-*-dragonfly* | *-*-freebsd*)
++  if grep dl_iterate_phdr $target_header_dir/sys/link_elf.h > /dev/null 2>&1; then
++      gcc_cv_target_dl_iterate_phdr=yes
++    else
++      gcc_cv_target_dl_iterate_phdr=no
++    fi
++  ;;
++# *-*-netbsd* | *-*-openbsd*)
++# if grep dl_iterate_phdr $target_header_dir/link_elf.h > /dev/null 2>&1; then
++#     gcc_cv_target_dl_iterate_phdr=yes
++#   else
++#     gcc_cv_target_dl_iterate_phdr=no
++#   fi
++# ;;
+ esac
+ 
+ if test x$gcc_cv_target_dl_iterate_phdr = xyes; then

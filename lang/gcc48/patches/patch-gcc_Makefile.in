@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_Makefile.in,v 1.1 2013/04/01 21:06:16 wiz Exp $
+
+Add gcc libdir to a programs rpath so that _this gcc's_ support libraries
+are found.
+
+--- gcc/Makefile.in.orig	2013-03-05 09:46:34.000000000 +0000
++++ gcc/Makefile.in
+@@ -2027,6 +2027,7 @@ prefix.o: prefix.c $(CONFIG_H) $(SYSTEM_
+ # Language-independent files.
+ 
+ DRIVER_DEFINES = \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(prefix)/@GCC_TARGET_MACHINE@/lib/%M $(LINKER_RPATH_FLAG) $(libdir)/%M \"" \
+   -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
+   -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
+   -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \

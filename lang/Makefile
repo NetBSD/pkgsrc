@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2013/03/24 18:35:04 dholland Exp $
+# $NetBSD: Makefile,v 1.342 2013/04/01 21:06:15 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -62,6 +62,8 @@ SUBDIR+=	gcc45
 SUBDIR+=	gcc46
 SUBDIR+=	gcc47
 SUBDIR+=	gcc47-libs
+SUBDIR+=	gcc48
+SUBDIR+=	gcc48-libs
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	gnat-aux
