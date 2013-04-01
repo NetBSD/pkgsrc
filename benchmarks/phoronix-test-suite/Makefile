@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/16 07:21:19 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/01 06:13:12 sbd Exp $
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
@@ -34,7 +34,8 @@ pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
-	cd ${WRKSRC}/ && DESTDIR=${DESTDIR:Q} ./install-sh ${PREFIX:Q}
+	cd ${WRKSRC}/ && DESTDIR=${DESTDIR:Q} PKGMANDIR=${PKGMANDIR:Q} \
+		./install-sh ${PREFIX:Q}
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
