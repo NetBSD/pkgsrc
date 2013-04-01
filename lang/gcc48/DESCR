@@ -1,0 +1,4 @@
+The GNU Compiler Collection (GCC) includes front ends for C, C++, Objective-C,
+Fortran, Java, and Go, as well as libraries for these languages (libstdc++,
+libgcj,...). This package provides the snapshot relases of version 4.8.
+See http://gcc.gnu.org/gcc-4.8/changes.html for changes relative to 4.7.x.

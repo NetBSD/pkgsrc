@@ -1,0 +1,14 @@
+$NetBSD: patch-libstdc++-v3_configure.host,v 1.1 2013/04/01 21:06:18 wiz Exp $
+
+--- libstdc++-v3/configure.host.orig	2012-02-10 18:10:12.000000000 +0000
++++ libstdc++-v3/configure.host
+@@ -239,6 +239,9 @@ case "${host_os}" in
+     os_include_dir="os/djgpp"
+     error_constants_dir="os/djgpp"
+     ;;
++  dragonfly*)
++    os_include_dir="os/bsd/dragonfly"
++    ;;
+   freebsd*)
+     os_include_dir="os/bsd/freebsd"
+     ;;
