@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12029 2013/03/31 13:59:29 wiz Exp $
+$NetBSD: TODO,v 1.12030 2013/04/01 16:08:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.1.1 [etm successor]
+	o etm2-2.1.2 [etm successor]
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evince-3.8.0
@@ -822,7 +822,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmemcached-1.0.16
 	o libmicrohttpd-0.9.26
 	o libmms-0.6.2
-	o libmp3splt-0.8.1
+	o libmp3splt-0.8.2
 	o libmtp-1.1.5
 	o libnasl-2.3.1
 	o libnice-0.1.4
@@ -896,8 +896,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mosh-1.2.4
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.8.0
-	o mp3diags-1.0.11
-	o mp3splt-2.5.1
+	o mp3diags-1.2.00
+	o mp3splt-2.5.2
 	o mp3splt-gtk-0.7.3
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.2
@@ -1020,7 +1020,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-3.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9781
+	o puzzles-9797
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1328,11 +1328,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmon-1.5.6
-	o xmp-4.0.1
+	o xmp-4.0.3
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorp-1.8.5
-	o xosview-1.13
+	o xosview-1.14
 	o xpaint-2.9.9
 	o xpr-1.0.4 [unpackaged]
 	o xproto-7.0.24
@@ -1347,6 +1347,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xvidcap-1.1.7
 	o xvidtune-1.0.3
 	o xview-3.2.1.4.25.5
+	o xvkbd-3.4
 	o xwpe-1.5.30a
 	o xye-0.12.1
 	o xzip-182
