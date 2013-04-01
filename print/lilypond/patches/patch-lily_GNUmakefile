@@ -1,0 +1,17 @@
+$NetBSD: patch-lily_GNUmakefile,v 1.1 2013/04/01 12:20:47 joerg Exp $
+
+Issue 2208.
+
+--- lily/GNUmakefile.orig	2013-03-31 15:01:52.000000000 +0000
++++ lily/GNUmakefile
+@@ -7,10 +7,6 @@ SUBDIRS = include
+ MODULE_LIBS=$(depth)/flower
+ MODULE_INCLUDES= $(depth)/flower/include
+ 
+-# need this to convert between function pointers and member function pointers.
+-MODULE_CXXFLAGS= -Wno-pmf-conversions 
+-
+-
+ HELP2MAN_EXECS = lilypond
+ STEPMAKE_TEMPLATES=c c++ executable po help2man
+ 

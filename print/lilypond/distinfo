@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2013/01/25 11:32:07 wiz Exp $
+$NetBSD: distinfo,v 1.17 2013/04/01 12:20:46 joerg Exp $
 
 SHA1 (lilypond-2.16.2.tar.gz) = 1eb3b0e5c117a8669dba19ab28f933351e51e39a
 RMD160 (lilypond-2.16.2.tar.gz) = bbb68ef05e81d8d9f5cf7ac26cffb5ab3935c61a
@@ -7,4 +7,9 @@ SHA1 (patch-aa) = 99dc3ecc7df664fba71d850e6c0b253fc451ec61
 SHA1 (patch-ab) = 08bf158aed8f6cbaf11d054716069486cf393d6b
 SHA1 (patch-ac) = ca7a8671885a40201f201431d2eb8a3377993c67
 SHA1 (patch-configure) = b0c73d828f26fb8db895ace55a678a6d7b09db0e
+SHA1 (patch-lily_GNUmakefile) = b5ee1b8a307b8d1118e603a995d7645536c71dc4
+SHA1 (patch-lily_grob.cc) = d6f12a99f3a517fb635e64d564821873f7f6b78f
+SHA1 (patch-lily_include_lily-proto.hh) = a472898ad4c3adb8b31aec8009f1d04845b9ddb3
+SHA1 (patch-lily_include_translator-group.hh) = c2fb449562288ecf097fefae7527c5f89f1f527c
+SHA1 (patch-lily_translator-dispatch-list.cc) = 90bc3d7fa45a10d2f5b92557328e82aa3e9763d8
 SHA1 (patch-scripts_auxiliar_cg-section.sh) = c6838a358ae1ea2f8ddd0791e72eb3c25ac2019b
