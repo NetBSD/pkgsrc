@@ -1,0 +1,4 @@
+Speaklater is a module that provides lazy strings for translations.
+Basically you get an object that appears to be a string but changes
+the value every time the value is evaluated based on a callable
+you provide.
