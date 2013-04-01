@@ -1,0 +1,82 @@
+$NetBSD: patch-boost_boost__1__34__1.patch,v 1.1 2013/04/01 12:19:13 joerg Exp $
+
+--- boost/boost_1_34_1.patch.orig	2013-03-30 22:51:40.000000000 +0000
++++ boost/boost_1_34_1.patch
+@@ -258,3 +258,77 @@
+              return *this;
+          }
+  
++--- misc/build/boost_1_34_1/boost/function/function_template.hpp.orig	2006-09-29 17:23:28.000000000 +0000
+++++ misc/build/boost_1_34_1/boost/function/function_template.hpp
++@@ -10,6 +10,7 @@
++ // Note: this header is a header template and must NOT have multiple-inclusion
++ // protection.
++ #include <boost/function/detail/prologue.hpp>
+++#include <boost/detail/no_exceptions_support.hpp>
++ 
++ #define BOOST_FUNCTION_TEMPLATE_PARMS BOOST_PP_ENUM_PARAMS(BOOST_FUNCTION_NUM_ARGS, typename T)
++ 
++@@ -561,12 +562,13 @@ namespace boost {
++     operator=(Functor BOOST_FUNCTION_TARGET_FIX(const &) f)
++     {
++       this->clear();
++-      try {
+++      BOOST_TRY {
++         this->assign_to(f);
++-      } catch (...) {
+++      } BOOST_CATCH (...) {
++         vtable = 0;
++-        throw;
+++        BOOST_RETHROW;
++       }
+++      BOOST_CATCH_END
++       return *this;
++     }
++ 
++@@ -592,12 +594,13 @@ namespace boost {
++         return *this;
++ 
++       this->clear();
++-      try {
+++      BOOST_TRY {
++         this->assign_to_own(f);
++-      } catch (...) {
+++      } BOOST_CATCH (...) {
++         vtable = 0;
++-        throw;
+++        BOOST_RETHROW;
++       }
+++      BOOST_CATCH_END
++       return *this;
++     }
++ 
++--- misc/build/boost_1_34_1/boost/weak_ptr.hpp.orig	2013-03-30 19:19:49.000000000 +0000
+++++ misc/build/boost_1_34_1/boost/weak_ptr.hpp
++@@ -14,6 +14,7 @@
++ //
++ 
++ #include <memory> // boost.TR1 include order fix
+++#include <boost/detail/no_exceptions_support.hpp>
++ #include <boost/detail/shared_count.hpp>
++ #include <boost/shared_ptr.hpp>
++ 
++@@ -101,16 +102,14 @@ public:
++             return shared_ptr<element_type>();
++         }
++ 
++-        try
++-        {
+++        BOOST_TRY {
++             return shared_ptr<element_type>(*this);
++-        }
++-        catch(bad_weak_ptr const &)
++-        {
+++        } BOOST_CATCH (bad_weak_ptr const &) {
++             // Q: how can we get here?
++             // A: another thread may have invalidated r after the use_count test above.
++             return shared_ptr<element_type>();
++         }
+++        BOOST_CATCH_END
++ 
++ #else
++ 
