@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2013/01/22 13:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2013/04/01 21:10:10 jmcneill Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -100,6 +100,7 @@ SUBDIR+=	libflash
 SUBDIR+=	libflashsupport
 SUBDIR+=	libflashsupport-pulse
 SUBDIR+=	libflashsupport10
+SUBDIR+=	libhdhomerun
 SUBDIR+=	libmatroska
 SUBDIR+=	libmp4v2
 SUBDIR+=	libmpeg2
