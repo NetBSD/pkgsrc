@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1081 2013/04/01 22:35:11 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.1082 2013/04/02 00:24:23 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/gcc48 version 4.8.0 [wiz 2013-04-01]
 	Added lang/gcc48-libs version 4.8.0nb1 [wiz 2013-04-01]
 	Updated net/unbound to 1.4.20 [pettai 2013-04-01]
+	Updated editors/sandy to 0.4 [mspo 2013-04-02]
