@@ -1,0 +1,7 @@
+Decode audio files using whichever backend is available. The library
+currently supports:
+- `Gstreamer`_ via `gst-python`_.
+- `Core Audio`_ on Mac OS X via `ctypes`_. (PyObjC not required.)
+- `MAD`_ via the `pymad`_ bindings.
+- `FFmpeg`_ via its command-line interface.
+- The standard library `wave`_ and `aifc`_ modules (for WAV and AIFF files).
