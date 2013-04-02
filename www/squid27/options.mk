@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.20 2010/07/28 10:16:14 adam Exp $
+# $NetBSD: options.mk,v 1.1 2013/04/02 15:42:22 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	snmp ssl \
-		squid-backend-aufs squid-backend-null \
+		squid-backend-aufs squid-backend-coss squid-backend-null \
 		squid-backend-ufs squid-carp squid-unlinkd \
 		squid-ldap-helper squid-pam-helper
 
@@ -22,25 +22,10 @@ PLIST_VARS+=	eacl_ip_user eacl_ldap_group eacl_unix_group
 #
 # most of options are enabled by default except aufs.  aufs backend isn't
 # tested well.
-PKG_SUGGESTED_OPTIONS=	squid-carp snmp ssl squid-pam-helper squid-unlinkd
+PKG_SUGGESTED_OPTIONS=	squid-backend-coss squid-carp snmp ssl \
+			squid-pam-helper squid-unlinkd
 
 .include "../../mk/bsd.prefs.mk"
-
-#
-# Squid 3.1 and above include IPv6 support
-#
-.if empty(PKGNAME:Msquid-[0-2].*) && empty(PKGNAME:Msquid-3.0.*)
-PKG_SUPPORTED_OPTIONS+=	inet6
-PKG_SUGGESTED_OPTIONS+=	inet6
-.endif
-
-#
-# Squid 3.0's COSS support is not stable now.
-#
-.if !empty(PKGNAME:Msquid-2.[0-9]*.[0-9]*)
-PKG_SUPPORTED_OPTIONS+=	squid-backend-coss 
-PKG_SUGGESTED_OPTIONS+=	squid-backend-coss
-.endif
 
 .if !empty(OPSYS:MLinux)
 PKG_SUPPORTED_OPTIONS+=	squid-netfilter
@@ -70,7 +55,7 @@ PKG_SUGGESTED_OPTIONS+=	squid-ipfw
 .endif
 
 # Darwin doesn't support System V IPC support.
-.if empty(PKGNAME:Msquid-[0-2].*) || empty(OPSYS:MDarwin)
+.if empty(OPSYS:MDarwin)
 PKG_SUPPORTED_OPTIONS+=	squid-backend-diskd
 PKG_SUGGESTED_OPTIONS+=	squid-backend-diskd
 .endif
