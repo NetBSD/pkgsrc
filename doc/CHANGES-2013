@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1137 2013/04/02 15:27:39 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.1138 2013/04/02 15:30:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1607,3 +1607,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc47 to 4.7.2nb3 [jperkin 2013-04-02]
 	Updated lang/gcc47-libs to 4.7.2nb4 [jperkin 2013-04-02]
 	Updated devel/sparse to 0.4.4 [dholland 2013-04-02]
+	Updated www/contao211 to 2.11.10 [taca 2013-04-02]
+	Updated www/contao211-example to 2.11.10 [taca 2013-04-02]
