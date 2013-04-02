@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/06 15:56:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/04/02 15:29:00 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/LGPL.txt
@@ -486,7 +486,6 @@ ${CT_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/vi_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/zh_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/autosave/editor_plugin.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/autosave/editor_plugin_src.js
-${CT_WEBDIR}/plugins/tinyMCE/plugins/autosave/langs/en.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/directionality/editor_plugin.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/directionality/editor_plugin_src.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/emotions/editor_plugin.js
@@ -664,6 +663,7 @@ ${CT_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/uk_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/vi_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/zh_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/searchreplace.htm
+${CT_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/changelog.txt
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/EnchantSpell.php
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/GoogleSpell.php
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/PSpell.php
@@ -726,6 +726,7 @@ ${CT_WEBDIR}/plugins/tinyMCE/plugins/style/langs/uk_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/style/langs/vi_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/style/langs/zh_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/style/props.htm
+${CT_WEBDIR}/plugins/tinyMCE/plugins/style/readme.txt
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/tabfocus/editor_plugin.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/tabfocus/editor_plugin_src.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/table/cell.htm
