@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.132 2013/04/01 21:06:57 wiz Exp $
+# $NetBSD: gcc.mk,v 1.133 2013/04/02 22:24:03 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -109,7 +109,7 @@ GCC_REQD+=	20120614
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
 #
-.include "../../lang/gcc48/version.mk"
+.include "../../lang/gcc47/version.mk"
 _GCC_DIST_VERSION:=	${GCC_DIST_VERSION}
 
 # _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
