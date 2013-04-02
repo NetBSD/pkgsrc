@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2013/04/02 15:27:11 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/02 15:38:51 dholland Exp $
 #
 
 DISTNAME=	sparse-0.4.4
 CATEGORIES=	devel lang
 MASTER_SITES=	https://kernel.org/pub/software/devel/sparse/dist/
 EXTRACT_SUFX=	.tar.xz
+FETCH_USING=	curl
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://kernel.org/pub/software/devel/sparse/
