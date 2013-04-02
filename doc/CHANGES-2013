@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1140 2013/04/02 15:35:24 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1141 2013/04/02 15:47:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1612,3 +1612,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211-translations to 201303210 [taca 2013-04-02]
 	Updated www/contao30 to 3.0.6 [taca 2013-04-02]
 	Updated www/contao30-example to 3.0.6 [taca 2013-04-02]
+	Updated www/geeklog to 2.0.0 [taca 2013-04-02]
