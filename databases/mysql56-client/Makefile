@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/13 21:00:02 adam Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/02 16:37:55 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=	mysqc
@@ -16,7 +16,6 @@ INSTALL_DIRS+=		client include libmysql man scripts tests
 REPLACE_PERL=	scripts/mysql_convert_table_format.sh
 REPLACE_PERL+=	scripts/mysql_find_rows.sh
 REPLACE_PERL+=	scripts/mysql_fix_extensions.sh
-REPLACE_PERL+=	scripts/mysql_fix_privilege_tables.sh
 REPLACE_PERL+=	scripts/mysql_install_db.pl.in
 REPLACE_PERL+=	scripts/mysql_secure_installation.pl.in
 REPLACE_PERL+=	scripts/mysql_setpermission.sh
