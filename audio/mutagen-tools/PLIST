@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/02 10:50:48 drochner Exp $
+bin/mid3iconv
+bin/mid3v2
+bin/moggsplit
+bin/mutagen-inspect
+bin/mutagen-pony
+man/man1/mid3iconv.1
+man/man1/mid3v2.1
+man/man1/moggsplit.1
+man/man1/mutagen-inspect.1
+man/man1/mutagen-pony.1
