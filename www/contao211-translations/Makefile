@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2013/03/16 07:21:23 obache Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/02 15:31:21 taca Exp $
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# defined for each distfiles
 DISTFILES=	${CT_DISTFILES}
@@ -16,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	contao${CT_VER}>=${CT_PKGVER}:../../www/contao${CT_VER}
 
 # Use time stamp of latest translation.
-VERS=		201302180
+VERS=		201303210
 CT_VERS=	211
 
 USE_TOOLS=	pax
