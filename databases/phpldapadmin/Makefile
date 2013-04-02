@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2013/03/16 07:21:19 obache Exp $
+# $NetBSD: Makefile,v 1.36 2013/04/02 16:00:10 taca Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 EXTRACT_SUFX=	.tgz
@@ -21,7 +20,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.2:../../devel/php-gettext
 
 USE_TOOLS+=	pax
 
-VERSION=	1.2.2
+VERSION=	1.2.3
 NO_BUILD=	YES
 
 CONF_FILES+=  ${PREFIX}/share/examples/phpldapadmin/config.php.example \
