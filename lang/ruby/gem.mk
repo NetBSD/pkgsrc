@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.18 2013/03/14 12:57:42 obache Exp $
+# $NetBSD: gem.mk,v 1.19 2013/04/02 15:22:39 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -63,6 +63,11 @@
 #	Note: Because of limited parser, argumetns for (1) must preceed to (2).
 #
 #	Default: (empty)
+#
+# GEM_PATH
+#	Set GEM_PATH; search path for rubygems
+#
+#	Default: ${PREFIX}/${GEM_HOME}
 #
 # BUILD_TARGET
 #	The Rakefile target that creates a local gem if using the
@@ -213,8 +218,11 @@ DISTFILES?=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY?=	# empty
 .endif
 
+# Specify GEM_PATH
+GEM_PATH?=	${PREFIX}/${GEM_HOME}
+
 # Base directory for Gems
-MAKE_ENV+=	GEM_PATH=${PREFIX}/${GEM_HOME}
+MAKE_ENV+=	GEM_PATH=${GEM_PATH}
 
 # Directory for the Gem to install
 GEM_NAME?=	${DISTNAME}
