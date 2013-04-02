@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2013/02/06 23:23:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/02 10:59:50 fhajny Exp $
 
-DISTNAME=	tmux-1.7
-PKGREVISION=	1
+DISTNAME=	tmux-1.8
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
@@ -17,7 +16,7 @@ USE_TERMINFO=	yes
 .include "../../mk/compiler.mk"
 .if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
     !empty(CC_VERSION:Mgcc-4.[6-9].*)
-BUILDLINK_TRANSFORM+=   rename:-D_XPG4_2:-D_XPG6
+BUILDLINK_TRANSFORM+=	rename:-D_XPG4_2:-D_XPG6
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
