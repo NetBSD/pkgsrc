@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2007/06/12 14:48:33 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2013/04/02 15:27:12 dholland Exp $
+
+(Very?) old dfly apparently doesn't have strtold.
 
 --- compat/strtold.c.orig	2007-06-12 14:35:09.000000000 +0000
 +++ compat/strtold.c

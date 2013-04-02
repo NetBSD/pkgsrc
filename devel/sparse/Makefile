@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:46 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/02 15:27:11 dholland Exp $
 #
 
-DISTNAME=	sparse-0.3
-PKGREVISION=	1
+DISTNAME=	sparse-0.4.4
 CATEGORIES=	devel lang
-MASTER_SITES=	http://kernel.org/pub/software/devel/sparse/dist/
+MASTER_SITES=	https://kernel.org/pub/software/devel/sparse/dist/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://kernel.org/pub/software/devel/sparse/
 COMMENT=	Semantic parser for C
+# The license in the tarball appears to be a different (older) version
+# from the one in pkgsrc/licenses. I have no idea how significant this
+# might be.
+#LICENSE=	osl
 
 INSTALLATION_DIRS+=	share/doc/sparse
 PKGCONFIG_OVERRIDE+=	sparse.pc.in
