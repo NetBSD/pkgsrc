@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2012/10/25 06:56:48 asau Exp $
+# $NetBSD: Makefile,v 1.40 2013/04/02 03:05:03 rodent Exp $
 
-DISTNAME=	docutils-0.9.1
+DISTNAME=	docutils-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
@@ -16,22 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_LANGUAGES=	#none
 
-SUBST_CLASSES+=		env
-SUBST_SED.env=		-e "s,\#! */usr/bin/env  *python[0-9.]*,\#!${PYTHONBIN},"
-SUBST_MESSAGE.env=	Fixing path to python.
-SUBST_STAGE.env=	post-patch
-SUBST_FILES.env=	docutils/_string_template_compat.py
-SUBST_FILES.env+=	docutils/error_reporting.py
-SUBST_FILES.env+=	docutils/math/latex2mathml.py
-SUBST_FILES.env+=	docutils/math/math2html.py
-SUBST_FILES.env+=	docutils/writers/xetex/__init__.py
-SUBST_FILES.env+=	docutils/utils/punctuation_chars.py
+REPLACE_PYTHON+=	docutils/utils/code_analyzer.py
+REPLACE_PYTHON+=	docutils/utils/error_reporting.py
+REPLACE_PYTHON+=	docutils/utils/math/latex2mathml.py
+REPLACE_PYTHON+=	docutils/utils/math/math2html.py
+REPLACE_PYTHON+=	docutils/utils/punctuation_chars.py
+REPLACE_PYTHON+=	docutils/utils/smartquotes.py
+REPLACE_PYTHON+=	docutils/writers/xetex/__init__.py
 
-SUBST_CLASSES+=		python
-SUBST_SED.python=	-e "s,\#!/usr/bin/python,\#!${PYTHONBIN},"
-SUBST_MESSAGE.python=	Fixing path to python.
-SUBST_STAGE.python=	post-patch
-SUBST_FILES.python=	docutils/utils/code_analyzer.py
-
+.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
