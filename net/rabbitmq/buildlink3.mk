@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2011/12/14 11:55:20 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2013/04/02 10:40:36 fhajny Exp $
 
 BUILDLINK_TREE+=			rabbitmq
 
@@ -6,8 +6,6 @@ BUILDLINK_TREE+=			rabbitmq
 RABBITMQ_BUILDLINK3_MK:=
 
 .include "version.mk"
-RABBITMQ_PLUGINS=	lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/plugins
-
 BUILDLINK_API_DEPENDS.rabbitmq+=	rabbitmq>=2.1.0
 BUILDLINK_PKGSRCDIR.rabbitmq?=		../../net/rabbitmq
 
