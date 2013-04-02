@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/12/08 12:02:50 wen Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/02 01:24:13 hiramatsu Exp $
 
-DISTNAME=	Unicode-Collate-0.95
+DISTNAME=	Unicode-Collate-0.97
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
