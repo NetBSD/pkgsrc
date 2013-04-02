@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1136 2013/04/02 09:59:00 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.1137 2013/04/02 15:27:39 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1606,3 +1606,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBIx-Class-Candy to 0.002103 [hiramatsu 2013-04-02]
 	Updated lang/gcc47 to 4.7.2nb3 [jperkin 2013-04-02]
 	Updated lang/gcc47-libs to 4.7.2nb4 [jperkin 2013-04-02]
+	Updated devel/sparse to 0.4.4 [dholland 2013-04-02]
