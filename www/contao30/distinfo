@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/02/19 15:45:03 taca Exp $
+$NetBSD: distinfo,v 1.8 2013/04/02 15:34:35 taca Exp $
 
-SHA1 (contao-20120109/contao-3.0.5.tar.gz) = 32e2f1be5a67a91b4a3f86ec7e765b0f095e7b44
-RMD160 (contao-20120109/contao-3.0.5.tar.gz) = ad1e1e86af17790c42f1f4f8977c6e8bb9fc6346
-Size (contao-20120109/contao-3.0.5.tar.gz) = 7711756 bytes
+SHA1 (contao-3.0.6.tar.gz) = 21c7bea1789ef74ed090ae972bf7071d0689b3a1
+RMD160 (contao-3.0.6.tar.gz) = 48ab35e76d7853a23e0612b98e924b9162ab6ab2
+Size (contao-3.0.6.tar.gz) = 7717948 bytes
