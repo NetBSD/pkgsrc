@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1083 2013/04/02 01:13:25 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1084 2013/04/02 01:13:38 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1551,3 +1551,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/unbound to 1.4.20 [pettai 2013-04-01]
 	Updated editors/sandy to 0.4 [mspo 2013-04-02]
 	Updated x11/kde4-l10n-ar to 4.8.4 [rodent 2013-04-02]
+	Updated x11/kde4-l10n-bg to 4.8.4 [rodent 2013-04-02]
