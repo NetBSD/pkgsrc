@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/02 10:44:41 drochner Exp $
+
+SHA1 (pyacoustid/v1.0.0.tar.gz) = c5fee198dd91e9aa3f5f26d1884e1127a0038e6a
+RMD160 (pyacoustid/v1.0.0.tar.gz) = 188a08842bcdba9220726327f3a5475cbe4dcf86
+Size (pyacoustid/v1.0.0.tar.gz) = 9816 bytes
