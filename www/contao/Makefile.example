@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.example,v 1.9 2012/10/28 06:30:13 asau Exp $
+# $NetBSD: Makefile.example,v 1.10 2013/04/02 15:27:58 taca Exp $
 #
 # used by www/contao211-example/Makefile
+# used by www/contao30-example/Makefile
 #
 
 DISTNAME=	contao-${CT_VERSION}
