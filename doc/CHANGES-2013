@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1132 2013/04/02 01:31:01 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1133 2013/04/02 01:42:55 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1601,3 +1601,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-wa to 4.8.4 [rodent 2013-04-02]
 	Updated x11/kde4-l10n-zh_CN to 4.8.4 [rodent 2013-04-02]
 	Updated x11/kde4-l10n-zh_TW to 4.8.4 [rodent 2013-04-02]
+	Updated converters/p5-Unicode-Collate to 0.97 [hiramatsu 2013-04-02]
