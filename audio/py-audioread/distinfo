@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/02 10:44:41 drochner Exp $
+
+SHA1 (audioread/v1.0.0.tar.gz) = f67aa7e11a86869dacc8189769c14d3c88e7a494
+RMD160 (audioread/v1.0.0.tar.gz) = 748d38461b63ac45053e5f4019fcf0b795e25649
+Size (audioread/v1.0.0.tar.gz) = 12934 bytes
