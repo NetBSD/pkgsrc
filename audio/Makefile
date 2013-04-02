@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.481 2013/04/02 10:44:40 drochner Exp $
+# $NetBSD: Makefile,v 1.482 2013/04/02 10:50:48 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -314,6 +314,7 @@ SUBDIR+=	mt-daapd
 SUBDIR+=	muse
 SUBDIR+=	musicbrainz
 SUBDIR+=	musicpd
+SUBDIR+=	mutagen-tools
 SUBDIR+=	nas
 SUBDIR+=	nas-auscope
 SUBDIR+=	ncmpc

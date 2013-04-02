@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2013/04/02 10:50:48 drochner Exp $
+
+--- setup.py.orig	2013-01-30 21:30:21.000000000 +0000
++++ setup.py
+@@ -154,7 +154,7 @@ class coverage_cmd(Command):
+             raise SystemExit("Coverage percentage went up; change setup.py.")
+ 
+ if os.name == "posix":
+-    data_files = [('share/man/man1', glob.glob("man/*.1"))]
++    data_files = [(os.getenv("PKGMANDIR") + '/man1', glob.glob("man/*.1"))]
+ else:
+     data_files = []
+ 
+@@ -168,7 +168,7 @@ if __name__ == "__main__":
+           author="Michael Urman",
+           author_email="quod-libet-development@groups.google.com",
+           license="GNU GPL v2",
+-          packages=["mutagen"],
++#          packages=["mutagen"],
+           data_files=data_files,
+           scripts=glob.glob("tools/m*[!~]"),
+           long_description="""\
