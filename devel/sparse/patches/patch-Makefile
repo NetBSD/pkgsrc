@@ -1,0 +1,39 @@
+$NetBSD: patch-Makefile,v 1.1 2013/04/02 15:27:12 dholland Exp $
+
+- honor pkgsrc's DESTDIR and PREFIX
+- honor PKGMANDIR
+- don't use non-portable install -v
+
+--- Makefile.orig	2011-11-25 05:39:36.000000000 +0000
++++ Makefile
+@@ -29,11 +29,12 @@ ifeq ($(HAVE_GCC_DEP),yes)
+ BASIC_CFLAGS += -Wp,-MD,$(@D)/.$(@F).d
+ endif
+ 
+-DESTDIR=
+-PREFIX=$(HOME)
++DESTDIR?=
++PREFIX?=$(HOME)
++PKGMANDIR?=share/man
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib
+-MANDIR=$(PREFIX)/share/man
++MANDIR=$(PREFIX)/$(PKGMANDIR)
+ MAN1DIR=$(MANDIR)/man1
+ INCLUDEDIR=$(PREFIX)/include
+ PKGCONFIGDIR=$(LIBDIR)/pkgconfig
+@@ -97,12 +98,12 @@ QUIET_INST_SH = $(Q:@=echo -n  '     INS
+ QUIET_INST    = $(Q:@=@echo -n '     INSTALL  ';)
+ 
+ define INSTALL_EXEC
+-	$(QUIET_INST)install -v $1 $(DESTDIR)$2/$1 || exit 1;
++	$(QUIET_INST)install $1 $(DESTDIR)$2/$1 || exit 1;
+ 
+ endef
+ 
+ define INSTALL_FILE
+-	$(QUIET_INST)install -v -m 644 $1 $(DESTDIR)$2/$1 || exit 1;
++	$(QUIET_INST)install -m 644 $1 $(DESTDIR)$2/$1 || exit 1;
+ 
+ endef
+ 
