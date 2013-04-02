@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2013/03/14 13:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.481 2013/04/02 10:44:40 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -58,6 +58,7 @@ SUBDIR+=	cddbd
 SUBDIR+=	cdparanoia
 SUBDIR+=	cdplayer
 SUBDIR+=	celt
+SUBDIR+=	chromaprint
 SUBDIR+=	cmp3
 SUBDIR+=	cmus
 SUBDIR+=	cplay
@@ -345,7 +346,9 @@ SUBDIR+=	picard
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
 SUBDIR+=	pulseaudio
+SUBDIR+=	py-acoustid
 SUBDIR+=	py-ao
+SUBDIR+=	py-audioread
 SUBDIR+=	py-audiotools
 SUBDIR+=	py-beets
 SUBDIR+=	py-cddb
