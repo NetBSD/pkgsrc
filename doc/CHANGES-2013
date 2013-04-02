@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1133 2013/04/02 01:42:55 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1134 2013/04/02 03:07:32 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1602,3 +1602,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-zh_CN to 4.8.4 [rodent 2013-04-02]
 	Updated x11/kde4-l10n-zh_TW to 4.8.4 [rodent 2013-04-02]
 	Updated converters/p5-Unicode-Collate to 0.97 [hiramatsu 2013-04-02]
+	Updated textproc/py-docutils to 0.10 [rodent 2013-04-02]
