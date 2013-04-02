@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2013/04/02 20:37:55 bsiegert Exp $
+
+Add support for MirBSD systems.
+--- configure.orig	Tue Mar  5 20:51:17 2013
++++ configure
+@@ -2801,6 +2801,11 @@ case "${host}" in
+     tcsh_config_file=bsd4.4
+   ;;
+ 
++  ## MirBSD systems
++  *-*-mirbsd*)
++    tcsh_config_file=bsd4.4
++  ;;
++
+   ## OpenBSD systems
+   *-*-openbsd*)
+     tcsh_config_file=bsd4.4
