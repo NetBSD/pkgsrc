@@ -1,0 +1,7 @@
+The NepomukCore library is the main library for dealing with Nepomuk
+components.  This includes the following parts -
+
+* The main resource handling centered around Nepomuk::Resource
+* The handling of ontologies via classes in the Nepomuk::Types namespace
+* The desktop Nepomuk::Query API
+* Several utility methods and classes

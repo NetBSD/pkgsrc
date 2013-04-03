@@ -1,15 +1,17 @@
-$NetBSD: patch-plasma_generic_applets_digital-clock_clock.cpp,v 1.1 2012/03/19 19:44:04 markd Exp $
+$NetBSD: patch-plasma_generic_applets_digital-clock_clock.cpp,v 1.2 2013/04/03 10:51:50 markd Exp $
 
 avoid an infinite loop when starting plasma. (from Sverre Froyen)
 
---- plasma/generic/applets/digital-clock/clock.cpp.orig	2012-01-09 10:32:10.000000000 -0700
-+++ plasma/generic/applets/digital-clock/clock.cpp	2012-01-10 11:57:19.000000000 -0700
-@@ -687,23 +687,36 @@ void Clock::generatePixmap()
+--- plasma/generic/applets/digital-clock/clock.cpp.orig	2013-03-01 06:32:24.000000000 +0000
++++ plasma/generic/applets/digital-clock/clock.cpp
+@@ -678,32 +678,38 @@ void Clock::generatePixmap()
  
  void Clock::expandFontToMax(QFont &font, const QString &text)
  {
 -    bool first = true;
      const QRect rect = contentsRect().toRect();
+     int oldWidth = 0;
+     int oldHeight = 0;
 +    int tryMax = 10;
 +    int trys = 0;
 +    int pointSize = font.pointSize();
@@ -28,7 +30,8 @@ avoid an infinite loop when starting plasma. (from Sverre Froyen)
 +        font.setPointSize(font.pointSize() + 1);
          const QFontMetrics fm(font);
          QRect fr = fm.boundingRect(rect, Qt::TextSingleLine, text);
--        if (fr.width() >= rect.width() || fr.height() >= rect.height()) {
+-        if (oldWidth == fr.width() && oldHeight == fr.height()) {
+-            // Largest font size reached.
 -            break;
 +        if (fr.width() > width || fr.height() > height) {
 +            width = fr.width();
@@ -40,11 +43,16 @@ avoid an infinite loop when starting plasma. (from Sverre Froyen)
 +            pointSize = font.pointSize();
 +            trys = 0;
          }
--    } while (true);
+-        oldWidth = fr.width();
+-        oldHeight = fr.height();
+-
+-        if (fr.width() >= rect.width() || fr.height() >= rect.height()) {
+-            break;
 +        else {
 +            // Real point size did not change
 +            trys++;
-+        }
+         }
+-    } while (true);
 +    } while (trys < tryMax);
 +
 +    font.setPointSize(pointSize);

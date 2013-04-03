@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/02/16 11:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/03 10:52:08 markd Exp $
 
 DISTNAME=	kcolorchooser-${_KDE_VERSION}
-PKGREVISION=	7
 CATEGORIES=	graphics
 COMMENT=	KDE color chooser
 

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/16 04:45:32 markd Exp $
+$NetBSD: distinfo,v 1.4 2013/04/03 10:51:53 markd Exp $
 
-SHA1 (kmouth-4.8.4.tar.xz) = 104bb2c434deabbaa57326fe567fc90c4067f36c
-RMD160 (kmouth-4.8.4.tar.xz) = 78f10eb56bc97df73d522d71658d3bcb12a33eeb
-Size (kmouth-4.8.4.tar.xz) = 323252 bytes
+SHA1 (kmouth-4.10.2.tar.xz) = 3ed90ae8a113264ef9b8c176c905f3d365443766
+RMD160 (kmouth-4.10.2.tar.xz) = 1b18750c39c40c63a39da653a4719c20c1c9d573
+Size (kmouth-4.10.2.tar.xz) = 321596 bytes

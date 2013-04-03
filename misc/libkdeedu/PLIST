@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:55:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:57 markd Exp $
 include/libkdeedu/keduvocarticle.h
 include/libkdeedu/keduvocconjugation.h
 include/libkdeedu/keduvoccontainer.h
@@ -21,11 +21,11 @@ include/libkdeedu/qtmml/QtMmlWidget
 include/libkdeedu/qtmml/qtmmlwidget.h
 include/libkdeedu/sharedkvtmlfiles.h
 lib/cmake/libkdeedu/LibKdeEduConfig.cmake
-lib/cmake/libkdeedu/LibKdeEduTargets-relwithdebinfo.cmake
+lib/cmake/libkdeedu/LibKdeEduTargets-${TARGET}.cmake
 lib/cmake/libkdeedu/LibKdeEduTargets.cmake
 lib/libkeduvocdocument.so
 lib/libkeduvocdocument.so.4
-lib/libkeduvocdocument.so.4.8.0
+lib/libkeduvocdocument.so.${PKGVERSION}
 lib/libqtmmlwidget.a
 share/icons/hicolor/16x16/actions/editplots.png
 share/icons/hicolor/16x16/actions/functionhelp.png

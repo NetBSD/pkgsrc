@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/16 04:45:30 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/04/03 10:52:08 markd Exp $
 
-SHA1 (ksnapshot-4.8.4.tar.xz) = 1cbd1ea468e7722feb8c96dd5f1f3a18bb91d4ef
-RMD160 (ksnapshot-4.8.4.tar.xz) = 6aea7b32653f67e5edaaef50f842087c8625dae6
-Size (ksnapshot-4.8.4.tar.xz) = 264944 bytes
+SHA1 (ksnapshot-4.10.2.tar.xz) = 4f3167a98d300a56abe91fb56785afc350439cbf
+RMD160 (ksnapshot-4.10.2.tar.xz) = d7bbf56ffd4bf845658f3055ae371fc8d8686f94
+Size (ksnapshot-4.10.2.tar.xz) = 264348 bytes
