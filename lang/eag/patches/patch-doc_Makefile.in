@@ -1,0 +1,14 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2013/04/03 13:26:44 jaapb Exp $
+
+Install documents in proper directory
+--- doc/Makefile.in.orig	2009-09-30 10:22:10.000000000 +0000
++++ doc/Makefile.in
+@@ -135,7 +135,7 @@ build_vendor = @build_vendor@
+ builddir = @builddir@
+ datadir = @datadir@
+ datarootdir = @datarootdir@
+-docdir = $(prefix)/doc
++docdir = @docdir@
+ dvidir = @dvidir@
+ exec_prefix = @exec_prefix@
+ host = @host@
