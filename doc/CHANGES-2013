@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1154 2013/04/03 12:43:48 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.1155 2013/04/03 13:27:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1626,3 +1626,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/ocaml-zip to 1.05 [jaapb 2013-04-03]
 	Updated devel/ocaml-lwt to 2.4.3 [jaapb 2013-04-03]
 	Updated net/ocamlnet to 3.6.3 [jaapb 2013-04-03]
+	Updated lang/eag to 2.6 [jaapb 2013-04-03]
