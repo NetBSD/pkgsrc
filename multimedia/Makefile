@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2013/04/01 21:10:10 jmcneill Exp $
+# $NetBSD: Makefile,v 1.204 2013/04/03 11:17:17 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -8,6 +8,7 @@ SUBDIR+=	adobe-flash-plugin
 SUBDIR+=	adobe-flash-plugin10.1
 SUBDIR+=	adobe-flash-plugin11
 SUBDIR+=	alevt
+SUBDIR+=	audiocd-kio
 SUBDIR+=	avidemux
 SUBDIR+=	bsdav
 SUBDIR+=	ccxstream
@@ -17,6 +18,7 @@ SUBDIR+=	clutter08-gst
 SUBDIR+=	deforaos-player
 SUBDIR+=	dirac
 SUBDIR+=	divxplayer
+SUBDIR+=	dragon
 SUBDIR+=	dumpmpeg
 SUBDIR+=	dvb-apps
 SUBDIR+=	dvd-slideshow
@@ -30,6 +32,7 @@ SUBDIR+=	ffmpeg
 SUBDIR+=	ffmpeg010
 SUBDIR+=	ffmpeg2theora
 SUBDIR+=	ffmpegthumbnailer
+SUBDIR+=	ffmpegthumbs
 SUBDIR+=	ffplay
 SUBDIR+=	flashplayer
 SUBDIR+=	fuppes
@@ -80,12 +83,14 @@ SUBDIR+=	gtranscode
 SUBDIR+=	gxine
 SUBDIR+=	handbrake
 SUBDIR+=	hwdecode-demos
+SUBDIR+=	juk
 SUBDIR+=	kaffeine
 SUBDIR+=	kdemultimedia3
-SUBDIR+=	kdemultimedia4
 SUBDIR+=	kdenlive
+SUBDIR+=	kmix
 SUBDIR+=	kmplayer
 SUBDIR+=	kmplayer-kde3
+SUBDIR+=	kscd
 SUBDIR+=	libass
 SUBDIR+=	libassetml
 SUBDIR+=	libdv
@@ -132,6 +137,7 @@ SUBDIR+=	mpeg_play
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-plugin
 SUBDIR+=	mplayer-share
+SUBDIR+=	mplayerthumbs
 SUBDIR+=	ns-flash
 SUBDIR+=	ogle
 SUBDIR+=	ogle_gui
