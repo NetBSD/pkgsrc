@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/10/25 06:57:00 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/03 07:27:28 markd Exp $
 
-DISTNAME=	shared-desktop-ontologies-0.7.0
+DISTNAME=	shared-desktop-ontologies-0.10.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oscaf/}
 EXTRACT_SUFX=	.tar.bz2
