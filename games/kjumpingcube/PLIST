@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:36 markd Exp $
+bin/kjumpingcube
+share/applications/kde4/kjumpingcube.desktop
+share/doc/kde/HTML/en/kjumpingcube/common
+share/doc/kde/HTML/en/kjumpingcube/index.cache.bz2
+share/doc/kde/HTML/en/kjumpingcube/index.docbook
+share/icons/hicolor/128x128/apps/kjumpingcube.png
+share/icons/hicolor/16x16/apps/kjumpingcube.png
+share/icons/hicolor/22x22/apps/kjumpingcube.png
+share/icons/hicolor/32x32/apps/kjumpingcube.png
+share/icons/hicolor/48x48/apps/kjumpingcube.png
+share/icons/hicolor/64x64/apps/kjumpingcube.png
+share/kde/apps/kjumpingcube/kjumpingcubeui.rc
+share/kde/apps/kjumpingcube/pics/default.desktop
+share/kde/apps/kjumpingcube/pics/default.svg
+share/kde/config.kcfg/kjumpingcube.kcfg
