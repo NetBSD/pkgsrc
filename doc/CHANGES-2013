@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1142 2013/04/02 16:01:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1143 2013/04/03 00:39:43 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1614,3 +1614,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao30-example to 3.0.6 [taca 2013-04-02]
 	Updated www/geeklog to 2.0.0 [taca 2013-04-02]
 	Updated databases/phpldapadmin to 1.2.3 [taca 2013-04-02]
+	Updated textproc/saxon to 9.4.0.7j [rodent 2013-04-03]
