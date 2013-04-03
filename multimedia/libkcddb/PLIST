@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:23:51 markd Exp $
+include/libkcddb/cdinfo.h
+include/libkcddb/cdinfodialog.h
+include/libkcddb/client.h
+include/libkcddb/configbase.h
+include/libkcddb/genres.h
+include/libkcddb/kcddb.h
+include/libkcddb/kcddb_export.h
+include/libkcddb/kcddbconfig.h
+lib/cmake/libkcddb/LibkcddbConfig.cmake
+lib/cmake/libkcddb/LibkcddbTargets-${TARGET}.cmake
+lib/cmake/libkcddb/LibkcddbTargets.cmake
+lib/kde4/kcm_cddb.so
+lib/libkcddb.so
+lib/libkcddb.so.4
+lib/libkcddb.so.${PKGVERSION}
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/common
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/index.docbook
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/kscd13.png
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/kscd14.png
+share/doc/kde/HTML/en/kcontrol/cddbretrieval/kscd16.png
+share/kde/config.kcfg/libkcddb.kcfg
+share/kde4/services/libkcddb.desktop
