@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.461 2013/03/17 13:55:58 asau Exp $
+# $NetBSD: Makefile,v 1.462 2013/04/03 10:57:07 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -104,7 +104,6 @@ SUBDIR+=	keychain
 SUBDIR+=	kgpg
 SUBDIR+=	knc
 SUBDIR+=	kpcli
-SUBDIR+=	ksecrets
 SUBDIR+=	kssh
 SUBDIR+=	kstart
 SUBDIR+=	kth-krb4
