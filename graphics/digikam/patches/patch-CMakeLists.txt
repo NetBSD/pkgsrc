@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2012/03/21 21:14:47 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2013/04/03 12:52:04 markd Exp $
 
 Don't do extras -- they are separate packages
 
---- CMakeLists.txt.orig	2012-01-03 00:42:09.000000000 +0000
+--- CMakeLists.txt.orig	2013-03-11 08:25:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -65,15 +65,15 @@ IF(${DIGIKAMSC_USE_PRIVATE_KDEGRAPHICS})
+@@ -127,15 +127,15 @@ IF(ENABLE_PRIVATE_KDEGRAPHICS)
          )
  ENDIF()
  
@@ -27,9 +27,9 @@ Don't do extras -- they are separate packages
 +#        ${CMAKE_MODULE_PATH}
 +#    )
  
- IF(${DIGIKAMSC_USE_PRIVATE_KDEGRAPHICS})
+ IF(ENABLE_PRIVATE_KDEGRAPHICS)
      SET(KIPI_LOCAL_DIR extra/libkipi)
-@@ -82,12 +82,12 @@ IF(${DIGIKAMSC_USE_PRIVATE_KDEGRAPHICS})
+@@ -144,12 +144,12 @@ IF(ENABLE_PRIVATE_KDEGRAPHICS)
      SET(KSANE_LOCAL_DIR extra/libksane)
  ENDIF()
  
@@ -45,5 +45,5 @@ Don't do extras -- they are separate packages
 -ADD_SUBDIRECTORY(extra)
 +#ADD_SUBDIRECTORY(extra)
  ADD_SUBDIRECTORY(core)
- MACRO_OPTIONAL_ADD_SUBDIRECTORY(doc)
  
+ IF(ENABLE_COMPILE_DOC)
