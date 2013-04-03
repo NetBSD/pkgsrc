@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:32 markd Exp $
+bin/kblocks
+share/applications/kde4/kblocks.desktop
+share/doc/kde/HTML/en/kblocks/common
+share/doc/kde/HTML/en/kblocks/index.cache.bz2
+share/doc/kde/HTML/en/kblocks/index.docbook
+share/icons/hicolor/128x128/apps/kblocks.png
+share/icons/hicolor/16x16/apps/kblocks.png
+share/icons/hicolor/22x22/apps/kblocks.png
+share/icons/hicolor/32x32/apps/kblocks.png
+share/icons/hicolor/48x48/apps/kblocks.png
+share/icons/hicolor/64x64/apps/kblocks.png
+share/kde/apps/kblocks/kblocksui.rc
+share/kde/apps/kblocks/themes/default.desktop
+share/kde/apps/kblocks/themes/default_block_fall.ogg
+share/kde/apps/kblocks/themes/default_block_move.ogg
+share/kde/apps/kblocks/themes/egyptian.svg
+share/kde/apps/kblocks/themes/egyptian_preview.png
+share/kde/apps/kblocks/themes/oxygen.desktop
+share/kde/apps/kblocks/themes/oxygen.svg
+share/kde/apps/kblocks/themes/oxygen_preview.png
+share/kde/config.kcfg/kblocks.kcfg
+share/kde/config/kblocks.knsrc
