@@ -1,0 +1,6 @@
+kmix is KDE's soundcard mixer program. Though small, it is
+full-featured. The program should give controls for each of your
+soundcards.
+
+kmix supports several platforms and sound drivers.
+
