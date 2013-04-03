@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/04/03 13:26:44 jaapb Exp $
 bin/eag-compile
 bin/eag-skel
 bin/eagcc
@@ -20,7 +20,6 @@ include/eag_trace.h
 include/ebs_bst.h
 include/ebs_cst.h
 include/ebs_error.h
-include/ebs_global.h
 include/ebs_lexds.h
 include/ebs_memalloc.h
 include/ebs_textstorage.h

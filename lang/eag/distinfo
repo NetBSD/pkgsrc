@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:03:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/04/03 13:26:44 jaapb Exp $
 
-SHA1 (eag-2.3.tgz) = 82bc143ea94113c4ba5411e607d288bcc0dec3e2
-RMD160 (eag-2.3.tgz) = 83dde8a45925060b24a22d2efeb199448e2b06d6
-Size (eag-2.3.tgz) = 498186 bytes
-SHA1 (patch-aa) = 657c556109d087a66e2dc854e23611ff5cfe4d8c
+SHA1 (eag-2.6.tgz) = 371e5a953d4b7f82346aac5dda6a6285a00c21c2
+RMD160 (eag-2.6.tgz) = d583cb0d25b4b96dc211bee9be266ee3f7f7ac72
+Size (eag-2.6.tgz) = 660555 bytes
+SHA1 (patch-doc_Makefile.in) = dcbbd30b15cd40f0215fd424bef263b0ed9dd112
