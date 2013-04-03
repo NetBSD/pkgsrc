@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:43 markd Exp $
+bin/lskat
+share/applications/kde4/lskat.desktop
+share/doc/kde/HTML/en/lskat/common
+share/doc/kde/HTML/en/lskat/index.cache.bz2
+share/doc/kde/HTML/en/lskat/index.docbook
+share/doc/kde/HTML/en/lskat/lskat_screen_01.png
+share/icons/hicolor/128x128/apps/lskat.png
+share/icons/hicolor/16x16/apps/lskat.png
+share/icons/hicolor/22x22/apps/lskat.png
+share/icons/hicolor/32x32/apps/lskat.png
+share/icons/hicolor/48x48/apps/lskat.png
+share/icons/hicolor/64x64/apps/lskat.png
+share/kde/apps/lskat/grafix/blue.desktop
+share/kde/apps/lskat/grafix/blue.rc
+share/kde/apps/lskat/grafix/blue.svg
+share/kde/apps/lskat/grafix/egyptian.desktop
+share/kde/apps/lskat/grafix/egyptian.rc
+share/kde/apps/lskat/grafix/egyptian.svg
+share/kde/apps/lskat/grafix/oxygen.desktop
+share/kde/apps/lskat/grafix/oxygen.rc
+share/kde/apps/lskat/grafix/oxygen.svg
+share/kde/apps/lskat/lskatui.rc

@@ -1,0 +1,7 @@
+kblackbox is a game of hide and seek played on a grid of boxes. The
+computer has hidden several balls within this box. By shooting beams
+into the box and observing where they emerge it is possible to deduce
+the positions of the hidden balls.
+
+The fewer beams you use and the quicker you are to find the balls,
+the better (the lower) your score.
