@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:30 markd Exp $
+bin/bomber
+share/applications/kde4/bomber.desktop
+share/doc/kde/HTML/en/bomber/common
+share/doc/kde/HTML/en/bomber/index.cache.bz2
+share/doc/kde/HTML/en/bomber/index.docbook
+share/icons/hicolor/128x128/apps/bomber.png
+share/icons/hicolor/32x32/apps/bomber.png
+share/icons/hicolor/48x48/apps/bomber.png
+share/icons/hicolor/64x64/apps/bomber.png
+share/icons/hicolor/scalable/apps/bomber.svgz
+share/kde/apps/bomber/bomberui.rc
+share/kde/apps/bomber/themes/Lava-Island.desktop
+share/kde/apps/bomber/themes/Lava-Island.svgz
+share/kde/apps/bomber/themes/kbomber.desktop
+share/kde/apps/bomber/themes/kbomber.png
+share/kde/apps/bomber/themes/kbomber.svgz
+share/kde/apps/bomber/themes/lava-Island.png
+share/kde/config.kcfg/bomber.kcfg
