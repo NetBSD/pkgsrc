@@ -1,10 +1,10 @@
-$NetBSD: patch-server_src_nepomuk_queryserviceclient.cpp,v 1.1 2012/03/21 23:26:40 markd Exp $
+$NetBSD: patch-server_src_nepomuk_queryserviceclient.cpp,v 1.2 2013/04/03 07:37:12 markd Exp $
 
 Workaround for gcc4.[12]  https://bugs.kde.org/show_bug.cgi?id=295813
 
---- server/src/nepomuk/queryserviceclient.cpp.orig	2012-01-23 16:33:32.000000000 +0000
+--- server/src/nepomuk/queryserviceclient.cpp.orig	2013-03-02 11:51:18.000000000 +0000
 +++ server/src/nepomuk/queryserviceclient.cpp
-@@ -150,7 +150,7 @@ Nepomuk::Query::QueryServiceClient::~Que
+@@ -159,7 +159,7 @@ Nepomuk::Query::QueryServiceClient::~Que
  }
  
  
@@ -13,8 +13,8 @@ Workaround for gcc4.[12]  https://bugs.kde.org/show_bug.cgi?id=295813
  {
      close();
  
-@@ -164,7 +164,7 @@ bool Nepomuk::Query::QueryServiceClient:
- }
+@@ -181,7 +181,7 @@ bool Nepomuk::Query::QueryServiceClient:
+ 
  
  
 -bool Nepomuk::Query::QueryServiceClient::blockingQuery( const QString& q, const QHash<QString, QString> &encodedRps )
