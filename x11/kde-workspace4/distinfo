@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2013/01/17 16:05:53 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/04/03 10:51:50 markd Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -9,16 +9,16 @@ Size (Daemon.png) = 15725 bytes
 SHA1 (NetBSD-flag-1.0.png) = a9cf264a52ae0a602eec956d91222e299c7dee5c
 RMD160 (NetBSD-flag-1.0.png) = 2eac20df70396169819059a704e6a85ae10234b0
 Size (NetBSD-flag-1.0.png) = 4532 bytes
-SHA1 (kde-workspace-4.8.4.tar.xz) = a732ceacf34dfb79c8ab243f17cd5a70b9183212
-RMD160 (kde-workspace-4.8.4.tar.xz) = 3d7e1bf7dfd094dea8129681ac311db137b32710
-Size (kde-workspace-4.8.4.tar.xz) = 35841792 bytes
+SHA1 (kde-workspace-4.10.2.tar.xz) = 12b10e8bea44f3aafa0c8d776eadfee14d71c3f8
+RMD160 (kde-workspace-4.10.2.tar.xz) = 1584cee3c208fbbe6e56d25e75e5cd2c51e9bba2
+Size (kde-workspace-4.10.2.tar.xz) = 13564908 bytes
 SHA1 (patch-kcontrol_keyboard_xkb_rules.cpp) = e4569e0671c55e990cbc0913e5abaead046a8e71
 SHA1 (patch-kdm_config.def) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
 SHA1 (patch-kdm_kcm_main.cpp) = bb692c83fa189342105744cc9c3c180b970571b7
 SHA1 (patch-kdm_kfrontend_CMakeLists.txt) = 0b0c541c7305d31e01a45f0a6a7f5ddb2d2e57fe
 SHA1 (patch-kdm_kfrontend_genkdmconf.c) = 12986752a1062199833df5aeba8163277ddb7361
 SHA1 (patch-ksysguard_example_CMakeLists.txt) = bd10f03a308442b8febe8864010987fb504b2d21
-SHA1 (patch-ksysguard_ksysguard_FreeBSD_ProcessList.c) = 42970c40f8e0e18f36570b504f708c7c100e96b8
+SHA1 (patch-ksysguard_ksysguard_FreeBSD_ProcessList.c) = 716f1e75fb23f7d6ddf31092e9a60961f078845c
 SHA1 (patch-ksysguard_ksysguard_FreeBSD_cpuinfo.c) = e827d09a853b479294a7771b47534d4ba71ef7cb
 SHA1 (patch-ksysguard_ksysguard_FreeBSD_uptime.c) = 96169c0c846c7337b65986dc1ce0b1c1b386ff30
 SHA1 (patch-ksysguard_ksysguardd_NetBSD_CPU.c) = 05312793f0c66cacf1bb61c081a8b15e6e7a2619
@@ -31,6 +31,6 @@ SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eac
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
 SHA1 (patch-libs_ksysguard_processcore_processes__netbsd__p.cpp) = 9fa5c51c28537c4b242847d3d54c893d28ddcaf4
 SHA1 (patch-mkpamserv) = 736fc439a34298f51c9fb09200b9dc8628eabc43
-SHA1 (patch-plasma_generic_applets_digital-clock_clock.cpp) = 75f8a7baf99151232e4f29c71da51be61efc6c4a
+SHA1 (patch-plasma_generic_applets_digital-clock_clock.cpp) = dd052f6c36fbd62dd5fecc0bcf162f22e500463c
 SHA1 (patch-plasma_generic_dataengines_rss_CMakeLists.txt) = 6a12cb3cb54a8b1899f29e7f50a1171862dce66e
-SHA1 (patch-startkde.cmake) = 415b06854b02d8dd0e2807d9c02a5cc754b59540
+SHA1 (patch-startkde.cmake) = bf651bde0a44520124453aa2f60fa956f237a6cf

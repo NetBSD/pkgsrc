@@ -1,10 +1,10 @@
-$NetBSD: patch-src_ProcessInfo.cpp,v 1.1.1.1 2012/03/20 05:07:49 markd Exp $
+$NetBSD: patch-src_ProcessInfo.cpp,v 1.2 2013/04/03 10:51:51 markd Exp $
 
---- src/ProcessInfo.cpp.orig	2010-03-26 17:26:32.000000000 +0000
+--- src/ProcessInfo.cpp.orig	2013-03-01 06:37:14.000000000 +0000
 +++ src/ProcessInfo.cpp
-@@ -894,6 +894,171 @@ private:
+@@ -1030,6 +1030,171 @@ private:
      }
- } ;
+ };
  
 +class NetBSDProcessInfo : public UnixProcessInfo
 +{
@@ -172,14 +172,14 @@ $NetBSD: patch-src_ProcessInfo.cpp,v 1.1.1.1 2012/03/20 05:07:49 markd Exp $
 +} ;
 +
  SSHProcessInfo::SSHProcessInfo(const ProcessInfo& process)
-  : _process(process)
+     : _process(process)
  {
-@@ -1039,6 +1204,8 @@ ProcessInfo* ProcessInfo::newInstance(in
-     return new LinuxProcessInfo(pid,enableEnvironmentRead);
+@@ -1184,6 +1349,8 @@ ProcessInfo* ProcessInfo::newInstance(in
+     return new LinuxProcessInfo(aPid, enableEnvironmentRead);
  #elif defined(Q_OS_SOLARIS)
-     return new SolarisProcessInfo(pid,enableEnvironmentRead);
+     return new SolarisProcessInfo(aPid, enableEnvironmentRead);
 +#elif defined(Q_OS_NETBSD)
-+    return new NetBSDProcessInfo(pid,enableEnvironmentRead);
++    return new NetBSDProcessInfo(aPid, enableEnvironmentRead);
  #elif defined(Q_OS_MAC)
-     return new MacProcessInfo(pid,enableEnvironmentRead);
+     return new MacProcessInfo(aPid, enableEnvironmentRead);
  #elif defined(Q_OS_FREEBSD)

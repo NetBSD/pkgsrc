@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/19 19:44:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:21 markd Exp $
 bin/pykdeuic4
+bin/pykdeuic4-${PYVERSSUFFIX}
 lib/kde4/kpythonpluginfactory.so
 ${PYSITELIB}/PyKDE4/__init__.py
 ${PYSITELIB}/PyKDE4/__init__.pyc
@@ -107,10 +108,12 @@ share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionstatistics.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionstatisticsdelegate.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionstatisticsjob.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionstatisticsmodel.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionutils_p.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionview.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/control.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/differencesalgorithminterface.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entity.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entitydeletedattribute.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entitydisplayattribute.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entityhiddenattribute.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entitylistview.sip
@@ -171,6 +174,10 @@ share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/statisticsproxymodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/transactionjobs.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/transactionsequence.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/transportresourcebase.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/trashfilterproxymodel.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/trashjob.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/trashrestorejob.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/trashsettings.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/unlinkjob.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/dnssdmod.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/domainbrowser.sip

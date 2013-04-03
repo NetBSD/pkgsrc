@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/19 22:43:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/03 10:52:11 markd Exp $
 include/libkdcraw/dcrawinfocontainer.h
 include/libkdcraw/dcrawsettingswidget.h
 include/libkdcraw/kdcraw.h
 include/libkdcraw/libkdcraw_export.h
+include/libkdcraw/ractionthreadbase.h
 include/libkdcraw/rawdecodingsettings.h
 include/libkdcraw/rawfiles.h
 include/libkdcraw/rcombobox.h
@@ -11,8 +12,8 @@ include/libkdcraw/rnuminput.h
 include/libkdcraw/squeezedcombobox.h
 include/libkdcraw/version.h
 lib/libkdcraw.so
-lib/libkdcraw.so.20
-lib/libkdcraw.so.20.0.1
+lib/libkdcraw.so.22
+lib/libkdcraw.so.22.0.0
 lib/pkgconfig/libkdcraw.pc
 share/icons/hicolor/128x128/apps/kdcraw.png
 share/icons/hicolor/32x32/apps/kdcraw.png

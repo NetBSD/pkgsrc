@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 06:35:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:16 markd Exp $
 bin/krcdnotifieritem
 lib/kde4/kcm_remotecontrol.so
 lib/kde4/kded_kremotecontroldaemon.so
@@ -45,7 +45,9 @@ share/kde/apps/kremotecontrol/profiles/kscd.profile.xml
 share/kde/apps/kremotecontrol/profiles/okular.profile.xml
 share/kde/apps/kremotecontrol/profiles/powermanagement.profile.xml
 share/kde/apps/kremotecontrol/profiles/profile.xsd
+share/kde/apps/kremotecontrol/profiles/tomahawk.profile.xml
 share/kde/apps/kremotecontrol/profiles/vlc.profile.xml
+share/kde/apps/kremotecontrol/profiles/vlc2.profile.xml
 share/kde/apps/kremotecontroldaemon/kremotecontroldaemon.notifyrc
 share/kde4/services/kcm_remotecontrol.desktop
 share/kde4/services/kded/kremotecontroldaemon.desktop

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 05:07:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:51 markd Exp $
 bin/konsole
 bin/konsoleprofile
 lib/kde4/libkonsolepart.so
@@ -8,16 +8,22 @@ share/applications/kde4/konsole.desktop
 share/doc/kde/HTML/en/konsole/common
 share/doc/kde/HTML/en/konsole/index.cache.bz2
 share/doc/kde/HTML/en/konsole/index.docbook
-share/kde/apps/konsole/BlackOnLightYellow.schema
+share/kde/apps/kconf_update/konsole-2.10.0-remove-menuindex-from-profiles.sh
+share/kde/apps/kconf_update/konsole-2.9.0-colorscheme-bold-key.sh
+share/kde/apps/kconf_update/konsole-2.9.0-global-options.sh
+share/kde/apps/kconf_update/konsole.upd
+share/kde/apps/konsole/BlackOnLightYellow.colorscheme
 share/kde/apps/konsole/BlackOnRandomLight.colorscheme
-share/kde/apps/konsole/BlackOnWhite.schema
+share/kde/apps/konsole/BlackOnWhite.colorscheme
+share/kde/apps/konsole/BlueOnBlack.colorscheme
 share/kde/apps/konsole/DarkPastels.colorscheme
 share/kde/apps/konsole/GreenOnBlack.colorscheme
 share/kde/apps/konsole/Linux.colorscheme
 share/kde/apps/konsole/README.KeyTab
+share/kde/apps/konsole/RedOnBlack.colorscheme
 share/kde/apps/konsole/Shell.profile
 share/kde/apps/konsole/Solarized.colorscheme
-share/kde/apps/konsole/WhiteOnBlack.schema
+share/kde/apps/konsole/WhiteOnBlack.colorscheme
 share/kde/apps/konsole/default.keytab
 share/kde/apps/konsole/konsole.notifyrc
 share/kde/apps/konsole/konsoleui.rc

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/02 20:30:38 markd Exp $
+$NetBSD: patch-aa,v 1.2 2013/04/03 10:52:22 markd Exp $
 
---- scripts/cvsaddcurrentdir.orig	2006-10-18 21:16:48.000000000 +1300
-+++ scripts/cvsaddcurrentdir
+--- kde-dev-scripts/cvsaddcurrentdir.orig	2006-10-18 21:16:48.000000000 +1300
++++ kde-dev-scripts/cvsaddcurrentdir
 @@ -17,7 +17,7 @@ ask_for_adding() {
  echo
  read -p "Add file $file to cvs ? (y/n) " answer rest

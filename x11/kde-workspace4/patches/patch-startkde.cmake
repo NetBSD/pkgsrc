@@ -1,8 +1,8 @@
-$NetBSD: patch-startkde.cmake,v 1.1 2012/03/19 19:44:04 markd Exp $
+$NetBSD: patch-startkde.cmake,v 1.2 2013/04/03 10:51:50 markd Exp $
 
---- startkde.cmake.orig	2007-11-29 02:29:24.000000000 +1300
+--- startkde.cmake.orig	2013-03-01 06:32:24.000000000 +0000
 +++ startkde.cmake
-@@ -38,6 +38,12 @@ if [ -n "$bindir" ]; then
+@@ -32,6 +32,12 @@ if [ -n "$bindir" ]; then
    esac
  fi
  
@@ -12,10 +12,10 @@ $NetBSD: patch-startkde.cmake,v 1.1 2012/03/19 19:44:04 markd Exp $
 +  *) PATH=$qtbindir:$PATH; export PATH;;
 +esac
 +
- # Boot sequence:
- #
- # kdeinit is used to fork off processes which improves memory usage
-@@ -219,11 +225,11 @@ usr_fdir=$HOME/.fonts
+ # Check if a KDE session already is running and whether it's possible to connect to X
+ kcheckrunning
+ kcheckrunning_result=$?
+@@ -192,11 +198,11 @@ usr_fdir=$HOME/.fonts
  
  if test -n "$KDEDIRS"; then
    kdedirs_first=`echo "$KDEDIRS"|sed -e 's/:.*//'`

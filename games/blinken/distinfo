@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/16 04:45:28 markd Exp $
+$NetBSD: distinfo,v 1.4 2013/04/03 10:51:56 markd Exp $
 
-SHA1 (blinken-4.8.4.tar.xz) = 571e1f06270d38e56149a8770517bf892859e2eb
-RMD160 (blinken-4.8.4.tar.xz) = 0611fbb96862109182be122bcc820fe551109177
-Size (blinken-4.8.4.tar.xz) = 567144 bytes
+SHA1 (blinken-4.10.2.tar.xz) = 884c9bd072325b3fc3e06da5c875516c6ee1f728
+RMD160 (blinken-4.10.2.tar.xz) = c3115f8c9c9d0b60afb1b846869dd277967205f3
+Size (blinken-4.10.2.tar.xz) = 566692 bytes

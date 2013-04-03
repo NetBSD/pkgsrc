@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2013/02/16 11:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/03 10:52:21 markd Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 DISTNAME=	pykde4-${_KDE_VERSION}
-PKGREVISION=	11
 CATEGORIES=	misc
 COMMENT=	Python bindings for the KDE integrated X11 desktop
 
@@ -31,14 +30,15 @@ SUBST_SED.pykdeuic4=	-e 's:/usr/bin/env python$$:${PYTHONBIN}:'
 #	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
 
 # remove when file not patched any longer
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/typedefs.sip.orig
+#post-install:
+#	${RM} -f ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/typedefs.sip.orig
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../security/polkit-qt/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.10

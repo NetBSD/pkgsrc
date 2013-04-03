@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/19 23:12:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/04/03 10:51:54 markd Exp $
 include/libkexiv2/altlangstredit.h
 include/libkexiv2/countryselector.h
 include/libkexiv2/kexiv2.h
@@ -10,7 +10,7 @@ include/libkexiv2/rotationmatrix.h
 include/libkexiv2/subjectwidget.h
 include/libkexiv2/version.h
 lib/libkexiv2.so
-lib/libkexiv2.so.10
-lib/libkexiv2.so.10.0.1
+lib/libkexiv2.so.11
+lib/libkexiv2.so.11.1.0
 lib/pkgconfig/libkexiv2.pc
 share/kde/apps/libkexiv2/data/topicset.iptc-subjectcode.xml

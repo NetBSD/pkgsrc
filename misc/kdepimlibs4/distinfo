@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.24 2012/12/20 23:00:06 joerg Exp $
+$NetBSD: distinfo,v 1.25 2013/04/03 10:51:47 markd Exp $
 
-SHA1 (kdepimlibs-4.8.4.tar.xz) = 34f693ac71896d0d8653fc2a81323d1e91531bb2
-RMD160 (kdepimlibs-4.8.4.tar.xz) = f9804ea6e6d016d879a16f1077e49aeef429ba13
-Size (kdepimlibs-4.8.4.tar.xz) = 2858756 bytes
+SHA1 (kdepimlibs-4.10.2.tar.xz) = ab163597d36b5457f9bcb0328f21c35777fffc34
+RMD160 (kdepimlibs-4.10.2.tar.xz) = bdcd31a2c3388886196b8b68e805a9672a55f998
+Size (kdepimlibs-4.10.2.tar.xz) = 2808532 bytes
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
 SHA1 (patch-kalarmcal_CMakeLists.txt) = 8237552f350f214c3380bf0fc54d19d36765c9b9
 SHA1 (patch-kblog_CMakeLists.txt) = 183d17f2de6f5f4f2f6bd29666b2a35d22c055aa
 SHA1 (patch-kcalutils_CMakeLists.txt) = 5c212ab23d0b1006a43c765bc1d860be85da284a
-SHA1 (patch-kimap_loginjob.cpp) = efcc4ee6915215013cbc8b349741d747cb061a94
+SHA1 (patch-kimap_loginjob.cpp) = 8a0fe3c1779b981d9c9ca6cb34121219f2f97c9f
 SHA1 (patch-kldap_ber.cpp) = 3656e006278db8fd4014f6e4a902f60703955871
 SHA1 (patch-kldap_ber.h) = c4edcaedb7169e261892b973627b3265f1efd3df
 SHA1 (patch-kmbox_CMakeLists.txt) = 924bd70a84c8af1c7d37501d4f718343a0aa7121
-SHA1 (patch-kpimutils_CMakeLists.txt) = 0a9f7283e2b70b38e0c545240251bc9ecb615eab
+SHA1 (patch-kpimutils_CMakeLists.txt) = 540a866b7c9d9de35ed0613519320490d73258d8
 SHA1 (patch-qgpgme_CMakeLists.txt) = 0860963f371a008f1d006dad58ea40329c358cfd

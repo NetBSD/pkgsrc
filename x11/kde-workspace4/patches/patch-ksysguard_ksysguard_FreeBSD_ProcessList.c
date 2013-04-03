@@ -1,6 +1,6 @@
-$NetBSD: patch-ksysguard_ksysguard_FreeBSD_ProcessList.c,v 1.1 2012/03/31 06:39:20 marino Exp $
+$NetBSD: patch-ksysguard_ksysguard_FreeBSD_ProcessList.c,v 1.2 2013/04/03 10:51:50 markd Exp $
 
---- ksysguard/ksysguardd/FreeBSD/ProcessList.c.orig	2012-03-30 20:44:17.924143000 +0000
+--- ksysguard/ksysguardd/FreeBSD/ProcessList.c.orig	2013-03-01 06:32:24.000000000 +0000
 +++ ksysguard/ksysguardd/FreeBSD/ProcessList.c
 @@ -54,6 +54,24 @@
  
@@ -70,8 +70,8 @@ $NetBSD: patch-ksysguard_ksysguard_FreeBSD_ProcessList.c,v 1.1 2012/03/31 06:39:
          }
  
 +#if defined(__DragonFly__)
-+        /* XXX */
-+        load = 0;
++	/* XXX */
++	load = 0;
 +#else
          if (last_ps != NULL)
              load = (ps->ki_runtime - last_ps->ki_runtime) / 1000000.0 / scale;
@@ -80,4 +80,4 @@ $NetBSD: patch-ksysguard_ksysguard_FreeBSD_ProcessList.c,v 1.1 2012/03/31 06:39:
 +#endif
  
          if (!ps->ki_pid)
-             // XXX: TODO: add support for displaying kernel process
+             /* XXX: TODO: add support for displaying kernel process */

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/16 04:45:30 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/04/03 10:52:11 markd Exp $
 
-SHA1 (kdegraphics-thumbnailers-4.8.4.tar.xz) = 57e753881f9ca78c4c188c49a3a1b258b92adb83
-RMD160 (kdegraphics-thumbnailers-4.8.4.tar.xz) = 3c292ba79f0156527c301aa428b4edd71f213379
-Size (kdegraphics-thumbnailers-4.8.4.tar.xz) = 42028 bytes
+SHA1 (kdegraphics-thumbnailers-4.10.2.tar.xz) = 7a3688aa23050967927e569f2b8d8c6841bf2401
+RMD160 (kdegraphics-thumbnailers-4.10.2.tar.xz) = 424fe1c11058db9e966607714a591796981d4c42
+Size (kdegraphics-thumbnailers-4.10.2.tar.xz) = 41696 bytes
