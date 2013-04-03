@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2012/10/31 11:18:33 asau Exp $
+# $NetBSD: Makefile,v 1.61 2013/04/03 06:47:26 wen Exp $
 
-DISTNAME=	Moose-2.0604
+DISTNAME=	Moose-2.0801
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
