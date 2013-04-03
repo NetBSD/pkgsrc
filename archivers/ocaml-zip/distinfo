@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/08/16 11:50:46 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/04/03 12:29:40 jaapb Exp $
 
-SHA1 (camlzip-1.04.tar.gz) = 43660307fba6243bf2e2e0c8c6ac078477c9d9f9
-RMD160 (camlzip-1.04.tar.gz) = 37a1aae1f84ee30c5f2f0ee2e4b603bf2b5bf397
-Size (camlzip-1.04.tar.gz) = 25691 bytes
-SHA1 (patch-aa) = e642f1187f5d4809b05775f1aa30c56abe2df006
+SHA1 (camlzip-1.05.tar.gz) = 0c32485958dd1a9c18f6f0abe1d2bf8e62caef74
+RMD160 (camlzip-1.05.tar.gz) = f54260638f4bbf43275907285d811a319077c0c8
+Size (camlzip-1.05.tar.gz) = 25817 bytes
