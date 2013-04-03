@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2013/03/31 08:13:30 obache Exp $
+# $NetBSD: Makefile,v 1.66 2013/04/03 12:30:07 markd Exp $
 #
 
 DISTNAME=	tellico-2.3.5
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	misc
 MASTER_SITES=	http://tellico-project.org/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +32,8 @@ USE_TOOLS+=	msgfmt pkg-config
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../multimedia/kdemultimedia4/buildlink3.mk"
+.include "../../multimedia/libkcompactdisc/buildlink3.mk"
+.include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../net/yaz/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
