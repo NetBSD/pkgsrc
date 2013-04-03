@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.334 2013/03/01 00:07:46 tcort Exp $
+# $NetBSD: bsd.prefs.mk,v 1.335 2013/04/03 13:45:49 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -131,7 +131,9 @@ LOWER_OPSYS?=		bsdi
 .elif ${OPSYS} == "Cygwin"
 LOWER_OPSYS?=		cygwin
 LOWER_VENDOR?=		pc
-LOWER_ARCH!=		${UNAME} -m
+.  if !defined(LOWER_ARCH)
+LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/'
+.  endif # !defined(LOWER_ARCH)
 _OS_VERSION!=		${UNAME} -r
 OS_VERSION=		${_OS_VERSION:C/\(.*\)//}
 OS_VARIANT!=		${UNAME} -s
