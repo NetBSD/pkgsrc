@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/04/10 00:02:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/03 07:41:37 markd Exp $
 bin/onto2vocabularyclass
 bin/sopranocmd
 bin/sopranod
@@ -82,6 +82,7 @@ include/soprano/asyncresult.h
 include/soprano/backend.h
 include/soprano/bindingset.h
 include/soprano/cluceneindex.h
+include/soprano/datastream.h
 include/soprano/dbusclient.h
 include/soprano/dbusexportiterator.h
 include/soprano/dbusexportmodel.h
