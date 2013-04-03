@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.396 2013/04/01 21:03:05 jmcneill Exp $
+# $NetBSD: Makefile,v 1.397 2013/04/03 10:54:12 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -184,6 +184,8 @@ SUBDIR+=	most
 SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
 SUBDIR+=	multitail
+SUBDIR+=	nepomuk-core
+SUBDIR+=	nepomuk-widgets
 SUBDIR+=	nxtvepg
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
