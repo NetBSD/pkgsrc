@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 07:20:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:00 markd Exp $
 bin/khangman
+include/khangman/khangman_engine_export.h
+include/khangman/khangmanengine.h
+include/khangman/prefs.h
+lib/libkhangmanengine.so
+lib/libkhangmanengine.so.4
+lib/libkhangmanengine.so.${PKGVERSION}
 man/man6/khangman.6
 share/applications/kde4/khangman.desktop
 share/doc/kde/HTML/en/khangman/application-exit.png
@@ -21,6 +27,8 @@ share/icons/hicolor/22x22/apps/khangman.png
 share/icons/hicolor/32x32/apps/khangman.png
 share/icons/hicolor/48x48/apps/khangman.png
 share/icons/hicolor/64x64/apps/khangman.png
+share/icons/hicolor/80x80/apps/khangman-harmattan.png
+share/icons/hicolor/scalable/apps/khangman-harmattan.svgz
 share/icons/hicolor/scalable/apps/khangman.svgz
 share/kde/apps/khangman/fonts/Domestic_Manners.ttf
 share/kde/apps/khangman/fonts/Dustismo_Roman.ttf
@@ -29,6 +37,7 @@ share/kde/apps/khangman/pics/bees/khangman_bees.svg
 share/kde/apps/khangman/pics/desert/khangman_desert.svg
 share/kde/apps/khangman/pics/sea/khangman_sea.svg
 share/kde/apps/khangman/pics/standardthemes.xml
+share/kde/apps/khangman/pics/winter/khangman_winter.svg
 share/kde/apps/khangman/sounds/EW_Dialogue_Appear.ogg
 share/kde/apps/khangman/sounds/new_game.ogg
 share/kde/config.kcfg/khangman.kcfg

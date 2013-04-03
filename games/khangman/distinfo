@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/16 04:45:29 markd Exp $
+$NetBSD: distinfo,v 1.4 2013/04/03 10:52:00 markd Exp $
 
-SHA1 (khangman-4.8.4.tar.xz) = aa544ba55833983bd21ebf594f2003a66b251901
-RMD160 (khangman-4.8.4.tar.xz) = a2da44881e6b00cfcf044982f19d29fa22499029
-Size (khangman-4.8.4.tar.xz) = 1155292 bytes
+SHA1 (khangman-4.10.2.tar.xz) = 2795c1ada9898854fe3a8ffd8a92c8ad5cd3eb04
+RMD160 (khangman-4.10.2.tar.xz) = 4d328ff8d807b64d3c7a2410b07e3ee88459f087
+Size (khangman-4.10.2.tar.xz) = 3946600 bytes
