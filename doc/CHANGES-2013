@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1148 2013/04/03 07:19:01 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1149 2013/04/03 08:12:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime to 1.01 [wen 2013-04-03]
 	Updated time/p5-DateTime-Format-Builder to 0.81 [wen 2013-04-03]
 	Updated time/p5-DateTime-Format-Strptime to 1.54 [wen 2013-04-03]
+	Updated textproc/p5-Text-CSV_XS to 0.97 [wen 2013-04-03]
