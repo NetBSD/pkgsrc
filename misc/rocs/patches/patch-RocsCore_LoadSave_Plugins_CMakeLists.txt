@@ -1,0 +1,32 @@
+$NetBSD: patch-RocsCore_LoadSave_Plugins_CMakeLists.txt,v 1.1 2013/04/03 10:52:25 markd Exp $
+
+Disable dotFileFormat plugin -- causes g++ Internal error on
+NetBSD 6.x
+
+--- RocsCore/LoadSave/Plugins/CMakeLists.txt.orig	2013-03-01 06:51:29.000000000 +0000
++++ RocsCore/LoadSave/Plugins/CMakeLists.txt
+@@ -19,15 +19,15 @@
+ add_subdirectory(tgfFileFormat)
+ add_subdirectory(tikzFileFormat)
+ 
+-# require Boost >= 1.49 for DOT file format
+-if(${Boost_VERSION} VERSION_LESS 104900)
+-    add_feature_info(DotFileFormat
+-        OFF
+-        "Building of DOT file format support needs Boost >= 1.49."
+-    )
+-else(${Boost_VERSION} VERSION_LESS 104900)
+-    add_subdirectory(dotFileFormat)
+-endif(${Boost_VERSION} VERSION_LESS 104900)
++## require Boost >= 1.49 for DOT file format
++#if(${Boost_VERSION} VERSION_LESS 104900)
++#    add_feature_info(DotFileFormat
++#        OFF
++#        "Building of DOT file format support needs Boost >= 1.49."
++#    )
++#else(${Boost_VERSION} VERSION_LESS 104900)
++#    add_subdirectory(dotFileFormat)
++#endif(${Boost_VERSION} VERSION_LESS 104900)
+ 
+ # these plugins are in an unstable state and are not suited for end users
+ if (ROCS_BUILD_LOADSAVE)

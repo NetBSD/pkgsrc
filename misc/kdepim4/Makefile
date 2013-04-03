@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2013/02/16 11:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/04/03 10:52:19 markd Exp $
 
 #DISTNAME=	kdepim-${_KDE_VERSION}
 DISTNAME=	kdepim-4.4.11.1
 PKGNAME=	${DISTNAME:S/-4/4-4/}
 MASTER_SITES=	${MASTER_SITE_KDE:=kdepim-4.4.11.1/src/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 EXTRACT_SUFX=	.tar.bz2
@@ -66,6 +66,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=full
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"

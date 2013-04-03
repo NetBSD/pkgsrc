@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.16 2012/03/19 23:32:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/04/03 10:52:07 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 lib/kde4/gvpart.so
 lib/libgwenviewlib.so
 lib/libgwenviewlib.so.4
-lib/libgwenviewlib.so.4.8.0
+lib/libgwenviewlib.so.${PKGVERSION}
 share/applications/kde4/gwenview.desktop
 share/doc/kde/HTML/en/gwenview/browse_mode.png
 share/doc/kde/HTML/en/gwenview/common
@@ -28,12 +28,10 @@ share/icons/hicolor/64x64/apps/gwenview.png
 share/icons/hicolor/scalable/actions/document-share.svgz
 share/icons/hicolor/scalable/apps/gwenview.svgz
 share/kde/apps/gvpart/gvpart.rc
+share/kde/apps/gwenview/color-schemes/fullscreen.colors
 share/kde/apps/gwenview/cursors/zoom.png
-share/kde/apps/gwenview/fullscreenthemes/blackglass/checked.png
-share/kde/apps/gwenview/fullscreenthemes/blackglass/scroll-left.png
-share/kde/apps/gwenview/fullscreenthemes/blackglass/scroll-right.png
-share/kde/apps/gwenview/fullscreenthemes/blackglass/style.css
 share/kde/apps/gwenview/gwenviewui.rc
+share/kde/apps/gwenview/images/background.png
 share/kde/apps/solid/actions/gwenview_importer.desktop
 share/kde/apps/solid/actions/gwenview_importer_camera.desktop
 share/kde4/services/ServiceMenus/slideshow.desktop
