@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1143 2013/04/03 00:39:43 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1144 2013/04/03 02:14:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/geeklog to 2.0.0 [taca 2013-04-02]
 	Updated databases/phpldapadmin to 1.2.3 [taca 2013-04-02]
 	Updated textproc/saxon to 9.4.0.7j [rodent 2013-04-03]
+	Updated www/p5-Plack to 1.0022 [wen 2013-04-03]
