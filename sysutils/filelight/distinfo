@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/06/16 04:45:38 markd Exp $
+$NetBSD: distinfo,v 1.7 2013/04/03 10:52:14 markd Exp $
 
-SHA1 (filelight-4.8.4.tar.xz) = 3023e9daa8bc5271bed3f3c08076952bcaf75efd
-RMD160 (filelight-4.8.4.tar.xz) = 86d44193dd1da30b091cadd36dca68283558826d
-Size (filelight-4.8.4.tar.xz) = 296540 bytes
+SHA1 (filelight-4.10.2.tar.xz) = 1047e985fead8655b9eac888315b007844b34a68
+RMD160 (filelight-4.10.2.tar.xz) = 44be8d73ce0b9de374dda7bf0b299258ac61f45c
+Size (filelight-4.10.2.tar.xz) = 290736 bytes

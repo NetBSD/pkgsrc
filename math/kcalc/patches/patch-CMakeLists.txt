@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/03 10:52:24 markd Exp $
+
+use mpfr (alternate code doesnt build on BSD)
+
+--- CMakeLists.txt.orig	2013-04-01 23:12:26.000000000 +0000
++++ CMakeLists.txt
+@@ -36,6 +36,9 @@ if(NOT GMP_FOUND)
+     endif()
+ endif(NOT GMP_FOUND)
+ 
++find_package (MPFR REQUIRED)
++add_definitions (-DKNUMBER_USE_MPFR)
++
+ include(CheckTypeSize)
+ include(CheckFunctionExists)
+ include(CheckIncludeFiles)

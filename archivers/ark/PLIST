@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 00:55:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:13 markd Exp $
 bin/ark
 lib/kde4/arkpart.so
 lib/kde4/kerfuffle_cli7z.so
@@ -12,7 +12,7 @@ lib/kde4/kerfuffle_libxz.so
 lib/kde4/libextracthere.so
 lib/libkerfuffle.so
 lib/libkerfuffle.so.4
-lib/libkerfuffle.so.4.8.0
+lib/libkerfuffle.so.${PKGVERSION}
 man/man1/ark.1
 share/applications/kde4/ark.desktop
 share/doc/kde/HTML/en/ark/ark-mainwindow.png
@@ -20,6 +20,13 @@ share/doc/kde/HTML/en/ark/common
 share/doc/kde/HTML/en/ark/index.cache.bz2
 share/doc/kde/HTML/en/ark/index.docbook
 share/doc/kde/HTML/en/ark/man-ark.1.docbook
+share/icons/hicolor/128x128/apps/ark.png
+share/icons/hicolor/16x16/apps/ark.png
+share/icons/hicolor/22x22/apps/ark.png
+share/icons/hicolor/32x32/apps/ark.png
+share/icons/hicolor/48x48/apps/ark.png
+share/icons/hicolor/64x64/apps/ark.png
+share/icons/hicolor/scalable/apps/ark.svgz
 share/kde/apps/ark/ark_part.rc
 share/kde/apps/ark/arkui.rc
 share/kde/config.kcfg/ark.kcfg

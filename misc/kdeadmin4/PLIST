@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/06/16 04:45:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/04/03 10:51:54 markd Exp $
 bin/ksystemlog
 bin/kuser
 lib/kde4/kcm_cron.so
@@ -20,20 +20,6 @@ share/doc/kde/HTML/en/kuser/common
 share/doc/kde/HTML/en/kuser/index.cache.bz2
 share/doc/kde/HTML/en/kuser/index.docbook
 share/doc/kde/HTML/en/kuser/kuser.png
-share/doc/kde/HTML/en/system-config-printer-kde/common
-share/doc/kde/HTML/en/system-config-printer-kde/index.cache.bz2
-share/doc/kde/HTML/en/system-config-printer-kde/index.docbook
-share/doc/kde/HTML/en/system-config-printer-kde/new-class.png
-share/doc/kde/HTML/en/system-config-printer-kde/new-details.png
-share/doc/kde/HTML/en/system-config-printer-kde/new-driver.png
-share/doc/kde/HTML/en/system-config-printer-kde/new-manufacturer.png
-share/doc/kde/HTML/en/system-config-printer-kde/new-uri.png
-share/doc/kde/HTML/en/system-config-printer-kde/new.png
-share/doc/kde/HTML/en/system-config-printer-kde/printer-job-options.png
-share/doc/kde/HTML/en/system-config-printer-kde/printer-options.png
-share/doc/kde/HTML/en/system-config-printer-kde/printer-policies.png
-share/doc/kde/HTML/en/system-config-printer-kde/printer-settings.png
-share/doc/kde/HTML/en/system-config-printer-kde/server.png
 share/icons/hicolor/128x128/apps/kuser.png
 share/icons/hicolor/16x16/apps/kuser.png
 share/icons/hicolor/22x22/apps/kuser.png
