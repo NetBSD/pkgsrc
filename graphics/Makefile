@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.648 2013/03/14 18:47:29 drochner Exp $
+# $NetBSD: Makefile,v 1.649 2013/04/03 10:55:14 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -234,6 +234,7 @@ SUBDIR+=	jpegquality
 SUBDIR+=	kamera
 SUBDIR+=	kbarcode
 SUBDIR+=	kcolorchooser
+SUBDIR+=	kde-base-artwork
 SUBDIR+=	kdegraphics-mobipocket
 SUBDIR+=	kdegraphics-strigi-analyzer
 SUBDIR+=	kdegraphics-thumbnailers
