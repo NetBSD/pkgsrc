@@ -1,0 +1,5 @@
+kshisen is a solitaire-like game played using the standard set of
+Mahjong tiles. Unlike Mahjong however, kshisen has only one layer
+of scrambled tiles.  You can remove matching pieces if they can be
+connected with a line with at most two bends in it. At the same
+time, the line must not cross any other tiles.

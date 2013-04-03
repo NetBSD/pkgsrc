@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:40 markd Exp $
+bin/kshisen
+share/applications/kde4/kshisen.desktop
+share/doc/kde/HTML/en/kshisen/common
+share/doc/kde/HTML/en/kshisen/index.cache.bz2
+share/doc/kde/HTML/en/kshisen/index.docbook
+share/doc/kde/HTML/en/kshisen/kshisen-configuration.png
+share/icons/hicolor/128x128/apps/kshisen.png
+share/icons/hicolor/16x16/apps/kshisen.png
+share/icons/hicolor/22x22/apps/kshisen.png
+share/icons/hicolor/32x32/apps/kshisen.png
+share/icons/hicolor/48x48/apps/kshisen.png
+share/icons/hicolor/64x64/apps/kshisen.png
+share/kde/apps/kshisen/kshisenui.rc
+share/kde/config.kcfg/kshisen.kcfg
+share/sounds/kshisen/tile-fall-tile.ogg
+share/sounds/kshisen/tile-touch.ogg

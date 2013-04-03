@@ -1,0 +1,3 @@
+libkmahjongg is a library used for loading and rendering of Mahjongg tilesets
+and associated backgrounds, used by KMahjongg and KShisen. Shared data is
+installed to {kdedir}/share/apps/kmahjongglib/*

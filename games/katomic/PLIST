@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:32 markd Exp $
+bin/katomic
+share/applications/kde4/katomic.desktop
+share/doc/kde/HTML/en/katomic/common
+share/doc/kde/HTML/en/katomic/index.cache.bz2
+share/doc/kde/HTML/en/katomic/index.docbook
+share/icons/hicolor/128x128/apps/katomic.png
+share/icons/hicolor/16x16/apps/katomic.png
+share/icons/hicolor/22x22/apps/katomic.png
+share/icons/hicolor/32x32/apps/katomic.png
+share/icons/hicolor/48x48/apps/katomic.png
+share/icons/hicolor/64x64/apps/katomic.png
+share/kde/apps/katomic/katomicui.rc
+share/kde/apps/katomic/levels/default_levels.dat
+share/kde/apps/katomic/pics/default_theme.svgz
+share/kde/apps/kconf_update/katomic-levelset-upd.pl
+share/kde/apps/kconf_update/katomic-levelset.upd
+share/kde/config/katomic.knsrc
