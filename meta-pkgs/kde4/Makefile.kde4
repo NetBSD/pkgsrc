@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde4,v 1.18 2013/04/03 10:51:43 markd Exp $
+# $NetBSD: Makefile.kde4,v 1.19 2013/04/03 22:04:16 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
@@ -27,7 +27,7 @@ CONFIGURE_DIRS= _KDE_build
 # eventually allow CMAKE_BUILD_TYPE to be overridden
 # set for current default
 TARGET_NAME=	relwithdebinfo
-PLIST_SUBST+=	TARGETS=${TARGET_NAME}
+PLIST_SUBST+=	TARGET=${TARGET_NAME}
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
