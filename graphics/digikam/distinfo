@@ -1,17 +1,10 @@
-$NetBSD: distinfo,v 1.38 2013/03/02 18:10:03 joerg Exp $
+$NetBSD: distinfo,v 1.39 2013/04/03 12:52:04 markd Exp $
 
-SHA1 (digikam-2.5.0.tar.bz2) = 6cadb838669d1bdcbd6abb677889f7d68d696383
-RMD160 (digikam-2.5.0.tar.bz2) = 4ff1b5fbc2cc4a8cb9994f7c7796086418dd43fb
-Size (digikam-2.5.0.tar.bz2) = 54976375 bytes
-SHA1 (patch-CMakeLists.txt) = be9b2c8df31e20b4d051c2bdaf92d0a0dff573b8
-SHA1 (patch-core_databaseserver_databaseserver.cpp) = 0782796cc4983a520d56951cf4e084f604c837ff
-SHA1 (patch-core_digikam_album_albummanager.h) = 1933ade39e080f1dda996683a6edf47b125a9acf
-SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = 78f2e7a35d7ddae3c8f685414112bd6aebec2855
-SHA1 (patch-core_libs_database_databaseserverstarter.cpp) = 3d58650edf5c6b9877a96202d2d37b8b97893760
-SHA1 (patch-core_libs_database_imagehistory_imagehistorygraph_boost.h) = 18aead6282798bfb20d43ec2a6b8a6a73bc9d065
-SHA1 (patch-core_libs_dimg_filters_icc_iccmanager.h) = 96eb80ae73184d95efb52d01ede8e25b607158a0
-SHA1 (patch-core_libs_template_templateselector.cpp) = 3c172396a9821479453853a607c07735a60e444b
-SHA1 (patch-core_libs_template_templateviewer.cpp) = f98ab6fa4fd81a967a4c2b0a490fef0f64c34c02
-SHA1 (patch-core_libs_widgets_common_dfontselect.cpp) = 64d4df3d82cfba603e26636547696ea0e6f9322b
-SHA1 (patch-core_utilities_setup_setupplugins.cpp) = c15907a93144d33905d1dd33f604362b79e89690
+SHA1 (digikam-3.1.0.tar.bz2) = f4ce304acdf10e859ab8f70ce9d53a05d92d4fbd
+RMD160 (digikam-3.1.0.tar.bz2) = 511550a7ee37aac958a0d2e5afaa0a07aa1eab0e
+Size (digikam-3.1.0.tar.bz2) = 58559707 bytes
+SHA1 (patch-CMakeLists.txt) = 83bdf0398c3a4120ce6dc83d205ca32c50229ff2
+SHA1 (patch-bootstrap.local) = 9164d0d162b4d8333961ee653f4c416dbdd530c9
+SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = 1cce43cd6a1575cfd6c75e9008972e2a521b05e6
+SHA1 (patch-core_libs_dimg_filters_icc_iccmanager.h) = 999bd32312fbe840913a8d29613b351384061b65
 SHA1 (patch-doc_CMakeLists.txt) = 5b4ba1daa49607b8773c3903d953e11bebc4d661

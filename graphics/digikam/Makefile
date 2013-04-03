@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2013/02/16 11:21:45 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2013/04/03 12:52:04 markd Exp $
 #
 
-DISTNAME=	digikam-2.5.0
-PKGREVISION=	15
+DISTNAME=	digikam-3.1.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
+MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,12 +19,13 @@ USE_LANGUAGES=		c c++
 
 REPLACE_PERL=	core/utilities/scripts/digitaglinktree/digitaglinktree
 CMAKE_ARGS+=    -DMYSQLD_PATH:PATH=${BUILDLINK_PREFIX.mysql-server}/libexec
+CMAKE_ARGS+=	-DDIGIKAMSC_USE_PRIVATE_KDEGRAPHICS:BOOL=OFF
 USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
 .include "options.mk"
 
 post-patch:
-	rm ${WRKSRC}/po/*/libkgeomap.po ${WRKSRC}/po/*/kipiplug*
+	rm ${WRKSRC}/po/*/libkgeomap.po ${WRKSRC}/po/*/kipiplug* ${WRKSRC}/po/*/libkipi*
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../databases/mysql51-server/buildlink3.mk"
@@ -41,7 +41,6 @@ post-patch:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../misc/libkgeomap/buildlink3.mk"
 .include "../../misc/libkvkontakte/buildlink3.mk"
-.include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/libmediawiki/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
