@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1152 2013/04/03 12:29:56 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.1153 2013/04/03 12:32:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/perl5 to 5.16.3 [adam 2013-04-03]
 	Updated devel/mercurial to 2.5.3 [wiz 2013-04-03]
 	Updated archivers/ocaml-zip to 1.05 [jaapb 2013-04-03]
+	Updated devel/ocaml-lwt to 2.4.3 [jaapb 2013-04-03]
