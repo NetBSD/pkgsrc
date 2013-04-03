@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/02/16 11:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/03 12:36:51 markd Exp $
 #
 
-PKGNAME=	libkgeomap-2.5.0
-DISTNAME=	digikam-2.5.0
-PKGREVISION=	8
+PKGNAME=	libkgeomap-3.1.0
+DISTNAME=	digikam-3.1.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +27,7 @@ post-patch:
 	echo "FIND_PACKAGE(Gettext REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
 	echo "ADD_SUBDIRECTORY(po)" >> ${WRKSRC}/CMakeLists.txt
 	ln -s ../../po ${WRKSRC}/po
-	rm ${WRKSRC}/po/*/digikam.po ${WRKSRC}/po/*/kipiplug*
+	rm ${WRKSRC}/po/*/digikam.po ${WRKSRC}/po/*/kipiplug* ${WRKSRC}/po/*/libkipi*
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/libkexiv2/buildlink3.mk"
