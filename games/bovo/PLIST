@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:30 markd Exp $
+bin/bovo
+share/applications/kde4/bovo.desktop
+share/doc/kde/HTML/en/bovo/common
+share/doc/kde/HTML/en/bovo/index.cache.bz2
+share/doc/kde/HTML/en/bovo/index.docbook
+share/icons/hicolor/128x128/apps/bovo.png
+share/icons/hicolor/16x16/apps/bovo.png
+share/icons/hicolor/22x22/apps/bovo.png
+share/icons/hicolor/32x32/apps/bovo.png
+share/icons/hicolor/48x48/apps/bovo.png
+share/icons/hicolor/64x64/apps/bovo.png
+share/icons/hicolor/scalable/apps/bovo.svgz
+share/kde/apps/bovo/bovoui.rc
+share/kde/apps/bovo/themes/gomoku/theme.svg
+share/kde/apps/bovo/themes/gomoku/themerc
+share/kde/apps/bovo/themes/highcontrast/theme.svg
+share/kde/apps/bovo/themes/highcontrast/themerc
+share/kde/apps/bovo/themes/scribble/theme.svg
+share/kde/apps/bovo/themes/scribble/themerc
+share/kde/apps/bovo/themes/spacy/theme.svg
+share/kde/apps/bovo/themes/spacy/themerc
