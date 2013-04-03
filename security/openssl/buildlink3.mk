@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.46 2013/02/07 11:30:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2013/04/03 11:56:20 obache Exp $
 
 BUILDLINK_TREE+=	openssl
 
@@ -14,7 +14,9 @@ BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 # Ensure that -lcrypt comes before -lcrypto when linking so that the
 # system crypt() routine is used.
 #
+.if ${OPSYS} != "Cygwin"
 WRAPPER_REORDER_CMDS+=	reorder:l:crypt:crypto
+.endif
 
 SSLBASE=	${BUILDLINK_PREFIX.openssl}
 BUILD_DEFS+=	SSLBASE
