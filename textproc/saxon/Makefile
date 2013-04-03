@@ -1,34 +1,28 @@
-# $NetBSD: Makefile,v 1.22 2012/10/25 06:57:00 asau Exp $
-#
+# $NetBSD: Makefile,v 1.23 2013/04/03 00:39:18 rodent Exp $
 
-DISTNAME=	saxon
-PKGNAME=	saxon-6.0.2
-PKGREVISION=	3
-CATEGORIES=	textproc www
-MASTER_SITES=	${HOMEPAGE}saxon6.0.2/
+DISTNAME=	SaxonHE9-4-0-7J
+PKGNAME=	${DISTNAME:tl:S/-/./g:S/he/-/}
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=saxon/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://users.breathe.com/mhkay/saxon/
+HOMEPAGE=	http://saxon.sourceforge.net/
 COMMENT=	Michael H. Kay's Java XSLT processor
+LICENSE=	mpl-1.1
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_JAVA=	run
+USE_JAVA2=	1.5
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_TOOLS+=	pax
 
-post-extract:
-	chmod -R u+w,go-w ${WRKSRC}
-
-INSTALLATION_DIRS= lib/java share/doc/java share/examples/java/saxon
+INSTALLATION_DIRS= lib/java
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/saxon.jar ${DESTDIR}${PREFIX}/lib/java
-	cd ${WRKSRC} && pax -rw -s '/^doc/saxon/' doc ${DESTDIR}${PREFIX}/share/doc/java
-	cd ${WRKSRC} && pax -rw -s '/^samples/saxon/' samples ${DESTDIR}${PREFIX}/share/examples/java
+	${INSTALL_DATA} ${WRKSRC}/saxon9he.jar ${DESTDIR}${PREFIX}/lib/java/saxon.jar
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
