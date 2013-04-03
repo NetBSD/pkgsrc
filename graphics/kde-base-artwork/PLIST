@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 10:52:20 markd Exp $
+share/kde/apps/ksplash/Themes/Default/1024x768/background.png
+share/kde/apps/ksplash/Themes/Default/1280x1024/background.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/background.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/description.txt
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon1.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon1_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon2.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon2_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon3.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon3_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon4.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon4_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon5.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon5_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/rectangle.png
+share/kde/apps/ksplash/Themes/Default/1920x1080/background.png
+share/kde/apps/ksplash/Themes/Default/1920x1200/background.png
+share/kde/apps/ksplash/Themes/Default/600x400/background.png
+share/kde/apps/ksplash/Themes/Default/800x600/background.png
+share/kde/apps/ksplash/Themes/Default/Preview.png
+share/kde/apps/ksplash/Themes/Default/Theme.rc

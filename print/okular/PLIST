@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 00:34:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:10 markd Exp $
 bin/okular
 include/okular/core/action.h
 include/okular/core/annotations.h
@@ -13,18 +13,23 @@ include/okular/core/okular_export.h
 include/okular/core/page.h
 include/okular/core/pagesize.h
 include/okular/core/pagetransition.h
+include/okular/core/settings_core.h
 include/okular/core/sound.h
 include/okular/core/sourcereference.h
 include/okular/core/textdocumentgenerator.h
 include/okular/core/textpage.h
+include/okular/core/tile.h
 include/okular/core/utils.h
 include/okular/core/version.h
 include/okular/interfaces/configinterface.h
 include/okular/interfaces/guiinterface.h
 include/okular/interfaces/printinterface.h
+include/okular/interfaces/saveinterface.h
 include/okular/interfaces/viewerinterface.h
 lib/cmake/Okular/OkularConfig.cmake
 lib/cmake/Okular/OkularConfigVersion.cmake
+lib/kde4/imports/org/kde/okular/libokularplugin.so
+lib/kde4/imports/org/kde/okular/qmldir
 lib/kde4/kio_msits.so
 lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
@@ -42,8 +47,9 @@ lib/kde4/okularGenerator_tiff.so
 lib/kde4/okularGenerator_xps.so
 lib/kde4/okularpart.so
 lib/libokularcore.so
-lib/libokularcore.so.1
-lib/libokularcore.so.1.8.0
+lib/libokularcore.so.2
+lib/libokularcore.so.2.0.0
+man/man1/okular.1
 share/applications/kde4/okular.desktop
 share/applications/kde4/okularApplication_chm.desktop
 share/applications/kde4/okularApplication_comicbook.desktop
@@ -61,14 +67,18 @@ share/applications/kde4/okularApplication_tiff.desktop
 share/applications/kde4/okularApplication_xps.desktop
 share/doc/kde/HTML/en/okular/annotation-properties.png
 share/doc/kde/HTML/en/okular/annotations.png
+share/doc/kde/HTML/en/okular/bookmark-management.png
 share/doc/kde/HTML/en/okular/common
+share/doc/kde/HTML/en/okular/configure-editor.png
 share/doc/kde/HTML/en/okular/configure.png
 share/doc/kde/HTML/en/okular/embedded-files-bar.png
 share/doc/kde/HTML/en/okular/forms-bar.png
 share/doc/kde/HTML/en/okular/index.cache.bz2
 share/doc/kde/HTML/en/okular/index.docbook
 share/doc/kde/HTML/en/okular/mainwindow.png
+share/doc/kde/HTML/en/okular/man-okular.1.docbook
 share/doc/kde/HTML/en/okular/presentation.png
+share/doc/kde/HTML/en/okular/rating.png
 share/icons/hicolor/128x128/apps/okular.png
 share/icons/hicolor/16x16/apps/okular.png
 share/icons/hicolor/22x22/apps/okular.png
@@ -76,6 +86,7 @@ share/icons/hicolor/32x32/apps/okular.png
 share/icons/hicolor/48x48/apps/okular.png
 share/icons/hicolor/64x64/apps/okular.png
 share/icons/hicolor/scalable/apps/okular.svgz
+share/kde/apps/kconf_update/okular.upd
 share/kde/apps/okular/icons/hicolor/16x16/apps/okular-gv.png
 share/kde/apps/okular/icons/hicolor/32x32/apps/okular-gv.png
 share/kde/apps/okular/part-viewermode.rc
@@ -113,6 +124,7 @@ share/kde/apps/okular/shell.rc
 share/kde/apps/okular/tools.xml
 share/kde/config.kcfg/gssettings.kcfg
 share/kde/config.kcfg/okular.kcfg
+share/kde/config.kcfg/okular_core.kcfg
 share/kde4/services/libokularGenerator_chmlib.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_djvu.desktop

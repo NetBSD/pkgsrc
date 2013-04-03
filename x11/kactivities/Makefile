@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/02/16 11:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/03 10:51:45 markd Exp $
 
 DISTNAME=	kactivities-${_KDE_VERSION}
-PKGREVISION=	7
 CATEGORIES=	x11
 COMMENT=	KDE Activity Manager
 
@@ -10,5 +9,6 @@ COMMENT=	KDE Activity Manager
 PKGCONFIG_OVERRIDE+=	lib/libkactivities.pc.cmake
 
 .include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:09 markd Exp $
 bin/kolourpaint
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.4
-lib/libkolourpaint_lgpl.so.4.8.0
+lib/libkolourpaint_lgpl.so.${PKGVERSION}
 share/applications/kde4/kolourpaint.desktop
 share/doc/kde/HTML/en/kolourpaint/KolourPaint.png
 share/doc/kde/HTML/en/kolourpaint/brush_shapes.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/09/17 12:06:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/03 10:51:59 markd Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
@@ -155,16 +155,16 @@ lib/kde4/plugins/accessible/chatwindowaccessiblewidgetfactory.so
 lib/kde4/sambausershareplugin.so
 lib/libkgetcore.so
 lib/libkgetcore.so.4
-lib/libkgetcore.so.4.8.0
+lib/libkgetcore.so.${PKGVERSION}
 lib/libkopete.so
 lib/libkopete.so.4
-lib/libkopete.so.4.8.0
+lib/libkopete.so.${PKGVERSION}
 lib/libkopete_oscar.so
 lib/libkopete_oscar.so.4
-lib/libkopete_oscar.so.4.8.0
+lib/libkopete_oscar.so.${PKGVERSION}
 lib/libkopete_videodevice.so
 lib/libkopete_videodevice.so.4
-lib/libkopete_videodevice.so.4.8.0
+lib/libkopete_videodevice.so.${PKGVERSION}
 lib/libkopeteaddaccountwizard.so
 lib/libkopeteaddaccountwizard.so.1
 lib/libkopeteaddaccountwizard.so.1.0.0
@@ -185,8 +185,8 @@ lib/libkopetestatusmenu.so.1
 lib/libkopetestatusmenu.so.1.0.0
 lib/libkrdccore.so
 lib/libkrdccore.so.4
-lib/libkrdccore.so.4.8.0
-lib/libkrfbprivate.so.4.8.0
+lib/libkrdccore.so.${PKGVERSION}
+lib/libkrfbprivate.so.${PKGVERSION}
 lib/libkyahoo.so
 lib/libkyahoo.so.1
 lib/libkyahoo.so.1.0.0
@@ -1479,6 +1479,8 @@ share/kde4/servicetypes/kopeteprotocol.desktop
 share/kde4/servicetypes/kopeteui.desktop
 share/kde4/servicetypes/krdc_plugin.desktop
 share/kde4/servicetypes/krfb-framebuffer.desktop
+share/ontology/kde/kget_history.ontology
+share/ontology/kde/kget_history.trig
 share/sounds/KDE-Im-Phone-Ring.wav
 share/sounds/Kopete_Event.ogg
 share/sounds/Kopete_Received.ogg

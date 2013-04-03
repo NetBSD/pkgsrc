@@ -1,0 +1,12 @@
+$NetBSD: patch-knumber_tests_CMakeLists.txt,v 1.1 2013/04/03 10:52:24 markd Exp $
+
+use mpfr (alternate code doesnt build on BSD)
+
+--- knumber/tests/CMakeLists.txt.orig	2013-03-01 07:05:02.000000000 +0000
++++ knumber/tests/CMakeLists.txt
+@@ -5,4 +5,4 @@ set(knumbertest_SRCS knumbertest.cpp ${l
+ 
+ kde4_add_unit_test(knumbertest TESTNAME KNumber ${knumbertest_SRCS})
+ 
+-target_link_libraries(knumbertest ${KDE4_KDECORE_LIBS} ${GMP_LIBRARIES})
++target_link_libraries(knumbertest ${KDE4_KDECORE_LIBS} ${GMP_LIBRARIES} ${MPFR_LIBRARIES})

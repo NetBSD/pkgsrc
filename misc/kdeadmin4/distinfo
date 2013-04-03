@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2012/06/16 04:45:35 markd Exp $
+$NetBSD: distinfo,v 1.18 2013/04/03 10:51:54 markd Exp $
 
-SHA1 (kdeadmin-4.8.4.tar.xz) = b825e40b29b4ae684265cb13b7935737d7ae6d68
-RMD160 (kdeadmin-4.8.4.tar.xz) = adabe82678e84cef51dc7a0b1219cab165742d4c
-Size (kdeadmin-4.8.4.tar.xz) = 1169564 bytes
+SHA1 (kdeadmin-4.10.2.tar.xz) = 885f63b846e9e8d1485c9261544efb2ab0eea58e
+RMD160 (kdeadmin-4.10.2.tar.xz) = 9613eb14c71b5f5f50a25c412e05e8ab77c1a30a
+Size (kdeadmin-4.10.2.tar.xz) = 676368 bytes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2013/03/16 07:21:20 obache Exp $
+# $NetBSD: Makefile,v 1.53 2013/04/03 10:52:22 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	13
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -19,46 +18,43 @@ CMAKE_ARGS+=	-DBUILD_kmtrace:BOOL=OFF
 CMAKE_ARGS+=	-DBUILD_kstartperf:BOOL=OFF
 
 REPLACE_BASH+= \
-	scripts/create_makefile \
-	scripts/create_svnignore \
-	scripts/makeobj \
-	scripts/package_crystalsvg \
-	scripts/svnversions
+	kde-dev-scripts/create_makefile \
+	kde-dev-scripts/create_svnignore \
+	kde-dev-scripts/makeobj \
+	kde-dev-scripts/package_crystalsvg \
+	kde-dev-scripts/svnversions
 
 REPLACE_PERL+= \
-	cervisia/cervisia-change_repos_list.pl \
-	cervisia/cervisia-normalize_cvsroot.pl \
-	cervisia/change_colors.pl \
 	kcachegrind/converters/dprof2calltree \
 	kcachegrind/converters/memprof2calltree \
 	kcachegrind/converters/op2calltree \
-	kioslave/perldoc/pod2html.pl \
-	scripts/colorcvs \
-	scripts/colorsvn \
-	scripts/cvs-clean \
-	scripts/cvsblame \
-	scripts/cvscheck \
-	scripts/cvslastchange \
-	scripts/cxxmetric \
-	scripts/extend_dmalloc \
-	scripts/extractattr \
-	scripts/extractqml \
-	scripts/extractrc \
-	scripts/fixheaders \
-	scripts/fixkdeincludes \
-	scripts/fixuifiles \
-	scripts/generate_string_table.pl \
-	scripts/includemocs \
-	scripts/kde-spellcheck.pl \
-	scripts/kdemangen.pl \
-	scripts/kdesrc-build \
-	scripts/krazy-licensecheck \
-	scripts/noncvslist \
-	scripts/png2mng.pl \
-	scripts/rc2kcfgxt.pl \
-	scripts/svn-clean \
-	scripts/svnintegrate \
-	scripts/svnlastchange \
+	kdesdk-kioslaves/perldoc/pod2html.pl \
+	kde-dev-scripts/colorcvs \
+	kde-dev-scripts/colorsvn \
+	kde-dev-scripts/cvs-clean \
+	kde-dev-scripts/cvsblame \
+	kde-dev-scripts/cvscheck \
+	kde-dev-scripts/cvslastchange \
+	kde-dev-scripts/cxxmetric \
+	kde-dev-scripts/extend_dmalloc \
+	kde-dev-scripts/extractattr \
+	kde-dev-scripts/extractqml \
+	kde-dev-scripts/extractrc \
+	kde-dev-scripts/fixheaders \
+	kde-dev-scripts/fixkdeincludes \
+	kde-dev-scripts/fixuifiles \
+	kde-dev-scripts/generate_string_table.pl \
+	kde-dev-scripts/includemocs \
+	kde-dev-scripts/kde-spellcheck.pl \
+	kde-dev-scripts/kdemangen.pl \
+	kde-dev-scripts/kdesrc-build \
+	kde-dev-scripts/krazy-licensecheck \
+	kde-dev-scripts/noncvslist \
+	kde-dev-scripts/png2mng.pl \
+	kde-dev-scripts/rc2kcfgxt.pl \
+	kde-dev-scripts/svn-clean \
+	kde-dev-scripts/svnintegrate \
+	kde-dev-scripts/svnlastchange \
 	umbrello/umbrello/headings/heading.pm
 
 # REPLACE_PHP+= kcachegrind/converters/pprof2calltree
@@ -71,19 +67,19 @@ SUBST_SED.php=		-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
 REPLACE_PYTHON+= \
 	kcachegrind/converters/hotshot2calltree \
 	lokalize/scripts/xliffmerge.py \
-	scripts/kde-systemsettings-tree.py \
-	scripts/kde_generate_export_header \
-	scripts/kdelnk2desktop.py \
-	scripts/rename_source_files \
-	scripts/zonetab2pot.py \
+	kde-dev-scripts/kde-systemsettings-tree.py \
+	kde-dev-scripts/kde_generate_export_header \
+	kde-dev-scripts/kdelnk2desktop.py \
+	kde-dev-scripts/rename_source_files \
+	kde-dev-scripts/zonetab2pot.py \
 	umbrello/umbrello/headings/heading.py
 
 REPLACE_RUBY+= \
 	umbrello/umbrello/headings/heading.rb
 
 REPLACE_SH+= \
-	scripts/build-progress.sh \
-	scripts/cvsaddcurrentdir
+	kde-dev-scripts/build-progress.sh \
+	kde-dev-scripts/cvsaddcurrentdir
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
