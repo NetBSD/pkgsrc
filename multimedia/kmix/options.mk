@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2011/02/25 20:39:24 markd Exp $
+# $NetBSD: options.mk,v 1.1 2013/04/03 11:13:10 markd Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kdemultimedia
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kmix
 PKG_SUPPORTED_OPTIONS=	pulseaudio alsa
 PKG_SUGGESTED_OPTIONS=
 
