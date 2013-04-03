@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12035 2013/04/02 03:07:32 rodent Exp $
+$NetBSD: TODO,v 1.12036 2013/04/03 00:39:43 rodent Exp $
 
 Suggested new packages
 ======================
@@ -1076,7 +1076,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o samba-4.0.4
 	o sarg-2.2.5
 	o sawfish-1.9.1
-	o saxon-9.2
 	o scala-2.10.0
 	o scapy-2.2.0
 	o scew-0.4.0
