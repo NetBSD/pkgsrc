@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2013/03/07 05:18:59 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2013/04/03 11:57:32 wiz Exp $
 
-DISTNAME=	mercurial-2.5.2
+DISTNAME=	mercurial-2.5.3
 CATEGORIES=	devel scm
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
