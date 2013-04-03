@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1145 2013/04/03 06:49:25 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1146 2013/04/03 07:10:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1617,3 +1617,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/saxon to 9.4.0.7j [rodent 2013-04-03]
 	Updated www/p5-Plack to 1.0022 [wen 2013-04-03]
 	Updated devel/p5-Moose to 2.0801 [wen 2013-04-03]
+	Updated time/p5-DateTime to 1.01 [wen 2013-04-03]
