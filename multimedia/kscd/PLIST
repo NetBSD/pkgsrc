@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 11:13:10 markd Exp $
+bin/kscd
+share/applications/kde4/kscd.desktop
+share/dbus-1/interfaces/org.kde.kscd.cdplayer.xml
+share/icons/hicolor/128x128/apps/kscd.png
+share/icons/hicolor/16x16/apps/kscd.png
+share/icons/hicolor/32x32/apps/kscd.png
+share/icons/hicolor/48x48/apps/kscd.png
+share/icons/hicolor/64x64/apps/kscd.png
+share/kde/apps/kscd/skin/Chrome.svg
+share/kde/apps/kscd/skin/Obsidian-Coast.svg
+share/kde/apps/kscd/skin/Steel.svg
+share/kde/apps/kscd/skin/default.svg
+share/kde/apps/solid/actions/kscd-play-audiocd.desktop
+share/kde/config.kcfg/kscd.kcfg

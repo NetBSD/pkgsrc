@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/03 11:13:09 markd Exp $
+
+SHA1 (juk-4.10.2.tar.xz) = 4ffb1275369dfd645a99449705ba1651e9bd3885
+RMD160 (juk-4.10.2.tar.xz) = 9a38a8166e2185edb197a5ec181fea37e185f587
+Size (juk-4.10.2.tar.xz) = 447424 bytes
+SHA1 (patch-mpris2_mediaplayer2player.cpp) = 714049e818091cab6b22ee4671774a862f568175
