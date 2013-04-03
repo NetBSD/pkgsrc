@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:37 markd Exp $
+bin/kmines
+share/applications/kde4/kmines.desktop
+share/doc/kde/HTML/en/kmines/common
+share/doc/kde/HTML/en/kmines/index.cache.bz2
+share/doc/kde/HTML/en/kmines/index.docbook
+share/icons/hicolor/128x128/apps/kmines.png
+share/icons/hicolor/16x16/apps/kmines.png
+share/icons/hicolor/22x22/apps/kmines.png
+share/icons/hicolor/32x32/apps/kmines.png
+share/icons/hicolor/48x48/apps/kmines.png
+share/icons/hicolor/64x64/apps/kmines.png
+share/kde/apps/kmines/kmines.notifyrc
+share/kde/apps/kmines/kminesui.rc
+share/kde/apps/kmines/themes/classic.desktop
+share/kde/apps/kmines/themes/classic_preview.png
+share/kde/apps/kmines/themes/default.desktop
+share/kde/apps/kmines/themes/default_preview.png
+share/kde/apps/kmines/themes/graveyard-mayhem-preview.png
+share/kde/apps/kmines/themes/graveyard-mayhem.desktop
+share/kde/apps/kmines/themes/graveyard-mayhem.svgz
+share/kde/apps/kmines/themes/green.desktop
+share/kde/apps/kmines/themes/green.png
+share/kde/apps/kmines/themes/kmines_classic.svgz
+share/kde/apps/kmines/themes/kmines_green.svgz
+share/kde/apps/kmines/themes/kmines_oxygen.svgz
+share/kde/config/kmines.knsrc

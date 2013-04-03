@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:36 markd Exp $
+bin/klines
+share/applications/kde4/klines.desktop
+share/doc/kde/HTML/en/klines/common
+share/doc/kde/HTML/en/klines/gamescreen.png
+share/doc/kde/HTML/en/klines/index.cache.bz2
+share/doc/kde/HTML/en/klines/index.docbook
+share/icons/hicolor/128x128/apps/klines.png
+share/icons/hicolor/16x16/apps/klines.png
+share/icons/hicolor/22x22/apps/klines.png
+share/icons/hicolor/32x32/apps/klines.png
+share/icons/hicolor/48x48/apps/klines.png
+share/icons/hicolor/64x64/apps/klines.png
+share/kde/apps/klines/klinesui.rc
+share/kde/apps/klines/themes/crystal.desktop
+share/kde/apps/klines/themes/crystal.png
+share/kde/apps/klines/themes/egyptian.desktop
+share/kde/apps/klines/themes/egyptian.png
+share/kde/apps/klines/themes/egyptian.svgz
+share/kde/apps/klines/themes/klines-gems.desktop
+share/kde/apps/klines/themes/klines-gems.png
+share/kde/apps/klines/themes/klines-gems.svgz
+share/kde/apps/klines/themes/klines_crystal.svgz
+share/kde/apps/klines/themes/metal.desktop
+share/kde/apps/klines/themes/metal.png
+share/kde/apps/klines/themes/metal.svgz
+share/kde/config.kcfg/klines.kcfg

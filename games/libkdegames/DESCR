@@ -1,0 +1,15 @@
+A collection of functions used by some games or which
+are useful for other games.
+
+Contents:
+  kcarddialog: Access to carddeck selection and administration
+               for cardgames
+  kstdgameaction: just like kstdaction this provides some default
+             action for kde games. games often use different entries
+             than other apps (like "game" instead of "file"), so use
+             this if possible
+  kgamemisc: some static method i didn't know a good class name for. it
+             currently features "randomName()" which will just give you
+             a random name from a list
+  kgame: this is a complete network/game handling library.
+  kgamecanvas: a fast game-oriented canvas library

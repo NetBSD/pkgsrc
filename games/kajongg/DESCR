@@ -1,0 +1,6 @@
+kajongg is a board game created after the famous oriental game of
+Mah Jong. It is played by four players. Worldwide many different
+rulesets are in use. Right now kajongg supports the Classical Chinese
+rules as played in Germany, eventually other main rulesets will follow.
+It is possible to customize or add new rulesets. Please do so and send
+them to the program author for integration!

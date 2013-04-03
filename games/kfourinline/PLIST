@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:34 markd Exp $
+bin/kfourinline
+bin/kfourinlineproc
+share/applications/kde4/kfourinline.desktop
+share/doc/kde/HTML/en/kfourinline/common
+share/doc/kde/HTML/en/kfourinline/index.cache.bz2
+share/doc/kde/HTML/en/kfourinline/index.docbook
+share/icons/hicolor/128x128/apps/kfourinline.png
+share/icons/hicolor/16x16/apps/kfourinline.png
+share/icons/hicolor/22x22/apps/kfourinline.png
+share/icons/hicolor/32x32/apps/kfourinline.png
+share/icons/hicolor/48x48/apps/kfourinline.png
+share/icons/hicolor/64x64/apps/kfourinline.png
+share/kde/apps/kfourinline/grafix/default.desktop
+share/kde/apps/kfourinline/grafix/default.rc
+share/kde/apps/kfourinline/grafix/default.svg
+share/kde/apps/kfourinline/grafix/gray_reflection.desktop
+share/kde/apps/kfourinline/grafix/gray_reflection.rc
+share/kde/apps/kfourinline/grafix/gray_reflection.svg
+share/kde/apps/kfourinline/grafix/yellow.desktop
+share/kde/apps/kfourinline/grafix/yellow.rc
+share/kde/apps/kfourinline/grafix/yellow.svg
+share/kde/apps/kfourinline/grafix/yellow_reflection.desktop
+share/kde/apps/kfourinline/grafix/yellow_reflection.rc
+share/kde/apps/kfourinline/kfourinlineui.rc
+share/kde/config.kcfg/kwin4.kcfg

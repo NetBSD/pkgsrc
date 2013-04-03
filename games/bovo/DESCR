@@ -1,0 +1,5 @@
+bovo is a Gomoku like game for two players, where the opponents
+alternate in placing their respective pictogram on the game board.
+The aim of this game is to connect five of your own pieces in an
+unbroken row vertically, horizontally or diagonally.
+

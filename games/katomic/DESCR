@@ -1,0 +1,6 @@
+katomic is a fun and educational game built around molecular geometry.
+It employs a simplistic two-dimensional look at the elements which
+comprise a molecule. A molecule is disassembled into its separate atoms
+and scattered around the playing field. The player must reassemble the
+molecule in order to complete the current level and move up to the next
+one.
