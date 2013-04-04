@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/02/12 13:03:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/04 13:31:55 obache Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -6,6 +6,7 @@ bin/rake${RUBY_VER}
 bin/rdoc${RUBY_VER}
 bin/ri${RUBY_VER}
 bin/${RUBY_NAME}
+${PLIST.win32}bin/rubyw${RUBY_VER}
 bin/testrb${RUBY_VER}
 ${RUBY_ARCHINC}/ruby/config.h
 ${RUBY_INC}/ruby.h
@@ -663,6 +664,13 @@ ${RUBY_LIB}/webrick/server.rb
 ${RUBY_LIB}/webrick/ssl.rb
 ${RUBY_LIB}/webrick/utils.rb
 ${RUBY_LIB}/webrick/version.rb
+${PLIST.win32}${RUBY_LIB}/win32/registry.rb
+${PLIST.win32}${RUBY_LIB}/win32/resolv.rb
+${PLIST.win32}${RUBY_LIB}/win32/sspi.rb
+${PLIST.win32}${RUBY_LIB}/win32/sspi.rb
+${PLIST.win32}${RUBY_LIB}/Win32API.rb
+${PLIST.win32}${RUBY_LIB}/win32ole.rb
+${PLIST.win32}${RUBY_LIB}/win32ole/property.rb
 ${RUBY_LIB}/xmlrpc/base64.rb
 ${RUBY_LIB}/xmlrpc/client.rb
 ${RUBY_LIB}/xmlrpc/config.rb
@@ -768,6 +776,7 @@ ${RUBY_ARCHLIB}/stringio.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/strscan.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/syck.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/syslog.${RUBY_DLEXT}
+${PLIST.win32}${RUBY_ARCHLIB}/win32ole.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/zlib.${RUBY_DLEXT}
 ${GEM_HOME}/gems/rake-0.9.2.2/bin/rake${RUBY_VER}
 ${GEM_HOME}/gems/rdoc-3.9.5/bin/rdoc${RUBY_VER}
