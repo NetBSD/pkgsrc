@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2013/03/21 04:05:41 jnemeth Exp $
+# $NetBSD: Makefile,v 1.428 2013/04/04 21:08:25 adam Exp $
 
 COMMENT=	Databases
 
@@ -44,7 +44,6 @@ SUBDIR+=	java-qdbm
 SUBDIR+=	java-tokyocabinet
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
-SUBDIR+=	jdbc-postgresql83
 SUBDIR+=	jdbc-postgresql84
 SUBDIR+=	jdbc-postgresql92
 SUBDIR+=	kmysqladmin
@@ -240,14 +239,6 @@ SUBDIR+=	poco-data-sqlite
 SUBDIR+=	postgresql-pgbench
 SUBDIR+=	postgresql-postgis
 #SUBDIR+=	postgresql-uuid	# just contains files for postgresql*-uuid
-SUBDIR+=	postgresql83
-SUBDIR+=	postgresql83-adminpack
-SUBDIR+=	postgresql83-client
-SUBDIR+=	postgresql83-plperl
-SUBDIR+=	postgresql83-plpython
-SUBDIR+=	postgresql83-pltcl
-SUBDIR+=	postgresql83-server
-SUBDIR+=	postgresql83-uuid
 SUBDIR+=	postgresql84
 SUBDIR+=	postgresql84-adminpack
 SUBDIR+=	postgresql84-client
