@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1160 2013/04/04 13:45:42 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1161 2013/04/04 13:47:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1366,7 +1366,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/ruby-gnome2 to 1.2.2 [obache 2013-03-16]
 	Updated devel/ruby-gnome2-atk to 1.2.2 [obache 2013-03-16]
 	Updated devel/ruby-gnome2-gio to 1.2.2 [obache 2013-03-16]
-	Added devel/ruby-gnome2-gobject-introspection version 1.2.2 [obache 2013-03-16]
+	Updated devel/ruby-gnome2-gobject-introspection to 1.2.2 [obache 2013-03-16]
 	Updated devel/ruby-gnome2-glib to 1.2.2 [obache 2013-03-16]
 	Updated devel/ruby-gnome2-pango to 1.2.2 [obache 2013-03-16]
 	Updated graphics/ruby-gnome2-gdk3 to 1.2.2 [obache 2013-03-16]
@@ -1437,7 +1437,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/ruby-gnome2 to 1.2.3 [obache 2013-03-17]
 	Updated devel/ruby-gnome2-atk to 1.2.3 [obache 2013-03-17]
 	Updated devel/ruby-gnome2-gio to 1.2.3 [obache 2013-03-17]
-	Added devel/ruby-gnome2-gobject-introspection version 1.2.3 [obache 2013-03-17]
+	Updated devel/ruby-gnome2-gobject-introspection to 1.2.3 [obache 2013-03-17]
 	Updated devel/ruby-gnome2-glib to 1.2.3 [obache 2013-03-17]
 	Updated devel/ruby-gnome2-pango to 1.2.3 [obache 2013-03-17]
 	Updated graphics/ruby-gnome2-gdk3 to 1.2.3 [obache 2013-03-17]
