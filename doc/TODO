@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12039 2013/04/04 09:43:03 wiz Exp $
+$NetBSD: TODO,v 1.12040 2013/04/04 10:36:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -342,6 +342,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Mesa-9.1.1
 	o MesaLib-9.1
 	o PAM-0.99.7.1
+	o R-3.0.0
 	o REminiscence-0.1.9
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
@@ -514,6 +515,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.3
 	o dropbear-2013.56
 	o dvdstyler-2.4.2
+	o dvtm-0.9
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o echinus-0.4.9
@@ -704,6 +706,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.5
+	o haproxy-1.4.23
 	o harfbuzz-0.9.14
 	o haskell-mode-1.45
 	o hdf-4.2.7
@@ -812,7 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libltdl-2.4.2
 	o libmatroska-1.4.0
 	o libmcs-0.7.2
-	o libmemcached-1.0.16
+	o libmemcached-1.0.17
 	o libmicrohttpd-0.9.26
 	o libmms-0.6.2
 	o libmp3splt-0.8.2
@@ -863,7 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeztxt-1.60
 	o manedit-1.2.1
 	o matchbox-panel-0.9.3
-	o mc-4.8.1.4
+	o mc-4.8.8
 	o mcsim-5.5.0
 	o mdds-0.7.0
 	o mdocml-1.12.1
@@ -978,7 +981,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pgadmin3-1.16.1 [pkg/47261]
 	o php-jpgraph-3.0.6
 	o php-owncloud-5.0.3
-	o php-tt-rss-1.7.6
+	o php-tt-rss-1.7.7
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -991,7 +994,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o planner-0.14.6
 	o ploticus-2.41
 	o ploticus-examples-230
-	o png-1.6.1
 	o po4a-0.41
 	o podofo-0.9.2
 	o pokerth-0.9.3
@@ -1013,7 +1015,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-3.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9801
+	o puzzles-9802
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
