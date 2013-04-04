@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2013/03/02 18:05:46 joerg Exp $
+$NetBSD: distinfo,v 1.14 2013/04/04 14:31:32 jperkin Exp $
 
 SHA1 (g95-0.93/g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95-0.93/g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -9,6 +9,7 @@ Size (g95-0.93/gcc-core-4.0.3.tar.bz2) = 15573608 bytes
 SHA1 (patch-.._gcc-4.0.3_gcc_config.gcc) = f93cca19dbb3544a1259960a3ab092fd72038125
 SHA1 (patch-.._gcc-4.0.3_gcc_config_dragonfly-spec.h) = 2fac90d3b4b2113e4713497fbcf3a3999dde2045
 SHA1 (patch-.._gcc-4.0.3_gcc_config_dragonfly.h) = 12707232e61b664f3b1a9943cbb3a49e61e94fa9
+SHA1 (patch-.._gcc-4.0.3_gcc_config_i386_darwin.h) = f5b17c0c33e824f8463f9b8c82fb012796ba4927
 SHA1 (patch-.._gcc-4.0.3_gcc_config_i386_dragonfly.h) = 96fa1faed692f8d4aeade98dd42d25b85ba051d7
 SHA1 (patch-.._gcc-4.0.3_gcc_config_i386_dragonfly64.h) = b228dbcdf7b5cf22d41d6ff04a37c569ca514c50
 SHA1 (patch-.._gcc-4.0.3_gcc_config_t-dragonfly) = 9636163ffd359b2a0dbb0a7fec2ca1cf98032c3d
