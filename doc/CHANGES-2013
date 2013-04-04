@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1157 2013/04/04 01:15:12 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1158 2013/04/04 09:43:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1771,3 +1771,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/digikam to 3.1.0 [taca 2013-04-03]
 	Updated devel/p5-Algorithm-CheckDigits to 1.2.1 [hiramatsu 2013-04-04]
 	Updated devel/p5-CPAN-Perl-Releases to 1.08 [hiramatsu 2013-04-04]
+	Added textproc/discount version 2.1.6 [wiz 2013-04-04]
