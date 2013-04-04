@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1161 2013/04/04 13:47:37 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1162 2013/04/04 16:02:15 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1790,3 +1790,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.5 [obache 2013-04-04]
 	Updated x11/ruby-gnome2-gtksourceview3 to 1.2.5 [obache 2013-04-04]
 	Updated x11/ruby-gnome2-vte to 1.2.5 [obache 2013-04-04]
+	Updated editors/easyedit to 1.4.6nb2 [dholland 2013-04-04]
