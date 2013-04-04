@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2013/03/30 21:58:16 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/04 16:01:55 dholland Exp $
 #
 
 DISTNAME=	ee-1.4.6.src
 PKGNAME=	easyedit-1.4.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://mahon.cwx.net/sources/
 EXTRACT_SUFX=	.tgz
 
-PATCHFILES=	easyedit-jumbo-patch-20130330.gz
+PATCHFILES=	easyedit-jumbo-patch-20130404.gz
 PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/easyedit/
 PATCH_DIST_STRIP= -p1
 
