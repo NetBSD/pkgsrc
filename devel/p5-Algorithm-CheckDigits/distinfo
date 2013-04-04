@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 10:41:18 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2013/04/04 01:13:42 hiramatsu Exp $
 
-SHA1 (Algorithm-CheckDigits-v1.1.1.tar.gz) = b68f497c722a51102611dc45c7404c9f64ccded7
-RMD160 (Algorithm-CheckDigits-v1.1.1.tar.gz) = c4dace3e4c2daa66f7fac633e4fbcc06f0fc1fd5
-Size (Algorithm-CheckDigits-v1.1.1.tar.gz) = 48166 bytes
+SHA1 (Algorithm-CheckDigits-v1.2.1.tar.gz) = c063e6ec4096e6022d3b04f8cbe253502957d03c
+RMD160 (Algorithm-CheckDigits-v1.2.1.tar.gz) = 07dd4f30cfff7fc1586fcfba782c6e38917f4f64
+Size (Algorithm-CheckDigits-v1.2.1.tar.gz) = 50262 bytes
