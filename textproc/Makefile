@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2013/01/26 10:50:23 obache Exp $
+# $NetBSD: Makefile,v 1.655 2013/04/04 09:42:53 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -69,6 +69,7 @@ SUBDIR+=	diction
 SUBDIR+=	diffsplit
 SUBDIR+=	diffstat
 SUBDIR+=	dikt
+SUBDIR+=	discount
 SUBDIR+=	docbook
 SUBDIR+=	docbook-simple
 SUBDIR+=	docbook-website
