@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1158 2013/04/04 09:43:02 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1159 2013/04/04 12:39:11 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Algorithm-CheckDigits to 1.2.1 [hiramatsu 2013-04-04]
 	Updated devel/p5-CPAN-Perl-Releases to 1.08 [hiramatsu 2013-04-04]
 	Added textproc/discount version 2.1.6 [wiz 2013-04-04]
+	Updated net/dnsmasq to 2.64nb1 [jperkin 2013-04-04]
