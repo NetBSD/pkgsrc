@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:19 joerg Exp $
-bin/padevchooser
-share/applications/padevchooser.desktop
-share/padevchooser/padevchooser.glade
