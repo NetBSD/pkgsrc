@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.95 2013/02/22 16:20:47 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.96 2013/04/04 13:30:07 obache Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -336,6 +336,10 @@ _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR
 .elif ${OPSYS} == "SunOS"
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}
  _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${_RUBY_API_MINOR}
+.elif ${OPSYS} == "Cygwin"
+RUBY_SHLIB=		${RUBY_VER}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}.dll.a
+RUBY_SHLIBALIAS=	bin/cygruby${RUBY_VER}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}.dll
+RUBY_STATICLIB=		${RUBY_VER}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}-static.a
 .endif
 
 .if !empty(_RUBY_SHLIBALIAS)
