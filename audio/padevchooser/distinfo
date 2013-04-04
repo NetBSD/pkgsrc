@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/20 18:35:30 jmcneill Exp $
-
-SHA1 (padevchooser-0.9.3.tar.gz) = 5a611c0e8a1f139c56ca696b8fd8dd7a65b77ba7
-RMD160 (padevchooser-0.9.3.tar.gz) = 17f19743b43169feb823d90ade6030499fedbf6a
-Size (padevchooser-0.9.3.tar.gz) = 100152 bytes
