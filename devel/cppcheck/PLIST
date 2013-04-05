@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/03 09:46:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/04/05 15:14:03 adam Exp $
 bin/cppcheck
+${PLIST.qt}bin/cppcheck-gui
 man/man1/cppcheck.1
