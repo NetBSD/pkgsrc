@@ -1,28 +1,11 @@
-$NetBSD: patch-mp,v 1.8 2013/01/10 15:01:31 ryoon Exp $
+$NetBSD: patch-mp,v 1.9 2013/04/05 13:30:17 ryoon Exp $
 
---- media/libsydneyaudio/src/Makefile.in.orig	2013-01-04 23:44:40.000000000 +0000
+--- media/libsydneyaudio/src/Makefile.in.orig	2013-03-26 22:17:56.000000000 +0000
 +++ media/libsydneyaudio/src/Makefile.in
-@@ -30,10 +30,6 @@ else ifeq ($(MOZ_WIDGET_TOOLKIT),android
- CSRCS		= \
- 		sydney_audio_android.c \
- 		$(NULL)
--else ifeq ($(OS_ARCH),Linux)
--CSRCS		= \
--		sydney_audio_alsa.c \
--		$(NULL)
- endif
- 
- ifeq ($(OS_ARCH),WINNT)
-@@ -68,6 +64,18 @@ CSRCS		= \
+@@ -70,6 +70,12 @@ CSRCS		= \
  		$(NULL)
  endif
  
-+ifdef MOZ_ALSA
-+CSRCS		= \
-+		sydney_audio_alsa.c \
-+		$(NULL)
-+endif
-+
 +ifdef MOZ_PULSEAUDIO
 +CSRCS		= \
 +		sydney_audio_pulseaudio.c \
