@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1165 2013/04/04 21:10:16 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1166 2013/04/05 09:12:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1853,3 +1853,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed databases/postgresql83-plperl [adam 2013-04-04]
 	Removed databases/postgresql83-pltcl [adam 2013-04-04]
 	Removed databases/postgresql83-server [adam 2013-04-04]
+	Updated x11/libXi to 1.7.1 [wiz 2013-04-05]
