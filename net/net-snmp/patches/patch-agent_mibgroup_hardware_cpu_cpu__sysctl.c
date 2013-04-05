@@ -1,7 +1,7 @@
-$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.2 2013/04/04 19:59:06 christos Exp $
+$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.3 2013/04/05 01:02:22 christos Exp $
 
---- agent/mibgroup/hardware/cpu/cpu_sysctl.c.orig	2012-10-09 18:28:58.000000000 -0400
-+++ agent/mibgroup/hardware/cpu/cpu_sysctl.c	2013-04-04 15:33:49.000000000 -0400
+--- agent/mibgrpu/hardware/cpu/cpu_sysctl.c.orig	2012-10-09 18:28:58.000000000 -0400
++++ agent/mibgrpu/hardware/cpu/cpu_sysctl.c	2013-04-04 20:55:47.000000000 -0400
 @@ -10,6 +10,7 @@
  
  #include <stdlib.h>
@@ -75,7 +75,36 @@ $NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.2 2013/04/04 19:59:
      cpu->nInterrupts  = (unsigned long long)mem_stats.NS_VM_INTR;
      cpu->nCtxSwitches = (unsigned long long)mem_stats.NS_VM_SWTCH;
      cpu->swapIn       = (unsigned long long)mem_stats.NS_VM_SWAPIN;
-@@ -205,7 +215,8 @@
+@@ -201,11 +211,37 @@
+ #ifdef NS_VM_PAGEOUT
+     cpu->pageOut      = (unsigned long long)mem_stats.NS_VM_PAGEOUT;
+ #endif
++#if defined(__NetBSD__)
++    {
++	NETSNMP_CPU_STATS *ncpu_stats;
++	size_t ncpu_size = sizeof(*ncpu_stats) * cpu_num * CPUSTATES;
++	ncpu_stats = malloc(ncpu_size);
++	int i;
++	if (ncpu_stats == NULL) {
++	    snmp_log(LOG_ERR, "no memory for kern.cp_time (errno %d)\n", errno);
++	    return;
++	}
++	if (sysctlbyname("kern.cp_time", ncpu_stats, &ncpu_size, NULL, 0) == -1)
++	    snmp_log(LOG_ERR, "sysctl kern.cp_time failed (errno %d)\n", errno);
++	for (i = 0; i < cpu_num; i++) {
++	    netsnmp_cpu_info  *ncpu = netsnmp_cpu_get_byIdx( i, 1 );
++	    size_t j = i * CPUSTATES;
++	    ncpu->user_ticks = (unsigned long long)ncpu_stats[j + CP_USER];
++	    ncpu->nice_ticks = (unsigned long long)ncpu_stats[j + CP_NICE];
++	    ncpu->sys2_ticks = (unsigned long long)ncpu_stats[j + CP_SYS]+cpu_stats[j + CP_INTR];
++	    ncpu->kern_ticks = (unsigned long long)ncpu_stats[j + CP_SYS];
++	    ncpu->idle_ticks = (unsigned long long)ncpu_stats[j + CP_IDLE];
++	    ncpu->intrpt_ticks = (unsigned long long)ncpu_stats[j + CP_INTR];
++	}
++	free(ncpu_stats);
++    }
++#endif
+ 
  #ifdef NETSNMP_KERN_MCPU
      mcpu_size  = cpu_num*sizeof(NETSNMP_KERN_MCPU_TYPE);
      mcpu_stats = malloc(mcpu_size);
