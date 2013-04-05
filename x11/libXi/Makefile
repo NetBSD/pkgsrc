@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/03/14 17:37:51 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/05 09:11:57 wiz Exp $
 #
 
-DISTNAME=		libXi-1.7
-PKGREVISION=		1
+DISTNAME=		libXi-1.7.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -40,6 +39,7 @@ BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.13
 .include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
