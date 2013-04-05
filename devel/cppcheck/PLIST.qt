@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.qt,v 1.2 2011/05/29 11:52:12 wiz Exp $
-bin/cppcheck-gui
