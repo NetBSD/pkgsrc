@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2013/03/25 02:55:59 sbd Exp $
+$NetBSD: patch-aa,v 1.18 2013/04/05 13:30:17 ryoon Exp $
 
---- configure.in.orig	2013-03-07 10:48:37.000000000 +0000
+--- configure.in.orig	2013-03-26 22:17:37.000000000 +0000
 +++ configure.in
-@@ -2097,6 +2097,9 @@ ia64*-hpux*)
+@@ -2130,6 +2130,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
          MC=mc.exe
      fi
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.17 2013/03/25 02:55:59 sbd Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -3035,6 +3038,9 @@ dnl ====================================
+@@ -3071,6 +3074,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.17 2013/03/25 02:55:59 sbd Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3336,6 +3342,9 @@ AC_CACHE_CHECK(
+@@ -3372,6 +3378,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.17 2013/03/25 02:55:59 sbd Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -4006,6 +4015,14 @@ if test -n "$YASM"; then
+@@ -4042,6 +4051,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.17 2013/03/25 02:55:59 sbd Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5260,8 +5277,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
+@@ -5326,8 +5343,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
  AC_SUBST(MOZ_SCTP)
  AC_SUBST(MOZ_SRTP)
  
@@ -58,20 +58,12 @@ $NetBSD: patch-aa,v 1.17 2013/03/25 02:55:59 sbd Exp $
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -5628,7 +5645,7 @@ dnl ====================================
+@@ -5731,7 +5748,7 @@ MOZ_ALSA=)
  
- dnl If using sydneyaudio with Linux, ensure that the alsa library is available
- if test -n "$MOZ_SYDNEYAUDIO" -a "$OS_TARGET" = "Linux"; then
+ if test -n "$MOZ_ALSA"; then
+     AC_DEFINE(MOZ_CUBEB)
 -    PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
 +    PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
           [echo "$MOZ_ALSA_PKG_ERRORS"
            AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
  fi
-@@ -8750,6 +8767,7 @@ AC_SUBST(MOZ_VP8_ERROR_CONCEALMENT)
- AC_SUBST(MOZ_VP8_ENCODER)
- AC_SUBST(MOZ_VP8)
- AC_SUBST(MOZ_OGG)
-+AC_SUBST(MOZ_ALSA)
- AC_SUBST(MOZ_ALSA_LIBS)
- AC_SUBST(MOZ_ALSA_CFLAGS)
- AC_SUBST(VPX_AS)
