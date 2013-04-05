@@ -1,7 +1,7 @@
-$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.3 2013/04/05 01:02:22 christos Exp $
+$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.4 2013/04/05 07:59:20 tron Exp $
 
---- agent/mibgrpu/hardware/cpu/cpu_sysctl.c.orig	2012-10-09 18:28:58.000000000 -0400
-+++ agent/mibgrpu/hardware/cpu/cpu_sysctl.c	2013-04-04 20:55:47.000000000 -0400
+--- agent/mibgroup/hardware/cpu/cpu_sysctl.c.orig	2012-10-09 18:28:58.000000000 -0400
++++ agent/mibgroup/hardware/cpu/cpu_sysctl.c	2013-04-04 20:55:47.000000000 -0400
 @@ -10,6 +10,7 @@
  
  #include <stdlib.h>
