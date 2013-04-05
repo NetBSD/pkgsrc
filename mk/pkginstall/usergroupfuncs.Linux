@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.Linux,v 1.5 2009/03/08 19:39:03 joerg Exp $
+# $NetBSD: usergroupfuncs.Linux,v 1.6 2013/04/05 03:30:40 sbd Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of shadow-utils.  (Not libuser)
@@ -96,7 +96,7 @@ call_useradd()
 	case $userid in
 	"")
 		${USERADD}					\
-			-c "$descr" -d "$home" -s "$shell"	\
+			-r -c "$descr" -d "$home" -s "$shell"	\
 			-g $group $user "$@"
 		;;
 	*)
@@ -149,7 +149,7 @@ addgroup()
 	if ${TEST} -n "${GROUPADD}" -a -x "${GROUPADD}"; then
 		${ECHO} "${PKGNAME}: Creating group \`\`$group''"
 		case $groupid in
-		"")	${GROUPADD} $group ;;
+		"")	${GROUPADD} -r $group ;;
 		*)	${GROUPADD} -g $groupid $group ;;
 		esac
 	fi
