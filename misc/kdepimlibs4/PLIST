@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/03 10:51:47 markd Exp $
-bin/akonadi_benchmarker
-bin/akonaditest
+@comment $NetBSD: PLIST,v 1.8 2013/04/05 23:07:20 markd Exp $
 include/KDE/Akonadi/AgentBase
 include/KDE/Akonadi/AgentFactory
 include/KDE/Akonadi/AgentFilterProxyModel
@@ -824,8 +822,6 @@ include/kimap/setquotajob.h
 include/kimap/storejob.h
 include/kimap/subscribejob.h
 include/kimap/unsubscribejob.h
-include/kimaptest/fakeserver.h
-include/kimaptest/mockjob.h
 include/kldap/ber.h
 include/kldap/kldap_export.h
 include/kldap/ldapattributeproxymodel.h
@@ -1085,7 +1081,6 @@ lib/libkholidays.so.${PKGVERSION}
 lib/libkimap.so
 lib/libkimap.so.4
 lib/libkimap.so.${PKGVERSION}
-lib/libkimaptest.a
 lib/libkldap.so
 lib/libkldap.so.4
 lib/libkldap.so.${PKGVERSION}
