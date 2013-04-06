@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/02/09 22:11:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2013/04/06 15:46:33 rodent Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -8,8 +8,8 @@ PKGREVISION=	6
 COMMENT+=	(arts plugin)
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/disable-arts/enable-arts/g}
-BUILD_DIRS=		${WRKSRC}/src/plugins/arts
-INSTALL_DIRS=		${WRKSRC}/src/plugins/arts
+BUILD_DIRS=		src/plugins/arts
+INSTALL_DIRS=		src/plugins/arts
 
 _LIBAO_BUILDING_PLUGIN=	yes
 

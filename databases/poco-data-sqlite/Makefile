@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/06 23:21:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 15:46:35 rodent Exp $
 #
 
 PKGNAME=	poco-data-sqlite-${POCO_VERSION}
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--no-samples
 
 USE_TOOLS+=	pax
 
-BUILD_DIRS=		${WRKSRC}/Data/SQLite
+BUILD_DIRS=		Data/SQLite
 INSTALLATION_DIRS=	include/Poco/Data/SQLite lib
 
 do-install:

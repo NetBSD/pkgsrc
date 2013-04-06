@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 18:16:23 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/06 15:46:39 rodent Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-plain/}
 COMMENT=	Cyrus SASL PLAIN authentication plugin
@@ -10,7 +10,7 @@ CONFLICTS=	cyrus-sasl<=2.1.19nb1
 
 CONFIGURE_ARGS+=	--enable-plain
 
-BUILD_DIRS=	${WRKSRC}/plugins
+BUILD_DIRS=	plugins
 BUILD_TARGET=	libplain.la
 
 do-install:

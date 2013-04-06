@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:23 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/06 15:46:39 rodent Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-login/}
 COMMENT=	Cyrus SASL LOGIN authentication plugin
@@ -12,7 +12,7 @@ SASL_PLUGIN=	yes
 CONFIGURE_ARGS+=	--enable-login
 CONFIGURE_ARGS+=	--enable-plain
 
-BUILD_DIRS=	${WRKSRC}/plugins
+BUILD_DIRS=	plugins
 BUILD_TARGET=	liblogin.la
 
 do-install:

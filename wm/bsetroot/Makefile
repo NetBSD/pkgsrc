@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 12:42:18 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/06 15:46:40 rodent Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -14,7 +14,7 @@ COMMENT=	Tools to set the root windows background
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
-BUILD_DIRS=	${WRKSRC}/nls ${WRKSRC}/util
+BUILD_DIRS=	nls util
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

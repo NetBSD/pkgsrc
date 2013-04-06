@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/23 17:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/06 15:46:38 rodent Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -26,7 +26,7 @@ CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 RCD_SCRIPTS=	upclient
 
-BUILD_DIRS=	${WRKSRC}/src
+BUILD_DIRS=	src
 
 INSTALLATION_DIRS=	bin share/doc/upclient ${EGDIR}
 
