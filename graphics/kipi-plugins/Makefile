@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2013/02/16 11:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2013/04/06 09:46:09 markd Exp $
 #
 
-PKGNAME=	kipi-plugins-2.5.0
-DISTNAME=	digikam-2.5.0
-PKGREVISION=	13
+PKGNAME=	kipi-plugins-3.1.0
+DISTNAME=	digikam-3.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +27,7 @@ post-patch:
 	echo "FIND_PACKAGE(Gettext REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
 	echo "ADD_SUBDIRECTORY(po)" >> ${WRKSRC}/CMakeLists.txt
 	ln -s ../../po ${WRKSRC}/po
-	rm ${WRKSRC}/po/*/digikam.po ${WRKSRC}/po/*/libkgeomap.po
+	rm ${WRKSRC}/po/*/digikam.po ${WRKSRC}/po/*/libkgeomap.po ${WRKSRC}/po/*/libkipi.po
 
 SUBST_CLASSES+=		xdg
 SUBST_SED.xdg=		-e "s,/usr/bin/env xdg-open,${PREFIX}/bin/xdg-open,"
