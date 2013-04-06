@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/02/06 19:31:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 14:58:20 rodent Exp $
 #
 
 DISTNAME=	rid-1.11
@@ -21,8 +21,8 @@ CONF_FILES=	${PREFIX}/share/examples/rid/rid.conf ${PKG_SYSCONFDIR}/rid.conf
 INSTALLATION_DIRS=	sbin share/doc/rid share/examples/rid
 
 post-configure:
-	@echo "#undef DEFAULT_YYIN" >> ${WRKSRC}/netconfig.h
-	@echo "#define DEFAULT_YYIN \"${PKG_SYSCONFDIR}/rid.conf\"" >> \
+	@${ECHO} "#undef DEFAULT_YYIN" >> ${WRKSRC}/netconfig.h
+	@${ECHO} "#define DEFAULT_YYIN \"${PKG_SYSCONFDIR}/rid.conf\"" >> \
 		${WRKSRC}/netconfig.h
 
 do-install:

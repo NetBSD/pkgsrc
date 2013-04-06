@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/02/21 07:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/06 14:58:21 rodent Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -33,8 +33,8 @@ MAKE_ENV+=	NOGCCERROR=yes		# see PR 35930
 
 # Avoid catpage regeneration
 post-extract:
-	echo ".PHONY: checkperms.cat1" >> ${WRKSRC}/Makefile
-	echo "checkperms.cat1:" >> ${WRKSRC}/Makefile
-	echo "" >> ${WRKSRC}/Makefile
+	${ECHO} ".PHONY: checkperms.cat1" >> ${WRKSRC}/Makefile
+	${ECHO} "checkperms.cat1:" >> ${WRKSRC}/Makefile
+	${ECHO} "" >> ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"

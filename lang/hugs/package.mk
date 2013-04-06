@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.4 2010/01/29 18:52:09 joerg Exp $
+# $NetBSD: package.mk,v 1.5 2013/04/06 14:58:19 rodent Exp $
 #
 
 PKGNAME=	hugs98-${DISTNAME}
@@ -34,7 +34,7 @@ do-install:
 		copy --verbose --destdir=${DESTDIR}
 	cd ${WRKSRC} && \
 	pkg=`awk '{ print $$2; nextfile }' < .installed-pkg-config` && \
-	echo $$pkg && \
+	${ECHO} $$pkg && \
 	${INSTALL_DATA_DIR} \
 	    ${DESTDIR}${PREFIX}/lib/hugs/packages/$$pkg/packages/$$pkg && \
 	${INSTALL_DATA} .installed-pkg-config \

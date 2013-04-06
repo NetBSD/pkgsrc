@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/10/06 14:11:06 asau Exp $
+# $NetBSD: Makefile,v 1.44 2013/04/06 14:58:19 rodent Exp $
 
 DISTNAME=	libungif-4.1.4
 PKGREVISION=	2
@@ -31,7 +31,7 @@ post-patch:
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && 					\
 	for SOURCE in libungif.*; do					\
-	  TARGET=`echo $$SOURCE | ${SED} -e s/libungif/libgif/`;	\
+	  TARGET=`${ECHO} $$SOURCE | ${SED} -e s/libungif/libgif/`;	\
 	  ${RM} -f $$TARGET; 						\
 	  if [ $$SOURCE = libungif.la ]; then				\
 	    ${SED} -e s/libungif/libgif/g $$SOURCE >$$TARGET;		\

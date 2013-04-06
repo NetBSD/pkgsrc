@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 13:24:20 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/06 14:58:21 rodent Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	3
@@ -39,7 +39,7 @@ E_THEMES?=	Absolute_E-DR16-199911060830.etheme \
 
 do-install:
 .for file in ${E_THEMES}
-	NAME=`echo ${file} | ${SED} -e s/-DR16.*//` ; \
+	NAME=`${ECHO} ${file} | ${SED} -e s/-DR16.*//` ; \
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${E_DATADIR}/$$NAME ; \
 	${GTAR} -C ${DESTDIR}${PREFIX}/${E_DATADIR}/$$NAME \
 		-xzf ${DISTDIR}/${DIST_SUBDIR}/${file}

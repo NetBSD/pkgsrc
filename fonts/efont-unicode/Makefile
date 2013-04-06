@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 18:28:18 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/06 14:58:18 rodent Exp $
 
 DISTNAME=	efont-unicode-bdf-0.4.2
 PKGNAME=	${DISTNAME:S/-bdf//}
@@ -34,7 +34,7 @@ FONTS_DIRS.x11=	${FONTDIR}
 do-build:
 	@cd ${WRKSRC};						\
 	for FONT in ${FONTS}; do				\
-	  ${ECHO} -n "Compiling font $${FONT} ... ";		\
+	  ${ECHO_N} "Compiling font $${FONT} ... ";		\
 	  bdftopcf $${FONT}.bdf |				\
 	    ${GZIP_CMD} -c >$${FONT}.pcf.gz;			\
 	  ${ECHO} "done";					\
@@ -43,7 +43,7 @@ do-build:
 do-install:
 	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${FONTDIR}
 	@for FONT in ${FONTS}; do				\
-	  ${ECHO} -n "Installing font $${FONT} ... ";		\
+	  ${ECHO_N} "Installing font $${FONT} ... ";		\
 	  ${INSTALL_DATA} ${WRKSRC}/$${FONT}.pcf.gz 		\
 	    ${DESTDIR}${PREFIX}/${FONTDIR};			\
 	  ${ECHO} "done";					\

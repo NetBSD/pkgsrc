@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2013/01/26 21:36:32 adam Exp $
+# $NetBSD: Makefile,v 1.111 2013/04/06 14:58:19 rodent Exp $
 
 DISTNAME=	tiff-4.0.3
 PKGREVISION=	2
@@ -29,7 +29,7 @@ TEST_TARGET=		check
 
 post-install:
 	cd ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3 && for file in *.3tiff; do\
-		target=`echo $$file | sed "s/3tiff/3/"`; \
+		target=`${ECHO} $$file | sed "s/3tiff/3/"`; \
 		${MV} $$file $$target; \
 	done
 
