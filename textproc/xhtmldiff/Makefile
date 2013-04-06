@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/09/23 09:22:14 taca Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 13:01:28 rodent Exp $
 
 DISTNAME=	xhtmldiff-1.2.2
 PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://theinternetco.net/projects/ruby/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	# http://theinternetco.net/projects/ruby/xhtmldiff.html
