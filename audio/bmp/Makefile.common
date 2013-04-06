@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2012/06/12 15:45:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2013/04/06 19:42:41 rodent Exp $
 #
 # used by audio/bmp/Makefile
 # used by audio/bmp-esound/Makefile
@@ -16,7 +16,7 @@ FILESDIR=		${.CURDIR}/../../audio/xmms/files
 PATCHDIR=		${.CURDIR}/../../audio/bmp/patches
 PATCH_SITES=		http://izb.knu.ac.kr/~bh/diffs/
 PATCHFILES=		bmp-0.9.7-ipv6-simple.diff
-PATCH_DIST_STRIP+=	-p1
+PATCH_DIST_STRIP=	-p1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

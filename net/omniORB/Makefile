@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:44 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 19:42:42 rodent Exp $
 #
 
 DISTNAME=		omniORB-4.1.5
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=omniorb/}
-EXTRACT_SUFX+=		.tar.bz2
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://omniorb.sourceforge.net/

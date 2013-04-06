@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/12/02 12:15:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 19:42:42 rodent Exp $
 #
 
 DISTNAME=	libvdpau-0.5
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--disable-documentation
 
-AUTO_MKDIRS+=		yes
+AUTO_MKDIRS=	yes
 
 PKGCONFIG_OVERRIDE+=	vdpau.pc.in
 

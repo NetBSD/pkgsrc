@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/31 11:16:58 asau Exp $
+# $NetBSD: Makefile,v 1.30 2013/04/06 19:42:41 rodent Exp $
 
 DISTNAME=	c31a1dd9cbb2
 # Last part of PKGNAME is changeset number
@@ -22,9 +22,9 @@ DIST_SUBDIR=	fromcvs
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python+=	tohg.rb
-SUBST_MESSAGE.python+=	Fixing path to Python interpreter.
+SUBST_MESSAGE.python=	Fixing path to Python interpreter.
 SUBST_SED.python+=	-e "s!'python'!'${PYTHONBIN}'!"
-SUBST_STAGE.python+=	pre-build
+SUBST_STAGE.python=	pre-build
 
 INSTALLATION_DIRS=	bin
 
