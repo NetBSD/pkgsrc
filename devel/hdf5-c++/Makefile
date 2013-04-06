@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/07 10:42:18 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 11:39:25 rodent Exp $
 
 PKGNAME=	hdf5-c++-${HDF5_VER}
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
@@ -24,15 +24,15 @@ do-install:
 	  H5Exception.h H5FaccProp.h H5FcreatProp.h H5File.h H5FloatType.h \
 	  H5Group.h H5IdComponent.h H5Include.h H5IntType.h H5Library.h \
 	  H5Object.h H5PredType.h H5PropList.h H5StrType.h H5VarLenType.h
-	${INSTALL_DATA} ${WRKSRC}/c++/src/$f ${DESTDIR}/${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/c++/src/${f} ${DESTDIR}/${PREFIX}/include/
 .endfor
 .for f in chunks.cpp compound.cpp create.cpp extend_ds.cpp \
 	  h5group.cpp readdata.cpp run-c++-ex.sh writedata.cpp
-	${INSTALL_DATA} ${WRKSRC}/c++/examples/$f \
+	${INSTALL_DATA} ${WRKSRC}/c++/examples/${f} \
 	    ${DESTDIR}/${PREFIX}/share/examples/hdf5/c++/
 .endfor
 .for f in ptExampleFL.cpp ptExampleVL.cpp run-hlc++-ex.sh
-	${INSTALL_DATA} ${WRKSRC}/hl/c++/examples/$f \
+	${INSTALL_DATA} ${WRKSRC}/hl/c++/examples/${f} \
 	    ${DESTDIR}/${PREFIX}/share/examples/hdf5/hl/c++/
 .endfor
 
