@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1179 2013/04/06 11:41:45 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1180 2013/04/06 12:05:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1874,3 +1874,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/kbibtex to 0.4.1 [markd 2013-04-06]
 	Updated sysutils/k4dirstat to 2.7.4 [markd 2013-04-06]
 	Updated meta-pkgs/pulseaudio-tools to 1.0 [wiz 2013-04-06]
+	Updated www/contao211 to 2.11.11 [taca 2013-04-06]
+	Updated www/contao211-example to 2.11.11 [taca 2013-04-06]
