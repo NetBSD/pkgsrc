@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/06 11:54:51 asau Exp $
+# $NetBSD: Makefile,v 1.38 2013/04/06 12:04:00 rodent Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -29,7 +29,7 @@ USE_TOOLS+=	gtar gunzip pax tail
 # The distfile is a self-extracting shell script.  "266" is a magic
 # number that's taken from the distfile itself.
 #
-EXTRACT_CMD=	tail +266 ${DOWNLOADED_DISTFILE} | gunzip | gtar -xf -
+EXTRACT_CMD=	tail +266 $$extract_file | gunzip | gtar -xf -
 
 DISTBINNAME=	quake3.x86
 BINNAME=	quake3arena

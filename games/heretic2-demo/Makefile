@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/06 11:54:42 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/06 12:04:00 rodent Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.lokigames.com/products/heretic2/
 COMMENT=	Heretic2 - first person Quake 3D engine based (linux demo)
 
 NO_CONFIGURE=	yes
-EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
+EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' $$extract_file | \
 								${GTAR} xzf -
 USE_TOOLS+=	gtar pax
 
