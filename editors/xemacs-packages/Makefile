@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/10/03 21:56:00 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2013/04/06 13:24:19 rodent Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.16
@@ -212,10 +212,10 @@ xemacs-update-package: xemacs-fetch-package-list xemacs-merge-package-list
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
-.for DISTFILE in ${DISTFILES}
-	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
+.for distfile in ${DISTFILES}
+	@${ECHO_MSG} -n "Extracting ${distfile} ... "
 	${GTAR} xCzf ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages \
-		${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
+		${DISTDIR}/${DIST_SUBDIR}/${distfile}
 	@${ECHO_MSG} "done"
 .endfor
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
@@ -225,11 +225,11 @@ do-install:
 	@${ECHO_MSG} -n "Fixing file permissions ... "
 	${CHMOD} -R g-w,o-w ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 	@${ECHO_MSG} "done"
-.for PROG in ${REPLACEMENT_PROGS}
-	@${ECHO_MSG} "Fixing ${PROG} paths"
-	for f in ${REPLACEMENTS.${PROG}}; do 			\
+.for prog in ${REPLACEMENT_PROGS}
+	@${ECHO_MSG} "Fixing ${prog} paths"
+	for f in ${REPLACEMENTS.${prog}}; do 			\
 		cp ${DESTDIR}$$f ${DESTDIR}$$f.pre;		\
-		${SED} -e 's|#!.*${PROG}|${PREFIX}/bin/${PROG}|'	\
+		${SED} -e 's|#!.*${prog}|${PREFIX}/bin/${prog}|'	\
 			${DESTDIR}$$f.pre > ${DESTDIR}$$f;	\
 		rm ${DESTDIR}$$f.pre;				\
 	done

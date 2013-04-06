@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/03 21:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/04/06 13:24:19 rodent Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.8
@@ -31,19 +31,19 @@ do-extract:
 	${CP} ${FILESDIR}/pkgdepgraph.0 ${WRKSRC}/pkgdepgraph.0.in
 
 do-build:
-.for FILE in pkgdepgraph
+.for file in pkgdepgraph
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
 		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
-		< ${WRKSRC}/${FILE}.pl 		\
-		> ${WRKSRC}/${FILE}
+		< ${WRKSRC}/${file}.pl 		\
+		> ${WRKSRC}/${file}
 .endfor
-.for FILE in pkgdepgraph.1 pkgdepgraph.0
+.for file in pkgdepgraph.1 pkgdepgraph.0
 	${SED} -e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
 		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'	\
-		< ${WRKSRC}/${FILE}.in		\
-		> ${WRKSRC}/${FILE}
+		< ${WRKSRC}/${file}.in		\
+		> ${WRKSRC}/${file}
 .endfor
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
 	# the pre-generated man-pages are 'mandoc';  these OS need 'man'

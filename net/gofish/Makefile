@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:24 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/06 13:24:19 rodent Exp $
 
 DISTNAME=		gofish-1.2
 CATEGORIES=		net
@@ -31,8 +31,8 @@ RCD_SCRIPTS=		gopherd
 
 OWN_DIRS_PERMS=		${RUNTIMEDIR} ${GOPHER_USER} ${GOPHER_GROUP} 0750
 
-.for FILE in gofish.conf gofish-www.conf
-CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.for file in gofish.conf gofish-www.conf
+CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
 
 FILES_SUBST+=		RUNTIMEDIR=${RUNTIMEDIR:Q}

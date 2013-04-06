@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/23 10:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2013/04/06 13:24:20 rodent Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -57,12 +57,12 @@ do-install:
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/asclock.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/asclock.1
-.for LANGUAGE in ${LANGUAGES}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/asclock-classic/${LANGUAGE}
-	cd ${WRKSRC}/${LANGUAGE}; ${INSTALL_DATA} month.xpm weekday.xpm \
-		${DESTDIR}${PREFIX}/share/asclock-classic/${LANGUAGE}
-	@${ECHO} share/asclock-classic/${LANGUAGE}/month.xpm >> ${PLIST_SRC}
-	@${ECHO} share/asclock-classic/${LANGUAGE}/weekday.xpm >> ${PLIST_SRC}
+.for language in ${LANGUAGES}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/asclock-classic/${language}
+	cd ${WRKSRC}/${language}; ${INSTALL_DATA} month.xpm weekday.xpm \
+		${DESTDIR}${PREFIX}/share/asclock-classic/${language}
+	@${ECHO} share/asclock-classic/${language}/month.xpm >> ${PLIST_SRC}
+	@${ECHO} share/asclock-classic/${language}/weekday.xpm >> ${PLIST_SRC}
 .endfor
 
 .include "../../x11/libXext/buildlink3.mk"
