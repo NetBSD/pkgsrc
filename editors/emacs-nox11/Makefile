@@ -1,3 +1,5 @@
+# $NetBSD: Makefile,v 1.39 2013/04/06 11:23:04 rodent Exp $
+
 DISTNAME=	emacs-nox11-${MY_EMACS_VERSION}
 MYPKGREVISION=	0	# Do not remove this when zero
 
