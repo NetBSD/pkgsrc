@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/11 23:25:07 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/06 19:42:42 rodent Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -26,7 +26,7 @@ INSTALLATION_DIRS+=	share/doc/bash-completion
 SUBST_CLASSES+=		path
 SUBST_SED.path+=	-e "s,/etc/bash_completion.d,${PREFIX}/share/bash-completion.d,g"
 SUBST_SED.path+=	-e "s,/etc/bash_completion,${PREFIX}/share/bash-completion/bash_completion,g"
-SUBST_STAGE.path+=	pre-build
+SUBST_STAGE.path=	pre-build
 SUBST_FILES.path+=	bash_completion* README
 SUBST_MESSAGE.path=	Fixing path to completion files.
 

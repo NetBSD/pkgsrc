@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2012/10/04 09:19:18 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/06 19:42:42 rodent Exp $
 
 DISTNAME=	gpsd-2.96
 PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://download.berlios.de/gpsd/
 
-MAINTAINER+=	gdt@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://gpsd.berlios.de/
 COMMENT=	GPS information daemon
 

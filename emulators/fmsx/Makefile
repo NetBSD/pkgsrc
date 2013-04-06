@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/23 10:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/04/06 19:42:41 rodent Exp $
 
 DISTNAME=	fMSX351
 PKGNAME=	fmsx-3.5.1
@@ -46,7 +46,7 @@ DEFS+=		-DMSB_FIRST
 .elif ${MACHINE_ENDIAN} == "little"
 DEFS+=		-DLSB_FIRST
 .else
-BROKEN+=	"Unknown endian"
+BROKEN=		"Unknown endian"
 .endif
 
 MAKE_ENV+=	DEFS=${DEFS:Q}
