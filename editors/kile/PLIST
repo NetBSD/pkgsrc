@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/03/21 22:59:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/04/06 10:15:38 markd Exp $
 bin/kile
 share/applications/kde4/kile.desktop
 share/dbus-1/interfaces/net.sourceforge.kile.main.xml
@@ -59,8 +59,13 @@ share/doc/kde/HTML/en/kile/structureview.png
 share/doc/kde/HTML/en/kile/texgroup.png
 share/doc/kde/HTML/es/kile/index.cache.bz2
 share/doc/kde/HTML/es/kile/index.docbook
+share/doc/kde/HTML/fr/kile/bullets.png
+share/doc/kde/HTML/fr/kile/delete.png
 share/doc/kde/HTML/fr/kile/index.cache.bz2
 share/doc/kde/HTML/fr/kile/index.docbook
+share/doc/kde/HTML/fr/kile/select.png
+share/doc/kde/HTML/fr/kile/snap_okular_settings.png
+share/doc/kde/HTML/fr/kile/snap_ref_choose.png
 share/doc/kde/HTML/it/kile/index.cache.bz2
 share/doc/kde/HTML/it/kile/index.docbook
 share/doc/kde/HTML/nl/kile/index.cache.bz2
@@ -190,6 +195,7 @@ share/kde/apps/kile/complete/tex/gauss.cwl
 share/kde/apps/kile/complete/tex/glosstex.cwl
 share/kde/apps/kile/complete/tex/graphicx.cwl
 share/kde/apps/kile/complete/tex/hyperref.cwl
+share/kde/apps/kile/complete/tex/ifplatform.cwl
 share/kde/apps/kile/complete/tex/ifthen.cwl
 share/kde/apps/kile/complete/tex/import.cwl
 share/kde/apps/kile/complete/tex/jurabib.cwl
@@ -344,6 +350,8 @@ share/kde/apps/kile/icons/hicolor/16x16/actions/matrix.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/medskip.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/medspace.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/minipage.png
+share/kde/apps/kile/icons/hicolor/16x16/actions/modified.png
+share/kde/apps/kile/icons/hicolor/16x16/actions/modonhd.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/multline.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/nextbullet.png
 share/kde/apps/kile/icons/hicolor/16x16/actions/nextparagraph.png
@@ -523,8 +531,6 @@ share/kde/apps/kile/icons/hicolor/48x48/actions/sqrt.png
 share/kde/apps/kile/icons/hicolor/64x64/actions/nroot.png
 share/kde/apps/kile/icons/hicolor/64x64/actions/preview.png
 share/kde/apps/kile/icons/hicolor/64x64/actions/sqrt.png
-share/kde/apps/kile/icons/oxygen/16x16/actions/modified.png
-share/kde/apps/kile/icons/oxygen/16x16/actions/modonhd.png
 share/kde/apps/kile/kilestdtools.rc
 share/kde/apps/kile/kileui.rc
 share/kde/apps/kile/mathsymbols/arrows/img001arrows.png
@@ -1575,8 +1581,10 @@ share/locale/ga/LC_MESSAGES/kile.mo
 share/locale/gl/LC_MESSAGES/kile.mo
 share/locale/hi/LC_MESSAGES/kile.mo
 share/locale/hne/LC_MESSAGES/kile.mo
+share/locale/hu/LC_MESSAGES/kile.mo
 share/locale/it/LC_MESSAGES/kile.mo
 share/locale/ja/LC_MESSAGES/kile.mo
+share/locale/kk/LC_MESSAGES/kile.mo
 share/locale/lt/LC_MESSAGES/kile.mo
 share/locale/mai/LC_MESSAGES/kile.mo
 share/locale/ms/LC_MESSAGES/kile.mo
