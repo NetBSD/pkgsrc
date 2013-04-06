@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 18:16:29 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/06 13:24:20 rodent Exp $
 #
 
 DISTNAME=	gpg2dot-1.5
@@ -26,16 +26,16 @@ do-extract:
 #	${CP} ${FILESDIR}/gpg2dot.1 ${WRKSRC}/gpg2dot.1.in
 
 do-build:
-.for FILE in gpg2dot
+.for file in gpg2dot
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
-		< ${WRKSRC}/${FILE}.pl 			\
-		> ${WRKSRC}/${FILE}
+		< ${WRKSRC}/${file}.pl 			\
+		> ${WRKSRC}/${file}
 .endfor
-#.for FILE in gpg2dot
+#.for file in gpg2dot
 #	${SED} -e ''					\
-#		< ${WRKSRC}/${FILE}.1.in		\
-#		> ${WRKSRC}/${FILE}.1
+#		< ${WRKSRC}/${file}.1.in		\
+#		> ${WRKSRC}/${file}.1
 #.endfor
 
 do-install:
