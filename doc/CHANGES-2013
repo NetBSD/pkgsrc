@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1172 2013/04/06 03:29:19 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1173 2013/04/06 03:32:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1727,7 +1727,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Added games/libkmahjongg version 4.10.2 [markd 2013-04-03]
 	Added games/bomber version 4.10.2 [markd 2013-04-03]
 	Added games/bovo version 4.10.2 [markd 2013-04-03]
-	Added games/grantier version 4.10.2 [markd 2013-04-03]
+	Added games/granatier version 4.10.2 [markd 2013-04-03]
 	Added games/kajongg version 4.10.2 [markd 2013-04-03]
 	Added games/kapman version 4.10.2 [markd 2013-04-03]
 	Added games/katomic version 4.10.2 [markd 2013-04-03]
