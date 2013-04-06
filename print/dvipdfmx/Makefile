@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/02/16 11:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/04/06 21:07:34 rodent Exp $
 
 DISTNAME=	texlive-20100720-source
 PKGNAME=	dvipdfmx-20100328
@@ -44,9 +44,9 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	data/dvipdfmx.cfg src/dvipdft
-SUBST_SED.paths=	-e 's,@DVIPDFM@,${PREFIX}/bin/dvipdfm,g' \
-			-e 's,@GS@,${TOOLS_PATH.gs},g' \
-			-e 's,@PS2PDF@,${LOCALBASE}/bin/ps2pdf,g'
+SUBST_SED.paths=	-e 's,@DVIPDFM@,${PREFIX}/bin/dvipdfm,g'
+SUBST_SED.paths+=	-e 's,@GS@,${TOOLS_PATH.gs},g'
+SUBST_SED.paths+=	-e 's,@PS2PDF@,${LOCALBASE}/bin/ps2pdf,g'
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf

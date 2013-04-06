@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:08 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/06 21:07:34 rodent Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -20,9 +20,9 @@ SUBST_CLASSES+=		options
 SUBST_MESSAGE.options=	Fixing build options.
 SUBST_STAGE.options=	post-patch
 SUBST_FILES.options=	Makefile Makefile.Solaris
-SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,' \
-			-e 's,LDFLAGS =,\#LDFLAGS =,' \
-			-e 's,CC =,\#CC =,'
+SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,'
+SUBST_SED.options+=	-e 's,LDFLAGS =,\#LDFLAGS =,'
+SUBST_SED.options+=	-e 's,CC =,\#CC =,'
 
 PTHREAD_OPTS+=		require
 LDFLAGS+=		${PTHREAD_LIBS}
