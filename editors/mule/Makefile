@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/10/03 11:43:38 asau Exp $
+# $NetBSD: Makefile,v 1.49 2013/04/06 20:27:20 rodent Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	7
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 .include "options.mk"
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${GNU_CONFIGURE_INFODIR}

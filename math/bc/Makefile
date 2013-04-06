@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/11 23:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/06 20:27:24 rodent Exp $
 
 DISTNAME=	bc-1.06
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	Arbitrary precision calculator language
 USE_TOOLS+=		flex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
