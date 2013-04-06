@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/03/17 14:40:33 taca Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 12:08:39 rodent Exp $
 
 DISTNAME=	log4r-1.1.10
 CATEGORIES=	devel
 
-HOMEPAGE=	http://log4r.rubyforge.org
+HOMEPAGE=	http://log4r.rubyforge.org/
 COMMENT=	Flexible logging library
 LICENSE=	gnu-lgpl-v3
 
