@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.45 2013/02/13 12:01:05 obache Exp $
+$NetBSD: distinfo,v 1.46 2013/04/06 08:56:35 obache Exp $
 
-SHA1 (opera-12.14-1738.amd64.freebsd.tar.xz) = e114ce3933e80c78491d375f2572f33f15398980
-RMD160 (opera-12.14-1738.amd64.freebsd.tar.xz) = 167debf35dad4d55f0c3d5e1c78a397a0fdd7325
-Size (opera-12.14-1738.amd64.freebsd.tar.xz) = 13443168 bytes
-SHA1 (opera-12.14-1738.i386.freebsd.tar.xz) = 263e39b98181b3e71ddc3fdf214148d88530dce7
-RMD160 (opera-12.14-1738.i386.freebsd.tar.xz) = 789705529486faa07a1171db161ef0e096cfc33a
-Size (opera-12.14-1738.i386.freebsd.tar.xz) = 13488412 bytes
-SHA1 (opera-12.14-1738.i386.linux.tar.xz) = 1511ecf3b8d65d237b3777df89188f630ced792b
-RMD160 (opera-12.14-1738.i386.linux.tar.xz) = e81ab632a5be1239fcca3e678734a51b5a1ca68e
-Size (opera-12.14-1738.i386.linux.tar.xz) = 13590832 bytes
-SHA1 (opera-12.14-1738.x86_64.linux.tar.xz) = 31a186b528f63d54b2c62bdea74cb79789a196be
-RMD160 (opera-12.14-1738.x86_64.linux.tar.xz) = 0ff799f91396251acb629c7df891de40c6b551c3
-Size (opera-12.14-1738.x86_64.linux.tar.xz) = 13680464 bytes
+SHA1 (opera-12.15-1748.amd64.freebsd.tar.xz) = 0803504e1d46fa4289f19976f59aab43681d03bd
+RMD160 (opera-12.15-1748.amd64.freebsd.tar.xz) = 6c3bc49aff1bb60a0bf480c7f5c33c2ee764c601
+Size (opera-12.15-1748.amd64.freebsd.tar.xz) = 13443688 bytes
+SHA1 (opera-12.15-1748.i386.freebsd.tar.xz) = bdae04099929e2d5be7d78984e87ee87e870159e
+RMD160 (opera-12.15-1748.i386.freebsd.tar.xz) = 0848a1020c78462d86c4e8ae1ec15d4016578cd5
+Size (opera-12.15-1748.i386.freebsd.tar.xz) = 13487204 bytes
+SHA1 (opera-12.15-1748.i386.linux.tar.xz) = 09a8659d280ad56bebd4ee557b65f56c4f65d49f
+RMD160 (opera-12.15-1748.i386.linux.tar.xz) = d888cbf2d8631a1f25a00168cbcd70bb948f47a2
+Size (opera-12.15-1748.i386.linux.tar.xz) = 13576396 bytes
+SHA1 (opera-12.15-1748.x86_64.linux.tar.xz) = e7600ec28e3118ce0beca1e13169f3bec75e1ae0
+RMD160 (opera-12.15-1748.x86_64.linux.tar.xz) = fba7ef3f0a020e4285d8029fee787ce9e043e3ea
+Size (opera-12.15-1748.x86_64.linux.tar.xz) = 13686680 bytes
