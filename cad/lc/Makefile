@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/16 15:26:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 04:11:44 rodent Exp $
 
 DISTNAME=	lc	# overridden below
 PKGNAME=	lc-${LCVER}
@@ -60,7 +60,7 @@ INSTALLATION_DIRS=	bin share
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lc ${DESTDIR}${PREFIX}/bin/lc
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcplot ${DESTDIR}${PREFIX}/bin/lcplot
-	if test -f ${WRKSRC}/bin/spice ; then ${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${DESTDIR}${PREFIX}/bin/lcspice ; fi
+	if ${TEST} -f ${WRKSRC}/bin/spice ; then ${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${DESTDIR}${PREFIX}/bin/lcspice ; fi
 	# remove cat pages after extraction but before installation
 	cd ${DESTDIR}${PREFIX}/share && \
 	  ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz && \
