@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.72 2013/03/15 13:34:32 kim Exp $
+# $NetBSD: Makefile,v 1.73 2013/04/06 13:01:27 rodent Exp $
 
 DISTNAME=	proftpd-1.3.4c
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
 		ftp://ftp.fsn.hu/pub/proftpd/distrib/source/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.proftpd.org/
