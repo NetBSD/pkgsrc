@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2013/02/17 18:55:44 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 13:01:28 rodent Exp $
 
 DISTNAME=	xalarm-3.06
 PKGREVISION=	3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 interactive alarm clock
