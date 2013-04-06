@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/06 21:07:35 rodent Exp $
 
 DISTNAME=	pkfix
 PKGNAME=	tex-${DISTNAME}-1.5
@@ -20,9 +20,9 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/pkfix
-SUBST_SED.paths=	-e 's,@DVIPS@,${LOCALBASE}/bin/dvips,g' \
-			-e 's,@KPSEWHICH@,${LOCALBASE}/bin/kpsewhich,g' \
-			-e 's,@TEX@,${LOCALBASE}/bin/tex,g'
+SUBST_SED.paths=	-e 's,@DVIPS@,${LOCALBASE}/bin/dvips,g'
+SUBST_SED.paths+=	-e 's,@KPSEWHICH@,${LOCALBASE}/bin/kpsewhich,g'
+SUBST_SED.paths+=	-e 's,@TEX@,${LOCALBASE}/bin/tex,g'
 
 INSTALLATION_DIRS+=	bin
 
