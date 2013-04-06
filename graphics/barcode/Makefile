@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/12/12 10:44:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/06 20:27:21 rodent Exp $
 #
 
 DISTNAME=	barcode-0.98
@@ -11,7 +11,7 @@ COMMENT=	Create bar codes as EPS (program and library)
 
 GNU_CONFIGURE=	YES
 MAKE_ENV+=	AWK=${AWK:Q}
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALL_MAKE_FLAGS=					\
 	BINDIR=${DESTDIR}${PREFIX}/bin			\

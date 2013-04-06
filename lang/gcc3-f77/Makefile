@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 20:11:40 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/06 20:27:22 rodent Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-f77-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - F77 compiler
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTLIBS=	libf2c/libg2c.la
 

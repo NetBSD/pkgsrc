@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 00:10:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/06 20:27:17 rodent Exp $
 #
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
+INFO_FILES=		yes
 
 WRKSRC=			${WRKDIR}/gcc-${DIST_VERSION}
 
