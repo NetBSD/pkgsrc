@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/31 11:19:50 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/06 04:07:24 rodent Exp $
 
 DISTNAME=	tet3.7-unsup.src
 PKGNAME=	tet3-3.7
@@ -46,7 +46,7 @@ PTHREAD_OPTS+=	native	# only native threads make sense
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
-PKG_SKIP_REASON+=	"Native threads are needed for this package"
+PKG_FAIL_REASON+=	"Native threads are needed for this package"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
