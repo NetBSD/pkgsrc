@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/06 08:04:39 apb Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 03:45:25 rodent Exp $
 #
 
 DISTNAME=	salt-0.10.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/saltstack/salt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
-COMMENT=	Documentation for salt - Remote execution and configuration management system
+COMMENT=	Documentation for salt
 LICENSE=	apache-2.0
 
 NO_CONFIGURE=	yes
@@ -26,7 +26,7 @@ do-install:
 	( cd ${DESTDIR}${PREFIX} \
 	  && ${FIND} ${HTMLDIR} -type f -print ) >>${PLIST_SRC}
 
-# The upstream salt project does not say what version of sphinx is reqwuired.
+# The upstream salt project does not say what version of sphinx is required.
 .include "../../lang/python/pyversion.mk"
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 

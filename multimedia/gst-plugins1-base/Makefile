@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/12/18 12:31:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 03:45:19 rodent Exp $
 #
 .include "Makefile.common"
 
 #CONFIGURE_ARGS+= --disable-silent-rules
 
-COMMENT+=		base plugins
+COMMENT+=	Base plugins
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=	perl:run
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/*.pc.in
 

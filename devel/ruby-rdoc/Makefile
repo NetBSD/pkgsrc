@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2011/11/23 05:21:03 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/06 03:45:12 rodent Exp $
 
 DISTNAME=	rdoc-${RUBY_RDOC_VERSION}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docs.seattlerb.org/rdoc
-COMMENT=	produces HTML and command-line documentation for Ruby projects
+COMMENT=	Produces HTML and command-line documentation for Ruby projects
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
 RUBY_JSON_REQD=	1.4

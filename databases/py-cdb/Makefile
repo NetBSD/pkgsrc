@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/02 21:25:48 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 03:45:08 rodent Exp $
 #
 
 DISTNAME=	python-cdb-0.34
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pilcrow.madison.wi.us/python-cdb/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://pilcrow.madison.wi.us/
-COMMENT=	cdb python extension module
+COMMENT=	Python extension module for cdb
 LICENSE=	gnu-gpl-v2
 
 PYDISTUTILSPKG=		yes
