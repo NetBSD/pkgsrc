@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2013/04/06 09:46:09 markd Exp $
+# $NetBSD: Makefile,v 1.85 2013/04/06 14:58:18 rodent Exp $
 #
 
 PKGNAME=	kipi-plugins-3.1.0
@@ -23,9 +23,9 @@ USE_TOOLS+=		msgfmt pkg-config
 WRKSRC=			${WRKDIR}/${DISTNAME}/extra/kipi-plugins
 
 post-patch:
-	echo "FIND_PACKAGE(Msgfmt REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
-	echo "FIND_PACKAGE(Gettext REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
-	echo "ADD_SUBDIRECTORY(po)" >> ${WRKSRC}/CMakeLists.txt
+	${ECHO} "FIND_PACKAGE(Msgfmt REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
+	${ECHO} "FIND_PACKAGE(Gettext REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
+	${ECHO} "ADD_SUBDIRECTORY(po)" >> ${WRKSRC}/CMakeLists.txt
 	ln -s ../../po ${WRKSRC}/po
 	rm ${WRKSRC}/po/*/digikam.po ${WRKSRC}/po/*/libkgeomap.po ${WRKSRC}/po/*/libkipi.po
 

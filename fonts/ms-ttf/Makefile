@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 18:28:28 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/04/06 14:58:18 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -39,7 +39,7 @@ INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}
 post-extract:
 	${RUN}								\
 	for f in ${WRKSRC}/*.TTF ; do					\
-		${MV} $$f `echo $$f | ${SED} 's|TTF$$|ttf|'`;		\
+		${MV} $$f `${ECHO} $$f | ${SED} 's|TTF$$|ttf|'`;	\
 	done
 
 do-install:

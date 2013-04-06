@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/04/06 04:07:24 rodent Exp $
+# $NetBSD: options.mk,v 1.5 2013/04/06 14:58:19 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
@@ -108,7 +108,7 @@ pre-configure:
 	cd ${WRKDIR}/.gcc/bin/ && \
 	for filename in ${ALT_GCC:T} $${bin_files} ; do \
 		${ECHO} '#!${TOOLS_SHELL}' > $${filename}; \
-		${ECHO} -n "exec ${ALT_GCC:H}/$${filename} " >>$${filename}; \
+		${ECHO_N} "exec ${ALT_GCC:H}/$${filename} " >>$${filename}; \
 		${ECHO} '"$$@"' >>$${filename}; \
 		${CHMOD} +x $${filename}; \
 	done )

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/29 05:07:15 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/04/06 14:58:21 rodent Exp $
 
 DISTNAME=	magicpoint-1.09a
 PKGNAME=	xmindpath-1.09a
@@ -23,9 +23,9 @@ SPECIAL_PERMS=	bin/xmindpath uucp ${REAL_ROOT_GROUP} 4511
 .if !empty(MISSING_FEATURES:Merr)
 pre-build:
 	cd ${BUILDLINK_DIR}/include && \
-	{ echo "#include <nbcompat/cdefs.h>"; \
-	  echo "#include <stdarg.h>"; \
-	  echo "#include <nbcompat/err.h>"; \
+	{ ${ECHO} "#include <nbcompat/cdefs.h>"; \
+	  ${ECHO} "#include <stdarg.h>"; \
+	  ${ECHO} "#include <nbcompat/err.h>"; \
 	} > err.h
 .endif
 

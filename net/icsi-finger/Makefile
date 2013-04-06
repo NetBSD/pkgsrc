@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/23 17:18:28 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/06 14:58:20 rodent Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.29
@@ -22,15 +22,15 @@ INSTALLATION_DIRS+=	share/examples/icsi-finger/targets
 
 pre-configure:
 		chmod +w ${WRKSRC}/config.h
-		echo \#define ManDir ${PREFIX}/${PKGMANDIR} >> \
+		${ECHO} \#define ManDir ${PREFIX}/${PKGMANDIR} >> \
 			${WRKSRC}/config.h
-		echo \#define TARGETDIR \"${PKG_SYSCONFDIR}/fingerdir/targets\"\
+		${ECHO} \#define TARGETDIR \"${PKG_SYSCONFDIR}/fingerdir/targets\"\
 			>> ${WRKSRC}/config.h
-		echo \#define TargetDir ${PKG_SYSCONFDIR}/fingerdir/targets \
+		${ECHO} \#define TargetDir ${PKG_SYSCONFDIR}/fingerdir/targets \
 			>> ${WRKSRC}/config.h
-		echo \#define TTYLOCFILE \"${PKG_SYSCONFDIR}/fingerdir/ttylocs\" \
+		${ECHO} \#define TTYLOCFILE \"${PKG_SYSCONFDIR}/fingerdir/ttylocs\" \
 			>> ${WRKSRC}/config.h
-		echo \#define HOSTCONFIGFILE \"${PKG_SYSCONFDIR}/fingerdir/hostconfig\" \
+		${ECHO} \#define HOSTCONFIGFILE \"${PKG_SYSCONFDIR}/fingerdir/hostconfig\" \
 			>> ${WRKSRC}/config.h
 		${MV} -f ${WRKSRC}/support/inetd.conf-add \
 			${WRKSRC}/support/inetd.conf-add.bak
