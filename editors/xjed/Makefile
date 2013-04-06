@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 11:43:48 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 03:45:12 rodent Exp $
 #
 PKGNAME=		xjed-0.99.16
 PKGREVISION=		1
 
 .include "../../editors/jed/Makefile.common"
-COMMENT=		Extensible folding editor with Emacs/WordStar/EDT emulations, X11 version
+COMMENT=		Extensible folding editor + Emacs/WordStar/EDT emulations, X11 version
 
 CONFLICTS=		jed-[0-9]*
 

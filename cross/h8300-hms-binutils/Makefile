@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 00:10:30 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/06 03:45:08 rodent Exp $
 
-DISTNAME=		binutils-2.12.1
-PKGNAME=		cross-h8300-hms-binutils-2.12.1
-PKGREVISION=		1
-CATEGORIES=		cross
-MASTER_SITES=		ftp://ftp.gnu.org/gnu/binutils/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	binutils-2.12.1
+PKGNAME=	cross-h8300-hms-binutils-2.12.1
+PKGREVISION=	1
+CATEGORIES=	cross
+MASTER_SITES=	ftp://ftp.gnu.org/gnu/binutils/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		# empty
-COMMENT=		h8300-hms cross utility
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	# empty
+COMMENT=	Cross utility for h8300-hms
 
-H8300_PREFIX=		${PREFIX}/libexec/cross-h8300-hms
+H8300_PREFIX=	${PREFIX}/libexec/cross-h8300-hms
 
-WRKSRC=			${WRKDIR}/objdir
-USE_TOOLS+=		gmake makeinfo
-HAS_CONFIGURE=		yes
+WRKSRC=		${WRKDIR}/objdir
+USE_TOOLS+=	gmake makeinfo
+HAS_CONFIGURE=	yes
+
 CONFIGURE_ARGS+=	--prefix=${H8300_PREFIX:Q}
-CONFIGURE_ARGS+=	--infodir=${H8300_PREFIX}/binutils
-CONFIGURE_ARGS+=	--target=h8300-hms
+CONFIGURE_ARGS+=	--infodir=${H8300_PREFIX}/binutils --target=h8300-hms
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/${DISTNAME}
 BUILD_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 INFO_FILES=		# PLIST
 
-INSTALLATION_DIRS=	bin ${H8300_PREFIX}
+INSTALLATION_DIRS+=	bin ${H8300_PREFIX}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
