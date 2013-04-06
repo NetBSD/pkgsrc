@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12042 2013/04/06 10:23:36 markd Exp $
+$NetBSD: TODO,v 1.12043 2013/04/06 11:14:50 rodent Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alacarte-0.13.2
 	o album-4.08
 	o aliados-0.2.0
-	o allegro-4.4.2
 	o alsa-1.0.23
 	o alsa-lib-1.0.26
 	o alsa-plugins-1.0.26
@@ -505,7 +504,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-1.0.0
 	o dgen-1.32
 	o dhid-5.3
-	o dictem-1.0.4
 	o diffutils-3.3
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -537,7 +535,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emerillon-0.1.90
 	o enlightenment-1.0.9
 	o enscript-1.6.6
-	o eog-3.6.2
 	o eog-plugins-3.6.1
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
@@ -557,11 +554,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evince-3.8.0
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
-	o evolution-exchange-2.32.2
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
-	o f-spot-0.8.2
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o farsight2-0.0.31
@@ -894,7 +889,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.5.2
 	o mp3splt-gtk-0.7.3
 	o mpeg4ip-1.6.1
-	o mpfr-3.1.2
 	o mpg123-1.15.3
 	o mpop-1.0.27
 	o mserv-devel-0.41
@@ -1084,7 +1078,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scrotwm-0.11.0
 	o scsh-1.3.0
 	o sdcc-2.9.0
-	o seahorse-2.32.0 [GNOME 2.32]
 	o seahorse-3.8.0
 	o seahorse-nautilus-3.8.0
 	o secpanel-0.6.1
@@ -1221,7 +1214,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wdiff-1.2.1
 	o webalizer-2.23.05
 	o webkit-gtk-2.0.0
-	o webkit-gtk3-1.10.1
 	o webmin-1.620
 	o websvn-2.3.2
 	o weechat-0.4.0
