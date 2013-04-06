@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2012/10/29 05:06:17 asau Exp $
+# $NetBSD: Makefile,v 1.130 2013/04/06 20:27:30 rodent Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		11
@@ -21,7 +21,7 @@ USE_LANGUAGES+=		c99
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	gdk.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+.pc.in
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xinput=xfree \

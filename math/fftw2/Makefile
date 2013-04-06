@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/04/06 14:22:40 rodent Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/06 20:27:24 rodent Exp $
 
 DISTNAME=	fftw-2.1.5
 PKGNAME=	fftw2-2.1.5
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--enable-shared
 USE_LANGUAGES=		c fortran77
 USE_TOOLS+=		gmake makeinfo
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "i386"

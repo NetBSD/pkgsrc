@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/02/17 19:18:01 dholland Exp $
+# $NetBSD: Makefile,v 1.35 2013/04/06 20:27:19 rodent Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -28,7 +28,7 @@ MAKEFLAGS=	${MAKEFLAGS.${EMACS_FLAVOR}}
 
 EVAL_PREFIX+=	QKC_PREFIX=qkc
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 EMACS_MODULES=	base
 EMACS_BUILDLINK=# defined

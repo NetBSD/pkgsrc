@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/03/01 21:16:11 markd Exp $
+# $NetBSD: Makefile,v 1.42 2013/04/06 20:27:24 rodent Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.wonderworks.com/vm/
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/vm

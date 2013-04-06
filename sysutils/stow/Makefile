@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 19:51:24 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/06 20:27:29 rodent Exp $
 #
 
 DISTNAME=	stow-1.3.3
@@ -14,6 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	perl:run
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 .include "../../mk/bsd.pkg.mk"

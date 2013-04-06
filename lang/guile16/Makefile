@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/12/05 23:42:14 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 20:27:22 rodent Exp $
 
 DISTNAME=		guile-1.6.8
 PKGREVISION=		5
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
