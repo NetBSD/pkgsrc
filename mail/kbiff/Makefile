@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2013/02/16 11:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2013/04/06 12:08:39 rodent Exp $
 
 DISTNAME=	kbiff-3.9
 PKGREVISION=	18
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kbiff/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.kbiff.org
+HOMEPAGE=	http://www.kbiff.org/
 COMMENT=	Mail notification utility for KDE
 
 USE_TOOLS+=		gmake perl
