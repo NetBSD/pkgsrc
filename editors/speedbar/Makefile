@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/02/17 19:18:03 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/06 20:27:20 rodent Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -17,7 +17,7 @@ PKGSRC_MAKE_ENV+=	EMACS=${EMACS}
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 SRCS=	speedbar.el dframe.el
 # XXX cd ${WRKSRC}; ${MAKE} -V opt_IMAGES

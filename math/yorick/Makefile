@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/04/06 15:46:37 rodent Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/06 20:27:25 rodent Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 share/doc share/emacs/sit
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 USE_TOOLS+=	gmake makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 post-patch:
 	for f in ${WRKSRC}/ysite.sh; do				\

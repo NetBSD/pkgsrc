@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/04/06 14:22:41 rodent Exp $
+# $NetBSD: Makefile,v 1.42 2013/04/06 20:27:28 rodent Exp $
 #
 
 DISTNAME=	sfs-0.7.2
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-uvfs
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	makeinfo perl:run lex
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 PKG_SYSCONFSUBDIR=	sfs
 PKG_GROUPS=		${SFS_GROUP}

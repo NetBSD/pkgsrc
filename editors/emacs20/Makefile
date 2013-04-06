@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2013/02/16 23:58:36 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2013/04/06 20:27:20 rodent Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -76,7 +76,7 @@ MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL:Q}
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 

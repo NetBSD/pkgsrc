@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/31 11:19:44 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/06 20:27:19 rodent Exp $
 #
 
 DISTNAME=	cvs-1.11.23
@@ -23,7 +23,7 @@ CHECK_INTERPRETER_SKIP=	share/cvs/contrib/*
 
 CONFIGURE_ENV+=	PERL=${TOOLS_PERL5}
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 USE_TOOLS+=	makeinfo
 TEXINFO_REQD?=	4.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2012/10/08 13:45:34 asau Exp $
+# $NetBSD: Makefile,v 1.74 2013/04/06 20:27:27 rodent Exp $
 
 DISTNAME=		a2ps-4.14
 PKGREVISION=		3
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	ac_cv_prog_EMACS=no
 EGDIR=			${PREFIX}/share/examples/a2ps
 CONF_FILES=		${EGDIR}/a2ps-site.cfg ${PKG_SYSCONFDIR}/a2ps-site.cfg
 CONF_FILES+=		${EGDIR}/a2ps.cfg ${PKG_SYSCONFDIR}/a2ps.cfg
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.info

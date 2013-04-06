@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 21:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/04/06 20:27:21 rodent Exp $
 
 DISTNAME=		cim-3.30
 PKGREVISION=		2
@@ -13,6 +13,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		libtool_path=${PKG_LIBTOOL:Q}
 USE_TOOLS+=		perl:run
 USE_LIBTOOL=		YES
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 .include "../../mk/bsd.pkg.mk"
