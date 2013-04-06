@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 09:21:15 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 15:46:37 rodent Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=	The v4l2 input plugin for xine-lib
 
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib
 
-BUILD_DIRS=	${WRKSRC}/src/input
+BUILD_DIRS=	src/input
 CONFIGURE_ARGS+=	--without-x --disable-xinerama
 CONFIGURE_ARGS+=	--disable-vcd
 

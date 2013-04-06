@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/02/16 11:24:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/06 15:46:39 rodent Exp $
 #
 
 DISTNAME=	brasero-2.32.1
@@ -26,7 +26,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool gawk msgfmt
 
 CONFIGURE_ARGS+=	--disable-inotify
-BUILD_DIRS=		${WRKSRC}/nautilus
+BUILD_DIRS=		nautilus
 INSTALL_DIRS=		${WRKSRC}/nautilus
 
 .include "../../sysutils/brasero/buildlink3.mk"

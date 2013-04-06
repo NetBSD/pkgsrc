@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/02/16 11:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2013/04/06 15:46:40 rodent Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
@@ -15,8 +15,8 @@ CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_PREFIX.gtk2}
 CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 
-BUILD_DIRS=		${WRKSRC}/utils ${WRKSRC}/driver
-INSTALL_DIRS=		${WRKSRC}/driver
+BUILD_DIRS=		utils driver
+INSTALL_DIRS=		driver
 INSTALL_TARGET=		install-gnome
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

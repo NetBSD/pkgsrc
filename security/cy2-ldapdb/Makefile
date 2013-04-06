@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 23:23:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/06 15:46:38 rodent Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-ldapdb/}
 PKGREVISION=	1
@@ -10,7 +10,7 @@ SASL_PLUGIN=	yes
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=	--enable-ldapdb
 
-BUILD_DIRS=	${WRKSRC}/plugins
+BUILD_DIRS=	plugins
 BUILD_TARGET=	libldapdb.la
 
 .include "../../databases/openldap-client/buildlink3.mk"
