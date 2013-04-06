@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1181 2013/04/06 12:07:38 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1182 2013/04/06 12:09:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211 to 2.11.11 [taca 2013-04-06]
 	Updated www/contao211-example to 2.11.11 [taca 2013-04-06]
 	Updated www/drupal7 to 7.22 [taca 2013-04-06]
+	Updated www/fengoffice to 2.2.4.1 [taca 2013-04-06]
