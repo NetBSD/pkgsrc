@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/06 03:45:16 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/06 13:09:25 rodent Exp $
 #
 
 DISTNAME=	mailhops-1.4
@@ -9,7 +9,7 @@ EXTRACT_SUFX=
 
 LICENSE=	gnu-gpl-v2
 
-MAINTAINER=	is@netbsd.org
+MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.spinnaker.de/mutt/
 COMMENT=	Shows the route of an Internet mail message
 

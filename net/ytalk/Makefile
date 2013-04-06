@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 17:19:22 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/04/06 13:09:26 rodent Exp $
 
 DISTNAME=	ytalk-3.3.0
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/pkgsrc/distfiles/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iagora.com/~espel/ytalk/ytalk.html
