@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1178 2013/04/06 11:03:12 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1179 2013/04/06 11:41:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1873,3 +1873,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/kdiff3 to 0.9.97 [markd 2013-04-06]
 	Updated print/kbibtex to 0.4.1 [markd 2013-04-06]
 	Updated sysutils/k4dirstat to 2.7.4 [markd 2013-04-06]
+	Updated meta-pkgs/pulseaudio-tools to 1.0 [wiz 2013-04-06]
