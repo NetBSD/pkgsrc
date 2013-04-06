@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2013/02/16 11:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/06 13:09:25 rodent Exp $
 
 DISTNAME=	remmina-0.9.3
 PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=remmina/}
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://remmina.sourceforge.net/
 COMMENT=	Remmina is a remote desktop client based on GTK+
 

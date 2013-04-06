@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 00:02:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 13:09:24 rodent Exp $
 #
 
 DISTNAME=	xmpppy-0.5.0rc1
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmpppy/}
 
-MAINTAINER=	schnoebe@netbsd.org
+MAINTAINER=	schnoebe@NetBSD.org
 HOMEPAGE=	http://xmpppy.sourceforge.net/
 COMMENT=	XMPP (Jabber) library for Python
 LICENSE=	gnu-gpl-v2
