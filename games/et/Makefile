@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:36 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 12:04:00 rodent Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
@@ -16,7 +16,7 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base glx
 
 USE_TOOLS+=	gtar pax
-EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
+EXTRACT_CMD=	${TAIL} +356 $$extract_file | ${GTAR} xzf - \
 		-C ${WRKSRC}
 
 ETDIR=		${PREFIX}/lib/lokigames/et

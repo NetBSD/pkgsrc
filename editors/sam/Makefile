@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/03 11:43:42 asau Exp $
+# $NetBSD: Makefile,v 1.40 2013/04/06 12:04:00 rodent Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -15,7 +15,7 @@ DEPENDS+=		libXgFonts>=1.0nb1:../../fonts/Xg
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}
-EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
+EXTRACT_CMD=		${GZCAT} $$extract_file | ${SH}
 
 MANCOMPRESSED=		yes
 USE_X11BASE=		yes
