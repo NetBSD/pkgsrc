@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/04 16:14:44 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 14:22:39 rodent Exp $
 
 PKGNAME=	${DISTNAME:C/-iscsi/-iscsi-lib/}
 CATEGORIES=	devel
 COMMENT=	NetBSD's iSCSI library (per iSCSI RFC 3720)
 
 BUILD_DIRS+=	${WRKSRC}/src/lib
+USE_LIBTOOL=	yes
 
 .include "Makefile.common"
 
