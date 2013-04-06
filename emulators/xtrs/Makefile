@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/01/13 20:54:30 is Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 21:07:32 rodent Exp $
 #
 
 DISTNAME=	xtrs-4.9d
@@ -17,19 +17,19 @@ BUILD_TARGET=	default
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch
 SUBST_FILES.mf=		Makefile.local
-SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g' \
-			-e 's|/usr/X11/|${X11PREFIX}/|g' \
-			-e 's|/usr/include/X11|${X11BASE}/include|g' \
-			-e 's|^\(LDFLAGS = \)-L/usr/X11R6/lib|\1-Wl,-R${X11BASE}/lib -L${X11BASE}/lib|g' \
-			-e 's|^\#EXTRALIBS.*|EXTRALIBS=${BUILDLINK_LDADD.oss}|'\
-			-e 's|/share/man|/man|g'
+SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g'
+SUBST_SED.mf+=		-e 's|/usr/X11/|${X11PREFIX}/|g'
+SUBST_SED.mf+=		-e 's|/usr/include/X11|${X11BASE}/include|g'
+SUBST_SED.mf+=		-e 's|^\(LDFLAGS = \)-L/usr/X11R6/lib|\1-Wl,-R${X11BASE}/lib -L${X11BASE}/lib|g'
+SUBST_SED.mf+=		-e 's|^\#EXTRALIBS.*|EXTRALIBS=${BUILDLINK_LDADD.oss}|'
+SUBST_SED.mf+=		-e 's|/share/man|/man|g'
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	trs_cassette.c cassette
 .if ${OSS_TYPE} != none
-SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSSOUND}|g' \
-			-e 's|if __linux|if 1|'
+SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSSOUND}|g'
+SUBST_SED.oss+=		-e 's|if __linux|if 1|'
 .endif
 
 

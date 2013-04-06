@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 12:19:07 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 21:07:33 rodent Exp $
 #
 #	Request by the author:
 #
@@ -37,9 +37,9 @@ FILES_SUBST+=		DCC_RUN=${DCC_RUN}
 SUBST_CLASSES+=		dae
 SUBST_STAGE.dae=	post-patch
 SUBST_FILES.dae=	homedir/dcc_conf.in
-SUBST_SED.dae=		-e 's/^\(DCCD_ENABLE=\)off$$/\1on/' \
-			-e 's/^\(DCCM_ENABLE=\)off$$/\1on/' \
-			-e 's/^\(DCCIFD_ENABLE=\)off$$/\1on/'
+SUBST_SED.dae=		-e 's/^\(DCCD_ENABLE=\)off$$/\1on/'
+SUBST_SED.dae+=		-e 's/^\(DCCM_ENABLE=\)off$$/\1on/'
+SUBST_SED.dae+=		-e 's/^\(DCCIFD_ENABLE=\)off$$/\1on/'
 SUBST_MESSAGE.dae=	Enabling all daemons in dcc_conf
 
 HAS_CONFIGURE=		yes

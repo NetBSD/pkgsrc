@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/04/06 20:27:23 rodent Exp $
+# $NetBSD: Makefile,v 1.48 2013/04/06 21:07:33 rodent Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		2
@@ -37,17 +37,16 @@ SUBST_FILES.sather-configure=			\
 	Browser/Web/gen_mml_sa_files		\
 	Browser/Web/gen_mml_shortflat		\
 	Browser/Web/graph2dot
-SUBST_SED.sather-configure=					\
-	-e 's:@CC@:${CC}:g'					\
-	-e 's:@CFLAGS@:${CFLAGS}:g'				\
-	-e 's:@GMAKE@:${GMAKE}:g'				\
-	-e 's:@PREFIX@:${PREFIX}:g'				\
-	-e 's:@X11BASE@:${X11BASE}:g'				\
-	-e 's:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g'	\
-	-e 's:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g'		\
-	-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'		\
-	-e 's:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g'	\
-	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
+SUBST_SED.sather-configure= 	-e 's:@CC@:${CC}:g'
+SUBST_SED.sather-configure+=	-e 's:@CFLAGS@:${CFLAGS}:g'
+SUBST_SED.sather-configure+=	-e 's:@GMAKE@:${GMAKE}:g'
+SUBST_SED.sather-configure+=	-e 's:@PREFIX@:${PREFIX}:g'
+SUBST_SED.sather-configure+=	-e 's:@X11BASE@:${X11BASE}:g'
+SUBST_SED.sather-configure+=	-e 's:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g'
+SUBST_SED.sather-configure+=	-e 's:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g'
+SUBST_SED.sather-configure+=	-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'
+SUBST_SED.sather-configure+=	-e 's:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g'
+SUBST_SED.sather-configure+=	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
 
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 lib/sather \
 			share/doc/sather share/emacs/site-lisp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 00:02:43 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/06 21:07:31 rodent Exp $
 #
 
 DISTNAME=	quirc-0.9.84
@@ -22,7 +22,9 @@ SUBST_CLASSES+=		T85
 SUBST_STAGE.T85=	post-patch
 SUBST_FILES.T85=	configure configure.in
 SUBST_MESSAGE.T85=	Changing tcl/tk 8.3 search into tcl/tk 8.5 search
-SUBST_SED.T85=		-e 's,8_3,8_5,g' -e 's,8.3,8.5,g' -e 's,83,85,g'
+SUBST_SED.T85=		-e 's,8_3,8_5,g'
+SUBST_SED.T85+=		-e 's,8.3,8.5,g'
+SUBST_SED.T85+=		-e 's,83,85,g'
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
