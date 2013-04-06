@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:23 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 21:07:32 rodent Exp $
 
 DISTNAME=	tkpiechart-5.4
 PKGREVISION=	1
@@ -21,8 +21,8 @@ SUBST_CLASSES+=		patch
 SUBST_MESSAGE.patch=	Remove version numbers for required packages.
 SUBST_STAGE.patch=	post-patch
 SUBST_FILES.patch=	demo demo.tcl instapkg.tcl piechart.htm
-SUBST_SED.patch=	-e '/require/s/stooop 3.7/stooop/g' \
-			-e '/require/s/switched 1.4/switched/g'
+SUBST_SED.patch=	-e '/require/s/stooop 3.7/stooop/g'
+SUBST_SED.patch+=	-e '/require/s/switched 1.4/switched/g'
 
 post-patch:
 	${CHMOD} a+x ${WRKSRC}/instapkg.tcl

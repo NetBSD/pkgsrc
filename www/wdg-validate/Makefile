@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/28 06:31:08 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/06 21:07:36 rodent Exp $
 #
 
 DISTNAME=	validate-1.2.2
@@ -29,8 +29,8 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	validate
-SUBST_SED.paths=	-e 's,/usr/local/share,${PREFIX}/share,g' \
-			-e 's,/usr/local/bin/lq-nsgmls,${LOCALBASE}/bin/lq-nsgmls,g'
+SUBST_SED.paths=	-e 's,/usr/local/share,${PREFIX}/share,g'
+SUBST_SED.paths+=	-e 's,/usr/local/bin/lq-nsgmls,${LOCALBASE}/bin/lq-nsgmls,g'
 
 INSTALLATION_DIRS+=	bin share/doc share/wdg/sgml-lib
 

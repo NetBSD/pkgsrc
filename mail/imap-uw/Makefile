@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2013/02/06 23:21:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.139 2013/04/06 21:07:34 rodent Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -98,20 +98,20 @@ SUBST_CLASSES+=		mbox
 SUBST_STAGE.mbox=	do-configure
 SUBST_FILES.mbox=	src/osdep/unix/env_unix.c
 .if defined(IMAP_USE_MAILSPOOLHOME)
-SUBST_SED.mbox=		-e 's|@SPOOLDIR@|myhomedir ()|'			\
-			-e 's|@MAILBOX@|"${IMAP_UW_MAILSPOOLHOME}"|'
+SUBST_SED.mbox=		-e 's|@SPOOLDIR@|myhomedir ()|'
+SUBST_SED.mbox+=	-e 's|@MAILBOX@|"${IMAP_UW_MAILSPOOLHOME}"|'
 .else
-SUBST_SED.mbox=		-e 's|@SPOOLDIR@|MAILSPOOL|'			\
-			-e 's|@MAILBOX@|myusername ()|'
+SUBST_SED.mbox=		-e 's|@SPOOLDIR@|MAILSPOOL|'
+SUBST_SED.mbox+=	-e 's|@MAILBOX@|myusername ()|'
 .endif
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-build
 SUBST_FILES.man=	src/imapd/imapd.8 src/ipopd/ipopd.8
-SUBST_SED.man=		-e "s|/usr/etc/imapd|${PREFIX}/libexec/imapd|g"	\
-			-e "s|/etc/rimapd|${PREFIX}/sbin/rimapd|g"	\
-			-e "s|/usr/etc/ipop2d|${PREFIX}/libexec/ipop2d|g" \
-			-e "s|/usr/etc/ipop3d|${PREFIX}/libexec/ipop3d|g"
+SUBST_SED.man=		-e "s|/usr/etc/imapd|${PREFIX}/libexec/imapd|g"
+SUBST_SED.man+=		-e "s|/etc/rimapd|${PREFIX}/sbin/rimapd|g"
+SUBST_SED.man+=		-e "s|/usr/etc/ipop2d|${PREFIX}/libexec/ipop2d|g"
+SUBST_SED.man+=		-e "s|/usr/etc/ipop3d|${PREFIX}/libexec/ipop3d|g"
 
 INSTALLATION_DIRS+=	bin lib libexec sbin				\
 			${PKGMANDIR}/man1 ${PKGMANDIR}/man8

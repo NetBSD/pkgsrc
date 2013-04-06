@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 11:54:53 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/06 21:07:32 rodent Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -26,9 +26,9 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths to tcl.h and tk.h.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	configure
-SUBST_SED.paths=	-e 's,@TCLPREFIX@,${BUILDLINK_PREFIX.tcl},g'	\
-			-e 's,@TKPREFIX@,${BUILDLINK_PREFIX.tk},g'	\
-			-e 's,@LIBDL@,${BUILDLINK_LDADD.dl},g'
+SUBST_SED.paths=	-e 's,@TCLPREFIX@,${BUILDLINK_PREFIX.tcl},g'
+SUBST_SED.paths+=	-e 's,@TKPREFIX@,${BUILDLINK_PREFIX.tk},g'
+SUBST_SED.paths+=	-e 's,@LIBDL@,${BUILDLINK_LDADD.dl},g'
 
 MAKE_ENV+=		X_LDFLAGS=${X11_LDFLAGS:Q}
 

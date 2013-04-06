@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/06 23:24:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/06 21:07:36 rodent Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	7
@@ -27,7 +27,8 @@ SUBST_CLASSES=		htpasswd
 SUBST_MESSAGE.htpasswd=	Fix name of (m)htpasswd in manual pages.
 SUBST_STAGE.htpasswd=	pre-build
 SUBST_FILES.htpasswd=	htpasswd.1 mini_httpd.8
-SUBST_SED.htpasswd=	-e 's/\([^.]\)htpasswd/\1mhtpasswd/g' -e 's/^htpasswd/m&/'
+SUBST_SED.htpasswd=	-e 's/\([^.]\)htpasswd/\1mhtpasswd/g'
+SUBST_SED.htpasswd+=	-e 's/^htpasswd/m&/'
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

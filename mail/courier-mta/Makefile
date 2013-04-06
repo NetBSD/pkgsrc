@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/02/06 23:22:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2013/04/06 21:07:33 rodent Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -66,12 +66,12 @@ SUBST_FILES.courier=	courier/doc/mkesmtpdcert.8.in			\
 			courier/module.esmtp/esmtpd.cnf.openssl.in	\
 			courier/module.esmtp/esmtpd.dist.in		\
 			courier/module.esmtp/mkesmtpdcert.in
-SUBST_SED.courier=	-e "s|^ESMTPDSTART=.*|ESMTPDSTART=YES|g"	\
-			-e "s|^ESMTPDSSLSTART=.*|ESMTPDSSLSTART=YES|g"	\
-			-e "s|@mydatadir@|@sysconfdir@|g"		\
-			-e "s|@datadir@/esmtpd.pem|@sysconfdir@/esmtpd.pem|g" \
-			-e "s|@datadir@/esmtpd.rand|@sysconfdir@/esmtpd.rand|g" \
-			-e "s|@libexecdir@/filters|@libexecdir@/courier/filters|g"
+SUBST_SED.courier=	-e "s|^ESMTPDSTART=.*|ESMTPDSTART=YES|g"
+SUBST_SED.courier+=	-e "s|^ESMTPDSSLSTART=.*|ESMTPDSSLSTART=YES|g"
+SUBST_SED.courier+=	-e "s|@mydatadir@|@sysconfdir@|g"
+SUBST_SED.courier+=	-e "s|@datadir@/esmtpd.pem|@sysconfdir@/esmtpd.pem|g"
+SUBST_SED.courier+=	-e "s|@datadir@/esmtpd.rand|@sysconfdir@/esmtpd.rand|g"
+SUBST_SED.courier+=	-e "s|@libexecdir@/filters|@libexecdir@/courier/filters|g"
 SUBST_STAGE.courier=	pre-configure
 
 SUBST_CLASSES+=		perms

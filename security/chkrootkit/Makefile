@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 18:16:22 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 21:07:35 rodent Exp $
 #
 
 DISTNAME=		chkrootkit-0.47
@@ -23,14 +23,14 @@ DOCDIR=		${PREFIX}/share/doc/chkrootkit
 SUBST_CLASSES+=		helper
 SUBST_STAGE.helper=	post-patch
 SUBST_FILES.helper=	chkrootkit
-SUBST_SED.helper=	-e "s|./chklastlog|${PREFIX}/bin/chklastlog|g"	\
-			-e "s|./chkproc|${PREFIX}/bin/chkproc|g" 	\
-			-e "s|./chkwtmp|${PREFIX}/bin/chkwtmp|g"	\
-			-e "s|./chkutmp|${PREFIX}/bin/chkutmp|g"	\
-			-e "s|./ifpromisc|${PREFIX}/bin/ifpromisc|g"	\
-			-e "s|./strings-static|${PREFIX}/bin/strings-static|g" \
-			-e "s|./chkdirs|${PREFIX}/bin/chkdirs|g" 	\
-			-e "s|/bin/sh|${SH}|g"
+SUBST_SED.helper=	-e "s|./chklastlog|${PREFIX}/bin/chklastlog|g"
+SUBST_SED.helper+=	-e "s|./chkproc|${PREFIX}/bin/chkproc|g"
+SUBST_SED.helper+=	-e "s|./chkwtmp|${PREFIX}/bin/chkwtmp|g"
+SUBST_SED.helper+=	-e "s|./chkutmp|${PREFIX}/bin/chkutmp|g"
+SUBST_SED.helper+=	-e "s|./ifpromisc|${PREFIX}/bin/ifpromisc|g"
+SUBST_SED.helper+=	-e "s|./strings-static|${PREFIX}/bin/strings-static|g"
+SUBST_SED.helper+=	-e "s|./chkdirs|${PREFIX}/bin/chkdirs|g"
+SUBST_SED.helper+=	-e "s|/bin/sh|${SH}|g"
 
 .include "../../mk/compiler.mk"
 

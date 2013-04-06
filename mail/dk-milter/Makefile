@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/02/06 23:22:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/06 21:07:33 rodent Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	6
@@ -20,10 +20,10 @@ REPLACE_CSH=		dk-filter/gentxt.csh
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	dk-filter/Makefile.m4 libdk/Makefile.m4
-SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
-			-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g' \
-			-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g' \
-			-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
+SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
+SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
+SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
+SUBST_SED.libs+=	-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
 SUBST_MESSAGE.libs=	Fixing makefile references.
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter

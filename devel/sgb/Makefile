@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:19:45 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/06 21:07:32 rodent Exp $
 
 DISTNAME=	sgb-2007-03.28
 PKGNAME=	sgb-20070328
@@ -23,8 +23,8 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Makefile
-SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g' \
-			-e 's,@PREFIX@,$${DESTDIR}${PREFIX},g'
+SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,$${DESTDIR}${PREFIX},g'
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/sgb

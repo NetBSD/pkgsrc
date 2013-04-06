@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/10/08 12:19:06 asau Exp $
+# $NetBSD: Makefile,v 1.76 2013/04/06 21:07:33 rodent Exp $
 
 DISTNAME=	courier-imap-4.10.0
 PKGREVISION=	1
@@ -62,19 +62,19 @@ SUBST_FILES.courier+=	imap/courierpop3d.8.in imap/mkpop3dcert.8.in	\
 			imap/mkpop3dcert.html.in imap/mkpop3dcert.in	\
 			imap/pop3d-ssl.dist.in imap/pop3d.cnf.openssl.in \
 			imap/pop3d.dist.in pop3d-ssl.rc.in pop3d.rc.in
-SUBST_SED.courier=	-e "s|^IMAPDSTART=.*|IMAPDSTART=YES|g"		\
-			-e "s|^IMAPDSSLSTART=.*|IMAPDSSLSTART=YES|g"	\
-			-e "s|^POP3DSTART=.*|POP3DSTART=YES|g"		\
-			-e "s|^POP3DSSLSTART=.*|POP3DSSLSTART=YES|g"	\
-			-e "s|@mydatadir@|@sysconfdir@|g"		\
-			-e "s|@datadir@/imapd.pem|@sysconfdir@/imapd.pem|g" \
-			-e "s|@datadir@/imapd.rand|@sysconfdir@/imapd.rand|g" \
-			-e "s|@datadir@/pop3d.pem|@sysconfdir@/pop3d.pem|g" \
-			-e "s|@datadir@/pop3d.rand|@sysconfdir@/pop3d.rand|g" \
-			-e "s|@libexecdir@/couriertcpd|@sbindir@/couriertcpd|g" \
-			-e "s|@sbindir@/imaplogin|@libexecdir@/imaplogin|g" \
-			-e "s|@sbindir@/pop3login|@libexecdir@/courierpop3login|g" \
-			-e "s|@bindir@/pop3d|@libexecdir@/courierpop3d|g"
+SUBST_SED.courier=	-e "s|^IMAPDSTART=.*|IMAPDSTART=YES|g"
+SUBST_SED.courier+=	-e "s|^IMAPDSSLSTART=.*|IMAPDSSLSTART=YES|g"
+SUBST_SED.courier+=	-e "s|^POP3DSTART=.*|POP3DSTART=YES|g"
+SUBST_SED.courier+=	-e "s|^POP3DSSLSTART=.*|POP3DSSLSTART=YES|g"
+SUBST_SED.courier+=	-e "s|@mydatadir@|@sysconfdir@|g"
+SUBST_SED.courier+=	-e "s|@datadir@/imapd.pem|@sysconfdir@/imapd.pem|g"
+SUBST_SED.courier+=	-e "s|@datadir@/imapd.rand|@sysconfdir@/imapd.rand|g"
+SUBST_SED.courier+=	-e "s|@datadir@/pop3d.pem|@sysconfdir@/pop3d.pem|g"
+SUBST_SED.courier+=	-e "s|@datadir@/pop3d.rand|@sysconfdir@/pop3d.rand|g"
+SUBST_SED.courier+=	-e "s|@libexecdir@/couriertcpd|@sbindir@/couriertcpd|g"
+SUBST_SED.courier+=	-e "s|@sbindir@/imaplogin|@libexecdir@/imaplogin|g"
+SUBST_SED.courier+=	-e "s|@sbindir@/pop3login|@libexecdir@/courierpop3login|g"
+SUBST_SED.courier+=	-e "s|@bindir@/pop3d|@libexecdir@/courierpop3d|g"
 SUBST_STAGE.courier=	pre-configure
 
 .include "../../security/courier-authlib/buildlink3.mk"

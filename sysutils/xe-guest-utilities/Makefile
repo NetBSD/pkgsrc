@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:35 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/06 21:07:35 rodent Exp $
 #
 
 # Values from XenServer 6.0.2 = 6, 0, 2, 52898
@@ -36,15 +36,16 @@ RCD_SCRIPTS=		xenguest
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	${SRCFILES}
-SUBST_SED.paths=	-e "s,@VARBASE@,${VARBASE},g" -e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.paths=	-e "s,@VARBASE@,${VARBASE},g"
+SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX},g"
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	post-patch
 SUBST_FILES.version=	xe-update-guest-attrs
-SUBST_SED.version=	-e "s,@XENMAJOR@,${XENMAJOR},g" \
-			-e "s,@XENMINOR@,${XENMINOR},g" \
-			-e "s,@XENTEENY@,${XENTEENY},g" \
-			-e "s,@XENBUILD@,${XENBUILD},g"
+SUBST_SED.version=	-e "s,@XENMAJOR@,${XENMAJOR},g"
+SUBST_SED.version+=	-e "s,@XENMINOR@,${XENMINOR},g"
+SUBST_SED.version+=	-e "s,@XENTEENY@,${XENTEENY},g"
+SUBST_SED.version+=	-e "s,@XENBUILD@,${XENBUILD},g"
 
 INSTALLATION_DIRS=	sbin
 

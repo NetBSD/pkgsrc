@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:25 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/06 21:07:35 rodent Exp $
 #
 
 DISTNAME=		su2-1.3
@@ -22,8 +22,8 @@ SUBST_CLASSES+=		preproc
 SUBST_MESSAGE.preproc=	Correcting C preprocessor directives.
 SUBST_STAGE.preproc=	post-patch
 SUBST_FILES.preproc=	su2.c
-SUBST_SED.preproc=	-e 's,^\(\# *else\).*,\1,' \
-			-e 's,^\(\# *endif\).*,\1,'
+SUBST_SED.preproc=	-e 's,^\(\# *else\).*,\1,'
+SUBST_SED.preproc=	-e 's,^\(\# *endif\).*,\1,'
 
 LDLIBS=			-lcrypt
 

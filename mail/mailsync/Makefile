@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/02/06 23:22:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2013/04/06 21:07:34 rodent Exp $
 #
 
 DISTNAME=	mailsync_5.2.1.orig
@@ -23,9 +23,9 @@ CONFIGURE_ARGS+=	--without-krb5
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	configure doc/examples/mailsync doc/mailsync.1
-SUBST_SED.conf=		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g" \
-			-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g" \
-			-e "s|/usr/share|${PREFIX}/share|g"
+SUBST_SED.conf=		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"
+SUBST_SED.conf+=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g"
+SUBST_SED.conf+=	-e "s|/usr/share|${PREFIX}/share|g"
 SUBST_MESSAGE.conf=	Fixing configure script.
 
 DOCS=	COPYING NEWS README THANKS TODO doc/ABSTRACT doc/HACKING
