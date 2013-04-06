@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/28 06:31:06 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 21:07:36 rodent Exp $
 
 DISTNAME=	swiggle-0.4
 PKGREVISION=	3
@@ -14,7 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch
 SUBST_FILES.mf=		Makefile
-SUBST_SED.mf=		-e "s/gcc/${CC}/" -e "s/-O3//"
+SUBST_SED.mf=		-e "s/gcc/${CC}/"
+SUBST_SED.mf+=		-e "s/-O3//"
 
 INSTALLATION_DIRS=	bin
 
