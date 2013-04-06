@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:57 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 03:45:24 rodent Exp $
 
 DISTNAME=	dd_rescue-1.23
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	${HOMEPAGE:Q}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.garloff.de/kurt/linux/ddrescue/
-COMMENT=	dd(1)-like tool for rescuing data from media with errors
+COMMENT=	Tool like dd(1) for rescuing data from media with errors
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/dd_rescue
