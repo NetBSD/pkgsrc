@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.3 2013/04/03 11:06:02 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.4 2013/04/06 18:11:02 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -7,3 +7,9 @@ Created pkgsrc-2013Q1 branch [wiz Mon Apr  1 17:45:18 CEST 2013]
 
 Pullup ticket #4108 - requested by dholland
 devel/cqual: critical bulk build fix
+Pullup ticket #4109 - requested by dholland
+audio/padevchooser: mark as broken
+Pullup ticket #4110 - requested by obache
+www/opera: security update
+Pullup ticket #4111 - requested by sborrill
+net/netatalk: build fix
