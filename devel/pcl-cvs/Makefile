@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/02/17 19:17:59 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/06 04:07:24 rodent Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
@@ -21,7 +21,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs20
 .include "../../editors/emacs/modules.mk"
 
 .if !((${EMACS_FLAVOR} == "emacs") && (${EMACS_VERSION_MAJOR} == "20"))
-PKG_SKIP_REASON+=	"${PKGNAME} is only for emacs20"
+PKG_FAIL_REASON+=	"${PKGNAME} is only for emacs20"
 .endif
 
 MAKE_ENV+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
