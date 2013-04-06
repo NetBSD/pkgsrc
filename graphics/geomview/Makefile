@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/10/06 14:10:51 asau Exp $
+# $NetBSD: Makefile,v 1.42 2013/04/06 20:27:21 rodent Exp $
 
 DISTNAME=		geomview-1.8.1
 PKGREVISION=		6
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--without-xforms
 CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_PREFIX.Mesa}
 CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE:Q}
 CPPFLAGS+=		-Dunix -Dalloca=__builtin_alloca
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 INSTALLATION_DIRS=	share/doc/geomview share/examples/geomview \
 			share/doc/html/geomview/pix

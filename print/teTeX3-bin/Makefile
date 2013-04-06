@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/02/16 11:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2013/04/06 20:27:27 rodent Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -20,7 +20,7 @@ DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 USE_TOOLS+=	bison perl:run lex
 
