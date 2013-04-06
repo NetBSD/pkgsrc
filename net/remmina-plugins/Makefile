@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/04/06 13:09:25 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/06 14:22:40 rodent Exp $
 
 DISTNAME=	remmina-plugins-0.9.2
 PKGREVISION=	10
@@ -12,6 +12,7 @@ COMMENT=	Plugins for Remmina, a remote desktop client based on GTK+
 DEPENDS+=	rdesktop>=1.6.0:../../net/rdesktop
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
 
 .include "../../x11/libxkbfile/buildlink3.mk"

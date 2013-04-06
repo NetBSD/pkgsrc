@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:17:22 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 14:22:39 rodent Exp $
 #
 
 DISTNAME=	libstree-0.4.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.icir.org/christian/libstree/
 COMMENT=	Suffix tree library
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc/html
 
 .include "../../mk/bsd.pkg.mk"

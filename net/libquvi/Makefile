@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:23:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 14:22:40 rodent Exp $
 #
 
 DISTNAME=	libquvi-0.4.1
@@ -15,6 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 CONFLICTS+=	quvi<=0.2.19
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libquvi.pc.in
