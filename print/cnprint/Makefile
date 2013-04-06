@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/01/11 23:29:39 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/06 03:59:24 rodent Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -35,10 +35,10 @@ do-extract:
 .for i in ${DISTFILES}
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${i} ${WRKSRC}
 .endfor
-	cd ${WRKSRC} && (${GZCAT} hbf.tar.gz || true) | ${TAR} xf -
+	cd ${WRKSRC} && (${GZCAT} hbf.tar.gz || ${TRUE}) | ${TAR} xf -
 	${MV} ${WRKSRC}/hbf/* ${WRKSRC}/
 	${RM} -fr ${WRKSRC}/hbf
-	${GUNZIP_CMD} ${WRKSRC}/*.gz || true
+	${GUNZIP_CMD} ${WRKSRC}/*.gz || ${TRUE}
 
 do-build:
 	cd ${WRKSRC} && \
