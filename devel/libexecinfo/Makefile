@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/03/14 22:27:15 asau Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 14:09:32 rodent Exp $
 
 DISTNAME=	libexecinfo-1.1
 CATEGORIES=	devel
-MASTER_SITES=	$(MASTER_SITE_FREEBSD)
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ober@NetBSD.org
