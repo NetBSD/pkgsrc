@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 11:43:47 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 13:24:18 rodent Exp $
 
 DISTNAME=		xcoral-3.2
 PKGREVISION=		1
@@ -25,8 +25,8 @@ INSTALLATION_DIRS=	bin lib/xcoral share/doc/xcoral/HTML/icons
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${DESTDIR}${PREFIX}/bin
-.for FILE in ${LIBFILES}
-	${INSTALL_DATA} ${WRKSRC}/SmacLib/${FILE} ${DESTDIR}${PREFIX}/lib/xcoral
+.for file in ${LIBFILES}
+	${INSTALL_DATA} ${WRKSRC}/SmacLib/${file} ${DESTDIR}${PREFIX}/lib/xcoral
 .endfor
 	${CP} -r ${WRKSRC}/Doc/* ${DESTDIR}${PREFIX}/share/doc/xcoral
 

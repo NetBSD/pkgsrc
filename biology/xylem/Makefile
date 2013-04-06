@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/11 20:32:14 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/06 13:24:18 rodent Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -27,9 +27,9 @@ post-build:
 	${MV} ${WRKSRC}/src.c/shuffle ${WRKSRC}/src.c/xyl-shuffle
 
 do-install:
-.for PROGRAM in dbstat getloc getob xyl-identify prot2nuc reform ribosome \
+.for program in dbstat getloc getob xyl-identify prot2nuc reform ribosome \
 	splitdb xyl-shuffle flat2phyl phyl2flat
-	${INSTALL_PROGRAM} ${WRKSRC}/src.c/${PROGRAM} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src.c/${program} ${DESTDIR}${PREFIX}/bin
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xylem
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/xylem/

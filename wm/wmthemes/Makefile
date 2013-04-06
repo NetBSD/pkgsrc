@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 12:42:25 asau Exp $
+# $NetBSD: Makefile,v 1.30 2013/04/06 13:24:20 rodent Exp $
 
 #
 # There is no distinfo file because users can specify alternate themes
@@ -41,26 +41,26 @@ SITES.${theme}.tar.gz=	http://download.freshmeat.net/themes/${theme:C/-[^-]*$//}
 do-install:
 	@${RM} -f ${PLIST_SRC}
 	@${TOUCH} ${PLIST_SRC}
-.for DIR in ${THEME_SUBDIRS}
-	@if [ -d ${WRKSRC}/${DIR} ] && [ -n "`ls ${WRKSRC}/${DIR}`" ]; then \
-	  ${ECHO} "Installing files in directory ${DIR}."; \
-	  cd ${WRKSRC}/${DIR}; \
-	  for FILE in *; do \
-	    ${MKDIR} ${DESTDIR}${PREFIX}/${WM_DATADIR}/${DIR}; \
-	    ${INSTALL_DATA} "$$FILE" ${DESTDIR}${PREFIX}/${WM_DATADIR}/${DIR}; \
-	    ${ECHO} "${WM_DATADIR}/${DIR}/$$FILE" >>${PLIST_SRC}; \
+.for dir in ${THEME_SUBDIRS}
+	@if [ -d ${WRKSRC}/${dir} ] && [ -n "`ls ${WRKSRC}/${dir}`" ]; then \
+	  ${ECHO} "Installing files in directory ${dir}."; \
+	  cd ${WRKSRC}/${dir}; \
+	  for file in *; do \
+	    ${MKDIR} ${DESTDIR}${PREFIX}/${WM_DATADIR}/${dir}; \
+	    ${INSTALL_DATA} "$$file" ${DESTDIR}${PREFIX}/${WM_DATADIR}/${dir}; \
+	    ${ECHO} "${WM_DATADIR}/${dir}/$$file" >>${PLIST_SRC}; \
 	  done; \
 	fi
 .endfor
 	@cd ${WRKSRC}; \
-	for DIR in *.themed; do \
-	  if [ -d "$$DIR" ] && [ -n "`${LS} "$$DIR"`" ]; then \
-	    ${ECHO} "Installing \"`${BASENAME} "$$DIR" .themed`\" theme."; \
-	    ${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
-	    cd "${WRKSRC}/$$DIR"; \
-	    for FILE in *; do \
-	      ${INSTALL_DATA} "$$FILE" "${DESTDIR}${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
-	      ${ECHO} "${WM_DATADIR}/Themes/$$DIR/$$FILE" >>${PLIST_SRC}; \
+	for dir in *.themed; do \
+	  if [ -d "$$dir" ] && [ -n "`${LS} "$$dir"`" ]; then \
+	    ${ECHO} "Installing \"`${BASENAME} "$$dir" .themed`\" theme."; \
+	    ${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/${WM_DATADIR}/Themes/$$dir"; \
+	    cd "${WRKSRC}/$$dir"; \
+	    for file in *; do \
+	      ${INSTALL_DATA} "$$file" "${DESTDIR}${PREFIX}/${WM_DATADIR}/Themes/$$dir"; \
+	      ${ECHO} "${WM_DATADIR}/Themes/$$dir/$$file" >>${PLIST_SRC}; \
 	    done; \
 	    cd ..; \
 	  fi; \
