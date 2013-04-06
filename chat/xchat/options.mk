@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2012/06/16 23:06:07 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2013/04/06 19:42:41 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat
 PKG_SUPPORTED_OPTIONS=	inet6 ssl socks5 mitshm gnome
@@ -50,8 +50,8 @@ CONFIGURE_ARGS+=	--disable-shm
 CONFIGURE_ARGS+=	--enable-dbus
 PLIST.dbus=		yes
 SUBST_CLASSES+=		gconf
-SUBST_STAGE.gconf+=	pre-configure
-SUBST_MESSAGE.gconf+=	Disabling schema registration/installation.
+SUBST_STAGE.gconf=	pre-configure
+SUBST_MESSAGE.gconf=	Disabling schema registration/installation.
 SUBST_SED.gconf+=	-e 's,DO_GCONF_TRUE,DO_GCONF_FALSE,g'
 SUBST_FILES.gconf+=	src/common/dbus/Makefile.in
 .	include "../../devel/GConf/schemas.mk"
