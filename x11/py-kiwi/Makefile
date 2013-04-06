@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/02/16 11:25:24 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/06 03:59:24 rodent Exp $
 #
 
 DISTNAME=	kiwi-1.9.29
@@ -24,8 +24,8 @@ SUBST_SED.localedir=	-e 's|share/locale|${PKGLOCALEDIR}/locale|'
 
 # tarball contains neither api nor howto.
 post-install:
-	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/api || true
-	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/howto || true
+	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/api || ${TRUE}
+	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/howto || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
