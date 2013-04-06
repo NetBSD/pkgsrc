@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/04/06 14:09:34 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/06 14:30:19 rodent Exp $
 
 DISTNAME=	jquery-rails-2.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_RUBYGEMS:=jquery-rails/}
+HOMEPAGE=	http://rubygems.org/gems/jquery-rails/
 COMMENT=	Rails jQuery support
 LICENSE=	mit
 
