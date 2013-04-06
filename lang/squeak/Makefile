@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/04/06 13:05:30 rodent Exp $
+# $NetBSD: Makefile,v 1.46 2013/04/06 14:32:38 rodent Exp $
 #
 
 SQUEAK_VERSION=	4.3
@@ -9,7 +9,7 @@ PKGNAME=	squeak-$(SQUEAK_VERSION)
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.squeak.org/$(SQUEAK_VERSION)/
 EXTRACT_SUFX=	.zip
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} $(SQUEAK_SOURCES).gz
+DISTFILES=	${DEFAULT_DISTFILES} $(SQUEAK_SOURCES).gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squeak.org/
