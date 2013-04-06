@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:51 joerg Exp $
-
-BUILDLINK_DEPMETHOD.trapproto?=	build
+# $NetBSD: buildlink3.mk,v 1.4 2013/04/06 13:46:35 rodent Exp $
 
 BUILDLINK_TREE+=	trapproto
 
 .if !defined(TRAPPROTO_BUILDLINK3_MK)
 TRAPPROTO_BUILDLINK3_MK:=
+
+BUILDLINK_DEPMETHOD.trapproto?=	build
 
 BUILDLINK_API_DEPENDS.trapproto+=	trapproto>=3.4.3
 BUILDLINK_PKGSRCDIR.trapproto?=	../../x11/trapproto
