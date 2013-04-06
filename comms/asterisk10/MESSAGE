@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2012/01/15 18:36:18 jnemeth Exp $
+$NetBSD: MESSAGE,v 1.2 2013/04/06 12:14:30 rodent Exp $
 
-${PKGBASE} now runs as ${ASTERISK_USER}:${ASTERISK_GROUP} instead of ${ROOT_USER}:${ROOT_GROUP} by default.
+${PKGBASE} now runs as ${ASTERISK_USER}:${ASTERISK_GROUP} instead of
+${ROOT_USER}:${ROOT_GROUP} by default.
 
 If you are upgrading from an older version, you should execute the
 following commands to correct permissions on existing files:
