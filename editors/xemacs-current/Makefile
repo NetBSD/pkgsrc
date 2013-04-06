@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2013/02/16 11:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2013/04/06 20:27:20 rodent Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	*BETA* XEmacs text editor version ${PKGVERSION_NOREV}
@@ -24,7 +24,7 @@ GCC_REQD+=		2.95.3
 PLIST_SUBST+=		DISTNAME=${EMACS_DISTNAME}
 FILES_SUBST+=		DISTNAME=${EMACS_DISTNAME}
 MESSAGE_SUBST+=		DISTNAME=${EMACS_DISTNAME}
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 .include "options.mk"
 

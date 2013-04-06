@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/06 11:55:00 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/04/06 20:27:20 rodent Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		9
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-tkconfig="${BUILDLINK_PREFIX.tk}/lib"
 MAKE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 MAKE_FLAGS+=		mandir=${PREFIX:Q}/${PKGMANDIR:Q}		\
 			infodir=${PREFIX:Q}/${PKGINFODIR:Q}
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # XXX SETGIDGAME should go away and the rest of these should come from
 # the infrastructure.

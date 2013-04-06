@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 00:10:30 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/04/06 20:27:17 rodent Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -35,7 +35,7 @@ SRCDIR=			${WRKDIR}/gcc-3.1
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 BUILD_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 INSTALLATION_DIRS+=	bin libexec/cross-h8300-hms/h8300-hms/bin
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 GCC_REQD+=		2.8.0
 

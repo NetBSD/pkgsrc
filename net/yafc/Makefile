@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 17:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 20:27:27 rodent Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	3
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	yes
 
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

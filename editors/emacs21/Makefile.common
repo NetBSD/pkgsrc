@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2013/02/17 07:43:49 dholland Exp $
+# $NetBSD: Makefile.common,v 1.13 2013/04/06 20:27:20 rodent Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -82,7 +82,7 @@ LDFLAGS+=	-Z
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 REPLACE_PERL=	lib-src/grep-changelog
 
 post-extract:

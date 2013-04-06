@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/09/16 15:21:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/06 20:27:24 rodent Exp $
 
 DISTNAME=	mcsim-5.4.0
 PKGREVISION=	1
@@ -14,7 +14,7 @@ CONFLICTS+=		mono-[0-9]* # bin/mod
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 REPLACE_SH=	sim/makemcsim.in sim/makemcsimd.in sim/makemcsims.in
 

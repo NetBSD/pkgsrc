@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/28 21:35:48 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/06 20:27:26 rodent Exp $
 
 PKGNAME=		${DISTNAME:S/-/-mysql-/}
 PKGREVISION=		8
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--without-pgsql
 CONFIGURE_ARGS+=	--with-mysql-lib=${BUILDLINK_PREFIX.mysql-client}/${BUILDLINK_LIBDIRS.mysql-client}
 CONFIGURE_ARGS+=	--with-mysql-include=${BUILDLINK_PREFIX.mysql-client}/${BUILDLINK_INCDIRS.mysql-client}
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

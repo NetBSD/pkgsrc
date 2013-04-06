@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 19:30:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/06 20:27:26 rodent Exp $
 
 DISTNAME=	ipgrab-0.9.9
 PKGREVISION=	1
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

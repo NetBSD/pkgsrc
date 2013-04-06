@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2012/10/23 17:18:08 asau Exp $
+# $NetBSD: Makefile,v 1.124 2013/04/06 20:27:26 rodent Exp $
 
 DISTNAME=	ORBit-0.5.17
 PKGREVISION=	2
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=	LIB_WRAP="-lwrap"
 PKGCONFIG_OVERRIDE+=	ORBit.pc.in
 PKGCONFIG_OVERRIDE+=	libIDL/libIDL.pc.in
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

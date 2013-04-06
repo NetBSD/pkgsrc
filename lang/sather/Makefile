@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/10/03 21:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/04/06 20:27:23 rodent Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		2
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake makeinfo pax perl:run
 
 BUILD_TARGET=		full optional
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 REPLACE_PERL=		Browser/Web/ps2gif
 

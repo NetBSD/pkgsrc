@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:00 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/06 20:27:29 rodent Exp $
 
 DISTNAME=	grep-2.4.2
 PKGNAME=	ja-grep-2.4.2
@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	msgfmt
 CONFIGURE_ARGS+=	--program-transform-name='s,^,j,'
 TEST_TARGET=	check
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	share/doc/ja-grep
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/02/17 19:18:07 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/06 20:27:25 rodent Exp $
 #
 
 DISTNAME=	lookup-1.4.1
@@ -20,7 +20,7 @@ EMACS_BUILDLINK=# defined
 
 GNU_CONFIGURE=	YES
 MAKEFLAGS+=	lispdir=${EMACS_LISPPREFIX}/lookup
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 CONFIGURE_ARGS+=${EMACS_FLAVOR}
 

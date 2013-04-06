@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/08 09:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.45 2013/04/06 20:27:25 rodent Exp $
 
 DISTNAME=	libcdio-0.83
 PKGREVISION=	1
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	libudf.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-versioned-libs
 CONFIGURE_ARGS+=	--enable-cpp-progs
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

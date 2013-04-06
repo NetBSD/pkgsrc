@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:43 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/04/06 20:27:19 rodent Exp $
 
 DISTNAME=	rx-1.5
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Fast replacement for the GNU regex library
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # When the API changes and breaks binary-compatibility with the previous
 # version, increment the MAJOR by 1 and reset the MINOR to 0.  Otherwise,

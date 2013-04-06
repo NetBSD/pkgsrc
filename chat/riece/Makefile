@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/17 19:17:56 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/06 20:27:17 rodent Exp $
 #
 
 DISTNAME=	riece-5.0.0
@@ -22,7 +22,7 @@ EMACS_MODULES=	base
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[^0-9]$||}
 
 GNU_CONFIGURE=	YES
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # --with-emacs=... or --with-xemacs=...
 CONFIGURE_ARGS+=	--with-${EMACS_FLAVOR}=${EMACS_BIN:Q}

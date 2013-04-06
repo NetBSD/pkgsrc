@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 17:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/06 20:27:27 rodent Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	6
@@ -33,7 +33,7 @@ PKG_GECOS.${UUCP_USER}=	UNIX-to-UNIX Copy
 PKG_HOMES.${UUCP_USER}=	${UUCP_PUBDIR}
 PKG_SHELL.${UUCP_USER}=	${PREFIX}/sbin/uucico
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # UUCP installs many set-uid "uucp" binaries.
 SPECIAL_PERMS+=	bin/cu ${UUCP_USER} ${BINGRP} 4555
