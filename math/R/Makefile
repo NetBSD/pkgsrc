@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2013/02/16 11:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2013/04/06 03:16:50 markd Exp $
 
 DISTNAME=		R-2.15.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -16,6 +16,8 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+BUILD_TARGET=		all info
+INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_TOOLS+=		pkg-config
@@ -24,6 +26,7 @@ USE_GNU_ICONV=		yes		# latin1 support, iconvlist
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 TEXINFO_REQD=		4.7
+INFO_FILES=		yes
 
 PTHREAD_AUTO_VARS=	yes
 
