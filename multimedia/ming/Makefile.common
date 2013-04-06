@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2012/05/12 08:24:43 obache Exp $
+# $NetBSD: Makefile.common,v 1.6 2013/04/06 13:01:26 rodent Exp $
 #
 # used by multimedia/php-ming/Makefile
 # used by multimedia/py-ming/Makefile
@@ -6,7 +6,6 @@
 MING_VERSION=	0.4.4
 DISTNAME=	ming-${MING_VERSION}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ming/}
-EXTRACT_SUFX=	.tar.gz
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/ming/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/ming/patches
