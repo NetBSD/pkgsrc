@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/22 07:06:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/04/06 10:45:05 markd Exp $
 bin/kbibtex
 lib/kde4/kbibtexpart.so
 lib/libkbibtexgui.so
@@ -19,6 +19,7 @@ share/kde/apps/kbibtex/fancy.xsl
 share/kde/apps/kbibtex/findduplicatesui.rc
 share/kde/apps/kbibtex/kbibtexui.rc
 share/kde/apps/kbibtex/lyx.rc
+share/kde/apps/kbibtex/pam2bibtex.xsl
 share/kde/apps/kbibtex/pubmed2bibtex.xsl
 share/kde/apps/kbibtex/standard.xsl
 share/kde/apps/kbibtexpart/kbibtexpartui.rc
