@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/25 22:47:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/06 03:45:25 rodent Exp $
 #
 
 DISTNAME=	harmony-stable-${VERSION}
@@ -9,9 +9,9 @@ MASTER_SITES=	http://alliance.seas.upenn.edu/~harmony/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alliance.seas.upenn.edu/~harmony/
-COMMENT=	Generic framework for reconciling disconnected updates to heterogeneous, replicated XML data
+COMMENT=	Reconciles disconnected updates to heterogeneous, replicated XML data
 
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=	no
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex

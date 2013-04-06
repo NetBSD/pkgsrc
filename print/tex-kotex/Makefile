@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/29 21:16:00 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 03:45:23 rodent Exp $
 
 DISTNAME=	kotex
 PKGNAME=	tex-${DISTNAME}-0.3
@@ -8,7 +8,7 @@ TEXLIVE_REV=	1
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
-COMMENT=	ko.TeX macros to typeset Korean with etex or pdftex
+COMMENT=	Macros (ko.TeX) to typeset Korean with etex or pdftex
 
 DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem

@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.22 2013/02/06 23:22:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/06 03:45:15 rodent Exp $
 #
 
-DISTNAME=		freepops-0.2.9
-PKGREVISION=		2
-CATEGORIES=		mail
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=freepops/}
+DISTNAME=	freepops-0.2.9
+PKGREVISION=	2
+CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freepops/}
 
-MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.freepops.org/
-COMMENT=		POP3 gateway to AOL, Gmail, Hotmail, Juno, Yahoo, etc.
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	schmonz@NetBSD.org
+HOMEPAGE=	http://www.freepops.org/
+COMMENT=	POP3 gateway to AOL, Gmail, Hotmail, Juno, Yahoo, etc
+LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 

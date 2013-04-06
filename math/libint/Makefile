@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/03/08 07:09:04 asau Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 03:45:17 rodent Exp $
 
 DISTNAME=	libint-2.0.0-stable
 PKGNAME=	libint-2.0.0
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://sourceforge.net/p/libint/
-COMMENT=	Efficient computation of quantum mechanical matrix elements over Gaussian basis sets
+COMMENT=	Efficient computation of quantum mechanical matrix elements over GBS
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes

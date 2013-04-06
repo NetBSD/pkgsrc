@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 19:51:08 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 03:45:24 rodent Exp $
 
 DISTNAME=	install-sh-20100824
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	install script compatible with the BSD install program
+COMMENT=	Install script compatible with the BSD install program
 
 BOOTSTRAP_PKG=	yes
 USE_TOOLS+=	sed

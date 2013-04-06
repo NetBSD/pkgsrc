@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/03 12:38:32 markd Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/06 03:45:18 rodent Exp $
 #
 
 PKGNAME=	libkvkontakte-3.1.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.digikam.org/
-COMMENT=	KDE library for asynchronous interaction with vkontakte.rusocial network
+COMMENT=	KDE library for asynchronous interaction with vkontakte.ru
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4

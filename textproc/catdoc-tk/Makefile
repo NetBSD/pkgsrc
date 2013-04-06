@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:55:43 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/06 03:45:25 rodent Exp $
 #
 
 .include "../../textproc/catdoc/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/catdoc/catdoc-tk/}
-COMMENT=		Reads MS-Word file and puts out its content as plain text (Tk interface)
+PKGNAME=	${DISTNAME:S/catdoc/catdoc-tk/}
+COMMENT=	Tk interface for MS-Word to plain text converter
 
-DEPENDS+=		catdoc>=0.91.4nb1:../../textproc/catdoc
+DEPENDS+=	catdoc>=0.91.4nb1:../../textproc/catdoc
 
-CONFIGURE_ARGS+=	--enable-wordview
-CONFIGURE_ENV+=		WISH="${BUILDLINK_PREFIX.tk}/bin/wish"
-CONFIGURE_ENV+=		enable_wordview=yes
+CONFIGURE_ARGS+	--enable-wordview
+CONFIGURE_ENV+=	WISH="${BUILDLINK_PREFIX.tk}/bin/wish"
+CONFIGURE_ENV+=	enable_wordview=yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

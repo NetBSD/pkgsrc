@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 09:57:18 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/06 03:45:17 rodent Exp $
 
-DISTNAME=		ls
-PKGNAME=		colorls-2.2
-PKGREVISION=		1
-CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+DISTNAME=	ls
+PKGNAME=	colorls-2.2
+PKGREVISION=	1
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		ls(1) that can use color to display file attributes
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Uses color with ls(1) to display file attributes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

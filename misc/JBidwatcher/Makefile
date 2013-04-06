@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:57:15 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/06 03:45:17 rodent Exp $
 #
 
 DISTNAME=	JBidwatcher-2.1.5
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jbidwatcher.com/
-COMMENT=	eBay sniping, bidding and monitoring software
+COMMENT=	Software for eBay sniping, bidding and monitoring
 #LICENSE=	Creative Commons BY-NC-SA Amended
 
 WRKSRC=		${WRKDIR}

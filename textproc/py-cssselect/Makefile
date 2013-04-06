@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/13 15:20:35 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 03:45:26 rodent Exp $
 #
 
 DISTNAME=	cssselect-0.7.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/c/cssselect/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.python.org/cssselect/
-COMMENT=	parses CSS3 Selectors and translates them to XPath 1.0
+COMMENT=	Parses CSS3 Selectors and translates them to XPath 1.0
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none

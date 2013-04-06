@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/03/31 08:13:32 obache Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 03:45:22 rodent Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.14
@@ -9,7 +9,7 @@ MASTER_SITES=	http://pdf2djvu.googlecode.com/files/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pdf2djvu/
-COMMENT=	pdf2djvu creates DjVu files from PDF files
+COMMENT=	Creates DjVu files from PDF files
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools

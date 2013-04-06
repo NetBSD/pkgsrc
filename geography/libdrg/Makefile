@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/01/26 21:37:38 adam Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 03:45:13 rodent Exp $
 #
 
 DISTNAME=	libdrg-0.0.81
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.lexort.com/software/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.lexort.com/software/
-COMMENT=	Library for reading and merging DRG files.
+COMMENT=	Library for reading and merging DRG files
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
