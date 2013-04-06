@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 03:45:17 rodent Exp $
 
 DISTNAME=	Excel-Template-Plus-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Excel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Excel-Template-Plus/
-COMMENT=	An extension to the Excel::Template module
+COMMENT=	Extension to the Excel::Template module
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Excel-Template-[0-9]*:../../math/p5-Excel-Template

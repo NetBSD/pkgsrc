@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/08 13:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/04/06 03:45:26 rodent Exp $
 #
 
 DISTNAME=	etm-877
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.duke.edu/~dgraham/ETM/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.duke.edu/~dgraham/ETM/
-COMMENT=	events and tasks manager using simple text files
+COMMENT=	Events and tasks manager using simple text files
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
