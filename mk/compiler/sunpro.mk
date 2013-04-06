@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.47 2010/07/30 07:58:59 asau Exp $
+# $NetBSD: sunpro.mk,v 1.48 2013/04/06 18:09:43 tez Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -16,6 +16,9 @@ COMPILER_SUNPRO_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 SUNWSPROBASE?=		/opt/SUNWspro
+.if !exists($SUNWSPROBASE)
+SUNWSPROBASE!=         /bin/ls -d /opt/solstudio*
+.endif
 
 # common definitions
 # XXX: should be moved to compiler.mk.
