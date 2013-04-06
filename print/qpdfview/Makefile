@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/03/31 08:13:32 obache Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 14:22:41 rodent Exp $
 #
 
 VER=		0.4
@@ -27,6 +27,7 @@ SUBST_VARS.prefix+=	DESTDIR PREFIX PKGMANDIR
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
 
 do-configure:
 	cd ${WRKSRC} && QTDIR=${QTDIR} \
