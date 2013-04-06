@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/11 23:04:24 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 14:58:20 rodent Exp $
 #
 
 DISTNAME=	muparser_v2_2_2
@@ -21,6 +21,6 @@ GNU_CONFIGURE=	yes
 PKGCONFIG_OVERRIDE+=	build/autoconf/muparser.pc.in
 
 do-test:
-	cd ${WRKSRC}/samples/example1 && echo quit | LD_LIBRARY_PATH=../../lib ./example1
+	cd ${WRKSRC}/samples/example1 && ${ECHO} quit | LD_LIBRARY_PATH=../../lib ./example1
 
 .include "../../mk/bsd.pkg.mk"
