@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 23:48:15 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/06 14:22:39 rodent Exp $
 #
 
-DISTNAME=		xmms-musepack-1.1
-PKGREVISION=		7
-CATEGORIES=		audio
-MASTER_SITES=		http://musepack.imosnet.de/linux/plugins/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	xmms-musepack-1.1
+PKGREVISION=	7
+CATEGORIES=	audio
+MASTER_SITES=	http://musepack.imosnet.de/linux/plugins/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.musepack.net/
-COMMENT=		XMMS plugin for musepack (mpc) files
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.musepack.net/
+COMMENT=	XMMS plugin for musepack (mpc) files
 
-USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_LANGUAGES=	c c++
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 
 .include "../../audio/libmusepack/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"

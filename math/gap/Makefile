@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/01/11 00:00:04 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/06 14:22:40 rodent Exp $
 #
 
 DISTNAME=	gap4r3
@@ -8,7 +8,7 @@ CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/ \
 		ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/ \
 		ftp://ftp.ccs.neu.edu/pub/mirrors/ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}	\
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 			fix4r3n5.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,8 +20,8 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
 
 USE_TOOLS+=	bsdtar
-
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 CONFIGURE_ENV+=	PREFIX=${PREFIX:Q}
 BUILD_TARGET=	default
 
