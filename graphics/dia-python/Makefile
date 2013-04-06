@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/02/16 11:21:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/04/06 15:46:36 rodent Exp $
 #
 
 DIA_SUBPKG=		-python
@@ -15,8 +15,8 @@ PYTHON_PATCH_SCRIPTS=	po-checktrans.py
 PYTHON_PATCH_SCRIPTS+=	plug-ins/python/gtkcons.py
 PYTHON_PATCH_SCRIPTS+=	sheets/checktrans.py
 
-BUILD_DIRS+=		${WRKSRC}/plug-ins/python
-INSTALL_DIRS+=		${WRKSRC}/plug-ins/python
+BUILD_DIRS+=		plug-ins/python
+INSTALL_DIRS+=		plug-ins/python
 
 post-install:
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/dia
