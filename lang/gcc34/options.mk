@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/12/31 03:20:12 dholland Exp $
+# $NetBSD: options.mk,v 1.4 2013/04/06 04:07:24 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
@@ -88,14 +88,14 @@ ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
 .	if !empty(ALT_GCC_RTS)
 RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 .	else
-PKG_SKIP_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
+PKG_FAIL_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
 .	endif
 .     else
-PKG_SKIP_REASON+=	"Missing bootstrap Ada compiler"
+PKG_FAIL_REASON+=	"Missing bootstrap Ada compiler"
 .     endif
 .  endif
 .  if !defined(ALT_GCC)
-PKG_SKIP_REASON+=	"An Ada bootstrap compiler must be specified to build Ada"
+PKG_FAIL_REASON+=	"An Ada bootstrap compiler must be specified to build Ada"
 .  endif
 
 .  if defined(ALT_GCC)
