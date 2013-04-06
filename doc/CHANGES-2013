@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1175 2013/04/06 09:49:25 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1176 2013/04/06 10:23:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1869,3 +1869,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-cs to 4.10.2 [markd 2013-04-06]
 	Updated x11/kde4-l10n-da to 4.10.2 [markd 2013-04-06]
 	Updated graphics/kipi-plugins to 3.1.0 [markd 2013-04-06]
+	Updated editors/kile to 2.1.3 [markd 2013-04-06]
+	Updated devel/kdiff3 to 0.9.97 [markd 2013-04-06]
