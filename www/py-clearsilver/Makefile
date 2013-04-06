@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/28 06:30:59 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 15:46:40 rodent Exp $
 
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=			1
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=		--with-python=${PYTHONBIN:Q}
 MAKE_FLAGS+=			PYTHON_SITE=${LOCALBASE}/${PYSITELIB}
 CFLAGS+=			-fPIC
 
-INSTALL_DIRS=			${WRKSRC}/python
+INSTALL_DIRS=			python
 
 PY_PATCHPLIST=			YES
 

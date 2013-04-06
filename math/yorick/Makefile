@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/09/11 23:04:36 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/04/06 15:46:37 rodent Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -13,7 +13,7 @@ COMMENT=	Numerical algebra system (similar to Matlab)
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/yorick-1.6
-BUILD_DIRS=	${WRKSRC} ${WRKSRC}/doc
+BUILD_DIRS=	${WRKSRC} doc
 INSTALL_DIRS=	${WRKSRC}
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 share/doc share/emacs/site-lisp
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
