@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/10/23 18:16:20 asau Exp $
+# $NetBSD: Makefile,v 1.49 2013/04/06 13:24:19 rodent Exp $
 
 DISTNAME=	Linux-PAM-0.77
 PKGNAME=	${DISTNAME:S/Linux-//}
@@ -80,8 +80,8 @@ PLIST.limits=		yes
 .endif
 
 CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASEDIR}/pam.conf
-.for FILE in ${CFILES}
-CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.for file in ${CFILES}
+CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
 SPECIAL_PERMS=		${PREFIX}/sbin/unix_chkpwd ${SETUID_ROOT_PERMS}
 
