@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.16 2013/03/18 10:04:11 jperkin Exp $
+$NetBSD: patch-aa,v 1.17 2013/04/06 12:41:23 obache Exp $
 
 Extend which ports we accept to deal with.
 
 Disable multilib directories.
 
---- configure.orig	2013-02-11 19:24:24.000000000 +0000
+--- configure.orig	2013-03-17 22:36:19.000000000 +0000
 +++ configure
-@@ -13329,7 +13329,7 @@ case "$host" in
+@@ -13331,7 +13331,7 @@ case "$host" in
  	TARGET=FRV; TARGETDIR=frv
  	;;
  
@@ -15,7 +15,7 @@ Disable multilib directories.
  	TARGET=PA_LINUX; TARGETDIR=pa
  	;;
    hppa*64-*-hpux*)
-@@ -13422,7 +13422,7 @@ case "$host" in
+@@ -13428,7 +13428,7 @@ case "$host" in
    mips-sgi-irix5.* | mips-sgi-irix6.* | mips*-*-rtems*)
  	TARGET=MIPS; TARGETDIR=mips
  	;;
@@ -24,7 +24,7 @@ Disable multilib directories.
  	# Support 128-bit long double for NewABI.
  	HAVE_LONG_DOUBLE='defined(__mips64)'
  	TARGET=MIPS; TARGETDIR=mips
-@@ -13443,7 +13443,7 @@ case "$host" in
+@@ -13449,7 +13449,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
@@ -33,7 +33,7 @@ Disable multilib directories.
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
  	;;
    powerpc64-*-freebsd*)
-@@ -13457,7 +13457,7 @@ case "$host" in
+@@ -13463,7 +13463,7 @@ case "$host" in
  	TARGET=S390; TARGETDIR=s390
  	;;
  
@@ -42,7 +42,7 @@ Disable multilib directories.
  	TARGET=SH; TARGETDIR=sh
  	;;
    sh64-*-* | sh5*-*-*)
-@@ -14647,7 +14647,7 @@ case "$target" in
+@@ -14661,7 +14661,7 @@ case "$target" in
  $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
@@ -51,19 +51,19 @@ Disable multilib directories.
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -14826,11 +14826,6 @@ if test "x$GCC" = "xyes"; then
+@@ -14840,11 +14840,6 @@ if test "x$GCC" = "xyes"; then
      toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
      toolexeclibdir='$(libdir)'
    fi
 -  multi_os_directory=`$CC -print-multi-os-directory`
 -  case $multi_os_directory in
 -    .) ;; # Avoid trailing /.
--    *) toolexeclibdir=$toolexeclibdir/$multi_os_directory ;;
+-    ../*) toolexeclibdir=$toolexeclibdir/$multi_os_directory ;;
 -  esac
  
  else
    toolexeclibdir='$(libdir)'
-@@ -16716,13 +16711,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -16734,13 +16729,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
