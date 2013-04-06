@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1174 2013/04/06 08:56:54 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1175 2013/04/06 09:49:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1861,3 +1861,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 20.0 [ryoon 2013-04-05]
 	Updated devel/cppcheck to 1.59 [adam 2013-04-05]
 	Updated www/opera to 12.15 [obache 2013-04-06]
+	Updated x11/kde4-l10n-ar to 4.10.2 [markd 2013-04-06]
+	Updated x11/kde4-l10n-bg to 4.10.2 [markd 2013-04-06]
+	Updated x11/kde4-l10n-bs to 4.10.2 [markd 2013-04-06]
+	Updated x11/kde4-l10n-ca to 4.10.2 [markd 2013-04-06]
+	Updated x11/kde4-l10n-cat to 4.10.2 [markd 2013-04-06]
+	Updated x11/kde4-l10n-cs to 4.10.2 [markd 2013-04-06]
+	Updated x11/kde4-l10n-da to 4.10.2 [markd 2013-04-06]
+	Updated graphics/kipi-plugins to 3.1.0 [markd 2013-04-06]
