@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2013/04/06 04:03:36 rodent Exp $
 lib/clisp/dynmod/lib-zlib.so
 lib/clisp/dynmod/zlib.lisp
 lib/clisp/zlib/Makefile
