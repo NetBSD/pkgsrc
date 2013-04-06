@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 11:39:26 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/06 14:09:33 rodent Exp $
 
 PKGNAME=	racket-textual-5.3.3
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
@@ -9,7 +9,7 @@ MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)
 		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
 		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/ \
 		http://russell.cs.bilgi.edu.tr/racket-installers/$(PKGVERSION_NOREV)/
-MASTER_SITES=	$(MASTER_SITES_PLT:=racket-textual/)
+MASTER_SITES=	${MASTER_SITES_PLT:=racket-textual/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	asau@inbox.ru
