@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2013/02/16 11:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2013/04/06 14:58:21 rodent Exp $
 
 PKGVER=		2.3.3
 DISTNAME=	openmotif-${PKGVER}
@@ -101,7 +101,7 @@ post-patch:
 			${RM} -f $${manpage}.presubst;			\
 		done;							\
 	done
-	echo "#include <X11/Xos_r.h>" > ${WRKSRC}/lib/Xm/Xmos_r.h
+	${ECHO} "#include <X11/Xos_r.h>" > ${WRKSRC}/lib/Xm/Xmos_r.h
 
 # Filter the manpages through tbl.
 post-build:

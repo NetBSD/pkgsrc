@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/01/29 15:51:06 taca Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 14:58:20 rodent Exp $
 #
 
 DISTNAME=	fml-7.98.18-${FML_STAMP}
@@ -61,7 +61,7 @@ CHECK_INTERPRETER_SKIP+= lib/fml/${FML_STAMP}/* \
 			libexec/fml/${FML_STAMP}/loader.in
 
 pre-configure:
-	echo ${FML_STAMP} > ${WRKSRC}/.version
+	${ECHO} ${FML_STAMP} > ${WRKSRC}/.version
 
 post-install:
 .for f in ${CONFS}

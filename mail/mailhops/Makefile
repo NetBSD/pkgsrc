@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/06 13:09:25 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 14:58:20 rodent Exp $
 #
 
 DISTNAME=	mailhops-1.4
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.spinnaker.de/mutt/
 COMMENT=	Shows the route of an Internet mail message
 
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	echo ${CP} "$${extract_file}" ${WRKSRC}/mailhops; \
+EXTRACT_CMD=	${ECHO} ${CP} "$${extract_file}" ${WRKSRC}/mailhops; \
 				${CP} "$${extract_file}" ${WRKSRC}/mailhops
 
 
