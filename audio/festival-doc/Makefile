@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 23:59:32 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 20:27:16 rodent Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -16,7 +16,7 @@ USE_TOOLS+=	pax
 
 DOC=		${PREFIX}/share/doc/festival
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	${PKGINFODIR}
 
