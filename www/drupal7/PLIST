@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/11/08 13:25:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/04/06 12:07:12 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -323,6 +323,7 @@ share/drupal/modules/field/field.crud.inc
 share/drupal/modules/field/field.default.inc
 share/drupal/modules/field/field.form.inc
 share/drupal/modules/field/field.info
+share/drupal/modules/field/field.info.class.inc
 share/drupal/modules/field/field.info.inc
 share/drupal/modules/field/field.install
 share/drupal/modules/field/field.module
@@ -604,6 +605,7 @@ share/drupal/modules/simpletest/files/php-1.txt
 share/drupal/modules/simpletest/files/php-2.php
 share/drupal/modules/simpletest/files/sql-1.txt
 share/drupal/modules/simpletest/files/sql-2.sql
+share/drupal/modules/simpletest/lib/Drupal/simpletest/Tests/PSR0WebTest.php
 share/drupal/modules/simpletest/simpletest.api.php
 share/drupal/modules/simpletest/simpletest.css
 share/drupal/modules/simpletest/simpletest.info
@@ -687,6 +689,10 @@ share/drupal/modules/simpletest/tests/password.test
 share/drupal/modules/simpletest/tests/path.test
 share/drupal/modules/simpletest/tests/path_test.info
 share/drupal/modules/simpletest/tests/path_test.module
+share/drupal/modules/simpletest/tests/psr_0_test/lib/Drupal/psr_0_test/Tests/ExampleTest.php
+share/drupal/modules/simpletest/tests/psr_0_test/lib/Drupal/psr_0_test/Tests/Nested/NestedExampleTest.php
+share/drupal/modules/simpletest/tests/psr_0_test/psr_0_test.info
+share/drupal/modules/simpletest/tests/psr_0_test/psr_0_test.module
 share/drupal/modules/simpletest/tests/registry.test
 share/drupal/modules/simpletest/tests/requirements1_test.info
 share/drupal/modules/simpletest/tests/requirements1_test.install
@@ -739,6 +745,7 @@ share/drupal/modules/simpletest/tests/update_test_3.install
 share/drupal/modules/simpletest/tests/update_test_3.module
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.bare.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.comments.database.php
+share/drupal/modules/simpletest/tests/upgrade/drupal-6.duplicate-permission.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.filled.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.forum.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.locale.database.php
