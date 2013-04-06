@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/12/14 17:04:15 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/06 14:09:32 rodent Exp $
 
 DISTNAME=	gemcutter-0.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubygems.org/gems/gemcutter
+HOMEPAGE=	${MASTER_SITE_RUBYGEMS:=gemcutter/}
 COMMENT=	Commands to interact with RubyGems.org
 LICENSE=	mit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/09/12 13:36:18 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/06 14:09:34 rodent Exp $
 
 DISTNAME=	directory_watcher-1.4.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubygems.org/gems/directory_watcher
+HOMEPAGE=	${MASTER_SITE_RUBYGEMS:=directory_watcher/}
 COMMENT=	FAM-like facility for Ruby
 LICENSE=	mit
 

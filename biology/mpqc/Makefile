@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/04/01 22:23:17 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/06 14:09:32 rodent Exp $
 
 DISTNAME=	mpqc-2.3.1
 CATEGORIES=	biology
-MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=mpqc/)
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpqc/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
