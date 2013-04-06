@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/03/31 08:13:30 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/06 03:45:22 rodent Exp $
 #
 
 DISTNAME=	electrix-0.2.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://electrix.sourceforge.net/
-COMMENT=	eLectrix is an application to view PDF files
+COMMENT=	Application to view PDF files
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	intltool pkg-config
