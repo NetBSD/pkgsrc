@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/02 20:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/06 13:09:24 rodent Exp $
 #
 
 VER=            0.1
@@ -10,7 +10,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.staringispolite.com/likepython/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	is@netbsd.org
+MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.staringispolite.com/likepython/
 COMMENT=	OMG! It's like Python, but like, you know, casual!
 LICENSE=	mit

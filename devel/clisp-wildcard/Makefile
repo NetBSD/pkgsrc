@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/02 20:47:49 marino Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 13:09:24 rodent Exp $
 #
 
 CLISP_MODULE=	wildcard
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 
-MAINTAINER=	hans@netbsd.org
+MAINTAINER=	hans@NetBSD.org
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP wildcard matching module
 

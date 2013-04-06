@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2012/10/15 18:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/06 13:09:25 rodent Exp $
 
 DISTNAME=	harminv-1.3.1
 CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/harminv/
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ab-initio.mit.edu/wiki/index.php/Harminv
 COMMENT=	Solver of harmonic inversion
 LICENSE=	gnu-gpl-v2
