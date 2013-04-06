@@ -8883,7 +8883,7 @@ HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 COMMENT=        GNU yacc clone
 
 GNU_CONFIGURE=  yes
-INFO_FILES=     bison.info
+INFO_FILES=     yes
 
 .include "../../mk/bsd.pkg.mk"
 
