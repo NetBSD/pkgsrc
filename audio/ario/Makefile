@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/02/16 11:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/06 03:45:06 rodent Exp $
 #
 
 DISTNAME=	ario-1.5.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ario-player/1.5.1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ario-player.sourceforge.net/
-COMMENT=	mpd client
+COMMENT=	Client for mpd
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
