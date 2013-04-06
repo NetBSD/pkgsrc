@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2012/10/28 06:30:01 asau Exp $
+# $NetBSD: Makefile,v 1.66 2013/04/06 13:24:20 rodent Exp $
 #
 
 DISTNAME=	adzap-20080508
@@ -21,17 +21,17 @@ CHECK_PORTABILITY_SKIP=	scripts/update-zapper.damien
 INSTALLATION_DIRS=	libexec share/examples/adzap
 
 do-configure:
-.for FILE in scripts/squid_redirect scripts/wrapzap
-	${CP} ${WRKSRC}/${FILE} ${WRKSRC}/${FILE}.ORIG
+.for file in scripts/squid_redirect scripts/wrapzap
+	${CP} ${WRKSRC}/${file} ${WRKSRC}/${file}.ORIG
 	${SED} -e "s:/usr/bin/perl:${PERL5}:g" \
 	       -e "s:@@PREFIX@@:${PREFIX}:g" \
-		<${WRKSRC}/${FILE}.ORIG >${WRKSRC}/${FILE}
+		<${WRKSRC}/${file}.ORIG >${WRKSRC}/${file}
 .endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/squid_redirect ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/wrapzap ${DESTDIR}${PREFIX}/libexec/adzap
-.for FILE in ad-clear.gif ad-clear.mp3 ad-clear.swf \
+.for file in ad-clear.gif ad-clear.mp3 ad-clear.swf \
     ad-grey.gif ad-old.gif \
     ad.gif ad.mp3 ad.swf \
     adbg-clear.gif adbg.gif \
@@ -44,10 +44,10 @@ do-install:
     no-op.html no-op.js \
     webbug-clear.gif webbug-clear.html webbug-clear.js \
     webbug.gif webbug.html webbug.js
-	${INSTALL_DATA} ${WRKSRC}/zaps/${FILE} ${DESTDIR}${PREFIX}/share/examples/adzap
+	${INSTALL_DATA} ${WRKSRC}/zaps/${file} ${DESTDIR}${PREFIX}/share/examples/adzap
 .endfor
-.for FILE in proxy-home.pac proxy-zip.pac
-	${INSTALL_DATA} ${WRKSRC}/rc/${FILE} ${DESTDIR}${PREFIX}/share/examples/adzap
+.for file in proxy-home.pac proxy-zip.pac
+	${INSTALL_DATA} ${WRKSRC}/rc/${file} ${DESTDIR}${PREFIX}/share/examples/adzap
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/scripts/adzap.conf \
 	    ${DESTDIR}${PREFIX}/share/examples/adzap
