@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/01/11 00:15:39 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/06 12:04:01 rodent Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGNAME=	quake3server-1.32b
@@ -14,7 +14,7 @@ COMMENT=	Quake III Arena Dedicated Server for Linux
 .include "../../games/quake3server/Makefile.common"
 
 USE_TOOLS+=	bsdtar
-EXTRACT_CMD=	${SED} '1,265d' ${DOWNLOADED_DISTFILE} | ${TOOLS_PATH.bsdtar} xzf -
+EXTRACT_CMD=	${SED} '1,265d' $$extract_file | ${TOOLS_PATH.bsdtar} xzf -
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}

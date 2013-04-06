@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 11:54:53 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/04/06 12:04:01 rodent Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -26,7 +26,7 @@ NOT_FOR_PLATFORM=	NetBSD-*-*
 BUILD_DIRS=	# empty
 RTCWDIR=	${PREFIX}/lib/lokigames/rtcw
 USE_TOOLS+=	gtar pax gzip
-EXTRACT_CMD=	${SED} '1,178d' ${DOWNLOADED_DISTFILE} |		\
+EXTRACT_CMD=	${SED} '1,178d' $$extract_file |		\
 		${GZIP_CMD} -d | ${GTAR} -C ${WRKSRC} -xf -
 
 pre-extract:

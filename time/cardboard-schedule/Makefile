@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 13:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/06 12:04:02 rodent Exp $
 #
 
 DISTNAME=	cs113ins
@@ -33,7 +33,7 @@ USE_TOOLS+=	unzip
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	cd ${WRKDIR:Q} && {					\
-			${UNZIP_CMD} ${DOWNLOADED_DISTFILE}		\
+			${UNZIP_CMD} $$extract_file		\
 			|| ${TEST} -f InstallerData/Installer.zip;	\
 		}
 NO_BUILD=	yes
