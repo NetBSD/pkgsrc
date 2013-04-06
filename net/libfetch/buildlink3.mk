@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.9 2013/02/06 23:20:50 jperkin Exp $
-
-BUILDLINK_DEPMETHOD.libfetch?=	build
+# $NetBSD: buildlink3.mk,v 1.10 2013/04/06 13:46:33 rodent Exp $
 
 BUILDLINK_TREE+=	libfetch
 
 .if !defined(LIBFETCH_BUILDLINK3_MK)
 LIBFETCH_BUILDLINK3_MK:=
+
+BUILDLINK_DEPMETHOD.libfetch?=	build
 
 BUILDLINK_API_DEPENDS.libfetch+=	libfetch>=2.28
 BUILDLINK_ABI_DEPENDS.libfetch?=	libfetch>=2.34nb1
