@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/31 11:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/04/06 20:27:18 rodent Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		7
@@ -16,7 +16,7 @@ CONFLICTS=		cvs-[0-9]*
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo perl:run
 GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include"
 CONFIGURE_ARGS+=	--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"

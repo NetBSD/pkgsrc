@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:52 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/06 20:27:23 rodent Exp $
 #
 
 .include "Makefile.common"
 PKGREVISION=	1
 USE_TOOLS+=	zip:run
 
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--disable-gtk-peer
 
