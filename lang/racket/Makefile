@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/02/16 21:20:21 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/06 11:39:26 rodent Exp $
 
 PKGNAME=	racket-5.3.3
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
@@ -43,7 +43,7 @@ CHECK_INTERPRETER_SKIP=	lib/racket/collects/meta/build/sitemap/setup.py \
 CHECK_INTERPRETER_SKIP+=	lib/racket/collects/tests/jpr/mon-script.ss
 
 .for f in use-c-printf.rkt use-crypt.rkt use-esd.rkt use-magick.rkt use-sndfile.rkt use-tcl.rkt use-xmmsctrl.rkt use-xosd.rkt
-REPLACE_RACKET+=	collects/ffi/examples/$f
+REPLACE_RACKET+=	collects/ffi/examples/${f}
 .endfor
 
 REPLACE_INTERPRETER+=	racket
