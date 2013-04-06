@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 09:57:20 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/06 03:45:17 rodent Exp $
 #
 
-DISTNAME=		dync-1.1
-PKGREVISION=		2
-CATEGORIES=		misc
-MASTER_SITES=		http://www.westley.demon.co.uk/src/
+DISTNAME=	dync-1.1
+PKGREVISION=	2
+CATEGORIES=	misc
+MASTER_SITES=	http://www.westley.demon.co.uk/src/
 
-MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://www.alistaircrooks.co.uk/software.html
-COMMENT=		awk-like utility with C as language
+MAINTAINER=	agc@NetBSD.org
+HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
+COMMENT=	C language awk-like utility
 
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		tst

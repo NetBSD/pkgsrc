@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2013/03/11 07:50:31 taca Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/06 03:45:12 rodent Exp $
 
 DISTNAME=	rspec-rails-2.13.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://relishapp.com/rspec
-COMMENT=	A test-double framework for rspec
+COMMENT=	Test-double framework for rspec
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}

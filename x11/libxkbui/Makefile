@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:38 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/06 03:45:28 rodent Exp $
 #
 
-DISTNAME=		libxkbui-1.0.2
-PKGREVISION=		1
-CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	libxkbui-1.0.2
+PKGREVISION=	1
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
-COMMENT=		xkbui library
+MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://xorg.freedesktop.org/
+COMMENT=	Library for xkbui
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	xkbui.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/27 12:32:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/06 03:45:23 rodent Exp $
 #
 
 DISTNAME=	ansible-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ansible.cc/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ansible.cc/
-COMMENT=	SSH-based configuration management, deployment, and task execution system
+COMMENT=	SSH-based configuration management, deployment, and task execution
 LICENSE=	gnu-gpl-v3
 
 EGDIR=		${PREFIX}/share/examples/ansible

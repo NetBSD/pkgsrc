@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 18:28:17 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/06 03:45:13 rodent Exp $
 #
 
 DISTNAME=	ttf-alee_12
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/ttf-alee/}
 
 MAINTAINER=	fox9@netb.co.kr
 HOMEPAGE=	http://packages.debian.org/unstable/x11/ttf-alee
-COMMENT=	A Lee's Hangul truetype fonts
+COMMENT=	A. Lee's Hangul truetype fonts
 LICENSE=	artistic
 
 NO_CONFIGURE=	YES

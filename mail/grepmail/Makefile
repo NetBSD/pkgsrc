@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/08 12:19:13 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/06 03:45:15 rodent Exp $
 
 DISTNAME=	grepmail-5.3033
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grepmail/}
 
 MAINTAINER=	david@fundy.net
 HOMEPAGE=	http://grepmail.sourceforge.net/
-COMMENT=	mbox formatted file search utility
+COMMENT=	Search utility for mbox formatted files
 
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5

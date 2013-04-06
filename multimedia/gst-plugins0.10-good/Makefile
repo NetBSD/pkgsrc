@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2012/10/08 09:21:03 asau Exp $
+# $NetBSD: Makefile,v 1.30 2013/04/06 03:45:19 rodent Exp $
 #
 
 .include "Makefile.common"
 PKGREVISION=		3
 
-COMMENT+=		good plugins
+COMMENT+=		Good plugins
 
 # some plugins were moved from bad to good
 CONFLICTS+=		gst-plugins0.10-bad<0.10.18

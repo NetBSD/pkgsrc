@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/12 11:58:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 03:45:21 rodent Exp $
 #
 
 DISTNAME=	pysmb-1.1.2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://miketeo.net/wp/index.php/projects/pysmb
-COMMENT=	pysmb is an experimental SMB/CIFS library written in Python
+COMMENT=	Experimental SMB/CIFS library written in Python
 LICENSE=	zlib
 
 USE_LANGUAGES=	# none

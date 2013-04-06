@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2012/12/04 15:16:14 prlw1 Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/06 03:45:19 rodent Exp $
 #
 
-DISTNAME=		gst-ffmpeg-0.10.13
-PKGREVISION=		6
-CATEGORIES=		multimedia
-MASTER_SITES=		http://gstreamer.freedesktop.org/src/gst-ffmpeg/
+DISTNAME=	gst-ffmpeg-0.10.13
+PKGREVISION=	6
+CATEGORIES=	multimedia
+MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gstreamer.freedesktop.org/src/gst-ffmpeg/
-COMMENT=		ffmpeg plugin for gstreamer
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://gstreamer.freedesktop.org/src/gst-ffmpeg/
+COMMENT=	GStreamer ffmpeg plugin
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

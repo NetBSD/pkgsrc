@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/15 11:54:04 obache Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/06 03:45:13 rodent Exp $
 #
 
 DISTNAME=	gource-0.38
@@ -8,7 +8,7 @@ MASTER_SITES=	http://gource.googlecode.com/files/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gource/
-COMMENT=	software version control visualization
+COMMENT=	Software version control visualization
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes

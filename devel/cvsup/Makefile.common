@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2012/08/14 17:07:56 asau Exp $
+# $NetBSD: Makefile.common,v 1.16 2013/04/06 03:45:09 rodent Exp $
 # used by devel/cvsup/Makefile
 # used by devel/cvsup-gui/Makefile
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/snapshots/
 
 MAINTAINER=	motoyuki@bsdclub.org
 HOMEPAGE=	http://www.cvsup.org/
-COMMENT=	cvsup daemon and client
+COMMENT=	Daemon and client for cvsup
 
 ONLY_FOR_PLATFORM=	DragonFly-*-i386 FreeBSD-*-i386 Linux-*-i386 \
 			NetBSD-*-i386

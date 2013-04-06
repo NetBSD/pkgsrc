@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/06 03:45:11 rodent Exp $
 
 DISTNAME=	Module-Implementation-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Implementation/
-COMMENT=	Loads one of several alternate underlying implementations for a Perl5 module
+COMMENT=	Loads one of several alternate underlying implementations
 LICENSE=	artistic-2.0
 
 # ExtUtils::MakeMaker >= 6.30 is in core since 5.8.8

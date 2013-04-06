@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 14:11:04 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/06 03:45:14 rodent Exp $
 #
 
 DISTNAME=	libjpeg-turbo-1.2.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://libjpeg-turbo.virtualgl.org/
-COMMENT=	libjpeg accelerated with MMX, SSE and SSE2 SIMD instructions
+COMMENT=	Accelerated libjpeg with MMX, SSE and SSE2 SIMD instructions
 LICENSE=	gnu-lgpl-v2 # OR wxWindows Library Licence, Version 3.1
 
 CONFLICTS=	jpeg-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/03/14 13:42:57 obache Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 03:45:12 rodent Exp $
 
 DISTNAME=	pkg-config-1.1.4
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.gem
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://github.com/rcairo/pkg-config
-COMMENT=	pkg-config implemented by pure Ruby
+COMMENT=	Pure Ruby implementation of pkg-config
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	${RUBY_PKGPREFIX}-gnome2-glib<0.90.0
