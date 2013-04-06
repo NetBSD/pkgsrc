@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/25 06:56:50 asau Exp $
+# $NetBSD: Makefile,v 1.45 2013/04/06 21:07:36 rodent Exp $
 
 DISTNAME=	libxml2-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,9 +18,9 @@ SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
 SUBST_FILES.setup=	setup.py
-SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g" \
-			-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g" \
-			-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/include,g"
+SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g"
+SUBST_SED.setup+=	-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g"
+SUBST_SED.setup+=	-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/include,g"
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
 

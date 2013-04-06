@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/04/06 20:27:27 rodent Exp $
+# $NetBSD: Makefile,v 1.72 2013/04/06 21:07:35 rodent Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -43,8 +43,8 @@ SUBST_CLASSES+=		web2c
 SUBST_MESSAGE.web2c=	Disabling web2c.
 SUBST_STAGE.web2c=	pre-configure
 SUBST_FILES.web2c=	Makefile.in texk/Makefile.in
-SUBST_SED.web2c=	-e 's,^programs = web2c,programs =,' \
-			-e 's,^@FMU@,,'
+SUBST_SED.web2c=	-e 's,^programs = web2c,programs =,'
+SUBST_SED.web2c+=	-e 's,^@FMU@,,'
 
 BUILD_DEFS+=		VARBASE
 LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
