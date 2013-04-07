@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/04/06 03:45:09 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/07 20:43:26 asau Exp $
 
 DISTNAME=	libf2c-20090201
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# see notes below
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/f2c/index.html
-COMMENT=	Library for f2c Fortran support
+COMMENT=	f2c Fortran support library
 
 CONFLICTS=	egcs-current-19980608 \
 		f2c<=20090411
