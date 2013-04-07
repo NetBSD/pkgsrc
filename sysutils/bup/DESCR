@@ -1,41 +1,22 @@
-bup is a program that backs things up.  bup has a few advantages
-over other backup software:
+bup is a program that backs things up.  bup has a few advantages over other
+backup software:
 
-It uses a rolling checksum algorithm (similar to rsync) to split
-large files into chunks. The most useful result of this is you can
-backup huge virtual machine (VM) disk images, databases, and XML
-files incrementally, even though they're typically all in one huge
-file, and not use tons of disk space for multiple versions.
+It uses a rolling checksum algorithm (similar to rsync) to split large files
+into chunks. The most useful result of this is you can backup huge virtual
+machine (VM) disk images, databases, and XML files incrementally, even though
+they're typically all in one huge file, and not use tons of disk space for
+multiple versions.
 
-It uses the packfile format from git (the open source version
-control system), so you can access the stored data even if you
-don't like bup's user interface.
+It uses the packfile format from git (the open source version control system),
+so you can access the stored data even if you don't like bup's user interface.
 
-Unlike git, it writes packfiles directly (instead of having a
-separate garbage collection / repacking stage) so it's fast even
-with gratuitously huge amounts of data. bup's improved index formats
-also allow you to track far more filenames than git (millions) and
-keep track of far more objects (hundreds or thousands of gigabytes).
+Unlike git, it writes packfiles directly (instead of having a separate garbage
+collection/repacking stage) so it's fast even with gratuitously huge amounts of 
+data. bup's improved index formats also allow you to track far more filenames
+than git (millions) and keep track of far more objects (hundreds or thousands of
+gigabytes).
 
-Data is "automagically" shared between incremental backups without
-having to know which backup is based on which other one - even if
-the backups are made from two different computers that don't even
-know about each other. You just tell bup to back stuff up, and it
-saves only the minimum amount of data needed.
-
-You can back up directly to a remote bup server, without needing
-tons of temporary disk space on the computer being backed up.  And
-if your backup is interrupted halfway through, the next run will
-pick up where you left off. And it's easy to set up a bup server:
-just install bup on any machine where you have ssh access.
-
-Bup can use "par2" redundancy to recover corrupted backups even if
-your disk has undetected bad sectors.
-
-Even when a backup is incremental, you don't have to worry about
-restoring the full backup, then each of the incrementals in turn;
-an incremental backup acts as if it's a full backup, it just takes
-less disk space.
-
-You can mount your bup repository as a FUSE filesystem and access
-the content that way, and even export it over Samba.
+Data is "automagically" shared between incremental backups without having to
+know which backup is based on which other one - even if the backups are made
+from two different computers that don't even know about each other. You just
+tell bup to back stuff up, and it saves only the minimum amount of data needed.

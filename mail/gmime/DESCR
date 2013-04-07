@@ -1,19 +1,14 @@
-GMime is a set of utilities for parsing and creating messages using
-the Multipurpose Internet Mail Extension (MIME) as defined by the
-following RFCs:
-
+GMime is a set of utilities for parsing and creating messages using the
+Multipurpose Internet Mail Extension (MIME) as defined by the following RFCs:
  * 0822: Standard for the Format of Arpa Internet Text Messages
- * 1521: MIME (Multipurpose Internet Mail Extensions) Part One:
-         Mechanisms for Specifying and Describing the Format of
-         Internet Message Bodies
- * 1847: Security Multiparts for MIME: Multipart/Signed and
-         Multipart/Encrypted
+ * 1521: MIME (Multipurpose Internet Mail Extensions) Part One: Mechanisms for
+         Specifying and Describing the Format of Internet Message Bodies
+ * 1847: Security Multiparts for MIME: Multipart/Signed and Multipart/Encrypted
  * 1864: The Content-MD5 Header Field (Obsoletes rfc1544)
  * 2015: MIME Security with Pretty Good Privacy (PGP)
  * 2045: Multipurpose Internet Mail Extensions (MIME) Part One:
          Format of Internet Message Bodies
- * 2046: Multipurpose Internet Mail Extensions (MIME) Part Two:
-         Media Types
+ * 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types
  * 2047: Multipurpose Internet Mail Extensions (MIME) Part Three:
          Message Header Extensions for Non-ASCII Text
  * 2048: Multipurpose Internet Mail Extensions (MIME) Part Four:

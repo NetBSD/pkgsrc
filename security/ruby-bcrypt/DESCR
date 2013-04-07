@@ -1,6 +1,6 @@
-bcrypt() is a sophisticated and secure hash algorithm designed by The
-OpenBSD project for hashing passwords. bcrypt-ruby provides a simple,
-humane wrapper for safely handling passwords.
+bcrypt() is a sophisticated and secure hash algorithm designed by The OpenBSD
+project for hashing passwords. bcrypt-ruby provides a simple, humane wrapper for
+safely handling passwords.
 
 = bcrypt-ruby
 
@@ -11,15 +11,14 @@ An easy way to keep your users' passwords secure.
 
 == Why you should use bcrypt
 
-If you store user passwords in the clear, then an attacker who steals
-a copy of your database has a giant list of emails and passwords. Some
-of your users will only have one password -- for their email account,
-for their banking account, for your application. A simple hack could
-escalate into massive identity theft.
+If you store user passwords in the clear, then an attacker who steals a copy of
+your database has a giant list of emails and passwords. Some of your users will
+only have one password - for their email account, for their banking account, for
+your application. A simple hack could escalate into massive identity theft.
 
-It's your responsibility as a web developer to make your web
-application secure -- blaming your users for not being security
-experts is not a professional response to risk.
+It's your responsibility as a web developer to make your web application secure
+- blaming your users for not being security experts is not a professional
+response to risk.
 
 bcrypt allows you to easily harden your application against these
 kinds of attacks.
