@@ -3,4 +3,3 @@ This module adds the following methods to HTTP::Response objects:
   $res->charset
   $res->encoder
   $res->encoding
-
