@@ -1,28 +1,24 @@
 The Flash Operator panel is a 'switchboard' application for the Asterisk PBX
-system. It displays information about your Asterisk PBX activity in real
-time via a standard web browser with Flash plugin. The display and button
-layout is configurable, you can have more than a 100 buttons on the screen
-at once.
+system. It displays information about your Asterisk PBX activity in real time
+via a standard web browser with Flash plugin. The display and button layout is
+configurable, you can have more than a 100 buttons on the screen at once.
 
 You can see at a glance:
-
-   * What extensions are busy, ringing or available
-   * Who is talking and to whom (clid, context, priority)
-   * SIP registration status and reachability
-   * Meetme room status (number of users) in the room
-   * Queue status (number of users waiting)
-   * Parked extensions
-   * Call duration Timers
-   * Logged in Agents
+ * What extensions are busy, ringing or available
+ * Who is talking and to whom (clid, context, priority)
+ * SIP registration status and reachability
+ * Meetme room status (number of users) in the room
+ * Queue status (number of users waiting)
+ * Parked extensions
+ * Call duration Timers
+ * Logged in Agents
 
 You can perform these actions:
-
-   * Hang-up a channel (double click the colored dot on the button)
-   * Transfer a call leg via drag&drop (drag the phone icon on a button to
-     another button)
-   * Originate calls via drag&drop
-   * Drag an available extension to an ongoing conversation and conference
-     the three together.
-   * Change the callerid text to something meaningfull when transferring or
-     originating a call
-   * Mute/Unmute meetme participants
+ * Hang-up a channel (double click the colored dot on the button)
+ * Transfer a call leg via drag&drop (drag the phone icon on a button to another   button)
+ * Originate calls via drag&drop
+ * Drag an available extension to an ongoing conversation and conference the
+   three together.
+ * Change the callerid text to something meaningfull when transferring or
+   originating a call
+ * Mute/Unmute meetme participants
