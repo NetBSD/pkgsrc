@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.13 2012/04/15 22:01:00 wiz Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.14 2013/04/07 21:04:44 wiz Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -28,7 +28,7 @@ HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 COMMENT=        GNU yacc clone
 
 GNU_CONFIGURE=  yes
-INFO_FILES=     bison.info
+INFO_FILES=     yes
 
 .include "../../mk/bsd.pkg.mk"
 </programlisting>
