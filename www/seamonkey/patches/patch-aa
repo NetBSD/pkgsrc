@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2013/01/20 08:33:13 ryoon Exp $
+$NetBSD: patch-aa,v 1.14 2013/04/07 20:23:49 ryoon Exp $
 
---- mozilla/configure.in.orig	2013-01-06 06:26:09.000000000 +0000
+--- mozilla/configure.in.orig	2013-04-01 03:30:49.000000000 +0000
 +++ mozilla/configure.in
-@@ -2137,6 +2137,9 @@ ia64*-hpux*)
+@@ -2130,6 +2130,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
          MC=mc.exe
      fi
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.13 2013/01/20 08:33:13 ryoon Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -3075,6 +3078,9 @@ dnl ====================================
+@@ -3071,6 +3074,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.13 2013/01/20 08:33:13 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3376,6 +3382,9 @@ AC_CACHE_CHECK(
+@@ -3372,6 +3378,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.13 2013/01/20 08:33:13 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5283,8 +5300,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
+@@ -5326,8 +5343,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
  AC_SUBST(MOZ_SCTP)
  AC_SUBST(MOZ_SRTP)
  
@@ -58,11 +58,3 @@ $NetBSD: patch-aa,v 1.13 2013/01/20 08:33:13 ryoon Exp $
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -8690,6 +8707,7 @@ AC_SUBST(MOZ_VP8_ERROR_CONCEALMENT)
- AC_SUBST(MOZ_VP8_ENCODER)
- AC_SUBST(MOZ_VP8)
- AC_SUBST(MOZ_OGG)
-+AC_SUBST(MOZ_ALSA)
- AC_SUBST(MOZ_ALSA_LIBS)
- AC_SUBST(MOZ_ALSA_CFLAGS)
- AC_SUBST(VPX_AS)

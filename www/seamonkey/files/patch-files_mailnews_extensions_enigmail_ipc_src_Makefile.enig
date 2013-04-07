@@ -1,0 +1,15 @@
+$NetBSD: patch-files_mailnews_extensions_enigmail_ipc_src_Makefile.enig,v 1.1 2013/04/07 20:23:49 ryoon Exp $
+
+--- mailnews/extensions/enigmail/ipc/src/Makefile.enig.orig	2013-01-20 17:08:40.000000000 +0000
++++ mailnews/extensions/enigmail/ipc/src/Makefile.enig
+@@ -18,8 +18,8 @@ LDFLAGS	+= -dynamiclib -install_name @ex
+ endif
+ 
+ ifeq ($(OS_ARCH),NetBSD)
+-ifeq ($(DLL_SUFFIX),.so.1.0)
+-LDFLAGS += -Wl,-Bsymbolic
++ifeq ($(DLL_SUFFIX),.so)
++LDFLAGS += -shared -Wl,-Bsymbolic
+ CFLAGS += -fPIC
+ endif
+ endif
