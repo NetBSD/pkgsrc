@@ -21,6 +21,4 @@ library.  The adns library has the following features:
   environment variables (for setuid programs), disable hostname
   syntax sanity checks to return arbitrary data, override or ignore
   resolv.conf in favour of supplied configuration, etc.
-* Believed to be correct ! For example, will correctly back off to
-  TCP in case of long replies or queries, or to other nameservers if
-  several are available. It has sensible handling of bad responses etc.
+...and more!

@@ -21,8 +21,4 @@ Here are some of the features:
   - Encrypted bookmark support (password can be saved to KWallet)
   - Distributed FTP support (PRET)
   - SSCN and CPSV support
-  - Skiplist
-  - ZeroConf (aka. Rendezvous) support for local site discovery
-  - Bookmark sharing with Kopete contacts (KDE >= 3.3)
-  - Bookmark import plugins
-  - Support for SFTP protocol [experimental]
+...and more!

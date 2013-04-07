@@ -1,4 +1,5 @@
-The kdewebdev package is the web development package for the K Desktop Environment.
+The kdewebdev package is the web development package for the K Desktop
+Environment.
 
 It contains Quanta Plus and other applications, which are useful for web
 development. They are runtime dependencies of Quanta Plus, and it is

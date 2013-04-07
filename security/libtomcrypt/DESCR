@@ -1,12 +1,11 @@
-LibTomCrypt is a fairly comprehensive, modular and portable
-cryptographic toolkit that provides developers with a vast array of
-well known published block ciphers, one-way hash functions, chaining
-modes, pseudo-random number generators, public key cryptography and a
-plethora of other routines.  LibTomCrypt has been designed from the
-ground up to be very simple to use.  It has a modular and standard API
-that allows new ciphers, hashes and PRNGs to be added or removed
-without change to the overall end application.  It features easy to
-use functions and a complete user manual which has many source snippet
+LibTomCrypt is a fairly comprehensive, modular and portable cryptographic
+toolkit that provides developers with a vast array of well known published block
+ciphers, one-way hash functions, chaining modes, pseudo-random number
+generators, public key cryptography and a plethora of other routines.
+LibTomCrypt has been designed from the ground up to be very simple to use. It
+has a modular and standard API that allows new ciphers, hashes and PRNGs to be
+added or removed without change to the overall end application. It features easy
+to use functions and a complete user manual which has many source snippet
 examples.
 
 * Block Ciphers
@@ -27,49 +26,4 @@ examples.
     * Khazad
     * KASUMI
     * SEED
-* Chaining Modes
-    * ECB
-    * CBC
-    * OFB
-    * CFB
-    * CTR
-    * IEEE LRW mode
-    * F8 Chaining Mode
-* One-Way Hash Functions
-    * MD2
-    * MD4
-    * MD5
-    * SHA-1
-    * SHA-224/256/384/512
-    * TIGER-192
-    * RIPE-MD 128/160/256/320
-    * WHIRLPOOL
-* Message Authentication
-    * FIPS-198 HMAC (supports all hashes)
-    * CMAC, also known as OMAC1 (supports all ciphers)
-    * PMAC Authentication
-    * F9-MAC
-    * Pelican MAC
-* Message Encrypt+Authenticate Modes
-    * EAX Mode
-    * OCB Mode
-    * CCM Mode (NIST spec)
-    * GCM Mode (IEEE spec)
-* Pseudo-Random Number Generators
-    * Yarrow (based algorithm)
-    * RC4
-    * Support for /dev/random, /dev/urandom and the Win32 CSP RNG
-    * Fortuna
-    * SOBER-128
-* Public Key Algorithms
-    * RSA (using PKCS #1 v1.5 and v2.1)
-    * ECC (EC-DSA X9.62 signatures, X9.63 EC-DH)
-          o With fast Fixed Point ECC support as well
-          o X9.63 import/export of public keys
-    * DSA (Users make their own groups)
-    * The math routines are pluggable which means you can use your own
-      math provider if you want.
-* Other standards
-    * PKCS #1 (v1.5 and v2.1 padding)
-    * PKCS #5
-    * ASN.1 DER
+...and more!

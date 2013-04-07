@@ -1,5 +1,3 @@
-Bonnie: A simple Filesystem Benchmark Program
-
 Bonnie tests the speed of sequential file I/O using standard C library
 calls.  It does reads and writes of characters using STDIO; and of
 blocks using system calls.  Then it does a sequential pass of reading

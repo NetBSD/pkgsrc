@@ -1,5 +1,4 @@
 A collection of utilities for manipulating pkg_summary(5) files.
-
 pkg_list_all_pkgs       - list (in PKGPATH form) all packages in pkgsrc tree
 pkg_src_summary         - create a full pkg_src_summary
                           for given (in PKGPATH form) packages
@@ -16,8 +15,7 @@ pkg_update_summary      - updates pkg_summary(5) by analysing the modification
 pkg_update_src_summary  - efficiently updates pkg_src_summary for all
                           packages in pkgsrc tree
 pkg_summary4view        - convert a summary file to human readable format
-pkg_refresh_summary     - output an information about latest/newest version
-                          of packages
+pkg_refresh_summary -- information about latest/newest version of packages
 pkg_cleanup_distdir     - remove old unused distfiles
 pkg_uniq_summary        - filter out repeated package summaries
 pkg_summary2deps        - summary to dependency graph converter
