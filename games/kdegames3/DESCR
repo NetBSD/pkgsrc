@@ -3,8 +3,8 @@ distribution:
 
 * kasteroids: shoot at those nasty asteroids
 * katomic: build complex atoms with a minimal amount of moves
-* kbackgammon: play backgammon against a local human player, via a
-               game server or against GNU Backgammon (not included)
+* kbackgammon: play backgammon against a local human player, via a game server
+  or against GNU Backgammon (not included)
 * kbattleship: battleship game with built-in game server
 * kblackbox: find atoms in a grid by shooting electrons
 * kbounce: claim areas and don't get disturbed
@@ -21,15 +21,4 @@ distribution:
 * ksame: collect pieces of the same color
 * kshisen: patience game where you take away all pieces
 * ksirtet: very known if spelt this backwards
-* ksmiletris: another Tetris-like game
-* ksnake: don't bite yourself, eat apples!
-* ksokoban: move all storage boxes into the cabinet
-* kspaceduel: two player game with shooting spaceships flying around a sun
-* ktron: like ksnake, but without fruits
-* ktuberling: kids game: make your own potato (NO french fries!)
-* kwin4: place 4 pieces in a row
-* libkdegames: KDE game library used by many of these programs
-* lskat: lieutnant skat
-
-There is also a directory libkdegames that contains card decks as well as
-some functions for game programmers.
+  ...and more!

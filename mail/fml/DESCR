@@ -1,73 +1,23 @@
-fml8 Features
-
-  * fml8 configuration file format is changed to new Postfix style format
-    configuration files (.cf files).
-
-  * usage of CUI is almost same as fml4 (it is same as could as possible). You
-    can use CUI (makefml and fml command)
-
-            to create/remove an ML,
-            to add/remove/change an addresse of ML members,
-            to add/remove/change an address of remote administrators,
-            to see log and member list,
-            et.al.
-
-
-    Makefml and fml are same programs except for argument order.
-
-    See  the Section called Difference Between fml4 And fml8: CUI in Chapter 8
-    on the CUI usage difference between fml4 and fml8.
-
-  * GUI (CGI) interface. The functions are a subset of CUI ones.
-
-            to create/remove an ML,
-            to add/remove/change an address of ML members,
-            to add/remove/change an address of remote administrators,
-            to see log and member list,
-            et.al.
-
-
-    The configuration file editing is incomplete yet.
-
-  * article delivery, header rewriting and several filters ( corresponding with
-    fml4's envelope filter and content filter ).
-
-  * command mail for users.
-
-            to add/remove/change the address,
-            get article summary,
-            get old articles,
-            et.al.
-
-
-  * command mail (admin command mail) for remote administratoin by mail.
-
-            to add/remove/change an addresse of ML members,
-            to add/remove/change an address of remote administrators,
-            to see log and member list,
-            et.al.
-
-
-  * automatic analyzer of error messages.
-
-  * IPv6 ready.
-
-  * tiny thread track system.
-
-  * built-in module for HTML converter of articles. support automatic
-    conversion by default.
-
-    fmlhtmlify and makefml supports html conversion functions.
-
-  * main programs (fml/libexec): distribute command error
-
-  * utilities: fmladdr fmlailas fmlconf fmldoc makefml fml
-
-  * fml4 emulation: if you replace fml.pl of fml4 and fml.pl of fml8, fml8 runs
-    as fml4.
-
-  * After 2004 summer, the queueing system is implemanted. Currently the
-    delivery system is queuing based. So, fml8 is a MTA in fact.
-
-  * Abstracted IO layer to get member list in unified way from a file, /etc/
-    group, NIS, SQL.
+fml8 Features:
+ * fml8 configuration file format is changed to new Postfix style format
+   configuration files (.cf files).
+ * usage of CUI is almost same as fml4 (it is same as could as possible). You
+   can use CUI (makefml and fml command)
+     to create/remove an ML,
+     to add/remove/change an addresse of ML members,
+     to add/remove/change an address of remote administrators,
+     to see log and member list,
+     et.al.
+Makefml and fml are same programs except for argument order. See the Section
+called Difference Between fml4 And fml8: CUI in Chapter 8 on the CUI usage
+difference between fml4 and fml8.
+ * GUI (CGI) interface. The functions are a subset of CUI ones.
+     to create/remove an ML,
+     to add/remove/change an address of ML members,
+     to add/remove/change an address of remote administrators,
+     to see log and member list,
+     et.al.
+The configuration file editing is incomplete yet.
+ * article delivery, header rewriting and several filters ( corresponding with
+   fml4's envelope filter and content filter ).
+   ...and more!
