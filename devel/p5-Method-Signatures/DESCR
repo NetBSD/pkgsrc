@@ -10,6 +10,7 @@ can write subroutines with signatures instead of having to spell out my
 
 Also allows signatures, very similar to Perl 6 signatures.
 
-Also does type checking, understanding all the types that Moose (or Mouse) would understand.
+Also does type checking, understanding all the types that Moose (or Mouse) would
+understand.
 
 And it does all this with no source filters.

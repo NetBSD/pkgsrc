@@ -9,6 +9,6 @@ significant features:
     * User space library (alsa-lib) to simplify application programming and
       provide higher level functionality.
     * Support for the older Open Sound System (OSS) API, providing binary
-      compatibility for most OSS programs. 
+      compatibility for most OSS programs.
 
 This package provides utilities for configuring and using ALSA.

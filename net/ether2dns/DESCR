@@ -1,4 +1,4 @@
-This is a quickie used by me to create IPv6 DNS entries for our 
+This is a quickie used by me to create IPv6 DNS entries for our
 machines assuming stateless address auto-configuration.
 
 Input format is standard /etc/ethers format.
