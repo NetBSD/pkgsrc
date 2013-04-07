@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1183 2013/04/06 12:41:43 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1184 2013/04/07 10:35:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/drupal7 to 7.22 [taca 2013-04-06]
 	Updated www/fengoffice to 2.2.4.1 [taca 2013-04-06]
 	Updated devel/libffi to 3.0.13 [obache 2013-04-06]
+	Updated converters/skf to 1.99.2 [obache 2013-04-07]
