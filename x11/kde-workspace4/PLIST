@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/03 10:51:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/04/07 02:30:01 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -708,7 +708,7 @@ share/examples/kde4-dbus/org.kde.ksysguard.processlisthelper.conf
 share/examples/kde4-dbus/org.kde.powerdevil.backlighthelper.conf
 share/examples/rc.d/kdm
 share/icons/Daemon.png
-share/icons/${OPSYS}-flag.png
+share/icons/NetBSD-flag.png
 share/icons/Oxygen_Black/cursors/00000000000000020006000e7e9ffc3f
 share/icons/Oxygen_Black/cursors/00008160000006810000408080010102
 share/icons/Oxygen_Black/cursors/03b6e0fcb3499374a867c041f52298f0
