@@ -1,0 +1,22 @@
+$NetBSD: patch-afterstep_desktop_desklets_desklet.display,v 1.1 2013/04/07 10:36:54 cheusov Exp $
+* fix bash-ism
+--- afterstep/desktop/desklets/desklet.display.orig	2007-09-12 15:33:23.000000000 +0000
++++ afterstep/desktop/desklets/desklet.display
+@@ -8,7 +8,7 @@ then
+     for i in `ls $pfad |grep -v $self`
+     do
+     echo "$pfad - > $i -> $1"
+-	if [ $1 == $i ]
++	if [ $1 = $i ]
+ 	then
+ 	    found=1
+ 	    if [ -f $pfad$1/config ]
+@@ -20,7 +20,7 @@ then
+ 	    fi
+ 	fi
+     done
+-    if [ $found == 1 ]
++    if [ $found = 1 ]
+     then
+ 	"$pfad$1/$1" | ascompose -T ASdesklet.$1 --override -f - -q -g $x$y -I
+     else
