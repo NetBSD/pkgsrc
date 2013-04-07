@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1188 2013/04/07 11:23:46 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1189 2013/04/07 12:37:53 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1884,3 +1884,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-multipart-post to 1.2.0 [obache 2013-04-07]
 	Updated www/ruby-faraday to 0.8.7 [obache 2013-04-07]
 	Updated textproc/ruby-tilt to 1.3.6 [obache 2013-04-07]
+	Updated wm/afterstep to 2.2.11 [cheusov 2013-04-07]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12047 2013/04/06 13:32:49 rodent Exp $
+$NetBSD: TODO,v 1.12048 2013/04/07 12:37:53 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
-	o afterstep-2.2.11
 	o akonadi-1.8.0
 	o alacarte-0.13.2
 	o album-4.08
