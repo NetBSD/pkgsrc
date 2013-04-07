@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/06 03:45:25 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/07 08:39:29 obache Exp $
 #
 
 .include "../../textproc/catdoc/Makefile.common"
@@ -8,7 +8,7 @@ COMMENT=	Tk interface for MS-Word to plain text converter
 
 DEPENDS+=	catdoc>=0.91.4nb1:../../textproc/catdoc
 
-CONFIGURE_ARGS+	--enable-wordview
+CONFIGURE_ARGS+=	--enable-wordview
 CONFIGURE_ENV+=	WISH="${BUILDLINK_PREFIX.tk}/bin/wish"
 CONFIGURE_ENV+=	enable_wordview=yes
 
