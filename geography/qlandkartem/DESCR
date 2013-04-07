@@ -5,9 +5,9 @@ QLandkarte GT. It's user interface is optimized to the few buttons of a
 typical PDA.
 
 This is experimental pre-alpha software and not targeted towards end-users
-in this stage of developement! This package is provided as a convenience to 
+in this stage of developement! This package is provided as a convenience to
 QLandkarte M developers only.
 
 Copy or hard-link the qlm executable to a user-writable directory as qlm
-wants to put its data files in the same directory as the executable, 
-otherwise it will dump core.
+wants to put its data files in the same directory as the executable, otherwise
+it will dump core.

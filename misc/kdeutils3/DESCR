@@ -1,12 +1,11 @@
-This package provides utility applications that are part of the standard
-KDE environment:
-
+This package provides utility applications that are part of the standard KDE
+environment:
 * ark: manager for compressed files and archives
 * kab: address book
 * karm: tracks time spend per task or project
 * kcalc: scientific calculator
-* kcharselect: select special characters from any fonts and put them into
-               the clipboard
+* kcharselect: select special characters from any fonts and put them into the
+  clipboard
 * charselectapplet: dito, but as a Kicker applet
 * kcardtools:
 * kdepasswd: like 'passwd', a graphical password changer
@@ -23,4 +22,3 @@ KDE environment:
 * knotes: paste yellow notes all over your screen, virtually of course
 * kpm: combines 'ps', 'top' and 'kill' into a visual process watcher
 * kregexpeditor: graphical regular expression editor
-* ktimer: execute programs after some time

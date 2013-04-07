@@ -9,4 +9,3 @@ standard KDE environment:
 * KPPP: dialer and front end for pppd
 * KRDC: a client for Desktop Sharing
 * Krfb: Desktop Sharing server, allow others to access your desktop via VNC
-

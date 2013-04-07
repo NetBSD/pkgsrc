@@ -1,5 +1,5 @@
-This package provides some toy applications that are part of the
-standard KDE environment:
+This package provides some toy applications that are part of the standard KDE
+environment:
 
 * amor: Amusing Misuse Of Resources put's comic figures above your windows
 * kmoon: system tray applet showing the moon phase
@@ -7,5 +7,4 @@ standard KDE environment:
 * ktux: Tux-in-a-Spaceship screen saver
 * kweather: kicker applet that will display the current weather outside
 * kworldclock: application and kicker applet showing daylight area on the world
-               globe
-
+  globe

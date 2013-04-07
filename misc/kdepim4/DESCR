@@ -1,14 +1,7 @@
-Anything relating to the KDE-PIM project. See also http://pim.kde.org.
-
 The KDE-PIM project aims to bring together those who wish to help design,
 implement, test, etc. anything that's to do with personal information
-management.
-
-This rather broad scope encompasses mail clients, addressbooks, usenet news,
-scheduling and even sticky notes.
-
-What it is
-----------
+management. This rather broad scope encompasses mail clients, addressbooks,
+usenet news, scheduling and even sticky notes.
 
 * kaddressbook: The KDE addressbook application.
 * kmail: the KDE mail client
@@ -27,13 +20,4 @@ What it is
 * akregator: Feed reader
 * kjots: manager for several "books" with a subject and notes
 
-
-There is also quite an amount of infrastructure in this package:
-
-* libkdepim: Common code for different kdepim apps
-* mimelib: MIME messages library
-* kpgp: A library for pgp
-* libkpimexchange: connecting to Exchange2000 servers
-* kdgantt: alternative lib for Gantt diagrams, used by the free/busy view of
-           KOrganizer (yes, we should decide for one of the Gantt libs)
-* kontactinterfaces: The glue for embedding KParts into Kontact
+There is also quite an amount of infrastructure in this package.

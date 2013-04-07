@@ -1,3 +1,2 @@
 This is the extension library to access a PostgreSQL database from Ruby.
 This library works with PostgreSQL 7.4 and later.
-

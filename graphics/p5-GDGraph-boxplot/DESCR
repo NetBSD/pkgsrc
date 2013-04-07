@@ -1,3 +1,3 @@
-GD::Graph::boxplot is a perl5 module that uses GD::Graph, GD, and 
-Statistics::Descriptive to create and display PNG output for box 
-and whisker graphs.
+GD::Graph::boxplot is a perl5 module that uses GD::Graph, GD, and
+Statistics::Descriptive to create and display PNG output for box and whisker
+graphs.

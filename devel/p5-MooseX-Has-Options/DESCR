@@ -22,7 +22,3 @@ This will converted into:
         isa => 'Str',
         ...
     );
-
-Options must come in the beginning of the argument list.
-MooseX::Has::Options will stop searching for options after the
-first alphanumeric string that does not start with a colon.

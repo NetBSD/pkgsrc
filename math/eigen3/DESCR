@@ -21,11 +21,4 @@ related algorithms. It is:
   o With fixed-size objects, dynamic memory allocation is avoided, and the
     loops are unrolled when that makes sense.
   o For large matrices, special attention is paid to cache-friendliness.
-* Elegant. The API is extremely clean and expressive, thanks to expression
-  templates. Implementing an algorithm on top of Eigen feels like just copying
-  pseudocode. You can use complex expressions and still rely on Eigen to
-  produce optimized code: there is no need for you to manually decompose
-  expressions into small steps.
-* Compiler-friendy. Eigen has very reasonable compilation times at least with
-  GCC, compared to other C++ libraries based on expression templates and heavy
-  metaprogramming. Eigen is also standard C++ and supports various compilers.
+...and more!
