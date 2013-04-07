@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2013/02/16 11:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2013/04/07 10:36:53 cheusov Exp $
 
-DISTNAME=	AfterStep-2.1.2
+DISTNAME=	AfterStep-2.2.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
-PKGREVISION=	25
 CATEGORIES=	wm
-MASTER_SITES=	ftp://ftp.afterstep.org/stable/v2.1/
+MASTER_SITES=	ftp://ftp.afterstep.org/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
