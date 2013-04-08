@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/04/11 11:34:59 drochner Exp $
+$NetBSD: distinfo,v 1.7 2013/04/08 16:48:22 drochner Exp $
 
-SHA1 (libgexiv2-0.4.1.tar.bz2) = b74cd19a4cf4a4a32a938ecb267974c29e630dc2
-RMD160 (libgexiv2-0.4.1.tar.bz2) = 5a13ef1646996a6e58956be34e1ec8b34b6390c1
-Size (libgexiv2-0.4.1.tar.bz2) = 25484 bytes
-SHA1 (patch-aa) = 8ca5d8fb2a05f4978fbdd151f433ad93fc65bbd7
+SHA1 (libgexiv2_0.6.1.tar.xz) = 298184cbca6e5695e48af96d12e705d5b67beebe
+RMD160 (libgexiv2_0.6.1.tar.xz) = 50ab38af313a3be39a8b61dfe2ca3435f4ac1d4a
+Size (libgexiv2_0.6.1.tar.xz) = 27300 bytes
+SHA1 (patch-aa) = 9996bdf8c33e31e3cccdf005d44f7b9a7a199c12
