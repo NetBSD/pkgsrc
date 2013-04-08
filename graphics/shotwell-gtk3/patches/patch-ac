@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2013/04/08 16:51:59 drochner Exp $
+
+--- configure.orig	2013-04-03 01:53:28.000000000 +0000
++++ configure
+@@ -144,7 +144,7 @@ done
+ 
+ # detect version of libgphoto2 the compilation host has installed
+ pkg-config --atleast-version 2.5 libgphoto2
+-if [ $? == 1 ]
++if [ $? = 1 ]
+ then 
+     printf "Detected libGPhoto 2.4.x - using default code path.\n";
+ else

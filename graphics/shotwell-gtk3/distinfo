@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/10/10 11:41:12 drochner Exp $
+$NetBSD: distinfo,v 1.5 2013/04/08 16:51:59 drochner Exp $
 
-SHA1 (shotwell-0.13.1.tar.xz) = 2748966e851baa465906c3c9bbfedcd48008432d
-RMD160 (shotwell-0.13.1.tar.xz) = 3c40f5a99993c25936eecab57b0c28898e254ef9
-Size (shotwell-0.13.1.tar.xz) = 1497664 bytes
-SHA1 (patch-aa) = 06e09d59f59a9d09168789725fc370b3616f0d25
+SHA1 (shotwell-0.14.1.tar.xz) = 7fa0fc21938b7627411d6d6c6c78c262bd6b756c
+RMD160 (shotwell-0.14.1.tar.xz) = f7aac98f1c6cdf56dd8f4c7e6902c242e7ca4028
+Size (shotwell-0.14.1.tar.xz) = 1624784 bytes
+SHA1 (patch-aa) = 555213fdc75b78dbc76f35d17f90c8526c087337
 SHA1 (patch-ab) = e4951475348523f407fe4960fcee861e8cbc29ed
+SHA1 (patch-ac) = 72cc9c3cbda9d0f6d7f30b9bb41899d9b57d1cca
