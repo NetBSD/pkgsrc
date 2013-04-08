@@ -1,0 +1,23 @@
+$NetBSD: patch-config.mak.uname,v 1.1 2013/04/08 14:12:25 mef Exp $
+
+
+--- config.mak.uname.orig	2013-03-14 04:15:22.000000000 +0900
++++ config.mak.uname	2013-04-08 19:11:58.000000000 +0900
+@@ -101,7 +101,7 @@
+ ifeq ($(uname_S),SunOS)
+ 	NEEDS_SOCKET = YesPlease
+ 	NEEDS_NSL = YesPlease
+-	SHELL_PATH = /bin/bash
++	SHELL_PATH = ${BASH}
+ 	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
+ 	NO_STRCASESTR = YesPlease
+ 	NO_MEMMEM = YesPlease
+@@ -144,8 +144,6 @@
+ 		NO_STRTOUMAX = YesPlease
+ 		GIT_TEST_CMP = cmp
+ 	endif
+-	INSTALL = /usr/ucb/install
+-	TAR = gtar
+ 	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
+ endif
+ ifeq ($(uname_O),Cygwin)
