@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/01/09 05:27:44 manu Exp $
+$NetBSD: MESSAGE,v 1.3 2013/04/08 11:17:24 rodent Exp $
 
 You will need to make SOGo accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
@@ -7,7 +7,7 @@ If you are running Apache then you may add the following lines to httpd.conf:
         Include ${PKG_SYSCONFDIR}/SOGo.conf
 
 Next, setup a PostgreSQL or MySQL database with a sogo user. Tweak tbe
-${PKG_SYSCONFDIR}/sogo-conf.sh script according to your needs, run it, and 
+${PKG_SYSCONFDIR}/sogo-conf.sh script according to your needs, run it, and
 start httpd and sogod:
 
         /etc/rc.d/sogod start

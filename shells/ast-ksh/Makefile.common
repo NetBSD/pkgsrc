@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2012/10/06 12:23:36 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.32 2013/04/08 11:17:22 rodent Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -29,8 +29,8 @@ MAKE_FLAGS+=	CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
 PDKSH=		/bin/ksh
 .endif
 
-# Link with libm to fix sfcvt link error - 
-# this is kind of a hack - 
+# Link with libm to fix sfcvt link error -
+# this is kind of a hack -
 # better would be to fix the 'meta makefile' to pass this
 # or to use the ksh-provided math routines.
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2010/07/06 10:17:15 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.11 2013/04/08 11:17:19 rodent Exp $
 #
 
 DISTNAME=	wistumbler2-2.0pre10
@@ -21,7 +21,7 @@ HAS_CONFIGURE=		YES
 MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ENV+=		PREFIX=${PREFIX} PKGMANDIR=${PKGMANDIR}
-MAKE_FLAGS=		PREFIX=${DESTDIR}${PREFIX} 
+MAKE_FLAGS=		PREFIX=${DESTDIR}${PREFIX}
 
 CONF_FILES=		${PREFIX}/share/examples/wistumbler2/wistumbler2.conf \
 			${PKG_SYSCONFDIR}/wistumbler2.conf

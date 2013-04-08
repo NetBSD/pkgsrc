@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/11/15 16:44:56 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/04/08 11:17:12 rodent Exp $
 bin/tpasm
 libdata/tpasm/8051.inc
 libdata/tpasm/8052.inc
@@ -9,4 +9,3 @@ libdata/tpasm/picmacros.inc
 libdata/tpasm/reg_167.inc
 libdata/tpasm/reg_xe167xm.inc
 share/doc/tpasm/MANUAL.TXT
-

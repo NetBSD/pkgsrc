@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2013/02/21 22:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2013/04/08 11:17:20 rodent Exp $
 
 # Notes to package maintainers:
 #
@@ -42,7 +42,7 @@ CHECK_PERMS=		no
 # pkg_install.
 #
 # We also use the newly built pkg_{add,create,delete} since upgrading
-# from an older pkg_install might required features of the new program. 
+# from an older pkg_install might required features of the new program.
 #
 # Note that the definitions are only overriden for the phases that are
 # supposed to use them.  pkg_admin pmatch might be used when looking for
