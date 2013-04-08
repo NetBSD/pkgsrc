@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 18:28:26 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/08 01:42:40 rodent Exp $
 #
 
 DISTNAME=	liberation-fonts-ttf-2.00.0
@@ -10,7 +10,7 @@ MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/ \
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
 COMMENT=	TrueType fonts from RedHat
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.

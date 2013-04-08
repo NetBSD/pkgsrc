@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:28:28 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/08 01:42:40 rodent Exp $
 
 DISTNAME=	NanumFont_TTF_ALL
 PKGNAME=	nanum-ttf-3.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://hangeul.naver.com/
 COMMENT=	Korean fonts distributed by Naver
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
