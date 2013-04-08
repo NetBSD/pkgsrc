@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.19 2012/11/16 21:18:39 adam Exp $
+$NetBSD: patch-aa,v 1.20 2013/04/08 14:12:25 mef Exp $
 
 --- Makefile.orig	2012-10-21 21:32:15.000000000 +0000
 +++ Makefile
@@ -25,27 +25,6 @@ $NetBSD: patch-aa,v 1.19 2012/11/16 21:18:39 adam Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -1023,9 +1017,10 @@ ifeq ($(uname_S),Darwin)
- 	BASIC_CFLAGS += -DPRECOMPOSE_UNICODE
- endif
- ifeq ($(uname_S),SunOS)
-+	NEED_LIBICONV = YesPlease
- 	NEEDS_SOCKET = YesPlease
- 	NEEDS_NSL = YesPlease
--	SHELL_PATH = /bin/bash
-+	SHELL_PATH = ${BASH}
- 	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
- 	NO_STRCASESTR = YesPlease
- 	NO_MEMMEM = YesPlease
-@@ -1068,8 +1063,6 @@ ifeq ($(uname_S),SunOS)
- 		NO_STRTOUMAX = YesPlease
- 		GIT_TEST_CMP = cmp
- 	endif
--	INSTALL = /usr/ucb/install
--	TAR = gtar
- 	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
- endif
- ifeq ($(uname_O),Cygwin)
 @@ -2038,8 +2031,8 @@ ifdef DEFAULT_HELP_FORMAT
  BASIC_CFLAGS += -DDEFAULT_HELP_FORMAT='"$(DEFAULT_HELP_FORMAT)"'
  endif
