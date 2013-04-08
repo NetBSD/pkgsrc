@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/10/03 21:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2013/04/08 11:17:09 rodent Exp $
 
 DISTNAME=	festival-2.1-release
 PKGNAME=	festival-2.1
@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}.tar.gz \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	Advanced multi-lingual speech synthesis system
-LICENSE=	original-bsd	
+LICENSE=	original-bsd
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++

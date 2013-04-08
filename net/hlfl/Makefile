@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:27 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/08 11:17:18 rodent Exp $
 #
 
 DISTNAME=		hlfl-0.60.1
 PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		http://www.hlfl.org/hlfl/ 
+MASTER_SITES=		http://www.hlfl.org/hlfl/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
