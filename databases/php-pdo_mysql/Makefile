@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/16 02:00:34 taca Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/08 11:17:10 rodent Exp $
 
 MODNAME=		pdo_mysql
 CATEGORIES+=		databases
@@ -16,4 +16,3 @@ CONFIGURE_ARGS+=	--with-${PKGMODNAME}=shared,${BUILDLINK_PREFIX.mysql-client}
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../databases/php-pdo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

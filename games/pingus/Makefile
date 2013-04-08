@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/02/16 11:21:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/08 11:17:14 rodent Exp $
 
 DISTNAME=	pingus-0.7.3
 PKGREVISION=	8
@@ -28,8 +28,7 @@ SCONS_CXX=	${CXX} -std=c++11
 SCONS_CXX=	${CXX}
 .endif
 
-MAKE_ENV+=	CPPPATH=${BUILDLINK_DIR}/include \
-		LIBPATH=${BUILDLINK_DIR}/lib 
+MAKE_ENV+=	CPPPATH=${BUILDLINK_DIR}/include LIBPATH=${BUILDLINK_DIR}/lib
 
 do-configure:
 	cd ${WRKSRC} && \
