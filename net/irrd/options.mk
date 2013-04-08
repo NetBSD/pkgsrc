@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/04/06 11:23:05 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2013/04/08 11:17:18 rodent Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.irrd
 PKG_SUPPORTED_OPTIONS=  pthreads
@@ -14,4 +14,3 @@ PTHREAD_AUTO_VARS=	yes
 .else
 CONFIGURE_ARGS+=        --disable-thread
 .endif
-

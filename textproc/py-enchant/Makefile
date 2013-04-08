@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:49 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/08 11:17:23 rodent Exp $
 #
 
 DISTNAME=	pyenchant-1.6.5
@@ -32,7 +32,7 @@ SUBST_STAGE.dlpath=	pre-configure
 SUBST_FILES.dlpath=	enchant/_enchant.py
 SUBST_VARS.dlpath=	PYENCHANT_LIBRARY_PATH
 
-post-extract: 
+post-extract:
 	# fix README file permissions
 	${CHMOD} 644 ${WRKSRC}/enchant/share/enchant/ispell/README.txt
 

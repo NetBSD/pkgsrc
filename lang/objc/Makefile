@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/02 20:11:46 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/08 11:17:15 rodent Exp $
 
 DISTNAME=	objc-3.2.10
 CATEGORIES=	lang
@@ -34,8 +34,8 @@ SUBST_FILES.mflags=	configure configure.in manual.html \
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	post-configure
-SUBST_MESSAGE.mandir=	Making mandir=${PKGMANDIR} 
-SUBST_SED.mandir=	-e '/$$(TAR)/s,man,${PKGMANDIR},' 
+SUBST_MESSAGE.mandir=	Making mandir=${PKGMANDIR}
+SUBST_SED.mandir=	-e '/$$(TAR)/s,man,${PKGMANDIR},'
 SUBST_FILES.mandir=	Makefile
 
 pre-configure:
