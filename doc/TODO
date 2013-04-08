@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12054 2013/04/08 14:34:00 mef Exp $
+$NetBSD: TODO,v 1.12055 2013/04/08 17:27:51 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vala-0.20.0
 	o vbetool-1.1
 	o vera-1.17
-	o veusz-1.17
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.18
