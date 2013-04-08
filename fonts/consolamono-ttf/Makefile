@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/26 11:15:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/08 01:42:39 rodent Exp $
 #
 
 VER=		20121116
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://openfontlibrary.org/en/font/consolamono
 COMMENT=	Monospace font created for programming
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 WRKSRC=		${WRKDIR}/Consola\ Mono
 USE_LANGUAGES=	# none
