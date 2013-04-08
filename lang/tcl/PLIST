@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/08/21 21:31:47 marino Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/04/08 14:19:38 kivinen Exp $
 bin/tclsh
 bin/tclsh${BASEVER}
 include/tcl.h
@@ -110,6 +110,8 @@ lib/tcl${BASEVER}/encoding/shiftjis.enc
 lib/tcl${BASEVER}/encoding/symbol.enc
 lib/tcl${BASEVER}/encoding/tis-620.enc
 lib/tcl${BASEVER}/history.tcl
+lib/tcl${BASEVER}/http/http.tcl
+lib/tcl${BASEVER}/http/pkgIndex.tcl
 lib/tcl${BASEVER}/http1.0/http.tcl
 lib/tcl${BASEVER}/http1.0/pkgIndex.tcl
 lib/tcl${BASEVER}/init.tcl
