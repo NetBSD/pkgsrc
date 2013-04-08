@@ -1,7 +1,9 @@
 Texmaker is a free LaTeX editor, that integrates many tools needed to develop
-documents with LaTeX, in just one application. Texmaker runs on UNIX, MacOS X
-and Windows systems and is released under the GPL license. Features:
-* a unicode editor to write your LaTeX source files (syntax highlighting,
+documents with LaTeX, in just one application.  Texmaker runs on UNIX, MacOS X
+and Windows systems and is released under the GPL license.
+
+Features:
+* an unicode editor to write your LaTeX source files (syntax highlighting,
   undo-redo, search-replace, spell checker...)
 * the principal LaTex tags can be inserted directly with the "LaTeX" and "Math"
   menus
