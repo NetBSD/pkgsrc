@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1194 2013/04/08 14:34:00 mef Exp $
+$NetBSD: CHANGES-2013,v 1.1195 2013/04/08 17:27:51 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1891,3 +1891,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/riece to 9.0.0 [mef 2013-04-08]
 	Updated devel/libmtp to 1.1.6 [markd 2013-04-08]
 	Updated devel/scmgit to 1.8.2 [mef 2013-04-08]
+	Updated graphics/libgexiv2 to 0.6.1 [drochner 2013-04-08]
+	Updated graphics/shotwell-gtk3 to 0.14.1 [drochner 2013-04-08]
+	Updated multimedia/gstreamer1 to 1.0.6 [drochner 2013-04-08]
+	Updated graphics/veusz to 1.17 [drochner 2013-04-08]
+	Updated databases/gramps3 to 3.4.3 [drochner 2013-04-08]
