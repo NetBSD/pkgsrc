@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/08/16 15:41:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/04/08 17:22:03 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -151,6 +151,7 @@ ${PYSITELIB}/veusz/examples/bar_labels.vsz
 ${PYSITELIB}/veusz/examples/bar_options.vsz
 ${PYSITELIB}/veusz/examples/barplots.vsz
 ${PYSITELIB}/veusz/examples/boxplot.vsz
+${PYSITELIB}/veusz/examples/broken_axis.vsz
 ${PYSITELIB}/veusz/examples/coloredpoints.vsz
 ${PYSITELIB}/veusz/examples/contour.vsz
 ${PYSITELIB}/veusz/examples/dataset_operations.vsz
@@ -209,6 +210,9 @@ ${PYSITELIB}/veusz/plugins/importplugin.pyo
 ${PYSITELIB}/veusz/plugins/toolsplugin.py
 ${PYSITELIB}/veusz/plugins/toolsplugin.pyc
 ${PYSITELIB}/veusz/plugins/toolsplugin.pyo
+${PYSITELIB}/veusz/plugins/votable.py
+${PYSITELIB}/veusz/plugins/votable.pyc
+${PYSITELIB}/veusz/plugins/votable.pyo
 ${PYSITELIB}/veusz/pyqtdistutils.py
 ${PYSITELIB}/veusz/pyqtdistutils.pyc
 ${PYSITELIB}/veusz/pyqtdistutils.pyo
@@ -314,6 +318,9 @@ ${PYSITELIB}/veusz/utils/version.pyo
 ${PYSITELIB}/veusz/utils/vzdbus.py
 ${PYSITELIB}/veusz/utils/vzdbus.pyc
 ${PYSITELIB}/veusz/utils/vzdbus.pyo
+${PYSITELIB}/veusz/utils/vzsamp.py
+${PYSITELIB}/veusz/utils/vzsamp.pyc
+${PYSITELIB}/veusz/utils/vzsamp.pyo
 ${PYSITELIB}/veusz/veusz_listen.py
 ${PYSITELIB}/veusz/veusz_listen.pyc
 ${PYSITELIB}/veusz/veusz_listen.pyo
@@ -326,6 +333,9 @@ ${PYSITELIB}/veusz/widgets/__init__.pyo
 ${PYSITELIB}/veusz/widgets/axis.py
 ${PYSITELIB}/veusz/widgets/axis.pyc
 ${PYSITELIB}/veusz/widgets/axis.pyo
+${PYSITELIB}/veusz/widgets/axisbroken.py
+${PYSITELIB}/veusz/widgets/axisbroken.pyc
+${PYSITELIB}/veusz/widgets/axisbroken.pyo
 ${PYSITELIB}/veusz/widgets/axisticks.py
 ${PYSITELIB}/veusz/widgets/axisticks.pyc
 ${PYSITELIB}/veusz/widgets/axisticks.pyo
@@ -419,6 +429,7 @@ ${PYSITELIB}/veusz/windows/consolewindow.pyo
 ${PYSITELIB}/veusz/windows/datanavigator.py
 ${PYSITELIB}/veusz/windows/datanavigator.pyc
 ${PYSITELIB}/veusz/windows/datanavigator.pyo
+${PYSITELIB}/veusz/windows/icons/button_axis-broken.svg
 ${PYSITELIB}/veusz/windows/icons/button_axis.svg
 ${PYSITELIB}/veusz/windows/icons/button_bar.svg
 ${PYSITELIB}/veusz/windows/icons/button_boxplot.svg
