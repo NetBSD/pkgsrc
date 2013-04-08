@@ -1,5 +1,7 @@
-phpPgAdmin is a web-based administration tool for PostgreSQL. It is perfect for
-PostgreSQL DBAs, newbies and hosting services. Features include:
+phpPgAdmin is a web-based administration tool for PostgreSQL. It is perfect
+for PostgreSQL DBAs, newbies and hosting services.
+
+Features include:
 - Administer multiple servers
 - Support for PostgreSQL 7.4.x, 8.0.x, 8.1.x, 8.2.x, 8.3.x, 8.4.x, 9.0.x
 - Manage all aspects of:
