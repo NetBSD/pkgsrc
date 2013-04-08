@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/02/16 11:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/08 16:51:59 drochner Exp $
 #
 
-DISTNAME=		shotwell-0.13.1
-PKGREVISION=		2
+DISTNAME=		shotwell-0.14.1
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.13/
+MASTER_SITES=		http://yorba.org/download/shotwell/0.14/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
@@ -23,6 +22,8 @@ MAKE_ENV+=		VALAC=${VALAC}
 
 REPLACE_SH+=		configure
 
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
