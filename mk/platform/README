@@ -1,9 +1,114 @@
-$NetBSD: README,v 1.1 2007/11/20 17:53:40 rillig Exp $
+$NetBSD: README,v 1.2 2013/04/08 13:29:26 obache Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
 
 TODO: Document all these variables.
+
+    CPP
+
+    ECHO_N is full command line of BSD `echo -n' compatible.
+
+    IMAKE_MAKE is make(1) program which gets invoked by imake(1).
+
+    IMAKEOPTS is additional arguments for imake(1)
+
+    PKGLOCALEDIR is the directory where locale data directory is put.
+
+    PS is fullpath to ps(1) command.
+
+    SU is fullpath to su(1) command.
+
+    TYPE is fullpath to type(1) command, or just `type' for shell builtin one.
+
+    USERADD is fullpath to useradd(8) command.
+
+    GROUPADD is fullpath to groupadd(8) command.
+
+    _PKG_USER_HOME is home directory for system accounts to match other system
+	accounts.
+
+    _USER_DEPENDS is dependency pattern which USERADD/GROUPADD to be available.
+
+    CPP_PRECOMP_FLAGS
+
+    DEF_UMASK
+
+    EXPORT_SYMBOLS_LDFLAGS is for adding symbols to the dynamic symbol table.
+
+    MOTIF_TYPE_DEFAULT is default motif-2.0 compatible libs type.
+
+    NOLOGIN is user's login shell to refuse a login.
+
+    PKG_TOOLS_BIN is fullpath to pkg_info(8) command.
+
+    ROOT_CMD is full command line prefix to invoke subsequent command will be
+	invoked with privileged user.
+
+    ROOT_USER is system privileged user name.
+
+    ROOT_GROUP is system privileged group name.
+
+    ULIMIT_CMD_datasize is command line to unlimit data segment size of a
+	process.
+
+    ULIMIT_CMD_stacksize is command line to unlimit stack size of a process.
+
+    ULIMIT_CMD_memorysize is command line to unlimit total physical memory
+	that can be in use by a process.
+
+    X11_TYPE is X11 implementation used to build X11 packages.
+
+	"native" means that platform native X11 is used.
+	"modular" means that modular X11 from pkgsrc is used.
+
+    _OPSYS_EMULDIR.${OPSYS} is sub directory in LOCALBASE where ${OPSYS}
+	emulation files is put.
+
+    _OPSYS_SYSTEM_RPATH is colon separated list of system rpath.
+
+    _OPSYS_HAS_INET6 is "yes" if IPv6 is standard, otherwise "no".
+
+    _OPSYS_HAS_JAVA is "yes" if Java is standard, otherwise "no".
+
+    _OPSYS_HAS_MANZ is "yes" if MANZ controles gzipping of man pages, or "no".
+
+    _OPSYS_HAS_OSSAUDIO is "yes" if libossadio is available
+
+    _OPSYS_PERL_REQD is base version of perl required, or empty if not required.
+
+    _OPSYS_PTHREAD_AUTO is "yes" if -lpthread is needed for pthreads, or "no".
+
+    _OPSYS_SHLIB_TYPE is platform shared lib type.
+
+    _PATCH_CAN_BACKUP is "yes if native patch(1) can make backups.
+
+    _PATCH_BACKUP_ARG is switch to patch(1) for backup suffix.
+
+    _USE_RPATH is "yes" to add rpath to LDFLAGS, otherwise "no"
+
+    _OPSYS_WHOLE_ARCHIVE_FLAG
+
+    _OPSYS_NO_WHOLE_ARCHIVE_FLAG
+
+    LINK_ALL_LIBGCC_HACK
+
+    _STRIPFLAG_CC is cc(1) option to strip.
+
+    _STRIPFLAG_INSTALL is install(1) option to strip.
+
+    DEFAULT_SERIAL_DEVICE is platform default serial device
+
+    SERIAL_DEVICES is list of supported serial devices
+
+    PKG_HAVE_KQUEUE is defined if kqueue(2) is supported.
+
+    _OPSYS_CAN_CHECK_SHLIBS is "yes" if "check-shlibs" in check/check-shlibs.mk
+	can be performed.
+
+    _OPSYS_MAX_CMDLEN_CMD is used to check maximum command line length and
+	set it in configure's environment, to avoid a test required by the
+	libtool script that takes forever.
 
 === Implementation notes ===
 
