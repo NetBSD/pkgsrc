@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2011/10/07 03:52:46 dholland Exp $
+$NetBSD: MESSAGE,v 1.2 2013/04/08 11:17:25 rodent Exp $
 
-You will need to make Phraseanet accessible through your HTTP server. 
+You will need to make Phraseanet accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
 
         Include ${PKG_SYSCONFDIR}/phrasea.conf

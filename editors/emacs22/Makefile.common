@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/02/24 01:25:30 dholland Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/04/08 11:17:12 rodent Exp $
 #
 # used by editors/emacs22/Makefile
 # used by editors/emacs22-nox11/Makefile
@@ -61,7 +61,7 @@ CPPFLAGS+=		-DDFLY_CRT_USRLIB
 
 # "emacs" uses the C pre-processor to generate makefiles. The C pre-processor
 # of newer GCC version is designed to break this by purpose. We work around
-# that using the traditional mode to generate makefiles. 
+# that using the traditional mode to generate makefiles.
 .if !empty(CC_VERSION:Mgcc-[4-9].*)
 CPP+=		-P
 CONFIGURE_ENV+=	CPP=${CPP:Q}

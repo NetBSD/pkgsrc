@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2013/02/16 11:18:50 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2013/04/08 11:17:24 rodent Exp $
 #
 
 DISTNAME=	epiphany-2.30.6
@@ -22,10 +22,10 @@ CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
 
 .include "../../mk/bsd.prefs.mk"
 
-# for backtrace                            
+# for backtrace
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=	-lexecinfo                              
-.endif                                    
+LIBS+=	-lexecinfo
+.endif
 
 PKGCONFIG_OVERRIDE=	data/epiphany.pc.in
 

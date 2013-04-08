@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 11:54:52 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/08 11:17:14 rodent Exp $
 
 DISTNAME=	urbanterror3
 PKGNAME=	quake3server-ut-3.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	games net
 DISTFILES=	urbanterror3.zip
 
-MASTER_SITES=	http://distfiles.aydogan.net/games/	
+MASTER_SITES=	http://distfiles.aydogan.net/games/
 
 MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Mod: Urban Terror 3 for Linux

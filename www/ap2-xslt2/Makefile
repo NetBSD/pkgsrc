@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/12/17 15:01:14 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/08 11:17:24 rodent Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-libxslt-hack
 CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs \
 			--with-xml2-config=${BUILDLINK_PREFIX.libxml2}/bin/xml2-config \
 			--with-apr-config=${BUILDLINK_PREFIX.apr}/bin/apr-config \
-			--with-apu-config=${BUILDLINK_PREFIX.apr}/bin/apu-config 
+			--with-apu-config=${BUILDLINK_PREFIX.apr}/bin/apu-config
 
 REPLACE_BASH=	utils/modxslt-config.pre.in
 

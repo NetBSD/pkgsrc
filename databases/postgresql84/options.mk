@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/03/14 13:22:06 fhajny Exp $
+# $NetBSD: options.mk,v 1.8 2013/04/08 11:17:11 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql84
 PKG_SUPPORTED_OPTIONS=	bonjour gssapi kerberos ldap pam xml dtrace
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=	--with-libxml
 .endif
 
 ###
-### Dtrace support 
+### Dtrace support
 ###
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--enable-dtrace

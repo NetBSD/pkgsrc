@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.96 2013/04/04 13:30:07 obache Exp $
+# $NetBSD: rubyversion.mk,v 1.97 2013/04/08 11:17:15 rodent Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -110,7 +110,7 @@
 #
 # RUBY_VERSION_FULL
 #	Version of Ruby including patchlevel.
-#	
+#
 # RUBY_BASE
 #	Name of ruby base package's name.
 #
@@ -176,7 +176,7 @@
 #
 # RUBY_GEM_BASE
 #	common GEM directory.
-#	
+#
 # GEM_HOME
 #	version specific GEM directory.
 #

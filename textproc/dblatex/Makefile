@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/11/03 20:33:04 gls Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/08 11:17:23 rodent Exp $
 #
 
 DISTNAME=	dblatex-0.3.2
@@ -31,7 +31,7 @@ SUBST_SED.man+=		-e "s,'python','${PYTHONBIN}',"
 
 do-test:
 	cd ${WRKSRC}/tests/mathml && gmake
-	
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

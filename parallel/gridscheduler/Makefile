@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/04/06 14:09:34 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/08 11:17:20 rodent Exp $
 
 PKGNAME=	gridscheduler-2011.11
 DISTNAME=	GE2011.11
@@ -117,7 +117,7 @@ post-patch:
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	source/dist/util/arch_variables
-SUBST_SED.paths=	-e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};' 
+SUBST_SED.paths=	-e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};'
 
 do-configure:
 .for __prog__ in qmake qtcsh

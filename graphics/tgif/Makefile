@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2012/10/06 14:11:22 asau Exp $
+# $NetBSD: Makefile,v 1.67 2013/04/08 11:17:14 rodent Exp $
 #
 
 DISTNAME=		tgif-4.2.5
@@ -30,7 +30,7 @@ post-patch::
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.endif 
+.endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

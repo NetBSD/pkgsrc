@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2012/02/28 15:03:39 hans Exp $
+# $NetBSD: builtin.mk,v 1.2 2013/04/08 11:17:13 rodent Exp $
 
 BUILTIN_PKG:=	fuse
 PKGCONFIG_BASE.fuse=	/usr
@@ -8,4 +8,3 @@ PKGCONFIG_FILE.fuse=	/usr/lib/pkgconfig/fuse.pc
 .if !empty(USE_BUILTIN.fuse:M[yY][eE][sS])
 BUILDLINK_FILES.fuse+=	lib/pkgconfig/fuse.pc
 .endif
-

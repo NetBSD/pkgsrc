@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:56:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/08 11:17:17 rodent Exp $
 #
 
 DISTNAME=	Math-Random-MT-Perl-1.06
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Math-Random-MT-Perl/
-COMMENT=	Pure Perl Mersenne Twister Random Number Generator 
+COMMENT=	Pure Perl Mersenne Twister Random Number Generator
 LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	# empty

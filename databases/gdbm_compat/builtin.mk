@@ -1,7 +1,7 @@
-# $NetBSD: builtin.mk,v 1.2 2012/01/01 04:22:03 sbd Exp $
+# $NetBSD: builtin.mk,v 1.3 2013/04/08 11:17:10 rodent Exp $
 
 BUILTIN_PKG:=			gdbm_compat
-BUILTIN_FIND_FILES_VAR=		NDBM_H 
+BUILTIN_FIND_FILES_VAR=		NDBM_H
 BUILTIN_FIND_FILES.NDBM_H=	/usr/include/ndbm.h
 BUILTIN_FIND_GREP.NDBM_H=	This file is part of GDBM
 
@@ -20,7 +20,7 @@ IS_BUILTIN.gdbm_compat=	yes
 MAKEVARS+=	IS_BUILTIN.gdbm_compat
 
 ##
-## Include databases/gdbm/builtin.mk so that BUILTIN_PKG.gdbm and 
+## Include databases/gdbm/builtin.mk so that BUILTIN_PKG.gdbm and
 ## USE_BUILTIN.gdbm are set.
 .if !defined(BUILTIN_PKG.gdbm) || !defined(USE_BUILTIN.gdbm)
 .  include "../../databases/gdbm/builtin.mk"

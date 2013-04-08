@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2012/10/04 07:05:54 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2013/04/08 11:17:11 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gps
-PKG_SUPPORTED_OPTIONS=	syslog python sqlite 
+PKG_SUPPORTED_OPTIONS=	syslog python sqlite
 PKG_SUGGESTED_OPTIONS=	syslog sqlite
 
 PLIST_VARS+=	pysupport
@@ -63,4 +63,3 @@ PLIST.pysupport= yes
 CONFIGURE_ARGS+= --without-python
 CONFIGURE_ARGS+= --disable-pygtk
 .endif
-
