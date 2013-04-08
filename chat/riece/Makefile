@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/04/08 07:13:07 mef Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/08 07:37:46 mef Exp $
 #
 
 DISTNAME=	riece-9.0.0
@@ -7,7 +7,7 @@ CATEGORIES=	chat japanese
 MASTER_SITES=	http://download.savannah.gnu.org/releases/riece/
 LICENSE=	gnu-gpl-v3
 
-MAINTAINER=	uebayasi@NetBSD.org
+MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://www.nongnu.org/riece/
 COMMENT=	IRC client for Emacs
 
