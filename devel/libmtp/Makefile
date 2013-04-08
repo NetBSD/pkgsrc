@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:18 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/08 09:52:01 markd Exp $
 #
 
-DISTNAME=		libmtp-1.1.3
+DISTNAME=		libmtp-1.1.6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmtp/}
 
