@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/04/08 07:13:07 mef Exp $
+Add the following line to your Emacs startup file such as ~/.emacs.
+
+  (autoload 'riece "riece" "Start Riece" t)
+
+If you are using XEmacs and want to install as a package, supply
+"--with-xemacs" option to the configure script and use
+"install-package" target instead of "install".
+
+* Manuals
+
+Info manuals are available after installation.  To read, start Emacs
+and type M-x info and select "Riece-en". Thank you.
+===========================================================================
