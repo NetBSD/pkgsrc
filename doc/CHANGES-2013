@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1193 2013/04/08 09:56:35 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1194 2013/04/08 14:34:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1890,3 +1890,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/binutils to 2.23.2 [mef 2013-04-08]
 	Updated chat/riece to 9.0.0 [mef 2013-04-08]
 	Updated devel/libmtp to 1.1.6 [markd 2013-04-08]
+	Updated devel/scmgit to 1.8.2 [mef 2013-04-08]
