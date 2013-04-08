@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2012/04/11 11:34:59 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2013/04/08 16:48:22 drochner Exp $
 
---- Makefile.orig	2012-03-28 22:41:52.000000000 +0000
+--- Makefile.orig	2013-03-19 21:41:56.000000000 +0000
 +++ Makefile
-@@ -162,7 +162,7 @@ $(VAPI_FILE): $(EXPANDED_VAPI_INPUT) $(D
+@@ -229,7 +229,7 @@ $(VAPI_FILE): $(EXPANDED_VAPI_INPUT) $(D
  	vapigen --library=$(PKGNAME) --metadatadir=vapi vapi/$(PKGNAME).gi
  
  $(PC_FILE): $(PC_INPUT) Makefile $(CONFIG_IN)
 -	m4 '--define=_VERSION_=$(VERSION)' '--define=_PREFIX_=$(PREFIX)' $< > $@
 +	m4 '-D_VERSION_=$(VERSION)' '-D_PREFIX_=$(PREFIX)' $< > $@
  
- $(EXPANDED_OBJ_FILES): $(BUILD_DIR)/%.o: gexiv2/%.cpp $(EXPANDED_HEADER_FILES) $(CONFIG_IN) Makefile
+ $(EXPANDED_LO_FILES): $(BUILD_DIR)/%.lo: gexiv2/%.cpp $(EXPANDED_HEADER_FILES) $(CONFIG_IN) Makefile
  	@pkg-config --print-errors --exists '$(EXT_PKG_VERSIONS)'
