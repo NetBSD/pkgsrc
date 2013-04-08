@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2009/08/25 13:19:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/04/08 11:29:46 obache Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -32,6 +32,10 @@ _GUIDE_DEPENDS+=	openjade>=1.3.2:../../textproc/openjade
 _GUIDE_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 _GUIDE_DEPENDS+=	tex-jadetex>=3.13:../../print/tex-jadetex
 GHOSTSCRIPT_REQD=	7.05
+# XXX: workaround for renaming of ghostscript package.
+REQPKGS_PRINT=		tex-jadetex>=3.13 ${TOOLS_DEPENDS.ghostscript}
+MAKE_ENV+=		REQPKGS_PRINT=${REQPKGS_PRINT:Q}
+# XXX: end
 .  if ${_GUIDE_DEPTYPE} == "run"
 USE_TOOLS+=		gs:run
 .  else
