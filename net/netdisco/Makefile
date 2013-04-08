@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/23 17:18:41 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/08 11:17:18 rodent Exp $
 #
 
 DISTNAME=		netdisco-1.1_with_mibs
@@ -143,7 +143,7 @@ do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
 	cd ${WRKSRC:Q} && pax -rw -pp . ${DESTDIR}${PREFIX:Q}/netdisco
 	mkdir ${DESTDIR}${EGDIR}
-	
+
 	set -e; \
 	for i in netdisco.conf netdisco-topology.txt netdisco.crontab \
 	    netdisco_apache.conf netdisco_apache_dir.conf; do \

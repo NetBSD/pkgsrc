@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/02/10 05:55:07 manu Exp $
+$NetBSD: MESSAGE,v 1.3 2013/04/08 11:17:18 rodent Exp $
 
 The openvpn rc.d script looks for configuration files in:
 
@@ -16,7 +16,7 @@ Please refer to the openvpn(8) manpage for full documentation on the
 available options.
 
 If you are upgrading from version 2.2.x, note that the plugin directory
-has changed to ${OPENVPN_PLUGINSDIR}. You may need to adjust your 
+has changed to ${OPENVPN_PLUGINSDIR}. You may need to adjust your
 configuration files.
 
 ===========================================================================
