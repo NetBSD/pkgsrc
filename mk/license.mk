@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.55 2013/03/14 16:19:30 wiz Exp $
+# $NetBSD: license.mk,v 1.56 2013/04/08 02:24:14 rodent Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -101,8 +101,6 @@
 # The convention is that Free or Open Source licenses do not have a
 # -license suffix, and nonfree licenses end in -license.
 
-# XXX open-font-license should perhaps be changed to open-font
-
 DEFAULT_ACCEPTABLE_LICENSES= \
 	apache-1.1 apache-2.0 \
 	artistic artistic-2.0 \
@@ -124,7 +122,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	mit \
 	mpl-1.0 mpl-1.1 mpl-2.0 \
 	mplusfont \
-	open-font-license \
+	ofl-v1.0 ofl-v1.1 \
 	original-bsd modified-bsd 2-clause-bsd \
 	php \
 	png-license \
