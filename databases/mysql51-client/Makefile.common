@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2013/01/21 08:58:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.28 2013/04/08 11:17:10 rodent Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -112,7 +112,7 @@ USE_TOOLS+=		autoconf bash autoheader gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 # reset the platform diff on SunOS unless it's a GNU diff
-# which is required by the MySQL build 
+# which is required by the MySQL build
 .if ${OPSYS} == "SunOS" && empty(TOOLS_PLATFORM.diff:Mgdiff)
 TOOLS_PLATFORM.diff=	# empty
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/02/16 11:24:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/08 11:17:25 rodent Exp $
 
 .include "../../devel/xulrunner192/dist.mk"
 PKGNAME=	firefox36-${FIREFOX_VER}
@@ -19,12 +19,12 @@ CONFIGURE_ARGS+=	--with-system-libxul
 ALL_ENV+=		MOZILLA_PKG_NAME=firefox36
 
 SUBST_CLASSES+=			fix-paths2
-SUBST_STAGE.fix-paths2=		pre-configure 
-SUBST_MESSAGE.fix-paths2=	Fixing absolute paths. 
-SUBST_FILES.fix-paths2=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h 
-SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp 
-SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/installer/Makefile.in 
-SUBST_SED.fix-paths2=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g' 
+SUBST_STAGE.fix-paths2=		pre-configure
+SUBST_MESSAGE.fix-paths2=	Fixing absolute paths.
+SUBST_FILES.fix-paths2=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h
+SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp
+SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/installer/Makefile.in
+SUBST_SED.fix-paths2=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g'
 
 .include "../../devel/xulrunner192/mozilla-common.mk"
 CONFIGURE_ARGS+=		--enable-chrome-format=jar

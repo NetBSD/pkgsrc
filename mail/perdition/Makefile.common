@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.8 2011/04/20 11:53:33 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2013/04/08 11:17:16 rodent Exp $
 #
-# used by mail/perdition-bdb/Makefile 
-# used by mail/perdition-gdbm/Makefile 
-# used by mail/perdition-ldap/Makefile 
-# used by mail/perdition-mysql/Makefile 
-# used by mail/perdition-odbc/Makefile 
-# used by mail/perdition-postgresql/Makefile 
-# used by mail/perdition/Makefile 
+# used by mail/perdition-bdb/Makefile
+# used by mail/perdition-gdbm/Makefile
+# used by mail/perdition-ldap/Makefile
+# used by mail/perdition-mysql/Makefile
+# used by mail/perdition-odbc/Makefile
+# used by mail/perdition-postgresql/Makefile
+# used by mail/perdition/Makefile
 
 DISTNAME=	perdition-${PERDITION_VERSION}
 CATEGORIES=	mail

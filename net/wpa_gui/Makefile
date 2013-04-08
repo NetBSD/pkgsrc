@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/03/24 14:33:14 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/08 11:17:20 rodent Exp $
 
 DISTNAME=	wpa_supplicant-2.0
 PKGNAME=	${DISTNAME:S/supplicant/gui/}
@@ -15,7 +15,7 @@ BUILD_DIRS=	wpa_supplicant
 BUILD_TARGET=	wpa_gui-qt4
 USE_TOOLS+=	gmake
 
-LRELEASE=	${QTDIR}/bin/lrelease 
+LRELEASE=	${QTDIR}/bin/lrelease
 MAKE_ENV+=	LRELEASE=${LRELEASE}
 
 INSTALLATION_DIRS=	sbin

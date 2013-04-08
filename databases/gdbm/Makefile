@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/10/02 21:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.49 2013/04/08 11:17:10 rodent Exp $
 
 .include "Makefile.common"
 
@@ -14,4 +14,3 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

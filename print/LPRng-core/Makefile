@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/10/08 13:45:34 asau Exp $
+# $NetBSD: Makefile,v 1.39 2013/04/08 11:17:20 rodent Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -53,7 +53,7 @@ SPECIAL_PERMS+=		bin/lpq ${SETUID_ROOT_PERMS} \
 			bin/lpr ${SETUID_ROOT_PERMS} \
 			bin/lprm ${SETUID_ROOT_PERMS} \
 			bin/lpstat ${SETUID_ROOT_PERMS} \
-			sbin/lpc ${SETUID_ROOT_PERMS} \
+			sbin/lpc ${SETUID_ROOT_PERMS}
 
 .include "../../mk/compiler.mk"
 

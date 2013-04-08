@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/14 11:16:48 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/08 11:17:13 rodent Exp $
 
 DISTNAME=	suse_gtk2-${SUSE_VERSION}
 PKGREVISION=	4
@@ -25,7 +25,7 @@ RPMUPDPKGS+=	libgtk-2_0-0-2.24.7-2.5.1.${SUSE_ARCH}
 RPMUPDPKGS+=	libjasper1-1.900.1-149.3.1.${SUSE_ARCH}
 RPMPKGS+=	libjson0-0.9-5.1.2.${SUSE_ARCH}
 RPMPKGS+=	libpulse0-1.1-1.2.${SUSE_ARCH}
-RPMPKGS+=	orbit2-2.14.19-5.1.3.${SUSE_ARCH} 
+RPMPKGS+=	orbit2-2.14.19-5.1.3.${SUSE_ARCH}
 RPMPKGS+=	shared-mime-info-0.91-3.1.2.${SUSE_ARCH}
 RPMPKGS+=	libpango-1_0-0-1.29.4-2.1.3.${SUSE_ARCH}
 

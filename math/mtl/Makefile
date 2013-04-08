@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/13 18:13:50 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/08 11:17:16 rodent Exp $
 
 DISTNAME=		mtl-2.1.2-22
 PKGNAME=		mtl-2.1.2.22
@@ -26,6 +26,6 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/doc/mtl
 
 do-test:
-	cd $(WRKSRC)/test && $(PERL5) ./bin/make_and_test.pl $(QUICK) -d ./src 
+	cd $(WRKSRC)/test && $(PERL5) ./bin/make_and_test.pl $(QUICK) -d ./src
 
 .include "../../mk/bsd.pkg.mk"

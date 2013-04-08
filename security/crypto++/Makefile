@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 18:16:22 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/08 11:17:20 rodent Exp $
 #
 
 DISTNAME=		cryptopp552
 PKGNAME=		cryptopp-5.5.2
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptopp/} 
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptopp/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

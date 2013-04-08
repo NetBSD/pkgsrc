@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 15:46:35 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/08 11:17:11 rodent Exp $
 
 PKGNAME=	${DISTNAME:C/-iscsi/-iscsi-lib/}
 CATEGORIES=	devel
@@ -11,5 +11,5 @@ USE_LIBTOOL=	yes
 
 post-install:
 	${INSTALL_DATA}	${WRKSRC}/include/iscsi.h ${DESTDIR}${PREFIX}/include
-	
+
 .include "../../mk/bsd.pkg.mk"

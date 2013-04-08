@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/02/06 23:20:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/08 11:17:21 rodent Exp $
 #
 
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
-# 
+#
 VER=			0.5.4
 DISTNAME=		libssh-${VER}
 PKGNAME=		libssh-0.54

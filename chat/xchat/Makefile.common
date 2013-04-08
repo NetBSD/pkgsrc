@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2012/10/03 00:02:46 asau Exp $
+# $NetBSD: Makefile.common,v 1.64 2013/04/08 11:17:09 rodent Exp $
 #
 # used by chat/xchat/Makefile
 # used by chat/xchat-perl/Makefile
@@ -10,7 +10,7 @@ MASTER_SITES=	http://xchat.org/files/source/2.8/
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	http://xchat.org/
-LICENSE=	gnu-gpl-v2 
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../chat/xchat/distinfo
 PATCHDIR?=	${.CURDIR}/../../chat/xchat/patches

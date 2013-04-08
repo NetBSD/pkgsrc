@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2012/03/15 10:05:01 ryoon Exp $
+$NetBSD: MESSAGE,v 1.4 2013/04/08 11:17:26 rodent Exp $
 
 To change the language in Seamonkey
 1) Enable language packs in Tools->Add-ons->Languages
 2) Navigate to about:config
-3) Edit the general.useragent.locale property. 
+3) Edit the general.useragent.locale property.
 
 Alternatively you can install the "Quick Locale Switcher" addon from:
 http://addons.mozilla.org/en-US/firefox/addon/1333 .

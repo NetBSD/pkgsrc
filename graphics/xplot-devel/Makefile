@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/06 14:11:26 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/08 11:17:14 rodent Exp $
 
 DISTNAME=	xplot-0.90.8
 PKGREVISION=	4
@@ -20,7 +20,7 @@ DOCFILES=	ANNOUNCE README README.tcp_plots \
 
 INSTALLATION_DIRS+=	share/doc/xplot
 INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 post-install:
 .for file in ${DOCFILES}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/01/11 00:06:53 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/08 11:17:22 rodent Exp $
 #
 
 DISTNAME=	whowatch-1.4
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	YES
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}	
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 CFLAGS.NetBSD+=	-D_KMEMUSER
 

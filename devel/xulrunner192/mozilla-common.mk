@@ -1,7 +1,7 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2012/12/15 01:09:40 marino Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2013/04/08 11:17:12 rodent Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
-# 
+#
 # used by devel/xulrunner192/Makefile
 # used by www/firefox36/Makefile
 

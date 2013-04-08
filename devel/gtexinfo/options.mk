@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2011/11/26 23:56:45 hans Exp $
+# $NetBSD: options.mk,v 1.2 2013/04/08 11:17:11 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtexinfo
 PKG_SUPPORTED_OPTIONS=	nls
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=	# blank
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
 .endif

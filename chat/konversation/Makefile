@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2013/02/16 11:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2013/04/08 11:17:09 rodent Exp $
 #
 
 DISTNAME=	konversation-1.4
@@ -21,7 +21,7 @@ REPLACE_BASH+=		data/scripts/*
 REPLACE_PERL+=		data/updaters/konversation-*.pl
 REPLACE_PERL+=		data/scripts/*
 REPLACE_PYTHON+=	data/scripts/*
-REPLACE_PYTHON+=	data/scripting_support/python/konversation/dbus.py 
+REPLACE_PYTHON+=	data/scripting_support/python/konversation/dbus.py
 
 USE_TOOLS+=		bash:run
 
