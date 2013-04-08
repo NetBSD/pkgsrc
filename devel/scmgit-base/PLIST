@@ -1,12 +1,33 @@
-@comment $NetBSD: PLIST,v 1.39 2013/01/04 08:22:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2013/04/08 14:12:25 mef Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
 bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
+${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 ${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
-lib/perl5/vendor_perl/${PKGMANDIR}/man3/Git.3
+${PERL5_SUB_INSTALLVENDORLIB}/Git/I18N.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/IndexInfo.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Editor.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Fetcher.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/GlobSpec.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Log.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Memoize/YAML.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Migration.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Prompt.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Ra.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Utils.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Git/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::I18N.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::SVN::Editor.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::SVN::Fetcher.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::SVN::Memoize::YAML.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::SVN::Prompt.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::SVN::Ra.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Git::SVN::Utils.3
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.py
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/__init__.pyc
 ${PLIST.python}${PYSITELIB}/git_remote_helpers/git/__init__.py
@@ -38,6 +59,7 @@ libexec/git-core/git-branch
 libexec/git-core/git-bundle
 libexec/git-core/git-cat-file
 libexec/git-core/git-check-attr
+libexec/git-core/git-check-ignore
 libexec/git-core/git-check-ref-format
 libexec/git-core/git-checkout
 libexec/git-core/git-checkout-index
@@ -140,7 +162,7 @@ libexec/git-core/git-remote-ftp
 libexec/git-core/git-remote-ftps
 libexec/git-core/git-remote-http
 libexec/git-core/git-remote-https
-libexec/git-core/git-remote-testgit
+libexec/git-core/git-remote-testpy
 libexec/git-core/git-remote-testsvn
 libexec/git-core/git-repack
 libexec/git-core/git-replace
@@ -188,11 +210,12 @@ libexec/git-core/git-write-tree
 libexec/git-core/mergetools/araxis
 libexec/git-core/mergetools/bc3
 libexec/git-core/mergetools/codecompare
-libexec/git-core/mergetools/defaults
 libexec/git-core/mergetools/deltawalker
 libexec/git-core/mergetools/diffuse
 libexec/git-core/mergetools/ecmerge
 libexec/git-core/mergetools/emerge
+libexec/git-core/mergetools/gvimdiff
+libexec/git-core/mergetools/gvimdiff2
 libexec/git-core/mergetools/kdiff3
 libexec/git-core/mergetools/kompare
 libexec/git-core/mergetools/meld
@@ -200,7 +223,8 @@ libexec/git-core/mergetools/opendiff
 libexec/git-core/mergetools/p4merge
 libexec/git-core/mergetools/tkdiff
 libexec/git-core/mergetools/tortoisemerge
-libexec/git-core/mergetools/vim
+libexec/git-core/mergetools/vimdiff
+libexec/git-core/mergetools/vimdiff2
 libexec/git-core/mergetools/xxdiff
 share/examples/scmgit/git-completion.bash
 share/examples/scmgit/templates/description
@@ -209,11 +233,11 @@ share/examples/scmgit/templates/hooks/commit-msg.sample
 share/examples/scmgit/templates/hooks/post-update.sample
 share/examples/scmgit/templates/hooks/pre-applypatch.sample
 share/examples/scmgit/templates/hooks/pre-commit.sample
+share/examples/scmgit/templates/hooks/pre-push.sample
 share/examples/scmgit/templates/hooks/pre-rebase.sample
 share/examples/scmgit/templates/hooks/prepare-commit-msg.sample
 share/examples/scmgit/templates/hooks/update.sample
 share/examples/scmgit/templates/info/exclude
-@pkgdir share/examples/scmgit/templates/branches
 share/locale/da/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
@@ -223,3 +247,4 @@ share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
 share/locale/vi/LC_MESSAGES/git.mo
 share/locale/zh_CN/LC_MESSAGES/git.mo
+@pkgdir share/examples/scmgit/templates/branches
