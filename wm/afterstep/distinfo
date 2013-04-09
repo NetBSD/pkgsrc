@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/04/07 10:36:53 cheusov Exp $
+$NetBSD: distinfo,v 1.17 2013/04/09 09:44:01 cheusov Exp $
 
 SHA1 (AfterStep-2.2.11.tar.bz2) = ecfd815b659046281530441af0bc4fc42900d0da
 RMD160 (AfterStep-2.2.11.tar.bz2) = a82a4b3fddcbcd97862212669c11d14629e51a4d
 Size (AfterStep-2.2.11.tar.bz2) = 6126237 bytes
-SHA1 (patch-Makefile.in) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-aa) = c903ca64b609e4270ead1f1e03cb6ea962b294f8
 SHA1 (patch-afterstep_desktop_desklets_desklet.display) = 8aa9d8e11514086849f1815c838c64c5d538efbf
 SHA1 (patch-configure) = 081192b46d025d9da4c5bc1bbb1e65717a8ed655
