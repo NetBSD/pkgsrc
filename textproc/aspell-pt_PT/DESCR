@@ -1,0 +1,3 @@
+Portuguese language support for aspell,
+e.g. `aspell -d portuguese -c $myfile'.
+Other sub-dictionary available in this package: brazilian.
