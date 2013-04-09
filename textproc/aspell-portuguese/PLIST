@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/21 10:09:11 marino Exp $
-lib/aspell/pt_PT.rws
-lib/aspell/pt_PT.multi
-share/aspell/pt_PT.dat
-share/aspell/pt_PT_affix.dat
-share/aspell/pt_PT_repl.dat
