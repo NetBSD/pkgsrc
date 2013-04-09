@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12057 2013/04/08 22:11:25 prlw1 Exp $
+$NetBSD: TODO,v 1.12058 2013/04/09 06:17:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1033,6 +1033,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.7.1
 	o qt5-libs-5.0.1
+	o quagga-0.99.22
 	o quilt-0.60
 	o radiance-3.7.2
 	o raine-0.51.15
