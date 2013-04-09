@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/21 09:52:55 marino Exp $
-lib/aspell/ro-classic-only.rws
-lib/aspell/ro-classic.multi
-lib/aspell/ro-common.rws
-lib/aspell/ro-only.rws
-lib/aspell/ro.multi
-lib/aspell/romanian-classic.alias
-lib/aspell/romanian.alias
-share/aspell/ro.dat
