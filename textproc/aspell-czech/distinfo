@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/05/25 13:42:18 wiz Exp $
-
-SHA1 (aspell6-cs-20040614-1.tar.bz2) = 83756c070c1444f06c779a350d0bdad1d31e2b98
-RMD160 (aspell6-cs-20040614-1.tar.bz2) = a1d285ef6438fa164f837c7d07aea7ca35365035
-Size (aspell6-cs-20040614-1.tar.bz2) = 451507 bytes
-SHA1 (patch-aa) = e22211d1b77a79d16e2334630dc171245bb15677
