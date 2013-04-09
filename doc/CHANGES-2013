@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1203 2013/04/09 16:00:54 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1204 2013/04/09 19:07:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1906,3 +1906,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 3.94 [wen 2013-04-09]
 	Updated devel/netcdf to 4.2.1.1 [adam 2013-04-09]
 	Updated geography/gdal-lib to 1.9.2 [adam 2013-04-09]
+	Updated devel/xulrunner17 to 17.0.5 [ryoon 2013-04-09]
+	Updated www/firefox17 to 17.0.5 [ryoon 2013-04-09]
