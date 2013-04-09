@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/21 09:52:11 marino Exp $
-lib/aspell/castellano.alias
-lib/aspell/es.multi
-lib/aspell/es.rws
-lib/aspell/espanol.alias
-lib/aspell/spanish.alias
-share/aspell/es.dat
-share/aspell/es_affix.dat

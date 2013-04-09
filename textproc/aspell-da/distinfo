@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/09 02:33:38 rodent Exp $
+
+SHA1 (aspell-da-1.7.30.tar.bz2) = 7b629f8a87840571ef29bbf312210f8a0e6bcbe2
+RMD160 (aspell-da-1.7.30.tar.bz2) = 278335a74a65d0b18d4e7e57400f4afa7552257c
+Size (aspell-da-1.7.30.tar.bz2) = 229478 bytes
+SHA1 (patch-aa) = 93f01850310b6b39ca31b607bcd2525125277eb7
