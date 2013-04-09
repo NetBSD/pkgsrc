@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.4 2013/04/06 18:11:02 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.5 2013/04/09 10:39:10 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -13,3 +13,19 @@ Pullup ticket #4110 - requested by obache
 www/opera: security update
 Pullup ticket #4111 - requested by sborrill
 net/netatalk: build fix
+Pullup ticket #4112 - requested by fhajny
+databases/postgresql84: security update
+databases/postgresql84-client: security update
+databases/postgresql84-server: security update
+databases/postgresql90: security update
+databases/postgresql90-client: security update
+databases/postgresql90-docs: security update
+databases/postgresql90-server: security update
+databases/postgresql91: security update
+databases/postgresql91-client: security update
+databases/postgresql91-docs: security update
+databases/postgresql91-server: security update
+databases/postgresql92: security update
+databases/postgresql92-client: security update
+databases/postgresql92-docs: security update
+databases/postgresql92-server: security update
