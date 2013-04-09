@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/02/09 11:19:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2013/04/09 10:33:31 tron Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -342,6 +342,7 @@ share/postgresql/timezone/Asia/Karachi
 share/postgresql/timezone/Asia/Kashgar
 share/postgresql/timezone/Asia/Kathmandu
 share/postgresql/timezone/Asia/Katmandu
+share/postgresql/timezone/Asia/Khandyga
 share/postgresql/timezone/Asia/Kolkata
 share/postgresql/timezone/Asia/Krasnoyarsk
 share/postgresql/timezone/Asia/Kuala_Lumpur
@@ -386,6 +387,7 @@ share/postgresql/timezone/Asia/Ujung_Pandang
 share/postgresql/timezone/Asia/Ulaanbaatar
 share/postgresql/timezone/Asia/Ulan_Bator
 share/postgresql/timezone/Asia/Urumqi
+share/postgresql/timezone/Asia/Ust-Nera
 share/postgresql/timezone/Asia/Vientiane
 share/postgresql/timezone/Asia/Vladivostok
 share/postgresql/timezone/Asia/Yakutsk
@@ -494,6 +496,7 @@ share/postgresql/timezone/Europe/Bratislava
 share/postgresql/timezone/Europe/Brussels
 share/postgresql/timezone/Europe/Bucharest
 share/postgresql/timezone/Europe/Budapest
+share/postgresql/timezone/Europe/Busingen
 share/postgresql/timezone/Europe/Chisinau
 share/postgresql/timezone/Europe/Copenhagen
 share/postgresql/timezone/Europe/Dublin

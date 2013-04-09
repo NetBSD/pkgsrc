@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/02/09 11:19:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2013/04/09 10:33:32 tron Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -685,6 +685,7 @@ share/locale/ru/LC_MESSAGES/pgscripts-9.2.mo
 share/locale/ru/LC_MESSAGES/psql-9.2.mo
 share/locale/sv/LC_MESSAGES/initdb-9.2.mo
 share/locale/sv/LC_MESSAGES/pg_config-9.2.mo
+share/locale/sv/LC_MESSAGES/pg_ctl-9.2.mo
 share/locale/sv/LC_MESSAGES/pgscripts-9.2.mo
 share/locale/ta/LC_MESSAGES/pg_config-9.2.mo
 share/locale/tr/LC_MESSAGES/ecpg-9.2.mo
