@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/03/27 10:16:10 sbd Exp $
+$NetBSD: distinfo,v 1.7 2013/04/09 19:07:03 ryoon Exp $
 
-SHA1 (firefox-17.0.4esr.source.tar.bz2) = c9440000ee3e674e4fc31ddcf6787b6cb8f55419
-RMD160 (firefox-17.0.4esr.source.tar.bz2) = a6abb741eb543099b162578977664a60d9ed5c25
-Size (firefox-17.0.4esr.source.tar.bz2) = 90791964 bytes
+SHA1 (firefox-17.0.5esr.source.tar.bz2) = 8e82f4b6c25b94d0630fcf2e7adffc32b3a922b1
+RMD160 (firefox-17.0.5esr.source.tar.bz2) = 800dad30676b1b17d77a808f1149e26ac65dbc82
+Size (firefox-17.0.5esr.source.tar.bz2) = 91105421 bytes
 SHA1 (patch-aa) = 31801b051004b2bf74ea9cc060d01def3becc1e3
 SHA1 (patch-ab) = b0d7975a291c63e07773e13b023f71e88c883128
 SHA1 (patch-ac) = 18640ddf00b7da9276fd67d95bd6f1b191a99d4f
@@ -10,7 +10,6 @@ SHA1 (patch-ad) = cf84430cb1d9c22caf6beaa89288f90577ae6352
 SHA1 (patch-ae) = 2d1ffba3f41564d672d05968ff09b188c904fd73
 SHA1 (patch-af) = 3dc276155f456a66ce0db9d1a0427d8f11cb74aa
 SHA1 (patch-ag) = c236c83c7b6a64c19c01010d19cad0120250047c
-SHA1 (patch-ai) = ec2a8bce48ec8a27066667d367cf1bac4874462b
 SHA1 (patch-aj) = 25008e1761306f90a31b4e2bff4dc52b2d8167de
 SHA1 (patch-ak) = 7cebf3e58ad14598fbe98c3d730c8a548c0bda1e
 SHA1 (patch-al) = 140f77112c463df90fe0dcd4173c5d6945395d4f
@@ -32,7 +31,7 @@ SHA1 (patch-bg) = a629ee2d31aefb366ed50a1e7bd5dba51a39dc68
 SHA1 (patch-bi) = 6ae67da19d32bc3e7fc09a32c50c4635f28fe1e6
 SHA1 (patch-build_autoconf_nss.m4) = b4da991ed606fcadcb6582b4c7213e1c83ee811f
 SHA1 (patch-config_baseconfig.mk) = 8fc7a064bda66c91488e27e7d49e615e49540c7d
-SHA1 (patch-config_system-headers) = d7d4b5ba0677cbb92dc2ca70cd387b7d88b79f63
+SHA1 (patch-config_system-headers) = 02c71493cdbed0b966fe674c736916aa666ea4f0
 SHA1 (patch-content_media_nsAudioStream.cpp) = 75c9fc45d464ee332271142c3e29b826b6254d49
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 66d023227b46582d30961cfac15506b9f29c23de
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = cba2ea71973b3717b29052e131eb278cec972ebd
@@ -65,7 +64,7 @@ SHA1 (patch-ipc_chromium_src_chrome_common_ipc__message__utils.h) = 84a078bdf4e8
 SHA1 (patch-ipc_chromium_src_chrome_common_transport__dib.h) = 15146bd327bb51b8de0783ff28b70201e3bfa532
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = be69744c199bae64c41455ff31efe2498b859414
 SHA1 (patch-ipc_glue_SharedMemorySysV.h) = c82d7fd5f1a099da175107401c725cfd5ea81845
-SHA1 (patch-js_src_config_system-headers) = 86f1aa66f8a35d6967c2cd03d05b6dd57209a690
+SHA1 (patch-js_src_config_system-headers) = a9c5bc2d2c822eb3bd5e8f4ba43407f89b57c009
 SHA1 (patch-js_src_jscpucfg.h) = afce65ca5964fb732d96cf22902f89cd02aedf0d
 SHA1 (patch-js_src_jsgc.cpp) = 0e617094a4b7d87cdf801d9bc4ac1f52d909a12a
 SHA1 (patch-js_src_jsinterp.cpp) = bee8bdde7dd951dbfbe5b049eb502f7412fbf8e6
@@ -76,7 +75,7 @@ SHA1 (patch-me) = 93d5ef914cb00389cd5c2d92d228f47ec2436cb3
 SHA1 (patch-media_libcubeb_src_Makefile.in) = a5026b121bca81043340104d331b6343953d5dc8
 SHA1 (patch-media_libsydneyaudio_src_Makefile.in) = 7e55e41cdbcd193f57beb417e4b5c3511e8ddae0
 SHA1 (patch-media_libsydneyaudio_src_sydney_audio_pulseaudio.c) = 75b828c074ccc71ff430795e2b044bebd8ff69eb
-SHA1 (patch-mf) = c871b1164d046ea94413ef743f84be67e739f595
+SHA1 (patch-mf) = 6d314e67e9ad99c43faf0aea53dd67a77802ba8a
 SHA1 (patch-mg) = 22dde266ee9d46d8de574103d1cc7035092e1b0a
 SHA1 (patch-mh) = 8c56d7467e90944be186300386b6a5106e087ac7
 SHA1 (patch-mi) = 56bf4b5900eef022e9959e9287dadd479a725ed6
