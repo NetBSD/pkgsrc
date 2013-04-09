@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1201 2013/04/09 14:26:38 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1202 2013/04/09 15:21:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1903,3 +1903,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey-l10n to 2.17 [ryoon 2013-04-09]
 	Updated devel/hdf5 to 1.8.10.1 [adam 2013-04-09]
 	Updated devel/hdf5-c++ to 1.8.10.1 [adam 2013-04-09]
+	Updated www/p5-Mojolicious to 3.94 [wen 2013-04-09]
