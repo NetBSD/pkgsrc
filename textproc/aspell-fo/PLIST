@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:42 rodent Exp $
+lib/aspell/faroese
+lib/aspell/fo_FO
+lib/aspell/føroyskt
+share/aspell/faroese.dat
+share/aspell/faroese_phonet.dat
+share/aspell/fo_FO.dat
+share/aspell/fo_FO_phonet.dat
+share/aspell/føroyskt.dat
+share/aspell/føroyskt_phonet.dat

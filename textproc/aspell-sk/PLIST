@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:48 rodent Exp $
+lib/aspell/sk-extend.rws
+lib/aspell/sk-extended.multi
+lib/aspell/sk.multi
+lib/aspell/sk.rws
+lib/aspell/sk_SK-extended.alias
+lib/aspell/sk_SK.alias
+lib/aspell/slovak-extended.alias
+lib/aspell/slovak.alias
+share/aspell/sk.dat

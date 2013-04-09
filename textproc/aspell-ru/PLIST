@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:47 rodent Exp $
+lib/aspell/ru-ye.multi
+lib/aspell/ru-ye.rws
+lib/aspell/ru-yeyo.multi
+lib/aspell/ru-yo.multi
+lib/aspell/ru-yo.rws
+lib/aspell/ru.multi
+share/aspell/ru.dat
+share/aspell/ru_affix.dat

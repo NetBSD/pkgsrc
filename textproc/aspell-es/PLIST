@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/09 02:33:41 rodent Exp $
+lib/aspell/castellano.alias
+lib/aspell/es.multi
+lib/aspell/es.rws
+lib/aspell/espanol.alias
+lib/aspell/spanish.alias
+share/aspell/es.dat
+share/aspell/es_affix.dat
