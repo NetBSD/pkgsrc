@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/04/08 22:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/04/09 06:05:25 wiz Exp $
 #
 
 SQUEAK_VERSION=	4.10.2.2614
@@ -45,7 +45,7 @@ PLIST_SUBST=	SQUEAK_VERSION=${SQUEAK_VERSION}
 PLIST_VARS+=	oss
 
 pre-configure:
-	${MKDIR} ${WRKSRC}/${CONFIGURE_DIRS}
+	${MKDIR} ${WRKSRC}/build
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
