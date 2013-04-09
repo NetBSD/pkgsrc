@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2012/10/31 11:17:32 asau Exp $
+# $NetBSD: Makefile,v 1.33 2013/04/09 15:57:28 adam Exp $
 
-DISTNAME=	netcdf-4.1.3
+DISTNAME=	netcdf-4.2.1.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.unidata.ucar.edu/downloads/netcdf/ftp/
 
@@ -11,10 +11,11 @@ COMMENT=	Library for array-oriented data access
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-f90
+CONFIGURE_ARGS+=	--disable-doxygen
 CONFIGURE_ARGS+=	--disable-examples
-CONFIGURE_ARGS+=	--disable-netcdf-4
 
 INFO_FILES=		yes
 
+.include "../../devel/hdf5/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
