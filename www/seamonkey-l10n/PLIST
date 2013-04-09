@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/02/23 23:59:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/04/09 12:31:28 ryoon Exp $
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/.mkdir.done
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca.manifest
@@ -311,6 +311,7 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/g
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/netError.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/netErrorApp.dtd
@@ -856,6 +857,7 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/g
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/netError.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/netErrorApp.dtd
@@ -1401,6 +1403,7 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/g
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/netError.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/netErrorApp.dtd
@@ -1946,6 +1949,7 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/netError.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/netErrorApp.dtd
@@ -2491,6 +2495,7 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/netError.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/netErrorApp.dtd
@@ -3036,6 +3041,7 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/netError.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/netErrorApp.dtd
@@ -3581,6 +3587,7 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/netError.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/netErrorApp.dtd
@@ -4126,6 +4133,7 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/g
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/netError.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/netErrorApp.dtd
@@ -4671,6 +4679,7 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/g
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/netError.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/netErrorApp.dtd
@@ -5216,6 +5225,7 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/g
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/netError.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/netErrorApp.dtd
@@ -5761,6 +5771,7 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/g
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/netError.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/netErrorApp.dtd
@@ -6306,6 +6317,7 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/netError.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/netErrorApp.dtd
@@ -6851,6 +6863,7 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/g
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/netError.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/netErrorApp.dtd
@@ -7396,6 +7409,7 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/g
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/netError.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/netErrorApp.dtd
@@ -7941,6 +7955,7 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/netError.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/netErrorApp.dtd
@@ -8486,6 +8501,7 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/g
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/netError.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/netErrorApp.dtd
@@ -9031,6 +9047,7 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/g
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/netError.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/netErrorApp.dtd
@@ -9576,6 +9593,7 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/netError.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/netErrorApp.dtd
@@ -10121,6 +10139,7 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/g
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/netError.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/netErrorApp.dtd
@@ -10666,6 +10685,7 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/g
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/netError.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/netErrorApp.dtd
@@ -11211,6 +11231,7 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/netError.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/netErrorApp.dtd
@@ -11756,6 +11777,7 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/g
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout_errors.properties
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/mathml/mathml.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/mozilla.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/netError.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/netErrorApp.dtd
