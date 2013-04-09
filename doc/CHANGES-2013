@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1200 2013/04/09 12:32:04 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1201 2013/04/09 14:26:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1901,3 +1901,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/phpmyadmin to 3.5.8 [tron 2013-04-09]
 	Updated www/firefox-l10n to 20.0 [ryoon 2013-04-09]
 	Updated www/seamonkey-l10n to 2.17 [ryoon 2013-04-09]
+	Updated devel/hdf5 to 1.8.10.1 [adam 2013-04-09]
+	Updated devel/hdf5-c++ to 1.8.10.1 [adam 2013-04-09]
