@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2009/12/02 17:56:26 snj Exp $
-
-SHA1 (aspell-fo-0.2.38.tar.bz2) = 3191d86991d1281e322d2576325dd5c6f97408ea
-RMD160 (aspell-fo-0.2.38.tar.bz2) = f9816f44f645c9902dfe2a0761284e40fabcddfe
-Size (aspell-fo-0.2.38.tar.bz2) = 183984 bytes
-SHA1 (patch-aa) = 78dcf76df264c55bda6bee7411a3c847bd8b4f7f
