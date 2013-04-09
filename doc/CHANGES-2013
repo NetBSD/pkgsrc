@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1199 2013/04/09 12:18:42 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1200 2013/04/09 12:32:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1900,3 +1900,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/grhino to 0.16.1 [prlw1 2013-04-08]
 	Updated databases/phpmyadmin to 3.5.8 [tron 2013-04-09]
 	Updated www/firefox-l10n to 20.0 [ryoon 2013-04-09]
+	Updated www/seamonkey-l10n to 2.17 [ryoon 2013-04-09]
