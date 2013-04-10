@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/03/14 19:32:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/04/10 11:41:37 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -74,11 +74,13 @@ man/man3/FcConfigGetCurrent.3
 man/man3/FcConfigGetFontDirs.3
 man/man3/FcConfigGetFonts.3
 man/man3/FcConfigGetRescanInterval.3
+man/man3/FcConfigGetSysRoot.3
 man/man3/FcConfigHome.3
 man/man3/FcConfigParseAndLoad.3
 man/man3/FcConfigReference.3
 man/man3/FcConfigSetCurrent.3
 man/man3/FcConfigSetRescanInterval.3
+man/man3/FcConfigSetSysRoot.3
 man/man3/FcConfigSubstitute.3
 man/man3/FcConfigSubstituteWithPat.3
 man/man3/FcConfigUptoDate.3
@@ -262,11 +264,13 @@ share/doc/fontconfig/fontconfig-devel/fcconfiggetcurrent.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetfontdirs.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetfonts.html
 share/doc/fontconfig/fontconfig-devel/fcconfiggetrescaninterval.html
+share/doc/fontconfig/fontconfig-devel/fcconfiggetsysroot.html
 share/doc/fontconfig/fontconfig-devel/fcconfighome.html
 share/doc/fontconfig/fontconfig-devel/fcconfigparseandload.html
 share/doc/fontconfig/fontconfig-devel/fcconfigreference.html
 share/doc/fontconfig/fontconfig-devel/fcconfigsetcurrent.html
 share/doc/fontconfig/fontconfig-devel/fcconfigsetrescaninterval.html
+share/doc/fontconfig/fontconfig-devel/fcconfigsetsysroot.html
 share/doc/fontconfig/fontconfig-devel/fcconfigsubstitute.html
 share/doc/fontconfig/fontconfig-devel/fcconfigsubstitutewithpat.html
 share/doc/fontconfig/fontconfig-devel/fcconfiguptodate.html
