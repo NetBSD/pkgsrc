@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/12/14 19:27:25 drochner Exp $
+$NetBSD: distinfo,v 1.3 2013/04/10 16:29:19 drochner Exp $
 
-SHA1 (grilo-plugins-0.2.5.tar.xz) = 2ea0e87ef8a62a794b47c0edfa04ac32ce490a5c
-RMD160 (grilo-plugins-0.2.5.tar.xz) = 67e11c18081c788076924569a4252ecac38ccd5a
-Size (grilo-plugins-0.2.5.tar.xz) = 429788 bytes
-SHA1 (patch-aa) = 196a135cee722452e7115ddb926b558f327d78e3
+SHA1 (grilo-plugins-0.2.6.tar.xz) = 30af957b890d038119a1d8949e8cf3668674d34a
+RMD160 (grilo-plugins-0.2.6.tar.xz) = 12de0ce464508ee176960e3050a25dc8ffacc004
+Size (grilo-plugins-0.2.6.tar.xz) = 440444 bytes
