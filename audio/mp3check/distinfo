@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.10 2012/08/10 18:02:12 joerg Exp $
+$NetBSD: distinfo,v 1.11 2013/04/10 16:20:21 drochner Exp $
 
-SHA1 (mp3check-0.8.3.tar.gz) = 4921a0f5250016abd8fe92d8ca4522c4c6e8b657
-RMD160 (mp3check-0.8.3.tar.gz) = da244159e2f6637d5bd1d386dbca6a2078329bdb
-Size (mp3check-0.8.3.tar.gz) = 163594 bytes
-SHA1 (patch-aa) = 0f2c2022951305e5efa5e057014fa17347704f47
-SHA1 (patch-ab) = 86e1da01f1407f748dbd2fa8436e2d2cdaaf3f4d
-SHA1 (patch-ad) = ca416a54a1b751f7587f977288a99b5da061a12a
-SHA1 (patch-ae) = 8858652cd376372411366d6c06e1e31e4d4b7590
-SHA1 (patch-tmap_h) = 9621cf08744cb164636c4b21087b415fa2f30471
-SHA1 (patch-tvector_h) = 02f6671dd45921e78aac24335522423f74c2b03c
+SHA1 (mp3check-0.8.7.tgz) = 31fe95bb7949343f6ebc04fcaa2faffd2b738264
+RMD160 (mp3check-0.8.7.tgz) = 03ababdfbd3742b4dd55df5d05f980d1c291bd6e
+Size (mp3check-0.8.7.tgz) = 71629 bytes
+SHA1 (patch-aa) = b5eccef8ae3ccccbfe7fd54ae3bc3b6a15e7f614
+SHA1 (patch-ae) = 45e1a74fd38fe3413faa85909878a896ddd87620
