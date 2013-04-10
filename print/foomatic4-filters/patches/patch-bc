@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2013/04/10 15:34:02 drochner Exp $
+
+--- spooler.c.orig	2012-07-02 14:50:46.000000000 +0000
++++ spooler.c
+@@ -308,7 +308,7 @@ void init_cups(list_t *arglist, dstr_t *
+      * PostScript by CUPS). */
+     if (isempty(fileconverter)) {
+         if (find_in_path("texttops", cupsfilterpath, texttopspath)) {
+-            snprintf(fileconverter, PATH_MAX, "%s/texttops '%s' '%s' '%s' '%s' "
++            snprintf(fileconverter, FM_CMDLINE_MAX, "%s/texttops '%s' '%s' '%s' '%s' "
+                     "page-top=36 page-bottom=36 page-left=36 page-right=36 "
+                     "nolandscape cpi=12 lpi=7 columns=1 wrap %s'"
+                     "| %s/pstops  '%s' '%s' '%s' '%s' '%s'",
