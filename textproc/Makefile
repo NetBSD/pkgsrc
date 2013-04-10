@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.666 2013/04/10 17:51:19 rodent Exp $
+# $NetBSD: Makefile,v 1.667 2013/04/10 18:00:10 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -24,6 +24,7 @@ SUBDIR+=	aspell-bn
 SUBDIR+=	aspell-br
 SUBDIR+=	aspell-ca
 SUBDIR+=	aspell-cs
+SUBDIR+=	aspell-csb
 SUBDIR+=	aspell-cy
 SUBDIR+=	aspell-da
 SUBDIR+=	aspell-de
