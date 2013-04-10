@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.19 2013/04/08 06:03:03 mef Exp $
+@comment $NetBSD: PLIST.common,v 1.20 2013/04/10 02:29:03 mef Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -198,32 +198,6 @@ ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xsc
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xsw
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xu
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xd
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xdc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xdw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xs
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xsc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xsw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xu
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_k1om.xw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xd
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xdc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xdw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xs
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xsc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xsw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xu
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_l1om.xw
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.x
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xbn
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xc
@@ -237,8 +211,3 @@ ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xsc
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xsw
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xu
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xu
