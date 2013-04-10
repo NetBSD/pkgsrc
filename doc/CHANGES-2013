@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1213 2013/04/10 11:07:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1214 2013/04/10 11:10:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1919,3 +1919,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/ruby-shadow version 2.2.0 [root 2013-04-10]
 	Updated sysutils/tree to 1.6.0 [wiz 2013-04-10]
 	Updated devel/py-distribute to 0.6.36 [wiz 2013-04-10]
+	Updated fonts/harfbuzz to 0.9.15 [wiz 2013-04-10]
