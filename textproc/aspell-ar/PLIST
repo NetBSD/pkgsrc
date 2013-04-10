@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 12:32:40 rodent Exp $
+lib/aspell/ar.multi
+lib/aspell/ar.rws
+lib/aspell/arabic.alias
+share/aspell/ar.dat
+share/aspell/ar_affix.dat
+share/aspell/l-ar.cmap
+share/aspell/l-ar.cset
