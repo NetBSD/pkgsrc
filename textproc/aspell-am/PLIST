@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 12:03:55 rodent Exp $
+lib/aspell/am.multi
+lib/aspell/am.rws
+lib/aspell/amharic.alias
+share/aspell/am.dat
+share/aspell/am_affix.dat
+share/aspell/am_phonet.dat
+share/aspell/s-ethi.cmap
+share/aspell/s-ethi.cset
