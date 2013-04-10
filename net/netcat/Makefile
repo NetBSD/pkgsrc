@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/10/23 17:18:41 asau Exp $
+# $NetBSD: Makefile,v 1.37 2013/04/10 08:00:10 obache Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://coast.cs.purdue.edu/pub/tools/unix/netutils/netcat/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.securityfocus.com/tools/137
+HOMEPAGE=	http://nc110.sourceforge.net/
 COMMENT=	Read and write data across network connections
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
