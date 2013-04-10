@@ -1,0 +1,5 @@
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.x
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xbn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xr
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xu
