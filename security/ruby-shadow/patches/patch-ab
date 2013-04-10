@@ -1,0 +1,309 @@
+$NetBSD: patch-ab,v 1.1.1.1 2013/04/10 09:25:22 tonnerre Exp $
+
+Handle OSX-like password APIs.
+
+--- shadow.c
++++ shadow.c
+@@ -7,8 +7,16 @@
+  * License: Free for any use with your own risk!
+  * Modified at: <1999/8/19 06:48:18 by ttate>
+  */
+-
++#ifndef OSX
+ #include <shadow.h>
++#define PWTYPE  struct spwd
++#else
++#include <sys/types.h>
++#include <pwd.h>
++#include <time.h>
++#include <uuid/uuid.h>
++#define PWTYPE  struct passwd
++#endif
+ #include "ruby.h"
+ #ifdef RUBY19
+ #include <ruby/io.h>
+@@ -33,54 +41,84 @@ static VALUE rb_eFileLock;
+ static VALUE
+ rb_shadow_setspent(VALUE self)
+ {
++  #ifdef OSX
++  setpassent(1);
++  #else
+   setspent();
++  #endif
+   return Qnil;
+-};
++}
+ 
+ 
+ static VALUE
+ rb_shadow_endspent(VALUE self)
+ {
++  #ifdef OSX
++  endpwent();
++  #else
+   endspent();
++  #endif
+   return Qnil;
+-};
+-
+-
++}
++#ifdef OSX
++static VALUE convert_pw_struct( struct passwd *entry )
++{
++  return rb_struct_new(rb_sPasswdEntry,
++		      rb_tainted_str_new2(entry->pw_name),
++		      rb_tainted_str_new2(entry->pw_passwd ),
++                      difftime( entry->pw_change, 0 ) / 24*60*60,
++		      Qnil, /* days that password must stay same */
++		      Qnil, /* days until passwor changes. */
++		      Qnil, /* days before expiration where user is warned */
++		      Qnil, /* days after password expiration that account becomes inactive */
++                      difftime( entry->pw_expire, 0 ) / 24*60*60,
++		      Qnil,
++		      NULL);
++}
++#else
++static VALUE convert_pw_struct( spwd *entry )
++{
++  result = rb_struct_new(rb_sPasswdEntry,
++		      rb_tainted_str_new2(entry->sp_namp),
++		      rb_tainted_str_new2(entry->sp_pwdp),
++		      INT2FIX(entry->sp_lstchg),
++		      INT2FIX(entry->sp_min),
++		      INT2FIX(entry->sp_max),
++		      INT2FIX(entry->sp_warn),
++		      INT2FIX(entry->sp_inact),
++		      INT2FIX(entry->sp_expire),
++		      INT2FIX(entry->sp_flag),
++		      NULL);
++}
++#endif
+ #ifndef SOLARIS
+ static VALUE
+ rb_shadow_sgetspent(VALUE self, VALUE str)
+ {
+-  struct spwd *entry;
++  PWTYPE *entry;
+   VALUE result;
+ 
+   if( TYPE(str) != T_STRING )
+     rb_raise(rb_eException,"argument must be a string.");
+ 
++  #ifdef OSX
++  entry = getpwnam( StringValuePtr(str) );
++  #else
+   entry = sgetspent(StringValuePtr(str));
+-
++  #endif
+   if( entry == NULL )
+     return Qnil;
++  result = convert_pw_struct( entry );
+ 
+-  result = rb_struct_new(rb_sPasswdEntry,
+-		      rb_tainted_str_new2(entry->sp_namp),
+-		      rb_tainted_str_new2(entry->sp_pwdp),
+-		      INT2FIX(entry->sp_lstchg),
+-		      INT2FIX(entry->sp_min),
+-		      INT2FIX(entry->sp_max),
+-		      INT2FIX(entry->sp_warn),
+-		      INT2FIX(entry->sp_inact),
+-		      INT2FIX(entry->sp_expire),
+-		      INT2FIX(entry->sp_flag),
+-		      NULL);
+   free(entry);
+   return result;
+-};
++}
+ #endif
+-
++#ifndef OSX
+ static VALUE
+ rb_shadow_fgetspent(VALUE self, VALUE file)
+ {
+-  struct spwd *entry;
++  PWTYPE *entry;
+   VALUE result;
+ 
+   if( TYPE(file) != T_FILE )
+@@ -91,85 +129,62 @@ rb_shadow_fgetspent(VALUE self, VALUE file)
+   if( entry == NULL )
+     return Qnil;
+ 
+-  result = rb_struct_new(rb_sPasswdEntry,
+-		      rb_tainted_str_new2(entry->sp_namp),
+-		      rb_tainted_str_new2(entry->sp_pwdp),
+-		      INT2FIX(entry->sp_lstchg),
+-		      INT2FIX(entry->sp_min),
+-		      INT2FIX(entry->sp_max),
+-		      INT2FIX(entry->sp_warn),
+-		      INT2FIX(entry->sp_inact),
+-		      INT2FIX(entry->sp_expire),
+-		      INT2FIX(entry->sp_flag),
+-		      NULL);
++  result = convert_pw_struct( entry );
+   return result;
+-};
++}
++#endif
+ 
+ static VALUE
+ rb_shadow_getspent(VALUE self)
+ {
+-  struct spwd *entry;
++  PWTYPE *entry;
+   VALUE result;
+-
++  #ifdef OSX
++  entry = getpwent();
++  #else
+   entry = getspent();
++  #endif
+ 
+   if( entry == NULL )
+     return Qnil;
+ 
+-  result = rb_struct_new(rb_sPasswdEntry,
+-		      rb_tainted_str_new2(entry->sp_namp),
+-		      rb_tainted_str_new2(entry->sp_pwdp),
+-		      INT2FIX(entry->sp_lstchg),
+-		      INT2FIX(entry->sp_min),
+-		      INT2FIX(entry->sp_max),
+-		      INT2FIX(entry->sp_warn),
+-		      INT2FIX(entry->sp_inact),
+-		      INT2FIX(entry->sp_expire),
+-		      INT2FIX(entry->sp_flag),
+-		      NULL);
++  result = convert_pw_struct( entry );
+   return result;
+-};
++}
+ 
+ static VALUE
+ rb_shadow_getspnam(VALUE self, VALUE name)
+ {
+-  struct spwd *entry;
++  PWTYPE *entry;
+   VALUE result;
+ 
+   if( TYPE(name) != T_STRING )
+     rb_raise(rb_eException,"argument must be a string.");
+-
++  #ifdef OSX
++  entry = getpwnam(StringValuePtr(name));
++  #else
+   entry = getspnam(StringValuePtr(name));
++  #endif
+ 
+   if( entry == NULL )
+     return Qnil;
+ 
+-  result = rb_struct_new(rb_sPasswdEntry,
+-		      rb_tainted_str_new2(entry->sp_namp),
+-		      rb_tainted_str_new2(entry->sp_pwdp),
+-		      INT2FIX(entry->sp_lstchg),
+-		      INT2FIX(entry->sp_min),
+-		      INT2FIX(entry->sp_max),
+-		      INT2FIX(entry->sp_warn),
+-		      INT2FIX(entry->sp_inact),
+-		      INT2FIX(entry->sp_expire),
+-		      INT2FIX(entry->sp_flag),
+-		      NULL);
++  result = convert_pw_struct( entry );
+   return result;
+-};
+-
++}
+ 
++#ifndef OSX
+ static VALUE
+ rb_shadow_putspent(VALUE self, VALUE entry, VALUE file)
+ {
+-  struct spwd centry;
++  PWTYPE centry;
+   FILE* cfile;
+   VALUE val[9];
+   int i;
+   int result;
+ 
+   for(i=0; i<=8; i++)
+-    val[i] = RSTRUCT_PTR( entry )[i]; //val[i] = RSTRUCT(entry)->ptr[i];
++    val[i] = RSTRUCT_PTR( entry )[i]; /* val[i] = RSTRUCT(entry)->ptr[i]; */
+   cfile = file_ptr( RFILE(file)->fptr );
+ 
+   centry.sp_namp = StringValuePtr(val[0]);
+@@ -188,7 +203,7 @@ rb_shadow_putspent(VALUE self, VALUE entry, VALUE file)
+     rb_raise(rb_eStandardError,"can't change password");
+ 
+   return Qtrue;
+-};
++}
+ 
+ 
+ static VALUE
+@@ -200,7 +215,7 @@ rb_shadow_lckpwdf(VALUE self)
+     rb_raise(rb_eFileLock,"password file was locked");
+   else
+     return Qtrue;
+-};
++}
+ 
+ static int in_lock;
+ 
+@@ -225,7 +240,7 @@ rb_shadow_lock(VALUE self)
+   else{
+     return rb_shadow_lckpwdf(self);
+   };
+-};
++}
+ 
+ 
+ static VALUE
+@@ -236,13 +251,13 @@ rb_shadow_ulckpwdf(VALUE self)
+   };
+   ulckpwdf();
+   return Qtrue;
+-};
++}
+ 
+ static VALUE
+ rb_shadow_unlock(VALUE self)
+ {
+   return rb_shadow_ulckpwdf(self);
+-};
++}
+ 
+ static VALUE
+ rb_shadow_lock_p(VALUE self)
+@@ -256,8 +271,9 @@ rb_shadow_lock_p(VALUE self)
+   else{
+     ulckpwdf();
+     return Qfalse;
+-  };
+-};
++  }
++}
++#endif
+ 
+ 
+ void
+@@ -283,13 +299,17 @@ Init_shadow()
+   #ifndef SOLARIS
+   rb_define_module_function(rb_mPasswd,"sgetspent",rb_shadow_sgetspent,1);
+   #endif
++  #ifndef OSX
+   rb_define_module_function(rb_mPasswd,"fgetspent",rb_shadow_fgetspent,1);
++  #endif
+   rb_define_module_function(rb_mPasswd,"getspent",rb_shadow_getspent,0);
+   rb_define_module_function(rb_mPasswd,"getspnam",rb_shadow_getspnam,1);
++  #ifndef OSX
+   rb_define_module_function(rb_mPasswd,"putspent",rb_shadow_putspent,2);
+   rb_define_module_function(rb_mPasswd,"lckpwdf",rb_shadow_lckpwdf,0);
+   rb_define_module_function(rb_mPasswd,"lock",rb_shadow_lock,0);
+   rb_define_module_function(rb_mPasswd,"ulckpwdf",rb_shadow_ulckpwdf,0);
+   rb_define_module_function(rb_mPasswd,"unlock",rb_shadow_unlock,0);
+   rb_define_module_function(rb_mPasswd,"lock?",rb_shadow_lock_p,0);
+-};
++  #endif
++}
