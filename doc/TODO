@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12069 2013/04/10 16:33:07 drochner Exp $
+$NetBSD: TODO,v 1.12070 2013/04/10 20:56:49 shattered Exp $
 
 Suggested new packages
 ======================
@@ -838,7 +838,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o luit-2.0.20130217
 	o lwm-1.2.2
 	o lyx-2.0.3
-	o lzip-1.14
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
