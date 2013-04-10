@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 17:46:20 rodent Exp $
+lib/aspell/bg.multi
+lib/aspell/bg.rws
+lib/aspell/bulgarian.alias
+share/aspell/bg.dat
+share/aspell/bg_affix.dat
+share/aspell/bg_phonet.dat
+share/aspell/bulgarian.kbd
