@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1225 2013/04/10 14:50:30 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1226 2013/04/10 15:20:00 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1947,3 +1947,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-vte to 1.2.6 [obache 2013-04-10]
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.6 [obache 2013-04-10]
 	Updated x11/ruby-gnome2-gtksourceview3 to 1.2.6 [obache 2013-04-10]
+	Updated x11/py-sip to 4.14.5 [drochner 2013-04-10]
+	Updated x11/py-qt4 to 4.9.6 [drochner 2013-04-10]
+	Updated x11/qt4-qscintilla to 2.7.1 [drochner 2013-04-10]
+	Updated security/gnutls to 3.0.29 [drochner 2013-04-10]
+	Updated security/libgcrypt to 1.5.1 [drochner 2013-04-10]
