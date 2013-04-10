@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/04/10 09:18:59 tonnerre Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.RUBYLIBDIR.-.console.time
+${GEM_LIBDIR}/Makefile
+${GEM_LIBDIR}/console.c
+${GEM_LIBDIR}/console.o
+${GEM_LIBDIR}/console.so
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/io/console.so
+${GEM_LIBDIR}/io/console/size.rb
+${GEM_LIBDIR}/lib/console/size.rb
+${GEM_LIBDIR}/mkmf.log
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
