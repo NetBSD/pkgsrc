@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1218 2013/04/10 11:31:56 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.1219 2013/04/10 11:32:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1926,3 +1926,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scintilla to 3.2.5 [drochner 2013-04-10]
 	Updated wip/gemrb to 0.7.2 [wiz 2013-04-10]
 	Updated editors/scite to 3.2.5 [drochner 2013-04-10]
+	Updated devel/fossil to 1.25 [wiz 2013-04-10]
