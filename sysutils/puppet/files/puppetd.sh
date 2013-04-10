@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: puppetd.sh,v 1.2 2008/04/04 15:20:48 jlam Exp $
+# $NetBSD: puppetd.sh,v 1.3 2013/04/10 21:10:55 tonnerre Exp $
 #
 # PROVIDE: puppetd
 # REQUIRE: DAEMON
@@ -11,7 +11,7 @@
 # puppetd="YES"
 # puppetd_confdir="@PKG_SYSCONFDIR@"
 # puppetd_pid="/var/run/${name}.pid"
-# puppetd_flags="--confdir $puppetd_confdir --rundir /var/run"
+# puppetd_flags="agent --confdir $puppetd_confdir --rundir /var/run"
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -19,11 +19,11 @@ fi
 
 name="puppetd"
 rcvar=$name
-command="@PREFIX@/bin/${name}"
+command="@PREFIX@/bin/puppet"
 command_interpreter="@RUBY@"
 : ${puppetd_confdir="@PKG_SYSCONFDIR@"}
 : ${puppetd_pid="/var/run/${name}.pid"}
-: ${puppetd_flags="--confdir $puppetd_confdir --rundir /var/run"}
+: ${puppetd_flags="agent --confdir $puppetd_confdir --rundir /var/run"}
 
 pidfile="$puppetd_pid"
 
