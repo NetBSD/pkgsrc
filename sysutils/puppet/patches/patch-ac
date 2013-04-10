@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.5 2010/06/11 01:27:58 tonnerre Exp $
+$NetBSD: patch-ac,v 1.6 2013/04/10 21:10:55 tonnerre Exp $
 
 NetBSD also has its init scripts in /etc/rc.d.
 
---- lib/puppet/provider/service/init.rb
+--- lib/puppet/provider/service/init.rb.orig	2013-04-01 00:44:50.000000000 +0000
 +++ lib/puppet/provider/service/init.rb
-@@ -17,6 +17,8 @@ Puppet::Type.type(:service).provide :init, :parent => :base do
-     case Facter["operatingsystem"].value
-     when "FreeBSD"
-         @defpath = ["/etc/rc.d", "/usr/local/etc/rc.d"]
-+    when "NetBSD"
-+        @defpath = "/etc/rc.d"
+@@ -9,7 +9,7 @@ Puppet::Type.type(:service).provide :ini
+       ["/etc/rc.d", "/usr/local/etc/rc.d"]
      when "HP-UX"
-         @defpath = "/sbin/init.d"
+       "/sbin/init.d"
+-    when "Archlinux"
++    when "Archlinux", "NetBSD"
+       "/etc/rc.d"
      else
+       "/etc/init.d"

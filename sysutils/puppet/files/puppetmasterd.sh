@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: puppetmasterd.sh,v 1.2 2008/04/04 15:20:48 jlam Exp $
+# $NetBSD: puppetmasterd.sh,v 1.3 2013/04/10 21:10:55 tonnerre Exp $
 #
 # PROVIDE: puppetmasterd
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 #
 # puppetmasterd="YES"
 # puppetmasterd_confdir:	Set to @PKG_SYSCONFDIR@ by default
-# puppetmasterd_flags:		Set to --confdir $puppetmasterd_confdir --rundir /var/run" by default
+# puppetmasterd_flags:		Set to master --confdir $puppetmasterd_confdir --rundir /var/run" by default
 #
 
 if [ -f /etc/rc.subr ]; then
@@ -19,13 +19,13 @@ fi
 
 name="puppetmasterd"
 rcvar=$name
-command="@PREFIX@/bin/${name}"
+command="@PREFIX@/bin/puppet"
 command_interpreter="@RUBY@"
 start_precmd="puppetmasterd_checkconfig"
 restart_precmd="puppetmasterd_checkconfig"
 : ${puppetmasterd_confdir="@PKG_SYSCONFDIR@"}
 : ${puppetmasterd_pid="/var/run/${name}.pid"}
-: ${puppetmasterd_flags="--confdir $puppetmasterd_confdir --rundir /var/run"}
+: ${puppetmasterd_flags="master --confdir $puppetmasterd_confdir --rundir /var/run"}
 
 pidfile="$puppetmasterd_pid"
 
