@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 17:41:36 rodent Exp $
+lib/aspell/be-common.rws
+lib/aspell/be-only.rws
+lib/aspell/be.multi
+lib/aspell/be_BY.alias
+lib/aspell/be_SU-only.rws
+lib/aspell/be_SU.multi
+lib/aspell/belarusian-soviet.alias
+lib/aspell/belarusian.alias
+share/aspell/be.dat
