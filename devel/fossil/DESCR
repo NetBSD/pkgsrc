@@ -1,44 +1,11 @@
-There are plenty of open-source version control systems available
-on the internet these days. What makes Fossil worthy of attention?
+Fossil is a distributed software control system that includes a
+whole palette of useful companion software: for example, bug
+tracking and a wiki.
 
-   1. Bug Tracking And Wiki - In addition to doing distributed
-   version control like Git and Mercurial, Fossil also supports
-   distributed bug tracking and distributed wiki all in a single
-   integrated package.
+It allows autosyncing with an upstream before a commit.  fossil is
+a single standalone executable, using bandwidth efficient transfers
+over HTTP. It includes its own HTTP server for providing the
+repository, if needed.
 
-   2. Web Interface - Fossil has a built-in and easy-to-use web
-   interface that simplifies project tracking and promotes situational
-   awareness. Simply type "fossil ui" from within any check-out
-   and Fossil automatically opens your web browser in a page that
-   gives detailed history and status information on that project.
-
-   3. Autosync - Fossil supports "autosync" mode which helps to
-   keep projects moving forward by reducing the amount of needless
-   forking and merging often associated distributed projects.
-
-   4. Self-Contained - Fossil is a single stand-alone executable
-   that contains everything needed to do configuration management.
-   Installation is trivial: simply download a precompiled binary
-   for Linux, Mac, or Windows and put it on your $PATH. Easy-to-compile
-   source code is available for users on other platforms. Fossil
-   sources are also mostly self-contained, requiring only the "zlib"
-   library and the standard C library to build.
-
-   5. Simple Networking - Fossil uses plain old HTTP (with proxy
-   support) for all network communications, meaning that it works
-   fine from behind restrictive firewalls. The protocol is bandwidth
-   efficient to the point that Fossil can be used comfortably over
-   a dial-up internet connection.
-
-   6. CGI Enabled - No server is required to use fossil. But a
-   server does make collaboration easier. Fossil supports three
-   different yet simple server configurations. The most popular is
-   a 2-line CGI script. This is the approach used by the self-hosting
-   fossil repositories.
-
-   7. Robust & Reliable - Fossil stores content in an SQLite database
-   so that transactions are atomic even if interrupted by a power
-   loss or system crash. Furthermore, automatic self-checks verify
-   that all aspects of the repository are consistent prior to each
-   commit. In over two years of operation, no work has ever been
-   lost after having been committed to a Fossil repository.
+The repository is kept in a sqlite database, only updated with
+atomic commits, which can be checked by fossil itself for consistency.
