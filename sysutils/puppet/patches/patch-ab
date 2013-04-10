@@ -1,29 +1,26 @@
-$NetBSD: patch-ab,v 1.4 2010/06/11 01:27:58 tonnerre Exp $
+$NetBSD: patch-ab,v 1.5 2013/04/10 21:10:55 tonnerre Exp $
 
 Make the FreeBSD provider the default for NetBSD as well.
 Omit _enabled for init scripts under NetBSD, which doesn't look for them.
 
---- lib/puppet/provider/service/freebsd.rb.orig	2009-02-08 16:47:46.000000000 +0100
+--- lib/puppet/provider/service/freebsd.rb.orig	2013-04-01 00:44:50.000000000 +0000
 +++ lib/puppet/provider/service/freebsd.rb
-@@ -8,7 +8,7 @@ Puppet::Type.type(:service).provide :freebsd, :parent => :init do
+@@ -3,7 +3,7 @@ Puppet::Type.type(:service).provide :fre
+   desc "Provider for FreeBSD and DragonFly BSD. Uses the `rcvar` argument of init scripts and parses/edits rc files."
  
-     confine :operatingsystem => [:freebsd, :netbsd, :openbsd]
+   confine :operatingsystem => [:freebsd, :dragonfly]
+-  defaultfor :operatingsystem => [:freebsd, :dragonfly]
++  defaultfor :operatingsystem => [:freebsd, :netbsd, :dragonfly]
  
--    defaultfor :operatingsystem => :freebsd
-+    defaultfor :operatingsystem => [:freebsd, :netbsd]
- 
-     @@rcconf_dir = '/etc/rc.conf.d'
- 
-@@ -41,7 +41,11 @@ Puppet::Type.type(:service).provide :freebsd, :parent => :init do
-             Dir.mkdir(@@rcconf_dir)
-         end
-         rcfile = File.join(@@rcconf_dir, @model[:name])
--        open(rcfile, 'w') { |f| f << "%s_enable=\"YES\"\n" % @model[:name] }
-+        if Facter.value(:operatingsystem) == "NetBSD"
-+            open(rcfile, 'w') { |f| f << "%s=\"YES\"\n" % @model[:name] }
-+        else
-+            open(rcfile, 'w') { |f| f << "%s_enable=\"YES\"\n" % @model[:name] }
-+        end
-     end
- 
-     # Override stop/start commands to use one<cmd>'s and the avoid race condition
+   def rcconf()        '/etc/rc.conf' end
+   def rcconf_local()  '/etc/rc.conf.local' end
+@@ -86,6 +86,9 @@ Puppet::Type.type(:service).provide :fre
+   # Add a new setting to the rc files
+   def rc_add(service, rcvar, yesno)
+     append = "\# Added by Puppet\n#{rcvar}_enable=\"#{yesno}\"\n"
++    if Facter.value(:operatingsystem) == "NetBSD"
++      append = "\# Added by Puppet\n#{rcvar}=\"#{yesno}\"\n"
++    end
+     # First, try the one-file-per-service style
+     if File.exists?(rcconf_dir)
+       File.open(rcconf_dir + "/#{service}", File::WRONLY | File::APPEND | File::CREAT, 0644) {
