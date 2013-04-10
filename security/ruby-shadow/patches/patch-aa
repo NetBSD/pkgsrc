@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2013/04/10 09:25:21 tonnerre Exp $
+
+Do something more sensible if we detect an OSX-like system.
+
+--- extconf.rb
++++ extconf.rb
+@@ -11,10 +11,11 @@ $CFLAGS = case RUBY_VERSION
+           when /^2\./; '-DRUBY19'
+           else; ''
+           end
++$CFLAGS += " -Wall -pedantic"
+ 
+ #$LDFLAGS = "-lshadow"
+ 
+-if( ! (ok = have_library("shadow","getspent")) )
++if !(ok = have_library("shadow","getspent"))
+   $LDFLAGS = ""
+   ok = have_func("getspent")
+ end
+@@ -36,9 +37,10 @@ else
+   osx_ok &= have_func( "getpwnam" )
+   osx_ok &= have_func( "getpwnam_r" )
+   osx_ok &= have_func( "getpwuid" )
++  #osx_ok &= have_func( "getuid_r" )
+   osx_ok &= have_func( "setpassent" )
+   osx_ok &= have_func( "setpwent" )
+-  if osx_ok
+-    raise "It looks like you're on OSX.  There is a branch that might help here: https://github.com/apalmblad/ruby-shadow/tree/osx"
+-  end
++  $CFLAGS += ' -DOSX'
++  create_makefile("shadow") if osx_ok
+ end
++
