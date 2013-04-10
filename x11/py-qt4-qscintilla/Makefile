@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2013/02/16 11:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/10 15:05:06 drochner Exp $
 #
 
-DISTNAME=	QScintilla-gpl-2.6.2
+DISTNAME=	QScintilla-gpl-2.7.1
 PKGNAME=	${PYPKGPREFIX}-qt4-${DISTNAME:tl:S/-gpl-/-/}
-PKGREVISION=	7
 CATEGORIES=	x11
-MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/QScintilla2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/software/qscintilla/intro
