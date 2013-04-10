@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.19 2012/10/10 16:53:39 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.20 2013/04/10 15:02:58 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -151,6 +151,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qtimeline.sip
 share/sip${PYVERSSUFFIX}/QtCore/qtimer.sip
 share/sip${PYVERSSUFFIX}/QtCore/qtranslator.sip
 share/sip${PYVERSSUFFIX}/QtCore/qurl.sip
+share/sip${PYVERSSUFFIX}/QtCore/qurlquery.sip
 share/sip${PYVERSSUFFIX}/QtCore/quuid.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvariant.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvariantanimation.sip
@@ -339,6 +340,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qrawfont.sip
 share/sip${PYVERSSUFFIX}/QtGui/qregion.sip
 share/sip${PYVERSSUFFIX}/QtGui/qrgb.sip
 share/sip${PYVERSSUFFIX}/QtGui/qrubberband.sip
+share/sip${PYVERSSUFFIX}/QtGui/qscreen.sip
 share/sip${PYVERSSUFFIX}/QtGui/qscrollarea.sip
 share/sip${PYVERSSUFFIX}/QtGui/qscrollbar.sip
 share/sip${PYVERSSUFFIX}/QtGui/qsessionmanager.sip
@@ -507,6 +509,7 @@ share/sip${PYVERSSUFFIX}/QtWebKit/qwebframe.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebhistory.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebhistoryinterface.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebinspector.sip
+share/sip${PYVERSSUFFIX}/QtWebKit/qwebkitglobal.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebkitversion.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebpage.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebpluginfactory.sip
