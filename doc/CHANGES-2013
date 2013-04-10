@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1210 2013/04/10 09:23:03 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.1211 2013/04/10 09:26:51 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk to 11.2.2 [jnemeth 2013-04-09]
 	Added devel/ruby-io-console version 0.4.2 [root 2013-04-10]
 	Added devel/ruby-minitest version 4.7.0 [root 2013-04-10]
+	Added security/ruby-shadow version 2.2.0 [root 2013-04-10]
