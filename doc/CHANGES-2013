@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1214 2013/04/10 11:10:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1215 2013/04/10 11:12:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1920,3 +1920,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/tree to 1.6.0 [wiz 2013-04-10]
 	Updated devel/py-distribute to 0.6.36 [wiz 2013-04-10]
 	Updated fonts/harfbuzz to 0.9.15 [wiz 2013-04-10]
+	Updated converters/help2man to 1.41.1 [wiz 2013-04-10]
