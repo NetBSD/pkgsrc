@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/04/10 09:21:51 tonnerre Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/design_rationale.rb
+${GEM_LIBDIR}/lib/hoe/minitest.rb
+${GEM_LIBDIR}/lib/minitest/autorun.rb
+${GEM_LIBDIR}/lib/minitest/benchmark.rb
+${GEM_LIBDIR}/lib/minitest/hell.rb
+${GEM_LIBDIR}/lib/minitest/mock.rb
+${GEM_LIBDIR}/lib/minitest/parallel_each.rb
+${GEM_LIBDIR}/lib/minitest/pride.rb
+${GEM_LIBDIR}/lib/minitest/spec.rb
+${GEM_LIBDIR}/lib/minitest/unit.rb
+${GEM_LIBDIR}/test/minitest/metametameta.rb
+${GEM_LIBDIR}/test/minitest/test_minitest_benchmark.rb
+${GEM_LIBDIR}/test/minitest/test_minitest_mock.rb
+${GEM_LIBDIR}/test/minitest/test_minitest_spec.rb
+${GEM_LIBDIR}/test/minitest/test_minitest_unit.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
