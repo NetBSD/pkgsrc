@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 17:59:41 rodent Exp $
+lib/aspell/csb.multi
+lib/aspell/csb.rws
+lib/aspell/kashubian.alias
+lib/aspell/kaszëbsczi.alias
+share/aspell/csb.dat
+share/aspell/l-csb.cmap
+share/aspell/l-csb.cset
