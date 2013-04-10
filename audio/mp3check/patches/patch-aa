@@ -1,18 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2012/01/11 19:23:03 hans Exp $
+$NetBSD: patch-aa,v 1.5 2013/04/10 16:20:21 drochner Exp $
 
---- mp3check.cc.orig	Mon Jan 27 23:58:46 2003
+--- mp3check.cc.orig	2009-04-28 21:15:16.000000000 +0000
 +++ mp3check.cc
-@@ -26,11 +26,12 @@
+@@ -26,6 +26,7 @@
  #include <unistd.h>
  #include <stdio.h>
  #include <stdlib.h>
 +#include <termios.h>
-+#include "config.h"
  #include "tappconfig.h"
  #include "crc16.h"
  #include "id3tag.h"
- #include "tfiletools.h"
--#include "config.h"
- 
- 
- 
