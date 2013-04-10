@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1222 2013/04/10 11:41:46 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1223 2013/04/10 12:02:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1924,7 +1924,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/gupnp to 0.20.2 [wiz 2013-04-10]
 	Updated www/webkit-gtk to 1.10.2 [drochner 2013-04-10]
 	Updated devel/scintilla to 3.2.5 [drochner 2013-04-10]
-	Updated wip/gemrb to 0.7.2 [wiz 2013-04-10]
 	Updated editors/scite to 3.2.5 [drochner 2013-04-10]
 	Updated devel/fossil to 1.25 [wiz 2013-04-10]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.75 [obache 2013-04-10]
