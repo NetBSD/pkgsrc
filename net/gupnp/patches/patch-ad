@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2013/03/15 18:09:30 drochner Exp $
+$NetBSD: patch-ad,v 1.5 2013/04/10 11:15:45 wiz Exp $
+
+Add support for BSD uuid library.
 
 --- libgupnp/gupnp-service.c.orig	2013-02-20 12:35:57.000000000 +0000
 +++ libgupnp/gupnp-service.c
