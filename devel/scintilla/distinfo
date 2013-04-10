@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/01/12 11:37:05 drochner Exp $
+$NetBSD: distinfo,v 1.4 2013/04/10 11:20:39 drochner Exp $
 
-SHA1 (scintilla229.tgz) = a63cfba30a0ec1d403aca7df8d7103f6a4bd7c10
-RMD160 (scintilla229.tgz) = 43465fed1be189cd30c24d23ede7e35cad0fb9d6
-Size (scintilla229.tgz) = 1051731 bytes
+SHA1 (scintilla325.tgz) = 9e0ec29e16dd28cb2b1de6131b13bf5577381f69
+RMD160 (scintilla325.tgz) = 84ed8904a4c4aa1a8373ab3bd472fc73e5f5e1b5
+Size (scintilla325.tgz) = 1078473 bytes
