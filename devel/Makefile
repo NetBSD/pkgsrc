@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1721 2013/04/10 09:20:27 tonnerre Exp $
+# $NetBSD: Makefile,v 1.1722 2013/04/10 09:22:32 tonnerre Exp $
 #
 
 COMMENT=	Development utilities
@@ -1476,6 +1476,7 @@ SUBDIR+=	ruby-memcache
 SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-metaclass
 SUBDIR+=	ruby-metaid
+SUBDIR+=	ruby-minitest
 SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mocha
 SUBDIR+=	ruby-mode
