@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/08/08 05:20:02 tnn Exp $
+$NetBSD: distinfo,v 1.7 2013/04/10 10:46:24 wiz Exp $
 
-SHA1 (tree-1.5.1.1.tgz) = ca4145bf1d2957ff3f4e6af0f64ce92d102fd356
-RMD160 (tree-1.5.1.1.tgz) = 7cc78b7a0103a7f81ec40c2c5e1ff2399fd7bb20
-Size (tree-1.5.1.1.tgz) = 30792 bytes
-SHA1 (patch-aa) = 813d77169d72bf52dccfa455bd5832d4f095afab
-SHA1 (patch-ab) = aec0fe0c3911eb16c35e770dd3bea3d946c34650
+SHA1 (tree-1.6.0.tgz) = 350f851f68859a011668362dd0e7ee81fd1b713a
+RMD160 (tree-1.6.0.tgz) = d0e89f49fa902c7a72056d1a4ef826ddfee6be15
+Size (tree-1.6.0.tgz) = 42706 bytes
+SHA1 (patch-Makefile) = b2b29766bfa46ff7e061bcd7bcd0fc88f954d236

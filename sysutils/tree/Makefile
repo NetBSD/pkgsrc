@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 19:51:27 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/10 10:46:24 wiz Exp $
 #
 
-DISTNAME=	tree-1.5.1.1
-PKGREVISION=	2
+DISTNAME=	tree-1.6.0
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://mama.indstate.edu/linux/tree/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +11,9 @@ HOMEPAGE=	http://mama.indstate.edu/users/ice/tree/
 COMMENT=	Print a text or HTML tree diagram of a directory structure
 LICENSE=	gnu-gpl-v2
 
-MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
+USE_TOOLS+=	gmake
+
+MAKE_FLAGS+=		prefix=${PREFIX:Q}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		MANSUBDIR=${PKGMANDIR:Q}
