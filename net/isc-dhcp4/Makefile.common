@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2013/03/26 16:25:06 taca Exp $
+# $NetBSD: Makefile.common,v 1.20 2013/04/10 11:31:27 fhajny Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -41,6 +41,11 @@ CONFIGURE_ARGS+=	--with-cli-lease-file=${DHCP_HOME}/dhclient.leases
 CONFIGURE_ARGS+=	--with-srv-pid-file=${DHCP_PID}/isc-dhcpd.pid
 CONFIGURE_ARGS+=	--with-cli-pid-file=${DHCP_PID}/isc-dhclient.pid
 CONFIGURE_ARGS+=	--with-relay-pid-file=${DHCP_PID}/isc-dhcrelay.pid
+CONFIGURE_ARGS+=	--with-srv6-lease-file=${DHCP_HOME}/dhcpd6.leases
+CONFIGURE_ARGS+=	--with-cli6-lease-file=${DHCP_HOME}/dhclient6.leases
+CONFIGURE_ARGS+=	--with-srv6-pid-file=${DHCP_PID}/isc-dhcpd6.pid
+CONFIGURE_ARGS+=	--with-cli6-pid-file=${DHCP_PID}/isc-dhclient6.pid
+CONFIGURE_ARGS+=	--with-relay6-pid-file=${DHCP_PID}/isc-dhcrelay6.pid
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-patch
