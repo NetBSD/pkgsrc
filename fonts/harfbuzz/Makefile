@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/10 11:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/10 12:27:10 wiz Exp $
 
 DISTNAME=	harfbuzz-0.9.15
 CATEGORIES=	fonts
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	harfbuzz.pc.in
+CONFIGURE_ENV+=		ICU_CONFIG=no
 
 LDFLAGS.OpenBSD+=	-lz
 
