@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.22 2013/03/03 18:59:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2013/04/10 11:16:39 drochner Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
-DISTNAME=	webkitgtk-1.10.1
+DISTNAME=	webkitgtk-1.10.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
