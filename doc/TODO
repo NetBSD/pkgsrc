@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12060 2013/04/09 16:00:54 adam Exp $
+$NetBSD: TODO,v 1.12061 2013/04/10 10:46:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1170,7 +1170,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o totem-3.4.1
 	o tpb-0.6.4
 	o trac-1.0.1
-	o tree-1.6.0
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o turba-4.0.3
