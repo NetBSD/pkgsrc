@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1217 2013/04/10 11:24:18 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1218 2013/04/10 11:31:56 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1922,4 +1922,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/harfbuzz to 0.9.15 [wiz 2013-04-10]
 	Updated converters/help2man to 1.41.1 [wiz 2013-04-10]
 	Updated net/gupnp to 0.20.2 [wiz 2013-04-10]
+	Updated www/webkit-gtk to 1.10.2 [drochner 2013-04-10]
+	Updated devel/scintilla to 3.2.5 [drochner 2013-04-10]
 	Updated wip/gemrb to 0.7.2 [wiz 2013-04-10]
+	Updated editors/scite to 3.2.5 [drochner 2013-04-10]
