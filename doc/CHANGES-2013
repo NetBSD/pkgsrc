@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1224 2013/04/10 12:37:51 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1225 2013/04/10 14:50:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1930,3 +1930,20 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.280 [obache 2013-04-10]
 	Updated fonts/fontconfig to 2.10.92 [wiz 2013-04-10]
 	Updated textproc/ruby-tilt to 1.3.7 [obache 2013-04-10]
+	Updated meta-pkgs/ruby-gnome2 to 1.2.6 [obache 2013-04-10]
+	Updated devel/ruby-gnome2-atk to 1.2.6 [obache 2013-04-10]
+	Updated devel/ruby-gnome2-gio to 1.2.6 [obache 2013-04-10]
+	Updated devel/ruby-gnome2-glib to 1.2.6 [obache 2013-04-10]
+	Updated devel/ruby-gnome2-gobject-introspection to 1.2.6 [obache 2013-04-10]
+	Updated devel/ruby-gnome2-pango to 1.2.6 [obache 2013-04-10]
+	Updated graphics/ruby-gnome2-gdk3 to 1.2.6 [obache 2013-04-10]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 1.2.6 [obache 2013-04-10]
+	Updated graphics/ruby-gnome2-goocanvas to 1.2.6 [obache 2013-04-10]
+	Updated graphics/ruby-gnome2-rsvg to 1.2.6 [obache 2013-04-10]
+	Updated multimedia/ruby-gnome2-gstreamer to 1.2.6 [obache 2013-04-10]
+	Updated print/ruby-gnome2-poppler to 1.2.6 [obache 2013-04-10]
+	Updated x11/ruby-gnome2-gtk to 1.2.6 [obache 2013-04-10]
+	Updated x11/ruby-gnome2-gtk3 to 1.2.6 [obache 2013-04-10]
+	Updated x11/ruby-gnome2-vte to 1.2.6 [obache 2013-04-10]
+	Updated x11/ruby-gnome2-gtksourceview2 to 1.2.6 [obache 2013-04-10]
+	Updated x11/ruby-gnome2-gtksourceview3 to 1.2.6 [obache 2013-04-10]
