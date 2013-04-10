@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 00:18:18 rodent Exp $
+lib/aspell/te.rws
+lib/aspell/te.multi
+lib/aspell/telugu.alias
+share/aspell/te.dat
+share/aspell/u-telu.cset
+share/aspell/u-telu.cmap
