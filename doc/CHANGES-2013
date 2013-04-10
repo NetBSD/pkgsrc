@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1229 2013/04/10 21:06:23 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.1230 2013/04/10 21:11:32 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/grilo-plugins to 0.2.6 [drochner 2013-04-10]
 	Updated archivers/lzip to 1.14 [shattered 2013-04-10]
 	Updated databases/ruby-hiera to 1.1.2 [root 2013-04-10]
+	Updated sysutils/puppet to 3.1.1 [root 2013-04-10]
