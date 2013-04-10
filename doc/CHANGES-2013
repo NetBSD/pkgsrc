@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1226 2013/04/10 15:20:00 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.1227 2013/04/10 16:33:07 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1952,3 +1952,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/qt4-qscintilla to 2.7.1 [drochner 2013-04-10]
 	Updated security/gnutls to 3.0.29 [drochner 2013-04-10]
 	Updated security/libgcrypt to 1.5.1 [drochner 2013-04-10]
+	Updated print/foomatic4-filters to 4.0.17 [drochner 2013-04-10]
+	Updated editors/TeXmacs-devel to 1.0.7.19 [drochner 2013-04-10]
+	Updated audio/mp3check to 0.8.7 [drochner 2013-04-10]
+	Updated net/grilo to 0.2.5 [drochner 2013-04-10]
+	Updated net/grilo-plugins to 0.2.6 [drochner 2013-04-10]
