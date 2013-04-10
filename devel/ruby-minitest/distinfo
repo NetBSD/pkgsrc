@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/04/10 09:21:51 tonnerre Exp $
+
+SHA1 (minitest-4.7.0.gem) = 76547177c77594629ca77517c38325468f7a6f92
+RMD160 (minitest-4.7.0.gem) = 57ce2c7addf0c70119ec766d5cfb4c715e5fe1a6
+Size (minitest-4.7.0.gem) = 56320 bytes
+SHA1 (patch-aa) = 9c0d7429ca91b9d1b1f8cc4a6148b646f784095e
