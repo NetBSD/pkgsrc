@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/02/09 15:39:09 taca Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/10 21:06:02 tonnerre Exp $
 
-DISTNAME=	hiera-1.0.0
-CATEGORIES=	time
+DISTNAME=	hiera-1.1.2
+CATEGORIES=	database
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/puppetlabs/hiera/
