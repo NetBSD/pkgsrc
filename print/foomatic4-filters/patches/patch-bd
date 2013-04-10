@@ -1,0 +1,17 @@
+$NetBSD: patch-bd,v 1.1 2013/04/10 15:34:02 drochner Exp $
+
+--- renderer.c.orig	2012-07-02 14:50:46.000000000 +0000
++++ renderer.c
+@@ -39,10 +39,10 @@
+  */
+ int test_gs_output_redirection()
+ {
+-    char gstestcommand[PATH_MAX];
++    char gstestcommand[FM_CMDLINE_MAX];
+     char output[10] = "";
+ 
+-    snprintf(gstestcommand, PATH_MAX, "%s -dQUIET -dPARANOIDSAFER -dNOPAUSE "
++    snprintf(gstestcommand, FM_CMDLINE_MAX, "%s -dQUIET -dPARANOIDSAFER -dNOPAUSE "
+              "-dBATCH -dNOMEDIAATTRS -sDEVICE=ps2write -sstdout=%%stderr "
+              "-sOutputFile=/dev/null -c '(hello\n) print flush' 2>&1", gspath);
+ 

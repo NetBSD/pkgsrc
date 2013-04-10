@@ -1,0 +1,32 @@
+$NetBSD: patch-ba,v 1.1 2013/04/10 15:34:02 drochner Exp $
+
+avoid namespace problems
+
+--- foomaticrip.h.orig	2012-07-02 14:50:46.000000000 +0000
++++ foomaticrip.h
+@@ -33,6 +33,7 @@
+ #include <stddef.h>
+ #include <stdio.h>
+ #include <time.h>
++#include <limits.h>
+ 
+ /* This is the location of the debug logfile (and also the copy of the
+  * processed PostScript data) in case you have enabled debugging above.
+@@ -93,7 +94,7 @@
+ extern int spooler;
+ 
+ 
+-#define PATH_MAX 65536
++#define FM_CMDLINE_MAX 65536
+ 
+ typedef struct {
+     char printer[256];
+@@ -123,7 +124,7 @@ extern struct dstr *jclappend;
+ extern char **jclprepend;
+ extern int jobhasjcl;
+ extern const char *accounting_prolog;
+-extern char fileconverter[PATH_MAX];
++extern char fileconverter[FM_CMDLINE_MAX];
+ extern char cupsfilterpath[PATH_MAX];
+ extern int debug;
+ extern int do_docs;
