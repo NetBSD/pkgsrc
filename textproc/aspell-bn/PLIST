@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/10 17:50:41 rodent Exp $
+lib/aspell/bengali.alias
+lib/aspell/bn.multi
+lib/aspell/bn.rws
+share/aspell/bn.dat
+share/aspell/u-beng.cmap
+share/aspell/u-beng.cset
