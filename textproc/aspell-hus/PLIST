@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 11:39:25 rodent Exp $
+lib/aspell/hus.multi
+lib/aspell/hus.rws
+share/aspell/hus.dat
+share/aspell/hus_affix.dat
