@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 00:10:16 rodent Exp $
+lib/aspell/frisian.alias
+lib/aspell/frysk.alias
+lib/aspell/fy.multi
+lib/aspell/fy.rws
+share/aspell/fy.dat
+share/aspell/fy_affix.dat
+share/aspell/l-fy.cmap
+share/aspell/l-fy.cset
