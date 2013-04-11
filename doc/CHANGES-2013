@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1265 2013/04/11 11:58:16 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1266 2013/04/11 12:30:59 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2021,3 +2021,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/getopt to 1.1.5 [adam 2013-04-11]
 	Added textproc/aspell-ia version 0.50.1 [rodent 2013-04-11]
 	Added textproc/aspell-id version 1.2.0 [rodent 2013-04-11]
+	Added textproc/aspell-is version 0.51.1.0 [rodent 2013-04-11]
