@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2013/04/06 13:01:27 rodent Exp $
+# $NetBSD: Makefile,v 1.33 2013/04/11 19:57:52 joerg Exp $
 #
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xentools3-${VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -136,6 +136,16 @@ CONF_FILES_PERMS+=	${EGDIR}/${s} ${PKG_SYSCONFDIR}/scripts/${s}	\
 .endfor
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts /var/log/xen
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_HOSTCFLAGS+=	-Wno-error=ignored-attributes -Wno-error=format-security
+EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
+		-Wno-error=tautological-compare -Wno-error=null-dereference \
+		-Wno-error=self-assign -Wno-error=sometimes-uninitialized
+.endif
+
+MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 
 pre-build:
 .if !exists(/usr/include/xen/xenio.h)

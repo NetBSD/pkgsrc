@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/04/06 13:01:27 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/11 19:57:51 joerg Exp $
 #
 
 VERSION=	3.3.2
@@ -46,10 +46,18 @@ XENKERNELDIR=		${PREFIX}/${INSTALLATION_DIRS}
 
 MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
+		-Wno-error=parentheses-equality -Wno-error=enum-conversion \
+		-Wno-error=tautological-compare
+.endif
+
 do-build:
-	cd ${WRKSRC} && ${GMAKE} debug=n xen
+	cd ${WRKSRC} && EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} debug=n xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
-	cd ${WRKSRC} && ${GMAKE} clean && ${GMAKE} debug=y xen
+	cd ${WRKSRC} && ${GMAKE} clean
+	cd ${WRKSRC} && EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} debug=y xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
 
 do-install:

@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2011/12/07 15:22:59 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2013/04/11 19:57:52 joerg Exp $
 
 --- ../Config.mk.orig	2009-08-06 13:17:07.000000000 +0000
 +++ ../Config.mk
+@@ -15,7 +15,7 @@ SHELL     ?= /bin/sh
+ # Tools to run on system hosting the build
+ HOSTCC      = gcc
+ HOSTCFLAGS  = -Wall -Werror -Wstrict-prototypes -O2 -fomit-frame-pointer
+-HOSTCFLAGS += -fno-strict-aliasing
++HOSTCFLAGS += -fno-strict-aliasing ${EXTRA_HOSTCFLAGS}
+ 
+ DISTDIR     ?= $(XEN_ROOT)/dist
+ DESTDIR     ?= /
 @@ -66,7 +66,7 @@ CFLAGS += -Wall -Wstrict-prototypes
  
  # -Wunused-value makes GCC 4.x too aggressive for my taste: ignoring the
@@ -11,7 +20,16 @@ $NetBSD: patch-ab,v 1.2 2011/12/07 15:22:59 joerg Exp $
  
  HOSTCFLAGS += $(call cc-option,$(HOSTCC),-Wdeclaration-after-statement,)
  CFLAGS     += $(call cc-option,$(CC),-Wdeclaration-after-statement,)
-@@ -90,7 +90,7 @@ QEMU_REMOTE=http://xenbits.xensource.com
+@@ -74,6 +74,8 @@ CFLAGS     += $(call cc-option,$(CC),-Wd
+ LDFLAGS += $(foreach i, $(EXTRA_LIB), -L$(i)) 
+ CFLAGS += $(foreach i, $(EXTRA_INCLUDES), -I$(i))
+ 
++CFLAGS += $(EXTRA_CFLAGS)
++
+ # Enable XSM security module.  Enabling XSM requires selection of an 
+ # XSM security module (FLASK_ENABLE or ACM_SECURITY).
+ XSM_ENABLE ?= n
+@@ -90,7 +92,7 @@ QEMU_REMOTE=http://xenbits.xensource.com
  
  # Specify which qemu-dm to use. This may be `ioemu' to use the old
  # Mercurial in-tree version, or a local directory, or a git URL.
