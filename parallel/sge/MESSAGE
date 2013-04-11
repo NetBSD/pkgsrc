@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2009/05/13 21:00:25 markd Exp $
+$NetBSD: MESSAGE,v 1.5 2013/04/11 14:42:13 hauke Exp $
 
 You will need to add the following lines to /etc/services:
 
@@ -14,18 +14,5 @@ master node of the cluster, run:
 For the back-end compute nodes, run:
 
         cd ${SGE_ROOT} && ./install_execd
-
-Additionally, you will want to add the following lines in /etc/csh.cshrc:
-
-# Sun Grid Engine Setup
-if ( -f ${SGE_ROOT}/default/common/settings.csh  ) then
-        source ${SGE_ROOT}/default/common/settings.csh
-endif
-
-and the following in /etc/profile:
-
-if [ -f ${SGE_ROOT}/default/common/settings.sh ]; then
-        . ${SGE_ROOT}/default/common/settings.sh
-fi
 
 ===========================================================================
