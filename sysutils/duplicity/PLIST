@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2012/09/05 10:05:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/04/11 16:27:45 drochner Exp $
 bin/duplicity
 bin/rdiffdir
 ${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/duplicity/GnuPGInterface.py
-${PYSITELIB}/duplicity/GnuPGInterface.pyc
-${PYSITELIB}/duplicity/GnuPGInterface.pyo
 ${PYSITELIB}/duplicity/__init__.py
 ${PYSITELIB}/duplicity/__init__.pyc
 ${PYSITELIB}/duplicity/__init__.pyo
@@ -72,6 +69,9 @@ ${PYSITELIB}/duplicity/backends/u1backend.pyo
 ${PYSITELIB}/duplicity/backends/webdavbackend.py
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyc
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyo
+${PYSITELIB}/duplicity/cached_ops.py
+${PYSITELIB}/duplicity/cached_ops.pyc
+${PYSITELIB}/duplicity/cached_ops.pyo
 ${PYSITELIB}/duplicity/collections.py
 ${PYSITELIB}/duplicity/collections.pyc
 ${PYSITELIB}/duplicity/collections.pyo
@@ -108,6 +108,9 @@ ${PYSITELIB}/duplicity/globals.pyo
 ${PYSITELIB}/duplicity/gpg.py
 ${PYSITELIB}/duplicity/gpg.pyc
 ${PYSITELIB}/duplicity/gpg.pyo
+${PYSITELIB}/duplicity/gpginterface.py
+${PYSITELIB}/duplicity/gpginterface.pyc
+${PYSITELIB}/duplicity/gpginterface.pyo
 ${PYSITELIB}/duplicity/lazy.py
 ${PYSITELIB}/duplicity/lazy.pyc
 ${PYSITELIB}/duplicity/lazy.pyo

@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/04/11 16:27:45 drochner Exp $
+Depending on the storage backend used, additional packages micht be needed:
+-Amazon S3 needs pkgsrc/net/py-boto.
+-For ssh/scp, pkgsrc/security/py-paramiko is recommended.
+-For more options, see the manpage.
+===========================================================================
