@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 11:09:46 rodent Exp $
+lib/aspell/hi.multi
+lib/aspell/hi.rws
+lib/aspell/hindi.alias
+share/aspell/hi.dat
+share/aspell/hi_affix.dat
+share/aspell/hi_phonet.dat
+share/aspell/hi_repl.dat
+share/aspell/u-deva.cmap
+share/aspell/u-deva.cset
