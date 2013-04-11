@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12072 2013/04/11 09:39:06 khorben Exp $
+$NetBSD: TODO,v 1.12073 2013/04/11 11:31:40 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1057,7 +1057,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scilab-5.5.3
 	o scm-5e7
 	o scmcvs-1.12.13
-	o scribus-1.4.2
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scrotwm-0.11.0
