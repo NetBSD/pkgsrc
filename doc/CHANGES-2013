@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1263 2013/04/11 11:48:42 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1264 2013/04/11 11:51:08 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2019,3 +2019,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-docs to 1.8.2.1 [adam 2013-04-11]
 	Updated www/gitweb to 1.8.2.1 [adam 2013-04-11]
 	Updated misc/getopt to 1.1.5 [adam 2013-04-11]
+	Added textproc/aspell-ia version 0.50.1 [rodent 2013-04-11]
