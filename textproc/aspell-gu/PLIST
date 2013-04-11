@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 03:43:31 rodent Exp $
+lib/aspell/gu.multi
+lib/aspell/gu.rws
+lib/aspell/gujarati.alias
+share/aspell/gu.dat
+share/aspell/u-gujr.cmap
+share/aspell/u-gujr.cset
