@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 00:02:11 rodent Exp $
+lib/aspell/estonian.alias
+lib/aspell/et.multi
+lib/aspell/et.rws
+share/aspell/et.dat
+share/aspell/et_affix.dat
