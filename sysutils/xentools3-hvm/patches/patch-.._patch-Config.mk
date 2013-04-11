@@ -1,4 +1,4 @@
-$NetBSD: patch-.._patch-Config.mk,v 1.2 2013/04/11 19:57:52 joerg Exp $
+$NetBSD: patch-.._patch-Config.mk,v 1.1 2013/04/11 19:57:52 joerg Exp $
 
 --- ../Config.mk.orig	2011-12-07 10:40:48.000000000 +0000
 +++ ../Config.mk

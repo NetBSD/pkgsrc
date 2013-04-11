@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 19:51:36 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/11 19:57:52 joerg Exp $
 #
 
 VERSION=		3.1.4
@@ -77,6 +77,16 @@ CONF_FILES_PERMS+=	${EGDIR}/qemu-ifup ${PKG_SYSCONFDIR}/scripts/qemu-ifup \
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts
 
 INSTALLATION_DIRS=	${EGDIR}
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_HOSTCFLAGS+=	-Wno-error=ignored-attributes -Wno-error=format-security
+EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
+		-Wno-error=tautological-compare -Wno-error=null-dereference \
+		-Wno-error=self-assign -Wno-error=sometimes-uninitialized
+.endif
+
+MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 
 pre-build:
 .if !exists(/usr/include/xen/xenio.h)

@@ -1,4 +1,4 @@
-$NetBSD: patch-cw,v 1.2 2007/12/03 21:54:30 bouyer Exp $
+$NetBSD: patch-cw,v 1.3 2013/04/11 19:57:51 joerg Exp $
 
 --- Config.mk.orig	2007-11-21 13:26:05.000000000 +0100
 +++ Config.mk	2007-11-21 13:26:40.000000000 +0100
@@ -12,3 +12,14 @@ $NetBSD: patch-cw,v 1.2 2007/12/03 21:54:30 bouyer Exp $
  XEN_TARGET_ARCH     ?= $(XEN_COMPILE_ARCH)
  XEN_OS              ?= $(shell uname -s)
  
+@@ -72,8 +73,8 @@ CFLAGS += -Wall -Wstrict-prototypes
+ # result of any casted expression causes a warning.
+ CFLAGS += -Wno-unused-value
+ 
+-HOSTCFLAGS += $(call cc-option,$(HOSTCC),-Wdeclaration-after-statement,)
+-CFLAGS     += $(call cc-option,$(CC),-Wdeclaration-after-statement,)
++HOSTCFLAGS += $(call cc-option,$(HOSTCC),-Wdeclaration-after-statement,) ${EXTRA_CFLAGS}
++CFLAGS     += $(call cc-option,$(CC),-Wdeclaration-after-statement,) ${EXTRA_CFLAGS}
+ 
+ LDFLAGS += $(foreach i, $(EXTRA_LIB), -L$(i)) 
+ CFLAGS += $(foreach i, $(EXTRA_INCLUDES), -I$(i))

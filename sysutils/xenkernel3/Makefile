@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2012/10/23 19:51:36 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/11 19:57:51 joerg Exp $
 #
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel3-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -57,18 +57,28 @@ XENKERNELDIR=		${PREFIX}/xen3-kernel
 
 MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -Wno-error=format \
+		-Wno-error=tautological-compare \
+		-Wno-error=parentheses-equality \
+		-Wno-error=sometimes-uninitialized -no-integrated-as \
+		-ffreestanding
+.endif
+
 do-build:
-	cd ${WRKSRC} && ${GMAKE} XEN_TARGET_X86_PAE=n debug=n xen
+	cd ${WRKSRC} && \
+	    EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} XEN_TARGET_X86_PAE=n debug=n xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
 	cd ${WRKSRC} && ${GMAKE} clean && \
-	    ${GMAKE} XEN_TARGET_X86_PAE=n debug=y xen
+	    EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} XEN_TARGET_X86_PAE=n debug=y xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
 .if  ${MACHINE_ARCH} == "i386"
 	cd ${WRKSRC} && ${GMAKE} clean && \
-	    ${GMAKE} XEN_TARGET_X86_PAE=y debug=n xen
+	    EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} XEN_TARGET_X86_PAE=y debug=n xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-PAE.gz
 	cd ${WRKSRC} && ${GMAKE} clean && \
-	    ${GMAKE} XEN_TARGET_X86_PAE=y debug=y xen
+	    EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} XEN_TARGET_X86_PAE=y debug=y xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-PAE-debug.gz
 .endif
 
