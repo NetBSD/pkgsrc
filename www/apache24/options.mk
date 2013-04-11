@@ -1,8 +1,12 @@
-# $NetBSD: options.mk,v 1.6 2012/08/26 12:37:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.7 2013/04/11 11:01:09 fhajny Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=		lua suexec apache-mpm-event apache-mpm-prefork apache-mpm-worker
 PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
+
+.if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.1[0-9])
+PKG_SUPPORTED_OPTIONS+=		privileges
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -70,3 +74,10 @@ PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--disable-lua
 .endif
+
+PLIST_VARS+=		privileges
+.if !empty(PKG_OPTIONS:Mprivileges)
+CONFIGURE_ARGS+=	--enable-privileges
+PLIST.privileges=	yes
+.endif
+
