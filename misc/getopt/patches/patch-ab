@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/12/26 15:55:39 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2013/04/11 11:45:44 adam Exp $
 
---- Makefile.orig	2003-01-23 21:52:29.000000000 +0100
+--- Makefile.orig	2012-08-12 09:07:43.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
  .SUFFIXES:
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/12/26 15:55:39 wiz Exp $
  bindir=$(prefix)/bin
  mandir=$(prefix)/man
  man1dir=$(mandir)/man1
-@@ -11,7 +11,7 @@ getoptdir=$(libdir)/getopt
+@@ -10,7 +10,7 @@ getoptdir=$(sharedir)/getopt
  localedir=$(sharedir)/locale
  
  # Define this to 0 to use the getopt(3) routines in this package.
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/12/26 15:55:39 wiz Exp $
  
  # Define this to 1 if you do not have the gettext routines
  WITHOUT_GETTEXT=0
-@@ -20,8 +20,6 @@ WITHOUT_GETTEXT=0
+@@ -23,8 +23,6 @@ UNLIKELYNAME=a8vwjfd92
  
  SHELL=/bin/sh
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/12/26 15:55:39 wiz Exp $
  RM=rm -f
  INSTALL=install
  MSGFMT=msgfmt
-@@ -39,8 +37,7 @@ WARNINGS=-Wall \
+@@ -42,8 +40,7 @@ WARNINGS=-Wall \
           -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes \
           -Wnested-externs -Winline
  OPTIMIZE=-O3 -fno-strength-reduce
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/12/26 15:55:39 wiz Exp $
  
  sources=getopt.c
  ifeq ($(LIBCGETOPT),0)
-@@ -58,7 +55,7 @@ clean: clean_po
+@@ -61,7 +58,7 @@ clean: clean_po
  	-$(RM) $(objects) $(binaries) 
  
  getopt: $(objects)
