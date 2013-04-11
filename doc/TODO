@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12070 2013/04/10 20:56:49 shattered Exp $
+$NetBSD: TODO,v 1.12071 2013/04/11 02:00:58 rodent Exp $
 
 Suggested new packages
 ======================
@@ -398,8 +398,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o arping-2.13
 	o asapm-3.1
 	o asc-2.5.0
-	o aspell-faroese-0.4.0
-	o aspell-norwegian-2.0.10
+	o aspell-fo-0.4.0
+	o aspell-nb-2.0.10
 	o astyle-1.15.3
 	o asymptote-2.21
 	o atari800-3.0.0
