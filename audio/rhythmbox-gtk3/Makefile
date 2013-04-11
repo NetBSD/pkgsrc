@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/02/16 11:20:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/11 11:30:58 drochner Exp $
 #
 
-DISTNAME=	rhythmbox-2.98
-PKGREVISION=	3
+DISTNAME=	rhythmbox-2.99
 CATEGORIES=	audio gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/2.98/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/2.99/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -34,18 +33,16 @@ CONFIGURE_ARGS+=	--disable-fm-radio
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 # needs introspection support
-BUILDLINK_API_DEPENDS.gstreamer0.10+=  gstreamer0.10>=0.10.36nb5
-BUILDLINK_API_DEPENDS.gst-plugins0.10-base+= gst-plugins0.10-base>=0.10.36nb5
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gstreamer1+=  gstreamer1>=1.0.6
+BUILDLINK_API_DEPENDS.gst-plugins1-base+= gst-plugins1-base>=1.0.6
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 BUILDLINK_API_DEPENDS.totem-pl-parser+= totem-pl-parser>=3.2.0
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.16.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
