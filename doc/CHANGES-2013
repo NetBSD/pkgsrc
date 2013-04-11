@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1258 2013/04/11 11:26:55 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1259 2013/04/11 11:31:40 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2006,4 +2006,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-hi version 0.02.0 [rodent 2013-04-11]
 	Added textproc/aspell-hil version 0.11.0 [rodent 2013-04-11]
 	Added textproc/aspell-hr version 0.51.0 [rodent 2013-04-11]
+	Updated print/scribus-qt4 to 1.4.2 [drochner 2013-04-11]
+	Updated multimedia/ffmpeg010 to 20130410.0.10.7 [drochner 2013-04-11]
 	Added textproc/aspell-hsb version 0.02.0 [rodent 2013-04-11]
+	Updated multimedia/gst-plugins1-libav to 1.0.6 [drochner 2013-04-11]
+	Updated audio/rhythmbox-gtk3 to 2.99 [drochner 2013-04-11]
