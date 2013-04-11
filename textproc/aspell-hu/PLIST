@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 11:33:16 rodent Exp $
+lib/aspell/hu.multi
+lib/aspell/hu.rws
+lib/aspell/hungarian.alias
+share/aspell/hu.dat
+share/aspell/hu_affix.dat
