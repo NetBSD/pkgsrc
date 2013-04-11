@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.4 2013/04/11 16:27:45 drochner Exp $
+
+prepare for SUBST
+
+--- duplicity/gpginterface.py.orig	2013-01-23 14:35:56.000000000 +0000
++++ duplicity/gpginterface.py
+@@ -281,7 +281,7 @@ class GnuPG:
+     """
+ 
+     def __init__(self):
+-        self.call = 'gpg'
++        self.call = '@GPGPATH@'
+         self.passphrase = None
+         self.options = Options()
+ 
