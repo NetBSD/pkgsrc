@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 00:27:28 rodent Exp $
+lib/aspell/galician.alias
+lib/aspell/gl-minimos.alias
+lib/aspell/gl.multi
+lib/aspell/gl.rws
+share/aspell/gl.dat
+share/aspell/gl_affix.dat
+share/aspell/gl_phonet.dat
