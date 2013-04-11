@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1270 2013/04/11 16:57:09 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1271 2013/04/11 17:01:43 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2027,3 +2027,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-kn version 0.01.1 [rodent 2013-04-11]
 	Added textproc/aspell-ku version 0.20.1 [rodent 2013-04-11]
 	Added textproc/aspell-ky version 0.01.0 [rodent 2013-04-11]
+	Added textproc/aspell-la version 20020503.0 [rodent 2013-04-11]
