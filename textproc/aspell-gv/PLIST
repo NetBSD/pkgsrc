@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 10:56:04 rodent Exp $
+lib/aspell/gaelg.alias
+lib/aspell/gv.multi
+lib/aspell/gv.rws
+lib/aspell/manx.alias
+share/aspell/gv.dat
