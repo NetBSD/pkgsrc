@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1262 2013/04/11 11:46:14 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1263 2013/04/11 11:48:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1939,7 +1939,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk10 to 10.12.2 [jnemeth 2013-04-09]
 	Updated comms/asterisk to 11.2.2 [jnemeth 2013-04-09]
 	Added textproc/aspell-fi version 0.7.0 [rodent 2013-04-10]
-	Added textproc/aspell-te version 0.01.2 [rodent 2013-04-11]
+	Added textproc/aspell-te version 0.01.2 [rodent 2013-04-10]
 	Added devel/ruby-io-console version 0.4.2 [tonnerre 2013-04-10]
 	Added devel/ruby-minitest version 4.7.0 [tonnerre 2013-04-10]
 	Added security/ruby-shadow version 2.2.0 [tonnerre 2013-04-10]
@@ -2014,3 +2014,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-hu version 0.99.4.2.0 [rodent 2013-04-11]
 	Added textproc/aspell-hus version 0.03.1 [rodent 2013-04-11]
 	Added textproc/aspell-hy version 0.10.0.0 [rodent 2013-04-11]
+	Updated devel/scmgit to 1.8.2.1 [adam 2013-04-11]
+	Updated devel/scmgit-base to 1.8.2.1 [adam 2013-04-11]
+	Updated devel/scmgit-docs to 1.8.2.1 [adam 2013-04-11]
+	Updated www/gitweb to 1.8.2.1 [adam 2013-04-11]
+	Updated misc/getopt to 1.1.5 [adam 2013-04-11]
