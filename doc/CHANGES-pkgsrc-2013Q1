@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.5 2013/04/09 10:39:10 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.6 2013/04/11 22:13:43 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -29,3 +29,11 @@ databases/postgresql92: security update
 databases/postgresql92-client: security update
 databases/postgresql92-docs: security update
 databases/postgresql92-server: security update
+Pullup ticket #4114 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
+Pullup ticket #4115 - requested by obache
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4116 - requested by jnemeth
+comms/asterisk: security update
+comms/asterisk10: security update
+comms/asterisk18: security update
