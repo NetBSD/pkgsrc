@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 03:31:21 rodent Exp $
+lib/aspell/grc.multi
+lib/aspell/grc.rws
+share/aspell/grc.dat
+share/aspell/l-grc.cmap
+share/aspell/l-grc.cset
