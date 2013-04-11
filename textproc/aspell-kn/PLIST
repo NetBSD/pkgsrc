@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 16:44:58 rodent Exp $
+lib/aspell/kannada.alias
+lib/aspell/kn.multi
+lib/aspell/kn.rws
+share/aspell/kn.dat
+share/aspell/u-knda.cmap
+share/aspell/u-knda.cset
