@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.28 2012/04/07 13:10:56 bsiegert Exp $
+$NetBSD: distinfo,v 1.29 2013/04/11 19:57:52 joerg Exp $
 
 SHA1 (xen-3.3.2.tar.gz) = 7f438e73ac81b25cf5e1570709e87001066bafe4
 RMD160 (xen-3.3.2.tar.gz) = 28faa56286f2a418e35dcba6079570ea871d6c7b
 Size (xen-3.3.2.tar.gz) = 11357576 bytes
 SHA1 (patch-CVE-2011-1583) = c9f59d9fbb20f0cb76733a4c2d136a67253cae0a
 SHA1 (patch-aa) = 74c3023e39baf488f8bae060e93f6175b32df61a
-SHA1 (patch-ab) = a73636bf27ad45fbdda791cb2b65254d26a5b899
+SHA1 (patch-ab) = 393c908858c81e526462a07de9b38fb449d294c3
 SHA1 (patch-ac) = 70af1b1a787b9dad9e41a2ffe14d595c6797b4d7
 SHA1 (patch-ad) = ccd63ed718e5ba3a742f181ae84af82e85f2f0c4
 SHA1 (patch-ae) = bb7116a71bf6637591b639511f055836a13d9887
@@ -27,6 +27,7 @@ SHA1 (patch-bh) = a072c1e2dd21aa284303b5fcc7eae5ff841a5fbc
 SHA1 (patch-bi) = 49c1b77b451b63cfe3a1fded7f6d0410d4c3cf92
 SHA1 (patch-bj) = 4c6b6a73d3ea5fb2c57b12dd4651f59024119276
 SHA1 (patch-bk) = a79256edc3dc2a5f4bcdbe1a2d14037ad74f11de
+SHA1 (patch-blktap_drivers_block-qcow.c) = 035411d811171fea46c8dec6534018370ef22e14
 SHA1 (patch-blktaplib_h) = a37ecaaefcd694be54bb75163339650be69f9250
 SHA1 (patch-ca) = b62ec8f0db5e65d737d1aaf3bd44580f5969328b
 SHA1 (patch-cb) = 9b7834e367a1820f28c0c1053d3f351751a12283
@@ -56,6 +57,7 @@ SHA1 (patch-fe) = 85d42672766fe8ce2dc7f745938722710c6ee5a3
 SHA1 (patch-ff) = 6ff97fa4f34f29c276e4aaab4b4db9ccf7b09957
 SHA1 (patch-fg) = 913295d341c1dd5bf4d1ef78f27520920f138d4c
 SHA1 (patch-io_ring_h) = 83b01462d5d2b48b4f97b3d9a7980aa3300ad0b3
+SHA1 (patch-ioemu_block-vvfat.c) = 4e6d998fe2c006bb68caaf8e1d11e641319ff5c2
 SHA1 (patch-python_xen_util_xmlrpcclient.py) = 2f983bc67930b86b538743dab6bc81d9aacc6b35
 SHA1 (patch-python_xen_util_xmlrpclib2.py) = 4977ebd86c7d76e1dc861c0f839c506446e384a5
 SHA1 (patch-qemu-e1000-CVSE-2012-0029) = 8628504e1dfd013254f816cb4feeb7548b9ad2ec
