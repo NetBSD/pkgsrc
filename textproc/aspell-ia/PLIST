@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 11:50:55 rodent Exp $
+lib/aspell/ia.multi
+lib/aspell/ia.rws
+lib/aspell/interlingua.alias
+share/aspell/ia.dat
