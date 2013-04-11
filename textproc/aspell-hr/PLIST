@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 11:21:49 rodent Exp $
+lib/aspell/croatian.alias
+lib/aspell/hr.multi
+lib/aspell/hr.rws
+share/aspell/hr.dat
