@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1266 2013/04/11 12:30:59 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1267 2013/04/11 16:30:09 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2022,3 +2022,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-ia version 0.50.1 [rodent 2013-04-11]
 	Added textproc/aspell-id version 1.2.0 [rodent 2013-04-11]
 	Added textproc/aspell-is version 0.51.1.0 [rodent 2013-04-11]
+	Updated sysutils/duplicity to 0.6.21 [drochner 2013-04-11]
+	Updated security/py-paramiko to 1.10.1 [drochner 2013-04-11]
