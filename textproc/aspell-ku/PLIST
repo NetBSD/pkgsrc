@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 16:50:38 rodent Exp $
+lib/aspell/ku.multi
+lib/aspell/ku.rws
+lib/aspell/kurdi.alias
+lib/aspell/kurdish.alias
+share/aspell/ku.dat
