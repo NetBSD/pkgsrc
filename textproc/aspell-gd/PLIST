@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 00:19:47 rodent Exp $
+lib/aspell/gaidhlig.alias
+lib/aspell/gd.multi
+lib/aspell/gd.rws
+share/aspell/gd.dat
+share/aspell/gd_phonet.dat
