@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 23:56:25 rodent Exp $
+lib/aspell/ml.multi
+lib/aspell/ml.rws
+share/aspell/ml.dat
+share/aspell/u-mlym.cmap
+share/aspell/u-mlym.cset
