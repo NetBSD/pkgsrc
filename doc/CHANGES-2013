@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1255 2013/04/11 11:09:59 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1256 2013/04/11 11:16:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-gv version 0.50.0 [rodent 2013-04-11]
 	Added textproc/aspell-he version 1.0.0 [rodent 2013-04-11]
 	Added textproc/aspell-hi version 0.02.0 [rodent 2013-04-11]
+	Added textproc/aspell-hil version 0.11.0 [rodent 2013-04-11]
