@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1231 2013/04/10 21:13:31 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.1232 2013/04/11 00:34:01 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1960,3 +1960,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/lzip to 1.14 [shattered 2013-04-10]
 	Updated databases/ruby-hiera to 1.1.2 [tonnerre 2013-04-10]
 	Updated sysutils/puppet to 3.1.1 [tonnerre 2013-04-10]
+	Updated textproc/p5-Text-Aspell to 0.09nb5 [rodent 2013-04-11]
