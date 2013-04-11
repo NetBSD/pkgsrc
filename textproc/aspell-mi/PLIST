@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 23:42:18 rodent Exp $
+lib/aspell/maori.alias
+lib/aspell/mi.multi
+lib/aspell/mi.rws
+share/aspell/mi.dat
