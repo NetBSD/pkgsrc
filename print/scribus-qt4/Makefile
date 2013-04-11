@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2013/02/16 11:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/11 11:23:22 drochner Exp $
 
-DISTNAME=		scribus-1.4.1
-PKGREVISION=		9
+DISTNAME=		scribus-1.4.2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scribus/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scribus.net/
 COMMENT=		Publishing layout with graphical interface
 
-WRKSRC=			${WRKDIR}/Scribus
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake perl pkg-config
@@ -18,13 +16,8 @@ PTHREAD_OPTS+=		require
 SHLIBTOOL_OVERRIDE=	# empty
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DPNG_LIBRARY_RELEASE=${LOCALBASE}/lib
-CONFIGURE_ARGS+=	--enable-cairo
-CONFIGURE_ARGS+=	--with-extra-includes=${PREFIX}/include
-CONFIGURE_ARGS+=	--with-extra-libs=${PREFIX}/lib
-CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
-CONFIGURE_ARGS+=	--with-pythondir=${PREFIX}
-# XXX make an option
-CONFIGURE_ARGS+=	--disable-cups
+# XXX not yet
+#CMAKE_ARGS+=	-DWITH_ASPELL:BOOL=OFF -DWANT_HUNSPELL:BOOL=ON
 
 INSTALLATION_DIRS+=	share/pixmaps
 
@@ -44,6 +37,7 @@ BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
+#.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
