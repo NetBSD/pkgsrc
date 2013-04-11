@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/11 16:54:33 rodent Exp $
+lib/aspell/kirghiz.alias
+lib/aspell/ky.multi
+lib/aspell/ky.rws
+share/aspell/ky.dat
+share/aspell/ky_affix.dat
+share/aspell/l-ky.cmap
+share/aspell/l-ky.cset
