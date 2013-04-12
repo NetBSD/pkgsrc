@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 00:01:31 rodent Exp $
+lib/aspell/mn.multi
+lib/aspell/mn.rws
+lib/aspell/mongolian.alias
+share/aspell/l-mn.cmap
+share/aspell/l-mn.cset
+share/aspell/mn.dat
+share/aspell/mn_affix.dat
