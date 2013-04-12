@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/12 14:31:17 schmonz Exp $
+
+SHA1 (Env-Path-0.18.tar.gz) = c4fea30529b26c3b8d6e6568243a28054e709d8a
+RMD160 (Env-Path-0.18.tar.gz) = ac3e488e9a3bb6e25744076467b75a3195e1d963
+Size (Env-Path-0.18.tar.gz) = 10411 bytes
