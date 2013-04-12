@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 10:50:37 rodent Exp $
+lib/aspell/or.multi
+lib/aspell/or.rws
+lib/aspell/oriya.alias
+share/aspell/or.dat
+share/aspell/u-orya.cmap
+share/aspell/u-orya.cset
