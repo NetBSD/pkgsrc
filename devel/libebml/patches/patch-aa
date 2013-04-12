@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2011/03/18 12:42:24 adam Exp $
+$NetBSD: patch-aa,v 1.14 2013/04/12 13:35:21 drochner Exp $
 
---- make/linux/Makefile.orig	2011-03-18 12:15:07.000000000 +0000
+--- make/linux/Makefile.orig	2013-03-21 12:07:39.000000000 +0000
 +++ make/linux/Makefile
 @@ -16,16 +16,16 @@ prefix=/boot/home/config
  else
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.13 2011/03/18 12:42:24 adam Exp $
  LIBRARY=libebml.a
 -LIBRARY_SO=libebml.so
 +LIBRARY_SO=libebml.la
- LIBRARY_SO_VER=libebml.so.3
+ LIBRARY_SO_VER=libebml.so.4
  
  # source-files
 @@ -84,16 +84,14 @@ lib:
