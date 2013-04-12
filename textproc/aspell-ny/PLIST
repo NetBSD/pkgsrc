@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 10:45:24 rodent Exp $
+lib/aspell/chewa.alias
+lib/aspell/chichewa.alias
+lib/aspell/ny.multi
+lib/aspell/ny.rws
+lib/aspell/nyanja.alias
+share/aspell/ny.dat
