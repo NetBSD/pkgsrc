@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1724 2013/04/12 14:33:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.1725 2013/04/12 14:35:07 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1160,6 +1160,7 @@ SUBDIR+=	p5-Test-Distribution
 SUBDIR+=	p5-Test-Exception
 SUBDIR+=	p5-Test-Expect
 SUBDIR+=	p5-Test-Fatal
+SUBDIR+=	p5-Test-File
 SUBDIR+=	p5-Test-File-Contents
 SUBDIR+=	p5-Test-File-ShareDir
 SUBDIR+=	p5-Test-Fixture-DBIC-Schema
