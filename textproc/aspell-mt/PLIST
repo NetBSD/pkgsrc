@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 10:31:25 rodent Exp $
+lib/aspell/maltese.alias
+lib/aspell/malti.alias
+lib/aspell/mt.multi
+lib/aspell/mt.rws
+share/aspell/mt.dat
+share/aspell/mt_phonet.dat
