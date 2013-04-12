@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
+$NetBSD: patch-al,v 1.10 2013/04/12 09:03:41 adam Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
 - honor pkgsrc LDFLAGS
 - other stuff not previously commented (XXX)
 
---- configure.orig	2012-04-09 23:07:36.000000000 +0000
+--- configure.orig	2013-04-06 14:02:41.000000000 +0000
 +++ configure
-@@ -3019,7 +3019,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3243,7 +3243,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -16,7 +16,7 @@ $NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -4920,15 +4920,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5342,15 +5342,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -33,7 +33,7 @@ $NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -7648,9 +7643,9 @@ then
+@@ -8214,9 +8209,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -46,7 +46,7 @@ $NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -7674,15 +7669,15 @@ then
+@@ -8240,15 +8235,15 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -66,7 +66,7 @@ $NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -7710,9 +7705,15 @@ then
+@@ -8276,9 +8271,15 @@ then
  				   ;;
  				esac
  		fi;;
@@ -82,7 +82,7 @@ $NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -7756,7 +7757,8 @@ then
+@@ -8322,7 +8323,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -92,7 +92,7 @@ $NetBSD: patch-al,v 1.9 2012/12/21 20:26:42 dholland Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7808,11 +7810,12 @@ then
+@@ -8374,11 +8376,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;

@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.7 2011/11/08 07:30:08 sbd Exp $
+$NetBSD: patch-am,v 1.8 2013/04/12 09:03:41 adam Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -19,10 +19,10 @@ headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
 
---- setup.py.orig	2011-06-11 15:46:28.000000000 +0000
+--- setup.py.orig	2013-04-06 14:02:41.000000000 +0000
 +++ setup.py
-@@ -21,7 +21,7 @@ from distutils.spawn import find_executa
- COMPILED_WITH_PYDEBUG = hasattr(sys, 'gettotalrefcount')
+@@ -33,7 +33,7 @@ host_platform = get_platform()
+ COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
@@ -30,7 +30,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -368,9 +368,15 @@ class PyBuildExt(build_ext):
+@@ -436,9 +436,15 @@ class PyBuildExt(build_ext):
              os.unlink(tmpfile)
  
      def detect_modules(self):
@@ -49,7 +49,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -715,9 +721,7 @@ class PyBuildExt(build_ext):
+@@ -794,9 +800,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -60,7 +60,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -832,172 +836,6 @@ class PyBuildExt(build_ext):
+@@ -915,175 +919,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -95,6 +95,9 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -            db_inc_paths.append('/pkg/db-3.%d/include' % x)
 -            db_inc_paths.append('/opt/db-3.%d/include' % x)
 -
+-        if cross_compiling:
+-            db_inc_paths = []
+-
 -        # Add some common subdirectories for Sleepycat DB to the list,
 -        # based on the standard include directories. This way DB3/4 gets
 -        # picked up when it is installed in a non-standard prefix and
@@ -115,7 +118,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -
 -        db_ver_inc_map = {}
 -
--        if sys.platform == 'darwin':
+-        if host_platform == 'darwin':
 -            sysroot = macosx_sdk_root()
 -
 -        class db_found(Exception): pass
@@ -125,7 +128,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -            for d in inc_dirs + db_inc_paths:
 -                f = os.path.join(d, "db.h")
 -
--                if sys.platform == 'darwin' and is_macosx_sdk_path(d):
+-                if host_platform == 'darwin' and is_macosx_sdk_path(d):
 -                    f = os.path.join(sysroot, d[1:], "db.h")
 -
 -                if db_setup_debug: print "db: looking for db.h in", f
@@ -175,7 +178,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -                    db_incdir.replace("include", 'lib'),
 -                ]
 -
--                if sys.platform != 'darwin':
+-                if host_platform != 'darwin':
 -                    db_dirs_to_check = filter(os.path.isdir, db_dirs_to_check)
 -
 -                else:
@@ -233,13 +236,13 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1113,35 +951,40 @@ class PyBuildExt(build_ext):
+@@ -1201,35 +1036,39 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
 -        f = "/usr/include/db.h"
 -
--        if sys.platform == 'darwin':
+-        if host_platform == 'darwin':
 -            if is_macosx_sdk_path(f):
 -                sysroot = macosx_sdk_root()
 -                f = os.path.join(sysroot, f[1:])
@@ -252,7 +255,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -                ### XXX this should be fixed to not be platform-dependent
 -                ### but I don't have direct access to an osf1 platform and
 -                ### seemed to be muffing the search somehow
--                libraries = platform == "osf1" and ['db'] or None
+-                libraries = host_platform == "osf1" and ['db'] or None
 -                if libraries is not None:
 -                    exts.append(Extension('bsddb185', ['bsddbmodule.c'],
 -                                          libraries=libraries))
@@ -270,8 +273,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
-         if platform not in ['cygwin']:
-+
+         if host_platform not in ['cygwin']:
 +            ## Top half based on find_file
 +            def find_ndbm_h(dirs):
 +                ret = None
@@ -298,16 +300,16 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1153,7 +996,7 @@ class PyBuildExt(build_ext):
+@@ -1241,7 +1080,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
 -                    if find_file("ndbm.h", inc_dirs, []) is not None:
 +                    if find_ndbm_h(inc_dirs) is not None:
-                         # Some systems have -lndbm, others don't
+                         # Some systems have -lndbm, others have -lgdbm_compat,
+                         # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-                                                                'ndbm'):
-@@ -1193,18 +1036,14 @@ class PyBuildExt(build_ext):
+@@ -1285,18 +1124,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
                  elif cand == "bdb":
@@ -334,7 +336,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2066,9 +1905,9 @@ def main():
+@@ -2176,9 +2011,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
