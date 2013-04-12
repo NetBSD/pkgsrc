@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST.base,v 1.4 2013/01/27 05:25:03 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
 bin/hp-align
 bin/hp-check
-bin/hp-check-plugin
 bin/hp-clean
 bin/hp-colorcal
 bin/hp-config_usb_printer
 bin/hp-devicesettings
 bin/hp-diagnose_plugin
 bin/hp-diagnose_queues
+bin/hp-doctor
 bin/hp-fab
 bin/hp-faxsetup
 bin/hp-firmware
@@ -128,6 +128,10 @@ share/hplip/base/models.py
 share/hplip/base/models.pyc
 share/hplip/base/module.py
 share/hplip/base/module.pyc
+share/hplip/base/os_utils.py
+share/hplip/base/os_utils.pyc
+share/hplip/base/password.py
+share/hplip/base/password.pyc
 share/hplip/base/pexpect.py
 share/hplip/base/pexpect.pyc
 share/hplip/base/pkit.py
@@ -136,8 +140,12 @@ share/hplip/base/pml.py
 share/hplip/base/pml.pyc
 share/hplip/base/queues.py
 share/hplip/base/queues.pyc
+share/hplip/base/services.py
+share/hplip/base/services.pyc
 share/hplip/base/slp.py
 share/hplip/base/slp.pyc
+share/hplip/base/smart_install.py
+share/hplip/base/smart_install.pyc
 share/hplip/base/status.py
 share/hplip/base/status.pyc
 share/hplip/base/strings.py
@@ -205,6 +213,8 @@ share/hplip/diagnose_plugin.py
 share/hplip/diagnose_plugin.pyc
 share/hplip/diagnose_queues.py
 share/hplip/diagnose_queues.pyc
+share/hplip/doctor.py
+share/hplip/doctor.pyc
 share/hplip/fab.py
 share/hplip/fab.pyc
 share/hplip/faxsetup.py
@@ -224,6 +234,8 @@ share/hplip/installer/core_install.pyc
 share/hplip/installer/dcheck.py
 share/hplip/installer/dcheck.pyc
 share/hplip/installer/distros.dat
+share/hplip/installer/pluginhandler.py
+share/hplip/installer/pluginhandler.pyc
 share/hplip/levels.py
 share/hplip/levels.pyc
 share/hplip/linefeedcal.py
@@ -496,7 +508,7 @@ share/hplip/ppd/HP/hp-designjet_t770_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t770ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_44in-ps.ppd.gz
-share/hplip/ppd/HP/hp-designjet_t800_t2000_premium-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_z5200_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6200_42in_photo-ps.ppd.gz
@@ -1002,7 +1014,7 @@ share/hplip/ppd/HP/hp-laserjet_4000_series-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_4000_series-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_4000_series-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_400_m401-ps.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_400_m401d-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_400_m401dne-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_400_mfp_m425-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_4050_series-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_4050_series-pcl3.ppd.gz
@@ -1059,7 +1071,6 @@ share/hplip/ppd/HP/hp-laserjet_5000_series-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_500_color_m551-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_500_color_mfp_m570-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_500_color_mfp_m575-ps.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_500_mfp_m521-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_500_mfp_m525-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_5100_series-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_5100_series-pcl3.ppd.gz
@@ -1221,7 +1232,6 @@ share/hplip/ppd/HP/hp-laserjet_m9059_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m521-ps.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_mfp_m725-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1005-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1005.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1006-hpijs.ppd.gz
@@ -1464,6 +1474,8 @@ share/hplip/ppd/HP/hp-officejet_7000_e809a_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7100_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7100_series.ppd.gz
+share/hplip/ppd/HP/hp-officejet_7110_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_7110_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7200_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7200_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7300_series-hpijs.ppd.gz
@@ -1932,5 +1944,4 @@ share/hplip/upgrade.py
 share/hplip/upgrade.pyc
 share/hplip/wificonfig.py
 share/hplip/wificonfig.pyc
-@pkgdir share/examples/hplip/log/hp
 @pkgdir share/examples/hplip/log/hp/tmp
