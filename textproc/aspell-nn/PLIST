@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 10:40:41 rodent Exp $
+lib/aspell/nn.multi
+lib/aspell/nn.rws
+lib/aspell/nynorsk.alias
+share/aspell/nn.dat
