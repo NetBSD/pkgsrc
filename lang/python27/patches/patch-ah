@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+$NetBSD: patch-ah,v 1.2 2013/04/12 09:03:41 adam Exp $
 
---- Modules/_cursesmodule.c.orig	2010-05-15 22:19:27.000000000 +0000
+--- Modules/_cursesmodule.c.orig	2013-04-06 14:02:36.000000000 +0000
 +++ Modules/_cursesmodule.c
 @@ -322,17 +322,9 @@ Window_NoArg2TupleReturnFunction(getpary
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  Window_OneArgNoReturnFunction(notimeout, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(scrollok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(winsdelln, int, "i;nlines")
-@@ -2108,7 +2100,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
+@@ -2110,7 +2102,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
  }
  #endif /* HAVE_CURSES_IS_TERM_RESIZED */
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  static PyObject *
  PyCurses_KeyName(PyObject *self, PyObject *args)
  {
-@@ -2127,7 +2118,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+@@ -2129,7 +2120,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
  
      return PyString_FromString((knp == NULL) ? "" : (char *)knp);
  }
@@ -36,7 +36,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  
  static PyObject *
  PyCurses_KillChar(PyObject *self)
-@@ -2672,9 +2662,7 @@ static PyMethodDef PyCurses_methods[] = 
+@@ -2674,9 +2664,7 @@ static PyMethodDef PyCurses_methods[] = 
  #ifdef HAVE_CURSES_IS_TERM_RESIZED
      {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
  #endif
@@ -46,7 +46,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
      {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS},
      {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS},
      {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
-@@ -2783,9 +2771,7 @@ init_curses(void)
+@@ -2785,9 +2773,7 @@ init_curses(void)
      SetDictInt("A_DIM",                 A_DIM);
      SetDictInt("A_BOLD",                A_BOLD);
      SetDictInt("A_ALTCHARSET",          A_ALTCHARSET);
@@ -56,7 +56,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
      SetDictInt("A_PROTECT",         A_PROTECT);
      SetDictInt("A_CHARTEXT",        A_CHARTEXT);
      SetDictInt("A_COLOR",           A_COLOR);
-@@ -2857,7 +2843,6 @@ init_curses(void)
+@@ -2859,7 +2845,6 @@ init_curses(void)
          int key;
          char *key_n;
          char *key_n2;
@@ -64,7 +64,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
          for (key=KEY_MIN;key < KEY_MAX; key++) {
              key_n = (char *)keyname(key);
              if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
-@@ -2885,7 +2870,6 @@ init_curses(void)
+@@ -2887,7 +2872,6 @@ init_curses(void)
              if (key_n2 != key_n)
                  free(key_n2);
          }
