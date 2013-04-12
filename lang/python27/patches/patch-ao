@@ -1,11 +1,11 @@
-$NetBSD: patch-ao,v 1.3 2012/04/13 18:47:31 adam Exp $
+$NetBSD: patch-ao,v 1.4 2013/04/12 09:03:41 adam Exp $
 
---- Lib/distutils/util.py.orig	2011-06-11 15:46:24.000000000 +0000
+--- Lib/distutils/util.py.orig	2013-04-06 14:02:26.000000000 +0000
 +++ Lib/distutils/util.py
-@@ -181,6 +181,8 @@ def get_platform ():
-                 # See 'i386' case
-                 if sys.maxint >= 2**32:
-                     machine = 'ppc64'
+@@ -101,6 +101,8 @@ def get_platform ():
+         osname, release, machine = _osx_support.get_platform_osx(
+                                         distutils.sysconfig.get_config_vars(),
+                                         osname, release, machine)
 +    elif osname[:9] == "dragonfly":
 +        release = str.split(release, "-")[0]
  
