@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1279 2013/04/12 00:12:44 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1280 2013/04/12 03:49:08 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-ml version 0.03.1 [rodent 2013-04-11]
 	Added textproc/aspell-mn version 0.06.2 [rodent 2013-04-12]
 	Added textproc/aspell-mr version 0.10.0 [rodent 2013-04-12]
+	update print/hplip to 3.13.4 [schnoebe 2013-04-12]
