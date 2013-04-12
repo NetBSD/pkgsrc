@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 11:17:06 rodent Exp $
+lib/aspell/qu.multi
+lib/aspell/qu.rws
+lib/aspell/quechua.alias
+share/aspell/qu.dat
+share/aspell/qu_affix.dat
