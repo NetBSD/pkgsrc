@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2013/04/12 08:27:15 mef Exp $
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.x
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xbn
 ${MACHINE_GNU_PLATFORM}/lib/ldscripts/i386nbsd.xn

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.20 2013/04/10 02:29:03 mef Exp $
+@comment $NetBSD: PLIST.common,v 1.21 2013/04/12 08:27:15 mef Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -185,29 +185,3 @@ share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/vi/LC_MESSAGES/gprof.mo
 share/locale/zh_TW/LC_MESSAGES/binutils.mo
 share/locale/zh_TW/LC_MESSAGES/ld.mo
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xd
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xdc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xdw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xs
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xsc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xsw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xu
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xd
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xdc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xdw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xs
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xsc
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xsw
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xu
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xw
