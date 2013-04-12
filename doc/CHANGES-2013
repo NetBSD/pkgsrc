@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1282 2013/04/12 10:31:49 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1283 2013/04/12 10:40:56 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/hplip to 3.13.4 [schnoebe 2013-04-12]
 	Updated lang/python27 to 2.7.4 [adam 2013-04-12]
 	Added textproc/aspell-mt version 0.50.0 [rodent 2013-04-12]
+	Added textproc/aspell-nn version 0.50.1.1 [rodent 2013-04-12]
