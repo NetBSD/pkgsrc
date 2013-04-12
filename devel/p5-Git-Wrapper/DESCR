@@ -1,0 +1,9 @@
+Git::Wrapper provides an API for git(7) that uses Perl data structures
+for argument passing, instead of CLI-style --options as Git does.
+
+Except as documented, every git subcommand is available as a method
+on a Git::Wrapper object. Replace any hyphens in the git command
+with underscores. The first argument should be a hashref containing
+options and their values. Boolean options are either true (included)
+or false (excluded). The remaining arguments are passed as ordinary
+command arguments.
