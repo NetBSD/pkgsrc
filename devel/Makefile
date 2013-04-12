@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1725 2013/04/12 14:35:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.1726 2013/04/12 14:36:19 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -803,6 +803,7 @@ SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Git-CPAN-Patch
 SUBDIR+=	p5-Git-Repository
+SUBDIR+=	p5-Git-Wrapper
 SUBDIR+=	p5-Gnome2
 SUBDIR+=	p5-Gnome2-GConf
 SUBDIR+=	p5-Graph
