@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/12 14:33:16 schmonz Exp $
+
+SHA1 (Test-Dir-1.014.tar.gz) = 599777a22041288f84c912827f788102c48b5050
+RMD160 (Test-Dir-1.014.tar.gz) = b65ca36f5996436f70430ef6b37163b309a18175
+Size (Test-Dir-1.014.tar.gz) = 21360 bytes

@@ -1,0 +1,3 @@
+This module provides a collection of test utilities for directory
+attributes. Use it in combination with Test::More in your test
+programs.
