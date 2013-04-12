@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2012/07/24 18:40:42 drochner Exp $
+# $NetBSD: options.mk,v 1.4 2013/04/12 13:40:47 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		debug faad hal skins sdl pulseaudio x11
+PKG_SUPPORTED_OPTIONS=		debug faad skins sdl pulseaudio x11
 PKG_SUPPORTED_OPTIONS+=		gnome dts rtsp
 # XXX broken
 #PKG_SUPPORTED_OPTIONS+=	dbus
@@ -65,17 +65,8 @@ CONFIGURE_ARGS+=	--disable-telepathy
 
 PLIST.dbus=		yes
 
-## HAL support (requires dbus)
-.if !empty(PKG_OPTIONS:Mhal)
-CONFIGURE_ARGS+=	--enable-hal
-.include "../../sysutils/hal/buildlink3.mk"
-PLIST.hal=		yes
-.else
-CONFIGURE_ARGS+=	--disable-hal
-.endif
 .else
 CONFIGURE_ARGS+=	--disable-dbus
-CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--disable-notify
 .endif
 
