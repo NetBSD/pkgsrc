@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1296 2013/04/12 14:33:28 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1297 2013/04/12 14:34:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/vlc2 to 2.0.6 [drochner 2013-04-12]
 	Added devel/p5-Env-Path version 0.18 [schmonz 2013-04-12]
 	Added devel/p5-Test-Dir version 1.014 [schmonz 2013-04-12]
+	Added devel/p5-Test-File version 1.34 [schmonz 2013-04-12]
