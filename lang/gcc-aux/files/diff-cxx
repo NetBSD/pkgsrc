@@ -44,7 +44,7 @@
  
 --- libstdc++-v3/configure.orig
 +++ libstdc++-v3/configure
-@@ -15704,7 +15704,7 @@
+@@ -15738,7 +15738,7 @@
  if test "${enable_clocale+set}" = set; then :
    enableval=$enable_clocale;
        case "$enableval" in
@@ -53,7 +53,7 @@
         *) as_fn_error "Unknown argument to enable/disable clocale" "$LINENO" 5 ;;
  	  	        esac
  
-@@ -15742,6 +15742,9 @@
+@@ -15776,6 +15776,9 @@
        darwin* | freebsd*)
  	enable_clocale_flag=darwin
  	;;
@@ -63,7 +63,7 @@
        *)
  	if test x"$with_newlib" = x"yes"; then
  	  enable_clocale_flag=newlib
-@@ -15883,7 +15886,23 @@
+@@ -15917,7 +15920,23 @@
        CTIME_CC=config/locale/generic/time_members.cc
        CLOCALE_INTERNAL_H=config/locale/generic/c++locale_internal.h
        ;;
