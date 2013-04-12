@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1726 2013/04/12 14:36:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.1727 2013/04/12 14:37:34 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -976,6 +976,7 @@ SUBDIR+=	p5-MooseX-Types-Perl
 SUBDIR+=	p5-MooseX-Types-Structured
 SUBDIR+=	p5-MooseX-Types-URI
 SUBDIR+=	p5-Mouse
+SUBDIR+=	p5-MouseX-NativeTraits
 SUBDIR+=	p5-MouseX-Types
 SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
