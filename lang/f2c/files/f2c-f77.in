@@ -30,6 +30,8 @@ PATH=$PATH:/bin:/usr/bin:@PREFIX@/bin
 #
 #		-isysroot	Change root directory for headers and libraries
 #
+#		-framework	Tells the linker to search for a framework
+#
 #		-c		Do not call linker, leave relocatables in *.o.
 #
 #		-C		Check that subscripts are in bounds.
@@ -301,6 +303,10 @@ do
 		;;
 
 	-isysroot) CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
+		shift 2
+		;;
+
+	-framework) CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
 		shift 2
 		;;
 
