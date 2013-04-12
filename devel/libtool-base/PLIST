@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2009/12/15 17:35:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/04/12 13:44:08 joerg Exp $
 bin/libtool
 bin/libtoolize
-${PLIST.shlibtool}bin/shlibtool
+bin/shlibtool
+man/man1/libtool.1
+man/man1/libtoolize.1
 share/aclocal/argz.m4
 share/aclocal/libtool.m4
 share/aclocal/ltdl.m4

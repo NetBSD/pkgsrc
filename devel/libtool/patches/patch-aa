@@ -1,22 +1,33 @@
-$NetBSD: patch-aa,v 1.36 2009/12/15 17:35:37 joerg Exp $
+$NetBSD: patch-aa,v 1.37 2013/04/12 13:44:08 joerg Exp $
 
---- Makefile.in.orig	2009-09-11 03:13:51.000000000 +0200
+--- Makefile.in.orig	2011-10-17 10:18:55.000000000 +0000
 +++ Makefile.in
-@@ -1594,7 +1594,7 @@ all-am: Makefile $(INFO_DEPS) $(LTLIBRAR
- 		config.h all-local
+@@ -638,9 +638,7 @@ sub_configure_deps = $(sub_aclocal_m4_de
+ info_TEXINFOS = doc/libtool.texi
+ doc_libtool_TEXINFOS = doc/PLATFORMS doc/fdl.texi doc/notes.texi
+ dist_man1_MANS = $(srcdir)/doc/libtool.1 $(srcdir)/doc/libtoolize.1
+-update_mans = \
+-  PATH=".$(PATH_SEPARATOR)$$PATH"; export PATH; \
+-  $(HELP2MAN) --output=$@
++update_mans = true
+ 
+ 
+ # These are required by libtoolize and must be executable when installed.
+@@ -2033,7 +2031,7 @@ all-am: Makefile $(INFO_DEPS) $(LTLIBRAR
+ 		$(HEADERS) config.h all-local
  installdirs: installdirs-recursive
  installdirs-am:
--	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(infodir)" "$(DESTDIR)$(includedir)" "$(DESTDIR)$(ltdlincludedir)"; do \
-+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(includedir)" "$(DESTDIR)$(ltdlincludedir)"; do \
+-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(infodir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(includedir)" "$(DESTDIR)$(ltdlincludedir)"; do \
++	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(includedir)" "$(DESTDIR)$(ltdlincludedir)"; do \
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: $(BUILT_SOURCES)
-@@ -1658,7 +1658,7 @@ info: info-recursive
+@@ -2104,7 +2102,7 @@ info: info-recursive
  info-am: $(INFO_DEPS)
  
  install-data-am: install-data-local install-includeHEADERS \
--	install-info-am install-ltdlincludeHEADERS
-+	install-ltdlincludeHEADERS
+-	install-info-am install-ltdlincludeHEADERS install-man
++	install-ltdlincludeHEADERS install-man
  
  install-dvi: install-dvi-recursive
  
