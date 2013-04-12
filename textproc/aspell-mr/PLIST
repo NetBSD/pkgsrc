@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 00:12:29 rodent Exp $
+lib/aspell/marathi.alias
+lib/aspell/mr.multi
+lib/aspell/mr.rws
+share/aspell/mr.dat
+share/aspell/u-deva.cmap
+share/aspell/u-deva.cset
