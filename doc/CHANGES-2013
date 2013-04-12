@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1292 2013/04/12 12:32:52 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1293 2013/04/12 13:46:26 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2049,3 +2049,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/aspell-sc version 1.0 [rodent 2013-04-12]
 	Added textproc/aspell-sl version 0.50.0 [rodent 2013-04-12]
 	Added textproc/aspell-sr version 0.02 [rodent 2013-04-12]
+	Updated devel/libebml to 1.3.0 [drochner 2013-04-12]
+	Updated multimedia/libmatroska to 1.4.0 [drochner 2013-04-12]
+	Updated multimedia/vlc2 to 2.0.6 [drochner 2013-04-12]
