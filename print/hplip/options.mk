@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/05/18 03:03:20 schnoebe Exp $
+# $NetBSD: options.mk,v 1.2 2013/04/12 03:47:30 schnoebe Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -46,7 +46,7 @@ EGFILES+=		dbus-1/system.d/com.hp.hplip.conf
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
-.include "../../sysutils/py-notify/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 .else
 CONFIGURE_ARGS+=	--disable-policykit
 CONFIGURE_ARGS+=	--disable-qt4
