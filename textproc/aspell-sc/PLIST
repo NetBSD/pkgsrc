@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 12:19:29 rodent Exp $
+lib/aspell/sardinian.alias
+lib/aspell/sc.multi
+lib/aspell/sc.rws
+lib/aspell/srd.alias
+share/aspell/sc.dat
