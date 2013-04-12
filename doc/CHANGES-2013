@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1300 2013/04/12 14:38:13 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1301 2013/04/12 14:41:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2062,3 +2062,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Git-Wrapper version 0.028 [schmonz 2013-04-12]
 	Added devel/p5-MouseX-NativeTraits version 1.09 [schmonz 2013-04-12]
 	Added devel/p5-MouseX-Types-Path-Class version 0.07 [schmonz 2013-04-12]
+	Added databases/p5-App-Sqitch version 0.961 [schmonz 2013-04-12]
