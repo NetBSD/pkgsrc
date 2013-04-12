@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12076 2013/04/12 13:46:26 drochner Exp $
+$NetBSD: TODO,v 1.12077 2013/04/12 13:53:31 joerg Exp $
 
 Suggested new packages
 ======================
@@ -815,7 +815,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtasn1-3.1
 	o libtcl-nothread-8.5.1
 	o libthrift-0.8.0
-	o libtool-2.4.2
 	o libtool-base-2.4.2
 	o libtool-info-2.4.2
 	o libusbx-1.0.13
