@@ -23,6 +23,7 @@ TODO=$1
 PKGBASE=$(echo $2 | sed "s/^py[0-9][0-9]-/py-/")
 PKGVERSION=$3
 TMPFILE="$TODO.$$"
+PKG_ADMIN="${PKG_ADMIN:-pkg_admin}"
 
 MATCH=$(grep -n '^[ 	]*o '"$PKGBASE"'-[0-9]' "$TODO" | sed 's/^\([^:]*:\)[ 	]*o /\1/;s/ .*//')
 
@@ -35,7 +36,7 @@ fi
 LINE=$(echo "$MATCH" | sed 's/:.*//')
 FOUNDPKG=$(echo "$MATCH" | sed -e "s/^[^:]*://")
 
-if pkg_admin pmatch "$PKGBASE"\<="$PKGVERSION" "$FOUNDPKG"; then
+if ${PKG_ADMIN} pmatch "$PKGBASE"\<="$PKGVERSION" "$FOUNDPKG"; then
     echo Removing "$FOUNDPKG" from TODO
     sed < "$TODO" "$LINE"d > "$TMPFILE"
     mv "$TMPFILE" "$TODO"
