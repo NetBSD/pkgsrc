@@ -1,0 +1,16 @@
+$NetBSD: patch-libs_config_configure,v 1.1 2013/04/12 13:34:42 joerg Exp $
+
+--- libs/config/configure.orig	2013-03-30 16:16:50.000000000 +0000
++++ libs/config/configure
+@@ -3050,10 +3050,7 @@ cat > user.hpp << EOF
+ // setup is fully ISO complient, and has no
+ // useful extentions, or for autoconf generated
+ // setups:
+-#ifndef BOOST_NO_CONFIG
+-#  define BOOST_NO_CONFIG
+-#endif
+-
++// #define BOOST_NO_CONFIG
+ 
+ // define if you want to disable threading support, even
+ // when available:
