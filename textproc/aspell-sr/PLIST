@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/12 12:32:39 rodent Exp $
+lib/aspell/sr-cyrl-only.rws
+lib/aspell/sr-cyrl.multi
+lib/aspell/sr-latn-only.rws
+lib/aspell/sr-latn.multi
+lib/aspell/sr.multi
+share/aspell/l-sr.cmap
+share/aspell/l-sr.cset
+share/aspell/sr.dat
