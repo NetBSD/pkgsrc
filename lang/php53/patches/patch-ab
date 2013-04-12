@@ -1,62 +1,62 @@
-$NetBSD: patch-ab,v 1.5 2013/03/16 01:58:18 taca Exp $
+$NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
 
---- configure.orig	2013-03-14 17:17:01.000000000 +0000
+--- configure.orig	2013-04-10 07:50:37.000000000 +0000
 +++ configure
-@@ -17392,7 +17392,7 @@ echo "${ECHO_T}no" >&6
+@@ -14121,7 +14121,7 @@ EOF
    PHP_VAR_SUBST="$PHP_VAR_SUBST SAPI_CGI_PATH"
  
  
 -        INSTALL_IT="@echo \"Installing PHP CGI binary: \$(INSTALL_ROOT)\$(bindir)/\"; \$(INSTALL) -m 0755 \$(SAPI_CGI_PATH) \$(INSTALL_ROOT)\$(bindir)/\$(program_prefix)php-cgi\$(program_suffix)\$(EXEEXT)"
 +        INSTALL_IT="@echo \"Installing PHP CGI binary: \$(INSTALL_ROOT)@CGIDIR@\"; \$(INSTALL) -m 0755 \$(SAPI_CGI_PATH) \$(INSTALL_ROOT)@CGIDIR@/php"
- 
+     
    if test "$PHP_SAPI" != "default"; then
- { { echo "$as_me:$LINENO: error:
-@@ -33475,7 +33475,7 @@ echo "$as_me: error: OpenSSL version 0.9
+ { echo "configure: error: 
+@@ -23462,7 +23462,7 @@ fi
      if test "$found_openssl" = "no"; then
- 
+   
      if test "$PHP_OPENSSL_DIR" = "yes"; then
 -      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
 +      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -35650,7 +35650,7 @@ echo "${ECHO_T}yes" >&6
+@@ -25453,7 +25453,7 @@ echo "configure:25433: checking bundled 
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
- 
- 
+     
+   
 -    for header_file in ext/sqlite3/libsqlite/sqlite3.h; do
 +    for header_file; do
- 
- 
+       
+   
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -47718,7 +47718,7 @@ echo "$as_me: error: OpenSSL version 0.9
+@@ -36315,7 +36315,7 @@ fi
      if test "$found_openssl" = "no"; then
- 
+   
      if test "$PHP_OPENSSL_DIR" = "yes"; then
 -      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
 +      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -65336,7 +65336,7 @@ echo "$as_me: error: OpenSSL version 0.9
+@@ -50360,7 +50360,7 @@ fi
      if test "$found_openssl" = "no"; then
- 
+   
      if test "$PHP_OPENSSL_DIR" = "yes"; then
 -      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
 +      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -106941,7 +106941,7 @@ echo "$as_me: error: OpenSSL version 0.9
+@@ -84478,7 +84478,7 @@ fi
      if test "$found_openssl" = "no"; then
- 
+   
      if test "$PHP_OPENSSL_DIR" = "yes"; then
 -      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
 +      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -138087,12 +138087,7 @@ old_CC=$CC
+@@ -107641,12 +107641,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
