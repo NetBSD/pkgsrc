@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2013/04/12 08:27:15 mef Exp $
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.x
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xbn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xc
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xd
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xdc
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xdw
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xr
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xs
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xsc
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xsw
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xu
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_i386.xw
