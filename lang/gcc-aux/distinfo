@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/10/01 17:26:52 marino Exp $
+$NetBSD: distinfo,v 1.3 2013/04/12 15:40:54 marino Exp $
 
-SHA1 (gcc-4.7.2.tar.bz2) = a464ba0f26eef24c29bcd1e7489421117fb9ee35
-RMD160 (gcc-4.7.2.tar.bz2) = fc281ade14b47d2a9c2ced4f7082c74bfbae31c1
-Size (gcc-4.7.2.tar.bz2) = 82884636 bytes
+SHA1 (gcc-4.7.3.tar.bz2) = 69e02737bd6e1a7c6047d801600d39c32b9427ca
+RMD160 (gcc-4.7.3.tar.bz2) = b4ba153b098cad726ecd28195ee445aa542d37ae
+Size (gcc-4.7.3.tar.bz2) = 82904224 bytes
 SHA1 (gnat-bootstrap.i386.dragonfly.tar.bz2) = d7a8103243a2df3723d9d3c3ec0da9c3bb725214
 RMD160 (gnat-bootstrap.i386.dragonfly.tar.bz2) = 9e6fde444e0ed76ee404810af6d6b7eb48659c09
 Size (gnat-bootstrap.i386.dragonfly.tar.bz2) = 28205489 bytes
