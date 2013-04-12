@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/03/31 08:13:29 obache Exp $
+# $NetBSD: Makefile,v 1.27 2013/04/12 12:48:19 joerg Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
@@ -155,8 +155,7 @@ post-extract:
 	${LN} -s ${DISTDIR}/${DIST_SUBDIR}/${md} ${WRKSRC}/src/${md}
 .endfor
 
-do-configure:
-	cd ${WRKSRC} && ./autogen.sh ${CONFIGURE_ARGS}
+CONFIGURE_SCRIPT=	./autogen.sh
 
 post-configure:
 	cd ${WRKSRC} && ./bin/create_bootstrap_links
