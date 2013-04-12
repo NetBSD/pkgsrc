@@ -1,117 +1,8 @@
-$NetBSD: patch-ab,v 1.73 2012/07/26 12:04:04 bsiegert Exp $
+$NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
 
-The last two chunks work around bugs in ksh on NetBSD.
-The problem manifests with wl and no_builtin_flag containing newlines.
-
---- configure.orig	Thu Jul 26 11:26:28 2012
+--- configure.orig	2013-03-03 13:53:45.000000000 +0000
 +++ configure
-@@ -822,6 +822,7 @@ CPP
- am__fastdepCC_FALSE
- am__fastdepCC_TRUE
- CCDEPMODE
-+am__nodep
- AMDEPBACKSLASH
- AMDEP_FALSE
- AMDEP_TRUE
-@@ -3257,17 +3258,17 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}ma
- 
- # We need awk for the "check" target.  The system "awk" is bad on
- # some platforms.
--# Always define AMTAR for backward compatibility.
-+# Always define AMTAR for backward compatibility.  Yes, it's still used
-+# in the wild :-(  We should find a proper way to deprecate it ...
-+AMTAR='$${TAR-tar}'
- 
--AMTAR=${AMTAR-"${am_missing_run}tar"}
-+am__tar='$${TAR-tar} chof - "$$tardir"' am__untar='$${TAR-tar} xf -'
- 
--am__tar='${AMTAR} chof - "$$tardir"'; am__untar='${AMTAR} xf -'
- 
- 
- 
- 
- 
--
- M4SH='$(AUTOM4TE) --language=m4sh'
- 
- 
-@@ -4145,6 +4146,7 @@ fi
- if test "x$enable_dependency_tracking" != xno; then
-   am_depcomp="$ac_aux_dir/depcomp"
-   AMDEPBACKSLASH='\'
-+  am__nodep='_no'
- fi
-  if test "x$enable_dependency_tracking" != xno; then
-   AMDEP_TRUE=
-@@ -4169,6 +4171,7 @@ else
-   # instance it was reported that on HP-UX the gcc test will end up
-   # making a dummy file named `D' -- because `-MD' means `put the output
-   # in D'.
-+  rm -rf conftest.dir
-   mkdir conftest.dir
-   # Copy depcomp to subdir because otherwise we won't find it if we're
-   # using a relative directory.
-@@ -4228,7 +4231,7 @@ else
- 	break
-       fi
-       ;;
--    msvisualcpp | msvcmsys)
-+    msvc7 | msvc7msys | msvisualcpp | msvcmsys)
-       # This compiler won't grok `-c -o', but also, the minuso test has
-       # not run yet.  These depmodes are late enough in the game, and
-       # so weak that their functioning should not be impacted.
-@@ -5230,13 +5233,13 @@ if test "${lt_cv_nm_interface+set}" = se
- else
-   lt_cv_nm_interface="BSD nm"
-   echo "int some_variable = 0;" > conftest.$ac_ext
--  (eval echo "\"\$as_me:5233: $ac_compile\"" >&5)
-+  (eval echo "\"\$as_me:5236: $ac_compile\"" >&5)
-   (eval "$ac_compile" 2>conftest.err)
-   cat conftest.err >&5
--  (eval echo "\"\$as_me:5236: $NM \\\"conftest.$ac_objext\\\"\"" >&5)
-+  (eval echo "\"\$as_me:5239: $NM \\\"conftest.$ac_objext\\\"\"" >&5)
-   (eval "$NM \"conftest.$ac_objext\"" 2>conftest.err > conftest.out)
-   cat conftest.err >&5
--  (eval echo "\"\$as_me:5239: output\"" >&5)
-+  (eval echo "\"\$as_me:5242: output\"" >&5)
-   cat conftest.out >&5
-   if $GREP 'External.*some_variable' conftest.out > /dev/null; then
-     lt_cv_nm_interface="MS dumpbin"
-@@ -5293,6 +5296,13 @@ else
-     lt_cv_sys_max_cmd_len=8192;
-     ;;
- 
-+  mint*)
-+    # On MiNT we can support fairly large cmd lengths, but it takes
-+    # a while to run the tests, so let's restrict it to something
-+    # reasonable.
-+    lt_cv_sys_max_cmd_len=8192;
-+    ;;
-+
-   amigaos*)
-     # On AmigaOS with pdksh, this test takes hours, literally.
-     # So we just punt and use a minimum line length of 8192.
-@@ -5299,7 +5309,7 @@ else
-     lt_cv_sys_max_cmd_len=8192;
-     ;;
- 
--  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
-+  netbsd* | freebsd* | openbsd* | mirbsd* | darwin* | dragonfly*)
-     # This has been around since 386BSD, at least.  Likely further.
-     if test -x /sbin/sysctl; then
-       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -5665,6 +5675,10 @@ gnu*)
-   lt_cv_deplibs_check_method=pass_all
-   ;;
- 
-+haiku*)
-+  lt_cv_deplibs_check_method=pass_all
-+  ;;
-+
- hpux10.20* | hpux11*)
-   lt_cv_file_magic_cmd=/usr/bin/file
-   case $host_cpu in
-@@ -5703,6 +5717,17 @@ linux* | k*bsd*-gnu)
+@@ -5829,12 +5829,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -127,9 +18,16 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  ;;
 +
  netbsd*)
-   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
-     lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
-@@ -5718,7 +5743,7 @@ newos6*)
+-  if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+-  else
+-    lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+-  fi
++  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
+   ;;
+ 
+ newos6*)
+@@ -5844,7 +5851,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -138,20 +36,11 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    ;;
  
  openbsd*)
-@@ -6439,7 +6464,7 @@ ia64-*-hpux*)
-   ;;
- *-*-irix6*)
-   # Find out which ABI we are using.
--  echo '#line 6442 "configure"' > conftest.$ac_ext
-+  echo '#line 6467 "configure"' > conftest.$ac_ext
-   if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$ac_compile\""; } >&5
-   (eval $ac_compile) 2>&5
-   ac_status=$?
-@@ -7900,7 +7925,10 @@ for cc_temp in $compiler""; do
+@@ -8493,7 +8500,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
--cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
 +if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
@@ -159,21 +48,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
  # Only perform the check for file, if the check method requires it
-@@ -8129,11 +8157,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8132: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8160: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:8136: \$? = $ac_status" >&5
-+   echo "$as_me:8164: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -8210,11 +8238,19 @@ $as_echo_n "checking for $compiler optio
+@@ -8806,9 +8816,16 @@ lt_prog_compiler_static=
        ;;
  
      darwin* | rhapsody*)
@@ -183,18 +58,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic='-fno-common'
 +      lt_prog_compiler_static=''
-       ;;
- 
-+    haiku*)
-+      # PIC is the default for Haiku.
-+      # The "-static" flag exists, but is broken.
-+      lt_prog_compiler_static=
 +      ;;
 +
-     hpux*)
-       # PIC is the default for 64-bit PA HP-UX, but not for 32-bit
-       # PA HP-UX.  On IA64 HP-UX, PIC is the default but the pic flag
-@@ -8234,6 +8270,13 @@ $as_echo_n "checking for $compiler optio
++    *mint*)
++      # FreeMiNT does not support shared libraries at all
++      lt_prog_compiler_pic=
+       ;;
+ 
+     haiku*)
+@@ -8836,6 +8853,13 @@ lt_prog_compiler_static=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -208,7 +80,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -8356,6 +8399,15 @@ $as_echo_n "checking for $compiler optio
+@@ -8988,6 +9012,15 @@ lt_prog_compiler_static=
        esac
        ;;
  
@@ -224,7 +96,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      newsos6)
        lt_prog_compiler_pic='-KPIC'
        lt_prog_compiler_static='-Bstatic'
-@@ -8431,6 +8483,9 @@ $as_echo_n "checking for $compiler optio
+@@ -9063,6 +9096,9 @@ lt_prog_compiler_static=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -234,85 +106,14 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic=
      ;;
-@@ -8468,11 +8523,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8471: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8526: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:8475: \$? = $ac_status" >&5
-+   echo "$as_me:8530: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -8573,11 +8628,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8576: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8631: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:8580: \$? = $ac_status" >&5
-+   echo "$as_me:8635: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -8628,11 +8683,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8631: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8686: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:8635: \$? = $ac_status" >&5
-+   echo "$as_me:8690: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -8844,6 +8899,11 @@ _LT_EOF
+@@ -9608,16 +9644,28 @@ _LT_EOF
        fi
        ;;
  
-+    haiku*)
-+      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      link_all_deplibs=yes
-+      ;;
-+
-     interix[3-9]*)
-       hardcode_direct=no
-       hardcode_shlibpath_var=no
-@@ -8930,7 +8990,7 @@ _LT_EOF
-       ;;
- 
-     netbsd*)
+-    netbsd*)
 -      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
-+      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
- 	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
- 	wlarc=
-       else
-@@ -9317,6 +9377,11 @@ if test -z "$aix_libpath"; then aix_libp
-       hardcode_shlibpath_var=no
-       ;;
- 
-+      haiku*)
-+        archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+        link_all_deplibs=yes
-+        ;;
-+
-     hpux9*)
-       if test "$GCC" = yes; then
- 	archive_cmds='$RM $output_objdir/$soname~$CC -shared -fPIC ${wl}+b ${wl}$install_libdir -o $output_objdir/$soname $libobjs $deplibs $compiler_flags~test $output_objdir/$soname = $lib || mv $output_objdir/$soname $lib'
-@@ -9430,6 +9495,20 @@ rm -f core conftest.err conftest.$ac_obj
-       link_all_deplibs=yes
-       ;;
- 
+-	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
 +    mirbsd*)
 +      if test -f /usr/libexec/ld.so; then
 +	hardcode_direct=yes
@@ -322,43 +123,77 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +	archive_expsym_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
 +	hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
 +	export_dynamic_flag_spec='${wl}-E'
-+      else
+       else
+-	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +	ld_shlibs=no
-+      fi
+       fi
+       ;;
+ 
++    netbsd*)
++      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++      hardcode_direct=yes
++      hardcode_shlibpath_var=no
 +      ;;
 +
-     netbsd*)
-       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
- 	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
-@@ -9450,6 +9529,8 @@ rm -f core conftest.err conftest.$ac_obj
+     solaris*)
+       if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
+ 	ld_shlibs=no
+@@ -10238,13 +10286,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       link_all_deplibs=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
++    mirbsd*)
++     if test -f /usr/libexec/ld.so; then
++	hardcode_direct=yes
++	hardcode_shlibpath_var=no
++	hardcode_direct_absolute=yes
++	archive_cmds='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
++	archive_expsym_cmds='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
++	hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec='${wl}-E'
++	whole_archive_flag_spec="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
+       else
+-	archive_cmds='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
++	ld_shlibs=no
+       fi
+-      hardcode_libdir_flag_spec='-R$libdir'
++      ;;
++
++    netbsd*)
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
+       hardcode_direct=yes
+       hardcode_shlibpath_var=no
+       ;;
+@@ -10258,6 +10318,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
 +      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec='-R$libdir'
++      hardcode_direct=yes
++      hardcode_shlibpath_var=no
        ;;
  
      openbsd*)
-@@ -10064,6 +10145,7 @@ beos*)
- bsdi[45]*)
-   version_type=linux
-   need_version=no
-+  need_lib_prefix=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-   soname_spec='${libname}${release}${shared_ext}$major'
-   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -10165,9 +10247,7 @@ freebsd1*)
-   dynamic_linker=no
+@@ -11031,7 +11096,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
    ;;
  
 -freebsd* | dragonfly*)
--  # DragonFly does not have aout.  When/if they implement a new
--  # versioning mechanism, adjust this.
 +freebsd*)
+   # DragonFly does not have aout.  When/if they implement a new
+   # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-     objformat=`/usr/bin/objformat`
-   else
-@@ -10179,7 +10259,7 @@ freebsd* | dragonfly*)
+@@ -11045,7 +11110,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -367,7 +202,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -10202,7 +10282,7 @@ freebsd* | dragonfly*)
+@@ -11068,13 +11133,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -376,7 +211,6 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -10209,6 +10289,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -392,35 +226,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  ;;
 +
  gnu*)
-   version_type=linux
+   version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -10219,6 +10310,19 @@ gnu*)
-   hardcode_into_libs=yes
-   ;;
- 
-+haiku*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  dynamic_linker="$host_os runtime_loader"
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  shlibpath_var=LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
-+  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
-+  hardcode_into_libs=yes
-+  ;;
-+
- hpux9* | hpux10* | hpux11*)
-   # Give a soname corresponding to the major version so that dld.sl refuses to
-   # link against other versions.
-@@ -10280,12 +10384,7 @@ interix[3-9]*)
+@@ -11162,12 +11238,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
 -    *)
 -	if test "$lt_cv_prog_gnu_ld" = yes; then
--		version_type=linux
+-		version_type=linux # correct to gnu/linux during the next big refactor
 -	else
 -		version_type=irix
 -	fi ;;
@@ -428,7 +242,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -10375,16 +10474,38 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -11266,19 +11337,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -462,16 +276,20 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    need_version=no
 -  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
-     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
-     dynamic_linker='NetBSD (a.out) ld.so'
-   else
+-    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+-    dynamic_linker='NetBSD (a.out) ld.so'
+-  else
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-     soname_spec='${libname}${release}${shared_ext}$major'
-     dynamic_linker='NetBSD ld.elf_so'
-   fi
-@@ -10413,7 +10534,7 @@ newsos6)
+-    soname_spec='${libname}${release}${shared_ext}$major'
+-    dynamic_linker='NetBSD ld.elf_so'
+-  fi
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='NetBSD ld.elf_so'
+   shlibpath_var=LD_LIBRARY_PATH
+   shlibpath_overrides_runpath=yes
+   hardcode_into_libs=yes
+@@ -11304,7 +11392,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -480,7 +298,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -10421,7 +10542,7 @@ openbsd*)
+@@ -11312,7 +11400,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -489,34 +307,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -10995,7 +11116,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 10998 "configure"
-+#line 11119 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -11091,7 +11212,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 11094 "configure"
-+#line 11215 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -11764,7 +11885,7 @@ else
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 11767 "configure"
-+#line 11888 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -11910,6 +12031,9 @@ else
+@@ -12847,6 +12935,9 @@ else
      # at 6.2 and later dlopen does load deplibs.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
@@ -526,39 +317,22 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    netbsd*)
      lt_cv_sys_dlopen_deplibs=yes
      ;;
-@@ -12473,6 +12597,7 @@ else
-   # instance it was reported that on HP-UX the gcc test will end up
-   # making a dummy file named `D' -- because `-MD' means `put the output
-   # in D'.
-+  rm -rf conftest.dir
-   mkdir conftest.dir
-   # Copy depcomp to subdir because otherwise we won't find it if we're
-   # using a relative directory.
-@@ -12532,7 +12657,7 @@ else
- 	break
-       fi
-       ;;
--    msvisualcpp | msvcmsys)
-+    msvc7 | msvc7msys | msvisualcpp | msvcmsys)
-       # This compiler won't grok `-c -o', but also, the minuso test has
-       # not run yet.  These depmodes are late enough in the game, and
-       # so weak that their functioning should not be impacted.
-@@ -12587,9 +12712,7 @@ else
- fi
+@@ -13536,9 +13627,7 @@ func_stripname_cnf ()
+   esac
+ } # func_stripname_cnf
  
- 
--if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
+-      if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
 -    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
 -    (test "X$CXX" != "Xg++"))) ; then
-+if test -n "$CXX" && test "X$CXX" != "Xno" ; then
++      if test -n "$CXX" && test "X$CXX" != "Xno" ; then
    ac_ext=cpp
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -12836,7 +12959,10 @@ $RM -r conftest*
+@@ -13786,7 +13875,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
--cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
 +if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
@@ -566,84 +340,53 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
    if test -n "$compiler"; then
-@@ -13613,6 +13739,22 @@ if test -z "$aix_libpath"; then aix_libp
-         ld_shlibs_CXX=no
+@@ -14665,15 +14757,12 @@ fi
  	;;
  
-+      mirbsd*)
-+	if test -f /usr/libexec/ld.so; then
-+	  hardcode_direct_CXX=yes
-+	  hardcode_shlibpath_var_CXX=no
-+	  hardcode_direct_absolute_CXX=yes
-+	  archive_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
-+	  archive_expsym_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
-+	  hardcode_libdir_flag_spec_CXX='${wl}-rpath,$libdir'
-+	  export_dynamic_flag_spec_CXX='${wl}-E'
-+	  whole_archive_flag_spec_CXX="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
-+	  output_verbose_link_cmd='echo'
-+	else
-+	  ld_shlibs_CXX=no
-+	fi
-+	;;
-+
-       mvs*)
-         case $cc_basename in
-           cxx*)
-@@ -13628,18 +13770,37 @@ if test -z "$aix_libpath"; then aix_libp
- 
        netbsd*)
-         if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
-+          # a.out is quite broken and goes directly to ld
- 	  archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
- 	  wlarc=
-+          # Determine if we need to override the c++rt0 that is
-+          # picked up by analysing output_verbose_link_cmds
-+          if test -f ${PREFIX}/lib/c++rt0/c++rt0.o.PIC; then
-+            cpprt0_file="${PREFIX}/lib/c++rt0/c++rt0.o.PIC"
-+          else
-+            cpprt0_file=
-+          fi
- 	  hardcode_libdir_flag_spec_CXX='-R$libdir'
- 	  hardcode_direct_CXX=yes
- 	  hardcode_shlibpath_var_CXX=no
+-        if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	  archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
+-	  wlarc=
+-	  hardcode_libdir_flag_spec_CXX='-R$libdir'
+-	  hardcode_direct_CXX=yes
+-	  hardcode_shlibpath_var_CXX=no
 -	fi
 -	# Workaround some broken pre-1.5 toolchains
 -	output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
-+        elif $CC -dumpspecs | grep -- '-lgcc -lc -lgcc' >/dev/null; then
-+          # Workaround some broken pre-1.5 ELF toolchains
-+          output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
-+        else
-+          # Modern ELF works sanely as-is
-+          archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+          archive_expsym_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+          output_verbose_link_cmd='echo'
-+        fi
++	ld_shlibs_CXX=yes
++	archive_cmds_CXX='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++	archive_expsym_cmds_CXX='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++	hardcode_libdir_flag_spec_CXX='${wl}-rpath,$libdir'
++	hardcode_direct_CXX=yes
++	hardcode_shlibpath_var_CXX=no
  	;;
  
        *nto* | *qnx*)
--        ld_shlibs_CXX=yes
-+        archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+        archive_expsym_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+        hardcode_libdir_flag_spec_CXX='-R$libdir'
-+        hardcode_direct_CXX=yes
-+        hardcode_shlibpath_var_CXX=no
-+        output_verbose_link_cmd='echo'
- 	;;
+@@ -14853,9 +14942,9 @@ fi
+ 	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
+ 	      no_undefined_flag_CXX=' ${wl}-z ${wl}defs'
+ 	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
+-	        archive_cmds_CXX='$CC -shared $pic_flag -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
++	        archive_cmds_CXX='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
+ 	        archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
++		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
  
-       openbsd2*)
-@@ -14036,6 +14197,11 @@ $RM -f confest.$objext
+ 	        # Commands to make compiler produce verbose output that lists
+ 	        # what "hidden" libraries, object files and flags are used when
+@@ -14864,9 +14953,9 @@ fi
+ 	      else
+ 	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
+ 	        # platform.
+-	        archive_cmds_CXX='$CC -G -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
++	        archive_cmds_CXX='$CC -G -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
+ 	        archive_expsym_cmds_CXX='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-		  $CC -G -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
++		  $CC -G -nostdlib ${wl}-M $wl$lib.exp $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
  
- # PORTME: override above test on systems where it is broken
- case $host_os in
-+netbsd*)
-+  if test -n "$cpprt0_file"; then
-+    predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
-+  fi
-+   ;;
- interix[3-9]*)
-   # Interix 3.5 installs completely hosed .la files for C++, so rather than
-   # hack all around it, let's just trust "g++" to DTRT.
-@@ -14176,14 +14342,25 @@ $as_echo_n "checking for $compiler optio
+ 	        # Commands to make compiler produce verbose output that lists
+ 	        # what "hidden" libraries, object files and flags are used when
+@@ -15236,9 +15325,15 @@ lt_prog_compiler_static_CXX=
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -653,24 +396,14 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_CXX='-fno-common'
 +      lt_prog_compiler_static_CXX=''
-       ;;
++      ;;
 +    *mint*)
 +      # FreeMiNT does not support shared libraries at all
 +      lt_prog_compiler_pic_CXX=
-+      ;;
+       ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-       lt_prog_compiler_pic_CXX=
-       ;;
-+    haiku*)
-+      # PIC is the default for Haiku.
-+      # The "-static" flag exists, but is broken.
-+      lt_prog_compiler_static_CXX=
-+      ;;
-     interix[3-9]*)
-       # Interix 3.x gcc -fpic/-fPIC options generate broken code.
-       # Instead, we relocate shared libraries at runtime.
-@@ -14246,6 +14423,9 @@ $as_echo_n "checking for $compiler optio
+@@ -15316,6 +15411,9 @@ lt_prog_compiler_static_CXX=
  	    ;;
  	esac
  	;;
@@ -680,7 +413,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -14443,6 +14623,9 @@ $as_echo_n "checking for $compiler optio
+@@ -15513,6 +15611,9 @@ lt_prog_compiler_static_CXX=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -690,68 +423,16 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_CXX=
      ;;
-@@ -14477,11 +14660,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:14480: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:14663: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:14484: \$? = $ac_status" >&5
-+   echo "$as_me:14667: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -14576,11 +14759,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:14579: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:14762: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:14583: \$? = $ac_status" >&5
-+   echo "$as_me:14766: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -14628,11 +14811,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:14631: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:14814: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:14635: \$? = $ac_status" >&5
-+   echo "$as_me:14818: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -14948,6 +15131,7 @@ beos*)
- bsdi[45]*)
-   version_type=linux
-   need_version=no
-+  need_lib_prefix=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-   soname_spec='${libname}${release}${shared_ext}$major'
-   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15048,9 +15232,7 @@ freebsd1*)
-   dynamic_linker=no
+@@ -16184,7 +16285,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
    ;;
  
 -freebsd* | dragonfly*)
--  # DragonFly does not have aout.  When/if they implement a new
--  # versioning mechanism, adjust this.
 +freebsd*)
+   # DragonFly does not have aout.  When/if they implement a new
+   # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-     objformat=`/usr/bin/objformat`
-   else
-@@ -15062,7 +15244,7 @@ freebsd* | dragonfly*)
+@@ -16198,7 +16299,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -760,7 +441,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -15085,7 +15267,7 @@ freebsd* | dragonfly*)
+@@ -16221,13 +16322,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -769,7 +450,6 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -15092,6 +15274,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -785,35 +465,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  ;;
 +
  gnu*)
-   version_type=linux
+   version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -15102,6 +15295,19 @@ gnu*)
-   hardcode_into_libs=yes
-   ;;
- 
-+haiku*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  dynamic_linker="$host_os runtime_loader"
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  shlibpath_var=LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
-+  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
-+  hardcode_into_libs=yes
-+  ;;
-+
- hpux9* | hpux10* | hpux11*)
-   # Give a soname corresponding to the major version so that dld.sl refuses to
-   # link against other versions.
-@@ -15163,12 +15369,7 @@ interix[3-9]*)
+@@ -16315,12 +16427,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
 -    *)
 -	if test "$lt_cv_prog_gnu_ld" = yes; then
--		version_type=linux
+-		version_type=linux # correct to gnu/linux during the next big refactor
 -	else
 -		version_type=irix
 -	fi ;;
@@ -821,7 +481,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15258,16 +15459,38 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -16419,19 +16526,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -855,16 +515,20 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    need_version=no
 -  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
-     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
-     dynamic_linker='NetBSD (a.out) ld.so'
-   else
+-    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+-    dynamic_linker='NetBSD (a.out) ld.so'
+-  else
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-     soname_spec='${libname}${release}${shared_ext}$major'
-     dynamic_linker='NetBSD ld.elf_so'
-   fi
-@@ -15296,7 +15519,7 @@ newsos6)
+-    soname_spec='${libname}${release}${shared_ext}$major'
+-    dynamic_linker='NetBSD ld.elf_so'
+-  fi
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='NetBSD ld.elf_so'
+   shlibpath_var=LD_LIBRARY_PATH
+   shlibpath_overrides_runpath=yes
+   hardcode_into_libs=yes
+@@ -16457,7 +16581,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -873,7 +537,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -15304,7 +15527,7 @@ openbsd*)
+@@ -16465,7 +16589,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -882,11 +546,11 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -15877,7 +16100,10 @@ $RM -r conftest*
+@@ -17039,7 +17163,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
--cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
 +if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
@@ -894,7 +558,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
    GCC=$G77
    if test -n "$compiler"; then
-@@ -15971,11 +16197,19 @@ $as_echo_n "checking for $compiler optio
+@@ -17131,9 +17258,16 @@ lt_prog_compiler_static_F77=
        ;;
  
      darwin* | rhapsody*)
@@ -904,18 +568,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_F77='-fno-common'
 +      lt_prog_compiler_static_F77=''
-       ;;
- 
-+    haiku*)
-+      # PIC is the default for Haiku.
-+      # The "-static" flag exists, but is broken.
-+      lt_prog_compiler_static_F77=
 +      ;;
 +
-     hpux*)
-       # PIC is the default for 64-bit PA HP-UX, but not for 32-bit
-       # PA HP-UX.  On IA64 HP-UX, PIC is the default but the pic flag
-@@ -15995,6 +16229,13 @@ $as_echo_n "checking for $compiler optio
++    *mint*)
++      # FreeMiNT does not support shared libraries at all
++      lt_prog_compiler_pic_F77=
+       ;;
+ 
+     haiku*)
+@@ -17161,6 +17295,13 @@ lt_prog_compiler_static_F77=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -929,7 +590,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -16117,6 +16358,15 @@ $as_echo_n "checking for $compiler optio
+@@ -17313,6 +17454,15 @@ lt_prog_compiler_static_F77=
        esac
        ;;
  
@@ -945,7 +606,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      newsos6)
        lt_prog_compiler_pic_F77='-KPIC'
        lt_prog_compiler_static_F77='-Bstatic'
-@@ -16192,6 +16442,9 @@ $as_echo_n "checking for $compiler optio
+@@ -17388,6 +17538,9 @@ lt_prog_compiler_static_F77=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -955,85 +616,14 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_F77=
      ;;
-@@ -16226,11 +16479,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:16229: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:16482: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:16233: \$? = $ac_status" >&5
-+   echo "$as_me:16486: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -16325,11 +16578,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:16328: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:16581: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:16332: \$? = $ac_status" >&5
-+   echo "$as_me:16585: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -16377,11 +16630,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:16380: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:16633: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:16384: \$? = $ac_status" >&5
-+   echo "$as_me:16637: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -16590,6 +16843,11 @@ _LT_EOF
+@@ -17918,16 +18071,28 @@ _LT_EOF
        fi
        ;;
  
-+    haiku*)
-+      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      link_all_deplibs_F77=yes
-+      ;;
-+
-     interix[3-9]*)
-       hardcode_direct_F77=no
-       hardcode_shlibpath_var_F77=no
-@@ -16676,7 +16934,7 @@ _LT_EOF
-       ;;
- 
-     netbsd*)
+-    netbsd*)
 -      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
-+      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
- 	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
- 	wlarc=
-       else
-@@ -17051,6 +17309,11 @@ if test -z "$aix_libpath"; then aix_libp
-       hardcode_shlibpath_var_F77=no
-       ;;
- 
-+      haiku*)
-+        archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+        link_all_deplibs_F77=yes
-+        ;;
-+
-     hpux9*)
-       if test "$GCC" = yes; then
- 	archive_cmds_F77='$RM $output_objdir/$soname~$CC -shared -fPIC ${wl}+b ${wl}$install_libdir -o $output_objdir/$soname $libobjs $deplibs $compiler_flags~test $output_objdir/$soname = $lib || mv $output_objdir/$soname $lib'
-@@ -17163,6 +17426,20 @@ rm -f core conftest.err conftest.$ac_obj
-       link_all_deplibs_F77=yes
-       ;;
- 
+-	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
 +    mirbsd*)
 +      if test -f /usr/libexec/ld.so; then
 +	hardcode_direct_F77=yes
@@ -1043,43 +633,77 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +	archive_expsym_cmds_F77='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
 +	hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
 +	export_dynamic_flag_spec_F77='${wl}-E'
-+      else
+       else
+-	archive_cmds_F77='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds_F77='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +	ld_shlibs_F77=no
-+      fi
+       fi
+       ;;
+ 
++    netbsd*)
++      archive_cmds_F77='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_F77='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
++      hardcode_direct_F77=yes
++      hardcode_shlibpath_var_F77=no
 +      ;;
 +
-     netbsd*)
-       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
- 	archive_cmds_F77='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
-@@ -17183,6 +17460,8 @@ rm -f core conftest.err conftest.$ac_obj
+     solaris*)
+       if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
+ 	ld_shlibs_F77=no
+@@ -18498,13 +18663,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       link_all_deplibs_F77=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds_F77='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
++    mirbsd*)
++     if test -f /usr/libexec/ld.so; then
++	hardcode_direct_F77=yes
++	hardcode_shlibpath_var_F77=no
++	hardcode_direct_absolute_F77=yes
++	archive_cmds_F77='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
++	archive_expsym_cmds_F77='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
++	hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec_F77='${wl}-E'
++	whole_archive_flag_spec_F77="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
+       else
+-	archive_cmds_F77='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
++	ld_shlibs_F77=no
+       fi
+-      hardcode_libdir_flag_spec_F77='-R$libdir'
++      ;;
++
++    netbsd*)
++      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
+       hardcode_direct_F77=yes
+       hardcode_shlibpath_var_F77=no
+       ;;
+@@ -18518,6 +18695,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
 +      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_F77='-R$libdir'
++      hardcode_direct_F77=yes
++      hardcode_shlibpath_var_F77=no
        ;;
  
      openbsd*)
-@@ -17644,6 +17923,7 @@ beos*)
- bsdi[45]*)
-   version_type=linux
-   need_version=no
-+  need_lib_prefix=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-   soname_spec='${libname}${release}${shared_ext}$major'
-   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17744,9 +18024,7 @@ freebsd1*)
-   dynamic_linker=no
+@@ -19126,7 +19308,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
    ;;
  
 -freebsd* | dragonfly*)
--  # DragonFly does not have aout.  When/if they implement a new
--  # versioning mechanism, adjust this.
 +freebsd*)
+   # DragonFly does not have aout.  When/if they implement a new
+   # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-     objformat=`/usr/bin/objformat`
-   else
-@@ -17758,7 +18036,7 @@ freebsd* | dragonfly*)
+@@ -19140,7 +19322,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -1088,7 +712,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -17781,7 +18059,7 @@ freebsd* | dragonfly*)
+@@ -19163,13 +19345,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -1097,7 +721,6 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -17788,6 +18066,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -1113,35 +736,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  ;;
 +
  gnu*)
-   version_type=linux
+   version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -17798,6 +18087,19 @@ gnu*)
-   hardcode_into_libs=yes
-   ;;
- 
-+haiku*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  dynamic_linker="$host_os runtime_loader"
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  shlibpath_var=LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
-+  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
-+  hardcode_into_libs=yes
-+  ;;
-+
- hpux9* | hpux10* | hpux11*)
-   # Give a soname corresponding to the major version so that dld.sl refuses to
-   # link against other versions.
-@@ -17859,12 +18161,7 @@ interix[3-9]*)
+@@ -19257,12 +19450,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
 -    *)
 -	if test "$lt_cv_prog_gnu_ld" = yes; then
--		version_type=linux
+-		version_type=linux # correct to gnu/linux during the next big refactor
 -	else
 -		version_type=irix
 -	fi ;;
@@ -1149,7 +752,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17948,16 +18245,38 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -19355,19 +19543,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -1183,16 +786,20 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    need_version=no
 -  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
-     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
-     dynamic_linker='NetBSD (a.out) ld.so'
-   else
+-    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+-    dynamic_linker='NetBSD (a.out) ld.so'
+-  else
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-     soname_spec='${libname}${release}${shared_ext}$major'
-     dynamic_linker='NetBSD ld.elf_so'
-   fi
-@@ -17986,7 +18305,7 @@ newsos6)
+-    soname_spec='${libname}${release}${shared_ext}$major'
+-    dynamic_linker='NetBSD ld.elf_so'
+-  fi
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='NetBSD ld.elf_so'
+   shlibpath_var=LD_LIBRARY_PATH
+   shlibpath_overrides_runpath=yes
+   hardcode_into_libs=yes
+@@ -19393,7 +19598,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -1201,7 +808,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -17994,7 +18313,7 @@ openbsd*)
+@@ -19401,7 +19606,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -1210,11 +817,11 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -18557,7 +18876,10 @@ $RM -r conftest*
+@@ -19966,7 +20171,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
--cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
 +if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
@@ -1222,7 +829,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
    if test -n "$compiler"; then
-@@ -18776,11 +19098,19 @@ $as_echo_n "checking for $compiler optio
+@@ -20203,9 +20411,16 @@ lt_prog_compiler_static_FC=
        ;;
  
      darwin* | rhapsody*)
@@ -1232,18 +839,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_FC='-fno-common'
 +      lt_prog_compiler_static_FC=''
-       ;;
- 
-+    haiku*)
-+      # PIC is the default for Haiku.
-+      # The "-static" flag exists, but is broken.
-+      lt_prog_compiler_static_FC=
 +      ;;
 +
-     hpux*)
-       # PIC is the default for 64-bit PA HP-UX, but not for 32-bit
-       # PA HP-UX.  On IA64 HP-UX, PIC is the default but the pic flag
-@@ -18800,6 +19130,13 @@ $as_echo_n "checking for $compiler optio
++    *mint*)
++      # FreeMiNT does not support shared libraries at all
++      lt_prog_compiler_pic_FC=
+       ;;
+ 
+     haiku*)
+@@ -20233,6 +20448,13 @@ lt_prog_compiler_static_FC=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -1257,7 +861,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -18922,6 +19259,15 @@ $as_echo_n "checking for $compiler optio
+@@ -20385,6 +20607,15 @@ lt_prog_compiler_static_FC=
        esac
        ;;
  
@@ -1273,7 +877,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      newsos6)
        lt_prog_compiler_pic_FC='-KPIC'
        lt_prog_compiler_static_FC='-Bstatic'
-@@ -18997,6 +19343,9 @@ $as_echo_n "checking for $compiler optio
+@@ -20460,6 +20691,9 @@ lt_prog_compiler_static_FC=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -1283,85 +887,14 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_FC=
      ;;
-@@ -19031,11 +19380,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:19034: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:19383: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:19038: \$? = $ac_status" >&5
-+   echo "$as_me:19387: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -19130,11 +19479,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:19133: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:19482: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:19137: \$? = $ac_status" >&5
-+   echo "$as_me:19486: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -19182,11 +19531,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:19185: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:19534: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:19189: \$? = $ac_status" >&5
-+   echo "$as_me:19538: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -19395,6 +19744,11 @@ _LT_EOF
+@@ -20990,16 +21224,28 @@ _LT_EOF
        fi
        ;;
  
-+    haiku*)
-+      archive_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      link_all_deplibs_FC=yes
-+      ;;
-+
-     interix[3-9]*)
-       hardcode_direct_FC=no
-       hardcode_shlibpath_var_FC=no
-@@ -19481,7 +19835,7 @@ _LT_EOF
-       ;;
- 
-     netbsd*)
+-    netbsd*)
 -      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
-+      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
- 	archive_cmds_FC='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
- 	wlarc=
-       else
-@@ -19856,6 +20210,11 @@ if test -z "$aix_libpath"; then aix_libp
-       hardcode_shlibpath_var_FC=no
-       ;;
- 
-+      haiku*)
-+        archive_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+        link_all_deplibs_FC=yes
-+        ;;
-+
-     hpux9*)
-       if test "$GCC" = yes; then
- 	archive_cmds_FC='$RM $output_objdir/$soname~$CC -shared -fPIC ${wl}+b ${wl}$install_libdir -o $output_objdir/$soname $libobjs $deplibs $compiler_flags~test $output_objdir/$soname = $lib || mv $output_objdir/$soname $lib'
-@@ -19968,6 +20327,20 @@ rm -f core conftest.err conftest.$ac_obj
-       link_all_deplibs_FC=yes
-       ;;
- 
+-	archive_cmds_FC='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
 +    mirbsd*)
 +      if test -f /usr/libexec/ld.so; then
 +	hardcode_direct_FC=yes
@@ -1371,43 +904,77 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +	archive_expsym_cmds_FC='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
 +	hardcode_libdir_flag_spec_FC='${wl}-rpath,$libdir'
 +	export_dynamic_flag_spec_FC='${wl}-E'
-+      else
+       else
+-	archive_cmds_FC='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds_FC='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +	ld_shlibs_FC=no
-+      fi
+       fi
+       ;;
+ 
++    netbsd*)
++      archive_cmds_FC='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_FC='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_FC='${wl}-rpath,$libdir'
++      hardcode_direct_FC=yes
++      hardcode_shlibpath_var_FC=no
 +      ;;
 +
-     netbsd*)
-       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
- 	archive_cmds_FC='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
-@@ -19988,6 +20361,8 @@ rm -f core conftest.err conftest.$ac_obj
+     solaris*)
+       if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
+ 	ld_shlibs_FC=no
+@@ -21570,13 +21816,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       link_all_deplibs_FC=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds_FC='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
++    mirbsd*)
++     if test -f /usr/libexec/ld.so; then
++	hardcode_direct_FC=yes
++	hardcode_shlibpath_var_FC=no
++	hardcode_direct_absolute_FC=yes
++	archive_cmds_FC='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
++	archive_expsym_cmds_FC='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
++	hardcode_libdir_flag_spec_FC='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec_FC='${wl}-E'
++	whole_archive_flag_spec_FC="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
+       else
+-	archive_cmds_FC='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
++	ld_shlibs_FC=no
+       fi
+-      hardcode_libdir_flag_spec_FC='-R$libdir'
++      ;;
++
++    netbsd*)
++      archive_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_FC='${wl}-rpath,$libdir'
+       hardcode_direct_FC=yes
+       hardcode_shlibpath_var_FC=no
+       ;;
+@@ -21590,6 +21848,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
 +      archive_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds_FC='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_FC='-R$libdir'
++      hardcode_direct_FC=yes
++      hardcode_shlibpath_var_FC=no
        ;;
  
      openbsd*)
-@@ -20449,6 +20824,7 @@ beos*)
- bsdi[45]*)
-   version_type=linux
-   need_version=no
-+  need_lib_prefix=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-   soname_spec='${libname}${release}${shared_ext}$major'
-   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -20549,9 +20925,7 @@ freebsd1*)
-   dynamic_linker=no
+@@ -22198,7 +22461,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
    ;;
  
 -freebsd* | dragonfly*)
--  # DragonFly does not have aout.  When/if they implement a new
--  # versioning mechanism, adjust this.
 +freebsd*)
+   # DragonFly does not have aout.  When/if they implement a new
+   # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-     objformat=`/usr/bin/objformat`
-   else
-@@ -20563,7 +20937,7 @@ freebsd* | dragonfly*)
+@@ -22212,7 +22475,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -1416,7 +983,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -20586,7 +20960,7 @@ freebsd* | dragonfly*)
+@@ -22235,13 +22498,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -1425,7 +992,6 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -20593,6 +20967,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -1441,35 +1007,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +  ;;
 +
  gnu*)
-   version_type=linux
+   version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -20603,6 +20988,19 @@ gnu*)
-   hardcode_into_libs=yes
-   ;;
- 
-+haiku*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  dynamic_linker="$host_os runtime_loader"
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}${major} ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  shlibpath_var=LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
-+  sys_lib_dlsearch_path_spec='/boot/home/config/lib /boot/common/lib /boot/system/lib'
-+  hardcode_into_libs=yes
-+  ;;
-+
- hpux9* | hpux10* | hpux11*)
-   # Give a soname corresponding to the major version so that dld.sl refuses to
-   # link against other versions.
-@@ -20664,12 +21062,7 @@ interix[3-9]*)
+@@ -22329,12 +22603,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
 -    *)
 -	if test "$lt_cv_prog_gnu_ld" = yes; then
--		version_type=linux
+-		version_type=linux # correct to gnu/linux during the next big refactor
 -	else
 -		version_type=irix
 -	fi ;;
@@ -1477,7 +1023,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    esac
    need_lib_prefix=no
    need_version=no
-@@ -20753,16 +21146,38 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -22427,19 +22696,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -1511,16 +1057,20 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    need_version=no
 -  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | $GREP __G95__ >/dev/null; then
-     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
-     dynamic_linker='NetBSD (a.out) ld.so'
-   else
+-    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+-    dynamic_linker='NetBSD (a.out) ld.so'
+-  else
 -    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-     soname_spec='${libname}${release}${shared_ext}$major'
-     dynamic_linker='NetBSD ld.elf_so'
-   fi
-@@ -20791,7 +21206,7 @@ newsos6)
+-    soname_spec='${libname}${release}${shared_ext}$major'
+-    dynamic_linker='NetBSD ld.elf_so'
+-  fi
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  soname_spec='${libname}${release}${shared_ext}$major'
++  dynamic_linker='NetBSD ld.elf_so'
+   shlibpath_var=LD_LIBRARY_PATH
+   shlibpath_overrides_runpath=yes
+   hardcode_into_libs=yes
+@@ -22465,7 +22751,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -1529,7 +1079,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -20799,7 +21214,7 @@ openbsd*)
+@@ -22473,7 +22759,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -1538,11 +1088,159 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -21205,7 +21620,10 @@ for cc_temp in $compiler""; do
+@@ -22883,7 +23169,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
--cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
++# Return the actual command name, not our pkgsrc wrapper name because several
++# decisions are made only based on compiler names
++if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
++cc_basename=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+ 
+ 
+ # Go did not exist at the time GCC didn't implicitly link libc in.
+@@ -23003,9 +23292,16 @@ lt_prog_compiler_static_GO=
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_GO='-fno-common'
++      lt_prog_compiler_static_GO=''
++      ;;
++
++    *mint*)
++      # FreeMiNT does not support shared libraries at all
++      lt_prog_compiler_pic_GO=
+       ;;
+ 
+     haiku*)
+@@ -23033,6 +23329,13 @@ lt_prog_compiler_static_GO=
+       # Instead, we relocate shared libraries at runtime.
+       ;;
+ 
++    mint*)
++      # Just because we use GCC doesn't mean we suddenly get shared libraries
++      # on systems that don't support them.
++      lt_prog_compiler_can_build_shared_GO=no
++      enable_shared=no
++      ;;
++
+     msdosdjgpp*)
+       # Just because we use GCC doesn't mean we suddenly get shared libraries
+       # on systems that don't support them.
+@@ -23185,6 +23488,15 @@ lt_prog_compiler_static_GO=
+       esac
+       ;;
+ 
++    mirbsd*)
++      case $cc_basename in
++      # pkgsrc f77 is f2c, which uses gcc underneath.
++      f77*)
++	lt_prog_compiler_wl_GO='-Wl,'
++	;;
++      esac
++      ;;
++
+     newsos6)
+       lt_prog_compiler_pic_GO='-KPIC'
+       lt_prog_compiler_static_GO='-Bstatic'
+@@ -23260,6 +23572,9 @@ lt_prog_compiler_static_GO=
+ 
+ case $host_os in
+   # For platforms which do not support PIC, -DPIC is meaningless:
++  mint*)
++    lt_prog_compiler_pic_GO=
++    ;;
+   *djgpp*)
+     lt_prog_compiler_pic_GO=
+     ;;
+@@ -23790,16 +24105,28 @@ _LT_EOF
+       fi
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds_GO='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
++    mirbsd*)
++      if test -f /usr/libexec/ld.so; then
++	hardcode_direct_GO=yes
++	hardcode_shlibpath_var_GO=no
++	hardcode_direct_absolute_GO=yes
++	archive_cmds_GO='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
++	archive_expsym_cmds_GO='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
++	hardcode_libdir_flag_spec_GO='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec_GO='${wl}-E'
+       else
+-	archive_cmds_GO='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds_GO='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++	ld_shlibs_GO=no
+       fi
+       ;;
+ 
++    netbsd*)
++      archive_cmds_GO='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_GO='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_GO='${wl}-rpath,$libdir'
++      hardcode_direct_GO=yes
++      hardcode_shlibpath_var_GO=no
++      ;;
++
+     solaris*)
+       if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
+ 	ld_shlibs_GO=no
+@@ -24381,13 +24708,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       link_all_deplibs_GO=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds_GO='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
++    mirbsd*)
++     if test -f /usr/libexec/ld.so; then
++	hardcode_direct_GO=yes
++	hardcode_shlibpath_var_GO=no
++	hardcode_direct_absolute_GO=yes
++	archive_cmds_GO='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
++	archive_expsym_cmds_GO='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
++	hardcode_libdir_flag_spec_GO='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec_GO='${wl}-E'
++	whole_archive_flag_spec_GO="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
+       else
+-	archive_cmds_GO='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
++	ld_shlibs_GO=no
+       fi
+-      hardcode_libdir_flag_spec_GO='-R$libdir'
++      ;;
++
++    netbsd*)
++      archive_cmds_GO='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_GO='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_GO='${wl}-rpath,$libdir'
+       hardcode_direct_GO=yes
+       hardcode_shlibpath_var_GO=no
+       ;;
+@@ -24401,6 +24740,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       ;;
+ 
+     *nto* | *qnx*)
++      archive_cmds_GO='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_GO='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_GO='-R$libdir'
++      hardcode_direct_GO=yes
++      hardcode_shlibpath_var_GO=no
+       ;;
+ 
+     openbsd*)
+@@ -24980,7 +25324,10 @@ for cc_temp in $compiler""; do
+     *) break;;
+   esac
+ done
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
 +if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
@@ -1550,21 +1248,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  
  # GCJ did not exist at the time GCC didn't implicitly link libc in.
-@@ -21242,11 +21660,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:21245: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:21663: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:21249: \$? = $ac_status" >&5
-+   echo "$as_me:21667: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -21320,11 +21738,19 @@ $as_echo_n "checking for $compiler optio
+@@ -25100,9 +25447,16 @@ lt_prog_compiler_static_GCJ=
        ;;
  
      darwin* | rhapsody*)
@@ -1574,18 +1258,15 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        # Common symbols not allowed in MH_DYLIB files
        lt_prog_compiler_pic_GCJ='-fno-common'
 +      lt_prog_compiler_static_GCJ=''
-       ;;
- 
-+    haiku*)
-+      # PIC is the default for Haiku.
-+      # The "-static" flag exists, but is broken.
-+      lt_prog_compiler_static_GCJ=
 +      ;;
 +
-     hpux*)
-       # PIC is the default for 64-bit PA HP-UX, but not for 32-bit
-       # PA HP-UX.  On IA64 HP-UX, PIC is the default but the pic flag
-@@ -21344,6 +21770,13 @@ $as_echo_n "checking for $compiler optio
++    *mint*)
++      # FreeMiNT does not support shared libraries at all
++      lt_prog_compiler_pic_GCJ=
+       ;;
+ 
+     haiku*)
+@@ -25130,6 +25484,13 @@ lt_prog_compiler_static_GCJ=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -1599,7 +1280,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -21466,6 +21899,15 @@ $as_echo_n "checking for $compiler optio
+@@ -25282,6 +25643,15 @@ lt_prog_compiler_static_GCJ=
        esac
        ;;
  
@@ -1615,7 +1296,7 @@ The problem manifests with wl and no_builtin_flag containing newlines.
      newsos6)
        lt_prog_compiler_pic_GCJ='-KPIC'
        lt_prog_compiler_static_GCJ='-Bstatic'
-@@ -21541,6 +21983,9 @@ $as_echo_n "checking for $compiler optio
+@@ -25357,6 +25727,9 @@ lt_prog_compiler_static_GCJ=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -1625,85 +1306,14 @@ The problem manifests with wl and no_builtin_flag containing newlines.
    *djgpp*)
      lt_prog_compiler_pic_GCJ=
      ;;
-@@ -21575,11 +22020,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:21578: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:22023: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:21582: \$? = $ac_status" >&5
-+   echo "$as_me:22027: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings other than the usual output.
-@@ -21674,11 +22119,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:21677: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:22122: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:21681: \$? = $ac_status" >&5
-+   echo "$as_me:22126: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -21726,11 +22171,11 @@ else
-    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:21729: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:22174: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:21733: \$? = $ac_status" >&5
-+   echo "$as_me:22178: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -21939,6 +22384,11 @@ _LT_EOF
+@@ -25887,16 +26260,28 @@ _LT_EOF
        fi
        ;;
  
-+    haiku*)
-+      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+      link_all_deplibs_GCJ=yes
-+      ;;
-+
-     interix[3-9]*)
-       hardcode_direct_GCJ=no
-       hardcode_shlibpath_var_GCJ=no
-@@ -22025,7 +22475,7 @@ _LT_EOF
-       ;;
- 
-     netbsd*)
+-    netbsd*)
 -      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
-+      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null && echo __G95__ | $CC -cpp -E - | grep __G95__ >/dev/null; then
- 	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
- 	wlarc=
-       else
-@@ -22412,6 +22862,11 @@ if test -z "$aix_libpath"; then aix_libp
-       hardcode_shlibpath_var_GCJ=no
-       ;;
- 
-+      haiku*)
-+        archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
-+        link_all_deplibs_GCJ=yes
-+        ;;
-+
-     hpux9*)
-       if test "$GCC" = yes; then
- 	archive_cmds_GCJ='$RM $output_objdir/$soname~$CC -shared -fPIC ${wl}+b ${wl}$install_libdir -o $output_objdir/$soname $libobjs $deplibs $compiler_flags~test $output_objdir/$soname = $lib || mv $output_objdir/$soname $lib'
-@@ -22525,6 +22980,20 @@ rm -f core conftest.err conftest.$ac_obj
-       link_all_deplibs_GCJ=yes
-       ;;
- 
+-	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+-	wlarc=
 +    mirbsd*)
 +      if test -f /usr/libexec/ld.so; then
 +	hardcode_direct_GCJ=yes
@@ -1713,28 +1323,72 @@ The problem manifests with wl and no_builtin_flag containing newlines.
 +	archive_expsym_cmds_GCJ='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
 +	hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
 +	export_dynamic_flag_spec_GCJ='${wl}-E'
-+      else
+       else
+-	archive_cmds_GCJ='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-	archive_expsym_cmds_GCJ='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
 +	ld_shlibs_GCJ=no
-+      fi
+       fi
+       ;;
+ 
++    netbsd*)
++      archive_cmds_GCJ='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_GCJ='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
++      hardcode_direct_GCJ=yes
++      hardcode_shlibpath_var_GCJ=no
 +      ;;
 +
-     netbsd*)
-       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
- 	archive_cmds_GCJ='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
-@@ -22545,6 +23014,8 @@ rm -f core conftest.err conftest.$ac_obj
+     solaris*)
+       if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
+ 	ld_shlibs_GCJ=no
+@@ -26478,13 +26863,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       link_all_deplibs_GCJ=yes
+       ;;
+ 
+-    netbsd*)
+-      if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+-	archive_cmds_GCJ='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
++    mirbsd*)
++     if test -f /usr/libexec/ld.so; then
++	hardcode_direct_GCJ=yes
++	hardcode_shlibpath_var_GCJ=no
++	hardcode_direct_absolute_GCJ=yes
++	archive_cmds_GCJ='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
++	archive_expsym_cmds_GCJ='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
++	hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
++	export_dynamic_flag_spec_GCJ='${wl}-E'
++	whole_archive_flag_spec_GCJ="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
+       else
+-	archive_cmds_GCJ='$LD -shared -o $lib $libobjs $deplibs $linker_flags'      # ELF
++	ld_shlibs_GCJ=no
+       fi
+-      hardcode_libdir_flag_spec_GCJ='-R$libdir'
++      ;;
++
++    netbsd*)
++      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
+       hardcode_direct_GCJ=yes
+       hardcode_shlibpath_var_GCJ=no
+       ;;
+@@ -26498,6 +26895,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
 +      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
 +      archive_expsym_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      hardcode_libdir_flag_spec_GCJ='-R$libdir'
++      hardcode_direct_GCJ=yes
++      hardcode_shlibpath_var_GCJ=no
        ;;
  
      openbsd*)
-@@ -23115,7 +23586,10 @@ for cc_temp in $compiler""; do
+@@ -27075,7 +27477,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
--cc_basename=`$ECHO "X$cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+-cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
 +# Return the actual command name, not our pkgsrc wrapper name because several
 +# decisions are made only based on compiler names
 +if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
@@ -1742,23 +1396,3 @@ The problem manifests with wl and no_builtin_flag containing newlines.
  
  lt_cv_prog_compiler_c_o_RC=yes
  
-@@ -24296,6 +24770,9 @@ LTCC='$LTCC'
- LTCFLAGS='$LTCFLAGS'
- compiler='$compiler_DEFAULT'
- 
-+printf "%s" "$lt_prog_compiler_wl" > /dev/null
-+printf "%s" "$lt_prog_compiler_no_builtin_flag" > /dev/null
-+
- # Quote evaled strings.
- for var in SED \
- GREP \
-@@ -24580,6 +25057,9 @@ case \$lt_ECHO in
-   ;;
- esac
- 
-+printf "%s" "$lt_prog_compiler_wl" > /dev/null
-+printf "%s" "$lt_prog_compiler_no_builtin_flag" > /dev/null
-+
- ac_aux_dir='$ac_aux_dir'
- xsi_shell='$xsi_shell'
- lt_shell_append='$lt_shell_append'
