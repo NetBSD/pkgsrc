@@ -1,0 +1,11 @@
+Sqitch is a VCS-aware SQL change management application. What makes
+it different from your typical migration-style approaches? A few
+things:
+
+* No opinions
+* Native scripting
+* VCS integration
+* Dependency resolution
+* No numbering
+* Bundling
+* Reduced duplication
