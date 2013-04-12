@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/01/31 23:01:56 marino Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/12 15:40:54 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -13,9 +12,9 @@ HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-SNAPSHOT=	20120920
+SNAPSHOT=	20130411
 GCC_BRANCH=	4.7
-GCC_POINT=	2
+GCC_POINT=	3
 GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
 LANGS=		c
 
