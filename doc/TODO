@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12078 2013/04/13 06:05:41 shattered Exp $
+$NetBSD: TODO,v 1.12079 2013/04/13 07:56:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,6 +347,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o SDL_gfx-2.0.24
+	o SOGo-2.0.5
 	o Sigil-0.7.1 [needs qt5]
 	o SmartEiffel-2.3
 	o TiffIO-130e
@@ -594,12 +595,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
-	o gaupol-0.21.1
+	o gaupol-0.22
 	o gcal-3.6.3
+	o gcc47-4.7.3
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcpio-2.10
-	o gdb-7.5
+	o gdal-1.9.2
+	o gdb-7.5.1 [wip]
 	o gdeskcal-1.01
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdl-3.8.0
@@ -682,7 +685,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
-	o guile-2.0.7
+	o guile-2.0.9
 	o guile-gtk-2.0
 	o gupnp-av-0.12.1
 	o gupnp-dlna-0.10.0
@@ -720,7 +723,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
 	o ilmbase-2.0.0
-	o imapfilter-2.5.3
+	o imapfilter-2.5.4
 	o imapsync-1.452
 	o imp-6.0.4
 	o ingo-3.0.3
@@ -786,6 +789,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgda-4.2.5
 	o libgdata-0.13.1
 	o libgee-0.10.0
+	o libgee0.8-0.8.6
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.8.0
 	o libgnomedb-3.1.2
@@ -907,7 +911,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ntp4-4.2.6p5
 	o nucleo-0.7.6
 	o nulib2-220
-	o nut-18.6
+	o nut-18.7
 	o nxtvepg-2.8.1
 	o olvwm-4.5
 	o oo2c-2.1.7
@@ -991,7 +995,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pulseaudio-3.0
 	o puppet-2.7.6
 	o puzzle-9173
-	o puzzles-9823
+	o puzzles-9830
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1013,7 +1017,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qbrew-0.3.9
 	o qemu-1.4.0
 	o qnetwalk-1.4
-	o qt5-libs-5.0.1
+	o qt5-libs-5.0.2
 	o quagga-0.99.22
 	o quilt-0.60
 	o radiance-3.7.2
@@ -1043,7 +1047,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o samba-3.6.13
-	o samba-4.0.4
+	o samba-4.0.5
 	o sarg-2.2.5
 	o sawfish-1.9.1
 	o scala-2.10.0
@@ -1079,7 +1083,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o smproxy-1.0.3
 	o snd-10.6
 	o snes9x-1.53
-	o snort-2.9.4.1
+	o snort-2.9.4.5
 	o solfege-3.20.7
 	o sope-4.6
 	o sound-juicer-2.32.0
@@ -1170,6 +1174,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vala-0.20.1
 	o vbetool-1.1
 	o vera-1.17
+	o veusz-1.17.1
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.18
@@ -1196,7 +1201,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.5.27 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.5.28 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
