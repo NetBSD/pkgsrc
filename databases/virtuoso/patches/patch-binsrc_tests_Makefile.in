@@ -1,0 +1,30 @@
+$NetBSD: patch-binsrc_tests_Makefile.in,v 1.1 2013/04/13 13:16:02 jaapb Exp $
+
+Remove conflict in installation of isql and isqlw
+--- binsrc/tests/Makefile.in.orig	2012-08-01 22:04:11.000000000 +0000
++++ binsrc/tests/Makefile.in
+@@ -54,7 +54,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-bin_PROGRAMS = isql$(EXEEXT) isqlw$(EXEEXT) inifile$(EXEEXT) \
++bin_PROGRAMS = isql-vt$(EXEEXT) isqlw-vt$(EXEEXT) inifile$(EXEEXT) \
+ 	$(am__EXEEXT_1)
+ noinst_PROGRAMS = M2$(EXEEXT) paramstats$(EXEEXT) ins$(EXEEXT) \
+ 	blobs$(EXEEXT) blobs2$(EXEEXT) blobnulls$(EXEEXT) \
+@@ -712,13 +712,13 @@ ins$(EXEEXT): $(ins_OBJECTS) $(ins_DEPEN
+ ins-iodbc$(EXEEXT): $(ins_iodbc_OBJECTS) $(ins_iodbc_DEPENDENCIES) 
+ 	@rm -f ins-iodbc$(EXEEXT)
+ 	$(ins_iodbc_LINK) $(ins_iodbc_OBJECTS) $(ins_iodbc_LDADD) $(LIBS)
+-isql$(EXEEXT): $(isql_OBJECTS) $(isql_DEPENDENCIES) 
++isql-vt$(EXEEXT): $(isql_OBJECTS) $(isql_DEPENDENCIES) 
+ 	@rm -f isql$(EXEEXT)
+ 	$(isql_LINK) $(isql_OBJECTS) $(isql_LDADD) $(LIBS)
+ isql-iodbc$(EXEEXT): $(isql_iodbc_OBJECTS) $(isql_iodbc_DEPENDENCIES) 
+ 	@rm -f isql-iodbc$(EXEEXT)
+ 	$(isql_iodbc_LINK) $(isql_iodbc_OBJECTS) $(isql_iodbc_LDADD) $(LIBS)
+-isqlw$(EXEEXT): $(isqlw_OBJECTS) $(isqlw_DEPENDENCIES) 
++isqlw-vt$(EXEEXT): $(isqlw_OBJECTS) $(isqlw_DEPENDENCIES) 
+ 	@rm -f isqlw$(EXEEXT)
+ 	$(isqlw_LINK) $(isqlw_OBJECTS) $(isqlw_LDADD) $(LIBS)
+ isqlw-iodbc$(EXEEXT): $(isqlw_iodbc_OBJECTS) $(isqlw_iodbc_DEPENDENCIES) 
