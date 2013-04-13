@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 09:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/13 09:03:47 ryoon Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -21,7 +21,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
 OO_BASEVER=		3.6
-OO_RELEASE=		3.6.2
+OO_RELEASE=		3.6.6
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -34,7 +34,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.proglinks
 PLIST_SRC+=		${WRKDIR}/PLIST
 PLIST_SRC+=		${PKGDIR}/PLIST.dirs
 
-EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
 EMUL_MODULES.linux=	freetype2 x11 locale png fontconfig
 EMUL_REQD=		suse>=11.3
@@ -53,6 +53,11 @@ USE_TOOLS+=	patch
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		LibO_${OO_RELEASE}_Linux_x86_install-rpm_en-US
 WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}.2_Linux_x86_install-rpm_en-US
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86/
+.elif ${EMUL_PLATFORM} == "linux-x86_64"
+DISTNAME=		LibO_${OO_RELEASE}_Linux_x86-64_install-rpm_en-US
+WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}.2_Linux_x86-64_install-rpm_en-US
+MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86_64/
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solaris_x86_install_en-US
 WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
