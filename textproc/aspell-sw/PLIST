@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 11:24:49 rodent Exp $
+lib/aspell/kiswahili.alias
+lib/aspell/sw.multi
+lib/aspell/sw.rws
+lib/aspell/swahili.alias
+share/aspell/sw.dat
