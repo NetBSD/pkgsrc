@@ -1,6 +1,18 @@
-$NetBSD: distinfo,v 1.22 2013/01/29 05:56:05 wiz Exp $
+$NetBSD: distinfo,v 1.23 2013/04/13 11:10:03 obache Exp $
 
 SHA1 (pkg-config-0.28.tar.gz) = 71853779b12f958777bffcb8ca6d849b4d3bed46
 RMD160 (pkg-config-0.28.tar.gz) = 233f0b667cfb8f2e6a5647984d6389a770132173
 Size (pkg-config-0.28.tar.gz) = 1931203 bytes
 SHA1 (patch-configure) = 286dcc405ae8f4d4c6e8598960ed03ba5822dfb1
+SHA1 (patch-glib_configure) = 4c1ea76c1c194fb085c8ae63d391c304e852d100
+SHA1 (patch-glib_configure.ac) = 75b0d3bfd806ca608b19a477cfe1cbc17654f579
+SHA1 (patch-glib_glib_gatomic.c) = d1ba014c58e04ba7be2fa1c7f852ed8fd71fe1c0
+SHA1 (patch-glib_glib_gcharset.c) = b191bc3ca806cff6fa54790fc225ddb35a158d55
+SHA1 (patch-glib_glib_gconvert.c) = 11a6c7cdd3a4473ff522bf7a0e7ad33653199970
+SHA1 (patch-glib_glib_gfileutils.c) = bc52e4435ad16a7e7f6780330d4b2b174a3a4411
+SHA1 (patch-glib_glib_glib.h) = 1c1baedb0f3266d948ded595b70b132821702963
+SHA1 (patch-glib_glib_gutf8.c) = 2ed8ea7b843e3d07392671201c8dfe1111e29065
+SHA1 (patch-glib_glib_gutils.c) = 60e16596d898324261fd6ae3ab1643beb8cb3ed3
+SHA1 (patch-glib_glib_gutils.h) = 9fdca0280fa7871c231b75fd6281c72dd621fac4
+SHA1 (patch-glib_glib_gwin32.h) = 8f3dba0a47a10280cdc1a96df8476796cf65d0e1
+SHA1 (patch-glib_glib_libcharset_localcharset.c) = dd4fc8979a31d74eb837cce5778711c1c76bc74e

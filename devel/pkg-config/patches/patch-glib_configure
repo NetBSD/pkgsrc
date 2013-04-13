@@ -1,0 +1,16 @@
+$NetBSD: patch-glib_configure,v 1.1 2013/04/13 11:10:04 obache Exp $
+
+* from glib2.0.cygport 2.32.1-not-win32.patch
+
+--- glib/configure.orig	2013-01-22 13:13:56.000000000 +0000
++++ glib/configure
+@@ -25733,9 +25733,6 @@ $as_echo "$broken_poll" >&6; }
+ 
+ 
+ case $host in
+-  *-*-cygwin*)
+-	G_LIBS_EXTRA="-luser32 -lkernel32"
+-    ;;
+   *-*-mingw*)
+ 	G_LIBS_EXTRA="-lws2_32 -lole32 -lwinmm -lshlwapi"
+     ;;
