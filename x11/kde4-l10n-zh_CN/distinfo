@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/02 01:01:50 rodent Exp $
+$NetBSD: distinfo,v 1.2 2013/04/13 19:06:26 rodent Exp $
 
-SHA1 (kde-l10n-zh_CN-4.8.4.tar.xz) = 90fe7eec87774dfdd4c37a8aa204d8f83651d307
-RMD160 (kde-l10n-zh_CN-4.8.4.tar.xz) = d41ade9cbf8cec99238e09eec561dc583ee743a1
-Size (kde-l10n-zh_CN-4.8.4.tar.xz) = 3559260 bytes
+SHA1 (kde-l10n-zh_CN-4.10.2.tar.xz) = 77a601392efc52deab08c756c0b8249357d77527
+RMD160 (kde-l10n-zh_CN-4.10.2.tar.xz) = 71b45f289a0c234065686a359bb25b4b90d1ac24
+Size (kde-l10n-zh_CN-4.10.2.tar.xz) = 3577892 bytes
