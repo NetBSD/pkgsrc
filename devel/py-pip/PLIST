@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/09/10 14:01:28 wen Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/04/13 14:41:53 wen Exp $
 bin/pip
 bin/pip-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -6,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pip/__init__.py
 ${PYSITELIB}/pip/__init__.pyc
@@ -13,15 +14,25 @@ ${PYSITELIB}/pip/__init__.pyo
 ${PYSITELIB}/pip/__main__.py
 ${PYSITELIB}/pip/__main__.pyc
 ${PYSITELIB}/pip/__main__.pyo
-${PYSITELIB}/pip/backwardcompat.py
-${PYSITELIB}/pip/backwardcompat.pyc
-${PYSITELIB}/pip/backwardcompat.pyo
+${PYSITELIB}/pip/backwardcompat/__init__.py
+${PYSITELIB}/pip/backwardcompat/__init__.pyc
+${PYSITELIB}/pip/backwardcompat/__init__.pyo
+${PYSITELIB}/pip/backwardcompat/socket_create_connection.py
+${PYSITELIB}/pip/backwardcompat/socket_create_connection.pyc
+${PYSITELIB}/pip/backwardcompat/socket_create_connection.pyo
+${PYSITELIB}/pip/backwardcompat/ssl_match_hostname.py
+${PYSITELIB}/pip/backwardcompat/ssl_match_hostname.pyc
+${PYSITELIB}/pip/backwardcompat/ssl_match_hostname.pyo
 ${PYSITELIB}/pip/basecommand.py
 ${PYSITELIB}/pip/basecommand.pyc
 ${PYSITELIB}/pip/basecommand.pyo
 ${PYSITELIB}/pip/baseparser.py
 ${PYSITELIB}/pip/baseparser.pyc
 ${PYSITELIB}/pip/baseparser.pyo
+${PYSITELIB}/pip/cacert.pem
+${PYSITELIB}/pip/cmdoptions.py
+${PYSITELIB}/pip/cmdoptions.pyc
+${PYSITELIB}/pip/cmdoptions.pyo
 ${PYSITELIB}/pip/commands/__init__.py
 ${PYSITELIB}/pip/commands/__init__.pyc
 ${PYSITELIB}/pip/commands/__init__.pyo
@@ -40,9 +51,15 @@ ${PYSITELIB}/pip/commands/help.pyo
 ${PYSITELIB}/pip/commands/install.py
 ${PYSITELIB}/pip/commands/install.pyc
 ${PYSITELIB}/pip/commands/install.pyo
+${PYSITELIB}/pip/commands/list.py
+${PYSITELIB}/pip/commands/list.pyc
+${PYSITELIB}/pip/commands/list.pyo
 ${PYSITELIB}/pip/commands/search.py
 ${PYSITELIB}/pip/commands/search.pyc
 ${PYSITELIB}/pip/commands/search.pyo
+${PYSITELIB}/pip/commands/show.py
+${PYSITELIB}/pip/commands/show.pyc
+${PYSITELIB}/pip/commands/show.pyo
 ${PYSITELIB}/pip/commands/uninstall.py
 ${PYSITELIB}/pip/commands/uninstall.pyc
 ${PYSITELIB}/pip/commands/uninstall.pyo
