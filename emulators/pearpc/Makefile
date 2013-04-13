@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/11/01 19:45:12 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/13 07:55:06 ghen Exp $
 
 DISTNAME=		pearpc-0.4
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pearpc/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pearpc.sourceforge.net/
 COMMENT=		PowerPC emulator
 

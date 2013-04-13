@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/31 11:17:24 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/13 07:55:01 ghen Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -7,7 +7,7 @@ CATEGORIES=		devel x11 scm
 MASTER_SITES=		http://lincvs.com/download/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lincvs.org/
 COMMENT=		Nice GUI front-end to CVS (using Qt)
 
