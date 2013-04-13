@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1302 2013/04/12 17:02:27 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1303 2013/04/13 00:05:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2065,3 +2065,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/p5-App-Sqitch version 0.961 [schmonz 2013-04-12]
 	Updated lang/php53 to 5.3.24 [taca 2013-04-12]
 	Updated lang/php54 to 5.4.14 [taca 2013-04-12]
+	Updated x11/kde4-l10n-el to 4.10.2 [markd 2013-04-12]
+	Updated x11/kde4-l10n-es to 4.10.2 [markd 2013-04-12]
+	Updated x11/kde4-l10n-et to 4.10.2 [markd 2013-04-12]
+	Updated x11/kde4-l10n-eu to 4.10.2 [markd 2013-04-12]
