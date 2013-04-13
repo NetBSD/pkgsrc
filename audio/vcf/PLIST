@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 14:49:09 rodent Exp $
+lib/ladspa/vcf.so
