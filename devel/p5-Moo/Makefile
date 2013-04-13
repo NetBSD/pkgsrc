@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/01/26 13:31:10 rhaen Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/13 14:22:05 wen Exp $
 
-DISTNAME=	Moo-1.000007
+DISTNAME=	Moo-1.001000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTROUT/}
@@ -14,7 +14,9 @@ DEPENDS+=	p5-Class-Method-Modifiers>=1.10:../../devel/p5-Class-Method-Modifiers
 DEPENDS+=	p5-Devel-GlobalDestruction>=0.09:../../devel/p5-Devel-GlobalDestruction
 DEPENDS+=	p5-Module-Runtime>=0.012:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-Role-Tiny>=1.002004:../../devel/p5-Role-Tiny
-DEPENDS+=	p5-strictures>=1.001001:../../devel/p5-strictures
+DEPENDS+=	p5-strictures>=1.004003:../../devel/p5-strictures
+
+BUILD_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=	auto/Moo/.packlist
 
