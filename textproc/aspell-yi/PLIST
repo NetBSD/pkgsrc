@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 12:44:44 rodent Exp $
+lib/aspell/yi.multi
+lib/aspell/yi.rws
+lib/aspell/yiddish.alias
+share/aspell/u-hebr.cmap
+share/aspell/u-hebr.cset
+share/aspell/yi.dat
