@@ -1,20 +1,17 @@
-$NetBSD: distinfo,v 1.3 2013/02/27 12:32:06 hubertf Exp $
+$NetBSD: distinfo,v 1.4 2013/04/13 17:51:57 riz Exp $
 
-SHA1 (ansible-1.0.tar.gz) = 05c28bf696968ae8ef7779f8757b089ef4da6270
-RMD160 (ansible-1.0.tar.gz) = 6526c7588ccf53250601f76e6c3b4d5afcc1beeb
-Size (ansible-1.0.tar.gz) = 222956 bytes
-SHA1 (patch-Makefile) = c7e66169fcfdd130e04e6f6b4fcd9cf16828e27d
-SHA1 (patch-docs_man_man1_ansible-playbook.1) = a7c4a1af3038615922e54f8c683daa0f9d920e0f
-SHA1 (patch-docs_man_man1_ansible.1) = 41fa78147cfa7be140742f1fe781d9f5652f4d8a
+SHA1 (ansible-1.1.tar.gz) = fa1009e80b624945675bbaba690b895a1ff050fd
+RMD160 (ansible-1.1.tar.gz) = 220dd91db3ab0d6df5dec456448e22d436077f3d
+Size (ansible-1.1.tar.gz) = 302115 bytes
+SHA1 (patch-docs_man_man1_ansible-playbook.1) = 33ce57bccb6cb29e978871a868bf26ca17d87660
+SHA1 (patch-docs_man_man1_ansible.1) = 266a520f8f227686cc84b8a3e9b6fac8e20e1247
 SHA1 (patch-examples_ansible.cfg) = 631236fadaadfd28d71b7bc7cce33e62691ee407
-SHA1 (patch-lib_ansible_callbacks.py) = e75a660e0f89f5a29ab69bea71c50d4e146cd55a
-SHA1 (patch-lib_ansible_constants.py) = 0e6102658553a833b98c79be12340dfccda3e87d
-SHA1 (patch-library_lineinfile) = 36a0cffd048380247644306ac08626869249c770
-SHA1 (patch-library_mysql_db) = ba034677a5f0e4727c37a1e0bbc9cd0314f4c4de
+SHA1 (patch-lib_ansible_callbacks.py) = 607809cf64a676ef91a70b915e97ac87b8ddd31b
+SHA1 (patch-lib_ansible_constants.py) = 51171c84680b18a2d1ff2401cc1fd08e009aa83c
+SHA1 (patch-library_mysql_db) = 45e782d41c3e2bc9e462441205f894e7089d798a
 SHA1 (patch-library_ping) = 6bb9b946df3a44ac938eee7e752bf2149936b8e6
-SHA1 (patch-library_pkgin) = 60f5350fbdb61b859bc562599e1e12636b3f98a9
+SHA1 (patch-library_pkgin) = 4b57890efa9145c0b2b68c2c75c990618488d824
 SHA1 (patch-library_raw) = 897aa5b8e5abadd23adc6de178cbec417c43e540
-SHA1 (patch-library_service) = 7fd6392b5f283ba5d511182ba9611f589b8a3d28
-SHA1 (patch-library_setup) = a1f396477f60d4e9cb6c2f6b12d1b438f0724392
+SHA1 (patch-library_setup) = 7489a5c905916cc1559db15b730a1a93cb782971
 SHA1 (patch-library_slurp) = 54a021519554c3eb95daf9396c32d6ec559ddab8
-SHA1 (patch-library_virt) = c53ef028ab29ff9aafe02946e85249e3421a7ab7
+SHA1 (patch-library_virt) = b01c7b2d7cd49ad7720d3a1430d7bba41673d2a6
