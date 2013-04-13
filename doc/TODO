@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12079 2013/04/13 07:56:51 wiz Exp $
+$NetBSD: TODO,v 1.12080 2013/04/13 13:00:26 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o subversion-base-1.7.9
 	o sudo-1.8.6p7
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
