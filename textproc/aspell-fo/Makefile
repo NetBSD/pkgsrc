@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2013/04/09 02:33:42 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/13 13:14:05 rodent Exp $
 
-DISTNAME=	aspell-fo-0.2.38
+DISTNAME=	aspell-fo-0.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://fo.speling.org/filer/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fo.speling.org/
+HOMEPAGE=	http://fo.speling.org/installation/aspell
 COMMENT=	Faroese language support for aspell
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	perl
 REPLACE_PERL=	unsq
