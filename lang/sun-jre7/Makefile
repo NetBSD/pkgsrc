@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2013/03/08 15:08:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/13 11:19:36 ryoon Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
 # Note: This needs to be kept in sync with the sun-jdk7 package
 # Note: If you make makesum, make sure that you include both archs in distinfo
 
-DISTNAME=	jre-7u15-${DIST_OS}-${DIST_ARCH}
-PKGNAME=	sun-jre7-7.0.15
+DISTNAME=	jre-7u17-${DIST_OS}-${DIST_ARCH}
+PKGNAME=	sun-jre7-7.0.17
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
 
-DOWNLOAD_NAME=	Java Runtime Environment (JRE) 7u15
+DOWNLOAD_NAME=	Java Runtime Environment (JRE) 7u17
 
 USE_TOOLS+=	pax
 
-WRKSRC=		${WRKDIR}/jre1.7.0_15
+WRKSRC=		${WRKDIR}/jre1.7.0_17
 JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
 REQD_DIRS=	${JAVA_HOME}
