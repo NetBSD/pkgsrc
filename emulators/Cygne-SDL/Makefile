@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 12:55:08 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/13 19:08:27 dholland Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		emulators
 MASTER_SITES=		http://sdlemu.ngemu.com/OpenProjects/
 
@@ -11,7 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://icculus.org/Cygne-SDL/
 COMMENT=		Bandai Wonderswan Color handheld emulator
 
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+# The makefile mentions nasm but does not actually use it.
+#BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/Cygne-SDL-0.1
 MAKE_FILE=		Makefiles/Makefile.unix
@@ -20,10 +21,7 @@ BUILD_DIRS=		src
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		zip
 
-# Uses i386 assembly code
-ONLY_FOR_PLATFORM=	*-*-i386
-
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/Cygne-SDL share/doc/Cygne-SDL
 
 post-build:
 	cd ${WRKSRC}/WonderSnake && \
@@ -31,9 +29,7 @@ post-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/cygne ${DESTDIR}${PREFIX}/bin/Cygne-SDL
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Cygne-SDL
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/Cygne-SDL
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/Cygne-SDL
 	${INSTALL_DATA} ${WRKSRC}/WonderSnake/Wondersnake.txt \
 		${DESTDIR}${PREFIX}/share/Cygne-SDL
 	${INSTALL_DATA} ${WRKSRC}/WonderSnake/Wondersnake.zip \
