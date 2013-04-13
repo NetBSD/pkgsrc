@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2013/04/09 02:33:42 rodent Exp $
+$NetBSD: patch-aa,v 1.2 2013/04/13 13:14:05 rodent Exp $
 
---- Makefile.orig	2009-11-04 12:38:50.000000000 -0800
-+++ Makefile	2009-12-02 09:53:27.000000000 -0800
+Use DESTDIR and install using INSTALL_* instead of chown/chmod/mv.
+
+--- Makefile.orig	2013-03-04 07:27:46.000000000 +0000
++++ Makefile
 @@ -9,16 +9,14 @@ landekode=FO
  lang = fo
- version = 0.2.38
+ version = 0.4.2
  
 -dictdir=`aspell dump config | grep '^\# dict-dir current: ' | cut -d' ' -f4`
 -datadir=`aspell dump config | grep '^\# data-dir current: ' | cut -d' ' -f4`
@@ -19,7 +21,7 @@ $NetBSD: patch-aa,v 1.1 2013/04/09 02:33:42 rodent Exp $
 -	mv $(sprog).dat $(sprog)_phonet.dat $(datadir)
 -	mv $(sprog)                         $(dictdir)
 +	${BSD_INSTALL_DATA} $(sprog).dat $(sprog)_phonet.dat $(datadir)
-+	${BSD_INSTALL_DATA} $(sprog)                         $(dictdir)
++	${BSD_INSTALL_DATA} $(sprog) $(dictdir)
  	ln -fs $(datadir)/$(sprog).dat        $(datadir)/$(sprogkode)_$(landekode).dat || true
  	ln -fs $(datadir)/$(sprog)_phonet.dat $(datadir)/$(sprogkode)_$(landekode)_phonet.dat || true
  	ln -fs $(dictdir)/$(sprog)            $(dictdir)/$(sprogkode)_$(landekode) || true
