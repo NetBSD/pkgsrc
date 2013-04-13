@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.4 2005/11/03 21:38:04 rillig Exp $
+$NetBSD: distinfo,v 1.5 2013/04/13 19:08:27 dholland Exp $
 
 SHA1 (Cygne-SDL-0.1-src.tar.gz) = f9c50702d1911d0ff1728e5aa089e67cfdfd0030
 RMD160 (Cygne-SDL-0.1-src.tar.gz) = 6d9fd7195a936f17fc3984a66722272c7e30991a
 Size (Cygne-SDL-0.1-src.tar.gz) = 106448 bytes
-SHA1 (patch-aa) = ee9dd0b364d278a45f2ac8d038b43aaf8f0c5c96
-SHA1 (patch-ab) = faff74d577fb243635a3aed7e6c17132bc43fe07
-SHA1 (patch-ac) = b8037825c79bd36aa65bf18745a3b09470b34ec0
-SHA1 (patch-ad) = 1bf79e577e70d13fb3032d331235dcd6e2d611f2
+SHA1 (patch-aa) = 65f8a9b50150dbbb65f20999e457ef31ff196c9b
+SHA1 (patch-ab) = 775f303626193bec32d2964ad7c63e528bc831b3
+SHA1 (patch-ac) = 5d73fc40a43a83aff312a86e077f28b1d52955c9
+SHA1 (patch-ad) = 0869496464d90d3b6db932d0279e4ac1328a3332
+SHA1 (patch-src_mainsdl.cpp) = 53cceb4a6b2b9c36b64414e8be621b0baa9470d1
