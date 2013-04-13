@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2013/04/12 14:41:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.430 2013/04/13 13:17:35 jaapb Exp $
 
 COMMENT=	Databases
 
@@ -412,6 +412,7 @@ SUBDIR+=	tinycdb
 SUBDIR+=	tokyocabinet
 SUBDIR+=	tokyotyrant
 SUBDIR+=	unixodbc
+SUBDIR+=	virtuoso
 SUBDIR+=	xsqlmenu
 SUBDIR+=	yap2lc
 SUBDIR+=	yasql
