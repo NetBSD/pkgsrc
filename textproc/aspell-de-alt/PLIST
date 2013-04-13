@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 12:53:32 rodent Exp $
+lib/aspell/de-alt.multi
+lib/aspell/de-alt.rws
+lib/aspell/deutsch-alt.alias
+lib/aspell/german-old.alias
+share/aspell/de-alt.dat
+share/aspell/de-alt_affix.dat
+share/aspell/de-alt_phonet.dat
