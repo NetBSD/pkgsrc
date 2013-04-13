@@ -1,11 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2013/02/09 13:27:27 ryoon Exp $
-# used by devel/java-subversion16/Makefile
-# used by devel/p5-subversion16/Makefile
-# used by devel/py-subversion16/Makefile
-# used by devel/ruby-subversion16/Makefile
+# $NetBSD: Makefile.common,v 1.2 2013/04/13 13:02:02 ryoon Exp $
 # used by devel/subversion-base16/Makefile
 # used by devel/subversion16/Makefile
-# used by www/ap2-subversion16/Makefile
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel scm
