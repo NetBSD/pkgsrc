@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2013/01/11 23:37:13 joerg Exp $
+$NetBSD: distinfo,v 1.84 2013/04/13 10:29:26 jaapb Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.4.tar.gz) = f5880f11c139d7d8d01ecb8d874535f7d9553198
 RMD160 (qt-everywhere-opensource-src-4.8.4.tar.gz) = 3c09a3b1411385d0917225f01ac2ff3a2ce83fda
@@ -51,6 +51,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_WebCore_features.pri) = d0053dd2732604908
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 0377066bd28d5eae02e8fcf200da4360c286ad84
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_MediaPlayer.cpp) = f9a1f71b4607c5f542c059873cf5735fad9ff3a1
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_qt_PlatformKeyboardEventQt.cpp) = b28cf71983f8e71b82b1c634a10b3898ca13ede5
+SHA1 (patch-src_corelib_animation_qpropertyanimation.cpp) = c6fb5cdfed1013f904b4a194d3c9fcab86a2327c
 SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
 SHA1 (patch-src_declarative_util_qdeclarativefontloader.cpp) = 0bb76eac102a4325cadb5bcb4e7a1ac85a3d099f
