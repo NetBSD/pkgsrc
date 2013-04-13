@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2005/11/03 21:38:04 rillig Exp $
+$NetBSD: patch-ab,v 1.3 2013/04/13 19:07:21 dholland Exp $
+
+- Fix C syntax (string constants continued onto the next line must
+have a backslash)
 
 --- src/Usage.h.orig	2002-03-26 16:55:20.000000000 +0100
 +++ src/Usage.h
