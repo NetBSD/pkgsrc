@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/04/12 09:03:41 adam Exp $
+# $NetBSD: Makefile,v 1.24 2013/04/13 12:55:53 obache Exp $
 
 .include "dist.mk"
 
@@ -60,7 +60,7 @@ PRIVILEGED_STAGES+=	clean
 CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
 PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
 .elif ${OPSYS} == "IRIX"
