@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 12:25:59 rodent Exp $
+lib/aspell/tr.multi
+lib/aspell/tr.rws
+share/aspell/tr.dat
