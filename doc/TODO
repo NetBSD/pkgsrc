@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12077 2013/04/12 13:53:31 joerg Exp $
+$NetBSD: TODO,v 1.12078 2013/04/13 06:05:41 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1139,7 +1139,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tinc-1.0.20
 	o tk-8.6
 	o tkcvs-8.2.3
-	o tkdiff-4.2
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
