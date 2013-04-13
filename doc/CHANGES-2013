@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1303 2013/04/13 00:05:13 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1304 2013/04/13 06:05:42 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-es to 4.10.2 [markd 2013-04-12]
 	Updated x11/kde4-l10n-et to 4.10.2 [markd 2013-04-12]
 	Updated x11/kde4-l10n-eu to 4.10.2 [markd 2013-04-12]
+	Updated devel/tkdiff to 4.2 [shattered 2013-04-12]
