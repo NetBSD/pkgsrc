@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/10/01 11:14:22 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2013/04/13 12:01:42 ryoon Exp $
 
-SHA1 (liberation-fonts-ttf-2.00.0.tar.gz) = 1d56c6f319401012e53818fa6e9e26ebf6429da0
-RMD160 (liberation-fonts-ttf-2.00.0.tar.gz) = 7a0ec5ffc77d962c8ce394eadbf00ccf7455e741
-Size (liberation-fonts-ttf-2.00.0.tar.gz) = 2302736 bytes
+SHA1 (liberation-fonts-ttf-2.00.1.tar.gz) = 84b40d7f8bb0cd085dd70b3abed197133d761557
+RMD160 (liberation-fonts-ttf-2.00.1.tar.gz) = 99ee3851f3f1ae9a431541de5765312f01ef19d7
+Size (liberation-fonts-ttf-2.00.1.tar.gz) = 2285857 bytes
