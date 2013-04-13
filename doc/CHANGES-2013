@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1308 2013/04/13 11:23:41 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1309 2013/04/13 11:25:02 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2075,3 +2075,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sun-jre7 to 7.0.17 [ryoon 2013-04-13]
 	Updated lang/sun-jdk7 to 7.0.17 [ryoon 2013-04-13]
 	Added textproc/aspell-lv version 0.5.5.1 [rodent 2013-04-13]
+	Added textproc/aspell-sw version 0.50.0 [rodent 2013-04-13]
