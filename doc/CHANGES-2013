@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1345 2013/04/13 23:54:42 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1346 2013/04/13 23:56:19 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2129,3 +2129,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-tg to 4.10.2 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-sl to 4.10.2 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-si to 4.10.2 [rodent 2013-04-13]
+	Updated x11/kde4-l10n-sk to 4.10.2 [rodent 2013-04-13]
