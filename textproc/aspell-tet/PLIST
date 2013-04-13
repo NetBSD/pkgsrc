@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 11:54:12 rodent Exp $
+lib/aspell/tet.multi
+lib/aspell/tet.rws
+lib/aspell/tetum.alias
+lib/aspell/tetun.alias
+share/aspell/tet.dat
