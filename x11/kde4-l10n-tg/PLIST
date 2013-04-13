@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/02 00:58:44 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/13 23:25:19 rodent Exp $
 share/kde/apps/khangman/tg.txt
 share/kde/apps/kvtml/tg/animals.kvtml
 share/kde/apps/kvtml/tg/easy.kvtml
@@ -73,7 +73,6 @@ share/locale/tg/LC_MESSAGES/kcm_memory.mo
 share/locale/tg/LC_MESSAGES/kcm_nepomuk.mo
 share/locale/tg/LC_MESSAGES/kcm_pci.mo
 share/locale/tg/LC_MESSAGES/kcm_phonon.mo
-share/locale/tg/LC_MESSAGES/kcm_phononxine.mo
 share/locale/tg/LC_MESSAGES/kcm_solid.mo
 share/locale/tg/LC_MESSAGES/kcm_standard_actions.mo
 share/locale/tg/LC_MESSAGES/kcmaccess.mo
@@ -123,7 +122,6 @@ share/locale/tg/LC_MESSAGES/kcmstyle.mo
 share/locale/tg/LC_MESSAGES/kcmusb.mo
 share/locale/tg/LC_MESSAGES/kcmview1394.mo
 share/locale/tg/LC_MESSAGES/kcmworkspaceoptions.mo
-share/locale/tg/LC_MESSAGES/kcmxinerama.mo
 share/locale/tg/LC_MESSAGES/kcron.mo
 share/locale/tg/LC_MESSAGES/kde-menu.mo
 share/locale/tg/LC_MESSAGES/kdebugdialog.mo
@@ -141,19 +139,13 @@ share/locale/tg/LC_MESSAGES/kdmgreet.mo
 share/locale/tg/LC_MESSAGES/kdontchangethehostname.mo
 share/locale/tg/LC_MESSAGES/keditbookmarks.mo
 share/locale/tg/LC_MESSAGES/kfile.mo
-share/locale/tg/LC_MESSAGES/kfile_avi.mo
 share/locale/tg/LC_MESSAGES/kfile_drgeo.mo
 share/locale/tg/LC_MESSAGES/kfile_exr.mo
-share/locale/tg/LC_MESSAGES/kfile_flac.mo
 share/locale/tg/LC_MESSAGES/kfile_kig.mo
-share/locale/tg/LC_MESSAGES/kfile_mp3.mo
-share/locale/tg/LC_MESSAGES/kfile_ogg.mo
 share/locale/tg/LC_MESSAGES/kfile_pnm.mo
 share/locale/tg/LC_MESSAGES/kfile_rgb.mo
 share/locale/tg/LC_MESSAGES/kfile_rpm.mo
-share/locale/tg/LC_MESSAGES/kfile_sid.mo
 share/locale/tg/LC_MESSAGES/kfile_tiff.mo
-share/locale/tg/LC_MESSAGES/kfile_wav.mo
 share/locale/tg/LC_MESSAGES/kfileaudiopreview4.mo
 share/locale/tg/LC_MESSAGES/kfilereplace.mo
 share/locale/tg/LC_MESSAGES/kfileshare.mo
@@ -313,6 +305,7 @@ share/locale/tg/LC_MESSAGES/libkonq.mo
 share/locale/tg/LC_MESSAGES/libkscreensaver.mo
 share/locale/tg/LC_MESSAGES/libksieve.mo
 share/locale/tg/LC_MESSAGES/libkworkspace.mo
+share/locale/tg/LC_MESSAGES/libmailimporter.mo
 share/locale/tg/LC_MESSAGES/libmessagelist.mo
 share/locale/tg/LC_MESSAGES/libmessageviewer.mo
 share/locale/tg/LC_MESSAGES/libplasma.mo
@@ -365,10 +358,8 @@ share/locale/tg/LC_MESSAGES/plasma_toolbox_desktoptoolbox.mo
 share/locale/tg/LC_MESSAGES/plasma_toolbox_paneltoolbox.mo
 share/locale/tg/LC_MESSAGES/plasma_wallpaper_color.mo
 share/locale/tg/LC_MESSAGES/plasma_wallpaper_image.mo
-share/locale/tg/LC_MESSAGES/plasmaengineexplorer.mo
 share/locale/tg/LC_MESSAGES/plasmagenericshell.mo
 share/locale/tg/LC_MESSAGES/plasmapkg.mo
-share/locale/tg/LC_MESSAGES/plasmoidviewer.mo
 share/locale/tg/LC_MESSAGES/powerdevil.mo
 share/locale/tg/LC_MESSAGES/processcore.mo
 share/locale/tg/LC_MESSAGES/processui.mo
@@ -378,7 +369,6 @@ share/locale/tg/LC_MESSAGES/solid-hardware.mo
 share/locale/tg/LC_MESSAGES/solid-network.mo
 share/locale/tg/LC_MESSAGES/solidcontrol.mo
 share/locale/tg/LC_MESSAGES/soliduiserver.mo
-share/locale/tg/LC_MESSAGES/spy.mo
 share/locale/tg/LC_MESSAGES/strigila_diff.mo
 share/locale/tg/LC_MESSAGES/sweeper.mo
 share/locale/tg/LC_MESSAGES/systemsettings.mo
