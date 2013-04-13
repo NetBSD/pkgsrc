@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/04/13 20:22:26 dholland Exp $
+
+--- configure~	2013-04-13 20:22:22.000000000 +0000
++++ configure
+@@ -9532,9 +9532,7 @@ echo "${ECHO_T}$ac_cv_lib_glut_glutSwapB
+ if test $ac_cv_lib_glut_glutSwapBuffers = yes; then
+   X_LIBS="-lglut $X_LIBS"
+ else
+-  { { echo "$as_me:$LINENO: error: Cannot find required glut library" >&5
+-echo "$as_me: error: Cannot find required glut library" >&2;}
+-   { (exit 1); exit 1; }; }
++  :
+ fi
+ 
+ 
