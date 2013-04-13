@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 11:23:28 rodent Exp $
+lib/aspell/latvian.alias
+lib/aspell/lv.multi
+lib/aspell/lv.rws
+share/aspell/lv.dat
+share/aspell/lv_affix.dat
