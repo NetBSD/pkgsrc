@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.9 2013/03/08 15:08:50 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2013/04/13 11:19:36 ryoon Exp $
 
 SHA1 (UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
 Size (UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
-SHA1 (jre-7u15-linux-i586.tar.gz) = 9d2680eb7cb07524f1ac43d517d221caa5aa08da
-RMD160 (jre-7u15-linux-i586.tar.gz) = 0f588dc329d70bb1e5b9c95e208df8d85bf01569
-Size (jre-7u15-linux-i586.tar.gz) = 48129053 bytes
-SHA1 (jre-7u15-linux-x64.tar.gz) = cfd274e6a18c135f3f16955388127fb48ebecb37
-RMD160 (jre-7u15-linux-x64.tar.gz) = b453d346173c7583d948856e54c61a02fa6893fe
-Size (jre-7u15-linux-x64.tar.gz) = 46794487 bytes
-SHA1 (jre-7u15-solaris-i586.tar.gz) = a99e1cd8c704961447aa99ef5f35323437aa1363
-RMD160 (jre-7u15-solaris-i586.tar.gz) = b65b2e2898dd27707496ac4ad71c9efd6abd6909
-Size (jre-7u15-solaris-i586.tar.gz) = 47614844 bytes
-SHA1 (jre-7u15-solaris-x64.tar.gz) = c364fdfa72ad6433db9b551c54c1914afb47545d
-RMD160 (jre-7u15-solaris-x64.tar.gz) = 83218ba2f4494e1b2522dccb9459833e62aa7e5b
-Size (jre-7u15-solaris-x64.tar.gz) = 15520392 bytes
+SHA1 (jre-7u17-linux-i586.tar.gz) = 9961b47ca754e8bd48e646ecc362b2fdb4066a22
+RMD160 (jre-7u17-linux-i586.tar.gz) = 313c0d3aec9fc55709c68d9c7e3465630e6bdf50
+Size (jre-7u17-linux-i586.tar.gz) = 48128443 bytes
+SHA1 (jre-7u17-linux-x64.tar.gz) = 108a720a509f610133f7dc29b8b5856d7e4f5279
+RMD160 (jre-7u17-linux-x64.tar.gz) = 49cd6d4ab9647232b909eabcab7fc7b413a4f9a6
+Size (jre-7u17-linux-x64.tar.gz) = 46800474 bytes
+SHA1 (jre-7u17-solaris-i586.tar.gz) = e885623c30acf86bcc1f214d77af3be5aebaffc8
+RMD160 (jre-7u17-solaris-i586.tar.gz) = b2086fdd1836bb27457066c1cb9c8c44793ff81c
+Size (jre-7u17-solaris-i586.tar.gz) = 47640677 bytes
+SHA1 (jre-7u17-solaris-x64.tar.gz) = a39d26ecafe732f02ff5bc90e897b0c0ff1f5ca1
+RMD160 (jre-7u17-solaris-x64.tar.gz) = e909eabbf1e12aa8ee109fb8cd477ecfb625e171
+Size (jre-7u17-solaris-x64.tar.gz) = 15575260 bytes
