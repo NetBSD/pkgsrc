@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 19:51:27 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/13 07:55:03 ghen Exp $
 
 DISTNAME=		torsmo-0.18
 PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=torsmo/}
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://torsmo.sourceforge.net/
 COMMENT=		Tyopoytaorvelo System Monitor
 

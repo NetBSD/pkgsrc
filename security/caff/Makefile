@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 18:16:22 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/13 07:55:05 ghen Exp $
 
 DISTNAME=	signing-party_1.1.4.orig
 PKGNAME=	${DISTNAME:S/signing-party_/caff-/S/.orig//}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
-MAINTAINER=	ghen@NetBSD.org,tonio@NetBSD.org
+MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://pgp-tools.alioth.debian.org/
 COMMENT=	Various GnuPG related tools
 LICENSE=	gnu-gpl-v2 AND modified-bsd

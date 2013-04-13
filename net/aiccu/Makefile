@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:09 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/13 07:55:05 ghen Exp $
 
 DISTNAME=		aiccu_20070115
 PKGNAME=		${DISTNAME:S/_/-/:S/.//g}
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.sixxs.net/archive/sixxs/aiccu/unix/
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sixxs.net/tools/aiccu/
 COMMENT=		Automatic IPv6 Connectivity Client Utility
 
