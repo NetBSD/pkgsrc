@@ -1,0 +1,12 @@
+Virtuoso is a multi-model data server that delivers a platform-agnostic
+solution for data management, access and integration.
+
+Services offered include:
+* relational data management
+* RDF data management
+* XML data management
+* free text content management & full text indexing
+* document web server
+* linked data server
+* web application server
+* web services deployment (SOAP or REST)
