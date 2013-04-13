@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 12:35:21 rodent Exp $
+lib/aspell/vi.multi
+lib/aspell/vi.rws
+lib/aspell/viet.alias
+share/aspell/tcvn3.cmap
+share/aspell/tcvn3.cset
+share/aspell/vi.dat
+share/aspell/viscii.cmap
+share/aspell/viscii.cset
