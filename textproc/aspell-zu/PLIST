@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 12:48:07 rodent Exp $
+lib/aspell/zu.multi
+lib/aspell/zu.rws
+lib/aspell/zulu.alias
+share/aspell/zu.dat
