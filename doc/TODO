@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12080 2013/04/13 13:00:26 ryoon Exp $
+$NetBSD: TODO,v 1.12081 2013/04/13 13:14:31 rodent Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o arping-2.13
 	o asapm-3.1
 	o asc-2.5.0
-	o aspell-fo-0.4.0
 	o aspell-nb-2.0.10
 	o astyle-1.15.3
 	o asymptote-2.21
