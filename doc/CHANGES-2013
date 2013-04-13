@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1331 2013/04/13 14:00:35 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1332 2013/04/13 14:23:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/aspell-fo to 0.4.2 [rodent 2013-04-13]
 	Added databases/virtuoso version 6.1.6 [jaapb 2013-04-13]
 	Updated devel/p5-Test-Class to 0.39 [wen 2013-04-13]
+	Updated devel/p5-Moo to 1.001000 [wen 2013-04-13]
