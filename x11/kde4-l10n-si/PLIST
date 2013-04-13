@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/02 00:57:06 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/13 23:54:26 rodent Exp $
 share/locale/si/LC_MESSAGES/audiorename_plugin.mo
 share/locale/si/LC_MESSAGES/blinken.mo
 share/locale/si/LC_MESSAGES/calendarsupport.mo
@@ -45,7 +45,6 @@ share/locale/si/LC_MESSAGES/kcm_memory.mo
 share/locale/si/LC_MESSAGES/kcm_nepomuk.mo
 share/locale/si/LC_MESSAGES/kcm_pci.mo
 share/locale/si/LC_MESSAGES/kcm_phonon.mo
-share/locale/si/LC_MESSAGES/kcm_phononxine.mo
 share/locale/si/LC_MESSAGES/kcm_platform.mo
 share/locale/si/LC_MESSAGES/kcm_solid.mo
 share/locale/si/LC_MESSAGES/kcm_solid_actions.mo
@@ -93,7 +92,6 @@ share/locale/si/LC_MESSAGES/kcmsmserver.mo
 share/locale/si/LC_MESSAGES/kcmstyle.mo
 share/locale/si/LC_MESSAGES/kcmusb.mo
 share/locale/si/LC_MESSAGES/kcmview1394.mo
-share/locale/si/LC_MESSAGES/kcmxinerama.mo
 share/locale/si/LC_MESSAGES/kcolorchooser.mo
 share/locale/si/LC_MESSAGES/kde-menu.mo
 share/locale/si/LC_MESSAGES/kdebugdialog.mo
@@ -293,11 +291,8 @@ share/locale/si/LC_MESSAGES/plasma_runner_windows.mo
 share/locale/si/LC_MESSAGES/plasma_scriptengine_qscript.mo
 share/locale/si/LC_MESSAGES/plasma_wallpaper_color.mo
 share/locale/si/LC_MESSAGES/plasma_wallpaper_image.mo
-share/locale/si/LC_MESSAGES/plasmaengineexplorer.mo
 share/locale/si/LC_MESSAGES/plasmagenericshell.mo
 share/locale/si/LC_MESSAGES/plasmapkg.mo
-share/locale/si/LC_MESSAGES/plasmawallpaperviewer.mo
-share/locale/si/LC_MESSAGES/plasmoidviewer.mo
 share/locale/si/LC_MESSAGES/powerdevil.mo
 share/locale/si/LC_MESSAGES/processcore.mo
 share/locale/si/LC_MESSAGES/processui.mo
