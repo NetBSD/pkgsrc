@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 23:59:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/13 07:55:06 ghen Exp $
 
 DISTNAME=	cripple-0.06b
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ghen@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vortex.prodigynet.co.uk/cripple/
 COMMENT=	Command line CD ripper/encoder wrapper with cddb support
 
