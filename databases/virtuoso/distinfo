@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1 2013/04/13 13:16:02 jaapb Exp $
+
+SHA1 (virtuoso-opensource-6.1.6.tar.gz) = 03bc14b1627d16d76687f8b8659801966aab3fb4
+RMD160 (virtuoso-opensource-6.1.6.tar.gz) = 0d8b4d0c319cc38b42777a05d19ae0769445716c
+Size (virtuoso-opensource-6.1.6.tar.gz) = 113255048 bytes
+SHA1 (patch-binsrc_b3s_make_vad.sh) = bbaeb582329090d79fe1472c024ee950414fae51
+SHA1 (patch-binsrc_samples_demo_make_vad.sh) = 3ccf1c58d7c6d8a9dbcb5ac3172c65ac5813f766
+SHA1 (patch-binsrc_samples_demo_mkdoc.sh) = b21984d2512ceb66f426610f739e4d1358df33d4
+SHA1 (patch-binsrc_tests_Makefile.in) = 80b733d53f59a732217d98e2306eea963265d36d
+SHA1 (patch-binsrc_tests_biftest_thook.sh) = 39be0bd03f1a4afcff5d7b8e7a87e681aebe4023
+SHA1 (patch-binsrc_tutorial_make_vad.sh) = 8cb40f5ede488173a72b736628cce0aab76d7d92
+SHA1 (patch-configure) = f677e10240e9071b952157d7451758c8ac2b719f
+SHA1 (patch-libsrc_Dk_Dksystem.h) = 286086d3783c2582f28403f153ecf926f8ede045
+SHA1 (patch-libsrc_Thread_sched_pthread.c) = 8e6abed884fb641fcd4a5e19d96b14926bfd029b
+SHA1 (patch-libsrc_Wi_bif_file.c) = 8b2c2678ca49d1b49dac5f6b399c43564dced121
+SHA1 (patch-libsrc_Wi_numeric.c) = 24fd10b42e4a45af92f9702b21a2c2127d45f347
+SHA1 (patch-libsrc_Wi_xml.h) = 9c13aebad26d6238a3a610601f70d4588e1b63dd
+SHA1 (patch-libsrc_Wi_xmlenc.c) = ca076e1bbf83c860056dd9619986877e4d57e286
+SHA1 (patch-libsrc_Wi_xmlenc.h) = ac95cf3ac387c4d296129cd9c17baeac535eefbb
+SHA1 (patch-libsrc_Wi_xmlenc_algos.c) = 51be6b67407937effe39f476c0c55149c6a3febc
+SHA1 (patch-libsrc_plugin_dlf.h) = eeb4e2166ceaef344d515f5bbcd9dcbb8a05cfff
