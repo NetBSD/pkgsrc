@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/13 12:40:25 rodent Exp $
+lib/aspell/wa.multi
+lib/aspell/wa.rws
+lib/aspell/walloon.alias
+lib/aspell/walon.alias
+share/aspell/wa.dat
+share/aspell/wa_phonet.dat
