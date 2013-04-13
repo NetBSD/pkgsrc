@@ -1,20 +1,39 @@
-$NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
+$NetBSD: patch-ac,v 1.3 2013/04/13 19:08:27 dholland Exp $
 
---- src/ddrawsdl.cpp.orig	2002-03-26 16:02:25.000000000 +0100
+- Fix C syntax (string constants continued onto the next line must
+have a backslash)
+
+- Use the asm blocks only on platforms where they're understood.
+Disable the more elaborate blitter modes on other platforms
+until/unless someone wants to write non-asm equivalents.
+
+--- src/ddrawsdl.cpp.orig	2002-03-26 15:02:25.000000000 +0000
 +++ src/ddrawsdl.cpp
-@@ -174,66 +174,66 @@ void UpdateFrame_h()
+@@ -12,6 +12,7 @@
+ */
+ 
+ #include <SDL.h>
++#include <assert.h>
+ #include "globals.h"
+ #include "gfx.h"
+ 
+@@ -174,69 +175,83 @@ void UpdateFrame_h()
  {
  	switch(fBlitterMode) {
  		case 1:
 -			__asm__ __volatile__(".align 32
 -							 cld
 -							 rep
++#if defined(__i386__) || defined(__x86_64__)
 +			__asm__ __volatile__(".align 32\n\
 +							 cld\n\
 +							 rep\n\
  							 movsw"
  							 :
  							 :"S"(dx_buffer), "D"(g_pDDSPrimary->pixels), "c"((g_pDDSPrimary->h * g_pDDSPrimary->pitch)>>1));
++#else
++			memcpy(g_pDDSPrimary->pixels, dx_buffer, g_pDDSPrimary->h * g_pDDSPrimary->pitch);
++#endif
  		break;
  		case 2:
 -			__asm__ __volatile__("pusha
@@ -40,6 +59,7 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
 -								 leal (%1, %2, 4), %1
 -								 jnz sum
 -								 emms
++#if defined(__i386__)
 +			__asm__ __volatile__("pusha\n\
 +								 xorl %%eax, %%eax\n\
 +								 movl $448, %%ebx \n\
@@ -66,6 +86,10 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
  								 popa"
  			:
  			: "S"(dx_buffer), "D"(g_pDDSPrimary->pixels), "c"(g_pDDSPrimary->pitch>>1), "d"(144));
++#else
++			/* If you put real code here, enable the corresponding option in main() */
++			assert(0);
++#endif
  		break;
  		
  		case 3:
@@ -92,6 +116,7 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
 -								 leal (%1, %2, 4), %1
 -								 jnz sum3
 -								 emms
++#if defined(__i386__)
 +			__asm__ __volatile__("pusha\n\
 +								 xorl %%eax, %%eax\n\
 +								 movl $896, %%ebx \n\
@@ -118,19 +143,30 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
  								 popa"
  			:
  			: "S"(dx_buffer), "D"(g_pDDSPrimary->pixels), "c"(g_pDDSPrimary->pitch>>1), "d"(144));
-@@ -418,65 +418,65 @@ void UpdateFrame_v()
++#else
++			/* If you put real code here, enable the corresponding option in main() */
++			assert(0);
++#endif
+ 		break;
+ 	}
+ 	//Niels(adjust to suit) use the asm below, or use standard memcpy/fast_memcpy etc, updateframe_v is not implemented
+@@ -418,68 +433,82 @@ void UpdateFrame_v()
  {
  	switch(fBlitterMode) {
  		case 1:
 -			__asm__ __volatile__(".align 32
 -							 cld
 -							 rep
++#if defined(__i386__) || defined(__x86_64__)
 +			__asm__ __volatile__(".align 32\n\
 +							 cld\n\
 +							 rep\n\
  							 movsw"
  							 :
  							 :"S"(dx_buffer), "D"(g_pDDSPrimary->pixels), "c"((g_pDDSPrimary->h * g_pDDSPrimary->pitch)>>1));
++#else
++			memcpy(g_pDDSPrimary->pixels, dx_buffer, g_pDDSPrimary->h * g_pDDSPrimary->pitch);
++#endif
  		break;
  		case 2: // double scanlines
 -			__asm__ __volatile__("pusha
@@ -156,6 +192,7 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
 -								 leal (%1, %2, 4), %1
 -								 jnz sumb
 -								 emms
++#if defined(__i386__)
 +			__asm__ __volatile__("pusha\n\
 +								 xorl %%eax, %%eax\n\
 +								 movl $288, %%ebx \n\
@@ -182,6 +219,10 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
  								 popa"
  			:
  			: "S"(dx_buffer), "D"(g_pDDSPrimary->pixels), "c"(g_pDDSPrimary->pitch>>1), "d"(224));
++#else
++			/* If you put real code here, enable the corresponding option in main() */
++			assert(0);
++#endif
  		break;
  		case 3: // double stretch mode
 -			__asm__ __volatile__("pusha
@@ -207,6 +248,7 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
 -								 leal (%1, %2, 4), %1
 -								 jnz sumc
 -								 emms
++#if defined(__i386__)
 +			__asm__ __volatile__("pusha\n\
 +								 xorl %%eax, %%eax\n\
 +								 movl $576, %%ebx \n\
@@ -233,3 +275,10 @@ $NetBSD: patch-ac,v 1.2 2005/11/03 21:38:04 rillig Exp $
  								 popa"
  			:
  			: "S"(dx_buffer), "D"(g_pDDSPrimary->pixels), "c"(g_pDDSPrimary->pitch>>1), "d"(224));
++#else
++			/* If you put real code here, enable the corresponding option in main() */
++			assert(0);
++#endif
+ 		break;
+ 	}
+ 	SDL_Flip(g_pDDSPrimary);
