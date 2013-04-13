@@ -1,26 +1,26 @@
-$NetBSD: patch-library_setup,v 1.1 2013/02/26 00:13:00 hubertf Exp $
+$NetBSD: patch-library_setup,v 1.2 2013/04/13 17:51:57 riz Exp $
 
---- library/setup.orig	2013-01-26 17:20:45.000000000 +0000
-+++ library/setup
-@@ -34,7 +34,7 @@ options: {}
- description: 
+--- library/setup.orig	2013-04-02 17:33:54.000000000 -0700
++++ library/setup	2013-04-13 09:39:00.000000000 -0700
+@@ -43,7 +43,7 @@
+ description:
       - This module is automatically called by playbooks to gather useful
         variables about remote hosts that can be used in playbooks. It can also be
 -       executed directly by C(/usr/bin/ansible) to check what variables are
 +       executed directly by C(@LOCALBASE@/bin/ansible) to check what variables are
         available to a host. Ansible provides many I(facts) about the system,
         automatically.
- notes: 
-@@ -86,7 +86,7 @@ class Facts(object):
-                  { 'path' : '/usr/bin/apt-get',     'name' : 'apt' },
+ notes:
+@@ -111,7 +111,7 @@
                   { 'path' : '/usr/bin/zypper',      'name' : 'zypper' },
-                  { 'path' : '/usr/bin/pacman',      'name' : 'pacman' }, 
--                 { 'path' : '/opt/local/bin/pkgin', 'name' : 'pkgin' } ]
-+                 { 'path' : '@LOCALBASE@/bin/pkgin', 'name' : 'pkgin' } ]
- 
-     def __init__(self):
-         self.facts = {}
-@@ -875,8 +875,8 @@ def run_setup(module):
+                  { 'path' : '/usr/bin/pacman',      'name' : 'pacman' },
+                  { 'path' : '/bin/opkg',            'name' : 'opkg' },
+-                 { 'path' : '/opt/local/bin/pkgin', 'name' : 'pkgin' },
++                 { 'path' : '@LOCALBASE@/bin/pkgin', 'name' : 'pkgin' },
+                  { 'path' : '/opt/local/bin/port',  'name' : 'macports' },
+                  { 'path' : '/sbin/apk',            'name' : 'apk' }, 
+     ]
+@@ -1531,8 +1531,8 @@
      # if facter is installed, and we can use --json because
      # ruby-json is ALSO installed, include facter data in the JSON
  
@@ -31,7 +31,7 @@ $NetBSD: patch-library_setup,v 1.1 2013/02/26 00:13:00 hubertf Exp $
          facter = True
          try:
              facter_ds = json.loads(out)
-@@ -890,8 +890,8 @@ def run_setup(module):
+@@ -1546,8 +1546,8 @@
      # because it contains a lot of nested stuff we can't use for
      # templating w/o making a nicer key for it (TODO)
  

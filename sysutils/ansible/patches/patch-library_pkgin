@@ -1,13 +1,13 @@
-$NetBSD: patch-library_pkgin,v 1.1 2013/02/26 00:13:00 hubertf Exp $
+$NetBSD: patch-library_pkgin,v 1.2 2013/04/13 17:51:57 riz Exp $
 
---- library/pkgin.orig	2013-02-01 21:29:56.000000000 +0000
-+++ library/pkgin
-@@ -55,7 +55,7 @@ import shlex
- import os
- import sys
+--- library/pkgin.orig	2013-03-30 16:29:28.000000000 -0700
++++ library/pkgin	2013-04-13 09:36:29.000000000 -0700
+@@ -118,7 +118,7 @@
+                 state        = dict(default="present", choices=["present","absent"]),
+                 name         = dict(aliases=["pkg"], required=True)))
  
--PKGIN_PATH = "/opt/local/bin/pkgin"
-+PKGIN_PATH = "@LOCALBASE@/bin/pkgin"
+-    pkgin_path = module.get_bin_path('pkgin', True, ['/opt/local/bin'])
++    pkgin_path = module.get_bin_path('pkgin', True, ['@LOCALBASE@/bin'])
  
- def query_package(module, name, state="present"):
+     p = module.params
  
