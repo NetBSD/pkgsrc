@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/09/11 23:59:29 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/13 07:55:04 ghen Exp $
 
 DISTNAME=		cplay-1.49
 PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		# ${HOMEPAGE}
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mask.tf.hut.fi/~flu/hacks/cplay/
 COMMENT=		Curses front-end for various audio players
 LICENSE=		gnu-gpl-v2
