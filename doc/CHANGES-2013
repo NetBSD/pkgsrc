@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1336 2013/04/13 19:06:44 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1337 2013/04/13 19:13:38 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2117,3 +2117,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added audio/vcf version 0.0.5 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-zh_TW to 4.10.2 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-zh_CN to 4.10.2 [rodent 2013-04-13]
+	Updated x11/kde4-l10n-wa to 4.10.2 [rodent 2013-04-13]
