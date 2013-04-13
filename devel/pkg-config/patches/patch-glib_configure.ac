@@ -1,0 +1,16 @@
+$NetBSD: patch-glib_configure.ac,v 1.1 2013/04/13 11:10:04 obache Exp $
+
+* from glib2.0.cygport 2.32.1-not-win32.patch
+
+--- glib/configure.ac.orig	2012-10-13 14:35:36.000000000 +0000
++++ glib/configure.ac
+@@ -2397,9 +2397,6 @@ dnl *** Win32 API libs ***
+ dnl **********************
+ 
+ case $host in
+-  *-*-cygwin*)
+-	G_LIBS_EXTRA="-luser32 -lkernel32"
+-    ;;
+   *-*-mingw*)
+ 	G_LIBS_EXTRA="-lws2_32 -lole32 -lwinmm -lshlwapi"
+     ;;
