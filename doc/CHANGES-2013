@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1318 2013/04/13 12:26:13 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1319 2013/04/13 12:31:19 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2091,3 +2091,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/openldap-nops to 2.4.35 [adam 2013-04-13]
 	Updated databases/openldap-smbk5pwd to 2.4.35 [adam 2013-04-13]
 	Added textproc/aspell-tr version 0.50.0 [rodent 2013-04-13]
+	Added textproc/aspell-uz version 0.6.0 [rodent 2013-04-13]
