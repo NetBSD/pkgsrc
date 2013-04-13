@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/02 01:01:26 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/13 19:13:23 rodent Exp $
 share/doc/kde/HTML/wa/common/fdl-translated.html
 share/doc/kde/HTML/wa/common/gpl-translated.html
 share/doc/kde/HTML/wa/common/kde-localised.css
@@ -97,6 +97,7 @@ share/locale/wa/LC_MESSAGES/fsview.mo
 share/locale/wa/LC_MESSAGES/gwenview.mo
 share/locale/wa/LC_MESSAGES/htmlsearch.mo
 share/locale/wa/LC_MESSAGES/imagerename_plugin.mo
+share/locale/wa/LC_MESSAGES/imgalleryplugin.mo
 share/locale/wa/LC_MESSAGES/joystick.mo
 share/locale/wa/LC_MESSAGES/kaccess.mo
 share/locale/wa/LC_MESSAGES/kactivitymanagerd.mo
@@ -105,7 +106,6 @@ share/locale/wa/LC_MESSAGES/kate.mo
 share/locale/wa/LC_MESSAGES/katekonsoleplugin.mo
 share/locale/wa/LC_MESSAGES/kateopenheader.mo
 share/locale/wa/LC_MESSAGES/katepart4.mo
-share/locale/wa/LC_MESSAGES/katequickdocumentswitcherplugin.mo
 share/locale/wa/LC_MESSAGES/kblankscrn.mo
 share/locale/wa/LC_MESSAGES/kbreakout.mo
 share/locale/wa/LC_MESSAGES/kcalc.mo
@@ -124,7 +124,6 @@ share/locale/wa/LC_MESSAGES/kcm_memory.mo
 share/locale/wa/LC_MESSAGES/kcm_nepomuk.mo
 share/locale/wa/LC_MESSAGES/kcm_pci.mo
 share/locale/wa/LC_MESSAGES/kcm_phonon.mo
-share/locale/wa/LC_MESSAGES/kcm_phononxine.mo
 share/locale/wa/LC_MESSAGES/kcm_platform.mo
 share/locale/wa/LC_MESSAGES/kcm_solid.mo
 share/locale/wa/LC_MESSAGES/kcm_solid_actions.mo
@@ -172,7 +171,6 @@ share/locale/wa/LC_MESSAGES/kcmstyle.mo
 share/locale/wa/LC_MESSAGES/kcmusb.mo
 share/locale/wa/LC_MESSAGES/kcmview1394.mo
 share/locale/wa/LC_MESSAGES/kcmworkspaceoptions.mo
-share/locale/wa/LC_MESSAGES/kcmxinerama.mo
 share/locale/wa/LC_MESSAGES/kcolorchooser.mo
 share/locale/wa/LC_MESSAGES/kcron.mo
 share/locale/wa/LC_MESSAGES/kde-menu.mo
@@ -189,18 +187,10 @@ share/locale/wa/LC_MESSAGES/kdmgreet.mo
 share/locale/wa/LC_MESSAGES/kdontchangethehostname.mo
 share/locale/wa/LC_MESSAGES/keditbookmarks.mo
 share/locale/wa/LC_MESSAGES/kfile.mo
-share/locale/wa/LC_MESSAGES/kfile_avi.mo
-share/locale/wa/LC_MESSAGES/kfile_flac.mo
-share/locale/wa/LC_MESSAGES/kfile_mp3.mo
-share/locale/wa/LC_MESSAGES/kfile_mpc.mo
-share/locale/wa/LC_MESSAGES/kfile_ogg.mo
 share/locale/wa/LC_MESSAGES/kfile_pnm.mo
 share/locale/wa/LC_MESSAGES/kfile_raw.mo
 share/locale/wa/LC_MESSAGES/kfile_rgb.mo
 share/locale/wa/LC_MESSAGES/kfile_rpm.mo
-share/locale/wa/LC_MESSAGES/kfile_sid.mo
-share/locale/wa/LC_MESSAGES/kfile_theora.mo
-share/locale/wa/LC_MESSAGES/kfile_wav.mo
 share/locale/wa/LC_MESSAGES/kfileaudiopreview4.mo
 share/locale/wa/LC_MESSAGES/kfindpart.mo
 share/locale/wa/LC_MESSAGES/kfloppy.mo
@@ -374,9 +364,9 @@ share/locale/wa/LC_MESSAGES/plasma_applet_netpanel.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_news.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_newspaper.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_notes.mo
-share/locale/wa/LC_MESSAGES/plasma_applet_notifications.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_notifier.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_nowplaying.mo
+share/locale/wa/LC_MESSAGES/plasma_applet_org.kde.notifications.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_pager.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_panel.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_panelspacer_internal.mo
@@ -440,11 +430,8 @@ share/locale/wa/LC_MESSAGES/plasma_toolbox_desktoptoolbox.mo
 share/locale/wa/LC_MESSAGES/plasma_toolbox_paneltoolbox.mo
 share/locale/wa/LC_MESSAGES/plasma_wallpaper_color.mo
 share/locale/wa/LC_MESSAGES/plasma_wallpaper_image.mo
-share/locale/wa/LC_MESSAGES/plasmaengineexplorer.mo
 share/locale/wa/LC_MESSAGES/plasmagenericshell.mo
 share/locale/wa/LC_MESSAGES/plasmapkg.mo
-share/locale/wa/LC_MESSAGES/plasmawallpaperviewer.mo
-share/locale/wa/LC_MESSAGES/plasmoidviewer.mo
 share/locale/wa/LC_MESSAGES/powerdevil.mo
 share/locale/wa/LC_MESSAGES/powerdevilglobalconfig.mo
 share/locale/wa/LC_MESSAGES/powerdevilprofilesconfig.mo
