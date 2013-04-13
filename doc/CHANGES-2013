@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1316 2013/04/13 12:07:48 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1317 2013/04/13 12:22:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2083,3 +2083,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/liberation-ttf to 2.00.1 [ryoon 2013-04-13]
 	Added textproc/aspell-tl version 0.02.1 [rodent 2013-04-13]
 	Added textproc/aspell-tn version 1.0.1.0 [rodent 2013-04-13]
+	Updated databases/openldap to 2.4.35 [adam 2013-04-13]
+	Updated databases/openldap-client to 2.4.35 [adam 2013-04-13]
+	Updated databases/openldap-server to 2.4.35 [adam 2013-04-13]
+	Updated databases/openldap-doc to 2.4.35 [adam 2013-04-13]
+	Updated databases/openldap-cloak to 2.4.35 [adam 2013-04-13]
+	Updated databases/openldap-nops to 2.4.35 [adam 2013-04-13]
+	Updated databases/openldap-smbk5pwd to 2.4.35 [adam 2013-04-13]
