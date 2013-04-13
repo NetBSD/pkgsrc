@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/02/09 13:27:27 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2013/04/13 13:02:02 ryoon Exp $
 
---- configure.orig	2012-12-27 18:22:29.000000000 +0000
+--- configure.orig	2013-03-28 23:39:13.000000000 +0000
 +++ configure
 @@ -701,7 +701,7 @@ MFLAGS=
  MAKEFLAGS=
@@ -9,5 +9,5 @@ $NetBSD: patch-configure,v 1.1 2013/02/09 13:27:27 ryoon Exp $
 -PACKAGE_NAME='subversion'
 +PACKAGE_NAME='subversion16'
  PACKAGE_TARNAME='subversion'
- PACKAGE_VERSION='1.6.20'
- PACKAGE_STRING='subversion 1.6.20'
+ PACKAGE_VERSION='1.6.21'
+ PACKAGE_STRING='subversion 1.6.21'
