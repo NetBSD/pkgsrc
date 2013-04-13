@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.dirs,v 1.1 2013/04/13 11:12:33 ryoon Exp $
+@pkgdir opt/libreoffice
+@pkgdir opt
