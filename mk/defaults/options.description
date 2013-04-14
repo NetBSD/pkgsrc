@@ -661,6 +661,7 @@ utf8			Enable UTF-8 (iconv) character encoding support.
 uucp			Enable support for uucp.
 uulib			Enable support for uulib.
 v4l2			Enable V4L2 (Video4Linux2) support.
+vaapi			Enable support for VAAPI.
 valgrind		Enable Valgrind debugging and profiling support.
 vbr			Enable Vouch By Reference support.
 vdpau			Enable support for VDPAU.
