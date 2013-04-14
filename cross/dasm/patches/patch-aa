@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2013/04/14 01:15:51 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2013/04/14 01:21:17 dholland Exp $
+
+"ulong" already exists on some platforms.
 
 --- asm.h.orig	1998-02-26 19:54:52.000000000 -0600
 +++ asm.h
