@@ -1,0 +1,24 @@
+$NetBSD: patch-demo_animation1_c,v 1.1 2013/04/14 00:15:27 dholland Exp $
+
+- use standard headers
+- call execl correctly
+
+--- demo/animation1.c~	1995-02-08 11:27:32.000000000 +0000
++++ demo/animation1.c
+@@ -80,6 +80,7 @@
+ #include <stdlib.h> 
+ #include <string.h> 
+ #include <signal.h> 
++#include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include "../src/globals.h"
+@@ -228,7 +229,7 @@ void call_vcg()
+ #ifdef X11
+ 			"-geometry","200x200-30+30",
+ #endif
+-			filename,0L);
++			filename, (char *)NULL);
+ 		}
+ 		 /* NEVER REACHED */ 
+ 
