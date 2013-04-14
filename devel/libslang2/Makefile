@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/02/16 11:17:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/14 19:46:50 joerg Exp $
 #
 
 DISTNAME=	slang-2.2.4
@@ -48,7 +48,7 @@ CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termcap}/share/terminfo
 .endif
 
 REPLACE_INTERPRETER+=	slsh
-REPLACE.slsh.old=	/usr/bin/env\ slsh
+REPLACE.slsh.old=	slsh
 REPLACE.slsh.new=	${PREFIX}/bin/slsh
 REPLACE_FILES.slsh=	slsh/scripts/jpegsize slsh/scripts/lsrpm \
 			slsh/scripts/sldb slsh/scripts/slprof \
