@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/10/27 14:03:17 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/04/14 19:48:56 joerg Exp $
 
-SHA1 (pymol-v1.4.1.tar.bz2) = 085c83af192c53160060fac14c438ca31c5b6ebf
-RMD160 (pymol-v1.4.1.tar.bz2) = 8a9e0c964ff76d6d8e7d837e579953ca8362c626
-Size (pymol-v1.4.1.tar.bz2) = 9105980 bytes
+SHA1 (pymol-v1.5.0.1.tar.bz2) = b59ff50437d34f21ca8ffd007a600de4df684073
+RMD160 (pymol-v1.5.0.1.tar.bz2) = 1e5fd51299f2bbe0249a9a07117c068af49ec095
+Size (pymol-v1.5.0.1.tar.bz2) = 9695855 bytes
