@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12083 2013/04/14 14:33:45 wiz Exp $
+$NetBSD: TODO,v 1.12084 2013/04/14 16:08:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -797,7 +797,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o liblbxutil-1.1.0
-	o libltdl-2.4.2
 	o libmcs-0.7.2
 	o libmemcached-1.0.17
 	o libmicrohttpd-0.9.26
