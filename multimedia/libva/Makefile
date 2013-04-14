@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 09:21:07 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/14 00:30:02 cheusov Exp $
 #
 
-# libva-1.0.7+ needs libdrm-2.4.23
-DISTNAME=	libva-1.0.6
-PKGREVISION=	1
+DISTNAME=	libva-1.1.0
 CATEGORIES=	multimedia
-MASTER_SITES=	http://cgit.freedesktop.org/libva/snapshot/
+MASTER_SITES=	http://www.freedesktop.org/software/vaapi/releases/libva/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +21,9 @@ DRIVER_SEARCH_PATH=	${PREFIX}/lib/xorg/modules/dri
 
 CONFIGURE_ARGS+=	--enable-i965-driver
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--with-drivers-path=${DRIVER_SEARCH_PATH}
+CONFIGURE_ARGS+=	--with-drivers-path=${DRIVER_SEARCH_PATH:Q}
+
+LIBS+=			${BUILDLINK_LDADD.dl}
 
 PKGCONFIG_OVERRIDE+=	libva-glx.pc.in
 PKGCONFIG_OVERRIDE+=	libva-tpi.pc.in

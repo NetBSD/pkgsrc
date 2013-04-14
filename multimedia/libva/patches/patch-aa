@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/19 04:15:41 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2013/04/14 00:30:02 cheusov Exp $
 
 Fix v4l2 header path on NetBSD.
 
---- va/va_backend.h.orig	2011-01-19 01:31:44.000000000 +0000
+--- va/va_backend.h.orig	2012-09-28 14:04:28.000000000 +0000
 +++ va/va_backend.h
-@@ -33,7 +33,11 @@
- #ifndef ANDROID
- #include <X11/Xlib.h>
- #endif
+@@ -30,7 +30,11 @@
+ #define _VA_BACKEND_H_
+ 
+ #include <va/va.h>
 +#if defined(__linux__)
  #include <linux/videodev2.h>
 +#elif defined(__NetBSD__)
