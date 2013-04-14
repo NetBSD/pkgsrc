@@ -1,0 +1,92 @@
+$NetBSD: patch-demo_animation3_c,v 1.1 2013/04/14 00:15:27 dholland Exp $
+
+- fix void main
+- print pointers correctly (use %jd rather than %p as it appears they
+  need to print in decimal)
+- call execl() correctly
+
+--- demo/animation3.c.orig	1995-02-08 18:54:17.000000000 +0000
++++ demo/animation3.c
+@@ -69,16 +69,19 @@
+ #include <stdlib.h> 
+ #include <string.h> 
+ #include <signal.h> 
++#include <unistd.h>
++#include <stdint.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include "../src/globals.h"
+ 
++#define PRINTPTR(n) ((intmax_t)(intptr_t)n)
+ 
+ /* Prototypes
+  * ----------
+  */
+ 
+-void main		_PP((int argc, char *argv[]));
++int main		_PP((int argc, char *argv[]));
+ void call_vcg		_PP((void));
+ void signal_vcg		_PP((int k));
+ void wait_for_vcg	_PP((void));
+@@ -132,9 +135,9 @@ int ins[15] = { 
+ char timep[20] = "1";
+ 
+ #ifdef ANSI_C
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ #else
+-void main(argc, argv)
++int main(argc, argv)
+ int argc;
+ char *argv[];
+ #endif
+@@ -172,6 +175,7 @@ char *argv[];
+ 	signal_vcg(- SIGUSR2);	/* close vcg (does not work with X11) */
+ 	sleep(3);
+ 	signal_vcg(- SIGQUIT);	/* exit vcg  */
++	return 0;
+ }
+ 
+ 
+@@ -224,7 +228,7 @@ void call_vcg()
+ #ifdef X11
+ 			"-geometry","200x200-30+30",
+ #endif
+-			filename,0L);
++			filename, (char *)NULL);
+ 		}
+ 		 /* NEVER REACHED */ 
+ 
+@@ -762,8 +766,8 @@ NODE n;
+ int i;
+ #endif
+ {
+-       	FPRINTF(f,"         node: { title: \"%d\" label: \"%d\" ", 
+-		n, n->num); 
++       	FPRINTF(f,"         node: { title: \"%jd\" label: \"%d\" ", 
++		PRINTPTR(n), n->num); 
+        	FPRINTF(f,"width:  34 "); 
+        	FPRINTF(f,"height: 34 "); 
+ 
+@@ -797,8 +801,8 @@ int i;
+ 	if (n->sons==2) {
+ 		print_node(f,n->son[0], 0);
+ 
+-       		FPRINTF(f,"         edge: { sourcename: \"%d\" ", n);
+-		FPRINTF(f,"targetname: \"%d\" ", n->son[0]); 
++       		FPRINTF(f,"         edge: { sourcename: \"%jd\" ", PRINTPTR(n));
++		FPRINTF(f,"targetname: \"%jd\" ", PRINTPTR(n->son[0]));
+ 		if ((n->son[0])->col == RED) {
+        			FPRINTF(f,"color: red "); 
+        			FPRINTF(f,"linestyle: dotted "); 
+@@ -810,8 +814,8 @@ int i;
+ 
+ 		print_node(f,n->son[1], 1);
+ 
+-       		FPRINTF(f,"         edge: { sourcename: \"%d\" ", n);
+-		FPRINTF(f,"targetname: \"%d\" ", n->son[1]); 
++       		FPRINTF(f,"         edge: { sourcename: \"%jd\" ", PRINTPTR(n));
++		FPRINTF(f,"targetname: \"%jd\" ", PRINTPTR(n->son[1]));
+ 		if ((n->son[1])->col == RED) {
+        			FPRINTF(f,"color: red "); 
+        			FPRINTF(f,"linestyle: dotted "); 
