@@ -1,15 +1,15 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/01/23 17:28:54 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/04/14 00:30:02 cheusov Exp $
 
 automake-1.13 compat.
 
---- configure.ac.orig	2010-10-27 23:26:04.000000000 +0000
+--- configure.ac.orig	2012-10-04 13:30:51.000000000 +0000
 +++ configure.ac
-@@ -41,7 +41,7 @@ AC_INIT([libva], [libva_version], [waldo
- AC_CONFIG_SRCDIR([Makefile.am])
+@@ -86,7 +86,7 @@ AC_CONFIG_SRCDIR([Makefile.am])
+ AC_CONFIG_MACRO_DIR([m4])
  AM_INIT_AUTOMAKE([dist-bzip2])
  
 -AM_CONFIG_HEADER([config.h])
 +AC_CONFIG_HEADERS([config.h])
+ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
  
- LIBVA_MAJOR_VERSION=libva_major_version
- LIBVA_MINOR_VERSION=libva_minor_version
+ TODAY="`LC_ALL=C date +'%a, %d %b %Y %X %z'`"
