@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2012/06/23 18:49:27 dholland Exp $
+$NetBSD: distinfo,v 1.16 2013/04/14 01:26:03 dholland Exp $
 
 SHA1 (sdbm.tar.Z) = ebeb769b308a00853b0119f32dda781829e1d712
 RMD160 (sdbm.tar.Z) = 33a48f642ad81bb15a7ce4440dca605e97774afa
@@ -8,6 +8,6 @@ SHA1 (patch-ab) = 0d432aa2f4a8b33077aa045386da499b494bcd24
 SHA1 (patch-ac) = dccfcb2b7a2f68188bb55bb514021cc091274678
 SHA1 (patch-ad) = 7857dbfc168d12985a9fa0b5cefc39ac90bc4fba
 SHA1 (patch-ae) = 69e4e40277ecae8e6023d72dbbd4a738583f46dd
-SHA1 (patch-af) = fa89bf6c82ed379f83285390641a51bd9bb69c7e
+SHA1 (patch-af) = fa25d68eacd6e0b555a29618960659573013ca76
 SHA1 (patch-ah) = 90dba8033eba363f246fd785e8897724ab7eb718
 SHA1 (patch-ai) = 30be3d05db35d02190e8749840921d23c55c24db

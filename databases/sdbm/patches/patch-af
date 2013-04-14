@@ -1,12 +1,12 @@
-$NetBSD: patch-af,v 1.4 2012/06/23 18:49:28 dholland Exp $
+$NetBSD: patch-af,v 1.5 2013/04/14 01:26:03 dholland Exp $
 
 - Use standard headers.
-- Don't provide own getopt on BSD platforms.
+- Don't provide own getopt on BSD platforms, or on Solaris.
 - Use <ctype.h> functions correctly.
 - Avoid signed bitwise operations.
 - Use the modern regexp library interface.
 
---- dbe.c.orig	2012-06-23 18:47:09.000000000 +0000
+--- dbe.c.orig	2013-04-14 01:29:53.000000000 +0000
 +++ dbe.c
 @@ -1,6 +1,12 @@
 +#include <sys/types.h>
@@ -26,7 +26,7 @@ $NetBSD: patch-af,v 1.4 2012/06/23 18:49:28 dholland Exp $
  #define index  strchr
  #endif
  
-+#if !(defined(BSD) && BSD >= 199506)
++#if !(defined(BSD) && BSD >= 199506) && !defined(__sun)
  char
  getopt(argc, argv, optstring)
  int argc;
