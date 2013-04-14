@@ -1,23 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 04:15:41 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/14 00:30:02 cheusov Exp $
 include/va/va.h
 include/va/va_backend.h
 include/va/va_backend_glx.h
 include/va/va_backend_tpi.h
-include/va/va_dri.h
+include/va/va_dec_jpeg.h
 include/va/va_dri2.h
 include/va/va_dricommon.h
-include/va/va_dummy.h
+include/va/va_drm.h
+include/va/va_drmcommon.h
 include/va/va_glx.h
 include/va/va_tpi.h
 include/va/va_version.h
 include/va/va_x11.h
+lib/libva-drm.la
 lib/libva-glx.la
 lib/libva-tpi.la
 lib/libva-x11.la
 lib/libva.la
+lib/pkgconfig/libva-drm.pc
 lib/pkgconfig/libva-glx.pc
 lib/pkgconfig/libva-tpi.pc
 lib/pkgconfig/libva-x11.pc
 lib/pkgconfig/libva.pc
 lib/xorg/modules/dri/dummy_drv_video.la
-lib/xorg/modules/dri/i965_drv_video.la
