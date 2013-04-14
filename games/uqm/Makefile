@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/05 22:19:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/14 05:22:34 dholland Exp $
 #
 
 DISTNAME=	uqm-0.7.0-source
@@ -49,13 +49,14 @@ SUBST_SED.config+=	-e 's;/usr/local/games;${PREFIX};'
 INSTALLATION_DIRS=	bin lib/uqm share/uqm/content/packages share/doc/uqm
 
 do-configure:
-	cd ${WRKSRC} && ./build.sh uqm config
+	cd ${WRKSRC} && ${SH} ./build.sh uqm config
 
 do-build:
-	cd ${WRKSRC} && ./build.sh uqm reprocess_config && ./build.sh uqm
+	cd ${WRKSRC} && ${SH} ./build.sh uqm reprocess_config && \
+		${SH} ./build.sh uqm
 
 do-install:
-	cd ${WRKSRC} && env DESTDIR=${DESTDIR} ./build.sh uqm install
+	cd ${WRKSRC} && env DESTDIR=${DESTDIR} ${SH} ./build.sh uqm install
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.7.0-content.uqm \
 		${DESTDIR}${PREFIX}/share/uqm/content/packages
 	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt \
