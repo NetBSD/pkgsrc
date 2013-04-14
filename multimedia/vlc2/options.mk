@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/04/12 13:40:47 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2013/04/14 12:35:25 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad skins sdl pulseaudio x11
@@ -6,6 +6,13 @@ PKG_SUPPORTED_OPTIONS+=		gnome dts rtsp
 # XXX broken
 #PKG_SUPPORTED_OPTIONS+=	dbus
 PKG_SUGGESTED_OPTIONS=		x11 rtsp
+
+### Add VAAPI if it is available
+.include "../../multimedia/libva/available.mk"
+.if ${VAAPI_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+= vaapi
+PKG_SUGGESTED_OPTIONS+=	vaapi
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -148,4 +155,12 @@ BUILDLINK_API_DEPENDS.liblive+= liblive>=20111223
 .  include "../../net/liblive/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-live555
+.endif
+
+## VAAPI support
+.if !empty(PKG_OPTIONS:Mvaapi)
+CONFIGURE_ARGS+=	--enable-libva
+.include "../../multimedia/libva/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libva
 .endif
