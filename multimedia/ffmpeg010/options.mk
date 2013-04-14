@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/12/01 10:15:53 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2013/04/14 00:59:50 cheusov Exp $
 
 # Global and legacy options
 
@@ -8,13 +8,21 @@ PKG_SUGGESTED_OPTIONS=	lame libvpx theora vorbis x264 xvid
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faac
 
-### Add vdpau if it is available
+### Add VDPAU if it is available
 .include "../../multimedia/libvdpau/available.mk"
 .if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= vdpau
 PKG_SUGGESTED_OPTIONS+=	vdpau
 .endif
 
+### Add VAAPI if it is available
+.include "../../multimedia/libva/available.mk"
+.if ${VAAPI_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+= vaapi
+PKG_SUGGESTED_OPTIONS+=	vaapi
+.endif
+
+###
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -101,11 +109,25 @@ CONFIGURE_ARGS+=	--disable-libx264
 ### VDPAU support
 ###
 .if !empty(PKG_OPTIONS:Mvdpau)
+CONFIGURE_ARGS+=	--enable-vdpau
 .include "../../multimedia/libvdpau/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-vdpau
 .endif
 
+###
+### VAAPI support
+###
+.if !empty(PKG_OPTIONS:Mvaapi)
+CONFIGURE_ARGS+=	--enable-vaapi
+.include "../../multimedia/libva/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-vaapi
+.endif
+
+###
+### VPX support
+###
 .if !empty(PKG_OPTIONS:Mlibvpx)
 CONFIGURE_ARGS+=	--enable-libvpx
 .include "../../multimedia/libvpx/buildlink3.mk"
