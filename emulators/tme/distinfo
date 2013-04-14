@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2013/02/26 23:39:18 joerg Exp $
+$NetBSD: distinfo,v 1.16 2013/04/14 02:00:15 dholland Exp $
 
 SHA1 (tme-0.8.tar.gz) = dd4f3421c20ceed548c5328a21dbb26e80f46b9c
 RMD160 (tme-0.8.tar.gz) = 6bd505c5fa7810d37f436883383c4ba655df2ded
 Size (tme-0.8.tar.gz) = 2100123 bytes
-SHA1 (patch-aa) = 41d42a5bbad9f87bce4bada14ca482f5e8f79d9a
+SHA1 (patch-aa) = 587f7a3d61a6b37e65d625f1bab0f3c2d740bba9
 SHA1 (patch-ab) = 3825986759da24c628b870a1493e4d37ec37358f
 SHA1 (patch-ac) = ba581f10ec54b056564a7a84a5833f2d854b55df
 SHA1 (patch-ad) = e90986262fe9d883ae64fe01dfb4ae07bde6a916
