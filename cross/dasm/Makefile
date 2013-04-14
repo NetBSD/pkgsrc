@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 00:10:29 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/14 01:21:17 dholland Exp $
 #
 
 DISTNAME=	dasm212
 PKGNAME=	dasm-2.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cross
 MASTER_SITES=	http://members.cox.net/rcolbert/zip/
 EXTRACT_SUFX=	.zip
