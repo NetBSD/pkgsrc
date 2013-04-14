@@ -1,4 +1,4 @@
-$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.4 2013/04/05 07:59:20 tron Exp $
+$NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.5 2013/04/14 19:45:31 joerg Exp $
 
 --- agent/mibgroup/hardware/cpu/cpu_sysctl.c.orig	2012-10-09 18:28:58.000000000 -0400
 +++ agent/mibgroup/hardware/cpu/cpu_sysctl.c	2013-04-04 20:55:47.000000000 -0400
@@ -87,7 +87,7 @@ $NetBSD: patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c,v 1.4 2013/04/05 07:59:
 +	int i;
 +	if (ncpu_stats == NULL) {
 +	    snmp_log(LOG_ERR, "no memory for kern.cp_time (errno %d)\n", errno);
-+	    return;
++	    return -1;
 +	}
 +	if (sysctlbyname("kern.cp_time", ncpu_stats, &ncpu_size, NULL, 0) == -1)
 +	    snmp_log(LOG_ERR, "sysctl kern.cp_time failed (errno %d)\n", errno);
