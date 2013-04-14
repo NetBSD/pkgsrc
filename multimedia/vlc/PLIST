@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2013/01/19 20:34:37 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.53 2013/04/14 22:14:42 cheusov Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -173,6 +173,7 @@ ${PLIST.dbus}lib/vlc/plugins/control/libdbus_plugin.la
 lib/vlc/plugins/control/libgestures_plugin.la
 ${PLIST.x11}lib/vlc/plugins/control/libglobalhotkeys_plugin.la
 lib/vlc/plugins/control/libhotkeys_plugin.la
+${PLIST.lirc}lib/vlc/plugins/control/liblirc_plugin.la
 lib/vlc/plugins/control/libmotion_plugin.la
 lib/vlc/plugins/control/libnetsync_plugin.la
 lib/vlc/plugins/control/liboldhttp_plugin.la
