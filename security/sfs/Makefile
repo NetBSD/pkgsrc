@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.43 2013/04/14 00:57:08 dholland Exp $
 #
 
 DISTNAME=	sfs-0.7.2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fs.net/sfswww/
+# http://en.wikipedia.org/wiki/Self-certifying_File_System
+# http://web.archive.org/web/20080502061505/http://www.fs.net/sfswww/
 COMMENT=	Secure, global, self-certifying network file system
 LICENSE=	gnu-gpl-v2
 
