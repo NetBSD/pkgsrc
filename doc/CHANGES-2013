@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1353 2013/04/14 01:10:42 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1354 2013/04/14 01:19:47 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2137,3 +2137,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/libva to 1.1.0 [cheusov 2013-04-14]
 	Added multimedia/libva-driver-vdpau version 0.7.4 [cheusov 2013-04-14]
 	Updated x11/kde4-l10n-pt_BR to 4.10.2 [rodent 2013-04-14]
+	Updated x11/kde4-l10n-pt to 4.10.2 [rodent 2013-04-14]
