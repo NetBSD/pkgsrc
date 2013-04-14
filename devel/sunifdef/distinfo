@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/22 03:10:01 bjs Exp $
+$NetBSD: distinfo,v 1.2 2013/04/14 01:36:50 dholland Exp $
 
 SHA1 (sunifdef-3.1.3.tar.gz) = edc67ad426402a90d9aa5a8b6316412b1a6f5a18
 RMD160 (sunifdef-3.1.3.tar.gz) = 8f70096f8045d4240e005f8fcf969b4981f732b6
 Size (sunifdef-3.1.3.tar.gz) = 443142 bytes
+SHA1 (patch-src_args.c) = 4c443ea5e127a41404489b6e79fe38fffd670276
