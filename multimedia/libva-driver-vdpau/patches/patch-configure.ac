@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/04/14 00:48:05 cheusov Exp $
+
+# Fix for latest autotools
+--- configure.ac.orig	2012-10-05 14:04:17.000000000 +0000
++++ configure.ac
+@@ -23,7 +23,7 @@ AC_INIT([vdpau_video], [vdpau_video_vers
+ AC_CONFIG_SRCDIR([Makefile.am])
+ AM_INIT_AUTOMAKE
+ 
+-AM_CONFIG_HEADER([src/config.h])
++AC_CONFIG_HEADERS([src/config.h])
+ 
+ VDPAU_VIDEO_MAJOR_VERSION=vdpau_video_major_version
+ VDPAU_VIDEO_MINOR_VERSION=vdpau_video_minor_version
