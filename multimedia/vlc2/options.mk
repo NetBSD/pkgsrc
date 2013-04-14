@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/04/14 12:35:25 cheusov Exp $
+# $NetBSD: options.mk,v 1.6 2013/04/14 22:10:23 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad skins sdl pulseaudio x11
@@ -14,6 +14,14 @@ PKG_SUPPORTED_OPTIONS+= vaapi
 PKG_SUGGESTED_OPTIONS+=	vaapi
 .endif
 
+### Add LIRC if it is available
+.include "../../comms/lirc/available.mk"
+.if ${LIRC_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+= lirc
+PKG_SUGGESTED_OPTIONS+=	lirc
+.endif
+
+###
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
@@ -163,4 +171,13 @@ CONFIGURE_ARGS+=	--enable-libva
 .include "../../multimedia/libva/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libva
+.endif
+
+## LIRC support
+.if !empty(PKG_OPTIONS:Mlirc)
+CONFIGURE_ARGS+=	--enable-lirc
+PLIST.lirc=	yes
+.include "../../comms/lirc/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-lirc
 .endif
