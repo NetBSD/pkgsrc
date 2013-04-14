@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1350 2013/04/14 00:30:48 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1351 2013/04/14 00:33:41 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2134,3 +2134,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-ro to 4.10.2 [rodent 2013-04-14]
 	Updated x11/kde4-l10n-ru to 4.10.2 [rodent 2013-04-14]
 	Updated math/py-scipy to 0.12.0 [markd 2013-04-14]
+	Updated multimedia/libva to 1.1.0 [cheusov 2013-04-14]
