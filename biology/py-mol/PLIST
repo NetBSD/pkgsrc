@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/04/14 19:48:56 joerg Exp $
 bin/pymol
 ${PYSITELIB}/chempy/__init__.py
 ${PYSITELIB}/chempy/__init__.pyc
@@ -172,6 +172,9 @@ ${PYSITELIB}/pmg_tk/Demo.pyo
 ${PYSITELIB}/pmg_tk/PMGApp.py
 ${PYSITELIB}/pmg_tk/PMGApp.pyc
 ${PYSITELIB}/pmg_tk/PMGApp.pyo
+${PYSITELIB}/pmg_tk/PyMOLMapLoad.py
+${PYSITELIB}/pmg_tk/PyMOLMapLoad.pyc
+${PYSITELIB}/pmg_tk/PyMOLMapLoad.pyo
 ${PYSITELIB}/pmg_tk/SetEditor.py
 ${PYSITELIB}/pmg_tk/SetEditor.pyc
 ${PYSITELIB}/pmg_tk/SetEditor.pyo
@@ -255,6 +258,9 @@ ${PYSITELIB}/pymol/computing.pyo
 ${PYSITELIB}/pymol/constants.py
 ${PYSITELIB}/pymol/constants.pyc
 ${PYSITELIB}/pymol/constants.pyo
+${PYSITELIB}/pymol/constants_palette.py
+${PYSITELIB}/pymol/constants_palette.pyc
+${PYSITELIB}/pymol/constants_palette.pyo
 ${PYSITELIB}/pymol/contrib/__init__.py
 ${PYSITELIB}/pymol/contrib/__init__.pyc
 ${PYSITELIB}/pymol/contrib/__init__.pyo
@@ -526,13 +532,32 @@ ${PYSITELIB}/pymol/pymol_path/data/pmg_tk/bitmaps/builder/cyc7.gif
 ${PYSITELIB}/pymol/pymol_path/data/pmg_tk/bitmaps/builder/cyc7.xbm
 ${PYSITELIB}/pymol/pymol_path/data/pymol/cmyk.png
 ${PYSITELIB}/pymol/pymol_path/data/pymol/hsv.ppm
+${PYSITELIB}/pymol/pymol_path/data/pymol/incentive_splash.png
 ${PYSITELIB}/pymol/pymol_path/data/pymol/matrices/BLOSUM62
 ${PYSITELIB}/pymol/pymol_path/data/pymol/splash.old.png
+${PYSITELIB}/pymol/pymol_path/data/pymol/splash.png
+${PYSITELIB}/pymol/pymol_path/data/pymol/splash_edu.png
+${PYSITELIB}/pymol/pymol_path/data/shaders/cylinder.fs
+${PYSITELIB}/pymol/pymol_path/data/shaders/cylinder.vs
+${PYSITELIB}/pymol/pymol_path/data/shaders/cylinder_no_ff.fs
 ${PYSITELIB}/pymol/pymol_path/data/shaders/default.fs
 ${PYSITELIB}/pymol/pymol_path/data/shaders/default.vs
+${PYSITELIB}/pymol/pymol_path/data/shaders/default_es.fs
+${PYSITELIB}/pymol/pymol_path/data/shaders/default_es.vs
+${PYSITELIB}/pymol/pymol_path/data/shaders/default_es2.fs
+${PYSITELIB}/pymol/pymol_path/data/shaders/default_es2.vs
+${PYSITELIB}/pymol/pymol_path/data/shaders/shadertext.txt
+${PYSITELIB}/pymol/pymol_path/data/shaders/sphere.fs
+${PYSITELIB}/pymol/pymol_path/data/shaders/sphere.vs
+${PYSITELIB}/pymol/pymol_path/data/shaders/sphere_arb_fs.fs
+${PYSITELIB}/pymol/pymol_path/data/shaders/sphere_arb_vs.vs
+${PYSITELIB}/pymol/pymol_path/data/shaders/spheredirect.vs
 ${PYSITELIB}/pymol/pymol_path/data/shaders/volume.fs
 ${PYSITELIB}/pymol/pymol_path/data/shaders/volume.vs
 ${PYSITELIB}/pymol/pymol_path/data/tut/1hpv.pdb
+${PYSITELIB}/pymol/pymol_path/data/xray/atomformfactor2.dat
+${PYSITELIB}/pymol/pymol_path/data/xray/atomformfactor5.dat
+${PYSITELIB}/pymol/pymol_path/data/xray/spgbase.dat
 ${PYSITELIB}/pymol/pymol_path/examples/chempy/generate_amber.py
 ${PYSITELIB}/pymol/pymol_path/examples/chempy/generate_mmff.py
 ${PYSITELIB}/pymol/pymol_path/examples/cookbook/area_diff.pml
@@ -569,6 +594,7 @@ ${PYSITELIB}/pymol/pymol_path/examples/devel/chempy_model02.py
 ${PYSITELIB}/pymol/pymol_path/examples/devel/chempy_model03.py
 ${PYSITELIB}/pymol/pymol_path/examples/devel/click_ordered_list.py
 ${PYSITELIB}/pymol/pymol_path/examples/devel/count_molecules.py
+${PYSITELIB}/pymol/pymol_path/examples/devel/demo.sdf
 ${PYSITELIB}/pymol/pymol_path/examples/devel/extend_demo01.py
 ${PYSITELIB}/pymol/pymol_path/examples/devel/gl01.py
 ${PYSITELIB}/pymol/pymol_path/examples/devel/gl02.py
@@ -640,6 +666,7 @@ ${PYSITELIB}/pymol/pymol_path/test/dat/small02.pdb
 ${PYSITELIB}/pymol/pymol_path/test/dat/small03.mol2
 ${PYSITELIB}/pymol/pymol_path/test/dat/tiny.pdb
 ${PYSITELIB}/pymol/pymol_path/test/dat/water.pdb
+${PYSITELIB}/pymol/pymol_path/test/headerTest.py
 ${PYSITELIB}/pymol/pymol_path/test/inp/B01.py
 ${PYSITELIB}/pymol/pymol_path/test/inp/B02.py
 ${PYSITELIB}/pymol/pymol_path/test/inp/B03.py
