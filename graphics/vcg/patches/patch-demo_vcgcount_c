@@ -1,0 +1,35 @@
+$NetBSD: patch-demo_vcgcount_c,v 1.1 2013/04/14 00:15:27 dholland Exp $
+
+- fix void main
+
+--- demo/vcgcount.c~	1995-02-08 11:27:34.000000000 +0000
++++ demo/vcgcount.c
+@@ -64,7 +64,7 @@
+  * ----------
+  */
+ 
+-void main		_PP((void));
++int main		_PP((void));
+ 
+ 
+ 
+@@ -85,9 +85,9 @@ int nredges;      /* The number of edges
+  */
+ 
+ #ifdef ANSI_C
+-void main(void)
++int main(void)
+ #else
+-void main()
++int main()
+ #endif
+ {
+ 	register char *c;
+@@ -120,6 +120,7 @@ void main()
+ 	}
+ 	PRINTF("This graph contains %d nodes and %d edges.\n", 
+ 		nrnodes, nredges);
++	return 0;
+ }
+ 
+ 
