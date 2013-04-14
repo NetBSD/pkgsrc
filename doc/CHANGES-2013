@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1379 2013/04/14 19:49:17 joerg Exp $
+$NetBSD: CHANGES-2013,v 1.1380 2013/04/14 19:51:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2165,3 +2165,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-App-Prove-Plugin-ProgressBar version 0.01 [schmonz 2013-04-14]
 	Updated www/curl to 7.30.0 [wiz 2013-04-14]
 	Updated biology/py-mol to 1.5.0.1 [joerg 2013-04-14]
+	Updated multimedia/farsight2 to 0.0.31 [wiz 2013-04-14]
