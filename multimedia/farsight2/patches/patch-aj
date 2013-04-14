@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2011/10/13 13:28:12 hans Exp $
+$NetBSD: patch-aj,v 1.4 2013/04/14 19:51:05 wiz Exp $
 
---- gst-libs/gst/farsight/fs-interfaces.c.orig	2011-02-10 20:29:39.000000000 +0100
-+++ gst-libs/gst/farsight/fs-interfaces.c	2011-10-12 18:58:16.132751166 +0200
-@@ -44,6 +44,10 @@
+--- gst-libs/gst/farsight/fs-interfaces.c.orig	2011-10-09 21:06:33.000000000 +0000
++++ gst-libs/gst/farsight/fs-interfaces.c
+@@ -58,6 +58,10 @@ GST_DEBUG_CATEGORY_EXTERN (fs_base_confe
   #include <sys/socket.h>
   #include <ifaddrs.h>
  #endif
@@ -11,9 +11,9 @@ $NetBSD: patch-aj,v 1.3 2011/10/13 13:28:12 hans Exp $
 +#include <sys/sockio.h>
 +#endif
  
- #include <gst/gst.h>
- 
-@@ -327,8 +329,8 @@ gchar *
+ /**
+  * fs_interfaces_get_local_interfaces:
+@@ -326,8 +330,8 @@ gchar *
  fs_interfaces_get_ip_for_interface (gchar *interface_name)
  {
    union  {
@@ -24,7 +24,7 @@ $NetBSD: patch-aj,v 1.3 2011/10/13 13:28:12 hans Exp $
    } sockaddr_union;
    struct ifreq ifr;
    gint sockfd;
-@@ -351,10 +353,10 @@ fs_interfaces_get_ip_for_interface (gcha
+@@ -350,10 +354,10 @@ fs_interfaces_get_ip_for_interface (gcha
    }
  
    close (sockfd);

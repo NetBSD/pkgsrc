@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.16 2011/10/13 13:28:12 hans Exp $
+$NetBSD: distinfo,v 1.17 2013/04/14 19:51:04 wiz Exp $
 
-SHA1 (farsight2-0.0.26.tar.gz) = 4d0e105a807075dd2a5c837aca92febdef6229a4
-RMD160 (farsight2-0.0.26.tar.gz) = 62e7b6f114040e0cd3e995439532a6937e0dbafa
-Size (farsight2-0.0.26.tar.gz) = 1167062 bytes
+SHA1 (farsight2-0.0.31.tar.gz) = 7471a1c8207c821b22e4f79c2a159f41140331de
+RMD160 (farsight2-0.0.31.tar.gz) = ce4a5de114c7a0abf83c78e488bd0da623bf7ea9
+Size (farsight2-0.0.31.tar.gz) = 1231416 bytes
 SHA1 (patch-ab) = 27fd12ad2d1774cbeb7c11a4cee5b40e5ea97853
 SHA1 (patch-ai) = 6459729f80f592a2a333d683b05a139b499f46c6
-SHA1 (patch-aj) = d73bcbec6b7c8387a01ab391a52373080ba44e61
+SHA1 (patch-aj) = 5363a433c4ac1c01dc90f85c9ab47b82509a2f98
 SHA1 (patch-ak) = 591ab7b6afefc84443280b01c765492007686ff6
 SHA1 (patch-gst-libs_gst_farsight_Makefile.in) = e56468e52401548b0dac0225153abde1a5d548e3
-SHA1 (patch-python_Makefile.in) = 7c9396e148958108deabb4286f8945edb10843fb
