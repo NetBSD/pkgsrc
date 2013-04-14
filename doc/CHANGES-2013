@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1377 2013/04/14 05:41:04 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1378 2013/04/14 16:39:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/kde4-l10n-hr to 4.10.2 [markd 2013-04-14]
 	Updated x11/kde4-l10n-hu to 4.10.2 [markd 2013-04-14]
 	Added devel/p5-App-Prove-Plugin-ProgressBar version 0.01 [schmonz 2013-04-14]
+	Updated www/curl to 7.30.0 [wiz 2013-04-14]
