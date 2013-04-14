@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2013/02/26 23:39:18 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2013/04/14 02:00:15 dholland Exp $
+
+- XXX: some unexplained/undocumented libtool fix
+- fix printf formats
+- explicitly ignore the variable "rc" in tme_module_close() as the
+Sun compiler is objecting to it being assigned and not used.
 
 --- libtme/module.c.orig	2010-06-05 19:04:42.000000000 +0000
 +++ libtme/module.c
@@ -52,3 +57,10 @@ $NetBSD: patch-aa,v 1.6 2013/02/26 23:39:18 joerg Exp $
      tme_free_string_array(tokens, -1);
      return (ENOENT);
    }
+@@ -400,5 +402,6 @@ tme_module_close(void *_module)
+   tme_free(module);
+ 
+   /* XXX assume success: */
++  (void)rc;
+   return (TME_OK);
+ }
