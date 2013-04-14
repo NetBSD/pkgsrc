@@ -1,0 +1,4 @@
+App::Prove::Plugin::ProgressBar::Formatter is a progress bar for
+Perl's prove(1). Use it like so:
+
+$ prove -PProgressBar t/
