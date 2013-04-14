@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/14 00:48:05 cheusov Exp $
+lib/xorg/modules/dri/nvidia_drv_video.so
+lib/xorg/modules/dri/s3g_drv_video.so
+lib/xorg/modules/dri/vdpau_drv_video.la
