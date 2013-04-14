@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2013/04/03 10:51:59 markd Exp $
+$NetBSD: distinfo,v 1.22 2013/04/14 19:44:54 joerg Exp $
 
 SHA1 (kdenetwork-4.10.2.tar.xz) = 972526be8275a8adcb6e4fa51188a5dad83a0b14
 RMD160 (kdenetwork-4.10.2.tar.xz) = 1ab2675e453d7bc39bb51a192d4e7166404dc351
@@ -8,4 +8,5 @@ SHA1 (patch-ab) = 0743b3b6c994623c507b8bcd52ee01dad31cf56f
 SHA1 (patch-ae) = 765d48550d2d8b7a59a1593a669b0909fef3bd96
 SHA1 (patch-af) = ebd1bc3ae40b5cd551a1283e28fb0f4a80764cfb
 SHA1 (patch-kget_CMakeLists.txt) = 91029f47cf50dbdd31b3ba63bf8e4e35c303f6cb
+SHA1 (patch-kget_core_transferhistorystore.cpp) = 4db4ecea52a77a076b732d2d0ac3bb1e4d821c09
 SHA1 (patch-kopete_protocols_wlm_CMakeLists.txt) = bf4929a7e872adb13b2017957801385ca9623f37
