@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1382 2013/04/15 15:35:56 manu Exp $
+$NetBSD: CHANGES-2013,v 1.1383 2013/04/15 15:42:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2168,3 +2168,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/farsight2 to 0.0.31 [wiz 2013-04-14]
 	Added devel/p5-Term-ReadLine-TTYtter version 1.4 [obache 2013-04-15]
 	Updated www/ap2-auth-mellon to 0.6.1 [manu 2013-04-15]
+	Updated databases/sqlite3 to 3.7.16.2 [adam 2013-04-15]
+	Updated databases/sqlite3-docs to 3.7.16.2 [adam 2013-04-15]
+	Updated databases/sqlite3-tcl to 3.7.16.2 [adam 2013-04-15]
