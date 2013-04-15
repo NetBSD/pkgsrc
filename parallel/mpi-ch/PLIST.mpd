@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.mpd,v 1.2 2013/04/06 04:03:37 rodent Exp $
+@comment $NetBSD: PLIST.mpd,v 1.3 2013/04/15 21:40:17 adam Exp $
 bin/mpd
 bin/mpd.py
 bin/mpdallexit
@@ -23,6 +23,7 @@ bin/mpdlistjobs.py
 bin/mpdman.py
 bin/mpdringtest
 bin/mpdringtest.py
+bin/mpdroot
 bin/mpdrun
 bin/mpdsigjob
 bin/mpdsigjob.py
