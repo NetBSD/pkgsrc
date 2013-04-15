@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1380 2013/04/14 19:51:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1381 2013/04/15 13:10:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/curl to 7.30.0 [wiz 2013-04-14]
 	Updated biology/py-mol to 1.5.0.1 [joerg 2013-04-14]
 	Updated multimedia/farsight2 to 0.0.31 [wiz 2013-04-14]
+	Added devel/p5-Term-ReadLine-TTYtter version 1.4 [obache 2013-04-15]
