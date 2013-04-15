@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.116 2013/04/15 12:54:45 obache Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.117 2013/04/15 13:05:14 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1439,7 +1439,7 @@ PERL5_PACKLIST= auto/Pg/.packlist
     <varname>installvendorman1dir</varname>, and
     <varname>installvendorman3dir</varname> represent those
     locations in which components of perl5 modules may be installed,
-    privided as variable with uppercase and prefixed with
+    provided as variable with uppercase and prefixed with
     <varname>PERL5_</varname>, e.g. <varname>PERL5_INSTALLARCHLIB</varname>
     and may be used by perl5 packages that don't have a packlist.
     These variables are also substituted for in the
