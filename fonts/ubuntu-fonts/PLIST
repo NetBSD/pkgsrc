@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/15 17:22:40 uwe Exp $
+lib/X11/fonts/TTF/Ubuntu-B.ttf
+lib/X11/fonts/TTF/Ubuntu-BI.ttf
+lib/X11/fonts/TTF/Ubuntu-C.ttf
+lib/X11/fonts/TTF/Ubuntu-L.ttf
+lib/X11/fonts/TTF/Ubuntu-LI.ttf
+lib/X11/fonts/TTF/Ubuntu-M.ttf
+lib/X11/fonts/TTF/Ubuntu-MI.ttf
+lib/X11/fonts/TTF/Ubuntu-R.ttf
+lib/X11/fonts/TTF/Ubuntu-RI.ttf
+lib/X11/fonts/TTF/UbuntuMono-B.ttf
+lib/X11/fonts/TTF/UbuntuMono-BI.ttf
+lib/X11/fonts/TTF/UbuntuMono-R.ttf
+lib/X11/fonts/TTF/UbuntuMono-RI.ttf
+share/doc/ubuntu-fonts/CONTRIBUTING.txt
+share/doc/ubuntu-fonts/FONTLOG.txt
+share/doc/ubuntu-fonts/LICENCE-FAQ.txt
+share/doc/ubuntu-fonts/LICENCE.txt
+share/doc/ubuntu-fonts/README.txt
+share/doc/ubuntu-fonts/TRADEMARKS.txt
+share/doc/ubuntu-fonts/copyright.txt
