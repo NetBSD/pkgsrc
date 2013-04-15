@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1384 2013/04/15 17:29:13 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1385 2013/04/15 19:44:21 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2172,3 +2172,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3-docs to 3.7.16.2 [adam 2013-04-15]
 	Updated databases/sqlite3-tcl to 3.7.16.2 [adam 2013-04-15]
 	Added fonts/ubuntu-fonts version 0.80 [uwe 2013-04-15]
+	Updated databases/pgbuildfarm to 4.10 [gls 2013-04-15]
