@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1386 2013/04/15 21:43:35 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1387 2013/04/15 22:34:01 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2176,3 +2176,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/bison to 2.7.1 [adam 2013-04-15]
 	Updated parallel/hwloc to 1.7 [adam 2013-04-15]
 	Updated parallel/mpi-ch to 3.0.3 [adam 2013-04-15]
+	Updated graphics/png to 1.6.2beta01 [prlw1 2013-04-15]
