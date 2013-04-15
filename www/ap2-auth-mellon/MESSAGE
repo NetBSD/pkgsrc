@@ -1,9 +1,33 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2009/03/02 16:47:42 manu Exp $
+$NetBSD: MESSAGE,v 1.2 2013/04/15 15:35:01 manu Exp $
 
 In order to use this module in your Apache installation, you need to
 add the following to your httpd.conf file:
 
   LoadModule auth_mellon_module lib/httpd/mod_auth_mellon.so
+
+If upgrading from version prior 0.6.0, please not the following
+backward-incompatible changes:
+
+* The POST replay functionality has been disabled by default, and the
+  automatic creation of the MellonPostDirectory target directory has been
+  removed. If you want to use the POST replay functionality, create a
+  directory accessible only by the apache user (e.g.: /var/spool/mellon)
+  and add this after the LoadModule for mod_auth_mellon.so:
+  
+  MellonPostDirectory /var/spool/mellon
+
+* Start discovery service when accessing the login endpoint. We used
+  to bypass the discovery service in this case, and just pick the first
+  IdP. This has been changed to send a request to the discovery service
+  instead, if one is configured.
+
+* The MellonLockFile default path has been changed to:
+    /var/run/mod_auth_mellon.lock
+  This only affects platforms where a lock file is required and
+  where Apache doesn't have write access to that directory during
+  startup. (Apache can normally create files in that directory
+  during startup.)
+
 
 ===========================================================================
