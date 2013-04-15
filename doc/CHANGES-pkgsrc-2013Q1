@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.7 2013/04/11 22:22:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.8 2013/04/15 22:31:20 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -39,3 +39,5 @@ comms/asterisk10: security update
 comms/asterisk18: security update
 Pullup ticket #4117 - requested by khorben
 net/socat: security update
+Pullup ticket #4118 - requested by taca
+lang/php53: build fix
