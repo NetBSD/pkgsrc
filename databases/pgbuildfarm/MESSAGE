@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/09/13 10:49:04 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2013/04/15 19:43:11 gls Exp $
 
 Please follow http://wiki.postgresql.org/wiki/PostgreSQL_Buildfarm_Howto
 to setup your machine for the BuildFarm.
@@ -12,11 +12,12 @@ devel/flex
 You should consider installing the following packages to be able to compile
 PostgreSQL with all features:
 
-lang/python26 (with pkgtools/pkg_alternatives to create the python link)
+lang/python27 (with pkgtools/pkg_alternatives to create the python link)
 lang/perl5
 lang/tcl
 textproc/libxml2
 textproc/libxslt
 devel/readline
+devel/p5-BSD-Resource
 
 ===========================================================================

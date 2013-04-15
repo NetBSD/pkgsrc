@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/11/02 07:55:31 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/15 19:43:11 gls Exp $
 #
 
-DISTNAME=		build-farm-4_5
+DISTNAME=		build-farm-4_10
 PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/:S/_/./}
-PKGREVISION=		1
 CATEGORIES=		databases
-MASTER_SITES=		http://pgfoundry.org/frs/download.php/3028/
+MASTER_SITES=		http://www.pgbuildfarm.org/downloads/releases/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		nico@orgrim.net
@@ -36,12 +35,14 @@ SUBST_FILES.conf=	setnotes.pl update_personality.pl PGBuild/Options.pm
 SUBST_SED.conf=		-e 's,build-farm.conf,${PKG_SYSCONFDIR}/build-farm.conf,'
 SUBST_MESSAGE.conf=	Fixing default value for build-farm.conf
 
-INSTALLATION_DIRS+= ${PMDIR}
-INSTALLATION_DIRS+= ${EGDIR}
+INSTALLATION_DIRS+=	${PMDIR}
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${PMDIR}/Modules
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/PGBuild/*.pm ${DESTDIR}${PMDIR}
+	${INSTALL_DATA} ${WRKSRC}/PGBuild/Modules/*.pm ${DESTDIR}${PMDIR}/Modules
 	${INSTALL_DATA} ${WRKSRC}/build-farm.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
