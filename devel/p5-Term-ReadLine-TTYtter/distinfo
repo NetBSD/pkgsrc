@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/15 13:09:54 obache Exp $
+
+SHA1 (Term-ReadLine-TTYtter-1.4.tar.gz) = 6fd9abc3b56d1bd8102a3375d0b6901d11110a9e
+RMD160 (Term-ReadLine-TTYtter-1.4.tar.gz) = be742edbccf9dd02000ae636ebed8afadce4516f
+Size (Term-ReadLine-TTYtter-1.4.tar.gz) = 52093 bytes
