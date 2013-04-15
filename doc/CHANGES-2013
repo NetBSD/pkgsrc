@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1383 2013/04/15 15:42:53 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1384 2013/04/15 17:29:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3 to 3.7.16.2 [adam 2013-04-15]
 	Updated databases/sqlite3-docs to 3.7.16.2 [adam 2013-04-15]
 	Updated databases/sqlite3-tcl to 3.7.16.2 [adam 2013-04-15]
+	Added fonts/ubuntu-fonts version 0.80 [uwe 2013-04-15]
