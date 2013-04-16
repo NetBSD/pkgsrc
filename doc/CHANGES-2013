@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1388 2013/04/16 01:09:03 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.1389 2013/04/16 06:48:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2178,3 +2178,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/mpi-ch to 3.0.3 [adam 2013-04-15]
 	Updated graphics/png to 1.6.2beta01 [prlw1 2013-04-15]
 	Updated geography/viking to 1.4.1 [gdt 2013-04-16]
+	Updated math/isl to 0.11.2 [adam 2013-04-16]
