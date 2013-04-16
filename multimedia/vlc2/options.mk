@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2013/04/15 20:57:56 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2013/04/16 22:11:24 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad skins sdl pulseaudio x11
@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS=		x11 rtsp
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
+PLIST_VARS+=		vaapi
 .if ${VAAPI_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= vaapi
 PKG_SUGGESTED_OPTIONS+=	vaapi
@@ -16,6 +17,7 @@ PKG_SUGGESTED_OPTIONS+=	vaapi
 
 ### Add LIRC if it is available
 .include "../../comms/lirc/available.mk"
+PLIST_VARS+=		lirc
 .if ${LIRC_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= lirc
 PKG_SUGGESTED_OPTIONS+=	lirc
@@ -24,7 +26,7 @@ PKG_SUGGESTED_OPTIONS+=	lirc
 ###
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		lirc ${PKG_SUPPORTED_OPTIONS}
+PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 ## PulseAudio support
 
