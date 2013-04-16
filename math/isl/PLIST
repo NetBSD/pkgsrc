@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/17 22:10:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/16 06:47:15 adam Exp $
 include/isl/aff.h
 include/isl/aff_type.h
 include/isl/arg.h
@@ -42,6 +42,6 @@ include/isl/union_set_type.h
 include/isl/vec.h
 include/isl/version.h
 include/isl/vertices.h
+lib/libisl-gdb.py
 lib/libisl.la
-lib/libisl.so.10.1.1-gdb.py
 lib/pkgconfig/isl.pc

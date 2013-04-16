@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/04/16 06:47:15 adam Exp $
+
+'$$libisl' differs between systems, so use 'libisl' instead.
+
+--- Makefile.in.orig	2013-04-16 06:42:30.000000000 +0000
++++ Makefile.in
+@@ -2278,9 +2278,9 @@ install-data-local: $(srcdir)/isl.py
+ 	case $$libisl in \
+ 	'') echo Cannot find isl library name. GDB bindings not installed.;; \
+ 	*) echo $(INSTALL_DATA) $(srcdir)/isl.py \
+-		$(DESTDIR)$(libdir)/$$libisl-gdb.py; \
++		$(DESTDIR)$(libdir)/libisl-gdb.py; \
+ 	test -z "$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"; \
+-	$(INSTALL_DATA) $(srcdir)/isl.py $(DESTDIR)$(libdir)/$$libisl-gdb.py; esac
++	$(INSTALL_DATA) $(srcdir)/isl.py $(DESTDIR)$(libdir)/libisl-gdb.py; esac
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
