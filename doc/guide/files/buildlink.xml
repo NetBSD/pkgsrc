@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.31 2013/03/20 01:29:24 obache Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.32 2013/04/16 13:55:33 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -335,6 +335,30 @@ BUILDLINK_TREE+=	-tiff
       <filename>buildlink3.mk</filename>
       file is included. Dependencies are only added for directly
       include <filename>buildlink3.mk</filename> files.</para>
+
+      <para>When providing a <filename>buildlink3.mk</filename> and
+      including other <filename>buildlink3.mk</filename> files in it,
+      please only add necessary ones. I.e. those whose libraries or
+      header files are automatically exposed when the package is
+      use.</para>
+
+      <para>In particular, if only an executable
+      (<filename>bin/foo</filename>) is linked against a library, that
+      library does not need to be propagated in the
+      <filename>buildlink3.mk</filename> file.</para>
+
+      <para>The following steps should help you decide if a
+      <filename>buildlink3.mk</filename> file needs to be included:
+      <itemizedlist>
+	<listitem><para>Run <filename>ldd</filename> on all installed
+	libraries and look against what other libraries they link. The
+	packages providing these must be
+	buildlinked.</para></listitem>
+	<listitem><para>Look at the installed header files: What
+	headers do they include? The packages providing these files
+	must be buildlinked.</para></listitem>
+      </itemizedlist>
+      </para>
     </sect2>
 
     <sect2 id="updating-buildlink-depends">
