@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/16 15:45:09 wiz Exp $
+
+SHA1 (pushover-0.0.4.tar.gz) = ca9b5b077e7762c4ae80f0873d2cfa0bd2dcb16b
+RMD160 (pushover-0.0.4.tar.gz) = b17ee34410a4f3f4de9252fa20a45798bb38b78a
+Size (pushover-0.0.4.tar.gz) = 33136958 bytes
