@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2013/02/19 19:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/16 06:47:15 adam Exp $
 
-DISTNAME=	isl-0.11.1
+DISTNAME=	isl-0.11.2
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/infrastructure/}
+MASTER_SITES=	http://garage.kotnet.org/~skimo/isl/ \
+		${MASTER_SITE_GNU:=gcc/infrastructure/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://garage.kotnet.org/~skimo/isl/
 COMMENT=	Integer set library required by gcc graphite
-HOMEPAGE=	http://repo.or.cz/w/isl.git
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmpl}
 
 TEST_TARGET=	check
