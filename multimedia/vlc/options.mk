@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2013/04/14 22:14:42 cheusov Exp $
+# $NetBSD: options.mk,v 1.28 2013/04/16 22:11:23 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome dts
@@ -6,6 +6,7 @@ PKG_SUGGESTED_OPTIONS=		x11
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
+PLIST_VARS+=		vaapi
 .if ${VAAPI_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= vaapi
 PKG_SUGGESTED_OPTIONS+=	vaapi
@@ -13,6 +14,7 @@ PKG_SUGGESTED_OPTIONS+=	vaapi
 
 ### Add LIRC if it is available
 .include "../../comms/lirc/available.mk"
+PLIST_VARS+=		lirc
 .if ${LIRC_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= lirc
 PKG_SUGGESTED_OPTIONS+=	lirc
