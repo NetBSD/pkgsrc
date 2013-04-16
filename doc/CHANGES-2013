@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1387 2013/04/15 22:34:01 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.1388 2013/04/16 01:09:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2177,3 +2177,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/hwloc to 1.7 [adam 2013-04-15]
 	Updated parallel/mpi-ch to 3.0.3 [adam 2013-04-15]
 	Updated graphics/png to 1.6.2beta01 [prlw1 2013-04-15]
+	Updated geography/viking to 1.4.1 [gdt 2013-04-16]
