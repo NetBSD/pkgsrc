@@ -1,8 +1,27 @@
-@comment $NetBSD: PLIST,v 1.7 2012/04/24 01:19:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/16 01:08:46 gdt Exp $
 bin/viking
 share/applications/viking.desktop
+share/gnome/help/viking/C/figures/Viking-OSM-CycleMap-ManyTracks.jpg
+share/gnome/help/viking/C/figures/addtr_18.png
+share/gnome/help/viking/C/figures/addwp_18.png
+share/gnome/help/viking/C/figures/demdl_18.png
+share/gnome/help/viking/C/figures/edtr_18.png
+share/gnome/help/viking/C/figures/edwp_18.png
+share/gnome/help/viking/C/figures/geomove_18.png
+share/gnome/help/viking/C/figures/geozoom_18.png
+share/gnome/help/viking/C/figures/map_tile_info_dialog.png
+share/gnome/help/viking/C/figures/mapdl_18.png
+share/gnome/help/viking/C/figures/mover_22.png
 share/gnome/help/viking/C/figures/properties_degree.png
 share/gnome/help/viking/C/figures/properties_units.png
+share/gnome/help/viking/C/figures/route_finder_18.png
+share/gnome/help/viking/C/figures/ruler_18.png
+share/gnome/help/viking/C/figures/select_18.png
+share/gnome/help/viking/C/figures/showpic_18.png
+share/gnome/help/viking/C/figures/trw_statusbar.png
+share/gnome/help/viking/C/figures/vik_new_route_18.png
+share/gnome/help/viking/C/figures/zoom_18.png
+share/gnome/help/viking/C/figures/zoom_status_popup.png
 share/gnome/help/viking/C/legal.xml
 share/gnome/help/viking/C/viking.xml
 share/icons/hicolor/48x48/apps/viking.png
@@ -12,6 +31,7 @@ share/locale/de/LC_MESSAGES/viking.mo
 share/locale/el/LC_MESSAGES/viking.mo
 share/locale/en_GB/LC_MESSAGES/viking.mo
 share/locale/es/LC_MESSAGES/viking.mo
+share/locale/fi/LC_MESSAGES/viking.mo
 share/locale/fr/LC_MESSAGES/viking.mo
 share/locale/he/LC_MESSAGES/viking.mo
 share/locale/hu/LC_MESSAGES/viking.mo
@@ -32,3 +52,6 @@ share/locale/uk/LC_MESSAGES/viking.mo
 share/locale/zh_CN/LC_MESSAGES/viking.mo
 share/locale/zh_TW/LC_MESSAGES/viking.mo
 share/omf/viking/viking-C.omf
+share/viking/external_tools.xml
+share/viking/goto_tools.xml
+share/viking/maps.xml

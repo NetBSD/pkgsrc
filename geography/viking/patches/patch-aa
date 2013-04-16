@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2012/01/26 01:00:14 gdt Exp $
+$NetBSD: patch-aa,v 1.3 2013/04/16 01:08:47 gdt Exp $
+
+Work around a bug in NetBSD.  See PR standards/40695.  Bug is fixed in
+-current but not -5; revisit if the workaround causes problems.
+(Not filed upstream because this is a NetBSD bug.)
 
 --- src/gpspoint.c.orig	2010-12-13 01:55:55.000000000 +0000
 +++ src/gpspoint.c
