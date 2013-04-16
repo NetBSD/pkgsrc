@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1390 2013/04/16 11:26:46 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1391 2013/04/16 15:46:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated geography/viking to 1.4.1 [gdt 2013-04-16]
 	Updated math/isl to 0.11.2 [adam 2013-04-16]
 	Updated converters/skf to 1.99.3 [obache 2013-04-16]
+	Added games/pushover version 0.0.4 [wiz 2013-04-16]
