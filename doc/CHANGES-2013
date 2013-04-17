@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1398 2013/04/17 13:50:33 marino Exp $
+$NetBSD: CHANGES-2013,v 1.1399 2013/04/17 18:09:18 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2189,3 +2189,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Added converters/gbase version 0.5 [rodent 2013-04-17]
 	Added misc/vimpager version 1.8.1 [obache 2013-04-17]
 	Updated security/otptool to 1.1.6 [marino 2013-04-17]
+	Updated multimedia/dvdauthor to 0.7.1 [drochner 2013-04-17]
+	Updated multimedia/dvdstyler to 2.4.3 [drochner 2013-04-17]
+	Updated multimedia/pitivi to 0.15.2 [drochner 2013-04-17]
