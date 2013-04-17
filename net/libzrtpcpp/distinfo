@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/17 00:55:35 rodent Exp $
+
+SHA1 (libzrtpcpp-2.3.2.tar.gz) = 75714bf9eb705bb4e430119f5d2527d5dcfa6f26
+RMD160 (libzrtpcpp-2.3.2.tar.gz) = 5a30d848b755afe3036e67d7fe881d0ec9c71fd4
+Size (libzrtpcpp-2.3.2.tar.gz) = 256951 bytes
+SHA1 (patch-CMakeLists.txt) = 4c47e69e4b1d48748c14268a25e192e7bb1ae953
