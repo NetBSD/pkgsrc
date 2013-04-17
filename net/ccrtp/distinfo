@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/17 00:54:16 rodent Exp $
+
+SHA1 (ccrtp-2.0.5.tar.gz) = 8576cb12f440cea4b665f9abb26ec89b354bc454
+RMD160 (ccrtp-2.0.5.tar.gz) = 4ee3da0438e219a6f841188b7ff3d5259159b1da
+Size (ccrtp-2.0.5.tar.gz) = 735488 bytes
