@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/17 00:55:35 rodent Exp $
+include/libzrtpcpp/TimeoutProvider.h
+include/libzrtpcpp/ZrtpCWrapper.h
+include/libzrtpcpp/ZrtpCallback.h
+include/libzrtpcpp/ZrtpCodes.h
+include/libzrtpcpp/ZrtpConfigure.h
+include/libzrtpcpp/ZrtpQueue.h
+include/libzrtpcpp/ZrtpUserCallback.h
+include/libzrtpcpp/zrtpccrtp.h
+lib/libzrtpcpp.so
+lib/libzrtpcpp.so.2
+lib/libzrtpcpp.so.${PKGVERSION}
+lib/pkgconfig/libzrtpcpp.pc
