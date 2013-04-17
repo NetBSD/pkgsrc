@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1400 2013/04/17 19:54:17 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1401 2013/04/17 19:56:44 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2193,3 +2193,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/dvdstyler to 2.4.3 [drochner 2013-04-17]
 	Updated multimedia/pitivi to 0.15.2 [drochner 2013-04-17]
 	Updated www/nginx to 1.2.8 [imil 2013-04-17]
+	Updated net/haproxy to 1.4.23 [morr 2013-04-17]
