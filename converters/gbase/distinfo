@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/17 01:19:03 rodent Exp $
+
+SHA1 (gbase-0.5.tar.gz) = a2884b236401bbc3adb45c281c4b399d20462d9b
+RMD160 (gbase-0.5.tar.gz) = ac8031c6b30e6cadf3e5d27f30adb8b9f0cc3d58
+Size (gbase-0.5.tar.gz) = 6427 bytes
+SHA1 (patch-Makefile) = 1e96c455abdc2926379fb075bbecb800ccdefb4f
