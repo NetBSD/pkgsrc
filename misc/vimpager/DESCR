@@ -1,0 +1,4 @@
+Use ViM as PAGER.
+
+A slightly more sophisticated replacement for less.sh that also supports being
+set as the PAGER environment variable.
