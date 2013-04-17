@@ -1,0 +1,8 @@
+Welcome to GNU ccRTP, the RTP protocol stack of GNU Common C++ and the
+GNU project.  GNU ccRTP was created as a "generic" and high performance
+RTP stack and uses queued packet lists for both sending and receiving of
+realtime data.  A single scheduler thread both schedules delivery of
+timestamped outgoing packets, and processes incoming packets into the
+receive queue.  A seperate thread or process can then feed data into the
+stack for delivery and process pending requests without interfering with
+the stack service thread itself.
