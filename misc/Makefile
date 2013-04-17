@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2013/04/13 11:13:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.399 2013/04/17 13:43:55 obache Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -287,6 +287,7 @@ SUBDIR+=	usbprog
 SUBDIR+=	utftools
 SUBDIR+=	vera
 SUBDIR+=	vfu
+SUBDIR+=	vimpager
 SUBDIR+=	visual-regexp
 SUBDIR+=	vttest
 SUBDIR+=	vym
