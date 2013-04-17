@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/17 00:51:20 rodent Exp $
+
+SHA1 (ucommon-6.0.3.tar.gz) = e3263fe7bb8a37dc00a227218c62a5040ccaf465
+RMD160 (ucommon-6.0.3.tar.gz) = 4debf5f5c31a6162b9d60041ddb44ca385336f3b
+Size (ucommon-6.0.3.tar.gz) = 806841 bytes
+SHA1 (patch-CMakeLists.txt) = 4d4c11a89111161bc8d8fe3715f643290ecb6149
