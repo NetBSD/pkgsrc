@@ -1,0 +1,3 @@
+GNU uCommon C++ is meant as a very light-weight C++ library to facilitate using
+C++ design patterns even for very deeply embedded applications, such as for
+systems using uclibc along with posix threading support.

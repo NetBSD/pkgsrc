@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/17 00:51:20 rodent Exp $
+
+Fix INSTALL_MANDIR overwriting itself.
+
+--- CMakeLists.txt.orig	2011-11-12 15:24:39.000000000 +0000
++++ CMakeLists.txt
+@@ -36,15 +36,7 @@ if(WIN32)
+     set(SYSCONFDIR "etc" CACHE PATH "config directory")
+     set(STATEDIR "var" CACHE PATH "state directory")
+ else()
+-    if (NOT LIB_SUFFIX)
+-        if (NOT EXISTS /etc/debian_version)
+-            if (${CMAKE_SYSTEM_PROCESSOR} STREQUAL "x86_64")
+-                set(LIB_SUFFIX 64)
+-            endif()
+-        endif()
+-    endif()
+     set(INSTALL_SBINDIR sbin)
+-    set(INSTALL_MANDIR share/man)
+     set(INSTALL_LOCALE share/locale)
+     set(INSTALL_DOCDIR share/doc/${PROJECT_NAME})
+     set(INSTALL_INFODIR share/info)
