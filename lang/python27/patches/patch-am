@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.8 2013/04/12 09:03:41 adam Exp $
+$NetBSD: patch-am,v 1.9 2013/04/17 13:21:05 obache Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -18,6 +18,8 @@ Only check the BUILDLINK_DIR for libraries etc, do not pick up random
 headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
+
+cygwin 2.7.3-no-libm.patch
 
 --- setup.py.orig	2013-04-06 14:02:41.000000000 +0000
 +++ setup.py
@@ -49,6 +51,15 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
+@@ -548,7 +554,7 @@ class PyBuildExt(build_ext):
+ 
+         # Check for MacOS X, which doesn't need libm.a at all
+         math_libs = ['m']
+-        if host_platform in ['darwin', 'beos']:
++        if host_platform in ['darwin', 'beos', 'cygwin']:
+             math_libs = []
+ 
+         # XXX Omitted modules: gl, pure, dl, SGI-specific modules
 @@ -794,9 +800,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
