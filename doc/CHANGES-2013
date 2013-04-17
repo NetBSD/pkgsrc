@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1395 2013/04/17 00:55:49 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1396 2013/04/17 01:19:18 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2186,3 +2186,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/ucommon version 6.0.3 [rodent 2013-04-17]
 	Added net/ccrtp version 2.0.5 [rodent 2013-04-17]
 	Added net/libzrtpcpp version 2.3.2 [rodent 2013-04-17]
+	Added converters/gbase version 0.5 [rodent 2013-04-17]
