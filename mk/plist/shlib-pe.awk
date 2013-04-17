@@ -1,4 +1,4 @@
-# $NetBSD: shlib-pe.awk,v 1.2 2013/03/03 11:53:58 obache Exp $
+# $NetBSD: shlib-pe.awk,v 1.3 2013/04/17 11:53:44 obache Exp $
 #
 # Copyright (c) 2006,2013 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -115,7 +115,7 @@ function add_dll(lib) {
 ### module, so the entry should stay.  Convert it into a dll name as
 ### well and record it as a dll.
 ###
-/.*\/lib[^\/]+\.so$/ {
+/.*\/[^\/]+\.so$/ {
 	cmd = TEST " -f " PREFIX "/" $0
 	if (system(cmd) == 0) {
 		entries[++nentries] = $0
@@ -127,6 +127,22 @@ function add_dll(lib) {
 		lib = $0 ".dll"
 		add_dll(lib)
 	}
+	next
+}
+
+###
+### If the ".a" file actually exists, then it's a library archive,
+### so the entry should stay.  Convert it into a DLL import library name as
+### well and record it as a DLL.
+###
+/.*\/lib[^\/]+\.a$/ {
+	cmd = TEST " -f " PREFIX "/" $0
+	if (system(cmd) == 0) {
+		entries[++nentries] = $0
+	}
+	lib = $0; sub("\\.a$", "", lib)
+	lib = lib ".dll.a"
+	add_dll(lib)
 	next
 }
 
