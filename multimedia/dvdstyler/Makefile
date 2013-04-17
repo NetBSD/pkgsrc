@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2013/02/16 11:23:31 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2013/04/17 17:36:19 drochner Exp $
 #
 
-DISTNAME=	DVDStyler-2.3.4
-PKGREVISION=	2
+DISTNAME=	DVDStyler-2.4.3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdstyler/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,6 +31,7 @@ post-install:
 
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.wxsvg+= wxsvg>=1.1.14
 .include "../../graphics/wxsvg/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 # needs mediactrl
