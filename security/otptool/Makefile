@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/02/06 23:23:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/17 13:36:19 marino Exp $
 
 DISTNAME=	mod_authn_otp-${DISTVERS}
 PKGNAME=	otptool-${DISTVERS}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://mod-authn-otp.googlecode.com/files/
 LICENSE=	apache-2.0
@@ -17,7 +16,7 @@ USE_LIBTOOL=	yes
 
 .include "../../mk/apache.mk"
 
-DISTVERS=	1.1.4
+DISTVERS=	1.1.6
 
 SBINDIR=	${PREFIX}/sbin
 
