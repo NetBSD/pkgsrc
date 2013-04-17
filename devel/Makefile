@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1730 2013/04/15 13:12:05 obache Exp $
+# $NetBSD: Makefile,v 1.1731 2013/04/17 00:52:07 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1623,6 +1623,7 @@ SUBDIR+=	treecc
 SUBDIR+=	trio
 SUBDIR+=	tvision
 SUBDIR+=	ucl
+SUBDIR+=	ucommon
 SUBDIR+=	ucpp
 SUBDIR+=	unidiff
 SUBDIR+=	uno
