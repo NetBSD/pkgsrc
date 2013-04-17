@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1401 2013/04/17 19:56:44 morr Exp $
+$NetBSD: CHANGES-2013,v 1.1402 2013/04/17 19:57:57 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2194,3 +2194,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/pitivi to 0.15.2 [drochner 2013-04-17]
 	Updated www/nginx to 1.2.8 [imil 2013-04-17]
 	Updated net/haproxy to 1.4.23 [morr 2013-04-17]
+	Updated www/nginx-devel to 1.3.16 [imil 2013-04-17]
