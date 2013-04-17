@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/17 00:54:16 rodent Exp $
+include/ccrtp/CryptoContext.h
+include/ccrtp/CryptoContextCtrl.h
+include/ccrtp/base.h
+include/ccrtp/channel.h
+include/ccrtp/cqueue.h
+include/ccrtp/ext.h
+include/ccrtp/formats.h
+include/ccrtp/ioqueue.h
+include/ccrtp/iqueue.h
+include/ccrtp/oqueue.h
+include/ccrtp/pool.h
+include/ccrtp/queuebase.h
+include/ccrtp/rtcppkt.h
+include/ccrtp/rtp.h
+include/ccrtp/rtppkt.h
+include/ccrtp/sources.h
+info/ccrtp.info
+lib/libccrtp.la
+lib/pkgconfig/libccrtp.pc
