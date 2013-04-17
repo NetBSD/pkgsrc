@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/04/01 21:06:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/04/17 10:25:41 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc48
 
@@ -19,7 +19,7 @@ BUILDLINK_AUTO_VARS.gcc48=	no
 
 # Packages that link against shared libraries need a full dependency.
 .if defined(_USE_GCC_SHLIB)
-DEPENDS+=	{gcc, gcc48-libs}>=${_GCC_REQD}:../../lang/gcc48-libs
+DEPENDS+=	{gcc,gcc48-libs}>=${_GCC_REQD}:../../lang/gcc48-libs
 ABI_DEPENDS+=	{gcc,gcc48-libs}>=4.8.0:../../lang/gcc48-libs
 .endif
 
