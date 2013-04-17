@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/11/10 22:13:47 pettai Exp $
+$NetBSD: distinfo,v 1.2 2013/04/17 13:36:19 marino Exp $
 
-SHA1 (mod_authn_otp-1.1.4.tar.gz) = cc1e3bebd3a2bf66fea6f4bf5e609e8bdc822040
-RMD160 (mod_authn_otp-1.1.4.tar.gz) = d1082f45fc94f042fd6b883152a5739b5a354d78
-Size (mod_authn_otp-1.1.4.tar.gz) = 94911 bytes
+SHA1 (mod_authn_otp-1.1.6.tar.gz) = 80e283bca7decb0f5e7b98c7a3afa33f0c2e2e13
+RMD160 (mod_authn_otp-1.1.6.tar.gz) = e312523737835c56f6b7d175d0b8102da3642eae
+Size (mod_authn_otp-1.1.6.tar.gz) = 99838 bytes
 SHA1 (patch-configure) = 011c00235c1d215bab48512f886776422bb55d63
