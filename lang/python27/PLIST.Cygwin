@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Cygwin,v 1.1 2013/04/17 13:21:05 obache Exp $
+bin/libpython${PY_VER_SUFFIX}.dll
