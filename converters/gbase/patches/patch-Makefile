@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2013/04/17 01:19:03 rodent Exp $
+
+Fix gtk2 detection.
+
+--- Makefile.orig	1999-10-27 21:23:51.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ CC = gcc
+-CCFLAGS = `gtk-config --cflags`
+-LDFLAGS = `gtk-config --libs`
++CFLAGS += `pkg-config --cflags gtk+-2.0`
++LDFLAGS = `pkg-config --libs gtk+-2.0`
+ 
+ gbase:	gbase.o
+ 	$(CC) gbase.o $(LDFLAGS) -o gbase
+@@ -8,8 +8,4 @@ gbase:	gbase.o
+ clean:
+ 	rm -f gbase gbase.o gbase.c~
+ 
+-# Make object files:
+-%.o:
+-	$(CC) $(CCFLAGS) -c $*.c
+-
+-gbase.o: gbase.c
+\ No newline at end of file
++gbase.o: gbase.c
