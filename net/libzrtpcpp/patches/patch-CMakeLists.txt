@@ -1,0 +1,25 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/17 00:55:36 rodent Exp $
+
+Don't set LIB_SUFFIX for pkgsrc. LIBDIRNAME is set via CMAKE_ARGS.
+
+--- CMakeLists.txt.orig	2012-10-17 13:16:16.000000000 +0000
++++ CMakeLists.txt
+@@ -71,18 +71,6 @@ endif()
+ enable_arg(ccrtp true "Enable GNU ccRTP support for GNU ZRTP")
+ args_help()
+ 
+-if (NOT LIB_SUFFIX)
+-    set(LIBDIRNAME "lib")
+-    # this caused problems in debian where it has to always be lib....
+-    if (NOT EXISTS /etc/debian_version)
+-        if ( "${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86_64" )
+-            set(LIBDIRNAME "lib64")
+-        endif()
+-    endif()
+-else()
+-    set(LIBDIRNAME "lib${LIB_SUFFIX}")
+-endif()
+-
+ # setup the Thread include and lib
+ find_package(Threads)
+ if(CMAKE_HAVE_PTHREAD_H)

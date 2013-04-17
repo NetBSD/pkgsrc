@@ -1,0 +1,2 @@
+libzrtpcpp, a separate extension package to ccrtp, provides support for the ZRTP
+protocol (as defined in the Internet draft draft-zimmermann-avt-zrtp).
