@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1393 2013/04/17 00:51:37 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1394 2013/04/17 00:54:39 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/glpk to 4.49 [adam 2013-04-16]
 	Updated converters/help2man to 1.41.2 [adam 2013-04-16]
 	Added devel/ucommon version 6.0.3 [rodent 2013-04-17]
+	Added net/ccrtp version 2.0.5 [rodent 2013-04-17]
