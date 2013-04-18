@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.4 2013/04/18 04:23:17 agc Exp $
+
+avoid a warning from the compiler
+
+--- tools/scan6.c	2013/04/05 16:27:27	1.1
++++ tools/scan6.c	2013/04/05 16:28:20
+@@ -2666,7 +2666,7 @@
+ 
+ int load_vm_entries(struct scan_list *scan, struct scan_entry *dst, struct prefix4_entry *v4host){
+ 	unsigned int 		i;
+-	u_int32_t			mask32;
++	u_int32_t			mask32 = 0xffffffff;
+ 	struct ether_addr 	ether;
+ 
+ 	/* VirtualBOX */
