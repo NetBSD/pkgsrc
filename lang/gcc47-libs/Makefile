@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2013/04/08 11:17:15 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/18 07:58:33 sbd Exp $
 
 GCC_PKGNAME=	gcc47
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
 
-DISTNAME=	gcc-${GCC_DIST_VERSION}
-PKGNAME=	${GCC_PKGNAME}-libs-${GCC_DIST_VERSION}
+DISTNAME=	gcc-${GCC47_DIST_VERSION}
+PKGNAME=	${GCC_PKGNAME}-libs-${GCC47_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc47 package so that with the dependence pattern
 ## '{gcc47,gcc47-libs}>=4.7.*' pkg_all will choose gcc47-libs over gcc47.
@@ -22,12 +22,12 @@ USE_TOOLS+=	pax
 
 NO_BUILD=		yes
 
-## Depend on exactly ${GCC_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc47
+## Depend on exactly ${GCC47_DIST_VERSION}.
+BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC47_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc47
 
 .include "../../mk/bsd.prefs.mk"
 
-FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC_DIST_VERSION}*
+FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC47_DIST_VERSION}*
 .include "../../mk/find-prefix.mk"
 
 GCC_SUBPREFIX=		${GCC_PKGNAME}
@@ -50,7 +50,7 @@ GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
 	   ${ECHO} '@pkgdir ${GCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
 
 ${LIBRARY_FILES}:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC_DIST_VERSION}*' |		\
+	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC47_DIST_VERSION}*' |		\
 	${SED} -n -e's,^${GCC_PREFIX}/,,' -e'/libexec\//d'		\
 		-e'/libgij/d;/libgcj/d;/libjvm/d'			\
 		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
