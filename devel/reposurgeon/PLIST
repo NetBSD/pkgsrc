@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/07 12:12:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/18 07:39:18 wiz Exp $
 bin/repodiffer
 bin/repopuller
 bin/reposurgeon
 man/man1/repodiffer.1
 man/man1/repopuller.1
 man/man1/reposurgeon.1
-share/doc/reposurgeon/COPYING
 share/doc/reposurgeon/NEWS
 share/doc/reposurgeon/README
-share/doc/reposurgeon/conversion.mk
+share/doc/reposurgeon/TODO
+share/doc/reposurgeon/features.html
+share/doc/reposurgeon/repodiffer.html
+share/doc/reposurgeon/repopuller.html
+share/doc/reposurgeon/reposurgeon.html
