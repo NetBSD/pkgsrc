@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2013/02/11 06:55:05 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/18 04:23:17 agc Exp $
+bin/address6
 bin/flow6
 bin/frag6
 bin/icmp6
@@ -11,20 +12,17 @@ bin/rd6
 bin/rs6
 bin/scan6
 bin/tcp6
+man/man1/address6.1
 man/man1/flow6.1
 man/man1/frag6.1
 man/man1/icmp6.1
+man/man1/jumbo6.1
+man/man1/na6.1
+man/man1/ni6.1
+man/man1/ns6.1
+man/man1/ra6.1
+man/man1/rd6.1
+man/man1/rs6.1
 man/man1/scan6.1
+man/man1/tcp6.1
 man/man5/ipv6toolkit.conf.5
-share/doc/ipv6-toolkit/flow6-manual.pdf
-share/doc/ipv6-toolkit/frag6-manual.pdf
-share/doc/ipv6-toolkit/icmp6-manual.pdf
-share/doc/ipv6-toolkit/jumbo6-manual.pdf
-share/doc/ipv6-toolkit/na6-manual.pdf
-share/doc/ipv6-toolkit/ni6-manual.pdf
-share/doc/ipv6-toolkit/ns6-manual.pdf
-share/doc/ipv6-toolkit/ra6-manual.pdf
-share/doc/ipv6-toolkit/rd6-manual.pdf
-share/doc/ipv6-toolkit/rs6-manual.pdf
-share/doc/ipv6-toolkit/scan6-manual.pdf
-share/doc/ipv6-toolkit/tcp6-manual.pdf
