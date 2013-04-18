@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/17 17:46:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/18 07:47:33 sbd Exp $
 
 GCC_PKGNAME=		gcc48
 .include		"version.mk"
@@ -13,7 +13,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	sbd@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) - 4.8 Release Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
