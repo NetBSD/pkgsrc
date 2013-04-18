@@ -1,6 +1,7 @@
-# $NetBSD: xorg.xcb-proto,v 1.1 2010/09/11 19:47:31 tron Exp $
+# $NetBSD: xorg.xcb-proto,v 1.2 2013/04/18 13:19:36 obache Exp $
 #
 lib/pkgconfig/xcb-proto.pc
+share/pkgconfig/xcb-proto.pc
 share/xcb/bigreq.xml
 share/xcb/composite.xml
 share/xcb/damage.xml
