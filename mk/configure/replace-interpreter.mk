@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.12 2013/04/02 00:28:57 mspo Exp $
+# $NetBSD: replace-interpreter.mk,v 1.13 2013/04/18 00:24:48 mspo Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -89,6 +89,8 @@ REPLACE.sys-sh.old=	[^[:space:]]*sh
 REPLACE.sys-sh.new=	${SH}
 REPLACE_FILES.sys-sh=	${REPLACE_SH}
 .endif
+# sed regexp to match optional "/usr/bin/env" followed by one or more spaces
+REPLACE.optional-env-space= \(/usr/bin/env[[:space:]][[:space:]]*\)\{0,1\}
 
 .PHONY: replace-interpreter
 replace-interpreter:
@@ -99,8 +101,7 @@ replace-interpreter:
 	cd ${WRKSRC};							\
 	for f in ${REPLACE_FILES.${_lang_}}; do				\
 		if [ -f "$${f}" ]; then					\
-			${SED} -e '1{ /env -i/!s|^#![[:space:]]*/usr/bin/env|#!|;}' \
-		 	-e '1s|^#![[:space:]]*${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
+			${SED} -e '1s|^#![[:space:]]*${REPLACE.optional-env-space}${REPLACE.${_lang_}.old}|#!${REPLACE.${_lang_}.new}|' \
 			< "$${f}" > "$${f}.new";			\
 			if [ -x "$${f}" ]; then				\
 				${CHMOD} a+x "$${f}.new";		\
