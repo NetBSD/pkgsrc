@@ -1,3 +1,4 @@
-# $NetBSD: xorg.xkeyboard-config,v 1.1 2010/06/04 10:52:21 ghen Exp $
+# $NetBSD: xorg.xkeyboard-config,v 1.2 2013/04/18 13:19:36 obache Exp $
 #
 lib/pkgconfig/xkeyboard-config.pc
+share/pkgconfig/xkeyboard-config.pc
