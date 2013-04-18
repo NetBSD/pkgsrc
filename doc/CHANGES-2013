@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1406 2013/04/18 13:20:03 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1407 2013/04/18 15:27:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2199,3 +2199,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/reposurgeon to 2.34 [wiz 2013-04-18]
 	Updated www/p5-Net-HTTP to 6.06 [hiramatsu 2013-04-18]
 	Updated pkgtools/x11-links to 0.74 [obache 2013-04-18]
+	Updated www/mediawiki to 1.20.4 [wen 2013-04-18]
