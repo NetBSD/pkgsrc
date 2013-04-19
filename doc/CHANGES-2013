@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1414 2013/04/19 14:06:04 bouyer Exp $
+$NetBSD: CHANGES-2013,v 1.1415 2013/04/19 16:31:23 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2208,3 +2208,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-IO-Socket-SSL to 1.86 [hiramatsu 2013-04-19]
 	Updated sysutils/xenkernel41 to 4.1.4nb2 [bouyer 2013-04-19]
 	Updated sysutils/xentools41 to 4.1.4nb4 [bouyer 2013-04-19]
+	Updated archivers/p5-Compress-Bzip2 to 2.15 [hiramatsu 2013-04-19]
