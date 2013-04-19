@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.56 2013/04/08 02:24:14 rodent Exp $
+# $NetBSD: license.mk,v 1.57 2013/04/19 11:25:26 rodent Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -103,6 +103,7 @@
 
 DEFAULT_ACCEPTABLE_LICENSES= \
 	apache-1.1 apache-2.0 \
+	arphic-public \
 	artistic artistic-2.0 \
 	boost-license \
 	cc-by-sa-v3.0 \
