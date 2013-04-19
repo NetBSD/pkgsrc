@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1412 2013/04/19 08:06:15 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1413 2013/04/19 09:13:47 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2205,3 +2205,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/nginx-devel to 1.3.16nb1 [imil 2013-04-19]
 	Added sysutils/entr version 1.9 [wiz 2013-04-19]
 	Updated devel/p5-FileHandle-Fmode to 0.13 [hiramatsu 2013-04-19]
+	Updated security/p5-IO-Socket-SSL to 1.86 [hiramatsu 2013-04-19]
