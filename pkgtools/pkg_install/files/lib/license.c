@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.31 2013/03/14 16:23:11 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.32 2013/04/19 17:22:23 rodent Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -47,6 +47,7 @@
 
 const char *default_acceptable_licenses =
     "apache-1.1 apache-2.0 "
+    "arphic-public "
     "artistic artistic-2.0 "
     "boost-license "
     "cc-by-sa-v3.0 "
@@ -66,7 +67,7 @@ const char *default_acceptable_licenses =
     "mit "
     "mpl-1.0 mpl-1.1 mpl-2.0 "
     "mplusfont "
-    "open-font-license "
+    "ofl-v1.0 ofl-v1.1 "
     "original-bsd modified-bsd 2-clause-bsd "
     "php "
     "png-license "
