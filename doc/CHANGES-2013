@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1408 2013/04/18 16:55:35 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.1409 2013/04/19 07:24:00 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2201,3 +2201,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/x11-links to 0.74 [obache 2013-04-18]
 	Updated www/mediawiki to 1.20.4 [wen 2013-04-18]
 	Updated comms/asterisk18 to 1.8.21.0 [jnemeth 2013-04-18]
+	Updated security/p5-Net-SSLeay to 1.54 [hiramatsu 2013-04-19]
