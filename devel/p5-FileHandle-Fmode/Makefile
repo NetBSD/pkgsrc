@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2012/10/31 11:18:15 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/19 08:05:44 hiramatsu Exp $
 #
 
-DISTNAME=	FileHandle-Fmode-0.11
+DISTNAME=	FileHandle-Fmode-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FileHandle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/FileHandle-Fmode/
 COMMENT=	Perl 5 module to determine how a filehandle is opened
+LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/FileHandle/Fmode/.packlist
 
