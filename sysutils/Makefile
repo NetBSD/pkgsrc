@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2013/03/06 12:38:41 obache Exp $
+# $NetBSD: Makefile,v 1.567 2013/04/19 07:57:23 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -101,6 +101,7 @@ SUBDIR+=	easydiskpasswd
 SUBDIR+=	edbus
 SUBDIR+=	efreet
 SUBDIR+=	eggdbus
+SUBDIR+=	entr
 SUBDIR+=	estd
 SUBDIR+=	etcmanage
 SUBDIR+=	etcutils
