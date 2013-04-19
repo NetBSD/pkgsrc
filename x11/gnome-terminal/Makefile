@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/02/16 11:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2013/04/19 21:06:28 prlw1 Exp $
 #
 
 DISTNAME=		gnome-terminal-2.32.1
@@ -31,6 +31,7 @@ BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.14.0
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
