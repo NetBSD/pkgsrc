@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 18:28:17 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/19 11:26:47 rodent Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
@@ -9,6 +9,7 @@ DISTFILES=	${FONT_FILES:=.gz} ${MISC_FILES}
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	Chinese TrueType fonts from Arphic Technology
+LICENSE=	arphic-public
 
 CONFLICTS=	arphicttf-[0-9]*
 
