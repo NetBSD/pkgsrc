@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/19 07:57:12 wiz Exp $
+
+SHA1 (entr-1.9.tar.gz) = b339dd1710addac2e69885681e95f19129ec6576
+RMD160 (entr-1.9.tar.gz) = ab55f7b6d17cb21d319062d3c79433d08d0d890a
+Size (entr-1.9.tar.gz) = 8680 bytes
+SHA1 (patch-Makefile.bsd) = 87d9a4474a819fc3840b616dfb31a2632dacf685
