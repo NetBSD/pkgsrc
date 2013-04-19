@@ -1,4 +1,4 @@
-/* $NetBSD: extract.c,v 1.1 2012/08/29 17:17:24 drochner Exp $ */
+/* $NetBSD: extract.c,v 1.2 2013/04/19 15:34:30 drochner Exp $ */
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -97,7 +97,7 @@ writeout(struct intel1_ucode_header *uh, int len,
 		used += link_unless_newer_exists(name, alias, uh->uh_rev);
 	}
 	if (eh) {
-		/* extension headers are unused in rev. 20120606 */
+		/* extension headers are unused in rev. 20130222 */
 		for (j = 0; j < eh->uet_count; j++) {
 			eps = &eh->uet_proc_sig[j];
 			for (i = 0; i < 8; i++) {
