@@ -1,0 +1,16 @@
+$NetBSD: patch-gmime_Makefile.in,v 1.1 2013/04/19 13:26:47 prlw1 Exp $
+
+Avoid compilation error caused by use of GStaticMutex which was
+deprecated in GLib 2.32 - needed for a successful compile with
+GLib 2.36.
+
+--- gmime/Makefile.in.orig	2013-04-19 13:00:45.000000000 +0000
++++ gmime/Makefile.in
+@@ -385,7 +385,6 @@ INCLUDES = \
+ 	-I$(top_srcdir)/util		\
+ 	$(VERSION_FLAGS) 		\
+ 	-DG_LOG_DOMAIN=\"gmime\"	\
+-	-DG_DISABLE_DEPRECATED		\
+ 	$(GMIME_CFLAGS)			\
+ 	$(GLIB_CFLAGS)
+ 
