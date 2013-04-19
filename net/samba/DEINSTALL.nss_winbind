@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL.nss_winbind,v 1.1 2012/08/19 07:28:36 sbd Exp $
+# $NetBSD: DEINSTALL.nss_winbind,v 1.2 2013/04/19 07:17:46 sborrill Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -10,7 +10,7 @@ DEINSTALL)
 		   target=`${LS} -l /usr/lib/${NSS_WINBIND##*/} | \
 			${AWK} '{print $NF;}'` && \
 		   ${TEST} x"$target" = x"${PREFIX}/${NSS_WINBIND}" ;then
-			${ECHO} "Removeing /usr/lib/${NSS_WINBIND##*/} symlink."
+			${ECHO} "Removing /usr/lib/${NSS_WINBIND##*/} symlink."
 			${RM} -f /usr/lib/${NSS_WINBIND##*/}
 		fi
 		;;
