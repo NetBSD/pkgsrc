@@ -1,18 +1,8 @@
-$NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
+$NetBSD: patch-ap,v 1.5 2013/04/19 22:21:41 prlw1 Exp $
 
---- gio/gcredentials.c.orig	2012-11-10 03:18:53.000000000 +0000
+--- gio/gcredentials.c.orig	2013-03-13 13:39:09.000000000 +0000
 +++ gio/gcredentials.c
-@@ -32,6 +32,9 @@
- #include <sys/socket.h>
- #include <string.h>
- #endif
-+#ifdef __NetBSD__
-+#include <string.h>
-+#endif
- #include <stdlib.h>
- 
- #include <gobject/gvaluecollector.h>
-@@ -90,8 +93,14 @@ struct _GCredentials
+@@ -81,8 +81,14 @@ struct _GCredentials
    struct ucred native;
  #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
    struct cmsgcred native;
@@ -28,7 +18,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
  #else
  #ifdef __GNUC__
  #warning Please add GCredentials support for your OS
-@@ -136,7 +145,7 @@ g_credentials_class_init (GCredentialsCl
+@@ -127,7 +133,7 @@ g_credentials_class_init (GCredentialsCl
  static void
  g_credentials_init (GCredentials *credentials)
  {
@@ -37,7 +27,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
    credentials->native.pid = getpid ();
    credentials->native.uid = geteuid ();
    credentials->native.gid = getegid ();
-@@ -192,7 +201,7 @@ g_credentials_to_string (GCredentials *c
+@@ -183,7 +189,7 @@ g_credentials_to_string (GCredentials *c
    g_return_val_if_fail (G_IS_CREDENTIALS (credentials), NULL);
  
    ret = g_string_new ("GCredentials:");
@@ -46,7 +36,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
    g_string_append (ret, "linux-ucred:");
    if (credentials->native.pid != -1)
      g_string_append_printf (ret, "pid=%" G_GINT64_FORMAT ",", (gint64) credentials->native.pid);
-@@ -257,7 +266,7 @@ g_credentials_is_same_user (GCredentials
+@@ -248,7 +254,7 @@ g_credentials_is_same_user (GCredentials
    g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
  
    ret = FALSE;
@@ -55,7 +45,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
    if (credentials->native.uid == other_credentials->native.uid)
      ret = TRUE;
  #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
-@@ -305,7 +314,7 @@ g_credentials_get_native (GCredentials  
+@@ -296,7 +302,7 @@ g_credentials_get_native (GCredentials  
  
    ret = NULL;
  
@@ -64,7 +54,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
    if (native_type != G_CREDENTIALS_TYPE_LINUX_UCRED)
      {
        g_warning ("g_credentials_get_native: Trying to get credentials of type %d but only "
-@@ -366,7 +375,7 @@ g_credentials_set_native (GCredentials  
+@@ -357,7 +363,7 @@ g_credentials_set_native (GCredentials  
                            GCredentialsType  native_type,
                            gpointer          native)
  {
@@ -73,7 +63,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
    if (native_type != G_CREDENTIALS_TYPE_LINUX_UCRED)
      {
        g_warning ("g_credentials_set_native: Trying to set credentials of type %d "
-@@ -375,7 +384,7 @@ g_credentials_set_native (GCredentials  
+@@ -366,7 +372,7 @@ g_credentials_set_native (GCredentials  
      }
    else
      {
@@ -82,7 +72,7 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
      }
  #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
    if (native_type != G_CREDENTIALS_TYPE_FREEBSD_CMSGCRED)
-@@ -433,7 +442,7 @@ g_credentials_get_unix_user (GCredential
+@@ -424,7 +430,7 @@ g_credentials_get_unix_user (GCredential
    g_return_val_if_fail (G_IS_CREDENTIALS (credentials), -1);
    g_return_val_if_fail (error == NULL || *error == NULL, -1);
  
@@ -91,7 +81,16 @@ $NetBSD: patch-ap,v 1.4 2012/11/13 21:23:07 adam Exp $
    ret = credentials->native.uid;
  #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
    ret = credentials->native.cmcred_euid;
-@@ -479,7 +488,7 @@ g_credentials_set_unix_user (GCredential
+@@ -470,7 +476,7 @@ g_credentials_get_unix_pid (GCredentials
+   ret = credentials->native.pid;
+ #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+   ret = credentials->native.cmcred_pid;
+-#elif defined(__OpenBSD__)
++#elif defined(__NetBSD__) || defined(__OpenBSD__)
+   ret = credentials->native.pid;
+ #else
+   ret = -1;
+@@ -512,7 +518,7 @@ g_credentials_set_unix_user (GCredential
    g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
  
    ret = FALSE;

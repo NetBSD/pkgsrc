@@ -1,19 +1,8 @@
-$NetBSD: patch-ak,v 1.14 2013/01/21 15:54:24 wiz Exp $
+$NetBSD: patch-ak,v 1.15 2013/04/19 22:21:41 prlw1 Exp $
 
-First chunk: automake-1.13 compat.
-
---- configure.ac.orig	2013-01-21 15:53:29.000000000 +0000
+--- configure.ac.orig	2013-03-25 20:37:16.000000000 +0000
 +++ configure.ac
-@@ -291,7 +291,7 @@ AC_TRY_COMPILE(,[class a { int b; } c;],
- AM_CONDITIONAL(HAVE_CXX, [test "$CXX" != ""])
- AC_LANG_RESTORE
- 
--AM_PROG_CC_STDC
-+AC_PROG_CC
- AM_PROG_CC_C_O
- AC_PROG_INSTALL
- 
-@@ -864,7 +864,7 @@ int main (int argc, char **argv)
+@@ -858,7 +858,7 @@ int main (void)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])
  
@@ -22,7 +11,7 @@ First chunk: automake-1.13 compat.
  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
  #else
  # include "error: this is not Sun Studio."
-@@ -1115,10 +1115,22 @@ AC_CHECK_TYPE([struct ip_mreqn], [
+@@ -1129,10 +1129,22 @@ AC_CHECK_TYPE([struct ip_mreqn], [
  
  case $host in
    *-*-solaris* )
@@ -49,7 +38,7 @@ First chunk: automake-1.13 compat.
  esac
  
  dnl
-@@ -1477,11 +1489,12 @@ if test x"$glib_native_win32" = xyes; th
+@@ -1491,11 +1503,12 @@ if test x"$glib_native_win32" = xyes; th
    G_MODULE_LDFLAGS=
  else
    export SED
@@ -63,7 +52,7 @@ First chunk: automake-1.13 compat.
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1542,13 +1555,13 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
+@@ -1556,13 +1569,13 @@ AS_IF([ test "$G_MODULE_IMPL" = "G_MODUL
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -80,7 +69,7 @@ First chunk: automake-1.13 compat.
  	AC_CACHE_CHECK([for RTLD_GLOBAL brokenness],
  		glib_cv_rtldglobal_broken,[
  		AC_TRY_RUN([
-@@ -1611,6 +1624,38 @@ dnl *** check for having dlerror()
+@@ -1625,6 +1638,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
  ])
@@ -119,7 +108,7 @@ First chunk: automake-1.13 compat.
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1621,7 +1666,7 @@ fi
+@@ -1635,7 +1680,7 @@ fi
  
  AC_MSG_CHECKING(for the suffix of module shared libraries)
  export SED
@@ -128,7 +117,7 @@ First chunk: automake-1.13 compat.
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -1640,6 +1685,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
+@@ -1654,6 +1699,7 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
@@ -136,7 +125,7 @@ First chunk: automake-1.13 compat.
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -2021,22 +2067,8 @@ AS_IF([ test x"$have_threads" = xposix],
+@@ -2035,22 +2081,8 @@ AS_IF([ test x"$have_threads" = xposix],
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
@@ -161,7 +150,7 @@ First chunk: automake-1.13 compat.
         ;;
    esac
  ])
-@@ -2322,6 +2354,7 @@ case $host in
+@@ -2336,6 +2368,7 @@ case $host in
      ;;
    *-*-openbsd*)
      LDFLAGS="$LDFLAGS -pthread"

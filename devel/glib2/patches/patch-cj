@@ -1,58 +1,60 @@
-$NetBSD: patch-cj,v 1.8 2012/04/30 13:53:48 drochner Exp $
+$NetBSD: patch-cj,v 1.9 2013/04/19 22:21:41 prlw1 Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
 https://bugzilla.gnome.org/show_bug.cgi?id=641350
 
---- glib/tests/Makefile.in.orig	2012-03-24 03:02:45.000000000 +0000
+--- glib/tests/Makefile.in.orig	2013-03-25 21:07:18.000000000 +0000
 +++ glib/tests/Makefile.in
-@@ -71,7 +71,7 @@ am__EXEEXT_3 = testing$(EXEEXT) option-c
- 	strfuncs$(EXEEXT) string$(EXEEXT) markup-parse$(EXEEXT) \
+@@ -91,7 +91,7 @@ am__EXEEXT_3 = array-test$(EXEEXT) async
+ 	keyfile$(EXEEXT) list$(EXEEXT) logging$(EXEEXT) \
+ 	mainloop$(EXEEXT) mappedfile$(EXEEXT) markup-parse$(EXEEXT) \
  	markup-collect$(EXEEXT) markup-escape$(EXEEXT) \
- 	markup-subparser$(EXEEXT) array-test$(EXEEXT) bytes$(EXEEXT) \
--	hostutils$(EXEEXT) gvariant$(EXEEXT) mem-overflow$(EXEEXT) \
-+	hostutils$(EXEEXT) gvariant$(EXEEXT) \
- 	utf8-performance$(EXEEXT) utils$(EXEEXT) regex$(EXEEXT) \
- 	base64$(EXEEXT) sequence$(EXEEXT) scannerapi$(EXEEXT) \
- 	shell$(EXEEXT) collate$(EXEEXT) utf8-pointer$(EXEEXT) \
-@@ -229,8 +229,6 @@ markup_parse_DEPENDENCIES = $(progs_ldad
- markup_subparser_SOURCES = markup-subparser.c
+-	markup-subparser$(EXEEXT) mem-overflow$(EXEEXT) mutex$(EXEEXT) \
++	markup-subparser$(EXEEXT) mutex$(EXEEXT) \
+ 	node$(EXEEXT) once$(EXEEXT) option-context$(EXEEXT) \
+ 	option-argv0$(EXEEXT) pattern$(EXEEXT) private$(EXEEXT) \
+ 	protocol$(EXEEXT) queue$(EXEEXT) rand$(EXEEXT) \
+@@ -287,10 +287,6 @@ markup_subparser_SOURCES = markup-subpar
  markup_subparser_OBJECTS = markup-subparser.$(OBJEXT)
- markup_subparser_DEPENDENCIES = $(progs_ldadd)
+ markup_subparser_LDADD = $(LDADD)
+ markup_subparser_DEPENDENCIES = $(top_builddir)/glib/libglib-2.0.la
 -mem_overflow_SOURCES = mem-overflow.c
 -mem_overflow_OBJECTS = mem-overflow.$(OBJEXT)
- mem_overflow_DEPENDENCIES = $(progs_ldadd)
+-mem_overflow_LDADD = $(LDADD)
+-mem_overflow_DEPENDENCIES = $(top_builddir)/glib/libglib-2.0.la
  mutex_SOURCES = mutex.c
  mutex_OBJECTS = mutex.$(OBJEXT)
-@@ -394,7 +392,7 @@ SOURCES = $(1bit_emufutex_SOURCES) 1bit-
- 	$(gwakeup_fallback_SOURCES) hash.c hmac.c hook.c hostutils.c \
- 	include.c $(keyfile_SOURCES) list.c logging.c mainloop.c \
- 	mappedfile.c markup-collect.c markup-escape.c markup-parse.c \
--	markup-subparser.c mem-overflow.c mutex.c node.c once.c \
-+	markup-subparser.c mutex.c node.c once.c \
- 	$(option_argv0_SOURCES) $(option_context_SOURCES) pattern.c \
- 	private.c $(protocol_SOURCES) queue.c $(rand_SOURCES) \
- 	rec-mutex.c regex.c rwlock.c scannerapi.c sequence.c shell.c \
-@@ -415,7 +413,7 @@ DIST_SOURCES = $(1bit_emufutex_SOURCES) 
- 	$(am__gwakeup_fallback_SOURCES_DIST) hash.c hmac.c hook.c \
- 	hostutils.c include.c $(keyfile_SOURCES) list.c logging.c \
+ mutex_LDADD = $(LDADD)
+@@ -485,7 +481,7 @@ SOURCES = $(1bit_emufutex_SOURCES) 1bit-
+ 	$(gwakeup_SOURCES) $(gwakeup_fallback_SOURCES) hash.c hmac.c \
+ 	hook.c hostutils.c include.c keyfile.c list.c logging.c \
  	mainloop.c mappedfile.c markup-collect.c markup-escape.c \
 -	markup-parse.c markup-subparser.c mem-overflow.c mutex.c \
 +	markup-parse.c markup-subparser.c mutex.c \
- 	node.c once.c $(option_argv0_SOURCES) \
- 	$(option_context_SOURCES) pattern.c private.c \
- 	$(protocol_SOURCES) queue.c $(rand_SOURCES) rec-mutex.c \
-@@ -679,7 +677,7 @@ EXTRA_DIST = 4096-random-bytes keyfilete
- TEST_PROGS = testing option-context option-argv0 keyfile fileutils \
- 	test-printf protocol rand strfuncs string markup-parse \
- 	markup-collect markup-escape markup-subparser array-test bytes \
--	hostutils gvariant mem-overflow utf8-performance utils regex \
-+	hostutils gvariant utf8-performance utils regex \
- 	base64 sequence scannerapi shell collate utf8-pointer \
- 	utf8-validate utf8-misc unicode checksum hmac hash cache date \
- 	node convert list slist queue tree uri dir pattern logging \
-@@ -973,9 +971,7 @@ markup-parse$(EXEEXT): $(markup_parse_OB
+ 	node.c once.c option-argv0.c option-context.c pattern.c \
+ 	private.c protocol.c queue.c rand.c rec-mutex.c regex.c \
+ 	rwlock.c scannerapi.c sequence.c shell.c slice.c slist.c \
+@@ -501,7 +497,7 @@ DIST_SOURCES = $(1bit_emufutex_SOURCES) 
+ 	$(gwakeup_SOURCES) $(am__gwakeup_fallback_SOURCES_DIST) hash.c \
+ 	hmac.c hook.c hostutils.c include.c keyfile.c list.c logging.c \
+ 	mainloop.c mappedfile.c markup-collect.c markup-escape.c \
+-	markup-parse.c markup-subparser.c mem-overflow.c mutex.c \
++	markup-parse.c markup-subparser.c mutex.c \
+ 	node.c once.c option-argv0.c option-context.c pattern.c \
+ 	private.c protocol.c queue.c rand.c rec-mutex.c regex.c \
+ 	rwlock.c scannerapi.c sequence.c shell.c slice.c slist.c \
+@@ -770,7 +766,7 @@ TEST_PROGS = array-test asyncqueue atomi
+ 	environment error fileutils gdatetime gvariant gwakeup hash \
+ 	hmac hook hostutils keyfile list logging mainloop mappedfile \
+ 	markup-parse markup-collect markup-escape markup-subparser \
+-	mem-overflow mutex node once option-context option-argv0 \
++	mutex node once option-context option-argv0 \
+ 	pattern private protocol queue rand rec-mutex regex rwlock \
+ 	scannerapi sequence shell slice slist sort spawn-multithreaded \
+ 	spawn-singlethread strfuncs string testing test-printf thread \
+@@ -965,9 +961,7 @@ markup-parse$(EXEEXT): $(markup_parse_OB
  markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) $(EXTRA_markup_subparser_DEPENDENCIES) 
  	@rm -f markup-subparser$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(markup_subparser_OBJECTS) $(markup_subparser_LDADD) $(LIBS)
@@ -63,7 +65,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  mutex$(EXEEXT): $(mutex_OBJECTS) $(mutex_DEPENDENCIES) $(EXTRA_mutex_DEPENDENCIES) 
  	@rm -f mutex$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(mutex_OBJECTS) $(mutex_LDADD) $(LIBS)
-@@ -1142,7 +1138,6 @@ distclean-compile:
+@@ -1128,7 +1122,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-escape.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-parse.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-subparser.Po@am__quote@

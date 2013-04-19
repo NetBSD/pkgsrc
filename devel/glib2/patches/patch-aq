@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.5 2012/11/13 21:23:07 adam Exp $
+$NetBSD: patch-aq,v 1.6 2013/04/19 22:21:41 prlw1 Exp $
 
---- gio/gsocket.c.orig	2012-11-10 03:27:29.000000000 +0000
+--- gio/gsocket.c.orig	2013-03-13 13:39:09.000000000 +0000
 +++ gio/gsocket.c
 @@ -37,6 +37,9 @@
  #include <signal.h>
@@ -12,16 +12,7 @@ $NetBSD: patch-aq,v 1.5 2012/11/13 21:23:07 adam Exp $
  
  #ifndef G_OS_WIN32
  # include <fcntl.h>
-@@ -2381,7 +2384,7 @@ g_socket_check_connect_result (GSocket  
- gssize
- g_socket_get_available_bytes (GSocket *socket)
- {
--#ifndef G_OS_WIN32
-+#ifdef G_OS_WIN32
-   gulong avail = 0;
- #else
-   gint avail = 0;
-@@ -4311,7 +4314,7 @@ g_socket_get_credentials (GSocket   *soc
+@@ -4349,7 +4352,7 @@ g_socket_get_credentials (GSocket   *soc
  
    ret = NULL;
  
@@ -30,7 +21,7 @@ $NetBSD: patch-aq,v 1.5 2012/11/13 21:23:07 adam Exp $
    {
      socklen_t optlen;
  #if defined(__linux__)
-@@ -4346,6 +4349,35 @@ g_socket_get_credentials (GSocket   *soc
+@@ -4384,6 +4387,35 @@ g_socket_get_credentials (GSocket   *soc
                                    &native_creds);
        }
    }
@@ -50,7 +41,7 @@ $NetBSD: patch-aq,v 1.5 2012/11/13 21:23:07 adam Exp $
 +    else
 +      {
 +	struct {
-+ 		pid_t pid;
++		pid_t pid;
 +		uid_t uid;
 +		gid_t gid;
 +	} native_creds;

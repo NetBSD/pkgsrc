@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.212 2012/10/06 20:44:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.213 2013/04/19 22:21:41 prlw1 Exp $
 
 .include "Makefile.common"
-.include "options.mk"
 
 CATEGORIES=		devel
 
