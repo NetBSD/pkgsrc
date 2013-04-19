@@ -4,7 +4,7 @@ At the moment, the idea is to add /dev/cdrom to your playlist.
 If you have multiple CDROM units (like a burner) you can add all
 those devices to the playlist and it should work.
 
-I know this exists already, but that's such an uugly hack I decided to
+I know this exists already, but that's such an ugly hack I decided to
 make my own version, which actually reads the audio data, and will also
 not need the subdirectory trick to get the tracks into the playlist:
 The tracks will be added and removed automatically as CDs are inserted
