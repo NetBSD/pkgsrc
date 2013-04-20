@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.183 2013/04/19 22:21:41 prlw1 Exp $
+$NetBSD: distinfo,v 1.184 2013/04/20 08:59:28 obache Exp $
 
 SHA1 (glib-2.36.1.tar.xz) = 6016ee6b46822d0ed471073e27420cfab26f7c68
 RMD160 (glib-2.36.1.tar.xz) = d89a1719d2e931833d68d91feb7233f0151b7326
@@ -17,7 +17,7 @@ SHA1 (patch-am) = 99f54927d76580dfeda2a6b1909e1bea5dbdc293
 SHA1 (patch-an) = 2d4eaa904347481bec55668e56d2ac431b567bc9
 SHA1 (patch-ap) = 5bc134ebe768c7171f25ce356b40edeae30c5b92
 SHA1 (patch-aq) = 217a8ea4ba7dbdcc315cb16575d55b9949997b64
-SHA1 (patch-ba) = f4233cd4e0109f9bee5630c655b0ab7b22ba0c61
+SHA1 (patch-ba) = 1119c43d1cc6e36aeb50bed2c1be9986e159dc4a
 SHA1 (patch-cb) = 56e2a9b2de04c8e528faf7ce778503fa55dcc3ac
 SHA1 (patch-cc) = f3d37cbb483863aab602f9c1209650e3e4795871
 SHA1 (patch-cd) = 312e2f322b295ddec613f9ce9760ecafeab69047
