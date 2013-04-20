@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/04/06 03:59:24 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/20 09:38:04 obache Exp $
 #
 
-PKGNAME=	${PYPKGPREFIX}-expat-0
-PKGREVISION=	6
+PKGNAME=	${PYPKGPREFIX}-expat-${PY_DISTVERSION}
 CATEGORIES=	textproc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
