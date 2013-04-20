@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/04/04 13:31:55 obache Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/20 02:30:17 obache Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -106,7 +106,7 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 #
 # work around for Linux
 #
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Cygwin"
 CONFIGURE_ENV+=	MKDIR_P=${MKDIR:Q}
 .endif
 
