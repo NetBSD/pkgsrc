@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2013/04/13 11:20:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/20 01:10:56 ryoon Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
 # in distinfo (make makesum will eat one of them)
 
-DISTNAME=	jdk-7u17-${DIST_OS}-${DIST_ARCH}
-PKGNAME=	sun-jdk7-7.0.17
+DISTNAME=	jdk-7u21-${DIST_OS}-${DIST_ARCH}
+PKGNAME=	sun-jdk7-7.0.21
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
 
-DOWNLOAD_NAME=	Java Development Kit (JDK) 7u17
+DOWNLOAD_NAME=	Java Development Kit (JDK) 7u21
 
 DEPENDS+=	${PKGNAME_NOREV:S/jdk/jre/}*:../../lang/sun-jre7
 
-WRKSRC=		${WRKDIR}/jdk1.7.0_17
+WRKSRC=		${WRKDIR}/jdk1.7.0_21
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
 
