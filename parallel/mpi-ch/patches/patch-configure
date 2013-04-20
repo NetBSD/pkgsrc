@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2013/04/20 17:39:01 asau Exp $
+
+Make it use weak symbols with Clang.
+
+--- configure.orig	2013-03-28 21:03:38.000000000 +0000
++++ configure
+@@ -27768,7 +27768,9 @@ else
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++#ifndef __clang__
+ extern int PFoo(int);
++#endif
+ #pragma weak PFoo = Foo
+ int Foo(int a) { return a; }
+ 
