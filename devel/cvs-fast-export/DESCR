@@ -1,0 +1,7 @@
+This program analyzes a collection of RCS files in a CVS
+repository (or outside of one) and, when possible, emits an
+equivalent history in the form of a fast-import stream. Not all
+possible histories can be rendered this way; the program tries to
+emit useful warnings when it can't. The program can also produce
+a visualization of the resulting commit DAG in the DOT format
+handled by the graphviz suite.
