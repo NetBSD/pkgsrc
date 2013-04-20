@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/02/12 20:36:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/04/20 08:06:56 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -4715,6 +4715,7 @@ share/mysql/test/suite/sys_vars/r/innodb_additional_mem_pool_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_autoextend_increment_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_autoinc_lock_mode_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_autoinc_lock_mode_func.result
+share/mysql/test/suite/sys_vars/r/innodb_buffer_pool_evict_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_buffer_pool_instances_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_buffer_pool_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_change_buffering_basic.result
@@ -5189,6 +5190,7 @@ share/mysql/test/suite/sys_vars/t/innodb_autoextend_increment_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_autoinc_lock_mode_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_autoinc_lock_mode_func-master.opt
 share/mysql/test/suite/sys_vars/t/innodb_autoinc_lock_mode_func.test
+share/mysql/test/suite/sys_vars/t/innodb_buffer_pool_evict_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_buffer_pool_instances_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_buffer_pool_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_change_buffering_basic.test
