@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.9 2013/04/20 10:30:25 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.10 2013/04/20 19:10:34 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -43,3 +43,5 @@ Pullup ticket #4118 - requested by taca
 lang/php53: build fix
 Pullup ticket #4120 - requested by drochner
 textproc/libxml2: security patch
+Pullup ticket #4113 - requested by tron
+databases/phpmyadmin: security update
