@@ -1,23 +1,24 @@
-$NetBSD: patch-cmake_ssl.cmake,v 1.1 2013/02/13 21:00:04 adam Exp $
+$NetBSD: patch-cmake_ssl.cmake,v 1.2 2013/04/20 08:06:01 adam Exp $
 
 Allow OpenSSH versions below 1.0.
 Do not prefer static libraries (or linking will fail).
 
---- cmake/ssl.cmake.orig	2013-02-12 13:35:25.000000000 +0000
+--- cmake/ssl.cmake.orig	2013-04-05 12:27:18.000000000 +0000
 +++ cmake/ssl.cmake
-@@ -139,8 +139,6 @@ MACRO (MYSQL_CHECK_SSL)
+@@ -143,9 +143,7 @@ MACRO (MYSQL_CHECK_SSL)
      ENDIF()
  
      # On mac this list is <.dylib;.so;.a>
 -    # We prefer static libraries, so we revert it here.
--    LIST(REVERSE CMAKE_FIND_LIBRARY_SUFFIXES)
-     MESSAGE(STATUS "suffixes <${CMAKE_FIND_LIBRARY_SUFFIXES}>")
-     FIND_LIBRARY(OPENSSL_LIBRARIES
-                  NAMES ssl ssleay32 ssleay32MD
-@@ -164,8 +162,7 @@ MACRO (MYSQL_CHECK_SSL)
+     IF (WITH_SSL_PATH)
+-      LIST(REVERSE CMAKE_FIND_LIBRARY_SUFFIXES)
+       MESSAGE(STATUS "suffixes <${CMAKE_FIND_LIBRARY_SUFFIXES}>")
+     ENDIF()
+     FIND_LIBRARY(OPENSSL_LIBRARY
+@@ -172,8 +170,7 @@ MACRO (MYSQL_CHECK_SSL)
  
      IF(OPENSSL_INCLUDE_DIR AND
-        OPENSSL_LIBRARIES   AND
+        OPENSSL_LIBRARY   AND
 -       CRYPTO_LIBRARY      AND
 -       OPENSSL_MAJOR_VERSION STREQUAL "1"
 +       CRYPTO_LIBRARY
