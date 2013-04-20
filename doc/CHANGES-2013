@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1419 2013/04/20 08:22:11 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.1420 2013/04/20 09:42:38 apb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql56-client to 5.6.11 [adam 2013-04-20]
 	Updated databases/mysql56-server to 5.6.11 [adam 2013-04-20]
 	Updated lang/coq to 8.4pl2 [jaapb 2013-04-20]
+	Added devel/cvs-fast-export version 0.3 [apb 2013-04-20]
