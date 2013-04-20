@@ -1,4 +1,4 @@
-$NetBSD: patch-sql_mysqld.cc,v 1.1 2013/02/13 21:00:07 adam Exp $
+$NetBSD: patch-sql_mysqld.cc,v 1.2 2013/04/20 08:06:01 adam Exp $
 
 --- sql/mysqld.cc.orig	2013-01-22 16:54:50.000000000 +0000
 +++ sql/mysqld.cc
@@ -20,12 +20,3 @@ $NetBSD: patch-sql_mysqld.cc,v 1.1 2013/02/13 21:00:07 adam Exp $
    /* We can't handle floating point exceptions with threads, so disable
       this on freebsd
       Don't fall for overflow, underflow,divide-by-zero or loss of precision.
-@@ -6292,7 +6292,7 @@ void handle_connections_sockets()
-             The connection was refused by TCP wrappers.
-             There are no details (by client IP) available to update the host_cache.
-           */
--          statistic_increment(connection_tcpwrap_errors, &LOCK_status);
-+          statistic_increment(connection_errors_tcpwrap, &LOCK_status);
-           continue;
-         }
-       }
