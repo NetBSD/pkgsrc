@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1422 2013/04/20 14:38:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1423 2013/04/20 22:48:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2220,3 +2220,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/cvs-fast-export version 0.3 [apb 2013-04-20]
 	Updated devel/p5-Compress-Raw-Zlib to 2.060 [hiramatsu 2013-04-20]
 	Updated textproc/p5-ack to 2.00 [wiz 2013-04-20]
+	Updated www/php-owncloud to 5.0.5 [ryoon 2013-04-20]
