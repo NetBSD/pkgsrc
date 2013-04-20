@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1421 2013/04/20 11:45:08 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1422 2013/04/20 14:38:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/coq to 8.4pl2 [jaapb 2013-04-20]
 	Added devel/cvs-fast-export version 0.3 [apb 2013-04-20]
 	Updated devel/p5-Compress-Raw-Zlib to 2.060 [hiramatsu 2013-04-20]
+	Updated textproc/p5-ack to 2.00 [wiz 2013-04-20]
