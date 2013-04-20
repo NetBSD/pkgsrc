@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1731 2013/04/17 00:52:07 rodent Exp $
+# $NetBSD: Makefile,v 1.1732 2013/04/20 09:41:26 apb Exp $
 #
 
 COMMENT=	Development utilities
@@ -132,6 +132,7 @@ SUBDIR+=	ctemplate
 SUBDIR+=	cunit
 SUBDIR+=	cut
 SUBDIR+=	cutter
+SUBDIR+=	cvs-fast-export
 SUBDIR+=	cvs2cl
 SUBDIR+=	cvs2html
 SUBDIR+=	cvs2svn
