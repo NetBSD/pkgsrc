@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.9 2013/03/18 14:01:24 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.10 2013/04/20 09:17:32 obache Exp $
 
 .if !defined(GLIB2_HACKS_MK)
 GLIB2_HACKS_MK=	# defined
@@ -30,6 +30,15 @@ SUBST_SED.iconv=	-e 's,libiconv_open,iconv_open,g'
 .if !empty(PKGSRC_COMPILER:Msunpro)
 PKG_HACKS+=		sunpro-visibility
 CONFIGURE_ARGS+=	--disable-visibility
+.endif
+
+#
+# GLib2>=2.36 depends on builtin functions which enabled with i486 and
+# later with GCC.
+#
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5]*-i386)
+GNU_ARCH.i386=		i486
+CFLAGS+=		-march=i486
 .endif
 
 .endif
