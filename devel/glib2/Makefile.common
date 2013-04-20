@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2013/04/19 22:21:41 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.28 2013/04/20 09:18:36 tron Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -65,6 +65,10 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
 CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
+.endif
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-Werror=missing-prototypes
 .endif
 
 .if ${OPSYS} == "HPUX"
