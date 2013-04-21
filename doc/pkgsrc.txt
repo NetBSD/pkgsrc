@@ -4825,7 +4825,7 @@ headers and libraries for these dependencies are also symlinked into $
 are only added for directly include buildlink3.mk files.
 
 When providing a buildlink3.mk and including other buildlink3.mk files in it,
-please only add necessary ones. I.e. those whose libraries or header files are
+please only add necessary ones, i.e., those whose libraries or header files are
 automatically exposed when the package is use.
 
 In particular, if only an executable (bin/foo) is linked against a library,
@@ -4841,7 +4841,7 @@ included:
     they link. Some of the packages providing these probably need to be
     buildlinked; however, it's not automatic, since e.g. GTK on some systems
     pulls in the X libraries, so they will show up in the ldd output, while on
-    others (like OS X) it won't. lddoutput can thus only be used as a hint.
+    others (like OS X) it won't. ldd output can thus only be used as a hint.
 
 14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.pkg in
 buildlink3.mk files
