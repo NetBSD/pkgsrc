@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2013/01/12 06:45:21 taca Exp $
+$NetBSD: distinfo,v 1.15 2013/04/21 12:56:02 obache Exp $
 
-SHA1 (gettext-2.3.7.gem) = 02c31bf2553c870c87226df259871578429c5827
-RMD160 (gettext-2.3.7.gem) = d6470e81120b6cf399b9e024343e03ebe6603c2a
-Size (gettext-2.3.7.gem) = 209408 bytes
+SHA1 (gettext-2.3.9.gem) = b30db6ef766234275aff24d714158fe6608fd2b7
+RMD160 (gettext-2.3.9.gem) = cd4198a7c11de78eb0b03d86454169eea600be4b
+Size (gettext-2.3.9.gem) = 161280 bytes
