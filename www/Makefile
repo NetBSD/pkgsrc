@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.961 2013/04/01 17:41:16 kleink Exp $
+# $NetBSD: Makefile,v 1.962 2013/04/21 12:20:42 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -235,6 +235,7 @@ SUBDIR+=	p5-Apache-DBILogConfig
 SUBDIR+=	p5-Apache-DBILogger
 SUBDIR+=	p5-Apache-Filter
 SUBDIR+=	p5-Apache-Gallery
+SUBDIR+=	p5-Apache-LogFormat-Compiler
 SUBDIR+=	p5-Apache-Reload
 SUBDIR+=	p5-Apache-SSI
 SUBDIR+=	p5-Apache-Session
