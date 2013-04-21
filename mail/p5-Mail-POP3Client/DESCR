@@ -1,0 +1,4 @@
+This is a POP3 client module for perl5.  It provides an object-oriented
+interface to a POP3 server.  It can be used to write perl-based
+biff clients, mail readers, or whatever.  See the inline POD doco
+for more details.  (perldoc Mail::POP3Client)
