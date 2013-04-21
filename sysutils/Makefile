@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.567 2013/04/19 07:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.568 2013/04/21 00:50:03 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -256,6 +256,7 @@ SUBDIR+=	libgksu
 SUBDIR+=	libgtop
 SUBDIR+=	libirman
 SUBDIR+=	libnotify
+SUBDIR+=	libnotify07
 SUBDIR+=	libol
 SUBDIR+=	liboobs
 SUBDIR+=	libpciaccess

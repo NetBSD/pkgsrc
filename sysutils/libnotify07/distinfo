@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/21 00:50:04 rodent Exp $
+
+SHA1 (libnotify-0.7.5.tar.xz) = 729d1382617fee7e82eac17d808c11469ab2b7e1
+RMD160 (libnotify-0.7.5.tar.xz) = 9f166a6b17f1f00e85e658e2effa8da93ac5497f
+Size (libnotify-0.7.5.tar.xz) = 275804 bytes
