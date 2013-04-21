@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2013/01/05 13:03:22 wen Exp $
+# $NetBSD: Makefile,v 1.37 2013/04/21 12:55:49 ryoon Exp $
 
-DISTNAME=	XML-RSS-1.49
+DISTNAME=	XML-RSS-1.50
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xrs
 CATEGORIES=	textproc perl5
