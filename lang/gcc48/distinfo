@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/04/21 09:04:09 sbd Exp $
+$NetBSD: distinfo,v 1.3 2013/04/21 16:10:28 adam Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -25,6 +25,7 @@ SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
 SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
 SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
+SHA1 (patch-libsanitizer_configure.tgt) = a56ba5e2dc6bc413e80358353af16e6910b0e106
 SHA1 (patch-libstdc++-v3_config_locale_dragonfly_c__locale.cc) = 5c0ccc6b90e3508b03ed399e8e9e300a6aa9cbb7
 SHA1 (patch-libstdc++-v3_config_locale_dragonfly_ctype__members.cc) = 876a754c7fcb1c4a362ca7b2655da6cdbb784ccc
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__base.h) = 12b8e3b998ae1c4b6641d8f9e26e7430c58bb7bc
