@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/03/02 19:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/21 00:52:22 rodent Exp $
 
 PKGNAME=	${DISTNAME:C:-:-gtk-:}
+PKGREVISION=	1
 
 USE_LANGUAGES+=		c c++
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
@@ -21,6 +22,6 @@ do-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
