@@ -1,18 +1,19 @@
-$NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
+$NetBSD: patch-cj,v 1.2 2013/04/21 15:39:59 joerg Exp $
 
 --- src/wnnfns.c.orig	1995-05-30 06:49:10.000000000 +0000
 +++ src/wnnfns.c
-@@ -322,6 +322,9 @@ static struct wnn_env *wnnfns_env_rev[NS
+@@ -322,6 +322,10 @@ static struct wnn_env *wnnfns_env_rev[NS
  static int wnnfns_norm;
  static unsigned char lc_wnn_server_type[NSERVER] = {LCJP, LCCN, LCINV, LCKR};
  
 +static int yes_or_no();
 +static void puts2();
++static void w2y(w_char *w);
 +
  /* Lisp Variables and Constants Definition */
  Lisp_Object	Qjserver;
  Lisp_Object	Qcserver;
-@@ -430,8 +433,6 @@ Specify password files of dictionary and
+@@ -430,8 +434,6 @@ Specify password files of dictionary and
       int			nargs;
       register Lisp_Object	*args;
  {
@@ -21,7 +22,22 @@ $NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
    struct gcpro gcpro1;
    int	snum;
    CHECK_STRING (args[0], 0);
-@@ -1242,8 +1243,6 @@ Specify password files of dictionary and
+@@ -539,12 +541,12 @@ DEFUN ("wnn-server-set-rev", Fwnn_set_re
+   int	snum;
+   if ((snum = check_wnn_server_type()) == -1) return Qnil;
+   if(rev == Qnil){
+-    if((!wnnfns_buf[snum]) || (!wnnfns_env_norm[snum])) return;
++    if((!wnnfns_buf[snum]) || (!wnnfns_env_norm[snum])) return Qnil;
+     jl_env_set(wnnfns_buf[snum], wnnfns_env_norm[snum]);
+     wnnfns_norm = 1;
+   }
+   else{
+-    if((!wnnfns_buf[snum]) || (!wnnfns_env_rev[snum])) return;
++    if((!wnnfns_buf[snum]) || (!wnnfns_env_rev[snum])) return Qnil;
+     jl_env_set(wnnfns_buf[snum], wnnfns_env_rev[snum]);
+     wnnfns_norm = 0;
+   }
+@@ -1242,8 +1244,6 @@ Specify password files of dictionary and
       int                        nargs;
       register Lisp_Object       *args;
  {
@@ -30,7 +46,7 @@ $NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
    struct gcpro gcpro1;
    int   snum;
    CHECK_STRING (args[0], 0);
-@@ -1278,8 +1277,6 @@ Specify password files of dictionary and
+@@ -1278,8 +1278,6 @@ Specify password files of dictionary and
       int                        nargs;
       register Lisp_Object       *args;
  {
@@ -39,7 +55,7 @@ $NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
    struct gcpro gcpro1;
    int   snum;
    CHECK_STRING (args[0], 0);
-@@ -1314,8 +1311,6 @@ Specify password files of dictionary and
+@@ -1314,8 +1312,6 @@ Specify password files of dictionary and
       int                        nargs;
       register Lisp_Object       *args;
  {
@@ -48,7 +64,7 @@ $NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
    struct gcpro gcpro1;
    int   snum;
    int	dic_no;
-@@ -1376,8 +1371,6 @@ Specify password files of dictionary and
+@@ -1376,8 +1372,6 @@ Specify password files of dictionary and
       int                        nargs;
       register Lisp_Object       *args;
  {
@@ -57,3 +73,13 @@ $NetBSD: patch-cj,v 1.1 2010/07/11 03:00:33 obache Exp $
    struct gcpro gcpro1;
    int   snum;
    int   dic_no;
+@@ -1918,8 +1912,7 @@ int x;
+ }
+ 
+ /* static void */
+-w2y(w)
+-w_char *w;
++static void w2y(w_char *w)
+ {
+   unsigned long		pbuf[5000], ybuf[5000];
+   unsigned long		*pin;
