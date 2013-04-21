@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/04/18 07:39:18 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/04/21 11:51:52 wiz Exp $
 
-SHA1 (reposurgeon-2.34.tar.gz) = 1990952d4379f85a22dce67dbb990154e30e9b1e
-RMD160 (reposurgeon-2.34.tar.gz) = ec427ee6ab1866869387eda04220164c00707239
-Size (reposurgeon-2.34.tar.gz) = 144118 bytes
-SHA1 (patch-Makefile) = 252a79f103ab800cc858233268dd33ac7223eaf3
+SHA1 (reposurgeon-2.35.tar.gz) = a438c90c77664604dde3f96a4f53aed21a9f07cd
+RMD160 (reposurgeon-2.35.tar.gz) = ada81de212d8e3b350513a09d46dc4228fba3eba
+Size (reposurgeon-2.35.tar.gz) = 145139 bytes
