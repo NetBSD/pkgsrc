@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.32 2013/04/16 13:55:33 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.33 2013/04/21 12:44:00 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -350,13 +350,17 @@ BUILDLINK_TREE+=	-tiff
       <para>The following steps should help you decide if a
       <filename>buildlink3.mk</filename> file needs to be included:
       <itemizedlist>
-	<listitem><para>Run <filename>ldd</filename> on all installed
-	libraries and look against what other libraries they link. The
-	packages providing these must be
-	buildlinked.</para></listitem>
 	<listitem><para>Look at the installed header files: What
 	headers do they include? The packages providing these files
 	must be buildlinked.</para></listitem>
+	<listitem><para>Run <filename>ldd</filename> on all installed
+	libraries and look against what other libraries they link.
+	Some of the packages providing these probably need to be
+	buildlinked; however, it's not automatic, since e.g. GTK on
+	some systems pulls in the X libraries, so they will show up in
+	the <filename>ldd</filename> output, while on others (like OS
+	X) it won't. <filename>ldd</filename>output can thus only be
+	used as a hint.</para></listitem>
       </itemizedlist>
       </para>
     </sect2>
