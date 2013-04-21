@@ -4834,11 +4834,14 @@ that library does not need to be propagated in the buildlink3.mk file.
 The following steps should help you decide if a buildlink3.mk file needs to be
 included:
 
-  * Run ldd on all installed libraries and look against what other libraries
-    they link. The packages providing these must be buildlinked.
-
   * Look at the installed header files: What headers do they include? The
     packages providing these files must be buildlinked.
+
+  * Run ldd on all installed libraries and look against what other libraries
+    they link. Some of the packages providing these probably need to be
+    buildlinked; however, it's not automatic, since e.g. GTK on some systems
+    pulls in the X libraries, so they will show up in the ldd output, while on
+    others (like OS X) it won't. lddoutput can thus only be used as a hint.
 
 14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.pkg in
 buildlink3.mk files
