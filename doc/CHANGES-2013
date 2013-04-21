@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1470 2013/04/21 17:22:10 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1471 2013/04/21 21:34:51 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/libgcrypt to 1.5.2 [wiz 2013-04-21]
 	Updated devel/meld to 1.7.2 [wiz 2013-04-21]
 	Updated mail/getmail to 4.40.0 [schmonz 2013-04-21]
+	Added sysutils/cuisine version 0.5.8 [imil 2013-04-21]
