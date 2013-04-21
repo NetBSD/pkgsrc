@@ -1,0 +1,1 @@
+Apache::LogFormat::Compiler compiles a log format string to perl-code.
