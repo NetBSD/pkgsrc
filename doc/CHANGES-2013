@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1466 2013/04/21 14:38:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1467 2013/04/21 14:40:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2265,3 +2265,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/flickcurl to 1.24 [wiz 2013-04-21]
 	Updated x11/libdrm to 2.4.44 [wiz 2013-04-21]
 	Updated games/gbrainy to 2.20 [wiz 2013-04-21]
+	Updated fonts/harfbuzz to 0.9.16 [wiz 2013-04-21]
