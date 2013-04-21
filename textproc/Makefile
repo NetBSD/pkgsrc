@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.720 2013/04/13 12:54:15 rodent Exp $
+# $NetBSD: Makefile,v 1.721 2013/04/21 12:33:34 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -671,6 +671,7 @@ SUBDIR+=	ruby-simple-rss
 SUBDIR+=	ruby-stringex
 SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
+SUBDIR+=	ruby-text
 SUBDIR+=	ruby-textpow
 SUBDIR+=	ruby-tilt
 SUBDIR+=	ruby-treetop
