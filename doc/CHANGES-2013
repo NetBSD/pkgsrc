@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1428 2013/04/21 03:14:43 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.1429 2013/04/21 04:09:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2225,3 +2225,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/transmission-gtk to 2.77nb1 [rodent 2013-04-21]
 	Updated net/avahi to 0.6.31nb7 [rodent 2013-04-21]
 	Updated www/varnish to 3.0.3 [mspo 2013-04-21]
+	Updated math/ruby-spreadsheet to 0.8.4 [obache 2013-04-21]
