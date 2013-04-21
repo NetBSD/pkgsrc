@@ -1,0 +1,4 @@
+Sys::Syslog is an interface to the UNIX syslog(3) program.
+
+Call syslog() with a string priority and a list of printf() args just like
+syslog(3).
