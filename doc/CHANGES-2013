@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1424 2013/04/21 01:01:57 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1425 2013/04/21 01:02:23 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2222,3 +2222,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-ack to 2.00 [wiz 2013-04-20]
 	Updated www/php-owncloud to 5.0.5 [ryoon 2013-04-20]
 	Added sysutils/libnotify07 version 0.7.5 [rodent 2013-04-21]
+	Updated net/avahi to 0.6.31nb7 [rodent 2013-04-21]
