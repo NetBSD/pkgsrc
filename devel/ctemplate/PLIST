@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/12 12:32:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/21 11:23:38 rodent Exp $
 bin/diff_tpl_auto_escape
 bin/make_tpl_varnames_h
 bin/template-converter
 include/ctemplate/per_expand_data.h
+include/ctemplate/str_ref.h
 include/ctemplate/template.h
 include/ctemplate/template_annotator.h
 include/ctemplate/template_cache.h
@@ -28,7 +29,9 @@ share/doc/${PKGNAME}/README_windows.txt
 share/doc/${PKGNAME}/auto_escape.html
 share/doc/${PKGNAME}/designstyle.css
 share/doc/${PKGNAME}/example.html
+share/doc/${PKGNAME}/guide.html
 share/doc/${PKGNAME}/howto.html
 share/doc/${PKGNAME}/index.html
+share/doc/${PKGNAME}/reference.html
 share/doc/${PKGNAME}/tips.html
 share/doc/${PKGNAME}/xss_resources.html
