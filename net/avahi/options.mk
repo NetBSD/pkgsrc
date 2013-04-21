@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2010/07/24 13:42:12 obache Exp $
+# $NetBSD: options.mk,v 1.3 2013/04/21 00:58:46 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
-
-PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm python
+PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk2 gtk3 mono python qt3
+PKG_SUPPORTED_OPTIONS+=	qt tests
+PKG_SUGGESTED_OPTIONS+=	gtk2
+PLIST_VARS+=		introspection gtk2 gtk3 mono qt3 qt ui
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,12 +25,61 @@ PLIST_SRC+=		${PKGDIR}/PLIST.howl
 CONFIGURE_ARGS+=	--disable-gdbm
 .endif
 
+.if !empty(PKG_OPTIONS:Mgtk2)
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
+.include "../../x11/gtk2/buildlink3.mk"
+PLIST.gtk2=		yes
+PLIST.ui=		yes
+.else
+CONFIGURE_ARGS+=	--disable-gtk
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtk3)
+.include "../../x11/gtk3/buildlink3.mk"
+PLIST.gtk3=		yes
+PLIST.ui=		yes
+.else
+CONFIGURE_ARGS+=	--disable-gtk3
+.endif
+
+.if !empty(PKG_OPTIONS:Mintrospection)
+.include "../../devel/gobject-introspection/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-introspection=yes
+PLIST.introspection=	yes
+.else
+CONFIGURE_ARGS+=	--enable-introspection=no
+.endif
+
+.if !empty(PKG_OPTIONS:Mmono)
+.include "../../x11/gtk-sharp/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
+CONFIGURE_ARGS+=	--disable-monodoc # XXX broken
+PLIST.mono=		yes
+.else
+CONFIGURE_ARGS+=	--disable-mono --disable-monodoc
+.endif
+
+.if !empty(PKG_OPTIONS:Mqt3)
+.include "../../x11/qt3-libs/buildlink3.mk"
+PLIST.qt3=		yes
+.else
+CONFIGURE_ARGS+=	--disable-qt3
+.endif
+
+.if !empty(PKG_OPTIONS:Mqt)
+.include "../../x11/qt4-libs/buildlink3.mk"
+PLIST.qt=		yes
+.else
+CONFIGURE_ARGS+=	--disable-qt4
+.endif
+
 ###
 ### Enable python support
 ###
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
 PY_PATCHPLIST=		yes
+REPLACE_PYTHON+=	avahi-python/avahi-discover/__init__.py
 .  include "../../lang/python/extension.mk"
 .  include "../../sysutils/py-dbus/buildlink3.mk"
 .  include "../../x11/py-gtk2/buildlink3.mk"
@@ -44,4 +95,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.python
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-python-dbus
 CONFIGURE_ARGS+=	--disable-pygtk
+.endif
+
+.if !empty(PKG_OPTIONS:Mtests)
+CONFIGURE_ARGS+=	--enable-tests
 .endif
