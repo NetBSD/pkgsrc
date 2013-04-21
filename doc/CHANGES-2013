@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1438 2013/04/21 11:52:00 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1439 2013/04/21 11:56:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2235,3 +2235,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Pod-Usage version 1.61 [ryoon 2013-04-21]
 	Added devel/p5-Log-Dispatch-Perl version 0.04 [ryoon 2013-04-21]
 	Updated devel/reposurgeon to 2.35 [wiz 2013-04-21]
+	Updated www/p5-libwww to 6.05 [ryoon 2013-04-21]
