@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1448 2013/04/21 12:26:57 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1449 2013/04/21 12:27:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2245,3 +2245,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-Apache-LogFormat-Compiler version 0.12 [ryoon 2013-04-21]
 	Added www/p5-HTML-Mason-PSGIHandler version 0.52 [ryoon 2013-04-21]
 	Added www/p5-HTML-Quoted version 0.03 [ryoon 2013-04-21]
+	Added textproc/ruby-text version 1.2.1 [obache 2013-04-21]
