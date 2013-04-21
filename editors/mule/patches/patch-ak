@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.4 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 - don't declare own errno
@@ -32,3 +32,39 @@ $NetBSD: patch-ak,v 1.4 2011/12/24 17:07:07 dholland Exp $
  
  Lisp_Object Qself_insert_command;
  Lisp_Object Qforward_char;
+@@ -582,8 +581,7 @@ echo_prompt (str)
+    C can be a character, which is printed prettily ("M-C-x" and all that
+    jazz), or a symbol, whose name is printed.  */
+ 
+-echo_char (c)
+-     Lisp_Object c;
++static void echo_char(Lisp_Object c)
+ {
+   extern char *push_key_description ();
+ 
+@@ -629,7 +627,7 @@ echo_char (c)
+ /* Temporarily add a dash to the end of the echo string if it's not
+    empty, so that it serves as a mini-prompt for the very next character.  */
+ 
+-echo_dash ()
++static void echo_dash (void)
+ {
+   if (!immediate_echo && echoptr == echobuf)
+     return;
+@@ -3570,7 +3568,7 @@ gobble_input (expected)
+ /* Put a buffer_switch_event in the buffer
+    so that read_key_sequence will notice the new current buffer.  */
+ 
+-record_asynch_buffer_change ()
++void record_asynch_buffer_change(void)
+ {
+   struct input_event event;
+   Lisp_Object tem;
+@@ -5633,7 +5631,6 @@ On such systems, Emacs starts a subshell
+   int old_height, old_width;
+   int width, height;
+   struct gcpro gcpro1, gcpro2;
+-  extern init_sys_modes ();
+ 
+   if (!NILP (stuffstring))
+     CHECK_STRING (stuffstring, 0);

@@ -1,15 +1,15 @@
-$NetBSD: patch-bx,v 1.2 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-bx,v 1.3 2013/04/21 15:39:59 joerg Exp $
 
---- lib-src/emacsserver.c.orig	2006-01-04 17:43:55.000000000 +0000
+--- lib-src/emacsserver.c.orig	1994-08-06 22:27:17.000000000 +0000
 +++ lib-src/emacsserver.c
-@@ -56,8 +56,8 @@ main ()
+@@ -55,8 +55,8 @@ main ()
+ #include <sys/un.h>
  #include <stdio.h>
  #include <errno.h>
+-
+-extern int errno;
 +#include <stdlib.h>
 +#include <string.h>
  
--extern int errno;
--
  main ()
  {
-   char system_name[32];

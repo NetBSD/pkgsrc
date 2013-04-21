@@ -1,11 +1,10 @@
-$NetBSD: patch-src_term_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-src_term_c,v 1.2 2013/04/21 15:40:00 joerg Exp $
 
 - use standard headers
 
---- src/term.c~	1995-01-06 05:57:00.000000000 +0000
+--- src/term.c.orig	1995-01-06 05:57:00.000000000 +0000
 +++ src/term.c
-@@ -52,7 +52,8 @@ the Free Software Foundation, 675 Mass A
- 	Macro definition of ITNCODE and AUTOCONV switched. */
+@@ -53,6 +53,7 @@ the Free Software Foundation, 675 Mass A
  
  #include <config.h>
  #include <stdio.h>
@@ -13,3 +12,195 @@ $NetBSD: patch-src_term_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
  #include <ctype.h>
  #include "termchar.h"
  #include "termopts.h"
+@@ -342,8 +343,11 @@ static int system_uses_terminfo;
+ char *tparam ();
+ 
+ extern char *tgetstr ();
++
++static void clear_end_of_line_raw (int first_unused_hpos);
++static void background_highlight (void);
+ 
+-ring_bell ()
++void ring_bell(void)
+ {
+   if (! FRAME_TERMCAP_P (selected_frame))
+     {
+@@ -353,7 +357,7 @@ ring_bell ()
+   OUTPUT (TS_visible_bell && visible_bell ? TS_visible_bell : TS_bell);
+ }
+ 
+-set_terminal_modes ()
++void set_terminal_modes(void)
+ {
+   if (! FRAME_TERMCAP_P (selected_frame))
+     {
+@@ -366,7 +370,7 @@ set_terminal_modes ()
+   losecursor ();
+ }
+ 
+-reset_terminal_modes ()
++void reset_terminal_modes(void)
+ {
+   if (! FRAME_TERMCAP_P (selected_frame))
+     {
+@@ -395,8 +399,7 @@ update_begin (f)
+     (*update_begin_hook) (f);
+ }
+ 
+-update_end (f)
+-     FRAME_PTR f;
++void update_end (FRAME_PTR f)
+ {
+   if (! FRAME_TERMCAP_P (updating_frame))
+     {
+@@ -410,8 +413,7 @@ update_end (f)
+   updating_frame = 0;
+ }
+ 
+-set_terminal_window (size)
+-     int size;
++void set_terminal_window (int size)
+ {
+   if (! FRAME_TERMCAP_P (updating_frame))
+     {
+@@ -493,7 +495,7 @@ turn_on_highlight ()
+    empty space inside windows.  What this is,
+    depends on the user option inverse-video.  */
+ 
+-background_highlight ()
++static void background_highlight (void)
+ {
+   if (TN_standout_width >= 0)
+     return;
+@@ -505,8 +507,8 @@ background_highlight ()
+ 
+ /* Set standout mode to the mode specified for the text to be output.  */
+ 
+-static
+-highlight_if_desired ()
++static void
++highlight_if_desired (void)
+ {
+   if (TN_standout_width >= 0)
+     return;
+@@ -544,9 +546,7 @@ write_standout_marker (flag, vpos)
+    Call this when about to modify line at position VPOS
+    and not change whether it is highlighted.  */
+ 
+-reassert_line_highlight (highlight, vpos)
+-     int highlight;
+-     int vpos;
++void reassert_line_highlight(int highlight, int vpos)
+ {
+   if (! FRAME_TERMCAP_P ((updating_frame ? updating_frame : selected_frame)))
+     {
+@@ -565,8 +565,7 @@ reassert_line_highlight (highlight, vpos
+ /* Call this when about to modify line at position VPOS
+    and change whether it is highlighted.  */
+ 
+-change_line_highlight (new_highlight, vpos, first_unused_hpos)
+-     int new_highlight, vpos, first_unused_hpos;
++void change_line_highlight (int new_highlight, int vpos, int first_unused_hpos)
+ {
+   standout_requested = new_highlight;
+   if (! FRAME_TERMCAP_P (updating_frame))
+@@ -601,8 +600,7 @@ change_line_highlight (new_highlight, vp
+ 
+ /* Move to absolute position, specified origin 0 */
+ 
+-cursor_to (row, col)
+-     int row, col;
++void cursor_to (int row, int col)
+ {
+   if (! FRAME_TERMCAP_P ((updating_frame
+ 			    ? updating_frame
+@@ -625,8 +623,7 @@ cursor_to (row, col)
+ 
+ /* Similar but don't take any account of the wasted characters.  */
+ 
+-raw_cursor_to (row, col)
+-     int row, col;
++static void raw_cursor_to (int row, int col)
+ {
+   if (! FRAME_TERMCAP_P ((updating_frame ? updating_frame : selected_frame)))
+     {
+@@ -645,7 +642,7 @@ raw_cursor_to (row, col)
+ /* Erase operations */
+ 
+ /* clear from cursor to end of frame */
+-clear_to_end ()
++static void clear_to_end (void)
+ {
+   register int i;
+ 
+@@ -672,7 +669,7 @@ clear_to_end ()
+ 
+ /* Clear entire frame */
+ 
+-clear_frame ()
++void clear_frame(void)
+ {
+   if (clear_frame_hook
+       && ! FRAME_TERMCAP_P ((updating_frame ? updating_frame : selected_frame)))
+@@ -717,8 +714,7 @@ clear_end_of_line (first_unused_hpos)
+ 
+    Note that the cursor may be moved, on terminals lacking a `ce' string.  */
+ 
+-clear_end_of_line_raw (first_unused_hpos)
+-     int first_unused_hpos;
++static void clear_end_of_line_raw (int first_unused_hpos)
+ {
+   register int i;
+ 
+@@ -954,9 +950,7 @@ linecode_conversion (len, src, dst)
+ /* len = actual_column_length, len2 = converted_string_length
+    string2 = converted_string */
+ /* I gave up using TS_repeat...K.Handa */
+-write_glyphs (string, len)
+-     register GLYPH *string;
+-     register int len;
++void write_glyphs (GLYPH *string, int len)
+ {
+   register GLYPH g;
+   register int tlen = GLYPH_TABLE_LENGTH;
+@@ -1038,9 +1032,7 @@ write_glyphs (string, len)
+ 
+ /* If start is zero, insert blanks instead of a string at start */
+  
+-insert_glyphs (start, len)
+-     register GLYPH *start;
+-     register int len;
++void insert_glyphs (GLYPH *start, int len)
+ {
+   char *buf;
+   register GLYPH g;
+@@ -1112,8 +1104,7 @@ insert_glyphs (start, len)
+       }
+ }
+ 
+-delete_glyphs (n)
+-     register int n;
++void delete_glyphs(int n)
+ {
+   char *buf;
+   register int i;
+@@ -1149,8 +1140,7 @@ delete_glyphs (n)
+ 
+ /* Insert N lines at vpos VPOS.  If N is negative, delete -N lines.  */
+ 
+-ins_del_lines (vpos, n)
+-     int vpos, n;
++void ins_del_lines (int vpos, int n)
+ {
+   char *multi = n > 0 ? TS_ins_multi_lines : TS_del_multi_lines;
+   char *single = n > 0 ? TS_ins_line : TS_del_line;
+@@ -1354,8 +1344,7 @@ extern int x_screen_planes;
+ 
+ extern do_line_insertion_deletion_costs ();
+ 
+-calculate_costs (frame)
+-     FRAME_PTR frame;
++void calculate_costs(FRAME_PTR frame)
+ {
+   register char *f = TS_set_scroll_region ?
+                        TS_set_scroll_region

@@ -1,4 +1,4 @@
-$NetBSD: patch-cf,v 1.2 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-cf,v 1.3 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 - don't declare own errno
@@ -13,7 +13,7 @@ $NetBSD: patch-cf,v 1.2 2011/12/24 17:07:07 dholland Exp $
  #include <config.h>
  
  #ifdef VMS
-@@ -56,8 +57,6 @@ extern DIR *opendir ();
+@@ -56,11 +57,11 @@ extern DIR *opendir ();
  #endif /* not SYSV_SYSTEM_DIR */
  #endif /* not MCPATH */
  
@@ -22,3 +22,18 @@ $NetBSD: patch-cf,v 1.2 2011/12/24 17:07:07 dholland Exp $
  extern char *egetenv ();
  extern char *strcpy ();
  
++static void lock_superlock(char *lfname);
++
+ #ifdef DECLARE_GETPWUID_WITH_UID_T
+ extern struct passwd *getpwuid (uid_t);
+ #else
+@@ -341,8 +342,7 @@ unlock_file (fn)
+   unlink (superlock_path);
+ }
+ 
+-lock_superlock (lfname)
+-     char *lfname;
++static void lock_superlock(char *lfname)
+ {
+   register int i, fd;
+   DIR *lockdir;
