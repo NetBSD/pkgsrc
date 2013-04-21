@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.117 2013/04/15 13:05:14 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.118 2013/04/21 11:33:55 rodent Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -128,34 +128,40 @@ INTERACTIVE_STAGE=      configure install
     <varname>ACCEPTABLE_LICENSES</varname> variable with "=" instead
     of "+=".  The licenses accepted by default are:
     <programlisting>
-        public-domain unlicense
-        gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
-        gnu-gpl-v1
-        gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
-        gnu-gpl-v3 gnu-lgpl-v3
-        original-bsd modified-bsd 2-clause-bsd
-        x11 mit miros
-        apache-1.1 apache-2.0
-        artistic artistic-2.0
-        cddl-1.0
-        cpl-1.0
-        open-font-license
-        mpl-1.0 mpl-1.1 mpl-2.0
-        php png-license
-        postgresql-license
-        zlib
-        zpl
-        python-software-foundation
-        ipafont
-        ibm-public-license-1.0
-        isc
-        boost-license
-        mplusfont
-        cc-by-sa-v3.0
-        lppl-1.3c
-        lucent
-        epl-v1.0
-	info-zip
+	apache-1.1 apache-2.0
+	arphic-public
+	artistic artistic-2.0
+	boost-license
+	cc-by-sa-v3.0
+	cddl-1.0
+	cpl-1.0
+	epl-v1.0
+	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
+	gnu-gpl-v1
+	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
+	gnu-gpl-v3 gnu-lgpl-v3
+	ibm-public-license-1.0
+	ipafont
+	isc
+	lppl-1.3c
+	lucent
+	miros
+	mit
+	mpl-1.0 mpl-1.1 mpl-2.0
+	mplusfont
+	ofl-v1.0 ofl-v1.1
+	original-bsd modified-bsd 2-clause-bsd
+	php
+	png-license
+	postgresql-license
+	public-domain
+	python-software-foundation
+	qpl-v1.0
+	sleepycat-public
+	unlicense
+	x11
+	zlib
+	zpl
     </programlisting>
     </para>
 
@@ -201,11 +207,17 @@ LICENSE=        xv-license
 ACCEPTABLE_LICENSES+=xv-license
     </programlisting>
 
-    <para>When adding a package with a new license, the license text
-    should be added to <filename>pkgsrc/licenses</filename> for
-    displaying.  A list of known licenses can be seen in this
-    directory.</para>
-
+    <para>When adding a package with a new license, the following steps
+    are required:</para>
+    <orderedlist>
+    <listitem><para>Check if the file can avoid the -license filename tag as described above by referencing <ulink url="http://www.gnu.org/licenses/license-list.html">Various Licenses and Comments about Them</ulink> and <ulink url="http://opensource.org/licenses/alphabetical">Licenses by Name | Open Source Initiative</ulink>.  If this is the case, additionally add the license filename to:</para>
+    <itemizedlist>
+    <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in <filename>pkgsrc/mk/license.mk</filename></para></listitem>
+    <listitem><para>default_acceptable_licenses in <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
+    </itemizedlist>
+    <para>with the proper syntax as demonstrated in those files, respectively.</para></listitem>
+    <listitem><para>The license text should be added to <filename>pkgsrc/licenses</filename> for displaying.  A list of known licenses can be seen in this directory.</para></listitem>
+    </orderedlist>
     <para>When the license changes (in a way other than formatting),
     please make sure that the new license has a different name (e.g.,
     append the version number if it exists, or the date).  Just
