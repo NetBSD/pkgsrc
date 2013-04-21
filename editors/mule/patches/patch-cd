@@ -1,4 +1,4 @@
-$NetBSD: patch-cd,v 1.2 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-cd,v 1.3 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 - don't declare own errno
@@ -22,3 +22,43 @@ $NetBSD: patch-cd,v 1.2 2011/12/24 17:07:07 dholland Exp $
  /* A mask of extra modifier bits to put into every keyboard char.  */
  extern int extra_keyboard_modifiers;
  
+@@ -385,7 +384,7 @@ static void dumpqueue ();
+ 
+ void dumpborder ();
+ static int XTcursor_to ();
+-static int XTclear_end_of_line ();
++static void XTclear_end_of_line (int);
+ 
+ #ifdef MULE			/* 94.7.1 by K.Handa */
+ /* Defined in ccl.c */
+@@ -1055,9 +1054,8 @@ XTwrite_glyphs (start, len)
+    to column FIRST_UNUSED (exclusive).  The idea is that everything
+    from FIRST_UNUSED onward is already erased.  */
+   
+-static int
+-XTclear_end_of_line (first_unused)
+-     register int first_unused;
++static void
++XTclear_end_of_line(int first_unused)
+ {
+   struct frame *f = updating_frame;
+   int mask;
+@@ -1419,7 +1417,7 @@ XTflash (f)
+ #define XRINGBELL XFeep (0);
+ #endif /* ! defined (HAVE_X11) */
+ 
+-XTring_bell ()
++static void XTring_bell (void)
+ {
+   if (x_current_display == 0)
+     return;
+@@ -6204,8 +6202,7 @@ x_make_frame_invisible (f)
+ 
+ /* Change window state from mapped to iconified. */
+ 
+-x_iconify_frame (f)
+-     struct frame *f;
++void x_iconify_frame(struct frame *f)
+ {
+   int mask;
+   int result;

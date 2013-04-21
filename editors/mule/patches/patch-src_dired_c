@@ -1,8 +1,8 @@
-$NetBSD: patch-src_dired_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-src_dired_c,v 1.2 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 
---- src/dired.c~	1994-11-11 00:35:50.000000000 +0000
+--- src/dired.c.orig	1994-11-11 00:35:50.000000000 +0000
 +++ src/dired.c
 @@ -21,6 +21,7 @@ the Free Software Foundation, 675 Mass A
  #include <config.h>
@@ -11,4 +11,13 @@ $NetBSD: patch-src_dired_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
 +#include <stdlib.h>
  #include <sys/types.h>
  #include <sys/stat.h>
+ 
+@@ -159,7 +160,7 @@ If NOSORT is non-nil, the list is not so
+       compile_pattern (match, &searchbuf, 0,
+ 		       buffer_defaults.downcase_table->contents);
+ #else
+-      compile_pattern (match, &searchbuf, 0, 0);
++      compile_pattern (match, &searchbuf, 0, 0, 0);
+ #endif
+     }
  

@@ -1,19 +1,20 @@
-$NetBSD: patch-cb,v 1.2 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-cb,v 1.3 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 - don't declare own errno
 
 --- src/dispnew.c.orig	1995-02-03 01:21:28.000000000 +0000
 +++ src/dispnew.c
-@@ -59,6 +59,7 @@ the Free Software Foundation, 675 Mass A
+@@ -59,6 +59,8 @@ the Free Software Foundation, 675 Mass A
  
  #include <stdio.h>
  #include <ctype.h>
 +#include <stdlib.h>
++#include <unistd.h>
  
  #include "lisp.h"
  #include "termchar.h"
-@@ -2047,7 +2048,6 @@ SIGTYPE
+@@ -2047,7 +2049,6 @@ SIGTYPE
  window_change_signal ()
  {
    int width, height;
@@ -21,3 +22,23 @@ $NetBSD: patch-cb,v 1.2 2011/12/24 17:07:07 dholland Exp $
    int old_errno = errno;
  
    get_frame_size (&width, &height);
+@@ -2111,9 +2112,7 @@ do_pending_window_change ()
+    redisplay.  Since this tries to resize windows, we can't call it
+    from a signal handler.  */
+ 
+-change_frame_size (frame, newheight, newwidth, pretend, delay)
+-     register FRAME_PTR frame;
+-     int newheight, newwidth, pretend;
++void change_frame_size (FRAME_PTR frame, int newheight, int newwidth, int pretend, int delay)
+ {
+   /* If we can't deal with the change now, queue it for later.  */
+   if (delay)
+@@ -2451,7 +2450,7 @@ char *terminal_type;
+ /* Then invoke its decoding routine to set up variables
+   in the terminal package */
+ 
+-init_display ()
++void init_display (void)
+ {
+ #ifdef HAVE_X_WINDOWS
+   extern int display_arg;

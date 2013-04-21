@@ -1,8 +1,8 @@
-$NetBSD: patch-src_search_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-src_search_c,v 1.2 2013/04/21 15:40:00 joerg Exp $
 
 - use standard headers
 
---- src/regex19.c.~3~	1996-07-16 01:44:24.000000000 +0000
+--- src/regex19.c.orig	1996-07-16 01:44:24.000000000 +0000
 +++ src/regex19.c
 @@ -25,6 +25,8 @@
    #pragma alloca
@@ -13,3 +13,12 @@ $NetBSD: patch-src_search_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
  #define _GNU_SOURCE
  
  #ifdef HAVE_CONFIG_H
+@@ -3455,7 +3457,7 @@ re_compile_fastmap (bufp)
+ 	case categoryspec:
+ 	case notcategoryspec:
+ 	  bufp->can_be_null = 1;
+-	  return;
++	  return 0;
+ #endif /* MULE */
+ 
+       /* All cases after this match the empty string.  These end with
