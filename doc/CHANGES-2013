@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1452 2013/04/21 12:37:02 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1453 2013/04/21 12:47:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2249,3 +2249,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-Plack-Middleware-Test-StashWarnings version 0.07 [ryoon 2013-04-21]
 	Updated time/p5-Data-ICal to 0.19 [ryoon 2013-04-21]
 	Updated mail/p5-MIME-tools to 5.504 [ryoon 2013-04-21]
+	Added mail/p5-Test-Email version 0.07 [ryoon 2013-04-21]
+	Updated databases/p5-DBD-mysql to 4.023 [ryoon 2013-04-21]
