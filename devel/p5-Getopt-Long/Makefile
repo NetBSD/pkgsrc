@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/12/17 02:55:21 obache Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/21 11:42:01 ryoon Exp $
 
-DISTNAME=		Getopt-Long-2.38
+DISTNAME=		Getopt-Long-2.39
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Getopt/}
 
