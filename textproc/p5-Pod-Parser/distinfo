@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/22 22:02:59 sno Exp $
+$NetBSD: distinfo,v 1.2 2013/04/21 12:58:35 ryoon Exp $
 
-SHA1 (Pod-Parser-1.38.tar.gz) = 099a41475a92465c4997234930cd37a3009e3efa
-RMD160 (Pod-Parser-1.38.tar.gz) = 820a07d928b6795f983cf3e92714d34a883b652c
-Size (Pod-Parser-1.38.tar.gz) = 103288 bytes
+SHA1 (Pod-Parser-1.60.tar.gz) = 28787dc77180fe4272e7874871499cc4aff20491
+RMD160 (Pod-Parser-1.60.tar.gz) = 67f60b859f51fda35c8ff70a4ffbffe05e87629d
+Size (Pod-Parser-1.60.tar.gz) = 79381 bytes
