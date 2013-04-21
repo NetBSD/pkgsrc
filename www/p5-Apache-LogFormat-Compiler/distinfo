@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/21 12:19:39 ryoon Exp $
+
+SHA1 (Apache-LogFormat-Compiler-0.12.tar.gz) = d637261f4e839dcef1a1224c500f3e5326c4c7dd
+RMD160 (Apache-LogFormat-Compiler-0.12.tar.gz) = 9d7148952f683fff8e3776538a28f8e87b220b47
+Size (Apache-LogFormat-Compiler-0.12.tar.gz) = 22410 bytes
