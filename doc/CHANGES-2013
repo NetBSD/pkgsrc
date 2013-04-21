@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1462 2013/04/21 14:04:50 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1463 2013/04/21 14:12:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/skf to 1.99.4 [obache 2013-04-21]
 	Added devel/rt4 version 4.0.11 [ryoon 2013-04-21]
 	Updated textproc/json-glib to 0.16.0 [rodent 2013-04-21]
+	Updated graphics/darktable to 1.2 [wiz 2013-04-21]
