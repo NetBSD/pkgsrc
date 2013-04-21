@@ -1,0 +1,4 @@
+This package contains the following modules.
+
+Test::Email	Test Email Contents
+Test::POP3	Automate Email Delivery Tests
