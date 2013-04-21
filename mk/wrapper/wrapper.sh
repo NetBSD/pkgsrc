@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.21 2009/05/30 19:18:01 joerg Exp $
+# $NetBSD: wrapper.sh,v 1.22 2013/04/21 03:51:27 uebayasi Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -133,7 +133,7 @@ msg_log $wrapperlog "<.>" "$cmd"
 
 if [ "${empty_file}" = "${cleanup}" ] && [ "$debug" != "yes" ]; then
 	eval "exec $cmd"
-	wrapper_results=$?
+	wrapper_result=$?
 else
 	wrapper_result=0
 	eval "$cmd" || wrapper_result="$?"
