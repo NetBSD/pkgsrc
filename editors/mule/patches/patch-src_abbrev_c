@@ -1,8 +1,8 @@
-$NetBSD: patch-src_abbrev_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-src_abbrev_c,v 1.2 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 
---- src/abbrev.c~	1993-09-13 11:20:03.000000000 +0000
+--- src/abbrev.c.orig	1993-09-13 11:20:03.000000000 +0000
 +++ src/abbrev.c
 @@ -20,6 +20,7 @@ the Free Software Foundation, 675 Mass A
  
@@ -12,3 +12,27 @@ $NetBSD: patch-src_abbrev_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
  #include "lisp.h"
  #include "commands.h"
  #include "buffer.h"
+@@ -369,9 +370,8 @@ is not undone.")
+   return Qnil;
+ }
+ 
+-static
+-write_abbrev (sym, stream)
+-     Lisp_Object sym, stream;
++static void
++write_abbrev (Lisp_Object sym, Lisp_Object stream)
+ {
+   Lisp_Object name;
+   if (NILP (XSYMBOL (sym)->value))
+@@ -388,9 +388,8 @@ write_abbrev (sym, stream)
+   insert (")\n", 2);
+ }
+ 
+-static
+-describe_abbrev (sym, stream)
+-     Lisp_Object sym, stream;
++static void
++describe_abbrev (Lisp_Object sym, Lisp_Object stream)
+ {
+   Lisp_Object one;
+ 
