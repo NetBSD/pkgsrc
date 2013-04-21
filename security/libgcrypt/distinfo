@@ -1,17 +1,11 @@
-$NetBSD: distinfo,v 1.37 2013/04/11 17:08:38 drochner Exp $
+$NetBSD: distinfo,v 1.38 2013/04/21 14:44:53 wiz Exp $
 
-SHA1 (libgcrypt-1.5.1/gcrypt.tar.bz2) = 5d402e4e4e6831f74b738f1a022cf024bcb24ecd
-RMD160 (libgcrypt-1.5.1/gcrypt.tar.bz2) = d1032e66bd4b6f51e437993a7178d14b09a2955a
-Size (libgcrypt-1.5.1/gcrypt.tar.bz2) = 4231 bytes
-SHA1 (libgcrypt-1.5.1/libgcrypt-1.5.1.tar.bz2) = 8b60a26b7eae1a727d58932d6b1efeb5716648ed
-RMD160 (libgcrypt-1.5.1/libgcrypt-1.5.1.tar.bz2) = f074d35b749e636bc18ceef01fc6fb9cf3d1e6a3
-Size (libgcrypt-1.5.1/libgcrypt-1.5.1.tar.bz2) = 1503471 bytes
+SHA1 (libgcrypt-1.5.2.tar.bz2) = c9998383532ba3e8bcaf690f2f0d65e814b48d2f
+RMD160 (libgcrypt-1.5.2.tar.bz2) = 0f387dcd4169284c2e1ba9b74d2a0367fba640e5
+Size (libgcrypt-1.5.2.tar.bz2) = 1507418 bytes
 SHA1 (patch-aa) = 7c46612f912d45dfd4ce4f4b510e72c00bd38585
 SHA1 (patch-ab) = 6fac21daa26b7de3b13839d076f78a74400efce7
 SHA1 (patch-ac) = c59d7bb73fa0e79522b287054633e276ffbb069d
 SHA1 (patch-ad) = 19345b7d164521d526a44eb3f1a465ff09d8266c
 SHA1 (patch-ae) = 50eeea5a193e14012e0d127a0618dfc03727d96c
 SHA1 (patch-af) = e6d33b3e9c25a560c1df11843c6be3c9319bd018
-SHA1 (patch-ba) = a39a6972d197193ea7831d23cfa66f14ca55105e
-SHA1 (patch-bb) = b75a2cb6d526976bb4d3a0948ce4c15eead4e2ae
-SHA1 (patch-bc) = 86b594ac2ee25d8a68809765a13942e8fd3be051
