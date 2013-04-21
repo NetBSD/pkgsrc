@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/03/15 22:00:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/04/21 14:46:34 wiz Exp $
 bin/meld
 lib/meld/meld/__init__.py
 lib/meld/meld/__init__.pyc
@@ -66,6 +66,9 @@ lib/meld/meld/recent.pyo
 lib/meld/meld/task.py
 lib/meld/meld/task.pyc
 lib/meld/meld/task.pyo
+lib/meld/meld/test_matchers.py
+lib/meld/meld/test_matchers.pyc
+lib/meld/meld/test_matchers.pyo
 lib/meld/meld/tree.py
 lib/meld/meld/tree.pyc
 lib/meld/meld/tree.pyo
