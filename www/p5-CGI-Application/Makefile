@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2012/10/28 06:30:27 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/04/21 07:18:47 hiramatsu Exp $
 
 DISTNAME=		CGI-Application-4.50
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		p5cga
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
@@ -13,6 +13,7 @@ COMMENT=		Perl5 module to create sophisticated, reusable web-based applications
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		{p5-CGI>=2.66,perl>=5.6.1nb2}:../../www/p5-CGI
+DEPENDS+=		p5-Class-ISA-[0-9]*:../../devel/p5-Class-ISA
 DEPENDS+=		p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
