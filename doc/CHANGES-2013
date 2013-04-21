@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1432 2013/04/21 11:23:57 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1433 2013/04/21 11:37:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Module-Build to 0.40040 [hiramatsu 2013-04-21]
 	Updated www/p5-CGI-Application to 4.50nb2 [hiramatsu 2013-04-21]
 	Updated devel/ctemplate to 2.2 [rodent 2013-04-21]
+	Updated security/p5-Mozilla-CA to 20130114 [ryoon 2013-04-21]
