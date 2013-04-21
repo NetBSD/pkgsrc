@@ -7638,7 +7638,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm80445136"></a><dl>
+<a name="idm88328368"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7657,7 +7657,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm80444752"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm88327984"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7667,7 +7667,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm80443600"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm88326832"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7678,7 +7678,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm80442576"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm88325808"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7870,34 +7870,40 @@ INTERACTIVE_STAGE=      configure install
     of "+=".  The licenses accepted by default are:
     </p>
 <pre class="programlisting">
-        public-domain unlicense
-        gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
-        gnu-gpl-v1
-        gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
-        gnu-gpl-v3 gnu-lgpl-v3
-        original-bsd modified-bsd 2-clause-bsd
-        x11 mit miros
-        apache-1.1 apache-2.0
-        artistic artistic-2.0
-        cddl-1.0
-        cpl-1.0
-        open-font-license
-        mpl-1.0 mpl-1.1 mpl-2.0
-        php png-license
-        postgresql-license
-        zlib
-        zpl
-        python-software-foundation
-        ipafont
-        ibm-public-license-1.0
-        isc
-        boost-license
-        mplusfont
-        cc-by-sa-v3.0
-        lppl-1.3c
-        lucent
-        epl-v1.0
-	info-zip
+	apache-1.1 apache-2.0
+	arphic-public
+	artistic artistic-2.0
+	boost-license
+	cc-by-sa-v3.0
+	cddl-1.0
+	cpl-1.0
+	epl-v1.0
+	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
+	gnu-gpl-v1
+	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
+	gnu-gpl-v3 gnu-lgpl-v3
+	ibm-public-license-1.0
+	ipafont
+	isc
+	lppl-1.3c
+	lucent
+	miros
+	mit
+	mpl-1.0 mpl-1.1 mpl-2.0
+	mplusfont
+	ofl-v1.0 ofl-v1.1
+	original-bsd modified-bsd 2-clause-bsd
+	php
+	png-license
+	postgresql-license
+	public-domain
+	python-software-foundation
+	qpl-v1.0
+	sleepycat-public
+	unlicense
+	x11
+	zlib
+	zpl
     </pre>
 <p>
     </p>
@@ -7935,10 +7941,19 @@ LICENSE=        xv-license
 <pre class="programlisting">
 ACCEPTABLE_LICENSES+=xv-license
     </pre>
-<p>When adding a package with a new license, the license text
-    should be added to <code class="filename">pkgsrc/licenses</code> for
-    displaying.  A list of known licenses can be seen in this
-    directory.</p>
+<p>When adding a package with a new license, the following steps
+    are required:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p>Check if the file can avoid the -license filename tag as described above by referencing <a class="ulink" href="http://www.gnu.org/licenses/license-list.html" target="_top">Various Licenses and Comments about Them</a> and <a class="ulink" href="http://opensource.org/licenses/alphabetical" target="_top">Licenses by Name | Open Source Initiative</a>.  If this is the case, additionally add the license filename to:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>DEFAULT_ACCEPTABLE_LICENSES in <code class="filename">pkgsrc/mk/license.mk</code></p></li>
+<li class="listitem"><p>default_acceptable_licenses in <code class="filename">pkgsrc/pkgtools/pkg_install/files/lib/license.c</code></p></li>
+</ul></div>
+<p>with the proper syntax as demonstrated in those files, respectively.</p>
+</li>
+<li class="listitem"><p>The license text should be added to <code class="filename">pkgsrc/licenses</code> for displaying.  A list of known licenses can be seen in this directory.</p></li>
+</ol></div>
 <p>When the license changes (in a way other than formatting),
     please make sure that the new license has a different name (e.g.,
     append the version number if it exists, or the date).  Just
@@ -9710,7 +9725,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm81992016"></a><dl>
+<a name="idm87777968"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9755,7 +9770,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm81991632"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm87777584"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9771,7 +9786,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm81987536"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm87773616"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9789,7 +9804,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm81983184"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm87769136"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9807,7 +9822,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm81978960"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm87765040"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9820,7 +9835,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm81976784"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm87762864"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9836,7 +9851,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm81973712"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm87759664"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9860,7 +9875,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm81965648"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm87751600"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9885,7 +9900,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm81961808"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm87747888"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9933,7 +9948,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm81955280"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm87741360"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
