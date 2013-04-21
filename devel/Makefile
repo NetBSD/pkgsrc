@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1734 2013/04/21 11:50:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.1735 2013/04/21 14:00:08 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1427,6 +1427,7 @@ SUBDIR+=	rsltc
 SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
 SUBDIR+=	rt3
+SUBDIR+=	rt4
 SUBDIR+=	rubigen
 SUBDIR+=	ruby-SDL
 SUBDIR+=	ruby-abstract
