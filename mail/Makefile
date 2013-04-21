@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2013/03/10 08:02:52 taca Exp $
+# $NetBSD: Makefile,v 1.431 2013/04/21 12:41:42 ryoon Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -229,6 +229,7 @@ SUBDIR+=	p5-Net-SMTP_auth
 SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-Sendmail-PMilter
+SUBDIR+=	p5-Test-Email
 SUBDIR+=	p5-URI-imap
 SUBDIR+=	p5-User-Identity
 SUBDIR+=	p5-razor-agents
