@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12104 2013/04/21 14:40:04 wiz Exp $
+$NetBSD: TODO,v 1.12105 2013/04/21 14:45:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -785,7 +785,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.0.0
 	o libflash-0.4.13
 	o libfolks-0.8.0
-	o libgcrypt-1.5.2
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1

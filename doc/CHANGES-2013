@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1467 2013/04/21 14:40:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1468 2013/04/21 14:45:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2266,3 +2266,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libdrm to 2.4.44 [wiz 2013-04-21]
 	Updated games/gbrainy to 2.20 [wiz 2013-04-21]
 	Updated fonts/harfbuzz to 0.9.16 [wiz 2013-04-21]
+	Updated security/libgcrypt to 1.5.2 [wiz 2013-04-21]
