@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2012/01/20 17:07:38 drochner Exp $
+# $NetBSD: options.mk,v 1.8 2013/04/21 14:44:53 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgcrypt
-PKG_SUPPORTED_OPTIONS=	idea
+PKG_SUPPORTED_OPTIONS=
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,17 +23,4 @@ PKG_SUGGESTED_OPTIONS+=	via-padlock
 .if empty(PKG_OPTIONS:Mvia-padlock)
 # Disable VIA Padlock support.
 CONFIGURE_ARGS+=	--disable-padlock-support
-.endif
-
-.if !empty(PKG_OPTIONS:Midea)
-# use of IDEA as crypto function
-DISTFILES+=	gcrypt.tar.bz2
-SITES.gcrypt.tar.bz2=	http://www.kfwebs.com/
-CFLAGS+=	-DUSE_IDEA
-MAKE_ENV+=	IDEAOBJECT=idea.lo
-USE_TOOLS+=	patch
-post-patch:	ideapatch
-ideapatch:
-	cd ${WRKDIR} && ${PATCH} <${FILESDIR}/idea-patch && \
-	${CP} idea.c ${WRKSRC}/cipher
 .endif
