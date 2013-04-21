@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1464 2013/04/21 14:30:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1465 2013/04/21 14:34:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2263,3 +2263,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/json-glib to 0.16.0 [rodent 2013-04-21]
 	Updated graphics/darktable to 1.2 [wiz 2013-04-21]
 	Updated net/flickcurl to 1.24 [wiz 2013-04-21]
+	Updated x11/libdrm to 2.4.44 [wiz 2013-04-21]
