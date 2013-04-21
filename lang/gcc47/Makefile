@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/18 07:58:33 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/21 08:56:34 sbd Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -47,6 +47,9 @@ SUBST_VARS.vars=	GCC_TARGET_MACHINE
 .include "../../mk/bsd.prefs.mk"
 
 LANGS=			c
+
+# In some cases LINKER_RPATH_FLAG needs a trailing space.
+LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
 LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
