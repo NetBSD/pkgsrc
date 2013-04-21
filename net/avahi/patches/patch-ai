@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2010/07/24 13:42:12 obache Exp $
+$NetBSD: patch-ai,v 1.3 2013/04/21 00:58:47 rodent Exp $
+
+Check lower bounds on port.
 
 --- avahi-core/server.c.orig	2010-06-29 18:51:53.000000000 +0000
 +++ avahi-core/server.c
