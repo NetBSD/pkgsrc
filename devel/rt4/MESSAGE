@@ -1,0 +1,60 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/04/21 13:59:34 ryoon Exp $
+
+To use RT 4, you will need to perform the following steps.
+
+1. Setup your postfix.
+
+2. If you want to use with MySQL server, install databases/mysql55-server
+   and start it. You can use other supported database management system.
+
+3. If you want to use www/ap2-fcgid with apache24, install www/ap2-fcgid
+   and www/apache24.
+
+4. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	FcgidMaxRequestLen 1073741824
+
+	DocumentRoot ${PREFIX}/share/rt4/data/html
+	ScriptAlias / ${PREFIX}/share/rt4/sbin/rt-server.fcgi/
+
+	<Directory "${PREFIX}/share/rt4/data/html">
+		AddDefaultCharset UTF-8
+		Require all granted
+	</Directory>
+
+	<Directory "${PREFIX}/share/rt4/sbin">
+		Options +ExecCGI
+		AddHandler fcgid-script fcgi
+		Require all granted
+	</Directory>
+
+5. Start mysqld and set root's password.
+
+6. Run rt-server for configuration.
+
+	$ sudo -u www ${PREFIX}/share/rt4/sbin/rt-server --port 8080
+
+7. Access http://localhost:8080/ and setup RT 4. After setting up, kill
+   rt-server with Ctrl-C.
+
+8. In your postfix /etc/mail/aliases, put the following lines to
+   enable actions with e-mail.
+   And you may enable CommentOnTicket,  CreateTicket, and  ReplyToTicket
+   to Global Group rights: Everyone screen.
+
+	rt:         "|${PREFIX}/share/rt4/bin/rt-mailgate --queue general --action correspond --url http://localhost/"
+	rt-comment: "|${PREFIX}/share/rt4/bin/rt-mailgate --queue general --action comment --url http://localhost/"
+
+9. Start apache httpd.
+
+10. Open http://localhost/ and login to RT 4.
+
+Note:
+You may have the following lines
+in your ${PREFIX}/share/rt4/etc/RT_SiteConfig.pm .
+
+Set( $NotifyActor, 1 );
+Set( $SetOutgoingMailFrom, 1);
+Set( $CorrespondAddress, "rtadmin@example.com");
+===========================================================================
