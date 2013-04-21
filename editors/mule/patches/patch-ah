@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-ah,v 1.5 2013/04/21 15:39:59 joerg Exp $
 
 - use standard headers
 - don't declare own errno
@@ -6,19 +6,31 @@ $NetBSD: patch-ah,v 1.4 2011/12/24 17:07:07 dholland Exp $
 
 --- src/fileio.c.orig	1995-06-23 10:25:18.000000000 +0000
 +++ src/fileio.c
-@@ -117,10 +117,7 @@ the Free Software Foundation, 675 Mass A
+@@ -116,10 +116,7 @@ the Free Software Foundation, 675 Mass A
+ #endif
  
  #include <errno.h>
-+#include <stdlib.h>
- 
+-
 -#ifndef vax11c
 -extern int errno;
 -#endif
--
++#include <stdlib.h>
+ 
  extern char *strerror ();
  
- #ifdef APOLLO
-@@ -2604,8 +2601,6 @@ The value is an integer.")
+@@ -1788,10 +1785,7 @@ expand_and_dir_to_file (filename, defdir
+   return abspath;
+ }
+ 
+-barf_or_query_if_file_exists (absname, querystring, interactive)
+-     Lisp_Object absname;
+-     unsigned char *querystring;
+-     int interactive;
++static void barf_or_query_if_file_exists (Lisp_Object absname, unsigned char *querystring, int interactive)
+ {
+   register Lisp_Object tem;
+   struct stat statbuf;
+@@ -2604,8 +2598,6 @@ The value is an integer.")
    return value;
  }
  
@@ -27,7 +39,7 @@ $NetBSD: patch-ah,v 1.4 2011/12/24 17:07:07 dholland Exp $
  DEFUN ("unix-sync", Funix_sync, Sunix_sync, 0, 0, "",
    "Tell Unix to finish all pending disk updates.")
    ()
-@@ -2614,8 +2609,6 @@ DEFUN ("unix-sync", Funix_sync, Sunix_sy
+@@ -2614,8 +2606,6 @@ DEFUN ("unix-sync", Funix_sync, Sunix_sy
    return Qnil;
  }
  
@@ -36,7 +48,7 @@ $NetBSD: patch-ah,v 1.4 2011/12/24 17:07:07 dholland Exp $
  DEFUN ("file-newer-than-file-p", Ffile_newer_than_file_p, Sfile_newer_than_file_p, 2, 2, 0,
    "Return t if file FILE1 is newer than file FILE2.\n\
  If FILE1 does not exist, the answer is nil;\n\
-@@ -4507,7 +4500,5 @@ This applies only to the operation `inhi
+@@ -4507,7 +4497,5 @@ This applies only to the operation `inhi
    defsubr (&Sread_file_name_internal);
    defsubr (&Sread_file_name);
  
