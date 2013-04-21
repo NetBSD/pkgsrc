@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/21 00:50:03 rodent Exp $
+bin/notify-send
+include/libnotify/notification.h
+include/libnotify/notify-enum-types.h
+include/libnotify/notify-features.h
+include/libnotify/notify.h
+${PLIST.introspection}lib/girepository-1.0/Notify-0.7.typelib
+lib/libnotify.la
+lib/pkgconfig/libnotify.pc
+${PLIST.doc}share/doc/libnotify/spec/notification-spec.html
+${PLIST.introspection}share/gir-1.0/Notify-0.7.gir
+share/gtk-doc/html/libnotify/NotifyNotification.html
+share/gtk-doc/html/libnotify/annotation-glossary.html
+share/gtk-doc/html/libnotify/api-index-deprecated.html
+share/gtk-doc/html/libnotify/api-index-full.html
+share/gtk-doc/html/libnotify/ch01.html
+share/gtk-doc/html/libnotify/home.png
+share/gtk-doc/html/libnotify/index.html
+share/gtk-doc/html/libnotify/index.sgml
+share/gtk-doc/html/libnotify/left.png
+share/gtk-doc/html/libnotify/libnotify-notify.html
+share/gtk-doc/html/libnotify/libnotify.devhelp2
+share/gtk-doc/html/libnotify/right.png
+share/gtk-doc/html/libnotify/style.css
+share/gtk-doc/html/libnotify/up.png
