@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/21 21:31:34 imil Exp $
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info/requires.txt
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/cuisine.py
+${PYSITELIB}/cuisine.pyc
+${PYSITELIB}/cuisine.pyo
+share/doc/cuisine/README.rst
+share/doc/cuisine/cuisine-api.html
