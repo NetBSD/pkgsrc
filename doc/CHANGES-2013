@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1456 2013/04/21 12:57:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1457 2013/04/21 13:03:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2254,3 +2254,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/p5-JSON to 2.57 [ryoon 2013-04-21]
 	Updated textproc/p5-XML-RSS to 1.50 [ryoon 2013-04-21]
 	Updated devel/ruby-gettext to 2.3.9 [obache 2013-04-21]
+	Updated textproc/p5-Pod-Parser to 1.60 [ryoon 2013-04-21]
+	Updated textproc/p5-Regexp-Common to 2013031301 [ryoon 2013-04-21]
