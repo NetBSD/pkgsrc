@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2013/01/14 23:30:34 morr Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/04/22 10:41:10 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -9,6 +9,7 @@ share/vim/${VIM_SUBDIR}/autoload/README.txt
 share/vim/${VIM_SUBDIR}/autoload/ada.vim
 share/vim/${VIM_SUBDIR}/autoload/adacomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/ccomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/clojurecomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/csscomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/decada.vim
 share/vim/${VIM_SUBDIR}/autoload/getscript.vim
@@ -257,6 +258,7 @@ share/vim/${VIM_SUBDIR}/ftplugin.vim
 share/vim/${VIM_SUBDIR}/ftplugin/README.txt
 share/vim/${VIM_SUBDIR}/ftplugin/a2ps.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aap.vim
+share/vim/${VIM_SUBDIR}/ftplugin/abap.vim
 share/vim/${VIM_SUBDIR}/ftplugin/abaqus.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ada.vim
 share/vim/${VIM_SUBDIR}/ftplugin/alsaconf.vim
@@ -273,6 +275,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/calendar.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cdrdaoconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/changelog.vim
+share/vim/${VIM_SUBDIR}/ftplugin/clojure.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cobol.vim
 share/vim/${VIM_SUBDIR}/ftplugin/conf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/config.vim
@@ -450,6 +453,7 @@ share/vim/${VIM_SUBDIR}/indent/cdl.vim
 share/vim/${VIM_SUBDIR}/indent/ch.vim
 share/vim/${VIM_SUBDIR}/indent/chaiscript.vim
 share/vim/${VIM_SUBDIR}/indent/changelog.vim
+share/vim/${VIM_SUBDIR}/indent/clojure.vim
 share/vim/${VIM_SUBDIR}/indent/cmake.vim
 share/vim/${VIM_SUBDIR}/indent/cobol.vim
 share/vim/${VIM_SUBDIR}/indent/config.vim
@@ -654,6 +658,7 @@ share/vim/${VIM_SUBDIR}/syntax/apachestyle.vim
 share/vim/${VIM_SUBDIR}/syntax/aptconf.vim
 share/vim/${VIM_SUBDIR}/syntax/arch.vim
 share/vim/${VIM_SUBDIR}/syntax/art.vim
+share/vim/${VIM_SUBDIR}/syntax/asciidoc.vim
 share/vim/${VIM_SUBDIR}/syntax/asm.vim
 share/vim/${VIM_SUBDIR}/syntax/asm68k.vim
 share/vim/${VIM_SUBDIR}/syntax/asmh8300.vim
@@ -700,6 +705,7 @@ share/vim/${VIM_SUBDIR}/syntax/chordpro.vim
 share/vim/${VIM_SUBDIR}/syntax/cl.vim
 share/vim/${VIM_SUBDIR}/syntax/clean.vim
 share/vim/${VIM_SUBDIR}/syntax/clipper.vim
+share/vim/${VIM_SUBDIR}/syntax/clojure.vim
 share/vim/${VIM_SUBDIR}/syntax/cmake.vim
 share/vim/${VIM_SUBDIR}/syntax/cmusrc.vim
 share/vim/${VIM_SUBDIR}/syntax/cobol.vim
@@ -714,6 +720,7 @@ share/vim/${VIM_SUBDIR}/syntax/crm.vim
 share/vim/${VIM_SUBDIR}/syntax/crontab.vim
 share/vim/${VIM_SUBDIR}/syntax/cs.vim
 share/vim/${VIM_SUBDIR}/syntax/csc.vim
+share/vim/${VIM_SUBDIR}/syntax/csdl.vim
 share/vim/${VIM_SUBDIR}/syntax/csh.vim
 share/vim/${VIM_SUBDIR}/syntax/csp.vim
 share/vim/${VIM_SUBDIR}/syntax/css.vim
@@ -901,6 +908,7 @@ share/vim/${VIM_SUBDIR}/syntax/mail.vim
 share/vim/${VIM_SUBDIR}/syntax/mailaliases.vim
 share/vim/${VIM_SUBDIR}/syntax/mailcap.vim
 share/vim/${VIM_SUBDIR}/syntax/make.vim
+share/vim/${VIM_SUBDIR}/syntax/mallard.vim
 share/vim/${VIM_SUBDIR}/syntax/man.vim
 share/vim/${VIM_SUBDIR}/syntax/manconf.vim
 share/vim/${VIM_SUBDIR}/syntax/manual.vim
@@ -1011,6 +1019,7 @@ share/vim/${VIM_SUBDIR}/syntax/rcs.vim
 share/vim/${VIM_SUBDIR}/syntax/rcslog.vim
 share/vim/${VIM_SUBDIR}/syntax/readline.vim
 share/vim/${VIM_SUBDIR}/syntax/rebol.vim
+share/vim/${VIM_SUBDIR}/syntax/redif.vim
 share/vim/${VIM_SUBDIR}/syntax/registry.vim
 share/vim/${VIM_SUBDIR}/syntax/remind.vim
 share/vim/${VIM_SUBDIR}/syntax/resolv.vim
@@ -1019,6 +1028,7 @@ share/vim/${VIM_SUBDIR}/syntax/rexx.vim
 share/vim/${VIM_SUBDIR}/syntax/rhelp.vim
 share/vim/${VIM_SUBDIR}/syntax/rib.vim
 share/vim/${VIM_SUBDIR}/syntax/rnc.vim
+share/vim/${VIM_SUBDIR}/syntax/rng.vim
 share/vim/${VIM_SUBDIR}/syntax/rnoweb.vim
 share/vim/${VIM_SUBDIR}/syntax/robots.vim
 share/vim/${VIM_SUBDIR}/syntax/rpcgen.vim
