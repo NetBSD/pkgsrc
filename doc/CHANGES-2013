@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1477 2013/04/22 15:01:27 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1478 2013/04/22 17:30:37 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2276,3 +2276,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/vim-share to 7.3.905 [morr 2013-04-22]
 	Updated sysutils/libnotify07 to 0.7.5nb1 [obache 2013-04-22]
 	Updated time/p5-DateTime-TimeZone to 1.59 [wen 2013-04-22]
+	Added net/paris-traceroute version 0.92 [imil 2013-04-22]
