@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1475 2013/04/22 10:42:11 morr Exp $
+$NetBSD: CHANGES-2013,v 1.1476 2013/04/22 13:12:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed multimedia/ns-flash [marino 2013-04-22]
 	Added sysutils/monitoring version 0.9.5 [imil 2013-04-22]
 	Updated editors/vim-share to 7.3.905 [morr 2013-04-22]
+	Updated sysutils/libnotify07 to 0.7.5nb1 [obache 2013-04-22]
