@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2013/04/21 21:32:35 imil Exp $
+# $NetBSD: Makefile,v 1.571 2013/04/22 09:40:33 imil Exp $
 #
 
 COMMENT=	System utilities
@@ -286,6 +286,7 @@ SUBDIR+=	mkmemstick
 SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
 SUBDIR+=	monit
+SUBDIR+=	monitoring
 SUBDIR+=	mrsync
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
