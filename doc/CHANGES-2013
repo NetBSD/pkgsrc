@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1474 2013/04/22 09:42:20 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1475 2013/04/22 10:42:11 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2273,3 +2273,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Tree-DAG_Node to 1.11 [hiramatsu 2013-04-22]
 	Removed multimedia/ns-flash [marino 2013-04-22]
 	Added sysutils/monitoring version 0.9.5 [imil 2013-04-22]
+	Updated editors/vim-share to 7.3.905 [morr 2013-04-22]
