@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/21 00:50:03 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/22 11:24:52 rodent Exp $
 
 DISTNAME=	libnotify-0.7.5
 PKGNAME=	${DISTNAME:S/-/07-/1}
@@ -23,7 +23,8 @@ PKGCONFIG_OVERRIDE=	libnotify.pc.in
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILD_DEPENDS+=	gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
+BUILDLINK_DEPMETHOD.gdk-pixbuf2=	build
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
