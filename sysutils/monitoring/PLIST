@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/22 09:39:21 imil Exp $
+bin/monitoring
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info
+${PYSITELIB}/monitoring.py
+${PYSITELIB}/monitoring.pyc
+${PYSITELIB}/monitoring.pyo
+share/doc/monitoring/README.rst
+share/examples/monitoring/example-service-isrunning.py
+share/examples/monitoring/example-service-monitoring.py
+share/examples/monitoring/example-system-health.py
