@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/17 00:54:16 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/22 06:03:36 rodent Exp $
 #
 
 DISTNAME=	ccrtp-2.0.5
@@ -20,11 +20,6 @@ INFO_FILES=		yes
 
 .include "options.mk"
 
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/ucommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
