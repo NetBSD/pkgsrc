@@ -1,0 +1,10 @@
+Paris Traceroute is a new version of the well-known network diagnosis and
+measurement tool.
+
+traceroute fails in the presence of routers that employ load balancing on
+packet header fields. The failures lead to the discovery of inaccurate and
+incomplete paths, that may mislead operators during problem diagnosis and
+result in erroneous internet maps.
+
+Paris traceroute, by controling packet header contents, obtains a more precise
+picture of the actual routes that packets follow.

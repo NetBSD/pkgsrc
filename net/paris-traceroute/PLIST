@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/22 17:27:27 imil Exp $
+man/man8/paris-traceroute.8
+sbin/paris-traceroute
