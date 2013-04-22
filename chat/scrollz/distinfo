@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2012/02/16 15:36:31 hans Exp $
+$NetBSD: distinfo,v 1.9 2013/04/22 21:18:45 zafer Exp $
 
 SHA1 (ScrollZ-1.9.5.tar.gz) = 33496b0e8f4e87b3de9ce78a47d5b77b66b155c0
 RMD160 (ScrollZ-1.9.5.tar.gz) = 8817697f6c47f47bcecef196793cb1cffc0031ba
 Size (ScrollZ-1.9.5.tar.gz) = 906167 bytes
-SHA1 (patch-Makefile.in) = 87449d920da8bd05200f8806da5117654dcffdea
+SHA1 (patch-Makefile.in) = 81bf541e740e1ee855d6e2b43a8eb75892416f5c
 SHA1 (patch-aa) = 8c30f9e340a291ff2badcf733861f74e4a44f413
