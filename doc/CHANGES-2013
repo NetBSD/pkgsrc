@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1476 2013/04/22 13:12:50 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1477 2013/04/22 15:01:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2275,3 +2275,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/monitoring version 0.9.5 [imil 2013-04-22]
 	Updated editors/vim-share to 7.3.905 [morr 2013-04-22]
 	Updated sysutils/libnotify07 to 0.7.5nb1 [obache 2013-04-22]
+	Updated time/p5-DateTime-TimeZone to 1.59 [wen 2013-04-22]
