@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1472 2013/04/22 03:04:30 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1473 2013/04/22 09:38:36 marino Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2271,3 +2271,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/getmail to 4.40.0 [schmonz 2013-04-21]
 	Added sysutils/cuisine version 0.5.8 [imil 2013-04-21]
 	Updated devel/p5-Tree-DAG_Node to 1.11 [hiramatsu 2013-04-22]
+	Removed multimedia/ns-flash [marino 2013-04-22]
