@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/17 00:51:20 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/22 05:44:39 rodent Exp $
 #
 
 DISTNAME=	ucommon-6.0.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=commonc++/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/commoncpp/
 COMMENT=	Very light-weight C++ library for deeply embedded applications
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3
 
 USE_TOOLS+=	intltool pkg-config
 USE_LANGUAGES=	c c++
@@ -21,8 +21,6 @@ PKGCONFIG_OVERRIDE+=	ucommon.pc.in
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
