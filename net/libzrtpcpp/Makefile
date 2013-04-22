@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/17 00:55:35 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/22 06:10:42 rodent Exp $
 
 DISTNAME=	libzrtpcpp-2.3.2
 CATEGORIES=	net
@@ -20,11 +20,7 @@ CMAKE_ARGS+=		-DLIBDIRNAME=lib
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7i
 BUILDLINK_DEPMETHOD.openssl=	build
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ucommon/buildlink3.mk"
 .include "../../net/ccrtp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
