@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/01/21 14:41:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/23 09:02:26 wiz Exp $
 include/dvbpsi/atsc_eit.h
 include/dvbpsi/atsc_ett.h
 include/dvbpsi/atsc_mgt.h
@@ -42,6 +42,7 @@ include/dvbpsi/dr_4f.h
 include/dvbpsi/dr_50.h
 include/dvbpsi/dr_52.h
 include/dvbpsi/dr_55.h
+include/dvbpsi/dr_54.h
 include/dvbpsi/dr_56.h
 include/dvbpsi/dr_58.h
 include/dvbpsi/dr_59.h
