@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1479 2013/04/23 09:02:36 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1480 2013/04/23 14:14:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2278,3 +2278,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-TimeZone to 1.59 [wen 2013-04-22]
 	Added net/paris-traceroute version 0.92 [imil 2013-04-22]
 	Updated multimedia/libdvbpsi to 1.1.0 [wiz 2013-04-23]
+	Updated mail/getmail to 4.40.1 [schmonz 2013-04-23]
