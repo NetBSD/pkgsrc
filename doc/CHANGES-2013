@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1480 2013/04/23 14:14:09 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1481 2013/04/23 17:19:06 gson Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/paris-traceroute version 0.92 [imil 2013-04-22]
 	Updated multimedia/libdvbpsi to 1.1.0 [wiz 2013-04-23]
 	Updated mail/getmail to 4.40.1 [schmonz 2013-04-23]
+	Updated misc/py-anita to 1.30 [gson 2013-04-23]
