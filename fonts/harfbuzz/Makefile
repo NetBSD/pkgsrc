@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/21 14:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/23 18:23:02 bsiegert Exp $
 
 DISTNAME=	harfbuzz-0.9.16
 CATEGORIES=	fonts
@@ -20,6 +20,13 @@ PKGCONFIG_OVERRIDE=	harfbuzz.pc.in
 CONFIGURE_ENV+=		ICU_CONFIG=no
 
 LDFLAGS.OpenBSD+=	-lz
+
+.include "../../mk/bsd.prefs.mk"
+
+# gcc too old
+.if ${OPSYS} == "MirBSD"
+BUILDLINK_TRANSFORM+=	rm:-fvisibility-inlines-hidden
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
