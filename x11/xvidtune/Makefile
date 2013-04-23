@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/04/06 14:09:35 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/23 18:45:15 shattered Exp $
 #
 
-DISTNAME=	xvidtune-1.0.2
-PKGREVISION=	1
+DISTNAME=	xvidtune-1.0.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
