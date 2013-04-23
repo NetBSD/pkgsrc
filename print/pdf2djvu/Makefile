@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/04/06 03:45:22 rodent Exp $
+# $NetBSD: Makefile,v 1.20 2013/04/23 19:05:14 bsiegert Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.14
@@ -23,7 +23,7 @@ TOOLS_DEPENDS.gsed=	gsed>=4.2:../../textproc/gsed
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-5*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-5*) || ${OPSYS} == "MirBSD"
 BUILDLINK_TRANSFORM+=	rm:-Werror=overloaded-virtual
 .endif
 
