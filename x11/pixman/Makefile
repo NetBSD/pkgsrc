@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2013/01/30 10:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2013/04/23 11:42:45 is Exp $
 
 DISTNAME=	pixman-0.28.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +12,10 @@ COMMENT=	Library of low-level pixel manipulation routines
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
+.if ${MACHINE_ARCH} == i386
+CONFIGURE_ARGS += --disable-sse2
+.endif
+
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl
 
