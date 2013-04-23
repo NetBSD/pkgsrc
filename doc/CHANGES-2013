@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1483 2013/04/23 18:45:39 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.1484 2013/04/23 22:12:03 tez Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2282,3 +2282,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-anita to 1.30 [gson 2013-04-23]
 	Updated security/clamav to 0.97.8 [adam 2013-04-23]
 	Updated x11/xvidtune to 1.0.3 [shattered 2013-04-23]
+	Updated security/mit-krb5 to 1.10.4nb1 [tez 2013-04-23]
