@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1481 2013/04/23 17:19:06 gson Exp $
+$NetBSD: CHANGES-2013,v 1.1482 2013/04/23 18:28:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2280,3 +2280,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/libdvbpsi to 1.1.0 [wiz 2013-04-23]
 	Updated mail/getmail to 4.40.1 [schmonz 2013-04-23]
 	Updated misc/py-anita to 1.30 [gson 2013-04-23]
+	Updated security/clamav to 0.97.8 [adam 2013-04-23]
