@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12108 2013/04/23 09:23:29 wiz Exp $
+$NetBSD: TODO,v 1.12109 2013/04/23 18:45:39 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1314,7 +1314,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
-	o xvidtune-1.0.3
 	o xview-3.2.1.4.25.5
 	o xvkbd-3.4
 	o xwpe-1.5.30a
