@@ -1,4 +1,6 @@
-$NetBSD: patch-src_descriptors_dr__7c.c,v 1.1 2013/02/26 11:27:28 joerg Exp $
+$NetBSD: patch-src_descriptors_dr__7c.c,v 1.2 2013/04/23 13:22:22 wiz Exp $
+
+clang fix, accepted upstream.
 
 --- src/descriptors/dr_7c.c.orig	2013-02-25 14:29:08.000000000 +0000
 +++ src/descriptors/dr_7c.c
