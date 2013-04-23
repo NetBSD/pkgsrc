@@ -1,4 +1,4 @@
-# $NetBSD: l10n.mk,v 1.2 2009/10/11 08:13:38 markd Exp $
+# $NetBSD: l10n.mk,v 1.3 2013/04/23 17:25:17 rodent Exp $
 
 # This file provides useful defaults for the l10n packages of koffice.
 #
@@ -17,7 +17,7 @@ PKGNAME=	${DISTNAME:S/kde-/kde4-/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_KDE_I18N}
 
-COMMENT=	${KOFFICE_LANGUAGE} language pack for KDE4
+COMMENT=	${KDE_LANGUAGE} language pack for KDE4
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
