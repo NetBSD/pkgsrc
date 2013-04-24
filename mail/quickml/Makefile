@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 12:19:29 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/24 10:06:50 sbd Exp $
 #
 
 DISTNAME=	quickml-0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://0xcc.net/quickml/
 
