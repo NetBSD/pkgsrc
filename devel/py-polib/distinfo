@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/24 13:34:28 obache Exp $
+
+SHA1 (polib-1.0.3.tar.gz) = 247ef0d0a830ca354f1979e8e43e63e4dc61a89a
+RMD160 (polib-1.0.3.tar.gz) = 12c67f058450b966d0bd0b97187f28f62eb005e9
+Size (polib-1.0.3.tar.gz) = 149954 bytes
