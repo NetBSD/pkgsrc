@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/10/25 06:55:55 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/24 02:20:36 rodent Exp $
 #
 
 DISTNAME=	igerman98-20120607
 PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.j3e.de/ispell/igerman98/dict/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.j3e.de/ispell/igerman98/
 COMMENT=	German dictionaries for hunspell
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-BUILD_DEPENDS+=	ispell-base>=3.1.20nb1:../../textproc/ispell-base
+BUILD_DEPENDS+=	ispell>=3.1.20nb1:../../textproc/ispell
 DEPENDS+=	hunspell>=1.1.5:../../textproc/hunspell
 
 USE_LANGUAGES=	# none
