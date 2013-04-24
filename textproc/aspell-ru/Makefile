@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/09 02:33:47 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:44 rodent Exp $
 #
 
 DISTNAME=	aspell6-ru-0.99f7-1
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	Russian language support for aspell
 
+CONFLICTS+=	aspell-russian-[0-9]*
 HAS_CONFIGURE=	yes
 
 .include "../../textproc/aspell/buildlink3.mk"

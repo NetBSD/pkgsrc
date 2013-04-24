@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/09 02:33:37 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:42 rodent Exp $
 #
 
 DISTNAME=	aspell6-cs-20040614-1
@@ -14,6 +14,7 @@ COMMENT=	Czech language support for aspell
 # earlier versions core-dumped on the input
 BUILDLINK_API_DEPENDS.aspell+=	aspell>=0.60.2nb1
 
+CONFLICTS+=	aspell-czech-[0-9]*
 HAS_CONFIGURE=	yes
 
 .include "../../textproc/aspell/buildlink3.mk"
