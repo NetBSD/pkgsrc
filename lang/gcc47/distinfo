@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/04/21 08:55:19 sbd Exp $
+$NetBSD: distinfo,v 1.17 2013/04/24 14:31:50 adam Exp $
 
-SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
-RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
-Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-4.7.2.tar.bz2) = a464ba0f26eef24c29bcd1e7489421117fb9ee35
-RMD160 (gcc-4.7.2.tar.bz2) = fc281ade14b47d2a9c2ced4f7082c74bfbae31c1
-Size (gcc-4.7.2.tar.bz2) = 82884636 bytes
+SHA1 (gcc-4.7.3.tar.bz2) = 69e02737bd6e1a7c6047d801600d39c32b9427ca
+RMD160 (gcc-4.7.3.tar.bz2) = b4ba153b098cad726ecd28195ee445aa542d37ae
+Size (gcc-4.7.3.tar.bz2) = 82904224 bytes
 SHA1 (patch-configure) = 51c0978c60baddd90ef7e512445fdef913c04e6c
 SHA1 (patch-gcc_Makefile.in) = a61187af64943ef38088442397fcd0f3f65fe2b5
 SHA1 (patch-gcc_config.gcc) = efa4ecabd71bdec14d5dd1f8bb836116c7a9d6e9
@@ -22,7 +19,7 @@ SHA1 (patch-include_libiberty.h) = ad2c64e9a14405c89b02ff68811b1c889405d0a1
 SHA1 (patch-libgcc_config.host) = 6b54e18c6348c4aeb3fda3093fbe990b59456af7
 SHA1 (patch-libgcc_config_i386_dragonfly-unwind.h) = 9d77252dd982495e90f95b82706bab29e581df9f
 SHA1 (patch-libgcc_crtstuff.c) = 88500ea895cd683608f8f2b7177149f11947e3b4
-SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 2a0b8c6d2f86d985506578b4e74947d3fb1766a5
+SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 6da81a310bc76db3ce88649d42658c748c958800
 SHA1 (patch-libgfortran_configure) = b3bbc7d9201073a1bed0b7e10141465bab52c8be
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
 SHA1 (patch-libgo_runtime_proc.c) = 55b2c449f4d43fe9b6d7ca1c7f075feebca8ebd6
