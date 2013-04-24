@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/24 02:20:41 rodent Exp $
+lib/romanian.aff
+lib/romanian.hash
+lib/romanian-signs.aff
+lib/romanian-signs.hash

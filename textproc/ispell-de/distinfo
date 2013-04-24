@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/24 02:20:38 rodent Exp $
+
+SHA1 (igerman98-20120607.tar.bz2) = 2cb42608727a13c877db98f19fe43b5cae2d4e73
+RMD160 (igerman98-20120607.tar.bz2) = 0756833bcda3b67f430b6b5dbfc5db9956960eae
+Size (igerman98-20120607.tar.bz2) = 475390 bytes
+SHA1 (patch-aa) = 5c14e2484a9a775b59ce84da1d2d3c2b4a8c9809

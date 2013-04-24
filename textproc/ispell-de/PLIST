@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/24 02:20:38 rodent Exp $
+lib/de_AT.aff
+lib/de_AT.hash
+lib/de_CH.aff
+lib/de_CH.hash
+lib/de_DE.aff
+lib/de_DE.hash

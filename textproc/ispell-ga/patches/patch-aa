@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1 2013/04/24 02:20:40 rodent Exp $
+
+--- Makefile.orig	2002-07-31 16:37:34.000000000 +0000
++++ Makefile
+@@ -1,13 +1,13 @@
+ # Makefile ispell-gaeilge
+ # INSTALLATION=gaeilgemor
+ INSTALLATION=gaeilge
+-ISPELLDIR=/usr/local/lib
+-ISPELLBIN=/usr/local/bin
++ISPELLDIR=${PREFIX}/lib
++ISPELLBIN=${PREFIX}/bin
+ MAKE=/usr/ccs/bin/make
+ ASPELLDATA=/usr/local/aspell
+ ASPELLFLAGS=--dict-dir=$(ASPELLDATA)/dict --data-dir=$(ASPELLDATA)/data
+ ASPELL=/usr/local/bin/aspell $(ASPELLFLAGS)
+-INSTALL=/usr/local/bin/install
++#INSTALL=/usr/local/bin/install
+ 
+ #   Shouldn't have to change anything below here
+ SHELL=/bin/sh
+@@ -172,14 +172,14 @@ sounds.txt: FORCE
+ 	$(ASPELL) --lang=gaeilge soundslike < aspell.txt > sounds.txt
+ 
+ install: $(INSTALLATION).hash
+-	$(INSTALL_DATA) $(INSTALLATION).hash $(ISPELLDIR)
+-	$(INSTALL_DATA) $(INSTALLATION).aff $(ISPELLDIR)
++	$(BSD_INSTALL_DATA) $(INSTALLATION).hash ${DESTDIR}$(ISPELLDIR)
++	$(BSD_INSTALL_DATA) $(INSTALLATION).aff ${DESTDIR}$(ISPELLDIR)
+ 
+ installall: gaeilge.hash gaeilgemor.hash
+-	$(INSTALL_DATA) gaeilge.hash $(ISPELLDIR)
+-	$(INSTALL_DATA) gaeilge.aff $(ISPELLDIR)
+-	$(INSTALL_DATA) gaeilgemor.hash $(ISPELLDIR)
+-	$(INSTALL_DATA) gaeilgemor.aff $(ISPELLDIR)
++	$(BSD_INSTALL_DATA) gaeilge.hash $(ISPELLDIR)
++	$(BSD_INSTALL_DATA) gaeilge.aff $(ISPELLDIR)
++	$(BSD_INSTALL_DATA) gaeilgemor.hash $(ISPELLDIR)
++	$(BSD_INSTALL_DATA) gaeilgemor.aff $(ISPELLDIR)
+ 
+ seiceail:
+ 	@cat ../bearla/tcht

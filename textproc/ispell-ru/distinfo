@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/24 02:20:41 rodent Exp $
+
+SHA1 (rus-ispell-0.99g4.tar.gz) = a1f178b8e51abe812a69209f58e4f583e4e7bc39
+RMD160 (rus-ispell-0.99g4.tar.gz) = 6c2d74b22c488e6372615b98c727f84011dea1be
+Size (rus-ispell-0.99g4.tar.gz) = 521972 bytes
+SHA1 (patch-aa) = 79cf6e28c3076a324e0f5b9b1228192bc470be6e
