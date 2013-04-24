@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2013/03/15 16:10:57 is Exp $
+# $NetBSD: Makefile,v 1.29.2.1 2013/04/24 21:11:06 tron Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -175,6 +175,17 @@ post-install:
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_HOSTCFLAGS+=	-Wno-error=ignored-attributes
+EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
+		-Wno-error=tautological-compare -Wno-error=null-dereference \
+		-Wno-error=empty-body -Wno-error=self-assign \
+		-Wno-error=sometimes-uninitialized
+.endif
+
+MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
