@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 00:20:16 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/24 10:06:48 sbd Exp $
 #
 
 DISTNAME=	pstotext-1.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters print
 MASTER_SITES=	ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/contrib/
 
