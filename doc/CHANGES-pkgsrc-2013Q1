@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.11 2013/04/24 21:12:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.12 2013/04/24 22:26:05 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -49,3 +49,5 @@ Pullup ticket #4123 - requested by bsiegert
 shells/tcsh: build fix
 Pullup ticket #4124 - requested by bouyer
 sysutils/xentools41: security patch
+Pullup ticket #4125 - requested by bouyer
+sysutils/xenkernel41: security patch
