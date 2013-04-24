@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/24 11:45:00 rodent Exp $
+lib/galician.aff
+lib/galician.hash
