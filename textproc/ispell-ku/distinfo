@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/24 03:32:37 rodent Exp $
+
+SHA1 (ispell-ku-0.20.tar.gz) = bf6b7ba306365b0c65d1e4e258e75cfc7116749a
+RMD160 (ispell-ku-0.20.tar.gz) = 7ceb7b0992b89b5fdfed6e0ba547fe6320a239de
+Size (ispell-ku-0.20.tar.gz) = 46143 bytes
+SHA1 (patch-Makefile) = 7b70e97cb743620fb476b63a86771122e0c3ccb5
