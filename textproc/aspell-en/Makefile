@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/09 02:33:40 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:42 rodent Exp $
 #
 
 DISTNAME=	aspell6-en-6.0-0
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	English language support for aspell
 
+CONFLICTS+=	aspell-english-[0-9]*
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	ASPELL=${BUILDLINK_PREFIX.aspell}/bin/aspell
 CONFIGURE_ENV+=	PREZIP=${BUILDLINK_PREFIX.aspell}/bin/prezip-bin

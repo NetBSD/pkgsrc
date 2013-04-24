@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/09 02:33:43 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:43 rodent Exp $
 
 DISTNAME=	aspell5-ga-3.5-0
 PKGNAME=	${DISTNAME:S/5-/-/1:S/-0/.0/1}
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://borel.slu.edu/~kps/ispell/
 COMMENT=	Irish language support for aspell
 
+CONFLICTS+=	aspell-gaeilge-[0-9]*
 HAS_CONFIGURE=	yes
 
 .include "../../textproc/aspell/buildlink3.mk"
