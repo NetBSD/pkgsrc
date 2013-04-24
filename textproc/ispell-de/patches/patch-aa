@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2013/04/24 02:20:38 rodent Exp $
+
+--- Makefile.orig	2010-01-18 09:07:38.000000000 +0000
++++ Makefile
+@@ -81,8 +81,8 @@ HUNSPELL_BIN = hunspell
+ HUNSPELL = $(HUNSPELL_BIN) `$(HUNSPELL_BIN) -h 2>&1 | grep -q "hunspell \\-i" && echo "-i latin1"`
+ 
+ 
+-SQ = sq
+-UNSQ = unsq
++SQ = ../bin/sq.pl
++UNSQ = ../bin/unsq.pl
+ #   if for some reason you don't have Ispell's unsq use my Perl sq/unsq
+ #  and put it into a directory known by your PATH variable!
+ #UNSQ = unsq.pl
