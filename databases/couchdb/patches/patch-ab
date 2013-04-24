@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.3 2013/03/04 14:12:40 fhajny Exp $
+$NetBSD: patch-ab,v 1.4 2013/04/24 12:22:38 jperkin Exp $
 
 Install into examples, not sysconfdir.
 
---- etc/couchdb/Makefile.in.orig	2012-12-20 21:28:48.000000000 +0000
-+++ etc/couchdb/Makefile.in	2013-03-04 13:08:45.587487445 +0000
-@@ -73,7 +73,7 @@ am__nobase_list = $(am__nobase_strip_set
- am__base_list = \
-   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
-   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+--- etc/couchdb/Makefile.in.orig	2013-03-30 14:46:47.000000000 +0000
++++ etc/couchdb/Makefile.in
+@@ -99,7 +99,7 @@ am__uninstall_files_from_dir = { \
+     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+          $(am__cd) "$$dir" && rm -f $$files; }; \
+   }
 -am__installdirs = "$(DESTDIR)$(localconfdir)"
 +am__installdirs = "$(DESTDIR)$(localegdir)"
  DATA = $(localconf_DATA) $(noinst_DATA)
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  transform = @program_transform_name@
-@@ -211,6 +211,7 @@ launchddir = @launchddir@
+@@ -240,6 +240,7 @@ launchddir = @launchddir@
  libdir = @libdir@
  libexecdir = @libexecdir@
  localconfdir = @localconfdir@
@@ -21,13 +21,18 @@ Install into examples, not sysconfdir.
  localdatadir = @localdatadir@
  localdocdir = @localdocdir@
  localedir = @localedir@
-@@ -303,24 +304,24 @@ clean-libtool:
+@@ -331,25 +332,25 @@ clean-libtool:
  	-rm -rf .libs _libs
  install-localconfDATA: $(localconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(localconfdir)" || $(MKDIR_P) "$(DESTDIR)$(localconfdir)"
-+	test -z "$(localegdir)" || $(MKDIR_P) "$(DESTDIR)$(localegdir)"
- 	@list='$(localconf_DATA)'; test -n "$(localconfdir)" || list=; \
+-	@list='$(localconf_DATA)'; test -n "$(localconfdir)" || list=; \
++	@list='$(localconf_DATA)'; test -n "$(localegdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(localconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(localconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(localegdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(localegdir)" || exit 1; \
+ 	fi; \
  	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  echo "$$d$$p"; \
@@ -44,15 +49,12 @@ Install into examples, not sysconfdir.
 -	@list='$(localconf_DATA)'; test -n "$(localconfdir)" || list=; \
 +	@list='$(localconf_DATA)'; test -n "$(localegdir)" || list=; \
  	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
- 	test -n "$$files" || exit 0; \
--	echo " ( cd '$(DESTDIR)$(localconfdir)' && rm -f" $$files ")"; \
--	cd "$(DESTDIR)$(localconfdir)" && rm -f $$files
-+	echo " ( cd '$(DESTDIR)$(localegdir)' && rm -f" $$files ")"; \
-+	cd "$(DESTDIR)$(localegdir)" && rm -f $$files
+-	dir='$(DESTDIR)$(localconfdir)'; $(am__uninstall_files_from_dir)
++	dir='$(DESTDIR)$(localegdir)'; $(am__uninstall_files_from_dir)
  tags: TAGS
  TAGS:
  
-@@ -362,7 +363,7 @@ check-am: all-am
+@@ -391,7 +392,7 @@ check-am: all-am
  check: check-am
  all-am: Makefile $(DATA)
  installdirs:
@@ -61,7 +63,7 @@ Install into examples, not sysconfdir.
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
-@@ -517,20 +518,20 @@ local_dev.ini: local.ini
+@@ -558,20 +559,20 @@ local_dev.ini: local.ini
  	fi
  
  install-data-hook:

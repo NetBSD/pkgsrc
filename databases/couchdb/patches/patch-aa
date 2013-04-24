@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2013/03/04 14:12:40 fhajny Exp $
+$NetBSD: patch-aa,v 1.5 2013/04/24 12:22:38 jperkin Exp $
 
 Set pkgsrc standard paths.
 
---- configure.orig	2012-12-20 21:28:51.000000000 +0000
-+++ configure	2013-03-04 13:05:12.523266279 +0000
-@@ -757,6 +757,7 @@ localstatelogdir
+--- configure.orig	2013-03-30 14:46:50.000000000 +0000
++++ configure
+@@ -646,6 +646,7 @@ localstatelogdir
  localstatelibdir
  locallibdir
  localdocdir
@@ -12,7 +12,34 @@ Set pkgsrc standard paths.
  localdatadir
  localconfdir
  bug_uri
-@@ -18159,13 +18160,15 @@ localdatadir=${datadir}/${package_identi
+@@ -18288,7 +18289,7 @@ fi
+ done
+ test -n "$CURL_CONFIG" || CURL_CONFIG="no"
+ 
+-    if test "$CURL_CONFIG" == "no"; then :
++    if test "$CURL_CONFIG" = "no"; then :
+ 
+       :
+ 
+@@ -18300,7 +18301,7 @@ $as_echo "$as_me: WARNING: You will be u
+ 
+ else
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
+ 
+@@ -18310,7 +18311,7 @@ else
+ 
+ fi
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
+ 
+@@ -19116,13 +19117,15 @@ localdatadir=${datadir}/${package_identi
  
  localdocdir=${datadir}/doc/${package_identifier}
  
@@ -30,7 +57,7 @@ Set pkgsrc standard paths.
  
  
  # On Windows we install directly into our erlang distribution.
-@@ -18175,9 +18178,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+@@ -19132,9 +19135,9 @@ if test x${IS_WINDOWS} = xTRUE; then
      localerlanglibdir=${libdir}
  
  else
