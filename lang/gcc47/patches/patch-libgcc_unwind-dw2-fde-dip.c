@@ -1,12 +1,12 @@
-$NetBSD: patch-libgcc_unwind-dw2-fde-dip.c,v 1.1 2012/06/23 22:13:02 marino Exp $
+$NetBSD: patch-libgcc_unwind-dw2-fde-dip.c,v 1.2 2013/04/24 14:31:51 adam Exp $
 
 Add dl_iterate_phdr error handling support for all BSDs.  The NetBSD and
 OpenBSD code will not run until dl_iterate_phdr detection in the configure
 script is uncommented.
 
---- libgcc/unwind-dw2-fde-dip.c.orig	2011-11-02 15:26:35.000000000 +0000
+--- libgcc/unwind-dw2-fde-dip.c.orig	2012-10-06 21:55:06.000000000 +0000
 +++ libgcc/unwind-dw2-fde-dip.c
-@@ -54,11 +54,19 @@
+@@ -54,13 +54,15 @@
  #endif
  
  #if !defined(inhibit_libc) && defined(HAVE_LD_EH_FRAME_HDR) \
@@ -17,13 +17,10 @@ script is uncommented.
  # define USE_PT_GNU_EH_FRAME
  #endif
  
-+#if !defined(inhibit_libc) && defined(HAVE_LD_EH_FRAME_HDR) \
+ #if !defined(inhibit_libc) && defined(HAVE_LD_EH_FRAME_HDR) \
+-    && defined(__OpenBSD__)
 +    && defined(TARGET_DL_ITERATE_PHDR) \
 +    && (defined(__OpenBSD__) || defined(__NetBSD__))
-+# define ElfW(n) Elf_##n
-+# define USE_PT_GNU_EH_FRAME
-+#endif
-+
- #if !defined(inhibit_libc) && defined(HAVE_LD_EH_FRAME_HDR) \
-     && defined(TARGET_DL_ITERATE_PHDR) \
-     && defined(__sun__) && defined(__svr4__)
+ # define ElfW(type) Elf_##type
+ # define USE_PT_GNU_EH_FRAME
+ #endif
