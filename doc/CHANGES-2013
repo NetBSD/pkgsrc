@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1489 2013/04/24 09:40:48 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1490 2013/04/24 09:52:54 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2302,3 +2302,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/ispell-lt version 1.3 [rodent 2013-04-24]
 	Added textproc/ispell-ku version 0.20 [rodent 2013-04-24]
 	Updated sysutils/cdrtools to 3.01alpha14 [wiz 2013-04-24]
+	Updated print/ghostscript to 9.05nb4 [sbd 2013-04-24]
