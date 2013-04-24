@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2013/02/17 19:18:09 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/24 02:20:38 rodent Exp $
 #
 
 DISTNAME=	ispell.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}ispell-emacs-3.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://kdstevens.com/pub/stevens/
 EXTRACT_SUFX=	.gz
@@ -14,7 +14,7 @@ COMMENT=	Emacs interface for ispell spell checker
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/ispell
 
-DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
+DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 
 DIST_SUBDIR=	${PKGNAME_NOREV:C|^xemacs-||}
 WRKSRC=		${WRKDIR}
