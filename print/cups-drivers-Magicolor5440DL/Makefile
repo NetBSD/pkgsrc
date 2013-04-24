@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2013/03/16 22:44:34 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2013/04/24 10:10:13 sbd Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
 PKGNAME=	cups-drivers-Magicolor5440DL-1.2.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print
 MASTER_SITES=	http://printer.konicaminolta.net/drivers/linux/
 EXTRACT_SUFX=	.zip
@@ -14,6 +14,9 @@ COMMENT=	CUPS drivers for printer Konica Minolta Magicolor 5440DL
 
 BUILD_DEPENDS+=	jbigkit>=1.6:../../graphics/jbigkit
 DEPENDS+=	cups>=1.1.14:../../print/cups
+
+GHOSTSCRIPT_REQD=	8.0
+USE_TOOLS+=		gs:run
 
 WRKSRC=		${WRKDIR}/5440DL_64_v1.2.1/magicolor5440DL-1.2.1/
 
@@ -27,13 +30,6 @@ LDFLAGS.DragonFly=	-lm
 post-extract:
 	cd ${WRKDIR}/5440DL_64_v1.2.1/; \
 		extract_file=src/magicolor5440DL-1.2.1.tar.gz; ${EXTRACT_CMD}
-
-# This >=8.0 should be restored if we ever go back to a single package
-# called just "ghostscript". (The current family of packages were
-# created in the days of 9.x and therefore always satisfy this
-# requirement.)
-#DEPENDS+=	ghostscript>=8.0:../../print/ghostscript
-.include "../../print/ghostscript/ghostscript.mk"
 
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"

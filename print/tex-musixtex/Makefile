@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/03/16 22:48:12 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/24 10:11:41 sbd Exp $
 
 DISTNAME=	musixtex
 PKGNAME=	tex-${DISTNAME}-1.15
-PKGREVISION=	2
+PKGREVISION=	3
 TEXLIVE_REV=	22568
 
 MAINTAINER=	dgriffi@cs.csubak.edu
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+
+USE_TOOLS+=	gs:run
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
@@ -30,5 +32,4 @@ post-extract:
 	${MV} ${WRKSRC}/texmf-dist/scripts/musixtex/${f}.lua ${WRKSRC}/bin/${f}
 .endfor
 
-.include "../../print/ghostscript/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

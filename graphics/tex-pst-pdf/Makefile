@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/03/16 22:53:52 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/24 10:16:08 sbd Exp $
 
 DISTNAME=	pst-pdf
 PKGNAME=	tex-${DISTNAME}-1.1v
 TEXLIVE_REV=	15878
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Make PDF versions of graphics by processing between runs
@@ -17,6 +17,8 @@ DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
 DEPENDS+=	tex-pdftex-def-[0-9]*:../../print/tex-pdftex-def
 DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
+
+USE_TOOLS+=	gs:run
 
 EVAL_PREFIX+=	DVIPS_PREFIX=dvipsk
 EVAL_PREFIX+=	PS2PDF_PREFIX=ghostscript
@@ -47,5 +49,4 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/scripts/pst-pdf/ps4pdf ${WRKSRC}/bin/
 
-.include "../../print/ghostscript/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
