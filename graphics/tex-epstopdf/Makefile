@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:56:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/24 10:06:49 sbd Exp $
 
 DISTNAME=	epstopdf
 PKGNAME=	tex-${DISTNAME}-2.16
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	19287
 
 MAINTAINER=	minskim@NetBSD.org

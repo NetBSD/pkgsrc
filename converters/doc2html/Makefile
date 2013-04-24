@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 13:24:18 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/24 10:06:48 sbd Exp $
 #
 
 DISTNAME=	doc2html
 PKGNAME=	doc2html-3.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 MASTER_SITES=	http://www.htdig.org/files/contrib/parsers/
 
