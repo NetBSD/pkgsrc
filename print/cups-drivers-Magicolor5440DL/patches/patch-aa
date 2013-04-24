@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2012/03/16 01:11:32 obache Exp $
+$NetBSD: patch-aa,v 1.5 2013/04/24 06:45:32 sbd Exp $
 
 - fix a typo about LDFLAGS
 - fix paths, some of them being hardcoded.
 
---- configure.orig	2007-02-28 23:33:11.000000000 +0100
+--- configure.orig	2007-02-28 22:33:11.000000000 +0000
 +++ configure
 @@ -2957,7 +2957,7 @@ fi
  echo "$as_me: libdir is $libdir" >&6;}
@@ -41,6 +41,19 @@ $NetBSD: patch-aa,v 1.4 2012/03/16 01:11:32 obache Exp $
  		CPPFLAGS="$CPPFLAGS -I/usr/local/include"
  		KM_DATADIR="$datadir/KONICA_MINOLTA/mc5440DL"
  
+@@ -2999,10 +2999,10 @@ _ACEOF
+                 ;;
+         *)
+                 # All others
+-                CUPS_SERVERBIN="$libdir/cups"
++                CUPS_SERVERBIN="$exec_prefix/libexec/cups"
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define CUPS_SERVERBIN "$libdir/cups"
++#define CUPS_SERVERBIN "$exec_prefix/libexec/cups"
+ _ACEOF
+ 
+ 		KM_DATADIR="$datadir/KONICA_MINOLTA/mc5440DL"
 @@ -3239,7 +3239,7 @@ elif test -f "/usr/lib/libjbig.a"; then
  elif test -f "/usr/local/lib64/libjbig.a"; then
  	LIBJBIG="/usr/local/lib64/libjbig.a"
