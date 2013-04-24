@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile,v 1.1 2013/04/24 03:32:38 rodent Exp $
+
+Install/uninstall to DESTDIR.
+
+--- Makefile.orig	2005-03-12 16:12:27.000000000 +0000
++++ Makefile
+@@ -16,11 +16,11 @@ $(INSTALLATION).hash: $(RAWWORDS) $(AFFI
+ 	$(ISPELLBIN)/buildhash $(RAWWORDS) $(AFFIXFILE) $(INSTALLATION).hash
+ 
+ install: $(INSTALLATION).hash $(AFFIXFILE)
+-	$(INSTALL_DATA) $(INSTALLATION).hash $(ISPELLDIR)
+-	$(INSTALL_DATA) $(AFFIXFILE) $(ISPELLDIR)
++	$(INSTALL_DATA) $(INSTALLATION).hash ${DESTDIR}$(ISPELLDIR)
++	$(INSTALL_DATA) $(AFFIXFILE) ${DESTDIR}$(ISPELLDIR)
+ 
+ uninstall:
+-	rm -f $(ISPELLDIR)/$(INSTALLATION).hash $(ISPELLDIR)/$(AFFIXFILE)
++	rm -f $(ISPELLDIR)/$(INSTALLATION).hash ${DESTDIR}$(ISPELLDIR)/$(AFFIXFILE)
+ 
+ clean:
+ 	rm -f *.cnt *.stat *.bak *.tar *.tar.gz

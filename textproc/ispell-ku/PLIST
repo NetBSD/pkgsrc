@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/24 03:32:37 rodent Exp $
+lib/ku.aff
+lib/ku.hash
