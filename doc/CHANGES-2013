@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1497 2013/04/24 16:38:06 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1498 2013/04/24 20:01:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2309,3 +2309,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Mouse to 1.08 [wen 2013-04-24]
 	Updated textproc/p5-Text-Xslate to 2.0001 [wen 2013-04-24]
 	Updated devel/p5-XSLoader to 0.16 [hiramatsu 2013-04-24]
+	Updated lang/gcc47 to 4.7.3 [adam 2013-04-24]
+	Updated lang/gcc47-libs to 4.7.3nb1 [adam 2013-04-24]
