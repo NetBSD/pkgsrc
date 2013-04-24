@@ -1,0 +1,21 @@
+$NetBSD: patch-xenstat_libxenstat_Makefile,v 1.1.2.2 2013/04/24 21:11:06 tron Exp $
+
+--- xenstat/libxenstat/Makefile.orig	2013-03-25 19:37:42.000000000 +0000
++++ xenstat/libxenstat/Makefile
+@@ -57,13 +57,13 @@ $(SHLIB): $(OBJECTS-y)
+ 	    $(OBJECTS-y) $(LDLIBS-y)
+ 
+ src/xenstat.o: src/xenstat.c src/xenstat.h src/xenstat_priv.h
+-	$(CC) $(CFLAGS) $(WARN_FLAGS) -c -o $@ $<
++	$(CC) $(WARN_FLAGS) $(CFLAGS) -c -o $@ $<
+ 
+ src/xenstat_linux.o: src/xenstat_linux.c src/xenstat_priv.h
+-	$(CC) $(CFLAGS) $(WARN_FLAGS) -c -o $@ $<
++	$(CC) $(WARN_FLAGS) $(CFLAGS) -c -o $@ $<
+ 
+ src/xenstat_solaris.o: src/xenstat_solaris.c src/xenstat_priv.h
+-	$(CC) $(CFLAGS) $(WARN_FLAGS) -c -o $@ $<
++	$(CC) $(WARN_FLAGS) $(CFLAGS) -c -o $@ $<
+ 
+ src/libxenstat.so.$(MAJOR): $(LIB)
+ 	$(MAKE_LINK) $(<F) $@
