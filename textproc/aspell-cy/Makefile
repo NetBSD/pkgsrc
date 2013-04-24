@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/09 02:33:38 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:45 rodent Exp $
 #
 
 DISTNAME=	aspell-cy-0.50-3
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	Welsh language support for aspell
 
+CONFLICTS+=	aspell-welsh-[0-9]*
 HAS_CONFIGURE=	yes
 
 .include "../../textproc/aspell/buildlink3.mk"
