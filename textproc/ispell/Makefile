@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/04/24 02:20:36 rodent Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/24 11:15:45 rodent Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	Interactive spelling checker
 
+CONFLICTS+=	ispell-base-[0-9]*
 USE_TOOLS+=	mktemp:run yacc
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
