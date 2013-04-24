@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2013/04/24 02:20:37 rodent Exp $
+
+--- ijoin.c.orig	Fri Mar 19 15:00:19 2004
++++ ijoin.c	Fri Mar 19 15:01:51 2004
+@@ -133,8 +133,6 @@
+ static int		unpairable1 = 0; /* NZ if -a1 */
+ static int		unpairable2 = 0; /* NZ if -a2 */
+ 
+-extern int	strcmp ();
+-
+ int main (argc, argv)			/* Join files */
+     int			argc;		/* Argument count */
+     char *		argv[];		/* Argument vector */

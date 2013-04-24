@@ -1,0 +1,52 @@
+$NetBSD: patch-as,v 1.1 2013/04/24 02:20:37 rodent Exp $
+
+Avoid conflit with system getline.
+Fixes PR pkg/41746, thanks to Tom Stejskal.
+
+--- correct.c.orig	2009-07-17 09:14:29.000000000 +0100
++++ correct.c	2009-07-17 09:14:46.000000000 +0100
+@@ -245,7 +245,7 @@
+ 		  struct flagent * sufent,
+ 		  ichar_t savearea[MAX_CAPS][INPUTWORDLEN + MAXAFFIXLEN],
+ 		  int * nsaved));
+-static char *	getline P ((char * buf, int bufsize));
++static char *	get_line P ((char * buf, int bufsize));
+ void		askmode P ((void));
+ void		copyout P ((unsigned char ** cc, int cnt));
+ static void	lookharder P ((unsigned char * string));
+@@ -571,7 +571,7 @@
+ 
+ 		imove (li - 1, 0);
+ 		(void) putchar ('!');
+-		if (getline ((char *) buf, sizeof buf) == NULL)
++		if (get_line ((char *) buf, sizeof buf) == NULL)
+ 		    {
+ 		    (void) putchar (7);
+ 		    ierase ();
+@@ -596,7 +596,7 @@
+ 		    (void) printf ("%s ", CORR_C_READONLY);
+ 		    }
+ 		(void) printf (CORR_C_REPLACE_WITH);
+-		if (getline ((char *) ctok, ctokl) == NULL)
++		if (get_line ((char *) ctok, ctokl) == NULL)
+ 		    {
+ 		    (void) putchar (7);
+ 		    /* Put it back */
+@@ -664,7 +664,7 @@
+ 		unsigned char	buf[100];
+ 		imove (li - 1, 0);
+ 		(void) printf (CORR_C_LOOKUP_PROMPT);
+-		if (getline ((char *) buf, sizeof buf) == NULL)
++		if (get_line ((char *) buf, sizeof buf) == NULL)
+ 		    {
+ 		    (void) putchar (7);
+ 		    ierase ();
+@@ -1583,7 +1583,7 @@
+     return;
+     }
+ 
+-static char * getline (s, len)
++static char * get_line (s, len)
+     register char *	s;
+     register int	len;
+     {
