@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/04/10 21:10:54 tonnerre Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/25 12:11:21 joerg Exp $
 
 DISTNAME=		puppet-3.1.1
 CATEGORIES=		sysutils
@@ -15,6 +15,8 @@ DEPENDS+=		${RUBY_PKGPREFIX}-io-console>=0.3:../../devel/ruby-io-console
 DEPENDS+=		${RUBY_PKGPREFIX}-json-pure>=0:../../textproc/ruby-json-pure
 DEPENDS+=		${RUBY_PKGPREFIX}-minitest>=2.5.1:../../devel/ruby-minitest
 DEPENDS+=		${RUBY_PKGPREFIX}-shadow>=2.0.0:../../security/ruby-shadow
+
+RUBY_VERSION_SUPPORTED=	193
 
 CONFLICTS+=		ruby[1-9][0-9]-puppet-[0-9]* puppet-[0-9]*
 
