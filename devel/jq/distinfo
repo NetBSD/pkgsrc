@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/04/25 09:10:26 jperkin Exp $
+
+SHA1 (jq-1.1.tar.gz) = a0b170faae0e79c2fcd3a9117ae109572cb9f443
+RMD160 (jq-1.1.tar.gz) = a43eb7e0b50db18708998a1538bfa81d59d8e64d
+Size (jq-1.1.tar.gz) = 432144 bytes
+SHA1 (patch-Makefile) = 41e1adee783b10b526e8a4d2a8614d4b9cfe9942
