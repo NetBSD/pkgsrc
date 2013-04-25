@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:46 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/25 06:40:49 wiz Exp $
 #
 
 DISTNAME=	ispell-pl-20021127
@@ -9,7 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://ispell-pl.sourceforge.net/
 COMMENT=	Polish dictionary for interactive spelling checker
 
-CONFLICTS+	ispell-polski-[0-9]*
+CONFLICTS+=	ispell-polski-[0-9]*
 DEPENDS+=	ispell>=3.1.20:../../textproc/ispell
 
 INSTALLATION_DIRS=	lib
