@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2013/04/24 02:20:41 rodent Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/04/25 06:42:39 wiz Exp $
+# used by textproc/ispell-ru/Makefile
+# used by textproc/ispell-ru-io/Makefile
 
 RUS_ISPELL_VERSION=	0.99g4
 
@@ -11,9 +13,8 @@ COMMENT=	Russian (KOI8-R) ispell dictonary from Alexander Lebedev
 
 DEPENDS+=	ispell>=3.1.20:../../textproc/ispell
 
-FILESDIR=	${.CURDIR}/../../textproc/ispell-russian/files
-PATCHDIR=	${.CURDIR}/../../textproc/ispell-russian/patches
-DISTINFO_FILE=	${.CURDIR}/../../textproc/ispell-russian/distinfo
+PATCHDIR=	${.CURDIR}/../../textproc/ispell-ru/patches
+DISTINFO_FILE=	${.CURDIR}/../../textproc/ispell-ru/distinfo
 
 WRKSRC=		${WRKDIR}
 MAKE_ENV+=	CAT=${CAT:Q} RM=${RM:Q} SED=${SED:Q} TR=${TR:Q} UNIQ="uniq"
