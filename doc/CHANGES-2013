@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1502 2013/04/25 11:08:23 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1503 2013/04/25 11:11:11 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2315,3 +2315,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/hal to 0.5.14nb10 [sbd 2013-04-25]
 	Added devel/jq version 1.1 [jperkin 2013-04-25]
 	Updated math/ruby-spreadsheet to 0.8.5 [obache 2013-04-25]
+	Updated www/nginx to 1.4.0 [imil 2013-04-25]
