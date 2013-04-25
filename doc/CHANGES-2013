@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1504 2013/04/25 11:27:43 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1505 2013/04/25 13:33:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2317,3 +2317,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/ruby-spreadsheet to 0.8.5 [obache 2013-04-25]
 	Updated www/nginx to 1.4.0 [imil 2013-04-25]
 	Updated www/nginx to 1.4.0nb1 [imil 2013-04-25]
+	Updated lang/sun-jre6 to 6.0.45 [ryoon 2013-04-25]
+	Updated lang/sun-jdk6 to 6.0.45 [ryoon 2013-04-25]
