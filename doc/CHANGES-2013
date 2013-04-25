@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1500 2013/04/25 03:59:38 sbd Exp $
+$NetBSD: CHANGES-2013,v 1.1501 2013/04/25 09:11:37 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2313,3 +2313,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc47-libs to 4.7.3nb1 [adam 2013-04-24]
 	Updated databases/phpmyadmin to 3.5.8.1 [tron 2013-04-24]
 	Updated sysutils/hal to 0.5.14nb10 [sbd 2013-04-25]
+	Added devel/jq version 1.1 [jperkin 2013-04-25]
