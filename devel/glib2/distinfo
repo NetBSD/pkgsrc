@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.184 2013/04/20 08:59:28 obache Exp $
+$NetBSD: distinfo,v 1.185 2013/04/25 12:10:48 joerg Exp $
 
 SHA1 (glib-2.36.1.tar.xz) = 6016ee6b46822d0ed471073e27420cfab26f7c68
 RMD160 (glib-2.36.1.tar.xz) = d89a1719d2e931833d68d91feb7233f0151b7326
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
 SHA1 (patch-ac) = 96e153339675457356f71e35d20375bed669d337
 SHA1 (patch-ae) = 09f16e8e14bdea3ee0e478d335f65cb66939e5f5
 SHA1 (patch-af) = 45c46d5d01517563fde21ba1a2fdd7d0485932ca
-SHA1 (patch-ah) = 66761b7994c54651933d50024eb607952565b214
+SHA1 (patch-ah) = 64765bc71ed7d75ff3e47f77359ecfce63c0e851
 SHA1 (patch-aha) = 3249929122a567eec3c421a1efa0ac510f1474b7
 SHA1 (patch-ai) = 037e2bb85fbc473c431bbf736dae89825236ff31
 SHA1 (patch-ak) = 950b7ca1e414560123b6ba56bb273baaa42364f7
@@ -27,5 +27,9 @@ SHA1 (patch-ck) = 324116cc6fb8dbce8ce8d20f5b237fc469a55cd2
 SHA1 (patch-cl) = eb00468c5c5c70dd41803a2a263204686959a415
 SHA1 (patch-cm) = 7f14ab327d021537714f876fbfbd4b0350d98a6e
 SHA1 (patch-cn) = ca3140375cb82ad9ef93d6157e04e40a593c36cd
+SHA1 (patch-gio_gcontenttype.c) = 72f0e1b2911df5997e15ef428706c3ba6b62dd83
 SHA1 (patch-gio_glocalfile.c) = 2087b54b187ae8812897f3ca9e893e542a5dd414
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182
+SHA1 (patch-gio_gthreadedresolver.c) = 18534f886363ba0b64b744277599f8e961c5d2b5
+SHA1 (patch-glib_gmarkup.c) = 238cce5f20d2fd9a12832d47d498edfd7290075b
+SHA1 (patch-glib_gstrfuncs.c) = 6719b83e35e1f4e4e8b1c113faa8596676fd9ae5
