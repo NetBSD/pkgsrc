@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12110 2013/04/24 20:01:21 adam Exp $
+$NetBSD: TODO,v 1.12111 2013/04/25 11:23:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eboard-1.1.1
 	o echinus-0.4.9
 	o eclipse-3.2.0
-	o ed-1.7
+	o ed-1.8
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eekboard-1.0.8
@@ -897,6 +897,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nessus-4.4.1
 	o netatalk-3.0.2
 	o netramet-50
+	o nettle-2.7
 	o newmail-1.0.2
 	o newt-0.52.12
 	o nhc98-1.22 [pkg/45318]
@@ -1185,7 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o veusz-1.17.1
 	o vfu-4.09
 	o vicq-0.4.2
-	o viewvc-1.1.19
+	o viewvc-1.1.20
 	o vifm-0.7.4b
 	o vinagre-3.8.1
 	o vino-2.32.2 [GNOME 2.32]
