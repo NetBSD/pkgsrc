@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1987 2013/02/22 13:35:27 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1988 2013/04/25 12:58:08 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -165,6 +165,7 @@ ALL_ENV+=	F77=${FC:Q}
 ALL_ENV+=	FC=${FC:Q}
 ALL_ENV+=	FFLAGS=${FFLAGS:M*:Q}
 ALL_ENV+=	LANG=C
+ALL_ENV+=	LC_ALL=C
 ALL_ENV+=	LC_COLLATE=C
 ALL_ENV+=	LC_CTYPE=C
 ALL_ENV+=	LC_MESSAGES=C
