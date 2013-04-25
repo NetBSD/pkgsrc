@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/03/16 22:54:29 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/25 03:53:11 sbd Exp $
 #
 
 PKGREVISION=		6
@@ -24,5 +24,5 @@ SUBST_FILES.fix-paths=		inst/cgi-bin/R.cgi
 SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 
 .include "../../math/R/Makefile.extension"
-.include "../../print/ghostscript/ghostscript.buildlink3.mk"
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
