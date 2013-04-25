@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.192 2013/03/16 22:40:25 dholland Exp $
+# $NetBSD: Makefile,v 1.193 2013/04/25 03:53:11 sbd Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	Package for display and interactive manipulation of images
