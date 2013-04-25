@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2013/03/02 20:33:33 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/04/25 20:41:33 shattered Exp $
 
-PKGREVISION=		4
+PKGREVISION=		5
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
 
@@ -28,7 +28,6 @@ OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} ${ROOT_USER} ${BACULA_GROUP} 770
 PKG_USERS=		${BACULA_DIR_USER}:${BACULA_GROUP}
 PKG_USERS+=		${BACULA_SD_USER}:${BACULA_GROUP}
 PKG_GROUPS=		${BACULA_GROUP}
-USERGROUP_PHASE=	pre-install
 
 CONF_FILES+=		${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
 CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
@@ -42,7 +41,6 @@ REPLACE_PERL+=		src/cats/make_catalog_backup.pl.in
 .include "Makefile.common"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/scripts/dvd-handler ${DESTDIR}${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${FILESDIR}/chio-changer \
 		${DESTDIR}${PREFIX}/libexec/bacula/
 

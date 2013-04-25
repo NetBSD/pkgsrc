@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2012/10/25 21:45:27 christos Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2013/04/25 20:41:33 shattered Exp $
 lib/bpipe-fd.la
 lib/libbac.la
 lib/libbaccfg.la
@@ -16,6 +16,7 @@ libexec/bacula/btraceback.mdb
 libexec/bacula/disk-changer
 libexec/bacula/mtx-changer
 libexec/bacula/mtx-changer.conf
+libexec/bacula/query.sql
 man/man1/bacula-bwxconsole.1
 man/man1/bacula-tray-monitor.1
 man/man1/bat.1
@@ -49,5 +50,4 @@ share/doc/bacula/VERIFYING
 share/doc/bacula/technotes
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bconsole.conf
-share/examples/bacula/dvd-handler
 share/examples/rc.d/bacula-fd
