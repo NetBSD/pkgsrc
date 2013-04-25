@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.22 2013/02/28 23:03:58 jperkin Exp $
+$NetBSD: distinfo,v 1.23 2013/04/25 13:32:39 ryoon Exp $
 
-SHA1 (jdk-6u37-linux-i586.bin) = 5e35efc6d2cb215596669edee4f8e3bce59f13f6
-RMD160 (jdk-6u37-linux-i586.bin) = d3e00f7abc4f4f00ce02eda4bcecb1e49b752e17
-Size (jdk-6u37-linux-i586.bin) = 71764073 bytes
-SHA1 (jdk-6u37-linux-x64.bin) = 930645bcb3bacecb510a25cd733e1ae607ed2485
-RMD160 (jdk-6u37-linux-x64.bin) = 9ac1989c0ea85b57c3a5858b81cc207503ebc4d6
-Size (jdk-6u37-linux-x64.bin) = 72048548 bytes
-SHA1 (jdk-6u37-solaris-i586.sh) = 34c699dcc036335cd1714975da57029a80d3e309
-RMD160 (jdk-6u37-solaris-i586.sh) = af90c19209ee48ad5537d899f5569b271a5c7a6c
-Size (jdk-6u37-solaris-i586.sh) = 71675046 bytes
-SHA1 (jdk-6u37-solaris-x64.sh) = cf5c38505bf68496a4e06d8d7f8cd9c6177fb8c9
-RMD160 (jdk-6u37-solaris-x64.sh) = 5ab755bbf91093ce354a5b98369299b803da162f
-Size (jdk-6u37-solaris-x64.sh) = 8860012 bytes
+SHA1 (jdk-6u45-linux-i586.bin) = e8de4940befbf2ccad3447bf5fe00ed121cbfe3d
+RMD160 (jdk-6u45-linux-i586.bin) = 6a303cbeabdaa7a013bd9380786c8dacaa4eb857
+Size (jdk-6u45-linux-i586.bin) = 71799552 bytes
+SHA1 (jdk-6u45-linux-x64.bin) = 24425cdb69c11e86d6b58757b29e5ba4e4977660
+RMD160 (jdk-6u45-linux-x64.bin) = c33124d4e2f0ecd62c49ca5c50e0bc9cb8e58074
+Size (jdk-6u45-linux-x64.bin) = 72087592 bytes
+SHA1 (jdk-6u45-solaris-i586.sh) = 11bc3044c274c6ebf88be40ae4f27031cdf2f6c8
+RMD160 (jdk-6u45-solaris-i586.sh) = 982968f24fc930f0a52d5baaf89f44cce25da80a
+Size (jdk-6u45-solaris-i586.sh) = 71704137 bytes
+SHA1 (jdk-6u45-solaris-x64.sh) = 477a5d0e8adaad78afe99ca56ce131738c4aa3b8
+RMD160 (jdk-6u45-solaris-x64.sh) = f041019c7748fe2debad20459e03453468d280be
+Size (jdk-6u45-solaris-x64.sh) = 8907780 bytes
