@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1511 2013/04/26 20:04:00 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1512 2013/04/26 23:25:56 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/libfontenc to 1.1.2 [wiz 2013-04-26]
 	Updated devel/jq to 1.2 [jperkin 2013-04-26]
 	Updated www/py-django-cms to 2.4.1 [adam 2013-04-26]
+	Updated security/netpgpverify to 20130426 [agc 2013-04-26]
