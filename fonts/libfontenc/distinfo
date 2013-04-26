@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/06/06 22:19:58 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/04/26 05:15:57 wiz Exp $
 
-SHA1 (libfontenc-1.1.1.tar.bz2) = 90bdd53d75585dd0f06ad7bc23faccd8a01bb733
-RMD160 (libfontenc-1.1.1.tar.bz2) = 237ca9ba30d46666608894a13f974eb76d067b34
-Size (libfontenc-1.1.1.tar.bz2) = 289688 bytes
+SHA1 (libfontenc-1.1.2.tar.bz2) = 2beffa0e9260c479b49f90f789318c7f9db2d41d
+RMD160 (libfontenc-1.1.2.tar.bz2) = 623eb689b27a604543d8e937e91be7b1fec93023
+Size (libfontenc-1.1.2.tar.bz2) = 294884 bytes
