@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1508 2013/04/25 22:01:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1509 2013/04/26 05:16:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2322,3 +2322,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/apache-tomcat7 to 7.0.39 [ryoon 2013-04-25]
 	Added security/ent version 19981020 [agc 2013-04-25]
 	Updated graphics/png to 1.6.2 [wiz 2013-04-25]
+	Updated fonts/libfontenc to 1.1.2 [wiz 2013-04-26]
