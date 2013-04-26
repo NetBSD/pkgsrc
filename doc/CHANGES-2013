@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1509 2013/04/26 05:16:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1510 2013/04/26 10:20:50 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2323,3 +2323,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/ent version 19981020 [agc 2013-04-25]
 	Updated graphics/png to 1.6.2 [wiz 2013-04-25]
 	Updated fonts/libfontenc to 1.1.2 [wiz 2013-04-26]
+	Updated devel/jq to 1.2 [jperkin 2013-04-26]
