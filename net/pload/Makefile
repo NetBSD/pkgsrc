@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 17:18:59 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/04/26 16:38:26 shattered Exp $
 #
 
 DISTNAME=	pload-0.9.5
@@ -12,6 +12,7 @@ COMMENT=	Network interface monitor for X11, monitoring totals and in/out rates
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+NOT_FOR_PLATFORM=	Darwin-*-*
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 HAS_CONFIGURE=	YES
