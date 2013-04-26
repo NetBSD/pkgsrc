@@ -99,7 +99,7 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 	if (strcasecmp(cmd, "cat") == 0) {
 		if ((cookie = pgpv_verify(&cursor, pgp, in, cc)) != 0) {
 			if ((size = pgpv_get_verified(&cursor, cookie, &data)) > 0) {
-				printf("%.*s", (int)size, data);
+				write(STDOUT_FILENO, data, size);
 			}
 			return 1;
 		}
