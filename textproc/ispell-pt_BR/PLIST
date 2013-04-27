@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/27 10:43:32 rodent Exp $
+bin/conjugue
+lib/br.aff
+lib/br.hash
+lib/verbos
+man/man1/conjugue.1
