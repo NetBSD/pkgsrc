@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1514 2013/04/27 07:36:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1515 2013/04/27 07:37:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/netpgpverify to 20130426 [agc 2013-04-26]
 	Updated x11/xterm to 292 [wiz 2013-04-27]
 	Updated devel/reposurgeon to 2.37 [wiz 2013-04-27]
+	Updated security/kpcli to 1.7 [wiz 2013-04-27]
