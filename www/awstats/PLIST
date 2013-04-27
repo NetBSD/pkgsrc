@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2012/07/20 14:11:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/04/27 11:19:38 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -7,6 +7,7 @@ awstats/bin/geoip_generator.pl
 awstats/bin/logresolvemerge.pl
 awstats/bin/maillogconvert.pl
 awstats/bin/urlaliasbuilder.pl
+awstats/cgi-bin/awdownloadcsv.pl
 awstats/cgi-bin/awredir.pl
 awstats/cgi-bin/awstats.pl
 awstats/cgi-bin/lang/awstats-al.txt
@@ -290,6 +291,7 @@ awstats/icon/flags/as.png
 awstats/icon/flags/at.png
 awstats/icon/flags/au.png
 awstats/icon/flags/aw.png
+awstats/icon/flags/ax.png
 awstats/icon/flags/az.png
 awstats/icon/flags/ba.png
 awstats/icon/flags/bb.png
@@ -362,6 +364,7 @@ awstats/icon/flags/gb.png
 awstats/icon/flags/gd.png
 awstats/icon/flags/ge.png
 awstats/icon/flags/gf.png
+awstats/icon/flags/gg.png
 awstats/icon/flags/gh.png
 awstats/icon/flags/gi.png
 awstats/icon/flags/gl.png
@@ -425,6 +428,7 @@ awstats/icon/flags/ly.png
 awstats/icon/flags/ma.png
 awstats/icon/flags/mc.png
 awstats/icon/flags/md.png
+awstats/icon/flags/me.png
 awstats/icon/flags/mg.png
 awstats/icon/flags/mil.png
 awstats/icon/flags/mk.png
@@ -489,6 +493,7 @@ awstats/icon/flags/se.png
 awstats/icon/flags/sg.png
 awstats/icon/flags/si.png
 awstats/icon/flags/sk.png
+awstats/icon/flags/sl.png
 awstats/icon/flags/sm.png
 awstats/icon/flags/sn.png
 awstats/icon/flags/sr.png
@@ -627,6 +632,12 @@ awstats/icon/os/linuxzenwalk.png
 awstats/icon/os/mac.png
 awstats/icon/os/macintosh.png
 awstats/icon/os/macosx.png
+awstats/icon/os/macosx4.png
+awstats/icon/os/macosx5.png
+awstats/icon/os/macosx6.png
+awstats/icon/os/macosx7.png
+awstats/icon/os/macosx8.png
+awstats/icon/os/macosx9.png
 awstats/icon/os/netbsd.png
 awstats/icon/os/netware.png
 awstats/icon/os/next.png

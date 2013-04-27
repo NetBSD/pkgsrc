@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2009/01/15 12:12:04 adam Exp $
+$NetBSD: patch-ab,v 1.7 2013/04/27 11:19:39 adam Exp $
+
+Fix paths.
 
 --- tools/awstats_configure.pl.orig	2008-04-06 15:45:24.000000000 +0200
 +++ tools/awstats_configure.pl
