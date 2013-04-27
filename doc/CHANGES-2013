@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1520 2013/04/27 12:10:21 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.1521 2013/04/27 17:54:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2335,3 +2335,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/glib-networking to 2.36.1 [drochner 2013-04-27]
 	Updated devel/xdelta3 to 3.0.6 [shattered 2013-04-27]
 	Updated net/libsoup24 to 2.42.2 [drochner 2013-04-27]
+	Updated www/squid3 to 3.3.4 [tron 2013-04-27]
