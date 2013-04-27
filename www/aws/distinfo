@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/07/08 20:14:28 marino Exp $
+$NetBSD: distinfo,v 1.5 2013/04/27 11:49:55 marino Exp $
 
 SHA1 (aws-2.10.0.1.tar.bz2) = 3ea20d4328951089f93caa3693eb24d67cf76594
 RMD160 (aws-2.10.0.1.tar.bz2) = 8d6c2e9e681f18b16bbd79e76e6b65bb8f07a871
@@ -19,7 +19,8 @@ SHA1 (patch-bh) = 59f370db7e47d5fb18fa239dfc3396703f7251c8
 SHA1 (patch-bi) = 3878eb24a44a23f119d78aad5b0c5bcfce1fc4a2
 SHA1 (patch-bj) = 6e138dbe344600ea870e33b030662422cadf6cbc
 SHA1 (patch-bk) = 7be4ff0eefa89a24d942fc38c55f81864dd483de
+SHA1 (patch-demos_test__ldap_test__ldap.gpr) = 4505d0b596eeb725a4e14355b72d8aa7d182c2a0
 SHA1 (patch-docs_docs.gpr) = acbe31da756c0cc3ee86132eedd0f0cc0ae6dd0e
 SHA1 (patch-include_include.gpr) = 8e65a8238077df79fedaafa8b95eb51c8897b6c0
 SHA1 (patch-src_soap_soap-message-xml.adb) = d7b84968c615c017fb33536d177ce8b4557e29dc
-SHA1 (patch-src_src.gpr) = 500bb473414253696c43dfa8b5999681accdb6ca
+SHA1 (patch-src_src.gpr) = 18480f2478c6fa3a1a7939f2a9fbdc4bd09178e3
