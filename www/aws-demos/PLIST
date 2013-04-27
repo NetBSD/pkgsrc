@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2011/03/02 10:14:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/27 11:52:43 marino Exp $
+${PLIST.ssl}share/examples/aws/demos/agent
 share/examples/aws/demos/auth
 share/examples/aws/demos/com_1
 share/examples/aws/demos/com_2
 share/examples/aws/demos/dispatch
 share/examples/aws/demos/hello_world
 share/examples/aws/demos/hotplug
-share/examples/aws/demos/interoplab_main
+@comment broken share/examples/aws/demos/interoplab_main
 share/examples/aws/demos/jabber_demo
 share/examples/aws/demos/main
 share/examples/aws/demos/multiple_sessions
 share/examples/aws/demos/res_demo
+${PLIST.ssl}share/examples/aws/demos/runme
 share/examples/aws/demos/soap_client
 share/examples/aws/demos/soap_cvs
 share/examples/aws/demos/soap_server
 share/examples/aws/demos/soap_server_disp
 share/examples/aws/demos/soap_svs
 share/examples/aws/demos/split
+${PLIST.ldap}share/examples/aws/demos/test_ldap
 share/examples/aws/demos/test_mail
 share/examples/aws/demos/text_input
 share/examples/aws/demos/vh_demo
@@ -26,6 +29,6 @@ share/examples/aws/demos/web_elements
 share/examples/aws/demos/web_mail
 share/examples/aws/demos/wps
 share/examples/aws/demos/ws
-share/examples/aws/demos/wsdl_demo_client
-share/examples/aws/demos/wsdl_demo_server
+@comment broken share/examples/aws/demos/wsdl_demo_client
+@comment broken share/examples/aws/demos/wsdl_demo_server
 share/examples/aws/demos/zdemo
