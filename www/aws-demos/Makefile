@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/04/27 11:52:43 marino Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/27 13:02:48 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -27,10 +27,10 @@ CONFIGURE_ARGS+=	prefix=${PREFIX}
 MAKE_ENV+=	ADA_PROJECT_PATH=${PREFIX}/lib/gnat
 
 SUBST_CLASSES+= 	lpath
-SUBST_STAGE.lpath=	pre-configure
+SUBST_STAGE.lpath=	post-patch
 SUBST_MESSAGE.lpath=	Add library path for ldap
 SUBST_FILES.lpath=	demos/test_ldap/test_ldap.gpr
-SUBST_SED.lpath=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.lpath=	-e 's|@PREFIX@|${PREFIX}|g'
 
 DEMO_DIRS+=	auth
 DEMO_DIRS+=	com
@@ -64,12 +64,14 @@ PLIST_VARS+=	ldap ssl
 BUILT_AWS !=	pkg_info -Q PKG_OPTIONS aws 2>/dev/null || echo
 
 .if !empty(BUILT_AWS:Mldap)
+.include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	LDAP=true
 DEMO_DIRS+=		test_ldap
 PLIST.ldap=		yes
 .endif
 
 .if !empty(BUILT_AWS:Mssl)
+.include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	SOCKET=openssl
 DEMO_DIRS+=		agent
 DEMO_DIRS+=		runme
@@ -77,6 +79,7 @@ PLIST.ssl=		yes
 .endif
 
 do-configure:
+	${MKDIR} ${WRKSRC}/.build/native/debug/static/obj
 	cd ${WRKSRC} && ${GMAKE} setup ${CONFIGURE_ARGS}
 
 do-build:
