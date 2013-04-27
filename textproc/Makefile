@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.726 2013/04/25 03:50:20 jnemeth Exp $
+# $NetBSD: Makefile,v 1.727 2013/04/27 10:44:38 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -262,6 +262,7 @@ SUBDIR+=	ispell-gl
 SUBDIR+=	ispell-ku
 SUBDIR+=	ispell-lt
 SUBDIR+=	ispell-pl
+SUBDIR+=	ispell-pt_BR
 SUBDIR+=	ispell-ro
 SUBDIR+=	ispell-ru
 SUBDIR+=	ispell-ru-io
