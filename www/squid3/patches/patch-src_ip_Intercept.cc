@@ -1,14 +1,10 @@
-$NetBSD: patch-src_ip_Intercept.cc,v 1.1 2013/02/10 18:16:53 adam Exp $
+$NetBSD: patch-src_ip_Intercept.cc,v 1.2 2013/04/27 17:51:24 tron Exp $
 
 Avoid conflict with IP Fitler's debug().
 
---- src/ip/Intercept.cc.orig	2013-02-09 07:30:01.000000000 +0000
-+++ src/ip/Intercept.cc
-@@ -34,9 +34,14 @@
- #include "comm/Connection.h"
- #include "ip/Intercept.h"
- #include "fde.h"
-+#include "../tools.h"
+--- src/ip/Intercept.cc.orig	2013-04-27 04:34:48.000000000 +0100
++++ src/ip/Intercept.cc	2013-04-27 18:40:24.000000000 +0100
+@@ -38,6 +38,10 @@
  
  #if IPF_TRANSPARENT
  
@@ -19,7 +15,7 @@ Avoid conflict with IP Fitler's debug().
  #if HAVE_SYS_IOCTL_H
  #include <sys/ioctl.h>
  #endif
-@@ -74,6 +79,10 @@
+@@ -75,6 +79,10 @@
  #include <errno.h>
  #endif
  
