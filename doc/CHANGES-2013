@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1516 2013/04/27 10:43:52 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1517 2013/04/27 10:51:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2330,3 +2330,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/reposurgeon to 2.37 [wiz 2013-04-27]
 	Updated security/kpcli to 1.7 [wiz 2013-04-27]
 	Added textproc/ispell-pt_BR version 2.4 [rodent 2013-04-27]
+	Updated www/py-django-appconf to 0.6 [ryoon 2013-04-27]
