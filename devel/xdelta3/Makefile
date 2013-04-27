@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:53 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/27 12:08:34 shattered Exp $
 #
 
-DISTNAME=		xdelta3.0.0
-PKGNAME=		xdelta3-3.0za
+DISTNAME=		xdelta3-3.0.6
 CATEGORIES=		devel
 MASTER_SITES=		http://xdelta.googlecode.com/files/
 
@@ -13,6 +12,8 @@ LICENSE=		gnu-gpl-v2
 
 BUILD_TARGET=		xdelta3
 USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+
 INSTALLATION_DIRS=	bin share/doc/xdelta3
 
 do-install:
