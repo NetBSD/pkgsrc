@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/03 15:31:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/27 10:50:13 ryoon Exp $
 ${PYSITELIB}/appconf/__init__.py
 ${PYSITELIB}/appconf/__init__.pyc
 ${PYSITELIB}/appconf/__init__.pyo
@@ -26,4 +26,5 @@ ${PYSITELIB}/appconf/utils.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
