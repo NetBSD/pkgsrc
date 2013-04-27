@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 15:46:35 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/27 23:05:50 joerg Exp $
 #
 
 DISTNAME=	bib2xml-10062002
@@ -18,7 +18,7 @@ BUILD_DIRS=	progs
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILD_DIRS}/bib2xml ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/progs/bib2xml ${DESTDIR}${PREFIX}/bin
 
 .include "../../textproc/btparse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
