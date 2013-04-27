@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2013/02/06 23:23:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/27 11:49:55 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
-MASTER_SITES=	http://downloads.dragonlace.net/src/ \
-		http://dragonlace.mirrors.ada.cx/src/
+MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	draco@marino.st
@@ -35,8 +34,10 @@ MAKE_ENV+=	ADA_PROJECT_PATH=${PREFIX}/lib/gnat
 SUBST_CLASSES+= 	rpath
 SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Adjust rpaths of shared libraries
-SUBST_FILES.rpath=	src/src.gpr include/include.gpr
-SUBST_SED.rpath=	-e "s,@ADDITIONAL_RPATH@,${ADDITIONAL_RPATH},"
+SUBST_FILES.rpath=	src/src.gpr include/include.gpr \
+			demos/test_ldap/test_ldap.gpr
+SUBST_SED.rpath=	-e "s,@ADDITIONAL_RPATH@,${ADDITIONAL_RPATH}," \
+			-e "s,@PREFIX@,${PREFIX},g"
 ADDITIONAL_RPATH=	${PREFIX}/lib:${PREFIX}/lib/aws/native/relocatable
 
 GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};

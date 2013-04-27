@@ -1,4 +1,4 @@
-$NetBSD: patch-src_src.gpr,v 1.1 2012/07/08 20:14:28 marino Exp $
+$NetBSD: patch-src_src.gpr,v 1.2 2013/04/27 11:49:56 marino Exp $
 
 --- src/src.gpr.orig	2011-01-25 20:52:57.000000000 +0000
 +++ src/src.gpr
@@ -11,3 +11,12 @@ $NetBSD: patch-src_src.gpr,v 1.1 2012/07/08 20:14:28 marino Exp $
           end case;
  
           case Shared.LDAP is
+@@ -88,7 +88,7 @@ project Src is
+                        Project'Library_Options & ("-lwldap32");
+                   when others =>
+                      for Library_Options use
+-                       Project'Library_Options & ("-lldap");
++                       Project'Library_Options & ("-L@PREFIX@/lib", "-lldap");
+                end case;
+             when "Disabled" =>
+                null;
