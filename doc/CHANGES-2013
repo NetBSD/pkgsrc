@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1515 2013/04/27 07:37:10 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1516 2013/04/27 10:43:52 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2329,3 +2329,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xterm to 292 [wiz 2013-04-27]
 	Updated devel/reposurgeon to 2.37 [wiz 2013-04-27]
 	Updated security/kpcli to 1.7 [wiz 2013-04-27]
+	Added textproc/ispell-pt_BR version 2.4 [rodent 2013-04-27]
