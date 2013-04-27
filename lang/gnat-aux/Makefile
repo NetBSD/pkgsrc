@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 21:56:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/27 06:03:39 marino Exp $
 #
 
 PKGNAME=	gnat-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	gcc-core-${GCC_VERSION}.tar.bz2
@@ -13,9 +12,9 @@ HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-SNAPSHOT=	20120301
+SNAPSHOT=	20130412
 GCC_BRANCH=	4.6
-GCC_POINT=	3
+GCC_POINT=	4
 GCC_VERSION=	${GCC_BRANCH}.${GCC_POINT}
 LANGS=		c
 
@@ -45,6 +44,7 @@ FULL_GNATGCC=		NOT SET
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
 OLD_EH=			register_frame
 REBUILD_LIB=		Rebuild the following library first:
+BOOTSTRAP_SITES=	http://downloads.dragonlace.net/src/
 
 
 .if ${OPSYS} == "DragonFly"
@@ -133,19 +133,30 @@ FULL_GNATGCC=${PREFIX}/bin/gnatgcc
 INTENDED_COMPILER=BOOTSTRAP
 FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
 DISTFILES+= ${BOOTSTRAP_COMPILER}
-SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/ \
-				http://dragonlace.mirrors.ada.cx/src/
+SITES.${BOOTSTRAP_COMPILER}=	${BOOTSTRAP_SITES}
 FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
 .endif
 
 
-# For pkg maintenance, uncomment to invoke "bmake mdi"
-#DISTFILES+= \
-#  gnat-bootstrap.i386.dragonfly.tar.bz2 \
-#  gnat-bootstrap.x86_64.dragonfly.tar.bz2 \
-#  gnat-bootstrap.i386.netbsd.tar.bz2 \
-#  gnat-bootstrap.x86_64.netbsd.tar.bz2 \
-#  gnat-bootstrap.i386.solaris.tar.bz2
+# For pkg maintenance, uncomment to invoke "bmake mdi PLUS_BOOTSTRAPS=1"
+.if defined(PLUS_BOOTSTRAPS)
+BS1=	gnat-bootstrap.i386.dragonfly.tar.bz2
+BS2=	gnat-bootstrap.x86_64.dragonfly.tar.bz2
+BS3=	gnat-bootstrap.i386.netbsd.tar.bz2
+BS4=	gnat-bootstrap.x86_64.netbsd.tar.bz2
+BS5=	gnat-bootstrap.i386.solaris.tar.bz2
+.  for bsite in ${BS1} ${BS2} ${BS3} ${BS4} ${BS5}
+SITES.${bsite}= ${BOOTSTRAP_SITES}
+.  endfor
+DISTFILES= \
+  gcc-core-${GCC_VERSION}.tar.bz2 \
+  gcc-ada-${GCC_VERSION}.tar.bz2 \
+  gcc-g++-${GCC_VERSION}.tar.bz2 \
+  gcc-fortran-${GCC_VERSION}.tar.bz2 \
+  gcc-objc-${GCC_VERSION}.tar.bz2 \
+  gcc-testsuite-${GCC_VERSION}.tar.bz2 \
+  ${BS1} ${BS2} ${BS3} ${BS4} ${BS5}
+.endif
 
 
 # establish ada-aware compiler for use
