@@ -5,7 +5,7 @@
              for Default_Switches ("Ada") use ("-lwldap32");
           when others =>
 -            for Default_Switches ("Ada") use ("-lldap");
-+            for Default_Switches ("Ada") use ("-L@PREFIX@/lib", "-lldap");
++            for Default_Switches ("Ada") use ("-L@PREFIX@/lib", "-lldap", "-llber");
        end case;
     end Linker;
  
