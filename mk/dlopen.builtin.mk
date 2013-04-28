@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.24 2012/05/04 08:31:14 obache Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.25 2013/04/28 13:43:55 obache Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -86,8 +86,12 @@ CHECK_BUILTIN.dl?=	no
 .if !empty(CHECK_BUILTIN.dl:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.dl:M[yY][eE][sS])
-.    if empty(H_DL:M__nonexistent__) && !empty(H_DL:M/usr/*)
+.    if empty(H_DL:M__nonexistent__)
+.      if !empty(H_DL:M/usr/*)
 BUILDLINK_PREFIX.dl=	/usr
+.      else
+BUILDLINK_PREFIX.dl=	# empty
+.      endif
 .    endif
 .    if !empty(BUILTIN_LIB_FOUND.dl:M[yY][eE][sS])
 #
