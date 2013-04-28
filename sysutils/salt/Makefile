@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/12/06 08:01:21 apb Exp $
+# $NetBSD: Makefile,v 1.11 2013/04/28 09:46:24 imil Exp $
 #
 
-DISTNAME=	salt-0.10.5
+DISTNAME=	salt-0.14.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cloud.github.com/downloads/saltstack/salt/
+MASTER_SITES=	http://pypi.python.org/packages/source/s/salt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
@@ -21,20 +21,21 @@ SUBST_FILES.fix-paths+=	salt/modules/mysql.py
 SUBST_FILES.fix-paths+=	salt/modules/postgres.py
 SUBST_FILES.fix-paths+=	salt/modules/tls.py
 SUBST_FILES.fix-paths+=	salt/utils/parsers.py
+SUBST_FILES.fix-paths+=	salt/utils/migrations.py
 SUBST_SED.fix-paths+=	-e "s|/etc/salt|${PKG_SYSCONFDIR}|g"
 
 PKG_SYSCONFSUBDIR=	salt
 
 EGDIR=		${PREFIX}/share/examples/salt
 INSTALLATION_DIRS+= ${EGDIR}
-CONF_FILES+=	${EGDIR}/master.template ${PKG_SYSCONFDIR}/master
-CONF_FILES+=	${EGDIR}/minion.template ${PKG_SYSCONFDIR}/minion
+CONF_FILES+=	${EGDIR}/master ${PKG_SYSCONFDIR}/master
+CONF_FILES+=	${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
 
 RCD_SCRIPTS+=	salt_master salt_minion
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/master.template ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/conf/minion.template ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/minion ${DESTDIR}${EGDIR}/
 
 # Dependencies are documented at
 # http://docs.saltstack.org/en/latest/topics/installation/index.html#dependencies
