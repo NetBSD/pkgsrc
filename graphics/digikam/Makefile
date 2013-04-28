@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2013/04/03 12:52:04 markd Exp $
+# $NetBSD: Makefile,v 1.94 2013/04/28 02:03:37 markd Exp $
 #
 
 DISTNAME=	digikam-3.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,7 @@ REPLACE_PERL=	core/utilities/scripts/digitaglinktree/digitaglinktree
 CMAKE_ARGS+=    -DMYSQLD_PATH:PATH=${BUILDLINK_PREFIX.mysql-server}/libexec
 CMAKE_ARGS+=	-DDIGIKAMSC_USE_PRIVATE_KDEGRAPHICS:BOOL=OFF
 USE_TOOLS+=	gawk msgfmt perl:run pkg-config
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug        
 
 .include "options.mk"
 
