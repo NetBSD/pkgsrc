@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.43 2012/11/19 11:34:15 ryoon Exp $
+# $NetBSD: DragonFly.mk,v 1.44 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -27,6 +27,8 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 _OPSYS_EMULDIR.linux=	/compat/linux
 
 _OPSYS_SYSTEM_RPATH?=		/usr/lib:/usr/lib/gcc41:/usr/lib/gcc34
+_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

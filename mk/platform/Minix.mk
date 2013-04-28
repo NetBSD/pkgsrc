@@ -1,4 +1,4 @@
-# $NetBSD: Minix.mk,v 1.4 2013/03/01 00:09:20 tcort Exp $
+# $NetBSD: Minix.mk,v 1.5 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the Minix operating system.
 
@@ -25,6 +25,10 @@ SERIAL_DEVICES?=	/dev/null
 USERADD?=		/usr/sbin/useradd
 ULIMIT_CMD_datasize?=	: 
 ULIMIT_CMD_stacksize?=	: 
+
+_OPSYS_SYSTEM_RPATH?=	/usr/lib
+_OPSYS_LIB_DIRS?=	/usr/lib
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
