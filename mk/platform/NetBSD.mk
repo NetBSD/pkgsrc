@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.38 2012/11/19 11:34:15 ryoon Exp $
+# $NetBSD: NetBSD.mk,v 1.39 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -61,6 +61,8 @@ _OPSYS_EMULDIR.solaris32=	/emul/svr4_32
 _OPSYS_EMULDIR.sunos=		/emul/sunos
 
 _OPSYS_SYSTEM_RPATH?=		/usr/lib
+_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

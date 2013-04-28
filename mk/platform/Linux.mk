@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.52 2012/11/19 11:34:15 ryoon Exp $
+# $NetBSD: Linux.mk,v 1.53 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -49,6 +49,8 @@ _OPSYS_EMULDIR.linux=	# empty
 _OPSYS_EMULDIR.linux32=	# empty
 
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
+_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
