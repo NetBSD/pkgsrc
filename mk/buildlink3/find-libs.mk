@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.10 2012/04/23 08:44:00 sbd Exp $
+# $NetBSD: find-libs.mk,v 1.11 2013/04/28 13:39:09 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -61,34 +61,17 @@ USE_TOOLS+=	test
 
 .for _lib_ in ${BUILTIN_FIND_LIBS}
 .  if !defined(BUILTIN_LIB_FOUND.${_lib_})
-.    if ${OPSYS} == "Haiku" && defined(BELIBRARIES) && !empty(BELIBRARIES)
 BUILTIN_LIB_FOUND.${_lib_}=	no
-.      for _path_ in ${BELIBRARIES:S/:/ /g}
-.        if ${BUILTIN_LIB_FOUND.${_lib_}} == "no"
+.    for _path_ in ${COMPILER_LIB_DIRS}
+.      if ${BUILTIN_LIB_FOUND.${_lib_}} == "no"
 BUILTIN_LIB_FOUND.${_lib_}!=    \
 	if ${TEST} "`${ECHO} ${_path_}/lib${_lib_}.*`" != "${_path_}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
 	fi
-.        endif
-.      endfor
-.    else
-# XXX: Why are we looking in '/usr/lib${ABI}' and '/lib${ABI}', as we should
-# XXX: only be looking in '/usr/lib${LIBABISUFFIX}' and '/lib${LIBABISUFFIX}'
-BUILTIN_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} "`${ECHO} /usr/lib${ABI}/lib${_lib_}.*`" != "/usr/lib${ABI}/lib${_lib_}.*"; then \
-		${ECHO} yes;						\
-	elif ${TEST} "`${ECHO} /lib${ABI}/lib${_lib_}.*`" != "/lib${ABI}/lib${_lib_}.*"; then \
-		${ECHO} yes;						\
-	elif ${TEST} "`${ECHO} /usr/lib${LIBABISUFFIX}/lib${_lib_}.*`" != "/usr/lib${LIBABISUFFIX}/lib${_lib_}.*"; then \
-		${ECHO} yes;						\
-	elif ${TEST} "`${ECHO} /lib${LIBABISUFFIX}/lib${_lib_}.*`" != "/lib${LIBABISUFFIX}/lib${_lib_}.*"; then \
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.    endif
+.      endif
+.    endfor
 .  endif
 MAKEVARS+=	BUILTIN_LIB_FOUND.${_lib_}
 .endfor
