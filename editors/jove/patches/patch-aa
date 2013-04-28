@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2012/05/23 04:43:17 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2013/04/28 03:19:36 dholland Exp $
 
 - configure for pkgsrc
 - honor PKGMANDIR
+- honor pkgsrc CFLAGS and LDFLAGS
 
 --- Makefile.orig	2005-09-30 22:14:41.000000000 +0000
 +++ Makefile
@@ -63,3 +64,19 @@ $NetBSD: patch-aa,v 1.4 2012/05/23 04:43:17 dholland Exp $
  
  # For making dependencies under BSD systems
  DEPENDFLAG = -M
+@@ -181,13 +181,13 @@ EXTRALIBS =
+ #	PDP-11 with separate I&D: -i
+ #	PDP-11 without separate I&D: -n
+ 
+-LDFLAGS =
++LDFLAGS+=
+ 
+ # for SCO Xenix, set
+ #	MEMFLAGS = -Mle
+ #	CFLAGS = -LARGE -O -F 3000 -K -Mle  (say -Mle2 for an 80286)
+ 
+-CFLAGS = $(OPTFLAGS) $(SYSDEFS)
++CFLAGS+= $(OPTFLAGS) $(SYSDEFS)
+ 
+ # For SYSVR4 (/usr/ucb/cc will NOT work because of setjmp.h):
+ #	CC = /usr/bin/cc
