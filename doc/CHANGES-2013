@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1525 2013/04/28 09:47:13 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1526 2013/04/28 13:57:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1307,6 +1307,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libffi to 3.0.12 [drochner 2013-03-14]
 	Updated devel/reposurgeon to 2.26 [ryoon 2013-03-14]
 	Removed security/py-ssh [gls 2013-03-14]
+	Added math/gnumeric112 version 1.12.0 [drochner 2013-03-14]
 	Added devel/libexecinfo version 1.1 [asau 2013-03-15]
 	Added security/zoneminder version 1.25.0 [dsainty 2013-03-15]
 	Updated comms/openobex to 1.7 [plunky 2013-03-15]
