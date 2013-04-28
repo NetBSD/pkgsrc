@@ -1,6 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2008/08/04 21:34:39 bjs Exp $
+$NetBSD: patch-aa,v 1.4 2013/04/28 03:15:37 dholland Exp $
 
---- src/Makefile.orig	2008-06-26 23:33:36.000000000 -0400
+- configure for pkgsrc
+- use libtool (why?)
+- rearrange installation
+- honor PKGMANDIR
+
+--- src/Makefile.orig	2008-06-27 03:33:36.000000000 +0000
 +++ src/Makefile
 @@ -7,20 +7,19 @@
  
@@ -110,9 +115,9 @@ $NetBSD: patch-aa,v 1.3 2008/08/04 21:34:39 bjs Exp $
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)${PREFIX}/share/applications
 +	${BSD_INSTALL_DATA} ../beaver.desktop \
 +		$(DESTDIR)${PREFIX}/share/applications/beaver.desktop
-+	${BSD_INSTALL_MAN_DIR} $(DESTDIR)${PREFIX}/man/man1
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)${PREFIX}/${PKGMANDIR}/man1
 +	${BSD_INSTALL_MAN} ../beaver.1x \
-+		$(DESTDIR)${PREFIX}/man/man1/beaver.1
++		$(DESTDIR)${PREFIX}/${PKGMANDIR}/man1/beaver.1
  .PHONY: clean re
  
  clean	:
