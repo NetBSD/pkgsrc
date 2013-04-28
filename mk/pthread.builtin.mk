@@ -1,10 +1,11 @@
-# $NetBSD: pthread.builtin.mk,v 1.12 2012/05/04 07:24:50 obache Exp $
+# $NetBSD: pthread.builtin.mk,v 1.13 2013/04/28 13:40:17 obache Exp $
 
 BUILTIN_PKG:=	pthread
 
 BUILTIN_FIND_LIBS:=		pthread c_r rt
 BUILTIN_FIND_FILES_VAR=		H_PTHREAD
-BUILTIN_FIND_FILES.H_PTHREAD=	/usr/include/pthread.h
+BUILTIN_FIND_FILES.H_PTHREAD=	/usr/include/pthread.h	\
+				/boot/develop/headers/posix/pthread.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -46,6 +47,13 @@ CHECK_BUILTIN.pthread?=	no
 
 .  if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
 BUILDLINK_PREFIX.pthread=	/usr
+.    if empty(H_PTHREAD:M__nonexistent__)
+.      if!empty(H_PTHREAD:M/usr/*)
+BUILDLINK_PREFIX.pthread=	/usr
+.      else
+BUILDLINK_PREFIX.pthread=	# empty
+.      endif
+.    endif
 BUILDLINK_CFLAGS.pthread=	# empty
 BUILDLINK_LDFLAGS.pthread=	# empty
 
