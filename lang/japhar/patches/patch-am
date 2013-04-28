@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2006/06/06 15:40:15 joerg Exp $
+$NetBSD: patch-am,v 1.2 2013/04/28 03:31:22 dholland Exp $
 
---- lib/libruntime/Makefile.in.orig	2006-06-06 15:22:19.000000000 +0000
+--- lib/libruntime/Makefile.in.orig	1999-03-16 03:24:42.000000000 +0000
 +++ lib/libruntime/Makefile.in
 @@ -87,8 +87,7 @@ LIBS = 
  @NEED_ZLIB_TRUE@ZLIB_INCLUDES = -I$(top_srcdir)/lib/zlib
@@ -22,3 +22,12 @@ $NetBSD: patch-am,v 1.1 2006/06/06 15:40:15 joerg Exp $
  objects.lo objects.o : objects.c ../../include/config.h \
  	../../lib/libjni/include/jniint.h \
  	../../lib/libjni/include/jni.h \
+@@ -527,7 +525,7 @@ mostlyclean distclean maintainer-clean
+ 
+ # Make lookup table from opcode definitions
+ interploop.h: interpfunc.c
+-	grep OPCODE interpfunc.c | grep -v '#define' | sort -n +1 > interploop.h
++	grep OPCODE interpfunc.c | grep -v '#define' | sort -n -k 2 > interploop.h
+ 
+ interploop.c: interploop.h
+ 
