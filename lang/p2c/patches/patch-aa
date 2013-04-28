@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2011/12/18 16:54:08 dholland Exp $
+$NetBSD: patch-aa,v 1.3 2013/04/28 03:38:25 dholland Exp $
 
  - configure for pkgsrc
  - use ranlib properly
  - fix install permissions
+ - honor PKGMANDIR
+ - support MAKE_JOBS
 
 --- Makefile.orig	1991-04-24 20:30:37.000000000 +0000
 +++ Makefile
@@ -21,7 +23,7 @@ $NetBSD: patch-aa,v 1.2 2011/12/18 16:54:08 dholland Exp $
 +INCDIR = ${PREFIX}/include/p2c
 +BINDIR = ${PREFIX}/bin
 +LIBDIR = ${PREFIX}/lib
-+MANDIR = ${PREFIX}/man/man1
++MANDIR = ${PREFIX}/${PKGMANDIR}/man1
 +#MANFILE = p2c.cat          # human-readable manual (for cat.1)
 +MANFILE = p2c.man.inst    # uncompressed nroff source (for man.1)
  #MANFILE = p2c.man.Z       # compressed nroff source (for man.1.Z)
@@ -49,6 +51,15 @@ $NetBSD: patch-aa,v 1.2 2011/12/18 16:54:08 dholland Exp $
  
  MISCSRCS = makeproto.c
  PROTOS = p2c.proto p2c.hdrs
+@@ -73,7 +73,7 @@ HDRS = trans.h p2c.h
+ 
+ 
+ # Top-level targets
+-all: proto p2c libp2c.a p2c.cat
++all: proto .WAIT p2c libp2c.a p2c.cat
+ proto: $(PROTOS)
+ 
+ 
 @@ -129,7 +129,8 @@ p2c.cat: p2c.man.inst
  #  Third, execute "make install" to compile and set things up.
  # (You may need to have a system operator do these steps for you.)
