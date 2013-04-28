@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.51 2013/04/04 10:24:14 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.52 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -70,6 +70,10 @@ _PKG_USER_HOME?=	/var/empty	# to match other system accounts
 _USER_DEPENDS=		user>=20040801:../../sysutils/user_darwin
 
 _OPSYS_EMULDIR.darwin=	# empty
+
+_OPSYS_SYSTEM_RPATH?=		/usr/lib
+_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
 
 .if ${OS_VERSION:R} >= 6
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

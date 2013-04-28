@@ -1,4 +1,4 @@
-# $NetBSD: FreeMiNT.mk,v 1.2 2009/07/26 05:32:43 agc Exp $
+# $NetBSD: FreeMiNT.mk,v 1.3 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the FreeMiNT operating system.
 
@@ -24,6 +24,10 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 _OPSYS_EMULDIR.osf1=	# empty
+
+_OPSYS_SYSTEM_RPATH?=		/usr/lib
+_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
 
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is standard
