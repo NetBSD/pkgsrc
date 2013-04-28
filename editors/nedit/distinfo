@@ -1,6 +1,25 @@
-$NetBSD: distinfo,v 1.12 2005/02/23 17:15:12 agc Exp $
+$NetBSD: distinfo,v 1.13 2013/04/28 20:35:22 dholland Exp $
 
 SHA1 (nedit-5.5-src.tar.bz2) = 7d3c87a793a5047cf857af1ac82e39f3b33e8a87
 RMD160 (nedit-5.5-src.tar.bz2) = 93fce64bdc5d8a9eff86ab76cec67d44d676d0eb
 Size (nedit-5.5-src.tar.bz2) = 1124825 bytes
+SHA1 (patch-Xlt_SlideC.c) = aafca789053536a0d3ca0bc98ae301c60697e4c2
 SHA1 (patch-aa) = 29cf7e55b23e437b0203e0dde09cc053d65f245c
+SHA1 (patch-source_highlight.c) = f6c8de27402e3e6d4fd73cb11e541c5c053835d9
+SHA1 (patch-source_interpret.c) = 85bd739969674bbe436b79362dec7ef70204888e
+SHA1 (patch-source_macro.c) = bb00f95dae17053f9a01bd2b18ed6f1139f65314
+SHA1 (patch-source_menu.c) = 529be222b97904b82721dc79ae8fa587378ccd48
+SHA1 (patch-source_parse.y) = 9a126e619ec53b76bcfc404055642cb9e47df9e3
+SHA1 (patch-source_preferences.c) = 9d2d111e5bd1a06086f89bdcd3c692d2f9d6ca44
+SHA1 (patch-source_regularExp.c) = d607b663a3853a6963d3dea7a32ba6c42af681eb
+SHA1 (patch-source_search.c) = b60f984d803d58618813f39a4b93e27f2b9325c8
+SHA1 (patch-source_selection.c) = 28d0fd4eaddbd1e36ef2eef12ad28fa5adc406ca
+SHA1 (patch-source_shell.c) = 8d8b0820d509553140f2e1d173287122ed6d7a96
+SHA1 (patch-source_tags.c) = ae8ebe7ab48a154d7538e417540eeac223cae624
+SHA1 (patch-source_text.c) = e88669188ed3512ee3945ab68bb392d0f3aa7708
+SHA1 (patch-source_textBuf.c) = 06fadd285929922fe42904d3d49e7eacf4e61e90
+SHA1 (patch-source_textDisp.c) = 84e3631eb7076c77704390ac6aee66b27d0422f3
+SHA1 (patch-source_textDrag.c) = 8b66f1bb80bbc2b3cf3751ff7c601ded34b54646
+SHA1 (patch-source_userCmds.c) = 22c6468cffd2cd0d10af03452a2c14d63e893cbe
+SHA1 (patch-source_window.c) = 72fda2bf7cc178ec57f38d25915dab8a8765874d
+SHA1 (patch-util_prefFile.c) = 4accc0a25c7744076a7f8ee72c0a04328f0db915
