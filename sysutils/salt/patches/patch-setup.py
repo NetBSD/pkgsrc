@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2012/12/06 08:01:21 apb Exp $
+$NetBSD: patch-setup.py,v 1.3 2013/04/28 09:46:25 imil Exp $
 
 * Remove unused example_path and template_path;
 * Set etc_path to the directory where configfiles will be
@@ -7,9 +7,9 @@ $NetBSD: patch-setup.py,v 1.2 2012/12/06 08:01:21 apb Exp $
   via the CONFIG_FILES setting in the pkgsrc Makefile.
 * Install man pages in PKGMANDIR, not PREFIX/share/man.
 
---- setup.py.orig	2012-11-15 01:20:54.000000000 +0000
+--- setup.py.orig	2013-03-29 00:06:49.000000000 +0000
 +++ setup.py
-@@ -87,13 +87,15 @@ DESC = ('Portable, distributed, remote e
+@@ -151,13 +151,15 @@ DESC = ('Portable, distributed, remote e
          'configuration management system')
  mod_path = os.path.join(get_python_lib(), 'salt/modules')
  doc_path = os.path.join(PREFIX, 'share/doc', NAME + '-' + VER)
@@ -28,9 +28,9 @@ $NetBSD: patch-setup.py,v 1.2 2012/12/06 08:01:21 apb Exp $
 -    etc_path = os.path.join(os.path.dirname(PREFIX), 'etc')
 +    man_path = os.path.join(os.path.dirname(PREFIX), 'share/man')
  
- libraries = ['ws2_32'] if sys.platform == 'win32' else []
- 
-@@ -141,7 +143,7 @@ setup_kwargs = {'name': NAME,
+ with open(salt_reqs) as f:
+     lines = f.read().split('\n')
+@@ -210,7 +212,7 @@ setup_kwargs = {'name': NAME,
                               'salt.utils',
                               ],
                  'package_data': {'salt.modules': ['rh_ip/*.jinja']},
@@ -39,7 +39,7 @@ $NetBSD: patch-setup.py,v 1.2 2012/12/06 08:01:21 apb Exp $
                                  ['doc/man/salt-master.1',
                                   'doc/man/salt-key.1',
                                   'doc/man/salt.1',
-@@ -151,7 +153,8 @@ setup_kwargs = {'name': NAME,
+@@ -220,7 +222,8 @@ setup_kwargs = {'name': NAME,
                                   'doc/man/salt-run.1',
                                   'doc/man/salt-minion.1',
                                   ]),
@@ -47,5 +47,5 @@ $NetBSD: patch-setup.py,v 1.2 2012/12/06 08:01:21 apb Exp $
 +                               (os.path.join(man_path, 'man7'),
 +                                ['doc/man/salt.7']),
                                 ],
+                 # Required for esky builds
                  'install_requires': requirements,
-                 # The dynamic module loading in salt.modules makes this
