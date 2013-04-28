@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.29 2012/11/19 11:34:15 ryoon Exp $
+# $NetBSD: FreeBSD.mk,v 1.30 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -33,6 +33,8 @@ _OPSYS_EMULDIR.freebsd=	# empty
 _OPSYS_EMULDIR.linux=	/compat/linux
 
 _OPSYS_SYSTEM_RPATH?=	/lib:/usr/lib	# STANDARD_LIBRARY_PATH (from rtld.h)
+_OPSYS_LIB_DIRS?=	/lib /usr/lib
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

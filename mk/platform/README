@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.2 2013/04/08 13:29:26 obache Exp $
+$NetBSD: README,v 1.3 2013/04/28 12:53:56 obache Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -66,6 +66,10 @@ TODO: Document all these variables.
 	emulation files is put.
 
     _OPSYS_SYSTEM_RPATH is colon separated list of system rpath.
+
+    _OPSYS_LIB_DIRS is list of system library directories.
+
+    _OPSYS_INCLUDE_DIRS is list of system header file directories.
 
     _OPSYS_HAS_INET6 is "yes" if IPv6 is standard, otherwise "no".
 

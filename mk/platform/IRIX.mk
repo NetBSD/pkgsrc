@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.40 2012/03/19 12:34:17 joerg Exp $
+# $NetBSD: IRIX.mk,v 1.41 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -36,6 +36,10 @@ _PKG_USER_HOME?=	/dev/null # to match other system accounts
 _USER_DEPENDS=		user-[0-9]*:../../sysutils/user_irix
 
 _OPSYS_EMULDIR.irix=	# empty
+
+_OPSYS_SYSTEM_RPATH?=	/usr/lib
+_OPSYS_LIB_DIRS?=	/usr/lib
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard

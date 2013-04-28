@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.32 2012/03/19 12:34:18 joerg Exp $
+# $NetBSD: UnixWare.mk,v 1.33 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -26,6 +26,10 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
+
+_OPSYS_SYSTEM_RPATH?=	/usr/lib
+_OPSYS_LIB_DIRS?=	/usr/lib
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet/in6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard

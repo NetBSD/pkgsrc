@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.11 2013/03/13 12:38:19 obache Exp $
+# $NetBSD: Cygwin.mk,v 1.12 2013/04/28 12:53:56 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -39,6 +39,10 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 X11_TYPE?=		native
+
+_OPSYS_SYSTEM_RPATH?=		# /usr/bin
+_OPSYS_LIB_DIRS?=		/lib /usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
 
 _OPSYS_EXE_SUFFIX=	.exe	# executables may have suffix
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
