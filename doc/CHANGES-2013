@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1523 2013/04/28 02:43:58 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.1524 2013/04/28 07:17:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2340,3 +2340,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libsoup24 to 2.42.2 [drochner 2013-04-27]
 	Updated www/squid3 to 3.3.4 [tron 2013-04-27]
 	Updated archivers/libzip to 0.11.1 [wiz 2013-04-27]
+	Updated x11/xvkbd to 3.4a [ryoon 2013-04-28]
