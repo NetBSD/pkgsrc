@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1522 2013/04/27 23:06:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1523 2013/04/28 02:43:58 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2117,8 +2117,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-pip to 1.3.1 [wen 2013-04-13]
 	Added audio/vcf version 0.0.5 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-zh_TW to 4.10.2 [rodent 2013-04-13]
+	Updated emulators/Cygne-SDL to 0.1nb6 [dholland 2013-04-13]
 	Updated x11/kde4-l10n-zh_CN to 4.10.2 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-wa to 4.10.2 [rodent 2013-04-13]
+	Updated graphics/gle to 3.1.0nb3 [dholland 2013-04-13]
 	Updated x11/kde4-l10n-vi to 4.10.2 [rodent 2013-04-13]
 	Updated x11/kde4-l10n-ug to 4.10.2 [rodent 2013-04-13]
 	Updated misc/attica to 0.4.1 [markd 2013-04-13]
@@ -2140,6 +2142,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Added multimedia/libva-driver-vdpau version 0.7.4 [cheusov 2013-04-14]
 	Updated x11/kde4-l10n-pt_BR to 4.10.2 [rodent 2013-04-14]
 	Updated x11/kde4-l10n-pt to 4.10.2 [rodent 2013-04-14]
+	Updated cross/dasm to 2.12nb2 [dholland 2013-04-14]
 	Updated x11/kde4-l10n-pl to 4.10.2 [rodent 2013-04-14]
 	Updated x11/kde4-l10n-pa to 4.10.2 [rodent 2013-04-14]
 	Updated x11/kde4-l10n-nn to 4.10.2 [rodent 2013-04-14]
