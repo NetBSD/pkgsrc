@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/04/03 10:52:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/04/28 01:57:14 markd Exp $
 bin/lancelot
 include/KDE/Lancelot/ActionListModel
 include/KDE/Lancelot/ActionListView
@@ -167,6 +167,7 @@ lib/kde4/plasma_engine_kdeobservatory.so
 lib/kde4/plasma_engine_kimpanel.so
 lib/kde4/plasma_engine_konqprofiles.so
 lib/kde4/plasma_engine_konsoleprofiles.so
+lib/kde4/plasma_engine_microblog.so
 lib/kde4/plasma_engine_ocs.so
 lib/kde4/plasma_engine_potd.so
 lib/kde4/plasma_engine_rtm.so
@@ -439,6 +440,7 @@ share/kde/apps/plasma/services/org.kde.plasma.dataengine.konsoleprofiles.operati
 share/kde/apps/plasma/services/rtmauth.operations
 share/kde/apps/plasma/services/rtmtask.operations
 share/kde/apps/plasma/services/rtmtasks.operations
+share/kde/apps/plasma/services/tweet.operations
 share/kde/apps/plasma/wallpapers/org.kde.animals/contents/ui/Animal.qml
 share/kde/apps/plasma/wallpapers/org.kde.animals/contents/ui/animals.qml
 share/kde/apps/plasma/wallpapers/org.kde.animals/metadata.desktop
@@ -557,6 +559,7 @@ share/kde4/services/plasma-dataengine-comic.desktop
 share/kde4/services/plasma-dataengine-kimpanel.desktop
 share/kde4/services/plasma-dataengine-konqprofiles.desktop
 share/kde4/services/plasma-dataengine-konsoleprofiles.desktop
+share/kde4/services/plasma-dataengine-microblog.desktop
 share/kde4/services/plasma-dataengine-ocs.desktop
 share/kde4/services/plasma-dataengine-potd.desktop
 share/kde4/services/plasma-dict-default.desktop
