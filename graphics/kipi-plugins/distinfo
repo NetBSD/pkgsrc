@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.29 2013/04/06 09:46:09 markd Exp $
+$NetBSD: distinfo,v 1.30 2013/04/28 11:57:45 markd Exp $
 
 SHA1 (digikam-3.1.0.tar.bz2) = f4ce304acdf10e859ab8f70ce9d53a05d92d4fbd
 RMD160 (digikam-3.1.0.tar.bz2) = 511550a7ee37aac958a0d2e5afaa0a07aa1eab0e
 Size (digikam-3.1.0.tar.bz2) = 58559707 bytes
-SHA1 (patch-htmlexport_wizard.cpp) = 0fa8c9a6fe315bc228e016aba2cd49f502a403c9
-SHA1 (patch-printimages_wizard_cropframe.cpp) = fc3cd2ec0175539d5d6013a2994a8b9bde0ecc57
-SHA1 (patch-printimages_wizard_wizard.cpp) = 18cae2452cab382923f2dbc5254a4ee6e27ad96b
