@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.335 2013/04/03 13:45:49 obache Exp $
+# $NetBSD: bsd.prefs.mk,v 1.336 2013/04/28 13:21:47 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -640,6 +640,10 @@ COMPILER_RPATH_FLAG=	${_OPSYS_COMPILER_RPATH_FLAG}
 .else
 COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
 .endif
+
+COMPILER_INCLUDE_DIRS?=	${_OPSYS_INCLUDE_DIRS:U/usr/include}
+COMPILER_LIB_DIRS?=	${_OPSYS_LIB_DIRS:U/usr/lib${LIBABISUFFIX} /lib${LIBABISUFFIX}}
+SYSTEM_DEFAULT_RPATH?=	${_OPSYS_SYSTEM_RPATH:U/usr/lib}
 
 # WHOLE_ARCHIVE_FLAG and NO_WHOLE_ARCHIVE_FLAG publically export the
 # linker flags to extract all symbols from a static archive.
