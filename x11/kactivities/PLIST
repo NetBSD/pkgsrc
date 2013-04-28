@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/04/03 10:51:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/04/28 01:54:42 markd Exp $
 bin/kactivitymanagerd
 include/KDE/KActivities/Consumer
 include/KDE/KActivities/Controller
@@ -49,6 +49,7 @@ share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/New
 share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/PasswordDialog.qml
 share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/uihandler.qml
 share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/metadata.desktop
+share/kde/config/activitymanagerrc
 share/kde4/services/activities.protocol
 share/kde4/services/activitymanager-plugin-activityranking.desktop
 share/kde4/services/activitymanager-plugin-globalshortcuts.desktop
