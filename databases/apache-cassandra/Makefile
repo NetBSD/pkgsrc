@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/05/20 00:27:59 tonnerre Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/29 11:16:39 fhajny Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
@@ -15,14 +15,14 @@ LICENSE=	apache-2.0
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 USE_JAVA=	run
-USE_JAVA2=	1.5
+USE_JAVA2=	6
 USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-CASSANDRA_VER=	0.7.6
+CASSANDRA_VER=	1.2.4
 CASSANDRA_HOME=	${PREFIX}/share/cassandra
 EGDIR=		${PREFIX}/share/examples/cassandra
 DOCDIR=		${PREFIX}/share/doc/cassandra
@@ -30,35 +30,36 @@ DOCDIR=		${PREFIX}/share/doc/cassandra
 RCD_SCRIPTS=		cassandra
 CASSANDRA_USER?=	cassandra
 CASSANDRA_GROUP?=	cassandra
-USERGROUP_PHASE=	pre-install
 PKG_GROUPS=		${CASSANDRA_GROUP}
 PKG_USERS=		${CASSANDRA_USER}:${CASSANDRA_GROUP}
 PKG_GROUPS_VARS+=	CASSANDRA_GROUP
 PKG_USERS_VARS=		CASSANDRA_USER
 PKG_HOME.cassandra=	${CASSANDRA_HOME}
 PKG_SHELL.cassandra=	${SH}
-PKG_SYSCONFDIR.cassandra= ${CASSANDRA_HOME}/conf
-OWN_DIRS+=		${PKG_SYSCONFDIR.cassandra}
+
+# Following line only to unlock PKG_SYSCONFDIR_PERMS
+PKG_SYSCONFSUBDIR=		conf
+PKG_SYSCONFVAR=			cassandra
+PKG_SYSCONFDIR.cassandra=	${CASSANDRA_HOME}/${PKG_SYSCONFSUBDIR}
+PKG_SYSCONFDIR_PERMS=		${CASSANDRA_USER} ${CASSANDRA_GROUP} 0755
+
+OWN_DIRS_PERMS+=	${VARBASE}/lib/cassandra ${CASSANDRA_USER} ${CASSANDRA_GROUP} 0751
+OWN_DIRS_PERMS+=	${VARBASE}/log/cassandra ${CASSANDRA_USER} ${CASSANDRA_GROUP} 0755
+
 FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME}		\
 			CASSANDRA_HOME=${CASSANDRA_HOME}	\
 			CASSANDRA_USER=${CASSANDRA_USER}	\
 			CASSANDRA_GROUP=${CASSANDRA_GROUP}
 
-PRIVATE_EGFILES=	passwd.properties
-PUBLIC_EGFILES=		cassandra-env.sh cassandra-topology.properties	\
-			cassandra.yaml log4j-server.properties		\
-			log4j-tools.properties access.properties	\
-			schema-sample.txt
+EGFILES=		cassandra-env.sh cassandra-rackdc.properties	\
+			cassandra-topology.properties cassandra.yaml	\
+			commitlog_archiving.properties cqlshrc.sample	\
+			log4j-server.properties	log4j-tools.properties
 
 DOCFILES=		CHANGES LICENSE NEWS NOTICE README
 
-.for f in ${PRIVATE_EGFILES}
-CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR.cassandra}/${f}	\
-			${CASSANDRA_USER} ${CASSANDRA_GROUP} 0640
-.endfor
-
-.for f in ${PUBLIC_EGFILES}
-CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR.cassandra}/${f}	\
+.for f in ${EGFILES}
+CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${CASSANDRA_USER} ${CASSANDRA_GROUP} 0644
 .endfor
 
@@ -74,20 +75,16 @@ do-install:
 		${RM} -f ${WRKSRC}/${f}.txt
 .endfor
 
-.for f in ${PRIVATE_EGFILES}
+.for f in ${EGFILES}
 		${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
-		${RM} -f ${WRKSRC}/conf/${f}
-.endfor
-
-.for f in ${PUBLIC_EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
-		${RM} -f ${WRKSRC}/conf/${f}
 .endfor
 
 	${FIND} ${WRKSRC} -name \*.exe -type f -print | ${XARGS} ${RM} -f
 	${FIND} ${WRKSRC} -name \*.bat -type f -print | ${XARGS} ${RM} -f
 
-	cd ${WRKSRC} && ${PAX} -rw -pm . ${DESTDIR}${CASSANDRA_HOME}
+	cd ${WRKSRC} && \
+	  ${PAX} -rw -pm bin interface javadoc lib pylib tools \
+	  ${DESTDIR}${CASSANDRA_HOME}
 
 	${FIND} ${DESTDIR}${CASSANDRA_HOME} -type d -print |	\
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
@@ -98,8 +95,6 @@ do-install:
 	${FIND} ${DESTDIR}${CASSANDRA_HOME} -type f -name \*.sh -print |	\
 		${XARGS} ${CHMOD} ${BINMODE}
 
-	${CHOWN} ${CASSANDRA_USER}:${CASSANDRA_GROUP}	\
-		${DESTDIR}${CASSANDRA_HOME}/conf
-
+.include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
