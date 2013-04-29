@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2008/09/17 12:36:38 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/04/29 21:31:12 joerg Exp $
 
 SHA1 (libnipper-0.12.1.tgz) = 0999540d127588d1be1b9f3baecb25603511e448
 RMD160 (libnipper-0.12.1.tgz) = 3ff9bdae5e41a1b1549103c6bea030f662d0d19c
 Size (libnipper-0.12.1.tgz) = 450651 bytes
 SHA1 (patch-aa) = c4d245196cd901b9f11826bd163df701e1b447a2
 SHA1 (patch-ab) = a4b62f536cceb0814d3bf5b658605a5ff0cc2be5
+SHA1 (patch-report_report-text.cpp) = e686920acc8fa665eb65e69977421e7d50b459df

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2012/12/24 06:28:16 dholland Exp $
+$NetBSD: distinfo,v 1.4 2013/04/29 21:31:11 joerg Exp $
 
 SHA1 (xu4-1.0beta3.tar.gz) = baf1bbdc18088096ae11ea31aa497532b7e7124c
 RMD160 (xu4-1.0beta3.tar.gz) = f758fea4bc3034b19122651cfb725a88e0684960
@@ -8,6 +8,7 @@ SHA1 (patch-src_armor.cpp) = 1cc4ad07efaa70c5764b910d055939e22b4287d5
 SHA1 (patch-src_codex.cpp) = 706aa3a6854b72ae6ada927cc1bd1c71f7c4959e
 SHA1 (patch-src_conversation.cpp) = 15ea5eed4abe11e7afb58359b6cd732b1e84b458
 SHA1 (patch-src_creature.cpp) = 9479f075c95b481bae073011c72672b383a5f7e4
+SHA1 (patch-src_debug.h) = 7c5e021bbc0edd355146440b57eea30ca87d77a7
 SHA1 (patch-src_dialogueloader.cpp) = 10b46af20241f6571a7656b577f42dfca39f74cc
 SHA1 (patch-src_dialogueloader__tlk.cpp) = e4f69fc103836a15800b9f76ae742555a686ad34
 SHA1 (patch-src_direction.cpp) = 412950b32b43dbfd7081733c94b4365ee85a3fdd

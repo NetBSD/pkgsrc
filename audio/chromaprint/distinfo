@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/02 10:44:41 drochner Exp $
+$NetBSD: distinfo,v 1.2 2013/04/29 21:31:09 joerg Exp $
 
 SHA1 (chromaprint-0.7.tar.gz) = 6a961585e82d26d357eb792216becc0864ddcdb2
 RMD160 (chromaprint-0.7.tar.gz) = e1304ec6c408b7760f9363c9b6549b5683991e58
 Size (chromaprint-0.7.tar.gz) = 543811 bytes
+SHA1 (patch-src_utils.h) = 121edd7b50f2a00ad2ab6629a4c2e86c4b00963a

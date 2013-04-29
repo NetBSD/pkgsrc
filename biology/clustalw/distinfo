@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/12/13 13:27:13 wen Exp $
+$NetBSD: distinfo,v 1.7 2013/04/29 21:31:09 joerg Exp $
 
 SHA1 (clustalw-2.1.tar.gz) = f29784f68585544baa77cbeca6392e533d4cf433
 RMD160 (clustalw-2.1.tar.gz) = e193769955a6270797fcb039ca398a4b59d9248d
 Size (clustalw-2.1.tar.gz) = 350761 bytes
+SHA1 (patch-src_general_VectorOutOfRange.h) = 8c1d3df314efba8afa88410542e26881951e7193
