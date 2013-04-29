@@ -1,8 +1,8 @@
-$NetBSD: patch-gui_base_locale__util.cc,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-gui_base_locale__util.cc,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
---- gui/base/locale_util.cc.orig	2012-08-31 05:37:21.000000000 +0000
+--- gui/base/locale_util.cc.orig	2013-03-29 04:34:04.000000000 +0000
 +++ gui/base/locale_util.cc
-@@ -206,7 +206,7 @@ TranslationDataImpl::TranslationDataImpl
+@@ -207,7 +207,7 @@ TranslationDataImpl::TranslationDataImpl
    qApp->installEventFilter(&window_title_modifier_);
  #endif  // MOZC_SHOW_BUILD_NUMBER_ON_TITLE
  

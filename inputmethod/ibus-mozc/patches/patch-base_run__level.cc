@@ -1,13 +1,17 @@
-$NetBSD: patch-base_run__level.cc,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-base_run__level.cc,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
---- base/run_level.cc.orig	2012-08-31 05:37:06.000000000 +0000
+--- base/run_level.cc.orig	2013-03-29 04:33:43.000000000 +0000
 +++ base/run_level.cc
-@@ -34,7 +34,7 @@
+@@ -34,10 +34,10 @@
  #include <aclapi.h>
- #endif  // OS_WINDOWS
+ #endif  // OS_WIN
  
 -#ifdef OS_LINUX
 +#if defined(OS_LINUX) || defined(OS_NETBSD)
  #include <unistd.h>
  #include <sys/types.h>
- #endif  // OS_LINUX
+-#endif  // OS_LINUX
++#endif  // OS_LINUX || OS_NETBSD
+ 
+ #include "base/const.h"
+ #include "base/logging.h"
