@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2010/12/03 21:21:10 ghen Exp $
+$NetBSD: patch-ab,v 1.3 2013/04/29 12:53:57 manu Exp $
 
---- doc/example-config/dovecot.conf.orig	2010-11-10 16:09:10.000000000 +0000
-+++ doc/example-config/dovecot.conf
-@@ -12,12 +12,9 @@
+--- doc/example-config/dovecot.conf.orig	2013-01-07 08:50:26.000000000 +0100
++++ doc/example-config/dovecot.conf	2013-04-11 10:01:20.000000000 +0200
+@@ -15,14 +15,11 @@
+ 
  # Default values are shown for each setting, it's not required to uncomment
  # those. These are exceptions to this though: No sections (e.g. namespace {})
  # or plugin settings are added by default, they're listed only as examples.
@@ -16,3 +17,4 @@ $NetBSD: patch-ab,v 1.2 2010/12/03 21:21:10 ghen Exp $
  
  # A comma separated list of IPs or hosts where to listen in for connections. 
  # "*" listens in all IPv4 interfaces, "::" listens in all IPv6 interfaces.
+ # If you want to specify non-default ports or anything more complex,
