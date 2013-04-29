@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/02/16 11:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/29 09:21:24 ryoon Exp $
 #
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	2
 
 INSTALLATION_DIRS+=	libexec share/ibus share/icons share/ibus/component \
 			share/ibus-mozc
@@ -11,13 +10,13 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c Release ${_MAKE_JOBS} \
+		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} ${_MAKE_JOBS} \
 			unix/ibus/ibus.gyp:ibus_mozc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/Release/ibus_mozc \
+	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/ibus_mozc \
 		${DESTDIR}${PREFIX}/libexec/ibus-engine-mozc
-	${INSTALL_DATA} ${WRKSRC}/out_${OSDEST}/Release/obj/gen/unix/ibus/mozc.xml \
+	${INSTALL_DATA} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/obj/gen/unix/ibus/mozc.xml \
 		${DESTDIR}${PREFIX}/share/ibus/component
 .for f in ui-alpha_full ui-alpha_half ui-dictionary ui-direct \
 	ui-hiragana ui-katakana_full ui-katakana_half ui-properties ui-tool

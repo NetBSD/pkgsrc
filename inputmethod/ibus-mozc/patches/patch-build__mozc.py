@@ -1,8 +1,8 @@
-$NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-build__mozc.py,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
---- build_mozc.py.orig	2012-08-31 05:36:42.000000000 +0000
+--- build_mozc.py.orig	2013-03-29 04:33:25.000000000 +0000
 +++ build_mozc.py
-@@ -60,6 +60,7 @@ from build_tools.util import GetRelPath
+@@ -62,6 +62,7 @@ from build_tools.util import GetRelPath
  from build_tools.util import IsLinux
  from build_tools.util import IsMac
  from build_tools.util import IsWindows
@@ -10,7 +10,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
  from build_tools.util import PrintErrorAndExit
  from build_tools.util import RemoveDirectoryRecursively
  from build_tools.util import RemoveFile
-@@ -111,6 +112,8 @@ def GetBuildBaseName(options, target_pla
+@@ -116,6 +117,8 @@ def GetBuildBaseName(options, target_pla
      build_base = 'out_mac'
    elif target_platform == 'Linux' or target_platform == 'ChromeOS':
      build_base = 'out_linux'
@@ -19,16 +19,20 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
    elif target_platform == 'Android':
      build_base = 'out_android'
    elif target_platform == 'NaCl':
-@@ -208,7 +211,7 @@ def GetGypFileNames(options):
-   if IsWindows():
-     gyp_file_names.extend(glob.glob('%s/win32/*/*.gyp' % SRC_DIR))
-     gyp_file_names.extend(glob.glob('third_party/breakpad/*.gyp'))
--  elif IsLinux():
-+  elif IsLinux() or IsNetBSD():
-     gyp_file_names.extend(glob.glob('%s/unix/*/*.gyp' % SRC_DIR))
-     # Add ibus.gyp if ibus version is >=1.4.1.
+@@ -219,6 +222,12 @@ def GetGypFileNames(options):
      if not PkgExists('ibus-1.0 >= 1.4.1'):
-@@ -274,6 +277,7 @@ def AddCommonOptions(parser):
+       logging.info('removing ibus.gyp.')
+       gyp_file_names.remove('%s/unix/ibus/ibus.gyp' % SRC_DIR)
++  elif options.target_platform == 'NetBSD':
++    gyp_file_names.extend(glob.glob('%s/unix/*/*.gyp' % SRC_DIR))
++    # Add ibus.gyp if ibus version is >=1.4.1.
++    if not PkgExists('ibus-1.0 >= 1.4.1'):
++      logging.info('removing ibus.gyp.')
++      gyp_file_names.remove('%s/unix/ibus/ibus.gyp' % SRC_DIR)
+   elif options.target_platform == 'ChromeOS':
+     gyp_file_names.extend(glob.glob('%s/unix/ibus/*.gyp' % SRC_DIR))
+   elif options.target_platform == 'NaCl':
+@@ -266,6 +275,7 @@ def AddCommonOptions(parser):
                      help='Specifies the base directory of the built binaries.')
    parser.add_option('--language', dest='language', default='japanese',
                      help='Specify the target language to build.')
@@ -36,7 +40,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
    return parser
  
  
-@@ -284,6 +288,8 @@ def AddTargetPlatformOption(parser):
+@@ -286,6 +296,8 @@ def AddTargetPlatformOption(parser):
    # If you want Android build, specify "Android".
    if IsLinux():
      default_target = 'Linux'
@@ -45,7 +49,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
    elif IsWindows():
      default_target = 'Windows'
    elif IsMac():
-@@ -413,7 +419,7 @@ def ParseGypOptions(args=None, values=No
+@@ -423,7 +435,7 @@ def ParseGypOptions(args=None, values=No
    use_zinnia_default = True
  
    parser.add_option('--server_dir', dest='server_dir',
@@ -54,20 +58,20 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
                      help='A path to the directory to be installed server '
                      'executable. This option is only available for Linux.')
  
-@@ -467,6 +473,12 @@ def ExpandMetaTarget(meta_target_name):
-                '%s/gui/gui.gyp:mozc_tool']
+@@ -477,6 +489,12 @@ def ExpandMetaTarget(options, meta_targe
+                SRC_DIR + '/gui/gui.gyp:mozc_tool']
      if PkgExists('ibus-1.0 >= 1.4.1'):
-       targets.append('%s/unix/ibus/ibus.gyp:ibus_mozc')
+       targets.append(SRC_DIR + '/unix/ibus/ibus.gyp:ibus_mozc')
 +  elif target_platform == 'NetBSD':
-+    targets = ['%s/server/server.gyp:mozc_server',
-+               '%s/renderer/renderer.gyp:mozc_renderer',
-+               '%s/gui/gui.gyp:mozc_tool']
++    targets = [SRC_DIR + '/server/server.gyp:mozc_server',
++               SRC_DIR + '/renderer/renderer.gyp:mozc_renderer',
++               SRC_DIR + '/gui/gui.gyp:mozc_tool']
 +    if PkgExists('ibus-1.0 >= 1.4.1'):
-+      targets.append('%s/unix/ibus/ibus.gyp:ibus_mozc')
++      targets.append(SRC_DIR + '/unix/ibus/ibus.gyp:ibus_mozc')
+   elif target_platform == 'ChromeOS':
+     targets.append(SRC_DIR + '/unix/ibus/ibus.gyp:ibus_mozc')
    elif target_platform == 'Mac':
-     targets = ['%s/mac/mac.gyp:DiskImage']
-   elif target_platform == 'Windows':
-@@ -481,7 +493,7 @@ def ParseBuildOptions(args=None, values=
+@@ -505,7 +523,7 @@ def ParseBuildOptions(args=None, values=
    """Parses command line options for the build command."""
    parser = optparse.OptionParser(usage='Usage: %prog build [options]')
    AddCommonOptions(parser)
@@ -76,7 +80,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      default_build_concurrency = GetNumberOfProcessors() * 2
      parser.add_option('--jobs', '-j', dest='jobs',
                        default=('%d' % default_build_concurrency),
-@@ -501,7 +513,7 @@ def ParseRunTestsOptions(args=None, valu
+@@ -525,7 +543,7 @@ def ParseRunTestsOptions(args=None, valu
    parser = optparse.OptionParser(
        usage='Usage: %prog runtests [options] [test_targets] [-- build options]')
    AddCommonOptions(parser)
@@ -85,16 +89,16 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      default_build_concurrency = GetNumberOfProcessors() * 2
      parser.add_option('--jobs', '-j', dest='jobs',
                        default=('%d' % default_build_concurrency),
-@@ -634,6 +646,8 @@ def GypMain(options, unused_args):
+@@ -673,6 +691,8 @@ def GypMain(options, unused_args):
      command_line.extend(['-D', 'wix_dir=%s' % options.wix_dir])
    else:
      command_line.extend(['-D', 'use_wix=NO'])
 +  if options.os:
 +    command_line.extend(['-D', 'OS=%s' % options.os])
  
-   command_line.extend(['-D', 'android_arch_abi=%s' % options.android_arch_abi])
-   command_line.extend(['-D', 'android_application_id=%s' %
-@@ -669,7 +683,7 @@ def GypMain(options, unused_args):
+   android_sdk_home = options.android_sdk_home
+   if version.GetTargetPlatform() == 'Android':
+@@ -726,7 +746,7 @@ def GypMain(options, unused_args):
  
    def SetCommandLineForFeature(option_name, windows=False, mac=False,
                                 linux=False, chromeos=False, android=False,
@@ -103,7 +107,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      """Updates an option like '--enable_foober' and add a -D argument for gyp.
  
      This function ensures an option like '--enable_foober' exists and it has a
-@@ -693,6 +707,8 @@ def GypMain(options, unused_args):
+@@ -750,6 +770,8 @@ def GypMain(options, unused_args):
            option on Android platform.
        nacl: A boolean which replesents the default value of the target
            option on NaCl.
@@ -112,50 +116,51 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
  
      Raises:
        ValueError: An error occurred when 'option_name' is empty.
-@@ -706,6 +722,7 @@ def GypMain(options, unused_args):
+@@ -763,6 +785,7 @@ def GypMain(options, unused_args):
                         'Linux': linux,
                         'ChromeOS': chromeos,
                         'Android': android,
-+                       'NetBSD' : netbsd,
++		       'NetBSD' : netbsd,
                         'NaCl': nacl}[options.target_platform]
      enable_option_name = 'enable_%s' % option_name
      enabled = options.ensure_value(enable_option_name, default_enabled)
-@@ -719,14 +736,17 @@ def GypMain(options, unused_args):
+@@ -776,14 +799,17 @@ def GypMain(options, unused_args):
    SetCommandLineForFeature(option_name='webservice_infolist')
    SetCommandLineForFeature(option_name='cloud_sync',
                             linux=is_official_dev,
-+                           netbsd=is_official_dev,
++			   netbsd=is_official_dev,
                             windows=is_official_dev,
                             mac=is_official_dev)
    SetCommandLineForFeature(option_name='cloud_handwriting',
                             linux=is_official_dev,
-+                           netbsd=is_official_dev,
++			   netbsd=is_official_dev,
                             windows=is_official_dev,
                             mac=is_official_dev)
    SetCommandLineForFeature(option_name='http_client',
                             linux=is_official,
-+                           netbsd=is_official,
++			   netbsd=is_official,
                             windows=is_official,
                             mac=is_official,
                             chromeos=False,  # not supported.
-@@ -735,6 +755,7 @@ def GypMain(options, unused_args):
-                            windows=True,
-                            mac=True,
-                            linux=True,
-+                           netbsd=True,
-                            chromeos=True,
-                            android=True,
-                            nacl=True)
-@@ -769,7 +790,7 @@ def GypMain(options, unused_args):
-   else:
+@@ -796,6 +822,7 @@ def GypMain(options, unused_args):
+                            android=True)
+   SetCommandLineForFeature(option_name='history_deletion',
+                            linux=is_official_dev,
++                           netbsd=is_official_dev,
+                            windows=is_official_dev,
+                            mac=is_official_dev)
+ 
+@@ -829,7 +856,8 @@ def GypMain(options, unused_args):
      command_line.extend(['-D', 'use_zinnia=NO'])
  
--  if IsLinux():
-+  if IsLinux() or IsNetBSD():
-     if '%s/unix/ibus/ibus.gyp' % SRC_DIR in gyp_file_names:
-       command_line.extend(['-D', 'use_libibus=1'])
+   if ((options.target_platform == 'Linux' or
+-       options.target_platform == 'ChromeOS') and
++       options.target_platform == 'ChromeOS' or
++       options.target_platform == 'NetBSD') and
+       '%s/unix/ibus/ibus.gyp' % SRC_DIR in gyp_file_names):
+     command_line.extend(['-D', 'use_libibus=1'])
  
-@@ -790,7 +811,7 @@ def GypMain(options, unused_args):
+@@ -874,7 +902,7 @@ def GypMain(options, unused_args):
    # command for pkg-config.  Here we catch the environment variable
    # and use the specified command instead of actual pkg-config
    # command.
@@ -164,7 +169,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      command_line.extend(['-D', 'pkg_config_command=%s' % GetPkgConfigCommand()])
    else:
      command_line.extend(['-D', 'pkg_config_command='])
-@@ -927,6 +948,41 @@ def BuildOnMac(options, targets, origina
+@@ -1043,6 +1071,41 @@ def BuildOnMac(options, targets, origina
                '-parallelizeTargets',
                'BUILD_WITH_GYP=1'])
  
@@ -176,7 +181,7 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
 +        CanonicalTargetToGypFileAndTargetName(target))
 +    target_names.append(target_name)
 +
-+    make_command = os.getenv('BUILD_COMMAND', 'gmake')
++    make_command = os.getenv('BUILD_COMMAND', 'make')
 +
 +  envvars = [
 +      'CFLAGS',
@@ -204,18 +209,18 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
 +
 +  RunOrDie([make_command] + build_args + target_names)
  
- def LocateMSBuildDir():
-   """Locate the directory where msbuild.exe exists.
-@@ -1079,6 +1135,8 @@ def BuildMain(options, targets, original
+ def BuildOnWindows(targets):
+   """Build the target on Windows."""
+@@ -1073,6 +1136,8 @@ def BuildMain(options, targets, original
      BuildOnMac(options, targets, original_directory_name)
    elif IsLinux():
      BuildOnLinux(options, targets, original_directory_name)
 +  elif IsNetBSD():
 +    BuildOnBSD(options, targets, original_directory_name)
    elif IsWindows():
-     BuildOnWindows(options, targets, original_directory_name)
+     BuildOnWindows(targets)
    else:
-@@ -1350,7 +1408,7 @@ def CleanBuildFilesAndDirectories(option
+@@ -1349,7 +1414,7 @@ def CleanBuildFilesAndDirectories(option
      elif IsMac():
        directory_names.extend(glob.glob(os.path.join(gyp_directory_name,
                                                      '*.xcodeproj')))
@@ -224,8 +229,8 @@ $NetBSD: patch-build__mozc.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
        file_names.extend(glob.glob(os.path.join(gyp_directory_name,
                                                 '*.target.mk')))
        file_names.extend(glob.glob(os.path.join(gyp_directory_name,
-@@ -1377,6 +1435,10 @@ def CleanBuildFilesAndDirectories(option
-     file_names.append('Makefile')
+@@ -1397,6 +1462,10 @@ def CleanBuildFilesAndDirectories(option
+ 
    elif IsWindows():
      file_names.append('third_party/breakpad/breakpad.gyp')
 +    directory_names.append('out_win')
