@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:36 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/29 11:23:58 sborrill Exp $
 #
 
 # VERSION is set in xentool41/version.mk
@@ -8,6 +8,10 @@ DISTNAME=		xen-${VERSION}
 PKGNAME=		xenstoretools-${VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
+
+DISTFILES=		${DISTNAME}.tar.gz
+DISTFILES+=		ipxe-git-v${VERSION_IPXE}.tar.gz
+SITES.ipxe-git-v${VERSION_IPXE}.tar.gz +=	http://xenbits.xensource.com/xen-extfiles/
 
 MAINTAINER=		sborrill@NetBSD.org
 HOMEPAGE=		http://xen.org/
