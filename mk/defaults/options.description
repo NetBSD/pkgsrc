@@ -158,6 +158,7 @@ exim-lookup-whoson	Lookup in whoson dynamic IP address.
 exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
 expat			Use the expat library for XML parsing.
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
+f90			Enable Fortran 90 support.
 faac			Enable AAC decoding support using faac.
 faad			Enable AAC decoding support using faad2.
 fam			Support using File Alteration Monitor (FAM).
