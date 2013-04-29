@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1537 2013/04/29 14:49:56 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1538 2013/04/29 16:43:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/py-notify-python version 0.1.1nb17 [ryoon 2013-04-29]
 	Updated audio/exaile to 0.2.14nb24 [ryoon 2013-04-29]
 	Updated inputmethod/ibus to 1.4.2nb6 [ryoon 2013-04-29]
+	Updated security/nettle to 2.7 [adam 2013-04-29]

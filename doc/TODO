@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12116 2013/04/29 09:37:18 wiz Exp $
+$NetBSD: TODO,v 1.12117 2013/04/29 16:43:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nessus-4.4.1
 	o netatalk-3.0.2
 	o netramet-50
-	o nettle-2.7
 	o newmail-1.0.2
 	o newt-0.52.12
 	o nhc98-1.22 [pkg/45318]
