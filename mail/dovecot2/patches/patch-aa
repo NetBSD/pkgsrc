@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2011/03/10 13:42:54 adam Exp $
+$NetBSD: patch-aa,v 1.5 2013/04/29 12:53:57 manu Exp $
 
---- doc/example-config/Makefile.in.orig	2010-10-21 17:37:01.000000000 +0000
-+++ doc/example-config/Makefile.in
-@@ -283,7 +283,7 @@ top_srcdir = @top_srcdir@
+--- doc/example-config/Makefile.in.orig	2013-04-10 21:31:22.000000000 +0200
++++ doc/example-config/Makefile.in	2013-04-11 10:00:23.000000000 +0200
+@@ -298,9 +298,9 @@
+ top_srcdir = @top_srcdir@
  SUBDIRS = conf.d
  pkgsysconfdir = $(sysconfdir)/dovecot
  nodist_pkgsysconf_DATA = README
@@ -11,7 +12,9 @@ $NetBSD: patch-aa,v 1.4 2011/03/10 13:42:54 adam Exp $
  example_DATA = \
  	dovecot.conf \
  	dovecot-db.conf.ext \
-@@ -626,8 +626,7 @@ info: info-recursive
+ 	dovecot-dict-auth.conf.ext \
+@@ -643,10 +643,9 @@
+ info: info-recursive
  
  info-am:
  
@@ -21,3 +24,4 @@ $NetBSD: patch-aa,v 1.4 2011/03/10 13:42:54 adam Exp $
  
  install-dvi: install-dvi-recursive
  
+ install-dvi-am:
