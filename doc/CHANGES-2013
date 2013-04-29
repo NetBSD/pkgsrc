@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1536 2013/04/29 13:29:44 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1537 2013/04/29 14:49:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2357,3 +2357,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-IO-Compress to 2.060 [hiramatsu 2013-04-29]
 	Updated mail/dovecot2 to 2.2.0 [hiramatsu 2013-04-29]
 	Added sysutils/py-notify-python version 0.1.1nb17 [ryoon 2013-04-29]
+	Updated audio/exaile to 0.2.14nb24 [ryoon 2013-04-29]
+	Updated inputmethod/ibus to 1.4.2nb6 [ryoon 2013-04-29]
