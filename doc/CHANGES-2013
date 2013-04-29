@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1534 2013/04/29 12:08:34 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1535 2013/04/29 12:54:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2355,3 +2355,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/bulk-medium to 20130429 [wiz 2013-04-29]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.060 [hiramatsu 2013-04-29]
 	Updated devel/p5-IO-Compress to 2.060 [hiramatsu 2013-04-29]
+	Updated mail/dovecot2 to 2.2.0 [hiramatsu 2013-04-29]
