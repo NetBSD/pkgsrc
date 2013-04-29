@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1527 2013/04/28 20:35:57 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.1528 2013/04/29 03:05:15 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2344,3 +2344,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xvkbd to 3.4a [ryoon 2013-04-28]
 	Updated sysutils/salt to 0.14.1 [imil 2013-04-28]
 	Updated editors/nedit to 5.5nb5 [dholland 2013-04-28]
+	Updated databases/p5-DBM-Deep to 2.0008 [hiramatsu 2013-04-29]
