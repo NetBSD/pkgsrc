@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2010/08/22 09:25:28 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2013/04/29 21:13:30 joerg Exp $
 
 * make gcc-4.3 compliant
   http://id3lib.cvs.sourceforge.net/viewvc/id3lib/id3lib-devel/include/id3/id3lib_strings.h?r1=1.7&r2=1.8
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.6 2010/08/22 09:25:28 wiz Exp $
  
 -#ifndef _GLIBCPP_USE_WCHAR_T
 +/* gcc-3.4 defines _GLIBCXX_USE_WCHAR_T instead of _GLIBCPP_USE_WCHAR_T */
-+#if !defined(_GLIBCPP_USE_WCHAR_T) && !defined(_GLIBCXX_USE_WCHAR_T)
++#if !defined(_GLIBCPP_USE_WCHAR_T) && !defined(_GLIBCXX_USE_WCHAR_T) && !defined(_LIBCPP_VERSION)
  #if (defined(ID3_NEED_WCHAR_TEMPLATE))
     template<>
       struct char_traits<wchar_t>
