@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2012/09/13 15:09:20 sno Exp $
+$NetBSD: distinfo,v 1.16 2013/04/29 12:07:45 hiramatsu Exp $
 
-SHA1 (IO-Compress-2.055.tar.gz) = f174c371b906557a693b68f6184d142bcf204a12
-RMD160 (IO-Compress-2.055.tar.gz) = 4ccddb577176d05cb0a07d0872e5d9a4d43c88ff
-Size (IO-Compress-2.055.tar.gz) = 237365 bytes
+SHA1 (IO-Compress-2.060.tar.gz) = d74d735ab9c918961ce1da481c17c3513dd46623
+RMD160 (IO-Compress-2.060.tar.gz) = b97d484ce76f9f2dd34b9ffb105979eea72f7ad6
+Size (IO-Compress-2.060.tar.gz) = 242986 bytes
