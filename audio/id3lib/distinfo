@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.19 2010/08/22 23:20:57 obache Exp $
+$NetBSD: distinfo,v 1.20 2013/04/29 21:13:30 joerg Exp $
 
 SHA1 (id3lib-3.8.3.tar.gz) = c92c880da41d1ec0b242745a901702ae87970838
 RMD160 (id3lib-3.8.3.tar.gz) = bfa2499ec649ed40815ad0a370c78eb1517952c4
 Size (id3lib-3.8.3.tar.gz) = 950726 bytes
-SHA1 (patch-aa) = a9adf3da8f41390582171b43d1a910aafb41c308
+SHA1 (patch-aa) = 23ccb36fc35e1f645a72b9292c1cd8eeb0379a38
 SHA1 (patch-af) = 0266e9220791b7b14a35dc9b7564ab75cbc6562b
 SHA1 (patch-ag) = a047fe90d83c88e0f6d0a6a0595a440ef49276e3
 SHA1 (patch-ah) = 42a04014cc839565063daa395884b757214eb911
 SHA1 (patch-ai) = c0521a6d62d17826c9b1f35f6be51e1b72c48e7c
 SHA1 (patch-aj) = 626952e7bbddbcf5db66a0509f62d588ccaed17a
 SHA1 (patch-ak) = f7d1155a7750b455ac590d5777b332a55542393d
-SHA1 (patch-aq) = a93740aaf50c4f38525e30497d640b856829b27e
+SHA1 (patch-aq) = 711a66086a591515b14358abeb265e28b2a178db
 SHA1 (patch-ar) = bee59462bfb3c5729e24827953a6da9f281cd8a7
 SHA1 (patch-as) = 50ca42926c603361864bf2891d6b4e01e7f59ade
 SHA1 (patch-at) = f5ab25d72d3d6e47c1710bbc17dd0cd0749a0b22
