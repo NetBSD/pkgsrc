@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1529 2013/04/29 07:44:29 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1530 2013/04/29 09:24:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2346,3 +2346,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/nedit to 5.5nb5 [dholland 2013-04-28]
 	Updated databases/p5-DBM-Deep to 2.0008 [hiramatsu 2013-04-29]
 	Added devel/netcdf-fortran version 4.2 [adam 2013-04-29]
+	Updated inputmethod/ibus-mozc to 1.10.1390.102 [ryoon 2013-04-29]
+	Updated inputmethod/mozc-server to 1.10.1390.102 [ryoon 2013-04-29]
+	Updated inputmethod/mozc-tool to 1.10.1390.102 [ryoon 2013-04-29]
