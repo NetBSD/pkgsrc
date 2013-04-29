@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/29 07:43:32 adam Exp $
+bin/nf-config
+${PLIST.f90}include/NETCDF.mod
+${PLIST.f90}include/TYPESIZES.mod
+include/netcdf.inc
+info/netcdf-f77.info
+info/netcdf-f77.info-1
+info/netcdf-f77.info-2
+info/netcdf-f90.info
+lib/libnetcdff.la
+lib/pkgconfig/netcdf-fortran.pc
+man/man3/netcdf_f77.3
+${PLIST.f90}man/man3/netcdf_f90.3
