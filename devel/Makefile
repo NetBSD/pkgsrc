@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1737 2013/04/25 09:15:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.1738 2013/04/29 07:43:49 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -489,6 +489,7 @@ SUBDIR+=	ncursesw
 SUBDIR+=	netbeans-ide
 SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
+SUBDIR+=	netcdf-fortran
 SUBDIR+=	newfile
 SUBDIR+=	noweb
 SUBDIR+=	npapi-sdk
