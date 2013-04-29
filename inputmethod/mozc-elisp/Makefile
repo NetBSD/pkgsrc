@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/13 15:07:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/29 09:52:16 ryoon Exp $
 #
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
@@ -26,4 +26,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/unix/emacs/mozc.elc \
 		${DESTDIR}${EMACS_LISPPREFIX}
 
-.include "../../inputmethod/ibus-mozc/Makefile.common"
+.include "../../inputmethod/mozc-server/Makefile.common"

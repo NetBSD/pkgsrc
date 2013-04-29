@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/29 09:22:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/29 09:52:18 ryoon Exp $
 #
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-tool-/}
@@ -16,4 +16,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/mozc_tool \
 		${DESTDIR}${PREFIX}/libexec
 
-.include "../../inputmethod/ibus-mozc/Makefile.common"
+.include "../../inputmethod/mozc-server/Makefile.common"
