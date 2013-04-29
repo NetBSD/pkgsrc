@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1532 2013/04/29 09:37:18 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1533 2013/04/29 10:50:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2351,3 +2351,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/mozc-tool to 1.10.1390.102 [ryoon 2013-04-29]
 	Updated inputmethod/mozc-elisp to 1.10.1390.102 [ryoon 2013-04-29]
 	Updated print/poppler to 0.22.3 [wiz 2013-04-29]
+	Removed lang/python31 successor lang/python33 [wiz 2013-04-29]
+	Updated meta-pkgs/bulk-medium to 20130429 [wiz 2013-04-29]
