@@ -1,0 +1,80 @@
+# $NetBSD: Makefile.common,v 1.1 2013/04/29 09:52:16 ryoon Exp $
+# used by inputmethod/ibus-mozc/Makefile
+# used by inputmethod/mozc-elisp/Makefile
+# used by inputmethod/mozc-server/Makefile
+# used by inputmethod/mozc-tool/Makefile
+#
+
+DISTNAME=	mozc-1.10.1390.102
+CATEGORIES=	inputmethod
+MASTER_SITES=	http://mozc.googlecode.com/files/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://code.google.com/p/mozc/
+COMMENT=	Japanese inputmethod Mozc engine for IBus
+LICENSE=	modified-bsd
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/mozc-server/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
+
+USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	gmake pkg-config
+
+FIND_PREFIX:=	GYPDIR=${PYPKGPREFIX}-gyp
+.include "../../mk/find-prefix.mk"
+
+OPENSSL_CFLAGS=		-I${BUILDLINK_PREFIX.openssl}/include
+OPENSSL_INC=		-I${BUILDLINK_PREFIX.openssl}/include
+OPENSSL_LDFLAGS=	-L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
+OPENSSL_LIBS=		-lssl -lcrypto
+
+SUBST_CLASSES+=		gyp
+SUBST_STAGE.gyp=	pre-configure
+SUBST_MESSAGE.gyp=	Fix gyp defaults
+SUBST_FILES.gyp+=	base/base.gyp
+SUBST_FILES.gyp+=	base/process.cc
+SUBST_FILES.gyp+=	handwriting/zinnia_handwriting.cc
+SUBST_FILES.gyp+=	unix/ibus/gen_mozc_xml.py
+SUBST_FILES.gyp+=	gui/qt_rcc.gypi
+SUBST_FILES.gyp+=	gui/qt_moc.gypi
+SUBST_FILES.gyp+=	gui/qt_uic.gypi
+SUBST_FILES.gyp+=	gui/qt_libraries.gypi
+SUBST_FILES.gyp+=	base/const.h
+SUBST_FILES.gyp+=	build_mozc.py
+SUBST_FILES.gyp+=	protobuf/genproto.gypi
+SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
+SUBST_VARS.gyp+=	PREFIX QTDIR
+
+# To disable flock(1) in link stage.
+ALL_ENV+=	LINK=${CXX}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+OSDEST=		bsd
+.elif ${OPSYS} == "Linux"
+OSDEST=		linux
+.endif
+
+MOZC_BUILD_MODE=	Release # or Debug
+
+do-configure:
+	cd ${WRKSRC} && env ${MAKE_ENV} \
+		GYP_DEFINES="use_libprotobuf=1" \
+		${PYTHONBIN} build_mozc.py gyp --os=${LOWER_OPSYS} && \
+		${PYTHONBIN} build_mozc.py build_tools -c ${MOZC_BUILD_MODE} ${_MAKE_JOBS}
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
+# gmock is not used yet...
+#.include "../../devel/gmock/buildlink3.mk"
+.include "../../inputmethod/ibus/buildlink3.mk"
+.include "../../inputmethod/zinnia/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+
+.include "../../lang/python/tool.mk"
+.include "../../mk/bsd.pkg.mk"
