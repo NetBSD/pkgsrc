@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/29 09:21:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/29 09:52:15 ryoon Exp $
 #
 
 PKGNAME=	ibus-${DISTNAME}
@@ -28,4 +28,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data/images/unix/ime_product_icon_opensource-32.png \
 		${DESTDIR}${PREFIX}/share/ibus-mozc/product_icon.png
 
-.include "Makefile.common"
+.include "../../inputmethod/mozc-server/Makefile.common"
