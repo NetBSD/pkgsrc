@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2012/12/18 13:27:10 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2013/04/29 21:12:36 joerg Exp $
 
 SHA1 (festival-2.1-release.tar.gz) = f0c5a4282667898c584516e3605742835f59cb77
 RMD160 (festival-2.1-release.tar.gz) = b3c646ecc532e4e05f846db06bbab12a13ec1d6b
@@ -21,6 +21,7 @@ SHA1 (patch-speech__tools_config_rules_compile__options.mak) = d3aa93029edba84f8
 SHA1 (patch-speech__tools_include_EST__SCFG.h) = d58bc030dec4d526a89719e32c3624c642f33f3e
 SHA1 (patch-speech__tools_include_EST__TIterator.h) = db7617f5c4a802672ce3b098ecd512b6cdb96aeb
 SHA1 (patch-speech__tools_include_EST__TNamedEnum.h) = f240a338d17d7a36a5dba1b0f3b48190b235bf03
+SHA1 (patch-speech__tools_include_EST__error.h) = 26c99948bee89f11b39efbb9d6eb195e1fb1602d
 SHA1 (patch-speech__tools_include_ling__class_EST__FeatureFunctionPackage.h) = ec5eb54fba5a50b43d1a0c9f0a5ae36407f55bff
 SHA1 (patch-speech__tools_include_unix_EST__socket__unix.h) = f81c0cda0858d121e2d24182f39c7ab8fc673174
 SHA1 (patch-speech__tools_stats_dynamic__program.cc) = d932f865d5c5577f7c1adc446adf9a2ab25c59c9
