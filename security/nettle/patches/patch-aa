@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2013/03/15 18:22:03 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2013/04/29 16:42:25 adam Exp $
 
---- configure.orig	2013-01-14 21:44:12.000000000 +0000
+--- configure.orig	2013-04-24 13:26:53.000000000 +0000
 +++ configure
-@@ -6886,7 +6886,7 @@ fi
+@@ -7183,7 +7183,7 @@ fi
      enable_documentation=yes
  
    else
