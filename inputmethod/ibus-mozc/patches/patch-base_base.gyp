@@ -1,8 +1,8 @@
-$NetBSD: patch-base_base.gyp,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-base_base.gyp,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
---- base/base.gyp.orig	2012-08-31 05:37:06.000000000 +0000
+--- base/base.gyp.orig	2013-03-29 04:33:43.000000000 +0000
 +++ base/base.gyp
-@@ -98,7 +98,7 @@
+@@ -85,7 +85,7 @@
          # shared among *host* binaries and *target* binaries. This means that
          # you should implement *host* binaries by using limited libraries
          # which are also available on NDK.
@@ -11,12 +11,13 @@ $NetBSD: patch-base_base.gyp,v 1.1 2013/01/18 11:36:40 ryoon Exp $
           'not (target_platform=="NaCl" and _toolset=="target")', {
            'defines': [
              'HAVE_LIBRT=1',
-@@ -260,22 +260,22 @@
+@@ -262,23 +262,23 @@
              ],
            }
          }],
--        ['OS=="linux" and target_platform!="Android"', {
-+        ['OS=="netbsd" or (OS=="linux" and target_platform!="Android")', {
+-        ['OS=="linux" and target_platform!="Android" and '
++        ['OS=="netbsd" or (OS=="linux" and target_platform!="Android") and '
+          'not (target_platform=="NaCl" and _toolset=="target")', {
            'cflags': [
 -            '<!@(<(pkg_config_command) --cflags-only-other openssl)',
 +            '@OPENSSL_CFLAGS@',
