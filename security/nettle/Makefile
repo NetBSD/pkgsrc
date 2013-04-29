@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/03/15 18:22:03 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/29 16:42:24 adam Exp $
 
-DISTNAME=	nettle-2.6
+DISTNAME=	nettle-2.7
 CATEGORIES=	devel security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
 		ftp://ftp.lysator.liu.se/pub/security/lsh/

@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile.in,v 1.4 2013/03/15 18:22:03 drochner Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2013/04/29 16:42:25 adam Exp $
 
 Use LIBTOOL.
 
---- Makefile.in.orig	2013-01-14 21:44:12.000000000 +0000
+--- Makefile.in.orig	2013-04-24 13:26:53.000000000 +0000
 +++ Makefile.in
-@@ -14,13 +14,13 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
- INSTALL_STRIP_PROGRAM = $(INSTALL_PROGRAM) -s
- MKDIR_P = @MKDIR_P@
+@@ -16,13 +16,13 @@ MKDIR_P = @MKDIR_P@
+ 
+ OPT_ASM_SOURCES = @OPT_ASM_SOURCES@
  
 -SUBDIRS = tools testsuite examples
 +SUBDIRS = tools testsuite
@@ -20,8 +20,8 @@ Use LIBTOOL.
  SHLIBTARGETS = @IF_SHARED@ $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
  
  getopt_SOURCES = getopt.c getopt1.c
-@@ -169,18 +169,18 @@ nettle_PURE_OBJS = $(nettle_OBJS:.$(OBJE
- hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT))
+@@ -186,18 +186,18 @@ nettle_PURE_OBJS = $(nettle_OBJS:.$(OBJE
+ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT)) $(OPT_ASM_SOURCES:.asm=.$(OBJEXT))
  hogweed_PURE_OBJS = $(hogweed_OBJS:.$(OBJEXT)=.p$(OBJEXT))
  
 -libnettle.a: $(nettle_OBJS)
@@ -49,16 +49,16 @@ Use LIBTOOL.
  	&& $(DEP_PROCESS)
  
  # Rules building shared libraries.
-@@ -244,7 +244,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
- .asm.$(OBJEXT):
- 	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
- 		$< >$*.s
--	$(COMPILE) $(CCPIC_MAYBE) -c $*.s
-+	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) $(CCPIC_MAYBE) -c $*.s
- 	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
+@@ -329,7 +329,7 @@ ecc-521.p$(OBJEXT): ecc-521.h
+ 	&& test -s $@T && mv -f $@T $@
  
- .asm.p$(OBJEXT):
-@@ -317,7 +317,7 @@ install-here: install-doc install-header
+ .s.$(OBJEXT):
+-	$(COMPILE) $(CCPIC_MAYBE) -c $<
++	${LIBTOOL} --mode=compile $(COMPILE) $(CCPIC_MAYBE) -c $<
+ 
+ .s.p$(OBJEXT):
+ 	$(COMPILE) $(SHLIBCFLAGS) -c $< -o $@
+@@ -398,7 +398,7 @@ install-here: install-doc install-header
  install-static: $(LIBTARGETS)
  	$(MKDIR_P) $(DESTDIR)$(libdir)
  	for f in $(LIBTARGETS); do \
