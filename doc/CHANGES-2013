@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1528 2013/04/29 03:05:15 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1529 2013/04/29 07:44:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2345,3 +2345,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/salt to 0.14.1 [imil 2013-04-28]
 	Updated editors/nedit to 5.5nb5 [dholland 2013-04-28]
 	Updated databases/p5-DBM-Deep to 2.0008 [hiramatsu 2013-04-29]
+	Added devel/netcdf-fortran version 4.2 [adam 2013-04-29]
