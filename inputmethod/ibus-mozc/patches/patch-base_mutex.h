@@ -1,11 +1,11 @@
-$NetBSD: patch-base_mutex.h,v 1.2 2013/01/26 20:33:59 ryoon Exp $
+$NetBSD: patch-base_mutex.h,v 1.3 2013/04/29 09:21:24 ryoon Exp $
 
 * First chunk, NetBSD ILP32 ports seem to require larger mutex array size.
 * I am not sure.
 
---- base/mutex.h.orig	2012-08-31 05:37:06.000000000 +0000
+--- base/mutex.h.orig	2013-03-29 04:33:43.000000000 +0000
 +++ base/mutex.h
-@@ -46,8 +46,8 @@ namespace mozc {
+@@ -50,8 +50,8 @@ namespace mozc {
  // To remove dependencies against plafrom specific headers such as
  // <Windows.h> or <pthread.h>, we use an array of pointers as an opaque buffer
  // where platform specific mutex structure will be placed.
@@ -16,8 +16,8 @@ $NetBSD: patch-base_mutex.h,v 1.2 2013/01/26 20:33:59 ryoon Exp $
  #define MOZC_MUTEX_PTR_ARRAYSIZE 11
  #define MOZC_RW_MUTEX_PTR_ARRAYSIZE 32
  #else
-@@ -56,6 +56,10 @@ namespace mozc {
- #define MOZC_RW_MUTEX_PTR_ARRAYSIZE 10
+@@ -60,6 +60,10 @@ namespace mozc {
+ #define MOZC_RW_MUTEX_PTR_ARRAYSIZE 12
  #endif
  
 +#if defined(__FreeBSD__) || defined(OS_NETBSD)

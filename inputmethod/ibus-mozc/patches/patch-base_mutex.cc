@@ -1,6 +1,6 @@
-$NetBSD: patch-base_mutex.cc,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-base_mutex.cc,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
---- base/mutex.cc.orig	2012-08-31 05:37:06.000000000 +0000
+--- base/mutex.cc.orig	2013-03-29 04:33:43.000000000 +0000
 +++ base/mutex.cc
 @@ -61,7 +61,7 @@ namespace mozc {
  
@@ -20,6 +20,15 @@ $NetBSD: patch-base_mutex.cc,v 1.1 2013/01/18 11:36:40 ryoon Exp $
  
  // Use OSAtomicCompareAndSwapInt on Mac OSX
  // http://developer.apple.com/iphone/library/documentation/
+@@ -91,7 +91,7 @@ inline int InterlockedCompareExchange(vo
+                                       int new_value,
+                                       int old_value) {
+   return OSAtomicCompareAndSwapInt(old_value, new_value, target)
+-      ? old_value : *target;
++      ? old_value : *target; || OS_NETBSD
+ }
+ #endif  // OX_MACOSX
+ 
 @@ -296,7 +296,7 @@ Mutex::Mutex() {
    // PTHREAD_MUTEX_RECURSIVE_NP but Mac OS X 10.5 does not
    pthread_mutexattr_t attr;
