@@ -1,16 +1,21 @@
-$NetBSD: distinfo,v 1.5 2012/06/28 05:24:22 dholland Exp $
+$NetBSD: distinfo,v 1.6 2013/04/29 21:27:15 joerg Exp $
 
 SHA1 (blackbox-0.70.1.tar.gz) = f0ab7e4b44ae6ee4c2a2136651afc567c47fe2cd
 RMD160 (blackbox-0.70.1.tar.gz) = ab80c43d42dbfac23c9f981885f25a42c66f51a6
 Size (blackbox-0.70.1.tar.gz) = 650400 bytes
 SHA1 (patch-aa) = 36e90d9a54329009c1d1fd9788ebe349858578b3
-SHA1 (patch-ab) = 30633230592a0b81002bdddbb1128694acde9d10
+SHA1 (patch-ab) = 1e568872f238e05be11d2a4f25cc38c9fa461b71
 SHA1 (patch-ac) = 5f7132230ab4c53bf5042a274592bae45c6a15ed
 SHA1 (patch-lib-Resource.cc) = 8ac7fee379aa940f85c7800572be5ee3bb4202c5
 SHA1 (patch-lib-Util.hh) = b0bbf923ee06d200666ce96b6bf5ad648b361fd8
 SHA1 (patch-lib-XDG.cc) = 55422803fd20b8f100816a204de7af22f00ba51c
+SHA1 (patch-lib_Display.cc) = 3b9c3dd6f9a309d4dc77409f3523608214e52926
+SHA1 (patch-lib_Pen.cc) = 41da4c0b2aad21d875be6521257e791926b31143
+SHA1 (patch-lib_Texture.cc) = 9c076e2f47d7ca99f422098323f19b60bbf389b4
 SHA1 (patch-src-BlackboxResource.cc) = 66d022f7a91f2054c45c3f38a0fe98da4ddce3de
 SHA1 (patch-src-ScreenResource.cc) = ec09befadf9e92bd9e9543f7e9b472639bf6e8d5
 SHA1 (patch-src-Toolbar.cc) = 6f301302c3370b67feb22dc066ed4aac0624d23d
-SHA1 (patch-src-main.cc) = 1b004b5860473300afc02fa50d6fc89523ab1b59
+SHA1 (patch-src-main.cc) = c5469f129f13b77c403ae54beba134ab26631652
+SHA1 (patch-src_Window.cc) = fbf093e74c4d1779e65830ad6c32c0733bfc5ee3
+SHA1 (patch-src_blackbox.cc) = a17c3eec5f6375feb8e68c4d53811bae5ab94d5b
 SHA1 (patch-util-bsetroot.cc) = 87b3e5aab03facfce88286f25df14580c39582c6

@@ -1,10 +1,49 @@
-$NetBSD: patch-ab,v 1.1 2008/01/14 02:04:41 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2013/04/29 21:27:15 joerg Exp $
 
 Sunpro has problems with a non-const const_reverse_iterator.
 
---- lib/Menu.cc.orig	2005-01-27 18:08:22.000000000 +0100
-+++ lib/Menu.cc	2007-12-05 16:08:11.094236000 +0100
-@@ -1052,10 +1052,10 @@ void bt::Menu::keyPressEvent(const XKeyE
+--- lib/Menu.cc.orig	2005-01-27 17:08:22.000000000 +0000
++++ lib/Menu.cc
+@@ -33,9 +33,9 @@
+ #include <X11/Xlib.h>
+ #include <X11/keysym.h>
+ 
+-#include <stdio.h>
+ #include <assert.h>
+-
++#include <stdio.h>
++#include <stdlib.h>
+ 
+ bt::MenuStyle **bt::MenuStyle::styles = 0;
+ 
+@@ -363,7 +363,7 @@ unsigned int bt::Menu::insertItem(const 
+   } else {
+     index = std::min(static_cast<size_t>(index), _items.size());
+     it = _items.begin();
+-    std::advance<ItemList::iterator, signed>(it, index);
++    std::advance(it, index);
+   }
+ 
+   it = _items.insert(it, item);
+@@ -514,7 +514,7 @@ void bt::Menu::removeItem(unsigned int i
+ 
+ void bt::Menu::removeIndex(unsigned int index) {
+   ItemList::iterator it = _items.begin();
+-  std::advance<ItemList::iterator, signed>(it, index);
++  std::advance(it, index);
+   if (it == _items.end())
+     return; // item not found
+   removeItemByIterator(it);
+@@ -1035,7 +1035,7 @@ void bt::Menu::keyPressEvent(const XKeyE
+     const ItemList::const_iterator &end = _items.end();
+     ItemList::const_iterator anchor = _items.begin();
+     if (_active_index != ~0u) {
+-      std::advance<ItemList::const_iterator, signed>(anchor, _active_index);
++      std::advance(anchor, _active_index);
+ 
+       // go one paste the current active index
+       if (anchor != end && !anchor->separator)
+@@ -1052,11 +1052,10 @@ void bt::Menu::keyPressEvent(const XKeyE
    }
  
    case XK_Up: {
@@ -14,11 +53,12 @@ Sunpro has problems with a non-const const_reverse_iterator.
 +    const ItemList::reverse_iterator &end = _items.rend();
      if (_active_index != ~0u) {
 -      std::advance<ItemList::const_reverse_iterator, signed>
-+      std::advance<ItemList::reverse_iterator, signed>
-         (anchor, _items.size() - _active_index - 1);
+-        (anchor, _items.size() - _active_index - 1);
++      std::advance(anchor, _items.size() - _active_index - 1);
  
        // go one item past the current active index
-@@ -1065,7 +1065,7 @@ void bt::Menu::keyPressEvent(const XKeyE
+       if (anchor != end && !anchor->separator)
+@@ -1065,7 +1064,7 @@ void bt::Menu::keyPressEvent(const XKeyE
  
      if (anchor == end) anchor = _items.rbegin();
  
@@ -27,7 +67,7 @@ Sunpro has problems with a non-const const_reverse_iterator.
        std::find_if(anchor, end, InteractMatch());
      if (it != end)
        activateIndex(it->indx);
-@@ -1073,8 +1073,8 @@ void bt::Menu::keyPressEvent(const XKeyE
+@@ -1073,8 +1072,8 @@ void bt::Menu::keyPressEvent(const XKeyE
    }
  
    case XK_Home: {
@@ -38,7 +78,7 @@ Sunpro has problems with a non-const const_reverse_iterator.
      it = std::find_if(it, end, InteractMatch());
      if (it != end)
        activateIndex(it->indx);
-@@ -1082,8 +1082,8 @@ void bt::Menu::keyPressEvent(const XKeyE
+@@ -1082,8 +1081,8 @@ void bt::Menu::keyPressEvent(const XKeyE
    }
  
    case XK_End: {
