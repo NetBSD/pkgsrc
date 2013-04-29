@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/29 07:43:32 adam Exp $
+
+SHA1 (netcdf-fortran-4.2.tar.gz) = f1887314455330f4057bc8eab432065f8f6f74ef
+RMD160 (netcdf-fortran-4.2.tar.gz) = e10c342a5d6ab2740cd910122b0164d16730e194
+Size (netcdf-fortran-4.2.tar.gz) = 2479928 bytes
