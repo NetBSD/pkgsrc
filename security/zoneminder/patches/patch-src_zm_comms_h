@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_comms_h,v 1.2 2013/03/24 16:47:47 joerg Exp $
+$NetBSD: patch-src_zm_comms_h,v 1.3 2013/04/29 21:31:13 joerg Exp $
 
 extern "C" system headers.
 
@@ -6,7 +6,7 @@ Include missing system headers for NetBSD.
 
 --- src/zm_comms.h.orig	2009-10-14 13:08:49.000000000 +0000
 +++ src/zm_comms.h
-@@ -22,10 +22,17 @@
+@@ -22,10 +22,18 @@
  
  #include "zm_exception.h"
  
@@ -20,6 +20,7 @@ Include missing system headers for NetBSD.
 +#include <netinet/in.h>
 +#include <stdlib.h>
 +#include <string.h>
++#include <time.h>
 +}
  
  #include <set>
