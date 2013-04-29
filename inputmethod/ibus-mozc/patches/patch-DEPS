@@ -1,14 +1,17 @@
-$NetBSD: patch-DEPS,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-DEPS,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
---- DEPS.orig	2012-08-31 05:36:42.000000000 +0000
+--- DEPS.orig	2013-03-29 04:33:25.000000000 +0000
 +++ DEPS
-@@ -91,3 +91,9 @@ deps_os = {
-       Var("clang_helper_in_chromium_revision"),
+@@ -88,6 +88,12 @@ deps_os = {
+        Var("zinnia_revision"),
    },
- }
+   "unix": {
 +  "netbsd": {
 +    "src/third_party/clang/scripts":
 +      "https://src.chromium.org/chrome/trunk/src/tools/clang/scripts@" +
 +      Var("clang_helper_in_chromium_revision"),
 +  },
 +}
+     "src/third_party/clang/scripts":
+       "https://src.chromium.org/chrome/trunk/src/tools/clang/scripts@" +
+       Var("clang_helper_in_chromium_revision"),

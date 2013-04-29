@@ -1,10 +1,10 @@
-$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
+$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.2 2013/04/29 09:21:24 ryoon Exp $
 
 * Fix for pkgsrc installation.
 
---- unix/ibus/gen_mozc_xml.py.orig	2012-08-31 05:36:43.000000000 +0000
+--- unix/ibus/gen_mozc_xml.py.orig	2013-03-29 04:33:43.000000000 +0000
 +++ unix/ibus/gen_mozc_xml.py
-@@ -48,7 +48,7 @@ IBUS_COMPONENT_PROPS = {
+@@ -49,7 +49,7 @@ IBUS_COMPONENT_PROPS = {
      'description': '%s Component',
      # TODO(yusukes): Support Linux distributions other than Gentoo/ChromeOS.
      # For example, Ubuntu uses /usr/lib/ibus-mozc/.
@@ -13,7 +13,7 @@ $NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      # TODO(mazda): Generate the version number.
      'version': '0.0.0.0',
      'author': 'Google Inc.',
-@@ -61,7 +61,7 @@ IBUS_COMPONENT_PROPS = {
+@@ -62,7 +62,7 @@ IBUS_COMPONENT_PROPS = {
  IBUS_ENGINE_COMMON_PROPS = {
      'description': '%s (Japanese Input Method)',
      'language': 'ja',
@@ -22,9 +22,9 @@ $NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      'rank': '80',
  }
  
-@@ -76,6 +76,13 @@ IBUS_ENGINES_PROPS = {
+@@ -95,6 +95,13 @@ IBUS_ENGINES_PROPS = {
          'longname': ['%s'],
-         'layout': ['jp'],
+         'layout': ['default'],
      },
 +    'NetBSD': {
 +        # DO NOT change the engine name 'mozc-jp'. The names is referenced by
@@ -36,16 +36,20 @@ $NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/01/18 11:36:40 ryoon Exp $
      # On Chrome/Chromium OS, we provide three engines.
      'ChromeOS': {
          # DO NOT change the engine name 'mozc-jp'. The names is referenced by
-@@ -193,7 +200,11 @@ def main():
- 
-   setup_arg = []
-   if options.platform == 'Linux':
+@@ -228,7 +235,15 @@ def main():
+   platform = options.platform
+   common_props = IBUS_ENGINE_COMMON_PROPS
+   if platform == 'Linux':
 -    setup_arg.append(os.path.join(options.server_dir, 'mozc_tool'))
 +    setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
 +    setup_arg.append('--mode=config_dialog')
++    if IsIBus15OrGreater(options):
++      # A tentative workaround against IBus 1.5
++      platform = 'Linux-IBus1.5'
++      common_props = IBUS_1_5_ENGINE_COMMON_PROPS
 +
-+  if options.platform == 'NetBSD':
++  if platform == 'NetBSD':
 +    setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
      setup_arg.append('--mode=config_dialog')
- 
-   if options.output_cpp:
+     if IsIBus15OrGreater(options):
+       # A tentative workaround against IBus 1.5
