@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/18 11:38:40 ryoon Exp $
-libexec/mozc_server_japanese
+@comment $NetBSD: PLIST,v 1.2 2013/04/29 09:22:04 ryoon Exp $
+libexec/mozc_server
