@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/04/19 14:03:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.32 2013/04/29 11:22:42 sborrill Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -10,8 +10,8 @@ CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
 DISTFILES=		${DISTNAME}.tar.gz
-DISTFILES+=		ipxe-git-v1.0.0.tar.gz
-SITES.ipxe-git-v1.0.0.tar.gz +=	http://xenbits.xensource.com/xen-extfiles/
+DISTFILES+=		ipxe-git-v${VERSION_IPXE}.tar.gz
+SITES.ipxe-git-v${VERSION_IPXE}.tar.gz +=	http://xenbits.xensource.com/xen-extfiles/
 
 MAINTAINER=		cegger@NetBSD.org
 HOMEPAGE=		http://xen.org/
