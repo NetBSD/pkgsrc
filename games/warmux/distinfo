@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/04/01 14:41:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2013/04/29 21:31:10 joerg Exp $
 
 SHA1 (warmux-11.01.tar.bz2) = 18e5d5bf144f069405c75ff8fe51296d9a7871a5
 RMD160 (warmux-11.01.tar.bz2) = 85a7bbfed5ca2ccbd793a12d7ea548948a747a88
@@ -7,3 +7,5 @@ SHA1 (patch-aa) = 163449e2cc6fadede8ce1a77bee08fcda59a0f0f
 SHA1 (patch-ab) = 48893791c36ae88b3fc5f565a39d3de786bc88d4
 SHA1 (patch-ac) = 24179b2ccdc2dc2dc6c95c33f12b7e55bb6f5a6e
 SHA1 (patch-lib_warmux_action_action.cpp) = 8a1138902c4fb8fbff4fddac4975fe352b532eca
+SHA1 (patch-lib_warmux_base_i18n.cpp) = 130fa3617f5549e9c47dcd907c33a54f0b19fcda
+SHA1 (patch-tools_list__games_main.cpp) = 0577d2e2cc073ba7d8efdce567138eb43bc535f4

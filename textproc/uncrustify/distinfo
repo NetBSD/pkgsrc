@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/13 04:22:34 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/04/29 21:31:13 joerg Exp $
 
 SHA1 (uncrustify-0.59.tar.gz) = 233e4f6cb34ef7020ce49e5b5d14f0d46f277e31
 RMD160 (uncrustify-0.59.tar.gz) = 433a04ddd3d477173fa31f16d05fd0a264436e64
 Size (uncrustify-0.59.tar.gz) = 983822 bytes
+SHA1 (patch-src_uncrustify.cpp) = efbf6c9856bad5cf3130e00a25fe2bf7b73ef16c
