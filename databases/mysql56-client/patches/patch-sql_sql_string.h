@@ -1,8 +1,8 @@
-$NetBSD: patch-sql_sql_string.h,v 1.1 2013/02/13 21:00:08 adam Exp $
+$NetBSD: patch-sql_sql_string.h,v 1.2 2013/04/29 21:16:57 joerg Exp $
 
 Portability: include <bstring.h> if exists.
 
---- sql/sql_string.h.orig	2013-02-12 11:46:16.000000000 +0000
+--- sql/sql_string.h.orig	2013-04-05 12:27:18.000000000 +0000
 +++ sql/sql_string.h
 @@ -22,6 +22,9 @@
  #include "my_sys.h"              /* alloc_root, my_free, my_realloc */
