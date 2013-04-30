@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/28 03:18:17 markd Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/30 20:51:54 markd Exp $
 
 DISTNAME=	kde-runtime-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -9,7 +9,6 @@ COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
-CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=off
 CMAKE_ARGS+=	-DWITH_LibSSH:BOOL=OFF
 CMAKE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
 CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
