@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2012/09/11 00:30:13 manu Exp $
+# $NetBSD: options.mk,v 1.5 2013/04/30 15:43:30 hauke Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
-PKG_SUPPORTED_OPTIONS=	cups debug kerberos pam slp ldap
+PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam slp
 
 .include "../../mk/bsd.options.mk"
 
@@ -22,6 +22,14 @@ CFLAGS+=		-g3
 INSTALL_UNSTRIPPED=	yes
 .endif
 
+PLIST_VARS+=		dnssd
+.if !empty(PKG_OPTIONS:Mdnssd)
+.include "../../net/mDNSResponder/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-zeroconf
+.else
+# configure patched to zeroconf="no"
+.endif
+
 PLIST_VARS+=		gssapi
 .if !empty(PKG_OPTIONS:Mkerberos)
 .include "../../mk/krb5.buildlink3.mk"
@@ -30,6 +38,13 @@ CONFIGURE_ENV+=		GSSAPI_LIBS="-lkrb5 -lroken -lasn1 -lcrypto -lcom_err"
 PLIST.gssapi=		yes
 .else
 CONFIGURE_ARGS+=	--without-gssapi
+.endif
+
+.if !empty(PKG_OPTIONS:Mldap)
+.include "../../databases/openldap-client/buildlink3.mk"
+CONFIGURE_ARGS+=       --with-ldap=yes
+.else
+CONFIGURE_ARGS+=       --with-ldap=no
 .endif
 
 PLIST_VARS+=		pam
@@ -47,11 +62,4 @@ CONFIGURE_ARGS+=	--without-pam
 CONFIGURE_ARGS+=	--enable-srvloc
 .else
 CONFIGURE_ARGS+=	--disable-srvloc
-.endif
-
-.if !empty(PKG_OPTIONS:Mldap)
-.include "../../databases/openldap-client/buildlink3.mk"
-CONFIGURE_ARGS+=       --with-ldap=yes
-.else
-CONFIGURE_ARGS+=       --with-ldap=no
 .endif

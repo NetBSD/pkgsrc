@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/06/13 07:18:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.26 2013/04/30 15:43:30 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
@@ -36,7 +36,6 @@ include/atalk/aep.h
 include/atalk/afp.h
 include/atalk/asp.h
 include/atalk/atp.h
-include/atalk/boolean.h
 include/atalk/cnid.h
 include/atalk/compat.h
 include/atalk/ddp.h
