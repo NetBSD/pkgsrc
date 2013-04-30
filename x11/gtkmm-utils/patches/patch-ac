@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/04/30 10:17:46 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2013/04/30 22:32:43 joerg Exp $
 
---- glibmm-utils/log-stream.cc.orig	2008-10-14 14:11:14.000000000 +0200
+--- glibmm-utils/log-stream.cc.orig	2008-10-14 12:11:14.000000000 +0000
 +++ glibmm-utils/log-stream.cc
-@@ -36,6 +36,10 @@
+@@ -26,7 +26,6 @@
+ #include <list>
+ #include <vector>
+ #include <fstream>
+-#include <tr1/memory>
+ #include <glibmm.h>
+ #include <glibmm/thread.h>
+ #include <glib/gstdio.h>
+@@ -36,11 +35,21 @@
  #include "date.h"
  #include "ustring.h"
  
@@ -13,3 +21,41 @@ $NetBSD: patch-ac,v 1.1.1.1 2010/04/30 10:17:46 wiz Exp $
  namespace Glib {
  namespace Util {
  
+ using namespace std ;
+ 
++#ifdef _LIBCPP_VERSION
++using std::shared_ptr;
++#else
++using std::tr1::shared_ptr;
++#endif
++
+ static LogStream::StreamType s_stream_type = LogStream::COUT_STREAM ;
+ static LogStream::LogLevel s_level_filter = LogStream::LOG_LEVEL_NORMAL ;
+ static bool s_is_active = true ;
+@@ -54,7 +63,7 @@ static bool s_is_active = true ;
+ 
+ class LogSink {
+ protected:
+-    mutable tr1::shared_ptr<Glib::Mutex> m_ostream_mutex ;
++    mutable shared_ptr<Glib::Mutex> m_ostream_mutex ;
+     ostream *m_out ;
+ 
+     //non copyable
+@@ -206,7 +215,7 @@ public:
+ };//end class OStreamSink
+ 
+ class OfstreamLogSink : public LogSink {
+-    std::tr1::shared_ptr<ofstream> m_ofstream ;
++    shared_ptr<ofstream> m_ofstream ;
+ 
+     void init_from_path (const Glib::ustring &a_file_path)
+     {
+@@ -250,7 +259,7 @@ public:
+     }
+ };//end class OfstreamLogSink
+ 
+-typedef std::tr1::shared_ptr<LogSink> LogSinkSafePtr ;
++typedef shared_ptr<LogSink> LogSinkSafePtr ;
+ struct LogStream::Priv
+ {
+     enum LogStream::StreamType stream_type ;
