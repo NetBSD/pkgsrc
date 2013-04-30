@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2012/12/14 07:39:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2013/04/30 20:08:10 adam Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -88,6 +88,7 @@ lib/samba/vfs/xattr_tdb.${LIBEXT}
 ${PLIST.pam}lib/security/pam_smbpass.${LIBEXT}
 ${PLIST.pam}${PLIST.winbind}lib/security/pam_winbind.${LIBEXT}
 ${PLIST.cups}libexec/cups/backend/smb
+man/man1/dbwrap_tool.1
 man/man1/findsmb.1
 man/man1/log2pcap.1
 man/man1/nmblookup.1
