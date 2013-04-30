@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/30 13:29:48 ryoon Exp $
+bin/kz_h8write
+share/kz_h8write/README.txt
