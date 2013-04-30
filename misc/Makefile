@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.399 2013/04/17 13:43:55 obache Exp $
+# $NetBSD: Makefile,v 1.400 2013/04/30 13:30:30 ryoon Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -153,6 +153,7 @@ SUBDIR+=	kstars
 SUBDIR+=	ktouch
 SUBDIR+=	kturtle
 SUBDIR+=	kwordquiz
+SUBDIR+=	kz_h8write
 SUBDIR+=	labelnation
 SUBDIR+=	latin-words-bin
 SUBDIR+=	less
