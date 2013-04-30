@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/03/13 17:11:25 taca Exp $
+# $NetBSD: options.mk,v 1.4.2.1 2013/04/30 19:31:29 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -60,7 +60,7 @@ SQUID_BACKENDS?=		ufs
 SQUID_BASIC_AUTH_HELPERS?=	MSNT NCSA NIS getpwnam
 SQUID_DIGEST_AUTH_HELPERS?=	password
 SQUID_NTLM_AUTH_HELPERS?=	SMB
-SQUID_EXTERNAL_ACL_HELPERS?=	fileuser_ip unix_group
+SQUID_EXTERNAL_ACL_HELPERS?=	file_userip unix_group
 
 # squid's code has preference as:
 #	squid-ipf > squid-pf > squid-netfilter
