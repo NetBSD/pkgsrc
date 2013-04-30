@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.4 2013/02/26 10:23:50 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/04/30 22:13:57 joerg Exp $
 
 SHA1 (freehdl-0.0.7.tar.gz) = eca7ad3ac58e56b72842e83a0a702c05b8f86aa4
 RMD160 (freehdl-0.0.7.tar.gz) = d00e14d6b1cd97154b221717124c6e20b0d4f776
 Size (freehdl-0.0.7.tar.gz) = 1394351 bytes
 SHA1 (patch-aa) = 4c7b147c47079931506366ce50fc0eeac187fd65
+SHA1 (patch-freehdl_kernel-db.hh) = a8bcb578151e5a310ada2b909d9ea180cf74445e
 SHA1 (patch-freehdl_kernel-sig-info.hh) = 86279768c0501434951e4d9cd6b2870c09278e9b
+SHA1 (patch-freehdl_kernel-util.hh) = 0fcc43c840e49210dc0d8020b21130808b96396c
 SHA1 (patch-freehdl_std-vhdl-types.hh) = eb5d237c9df90adf057ab9d5c650e76fe0ae5b28
 SHA1 (patch-kernel_driver__info.cc) = 7db334da74f9e5856e1dd8b3c7b627d2f3d27646
+SHA1 (patch-v2cc_v2cc-decl.cc) = 220ef0bea3788004a6546354b6d76664d9f359a8
+SHA1 (patch-v2cc_v2cc-explore.cc) = 5ced1d568f2f441d65dea962a11f19f9a1b04b0c
+SHA1 (patch-v2cc_v2cc-expr.cc) = d8513d1d7e40ba4ef684c8078c0b12b9185b6eae
+SHA1 (patch-v2cc_v2cc-util.cc) = aeab1d9a5a6a191ca591211acd0863a8a6cdbe00
