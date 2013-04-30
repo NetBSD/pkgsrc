@@ -1,10 +1,17 @@
-$NetBSD: distinfo,v 1.3 2012/11/16 00:27:20 joerg Exp $
+$NetBSD: distinfo,v 1.4 2013/04/30 22:32:43 joerg Exp $
 
 SHA1 (gtkmm-utils-0.4.1.tar.gz) = dbf1af7f0ee27c380786651591ef83549ce97ca0
 RMD160 (gtkmm-utils-0.4.1.tar.gz) = 1db5390fc26f0f55fa19511e63b9d4ea6edb7250
 Size (gtkmm-utils-0.4.1.tar.gz) = 388799 bytes
 SHA1 (patch-aa) = 6bcc502c2901da1b468d9b9cb5d02f0d426828d6
 SHA1 (patch-ab) = 1ac7b0b9cf87176264d12711b7e57f26fff30adf
-SHA1 (patch-ac) = 81d58f752d8cc0383b9c3d532360e2cc7426ea01
+SHA1 (patch-ac) = 6a8fc343d1d85a69590ef6771fde19e2ae9b8167
+SHA1 (patch-examples_logging.h) = fdec2424092506e870a59cf8ab5f6dde8596783b
+SHA1 (patch-examples_tiles-simple.cc) = e9f68f794548cb6e80fa0cf2989893533b286e22
+SHA1 (patch-examples_tiles-simple.h) = fc7e3a92ca5580875917a6365105ad3c6cb55b12
+SHA1 (patch-glibmm-utils_log-stream.h) = 3d88342af3c11551d9da124b8e0c510d5b842f85
+SHA1 (patch-glibmm-utils_scope-logger.h) = 86f28a8e6c4634d09172081d9a95f944c21564d4
 SHA1 (patch-glibmm-utils_ustring.h) = 31afa32fe4a38d4b2ca8ef83ad1d944c8c0d4779
 SHA1 (patch-glibmm-utils_ustring_cc) = 111019060ddfa53afc4c3a2d965d7993049262a9
+SHA1 (patch-gtkmm-utils_tile-view.cc) = 08471ce32b241c8081491c59afd645e5837c93af
+SHA1 (patch-gtkmm-utils_tile-view.h) = 3d74946cfd46d84686850fb9b0f82bd0b13750d8
