@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2011/02/17 08:31:50 markd Exp $
+$NetBSD: distinfo,v 1.39 2013/04/30 22:34:29 joerg Exp $
 
 SHA1 (kdesdk-3.5.10.tar.bz2) = 1a6702e8e7741690496327b8a908fabdab5d3c79
 RMD160 (kdesdk-3.5.10.tar.bz2) = 28a296667d66021c3b13c1991e1028d5e8554dfd
@@ -9,4 +9,6 @@ SHA1 (patch-ac) = 86d3e639fe15e88dad41b590e5399b3d50207307
 SHA1 (patch-ad) = 5ae3bd5af9b76d7824d166109352bb8916c946f7
 SHA1 (patch-ae) = 1f9373975df35f3249779e18d90005b7a016e5cb
 SHA1 (patch-kbabel_common_libgettext_pofiles.ll) = 996701f1bef3beb87c5a264a079488abcede91cd
+SHA1 (patch-kbabel_kbabel_kbcataloglistviewitem.cpp) = 8a4f0d7966ef815241e304247f456c6c2cb504fc
 SHA1 (patch-poxml_antlr_antlr_CharScanner.hpp) = bac4a7a4914f85bb4f6e2137d574970a76ad7682
+SHA1 (patch-poxml_antlr_src_BitSet.cpp) = e9334768ef2b4513013f5e3a4f74b140c58e74a6
