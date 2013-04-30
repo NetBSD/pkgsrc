@@ -1,18 +1,22 @@
-$NetBSD: distinfo,v 1.8 2012/01/20 17:07:35 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/04/30 22:20:58 joerg Exp $
 
 SHA1 (EXCH314S.zip) = 7d8ffbd94dc86a97512826e611048a691c8c646d
 RMD160 (EXCH314S.zip) = 0503200c210aaf7ddc69e1372392e8ea690505ea
 Size (EXCH314S.zip) = 110676 bytes
-SHA1 (patch-aa) = 43731240e32aaab2c7c32aac343ef31f5a220b5a
-SHA1 (patch-ab) = a9385051ed9d482e02bbeff40b5d9552ebc56c9f
+SHA1 (patch-aa) = 6aa16f2ca4ecc52b77739b5d28ab650f8102e54c
+SHA1 (patch-ab) = a38d6455675083e9ca291c844c85746a0ed897e5
 SHA1 (patch-ac) = cfc1beff8ae3b2e4c9620e8d49852ce80d848ad6
-SHA1 (patch-ad) = 6aa7b8eff073d68899fbd026bd16d92c0ddf1d82
+SHA1 (patch-ad) = 6deeaae3dbaf84f7763306d06117e21aa3dcf885
 SHA1 (patch-ae) = 9d374b888a6f431604f41c4421baa23d8ca775a1
-SHA1 (patch-af) = 7eb0c780dea41b5d17a532f82a76b984eeefda2d
-SHA1 (patch-ag) = 00bb9750c823aecd7fa44aacc1cf539e062055a9
+SHA1 (patch-af) = f2379b8929775ff660f9af9fc96969eab1b25870
+SHA1 (patch-ag) = 7072e6b7ac08fcb901630c2705fe38065bc89bab
 SHA1 (patch-ah) = 872b0b7c62f95075f0ce7360464fa51215619ee3
-SHA1 (patch-ai) = 0f8a0182460982181a8bd9d802759f6f24067a79
-SHA1 (patch-aj) = b769f2f063794a323136ff75d6219d6f6f98600e
+SHA1 (patch-ai) = 7244cfeb214e08a5e10198de2488957a63e8fda9
+SHA1 (patch-aj) = 064dd97be969d403f09cb9cab70705891b1355de
 SHA1 (patch-ak) = 659f1cf07efefe524be4d025446fea55eb5f3e9a
-SHA1 (patch-parse.cpp) = b3eab9785fb3be104ba8258259bcf2254c695194
+SHA1 (patch-funct.h) = 8ff861d1cfaac5aac8722334b2142e9c63a231c6
+SHA1 (patch-main.h) = f49c0c889469002281fd15c6ceac359f8c4e6f51
+SHA1 (patch-parse.cpp) = f000ea0d4e2adb893ec6ec09a5e0c3dc5c77970d
+SHA1 (patch-pmoves.cpp) = 66973c0baee54fa623a9f0b77c29d41e4c6924b8
+SHA1 (patch-search.h) = 85b16b102087dd218d64c14cc294c5c6df6849bb
 SHA1 (patch-setup.cpp) = 16914d19bb6bc48341409dfa15d9f451e4f46733
