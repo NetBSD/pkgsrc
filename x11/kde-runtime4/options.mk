@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2013/04/28 03:18:18 markd Exp $
+# $NetBSD: options.mk,v 1.4 2013/04/30 20:51:54 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kde-runtime4
-PKG_SUPPORTED_OPTIONS=	samba alsa
+PKG_SUPPORTED_OPTIONS=	samba alsa pulseaudio
 PKG_SUGGESTED_OPTIONS=	samba
 
 .if ${OPSYS} == "Linux"
@@ -22,4 +22,10 @@ PLIST.smb=	yes
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWITH_ALSA=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
 .endif
