@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2011/03/11 13:00:12 drochner Exp $
+$NetBSD: distinfo,v 1.4 2013/04/30 22:25:39 joerg Exp $
 
 SHA1 (fityk-0.9.7.tar.bz2) = bb4d11b529c6c87c68c6f7359075915caf95a996
 RMD160 (fityk-0.9.7.tar.bz2) = bd403037157b32ec7c7c6972f17116e403d099bc
 Size (fityk-0.9.7.tar.bz2) = 1146628 bytes
 SHA1 (patch-aa) = c923919db013ca9ddb8370617bf0b4b0aaa31922
+SHA1 (patch-src_GAfit.cpp) = 6543899d3861853d0738bbb5ced2cc9f59fda6db
+SHA1 (patch-src_eparser.cpp) = 6120b71f1bcafc1efc5b774426955084739a42c0
+SHA1 (patch-src_wxgui_ceria.cpp) = d3d07180b20b563c67d1bb7316d38ef64ff91a8a
