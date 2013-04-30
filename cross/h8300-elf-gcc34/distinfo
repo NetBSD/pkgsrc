@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2013/04/30 13:26:34 ryoon Exp $
+
+SHA1 (gcc-core-3.4.6.tar.gz) = 879d34505d25896c82a4f098d5512b3cd5df81cc
+RMD160 (gcc-core-3.4.6.tar.gz) = d24dadbda68df53940e3f0d98a8ab6ded6e64628
+Size (gcc-core-3.4.6.tar.gz) = 17345868 bytes
+SHA1 (gcc-g++-3.4.6.tar.gz) = e35986873e004425a439ec52394017a92bae5c04
+RMD160 (gcc-g++-3.4.6.tar.gz) = 431e4ecba641cee46ed3ab28c0b9a56e698acb92
+Size (gcc-g++-3.4.6.tar.gz) = 3552486 bytes
+SHA1 (newlib-1.14.0.tar.gz) = edc50f5cda734b50c5431a2b8d1e579ac82ce3f9
+RMD160 (newlib-1.14.0.tar.gz) = 6f2b3f32759925142421ddc069229eff857dd106
+Size (newlib-1.14.0.tar.gz) = 7981432 bytes
+SHA1 (patch-gcc-gcc_config_h8300_h8300.c) = 4fa4462b2721a6b1afb3cf1ebfb07d943fccc11e
+SHA1 (patch-libiberty_physmem.c) = b3d0c52bafaaa7774777c9394c5e12fa8392a591
