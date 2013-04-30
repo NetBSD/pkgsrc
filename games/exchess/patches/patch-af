@@ -1,8 +1,27 @@
-$NetBSD: patch-af,v 1.1 2004/02/14 04:31:56 kristerw Exp $
+$NetBSD: patch-af,v 1.2 2013/04/30 22:20:58 joerg Exp $
 
---- hash.h.orig	Sat Feb 14 04:16:19 2004
-+++ hash.h	Sat Feb 14 04:16:36 2004
-@@ -54,6 +54,6 @@
+--- hash.h.orig	2000-02-25 18:31:36.000000000 +0000
++++ hash.h
+@@ -17,7 +17,7 @@ struct hash_rec
+   short score;
+   char flag;
+   unsigned char depth;
+-  move hmove;
++  my_move hmove;
+   unsigned char id;
+   unsigned char mate_ext;
+ };
+@@ -46,14 +46,14 @@ struct pawn_rec
+ void open_hash();
+ void close_hash();
+ void set_hash_size(int Mbytes);
+-void put_hash(h_code h_key, int score, int alpha, int beta, int depth, move hmove, int mate_ext);
+-int get_hash(h_code h_key, int alpha, int beta, int depth, int *mate_ext, int *null_hash, move *gmove);
++void put_hash(h_code h_key, int score, int alpha, int beta, int depth, my_move hmove, int mate_ext);
++int get_hash(h_code h_key, int alpha, int beta, int depth, int *mate_ext, int *null_hash, my_move *gmove);
+ int get_move(h_code h_key);
+ h_code gen_code(position *p);
+ void start_code();
  float ran(long *idum);
  
  /* Macro for or'ing two hash codes */
