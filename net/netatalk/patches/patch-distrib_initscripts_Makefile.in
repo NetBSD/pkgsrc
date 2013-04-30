@@ -1,8 +1,8 @@
-$NetBSD: patch-bj,v 1.5 2011/09/22 01:20:21 christos Exp $
+$NetBSD: patch-distrib_initscripts_Makefile.in,v 1.1 2013/04/30 15:43:31 hauke Exp $
 
---- distrib/initscripts/Makefile.in.orig	2011-09-06 07:41:21.000000000 -0400
-+++ distrib/initscripts/Makefile.in	2011-09-21 11:28:50.000000000 -0400
-@@ -498,7 +498,7 @@
+--- distrib/initscripts/Makefile.in.orig	2012-09-28 07:49:25.000000000 +0000
++++ distrib/initscripts/Makefile.in
+@@ -592,7 +592,7 @@ info: info-am
  
  info-am:
  
@@ -10,8 +10,8 @@ $NetBSD: patch-bj,v 1.5 2011/09/22 01:20:21 christos Exp $
 +install-data-am: install-serviceDATA
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- 
-@@ -621,23 +621,23 @@
+ install-dvi: install-dvi-am
+@@ -723,23 +723,23 @@ uninstall: uninstall-startup
  @USE_TRU64_TRUE@uninstall-startup: uninstall-am
  
  @USE_NETBSD_TRUE@afpd: rc.afpd.netbsd
