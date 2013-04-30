@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2013/04/15 21:40:17 adam Exp $
+# $NetBSD: Makefile,v 1.75 2013/04/30 07:03:33 asau Exp $
 
 DISTNAME=	mpich-3.0.3
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
@@ -28,6 +29,9 @@ CONFIGURE_ARGS+=	--disable-fc		# problems?
 CONFIGURE_ARGS+=	--with-openpa-prefix=${BUILDLINK_PREFIX.openpa}
 CONFIGURE_ARGS+=	--with-hwloc-prefix=${BUILDLINK_PREFIX.hwloc}
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
+# Make MPI compiler wrapper usable outside pkgsrc:
+CONFIGURE_ENV+=		WRAPPER_LDFLAGS="-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib"
+CONFIGURE_ENV+=		MPICH_LDFLAGS="-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib"
 
 PKG_SYSCONFSUBDIR=	mpich
 
