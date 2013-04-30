@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2009/11/24 11:23:34 obache Exp $
+$NetBSD: patch-aj,v 1.2 2013/04/30 22:23:07 joerg Exp $
 
 for process jyutping.cin.
 
@@ -19,3 +19,12 @@ for process jyutping.cin.
  	return 0;
  
      cmd[0] = '\0';
+@@ -233,7 +233,7 @@ print_usage(void)
+ }
+ 
+ static void
+-cin2tab_setlocale(locale_t *locale)
++cin2tab_setlocale(xcin_locale_t *locale)
+ {
+     char loc_return[128], enc_return[128];
+     int ret;
