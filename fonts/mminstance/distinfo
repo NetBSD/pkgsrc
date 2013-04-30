@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2008/09/19 23:59:52 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/04/30 22:19:27 joerg Exp $
 
 SHA1 (mminstance-1.20.tar.gz) = 599cace92339e4120d30db40dfd157e400c745c8
 RMD160 (mminstance-1.20.tar.gz) = 6e5d190a8459d8c737782eeec8a7a7d9bf676d8a
 Size (mminstance-1.20.tar.gz) = 191723 bytes
 SHA1 (patch-aa) = d601f1bdaec7de91d64d0b7b9ccabf85522dada2
 SHA1 (patch-ab) = 8c73881e0c9f08eebd8c0ea2ff6e358469faefba
+SHA1 (patch-libefont_t1interp.cc) = 1fd79f69e3c95f870e9f215c135d18b490c1c640
+SHA1 (patch-mmpfb_myfont.hh) = ca74679427ec1c9815b0d93be848aae46876a0b5
