@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/09/14 00:22:11 asau Exp $
+$NetBSD: distinfo,v 1.5 2013/04/30 22:26:29 joerg Exp $
 
 SHA1 (xylib-1.0.tar.bz2) = 3664b6753e11673e637ced473ce00d24ff0ce338
 RMD160 (xylib-1.0.tar.bz2) = 3a125a7d08a60fa65e22a0b09122069a160ebfac
 Size (xylib-1.0.tar.bz2) = 287286 bytes
+SHA1 (patch-xylib_cache.h) = a34d702b8b5a4525255717f0971e1fa1f651cfee
