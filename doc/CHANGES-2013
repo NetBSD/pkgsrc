@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1544 2013/04/30 20:57:02 markd Exp $
+$NetBSD: CHANGES-2013,v 1.1545 2013/05/01 05:53:19 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/netatalk to 2.2.4 [hauke 2013-04-30]
 	Updated net/samba to 3.6.14 [adam 2013-04-30]
 	Updated print/gv to 3.7.4 [markd 2013-04-30]
+	Updated security/libsodium to 0.4.1 [agc 2013-04-30]
