@@ -1,6 +1,8 @@
-$NetBSD: patch-aq,v 1.7 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-sshpty.c,v 1.1 2013/05/01 19:58:27 imil Exp $
 
---- sshpty.c.orig	2009-02-12 10:19:21.000000000 +0900
+Replace uid 0 with ROOTUID macro
+
+--- sshpty.c.orig	2009-02-12 01:19:21.000000000 +0000
 +++ sshpty.c
 @@ -86,7 +86,7 @@ void
  pty_release(const char *tty)

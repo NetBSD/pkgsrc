@@ -1,4 +1,6 @@
-$NetBSD: patch-aw,v 1.4 2011/02/16 17:45:09 taca Exp $
+$NetBSD: patch-openbsd-compat_port-tun.c,v 1.1 2013/05/01 19:58:26 imil Exp $
+
+if_tun.h can be found in net/tun
 
 --- openbsd-compat/port-tun.c.orig	2010-08-10 02:47:42.000000000 +0000
 +++ openbsd-compat/port-tun.c

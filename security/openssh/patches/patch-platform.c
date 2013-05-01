@@ -1,8 +1,8 @@
-$NetBSD: patch-platform.c,v 1.1 2011/02/16 17:45:09 taca Exp $
+$NetBSD: patch-platform.c,v 1.2 2013/05/01 19:58:26 imil Exp $
 
-Fix for Interix.
+Interix support
 
---- platform.c.orig	2011-01-11 06:02:25.000000000 +0000
+--- platform.c.orig	2013-03-12 00:31:05.000000000 +0000
 +++ platform.c
 @@ -81,7 +81,9 @@ platform_privileged_uidswap(void)
  	/* uid 0 is not special on Cygwin so always try */

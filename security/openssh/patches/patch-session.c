@@ -1,12 +1,10 @@
-$NetBSD: patch-ao,v 1.17 2011/02/16 17:45:08 taca Exp $
+$NetBSD: patch-session.c,v 1.1 2013/05/01 19:58:26 imil Exp $
 
-One more replacing 0 with ROOTUID is handled by using SUBST framework
-because patch can't handle it when hpn-patch option is enabled.
-So, don't simply update this file with mkpatch command.
+Interix support
 
---- session.c.orig	2011-02-16 01:25:58.000000000 +0000
+--- session.c.orig	2013-03-15 00:22:37.000000000 +0000
 +++ session.c
-@@ -1075,7 +1075,7 @@ read_etc_default_login(char ***env, u_in
+@@ -1081,7 +1081,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)
  		return;
  
@@ -15,7 +13,7 @@ So, don't simply update this file with mkpatch command.
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1184,7 +1184,7 @@ do_setup_env(Session *s, const char *she
+@@ -1190,7 +1190,7 @@ do_setup_env(Session *s, const char *she
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
  		if (path == NULL || *path == '\0') {
  			child_set_env(&env, &envsize, "PATH",
@@ -24,7 +22,7 @@ So, don't simply update this file with mkpatch command.
  				SUPERUSER_PATH : _PATH_STDPATH);
  		}
  # endif /* HAVE_CYGWIN */
-@@ -1298,6 +1298,18 @@ do_setup_env(Session *s, const char *she
+@@ -1304,6 +1304,18 @@ do_setup_env(Session *s, const char *she
  		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
  		read_environment_file(&env, &envsize, buf);
  	}
@@ -43,7 +41,7 @@ So, don't simply update this file with mkpatch command.
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1488,11 +1500,13 @@ do_setusercontext(struct passwd *pw)
+@@ -1494,11 +1506,13 @@ do_setusercontext(struct passwd *pw)
  			perror("setgid");
  			exit(1);
  		}
@@ -57,7 +55,7 @@ So, don't simply update this file with mkpatch command.
  		endgrent();
  #endif
  
-@@ -2305,7 +2319,7 @@ session_pty_cleanup2(Session *s)
+@@ -2313,7 +2327,7 @@ session_pty_cleanup2(Session *s)
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
