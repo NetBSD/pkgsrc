@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.ldap,v 1.1 2012/05/31 11:58:37 imil Exp $
-share/doc/openssh/README.lpk
-share/examples/openssh/lpk-user-example.txt
-share/examples/openssh/openssh-lpk_openldap.schema
-share/examples/openssh/openssh-lpk_sun.schema
