@@ -1,0 +1,5 @@
+lib/librumpkern_sys_sunos.a
+lib/librumpkern_sys_sunos_pic.a
+lib/librumpkern_sys_sunos.so
+lib/librumpkern_sys_sunos.so.0
+lib/librumpkern_sys_sunos.so.0.0
