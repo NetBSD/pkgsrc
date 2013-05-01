@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/29 11:16:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/01 10:25:30 fhajny Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
@@ -64,6 +64,10 @@ CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 .endfor
 
 INSTALLATION_DIRS+=	${CASSANDRA_HOME} ${EGDIR} ${DOCDIR}
+
+CHECK_INTERPRETER_SKIP+=interface/cassandra.thrift
+CHECK_INTERPRETER_SKIP+=pylib/setup.py
+CHECK_INTERPRETER_SKIP+=tools/bin/token-generator
 
 do-install:
 .for d in ${WORK_DIRS}
