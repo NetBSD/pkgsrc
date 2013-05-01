@@ -3,7 +3,7 @@ mount it.
 
 Classic commands included (prefixed with fsu_):
 
-* cat, diff, du, find, ls
+* cat, diff, du, find, ls, stat
 * chflags, chmod, chown, mv, rm, rmdir
 * cp, ln, mkdir, mkfifo, mknod, touch
 
@@ -12,5 +12,3 @@ New commands:
 * fsu_ecp (cp-like which allows the user to get/put files from/to the image)
 * fsu_exec (executes a local command like text editor on a file from the image)
 * fsu_write (writes its input in a file on the image)
-* fsu_console (a command console tool that uses previous commands and adds
-  directory browsing)
