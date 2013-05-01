@@ -1,0 +1,11 @@
+lib/librumphijack_pic.a
+lib/librumphijack.so
+lib/librumphijack.so.0
+lib/librumphijack.so.0.0
+lib/librumpkern_sys_linux.a
+lib/librumpkern_sys_linux_pic.a
+lib/librumpkern_sys_linux.so
+lib/librumpkern_sys_linux.so.0
+lib/librumpkern_sys_linux.so.0.0
+share/man/cat3/rumphijack.0
+share/man/man3/rumphijack.3
