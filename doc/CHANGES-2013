@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1545 2013/05/01 05:53:19 agc Exp $
+$NetBSD: CHANGES-2013,v 1.1546 2013/05/01 17:18:36 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2367,3 +2367,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.14 [adam 2013-04-30]
 	Updated print/gv to 3.7.4 [markd 2013-04-30]
 	Updated security/libsodium to 0.4.1 [agc 2013-04-30]
+	Updated misc/rump to 20130430 [stacktic 2013-05-01]
+	Updated filesystems/fs-utils to 20130430 [stacktic 2013-05-01]
