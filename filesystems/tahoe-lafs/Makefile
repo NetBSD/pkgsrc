@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 16:08:33 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/05/01 23:59:53 gdt Exp $
 #
 
-VERSION=	1.9.2
+VERSION=	1.10.0
 DISTNAME=	allmydata-tahoe-${VERSION}
 EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
@@ -25,13 +25,14 @@ TEST_TARGET=	test
 # TODO
 # fix nevow: doc location
 
+# Included egg darcsver, but depend anyway.
+BUILD_DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
+
 DEPENDS+=	${PYPKGPREFIX}-zfec-[0-9]*:../../converters/py-zfec
 DEPENDS+=	${PYPKGPREFIX}-zbase32-[0-9]*:../../converters/py-zbase32
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
-# Included egg darcsver, but depend anyway.
-DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
 DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # Included egg setuptools_trial, not used.
