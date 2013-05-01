@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.15 2011/02/16 17:45:08 taca Exp $
+$NetBSD: patch-loginrec.c,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- loginrec.c.orig	2011-01-17 10:15:31.000000000 +0000
+Interix support and related fixes
+
+--- loginrec.c.orig	2013-02-22 22:12:24.000000000 +0000
 +++ loginrec.c
-@@ -433,8 +433,8 @@ login_set_addr(struct logininfo *li, con
+@@ -429,8 +429,8 @@ login_set_addr(struct logininfo *li, con
  int
  login_write(struct logininfo *li)
  {
@@ -13,7 +15,7 @@ $NetBSD: patch-ad,v 1.15 2011/02/16 17:45:08 taca Exp $
  		logit("Attempt to write login records by non-root user (aborting)");
  		return (1);
  	}
-@@ -442,7 +442,7 @@ login_write(struct logininfo *li)
+@@ -438,7 +438,7 @@ login_write(struct logininfo *li)
  
  	/* set the timestamp */
  	login_set_current_time(li);
@@ -22,7 +24,7 @@ $NetBSD: patch-ad,v 1.15 2011/02/16 17:45:08 taca Exp $
  	syslogin_write_entry(li);
  #endif
  #ifdef USE_LASTLOG
-@@ -626,7 +626,7 @@ line_abbrevname(char *dst, const char *s
+@@ -622,7 +622,7 @@ line_abbrevname(char *dst, const char *s
   ** into account.
   **/
  
@@ -31,7 +33,7 @@ $NetBSD: patch-ad,v 1.15 2011/02/16 17:45:08 taca Exp $
  
  /* build the utmp structure */
  void
-@@ -763,10 +763,6 @@ construct_utmpx(struct logininfo *li, st
+@@ -759,10 +759,6 @@ construct_utmpx(struct logininfo *li, st
  	set_utmpx_time(li, utx);
  	utx->ut_pid = li->pid;
  
@@ -42,7 +44,7 @@ $NetBSD: patch-ad,v 1.15 2011/02/16 17:45:08 taca Exp $
  	if (li->type == LTYPE_LOGOUT)
  		return;
  
-@@ -775,6 +771,8 @@ construct_utmpx(struct logininfo *li, st
+@@ -771,6 +767,8 @@ construct_utmpx(struct logininfo *li, st
  	 * for logouts.
  	 */
  
@@ -51,7 +53,7 @@ $NetBSD: patch-ad,v 1.15 2011/02/16 17:45:08 taca Exp $
  # ifdef HAVE_HOST_IN_UTMPX
  	strncpy(utx->ut_host, li->hostname,
  	    MIN_SIZEOF(utx->ut_host, li->hostname));
-@@ -1410,7 +1408,7 @@ wtmpx_get_entry(struct logininfo *li)
+@@ -1406,7 +1404,7 @@ wtmpx_get_entry(struct logininfo *li)
   ** Low-level libutil login() functions
   **/
  

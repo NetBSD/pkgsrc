@@ -1,6 +1,8 @@
-$NetBSD: patch-au,v 1.3 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-openbsd-compat_bsd-openpty.c,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- openbsd-compat/bsd-openpty.c.orig	2006-08-24 18:52:30.000000000 +0900
+Interix support
+
+--- openbsd-compat/bsd-openpty.c.orig	2006-08-24 09:52:30.000000000 +0000
 +++ openbsd-compat/bsd-openpty.c
 @@ -121,15 +121,17 @@ openpty(int *amaster, int *aslave, char 
  		return (-1);
