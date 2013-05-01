@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/07/07 00:34:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/05/01 23:59:53 gdt Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -114,9 +114,15 @@ ${PYSITELIB}/allmydata/introducer/__init__.pyo
 ${PYSITELIB}/allmydata/introducer/client.py
 ${PYSITELIB}/allmydata/introducer/client.pyc
 ${PYSITELIB}/allmydata/introducer/client.pyo
+${PYSITELIB}/allmydata/introducer/common.py
+${PYSITELIB}/allmydata/introducer/common.pyc
+${PYSITELIB}/allmydata/introducer/common.pyo
 ${PYSITELIB}/allmydata/introducer/interfaces.py
 ${PYSITELIB}/allmydata/introducer/interfaces.pyc
 ${PYSITELIB}/allmydata/introducer/interfaces.pyo
+${PYSITELIB}/allmydata/introducer/old.py
+${PYSITELIB}/allmydata/introducer/old.pyc
+${PYSITELIB}/allmydata/introducer/old.pyo
 ${PYSITELIB}/allmydata/introducer/server.py
 ${PYSITELIB}/allmydata/introducer/server.pyc
 ${PYSITELIB}/allmydata/introducer/server.pyo
@@ -162,15 +168,12 @@ ${PYSITELIB}/allmydata/node.pyo
 ${PYSITELIB}/allmydata/nodemaker.py
 ${PYSITELIB}/allmydata/nodemaker.pyc
 ${PYSITELIB}/allmydata/nodemaker.pyo
-${PYSITELIB}/allmydata/provisioning.py
-${PYSITELIB}/allmydata/provisioning.pyc
-${PYSITELIB}/allmydata/provisioning.pyo
-${PYSITELIB}/allmydata/reliability.py
-${PYSITELIB}/allmydata/reliability.pyc
-${PYSITELIB}/allmydata/reliability.pyo
 ${PYSITELIB}/allmydata/scripts/__init__.py
 ${PYSITELIB}/allmydata/scripts/__init__.pyc
 ${PYSITELIB}/allmydata/scripts/__init__.pyo
+${PYSITELIB}/allmydata/scripts/admin.py
+${PYSITELIB}/allmydata/scripts/admin.pyc
+${PYSITELIB}/allmydata/scripts/admin.pyo
 ${PYSITELIB}/allmydata/scripts/backupdb.py
 ${PYSITELIB}/allmydata/scripts/backupdb.pyc
 ${PYSITELIB}/allmydata/scripts/backupdb.pyo
@@ -387,9 +390,6 @@ ${PYSITELIB}/allmydata/test/test_node.pyo
 ${PYSITELIB}/allmydata/test/test_observer.py
 ${PYSITELIB}/allmydata/test/test_observer.pyc
 ${PYSITELIB}/allmydata/test/test_observer.pyo
-${PYSITELIB}/allmydata/test/test_provisioning.py
-${PYSITELIB}/allmydata/test/test_provisioning.pyc
-${PYSITELIB}/allmydata/test/test_provisioning.pyo
 ${PYSITELIB}/allmydata/test/test_repairer.py
 ${PYSITELIB}/allmydata/test/test_repairer.pyc
 ${PYSITELIB}/allmydata/test/test_repairer.pyo
@@ -486,6 +486,9 @@ ${PYSITELIB}/allmydata/util/idlib.pyo
 ${PYSITELIB}/allmydata/util/iputil.py
 ${PYSITELIB}/allmydata/util/iputil.pyc
 ${PYSITELIB}/allmydata/util/iputil.pyo
+${PYSITELIB}/allmydata/util/keyutil.py
+${PYSITELIB}/allmydata/util/keyutil.pyc
+${PYSITELIB}/allmydata/util/keyutil.pyo
 ${PYSITELIB}/allmydata/util/limiter.py
 ${PYSITELIB}/allmydata/util/limiter.pyc
 ${PYSITELIB}/allmydata/util/limiter.pyo
@@ -571,17 +574,14 @@ ${PYSITELIB}/allmydata/web/map-update-status.xhtml
 ${PYSITELIB}/allmydata/web/operations.py
 ${PYSITELIB}/allmydata/web/operations.pyc
 ${PYSITELIB}/allmydata/web/operations.pyo
-${PYSITELIB}/allmydata/web/provisioning.xhtml
 ${PYSITELIB}/allmydata/web/publish-status.xhtml
-${PYSITELIB}/allmydata/web/reliability.py
-${PYSITELIB}/allmydata/web/reliability.pyc
-${PYSITELIB}/allmydata/web/reliability.pyo
-${PYSITELIB}/allmydata/web/reliability.xhtml
 ${PYSITELIB}/allmydata/web/rename-form.xhtml
 ${PYSITELIB}/allmydata/web/retrieve-status.xhtml
 ${PYSITELIB}/allmydata/web/root.py
 ${PYSITELIB}/allmydata/web/root.pyc
 ${PYSITELIB}/allmydata/web/root.pyo
+${PYSITELIB}/allmydata/web/static/css/bootstrap.css
+${PYSITELIB}/allmydata/web/static/css/new-tahoe.css
 ${PYSITELIB}/allmydata/web/static/d3-2.4.6.min.js
 ${PYSITELIB}/allmydata/web/static/d3-2.4.6.time.min.js
 ${PYSITELIB}/allmydata/web/static/download_status_timeline.js
@@ -625,3 +625,9 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/buildtest/__init__.py
+${PYSITELIB}/buildtest/__init__.pyc
+${PYSITELIB}/buildtest/__init__.pyo
+${PYSITELIB}/buildtest/test_build_with_fake_dist.py
+${PYSITELIB}/buildtest/test_build_with_fake_dist.pyc
+${PYSITELIB}/buildtest/test_build_with_fake_dist.pyo
