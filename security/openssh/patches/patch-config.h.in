@@ -1,8 +1,10 @@
-$NetBSD: patch-ag,v 1.14 2011/02/16 17:45:08 taca Exp $
+$NetBSD: patch-config.h.in,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- config.h.in.orig	2011-02-04 00:59:51.000000000 +0000
+Added Interix and define new path to if_tun.h
+
+--- config.h.in.orig	2013-03-21 23:38:18.000000000 +0000
 +++ config.h.in
-@@ -533,6 +533,9 @@
+@@ -561,6 +561,9 @@
  /* define if you have int64_t data type */
  #undef HAVE_INT64_T
  
@@ -12,7 +14,7 @@ $NetBSD: patch-ag,v 1.14 2011/02/16 17:45:08 taca Exp $
  /* Define to 1 if you have the <inttypes.h> header file. */
  #undef HAVE_INTTYPES_H
  
-@@ -659,6 +662,9 @@
+@@ -699,6 +702,9 @@
  /* Define to 1 if you have the <net/if_tun.h> header file. */
  #undef HAVE_NET_IF_TUN_H
  

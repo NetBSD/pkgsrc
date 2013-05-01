@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/05/01 19:58:26 imil Exp $
+
+Removed install-sysconf as we handle that phase through post-install
+
+--- Makefile.in.orig	2013-03-07 15:37:13.000000000 +0000
++++ Makefile.in
+@@ -22,7 +22,7 @@ top_srcdir=@top_srcdir@
+ DESTDIR=
+ VPATH=@srcdir@
+ SSH_PROGRAM=@bindir@/ssh
+-ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
++#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
+ SFTP_SERVER=$(libexecdir)/sftp-server
+ SSH_KEYSIGN=$(libexecdir)/ssh-keysign
+ SSH_PKCS11_HELPER=$(libexecdir)/ssh-pkcs11-helper
+@@ -242,7 +242,7 @@ distprep: catman-do
+ 	-rm -rf autom4te.cache
+ 
+ install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
+-install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf
++install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
+ install-nosysconf: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
+ 
+ check-config:

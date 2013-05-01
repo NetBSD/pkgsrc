@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.30 2011/02/16 17:45:08 taca Exp $
+$NetBSD: patch-configure.ac,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- configure.ac.orig	2010-04-10 15:58:01.000000000 +0300
-+++ configure.ac	2010-06-09 21:32:22.000000000 +0300
-@@ -191,6 +191,9 @@
+Various fixes regarding portability
+
+--- configure.ac.orig	2013-03-20 01:55:15.000000000 +0000
++++ configure.ac
+@@ -241,6 +241,9 @@ AC_ARG_WITH([rpath],
  	]
  )
  
@@ -10,9 +12,9 @@ $NetBSD: patch-ab,v 1.30 2011/02/16 17:45:08 taca Exp $
 +need_dash_r=
 +
  # Allow user to specify flags
- AC_ARG_WITH(cflags,
+ AC_ARG_WITH([cflags],
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -258,6 +261,7 @@
+@@ -309,6 +312,7 @@ AC_CHECK_HEADERS([ \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -20,7 +22,7 @@ $NetBSD: patch-ab,v 1.30 2011/02/16 17:45:08 taca Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -541,6 +545,15 @@
+@@ -603,6 +607,15 @@ main() { if (NSVersionOfRunTimeLibrary("
  		;;
  	esac
  	;;
@@ -35,12 +37,12 @@ $NetBSD: patch-ab,v 1.30 2011/02/16 17:45:08 taca Exp $
 +        ;;
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
- 	AC_DEFINE(BROKEN_INET_NTOA, 1,
-@@ -4106,9 +4119,17 @@
- )
+ 	AC_DEFINE([BROKEN_INET_NTOA], [1],
+@@ -4460,9 +4473,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+ ])
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
--		AC_DEFINE(DISABLE_WTMPX)
+-		AC_DEFINE([DISABLE_WTMPX])
 +		for f in /var/log/wtmpx; do
 +			if test -f $f ; then
 +				conf_wtmpx_location=$f
@@ -53,10 +55,10 @@ $NetBSD: patch-ab,v 1.30 2011/02/16 17:45:08 taca Exp $
 -else
 +fi
 +if test -n "$conf_wtmpx_location"; then
- 	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location",
+ 	AC_DEFINE_UNQUOTED([CONF_WTMPX_FILE], ["$conf_wtmpx_location"],
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -4156,7 +4177,7 @@
+@@ -4547,7 +4568,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

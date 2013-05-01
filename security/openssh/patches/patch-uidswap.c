@@ -1,6 +1,8 @@
-$NetBSD: patch-ar,v 1.8 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-uidswap.c,v 1.1 2013/05/01 19:58:27 imil Exp $
 
---- uidswap.c.orig	2009-01-21 14:04:24.000000000 +0900
+Interix support
+
+--- uidswap.c.orig	2012-11-05 06:04:37.000000000 +0000
 +++ uidswap.c
 @@ -66,13 +66,13 @@ temporarily_use_uid(struct passwd *pw)
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
@@ -42,7 +44,7 @@ $NetBSD: patch-ar,v 1.8 2009/05/21 03:22:29 taca Exp $
  #ifndef SAVED_IDS_WORK_WITH_SETEUID
  	/* Propagate the privileged gid to all of our gids. */
  	if (setgid(getegid()) < 0)
-@@ -198,8 +202,10 @@ restore_uid(void)
+@@ -186,8 +190,10 @@ restore_uid(void)
  	setgid(getgid());
  #endif /* SAVED_IDS_WORK_WITH_SETEUID */
  
@@ -53,7 +55,7 @@ $NetBSD: patch-ar,v 1.8 2009/05/21 03:22:29 taca Exp $
  	temporarily_use_uid_effective = 0;
  }
  
-@@ -220,6 +226,10 @@ permanently_set_uid(struct passwd *pw)
+@@ -208,6 +214,10 @@ permanently_set_uid(struct passwd *pw)
  	debug("permanently_set_uid: %u/%u", (u_int)pw->pw_uid,
  	    (u_int)pw->pw_gid);
  
@@ -61,10 +63,10 @@ $NetBSD: patch-ar,v 1.8 2009/05/21 03:22:29 taca Exp $
 +	if (setuser(pw->pw_name, NULL, SU_COMPLETE))
 +		fatal("setuser %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
 +#else
- #if defined(HAVE_SETRESGID) && !defined(BROKEN_SETRESGID)
  	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
  		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
-@@ -278,6 +288,7 @@ permanently_set_uid(struct passwd *pw)
+ 
+@@ -244,6 +254,7 @@ permanently_set_uid(struct passwd *pw)
  	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
  		fatal("%s: was able to restore old [e]uid", __func__);
  #endif

@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.48 2011/02/16 17:45:08 taca Exp $
+$NetBSD: patch-configure,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- configure.orig	2010-04-16 03:17:11.000000000 +0300
-+++ configure	2010-06-09 21:30:29.000000000 +0300
-@@ -5665,6 +5665,9 @@
+Various fixes regarding portability
+
+--- configure.orig	2013-03-21 23:38:28.000000000 +0000
++++ configure
+@@ -5993,6 +5993,9 @@ if test "${with_rpath+set}" = set; then 
  fi
  
  
@@ -12,7 +14,7 @@ $NetBSD: patch-aa,v 1.48 2011/02/16 17:45:08 taca Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags was given.
-@@ -5810,6 +5813,7 @@
+@@ -6076,6 +6079,7 @@ for ac_header in  \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -20,7 +22,7 @@ $NetBSD: patch-aa,v 1.48 2011/02/16 17:45:08 taca Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -7660,6 +7664,36 @@
+@@ -6786,6 +6790,36 @@ $as_echo "#define HAVE_SECUREWARE 1" >>c
  		;;
  	esac
  	;;
@@ -57,30 +59,28 @@ $NetBSD: patch-aa,v 1.48 2011/02/16 17:45:08 taca Exp $
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -8226,7 +8260,7 @@
- _ACEOF
+@@ -6987,7 +7021,7 @@ fi
+ $as_echo "#define SSH_TUN_PREPEND_AF 1" >>confdefs.h
  
  	;;
 -*-*-freebsd*)
 +*-*-freebsd*|*-*-dragonfly*)
  	check_for_libcrypt_later=1
  
- cat >>confdefs.h <<\_ACEOF
-@@ -29573,14 +29607,20 @@
+ $as_echo "#define LOCKED_PASSWD_PREFIX \"*LOCKED*\"" >>confdefs.h
+@@ -17033,12 +17067,18 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
--		cat >>confdefs.h <<\_ACEOF
+-		$as_echo "#define DISABLE_WTMPX 1" >>confdefs.h
+-
 +		for f in /var/log/wtmpx; do
 +			if test -f $f ; then
 +				conf_wtmpx_location=$f
 +			fi
 +		done
 +		if test -z "$conf_wtmpx_location"; then
-+			cat >>confdefs.h <<\_ACEOF
- #define DISABLE_WTMPX 1
- _ACEOF
--
++			$as_echo "#define DISABLE_WTMPX 1" >>confdefs.h
 +		fi
  	fi
 -else
@@ -92,7 +92,7 @@ $NetBSD: patch-aa,v 1.48 2011/02/16 17:45:08 taca Exp $
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -30888,7 +30930,7 @@
+@@ -18441,7 +18481,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

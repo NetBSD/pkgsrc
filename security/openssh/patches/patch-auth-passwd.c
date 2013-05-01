@@ -1,6 +1,8 @@
-$NetBSD: patch-af,v 1.10 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-auth-passwd.c,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- auth-passwd.c.orig	2006-08-05 11:39:39.000000000 +0900
+Replace uid 0 with ROOTUID macro
+
+--- auth-passwd.c.orig	2012-04-25 23:51:28.000000000 +0000
 +++ auth-passwd.c
 @@ -87,7 +87,7 @@ auth_password(Authctxt *authctxt, const 
  #endif

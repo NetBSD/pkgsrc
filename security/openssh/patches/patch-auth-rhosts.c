@@ -1,6 +1,8 @@
-$NetBSD: patch-aj,v 1.8 2009/05/21 03:22:29 taca Exp $
+$NetBSD: patch-auth-rhosts.c,v 1.1 2013/05/01 19:58:26 imil Exp $
 
---- auth-rhosts.c.orig	2008-06-14 08:01:25.000000000 +0900
+Replace uid 0 with ROOTUID macro
+
+--- auth-rhosts.c.orig	2010-03-07 12:05:17.000000000 +0000
 +++ auth-rhosts.c
 @@ -230,7 +230,7 @@ auth_rhosts2_raw(struct passwd *pw, cons
  		return 0;
