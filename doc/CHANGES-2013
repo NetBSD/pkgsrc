@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1553 2013/05/02 02:38:41 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1554 2013/05/02 03:28:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2376,3 +2376,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-Format-Natural to 1.02 [wen 2013-05-02]
 	Updated textproc/p5-XML-Bare to 0.52 [wen 2013-05-02]
 	Updated devel/p5-Test-Harness to 3.27 [wen 2013-05-02]
+	Updated databases/p5-DBI to 1.625 [wen 2013-05-02]
