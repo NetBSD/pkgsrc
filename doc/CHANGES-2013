@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1558 2013/05/02 06:51:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1559 2013/05/02 07:23:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Class-Accessor-Grouped to 0.10010 [wen 2013-05-02]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.12 [wen 2013-05-02]
 	Updated devel/p5-namespace-clean to 0.24 [wen 2013-05-02]
+	Updated databases/p5-DBIx-Class to 0.08250 [wen 2013-05-02]
