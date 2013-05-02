@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/03/30 09:31:15 obache Exp $
+$NetBSD: distinfo,v 1.7 2013/05/02 09:15:07 obache Exp $
 
-SHA1 (suse121/libxml2-2.7.8+git20110708-3.20.1.i586.rpm) = 37d4324e10c02716b4ecf0abbde2a345c8551896
-RMD160 (suse121/libxml2-2.7.8+git20110708-3.20.1.i586.rpm) = 9dcedab8a59217d03d3444624954eebdfd0c932c
-Size (suse121/libxml2-2.7.8+git20110708-3.20.1.i586.rpm) = 569420 bytes
-SHA1 (suse121/libxml2-2.7.8+git20110708-3.20.1.x86_64.rpm) = c5fff0f43e84abb9ab74b911b753429df32ea161
-RMD160 (suse121/libxml2-2.7.8+git20110708-3.20.1.x86_64.rpm) = a871f8c1d3e4876aa6a21a1bf578b1503f5b55d5
-Size (suse121/libxml2-2.7.8+git20110708-3.20.1.x86_64.rpm) = 578396 bytes
+SHA1 (suse121/libxml2-2.7.8+git20110708-3.24.1.i586.rpm) = 0bb84e1ed57845b3c74b5117642b7f561d29d4e7
+RMD160 (suse121/libxml2-2.7.8+git20110708-3.24.1.i586.rpm) = dd2604f24726ba50c3c98487df45a56608a942d9
+Size (suse121/libxml2-2.7.8+git20110708-3.24.1.i586.rpm) = 569665 bytes
+SHA1 (suse121/libxml2-2.7.8+git20110708-3.24.1.x86_64.rpm) = 697ee6c91401cd71ccc5a9d3560f2518feae2952
+RMD160 (suse121/libxml2-2.7.8+git20110708-3.24.1.x86_64.rpm) = 26e925dbd76e6dd1a26348caf3540cb2e03fda50
+Size (suse121/libxml2-2.7.8+git20110708-3.24.1.x86_64.rpm) = 578744 bytes
