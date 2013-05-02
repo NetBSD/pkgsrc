@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1547 2013/05/01 20:04:12 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1548 2013/05/02 00:00:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/rump to 20130430 [stacktic 2013-05-01]
 	Updated filesystems/fs-utils to 20130430 [stacktic 2013-05-01]
 	Updated security/openssh to 6.2.1 [imil 2013-05-01]
+	Updated filesystems/tahoe-lafs to 1.10.0 [gdt 2013-05-01]
