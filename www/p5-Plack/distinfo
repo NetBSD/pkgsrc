@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2013/04/21 12:17:10 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2013/05/02 01:32:40 wen Exp $
 
-SHA1 (Plack-1.0023.tar.gz) = 228e98e6a875b34648f289bc588553fd894ba28c
-RMD160 (Plack-1.0023.tar.gz) = 5b0a2c16a1224e1537f48f9362dbcb12b643a464
-Size (Plack-1.0023.tar.gz) = 233572 bytes
+SHA1 (Plack-1.0024.tar.gz) = 897f919ae1425ffce6929bcd017788a6a5a6a27a
+RMD160 (Plack-1.0024.tar.gz) = 5d3acbfb92147a3da6c8ffa60a3db7ffe23aa25f
+Size (Plack-1.0024.tar.gz) = 233763 bytes
