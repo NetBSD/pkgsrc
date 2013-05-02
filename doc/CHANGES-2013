@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1551 2013/05/02 02:21:52 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1552 2013/05/02 02:31:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2374,3 +2374,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Plack to 1.0024 [wen 2013-05-02]
 	Updated devel/p5-autobox to 2.79 [wen 2013-05-02]
 	Updated time/p5-DateTime-Format-Natural to 1.02 [wen 2013-05-02]
+	Updated textproc/p5-XML-Bare to 0.52 [wen 2013-05-02]
