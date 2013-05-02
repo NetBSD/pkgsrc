@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/05/02 05:06:12 agc Exp $
+bin/em
+share/em/emhelp

@@ -1,0 +1,23 @@
+em - the editor for mortals - is a variant of the standard Unix text
+editor - ed.  It includes all of ed, so the documentation for ed is
+fully applicable to em.  Em also has a number of new commands and
+facilities designed to improve its interaction and increase its
+usefulness.
+
+Em differs from ed in that it normally prefixes command lines with a
+'>'.  For those who prefer silence, if the editor is invoked by any
+name not having 'm' as its second character, no prompts will appear.
+Other ways of controlling prompts are described below.
+
+The em editor was designed for display terminals and was a
+single-line-at-a-time visual editor.  It was one of the first programs
+on Unix to make heavy use of "raw terminal input mode", in which the
+running program, rather than the terminal device driver, handled all
+keystrokes.
+
+Inspired by em, and by their own tweaks to ed, Bill Joy and Chuck
+Haley, both graduate students at UC Berkeley, took code from em to
+make en, and then "extended" en to create ex version 0.1.
+
+This version was translated from V6 Unix C (mid-70s era) to the
+present day by Pierre Gaston.
