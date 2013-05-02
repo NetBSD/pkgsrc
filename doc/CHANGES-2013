@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1549 2013/05/02 01:35:16 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1550 2013/05/02 01:53:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2372,3 +2372,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/openssh to 6.2.1 [imil 2013-05-01]
 	Updated filesystems/tahoe-lafs to 1.10.0 [gdt 2013-05-01]
 	Updated www/p5-Plack to 1.0024 [wen 2013-05-02]
+	Updated devel/p5-autobox to 2.79 [wen 2013-05-02]
