@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.16 2012/09/03 14:59:33 adam Exp $
+# $NetBSD: gettext.mk,v 1.17 2013/05/02 13:12:03 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # treated specially below.
 #
 _TOOLS.gettext-tools=		gettext msgmerge xgettext msgconv autopoint
-_TOOLS_DEP.gettext-tools=	{gettext-tools>=0.14.5,gettext>=0.10.36<0.14.5}
+_TOOLS_DEP.gettext-tools=	gettext-tools>=0.15
 
 .for _t_ in ${_TOOLS.gettext-tools}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:C/:.*//:M${_t_})
@@ -56,8 +56,19 @@ USE_TOOLS+=	msgfmt
 .  if !empty(PKGPATH:Mdevel/gettext-tools)
 MAKEFLAGS+=		TOOLS_IGNORE.msgfmt=
 .  else
-.    if defined(TOOLS_PLATFORM.msgfmt) && !empty(TOOLS_PLATFORM.msgfmt)
+# If we're not using the builtin gettext implementation, then we should
+# definitely be using the pkgsrc version of msgfmt (gettext-tools).
+#
+CHECK_BUILTIN.gettext:=	yes
+.    include "../../devel/gettext-lib/builtin.mk"
+CHECK_BUILTIN.gettext:=	no
+.    if !empty(USE_BUILTIN.gettext:M[nN][oO])
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+.    endif
+
 _TOOLS_USE_PKGSRC.msgfmt?=	no
+.    if empty(_TOOLS_USE_PKGSRC.msgfmt:M[Yy][Ee][Ss]) && \
+	defined(TOOLS_PLATFORM.msgfmt) && !empty(TOOLS_PLATFORM.msgfmt)
 #
 # MSGFMT_STRIP_MSGID_PLURAL: Yes for msgfmt < 0.10.36
 # MSGFMT_STRIP_MSGCTXT: Yes for msgfmt < 0.15
@@ -101,16 +112,6 @@ _TOOLS_USE_MSGFMT_SH=		yes
 _TOOLS_USE_MSGFMT_SH=		no
 .    endif
 MAKEVARS+=	_TOOLS_USE_MSGFMT_SH
-
-# If we're not using the builtin gettext implementation, then we should
-# definitely be using the pkgsrc version of msgfmt (gettext-tools).
-#
-CHECK_BUILTIN.gettext:=	yes
-.    include "../../devel/gettext-lib/builtin.mk"
-CHECK_BUILTIN.gettext:=	no
-.    if !empty(USE_BUILTIN.gettext:M[nN][oO])
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-.    endif
 
 .    if !empty(_TOOLS_USE_PKGSRC.msgfmt:M[yY][eE][sS])
 TOOLS_CREATE+=		msgfmt
