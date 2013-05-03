@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1564 2013/05/03 16:55:34 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.1565 2013/05/03 17:54:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/stellarium to 0.12.1 [drochner 2013-05-03]
 	Updated security/gpgme to 1.4.1 [drochner 2013-05-03]
 	Updated math/galculator to 2.1.2 [drochner 2013-05-03]
+	Updated net/gssdp to 0.14.2nb1 [wiz 2013-05-03]
