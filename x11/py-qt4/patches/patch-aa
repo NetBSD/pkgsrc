@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.7 2012/10/10 16:53:39 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2013/05/03 15:48:21 drochner Exp $
 
---- configure.py.orig	2012-09-29 11:34:33.000000000 +0000
+--- configure.py.orig	2013-04-21 12:01:57.000000000 +0000
 +++ configure.py
-@@ -362,7 +362,7 @@ class ConfigurePyQt4:
+@@ -345,7 +345,7 @@ class ConfigurePyQt4:
          pyqt_modules.append("QtCore")
  
          check_module("QtGui", "qwidget.h", "new QWidget()")
 -        check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")")
 +        check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")", extra_libs=["QtCore"])
-         if qt_version < 0x050000: check_module("QtMultimedia", "QAudioDeviceInfo",
+         check_module("QtMultimedia", "QAudioDeviceInfo",
                  "new QAudioDeviceInfo()")
          check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
-@@ -396,8 +396,8 @@ class ConfigurePyQt4:
-         if qt_version < 0x050000:
-             check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
- 
--        if qt_version < 0x050000: check_module("phonon", "phonon/videowidget.h",
+@@ -369,8 +369,8 @@ class ConfigurePyQt4:
+         check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
+         check_module("QtXml", "qdom.h", "new QDomDocument()")
+         check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
+-        check_module("phonon", "phonon/videowidget.h",
 -                "new Phonon::VideoWidget()")
-+#        if qt_version < 0x050000: check_module("phonon", "phonon/videowidget.h",
++#        check_module("phonon", "phonon/videowidget.h",
 +#                "new Phonon::VideoWidget()")
          check_module("QtAssistant", "qassistantclient.h",
                  "new QAssistantClient(\"foo\")", extra_lib_dirs=ass_lib_dirs,
