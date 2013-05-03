@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.20 2013/04/10 15:02:58 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.21 2013/05/03 15:48:15 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -67,6 +67,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qabstractanimation.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstracteventdispatcher.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractfileengine.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractitemmodel.sip
+share/sip${PYVERSSUFFIX}/QtCore/qabstractnativeeventfilter.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractstate.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstracttransition.sip
 share/sip${PYVERSSUFFIX}/QtCore/qanimationgroup.sip
@@ -157,6 +158,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qvariant.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvariantanimation.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvector.sip
 share/sip${PYVERSSUFFIX}/QtCore/qwaitcondition.sip
+share/sip${PYVERSSUFFIX}/QtCore/qwineventnotifier.sip
 share/sip${PYVERSSUFFIX}/QtCore/qxmlstream.sip
 share/sip${PYVERSSUFFIX}/QtDeclarative/QtDeclarativemod.sip
 share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativecomponent.sip
