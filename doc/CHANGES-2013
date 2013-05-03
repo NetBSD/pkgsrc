@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1563 2013/05/03 15:23:48 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.1564 2013/05/03 16:55:34 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2386,3 +2386,12 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/suse121_libxml2 to 12.1nb6 [obache 2013-05-02]
 	Updated net/mikutter to 0.2.1.1142 [obache 2013-05-03]
 	Updated databases/guile-pg to 0.46 [gdt 2013-05-03]
+	Updated graphics/veusz to 1.17.1 [drochner 2013-05-03]
+	Updated x11/py-qt4 to 4.10.1 [drochner 2013-05-03]
+	Updated misc/goffice0.10 to 0.10.2 [drochner 2013-05-03]
+	Updated math/gnumeric112 to 1.12.2 [drochner 2013-05-03]
+	Updated multimedia/gstreamer1 to 1.0.7 [drochner 2013-05-03]
+	Updated audio/rhythmbox-gtk3 to 2.99.1 [drochner 2013-05-03]
+	Updated misc/stellarium to 0.12.1 [drochner 2013-05-03]
+	Updated security/gpgme to 1.4.1 [drochner 2013-05-03]
+	Updated math/galculator to 2.1.2 [drochner 2013-05-03]
