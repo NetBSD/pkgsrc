@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.42 2013/05/02 12:39:00 obache Exp $
+# $NetBSD: builtin.mk,v 1.43 2013/05/03 01:57:11 obache Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -6,16 +6,13 @@ BUILTIN_PKG:=	gettext
 
 BUILTIN_FIND_LIBS:=			intl
 BUILTIN_FIND_FILES_VAR:=		H_GETTEXT H_GENTOO_GETTEXT	\
-					H_NGETTEXT_GETTEXT 		\
-					H_DCGETTEXT_GETTEXT
+					H_NGETTEXT_GETTEXT
 BUILTIN_FIND_FILES.H_GETTEXT=		/usr/include/libintl.h
 BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
 BUILTIN_FIND_FILES.H_GENTOO_GETTEXT=	/usr/include/libintl.h
 BUILTIN_FIND_GREP.H_GENTOO_GETTEXT=	gentoo-multilib/.*/libintl.h
 BUILTIN_FIND_FILES.H_NGETTEXT_GETTEXT=	/usr/include/libintl.h
 BUILTIN_FIND_GREP.H_NGETTEXT_GETTEXT=	char.*ngettext
-BUILTIN_FIND_FILES.H_DCGETTEXT_GETTEXT=	/usr/include/libintl.h
-BUILTIN_FIND_GREP.H_DCGETTEXT_GETTEXT=	char.*dcgettext
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -65,10 +62,10 @@ USE_BUILTIN.gettext!=							\
 .    endif
 # XXX
 # XXX By default, assume that the native gettext implementation is good
-# XXX enough to replace GNU gettext if it supplies dcgettext().
+# XXX enough to replace GNU gettext if it supplies ngettext().
 # XXX
-.    if empty(H_DCGETTEXT_GETTEXT:M__nonexistent__) && \
-	empty(H_DCGETTEXT_GETTEXT:M${LOCALBASE}/*)
+.    if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
+	empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
 USE_BUILTIN.gettext=	yes
 .    endif
 #
