@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/14 18:56:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/03 15:51:23 drochner Exp $
 include/libgoffice-0.10/goffice/app/error-info.h
 include/libgoffice-0.10/goffice/app/file.h
 include/libgoffice-0.10/goffice/app/go-cmd-context-impl.h
@@ -101,6 +101,7 @@ include/libgoffice-0.10/goffice/gtk/go-color-selector.h
 include/libgoffice-0.10/goffice/gtk/go-combo-box.h
 include/libgoffice-0.10/goffice/gtk/go-combo-color.h
 include/libgoffice-0.10/goffice/gtk/go-combo-pixmaps.h
+include/libgoffice-0.10/goffice/gtk/go-font-sel-dialog.h
 include/libgoffice-0.10/goffice/gtk/go-font-sel.h
 include/libgoffice-0.10/goffice/gtk/go-format-sel.h
 include/libgoffice-0.10/goffice/gtk/go-gradient-selector.h
