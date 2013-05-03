@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2013/02/03 14:39:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2013/05/03 21:26:14 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -6,6 +6,9 @@ ${PYSITELIB}/hgext/__init__.pyo
 ${PYSITELIB}/hgext/acl.py
 ${PYSITELIB}/hgext/acl.pyc
 ${PYSITELIB}/hgext/acl.pyo
+${PYSITELIB}/hgext/blackbox.py
+${PYSITELIB}/hgext/blackbox.pyc
+${PYSITELIB}/hgext/blackbox.pyo
 ${PYSITELIB}/hgext/bugzilla.py
 ${PYSITELIB}/hgext/bugzilla.pyc
 ${PYSITELIB}/hgext/bugzilla.pyo
@@ -243,6 +246,9 @@ ${PYSITELIB}/mercurial/dagutil.pyo
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
 ${PYSITELIB}/mercurial/demandimport.pyo
+${PYSITELIB}/mercurial/dicthelpers.py
+${PYSITELIB}/mercurial/dicthelpers.pyc
+${PYSITELIB}/mercurial/dicthelpers.pyo
 ${PYSITELIB}/mercurial/diffhelpers.so
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
@@ -451,9 +457,15 @@ ${PYSITELIB}/mercurial/revlog.pyo
 ${PYSITELIB}/mercurial/revset.py
 ${PYSITELIB}/mercurial/revset.pyc
 ${PYSITELIB}/mercurial/revset.pyo
+${PYSITELIB}/mercurial/scmposix.py
+${PYSITELIB}/mercurial/scmposix.pyc
+${PYSITELIB}/mercurial/scmposix.pyo
 ${PYSITELIB}/mercurial/scmutil.py
 ${PYSITELIB}/mercurial/scmutil.pyc
 ${PYSITELIB}/mercurial/scmutil.pyo
+${PYSITELIB}/mercurial/scmwindows.py
+${PYSITELIB}/mercurial/scmwindows.pyc
+${PYSITELIB}/mercurial/scmwindows.pyo
 ${PYSITELIB}/mercurial/setdiscovery.py
 ${PYSITELIB}/mercurial/setdiscovery.pyc
 ${PYSITELIB}/mercurial/setdiscovery.pyo
@@ -654,6 +666,9 @@ ${PYSITELIB}/mercurial/treediscovery.pyo
 ${PYSITELIB}/mercurial/ui.py
 ${PYSITELIB}/mercurial/ui.pyc
 ${PYSITELIB}/mercurial/ui.pyo
+${PYSITELIB}/mercurial/unionrepo.py
+${PYSITELIB}/mercurial/unionrepo.pyc
+${PYSITELIB}/mercurial/unionrepo.pyo
 ${PYSITELIB}/mercurial/url.py
 ${PYSITELIB}/mercurial/url.pyc
 ${PYSITELIB}/mercurial/url.pyo
@@ -672,6 +687,9 @@ ${PYSITELIB}/mercurial/windows.pyo
 ${PYSITELIB}/mercurial/wireproto.py
 ${PYSITELIB}/mercurial/wireproto.pyc
 ${PYSITELIB}/mercurial/wireproto.pyo
+${PYSITELIB}/mercurial/worker.py
+${PYSITELIB}/mercurial/worker.pyc
+${PYSITELIB}/mercurial/worker.pyo
 man/man1/hg.1
 man/man5/hgignore.5
 man/man5/hgrc.5
