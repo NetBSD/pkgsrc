@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/03/14 19:00:45 drochner Exp $
+$NetBSD: distinfo,v 1.2 2013/05/03 15:54:46 drochner Exp $
 
-SHA1 (gnumeric-1.12.1.tar.xz) = bd1ed3ca0f005dd6c6830b279fdaad091f4d2cee
-RMD160 (gnumeric-1.12.1.tar.xz) = 712bedeaafe1c58c9230eb33664e7281b55002ba
-Size (gnumeric-1.12.1.tar.xz) = 15692328 bytes
+SHA1 (gnumeric-1.12.2.tar.xz) = 716b4f4e87996ff9e55505479fbee0e26b1fa96d
+RMD160 (gnumeric-1.12.2.tar.xz) = 4e89fcce381631c6c0a07f8ac22c99eb4a207a82
+Size (gnumeric-1.12.2.tar.xz) = 15517296 bytes
 SHA1 (patch-aa) = f1cefe02242eebccef616365bd08627d5e9fb4cd
 SHA1 (patch-ab) = cb1f97384986219f8f54c3a87af5499d27dc8b1b
