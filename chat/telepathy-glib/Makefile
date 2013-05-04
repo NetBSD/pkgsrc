@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/10/03 00:02:45 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/05/04 22:38:14 prlw1 Exp $
 #
 
-DISTNAME=	telepathy-glib-0.14.3
-PKGREVISION=	7
+DISTNAME=	telepathy-glib-0.20.2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-glib/
 
@@ -25,12 +24,13 @@ CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 REPLACE_PYTHON+=	tests/all-errors-documented.py
 TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.20.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.32.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.30.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/vala014/buildlink3.mk"
-BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.82
+.include "../../lang/vala020/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.90
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=0.95
 .include "../../sysutils/dbus/buildlink3.mk"
