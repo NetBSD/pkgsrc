@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/05/04 13:13:44 dsainty Exp $
+# $NetBSD: Makefile,v 1.6 2013/05/04 13:16:40 dsainty Exp $
 #
 
-DISTNAME=		testdisk-6.14-WIP
+DISTNAME=		testdisk-6.13
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cgsecurity.org/
 EXTRACT_SUFX=		.tar.bz2
