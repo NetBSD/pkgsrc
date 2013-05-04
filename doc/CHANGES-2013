@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1572 2013/05/04 14:52:15 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1573 2013/05/04 15:59:08 mbalmer Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2404,3 +2404,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Hash-MultiValue to 0.13 [hiramatsu 2013-05-04]
 	Updated audio/py-beets to 1.1.0 [drochner 2013-05-04]
 	Updated graphics/freeglut to 2.8.1 [rodent 2013-05-04]
+	Added mail/smtp-vilter version 1.3.8 [mbalmer 2013-05-04]
