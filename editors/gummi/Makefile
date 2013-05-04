@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/03/31 08:13:28 obache Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/04 07:19:01 obache Exp $
 #
 
 DISTNAME=		gummi-0.6.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		editors
 MASTER_SITES=		http://dev.midnightcoding.org/attachments/download/301/
 
