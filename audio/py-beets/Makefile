@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/03/14 21:36:19 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/04 13:27:22 drochner Exp $
 #
 
-DISTNAME=	v1.0.0
-PKGNAME=	${PYPKGPREFIX}-beets-${DISTNAME:S/v//}
+DISTNAME=	v1.1.0
+PKGNAME=	beets-${DISTNAME:S/v//}
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/sampsyo/beets/archive/
 
@@ -20,14 +20,15 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
+.include "../../lang/python/pyversion.mk"
+.if empty(PYPKGPREFIX:Mpy27)
+DEPENDS+=	${PYPKGPREFIX}-ordereddict-[0-9]*:../../devel/py-ordereddict
+.endif
+
 DIST_SUBDIR=	py-beets
 WRKSRC=		${WRKDIR}/beets-${DISTNAME:S/v//}
 USE_LANGUAGES=	# none
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 EGG_NAME=	beets-${DISTNAME:S/v//}
-
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/beet ${DESTDIR}${PREFIX}/bin/beet${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
