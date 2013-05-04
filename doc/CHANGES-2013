@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1573 2013/05/04 15:59:08 mbalmer Exp $
+$NetBSD: CHANGES-2013,v 1.1574 2013/05/04 16:10:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2405,3 +2405,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/py-beets to 1.1.0 [drochner 2013-05-04]
 	Updated graphics/freeglut to 2.8.1 [rodent 2013-05-04]
 	Added mail/smtp-vilter version 1.3.8 [mbalmer 2013-05-04]
+	Updated textproc/p5-XML-LibXML to 2.0016 [wen 2013-05-04]
