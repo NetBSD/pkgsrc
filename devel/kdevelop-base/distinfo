@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2013/03/26 23:30:44 joerg Exp $
+$NetBSD: distinfo,v 1.44 2013/05/04 12:59:46 joerg Exp $
 
 SHA1 (kdevelop_3.5.5.orig.tar.gz) = a28c7e4e9b5a7244a5a7063593c9713178a54bcd
 RMD160 (kdevelop_3.5.5.orig.tar.gz) = 5426fdff33ce32908141c098c8dfd5e4223c928a
@@ -10,7 +10,7 @@ SHA1 (patch-ah) = fec4ba7d20ca75c2a4dc5942270cab899776a741
 SHA1 (patch-ai) = 79386e66fd512b9c963de6e3e0214e88fc367946
 SHA1 (patch-aj) = 49a8fa7b2061961f9a8a5993e2b8b06403798c08
 SHA1 (patch-languages_bash_bashsupport__part.cpp) = 4214ca2c8152a19d6920173a68b03e0734d5bdd9
-SHA1 (patch-languages_cpp_cppcodecompletion.cpp) = c2f4415d29c881b651cc3ac8c90f3470c813e4cf
+SHA1 (patch-languages_cpp_cppcodecompletion.cpp) = b62a050edaaab7d5e415e4d2b170a4bb6cd71d8b
 SHA1 (patch-languages_cpp_simpletypecachebinder.h) = fe1e1feca5a95c1f46a614f22ff303dd6a66d1f1
 SHA1 (patch-languages_csharp_csharpsupportpart.cpp) = 64e530dbf53ffa40ee5b80d5ff5b12fd941c456b
 SHA1 (patch-languages_perl_perlparser.cpp) = 7269721f036ec82032390eda51fe3afaae9c3853

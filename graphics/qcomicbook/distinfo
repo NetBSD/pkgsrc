@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/23 21:55:25 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/05/04 12:59:46 joerg Exp $
 
 SHA1 (qcomicbook-0.9.0.tar.gz) = 223b05a0330ff5b2ad4c02f21cf6a15554bae54a
 RMD160 (qcomicbook-0.9.0.tar.gz) = 189df555ff50b39e751eaa1a661af5168114aec6
 Size (qcomicbook-0.9.0.tar.gz) = 738514 bytes
+SHA1 (patch-src_FrameDetect_CompareFrames.h) = 720b89fff4728cad143b892975e68c0c11e1c1a7

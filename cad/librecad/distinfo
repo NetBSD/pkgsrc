@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/08/18 06:58:15 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2013/05/04 12:59:45 joerg Exp $
 
 SHA1 (LibreCAD-LibreCAD-v1.0.2-0-ga6826ad.tar.gz) = 83ebe4c5536c504904020ff6ff004cab68d1a41e
 RMD160 (LibreCAD-LibreCAD-v1.0.2-0-ga6826ad.tar.gz) = 51f940a5b62ec88785665a7ed20716fbd32ebfd3
 Size (LibreCAD-LibreCAD-v1.0.2-0-ga6826ad.tar.gz) = 4577653 bytes
 SHA1 (patch-scripts_postprocess-unix.sh) = 265317f3fc26c09fec025d65242657f60e283155
+SHA1 (patch-src_lib_engine_rs__color.h) = 1205d89f7df77a8bf56850edf077bd98a9c98a16
