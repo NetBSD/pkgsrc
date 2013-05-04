@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2013/03/31 08:13:31 obache Exp $
+# $NetBSD: Makefile,v 1.55 2013/05/04 07:19:06 obache Exp $
 #
 
 .include "../../print/evince/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/evince/evince-nautilus/}
-PKGREVISION=		15
+PKGREVISION=		16
 COMMENT=		File properties plugin for evince files
 
 .include "options.mk"
