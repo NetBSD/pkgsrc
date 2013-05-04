@@ -1,8 +1,16 @@
-$NetBSD: patch-languages_cpp_cppcodecompletion.cpp,v 1.1 2012/06/25 11:21:35 joerg Exp $
+$NetBSD: patch-languages_cpp_cppcodecompletion.cpp,v 1.2 2013/05/04 12:59:46 joerg Exp $
 
---- languages/cpp/cppcodecompletion.cpp.orig	2012-06-18 23:10:55.000000000 +0000
+--- languages/cpp/cppcodecompletion.cpp.orig	2009-02-26 20:15:14.000000000 +0000
 +++ languages/cpp/cppcodecompletion.cpp
-@@ -3892,15 +3892,15 @@ void CppCodeCompletion::computeCompletio
+@@ -36,6 +36,7 @@ email                : david.nolden.kdev
+ #include "tag_creator.h"
+ 
+ #include <typeinfo>
++#include <vector>
+ 
+ #include <qpopupmenu.h>
+ 
+@@ -3892,15 +3893,15 @@ void CppCodeCompletion::computeCompletio
          ArgumentList fArgs = ( *it ) ->argumentList();
          if ( fArgs.count() != args.count() )
            continue;
