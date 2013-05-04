@@ -1,0 +1,11 @@
+$NetBSD: patch-test_CMakeLists.txt,v 1.1 2013/05/04 12:51:31 joerg Exp $
+
+--- test/CMakeLists.txt.orig	2013-05-04 02:09:14.000000000 +0000
++++ test/CMakeLists.txt
+@@ -11,6 +11,5 @@ SUBDIRS(
+ 	TokenizerTest
+ 	VariantTest
+ 	WatermarkTest
+-	unit
+ 	)
+ 
