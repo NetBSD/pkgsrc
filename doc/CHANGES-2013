@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1576 2013/05/04 23:48:10 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1577 2013/05/04 23:51:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2408,3 +2408,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-LibXML to 2.0016 [wen 2013-05-04]
 	Updated chat/telepathy-glib to 0.20.2 [prlw1 2013-05-04]
 	Updated time/py-icalendar to 3.4 [wiz 2013-05-04]
+	Updated devel/py-cython to 0.19 [wiz 2013-05-04]
