@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/03/08 07:57:28 wen Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/05/04 08:26:51 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/.jshintignore
 share/mediawiki/.jshintrc
@@ -145,6 +145,8 @@ share/mediawiki/extensions/Vector/modules/images/open.png
 share/mediawiki/extensions/Vector/modules/images/portal-break.png
 share/mediawiki/extensions/Vector/modules/jquery.footerCollapsibleList.js
 share/mediawiki/extensions/Vector/switchExperimentPrefs.php
+share/mediawiki/extensions/WikiEditor/.jshintignore
+share/mediawiki/extensions/WikiEditor/.jshintrc
 share/mediawiki/extensions/WikiEditor/README
 share/mediawiki/extensions/WikiEditor/WikiEditor.hooks.php
 share/mediawiki/extensions/WikiEditor/WikiEditor.i18n.php
@@ -285,6 +287,11 @@ share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toc.js
 share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toolbar.config.js
 share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toolbar.css
 share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toolbar.js
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiDialogs_Links.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiDialogs_Links_Setup.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiEditorConstants.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiEditorSeleniumConfig.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiEditorTestSuite.php
 share/mediawiki/images/.htaccess
 share/mediawiki/images/README
 share/mediawiki/img_auth.php
