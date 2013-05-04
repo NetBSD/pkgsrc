@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:47 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/04 19:48:00 richard Exp $
 #
 
 DISTNAME=	splint-3.1.2.src
@@ -10,11 +10,13 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lclint.cs.virginia.edu/
 COMMENT=	Statically check C programs
+LICENSE=        gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake lex
 GNU_CONFIGURE=	YES
+USE_LANGUAGES=	c99
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
