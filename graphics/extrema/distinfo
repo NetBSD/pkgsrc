@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.5 2012/11/23 12:29:15 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/05/04 12:46:01 joerg Exp $
 
 SHA1 (extrema-4.4.4.tar.gz) = eff38eb3c36aa9acc3ad471ea57f2037c66e1842
 RMD160 (extrema-4.4.4.tar.gz) = 4ce6dcacca51ac18deb770cd9c0f7f77d0458ccd
 Size (extrema-4.4.4.tar.gz) = 6404330 bytes
+SHA1 (patch-src_Expression_Expression.h) = 7c6101f9eff147cacfca5ba581785b5c72826894
 SHA1 (patch-src_Graphics_GRA__thiessenTriangulation_h) = ede808bc2f19f3aafb31310eb04aa5317ad9b471
+SHA1 (patch-src_Variables_NVariableTable.h) = b15ef23916559b714b75d3867c39735e70ad6cbc
+SHA1 (patch-src_Variables_TVariableTable.h) = 94783b18d48e369a457e65e50d1ff227eb5aa8d8
 SHA1 (patch-src_wxForms_AxisPopup.cpp) = 8b96ab1d88f5abfaa6d45562bc02c990b8143a48
 SHA1 (patch-src_wxForms_FontChooser.cpp) = bc6a979c8d693347efdf581653008a62abce149a
 SHA1 (patch-src_wxForms_LegendPopup.cpp) = 51491d6fe345c380dda6044d4c463d9f8da5fe49
