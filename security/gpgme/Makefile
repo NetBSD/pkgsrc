@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/05/03 16:36:04 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2013/05/04 02:50:41 obache Exp $
 
 DISTNAME=	gpgme-1.4.1
 CATEGORIES=	security
@@ -41,6 +41,10 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+CONFIGURE_ENV+=		gpgme_cv_tls_works=no
 .endif
 
 # we want the getenv_r() semantics of NetBSD-current
