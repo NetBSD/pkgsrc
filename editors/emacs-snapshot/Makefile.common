@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.56 2013/03/05 17:38:31 dholland Exp $
+# $NetBSD: Makefile.common,v 1.57 2013/05/04 03:24:18 minskim Exp $
 
-DISTNAME=	emacs-snapshot_20130207.orig
+DISTNAME=	emacs-snapshot_20130427.orig
 SNAPDATE=	${DISTNAME:S/emacs-snapshot_//:S/.orig//}
 PKGNAME=	emacs${_EMACS_VERSION_MAJOR}-${EMACS_VERSION}.${SNAPDATE}
 CATEGORIES=	editors
@@ -77,7 +77,6 @@ post-extract:
 	cp ${.CURDIR}/../../editors/emacs23/files/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
-	${CHMOD} ugo+rx ${WRKSRC}/leim/ja-dic ${WRKSRC}/leim/quail
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
