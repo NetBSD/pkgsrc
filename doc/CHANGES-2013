@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1570 2013/05/04 11:19:57 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1571 2013/05/04 13:28:29 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2402,3 +2402,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/mediawiki to 1.20.5 [wen 2013-05-04]
 	Updated devel/p5-Test-SharedFork to 0.21 [hiramatsu 2013-05-04]
 	Updated devel/p5-Hash-MultiValue to 0.13 [hiramatsu 2013-05-04]
+	Updated audio/py-beets to 1.1.0 [drochner 2013-05-04]
