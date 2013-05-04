@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/04 15:56:44 mbalmer Exp $
+lib/smtp-vilter/vilter-attachment.so
+lib/smtp-vilter/vilter-clamd.so
+lib/smtp-vilter/vilter-icap.so
+lib/smtp-vilter/vilter-regex.so
+lib/smtp-vilter/vilter-spamd.so
+man/man5/smtp-vilter.conf.5
+man/man8/smtp-vilter.8
+sbin/smtp-vilter
+share/examples/smtp-vilter/attachment-notification
+share/examples/smtp-vilter/attachment.conf
+share/examples/smtp-vilter/clamd.conf
+share/examples/smtp-vilter/icap.conf
+share/examples/smtp-vilter/recipient-notification
+share/examples/smtp-vilter/regex.conf
+share/examples/smtp-vilter/smtp-vilter.conf
+share/examples/smtp-vilter/spamd.conf
