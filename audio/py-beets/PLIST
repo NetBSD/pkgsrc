@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/14 21:36:19 drochner Exp $
-bin/beet${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2013/05/04 13:27:22 drochner Exp $
+bin/beet
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -23,6 +23,7 @@ ${PYSITELIB}/beets/autotag/match.pyo
 ${PYSITELIB}/beets/autotag/mb.py
 ${PYSITELIB}/beets/autotag/mb.pyc
 ${PYSITELIB}/beets/autotag/mb.pyo
+${PYSITELIB}/beets/config_default.yaml
 ${PYSITELIB}/beets/importer.py
 ${PYSITELIB}/beets/importer.pyc
 ${PYSITELIB}/beets/importer.pyo
@@ -41,6 +42,9 @@ ${PYSITELIB}/beets/ui/__init__.pyo
 ${PYSITELIB}/beets/ui/commands.py
 ${PYSITELIB}/beets/ui/commands.pyc
 ${PYSITELIB}/beets/ui/commands.pyo
+${PYSITELIB}/beets/ui/migrate.py
+${PYSITELIB}/beets/ui/migrate.pyc
+${PYSITELIB}/beets/ui/migrate.pyo
 ${PYSITELIB}/beets/util/__init__.py
 ${PYSITELIB}/beets/util/__init__.pyc
 ${PYSITELIB}/beets/util/__init__.pyo
@@ -50,6 +54,9 @@ ${PYSITELIB}/beets/util/artresizer.pyo
 ${PYSITELIB}/beets/util/bluelet.py
 ${PYSITELIB}/beets/util/bluelet.pyc
 ${PYSITELIB}/beets/util/bluelet.pyo
+${PYSITELIB}/beets/util/confit.py
+${PYSITELIB}/beets/util/confit.pyc
+${PYSITELIB}/beets/util/confit.pyo
 ${PYSITELIB}/beets/util/enumeration.py
 ${PYSITELIB}/beets/util/enumeration.pyc
 ${PYSITELIB}/beets/util/enumeration.pyo
@@ -86,9 +93,9 @@ ${PYSITELIB}/beetsplug/embedart.pyo
 ${PYSITELIB}/beetsplug/fetchart.py
 ${PYSITELIB}/beetsplug/fetchart.pyc
 ${PYSITELIB}/beetsplug/fetchart.pyo
-${PYSITELIB}/beetsplug/fuzzy_search.py
-${PYSITELIB}/beetsplug/fuzzy_search.pyc
-${PYSITELIB}/beetsplug/fuzzy_search.pyo
+${PYSITELIB}/beetsplug/fuzzy.py
+${PYSITELIB}/beetsplug/fuzzy.pyc
+${PYSITELIB}/beetsplug/fuzzy.pyo
 ${PYSITELIB}/beetsplug/ihate.py
 ${PYSITELIB}/beetsplug/ihate.pyc
 ${PYSITELIB}/beetsplug/ihate.pyo
@@ -112,12 +119,15 @@ ${PYSITELIB}/beetsplug/lyrics.pyo
 ${PYSITELIB}/beetsplug/mbcollection.py
 ${PYSITELIB}/beetsplug/mbcollection.pyc
 ${PYSITELIB}/beetsplug/mbcollection.pyo
+${PYSITELIB}/beetsplug/mbsync.py
+${PYSITELIB}/beetsplug/mbsync.pyc
+${PYSITELIB}/beetsplug/mbsync.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo
-${PYSITELIB}/beetsplug/rdm.py
-${PYSITELIB}/beetsplug/rdm.pyc
-${PYSITELIB}/beetsplug/rdm.pyo
+${PYSITELIB}/beetsplug/random.py
+${PYSITELIB}/beetsplug/random.pyc
+${PYSITELIB}/beetsplug/random.pyo
 ${PYSITELIB}/beetsplug/replaygain.py
 ${PYSITELIB}/beetsplug/replaygain.pyc
 ${PYSITELIB}/beetsplug/replaygain.pyo
@@ -127,6 +137,9 @@ ${PYSITELIB}/beetsplug/rewrite.pyo
 ${PYSITELIB}/beetsplug/scrub.py
 ${PYSITELIB}/beetsplug/scrub.pyc
 ${PYSITELIB}/beetsplug/scrub.pyo
+${PYSITELIB}/beetsplug/smartplaylist.py
+${PYSITELIB}/beetsplug/smartplaylist.pyc
+${PYSITELIB}/beetsplug/smartplaylist.pyo
 ${PYSITELIB}/beetsplug/the.py
 ${PYSITELIB}/beetsplug/the.pyc
 ${PYSITELIB}/beetsplug/the.pyo
