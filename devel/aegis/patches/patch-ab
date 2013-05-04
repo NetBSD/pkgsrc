@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2010/02/13 06:28:21 obache Exp $
+$NetBSD: patch-ab,v 1.5 2013/05/04 12:59:46 joerg Exp $
 
 Avoid compiler noise when storing an integer in a pointer.
 
@@ -7,7 +7,14 @@ somebody else's problem.)
 
 --- libaegis/project/history/change/change2time.cc.orig	2009-06-25 16:00:55.000000000 +0000
 +++ libaegis/project/history/change/change2time.cc
-@@ -28,13 +28,13 @@ time_t
+@@ -22,19 +22,19 @@
+ #include <libaegis/change.h>
+ #include <libaegis/change/branch.h>
+ #include <libaegis/project.h>
+-
++#include <cinttypes>
+ 
+ time_t
  project_ty::change_completion_timestamp(long change_number)
  {
      assert(change2time_stp);
