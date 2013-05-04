@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/04 10:37:38 dsainty Exp $
 #
 
 DISTNAME=		testdisk-6.13
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cgsecurity.org/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,4 +15,5 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
