@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1568 2013/05/04 07:22:56 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1569 2013/05/04 08:28:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2399,3 +2399,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mercurial to 2.6 [wiz 2013-05-03]
 	Updated editors/emacs-snapshot to 24.3.50.20130427 [minskim 2013-05-04]
 	Updated devel/p5-Class-Inspector to 1.28 [hiramatsu 2013-05-04]
+	Updated www/mediawiki to 1.20.5 [wen 2013-05-04]
