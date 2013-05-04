@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2013/02/03 16:35:51 wiz Exp $
-bin/cygdb${PYVERSSUFFIX}
-bin/cython${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.9 2013/05/04 23:50:52 wiz Exp $
+bin/cygdb2.7
+bin/cython2.7
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyo
@@ -149,6 +149,9 @@ ${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestUtilityLoad.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestVisitor.py
+${PYSITELIB}/Cython/Compiler/Tests/TestVisitor.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestVisitor.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/__init__.py
 ${PYSITELIB}/Cython/Compiler/Tests/__init__.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/__init__.pyo
@@ -266,6 +269,7 @@ ${PYSITELIB}/Cython/Includes/cpython/buffer.pxd
 ${PYSITELIB}/Cython/Includes/cpython/bytes.pxd
 ${PYSITELIB}/Cython/Includes/cpython/cobject.pxd
 ${PYSITELIB}/Cython/Includes/cpython/complex.pxd
+${PYSITELIB}/Cython/Includes/cpython/datetime.pxd
 ${PYSITELIB}/Cython/Includes/cpython/dict.pxd
 ${PYSITELIB}/Cython/Includes/cpython/exc.pxd
 ${PYSITELIB}/Cython/Includes/cpython/float.pxd
@@ -415,6 +419,7 @@ ${PYSITELIB}/Cython/Utility/ObjectHandling.c
 ${PYSITELIB}/Cython/Utility/Optimize.c
 ${PYSITELIB}/Cython/Utility/Overflow.c
 ${PYSITELIB}/Cython/Utility/Printing.c
+${PYSITELIB}/Cython/Utility/Profile.c
 ${PYSITELIB}/Cython/Utility/StringTools.c
 ${PYSITELIB}/Cython/Utility/TestCyUtilityLoader.pyx
 ${PYSITELIB}/Cython/Utility/TestCythonScope.pyx
