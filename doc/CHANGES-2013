@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1566 2013/05/03 21:26:24 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1567 2013/05/04 03:27:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2397,3 +2397,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/galculator to 2.1.2 [drochner 2013-05-03]
 	Updated net/gssdp to 0.14.2nb1 [wiz 2013-05-03]
 	Updated devel/mercurial to 2.6 [wiz 2013-05-03]
+	Updated editors/emacs-snapshot to 24.3.50.20130427 [minskim 2013-05-04]
