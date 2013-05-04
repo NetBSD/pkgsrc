@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.16 2012/06/12 15:45:55 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2013/05/04 18:16:37 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
-PKG_SUPPORTED_OPTIONS=	bdb sasl slp inet6 smbk5pwd dso
+PKG_SUPPORTED_OPTIONS=	bdb dso inet6 sasl slapi slp smbk5pwd
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
 PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
 PKG_SUGGESTED_OPTIONS=	bdb inet6
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	slapi
 
 ###
 ### Whether to build with the Berkeley DB based slapd backends.
@@ -99,5 +101,16 @@ CONFIGURE_ARGS+=	--enable-modules
 .  if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
 .  endif
+.include "../../devel/libltdl/buildlink3.mk"
+.endif
+
+###
+### Enable SLAPI support
+###
+.if empty(PKG_OPTIONS:Mslapi)
+CONFIGURE_ARGS+=	--disable-slapi
+.else
+CONFIGURE_ARGS+=	--enable-slapi
+PLIST.slapi=		yes
 .include "../../devel/libltdl/buildlink3.mk"
 .endif
