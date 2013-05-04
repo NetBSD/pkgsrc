@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/02/16 11:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2013/05/04 12:52:29 joerg Exp $
 
 DISTNAME=		apcupsd-3.14.9
 PKGREVISION=		6
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 
 CONFIGURE_ENV+=		SCRIPTSHELL=${TOOLS_SH:Q}
-CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q}
+CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q} LD=${CXX}
 
 EGDIR=		${PREFIX}/share/examples/apcupsd
 
