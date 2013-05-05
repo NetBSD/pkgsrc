@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2011/01/12 20:23:34 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2013/05/05 09:20:44 drochner Exp $
 
---- tests/scanner/Regress-1.0-expected.gir.orig	2010-12-17 17:03:58.000000000 +0000
+--- tests/scanner/Regress-1.0-expected.gir.orig	2013-03-06 22:53:19.000000000 +0000
 +++ tests/scanner/Regress-1.0-expected.gir
-@@ -2115,11 +2115,11 @@ call and can be released on return.</doc
+@@ -1403,7 +1403,7 @@ uses a C sugar return type.</doc>
+             <type name="FooObject" c:type="RegressFooObject*"/>
+           </instance-parameter>
+           <parameter name="time" transfer-ownership="none">
+-            <type name="glong" c:type="time_t"/>
++            <type name="@TIMET_CTYPE@" c:type="time_t"/>
+           </parameter>
+         </parameters>
+       </method>
+@@ -6007,11 +6007,11 @@ https://bugzilla.gnome.org/show_bug.cgi?
      </function>
      <function name="test_timet" c:identifier="regress_test_timet">
        <return-value transfer-ownership="none">
