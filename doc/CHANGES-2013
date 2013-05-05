@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1584 2013/05/05 12:28:28 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1585 2013/05/05 20:43:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2414,3 +2414,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/sendmail to 8.14.7 [jnemeth 2013-05-05]
 	Updated devel/gobject-introspection to 1.36.0 [drochner 2013-05-05]
 	Updated sysutils/salt to 0.15.0 [imil 2013-05-05]
+	Updated devel/mr to 1.15 [schmonz 2013-05-05]
