@@ -1,5 +1,5 @@
-$NetBSD: patch-ac,v 1.28 2012/12/17 09:08:47 wen Exp $
-Ensure the correct linker flags are used on Solaris/GCC.
+$NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
+
 --- configure.orig	2012-06-14 22:05:51.000000000 +0000
 +++ configure
 @@ -3976,7 +3976,7 @@ fi
@@ -52,16 +52,23 @@ Ensure the correct linker flags are used on Solaris/GCC.
  int main () {
      Rcomplex z[3];
  
-@@ -26224,7 +26235,7 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26224,12 +26235,12 @@ $as_echo "$as_me: WARNING: Use of flat n
        SHLIB_LIBADD="-lcc_dynamic"
      fi
      ;;
 -  freebsd*)
+-    main_ldflags="-export-dynamic"
 +  freebsd*|dragonfly*)
-     main_ldflags="-export-dynamic"
++    main_ldflags="${wl}-export-dynamic"
      shlib_ldflags="-shared"
      ;;
-@@ -26312,6 +26323,13 @@ $as_echo "$as_me: WARNING: Use of flat n
+   gnu*)				# GNU Hurd
+-    main_ldflags="-export-dynamic"
++    main_ldflags="${wl}-export-dynamic"
+     ;;
+   hpux*)
+     SHLIB_EXT=".sl"
+@@ -26312,8 +26323,15 @@ $as_echo "$as_me: WARNING: Use of flat n
      fcpicflags=
      ;;
    netbsd*)
@@ -73,8 +80,11 @@ Ensure the correct linker flags are used on Solaris/GCC.
 +     esac
 +
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
-       main_ldflags="-export-dynamic"
+-      main_ldflags="-export-dynamic"
++      main_ldflags="${wl}-export-dynamic"
        shlib_ldflags="-shared"
+     else
+       shlib_ldflags="-Bshareable"
 @@ -26335,22 +26353,22 @@ $as_echo "$as_me: WARNING: Use of flat n
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
@@ -111,7 +121,49 @@ Ensure the correct linker flags are used on Solaris/GCC.
        ;;
      *)
        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: I could not determine CPICFLAGS." >&5
-@@ -29539,6 +29557,15 @@ cat > conftest.c <<EOF
+@@ -26916,6 +26934,14 @@ _ACEOF
+ ## Cygwin has rintl but not nearbyintl
+ for ac_func in expm1 hypot log1p log2 log10 nearbyint nearbyintl powl rint rintl
+ do
++case $ac_func in
++expm1|log1p|log2|log10|nearbyint|nearbyintl|rint|rintl)
++    args="x"
++    ;;
++hypot|powl)
++    args="x,x"
++    ;;
++esac
+ as_ac_Symbol=`$as_echo "ac_cv_have_decl_$ac_func" | $as_tr_sh`
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $ac_func exists and is declared" >&5
+ $as_echo_n "checking whether $ac_func exists and is declared... " >&6; }
+@@ -26925,24 +26951,12 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <math.h>
++volatile long double x;
+ 
+-#ifdef F77_DUMMY_MAIN
+-
+-#  ifdef __cplusplus
+-     extern "C"
+-#  endif
+-   int F77_DUMMY_MAIN() { return 1; }
+-
+-#endif
+ int
+ main ()
+ {
+-#ifndef $ac_func
+-  char *p = (char *) $ac_func;
+-#endif
+-
+-  ;
+-  return 0;
++  return $ac_func($args);
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+@@ -29539,6 +29553,15 @@ cat > conftest.c <<EOF
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
  
@@ -127,7 +179,7 @@ Ensure the correct linker flags are used on Solaris/GCC.
  int main () {
    int iflag;
    F77_SYMBOL(test1)(&iflag);
-@@ -29606,6 +29633,14 @@ else
+@@ -29606,6 +29629,14 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
