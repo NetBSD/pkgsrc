@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.57 2013/04/19 11:25:26 rodent Exp $
+# $NetBSD: license.mk,v 1.58 2013/05/05 21:09:59 rodent Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -131,6 +131,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	public-domain \
 	python-software-foundation \
 	qpl-v1.0 \
+	sgi-free-software-b-v2.0 \
 	sleepycat-public \
 	unlicense \
 	x11 \
