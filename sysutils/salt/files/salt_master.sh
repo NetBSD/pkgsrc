@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: salt_master.sh,v 1.1 2012/01/21 20:26:58 apb Exp $
+# $NetBSD: salt_master.sh,v 1.2 2013/05/05 12:26:23 imil Exp $
 #
 
 # PROVIDE: salt_master
@@ -13,6 +13,7 @@ name="salt_master"
 rcvar=$name
 command="@PREFIX@/bin/salt-master"
 command_args="-d"
+command_interpreter=@PYTHON@
 required_files="@PKG_SYSCONFDIR@/master"
 
 load_rc_config $name
