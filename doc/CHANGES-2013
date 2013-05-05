@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1583 2013/05/05 09:25:56 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.1584 2013/05/05 12:28:28 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2413,3 +2413,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk to 11.3.0 [jnemeth 2013-05-05]
 	Updated mail/sendmail to 8.14.7 [jnemeth 2013-05-05]
 	Updated devel/gobject-introspection to 1.36.0 [drochner 2013-05-05]
+	Updated sysutils/salt to 0.15.0 [imil 2013-05-05]
