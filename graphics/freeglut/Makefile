@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/05/04 14:32:20 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2013/05/05 21:07:53 rodent Exp $
 #
 
 DISTNAME=	freeglut-2.8.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeglut/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeglut.sourceforge.net/
 COMMENT=	Alternative to the OpenGL Utility Toolkit (GLUT) library
-LICENSE=	# XXX mit + advertising clause; See discussion on tech-pkg@
+LICENSE=	x11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
