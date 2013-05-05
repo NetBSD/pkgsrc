@@ -5,6 +5,7 @@ Supported filesystems:
 - BSD disklabel ( FreeBSD/OpenBSD/NetBSD )
 - CramFS (Compressed File System)
 - DOS/Windows FAT12, FAT16 and FAT32
+- Windows exFAT
 - HFS, Hierarchical File System
 - JFS, IBM's Journaled File System
 - Linux Ext2 and Ext3
