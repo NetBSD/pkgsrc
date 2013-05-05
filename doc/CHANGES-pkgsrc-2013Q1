@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.14 2013/04/30 19:32:58 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.15 2013/05/05 17:52:15 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -56,4 +56,6 @@ databases/phpmyadmin: security update
 Pullup ticket #4128 - requested by tez
 security/mit-krb5: security patch
 Pullup ticket #4129 - requested by dholland
+www/squid3: build fix
+Pullup ticket #4131 - requested by obache
 www/squid3: build fix
