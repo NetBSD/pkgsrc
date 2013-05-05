@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/05 01:32:34 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -377,13 +377,13 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.22
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.23
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.22
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.23
 libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.11
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.22
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.22
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.23
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.23
 libdata/asterisk/sounds/en/T-changed-to.gsm
 libdata/asterisk/sounds/en/T-is-not-available.gsm
 libdata/asterisk/sounds/en/T-to-disable-ancmnt.gsm
@@ -581,6 +581,8 @@ libdata/asterisk/sounds/en/computer-friend1.gsm
 libdata/asterisk/sounds/en/computer-friend2.gsm
 libdata/asterisk/sounds/en/conditions.gsm
 libdata/asterisk/sounds/en/conf-adminmenu-162.gsm
+libdata/asterisk/sounds/en/conf-adminmenu-18.gsm
+libdata/asterisk/sounds/en/conf-adminmenu-menu8.gsm
 libdata/asterisk/sounds/en/conf-adminmenu.gsm
 libdata/asterisk/sounds/en/conf-banned.gsm
 libdata/asterisk/sounds/en/conf-enteringno.gsm

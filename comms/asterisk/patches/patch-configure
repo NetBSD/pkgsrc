@@ -1,28 +1,28 @@
-$NetBSD: patch-configure,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+$NetBSD: patch-configure,v 1.2 2013/05/05 01:32:35 jnemeth Exp $
 
---- configure.orig	2012-10-18 20:02:02.000000000 +0000
+--- configure.orig	2013-01-30 17:46:52.000000000 +0000
 +++ configure
-@@ -23783,16 +23783,16 @@ if $(${CC} -march=native -S -o /dev/null
+@@ -16165,16 +16165,16 @@ if $(${CC} -march=native -S -o /dev/null
  	if test "${CONFIG_CFLAGS}" = ""; then
- 		{ $as_echo "$as_me:$LINENO: result: yes" >&5
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
 -		AST_NATIVE_ARCH=1
 +		AST_NATIVE_ARCH=0
  	else
- 		{ $as_echo "$as_me:$LINENO: result: user CFLAGS present" >&5
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: user CFLAGS present" >&5
  $as_echo "user CFLAGS present" >&6; }
 -		AST_NATIVE_ARCH=
 +		AST_NATIVE_ARCH=0
  	fi
  else
- 	{ $as_echo "$as_me:$LINENO: result: no" >&5
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
 -	AST_NATIVE_ARCH=
 +	AST_NATIVE_ARCH=0
  fi
  
  
-@@ -24732,6 +24732,148 @@ fi
+@@ -16699,6 +16699,148 @@ fi
  
  
  
@@ -171,18 +171,18 @@ $NetBSD: patch-configure,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -29331,6 +29473,8 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
+@@ -17840,6 +17982,8 @@ $as_echo_n "checking if \"struct ifaddrs
+ 
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-+#include <sys/types.h>
-+#include <sys/socket.h>
- #include <ifaddrs.h>
++ #include <sys/types.h>
++ #include <sys/socket.h>
+  #include <ifaddrs.h>
  int
  main ()
-@@ -56711,10 +56855,10 @@ cat >>confdefs.h <<\_ACEOF
- #define HAVE_SBIN_LAUNCHD 1
- _ACEOF
+@@ -29471,10 +29615,10 @@ if test "x$ac_cv_file__sbin_launchd" = x
+ 
+ $as_echo "#define HAVE_SBIN_LAUNCHD 1" >>confdefs.h
  
 -fi
  
