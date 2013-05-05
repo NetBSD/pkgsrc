@@ -1,8 +1,8 @@
-$NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
+$NetBSD: patch-apps_app__queue.c,v 1.2 2013/05/05 01:32:35 jnemeth Exp $
 
---- apps/app_queue.c.orig	2012-10-01 20:26:09.000000000 +0000
+--- apps/app_queue.c.orig	2013-01-09 00:03:40.000000000 +0000
 +++ apps/app_queue.c
-@@ -4550,7 +4550,7 @@ static int wait_our_turn(struct queue_en
+@@ -4717,7 +4717,7 @@ static int wait_our_turn(struct queue_en
  
  			if ((status = get_member_status(qe->parent, qe->max_penalty, qe->min_penalty, qe->parent->leavewhenempty))) {
  				*reason = QUEUE_LEAVEEMPTY;
@@ -11,7 +11,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  				leave_queue(qe);
  				break;
  			}
-@@ -4789,12 +4789,12 @@ static void send_agent_complete(const st
+@@ -4957,12 +4957,12 @@ static void send_agent_complete(const st
  		"Channel: %s\r\n"
  		"Member: %s\r\n"
  		"MemberName: %s\r\n"
@@ -27,7 +27,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  		qe->parent->eventwhencalled == QUEUE_EVENT_VARIABLES ? vars2manager(qe->chan, vars, vars_len) : "");
  }
  
-@@ -4837,9 +4837,9 @@ static void queue_transfer_fixup(void *d
+@@ -5005,9 +5005,9 @@ static void queue_transfer_fixup(void *d
  	int callcompletedinsl = qtds->callcompletedinsl;
  	struct ast_datastore *datastore;
  
@@ -40,7 +40,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  
  	update_queue(qe->parent, member, callcompletedinsl, (time(NULL) - callstart));
  	
-@@ -5356,7 +5356,7 @@ static int try_calling(struct queue_ent 
+@@ -5524,7 +5524,7 @@ static int try_calling(struct queue_ent 
  			} else if (ast_check_hangup(qe->chan)) {
  				/* Caller must have hung up just before being connected */
  				ast_log(LOG_NOTICE, "Caller was about to talk to agent on %s but the caller hungup.\n", ast_channel_name(peer));
@@ -49,7 +49,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  				record_abandoned(qe);
  				ast_autoservice_chan_hangup_peer(qe->chan, peer);
  				ao2_ref(member, -1);
-@@ -5405,8 +5405,8 @@ static int try_calling(struct queue_ent 
+@@ -5573,8 +5573,8 @@ static int try_calling(struct queue_ent 
  		/* if setqueueentryvar is defined, make queue entry (i.e. the caller) variables available to the channel */
  		/* use  pbx_builtin_setvar to set a load of variables with one call */
  		if (qe->parent->setqueueentryvar) {
@@ -60,7 +60,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  			pbx_builtin_setvar_multiple(qe->chan, interfacevar);
  			pbx_builtin_setvar_multiple(peer, interfacevar);
  		}
-@@ -5623,8 +5623,8 @@ static int try_calling(struct queue_ent 
+@@ -5791,8 +5791,8 @@ static int try_calling(struct queue_ent 
  			}
  		}
  		qe->handled++;
@@ -71,7 +71,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  
  		if (ast_channel_cdr(qe->chan)) {
  			struct ast_cdr *cdr;
-@@ -5678,12 +5678,12 @@ static int try_calling(struct queue_ent 
+@@ -5846,12 +5846,12 @@ static int try_calling(struct queue_ent 
  					"Channel: %s\r\n"
  					"Member: %s\r\n"
  					"MemberName: %s\r\n"
@@ -87,7 +87,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  					qe->parent->eventwhencalled == QUEUE_EVENT_VARIABLES ? vars2manager(qe->chan, vars, sizeof(vars)) : "");
  		ast_copy_string(oldcontext, ast_channel_context(qe->chan), sizeof(oldcontext));
  		ast_copy_string(oldexten, ast_channel_exten(qe->chan), sizeof(oldexten));
-@@ -5715,17 +5715,17 @@ static int try_calling(struct queue_ent 
+@@ -5883,17 +5883,17 @@ static int try_calling(struct queue_ent 
  
  			/* detect a blind transfer */
  			if (!(ast_channel_softhangup_internal_flag(qe->chan) | ast_channel_softhangup_internal_flag(peer)) && (strcasecmp(oldcontext, ast_channel_context(qe->chan)) || strcasecmp(oldexten, ast_channel_exten(qe->chan)))) {
@@ -98,7 +98,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
 +					ast_channel_exten(qe->chan), ast_channel_context(qe->chan), (intmax_t) (callstart - qe->start),
 +					(intmax_t) (time(NULL) - callstart), qe->opos);
  				send_agent_complete(qe, queuename, peer, member, callstart, vars, sizeof(vars), TRANSFER);
- 			} else if (ast_check_hangup(qe->chan)) {
+ 			} else if (ast_check_hangup(qe->chan) && !ast_check_hangup(peer)) {
 -				ast_queue_log(queuename, ast_channel_uniqueid(qe->chan), member->membername, "COMPLETECALLER", "%ld|%ld|%d",
 -					(long) (callstart - qe->start), (long) (time(NULL) - callstart), qe->opos);
 +				ast_queue_log(queuename, ast_channel_uniqueid(qe->chan), member->membername, "COMPLETECALLER", "%jd|%jd|%d",
@@ -112,7 +112,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  				send_agent_complete(qe, queuename, peer, member, callstart, vars, sizeof(vars), AGENT);
  			}
  			if ((tds = ast_channel_datastore_find(qe->chan, &queue_transfer_info, NULL))) {	
-@@ -6902,8 +6902,8 @@ check_turns:
+@@ -7070,8 +7070,8 @@ check_turns:
  			record_abandoned(&qe);
  			reason = QUEUE_TIMEOUT;
  			res = 0;
@@ -123,7 +123,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  			break;
  		}
  
-@@ -6947,7 +6947,7 @@ check_turns:
+@@ -7115,7 +7115,7 @@ check_turns:
  			if ((status = get_member_status(qe.parent, qe.max_penalty, qe.min_penalty, qe.parent->leavewhenempty))) {
  				record_abandoned(&qe);
  				reason = QUEUE_LEAVEEMPTY;
@@ -132,7 +132,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  				res = 0;
  				break;
  			}
-@@ -6969,7 +6969,7 @@ check_turns:
+@@ -7137,7 +7137,7 @@ check_turns:
  			record_abandoned(&qe);
  			reason = QUEUE_TIMEOUT;
  			res = 0;
@@ -141,7 +141,7 @@ $NetBSD: patch-apps_app__queue.c,v 1.1 2012/12/11 08:22:48 jnemeth Exp $
  			break;
  		}
  
-@@ -6997,8 +6997,8 @@ stop:
+@@ -7165,8 +7165,8 @@ stop:
  			if (!qe.handled) {
  				record_abandoned(&qe);
  				ast_queue_log(args.queuename, ast_channel_uniqueid(chan), "NONE", "ABANDON",
