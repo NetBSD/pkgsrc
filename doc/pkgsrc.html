@@ -7658,7 +7658,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm30189572"></a><dl>
+<a name="idm86685616"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7677,7 +7677,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm30189380"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm86685232"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7687,7 +7687,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm30188868"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm86684208"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7698,7 +7698,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm30188356"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm86683184"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7919,6 +7919,7 @@ INTERACTIVE_STAGE=      configure install
 	public-domain
 	python-software-foundation
 	qpl-v1.0
+	sgi-free-software-b-v2.0
 	sleepycat-public
 	unlicense
 	x11
@@ -7969,6 +7970,7 @@ ACCEPTABLE_LICENSES+=xv-license
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>DEFAULT_ACCEPTABLE_LICENSES in <code class="filename">pkgsrc/mk/license.mk</code></p></li>
 <li class="listitem"><p>default_acceptable_licenses in <code class="filename">pkgsrc/pkgtools/pkg_install/files/lib/license.c</code></p></li>
+<li class="listitem"><p>the ACCEPTABLE_LICENSES list in <code class="filename">pkgsrc/doc/guide/files/fixes.xml</code></p></li>
 </ul></div>
 <p>with the proper syntax as demonstrated in those files, respectively.</p>
 </li>
@@ -9745,7 +9747,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm29880324"></a><dl>
+<a name="idm88223536"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9790,7 +9792,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm29880132"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm88223152"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9806,7 +9808,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm29873860"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm88219056"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9824,7 +9826,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm29871620"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm88214704"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9842,7 +9844,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm29869444"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm88210480"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9855,7 +9857,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm29868356"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm88208304"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9871,7 +9873,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm29866756"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm88205232"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9895,7 +9897,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm29862788"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm88197168"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9920,7 +9922,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm29860740"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm88193328"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9968,7 +9970,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm29857476"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm88186800"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
