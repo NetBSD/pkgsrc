@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/03/03 12:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/05 21:59:56 rodent Exp $
 #
 
 DISTNAME=	desktop-gnome-0.5
@@ -22,7 +22,7 @@ DEPENDS+=	notification-daemon-[0-9]*:../../sysutils/notification-daemon
 DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
 DEPENDS+=	pidgin-[0-9]*:../../chat/pidgin
 DEPENDS+=	pidgin-libnotify-[0-9]*:../../chat/pidgin-libnotify
-DEPENDS+=	transmission-gtk-[0-9]*:../../net/transmission-gtk
+#DEPENDS+=	transmission-gtk-[0-9]*:../../net/transmission-gtk
 DEPENDS+=	filezilla-[0-9]*:../../net/filezilla
 
 # useful fonts and themes
