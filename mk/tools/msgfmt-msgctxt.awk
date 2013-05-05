@@ -1,4 +1,4 @@
-# $NetBSD: msgfmt-msgctxt.awk,v 1.4 2013/05/03 12:31:43 obache Exp $
+# $NetBSD: msgfmt-msgctxt.awk,v 1.5 2013/05/05 00:34:22 obache Exp $
 #
 # Simple awk script to strip out .po entries with msgctxt and "#~|", so the
 # resultant file can be handled by the msgfmt<0.15.
@@ -57,13 +57,14 @@ BEGIN {
 		#
 		MSGID_RE = OBSOLETE_RE "msgid"
 		if ($0 ~ MSGID_RE KEYWORD_SEP) {
+			obsolete = ""
+			if ($0 ~ OBSOLETE_RE_MATCH) obsolete = OBSOLETE
 			if (s > 0) {
 				print obsolete "msgid " singular[0]
 				for (i = 1; i < s; i++)
 					print obsolete singular[i]
 				print obsolete "\"\\004\""
 			}
-			if ($0 ~ OBSOLETE_RE_MATCH) obsolete = OBSOLETE
 			sub(MSGID_RE SPACE, "")
 			t = 0
 			if ($0 ~ EMPTY) $0 = "\"\""
