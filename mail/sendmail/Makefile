@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.114 2013/02/06 23:22:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.115 2013/05/05 02:36:20 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	1
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
