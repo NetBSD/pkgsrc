@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4.2.1 2013/04/30 19:31:29 tron Exp $
+# $NetBSD: options.mk,v 1.4.2.2 2013/05/05 11:08:09 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -15,7 +15,7 @@ PLIST_VARS+=	ba_LDAP ba_MSNT ba_NCSA ba_NIS ba_PAM ba_getpwnam
 PLIST_VARS+=	da_LDAP
 PLIST_VARS+=	na_SMB
 PLIST_VARS+=	ta_kerberos
-PLIST_VARS+=	eacl_ip_user eacl_LDAP_group eacl_unix_group
+PLIST_VARS+=	eacl_file_userip eacl_LDAP_group eacl_unix_group
 
 PKG_SUGGESTED_OPTIONS=	inet6 snmp ssl squid-backend-diskd squid-carp \
 		squid-pam-helper squid-unlinkd
