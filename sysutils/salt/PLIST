@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/28 09:46:24 imil Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/05 12:26:23 imil Exp $
 bin/salt
 bin/salt-call
 bin/salt-cp
@@ -146,6 +146,9 @@ ${PYSITELIB}/salt/modules/cron.pyo
 ${PYSITELIB}/salt/modules/daemontools.py
 ${PYSITELIB}/salt/modules/daemontools.pyc
 ${PYSITELIB}/salt/modules/daemontools.pyo
+${PYSITELIB}/salt/modules/darwin_sysctl.py
+${PYSITELIB}/salt/modules/darwin_sysctl.pyc
+${PYSITELIB}/salt/modules/darwin_sysctl.pyo
 ${PYSITELIB}/salt/modules/data.py
 ${PYSITELIB}/salt/modules/data.pyc
 ${PYSITELIB}/salt/modules/data.pyo
@@ -284,9 +287,15 @@ ${PYSITELIB}/salt/modules/logrotate.pyo
 ${PYSITELIB}/salt/modules/makeconf.py
 ${PYSITELIB}/salt/modules/makeconf.pyc
 ${PYSITELIB}/salt/modules/makeconf.pyo
+${PYSITELIB}/salt/modules/match.py
+${PYSITELIB}/salt/modules/match.pyc
+${PYSITELIB}/salt/modules/match.pyo
 ${PYSITELIB}/salt/modules/mdadm.py
 ${PYSITELIB}/salt/modules/mdadm.pyc
 ${PYSITELIB}/salt/modules/mdadm.pyo
+${PYSITELIB}/salt/modules/mine.py
+${PYSITELIB}/salt/modules/mine.pyc
+${PYSITELIB}/salt/modules/mine.pyo
 ${PYSITELIB}/salt/modules/mongodb.py
 ${PYSITELIB}/salt/modules/mongodb.pyc
 ${PYSITELIB}/salt/modules/mongodb.pyo
@@ -654,6 +663,9 @@ ${PYSITELIB}/salt/returners/cassandra_return.pyo
 ${PYSITELIB}/salt/returners/local.py
 ${PYSITELIB}/salt/returners/local.pyc
 ${PYSITELIB}/salt/returners/local.pyo
+${PYSITELIB}/salt/returners/memcache_return.py
+${PYSITELIB}/salt/returners/memcache_return.pyc
+${PYSITELIB}/salt/returners/memcache_return.pyo
 ${PYSITELIB}/salt/returners/mongo_future_return.py
 ${PYSITELIB}/salt/returners/mongo_future_return.pyc
 ${PYSITELIB}/salt/returners/mongo_future_return.pyo
@@ -747,6 +759,9 @@ ${PYSITELIB}/salt/states/cron.pyo
 ${PYSITELIB}/salt/states/debconfmod.py
 ${PYSITELIB}/salt/states/debconfmod.pyc
 ${PYSITELIB}/salt/states/debconfmod.pyo
+${PYSITELIB}/salt/states/disk.py
+${PYSITELIB}/salt/states/disk.pyc
+${PYSITELIB}/salt/states/disk.pyo
 ${PYSITELIB}/salt/states/file.py
 ${PYSITELIB}/salt/states/file.pyc
 ${PYSITELIB}/salt/states/file.pyo
@@ -783,9 +798,15 @@ ${PYSITELIB}/salt/states/libvirt.pyo
 ${PYSITELIB}/salt/states/locale.py
 ${PYSITELIB}/salt/states/locale.pyc
 ${PYSITELIB}/salt/states/locale.pyo
+${PYSITELIB}/salt/states/lvm.py
+${PYSITELIB}/salt/states/lvm.pyc
+${PYSITELIB}/salt/states/lvm.pyo
 ${PYSITELIB}/salt/states/makeconf.py
 ${PYSITELIB}/salt/states/makeconf.pyc
 ${PYSITELIB}/salt/states/makeconf.pyo
+${PYSITELIB}/salt/states/mdadm.py
+${PYSITELIB}/salt/states/mdadm.pyc
+${PYSITELIB}/salt/states/mdadm.pyo
 ${PYSITELIB}/salt/states/module.py
 ${PYSITELIB}/salt/states/module.pyc
 ${PYSITELIB}/salt/states/module.pyo
@@ -837,6 +858,9 @@ ${PYSITELIB}/salt/states/postgres_group.pyo
 ${PYSITELIB}/salt/states/postgres_user.py
 ${PYSITELIB}/salt/states/postgres_user.pyc
 ${PYSITELIB}/salt/states/postgres_user.pyo
+${PYSITELIB}/salt/states/quota.py
+${PYSITELIB}/salt/states/quota.pyc
+${PYSITELIB}/salt/states/quota.pyo
 ${PYSITELIB}/salt/states/rabbitmq_user.py
 ${PYSITELIB}/salt/states/rabbitmq_user.pyc
 ${PYSITELIB}/salt/states/rabbitmq_user.pyo
@@ -933,6 +957,9 @@ ${PYSITELIB}/salt/utils/migrations.pyo
 ${PYSITELIB}/salt/utils/minions.py
 ${PYSITELIB}/salt/utils/minions.pyc
 ${PYSITELIB}/salt/utils/minions.pyo
+${PYSITELIB}/salt/utils/odict.py
+${PYSITELIB}/salt/utils/odict.pyc
+${PYSITELIB}/salt/utils/odict.pyo
 ${PYSITELIB}/salt/utils/parsers.py
 ${PYSITELIB}/salt/utils/parsers.pyc
 ${PYSITELIB}/salt/utils/parsers.pyo

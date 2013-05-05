@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/04/28 09:46:24 imil Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/05 12:26:23 imil Exp $
 #
 
-DISTNAME=	salt-0.14.1
+DISTNAME=	salt-0.15.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pypi.python.org/packages/source/s/salt/
 
@@ -24,14 +24,18 @@ SUBST_FILES.fix-paths+=	salt/utils/parsers.py
 SUBST_FILES.fix-paths+=	salt/utils/migrations.py
 SUBST_SED.fix-paths+=	-e "s|/etc/salt|${PKG_SYSCONFDIR}|g"
 
+REPLACE_PYTHON+=	salt/modules/munin.py
+REPLACE_PYTHON+=	salt/returners/sentry_return.py
+
+RCD_SCRIPTS+=		salt_master salt_minion
+FILES_SUBST+=		PYTHON=${PYTHONBIN:Q}
+
 PKG_SYSCONFSUBDIR=	salt
 
-EGDIR=		${PREFIX}/share/examples/salt
-INSTALLATION_DIRS+= ${EGDIR}
-CONF_FILES+=	${EGDIR}/master ${PKG_SYSCONFDIR}/master
-CONF_FILES+=	${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
-
-RCD_SCRIPTS+=	salt_master salt_minion
+EGDIR=			${PREFIX}/share/examples/salt
+INSTALLATION_DIRS+= 	${EGDIR}
+CONF_FILES+=		${EGDIR}/master ${PKG_SYSCONFDIR}/master
+CONF_FILES+=		${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
@@ -45,6 +49,7 @@ post-install:
 # There's also an optional dependency on gcc, for Cython support, but
 # we don't bother with that here.
 #
+.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 DEPENDS+= zeromq>=2.1.9:../../net/zeromq
 DEPENDS+= ${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq
