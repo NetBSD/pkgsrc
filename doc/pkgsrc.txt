@@ -6657,6 +6657,7 @@ variable with "=" instead of "+=". The licenses accepted by default are:
         public-domain
         python-software-foundation
         qpl-v1.0
+        sgi-free-software-b-v2.0
         sleepycat-public
         unlicense
         x11
@@ -6705,6 +6706,8 @@ When adding a package with a new license, the following steps are required:
 
       + default_acceptable_licenses in pkgsrc/pkgtools/pkg_install/files/lib/
         license.c
+
+      + the ACCEPTABLE_LICENSES list in pkgsrc/doc/guide/files/fixes.xml
 
     with the proper syntax as demonstrated in those files, respectively.
 
