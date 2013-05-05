@@ -1,8 +1,11 @@
-$NetBSD: patch-giscanner_scannerlexer.l,v 1.1 2012/02/15 16:42:36 martin Exp $
+$NetBSD: patch-giscanner_scannerlexer.l,v 1.2 2013/05/05 09:20:44 drochner Exp $
 
---- giscanner/scannerlexer.l.orig	2011-06-10 17:36:50.000000000 +0200
-+++ giscanner/scannerlexer.l	2012-02-15 16:10:33.000000000 +0100
-@@ -134,6 +134,8 @@
+Ignore __asm volatile as per PR pkg/46017
+https://bugzilla.gnome.org/show_bug.cgi?id=678794
+
+--- giscanner/scannerlexer.l.orig	2012-12-18 16:27:16.000000000 +0000
++++ giscanner/scannerlexer.l
+@@ -134,6 +134,8 @@ stringtext				([^\\\"])|(\\.)
  ","					{ return ','; }
  "->"					{ return ARROW; }
  
@@ -11,3 +14,12 @@ $NetBSD: patch-giscanner_scannerlexer.l,v 1.1 2012/02/15 16:42:36 martin Exp $
  "__asm" 	        	        { if (!parse_ignored_macro()) REJECT; }
  "__asm__" 	        	        { if (!parse_ignored_macro()) REJECT; }
  "__attribute__" 		        { if (!parse_ignored_macro()) REJECT; }
+@@ -145,6 +147,8 @@ stringtext				([^\\\"])|(\\.)
+ "__signed__"				{ return SIGNED; }
+ "__restrict"				{ return RESTRICT; }
+ "__typeof"				{ if (!parse_ignored_macro()) REJECT; }
++"__volatile"				{ if (!parse_ignored_macro()) REJECT; }
++"__volatile__"				{ if (!parse_ignored_macro()) REJECT; }
+ "_Bool"					{ return BOOL; }
+ 
+ "G_GINT64_CONSTANT"			{ return INTL_CONST; }
