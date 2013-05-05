@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/02/16 11:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/05/05 13:44:22 spz Exp $
 
 DISTNAME=	cairo-1.12.14
 PKGNAME=	${DISTNAME:S/-/-gobject-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -28,16 +28,7 @@ CONFIGURE_ARGS+=	--enable-ps
 
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-.if exists(/System/Library/Frameworks/Carbon.framework)
-CONFIGURE_ARGS+=        --enable-quartz
-CONFIGURE_ARGS+=        --enable-quartz-font
-CONFIGURE_ARGS+=        --enable-quartz-image
-CONFIGURE_ARGS+=	--disable-gl
-CONFIGURE_ARGS+=	--disable-xlib
-CONFIGURE_ARGS+=	--disable-xlib-xrender
-.else
-CONFIGURE_ARGS+=	--enable-gl
-.endif
+.include "options.mk"
 
 # For snprintf() and ctime_r()
 CPPFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
