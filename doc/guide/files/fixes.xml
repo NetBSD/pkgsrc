@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.118 2013/04/21 11:33:55 rodent Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.119 2013/05/05 21:26:37 rodent Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -157,6 +157,7 @@ INTERACTIVE_STAGE=      configure install
 	public-domain
 	python-software-foundation
 	qpl-v1.0
+	sgi-free-software-b-v2.0
 	sleepycat-public
 	unlicense
 	x11
@@ -214,6 +215,7 @@ ACCEPTABLE_LICENSES+=xv-license
     <itemizedlist>
     <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in <filename>pkgsrc/mk/license.mk</filename></para></listitem>
     <listitem><para>default_acceptable_licenses in <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
+    <listitem><para>the ACCEPTABLE_LICENSES list in <filename>pkgsrc/doc/guide/files/fixes.xml</filename></para></listitem>
     </itemizedlist>
     <para>with the proper syntax as demonstrated in those files, respectively.</para></listitem>
     <listitem><para>The license text should be added to <filename>pkgsrc/licenses</filename> for displaying.  A list of known licenses can be seen in this directory.</para></listitem>
