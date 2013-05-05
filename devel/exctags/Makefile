@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/03/22 05:07:50 rodent Exp $
+# $NetBSD: Makefile,v 1.25 2013/05/05 21:56:22 rodent Exp $
 #
 
 DISTNAME=	ctags-5.8
@@ -30,7 +30,7 @@ SUBST_SED.man+=		-e 's|fBctags|fBexctags|g'
 SUBST_SED.man+=		-e 's|fBetags|fBexetags|g'
 SUBST_SED.man+=		-e 's|"ctags|"exctags|g'
 SUBST_SED.man+=		-e 's|"etags|"exetags|g'
-SUBST_SED.man+=		-e 's|/usr/local|${LOCALBASE}|g'
+SUBST_SED.man+=		-e 's|/usr/local|${PREFIX}|g'
 
 SUBST_CLASSES+=		rename
 SUBST_STAGE.rename=	post-patch
