@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.12 2012/11/15 14:56:34 drochner Exp $
+$NetBSD: distinfo,v 1.13 2013/05/05 09:20:44 drochner Exp $
 
-SHA1 (gobject-introspection-1.34.2.tar.xz) = 3c9824422ef485dafa341496a3d57bef217e2853
-RMD160 (gobject-introspection-1.34.2.tar.xz) = 83b766bb16500b799e23dcabff915e9863197862
-Size (gobject-introspection-1.34.2.tar.xz) = 1088768 bytes
+SHA1 (gobject-introspection-1.36.0.tar.xz) = 8f0945bda62f2bc2a5ce36e8a1ea7d4753ab0517
+RMD160 (gobject-introspection-1.36.0.tar.xz) = bcc541a021ca409395a82fc4dd52a1353679908a
+Size (gobject-introspection-1.36.0.tar.xz) = 1201108 bytes
 SHA1 (patch-aa) = d7ebe6a0c81694fb537dc9cb67286fb9a0d60a9b
-SHA1 (patch-ab) = 5cb15e68a1f249f2975d661daf566cc2ec1f6102
-SHA1 (patch-ac) = 7f716a061473fcf9853a2a508b895b3a87050fa4
-SHA1 (patch-ad) = 4086722fa0f51c332536002db36b9edbe2e71a2a
-SHA1 (patch-giscanner_scannerlexer.l) = 69152ebb060b87083d32aff6ad2a6195c9987c59
+SHA1 (patch-ac) = 52174e01aa90a5cf75cfe2f255826c1e46f8e183
+SHA1 (patch-ad) = 0c67a1bb64e4e39eb9a4829e53744199a0f64fb6
+SHA1 (patch-giscanner_scannerlexer.l) = 9636a0884c2ac718f1b5bfc588d691f707ea310e
