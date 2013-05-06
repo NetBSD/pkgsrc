@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/05 13:12:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/06 07:11:25 ryoon Exp $
 
 DISTNAME=		gcc-core-3.4.6
 PKGNAME=		cross-h8300-elf-${DISTNAME:S/-core//}
@@ -7,13 +7,12 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.4.6/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${DISTNAME:S/-core-/-g++-/}${EXTRACT_SUFX} \
 			newlib-${NEWLIBVER}${EXTRACT_SUFX}
-SITES.newlib-1.14.0.tar.gz=	ftp://sources.redhat.com/pub/newlib/
+NEWLIBVER=		1.14.0
+SITES.newlib-${NEWLIBVER}.tar.gz=	ftp://sources.redhat.com/pub/newlib/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		#empty
 COMMENT=		GCC compiler for h8300-elf
-
-NEWLIBVER=		1.14.0
 
 DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 
