@@ -1,22 +1,31 @@
-$NetBSD: patch-sql_mysqld.cc,v 1.2 2013/04/20 08:06:01 adam Exp $
+$NetBSD: patch-sql_mysqld.cc,v 1.3 2013/05/06 14:41:08 joerg Exp $
 
---- sql/mysqld.cc.orig	2013-01-22 16:54:50.000000000 +0000
+--- sql/mysqld.cc.orig	2013-05-05 21:55:08.000000000 +0000
 +++ sql/mysqld.cc
-@@ -184,7 +184,7 @@ extern int memcntl(caddr_t, size_t, int,
- int initgroups(const char *,unsigned int);
+@@ -8268,7 +8268,7 @@ mysqld_get_one_option(int optid,
+     opt_myisam_log=1;
+     break;
+   case (int) OPT_BIN_LOG:
+-    opt_bin_log= test(argument != disabled_my_option);
++    opt_bin_log= my_test(argument != disabled_my_option);
+     break;
+ #ifdef HAVE_REPLICATION
+   case (int)OPT_REPLICATE_IGNORE_DB:
+@@ -8766,7 +8766,7 @@ static int get_options(int *argc_ptr, ch
+     Set some global variables from the global_system_variables
+     In most cases the global variables will not be used
+   */
+-  my_disable_locking= myisam_single_user= test(opt_external_locking == 0);
++  my_disable_locking= myisam_single_user= my_test(opt_external_locking == 0);
+   my_default_record_cache_size=global_system_variables.read_buff_size;
+ 
+   global_system_variables.long_query_time= (ulonglong)
+@@ -8793,7 +8793,7 @@ static int get_options(int *argc_ptr, ch
  #endif
  
--#if defined(__FreeBSD__) && defined(HAVE_IEEEFP_H) && !defined(HAVE_FEDISABLEEXCEPT)
-+#if (defined(__FreeBSD__) || defined(__DragonFly__)) && defined(HAVE_IEEEFP_H) && !defined(HAVE_FEDISABLEEXCEPT)
- #include <ieeefp.h>
- #ifdef HAVE_FP_EXCEPT       // Fix type conflict
- typedef fp_except fp_except_t;
-@@ -215,7 +215,7 @@ extern "C" my_bool reopen_fstreams(const
+   global_system_variables.engine_condition_pushdown=
+-    test(global_system_variables.optimizer_switch &
++    my_test(global_system_variables.optimizer_switch &
+          OPTIMIZER_SWITCH_ENGINE_CONDITION_PUSHDOWN);
  
- inline void setup_fpu()
- {
--#if defined(__FreeBSD__) && defined(HAVE_IEEEFP_H) && !defined(HAVE_FEDISABLEEXCEPT)
-+#if (defined(__FreeBSD__) || defined(__DragonFly__)) && defined(HAVE_IEEEFP_H) && !defined(HAVE_FEDISABLEEXCEPT)
-   /* We can't handle floating point exceptions with threads, so disable
-      this on freebsd
-      Don't fall for overflow, underflow,divide-by-zero or loss of precision.
+   opt_readonly= read_only;
