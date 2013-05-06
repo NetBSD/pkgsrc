@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.854 2013/03/26 15:11:20 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.855 2013/05/06 02:53:25 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6754,11 +6754,6 @@ sub checkfile_PLIST($) {
 "Directories are removed automatically when they are empty.",
 "When a package needs an empty directory, it can use the \@pkgdir",
 "command in the PLIST");
-
-				# XXX: this check should be made independent of dirrm
-				if ($pkgpath ne "graphics/hicolor-icon-theme" && $arg =~ m"^share/icons/hicolor(?:$|/)") {
-					$line->log_error("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
-				}
 			} elsif ($cmd eq "imake-man") {
 				my (@args) = split(/\s+/, $arg);
 				if (@args != 3) {
@@ -6910,9 +6905,28 @@ sub checkfile_PLIST($) {
 			} elsif ($text =~ m"^share/applications/.*\.desktop$") {
 				my $f = "../../sysutils/desktop-file-utils/desktopdb.mk";
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
-					$line->log_warning("Packages that install a .desktop entry should .include \"$f\".");
+					$line->log_warning("Packages that install a .desktop entry may .include \"$f\".");
+					$line->explain_warning(
+"If *.desktop files contain MimeType keys, global MIME Type registory DB",
+"must be updated by desktop-file-utils.",
+"Otherwise, this warning is harmless.");
 				}
 
+			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
+				my $f = "../../graphics/hicolor-icon-theme/buildlink3.mk";
+				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
+					$line->log_error("Please .include \"$f\"");
+					$line->explain_error(
+"If hicolor icon themes are installed, icon theme cache must be maintained.");
+				}
+
+			} elsif ($pkgpath ne "graphics/gnome-icon-theme" && $text =~ m"^share/icons/gnome(?:$|/)") {
+				my $f = "../../graphics/gnome-icon-theme/buildlink3.mk";
+				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
+					$line->log_error("Please .include \"$f\"");
+					$line->explain_error(
+"If Gnome icon themes are installed, icon theme cache must be maintained.");
+				}
 			} elsif ($dirname eq "share/aclocal" && $basename =~ m"\.m4$") {
 				# Fine.
 
