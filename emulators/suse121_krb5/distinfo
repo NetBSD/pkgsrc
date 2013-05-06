@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:37:21 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/05/06 19:05:53 gls Exp $
 
-SHA1 (suse121/krb5-1.9.1-24.3.1.i586.rpm) = 7d361fe6122a4590e2efdf4332ef021fc175b78e
-RMD160 (suse121/krb5-1.9.1-24.3.1.i586.rpm) = a5117529753097ec489e0d987cab89eea3e3ac31
-Size (suse121/krb5-1.9.1-24.3.1.i586.rpm) = 532309 bytes
-SHA1 (suse121/krb5-1.9.1-24.3.1.x86_64.rpm) = b97374acc07e6d699618427aa3d2d312bd8d9818
-RMD160 (suse121/krb5-1.9.1-24.3.1.x86_64.rpm) = f78d0b66bea335cdddc45ab4de2edbfd29fe07d3
-Size (suse121/krb5-1.9.1-24.3.1.x86_64.rpm) = 525992 bytes
+SHA1 (suse121/krb5-1.9.1-24.20.1.i586.rpm) = c61cb882c8dd453d6a231ac729f8bd92ec735261
+RMD160 (suse121/krb5-1.9.1-24.20.1.i586.rpm) = 494d16ff516583fc42d7cba30e09376eafc9a29e
+Size (suse121/krb5-1.9.1-24.20.1.i586.rpm) = 532757 bytes
+SHA1 (suse121/krb5-1.9.1-24.20.1.x86_64.rpm) = 0f17f23e66bae51366d3cb816efd476415df61d0
+RMD160 (suse121/krb5-1.9.1-24.20.1.x86_64.rpm) = 3e8cc10b07f2d873efd555e46b2f8c2fee1bca4a
+Size (suse121/krb5-1.9.1-24.20.1.x86_64.rpm) = 526684 bytes
 SHA1 (suse121/libcom_err2-1.41.14-10.1.2.i586.rpm) = ec87babea9fa0e54ef5f592e6fed6bb3bb3907a1
 RMD160 (suse121/libcom_err2-1.41.14-10.1.2.i586.rpm) = d476f9815cc0476e50cae734ef5a1d815e439651
 Size (suse121/libcom_err2-1.41.14-10.1.2.i586.rpm) = 21667 bytes
