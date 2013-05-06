@@ -1,8 +1,31 @@
-$NetBSD: patch-src_include_fst_synchronize.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
+$NetBSD: patch-src_include_fst_synchronize.h,v 1.2 2013/05/06 14:52:54 joerg Exp $
 
---- src/include/fst/synchronize.h.orig	2012-07-03 10:05:34.000000000 +0000
+--- src/include/fst/synchronize.h.orig	2009-03-21 03:35:34.000000000 +0000
 +++ src/include/fst/synchronize.h
-@@ -111,7 +111,7 @@ class SynchronizeFstImpl
+@@ -20,11 +20,21 @@
+ #ifndef FST_LIB_SYNCHRONIZE_H__
+ #define FST_LIB_SYNCHRONIZE_H__
+ 
+-#include <algorithm>
++#include <ciso646>
++
++#if defined(_LIBCPP_VERSION) || __cplusplus >= 201103L
++#include <unordered_map>
++using std::unordered_map;
++#include <unordered_set>
++using std::unordered_set;
++#else
+ #include <tr1/unordered_map>
+ using std::tr1::unordered_map;
+ #include <tr1/unordered_set>
+ using std::tr1::unordered_set;
++#endif
++
++#include <algorithm>
+ #include <string>
+ #include <utility>
+ #include <vector>
+@@ -111,7 +121,7 @@ class SynchronizeFstImpl
          return kNoStateId;
        const String *empty = FindString(new String());
        StateId start = FindState(Element(fst_->Start(), empty, empty));
@@ -11,7 +34,7 @@ $NetBSD: patch-src_include_fst_synchronize.h,v 1.1 2012/07/03 17:42:05 joerg Exp
      }
      return CacheImpl<A>::Start();
    }
-@@ -121,9 +121,9 @@ class SynchronizeFstImpl
+@@ -121,9 +131,9 @@ class SynchronizeFstImpl
        const Element &e = elements_[s];
        Weight w = e.state == kNoStateId ? Weight::One() : fst_->Final(e.state);
        if ((w != Weight::Zero()) && (e.istring)->empty() && (e.ostring)->empty())
@@ -23,7 +46,7 @@ $NetBSD: patch-src_include_fst_synchronize.h,v 1.1 2012/07/03 17:42:05 joerg Exp
      }
      return CacheImpl<A>::Final(s);
    }
-@@ -230,13 +230,13 @@ class SynchronizeFstImpl
+@@ -230,13 +240,13 @@ class SynchronizeFstImpl
            const String *istring = Cdr(e.istring, arc.ilabel);
            const String *ostring = Cdr(e.ostring, arc.olabel);
            StateId d = FindState(Element(arc.nextstate, istring, ostring));
@@ -39,7 +62,7 @@ $NetBSD: patch-src_include_fst_synchronize.h,v 1.1 2012/07/03 17:42:05 joerg Exp
          }
        }
  
-@@ -246,9 +246,9 @@ class SynchronizeFstImpl
+@@ -246,9 +256,9 @@ class SynchronizeFstImpl
        const String *istring = Cdr(e.istring);
        const String *ostring = Cdr(e.ostring);
        StateId d = FindState(Element(kNoStateId, istring, ostring));
