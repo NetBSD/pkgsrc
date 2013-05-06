@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.119 2013/05/05 21:26:37 rodent Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.120 2013/05/06 01:32:58 rodent Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -715,8 +715,8 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     sure the distfile was really updated on purpose, and that
     no trojan horse or so crept in.
     Please mention that the distfiles were compared and what was found
-    in your commit message.
-    Then, the correct way to work around this is to
+    in your commit message.</para>
+    <para>Then, the correct way to work around this is to
     set <varname>DIST_SUBDIR</varname> to a unique directory name,
     usually based on <varname>PKGNAME_NOREV</varname>. All
     <varname>DISTFILES</varname> and
@@ -726,11 +726,12 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     In case this
     happens more often, <varname>PKGNAME</varname> can be used (thus
     including the <filename>nbX</filename> suffix) or a date stamp
-    can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.
-    Do not forget regenerating the <filename>distinfo</filename> file
+    can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.</para>
+    <para><varname>DIST_SUBDIR</varname> is also used when a distfile's name does not contain a version and the distfile is apt to change. In cases where the likelihood of this is very small, <varname>DIST_SUBDIR</varname> might not be required. Additionally, <varname>DIST_SUBDIR</varname> must not be removed unless the distfile name changes, even if a package is being moved or renamed.</para>
+    <para>Do not forget regenerating the <filename>distinfo</filename> file
     after that, since it contains the <varname>DIST_SUBDIR</varname>
     path in the filenames.
-    Also increase the PKGREVISION if the installed package is different.
+    Also, increase the PKGREVISION if the installed package is different.
     Furthermore, a mail to the package's authors seems appropriate
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</para>
@@ -1912,8 +1913,8 @@ PERL5_PACKLIST= auto/Pg/.packlist
 
       <para>If a package installs <filename>.desktop</filename> files
       under <filename>share/applications</filename> and these include
-      MIME information, you need to take extra steps to ensure that they
-      are registered into the MIME database:</para>
+      MIME information (MimeType key), you need to take extra steps to
+      ensure that they are registered into the MIME database:</para>
 
       <orderedlist>
         <listitem>
