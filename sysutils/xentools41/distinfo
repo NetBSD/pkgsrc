@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2013/05/03 16:48:38 drochner Exp $
+$NetBSD: distinfo,v 1.30 2013/05/06 14:59:10 joerg Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -40,7 +40,9 @@ SHA1 (patch-dc) = d860fe3725978227278d58f09e7d5157001e463e
 SHA1 (patch-dd) = e66d9cc0028ba922b050fc142862b4095cd018f3
 SHA1 (patch-de) = fae94b61a430a1a7dd98c9a6a04e4513824c6d8d
 SHA1 (patch-df) = d20bf9d3fd05f5334f77c9154bf0fb9944c1292c
+SHA1 (patch-examples_Makefile) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-firmware_hvmloader_Makefile) = b2914e4988ba004d45403d67f1580b1f9725d006
+SHA1 (patch-hotplug_common_Makefile) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-ioemu-qemu-xen_hw_pass-through.c) = 76185c239078f29cb42b953d6c2cd1f59e240989
 SHA1 (patch-ioemu-qemu-xen_hw_pass-through.h) = 98c26798d1ad99d3eee8b33deb08f747c958c886
 SHA1 (patch-ioemu-qemu-xen_hw_piix4acpi.c) = ca19457e9bde2d844a86a866960ac6de1f3d084c
@@ -50,6 +52,7 @@ SHA1 (patch-ioemu-qemu-xen_hw_pt-msi.h) = d1bb1a8ad90d6577056f11df96f5469ffe74a3
 SHA1 (patch-ioemu-qemu-xen_xen-hooks.mak) = a00d9a9fd0fbb9fd89788b9dfaf5b389a28d47e2
 SHA1 (patch-libxl_libxl_create.c) = 02b661ca684609939c6ef762c0ddd1c5e62ad4d0
 SHA1 (patch-libxl_libxl_internal.h) = e126e5e998117903f0c66cc370d350c504ed33d9
+SHA1 (patch-libxl_xl__cmdimpl.c) = 0e038b9702e131ec527d49cb2c21e4acf581cbfe
 SHA1 (patch-ocaml_Makefile.rules) = 104f9d40186e5e4ca6a2e6359bbb369c3c91d1dc
 SHA1 (patch-ocaml_common.make) = c59d32301198d65691ab23529dd791de5ac40199
 SHA1 (patch-ocaml_xenstored_define.ml) = f44841625554ceba6e83dbb41f688993c2a8d9a2
