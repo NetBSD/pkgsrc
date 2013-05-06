@@ -1,8 +1,27 @@
-$NetBSD: patch-src_include_fst_factor-weight.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
+$NetBSD: patch-src_include_fst_factor-weight.h,v 1.2 2013/05/06 14:52:54 joerg Exp $
 
---- src/include/fst/factor-weight.h.orig	2012-07-03 09:54:33.000000000 +0000
+--- src/include/fst/factor-weight.h.orig	2009-03-21 03:35:33.000000000 +0000
 +++ src/include/fst/factor-weight.h
-@@ -215,7 +215,7 @@ class FactorWeightFstImpl
+@@ -20,9 +20,17 @@
+ #ifndef FST_LIB_FACTOR_WEIGHT_H__
+ #define FST_LIB_FACTOR_WEIGHT_H__
+ 
+-#include <algorithm>
++#include <ciso646>
++
++#if defined(_LIBCPP_VERSION) || __cplusplus >= 201103L
++#include <unordered_map>
++using std::unordered_map;
++#else
+ #include <tr1/unordered_map>
+ using std::tr1::unordered_map;
++#endif
++
++#include <algorithm>
+ #include <fst/slist.h>
+ #include <string>
+ #include <utility>
+@@ -215,7 +223,7 @@ class FactorWeightFstImpl
        if (s == kNoStateId)
          return kNoStateId;
        StateId start = FindState(Element(fst_->Start(), Weight::One()));
@@ -11,7 +30,7 @@ $NetBSD: patch-src_include_fst_factor-weight.h,v 1.1 2012/07/03 17:42:05 joerg E
      }
      return CacheImpl<A>::Start();
    }
-@@ -229,9 +229,9 @@ class FactorWeightFstImpl
+@@ -229,9 +237,9 @@ class FactorWeightFstImpl
                   : (Weight) Times(e.weight, fst_->Final(e.state));
        FactorIterator f(w);
        if (!(mode_ & kFactorFinalWeights) || f.Done())
@@ -23,7 +42,7 @@ $NetBSD: patch-src_include_fst_factor-weight.h,v 1.1 2012/07/03 17:42:05 joerg E
      }
      return CacheImpl<A>::Final(s);
    }
-@@ -298,13 +298,13 @@ class FactorWeightFstImpl
+@@ -298,13 +306,13 @@ class FactorWeightFstImpl
          FactorIterator fit(w);
          if (!(mode_ & kFactorArcWeights) || fit.Done()) {
            StateId d = FindState(Element(arc.nextstate, Weight::One()));
@@ -39,7 +58,7 @@ $NetBSD: patch-src_include_fst_factor-weight.h,v 1.1 2012/07/03 17:42:05 joerg E
            }
          }
        }
-@@ -322,10 +322,10 @@ class FactorWeightFstImpl
+@@ -322,10 +330,10 @@ class FactorWeightFstImpl
          const pair<Weight, Weight> &p = fit.Value();
          StateId d = FindState(Element(kNoStateId,
                                        p.second.Quantize(delta_)));
