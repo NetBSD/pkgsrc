@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/11/17 22:20:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/05/06 20:44:18 markd Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -13,8 +13,8 @@ ${PLIST.x11}bin/pax11publish
 bin/pulseaudio
 ${PLIST.x11}bin/start-pulseaudio-kde
 ${PLIST.x11}bin/start-pulseaudio-x11
-${PLIST.x11}etc/xdg/autostart/pulseaudio-kde.desktop
-${PLIST.x11}etc/xdg/autostart/pulseaudio.desktop
+${PLIST.x11}share/examples/pulseaudio/pulseaudio-kde.desktop
+${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 include/pulse/cdecl.h
 include/pulse/channelmap.h
 include/pulse/context.h

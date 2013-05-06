@@ -1,11 +1,24 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2013/01/29 15:34:47 wiz Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2013/05/06 20:44:18 markd Exp $
 
 Use pkgsrc infrastructure for config files.
 
 --- src/Makefile.in.orig	2012-07-19 11:30:13.000000000 +0000
 +++ src/Makefile.in
-@@ -2943,7 +2943,7 @@ pulselibexecdir = $(libexecdir)/pulse
- @HAVE_X11_TRUE@xdgautostartdir = $(sysconfdir)/xdg/autostart
+@@ -2927,7 +2927,7 @@ pdfdir = @pdfdir@
+ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+ psdir = @psdir@
+-pulseconfdir = @pulseconfdir@
++pulseconfdir = ${EGDIR}
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+@@ -2940,10 +2940,10 @@ udevrulesdir = @udevrulesdir@
+ pulseincludedir = $(includedir)/pulse
+ pulsecoreincludedir = $(includedir)/pulsecore
+ pulselibexecdir = $(libexecdir)/pulse
+-@HAVE_X11_TRUE@xdgautostartdir = $(sysconfdir)/xdg/autostart
++@HAVE_X11_TRUE@xdgautostartdir = ${EGDIR}
  @HAVE_ALSA_TRUE@alsaprofilesetsdir = $(datadir)/pulseaudio/alsa-mixer/profile-sets
  @HAVE_ALSA_TRUE@alsapathsdir = $(datadir)/pulseaudio/alsa-mixer/paths
 -@HAVE_DBUS_TRUE@dbuspolicydir = $(sysconfdir)/dbus-1/system.d
