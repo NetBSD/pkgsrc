@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/02/27 10:51:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/05/06 19:55:27 gls Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.flac}lib/cmus/ip/flac.so
@@ -26,4 +26,5 @@ share/cmus/green-mono-88.theme
 share/cmus/green.theme
 share/cmus/rc
 share/cmus/xterm-white.theme
+share/cmus/zenburn.theme
 share/doc/cmus/examples/cmus-status-display
