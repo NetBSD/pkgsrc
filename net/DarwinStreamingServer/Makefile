@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/03/24 16:51:07 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/06 14:55:25 joerg Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -24,8 +24,8 @@ USE_LANGUAGES=	c c++
 MAKE_FILE=	Makefile.POSIX
 MAKE_ENV+=	CCOMP=${CC:Q} CPLUS=${CXX:Q}\ -fPIC LINKER=${CXX:Q}
 MAKE_ENV+=	COMPILER_FLAGS=${CFLAGS:Q} INCLUDE_FLAG="-include"
-MAKE_ENV+=	CORE_LINK_LIBS="-pthread -lm -lcrypt -lstdc++"
-MAKE_ENV+=	SHARED="-shared" MODULE_LIBS="-lgcc -lstdc++"
+MAKE_ENV+=	CORE_LINK_LIBS="-pthread -lm -lcrypt"
+MAKE_ENV+=	SHARED="-shared" MODULE_LIBS=""
 
 BUILD_DIRS=	CommonUtilitiesLib
 BUILD_DIRS+=	QTFileLib
