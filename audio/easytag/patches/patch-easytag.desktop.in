@@ -1,0 +1,15 @@
+$NetBSD: patch-easytag.desktop.in,v 1.1 2013/05/06 10:12:11 wiz Exp $
+
+Remove deprecated MIME type.
+
+--- easytag.desktop.in.orig	2013-01-16 09:02:13.000000000 +0000
++++ easytag.desktop.in
+@@ -6,7 +6,7 @@ _Keywords=mp3;tag;audio;
+ Type=Application
+ Icon=easytag
+ Categories=GTK;AudioVideo;AudioVideoEditing;
+-MimeType=x-directory/normal;inode/directory;audio/x-mp3;audio/x-mpeg;audio/mpeg;application/ogg;audio/x-vorbis+ogg;audio/x-flac;audio/x-musepack;audio/x-ape;
++MimeType=inode/directory;audio/x-mp3;audio/x-mpeg;audio/mpeg;application/ogg;audio/x-vorbis+ogg;audio/x-flac;audio/x-musepack;audio/x-ape;
+ Exec=easytag %F
+ Terminal=false
+ StartupNotify=true

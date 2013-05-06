@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2013/02/16 11:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2013/05/06 10:12:11 wiz Exp $
 #
 
 DISTNAME=	easytag-2.1.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/easytag/2.1/}
 EXTRACT_SUFX=	.tar.xz
