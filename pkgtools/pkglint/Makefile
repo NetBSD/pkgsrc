@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.428 2013/03/26 15:11:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.429 2013/05/06 02:53:24 obache Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
 # After updating, please re-set the CVS tag to HEAD.
-DISTNAME=	pkglint-4.128
+DISTNAME=	pkglint-4.129
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
