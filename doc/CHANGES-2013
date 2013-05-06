@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1594 2013/05/06 19:06:15 gls Exp $
+$NetBSD: CHANGES-2013,v 1.1595 2013/05/06 19:56:00 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2425,3 +2425,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBD-CSV to 0.38 [hiramatsu 2013-05-06]
 	Updated www/p5-HTTP-Body to 1.17 [hiramatsu 2013-05-06]
 	Updated emulators/suse121_krb5 to 12.1nb1 [gls 2013-05-06]
+	Updated audio/cmus to 2.5.0 [gls 2013-05-06]
