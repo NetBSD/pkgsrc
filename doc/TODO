@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12128 2013/05/05 21:15:52 wiz Exp $
+$NetBSD: TODO,v 1.12129 2013/05/06 19:56:00 gls Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clutter-1.14.2
 	o clutter-gst-2.0.2
 	o cmake-fedora-1.0.5
-	o cmus-2.5.0
 	o coccigrep-1.12
 	o colorize-0.3.4
 	o colortail-0.3.3
