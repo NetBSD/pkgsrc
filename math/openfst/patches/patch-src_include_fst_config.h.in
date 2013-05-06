@@ -1,0 +1,14 @@
+$NetBSD: patch-src_include_fst_config.h.in,v 1.1 2013/05/06 14:53:16 joerg Exp $
+
+--- src/include/fst/config.h.in.orig	2013-05-03 17:47:24.000000000 +0000
++++ src/include/fst/config.h.in
+@@ -2,7 +2,7 @@
+ 
+ /* Define to 1 if the system has the type `std::tr1::hash<long long
+    unsigned>'. */
+-#define HAVE_STD__TR1__HASH_LONG_LONG_UNSIGNED_ 1
++#undef HAVE_STD__TR1__HASH_LONG_LONG_UNSIGNED_
+ 
+ /* Define to 1 if the system has the type `__gnu_cxx::slist<int>'. */
+-#define HAVE___GNU_CXX__SLIST_INT_ 1
++#undef HAVE___GNU_CXX__SLIST_INT_
