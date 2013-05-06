@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/10/08 20:46:38 pettai Exp $
+$NetBSD: distinfo,v 1.13 2013/05/06 14:58:20 joerg Exp $
 
 SHA1 (Botan-1.8.14.tgz) = a845a5e6d0386e0bdbd7a8cfc646d5a4cdec8649
 RMD160 (Botan-1.8.14.tgz) = 6125937c13860b67a18dbbee71c477b4d06ad5b2
@@ -6,5 +6,20 @@ Size (Botan-1.8.14.tgz) = 2632909 bytes
 SHA1 (patch-ab) = a53a3e23722d8f478c5a6c5ecf1df08d74fd21c0
 SHA1 (patch-ac) = 4f98ff086983b27ed17d048486a8afced47e7970
 SHA1 (patch-ak) = 7bf66c1faa84971b490be96efefac0ef44f97b70
+SHA1 (patch-src_cert_cvc_cvc__ado.cpp) = 94c632fcdf6d8df903135c7abe9bb26ab194f803
+SHA1 (patch-src_cert_cvc_cvc__ado.h) = b10593175baf2787b5522a05369773877c135a8a
+SHA1 (patch-src_cert_cvc_cvc__ca.cpp) = 2bd37cbd9432d605b1306d43612e35a37565d490
+SHA1 (patch-src_cert_cvc_cvc__cert.cpp) = 4cac9f415e1e60b04b97ba8fbb29d891f08cbab9
+SHA1 (patch-src_cert_cvc_cvc__cert.h) = de72a3c9a4f1d6eb107ff07f209516e9ffca8e1c
+SHA1 (patch-src_cert_cvc_cvc__req.cpp) = 576d874e570a271ffb3ac81e57890401d900583a
+SHA1 (patch-src_cert_cvc_cvc__req.h) = 419916c1b2089e27d5e9f2a2f714793e6fcc1809
+SHA1 (patch-src_cert_cvc_cvc__self.cpp) = 251a097a699633e3537cc87c28aeed41e885344f
+SHA1 (patch-src_cert_cvc_freestore.h) = 620892af8b6caf688c1c1789acd2a2f712f5d441
 SHA1 (patch-src_entropy_unix_procs_info.txt) = c2685db5fbd16a67b008b738730518858265ebc0
 SHA1 (patch-src_hash_sha1_amd64_info.txt) = d83a7b88b5860a596607e529b29090afa16dcda7
+SHA1 (patch-src_math_gfpmath_curve__gfp.cpp) = 4a24c751bc5a8ae049b633b0ac2fcb48a6f606ff
+SHA1 (patch-src_math_gfpmath_curve__gfp.h) = f0338064ba2dda12c36af9ad18d3a036f99fea50
+SHA1 (patch-src_math_gfpmath_gfp__element.cpp) = 6b787da2e8d9d3e6d00c3a4d3de907d0466dbfbc
+SHA1 (patch-src_math_gfpmath_gfp__element.h) = 59bf2a7d1ccde428e5c42977f1185e4b15c2d02f
+SHA1 (patch-src_math_gfpmath_point__gfp.cpp) = e9727610d64b103991f2b5ce82de26627e8e02f6
+SHA1 (patch-src_math_gfpmath_point__gfp.h) = 3b2b93e11cb0b49bfb983147d36259060daff782
