@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1588 2013/05/06 10:12:20 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1589 2013/05/06 15:51:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ikiwiki to 3.20130504 [schmonz 2013-05-05]
 	Updated pkgtools/pkglint to 4.129 [obache 2013-05-06]
 	Updated audio/easytag to 2.1.8nb2 [wiz 2013-05-06]
+	Updated devel/p5-Test-Pod to 1.48 [wen 2013-05-06]
