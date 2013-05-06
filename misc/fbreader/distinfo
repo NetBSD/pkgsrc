@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/10/01 12:47:30 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/05/06 15:04:55 joerg Exp $
 
 SHA1 (fbreader-sources-0.99.2.tgz) = 16391ac7d5e38c014c48f9f9f8c0a21342926ffe
 RMD160 (fbreader-sources-0.99.2.tgz) = b143d8bb2aa3879f2c4b273011ffef5ec93532be
@@ -6,4 +6,8 @@ Size (fbreader-sources-0.99.2.tgz) = 2423279 bytes
 SHA1 (patch-ab) = 4fcbbc7c9fe7fe2e9d841d226ba69624e36e08a5
 SHA1 (patch-ah) = 8b30ee01cdb05d1680ce45cb57ba37011c33fa6c
 SHA1 (patch-ai) = 4e1e7f400277461853deba91536d25c13d9b6426
+SHA1 (patch-fbreader_src_fbreader_FBReaderActions.cpp) = ac2d5937d3628abd6db2e4b2fe869d95262d2689
+SHA1 (patch-fbreader_src_fbreader_FBView.cpp) = f9018b813b92d31c67e13eb68d6e50c8a7637a5c
+SHA1 (patch-fbreader_src_formats_html_HtmlReader.cpp) = fe0ebe4dff97a11581a6d7b079f8f19f4e3be019
 SHA1 (patch-zlibrary_text_Makefile) = 626331a0fe20419613029ad1337c1d60d73837c9
+SHA1 (patch-zlibrary_text_src_area_ZLTextAreaStyle.cpp) = ec87bd8072c2385df6e224c7cb1a914bef595f78
