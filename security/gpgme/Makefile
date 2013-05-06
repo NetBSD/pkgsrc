@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/05/04 02:50:41 obache Exp $
+# $NetBSD: Makefile,v 1.72 2013/05/06 18:18:31 drochner Exp $
 
 DISTNAME=	gpgme-1.4.1
 CATEGORIES=	security
@@ -43,7 +43,9 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+# TLS is unsupported on NetBSD<=5, but causes crashes on -current too
+#.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 CONFIGURE_ENV+=		gpgme_cv_tls_works=no
 .endif
 
