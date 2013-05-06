@@ -1,16 +1,26 @@
-$NetBSD: distinfo,v 1.2 2012/07/03 17:42:05 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/05/06 14:52:54 joerg Exp $
 
 SHA1 (openfst-1.1.tar.gz) = b070f84a981dfadc4c049f505bd3406a43dfa55d
 RMD160 (openfst-1.1.tar.gz) = 45657bb11f91ffdce5261ff6f4c103c164cc161b
 Size (openfst-1.1.tar.gz) = 513404 bytes
+SHA1 (patch-src_bin_compile-main.h) = b0f77cf8876acea5597b0ddb622dcddc52103cf0
 SHA1 (patch-src_include_fst_cache.h) = 6a29b49f07b61a0ed9d9e2349805b836c45a25bc
 SHA1 (patch-src_include_fst_compact-fst.h) = f1a2b9ec65d3c8be4d0574c96fa5e5a52c9e680c
 SHA1 (patch-src_include_fst_compose.h) = 4fb25482929aecf37e69d9b6c23491f5512554f8
+SHA1 (patch-src_include_fst_config.h.in) = 6c1eba23afe7d30026b37b9e7cf7c6552778c3e4
 SHA1 (patch-src_include_fst_const-fst.h) = 758b60a5238f9f6f4a1a5a05c5abc41d81faa3a2
-SHA1 (patch-src_include_fst_determinize.h) = 825ad312b52933d981a1ea8dd7103da90b1f3e80
+SHA1 (patch-src_include_fst_determinize.h) = c0ec374166a57c3df97cab25b5ec87231ec86df5
 SHA1 (patch-src_include_fst_difference.h) = e66c128b621d1be4f9b7501d969cd2097f32aa04
-SHA1 (patch-src_include_fst_factor-weight.h) = 88229131e6de6daf950f85db32b1dbcbf4507733
-SHA1 (patch-src_include_fst_map.h) = 7c46539d7b72f1f24ea275bfff1678bbb64f932c
-SHA1 (patch-src_include_fst_replace.h) = 87604a022040f3f825eede69c36917b37b515cda
-SHA1 (patch-src_include_fst_synchronize.h) = 8a43aab991bf48f1e656d4e47dea8f0326d12773
+SHA1 (patch-src_include_fst_encode.h) = ad9c3662b63dc40a40fa827fa011ea8332f04962
+SHA1 (patch-src_include_fst_epsnormalize.h) = 1bee82d16fab4bdb4d635eb27aa22f9573d57fb9
+SHA1 (patch-src_include_fst_equivalent.h) = dbc925b9de2b859a0a5493db4e5823dc8ed57e6c
+SHA1 (patch-src_include_fst_factor-weight.h) = 311911d8308cdc073cffa2a2d0a52202330c4324
+SHA1 (patch-src_include_fst_map.h) = 61faf469de577c944d2e66c10f1b877619ae0889
+SHA1 (patch-src_include_fst_relabel.h) = 6fce070b426dfbcfb2aa89c05daec96b03cd6349
+SHA1 (patch-src_include_fst_replace.h) = 2f8984463d5f083d3bc1fa439dc1a88e27f1954f
+SHA1 (patch-src_include_fst_rmepsilon.h) = e371a2145c571378a49b707710b9ab5cc592f352
+SHA1 (patch-src_include_fst_rmfinalepsilon.h) = fb1834d54a343982eb433f6c7ffddf1315a2b797
+SHA1 (patch-src_include_fst_slist.h) = c63321cf232ec861ec07dc0c26a9c5c773c35f49
+SHA1 (patch-src_include_fst_synchronize.h) = aed6efedd865bda3a881d5516487c4abdac36217
+SHA1 (patch-src_include_fst_test-properties.h) = d82a8e542a8afbe10a7232c12a22a724a9fe0a0c
 SHA1 (patch-src_include_fst_vector-fst.h) = 51178b6757e89e5c18807ec8521223dacaeb6c16

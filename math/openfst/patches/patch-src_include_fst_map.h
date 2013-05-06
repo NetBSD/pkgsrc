@@ -1,8 +1,24 @@
-$NetBSD: patch-src_include_fst_map.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
+$NetBSD: patch-src_include_fst_map.h,v 1.2 2013/05/06 14:52:54 joerg Exp $
 
---- src/include/fst/map.h.orig	2012-07-03 09:55:26.000000000 +0000
+--- src/include/fst/map.h.orig	2009-03-21 03:35:34.000000000 +0000
 +++ src/include/fst/map.h
-@@ -336,7 +336,7 @@ class MapFstImpl : public CacheImpl<B> {
+@@ -21,8 +21,15 @@
+ #ifndef FST_LIB_MAP_H__
+ #define FST_LIB_MAP_H__
+ 
++#include <ciso646>
++
++#if defined(_LIBCPP_VERSION) || __cplusplus >= 201103L
++#include <unordered_map>
++using std::unordered_map;
++#else
+ #include <tr1/unordered_map>
+ using std::tr1::unordered_map;
++#endif
+ #include <string>
+ #include <utility>
+ #include <fst/cache.h>
+@@ -336,7 +343,7 @@ class MapFstImpl : public CacheImpl<B> {
  
    StateId Start() {
      if (!HasStart())
@@ -11,7 +27,7 @@ $NetBSD: patch-src_include_fst_map.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
      return CacheImpl<B>::Start();
    }
  
-@@ -348,24 +348,24 @@ class MapFstImpl : public CacheImpl<B> {
+@@ -348,24 +355,24 @@ class MapFstImpl : public CacheImpl<B> {
            B final_arc = (*mapper_)(A(0, 0, fst_->Final(FindIState(s)),
                                          kNoStateId));
            CHECK(final_arc.ilabel == 0 && final_arc.olabel == 0);
@@ -41,7 +57,7 @@ $NetBSD: patch-src_include_fst_map.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
            break;
          }
        }
-@@ -399,14 +399,14 @@ class MapFstImpl : public CacheImpl<B> {
+@@ -399,14 +406,14 @@ class MapFstImpl : public CacheImpl<B> {
  
    void Expand(StateId s) {
      // Add exiting arcs.
@@ -58,7 +74,7 @@ $NetBSD: patch-src_include_fst_map.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
      }
  
      // Check for superfinal arcs.
-@@ -422,7 +422,7 @@ class MapFstImpl : public CacheImpl<B> {
+@@ -422,7 +429,7 @@ class MapFstImpl : public CacheImpl<B> {
              if (superfinal_ == kNoStateId)
                superfinal_ = nstates_++;
              final_arc.nextstate = superfinal_;
@@ -67,7 +83,7 @@ $NetBSD: patch-src_include_fst_map.h,v 1.1 2012/07/03 17:42:05 joerg Exp $
            }
            break;
          }
-@@ -431,12 +431,12 @@ class MapFstImpl : public CacheImpl<B> {
+@@ -431,12 +438,12 @@ class MapFstImpl : public CacheImpl<B> {
                                        kNoStateId));
          if (final_arc.ilabel != 0 || final_arc.olabel != 0 ||
              final_arc.weight != B::Weight::Zero())
