@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/03/02 18:20:19 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/05/06 15:04:54 joerg Exp $
 
 SHA1 (centerim-4.22.9.tar.gz) = ebe9f4ee2064a2fa10f1084ce26083ccd295673e
 RMD160 (centerim-4.22.9.tar.gz) = 253007e466a211ec740f7843538e4f686ab95cad
@@ -9,6 +9,7 @@ SHA1 (patch-ad) = bfe19ca98facfbb23a87dd28a176980fb4e986de
 SHA1 (patch-av) = 05758183016fb1bb297c9c3d2c0606e6a66f9901
 SHA1 (patch-bb) = 7312d496cdde7f619eff6bfef6025fe9be14529d
 SHA1 (patch-libicq2000_libicq2000_sigslot.h) = a812915ad5b329a6c82ff90835d26f73552eeebb
+SHA1 (patch-libicq2000_src_ContactTree.cpp) = 5be7af2c59d15a7e4d78d4d3ea36b1bfeb12c34a
 SHA1 (patch-libjabber_jconn.c) = 6c0eff8b52a8306c6fbb80ced1c187ec1861bb05
 SHA1 (patch-src_hooks_msnhook.cc) = 9b0ee3bb3fb524cf9060a3e34dd0f8e4f4f32d5c
 SHA1 (patch-src_hooks_msnhook.h) = 63bce505a649642882093b49e5f298fc66954ef8
