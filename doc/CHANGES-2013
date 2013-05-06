@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1586 2013/05/05 20:53:41 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1587 2013/05/06 02:54:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2416,3 +2416,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/salt to 0.15.0 [imil 2013-05-05]
 	Updated devel/mr to 1.15 [schmonz 2013-05-05]
 	Updated www/ikiwiki to 3.20130504 [schmonz 2013-05-05]
+	Updated pkgtools/pkglint to 4.129 [obache 2013-05-06]
