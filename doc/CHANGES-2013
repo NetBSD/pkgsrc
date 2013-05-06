@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1592 2013/05/06 16:09:45 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1593 2013/05/06 18:09:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2422,3 +2422,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Pod-Simple to 3.28 [wen 2013-05-06]
 	Updated devel/p5-Moo to 1.002000 [wen 2013-05-06]
 	Updated databases/p5-DBIx-Connector to 0.53 [wen 2013-05-06]
+	Updated databases/p5-DBD-CSV to 0.38 [hiramatsu 2013-05-06]
+	Updated www/p5-HTTP-Body to 1.17 [hiramatsu 2013-05-06]
