@@ -1,0 +1,12 @@
+$NetBSD: patch-gnumeric.desktop.in,v 1.1 2013/05/06 11:06:35 wiz Exp $
+
+Remove deprecated MIME type.
+
+--- gnumeric.desktop.in.orig	2009-11-11 00:25:31.000000000 +0000
++++ gnumeric.desktop.in
+@@ -15,4 +15,4 @@ X-GNOME-Bugzilla-Product=Gnumeric
+ X-GNOME-Bugzilla-Version=BUGZILLAVERSION
+ X-GNOME-Bugzilla-Component=General
+ X-GNOME-DocPath=gnumeric
+-MimeType=application/x-gnumeric;application/vnd.ms-excel;application/excel;application/msexcel;application/x-excel;application/x-ms-excel;application/x-msexcel;application/x-xls;application/xls;application/x-dos_ms_excel;zz-application/zz-winassoc-xls;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/tab-separated-values;text/csv;text/x-csv;text/spreadsheet;text/tab-separated-values;application/vnd.lotus-1-2-3;application/x-123;application/vnd.sun.xml.calc;application/vnd.sun.xml.calc.template;application/x-applix-spreadsheet;application/x-mps;application/x-oleo;application/x-planperfect;application/x-quattropro;application/x-sc;application/x-sylk;application/x-dbase;application/x-dbf;application/x-xbase;
++MimeType=application/x-gnumeric;application/vnd.ms-excel;application/excel;application/msexcel;application/x-excel;application/x-ms-excel;application/x-msexcel;application/x-xls;application/xls;application/x-dos_ms_excel;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/tab-separated-values;text/csv;text/x-csv;text/spreadsheet;text/tab-separated-values;application/vnd.lotus-1-2-3;application/x-123;application/vnd.sun.xml.calc;application/vnd.sun.xml.calc.template;application/x-applix-spreadsheet;application/x-mps;application/x-oleo;application/x-planperfect;application/x-quattropro;application/x-sc;application/x-sylk;application/x-dbase;application/x-dbf;application/x-xbase;
