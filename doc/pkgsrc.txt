@@ -7065,18 +7065,27 @@ checksum will no longer match. The contents of the new distfile should be
 compared against the old one before changing anything, to make sure the
 distfile was really updated on purpose, and that no trojan horse or so crept
 in. Please mention that the distfiles were compared and what was found in your
-commit message. Then, the correct way to work around this is to set DIST_SUBDIR
-to a unique directory name, usually based on PKGNAME_NOREV. All DISTFILES and
-PATCHFILES for this package will be put in that subdirectory of the local
-distfiles directory. (See Section 19.1.11, "How to handle incrementing versions
-when fixing an existing package" for more details.) In case this happens more
-often, PKGNAME can be used (thus including the nbX suffix) or a date stamp can
-be appended, like ${PKGNAME_NOREV}-YYYYMMDD. Do not forget regenerating the
-distinfo file after that, since it contains the DIST_SUBDIR path in the
-filenames. Also increase the PKGREVISION if the installed package is different.
-Furthermore, a mail to the package's authors seems appropriate telling them
-that changing distfiles after releases without changing the file names is not
-good practice.
+commit message.
+
+Then, the correct way to work around this is to set DIST_SUBDIR to a unique
+directory name, usually based on PKGNAME_NOREV. All DISTFILES and PATCHFILES
+for this package will be put in that subdirectory of the local distfiles
+directory. (See Section 19.1.11, "How to handle incrementing versions when
+fixing an existing package" for more details.) In case this happens more often,
+PKGNAME can be used (thus including the nbX suffix) or a date stamp can be
+appended, like ${PKGNAME_NOREV}-YYYYMMDD.
+
+DIST_SUBDIR is also used when a distfile's name does not contain a version and
+the distfile is apt to change. In cases where the likelihood of this is very
+small, DIST_SUBDIR might not be required. Additionally, DIST_SUBDIR must not be
+removed unless the distfile name changes, even if a package is being moved or
+renamed.
+
+Do not forget regenerating the distinfo file after that, since it contains the
+DIST_SUBDIR path in the filenames. Also, increase the PKGREVISION if the
+installed package is different. Furthermore, a mail to the package's authors
+seems appropriate telling them that changing distfiles after releases without
+changing the file names is not good practice.
 
 19.3. Fixing problems in the configure phase
 
@@ -7833,8 +7842,8 @@ points is to regenerate it using make print-PLIST.
 19.6.20. Packages installing desktop files
 
 If a package installs .desktop files under share/applications and these include
-MIME information, you need to take extra steps to ensure that they are
-registered into the MIME database:
+MIME information (MimeType key), you need to take extra steps to ensure that
+they are registered into the MIME database:
 
  1. Include ../../sysutils/desktop-file-utils/desktopdb.mk.
 
