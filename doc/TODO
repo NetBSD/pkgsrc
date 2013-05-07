@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12129 2013/05/06 19:56:00 gls Exp $
+$NetBSD: TODO,v 1.12130 2013/05/07 20:38:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adtool-1.3
 	o aewm++-1.0.27
 	o alacarte-0.13.2
-	o album-4.08
+	o album-4.09
 	o aliados-0.2.0
 	o alsa-1.0.23
 	o alsa-lib-1.0.27
@@ -541,8 +541,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
-	o eric4-4.5.9
-	o eric5-5.3.2
+	o eric4-4.5.11
+	o eric5-5.3.3
 	o erlang-16a
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -633,7 +633,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.6.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.8.0
+	o gnome-keyring-3.8.2
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
@@ -749,6 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.3
+	o kde4-4.10.3
 	o kdenlive-0.9.6
 	o kdevelop-4.5
 	o kdrill-6.5
@@ -797,7 +798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblbxutil-1.1.0
 	o libmcs-0.7.2
 	o libmemcached-1.0.17
-	o libmicrohttpd-0.9.26
+	o libmicrohttpd-0.9.27
 	o libmms-0.6.2
 	o libmp3splt-0.8.2
 	o libnasl-2.3.1
@@ -917,7 +918,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
-	o opendkim-2.8.2
+	o opendkim-2.8.3
 	o openexr-2.0.0
 	o opengrok-0.11.1
 	o openmortal-0.7.1
@@ -996,7 +997,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o puf-1.0.0
 	o pulseaudio-3.0
 	o puzzle-9173
-	o puzzles-9835
+	o puzzles-9838
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1027,8 +1028,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o raine-0.51.15
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rcs-5.8.2
+	o rcs-5.9.0
 	o rdp-1.6
+	o re-alpine-2.03 [pkg/47802]
 	o remind-3.1.13
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
