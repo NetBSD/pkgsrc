@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/07 08:49:28 wiz Exp $
+bin/logrider.sh
+bin/logtail.sh
+share/examples/logrider/ignore
+share/examples/logrider/hacking
+share/examples/logrider/violations
+share/examples/logrider/logrider.conf
+share/examples/logrider/violations_ignore/cvspserver
+share/examples/logrider/violations_ignore/drweb-postfix
+share/examples/logrider/violations_ignore/ftp
+share/examples/logrider/violations_ignore/microbackup
+share/examples/logrider/violations_ignore/misc
+share/examples/logrider/violations_ignore/named
+share/examples/logrider/violations_ignore/nsfbackup
+share/examples/logrider/violations_ignore/pam
+share/examples/logrider/violations_ignore/postfix
+share/examples/logrider/violations_ignore/sshd
