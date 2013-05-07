@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/05/07 08:49:28 wiz Exp $
+
+SHA1 (logrider-0.2.zip) = d23c030d29f5776a8897a393cb4f61f37cde128d
+RMD160 (logrider-0.2.zip) = 5f63fea34cf322b28f30eb291f6409178f489f4a
+Size (logrider-0.2.zip) = 12242 bytes
+SHA1 (patch-logtail.sh) = cdf37c97607654124b8bdd341606e25e47444e0e
