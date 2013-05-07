@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2013/01/10 16:09:59 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2013/05/07 09:19:32 sbd Exp $
 
 SHA1 (thunderbird-10.0.12esr.source.tar.bz2) = 260a3baca5eaa80bcc075b08c9f12016d61877de
 RMD160 (thunderbird-10.0.12esr.source.tar.bz2) = 63586fc3460f4522900b84f58805c3a3a9cfe7a6
@@ -65,7 +65,7 @@ SHA1 (patch-mozilla_ipc_chromium_src_base_base__paths.h) = 8becedc1754721a913384
 SHA1 (patch-mozilla_ipc_chromium_src_base_file__util__bsd.cc) = ec55788a5b24f331a54d242c688bb68b657b71bd
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__loop.cc) = 2a437553e275ed620e27564f13868a8fcf118e12
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread.h) = 61a7c02dad19b43a3b2a5ae344179247e2a2b68d
-SHA1 (patch-mozilla_ipc_chromium_src_base_process__util.h) = e76cd9f3e3ee9aaadf370e5b2caa0c9aabad2fec
+SHA1 (patch-mozilla_ipc_chromium_src_base_process__util.h) = efe3d2b8ba4ea542806627c523d6ac6ad39ade52
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc) = c0a5f86bc9db4c137c8bb77e9773e5134fd755c1
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__posix.cc) = 3e1c0e528f1f0a4fe846210fa62f700a9ea62179
 SHA1 (patch-mozilla_ipc_chromium_src_base_third__party_nspr_prtime.cc) = 55eb4ea80c65ecff08e2cda70e3dc3c9acf951b8
