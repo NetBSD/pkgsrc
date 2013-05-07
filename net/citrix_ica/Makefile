@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/02/12 13:55:48 sborrill Exp $
+# $NetBSD: Makefile,v 1.44 2013/05/07 15:14:46 joerg Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	2
@@ -24,7 +24,7 @@ EMUL_PLATFORMS+=	solaris-sparc
 EMUL_PLATFORMS+=	solaris-i386
 EMUL_MODULES.linux=	locale motif x11
 
-PKG_DESTDIR_SUPPORT=	none
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,10 +51,11 @@ EXTRACT_SUFX=	.tar.z
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-CDIR=		${PREFIX}/lib/ICAClient
+PLAIN_CDIR=	${PREFIX}/lib/ICAClient
+CDIR=		${DESTDIR}${PLAIN_CDIR}
 USE_TOOLS+=	patch
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin lib
 
 .if ${MASTER_SITES} == "manual"
 FETCH_MESSAGE=  "Please fetch ${DISTFILES} manually from"
@@ -72,9 +73,9 @@ do-patch:
 do-build:
 	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/response.${MACHINE_ARCH} \
 		> ${WRKSRC}/response
-	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/wfcmgr \
+	${SED} s%DESTINATION%${PLAIN_CDIR}% ${FILESDIR}/wfcmgr \
 		> ${WRKSRC}/wfcmgr.x
-	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/wfica \
+	${SED} s%DESTINATION%${PLAIN_CDIR}% ${FILESDIR}/wfica \
 		> ${WRKSRC}/wfica.x
 
 pre-install:
@@ -94,10 +95,17 @@ pre-install:
 
 do-install:
 	cd ${WRKSRC} && ./setupwfc < response
-	${INSTALL_SCRIPT} ${WRKSRC}/wfcmgr.x ${PREFIX}/bin/wfcmgr
-	${INSTALL_SCRIPT} ${WRKSRC}/wfica.x ${PREFIX}/bin/wfica
-	${SED} "s#/usr/lib/ICAClient#${CDIR}#g" \
+	${INSTALL_SCRIPT} ${WRKSRC}/wfcmgr.x ${DESTDIR}${PREFIX}/bin/wfcmgr
+	${INSTALL_SCRIPT} ${WRKSRC}/wfica.x ${DESTDIR}${PREFIX}/bin/wfica
+	${SED} "s#/usr/lib/ICAClient#${PLAIN_CDIR}#g" \
 		< ${CDIR}/util/icalicense.sh > ${CDIR}/util/icalicense.sh.fixed
 	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
+
+post-install:
+.for f in desktop/Citrix_PNA.desktop desktop/wfcmgr.desktop wfica.sh \
+    wfica_assoc.sh
+	sed -e s,${CDIR:Q},${PLAIN_CDIR:Q},g ${CDIR}/${f} > ${CDIR}/${f}.new
+	mv ${CDIR}/${f}.new ${CDIR}/${f}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
