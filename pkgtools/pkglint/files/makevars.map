@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.232 2013/03/08 12:35:43 obache Exp $
+# $NetBSD: makevars.map,v 1.233 2013/05/07 08:45:06 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -327,6 +327,7 @@ EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 # ^^ FIXME: Looks like a type mismatch.
 EXPORT_SYMBOLS_LDFLAGS	List of LdFlag [$system]
 EXTRACT_CMD		ShellCommand [$system]
+EXTRACT_DIR		Pathname [$package]
 EXTRACT_ELEMENTS	List of Pathmask [$package_list]
 EXTRACT_ONLY		List of Pathname [$package_list]
 EXTRACT_OPTS		List of ShellWord [m:as,c:as]
