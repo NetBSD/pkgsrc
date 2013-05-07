@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/03/07 12:58:11 obache Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/07 20:30:22 gls Exp $
 #
 
-DISTNAME=		logrotate-3.8.3
+DISTNAME=		logrotate-3.8.4
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
-MASTER_SITES+=		${MASTER_SITE_FREEBSD:=distfiles/}
+MASTER_SITES=		https://fedorahosted.org/releases/l/o/logrotate/
+FETCH_USING=		curl
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://fedorahosted.org/logrotate/
