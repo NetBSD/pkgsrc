@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1595 2013/05/06 19:56:00 gls Exp $
+$NetBSD: CHANGES-2013,v 1.1596 2013/05/07 08:49:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2426,3 +2426,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-HTTP-Body to 1.17 [hiramatsu 2013-05-06]
 	Updated emulators/suse121_krb5 to 12.1nb1 [gls 2013-05-06]
 	Updated audio/cmus to 2.5.0 [gls 2013-05-06]
+	Added sysutils/logrider version 0.2 [wiz 2013-05-07]
