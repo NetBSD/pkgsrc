@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2013/04/29 13:25:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.573 2013/05/07 08:49:40 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -264,6 +264,7 @@ SUBDIR+=	libpciaccess
 SUBDIR+=	libvirt
 SUBDIR+=	lilo
 SUBDIR+=	logfinder
+SUBDIR+=	logrider
 SUBDIR+=	logrot
 SUBDIR+=	logrotate
 SUBDIR+=	lsof
