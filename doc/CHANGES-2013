@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1596 2013/05/07 08:49:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1597 2013/05/07 10:06:59 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2427,3 +2427,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/suse121_krb5 to 12.1nb1 [gls 2013-05-06]
 	Updated audio/cmus to 2.5.0 [gls 2013-05-06]
 	Added sysutils/logrider version 0.2 [wiz 2013-05-07]
+	Updated x11/xf86-video-openchrome to 0.2.906 [sborrill 2013-05-07]
