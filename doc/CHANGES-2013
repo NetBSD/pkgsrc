@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1597 2013/05/07 10:06:59 sborrill Exp $
+$NetBSD: CHANGES-2013,v 1.1598 2013/05/07 14:09:31 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/cmus to 2.5.0 [gls 2013-05-06]
 	Added sysutils/logrider version 0.2 [wiz 2013-05-07]
 	Updated x11/xf86-video-openchrome to 0.2.906 [sborrill 2013-05-07]
+	Updated www/nginx to 1.4.1 [imil 2013-05-07]
