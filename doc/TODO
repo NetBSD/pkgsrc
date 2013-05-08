@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12130 2013/05/07 20:38:27 wiz Exp $
+$NetBSD: TODO,v 1.12131 2013/05/08 17:40:54 shattered Exp $
 
 Suggested new packages
 ======================
@@ -775,7 +775,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o level9-4.1
 	o lftp-4.4.0
 	o lgeneral-1.2.3
-	o lhasa-0.1.0
 	o libAppleWM-1.4.1
 	o libarchive-3.0.4
 	o libcaca-0.99beta18
