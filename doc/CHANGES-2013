@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1604 2013/05/08 12:51:29 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1605 2013/05/08 17:40:55 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2451,4 +2451,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-vte to 2.0.0 [obache 2013-05-08]
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.0.0 [obache 2013-05-08]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.0.0 [obache 2013-05-08]
+	Updated archivers/lhasa to 0.1.0 [shattered 2013-05-08]
 
