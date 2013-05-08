@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.25 2012/10/06 14:11:08 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/05/08 17:49:11 adam Exp $
 
-DISTNAME=	openexr-1.7.0
+DISTNAME=	openexr-2.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
+MASTER_SITES=	http://download.savannah.nongnu.org/releases/openexr/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
 LICENSE=	modified-bsd
 
-USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	OpenEXR.pc.in
 TEST_TARGET=		check
