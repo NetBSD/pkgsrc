@@ -1,6 +1,6 @@
-$NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:12:15 ryoon Exp $
+$NetBSD: patch-aa-toplevel,v 1.11 2013/05/08 09:14:30 sbd Exp $
 
---- configure.in.orig	2012-11-19 22:35:28.000000000 +0000
+--- configure.in.orig	2013-03-28 18:07:18.000000000 +0000
 +++ configure.in
 @@ -1797,7 +1797,7 @@ ld.])
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
@@ -41,3 +41,18 @@ $NetBSD: patch-aa-toplevel,v 1.10 2013/01/07 21:12:15 ryoon Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
+@@ -4990,12 +4999,13 @@ dnl If using sydneyaudio with Linux, ens
+ if test -n "$MOZ_SYDNEYAUDIO"; then
+    case "$target_os" in
+ linux*)
+-      PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
++      PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for Ogg or Wave decoding on Linux.  Disable with --disable-ogg --disable-wave.])])
+       ;;
+    esac
+ fi
++AC_SUBST(MOZ_ALSA)
+ AC_SUBST(MOZ_ALSA_LIBS)
+ 
+ dnl ========================================================
