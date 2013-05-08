@@ -1,2 +1,11 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2012/01/07 23:37:51 sbd Exp $
-include/thunderbird/nsslowhash.h
+@comment $NetBSD: PLIST.Linux,v 1.2 2013/05/08 09:12:53 sbd Exp $
+include/thunderbird/MediaEngineWebRTC.h
+${PLIST.sps}include/thunderbird/nsIProfiler.h
+include/thunderbird/nsRawDecoder.h
+include/thunderbird/nsRawReader.h
+include/thunderbird/nsRawStructs.h
+${PLIST.sps}include/thunderbird/shared-libraries.h
+${PLIST.sps}include/thunderbird/sps_sampler.h
+lib/thunderbird-sdk/sdk/lib/libmemory.a
+${PLIST.sps}lib/thunderbird/modules/Profiler.jsm
+${PLIST.sps}share/idl/thunderbird/nsIProfiler.idl

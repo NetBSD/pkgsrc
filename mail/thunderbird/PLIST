@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2013/01/19 03:43:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.47 2013/05/08 09:12:53 sbd Exp $
 bin/thunderbird
 include/thunderbird/.mkdir.done
 include/thunderbird/AccEvent.h
@@ -2820,7 +2820,7 @@ include/thunderbird/theora/codec.h
 include/thunderbird/theora/theora.h
 include/thunderbird/theora/theoradec.h
 include/thunderbird/theora/theoraenc.h
-include/thunderbird/tremor/ivorbiscodec.h
+${PLIST.tremor}include/thunderbird/tremor/ivorbiscodec.h
 include/thunderbird/txIEXSLTRegExFunctions.h
 include/thunderbird/txIFunctionEvaluationContext.h
 include/thunderbird/txINodeSet.h
@@ -2828,6 +2828,7 @@ include/thunderbird/txIXPathObject.h
 include/thunderbird/uconvutil.h
 include/thunderbird/updatedefines.h
 include/thunderbird/updatelogging.h
+${PLIST.vorbis}include/thunderbird/vorbis/codec.h
 include/thunderbird/xpcIJSGetFactory.h
 include/thunderbird/xpcIJSModuleLoader.h
 include/thunderbird/xpcIJSWeakReference.h
