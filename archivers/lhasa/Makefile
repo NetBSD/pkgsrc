@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/09/11 19:46:56 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/08 17:40:30 shattered Exp $
 #
 
-DISTNAME=	lhasa-0.0.7
+DISTNAME=	lhasa-0.1.0
 CATEGORIES=	archivers
-MASTER_SITES=	http://cloud.github.com/downloads/fragglet/lhasa/
+MASTER_SITES=	http://www.soulsphere.org/projects/lhasa/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fragglet.github.com/lhasa/
