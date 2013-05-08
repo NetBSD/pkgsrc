@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.47 2013/04/15 15:21:26 mef Exp $
+# $NetBSD: mozilla-common.mk,v 1.48 2013/05/08 09:11:20 sbd Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -80,6 +80,19 @@ BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 CONFIGURE_ARGS+=	--enable-libjpeg-turbo
 .else
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
+.endif
+
+PLIST_VARS+=	sps vorbis tremor
+
+.if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
+PLIST.sps=	yes
+.endif
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*) || ${OPSYS} == "DragonFly" \
+    || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+PLIST.tremor=	yes
+.else
+PLIST.vorbis=	yes
 .endif
 
 #
