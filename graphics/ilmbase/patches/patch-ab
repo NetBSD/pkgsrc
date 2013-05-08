@@ -1,8 +1,56 @@
-$NetBSD: patch-ab,v 1.1 2010/12/14 09:52:51 adam Exp $
+$NetBSD: patch-ab,v 1.2 2013/05/08 17:48:33 adam Exp $
 
---- configure.orig	2010-12-14 09:46:18.000000000 +0000
+Compatibility fix.
+Disable univeral binary build on Mac OS X.
+
+--- configure.orig	2013-03-14 16:58:22.000000000 +0000
 +++ configure
-@@ -20385,23 +20385,7 @@ else
+@@ -20524,7 +20524,7 @@ LIB_SUFFIX=""
+ lib_suffix_valid="no"
+ 
+ lib_namespace=""
+-if test "x${library_namespace_versioning}" == xyes ; then
++if test "x${library_namespace_versioning}" = xyes ; then
+     cat >>confdefs.h <<_ACEOF
+ #define IMATH_INTERNAL_NAMESPACE Imath_${ILMBASE_VERSION_API}
+ _ACEOF
+@@ -20545,7 +20545,7 @@ _ACEOF
+     lib_namespace="${ILMBASE_VERSION_API}"
+     LIB_SUFFIX="${ILMBASE_VERSION_API}"
+     lib_suffix_valid="yes"
+-elif test "x${library_namespace_versioning}" == xno ; then
++elif test "x${library_namespace_versioning}" = xno ; then
+     cat >>confdefs.h <<_ACEOF
+ #define IMATH_INTERNAL_NAMESPACE Imath
+ _ACEOF
+@@ -20583,7 +20583,7 @@ _ACEOF
+ fi
+ 
+ 
+-if test "x${lib_suffix_valid}" == xyes ; then
++if test "x${lib_suffix_valid}" = xyes ; then
+ LIB_SUFFIX_DASH="-${LIB_SUFFIX}"
+ 
+ 
+@@ -20622,7 +20622,7 @@ else
+   custom_public_namespace=no
+ fi;
+ 
+-if test "x${custom_public_namespace}" == xyes ; then
++if test "x${custom_public_namespace}" = xyes ; then
+     { echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&5
+ echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&2;}
+     cat >>confdefs.h <<\_ACEOF
+@@ -20640,7 +20640,7 @@ _ACEOF
+ 
+     public_namespace=""
+     custom_public_namespace=no
+-elif test "x${custom_public_namespace}" == xno ; then
++elif test "x${custom_public_namespace}" = xno ; then
+     cat >>confdefs.h <<\_ACEOF
+ #define IMATH_NAMESPACE Imath
+ _ACEOF
+@@ -20690,23 +20690,7 @@ else
  fi;
  
    if test "${osx_arch}" != default ; then
