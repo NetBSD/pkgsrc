@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 14:10:59 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/08 17:48:33 adam Exp $
 
-DISTNAME=	ilmbase-1.0.2
-PKGREVISION=	2
+DISTNAME=	ilmbase-2.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
+MASTER_SITES=	http://download.savannah.nongnu.org/releases/openexr/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
 LICENSE=	modified-bsd
 
-USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 LIBS.SunOS=		-lm
