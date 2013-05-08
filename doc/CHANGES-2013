@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1603 2013/05/08 12:40:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1604 2013/05/08 12:51:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2434,3 +2434,21 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-wtforms to 1.0.4 [kleink 2013-05-07]
 	Updated www/py-wtforms to 1.0.4nb1 [kleink 2013-05-08]
 	Updated devel/p5-Moose to 2.0802 [wen 2013-05-08]
+	Updated meta-pkgs/ruby-gnome2 to 2.0.0 [obache 2013-05-08]
+	Updated devel/ruby-gnome2-atk to 2.0.0 [obache 2013-05-08]
+	Updated devel/ruby-gnome2-gio to 2.0.0 [obache 2013-05-08]
+	Updated devel/ruby-gnome2-glib to 2.0.0 [obache 2013-05-08]
+	Updated devel/ruby-gnome2-gobject-introspection to 2.0.0 [obache 2013-05-08]
+	Updated devel/ruby-gnome2-pango to 2.0.0 [obache 2013-05-08]
+	Updated graphics/ruby-gnome2-gdk3 to 2.0.0 [obache 2013-05-08]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 2.0.0 [obache 2013-05-08]
+	Updated graphics/ruby-gnome2-goocanvas to 2.0.0 [obache 2013-05-08]
+	Updated graphics/ruby-gnome2-rsvg to 2.0.0 [obache 2013-05-08]
+	Updated multimedia/ruby-gnome2-gstreamer to 2.0.0 [obache 2013-05-08]
+	Updated print/ruby-gnome2-poppler to 2.0.0 [obache 2013-05-08]
+	Updated x11/ruby-gnome2-gtk to 2.0.0 [obache 2013-05-08]
+	Updated x11/ruby-gnome2-gtk3 to 2.0.0 [obache 2013-05-08]
+	Updated x11/ruby-gnome2-vte to 2.0.0 [obache 2013-05-08]
+	Updated x11/ruby-gnome2-gtksourceview2 to 2.0.0 [obache 2013-05-08]
+	Updated x11/ruby-gnome2-gtksourceview3 to 2.0.0 [obache 2013-05-08]
+
