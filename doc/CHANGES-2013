@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1602 2013/05/08 08:31:30 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.1603 2013/05/08 12:40:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/logrotate to 3.8.4 [gls 2013-05-07]
 	Updated www/py-wtforms to 1.0.4 [kleink 2013-05-07]
 	Updated www/py-wtforms to 1.0.4nb1 [kleink 2013-05-08]
+	Updated devel/p5-Moose to 2.0802 [wen 2013-05-08]
