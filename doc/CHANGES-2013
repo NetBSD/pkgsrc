@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1621 2013/05/09 15:42:35 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1622 2013/05/09 15:48:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2464,7 +2464,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.15 [adam 2013-05-09]
 	Updated security/mit-krb5 to 1.10.5 [adam 2013-05-09]
 	Updated graphics/rabbit to 2.0.7 [obache 2013-05-09]
-	Added devel/libtool-fortran to 2.4.2 [joerg 2013-05-09]
+	Added devel/libtool-fortran version 2.4.2 [joerg 2013-05-09]
 	Updated ham/fldigi to 3.21.70 [mef 2013-05-09]
 	Updated devel/jenkins to 1.509.1 [ryoon 2013-05-09]
 	Updated editors/OmegaT to 3.0.0 [ryoon 2013-05-09]
