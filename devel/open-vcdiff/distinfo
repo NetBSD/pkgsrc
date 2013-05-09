@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/01/03 18:33:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2013/05/09 20:05:36 joerg Exp $
 
 SHA1 (open-vcdiff-0.8.3.tar.gz) = fd14e8d46edac14988f1a6cab479bc07677d487c
 RMD160 (open-vcdiff-0.8.3.tar.gz) = ddfc8e0a9650a9382927d0e64b6d8184870fcfd2
 Size (open-vcdiff-0.8.3.tar.gz) = 757271 bytes
+SHA1 (patch-gflags_src_gflags.cc) = 866a0c3d90dd99fa6d27d09b3bf8b1ca92e78bc4
+SHA1 (patch-gtest_include_gtest_internal_gtest-port.h) = c96a9348af84c09cb2215eef8cf6f6d64dc52bf2
