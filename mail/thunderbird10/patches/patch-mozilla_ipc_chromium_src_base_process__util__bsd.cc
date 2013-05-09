@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.2 2013/05/09 13:59:35 joerg Exp $
 
 
---- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2012-03-08 18:52:15.229788000 +0100
-+++ mozilla/ipc/chromium/src/base/process_util_bsd.cc	2012-03-11 10:59:50.559480000 +0100
+--- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2013-05-07 18:54:47.000000000 +0000
++++ mozilla/ipc/chromium/src/base/process_util_bsd.cc
 @@ -0,0 +1,309 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be

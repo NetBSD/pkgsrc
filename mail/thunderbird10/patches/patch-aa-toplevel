@@ -1,6 +1,6 @@
-$NetBSD: patch-aa-toplevel,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+$NetBSD: patch-aa-toplevel,v 1.2 2013/05/09 13:59:35 joerg Exp $
 
---- configure.in.orig	2012-02-16 10:18:22.000000000 +0000
+--- configure.in.orig	2013-01-05 14:21:05.000000000 +0000
 +++ configure.in
 @@ -1945,7 +1945,7 @@ ld.])
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
@@ -21,7 +21,17 @@ $NetBSD: patch-aa-toplevel,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
      ;; 
  
  ia64*-hpux*)
-@@ -3185,6 +3188,9 @@ dnl ====================================
+@@ -3016,6 +3019,9 @@ if test "$GNU_CC"; then
+   AC_CACHE_CHECK(for visibility(hidden) attribute,
+                  ac_cv_visibility_hidden,
+                  [cat > conftest.c <<EOF
++#ifdef __clang__
++#error Not supported by old Mozilla
++#endif
+                   int foo __attribute__ ((visibility ("hidden"))) = 1;
+ EOF
+                   ac_cv_visibility_hidden=no
+@@ -3185,6 +3191,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
