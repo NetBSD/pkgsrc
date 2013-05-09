@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1616 2013/05/09 13:43:22 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1617 2013/05/09 13:55:18 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2464,3 +2464,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.15 [adam 2013-05-09]
 	Updated security/mit-krb5 to 1.10.5 [adam 2013-05-09]
 	Updated graphics/rabbit to 2.0.7 [obache 2013-05-09]
+	Added devel/libtool-fortran to 2.4.2 [joerg 2013-05-09]
