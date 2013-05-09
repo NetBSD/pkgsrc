@@ -1,7 +1,7 @@
-$NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h,v 1.1 2012/02/16 20:42:46 hans Exp $
+$NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h,v 1.2 2013/05/09 14:07:08 joerg Exp $
 
---- src/3rdparty/webkit/Source/JavaScriptCore/wtf/Threading.h.orig	2011-12-08 06:06:02.000000000 +0100
-+++ src/3rdparty/webkit/Source/JavaScriptCore/wtf/Threading.h	2012-01-15 02:04:00.160127709 +0100
+--- src/3rdparty/webkit/Source/JavaScriptCore/wtf/Threading.h.orig	2012-11-23 10:10:05.000000000 +0000
++++ src/3rdparty/webkit/Source/JavaScriptCore/wtf/Threading.h
 @@ -113,6 +113,8 @@ using WTF::createThread;
  using WTF::currentThread;
  using WTF::detachThread;
