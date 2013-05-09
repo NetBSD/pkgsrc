@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/01/26 11:07:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.24 2013/05/09 13:43:02 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -51,6 +51,7 @@ ${RUBY_VENDORLIB}/rabbit/element/video.rb
 ${RUBY_VENDORLIB}/rabbit/formatter.rb
 ${RUBY_VENDORLIB}/rabbit/frame.rb
 ${RUBY_VENDORLIB}/rabbit/front.rb
+${RUBY_VENDORLIB}/rabbit/gem-builder.rb
 ${RUBY_VENDORLIB}/rabbit/gem-finder.rb
 ${RUBY_VENDORLIB}/rabbit/gesture/handler.rb
 ${RUBY_VENDORLIB}/rabbit/gesture/processor.rb
