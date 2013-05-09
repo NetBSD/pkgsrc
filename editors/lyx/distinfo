@@ -1,13 +1,20 @@
-$NetBSD: distinfo,v 1.9 2012/11/23 12:32:00 joerg Exp $
+$NetBSD: distinfo,v 1.10 2013/05/09 13:56:57 joerg Exp $
 
 SHA1 (lyx-1.6.10.tar.bz2) = 344e14897ea7d004bf181eac39355f1b08f0af83
 RMD160 (lyx-1.6.10.tar.bz2) = b84409c19d320f915c3254d56d8aa0b40e61540d
 Size (lyx-1.6.10.tar.bz2) = 12559454 bytes
+SHA1 (patch-boost_boost_detail_container__fwd.hpp) = 20e3b5cb7cc0ffff68f8678a2977771ff6ef92e3
+SHA1 (patch-boost_libs_signals_src_named__slot__map.cpp) = 3d73f93911eb2a9b51b0be34e3a26e85ec5b54f4
 SHA1 (patch-development_MacOSX_Makefile.in) = ae9e51e3458f8986ae392b146f8684305b7fe25b
+SHA1 (patch-src_ISpell.cpp) = 6ec15efefe9f1c539f13a12a16757fd4e02b7b96
+SHA1 (patch-src_ServerSocket.cpp) = 62c9ecfe0de4516aba3ebca29b1a1e1768694551
 SHA1 (patch-src_WordList.cpp) = d747efcd6ca4d7015a5c6860a8844ac79a65672a
+SHA1 (patch-src_frontends_qt4_GuiCommandBuffer.cpp) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-src_insets_InsetInclude.cpp) = 94d52c40e188a2d8c083720e5b758c862e499726
-SHA1 (patch-src_insets_InsetTabular.cpp) = 9b8f9e5bf96780f17a68f95ba34724fd8b5e34c2
+SHA1 (patch-src_insets_InsetTabular.cpp) = 13e35c0a66ae87443315624d8c4bbbd11ea20cea
+SHA1 (patch-src_insets_InsetText.cpp) = 83719f8a1b6ff221ce34ef5a9b8c7da56c5fb79f
 SHA1 (patch-src_mathed_InsetMath.h) = c178b1436c7a969e29b328dde1a800e9ccb7af0e
 SHA1 (patch-src_mathed_MathData.h) = fcd51f36aa2aae29f75e041d7adb1d88baa370a5
+SHA1 (patch-src_support_debug.h) = fa6e4ddc0bd6fdeb00ab99e4be190be9430dced9
 SHA1 (patch-src_support_strfwd.h) = 4ef82f8703fd68f8b953447f05ab1fd71958c379
 SHA1 (patch-src_support_unicode.cpp) = 71bdc1b929a3c90bed84d6de5aa0734e548c67de
