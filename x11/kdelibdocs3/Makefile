@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2013/02/16 11:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2013/05/09 07:40:46 adam Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	x11 devel
 LICENSE=	gnu-gpl-v2
 

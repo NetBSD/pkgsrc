@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2013/04/15 13:31:28 obache Exp $
+# $NetBSD: Makefile,v 1.20 2013/05/09 07:39:39 adam Exp $
 #
 
 VERS=			1.7.6
 DISTNAME=		pysvn-${VERS}
 PKGNAME=		${PYPKGPREFIX}-pysvn-${VERS}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=	http://pysvn.barrys-emacs.org/source_kits/
 
