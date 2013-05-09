@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/30 13:24:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 13:47:25 joerg Exp $
 
 DISTNAME=	binutils-2.19.1
 PKGNAME=	cross-h8300-elf-${DISTNAME}
@@ -20,7 +20,7 @@ CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 GNU_CONFIGURE_PREFIX=	${H8300_PREFIX}
 
-CONFIGURE_ARGS+=	--target=h8300-elf
+CONFIGURE_ARGS+=	--disable-werror --target=h8300-elf
 INFO_FILES=		yes
 
 INSTALLATION_DIRS+=	bin ${H8300_PREFIX}
