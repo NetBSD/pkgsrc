@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1609 2013/05/09 00:42:59 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1610 2013/05/09 01:46:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2457,3 +2457,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/tmux to 1.8nb1 [minskim 2013-05-08]
 	Added multimedia/liboggz version 1.1.1 [rodent 2013-05-09]
 	Added audio/libfishsound version 1.0.0 [rodent 2013-05-09]
+	Added net/lldpd version 0.7.2 [mef 2013-05-09]
