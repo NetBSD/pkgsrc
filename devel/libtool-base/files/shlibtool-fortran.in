@@ -1,0 +1,4 @@
+#!@SH@
+# $NetBSD: shlibtool-fortran.in,v 1.1 2013/05/09 13:54:11 joerg Exp $
+
+exec @PREFIX@/bin/libtool-fortran --tag=disable-static "$@"
