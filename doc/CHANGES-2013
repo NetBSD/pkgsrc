@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1623 2013/05/09 15:55:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1624 2013/05/09 16:00:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2470,3 +2470,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/OmegaT to 3.0.0 [ryoon 2013-05-09]
 	Updated sysutils/pstree to 2.36 [wen 2013-05-09]
 	Updated www/p5-Dancer to 1.3113 [wen 2013-05-09]
+	Added misc/ruby-args_parser version 0.1.4 [mef 2013-05-09]
+	Added misc/ruby-hashie version 1.2.0 [mef 2013-05-09]
+	Added misc/ruby-parallel version 0.6.4 [mef 2013-05-09]
+	Added misc/ruby-rainbow version 1.1.4 [mef 2013-05-09]
+	Added net/ruby-tw version 0.3.9 [mef 2013-05-09]
+	Added net/ruby-twitter version 4.6.2 [mef 2013-05-09]
+	Added net/ruby-userstream version 1.3.0 [mef 2013-05-09]
