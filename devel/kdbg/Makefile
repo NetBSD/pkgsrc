@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2013/02/16 11:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2013/05/09 07:39:35 adam Exp $
 
 DISTNAME=	kdbg-2.2.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kdbg/}
 
