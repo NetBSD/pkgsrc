@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/02/21 15:14:45 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/09 07:39:32 adam Exp $
 
 DISTNAME=	pysqlite-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pysqlite/sqlite2/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases python
 MASTER_SITES=	http://pysqlite.googlecode.com/files/
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.85 2013/03/17 21:37:31 tsutsui Exp $
+# $NetBSD: Makefile,v 1.86 2013/05/09 07:40:14 adam Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
-PKGREVISION=		41
+PKGREVISION=		42
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}

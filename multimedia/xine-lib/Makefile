@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2013/03/16 06:20:45 obache Exp $
+# $NetBSD: Makefile,v 1.114 2013/05/09 07:40:21 adam Exp $
 
-PKGREVISION=	8
+PKGREVISION=	9
 
 .include "Makefile.common"
 

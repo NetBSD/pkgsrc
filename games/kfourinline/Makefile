@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/04/03 12:03:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 07:39:45 adam Exp $
 
 DISTNAME=	kfourinline-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	a four-in-a-row game for KDE
 

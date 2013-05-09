@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/04/03 12:03:39 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 07:39:47 adam Exp $
 
 DISTNAME=	konquest-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	a game of galactic conquest for KDE
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/04/03 12:03:37 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 07:39:46 adam Exp $
 
 DISTNAME=	kmahjongg-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	a tile matching game for one or two players
 
