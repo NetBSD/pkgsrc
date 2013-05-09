@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/01/26 21:36:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/09 07:39:17 adam Exp $
 #
 
 DISTNAME=	gupnp-dlna-0.6.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-dlna/0.6/}
 EXTRACT_SUFX=	.tar.xz
