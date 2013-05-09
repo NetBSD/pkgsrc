@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.1 2013/05/09 01:39:42 mef Exp $
+$NetBSD: distinfo,v 1.2 2013/05/09 05:42:53 mef Exp $
 
 SHA1 (lldpd-0.7.2.tar.gz) = 2c2f9e41ec7accd78a48cd80361cebb3e24ce261
 RMD160 (lldpd-0.7.2.tar.gz) = ec018def05aed186b3e60cbfda67f9bc52750475
 Size (lldpd-0.7.2.tar.gz) = 1415698 bytes
+SHA1 (patch-config.h.in) = 703dfd083d845b982baba58a7e5ac220fea14450
+SHA1 (patch-configure) = eda1e6a9df484a0b31e168b0ef69b9936afed613
+SHA1 (patch-m4_os.m4) = 57e8b6dd6b8d7882dcabe33c75e43c72855ff1a3
+SHA1 (patch-src_daemon_lldpd.c) = 1cf700e4cd6849449734f1435bb94f125b98ec3b
+SHA1 (patch-src_daemon_priv.c) = 25daafd24f6eceea02b201fbd2cf324f0ff21379
