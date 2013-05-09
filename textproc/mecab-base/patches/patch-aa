@@ -1,10 +1,26 @@
-$NetBSD: patch-aa,v 1.6 2012/06/10 11:54:44 obache Exp $
+$NetBSD: patch-aa,v 1.7 2013/05/09 15:07:59 joerg Exp $
 
 * Use own optimization flags.
 
---- configure.orig	2012-06-04 14:15:35.000000000 +0000
+--- configure.orig	2013-02-15 08:08:00.000000000 +0000
 +++ configure
-@@ -18036,8 +18036,8 @@ $as_echo "no" >&6; }
+@@ -17804,6 +17804,7 @@ $as_echo "#define HAVE_MMAP 1" >>confdef
+ fi
+ rm -f conftest.mmap conftest.txt
+ 
++if false; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lstdc++" >&5
+ $as_echo_n "checking for main in -lstdc++... " >&6; }
+ if ${ac_cv_lib_stdcpp_main+:} false; then :
+@@ -17837,6 +17838,7 @@ $as_echo "$ac_cv_lib_stdcpp_main" >&6; }
+ if test "x$ac_cv_lib_stdcpp_main" = xyes; then :
+   MECAB_LIBS="-lstdc++"
+ fi
++fi
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_create in -lpthread" >&5
+ $as_echo_n "checking for pthread_create in -lpthread... " >&6; }
+@@ -17989,8 +17991,8 @@ $as_echo "no" >&6; }
  fi
  
  if test -n "$GCC"; then
