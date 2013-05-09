@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2012/10/02 12:20:47 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2013/05/09 20:06:53 joerg Exp $
 
 SHA1 (pdns-2.9.22.5.tar.gz) = 7a514fe624c110afb8a262f4d76376d0f8e17bea
 RMD160 (pdns-2.9.22.5.tar.gz) = 8be76a7a63c3366d55724815245e2f955ec0adda
@@ -6,12 +6,24 @@ Size (pdns-2.9.22.5.tar.gz) = 1077617 bytes
 SHA1 (patch-aa) = e31080087d9369349e912c94e7dbfce72c9fc629
 SHA1 (patch-ab) = f54ace6ff60162e50119eb11bcb2f5db5e1ea480
 SHA1 (patch-configure) = 2a0beb262c421d7887dcabc56102c04b340a920b
+SHA1 (patch-modules_pipebackend_pipebackend.cc) = 760d8035e99faadfbb90ee31230e43c5157aecb4
+SHA1 (patch-modules_pipebackend_pipebackend.hh) = 7451c14660674210ca2024767e5cd44f7ec9da54
 SHA1 (patch-pdns_aes_brg_endian.h) = f7e5294251cd0d89e8ff802292f27b0c4cb50be7
-SHA1 (patch-pdns_backends_bind_bindbackend2.cc) = d6d5d2c4a726f19c8846d7f0c96a45bd5f2e3a8a
+SHA1 (patch-pdns_backends_bind_bindbackend2.cc) = 46fdd94323cd2ecb914e30db4560495cc8efd660
+SHA1 (patch-pdns_backends_bind_bindbackend2.hh) = 0cc15f8d7c53cc5dd2b81c4e2e67601a5192ab54
 SHA1 (patch-pdns_dns.hh) = f7d95f4c28fd986e76b4c25333b1b063992aa0c5
+SHA1 (patch-pdns_dnspacket.cc) = 659f6511b2fabfebb48fd9472a5e43fc42c0f356
+SHA1 (patch-pdns_dnsparser.cc) = 895e66ce1afb5f5af4bcb367a8946ab3d4eb5703
+SHA1 (patch-pdns_dnsparser.hh) = cd39fda0d7952bd9858f28eac750c7c05be08ced
+SHA1 (patch-pdns_dnspbench.cc) = 91670ad952f185c325270d977545425ef86dffe9
+SHA1 (patch-pdns_dynloader.cc) = 26743b3465fccb8a013790dcdc64d195af0666da
 SHA1 (patch-pdns_dynmessenger.cc) = df89ba91abc96319b323fc19b413b127112f4afb
 SHA1 (patch-pdns_ext_nedmalloc_malloc.c) = 979ccbf76edf9ff8ceeded0cf6fc1e401d1c1504
+SHA1 (patch-pdns_htimer.cc) = 3e984f93da7b7be3f309e45ba1182d75c3980769
+SHA1 (patch-pdns_nameserver.cc) = 5ff1dd6d419c4cbbf3e12bcfca22164dafcc3df6
 SHA1 (patch-pdns_packethandler.cc) = db36bf022ebf1e27f52e2e5f05f5fb81783f2288
-SHA1 (patch-pdns_pdns_recursor.cc) = f8dff83d9153d8c1eef2aeda23bf9338f9319b1a
+SHA1 (patch-pdns_pdns_recursor.cc) = 03b012eab35dd4b83602151736cf61bdd74f14ef
 SHA1 (patch-pdns_receiver.cc) = 8a9932413f5c8234478cd9d5b3f5237fcf9ac087
-SHA1 (patch-pdns_resolver.cc) = fec1bfc0083c59963c1bfa44210fe84266b4bb56
+SHA1 (patch-pdns_recursor__cache.cc) = 242bff58eff98ee943a7fb599a6590f079328251
+SHA1 (patch-pdns_resolver.cc) = 4a73c460abbbd223109ec119c6280f19d7402956
+SHA1 (patch-pdns_tcpreceiver.cc) = 836a1a114a8a6fdf67335db64909882ca498096a
