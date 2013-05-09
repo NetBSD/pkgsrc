@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/14 19:48:56 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/09 20:03:51 joerg Exp $
 
 DISTNAME=	pymol-v1.5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
@@ -32,10 +32,10 @@ CHECK_PORTABILITY_SKIP+=	setup/*
 INSTALLATION_DIRS=	bin
 
 # Gross hack
-PYSETUPBUILDTARGET=	install
+PYSETUPBUILDTARGET=	install ${_PYSETUPINSTALLARGS}
 
 post-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py install ${_PYSETUPINSTALLARGS}
 	${INSTALL_SCRIPT} ${WRKSRC}/pymol ${DESTDIR}${PREFIX}/bin/pymol
 
 .include "../../devel/zlib/buildlink3.mk"
