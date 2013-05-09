@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/09 01:39:42 mef Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 02:05:55 obache Exp $
 
 DISTNAME=		lldpd-0.7.2
 CATEGORIES=		net
@@ -29,5 +29,6 @@ AUTO_MKDIRS=		yes
 
 INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
