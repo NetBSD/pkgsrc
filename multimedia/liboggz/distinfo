@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/09 00:40:12 rodent Exp $
+
+SHA1 (liboggz-1.1.1.tar.gz) = 3540190c8c9a31d834aa7794ef991bbab699f4de
+RMD160 (liboggz-1.1.1.tar.gz) = e85073131bc8ec021b1529487ef21802d01b0260
+Size (liboggz-1.1.1.tar.gz) = 702261 bytes
