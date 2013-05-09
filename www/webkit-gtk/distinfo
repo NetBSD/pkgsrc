@@ -1,15 +1,25 @@
-$NetBSD: distinfo,v 1.61 2013/04/10 11:16:39 drochner Exp $
+$NetBSD: distinfo,v 1.62 2013/05/09 14:04:42 joerg Exp $
 
 SHA1 (webkitgtk-1.10.2.tar.xz) = 733ca23157eb8dd072d57becf325799c00bde630
 RMD160 (webkitgtk-1.10.2.tar.xz) = 91e6b8bcd4bb8234271dd6c6ebdba63dd1c0840e
 Size (webkitgtk-1.10.2.tar.xz) = 8633640 bytes
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = c5e1efdac5f6e2a4c035b6a3ce808d0e7a076703
 SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f166335d829aba9051c1aaf1b950ec655deef372
-SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 462e62d9078ef90df8cdeccbb64b0d2ccde5f11e
+SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = ce9766427bebd4aac0b8c7fc2c12cc0ed75150d5
+SHA1 (patch-Source_WTF_wtf_Atomics.h) = 3cc890798e7e956b75c2a181eca4a4d05cb545fc
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = f922736410d49e7d7d1a459bffd3dffd0364e85a
+SHA1 (patch-Source_WTF_wtf_RefCountedLeakCounter.h) = 3cdf53f9735675bff83b48a81db59c3512f306e3
+SHA1 (patch-Source_WTF_wtf_ThreadSafeRefCounted.h) = c068f8b248b8864eeaa582fa096eca279f06890e
+SHA1 (patch-Source_WebCore_Modules_webaudio_AudioContext.h) = 121b67efd25af6982f02a19d0b9e1e26be89e782
+SHA1 (patch-Source_WebCore_Modules_webaudio_AudioNode.h) = 1d22889087504d8fd42f38f72bde777850a4e767
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = b331ad70a9c6a133c854b65452bad4ae3558e2e6
 SHA1 (patch-Source_WebCore_editing_Editor.h) = 43562577dd6432a86fd8ee0a1e7bb0db31f07d2d
+SHA1 (patch-Source_WebCore_platform_gtk_FileSystemGtk.cpp) = 76e6e3e662edcfb7e327f2e475709a105d146e50
+SHA1 (patch-Source_WebCore_platform_network_DNSResolveQueue.h) = ba2960eeda95189a85744112b2533e66599eb4b7
 SHA1 (patch-Source_WebCore_platform_sql_SQLiteDatabase.cpp) = 0f33b188b242166584d5725060c5c430a819be61
+SHA1 (patch-Source_WebKit2_WebProcess_WebCoreSupport_WebPlatformStrategies.cpp) = 92f4016fe65fc6162b7f6dfcdc4c6ea2f5204b02
+SHA1 (patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp) = 816cecbcb8ddf4af65265f5e76745b93f1055904
+SHA1 (patch-Tools_DumpRenderTree_gtk_ImageDiff.cpp) = 36013247ccbc2df274762acb49304511c06cb0f7
 SHA1 (patch-ai) = 8df303ffde5c4398e56601c524e9ab4aff52096c
 SHA1 (patch-aj) = 930d1b5d73028b2f2e5abb33c15f72befadc64ce
 SHA1 (patch-ak) = 64ad843164f1c12968e933080e0966a9019abfdf
