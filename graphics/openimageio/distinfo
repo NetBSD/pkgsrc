@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/02/27 15:19:02 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2013/05/09 13:58:54 joerg Exp $
 
 SHA1 (oiio-Release-1.1.7.tar.gz) = 435286ffad18169fd615cd33d95c2b49d3e4ec17
 RMD160 (oiio-Release-1.1.7.tar.gz) = dfe15e32ff0c821165079bf517cf11dd87146ccc
@@ -8,8 +8,11 @@ SHA1 (patch-cmake_modules_FindOpenJpeg.cmake) = 20d15c8ee0a25ab631ed39910b6e441d
 SHA1 (patch-cmake_oiio__macros.cmake) = 016c4792c1dc85a903477f4c72af26577e1b2bb9
 SHA1 (patch-cmake_platform.cmake) = bb3ef743bdb04a76efcabb745af62473205e01ae
 SHA1 (patch-dpx.imageio_libdpx_DPXColorConverter.cpp) = 595415e7e2897798df76474dd906e25cdf3a929e
+SHA1 (patch-include_pugixml.hpp) = 242a95507b970c3cef94099d49fc2326b79bd23b
+SHA1 (patch-include_tbb_tbb__exception.h) = b2e98d44666d8a113dd6f21f2300ffdd8af3e20c
 SHA1 (patch-include_tbb_tbb__machine.h) = 7d9a196397315e0d39dd2f16139e011ab84c5630
 SHA1 (patch-include_tbb_tbb__misc.h) = 27995a9cdb72b182e352b2a649756af2d60fec86
 SHA1 (patch-libutil_sysutil.cpp) = b7484aef56ea239bae20faba1f04c14907557485
 SHA1 (patch-make_detectplatform.mk) = a399f09b9280109519a829dbacc1b924a074f4cc
+SHA1 (patch-psd.imageio_psdinput.cpp) = 234d617fb02b094e418ad3480888e51a1ec8f3d1
 SHA1 (patch-ptex.imageio_ptex_PtexPlatform.h) = 3c32f95181cfcf8c0e67249a4d04f7ea14a5e122
