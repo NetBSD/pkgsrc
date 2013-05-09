@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2013/01/04 09:29:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2013/05/09 07:10:08 adam Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -27,8 +27,6 @@ include/layout/plruns.h
 include/unicode/alphaindex.h
 include/unicode/appendable.h
 include/unicode/basictz.h
-include/unicode/bms.h
-include/unicode/bmsearch.h
 include/unicode/brkiter.h
 include/unicode/bytestream.h
 include/unicode/bytestrie.h
@@ -39,7 +37,7 @@ include/unicode/chariter.h
 include/unicode/choicfmt.h
 include/unicode/coleitr.h
 include/unicode/coll.h
-include/unicode/colldata.h
+include/unicode/compactdecimalformat.h
 include/unicode/curramt.h
 include/unicode/currpinf.h
 include/unicode/currunit.h
@@ -89,6 +87,7 @@ include/unicode/rbbi.h
 include/unicode/rbnf.h
 include/unicode/rbtz.h
 include/unicode/regex.h
+include/unicode/region.h
 include/unicode/rep.h
 include/unicode/resbund.h
 include/unicode/schriter.h
@@ -193,35 +192,35 @@ lib/icu/current
 lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
-lib/libicudata.so.50
+lib/libicudata.so.51
 lib/libicudata.so.${PKGVERSION}
 lib/libicui18n.a
 lib/libicui18n.so
-lib/libicui18n.so.50
+lib/libicui18n.so.51
 lib/libicui18n.so.${PKGVERSION}
 lib/libicuio.a
 lib/libicuio.so
-lib/libicuio.so.50
+lib/libicuio.so.51
 lib/libicuio.so.${PKGVERSION}
 lib/libicule.a
 lib/libicule.so
-lib/libicule.so.50
+lib/libicule.so.51
 lib/libicule.so.${PKGVERSION}
 lib/libiculx.a
 lib/libiculx.so
-lib/libiculx.so.50
+lib/libiculx.so.51
 lib/libiculx.so.${PKGVERSION}
 lib/libicutest.a
 lib/libicutest.so
-lib/libicutest.so.50
+lib/libicutest.so.51
 lib/libicutest.so.${PKGVERSION}
 lib/libicutu.a
 lib/libicutu.so
-lib/libicutu.so.50
+lib/libicutu.so.51
 lib/libicutu.so.${PKGVERSION}
 lib/libicuuc.a
 lib/libicuuc.so
-lib/libicuuc.so.50
+lib/libicuuc.so.51
 lib/libicuuc.so.${PKGVERSION}
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
