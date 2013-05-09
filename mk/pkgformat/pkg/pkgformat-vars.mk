@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.2 2011/12/13 16:35:48 joerg Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.3 2013/05/09 23:37:26 riastradh Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -23,8 +23,10 @@ PKG_DBDIR?=		/var/db/pkg
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _PKG_DBDIR=		${_CROSS_DESTDIR}${PKG_DBDIR}
+_HOST_PKG_DBDIR=	${HOST_PKG_DBDIR:U${PKG_DBDIR}}
 .elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _PKG_DBDIR=		${_CROSS_DESTDIR}${DEPOTBASE}
+_HOST_PKG_DBDIR=	${HOST_DEPOTBASE:U${DEPOTBASE}}
 .endif
 
 PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
@@ -67,12 +69,14 @@ _AUDIT_CONFIG_OPTION=	IGNORE_URL
 # correct package database directory.
 #
 PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
+HOST_PKGTOOLS_ARGS?=	-K ${_HOST_PKG_DBDIR}
 
 # Views are rooted in ${LOCALBASE}, all packages are depoted in
 # ${DEPOTBASE}, and the package database directory for the default view
 # is in ${PKG_DBDIR}.
 #
-PKG_VIEW_ARGS?=	-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
+PKG_VIEW_ARGS?=		-W ${LOCALBASE} -d ${DEPOTBASE} -k ${_CROSS_DESTDIR}${PKG_DBDIR}
+HOST_PKG_VIEW_ARGS?=	-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
 
 PKG_ADD?=	${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
 PKG_ADMIN?=	${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
@@ -82,12 +86,21 @@ PKG_INFO?=	${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
 PKG_VIEW?=	${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=	${LINKFARM_CMD}
 
+HOST_PKG_ADD?=		${PKG_ADD_CMD} ${HOST-PKGTOOLS_ARGS}
+HOST_PKG_ADMIN?=	${PKG_ADMIN_CMD} ${HOST_PKGTOOLS_ARGS}
+HOST_PKG_CREATE?=	${PKG_CREATE_CMD} ${HOST_PKGTOOLS_ARGS}
+HOST_PKG_DELETE?=	${PKG_DELETE_CMD} ${HOST_PKGTOOLS_ARGS}
+HOST_PKG_INFO?=		${PKG_INFO_CMD} ${HOST_PKGTOOLS_ARGS}
+HOST_PKG_VIEW?=		${PKG_VIEW_CMD} ${HOST_PKG_VIEW_ARGS}
+HOST_LINKFARM?=		${LINKFARM_CMD}
+
 # "${_PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
 # package that best matches pkgpattern.  Use this instead of
 # "${PKG_INFO} -e pkgpattern" if the latter would return more than one
 # package name.
 #
 _PKG_BEST_EXISTS?=	${PKG_INFO} -E
+_HOST_PKG_BEST_EXISTS?=	${HOST_PKG_INFO} -E
 
 # XXX Leave this here until all uses of this have been purged from the
 # XXX public parts of pkgsrc.

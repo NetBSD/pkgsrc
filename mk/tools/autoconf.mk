@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.15 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: autoconf.mk,v 1.16 2013/05/09 23:37:27 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -95,7 +95,7 @@ AUTOCONF_REQD?=		2.50
 .    if !empty(USE_TOOLS:Mautoconf\:run)
 _TOOLS_DEPMETHOD.autoconf=	DEPENDS
 .    else
-_TOOLS_DEPMETHOD.autoconf=	BUILD_DEPENDS
+_TOOLS_DEPMETHOD.autoconf=	TOOL_DEPENDS
 .    endif
 TOOLS_DEPENDS.autoconf?=	autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
 .    if empty(${_TOOLS_DEPMETHOD.autoconf}:M${TOOLS_DEPENDS.autoconf})
@@ -135,7 +135,7 @@ AUTOCONF_REQD?=		2.13
 .    if !empty(USE_TOOLS:Mautoconf213\:run)
 _TOOLS_DEPMETHOD.autoconf213=	DEPENDS
 .    else
-_TOOLS_DEPMETHOD.autoconf213=	BUILD_DEPENDS
+_TOOLS_DEPMETHOD.autoconf213=	TOOL_DEPENDS
 .    endif
 TOOLS_DEPENDS.autoconf213?=	autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf213
 .    if empty(${_TOOLS_DEPMETHOD.autoconf213}:M${TOOLS_DEPENDS.autoconf213})
