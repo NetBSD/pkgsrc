@@ -1,6 +1,10 @@
-$NetBSD: patch-src_common_imageio__exr.hh,v 1.1 2013/05/06 14:47:48 joerg Exp $
+$NetBSD: patch-src_common_imageio__exr.hh,v 1.2 2013/05/09 15:27:02 wiz Exp $
 
---- src/common/imageio_exr.hh.orig	2013-05-04 14:59:46.000000000 +0000
+stdc++ fixes from joerg (first, first half of third junk).
+
+openexr-2.0 compat from http://www.darktable.org/redmine/issues/9398
+
+--- src/common/imageio_exr.hh.orig	2013-04-03 20:13:14.000000000 +0000
 +++ src/common/imageio_exr.hh
 @@ -21,7 +21,15 @@
  #include "common/image.h"
@@ -18,7 +22,23 @@ $NetBSD: patch-src_common_imageio__exr.hh,v 1.1 2013/05/06 14:47:48 joerg Exp $
  
  #include <OpenEXR/ImfFrameBuffer.h>
  #include <OpenEXR/ImfTestFile.h>
-@@ -50,7 +58,7 @@ public:
+@@ -30,8 +38,14 @@
+ #include <OpenEXR/ImfChannelList.h>
+ #include <OpenEXR/ImfStandardAttributes.h>
+ 
++#ifdef OPENEXR_IMF_INTERNAL_NAMESPACE
++#define IMF_NS OPENEXR_IMF_INTERNAL_NAMESPACE
++#else
++#define IMF_NS Imf
++#endif
++
+ // this stores our exif data as a blob.
+-namespace Imf
++namespace IMF_NS
+ {
+ class Blob
+ {
+@@ -50,11 +64,11 @@ public:
    }
  
    uint32_t size;
@@ -27,3 +47,8 @@ $NetBSD: patch-src_common_imageio__exr.hh,v 1.1 2013/05/06 14:47:48 joerg Exp $
  };
  
  
+-typedef Imf::TypedAttribute<Imf::Blob> BlobAttribute;
++typedef IMF_NS::TypedAttribute<IMF_NS::Blob> BlobAttribute;
+ template <> const char *BlobAttribute::staticTypeName()
+ {
+   return "blob";
