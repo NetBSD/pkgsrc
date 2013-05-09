@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2013/05/09 13:53:47 joerg Exp $
+# $NetBSD: Makefile,v 1.1 2013/05/09 13:53:48 joerg Exp $
 
 ###########################################################################
 ###########################################################################
@@ -25,11 +25,12 @@
 
 .include "../../devel/libtool/Makefile.common"
 
-PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	1
+FILESDIR=	${.CURDIR}/../libtool-base/files
+
+PKGNAME=	${DISTNAME:S/-/-fortran-/}
 SVR4_PKGNAME=	ltoob
 
-COMMENT=	Generic shared library support script (the script itself)
+COMMENT=	Generic shared library support script (the script itself, incl. Fortran)
 
 CONFLICTS+=	libtool<=1.3.5nb11
 
@@ -58,10 +59,12 @@ CFLAGS+=	${_COMPILER_ABI_FLAG.${ABI}}
 # We are going to want libtool to find the same versions of the C, C++,
 # and Fortran compilers.
 #
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++ fortran
 CONFIGURE_ARGS+=	--disable-ltdl-install
 
 USE_TOOLS+=		echo
+
+INSTALLATION_DIRS+=	bin
 
 .PHONY: fix-libtool
 fix-libtool:
@@ -76,10 +79,11 @@ post-build: fix-libtool
 post-build:
 	@${SED}	-e "s|@PREFIX@|"${PREFIX:Q}"|g"				\
 		-e "s|@SH@|"${SH:Q}"|g"					\
-		${FILESDIR}/shlibtool.in > ${WRKSRC}/shlibtool
+		${FILESDIR}/shlibtool-fortran.in > ${WRKSRC}/shlibtool-fortran
 
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/bin/shlibtool
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool-fortran ${DESTDIR}${PREFIX}/bin/shlibtool-fortran
+	${INSTALL_SCRIPT} ${WRKSRC}/libtool ${DESTDIR}${PREFIX}/bin/libtool-fortran
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
 
