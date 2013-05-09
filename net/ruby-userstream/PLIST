@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/09 15:53:33 mef Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/user_stream.rb
+${GEM_LIBDIR}/lib/user_stream/api.rb
+${GEM_LIBDIR}/lib/user_stream/client.rb
+${GEM_LIBDIR}/lib/user_stream/configuration.rb
+${GEM_LIBDIR}/lib/user_stream/error.rb
+${GEM_LIBDIR}/lib/user_stream/version.rb
+${GEM_LIBDIR}/lib/userstream.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/userstream_spec.rb
+${GEM_LIBDIR}/userstream.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
