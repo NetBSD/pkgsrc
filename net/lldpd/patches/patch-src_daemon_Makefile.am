@@ -1,0 +1,18 @@
+$NetBSD: patch-src_daemon_Makefile.am,v 1.1 2013/05/09 06:55:57 mef Exp $
+
+Add DragonFly support.
+
+--- src/daemon/Makefile.am.orig	2013-04-13 17:18:24.000000000 +0900
++++ src/daemon/Makefile.am	2013-05-09 14:47:09.802207000 +0900
+@@ -43,6 +43,11 @@ liblldpd_la_SOURCES += \
+ 	interfaces-bsd.c \
+ 	dmi-dummy.c
+ endif
++if HOST_OS_DRAGONFLY
++liblldpd_la_SOURCES += \
++	interfaces-bsd.c \
++	dmi-dummy.c
++endif
+ if HOST_OS_OSX
+ liblldpd_la_SOURCES += \
+ 	interfaces-bsd.c \
