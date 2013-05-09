@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.52 2013/05/09 13:53:48 joerg Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.53 2013/05/09 23:37:25 riastradh Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -91,6 +91,10 @@ BUILD_DEFS+=		KERBEROS
 #	Makefiles to invoke the proper libtool.
 #
 .if !empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77)
+.  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) # XXX
+PKG_FAIL_REASON+=	"Cross-compiling Fortran with libtool NYI."
+.  endif
+
 PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool-fortran
 PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool-fortran
 
@@ -98,8 +102,13 @@ PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool-fortran
 BUILD_DEPENDS+=		libtool-fortran>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-fortran
 .  endif
 .else
+.  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+PKG_LIBTOOL?=		${CROSSBASE}/bin/libtool
+PKG_SHLIBTOOL?=		${CROSSBASE}/bin/shlibtool
+.  else
 PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
 PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
+.  endif
 .endif
 _LIBTOOL?=		${PKG_LIBTOOL}
 _SHLIBTOOL?=		${PKG_SHLIBTOOL}
@@ -107,7 +116,11 @@ LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
 LIBTOOL_REQD?=		2.2.6bnb3
-BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+TOOL_DEPENDS+=		cross-libtool-base-${MACHINE_ARCH}>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../cross/libtool-base
+.else
+TOOL_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
+.endif
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.15 2010/07/30 07:58:59 asau Exp $
+# $NetBSD: f2c.mk,v 1.16 2013/05/09 23:37:26 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -88,9 +88,9 @@ PREPEND_PATH+=	${_F2C_DIR}/bin
 .  endif
 
 # Dependencies:
-BUILD_DEPENDS+=	f2c>=20090411nb2:../../lang/f2c # translator
+TOOL_DEPENDS+=	f2c>=20090411nb2:../../lang/f2c # translator
 
-.if empty(PKGPATH:Mdevel/libtool-base) # See below
+.if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mcross/libtool-base) # See below
 .  include "../../devel/libf2c/buildlink3.mk" # library
 .endif
 
@@ -99,7 +99,7 @@ PKGSRC_MAKE_ENV+=	F2C_DIR=${F2C_DIR:Q}
 .  endif
 
 # libtool-base is special as it only needs f77 to extract linker flags etc.
-.if !empty(PKGPATH:Mdevel/libtool-base)
+.if !empty(PKGPATH:Mdevel/libtool-base) || !empty(PKGPATH:Mcross/libtool-base)
 pre-configure: fake-f2c-libs
 
 _WRAP_EXTRA_ARGS.FC+=	-L${WRKDIR}/.f2c/lib -I${WRKDIR}/.f2c/include
