@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.964 2013/04/22 17:28:42 imil Exp $
+# $NetBSD: Makefile,v 1.965 2013/05/09 01:41:58 mef Exp $
 #
 
 COMMENT=	Networking tools
@@ -268,6 +268,7 @@ SUBDIR+=	libupnp
 SUBDIR+=	libvncserver
 SUBDIR+=	libzrtpcpp
 SUBDIR+=	linc
+SUBDIR+=	lldpd
 SUBDIR+=	llnlxdir
 SUBDIR+=	llnlxftp
 SUBDIR+=	logjam
