@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/05/13 10:54:39 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2013/05/09 13:49:10 joerg Exp $
 
 SHA1 (gtest-1.6.0.zip) = 00d6be170eb9fc3b2198ffdcb1f1d6ba7fc6e621
 RMD160 (gtest-1.6.0.zip) = ae4be5325f0cd83fea9902aa8674915ef2dcf8b4
 Size (gtest-1.6.0.zip) = 1121697 bytes
 SHA1 (patch-Makefile.in) = f071727b3f8bc1c50837cc59dc87a20ff203ed72
 SHA1 (patch-configure) = 7e11bf665760d489ad0bbb0806d2f88c7e335738
+SHA1 (patch-include_gtest_internal_gtest-port.h) = 9cbe09192266019723f498238bbaa92132adb27e

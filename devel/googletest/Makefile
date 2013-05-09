@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:03 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/09 13:49:10 joerg Exp $
 #
 
 DISTNAME=	gtest-1.6.0
@@ -30,6 +30,11 @@ SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing dynamic python
 SUBST_FILES.fix-python+=	scripts/*py
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/gtest-config ${DESTDIR}${PREFIX}/bin
