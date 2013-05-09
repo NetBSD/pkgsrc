@@ -1,8 +1,24 @@
-$NetBSD: patch-configure,v 1.1 2011/09/14 17:47:38 hans Exp $
+$NetBSD: patch-configure,v 1.2 2013/05/09 15:07:59 joerg Exp $
 
---- configure.orig	2005-09-03 04:33:48.000000000 +0200
-+++ configure	2011-09-13 18:13:16.246039614 +0200
-@@ -20250,11 +20250,6 @@ echo "${ECHO_T}yes" >&6
+--- configure.orig	2005-09-03 02:33:48.000000000 +0000
++++ configure
+@@ -20169,6 +20169,7 @@ if test $ac_cv_lib_m_pow = yes; then
+   M_LIBS="-lm"
+ fi
+ 
++if false; then
+ echo "$as_me:$LINENO: checking for main in -lstdc++" >&5
+ echo $ECHO_N "checking for main in -lstdc++... $ECHO_C" >&6
+ if test "${ac_cv_lib_stdcpp_main+set}" = set; then
+@@ -20230,6 +20231,7 @@ echo "${ECHO_T}$ac_cv_lib_stdcpp_main" >
+ if test $ac_cv_lib_stdcpp_main = yes; then
+   STDCPP_LIBS="-lstdc++"
+ fi
++fi
+ 
+ ac_ext=cc
+ ac_cpp='$CXXCPP $CPPFLAGS'
+@@ -20250,11 +20252,6 @@ echo "${ECHO_T}yes" >&6
  else
          echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
