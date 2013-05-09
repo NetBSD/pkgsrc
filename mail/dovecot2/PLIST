@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/04/29 12:53:57 manu Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/05/09 03:49:16 manu Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -617,6 +617,7 @@ share/doc/dovecot/wiki/Logging.txt
 share/doc/dovecot/wiki/LoginProcess.txt
 share/doc/dovecot/wiki/MDA.txt
 share/doc/dovecot/wiki/MTA.txt
+share/doc/dovecot/wiki/MailboxSettings.txt
 share/doc/dovecot/wiki/MailLocation.LocalDisk.txt
 share/doc/dovecot/wiki/MailLocation.Maildir.txt
 share/doc/dovecot/wiki/MailLocation.SharedDisk.txt
