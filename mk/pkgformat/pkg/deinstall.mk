@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: deinstall.mk,v 1.2 2013/05/09 23:37:26 riastradh Exp $
 
 # Set the appropriate flags to pass to pkg_delete(1) based on the value
 # of DEINSTALLDEPENDS (see pkgsrc/mk/install/deinstall.mk).
@@ -46,6 +46,7 @@ _pkgformat-deinstall: .PHONY
 		${PKG_DELETE} ${_PKG_ARGS_DEINSTALL} "$$found" || ${TRUE} ; \
 	fi
 .if defined(DEINSTALLDEPENDS) && !empty(DEINSTALLDEPENDS:M[yY][eE][sS])
+# XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS split.
 .  for _pkg_ in ${BUILD_DEPENDS:C/:.*$//}
 	${RUN}								\
 	found=`${_PKG_BEST_EXISTS} ${_pkg_:Q} || ${TRUE}`;		\

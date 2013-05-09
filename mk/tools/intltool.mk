@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.5 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: intltool.mk,v 1.6 2013/05/09 23:37:27 riastradh Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,7 +50,7 @@ TOOLS_DEPENDS.intltool?=	intltool>=0.40.0:../../textproc/intltool
 .    if !empty(USE_TOOLS:Mintltool\:run)
 DEPENDS+=		${TOOLS_DEPENDS.intltool}
 .    else
-BUILD_DEPENDS+=		${TOOLS_DEPENDS.intltool}
+TOOL_DEPENDS+=		${TOOLS_DEPENDS.intltool}
 .    endif
 EVAL_PREFIX+=		TOOLS_PREFIX.intltool=intltool
 .    for _t_ in ${_TOOLS.intltool}
