@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2013/02/16 11:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2013/05/09 07:39:25 adam Exp $
 #
 
 DISTNAME=		gmpc-0.20.0
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		audio
 MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/0.20.0/ \
 			${MASTER_SITE_SOURCEFORGE:=musicpd/}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2013/04/03 12:27:58 markd Exp $
+# $NetBSD: Makefile,v 1.58 2013/05/09 07:40:31 adam Exp $
 #
 
 DISTNAME=		k3b-2.0.2
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=k3b/}
 EXTRACT_SUFX=		.tar.bz2
