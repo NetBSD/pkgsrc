@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/09 01:39:42 mef Exp $
+include/lldp-const.h
+include/lldpctl.h
+lib/liblldpctl.la
+lib/pkgconfig/lldpctl.pc
+man/man8/lldpcli.8
+man/man8/lldpctl.8
+man/man8/lldpd.8
+sbin/lldpcli
+sbin/lldpctl
+sbin/lldpd
+share/doc/lldpd/ChangeLog
+share/doc/lldpd/NEWS
+share/doc/lldpd/README.md
+share/examples/rc.d/lldpd
