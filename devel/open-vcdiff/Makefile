@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/01/03 18:33:20 agc Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 20:05:36 joerg Exp $
 #
 
 DISTNAME=	open-vcdiff-0.8.3
@@ -16,6 +16,11 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 
 AUTO_MKDIRS=	yes
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

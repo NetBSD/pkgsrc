@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/04/06 20:27:18 rodent Exp $
+# $NetBSD: Makefile,v 1.32 2013/05/09 20:05:35 joerg Exp $
 #
 
 DISTNAME=	CSSC-1.3.0
@@ -20,5 +20,10 @@ TEST_TARGET=	check
 
 TEXINFO_REQD=	4.0
 INFO_FILES=	yes
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 .include "../../mk/bsd.pkg.mk"
