@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.25 2011/09/08 20:17:15 abs Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.26 2013/05/09 23:37:25 riastradh Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -152,6 +152,8 @@ binpkg-list:
 # distribution-name|package-path|installation-prefix|comment| \
 #  description-file|maintainer|categories|build deps|run deps|for arch| \
 #  not for opsys
+#
+# XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS split.
 #
 .PHONY: describe
 .if !target(describe)

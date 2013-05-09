@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.2 2012/07/02 14:53:13 joerg Exp $
+# $NetBSD: depends.mk,v 1.3 2013/05/09 23:37:26 riastradh Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -33,18 +33,26 @@ _FULL_DEPENDS_CMD=	\
 	${AWK} '$$1 == "full" { print $$3; }' < ${_RDEPENDS_FILE}
 
 _REDUCE_DEPENDS_CMD=	${PKGSRC_SETENV} CAT=${CAT:Q}				\
-				PKG_ADMIN=${PKG_ADMIN_CMD:Q}		\
+				PKG_ADMIN=${PKG_ADMIN:Q}		\
+				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
+			${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-depends.awk
+
+_HOST_REDUCE_DEPENDS_CMD=						\
+			${PKGSRC_SETENV} CAT=${CAT:Q}			\
+				PKG_ADMIN=${HOST_PKG_ADMIN:Q}		\
 				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
 			${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-depends.awk
 
 _REDUCE_RESOLVED_DEPENDS_CMD=${PKGSRC_SETENV} CAT=${CAT:Q}		\
-				PKG_INFO=${PKG_INFO_CMD:Q}		\
+				PKG_INFO=${PKG_INFO:Q}			\
+				HOST_PKG_INFO=${HOST_PKG_INFO:Q}	\
 			${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-resolved-depends.awk \
 				< ${_RDEPENDS_FILE}
 
 _pkgformat-show-depends: .PHONY
 	@case ${VARNAME:Q}"" in						\
 	BUILD_DEPENDS)	${_REDUCE_DEPENDS_CMD} ${BUILD_DEPENDS:Q} ;;	\
+	TOOL_DEPENDS)	${_HOST_REDUCE_DEPENDS_CMD} ${TOOL_DEPENDS:Q} ;;\
 	DEPENDS|*)	${_REDUCE_DEPENDS_CMD} ${DEPENDS:Q} ;;		\
 	esac
 
@@ -53,6 +61,7 @@ _LIST_DEPENDS_CMD=	\
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
+			" "${TOOL_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
 
@@ -60,13 +69,15 @@ _LIST_DEPENDS_CMD.bootstrap=	\
 	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
-			" "${BOOTSTRAP_DEPENDS:Q} " " " "
+			" "${BOOTSTRAP_DEPENDS:Q} " " " " " "
 
 _RESOLVE_DEPENDS_CMD=	\
 	${PKGSRC_SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
+		HOST_PKG_INFO=${HOST_PKG_INFO:Q} \
 		_DEPENDS_FILE=${_DEPENDS_FILE:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/resolve-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
+			" "${TOOL_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
 
@@ -76,12 +87,29 @@ _RESOLVE_DEPENDS_CMD=	\
 #	@param $pattern The pattern of the package to be installed.
 #	@param $dir The pkgsrc directory from which the package can be
 #		built.
-#	@param $type The dependency type. Can be one of bootstrap,
+#	@param $type The dependency type. Can be one of bootstrap, tool,
 #		build, full.
 #
 _DEPENDS_INSTALL_CMD=							\
-	pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;		\
-	case $$type in bootstrap) Type=Bootstrap;; build) Type=Build;; full) Type=Full;; esac; \
+	case $$type in bootstrap) Type=Bootstrap;; tool) Type=Tool;; build) Type=Build;; full) Type=Full;; esac; \
+	case $$type in							\
+	bootstrap|tool)							\
+		if expr "${USE_CROSS_COMPILE:Uno}" : '[yY][eE][sS]' >/dev/null; then \
+			extradep="";					\
+		else							\
+			extradep=" ${PKGNAME}";				\
+		fi;							\
+		cross=no;						\
+		archopt=TARGET_ARCH=${MACHINE_ARCH};			\
+		pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
+		;;							\
+	build|full)							\
+		extradep=" ${PKGNAME}";					\
+		cross=${USE_CROSS_COMPILE:Uno};				\
+		archopt=;						\
+		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
+		;;							\
+	esac;								\
 	case "$$pkg" in							\
 	"")								\
 		${STEP_MSG} "$$Type dependency $$pattern: NOT found";	\
@@ -89,8 +117,18 @@ _DEPENDS_INSTALL_CMD=							\
 		${STEP_MSG} "Verifying $$target for $$dir";		\
 		[ -d "$$dir" ] || ${FAIL_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 		cd $$dir;						\
-		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
-		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
+		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV}			\
+			_PKGSRC_DEPS="$$extradep${_PKGSRC_DEPS}"	\
+			PKGNAME_REQD="$$pattern"			\
+			USE_CROSS_COMPILE=$$cross			\
+			$$archopt					\
+		    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target;	\
+		case $$type in						\
+		bootstrap|tool)						\
+			pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;; \
+		build|full)						\
+			pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;; \
+		esac;							\
 		case "$$pkg" in						\
 		"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
 			${ERROR_MSG} "    be installed, but one cannot be found.  Perhaps there is a"; \
@@ -100,7 +138,12 @@ _DEPENDS_INSTALL_CMD=							\
 		${STEP_MSG} "Returning to build of ${PKGNAME}";		\
 		;;							\
 	*)								\
-		objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;		\
+		case $$type in						\
+		bootstrap|tool)						\
+			objfmt=`${HOST_PKG_INFO} -Q OBJECT_FMT "$$pkg"`;; \
+		build|full)						\
+			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;;	\
+		esac;							\
 		case "$$objfmt" in					\
 		"")	${WARNING_MSG} "[depends.mk] Unknown object format for installed package $$pkg" ;; \
 		${OBJECT_FMT})	;;					\

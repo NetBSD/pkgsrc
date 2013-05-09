@@ -57,11 +57,12 @@ print_entries() {
 	done
 }
 
-if [ $# != 3 ]; then
-	echo "usage: list-dependencies bootstrap_depends build_depends depends" 1>&2
+if [ $# != 4 ]; then
+	echo "usage: list-dependencies bootstrap_depends tool_depends build_depends depends" 1>&2
 	exit 1
 fi
 
 print_entries bootstrap "$1"
-print_entries build "$2"
-print_entries full "$3"
+print_entries tool "$2"
+print_entries build "$3"
+print_entries full "$4"
