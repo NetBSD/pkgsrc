@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.7 2008/09/07 11:13:51 wiz Exp $
+# $NetBSD: genindex.awk,v 1.8 2013/05/09 23:37:27 riastradh Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -61,6 +61,7 @@ BEGIN {
 #depends /usr/pkgsrc/math/scilab xless-[0-9]*:../../x11/xless pvm-3.4.3:../../parallel/pvm3
 #
 
+# XXX Need to handle BUILD_DEPENDS/TOOL_DEPENDS split.
 /^(build_)?depends / {
 #
 # Read in the entire depends tree

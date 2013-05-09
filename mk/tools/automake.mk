@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.19 2009/06/10 15:31:45 wiz Exp $
+# $NetBSD: automake.mk,v 1.20 2013/05/09 23:37:27 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -111,7 +111,7 @@ AUTOCONF_REQD?=		2.58
 .    if !empty(USE_TOOLS:Mautomake\:run)
 _TOOLS_DEPMETHOD.automake=	DEPENDS
 .    else
-_TOOLS_DEPMETHOD.automake=	BUILD_DEPENDS
+_TOOLS_DEPMETHOD.automake=	TOOL_DEPENDS
 .    endif
 TOOLS_DEPENDS.automake?=	automake>=${AUTOMAKE_REQD}:../../devel/automake
 .    if empty(${_TOOLS_DEPMETHOD.automake}:M${TOOLS_DEPENDS.automake})
@@ -137,7 +137,7 @@ AUTOCONF_REQD?=		2.13
 .    if !empty(USE_TOOLS:Mautomake14\:run)
 _TOOLS_DEPMETHOD.automake14=	DEPENDS
 .    else
-_TOOLS_DEPMETHOD.automake14=	BUILD_DEPENDS
+_TOOLS_DEPMETHOD.automake14=	TOOL_DEPENDS
 .    endif
 TOOLS_DEPENDS.automake14?=	automake14>=${AUTOMAKE_REQD}:../../devel/automake14
 .    if empty(${_TOOLS_DEPMETHOD.automake14}:M${TOOLS_DEPENDS.automake14})
@@ -183,5 +183,5 @@ ${_TOOLS_AM_TYPE.${_t_}}+=	${_t_}
 .endif
 
 .if !empty(USE_TOOLS:Mgettext-m4)
-BUILD_DEPENDS+=	{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
+TOOL_DEPENDS+=	{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 .endif

@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-resolved-depends.awk,v 1.1 2012/07/02 14:53:13 joerg Exp $
+# $NetBSD: reduce-resolved-depends.awk,v 1.2 2013/05/09 23:37:26 riastradh Exp $
 #
 # Copyright (c) 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,12 +46,14 @@
 # ENVIRONMENT
 #	CAT
 #	PKG_INFO
+#	HOST_PKG_INFO (for cross-compilation)
 #
 ######################################################################
 
 BEGIN {
 	CAT = ENVIRON["CAT"] ? ENVIRON["CAT"] : "cat"
 	PKG_INFO = ENVIRON["PKG_INFO"] ? ENVIRON["PKG_INFO"] : "pkg_info"
+	HOST_PKG_INFO = ENVIRON["HOST_PKG_INFO"] ? ENVIRON["HOST_PKG_INFO"] : "pkg_info"
 
 	PROGNAME = "reduce-resolved-depends.awk"
 	ERRCAT = CAT " 1>&2"
@@ -61,7 +63,10 @@ BEGIN {
 			print "ERROR: [" PROGNAME "] invalid dependency line " $0 | ERRCAT
 			exit 1
 		}
-		if ($1 != "full" && $1 != "build" && $1 != "bootstrap") {
+		if ($1 != "full" &&
+		    $1 != "build" &&
+		    $1 != "tool" &&
+		    $1 != "bootstrap") {
 			print "ERROR: [" PROGNAME "] invalid dependency line " $0 | ERRCAT
 			exit 1
 		}
@@ -77,6 +82,7 @@ BEGIN {
 		if (type[i] == "full" && checked_full[pkg[i]] != 1) {
 			checked_full[pkg[i]] = 1
 			checked_build[pkg[i]] = 1
+			checked_tool[pkg[i]] = 1
 			checked_bootstrap[pkg[i]] = 1
 			print_line[i] = 1
 		}
@@ -86,12 +92,33 @@ BEGIN {
 		if (type[i] == "bootstrap" && checked_bootstrap[pkg[i]] != 1) {
 			checked_bootstrap[pkg[i]] = 1
 			found = 0
-			cmd = PKG_INFO " -qr " pkg[i]
-			while (cmd | getline dpkg) {
-				if (checked_full[dpkg] == 1)
-					found = 1
+			if (PKG_INFO == HOST_PKG_INFO) {
+				cmd = PKG_INFO " -qr " pkg[i]
+				while (cmd | getline dpkg) {
+					if (checked_full[dpkg] == 1)
+						found = 1
+				}
+				close(cmd)
 			}
-			close(cmd)
+			if (found == 0)
+				print_line[i] = 1
+		}
+	}
+
+	for (i = 0; i < lines; ++i) {
+		if (type[i] == "tool" && checked_tool[pkg[i]] != 1) {
+			checked_tool[pkg[i]] = 1
+			if (checked_bootstrap[pkg[i]] == 1)
+				continue
+			found = 0
+			if (PKG_INFO == HOST_PKG_INFO) {
+				cmd = PKG_INFO " -qr " pkg[i]
+				while (cmd | getline dpkg) {
+					if (checked_full[dpkg] == 1)
+						found = 1
+				}
+				close(cmd)
+			}
 			if (found == 0)
 				print_line[i] = 1
 		}
@@ -100,8 +127,9 @@ BEGIN {
 	for (i = 0; i < lines; ++i) {
 		if (type[i] == "build" && checked_build[pkg[i]] != 1) {
 			checked_build[pkg[i]] = 1
-			if (checked_bootstrap[pkg[i]] == 1)
-				continue
+			if (PKG_INFO == HOST_PKG_INFO)
+				if (checked_bootstrap[pkg[i]] == 1)
+					continue
 			found = 0
 			cmd = PKG_INFO " -qr " pkg[i]
 			while (cmd | getline dpkg) {

@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.30 2008/02/07 20:59:05 rillig Exp $
+# $NetBSD: distcc.mk,v 1.31 2013/05/09 23:37:26 riastradh Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -93,7 +93,7 @@ PREPEND_PATH+=	${_DISTCC_DIR}/bin
 .  endif
 
 # Add the dependency on distcc.
-BUILD_DEPENDS+=	distcc-[0-9]*:../../devel/distcc
+TOOL_DEPENDS+=	distcc-[0-9]*:../../devel/distcc
 
 .  if defined(DISTCC_HOSTS) && !empty(DISTCC_HOSTS)
 PKGSRC_MAKE_ENV+=	DISTCC_HOSTS=${DISTCC_HOSTS:Q}

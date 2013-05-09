@@ -30,11 +30,16 @@ error_msg() {
 }
 
 find_best() {
-	${PKG_INFO} -E "$1" || ${TRUE}
+	case $1 in
+	bootstrap|tool)
+		${HOST_PKG_INFO} -E "$2" || ${TRUE};;
+	build|full)
+		${PKG_INFO} -E "$2" || ${TRUE};;
+	esac
 }
 
 ${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
-	pkg=`find_best "$pattern"`
+	pkg=`find_best "$type" "$pattern"`
 	case "$pkg" in
 	"")
 		error_msg "[resolve-dependencies] A package matching \`\`$pattern'' should"

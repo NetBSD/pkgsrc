@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.9 2013/05/09 14:01:08 joerg Exp $
+# $NetBSD: clang.mk,v 1.10 2013/05/09 23:37:26 riastradh Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -13,7 +13,7 @@ COMPILER_CLANG_MK=	defined
 
 # Add the dependency on clang
 # TODO: may be installed already, check for this
-#BUILD_DEPENDS+= clang-[0-9]*:../../lang/clang
+#TOOL_DEPENDS+= clang-[0-9]*:../../lang/clang
 
 .include "../../mk/bsd.prefs.mk"
 
