@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/13 16:39:06 drochner Exp $
-${PYSITELIB}/PyQt4/Qsci.so
-qt4/qsci/api/python/QScintilla2.api
+@comment $NetBSD: PLIST,v 1.3 2013/05/09 20:07:39 joerg Exp $
+${PYSITELIB}/PyQt4/Qsci.la
+qt4/api/python/QScintilla2.api
 share/sip${PYVERSSUFFIX}/Qsci/qsciabstractapis.sip
 share/sip${PYVERSSUFFIX}/Qsci/qsciapis.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscicommand.sip
