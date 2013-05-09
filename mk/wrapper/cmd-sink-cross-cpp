@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-cross-cpp,v 1.1 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: cmd-sink-cross-cpp,v 1.2 2013/05/09 23:35:29 riastradh Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -29,17 +29,8 @@
 # OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-# Don't use standard include path.
-arg="-nostdinc"
-$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-. $buildcmd
-
-# Compiler searches for headers in /usr/include, emulate.
-arg="-isystem"
-$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-. $buildcmd
-
-arg="@CROSS_DESTDIR@/usr/include"
+# Use include files and libraries from the target system image.
+arg="--sysroot=@CROSS_DESTDIR@"
 $debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
 . $buildcmd
 
