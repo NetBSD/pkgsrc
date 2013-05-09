@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.46 2012/05/26 13:09:54 obache Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.47 2013/05/09 23:33:53 riastradh Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -137,7 +137,13 @@ TOOLS_CREATE+=			ar
 TOOLS_PATH.ranlib?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ranlib
 TOOLS_CREATE+=			ranlib
 
-NATIVE_CC:=	/usr/bin/cc
+NATIVE_CC:=	/usr/bin/cc -B /usr/libexec -B /usr/bin
 CC=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-gcc
+
+NATIVE_CXX:=	/usr/bin/c++ -B /usr/libexec -B /usr/bin
+CXX=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-g++
+
+NATIVE_LD:=	/usr/bin/ld
+LD=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ld
 
 .endif
