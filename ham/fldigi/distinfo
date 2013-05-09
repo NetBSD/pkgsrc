@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2013/05/06 14:49:32 joerg Exp $
+$NetBSD: distinfo,v 1.13 2013/05/09 14:09:13 mef Exp $
 
-SHA1 (fldigi-3.21.65.tar.gz) = 02b5a63e5895e39a3727bc717b5fe6ffefc602de
-RMD160 (fldigi-3.21.65.tar.gz) = 7cca0f4e066d02ca8141e8a8097ee721666888f2
-Size (fldigi-3.21.65.tar.gz) = 2134500 bytes
+SHA1 (fldigi-3.21.70.tar.gz) = 670700583404205990c7b7229eb6e75909698e63
+RMD160 (fldigi-3.21.70.tar.gz) = bcbb75218cc79d4662bf4bd07ed206823d9c953e
+Size (fldigi-3.21.70.tar.gz) = 2145803 bytes
 SHA1 (patch-src_dominoex_dominoex.cxx) = f1f94bb21856f1911c75ee0a138170fba17432b4
 SHA1 (patch-src_include_qrunner.h) = 575a142fa935be760e6d440de5b6d965c6259388
 SHA1 (patch-src_logbook_logsupport.cxx) = f5540103677064d8a6da61db8f445b792729305c
@@ -14,7 +14,6 @@ SHA1 (patch-src_spot_notify.cxx) = e0f2889f1ae2405326b2883f13f618c3d9bfd412
 SHA1 (patch-src_spot_pskrep.cxx) = 1ea5838d80224b06fe940802f4f6ee7ac4207a72
 SHA1 (patch-src_spot_spot.cxx) = e69b10e9f9e884d3ef3cf5bb18d882cb1a5db5a7
 SHA1 (patch-src_thor_thor.cxx) = 7df1c77f79f9746e243440740bb35994a09ac66e
-SHA1 (patch-src_throb_throb.cxx) = a5dc3edc64058076d046ee99e76dfc84663f756e
 SHA1 (patch-src_xmlrpcpp_XmlRpcClient.cpp) = 5d7aab9e194cd51ca0bd56430e751db1491dd1f7
 SHA1 (patch-src_xmlrpcpp_XmlRpcServer.cpp) = 30da72b30c6f66ecaa1e05ac1b53450db9a1c2cc
 SHA1 (patch-src_xmlrpcpp_base64.h) = 1f1b27e010c5e4ce0f9d5b0bf4a729eefc7535ac
