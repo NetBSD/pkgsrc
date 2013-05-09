@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/09 15:53:32 mef Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Changelog
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.markdown
+${GEM_LIBDIR}/lib/ansi_color.rb
+${GEM_LIBDIR}/lib/ansi_rgb.rb
+${GEM_LIBDIR}/lib/rainbow.rb
+${GEM_LIBDIR}/test/rainbow_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
