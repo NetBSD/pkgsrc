@@ -1,0 +1,33 @@
+# $NetBSD: Makefile,v 1.1 2013/05/09 01:39:42 mef Exp $
+
+DISTNAME=		lldpd-0.7.2
+CATEGORIES=		net
+MASTER_SITES=		http://media.luffy.cx/files/lldpd/
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://vincentbernat.github.com/lldpd/
+COMMENT=		802.1ab (LLDP) implementation
+LICENSE=		isc
+# `lldpcli` will be linked to GNU Readline (which is GPL licensed)
+# if available. To avoid this, use `--without-readline` as a configure
+# option.
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
+
+RCD_SCRIPTS=		lldpd
+PKG_GROUPS=		_lldpd
+PKG_USERS=		_lldpd:_lldpd
+PKG_HOME._lldpd=	${VARBASE}/chroot/lldpd
+
+OWN_DIRS=		${VARBASE}/chroot/lldpd
+AUTO_MKDIRS=		yes
+
+INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+
+.include "../../devel/libevent/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
