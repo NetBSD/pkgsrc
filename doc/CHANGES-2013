@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1614 2013/05/09 07:44:34 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1615 2013/05/09 08:41:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.1 [manu 2013-05-09]
 	Updated textproc/icu to 51.1 [adam 2013-05-09]
 	Updated net/samba to 3.6.15 [adam 2013-05-09]
+	Updated security/mit-krb5 to 1.10.5 [adam 2013-05-09]
