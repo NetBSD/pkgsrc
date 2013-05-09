@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-cross-gcc,v 1.2 2007/10/09 19:19:13 martti Exp $
+# $NetBSD: cmd-sink-cross-gcc,v 1.3 2013/05/09 23:35:29 riastradh Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -29,41 +29,8 @@
 # OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-if [ "${dont_link}" != yes ]; then
-	# Don't use standard search paths
-	arg="-Wl,-nostdlib"
-	$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-	. $buildcmd
-
-	# All normal library locations should be checked for
-	for libdir in /usr/lib @PREFIX@/lib; do
-		arg="-Wl,-rpath-link,@CROSS_DESTDIR@${libdir}"
-		$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-		. $buildcmd
-	done
-
-	# Compiler searches for libraries in /usr/lib, emulate.
-	arg="-L@CROSS_DESTDIR@/usr/lib"
-	$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-	. $buildcmd
-
-	# crt1.o and friends needs to be found as well.
-	arg="-B@CROSS_DESTDIR@/usr/lib"
-	$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-	. $buildcmd
-fi
-
-# Don't use standard include path.
-arg="-nostdinc"
-$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-. $buildcmd
-
-# Compiler searches for headers in /usr/include, emulate.
-arg="-isystem"
-$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
-. $buildcmd
-
-arg="@CROSS_DESTDIR@/usr/include"
+# Use include files and libraries from the target system image.
+arg="--sysroot=@CROSS_DESTDIR@"
 $debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
 . $buildcmd
 
