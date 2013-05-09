@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/05/09 07:39:11 adam Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/09 13:58:54 joerg Exp $
 
 OIIOVER=	1.1.7
 DISTNAME=	oiio-Release-${OIIOVER}
@@ -25,9 +25,10 @@ CMAKE_ARGS+=		-DILMBASE_HOME:STRING=${BUILDLINK_PREFIX.ilmbase}
 CMAKE_ARGS+=		-DOPENJPEG_HOME:STRING=${BUILDLINK_PREFIX.openjpeg15}
 CMAKE_ARGS+=		-DOPENEXR_HOME:STRING=${BUILDLINK_PREFIX.openexr}
 
-post-patch:
+pre-install:
 	${RM} -f ${WRKSRC}/include/tbb/tbb_machine.h.orig
 	${RM} -f ${WRKSRC}/include/tbb/tbb_misc.h.orig
+	${RM} -f ${WRKSRC}/include/tbb/tbb_exception.h.orig
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
