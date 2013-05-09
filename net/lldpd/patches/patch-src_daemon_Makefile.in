@@ -1,0 +1,26 @@
+$NetBSD: patch-src_daemon_Makefile.in,v 1.1 2013/05/09 06:55:57 mef Exp $
+
+Add DragonFly support.
+
+--- src/daemon/Makefile.in.orig	2013-04-20 10:06:23.000000000 +0900
++++ src/daemon/Makefile.in	2013-05-09 14:53:36.188143000 +0900
+@@ -70,6 +70,10 @@ sbin_PROGRAMS = lldpd$(EXEEXT)
+ @HOST_OS_NETBSD_TRUE@	interfaces-bsd.c \
+ @HOST_OS_NETBSD_TRUE@	dmi-dummy.c
+ 
++@HOST_OS_DRAGONFLY_TRUE@am__append_4 = \
++@HOST_OS_DRAGONFLY_TRUE@	interfaces-bsd.c \
++@HOST_OS_DRAGONFLY_TRUE@	dmi-dummy.c
++
+ @HOST_OS_OSX_TRUE@am__append_5 = \
+ @HOST_OS_OSX_TRUE@	interfaces-bsd.c \
+ @HOST_OS_OSX_TRUE@	dmi-osx.c
+@@ -121,6 +125,8 @@ am__liblldpd_la_SOURCES_DIST = frame.h f
+ @HOST_OS_OPENBSD_TRUE@	liblldpd_la-dmi-openbsd.lo
+ @HOST_OS_NETBSD_TRUE@am__objects_4 = liblldpd_la-interfaces-bsd.lo \
+ @HOST_OS_NETBSD_TRUE@	liblldpd_la-dmi-dummy.lo
++@HOST_OS_DRAGONFLY_TRUE@am__objects_4 = liblldpd_la-interfaces-bsd.lo \
++@HOST_OS_DRAGONFLY_TRUE@	liblldpd_la-dmi-dummy.lo
+ @HOST_OS_OSX_TRUE@am__objects_5 = liblldpd_la-interfaces-bsd.lo \
+ @HOST_OS_OSX_TRUE@	liblldpd_la-dmi-osx.lo
+ @USE_SNMP_TRUE@am__objects_6 = liblldpd_la-agent.lo \
