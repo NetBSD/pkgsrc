@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2013/05/09 15:07:59 joerg Exp $
+
+--- configure.orig	2013-05-09 15:00:15.000000000 +0000
++++ configure
+@@ -20635,6 +20635,7 @@ CABOCHA_DEFAULT_RC="$sysconfdir/cabochar
+ CABOCHA_TXTMODEL_LIST=`(cd model; echo *.txtmodel.gz)`
+ CABOCHA_MODEL_LIST=`(cd model; echo *.txtmodel.gz | sed s/.txtmodel.gz/.model/g)`
+ 
++if false; then
+ echo "$as_me:$LINENO: checking for main in -lstdc++" >&5
+ echo $ECHO_N "checking for main in -lstdc++... $ECHO_C" >&6
+ if test "${ac_cv_lib_stdcpp_main+set}" = set; then
+@@ -20696,6 +20697,7 @@ echo "${ECHO_T}$ac_cv_lib_stdcpp_main" >
+ if test $ac_cv_lib_stdcpp_main = yes; then
+   STDCPP_LIBS="-lstdc++"
+ fi
++fi
+ 
+ LIBS="$YAMCHA_LIBS $STDCPP_LIBS $LIBS"
+ CABOCHA_LIBS="$LIBS"
