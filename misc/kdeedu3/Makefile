@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2013/02/16 11:23:19 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2013/05/09 07:40:09 adam Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 

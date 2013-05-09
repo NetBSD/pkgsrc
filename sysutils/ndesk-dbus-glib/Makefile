@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2013/01/26 21:36:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/09 07:39:19 adam Exp $
 
 DISTNAME=	ndesk-dbus-glib-0.4.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ndesk.org/archive/ndesk-dbus/
 

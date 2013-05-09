@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/04/03 12:03:31 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/09 07:39:43 adam Exp $
 
 DISTNAME=	kapman-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	Pac-Man clone
 
