@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1619 2013/05/09 15:17:40 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1620 2013/05/09 15:25:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2467,3 +2467,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/libtool-fortran to 2.4.2 [joerg 2013-05-09]
 	Updated ham/fldigi to 3.21.70 [mef 2013-05-09]
 	Updated devel/jenkins to 1.509.1 [ryoon 2013-05-09]
+	Updated editors/OmegaT to 3.0.0 [ryoon 2013-05-09]
