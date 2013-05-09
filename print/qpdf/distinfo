@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/03/02 17:58:35 joerg Exp $
+$NetBSD: distinfo,v 1.4 2013/05/09 14:01:43 joerg Exp $
 
 SHA1 (qpdf-4.0.1.tar.gz) = 029ad13e1089396df34aeee3c5e386789715112a
 RMD160 (qpdf-4.0.1.tar.gz) = e687b293ef45ee3e60600c2ae8c660f013a10c91
 Size (qpdf-4.0.1.tar.gz) = 5031080 bytes
+SHA1 (patch-include_qpdf_QPDFExc.hh) = 4a262d7de750c39dfd66cc33314b24b057e206e0
 SHA1 (patch-libqpdf_QPDF.cc) = 06837ddacad4a2d9cb8bb28af8c81e557d9a9a6e
 SHA1 (patch-make_libtool.mk) = 24953c7f2db264eff7e543fae990732a9338d5d8
