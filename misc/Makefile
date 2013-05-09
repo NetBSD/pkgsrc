@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.400 2013/04/30 13:30:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.401 2013/05/09 16:22:45 mef Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -244,14 +244,18 @@ SUBDIR+=	routeplanner-cli
 SUBDIR+=	rox-memo
 SUBDIR+=	rpm
 SUBDIR+=	ruby-ansi
+SUBDIR+=	ruby-args_parser
 SUBDIR+=	ruby-bundler
 SUBDIR+=	ruby-columnize
 SUBDIR+=	ruby-commander
 SUBDIR+=	ruby-configuration
 SUBDIR+=	ruby-daemons
 SUBDIR+=	ruby-gem_plugin
+SUBDIR+=	ruby-hashie
 SUBDIR+=	ruby-launchy
+SUBDIR+=	ruby-parallel
 SUBDIR+=	ruby-progressbar
+SUBDIR+=	ruby-rainbow
 SUBDIR+=	ruby-sprockets
 SUBDIR+=	ruby-sprockets22
 SUBDIR+=	ruby-transaction-simple
