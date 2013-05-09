@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.51 2012/03/19 12:34:14 joerg Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.52 2013/05/09 13:53:48 joerg Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -90,8 +90,17 @@ BUILD_DEFS+=		KERBEROS
 # LIBTOOL is the publicly-readable variable that should be used by
 #	Makefiles to invoke the proper libtool.
 #
+.if !empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77)
+PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool-fortran
+PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool-fortran
+
+.  if defined(USE_LIBTOOL)
+BUILD_DEPENDS+=		libtool-fortran>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-fortran
+.  endif
+.else
 PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
 PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
+.endif
 _LIBTOOL?=		${PKG_LIBTOOL}
 _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
