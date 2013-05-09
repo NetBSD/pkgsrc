@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/01/26 11:07:29 obache Exp $
+# $NetBSD: Makefile,v 1.40 2013/05/09 13:43:02 obache Exp $
 #
 
-DISTNAME=	rabbit-2.0.6
+DISTNAME=	rabbit-2.0.7
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rabbit-shocker.org/download/
 
@@ -21,7 +21,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-coderay>=1.0.0:../../textproc/ruby-coderay
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown-[0-9]*:../../textproc/ruby-kramdown
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext-[0-9]*:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-faraday-[0-9]*:../../www/ruby-faraday
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gstreamer-[0-9]*:../../multimedia/ruby-gnome2-gstreamer
 
 USE_RUBY_SETUP=		yes
 USE_RUBY_SETUP_PKG=	yes
