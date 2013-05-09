@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.256 2013/04/24 09:55:03 sbd Exp $
+# $NetBSD: replace.mk,v 1.257 2013/05/09 23:37:27 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -128,14 +128,14 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`byacc'' conflict in USE_TOOLS."
 # dependency is determined by the modifier specified for each tool:
 #
 #    BOOTSTRAP_DEPENDS:	:bootstrap
-#    BUILD_DEPENDS:	:build (default), :pkgsrc
+#    TOOL_DEPENDS:	:build (default), :pkgsrc
 #    DEPENDS:		:run
 #
 .for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:bootstrap}
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BOOTSTRAP_DEPENDS
 .endfor
 .for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:build} ${USE_TOOLS:M*\:pkgsrc}
-_TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BUILD_DEPENDS
+_TOOLS_DEPMETHOD.${_t_:C/:.*//}=	TOOL_DEPENDS
 .endfor
 .for _t_ in ${USE_TOOLS:M*\:run}
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
@@ -143,37 +143,37 @@ _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
 
 .if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 .  if defined(_TOOLS_DEPMETHOD.bison-yacc) && \
-      (${_TOOLS_DEPMETHOD.bison-yacc} == "BUILD_DEPENDS") && \
+      (${_TOOLS_DEPMETHOD.bison-yacc} == "TOOL_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.yacc)
 _TOOLS_DEPMETHOD.bison-yacc=	${_TOOLS_DEPMETHOD.yacc}
 .  endif
 .endif
 .if !empty(_USE_TOOLS:Mflex)		# flex > lex
-.  if (${_TOOLS_DEPMETHOD.flex} == "BUILD_DEPENDS") && \
+.  if (${_TOOLS_DEPMETHOD.flex} == "TOOL_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.lex)
 _TOOLS_DEPMETHOD.flex=		${_TOOLS_DEPMETHOD.lex}
 .  endif
 .endif
 .if !empty(_USE_TOOLS:Mgawk)		# gawk > awk
-.  if (${_TOOLS_DEPMETHOD.gawk} == "BUILD_DEPENDS") && \
+.  if (${_TOOLS_DEPMETHOD.gawk} == "TOOL_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.awk)
 _TOOLS_DEPMETHOD.gawk=		${_TOOLS_DEPMETHOD.awk}
 .  endif
 .endif
 .if !empty(_USE_TOOLS:Mgm4)		# gm4 > m4
-.  if (${_TOOLS_DEPMETHOD.gm4} == "BUILD_DEPENDS") && \
+.  if (${_TOOLS_DEPMETHOD.gm4} == "TOOL_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.m4)
 _TOOLS_DEPMETHOD.gm4=		${_TOOLS_DEPMETHOD.m4}
 .  endif
 .endif
 .if !empty(_USE_TOOLS:Mgsed)		# gsed > sed
-.  if (${_TOOLS_DEPMETHOD.gsed} == "BUILD_DEPENDS") && \
+.  if (${_TOOLS_DEPMETHOD.gsed} == "TOOL_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.sed)
 _TOOLS_DEPMETHOD.gsed=		${_TOOLS_DEPMETHOD.sed}
 .  endif
 .endif
 .if !empty(_USE_TOOLS:Mgsoelim)		# gsoelim > soelim
-.  if (${_TOOLS_DEPMETHOD.gsoelim} == "BUILD_DEPENDS") && \
+.  if (${_TOOLS_DEPMETHOD.gsoelim} == "TOOL_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.soelim)
 _TOOLS_DEPMETHOD.gsoelim=	${_TOOLS_DEPMETHOD.soelim}
 .  endif

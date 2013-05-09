@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.9 2011/09/08 20:17:15 abs Exp $
+# $NetBSD: bsd.utils.mk,v 1.10 2013/05/09 23:37:25 riastradh Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -10,7 +10,7 @@
 #
 DEPENDS_TYPE?=  all
 .if !empty(DEPENDS_TYPE:Mbuild) || !empty(DEPENDS_TYPE:Mall)
-_ALL_DEPENDS+=	${BOOTSTRAP_DEPENDS} ${BUILD_DEPENDS}
+_ALL_DEPENDS+=	${BOOTSTRAP_DEPENDS} ${BUILD_DEPENDS} ${TOOL_DEPENDS}
 .endif
 .if !empty(DEPENDS_TYPE:Minstall) || !empty(DEPENDS_TYPE:Mpackage) || \
     !empty(DEPENDS_TYPE:Mall)
@@ -31,6 +31,8 @@ show-depends-dirs show-depends-pkgpaths:
 
 # _DEPENDS_WALK_CMD holds the command (sans arguments) to walk the
 # dependency graph for a package.
+#
+# XXX Need to handle TOOL_DEPENDS/BUILD_DEPENDS split and cross-compilation.
 #
 _DEPENDS_WALK_MAKEFLAGS?=	${MAKEFLAGS}
 _DEPENDS_WALK_CMD=							\
