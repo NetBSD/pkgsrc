@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1611 2013/05/09 03:45:40 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1612 2013/05/09 04:07:38 manu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2459,3 +2459,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added audio/libfishsound version 1.0.0 [rodent 2013-05-09]
 	Added net/lldpd version 0.7.2 [mef 2013-05-09]
 	Updated mail/getmail to 4.40.2 [schmonz 2013-05-09]
+	Updated mail/dovecot2 to 2.2.1 [manu 2013-05-09]
