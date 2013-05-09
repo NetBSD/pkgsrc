@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1607 2013/05/08 18:05:22 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.1608 2013/05/09 00:40:32 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2455,3 +2455,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ilmbase to 2.0.0 [adam 2013-05-08]
 	Updated graphics/openexr to 2.0.0 [adam 2013-05-08]
 	Updated misc/tmux to 1.8nb1 [minskim 2013-05-08]
+	Added multimedia/liboggz version 1.1.1 [rodent 2013-05-09]
