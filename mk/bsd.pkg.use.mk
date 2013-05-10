@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.53 2013/05/09 23:37:25 riastradh Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.54 2013/05/10 09:07:37 obache Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -90,7 +90,8 @@ BUILD_DEFS+=		KERBEROS
 # LIBTOOL is the publicly-readable variable that should be used by
 #	Makefiles to invoke the proper libtool.
 #
-.if !empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77)
+.if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran) || \
+    defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran77)
 .  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) # XXX
 PKG_FAIL_REASON+=	"Cross-compiling Fortran with libtool NYI."
 .  endif
