@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/01/16 20:55:30 adam Exp $
+# $NetBSD: Makefile,v 1.41 2013/05/10 05:39:20 riastradh Exp $
 
 SNAPSHOT_DATE=	20130115
 
@@ -51,6 +51,11 @@ CONFIG_SHELL=		${BASH}
 CONFIGURE_ARGS+=	--enable-pic	# uses libtool's -prefer-pic
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 MAKE_ENV+=		SH=${SH:Q}
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+# XXX Consider passing this whether cross-compiling or not.
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+.endif
 
 BUILD_TARGET=		default
 INSTALL_TARGET=		install-lib-static install-cli
