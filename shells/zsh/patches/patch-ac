@@ -1,17 +1,23 @@
-$NetBSD: patch-ac,v 1.28 2013/02/22 13:40:30 jperkin Exp $
+$NetBSD: patch-ac,v 1.29 2013/05/10 01:17:33 riastradh Exp $
 
 First chunk:
 Add support for thread limits.
 From Peter Stephenson <Peter.Stephenson@csr.com> on zsh-workers.
+Accepted by Peter Stephenson <p.w.stephenson@ntlworld.com> on
+zsh-workers on 2012-08-16.
 
-All other chunks:
+Middle chunks:
+Use a compile test, not a run test, for whether various rlimit values
+are equivalent.  A compile test is sufficient because zsh uses these
+values in switch cases, so they must be compile-time, if not
+preprocessor-time, constants.
+
+Last chunk:
 Make this package build on Interix.  Patches provided by Hiramatsu
 Yoshifumi in PR pkg/25946.
 Last chunk only:
 Don't force -Wl,--whole-archive for NetBSD, it breaks the build with
 clang, which doesn't have a reason to disable it again.
-
-All chunks:
 Accepted by Peter Stephenson <p.w.stephenson@ntlworld.com> on
 zsh-workers on 2012-08-16.
 
@@ -60,7 +66,155 @@ zsh-workers on 2012-08-16.
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for limit RLIMIT_NOFILE" >&5
  $as_echo_n "checking for limit RLIMIT_NOFILE... " >&6; }
  if ${zsh_cv_have_RLIMIT_NOFILE+:} false; then :
-@@ -11630,6 +11666,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
+@@ -10011,9 +10047,6 @@ $as_echo_n "checking if RLIMIT_VMEM and 
+ if ${zsh_cv_rlimit_vmem_is_rss+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+-  if test "$cross_compiling" = yes; then :
+-  zsh_cv_rlimit_vmem_is_rss=no
+-else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -10022,43 +10055,33 @@ else
+ #include <sys/time.h>
+ #endif
+ #include <sys/resource.h>
+-int main()
++int
++main ()
+ {
+-int ret = 1;
+-#if defined(HAVE_RLIMIT_VMEM) && defined(HAVE_RLIMIT_RSS)
+-if (RLIMIT_RSS == RLIMIT_VMEM) ret = 0;
+-#endif
+-return ret;
++static char x[(RLIMIT_VMEM == RLIMIT_RSS)? 1 : -1]
++  ;
++  return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
++if ac_fn_c_try_compile "$LINENO"; then :
+   zsh_cv_rlimit_vmem_is_rss=yes
+ else
+   zsh_cv_rlimit_vmem_is_rss=no
+ fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $zsh_cv_rlimit_vmem_is_rss" >&5
+ $as_echo "$zsh_cv_rlimit_vmem_is_rss" >&6; }
+-
+ if test x$zsh_cv_rlimit_vmem_is_rss = xyes; then
+   $as_echo "#define RLIMIT_VMEM_IS_RSS 1" >>confdefs.h
+ 
+ fi
+ 
+-
+-
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if RLIMIT_VMEM and RLIMIT_AS are the same" >&5
+ $as_echo_n "checking if RLIMIT_VMEM and RLIMIT_AS are the same... " >&6; }
+ if ${zsh_cv_rlimit_vmem_is_as+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+-  if test "$cross_compiling" = yes; then :
+-  zsh_cv_rlimit_vmem_is_as=no
+-else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -10067,43 +10090,33 @@ else
+ #include <sys/time.h>
+ #endif
+ #include <sys/resource.h>
+-int main()
++int
++main ()
+ {
+-int ret = 1;
+-#if defined(HAVE_RLIMIT_VMEM) && defined(HAVE_RLIMIT_AS)
+-if (RLIMIT_AS == RLIMIT_VMEM) ret = 0;
+-#endif
+-return ret;
++static char x[(RLIMIT_VMEM == RLIMIT_AS)? 1 : -1]
++  ;
++  return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
++if ac_fn_c_try_compile "$LINENO"; then :
+   zsh_cv_rlimit_vmem_is_as=yes
+ else
+   zsh_cv_rlimit_vmem_is_as=no
+ fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $zsh_cv_rlimit_vmem_is_as" >&5
+ $as_echo "$zsh_cv_rlimit_vmem_is_as" >&6; }
+-
+ if test x$zsh_cv_rlimit_vmem_is_as = xyes; then
+   $as_echo "#define RLIMIT_VMEM_IS_AS 1" >>confdefs.h
+ 
+ fi
+ 
+-
+-
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if RLIMIT_RSS and RLIMIT_AS are the same" >&5
+ $as_echo_n "checking if RLIMIT_RSS and RLIMIT_AS are the same... " >&6; }
+ if ${zsh_cv_rlimit_rss_is_as+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+-  if test "$cross_compiling" = yes; then :
+-  zsh_cv_rlimit_rss_is_as=no
+-else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -10112,28 +10125,23 @@ else
+ #include <sys/time.h>
+ #endif
+ #include <sys/resource.h>
+-int main()
++int
++main ()
+ {
+-int ret = 1;
+-#if defined(HAVE_RLIMIT_RSS) && defined(HAVE_RLIMIT_AS)
+-if (RLIMIT_AS == RLIMIT_RSS) ret = 0;
+-#endif
+-return ret;
++static char x[(RLIMIT_RSS == RLIMIT_AS)? 1 : -1]
++  ;
++  return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
++if ac_fn_c_try_compile "$LINENO"; then :
+   zsh_cv_rlimit_rss_is_as=yes
+ else
+   zsh_cv_rlimit_rss_is_as=no
+ fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $zsh_cv_rlimit_rss_is_as" >&5
+ $as_echo "$zsh_cv_rlimit_rss_is_as" >&6; }
+-
+ if test x$zsh_cv_rlimit_rss_is_as = xyes; then
+   $as_echo "#define RLIMIT_RSS_IS_AS 1" >>confdefs.h
+ 
+@@ -11630,6 +11638,10 @@ $as_echo "$zsh_cv_sys_elf" >&6; }
          DLLD="${DLLD=$CC}"
          DLLDARG=""
        ;;

@@ -1,0 +1,98 @@
+$NetBSD: patch-configure.ac,v 1.3 2013/05/10 01:17:33 riastradh Exp $
+
+Use a compile test, not a run test, for whether various rlimit values
+are equivalent.  A compile test is sufficient because zsh uses these
+values in switch cases, so they must be compile-time, if not
+preprocessor-time, constants.
+
+--- configure.ac.orig	2012-09-09 18:26:47.000000000 +0000
++++ configure.ac
+@@ -1812,85 +1812,9 @@ zsh_LIMIT_PRESENT(RLIMIT_MSGQUEUE)
+ zsh_LIMIT_PRESENT(RLIMIT_NICE)
+ zsh_LIMIT_PRESENT(RLIMIT_RTPRIO)
+ 
+-AH_TEMPLATE([RLIMIT_VMEM_IS_RSS],
+-[Define to 1 if RLIMIT_VMEM and RLIMIT_RSS both exist and are equal.])
+-AC_CACHE_CHECK(if RLIMIT_VMEM and RLIMIT_RSS are the same,
+-zsh_cv_rlimit_vmem_is_rss,
+-[AC_TRY_RUN([
+-#include <sys/types.h>
+-#ifdef HAVE_SYS_TIME_H
+-#include <sys/time.h>
+-#endif
+-#include <sys/resource.h>
+-int main()
+-{
+-int ret = 1;
+-#if defined(HAVE_RLIMIT_VMEM) && defined(HAVE_RLIMIT_RSS)
+-if (RLIMIT_RSS == RLIMIT_VMEM) ret = 0;
+-#endif
+-return ret;
+-}],
+-  zsh_cv_rlimit_vmem_is_rss=yes,
+-  zsh_cv_rlimit_vmem_is_rss=no,
+-  zsh_cv_rlimit_vmem_is_rss=no)])
+-
+-if test x$zsh_cv_rlimit_vmem_is_rss = xyes; then
+-  AC_DEFINE(RLIMIT_VMEM_IS_RSS)
+-fi
+-
+-
+-AH_TEMPLATE([RLIMIT_VMEM_IS_AS],
+-[Define to 1 if RLIMIT_VMEM and RLIMIT_AS both exist and are equal.])
+-AC_CACHE_CHECK(if RLIMIT_VMEM and RLIMIT_AS are the same,
+-zsh_cv_rlimit_vmem_is_as,
+-[AC_TRY_RUN([
+-#include <sys/types.h>
+-#ifdef HAVE_SYS_TIME_H
+-#include <sys/time.h>
+-#endif
+-#include <sys/resource.h>
+-int main()
+-{
+-int ret = 1;
+-#if defined(HAVE_RLIMIT_VMEM) && defined(HAVE_RLIMIT_AS)
+-if (RLIMIT_AS == RLIMIT_VMEM) ret = 0;
+-#endif
+-return ret;
+-}],
+-  zsh_cv_rlimit_vmem_is_as=yes,
+-  zsh_cv_rlimit_vmem_is_as=no,
+-  zsh_cv_rlimit_vmem_is_as=no)])
+-
+-if test x$zsh_cv_rlimit_vmem_is_as = xyes; then
+-  AC_DEFINE(RLIMIT_VMEM_IS_AS)
+-fi
+-
+-
+-AH_TEMPLATE([RLIMIT_RSS_IS_AS],
+-[Define to 1 if RLIMIT_RSS and RLIMIT_AS both exist and are equal.])
+-AC_CACHE_CHECK(if RLIMIT_RSS and RLIMIT_AS are the same,
+-zsh_cv_rlimit_rss_is_as,
+-[AC_TRY_RUN([
+-#include <sys/types.h>
+-#ifdef HAVE_SYS_TIME_H
+-#include <sys/time.h>
+-#endif
+-#include <sys/resource.h>
+-int main()
+-{
+-int ret = 1;
+-#if defined(HAVE_RLIMIT_RSS) && defined(HAVE_RLIMIT_AS)
+-if (RLIMIT_AS == RLIMIT_RSS) ret = 0;
+-#endif
+-return ret;
+-}],
+-  zsh_cv_rlimit_rss_is_as=yes,
+-  zsh_cv_rlimit_rss_is_as=no,
+-  zsh_cv_rlimit_rss_is_as=no)])
+-
+-if test x$zsh_cv_rlimit_rss_is_as = xyes; then
+-  AC_DEFINE(RLIMIT_RSS_IS_AS)
+-fi
++zsh_LIMITS_EQUAL(VMEM, vmem, RSS, rss)
++zsh_LIMITS_EQUAL(VMEM, vmem, AS, as)
++zsh_LIMITS_EQUAL(RSS, rss, AS, as)
+ 
+ 
+ dnl --------------------------------------------
