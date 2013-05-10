@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2012/10/31 11:17:31 asau Exp $
+# $NetBSD: Makefile.common,v 1.19 2013/05/10 00:36:30 riastradh Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -33,6 +33,13 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
+CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
+CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${LOCALBASE}/bin/tic
+.endif
+
 .if !defined(TOOLS_TBL)
 # This means that groff needs to be built to get tbl(1).
 # We can only build groff if there is a builtin implementation of curses,
