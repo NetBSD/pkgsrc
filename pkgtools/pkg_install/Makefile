@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2013/04/08 11:17:20 rodent Exp $
+# $NetBSD: Makefile,v 1.195 2013/05/10 00:49:00 riastradh Exp $
 
 # Notes to package maintainers:
 #
@@ -42,7 +42,10 @@ CHECK_PERMS=		no
 # pkg_install.
 #
 # We also use the newly built pkg_{add,create,delete} since upgrading
-# from an older pkg_install might required features of the new program.
+# from an older pkg_install might required features of the new
+# program, provided that we are not cross-compiling.  (XXX If we are
+# cross-compiling, we should maybe have a host build dependency on
+# ourselves...)
 #
 # Note that the definitions are only overriden for the phases that are
 # supposed to use them.  pkg_admin pmatch might be used when looking for
@@ -50,7 +53,7 @@ CHECK_PERMS=		no
 # be rethought.
 USE_NATIVE_GCC=		yes
 
-.if defined(_PKGSRC_BARRIER)
+.if defined(_PKGSRC_BARRIER) && empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
 PKG_CREATE_CMD=		${WRKSRC}/create/pkg_create
 PKG_DELETE_CMD=		${WRKSRC}/delete/pkg_delete
