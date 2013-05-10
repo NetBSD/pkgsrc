@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/10 12:01:50 imil Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/10 12:04:00 imil Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -25,17 +25,5 @@ SUBST_SED.path+=	-e "s,/etc/bash_completion,${PREFIX}/share/bash-completion/bash
 SUBST_STAGE.path=	pre-build
 SUBST_FILES.path+=	README
 SUBST_MESSAGE.path=	Fixing path to completion files.
-
-#do-build:
-
-#do-install:
-#	${INSTALL_DATA} ${WRKSRC}/README \
-#		${DESTDIR}${PREFIX}/share/doc/bash-completion
-#	${INSTALL_DATA} ${WRKSRC}/bash_completion \
-#		${DESTDIR}${PREFIX}/share/bash-completion
-#	${INSTALL_DATA} ${WRKSRC}/bash_completion.sh \
-#		${DESTDIR}${PREFIX}/share/bash-completion
-#	${INSTALL_DATA} ${WRKSRC}/contrib/* \
-#	    ${DESTDIR}${PREFIX}/share/bash-completion.d
 
 .include "../../mk/bsd.pkg.mk"
