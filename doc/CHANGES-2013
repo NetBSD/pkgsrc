@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1629 2013/05/10 14:39:44 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1630 2013/05/10 15:53:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/bash-completion to 2.1 [imil 2013-05-10]
 	Added devel/bpython version 0.12 [imil 2013-05-10]
 	Updated sysutils/gvfs to 1.6.7 [obache 2013-05-10]
+	Updated mail/msmtp to 1.4.31 [ryoon 2013-05-10]
