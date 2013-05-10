@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/04/11 09:38:09 khorben Exp $
+# $NetBSD: Makefile,v 1.28 2013/05/10 00:46:53 riastradh Exp $
 
 DISTNAME=	socat-1.7.2.1
 CATEGORIES=	net
@@ -13,8 +13,18 @@ GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 ONLY_FOR_COMPILER=	gcc	# uses -Werror in the configure script
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--disable-libwrap
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+# XXX Kludge -- the right fix is to make socat not depend on these constants.
+CONFIGURE_ENV+=		sc_cv_sys_crdly_shift=-1
+CONFIGURE_ENV+=		sc_cv_sys_tabdly_shift=-1
+CONFIGURE_ENV+=		sc_cv_sys_csize_shift=8
+CONFIGURE_ENV+=		ac_cv_ispeed_offset=9
+.endif
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
