@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2013/02/06 23:21:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2013/05/10 01:22:27 riastradh Exp $
 
-DISTNAME=	libevent-2.0.21-stable
-PKGNAME=	${DISTNAME:S/-stable//}
-PKGREVISION=	1
+.include "../../devel/libevent/Makefile.common"
+
+PKGNAME=	libevent-${LIBEVENT_VERSION}
+PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=levent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libevent.org/
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libevent_openssl.pc.in
 PKGCONFIG_OVERRIDE+=	libevent_pthreads.pc.in
 PKGCONFIG_OVERRIDE+=	libevent.pc.in
-REPLACE_PYTHON=		event_rpcgen.py
 TEST_TARGET=		verify
 
 LIBS.SunOS+=	-lnsl -lresolv
@@ -34,6 +33,5 @@ CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
 CPPFLAGS+=		-Dstrtoll=__strtoll
 .endif
 
-.include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

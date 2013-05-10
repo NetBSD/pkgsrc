@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/02/11 21:13:47 tnn Exp $
-bin/event_rpcgen.py
+@comment $NetBSD: PLIST,v 1.7 2013/05/10 01:22:27 riastradh Exp $
 include/evdns.h
 include/event.h
 include/event2/buffer.h
