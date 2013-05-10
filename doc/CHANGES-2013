@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1624 2013/05/09 16:00:48 mef Exp $
+$NetBSD: CHANGES-2013,v 1.1625 2013/05/10 04:17:59 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2477,3 +2477,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/ruby-tw version 0.3.9 [mef 2013-05-09]
 	Added net/ruby-twitter version 4.6.2 [mef 2013-05-09]
 	Added net/ruby-userstream version 1.3.0 [mef 2013-05-09]
+	Added devel/py-libevent-rpcgen version 2.0.21 [riastradh 2013-05-10]
