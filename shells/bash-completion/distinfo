@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/09/25 12:29:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2013/05/10 12:01:51 imil Exp $
 
-SHA1 (bash-completion-1.0.tar.gz) = 61040795731f5ff509c46e818a1edf0a7a93e11d
-RMD160 (bash-completion-1.0.tar.gz) = b590c2633c5c10c3e98b14a74f4e96c910b6177d
-Size (bash-completion-1.0.tar.gz) = 143578 bytes
-SHA1 (patch-aa) = 6c6685a3fa99c2e0585843a1138a225b2c2ea537
+SHA1 (bash-completion-2.1.tar.gz) = fad16b1cdae2b40d6814f786990e0e50ab2d537a
+RMD160 (bash-completion-2.1.tar.gz) = a2d42658f2f6a77563614a4a733c95c57bb42cfc
+Size (bash-completion-2.1.tar.gz) = 341139 bytes
+SHA1 (patch-bash__completion) = 6edb8da01fe6252cc2fabb397736e32c00e5a1a6
+SHA1 (patch-completions_man) = 336d45f3567c6e69736e5cd41230874cdcb0ca56
