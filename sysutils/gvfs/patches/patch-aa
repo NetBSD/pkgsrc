@@ -1,8 +1,24 @@
-$NetBSD: patch-aa,v 1.8 2010/11/16 13:57:28 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2013/05/10 14:37:42 obache Exp $
 
---- configure.orig	2010-05-27 04:02:32.000000000 +0000
+* killed -DG_DISABLED_DEPRECATED, so msg_gconf_gio will be built even with
+  gio-2.0>2.27.1
+* add RPATH for samba
+*
+
+--- configure.orig	2011-03-21 16:02:39.000000000 +0000
 +++ configure
-@@ -16082,7 +16082,7 @@ $as_echo "#define HAVE_SAMBA /**/" >>con
+@@ -15633,8 +15633,8 @@ fi
+ 
+ msg_gconf_gio=no
+ if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gio-2.0 <= 2.27.1\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gio-2.0 <= 2.27.1") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gio-2.0\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "gio-2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+@@ -16928,7 +16928,7 @@ $as_echo "#define HAVE_SAMBA /**/" >>con
  
  		msg_samba="yes"
                  if test x$with_samba_libs != x/usr/lib; then
@@ -11,7 +27,7 @@ $NetBSD: patch-aa,v 1.8 2010/11/16 13:57:28 drochner Exp $
                  else
                  	SAMBA_LIBS="-lsmbclient"
                  fi
-@@ -16532,7 +16532,7 @@ _ACEOF
+@@ -17376,7 +17376,7 @@ _ACEOF
  fi
  
  
