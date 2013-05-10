@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2013/02/16 11:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.174 2013/05/10 21:01:16 richard Exp $
 #
 
 DISTNAME=	gdm-2.20.11
@@ -136,6 +136,7 @@ BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.11
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
