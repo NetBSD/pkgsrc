@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/04/09 16:33:57 adam Exp $
+# $NetBSD: Makefile,v 1.35 2013/05/10 07:16:29 adam Exp $
 
 DISTNAME=	netcdf-4.2.1.1
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unidata.ucar.edu/software/netcdf/index.html
 COMMENT=	Library for array-oriented data access
 
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen
