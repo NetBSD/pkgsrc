@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.79 2013/04/12 13:44:08 joerg Exp $
+# $NetBSD: Makefile.common,v 1.80 2013/05/10 00:15:02 riastradh Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-info/Makefile
@@ -41,8 +41,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 
-DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
-PATCHDIR=	${.CURDIR}/../libtool/patches
+DISTINFO_FILE=	${.CURDIR}/../../devel/libtool/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/libtool/patches
 
 AUTOMAKE_OVERRIDE=	NO
 
@@ -60,12 +60,15 @@ CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 
 # The configure script doesn't seem to be working out the need for -p
-# or -B, so tell it
+# or -B, so tell it.  For cross-compilation, force it to use the normal
+# NM and not the one in ${BUILDLINK_DIR}.
 #
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 .elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
+.else
+CONFIGURE_ENV+=		lt_cv_path_NM=${NM:Q}
 .endif
 
 CONFIGURE_ENV+=		RANLIB=${RANLIB:Q}
