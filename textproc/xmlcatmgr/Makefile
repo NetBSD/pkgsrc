@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/25 06:57:08 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/05/10 22:33:55 riastradh Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -27,16 +27,25 @@ REQD_DIRS=	${PREFIX}/share/sgml ${PREFIX}/share/xml
 
 INSTALLATION_DIRS+=	share/examples/xmlcatmgr
 
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+XMLCATMGR=	${WRKSRC}/xmlcatmgr
+.else
+TOOL_DEPENDS+=	${PKGNAME}:../../textproc/xmlcatmgr
+XMLCATMGR=	${PREFIX}/bin/xmlcatmgr
+.endif
+
 post-build:
 	@${ECHO} "Creating SGML catalogs..."
-	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml create
-	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.sgml create
-	@${WRKSRC}/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml add \
+	@${XMLCATMGR} -sc ${WRKDIR}/catalog.etc.sgml create
+	@${XMLCATMGR} -sc ${WRKDIR}/catalog.sgml create
+	@${XMLCATMGR} -sc ${WRKDIR}/catalog.etc.sgml add \
 		CATALOG ${PREFIX}/share/sgml/catalog
 	@${ECHO} "Creating XML catalogs..."
-	@${WRKSRC}/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml create
-	@${WRKSRC}/xmlcatmgr -c ${WRKDIR}/catalog.xml create
-	@${WRKSRC}/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml add \
+	@${XMLCATMGR} -c ${WRKDIR}/catalog.etc.xml create
+	@${XMLCATMGR} -c ${WRKDIR}/catalog.xml create
+	@${XMLCATMGR} -c ${WRKDIR}/catalog.etc.xml add \
 		nextCatalog ${PREFIX}/share/xml/catalog
 
 post-install:
