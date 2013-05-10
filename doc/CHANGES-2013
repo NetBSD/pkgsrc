@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1627 2013/05/10 12:04:23 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1628 2013/05/10 13:00:25 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2480,3 +2480,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/py-libevent-rpcgen version 2.0.21 [riastradh 2013-05-10]
 	Updated parallel/mpi-ch to 3.0.4 [adam 2013-05-10]
 	Updated shells/bash-completion to 2.1 [imil 2013-05-10]
+	Added devel/bpython version 0.12 [imil 2013-05-10]
