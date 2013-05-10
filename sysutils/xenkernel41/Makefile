@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/05/03 16:48:37 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2013/05/10 20:07:34 riastradh Exp $
 #
 
 VERSION=	4.1.5
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-PYTHON_FOR_BUILD_ONLY=	# empty
+PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		NO
 
 # XXX Why does this not work?
