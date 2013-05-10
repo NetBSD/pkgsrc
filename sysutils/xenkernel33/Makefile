@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/11 19:57:51 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2013/05/10 20:07:34 riastradh Exp $
 #
 
 VERSION=	3.3.2
@@ -26,7 +26,7 @@ WRKSRC=		${WRKDIR}/xen-${VERSION}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-PYTHON_FOR_BUILD_ONLY=	# empty
+PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		NO
 
 SUBST_CLASSES+=		py
