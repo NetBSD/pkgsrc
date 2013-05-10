@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2013/04/30 07:03:33 asau Exp $
+# $NetBSD: Makefile,v 1.76 2013/05/10 08:24:57 adam Exp $
 
-DISTNAME=	mpich-3.0.3
-PKGREVISION=	1
+DISTNAME=	mpich-3.0.4
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
@@ -16,7 +15,7 @@ DEPENDS+=	bash-[0-9]*:../../shells/bash
 MPI_PREFIX=		${LOCALBASE}
 INSTALLATION_PREFIX=	${MPI_PREFIX}
 
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--datadir=${MPI_PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${MPI_PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${MPI_PREFIX}/share/doc/${PKGBASE}/html
-CONFIGURE_ARGS+=	--disable-fc		# problems?
 CONFIGURE_ARGS+=	--with-openpa-prefix=${BUILDLINK_PREFIX.openpa}
 CONFIGURE_ARGS+=	--with-hwloc-prefix=${BUILDLINK_PREFIX.hwloc}
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
