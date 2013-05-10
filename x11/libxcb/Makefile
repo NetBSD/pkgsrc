@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/02/01 14:40:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2013/05/10 22:40:31 riastradh Exp $
 #
 
 DISTNAME=	libxcb-1.9
@@ -11,8 +11,8 @@ HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
-BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
-BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.7:../../x11/py-xcbgen
+TOOL_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
+TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.7:../../x11/py-xcbgen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -20,6 +20,17 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
 CONFIGURE_ARGS+=	--disable-doxygen
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+# No native C compiler needed -- the tool that gobbles up the xcb
+# prototypes is in Python.
+#
+# XXX This needs to match the version of xcb-proto we get for the
+# target by buildlink3.
+TOOL_DEPENDS+=		xcb-proto-[0-9]*:../../x11/xcb-proto
+.endif
 
 # Adds -Wl,-R to pkgconfig files automatically
 PKGCONFIG_OVERRIDE+=	xcb-composite.pc.in
@@ -71,7 +82,7 @@ post-extract:
 ###	so it's not needed (nor should it ever be, really).
 ###
 #.include "../../devel/gperf/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.8
 .include "../../x11/xcb-proto/buildlink3.mk"

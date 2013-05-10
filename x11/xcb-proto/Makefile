@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:58 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/10 22:40:31 riastradh Exp $
 #
 
 DISTNAME=	xcb-proto-1.8
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	xcb-proto.pc.in
 CONFIGURE_ENV+=		XMLLLINT=${BUILDLINK_PREFIX.libxml}/bin/xmllint
 
 # XXX just for the "configure" check
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
 BUILDLINK_DEPMETHOD.libxml2?=	build
 .include "../../textproc/libxml2/buildlink3.mk"
