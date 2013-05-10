@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/10/29 05:06:33 asau Exp $
+# $NetBSD: Makefile,v 1.30 2013/05/10 22:38:31 riastradh Exp $
 #
 
 DISTNAME=		libX11-1.5.0
@@ -31,10 +31,6 @@ CONFIGURE_ENV+=		FILE_MAN_SUFFIX=5
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
-.endif
-
 CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 CPPFLAGS.MirBSD+=	-pthread
 LDFLAGS.MirBSD+=	-pthread
@@ -48,6 +44,14 @@ BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
 .elif empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+
+# XXX This needs to match the version of xcb-proto we get for the
+# target by buildlink3.
+TOOL_DEPENDS+=		xproto-[0-9]*:../../x11/xproto
 .endif
 
 .include "../../x11/bigreqsproto/buildlink3.mk"
