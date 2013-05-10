@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/05/10 01:22:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/10 01:25:03 riastradh Exp $
 
-.include "../../libevent/devel/Makefile.common"
+.include "../../devel/libevent/Makefile.common"
 
 DISTNAME=	py-libevent-rpcgen-${LIBEVENT_VERSION}
 CATEGORIES=	devel
