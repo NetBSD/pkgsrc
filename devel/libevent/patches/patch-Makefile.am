@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/05/10 01:22:27 riastradh Exp $
+
+Don't install event_rpcgen.py.
+
+--- Makefile.am.orig	2012-11-18 06:38:50.000000000 +0000
++++ Makefile.am
+@@ -86,7 +86,7 @@ VERSION_INFO = 6:9:1
+ # series won't be binary-compatible.
+ 
+ if INSTALL_LIBEVENT
+-dist_bin_SCRIPTS = event_rpcgen.py
++dist_bin_SCRIPTS = 
+ endif
+ 
+ pkgconfigdir=$(libdir)/pkgconfig
