@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/02 21:25:53 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/05/10 12:55:48 fhajny Exp $
 
 DISTNAME=	slony1-2.1.0
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://main.slony.info/
 COMMENT=	Replication system for PostgreSQL
 
-PGSQL_VERSIONS_ACCEPTED=91 90 84 83
+PGSQL_VERSIONS_ACCEPTED=91 90 84
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
