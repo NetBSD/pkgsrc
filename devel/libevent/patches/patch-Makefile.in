@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/05/10 01:22:27 riastradh Exp $
+
+Don't install event_rpcgen.py.
+
+--- Makefile.in.orig	2012-11-19 15:13:17.000000000 +0000
++++ Makefile.in
+@@ -210,7 +210,7 @@ libevent_pthreads_la_LINK = $(LIBTOOL) -
+ @INSTALL_LIBEVENT_FALSE@@PTHREADS_TRUE@am_libevent_pthreads_la_rpath =
+ @INSTALL_LIBEVENT_TRUE@@PTHREADS_TRUE@am_libevent_pthreads_la_rpath =  \
+ @INSTALL_LIBEVENT_TRUE@@PTHREADS_TRUE@	-rpath $(libdir)
+-am__dist_bin_SCRIPTS_DIST = event_rpcgen.py
++am__dist_bin_SCRIPTS_DIST = 
+ SCRIPTS = $(dist_bin_SCRIPTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+@@ -508,7 +508,7 @@ VERSION_INFO = 6:9:1
+ # nice and rare.  For the next couple of years, though, 'struct event'
+ # is user-visible, and so we can pretty much guarantee that release
+ # series won't be binary-compatible.
+-@INSTALL_LIBEVENT_TRUE@dist_bin_SCRIPTS = event_rpcgen.py
++@INSTALL_LIBEVENT_TRUE@dist_bin_SCRIPTS = 
+ pkgconfigdir = $(libdir)/pkgconfig
+ LIBEVENT_PKGCONFIG = libevent.pc $(am__append_2) $(am__append_4)
+ 
