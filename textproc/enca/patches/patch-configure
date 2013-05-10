@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2013/05/10 05:27:39 riastradh Exp $
+
+Pass CC_FOR_BUILD through for make_hash.
+
+--- configure.orig	2012-09-11 09:12:23.000000000 +0000
++++ configure
+@@ -635,6 +635,7 @@ ac_includes_default="\
+ ac_subst_vars='am__EXEEXT_FALSE
+ am__EXEEXT_TRUE
+ LTLIBOBJS
++CC_FOR_BUILD
+ SHELL_RANDOM_FILENAME
+ DEFAULT_CONVERTER_LIST
+ DEFAULT_EXTERNAL_CONVERTER
