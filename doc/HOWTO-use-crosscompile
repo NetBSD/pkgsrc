@@ -1,0 +1,197 @@
+Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
+Taylor R. Campbell <riastradh@NetBSD.org>
+2013-04-23 draft
+
+The following steps enable you to build binary packages for a machine
+architecture other than the one you are building on.  For example, you
+might use them on your beefy umpteen-core amd64-based build machine
+(the `native' machine) to build packages for your feeble powerpc-based
+network appliance (the `target' machine).
+
+These instructions assume you use the conventional privileged paths:
+/usr/src for the NetBSD source tree, /usr/obj for the NetBSD object
+tree, and /usr/pkgsrc for the pkgsrc tree.  If you want to do it
+unprivileged, see `* Unprivileged notes' below.
+
+XXX This currently works only for NetBSD.
+
+* Build NetBSD tools and distribution for the target system
+
+Use build.sh to build NetBSD tools and a distribution, and remember
+what the destdir and tooldir are -- you'll need them for pkgsrc's
+mk.conf.
+
+   $ cd /usr/src
+   $ ./build.sh -m evbppc tools
+   $ ./build.sh -m evbppc distribution
+
+By default, the destdir will be /usr/obj/destdir.evbppc, and the
+tooldir will be (say) /usr/obj/tooldir.NetBSD-6.1.amd64 if you're
+running NetBSD 6.1 on amd64.
+
+* Set up mk.conf
+
+In addition to whatever else you want in your mk.conf for pkgsrc, add:
+
+   # Cross-compile by default.
+   #
+   # XXX This currently can't be set to `yes' on the command line,
+   # which is a bug.
+   USE_CROSS_COMPILE?=  yes
+
+   # This is a kludge for cross-libtool.
+   #
+   # XXX Should not need this.
+   CROSSBASE=           ${LOCALBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}
+
+   .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+   # Specify the machine architecture of target packages.
+   #
+   # XXX This currently can't be set on the command line, which is a
+   # bug.
+   MACHINE_ARCH=        powerpc
+
+   # Point pkgsrc at the NetBSD tooldir and destdir.
+   #
+   # XXX There is no obvious variable that is set to amd64 so that we
+   # could use
+   #
+   #    TOOLDIR=        /usr/obj/tooldir.${OPSYS}-${OS_VERSION}.${NATIVE_xyz}
+   #
+   # MACHINE is amd64 but, since it's not NATIVE_xyz, it's wrong.
+   # NATIVE_MACHINE_ARCH is x86_64, not amd64.
+   TOOLDIR=             /usr/obj/tooldir.NetBSD-6.1.amd64
+   CROSS_DESTDIR=       /usr/obj/destdir.evbppc
+
+   # Put target work and packages in separate directories.  (You might
+   # use OBJMACHINE=yes or WRKOBJDIR=/tmp/work.${MACHINE_ARCH} instead
+   # for the work directories.)
+   #
+   # XXX Should not need this.
+   PACKAGES=            ${PKGSRCDIR}/packages.${MACHINE_ARCH}
+   WRKDIR_BASENAME=     work.${MACHINE_ARCH}
+   .endif
+
+You can bootstrap pkgsrc or not; it shouldn't make a difference for
+cross-compilation.  If you do, replace `make' by `bmake' below, of
+course.
+
+XXX Some variables, notably LOCALBASE and other paths that get baked
+into packages, cannot currently be set differently for native and
+target packages.
+
+* Work around libtool
+
+Libtool's build system is broken -- it misuses the GNU build system
+build/host/target settings.  For now we need to kludge around it
+manually:
+
+   $ cd /usr/pkgsrc/cross/libtool-base
+   $ make package
+   $ pkg_add -m powerpc /usr/pkgsrc/packages.powerpc/All/cross-libtool-base-powerpc-2.4.2.tgz
+
+(This builds a libtool package for the target, and then installs the
+target package natively.  This *shouldn't* work, and pkg_add normally
+refuses this, but it does work because libtool is a shell script, and
+`pkg_add -m powerpc' makes pkg_add pretend we are powerpc to suppress
+its refusal.)
+
+* Make some packages
+
+Now packages you build normally will be cross-compiled for the target:
+
+   $ cd /usr/pkgsrc/net/isc-dhcpd4 && make package
+
+You can find the shiny new powerpc package at
+
+   /usr/pkgsrc/packages.powerpc/
+
+Any packages needed on natively to build the target packages will be
+built and installed automatically, but if for some reason you want to
+build a native package, you can run
+
+   $ cd /usr/pkgsrc/net/isc-dhcpd4 && make package USE_CROSS_COMPILE=no
+
+XXX Note that currently you cannot omit USE_CROSS_COMPILE?=yes from
+your mk.conf and pass USE_CROSS_COMPILE=yes on the make command line.
+This is a bug.
+
+* Unprivileged notes
+
+I do all this stuff unprivileged in directories under my home
+directory so that it's easy for me to nuke build products without
+messing with the package installations I use for development.
+
+   NetBSD srcdir:       ~/netbsd/current/src
+   NetBSD objdir:       ~/netbsd/current/obj.evbppc
+   NetBSD tooldir:      ~/netbsd/current/obj.evbppc/tooldir.NetBSD-6.1.amd64
+   NetBSD destdir:      ~/netbsd/current/obj.evbppc/destdir.evbppc
+   pkgsrc:              ~/pkgsrc/current/pkgsrc
+   pkgsrc LOCALBASE:    ~/pkgsrc/current/pkg
+
+(~/netbsd/current/src and ~/pkgsrc/current/pkgsrc are actually
+read-only null mounts of ~/netbsd/current/src-cvs and
+~/pkgsrc/current/pkgsrc-cvs, respectively.)
+
+To build NetBSD, I run:
+
+   $ cd ~/netbsd/current/src
+   $ ./build.sh -O ../obj.evbppc -U -u -m evbppc -j12 tools
+   $ ./build.sh -O ../obj.evbppc -U -u -m evbppc -j12 distribution
+
+My mk.conf additionally has UNPRIVILEGED=yes, and I bootstrap pkgsrc
+with
+
+   $ cd ~/pkgsrc/current/pkgsrc/bootstrap
+   $ ./bootstrap \
+        --gzip-binary-kit ~/pkgsrc/current/bootstrap/20130422.tgz \
+        --mk-fragment ~/pkgsrc/current/bootstrap/20130422.mk \
+        --prefix ~/pkgsrc/current/pkg \
+        --unprivileged \
+        --workdir /tmp/bootwork
+
+and various other crud to customize the build and package options.
+This requires putting ~/pkgsrc/current/pkg/{bin,sbin} before
+/usr/{bin,sbin} in your PATH so that you see bmake and use the right
+pkg_* tools.  Send me a note if you have questions about my setup.
+
+* Terminology
+
+This document and the relevant pkgsrc variables call the machine on
+which the packages are built the `native' machine, and the machine on
+which the packages are to be run the `target' machine.
+
+This is different from the GNU build system, which considers three
+different machines for so-called Canadian cross-builds, which pkgsrc
+does not support:
+
+   The `build' machine is the machine on which the software is built.
+   The `host' machine is the machine on which the software will run.
+   The `target' machine is the machine that the software is being
+     configured to operate on, such as a cross-compiler or cross-linker.
+
+These correspond to the pkgsrc nomenclature as follows:
+
+- Native packages configured for native compilation:
+
+        GNU     pkgsrc
+        ---     ------
+        build   native
+        host    native
+        target  native
+
+- Native packages configured for cross-compilation:
+
+        GNU     pkgsrc
+        ---     ------
+        build   native
+        host    native
+        target  target
+
+- Target packages:
+
+        GNU     pkgsrc
+        ---     ------
+        build   native
+        host    target
+        target  target

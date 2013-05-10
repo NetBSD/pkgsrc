@@ -1,0 +1,87 @@
+Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
+Taylor R. Campbell <riastradh@NetBSD.org>
+2013-04-23 draft
+
+These are some notes on how to make your package cross-compilable.
+There is no single recipe for it -- each package is different, and
+even if it follows, say, the GNU build system conventions, it may have
+its quirks, and the author of the software you're packaging may not
+have ever thought of cross-compilation.
+
+* Native and target platform
+
+When building a package, MACHINE_ARCH, MACHINE_GNU_PLATFORM, &c.,
+describe the platform for which the package is being built.  If
+USE_CROSS_COMPILE=no, this is the native platform; otherwise, if
+USE_CROSS_COMPILE=yes, it is the target platform, and the additional
+variables NATIVE_MACHINE_ARCH, NATIVE_MACHINE_GNU_PLATFORM, &c.,
+describe the native platform.
+
+When building a native package for cross-compilation, such as a
+compiler for the target, the variable TARGET_ARCH describes the target
+platform like MACHINE_ARCH.  If the build product varies with the
+choice of target, then TARGET_ARCH should be embedded into the PKGNAME
+somewhere so that the different build products are distinguished by
+having different package names.
+
+XXX This pattern is incompletely realized.  We should probably replace
+TARGET_ARCH by TARGET_MACHINE_ARCH, TARGET_MACHINE_GNU_PLATFORM, &c.,
+and perhaps decide which of those is the main switch that you set when
+you want to select cross-compilation.  Ideally, this switch should
+also support cross-compilation to other operating systems.
+
+* Specifying the toolchain
+
+Software built following GNU conventions can set GNU_CONFIGURE=yes so
+that pkgsrc will automatically specify the right --build, --host, and
+--target options for cross-compilation and point everything at the
+right toolchain.
+
+XXX And software not built following GNU conventions...?
+
+* Tool dependencies
+
+If the process of building your package requires running programs,
+loading libraries, using data, &c., from a native package, the native
+package is a tool dependency, not (necessarily) a build dependency or
+a normal dependency.  For example, if building your package entails
+transforming some XML with XSLT, you might add:
+
+TOOL_DEPENDS+=  libxslt>=1.1.0:../../textproc/libxslt
+
+* Native C and C++ compilers
+
+Some software wants build tools written in C and C++ and then execute
+them natively at build-time.  Sometimes configure scripts or makefiles
+accept a variable named CC_FOR_BUILD or similar to supply this; in
+that case, you can pass in the pkgsrc make variables NATIVE_CC and
+friends:
+
+CONFIGURE_ENV+= CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ENV+= CXX_FOR_BUILD=${NATIVE_CXX:Q}
+CONFIGURE_ENV+= LD_FOR_BUILD=${NATIVE_LD:Q}
+
+If the software doesn't use CC_FOR_BUILD, it may still be easy to find
+the makefile rules that invoke $(CC) or $(LD) to build native tools
+and patch them to replace that by $(CC_FOR_BUILD) and $(LD_FOR_BUILD).
+
+XXX The mechanism here is currently pretty kludgey; there is little
+principle to these NATIVE_CC/CXX/LD variables and they should be
+better rationalized.  If you want a native Fortran compiler, for
+instance, you'll have to hack it yourself.
+
+* Configure-time run-tests
+
+There's a lot of autoconf-configured software out there that uses
+run-tests to learn about the environment, which doesn't work so well
+in cross-builds.  Some of these can be patched to be replaced by
+compile-tests; otherwise, for a particular known target environment,
+you can pre-answer the tests for autoconf:
+
+.include "../../bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# Configure wants to check for /dev/random but can't.  We know NetBSD
+# always has a /dev/random, so inform autoconf of the fact.
+CONFIGURE_ENV+= ac_cv_file__dev_random=yes
+.endif
