@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/31 11:19:55 asau Exp $
+# $NetBSD: Makefile,v 1.33 2013/05/10 04:28:21 riastradh Exp $
 #
 
 DISTNAME=	yasm-1.2.0
@@ -15,11 +15,22 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
 
+.include "../../mk/bsd.prefs.mk"
+
+# Commit message suggests this is Darwin-specific.  Won't work to
+# cross-compile to Darwin, but that doesn't work at all anyway.
+.if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=		link
 SUBST_STAGE.link=	pre-configure
 SUBST_MESSAGE.link=	Fix linking command.
 SUBST_FILES.link=	Makefile.in
 SUBST_SED.link=		-e 's,$$(CCLD_FOR_BUILD) -o $$@,$$(LINK) -o $$@,'
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ENV+=		CCLD_FOR_BUILD=${NATIVE_CC:Q}
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
