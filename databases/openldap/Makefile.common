@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2012/10/22 09:41:07 ghen Exp $
+# $NetBSD: Makefile.common,v 1.36 2013/05/10 06:51:26 riastradh Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -71,6 +71,12 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR}
 CONFIGURE_ARGS+=	--enable-dynamic
 CONFIGURE_ARGS+=	--with-tls=openssl
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+# Probably true for more than just NetBSD.
+CONFIGURE_ARGS+=	--with-yielding_select=yes
+CONFIGURE_ENV+=		ac_cv_func_memcmp_working=yes
+.endif
 
 EGDIR=			${PREFIX}/share/examples/openldap
 
