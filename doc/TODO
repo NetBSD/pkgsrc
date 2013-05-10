@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12133 2013/05/10 12:04:23 imil Exp $
+$NetBSD: TODO,v 1.12134 2013/05/10 14:39:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gupnp-av-0.12.1
 	o gupnp-dlna-0.10.0
 	o gupnp-tools-0.8.6
-	o gvfs-1.6.7
 	o gwaei-3.6.2
 	o gworkspace-0.9.2
 	o gxine-0.5.907
