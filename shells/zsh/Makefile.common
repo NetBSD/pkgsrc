@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.70 2013/03/28 22:26:13 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.71 2013/05/10 01:17:33 riastradh Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -29,6 +29,14 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .if ${OPSYS} == "Darwin"
 #CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_LIB:Q}
 INSTALL_UNSTRIPPED=	yes
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+# These can't be detected automagically in cross-builds.
+CONFIGURE_ENV+=		zsh_cv_shared_environ=yes
+CONFIGURE_ENV+=		zsh_cv_shared_tgetent=yes
+CONFIGURE_ENV+=		zsh_cv_shared_tigetstr=yes
+CONFIGURE_ENV+=		zsh_cv_sys_dynamic_execsyms=yes
 .endif
 
 PLIST_VARS+=	xattr
