@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.107 2013/05/10 00:35:51 riastradh Exp $
+# $NetBSD: pyversion.mk,v 1.108 2013/05/10 20:07:34 riastradh Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -47,8 +47,8 @@
 # PYTHON_FOR_BUILD_ONLY
 #	Whether Python is needed only at build time or at run time.
 #
-#	Possible values: (defined) (undefined)
-#	Default: (undefined)
+#	Possible values: yes no tool
+#	Default: no
 #
 # PYTHON_SELF_CONFLICT
 #	If set to "yes", additional CONFLICTS entries are added for
@@ -196,10 +196,12 @@ PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PYPKGSRCDIR)
-# XXX BUILD_DEPENDS/TOOL_DEPENDS split makes this variable name confusing.
-.  if defined(PYTHON_FOR_BUILD_ONLY)
-TOOL_DEPENDS+=	${PYDEPENDENCY}
+.  if !empty(PYTHON_FOR_BUILD_ONLY:M[tT][oO][oO][lL])
+TOOL_DEPENDS+=			${PYDEPENDENCY}
 .  else
+.    if !empty(PYTHON_FOR_BUILD_ONLY:M[yY][eE][sS])
+BUILDLINK_DEPMETHOD.python?=	build
+.    endif
 .    include "${PYPKGSRCDIR}/buildlink3.mk"
 .  endif
 .endif
