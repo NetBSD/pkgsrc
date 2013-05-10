@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/03/15 22:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2013/05/10 00:37:48 riastradh Exp $
 
 DISTNAME=	libgpg-error-1.11
 CATEGORIES=	security
@@ -19,11 +19,16 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
 MAKE_ENV+=		LC_ALL="C"
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+.else
+CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
+.endif
 
 # XXX See HACKS
 .if ${OPSYS} == "IRIX" || !empty(MACHINE_PLATFORM:MNetBSD-[3-9]*)
