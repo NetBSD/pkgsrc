@@ -1,12 +1,14 @@
-$NetBSD: distinfo,v 1.5 2012/08/08 13:42:42 marino Exp $
+$NetBSD: distinfo,v 1.6 2013/05/11 21:40:40 joerg Exp $
 
 SHA1 (synergy-1.2.7.tar.gz) = 5964460892fd9e9cb55c5bfe4e781f2bc08d0b76
 RMD160 (synergy-1.2.7.tar.gz) = 6bdbe5adbc13c2f49afcb99ccaa20b96a12c2bcf
 Size (synergy-1.2.7.tar.gz) = 707319 bytes
 SHA1 (patch-aa) = 5a48140c7622195a716eededae2d1ee0f6fa4e85
 SHA1 (patch-ab) = 24f611bc942b6c0dac8e3d398150e5a8bb44ebd6
+SHA1 (patch-cmd_synergyc_synergyc.cpp) = 5cdfdeafe28aca64b86892040fb35affb6857cbe
 SHA1 (patch-lib-arch-CArchDaemonUnix.cpp) = 1d11d87f9a388ba68403ff74d4fcd5fa180a919e
 SHA1 (patch-lib_arch_CMultibyte.cpp) = 66cc7cd1e327a1bfd519cb003835914221cbb369
+SHA1 (patch-lib_base_CEvent.cpp) = d23f2fbf2e9cf6dea3740ad1f6f4aeb9029d9a32
 SHA1 (patch-lib_base_CStringUtil.cpp) = 8f803bcab5a37bd4bf5a918fe3333338bd7d22c2
 SHA1 (patch-lib_client_CClient.cpp) = afa4dc5089da155756a5ea4772be216256f71663
 SHA1 (patch-lib_client_CServerProxy.cpp) = d6692bebbb6c71684cd320822859701b96fb7efc
