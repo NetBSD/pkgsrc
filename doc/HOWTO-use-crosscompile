@@ -1,6 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
-2013-04-23 draft
+
+$NetBSD: HOWTO-use-crosscompile,v 1.2 2013/05/11 20:15:10 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
