@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2009/11/17 19:50:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/05/11 20:11:38 riastradh Exp $
 bin/ekiga
 bin/ekiga-config-tool
-bin/ekiga-helper
+${PLIST.dbus}bin/ekiga-helper
+${PLIST.not-gconf}etc/ekiga/ekiga.schemas
 man/man1/ekiga.1
 share/applications/ekiga.desktop
-share/dbus-1/services/org.ekiga.Ekiga.service
-share/dbus-1/services/org.ekiga.Helper.service
-share/gconf/schemas/ekiga.schemas
+${PLIST.dbus}share/dbus-1/services/org.ekiga.Ekiga.service
+${PLIST.dbus}share/dbus-1/services/org.ekiga.Helper.service
+${PLIST.gconf}share/gconf/schemas/ekiga.schemas
 share/gnome/help/ekiga/C/ekiga.xml
 share/gnome/help/ekiga/C/figures/accounts_d1.png
 share/gnome/help/ekiga/C/figures/accounts_h323.png
