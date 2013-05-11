@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/05/05 12:26:23 imil Exp $
+$NetBSD: distinfo,v 1.5 2013/05/11 18:26:19 imil Exp $
 
-SHA1 (salt-0.15.0.tar.gz) = 2369b6b9a931c80ff6a09b38f94ee27fe5a36593
-RMD160 (salt-0.15.0.tar.gz) = 27d027c4243abfd636d59769714784fc39aec78b
-Size (salt-0.15.0.tar.gz) = 3411308 bytes
+SHA1 (salt-0.15.1.tar.gz) = 634b7873f2cae9fda32cf62af06fb4136ea48a2f
+RMD160 (salt-0.15.1.tar.gz) = e3e7d0682fc49e441621ede7afa192bb04947a2e
+Size (salt-0.15.1.tar.gz) = 5752766 bytes
 SHA1 (patch-setup.py) = 15907268df5ee1d06e1c932dc84fd7701156519d
