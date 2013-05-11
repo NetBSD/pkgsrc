@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/05/09 07:39:19 adam Exp $
+# $NetBSD: Makefile,v 1.32 2013/05/11 02:23:54 obache Exp $
 #
 
 DISTNAME=	PackageKit-0.4.0
@@ -66,6 +66,7 @@ pre-configure:
 
 .include "../../mk/compiler.mk"
 BUILDLINK_TRANSFORM+=	rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
