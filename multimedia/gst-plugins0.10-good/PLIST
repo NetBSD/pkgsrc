@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/02/28 18:31:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2013/05/11 19:17:49 riastradh Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
@@ -17,7 +17,7 @@ lib/gstreamer-0.10/libgsteffectv.la
 lib/gstreamer-0.10/libgstequalizer.la
 lib/gstreamer-0.10/libgstflv.la
 lib/gstreamer-0.10/libgstflxdec.la
-lib/gstreamer-0.10/libgstgconfelements.la
+${PLIST.gconf}lib/gstreamer-0.10/libgstgconfelements.la
 lib/gstreamer-0.10/libgstgoom.la
 lib/gstreamer-0.10/libgstgoom2k1.la
 lib/gstreamer-0.10/libgsticydemux.la
@@ -46,7 +46,7 @@ lib/gstreamer-0.10/libgstvideomixer.la
 lib/gstreamer-0.10/libgstwavenc.la
 lib/gstreamer-0.10/libgstwavparse.la
 lib/gstreamer-0.10/libgsty4menc.la
-share/gconf/schemas/gstreamer-0.10.schemas
+${PLIST.gconf}share/gconf/schemas/gstreamer-0.10.schemas
 share/gstreamer-0.10/presets/GstIirEqualizer10Bands.prs
 share/gstreamer-0.10/presets/GstIirEqualizer3Bands.prs
 share/locale/af/LC_MESSAGES/gst-plugins-good-0.10.mo
