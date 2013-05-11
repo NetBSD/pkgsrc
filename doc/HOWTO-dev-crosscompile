@@ -1,6 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
-2013-04-23 draft
+
+$NetBSD: HOWTO-dev-crosscompile,v 1.2 2013/05/11 20:15:29 riastradh Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
