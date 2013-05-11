@@ -611,6 +611,7 @@ squid-pf		Enable use of transparent proxy with Packet Filter.
 squid-unlinkd		Enable use of unlinkd.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
+static			Allows you to build static libraries.
 streamtuner-local	Enable local metadata support.
 streamtuner-xiph	Enable the Xiph plugin.
 suexec			Enable suEXEC support in Apache web server.
