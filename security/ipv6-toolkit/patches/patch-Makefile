@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2013/05/11 21:15:55 agc Exp $
+
+Take ${CC} from environment
+
+--- Makefile	2013/05/11 20:47:52	1.1
++++ Makefile	2013/05/11 20:48:02
+@@ -1,7 +1,7 @@
+ #
+ # SI6 Networks' IPv6 toolkit Makefile
+ #
+-CC= gcc
++CC?= gcc
+ CFLAGS+= -Wall
+ LDFLAGS+= -lpcap -lm
+ MANPATH= /usr/share/man
