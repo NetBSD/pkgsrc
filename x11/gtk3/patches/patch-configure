@@ -1,0 +1,42 @@
+$NetBSD: patch-configure,v 1.1 2013/05/11 19:49:15 riastradh Exp $
+
+--- configure.orig	2013-01-20 03:10:46.000000000 +0000
++++ configure
+@@ -1010,6 +1010,7 @@ enable_glibtest
+ enable_modules
+ with_included_immodules
+ with_x
++with_atk_bridge
+ enable_cups
+ enable_papi
+ enable_test_print_backend
+@@ -1754,6 +1755,7 @@ Optional Packages:
+   --with-included-immodules=MODULE1,MODULE2,...
+                           build the specified input methods into gtk
+   --with-x                use the X Window System
++  --without-atk-bridge    Do not use atk-bridge-2.0
+   --with-html-dir=PATH    path to installed docs
+   --with-xml-catalog=CATALOG
+                           path to xml catalog to use
+@@ -23450,8 +23452,20 @@ fi
+ # Check for Accessibility Toolkit flags
+ ########################################
+ 
+-if test x$enable_x11_backend = xyes; then
++
++# Check whether --with-atk-bridge was given.
++if test "${with_atk_bridge+set}" = set; then :
++  withval=$with_atk_bridge; :
++else
++  with_atk_bridge=yes
++fi
++
++
++if test x$enable_x11_backend = xyes -a x$with_atk_bridge = xyes; then
+    ATK_PACKAGES="atk atk-bridge-2.0"
++
++$as_echo "#define HAVE_ATK_BRIDGE 1" >>confdefs.h
++
+ else
+    ATK_PACKAGES="atk"
+ fi

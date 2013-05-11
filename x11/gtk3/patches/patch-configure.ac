@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/05/11 19:49:15 riastradh Exp $
+
+--- configure.ac.orig	2013-01-07 10:50:02.000000000 +0000
++++ configure.ac
+@@ -1295,8 +1295,13 @@ AC_SUBST(GDK_DEP_CFLAGS)
+ # Check for Accessibility Toolkit flags
+ ########################################
+ 
+-if test x$enable_x11_backend = xyes; then
++AC_ARG_WITH(atk-bridge,
++           AS_HELP_STRING([--without-atk-bridge], [Do not use atk-bridge-2.0]),
++           :, with_atk_bridge=yes)
++
++if test x$enable_x11_backend = xyes -a x$with_atk_bridge = xyes; then
+    ATK_PACKAGES="atk atk-bridge-2.0"
++   AC_DEFINE([HAVE_ATK_BRIDGE], [1], [Define if we're using atk-bridge-2.0])
+ else
+    ATK_PACKAGES="atk"
+ fi

@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.4 2012/11/13 21:55:27 adam Exp $
+# $NetBSD: options.mk,v 1.5 2013/05/11 19:49:15 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
-PKG_SUPPORTED_OPTIONS=	cups debug
+PKG_SUPPORTED_OPTIONS=	gtk3-atk-bridge cups debug
 PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
 PKG_OPTIONS_GROUP.gdk-target=	x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_OPTIONS_GROUP.gdk-target+=	quartz
 .endif
-PKG_SUGGESTED_OPTIONS=		x11
+PKG_SUGGESTED_OPTIONS=		gtk3-atk-bridge x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -37,10 +37,15 @@ CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 PLIST.x11=		yes
 
+.  if !empty(PKG_OPTIONS:Mgtk3-atk-bridge)
 BUILDLINK_API_DEPENDS.at-spi2-atk+=	at-spi2-atk>=2.6.1
+.    include "../../devel/at-spi2-atk/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-atk-bridge
+.  endif
+
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
-.include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
