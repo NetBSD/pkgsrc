@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2011/10/14 02:05:00 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2013/05/11 21:31:21 joerg Exp $
 
 SHA1 (vera++-1.1.1.tar.gz) = fe3c14775b50a580d88872e0ada8602b39a2ae01
 RMD160 (vera++-1.1.1.tar.gz) = d085fe4605930c7cf18ed2e8471b1771d08511e1
@@ -6,3 +6,5 @@ Size (vera++-1.1.1.tar.gz) = 53263 bytes
 SHA1 (patch-aa) = c1cb077ec08e7a3b2d1f9ba40630bb7fce81bbaa
 SHA1 (patch-ab) = 1164e33cc69ddd87c9d4f8dc082ffdf2b7abad84
 SHA1 (patch-ac) = e23a83a69620c50c4b29711b12982a22aec536fe
+SHA1 (patch-src_plugins_cpptcl-1.1.4_cpptcl.cpp) = 249d7754141a0d4706b18337cf9c70c4956a09bf
+SHA1 (patch-src_structures_Tokens.cpp) = f9eed58c609ce5270c67ae68f098b1b90ae3c224
