@@ -1,0 +1,12 @@
+$NetBSD: TODO.crosscompile,v 1.1 2013/05/11 16:49:30 riastradh Exp $
+
+* Fix the cross-libtool crock.
+* Organize NATIVE_xyz and TARGET_xyz better.
+* Organize host/target compiler tools better.
+* Automatically set PACKAGES=packages.${MACHINE_ARCH}.
+* Automatically set WRKDIR_BASENAME=work.${MACHINE_ARCH}.
+* Simplify mk.conf setup (see HOWTO-use-crosscompile).
+* Make USE_CROSS_COMPILE and MACHINE_ARCH passable on the command line.
+* Don't require user to set up CROSSBASE cruft.
+* Allow LOCALBASE &c. to be set differently on host and target.
+* Make cross-OS builds work.  Perhaps use GNU_PLATFORM, not ARCH.
