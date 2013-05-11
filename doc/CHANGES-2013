@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1631 2013/05/10 21:57:53 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1632 2013/05/11 00:38:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/gvfs to 1.6.7 [obache 2013-05-10]
 	Updated mail/msmtp to 1.4.31 [ryoon 2013-05-10]
 	Updated devel/bpython to 0.12nb1 [imil 2013-05-10]
+	Updated mail/getmail to 4.40.3 [schmonz 2013-05-11]
