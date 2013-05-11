@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1633 2013/05/11 10:19:12 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1634 2013/05/11 18:06:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/bpython to 0.12nb1 [imil 2013-05-10]
 	Updated mail/getmail to 4.40.3 [schmonz 2013-05-11]
 	Updated emulators/suse121_libcurl to 12.1nb1 [obache 2013-05-11]
+	Added devel/p5-Gravatar-URL version 1.06 [schmonz 2013-05-11]
