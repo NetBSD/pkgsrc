@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1634 2013/05/11 18:06:47 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1635 2013/05/11 22:33:35 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2487,3 +2487,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/getmail to 4.40.3 [schmonz 2013-05-11]
 	Updated emulators/suse121_libcurl to 12.1nb1 [obache 2013-05-11]
 	Added devel/p5-Gravatar-URL version 1.06 [schmonz 2013-05-11]
+	Added devel/lua-penlight version 1.1.0 [alnsn 2013-05-11]
