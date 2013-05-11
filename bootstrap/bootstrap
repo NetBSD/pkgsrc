@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.191 2013/03/11 22:48:23 tcort Exp $
+# $NetBSD: bootstrap,v 1.192 2013/05/11 23:42:44 ryoon Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -620,7 +620,13 @@ Linux)
 		root_group=root
 	fi
 	need_bsd_install=no
-	need_awk=no
+	# Debian/Ubuntu's awk is mawk, and mawk does not understand
+	# some regexp used in pkgsrc/mk.
+	if [ -f /etc/debian_version ]; then
+		need_awk=yes
+	else
+		need_awk=no
+	fi
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
