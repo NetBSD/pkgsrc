@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2013/05/11 16:39:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.76 2013/05/11 16:43:50 riastradh Exp $
 
 DISTNAME=	tcsh-6.18.01
 PKGREVISION=	4
@@ -26,7 +26,7 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:S/5./2./}
 .endif
 
-.if ${USE_CROSS_COMPILE} == "yes"
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 # XXX Should use CONFIGURE_ENV, but the configure script disregards
 # $CC_FOR_GETHOST in the environment and sets it to cc.
 MAKE_FLAGS+=	CC_FOR_GETHOST=${NATIVE_CC:Q}
