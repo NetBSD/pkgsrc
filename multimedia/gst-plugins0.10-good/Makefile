@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.30 2013/04/06 03:45:19 rodent Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/11 19:17:49 riastradh Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT+=		Good plugins
 
 # some plugins were moved from bad to good
 CONFLICTS+=		gst-plugins0.10-bad<0.10.18
 
-CONFIGURE_ARGS+=	--enable-gconf
-CONFIGURE_ARGS+=	--enable-gconftool
-CONFIGURE_ARGS+=	--enable-zlib
+.include "options.mk"
 
-# We depend on libxml anyway (indirectly through GConf), so this
-# doesn't hurt. Just make it explicite.
+CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-annodex
-.include "../../textproc/libxml2/buildlink3.mk"
 
 GCONF_SCHEMAS=		gstreamer-0.10.schemas
 
@@ -24,10 +20,12 @@ GCONF_SCHEMAS=		gstreamer-0.10.schemas
 TEST_TARGET=		check-torture
 
 post-install:
+.if !empty(PKG_OPTIONS:Mgconf)
 	${INSTALL_DATA} ${WRKSRC}/gconf/gstreamer-0.10.schemas \
 		${DESTDIR}${GCONF_SCHEMAS_DIR}
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
