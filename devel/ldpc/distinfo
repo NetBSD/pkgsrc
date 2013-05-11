@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/02/10 16:15:36 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/05/11 21:21:22 agc Exp $
 
 SHA1 (LDPC-2006-02-08.tar.gz) = b4bc77ed5a56976dca7d47f1065b0d59863385d9
 RMD160 (LDPC-2006-02-08.tar.gz) = 37ffa0afc895ab7448d77bf5cdfb05735443c317
 Size (LDPC-2006-02-08.tar.gz) = 405064 bytes
-SHA1 (patch-aa) = e7594fa0595c3bef0d6548d706aaa26e3380748b
+SHA1 (patch-aa) = 0be0a5f4b23fc002927f3844b98dc1d7767abae1
