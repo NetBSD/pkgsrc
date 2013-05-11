@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/02/15 12:30:06 obache Exp $
+$NetBSD: distinfo,v 1.6 2013/05/11 19:27:48 riastradh Exp $
 
 SHA1 (nload-0.7.4.tar.gz) = bb0a168c93c588ad4fd5e3a653b3620b79ada1e8
 RMD160 (nload-0.7.4.tar.gz) = 77eb199ee73fdc45b25b0e246c2ba73fa6efe779
 Size (nload-0.7.4.tar.gz) = 151005 bytes
 SHA1 (patch-aa) = 1551e7059eb0ebde05ed8cdc561099192d048503
-SHA1 (patch-ac) = 6d26b865eeea4f8ae18db7f1ad6703694d63f514
+SHA1 (patch-ac) = bbc117e6801fc7918eeff56ce2a467402bf2a903
+SHA1 (patch-configure.in) = e8858851c2514c1708d36d01e85ff83cdbf099b7

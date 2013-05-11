@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2012/02/15 12:30:06 obache Exp $
+$NetBSD: patch-ac,v 1.5 2013/05/11 19:27:48 riastradh Exp $
+
+Match Darwin and DragonflyBSD as BSD too.
+
+Skip broken AC_FUNC_MALLOC.
 
 --- configure.orig	2012-02-06 09:53:58.000000000 +0000
 +++ configure
@@ -10,4 +14,66 @@ $NetBSD: patch-ac,v 1.4 2012/02/15 12:30:06 obache Exp $
 +    *bsd* | *darwin* | *dragonfly*)
  
  $as_echo "#define HAVE_BSD 1" >>confdefs.h
+ 
+@@ -4707,61 +4707,6 @@ fi
+ 
+ done
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GNU libc compatible malloc" >&5
+-$as_echo_n "checking for GNU libc compatible malloc... " >&6; }
+-if test "${ac_cv_func_malloc_0_nonnull+set}" = set; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  if test "$cross_compiling" = yes; then :
+-  ac_cv_func_malloc_0_nonnull=no
+-else
+-  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-#if defined STDC_HEADERS || defined HAVE_STDLIB_H
+-# include <stdlib.h>
+-#else
+-char *malloc ();
+-#endif
+-
+-int
+-main ()
+-{
+-return ! malloc (0);
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
+-  ac_cv_func_malloc_0_nonnull=yes
+-else
+-  ac_cv_func_malloc_0_nonnull=no
+-fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
+-fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_func_malloc_0_nonnull" >&5
+-$as_echo "$ac_cv_func_malloc_0_nonnull" >&6; }
+-if test $ac_cv_func_malloc_0_nonnull = yes; then :
+-
+-$as_echo "#define HAVE_MALLOC 1" >>confdefs.h
+-
+-else
+-  $as_echo "#define HAVE_MALLOC 0" >>confdefs.h
+-
+-   case " $LIBOBJS " in
+-  *" malloc.$ac_objext "* ) ;;
+-  *) LIBOBJS="$LIBOBJS malloc.$ac_objext"
+- ;;
+-esac
+-
+-
+-$as_echo "#define malloc rpl_malloc" >>confdefs.h
+-
+-fi
+-
+-
+         ;;
+     *solaris*)
  
