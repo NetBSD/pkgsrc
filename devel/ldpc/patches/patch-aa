@@ -1,10 +1,24 @@
-$NetBSD: patch-aa,v 1.1 2011/02/10 16:15:36 agc Exp $
+$NetBSD: patch-aa,v 1.2 2013/05/11 21:21:22 agc Exp $
 
 Refer to the file of random numbers in the correct location
 
---- Makefile	2011/02/10 04:47:36	1.1
-+++ Makefile	2011/02/10 04:46:57
-@@ -104,7 +104,7 @@
+Pick up ${CC} from environment if defined
+
+--- Makefile.orig	2006-02-08 18:48:55.000000000 -0800
++++ Makefile	2013-05-11 13:54:48.000000000 -0700
+@@ -25,8 +25,9 @@
+ # make things more complex and error-prone.
+ 
+ 
+-COMPILE = cc -c -O    # Command to compile a module from .c to .o
+-LINK =    cc          # Command to link a program
++CC?= cc
++COMPILE = ${CC} -c -O    # Command to compile a module from .c to .o
++LINK =    ${CC}          # Command to link a program
+ 
+ 
+ # MAKE ALL THE MAIN PROGRAMS.  First makes the modules used.
+@@ -104,7 +105,7 @@
  	$(COMPILE) mod2sparse.c
  	$(COMPILE) mod2convert.c
  	$(COMPILE) distrib.c
