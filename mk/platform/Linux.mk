@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.53 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: Linux.mk,v 1.54 2013/05/11 23:56:24 ryoon Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -48,8 +48,25 @@ USERADD?=		/usr/sbin/useradd
 _OPSYS_EMULDIR.linux=	# empty
 _OPSYS_EMULDIR.linux32=	# empty
 
+# Support Debian/Ubuntu's multiarch hierarchy.
+.if exists(/etc/debian_version)
+.if !empty(MACHINE_ARCH:Mx86_64)
+_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
+_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu
+.endif
+.if !empty(MACHINE_ARCH:Mi386)
+_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu
+_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/i386-li
+nux-gnu /usr/lib/i386-linux-gnu
+.endif
+.if !empty(MACHINE_ARCH:Marm*)
+_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabi:/usr/lib/arm-linux-gnueabi
+_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabi /usr/lib/arm-linux-gnueabi
+.endif
+.else
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
+.endif
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
