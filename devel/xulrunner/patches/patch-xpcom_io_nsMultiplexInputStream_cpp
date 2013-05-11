@@ -1,0 +1,19 @@
+$NetBSD: patch-xpcom_io_nsMultiplexInputStream_cpp,v 1.1 2013/05/11 23:33:14 mef Exp $
+
+Fix PR/47722, dragonfly (gcc 4.7) build problem:
+error: no matching function for call to 
+   'NS_MIN(int64_t&, __gnu_cxx::__enable_if<true, double>::__type)'
+devel/xulrunner/work/mozilla-release/xpcom/io/nsMultiplexInputStream.cpp:532:83
+
+--- xpcom/io/nsMultiplexInputStream.cpp.orig	2013-04-10 12:03:01.000000000 +0900
++++ xpcom/io/nsMultiplexInputStream.cpp	2013-04-16 08:01:29.000000000 +0900
+@@ -529,7 +529,7 @@ nsMultiplexInputStream::Seek(int32_t aWh
+                     rv = stream->Tell(&avail);
+                     NS_ENSURE_SUCCESS(rv, rv);
+ 
+-                    int64_t newPos = streamPos + NS_MIN(avail, std::abs(remaining));
++                    int64_t newPos = streamPos + NS_MIN(avail, (int64_t)std::abs(remaining));
+ 
+                     rv = stream->Seek(NS_SEEK_END, -newPos);
+                     NS_ENSURE_SUCCESS(rv, rv);
+
