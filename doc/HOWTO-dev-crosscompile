@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-dev-crosscompile,v 1.2 2013/05/11 20:15:29 riastradh Exp $
+$NetBSD: HOWTO-dev-crosscompile,v 1.3 2013/05/11 20:24:01 riastradh Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
@@ -53,14 +53,22 @@ TOOL_DEPENDS+=  libxslt>=1.1.0:../../textproc/libxslt
 * Native C and C++ compilers
 
 Some software wants build tools written in C and C++ and then execute
-them natively at build-time.  Sometimes configure scripts or makefiles
-accept a variable named CC_FOR_BUILD or similar to supply this; in
-that case, you can pass in the pkgsrc make variables NATIVE_CC and
-friends:
+them natively at build-time.  Your package probably does this if when
+you try to cross-compile it, it fails with:
 
+   sh: Cannot execute ELF binary ./foobar
+
+Sometimes configure scripts or makefiles accept a variable named
+CC_FOR_BUILD or similar to build these tools.  In that case, you can
+pass in the pkgsrc make variables NATIVE_CC and friends:
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+= CC_FOR_BUILD=${NATIVE_CC:Q}
 CONFIGURE_ENV+= CXX_FOR_BUILD=${NATIVE_CXX:Q}
 CONFIGURE_ENV+= LD_FOR_BUILD=${NATIVE_LD:Q}
+.endif
 
 If the software doesn't use CC_FOR_BUILD, it may still be easy to find
 the makefile rules that invoke $(CC) or $(LD) to build native tools
@@ -75,14 +83,25 @@ instance, you'll have to hack it yourself.
 
 There's a lot of autoconf-configured software out there that uses
 run-tests to learn about the environment, which doesn't work so well
-in cross-builds.  Some of these can be patched to be replaced by
-compile-tests; otherwise, for a particular known target environment,
-you can pre-answer the tests for autoconf:
+in cross-builds.  Your package probably uses this if it when you try to
+cross-compile it, it fails with:
+
+   configure: error: cannot run test programs while cross-compiling
+
+or
+
+   configure: error: cannot check for file existence when cross-compiling
+
+Some of these can be patched to be replaced by compile-tests.
+Otherwise, for a particular known target environment, you can
+pre-answer the tests for autoconf:
 
 .include "../../bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  if ${OPSYS} == "NetBSD"
 # Configure wants to check for /dev/random but can't.  We know NetBSD
 # always has a /dev/random, so inform autoconf of the fact.
 CONFIGURE_ENV+= ac_cv_file__dev_random=yes
+.  endif
 .endif
