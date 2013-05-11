@@ -1,0 +1,14 @@
+$NetBSD: patch-config.h.in,v 1.1 2013/05/11 19:49:15 riastradh Exp $
+
+--- config.h.in.orig	2013-01-07 10:56:29.000000000 +0000
++++ config.h.in
+@@ -21,6 +21,9 @@
+ /* Define the location where the catalogs will be installed */
+ #undef GTK_LOCALEDIR
+ 
++/* Define if we're using atk-bridge-2.0 */
++#undef HAVE_ATK_BRIDGE
++
+ /* Define to 1 if you have the `bind_textdomain_codeset' function. */
+ #undef HAVE_BIND_TEXTDOMAIN_CODESET
+ 
