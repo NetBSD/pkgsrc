@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/05/11 21:51:18 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/11 22:24:46 alnsn Exp $
 #
 
 DISTNAME=	${PL_VERSION}
@@ -12,6 +12,7 @@ COMMENT=	Lua libraries for functional programming, OS path management, etc
 LICENSE=	mit
 
 PL_VERSION=	1.1.0
+DIST_SUBDIR=	lua-penlight
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
