@@ -1,13 +1,21 @@
-$NetBSD: patch-src_gui_curses_gui-curses-term_c,v 1.1 2012/05/29 00:32:27 dholland Exp $
+$NetBSD: patch-src_gui_curses_gui-curses-term_c,v 1.2 2013/05/11 18:31:11 riastradh Exp $
+
+Include <ncurses/term.h>, not <ncursesw/term.h>.
+Check for HAVE_NCURSES_TERM_H, not for HAVE_NCURSES_CURSES_H.
 
 Workaround for build failure on early NetBSD 6.99.* and prerelease 6.0
 (PR 46492)
 
---- src/gui/curses/gui-curses-term.c~	2012-01-08 10:28:06.000000000 +0000
+--- src/gui/curses/gui-curses-term.c.orig	2012-03-10 07:56:43.000000000 +0000
 +++ src/gui/curses/gui-curses-term.c
-@@ -28,6 +28,10 @@
- #ifdef HAVE_NCURSESW_CURSES_H
- #include <ncursesw/term.h>
+@@ -25,9 +25,13 @@
+ #include "config.h"
+ #endif
+ 
+-#ifdef HAVE_NCURSESW_CURSES_H
+-#include <ncursesw/term.h>
++#ifdef HAVE_NCURSES_TERM_H
++#include <ncurses/term.h>
  #else
 +#ifdef __NetBSD__
 +/* workaround for build failure on early 6.99.* and prerelease 6.0 */
