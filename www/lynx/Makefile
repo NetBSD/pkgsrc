@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2013/02/08 00:10:47 tron Exp $
+# $NetBSD: Makefile,v 1.114 2013/05/11 16:24:59 riastradh Exp $
 
 DISTNAME=	lynx2.8.7
 PKGNAME=	lynx-2.8.7
@@ -74,6 +74,10 @@ CONFIGURE_ARGS+=	--enable-kbd-layout
 CONFIGURE_ARGS+=	--enable-nested-tables
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
