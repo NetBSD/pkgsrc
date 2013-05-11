@@ -1,0 +1,5 @@
+A Gravatar is a Globally Recognized Avatar for a given email address
+or OpenID. This allows you to have a global picture associated with
+your email address or OpenID. You can look up the Gravatar by
+constructing a URL to get the image from gravatar.com. This module
+does that.
