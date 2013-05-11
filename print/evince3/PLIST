@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/19 18:39:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/05/11 20:47:15 riastradh Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -67,11 +67,11 @@ lib/libevdocument3.la
 lib/libevview3.la
 lib/pkgconfig/evince-document-3.0.pc
 lib/pkgconfig/evince-view-3.0.pc
-libexec/evinced
+${PLIST.dbus}libexec/evinced
 man/man1/evince.1
 share/GConf/gsettings/evince.convert
 share/applications/evince.desktop
-share/dbus-1/services/org.gnome.evince.Daemon.service
+${PLIST.dbus}share/dbus-1/services/org.gnome.evince.Daemon.service
 share/evince/hand-open.png
 share/evince/icons/hicolor/16x16/actions/object-rotate-left.png
 share/evince/icons/hicolor/16x16/actions/object-rotate-right.png
