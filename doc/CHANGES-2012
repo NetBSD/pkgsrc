@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4028 2013/01/03 09:36:01 agc Exp $
+$NetBSD: CHANGES-2012,v 1.4029 2013/05/12 14:08:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -3792,6 +3792,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211-translations to 201207310 [taca 2012-08-01]
 	Updated sysutils/py-dbus to 1.1.1 [drochner 2012-08-01]
 	Updated sysutils/dbus to 1.6.4 [drochner 2012-08-01]
+	Added sysutils/dbus-python-common version 1.1.1 [drochner 2012-08-01]
 	Updated emulators/suse121_libjpeg to 12.1nb1 [obache 2012-08-02]
 	Updated pkgtools/pkg_chk to 2.0.3 [abs 2012-08-02]
 	Updated devel/pth to 2.0.7nb3 [jperkin 2012-08-02]
