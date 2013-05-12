@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1989 2013/05/09 23:37:25 riastradh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1990 2013/05/12 06:17:50 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -371,7 +371,7 @@ _BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 #
 USE_TOOLS+=								\
 	[ awk basename cat chgrp chmod chown cmp cp cut dirname echo	\
-	egrep env false file find grep head hostname id install ln ls	\
+	egrep env false find grep head hostname id install ln ls	\
 	mkdir mv printf pwd rm rmdir sed sh sort			\
 	tail test touch tr true wc xargs
 
@@ -381,6 +381,11 @@ USE_TOOLS+=	expr
 # bsd.bulk-pkg.mk uses certain tools
 .if defined(BATCH)
 USE_TOOLS+=	tee tsort
+.endif
+
+# scripts/shlib-type
+.if ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
+USE_TOOLS+=	file
 .endif
 
 # INSTALL/DEINSTALL script framework
