@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.69 2013/05/12 05:13:38 obache Exp $
+# $NetBSD: bsd.options.mk,v 1.70 2013/05/12 17:19:41 riastradh Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -288,7 +288,7 @@ _opt_:=		-${_popt_}
 .    if empty(_opt_:M-*)
 _OPTIONS_UNSUPPORTED:=${_OPTIONS_UNSUPPORTED} ${_opt_}
 .    else
-PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Option "${_opt_:Q}" is unsupported, so disabling it has no effect."
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Option "${_opt_:C/^-//:Q}" is unsupported, so disabling it has no effect."
 .    endif
 .  else
 .    if defined(_PKG_OPTIONS_GROUP_MAP.${_popt_})
