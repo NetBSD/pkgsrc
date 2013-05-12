@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/12 19:55:42 cheusov Exp $
+
+SHA1 (oauth2-1.5.211.tar.gz) = ac66def0ec16e4d2654e75f2bcae837e6dcf309f
+RMD160 (oauth2-1.5.211.tar.gz) = 70baee500d03210cf30125be0cb3281185c70626
+Size (oauth2-1.5.211.tar.gz) = 18608 bytes
