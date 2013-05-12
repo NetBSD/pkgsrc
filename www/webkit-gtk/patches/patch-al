@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.3 2012/11/07 15:29:13 joerg Exp $
+$NetBSD: patch-al,v 1.4 2013/05/12 06:11:17 richard Exp $
 
---- GNUmakefile.in.orig	2012-04-24 05:17:27.000000000 +0000
+--- GNUmakefile.in.orig	2012-12-09 18:20:20.000000000 +0000
 +++ GNUmakefile.in
-@@ -21828,7 +21828,6 @@ Programs_minidom_CPPFLAGS = \
+@@ -21156,7 +21156,6 @@ Programs_minidom_CPPFLAGS = \
  	$(javascriptcore_cppflags)
  
  Programs_minidom_CFLAGS = \
@@ -10,7 +10,7 @@ $NetBSD: patch-al,v 1.3 2012/11/07 15:29:13 joerg Exp $
  	-fno-strict-aliasing \
  	$(global_cflags) \
  	$(GLOBALDEPS_CFLAGS)
-@@ -80247,6 +80246,8 @@ doc-maintainer-clean-local: clean
+@@ -79732,6 +79731,8 @@ doc-maintainer-clean-local: clean
  	-@rmdir Documentation
  
  install-data-local:
@@ -19,7 +19,7 @@ $NetBSD: patch-al,v 1.3 2012/11/07 15:29:13 joerg Exp $
  	@installfiles=`echo ./Documentation/webkitgtk/html/*`; \
  	if test "$$installfiles" = './Documentation/webkitgtk/html/*'; \
  	then echo 1>&2 'No documentation to install' ; \
-@@ -80287,7 +80288,7 @@ install-data-local:
+@@ -79772,7 +79773,7 @@ install-data-local:
  @ENABLE_WEBKIT2_TRUE@	      $${installdir}/webkit2gtk-$(DOC_MODULE_VERSION).devhelp2; \
  @ENABLE_WEBKIT2_TRUE@	  fi; \
  @ENABLE_WEBKIT2_TRUE@	fi
