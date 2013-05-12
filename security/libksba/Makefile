@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/05/10 20:24:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.28 2013/05/12 00:28:52 riastradh Exp $
 
 DISTNAME=	libksba-1.3.0
 CATEGORIES=	security
@@ -16,6 +16,8 @@ INFO_FILES=		yes
 
 TEST_TARGET=		check
 TEXINFO_REQD=		4.0
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
