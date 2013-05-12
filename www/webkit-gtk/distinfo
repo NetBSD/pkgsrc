@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.62 2013/05/09 14:04:42 joerg Exp $
+$NetBSD: distinfo,v 1.63 2013/05/12 06:11:17 richard Exp $
 
 SHA1 (webkitgtk-1.10.2.tar.xz) = 733ca23157eb8dd072d57becf325799c00bde630
 RMD160 (webkitgtk-1.10.2.tar.xz) = 91e6b8bcd4bb8234271dd6c6ebdba63dd1c0840e
@@ -7,6 +7,7 @@ SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = c5e1efdac5f6e2a
 SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f166335d829aba9051c1aaf1b950ec655deef372
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = ce9766427bebd4aac0b8c7fc2c12cc0ed75150d5
 SHA1 (patch-Source_WTF_wtf_Atomics.h) = 3cc890798e7e956b75c2a181eca4a4d05cb545fc
+SHA1 (patch-Source_WTF_wtf_Compiler.h) = 9e80acdbb57be1844103fe647a017ad7e46cc513
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = f922736410d49e7d7d1a459bffd3dffd0364e85a
 SHA1 (patch-Source_WTF_wtf_RefCountedLeakCounter.h) = 3cdf53f9735675bff83b48a81db59c3512f306e3
 SHA1 (patch-Source_WTF_wtf_ThreadSafeRefCounted.h) = c068f8b248b8864eeaa582fa096eca279f06890e
@@ -23,6 +24,6 @@ SHA1 (patch-Tools_DumpRenderTree_gtk_ImageDiff.cpp) = 36013247ccbc2df274762acb49
 SHA1 (patch-ai) = 8df303ffde5c4398e56601c524e9ab4aff52096c
 SHA1 (patch-aj) = 930d1b5d73028b2f2e5abb33c15f72befadc64ce
 SHA1 (patch-ak) = 64ad843164f1c12968e933080e0966a9019abfdf
-SHA1 (patch-al) = dd7201d0a5dcc0f173a156f3bb42e1417bef6b06
+SHA1 (patch-al) = e2041fda38ad0a4d8d5e4c31f184a812f5332b6b
 SHA1 (patch-am) = 9516994b630b43c7c234f61debf8d762cf7aee97
 SHA1 (patch-configure) = 448caea068344fe987e566f73b3f567dad7b93ed
