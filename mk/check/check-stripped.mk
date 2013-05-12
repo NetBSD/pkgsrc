@@ -1,4 +1,4 @@
-# $NetBSD: check-stripped.mk,v 1.4 2010/08/24 19:08:29 bad Exp $
+# $NetBSD: check-stripped.mk,v 1.5 2013/05/12 06:17:50 obache Exp $
 #
 # This file checks that after installation, all binaries conform to the
 # setting of INSTALL_UNSTRIPPED.
@@ -31,6 +31,9 @@ _CHECK_STRIPPED_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
 .if !empty(CHECK_STRIPPED:M[Yy][Ee][Ss])
 privileged-install-hook: _check-stripped
+.  if empty(USE_TOOLS:Mfile)
+USE_TOOLS+=	file
+.  endif
 .endif
 
 _check-stripped: error-check .PHONY
