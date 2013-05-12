@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeMiNT.mk,v 1.1 2009/03/05 00:02:44 abs Exp $
+# $NetBSD: tools.FreeMiNT.mk,v 1.2 2013/05/12 06:19:21 obache Exp $
 #
 # System-supplied tools for the FreeMiNT operating system.
 
@@ -24,7 +24,6 @@ TOOLS_PLATFORM.egrep?=		/bin/egrep
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/usr/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
-TOOLS_PLATFORM.file?=		/usr/bin/printf "%s: text\n"	# Hack
 TOOLS_PLATFORM.fgrep?=		/bin/fgrep
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/lex
