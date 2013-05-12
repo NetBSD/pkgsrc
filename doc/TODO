@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12135 2013/05/10 15:53:08 ryoon Exp $
+$NetBSD: TODO,v 1.12136 2013/05/12 15:48:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o byacc-20130304
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-0.9.27
+	o calibre-0.9.30
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
@@ -493,6 +493,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasm-2.20.11
 	o dbench-4.0
 	o dbus-1.7.2
+	o dbus-python-common-1.2.0
 	o dcc-1.3.141
 	o dd_rescue-1.33 [wip]
 	o ddclient-3.7.3
@@ -549,7 +550,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.1.3 [etm successor]
+	o etm2-2.1.4 [etm successor]
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evince-3.8.0
@@ -565,6 +566,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
+	o ffmpeg-20130512.1.2.1
 	o file-5.14
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -581,6 +583,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freenet-0.7
 	o freesci-0.6.4
 	o freeswitch-1.2.3
+	o freetype-2.4.12
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
@@ -594,6 +597,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gaupol-0.22
+	o gawk-4.1.0
 	o gcal-3.6.3
 	o gcin-1.5.5
 	o gcombust-0.1.55
@@ -653,6 +657,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.2
 	o gnuchess-6.0.3
+	o gnupg2-2.0.20
 	o gnutls-3.1.10
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
@@ -706,7 +711,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o host-20070128
 	o html2wml-0.4.11
 	o htop-1.0.2
-	o httping-2.2.1
+	o httping-2.3.1
 	o httptunnel-3.3
 	o hugin-2012.0.0
 	o hylafax-6.0.5
@@ -829,7 +834,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lua-5.2.1
 	o luit-2.0.20130217
 	o lwm-1.2.2
-	o lyx-2.0.3
+	o lyx-2.0.6
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o maildrop-2.6.0
@@ -968,6 +973,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pingus-0.7.4
 	o pioneers-14.1
 	o pircbot-1.4.6
+	o pixman-0.30.0
 	o pks-0.9.6
 	o planner-0.14.6
 	o ploticus-2.41
@@ -991,7 +997,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o puf-1.0.0
 	o pulseaudio-3.0
 	o puzzle-9173
-	o puzzles-9838
+	o puzzles-9840
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -999,15 +1005,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.10.0
 	o py-carddav-0.4.1
-	o py-distribute-0.6.37
+	o py-cython-0.19.1
+	o py-dbus-1.2.0
+	o py-distribute-0.6.38
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gobject3-3.8.1
 	o py-httplib2-0.8
 	o py-libxml2-2.9.1
-	o py-lxml-3.2.0
+	o py-lxml-3.2.1
 	o py-moin-1.9.7
-	o py-simplejson-3.2.0
+	o py-simplejson-3.3.0
 	o py-sybase-0.37
 	o py-trueskill-0.4
 	o py-urwid-1.1.0
@@ -1018,6 +1026,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt5-libs-5.0.2
 	o quagga-0.99.22.1
 	o quilt-0.60
+	o racket-5.3.4
 	o radiance-3.7.2
 	o raine-0.51.15
 	o rat-4.2.25
@@ -1047,7 +1056,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sablecc-3.7
 	o samba-4.0.5
 	o sarg-2.2.5
-	o sawfish-1.9.1
+	o sawfish-1.9.91
 	o scala-2.10.0
 	o scapy-2.2.0
 	o scew-0.4.0
@@ -1133,7 +1142,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o texlive-2012
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-4.0.1
+	o texmaker-4.0.2
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
 	o tig-1.0
@@ -1176,12 +1185,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.20
-	o vifm-0.7.4b
+	o vifm-0.7.5
 	o vinagre-3.8.1
 	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.8.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
+	o vmips-1.4.1
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
 	o wMosaic-3.8.22
@@ -1210,7 +1220,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130504
+	o x264-devel-20130511
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
