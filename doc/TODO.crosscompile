@@ -1,4 +1,4 @@
-$NetBSD: TODO.crosscompile,v 1.6 2013/05/13 14:28:04 riastradh Exp $
+$NetBSD: TODO.crosscompile,v 1.7 2013/05/13 15:14:42 riastradh Exp $
 
 * Fix the cross-libtool crock.
 * Organize NATIVE_xyz and TARGET_xyz better.
@@ -14,3 +14,4 @@ $NetBSD: TODO.crosscompile,v 1.6 2013/05/13 14:28:04 riastradh Exp $
 * Teach pbulk about TOOL_DEPENDS so it can easily do bulk cross-builds.
 * Distinguish host build-time tools from target run-time tools.
 * If you set MACHINE_ARCH, what should MACHINE be?  (Avoid using it?)
+* Make sure cross-builds DTRT with INSTALL scripts.
