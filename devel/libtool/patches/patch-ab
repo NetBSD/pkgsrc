@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
+$NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
 
---- configure.orig	2013-03-03 13:53:45.000000000 +0000
+--- configure.orig	2011-10-17 10:18:58.000000000 +0000
 +++ configure
 @@ -5829,12 +5829,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    lt_cv_deplibs_check_method=pass_all
@@ -141,6 +141,15 @@ $NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs=no
+@@ -10026,7 +10074,7 @@ fi
+   allow_undefined_flag="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -10238,13 +10286,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs=yes
        ;;
@@ -340,6 +349,15 @@ $NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
  
  
    if test -n "$compiler"; then
+@@ -14282,7 +14374,7 @@ fi
+   allow_undefined_flag_CXX="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -14665,15 +14757,12 @@ fi
  	;;
  
@@ -651,6 +669,15 @@ $NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_F77=no
+@@ -18324,7 +18489,7 @@ fi
+   allow_undefined_flag_F77="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -18498,13 +18663,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_F77=yes
        ;;
@@ -922,6 +949,15 @@ $NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_FC=no
+@@ -21396,7 +21642,7 @@ fi
+   allow_undefined_flag_FC="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -21570,13 +21816,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_FC=yes
        ;;
@@ -1193,6 +1229,15 @@ $NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_GO=no
+@@ -24208,7 +24535,7 @@ fi
+   allow_undefined_flag_GO="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -24381,13 +24708,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_GO=yes
        ;;
@@ -1341,6 +1386,15 @@ $NetBSD: patch-ab,v 1.74 2013/04/12 13:44:08 joerg Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_GCJ=no
+@@ -26305,7 +26690,7 @@ fi
+   allow_undefined_flag_GCJ="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -26478,13 +26863,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_GCJ=yes
        ;;
