@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1641 2013/05/13 21:04:59 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.1642 2013/05/13 22:47:14 tez Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2495,3 +2495,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffmpeg to 20130510.1.2.1 [adam 2013-05-13]
 	Updated multimedia/ffplay to 1.2.1 [adam 2013-05-13]
 	Updated editors/emacs-snapshot to 24.3.50.20130510 [minskim 2013-05-13]
+	Updated security/mit-krb5 to 1.10.5nb1 [tez 2013-05-13]
