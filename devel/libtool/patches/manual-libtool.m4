@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.34 2013/04/12 13:44:08 joerg Exp $
+$NetBSD: manual-libtool.m4,v 1.35 2013/05/13 14:04:27 adam Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
@@ -14,6 +14,15 @@ $NetBSD: manual-libtool.m4,v 1.34 2013/04/12 13:44:08 joerg Exp $
  ])
  
  
+@@ -1098,7 +1101,7 @@ m4_defun([_LT_DARWIN_LINKER_FEATURES],
+   _LT_TAGVAR(allow_undefined_flag, $1)="$_lt_dar_allow_undefined"
+   case $cc_basename in
+      ifort*) _lt_dar_can_shared=yes ;;
+-     *) _lt_dar_can_shared=$GCC ;;
++     *) _lt_dar_can_shared=yes ;;
+   esac
+   if test "$_lt_dar_can_shared" = "yes"; then
+     output_verbose_link_cmd=func_echo_all
 @@ -2468,7 +2471,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
