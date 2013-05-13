@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1640 2013/05/13 14:45:40 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1641 2013/05/13 21:04:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-autodie to 2.19 [wen 2013-05-13]
 	Updated multimedia/ffmpeg to 20130510.1.2.1 [adam 2013-05-13]
 	Updated multimedia/ffplay to 1.2.1 [adam 2013-05-13]
+	Updated editors/emacs-snapshot to 24.3.50.20130510 [minskim 2013-05-13]
