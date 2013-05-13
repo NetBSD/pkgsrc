@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/02 10:40:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/05/13 11:51:38 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APL2-Stomp-Websocket
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-Apache-Basho
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-BSD-base64js
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-BSD-glMatrix
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-EJS10
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Flot
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Mochi
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Sammy060
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-eldap
@@ -48,6 +50,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_auth_mechanism.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_auth_mechanism_amqplain.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_auth_mechanism_cr_demo.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_auth_mechanism_plain.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_autoheal.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_backing_queue.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_backing_queue_qc.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_basic.beam
@@ -87,8 +90,13 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_memory_monitor.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_coordinator.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_master.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_misc.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_mode.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_mode_all.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_mode_exactly.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_mode_nodes.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_slave.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_slave_sup.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_sync.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_misc.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mnesia.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_msg_file.beam
@@ -151,6 +159,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp_client-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-0.5.0-rmq0.0.0-git4b93c2d.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/eldap-0.0.0-gite309de4.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/mochiweb-2.3.1-rmq0.0.0-gitd541e9a.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_amqp1_0-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_ldap-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_mechanism_ssl-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_consistent_hash_exchange-0.0.0.ez
@@ -163,7 +172,6 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-0.0.0.e
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_agent-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_visualiser-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_mqtt-0.0.0.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_old_federation-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_shovel-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_shovel_management-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_stomp-0.0.0.ez
