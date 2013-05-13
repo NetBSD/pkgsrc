@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1637 2013/05/12 19:57:29 cheusov Exp $
+$NetBSD: CHANGES-2013,v 1.1638 2013/05/13 01:51:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2490,3 +2490,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/lua-penlight version 1.1.0 [alnsn 2013-05-11]
 	Updated comms/asterisk to 11.3.0nb2 [jnemeth 2013-05-12]
 	Added security/py-oauth2 version 1.5.211 [cheusov 2013-05-12]
+	Updated lang/mawk to 1.3.4.20130219 [wen 2013-05-13]
