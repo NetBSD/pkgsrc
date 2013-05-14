@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.97 2013/04/08 11:17:15 rodent Exp $
+# $NetBSD: rubyversion.mk,v 1.98 2013/05/14 15:18:05 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -216,17 +216,24 @@ RUBY193_API_VERSION=	1.9.1
 RUBY_VERSION_DEFAULT?=	193
 
 RUBY_VERSION_SUPPORTED?= 193 18
-RUBY_VER?=		${RUBY_VERSION_DEFAULT}
-
-# If package support only one version, use it.
-.if ${RUBY_VERSION_SUPPORTED:[\#]} == 1
-RUBY_VER=		${RUBY_VERSION_SUPPORTED}
-RUBY_VERSION_DEFAULT=	${RUBY_VERSION_SUPPORTED}
-.endif
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
 .  if ${rv} == ${RUBY_VERSION_REQD}
+RUBY_VER=	${rv}
+.  endif
+. endfor
+.elif !defined(RUBY_VER)
+. for rv in ${RUBY_VERSION_SUPPORTED}
+.  if ${rv} == ${RUBY_VERSION_DEFAULT}
+RUBY_VER=	${rv}
+.  endif
+. endfor
+.endif
+
+.if !defined(RUBY_VER)
+. for rv in ${RUBY_VERSION_SUPPORTED}
+.  if !defined(RUBY_VER)
 RUBY_VER=	${rv}
 .  endif
 . endfor
@@ -246,8 +253,10 @@ RUBY_ABI_VERSION=	${RUBY_VERSION}
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 .endif
 
+.if !empty(RUBY_VERSION)
 RUBY_PATCHLEVEL=	${RUBY${RUBY_VER}_PATCHLEVEL}
 RUBY_API_VERSION=	${RUBY${RUBY_VER}_API_VERSION}
+.endif
 
 # Variable assignment for multi-ruby packages
 MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
@@ -419,14 +428,11 @@ MAKE_ENV+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 MAKEFLAGS+=		RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
 
 #
-# PLIST
+# PLIST_VARS for x11/ruby-tk package.
 #
-PLIST_VARS+=		ruby18 ruby19 ruby193
-.if ${RUBY_VER} == "18"
-PLIST.ruby18=		yes
-.elif ${RUBY_VER} == "193"
+PLIST_VARS+=		ruby19
+.if ${RUBY_VER} != "18"
 PLIST.ruby19=		yes
-PLIST.ruby193=		yes
 .endif
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
