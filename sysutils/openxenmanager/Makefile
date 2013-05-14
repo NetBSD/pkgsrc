@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/14 13:56:48 imil Exp $
 #
 
 DISTNAME=	openxenmanager_0.r80+dfsg.orig
 PKGNAME=	openxenmanager-0.0.80
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/o/openxenmanager/}
 
@@ -41,4 +42,8 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/openxenmanager
 
 .include "../../lang/python/application.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../net/gtk-vnc/buildlink3.mk"
+.include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../graphics/graphviz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
