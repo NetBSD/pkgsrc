@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.5 2013/02/06 23:20:54 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2013/05/14 15:48:40 taca Exp $
 
 BUILDLINK_TREE+=	dovecot
 
 .if !defined(DOVECOT_BUILDLINK3_MK)
 DOVECOT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=2.0.6
-BUILDLINK_ABI_DEPENDS.dovecot+=		dovecot>=2.1.13nb2
+BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=2.2.0
+BUILDLINK_ABI_DEPENDS.dovecot+=		dovecot>=2.2.0
 BUILDLINK_PKGSRCDIR.dovecot?=		../../mail/dovecot2
 
 pkgbase:=	dovecot
