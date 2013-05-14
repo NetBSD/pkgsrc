@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/05/09 07:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.30 2013/05/14 19:15:36 joerg Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
@@ -26,6 +26,12 @@ TEST_TARGET=	check
 
 pre-build:
 	${CHMOD} 0755 ${WRKSRC}/lib/erl/rebar
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
+.endif
 
 .include "options.mk"
 
