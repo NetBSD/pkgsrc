@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.96 2013/04/07 20:23:49 ryoon Exp $
+$NetBSD: distinfo,v 1.97 2013/05/14 19:08:42 joerg Exp $
 
 SHA1 (enigmail-1.5.1.tar.gz) = fec4c169731a9f0f47d1e443ea6f427196f759a7
 RMD160 (enigmail-1.5.1.tar.gz) = b7e3adc5f09d7671ac8c419a3cdd73f567351c79
@@ -40,6 +40,9 @@ SHA1 (patch-md) = 48e172fdf3ec12765e674a4a2ba8ac1b53f2f15b
 SHA1 (patch-me) = 4c5f293574e9bdbe3ad8fa2abd7649622750f24f
 SHA1 (patch-mozilla_build_autoconf_nss.m4) = 3b05127e72a76ac2f87c8362cbde13ce76485a19
 SHA1 (patch-mozilla_config_baseconfig.mk) = 22135e1dd081529afc217009b2f2e860d8c51cd9
+SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
+SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
+SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = 32d4ab3fbf80bf19783dab7c4a875a7262f419cf
 SHA1 (patch-mozilla_gfx_skia_Makefile.in) = 9adc38011a2186d8671360f6635a6c83dc758c9a
 SHA1 (patch-mozilla_gfx_skia_src_sfnt_SkOTTable__head.h) = 75a54359e2ebc4a019e4b5ed027df654b612ea34
 SHA1 (patch-mozilla_gfx_skia_src_sfnt_SkOTTable__name.h) = f8ef35f6d4ede4d02baee2c2905089b307724b95
