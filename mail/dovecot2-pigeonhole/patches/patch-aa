@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/05 12:01:20 adam Exp $
+$NetBSD: patch-aa,v 1.2 2013/05/14 15:49:52 taca Exp $
 
---- doc/example-config/conf.d/Makefile.in.orig	2010-11-05 08:58:58.000000000 +0000
+Install example configuration files to examples directory of pkgsrc.
+
+--- doc/example-config/conf.d/Makefile.in.orig	2013-05-09 13:32:15.000000000 +0000
 +++ doc/example-config/conf.d/Makefile.in
-@@ -214,7 +214,7 @@ top_build_prefix = @top_build_prefix@
+@@ -231,7 +231,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  pkgsysconfdir = $(sysconfdir)/dovecot
@@ -10,4 +12,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/05 12:01:20 adam Exp $
 +exampledir = $(datadir)/examples/dovecot/conf.d
  example_DATA = \
  	20-managesieve.conf \
- 	90-sieve.conf
+ 	90-sieve.conf \
