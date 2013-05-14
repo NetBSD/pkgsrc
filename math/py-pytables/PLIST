@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/11/24 18:06:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/05/14 09:57:58 fhajny Exp $
 bin/nctoh5${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
@@ -7,15 +7,6 @@ ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
 ${PYSITELIB}/tables/_comp_bzip2.so
 ${PYSITELIB}/tables/_comp_lzo.so
-${PYSITELIB}/tables/_conditions_common.py
-${PYSITELIB}/tables/_conditions_common.pyc
-${PYSITELIB}/tables/_conditions_common.pyo
-${PYSITELIB}/tables/_parameters_common.py
-${PYSITELIB}/tables/_parameters_common.pyc
-${PYSITELIB}/tables/_parameters_common.pyo
-${PYSITELIB}/tables/_table_common.py
-${PYSITELIB}/tables/_table_common.pyc
-${PYSITELIB}/tables/_table_common.pyo
 ${PYSITELIB}/tables/array.py
 ${PYSITELIB}/tables/array.pyc
 ${PYSITELIB}/tables/array.pyo
@@ -56,6 +47,16 @@ ${PYSITELIB}/tables/group.py
 ${PYSITELIB}/tables/group.pyc
 ${PYSITELIB}/tables/group.pyo
 ${PYSITELIB}/tables/hdf5Extension.so
+${PYSITELIB}/tables/idxutils.py
+${PYSITELIB}/tables/idxutils.pyc
+${PYSITELIB}/tables/idxutils.pyo
+${PYSITELIB}/tables/index.py
+${PYSITELIB}/tables/index.pyc
+${PYSITELIB}/tables/index.pyo
+${PYSITELIB}/tables/indexes.py
+${PYSITELIB}/tables/indexes.pyc
+${PYSITELIB}/tables/indexes.pyo
+${PYSITELIB}/tables/indexesExtension.so
 ${PYSITELIB}/tables/leaf.py
 ${PYSITELIB}/tables/leaf.pyc
 ${PYSITELIB}/tables/leaf.pyo
@@ -63,15 +64,13 @@ ${PYSITELIB}/tables/link.py
 ${PYSITELIB}/tables/link.pyc
 ${PYSITELIB}/tables/link.pyo
 ${PYSITELIB}/tables/linkExtension.so
+${PYSITELIB}/tables/lrucacheExtension.so
 ${PYSITELIB}/tables/misc/__init__.py
 ${PYSITELIB}/tables/misc/__init__.pyc
 ${PYSITELIB}/tables/misc/__init__.pyo
 ${PYSITELIB}/tables/misc/enum.py
 ${PYSITELIB}/tables/misc/enum.pyc
 ${PYSITELIB}/tables/misc/enum.pyo
-${PYSITELIB}/tables/misc/lrucache.py
-${PYSITELIB}/tables/misc/lrucache.pyc
-${PYSITELIB}/tables/misc/lrucache.pyo
 ${PYSITELIB}/tables/misc/proxydict.py
 ${PYSITELIB}/tables/misc/proxydict.pyc
 ${PYSITELIB}/tables/misc/proxydict.pyo
@@ -171,14 +170,20 @@ ${PYSITELIB}/tables/tests/check_leaks.pyo
 ${PYSITELIB}/tables/tests/common.py
 ${PYSITELIB}/tables/tests/common.pyc
 ${PYSITELIB}/tables/tests/common.pyo
+${PYSITELIB}/tables/tests/create_backcompat_indexes.py
+${PYSITELIB}/tables/tests/create_backcompat_indexes.pyc
+${PYSITELIB}/tables/tests/create_backcompat_indexes.pyo
 ${PYSITELIB}/tables/tests/elink.h5
 ${PYSITELIB}/tables/tests/elink2.h5
 ${PYSITELIB}/tables/tests/ex-noattr.h5
 ${PYSITELIB}/tables/tests/flavored_vlarrays-format1.6.h5
+${PYSITELIB}/tables/tests/float.h5
 ${PYSITELIB}/tables/tests/idx-std-1.x.h5
 ${PYSITELIB}/tables/tests/indexes_2_0.h5
+${PYSITELIB}/tables/tests/indexes_2_1.h5
 ${PYSITELIB}/tables/tests/nested-type-with-gaps.h5
 ${PYSITELIB}/tables/tests/non-chunked-table.h5
+${PYSITELIB}/tables/tests/scalar.h5
 ${PYSITELIB}/tables/tests/slink.h5
 ${PYSITELIB}/tables/tests/smpl_SDSextendible.h5
 ${PYSITELIB}/tables/tests/smpl_compound_chunked.h5
@@ -235,6 +240,12 @@ ${PYSITELIB}/tables/tests/test_hdf5compat.pyo
 ${PYSITELIB}/tables/tests/test_index_backcompat.py
 ${PYSITELIB}/tables/tests/test_index_backcompat.pyc
 ${PYSITELIB}/tables/tests/test_index_backcompat.pyo
+${PYSITELIB}/tables/tests/test_indexes.py
+${PYSITELIB}/tables/tests/test_indexes.pyc
+${PYSITELIB}/tables/tests/test_indexes.pyo
+${PYSITELIB}/tables/tests/test_indexvalues.py
+${PYSITELIB}/tables/tests/test_indexvalues.pyc
+${PYSITELIB}/tables/tests/test_indexvalues.pyo
 ${PYSITELIB}/tables/tests/test_links.py
 ${PYSITELIB}/tables/tests/test_links.pyc
 ${PYSITELIB}/tables/tests/test_links.pyo
@@ -274,6 +285,7 @@ ${PYSITELIB}/tables/tests/test_vlarray.pyc
 ${PYSITELIB}/tables/tests/test_vlarray.pyo
 ${PYSITELIB}/tables/tests/time-table-vlarray-1_x.h5
 ${PYSITELIB}/tables/tests/times-nested-be.h5
+${PYSITELIB}/tables/tests/vlstr_attr.h5
 ${PYSITELIB}/tables/tests/vlunicode_endian.h5
 ${PYSITELIB}/tables/tests/zerodim-attrs-1.3.h5
 ${PYSITELIB}/tables/tests/zerodim-attrs-1.4.h5
