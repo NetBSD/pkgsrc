@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/05/09 03:49:16 manu Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/05/14 15:38:36 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -632,6 +632,7 @@ share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
+share/doc/dovecot/wiki/MailboxSettings.txt
 share/doc/dovecot/wiki/MboxChildFolders.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
