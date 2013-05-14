@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.3 2010/11/24 18:06:01 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2013/05/14 09:57:58 fhajny Exp $
 
 avoid use of a rendundant Python-2.6 builtin for compatibility
 
 --- tables/tests/test_basics.py.orig	2010-11-05 09:27:14.000000000 +0000
 +++ tables/tests/test_basics.py
-@@ -2243,7 +2243,7 @@ def _worker(fn, qout = None):
+@@ -2357,7 +2357,7 @@ def _worker(fn, qout = None):
      rows = fp.root.table.where('(f0 < 10)')
      if common.verbose:
          print "Got the iterator, about to iterate"
--    row = next(rows)
+-    next(rows)
 +    row = rows.next()
      if common.verbose:
          print "Succeeded in one iteration\n"
