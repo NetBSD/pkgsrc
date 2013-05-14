@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2011/11/03 00:22:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/05/14 19:44:22 wiz Exp $
 bin/diffuse
+man/cs/man1/diffuse.1
 man/it/man1/diffuse.1
 man/man1/diffuse.1
 man/ru/man1/diffuse.1
@@ -9,6 +10,7 @@ share/diffuse/syntax/c++.syntax
 share/diffuse/syntax/csh.syntax
 share/diffuse/syntax/csharp.syntax
 share/diffuse/syntax/css.syntax
+share/diffuse/syntax/erlang.syntax
 share/diffuse/syntax/fortran.syntax
 share/diffuse/syntax/gettext.syntax
 share/diffuse/syntax/glsl.syntax
@@ -21,6 +23,7 @@ share/diffuse/syntax/jsp.syntax
 share/diffuse/syntax/makefile.syntax
 share/diffuse/syntax/objective-c++.syntax
 share/diffuse/syntax/octave.syntax
+share/diffuse/syntax/opencl.syntax
 share/diffuse/syntax/pascal.syntax
 share/diffuse/syntax/patch.syntax
 share/diffuse/syntax/perl.syntax
@@ -36,13 +39,16 @@ share/diffuse/syntax/vhdl.syntax
 share/diffuse/syntax/xml.syntax
 share/examples/diffuse/diffuserc
 share/gnome/help/diffuse/C/diffuse.xml
+share/gnome/help/diffuse/cs/diffuse.xml
 share/gnome/help/diffuse/it/diffuse.xml
 share/gnome/help/diffuse/ru/diffuse.xml
+share/locale/cs/LC_MESSAGES/diffuse.mo
 share/locale/de/LC_MESSAGES/diffuse.mo
 share/locale/es/LC_MESSAGES/diffuse.mo
 share/locale/it/LC_MESSAGES/diffuse.mo
 share/locale/ja/LC_MESSAGES/diffuse.mo
 share/locale/ko/LC_MESSAGES/diffuse.mo
+share/locale/pl/LC_MESSAGES/diffuse.mo
 share/locale/ru/LC_MESSAGES/diffuse.mo
 share/locale/zh_CN/LC_MESSAGES/diffuse.mo
 share/omf/diffuse/diffuse-C.omf
