@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.21 2012/11/17 11:15:13 ryoon Exp $
+# $NetBSD: url2pkg.pl,v 1.22 2013/05/14 19:42:38 wiz Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -322,7 +322,6 @@ sub generate_initial_package($) {
 
 	open(MF, ">", "Makefile") or die;
 	print MF ("# \$Net" . "BSD\$\n");
-	print MF ("#\n");
 	print MF ("\n");
 	print_section(*MF, [
 		["DISTNAME", $distname],
