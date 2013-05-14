@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/05/14 13:56:48 imil Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/14 19:38:28 imil Exp $
 #
 
 DISTNAME=	openxenmanager_0.r80+dfsg.orig
 PKGNAME=	openxenmanager-0.0.80
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/o/openxenmanager/}
 
@@ -13,8 +13,11 @@ COMMENT=	Open source XenServer/Xen Cloud Platform interface
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
+USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
+
+DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.7.7:../../www/py-httplib2
 
 INSTALLATION_DIRS=	bin share
 
