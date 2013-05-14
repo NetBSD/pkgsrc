@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1647 2013/05/14 15:39:05 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1648 2013/05/14 15:50:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed www/squid27 [taca 2013-05-14]
 	Removed www/typo3_46 [taca 2013-05-14]
 	Updated mail/dovecot2 to 2.2.1nb2 [taca 2013-05-14]
+	Updated mail/dovecot2-pigeonhole to 0.4.0 [taca 2013-05-14]
