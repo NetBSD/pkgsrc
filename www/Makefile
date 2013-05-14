@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.966 2013/05/14 14:42:09 taca Exp $
+# $NetBSD: Makefile,v 1.967 2013/05/14 14:47:11 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -700,7 +700,6 @@ SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
 SUBDIR+=	trac
 SUBDIR+=	typo3_45
-SUBDIR+=	typo3_46
 SUBDIR+=	typo3_47
 SUBDIR+=	urlget
 SUBDIR+=	urlgrabber
