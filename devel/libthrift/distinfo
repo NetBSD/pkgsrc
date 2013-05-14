@@ -1,10 +1,24 @@
-$NetBSD: distinfo,v 1.8 2012/06/16 01:42:58 taca Exp $
+$NetBSD: distinfo,v 1.9 2013/05/14 19:15:36 joerg Exp $
 
 SHA1 (thrift-0.7.0.tar.gz) = b8f6877bc75878984355da4efe171ad99ff05b6a
 RMD160 (thrift-0.7.0.tar.gz) = d9db8ff077347134101cd017e086511c4317b052
 Size (thrift-0.7.0.tar.gz) = 2248326 bytes
 SHA1 (patch-ac) = 84032447dc90b7071d8f54fc56dd30584fbc8116
+SHA1 (patch-compiler_cpp_src_generate_t__rb__generator.cc) = 1b2e71c38fdf3211be65bc199f348fcbadfe805c
+SHA1 (patch-compiler_cpp_src_thrifty.yy) = 69ccc48794edf8358ab39950794e1c542641fb3f
 SHA1 (patch-lib__rb__ext__extconf.rb) = 627725567f6d78070e28d430ebe7ac96910df8ec
 SHA1 (patch-lib__rb__setup.rb) = 4e08bb4c0828306ee2391f5d5760e74a5df30a73
+SHA1 (patch-lib_cpp_src_async_TAsyncBufferProcessor.h) = 2387b52d1dcd01637bd0853743ede85dd4a3357b
+SHA1 (patch-lib_cpp_src_async_TAsyncChannel.cpp) = dd3d65fd83f6ab4ebbc81f7e6ea98b05ef13592e
+SHA1 (patch-lib_cpp_src_async_TAsyncChannel.h) = 6a9e25f84d9d1d8b1192c5f3b059ea7a39c8396a
+SHA1 (patch-lib_cpp_src_async_TAsyncProcessor.h) = 15c9b3534276fc6b75f5f3c7978ad7e914b38f61
+SHA1 (patch-lib_cpp_src_async_TAsyncProtocolProcessor.cpp) = 70b06199d2908c7de3b0b18594e9492480f1a031
+SHA1 (patch-lib_cpp_src_async_TAsyncProtocolProcessor.h) = 49fd58352134e684e92bb9a70c423fe54b2688b5
+SHA1 (patch-lib_cpp_src_async_TEvhttpServer.cpp) = 84558ef95935914cccb74405031bc532c9b180ad
+SHA1 (patch-lib_cpp_src_concurrency_FunctionRunner.h) = 8e15b54872ad0bb59276d25d7200517382a9fcb4
+SHA1 (patch-lib_cpp_src_concurrency_ThreadManager.h) = e97795f632ed98c19172fa25ff6a83a0c9580ff2
+SHA1 (patch-lib_cpp_src_server_TNonblockingServer.cpp) = 1f94bcad637279b151b8c0830854c5fc72919e68
+SHA1 (patch-lib_cpp_src_transport_TSSLSocket.cpp) = 5b0ee2a0d276affc4ead52492e0100f4c0665550
+SHA1 (patch-lib_cpp_src_transport_TServerSocket.cpp) = dc54a0991f5918de04da73f184c551d7a2bd57ed
 SHA1 (patch-lib_erl_Makefile.in) = 74bfbc9f191f685cb175801a495ae4af0eaa6e69
 SHA1 (patch-lib_php_src_ext_thrift__protocol_php__thrift__protocol.cpp) = 6c1f1add0bfc652662efa59fc47d15e91a4d6a2b
