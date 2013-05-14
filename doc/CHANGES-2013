@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1649 2013/05/14 19:39:01 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1650 2013/05/14 19:44:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2503,3 +2503,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.1nb2 [taca 2013-05-14]
 	Updated mail/dovecot2-pigeonhole to 0.4.0 [taca 2013-05-14]
 	Updated sysutils/openxenmanager to 0.0.80nb2 [imil 2013-05-14]
+	Updated devel/diffuse to 0.4.7 [wiz 2013-05-14]
