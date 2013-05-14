@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1643 2013/05/14 08:16:43 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.1644 2013/05/14 13:57:17 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2497,3 +2497,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs-snapshot to 24.3.50.20130510 [minskim 2013-05-13]
 	Updated security/mit-krb5 to 1.10.5nb1 [tez 2013-05-13]
 	Updated net/knot to 1.2.0 [pettai 2013-05-14]
+	Updated sysutils/openxenmanager to 0.0.80nb1 [imil 2013-05-14]
