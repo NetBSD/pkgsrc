@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/04/06 13:24:19 rodent Exp $
+# $NetBSD: Makefile,v 1.46 2013/05/14 19:16:43 joerg Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -87,6 +87,9 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
 			-Wno-parentheses-equality -Wno-empty-body
+.  if ${MACHINE_ARCH} == "x86_64"
+_WRAP_EXTRA_ARGS.CXX+=	-mstackrealign
+.  endif
 .endif
 .include "bootstrap.mk"
 .include "icedtea-extras.mk"
