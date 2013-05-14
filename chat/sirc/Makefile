@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/12/14 23:46:28 marino Exp $
+# $NetBSD: Makefile,v 1.26 2013/05/14 12:33:13 joerg Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	5
@@ -14,6 +14,8 @@ COMMENT=	IRC client written and programmable in perl
 DEPENDS+=	p5-Socket6>=0.07:../../net/p5-Socket6
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_LANGUAGES=	c
 
 # supports IPv6 (actually, AF-independent)
 BUILD_DEFS+=	IPV6_READY
