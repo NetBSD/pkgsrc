@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.103 2013/05/11 23:33:14 mef Exp $
+$NetBSD: distinfo,v 1.104 2013/05/14 12:41:02 joerg Exp $
 
 SHA1 (firefox-20.0.1.source.tar.bz2) = 8d8f775293982f2526bb2da5dc743cd20a47af47
 RMD160 (firefox-20.0.1.source.tar.bz2) = a09371db65b3fd052197039a1e0f6c1f4e37823a
@@ -26,6 +26,9 @@ SHA1 (patch-bg) = e5af56b3dca81ad67149c09942580ebd9062b38d
 SHA1 (patch-bi) = 3dd927d93431afe000cd4a45b4d9920e63158a85
 SHA1 (patch-build_autoconf_nss.m4) = 4731f46a41f6d4ff31a6da07c9badb328a0f676f
 SHA1 (patch-config_baseconfig.mk) = 4f8e966e5e9684c165929d02f82099fb4befcc75
+SHA1 (patch-config_stl__wrappers_ios) = 00d723e2f2f252485350ede5833f0bb84c1235c1
+SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598206b
+SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-gfx_skia_Makefile.in) = ddc7e4a375f4cfd7dd76c5b37835bbcd3ad13cf1
 SHA1 (patch-gfx_skia_src_sfnt_SkOTTable__head.h) = 493fced792610ea1ce5ab6b1e043ef36b33f8279
 SHA1 (patch-gfx_skia_src_sfnt_SkOTTable__name.h) = 61a6611b3dd08f5bd56681244eefbfa3f209f6a1
