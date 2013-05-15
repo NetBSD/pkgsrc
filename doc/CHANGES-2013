@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1657 2013/05/15 22:25:31 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1658 2013/05/15 22:35:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2515,3 +2515,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/gitweb to 1.8.2.3 [adam 2013-05-15]
 	Updated lang/gawk to 4.1.0 [adam 2013-05-15]
 	Updated security/py-asn1 to 0.1.7 [wiz 2013-05-15]
+	Updated devel/py-urwid to 1.1.1 [wiz 2013-05-15]

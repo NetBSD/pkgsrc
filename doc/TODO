@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12141 2013/05/15 21:42:09 wiz Exp $
+$NetBSD: TODO,v 1.12142 2013/05/15 22:35:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simplejson-3.3.0
 	o py-sybase-0.37
 	o py-trueskill-0.4
-	o py-urwid-1.1.0
 	o python33-3.3.1
 	o qbrew-0.3.9
 	o qemu-1.4.1
