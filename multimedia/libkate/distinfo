@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/15 00:41:42 rodent Exp $
+
+SHA1 (libkate-0.4.1.tar.gz) = 87fd8baaddb7120fb4d20b0a0437e44ea8b6c9d8
+RMD160 (libkate-0.4.1.tar.gz) = e92e11bde9cd14312c304a89d79c3ba9e4384762
+Size (libkate-0.4.1.tar.gz) = 906896 bytes
