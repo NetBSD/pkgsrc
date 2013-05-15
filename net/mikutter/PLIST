@@ -1,25 +1,26 @@
-@comment $NetBSD: PLIST,v 1.22 2013/02/05 11:57:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/05/15 11:24:14 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
-share/mikutter/core/autotag.rb
 share/mikutter/core/boot/check_config_permission.rb
 share/mikutter/core/boot/load_plugin.rb
+share/mikutter/core/boot/mainloop.rb
 share/mikutter/core/boot/option.rb
 share/mikutter/core/boot/shell/generate.rb
 share/mikutter/core/boot/shell/spec.rb
-share/mikutter/core/chi.rb
 share/mikutter/core/config.rb
 share/mikutter/core/configloader.rb
 share/mikutter/core/delayer.rb
 share/mikutter/core/entity.rb
 share/mikutter/core/environment.rb
-share/mikutter/core/image.rb
-share/mikutter/core/initialize.rb
+share/mikutter/core/event.rb
+share/mikutter/core/event_filter.rb
+share/mikutter/core/event_listener.rb
 share/mikutter/core/lib/deferred.rb
 share/mikutter/core/lib/deferred/deferred.rb
 share/mikutter/core/lib/deferred/deferredable.rb
 share/mikutter/core/lib/deferred/test.deferred.rb
+share/mikutter/core/lib/instance_storage.rb
 share/mikutter/core/lib/lazy.rb
 share/mikutter/core/lib/mikutwitter.rb
 share/mikutter/core/lib/mikutwitter/api_call_support.rb
@@ -83,6 +84,7 @@ share/mikutter/core/miku/symbol.rb
 share/mikutter/core/miku/symboltable.rb
 share/mikutter/core/miku/yamlisp.rb
 share/mikutter/core/miquire.rb
+share/mikutter/core/miquire_plugin.rb
 share/mikutter/core/mui/cairo_cell_renderer_message.rb
 share/mikutter/core/mui/cairo_coordinate_module.rb
 share/mikutter/core/mui/cairo_icon_over_button.rb
@@ -101,6 +103,7 @@ share/mikutter/core/mui/gtk_contextmenu.rb
 share/mikutter/core/mui/gtk_crud.rb
 share/mikutter/core/mui/gtk_dark_matter_prification.rb
 share/mikutter/core/mui/gtk_extension.rb
+share/mikutter/core/mui/gtk_inneruserlist.rb
 share/mikutter/core/mui/gtk_intelligent_textview.rb
 share/mikutter/core/mui/gtk_keyconfig.rb
 share/mikutter/core/mui/gtk_listlist.rb
@@ -109,7 +112,6 @@ share/mikutter/core/mui/gtk_mtk.rb
 share/mikutter/core/mui/gtk_postbox.rb
 share/mikutter/core/mui/gtk_pseudo_signal_handler.rb
 share/mikutter/core/mui/gtk_selectbox.rb
-share/mikutter/core/mui/gtk_skin.rb
 share/mikutter/core/mui/gtk_timeline_utils.rb
 share/mikutter/core/mui/gtk_tree_view_pretty_scroll.rb
 share/mikutter/core/mui/gtk_userlist.rb
@@ -120,6 +122,8 @@ share/mikutter/core/mui/gtk_web_image_loader_image_cache_raw.rb
 share/mikutter/core/mui/gtk_webicon.rb
 share/mikutter/core/plugin.rb
 share/mikutter/core/plugin/ChangeLog
+share/mikutter/core/plugin/achievement/achievement.rb
+share/mikutter/core/plugin/achievement/spec
 share/mikutter/core/plugin/activity/activity.rb
 share/mikutter/core/plugin/activity/spec
 share/mikutter/core/plugin/alsa/alsa.rb
@@ -150,13 +154,16 @@ share/mikutter/core/plugin/extract/extract.rb
 share/mikutter/core/plugin/extract/spec
 share/mikutter/core/plugin/followingcontrol/followingcontrol.rb
 share/mikutter/core/plugin/followingcontrol/spec
+share/mikutter/core/plugin/gtk/Gemfile
 share/mikutter/core/plugin/gtk/delayer.rb
 share/mikutter/core/plugin/gtk/gtk.rb
+share/mikutter/core/plugin/gtk/mainloop.rb
 share/mikutter/core/plugin/gtk/mikutter_window.rb
 share/mikutter/core/plugin/gtk/slug_dictionary.rb
 share/mikutter/core/plugin/gtk/spec
 share/mikutter/core/plugin/gtk/tab_container.rb
 share/mikutter/core/plugin/gtk/tab_toolbar.rb
+share/mikutter/core/plugin/gtk/toolbar_generator.rb
 share/mikutter/core/plugin/gui/command.rb
 share/mikutter/core/plugin/gui/cuscadable.rb
 share/mikutter/core/plugin/gui/dsl.rb
@@ -218,9 +225,12 @@ share/mikutter/core/plugin/settings/settings.rb
 share/mikutter/core/plugin/settings/spec
 share/mikutter/core/plugin/settings/test_listener.rb
 share/mikutter/core/plugin/shortcutkey/shortcutkey.rb
+share/mikutter/core/plugin/shortcutkey/shortcutkey_listview.rb
 share/mikutter/core/plugin/shortcutkey/spec
 share/mikutter/core/plugin/smartthread/smartthread.rb
 share/mikutter/core/plugin/smartthread/spec
+share/mikutter/core/plugin/sound/sound.rb
+share/mikutter/core/plugin/sound/spec
 share/mikutter/core/plugin/streaming/filter.rb
 share/mikutter/core/plugin/streaming/parma_streamer.rb
 share/mikutter/core/plugin/streaming/spec
@@ -234,6 +244,7 @@ share/mikutter/core/plugin/template
 share/mikutter/core/retriever.rb
 share/mikutter/core/serialthread.rb
 share/mikutter/core/service.rb
+share/mikutter/core/skin.rb
 share/mikutter/core/skin/data/arrow_followed.png
 share/mikutter/core/skin/data/arrow_following.png
 share/mikutter/core/skin/data/arrow_notfollowed.png
@@ -248,6 +259,7 @@ share/mikutter/core/skin/data/fav.png
 share/mikutter/core/skin/data/followers.png
 share/mikutter/core/skin/data/followings.png
 share/mikutter/core/skin/data/icon.png
+share/mikutter/core/skin/data/icon_alternative.png
 share/mikutter/core/skin/data/list.png
 share/mikutter/core/skin/data/loading.png
 share/mikutter/core/skin/data/notfound.png
@@ -284,18 +296,6 @@ share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
-share/mikutter/core/test/icon_test.png
-share/mikutter/core/test/test_cairo_markup_generator.rb
-share/mikutter/core/test/test_cairo_textselector.rb
-share/mikutter/core/test/test_entity.rb
-share/mikutter/core/test/test_gtk_webicon.rb
-share/mikutter/core/test/test_message.rb
-share/mikutter/core/test/test_messageconverters.rb
-share/mikutter/core/test/test_miquire.rb
-share/mikutter/core/test/test_retriever.rb
-share/mikutter/core/test/test_userlist.rb
-share/mikutter/core/test/test_utils.rb
-share/mikutter/core/test/test_web_image_loader.rb
 share/mikutter/core/user.rb
 share/mikutter/core/userconfig.rb
 share/mikutter/core/userlist.rb
@@ -320,19 +320,3 @@ share/mikutter/devel/chiskel/core/plugin/uptime.rb
 share/mikutter/devel/makechi.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
-@pkgdir share/mikutter/vendor
-@pkgdir share/mikutter/core/plugin/directmessage
-@pkgdir share/mikutter/core/addon/tco
-@pkgdir share/mikutter/core/addon/streaming
-@pkgdir share/mikutter/core/addon/settings
-@pkgdir share/mikutter/core/addon/rest
-@pkgdir share/mikutter/core/addon/proxy
-@pkgdir share/mikutter/core/addon/openimg
-@pkgdir share/mikutter/core/addon/list
-@pkgdir share/mikutter/core/addon/libnotify
-@pkgdir share/mikutter/core/addon/image_file_cache
-@pkgdir share/mikutter/core/addon/directmessage
-@pkgdir share/mikutter/core/addon/bitly
-@pkgdir share/mikutter/core/addon/aspectframe
-@pkgdir share/mikutter/core/addon/alsa
-@pkgdir share/mikutter/core/addon/activity
