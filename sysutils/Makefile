@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.573 2013/05/07 08:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.574 2013/05/15 07:01:40 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -512,12 +512,14 @@ SUBDIR+=	xenkernel20
 SUBDIR+=	xenkernel3
 SUBDIR+=	xenkernel33
 SUBDIR+=	xenkernel41
+SUBDIR+=	xenkernel42
 SUBDIR+=	xenstoretools
 SUBDIR+=	xentools20
 SUBDIR+=	xentools3
 SUBDIR+=	xentools3-hvm
 SUBDIR+=	xentools33
 SUBDIR+=	xentools41
+SUBDIR+=	xentools42
 SUBDIR+=	xenvstat
 SUBDIR+=	xfce4-appfinder
 SUBDIR+=	xfce4-battery-plugin
