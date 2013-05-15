@@ -1,21 +1,22 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/03/17 03:16:20 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/05/15 11:55:20 adam Exp $
 
 Correct locale location, use names gawk and pgawk unconditionally
---- Makefile.in.orig	2011-06-24 08:16:13.000000000 +0000
+
+--- Makefile.in.orig	2013-05-09 12:59:40.000000000 +0000
 +++ Makefile.in
-@@ -189,7 +189,7 @@ CFLAGS = @CFLAGS@
+@@ -285,7 +285,7 @@ CFLAGS = @CFLAGS@
  CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
  CYGPATH_W = @CYGPATH_W@
--DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(datadir)/locale"'
-+DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(prefix)/$(PKGLOCALEDIR)/locale"'
+-DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(datadir)/locale"'
++DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(prefix)/$(PKGLOCALEDIR)/locale"'
  DEPDIR = @DEPDIR@
  ECHO_C = @ECHO_C@
  ECHO_N = @ECHO_N@
-@@ -1014,9 +1014,7 @@ install-exec-hook:
+@@ -1131,9 +1131,7 @@ uninstall-am: uninstall-binPROGRAMS unin
+ install-exec-hook:
  	(cd $(DESTDIR)$(bindir); \
  	$(LN) gawk$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
- 	$(LN) pgawk$(EXEEXT) pgawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
 -	if [ ! -f awk ]; \
 -	then	$(LN_S) gawk$(EXEEXT) awk; \
 -	fi; exit 0)
