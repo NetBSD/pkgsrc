@@ -1,0 +1,9 @@
+$NetBSD: patch-firmware_etherboot_patches_series,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- firmware/etherboot/patches/series.orig	2012-12-17 15:00:24.000000000 +0000
++++ firmware/etherboot/patches/series
+@@ -1,4 +1,3 @@
+ boot_prompt_option.patch
+ build_fix_1.patch
+ build_fix_2.patch
+-build_fix_3.patch

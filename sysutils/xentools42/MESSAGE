@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+Please note that the xm command is deprecated in this version of
+Xen and is likely to go away in the near future.  It still functions,
+but you should consider switching to the xl command, which is now
+functional on NetBSD.  The xend rcd script provides support for xm
+command and should only be activated if you plan on using the xm
+command.
+
+===========================================================================

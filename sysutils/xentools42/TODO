@@ -1,0 +1,7 @@
+- remove all #XXX
+- get qemu going
+- fix grant table stuff
+- get xenapi functioning
+- figure out why xl hangs in kernel if daemons aren't running
+- find out why xl can't create domains if xenbackendd has ever been run
+- find and add support for any new features

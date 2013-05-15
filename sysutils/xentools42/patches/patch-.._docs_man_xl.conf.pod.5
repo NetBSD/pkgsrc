@@ -1,0 +1,21 @@
+$NetBSD: patch-.._docs_man_xl.conf.pod.5,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- ../docs/man/xl.conf.pod.5.orig	2013-04-23 16:42:55.000000000 +0000
++++ ../docs/man/xl.conf.pod.5
+@@ -1,6 +1,6 @@
+ =head1 NAME
+ 
+-/etc/xen/xl.conf - XL Global/Host Configuration 
++@XENDCONFDIR@/xl.conf - XL Global/Host Configuration 
+ 
+ =head1 DESCRIPTION
+ 
+@@ -74,7 +74,7 @@ Default: C</var/lock/xl>
+ 
+ Configures the default hotplug script used by virtual network devices.
+ 
+-Default: C</etc/xen/scripts/vif-bridge>
++Default: C<@XENDCONFDIR@/scripts/vif-bridge>
+ 
+ =item B<defaultbridge="NAME">
+ 

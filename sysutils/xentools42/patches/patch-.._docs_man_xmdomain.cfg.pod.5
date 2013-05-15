@@ -1,0 +1,36 @@
+$NetBSD: patch-.._docs_man_xmdomain.cfg.pod.5,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- ../docs/man/xmdomain.cfg.pod.5.orig	2008-08-01 16:38:07.000000000 +0200
++++ ../docs/man/xmdomain.cfg.pod.5
+@@ -4,9 +4,9 @@ xmdomain.cfg - xm domain config file for
+ 
+ =head1 SYNOPSIS
+ 
+- /etc/xen/myxendomain
+- /etc/xen/myxendomain2
+- /etc/xen/auto/myxenautostarted
++ @XENDCONFDIR@/myxendomain
++ @XENDCONFDIR@/myxendomain2
++ @XENDCONFDIR@/auto/myxenautostarted
+ 
+ =head1 DESCRIPTION
+ 
+@@ -14,14 +14,14 @@ The B<xm>(1) program uses python executa
+ domains to create from scratch.  Each of these config files needs to
+ contain a number of required options, and may specify many more.
+ 
+-Domain configuration files live in /etc/xen by default, if you store
++Domain configuration files live in @XENDCONFDIR@ by default, if you store
+ config files anywhere else the full path to the config file must be
+ specified in the I<xm create> command.
+ 
+-/etc/xen/auto is a special case.  Domain config files in that
++@XENDCONFDIR@/auto is a special case.  Domain config files in that
+ directory will be started automatically at system boot if the
+-xendomain init script is enabled.  The contents of /etc/xen/auto
+-should be symlinks to files in /etc/xen to allow I<xm create> to be
++xendomain init script is enabled.  The contents of @XENDCONFDIR@/auto
++should be symlinks to files in @XENDCONFDIR@ to allow I<xm create> to be
+ used without full paths.
+ 
+ Options are specified by I<name = value> statements in the

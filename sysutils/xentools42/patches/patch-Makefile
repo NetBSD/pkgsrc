@@ -1,0 +1,52 @@
+$NetBSD: patch-Makefile,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- Makefile.orig	2012-12-17 15:00:09.000000000 +0000
++++ Makefile
+@@ -15,28 +15,29 @@ SUBDIRS-y += examples
+ SUBDIRS-y += hotplug
+ SUBDIRS-y += xentrace
+ SUBDIRS-$(CONFIG_XCUTILS) += xcutils
+-SUBDIRS-$(CONFIG_X86) += firmware
++#XXX SUBDIRS-$(CONFIG_X86) += firmware
+ SUBDIRS-y += console
+ SUBDIRS-y += xenmon
+-SUBDIRS-$(VTPM_TOOLS) += vtpm_manager
+-SUBDIRS-$(VTPM_TOOLS) += vtpm
++#XXX SUBDIRS-$(VTPM_TOOLS) += vtpm_manager
++#XXX SUBDIRS-$(VTPM_TOOLS) += vtpm
+ SUBDIRS-y += xenstat
+ SUBDIRS-$(CONFIG_Linux) += $(SUBDIRS-libaio)
+ SUBDIRS-$(CONFIG_Linux) += memshr 
+ SUBDIRS-$(CONFIG_Linux) += blktap
+ SUBDIRS-$(CONFIG_Linux) += blktap2
+ SUBDIRS-$(CONFIG_NetBSD) += $(SUBDIRS-libaio)
+-SUBDIRS-$(CONFIG_NetBSD) += blktap2
++SUBDIRS-$(CONFIG_NetBSD) += blktap
++#SUBDIRS-$(CONFIG_NetBSD) += blktap2
+ SUBDIRS-$(CONFIG_NetBSD) += xenbackendd
+ SUBDIRS-y += libfsimage
+ SUBDIRS-$(LIBXENAPI_BINDINGS) += libxen
+ SUBDIRS-$(CONFIG_Linux) += libvchan
+ 
+-# do not recurse in to a dir we are about to delete
+-ifneq "$(MAKECMDGOALS)" "distclean"
+-SUBDIRS-$(CONFIG_IOEMU) += qemu-xen-traditional-dir
+-SUBDIRS-$(CONFIG_IOEMU) += qemu-xen-dir
+-endif
++#XXX # do not recurse in to a dir we are about to delete
++#XXX ifneq "$(MAKECMDGOALS)" "distclean"
++#XXX SUBDIRS-$(CONFIG_IOEMU) += qemu-xen-traditional-dir
++#XXX SUBDIRS-$(CONFIG_IOEMU) += qemu-xen-dir
++#XXX endif
+ 
+ SUBDIRS-y += xenpmd
+ SUBDIRS-y += libxl
+@@ -44,7 +45,7 @@ SUBDIRS-y += remus
+ SUBDIRS-$(CONFIG_X86) += xenpaging
+ SUBDIRS-$(CONFIG_X86) += debugger/gdbsx
+ SUBDIRS-$(CONFIG_X86) += debugger/kdd
+-SUBDIRS-$(CONFIG_TESTS) += tests
++#XXX SUBDIRS-$(CONFIG_TESTS) += tests
+ 
+ # These don't cross-compile
+ ifeq ($(XEN_COMPILE_ARCH),$(XEN_TARGET_ARCH))

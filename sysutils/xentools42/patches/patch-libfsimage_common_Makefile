@@ -1,0 +1,13 @@
+$NetBSD: patch-libfsimage_common_Makefile,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- libfsimage/common/Makefile.orig	2010-05-11 21:27:58.000000000 +0000
++++ libfsimage/common/Makefile
+@@ -4,6 +4,8 @@ include $(XEN_ROOT)/tools/Rules.mk
+ MAJOR = 1.0
+ MINOR = 0
+ 
++CFLAGS += -DFSIMAGE_FSDIR=\"$(LIBDIR)/fs\"
++
+ LDFLAGS-$(CONFIG_SunOS) = -Wl,-M -Wl,mapfile-SunOS
+ LDFLAGS-$(CONFIG_Linux) = -Wl,mapfile-GNU
+ LDFLAGS = $(LDFLAGS-y)

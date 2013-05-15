@@ -1,0 +1,12 @@
+$NetBSD: patch-xentrace_Makefile,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- xentrace/Makefile.orig	2010-04-07 16:12:05.000000000 +0000
++++ xentrace/Makefile
+@@ -43,6 +43,7 @@ install: build
+ 	[ -z "$(LIBBIN)" ] || $(INSTALL_PROG) $(LIBBIN) $(DESTDIR)$(PRIVATE_BINDIR)
+ 	$(INSTALL_DATA) $(MAN1) $(DESTDIR)$(MAN1DIR)
+ 	$(INSTALL_DATA) $(MAN8) $(DESTDIR)$(MAN8DIR)
++	$(INSTALL_DATA) formats $(DESTDIR)$(EGDIR)
+ 
+ .PHONY: clean
+ clean:
