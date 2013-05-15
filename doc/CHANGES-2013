@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1655 2013/05/15 15:19:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1656 2013/05/15 19:46:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2509,3 +2509,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/xentools42 version 4.2.2 [jnemeth 2013-05-15]
 	Updated net/mikutter to 0.2.2.1230 [obache 2013-05-15]
 	Updated devel/libtool-fortran to 2.4.2nb1 [wiz 2013-05-15]
+	Updated devel/scmgit to 1.8.2.3 [adam 2013-05-15]
+	Updated devel/scmgit-base to 1.8.2.3 [adam 2013-05-15]
+	Updated devel/scmgit-docs to 1.8.2.3 [adam 2013-05-15]
+	Updated www/gitweb to 1.8.2.3 [adam 2013-05-15]
+	Updated lang/gawk to 4.1.0 [adam 2013-05-15]
