@@ -1,0 +1,15 @@
+$NetBSD: patch-scanpci_Makefile.am,v 1.1 2013/05/15 03:20:16 richard Exp $
+
+scanpci: print meaningful info on BASEROM
+
+--- scanpci/Makefile.am.orig	2012-04-09 17:02:57.000000000 +0000
++++ scanpci/Makefile.am
+@@ -23,7 +23,7 @@
+ 
+ noinst_PROGRAMS = scanpci
+ 
+-AM_CPPFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/src
+ LDADD =  $(top_builddir)/src/libpciaccess.la
+ 
+ scanpci_SOURCES = scanpci.c
