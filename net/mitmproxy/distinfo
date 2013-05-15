@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/15 22:39:26 wiz Exp $
+
+SHA1 (mitmproxy-0.9.tar.gz) = fff2765dc814e23767381efc3b27aa2f1dbaf0b1
+RMD160 (mitmproxy-0.9.tar.gz) = 1b075bc605932df6e4eb21e45a133722a39ec18b
+Size (mitmproxy-0.9.tar.gz) = 3116986 bytes
