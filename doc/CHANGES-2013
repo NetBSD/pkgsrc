@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1651 2013/05/15 00:42:02 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1652 2013/05/15 07:00:01 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2505,3 +2505,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/openxenmanager to 0.0.80nb2 [imil 2013-05-14]
 	Updated devel/diffuse to 0.4.7 [wiz 2013-05-14]
 	Added multimedia/libkate version 0.4.1 [rodent 2013-05-15]
+	Added sysutils/xenkernel42 version 4.2.2 [jnemeth 2013-05-15]
