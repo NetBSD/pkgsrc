@@ -1,0 +1,13 @@
+$NetBSD: patch-examples_xend-config.sxp,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- examples/xend-config.sxp.orig	2010-04-07 16:12:04.000000000 +0000
++++ examples/xend-config.sxp
+@@ -190,7 +190,7 @@
+ 
+ # Whether to enable auto-ballooning of dom0 to allow domUs to be created.
+ # If enable-dom0-ballooning = no, dom0 will never balloon out.
+-(enable-dom0-ballooning yes)
++(enable-dom0-ballooning no)
+ 
+ # 32-bit paravirtual domains can only consume physical
+ # memory below 168GB. On systems with memory beyond that address,
