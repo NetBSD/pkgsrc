@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/01/28 08:13:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/05/15 22:35:31 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/urwid/canvas.pyo
 ${PYSITELIB}/urwid/command_map.py
 ${PYSITELIB}/urwid/command_map.pyc
 ${PYSITELIB}/urwid/command_map.pyo
+${PYSITELIB}/urwid/compat.py
+${PYSITELIB}/urwid/compat.pyc
+${PYSITELIB}/urwid/compat.pyo
 ${PYSITELIB}/urwid/container.py
 ${PYSITELIB}/urwid/container.pyc
 ${PYSITELIB}/urwid/container.pyo
@@ -37,6 +40,9 @@ ${PYSITELIB}/urwid/graphics.pyo
 ${PYSITELIB}/urwid/html_fragment.py
 ${PYSITELIB}/urwid/html_fragment.pyc
 ${PYSITELIB}/urwid/html_fragment.pyo
+${PYSITELIB}/urwid/lcd_display.py
+${PYSITELIB}/urwid/lcd_display.pyc
+${PYSITELIB}/urwid/lcd_display.pyo
 ${PYSITELIB}/urwid/listbox.py
 ${PYSITELIB}/urwid/listbox.pyc
 ${PYSITELIB}/urwid/listbox.pyo
@@ -59,12 +65,27 @@ ${PYSITELIB}/urwid/split_repr.py
 ${PYSITELIB}/urwid/split_repr.pyc
 ${PYSITELIB}/urwid/split_repr.pyo
 ${PYSITELIB}/urwid/str_util.so
+${PYSITELIB}/urwid/tests.py
+${PYSITELIB}/urwid/tests.pyc
+${PYSITELIB}/urwid/tests.pyo
 ${PYSITELIB}/urwid/text_layout.py
 ${PYSITELIB}/urwid/text_layout.pyc
 ${PYSITELIB}/urwid/text_layout.pyo
+${PYSITELIB}/urwid/treetools.py
+${PYSITELIB}/urwid/treetools.pyc
+${PYSITELIB}/urwid/treetools.pyo
 ${PYSITELIB}/urwid/util.py
 ${PYSITELIB}/urwid/util.pyc
 ${PYSITELIB}/urwid/util.pyo
+${PYSITELIB}/urwid/version.py
+${PYSITELIB}/urwid/version.pyc
+${PYSITELIB}/urwid/version.pyo
+${PYSITELIB}/urwid/vterm.py
+${PYSITELIB}/urwid/vterm.pyc
+${PYSITELIB}/urwid/vterm.pyo
+${PYSITELIB}/urwid/vterm_test.py
+${PYSITELIB}/urwid/vterm_test.pyc
+${PYSITELIB}/urwid/vterm_test.pyo
 ${PYSITELIB}/urwid/web_display.py
 ${PYSITELIB}/urwid/web_display.pyc
 ${PYSITELIB}/urwid/web_display.pyo
@@ -74,8 +95,6 @@ ${PYSITELIB}/urwid/widget.pyo
 ${PYSITELIB}/urwid/wimp.py
 ${PYSITELIB}/urwid/wimp.pyc
 ${PYSITELIB}/urwid/wimp.pyo
-share/doc/py-urwid/reference.html
-share/doc/py-urwid/tutorial.html
 share/examples/py-urwid/bigtext.py
 share/examples/py-urwid/browse.py
 share/examples/py-urwid/calc.py
@@ -84,5 +103,14 @@ share/examples/py-urwid/edit.py
 share/examples/py-urwid/fib.py
 share/examples/py-urwid/graph.py
 share/examples/py-urwid/input_test.py
-share/examples/py-urwid/test_urwid.py
+share/examples/py-urwid/lcd_cf635.py
+share/examples/py-urwid/palette_test.py
+share/examples/py-urwid/pop_up.py
+share/examples/py-urwid/subproc.py
+share/examples/py-urwid/subproc2.py
+share/examples/py-urwid/terminal.py
 share/examples/py-urwid/tour.py
+share/examples/py-urwid/treesample.py
+share/examples/py-urwid/twisted_serve_ssh.py
+share/examples/py-urwid/twisted_serve_ssh.tac
+@pkgdir share/doc/py-urwid
