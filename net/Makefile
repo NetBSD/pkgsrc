@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.966 2013/05/09 16:22:45 mef Exp $
+# $NetBSD: Makefile,v 1.967 2013/05/15 22:41:09 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -285,6 +285,7 @@ SUBDIR+=	mikutter
 SUBDIR+=	miniupnpd
 SUBDIR+=	miredo
 SUBDIR+=	mirror
+SUBDIR+=	mitmproxy
 SUBDIR+=	mldonkey
 SUBDIR+=	mldonkey-gui
 SUBDIR+=	modpcap
@@ -531,6 +532,7 @@ SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-medusa
 SUBDIR+=	py-netifaces
+SUBDIR+=	py-netlib
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
 SUBDIR+=	py-ptt
