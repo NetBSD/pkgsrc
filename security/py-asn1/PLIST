@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/01 17:23:36 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/15 22:25:22 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pyasn1/__init__.py
 ${PYSITELIB}/pyasn1/__init__.pyc
 ${PYSITELIB}/pyasn1/__init__.pyo
@@ -39,6 +40,15 @@ ${PYSITELIB}/pyasn1/codec/der/decoder.pyo
 ${PYSITELIB}/pyasn1/codec/der/encoder.py
 ${PYSITELIB}/pyasn1/codec/der/encoder.pyc
 ${PYSITELIB}/pyasn1/codec/der/encoder.pyo
+${PYSITELIB}/pyasn1/compat/__init__.py
+${PYSITELIB}/pyasn1/compat/__init__.pyc
+${PYSITELIB}/pyasn1/compat/__init__.pyo
+${PYSITELIB}/pyasn1/compat/octets.py
+${PYSITELIB}/pyasn1/compat/octets.pyc
+${PYSITELIB}/pyasn1/compat/octets.pyo
+${PYSITELIB}/pyasn1/debug.py
+${PYSITELIB}/pyasn1/debug.pyc
+${PYSITELIB}/pyasn1/debug.pyo
 ${PYSITELIB}/pyasn1/error.py
 ${PYSITELIB}/pyasn1/error.pyc
 ${PYSITELIB}/pyasn1/error.pyo
@@ -66,6 +76,9 @@ ${PYSITELIB}/pyasn1/type/namedval.pyo
 ${PYSITELIB}/pyasn1/type/tag.py
 ${PYSITELIB}/pyasn1/type/tag.pyc
 ${PYSITELIB}/pyasn1/type/tag.pyo
+${PYSITELIB}/pyasn1/type/tagmap.py
+${PYSITELIB}/pyasn1/type/tagmap.pyc
+${PYSITELIB}/pyasn1/type/tagmap.pyo
 ${PYSITELIB}/pyasn1/type/univ.py
 ${PYSITELIB}/pyasn1/type/univ.pyc
 ${PYSITELIB}/pyasn1/type/univ.pyo
