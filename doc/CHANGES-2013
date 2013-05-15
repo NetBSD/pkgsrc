@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1653 2013/05/15 07:00:22 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.1654 2013/05/15 11:25:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2507,3 +2507,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added multimedia/libkate version 0.4.1 [rodent 2013-05-15]
 	Added sysutils/xenkernel42 version 4.2.2 [jnemeth 2013-05-15]
 	Added sysutils/xentools42 version 4.2.2 [jnemeth 2013-05-15]
+	Updated net/mikutter to 0.2.2.1230 [obache 2013-05-15]
