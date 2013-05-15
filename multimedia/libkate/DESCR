@@ -1,0 +1,10 @@
+Kate is an overlay codec, originally designed for karaoke and text, that can be
+multiplixed in Ogg. Text and images can be carried by a Kate stream, and
+animated. Most of the time, this would be multiplexed with audio/video to carry
+subtitles, song lyrics (with or without karaoke data), etc, but doesn't have to
+be.
+
+Series of curves (splines, segments, etc) may be attached to various properties
+(text position, font size, etc) to create animated overlays. This allows
+scrolling or fading text to be defined. This can even be used to draw arbitrary
+shapes, so hand drawing can also be represented by a Kate stream.
