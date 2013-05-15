@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2013/05/09 00:41:09 rodent Exp $
+# $NetBSD: Makefile,v 1.209 2013/05/15 00:42:52 rodent Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -106,6 +106,7 @@ SUBDIR+=	libflashsupport
 SUBDIR+=	libflashsupport-pulse
 SUBDIR+=	libflashsupport10
 SUBDIR+=	libhdhomerun
+SUBDIR+=	libkate
 SUBDIR+=	libkcddb
 SUBDIR+=	libkcompactdisc
 SUBDIR+=	libmatroska
