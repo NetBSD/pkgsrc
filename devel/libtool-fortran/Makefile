@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/09 13:53:48 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/15 15:19:04 wiz Exp $
 
 ###########################################################################
 ###########################################################################
@@ -28,7 +28,8 @@
 FILESDIR=	${.CURDIR}/../libtool-base/files
 
 PKGNAME=	${DISTNAME:S/-/-fortran-/}
-SVR4_PKGNAME=	ltoob
+PKGREVISION=	1
+SVR4_PKGNAME=	ltoof
 
 COMMENT=	Generic shared library support script (the script itself, incl. Fortran)
 
@@ -59,7 +60,7 @@ CFLAGS+=	${_COMPILER_ABI_FLAG.${ABI}}
 # We are going to want libtool to find the same versions of the C, C++,
 # and Fortran compilers.
 #
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 CONFIGURE_ARGS+=	--disable-ltdl-install
 
 USE_TOOLS+=		echo
