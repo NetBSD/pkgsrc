@@ -1,9 +1,9 @@
-$NetBSD: patch-giscanner_dumper.py,v 1.1 2013/05/15 15:46:52 adam Exp $
+$NetBSD: patch-giscanner_dumper.py,v 1.2 2013/05/15 19:17:59 adam Exp $
 
 Don't treat 'clang' as Visual C++ compiler.
 
---- work/gobject-introspection-1.36.0//giscanner/dumper.py.orig	2013-05-15 15:30:07.000000000 +0000
-+++ work/gobject-introspection-1.36.0//giscanner/dumper.py
+--- giscanner/dumper.py.orig	2013-05-15 15:30:07.000000000 +0000
++++ giscanner/dumper.py
 @@ -86,11 +86,6 @@ class DumpCompiler(object):
          self._linker_cmd = os.environ.get('CC', self._compiler_cmd)
          self._pkgconfig_cmd = os.environ.get('PKG_CONFIG', 'pkg-config')
