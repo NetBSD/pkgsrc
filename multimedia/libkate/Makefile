@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/05/15 00:41:42 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/15 00:47:01 rodent Exp $
 #
 
 DISTNAME=	libkate-0.4.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://libkate.googlecode.com/files/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://wiki.xiph.org/index.php/OggKate
 COMMENT=	Overlay codec, originally designed for karaoke and text
 LICENSE=	modified-bsd
