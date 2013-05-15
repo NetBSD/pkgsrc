@@ -1,0 +1,13 @@
+$NetBSD: patch-firmware_etherboot_patches_boot__prompt__option.patch,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+
+--- firmware/etherboot/patches/boot_prompt_option.patch.orig	2012-12-17 15:00:24.000000000 +0000
++++ firmware/etherboot/patches/boot_prompt_option.patch
+@@ -13,7 +13,7 @@ index 0f92415..cce7505 100644
+ @@ -418,6 +419,7 @@ no_pmm:
+  	pushw	%cs
+  	call	exec
+- 2:
++ out:
+ +#endif
+  	/* Restore registers */
+  	popw	%gs
