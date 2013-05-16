@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1669 2013/05/16 16:20:44 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1670 2013/05/16 16:28:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2535,3 +2535,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ruby to 1.9.3p429nb1 [taca 2013-05-16]
 	Updated lang/php53 to 5.3.25 [taca 2013-05-16]
 	Updated lang/php54 to 5.4.15 [taca 2013-05-16]
+	Updated www/typo3_45 to 4.5.26 [taca 2013-05-16]
+	Updated www/typo3_47 to 4.7.11 [taca 2013-05-16]
