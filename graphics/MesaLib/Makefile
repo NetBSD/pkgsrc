@@ -1,26 +1,20 @@
-# $NetBSD: Makefile,v 1.90 2012/10/06 14:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.91 2013/05/16 05:22:02 richard Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
-PKGREVISION=	6
 COMMENT=	Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	xf86driproto<2.0.4
 
-MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h	\
-		glx_mangle.h osmesa.h xmesa.h xmesa_x.h	\
- 		xmesa_xf86.h
-
-MESA_HEADERS+=	internal/dri_interface.h internal/sarea.h
-
-BUILD_DEFS+=		MESA_HZ
 PLIST_VARS=		dri nodri
 
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/glw/glw.pc.in
-# no configure stage
-PKGCONFIG_OVERRIDE_STAGE=	pre-build
+
+CONFIGURE_ARGS+=        --disable-glu
+CONFIGURE_ARGS+=        --disable-glut
+CONFIGURE_ARGS+=        --disable-motif
 
 .include "glx-config.mk"
 .include "../../graphics/Mesa/Makefile.lib"
@@ -55,21 +49,19 @@ MAKE_ENV+=		PTHREAD_STUBLIB=${PTHREAD_STUBLIB:Q}
 MAKE_ENV+=	CROSS_COMPILING=yes
 .endif
 
-RM_PATCH_BACKUP_DIRS=	docs src/mesa src/glut/glx \
-			progs/demos progs/xdemos progs/glsl
 post-extract:
+.if !empty(PKG_OPTIONS:Mdri) && (${OPSYS} == "SunOS")
+	${CP} ${FILESDIR}/mapfile.externs ${WRKSRC}/src/mesa/drivers/dri/
+.endif
 	${CP} ${FILESDIR}/gen_matypes.awk ${WRKSRC}/src/mesa/x86
 	${CP} ${FILESDIR}/gen_matypes.sh ${WRKSRC}/src/mesa/x86
 	${CHMOD} a+x ${WRKSRC}/src/mesa/x86/gen_matypes.sh
-	for fn in ${RM_PATCH_BACKUP_DIRS}; do \
-		${RM} -f ${WRKSRC}/$${fn}/*.orig; \
-	done
 
+#
+# remove include files installed respectively by ../glu and ../glut
+#
 pre-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL/internal
-
-pre-build:
-	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
+	${RM} -f ${WRKSRC}/include/GL/glu*.h
 
 .include "../../mk/compiler.mk"
 
@@ -77,6 +69,4 @@ pre-build:
 CFLAGS+=	-no-integrated-as -fvisibility=hidden
 .endif
 
-# no configure phase
-.include "../../mk/configure/pkg-config-override.mk"
 .include "../../mk/bsd.pkg.mk"
