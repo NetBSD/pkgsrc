@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.14 2012/06/13 11:57:42 obache Exp $
+# $NetBSD: Makefile.lib,v 1.15 2013/05/16 05:04:56 richard Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -12,35 +12,27 @@
 
 DISTFILES+=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
 DISTFILES+=	MesaGLUT-${MESA_VERSION}${EXTRACT_SUFX}
-DISTFILES+=	MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
+#DISTFILES+=	MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-LIBTOOL=		${PKG_SHLIBTOOL}
-USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c99 c++
+USE_TOOLS+=		automake bison flex gmake pkg-config makedepend
+
+PYTHON_FOR_BUILD_ONLY=  yes
+.include "../../lang/python/tool.mk"
+BUILDLINK_DEPMETHOD.libxml2?=   build
+.include "../../textproc/libxml2/buildlink3.mk"
 
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
 
-COPTS?= 	 	# empty
-COPTS+= 	 	-prefer-pic 	# Make sure to build PIC libraries.
-
 MAKE_ENV+=		MAKE=${GMAKE:Q}
-MAKE_ENV+=		COPTS=${COPTS:M*:Q}
-MAKE_ENV+=		MKDEP=${TRUE:Q}
 
-#.if ${X11_TYPE} == "modular"
-#.  if defined(PKG_BUILD_OPTIONS.libX11) && \
-#	!empty(PKG_BUILD_OPTIONS.libX11:Mxcb)
-#MAKE_ENV+=		USE_XCB=yes
-#.  endif
-#.endif
-
-#.if empty(MAKE_ENV:MUSE_XCB=*)
-MAKE_ENV+=		USE_XCB=no
-#.endif
+CONFIGURE_ARGS+=        --with-gallium-drivers=""
+CONFIGURE_ARGS+=        --disable-gallium-llvm
+CONFIGURE_ARGS+=        --disable-egl
 
 .include "../../mk/compiler.mk"
 
@@ -48,58 +40,5 @@ MAKE_ENV+=		USE_XCB=no
 CFLAGS+=	-D__FUNCTION__=__FILE__
 .endif
 
-MESA_HZ?=	100
-MAKE_ENV+=	MESA_HZ=${MESA_HZ:Q}
-.if ${OPSYS} == "NetBSD" && exists(/sbin/sysctl)
-tmphz=\
-	${/sbin/sysctl kern.clockrate || ${TRUE}\
-	:L:sh:ts,:S/,//gW:C/([^[0-9]]*)(=|[^ hz])*([^[0-9])//g:M[0-9]*}
-.  if !empty(tmphz) && (${tmphz} > 50) && (${tmphz} < 2001)
-MESA_HZ=	${tmphz}
-.  endif
-.endif
-###
-### XXX do we still want this?
-###
-.if ${OPSYS} == "Interix"
-BUILD_TARGET=		interix3
-.else
-BUILD_TARGET?=		pkgsrc
-.endif
-
-RM_PATCH_BACKUP_DIRS= 	docs src/mesa src/glut/glx \
- 	 	 	progs/demos progs/xdemos progs/glsl
-pre-patch:
-	for fn in ${RM_PATCH_BACKUP_DIRS}; do \
-		${RM} -f ${WRKSRC}/$${fn}/*.orig; \
-	done
-
-post-patch:
-	${CP} ${.CURDIR}/../MesaLib/files/configs/[d-z]* ${WRKSRC}/configs
-
-post-install: install-headers
-###
-### XXX MesaLib installs headers into GL/internal, and this directory is
-###	created there by the pre-install target.  TODO: unify these targets.
-###
-.PHONY: install-headers
-.if empty(PKGNAME:M*MesaDemos*)
-install-headers:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
-.for hdr in ${MESA_HEADERS}
-	if [ -f ${WRKSRC}/include/GL/${hdr:Q} ]; then \
-	    ${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr:Q} \
-	    ${DESTDIR}${PREFIX}/include/GL/${hdr:Q}; \
-	fi;
-.endfor
-.else
-install-headers:
-	@${DO_NADA}
-.endif
-
-SUBST_CLASSES+=                 fix-paths
-SUBST_STAGE.fix-paths=          pre-configure
-SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
-SUBST_FILES.fix-paths=          src/*.c
-SUBST_FILES.fix-paths+=         scripts/*.sh
-SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+pre-configure:
+	cd ${WRKSRC} && ${MAKE} configure
