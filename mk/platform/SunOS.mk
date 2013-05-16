@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.50 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: SunOS.mk,v 1.51 2013/05/16 17:09:07 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -78,10 +78,8 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 
 .if ${MACHINE_ARCH} == "x86_64"
 LIBABISUFFIX=		/amd64
-_OPSYS_SYSTEM_RPATH?=	/lib/64:/usr/lib/64
-.else
-_OPSYS_SYSTEM_RPATH?=	/lib:/usr/lib
 .endif
+_OPSYS_SYSTEM_RPATH?=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 
