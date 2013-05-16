@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2012/09/11 23:04:24 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/16 12:37:35 obache Exp $
 
-DISTNAME=		metis-4.0
+DISTNAME=		metis-4.0.3
 CATEGORIES=		math
 MASTER_SITES=		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
 
