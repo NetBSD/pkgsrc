@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.465 2013/05/12 19:55:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.466 2013/05/16 04:46:18 jnemeth Exp $
 #
 
 COMMENT=	Security tools
@@ -126,7 +126,6 @@ SUBDIR+=	libksba
 SUBDIR+=	libmcrypt
 SUBDIR+=	libnetpgpverify
 SUBDIR+=	liboauth
-SUBDIR+=	liboauth2
 SUBDIR+=	libp11
 SUBDIR+=	libpbc
 SUBDIR+=	libprelude
@@ -325,6 +324,7 @@ SUBDIR+=	py-lasso
 SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
 SUBDIR+=	py-oauth
+SUBDIR+=	py-oauth2
 SUBDIR+=	py-openid
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-prewikka
