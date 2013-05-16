@@ -1,32 +1,34 @@
-# $NetBSD: Makefile,v 1.57 2009/08/25 07:29:18 hasso Exp $
+# $NetBSD: Makefile,v 1.58 2013/05/16 05:25:02 richard Exp $
 
 PKGNAME=	glu-${MESA_PKGVERSION}
-PKGREVISION=	2
 COMMENT=	GLU polygon tessellation facility for Mesa
 
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
-MESA_HEADERS=	glu.h glu_mangle.h
 
 PKGCONFIG_OVERRIDE+=    src/glu/glu.pc.in
-# no configure stage
-PKGCONFIG_OVERRIDE_STAGE=       pre-build
+
+CONFIGURE_ARGS+=        --enable-glu
+CONFIGURE_ARGS+=        --disable-glut
+CONFIGURE_ARGS+=        --disable-glw
+CONFIGURE_ARGS+=        --with-dri-drivers=""
+
+BUILD_DIRS=             src/glu
+BUILD_TARGET=           default
+
+INSTALL_DIRS=           src/glu
+INSTALLATION_DIRS+=     include/GL
 
 .include "../../graphics/Mesa/Makefile.lib"
 
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
 .include "../../graphics/MesaLib/buildlink3.mk"
 
-post-extract:
-	${GREP} '^[[:cntrl:]][g][l][u]' ${WRKSRC}/src/glu/sgi/glu.def \
-	| ${SED} -e 's,^[[:cntrl:]],,' > ${WRKSRC}/src/glu/sgi/glu.sym
-	${RM} ${WRKSRC}/src/glu/sgi/glu.exports
-	${CP} ${FILESDIR}/glu.exports.in ${WRKSRC}/src/glu/sgi/
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/include/GL/glu.h \
+		${DESTDIR}${PREFIX}/include/GL/glu.h
+	${INSTALL_DATA} ${WRKSRC}/include/GL/glu_mangle.h \
+		${DESTDIR}${PREFIX}/include/GL/glu_mangle.h
 
-pre-build:
-	cd ${WRKSRC} && ${RM} -fr src/glx src/mesa src/glut src/glw progs
-
-# no configure phase
-.include "../../mk/configure/pkg-config-override.mk"
 .include "../../mk/bsd.pkg.mk"
