@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.1.1.1 2011/11/08 16:10:51 taca Exp $
+$NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.2 2013/05/16 16:13:59 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
@@ -12,23 +12,6 @@ Add install_root option for pkgsrc's rubygems support.
    # :prerelease:: Allow prerelease versions.  See #install.
    # :security_policy:: See Gem::Installer::new and Gem::Security.
    # :user_install:: See Gem::Installer.new
-@@ -45,11 +46,14 @@ class Gem::DependencyInstaller
- 
-   def initialize(options = {})
-     if options[:install_dir] then
--      @gem_home = options[:install_dir]
-+      if options[:install_root].nil? or options[:install_root] == "" then
-+        @gem_home = options[:install_dir].dup
-+      else
-+        @gem_home = options[:install_root].dup
-+      end
- 
-       Gem::Specification.dirs = @gem_home
-       Gem.ensure_gem_subdirectories @gem_home
--      options[:install_dir] = @gem_home # FIX: because we suck and reuse below
-     end
- 
-     options = DEFAULT_OPTIONS.merge options
 @@ -69,7 +73,12 @@ class Gem::DependencyInstaller
      @installed_gems = []
  

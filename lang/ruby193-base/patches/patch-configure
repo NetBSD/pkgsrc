@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
+$NetBSD: patch-configure,v 1.8 2013/05/16 16:13:59 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.orig	Fri Feb 22 09:44:18 2013
+--- configure.orig	2013-05-14 11:40:01.000000000 +0000
 +++ configure
-@@ -10722,6 +10722,9 @@ esac
+@@ -10724,6 +10724,9 @@ esac
    superux*) :
      	ac_cv_func_setitimer=no
  		 ;; #(
@@ -15,8 +15,8 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
    *) :
      	LIBS="-lm $LIBS" ;;
  esac
-@@ -11325,7 +11328,13 @@ for ac_header in limits.h sys/file.h sys
- 		 net/socket.h sys/socket.h process.h
+@@ -11327,7 +11330,13 @@ for ac_header in limits.h sys/file.h sys
+ 		 net/socket.h sys/socket.h process.h atomic.h
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
 -ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
@@ -30,7 +30,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
    cat >>confdefs.h <<_ACEOF
  #define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
-@@ -12053,6 +12062,9 @@ fi
+@@ -12072,6 +12081,9 @@ fi
  ac_fn_c_check_type "$LINENO" "struct timespec" "ac_cv_type_struct_timespec" "#ifdef HAVE_TIME_H
  #include <time.h>
  #endif
@@ -40,7 +40,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  "
  if test "x$ac_cv_type_struct_timespec" = xyes; then :
  
-@@ -13844,6 +13856,8 @@ else
+@@ -13863,6 +13875,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -49,7 +49,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -15784,7 +15798,7 @@ done
+@@ -15803,7 +15817,7 @@ done
      MAINLIBS="-pthread $MAINLIBS" ;; #(
    *) :
      case "$target_os" in #(
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
      LIBS="-pthread $LIBS" ;; #(
    *) :
      LIBS="-l$pthread_lib $LIBS" ;;
-@@ -16234,7 +16248,9 @@ esac ;; #(
+@@ -16253,7 +16267,9 @@ esac ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -68,7 +68,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -16246,7 +16262,7 @@ esac ;; #(
+@@ -16265,7 +16281,7 @@ esac ;; #(
  			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
  			fi
  			rb_cv_dlopen=yes ;; #(
@@ -77,7 +77,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
      	: ${LDSHARED='$(CC) -shared ${CCDLFLAGS}'}
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-E"
-@@ -16775,7 +16791,7 @@ _ACEOF
+@@ -16796,7 +16812,7 @@ _ACEOF
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -86,7 +86,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -16792,7 +16808,7 @@ _ACEOF
+@@ -16813,7 +16829,7 @@ _ACEOF
  	   LIBRUBY_ALIASES=""
  	fi
  	 ;; #(
@@ -95,7 +95,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
-@@ -16853,7 +16869,12 @@ esac
+@@ -16874,7 +16890,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -109,7 +109,7 @@ $NetBSD: patch-configure,v 1.7 2013/04/30 21:30:59 bsiegert Exp $
  	 ;; #(
    *) :
       ;;
-@@ -16916,11 +16937,7 @@ if test "$install_doc" != no; then
+@@ -16937,11 +16958,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi

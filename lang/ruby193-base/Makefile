@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/04/20 02:30:17 obache Exp $
+# $NetBSD: Makefile,v 1.30 2013/05/16 16:13:59 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -83,6 +83,9 @@ CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VERSION}
 CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
 .endif
 
+#
+# Win32 support (for Cygwin)
+#
 PLIST_VARS+=	win32
 .if ${OPSYS} == "Cygwin"
 PLIST.win32=	yes
@@ -104,7 +107,7 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 .endif
 
 #
-# work around for Linux
+# work around for Linux and Cygwin
 #
 .if ${OPSYS} == "Linux" || ${OPSYS} == "Cygwin"
 CONFIGURE_ENV+=	MKDIR_P=${MKDIR:Q}
