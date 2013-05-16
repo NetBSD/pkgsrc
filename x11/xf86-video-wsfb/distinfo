@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/06/09 06:32:31 obache Exp $
+$NetBSD: distinfo,v 1.4 2013/05/16 06:34:55 richard Exp $
 
-SHA1 (xf86-video-wsfb-0.2.1.tar.bz2) = 5f7fff95bf0f9409dc392e2f5c192156bf168b33
-RMD160 (xf86-video-wsfb-0.2.1.tar.bz2) = a3ef24a1921593cae51e87a4532b86a5dd2e1e1e
-Size (xf86-video-wsfb-0.2.1.tar.bz2) = 216172 bytes
-SHA1 (patch-aa) = a79da4d939ae7a1048ad18dd71195a5f8870e5f6
+SHA1 (xf86-video-wsfb-0.4.0.tar.bz2) = fc04a2127fc5de3f5d13c56c3be781df34c26a90
+RMD160 (xf86-video-wsfb-0.4.0.tar.bz2) = d35555d20ed5ae303846a1e72fa5e55049428edd
+Size (xf86-video-wsfb-0.4.0.tar.bz2) = 264372 bytes
