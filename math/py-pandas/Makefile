@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/02/16 00:02:19 bad Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/16 23:10:16 bad Exp $
 
-DISTNAME=	pandas-0.10.1
+DISTNAME=	pandas-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pandas/
@@ -22,7 +22,9 @@ USE_LANGUAGES+=	c c++
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
+# XXX want py-bottleneck
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../math/py-numexpr/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
