@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/29 05:07:04 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/16 06:10:17 richard Exp $
 #
 
-DISTNAME=	xf86-video-i128-1.3.3
-PKGREVISION=	1
+DISTNAME=	xf86-video-i128-1.3.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
