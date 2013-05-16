@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/05/04 06:08:44 obache Exp $
+# $NetBSD: options.mk,v 1.7 2013/05/16 12:04:57 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -12,7 +12,7 @@ PKG_OPTIONS_LEGACY_OPTS=	diskd:squid-backend-diskd \
 
 PLIST_VARS+=	diskd snmp unlinkd
 PLIST_VARS+=	ba_LDAP ba_MSNT ba_NCSA ba_NIS ba_PAM ba_getpwnam
-PLIST_VARS+=	da_LDAP
+PLIST_VARS+=	da_file da_LDAP
 PLIST_VARS+=	na_SMB
 PLIST_VARS+=	ta_kerberos
 PLIST_VARS+=	eacl_file_userip eacl_LDAP_group eacl_unix_group
@@ -58,7 +58,7 @@ PKG_SUPPORTED_OPTIONS+=	squid-arp-acl
 
 SQUID_BACKENDS?=		ufs
 SQUID_BASIC_AUTH_HELPERS?=	MSNT NCSA NIS getpwnam
-SQUID_DIGEST_AUTH_HELPERS?=	password
+SQUID_DIGEST_AUTH_HELPERS?=	file
 SQUID_NTLM_AUTH_HELPERS?=	SMB
 SQUID_EXTERNAL_ACL_HELPERS?=	file_userip unix_group
 
@@ -144,6 +144,12 @@ CONFIGURE_ARGS+=	--enable-auth-basic=${SQUID_BASIC_AUTH_HELPERS:Q}
 .  for i in ${SQUID_BASIC_AUTH_HELPERS}
 PLIST.ba_${i}=		yes
 .  endfor
+.PHONY: squid-enable-helper-basic_auth
+pre-configure: squid-enable-helper-basic_auth
+squid-enable-helper-basic_auth:
+.  for i in ${SQUID_BASIC_AUTH_HELPERS}
+	${ECHO} "exit 0" > ${WRKSRC}/helpers/basic_auth/${i}/config.test
+.  endfor
 .endif
 
 .if empty(SQUID_DIGEST_AUTH_HELPERS)
@@ -153,6 +159,10 @@ CONFIGURE_ARGS+=	--enable-auth-digest=${SQUID_DIGEST_AUTH_HELPERS:Q}
 .  for i in ${SQUID_DIGEST_AUTH_HELPERS}
 PLIST.da_${i}=		yes
 .  endfor
+pre-configure:
+.  for i in ${SQUID_DIGEST_AUTH_HELPERS}
+	${ECHO} "exit 0" > ${WRKSRC}/helpers/digest_auth/${i}/config.test
+.  endfor
 .endif
 
 .if empty(SQUID_NEGOTIATE_AUTH_HELPERS)
@@ -161,6 +171,12 @@ CONFIGURE_ARGS+=	--disable-auth-negotiate
 CONFIGURE_ARGS+=	--enable-auth-negotiate=${SQUID_NEGOTIATE_AUTH_HELPERS:Q}
 .  for i in ${SQUID_NEGOTIATE_AUTH_HELPERS}
 PLIST.ta_${i}=		yes
+.  endfor
+.PHONY: squid-enable-helper-negotiate_auth
+pre-configure: squid-enable-helper-negotiate_auth
+squid-enable-helper-negotiate_auth:
+.  for i in ${SQUID_NEGOTIATE_AUTH_HELPERS}
+	${ECHO} "exit 0" > ${WRKSRC}/helpers/negotiate_auth/${i}/config.test
 .  endfor
 .endif
 
@@ -179,5 +195,11 @@ CONFIGURE_ARGS+=	--disable-external-acl-helpers
 CONFIGURE_ARGS+=	--enable-external-acl-helpers=${SQUID_EXTERNAL_ACL_HELPERS:Q}
 .  for i in ${SQUID_EXTERNAL_ACL_HELPERS}
 PLIST.eacl_${i}=	yes
+.  endfor
+.PHONY: squid-enable-helper-external_auth
+pre-configure: squid-enable-helper-external_auth
+squid-enable-helper-external_auth:
+.  for i in ${SQUID_EXTERNAL_AUTH_HELPERS}
+	${ECHO} "exit 0" > ${WRKSRC}/helpers/external_auth/${i}/config.test
 .  endfor
 .endif
