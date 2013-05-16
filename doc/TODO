@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12144 2013/05/16 12:37:46 obache Exp $
+$NetBSD: TODO,v 1.12145 2013/05/16 12:39:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -850,6 +850,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mdocml-1.12.1
 	o mergeant-0.67
 	o mesure-0.7.2
+	o metis-5.1.0
 	o mgetty+sendfax-1.1.35
 	o midori-0.5
 	o milkytracker-0.90.85
