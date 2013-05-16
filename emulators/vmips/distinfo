@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/10/14 05:44:44 shattered Exp $
+$NetBSD: distinfo,v 1.5 2013/05/16 05:17:45 shattered Exp $
 
-SHA1 (vmips-1.4.tar.gz) = e8e1699c6922c00ed39d3e6210ba92bf5381e5aa
-RMD160 (vmips-1.4.tar.gz) = 6bc6b7bac1dc692ce8bce879b0e1c96ad779e9cc
-Size (vmips-1.4.tar.gz) = 1028066 bytes
+SHA1 (vmips-1.4.1.tar.gz) = 1a087ed01e4e76c0ee19f3bbe5a8882a5183bf7c
+RMD160 (vmips-1.4.1.tar.gz) = bb4a34bfcfdbc0c8b5644498ec237bfa8956fde9
+Size (vmips-1.4.1.tar.gz) = 1038289 bytes
 SHA1 (patch-cpu.cc) = 723ab3f436a460b3a7cca0f7610943606a8bdc3e
 SHA1 (patch-options.cc) = 65c0a46c7c1d1feddef344f95026007ccc7b0b1d
 SHA1 (patch-vmipstool.cc) = fe42e124cb205764be08cff6f65d9c3300220dfc
