@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1667 2013/05/16 14:17:53 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1668 2013/05/16 16:16:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2525,3 +2525,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.3.4nb1 [obache 2013-05-16]
 	Updated math/metis to 4.0.3 [obache 2013-05-16]
 	Updated graphics/gnuplot to 4.6.3 [adam 2013-05-16]
+	Updated lang/ruby193-base to 1.9.3p429 [taca 2013-05-16]
+	Updated databases/ruby-gdbm to 1.9.3p429nb2 [taca 2013-05-16]
+	Updated devel/ruby-curses to 1.9.3p429 [taca 2013-05-16]
+	Updated devel/ruby-fiddle to 1.9.3p429 [taca 2013-05-16]
+	Updated devel/ruby-readline to 1.9.3p429nb2 [taca 2013-05-16]
+	Updated x11/ruby-tk to 1.9.3p429nb1 [taca 2013-05-16]
+	Updated lang/ruby193 to 1.9.3p429 [taca 2013-05-16]
+	Updated lang/ruby to 1.9.3p429nb1 [taca 2013-05-16]
