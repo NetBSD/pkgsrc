@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.19 2012/10/17 11:36:02 jperkin Exp $
+# $NetBSD: options.mk,v 1.20 2013/05/16 05:22:02 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
 
 # Assembler code build configurations
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
-PKG_SUPPORTED_OPTIONS+=		${MACHINE_ARCH}
-PKG_SUGGESTED_OPTIONS+=		${MACHINE_ARCH}
+    ${OPSYS} != "Darwin"
+#PKG_SUPPORTED_OPTIONS+=		${MACHINE_ARCH}
+#PKG_SUGGESTED_OPTIONS+=		${MACHINE_ARCH}
 .endif
 ###
 ### XXX  There are [probably] others, but let's not get crazy just yet.
@@ -42,24 +42,25 @@ PKG_SUGGESTED_OPTIONS+=		dri
 ###
 ### XXX Yes, this is a bit overly verbose; with Mesa, that can't hurt much.
 ###	NOTE: there is no assembler code built with libOSMesa.
-.if (!empty(PKG_OPTIONS:Mi386) || !empty(PKG_OPTIONS:Mx86_64)) && \
-     !empty(PKG_OPTIONS:Mdri)
-BUILD_TARGET_SUFFIX=	-${MACHINE_ARCH}
-.else
-BUILD_TARGET_SUFFIX=	# empty
-.endif
+#.if (!empty(PKG_OPTIONS:Mi386) || !empty(PKG_OPTIONS:Mx86_64)) && \
+#     !empty(PKG_OPTIONS:Mdri)
+#BUILD_TARGET_SUFFIX=	-${MACHINE_ARCH}
+#.else
+#BUILD_TARGET_SUFFIX=	# empty
+#.endif
 
 .if !empty(PKG_OPTIONS:Mdri)
-BUILD_TARGET=	pkgsrc-dri${BUILD_TARGET_SUFFIX}
+CONFIGURE_ARGS+=        --with-driver=dri
 PLIST.dri=	yes
 BUILDLINK_API_DEPENDS.libdrm+= libdrm>=2.4.9
 .  include "../../sysutils/libpciaccess/buildlink3.mk"
 .  include "../../graphics/MesaLib/dri.mk"
+CONFIGURE_ARGS+=        --with-dri-drivers="i810 i915 i965 mach64 mga r128 r200 r300 r600 radeon savage sis swrast tdfx unichrome"
 .else
-BUILD_TARGET=	pkgsrc
+CONFIGURE_ARGS+=        --with-driver=xlib,osmesa
 PLIST.nodri=	yes
 ###
 ### XXX building libOSMesa breaks with -j, and GNU make has no .WAIT
 ###
-MAKE_JOBS_SAFE=			no
+#MAKE_JOBS_SAFE=			no
 .endif
