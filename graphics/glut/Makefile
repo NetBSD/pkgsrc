@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.53 2009/08/25 07:29:18 hasso Exp $
+# $NetBSD: Makefile,v 1.54 2013/05/16 05:28:13 richard Exp $
 
 PKGNAME=	glut-${MESA_PKGVERSION}
-PKGREVISION=	1
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
-MESA_HEADERS=	glut.h glutf90.h
 
 PKGCONFIG_OVERRIDE+=    src/glut/glx/glut.pc.in
-# no configure stage
-PKGCONFIG_OVERRIDE_STAGE=       pre-build
 
 .include "../../graphics/Mesa/Makefile.lib"
 
@@ -23,11 +19,21 @@ BUILDLINK_API_DEPENDS.glu+=	glu>=${MESA_PKGVERSION}
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 
-pre-build:
-	cd ${WRKSRC} && ${RM} -fr src/mesa src/glu src/glx src/glw progs
-###	XXX why is this needed?
-	mkdir -p ${WRKSRC}/src/glut/lib
+CONFIGURE_ARGS+=        --enable-glu
+CONFIGURE_ARGS+=        --enable-glut
+CONFIGURE_ARGS+=        --disable-glw
+CONFIGURE_ARGS+=        --with-dri-drivers=""
 
-# no configure phase
-.include "../../mk/configure/pkg-config-override.mk"
+BUILD_DIRS=             src/glut/glx
+BUILD_TARGET=           default
+
+INSTALL_DIRS=           src/glut/glx
+INSTALLATION_DIRS+=     include/GL
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/include/GL/glut.h \
+		${DESTDIR}${PREFIX}/include/GL/glut.h
+	${INSTALL_DATA} ${WRKSRC}/include/GL/glutf90.h \
+		${DESTDIR}${PREFIX}/include/GL/glutf90.h
+
 .include "../../mk/bsd.pkg.mk"
