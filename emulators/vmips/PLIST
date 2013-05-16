@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/16 05:17:45 shattered Exp $
 bin/vmips
 bin/vmipstool
 include/vmips/asm_regnames.h
@@ -7,3 +7,4 @@ man/man1/vmips.1
 man/man1/vmipstool.1
 share/examples/vmips/vmipsrc
 share/vmips/ld.script
+share/vmips/setup.S

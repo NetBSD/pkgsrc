@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/14 05:44:44 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2013/05/16 05:17:45 shattered Exp $
 #
 
-DISTNAME=		vmips-1.4
+DISTNAME=		vmips-1.4.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vmips/}
 
