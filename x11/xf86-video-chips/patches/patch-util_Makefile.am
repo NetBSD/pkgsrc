@@ -1,0 +1,15 @@
+$NetBSD: patch-util_Makefile.am,v 1.1 2013/05/16 06:05:19 richard Exp $
+
+--- util/Makefile.am.orig	2012-06-05 17:37:42.000000000 +0000
++++ util/Makefile.am
+@@ -3,7 +3,7 @@ if BUILD_UTILS
+ noinst_PROGRAMS = dRegs mRegs modClock memClock
+ endif
+ 
+-dRegs_SOURCES = dRegs.c AsmMacros.h
+-mRegs_SOURCES = mRegs.c AsmMacros.h
+-modClock_SOURCES = modClock.c AsmMacros.h
++dRegs_SOURCES = dRegs.c AsmMacros.h iopl.h
++mRegs_SOURCES = mRegs.c AsmMacros.h iopl.h
++modClock_SOURCES = modClock.c AsmMacros.h iopl.h
+ memClock_SOURCES = modClock.c AsmMacros.h
