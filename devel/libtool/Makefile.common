@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.80 2013/05/10 00:15:02 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.81 2013/05/16 14:25:48 ryoon Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
+# used by devel/libtool-fortran/Makefile
 # used by devel/libtool-info/Makefile
 
 ###########################################################################
