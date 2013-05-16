@@ -1,0 +1,22 @@
+$NetBSD: patch-distbb.default.conf.in,v 1.1 2013/05/16 01:26:08 cheusov Exp $
+
+--- distbb.default.conf.in.orig	2013-02-02 11:07:48.000000000 +0000
++++ distbb.default.conf.in
+@@ -103,7 +103,7 @@ assign PKG_SRC_SUMMARY "$PACKAGES/All/pk
+ #
+ # If you want to build short version of src_summary, uncomment the following
+ # (see pkg_src_summary(1))
+-assign PSS_FIELDS 'PKGNAME PKGPATH DEPENDS TARGET_BUILD_DEPENDS BUILD_DEPENDS MAINTAINER HOMEPAGE DESCRIPTION NO_BIN_ON_FTP NO_BIN_ON_CDROM USE_LANGUAGES ALLDISTFILES PKG_FAIL_REASON'
++assign PSS_FIELDS 'PKGNAME PKGPATH DEPENDS TOOL_DEPENDS BUILD_DEPENDS MAINTAINER HOMEPAGE DESCRIPTION NO_BIN_ON_FTP NO_BIN_ON_CDROM USE_LANGUAGES ALLDISTFILES PKG_FAIL_REASON'
+ #
+ # For generating an "expanded" PLIST.
+ # It is useless for distbb but looks very nice ;-)
+@@ -128,7 +128,7 @@ assign PSS_FIELDS 'PKGNAME PKGPATH DEPEN
+ # (-m option is for building multi-variant packages, see pkg_src_summary(1),
+ # NOTE: -m currently doesn't work when entire pkgsrc tree is built,
+ # because lots of multi-variant packages have constant PKGBASE )
+-assign PKG_UPDATE_SRC_SUMMARY_CMD "@bindir@/pkg_src_summary -bm -A > \"$PKG_SRC_SUMMARY\""
++assign PKG_UPDATE_SRC_SUMMARY_CMD "@bindir@/pkg_src_summary -btm -A > \"$PKG_SRC_SUMMARY\""
+ 
+ # program for comparing pkg_summary(5) for available binaries and
+ # pkg_src_summary collected from pkgsrc source tree
