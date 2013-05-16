@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12142 2013/05/15 22:35:41 wiz Exp $
+$NetBSD: TODO,v 1.12143 2013/05/16 05:18:50 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vino-3.8.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
-	o vmips-1.4.1
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
 	o wMosaic-3.8.22
