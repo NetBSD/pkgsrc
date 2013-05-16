@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2013/03/19 15:37:41 taca Exp $
+# $NetBSD: Makefile,v 1.14 2013/05/16 16:25:56 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
@@ -17,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-VER=		4.7.10
+VER=		4.7.11
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
@@ -25,7 +24,7 @@ TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-PHP_VERSIONS_ACCEPTED=	53
+#PHP_VERSIONS_ACCEPTED=	53
 
 # maybe resides in lang/php/phpversion.mk
 REPLACE_INTERPRETER+=	php
