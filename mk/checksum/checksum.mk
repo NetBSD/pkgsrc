@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.17 2013/01/24 11:20:56 tron Exp $
+# $NetBSD: checksum.mk,v 1.18 2013/05/16 08:31:07 obache Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -28,7 +28,7 @@ _COOKIE.checksum=	${_COOKIE.extract}
 
 _CHECKSUM_CMD=								\
 	${PKGSRC_SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}	\
-		ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_SED:Q}			\
+		ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_CMDLINE_SED:Q}		\
 		TEST=${TOOLS_TEST:Q}					\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
