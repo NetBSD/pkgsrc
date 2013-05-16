@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1664 2013/05/16 05:18:50 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.1665 2013/05/16 12:05:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.86 [obache 2013-05-16]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.285 [obache 2013-05-16]
 	Updated emulators/vmips to 1.4.1 [shattered 2013-05-16]
+	Updated www/squid3 to 3.3.4nb1 [obache 2013-05-16]
