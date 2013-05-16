@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/04/21 14:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/05/16 05:43:14 richard Exp $
 
 DISTNAME=		libdrm-2.4.44
+PKGREVISION=		1
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -27,13 +28,11 @@ SUBST_STAGE.atomic=	pre-configure
 SUBST_VARS.atomic=	ATOMIC_OPS_CHECK
 
 ATOMIC_OPS_CHECK=	0
-.if ${OPSYS} == "NetBSD"
-.  if exists(/usr/include/sys/atomic.h)
+.if exists(/usr/include/sys/atomic.h)
 ATOMIC_OPS_CHECK=	1
-.  else
+.else
 .  include "../../devel/libatomic_ops/buildlink3.mk"
 CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
-.  endif
 .endif
 
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
