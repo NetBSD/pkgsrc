@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1661 2013/05/16 01:24:24 cheusov Exp $
+$NetBSD: CHANGES-2013,v 1.1662 2013/05/16 05:16:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2519,3 +2519,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/py-netlib version 0.9 [wiz 2013-05-15]
 	Added net/mitmproxy version 0.9 [wiz 2013-05-15]
 	Updated pkgtools/pkg_summary-utils to 0.62.0 [cheusov 2013-05-16]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.86 [obache 2013-05-16]
