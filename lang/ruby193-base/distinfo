@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.19 2013/04/30 21:30:59 bsiegert Exp $
+$NetBSD: distinfo,v 1.20 2013/05/16 16:13:59 taca Exp $
 
-SHA1 (ruby-1.9.3-p392.tar.bz2) = de73455ff6500372d647fb49d24cc130fbd5815e
-RMD160 (ruby-1.9.3-p392.tar.bz2) = 4d12f62ce294a9c8fe27369413253097241e3fb0
-Size (ruby-1.9.3-p392.tar.bz2) = 10024221 bytes
-SHA1 (patch-configure) = 4b9c2ea8933345a06987ad9120341b2713669c95
-SHA1 (patch-configure.in) = 7812319d8286032f2ecf7ce22dc018ae2684f384
+SHA1 (ruby-1.9.3-p429.tar.bz2) = 18f464c49c857fad3b3b277c8ef5eb8c30a7794a
+RMD160 (ruby-1.9.3-p429.tar.bz2) = c39f2f713f6438c14e32f992d1e50e5624a84eba
+Size (ruby-1.9.3-p429.tar.bz2) = 10042323 bytes
+SHA1 (patch-Makefile.in) = 2d162718be709f8367b476148a2a68ebd527fb2f
+SHA1 (patch-configure) = 383a492bad17fa27d4aee8e68b360ac719c18dcd
+SHA1 (patch-configure.in) = ded6328a328a1ce79c937158e4ebbfecd7ca6db3
 SHA1 (patch-defs_default__gems) = fb24111736f1a76a05e853aa068024dbdd24e5a5
 SHA1 (patch-lib_rdoc_ri_driver.rb) = acb4cb022893eb8dea2adf7564f5e5e1a0f1e9c8
 SHA1 (patch-lib_rubygems.rb) = 2aed4990a868dc92668a78da7bcff2050ff3dd66
@@ -14,7 +15,7 @@ SHA1 (patch-lib_rubygems_commands_uninstall__command.rb) = 7d8dd07d332f0e89822d0
 SHA1 (patch-lib_rubygems_commands_unpack__command.rb) = b8e18f1feedb7966e2a5280d6020c6134a7d83a3
 SHA1 (patch-lib_rubygems_config__file.rb) = ed4ff25ea89a2d13ee601c7edfda0902f08fe29c
 SHA1 (patch-lib_rubygems_defaults.rb) = 101a6e653ef3811cdda3ed333b50448c0d3f0d26
-SHA1 (patch-lib_rubygems_dependency__installer.rb) = 572775dd430619f93168732ad312d06819b6f1d7
+SHA1 (patch-lib_rubygems_dependency__installer.rb) = 2ad4854a4c226158d985b3a42861932676be31d3
 SHA1 (patch-lib_rubygems_doc__manager.rb) = 4b2d70e5dfaeff1f1b70ff27f1084065dcc742d3
 SHA1 (patch-lib_rubygems_install__update__options.rb) = 74f81900c92bc3c7a663a112cccf6ff88b6ae180
 SHA1 (patch-lib_rubygems_installer.rb) = cec82bd0c5255a2a23799273c7a2835e2bef7e33
