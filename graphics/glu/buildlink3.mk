@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2009/03/20 19:24:39 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2013/05/16 05:25:02 richard Exp $
 
 BUILDLINK_TREE+=	glu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glu
 GLU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glu+=	glu>=3.4.2
-BUILDLINK_ABI_DEPENDS.glu+=	glu>=7.0.3
+BUILDLINK_ABI_DEPENDS.glu+=	glu>=7.11.2
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 
 .include "../../graphics/MesaLib/buildlink3.mk"
