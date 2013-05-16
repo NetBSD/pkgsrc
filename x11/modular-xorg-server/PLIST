@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/03/13 14:13:52 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/05/16 05:38:31 richard Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -9,16 +9,16 @@ include/xorg/BT.h
 include/xorg/IBM.h
 include/xorg/TI.h
 include/xorg/XIstubs.h
-${PLIST.sunos}include/xorg/agpgart.h
-include/xorg/bstore.h
-include/xorg/bstorestr.h
+include/xorg/Xprintf.h
 include/xorg/bt829.h
-include/xorg/cfb8_16.h
+include/xorg/callback.h
+include/xorg/client.h
 include/xorg/closestr.h
 include/xorg/closure.h
 include/xorg/colormap.h
 include/xorg/colormapst.h
 include/xorg/compiler.h
+include/xorg/compositeext.h
 include/xorg/cursor.h
 include/xorg/cursorstr.h
 include/xorg/damage.h
@@ -36,6 +36,7 @@ ${PLIST.dri}include/xorg/dri.h
 include/xorg/dri2.h
 ${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
+include/xorg/events.h
 include/xorg/exa.h
 include/xorg/exevents.h
 include/xorg/extension.h
@@ -44,6 +45,7 @@ include/xorg/extnsionst.h
 include/xorg/fb.h
 include/xorg/fbdevhw.h
 include/xorg/fboverlay.h
+include/xorg/fbpict.h
 include/xorg/fbrop.h
 include/xorg/fi1236.h
 include/xorg/fourcc.h
@@ -57,8 +59,8 @@ include/xorg/hotplug.h
 include/xorg/i2c_def.h
 include/xorg/input.h
 include/xorg/inputstr.h
+include/xorg/list.h
 include/xorg/mi.h
-include/xorg/mibank.h
 include/xorg/mibstore.h
 include/xorg/micmap.h
 include/xorg/micoord.h
@@ -66,6 +68,7 @@ include/xorg/mifillarc.h
 include/xorg/mifpoly.h
 include/xorg/migc.h
 include/xorg/miline.h
+include/xorg/mioverlay.h
 include/xorg/mipict.h
 include/xorg/mipointer.h
 include/xorg/mipointrst.h
@@ -73,11 +76,16 @@ include/xorg/misc.h
 include/xorg/miscstruct.h
 include/xorg/mispans.h
 include/xorg/mistruct.h
+include/xorg/misync.h
+include/xorg/misyncstr.h
 include/xorg/miwideline.h
 include/xorg/mizerarc.h
 include/xorg/msp3430.h
 include/xorg/opaque.h
+include/xorg/optionstr.h
 include/xorg/os.h
+include/xorg/panoramiX.h
+include/xorg/panoramiXsrv.h
 include/xorg/picture.h
 include/xorg/picturestr.h
 include/xorg/pixmap.h
@@ -90,7 +98,6 @@ include/xorg/randrstr.h
 include/xorg/region.h
 include/xorg/regionstr.h
 include/xorg/registry.h
-include/xorg/renderedge.h
 include/xorg/resource.h
 include/xorg/rgb.h
 include/xorg/rrtransform.h
@@ -106,6 +113,7 @@ include/xorg/site.h
 ${PLIST.sunos}include/xorg/solaris-${SUNOS_ARCH}.il
 include/xorg/swaprep.h
 include/xorg/swapreq.h
+include/xorg/syncsdk.h
 include/xorg/tda8425.h
 include/xorg/tda9850.h
 include/xorg/tda9885.h
@@ -114,13 +122,15 @@ include/xorg/validate.h
 include/xorg/vbe.h
 include/xorg/vbeModes.h
 include/xorg/vgaHW.h
+include/xorg/vidmodeproc.h
 include/xorg/wfbrename.h
 include/xorg/window.h
 include/xorg/windowstr.h
-include/xorg/xaa.h
-include/xorg/xaaWrapper.h
-include/xorg/xaalocal.h
 include/xorg/xaarop.h
+include/xorg/xaa.h
+include/xorg/xaalocal.h
+include/xorg/xace.h
+include/xorg/xacestr.h
 include/xorg/xf86.h
 include/xorg/xf86Crtc.h
 include/xorg/xf86Cursor.h
@@ -128,17 +138,17 @@ include/xorg/xf86DDC.h
 include/xorg/xf86Modes.h
 include/xorg/xf86Module.h
 include/xorg/xf86Opt.h
+include/xorg/xf86Optionstr.h
 include/xorg/xf86Optrec.h
 include/xorg/xf86Parser.h
 include/xorg/xf86Pci.h
 include/xorg/xf86PciInfo.h
 include/xorg/xf86Priv.h
 include/xorg/xf86Privstr.h
-include/xorg/xf86RAC.h
 include/xorg/xf86RamDac.h
 include/xorg/xf86RandR12.h
 include/xorg/xf86Rename.h
-include/xorg/xf86Resources.h
+include/xorg/xf86VGAarbiter.h
 include/xorg/xf86Xinput.h
 include/xorg/xf86_OSlib.h
 include/xorg/xf86_OSproc.h
@@ -151,6 +161,7 @@ include/xorg/xf86str.h
 include/xorg/xf86xv.h
 include/xorg/xf86xvmc.h
 include/xorg/xf86xvpriv.h
+include/xorg/xfixes.h
 include/xorg/xisb.h
 include/xorg/xkbfile.h
 include/xorg/xkbrules.h
@@ -161,15 +172,16 @@ include/xorg/xorgVersion.h
 include/xorg/xserver-properties.h
 include/xorg/xvdix.h
 include/xorg/xvmcext.h
-lib/X11/Options
 lib/pkgconfig/xorg-server.pc
-lib/xorg/modules/extensions/libdbe.la
+${PLIST.dri}lib/xorg/modules/extensions/libdbe.la
 ${PLIST.dri}lib/xorg/modules/extensions/libdri.la
-lib/xorg/modules/extensions/libdri2.la
-lib/xorg/modules/extensions/libextmod.la
+${PLIST.dri}lib/xorg/modules/extensions/libdri2.la
+${PLIST.dri}lib/xorg/modules/extensions/libextmod.la
 ${PLIST.dri}lib/xorg/modules/extensions/libglx.la
+${PLIST.dri}lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/libexa.la
 lib/xorg/modules/libfb.la
+lib/xorg/modules/libfbdevhw.la
 lib/xorg/modules/libint10.la
 lib/xorg/modules/libshadow.la
 lib/xorg/modules/libshadowfb.la
@@ -177,8 +189,6 @@ lib/xorg/modules/libvbe.la
 lib/xorg/modules/libvgahw.la
 lib/xorg/modules/libwfb.la
 lib/xorg/modules/libxaa.la
-lib/xorg/modules/libxf8_16bpp.la
-lib/xorg/modules/linux/libfbdevhw.la
 lib/xorg/modules/multimedia/bt829_drv.la
 lib/xorg/modules/multimedia/fi1236_drv.la
 lib/xorg/modules/multimedia/msp3430_drv.la
@@ -196,6 +206,8 @@ man/man1/gtf.1
 man/man4/exa.4
 man/man4/fbdevhw.4
 man/man5/xorg.conf.5
+man/man5/xorg.conf.d.5
 share/aclocal/xorg-server.m4
+${PLIST.dtrace}share/doc/xorg-server/Xserver-DTrace.xml
 @pkgdir lib/xorg/modules/input
 @pkgdir lib/xorg/modules/drivers

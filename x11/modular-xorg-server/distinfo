@@ -1,36 +1,6 @@
-$NetBSD: distinfo,v 1.47 2012/12/15 09:26:07 is Exp $
+$NetBSD: distinfo,v 1.48 2013/05/16 05:38:31 richard Exp $
 
-SHA1 (xorg-server-1.6.5.tar.bz2) = c57c80dd15d3ca492e58ae993b9015d085ec6ea6
-RMD160 (xorg-server-1.6.5.tar.bz2) = 702970358a5643dbc9205f42e39c5b8ed2ff845a
-Size (xorg-server-1.6.5.tar.bz2) = 4678406 bytes
-SHA1 (patch-ab) = c65457bf58b7504375b31512c743c9f1a5dcdde0
-SHA1 (patch-ac) = fdc115fad11cddcc77e3aee4d6992b6e7c6fbf32
-SHA1 (patch-af) = 722d4679d3386c9a02e1c45a1aa355658ccc2908
-SHA1 (patch-aj) = 84ff5c6215d0b62734cf26e78394a70afe2b7007
-SHA1 (patch-ak) = df6d3b2172254e1f9d44eb40144cad5ed29a7d1d
-SHA1 (patch-al) = cb1fb44037f23fb2838ed36aaf2591946264fe53
-SHA1 (patch-am) = be278e6044dfa37b108d2544c82b84f36b6ca9d7
-SHA1 (patch-ba) = b758aab64fcba81ba33b7c425db6430757b2fd4b
-SHA1 (patch-bb) = 1e8ca63c07b22424d0bf379dd98e032f41eabc0e
-SHA1 (patch-bc) = f1ab56e8876ddc6bc0fe941a45ab2c7726c5cbf4
-SHA1 (patch-bd) = 01abcfe981c5d7d8aa20ca80e6a55cecc5e0daad
-SHA1 (patch-be) = 29d24b313707689c390eb4d3b0f0afe7799944df
-SHA1 (patch-bf) = fe74060e662e39accc285026b7eb0a7fd87e698e
-SHA1 (patch-bg) = 6e44664941585390c32b5f6cc1fdc93447228b09
-SHA1 (patch-bh) = 51074592a06a84a049a4e2bc994471491e2e202c
-SHA1 (patch-bi) = 52012af9c4bd2dab0e9d96cb1692a5e342737748
-SHA1 (patch-bj) = 3bea92151311028e9eeeacd441b1855a0d5f6867
-SHA1 (patch-bk) = 293aba14c63bfd4c8cf282c4a1cca40f76f6634a
-SHA1 (patch-bl) = 42fb973bd4a22bbe6c441159f1edcaf7c04f0d27
-SHA1 (patch-bm) = 9c7192eb98816165d8fb16af465e0056045280b2
-SHA1 (patch-bn) = 27dffea8ce05ac79fd438818fba463f57776f2af
-SHA1 (patch-bo) = ee05a01c6b1d4d0b759d8372f16c5f752273f73e
+SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
+RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
+Size (xorg-server-1.12.4.tar.bz2) = 5444761 bytes
 SHA1 (patch-configure) = 031bc0accf1dd71ed687e7aac3fcc9498cb06784
-SHA1 (patch-os_utils.c) = 949384a74c5702c863dea7387bfe18952c92b239
-SHA1 (patch-sa) = 349bad3f5f7e6bc3b7d37ab37fb6d2a0e6f4d7f0
-SHA1 (patch-sb) = 48c22a62b30c6bc4d5786624bc264fee30a9bb81
-SHA1 (patch-sc) = dd93e15253b78395050d65df0f972e57ccf546e0
-SHA1 (patch-sd) = 36d3946217b57416e8d0d3099e48d4e9f957c881
-SHA1 (patch-se) = 22b20c734b7fcf59d75227aeb1fa703465582568
-SHA1 (patch-sf) = 22d4f575c066691696ec96f1fcd459251b662012
-SHA1 (patch-sg) = 81598e687357a6e8b477055d14ece01372ae4617
