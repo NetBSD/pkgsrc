@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/05/04 06:08:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/16 12:04:57 obache Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -8,6 +8,7 @@ ${PLIST.ba_NCSA}libexec/basic_ncsa_auth
 ${PLIST.ba_NIS}libexec/basic_nis_auth
 ${PLIST.ba_PAM}libexec/basic_pam_auth
 libexec/cachemgr.cgi
+${PLIST.da_file}libexec/digest_file_auth
 ${PLIST.da_LDAP}libexec/digest_ldap_auth
 ${PLIST.diskd}libexec/diskd
 ${PLIST.eacl_file_userip}libexec/ext_file_userip_acl
@@ -29,6 +30,7 @@ ${PLIST.ba_getpwnam}man/man8/basic_getpwnam_auth.8
 ${PLIST.ba_LDAP}man/man8/basic_ldap_auth.8
 ${PLIST.ba_NCSA}man/man8/basic_ncsa_auth.8
 ${PLIST.ba_PAM}man/man8/basic_pam_auth.8
+${PLIST.da_file}man/man8/digest_file_auth.8
 ${PLIST.eacl_file_userip}man/man8/ext_file_userip_acl.8
 ${PLIST.eacl_LDAP_group}man/man8/ext_ldap_group_acl.8
 ${PLIST.eacl_unix_group}man/man8/ext_unix_group_acl.8
