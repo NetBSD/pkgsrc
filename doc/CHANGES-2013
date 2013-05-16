@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1660 2013/05/15 22:41:41 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1661 2013/05/16 01:24:24 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-urwid to 1.1.1 [wiz 2013-05-15]
 	Added net/py-netlib version 0.9 [wiz 2013-05-15]
 	Added net/mitmproxy version 0.9 [wiz 2013-05-15]
+	Updated pkgtools/pkg_summary-utils to 0.62.0 [cheusov 2013-05-16]
