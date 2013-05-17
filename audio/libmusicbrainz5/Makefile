@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/06 23:21:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/17 21:56:15 jperkin Exp $
 
 DISTNAME=	libmusicbrainz-5.0.1
 PKGNAME=	${DISTNAME:S/brainz/brainz5/}
@@ -17,7 +17,10 @@ PKGCONFIG_OVERRIDE=	libmusicbrainz5.pc.cmake
 
 CMAKE_ARGS+=	-DNEON_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.neon}/include/neon
 
+LDFLAGS.SunOS+=	-lintl
+
 #.include "../../audio/libdiscid/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.neon+=	neon>=0.25.0
 .include "../../www/neon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
