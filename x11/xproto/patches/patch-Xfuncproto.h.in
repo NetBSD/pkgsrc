@@ -1,0 +1,35 @@
+$NetBSD: patch-Xfuncproto.h.in,v 1.1 2013/05/17 13:17:40 joerg Exp $
+
+--- Xfuncproto.h.in.orig	2013-03-29 23:26:53.000000000 +0000
++++ Xfuncproto.h.in
+@@ -84,9 +84,9 @@ in this Software without prior written a
+ 
+ /* Added in X11R6.9, so available in any version of modular xproto */
+ #if defined(__GNUC__) && (__GNUC__ >= 4) && !defined(__CYGWIN__) && !defined(__MINGW32__)
+-# define _X_EXPORT      __attribute__((visibility("default")))
+-# define _X_HIDDEN      __attribute__((visibility("hidden")))
+-# define _X_INTERNAL    __attribute__((visibility("internal")))
++# define _X_EXPORT      __attribute__((__visibility__("default")))
++# define _X_HIDDEN      __attribute__((__visibility__("hidden")))
++# define _X_INTERNAL    __attribute__((__visibility__("internal")))
+ #elif defined(__SUNPRO_C) && (__SUNPRO_C >= 0x550)
+ # define _X_EXPORT      __global
+ # define _X_HIDDEN      __hidden
+@@ -108,7 +108,7 @@ in this Software without prior written a
+ 
+ /* Added in X11R6.9, so available in any version of modular xproto */
+ #if defined(__GNUC__) && ((__GNUC__ * 100 + __GNUC_MINOR__) >= 301)
+-# define _X_DEPRECATED  __attribute__((deprecated))
++# define _X_DEPRECATED  __attribute__((__deprecated__))
+ #else /* not gcc >= 3.1 */
+ # define _X_DEPRECATED
+ #endif
+@@ -132,7 +132,7 @@ in this Software without prior written a
+    argument macros, must be only used inside #ifdef _X_NONNULL guards, as
+    many legacy X clients are compiled in C89 mode still. */
+ #if defined(__GNUC__) &&  ((__GNUC__ * 100 + __GNUC_MINOR__) >= 303)
+-#define _X_NONNULL(args...)  __attribute__((nonnull(args)))
++#define _X_NONNULL(args...)  __attribute__((__nonnull__(args)))
+ #elif defined(__STDC_VERSION__) && (__STDC_VERSION__ - 0 >= 199901L) /* C99 */
+ #define _X_NONNULL(...)  /* */
+ #endif

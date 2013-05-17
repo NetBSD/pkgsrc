@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.21 2013/05/16 05:49:54 richard Exp $
+$NetBSD: distinfo,v 1.22 2013/05/17 13:17:40 joerg Exp $
 
 SHA1 (xproto-7.0.24.tar.bz2) = c05b5757174839644f2fd98c1b062150494b6b15
 RMD160 (xproto-7.0.24.tar.bz2) = 9a4d909e2b434bb0f2b7664ed8f3331c94c98580
 Size (xproto-7.0.24.tar.bz2) = 292795 bytes
+SHA1 (patch-Xfuncproto.h.in) = be2f94377fb61af159b704d3028fc82f93959557
+SHA1 (patch-Xos_r.h.in) = 6de176ec5bef08d67286a14eca651b1968d0b4bb
+SHA1 (patch-configure) = a589cc4b75bbaa4c93789d4ffc85a05fcaf0e25c
+SHA1 (patch-configure.ac) = 446b38c6043d90fb0f80df5f5d70d0b57e572310
