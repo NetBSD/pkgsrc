@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2013/02/16 11:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2013/05/17 19:38:59 jperkin Exp $
 
 DISTNAME=	e16-0.16.8.8
 PKGNAME=	${DISTNAME:S/e16/enlightenment/}
@@ -36,11 +36,19 @@ SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
 
+PLIST_VARS+=	libhack
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
+PLIST.libhack=	yes
+.endif
+
 post-install:
-	${FIND} ${PREFIX}/share/e16/themes -type d -print | \
-	${XARGS} ${CHMOD} ${BINMODE}
-	${FIND} ${PREFIX}/share/e16/themes -type f -print | \
-	${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${DESTDIR}${PREFIX}/share/e16/themes -type d -print | \
+		${XARGS} ${CHMOD} ${BINMODE}
+	${FIND} ${DESTDIR}${PREFIX}/share/e16/themes -type f -print | \
+		${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
