@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/04/13 07:55:02 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/17 19:49:12 jperkin Exp $
 
 DISTNAME=		libixp-0.4
 CATEGORIES=		devel
@@ -14,5 +14,8 @@ INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 USE_TOOLS+=		gmake
 
 REPLACE_SH+=		util/compile
+
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
+LDFLAGS.SunOS+=		-lsocket
 
 .include "../../mk/bsd.pkg.mk"
