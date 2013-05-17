@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2013/05/06 15:03:19 joerg Exp $
+$NetBSD: distinfo,v 1.35 2013/05/17 21:20:40 jperkin Exp $
 
 SHA1 (kdelibs-4.10.2.tar.xz) = 2f1f455c39fa33cc133db7ec6b3d2dbbabe03c85
 RMD160 (kdelibs-4.10.2.tar.xz) = b1cb62464e146c2f65cf4bb2487be7001ee4fc7b
@@ -18,6 +18,7 @@ SHA1 (patch-cmake_modules_FindKDE4Internal.cmake) = 4b1e7a68fe6f3766deca6d557e80
 SHA1 (patch-cmake_modules_FindTaglib.cmake) = be38479966da542343dd962c57f7e9d1be3e9ff4
 SHA1 (patch-kdecore_localization_klocale_kde.cpp) = b8a513a0c51e65d7e604a88c1d0e3325be6ad688
 SHA1 (patch-kdecore_network_ConfigureChecks.cmake) = 0ad9352974911ef78ec565f7b2a97c45ead2cf72
+SHA1 (patch-kdecore_tests_CMakeLists.txt) = b09d569127b3be95a6b9d51a0e02d0d1877a289f
 SHA1 (patch-kdecore_util_kshareddatacache_p.h) = 6d064fe75fbecd489b0343960333864c717c0805
 SHA1 (patch-kjs_JSImmediate.h) = ecc761c7c82f711f41cf47d706c1c22d22c2980a
 SHA1 (patch-kjs_interpreter.cpp) = 9d400daf7d96674b8d66e1cde46dcb3615635241
