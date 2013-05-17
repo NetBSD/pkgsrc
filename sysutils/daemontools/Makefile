@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/23 19:50:57 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/05/17 14:48:49 jperkin Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		1
@@ -22,6 +22,8 @@ WRKSRC=			${WRKDIR}/admin/${DISTNAME}
 DJB_SLASHPACKAGE=	YES
 
 CMDDIR=			${WRKSRC}/command
+
+USE_TOOLS+=		file
 
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
