@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.54 2013/05/11 23:56:24 ryoon Exp $
+# $NetBSD: Linux.mk,v 1.55 2013/05/17 03:40:02 dsainty Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -56,8 +56,7 @@ _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/x86_64-linux-
 .endif
 .if !empty(MACHINE_ARCH:Mi386)
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu
-_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/i386-li
-nux-gnu /usr/lib/i386-linux-gnu
+_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/i386-linux-gnu /usr/lib/i386-linux-gnu
 .endif
 .if !empty(MACHINE_ARCH:Marm*)
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabi:/usr/lib/arm-linux-gnueabi
