@@ -1,0 +1,152 @@
+$NetBSD: patch-configure,v 1.3 2013/05/17 13:17:40 joerg Exp $
+
+--- configure.orig	2013-03-29 23:27:02.000000000 +0000
++++ configure
+@@ -1959,6 +1971,73 @@ $as_echo "$ac_res" >&6; }
+   eval $as_lineno_stack; ${as_lineno_stack:+:} unset as_lineno
+ 
+ } # ac_fn_c_check_member
++
++# ac_fn_c_check_func LINENO FUNC VAR
++# ----------------------------------
++# Tests whether FUNC exists, setting the cache variable VAR accordingly
++ac_fn_c_check_func ()
++{
++  as_lineno=${as_lineno-"$1"} as_lineno_stack=as_lineno_stack=$as_lineno_stack
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $2" >&5
++$as_echo_n "checking for $2... " >&6; }
++if eval \${$3+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++/* Define $2 to an innocuous variant, in case <limits.h> declares $2.
++   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
++#define $2 innocuous_$2
++
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char $2 (); below.
++    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
++    <limits.h> exists even on freestanding compilers.  */
++
++#ifdef __STDC__
++# include <limits.h>
++#else
++# include <assert.h>
++#endif
++
++#undef $2
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char $2 ();
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined __stub_$2 || defined __stub___$2
++choke me
++#endif
++
++int
++main ()
++{
++return $2 ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"; then :
++  eval "$3=yes"
++else
++  eval "$3=no"
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++fi
++eval ac_res=\$$3
++	       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
++$as_echo "$ac_res" >&6; }
++  eval $as_lineno_stack; ${as_lineno_stack:+:} unset as_lineno
++
++} # ac_fn_c_check_func
+ cat >config.log <<_ACEOF
+ This file contains any messages produced by compilers while
+ running configure, to aid debugging if configure makes a mistake.
+@@ -11073,6 +11237,8 @@ ac_config_headers="$ac_config_headers do
+ 
+ ac_config_headers="$ac_config_headers Xfuncproto.h"
+ 
++ac_config_headers="$ac_config_headers Xos_r.h"
++
+ 
+ 
+ 
+@@ -11324,6 +11490,56 @@ $as_echo "#define NARROWPROTO /**/" >>co
+ 
+ fi
+ 
++# Handle Xos_r.h
++ac_fn_c_check_func "$LINENO" "readdir_r" "ac_cv_func_readdir_r"
++if test "x$ac_cv_func_readdir_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_DIRENTAPI /**/" >>confdefs.h
++
++fi
++
++ac_fn_c_check_func "$LINENO" "getgrgid_r" "ac_cv_func_getgrgid_r"
++if test "x$ac_cv_func_getgrgid_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_GRPAPI /**/" >>confdefs.h
++
++fi
++
++ac_fn_c_check_func "$LINENO" "getpwuid_r" "ac_cv_func_getpwuid_r"
++if test "x$ac_cv_func_getpwuid_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_PWDAPI /**/" >>confdefs.h
++
++fi
++
++ac_fn_c_check_func "$LINENO" "gethostbyname_r" "ac_cv_func_gethostbyname_r"
++if test "x$ac_cv_func_gethostbyname_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_NETDBAPI /**/" >>confdefs.h
++
++fi
++
++ac_fn_c_check_func "$LINENO" "strtok_r" "ac_cv_func_strtok_r"
++if test "x$ac_cv_func_strtok_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_STRINGAPI /**/" >>confdefs.h
++
++fi
++
++ac_fn_c_check_func "$LINENO" "gmtime_r" "ac_cv_func_gmtime_r"
++if test "x$ac_cv_func_gmtime_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_TIMEAPI /**/" >>confdefs.h
++
++fi
++
++ac_fn_c_check_func "$LINENO" "ttyname_r" "ac_cv_func_ttyname_r"
++if test "x$ac_cv_func_ttyname_r" = xyes; then :
++
++$as_echo "#define _XOS_R_H_MTSAFE_UNISTDAPI /**/" >>confdefs.h
++
++fi
++
+ 
+ ac_config_files="$ac_config_files Makefile specs/Makefile specs/SIAddresses/Makefile Xpoll.h xproto.pc"
+ 
+@@ -12083,6 +12307,7 @@ do
+     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+     "do-not-use-config.h") CONFIG_HEADERS="$CONFIG_HEADERS do-not-use-config.h" ;;
+     "Xfuncproto.h") CONFIG_HEADERS="$CONFIG_HEADERS Xfuncproto.h" ;;
++    "Xos_r.h") CONFIG_HEADERS="$CONFIG_HEADERS Xos_r.h" ;;
+     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+     "specs/Makefile") CONFIG_FILES="$CONFIG_FILES specs/Makefile" ;;
+     "specs/SIAddresses/Makefile") CONFIG_FILES="$CONFIG_FILES specs/SIAddresses/Makefile" ;;
