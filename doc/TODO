@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12146 2013/05/16 16:33:56 taca Exp $
+$NetBSD: TODO,v 1.12147 2013/05/17 16:53:10 richard Exp $
 
 Suggested new packages
 ======================
@@ -1229,52 +1229,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xchm-1.22
 	o xcircuit-3.6.85
 	o xcmsdb-1.0.4 [unpackaged]
-	o xcompmgr-1.1.6
 	o xdesktopwaves-1.3
-	o xdriinfo-1.0.4
 	o xemacs-current-21.5.31
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-input-keyboard-1.7.0
 	o xf86-input-mouse-1.9.0 [needs modular-xorg-server-1.7+]
-	o xf86-input-vmmouse-13.0.0
-	o xf86-input-void-1.4.0
-	o xf86-video-apm-1.2.5
-	o xf86-video-ark-0.7.5
-	o xf86-video-ast-0.97.0
-	o xf86-video-ati-7.1.0
-	o xf86-video-chips-1.2.5
-	o xf86-video-cirrus-1.5.2
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-glint-1.2.8
-	o xf86-video-i128-1.3.6
-	o xf86-video-i740-1.3.4
 	o xf86-video-intel-2.21.6
-	o xf86-video-mach64-6.9.4
-	o xf86-video-mga-1.6.2
-	o xf86-video-neomagic-1.2.7
 	o xf86-video-newport-0.2.4 [unpackaged]
-	o xf86-video-nv-2.1.20
-	o xf86-video-openchrome-0.3.2
-	o xf86-video-r128-6.9.1
-	o xf86-video-rendition-4.2.5
-	o xf86-video-s3-0.6.5
-	o xf86-video-s3virge-1.10.6
-	o xf86-video-savage-2.3.6
-	o xf86-video-siliconmotion-1.7.7
-	o xf86-video-sis-0.10.7
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-sunffb-1.2.1 [unpackaged]
-	o xf86-video-tdfx-1.4.5
-	o xf86-video-tga-1.2.2
-	o xf86-video-trident-1.3.6
-	o xf86-video-tseng-1.2.5
-	o xf86-video-vesa-2.3.2
-	o xf86-video-vmware-13.0.1
 	o xf86-video-voodoo-1.2.4
-	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xfce4-4.10
 	o xfce4-volman-0.3.80
@@ -1282,7 +1250,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
-	o xinput-1.6.0
 	o xjman-0.7
 	o xli-2006.11.10
 	o xlsatoms-1.1.1 [unpackaged]
