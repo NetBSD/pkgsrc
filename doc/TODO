@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12148 2013/05/18 12:21:11 rodent Exp $
+$NetBSD: TODO,v 1.12149 2013/05/18 13:40:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -768,7 +768,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcares-1.10.0
 	o libchamplain08-0.12.3
 	o libdiscid-0.5
-	o libdrm-2.4.45
 	o libextractor-1.0.0
 	o libflash-0.4.13
 	o libfolks-0.8.0
