@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/30 15:49:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/18 09:05:46 ryoon Exp $
 bin/secret-tool
 include/libsecret-1/libsecret/secret-attributes.h
 include/libsecret-1/libsecret/secret-collection.h
@@ -76,5 +76,15 @@ share/gtk-doc/html/libsecret-1/vala-examples.html
 share/gtk-doc/html/libsecret-1/vala-lookup-example.html
 share/gtk-doc/html/libsecret-1/vala-remove-example.html
 share/gtk-doc/html/libsecret-1/vala-store-example.html
+share/locale/cs/LC_MESSAGES/libsecret.mo
+share/locale/es/LC_MESSAGES/libsecret.mo
+share/locale/gl/LC_MESSAGES/libsecret.mo
+share/locale/hu/LC_MESSAGES/libsecret.mo
+share/locale/it/LC_MESSAGES/libsecret.mo
 share/locale/ja/LC_MESSAGES/libsecret.mo
 share/locale/pl/LC_MESSAGES/libsecret.mo
+share/locale/pt_BR/LC_MESSAGES/libsecret.mo
+share/locale/ru/LC_MESSAGES/libsecret.mo
+share/locale/sl/LC_MESSAGES/libsecret.mo
+share/locale/sr/LC_MESSAGES/libsecret.mo
+share/locale/sr@latin/LC_MESSAGES/libsecret.mo

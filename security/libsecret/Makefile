@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/12/19 13:29:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/18 09:05:46 ryoon Exp $
 #
 
-DISTNAME=	libsecret-0.12
-CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/0.12/}
+DISTNAME=	libsecret-0.15
+CATEGORIES=	security gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
