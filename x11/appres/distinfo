@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 17:53:08 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/05/18 13:32:05 wiz Exp $
 
-SHA1 (appres-1.0.3.tar.bz2) = 7303f12fae8cce92da2dbd88c9d31d816dc5da06
-RMD160 (appres-1.0.3.tar.bz2) = 58603ae578b3b794382ab34f4e5c6a59d6dabee0
-Size (appres-1.0.3.tar.bz2) = 104807 bytes
+SHA1 (appres-1.0.4.tar.bz2) = f89d6fff84d838c0b8b4adeca46185b6d4812a27
+RMD160 (appres-1.0.4.tar.bz2) = 8f8711e9a847292b1342788c43c49832adea511c
+Size (appres-1.0.4.tar.bz2) = 117949 bytes
