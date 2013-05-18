@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.4 2009/06/08 10:16:22 hasso Exp $
+$NetBSD: patch-ae,v 1.5 2013/05/18 20:23:03 adam Exp $
 
 Do not use $(SHELL), call directly @install_sh@.
 
 --- po/Makefile.in.in.orig	2007-03-26 12:25:16.000000000 +0200
 +++ po/Makefile.in.in
-@@ -38,8 +38,8 @@ INSTALL_DATA = @INSTALL_DATA@
+@@ -39,8 +39,8 @@ INSTALL_DATA = @INSTALL_DATA@
  # In automake >= 1.10, @mkdir_p@ is derived from ${MKDIR_P}, which is defined
  # either as "/path/to/mkdir -p" or ".../install-sh -c -d". For these automake
  # versions, $(mkinstalldirs) and $(install_sh) are unused.
