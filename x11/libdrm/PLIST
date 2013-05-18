@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/01/25 10:32:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/05/18 13:40:48 wiz Exp $
 include/libdrm/drm.h
 include/libdrm/drm_fourcc.h
 include/libdrm/drm_mode.h
@@ -11,6 +11,7 @@ include/libdrm/mach64_drm.h
 include/libdrm/mga_drm.h
 include/libdrm/nouveau.h
 include/libdrm/nouveau_drm.h
+include/libdrm/qxl_drm.h
 include/libdrm/r128_drm.h
 include/libdrm/r600_pci_ids.h
 include/libdrm/radeon_bo.h
