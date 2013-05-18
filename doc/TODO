@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12155 2013/05/18 21:56:22 prlw1 Exp $
+$NetBSD: TODO,v 1.12156 2013/05/18 23:02:18 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -993,7 +993,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-distribute-0.6.38
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
-	o py-gobject3-3.8.2
 	o py-httplib2-0.8
 	o py-libxml2-2.9.1
 	o py-lxml-3.2.1
