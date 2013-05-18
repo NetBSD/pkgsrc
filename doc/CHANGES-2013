@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1680 2013/05/18 13:33:17 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1681 2013/05/18 13:34:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2591,3 +2591,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/vinagre to 3.6.2nb7 [ryoon 2013-05-18]
 	Updated x11/appres to 1.0.4 [wiz 2013-05-18]
 	Updated x11/transset to 1.0.1 [wiz 2013-05-18]
+	Updated x11/xfontsel to 1.0.5 [wiz 2013-05-18]
