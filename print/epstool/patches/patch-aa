@@ -1,18 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2009/11/25 21:59:34 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2013/05/18 20:50:36 shattered Exp $
 
---- makefile.orig	2005-01-07 12:40:46.000000000 +0100
+--- makefile.orig	2005-06-10 09:41:00.000000000 +0000
 +++ makefile
-@@ -32,11 +32,11 @@ LIBPNGINC=
- LIBPNGCFLAGS=
- LIBPNGLIBS=
+@@ -45,9 +45,9 @@ TARGET=epstool
+ 
+ include $(SRCDIR)/common.mak
  
 -EPSTOOL_ROOT=/usr/local
 +EPSTOOL_ROOT=${DESTDIR}${PREFIX}
  EPSTOOL_BASE=$(prefix)$(EPSTOOL_ROOT)
- EPSTOOL_BINDIR=$(EPSTOOL_BASE)/bin
- EPSTOOL_MANDIR=$(EPSTOOL_BASE)/man
--EPSTOOL_DOCDIR=$(EPSTOOL_BASE)/share/doc
+-EPSTOOL_DOCDIR=$(EPSTOOL_BASE)/share/doc/epstool-$(EPSTOOL_VERSION)
 +EPSTOOL_DOCDIR=$(EPSTOOL_BASE)/share/doc/epstool
+ EPSTOOL_MANDIR=$(EPSTOOL_BASE)/man
+ EPSTOOL_BINDIR=$(EPSTOOL_BASE)/bin
  
- LONGFILEDEF=
- LONGFILEMOD=cfile
