@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/08 20:31:27 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/18 21:56:03 prlw1 Exp $
 include/at-spi2-atk/2.0/atk-bridge.h
 lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 lib/libatk-bridge-2.0.la
 lib/pkgconfig/atk-bridge-2.0.pc
-share/glib-2.0/schemas/org.a11y.atspi.gschema.xml
