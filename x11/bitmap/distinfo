@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 17:55:41 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/05/18 13:37:41 wiz Exp $
 
-SHA1 (bitmap-1.0.6.tar.bz2) = 5527034785dec2b93a8d0931edc58602032d1f91
-RMD160 (bitmap-1.0.6.tar.bz2) = 0466cb1bf00f1d7aab773a0e1fbf2dea15f3f99f
-Size (bitmap-1.0.6.tar.bz2) = 165457 bytes
+SHA1 (bitmap-1.0.7.tar.bz2) = 18c4762b8c94b519ee2ca6c3171cc2f85e6b2421
+RMD160 (bitmap-1.0.7.tar.bz2) = 2b6bb14311b35502bb188ceb86f10ff2b205dd73
+Size (bitmap-1.0.7.tar.bz2) = 169437 bytes
