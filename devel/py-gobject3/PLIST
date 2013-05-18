@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/04 14:54:34 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/18 22:59:46 prlw1 Exp $
 include/pygobject-3.0/pygobject.h
 lib/libpyglib-gi-2.0-python${PYVERSSUFFIX}.la
 lib/pkgconfig/pygobject-3.0.pc
@@ -39,6 +39,9 @@ ${PYSITELIB}/gi/overrides/GIMarshallingTests.pyo
 ${PYSITELIB}/gi/overrides/GLib.py
 ${PYSITELIB}/gi/overrides/GLib.pyc
 ${PYSITELIB}/gi/overrides/GLib.pyo
+${PYSITELIB}/gi/overrides/GObject.py
+${PYSITELIB}/gi/overrides/GObject.pyc
+${PYSITELIB}/gi/overrides/GObject.pyo
 ${PYSITELIB}/gi/overrides/Gdk.py
 ${PYSITELIB}/gi/overrides/Gdk.pyc
 ${PYSITELIB}/gi/overrides/Gdk.pyo
@@ -67,3 +70,12 @@ ${PYSITELIB}/gi/types.py
 ${PYSITELIB}/gi/types.pyc
 ${PYSITELIB}/gi/types.pyo
 ${PYSITELIB}/pygobject-${PKGVERSION}-py${PYVERSSUFFIX}-${PLATFORM}.egg-info
+${PYSITELIB}/pygtkcompat/__init__.py
+${PYSITELIB}/pygtkcompat/__init__.pyc
+${PYSITELIB}/pygtkcompat/__init__.pyo
+${PYSITELIB}/pygtkcompat/generictreemodel.py
+${PYSITELIB}/pygtkcompat/generictreemodel.pyc
+${PYSITELIB}/pygtkcompat/generictreemodel.pyo
+${PYSITELIB}/pygtkcompat/pygtkcompat.py
+${PYSITELIB}/pygtkcompat/pygtkcompat.pyc
+${PYSITELIB}/pygtkcompat/pygtkcompat.pyo
