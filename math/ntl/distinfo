@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/01/02 23:42:28 dholland Exp $
+$NetBSD: distinfo,v 1.8 2013/05/18 18:32:19 agc Exp $
 
-SHA1 (ntl-5.5.2.tar.gz) = b45e3858f7f351afeb7fbb831b256befc4892b06
-RMD160 (ntl-5.5.2.tar.gz) = 3ba508219276b3922ec6def391100a23b79f6193
-Size (ntl-5.5.2.tar.gz) = 707247 bytes
-SHA1 (patch-aa) = e2900601cf350c8d93f7aa77969b3caca164c8fa
+SHA1 (ntl-6.0.0.tar.gz) = ee71b1c6a94f34b8a3c226502a0a0c6c2d1bc3f9
+RMD160 (ntl-6.0.0.tar.gz) = 2be966b4f2ecb7cd957ca42b41836459b9a29bd9
+Size (ntl-6.0.0.tar.gz) = 714741 bytes
+SHA1 (patch-aa) = 4f07d991930fa8bac5cf586693cce0b3e8679527
 SHA1 (patch-ab) = b91b052c88ea49a4138723259a312c43148737cc
 SHA1 (patch-ac) = 99c32692cd27ea63e966c3fe1df0b8a6373f5018
