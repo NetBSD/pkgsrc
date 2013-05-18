@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
+$NetBSD: patch-aa,v 1.8 2013/05/18 18:32:19 agc Exp $
 
 - configure for pkgsrc
 - libtoolize
 
---- makefile.orig	2009-08-14 12:53:13.000000000 +0000
-+++ makefile
+--- makefile.orig	2013-02-15 06:44:27.000000000 -0800
++++ makefile	2013-05-07 10:56:46.000000000 -0700
 @@ -7,7 +7,7 @@
  ###############################################################
  
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  # A C or C++ compiler, e. g., gcc, cc, xlc.
  # There are a few components written in C which may be compiled
  # under C++, but C compilers tend to generate slightly better code.
-@@ -15,11 +15,11 @@ CC=gcc
+@@ -15,11 +15,11 @@
  # compatible code.
  
  
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  # Flags for the C compiler
  # Some useful flags:
  #   -O2   --  recommended level of optimization
-@@ -32,7 +32,7 @@ CFLAGS=-O2
+@@ -32,7 +32,7 @@
  
  
  
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  # Flags for the C++ compiler (usually the same as CFLAGS)
  # Some useful flags:
  #   -+  -- needed with xlC to make it treat .c files as C++ files
-@@ -41,16 +41,16 @@ CXXFLAGS=$(CFLAGS)
+@@ -41,16 +41,16 @@
  # The defaults should almost always be OK.
  
  
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  # arguments for linker for C programs
  
  LDFLAGS_CXX=$(LDFLAGS)
-@@ -62,15 +62,15 @@ LDLIBS=-lm
+@@ -62,15 +62,15 @@
  LDLIBS_CXX=$(LDLIBS)
  # libraries for linking C++ programs
  
@@ -78,7 +78,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  LIBDIR=$(PREFIX)/lib
  INCLUDEDIR=$(PREFIX)/include
  DOCDIR=$(PREFIX)/share/doc
-@@ -92,17 +92,17 @@ DOCDIR=$(PREFIX)/share/doc
+@@ -92,17 +92,17 @@
  ###############################################################
  
  
@@ -93,8 +93,8 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
 +GMP_LIBDIR= ${GMP_PREFIX}/lib
  # directory containing libgmp.a if using GMP 
  
--GMP_OPT_INCDIR=# -I$(GMP_INCDIR) # GMP
--GMP_OPT_LIBDIR=# -L$(GMP_LIBDIR) # GMP
+-GMP_OPT_INCDIR=# -I$(GMP_INCDIR) # GMPI
+-GMP_OPT_LIBDIR=# -L$(GMP_LIBDIR) # GMPL
 -GMP_OPT_LIB=# -lgmp # GMP
 +GMP_OPT_INCDIR= -I$(GMP_INCDIR) # GMP
 +GMP_OPT_LIBDIR= -Wl,-R$(GMP_LIBDIR) -L$(GMP_LIBDIR) # GMP
@@ -102,7 +102,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  # uncomment these if using GMP
  
  
-@@ -116,7 +116,7 @@ GMP_OPT_LIB=# -lgmp # GMP
+@@ -116,7 +116,7 @@
  #
  ###############################################################
  
@@ -111,7 +111,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  
  GF2X_INCDIR=$(GF2X_PREFIX)/include
  # directory containing gf2x.h if using gf2x
-@@ -125,7 +125,7 @@ GF2X_LIBDIR=$(GF2X_PREFIX)/lib
+@@ -125,7 +125,7 @@
  # directory containing libgf2x.a
  
  GF2X_OPT_INCDIR=# -I$(GF2X_INCDIR) # GF2X
@@ -120,7 +120,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  GF2X_OPT_LIB=# -lgf2x # GF2X
  # uncomment these if using gf2x
  
-@@ -179,7 +179,7 @@ OBJ=$(O19)
+@@ -179,7 +179,7 @@
  S01=FFT.c FacVec.c GF2.c GF2E.c GF2EX.c GF2EXFactoring.c GF2X.c GF2X1.c
  S02=$(S01) GF2XFactoring.c GF2XVec.c HNF.c ctools.c LLL.c LLL_FP.c LLL_QP.c
  S03=$(S02) LLL_RR.c LLL_XD.c RR.c WordVector.c ZZ.c ZZVec.c ZZX.c ZZX1.c
@@ -129,18 +129,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  S05=$(S04) ZZ_pEXFactoring.c ZZ_pX.c ZZ_pX1.c ZZ_pXCharPoly.c
  S06=$(S05) ZZ_pXFactoring.c fileio.c lip.c lzz_p.c lzz_pE.c lzz_pEX.c
  S07=$(S06) lzz_pEXFactoring.c lzz_pX.c lzz_pX1.c
-@@ -194,8 +194,8 @@ S15=$(S14) vec_long.c vec_lzz_p.c vec_lz
- S16=$(S15) vec_vec_GF2.c vec_vec_GF2E.c vec_vec_RR.c vec_vec_ZZ.c
- S17=$(S16) vec_vec_ZZ_p.c vec_vec_ZZ_pE.c vec_vec_long.c vec_vec_lzz_p.c
- S18=$(S17) vec_vec_lzz_pE.c vec_xdouble.c xdouble.c
--S19=$(S18) G_LLL_FP.c G_LLL_QP.c G_LLL_XD.c G_LLL_RR.c 
--S20=$(S19) vec_ulong.c vec_vec_ulong.c 
-+S19=$(S18) G_LLL_FP.c G_LLL_QP.c G_LLL_XD.c G_LLL_RR.c
-+S20=$(S19) vec_ulong.c vec_vec_ulong.c
- 
- SRC = $(S20)
- 
-@@ -234,9 +234,9 @@ INCL=$(IN18)
+@@ -233,9 +233,9 @@
  
  # test data
  
@@ -153,7 +142,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  TD4=$(TD3) CharPolyTestOut QuadTestIn QuadTestOut
  
  TD = $(TD4)
-@@ -314,11 +314,11 @@ SFILES=$(SFI3)
+@@ -313,11 +313,11 @@
  NTL_INCLUDE = -I../include -I.
  # NTL needs this to find its include files
  
@@ -169,7 +158,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  
  
  
-@@ -332,7 +332,7 @@ all:
+@@ -331,7 +331,7 @@
  	make setup2
  	make setup3
  	make setup4
@@ -178,7 +167,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  	touch all
  
  
-@@ -340,7 +340,7 @@ all:
+@@ -339,7 +339,7 @@
  
  setup1:
  	$(COMPILE) MakeDescAux.c
@@ -187,7 +176,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  	./MakeDesc
  	mv mach_desc.h ../include/NTL/mach_desc.h
  
-@@ -367,10 +367,16 @@ setup4:
+@@ -366,10 +366,16 @@
  	sh Wizard $(WIZARD)
  
  
@@ -208,7 +197,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  
  LCOMP= #LSTAT
  # LCOMP=$(LIBTOOL) --mode=compile #LSHAR
-@@ -391,7 +397,7 @@ GetTime.o: GetTime.c 
+@@ -390,7 +396,7 @@
  	$(LCOMP) $(COMPILE_CXX) $(GF2X_OPT_INCDIR) $<
  
  .c: 
@@ -217,7 +206,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  # 	$(LIBTOOL) --mode=link $(LINK_CXX) -o $@ $< libntl.la #LSHAR
  
  #################################################################
-@@ -425,23 +431,29 @@ check:
+@@ -424,23 +430,29 @@
  
  
  install:
@@ -264,7 +253,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  
  uninstall:
  	rm -f $(LIBDIR)/libntl.a #LSTAT
-@@ -461,7 +473,7 @@ uninstall:
+@@ -460,7 +472,7 @@
  #################################################################
  
  clobber:	
@@ -273,7 +262,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  	rm -f lip_gmp_aux_impl.h ../include/NTL/gmp_aux.h
  	sh RemoveProg $(PROGS) MakeDesc TestGetTime gen_lip_gmp_aux gen_gmp_aux
  	rm -f *.o
-@@ -472,7 +484,7 @@ clobber:	
+@@ -471,7 +483,7 @@
  
  clean:
  	sh RemoveProg MakeDesc TestGetTime gen_lip_gmp_aux gen_gmp_aux
@@ -282,7 +271,7 @@ $NetBSD: patch-aa,v 1.7 2012/01/02 23:42:28 dholland Exp $
  	rm -rf small
  # 	- $(LIBTOOL) --mode=clean rm -f libntl.la *.lo #LSHAR
  
-@@ -522,22 +534,25 @@ WO3 = $(WO2) GF2.o WordVector.o vec_GF2.
+@@ -521,22 +533,25 @@
  WOBJ = $(WO3)
  
  # wntl.a: LCOMP= #LSHAR
