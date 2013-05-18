@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1691 2013/05/18 20:51:04 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.1692 2013/05/18 21:46:36 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2602,3 +2602,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/HElib version 20130501 [agc 2013-05-18]
 	Updated net/lftp to 4.4.6 [adam 2013-05-18]
 	Updated print/epstool to 3.08 [shattered 2013-05-18]
+	Updated devel/atk to 2.8.0 [prlw1 2013-05-18]
