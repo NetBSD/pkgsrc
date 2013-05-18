@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2009/06/08 10:16:22 hasso Exp $
+$NetBSD: patch-ac,v 1.5 2013/05/18 20:23:03 adam Exp $
 
 The configuration files are handled by CONF_FILES.
 
 --- Makefile.in.orig	2009-05-15 09:25:53 +0300
 +++ Makefile.in	2009-06-08 12:23:32 +0300
-@@ -1138,7 +1138,7 @@ info: info-recursive
+@@ -1871,7 +1871,7 @@ info: info-recursive
  
  info-am:
  

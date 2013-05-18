@@ -1,24 +1,22 @@
-$NetBSD: patch-aa,v 1.17 2011/07/27 04:57:47 pettai Exp $
+$NetBSD: patch-aa,v 1.18 2013/05/18 20:23:03 adam Exp $
 
 Do not install by default Perl scripts; they are installed via
 ${INSTALL_SCRIPT} if the user set the "perl" option.
 
 Do not remove the *.la files.
 
-$NetBSD: patch-aa,v 1.17 2011/07/27 04:57:47 pettai Exp $
-
---- src/Makefile.in.orig	2011-06-28 09:31:02.000000000 +0000
+--- src/Makefile.in.orig	2013-05-17 10:02:35.000000000 +0000
 +++ src/Makefile.in
-@@ -1265,7 +1265,7 @@ top_builddir = @top_builddir@
+@@ -1567,7 +1567,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  pkgverlibdir = $(pkglibdir)/$(VERSION)
  bin_SCRIPTS = lftpget
--pkgdata_SCRIPTS = import-ncftp import-netscape verify-file convert-mozilla-cookies
-+pkgdata_SCRIPTS = import-ncftp import-netscape
+-pkgdata_SCRIPTS = import-ncftp import-netscape verify-file convert-mozilla-cookies xdg-move
++pkgdata_SCRIPTS = import-ncftp import-netscape xdg-move
  noinst_SCRIPTS = ftpget
  EXTRA_DIST = $(pkgdata_SCRIPTS) $(bin_SCRIPTS) $(noinst_SCRIPTS)
  lftp_SOURCES = lftp.cc complete.h complete.cc lftp_rl.c lftp_rl.h attach.cc attach.h
-@@ -1865,7 +1865,7 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRA
+@@ -2201,7 +2201,7 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRA
  install-binPROGRAMS: install-libLTLIBRARIES
  
  installdirs:
@@ -27,7 +25,7 @@ $NetBSD: patch-aa,v 1.17 2011/07/27 04:57:47 pettai Exp $
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
-@@ -1995,6 +1995,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -2337,6 +2337,9 @@ uninstall-am: uninstall-binPROGRAMS unin
  
  # libtool does not strip modules, do it here.
  install-data-hook:
