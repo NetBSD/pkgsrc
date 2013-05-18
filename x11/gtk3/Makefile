@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2013/02/16 11:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2013/05/18 22:44:43 prlw1 Exp $
 
-DISTNAME=	gtk+-3.6.4
+DISTNAME=	gtk+-3.8.2
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
-PKGREVISION=	3
-CATEGORIES=	x11
+CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/${PKGVERSION_NOREV:R}/ \
 		${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,6 +26,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--disable-papi
 # XXX for now, to avoid conflict
 CONFIGURE_ARGS+=	--enable-gtk2-dependency
+# Avoid regeneration of Makefile.in after configure.ac patch
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 DEPENDS+=		gtk2+-[0-9]*:../../x11/gtk2
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 TEST_TARGET=		check
@@ -73,12 +74,12 @@ _BUILDING_GTK3=	yes
 .include "modules.mk"
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
-BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
+BUILDLINK_API_DEPENDS.atk+=	atk>=2.7.5
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.33.1
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35.3
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.26.0
+BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.27.1
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.32
@@ -88,7 +89,7 @@ BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.32
 
 .include "../../devel/glib2/schemas.mk"
 
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.29.4nb2
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.32.4
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.0
