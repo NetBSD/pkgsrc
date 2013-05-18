@@ -184,6 +184,7 @@ freetype		Enable freetype support.
 fribidi			Enable BIDI support using fribidi.
 ftp			Enable File Transfer Protocol (FTP) support.
 fts			Enable full-text searching.
+fuse			Enable Filesystem in Userspace support.
 gamin			Enable Gamin file and directory monitoring system support.
 gcc-ada			Build the gcc Ada frontend and libraries.
 gcc-c++			Build the gcc C++ frontend and libraries.
@@ -255,6 +256,7 @@ imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 imlib2-amd64		Enable amd64 speedups.
 inet6			Enable support for IPv6.
+inotify			Enable libinotify support.
 inspircd-remoteinet6	Enable remote includes over IPv6.
 inspircd-sqlauth	Enable connections to be tied into a database table.
 inspircd-sqllog		Enable logging of network-wide data for your network into a database.
@@ -480,6 +482,7 @@ octave			Enable Octave support.
 odbc			Enable ODBC support.
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 ogg			Enable Ogg support.
+oggz			Enable Oggz support.
 oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 onscripter-pda		Enable PDA_AUTOSIZE option to fit window size to screen
