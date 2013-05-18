@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1675 2013/05/18 02:03:41 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1676 2013/05/18 03:40:25 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2586,3 +2586,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg to 1.12.4 [richard 2013-05-17]
 	Updated comms/asterisk18 to 1.8.22.0 [jnemeth 2013-05-18]
 	Updated textproc/saxon to 9.5.0.1j [rodent 2013-05-18]
+	Updated comms/asterisk to 11.4.0 [jnemeth 2013-05-18]
