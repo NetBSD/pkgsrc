@@ -1,4 +1,4 @@
-/* $NetBSD: s-netbsd.h,v 1.3 1999/09/20 21:43:34 kim Exp $ */
+/* $NetBSD: s-netbsd.h,v 1.4 2013/05/18 11:15:00 mlelstv Exp $ */
 
 /*
  *      This version is for FreeBSD 2.1
@@ -22,13 +22,13 @@
 #define HAVE_UNISTD_H
 #define HAVE_FCNTL_H
 
-#define HAVE_TERMIOS
+#define HAVE_TERMIOS_H
 
 /*
  *	Define if your system has system V like ioctls
  */
 
-#undef	HAVE_TERMIO			/* */
+#undef	HAVE_TERMIO_H			/* */
 
 /*
  *	Define to use terminfo database.
