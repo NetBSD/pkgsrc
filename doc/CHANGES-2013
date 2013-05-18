@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1697 2013/05/18 23:02:18 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.1698 2013/05/18 23:05:54 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2608,3 +2608,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gdk-pixbuf2 to 2.28.1 [prlw1 2013-05-18]
 	Updated x11/gtk3 to 3.8.2 [prlw1 2013-05-18]
 	Updated devel/py-gobject3 to 3.8.2 [prlw1 2013-05-18]
+	Updated devel/py-at-spi2 to 2.8.0 [prlw1 2013-05-18]
