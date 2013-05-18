@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/07/25 21:38:34 pettai Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/05/18 20:23:03 adam Exp $
 bin/lftp
 bin/lftpget
 @comment belongs to libiconv: lib/charset.alias
@@ -18,8 +18,11 @@ man/man1/lftp.1
 man/man1/lftpget.1
 man/man5/lftp.conf.5
 share/examples/lftp/lftp.conf.default
+${PLIST.perl}share/lftp/convert-mozilla-cookies
 share/lftp/import-ncftp
 share/lftp/import-netscape
+${PLIST.perl}share/lftp/verify-file
+share/lftp/xdg-move
 share/locale/cs/LC_MESSAGES/lftp.mo
 share/locale/de/LC_MESSAGES/lftp.mo
 share/locale/es/LC_MESSAGES/lftp.mo
