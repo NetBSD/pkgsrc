@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
+$NetBSD: patch-configure.in,v 1.8 2013/05/18 07:39:36 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.in.orig	2013-05-14 02:23:27.000000000 +0000
+--- configure.in.orig	2013-05-14 15:26:08.000000000 +0000
 +++ configure.in
-@@ -1129,6 +1129,8 @@ main()
+@@ -1136,6 +1136,8 @@ main()
  		],
  [superux*], [	ac_cv_func_setitimer=no
  		],
@@ -14,7 +14,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  [	LIBS="-lm $LIBS"])
  AC_CHECK_LIB(crypt, crypt)
  AC_CHECK_LIB(dl, dlopen)	# Dynamic linking for SunOS/Solaris and SYSV
-@@ -1169,7 +1171,12 @@ AC_CHECK_HEADERS(limits.h sys/file.h sys
+@@ -1176,7 +1178,12 @@ AC_CHECK_HEADERS(limits.h sys/file.h sys
  		 syscall.h pwd.h grp.h a.out.h utime.h direct.h sys/resource.h \
  		 sys/mkdev.h sys/utime.h xti.h netinet/in_systm.h float.h ieeefp.h \
  		 ucontext.h intrinsics.h langinfo.h locale.h sys/sendfile.h time.h \
@@ -28,7 +28,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  
  AC_TYPE_SIZE_T
  RUBY_CHECK_SIZEOF(size_t, [int long void*], [], [@%:@include <sys/types.h>])
-@@ -1202,6 +1209,9 @@ AC_CHECK_TYPES([struct timeval], [], [],
+@@ -1209,6 +1216,9 @@ AC_CHECK_TYPES([struct timeval], [], [],
  
  AC_CHECK_TYPES([struct timespec], [], [], [@%:@ifdef HAVE_TIME_H
  @%:@include <time.h>
@@ -38,7 +38,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  @%:@endif])
  
  AC_CHECK_TYPES([struct timezone], [], [], [@%:@ifdef HAVE_TIME_H
-@@ -1794,7 +1804,7 @@ if test x"$enable_pthread" = xyes; then
+@@ -1801,7 +1811,7 @@ if test x"$enable_pthread" = xyes; then
  	[root], [],
  	[c_r],  [MAINLIBS="-pthread $MAINLIBS"],
  	        [AS_CASE(["$target_os"],
@@ -47,7 +47,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  		    [LIBS="-l$pthread_lib $LIBS"])])
      else
  	AC_MSG_WARN("Don't know how to find pthread library on your system -- thread support disabled")
-@@ -2025,7 +2035,9 @@ if test "$with_dln_a_out" != yes; then
+@@ -2032,7 +2042,9 @@ if test "$with_dln_a_out" != yes; then
  			rb_cv_dlopen=yes],
  	[interix*], [	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -57,7 +57,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  			rb_cv_dlopen=yes],
  	[freebsd*|dragonfly*], [
  			: ${LDSHARED='$(CC) -shared'}
-@@ -2036,7 +2048,7 @@ if test "$with_dln_a_out" != yes; then
+@@ -2043,7 +2055,7 @@ if test "$with_dln_a_out" != yes; then
  			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
  			fi
  			rb_cv_dlopen=yes],
@@ -66,16 +66,16 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-E"
  			fi
-@@ -2337,7 +2349,7 @@ AS_CASE("$enable_shared", [yes], [
+@@ -2344,7 +2356,7 @@ AS_CASE("$enable_shared", [yes], [
  	],
      [freebsd*|dragonfly*], [
  	SOLIBS='$(LIBS)'
 -	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)'
-+	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)\$(TEENY)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)$(TEENY)'
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -2353,7 +2365,7 @@ AS_CASE("$enable_shared", [yes], [
+@@ -2360,7 +2372,7 @@ AS_CASE("$enable_shared", [yes], [
  	   LIBRUBY_ALIASES=""
  	fi
  	],
@@ -84,7 +84,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
  	],
-@@ -2403,7 +2415,12 @@ AS_CASE("$enable_shared", [yes], [
+@@ -2410,7 +2422,12 @@ AS_CASE("$enable_shared", [yes], [
  	LIBRUBY_ALIASES='lib$(RUBY_BASE_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
  	],
      [interix*], [
@@ -98,7 +98,7 @@ $NetBSD: patch-configure.in,v 1.7 2013/05/16 16:13:59 taca Exp $
  	])
  ], [
    LIBRUBYARG_SHARED=
-@@ -2448,11 +2465,7 @@ if test "$install_doc" != no; then
+@@ -2455,11 +2472,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
