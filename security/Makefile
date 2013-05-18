@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2013/05/16 04:46:18 jnemeth Exp $
+# $NetBSD: Makefile,v 1.467 2013/05/18 18:37:27 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -7,6 +7,7 @@ SUBDIR+=	Bastille
 SUBDIR+=	CSP
 SUBDIR+=	CoolKey
 SUBDIR+=	EasyPG
+SUBDIR+=	HElib
 SUBDIR+=	KeePass
 SUBDIR+=	MyPasswordSafe
 SUBDIR+=	PAM
