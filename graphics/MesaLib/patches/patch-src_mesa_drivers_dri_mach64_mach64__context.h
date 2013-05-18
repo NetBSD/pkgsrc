@@ -1,4 +1,4 @@
-$NetBSD: patch-src_mesa_drivers_dri_mach64_mach64__context.h,v 1.1 2013/05/16 05:22:02 richard Exp $
+$NetBSD: patch-src_mesa_drivers_dri_mach64_mach64__context.h,v 1.2 2013/05/18 05:57:10 obache Exp $
 
 --- src/mesa/drivers/dri/mach64/mach64_context.h.orig	2011-10-15 00:43:58.000000000 +0000
 +++ src/mesa/drivers/dri/mach64/mach64_context.h
@@ -11,3 +11,13 @@ $NetBSD: patch-src_mesa_drivers_dri_mach64_mach64__context.h,v 1.1 2013/05/16 05
  #include "mach64_reg.h"
  
  #include "texmem.h"
+@@ -298,6 +298,9 @@ extern GLboolean mach64UnbindContext( __
+ #if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <machine/endian.h>
+ #define bswap_32 bswap32
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
++#include <sys/endian.h>
++#define bswap_32 bswap32
+ #else
+ #include <byteswap.h>
+ #endif
