@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1686 2013/05/18 13:46:45 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1687 2013/05/18 14:48:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2597,3 +2597,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/bitmap to 1.0.7 [wiz 2013-05-18]
 	Updated x11/libdrm to 2.4.45 [wiz 2013-05-18]
 	Updated sysutils/libpciaccess to 0.13.1nb2 [wiz 2013-05-18]
+	Updated devel/automake to 1.13.2 [wiz 2013-05-18]
