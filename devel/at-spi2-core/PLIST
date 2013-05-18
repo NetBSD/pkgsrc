@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/01/10 22:14:14 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/18 21:51:59 prlw1 Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
@@ -131,6 +131,7 @@ share/locale/sr@latin/LC_MESSAGES/at-spi2-core.mo
 share/locale/sv/LC_MESSAGES/at-spi2-core.mo
 share/locale/ta/LC_MESSAGES/at-spi2-core.mo
 share/locale/te/LC_MESSAGES/at-spi2-core.mo
+share/locale/tg/LC_MESSAGES/at-spi2-core.mo
 share/locale/tr/LC_MESSAGES/at-spi2-core.mo
 share/locale/ug/LC_MESSAGES/at-spi2-core.mo
 share/locale/uk/LC_MESSAGES/at-spi2-core.mo
