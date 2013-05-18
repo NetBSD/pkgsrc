@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.13 2013/04/18 16:55:22 jnemeth Exp $
+$NetBSD: patch-aq,v 1.14 2013/05/18 01:00:43 jnemeth Exp $
 
 --- configure.orig	2013-01-30 17:44:11.000000000 +0000
 +++ configure
@@ -167,15 +167,3 @@ $NetBSD: patch-aq,v 1.13 2013/04/18 16:55:22 jnemeth Exp $
   #include <ifaddrs.h>
  int
  main ()
-@@ -29253,10 +29395,10 @@ if test "x$ac_cv_file__sbin_launchd" = x
- 
- $as_echo "#define HAVE_SBIN_LAUNCHD 1" >>confdefs.h
- 
--fi
- 
-   PBX_LAUNCHD=1
- fi
-+fi
- 
- 
- PBX_GTK2=0

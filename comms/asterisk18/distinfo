@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.45 2013/04/18 16:55:22 jnemeth Exp $
+$NetBSD: distinfo,v 1.46 2013/05/18 01:00:43 jnemeth Exp $
 
-SHA1 (asterisk-1.8.21.0/asterisk-1.8.21.0.tar.gz) = aa1105e6c44ea2174b939da9e1ec942de2d1821a
-RMD160 (asterisk-1.8.21.0/asterisk-1.8.21.0.tar.gz) = b72fac9ddce36e96b204556a396699d5985cb885
-Size (asterisk-1.8.21.0/asterisk-1.8.21.0.tar.gz) = 25334905 bytes
-SHA1 (asterisk-1.8.21.0/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz) = 3aac6cf4a07cb2644b7b5369c618b07561619f9f
-RMD160 (asterisk-1.8.21.0/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz) = 5dc9696c54d2233cf74835fe7ccd2c1791f20041
-Size (asterisk-1.8.21.0/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz) = 4407925 bytes
+SHA1 (asterisk-1.8.22.0/asterisk-1.8.22.0.tar.gz) = fca7c971cb0d3621ee64069c4f83aebf10416327
+RMD160 (asterisk-1.8.22.0/asterisk-1.8.22.0.tar.gz) = c232e45463f1915e204e7762a19dceacdd96fb2f
+Size (asterisk-1.8.22.0/asterisk-1.8.22.0.tar.gz) = 25343979 bytes
+SHA1 (asterisk-1.8.22.0/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz) = 3aac6cf4a07cb2644b7b5369c618b07561619f9f
+RMD160 (asterisk-1.8.22.0/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz) = 5dc9696c54d2233cf74835fe7ccd2c1791f20041
+Size (asterisk-1.8.22.0/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz) = 4407925 bytes
 SHA1 (patch-aa) = 832f1c043b15198e0a286094dd0cc1a251bcfed0
 SHA1 (patch-af) = 19786616bb606c38f769ec85f2e4d118573659ab
 SHA1 (patch-ai) = e92edab5c1ff323478f41d0b0783102ed527fe39
@@ -15,7 +15,7 @@ SHA1 (patch-am) = 5f9cbf47ec1cb66758492a5ed1bf843006eae9b7
 SHA1 (patch-an) = 93a5df66fd6459fb76e9191dc3bf37b9ee5483b5
 SHA1 (patch-ao) = aa95464a8bd4a417f313541b465142d2e4c3ee47
 SHA1 (patch-ap) = 94a986e6e24c04ee8e95ea6809f826cb99c90c8a
-SHA1 (patch-aq) = 8da5ef9a64f6e18849f58826252f41fe876e89dc
+SHA1 (patch-aq) = 8e33599ff6d6b1192ab69533b65d6831ddf4ba1c
 SHA1 (patch-ar) = da8e614e68e476ce32c66fed5ee9dcb8c5f9a060
 SHA1 (patch-as) = b2e1aadf49f20506243ab40796f15aab12d95bad
 SHA1 (patch-at) = df318d7b492121ff6f766b0e6ea73415293e96f0
