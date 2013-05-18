@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1673 2013/05/17 16:53:10 richard Exp $
+$NetBSD: CHANGES-2013,v 1.1674 2013/05/18 01:00:54 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-wsfb to 0.4.0 [richard 2013-05-17]
 	Updated meta-pkgs/modular-xorg-drivers to 1.12 [richard 2013-05-17]
 	Updated meta-pkgs/modular-xorg to 1.12.4 [richard 2013-05-17]
+	Updated comms/asterisk18 to 1.8.22.0 [jnemeth 2013-05-18]
