@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/05/18 18:36:25 agc Exp $
+FHE/CModulus.h
+FHE/Ctxt.h
+FHE/DoubleCRT.h
+FHE/EncryptedArray.h
+FHE/FHE.h
+FHE/FHEContext.h
+FHE/IndexMap.h
+FHE/IndexSet.h
+FHE/NumbTh.h
+FHE/PAlgebra.h
+FHE/SingleCRT.h
+FHE/bluestein.h
+FHE/replicate.h
+FHE/timing.h
+lib/libfhe.a
