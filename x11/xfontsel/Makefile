@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/10/29 05:07:11 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/05/18 13:34:07 wiz Exp $
 
-DISTNAME=		xfontsel-1.0.4
+DISTNAME=		xfontsel-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
