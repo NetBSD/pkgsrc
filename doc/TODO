@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12147 2013/05/17 16:53:10 richard Exp $
+$NetBSD: TODO,v 1.12148 2013/05/18 12:21:11 rodent Exp $
 
 Suggested new packages
 ======================
@@ -59,11 +59,6 @@ Suggested new packages
 	choosefont
 	http://choosefont.sourceforge.net/
 	Utility for browsing, previewing and selecting a X11 font.
-
-	logrider
-	http://ilya-evseev.narod.ru/posix/logrider/
-	Scan system logs for alert/hacking signatures based on set
-	of static filters.
 
 	ardour
 	http://ardour.org/
@@ -255,14 +250,6 @@ Suggested new packages
 	http://tkimg.sourceforge.net/
 	Add support for several image formats to Tk
 
-	tktable [pkg/38027]
-	http://tktable.sourceforge.net/
-	Grid/table/spreadsheet like widget for Tk
-
-	tDOM [pkg/38028]
-	http://www.tdom.org/
-	C based XML extension for Tcl
-
 	xine-plugin [pkg/38159]
 	http://xinehq.de/
 	Plugin for www/firefox for using multimedia/xine-lib
@@ -350,7 +337,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Sigil-0.7.2 [needs qt5]
 	o SmartEiffel-2.3
 	o TiffIO-130e
-	o Transmission-gui-2.77
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-7.5.2
