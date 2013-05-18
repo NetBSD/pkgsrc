@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/03/03 16:53:42 yyamano Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/18 05:37:03 markd Exp $
 #
 
 DISTNAME=	apache-maven-3.0.5
@@ -21,6 +21,7 @@ SUBST_FILES.maven=	bin/mvn
 SUBST_STAGE.maven=	pre-configure
 SUBST_SED.maven=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 SUBST_SED.maven+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.maven+=	-e 's,@SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 
 INSTALLATION_DIRS=	bin etc/maven lib/java/maven lib/java/maven/boot
 INSTALLATION_DIRS+=	share/doc/java/maven share/examples/maven
