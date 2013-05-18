@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/10/26 11:36:34 prlw1 Exp $
+$NetBSD: distinfo,v 1.4 2013/05/18 23:12:39 prlw1 Exp $
 
-SHA1 (gcalctool-6.6.1.tar.xz) = 2aa52bfee77068b01cf5afaa239c6de67fcbe49d
-RMD160 (gcalctool-6.6.1.tar.xz) = c28adcee28095806522188a20abe1cdf4c729754
-Size (gcalctool-6.6.1.tar.xz) = 967848 bytes
+SHA1 (gcalctool-6.6.2.tar.xz) = a8881f2a8090dfead317e344a9bd92a0ff301969
+RMD160 (gcalctool-6.6.2.tar.xz) = 44c8392e27a078c2e4dff35067baff18569c263b
+Size (gcalctool-6.6.2.tar.xz) = 968148 bytes
 SHA1 (patch-data_buttons-advanced.ui) = f7ce6b1dd5dde6f8fa2a3b88bf68ce6312a2ad9e
 SHA1 (patch-data_buttons-basic.ui) = c2631f72858f607e2038cf84e7b9626b68d8cd9a
 SHA1 (patch-data_buttons-financial.ui) = 8939389bd39d6cc762b2836e9a5d2e91e2248d52
