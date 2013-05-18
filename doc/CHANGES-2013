@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1688 2013/05/18 18:33:29 agc Exp $
+$NetBSD: CHANGES-2013,v 1.1689 2013/05/18 18:38:25 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/libpciaccess to 0.13.1nb2 [wiz 2013-05-18]
 	Updated devel/automake to 1.13.2 [wiz 2013-05-18]
 	Updated math/ntl to 6.0.0 [agc 2013-05-18]
+	Added security/HElib version 20130501 [agc 2013-05-18]
