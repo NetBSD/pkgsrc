@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/29 05:06:54 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2013/05/18 13:33:05 wiz Exp $
 
-DISTNAME=	transset-1.0.0
+DISTNAME=	transset-1.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 

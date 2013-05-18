@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/06/05 06:45:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/05/18 13:33:05 wiz Exp $
 
-SHA1 (transset-1.0.0.tar.gz) = b168e0320901c2b0fe401b8be43a0f84e8fa148f
-RMD160 (transset-1.0.0.tar.gz) = bbf4635f0d05189980a5cdd5a9dedbddf6c176fc
-Size (transset-1.0.0.tar.gz) = 143324 bytes
+SHA1 (transset-1.0.1.tar.gz) = 3cb57c299c26ee5bd3249ce54d11a1cbb9c9219e
+RMD160 (transset-1.0.1.tar.gz) = d0d226ddc8491020b7a664b719645d80ac460499
+Size (transset-1.0.1.tar.gz) = 151377 bytes
