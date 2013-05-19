@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2013/01/22 10:42:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/19 17:45:04 wiz Exp $
 
-DISTNAME=	cd-discid-1.3.1
+DISTNAME=	cd-discid-1.4
 CATEGORIES=	audio
 MASTER_SITES=	http://linukz.org/download/
 
@@ -14,9 +14,6 @@ NOT_FOR_PLATFORM=	Interix-*-*
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-build:
-	cd ${WRKSRC} && ${CC} -O -o cd-discid cd-discid.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cd-discid ${DESTDIR}${PREFIX}/bin
