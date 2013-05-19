@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1708 2013/05/19 10:01:18 asau Exp $
+$NetBSD: CHANGES-2013,v 1.1709 2013/05/19 11:08:09 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/xulrunner to 21.0 [ryoon 2013-05-19]
 	Updated www/firefox to 21.0 [ryoon 2013-05-19]
 	Updated math/fricas to 1.2.0 [asau 2013-05-19]
+	Updated sysutils/dmidecode to 2.12 [shattered 2013-05-19]
