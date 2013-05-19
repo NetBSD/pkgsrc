@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2013/05/09 14:07:08 joerg Exp $
+$NetBSD: distinfo,v 1.86 2013/05/19 09:10:10 adam Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.4.tar.gz) = f5880f11c139d7d8d01ecb8d874535f7d9553198
 RMD160 (qt-everywhere-opensource-src-4.8.4.tar.gz) = 3c09a3b1411385d0917225f01ac2ff3a2ce83fda
@@ -75,5 +75,6 @@ SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
 SHA1 (patch-src_corelib_tools_qiterator.h) = 40c4807719e6555a40f6a738330ad5037d6c80ad
 SHA1 (patch-src_declarative_util_qdeclarativefontloader.cpp) = 0bb76eac102a4325cadb5bcb4e7a1ac85a3d099f
+SHA1 (patch-src_gui_kernel_qt_cocoa_helpers_mac_p.h) = 84d356628d764797524fe72139ea6829a33524ea
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2b282caa298508dc3e9dd8566
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
