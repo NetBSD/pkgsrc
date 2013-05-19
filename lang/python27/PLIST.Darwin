@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1.1.1 2011/02/22 08:51:59 obache Exp $
-lib/libpython${PY_VER_SUFFIX}.dylib
+@comment $NetBSD: PLIST.Darwin,v 1.2 2013/05/19 20:37:14 adam Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/ColorPicker.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/MacOS.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/Nav.so
