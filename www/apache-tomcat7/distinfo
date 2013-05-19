@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/04/25 14:30:35 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/05/19 13:05:46 ryoon Exp $
 
-SHA1 (apache-tomcat-7.0.39.tar.gz) = a4dbca1ffa8f67cf9c985426ee019973638f4666
-RMD160 (apache-tomcat-7.0.39.tar.gz) = 421f8d923c4d3ef17691cdf7057ef91cbbd5d8e1
-Size (apache-tomcat-7.0.39.tar.gz) = 7831716 bytes
+SHA1 (apache-tomcat-7.0.40.tar.gz) = 2fe185842076458da57b54f0a2cc3f5b41ae007d
+RMD160 (apache-tomcat-7.0.40.tar.gz) = 7b16c2d71c3f09b0e941042c50377fbdfcaabd03
+Size (apache-tomcat-7.0.40.tar.gz) = 7843733 bytes
