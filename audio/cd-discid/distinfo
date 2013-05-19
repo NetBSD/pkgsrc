@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/01/22 10:42:06 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2013/05/19 17:45:04 wiz Exp $
 
-SHA1 (cd-discid-1.3.1.tar.gz) = 32580d3fa446c59d6519c700e1180efb7d5fe23e
-RMD160 (cd-discid-1.3.1.tar.gz) = 1b4fc78212f3ce004edf1337b9e43c210b555a94
-Size (cd-discid-1.3.1.tar.gz) = 12204 bytes
-SHA1 (patch-aa) = d5270a000e5db904fcf41084ac3362eeba3752a2
+SHA1 (cd-discid-1.4.tar.gz) = 9baf059ece993beabbe9c5fb97ceffd47d0070da
+RMD160 (cd-discid-1.4.tar.gz) = a63dabd35ca0b1f8114eeca78f79ea2f6b52cd6e
+Size (cd-discid-1.4.tar.gz) = 12435 bytes
+SHA1 (patch-aa) = 4cf2c11f55e5d8bc717c50cc1819beaa5590e38d
 SHA1 (patch-ab) = 3edf0e6373307a1d3a115f41fac39eaee1fc3aa2
