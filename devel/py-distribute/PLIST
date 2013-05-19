@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/20 16:11:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/19 17:37:40 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -28,6 +28,7 @@ ${PYSITELIB}/setuptools/archive_util.pyc
 ${PYSITELIB}/setuptools/archive_util.pyo
 ${PYSITELIB}/setuptools/cli-32.exe
 ${PYSITELIB}/setuptools/cli-64.exe
+${PYSITELIB}/setuptools/cli-arm-32.exe
 ${PYSITELIB}/setuptools/cli.exe
 ${PYSITELIB}/setuptools/command/__init__.py
 ${PYSITELIB}/setuptools/command/__init__.pyc
@@ -71,6 +72,7 @@ ${PYSITELIB}/setuptools/command/install_lib.pyo
 ${PYSITELIB}/setuptools/command/install_scripts.py
 ${PYSITELIB}/setuptools/command/install_scripts.pyc
 ${PYSITELIB}/setuptools/command/install_scripts.pyo
+${PYSITELIB}/setuptools/command/launcher manifest.xml
 ${PYSITELIB}/setuptools/command/register.py
 ${PYSITELIB}/setuptools/command/register.pyc
 ${PYSITELIB}/setuptools/command/register.pyo
@@ -106,6 +108,7 @@ ${PYSITELIB}/setuptools/extension.pyc
 ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/gui-32.exe
 ${PYSITELIB}/setuptools/gui-64.exe
+${PYSITELIB}/setuptools/gui-arm-32.exe
 ${PYSITELIB}/setuptools/gui.exe
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
