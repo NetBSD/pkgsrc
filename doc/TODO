@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12167 2013/05/19 17:41:37 wiz Exp $
+$NetBSD: TODO,v 1.12168 2013/05/19 17:45:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o calligra-2.4.3 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
-	o cd-discid-1.4
 	o cddbd-1.5.2
 	o cdialog-1.2.20121230
 	o cdk-5.0.20120323

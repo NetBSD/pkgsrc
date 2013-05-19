@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1717 2013/05/19 17:41:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1718 2013/05/19 17:45:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2628,3 +2628,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-distribute to 0.6.40 [wiz 2013-05-19]
 	Updated devel/mercurial to 2.6.1 [wiz 2013-05-19]
 	Updated devel/py-cython to 0.19.1 [wiz 2013-05-19]
+	Updated audio/cd-discid to 1.4 [wiz 2013-05-19]
