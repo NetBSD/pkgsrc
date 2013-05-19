@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/08/16 08:29:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/05/19 17:50:31 wiz Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -50,6 +50,7 @@ share/slib/dynwind.scm
 share/slib/elk.init
 share/slib/eval.scm
 share/slib/factor.scm
+share/slib/fluid-let.scm
 share/slib/fluidlet.scm
 share/slib/format.scm
 share/slib/formatst.scm
@@ -59,6 +60,7 @@ share/slib/getopt.scm
 share/slib/getparam.scm
 share/slib/glob.scm
 share/slib/grapheps.scm
+share/slib/guile-2.init
 share/slib/guile.init
 share/slib/hash.scm
 share/slib/hashtab.scm
@@ -177,7 +179,7 @@ share/slib/values.scm
 share/slib/vet.scm
 share/slib/vscm.init
 share/slib/withfile.scm
-share/slib/wttest.scm
+share/slib/wttree-test.scm
 share/slib/wttree.scm
 share/slib/xml-parse.scm
 share/slib/yasyn.scm
