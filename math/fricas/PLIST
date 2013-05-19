@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/12/08 15:26:57 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/05/19 10:01:00 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -628,6 +628,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAGCDOC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAGCDT2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAGCDT3.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAGMA.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAMA.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAPHACK1.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAPHACK2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MAPHACK3.${FASL}
@@ -852,6 +853,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PICOERCE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PID.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PINTERP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PINTERPA.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PIT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PLEQN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PLOT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PLOT1.${FASL}
