@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1720 2013/05/19 18:51:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1721 2013/05/19 18:52:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/cd-discid to 1.4 [wiz 2013-05-19]
 	Updated devel/slib to 3.2.4 [wiz 2013-05-19]
 	Updated devel/glibmm to 2.36.0 [wiz 2013-05-19]
+	Updated textproc/py-lxml to 3.2.1 [wiz 2013-05-19]
