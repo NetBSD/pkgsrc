@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2013/05/19 08:50:24 ryoon Exp $
+# $NetBSD: options.mk,v 1.12 2013/05/19 12:31:58 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 .include "../../sysutils/libnotify/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
 CONFIGURE_ARGS+=	--enable-libnotify
-CONFIGURE_ARGS+=	--enable-extensions
+CONFIGURE_ARGS+=	--enable-extensions=gnomevfs
 PLIST.gnome=		yes
 .else
 CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
