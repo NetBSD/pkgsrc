@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12169 2013/05/19 18:51:25 wiz Exp $
+$NetBSD: TODO,v 1.12170 2013/05/19 18:52:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -988,7 +988,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-libxml2-2.9.1
-	o py-lxml-3.2.1
 	o py-moin-1.9.7
 	o py-simplejson-3.3.0
 	o py-sybase-0.37
