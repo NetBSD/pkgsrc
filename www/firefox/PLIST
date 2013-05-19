@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2013/05/19 08:50:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.64 2013/05/19 12:31:58 ryoon Exp $
 bin/firefox
 include/firefox/AbstractMediaDecoder.h
 include/firefox/AccEvent.h
@@ -4405,7 +4405,9 @@ lib/firefox/components/contentSecurityPolicy.js
 lib/firefox/components/crypto-SDR.js
 lib/firefox/components/interfaces.xpt
 lib/firefox/components/jsconsole-clhandler.js
+${PLIST.gnome}lib/firefox/components/libdbusservice.so
 lib/firefox/components/libmozgnome.so
+${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/messageWakeupService.js
 lib/firefox/components/nsBadCertHandler.js
 lib/firefox/components/nsBlocklistService.js
