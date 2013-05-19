@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1704 2013/05/19 07:36:57 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1705 2013/05/19 08:15:50 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -1631,7 +1631,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/shared-desktop-ontologies to 0.10.0 [markd 2013-04-03]
 	Updated mail/akonadi to 1.9.1 [markd 2013-04-03]
 	Updated textproc/soprano to 2.9.0 [markd 2013-04-03]
-
 	Updated archivers/ark to 4.10.2 [markd 2013-04-03]
 	Updated devel/kdesdk4 to 4.10.2 [markd 2013-04-03]
 	Updated editors/kate to 4.10.2 [markd 2013-04-03]
@@ -2615,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/viewvc to 1.1.20 [ryoon 2013-05-19]
 	Updated www/ikiwiki to 3.20130518 [schmonz 2013-05-19]
 	Updated emulators/atari800 to 3.0.0 [adam 2013-05-19]
+	Updated time/remind to 3.1.13 [shattered 2013-05-19]
