@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.server,v 1.11 2013/04/25 20:41:33 shattered Exp $
+@comment $NetBSD: PLIST.server,v 1.12 2013/05/19 11:00:03 shattered Exp $
 lib/libbaccats.la
 lib/libbaccats-${BACULA_DB}.la
 lib/libbacsql.la
@@ -29,8 +29,6 @@ sbin/bsmtp
 sbin/btape
 sbin/bwild
 sbin/dbcheck
-${STATIC}sbin/static-bacula-dir
-${STATIC}sbin/static-bacula-sd
 share/examples/bacula/bacula-dir.conf
 share/examples/bacula/bacula-sd.conf
 share/examples/rc.d/bacula
