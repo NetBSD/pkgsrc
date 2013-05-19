@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.104 2013/05/08 09:11:19 sbd Exp $
+# $NetBSD: Makefile,v 1.105 2013/05/19 08:47:41 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
 CATEGORIES=	devel www
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://developer.mozilla.org/en/docs/XULRunner
 COMMENT=	XML User Interface Language runtime environment
 LICENSE=	mpl-1.1
+
+BROKEN=		prefs and chrome:// load problem.
 
 MOZILLA_DIR=	# empty
 
