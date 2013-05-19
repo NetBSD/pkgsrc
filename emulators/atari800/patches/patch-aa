@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2006/01/20 07:38:13 adam Exp $
+$NetBSD: patch-aa,v 1.6 2013/05/19 07:35:56 adam Exp $
 
---- sound_oss.c.orig	2005-12-28 19:22:06.000000000 +0100
+--- sound_oss.c.orig	2011-11-16 18:01:37.000000000 +0000
 +++ sound_oss.c
-@@ -39,7 +39,7 @@
- #include "pokeysnd.h"
+@@ -40,7 +40,7 @@
+ #include "sound.h"
  #include "util.h"
  
 -static const char * const dspname = "/dev/dsp";
