@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1714 2013/05/19 15:48:11 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1715 2013/05/19 17:37:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2625,3 +2625,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox17-l10n to 17.0.6 [ryoon 2013-05-19]
 	Updated www/apache-tomcat7 to 7.0.40 [ryoon 2013-05-19]
 	Updated net/wireshark to 1.8.7 [tron 2013-05-19]
+	Updated devel/py-distribute to 0.6.40 [wiz 2013-05-19]
