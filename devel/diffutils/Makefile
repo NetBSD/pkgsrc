@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2012/12/06 11:40:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/19 03:21:40 ryoon Exp $
 #
 
-DISTNAME=		diffutils-3.2
-PKGREVISION=		2
+DISTNAME=		diffutils-3.3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/diffutils/diffutils.html
