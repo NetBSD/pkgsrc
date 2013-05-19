@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2013/05/16 05:38:31 richard Exp $
+# $NetBSD: Makefile,v 1.76 2013/05/19 09:28:51 obache Exp $
 #
 
 DISTNAME=	xorg-server-1.12.4
@@ -43,6 +43,11 @@ DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
 CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
+# TLS is not supported by NetBSD<6
+.  if !empty(OS_VERSION:M[0-5].*)
+CONFIGURE_ENV+=		ac_cv_tls=no
+CONFIGURE_ARGS+=	--disable-glx-tls
+.  endif
 .endif
 CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 
