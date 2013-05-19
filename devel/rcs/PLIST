@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/25 11:46:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/19 03:30:44 ryoon Exp $
 bin/ci
 bin/co
 bin/ident
@@ -16,8 +16,9 @@ man/man1/merge.1
 man/man1/rcs.1
 man/man1/rcsclean.1
 man/man1/rcsdiff.1
-man/man1/rcsintro.1
 man/man1/rcslog.1
 man/man1/rcsmerge.1
 man/man1/rlog.1
 man/man5/rcsfile.5
+share/info/dir
+share/info/rcs.info
