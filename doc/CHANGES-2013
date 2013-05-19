@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1699 2013/05/18 23:13:02 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.1700 2013/05/19 03:23:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-gobject3 to 3.8.2 [prlw1 2013-05-18]
 	Updated devel/py-at-spi2 to 2.8.0 [prlw1 2013-05-18]
 	Updated math/gcalctool-gtk3 to 6.6.2 [prlw1 2013-05-18]
+	Updated devel/diffutils to 3.3 [ryoon 2013-05-19]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12156 2013/05/18 23:02:18 prlw1 Exp $
+$NetBSD: TODO,v 1.12157 2013/05/19 03:23:17 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dgen-1.32
 	o dhid-5.3
 	o diffstat-1.57
-	o diffutils-3.3
 	o dillo-3.0.3
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
