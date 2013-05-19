@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2010/09/09 11:39:58 obache Exp $
+$NetBSD: patch-ab,v 1.6 2013/05/19 08:14:05 shattered Exp $
 
 --- src/Makefile.in.orig	2010-04-21 17:26:56.000000000 +0000
 +++ src/Makefile.in
@@ -15,15 +15,6 @@ $NetBSD: patch-ab,v 1.5 2010/09/09 11:39:58 obache Exp $
  
  MANS=		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
  		$(srcdir)/../man/tkremind.1 $(srcdir)/../man/cm2rem.1 \
-@@ -41,7 +42,7 @@ test: remind
- 	@sh ../tests/test-rem
- 
- .c.o:
--	@CC@ -c @CFLAGS@ @DEFS@ $(CEXTRA) $(LANGDEF) -I. -I$(srcdir) $<
-+	@CC@ -c @CFLAGS@ @CPPFLAGS@ @DEFS@ $(CEXTRA) $(LANGDEF) -I. -I$(srcdir) $<
- 
- rem2ps: rem2ps.o dynbuf.o
- 	@CC@ @LDFLAGS@ $(LDEXTRA) -o rem2ps rem2ps.o dynbuf.o
 @@ -51,9 +52,12 @@ remind: $(REMINDOBJS)
  
  install-nostripped: all
