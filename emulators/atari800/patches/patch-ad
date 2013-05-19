@@ -1,8 +1,34 @@
-$NetBSD: patch-ad,v 1.7 2012/08/26 19:42:09 marino Exp $
+$NetBSD: patch-ad,v 1.8 2013/05/19 07:35:56 adam Exp $
 
---- configure.orig	2011-04-28 12:07:28.000000000 +0000
+Compatibility fixes.
+
+--- configure.orig	2013-03-03 15:58:11.000000000 +0000
 +++ configure
-@@ -8425,7 +8425,7 @@ $as_echo "#define IDE 1" >>confdefs.h
+@@ -7347,11 +7347,8 @@ $as_echo "#define SDL 1" >>confdefs.h
+             LIBS="$LIBS $SDL_LIBS"
+             CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
+             if [ "$a8_host" = "win" ]; then
+-                CPPFLAGS=${CPPFLAGS/-Dmain=SDL_main/}
+-                LIBS=${LIBS/-lSDLmain/}
+                 OBJS="$OBJS SDL_win32_main.o"
+                 CPPFLAGS="$CPPFLAGS -DNO_STDIO_REDIRECT"
+-                LIBS=${LIBS/-mwindows/}
+             fi
+             a8_use_sdl=yes
+ 
+@@ -8259,11 +8256,8 @@ $as_echo "#define SDL 1" >>confdefs.h
+             LIBS="$LIBS $SDL_LIBS"
+             CPPFLAGS="$CPPFLAGS $SDL_CFLAGS"
+             if [ "$a8_host" = "win" ]; then
+-                CPPFLAGS=${CPPFLAGS/-Dmain=SDL_main/}
+-                LIBS=${LIBS/-lSDLmain/}
+                 OBJS="$OBJS SDL_win32_main.o"
+                 CPPFLAGS="$CPPFLAGS -DNO_STDIO_REDIRECT"
+-                LIBS=${LIBS/-mwindows/}
+             fi
+             a8_use_sdl=yes
+ 
+@@ -8601,7 +8595,7 @@ $as_echo "#define IDE 1" >>confdefs.h
  
      fi
  
@@ -11,14 +37,3 @@ $NetBSD: patch-ad,v 1.7 2012/08/26 19:42:09 marino Exp $
      # Check whether --enable-largefile was given.
  if test "${enable_largefile+set}" = set; then :
    enableval=$enable_largefile;
-@@ -8878,10 +8878,8 @@ case "$a8_target" in
-         LIBS="$LIBS $SDL_LIBS"
-         CFLAGS="$CFLAGS $SDL_CFLAGS"
-         if [ "$a8_host" = "win" ]; then
--            LIBS=${LIBS/-lSDLmain/}
-             OBJS="$OBJS SDL_win32_main.o"
-             CFLAGS="$CFLAGS -DNO_STDIO_REDIRECT"
--            LIBS=${LIBS/-mwindows/}
-         fi
-         ;;
- esac

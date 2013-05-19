@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2012/08/26 19:42:09 marino Exp $
+$NetBSD: patch-ab,v 1.9 2013/05/19 07:35:56 adam Exp $
 
 --- cfg.c.orig	2011-04-18 01:47:48.000000000 +0000
 +++ cfg.c
-@@ -105,7 +105,7 @@ void CFG_FindROMImages(const char *direc
+@@ -64,7 +64,7 @@ void CFG_FindROMImages(const char *direc
  #endif
  
  #ifndef SYSTEM_WIDE_CFG_FILE

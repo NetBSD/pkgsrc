@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.6 2012/08/26 19:42:09 marino Exp $
+$NetBSD: patch-ac,v 1.7 2013/05/19 07:35:56 adam Exp $
 
---- Makefile.in.orig	2011-04-05 02:36:16.000000000 +0000
+--- Makefile.in.orig	2012-03-18 15:31:09.000000000 +0000
 +++ Makefile.in
 @@ -20,15 +20,15 @@ else
  	endif
  endif
  
--CFLAGS = @CFLAGS@
+-CFLAGS = @CFLAGS@ @CPPFLAGS@
 -LDFLAGS = @LDFLAGS@
-+CFLAGS = @CFLAGS@ -DPREFIX=\"${PREFIX}\" -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
++CFLAGS = @CFLAGS@ @CPPFLAGS@ -DPREFIX=\"${PREFIX}\" -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
 +LDFLAGS = @LDFLAGS@ ${LIBOSSAUDIO}
  
  INSTALL = @INSTALL@
