@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2012/10/31 11:19:46 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/05/19 17:50:31 wiz Exp $
 
-DISTNAME=	slib-3b3
+DISTNAME=	slib-3b4
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -8,7 +8,7 @@ DISTNAME=	slib-3b3
 #
 # Also update guile-slib
 #
-PKGNAME=	slib-3.2.3
+PKGNAME=	slib-3.2.4
 CATEGORIES=	devel
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 
