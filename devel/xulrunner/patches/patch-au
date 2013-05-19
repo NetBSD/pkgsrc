@@ -1,10 +1,10 @@
-$NetBSD: patch-au,v 1.7 2013/01/10 15:01:30 ryoon Exp $
+$NetBSD: patch-au,v 1.8 2013/05/19 08:47:41 ryoon Exp $
 
 - Fix device name on NetBSD
 - SOUND_VERSION just isn't a reliable way to detect features supported by
   particular OSS implementation.
 
---- media/libsydneyaudio/src/sydney_audio_oss.c.orig	2013-01-04 23:44:40.000000000 +0000
+--- media/libsydneyaudio/src/sydney_audio_oss.c.orig	2013-05-11 19:19:43.000000000 +0000
 +++ media/libsydneyaudio/src/sydney_audio_oss.c
 @@ -23,7 +23,7 @@
  // support only versions newer than 3.6.1
@@ -28,3 +28,14 @@ $NetBSD: patch-au,v 1.7 2013/01/10 15:01:30 ryoon Exp $
    s->output_fd    = -1;
    s->thread_id    = 0;
    s->playing      = 0;
+@@ -446,6 +451,10 @@ static void audio_callback(void* data)
+           printf("!");  /* not enough audio data */
+ #endif
+           bytes = bytes-bytes_to_copy;
++          struct timespec ts = {0, 1000000};
++          pthread_mutex_unlock(&s->mutex);
++          nanosleep(&ts, NULL);
++          pthread_mutex_lock(&s->mutex);
+           break;
+         }
+         free(s->bl_head);
