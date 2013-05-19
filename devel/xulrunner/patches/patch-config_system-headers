@@ -1,0 +1,10 @@
+$NetBSD: patch-config_system-headers,v 1.5 2013/05/19 08:47:41 ryoon Exp $
+
+--- config/system-headers.orig	2013-05-11 19:19:23.000000000 +0000
++++ config/system-headers
+@@ -1126,3 +1126,5 @@ sys/thr.h
+ sys/user.h
+ kvm.h
+ spawn.h
++err.h
++xlocale.h
