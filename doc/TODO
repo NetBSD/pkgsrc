@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12164 2013/05/19 17:36:04 wiz Exp $
+$NetBSD: TODO,v 1.12165 2013/05/19 17:37:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -988,7 +988,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-carddav-0.4.1
 	o py-cython-0.19.1
 	o py-dbus-1.2.0
-	o py-distribute-0.6.40
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
