@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2013/05/19 18:51:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2013/05/20 20:44:09 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -954,10 +954,7 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring__Iterator-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring__Iterator.html
-share/doc/glibmm-2.4/reference/html/classadaptor__type.html
 share/doc/glibmm-2.4/reference/html/classes.html
-share/doc/glibmm-2.4/reference/html/classthrow__allocator__base.html
-share/doc/glibmm-2.4/reference/html/classtypes__traits.html
 share/doc/glibmm-2.4/reference/html/closed.png
 share/doc/glibmm-2.4/reference/html/deprecated.html
 share/doc/glibmm-2.4/reference/html/dir_02fef2a40270467d72a7f717cf991d8a.html
@@ -1178,23 +1175,6 @@ share/doc/glibmm-2.4/reference/html/namespacemembers_func_0x78.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_type.html
 share/doc/glibmm-2.4/reference/html/namespacemembers_vars.html
 share/doc/glibmm-2.4/reference/html/namespaces.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1bernoulli__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1binomial__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1bitset.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1cauchy__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1chi__squared__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1discrete__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1exponential__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1extreme__value__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1fisher__f__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1gamma__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1geometric__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1lognormal__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1normal__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1piecewise__constant__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1piecewise__linear__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1poisson__distribution.html
-share/doc/glibmm-2.4/reference/html/namespacestd_1_1uniform__int__distribution.html
 share/doc/glibmm-2.4/reference/html/nav_f.png
 share/doc/glibmm-2.4/reference/html/nav_g.png
 share/doc/glibmm-2.4/reference/html/nav_h.png
