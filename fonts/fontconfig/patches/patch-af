@@ -1,15 +1,15 @@
-$NetBSD: patch-af,v 1.1 2012/07/31 18:12:28 drochner Exp $
+$NetBSD: patch-af,v 1.2 2013/05/20 19:56:39 adam Exp $
 
---- conf.d/README.orig	2012-02-20 03:49:18.000000000 +0000
+--- conf.d/README.orig	2013-05-13 03:05:36.000000000 +0000
 +++ conf.d/README
 @@ -2,9 +2,8 @@ conf.d/README
  
  Each file in this directory is a fontconfig configuration file.  Fontconfig
  scans this directory, loading all files of the form [0-9][0-9]*.conf.
--These files are normally installed in ../conf.avail and then symlinked here,
--allowing them to be easily installed and then enabled/disabled by adjusting
--the symlinks.
-+These files are installed in @PREFIX@/share/fontconfig/conf.avail
+-These files are normally installed in /usr/share/fontconfig/conf.avail
+-and then symlinked here, allowing them to be easily installed and then
+-enabled/disabled by adjusting the symlinks.
++These files are normally installed in @PREFIX@/share/fontconfig/conf.avail
 +and then copied or symlinked here as needed.
  
  The files are loaded in numeric order, the structure of the configuration
