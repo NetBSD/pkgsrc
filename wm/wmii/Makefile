@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/04/13 07:55:05 ghen Exp $
+# $NetBSD: Makefile,v 1.27 2013/05/20 09:04:44 jperkin Exp $
 
 DISTNAME=		wmii-3.6
 PKGREVISION=		4
@@ -32,6 +32,11 @@ CONF_FILES_MODE=	0755
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-build
+SUBST_FILES.vars=	util/compile
+SUBST_VARS.vars=	EGREP SED SH
 
 post-build:
 	mv ${WRKSRC}/man/wmii.1 ${WRKSRC}/man/wmii.tbl

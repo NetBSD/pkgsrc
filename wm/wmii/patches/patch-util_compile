@@ -1,0 +1,31 @@
+$NetBSD: patch-util_compile,v 1.1 2013/05/20 09:04:44 jperkin Exp $
+
+--- util/compile.orig	2007-11-16 13:59:15.000000000 +0000
++++ util/compile
+@@ -1,7 +1,7 @@
+-#!/bin/sh -f
++#!@SH@ -f
+ 
+ outfile="$1"; shift
+-bin="$(echo $0 | sed 's,/[^/]*$,,')"
++bin="$(echo $0 | @SED@ 's,/[^/]*$,,')"
+ 
+ # Derived from Russ Cox's 9c in plan9port.
+ 
+@@ -12,12 +12,12 @@ echo CC $($bin/cleanname ${BASE}$outfile
+ $CC -o $outfile $CFLAGS $@ 2>$xtmp
+ status=$?
+ 
+-base=$(echo $BASE | sed 's/,/\\,/g')
++base=$(echo $BASE | @SED@ 's/,/\\,/g')
+ re='\([^[:space:]/]*\..:[0-9]\)'
+ 
+-cat $xtmp | sed "s,^$re,$base&,g; s,\([[:space:]]\)$re,\1$base\2,g" |
+-	egrep -v ': error: .Each undeclared identifier|: error: for each function it appears|is dangerous, better use|is almost always misused|: In function |: At top level:|support .long long.|use of C99 long long|ISO C forbids conversion' |
+-	sed 's/ .first use in this function.$//; s/\"\([^\"][^\"]*\)\", line \([0-9][0-9]*\)/\1:\2/g' |
++cat $xtmp | @SED@ "s,^$re,$base&,g; s,\([[:space:]]\)$re,\1$base\2,g" |
++	@EGREP@ -v ': error: .Each undeclared identifier|: error: for each function it appears|is dangerous, better use|is almost always misused|: In function |: At top level:|support .long long.|use of C99 long long|ISO C forbids conversion' |
++	@SED@ 's/ .first use in this function.$//; s/\"\([^\"][^\"]*\)\", line \([0-9][0-9]*\)/\1:\2/g' |
+ 	uniq 1>&2
+ 
+ rm -f $xtmp
