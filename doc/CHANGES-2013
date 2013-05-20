@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1730 2013/05/20 19:18:35 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1731 2013/05/20 20:52:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2645,3 +2645,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3 to 3.7.17 [adam 2013-05-20]
 	Updated databases/sqlite3-docs to 3.7.17 [adam 2013-05-20]
 	Updated databases/sqlite3-tcl to 3.7.17 [adam 2013-05-20]
+	Updated fonts/fontconfig to 2.10.93 [adam 2013-05-20]
+	Updated devel/glibmm to 2.36.2 [adam 2013-05-20]
+	Updated devel/atkmm to 2.22.7 [adam 2013-05-20]
+	Updated devel/pangomm to 2.34.0 [adam 2013-05-20]
+	Updated x11/gtkmm to 2.24.3 [adam 2013-05-20]
