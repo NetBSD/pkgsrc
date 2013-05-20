@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2013/05/20 01:43:05 sbd Exp $
+# $NetBSD: options.mk,v 1.22 2013/05/20 07:04:35 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -31,6 +31,9 @@ PKG_SUPPORTED_OPTIONS+=		dri
 ###	Mesa 6.5.3 (a development release).
 ###
 .if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*) && ${X11_TYPE} == "modular"
+PKG_SUGGESTED_OPTIONS+=		dri
+.endif
+.if !empty(MACHINE_PLATFORM:MLinux-*-*86*) && ${X11_TYPE} == "modular"
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
