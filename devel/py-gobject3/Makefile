@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/05/18 22:59:46 prlw1 Exp $
+# $NetBSD: Makefile,v 1.16 2013/05/20 14:51:13 joerg Exp $
 
 DISTNAME=		pygobject-3.8.2
 PKGNAME=		${PYPKGPREFIX}-gobject3-3.8.2
@@ -17,7 +17,7 @@ USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
+#PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_SELF_CONFLICT=		yes
 
 PKGCONFIG_OVERRIDE+=	pygobject-3.0.pc.in
