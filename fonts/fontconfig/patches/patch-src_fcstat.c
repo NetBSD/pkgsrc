@@ -1,9 +1,10 @@
-$NetBSD: patch-src_fcstat.c,v 1.2 2013/03/14 19:32:33 drochner Exp $
+$NetBSD: patch-src_fcstat.c,v 1.3 2013/05/20 19:56:39 adam Exp $
 
 The argument types to scandir(3) differ between different OSes.
 OpenBSD seems to be still different. I used the provided alphasort
 instead of rewriting the equivalent sorter function.
 statvfs and fstatvfs need another include file, at least on MirBSD.
+
 --- src/fcstat.c.orig	2013-01-08 06:42:23.000000000 +0000
 +++ src/fcstat.c
 @@ -42,6 +42,9 @@
