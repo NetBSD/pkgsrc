@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2011/01/23 09:42:10 markd Exp $
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtbegin.o
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtbeginS.o
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtbeginT.o
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtend.o
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtendS.o
+@comment $NetBSD: PLIST.Linux,v 1.2 2013/05/20 05:47:34 adam Exp $
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtbegin.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtbeginS.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtbeginT.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtend.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtendS.o
