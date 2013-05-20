@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/04/01 01:18:35 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/20 14:59:59 fhajny Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	mysqs
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	{mysql-server-[0-9]*,mysql3-server-[0-9]*}
-
-# might be removed in the future
-# if mysqld_safe script is installed here, or rc.d script invokes mysqld
-DEPENDS+=	mysql-client>=${PKGVERSION_NOREV}:../../databases/mysql56-client
 
 .include "../../databases/mysql56-client/Makefile.common"
 
@@ -86,6 +83,7 @@ CFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 .endif
 
+.include "../../databases/mysql56-client/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
