@@ -1,4 +1,4 @@
-$NetBSD: patch-dj,v 1.4 2009/12/10 20:35:58 abs Exp $
+$NetBSD: patch-dj,v 1.5 2013/05/20 11:35:22 jperkin Exp $
 
 --- lib/libxview/file_chooser/file_list.c.orig	1993-06-29 05:17:56.000000000 +0000
 +++ lib/libxview/file_chooser/file_list.c
@@ -32,6 +32,15 @@ $NetBSD: patch-dj,v 1.4 2009/12/10 20:35:58 abs Exp $
  	xv_free_ref( private->dotdot_string );
  	if ( private->dir_ptr )
  	    (void) closedir( private->dir_ptr );
+@@ -1166,7 +1174,7 @@ flist_update_list( private, rows, num_ro
+  * ifdef'd for SVR4 because it causes the 4.x MIT build to fail, not just print
+  * warnings.
+  */
+-#ifdef SVR4
++#ifdef notSVR4
+ static int	sed, nbra, circf;
+ static char	*loc1, *loc2, *locs;
+ static int 	advance();
 @@ -1174,14 +1182,16 @@ static char	*compile();
  static int 	step();
  #endif /* SVR4 */
