@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.45 2012/12/17 18:37:06 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.46 2013/05/20 14:05:32 joerg Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -13,7 +13,7 @@ EXTRACT_SUFX?=	.tar.bz2
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/
 
-USE_TOOLS+=		gmake imake perl
+USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 SET_LIBDIR=		YES
