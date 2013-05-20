@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.6 2012/05/08 02:59:16 sbd Exp $
+$NetBSD: patch-ab,v 1.7 2013/05/20 05:47:34 adam Exp $
 
 Use $(host_alias) as the program prefix so it matches ${MACHINE_GNU_PLATFORM}
 
---- Makefile.in.orig	2009-02-17 16:46:06.000000000 +0000
+--- Makefile.in.orig	2010-04-22 04:23:24.000000000 +0000
 +++ Makefile.in
-@@ -1330,7 +1330,7 @@ clean-local:
+@@ -1418,7 +1418,7 @@ clean-local:
  	rm -f options.tmp options.c options.h version.c
  
  install-exec-hook:
@@ -13,7 +13,7 @@ Use $(host_alias) as the program prefix so it matches ${MACHINE_GNU_PLATFORM}
  
  install-data-hook:
  	-ln -sf f951$(EXEEXT) $(DESTDIR)@DEST_LIBDIR@/cc1
-@@ -1341,8 +1341,9 @@ install-data-hook:
+@@ -1429,8 +1429,9 @@ install-data-hook:
  	  ranlib $(DESTDIR)@DEST_LIBDIR@/libgcc_eh.a ; \
  	  ranlib $(DESTDIR)@DEST_LIBDIR@/libgcc.a ; \
  	fi

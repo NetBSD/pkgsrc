@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:31 joerg Exp $
-bin/g95
+@comment $NetBSD: PLIST,v 1.4 2013/05/20 05:47:34 adam Exp $
 bin/f95
+bin/g95
 bin/${MACHINE_GNU_PLATFORM}-g95
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/cc1
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/f951
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/libgcc_eh.a
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/libgcc_s.so
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/libgcc_s.so.1
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/libgcc.a
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/libf95.a
-share/doc/g95/INSTALL
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/cc1
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/f951
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_eh.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_s.so
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_s.so.1
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libf95.a
 share/doc/g95/G95Manual.pdf
+share/doc/g95/INSTALL
