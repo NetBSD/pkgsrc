@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/05/14 19:15:36 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/20 07:24:23 sbd Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=		no
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LEXLIB=""
 
