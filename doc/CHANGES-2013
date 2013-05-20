@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1726 2013/05/20 08:19:31 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1727 2013/05/20 11:56:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2639,3 +2639,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/nmap to 6.25 [adam 2013-05-20]
 	Updated devel/py-dulwich to 0.8.7 [ryoon 2013-05-20]
 	Updated devel/hg-git to 0.4.0 [ryoon 2013-05-20]
+	Updated mail/thunderbird to 17.0.6 [ryoon 2013-05-20]
