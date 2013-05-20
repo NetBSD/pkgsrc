@@ -1,9 +1,9 @@
-$NetBSD: patch-.._gcc-4.0.3_gcc_config_dragonfly.h,v 1.1 2011/02/19 16:06:31 rumko Exp $
+$NetBSD: patch-gcc_config_dragonfly.h,v 1.1 2013/05/20 05:47:34 adam Exp $
 
 DragonFly BSD support.
 
---- /dev/null	2011-02-01 20:59:25 +0100
-+++ ../gcc-4.0.3/gcc/config/dragonfly.h	2011-02-01 19:19:27 +0100
+--- ../gcc-4.1.2/gcc/config/dragonfly.h.orig	2013-05-19 08:51:14.000000000 +0000
++++ ../gcc-4.1.2/gcc/config/dragonfly.h
 @@ -0,0 +1,87 @@
 +/* Base configuration file for all DragonFly targets.
 +   Copyright (C) 1999, 2000, 2001 Free Software Foundation, Inc.
