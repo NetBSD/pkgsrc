@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.177 2013/05/09 07:39:23 adam Exp $
+# $NetBSD: Makefile,v 1.178 2013/05/20 14:04:53 joerg Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -33,6 +33,9 @@ REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ENV+=		kde_cv_defines_imake_version=8 \
+			kde_cv_defines_imake="XBINDIR=${X11PREFIX:Q}/bin XLIBDIR=${X11PREFIX:Q}/lib" \
+			XMKMF=${TRUE}
 
 REPLACE_PERL+=		kcontrol/keys/convertShortcuts.pl \
 			khelpcenter/searchhandlers/khc_docbookdig.pl.in \
@@ -202,6 +205,7 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/libfontenc/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
