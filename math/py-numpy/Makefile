@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/02/21 10:59:38 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.25 2013/05/20 05:59:58 adam Exp $
 
-DISTNAME=	numpy-1.6.2
+DISTNAME=	numpy-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -12,16 +10,27 @@ HOMEPAGE=	http://numpy.scipy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
-USE_LANGUAGES+=	c fortran
+USE_LANGUAGES=		c fortran
 PYTHON_VERSIONS_INCLUDE_3X= yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-MAKE_ENV+=	ATLAS=None
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+MAKE_ENV+=		ATLAS=None
 
-REPLACE_PYTHON+=	numpy/core/scons_support.py
-REPLACE_PYTHON+=	numpy/distutils/from_template.py
-REPLACE_PYTHON+=	numpy/distutils/system_info.py
-REPLACE_PYTHON+=	numpy/ma/bench.py
-REPLACE_PYTHON+=	numpy/distutils/conv_template.py
+REPLACE_PYTHON+=	numpy/*.py
+REPLACE_PYTHON+=	numpy/compat/*.py
+REPLACE_PYTHON+=	numpy/core/*.py
+REPLACE_PYTHON+=	numpy/distutils/*.py
+REPLACE_PYTHON+=	numpy/distutils/tests/*.py
+REPLACE_PYTHON+=	numpy/distutils/tests/f2py_ext/*.py
+REPLACE_PYTHON+=	numpy/distutils/tests/f2py_f90_ext/*.py
+REPLACE_PYTHON+=	numpy/distutils/tests/gen_ext/*.py
+REPLACE_PYTHON+=	numpy/distutils/tests/pyrex_ext/*.py
+REPLACE_PYTHON+=	numpy/distutils/tests/swig_ext/*.py
+REPLACE_PYTHON+=	numpy/f2py/*.py
+REPLACE_PYTHON+=	numpy/f2py/docs/usersguide/*.py
+REPLACE_PYTHON+=	numpy/fft/tests/*.py
+REPLACE_PYTHON+=	numpy/ma/*.py
+REPLACE_PYTHON+=	numpy/matrixlib/*.py
+REPLACE_PYTHON+=	numpy/testing/*.py
 
 SUBST_CLASSES+=		numpy
 SUBST_STAGE.numpy=	post-patch
@@ -33,16 +42,12 @@ SUBST_SED.numpy+=	-e 's:%(os.path.basename(sys.executable))::'
 .include "../../mk/compiler.mk"
 
 .if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95)
-PYSETUPBUILDARGS+= --fcompiler=g95
+PYSETUPBUILDARGS+=	--fcompiler=g95
 .elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
-PYSETUPBUILDARGS+= --fcompiler=gnu95
+PYSETUPBUILDARGS+=	--fcompiler=gnu95
 .elif !empty(PKGSRC_COMPILER:Mgcc)
-PYSETUPBUILDARGS+= --fcompiler=gnu
+PYSETUPBUILDARGS+=	--fcompiler=gnu
 .endif
-
-# According to http://projects.scipy.org/numpy/ticket/1101,
-# LDFLAGS should either not be set or include -shared.
-LDFLAGS+=		-shared
 
 # This package bypasses the wrappers and calls the compilers directly when
 # linking, so ensure that we pass through requisite options.
@@ -54,6 +59,14 @@ SUBST_CLASSES+=		linkabi
 SUBST_STAGE.linkabi=	post-patch
 SUBST_FILES.linkabi=	numpy/distutils/fcompiler/gnu.py
 SUBST_SED.linkabi=	-e 's,@COMPILER_ABI_FLAG@,${_COMPILER_ABI_FLAG.${ABI}},'
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# to avoid '-bundle can't be used with -dynamiclib' error
+BUILDLINK_TRANSFORM+=	rm:-bundle
+LDFLAGS+=		-lpython
+.endif
 
 # needs devel/py-nose
 #do-test:

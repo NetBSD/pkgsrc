@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/08/15 17:16:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/05/20 05:59:58 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/numpy/__config__.py
@@ -31,13 +31,13 @@ ${PYSITELIB}/numpy/compat/setupscons.pyo
 ${PYSITELIB}/numpy/core/__init__.py
 ${PYSITELIB}/numpy/core/__init__.pyc
 ${PYSITELIB}/numpy/core/__init__.pyo
+${PYSITELIB}/numpy/core/_dummy.so
 ${PYSITELIB}/numpy/core/_internal.py
 ${PYSITELIB}/numpy/core/_internal.pyc
 ${PYSITELIB}/numpy/core/_internal.pyo
-${PYSITELIB}/numpy/core/_mx_datetime_parser.py
-${PYSITELIB}/numpy/core/_mx_datetime_parser.pyc
-${PYSITELIB}/numpy/core/_mx_datetime_parser.pyo
-${PYSITELIB}/numpy/core/_sort.so
+${PYSITELIB}/numpy/core/_methods.py
+${PYSITELIB}/numpy/core/_methods.pyc
+${PYSITELIB}/numpy/core/_methods.pyo
 ${PYSITELIB}/numpy/core/arrayprint.py
 ${PYSITELIB}/numpy/core/arrayprint.pyc
 ${PYSITELIB}/numpy/core/arrayprint.pyo
@@ -70,9 +70,11 @@ ${PYSITELIB}/numpy/core/include/numpy/noprefix.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_3kcompat.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_common.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_cpu.h
+${PYSITELIB}/numpy/core/include/numpy/npy_deprecated_api.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_endian.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_interrupt.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_math.h
+${PYSITELIB}/numpy/core/include/numpy/npy_no_deprecated_api.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_os.h
 ${PYSITELIB}/numpy/core/include/numpy/numpyconfig.h
 ${PYSITELIB}/numpy/core/include/numpy/old_defines.h
@@ -132,10 +134,14 @@ ${PYSITELIB}/numpy/core/tests/test_errstate.py
 ${PYSITELIB}/numpy/core/tests/test_function_base.py
 ${PYSITELIB}/numpy/core/tests/test_getlimits.py
 ${PYSITELIB}/numpy/core/tests/test_half.py
-${PYSITELIB}/numpy/core/tests/test_iterator.py
+${PYSITELIB}/numpy/core/tests/test_indexerrors.py
+${PYSITELIB}/numpy/core/tests/test_indexing.py
+${PYSITELIB}/numpy/core/tests/test_item_selection.py
 ${PYSITELIB}/numpy/core/tests/test_machar.py
 ${PYSITELIB}/numpy/core/tests/test_memmap.py
 ${PYSITELIB}/numpy/core/tests/test_multiarray.py
+${PYSITELIB}/numpy/core/tests/test_multiarray_assignment.py
+${PYSITELIB}/numpy/core/tests/test_nditer.py
 ${PYSITELIB}/numpy/core/tests/test_numeric.py
 ${PYSITELIB}/numpy/core/tests/test_numerictypes.py
 ${PYSITELIB}/numpy/core/tests/test_print.py
@@ -363,6 +369,7 @@ ${PYSITELIB}/numpy/distutils/tests/swig_ext/src/zoo.h
 ${PYSITELIB}/numpy/distutils/tests/swig_ext/src/zoo.i
 ${PYSITELIB}/numpy/distutils/tests/swig_ext/tests/test_example.py
 ${PYSITELIB}/numpy/distutils/tests/swig_ext/tests/test_example2.py
+${PYSITELIB}/numpy/distutils/tests/test_exec_command.py
 ${PYSITELIB}/numpy/distutils/tests/test_fcompiler_gnu.py
 ${PYSITELIB}/numpy/distutils/tests/test_fcompiler_intel.py
 ${PYSITELIB}/numpy/distutils/tests/test_misc_util.py
@@ -586,6 +593,9 @@ ${PYSITELIB}/numpy/lib/_datasource.pyo
 ${PYSITELIB}/numpy/lib/_iotools.py
 ${PYSITELIB}/numpy/lib/_iotools.pyc
 ${PYSITELIB}/numpy/lib/_iotools.pyo
+${PYSITELIB}/numpy/lib/arraypad.py
+${PYSITELIB}/numpy/lib/arraypad.pyc
+${PYSITELIB}/numpy/lib/arraypad.pyo
 ${PYSITELIB}/numpy/lib/arraysetops.py
 ${PYSITELIB}/numpy/lib/arraysetops.pyc
 ${PYSITELIB}/numpy/lib/arraysetops.pyo
@@ -638,6 +648,7 @@ ${PYSITELIB}/numpy/lib/stride_tricks.pyc
 ${PYSITELIB}/numpy/lib/stride_tricks.pyo
 ${PYSITELIB}/numpy/lib/tests/test__datasource.py
 ${PYSITELIB}/numpy/lib/tests/test__iotools.py
+${PYSITELIB}/numpy/lib/tests/test_arraypad.py
 ${PYSITELIB}/numpy/lib/tests/test_arraysetops.py
 ${PYSITELIB}/numpy/lib/tests/test_arrayterator.py
 ${PYSITELIB}/numpy/lib/tests/test_financial.py
@@ -912,6 +923,7 @@ ${PYSITELIB}/numpy/polynomial/setup.py
 ${PYSITELIB}/numpy/polynomial/setup.pyc
 ${PYSITELIB}/numpy/polynomial/setup.pyo
 ${PYSITELIB}/numpy/polynomial/tests/test_chebyshev.py
+${PYSITELIB}/numpy/polynomial/tests/test_classes.py
 ${PYSITELIB}/numpy/polynomial/tests/test_hermite.py
 ${PYSITELIB}/numpy/polynomial/tests/test_hermite_e.py
 ${PYSITELIB}/numpy/polynomial/tests/test_laguerre.py
@@ -969,6 +981,7 @@ ${PYSITELIB}/numpy/testing/setupscons.py
 ${PYSITELIB}/numpy/testing/setupscons.pyc
 ${PYSITELIB}/numpy/testing/setupscons.pyo
 ${PYSITELIB}/numpy/testing/tests/test_decorators.py
+${PYSITELIB}/numpy/testing/tests/test_doctesting.py
 ${PYSITELIB}/numpy/testing/tests/test_utils.py
 ${PYSITELIB}/numpy/testing/utils.py
 ${PYSITELIB}/numpy/testing/utils.pyc

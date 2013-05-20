@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/12/19 22:04:36 markd Exp $
+$NetBSD: patch-ab,v 1.2 2013/05/20 05:59:58 adam Exp $
 
 --- numpy/linalg/lapack_litemodule.c.orig	2008-05-26 19:39:50.000000000 +1200
 +++ numpy/linalg/lapack_litemodule.c
-@@ -16,6 +16,8 @@ typedef struct { float r, i; } f2c_compl
+@@ -17,6 +17,8 @@ typedef struct { float r, i; } f2c_compl
  typedef struct { double r, i; } f2c_doublecomplex;
  /* typedef long int (*L_fp)(); */
  
