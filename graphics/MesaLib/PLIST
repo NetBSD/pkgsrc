@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2013/05/16 05:22:02 richard Exp $
+@comment $NetBSD: PLIST,v 1.26 2013/05/20 06:59:18 sbd Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -10,7 +10,7 @@ include/GL/glfbdev.h
 include/GL/glx.h
 include/GL/glx_mangle.h
 include/GL/glxext.h
-include/GL/internal/dri_interface.h
+${PLIST.dri}include/GL/internal/dri_interface.h
 include/GL/mesa_wgl.h
 include/GL/osmesa.h
 include/GL/vms_x_fix.h
@@ -24,6 +24,7 @@ lib/libGLw.so.1
 lib/libGLw.so.1.0.0
 ${PLIST.nodri}lib/libOSMesa.so
 ${PLIST.nodri}lib/libOSMesa.so.7
+${PLIST.nodri}lib/libOSMesa.so.7.11.0
 ${PLIST.dri}lib/dri/i810_dri.so
 ${PLIST.dri}lib/dri/i915_dri.so
 ${PLIST.dri}lib/dri/i965_dri.so
