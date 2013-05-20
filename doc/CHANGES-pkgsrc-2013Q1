@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.17 2013/05/17 07:27:31 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.18 2013/05/20 13:25:39 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -71,3 +71,5 @@ Pullup ticket #4137 - requested by obache
 multimedia/adobe-flash-plugin11: security update
 Pullup ticket #4132 - requested by taca
 lang/php53: build fix
+Pullup ticket #4139 - requested by tron
+net/wireshark: security update
