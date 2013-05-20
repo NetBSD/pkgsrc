@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/19 12:49:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/20 00:17:42 ryoon Exp $
 bin/xulrunner17
 include/xulrunner17/.mkdir.done
 include/xulrunner17/AccEvent.h
@@ -340,7 +340,7 @@ include/xulrunner17/mozilla/a11y/DocAccessible.h
 include/xulrunner17/mozilla/a11y/FocusManager.h
 include/xulrunner17/mozilla/a11y/HyperTextAccessible.h
 include/xulrunner17/mozilla/a11y/HyperTextAccessibleWrap.h
-include/xulrunner17/mozilla/a11y/Logging.h
+${PLIST.debug}include/xulrunner17/mozilla/a11y/Logging.h
 include/xulrunner17/mozilla/a11y/Role.h
 include/xulrunner17/mozilla/a11y/States.h
 include/xulrunner17/mozilla/arm.h
