@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1723 2013/05/20 00:05:24 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.1724 2013/05/20 06:23:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2634,3 +2634,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/py-lxml to 3.2.1 [wiz 2013-05-19]
 	Updated textproc/yelp-xsl to 3.8.1 [prlw1 2013-05-20]
 	Updated misc/yelp3 to 3.8.1 [prlw1 2013-05-20]
+	Updated lang/g95 to 0.93nb1 [adam 2013-05-20]
+	Updated math/py-numpy to 1.7.1 [adam 2013-05-20]
+	Updated net/nmap to 6.25 [adam 2013-05-20]
