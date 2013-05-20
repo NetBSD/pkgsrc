@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.18 2012/09/16 20:29:06 pettai Exp $
+$NetBSD: patch-ab,v 1.19 2013/05/20 06:21:22 adam Exp $
 
---- configure.orig	2011-01-21 21:00:04.000000000 +0000
+--- configure.orig	2012-11-16 00:54:16.000000000 +0000
 +++ configure
-@@ -6115,6 +6115,7 @@ else
+@@ -6311,6 +6311,7 @@ else
  extern char pcap_version[];
  int main() {
    int major, minor1, minor2;
 +  exit(0);	/* fool it */
    sscanf(pcap_version,"%d.%d.%d", &major, &minor1, &minor2);
    if (major > 0)
-     exit(0);
+     return 0;
