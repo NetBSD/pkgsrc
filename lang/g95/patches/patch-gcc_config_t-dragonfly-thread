@@ -1,0 +1,9 @@
+$NetBSD: patch-gcc_config_t-dragonfly-thread,v 1.1 2013/05/20 05:47:34 adam Exp $
+
+DragonFly BSD support.
+
+--- ../gcc-4.1.2/gcc/config/t-dragonfly-thread.orig	2013-05-19 08:55:29.000000000 +0000
++++ ../gcc-4.1.2/gcc/config/t-dragonfly-thread
+@@ -0,0 +1,2 @@
++# This is currently needed to compile libgcc2 for threads support
++TARGET_LIBGCC2_CFLAGS += -pthread

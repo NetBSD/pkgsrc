@@ -1,9 +1,9 @@
-$NetBSD: patch-.._gcc-4.0.3_gcc_config_i386_dragonfly64.h,v 1.1 2011/02/19 16:06:31 rumko Exp $
+$NetBSD: patch-gcc_config_i386_dragonfly64.h,v 1.1 2013/05/20 05:47:34 adam Exp $
 
 DragonFly BSD support.
 
---- /dev/null	2011-02-01 20:59:25 +0100
-+++ ../gcc-4.0.3/gcc/config/i386/dragonfly64.h	2011-02-01 19:38:50 +0100
+--- ../gcc-4.1.2/gcc/config/i386/dragonfly64.h.orig	2013-05-19 08:54:10.000000000 +0000
++++ ../gcc-4.1.2/gcc/config/i386/dragonfly64.h
 @@ -0,0 +1,45 @@
 +/* Definitions for AMD x86-64 running DragonFly with ELF format
 +   Copyright (C) 2002, 2004 Free Software Foundation, Inc.
