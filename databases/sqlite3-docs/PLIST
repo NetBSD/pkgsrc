@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/04/15 15:33:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/05/20 19:17:15 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -145,6 +145,7 @@ share/doc/sqlite3/c3ref/stmt.html
 share/doc/sqlite3/c3ref/stmt_busy.html
 share/doc/sqlite3/c3ref/stmt_readonly.html
 share/doc/sqlite3/c3ref/stmt_status.html
+share/doc/sqlite3/c3ref/strglob.html
 share/doc/sqlite3/c3ref/stricmp.html
 share/doc/sqlite3/c3ref/table_column_metadata.html
 share/doc/sqlite3/c3ref/temp_directory.html
@@ -194,6 +195,7 @@ share/doc/sqlite3/doclist.html
 share/doc/sqlite3/docs.html
 share/doc/sqlite3/download.html
 share/doc/sqlite3/eqp.html
+share/doc/sqlite3/errlog.html
 share/doc/sqlite3/famous.html
 share/doc/sqlite3/faq.html
 share/doc/sqlite3/favicon.ico
@@ -354,6 +356,7 @@ share/doc/sqlite3/images/qp/obrowid.gif
 share/doc/sqlite3/images/qp/orquery.gif
 share/doc/sqlite3/images/qp/rowidlu.gif
 share/doc/sqlite3/images/qp/tab.gif
+share/doc/sqlite3/images/qp/tpchq8.gif
 share/doc/sqlite3/images/se.gif
 share/doc/sqlite3/images/se.png
 share/doc/sqlite3/images/shane1.jpg
@@ -455,9 +458,11 @@ share/doc/sqlite3/lang_transaction.html
 share/doc/sqlite3/lang_update.html
 share/doc/sqlite3/lang_vacuum.html
 share/doc/sqlite3/limits.html
+share/doc/sqlite3/loadext.html
 share/doc/sqlite3/lockingv3.html
 share/doc/sqlite3/malloc.html
 share/doc/sqlite3/mingw.html
+share/doc/sqlite3/mmap.html
 share/doc/sqlite3/mostdeployed.html
 share/doc/sqlite3/news.html
 share/doc/sqlite3/nulls.html
@@ -470,6 +475,7 @@ share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
 share/doc/sqlite3/privatebranch.html
 share/doc/sqlite3/psow.html
+share/doc/sqlite3/queryplanner-ng.html
 share/doc/sqlite3/queryplanner.html
 share/doc/sqlite3/quickstart.html
 share/doc/sqlite3/releaselog/3_0_0.html
@@ -574,6 +580,7 @@ share/doc/sqlite3/releaselog/3_7_15_2.html
 share/doc/sqlite3/releaselog/3_7_16.html
 share/doc/sqlite3/releaselog/3_7_16_1.html
 share/doc/sqlite3/releaselog/3_7_16_2.html
+share/doc/sqlite3/releaselog/3_7_17.html
 share/doc/sqlite3/releaselog/3_7_2.html
 share/doc/sqlite3/releaselog/3_7_3.html
 share/doc/sqlite3/releaselog/3_7_4.html
