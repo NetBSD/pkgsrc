@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/14 18:47:29 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/20 11:51:26 jperkin Exp $
 #
 
 DISTNAME=	lasem-0.4.1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config bison intltool flex gmake
+USE_TOOLS+=	bison flex gettext gmake intltool pkg-config
 TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	lasem.pc.in
