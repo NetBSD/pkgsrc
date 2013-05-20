@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/02/07 20:06:44 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2013/05/20 07:10:39 ryoon Exp $
 
-SHA1 (dulwich-0.8.3.tar.gz) = d22041d2b7be93d11042087749d4203062b6d12e
-RMD160 (dulwich-0.8.3.tar.gz) = 915ad05a7653d88439c287b1a49a2e44122fdcf8
-Size (dulwich-0.8.3.tar.gz) = 200480 bytes
+SHA1 (dulwich-0.8.7.tar.gz) = 0db3bf228ff601abd36a22c42e20eed4aae313e9
+RMD160 (dulwich-0.8.7.tar.gz) = 408044a918a422df608b701d9bc9ac0fa42721f8
+Size (dulwich-0.8.7.tar.gz) = 208639 bytes
