@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/05/20 14:59:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/20 15:03:51 fhajny Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -17,6 +17,7 @@ CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
 CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
 PLIST.embedded=		yes
 .else
+CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=OFF
 # We only need readline to placate the configure script if we don't build
 # the embedded server as it is the only binary linked against "readline".
 BUILDLINK_DEPMETHOD.readline=	build
