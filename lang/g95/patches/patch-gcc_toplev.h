@@ -1,8 +1,8 @@
-$NetBSD: patch-.._gcc-4.0.3_gcc_toplev.h,v 1.1 2013/03/02 18:05:46 joerg Exp $
+$NetBSD: patch-gcc_toplev.h,v 1.1 2013/05/20 05:47:34 adam Exp $
 
---- ../gcc-4.0.3/gcc/toplev.h.orig	2013-03-01 10:43:23.000000000 +0000
-+++ ../gcc-4.0.3/gcc/toplev.h
-@@ -180,13 +180,13 @@ extern int floor_log2                  (
+--- ../gcc-4.1.2/gcc/toplev.h.orig	2005-09-09 00:47:05.000000000 +0000
++++ ../gcc-4.1.2/gcc/toplev.h
+@@ -171,13 +171,13 @@ extern int floor_log2                  (
  #  define CTZ_HWI __builtin_ctz
  # endif
  
