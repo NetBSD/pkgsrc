@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/05/09 07:39:13 adam Exp $
+# $NetBSD: Makefile,v 1.50 2013/05/20 11:08:18 jperkin Exp $
 
 DISTNAME=	kdepimlibs-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -11,6 +11,9 @@ COMMENT=	Support libraries for PIM for the KDE integrated X11 desktop
 CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDEPimLibsDependencies.cmake
 
 CMAKE_ARGS+=	-DKDE4_BUILD_TESTS:BOOL=OFF
+
+# for strcasecmp
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 REPLACE_PERL+= mailtransport/kconf_update/migrate-transports.pl
 
