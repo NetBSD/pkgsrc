@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 10:51:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/21 12:49:35 markd Exp $
 bin/nepomuk-simpleresource-rcgen
 bin/nepomuk2-rcgen
 bin/nepomukbackup
@@ -123,6 +123,7 @@ lib/libnepomukcommon.so
 lib/libnepomukcore.so
 lib/libnepomukcore.so.4
 lib/libnepomukcore.so.${PKGVERSION}
+lib/libnepomukextractor.so
 share/applications/kde4/nepomukbackup.desktop
 share/applications/kde4/nepomukcleaner.desktop
 share/dbus-1/interfaces/org.kde.NepomukServer.xml

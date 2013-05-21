@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/13 23:08:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:38 markd Exp $
 man/fr/man1/adddebug.1
 man/fr/man1/ark.1
 man/fr/man1/cheatmake.1
@@ -35,6 +35,7 @@ man/fr/man1/ktouch.1
 man/fr/man1/makekdewidgets.1
 man/fr/man1/okular.1
 man/fr/man1/plasmaengineexplorer.1
+man/fr/man1/plasmapkg.1
 man/fr/man1/po2xml.1
 man/fr/man1/preparetips.1
 man/fr/man1/pruneemptydirs.1
@@ -1431,6 +1432,9 @@ share/doc/kde/HTML/fr/marble/routing-5.png
 share/doc/kde/HTML/fr/marble/routing-6.png
 share/doc/kde/HTML/fr/marble/search-1.png
 share/doc/kde/HTML/fr/marble/search-2.png
+share/doc/kde/HTML/fr/okteta/common
+share/doc/kde/HTML/fr/okteta/index.cache.bz2
+share/doc/kde/HTML/fr/okteta/index.docbook
 share/doc/kde/HTML/fr/okular/annotation-properties.png
 share/doc/kde/HTML/fr/okular/annotations.png
 share/doc/kde/HTML/fr/okular/bookmark-management.png
@@ -1530,6 +1534,9 @@ share/doc/kde/HTML/fr/picmi/index.docbook
 share/doc/kde/HTML/fr/plasma-desktop/common
 share/doc/kde/HTML/fr/plasma-desktop/index.cache.bz2
 share/doc/kde/HTML/fr/plasma-desktop/index.docbook
+share/doc/kde/HTML/fr/rocs/common
+share/doc/kde/HTML/fr/rocs/index.cache.bz2
+share/doc/kde/HTML/fr/rocs/index.docbook
 share/doc/kde/HTML/fr/sonnet/common
 share/doc/kde/HTML/fr/sonnet/index.cache.bz2
 share/doc/kde/HTML/fr/sonnet/index.docbook
@@ -1728,7 +1735,6 @@ share/locale/fr/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/fr/LC_MESSAGES/kcm_emoticons.mo
 share/locale/fr/LC_MESSAGES/kcm_infobase.mo
 share/locale/fr/LC_MESSAGES/kcm_infosummary.mo
-share/locale/fr/LC_MESSAGES/kcm_krfb.mo
 share/locale/fr/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/fr/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/fr/LC_MESSAGES/kcm_memory.mo
@@ -1849,7 +1855,6 @@ share/locale/fr/LC_MESSAGES/kig.mo
 share/locale/fr/LC_MESSAGES/kigo.mo
 share/locale/fr/LC_MESSAGES/killbots.mo
 share/locale/fr/LC_MESSAGES/kimagemapeditor.mo
-share/locale/fr/LC_MESSAGES/kinetd.mo
 share/locale/fr/LC_MESSAGES/kinfocenter.mo
 share/locale/fr/LC_MESSAGES/kio4.mo
 share/locale/fr/LC_MESSAGES/kio_activities.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:51:56 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:35 markd Exp $
 
-SHA1 (marble-4.10.2.tar.xz) = e4ba6aaaa5f861f715a7c4881dd78ed1deb03a36
-RMD160 (marble-4.10.2.tar.xz) = 21ccee8ac9792c1c2920634a82c2eefd00d2f186
-Size (marble-4.10.2.tar.xz) = 19466508 bytes
+SHA1 (marble-4.10.3.tar.xz) = 814fffa64d91bec647c3f7e5cb130a2027dd6815
+RMD160 (marble-4.10.3.tar.xz) = f8fe39d776d6d67b1f2b42bb17a8cf6868f08354
+Size (marble-4.10.3.tar.xz) = 19449908 bytes

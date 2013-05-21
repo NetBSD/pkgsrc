@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/03 12:03:42 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
 
-SHA1 (ktuberling-4.10.2.tar.xz) = e2431b70470c37b9f46514fc62932ac7f225f6b7
-RMD160 (ktuberling-4.10.2.tar.xz) = faff7cd3227e4b5a50e5f09a38805760ed7a70d9
-Size (ktuberling-4.10.2.tar.xz) = 4298156 bytes
+SHA1 (ktuberling-4.10.3.tar.xz) = 223838a37bcdc0b1b45ef04140437a1a59b1c2a8
+RMD160 (ktuberling-4.10.3.tar.xz) = ac2b26222bb0a5ab918e2bd4a04306247e08b4ea
+Size (ktuberling-4.10.3.tar.xz) = 4297136 bytes

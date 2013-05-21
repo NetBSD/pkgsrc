@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2013/04/03 10:52:07 markd Exp $
+$NetBSD: distinfo,v 1.25 2013/05/21 12:49:32 markd Exp $
 
-SHA1 (gwenview-4.10.2.tar.xz) = 6872a50b2fda3bed717e0fc1b367b02ad80550dd
-RMD160 (gwenview-4.10.2.tar.xz) = 5b0e75f5867bca7e6964af98275a277e797a608d
-Size (gwenview-4.10.2.tar.xz) = 2184620 bytes
+SHA1 (gwenview-4.10.3.tar.xz) = 1b020d9689a3b401f254ae6f26bc0f1e2455e11e
+RMD160 (gwenview-4.10.3.tar.xz) = 4c459a980626403ed20c03b1467d012bc292db78
+Size (gwenview-4.10.3.tar.xz) = 2184520 bytes
 SHA1 (patch-lib_CMakeLists.txt) = d5f94257c76eaa2ff366449314b7f7cfdf4af21a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/14 01:23:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:40 markd Exp $
 share/kde/apps/kvtml/pa/animals.kvtml
 share/kde/apps/kvtml/pa/clothing.kvtml
 share/kde/apps/kvtml/pa/computers.kvtml
@@ -161,7 +161,6 @@ share/locale/pa/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/pa/LC_MESSAGES/kcm_emoticons.mo
 share/locale/pa/LC_MESSAGES/kcm_infobase.mo
 share/locale/pa/LC_MESSAGES/kcm_infosummary.mo
-share/locale/pa/LC_MESSAGES/kcm_krfb.mo
 share/locale/pa/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/pa/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/pa/LC_MESSAGES/kcm_memory.mo
@@ -276,7 +275,6 @@ share/locale/pa/LC_MESSAGES/khtmlsettingsplugin.mo
 share/locale/pa/LC_MESSAGES/kiconfinder.mo
 share/locale/pa/LC_MESSAGES/kig.mo
 share/locale/pa/LC_MESSAGES/kimagemapeditor.mo
-share/locale/pa/LC_MESSAGES/kinetd.mo
 share/locale/pa/LC_MESSAGES/kinfocenter.mo
 share/locale/pa/LC_MESSAGES/kio4.mo
 share/locale/pa/LC_MESSAGES/kio_activities.mo

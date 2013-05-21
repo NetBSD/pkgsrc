@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/03 10:51:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/21 12:49:37 markd Exp $
 bin/dolphin
 bin/fsview
 bin/kbookmarkmerger
@@ -85,7 +85,7 @@ lib/libkdeinit4_kfmclient.so
 lib/libkdeinit4_konqueror.so
 lib/libkonq.so
 lib/libkonq.so.5
-lib/libkonq.so.5.10.2
+lib/libkonq.so.5.10.3
 lib/libkonqsidebarplugin.so
 lib/libkonqsidebarplugin.so.4
 lib/libkonqsidebarplugin.so.${PKGVERSION}

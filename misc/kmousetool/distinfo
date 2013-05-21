@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:51:53 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:34 markd Exp $
 
-SHA1 (kmousetool-4.10.2.tar.xz) = d6778d9393b0a1cfa597565bc77771b78d98422f
-RMD160 (kmousetool-4.10.2.tar.xz) = a356e43e4204900e9649b10bc8d5d98b5114a3b9
-Size (kmousetool-4.10.2.tar.xz) = 43780 bytes
+SHA1 (kmousetool-4.10.3.tar.xz) = 8314f6913059a7f012896be80705893876d1eb37
+RMD160 (kmousetool-4.10.3.tar.xz) = 39c9880efff0522f3b4e4fe82556af2aaa5c0d27
+Size (kmousetool-4.10.3.tar.xz) = 43892 bytes

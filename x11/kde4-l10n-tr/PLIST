@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/13 23:16:47 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:41 markd Exp $
 man/tr/man1/checkXML.1
 man/tr/man1/dragon.1
 man/tr/man7/kdeoptions.7
@@ -267,7 +267,6 @@ share/locale/tr/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/tr/LC_MESSAGES/kcm_emoticons.mo
 share/locale/tr/LC_MESSAGES/kcm_infobase.mo
 share/locale/tr/LC_MESSAGES/kcm_infosummary.mo
-share/locale/tr/LC_MESSAGES/kcm_krfb.mo
 share/locale/tr/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/tr/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/tr/LC_MESSAGES/kcm_memory.mo
@@ -388,7 +387,6 @@ share/locale/tr/LC_MESSAGES/kig.mo
 share/locale/tr/LC_MESSAGES/kigo.mo
 share/locale/tr/LC_MESSAGES/killbots.mo
 share/locale/tr/LC_MESSAGES/kimagemapeditor.mo
-share/locale/tr/LC_MESSAGES/kinetd.mo
 share/locale/tr/LC_MESSAGES/kinfocenter.mo
 share/locale/tr/LC_MESSAGES/kio4.mo
 share/locale/tr/LC_MESSAGES/kio_activities.mo

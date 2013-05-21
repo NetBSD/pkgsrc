@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/14 00:06:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:40 markd Exp $
 share/doc/kde/HTML/ro/common/fdl-translated.html
 share/doc/kde/HTML/ro/common/gpl-translated.html
 share/doc/kde/HTML/ro/common/kde-localised.css
@@ -215,7 +215,6 @@ share/locale/ro/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/ro/LC_MESSAGES/kcm_emoticons.mo
 share/locale/ro/LC_MESSAGES/kcm_infobase.mo
 share/locale/ro/LC_MESSAGES/kcm_infosummary.mo
-share/locale/ro/LC_MESSAGES/kcm_krfb.mo
 share/locale/ro/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/ro/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/ro/LC_MESSAGES/kcm_memory.mo
@@ -335,7 +334,6 @@ share/locale/ro/LC_MESSAGES/kig.mo
 share/locale/ro/LC_MESSAGES/kigo.mo
 share/locale/ro/LC_MESSAGES/killbots.mo
 share/locale/ro/LC_MESSAGES/kimagemapeditor.mo
-share/locale/ro/LC_MESSAGES/kinetd.mo
 share/locale/ro/LC_MESSAGES/kinfocenter.mo
 share/locale/ro/LC_MESSAGES/kio4.mo
 share/locale/ro/LC_MESSAGES/kio_activities.mo
