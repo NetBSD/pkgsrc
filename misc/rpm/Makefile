@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/10/08 09:57:36 asau Exp $
+# $NetBSD: Makefile,v 1.76 2013/05/21 07:57:50 sbd Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	8
@@ -19,6 +19,9 @@ MAKE_JOBS_SAFE=		no
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
+
+GMAKE_REQD+=		3.82nb1
+GMAKE=			${TOOLS_GMAKE}
 
 # this is needed in addition of USE_PKGLOCALEDIR
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
