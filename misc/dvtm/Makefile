@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2013/02/16 09:28:59 shattered Exp $
-#
+# $NetBSD: Makefile,v 1.9 2013/05/21 12:34:02 adam Exp $
 
-DISTNAME=	dvtm-0.8
+DISTNAME=	dvtm-0.9
 CATEGORIES=	misc
 MASTER_SITES=	http://www.brain-dump.org/projects/dvtm/
 
@@ -10,8 +9,8 @@ HOMEPAGE=	http://www.brain-dump.org/projects/dvtm/
 COMMENT=	Dynamic virtual terminal manager
 LICENSE=	mit
 
-NO_CONFIGURE=		yes
 USE_LANGUAGES=		c99
+NO_CONFIGURE=		yes
 CURSES_DEFAULT=		ncurses
 
 SUBST_CLASSES+=		config

@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2009/02/19 19:22:22 tonio Exp $
+$NetBSD: patch-aa,v 1.5 2013/05/21 12:34:02 adam Exp $
 
 Do not use rudimentary mkdir(1), cp(1) and chmod(1): install(1) is
 simpler and more elegant to install binaries.
 
---- Makefile.orig	2009-02-08 22:52:37.000000000 +0100
+--- Makefile.orig	2013-04-03 11:18:46.000000000 +0000
 +++ Makefile
-@@ -20,6 +20,7 @@ ${OBJ}: config.h config.mk
+@@ -23,6 +23,7 @@ ${OBJ}: config.h config.mk
  dvtm: ${OBJ}
  	@echo CC -o $@
  	@${CC} -o $@ ${OBJ} ${LDFLAGS}
@@ -13,7 +13,7 @@ simpler and more elegant to install binaries.
  
  debug: clean
  	@make CFLAGS='${DEBUG_CFLAGS}'
-@@ -40,18 +41,12 @@ dist: clean
+@@ -42,20 +43,13 @@ dist: clean
  	@rm -rf dvtm-${VERSION}
  
  install: dvtm
@@ -33,6 +33,8 @@ simpler and more elegant to install binaries.
 -	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/dvtm.1
 +	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
 +	${BSD_INSTALL_MAN} dvtm.1.out ${DESTDIR}${MANPREFIX}/man1/dvtm.1
+ 	@echo installing terminfo description
+-	@tic -s dvtm.info
  
  uninstall:
  	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
