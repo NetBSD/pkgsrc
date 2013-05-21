@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.727 2013/04/27 10:44:38 rodent Exp $
+# $NetBSD: Makefile,v 1.728 2013/05/21 15:04:09 kleink Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -601,6 +601,7 @@ SUBDIR+=	py-libxslt
 SUBDIR+=	py-lxml
 SUBDIR+=	py-markdown
 SUBDIR+=	py-markdown2
+SUBDIR+=	py-markupsafe
 SUBDIR+=	py-mecab
 SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-prettytable
