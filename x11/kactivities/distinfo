@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:51:45 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:37 markd Exp $
 
-SHA1 (kactivities-4.10.2.tar.xz) = bde79ed3db93d5fa72e1081a6638c5cb777f495e
-RMD160 (kactivities-4.10.2.tar.xz) = 04e63600ceddd0788b2f0ba63816b0b07a209643
-Size (kactivities-4.10.2.tar.xz) = 108668 bytes
+SHA1 (kactivities-4.10.3.tar.xz) = 0c00782aea70ad1963e303b1eec55482265f0b37
+RMD160 (kactivities-4.10.3.tar.xz) = 2ef5816eb99a72777b16138d0cf90457eb327efc
+Size (kactivities-4.10.3.tar.xz) = 108600 bytes

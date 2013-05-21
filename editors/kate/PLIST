@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/03 10:52:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/21 12:49:28 markd Exp $
 bin/kate
 bin/kwrite
 include/kate/application.h
@@ -423,6 +423,7 @@ share/kde/config/katemoderc
 share/kde/config/katerc
 share/kde/config/kateschemarc
 share/kde/config/katesyntaxhighlightingrc
+share/kde/config/ktexteditor_codesnippets_core.knsrc
 share/kde4/services/kate_kttsd.desktop
 share/kde4/services/katebacktracebrowserplugin.desktop
 share/kde4/services/katebuildplugin.desktop

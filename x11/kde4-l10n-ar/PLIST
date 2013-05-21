@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/06 09:38:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:37 markd Exp $
 share/kde/apps/klettres/ar/alpha/a-01.ogg
 share/kde/apps/klettres/ar/alpha/a-02.ogg
 share/kde/apps/klettres/ar/alpha/a-03.ogg
@@ -128,7 +128,6 @@ share/locale/ar/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/ar/LC_MESSAGES/kcm_emoticons.mo
 share/locale/ar/LC_MESSAGES/kcm_infobase.mo
 share/locale/ar/LC_MESSAGES/kcm_infosummary.mo
-share/locale/ar/LC_MESSAGES/kcm_krfb.mo
 share/locale/ar/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/ar/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/ar/LC_MESSAGES/kcm_memory.mo
@@ -242,7 +241,6 @@ share/locale/ar/LC_MESSAGES/khtmlsettingsplugin.mo
 share/locale/ar/LC_MESSAGES/kiconfinder.mo
 share/locale/ar/LC_MESSAGES/kig.mo
 share/locale/ar/LC_MESSAGES/kimagemapeditor.mo
-share/locale/ar/LC_MESSAGES/kinetd.mo
 share/locale/ar/LC_MESSAGES/kinfocenter.mo
 share/locale/ar/LC_MESSAGES/kio4.mo
 share/locale/ar/LC_MESSAGES/kio_akonadi.mo

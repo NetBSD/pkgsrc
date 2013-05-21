@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/14 01:22:04 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:40 markd Exp $
 man/pl/man1/kalzium.1
 man/pl/man1/kbookmarkmerger.1
 man/pl/man1/kbruch.1
@@ -998,7 +998,6 @@ share/locale/pl/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/pl/LC_MESSAGES/kcm_emoticons.mo
 share/locale/pl/LC_MESSAGES/kcm_infobase.mo
 share/locale/pl/LC_MESSAGES/kcm_infosummary.mo
-share/locale/pl/LC_MESSAGES/kcm_krfb.mo
 share/locale/pl/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/pl/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/pl/LC_MESSAGES/kcm_memory.mo
@@ -1119,7 +1118,6 @@ share/locale/pl/LC_MESSAGES/kig.mo
 share/locale/pl/LC_MESSAGES/kigo.mo
 share/locale/pl/LC_MESSAGES/killbots.mo
 share/locale/pl/LC_MESSAGES/kimagemapeditor.mo
-share/locale/pl/LC_MESSAGES/kinetd.mo
 share/locale/pl/LC_MESSAGES/kinfocenter.mo
 share/locale/pl/LC_MESSAGES/kio4.mo
 share/locale/pl/LC_MESSAGES/kio_activities.mo

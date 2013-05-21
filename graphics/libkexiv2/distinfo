@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2013/04/03 10:51:54 markd Exp $
+$NetBSD: distinfo,v 1.14 2013/05/21 12:49:33 markd Exp $
 
-SHA1 (libkexiv2-4.10.2.tar.xz) = 02dce6eaf48c14f134f220eeed494d74d41f7226
-RMD160 (libkexiv2-4.10.2.tar.xz) = 4263958e9304540106b72da8a0af015d35b8cda0
-Size (libkexiv2-4.10.2.tar.xz) = 134504 bytes
+SHA1 (libkexiv2-4.10.3.tar.xz) = 57f3d52c8ff6b58af55fb83d38d7479688bd681b
+RMD160 (libkexiv2-4.10.3.tar.xz) = 955c1dc8f31720889a28da4999e5903d9a72e17b
+Size (libkexiv2-4.10.3.tar.xz) = 134424 bytes

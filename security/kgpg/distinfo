@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:52:17 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:36 markd Exp $
 
-SHA1 (kgpg-4.10.2.tar.xz) = fbe8df63cbfbff616493267253b03e153e2bbc40
-RMD160 (kgpg-4.10.2.tar.xz) = c6e16ac7183e9735085afbf32d850622d20a5085
-Size (kgpg-4.10.2.tar.xz) = 814584 bytes
+SHA1 (kgpg-4.10.3.tar.xz) = ba92c6edcf6ce857fec7969aab5a8b8afce2d43c
+RMD160 (kgpg-4.10.3.tar.xz) = d1fd4813dab4f12da144f88c1bf3f8e6a9cc0b57
+Size (kgpg-4.10.3.tar.xz) = 815272 bytes

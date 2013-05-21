@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:51:51 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:37 markd Exp $
 
-SHA1 (konsole-4.10.2.tar.xz) = 171824f4d06c66a4373274da01cad84853bec821
-RMD160 (konsole-4.10.2.tar.xz) = 52c0b634ee9f40b9cb5add8eaa91e1c416a23644
-Size (konsole-4.10.2.tar.xz) = 447576 bytes
+SHA1 (konsole-4.10.3.tar.xz) = fd5d00103c2d6f8c446286f997edd286a719e1e9
+RMD160 (konsole-4.10.3.tar.xz) = 9bd784a1fdc8810cf7aad2f820b60206c1b4c3d9
+Size (konsole-4.10.3.tar.xz) = 445852 bytes
 SHA1 (patch-src_ProcessInfo.cpp) = 3a1e078e344bdb22c092f8ce9ee18a5e2a8c5eef

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25 2013/04/03 10:51:47 markd Exp $
+$NetBSD: distinfo,v 1.26 2013/05/21 12:49:34 markd Exp $
 
-SHA1 (kdepimlibs-4.10.2.tar.xz) = ab163597d36b5457f9bcb0328f21c35777fffc34
-RMD160 (kdepimlibs-4.10.2.tar.xz) = bdcd31a2c3388886196b8b68e805a9672a55f998
-Size (kdepimlibs-4.10.2.tar.xz) = 2808532 bytes
+SHA1 (kdepimlibs-4.10.3.tar.xz) = 7ede01b2f169c066c98f553606e99817d83f252b
+RMD160 (kdepimlibs-4.10.3.tar.xz) = c2a79af34f5d929350f4ea861d6a587b2e5a25c4
+Size (kdepimlibs-4.10.3.tar.xz) = 2966380 bytes
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
 SHA1 (patch-kalarmcal_CMakeLists.txt) = 8237552f350f214c3380bf0fc54d19d36765c9b9
 SHA1 (patch-kblog_CMakeLists.txt) = 183d17f2de6f5f4f2f6bd29666b2a35d22c055aa

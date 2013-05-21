@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/03 12:03:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/05/21 12:49:32 markd Exp $
 
-SHA1 (palapeli-4.10.2.tar.xz) = df69d8a792aa1283c4842b2e26d24c37c284380a
-RMD160 (palapeli-4.10.2.tar.xz) = 185bd0589b96537b73ab6a4d2f586cff3e64a401
-Size (palapeli-4.10.2.tar.xz) = 1737744 bytes
+SHA1 (palapeli-4.10.3.tar.xz) = 251df2913548628f245516341a6c91a7edc1632c
+RMD160 (palapeli-4.10.3.tar.xz) = a9c0bf1fe99409e291c0b014e9309f704934d70e
+Size (palapeli-4.10.3.tar.xz) = 1738436 bytes

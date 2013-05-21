@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/03 12:03:40 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
 
-SHA1 (kshisen-4.10.2.tar.xz) = df41aac7d3048ccfdbd55b62872643c7325b9722
-RMD160 (kshisen-4.10.2.tar.xz) = 7e00e5b319c0d5d94715f3c4ddd0b7dfbfa27e9a
-Size (kshisen-4.10.2.tar.xz) = 145448 bytes
+SHA1 (kshisen-4.10.3.tar.xz) = 36f8e99e64d9fd29e6b264c9c83fda38f5f09423
+RMD160 (kshisen-4.10.3.tar.xz) = dd8f86143b477bc413b7b5d18c60e5a9ea2a793e
+Size (kshisen-4.10.3.tar.xz) = 145564 bytes
