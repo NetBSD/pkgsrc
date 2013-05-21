@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2004/11/05 11:51:35 adam Exp $
+$NetBSD: patch-ad,v 1.9 2013/05/21 14:38:40 hans Exp $
 
---- src/main.c.orig	2004-10-25 01:32:51.000000000 +0000
+--- src/main.c.orig	2013-01-09 21:42:49.000000000 +0000
 +++ src/main.c
-@@ -28,6 +28,7 @@
+@@ -31,6 +31,7 @@
  #include <sys/stat.h>
  #include <sys/types.h>
  #include <fcntl.h>
@@ -10,16 +10,16 @@ $NetBSD: patch-ad,v 1.8 2004/11/05 11:51:35 adam Exp $
  
  #include <X11/Xlib.h>
  #include <X11/Xutil.h>
-@@ -233,6 +234,12 @@ SetupEnvironment(WScreen *scr)
+@@ -315,6 +316,12 @@ void SetupEnvironment(WScreen * scr)
  {
-     char *tmp, *ptr;
-     char buf[16];
-+    struct sigaction sa;
+ 	char *tmp, *ptr;
+ 	char buf[16];
++	struct sigaction sa;
 +
-+    sa.sa_handler = SIG_DFL;
-+    sigemptyset(&sa.sa_mask);
-+    /* sa.sa_mask = 0; */
-+    sigaction(SIGPIPE, &sa, NULL);
++	sa.sa_handler = SIG_DFL;
++	sigemptyset(&sa.sa_mask);
++	/* sa.sa_mask = 0; */
++	sigaction(SIGPIPE, &sa, NULL);
  
-     if (multiHead) {
-         int len = strlen(DisplayName)+64;
+ 	if (multiHead) {
+ 		int len = strlen(DisplayName) + 64;

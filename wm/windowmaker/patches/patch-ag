@@ -1,19 +1,16 @@
-$NetBSD: patch-ag,v 1.6 2007/06/21 00:00:23 minskim Exp $
+$NetBSD: patch-ag,v 1.7 2013/05/21 14:38:40 hans Exp $
 
---- WINGs/Examples/Makefile.in.orig	2007-06-20 16:28:40.000000000 -0700
+--- WINGs/Examples/Makefile.in.orig	2013-01-09 21:43:06.000000000 +0000
 +++ WINGs/Examples/Makefile.in
-@@ -127,12 +127,12 @@ puzzle_DEPENDENCIES = $(top_builddir)/WI
+@@ -262,9 +262,9 @@ colorpick_DEPENDENCIES = $(top_builddir)
+ fontl_DEPENDENCIES = $(top_builddir)/WINGs/libWINGs.la
+ puzzle_DEPENDENCIES = $(top_builddir)/WINGs/libWINGs.la
+ connect_DEPENDENCIES = $(top_builddir)/WINGs/libWUtil.la
+-connect_LDADD = $(top_builddir)/WINGs/libWUtil.la @LIBRARY_SEARCH_PATH@ @INTLIBS@
++connect_LDADD = $(top_builddir)/WINGs/libWUtil.la @LIBRARY_SEARCH_PATH@ @INTLIBS@ @XLIBS@
+ server_DEPENDENCIES = $(top_builddir)/WINGs/libWUtil.la
+-server_LDADD = $(top_builddir)/WINGs/libWUtil.la @LIBRARY_SEARCH_PATH@ @INTLIBS@
++server_LDADD = $(top_builddir)/WINGs/libWUtil.la @LIBRARY_SEARCH_PATH@ @INTLIBS@ @XLIBS@
+ AM_CPPFLAGS = -I$(top_srcdir)/WINGs -I$(top_srcdir)/wrlib -I$(top_srcdir)/src \
+ 	-DRESOURCE_PATH=\"$(datadir)/WINGs\" @HEADER_SEARCH_PATH@
  
- connect_DEPENDENCIES = $(top_builddir)/WINGs/libWUtil.a
- 
--connect_LDADD = $(top_builddir)/WINGs/libWUtil.a @LIBRARY_SEARCH_PATH@ 	@NETLIBS@ @INTLIBS@
-+connect_LDADD = $(top_builddir)/WINGs/libWUtil.a @LIBRARY_SEARCH_PATH@ 	@NETLIBS@ @INTLIBS@ @XLIBS@
- 
- 
- server_DEPENDENCIES = $(top_builddir)/WINGs/libWUtil.a
- 
--server_LDADD = $(top_builddir)/WINGs/libWUtil.a @LIBRARY_SEARCH_PATH@ 	@NETLIBS@ @INTLIBS@
-+server_LDADD = $(top_builddir)/WINGs/libWUtil.a @LIBRARY_SEARCH_PATH@ 	@NETLIBS@ @INTLIBS@ @XLIBS@
- 
- 
- INCLUDES = -I$(top_srcdir)/WINGs -I$(top_srcdir)/wrlib -I$(top_srcdir)/src 	-DRESOURCE_PATH=\"$(datadir)/WINGs\" @HEADER_SEARCH_PATH@ -DDEBUG

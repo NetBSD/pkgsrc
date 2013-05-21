@@ -1,0 +1,29 @@
+$NetBSD: patch-doc_cs_Makefile.in,v 1.1 2013/05/21 14:38:40 hans Exp $
+
+--- doc/cs/Makefile.in.orig	2013-05-14 22:33:35.000000000 +0000
++++ doc/cs/Makefile.in
+@@ -237,15 +237,15 @@ top_srcdir = @top_srcdir@
+ wprefs_bindir = @wprefs_bindir@
+ wprefs_datadir = @wprefs_datadir@
+ man_MANS = \
+-	geticonset.1x \
+-	setstyle.1x \
+-	wxpaste.1x \
+-	getstyle.1x \
+-	wdwrite.1x \
+-	wmsetbg.1x \
+-	seticons.1x \
+-	wmaker.1x \
+-	wxcopy.1x
++	geticonset.1 \
++	setstyle.1 \
++	wxpaste.1 \
++	getstyle.1 \
++	wdwrite.1 \
++	wmsetbg.1 \
++	seticons.1 \
++	wmaker.1 \
++	wxcopy.1
+ 
+ EXTRA_DIST = $(man_MANS)
+ all: all-am

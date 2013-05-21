@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.97 2013/02/16 11:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2013/05/21 14:38:40 hans Exp $
 
-DISTNAME=	WindowMaker-0.92.0
+DISTNAME=	WindowMaker-0.95.4
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	21
 CATEGORIES=	x11 wm windowmaker
-MASTER_SITES=	http://windowmaker.info/pub/source/release/ \
-	ftp://ftp.dti.ad.jp/pub/X/WindowMaker/source/release/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://windowmaker.info/pub/source/release/
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.info/
@@ -23,7 +21,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-gnustepdir=${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
-CONFIGURE_ENV+=		LINGUAS=yes
+CONFIGURE_ENV+=		LINGUAS="bg ca cs cz da de el es et fi fr gl he hr hu it ja ko nl ms no pl pt ro ru se sk sl sv tr zh_CN zh_TW"
 CONFIGURE_ENV+=		CPP_PATH=${CPP:Q}
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		util/wkdemenu.pl
@@ -56,12 +54,9 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
 #
-#	kde		enable support for kde/kwm window manager hints
-#	gnome		enable support for GNOME window manager hints
-#	openlook	enable support for OPEN LOOK(tm) window manager hints
 #	vdesktop	enable support for virtual desktop.
 
-WINDOWMAKER_OPTIONS?=	gnome kde openlook vdesktop
+WINDOWMAKER_OPTIONS?=	vdesktop
 
 BUILD_DEFS+=		WINDOWMAKER_OPTIONS
 
@@ -107,6 +102,7 @@ post-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
