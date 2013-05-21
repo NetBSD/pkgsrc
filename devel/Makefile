@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1743 2013/05/11 22:31:46 alnsn Exp $
+# $NetBSD: Makefile,v 1.1744 2013/05/21 14:35:37 imil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1393,6 +1393,7 @@ SUBDIR+=	py-pytemplate
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-quixote
 SUBDIR+=	py-readline
+SUBDIR+=	py-requests
 SUBDIR+=	py-rope
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_trial
