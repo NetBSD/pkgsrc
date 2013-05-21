@@ -1,19 +1,17 @@
-$NetBSD: distinfo,v 1.30 2011/05/17 10:36:45 hans Exp $
+$NetBSD: distinfo,v 1.31 2013/05/21 14:38:40 hans Exp $
 
-SHA1 (WindowMaker-0.92.0.tar.bz2) = 4f7fea6f40b9ba9f870d2e2f0ce46274750edb2c
-RMD160 (WindowMaker-0.92.0.tar.bz2) = c161eee64092fafb4868181fe2a0b6db96ed6de0
-Size (WindowMaker-0.92.0.tar.bz2) = 2202748 bytes
-SHA1 (patch-aa) = d62ab8e22f14888739717b628b7b20aaade686de
-SHA1 (patch-ab) = 533a22d64c30a27335a6abca5717047c6696adfb
-SHA1 (patch-ac) = 709866bb1db30a3d83fee6ad38f632bbbfd4fe71
-SHA1 (patch-ad) = 183b529289bbcb8dd7590296e546c166aef8da0a
-SHA1 (patch-ae) = 67c478b4fbee07ac832f59a7ad21bbbf137f5f86
-SHA1 (patch-af) = d754e2a195f1d58ea8a55f2e7bb375d18dd67e5e
-SHA1 (patch-ag) = 706d6261f58bae4cd810a77fd65dfb57d870bcab
-SHA1 (patch-ah) = b391a48f723c62335448007a89c6958a7d922d86
+SHA1 (WindowMaker-0.95.4.tar.gz) = 1477954668012010cf7991cb8139205768205717
+RMD160 (WindowMaker-0.95.4.tar.gz) = 9316c30d9d2ebd1080711596ec1b97158997fa3a
+Size (WindowMaker-0.95.4.tar.gz) = 2789390 bytes
+SHA1 (patch-aa) = 5f463c922570ff3dc8fa7e35edd93416f9af1199
+SHA1 (patch-ab) = 794946828ede1816ea3b6a4c17f00465e1ae06c9
+SHA1 (patch-ac) = 0a2843e3f8e8456080082d1f3e57f58a5d440d18
+SHA1 (patch-ad) = ec668c0e40289e87e92ec85d26810ef358d2407a
+SHA1 (patch-ae) = 65d6df46e8ef6550be8be403a6b27a73ef4cc0f0
+SHA1 (patch-af) = 87c1ddd22f4afae10ae60f012d12a41de44b0f12
+SHA1 (patch-ag) = 4447310218e73ab0b78e563dabc9ce9614d68cfd
 SHA1 (patch-ai) = 44a6a63bad867e6bc614b58688d59aa610b8553b
-SHA1 (patch-aj) = 9d993770f77cd53d005b1f2c81baff49831fe96a
-SHA1 (patch-ak) = aca311941e7c2fa7860934cd029ff87fde96c8ff
-SHA1 (patch-al) = b900fcc52c3fb5b5184b28e22c29e111317ea7ad
-SHA1 (patch-am) = b25f546dc8192cfa910461e3dc5111703aecc586
-SHA1 (patch-ao) = bdff72c638f6bef666b46a8ad6300742fe3cb12d
+SHA1 (patch-aj) = 248d7088ee2ce861898a7474cde8a08f4b879ee9
+SHA1 (patch-ak) = 10ba26239b1d85746e42ac1fad983bc3cd11d0a7
+SHA1 (patch-doc_cs_Makefile.in) = ab0b42a60863fec8fba0de0e8a2ae74fa3cf8103
+SHA1 (patch-doc_ru_Makefile.in) = 7c0b861c6bbe457e8e55e0265335195b95bbe031
