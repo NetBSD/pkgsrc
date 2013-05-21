@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:52:24 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:33 markd Exp $
 
-SHA1 (kcalc-4.10.2.tar.xz) = 45f2a3eb557891e3c47a00dafb9ad3bd64bde4d8
-RMD160 (kcalc-4.10.2.tar.xz) = 863148b798a1ab09eb137545fd7ce8ce395ee3c8
-Size (kcalc-4.10.2.tar.xz) = 93980 bytes
+SHA1 (kcalc-4.10.3.tar.xz) = c80f91c2f41a60cca670c8cb1b5e2c395e935fac
+RMD160 (kcalc-4.10.3.tar.xz) = 6542004b478c6e3cf60131a1f8678808556dc80d
+Size (kcalc-4.10.3.tar.xz) = 93972 bytes
 SHA1 (patch-CMakeLists.txt) = 3267b41b6a6a25a18b3dc450747beedb2976b45e
 SHA1 (patch-knumber_knumber_float.cpp) = 413c778069c0d38272e67b00eaca1a76a933e5cb
 SHA1 (patch-knumber_tests_CMakeLists.txt) = 7d159f617903b778e65615cb73a81f40f1d262df

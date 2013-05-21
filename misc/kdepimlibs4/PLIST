@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/04/05 23:07:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/05/21 12:49:34 markd Exp $
 include/KDE/Akonadi/AgentBase
 include/KDE/Akonadi/AgentFactory
 include/KDE/Akonadi/AgentFilterProxyModel
@@ -1246,6 +1246,8 @@ share/kde/apps/libkholidays/plan2/holiday_lt_lt
 share/kde/apps/libkholidays/plan2/holiday_lu_fr
 share/kde/apps/libkholidays/plan2/holiday_lu_lb
 share/kde/apps/libkholidays/plan2/holiday_lv_lv
+share/kde/apps/libkholidays/plan2/holiday_ma_ar
+share/kde/apps/libkholidays/plan2/holiday_ma_fr
 share/kde/apps/libkholidays/plan2/holiday_mq_fr
 share/kde/apps/libkholidays/plan2/holiday_mx_es
 share/kde/apps/libkholidays/plan2/holiday_na_en-gb
@@ -1256,6 +1258,7 @@ share/kde/apps/libkholidays/plan2/holiday_no_nn
 share/kde/apps/libkholidays/plan2/holiday_nz_en-gb
 share/kde/apps/libkholidays/plan2/holiday_pa_en
 share/kde/apps/libkholidays/plan2/holiday_pa_es
+share/kde/apps/libkholidays/plan2/holiday_pe_es
 share/kde/apps/libkholidays/plan2/holiday_pf_fr
 share/kde/apps/libkholidays/plan2/holiday_pl_pl
 share/kde/apps/libkholidays/plan2/holiday_pt_pt
@@ -1270,6 +1273,8 @@ share/kde/apps/libkholidays/plan2/holiday_si_sl
 share/kde/apps/libkholidays/plan2/holiday_sk_sk
 share/kde/apps/libkholidays/plan2/holiday_sm_it
 share/kde/apps/libkholidays/plan2/holiday_th_en-gb
+share/kde/apps/libkholidays/plan2/holiday_tr_en-gb
+share/kde/apps/libkholidays/plan2/holiday_tr_tr
 share/kde/apps/libkholidays/plan2/holiday_ua_uk
 share/kde/apps/libkholidays/plan2/holiday_us_en-us
 share/kde/apps/libkholidays/plan2/holiday_uy_es
