@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/04/03 10:52:02 markd Exp $
+$NetBSD: distinfo,v 1.8 2013/05/21 12:49:35 markd Exp $
 
-SHA1 (kstars-4.10.2.tar.xz) = ce99c18862505eac3da729e666315d0b27daec1e
-RMD160 (kstars-4.10.2.tar.xz) = 9c4f209d2a8008544c04b74149268432e4b05695
-Size (kstars-4.10.2.tar.xz) = 12470500 bytes
+SHA1 (kstars-4.10.3.tar.xz) = 32490b846b468dc9a8393c0a70cb0d0e805163a8
+RMD160 (kstars-4.10.3.tar.xz) = bc37f90cb0590b87126b7b8a55ec922de00ee59e
+Size (kstars-4.10.3.tar.xz) = 12490412 bytes
 SHA1 (patch-kstars_skyobjects_ksmoon.cpp) = 23d31289ca18075afb38324b72ca41a1287aa9b3
