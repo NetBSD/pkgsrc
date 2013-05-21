@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1740 2013/05/21 19:52:15 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.1741 2013/05/21 20:58:29 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/py-markupsafe version 0.16 [kleink 2013-05-21]
 	Updated textproc/py-markupsafe to 0.17 [kleink 2013-05-21]
 	Updated textproc/py-jinja2 to 2.7 [kleink 2013-05-21]
+	Updated www/py-flask-admin to 1.0.6 [kleink 2013-05-21]
