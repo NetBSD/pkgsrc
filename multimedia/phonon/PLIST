@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/19 10:07:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/05/21 12:13:14 markd Exp $
 include/KDE/Phonon/AbstractAudioOutput
 include/KDE/Phonon/AbstractMediaStream
 include/KDE/Phonon/AbstractVideoOutput
@@ -68,6 +68,7 @@ include/phonon/EffectInterface
 include/phonon/EffectParameter
 include/phonon/EffectWidget
 include/phonon/Global
+include/phonon/GlobalDescriptionContainer
 include/phonon/MediaController
 include/phonon/MediaNode
 include/phonon/MediaObject
@@ -133,6 +134,7 @@ include/phonon/experimental/videoframe2.h
 include/phonon/experimental/videowidget.h
 include/phonon/experimental/visualization.h
 include/phonon/globalconfig.h
+include/phonon/globaldescriptioncontainer.h
 include/phonon/mediacontroller.h
 include/phonon/medianode.h
 include/phonon/mediaobject.h
@@ -155,6 +157,10 @@ include/phonon/videowidgetinterface.h
 include/phonon/volumefadereffect.h
 include/phonon/volumefaderinterface.h
 include/phonon/volumeslider.h
+lib/cmake/phonon/PhononConfig.cmake
+lib/cmake/phonon/PhononConfigVersion.cmake
+lib/cmake/phonon/PhononTargets-noconfig.cmake
+lib/cmake/phonon/PhononTargets.cmake
 lib/libphonon.so
 lib/libphonon.so.4
 lib/libphonon.so.${PKGVERSION}
@@ -165,14 +171,16 @@ lib/pkgconfig/phonon.pc
 qt4/mkspecs/modules/qt_phonon.pri
 qt4/plugins/designer/libphononwidgets.so
 share/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
-share/phonon-buildsystem/COPYING-CMAKE-SCRIPTS
-share/phonon-buildsystem/FindAutomoc4.cmake
-share/phonon-buildsystem/FindPackageHandleStandardArgs.cmake
-share/phonon-buildsystem/FindPhononInternal.cmake
-share/phonon-buildsystem/FindQt4.cmake
-share/phonon-buildsystem/MacroEnsureVersion.cmake
-share/phonon-buildsystem/MacroLogFeature.cmake
-share/phonon-buildsystem/MacroOptionalFindPackage.cmake
-share/phonon-buildsystem/MacroPushRequiredVars.cmake
-share/phonon-buildsystem/PhononMacros.cmake
-share/phonon-buildsystem/cmake_uninstall.cmake.in
+share/phonon/buildsystem/COPYING-CMAKE-SCRIPTS
+share/phonon/buildsystem/FindAutomoc4.cmake
+share/phonon/buildsystem/FindPackageHandleStandardArgs.cmake
+share/phonon/buildsystem/FindPhononInternal.cmake
+share/phonon/buildsystem/FindQt4.cmake
+share/phonon/buildsystem/MacroEnsureVersion.cmake
+share/phonon/buildsystem/MacroLogFeature.cmake
+share/phonon/buildsystem/MacroOptionalFindPackage.cmake
+share/phonon/buildsystem/MacroPushRequiredVars.cmake
+share/phonon/buildsystem/PhononMacros.cmake
+share/phonon/buildsystem/Qt4ConfigDependentSettings.cmake
+share/phonon/buildsystem/Qt4Macros.cmake
+share/phonon/buildsystem/cmake_uninstall.cmake.in
