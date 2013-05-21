@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/21 15:03:43 kleink Exp $
+
+SHA1 (MarkupSafe-0.16.tar.gz) = f2486fbc9c05bf1f401aef0febdc30b9fe34bbc6
+RMD160 (MarkupSafe-0.16.tar.gz) = f4659de412127f2dfe460a561e29e2217db630ae
+Size (MarkupSafe-0.16.tar.gz) = 11530 bytes
