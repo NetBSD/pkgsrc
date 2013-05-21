@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/13 00:01:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:38 markd Exp $
 man/es/man1/adddebug.1
 man/es/man1/ark.1
 man/es/man1/cheatmake.1
@@ -274,6 +274,9 @@ share/doc/kde/HTML/es/kcontrol/componentchooser/index.docbook
 share/doc/kde/HTML/es/kcontrol/cookies/common
 share/doc/kde/HTML/es/kcontrol/cookies/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/cookies/index.docbook
+share/doc/kde/HTML/es/kcontrol/cursortheme/common
+share/doc/kde/HTML/es/kcontrol/cursortheme/index.cache.bz2
+share/doc/kde/HTML/es/kcontrol/cursortheme/index.docbook
 share/doc/kde/HTML/es/kcontrol/desktop/common
 share/doc/kde/HTML/es/kcontrol/desktop/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/desktop/index.docbook
@@ -349,6 +352,9 @@ share/doc/kde/HTML/es/kcontrol/khtml-adblock/index.docbook
 share/doc/kde/HTML/es/kcontrol/khtml-behavior/common
 share/doc/kde/HTML/es/kcontrol/khtml-behavior/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/khtml-behavior/index.docbook
+share/doc/kde/HTML/es/kcontrol/khtml-general/common
+share/doc/kde/HTML/es/kcontrol/khtml-general/index.cache.bz2
+share/doc/kde/HTML/es/kcontrol/khtml-general/index.docbook
 share/doc/kde/HTML/es/kcontrol/khtml-java-js/common
 share/doc/kde/HTML/es/kcontrol/khtml-java-js/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/khtml-java-js/index.docbook
@@ -367,9 +373,15 @@ share/doc/kde/HTML/es/kcontrol/kwincompositing/index.docbook
 share/doc/kde/HTML/es/kcontrol/kwindecoration/common
 share/doc/kde/HTML/es/kcontrol/kwindecoration/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/kwindecoration/index.docbook
+share/doc/kde/HTML/es/kcontrol/kwinscreenedges/common
+share/doc/kde/HTML/es/kcontrol/kwinscreenedges/index.cache.bz2
+share/doc/kde/HTML/es/kcontrol/kwinscreenedges/index.docbook
 share/doc/kde/HTML/es/kcontrol/language/common
 share/doc/kde/HTML/es/kcontrol/language/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/language/index.docbook
+share/doc/kde/HTML/es/kcontrol/mouse/common
+share/doc/kde/HTML/es/kcontrol/mouse/index.cache.bz2
+share/doc/kde/HTML/es/kcontrol/mouse/index.docbook
 share/doc/kde/HTML/es/kcontrol/nepomuk/common
 share/doc/kde/HTML/es/kcontrol/nepomuk/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/nepomuk/index.docbook
@@ -1633,7 +1645,6 @@ share/locale/es/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/es/LC_MESSAGES/kcm_emoticons.mo
 share/locale/es/LC_MESSAGES/kcm_infobase.mo
 share/locale/es/LC_MESSAGES/kcm_infosummary.mo
-share/locale/es/LC_MESSAGES/kcm_krfb.mo
 share/locale/es/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/es/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/es/LC_MESSAGES/kcm_memory.mo
@@ -1754,7 +1765,6 @@ share/locale/es/LC_MESSAGES/kig.mo
 share/locale/es/LC_MESSAGES/kigo.mo
 share/locale/es/LC_MESSAGES/killbots.mo
 share/locale/es/LC_MESSAGES/kimagemapeditor.mo
-share/locale/es/LC_MESSAGES/kinetd.mo
 share/locale/es/LC_MESSAGES/kinfocenter.mo
 share/locale/es/LC_MESSAGES/kio4.mo
 share/locale/es/LC_MESSAGES/kio_activities.mo
