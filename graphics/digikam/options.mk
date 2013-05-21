@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2013/04/28 02:03:38 markd Exp $
+# $NetBSD: options.mk,v 1.4 2013/05/21 13:04:09 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.digikam
 PKG_SUPPORTED_OPTIONS=	lensfun liblqr pim
-PKG_SUGGESTED_OPTIONS=	lensfun liblqr pim
+PKG_SUGGESTED_OPTIONS=	liblqr pim
 
 .include "../../mk/bsd.options.mk"
 
