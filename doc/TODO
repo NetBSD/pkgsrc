@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12174 2013/05/21 13:22:03 markd Exp $
+$NetBSD: TODO,v 1.12175 2013/05/21 14:43:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -489,7 +489,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o doclifter-2.10
-	o doxygen-1.8.4
 	o dpkg-1.16.9 [pkg/47234]
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
