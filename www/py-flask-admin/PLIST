@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/24 13:24:27 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 20:57:30 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -119,6 +119,9 @@ ${PYSITELIB}/flask_admin/model/filters.pyo
 ${PYSITELIB}/flask_admin/model/form.py
 ${PYSITELIB}/flask_admin/model/form.pyc
 ${PYSITELIB}/flask_admin/model/form.pyo
+${PYSITELIB}/flask_admin/model/helpers.py
+${PYSITELIB}/flask_admin/model/helpers.pyc
+${PYSITELIB}/flask_admin/model/helpers.pyo
 ${PYSITELIB}/flask_admin/model/template.py
 ${PYSITELIB}/flask_admin/model/template.pyc
 ${PYSITELIB}/flask_admin/model/template.pyo
@@ -209,7 +212,17 @@ ${PYSITELIB}/flask_admin/tools.pyo
 ${PYSITELIB}/flask_admin/translations/__init__.py
 ${PYSITELIB}/flask_admin/translations/__init__.pyc
 ${PYSITELIB}/flask_admin/translations/__init__.pyo
+${PYSITELIB}/flask_admin/translations/cs/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/cs/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/de/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/de/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/fa/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/fa/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/fr/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/fr/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/zh_CN/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/zh_CN/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/zh_TW/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/zh_TW/LC_MESSAGES/admin.po
