@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1737 2013/05/21 14:45:59 hans Exp $
+$NetBSD: CHANGES-2013,v 1.1738 2013/05/21 15:05:56 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2846,3 +2846,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/py-requests version 1.2.1 [imil 2013-05-21]
 	Updated devel/doxygen to 1.8.4 [wiz 2013-05-21]
 	Updated wm/windowmaker to 0.95.4 [hans 2013-05-21]
+	Added textproc/py-markupsafe version 0.16 [kleink 2013-05-21]
