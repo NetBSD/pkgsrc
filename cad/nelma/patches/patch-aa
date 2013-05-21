@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2010/08/04 02:46:03 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.4 2013/05/21 21:33:44 sbd Exp $
 
 --- Makefile.orig	2007-03-04 19:29:14.000000000 +0000
 +++ Makefile
@@ -8,8 +8,8 @@ $NetBSD: patch-aa,v 1.3 2010/08/04 02:46:03 dmcmahill Exp $
  man-install:
 -	$(INSTALL_MAN) doc/nelma-cap.1 $(PREFIX)/man/man1
 -	$(INSTALL_MAN) doc/nelma-drc.1 $(PREFIX)/man/man1
-+	$(INSTALL_MAN) doc/nelma-cap.1 $(DESTDIR)$(PREFIX)/man/man1
-+	$(INSTALL_MAN) doc/nelma-drc.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(INSTALL_MAN) doc/nelma-cap.1 $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
++	$(INSTALL_MAN) doc/nelma-drc.1 $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
  
  doxygen:
  	doxygen
