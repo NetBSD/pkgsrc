@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/09/05 10:54:32 adam Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 19:51:22 kleink Exp $
 
-SHA1 (Jinja2-2.6.tar.gz) = f122aeb324b2009bbcee341d0f001a047ac4bbe5
-RMD160 (Jinja2-2.6.tar.gz) = 77829eabfc71dd6cf7eece1fe5d0b96b21de3b18
-Size (Jinja2-2.6.tar.gz) = 389741 bytes
+SHA1 (Jinja2-2.7.tar.gz) = fe11167f17292a02e031efa8ad436bcb4ea9425e
+RMD160 (Jinja2-2.7.tar.gz) = bf0cf714fcd5dc03e15f1102552bd64eaf2f2895
+Size (Jinja2-2.7.tar.gz) = 377603 bytes
