@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1735 2013/05/21 14:37:52 imil Exp $
+$NetBSD: CHANGES-2013,v 1.1736 2013/05/21 14:43:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2844,3 +2844,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/libkvkontakte to 3.2.0 [markd 2013-05-21]
 	Updated www/libmediawiki to 3.2.0 [markd 2013-05-21]
 	Added devel/py-requests version 1.2.1 [imil 2013-05-21]
+	Updated devel/doxygen to 1.8.4 [wiz 2013-05-21]
