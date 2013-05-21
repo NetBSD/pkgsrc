@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/14 05:11:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:39 markd Exp $
 share/kde/apps/khangman/ga.txt
 share/kde/apps/ktuberling/sounds/ga.soundtheme
 share/kde/apps/ktuberling/sounds/ga/beal.wav
@@ -198,7 +198,6 @@ share/locale/ga/LC_MESSAGES/kcm_device_automounter.mo
 share/locale/ga/LC_MESSAGES/kcm_emoticons.mo
 share/locale/ga/LC_MESSAGES/kcm_infobase.mo
 share/locale/ga/LC_MESSAGES/kcm_infosummary.mo
-share/locale/ga/LC_MESSAGES/kcm_krfb.mo
 share/locale/ga/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/ga/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/ga/LC_MESSAGES/kcm_memory.mo
@@ -319,7 +318,6 @@ share/locale/ga/LC_MESSAGES/kig.mo
 share/locale/ga/LC_MESSAGES/kigo.mo
 share/locale/ga/LC_MESSAGES/killbots.mo
 share/locale/ga/LC_MESSAGES/kimagemapeditor.mo
-share/locale/ga/LC_MESSAGES/kinetd.mo
 share/locale/ga/LC_MESSAGES/kinfocenter.mo
 share/locale/ga/LC_MESSAGES/kio4.mo
 share/locale/ga/LC_MESSAGES/kio_activities.mo

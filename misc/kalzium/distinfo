@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:51:58 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:33 markd Exp $
 
-SHA1 (kalzium-4.10.2.tar.xz) = bf4c5b19905d83dede215b672d6b2911eb6d57cc
-RMD160 (kalzium-4.10.2.tar.xz) = 052386be65257bfd6ab6359ee22640b25e21ec7d
-Size (kalzium-4.10.2.tar.xz) = 3719308 bytes
+SHA1 (kalzium-4.10.3.tar.xz) = 2711ee3b9914329d9813c24798cf57811dd7eadd
+RMD160 (kalzium-4.10.3.tar.xz) = 8b52fab47843ba8b0e6069bb21e8da1710913dec
+Size (kalzium-4.10.3.tar.xz) = 3709764 bytes
