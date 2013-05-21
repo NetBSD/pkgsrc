@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/21 15:03:43 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/21 19:30:37 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,7 @@ ${PYSITELIB}/markupsafe/_native.py
 ${PYSITELIB}/markupsafe/_native.pyc
 ${PYSITELIB}/markupsafe/_native.pyo
 ${PYSITELIB}/markupsafe/_speedups.c
+${PYSITELIB}/markupsafe/_speedups.so
 ${PYSITELIB}/markupsafe/tests.py
 ${PYSITELIB}/markupsafe/tests.pyc
 ${PYSITELIB}/markupsafe/tests.pyo
