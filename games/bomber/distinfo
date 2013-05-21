@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/03 12:03:30 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/05/21 12:49:29 markd Exp $
 
-SHA1 (bomber-4.10.2.tar.xz) = 7f5e955127da33c7589103628cac356e6ebe4141
-RMD160 (bomber-4.10.2.tar.xz) = e99809ffd766ac9c17473cb110910e8aa7643d42
-Size (bomber-4.10.2.tar.xz) = 391504 bytes
+SHA1 (bomber-4.10.3.tar.xz) = b2cf0a81d282424811cdc527545a132ef5d73a3a
+RMD160 (bomber-4.10.3.tar.xz) = 23f80b6eeee1f33eaef04fd6044f636498c06729
+Size (bomber-4.10.3.tar.xz) = 392084 bytes

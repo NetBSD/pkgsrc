@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/03 12:03:34 markd Exp $
+$NetBSD: distinfo,v 1.2 2013/05/21 12:49:29 markd Exp $
 
-SHA1 (kfourinline-4.10.2.tar.xz) = b587f56bf5f095ec44da271e04b325f6dcc5c5f0
-RMD160 (kfourinline-4.10.2.tar.xz) = 36c623708edca734db1a27594a5870da1892f06d
-Size (kfourinline-4.10.2.tar.xz) = 272112 bytes
+SHA1 (kfourinline-4.10.3.tar.xz) = d49eff3bc2198c4ebb7d14a664ed7b2271e4ca32
+RMD160 (kfourinline-4.10.3.tar.xz) = ca828001758ec15baefc7cb6f81c53a50f19e012
+Size (kfourinline-4.10.3.tar.xz) = 272096 bytes

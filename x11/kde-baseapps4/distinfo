@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 10:51:49 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/05/21 12:49:37 markd Exp $
 
-SHA1 (kde-baseapps-4.10.2.tar.xz) = 7f505292e95b35205cec3baa67e9e9b24f79b9b9
-RMD160 (kde-baseapps-4.10.2.tar.xz) = 74646825112ebaa313f1ab542b5d848d049c3260
-Size (kde-baseapps-4.10.2.tar.xz) = 2611976 bytes
+SHA1 (kde-baseapps-4.10.3.tar.xz) = c9949ef6dafbc567bb3f088bf9e156c3a5a9ec08
+RMD160 (kde-baseapps-4.10.3.tar.xz) = 70caa3c27ac73330cbeb6c5ca26a7a94ec260479
+Size (kde-baseapps-4.10.3.tar.xz) = 2613696 bytes
