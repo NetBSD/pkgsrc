@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1739 2013/05/21 19:39:57 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.1740 2013/05/21 19:52:15 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2848,3 +2848,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated wm/windowmaker to 0.95.4 [hans 2013-05-21]
 	Added textproc/py-markupsafe version 0.16 [kleink 2013-05-21]
 	Updated textproc/py-markupsafe to 0.17 [kleink 2013-05-21]
+	Updated textproc/py-jinja2 to 2.7 [kleink 2013-05-21]
