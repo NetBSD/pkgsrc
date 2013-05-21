@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2013/04/06 12:08:40 rodent Exp $
+# $NetBSD: Makefile,v 1.32 2013/05/21 12:13:14 markd Exp $
 
-DISTNAME=	phonon-4.5.1
-PKGREVISION=	8
+DISTNAME=	phonon-4.6.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.5.1/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.6.0/src/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
@@ -20,7 +19,9 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
-CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
+CMAKE_ARGS+=	-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT:BOOL=TRUE
+
+.include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	phonon.pc.cmake
 
