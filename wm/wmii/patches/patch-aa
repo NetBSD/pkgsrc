@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2013/05/20 09:04:44 jperkin Exp $
+$NetBSD: patch-aa,v 1.10 2013/05/21 14:59:25 jperkin Exp $
 
 --- config.mk.orig	2007-11-16 13:59:15.000000000 +0000
 +++ config.mk
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.9 2013/05/20 09:04:44 jperkin Exp $
  MKDEP = cpp -M
  
  # Compiler
-@@ -32,13 +31,12 @@ P9PATHS = ${PLAN9}:"'$${HOME}/plan9'":/u
+@@ -32,8 +31,7 @@ P9PATHS = ${PLAN9}:"'$${HOME}/plan9'":/u
  INCX11 = -I/usr/X11R6/include
  LIBX11 = -L/usr/X11R6/lib -lX11
  LIBICONV = # Leave blank if your libc includes iconv (glibc does)
@@ -43,9 +43,3 @@ $NetBSD: patch-aa,v 1.9 2013/05/20 09:04:44 jperkin Exp $
  
  # Solaris
  #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
- #LDFLAGS = ${LIBS} -R${PREFIX}/lib
--#LDFLAGS += -lsocket -lnsl
-+LDFLAGS += -lsocket -lnsl
- #CFLAGS += -xtarget=ultra
- 
- 
