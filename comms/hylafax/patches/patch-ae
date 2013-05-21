@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.16 2012/04/08 03:25:03 dholland Exp $
+$NetBSD: patch-ae,v 1.17 2013/05/21 18:36:52 joerg Exp $
 
 - Configure for pkgsrc.
 - Recognize libtiff 4.x.
@@ -80,6 +80,24 @@ $NetBSD: patch-ae,v 1.16 2012/04/08 03:25:03 dholland Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
+@@ -809,7 +809,7 @@ checkGCCVersion()
+ # NB: use ANSI C prototype to weed out non-ANSI compilers.
+ #
+ cat>dummy.c<<EOF
+-main(int argc, char* argv) { exit(0); }
++int main(int argc, char** argv) { exit(0); }
+ EOF
+ 
+ checkCompiler()
+@@ -958,7 +958,7 @@ fi
+ # Make dependency information.
+ #
+ cat>dummy.c<<EOF
+-main(int argc, char* argv) { exit(0); }
++int main(int argc, char** argv) { exit(0); }
+ EOF
+ capture cat dummy.c
+ if capture "$CCOMPILER -c -M $MKDEPCOPTS dummy.c | grep '^dummy.o[ 	]*:[ 	]*dummy.c'"; then
 @@ -1418,12 +1418,22 @@ runMake()
  CheckForCXXRuntime()
  {
@@ -105,6 +123,60 @@ $NetBSD: patch-ae,v 1.16 2012/04/08 03:25:03 dholland Exp $
      cat 1>&2 <<EOF
  
  Missing C++ runtime support for $CXX ($CXXCOMPILER).
+@@ -1591,7 +1601,7 @@ pamconv(int num_msg, const struct pam_me
+ {
+     return(0);
+ }
+-main()
++int main()
+ {
+     struct pam_conv conv = { pamconv };
+ }
+@@ -2062,7 +2072,7 @@ EmitConfigurationDefinitions()
+ #
+ CheckForFunc()
+ {
+-    echo "extern int $1(); main(){$1();exit(0);}" >t.c
++    echo "extern int $1(); int main(){$1();exit(0);}" >t.c
+     capture cat t.c
+     runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
+ }
+@@ -2315,7 +2325,7 @@ CheckForStructExitStatus()
+ 	echo "$i"
+     done
+     cat<<EOF
+-main()
++int main()
+ {
+     struct $decl x;
+     x.ut_exit.e_exit = 0;
+@@ -2332,7 +2342,7 @@ CheckForTimeZoneHandling()
+ {
+     (echo '#include <time.h>'
+     cat<<EOF
+-main()
++int main()
+ {
+     struct tm x;
+     char* cp;
+@@ -2351,7 +2361,7 @@ CheckForTXCD()
+ {
+     cat>t.c<<EOF
+ #include <sys/ioctl.h>
+-main()
++int main()
+ {
+     ioctl(0, TXADDCD, "rts");
+     ioctl(0, TXDELCD, "rts");
+@@ -2400,7 +2410,7 @@ CheckLibtiff()
+     cat>t.c<<EOF
+ #include <stdio.h>
+ #include "tiffio.h"
+-main()
++int main()
+ {
+     printf( "header_ver=%d lib_ver=%s", TIFFLIB_VERSION, TIFFGetVersion() );
+     exit(0);
 @@ -2418,7 +2428,7 @@ EOF
  	if [ ${header_ver} -ge 19960307 ]; then
  	    case ${lib_ver} in
@@ -114,7 +186,32 @@ $NetBSD: patch-ae,v 1.16 2012/04/08 03:25:03 dholland Exp $
  	    esac
  	fi
      else
-@@ -3145,13 +3155,7 @@ main()
+@@ -3102,7 +3112,7 @@ CheckForSyslog()
+ {
+     (echo '#include <syslog.h>';
+      echo '#include "port.h"';
+-     echo 'main(){syslog(0,"foo");exit(0);}') >t.c
++     echo 'int main(){syslog(0,"foo");exit(0);}') >t.c
+     capture cat t.c
+     runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
+ }
+@@ -3111,7 +3121,7 @@ CheckForVSyslog()
+     (echo '#include <syslog.h>';
+      echo '#include <stdarg.h>';
+      echo '#include "port.h"';
+-     echo 'main(){va_list ap; vsyslog(0,"foo", ap);exit(0);}') >t.c
++     echo 'int main(){va_list ap; vsyslog(0,"foo", ap);exit(0);}') >t.c
+     capture cat t.c
+     runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
+ }
+@@ -3139,19 +3149,13 @@ Note "Checking ZLIB support."
+ #
+ cat>t.c<<EOF
+ #include "zlib.h"
+-main()
++int main()
+ {
+     if (strcmp(ZLIB_VERSION, "0.95") < 0) {     /* include file version */
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
      }
@@ -137,6 +234,15 @@ $NetBSD: patch-ae,v 1.16 2012/04/08 03:25:03 dholland Exp $
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
+@@ -3245,7 +3249,7 @@ if [ -f $SRCDIR/MLA/VERSION -a $DBLIB = 
+ #include <stdio.h>
+ #include <string.h>
+ #include "db.h"
+-main()
++int main()
+ {
+     DBT key, data;
+     const char d[] = "some random string";
 @@ -3722,6 +3726,7 @@ if [ -z "$FAXGID" ]; then
      *-bsdi*)	FAXGID=uucp;;
      *freebsd2.1*) FAXGID=uucp; break;; # Not sure when this changed..
