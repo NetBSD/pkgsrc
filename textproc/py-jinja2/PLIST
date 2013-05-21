@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/03/23 11:38:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/05/21 19:51:22 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,22 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jinja2/__init__.py
 ${PYSITELIB}/jinja2/__init__.pyc
 ${PYSITELIB}/jinja2/__init__.pyo
-${PYSITELIB}/jinja2/_debugsupport.c
-${PYSITELIB}/jinja2/_markupsafe/__init__.py
-${PYSITELIB}/jinja2/_markupsafe/__init__.pyc
-${PYSITELIB}/jinja2/_markupsafe/__init__.pyo
-${PYSITELIB}/jinja2/_markupsafe/_bundle.py
-${PYSITELIB}/jinja2/_markupsafe/_bundle.pyc
-${PYSITELIB}/jinja2/_markupsafe/_bundle.pyo
-${PYSITELIB}/jinja2/_markupsafe/_constants.py
-${PYSITELIB}/jinja2/_markupsafe/_constants.pyc
-${PYSITELIB}/jinja2/_markupsafe/_constants.pyo
-${PYSITELIB}/jinja2/_markupsafe/_native.py
-${PYSITELIB}/jinja2/_markupsafe/_native.pyc
-${PYSITELIB}/jinja2/_markupsafe/_native.pyo
-${PYSITELIB}/jinja2/_markupsafe/tests.py
-${PYSITELIB}/jinja2/_markupsafe/tests.pyc
-${PYSITELIB}/jinja2/_markupsafe/tests.pyo
+${PYSITELIB}/jinja2/_compat.py
+${PYSITELIB}/jinja2/_compat.pyc
+${PYSITELIB}/jinja2/_compat.pyo
 ${PYSITELIB}/jinja2/_stringdefs.py
 ${PYSITELIB}/jinja2/_stringdefs.pyc
 ${PYSITELIB}/jinja2/_stringdefs.pyo
