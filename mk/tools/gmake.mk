@@ -1,4 +1,4 @@
-# $NetBSD: gmake.mk,v 1.1 2011/11/26 16:11:11 hans Exp $
+# $NetBSD: gmake.mk,v 1.2 2013/05/21 07:13:50 sbd Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,7 +35,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-GMAKE_REQD?=		3.80
+GMAKE_REQD?=		3.81
 
 # If the package does explicitly request gmake as a tool, then determine if the
 # platform-provided gmake's version is at least ${GMAKE_REQD}.  If it isn't, then
