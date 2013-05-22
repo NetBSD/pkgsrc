@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1744 2013/05/22 13:08:25 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1745 2013/05/22 13:15:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2853,3 +2853,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBD-SQLite2 to 0.36 [hiramatsu 2013-05-22]
 	Updated textproc/py-markupsafe to 0.18 [kleink 2013-05-22]
 	Added textproc/CRF++ version 0.58 [obache 2013-05-22]
+	Updated textproc/cabocha to 0.66 [obache 2013-05-22]
+	Updated textproc/p5-cabocha to 0.66 [obache 2013-05-22]
+	Updated textproc/py-cabocha to 0.66 [obache 2013-05-22]
+	Updated textproc/ruby-cabocha to 0.66 [obache 2013-05-22]
