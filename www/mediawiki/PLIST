@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/05/04 08:26:51 wen Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/05/22 15:04:06 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/.jshintignore
 share/mediawiki/.jshintrc
@@ -2319,7 +2319,6 @@ share/mediawiki/skins/modern/main.css
 share/mediawiki/skins/modern/news_icon.png
 share/mediawiki/skins/modern/print.css
 share/mediawiki/skins/modern/video.png
-share/mediawiki/skins/monobook/FF2Fixes.css
 share/mediawiki/skins/monobook/IE60Fixes.css
 share/mediawiki/skins/monobook/IE70Fixes.css
 share/mediawiki/skins/monobook/Opera6Fixes.css
