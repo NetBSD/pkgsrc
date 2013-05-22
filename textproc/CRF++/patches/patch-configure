@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2013/05/22 13:07:47 obache Exp $
+
+* prevent to overwritten CFLAGS and CXXFLAGS
+
+--- configure.orig	2013-02-08 14:35:50.000000000 +0000
++++ configure
+@@ -15908,10 +15908,6 @@ $as_echo "no" >&6; }
+         fi
+ fi
+ 
+-if test -n "$GCC"; then
+-   CFLAGS="-O3 -Wall";
+-   CXXFLAGS="-O3 -Wall";
+-fi
+ 
+ 
+ 
