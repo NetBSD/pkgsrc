@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2013/01/03 15:19:53 adam Exp $
+$NetBSD: patch-ad,v 1.6 2013/05/22 20:51:16 sbd Exp $
 
---- Makefile.config.in.orig	2012-05-15 22:06:08.000000000 +0000
+--- Makefile.config.in.orig	2012-10-01 18:40:32.000000000 +0000
 +++ Makefile.config.in
 @@ -97,11 +97,11 @@ endif
  PROJ_bindir     := $(PROJ_prefix)/bin
@@ -12,7 +12,7 @@ $NetBSD: patch-ad,v 1.5 2013/01/03 15:19:53 adam Exp $
  PROJ_includedir := $(PROJ_prefix)/include
  PROJ_infodir    := $(PROJ_prefix)/info
 -PROJ_mandir     := $(PROJ_prefix)/share/man
-+PROJ_mandir     := $(PROJ_prefix)/man
++PROJ_mandir     := $(PROJ_prefix)/${PKGMANDIR}
  
  # Determine if we're on a unix type operating system
  LLVM_ON_UNIX:=@LLVM_ON_UNIX@
