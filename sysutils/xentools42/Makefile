@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/22 05:32:43 jnemeth Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -41,7 +41,7 @@ CHECK_PORTABILITY_SKIP=	examples/*
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
-USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl
+USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash
 
 GNU_CONFIGURE=		YES
 #CONFIGURE_ARGS+=	--enable-xenapi
