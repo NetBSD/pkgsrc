@@ -1,15 +1,16 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/05/19 12:16:25 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/05/22 13:14:29 obache Exp $
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
 # used by textproc/ruby-cabocha/Makefile
 
-DISTNAME=	cabocha-0.53
+DISTNAME=	cabocha-0.66
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.chasen.org/~taku/software/cabocha/src/
+MASTER_SITES=	http://cabocha.googlecode.com/files/
+EXTRACT_SUFX=	.tar.bz2
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/cabocha/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/cabocha/patches
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://www.chasen.org/~taku/software/cabocha/
-LICENSE=	gnu-lgpl-v2.1
+HOMEPAGE=	http://code.google.com/p/cabocha/
+LICENSE=	modified-bsd

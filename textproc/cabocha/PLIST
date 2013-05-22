@@ -1,19 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/19 12:16:25 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/22 13:14:29 obache Exp $
 bin/cabocha
 bin/cabocha-config
 include/cabocha.h
-lib/cabocha/model/CRL-IREX-ne.model
-lib/cabocha/model/CRL-IREX-ne.txtmodel.gz
-lib/cabocha/model/IPA-chunker.model
-lib/cabocha/model/IPA-chunker.txtmodel.gz
-lib/cabocha/model/IPA-dep-A+P.model
-lib/cabocha/model/IPA-dep-A+P.txtmodel.gz
-lib/cabocha/model/IPA-dep.model
-lib/cabocha/model/IPA-dep.txtmodel.gz
+lib/cabocha/model/chunk.ipa.model
+lib/cabocha/model/chunk.juman.model
+lib/cabocha/model/chunk.unidic.model
+lib/cabocha/model/dep-tournament.ipa.model
+lib/cabocha/model/dep-tournament.juman.model
+lib/cabocha/model/dep-tournament.unidic.model
+lib/cabocha/model/dep.ipa.model
+lib/cabocha/model/dep.juman.model
+lib/cabocha/model/dep.unidic.model
+lib/cabocha/model/ne.ipa.model
+lib/cabocha/model/ne.juman.model
+lib/cabocha/model/ne.unidic.model
 lib/libcabocha.la
-libexec/cabocha/KyotoCorpus.pm
-libexec/cabocha/Makefile
-libexec/cabocha/kc2cabocha.pl
-libexec/cabocha/kc2juman.pl
+libexec/cabocha/cabocha-learn
+libexec/cabocha/cabocha-model-index
+libexec/cabocha/cabocha-system-eval
 man/man1/cabocha.1
 share/examples/cabocharc

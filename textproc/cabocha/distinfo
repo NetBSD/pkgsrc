@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/09 15:07:58 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/05/22 13:14:29 obache Exp $
 
-SHA1 (cabocha-0.53.tar.gz) = 6b8903aa6843887bb669d9d5baea8a0eae320d80
-RMD160 (cabocha-0.53.tar.gz) = 39b637adc8b882542ecc3b6df34d8f6b99be3e38
-Size (cabocha-0.53.tar.gz) = 11552551 bytes
-SHA1 (patch-aa) = cb868fa8b88180ed5f84d55796d042e5774862af
-SHA1 (patch-ab) = 3dcaae627c12a8ffc3595177768445335c5a3bd4
-SHA1 (patch-configure) = be6ea41b105f3d4c78b240cfc2ec8de6b604713f
-SHA1 (patch-src_cabocha.h) = 85bbf0da32677b7d4a33f1ef8d9aa7915fa1da1f
-SHA1 (patch-src_common.h) = 33a84611497ff0d98a6d9d9abaf0cd3ff60c3a83
+SHA1 (cabocha-0.66.tar.bz2) = 33172b7973239a53d98eabbd309f70d88e36c94c
+RMD160 (cabocha-0.66.tar.bz2) = 23bd1ac45ca9a065c91f223542f61ddf18d97dfd
+Size (cabocha-0.66.tar.bz2) = 111166592 bytes
