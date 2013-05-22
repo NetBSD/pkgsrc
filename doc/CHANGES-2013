@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1742 2013/05/22 03:28:09 hiramatsu Exp $
+$NetBSD: CHANGES-2013,v 1.1743 2013/05/22 11:53:29 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2851,3 +2851,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/py-jinja2 to 2.7 [kleink 2013-05-21]
 	Updated www/py-flask-admin to 1.0.6 [kleink 2013-05-21]
 	Updated databases/p5-DBD-SQLite2 to 0.36 [hiramatsu 2013-05-22]
+	Updated textproc/py-markupsafe to 0.18 [kleink 2013-05-22]
