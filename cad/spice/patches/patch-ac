@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2011/05/14 18:45:54 hans Exp $
+$NetBSD: patch-ac,v 1.8 2013/05/22 07:44:04 sbd Exp $
 
---- src/include/misc.h.orig	1993-04-25 23:37:48.000000000 +0200
+--- src/include/misc.h.orig	1993-04-25 21:37:48.000000000 +0000
 +++ src/include/misc.h
 @@ -5,6 +5,8 @@ Copyright 1990 Regents of the University
  #ifndef MISC_H
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.7 2011/05/14 18:45:54 hans Exp $
 -extern char *realloc();
 -extern char *getenv();
 -extern int errno;
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__linux__))
  extern char *sys_errlist[];
 -extern char *getenv();
 +#endif
@@ -41,7 +41,7 @@ $NetBSD: patch-ac,v 1.7 2011/05/14 18:45:54 hans Exp $
  #    endif /* clearerr */
  #  endif /* HAS_CLEARERR */
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun) || defined(__linux__))
  #  ifndef bzero
  extern int bzero();
  #  endif
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.7 2011/05/14 18:45:54 hans Exp $
  extern void perror();
  #endif
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun) || defined(__linux__))
  #ifdef HAS_TIME_
  #  ifdef HAS_BSDTIME
  extern char *timezone();
@@ -68,7 +68,7 @@ $NetBSD: patch-ac,v 1.7 2011/05/14 18:45:54 hans Exp $
  
  #ifndef HAS_MEMAVL
  #  ifdef HAS_RLIMIT_
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__sun) || defined(__linux__))
  extern char *sbrk();
 +#endif
  #  endif
