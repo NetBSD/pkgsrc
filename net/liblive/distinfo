@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2013/02/22 14:40:07 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2013/05/22 09:39:35 fhajny Exp $
 
 SHA1 (live.2012.02.04.tar.gz) = 26e06f8ec296c3494bc118b7ffde4ad7082e8f80
 RMD160 (live.2012.02.04.tar.gz) = 0ff1f656d7244b94820a7ee299d7c96003791b00
 Size (live.2012.02.04.tar.gz) = 541332 bytes
 SHA1 (patch-aa) = ecbf7f9a0d9835fbdb8208d296640570b8770e93
-SHA1 (patch-ba) = 0d977525350b4be3a564060a1d5a561c5564a768
+SHA1 (patch-ba) = dc6fa32b1fa2fcfb84d4917f49c966ea5f938568
 SHA1 (patch-ca) = 20d35409d7fe63e0088d3105d5cd54809da13097
 SHA1 (patch-cb) = ed98aa446cc4c6cf3c861101637e619d32cc9e95
 SHA1 (patch-cc) = 1e968b8742c913f67654d83612bafe4fe01364c0
