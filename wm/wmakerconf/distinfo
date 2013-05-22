@@ -1,11 +1,15 @@
-$NetBSD: distinfo,v 1.8 2010/02/12 20:31:32 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/05/22 18:01:24 tron Exp $
 
 SHA1 (wmakerconf-2.11.tar.gz) = 2c2409aad8b0348c2801c4350047a5468a800e48
 RMD160 (wmakerconf-2.11.tar.gz) = 18d661836272ae21f9d79398359b37b97b0a396a
 Size (wmakerconf-2.11.tar.gz) = 791166 bytes
 SHA1 (patch-aa) = d26fdc359404796ea7bf6791014e3b8b3abc4cbc
 SHA1 (patch-ab) = 3e5f5f8cad200a6b09001572336920685d5e2a82
-SHA1 (patch-ac) = 89f7cba515367182c6ad257b43d76256ed7be609
 SHA1 (patch-ad) = ebcd4d319c9f0cd995f6b43b30bf4446daf24934
 SHA1 (patch-ae) = b656967929071c09bef3315588fede877e839ce6
 SHA1 (patch-af) = c6f05d30ee645d0e7ff1ed574208d5819beeceac
+SHA1 (patch-src_menu.c) = 9ae1df8b5b60881181f75ce409dc29593fe71210
+SHA1 (patch-src_rootmenu.c) = 2e327c2b1b3937e98a5e34f9de65c2d3c726403e
+SHA1 (patch-src_themebrowser.c) = 4b4620d322770aa2806a3c483e94bf4d27381501
+SHA1 (patch-src_window.c) = 4aa5f9f16276c0325b4d0a0b9d39289a89cec4c9
+SHA1 (patch-src_wmconfig.c) = 66d40308389977e9476593586ec8060acef41cae
