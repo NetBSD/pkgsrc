@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/05/19 03:30:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2013/05/22 21:53:09 tcort Exp $
 #
 
 DISTNAME=		rcs-5.9.0
@@ -13,7 +13,7 @@ COMMENT=		GNU Revision Control System - version control software
 USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "AIX"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "AIX" || ${OPSYS} == "Minix"
 DEPENDS+=		diffutils>=2.7:../../devel/diffutils
 CONFIGURE_ARGS+=	--with-diffutils
 # the native diff/diff3 is not sufficient for rcs
