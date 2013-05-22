@@ -1,15 +1,15 @@
-$NetBSD: patch-ba,v 1.2 2012/02/21 12:38:58 drochner Exp $
+$NetBSD: patch-ba,v 1.3 2013/05/22 09:39:35 fhajny Exp $
 
 --- config.solaris-32bit.orig	2008-07-25 02:40:05.000000000 +0200
 +++ config.solaris-32bit
 @@ -1,17 +1,20 @@
 -COMPILE_OPTS =		$(INCLUDES) -I. -O -DSOLARIS -DSOCKLEN_T=socklen_t
 +.SUFFIXES: .la .lo .cpp
-+COMPILE_OPTS =		${INCLUDES} -I. ${CPPFLAGS} -O -DSOLARIS -DSOCKLEN_T=socklen_t
++COMPILE_OPTS =		${INCLUDES} -I. ${CPPFLAGS} -O -DSOLARIS -DSOCKLEN_T=socklen_t -DXLOCALE_NOT_USED=1
  C =			c
 -C_COMPILER =		cc
 -C_FLAGS =		$(COMPILE_OPTS)
-+C_COMPILER =		${LIBTOOL} --mode=compile ${CC}
++C_COMPILER =		${LIBTOOL} --tag=CC --mode=compile ${CC}
 +C_FLAGS =		${COMPILE_OPTS}
  CPP =			cpp
 -CPLUSPLUS_COMPILER =	c++
@@ -21,14 +21,14 @@ $NetBSD: patch-ba,v 1.2 2012/02/21 12:38:58 drochner Exp $
 -LIBRARY_LINK =		ld -o
 -LIBRARY_LINK_OPTS =	$(LINK_OPTS) -r -dn
 -LIB_SUFFIX =			a
-+CPLUSPLUS_COMPILER =	${LIBTOOL} --mode=compile c++
++CPLUSPLUS_COMPILER =	${LIBTOOL} --tag=CXX --mode=compile c++
 +CPLUSPLUS_FLAGS =	${COMPILE_OPTS} -Wall
 +OBJ =			lo
-+LINK =			${LIBTOOL} --mode=link c++ -o
++LINK =			${LIBTOOL} --tag=CXX --mode=link c++ -o
 +LINK+=			# this is needed to add a space!
 +LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm
 +CONSOLE_LINK_OPTS =	${LINK_OPTS}
-+LIBRARY_LINK =		${LIBTOOL} --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
++LIBRARY_LINK =		${LIBTOOL} --tag=CXX --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
 +LIBRARY_LINK+=		# this is needed to add a space!
 +LIBRARY_LINK_OPTS =	${LINK_OPTS}  -r -dn
 +LIB_SUFFIX =		la
