@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/04/29 21:34:11 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/05/22 13:14:19 joerg Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -33,6 +33,9 @@ SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__base.h) = 12b8e3b998ae1c
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__configure__char.cc) = d5649f42b61ff3c27d60e813cc844b820525aee4
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h) = 3e8cbedb167fc623f184a59b1f4b330544b08939
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_os__defines.h) = 9a45ecb4309c50ca90008b2fc7d3b44d002698b4
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 014d442c885b9c51d1a4af05205279c274a9559d
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = b63c2682336c9b6f0e0d7b900d6f40ad6e7a5ec4
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 626fc1f9c035ac5cef30a92d525af4e778835ebf
 SHA1 (patch-libstdc++-v3_configure) = 3821275fa698221d7665ea3c98b0a24f33954a5a
 SHA1 (patch-libstdc++-v3_configure.host) = 7426ea4a9735e5f886f4a3ffb4a9ba62734178c4
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 9784bfa4323f8498b36565d0fea28fce69ffdbb1
