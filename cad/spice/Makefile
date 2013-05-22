@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/10/08 13:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.47 2013/05/22 07:44:03 sbd Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -28,7 +28,9 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
 MAKE_ENV+=	WRKSRC=${WRKSRC:Q}
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "SunOS"
+.if ${OPSYS} == "Linux"
+CFLAGS+=	-Dlinux
+.elif ${OPSYS} != "SunOS"
 CFLAGS+=	-Dbsd
 .endif
 
@@ -73,5 +75,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${DESTDIR}${PREFIX}/share/examples/spice3
 
 #.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
