@@ -1,12 +1,12 @@
-$NetBSD: patch-au,v 1.3 2011/05/14 18:45:54 hans Exp $
+$NetBSD: patch-au,v 1.4 2013/05/22 07:44:04 sbd Exp $
 
---- src/include/cpstd.h.orig	2005-12-17 13:10:09.000000000 +0000
+--- src/include/cpstd.h.orig	1993-04-14 19:57:42.000000000 +0000
 +++ src/include/cpstd.h
 @@ -50,7 +50,9 @@ extern char *tildexpand();
  extern char *printnum();
  extern int cp_numdgt;
  extern void fatal();
-+#if !defined(__DragonFly__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(__sun)
++#if !defined(__DragonFly__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(__sun) && !defined(__linux__)
  extern void setenv();
 +#endif
  extern void cp_printword();
