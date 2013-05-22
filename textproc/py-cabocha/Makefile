@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:48 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/22 13:14:30 obache Exp $
 #
 
 .include "../../textproc/cabocha/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES+=	python
 
 COMMENT=	CaboCha python module
