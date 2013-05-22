@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/21 19:51:22 kleink Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/22 14:31:48 joerg Exp $
 
 DISTNAME=	Jinja2-2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		#none
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	31 32
 
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 
