@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1747 2013/05/22 15:10:30 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.1748 2013/05/22 15:18:03 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2859,3 +2859,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-cabocha to 0.66 [obache 2013-05-22]
 	Updated www/mediawiki to 1.20.6 [wen 2013-05-22]
 	Updated sysutils/lockf to 1 [mspo 2013-05-22]
+	Updated lang/nodejs to 0.10.6 [mspo 2013-05-22]
