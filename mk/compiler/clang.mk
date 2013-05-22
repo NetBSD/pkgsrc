@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.10 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: clang.mk,v 1.11 2013/05/22 12:13:35 joerg Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -50,7 +50,7 @@ CC_VERSION?=		clang
 _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
 _COMPILER_LD_FLAG=	-Wl,
-_LINKER_RPATH_FLAG=	-rpath
+_LINKER_RPATH_FLAG=	-R
 _COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG},
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
