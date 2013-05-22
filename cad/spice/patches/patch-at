@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.3 2013/03/02 17:51:49 joerg Exp $
+$NetBSD: patch-at,v 1.4 2013/05/22 07:44:04 sbd Exp $
 
 --- src/lib/mfb/mfbgnc.c.orig	1991-04-10 02:08:26.000000000 +0000
 +++ src/lib/mfb/mfbgnc.c
@@ -7,7 +7,7 @@ $NetBSD: patch-at,v 1.3 2013/03/02 17:51:49 joerg Exp $
  
  /* Library routines */
 -#ifdef HAS_FTIME
-+#if defined(HAS_FTIME) && !(defined(__DragonFly__) || defined(__sun))
++#if defined(HAS_FTIME) && !(defined(__DragonFly__) || defined(__sun) || defined(__linux__))
  extern void ftime();
  #endif
  
