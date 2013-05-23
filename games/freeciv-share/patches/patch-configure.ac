@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/05/23 15:02:53 joerg Exp $
+
+--- configure.ac.orig	2012-03-31 12:35:57.000000000 +0000
++++ configure.ac
+@@ -883,7 +883,7 @@ dnl In the future we probably get rid of
+ dnl lua from system.
+ dnl LUA_AS_DEPENDENCY should be empty when using lua outside own our tree.
+ LUA_CFLAGS="-I\$(top_srcdir)/dependencies/lua-5.1/src"
+-LUA_LIBS="\$(top_builddir)/dependencies/lua-5.1/src/liblua.a"
++LUA_LIBS="\$(top_builddir)/dependencies/lua-5.1/src/liblua.la"
+ LUA_AS_DEPENDENCY="$LUA_LIBS"
+ AC_SUBST([LUA_CFLAGS])
+ AC_SUBST([LUA_LIBS])
+@@ -891,7 +891,7 @@ AC_SUBST([LUA_AS_DEPENDENCY])
+ 
+ 
+ TOLUA_CFLAGS="-I\$(top_srcdir)/dependencies/tolua-5.1/include"
+-TOLUA_LIBS="\$(top_builddir)/dependencies/tolua-5.1/src/lib/libtolua.a"
++TOLUA_LIBS="\$(top_builddir)/dependencies/tolua-5.1/src/lib/libtolua.la"
+ TOLUA_AS_DEPENDENCY="$TOLUA_LIBS"
+ AC_SUBST([TOLUA_CFLAGS])
+ AC_SUBST([TOLUA_LIBS])

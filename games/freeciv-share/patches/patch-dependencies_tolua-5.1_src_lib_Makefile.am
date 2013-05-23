@@ -1,0 +1,17 @@
+$NetBSD: patch-dependencies_tolua-5.1_src_lib_Makefile.am,v 1.1 2013/05/23 15:02:53 joerg Exp $
+
+--- dependencies/tolua-5.1/src/lib/Makefile.am.orig	2012-03-31 12:32:31.000000000 +0000
++++ dependencies/tolua-5.1/src/lib/Makefile.am
+@@ -1,10 +1,10 @@
+-noinst_LIBRARIES = libtolua.a
++noinst_LTLIBRARIES = libtolua.la
+ 
+ AM_CPPFLAGS = \
+ 	-I$(top_srcdir)/dependencies/tolua-5.1/include \
+ 	$(LUA_CFLAGS)
+ 
+-libtolua_a_SOURCES = \
++libtolua_la_SOURCES = \
+ 	tolua_event.c \
+ 	tolua_event.h \
+ 	tolua_is.c \

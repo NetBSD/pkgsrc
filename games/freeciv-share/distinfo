@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2012/08/17 18:42:43 prlw1 Exp $
+$NetBSD: distinfo,v 1.28 2013/05/23 15:02:53 joerg Exp $
 
 SHA1 (freeciv-2.3.2.tar.bz2) = e6267b5e0483cf9c29d01793d2f9433e73d62191
 RMD160 (freeciv-2.3.2.tar.bz2) = 63bea690cfd6953bfb30d320a3e3f7a69353b64c
@@ -8,3 +8,9 @@ SHA1 (patch-common_dataio.c) = 6fd08d7185f953fbfdc2c554ad67c4e5c8f2be87
 SHA1 (patch-common_dataio.h) = 4a513230ee814269466959fcb977b1360a78ee53
 SHA1 (patch-common_generate__packets.py) = 0fb74f024d1ada9ad85f62b12099c385d1e972c7
 SHA1 (patch-common_packets.c) = 7ea66b3d0068a1255d818a9808bf7e581c95fb71
+SHA1 (patch-configure.ac) = 3c9ce11318a497df6c06f2e272183b1dd1eaf483
+SHA1 (patch-dependencies_lua-5.1_src_Makefile.am) = 2d240eb7488bfd0071867b68e5a78a6927c85089
+SHA1 (patch-dependencies_tolua-5.1_src_bin_Makefile.am) = 933dd8a213a3b2fecc290d59d3d12437e9c5ce2c
+SHA1 (patch-dependencies_tolua-5.1_src_lib_Makefile.am) = 8810cd3865433a52783f8ae274ebb0d8b50deee8
+SHA1 (patch-m4_x.m4) = 53e685c02ab97fcef9c39be1fee5dc5e73775588
+SHA1 (patch-server_Makefile.am) = 6f4cac8fccd8a289d944db6593bbbabb3650d4b9
