@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/21 14:34:38 imil Exp $
-${PYSITELIB}/requests-1.2.1-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/requests-1.2.1-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/requests-1.2.1-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/requests-1.2.1-py2.7.egg-info/not-zip-safe
-${PYSITELIB}/requests-1.2.1-py2.7.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2013/05/23 15:01:15 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/requests/__init__.py
 ${PYSITELIB}/requests/__init__.pyc
 ${PYSITELIB}/requests/__init__.pyo
