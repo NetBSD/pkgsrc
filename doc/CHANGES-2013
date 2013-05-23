@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1756 2013/05/23 16:02:22 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1757 2013/05/23 19:49:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2868,8 +2868,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 21.0nb1 [ryoon 2013-05-23]
 	Updated www/seamonkey to 2.18beta4 [ryoon 2013-05-23]
 	Updated mail/thunderbird-l10n to 17.0.6 [ryoon 2013-05-23]
-	Removed devel/xulrunner 21.0 [ryoon 2013-05-23]
+	Removed devel/xulrunner [ryoon 2013-05-23]
 	Updated devel/transifex-client to 0.9 [taca 2013-05-23]
 	Added www/contao31 version 3.1.0 [taca 2013-05-23]
 	Added www/contao31-example version 3.1.0 [taca 2013-05-23]
 	Updated graphics/pngcrush to 1.7.58 [adam 2013-05-23]
+	Updated mail/dovecot2 to 2.2.2 [adam 2013-05-23]
