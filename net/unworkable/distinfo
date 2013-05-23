@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/19 05:40:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2013/05/23 15:01:05 christos Exp $
 
 SHA1 (unworkable-0.51.tar.gz) = 0a179f7d84aa95df3fe30bd49806776826f8e4c6
 RMD160 (unworkable-0.51.tar.gz) = 72174941df30ab63101f334f0a657e1357f7309b
 Size (unworkable-0.51.tar.gz) = 71020 bytes
 SHA1 (patch-aa) = c792177339cf79341c24cf9a12032ee98d564eaa
+SHA1 (patch-main.c) = d25ddad279f8143c4f15733f86c12f1074e43f0e
