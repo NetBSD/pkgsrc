@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.18 2013/05/20 13:25:39 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.19 2013/05/23 19:15:55 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -73,3 +73,5 @@ Pullup ticket #4132 - requested by taca
 lang/php53: build fix
 Pullup ticket #4139 - requested by tron
 net/wireshark: security update
+Pullup ticket #4140 - requested by obache
+emulators/suse121_libtiff: security update
