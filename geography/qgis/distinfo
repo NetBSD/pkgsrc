@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2013/01/10 23:58:29 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/05/23 15:03:27 joerg Exp $
 
 SHA1 (qgis-1.7.4.tar.bz2) = 0dae5cb933d1ce621e5fe30c1937887d813a2098
 RMD160 (qgis-1.7.4.tar.bz2) = dae51556b09a57ce9537ca4ed75830f15e3be5a4
@@ -17,6 +17,8 @@ SHA1 (patch-src_core_qgsvectorlayer.h) = 091f6bd54a2a8d3d504f95dc4a6cec3fc6735d8
 SHA1 (patch-src_core_raster_qgsrasterlayer.cpp) = 9501fb0c31096613cd9da3f928704532d1c0aa23
 SHA1 (patch-src_core_raster_qgsrasterlayer.h) = 50ad211252064b51d875b217c8f91315cedb9ea5
 SHA1 (patch-src_core_spatialindex_include_Tools.h) = ccee3200f1a4d6807d0da2fb3f2307bfc345f83d
+SHA1 (patch-src_core_spatialindex_storagemanager_DiskStorageManager.cc) = 651fbb687c366d3fe0b3812be327659995f6f299
+SHA1 (patch-src_core_spatialindex_tools_TemporaryFile.cc) = 375968005b185704624646ba76d2272bfed199b0
 SHA1 (patch-src_core_spatialite_spatialite.c) = a6b8ad377311a4a3e122a1336ccc32a2b1638cd7
 SHA1 (patch-src_core_symbology-ng_qgssymbolv2.h) = 4ffe326210e77a37d3f984798ec2c9cc51865716
 SHA1 (patch-src_helpviewer_CMakeLists.txt) = 209347863b9b3719d0eb04b142c831a2bfdb77ea
