@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/04/09 21:15:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2013/05/23 13:34:11 ryoon Exp $
 #
 
-TB_VER=		17.0.5
+TB_VER=		17.0.6
 PKGNAME=	thunderbird-l10n-${TB_VER}
 DISTNAME=	# empty
 CATEGORIES=	mail
@@ -28,5 +28,5 @@ TB_LOCALES=	        ar be bn-BD br ca cs			\
 EXTENSIONS_DIR=		${PREFIX}/lib/thunderbird/extensions
 XPI_FILES=		${TB_LOCALES:=.xpi}
 
-.include "../../devel/xulrunner/xpi.mk"
+.include "../../devel/xulrunner17/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
