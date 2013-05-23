@@ -1,4 +1,4 @@
-$NetBSD: patch-directory_c-sdk_ldap_include_portable.h,v 1.9 2012/11/23 17:28:49 ryoon Exp $
+$NetBSD: patch-ldap_sdks_c-sdk_ldap_include_portable.h,v 1.1 2013/05/23 13:25:30 ryoon Exp $
 
 --- ldap/sdks/c-sdk/ldap/include/portable.h.orig	2012-11-18 10:20:06.000000000 +0000
 +++ ldap/sdks/c-sdk/ldap/include/portable.h

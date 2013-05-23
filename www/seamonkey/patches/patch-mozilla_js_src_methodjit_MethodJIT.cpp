@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.6 2013/01/07 21:55:30 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.7 2013/05/23 13:25:30 ryoon Exp $
 
---- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-11-18 10:19:40.000000000 +0000
+--- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2013-05-03 03:07:59.000000000 +0000
 +++ mozilla/js/src/methodjit/MethodJIT.cpp
-@@ -135,7 +135,7 @@ PopActiveVMFrame(VMFrame &f)
+@@ -138,7 +138,7 @@ PopActiveVMFrame(VMFrame &f)
  
  JS_STATIC_ASSERT(offsetof(FrameRegs, sp) == 0);
  
@@ -11,3 +11,12 @@ $NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.6 2013/01/07 21:55:30 
  # define SYMBOL_STRING_RELOC(name) #name "@plt"
  #else
  # define SYMBOL_STRING_RELOC(name) SYMBOL_STRING(name)
+@@ -152,7 +152,7 @@ JS_STATIC_ASSERT(offsetof(FrameRegs, sp)
+ 
+ #if defined(XP_MACOSX)
+ # define HIDE_SYMBOL(name) ".private_extern _" #name
+-#elif defined(__linux__)
++#elif defined(__ELF__)
+ # define HIDE_SYMBOL(name) ".hidden" #name
+ #else
+ # define HIDE_SYMBOL(name)
