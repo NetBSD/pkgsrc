@@ -1,9 +1,8 @@
-$NetBSD: patch-af,v 1.5 2013/04/29 12:53:57 manu Exp $
+$NetBSD: patch-af,v 1.6 2013/05/23 19:45:50 adam Exp $
 
---- doc/example-config/conf.d/Makefile.in.orig	2013-04-10 21:31:22.000000000 +0200
-+++ doc/example-config/conf.d/Makefile.in	2013-04-11 10:02:24.000000000 +0200
-@@ -255,9 +255,9 @@
- top_build_prefix = @top_build_prefix@
+--- doc/example-config/conf.d/Makefile.in.orig	2013-05-19 23:04:29.000000000 +0000
++++ doc/example-config/conf.d/Makefile.in
+@@ -256,7 +256,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  pkgsysconfdir = $(sysconfdir)/dovecot
@@ -12,4 +11,3 @@ $NetBSD: patch-af,v 1.5 2013/04/29 12:53:57 manu Exp $
  example_DATA = \
  	auth-checkpassword.conf.ext \
  	auth-deny.conf.ext \
- 	auth-ldap.conf.ext \
