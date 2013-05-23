@@ -1,0 +1,18 @@
+$NetBSD: patch-mozilla_js_src_Makefile.in,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+
+--- mozilla/js/src/Makefile.in.orig	2013-05-03 03:07:57.000000000 +0000
++++ mozilla/js/src/Makefile.in
+@@ -791,6 +791,13 @@ EXTRA_LIBS	+= -lposix4 -ldl -lnsl -lsock
+ endif
+ endif
+ 
++# clang 3.3 + -O2 makes jaeger crash in FixupArity
++ifdef CLANG_CXX
++ifndef MOZ_DEBUG
++Compiler.$(OBJ_SUFFIX): CXXFLAGS += -fno-inline-functions
++endif
++endif
++
+ # An AIX Optimization bug causes PR_dtoa() & JS_dtoa to produce wrong result.
+ # This suppresses optimization for this single compilation unit.
+ ifeq ($(OS_ARCH),AIX)
