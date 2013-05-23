@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.23 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: package.mk,v 1.24 2013/05/23 13:18:56 obache Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -17,6 +17,7 @@ _PACKAGE_TARGETS+=	check-vulnerable
 _PACKAGE_TARGETS+=	replace
 .else
 _PACKAGE_TARGETS+=	stage-install
+_PACKAGE_TARGETS+=	stage-package-create
 .endif
 _PACKAGE_TARGETS+=	acquire-package-lock
 _PACKAGE_TARGETS+=	${_COOKIE.package}
