@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/23 19:51:22 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/05/23 18:42:22 joerg Exp $
 
 DISTNAME=	rtty-3.2
 PKGREVISION=	1
@@ -18,8 +18,8 @@ MAKE_ENV+=	LIBS="-lcrypt"
 .endif
 
 pre-configure:
-	${CHMOD} -R u+w ${WRKDIR}
-	for f in `${FIND} ${WRKDIR}/. -type f -print | ${XARGS} ${GREP} -l '/usr/local'`; do \
+	${CHMOD} u+w ${WRKDIR}/*
+	for f in `echo ${WRKDIR}/* | ${XARGS} ${GREP} -l '/usr/local'`; do \
 		${ECHO} patching $$f ; \
 		${SED} -e 's:/usr/local:${PREFIX}:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
