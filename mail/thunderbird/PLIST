@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2013/05/08 09:12:53 sbd Exp $
+@comment $NetBSD: PLIST,v 1.48 2013/05/23 13:13:30 ryoon Exp $
 bin/thunderbird
 include/thunderbird/.mkdir.done
 include/thunderbird/AccEvent.h
@@ -185,14 +185,6 @@ include/thunderbird/inIFlasher.h
 include/thunderbird/inISearchObserver.h
 include/thunderbird/inISearchProcess.h
 include/thunderbird/jArray.h
-${PLIST.jemalloc}include/thunderbird/jemalloc.h
-${PLIST.jemalloc}include/thunderbird/jemalloc_types.h
-include/thunderbird/jconfig.h
-include/thunderbird/jerror.h
-include/thunderbird/jinclude.h
-include/thunderbird/jmorecfg.h
-include/thunderbird/jpegint.h
-include/thunderbird/jpeglib.h
 include/thunderbird/js-config.h
 include/thunderbird/js.msg
 include/thunderbird/js/HashTable.h
@@ -2820,7 +2812,7 @@ include/thunderbird/theora/codec.h
 include/thunderbird/theora/theora.h
 include/thunderbird/theora/theoradec.h
 include/thunderbird/theora/theoraenc.h
-${PLIST.tremor}include/thunderbird/tremor/ivorbiscodec.h
+include/thunderbird/tremor/ivorbiscodec.h
 include/thunderbird/txIEXSLTRegExFunctions.h
 include/thunderbird/txIFunctionEvaluationContext.h
 include/thunderbird/txINodeSet.h
@@ -2828,7 +2820,6 @@ include/thunderbird/txIXPathObject.h
 include/thunderbird/uconvutil.h
 include/thunderbird/updatedefines.h
 include/thunderbird/updatelogging.h
-${PLIST.vorbis}include/thunderbird/vorbis/codec.h
 include/thunderbird/xpcIJSGetFactory.h
 include/thunderbird/xpcIJSModuleLoader.h
 include/thunderbird/xpcIJSWeakReference.h
@@ -3255,10 +3246,10 @@ lib/thunderbird/chrome/comm/content/editor/editorUtilities.js
 lib/thunderbird/chrome/comm/content/editor/images/tag-anchor.gif
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
-lib/thunderbird/chrome/en-US/locale/en-US/alerts/notificationNames.properties
-lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
 ${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
+lib/thunderbird/chrome/en-US/locale/en-US/alerts/notificationNames.properties
+lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
 lib/thunderbird/chrome/en-US/locale/en-US/chat/accounts.properties
 lib/thunderbird/chrome/en-US/locale/en-US/chat/commands.properties
 lib/thunderbird/chrome/en-US/locale/en-US/chat/conversations.properties
