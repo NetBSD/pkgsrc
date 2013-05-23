@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: replace.mk,v 1.2 2013/05/23 13:18:56 obache Exp $
 #
 
 # _pkgformat-replace:
@@ -207,12 +207,12 @@ replace-destdir: .PHONY
 	@${PHASE_MSG} "Updating using binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
-	${PKG_ADD} -U -D -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
+	${PKG_ADD} -U -D -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${STAGE_PKGFILE}
 	@${ECHO} "Fixing recorded cwd..."
 	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
 	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
 .else
-	${PKG_ADD} -U -D ${PKGFILE}
+	${PKG_ADD} -U -D ${STAGE_PKGFILE}
 .endif
 	${RUN}${_REPLACE_OLDNAME_CMD}; \
 	${PKG_INFO} -qR ${PKGNAME:Q} | while read pkg; do \
