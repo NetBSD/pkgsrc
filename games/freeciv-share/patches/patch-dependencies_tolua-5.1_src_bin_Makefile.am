@@ -1,0 +1,15 @@
+$NetBSD: patch-dependencies_tolua-5.1_src_bin_Makefile.am,v 1.1 2013/05/23 15:02:53 joerg Exp $
+
+--- dependencies/tolua-5.1/src/bin/Makefile.am.orig	2013-05-22 20:21:27.000000000 +0000
++++ dependencies/tolua-5.1/src/bin/Makefile.am
+@@ -36,8 +36,8 @@ EXTRA_tolua_SOURCES = \
+ 
+ tolua_DEPENDENCIES = \
+ 	$(LUA_AS_DEPENDENCY) \
+-	../lib/libtolua.a
++	../lib/libtolua.la
+ 
+ tolua_LDFLAGS = \
+ 	$(LUA_LIBS) \
+-	../lib/libtolua.a -lm
++	../lib/libtolua.la -lm
