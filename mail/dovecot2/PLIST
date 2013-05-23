@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/05/14 15:38:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2013/05/23 19:45:50 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -439,19 +439,13 @@ lib/dovecot/lib21_fts_squat_plugin.la
 lib/dovecot/lib30_imap_zlib_plugin.la
 lib/dovecot/lib90_stats_plugin.la
 lib/dovecot/lib95_imap_stats_plugin.la
-lib/dovecot/libdovecot-compression.a
 lib/dovecot/libdovecot-compression.la
-lib/dovecot/libdovecot-compression.so
-lib/dovecot/libdovecot-compression.so.0
-lib/dovecot/libdovecot-compression.so.0.0.0
 lib/dovecot/libdovecot-lda.la
 lib/dovecot/libdovecot-login.la
 lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
-lib/dovecot/libssl_iostream_openssl.a
 lib/dovecot/libssl_iostream_openssl.la
-lib/dovecot/libssl_iostream_openssl.so
 libexec/dovecot/aggregator
 libexec/dovecot/anvil
 libexec/dovecot/auth
@@ -612,12 +606,12 @@ share/doc/dovecot/wiki/LDA.Postfix.txt
 share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
 share/doc/dovecot/wiki/LDA.txt
+share/doc/dovecot/wiki/LMTP.Exim.txt
 share/doc/dovecot/wiki/LMTP.txt
 share/doc/dovecot/wiki/Logging.txt
 share/doc/dovecot/wiki/LoginProcess.txt
 share/doc/dovecot/wiki/MDA.txt
 share/doc/dovecot/wiki/MTA.txt
-share/doc/dovecot/wiki/MailboxSettings.txt
 share/doc/dovecot/wiki/MailLocation.LocalDisk.txt
 share/doc/dovecot/wiki/MailLocation.Maildir.txt
 share/doc/dovecot/wiki/MailLocation.SharedDisk.txt
@@ -717,6 +711,7 @@ share/doc/dovecot/wiki/RunningDovecot.txt
 share/doc/dovecot/wiki/SSL.CertificateClientImporting.txt
 share/doc/dovecot/wiki/SSL.CertificateCreation.txt
 share/doc/dovecot/wiki/SSL.DovecotConfiguration.txt
+share/doc/dovecot/wiki/SSL.SNIClientSupport.txt
 share/doc/dovecot/wiki/SSL.txt
 share/doc/dovecot/wiki/Sasl.txt
 share/doc/dovecot/wiki/SecurityTuning.txt
@@ -767,6 +762,7 @@ share/examples/dovecot/conf.d/90-plugin.conf
 share/examples/dovecot/conf.d/90-quota.conf
 share/examples/dovecot/conf.d/auth-checkpassword.conf.ext
 share/examples/dovecot/conf.d/auth-deny.conf.ext
+share/examples/dovecot/conf.d/auth-dict.conf.ext
 share/examples/dovecot/conf.d/auth-ldap.conf.ext
 share/examples/dovecot/conf.d/auth-master.conf.ext
 share/examples/dovecot/conf.d/auth-passwdfile.conf.ext
@@ -774,7 +770,6 @@ share/examples/dovecot/conf.d/auth-sql.conf.ext
 share/examples/dovecot/conf.d/auth-static.conf.ext
 share/examples/dovecot/conf.d/auth-system.conf.ext
 share/examples/dovecot/conf.d/auth-vpopmail.conf.ext
-share/examples/dovecot/dovecot-db.conf.ext
 share/examples/dovecot/dovecot-dict-auth.conf.ext
 share/examples/dovecot/dovecot-dict-sql.conf.ext
 share/examples/dovecot/dovecot-ldap.conf.ext
