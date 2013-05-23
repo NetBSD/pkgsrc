@@ -1,6 +1,6 @@
-$NetBSD: patch-mb,v 1.9 2013/02/23 23:54:03 ryoon Exp $
+$NetBSD: patch-mb,v 1.10 2013/05/23 13:25:30 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2013-02-18 04:06:50.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2013-05-03 03:08:15.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -50,7 +50,7 @@ endif
  endif
@@ -16,7 +16,7 @@ $NetBSD: patch-mb,v 1.9 2013/02/23 23:54:03 ryoon Exp $
  # Migrate other platforms here after testing
  #
 -ifneq (,$(filter Linux FreeBSD GNU_%,$(OS_ARCH)))
-+ifneq (,$(filter Linux FreeBSD NetBSD OpenBSD GNU_%,$(OS_ARCH)))
++ifneq (,$(filter Linux FreeBSD DragonFly NetBSD OpenBSD GNU_%,$(OS_ARCH)))
  # Linux/x86-64
  ifeq (x86_64,$(OS_TEST))
  CPPSRCS		:= xptcinvoke_x86_64_unix.cpp xptcstubs_x86_64_linux.cpp
