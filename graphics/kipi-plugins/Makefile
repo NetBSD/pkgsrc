@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2013/05/21 13:04:09 markd Exp $
+# $NetBSD: Makefile,v 1.88 2013/05/23 18:40:17 joerg Exp $
 #
 
 PKGNAME=	kipi-plugins-3.2.0
@@ -18,7 +18,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config bison
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/extra/kipi-plugins
 
