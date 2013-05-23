@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.13 2010/02/24 22:53:34 joerg Exp $
+# $NetBSD: bsd.install.mk,v 1.14 2013/05/23 13:18:56 obache Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -25,7 +25,7 @@ _COOKIE.install=	${WRKDIR}/.install_done
 .if ${_USE_DESTDIR} == "no"
 install: stage-install
 .else
-install: package-install
+install: stage-package-install
 .endif
 
 ######################################################################
