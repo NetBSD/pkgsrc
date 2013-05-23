@@ -1,8 +1,13 @@
-$NetBSD: patch-af,v 1.1 2011/11/24 01:15:41 marino Exp $
+$NetBSD: patch-af,v 1.2 2013/05/23 14:59:13 joerg Exp $
 
 --- bhm.cpp.orig	2008-05-26 09:43:52.000000000 +0000
 +++ bhm.cpp
-@@ -13,6 +13,9 @@
+@@ -9,10 +9,14 @@
+ #include <sys/wait.h>
+ #include <signal.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/poll.h>
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <arpa/inet.h>
@@ -12,3 +17,30 @@ $NetBSD: patch-af,v 1.1 2011/11/24 01:15:41 marino Exp $
  #include <netinet/ip.h>
  
  #include "postal.h"
+@@ -47,7 +51,7 @@ void usage(CPCCHAR msg = NULL)
+ 
+ int maxMsgSize = 10240;
+ results res;
+-Logit *log;
++Logit *my_log;
+ 
+ int exitCount = 0;
+ 
+@@ -261,7 +265,7 @@ int readCommand(base_tcp &t, char *buf, 
+ 
+ void do_work(thread_data *td)
+ {
+-  base_tcp t(td->fd, log, td->debug, &res
++  base_tcp t(td->fd, my_log, td->debug, &res
+ #ifdef USE_SSL
+     , td->ssl
+ #endif
+@@ -405,7 +409,7 @@ int main(int argc, char **argv)
+ #endif
+     "\n");
+ 
+-  log = new Logit("bhm.log", allLog, false, 0);
++  my_log = new Logit("bhm.log", allLog, false, 0);
+   Logit *debug = NULL;
+ 
+   if(debugName)

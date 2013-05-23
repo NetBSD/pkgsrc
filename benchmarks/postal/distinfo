@@ -1,10 +1,14 @@
-$NetBSD: distinfo,v 1.6 2011/11/24 01:15:41 marino Exp $
+$NetBSD: distinfo,v 1.7 2013/05/23 14:59:13 joerg Exp $
 
 SHA1 (postal-0.70.tgz) = d02dc900eb645aa993c5747fa434a0af4b0fb7e0
 RMD160 (postal-0.70.tgz) = 2b23ab0d60abfeaad32adf7ba65134d0f267294a
 Size (postal-0.70.tgz) = 99965 bytes
-SHA1 (patch-aa) = d280c32d86451d2abee8ec95e7a22f91c752ae60
-SHA1 (patch-ab) = bc67f3c2d609f1aeb0969467cdc170e2f6ac08b8
+SHA1 (patch-aa) = 0d85ec46202e0077d7f435547158eff65eab8a69
+SHA1 (patch-ab) = 38ed0b1ad550b31e8d46639e43b243e0e2b99cf5
 SHA1 (patch-ad) = 3707f465c6a69c94fd862fb7863a3c8cb6519366
 SHA1 (patch-ae) = 094165c454fb87c9cbacfae6e9ab2bb38f4d15a2
-SHA1 (patch-af) = ddc0280be05d7fac510ac9204146023d9ad58a00
+SHA1 (patch-af) = ce387f94ff18a9a6b67dfe5a07740cc8340e6cfb
+SHA1 (patch-bhmusers.cpp) = 4cdbb026eb8da5bc42aae304e35869542e19ac60
+SHA1 (patch-bhmusers.h) = 430fdea85b33a331442b67d988b203715171dcad
+SHA1 (patch-smtp.cpp) = a91db5779f1ef8cf6d514c1304d20d01a4548772
+SHA1 (patch-smtp.h) = 876ece300ee53085b61bb1d16efffa907e733a43
