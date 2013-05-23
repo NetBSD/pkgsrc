@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.8 2013/01/20 08:33:13 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.9 2013/05/23 13:25:30 ryoon Exp $
 include/seamonkey/calBaseCID.h
 include/seamonkey/calIAlarm.h
 include/seamonkey/calIAlarmService.h
@@ -275,7 +275,6 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/common/widgets/calendar-widgets.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/datetimepickers/datetimepickers.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/day-box-item-image.png
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/daypicker-background.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/event-grippy-bottom.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/event-grippy-left.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/event-grippy-right.png
