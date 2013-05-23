@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1748 2013/05/22 15:18:03 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.1749 2013/05/23 08:07:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/mediawiki to 1.20.6 [wen 2013-05-22]
 	Updated sysutils/lockf to 1 [mspo 2013-05-22]
 	Updated lang/nodejs to 0.10.6 [mspo 2013-05-22]
+	Updated www/moodle to 2.5 [wen 2013-05-23]
