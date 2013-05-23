@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1754 2013/05/23 14:55:49 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1755 2013/05/23 15:07:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2870,3 +2870,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/thunderbird-l10n to 17.0.6 [ryoon 2013-05-23]
 	Removed devel/xulrunner 21.0 [ryoon 2013-05-23]
 	Updated devel/transifex-client to 0.9 [taca 2013-05-23]
+	Added www/contao31 version 3.1.0 [taca 2013-05-23]
+	Added www/contao31-example version 3.1.0 [taca 2013-05-23]
