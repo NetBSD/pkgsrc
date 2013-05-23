@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2013/02/10 18:16:53 adam Exp $
+$NetBSD: patch-configure,v 1.2 2013/05/23 20:21:28 adam Exp $
 
 Compatibility problems.
 
---- configure.orig	2013-02-09 07:30:57.000000000 +0000
+--- configure.orig	2013-05-20 11:50:55.000000000 +0000
 +++ configure
-@@ -22437,7 +22437,7 @@ fi
+@@ -22798,7 +22798,7 @@ fi
  
  done
  
@@ -13,7 +13,7 @@ Compatibility problems.
      for ac_header in gssapi/gssapi_generic.h
  do :
    ac_fn_cxx_check_header_mongrel "$LINENO" "gssapi/gssapi_generic.h" "ac_cv_header_gssapi_gssapi_generic_h" "$ac_includes_default"
-@@ -22634,7 +22634,7 @@ done
+@@ -22995,7 +22995,7 @@ done
  
  
    ac_com_error_message=no
@@ -22,7 +22,7 @@ Compatibility problems.
        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <com_err.h>
-@@ -22646,7 +22646,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
+@@ -23007,7 +23007,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
  fi
  rm -f conftest*
  
@@ -31,7 +31,7 @@ Compatibility problems.
        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <et/com_err.h>
-@@ -22707,7 +22707,7 @@ $as_echo "#define HAVE_MAX_SKEW_IN_KRB5_
+@@ -23068,7 +23068,7 @@ $as_echo "#define HAVE_MAX_SKEW_IN_KRB5_
  
    fi
  
@@ -40,7 +40,7 @@ Compatibility problems.
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for error_message in -lcom_err" >&5
  $as_echo_n "checking for error_message in -lcom_err... " >&6; }
  if ${ac_cv_lib_com_err_error_message+:} false; then :
-@@ -22750,7 +22750,7 @@ $as_echo "#define HAVE_ERROR_MESSAGE 1" 
+@@ -23111,7 +23111,7 @@ $as_echo "#define HAVE_ERROR_MESSAGE 1" 
  
  fi
  
