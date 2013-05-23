@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2013/04/06 12:04:24 taca Exp $
+# $NetBSD: Makefile.common,v 1.35 2013/05/23 14:58:34 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
@@ -9,6 +9,7 @@
 # current release
 CT211_VERSION=	2.11.11
 CT300_VERSION=	3.0.6
+CT310_VERSION=	3.1.0
 
 CT_VERS?=	211
 
@@ -19,6 +20,9 @@ CT_FILES=	tl_files
 CT_VERSION=	${CT300_VERSION}
 CT_FILES=	files
 CT_DIST_SUBDIR=	contao-20120109
+.elif ${CT_VERS} == "31"
+CT_VERSION=	${CT310_VERSION}
+CT_FILES=	files
 .else
 .error "Illegal version specified: ${CT_VERS}"
 .endif
