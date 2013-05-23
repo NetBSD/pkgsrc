@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2006/01/20 01:06:22 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2013/05/23 15:46:11 christos Exp $
 
---- arpd.c.orig	2003-02-09 04:20:40.000000000 +0000
-+++ arpd.c
+--- arpd.c.orig	2003-02-08 23:20:40.000000000 -0500
++++ arpd.c	2013-05-23 11:43:08.000000000 -0400
 @@ -33,7 +33,7 @@
  #define ARPD_MAX_ACTIVE		600
  #define ARPD_MAX_INACTIVE	300
@@ -11,7 +11,15 @@ $NetBSD: patch-ab,v 1.2 2006/01/20 01:06:22 joerg Exp $
  
  struct arp_req {
  	struct addr		pa;
-@@ -265,7 +265,7 @@ arpd_send(eth_t *eth, int op,
+@@ -65,7 +65,6 @@
+ static arp_t			*arpd_arp;
+ static eth_t			*arpd_eth;
+ static struct intf_entry	 arpd_ifent;
+-static int			 arpd_sig;
+ 
+ static void
+ usage(void)
+@@ -265,7 +264,7 @@
  	    spa->addr_ip, tha->addr_eth, tpa->addr_ip);
  	
  	if (op == ARP_OP_REQUEST) {
@@ -20,7 +28,7 @@ $NetBSD: patch-ab,v 1.2 2006/01/20 01:06:22 joerg Exp $
  		    addr_ntoa(tpa), addr_ntoa(spa));
  	} else if (op == ARP_OP_REPLY) {
  		syslog(LOG_INFO, "arp reply %s is-at %s",
-@@ -282,7 +282,7 @@ arpd_lookup(struct addr *addr)
+@@ -282,7 +281,7 @@
  	int error;
  
  	if (addr_cmp(addr, &arpd_ifent.intf_addr) == 0) {
@@ -29,7 +37,7 @@ $NetBSD: patch-ab,v 1.2 2006/01/20 01:06:22 joerg Exp $
  		    addr_ntoa(addr), addr_ntoa(&arpd_ifent.intf_link_addr));
  		return (0);
  	}
-@@ -291,10 +291,10 @@ arpd_lookup(struct addr *addr)
+@@ -291,10 +290,10 @@
  	error = arp_get(arpd_arp, &arpent);
  	
  	if (error == -1) {
@@ -42,7 +50,7 @@ $NetBSD: patch-ab,v 1.2 2006/01/20 01:06:22 joerg Exp $
  		    addr_ntoa(addr), addr_ntoa(&arpent.arp_ha));
  	}
  	return (error);
-@@ -423,7 +423,7 @@ arpd_recv_cb(u_char *u, const struct pca
+@@ -423,7 +422,7 @@
  		if ((req = SPLAY_FIND(tree, &arpd_reqs, &tmp)) != NULL) {
  			addr_pack(&src.arp_ha, ADDR_TYPE_ETH, ETH_ADDR_BITS,
  			    ethip->ar_sha, ETH_ADDR_LEN);
@@ -51,3 +59,59 @@ $NetBSD: patch-ab,v 1.2 2006/01/20 01:06:22 joerg Exp $
  			    addr_ntoa(&req->pa), addr_ntoa(&src.arp_ha));
  			
  			/* This address is claimed */
+@@ -442,22 +441,23 @@
+ 		syslog(LOG_ERR, "pcap_dispatch: %s", pcap_geterr(arpd_pcap));
+ }
+  
+-void
+-terminate_handler(int sig)
+-{
+-	extern int event_gotsig;
+-
+-	event_gotsig = 1;
+-	arpd_sig = sig;
+-}
++static void 
++arpd_signal(evutil_socket_t fd, short what, void *arg)
+ 
+-int
+-arpd_signal(void)
+ {
++	int arpd_sig;
++	recv(fd, &arpd_sig, sizeof(arpd_sig), 0);
+ 	syslog(LOG_INFO, "exiting on signal %d", arpd_sig);
+ 	arpd_exit(0);
+-	/* NOTREACHED */
+-	return (-1);
++}
++
++static void
++addsignal(int sig) {
++	struct event sig_ev;
++	int got;
++
++	evsignal_set(&sig_ev, sig, arpd_signal, &got);
++	evsignal_add(&sig_ev, NULL);
+ }
+ 
+ int
+@@ -516,16 +516,9 @@
+ 	event_add(&recv_ev, NULL);
+ 	
+ 	/* Setup signal handler */
+-	if (signal(SIGINT, terminate_handler) == SIG_ERR) {
+-		perror("signal");
+-		return (-1);
+-	}
+-	if (signal(SIGTERM, terminate_handler) == SIG_ERR) {
+-		perror("signal");
+-		return (-1);
+-	}
+-	event_sigcb = arpd_signal;
+-	
++	addsignal(SIGINT);
++	addsignal(SIGTERM);
++
+ 	event_dispatch();
+ 
+ 	return (0);
