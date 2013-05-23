@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/11 19:37:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/23 15:07:29 joerg Exp $
 #
 
 DISTNAME=		fish-1.23.1
@@ -24,8 +24,7 @@ PKG_SHELL=		bin/fish
 
 .include "../../mk/bsd.prefs.mk"
 
-# backtrace() and backtrace_symbols were added in NetBSD-6.99.8
-.if !empty(MACHINE_PLATFORM:MNetBSD-*) && (empty(MACHINE_PLATFORM:MNetBSD-[0-6].*) || (!empty(MACHINE_PLATFORM:MNetBS-6.99.*) && empty(MACHINE_PLATFORM:MNetBSD-6.99.[0-7])))
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
 CPPFLAGS+=		-DHAVE_BACKTRACE
 CPPFLAGS+=		-DHAVE_BACKTRACE_SYMBOLS
 LDFLAGS+=		-lexecinfo
