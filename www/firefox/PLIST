@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2013/05/19 12:31:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.65 2013/05/23 13:12:13 ryoon Exp $
 bin/firefox
 include/firefox/AbstractMediaDecoder.h
 include/firefox/AccEvent.h
@@ -400,6 +400,7 @@ include/firefox/mozilla/a11y/DocManager.h
 include/firefox/mozilla/a11y/FocusManager.h
 include/firefox/mozilla/a11y/HyperTextAccessible.h
 include/firefox/mozilla/a11y/HyperTextAccessibleWrap.h
+${PLIST.debug}include/firefox/mozilla/a11y/Logging.h
 include/firefox/mozilla/a11y/Platform.h
 include/firefox/mozilla/a11y/Role.h
 include/firefox/mozilla/a11y/States.h
