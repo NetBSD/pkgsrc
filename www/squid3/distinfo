@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.6 2013/04/27 17:51:24 tron Exp $
+$NetBSD: distinfo,v 1.7 2013/05/23 20:21:28 adam Exp $
 
-SHA1 (squid-3.3.4.tar.xz) = 2b9b0e91568599ded93f90dda6197aa8744fc5b5
-RMD160 (squid-3.3.4.tar.xz) = 9a3c09867bdce77e800d247780594ccded89488a
-Size (squid-3.3.4.tar.xz) = 2178260 bytes
-SHA1 (patch-configure) = 8e5eb49a8d04c77f3cf9de9390a8992268421cb6
+SHA1 (squid-3.3.5.tar.xz) = 60b1b46683cccd3d845f324dbedb9f289d375115
+RMD160 (squid-3.3.5.tar.xz) = 400fe3a362a127e90ea0ece556e48ac414644f31
+Size (squid-3.3.5.tar.xz) = 2180668 bytes
+SHA1 (patch-configure) = 86400fd701a84eb174395755eec7b13cbfce55ec
 SHA1 (patch-errors_Makefile.in) = afbac822ac84d5e1734d55fc625e949ae0b85289
 SHA1 (patch-helpers_basic_auth_MSNT_Makefile.in) = 74a0379d3ec0c2601dbb62b16df889bf4edcaedf
-SHA1 (patch-src_Makefile.in) = 32bc968a7680414d87acf1a4c96822a3d80c2030
+SHA1 (patch-src_Makefile.in) = 130e223568a07c474b30a8fa3678c60f8b487c3e
 SHA1 (patch-src_base_TidyPointer.h) = 93428d26bb2479fc845764a324658eaacd26588e
 SHA1 (patch-src_ip_Intercept.cc) = 8a8640d5f7eef217b2536646513eb872c67a7ffc
 SHA1 (patch-src_store.cc) = 055d98a59103b02a51876a5c8ffed9514954beb4
