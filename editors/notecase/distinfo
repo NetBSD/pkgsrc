@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/12/08 20:41:47 marino Exp $
+$NetBSD: distinfo,v 1.8 2013/05/23 18:39:35 joerg Exp $
 
 SHA1 (notecase-1.8.8_src.tar.gz) = 9657fc83ed4c1820f713b4106c113acaabf6a3b3
 RMD160 (notecase-1.8.8_src.tar.gz) = ae98102173e85530c22bbd9d92df23bea9b67886
@@ -10,4 +10,6 @@ SHA1 (patch-ae) = 355b89d234a95697c5344bbfe24d347e9cd630f7
 SHA1 (patch-af) = eab3d1dfa00cb2eed49b4a08ad780d295b9a9dda
 SHA1 (patch-ag) = 376e7c934beb5b666503b92e970695ece879d4cc
 SHA1 (patch-ah) = cb8cca8e9980f13a6e3c4b1731fa1ae17136dd09
+SHA1 (patch-src_gui_GuiLanguage.cpp) = fd95aa3a7101b8b504b860bf976a96d7fc14d0cf
 SHA1 (patch-src_lib_EnumDirectory.cpp) = d0f192e97444f2decafdd67a830a061a14765a02
+SHA1 (patch-src_lib_IniFile.cpp) = b47543cad27edd6acf69052b7e8a7845fc731f15
