@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/05/21 14:34:38 imil Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/23 15:01:15 joerg Exp $
 #
 
 DISTNAME=	v1.2.1
 PKGNAME=	${PYPKGPREFIX}-requests-${DISTNAME}
+EGG_NAME=	requests-1.2.1
 CATEGORIES=	devel www
 MASTER_SITES=	https://github.com/kennethreitz/requests/archive/
 EXTRACT_SUFX=	.zip
