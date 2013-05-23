@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1758 2013/05/23 20:22:15 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1759 2013/05/23 21:12:20 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2875,3 +2875,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.58 [adam 2013-05-23]
 	Updated mail/dovecot2 to 2.2.2 [adam 2013-05-23]
 	Updated www/squid3 to 3.3.5 [adam 2013-05-23]
+	Updated devel/quilt to 0.48nb2 [sbd 2013-05-23]
