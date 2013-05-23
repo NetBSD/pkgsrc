@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2013/05/22 15:17:07 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/23 11:23:50 fhajny Exp $
 #
 
-DISTNAME=	node-v0.10.6
+DISTNAME=	node-v0.10.7
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nodejs.org/
 COMMENT=	V8 JavaScript for clients and servers
 LICENSE=	mit
-
-CHECK_INTERPRETER=	no
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
@@ -49,6 +47,8 @@ REPLACE_PYTHON+=	tools/node-waf
 REPLACE_PYTHON+=	tools/waf-light
 REPLACE_PYTHON+=	tools/wafadmin/*.py
 REPLACE_PYTHON+=	tools/wafadmin/Tools/*.py
+
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 . include "../../devel/libexecinfo/buildlink3.mk"
