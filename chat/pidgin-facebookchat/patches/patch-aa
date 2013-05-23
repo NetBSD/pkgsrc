@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/06/22 13:46:30 obache Exp $
+$NetBSD: patch-aa,v 1.5 2013/05/23 15:00:27 joerg Exp $
 
 * not to build&install redundant plugins.
 * pidin>=2.7.9 contains facebook.png.
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2012/06/22 13:46:30 obache Exp $
  
  libfacebook.so:	${FACEBOOK_SOURCES}
 -	${LINUX32_COMPILER} ${LIBPURPLE_CFLAGS} -Wall ${GLIB_CFLAGS} -I. -g -O2 -pipe ${FACEBOOK_SOURCES} -o libfacebook.so -shared -fPIC -DPIC
-+	${CC} ${CFLAGS} ${LIBPURPLE_CFLAGS} -Wall ${LDFLAGS} ${GLIB_CFLAGS} -I.  ${FACEBOOK_SOURCES} -o libfacebook.so -shared -fPIC -DPIC
++	${CC} ${CFLAGS} ${LIBPURPLE_CFLAGS} -Wall ${LDFLAGS} ${GLIB_CFLAGS} -I.  ${FACEBOOK_SOURCES:M*.c} -o libfacebook.so -shared -fPIC -DPIC
  
  libfacebookxmpp.so:	libfbxmpp.c ${FACEBOOK_SOURCES}
  	${LINUX32_COMPILER} ${LIBPURPLE_CFLAGS} -Wall ${GLIB_CFLAGS} -I. -g -O2 -pipe libfbxmpp.c ${FACEBOOK_SOURCES} -o libfacebookxmpp.so -shared -fPIC -DPIC -I$(PIDGIN_DIR)/libpurple/protocols/jabber/ -lxml2 -I/usr/include/libxml2
