@@ -1,6 +1,20 @@
-$NetBSD: distinfo,v 1.3 2010/03/20 01:51:40 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2013/05/23 14:57:32 joerg Exp $
 
 SHA1 (publicfile-0.52.tar.gz) = 067e5a0c57bf8ac04c578cac47bd80c2d88eddeb
 RMD160 (publicfile-0.52.tar.gz) = 02d2bff245e9d474f26ac29a96775c8eeed0799c
 Size (publicfile-0.52.tar.gz) = 34892 bytes
-SHA1 (patch-aa) = e9933a7337b4fa6683fb6c11a6421bfa6e6962eb
+SHA1 (patch-Makefile) = e9933a7337b4fa6683fb6c11a6421bfa6e6962eb
+SHA1 (patch-alloc.c) = 3a8491e1f15595cafba1406e22d282fdb1734365
+SHA1 (patch-exit.h) = cff7aa714c2dcfa95f3663af12a3e26013a4d391
+SHA1 (patch-fetch.c) = fc10297708df10817eff97927d1fc2f05acbaff0
+SHA1 (patch-file.c) = 15a9db2b4225ccbe935a71a3515553b1f9731af8
+SHA1 (patch-filetype.c) = 87e2fa25e92c41fa0ce84c8cd7549ba83f00f4b0
+SHA1 (patch-ftpd.c) = 90755132891cf6b36a5e0a5c589b6c11857dfeec
+SHA1 (patch-httpd.c) = 4fa3d55ea17b2a626109da2c84a60a6c5f9b8972
+SHA1 (patch-leapsecs__read.c) = b956b8983d7a680b0349d9f99551a6480a1f664b
+SHA1 (patch-main.c) = abe752e15212ee4f191de4e56256d7e137cfb184
+SHA1 (patch-open.h) = 4605a65b282d013c71a02128df3c297a259cfa16
+SHA1 (patch-prot.c) = 35c0fdce5b121f5b17b8cb4a288f4d43b8e8e197
+SHA1 (patch-prot.h) = 6c47e387dbc9c9bc59f53a84e2112fadd6836118
+SHA1 (patch-readwrite.h) = e6f17cddb9673ebb4a458c557215c28526712501
+SHA1 (patch-utime.c) = cd4b3414200c190cec781d00cf36267e2a0b4208
