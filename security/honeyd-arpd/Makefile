@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2013/02/06 23:23:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2013/05/23 15:46:11 christos Exp $
 #
 
 DISTNAME=	arpd-0.2
 PKGNAME=	honeyd-arpd-0.2
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	security net
 MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
 
