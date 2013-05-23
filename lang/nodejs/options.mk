@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/05/22 15:17:07 mspo Exp $
+# $NetBSD: options.mk,v 1.2 2013/05/23 11:22:44 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--without-dtrace
 
 .if !empty(PKG_OPTIONS:Mopenssl)
 .include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--shared-openssl
 .else
 CONFIGURE_ARGS+=	--without-openssl
 .endif
