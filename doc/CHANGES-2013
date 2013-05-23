@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1757 2013/05/23 19:49:29 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1758 2013/05/23 20:22:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2874,3 +2874,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/contao31-example version 3.1.0 [taca 2013-05-23]
 	Updated graphics/pngcrush to 1.7.58 [adam 2013-05-23]
 	Updated mail/dovecot2 to 2.2.2 [adam 2013-05-23]
+	Updated www/squid3 to 3.3.5 [adam 2013-05-23]
