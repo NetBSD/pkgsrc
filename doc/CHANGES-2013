@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1750 2013/05/23 08:18:09 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1751 2013/05/23 08:37:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/nodejs to 0.10.6 [mspo 2013-05-22]
 	Updated www/moodle to 2.5 [wen 2013-05-23]
 	Updated converters/p5-JSON to 2.58 [wen 2013-05-23]
+	Updated textproc/p5-XML-RSS to 1.52 [wen 2013-05-23]
