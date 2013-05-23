@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2013/05/19 12:31:58 ryoon Exp $
+# $NetBSD: options.mk,v 1.13 2013/05/23 13:12:13 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
-
-# XXX for xulrunner integrated firefox.
 PKG_SUPPORTED_OPTIONS+=	debug mozilla-jemalloc gnome pulseaudio
 PLIST_VARS+=		gnome jemalloc debug
 
