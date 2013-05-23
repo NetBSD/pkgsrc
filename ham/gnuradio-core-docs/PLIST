@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/03/23 10:04:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/05/23 15:05:07 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/README
 share/doc/gnuradio-${PKGVERSION}/README.hacking
 share/doc/gnuradio-${PKGVERSION}/html/ad9862_8h.html
@@ -9195,6 +9195,7 @@ share/doc/gnuradio-${PKGVERSION}/html/pmt__sugar_8h__dep__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/pmt__sugar_8h__dep__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/pmt__sugar_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/pmt__unv__int_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/pmt__unv__int_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/pmt__unv__int_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/pmt__unv__int_8h__dep__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/pmt__unv__int_8h__dep__incl.png
