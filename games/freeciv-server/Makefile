@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/06 11:54:38 asau Exp $
+# $NetBSD: Makefile,v 1.40 2013/05/23 15:02:53 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -6,7 +6,10 @@ COMMENT=	Freeciv game server
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
 
-#MAKE_JOBS_SAFE=		no
+USE_TOOLS+=	automake autoconf
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 USE_GNU_READLINE=	yes
 CONFIGURE_ARGS+=	--disable-make-data

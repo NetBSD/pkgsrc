@@ -1,0 +1,20 @@
+$NetBSD: patch-server_Makefile.am,v 1.1 2013/05/23 15:02:53 joerg Exp $
+
+--- server/Makefile.am.orig	2013-05-22 20:25:54.000000000 +0000
++++ server/Makefile.am
+@@ -112,6 +112,7 @@ libfreeciv_srv_la_DEPENDENCIES = \
+  $(srvlibs)
+ 
+ libfreeciv_srv_la_LIBADD = \
++ $(LUA_LIBS) $(TOLUA_LIBS) \
+  $(srvlibs)
+ 
+ freeciv_server_DEPENDENCIES = \
+@@ -128,7 +129,6 @@ freeciv_server_LDADD = \
+  ./libfreeciv-srv.la \
+  $(top_builddir)/common/libfreeciv.la \
+  $(INTLLIBS) \
+- $(LUA_LIBS) $(TOLUA_LIBS) \
+  $(AUTH_LIBS) $(SERVER_LIBS) $(LIB_GGZDMOD) $(SERVERICON)
+ 
+ desktopfiledir = $(prefix)/share/applications
