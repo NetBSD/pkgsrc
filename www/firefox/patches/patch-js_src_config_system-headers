@@ -1,0 +1,10 @@
+$NetBSD: patch-js_src_config_system-headers,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+
+--- js/src/config/system-headers.orig	2013-05-11 19:19:32.000000000 +0000
++++ js/src/config/system-headers
+@@ -1126,3 +1126,5 @@ sys/thr.h
+ sys/user.h
+ kvm.h
+ spawn.h
++err.h
++xlocale.h

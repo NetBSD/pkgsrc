@@ -1,0 +1,23 @@
+$NetBSD: patch-netwerk_sctp_src_Makefile.in,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+
+--- netwerk/sctp/src/Makefile.in.orig	2013-05-11 19:19:49.000000000 +0000
++++ netwerk/sctp/src/Makefile.in
+@@ -114,11 +114,18 @@ DEFINES += \
+   -U__FreeBSD__ \
+   $(NULL)
+ else
++ifeq ($(OS_TARGET),NetBSD)
++DEFINES += \
++  -D__Userspace_os_NetBSD=1 \
++  -U__NetBSD__ \
++  $(NULL)
++else
+ #error Unsupported platform!
+ endif
+ endif
+ endif
+ endif
++endif
+ 
+ include $(topsrcdir)/config/config.mk
+ include $(topsrcdir)/ipc/chromium/chromium-config.mk
