@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2013/05/09 07:40:27 adam Exp $
+# $NetBSD: Makefile,v 1.37 2013/05/24 15:08:00 jperkin Exp $
 #
 
 DISTNAME=		pkgin-0.6.3.1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		pkgtools
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -43,6 +43,8 @@ SUBST_MESSAGE.osrel=	Adjusting repository OS release
 SUBST_FILES.osrel=	REPOSITORIES
 SUBST_SED.osrel=	-e "s|@OSREL@|${OS_VERSION:C/_.*//}|"
 .endif
+
+CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
