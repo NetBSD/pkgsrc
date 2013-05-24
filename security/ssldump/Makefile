@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/02/06 23:23:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2013/05/24 15:30:47 jperkin Exp $
 #
 
 DISTNAME=	ssldump-0.9b3
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=--with-pcap-inc=${BUILDLINK_PREFIX.libpcap}/include \
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/sbin \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+CFLAGS.SunOS+=	-Du_int16_t=uint16_t
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
