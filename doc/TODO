@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12176 2013/05/22 12:30:18 obache Exp $
+$NetBSD: TODO,v 1.12177 2013/05/24 13:13:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache-ant-1.9.0
+	o apache-ant-1.9.1
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
@@ -384,7 +384,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asc-2.5.0
 	o aspell-nb-2.0.10
 	o astyle-1.15.3
-	o asymptote-2.22
+	o asymptote-2.23
 	o aterm-1.0.1
 	o audacious-plugins-2.4.4
 	o audacity-2.0.2 [wip (audacity-devel)]
@@ -418,8 +418,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o byacc-20130304
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-0.9.30
+	o calibre-0.9.31
 	o calligra-2.4.3 [in wip; koffice successor]
+	o capc-calc-2.12.4.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
 	o cddbd-1.5.2
@@ -604,6 +605,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-9.1.2
+	o gmp-5.1.2
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.8.2
@@ -657,7 +659,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtick-0.4.2
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
-	o gtkmm-3.8.0
+	o gtkmm-3.8.0 [see wip/gtkmm3]
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.41
 	o gtl-3.6
@@ -675,6 +677,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gzip-1.5
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1 [GNOME 2.32]
+	o handbrake-0.9.9
 	o hanzim-3.5
 	o haskell-mode-1.45
 	o hdf-4.2.7
@@ -850,7 +853,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.5.2
 	o mp3splt-gtk-0.7.3
 	o mpeg4ip-1.6.1
-	o mpg123-1.15.3
+	o mpg123-1.15.4
 	o mpop-1.0.28
 	o mserv-devel-0.41
 	o mu-0.9.9.5
@@ -915,7 +918,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Search-Xapian-1.2.12
 	o p5-cairo-1.100
 	o p5-clutter-1.110
-	o p5-gtk2-1.244
+	o p5-gtk2-1.300
 	o p5-pango-1.224
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
@@ -994,7 +997,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-trueskill-0.4
 	o python33-3.3.1
 	o qbrew-0.3.9
-	o qemu-1.4.1
+	o qemu-1.5
 	o qnetwalk-1.4
 	o qt5-libs-5.0.2
 	o quagga-0.99.22.1
@@ -1025,7 +1028,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.41
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.0.5
+	o samba-4.0.6
 	o sarg-2.2.5
 	o sawfish-1.9.91
 	o scala-2.10.0
@@ -1057,7 +1060,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skype-4.1
-	o slib-3b4
 	o slock-1.1
 	o smartmontools-6.0
 	o smproxy-1.0.3
@@ -1175,7 +1177,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webkit-gtk-2.0.2
 	o webmin-1.630
 	o websvn-2.3.2
-	o weechat-0.4.0
+	o weechat-0.4.1
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
@@ -1212,6 +1214,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-intel-2.21.7
 	o xf86-video-mga-1.9.100
 	o xf86-video-newport-0.2.4 [unpackaged]
+	o xf86-video-openchrome-0.3.3
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-sunffb-1.2.1 [unpackaged]
 	o xf86-video-voodoo-1.2.4
