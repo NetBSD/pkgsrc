@@ -1,8 +1,11 @@
-$NetBSD: patch-libproxy_CMakeLists.txt,v 1.1 2013/05/24 18:22:57 wiz Exp $
+$NetBSD: patch-libproxy_CMakeLists.txt,v 1.2 2013/05/24 18:31:49 wiz Exp $
 
 If this is defined, it doesn't compile on NetBSD due to
 http://gcc.gnu.org/bugzilla/show_bug.cgi?id=24012
 and missing ntohs() etc.
+
+Reported upstream at
+http://code.google.com/p/libproxy/issues/detail?id=193
 
 --- libproxy/CMakeLists.txt.orig	2012-11-30 22:31:35.000000000 +0000
 +++ libproxy/CMakeLists.txt
