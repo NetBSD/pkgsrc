@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1763 2013/05/24 13:16:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1764 2013/05/24 13:28:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2880,3 +2880,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/reposurgeon to 2.39 [wiz 2013-05-24]
 	Updated print/acroread9 to 9.5.5 [obache 2013-05-24]
 	Updated x11/xf86-video-openchrome to 0.3.3 [wiz 2013-05-24]
+	Updated x11/pixman to 0.30.0 [wiz 2013-05-24]
