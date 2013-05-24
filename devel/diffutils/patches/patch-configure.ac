@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/05/24 11:40:52 richard Exp $
+
+from upstream: http://git.savannah.gnu.org/cgit/diffutils.git/commit/?id=d1d1df8e369b0f31e5e6f2784dbfa35d7ddc3647
+The future major Automake version (2.0, ETA at least one year from now) might enable that option unconditionally, so better get prepared in due time. * configure.ac (AM_INIT_AUTOMAKE): Adjust. (AM_PROG_CC_C_O): New, required by Automake up to 1.13.x when the 'subdir-objects' is in use.
+
+--- configure.ac.orig	jeu. mai 23 06:14:24 2013
++++ configure.ac	jeu. mai 23 06:15:34 2013
+@@ -26,7 +26,8 @@
+ AC_CONFIG_AUX_DIR([build-aux])
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+-AM_INIT_AUTOMAKE([1.11 dist-xz no-dist-gzip color-tests parallel-tests])
++AM_INIT_AUTOMAKE([1.11 dist-xz no-dist-gzip subdir-objects
++			 color-tests parallel-tests])
+ AM_SILENT_RULES([yes]) # make --enable-silent-rules the default.
+ 
+ AC_CONFIG_HEADER([lib/config.h:lib/config.hin])
+@@ -33,6 +34,7 @@
+ 
+ AC_PROG_AWK
+ AC_PROG_CC
++AM_PROG_CC_C_O
+ AM_MISSING_PROG([HELP2MAN], [help2man])
+ AC_PROG_RANLIB
+ gl_EARLY
