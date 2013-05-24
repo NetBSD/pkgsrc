@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.969 2013/05/23 15:06:35 taca Exp $
+# $NetBSD: Makefile,v 1.970 2013/05/24 08:08:16 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -188,6 +188,7 @@ SUBDIR+=	liferea-current
 SUBDIR+=	lighttpd
 SUBDIR+=	links
 SUBDIR+=	links-gui
+SUBDIR+=	litmus
 SUBDIR+=	llgal
 SUBDIR+=	loggerhead
 SUBDIR+=	lua-curl
