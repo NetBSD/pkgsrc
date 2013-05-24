@@ -1,6 +1,6 @@
-$NetBSD: patch-bc,v 1.3 2013/01/30 10:21:22 wiz Exp $
+$NetBSD: patch-bc,v 1.4 2013/05/24 13:28:04 wiz Exp $
 
---- pixman/pixman.c.orig	2012-12-10 11:34:13.000000000 +0000
+--- pixman/pixman.c.orig	2013-04-18 05:03:32.000000000 +0000
 +++ pixman/pixman.c
 @@ -152,6 +152,57 @@ optimize_operator (pixman_op_t     op,
      return operator_table[op].opaque_info[is_dest_opaque | is_source_opaque];
@@ -60,10 +60,10 @@ $NetBSD: patch-bc,v 1.3 2013/01/30 10:21:22 wiz Exp $
  /*
   * Computing composite region
   */
-@@ -576,6 +627,13 @@ pixman_image_composite32 (pixman_op_t   
-     uint32_t src_flags, mask_flags, dest_flags;
-     pixman_region32_t region;
-     pixman_box32_t extents;
+@@ -588,6 +639,13 @@ pixman_image_composite32 (pixman_op_t   
+     pixman_composite_info_t info;
+     const pixman_box32_t *pbox;
+     int n;
 +    uint32_t *src_bits;
 +    int src_dx, src_dy;
 +    uint32_t *mask_bits;
@@ -71,15 +71,15 @@ $NetBSD: patch-bc,v 1.3 2013/01/30 10:21:22 wiz Exp $
 +    uint32_t *dest_bits;
 +    int dest_dx, dest_dy;
 +    pixman_bool_t need_workaround;
-     pixman_implementation_t *imp;
-     pixman_composite_func_t func;
  
-@@ -614,6 +672,16 @@ pixman_image_composite32 (pixman_op_t   
+     _pixman_image_validate (src);
+     if (mask)
+@@ -624,6 +682,16 @@ pixman_image_composite32 (pixman_op_t   
  	    src_format = mask_format = PIXMAN_rpixbuf;
      }
  
 +    /* Check for workaround */
-+    need_workaround = (src_flags | mask_flags | dest_flags) & FAST_PATH_NEEDS_WORKAROUND;
++    need_workaround = (info.src_flags | info.mask_flags | info.dest_flags) & FAST_PATH_NEEDS_WORKAROUND;
 +
 +    if (need_workaround)
 +    {
@@ -91,7 +91,7 @@ $NetBSD: patch-bc,v 1.3 2013/01/30 10:21:22 wiz Exp $
      pixman_region32_init (&region);
  
      if (!_pixman_compute_composite_region32 (
-@@ -707,6 +775,13 @@ pixman_image_composite32 (pixman_op_t   
+@@ -710,6 +778,13 @@ pixman_image_composite32 (pixman_op_t   
      }
  
  out:
