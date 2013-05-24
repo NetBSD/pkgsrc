@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1764 2013/05/24 13:28:14 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1765 2013/05/24 15:08:22 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2881,3 +2881,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/acroread9 to 9.5.5 [obache 2013-05-24]
 	Updated x11/xf86-video-openchrome to 0.3.3 [wiz 2013-05-24]
 	Updated x11/pixman to 0.30.0 [wiz 2013-05-24]
+	Updated pkgtools/pkgin to 0.6.3.1.1nb2 [jperkin 2013-05-24]
