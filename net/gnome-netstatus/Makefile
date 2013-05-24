@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2013/05/09 07:40:23 adam Exp $
+# $NetBSD: Makefile,v 1.68 2013/05/24 18:23:38 wiz Exp $
 #
 
 DISTNAME=	gnome-netstatus-2.26.0
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-netstatus/2.26/}
 EXTRACT_SUFX=	.tar.bz2

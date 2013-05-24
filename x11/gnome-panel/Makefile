@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.156 2013/05/09 07:39:21 adam Exp $
+# $NetBSD: Makefile,v 1.157 2013/05/24 18:23:33 wiz Exp $
 #
 
 DISTNAME=		gnome-panel-2.32.1
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.32/}
 EXTRACT_SUFX=		.tar.bz2
