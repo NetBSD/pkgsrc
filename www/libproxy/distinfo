@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.10 2012/11/28 12:20:38 drochner Exp $
+$NetBSD: distinfo,v 1.11 2013/05/24 18:22:57 wiz Exp $
 
-SHA1 (libproxy-0.3.1.tar.bz2) = 71338ede69b4ed2b32541f7cf5285c8828ad3a8d
-RMD160 (libproxy-0.3.1.tar.bz2) = 565deed81f13752f61bbff531085ef1b2c5e13d0
-Size (libproxy-0.3.1.tar.bz2) = 315526 bytes
-SHA1 (patch-CVE-2012-4505) = ad59e5196a334d909073170bf2e56f1feca3dccf
-SHA1 (patch-aa) = 08baf8aeab5a1060cc5a6fa0435199892c7a0ab6
-SHA1 (patch-ab) = b2bd350d3af3274fa028612dbe6e2cb8ddd3e8bd
-SHA1 (patch-ac) = 8bcc3543479490c92def6243ad74f8bf714cfeb2
+SHA1 (libproxy-0.4.11.tar.gz) = c037969434095bc65d29437e11a7c9e0293a5149
+RMD160 (libproxy-0.4.11.tar.gz) = 382110e088faf7a170ac838864d675204d886237
+Size (libproxy-0.4.11.tar.gz) = 93757 bytes
+SHA1 (patch-libproxy_CMakeLists.txt) = b300954ce464a0854c46b5acd14bd8c78782d577

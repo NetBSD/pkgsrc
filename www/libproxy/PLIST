@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/15 11:00:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/05/24 18:22:57 wiz Exp $
 bin/proxy
 include/proxy.h
-lib/libproxy.la
-lib/libproxy/${PKGVERSION}/modules/config_direct.so
-lib/libproxy/${PKGVERSION}/modules/config_envvar.so
-lib/libproxy/${PKGVERSION}/modules/config_file.so
-lib/libproxy/${PKGVERSION}/modules/config_wpad.so
-lib/libproxy/${PKGVERSION}/modules/ignore_domain.so
-lib/libproxy/${PKGVERSION}/modules/ignore_ip.so
-lib/libproxy/${PKGVERSION}/modules/wpad_dns.so
-lib/libproxy/${PKGVERSION}/modules/wpad_dnsdevolution.so
+lib/libproxy.so
+lib/libproxy.so.1
+lib/libproxy.so.1.0.0
 lib/pkgconfig/libproxy-1.0.pc
+share/cmake/Modules/Findlibproxy.cmake
