@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1760 2013/05/24 08:08:55 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1761 2013/05/24 11:42:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2877,3 +2877,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.3.5 [adam 2013-05-23]
 	Updated devel/quilt to 0.48nb2 [sbd 2013-05-23]
 	Added www/litmus version 0.13 [adam 2013-05-24]
+	Updated devel/reposurgeon to 2.39 [wiz 2013-05-24]
