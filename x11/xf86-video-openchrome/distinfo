@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/05/16 06:21:48 richard Exp $
+$NetBSD: distinfo,v 1.5 2013/05/24 13:16:23 wiz Exp $
 
-SHA1 (xf86-video-openchrome-0.3.2.tar.bz2) = e5be9a8200410b3e3e66349bab4c8acd1ead4402
-RMD160 (xf86-video-openchrome-0.3.2.tar.bz2) = 8f1c945578b78aa6a5637b3a4d7bee6ab52202cb
-Size (xf86-video-openchrome-0.3.2.tar.bz2) = 517434 bytes
+SHA1 (xf86-video-openchrome-0.3.3.tar.bz2) = 1f7b23d4ed53417eda5c6730486b36812f469295
+RMD160 (xf86-video-openchrome-0.3.3.tar.bz2) = 0ad09dd672793ff8a7b844ccc25e5385410e268e
+Size (xf86-video-openchrome-0.3.3.tar.bz2) = 518705 bytes
