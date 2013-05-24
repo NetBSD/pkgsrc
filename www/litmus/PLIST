@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/24 08:07:26 adam Exp $
+bin/litmus
+libexec/litmus/basic
+libexec/litmus/copymove
+libexec/litmus/http
+libexec/litmus/locks
+libexec/litmus/props
+share/litmus/htdocs/foo
