@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1762 2013/05/24 13:11:27 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1763 2013/05/24 13:16:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2879,3 +2879,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/litmus version 0.13 [adam 2013-05-24]
 	Updated devel/reposurgeon to 2.39 [wiz 2013-05-24]
 	Updated print/acroread9 to 9.5.5 [obache 2013-05-24]
+	Updated x11/xf86-video-openchrome to 0.3.3 [wiz 2013-05-24]
