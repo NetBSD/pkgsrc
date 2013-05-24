@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/05/22 14:31:48 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2013/05/24 19:30:54 joerg Exp $
 
 DISTNAME=	Jinja2-2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,6 +15,11 @@ USE_LANGUAGES=		#none
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+
+SUBST_CLASSES+=		unicode
+SUBST_FILES.unicode=	jinja2/*.py jinja2/testsuite/*.py
+SUBST_SED.unicode+=	-e "s,u',',g" -e 's,u",",g'
+SUBST_STAGE.unicode=	pre-install
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
