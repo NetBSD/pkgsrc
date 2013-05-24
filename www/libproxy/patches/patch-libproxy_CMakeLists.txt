@@ -1,0 +1,16 @@
+$NetBSD: patch-libproxy_CMakeLists.txt,v 1.1 2013/05/24 18:22:57 wiz Exp $
+
+If this is defined, it doesn't compile on NetBSD due to
+http://gcc.gnu.org/bugzilla/show_bug.cgi?id=24012
+and missing ntohs() etc.
+
+--- libproxy/CMakeLists.txt.orig	2012-11-30 22:31:35.000000000 +0000
++++ libproxy/CMakeLists.txt
+@@ -6,7 +6,6 @@ set_project_version(0 4 11)
+ if (WIN32)
+   add_definitions(-D_CRT_SECURE_NO_WARNINGS=1)
+ else(WIN32)
+-  add_definitions(-D_POSIX_C_SOURCE=200112L)
+   set(CMAKE_CXX_FLAGS "-fvisibility=hidden ${CMAKE_CXX_FLAGS}")
+ endif(WIN32)
+ 
