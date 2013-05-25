@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2013/05/25 05:19:17 jnemeth Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -38,8 +38,10 @@ SHA1 (patch-libxc_xc__netbsd.c) = c94a2f7b38bfc1479401acf1bb124251bb4e3fcf
 SHA1 (patch-libxl_libxl__create.c) = a212b3760f1bb796c6f126e5c795154f4e8030e2
 SHA1 (patch-libxl_libxl__internal.h) = f8ff92400f7ba7858cc1963b11c1e8ee23d4e51f
 SHA1 (patch-ocaml_common.make) = c59d32301198d65691ab23529dd791de5ac40199
+SHA1 (patch-ocaml_xenstored_Makefile) = 0df19c3507616e104ecdfa403d14e046c5b2a368
 SHA1 (patch-ocaml_xenstored_define.ml) = 044144295c2818a71c14dffc9c58f8592b222b0c
 SHA1 (patch-ocaml_xenstored_utils.ml) = cc792a696743fa348b274b1c23783ea1a0d7da47
+SHA1 (patch-pygrub_Makefile) = fa3671e0ff50a6a341ddf54a7b81c21add9e4f89
 SHA1 (patch-python_xen_xend_XendNode.py) = 2c65e4b4b85e91e92dfb3aa402ebc44694bdff06
 SHA1 (patch-python_xen_xend_osdep.py) = 8da6bba38bd7677ea829ca35058f7d2d1d7acad4
 SHA1 (patch-python_xen_xm_create.py) = 7b25b3b3a8d58effae395d776f2a4b94d79acfcb
