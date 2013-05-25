@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/05/24 18:22:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/25 11:13:12 obache Exp $
 
 DISTNAME=	libproxy-0.4.11
 CATEGORIES=	www gnome
@@ -12,9 +12,9 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
-PY_PATCHPLIST=	yes
 USE_LANGUAGES=	c99 c++
 LIBS.SunOS+=	-lnsl -lsocket
+CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
 
 PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
 PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in
