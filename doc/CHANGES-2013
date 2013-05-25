@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1773 2013/05/25 14:44:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1774 2013/05/25 16:54:36 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2890,3 +2890,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/icedtea-web to 1.2prenb15 [ryoon 2013-05-25]
 	Updated devel/gmp to 5.1.2 [wiz 2013-05-25]
 	Updated print/poppler to 0.22.4 [wiz 2013-05-25]
+	Updated audio/paprefs to 0.9.10 [shattered 2013-05-25]
+	Updated comms/jpilot to 1.8.0 [shattered 2013-05-25]
+	Updated devel/astyle to 1.15.3 [shattered 2013-05-25]
+	Updated emulators/dgen to 1.32 [shattered 2013-05-25]
