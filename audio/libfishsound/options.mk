@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2013/05/09 00:42:45 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2013/05/25 01:37:59 rodent Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libfish
-PKG_SUPPORTED_OPTIONS=	doc flac speex valgrind vorbis
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libfishsound
+PKG_SUPPORTED_OPTIONS=	doc valgrind
 PKG_SUGGESTED_OPTIONS+=	flac speex vorbis
+PKG_OPTIONS_NONEMPTY_SETS+=	codec
+PKG_OPTIONS_SET.codec=		flac speex vorbis
+
 PLIST_VARS+=		doc nodoc
 
 .include "../../mk/bsd.options.mk"
