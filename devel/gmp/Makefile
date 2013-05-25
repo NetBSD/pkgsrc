@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2013/05/10 00:44:29 riastradh Exp $
+# $NetBSD: Makefile,v 1.70 2013/05/25 13:32:26 wiz Exp $
 
-DISTNAME=	gmp-5.1.1
+DISTNAME=	gmp-5.1.2
 CATEGORIES=	devel math
 MASTER_SITES=	ftp://ftp.gmplib.org/pub/${DISTNAME}/
 # Use .tar.bz2 distfile so that no extra dependency on archivers/xz
