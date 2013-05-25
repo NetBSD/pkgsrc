@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/24 11:15:45 rodent Exp $
-lib/en_GBxlg.hash
-lib/en_GB.hash
+@comment $NetBSD: PLIST,v 1.3 2013/05/25 23:46:51 joerg Exp $
+lib/british.hash
+lib/britishxlg.hash
