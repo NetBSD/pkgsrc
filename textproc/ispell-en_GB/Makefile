@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:45 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/25 23:46:51 joerg Exp $
 #
 
 DISTNAME=	ispell-3.3.02
 PKGNAME=	${DISTNAME:S/-/-${DICT_LANG}-/1}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
 
@@ -15,7 +16,7 @@ DEPENDS+=	ispell>=3.3.02:../../textproc/ispell
 
 BUILD_TARGET=	config.sh all-languages
 
-DICT_LANG=	en_GB
+DICT_LANG=	british
 
 MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 
@@ -43,4 +44,5 @@ do-install:
 	${RM} -f ${DICT_LANG}.hash;					\
 	${LN} ${DICT_LANG}xlg.hash ${DICT_LANG}.hash
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
