@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2012/05/07 00:20:34 dholland Exp $
+$NetBSD: distinfo,v 1.14 2013/05/25 23:45:34 joerg Exp $
 
 SHA1 (linc-1.1.1.tar.bz2) = efebe15c4e29f9c03dfda04191161e557b1e1982
 RMD160 (linc-1.1.1.tar.bz2) = 0b8607abf3a9fa877c83f43586e5227a3fb85d66
@@ -8,3 +8,4 @@ SHA1 (patch-include_linc_linc-connection_h) = a6bbddfc11f7bb40e129ea33c4d4589f6c
 SHA1 (patch-include_linc_linc-protocol_h) = 1b02124daa240ec827c841eb68f0bb02828a4ac3
 SHA1 (patch-include_linc_linc-server_h) = 4d11642b396c7fbfe017e6f2bbaf21c3d86fa439
 SHA1 (patch-include_linc_linc-types_h) = 1437a91a5a13966c79f015a93b183ad5c3de244c
+SHA1 (patch-src_linc.c) = ced3dcef8c5b38d973ef1d725f77b9738c36e6be
