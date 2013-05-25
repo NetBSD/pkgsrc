@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2012/07/20 14:38:51 marino Exp $
+$NetBSD: distinfo,v 1.12 2013/05/25 23:42:45 joerg Exp $
 
 SHA1 (vile-9.8.tgz) = d99f41479fa9726147301193a0e10e4282e4779c
 RMD160 (vile-9.8.tgz) = 83a0a76be2e2914a193de9c61b7f1a7d159068df
 Size (vile-9.8.tgz) = 2109000 bytes
+SHA1 (patch-filters_filters.h) = df8001a5f6607709dd4ba3cf88c25a898b85bb05
 SHA1 (patch-filters_makefile.in) = c2127de2f65ee09bce3ee0fd9163be95bf686c61
 SHA1 (patch-makefile.in) = 758c8864da18c4929a2287a9fe7ebbedd45352fe
