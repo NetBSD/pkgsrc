@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:38:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/05/25 16:28:05 shattered Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -49,6 +49,7 @@ share/jpilot/CalendarDB-PDat.pdb
 share/jpilot/ContactsDB-PAdd.pdb
 share/jpilot/DatebookDB.pdb
 share/jpilot/ExpenseDB.pdb
+share/jpilot/MañanaDB.pdb
 share/jpilot/Memo32DB.pdb
 share/jpilot/MemoDB.pdb
 share/jpilot/MemosDB-PMem.pdb
