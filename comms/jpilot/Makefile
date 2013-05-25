@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.87 2013/02/16 11:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2013/05/25 16:28:05 shattered Exp $
 #
 
-DISTNAME=		jpilot-1.6.0
-PKGREVISION=		19
+DISTNAME=		jpilot-1.8.0
+#KGREVISION=		19
 CATEGORIES=		comms
-MASTER_SITES=		http://www.jpilot.org/older/
+MASTER_SITES=		http://www.jpilot.org/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.jpilot.org/
@@ -21,6 +21,7 @@ USE_LANGUAGES+=		c
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk2}"
 CONFIGURE_ARGS+=	--with-pilot-prefix="${BUILDLINK_PREFIX.pilot-link-libs}"
+BUILDLINK_ABI_DEPENDS.pilot-link-libs+= pilot-link-libs>=0.12.5
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "SunOS"
