@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/02/27 17:42:23 drochner Exp $
+$NetBSD: distinfo,v 1.3 2013/05/25 23:41:24 joerg Exp $
 
 SHA1 (libopensync-plugin-evolution2-0.22.tar.bz2) = 8d8bf10c4323e9c8e4c39f431f7c19a64718a37a
 RMD160 (libopensync-plugin-evolution2-0.22.tar.bz2) = 30c93ff7669d1405bc141909667f53c2242a23bd
 Size (libopensync-plugin-evolution2-0.22.tar.bz2) = 219916 bytes
 SHA1 (patch-aa) = ccd840cb82c14edd48b480952279f43bb4bf63db
 SHA1 (patch-ab) = 99fb0d91e08c68d447d3505c889aeb0e514dd645
+SHA1 (patch-src_evolution2__sync.c) = e1da249281c6f90b90ba15b8a75591c6b98cfd24
