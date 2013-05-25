@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/05/01 17:16:06 stacktic Exp $
+# $NetBSD: Makefile,v 1.14 2013/05/25 15:19:26 stacktic Exp $
 #
 
 GIT_COMMIT=		a6bfcf
@@ -14,7 +14,7 @@ COMMENT=		Tools to access/modify a file system image through RUMP
 LICENSE=		2-clause-bsd
 DEPENDS+=		rump-2013[0-9]*:../../misc/rump
 
-ONLY_FOR_PLATFORM=	Linux-*-* SunOS-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* SunOS-*-* NetBSD-*-* DragonFly-*-*
 
 INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1 ${PKGMANDIR}/man3
 

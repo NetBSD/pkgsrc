@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/05/01 17:16:06 stacktic Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/25 15:19:26 stacktic Exp $
 #
 
 GIT_COMMIT=		067df5
@@ -14,7 +14,7 @@ COMMENT=		Virtualized NetBSD kernel components in userspace
 LICENSE=		2-clause-bsd
 USE_TOOLS+=		pax
 
-ONLY_FOR_PLATFORM=	Linux-*-* SunOS-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* SunOS-*-* NetBSD-*-* DragonFly-*-*
 
 INSTALLATION_DIRS=	lib include/rump ${PKGMANDIR}/man3
 
