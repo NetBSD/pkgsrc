@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.10 2013/02/26 11:15:19 joerg Exp $
+$NetBSD: distinfo,v 1.11 2013/05/25 23:43:25 joerg Exp $
 
 SHA1 (merkaartor-0.17.2.tar.bz2) = f789141db427bf25bb3b61801fefc98ab0430012
 RMD160 (merkaartor-0.17.2.tar.bz2) = c5c8944872828ba5ada6003cd5821f33899da3cb
 Size (merkaartor-0.17.2.tar.bz2) = 7138991 bytes
+SHA1 (patch-3rdparty_qtsingleapplication-2.6__1-opensource_src_qtlocalpeer.cpp) = 1b3f1328a4bf016935a3ceb04b9339584b6e701d
 SHA1 (patch-aa) = bd8ac239c841f47260925a2749063849d67c839f
 SHA1 (patch-include_builtin-ggl_ggl_algorithms_overlay_get__intersection__points.hpp) = 4ac08df56c12c5a453548f3df53f85d4741c28b6
 SHA1 (patch-include_builtin-ggl_ggl_geometries_adapted_tuple.hpp) = 1c6537cf877417cf1b05b33174c2358af313f7ad
