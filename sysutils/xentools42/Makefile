@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/05/22 05:32:43 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/25 05:19:17 jnemeth Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools42-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -148,6 +149,8 @@ CONF_FILES+=		${EGDIR}/formats ${PKG_SYSCONFDIR}/formats
 CONF_FILES+=		${EGDIR}/xend-config.sxp ${PKG_SYSCONFDIR}/xend-config.sxp
 CONF_FILES+=		${EGDIR}/xl.conf ${PKG_SYSCONFDIR}/xl.conf
 CONF_FILES+=		${EGDIR}/xm-config.xml ${PKG_SYSCONFDIR}/xm-config.xml
+CONF_FILES+=		${EGDIR}/oxenstored.conf ${PKG_SYSCONFDIR}/oxenstored.conf
+
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts ${VARBASE}/log/xen
 OWN_DIRS+=		${VARBASE}/lib/xen

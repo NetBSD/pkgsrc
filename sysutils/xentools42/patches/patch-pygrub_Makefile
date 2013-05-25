@@ -1,0 +1,13 @@
+$NetBSD: patch-pygrub_Makefile,v 1.1 2013/05/25 05:19:17 jnemeth Exp $
+
+--- pygrub/Makefile.orig	2013-04-23 16:42:55.000000000 +0000
++++ pygrub/Makefile
+@@ -15,7 +15,7 @@ install: all
+ 		--install-scripts=$(PRIVATE_BINDIR) --force
+ 	$(INSTALL_DIR) $(DESTDIR)/var/run/xend/boot
+ 	set -e; if [ "`readlink -f $(DESTDIR)/$(BINDIR)`" != \
+-	             "`readlink -f $(PRIVATE_BINDIR)`" ]; then \
++	             "`readlink -f $(DESTDIR)/$(PRIVATE_BINDIR)`" ]; then \
+ 	    ln -sf $(PRIVATE_BINDIR)/pygrub $(DESTDIR)/$(BINDIR); \
+ 	fi
+ 
