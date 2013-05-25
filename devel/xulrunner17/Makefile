@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/02/24 14:18:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/25 11:08:21 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner17-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
+PKGREVISION=	1
 CATEGORIES=	devel www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-libxul
 ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner17
 
 MAKE_ENV+=		FREEBL_NO_DEPEND=0
+
+INSTALLATION_DIRS=	lib/pkgconfig
 
 # workround for link of xulrunner-bin etc.
 LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/xulrunner17 ${COMPILER_RPATH_FLAG}${PREFIX}/lib
@@ -75,5 +78,7 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/xulrunner17-sdk/sdk/lib
 	ln -s ${PREFIX}/lib/xulrunner17/lib \
 	  ${DESTDIR}${PREFIX}/lib/xulrunner17-sdk/lib
+	${INSTALL_DATA} ${WRKSRC}/xulrunner/installer/*pc \
+		${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
