@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2013/02/22 15:37:58 imil Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/05/25 18:18:58 shattered Exp $
+# used by www/nginx/Makefile
+# used by www/nginx-devel/Makefile
 
 # Used by both www/nginx and www/nginx-devel
 # Do *not* add any version-specific data here, any change
