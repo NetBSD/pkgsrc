@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1772 2013/05/25 13:32:36 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1773 2013/05/25 14:44:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2889,3 +2889,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/openoffice3 to 3.1.1nb43 [ryoon 2013-05-25]
 	Updated www/icedtea-web to 1.2prenb15 [ryoon 2013-05-25]
 	Updated devel/gmp to 5.1.2 [wiz 2013-05-25]
+	Updated print/poppler to 0.22.4 [wiz 2013-05-25]
