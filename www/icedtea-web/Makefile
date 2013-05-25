@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2013/02/16 11:24:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/05/25 11:13:58 ryoon Exp $
 #
 
 DISTNAME=	61e08e67b176
 PKGNAME=	icedtea-web-1.2pre
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	www
 MASTER_SITES=	http://icedtea.classpath.org/hg/icedtea-web/archive/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,8 +32,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/plugin/icedteanp/IcedTeaPlugin.so ${DESTDIR}${PREFIX}/lib/netscape/plugins
 	${INSTALL_SCRIPT} ${WRKSRC}/launcher.build/javaws ${DESTDIR}${PREFIX}/bin
 
-BUILDLINK_API_DEPENDS.xulrunner+=       xulrunner>=5.0
-.include "../../devel/xulrunner/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xulrunner17+=       xulrunner17>=17.0.6nb1
+.include "../../devel/xulrunner17/buildlink3.mk"
 BUILDLINK_API_DEPENDS.openjdk7+=       openjdk7>=1.7.0.147
 .include "../../lang/openjdk7/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
