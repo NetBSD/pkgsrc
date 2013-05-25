@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1767 2013/05/25 05:19:29 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.1768 2013/05/25 06:36:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2884,3 +2884,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkgin to 0.6.3.1.1nb2 [jperkin 2013-05-24]
 	Updated www/libproxy to 0.4.11 [wiz 2013-05-24]
 	Updated sysutils/xentools42 to 4.2.2nb1 [jnemeth 2013-05-25]
+	Updated x11/libXau to 1.0.8 [wiz 2013-05-25]
