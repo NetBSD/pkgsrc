@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/25 05:19:17 jnemeth Exp $
 bin/libxl-save-helper
 bin/lsevtchn
 bin/pygrub
@@ -25,7 +25,6 @@ bin/xenstore-write
 bin/xentrace
 bin/xentrace_format
 bin/xentrace_setsize
-etc/xen/oxenstored.conf
 include/_libxl_list.h
 include/_libxl_types.h
 include/_libxl_types_json.h
@@ -679,6 +678,7 @@ share/examples/xen/README
 share/examples/xen/README.incompatibilities
 share/examples/xen/cpupool
 share/examples/xen/formats
+share/examples/xen/oxenstored.conf
 share/examples/xen/scripts/block
 share/examples/xen/scripts/hotplugpath.sh
 @comment share/examples/xen/scripts/qemu-ifup
