@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:47 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/05/25 20:09:01 ryoon Exp $
 #
 
 DISTNAME=	open-cobol-1.1
 PKGNAME=	opencobol-1.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.sim-basis.de/
 
@@ -22,12 +23,14 @@ INFO_FILES=		yes
 
 TEST_TARGET=		check
 
+# Should be more cintelligent, forks only for NetBSD.
 SUBST_CLASSES+=		bdb
-SUBST_MESSAGE.bdb=	Fixing bdb library names.
+SUBST_MESSAGE.bdb=	Fixing runtime error.
 SUBST_STAGE.bdb=	pre-configure
 SUBST_FILES.bdb=	configure
 SUBST_SED.bdb=		-e 's,db-4.5,db5,g'
 SUBST_SED.bdb+=		-e 's,db-4.4,db4,g'
+SUBST_SED.bdb+=		-e 's,ncurses,curses,g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
