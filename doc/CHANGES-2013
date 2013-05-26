@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1803 2013/05/26 20:29:29 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1804 2013/05/26 20:29:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2924,3 +2924,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/nickle to 2.77 [wiz 2013-05-26]
 	Updated net/libnice to 0.1.4 [wiz 2013-05-26]
 	Added net/gst-plugins1-libnice version 0.1.4 [wiz 2013-05-26]
+	Removed net/gst-plugins0.10-libnice [wiz 2013-05-26]
