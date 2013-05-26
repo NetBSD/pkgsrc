@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/26 21:28:07 rodent Exp $
+bin/sshpass
+man/man1/sshpass.1
