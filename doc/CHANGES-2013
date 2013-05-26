@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1775 2013/05/25 20:09:57 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1776 2013/05/26 00:44:53 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2895,3 +2895,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/astyle to 1.15.3 [shattered 2013-05-25]
 	Updated emulators/dgen to 1.32 [shattered 2013-05-25]
 	Updated lang/opencobol to 1.1nb1 [ryoon 2013-05-25]
+	Updated print/hplip to 3.13.5 [schnoebe 2013-05-26]
