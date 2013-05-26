@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.100 2013/04/19 09:47:43 drochner Exp $
+$NetBSD: distinfo,v 1.101 2013/05/26 09:22:14 adam Exp $
 
-SHA1 (libxml2-2.9.0.tar.gz) = a43d7c0a8e463ac5a7846254f2a732a9af146fab
-RMD160 (libxml2-2.9.0.tar.gz) = d025639320bb34adbc45a43f46354190f6bbb7b5
-Size (libxml2-2.9.0.tar.gz) = 5161069 bytes
-SHA1 (patch-CVE-2012-5134) = 22caaed2b03334d42253b2b1c5a43473e6c8b4dc
-SHA1 (patch-CVE-2013-0338-CVE-2013-0339) = d9eb3fe147dff5afd6920d818e5f982505e0663f
-SHA1 (patch-SA53061_1) = ee1e4494c137aa7a294ad97a147f28f6bde11f30
-SHA1 (patch-SA53061_2) = c6a61235f0fcb6a00677a3582450700281eaa3ed
-SHA1 (patch-aa) = 6fcfb2e1ac374a7a047ee188a61ef218106ee54a
-SHA1 (patch-ab) = 8a7a5ae0c9d129826485c74f29cf4de3199212e7
+SHA1 (libxml2-2.9.1.tar.gz) = eb3e2146c6d68aea5c2a4422ed76fe196f933c21
+RMD160 (libxml2-2.9.1.tar.gz) = 257285d9ac070ed9f58666b7bd7c4653651c871b
+Size (libxml2-2.9.1.tar.gz) = 5172503 bytes
+SHA1 (patch-aa) = 589a279df1a5fac8b1b2dbd0018a1bbf0c5ab169
+SHA1 (patch-ab) = 11567fe9a3fde42f3901fd4ab4620bf845fe634b
 SHA1 (patch-ac) = 101cd554fd22e8e9817e21591240eb784b1219b5
 SHA1 (patch-ad) = cd45da492b02cce9983c46762839f68b8b1e0177
-SHA1 (patch-ae) = 035e015abf401b15af9bf052a108a1c7b8db6c79
+SHA1 (patch-ae) = 2823276343f65c7d244d22e548faa6a517445819
 SHA1 (patch-ag) = 19afd69713298ecbd247ba733a7c0c13464ae572
 SHA1 (patch-aj) = 988c30b4b09a1cbaf9e7db02bb8981da0f1beaa7
-SHA1 (patch-threads.c) = ed7339037e857707cf20217fa4c191d071e492f3
+SHA1 (patch-threads.c) = 70bb0a779dff6611f755128d609f82360a492f9a
