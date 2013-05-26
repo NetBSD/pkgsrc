@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1805 2013/05/26 20:30:26 bouyer Exp $
+$NetBSD: CHANGES-2013,v 1.1806 2013/05/26 21:28:22 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2926,3 +2926,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libnice to 0.1.4 [wiz 2013-05-26]
 	Added net/gst-plugins1-libnice version 0.1.4 [wiz 2013-05-26]
 	Removed net/gst-plugins0.10-libnice [wiz 2013-05-26]
+	Added security/sshpass version 1.05 [rodent 2013-05-26]
