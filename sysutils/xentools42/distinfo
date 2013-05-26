@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/05/25 05:19:17 jnemeth Exp $
+$NetBSD: distinfo,v 1.3 2013/05/26 20:27:43 bouyer Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -6,9 +6,11 @@ Size (ipxe-git-v1.0.0.tar.gz) = 1996881 bytes
 SHA1 (xen-4.2.2.tar.gz) = b48cc7f375e9a5d65ff2d680f1b512dbea5a3b7c
 RMD160 (xen-4.2.2.tar.gz) = 925cb2abdd080254a5457d1b304f811036261ab6
 Size (xen-4.2.2.tar.gz) = 15602746 bytes
+SHA1 (patch-.._.._ipxe_src_Makefile.housekeeping) = 5ec8020a9705b2f64096c2942473a8de4db578bb
 SHA1 (patch-.._.._ipxe_src_arch_i386_include_librm.h) = 4549ac641b112321b4731a918d85219c3fce6808
+SHA1 (patch-.._.._ipxe_src_arch_i386_scripts_i386.lds) = 4c0cbb7f535be43e1b6f53c284340a8bafc37c0b
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 240ff973757403b983f12b2cbed826584c4a8aba
-SHA1 (patch-.._.._ipxe_src_net_tls.c) = c0cfbc2ab2b92c659c146601c4f80d58c951ca62
+SHA1 (patch-.._.._ipxe_src_net_tls.c) = 893c70515bc4cb0d4d9319fd94eddc4945f6a0b3
 SHA1 (patch-.._Config.mk) = ec5ba76be10e43cb1b2d37686e35d5fb81d8de80
 SHA1 (patch-.._config_NetBSD.mk) = 90893326dcce4e3e2ef273f22ec5ddf5af0f7cd8
 SHA1 (patch-.._config_StdGNU.mk) = 3f93999038bd9d25277803cd1d969dc5733b593f
@@ -19,7 +21,7 @@ SHA1 (patch-.._docs_man_xl.pod.1) = bd6272abed11c60c7c5ae88ae54377a3bfb921ed
 SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = a693a79a1f1c16548f62f7da1fa58fa28030990f
 SHA1 (patch-.._docs_man_xm.pod.1) = 975b7570da4bf9fd9cb79539fbd36b8dfbcbd571
 SHA1 (patch-.._docs_man_xmdomain.cfg.pod.5) = 5563a72e203e789a86f4166c71ddb3fcff5215c6
-SHA1 (patch-Makefile) = 8476e65d5bdf257cdf09d98b90820c82cb0ff719
+SHA1 (patch-Makefile) = 37fbcd6d2f0279d4c04c91085b0e7f5611a5b92a
 SHA1 (patch-blktap_drivers_Makefile) = 0906a5ec3a7450fc987b01289e2560e60966d00d
 SHA1 (patch-configure) = 7bf4183efb76bded94a9519bf2737fb1240ab0e7
 SHA1 (patch-examples_Makefile) = 8e89fab7817785b32d79ec0cad3a2645c6981f01
@@ -58,4 +60,8 @@ SHA1 (patch-qemu-xen-traditional_hw_pt-msi.c) = 7281d62de494fbbb6508818c9f8c5cfc
 SHA1 (patch-qemu-xen-traditional_hw_pt-msi.h) = a33b6ed927db0204c25a9f6ff1bb8870c765f8ad
 SHA1 (patch-qemu-xen-traditional_i386-dm_hookstarget.mak) = 7d526e8a9a0b0daf7215c54a036f7a3306291589
 SHA1 (patch-qemu-xen-traditional_xen-hooks.mak) = 7acec9c981d18e1b659efc1d8e7c5c3b90d45411
+SHA1 (patch-qemu-xen_audio_audio.c) = 95f7417cec027239e9591b8def632d9344f42e05
+SHA1 (patch-qemu-xen_fpu_softfloat-specialize.h) = 791aeac1642101cbe2b15bf7ec189765c370f1a2
+SHA1 (patch-qemu-xen_ioport.c) = 3dde5877f35396015d28eb2bb318ad2f79e6b4f8
+SHA1 (patch-qemu-xen_memory.c) = e4e39a0d02195e3b04d97af04d4aa31ff379b73e
 SHA1 (patch-xentrace_Makefile) = 9b53ba4a809dad7a1de34c8fa0dbe493d7256ada
