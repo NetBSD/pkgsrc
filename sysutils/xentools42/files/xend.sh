@@ -22,7 +22,6 @@ SBINDIR=@PREFIX@/sbin
 
 xen_precmd()
 {
-	mkdir -p /var/run/xend || exit 1
 	mkdir -p /var/run/xend/boot || exit 1
 }
 
