@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1784 2013/05/26 12:19:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1785 2013/05/26 17:28:55 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2904,3 +2904,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/libraw to 0.15.1 [adam 2013-05-26]
 	Updated textproc/libxml2 to 2.9.1 [adam 2013-05-26]
 	Updated databases/sqlitebrowser to 2.0beta1 [rodent 2013-05-26]
+	Updated misc/rump to 20130525 [stacktic 2013-05-26]
+	Updated filesystems/fs-utils to 20130519 [stacktic 2013-05-26]
