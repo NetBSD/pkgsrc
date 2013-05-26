@@ -1,0 +1,12 @@
+"Tilp is a Linking Program" - The TiLP project aims to develop a multi-platform
+linking program for use with all TI graphing calculators (TI73 ... V200PLT).
+
+Supported link cables are: GrayLink, BlackLink, SilverLink, DirectLink Parallel
+Link, VTi (virtual) and TiEmu (virtual).
+
+Supported hand-helds are: TI73, TI82, TI83, TI83+, TI84+, TI85, TI86, TI89,
+Titanium, TI92, TI92+, V200, NSpire, NSpire-CAS.
+
+Capabilities: silent link, screendump, directory listing, send/recv of vars,
+send/Recv of backups, send/recv of FLASH apps, send of OS, ROM dumping, ID LIST,
+clock, create folder, delete var/app...
