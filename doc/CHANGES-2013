@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1781 2013/05/26 04:14:44 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1782 2013/05/26 09:23:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2901,3 +2901,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/fromcvs to 0.0.0.133 [ryoon 2013-05-26]
 	Updated devel/cvs-fast-export to 0.4 [ryoon 2013-05-26]
 	Added lang/open-cobol-ce version 1.1.59 [ryoon 2013-05-26]
+	Updated graphics/libraw to 0.15.1 [adam 2013-05-26]
+	Updated textproc/libxml2 to 2.9.1 [adam 2013-05-26]
