@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/25 05:19:17 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/26 20:27:43 bouyer Exp $
 bin/libxl-save-helper
 bin/lsevtchn
 bin/pygrub
-@comment bin/qemu-img-xen
+bin/qemu-img-xen
 bin/readnotes
 bin/remus
 bin/xc_restore
@@ -615,8 +615,13 @@ ${PYSITELIB}/xen/xsview/main.py
 ${PYSITELIB}/xen/xsview/main.pyc
 ${PYSITELIB}/xen/xsview/xsviewer.py
 ${PYSITELIB}/xen/xsview/xsviewer.pyc
-@comment lib/xen/boot/hvmloader
-@comment libexec/qemu-dm
+lib/xen/boot/hvmloader
+libexec/qemu-dm
+libexec/qemu-ga
+libexec/qemu-img
+libexec/qemu-io
+libexec/qemu-nbd
+libexec/qemu-system-i386
 libexec/xenpaging
 man/man1/xentop.1
 man/man1/xentrace_format.1
@@ -681,7 +686,7 @@ share/examples/xen/formats
 share/examples/xen/oxenstored.conf
 share/examples/xen/scripts/block
 share/examples/xen/scripts/hotplugpath.sh
-@comment share/examples/xen/scripts/qemu-ifup
+share/examples/xen/scripts/qemu-ifup
 share/examples/xen/scripts/vif-bridge
 share/examples/xen/scripts/vif-ip
 share/examples/xen/xend-config.sxp
@@ -700,53 +705,115 @@ share/examples/xen/xmexample.vti
 share/examples/xen/xmexample1
 share/examples/xen/xmexample2
 share/examples/xen/xmexample3
+share/qemu-xen/bamboo.dtb
+share/qemu-xen/bios.bin
+share/qemu-xen/keymaps/ar
+share/qemu-xen/keymaps/common
+share/qemu-xen/keymaps/da
+share/qemu-xen/keymaps/de
+share/qemu-xen/keymaps/de-ch
+share/qemu-xen/keymaps/en-gb
+share/qemu-xen/keymaps/en-us
+share/qemu-xen/keymaps/es
+share/qemu-xen/keymaps/et
+share/qemu-xen/keymaps/fi
+share/qemu-xen/keymaps/fo
+share/qemu-xen/keymaps/fr
+share/qemu-xen/keymaps/fr-be
+share/qemu-xen/keymaps/fr-ca
+share/qemu-xen/keymaps/fr-ch
+share/qemu-xen/keymaps/hr
+share/qemu-xen/keymaps/hu
+share/qemu-xen/keymaps/is
+share/qemu-xen/keymaps/it
+share/qemu-xen/keymaps/ja
+share/qemu-xen/keymaps/lt
+share/qemu-xen/keymaps/lv
+share/qemu-xen/keymaps/mk
+share/qemu-xen/keymaps/modifiers
+share/qemu-xen/keymaps/nl
+share/qemu-xen/keymaps/nl-be
+share/qemu-xen/keymaps/no
+share/qemu-xen/keymaps/pl
+share/qemu-xen/keymaps/pt
+share/qemu-xen/keymaps/pt-br
+share/qemu-xen/keymaps/ru
+share/qemu-xen/keymaps/sl
+share/qemu-xen/keymaps/sv
+share/qemu-xen/keymaps/th
+share/qemu-xen/keymaps/tr
+share/qemu-xen/linuxboot.bin
+share/qemu-xen/mpc8544ds.dtb
+share/qemu-xen/multiboot.bin
+share/qemu-xen/openbios-ppc
+share/qemu-xen/openbios-sparc32
+share/qemu-xen/openbios-sparc64
+share/qemu-xen/palcode-clipper
+share/qemu-xen/petalogix-ml605.dtb
+share/qemu-xen/petalogix-s3adsp1800.dtb
+share/qemu-xen/ppc_rom.bin
+share/qemu-xen/pxe-e1000.rom
+share/qemu-xen/pxe-eepro100.rom
+share/qemu-xen/pxe-ne2k_pci.rom
+share/qemu-xen/pxe-pcnet.rom
+share/qemu-xen/pxe-rtl8139.rom
+share/qemu-xen/pxe-virtio.rom
+share/qemu-xen/s390-zipl.rom
+share/qemu-xen/sgabios.bin
+share/qemu-xen/slof.bin
+share/qemu-xen/spapr-rtas.bin
+share/qemu-xen/vgabios-cirrus.bin
+share/qemu-xen/vgabios-qxl.bin
+share/qemu-xen/vgabios-stdvga.bin
+share/qemu-xen/vgabios-vmware.bin
+share/qemu-xen/vgabios.bin
 share/xen/create.dtd
-@comment share/xen/qemu/bamboo.dtb
-@comment share/xen/qemu/bios.bin
-@comment share/xen/qemu/keymaps/ar
-@comment share/xen/qemu/keymaps/common
-@comment share/xen/qemu/keymaps/da
-@comment share/xen/qemu/keymaps/de
-@comment share/xen/qemu/keymaps/de-ch
-@comment share/xen/qemu/keymaps/en-gb
-@comment share/xen/qemu/keymaps/en-us
-@comment share/xen/qemu/keymaps/es
-@comment share/xen/qemu/keymaps/et
-@comment share/xen/qemu/keymaps/fi
-@comment share/xen/qemu/keymaps/fo
-@comment share/xen/qemu/keymaps/fr
-@comment share/xen/qemu/keymaps/fr-be
-@comment share/xen/qemu/keymaps/fr-ca
-@comment share/xen/qemu/keymaps/fr-ch
-@comment share/xen/qemu/keymaps/hr
-@comment share/xen/qemu/keymaps/hu
-@comment share/xen/qemu/keymaps/is
-@comment share/xen/qemu/keymaps/it
-@comment share/xen/qemu/keymaps/ja
-@comment share/xen/qemu/keymaps/lt
-@comment share/xen/qemu/keymaps/lv
-@comment share/xen/qemu/keymaps/mk
-@comment share/xen/qemu/keymaps/modifiers
-@comment share/xen/qemu/keymaps/nl
-@comment share/xen/qemu/keymaps/nl-be
-@comment share/xen/qemu/keymaps/no
-@comment share/xen/qemu/keymaps/pl
-@comment share/xen/qemu/keymaps/pt
-@comment share/xen/qemu/keymaps/pt-br
-@comment share/xen/qemu/keymaps/ru
-@comment share/xen/qemu/keymaps/sl
-@comment share/xen/qemu/keymaps/sv
-@comment share/xen/qemu/keymaps/th
-@comment share/xen/qemu/keymaps/tr
-@comment share/xen/qemu/openbios-ppc
-@comment share/xen/qemu/openbios-sparc32
-@comment share/xen/qemu/openbios-sparc64
-@comment share/xen/qemu/ppc_rom.bin
-@comment share/xen/qemu/pxe-e1000.bin
-@comment share/xen/qemu/pxe-ne2k_pci.bin
-@comment share/xen/qemu/pxe-pcnet.bin
-@comment share/xen/qemu/pxe-rtl8139.bin
-@comment share/xen/qemu/vgabios-cirrus.bin
-@comment share/xen/qemu/vgabios.bin
-@comment share/xen/qemu/video.x
+share/xen/qemu/bamboo.dtb
+share/xen/qemu/bios.bin
+share/xen/qemu/keymaps/ar
+share/xen/qemu/keymaps/common
+share/xen/qemu/keymaps/da
+share/xen/qemu/keymaps/de
+share/xen/qemu/keymaps/de-ch
+share/xen/qemu/keymaps/en-gb
+share/xen/qemu/keymaps/en-us
+share/xen/qemu/keymaps/es
+share/xen/qemu/keymaps/et
+share/xen/qemu/keymaps/fi
+share/xen/qemu/keymaps/fo
+share/xen/qemu/keymaps/fr
+share/xen/qemu/keymaps/fr-be
+share/xen/qemu/keymaps/fr-ca
+share/xen/qemu/keymaps/fr-ch
+share/xen/qemu/keymaps/hr
+share/xen/qemu/keymaps/hu
+share/xen/qemu/keymaps/is
+share/xen/qemu/keymaps/it
+share/xen/qemu/keymaps/ja
+share/xen/qemu/keymaps/lt
+share/xen/qemu/keymaps/lv
+share/xen/qemu/keymaps/mk
+share/xen/qemu/keymaps/modifiers
+share/xen/qemu/keymaps/nl
+share/xen/qemu/keymaps/nl-be
+share/xen/qemu/keymaps/no
+share/xen/qemu/keymaps/pl
+share/xen/qemu/keymaps/pt
+share/xen/qemu/keymaps/pt-br
+share/xen/qemu/keymaps/ru
+share/xen/qemu/keymaps/sl
+share/xen/qemu/keymaps/sv
+share/xen/qemu/keymaps/th
+share/xen/qemu/keymaps/tr
+share/xen/qemu/openbios-ppc
+share/xen/qemu/openbios-sparc32
+share/xen/qemu/openbios-sparc64
+share/xen/qemu/ppc_rom.bin
+share/xen/qemu/pxe-e1000.bin
+share/xen/qemu/pxe-ne2k_pci.bin
+share/xen/qemu/pxe-pcnet.bin
+share/xen/qemu/pxe-rtl8139.bin
+share/xen/qemu/vgabios-cirrus.bin
+share/xen/qemu/vgabios.bin
+share/xen/qemu/video.x
 @pkgdir share/examples/xen/auto
