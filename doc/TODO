@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12188 2013/05/26 17:57:21 wiz Exp $
+$NetBSD: TODO,v 1.12189 2013/05/26 17:58:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-0.94.3
 	o cddbd-1.5.2
-	o cdialog-1.2.20130523
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
 	o celestia-1.6.0
@@ -487,7 +486,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.7
 	o denemo-1.0.2
 	o dhid-5.3
-	o dialog-1.2.20130523
 	o diffstat-1.57
 	o dillo-3.0.3
 	o dinotrace-9.3e
