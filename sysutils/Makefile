@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.575 2013/05/22 15:10:11 mspo Exp $
+# $NetBSD: Makefile,v 1.576 2013/05/26 23:06:57 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -133,6 +133,7 @@ SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
 SUBDIR+=	genpasswd
 SUBDIR+=	gentoo
+SUBDIR+=	gfm
 SUBDIR+=	gio-fam
 SUBDIR+=	gkrellm
 SUBDIR+=	gkrellm-est
