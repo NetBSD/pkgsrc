@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/19 17:37:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/05/26 17:59:59 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -113,6 +113,9 @@ ${PYSITELIB}/setuptools/gui.exe
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
+${PYSITELIB}/setuptools/py24compat.py
+${PYSITELIB}/setuptools/py24compat.pyc
+${PYSITELIB}/setuptools/py24compat.pyo
 ${PYSITELIB}/setuptools/sandbox.py
 ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
@@ -122,6 +125,9 @@ ${PYSITELIB}/setuptools/script template (dev).pyo
 ${PYSITELIB}/setuptools/script template.py
 ${PYSITELIB}/setuptools/script template.pyc
 ${PYSITELIB}/setuptools/script template.pyo
+${PYSITELIB}/setuptools/site-patch.py
+${PYSITELIB}/setuptools/site-patch.pyc
+${PYSITELIB}/setuptools/site-patch.pyo
 ${PYSITELIB}/setuptools/tests/__init__.py
 ${PYSITELIB}/setuptools/tests/__init__.pyc
 ${PYSITELIB}/setuptools/tests/__init__.pyo
@@ -170,6 +176,3 @@ ${PYSITELIB}/setuptools/tests/test_test.pyo
 ${PYSITELIB}/setuptools/tests/test_upload_docs.py
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyc
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyo
-${PYSITELIB}/site.py
-${PYSITELIB}/site.pyc
-${PYSITELIB}/site.pyo
