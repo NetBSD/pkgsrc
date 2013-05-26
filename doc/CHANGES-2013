@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1798 2013/05/26 19:56:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1799 2013/05/26 20:02:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2919,3 +2919,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/puzzles to 9840 [wiz 2013-05-26]
 	Updated sysutils/py-dbus to 1.2.0 [wiz 2013-05-26]
 	Updated games/py-trueskill to 0.4 [wiz 2013-05-26]
+	Updated audio/mp3diags to 1.0.12.079 [wiz 2013-05-26]
