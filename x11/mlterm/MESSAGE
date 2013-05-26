@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/05/26 18:18:25 tsutsui Exp $
+
+mlterm refers config files under ${PREFIX}/etc/mlterm as system default.
+To use mlterm with per user configurations, you have to prepare own config
+files under ~/.mlterm directory.  Please check and copy config files
+(at least main, font, and font-fb) in ${PREFIX}/share/examples/mlterm
+into ~/.mlterm and modify them per your preferable settings.
+All available configurations are mentioned in the mlterm(1) man page.
+
+To use mlterm-fb on NetBSD/amd64 and NetBSD/i386 console, you have to
+enable VESA on the bootloader prompt.  You also have to modify the default
+/etc/ttys settings to enable getty(8) at ttyE0 instead of console.
+Please check NetBSD's boot(8) and ttys(5) man pages for these settings.
+
+You might also have to install proper UTF-8 fonts like efont-unicode
+to print multilingual characters.
+
+Please also read the documentation in the directory
+  ${PREFIX}/share/doc/mlterm
+for more details.
+===========================================================================
