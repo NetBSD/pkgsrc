@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2013/05/26 01:33:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.347 2013/05/26 04:14:12 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -116,6 +116,7 @@ SUBDIR+=	objc
 SUBDIR+=	ocaml
 SUBDIR+=	onyx
 SUBDIR+=	oo2c
+SUBDIR+=	open-cobol-ce
 SUBDIR+=	opencobol
 SUBDIR+=	openjdk7
 SUBDIR+=	openjdk7-bin
