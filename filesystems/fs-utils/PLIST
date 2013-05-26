@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2013/05/01 17:16:06 stacktic Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/05/26 17:25:30 stacktic Exp $
 bin/fsu_cat
 bin/fsu_chflags
 bin/fsu_chmod
 bin/fsu_chown
 bin/fsu_cp
+bin/fsu_df
 bin/fsu_diff
 bin/fsu_du
 bin/fsu_ecp
