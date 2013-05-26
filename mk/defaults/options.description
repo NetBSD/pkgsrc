@@ -241,6 +241,7 @@ hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
+ibus			Enable Intelligent Input Bus support.
 icu			Enable icu support.
 id3			Enable id3 tagging support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
@@ -422,6 +423,7 @@ migemo			Enable migemo (Japanese text search tool/library) support.
 mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
+mlterm-fb		Enable framebuffer support.
 mmx			Enable MMX support (i386 only).
 mng			Enable mng (Multiple-image Network Graphics) support.
 modperl			Use modperl to improve speed of Perl scripts in Apache.
