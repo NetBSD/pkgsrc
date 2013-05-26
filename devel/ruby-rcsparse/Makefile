@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:42 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/26 01:44:44 ryoon Exp $
 
-DISTNAME=	75d93404707d
-PKGNAME=	${RUBY_PKGPREFIX}-rcsparse-0.0.0.45
-PKGREVISION=	1
+DISTNAME=	fromcvs-rcsparse-d8303aab
+# Bump simply to 0.0.0.46, I am not sure...
+PKGNAME=	${RUBY_PKGPREFIX}-rcsparse-0.0.0.46
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://ww2.fs.ei.tum.de/~corecode/hg/rcsparse/archive/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	-http://gitorious.org/fromcvs/rcsparse/archive-tarball/d8303aab
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ww2.fs.ei.tum.de/~corecode/hg/rcsparse/
+HOMEPAGE=	http://gitorious.org/fromcvs/rcsparse
 COMMENT=	RCS parsing library for Ruby
 LICENSE=	corecode-license
 
-DIST_SUBDIR=	rcsparse
-WRKSRC=		${WRKDIR}/rcsparse-${DISTNAME}
+WRKSRC=		${WRKDIR}/fromcvs-rcsparse
 USE_RUBY_EXTCONF=	yes
+
+RUBY_VERSION_SUPPORTED=	18
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
