@@ -1,0 +1,4 @@
+opensource COBOL is based on OpenCOBOL compiler and has some
+extensions used in Japan. It translate COBOL programs to C code
+and compiles it using GCC.
+This package tracks opensource COBOL UTF-8 version.
