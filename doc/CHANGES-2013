@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1787 2013/05/26 17:56:20 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1788 2013/05/26 17:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2908,3 +2908,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated filesystems/fs-utils to 20130519 [stacktic 2013-05-26]
 	Updated mail/getmail to 4.41.0 [schmonz 2013-05-26]
 	Updated lang/python33 to 3.3.2 [wiz 2013-05-26]
+	Updated multimedia/libogg to 1.3.1 [wiz 2013-05-26]
