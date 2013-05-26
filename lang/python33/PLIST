@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/11 00:16:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/26 17:56:09 wiz Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -98,8 +98,8 @@ include/python${PY_VER_SUFFIX}/ucnhash.h
 include/python${PY_VER_SUFFIX}/unicodeobject.h
 include/python${PY_VER_SUFFIX}/warnings.h
 include/python${PY_VER_SUFFIX}/weakrefobject.h
-lib/libpython${PY_VER_SUFFIX}.so.1.0
 lib/libpython${PY_VER_SUFFIX}.so
+lib/libpython${PY_VER_SUFFIX}.so.1.0
 lib/libpython3.so
 lib/pkgconfig/python-${PY_VER_SUFFIX}.pc
 lib/python${PY_VER_SUFFIX}/LICENSE.txt
@@ -623,6 +623,8 @@ lib/python${PY_VER_SUFFIX}/ctypes/test/__pycache__/test_varsize_struct.cpython-3
 lib/python${PY_VER_SUFFIX}/ctypes/test/__pycache__/test_varsize_struct.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/__pycache__/test_win32.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/test/__pycache__/test_win32.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/ctypes/test/__pycache__/test_wintypes.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/ctypes/test/__pycache__/test_wintypes.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/runtests.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_anon.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_array_in_pointer.py
@@ -676,6 +678,7 @@ lib/python${PY_VER_SUFFIX}/ctypes/test/test_unicode.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_values.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_varsize_struct.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_win32.py
+lib/python${PY_VER_SUFFIX}/ctypes/test/test_wintypes.py
 lib/python${PY_VER_SUFFIX}/ctypes/util.py
 lib/python${PY_VER_SUFFIX}/ctypes/wintypes.py
 lib/python${PY_VER_SUFFIX}/curses/__init__.py
@@ -2286,6 +2289,10 @@ lib/python${PY_VER_SUFFIX}/test/__pycache__/reperf.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/reperf.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/sample_doctest.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/sample_doctest.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/__pycache__/sample_doctest_no_docstrings.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/__pycache__/sample_doctest_no_docstrings.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/__pycache__/sample_doctest_no_doctests.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/__pycache__/sample_doctest_no_doctests.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/script_helper.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/script_helper.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/seq_tests.cpython-33.pyc
@@ -3006,6 +3013,8 @@ lib/python${PY_VER_SUFFIX}/test/__pycache__/test_weakref.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_weakref.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_weakset.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_weakset.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/__pycache__/test_webbrowser.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/__pycache__/test_webbrowser.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_winreg.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_winreg.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_winsound.cpython-33.pyc
@@ -3016,6 +3025,8 @@ lib/python${PY_VER_SUFFIX}/test/__pycache__/test_wsgiref.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_wsgiref.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xdrlib.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xdrlib.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xml_dom_minicompat.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xml_dom_minicompat.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xml_etree.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xml_etree.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/__pycache__/test_xml_etree_c.cpython-33.pyc
@@ -3305,6 +3316,8 @@ lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_separators.cpython-3
 lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_separators.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_speedups.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_speedups.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_tool.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_tool.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_unicode.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/json_tests/__pycache__/test_unicode.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/json_tests/test_decode.py
@@ -3321,6 +3334,7 @@ lib/python${PY_VER_SUFFIX}/test/json_tests/test_recursion.py
 lib/python${PY_VER_SUFFIX}/test/json_tests/test_scanstring.py
 lib/python${PY_VER_SUFFIX}/test/json_tests/test_separators.py
 lib/python${PY_VER_SUFFIX}/test/json_tests/test_speedups.py
+lib/python${PY_VER_SUFFIX}/test/json_tests/test_tool.py
 lib/python${PY_VER_SUFFIX}/test/json_tests/test_unicode.py
 lib/python${PY_VER_SUFFIX}/test/keycert.passwd.pem
 lib/python${PY_VER_SUFFIX}/test/keycert.pem
@@ -3388,6 +3402,8 @@ lib/python${PY_VER_SUFFIX}/test/regrtest.py
 lib/python${PY_VER_SUFFIX}/test/relimport.py
 lib/python${PY_VER_SUFFIX}/test/reperf.py
 lib/python${PY_VER_SUFFIX}/test/sample_doctest.py
+lib/python${PY_VER_SUFFIX}/test/sample_doctest_no_docstrings.py
+lib/python${PY_VER_SUFFIX}/test/sample_doctest_no_doctests.py
 lib/python${PY_VER_SUFFIX}/test/script_helper.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/sgml_input.html
@@ -3546,6 +3562,8 @@ lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_generator.cpython-33
 lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_generator.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_headerregistry.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_headerregistry.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_inversion.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_inversion.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_message.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_message.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/test/test_email/__pycache__/test_parser.cpython-33.pyc
@@ -3614,6 +3632,7 @@ lib/python${PY_VER_SUFFIX}/test/test_email/test_defect_handling.py
 lib/python${PY_VER_SUFFIX}/test/test_email/test_email.py
 lib/python${PY_VER_SUFFIX}/test/test_email/test_generator.py
 lib/python${PY_VER_SUFFIX}/test/test_email/test_headerregistry.py
+lib/python${PY_VER_SUFFIX}/test/test_email/test_inversion.py
 lib/python${PY_VER_SUFFIX}/test/test_email/test_message.py
 lib/python${PY_VER_SUFFIX}/test/test_email/test_parser.py
 lib/python${PY_VER_SUFFIX}/test/test_email/test_pickleable.py
@@ -3996,11 +4015,13 @@ lib/python${PY_VER_SUFFIX}/test/test_warnings.py
 lib/python${PY_VER_SUFFIX}/test/test_wave.py
 lib/python${PY_VER_SUFFIX}/test/test_weakref.py
 lib/python${PY_VER_SUFFIX}/test/test_weakset.py
+lib/python${PY_VER_SUFFIX}/test/test_webbrowser.py
 lib/python${PY_VER_SUFFIX}/test/test_winreg.py
 lib/python${PY_VER_SUFFIX}/test/test_winsound.py
 lib/python${PY_VER_SUFFIX}/test/test_with.py
 lib/python${PY_VER_SUFFIX}/test/test_wsgiref.py
 lib/python${PY_VER_SUFFIX}/test/test_xdrlib.py
+lib/python${PY_VER_SUFFIX}/test/test_xml_dom_minicompat.py
 lib/python${PY_VER_SUFFIX}/test/test_xml_etree.py
 lib/python${PY_VER_SUFFIX}/test/test_xml_etree_c.py
 lib/python${PY_VER_SUFFIX}/test/test_xmlrpc.py
@@ -4099,12 +4120,15 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_font.cpyth
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_font.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_loadtk.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_loadtk.cpython-33.pyo
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_misc.cpython-33.pyc
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_misc.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_text.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_text.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_variables.cpython-33.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/__pycache__/test_variables.cpython-33.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_font.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_loadtk.py
+lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_misc.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_text.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_tkinter/test_variables.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/__init__.py
