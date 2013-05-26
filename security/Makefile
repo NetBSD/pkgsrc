@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2013/05/18 18:37:27 agc Exp $
+# $NetBSD: Makefile,v 1.468 2013/05/26 21:29:00 rodent Exp $
 #
 
 COMMENT=	Security tools
@@ -383,6 +383,7 @@ SUBDIR+=	srp_client
 SUBDIR+=	ssh-askpass
 SUBDIR+=	ssh-ip-tunnel
 SUBDIR+=	sshfp
+SUBDIR+=	sshpass
 SUBDIR+=	ssldump
 SUBDIR+=	sslproxy
 SUBDIR+=	sslwrap
