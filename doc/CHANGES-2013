@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1783 2013/05/26 12:15:20 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1784 2013/05/26 12:19:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2858,8 +2858,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/py-cabocha to 0.66 [obache 2013-05-22]
 	Updated textproc/ruby-cabocha to 0.66 [obache 2013-05-22]
 	Updated www/mediawiki to 1.20.6 [wen 2013-05-22]
-	Updated sysutils/lockf to 1 [mspo 2013-05-22]
-	Updated lang/nodejs to 0.10.6 [mspo 2013-05-22]
+	Added sysutils/lockf version 1 [mspo 2013-05-22]
+	Added lang/nodejs version 0.10.6 [mspo 2013-05-22]
 	Updated www/moodle to 2.5 [wen 2013-05-23]
 	Updated converters/p5-JSON to 2.58 [wen 2013-05-23]
 	Updated textproc/p5-XML-RSS to 1.52 [wen 2013-05-23]
