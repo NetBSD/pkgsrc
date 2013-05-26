@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1777 2013/05/26 01:34:28 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1778 2013/05/26 01:45:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2897,3 +2897,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/opencobol to 1.1nb1 [ryoon 2013-05-25]
 	Updated print/hplip to 3.13.5 [schnoebe 2013-05-26]
 	Added lang/opensource-cobol version 1.3J [ryoon 2013-05-26]
+	Updated devel/ruby-rcsparse to 0.0.0.46 [ryoon 2013-05-26]
