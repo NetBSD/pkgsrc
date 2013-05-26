@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/01/29 05:50:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/05/26 23:19:29 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.11
@@ -23,6 +23,7 @@ DEPENDS+=	iceauth-[0-9]*:../../x11/iceauth
 DEPENDS+=	ico-[0-9]*:../../x11/ico
 DEPENDS+=	listres-[0-9]*:../../x11/listres
 DEPENDS+=	luit-[0-9]*:../../x11/luit
+DEPENDS+=	oclock-[0-9]*:../../x11/oclock
 DEPENDS+=	setxkbmap-[0-9]*:../../x11/setxkbmap
 DEPENDS+=	transset-[0-9]*:../../x11/transset
 DEPENDS+=	viewres-[0-9]*:../../x11/viewres
