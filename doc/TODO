@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12199 2013/05/26 20:14:56 wiz Exp $
+$NetBSD: TODO,v 1.12200 2013/05/26 20:28:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -778,7 +778,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmms-0.6.2
 	o libmp3splt-0.8.2
 	o libnasl-2.3.1
-	o libnice-0.1.4
 	o libnids-1.24
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libquantum-1.1.0 [pkg/43728, development release]
