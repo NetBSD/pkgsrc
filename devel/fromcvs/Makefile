@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.30 2013/04/06 19:42:41 rodent Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/26 01:48:42 ryoon Exp $
 
-DISTNAME=	c31a1dd9cbb2
-# Last part of PKGNAME is changeset number
-PKGNAME=	fromcvs-0.0.0.132
-PKGREVISION=	3
+DISTNAME=	fromcvs-fromcvs-184311d
+# Bump simply to 0.0.0.133, I am not sure...
+PKGNAME=	fromcvs-0.0.0.133
 CATEGORIES=	devel scm
-MASTER_SITES=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/archive/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	-http://gitorious.org/fromcvs/fromcvs/archive-tarball/184311d
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/
+HOMEPAGE=	
 COMMENT=	CVS repository conversion tool
 LICENSE=	corecode-license
 
@@ -17,8 +16,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rbtree>=0.2.0:../../devel/ruby-rbtree
 DEPENDS+=	${RUBY_PKGPREFIX}-rcsparse>=0.0.0.37:../../devel/ruby-rcsparse
 DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.2.1:../../databases/ruby-sqlite3
 
-WRKSRC=		${WRKDIR}/fromcvs-${DISTNAME}
-DIST_SUBDIR=	fromcvs
+WRKSRC=		${WRKDIR}/fromcvs-fromcvs
+
+RUBY_VERSION_SUPPORTED=	18
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python+=	tohg.rb
