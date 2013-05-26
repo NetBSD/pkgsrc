@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.120 2013/05/06 01:32:58 rodent Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.121 2013/05/26 18:21:46 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -358,12 +358,26 @@ ACCEPTABLE_LICENSES+=xv-license
     <orderedlist>
       <listitem>
 	<para>If your package needs another package's binaries or
-	libraries to build or run, and if that package has a
+	libraries to build and run, and if that package has a
 	<filename>buildlink3.mk</filename> file available, use it:</para>
 
 	<programlisting>
 .include "../../graphics/jpeg/buildlink3.mk"
 	</programlisting>
+      </listitem>
+
+      <listitem>
+	<para>If your package needs another package's binaries or
+	libraries only for building, and if that package has a
+	<filename>buildlink3.mk</filename> file available, use it:</para>
+
+	<programlisting>
+.include "../../graphics/jpeg/buildlink3.mk"
+	</programlisting>
+	<para>but set
+	<varname>BUILDLINK_DEPMETHOD.<replaceable>jpeg</replaceable>?=build</varname>
+	to make it a build dependency only. This case is rather
+	rare.</para>
       </listitem>
 
       <listitem>
