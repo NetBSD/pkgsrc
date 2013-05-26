@@ -6811,23 +6811,32 @@ The format for a BUILD_DEPENDS and a DEPENDS definition is:
 Please note that the "pre-req-package-name" may include any of the wildcard
 version numbers recognized by pkg_info(1).
 
- 1. If your package needs another package's binaries or libraries to build or
+ 1. If your package needs another package's binaries or libraries to build and
     run, and if that package has a buildlink3.mk file available, use it:
 
     .include "../../graphics/jpeg/buildlink3.mk"
 
 
- 2. If your package needs binaries from another package to build, use the
+ 2. If your package needs another package's binaries or libraries only for
+    building, and if that package has a buildlink3.mk file available, use it:
+
+    .include "../../graphics/jpeg/buildlink3.mk"
+
+
+    but set BUILDLINK_DEPMETHOD.jpeg?=build to make it a build dependency only.
+    This case is rather rare.
+
+ 3. If your package needs binaries from another package to build, use the
     BUILD_DEPENDS definition:
 
     BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 
 
- 3. If your package needs a library with which to link and there is no
+ 4. If your package needs a library with which to link and there is no
     buildlink3.mk file available, create one. Using DEPENDS won't be sufficient
     because the include files and libraries will be hidden from the compiler.
 
- 4. If your package needs some executable to be able to run correctly and if
+ 5. If your package needs some executable to be able to run correctly and if
     there's no buildlink3.mk file, this is specified using the DEPENDS
     variable. The print/lyx package needs to be able to execute the latex
     binary from the teTeX package when it runs, and that is specified:
@@ -6835,7 +6844,7 @@ version numbers recognized by pkg_info(1).
     DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 
 
- 5. You can use wildcards in package dependencies. Note that such wildcard
+ 6. You can use wildcards in package dependencies. Note that such wildcard
     dependencies are retained when creating binary packages. The dependency is
     checked when installing the binary package and any package which matches
     the pattern will be used. Wildcard dependencies should be used with care.
