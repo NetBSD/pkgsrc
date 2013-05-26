@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
+$NetBSD: distinfo,v 1.6 2013/05/26 00:43:23 schnoebe Exp $
 
-SHA1 (hplip-3.13.4.tar.gz) = df8e1cd027e7fc56f4d344904cd58d0105914e9d
-RMD160 (hplip-3.13.4.tar.gz) = 65df3b65aec0b588d80635cdff7dc88e21d22424
-Size (hplip-3.13.4.tar.gz) = 20680774 bytes
+SHA1 (hplip-3.13.5.tar.gz) = a28ebd754a94a83e493aa91673def890564c85f1
+RMD160 (hplip-3.13.5.tar.gz) = 056289cd233e4c95cb16cf30e136bebe691deed7
+Size (hplip-3.13.5.tar.gz) = 20737422 bytes
 SHA1 (patch-aa) = bad4a3a9570d9bbd1e0fe226b625f1ddc3f31b8c
 SHA1 (patch-ab) = ce2775ef74746aefd942bda49c4e548f7c771ff5
 SHA1 (patch-ad) = 468fbf167e1f20bb8617e444977969e46b19f3be
-SHA1 (patch-ae) = 1d619e74413d14271bdd428ce1dafcd1944c2423
+SHA1 (patch-ae) = da7a6f9ccb3787101496dd6588c3ebd31f69157d
 SHA1 (patch-io_hpmud_musb.h) = ad634f5a1f426877e1c88916b6468fcdb7598555
 SHA1 (patch-io_hpmud_pml.c) = 9bd341140afbc9ddb8eb8dff7eee05365231f94f
 SHA1 (patch-prnt_hpijs_context2.cpp) = f81148c1c334a9074453b27ac055833cd1669bd0

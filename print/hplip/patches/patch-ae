@@ -1,14 +1,22 @@
-$NetBSD: patch-ae,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
+$NetBSD: patch-ae,v 1.6 2013/05/26 00:43:23 schnoebe Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
 
 # reported upstream as https://bugs.launchpad.net/hplip/+bug/726218
 
---- Makefile.am.orig	2013-03-08 07:15:32.000000000 +0000
+# still needs to handle the buildlink path for libusb-1.0 :(
+# schnoebe -- Fri May 24 14:55:57 CDT 2013
+
+--- Makefile.am.orig	2013-05-10 10:09:32.000000000 +0000
 +++ Makefile.am
-@@ -110,11 +110,11 @@ hp_mkuri_LDADD = -ldl libhpmud.la
+@@ -110,26 +110,26 @@ hp_mkuri_LDADD = -ldl libhpmud.la
  hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
+ 
+ #hpmud rules data dir
+-rulessystemdir=/usr/lib/systemd/system
++rulessystemdir= $(libdir)/systemd/system
+ dist_rulessystem_DATA =data/rules/hplip-printer@.service
  
  # cron files
 -crondir = /etc/cron.daily
@@ -19,12 +27,11 @@ $NetBSD: patch-ae,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
 -rulesdir = /etc/udev/rules.d
 +rulesdir = $(sysconfdir)/udev/rules.d
  if UDEV_SYSFS_RULES
- dist_rules_DATA = data/rules/56-hpmud_support_sysfs.rules
- dist_rules_DATA += data/rules/86-hpmud_plugin_sysfs.rules
-@@ -134,11 +134,11 @@ else
- dist_rules_DATA += data/rules/55-hpmud.rules
+ dist_rules_DATA = data/rules/56-hpmud_sysfs.rules
+ else
+ dist_rules_DATA = data/rules/56-hpmud.rules
  endif
- endif
+ 
 -halpredir = /usr/share/hal/fdi/preprobe/10osvendor
 +halpredir = $(datadir)/hal/fdi/preprobe/10osvendor
  dist_halpre_DATA = data/rules/20-hplip-devices.fdi
@@ -35,24 +42,23 @@ $NetBSD: patch-ae,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
  hplip_conf_DATA = hplip.conf
  
  #pstotiff filter
-@@ -146,13 +146,13 @@ pstotiffdir = $(cupsfilterdir)
+@@ -137,12 +137,12 @@ pstotiffdir = $(cupsfilterdir)
  pstotiff_SCRIPTS = fax/filters/pstotiff
  
  # hplip.state
 -hplip_statedir = /var/lib/hp
-+hplip_statedir = ($localstatedir)/lib/hp
++hplip_statedir = $(localstatedir)/lib/hp
  dist_hplip_state_DATA =
- #dist_hplip_state_DATA = hplip.state
  
  # Log Files
 -hplip_Logdir=/var/log/hp
 -hplip_tmpdir=/var/log/hp/tmp
-+hplip_Logdir=$(localstatedir)/log/hp
-+hplip_tmpdir=$(localstatedir)/log/hp/tmp
++hplip_Logdir= $(localstatedir)/log/hp
++hplip_tmpdir= $(localstatedir)/log/hp/tmp
  
  if FULL_BUILD
  
-@@ -372,9 +372,9 @@ endif
+@@ -358,9 +358,9 @@ endif
  
  # PolicyKit
  if POLICYKIT_INSTALL
@@ -64,7 +70,7 @@ $NetBSD: patch-ae,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
  dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
  policykit_policydir = $(policykit_dir)
  dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
-@@ -563,25 +563,17 @@ endif
+@@ -549,25 +549,17 @@ endif
  install-dist_hplip_LogDATA:
  if FULL_BUILD
  	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
@@ -90,7 +96,7 @@ $NetBSD: patch-ae,v 1.5 2013/04/12 03:47:30 schnoebe Exp $
  endif	#FULL_BUILD
  
  install-dist_cronDATA:$(dist_cron_DATA)
-@@ -600,13 +592,13 @@ install-data-hook:
+@@ -586,13 +578,13 @@ install-data-hook:
  if HPLIP_BUILD
  #	   If scanner build, add hpaio entry to sane dll.conf.
  	if [ "$(scan_build)" = "yes" ]; then \
