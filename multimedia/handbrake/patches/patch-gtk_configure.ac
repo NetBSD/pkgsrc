@@ -1,4 +1,4 @@
-$NetBSD: patch-gtk_configure.ac,v 1.1 2013/01/26 23:26:19 wiz Exp $
+$NetBSD: patch-gtk_configure.ac,v 1.2 2013/05/26 12:55:44 wiz Exp $
 
 automake-1.13 compat.
 
@@ -21,16 +21,16 @@ automake-1.13 compat.
  AC_HEADER_STDC
  
  # introduce the optional configure parameter for the path of libXXX.a
-@@ -51,16 +50,6 @@ AC_SUBST(GLOBALLDFLAGS, $LDFLAGS )
+@@ -51,16 +50,9 @@ AC_SUBST(GLOBALLDFLAGS, $LDFLAGS )
  
  
  
 -dnl ***************************************************************************
 -dnl Internatinalization
 -dnl ***************************************************************************
--GETTEXT_PACKAGE=ghb
--AC_SUBST(GETTEXT_PACKAGE)
--AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [GETTEXT package name])
+ GETTEXT_PACKAGE=ghb
+ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [GETTEXT package name])
 -AM_GLIB_GNU_GETTEXT
 -IT_PROG_INTLTOOL([0.35.0])
 -
