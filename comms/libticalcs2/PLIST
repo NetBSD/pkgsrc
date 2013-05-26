@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/26 22:58:30 rodent Exp $
+include/tilp2/export3.h
+include/tilp2/keys73.h
+include/tilp2/keys83p.h
+include/tilp2/keys89.h
+include/tilp2/keys92p.h
+include/tilp2/stdints3.h
+include/tilp2/ticalcs.h
+lib/libticalcs2.la
+lib/pkgconfig/ticalcs2.pc
+${PLIST.nls}share/locale/fr/LC_MESSAGES/libticalcs2.mo
