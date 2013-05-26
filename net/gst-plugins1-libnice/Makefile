@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/05/24 18:23:38 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.1 2013/05/26 20:29:02 wiz Exp $
 
-DISTNAME=	libnice-0.1.2
-PKGNAME=	gst-plugins0.10-${DISTNAME}
-PKGREVISION=	7
+DISTNAME=	libnice-0.1.4
+PKGNAME=	gst-plugins1-${DISTNAME}
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -28,6 +26,6 @@ INSTALL_DIRS=	gst
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/gupnp-igd/buildlink3.mk"
 .include "../../net/libnice/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
