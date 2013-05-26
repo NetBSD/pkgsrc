@@ -1,0 +1,11 @@
+The GFM is an application allowing to manipulate single/group/tigroup files. It
+can:
+
+ * create a new file
+ * open an existing file
+ * save file
+ * rename variables
+ * remove variables
+ * create folders
+ * group files into a group/tigroup file
+ * ungroup a group/tigroup file into single files
