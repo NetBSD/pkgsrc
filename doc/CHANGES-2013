@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1792 2013/05/26 18:06:14 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1793 2013/05/26 18:09:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2913,3 +2913,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-distribute to 0.6.43 [wiz 2013-05-26]
 	Updated fonts/harfbuzz to 0.9.17 [wiz 2013-05-26]
 	Updated sysutils/dbus to 1.6.10 [wiz 2013-05-26]
+	Updated pkgtools/pkglint to 4.130 [wiz 2013-05-26]
