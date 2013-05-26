@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2013/02/11 01:14:41 dsainty Exp $
+# $NetBSD: Makefile,v 1.95 2013/05/26 23:08:24 rodent Exp $
 #
 
 COMMENT=	Communication utilities
@@ -36,6 +36,10 @@ SUBDIR+=	libopensync-plugin-file
 SUBDIR+=	libopensync-plugin-kdepim
 SUBDIR+=	libopensync-plugin-syncml
 SUBDIR+=	libsyncml
+SUBDIR+=	libticables2
+SUBDIR+=	libticalcs2
+SUBDIR+=	libticonv
+SUBDIR+=	libtifiles2
 SUBDIR+=	lirc
 SUBDIR+=	lrzsz
 SUBDIR+=	malsync
@@ -71,6 +75,7 @@ SUBDIR+=	synce-librapi2
 SUBDIR+=	synce-libsynce
 SUBDIR+=	synce-rra
 SUBDIR+=	synce-serial
+SUBDIR+=	tilp2
 SUBDIR+=	tkhylafax
 SUBDIR+=	tn3270
 SUBDIR+=	xisp
