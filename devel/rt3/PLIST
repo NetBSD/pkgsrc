@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2012/10/31 20:39:26 spz Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/05/26 16:55:53 spz Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -331,6 +331,9 @@ share/rt3/etc/upgrade/3.8.6/content
 share/rt3/etc/upgrade/3.8.8/content
 share/rt3/etc/upgrade/3.8.9/content
 share/rt3/etc/upgrade/3.8.12/content
+share/rt3/etc/upgrade/3.8.17/schema.Oracle
+share/rt3/etc/upgrade/3.8.17/schema.Pg
+share/rt3/etc/upgrade/3.8.17/schema.mysql
 share/rt3/etc/vulnerable-passwords
 share/rt3/html/Admin/CustomFields/GroupRights.html
 share/rt3/html/Admin/CustomFields/Modify.html
