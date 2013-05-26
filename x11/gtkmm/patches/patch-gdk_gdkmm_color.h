@@ -1,4 +1,6 @@
-$NetBSD: patch-gdk_gdkmm_color.h,v 1.1 2013/05/24 19:31:59 joerg Exp $
+$NetBSD: patch-gdk_gdkmm_color.h,v 1.2 2013/05/26 09:14:57 adam Exp $
+
+Fix missing dependencies.
 
 --- gdk/gdkmm/color.h.orig	2013-05-24 17:18:47.000000000 +0000
 +++ gdk/gdkmm/color.h
