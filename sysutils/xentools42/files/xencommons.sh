@@ -22,6 +22,7 @@ SBINDIR=@PREFIX@/sbin
 
 xen_precmd()
 {
+	mkdir -p /var/run/xen || exit 1
 	mkdir -p /var/run/xenstored || exit 1
 }
 
