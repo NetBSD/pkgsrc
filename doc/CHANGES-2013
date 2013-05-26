@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1793 2013/05/26 18:09:35 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1794 2013/05/26 18:21:29 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2914,3 +2914,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/harfbuzz to 0.9.17 [wiz 2013-05-26]
 	Updated sysutils/dbus to 1.6.10 [wiz 2013-05-26]
 	Updated pkgtools/pkglint to 4.130 [wiz 2013-05-26]
+	Updated x11/mlterm to 3.2.0 [tsutsui 2013-05-26]
