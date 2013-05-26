@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
+$NetBSD: patch-al,v 1.2 2013/05/26 17:56:09 wiz Exp $
 
---- configure.orig	2012-04-11 06:54:08.000000000 +0000
+--- configure.orig	2013-05-15 16:33:00.000000000 +0000
 +++ configure
-@@ -3020,7 +3020,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3332,7 +3332,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -4959,15 +4959,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5594,15 +5594,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -28,7 +28,7 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  if test "$with_pydebug" != yes
            then
-@@ -7626,8 +7621,8 @@ then
+@@ -8465,8 +8460,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -39,7 +39,7 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -7652,9 +7647,9 @@ then
+@@ -8491,9 +8486,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -52,7 +52,7 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
  			fi
  		fi
  		;;
-@@ -7688,9 +7683,15 @@ then
+@@ -8527,9 +8522,15 @@ then
  				   ;;
  				esac
  		fi;;
@@ -68,7 +68,7 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -7731,7 +7732,8 @@ then
+@@ -8570,7 +8571,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -78,7 +78,7 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7774,11 +7776,12 @@ then
+@@ -8613,11 +8615,12 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -92,12 +92,12 @@ $NetBSD: patch-al,v 1.1 2012/12/10 03:15:49 tsarna Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -12738,8 +12741,6 @@ then
- 		esac
- 		;;
- 	CYGWIN*)   SO=.dll;;
--	Linux*|GNU*)
--		   SO=.${SOABI}.so;;
- 	*)	   SO=.so;;
- 	esac
- else
+@@ -13707,8 +13710,6 @@ $as_echo "$SOABI" >&6; }
+ 
+ 
+ case $ac_sys_system in
+-    Linux*|GNU*)
+-	EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX};;
+     *)
+ 	EXT_SUFFIX=${SHLIB_SUFFIX};;
+ esac
