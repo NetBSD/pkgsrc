@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1795 2013/05/26 18:37:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1796 2013/05/26 18:43:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2916,3 +2916,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkglint to 4.130 [wiz 2013-05-26]
 	Updated x11/mlterm to 3.2.0 [tsutsui 2013-05-26]
 	Updated audio/musicpd to 0.17.4 [wiz 2013-05-26]
+	Updated games/puzzles to 9840 [wiz 2013-05-26]
