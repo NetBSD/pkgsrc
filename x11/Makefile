@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.684 2013/04/14 03:19:04 rodent Exp $
+# $NetBSD: Makefile,v 1.685 2013/05/26 23:17:03 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -329,6 +329,7 @@ SUBDIR+=	mxterm
 SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
+SUBDIR+=	oclock
 SUBDIR+=	oneko
 SUBDIR+=	openbsd-input-ws
 SUBDIR+=	openmotif
