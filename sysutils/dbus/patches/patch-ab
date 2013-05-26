@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.20 2012/08/14 19:18:08 abs Exp $
+$NetBSD: patch-ab,v 1.21 2013/05/26 18:06:04 wiz Exp $
 
 _dbus_poll: Set the timeout value argument to poll to -1 whenever
 it is less than -1 to avoid kde4 session start hang
 
---- dbus/dbus-sysdeps-unix.c.orig	2012-07-03 18:02:45.000000000 +0000
+--- dbus/dbus-sysdeps-unix.c.orig	2013-04-22 14:10:32.000000000 +0000
 +++ dbus/dbus-sysdeps-unix.c
 @@ -22,6 +22,8 @@
   *
@@ -14,8 +14,8 @@ it is less than -1 to avoid kde4 session start hang
  #include <config.h>
  
  #include "dbus-internals.h"
-@@ -72,6 +74,10 @@
- #include <ucred.h>
+@@ -75,6 +77,10 @@
+ #include <alloca.h>
  #endif
  
 +#ifdef __NetBSD__
@@ -25,7 +25,7 @@ it is less than -1 to avoid kde4 session start hang
  #ifdef HAVE_ADT
  #include <bsm/adt.h>
  #endif
-@@ -122,6 +128,32 @@
+@@ -125,6 +131,32 @@
  
  #endif /* Solaris */
  
@@ -58,7 +58,7 @@ it is less than -1 to avoid kde4 session start hang
  static dbus_bool_t
  _dbus_open_socket (int              *fd_p,
                     int               domain,
-@@ -969,7 +1001,7 @@ _dbus_set_local_creds (int fd, dbus_bool
+@@ -972,7 +1004,7 @@ _dbus_set_local_creds (int fd, dbus_bool
  {
    dbus_bool_t retval = TRUE;
  
@@ -67,7 +67,7 @@ it is less than -1 to avoid kde4 session start hang
    /* NOOP just to make sure only one codepath is used
     *      and to prefer CMSGCRED
     */
-@@ -1674,6 +1706,11 @@ _dbus_read_credentials_socket  (int     
+@@ -1677,6 +1709,11 @@ _dbus_read_credentials_socket  (int     
      char cred[CMSG_SPACE (sizeof (struct cmsgcred))];
    } cmsg;
  
@@ -79,7 +79,7 @@ it is less than -1 to avoid kde4 session start hang
  #elif defined(LOCAL_CREDS)
    struct {
      struct cmsghdr hdr;
-@@ -1709,10 +1746,15 @@ _dbus_read_credentials_socket  (int     
+@@ -1712,10 +1749,15 @@ _dbus_read_credentials_socket  (int     
    msg.msg_iov = &iov;
    msg.msg_iovlen = 1;
  
@@ -96,7 +96,7 @@ it is less than -1 to avoid kde4 session start hang
  #endif
  
   again:
-@@ -1749,9 +1791,13 @@ _dbus_read_credentials_socket  (int     
+@@ -1752,9 +1794,13 @@ _dbus_read_credentials_socket  (int     
        return FALSE;
      }
  
@@ -111,7 +111,7 @@ it is less than -1 to avoid kde4 session start hang
      {
        dbus_set_error (error, DBUS_ERROR_FAILED,
                        "Message from recvmsg() was not SCM_CREDS");
-@@ -1787,6 +1833,16 @@ _dbus_read_credentials_socket  (int     
+@@ -1790,6 +1836,16 @@ _dbus_read_credentials_socket  (int     
      cred = (struct cmsgcred *) CMSG_DATA (&cmsg.hdr);
      pid_read = cred->cmcred_pid;
      uid_read = cred->cmcred_euid;
@@ -128,7 +128,7 @@ it is less than -1 to avoid kde4 session start hang
  #elif defined(LOCAL_CREDS)
      pid_read = DBUS_PID_UNSET;
      uid_read = cmsg.cred.sc_uid;
-@@ -1848,7 +1904,7 @@ _dbus_read_credentials_socket  (int     
+@@ -1851,7 +1907,7 @@ _dbus_read_credentials_socket  (int     
        }
      if (ucred != NULL)
        ucred_free (ucred);
@@ -137,7 +137,7 @@ it is less than -1 to avoid kde4 session start hang
      _dbus_verbose ("Socket credentials not supported on this OS\n");
  #endif
    }
-@@ -2525,6 +2581,10 @@ _dbus_poll (DBusPollFD *fds,
+@@ -2528,6 +2584,10 @@ _dbus_poll (DBusPollFD *fds,
        _DBUS_STRUCT_OFFSET (DBusPollFD, revents) ==
        _DBUS_STRUCT_OFFSET (struct pollfd, revents))
      {
