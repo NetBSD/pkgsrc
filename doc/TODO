@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12191 2013/05/26 18:01:25 wiz Exp $
+$NetBSD: TODO,v 1.12192 2013/05/26 18:06:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dasm-2.20.11
 	o dbench-4.0
-	o dbus-1.7.2
 	o dbus-python-common-1.2.0
 	o dcc-1.3.141
 	o dd_rescue-1.33 [wip]
