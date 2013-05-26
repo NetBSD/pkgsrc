@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/11 11:53:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/05/26 20:14:48 wiz Exp $
 bin/nickle
 include/nickle/builtin-namespaces.h
 include/nickle/builtin.h
@@ -38,21 +38,21 @@ share/nickle/examples/restart.5c
 share/nickle/examples/roman.5c
 share/nickle/examples/rsa-demo.5c
 share/nickle/examples/rsa.5c
-share/nickle/examples/skiplist.5c
 share/nickle/examples/skiplisttest.5c
 share/nickle/examples/smlng/COPYING
 share/nickle/examples/smlng/context.5c
 share/nickle/examples/smlng/generate.5c
 share/nickle/examples/smlng/parse.5c
 share/nickle/examples/smlng/test.5c
-share/nickle/examples/sort.5c
 share/nickle/examples/turtle/COPYING
 share/nickle/examples/turtle/snowflake.5c
 share/nickle/examples/turtle/snowflake.tex
 share/nickle/examples/turtle/turtle.5c
 share/nickle/factorial.5c
 share/nickle/file.5c
+share/nickle/gamma.5c
 share/nickle/history.5c
+share/nickle/list.5c
 share/nickle/math.5c
 share/nickle/mutex.5c
 share/nickle/parse-args.5c
@@ -61,6 +61,8 @@ share/nickle/printf.5c
 share/nickle/prng.5c
 share/nickle/process.5c
 share/nickle/scanf.5c
+share/nickle/skiplist.5c
 share/nickle/socket.5c
+share/nickle/sort.5c
 share/nickle/string.5c
 share/nickle/svg.5c
