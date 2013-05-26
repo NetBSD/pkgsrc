@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
+$NetBSD: patch-ab,v 1.27 2013/05/26 09:22:14 adam Exp $
 
---- configure.orig	2012-09-11 06:55:35.000000000 +0000
+--- configure.orig	2013-04-19 07:36:11.000000000 +0000
 +++ configure
-@@ -13971,7 +13971,7 @@ fi
+@@ -13948,7 +13948,7 @@ fi
  fi
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
-@@ -14436,13 +14436,13 @@ else
+@@ -14417,13 +14417,13 @@ else
          if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
              ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
  if test "x$ac_cv_header_pthread_h" = xyes; then :
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -14474,7 +14474,7 @@ fi
+@@ -14455,7 +14455,7 @@ fi
  $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
  if test "x$ac_cv_lib_pthread_pthread_join" = xyes; then :
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
  
  $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
  
-@@ -14496,12 +14496,12 @@ fi
+@@ -14477,12 +14477,12 @@ fi
         *beos*) WITH_THREADS="1"
  	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
         ;;
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
  	           if expr ${GCC_MEDIUM} \> 2 \& ${GCC_MAJOR} = 3 > /dev/null
  		   then
  		       THREAD_LIBS=""
-@@ -14518,6 +14518,10 @@ fi
+@@ -14499,6 +14499,10 @@ fi
  	       fi
  	   fi
         ;;
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
      esac
      if test "$WITH_THREADS" = "1" ; then
  	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
-@@ -14787,7 +14791,7 @@ else
+@@ -14769,7 +14773,7 @@ else
      TEST_SAX=SAXtests
  fi
  
@@ -72,7 +72,7 @@ $NetBSD: patch-ab,v 1.26 2013/01/15 15:31:57 joerg Exp $
    WITH_SAX1_SOURCES_TRUE=
    WITH_SAX1_SOURCES_FALSE='#'
  else
-@@ -15209,10 +15213,6 @@ case "$host" in
+@@ -15191,10 +15195,6 @@ case "$host" in
  
  $as_echo "#define _WINSOCKAPI_ 1" >>confdefs.h
  

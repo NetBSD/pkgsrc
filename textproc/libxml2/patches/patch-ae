@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.12 2012/09/15 10:23:38 adam Exp $
+$NetBSD: patch-ae,v 1.13 2013/05/26 09:22:14 adam Exp $
 
 --- doc/examples/Makefile.in.orig	2012-09-11 06:55:36.000000000 +0000
 +++ doc/examples/Makefile.in
-@@ -822,7 +822,7 @@ uninstall-am:
+@@ -844,7 +844,7 @@ uninstall-am:
  
  install-data-local: 
  	$(MKDIR_P) $(DESTDIR)$(HTML_DIR)
