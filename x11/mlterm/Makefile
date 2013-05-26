@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2013/03/24 16:02:13 tsutsui Exp $
+# $NetBSD: Makefile,v 1.83 2013/05/26 18:18:25 tsutsui Exp $
 
-DISTNAME=	mlterm-3.1.9
+DISTNAME=	mlterm-3.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
@@ -8,8 +8,6 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 LICENSE=	modified-bsd
-
-MAKE_JOBS_SAFE=		no
 
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-* NetBSD-1.5[A-S]-*
@@ -33,19 +31,48 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
+.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 SUBST_CLASSES+=		link
-SUBST_MESSAGE.link=	Fixing hardcoded paths and link options.
+SUBST_MESSAGE.link=	Fixing hardcoded paths and link options in Makefiles.
 SUBST_STAGE.link=	post-patch
 SUBST_FILES.link=	Makefile.in */Makefile.in */*/Makefile.in \
-			*/*/*/Makefile.in man/mlterm.1
+			*/*/*/Makefile.in
 SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& ${X11_LDFLAGS:M*:Q}|g'
 SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& ${X11_LDFLAGS:M*:Q}|g'
 SUBST_SED.link+=	-e 's|/usr/local/|${PREFIX}/|g'
 SUBST_SED.link+=	-e 's|/usr/X11R7/|${X11BASE}/|g'
 
+SUBST_CLASSES+=		man
+SUBST_MESSAGE.man=	Fixing hardcoded paths in man pages.
+SUBST_STAGE.man=	post-patch
+SUBST_FILES.man=	man/mlterm.1
+SUBST_SED.man=		-e 's|/usr/X11R6/lib/X11/mlterm/|${PKG_SYSCONFDIR}/|g'
+SUBST_SED.man+=		-e 's|/usr/X11R6/include/|${X11BASE}/include/|g'
+
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.conf=	Fixing hardcoded paths in config files.
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	etc/font-fb
+SUBST_SED.conf=		-e 's|/usr/X11R7/|${X11BASE}/|g'
+SUBST_SED.conf+=	-e 's|/usr/pkg/|${PREFIX}/|g'
+
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+INSTALLATION_DIRS=	share/doc/mlterm share/doc/mlterm/en share/doc/mlterm/ja
+
+post-install:
+.for f in FAQ PROTOCOL README.bidi README.fb README.indic README.xim
+	${INSTALL_DATA} ${WRKSRC}/doc/en/${f} \
+		${DESTDIR}${PREFIX}/share/doc/mlterm/en
+.endfor
+.for f in BUGS FAQ README.aafont README.comb README.confapp README.fb \
+		README.fontproto README.ja README.pty README.server \
+		README.tate README.utf8 README.xim
+	${INSTALL_DATA} ${WRKSRC}/doc/ja/${f} \
+		${DESTDIR}${PREFIX}/share/doc/mlterm/ja
+.endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
