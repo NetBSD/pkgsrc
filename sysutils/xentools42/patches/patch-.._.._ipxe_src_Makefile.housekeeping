@@ -1,0 +1,24 @@
+$NetBSD: patch-.._.._ipxe_src_Makefile.housekeeping,v 1.1 2013/05/26 20:27:43 bouyer Exp $
+
+--- ../../ipxe/src/Makefile.housekeeping.orig	2013-05-26 19:35:55.000000000 +0200
++++ ../../ipxe/src/Makefile.housekeeping	2013-05-26 19:38:52.000000000 +0200
+@@ -160,8 +160,8 @@
+ Q :=
+ QM := @\#
+ else
+-Q := @
+-QM := @
++Q :=
++QM := @\#
+ endif
+ 
+ ###############################################################################
+@@ -575,7 +575,7 @@
+ #		  --defsym pci_vendor=0x1186 --defsym pci_device=0x1300")
+ #
+ TGT_LD_FLAGS	= $(foreach SYM,$(TGT_LD_PREFIX) $(TGT_LD_DRIVERS) obj_config,\
+-		    -u $(SYM) --defsym check_$(SYM)=$(SYM) ) \
++		    -u $(SYM) ) \
+ 		  $(patsubst %,--defsym %,$(TGT_LD_IDS))
+ 
+ # Calculate makerom flags for the specific target
