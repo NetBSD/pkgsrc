@@ -1,8 +1,16 @@
-$NetBSD: patch-.._.._ipxe_src_net_tls.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
+$NetBSD: patch-.._.._ipxe_src_net_tls.c,v 1.2 2013/05/26 20:27:43 bouyer Exp $
 
---- ../../ipxe/src/net/tls.c.orig	2013-03-25 18:53:57.000000000 +0000
-+++ ../../ipxe/src/net/tls.c
-@@ -650,18 +650,22 @@ static int tls_send_client_key_exchange 
+--- ../../ipxe/src/net/tls.c.orig	2010-02-02 17:12:44.000000000 +0100
++++ ../../ipxe/src/net/tls.c	2013-05-26 20:05:24.000000000 +0200
+@@ -29,6 +29,7 @@
+ #include <stdarg.h>
+ #include <string.h>
+ #include <errno.h>
++#include <alloca.h>
+ #include <byteswap.h>
+ #include <gpxe/hmac.h>
+ #include <gpxe/md5.h>
+@@ -650,18 +651,22 @@
  	RSA_CTX *rsa_ctx;
  	RSA_pub_key_new ( &rsa_ctx, tls->rsa.modulus, tls->rsa.modulus_len,
  			  tls->rsa.exponent, tls->rsa.exponent_len );
@@ -34,7 +42,7 @@ $NetBSD: patch-.._.._ipxe_src_net_tls.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
  
  	/* FIXME: Hack alert */
  	DBGC ( tls, "RSA encrypting plaintext, modulus, exponent:\n" );
-@@ -671,14 +675,13 @@ static int tls_send_client_key_exchange 
+@@ -671,14 +676,13 @@
  	DBGC_HD ( tls, tls->rsa.exponent, tls->rsa.exponent_len );
  	RSA_encrypt ( rsa_ctx, ( const uint8_t * ) &tls->pre_master_secret,
  		      sizeof ( tls->pre_master_secret ),
@@ -52,7 +60,7 @@ $NetBSD: patch-.._.._ipxe_src_net_tls.c,v 1.1 2013/05/15 06:58:50 jnemeth Exp $
  }
  
  /**
-@@ -802,12 +805,12 @@ static int tls_new_server_hello ( struct
+@@ -802,12 +806,12 @@
  		uint8_t session_id_len;
  		char next[0];
  	} __attribute__ (( packed )) *hello_a = data;
