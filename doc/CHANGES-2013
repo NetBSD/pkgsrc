@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1812 2013/05/26 23:06:20 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1813 2013/05/26 23:16:28 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2933,3 +2933,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added comms/libtifiles2 version 1.1.5 [rodent 2013-05-26]
 	Added comms/tilp2 version 1.16 [rodent 2013-05-26]
 	Added sysutils/gfm version 1.06 [rodent 2013-05-26]
+	Added x11/oclock version 1.0.3 [rodent 2013-05-26]
