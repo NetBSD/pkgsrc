@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.19 2012/09/25 07:08:22 sbd Exp $
+# $NetBSD: Makefile.install,v 1.20 2013/05/26 16:55:53 spz Exp $
 
 .include "dirs.mk"
 
@@ -68,7 +68,7 @@ RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\
 RT_UPGRADE_DIRS=	3.3.0 3.3.11 3.5.1 3.7.1 3.7.3 3.7.10 3.7.15	\
 			3.7.19 3.7.81 3.7.82 3.7.85 3.7.86 3.7.87       \
 			3.8.0 3.8.1 3.8.2 3.8.3 3.8.4 3.8.6 3.8.8 3.8.9 \
-			3.8.12
+			3.8.12 3.8.17
 
 MESSAGE_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTSHAREDIR=${RT_SHARE_DIR:Q}
 
