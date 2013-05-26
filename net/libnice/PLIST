@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/22 15:54:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/05/26 20:28:18 wiz Exp $
+bin/sdp-example
+bin/simple-example
 bin/stunbdc
 bin/stund
+bin/threaded-example
 include/nice/address.h
 include/nice/agent.h
 include/nice/candidate.h
