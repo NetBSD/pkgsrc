@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/26 04:13:05 ryoon Exp $
+bin/cob-config
+bin/cobc
+bin/cobcrun
+include/libcob.h
+include/libcob/codegen.h
+include/libcob/common.h
+include/libcob/exception.def
+include/libcob/system.def
+info/open-cobol.info
+lib/libcob.la
+lib/open-cobol-ce/CBL_OC_DUMP.so
+share/open-cobol-ce/config/bs2000.conf
+share/open-cobol-ce/config/cobol2002.conf
+share/open-cobol-ce/config/cobol85.conf
+share/open-cobol-ce/config/default.conf
+share/open-cobol-ce/config/ibm.conf
+share/open-cobol-ce/config/mf.conf
+share/open-cobol-ce/config/mvs.conf
+share/open-cobol-ce/copy/screenio.cpy
