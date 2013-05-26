@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1785 2013/05/26 17:28:55 stacktic Exp $
+$NetBSD: CHANGES-2013,v 1.1786 2013/05/26 17:55:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2906,3 +2906,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlitebrowser to 2.0beta1 [rodent 2013-05-26]
 	Updated misc/rump to 20130525 [stacktic 2013-05-26]
 	Updated filesystems/fs-utils to 20130519 [stacktic 2013-05-26]
+	Updated mail/getmail to 4.41.0 [schmonz 2013-05-26]
