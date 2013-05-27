@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1 2013/05/27 18:17:11 prlw1 Exp $
+#
+# used by devel/dconf-editor/Makefile
+
+DISTNAME=	dconf-0.16.0
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://live.gnome.org/dconf
+COMMENT=	Backend for gsettings
+LICENSE=	gnu-lgpl-v2.1
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake intltool msgfmt
