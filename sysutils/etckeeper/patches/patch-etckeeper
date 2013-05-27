@@ -1,0 +1,24 @@
+$NetBSD: patch-etckeeper,v 1.1 2013/05/27 08:36:00 sbd Exp $
+
+Add SUBST_VARS tokens.
+
+--- etckeeper.orig	2012-12-28 16:09:51.000000000 +0000
++++ etckeeper
+@@ -2,7 +2,7 @@
+ set -e
+ 
+ if [ -z "$ETCKEEPER_CONF_DIR" ]; then
+-	ETCKEEPER_CONF_DIR=/etc/etckeeper
++	ETCKEEPER_CONF_DIR=@PKG_SYSCONFDIR@
+ fi
+ 
+ conf="$ETCKEEPER_CONF_DIR/etckeeper.conf"
+@@ -86,7 +86,7 @@ if [ "x$1" = "x-d" ]; then
+ fi
+ 
+ if [ -z "$ETCKEEPER_DIR" ]; then
+-	ETCKEEPER_DIR=/etc
++	ETCKEEPER_DIR=@PKG_SYSCONFBASEDIR@
+ fi
+ cd "$ETCKEEPER_DIR"
+ export ETCKEEPER_DIR
