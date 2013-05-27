@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1823 2013/05/27 16:25:55 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1824 2013/05/27 18:17:35 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2944,3 +2944,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.23 [wen 2013-05-27]
 	Updated devel/zlib to 1.2.8 [adam 2012-05-27]
 	Updated lang/python27 to 2.7.5 [adam 2013-05-27]
+	Updated devel/dconf to 0.16.0 [prlw1 2013-05-27]
