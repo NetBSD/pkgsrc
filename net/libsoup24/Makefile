@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2013/05/24 18:23:32 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/05/27 11:57:19 drochner Exp $
 
 DISTNAME=	libsoup-2.42.2
 PKGNAME=	${DISTNAME:S/libsoup/libsoup24/}
@@ -41,5 +41,4 @@ PYTHON_FOR_BUILD_ONLY= yes
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.7
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/libproxy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
