@@ -1,0 +1,8 @@
+etckeeper is a collection of tools to let /etc be stored in a git,
+mercurial, darcs, or bzr repository. It hooks into apt (and other
+package managers including yum and pacman-g2) to automatically commit
+changes made to /etc during package upgrades. It tracks file metadata
+that revison control systems do not normally support, but that is
+important for /etc, such as the permissions of /etc/shadow.
+It's quite modular and configurable, while also being simple to use
+if you understand the basics of working with revision control.
