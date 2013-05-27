@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/05/26 23:16:15 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/27 01:13:00 rodent Exp $
 #
 
 DISTNAME=	oclock-1.0.3
-CATEGORIES=	x11
+CATEGORIES=	time x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
