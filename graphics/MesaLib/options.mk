@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2013/05/20 07:04:35 sbd Exp $
+# $NetBSD: options.mk,v 1.23 2013/05/27 06:45:30 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -17,23 +17,16 @@ PKG_SUPPORTED_OPTIONS=
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc" || \
      ${MACHINE_ARCH} == "sparc64") && \
-    ((${OPSYS} == "NetBSD" && ${X11_TYPE} == "modular") || \
+    (${OPSYS} == "NetBSD" || \
      ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
      ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
      ${OPSYS} == "SunOS")
 PKG_SUPPORTED_OPTIONS+=		dri
 .endif
-###
-### XXX OpenGL still works fine with the software fallback.  As of now,
-###	I think this is a good way to see which bugs surface before the
-###	next release branch.  Upgrading the X server to the 1.4 branch
-###	is advised given that it's glx/glcore modules are built from
-###	Mesa 6.5.3 (a development release).
-###
-.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*) && ${X11_TYPE} == "modular"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*)
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-*86*) && ${X11_TYPE} == "modular"
+.if !empty(MACHINE_PLATFORM:MLinux-*-*86*)
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
@@ -55,7 +48,7 @@ PKG_SUGGESTED_OPTIONS+=		dri
 .if !empty(PKG_OPTIONS:Mdri)
 CONFIGURE_ARGS+=        --with-driver=dri
 PLIST.dri=	yes
-BUILDLINK_API_DEPENDS.libdrm+= libdrm>=2.4.9
+BUILDLINK_API_DEPENDS.libdrm+= libdrm>=2.4.24
 .  include "../../sysutils/libpciaccess/buildlink3.mk"
 .  include "../../graphics/MesaLib/dri.mk"
 CONFIGURE_ARGS+=        --with-dri-drivers="i810 i915 i965 mach64 mga r128 r200 r300 r600 radeon savage sis swrast tdfx unichrome"
