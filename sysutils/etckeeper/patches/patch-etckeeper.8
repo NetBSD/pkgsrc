@@ -1,0 +1,51 @@
+$NetBSD: patch-etckeeper.8,v 1.1 2013/05/27 08:36:00 sbd Exp $
+
+Add SUBST_VARS tokens.
+
+--- etckeeper.8.orig	2012-06-02 22:14:44.000000000 +0000
++++ etckeeper.8
+@@ -5,21 +5,21 @@ etckeeper \- store /etc in git, mercuria
+ .SH SYNOPSIS
+ .B etckeeper command [-d directory]
+ .SH DESCRIPTION
+-etckeeper manages /etc be stored in a git, mercurial, bazaar, or darcs
+-repository. By default each of the commands operates on /etc, but a
+-different directory can be specified to operate on a clone of the /etc
++etckeeper manages @PKG_SYSCONFBASEDIR@ be stored in a git, mercurial, bazaar, or darcs
++repository. By default each of the commands operates on @PKG_SYSCONFBASEDIR@, but a
++different directory can be specified to operate on a clone of the @PKG_SYSCONFBASEDIR@
+ repository located elsewhere.
+ .SH COMMANDS
+ .TP
+ .B init
+ This initialises and sets up a git, mercurial, bazaar, or darcs
+ repository (depending on the VCS setting in
+-/etc/etckeeper/etckeeper.conf). Typically this is run in /etc once
++@PKG_SYSCONFDIR@/etckeeper.conf). Typically this is run in @PKG_SYSCONFBASEDIR@ once
+ when starting to use etckeeper on a machine. It can also be used to
+-initialise a clone of the /etc repository located elsewhere.
++initialise a clone of the @PKG_SYSCONFBASEDIR@ repository located elsewhere.
+ .TP
+ .B commit [message]
+-Commits all changes in /etc to the repository. A commit message can be
++Commits all changes in @PKG_SYSCONFBASEDIR@ to the repository. A commit message can be
+ specified. You may also use the underlying VCS to commit manually.
+ (Note that etckeeper commit will notice if a user has used sudo or su to
+ become root, and record the original username in the commit.)
+@@ -60,13 +60,13 @@ uninit, then modify etckeeper.conf to us
+ etckeeper init. (The -f switch can be used to force uninit without
+ prompting.)
+ .SH FILES
+-/etc/etckeeper/etckeeper.conf is the configuration file.
++@PKG_SYSCONFDIR@/etckeeper.conf is the configuration file.
+ 
+-/etc/etckeeper also contains directories containing the programs that are
++PKG_SYSCONFDIR also contains directories containing the programs that are
+ run for each of the above commands.
+ .SH ENVIRONMENT VARIABLES
+ ETCKEEPER_CONF_DIR path to configuration directory instead of default /etc/etckeeper.
+ .SH SEE ALSO
+-/usr/share/doc/etckeeper/README.gz
++@PREFIX@/share/doc/etckeeper/README
+ .SH AUTHOR 
+ Joey Hess <joey@kitenet.net>
