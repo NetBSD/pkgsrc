@@ -1,0 +1,15 @@
+$NetBSD: patch-bash__completion,v 1.1 2013/05/27 08:36:00 sbd Exp $
+
+Add SUBST_VARS token.
+
+--- bash_completion.orig	2011-02-22 20:19:36.000000000 +0000
++++ bash_completion
+@@ -2,7 +2,7 @@ _etckeeper() {
+ 	local cur;
+ 	COMPREPLY=();
+ 	cur=${COMP_WORDS[COMP_CWORD]};
+-	COMPREPLY=( $( compgen -W '$(cd /etc/etckeeper/; for i in *.d/; do echo ${i%.d/}; done)' -- $cur ) );
++	COMPREPLY=( $( compgen -W '$(cd @PKG_SYSCONFDIR@; for i in *.d/; do echo ${i%.d/}; done)' -- $cur ) );
+ }
+ 
+ complete -F _etckeeper etckeeper

@@ -1,0 +1,15 @@
+$NetBSD: patch-update-ignore.d_01update-ignore,v 1.1 2013/05/27 08:36:00 sbd Exp $
+
+Change '/etc' to ${ETCKEEPER_DIR}.
+
+--- update-ignore.d/01update-ignore.orig	2013-05-09 02:35:47.000000000 +0000
++++ update-ignore.d/01update-ignore
+@@ -115,7 +115,7 @@ writefile () {
+ 	ignore blkid.tab.old
+ 	nl
+ 	
+-	comment "some other files in /etc that typically do not need to be tracked"
++	comment "some other files in ${ETCKEEPER_DIR} that typically do not need to be tracked"
+ 	ignore nologin
+ 	ignore ld.so.cache
+ 	ignore prelink.cache

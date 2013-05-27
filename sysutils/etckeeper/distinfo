@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2013/05/27 08:36:00 sbd Exp $
+
+SHA1 (etckeeper_1.3.tar.gz) = 8716d5cfc9fc584bf0069932383ec1ca956f4788
+RMD160 (etckeeper_1.3.tar.gz) = 43404007c3d5b727ee2040477245591ab17372ca
+Size (etckeeper_1.3.tar.gz) = 47387 bytes
+SHA1 (patch-bash__completion) = 95936127f98a76b4b7b66ddc170ba6c1e1e4c0d9
+SHA1 (patch-debian_cron.daily) = 5473807c2bcab9931e6324436f1d1ff3363ee3d2
+SHA1 (patch-etckeeper) = 07a6b61b6c79096065953d22087c32ea5d776f2c
+SHA1 (patch-etckeeper.8) = bb6e59169edac6ae16cebd25c05aa3c2305b3990
+SHA1 (patch-etckeeper.conf) = c246bf082a1b7137c3f50fa43e432ea9c1587464
+SHA1 (patch-init.d_40vcs-init) = d267d4e7e2b82353614ed15455c2739e1c8f92d6
+SHA1 (patch-list-installed.d_50list-installed) = b0c9a500fa80c97686f229b8f936de6f1c8de7e0
+SHA1 (patch-post-install.d_50vcs-commit) = c79cd3c5f195cbc4808074557818f5f7d9a4e457
+SHA1 (patch-pre-install.d_10packagelist) = c2383ef03e2f360c581acb2c4c3ca09bad8cac10
+SHA1 (patch-pre-install.d_50uncommitted-changes) = 908a2cf5a107346a57f3fde1f1076c2ec7f92b9f
+SHA1 (patch-update-ignore.d_01update-ignore) = 3e73493f268da3d40623fcd192d3da911357acee
