@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.9 2013/04/17 13:21:05 obache Exp $
+$NetBSD: patch-am,v 1.10 2013/05/27 16:24:00 adam Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -48,9 +48,9 @@ cygwin 2.7.3-no-libm.patch
 +                self.compiler.library_dirs.insert(0, libdir)
 +            if incdir not in self.compiler.include_dirs:
 +                self.compiler.include_dirs.insert(0, incdir)
+         self.add_gcc_paths()
          self.add_multiarch_paths()
  
-         # Add paths specified in the environment variables LDFLAGS and
 @@ -548,7 +554,7 @@ class PyBuildExt(build_ext):
  
          # Check for MacOS X, which doesn't need libm.a at all
