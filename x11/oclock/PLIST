@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/26 23:16:15 rodent Exp $
-bin/oclock
-lib/X11/app-defaults/Clock-color
-man/man1/oclock.1
