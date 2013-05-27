@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1820 2013/05/27 14:59:02 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1821 2013/05/27 15:06:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2940,3 +2940,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Graph to 0.96 [wen 2013-05-27]
 	Updated devel/p5-Test-CheckDeps to 0.004 [wen 2013-05-27]
 	Updated net/p5-Test-TCP to 1.27 [wen 2013-05-27]
+	Updated www/p5-HTML-Parser to 3.71 [wen 2013-05-27]
