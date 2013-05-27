@@ -1,0 +1,13 @@
+$NetBSD: patch-pre-install.d_10packagelist,v 1.1 2013/05/27 08:36:00 sbd Exp $
+
+Add SUBST_VARS token.
+
+--- pre-install.d/10packagelist.orig	2011-02-22 20:19:36.000000000 +0000
++++ pre-install.d/10packagelist
+@@ -1,4 +1,4 @@
+ #!/bin/sh
+ # This list will be later used when committing.
+-mkdir -p /var/cache/etckeeper/
+-etckeeper list-installed > /var/cache/etckeeper/packagelist.pre-install
++mkdir -p @VARBASE@/cache/etckeeper/
++etckeeper list-installed > @VARBASE@/cache/etckeeper/packagelist.pre-install
