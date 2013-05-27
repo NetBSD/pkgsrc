@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2013/04/12 09:03:41 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2013/05/27 16:24:00 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -172,6 +172,9 @@ lib/python${PY_VER_SUFFIX}/_pyio.pyo
 lib/python${PY_VER_SUFFIX}/_strptime.py
 lib/python${PY_VER_SUFFIX}/_strptime.pyc
 lib/python${PY_VER_SUFFIX}/_strptime.pyo
+lib/python${PY_VER_SUFFIX}/_sysconfigdata.py
+lib/python${PY_VER_SUFFIX}/_sysconfigdata.pyc
+lib/python${PY_VER_SUFFIX}/_sysconfigdata.pyo
 lib/python${PY_VER_SUFFIX}/_threading_local.py
 lib/python${PY_VER_SUFFIX}/_threading_local.pyc
 lib/python${PY_VER_SUFFIX}/_threading_local.pyo
@@ -593,6 +596,9 @@ lib/python${PY_VER_SUFFIX}/ctypes/test/test_varsize_struct.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_win32.py
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_win32.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/test/test_win32.pyo
+lib/python${PY_VER_SUFFIX}/ctypes/test/test_wintypes.py
+lib/python${PY_VER_SUFFIX}/ctypes/test/test_wintypes.pyc
+lib/python${PY_VER_SUFFIX}/ctypes/test/test_wintypes.pyo
 lib/python${PY_VER_SUFFIX}/ctypes/util.py
 lib/python${PY_VER_SUFFIX}/ctypes/util.pyc
 lib/python${PY_VER_SUFFIX}/ctypes/util.pyo
@@ -4068,7 +4074,6 @@ lib/python${PY_VER_SUFFIX}/test/test_zlib.pyo
 lib/python${PY_VER_SUFFIX}/test/testall.py
 lib/python${PY_VER_SUFFIX}/test/testall.pyc
 lib/python${PY_VER_SUFFIX}/test/testall.pyo
-lib/python${PY_VER_SUFFIX}/test/testbz2_bigmem.bz2
 lib/python${PY_VER_SUFFIX}/test/testcodec.py
 lib/python${PY_VER_SUFFIX}/test/testcodec.pyc
 lib/python${PY_VER_SUFFIX}/test/testcodec.pyo
