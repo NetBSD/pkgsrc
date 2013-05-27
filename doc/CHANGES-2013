@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1816 2013/05/27 10:51:15 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1817 2013/05/27 10:56:57 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2935,5 +2935,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/gfm version 1.06 [rodent 2013-05-26]
 	Added x11/oclock version 1.0.3 [rodent 2013-05-26]
 	Added sysutils/etckeeper version 1.3 [sbd 2013-05-27]
-	Added time/oclock version 1.0.3 [rodent 2013-05-27]
-	Added time/xclock version 1.0.6 [rodent 2013-05-27]
+	Moved x11/oclock to time/oclock [rodent 2013-05-27]
+	Moved x11/xclock to time/xclock [rodent 2013-05-27]
