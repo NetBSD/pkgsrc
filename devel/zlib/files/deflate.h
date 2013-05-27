@@ -8,7 +8,7 @@
    subject to change. Applications should only use zlib.h.
  */
 
-/* @(#) $Id: deflate.h,v 1.3 2012/05/09 11:33:09 adam Exp $ */
+/* @(#) $Id: deflate.h,v 1.4 2013/05/27 16:22:10 adam Exp $ */
 
 #ifndef DEFLATE_H
 #define DEFLATE_H
@@ -104,7 +104,7 @@ typedef struct internal_state {
     int   wrap;          /* bit 0 true for zlib, bit 1 true for gzip */
     gz_headerp  gzhead;  /* gzip header information to write */
     uInt   gzindex;      /* where in extra, name, or comment */
-    Byte  method;        /* STORED (for zip only) or DEFLATED */
+    Byte  method;        /* can only be DEFLATED */
     int   last_flush;    /* value of flush param for previous deflate call */
 
                 /* used by deflate.c: */
