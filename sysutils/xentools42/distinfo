@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2013/05/26 20:27:43 bouyer Exp $
+$NetBSD: distinfo,v 1.4 2013/05/27 22:26:27 prlw1 Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -10,6 +10,9 @@ SHA1 (patch-.._.._ipxe_src_Makefile.housekeeping) = 5ec8020a9705b2f64096c2942473
 SHA1 (patch-.._.._ipxe_src_arch_i386_include_librm.h) = 4549ac641b112321b4731a918d85219c3fce6808
 SHA1 (patch-.._.._ipxe_src_arch_i386_scripts_i386.lds) = 4c0cbb7f535be43e1b6f53c284340a8bafc37c0b
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 240ff973757403b983f12b2cbed826584c4a8aba
+SHA1 (patch-.._.._ipxe_src_drivers_net_ath5k_ath5k_qcu.c) = eb86106d05d5cc3300b7b57b0e0c2fdd338bbf43
+SHA1 (patch-.._.._ipxe_src_drivers_net_ns83820.c) = fbdfc47949f4946174b705d41d2b6c4405a68704
+SHA1 (patch-.._.._ipxe_src_drivers_net_tulip.c) = 0d9370c64e5e6bf15a5b87944e03333a10e4a299
 SHA1 (patch-.._.._ipxe_src_net_tls.c) = 893c70515bc4cb0d4d9319fd94eddc4945f6a0b3
 SHA1 (patch-.._Config.mk) = ec5ba76be10e43cb1b2d37686e35d5fb81d8de80
 SHA1 (patch-.._config_NetBSD.mk) = 90893326dcce4e3e2ef273f22ec5ddf5af0f7cd8
