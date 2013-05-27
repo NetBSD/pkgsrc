@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/05/26 23:19:29 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2013/05/27 10:55:05 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.11
@@ -23,7 +23,7 @@ DEPENDS+=	iceauth-[0-9]*:../../x11/iceauth
 DEPENDS+=	ico-[0-9]*:../../x11/ico
 DEPENDS+=	listres-[0-9]*:../../x11/listres
 DEPENDS+=	luit-[0-9]*:../../x11/luit
-DEPENDS+=	oclock-[0-9]*:../../x11/oclock
+DEPENDS+=	oclock-[0-9]*:../../time/oclock
 DEPENDS+=	setxkbmap-[0-9]*:../../x11/setxkbmap
 DEPENDS+=	transset-[0-9]*:../../x11/transset
 DEPENDS+=	viewres-[0-9]*:../../x11/viewres
@@ -31,7 +31,7 @@ DEPENDS+=	x11perf-[0-9]*:../../x11/x11perf
 DEPENDS+=	xauth-[0-9]*:../../x11/xauth
 DEPENDS+=	xbacklight-[0-9]*:../../x11/xbacklight
 DEPENDS+=	xcalc-[0-9]*:../../x11/xcalc
-DEPENDS+=	xclock-[0-9]*:../../x11/xclock
+DEPENDS+=	xclock-[0-9]*:../../time/xclock
 DEPENDS+=	xconsole-[0-9]*:../../x11/xconsole
 DEPENDS+=	xcursorgen-[0-9]*:../../x11/xcursorgen
 DEPENDS+=	xdm-[0-9]*:../../x11/xdm
