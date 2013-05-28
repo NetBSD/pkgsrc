@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2013/05/21 13:06:35 markd Exp $
+# $NetBSD: Makefile,v 1.128 2013/05/28 11:21:05 abs Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -39,7 +39,10 @@ SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-server}:
 .include "options.mk"
 
 .include "../../mk/mysql.buildlink3.mk"
-.if ${_MYSQL_VERSION} == "55"
+.if ${_MYSQL_VERSION} == "56"
+.include "../../databases/mysql56-server/buildlink3.mk"
+SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib:
+.elif ${_MYSQL_VERSION} == "55"
 .include "../../databases/mysql55-server/buildlink3.mk"
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib:
 .elif ${_MYSQL_VERSION} == "51"
