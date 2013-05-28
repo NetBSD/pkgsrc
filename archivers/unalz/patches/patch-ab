@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.12 2012/06/28 05:21:19 sbd Exp $
+$NetBSD: patch-ab,v 1.13 2013/05/28 19:00:04 joerg Exp $
 
 * Use system/buildlinked headers.
 * The correct type for get_crc_table with zlib 1.2.7 is z_crc_t*
@@ -13,6 +13,42 @@ $NetBSD: patch-ab,v 1.12 2012/06/28 05:21:19 sbd Exp $
  #include "UnAlz.h"
  
  // utime 함수 처리
+@@ -159,7 +159,7 @@ CUnAlz::CUnAlz()
+ {
+ 	memset(m_files, 0, sizeof(m_files));
+ 	m_nErr = ERR_NOERR;
+-	m_posCur = (FileList::iterator)NULL;
++	m_posCur = m_fileList.end();
+ 	m_pFuncCallBack = NULL;
+ 	m_pCallbackParam = NULL;
+ 	m_bHalt = FALSE;
+@@ -331,7 +331,7 @@ void CUnAlz::Close()
+ 		i->Clear();
+ 	}
+ 
+-	m_posCur = (FileList::iterator)NULL;
++	m_posCur = m_fileList.end();
+ }
+ 
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+@@ -641,7 +641,7 @@ BOOL CUnAlz::SetCurrentFile(const char* 
+ 		}
+ 	}
+ 
+-	m_posCur = (FileList::iterator)NULL;
++	m_posCur = m_fileList.end();
+ 
+ 	return FALSE;
+ }
+@@ -682,7 +682,7 @@ BOOL CUnAlz::ExtractCurrentFileToBuf(BYT
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+ BOOL CUnAlz::ExtractCurrentFile(const char* szDestPathName, const char* szDestFileName)
+ {
+-	if(m_posCur==(FileList::iterator)NULL) {ASSERT(0); return FALSE;}
++	if(m_posCur==m_fileList.end()) {ASSERT(0); return FALSE;}
+ 
+ 	BOOL	ret=FALSE;
+ 
 @@ -1891,7 +1891,11 @@ void CUnAlz::DecryptingData(int nSize, B
  ////////////////////////////////////////////////////////////////////////////////////////////////////
  UINT32 CUnAlz::CRC32(UINT32 l, BYTE c)
