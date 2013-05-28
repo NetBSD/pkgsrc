@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1830 2013/05/28 14:08:48 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1831 2013/05/28 15:23:28 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2952,3 +2952,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed misc/py-libanki [wiz 2013-05-28]
 	Removed misc/py-anki successor misc/py-anki2 [wiz 2013-05-28]
 	Updated devel/pcre to 8.33 [adam 2013-05-28]
+	Updated x11/mlterm to 3.2.0nb1 [tsutsui 2013-05-28]
