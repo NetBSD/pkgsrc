@@ -1,11 +1,20 @@
-$NetBSD: patch-ac,v 1.5 2011/08/18 05:03:10 dholland Exp $
+$NetBSD: patch-ac,v 1.6 2013/05/28 19:03:49 joerg Exp $
 
 Config for pkgsrc.
 DESTDIR support.
 Make the SYMLINK relative.
 
---- unix/tfconfig.orig	2011-08-18 04:45:11.000000000 +0000
+--- unix/tfconfig.orig	2013-05-28 16:51:21.000000000 +0000
 +++ unix/tfconfig
+@@ -35,7 +35,7 @@ echo "Configuring $TFVERSION"; echo
+ 
+ ### Initialize variables, just in case they're already defined.
+ 
+-AOUT=tfconfig.out
++AOUT=`pwd`/tfconfig.out
+ BINDIR=''
+ # CC=''		;# Use the value from the environment if there is one.
+ CCFLAGS=${TFDEV_CCFLAGS-'-O'}
 @@ -168,18 +168,18 @@ fi
  # The cd;pwd is needed to normalize the directory name in case of links, etc.
  
@@ -69,3 +78,19 @@ Make the SYMLINK relative.
  echo "LIBDIR     = ${LIBDIR}" >&5
  echo "MAILDIR    = ${MAILDIR}" >&5
  echo "MANPAGE    = ${MANPAGE}" >&5
+@@ -654,11 +656,13 @@ echo "Testing type of signal handlers...
+ cat >test.c <<EOF
+ #include <sys/types.h>
+ #include <signal.h>
++#include <stdlib.h>
+ #undef signal
+-extern void (*signal())();
++typedef void (*my_sighandler_t)(int);
++extern my_sighandler_t signal(int, my_sighandler_t);
+ main() { exit(0); }
+ EOF
+-if ${CC} ${CCFLAGS} -c test.c -o ${AOUT}>/dev/null 2>&1; then
++if ${CC} ${CCFLAGS} -c test.c -o ${AOUT}; then
+     echo "Signal handlers return void, as they should."
+     echo '#define RETSIG void' >&4
+ else
