@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/28 03:11:55 rodent Exp $
+bin/xstdcmap
+man/man1/xstdcmap.1
