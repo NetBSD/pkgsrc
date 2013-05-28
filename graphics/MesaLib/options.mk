@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2013/05/27 06:45:30 wiz Exp $
+# $NetBSD: options.mk,v 1.24 2013/05/28 11:27:09 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -55,6 +55,9 @@ CONFIGURE_ARGS+=        --with-dri-drivers="i810 i915 i965 mach64 mga r128 r200 
 .else
 CONFIGURE_ARGS+=        --with-driver=xlib
 PLIST.nodri=	yes
+.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*)
+PKG_FAIL_REASON=	"The dri option needs to be enabled for this to build on NetBSD."
+.endif
 ###
 ### XXX building libOSMesa breaks with -j, and GNU make has no .WAIT
 ###
