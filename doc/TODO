@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12202 2013/05/28 03:00:59 rodent Exp $
+$NetBSD: TODO,v 1.12203 2013/05/28 03:51:42 rodent Exp $
 
 Suggested new packages
 ======================
@@ -283,8 +283,7 @@ Suggested new packages
 	(but not quite working for) Potlatch2 of OpenStreetMap.
 
 	Missing xorg packages
-	app: constype, intel-gpu-tools, xmh,
-	xphelloworld, xpr, xrx, xstdcmap, xtrap
+	app: constype, intel-gpu-tools
 	driver: xf86-input-acecad, xf86-input-aiptek,
 	xf86-input-calcomp, xf86-input-citron, xf86-input-digitaledge,
 	xf86-input-dmc, xf86-input-dynapro, xf86-input-elo2300,
@@ -301,8 +300,7 @@ Suggested new packages
 	xf86-video-sunleo, xf86-video-suntcx, xf86-video-v4l,
 	xf86-video-vermilion, xf86-video-voodoo, xf86-video-xgi,
 	xf86-video-xgixp
-	lib: libWindowsWM, libXaw3d, libXfontcache,
-	libXprintAppUtil, liboldX
+	lib: libWindowsWM, libXfontcache, liboldX
 	proto: windowswmproto
 	test: xorg-gtest, xts
 	util: gccmakedep, lndir
