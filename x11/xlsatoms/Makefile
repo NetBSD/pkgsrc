@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/28 03:00:36 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/28 03:47:57 rodent Exp $
 #
 
 DISTNAME=	xlsatoms-1.1.1
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Lists the interned atoms defined on an X11 server
 LICENSE=	x11
