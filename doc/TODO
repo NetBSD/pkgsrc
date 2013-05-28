@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12203 2013/05/28 03:51:42 rodent Exp $
+$NetBSD: TODO,v 1.12204 2013/05/28 22:43:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm2-2.1.5 [etm successor]
 	o ettercap-0.7.4
 	o eukleides-1.5.4
-	o evince-3.8.0
+	o evince-3.8.2
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-mapi-0.32.2 [GNOME 2.32]
@@ -824,6 +824,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o midori-0.5
 	o milkytracker-0.90.85
+	o mimedefang-2.74
 	o mined-2012.22
 	o miniupnpd-1.8
 	o minivmac-3.2.3
@@ -915,7 +916,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
-	o pango-1.34.0
+	o pango-1.34.1
 	o parallel-20130422
 	o pari-2.5.3
 	o patch-2.7.1
@@ -1196,7 +1197,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-intel-2.21.7
+	o xf86-video-intel-2.21.8
 	o xf86-video-mga-1.9.100
 	o xf86-video-newport-0.2.4 [unpackaged]
 	o xf86-video-sisusb-0.9.4
