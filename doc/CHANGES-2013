@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1829 2013/05/28 12:56:07 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1830 2013/05/28 14:08:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2951,3 +2951,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/xstdcmap version 1.0.3 [rodent 2013-05-28]
 	Removed misc/py-libanki [wiz 2013-05-28]
 	Removed misc/py-anki successor misc/py-anki2 [wiz 2013-05-28]
+	Updated devel/pcre to 8.33 [adam 2013-05-28]
