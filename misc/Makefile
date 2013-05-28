@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2013/05/09 16:22:45 mef Exp $
+# $NetBSD: Makefile,v 1.402 2013/05/28 12:55:22 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -228,10 +228,8 @@ SUBDIR+=	pinfo
 SUBDIR+=	ppower
 SUBDIR+=	pty-redir
 SUBDIR+=	py-anita
-SUBDIR+=	py-anki
 SUBDIR+=	py-anki2
 SUBDIR+=	py-carddav
-SUBDIR+=	py-libanki
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	raspberrypi-userland
