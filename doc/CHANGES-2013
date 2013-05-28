@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1826 2013/05/28 02:53:30 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1827 2013/05/28 03:00:59 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/dconf to 0.16.0 [prlw1 2013-05-27]
 	Added x11/xditview version 1.0.3 [rodent 2013-05-28]
 	Added graphics/xgc version 1.0.4 [rodent 2013-05-28]
+	Added x11/xlsatoms version 1.1.1 [rodent 2013-05-28]
