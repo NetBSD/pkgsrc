@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1828 2013/05/28 03:12:14 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1829 2013/05/28 12:56:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2949,3 +2949,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added graphics/xgc version 1.0.4 [rodent 2013-05-28]
 	Added x11/xlsatoms version 1.1.1 [rodent 2013-05-28]
 	Added x11/xstdcmap version 1.0.3 [rodent 2013-05-28]
+	Removed misc/py-libanki [wiz 2013-05-28]
+	Removed misc/py-anki successor misc/py-anki2 [wiz 2013-05-28]
