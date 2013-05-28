@@ -1,9 +1,18 @@
-$NetBSD: patch-SConstruct,v 1.1.1.1 2012/05/08 09:34:17 imil Exp $
+$NetBSD: patch-SConstruct,v 1.2 2013/05/28 19:01:22 joerg Exp $
 
 Create shared object.
 
 --- SConstruct.orig	2008-04-21 00:05:35.000000000 +0000
 +++ SConstruct
+@@ -5,7 +5,7 @@ tools = ['default']
+ if os.name == 'nt':
+ 	tools = ['mingw']
+ 
+-env = Environment(tools = tools)
++env = Environment(tools = tools, ENV = {'PATH': os.environ['PATH']})
+ 
+ options_file = None
+ if sys.platform == 'linux2':
 @@ -22,6 +22,7 @@ opts.Add('CXX', 'The C++ compiler (for t
  opts.Add('CCFLAGS', 'Flags for the compiler.', ['-O2', '-Wall'])
  opts.Add('LINK', 'The linker.')
