@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1824 2013/05/27 18:17:35 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.1825 2013/05/28 02:15:52 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2945,3 +2945,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/zlib to 1.2.8 [adam 2012-05-27]
 	Updated lang/python27 to 2.7.5 [adam 2013-05-27]
 	Updated devel/dconf to 0.16.0 [prlw1 2013-05-27]
+	Added x11/xditview version 1.0.3 [rodent 2013-05-28]
