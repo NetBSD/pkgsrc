@@ -1,0 +1,4 @@
+The xstdcmap utility can be used to selectively define standard colormap
+properties. It is intended to be run from a user's X startup script to create
+standard colormap definitions in order to facilitate sharing of scarce colormap
+resources among clients using PseudoColor visuals.
