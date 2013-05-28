@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/05/27 10:55:05 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2013/05/28 11:17:24 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.11
@@ -34,6 +34,7 @@ DEPENDS+=	xcalc-[0-9]*:../../x11/xcalc
 DEPENDS+=	xclock-[0-9]*:../../time/xclock
 DEPENDS+=	xconsole-[0-9]*:../../x11/xconsole
 DEPENDS+=	xcursorgen-[0-9]*:../../x11/xcursorgen
+DEPENDS+=	xditview-[0-9]*:../../x11/xditview
 DEPENDS+=	xdm-[0-9]*:../../x11/xdm
 DEPENDS+=	xdpyinfo-[0-9]*:../../x11/xdpyinfo
 DEPENDS+=	xev-[0-9]*:../../x11/xev
@@ -41,6 +42,7 @@ DEPENDS+=	xeyes-[0-9]*:../../x11/xeyes
 DEPENDS+=	xfd-[0-9]*:../../x11/xfd
 DEPENDS+=	xfontsel-[0-9]*:../../x11/xfontsel
 DEPENDS+=	xgamma-[0-9]*:../../x11/xgamma
+DEPENDS+=	xgc-[0-9]*:../../graphics/xgc
 DEPENDS+=	xhost-[0-9]*:../../x11/xhost
 DEPENDS+=	xinit-[0-9]*:../../x11/xinit
 DEPENDS+=	xkbevd-[0-9]*:../../x11/xkbevd
@@ -49,6 +51,7 @@ DEPENDS+=	xkbutils-[0-9]*:../../x11/xkbutils
 DEPENDS+=	xkill-[0-9]*:../../x11/xkill
 DEPENDS+=	xload-[0-9]*:../../x11/xload
 DEPENDS+=	xlogo-[0-9]*:../../x11/xlogo
+DEPENDS+=	xlsatoms-[0-9]*:../../x11/xlsatoms
 DEPENDS+=	xlsclients-[0-9]*:../../x11/xlsclients
 DEPENDS+=	xlsfonts-[0-9]*:../../x11/xlsfonts
 DEPENDS+=	xmag-[0-9]*:../../x11/xmag
@@ -68,6 +71,7 @@ DEPENDS+=	xsetmode-[0-9]*:../../x11/xsetmode
 DEPENDS+=	xsetpointer-[0-9]*:../../x11/xsetpointer
 DEPENDS+=	xsetroot-[0-9]*:../../x11/xsetroot
 DEPENDS+=	xsm-[0-9]*:../../x11/xsm
+DEPENDS+=	xstdcmap-[0-9]*:../../x11/xstdcmap
 DEPENDS+=	xterm-[0-9]*:../../x11/xterm
 DEPENDS+=	xvinfo-[0-9]*:../../x11/xvinfo
 DEPENDS+=	xwininfo-[0-9]*:../../x11/xwininfo
