@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.13 2011/01/08 18:06:00 kefren Exp $
---- mono/utils/mono-semaphore.c.orig	2011-01-04 19:39:55.000000000 +0200
-+++ mono/utils/mono-semaphore.c	2011-01-08 18:52:28.000000000 +0200
+$NetBSD: patch-ah,v 1.14 2013/05/29 11:11:12 wiz Exp $
+--- mono/utils/mono-semaphore.c.orig	2012-12-05 17:44:35.000000000 +0000
++++ mono/utils/mono-semaphore.c
 @@ -22,7 +22,7 @@
  #  ifdef USE_MACH_SEMA
  #    define TIMESPEC mach_timespec_t
@@ -27,7 +27,7 @@ $NetBSD: patch-ah,v 1.13 2011/01/08 18:06:00 kefren Exp $
  
  #ifndef USE_MACH_SEMA
  	if (timeout_ms == 0)
-@@ -48,6 +49,19 @@
+@@ -48,6 +49,19 @@ mono_sem_timedwait (MonoSemType *sem, gu
  	if (timeout_ms == (guint32) 0xFFFFFFFF)
  		return mono_sem_wait (sem, alertable);
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ah,v 1.13 2011/01/08 18:06:00 kefren Exp $
  #ifdef USE_MACH_SEMA
  	memset (&t, 0, sizeof (TIMESPEC));
  #else
-@@ -59,19 +73,6 @@
+@@ -59,19 +73,6 @@ mono_sem_timedwait (MonoSemType *sem, gu
  		ts.tv_nsec -= NSEC_PER_SEC;
  		ts.tv_sec++;
  	}

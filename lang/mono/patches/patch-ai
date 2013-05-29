@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.8 2010/01/15 19:41:23 drochner Exp $
+$NetBSD: patch-ai,v 1.9 2013/05/29 11:11:12 wiz Exp $
 
---- mono/metadata/object.c.orig	2009-10-26 20:44:10.000000000 +0000
+--- mono/metadata/object.c.orig	2012-12-05 17:44:35.000000000 +0000
 +++ mono/metadata/object.c
-@@ -3353,6 +3353,135 @@ mono_install_runtime_invoke (MonoInvokeF
+@@ -4042,6 +4042,135 @@ mono_install_runtime_invoke (MonoInvokeF
  	default_mono_runtime_invoke = func ? func: dummy_mono_runtime_invoke;
  }
  
@@ -138,7 +138,7 @@ $NetBSD: patch-ai,v 1.8 2010/01/15 19:41:23 drochner Exp $
  
  /**
   * mono_runtime_invoke_array:
-@@ -3405,6 +3534,8 @@ mono_runtime_invoke_array (MonoMethod *m
+@@ -4094,6 +4223,8 @@ mono_runtime_invoke_array (MonoMethod *m
  		pa = alloca (sizeof (gpointer) * mono_array_length (params));
  		for (i = 0; i < mono_array_length (params); i++) {
  			MonoType *t = sig->params [i];
@@ -147,7 +147,7 @@ $NetBSD: patch-ai,v 1.8 2010/01/15 19:41:23 drochner Exp $
  
  		again:
  			switch (t->type) {
-@@ -3429,9 +3560,16 @@ mono_runtime_invoke_array (MonoMethod *m
+@@ -4118,9 +4249,16 @@ mono_runtime_invoke_array (MonoMethod *m
  					if (t->byref)
  						has_byref_nullables = TRUE;
  				} else {
@@ -166,7 +166,7 @@ $NetBSD: patch-ai,v 1.8 2010/01/15 19:41:23 drochner Exp $
  
  					if (t->byref) {
  						/*
-@@ -3441,12 +3579,13 @@ mono_runtime_invoke_array (MonoMethod *m
+@@ -4130,12 +4268,13 @@ mono_runtime_invoke_array (MonoMethod *m
  						 * object, pass that to the callee, and replace the original
  						 * boxed object in the arg array with the copy.
  						 */
@@ -182,7 +182,7 @@ $NetBSD: patch-ai,v 1.8 2010/01/15 19:41:23 drochner Exp $
  				}
  				break;
  			case MONO_TYPE_STRING:
-@@ -3454,11 +3593,19 @@ mono_runtime_invoke_array (MonoMethod *m
+@@ -4143,11 +4282,19 @@ mono_runtime_invoke_array (MonoMethod *m
  			case MONO_TYPE_CLASS:
  			case MONO_TYPE_ARRAY:
  			case MONO_TYPE_SZARRAY:

@@ -1,4 +1,4 @@
-$NetBSD: patch-cc,v 1.4 2010/10/04 06:09:29 kefren Exp $
+$NetBSD: patch-cc,v 1.5 2013/05/29 11:11:12 wiz Exp $
 
 Currently mono is not copying the domain default context for some of
 the newly created threads. This leads to some problems with programs
@@ -9,9 +9,9 @@ issue until further investigations for pkgsrc-2010Q3 release.
 Bug tracking: https://bugzilla.novell.com/show_bug.cgi?id=599485
 
 
---- mono/metadata/domain.c.old	2010-10-03 20:58:27.000000000 +0300
-+++ mono/metadata/domain.c	2010-10-03 21:03:13.000000000 +0300
-@@ -2154,7 +2154,18 @@ mono_context_set (MonoAppContext * new_c
+--- mono/metadata/domain.c.orig	2012-12-05 17:44:34.000000000 +0000
++++ mono/metadata/domain.c
+@@ -2305,7 +2305,18 @@ mono_context_set (MonoAppContext * new_c
  MonoAppContext * 
  mono_context_get (void)
  {
