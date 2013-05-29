@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2013/05/03 01:37:02 mef Exp $
+# $NetBSD: Makefile,v 1.73 2013/05/29 09:59:15 adam Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.10
-PKGREVISION=	4
+DISTNAME=	cmake-${CMAKE_API}.11
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
@@ -14,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_NCURSES=		wsyncup
+USE_NCURSES=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 

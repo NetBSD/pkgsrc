@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/11/15 19:31:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2013/05/29 09:59:15 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -141,6 +141,7 @@ share/cmake-${CMAKE_API}/Modules/CPackDeb.cmake
 share/cmake-${CMAKE_API}/Modules/CPackNSIS.cmake
 share/cmake-${CMAKE_API}/Modules/CPackPackageMaker.cmake
 share/cmake-${CMAKE_API}/Modules/CPackRPM.cmake
+share/cmake-${CMAKE_API}/Modules/CPackWIX.cmake
 share/cmake-${CMAKE_API}/Modules/CPackZIP.cmake
 share/cmake-${CMAKE_API}/Modules/CTest.cmake
 share/cmake-${CMAKE_API}/Modules/CTestScriptMode.cmake
@@ -216,6 +217,9 @@ share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/TI-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/TI-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/TI-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/TinyCC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-CXX.cmake
@@ -236,6 +240,8 @@ share/cmake-${CMAKE_API}/Modules/DartConfiguration.tcl.in
 share/cmake-${CMAKE_API}/Modules/DeployQt4.cmake
 share/cmake-${CMAKE_API}/Modules/Documentation.cmake
 share/cmake-${CMAKE_API}/Modules/DummyCXXFile.cxx
+share/cmake-${CMAKE_API}/Modules/ExternalData.cmake
+share/cmake-${CMAKE_API}/Modules/ExternalData_config.cmake.in
 share/cmake-${CMAKE_API}/Modules/ExternalProject.cmake
 share/cmake-${CMAKE_API}/Modules/FLTKCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/FeatureSummary.cmake
@@ -287,6 +293,7 @@ share/cmake-${CMAKE_API}/Modules/FindHSPELL.cmake
 share/cmake-${CMAKE_API}/Modules/FindHTMLHelp.cmake
 share/cmake-${CMAKE_API}/Modules/FindHg.cmake
 share/cmake-${CMAKE_API}/Modules/FindITK.cmake
+share/cmake-${CMAKE_API}/Modules/FindIcotool.cmake
 share/cmake-${CMAKE_API}/Modules/FindImageMagick.cmake
 share/cmake-${CMAKE_API}/Modules/FindJNI.cmake
 share/cmake-${CMAKE_API}/Modules/FindJPEG.cmake
@@ -586,6 +593,8 @@ share/cmake-${CMAKE_API}/Modules/Qt4ConfigDependentSettings.cmake
 share/cmake-${CMAKE_API}/Modules/Qt4Macros.cmake
 share/cmake-${CMAKE_API}/Modules/RepositoryInfo.txt.in
 share/cmake-${CMAKE_API}/Modules/SelectLibraryConfigurations.cmake
+share/cmake-${CMAKE_API}/Modules/Squish4RunTestCase.bat
+share/cmake-${CMAKE_API}/Modules/Squish4RunTestCase.sh
 share/cmake-${CMAKE_API}/Modules/SquishRunTestCase.bat
 share/cmake-${CMAKE_API}/Modules/SquishRunTestCase.sh
 share/cmake-${CMAKE_API}/Modules/SquishTestScript.cmake
@@ -615,6 +624,7 @@ share/cmake-${CMAKE_API}/Modules/UseVTKConfig40.cmake
 share/cmake-${CMAKE_API}/Modules/Use_wxWindows.cmake
 share/cmake-${CMAKE_API}/Modules/UsewxWidgets.cmake
 share/cmake-${CMAKE_API}/Modules/VTKCompatibility.cmake
+share/cmake-${CMAKE_API}/Modules/WIX.template.in
 share/cmake-${CMAKE_API}/Modules/WriteBasicConfigVersionFile.cmake
 share/cmake-${CMAKE_API}/Modules/ecos_clean.cmake
 share/cmake-${CMAKE_API}/Modules/exportheader.cmake.in
