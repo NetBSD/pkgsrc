@@ -1,7 +1,5 @@
 window(1) implements a windowing environment on ASCII terminals.
 It is similar to tmux and GNU screen.
 
-The program provided by this package is based on the original code of
-window(1) shipped by NetBSD 5.x.  NetBSD is replacing window(1) with
-tmux, and when that happens this package will be the canonical source
-for window(1).
+window(1) was previously shipped with NetBSD, up to and including
+NetBSD 6.x.  Then it was replaced by tmux.
