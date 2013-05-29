@@ -1,7 +1,7 @@
-$NetBSD: patch-bf,v 1.2 2008/02/13 14:16:43 kefren Exp $
---- support/map.c.orig	2008-02-05 14:14:43.000000000 +0200
-+++ support/map.c	2008-02-05 14:16:06.000000000 +0200
-@@ -3011,13 +3011,21 @@ int Mono_Posix_ToMountFlags (guint64 x, 
+$NetBSD: patch-bf,v 1.3 2013/05/29 11:11:12 wiz Exp $
+--- support/map.c.orig	2012-12-05 17:44:30.000000000 +0000
++++ support/map.c
+@@ -3282,13 +3282,21 @@ int Mono_Posix_ToMountFlags (guint64 x, 
  
  int Mono_Posix_FromMremapFlags (guint64 x, guint64 *r)
  {
