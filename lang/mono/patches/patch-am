@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.4 2011/06/10 04:11:29 kefren Exp $
---- mono/io-layer/io.c.orig	2011-06-10 05:45:49.000000000 +0300
-+++ mono/io-layer/io.c	2011-06-10 05:50:38.000000000 +0300
-@@ -3589,7 +3589,7 @@ guint32 GetTempPath (guint32 len, gunich
+$NetBSD: patch-am,v 1.5 2013/05/29 11:11:12 wiz Exp $
+--- mono/io-layer/io.c.orig	2012-12-05 17:44:35.000000000 +0000
++++ mono/io-layer/io.c
+@@ -3376,7 +3376,7 @@ guint32 GetTempPath (guint32 len, gunich
  	return(ret);
  }
  

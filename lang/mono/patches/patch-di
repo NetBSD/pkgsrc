@@ -1,7 +1,7 @@
-$NetBSD: patch-di,v 1.4 2010/12/29 10:42:35 obache Exp $
---- mono/tests/libtest.c.orig	2010-04-22 18:37:47.000000000 +0300
-+++ mono/tests/libtest.c	2010-04-29 10:55:04.000000000 +0300
-@@ -3190,7 +3190,7 @@
+$NetBSD: patch-di,v 1.5 2013/05/29 11:11:12 wiz Exp $
+--- mono/tests/libtest.c.orig	2012-12-05 17:44:31.000000000 +0000
++++ mono/tests/libtest.c
+@@ -3297,7 +3297,7 @@ mono_test_marshal_ccw_itest (MonoComObje
   * mono_method_get_unmanaged_thunk tests
   */
  
