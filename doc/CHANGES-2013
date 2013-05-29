@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1837 2013/05/29 20:17:02 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1838 2013/05/29 20:20:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2960,3 +2960,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/scim-tables to 0.5.13 [obache 2013-05-29]
 	Updated math/glpk to 4.50 [adam 2013-05-29]
 	Updated converters/help2man to 1.42.1 [adam 2013-05-29]
+	Updated security/nettle to 2.7.1 [adam 2013-05-29]
