@@ -1,11 +1,20 @@
-$NetBSD: patch-src_d__osc.c,v 1.3 2012/02/15 22:36:39 hans Exp $
+$NetBSD: patch-src_d__osc.c,v 1.4 2013/05/29 11:26:12 wiz Exp $
 
 Detect endianness on NetBSD.
 https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478072
 
+Detect endianness on OpenBSD.
+
+Detect endianness on Solaris.
+
 --- src/d_osc.c.orig	2010-07-28 20:55:17.000000000 +0000
 +++ src/d_osc.c
-@@ -15,7 +15,7 @@
+@@ -11,11 +11,11 @@
+ #define UNITBIT32 1572864.  /* 3*2^19; bit 32 has place value 1 */
+ 
+ 
+-#ifdef IRIX
++#if defined(IRIX) || defined(__OpenBSD__)
  #include <sys/endian.h>
  #endif
  
