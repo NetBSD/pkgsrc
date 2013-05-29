@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/06/03 17:37:56 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/05/29 22:35:07 wiz Exp $
 
-SHA1 (libXfixes-5.0.tar.bz2) = 3e4d374e9026111a04cd669d4b3434273fc34fe0
-RMD160 (libXfixes-5.0.tar.bz2) = 31764e2dcc66ef73ad3cf42ad491f2039e0e5602
-Size (libXfixes-5.0.tar.bz2) = 253777 bytes
+SHA1 (libXfixes-5.0.1.tar.bz2) = e14fa072bd70b30eef47391cac637bdb4de9e8a3
+RMD160 (libXfixes-5.0.1.tar.bz2) = 8a65dda43d4e67ae2b56ed9c05beaa76f85c1bde
+Size (libXfixes-5.0.1.tar.bz2) = 291978 bytes
