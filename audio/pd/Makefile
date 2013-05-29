@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/02 23:48:04 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/29 11:26:12 wiz Exp $
 #
 
 DISTNAME=	pd-0.43-0.src
@@ -63,6 +63,8 @@ SUBST_FILES.doc+=	tcl/pd_menus.tcl
 EXTERNAL_EXTENSION=	d_fat
 .elif ${OPSYS} == "Linux"
 EXTERNAL_EXTENSION=	pd_linux
+.elif ${OPSYS} == "OpenBSD"
+CFLAGS+=		-DAPI_DEFAULT=API_OSS -DAPI_DEFSTRING=\"OSS\"
 .else
 EXTERNAL_EXTENSION=	# empty
 .endif

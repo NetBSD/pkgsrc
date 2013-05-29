@@ -1,11 +1,15 @@
-$NetBSD: patch-src_s__loader.c,v 1.3 2012/02/15 22:36:39 hans Exp $
+$NetBSD: patch-src_s__loader.c,v 1.4 2013/05/29 11:26:12 wiz Exp $
 
 Define extensions for NetBSD.
 https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478072
 
+Define extensions for OpenBSD.
+
+Define extensions for Solaris.
+
 --- src/s_loader.c.orig	2010-07-29 03:50:34.000000000 +0000
 +++ src/s_loader.c
-@@ -38,6 +38,18 @@ a fat binary or an indication of the ins
+@@ -38,6 +38,24 @@ a fat binary or an indication of the ins
  
  #ifdef __FreeBSD__
  static char sys_dllextent[] = ".b_i386", sys_dllextent2[] = ".pd_freebsd";
@@ -14,6 +18,12 @@ https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478
 +static char sys_dllextent[] = ".n_ia64", sys_dllextent2[] = ".pd_netbsd";
 +# else
 +static char sys_dllextent[] = ".n_i386", sys_dllextent2[] = ".pd_netbsd";
++# endif
++#elif defined(__OpenBSD__)
++# ifdef __x86_64__
++static char sys_dllextent[] = ".b_ia64", sys_dllextent2[] = ".pd_openbsd";
++# else
++static char sys_dllextent[] = ".b_i386", sys_dllextent2[] = ".pd_openbsd";
 +# endif
 +#elif defined(__sun)
 +# ifdef __x86_64__
