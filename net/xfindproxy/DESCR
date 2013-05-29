@@ -1,0 +1,4 @@
+xfindproxy is used to locate available X11 proxy services. It utilizes the Proxy
+Management Protocol to communicate with a proxy manager. The proxy manager keeps
+track of all available proxy services, starts new proxies when necessary, and
+makes sure that proxies are shared whenever possible.
