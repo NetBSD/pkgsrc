@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1841 2013/05/29 22:36:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1842 2013/05/29 22:53:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2964,3 +2964,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXfixes to 5.0.1 [wiz 2013-05-29]
 	Updated x11/libFS to 1.0.5 [wiz 2013-05-29]
 	Updated x11/xkeyboard-config to 2.9 [wiz 2013-05-29]
+	Updated security/gnupg2 to 2.0.20 [wiz 2013-05-29]
