@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/06/03 17:22:40 wiz Exp $
+$NetBSD: distinfo,v 1.6 2013/05/29 22:35:44 wiz Exp $
 
-SHA1 (libFS-1.0.4.tar.bz2) = f114f32f60eb84d3e1d0e6f0dfe7679b07e91295
-RMD160 (libFS-1.0.4.tar.bz2) = 6e74cc9b4d8ece4abcabb26e3c5cec7a0e591918
-Size (libFS-1.0.4.tar.bz2) = 291155 bytes
+SHA1 (libFS-1.0.5.tar.bz2) = 3a94bc42775f4aa2eac14a51e0043299d7cd31b6
+RMD160 (libFS-1.0.5.tar.bz2) = c3f6bb8fed4ac1904e55fe36cb4650e69f37dc06
+Size (libFS-1.0.5.tar.bz2) = 303806 bytes
