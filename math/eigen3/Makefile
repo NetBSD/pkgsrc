@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/04/01 12:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/29 22:58:25 wiz Exp $
 
-DISTNAME=	3.1.2
-PKGNAME=	eigen3-3.1.2
-PKGREVISION=	1
+DISTNAME=	3.1.3
+PKGNAME=	eigen3-3.1.3
 CATEGORIES=	math
 MASTER_SITES=   http://bitbucket.org/eigen/eigen/get/
 DIST_SUBDIR=	eigen3
@@ -17,7 +16,7 @@ USE_LANGUAGES+= c c++
 USE_CMAKE= yes
 CMAKE_ARG_PATH= ..
 CONFIGURE_DIRS= _build
-WRKSRC=		${WRKDIR}/eigen-eigen-5097c01bcdc4
+WRKSRC=		${WRKDIR}/eigen-eigen-2249f9c22fe8
 FETCH_USING=	curl
 
 pre-configure:
