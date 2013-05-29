@@ -1,4 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/01 12:14:34 joerg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2013/05/29 22:58:25 wiz Exp $
+
+Use pkgsrc default path for pkg-config files.
 
 --- CMakeLists.txt.orig	2013-03-31 22:44:57.000000000 +0000
 +++ CMakeLists.txt
