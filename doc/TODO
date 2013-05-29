@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12211 2013/05/29 22:35:16 wiz Exp $
+$NetBSD: TODO,v 1.12212 2013/05/29 22:35:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -750,7 +750,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o level9-4.1
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
-	o libFS-1.0.5
 	o libarchive-3.0.4
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
