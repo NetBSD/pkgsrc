@@ -1,18 +1,16 @@
-$NetBSD: patch-ak,v 1.9 2011/03/17 14:24:52 kefren Exp $
---- libgc/pthread_support.c.orig	2011-01-04 19:39:55.000000000 +0200
-+++ libgc/pthread_support.c	2011-03-17 16:14:10.000000000 +0200
-@@ -68,8 +68,8 @@
- 
- # if (defined(GC_DGUX386_THREADS) || defined(GC_OSF1_THREADS) || \
+$NetBSD: patch-ak,v 1.10 2013/05/29 11:11:12 wiz Exp $
+--- libgc/pthread_support.c.orig	2012-12-05 17:44:36.000000000 +0000
++++ libgc/pthread_support.c
+@@ -71,7 +71,7 @@
        defined(GC_DARWIN_THREADS) || defined(GC_AIX_THREADS)) || \
--      defined(GC_NETBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
+       defined(GC_NETBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
+       defined(GC_FREEBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
 -      defined(GC_OPENBSD_THREADS)
-+      defined(GC_NETBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) && \
 +      !defined(USE_COMPILER_TLS) || defined(GC_OPENBSD_THREADS)
  #   define USE_PTHREAD_SPECIFIC
  # endif
- 
-@@ -1175,6 +1175,22 @@
+ #endif
+@@ -1280,6 +1280,22 @@ void GC_end_blocking(void) {
  #define __d10_sleep sleep
  #endif /* GC_DGUX386_THREADS */
  
