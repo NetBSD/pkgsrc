@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/05/28 11:17:24 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2013/05/29 03:25:38 rodent Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.11
@@ -40,6 +40,7 @@ DEPENDS+=	xdpyinfo-[0-9]*:../../x11/xdpyinfo
 DEPENDS+=	xev-[0-9]*:../../x11/xev
 DEPENDS+=	xeyes-[0-9]*:../../x11/xeyes
 DEPENDS+=	xfd-[0-9]*:../../x11/xfd
+DEPENDS+=	xfindproxy-[0-9]*:../../net/xfindproxy
 DEPENDS+=	xfontsel-[0-9]*:../../x11/xfontsel
 DEPENDS+=	xgamma-[0-9]*:../../x11/xgamma
 DEPENDS+=	xgc-[0-9]*:../../graphics/xgc
