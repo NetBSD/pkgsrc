@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1833 2013/05/29 03:23:37 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1834 2013/05/29 10:00:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2955,3 +2955,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/mlterm to 3.2.0nb1 [tsutsui 2013-05-28]
 	Updated x11/xterm to 293 [wiz 2013-05-28]
 	Added net/xfindproxy version 1.0.2 [rodent 2013-05-29]
+	Updated devel/cmake to 2.8.11 [adam 2013-05-29]
