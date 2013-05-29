@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.16 2010/07/31 08:40:37 kefren Exp $
---- mono/io-layer/collection.c.orig	2010-07-26 13:00:10.000000000 +0300
-+++ mono/io-layer/collection.c	2010-07-26 13:00:48.000000000 +0300
-@@ -60,7 +60,11 @@
+$NetBSD: patch-aa,v 1.17 2013/05/29 11:11:12 wiz Exp $
+--- mono/io-layer/collection.c.orig	2012-12-05 17:44:35.000000000 +0000
++++ mono/io-layer/collection.c
+@@ -57,7 +57,11 @@ void _wapi_collection_init (void)
  
  #if defined(HAVE_PTHREAD_ATTR_SETSTACKSIZE)
          if (set_stacksize == 0) {

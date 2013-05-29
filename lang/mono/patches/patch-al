@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.5 2011/10/29 05:47:54 kefren Exp $
---- data/config.in.orig	2011-08-26 04:06:38.000000000 +0300
-+++ data/config.in	2011-10-28 15:54:35.000000000 +0300
+$NetBSD: patch-al,v 1.6 2013/05/29 11:11:12 wiz Exp $
+--- data/config.in.orig	2012-12-05 17:44:37.000000000 +0000
++++ data/config.in
 @@ -18,7 +18,7 @@
  	<dllmap dll="libX11" target="@X11@" os="!windows" />
  	<dllmap dll="libcairo-2.dll" target="libcairo.so.2" os="!windows"/>

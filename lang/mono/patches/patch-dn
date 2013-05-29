@@ -1,10 +1,10 @@
-$NetBSD: patch-dn,v 1.1 2011/08/04 05:23:02 kefren Exp $
+$NetBSD: patch-dn,v 1.2 2013/05/29 11:11:12 wiz Exp $
 
 http://gnats.netbsd.org/45201
 
---- mono/mini/mini-amd64.h.orig	2011-08-04 08:13:43.000000000 +0300
-+++ mono/mini/mini-amd64.h	2011-08-04 08:15:09.000000000 +0300
-@@ -272,6 +272,10 @@ typedef struct {
+--- mono/mini/mini-amd64.h.orig	2012-12-05 17:44:32.000000000 +0000
++++ mono/mini/mini-amd64.h
+@@ -252,6 +252,10 @@ typedef struct MonoCompileArch {
  
  #define MONO_ARCH_NOMAP32BIT
  

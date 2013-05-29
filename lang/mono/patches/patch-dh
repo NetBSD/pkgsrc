@@ -1,7 +1,7 @@
-$NetBSD: patch-dh,v 1.2 2010/10/16 04:32:18 kefren Exp $
---- mono/mini/mini-x86.c.orig	2010-10-05 22:59:29.000000000 +0300
-+++ mono/mini/mini-x86.c	2010-10-07 18:37:19.000000000 +0300
-@@ -248,7 +248,7 @@
+$NetBSD: patch-dh,v 1.3 2013/05/29 11:11:12 wiz Exp $
+--- mono/mini/mini-x86.c.orig	2012-12-05 17:44:33.000000000 +0000
++++ mono/mini/mini-x86.c
+@@ -231,7 +231,7 @@ typedef struct {
  
  static X86_Reg_No param_regs [] = { 0 };
  

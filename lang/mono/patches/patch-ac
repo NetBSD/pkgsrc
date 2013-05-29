@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.17 2010/10/16 04:32:18 kefren Exp $
---- data/Makefile.in.orig	2010-10-05 23:00:34.000000000 +0300
-+++ data/Makefile.in	2010-10-07 18:25:56.000000000 +0300
-@@ -284,7 +284,7 @@
+$NetBSD: patch-ac,v 1.18 2013/05/29 11:11:12 wiz Exp $
+--- data/Makefile.in.orig	2012-12-05 17:50:23.000000000 +0000
++++ data/Makefile.in
+@@ -341,7 +341,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  SUBDIRS = net_2_0 $(am__append_1)

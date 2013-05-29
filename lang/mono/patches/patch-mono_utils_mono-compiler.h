@@ -1,11 +1,11 @@
-$NetBSD: patch-mono_utils_mono-compiler.h,v 1.1 2012/05/04 16:23:20 joerg Exp $
+$NetBSD: patch-mono_utils_mono-compiler.h,v 1.2 2013/05/29 11:11:12 wiz Exp $
 
 Make sure that TLS variables are actually emitted, since the compiler
 doesn't see all references.
 
---- mono/utils/mono-compiler.h.orig	2012-04-27 22:30:53.000000000 +0000
+--- mono/utils/mono-compiler.h.orig	2012-12-05 17:44:35.000000000 +0000
 +++ mono/utils/mono-compiler.h
-@@ -29,7 +29,7 @@
+@@ -36,7 +36,7 @@
  #if defined(PIC)
  
  #ifdef PIC_INITIAL_EXEC
@@ -14,7 +14,7 @@ doesn't see all references.
  #else
  #if defined (__powerpc__)
  /* local dynamic requires a call to __tls_get_addr to look up the
-@@ -41,18 +41,18 @@
+@@ -48,18 +48,18 @@
     For now we will disable this. */
  #define MONO_TLS_FAST
  #else

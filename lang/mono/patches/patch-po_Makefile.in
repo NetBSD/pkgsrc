@@ -1,0 +1,13 @@
+$NetBSD: patch-po_Makefile.in,v 1.1 2013/05/29 11:11:12 wiz Exp $
+
+--- po/Makefile.in.orig	2013-04-25 09:08:53.000000000 +0000
++++ po/Makefile.in
+@@ -321,7 +321,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = mcs
++SUBDIRS = 
+ all: all-recursive
+ 
+ .SUFFIXES:

@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.8 2011/10/29 05:47:54 kefren Exp $
---- mono/cil/Makefile.in.orig	2011-09-15 20:12:39.000000000 +0300
-+++ mono/cil/Makefile.in	2011-10-28 15:43:18.000000000 +0300
-@@ -506,7 +506,7 @@ uninstall-am: uninstall-defDATA uninstal
+$NetBSD: patch-ba,v 1.9 2013/05/29 11:11:12 wiz Exp $
+--- mono/cil/Makefile.in.orig	2012-12-05 17:50:27.000000000 +0000
++++ mono/cil/Makefile.in
+@@ -517,7 +517,7 @@ uninstall-am: uninstall-defDATA uninstal
  	uninstall-xmlDATA
  
  opcode.def: make-opcodes-def.pl cil-opcodes.xml

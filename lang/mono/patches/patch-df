@@ -1,6 +1,6 @@
-$NetBSD: patch-df,v 1.3 2010/04/29 08:44:30 kefren Exp $
---- support/mph.h.orig	2010-04-22 18:37:47.000000000 +0300
-+++ support/mph.h	2010-04-29 09:50:38.000000000 +0300
+$NetBSD: patch-df,v 1.4 2013/05/29 11:11:12 wiz Exp $
+--- support/mph.h.orig	2012-12-05 17:44:30.000000000 +0000
++++ support/mph.h
 @@ -36,7 +36,7 @@
  #include <stdint.h>             /* for SIZE_MAX */
  #endif

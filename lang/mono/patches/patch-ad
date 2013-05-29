@@ -1,7 +1,18 @@
-$NetBSD: patch-ad,v 1.23 2011/10/29 05:47:54 kefren Exp $
---- mono/utils/mono-sigcontext.h.orig	2011-09-14 06:32:19.000000000 +0300
-+++ mono/utils/mono-sigcontext.h	2011-10-28 17:28:46.000000000 +0300
-@@ -211,7 +211,7 @@
+$NetBSD: patch-ad,v 1.24 2013/05/29 11:11:12 wiz Exp $
+--- mono/utils/mono-sigcontext.h.orig	2012-12-05 17:44:35.000000000 +0000
++++ mono/utils/mono-sigcontext.h
+@@ -204,6 +204,10 @@ typedef struct ucontext {
+ 	#define UCONTEXT_REG_RSI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RSI])
+ 	#define UCONTEXT_REG_RDI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RDI])
+ 	#define UCONTEXT_REG_RIP(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RIP])
++	#define UCONTEXT_REG_R8(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R8])
++	#define UCONTEXT_REG_R9(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R9])
++	#define UCONTEXT_REG_R10(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R10])
++	#define UCONTEXT_REG_R11(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R11])
+ 	#define UCONTEXT_REG_R12(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R12])
+ 	#define UCONTEXT_REG_R13(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R13])
+ 	#define UCONTEXT_REG_R14(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R14])
+@@ -292,7 +296,7 @@ typedef struct ucontext {
  	#define UCONTEXT_REG_FPRn(ctx, n) (((os_ucontext*)(ctx))->uc_mcontext.__fpregs.__fpu_regs [(n)])
  	#define UCONTEXT_REG_NIP(ctx)     _UC_MACHINE_PC(ctx)
  	#define UCONTEXT_REG_LNK(ctx)     (((os_ucontext*)(ctx))->uc_mcontext.__gregs [_REG_LR])
