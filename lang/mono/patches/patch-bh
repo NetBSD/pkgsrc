@@ -1,7 +1,7 @@
-$NetBSD: patch-bh,v 1.1 2008/02/13 14:16:43 kefren Exp $
---- mcs/class/Managed.Windows.Forms/build-csproj.orig	2008-02-07 08:44:48.000000000 +0200
-+++ mcs/class/Managed.Windows.Forms/build-csproj	2008-02-07 08:44:59.000000000 +0200
-@@ -177,7 +177,7 @@
+$NetBSD: patch-bh,v 1.2 2013/05/29 11:11:12 wiz Exp $
+--- mcs/class/Managed.Windows.Forms/build-csproj.orig	2012-12-05 17:46:25.000000000 +0000
++++ mcs/class/Managed.Windows.Forms/build-csproj
+@@ -177,7 +177,7 @@ SWFresourcelist()
  {
  cat $Resource | while read SRC; do
  SRC=`echo $SRC | $tr '/' '\\\\'`

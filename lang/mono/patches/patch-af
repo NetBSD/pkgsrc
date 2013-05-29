@@ -1,12 +1,12 @@
-$NetBSD: patch-af,v 1.12 2010/10/16 04:32:18 kefren Exp $
---- mono/metadata/Makefile.in.orig	2010-10-05 23:00:37.000000000 +0300
-+++ mono/metadata/Makefile.in	2010-10-07 18:29:35.000000000 +0300
-@@ -163,7 +163,7 @@
- 	$(LIBTOOLFLAGS) --mode=link $(CCLD) \
+$NetBSD: patch-af,v 1.13 2013/05/29 11:11:12 wiz Exp $
+--- mono/metadata/Makefile.in.orig	2012-12-05 17:50:29.000000000 +0000
++++ mono/metadata/Makefile.in
+@@ -159,7 +159,7 @@ libmonoruntime_static_la_LINK = $(LIBTOO
  	$(libmonoruntime_static_la_CFLAGS) $(CFLAGS) \
  	$(libmonoruntime_static_la_LDFLAGS) $(LDFLAGS) -o $@
+ @DISABLE_EXECUTABLES_FALSE@@SUPPORT_BOEHM_TRUE@am_libmonoruntime_static_la_rpath =
 -libmonoruntime_la_LIBADD =
 +libmonoruntime_la_LIBADD = $(ICU_LIBS)
  am__libmonoruntime_la_SOURCES_DIST = console-unix.c console-win32.c \
- 	appdomain.c assembly.c attach.h attach.c boehm-gc.c \
- 	char-conversions.h cil-coff.h class.c class-internals.h \
+ 	assembly.c attach.h attach.c char-conversions.h cil-coff.h \
+ 	class.c class-internals.h cominterop.c cominterop.h \

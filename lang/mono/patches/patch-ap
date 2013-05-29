@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.3 2010/10/16 04:32:18 kefren Exp $
---- mcs/jay/Makefile.orig	2010-10-05 22:59:29.000000000 +0300
-+++ mcs/jay/Makefile	2010-10-07 18:31:50.000000000 +0300
-@@ -21,19 +21,19 @@
+$NetBSD: patch-ap,v 1.4 2013/05/29 11:11:12 wiz Exp $
+--- mcs/jay/Makefile.orig	2012-12-05 17:45:59.000000000 +0000
++++ mcs/jay/Makefile
+@@ -21,19 +21,19 @@ ifndef NO_INSTALL
  install-local:
  	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/bin
  	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/share/jay
