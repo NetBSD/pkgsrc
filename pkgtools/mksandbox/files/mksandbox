@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.2 2012/08/26 21:38:34 agc Exp $
+# $NetBSD: mksandbox,v 1.3 2013/05/29 15:09:49 wiz Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -26,7 +26,7 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--without-x] [--verbose] sandbox-dir
+# Usage: mksandbox [--mounthost=host] [--pkgsrc=dir] [--src=srcdir] [--verbose] [--without-x] [--xsrc=xsrcdir] sandbox-dir
 #
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
 # build), using null mounts.
@@ -44,7 +44,7 @@ sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /va
 
 usage()
 {
-	echo "Usage: mksandbox [--mounthost=host] [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--without-x] [--verbose] sandbox-dir"
+	echo "usage: mksandbox [--mounthost=host] [--pkgsrc=dir] [--src=srcdir] [--verbose] [--without-x] [--xsrc=xsrcdir] sandbox-dir"
 	exit 1
 }
 
