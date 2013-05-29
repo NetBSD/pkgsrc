@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1835 2013/05/29 11:11:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1836 2013/05/29 13:10:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2957,3 +2957,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/xfindproxy version 1.0.2 [rodent 2013-05-29]
 	Updated devel/cmake to 2.8.11 [adam 2013-05-29]
 	Updated lang/mono to 3.0.10 [wiz 2013-05-29]
+	Updated inputmethod/scim-tables to 0.5.13 [obache 2013-05-29]
