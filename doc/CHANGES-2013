@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1838 2013/05/29 20:20:29 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1839 2013/05/29 22:35:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2961,3 +2961,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/glpk to 4.50 [adam 2013-05-29]
 	Updated converters/help2man to 1.42.1 [adam 2013-05-29]
 	Updated security/nettle to 2.7.1 [adam 2013-05-29]
+	Updated x11/libXfixes to 5.0.1 [wiz 2013-05-29]
