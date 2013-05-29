@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.31 2013/04/21 14:38:14 wiz Exp $
+$NetBSD: distinfo,v 1.32 2013/05/29 11:13:41 wiz Exp $
 
 SHA1 (gbrainy-2.2.0.tar.gz) = 5751ce78e30b4108ecc9565ea3b744265e220c98
 RMD160 (gbrainy-2.2.0.tar.gz) = 68bff13308ae76155034a5dea3af268e5f3b9173
 Size (gbrainy-2.2.0.tar.gz) = 2818865 bytes
+SHA1 (patch-src_Core_Libraries_CSharpCompiler.cs) = f39a7b2e768aacd4ac61bde3616908d1866aec34

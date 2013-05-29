@@ -1,0 +1,17 @@
+$NetBSD: patch-Mono.Addins.Gui_Mono.Addins.Gui.csproj,v 1.1 2013/05/29 11:13:03 wiz Exp $
+
+Fix
+: error CS1705: Assembly `gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f' references `Mono.Cairo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756' which has a higher version number than imported assembly `Mono.Cairo, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756'
+Mono.Addins.Gui/HeaderBox.cs(133,47): error CS0012: The type `Cairo.Context' is defined in an assembly that is not referenced. Consider adding a reference to assembly `Mono.Cairo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756'
+
+--- Mono.Addins.Gui/Mono.Addins.Gui.csproj.orig	2012-10-16 10:04:04.000000000 +0000
++++ Mono.Addins.Gui/Mono.Addins.Gui.csproj
+@@ -42,7 +42,7 @@
+     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-    <Reference Include="Mono.Cairo" />
++    <Reference Include="Mono.Cairo, Version=4.0.0.0" />
+     <Reference Include="System.Core" />
+   </ItemGroup>
+   <ItemGroup>

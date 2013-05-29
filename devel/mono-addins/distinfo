@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/10/20 13:21:34 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/05/29 11:13:03 wiz Exp $
 
 SHA1 (mono-addins-1.0.tar.gz) = f6c4b4c0bb64fcd8ba7d0ef4ade9e4cc42c03434
 RMD160 (mono-addins-1.0.tar.gz) = 591dd434a10069cb249f32834248dcb4bccd4928
 Size (mono-addins-1.0.tar.gz) = 539596 bytes
+SHA1 (patch-Mono.Addins.Gui_Mono.Addins.Gui.csproj) = 467bec67decf82312122b61a75b65ce3a413e35a
