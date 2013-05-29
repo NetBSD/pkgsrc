@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/05/26 20:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/29 09:06:02 wiz Exp $
 
 DISTNAME=	nickle-2.77
 CATEGORIES=	math lang
@@ -13,12 +13,12 @@ GNU_CONFIGURE=	yes
 
 TEST_TARGET=	check
 
-USE_GNU_READLINE=	yes
-# as of nickle-2.77 on NetBSD-6.99.20/amd64:
-# lex.l: In function 'LexInit':
-# lex.l:129:27: warning: assignment from incompatible pointer type
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == NetBSD) && empty(OS_VERSION:M6.99.2[1-9]*) && empty(OS_VERSION:M6.99.[345679][0-9]*) && empty(OS_VERSION:M[789].*)
 # lex.l:131:5: error: 'rl_catch_signals' undeclared (first use in this function)
-# lex.l:131:5: note: each undeclared identifier is reported only once for each function it appears in
+USE_GNU_READLINE=	yes
+.endif
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
