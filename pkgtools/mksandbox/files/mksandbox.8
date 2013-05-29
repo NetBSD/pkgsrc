@@ -1,4 +1,4 @@
-.\" $NetBSD: mksandbox.8,v 1.3 2012/08/26 22:13:18 wiz Exp $
+.\" $NetBSD: mksandbox.8,v 1.4 2013/05/29 15:14:49 wiz Exp $
 .\"
 .\" Copyright (c) 2012 Thomas Klausner <wiz@NetBSD.org>
 .\" All rights reserved.
@@ -23,7 +23,7 @@
 .\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 .\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd August 26, 2012
+.Dd May 29, 2013
 .Dt MKSANDBOX 8
 .Os
 .Sh NAME
@@ -31,6 +31,7 @@
 .Nd set up a sandbox
 .Sh SYNOPSIS
 .Nm
+.Op Fl Fl mounthost Ns = Ns Ar host
 .Op Fl Fl pkgsrc Ns = Ns Ar dir
 .Op Fl Fl src Ns = Ns Ar srcdir
 .Op Fl Fl verbose
@@ -44,8 +45,12 @@ build), using null mounts.
 The sandbox is set up for the target directory
 .Ar sandbox-dir .
 .Pp
-The supported options are:
-.Bl -tag -width "Xpkgsrc=dirXXX"
+The following options are available:
+.Bl -tag -width "Xmounthost=hostXXX"
+.It Fl Fl mounthost Ns = Ns Ar host
+Use
+.Ar host
+as the mount host.
 .It Fl Fl pkgsrc Ns = Ns Ar dir
 Look for the pkgsrc files in
 .Ar dir
@@ -55,7 +60,7 @@ instead of the default
 Look for the
 .Nx
 src files in
-.Ar dir
+.Ar srcdir
 instead of the default
 .Pa /usr/src
 (only needed for some packages that compile kernel modules).
@@ -67,9 +72,9 @@ Do not include X files in the sandbox.
 Look for the
 .Nx
 xsrc files in
-.Ar dir
+.Ar xsrcdir
 instead of the default
-.Pa /usr/src
+.Pa /usr/xsrc
 (only needed for some packages).
 .El
 .Sh USAGE
@@ -84,7 +89,7 @@ execute commands inside.
 The
 .Pa sandbox
 script supports the following commands:
-.Bl -tag -width XanythingXelseXXX
+.Bl -tag -width XXnoXargumentXXXX
 .It Ic mount
 Set up the sandbox.
 .It Ic umount
@@ -95,16 +100,16 @@ Start
 inside the sandbox.
 Can only be called after
 .Ic mount .
-.It anything-else
+.It Ic command
 Try running
-.Pa anything-else
+.Pa command
 inside the sandbox.
 Fails if the argument is not an executable.
 Can only be called after
 .Ic mount .
 .El
 .Sh EXAMPLES
-The most common usage is running mksandbox once, e.g.
+The most common usage is running mksandbox once, e.g.,
 .Dl mksandbox /home/user/sandboxdir
 and then reusing this sandbox.
 Once the sandbox exists, the most common usage is:
