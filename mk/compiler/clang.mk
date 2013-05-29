@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.11 2013/05/22 12:13:35 joerg Exp $
+# $NetBSD: clang.mk,v 1.12 2013/05/29 13:19:02 joerg Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -51,7 +51,7 @@ _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
 _COMPILER_LD_FLAG=	-Wl,
 _LINKER_RPATH_FLAG=	-R
-_COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG},
+_COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG}
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
 # ones requested by the package in USE_LANGUAGES.
