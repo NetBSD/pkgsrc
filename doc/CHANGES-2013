@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1836 2013/05/29 13:10:32 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1837 2013/05/29 20:17:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2958,3 +2958,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/cmake to 2.8.11 [adam 2013-05-29]
 	Updated lang/mono to 3.0.10 [wiz 2013-05-29]
 	Updated inputmethod/scim-tables to 0.5.13 [obache 2013-05-29]
+	Updated math/glpk to 4.50 [adam 2013-05-29]
+	Updated converters/help2man to 1.42.1 [adam 2013-05-29]
