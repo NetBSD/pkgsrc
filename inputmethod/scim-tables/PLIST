@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/02 10:09:37 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/29 13:09:55 obache Exp $
 bin/scim-make-table
 lib/scim-1.0/1.4.0/IMEngine/table.la
 lib/scim-1.0/1.4.0/SetupUI/table-imengine-setup.la
@@ -31,6 +31,7 @@ share/scim/icons/Gujarati-phonetic.png
 share/scim/icons/HIRAGANA.png
 share/scim/icons/Hangul.png
 share/scim/icons/Hanja.png
+share/scim/icons/HebrewComputer.png
 share/scim/icons/Hindi-inscript.png
 share/scim/icons/Hindi-phonetic.png
 share/scim/icons/Hindi-remington.png
@@ -50,6 +51,7 @@ share/scim/icons/Punjabi-jhelum.png
 share/scim/icons/Punjabi-phonetic.png
 share/scim/icons/Punjabi-remington.png
 share/scim/icons/Quick.png
+share/scim/icons/RussianComputer.png
 share/scim/icons/RussianTraditional.png
 share/scim/icons/Simplex.png
 share/scim/icons/SmartCangJie6.png
@@ -91,6 +93,7 @@ share/scim/tables/HIRAGANA.bin
 share/scim/tables/Hangul.bin
 share/scim/tables/HangulRomaja.bin
 share/scim/tables/Hanja.bin
+share/scim/tables/HebrewComputer.bin
 share/scim/tables/Hindi-inscript.bin
 share/scim/tables/Hindi-phonetic.bin
 share/scim/tables/Hindi-remington.bin
@@ -112,6 +115,7 @@ share/scim/tables/Punjabi-jhelum.bin
 share/scim/tables/Punjabi-phonetic.bin
 share/scim/tables/Punjabi-remington.bin
 share/scim/tables/Quick.bin
+share/scim/tables/RussianComputer.bin
 share/scim/tables/RussianTraditional.bin
 share/scim/tables/Simplex.bin
 share/scim/tables/SmartCangJie6.bin
