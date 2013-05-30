@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/05/29 09:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/30 16:58:01 wiz Exp $
 
 DISTNAME=	nickle-2.77
 CATEGORIES=	math lang
@@ -15,7 +15,7 @@ TEST_TARGET=	check
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == NetBSD) && empty(OS_VERSION:M6.99.2[1-9]*) && empty(OS_VERSION:M6.99.[345679][0-9]*) && empty(OS_VERSION:M[789].*)
+.if (${OPSYS} == NetBSD) && empty(OS_VERSION:M6.99.2[1-9]*) && empty(OS_VERSION:M6.99.[345679][0-9]*) && empty(OS_VERSION:M[789].*) || (${OPSYS} == "DragonFly")
 # lex.l:131:5: error: 'rl_catch_signals' undeclared (first use in this function)
 USE_GNU_READLINE=	yes
 .endif
