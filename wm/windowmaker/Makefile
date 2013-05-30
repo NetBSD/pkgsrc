@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2013/05/21 14:38:40 hans Exp $
+# $NetBSD: Makefile,v 1.99 2013/05/30 15:18:28 hans Exp $
 
 DISTNAME=	WindowMaker-0.95.4
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -12,7 +12,7 @@ COMMENT=	GNUStep-compliant NEXTSTEP(tm) window manager clone
 
 BROKEN_GETTEXT_DETECTION=	yes
 
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config xgettext
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
