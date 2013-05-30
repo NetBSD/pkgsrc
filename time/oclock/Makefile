@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/27 10:48:59 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/30 11:41:42 rodent Exp $
 #
 
 DISTNAME=	oclock-1.0.3
@@ -10,6 +10,8 @@ MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Simple analog clock to make a round window
 LICENSE=	x11
+
+PREV_PKGPATH=	x11/oclock
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
