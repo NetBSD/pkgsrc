@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.4 2013/05/21 14:38:40 hans Exp $
+$NetBSD: patch-ak,v 1.5 2013/05/30 15:18:28 hans Exp $
 
 --- util/Makefile.in.orig	2013-01-09 21:43:07.000000000 +0000
 +++ util/Makefile.in
@@ -25,7 +25,7 @@ $NetBSD: patch-ak,v 1.4 2013/05/21 14:38:40 hans Exp $
  convertfonts_SOURCES = convertfonts.c fontconv.c
 -seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 -geticonset_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
-+seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@$(liblist)
++seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
 +geticonset_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
  wmagnify_LDADD = \
  	$(top_builddir)/WINGs/libWINGs.la \
