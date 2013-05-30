@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/27 10:51:01 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/30 11:41:42 rodent Exp $
 #
 
 DISTNAME=	xclock-1.0.6
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Analog / digital clock for X
+
+PREV_PKGPATH=	x11/xclock
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
