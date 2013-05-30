@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1847 2013/05/30 13:41:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1848 2013/05/30 16:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2970,3 +2970,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXcursor to 1.1.14 [wiz 2013-05-30]
 	Updated graphics/ImageMagick to 6.8.5.8 [wiz 2013-05-30]
 	Updated graphics/p5-PerlMagick to 6.8.5.8 [wiz 2013-05-30]
+	Updated x11/libxcb to 1.9.1 [wiz 2013-05-30]
