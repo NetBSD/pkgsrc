@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/06/03 17:39:56 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/05/30 07:05:21 wiz Exp $
 
-SHA1 (libXcursor-1.1.13.tar.bz2) = 4e461d9e4324689ca8a84706926a8c0fe9470e47
-RMD160 (libXcursor-1.1.13.tar.bz2) = 11f643f8fa934a5670249156bd98b89554353566
-Size (libXcursor-1.1.13.tar.bz2) = 302525 bytes
+SHA1 (libXcursor-1.1.14.tar.bz2) = 89870756758439f9216ddf5f2d3dca56570fc6b7
+RMD160 (libXcursor-1.1.14.tar.bz2) = 95c0779a2fc04876fa01e785a30111564bb8e9c4
+Size (libXcursor-1.1.14.tar.bz2) = 311896 bytes
