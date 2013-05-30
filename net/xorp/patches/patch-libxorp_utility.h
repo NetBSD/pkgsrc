@@ -1,16 +1,20 @@
-$NetBSD: patch-libxorp_utility.h,v 1.2 2012/09/28 05:47:32 dholland Exp $
+$NetBSD: patch-libxorp_utility.h,v 1.3 2013/05/30 15:37:24 joerg Exp $
 
 --- libxorp/utility.h.orig	2009-01-05 18:30:58.000000000 +0000
 +++ libxorp/utility.h
-@@ -31,7 +31,7 @@
+@@ -30,9 +30,9 @@
+ /*
   * Compile time assertion.
   */
- #ifndef static_assert
+-#ifndef static_assert
 -#define static_assert(a) switch (a) case 0: case (a):
-+#define static_assert(a) ((void)sizeof(int[(a) ? 1 : -1]))
- #endif /* static_assert */
+-#endif /* static_assert */
++#ifndef my_static_assert
++#define my_static_assert(a) ((void)sizeof(int[(a) ? 1 : -1]))
++#endif /* my_static_assert */
  
  /*
+  * A macro to avoid compilation warnings about unused functions arguments.
 @@ -42,7 +42,7 @@
  #ifdef UNUSED
  # undef UNUSED
