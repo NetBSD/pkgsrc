@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/05/27 18:17:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/30 09:02:36 prlw1 Exp $
 
 .include "Makefile.common"
 
@@ -11,6 +11,7 @@ PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 BUILDLINK_TRANSFORM+=   rm:-ldl
 .endif
 
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
