@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1848 2013/05/30 16:53:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1849 2013/05/30 22:58:36 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2971,3 +2971,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ImageMagick to 6.8.5.8 [wiz 2013-05-30]
 	Updated graphics/p5-PerlMagick to 6.8.5.8 [wiz 2013-05-30]
 	Updated x11/libxcb to 1.9.1 [wiz 2013-05-30]
+	Updated www/apache22 to 2.2.24nb1 [tron 2013-05-30]
