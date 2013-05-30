@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.20 2013/05/25 14:40:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.21 2013/05/30 08:30:05 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -77,3 +77,5 @@ Pullup ticket #4140 - requested by obache
 emulators/suse121_libtiff: security update
 Pullup ticket #4141 - requested by obache
 print/acroread9: security update
+Pullup ticket #4142 - requested by spz
+devel/rt3: security update
