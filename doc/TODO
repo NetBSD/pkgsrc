@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12216 2013/05/29 22:59:41 wiz Exp $
+$NetBSD: TODO,v 1.12217 2013/05/30 08:12:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,6 +407,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blender-2.67
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o bochs-2.6.2
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
@@ -641,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gpsim-0.26.1
 	o gramofile-1.6P
+	o gramps3-3.4.4
 	o graphviz-2.30.1
 	o groff-1.22.2
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
@@ -679,7 +681,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hiawatha-9.1
 	o highlight-3.13
 	o honeyd-1.5c
-	o horde-5.0.4
+	o horde-5.0.5
 	o host-20070128
 	o html2wml-0.4.11
 	o htop-1.0.2
@@ -696,8 +698,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.5.4
 	o imapsync-1.452
-	o imp-6.0.4
-	o ingo-3.0.3
+	o imp-6.0.5
+	o ingo-3.0.4
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
@@ -733,7 +735,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o knights-2.5.0
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-4.0.4
+	o kronolith-4.0.5
 	o krusader-2.0
 	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
@@ -1119,7 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o trac-1.0.1
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o turba-4.0.3
+	o turba-4.0.4
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o typo3-6.1.1
