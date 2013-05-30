@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2010/09/10 19:13:52 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2013/05/30 16:53:47 wiz Exp $
 
---- configure.orig	2010-09-06 16:16:29.000000000 +0000
+--- configure.orig	2013-05-30 15:38:09.000000000 +0000
 +++ configure
-@@ -11827,7 +11827,7 @@ else
+@@ -13120,7 +13120,7 @@ else
  $as_echo "yes" >&6; }
- 
+ 	:
  fi
 -NEEDED="pthread-stubs xau >= 0.99.2"
 +NEEDED="xau >= 0.99.2"
