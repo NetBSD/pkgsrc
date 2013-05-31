@@ -1,0 +1,6 @@
+This module provides the definition of the WindowsWM extension to the X11
+protocol, used for coordination between an X11 server and the Microsoft Windows
+native window manager.
+
+WindowsWM is only intended to be used on Cygwin when running a rootless XWin
+server.
