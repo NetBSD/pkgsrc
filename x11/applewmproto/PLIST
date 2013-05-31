@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/16 13:08:13 obache Exp $
-include/X11/extensions/applewmconst.h
-include/X11/extensions/applewmproto.h
-lib/pkgconfig/applewmproto.pc
