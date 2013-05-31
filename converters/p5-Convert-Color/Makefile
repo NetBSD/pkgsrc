@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/31 12:39:44 wiz Exp $
 
 DISTNAME=	Convert-Color-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 

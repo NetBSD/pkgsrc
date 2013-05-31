@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2013/02/16 11:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2013/05/31 12:39:43 wiz Exp $
 
 .include "../../comms/pilot-link/Makefile.common"
 
-PKGREVISION=		5
+PKGREVISION=		6
 COMMENT=		Tools to talk to the 3Com Pilot PDA
 
 BUILDLINK_API_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
