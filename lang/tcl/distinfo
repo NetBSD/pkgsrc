@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.55 2013/04/08 14:19:38 kivinen Exp $
+$NetBSD: distinfo,v 1.56 2013/05/31 20:15:04 adam Exp $
 
-SHA1 (tcl8.5.13-src.tar.gz) = 65b677dc699426233b926edfa9e304d456da7cad
-RMD160 (tcl8.5.13-src.tar.gz) = 20cfb8adebd77a6d037f67a9af7e88d80032b3c2
-Size (tcl8.5.13-src.tar.gz) = 4513204 bytes
+SHA1 (tcl8.5.14-src.tar.gz) = 9bc452eec453c2ed37625874b9011563db687b07
+RMD160 (tcl8.5.14-src.tar.gz) = 32ed2009f28c357af87cad7815c56488f5bd5222
+Size (tcl8.5.14-src.tar.gz) = 4528533 bytes
 SHA1 (patch-generic_tclInt.h) = 13289d8fcf5021898b06a9608bc05fc968a1ba5c
-SHA1 (patch-generic_tclPort.h) = cd44f24c79048a70e2c4929aa1499ee336602ba5
+SHA1 (patch-generic_tclPort.h) = 36ff05b22591d588952e55d0f13c2ef52e371d1e
 SHA1 (patch-generic_tclPosixStr.c) = 8c252a4f3d8898fb48544d15123d6a8ddc3172f0
 SHA1 (patch-tests_load.test) = 438695ab76e01646e49aadc01c44344a5495eabb
 SHA1 (patch-tests_pkgMkIndex.test) = 70d1042c1f4743052c5fa191fa7c4732a08e28a2
-SHA1 (patch-unix_Makefile.in) = c87f98382790ff40aa54aabb99361f6c469dc050
-SHA1 (patch-unix_configure) = 2e1e6d2020e68b91b94c0b05cb1d349126989adc
+SHA1 (patch-unix_Makefile.in) = 5944654dcecf8bac76776d22a033e384a8f33cf8
+SHA1 (patch-unix_configure) = 2e37252168e24b133d7888d1e3f47b332e162977
 SHA1 (patch-unix_tclConfig.sh.in) = 5a32d8e97240d14f3a03e205637fe3bf8307d868
 SHA1 (patch-unix_tclUnixCompat.c) = 7ffa40a1a56345f5b86cd896e8e3b0d5748d8c5e
 SHA1 (patch-unix_tclUnixFCmd.c) = a56a12b8a0068e914d10336076347ca2b0ba9ac7
 SHA1 (patch-unix_tclUnixInit.c) = 4cbddb3e1a9ed4bbbf2d8de0df1a9032fc5b2629
-SHA1 (patch-unix_tclUnixPort.h) = 2965dd6ef6560e0a6385c6cb286754f63c98c827
+SHA1 (patch-unix_tclUnixPort.h) = c4f1c26228b36563c44e5c27824955882c3a675f

@@ -1,25 +1,8 @@
-$NetBSD: patch-unix_tclUnixPort.h,v 1.1 2012/08/21 21:31:47 marino Exp $
+$NetBSD: patch-unix_tclUnixPort.h,v 1.2 2013/05/31 20:15:04 adam Exp $
 
---- unix/tclUnixPort.h.orig	2012-07-16 11:57:06.000000000 +0000
+--- unix/tclUnixPort.h.orig	2013-05-31 19:30:55.000000000 +0000
 +++ unix/tclUnixPort.h
-@@ -45,15 +45,7 @@
- #   include <sys/param.h>
- #endif
- #include <sys/types.h>
--#ifdef USE_DIRENT2_H
--#   include "../compat/dirent2.h"
--#else
--#ifdef NO_DIRENT_H
--#   include "../compat/dirent.h"
--#else
--#   include <dirent.h>
--#endif
--#endif
-+#include <dirent.h>
- 
- /*
-  *---------------------------------------------------------------------------
-@@ -135,19 +127,11 @@ typedef off_t		Tcl_SeekOffset;
+@@ -121,19 +121,11 @@ typedef off_t		Tcl_SeekOffset;
  #if HAVE_INTTYPES_H
  #   include <inttypes.h>
  #endif
@@ -39,5 +22,5 @@ $NetBSD: patch-unix_tclUnixPort.h,v 1.1 2012/08/21 21:31:47 marino Exp $
 -#endif
 +#include <unistd.h>
  
- MODULE_SCOPE int TclUnixSetBlockingMode(int fd, int mode);
+ extern int TclUnixSetBlockingMode(int fd, int mode);
  
