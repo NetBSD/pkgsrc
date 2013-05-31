@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1868 2013/05/31 20:01:44 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.1869 2013/05/31 20:17:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3000,3 +3000,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/rabbitmq to 3.1.1 [fhajny 2013-05-31]
 	Updated devel/p5-Class-ErrorHandler to 0.02 [schmonz 2013-05-31]
 	Updated chat/ejabberd to 2.1.12 [fhajny 2013-05-31]
+	Updated lang/tcl to 8.5.14 [adam 2013-05-31]
+	Updated x11/tk to 8.5.14 [adam 2013-05-31]
+	Updated x11/p5-Tk to 804.031 [adam 2013-05-31]
