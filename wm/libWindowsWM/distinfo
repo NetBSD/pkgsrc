@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/31 00:28:47 rodent Exp $
+
+SHA1 (libWindowsWM-1.0.1.tar.bz2) = 23e0fe25060c859b4c40999d264133127e6e1ca7
+RMD160 (libWindowsWM-1.0.1.tar.bz2) = 0bd8e647b63c6e725e870b71d6286f84fbd12c1c
+Size (libWindowsWM-1.0.1.tar.bz2) = 246815 bytes
