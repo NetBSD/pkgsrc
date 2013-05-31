@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/31 12:41:46 wiz Exp $
 
 DISTNAME=	pkg_distinst-0.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty

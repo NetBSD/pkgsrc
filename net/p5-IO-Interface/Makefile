@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 17:18:45 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/05/31 12:41:36 wiz Exp $
 #
 
 DISTNAME=		IO-Interface-1.06
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		p5ioi
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}

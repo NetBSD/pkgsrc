@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.232 2013/05/09 07:36:14 adam Exp $
+# $NetBSD: Makefile,v 1.233 2013/05/31 12:41:43 wiz Exp $
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/03/16 22:58:52 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:25 wiz Exp $
 
 DISTNAME=	bulk-small-20130316
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty

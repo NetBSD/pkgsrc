@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/25 06:57:08 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/31 12:42:24 wiz Exp $
 #
 
 DISTNAME=	xmltoman_0.4.orig
 PKGNAME=	${DISTNAME:S/_/-/:R}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xmltoman/}
 

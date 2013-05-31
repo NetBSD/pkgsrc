@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:17 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:32 wiz Exp $
 #
 
 DISTNAME=	dotse-dnscheck-1.2.6-0-g86a5c69
 PKGNAME=	dnscheck-1.2.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	-https://github.com/dotse/dnscheck/tarball/1.2.6
 

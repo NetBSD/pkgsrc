@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/01/22 10:18:41 mef Exp $
+# $NetBSD: Makefile,v 1.15 2013/05/31 12:41:48 wiz Exp $
 
 DISTNAME=	a2ps.pl-1.45
 PKGNAME=	ja-a2ps-1.45
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	# None

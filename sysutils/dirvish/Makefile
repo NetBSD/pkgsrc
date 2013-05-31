@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/12/17 13:25:57 obache Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/31 12:42:00 wiz Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.dirvish.org/
 EXTRACT_SUFX=	.tgz

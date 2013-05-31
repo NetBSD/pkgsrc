@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 09:57:18 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/05/31 12:41:26 wiz Exp $
 #
 
 DISTNAME=	colorize_0.3.0
 PKGNAME=	colorize-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://colorize.raszi.hu/downloads/
 EXTRACT_SUFX=	.tar.bz2

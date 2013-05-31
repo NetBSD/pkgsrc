@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/31 12:41:12 wiz Exp $
 
 MODNAME=		perl
 PKGMODNAME=		perl
 PECL_VERSION=		1.0.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES+=		lang
 COMMENT=		PHP extension embedding Perl in PHP
 

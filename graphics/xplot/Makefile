@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2012/10/06 14:11:26 asau Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/31 12:41:10 wiz Exp $
 
 DISTNAME=	xplot-0.90.7.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.xplot.org/xplot/
 HOMEPAGE=	http://www.xplot.org/

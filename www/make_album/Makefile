@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:21 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/31 12:42:33 wiz Exp $
 #
 
 DISTNAME=	make_album_1_6
 PKGNAME=	make_album-1.6
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://www.burren.cx/david/files/
 

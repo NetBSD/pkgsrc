@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2012/10/29 05:07:02 asau Exp $
+# $NetBSD: Makefile,v 1.57 2013/05/31 12:42:57 wiz Exp $
 
 DISTNAME=	xephem-3.7.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		http://97.74.56.125/free/

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:18:45 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/31 12:40:38 wiz Exp $
 #
 
 DISTNAME=	Package-Variant-1.001002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:17:55 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/31 12:40:12 wiz Exp $
 
 DISTNAME=	Data-Buffer-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	p5dbu
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}

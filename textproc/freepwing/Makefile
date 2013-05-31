@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/10/25 06:55:50 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/31 12:42:06 wiz Exp $
 
 DISTNAME=	freepwing-1.4.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/freepwing/
 

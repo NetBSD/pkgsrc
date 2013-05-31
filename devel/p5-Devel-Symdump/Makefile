@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/10/31 11:18:03 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/05/31 12:40:16 wiz Exp $
 
 DISTNAME=	Devel-Symdump-2.08
 PKGNAME=	p5-${DISTNAME}00
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5dsd
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}

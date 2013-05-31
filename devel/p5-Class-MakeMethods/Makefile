@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:17:49 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/31 12:40:09 wiz Exp $
 
 DISTNAME=	Class-MakeMethods-1.01
 PKGNAME=	p5-${DISTNAME}0 # developer uses three-digit versions
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

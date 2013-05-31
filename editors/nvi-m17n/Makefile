@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2013/04/06 15:46:36 rodent Exp $
+# $NetBSD: Makefile,v 1.50 2013/05/31 12:40:59 wiz Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040608
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.bostic.com/files/
 

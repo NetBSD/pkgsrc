@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:49 wiz Exp $
 
 DISTNAME=	pdftools
 PKGNAME=	tex-${DISTNAME}-0.82
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	23089
 
 MAINTAINER=	minskim@NetBSD.org

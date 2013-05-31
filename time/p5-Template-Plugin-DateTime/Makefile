@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/04/06 03:45:26 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/31 12:42:27 wiz Exp $
 #
 
 DISTNAME=	Template-Plugin-DateTime-0.06001
 PKGNAME=	p5-${DISTNAME:S/06001/06.001/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
