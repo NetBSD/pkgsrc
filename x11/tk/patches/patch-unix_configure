@@ -1,6 +1,6 @@
-$NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
+$NetBSD: patch-unix_configure,v 1.6 2013/05/31 20:15:32 adam Exp $
 
---- unix/configure.orig	2012-11-09 15:15:03.000000000 +0000
+--- unix/configure.orig	2013-04-01 18:36:49.000000000 +0000
 +++ unix/configure
 @@ -4843,10 +4843,10 @@ fi
      # LDFLAGS_ARCH so they eventually end up in LDFLAGS even if [load]
@@ -15,7 +15,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = yes; then
-@@ -5837,7 +5837,7 @@ fi
+@@ -5822,7 +5822,7 @@ fi
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -24,7 +24,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  	    arch=`arch -s`
  	    case "$arch" in
  	    m88k|vax)
-@@ -5858,7 +5858,7 @@ fi
+@@ -5843,7 +5843,7 @@ fi
  fi
  
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
@@ -33,7 +33,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  		;;
  	    esac
  	    case "$arch" in
-@@ -5930,7 +5930,7 @@ fi
+@@ -5915,7 +5915,7 @@ fi
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
@@ -42,7 +42,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  	    if test $doRpath = yes; then
  
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
-@@ -5945,21 +5945,15 @@ fi
+@@ -5930,21 +5930,15 @@ fi
  	    	LDFLAGS="$LDFLAGS -pthread"
  
  fi
@@ -69,7 +69,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
-@@ -5981,7 +5975,7 @@ fi
+@@ -5966,7 +5960,7 @@ fi
  	    # Version numbers are dot-stripped by system policy.
  	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
@@ -78,7 +78,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
  	Darwin-*)
-@@ -7159,7 +7153,7 @@ fi
+@@ -7144,7 +7138,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
@@ -87,7 +87,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
-@@ -7169,12 +7163,12 @@ fi
+@@ -7154,12 +7148,12 @@ fi
  
      if test "$SHARED_LIB_SUFFIX" = ""; then
  
@@ -102,7 +102,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  fi
  
      DLL_INSTALL_DIR="\$(LIB_INSTALL_DIR)"
-@@ -7190,7 +7184,11 @@ fi
+@@ -7175,7 +7169,11 @@ fi
  
  else
  
@@ -115,7 +115,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  
  fi
  
-@@ -7224,7 +7222,7 @@ fi
+@@ -7209,7 +7207,7 @@ fi
  else
  
          MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
@@ -124,7 +124,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  
  fi
  
-@@ -10358,7 +10356,7 @@ echo $ECHO_N "checking for X11 libraries
+@@ -10343,7 +10341,7 @@ echo $ECHO_N "checking for X11 libraries
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl -o -r $i/libX11.dylib; then
  		echo "$as_me:$LINENO: result: $i" >&5
  echo "${ECHO_T}$i" >&6
@@ -133,7 +133,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -10367,7 +10365,7 @@ echo "${ECHO_T}$i" >&6
+@@ -10352,7 +10350,7 @@ echo "${ECHO_T}$i" >&6
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -142,7 +142,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -11386,18 +11384,14 @@ else
+@@ -11531,18 +11529,14 @@ else
      fi
      # libdir must be a fully qualified path and not ${exec_prefix}/lib
      eval libdir="$libdir"
@@ -163,7 +163,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  fi
  
  #--------------------------------------------------------------------
-@@ -11409,11 +11403,7 @@ fi
+@@ -11554,11 +11548,7 @@ fi
  eval "TK_STUB_LIB_FILE=libtkstub${TK_UNSHARED_LIB_SUFFIX}"
  eval "TK_STUB_LIB_DIR=${libdir}"
  
@@ -176,7 +176,7 @@ $NetBSD: patch-unix_configure,v 1.5 2012/11/24 21:38:50 adam Exp $
  
  TK_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TK_STUB_LIB_FLAG}"
  TK_STUB_LIB_SPEC="-L${TK_STUB_LIB_DIR} ${TK_STUB_LIB_FLAG}"
-@@ -12233,6 +12223,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
+@@ -12378,6 +12368,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
  s,@REZ@,$REZ,;t t
  s,@REZ_FLAGS@,$REZ_FLAGS,;t t
  s,@LTLIBOBJS@,$LTLIBOBJS,;t t

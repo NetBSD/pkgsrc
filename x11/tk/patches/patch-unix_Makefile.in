@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.3 2013/05/31 20:15:32 adam Exp $
 
---- unix/Makefile.in.orig	2012-11-09 15:15:03.000000000 +0000
+--- unix/Makefile.in.orig	2013-04-01 18:36:49.000000000 +0000
 +++ unix/Makefile.in
-@@ -14,6 +14,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
+@@ -13,6 +13,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
  MINOR_VERSION		= @TK_MINOR_VERSION@
  PATCH_LEVEL		= @TK_PATCH_LEVEL@
  LOCALES			= @LOCALES@
@@ -10,7 +10,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  
  #----------------------------------------------------------------
  # Things you can change to personalize the Makefile for your own
-@@ -64,6 +65,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TK
+@@ -63,6 +64,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TK
  
  # Directory in which to install the include file tk.h:
  INCLUDE_INSTALL_DIR	= $(INSTALL_ROOT)$(includedir)
@@ -19,7 +19,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  
  # Path to the private tk header dir:
  PRIVATE_INCLUDE_DIR	= @PRIVATE_INCLUDE_DIR@
-@@ -100,7 +103,7 @@ DEMO_INSTALL_DIR	= $(INSTALL_ROOT)$(TK_L
+@@ -99,7 +102,7 @@ DEMO_INSTALL_DIR	= $(INSTALL_ROOT)$(TK_L
  # The directory containing the Tcl sources and headers appropriate
  # for this version of Tk ("srcdir" will be replaced or has already
  # been replaced by the configure script):
@@ -28,7 +28,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  
  # The directory containing the platform specific Tcl sources and headers
  # appropriate for this version of Tk:
-@@ -137,7 +140,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
+@@ -136,7 +139,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
  #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
@@ -37,7 +37,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
-@@ -245,6 +248,7 @@ TK_STUB_LIB_FLAG	= @TK_STUB_LIB_FLAG@
+@@ -244,6 +247,7 @@ TK_STUB_LIB_FLAG	= @TK_STUB_LIB_FLAG@
  #TK_STUB_LIB_FLAG	= -ltkstub
  
  TK_LIB_FILE		= @TK_LIB_FILE@
@@ -45,7 +45,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  #TK_LIB_FILE		= libtk.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -276,6 +280,8 @@ SHLIB_LD		= @SHLIB_LD@
+@@ -275,6 +279,8 @@ SHLIB_LD		= @SHLIB_LD@
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  TK_SHLIB_LD_EXTRAS	= @TK_SHLIB_LD_EXTRAS@
  
@@ -54,7 +54,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  # Additional search flags needed to find the various shared libraries
  # at run-time.  The first symbol is for use when creating a binary
  # with cc, and the second is for use when running ld directly.
-@@ -546,6 +552,9 @@ PRIVATE_HDRS = $(GENERIC_DIR)/tkInt.h $(
+@@ -545,6 +551,9 @@ PRIVATE_HDRS = $(GENERIC_DIR)/tkInt.h $(
  
  DEMOPROGS = browse hello ixset rmt rolodex square tcolor timer widget
  
@@ -64,7 +64,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  SHELL_ENV = \
  	@LD_LIBRARY_PATH_VAR@="`pwd`:${TCL_BIN_DIR}:$${@LD_LIBRARY_PATH_VAR@}"; \
  	export @LD_LIBRARY_PATH_VAR@; \
-@@ -569,6 +578,11 @@ ${LIB_FILE}: ${OBJS} ${STUB_LIB_FILE} @L
+@@ -568,6 +577,11 @@ ${LIB_FILE}: ${OBJS} ${STUB_LIB_FILE} @L
  	rm -f $@
  	@MAKE_LIB@
  
@@ -76,7 +76,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f $@
  	@MAKE_STUB_LIB@
-@@ -686,7 +700,7 @@ install-strip:
+@@ -685,7 +699,7 @@ install-strip:
  # some ranlibs write to current directory, and this might not always be
  # possible (e.g. if installing as root).
  
@@ -85,7 +85,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  	@for i in "$(LIB_INSTALL_DIR)" "$(BIN_INSTALL_DIR)" \
  	    "$(PKG_INSTALL_DIR)" "$(CONFIG_INSTALL_DIR)" ; \
  	    do \
-@@ -716,13 +730,20 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
+@@ -715,13 +729,20 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
  	    fi
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -107,7 +107,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  	@echo "Installing tkConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tkConfig.sh "$(CONFIG_INSTALL_DIR)/tkConfig.sh"
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -827,7 +848,7 @@ install-doc:
+@@ -826,7 +847,7 @@ install-doc:
  install-headers:
  	@if test "$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)" != ""; then \
  	    XLIB_INCLUDE_INSTALL_DIR="$(INCLUDE_INSTALL_DIR)"/X11; fi; \
@@ -116,7 +116,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.2 2012/11/24 21:38:50 adam Exp $
  	    do \
  	    if [ -n "$$i" -a ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -836,9 +857,12 @@ install-headers:
+@@ -835,9 +856,12 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
