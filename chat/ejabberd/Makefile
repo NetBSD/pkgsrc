@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2013/02/06 23:21:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2013/05/31 20:01:30 fhajny Exp $
 
-DISTNAME=	ejabberd-2.1.11
-PKGREVISION=	1
+DISTNAME=	ejabberd-2.1.12
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
