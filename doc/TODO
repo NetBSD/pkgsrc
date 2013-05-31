@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12223 2013/05/31 10:56:31 adam Exp $
+$NetBSD: TODO,v 1.12224 2013/05/31 14:42:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -640,6 +640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gpsdrive-2.11
 	o gpsim-0.26.1
 	o gramofile-1.6P
+	o gramps-4.0.0
 	o gramps3-3.4.4
 	o graphviz-2.30.1
 	o groff-1.22.2
@@ -714,7 +715,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jed-0.99-18
-	o john-1.7.9jumbo7
+	o john-1.8.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
@@ -923,7 +924,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pgadmin3-1.16.1 [pkg/47261]
 	o php-concrete5-5.6.1.2
 	o php-jpgraph-3.0.6
-	o php-owncloud-5.0.4
 	o php-sugarcrm-6.5.12
 	o php-tt-rss-1.7.9
 	o php-tiki6-6.10
@@ -1013,6 +1013,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scilab-5.5.3
 	o scm-5e7
 	o scmcvs-1.12.13
+	o scmgit-1.8.3
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scrotwm-0.11.0
@@ -1089,6 +1090,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tea-35.0.0
 	o ted-en-us-2.17
 	o teem-1.10.0
+	o telepathy-gabble-0.16.6
 	o tellico-2.3.7
 	o tesseract-3.02.02
 	o tetrinetx-1.40c
@@ -1106,7 +1108,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
-	o tmux-1.8
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.4.2 [GNOME 2.32]
@@ -1156,7 +1157,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-0.4.1
 	o windowlab-1.40
-	o windowmaker-0.95.2 [wip]
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.5.31 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
