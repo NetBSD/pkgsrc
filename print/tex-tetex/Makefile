@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/14 21:25:22 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/31 12:41:50 wiz Exp $
 
 DISTNAME=	tetex
 PKGNAME=	tex-${DISTNAME}-3.0.27774
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	27774
 
 MAINTAINER=	minskim@NetBSD.org

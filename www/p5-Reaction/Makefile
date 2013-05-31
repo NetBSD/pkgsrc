@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:50 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/31 12:42:50 wiz Exp $
 
 DISTNAME=	Reaction-0.002005
 PKGNAME=	p5-Reaction-0.2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Reaction/}
 

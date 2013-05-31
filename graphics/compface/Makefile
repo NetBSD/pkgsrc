@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 14:10:44 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/05/31 12:41:05 wiz Exp $
 
 DISTNAME=	compface-1.5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.xemacs.org/pub/xemacs/aux/
 

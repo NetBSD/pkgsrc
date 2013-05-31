@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2013/05/09 18:26:33 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/05/31 12:40:01 wiz Exp $
 
 META_PACKAGE=	# empty
 
 .include "Makefile.common"
-PKGREVISION=	1
+PKGREVISION=	2
 
 SVR4_PKGNAME=	ltool
 
