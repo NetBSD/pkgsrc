@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1852 2013/05/31 00:33:58 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1853 2013/05/31 00:37:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2975,3 +2975,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added wm/windowswmproto version 1.0.4 [rodent 2013-05-31]
 	Added wm/libWindowsWM version 1.0.1 [rodent 2013-05-31]
 	Added wm/applewmproto version 1.4.2 [rodent 2013-05-31]
+	Added wm/libAppleWM version 1.4.0 [rodent 2013-05-31]
