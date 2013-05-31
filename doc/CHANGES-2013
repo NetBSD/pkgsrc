@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1869 2013/05/31 20:17:55 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1870 2013/05/31 22:53:49 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3003,3 +3003,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/tcl to 8.5.14 [adam 2013-05-31]
 	Updated x11/tk to 8.5.14 [adam 2013-05-31]
 	Updated x11/p5-Tk to 804.031 [adam 2013-05-31]
+	Updated devel/glib2 to 2.36.2 [prlw1 2013-05-31]
