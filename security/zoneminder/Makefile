@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/03/24 16:47:47 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:58 wiz Exp $
 #
 
 DISTNAME=	ZoneMinder-1.25.0
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www2.zoneminder.com/downloads/
 

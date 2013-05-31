@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/01/26 16:35:50 rhaen Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/31 12:40:42 wiz Exp $
 
 DISTNAME=	Safe-Isa-1.000002
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTROUT/}
 

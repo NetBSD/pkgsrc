@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:43 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/31 12:42:23 wiz Exp $
 #
 
 DISTNAME=	YAML-LibYAML-0.38
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	p5-${DISTNAME}
 #PKGNAME=	p5-${DISTNAME:S/LibYAML/XS/}
 CATEGORIES=	textproc perl5

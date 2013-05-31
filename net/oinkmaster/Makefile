@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 17:18:43 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/05/31 12:41:35 wiz Exp $
 
 DISTNAME=	oinkmaster-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 

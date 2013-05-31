@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2013/03/16 07:21:23 obache Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/31 12:42:32 wiz Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 DAVICAL_VERSION=1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
 
