@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2012/10/29 05:06:35 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/31 08:24:06 wiz Exp $
 
-DISTNAME=	libXinerama-1.1.2
+DISTNAME=	libXinerama-1.1.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
