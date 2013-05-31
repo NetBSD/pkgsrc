@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2013/05/09 07:39:31 adam Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/31 12:39:47 wiz Exp $
 #
 
 DISTNAME=		apache-couchdb-1.3.0
 PKGNAME=		${DISTNAME:S/apache-//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/source/1.3.0/}
 
