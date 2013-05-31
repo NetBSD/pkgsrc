@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2013/02/12 23:26:10 tonnerre Exp $
+# $NetBSD: Makefile,v 1.118 2013/05/31 00:38:59 rodent Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -9,6 +9,7 @@ SUBDIR+=	aewm++
 SUBDIR+=	afterstep
 SUBDIR+=	amaterus
 SUBDIR+=	amiwm
+SUBDIR+=	applewmproto
 SUBDIR+=	awesome
 SUBDIR+=	bbkeys
 SUBDIR+=	bbkeys09
@@ -48,6 +49,8 @@ SUBDIR+=	icewmconf
 SUBDIR+=	ion
 SUBDIR+=	jwm
 SUBDIR+=	larswm
+SUBDIR+=	libAppleWM
+SUBDIR+=	libWindowsWM
 SUBDIR+=	lwm
 SUBDIR+=	matchbox-wm
 SUBDIR+=	metacity
@@ -80,6 +83,7 @@ SUBDIR+=	wbar
 SUBDIR+=	weewm
 SUBDIR+=	windowlab
 SUBDIR+=	windowmaker
+SUBDIR+=	windowswmproto
 SUBDIR+=	wm2
 SUBDIR+=	wmakerconf
 SUBDIR+=	wmctrl
