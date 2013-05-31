@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/31 00:27:37 rodent Exp $
+include/X11/extensions/windowswm.h
+include/X11/extensions/windowswmstr.h
+lib/pkgconfig/windowswmproto.pc
