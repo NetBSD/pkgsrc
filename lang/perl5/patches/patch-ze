@@ -1,10 +1,10 @@
-$NetBSD: patch-ze,v 1.4 2012/10/03 19:59:47 adam Exp $
+$NetBSD: patch-ze,v 1.5 2013/05/31 10:55:15 adam Exp $
 
 Fixes compilation problem on Solaris/SPARC.
 
---- perl.h.orig	2012-08-03 17:35:26.000000000 +0000
+--- perl.h.orig	2013-05-05 19:32:18.000000000 +0000
 +++ perl.h
-@@ -1393,8 +1393,8 @@ EXTERN_C char *crypt(const char *, const
+@@ -1435,8 +1435,8 @@ EXTERN_C char *crypt(const char *, const
  #       endif
  #else
  #    ifdef HAS_SYS_ERRLIST
@@ -15,7 +15,7 @@ Fixes compilation problem on Solaris/SPARC.
  #       ifndef Strerror
  #           define Strerror(e) \
  		((e) < 0 || (e) >= sys_nerr ? "(unknown)" : sys_errlist[e])
-@@ -1472,6 +1472,10 @@ EXTERN_C char *crypt(const char *, const
+@@ -1514,6 +1514,10 @@ EXTERN_C char *crypt(const char *, const
   */
  
  #if defined(I_SYSMODE) && !defined(PERL_MICRO)

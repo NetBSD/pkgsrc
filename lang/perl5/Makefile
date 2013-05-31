@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2013/04/23 12:22:35 obache Exp $
+# $NetBSD: Makefile,v 1.201 2013/05/31 10:55:15 adam Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -163,12 +163,15 @@ SUBST_MESSAGE.rm=	Do not use tools version of rm.
 SUBST_SED.rm=	-e "s!^rm_try='/.*/\\.tools/bin/rm -f!rm_try='/bin/rm -f!"
 
 # Replace our perl as the interpreter
-REPLACE_PERL+=		lib/File/DosGlob.pm
-REPLACE_PERL+=		lib/unicore/mktables
-REPLACE_PERL+=		lib/version.pm
+REPLACE_PERL+=		cpan/Config-Perl-V/V.pm
+REPLACE_PERL+=		cpan/Getopt-Long/lib/Getopt/Long.pm
 REPLACE_PERL+=		dist/bignum/lib/Math/BigFloat/Trace.pm
 REPLACE_PERL+=		dist/bignum/lib/Math/BigInt/Trace.pm
 REPLACE_PERL+=		dist/ExtUtils-ParseXS/lib/ExtUtils/xsubpp
+REPLACE_PERL+=		ext/File-DosGlob/lib/File/DosGlob.pm
+REPLACE_PERL+=		lib/File/DosGlob.pm
+REPLACE_PERL+=		lib/unicore/mktables
+REPLACE_PERL+=		lib/version.pm
 
 # And replace a perl interpreter during the pre-install stage
 # I think this may be a bootstrap script, so can't use REPLACE_PERL

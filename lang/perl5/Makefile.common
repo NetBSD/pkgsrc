@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.17 2013/04/06 01:16:50 dholland Exp $
+# $NetBSD: Makefile.common,v 1.18 2013/05/31 10:55:15 adam Exp $
 #
 # used by lang/perl5/Makefile
 # used by databases/p5-gdbm/Makefile
 
-DISTNAME=	perl-5.16.3
+DISTNAME=	perl-5.18.0
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/5.0/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
@@ -11,5 +11,3 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.perl.org/
 LICENSE=	${PERL5_LICENSE}
-
-MAKE_JOBS_SAFE=	no
