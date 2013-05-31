@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.19 2012/01/22 19:00:34 abs Exp $
+$NetBSD: distinfo,v 1.20 2013/05/31 20:13:24 adam Exp $
 
-SHA1 (Tk-804.030.tar.gz) = f5a85cee56de9679e49260e6e80d6dc384e60a5e
-RMD160 (Tk-804.030.tar.gz) = bf139ab03e9f07f7a184ea25dece9d8b1b6d10e0
-Size (Tk-804.030.tar.gz) = 6928048 bytes
+SHA1 (Tk-804.031.tar.gz) = f2e9db4f2ae7f45be04471cc738239c08be7aa48
+RMD160 (Tk-804.031.tar.gz) = 442b13da904881406e9965468eab1c7b084523ce
+Size (Tk-804.031.tar.gz) = 6932339 bytes
 SHA1 (patch-aa) = 863ab22dcad8c20d8e84e840f11fa41964eb051b
-SHA1 (patch-ac) = fffe0c46e44202fe0018146b4ba5e23f50168c04
-SHA1 (patch-ad) = 3ea2490f6d30436d72e3321ae50689c28bdb25cc
-SHA1 (patch-ah) = e48711b341a285bd8055a6c487d0185695ece460
+SHA1 (patch-ac) = 8918f9a9dfd884ed8d7b76b0615e266ffa392a44
+SHA1 (patch-ad) = b1a659fe92cdab86d8ff7b04937de9f0c25b080a
+SHA1 (patch-ah) = 1b75be678e1bb31a182b3f9dcb9063bf4fc086a1
 SHA1 (patch-ai) = f6ef20cb48f3ee08335a6410e873f3b5aa277b20
 SHA1 (patch-aj) = ba3dfe1e7b7a19af1240b37186ab69d857d925f4

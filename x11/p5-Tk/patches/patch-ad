@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2012/01/22 19:00:34 abs Exp $
+$NetBSD: patch-ad,v 1.5 2013/05/31 20:13:24 adam Exp $
 
---- PNG/Makefile.PL.orig	2010-09-27 21:57:28.000000000 +0000
+--- PNG/Makefile.PL.orig	2013-05-21 13:25:13.000000000 +0000
 +++ PNG/Makefile.PL
 @@ -2,7 +2,6 @@
  use strict;
@@ -10,24 +10,19 @@ $NetBSD: patch-ad,v 1.4 2012/01/22 19:00:34 abs Exp $
  use File::Copy;
  
  my $l = $Config::Config{'lib_ext'};
-@@ -15,68 +14,15 @@ foreach my $file (qw(zlib/Makefile.PL li
-   unlink($file);
-  }
+@@ -27,8 +26,6 @@ if ($? == 0) {
+     $libpng_libs   = '-lpng -lz -lm';
+ }
  
 -if ($Tk::MMtry::VERSION ge '4.007' &&
--    try_run("config/has_png.c",['-I/usr/local/include'],['-lpng -lz -lm']))
-- {
+-    try_run("config/has_png.c",[$libpng_cflags],[$libpng_libs]))
+  {
    Tk::MMutil::TkExtMakefile(
         NAME         => 'Tk::PNG',
-        VERSION_FROM => 'PNG.pm',
-        XS_VERSION   => $Tk::Config::VERSION,
-        dist         => { COMPRESS => 'gzip -f9', SUFFIX => '.gz' },
-        OBJECT       => '$(O_FILES)',
--       INC          => '-I/usr/local/include',
-+       INC          => '-I%%LOCALBASE%%/include',
-        LIBS         => ['-lpng -lz -lm'],
+@@ -40,55 +37,6 @@ if ($Tk::MMtry::VERSION ge '4.007' &&
+        LIBS         => [$libpng_libs],
       );
-- }
+  }
 -else
 - {
 -  my $ok = 1;
