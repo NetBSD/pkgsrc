@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1851 2013/05/31 00:29:07 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1852 2013/05/31 00:33:58 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/apache22 to 2.2.24nb1 [tron 2013-05-30]
 	Added wm/windowswmproto version 1.0.4 [rodent 2013-05-31]
 	Added wm/libWindowsWM version 1.0.1 [rodent 2013-05-31]
+	Added wm/applewmproto version 1.4.2 [rodent 2013-05-31]
