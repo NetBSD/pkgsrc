@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/31 00:36:55 rodent Exp $
+include/X11/extensions/applewm.h
+lib/libAppleWM.la
+lib/pkgconfig/applewm.pc
+man/man3/AppleWM.3
