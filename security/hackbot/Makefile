@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/03/03 11:15:11 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/31 12:41:51 wiz Exp $
 
 DISTNAME=		hackbot-2.21
+PKGREVISION=		1
 CATEGORIES=		security net
 MASTER_SITES=		http://www.xs4all.nl/~mvberkum/hackbot/
 EXTRACT_SUFX=		.tgz

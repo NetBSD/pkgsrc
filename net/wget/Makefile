@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2013/02/26 11:05:10 obache Exp $
+# $NetBSD: Makefile,v 1.116 2013/05/31 12:41:44 wiz Exp $
 
 DISTNAME=	wget-1.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 EXTRACT_SUFX=	.tar.xz
