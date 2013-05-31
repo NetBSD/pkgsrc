@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2013/05/04 03:24:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.31 2013/05/31 23:20:18 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -84,7 +84,7 @@ share/emacs/${EMACS_VERSION}/etc/COPYING
 share/emacs/${EMACS_VERSION}/etc/DEBUG
 share/emacs/${EMACS_VERSION}/etc/DEVEL.HUMOR
 share/emacs/${EMACS_VERSION}/etc/DISTRIB
-share/emacs/${EMACS_VERSION}/etc/DOC-${EMACS_VERSION}.1
+share/emacs/${EMACS_VERSION}/etc/DOC
 share/emacs/${EMACS_VERSION}/etc/ERC-NEWS
 share/emacs/${EMACS_VERSION}/etc/ETAGS.EBNF
 share/emacs/${EMACS_VERSION}/etc/ETAGS.README
@@ -2799,8 +2799,6 @@ share/emacs/${EMACS_VERSION}/lisp/net/trampver.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/trampver.elc
 share/emacs/${EMACS_VERSION}/lisp/net/webjump.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/webjump.elc
-share/emacs/${EMACS_VERSION}/lisp/net/xesam.el.gz
-share/emacs/${EMACS_VERSION}/lisp/net/xesam.elc
 share/emacs/${EMACS_VERSION}/lisp/net/zeroconf.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/zeroconf.elc
 share/emacs/${EMACS_VERSION}/lisp/newcomment.el.gz
@@ -2930,6 +2928,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/spell.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/spell.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sregex.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sregex.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/sup-mouse.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/sup-mouse.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/swedish.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/sym-comp.el.gz
@@ -2938,6 +2938,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/terminal.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/terminal.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/vc-mcvs.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/xesam.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/xesam.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/yow.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/yow.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-C.el.gz
@@ -3525,8 +3527,6 @@ share/emacs/${EMACS_VERSION}/lisp/term/screen.el.gz
 share/emacs/${EMACS_VERSION}/lisp/term/screen.elc
 share/emacs/${EMACS_VERSION}/lisp/term/sun.el.gz
 share/emacs/${EMACS_VERSION}/lisp/term/sun.elc
-share/emacs/${EMACS_VERSION}/lisp/term/sup-mouse.el.gz
-share/emacs/${EMACS_VERSION}/lisp/term/sup-mouse.elc
 share/emacs/${EMACS_VERSION}/lisp/term/tty-colors.el.gz
 share/emacs/${EMACS_VERSION}/lisp/term/tty-colors.elc
 share/emacs/${EMACS_VERSION}/lisp/term/tvi970.el.gz

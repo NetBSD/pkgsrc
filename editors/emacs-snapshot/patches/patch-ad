@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.2 2013/02/12 04:47:32 minskim Exp $
+$NetBSD: patch-ad,v 1.3 2013/05/31 23:20:18 minskim Exp $
 
 Magic line to avoid segmentation fault during build (not always happen).
 
---- lisp/cus-dep.el.orig	2010-06-02 09:53:41.000000000 -0700
+--- lisp/cus-dep.el.orig	2013-05-27 05:08:04.000000000 +0000
 +++ lisp/cus-dep.el
-@@ -59,6 +59,7 @@ Usage: emacs -batch -l ./cus-dep.el -f c
+@@ -70,6 +70,7 @@ Usage: emacs -batch -l ./cus-dep.el -f c
              (unless (or (string-match custom-dependencies-no-scan-regexp file)
-                         (string-match preloaded file)
+                         (string-match preloaded (format "%s/%s" subdir file))
                          (not (file-exists-p file)))
 +              (message file)
                (erase-buffer)
+               (kill-all-local-variables)
                (insert-file-contents file)
-               (goto-char (point-min))
