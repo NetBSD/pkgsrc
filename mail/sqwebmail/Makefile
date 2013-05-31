@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2012/10/08 12:19:32 asau Exp $
+# $NetBSD: Makefile,v 1.73 2013/05/31 12:41:21 wiz Exp $
 
 DISTNAME=	sqwebmail-5.5.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2

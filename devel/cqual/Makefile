@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/04/01 15:26:26 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2013/05/31 12:39:58 wiz Exp $
 #
 
 DISTNAME=		cqual-0.991
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cqual/}
 

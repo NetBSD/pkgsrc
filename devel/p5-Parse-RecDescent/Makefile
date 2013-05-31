@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2012/10/31 11:18:47 asau Exp $
+# $NetBSD: Makefile,v 1.30 2013/05/31 12:40:38 wiz Exp $
 #
 
 DISTNAME=	Parse-RecDescent-1.967009
 PKGNAME=	p5-${DISTNAME:S/967009/967.9/}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 

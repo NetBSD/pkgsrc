@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2013/02/06 23:21:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.85 2013/05/31 12:42:32 wiz Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/
 EXTRACT_SUFX=		.tgz
