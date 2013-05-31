@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/05/25 11:13:12 obache Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/31 08:41:55 wiz Exp $
 
 DISTNAME=	libproxy-0.4.11
 CATEGORIES=	www gnome
@@ -13,8 +13,14 @@ USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c99 c++
-LIBS.SunOS+=	-lnsl -lsocket
 CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if (${OPSYS} == "SunOS")
+# add libraries needed for Solaris, and add stuff cmake would add it on its own
+CMAKE_ARGS+=	CMAKE_EXE_LINKER_FLAGS:STRING="-lnsl -lsocket ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
+.endif
 
 PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
 PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in
