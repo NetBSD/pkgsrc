@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/28 06:30:14 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/31 12:42:32 wiz Exp $
 #
 
 DISTNAME=		drraw-2.2b2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases graphics www
 MASTER_SITES=		http://web.taranis.org/drraw/dist/
 

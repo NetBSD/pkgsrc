@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 09:57:36 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/05/31 12:41:29 wiz Exp $
 
 DISTNAME=	reed-5.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.sacredchao.net/software/reed/
 

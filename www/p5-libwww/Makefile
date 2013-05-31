@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2013/04/21 11:55:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2013/05/31 12:42:54 wiz Exp $
 
 DISTNAME=	libwww-perl-6.05
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GA/GAAS/}

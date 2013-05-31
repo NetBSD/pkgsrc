@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/25 06:56:11 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/31 12:42:09 wiz Exp $
 #
 
 DISTNAME=	Data-HexDump-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FT/FTASSIN/
 

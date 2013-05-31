@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:43 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/31 12:40:37 wiz Exp $
 
 DISTNAME=	POE-Component-Syndicator-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 

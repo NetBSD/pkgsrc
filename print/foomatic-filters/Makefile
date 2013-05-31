@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2013/04/24 10:06:51 sbd Exp $
+# $NetBSD: Makefile,v 1.24 2013/05/31 12:41:47 wiz Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

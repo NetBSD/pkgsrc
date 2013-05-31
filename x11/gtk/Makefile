@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2013/04/06 20:27:30 rodent Exp $
+# $NetBSD: Makefile,v 1.131 2013/05/31 12:42:56 wiz Exp $
 
 DISTNAME=		gtk+-1.2.10
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			${MASTER_SITE_GNOME:=sources/gtk+/1.2/}

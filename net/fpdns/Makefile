@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 17:18:21 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:32 wiz Exp $
 #
 
 DISTNAME=	fpdns-0.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.rfc.se/fpdns/distfiles/
 

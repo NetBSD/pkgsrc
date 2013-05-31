@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2013/02/06 23:23:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2013/05/31 12:41:45 wiz Exp $
 #
 
 DISTNAME=		sge-8.0.0d
 PKGNAME=		sge-8.0.0.4
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.0.0d/
 

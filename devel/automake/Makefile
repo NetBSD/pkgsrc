@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2013/05/18 14:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2013/05/31 12:39:57 wiz Exp $
 #
 
 # Note: when the minor version changes (e.g. 1.11 -> 1.12)
@@ -7,6 +7,7 @@
 # (It should be safe to make the change blindly.)
 
 DISTNAME=	automake-1.13.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=automake/} \
 		ftp://sources.redhat.com/pub/automake/

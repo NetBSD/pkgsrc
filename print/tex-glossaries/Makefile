@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 21:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:49 wiz Exp $
 
 DISTNAME=	glossaries
 PKGNAME=	tex-${DISTNAME}-3.01
-PKGREVISION=	2
+PKGREVISION=	3
 TEXLIVE_REV=	22100
 
 MAINTAINER=	jmmv@NetBSD.org

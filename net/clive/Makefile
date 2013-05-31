@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2012/10/23 17:18:14 asau Exp $
+# $NetBSD: Makefile,v 1.46 2013/05/31 12:41:32 wiz Exp $
 #
 
 DISTNAME=	clive-2.3.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://clive.googlecode.com/files/
 

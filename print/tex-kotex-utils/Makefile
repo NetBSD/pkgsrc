@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 13:45:47 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:49 wiz Exp $
 
 DISTNAME=	kotex-dist-20110504
 PKGNAME=	tex-kotex-utils-0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/ko.TeX/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/10/31 11:18:55 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/05/31 12:40:43 wiz Exp $
 
 DISTNAME=	Schedule-RateLimiter-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Schedule/}
 

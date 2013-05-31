@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 13:45:36 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/05/31 12:41:47 wiz Exp $
 #
 
 DISTNAME=	chktex-1.6.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://baruch.ev-en.org/proj/chktex/
 

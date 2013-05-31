@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/11/05 15:06:45 reed Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/31 12:41:15 wiz Exp $
 #
 
 DISTNAME=	mailsort-1.26
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AZ/AZS/mailsort/
 

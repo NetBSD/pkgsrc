@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:42 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/31 12:42:06 wiz Exp $
 
 DISTNAME=	aspell-da-1.7.30
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://da.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2

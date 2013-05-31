@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/11/10 14:24:44 pettai Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:58 wiz Exp $
 #
 
 DISTNAME=	sks-1.1.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://cdn.bitbucket.org/skskeyserver/sks-keyserver/downloads/
 EXTRACT_SUFX=	.tgz

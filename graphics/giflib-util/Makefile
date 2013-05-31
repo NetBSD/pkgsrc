@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:10:52 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:06 wiz Exp $
 #
 
 .include "../../graphics/giflib/Makefile.common"
 
 PKGNAME=	giflib-util-4.1.6
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	GIF image format utility
 

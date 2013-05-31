@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:20:58 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/31 12:41:30 wiz Exp $
 #
 
 DISTNAME=		dirac-1.0.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dirac/}
 
