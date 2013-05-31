@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.55 2012/10/03 00:10:29 asau Exp $
+# $NetBSD: Makefile,v 1.56 2013/05/31 12:39:46 wiz Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
 # gets built at cross-pkg build time (it's target specific).
 
 DISTNAME=		binutils-2.17
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		cross-binutils-2.17.0.0
 CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2012/10/03 21:54:24 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2013/05/31 12:39:55 wiz Exp $
 
 DISTNAME=	perl-ldap-0.4001
 PKGNAME=	p5-${DISTNAME:S/4001/40.01/}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	pldap
 CATEGORIES=	databases net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
