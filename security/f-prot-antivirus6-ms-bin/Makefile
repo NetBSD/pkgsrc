@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/04/08 11:17:21 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:51 wiz Exp $
 #
 DISTNAME=		${FP_DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		security
 
 MAINTAINER=		taca@NetBSD.org

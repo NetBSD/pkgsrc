@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:50 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/31 12:41:39 wiz Exp $
 #
 
 DISTNAME=	Net-Jifty-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

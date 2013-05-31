@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/03/16 07:21:24 obache Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/31 12:42:32 wiz Exp $
 #
 
 DISTNAME=	gallery-1.5.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gallery/}
 

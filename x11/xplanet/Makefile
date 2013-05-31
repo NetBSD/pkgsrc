@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2013/02/16 11:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2013/05/31 12:42:57 wiz Exp $
 
 DISTNAME=	xplanet-1.2.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xplanet/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:25 wiz Exp $
 #
 
 DISTNAME=	ppl-0.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 #MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/infrastructure/
 MASTER_SITES=	http://www.cs.unipr.it/ppl/Download/ftp/releases/0.11.2/
