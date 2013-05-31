@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/12/24 03:59:26 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2013/05/31 12:39:46 wiz Exp $
 
 DISTNAME=		avr-libc-1.6.7
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2

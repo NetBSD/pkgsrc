@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/10/08 13:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/05/31 12:39:39 wiz Exp $
 #
 
 DISTNAME=	spiceprm-0.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/apps/circuits/
 

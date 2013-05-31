@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 21:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/05/31 12:39:44 wiz Exp $
 
 DISTNAME=	Convert-TNEF-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	p5tnf
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}

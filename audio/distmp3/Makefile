@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/04/08 11:17:08 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2013/05/31 12:39:36 wiz Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.aydogan.net/audio/
 EXTRACT_SUFX=		.tar.bz2

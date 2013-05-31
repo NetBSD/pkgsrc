@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 21:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/05/31 12:39:46 wiz Exp $
 
 DISTNAME=		gcc-4.4.1
 PKGNAME=		avr-gcc-4.4.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}
 EXTRACT_SUFX=		.tar.bz2
