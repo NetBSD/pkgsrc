@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 21:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/31 12:39:38 wiz Exp $
 
 DISTNAME=	MusicBrainz-Client-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MusicBrainz/}
 
