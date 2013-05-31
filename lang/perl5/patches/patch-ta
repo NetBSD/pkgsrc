@@ -1,15 +1,15 @@
-$NetBSD: patch-ta,v 1.4 2011/08/05 18:06:15 adam Exp $
+$NetBSD: patch-ta,v 1.5 2013/05/31 10:55:15 adam Exp $
 
 On NetBSD, filesystems may be mounted with the noatime option.
 
---- t/io/fs.t.orig	2009-12-06 21:03:51.000000000 +0000
-+++ t/io/fs.t	2009-12-06 21:04:34.000000000 +0000
-@@ -275,15 +275,15 @@
+--- t/io/fs.t.orig	2013-05-01 02:52:56.000000000 +0000
++++ t/io/fs.t
+@@ -275,15 +275,15 @@ sub check_utime_result {
  		is( $atime, 500000001,          'atime' );
  		is( $mtime, 500000000 + $delta, 'mtime' );
  	    }
--	    elsif ($^O eq 'beos' || $^O eq 'haiku') {
-+	    elsif ($^O eq 'beos' || $^O eq 'haiku' || $^O eq 'netbsd') {
+-	    elsif ($^O eq 'haiku') {
++	    elsif ($^O eq 'haiku' || $^O eq 'netbsd')) {
              SKIP: {
  		    skip "atime not updated", 1;
  		}
