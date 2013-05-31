@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12222 2013/05/31 01:13:50 rodent Exp $
+$NetBSD: TODO,v 1.12223 2013/05/31 10:56:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -919,7 +919,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
 	o pen-0.17.3
-	o perl-5.18.0
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
 	o php-concrete5-5.6.1.2
