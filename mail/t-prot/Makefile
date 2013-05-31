@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 12:19:33 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:21 wiz Exp $
 #
 
 DISTNAME=	t-prot-2.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.escape.de/users/tolot/mutt/t-prot/downloads/
 

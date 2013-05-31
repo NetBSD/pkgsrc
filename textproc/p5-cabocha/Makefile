@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/05/22 13:14:29 obache Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/05/31 12:42:23 wiz Exp $
 
 .include "../../textproc/cabocha/Makefile.common"
 
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 
 COMMENT=	CaboCha perl module
 

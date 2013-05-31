@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/29 05:06:42 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/05/31 12:42:56 wiz Exp $
 
 DISTNAME=	Gtk2-Ex-FormFactory-0.67
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/
 
