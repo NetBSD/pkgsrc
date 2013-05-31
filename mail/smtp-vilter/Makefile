@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2013/05/30 18:18:51 mbalmer Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/31 12:56:42 mbalmer Exp $
 
 DISTNAME=		smtp-vilter-1.3.8
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz
-PKGREVISION=		1
+PKGREVISION=		2
 
-MAINTAINER=		Marc Balmer <marc@msys.ch>
+MAINTAINER=		marc@msys.ch
 HOMEPAGE=		http://www.etc.msys.ch/software/smtp-vilter/
 COMMENT=		milter to scan messages for viruses and spam
 
