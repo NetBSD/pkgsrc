@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1865 2013/05/31 12:39:56 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.1866 2013/05/31 14:33:25 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2997,3 +2997,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXtst to 1.2.2 [wiz 2013-05-31]
 	Updated lang/perl5 to 5.18.0 [adam 2013-05-31]
 	Updated lang/nodejs to 0.10.9 [fhajny 2013-05-31]
+	Updated net/rabbitmq to 3.1.1 [fhajny 2013-05-31]
