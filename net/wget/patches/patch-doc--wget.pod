@@ -1,0 +1,64 @@
+$NetBSD: patch-doc--wget.pod,v 1.1 2013/05/31 20:18:06 martin Exp $
+
+# fix syntax errors with newer pod2man
+
+--- doc/wget.pod.orig	2013-05-31 21:26:38.000000000 +0200
++++ doc/wget.pod	2013-05-31 21:47:31.000000000 +0200
+@@ -2097,48 +2097,48 @@
+ =over 4
+ 
+ 
+-=item 0
++=item "0"
+ 
+ No problems occurred.
+ 
+ 
+-=item 1
++=item "1"
+ 
+ Generic error code.
+ 
+ 
+-=item 2
++=item "2"
+ 
+ Parse error---for instance, when parsing command-line options, the
+ B<.wgetrc> or B<.netrc>...
+ 
+ 
+-=item 3
++=item "3"
+ 
+ File I/O error.
+ 
+ 
+-=item 4
++=item "4"
+ 
+ Network failure.
+ 
+ 
+-=item 5
++=item "5"
+ 
+ SSL verification failure.
+ 
+ 
+-=item 6
++=item "6"
+ 
+ Username/password authentication failure.
+ 
+ 
+-=item 7
++=item "7"
+ 
+ Protocol errors.
+ 
+ 
+-=item 8
++=item "8"
+ 
+ Server issued an error response.
+ 
