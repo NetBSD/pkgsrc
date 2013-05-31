@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2012/01/22 19:00:34 abs Exp $
+$NetBSD: patch-ah,v 1.3 2013/05/31 20:13:24 adam Exp $
 
 --- myConfig.orig	2012-01-22 18:50:31.000000000 +0000
 +++ myConfig
-@@ -336,7 +336,7 @@ if ($win_arch eq 'x') {
+@@ -346,7 +346,7 @@ if ($win_arch eq 'x') {
    #
    # Prefer 64bit libraries on certain architectures
    #
