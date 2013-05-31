@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/01 22:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/31 21:39:39 ryoon Exp $
 #
 
 FIREFOX_VER=	3.6.28
@@ -34,5 +34,5 @@ SUBST_STAGE.chop=	post-configure
 SUBST_FILES.chop=	ta-LK/install.rdf
 SUBST_SED.chop=		-e '1,3d'
 
-.include "../../devel/xulrunner/xpi.mk"
+.include "../../www/firefox/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
