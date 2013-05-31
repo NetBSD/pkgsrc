@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1859 2013/05/31 08:27:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1860 2013/05/31 08:28:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2981,3 +2981,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXp to 1.0.2 [wiz 2013-05-31]
 	Updated x11/libXres to 1.0.7 [wiz 2013-05-31]
 	Updated x11/libXt to 1.1.4 [wiz 2013-05-31]
+	Updated x11/libXxf86dga to 1.1.4 [wiz 2013-05-31]
