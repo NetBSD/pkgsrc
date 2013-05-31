@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2013/05/29 03:25:38 rodent Exp $
+# $NetBSD: Makefile,v 1.24 2013/05/31 11:37:25 rodent Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-apps-1.11
+PKGNAME=	modular-xorg-apps-1.14
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 DISTFILES=	# empty
