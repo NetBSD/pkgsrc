@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 21:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/05/31 12:39:48 wiz Exp $
 #
 
 DISTNAME=	mytop-1.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	http://jeremy.zawodny.com/mysql/mytop/
 

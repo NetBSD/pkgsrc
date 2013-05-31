@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/04/24 05:35:42 kim Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/31 12:39:37 wiz Exp $
 #
 
 DISTNAME=	mstream-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://oss.gw.com/people/kim/
 

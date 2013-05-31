@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 00:02:35 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/31 12:39:40 wiz Exp $
 #
 
 DISTNAME=		dccserver-0.5
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://www.nih.at/dccserver/
 EXTRACT_SUFX=		.tar.bz2

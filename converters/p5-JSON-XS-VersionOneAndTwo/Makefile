@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/31 12:39:45 wiz Exp $
 
 DISTNAME=	JSON-XS-VersionOneAndTwo-0.31
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LB/LBROCARD/}
 
