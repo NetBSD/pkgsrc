@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/07 12:21:09 tron Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/01 15:58:01 tron Exp $
 
---- demime.stable.orig	Wed Apr 17 17:08:40 2002
-+++ demime.stable
+Enable 8bit mode and fix build with Perl 5.18 and newer.
+
+--- demime.stable.orig	2013-06-01 16:48:54.000000000 +0100
++++ demime.stable	2013-06-01 16:55:48.000000000 +0100
 @@ -21,7 +21,7 @@
  
  # Following controls whether only 7 bit output
@@ -11,3 +13,34 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/07 12:21:09 tron Exp $
  
  # Following configuration variable controls whether a message/rfc822
  # in a multipart/mixed main segment is rendered or elided.
+@@ -2198,6 +2198,8 @@
+ 
+ =head2 Parameters
+ 
++=over
++
+ =item -p | --[no]preservefrom
+ 
+ Controls whether demime passes the Unix style "From" line through, if it
+@@ -2386,9 +2388,12 @@
+ If demime has not yet tried to produce any output, none of the other 
+ possibilities will apply.
+ 
++=back
+ 
+ =head2 What demime will do when faced with different types of input:
+ 
++=over
++
+ =item B<text/plain or no content type in mail header>
+ 
+ The content will be passed through without reformatting.  A scan will
+@@ -2490,6 +2495,8 @@
+ If the program does not recognize the top level mime type of the mail
+ then a message will be printed and the mail will be bounced.
+ 
++=back
++
+ =head1 FILES
+ 
+ If the installer has left $AD_REMOVE = 1 in the program header (the
