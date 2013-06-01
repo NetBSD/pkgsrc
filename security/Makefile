@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.468 2013/05/26 21:29:00 rodent Exp $
+# $NetBSD: Makefile,v 1.469 2013/06/01 14:32:22 shattered Exp $
 #
 
 COMMENT=	Security tools
@@ -279,6 +279,7 @@ SUBDIR+=	pam-saml
 SUBDIR+=	pam-tacplus
 SUBDIR+=	pam-yubico
 SUBDIR+=	pam_ssh_agent_auth
+SUBDIR+=	paperkey
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
 SUBDIR+=	pgp2
