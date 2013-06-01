@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 18:16:21 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/06/01 12:19:30 shattered Exp $
 
-DISTNAME=	avcheck-0.9
+DISTNAME=	avcheck-0.91
+PKGNAME=	avcheck-0.9.1
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.corpit.ru/ftp/avcheck/
 
