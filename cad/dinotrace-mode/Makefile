@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2013/02/17 19:17:55 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/01 14:05:13 shattered Exp $
 #
 
-DISTNAME=	dinotrace-9.3c
-PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-9.3c
-PKGREVISION=	2
+DISTNAME=	dinotrace-9.4c
+PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-9.4c
 CATEGORIES=	cad editors
-MASTER_SITES=	http://www.veripool.com/ftp/
+MASTER_SITES=	http://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.veripool.com/dinotrace/
+HOMEPAGE=	http://www.veripool.org/dinotrace/
 COMMENT=	Emacs major mode for dinotrace
+
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode>=3.13:../../cad/verilog-mode
 
