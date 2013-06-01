@@ -1,6 +1,6 @@
-# $NetBSD: giflib.buildlink3.mk,v 1.1 2011/03/09 16:22:01 drochner Exp $
+# $NetBSD: giflib.buildlink3.mk,v 1.2 2013/06/01 19:44:53 rillig Exp $
 
-# choose a GIF library implemtation:
+# choose a GIF library implementation:
 # "libungif" was used to avoid patent problems. The patents are
 # expired, so "giflib" should be safe to use.
 
