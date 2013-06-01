@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/04/22 11:48:29 wiz Exp $
+$NetBSD: distinfo,v 1.8 2013/06/01 07:34:58 wiz Exp $
 
-SHA1 (GnuPG-Interface-0.45.tar.gz) = 1d34cc20ea538804a8c5dbb3aec1e11862724f90
-RMD160 (GnuPG-Interface-0.45.tar.gz) = 0e5aef93e84a58daae6aa09901a699b930e19e04
-Size (GnuPG-Interface-0.45.tar.gz) = 67148 bytes
+SHA1 (GnuPG-Interface-0.46.tar.gz) = 0d084507f2c09eca158c3948e35567d69fff768c
+RMD160 (GnuPG-Interface-0.46.tar.gz) = 7cdc1a04fa8be4ad11d0aa8519bdf98ff7949156
+Size (GnuPG-Interface-0.46.tar.gz) = 67892 bytes
