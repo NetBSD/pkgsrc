@@ -1,0 +1,25 @@
+$NetBSD: patch-AUTHORS,v 1.1 2013/06/01 07:46:43 wiz Exp $
+
+Remove characters that perl-5.18's pod2man doesn't like
+(this file is included verbatim in the docs).
+
+--- AUTHORS.orig	2012-06-16 18:38:51.000000000 +0000
++++ AUTHORS
+@@ -3550,7 +3550,7 @@ Cvetan Ivanov		<zezo [AT] spnet.net>
+ Vasanth Manickam	<vasanth.manickam [AT] bt.com>
+ Julian Onions		<julian.onions [AT] gmail.com>
+ Samuel Thibault		<samuel.thibault [AT] ens-lyon.org>
+-Peter Kovář		<peter.kovar [AT] gmail.com>
++Peter Kovar		<peter.kovar [AT] gmail.com>
+ Paul Ollis		<paul.ollis [AT] roke.co.uk>
+ Dominik Kuhlen		<dkuhlen [AT] gmx.net>
+ Karl Knoebl		<karl.knoebl [AT] siemens.com>
+@@ -3641,7 +3641,7 @@ Paul Stath		<pstath [AT] axxcelera.com>
+ DeCount			<aatrade [AT] libero.it>
+ Andras Veres-Szentkiralyi	<vsza [AT] vsza.hu>
+ Jakob Hirsch 		<jh.wireshark-bugzilla [AT] plonk.de>
+-Роман Донченко		<DXDragon [AT] yandex.ru>
++			<DXDragon [AT] yandex.ru>
+ 			<billyjeans [AT] gmail.com>
+ Evan Huus		<eapache [AT] gmail.com>
+ Tom Cook		<tcook [AT] ixiacom.com>
