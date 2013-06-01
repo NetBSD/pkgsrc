@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2013/06/01 07:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2013/06/01 07:38:16 wiz Exp $
 
 DISTNAME=	pango-1.34.1
 CATEGORIES=	devel fonts
@@ -58,7 +58,7 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.5.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=0.9.9
 .include "../../fonts/harfbuzz/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.10
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
