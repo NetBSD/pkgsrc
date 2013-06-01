@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1879 2013/06/01 14:04:12 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1880 2013/06/01 14:23:06 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3013,3 +3013,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-GnuPG-Interface to 0.46 [wiz 2013-06-01]
 	Updated net/p5-NetAddr-IP to 4.069 [tron 2013-06-01]
 	Updated devel/rcs to 5.9.0nb1 [ryoon 2013-06-01]
+	Updated net/bftpd to 3.7 [shattered 2013-06-01]
+	Updated sysutils/tpb to 0.6.4 [shattered 2013-06-01]
+	Updated security/avcheck to 0.9.1 [shattered 2013-06-01]
+	Updated cad/dinotrace to 9.4c [shattered 2013-06-01]
+	Updated cad/dinotrace-mode to 9.4c [shattered 2013-06-01]
