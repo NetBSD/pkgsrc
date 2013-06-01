@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/05/26 17:23:44 stacktic Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/01 15:42:03 stacktic Exp $
 #
 
-VERSION_TIMESTAMP=	1369495826
-PKGNAME=		rump-20130525
-DISTNAME=		buildrump-${VERSION_TIMESTAMP}
+VERSION=		20130601
+PKGNAME=		rump-${VERSION}
+DISTNAME=		buildrump-${VERSION}
 EXTRACT_SUFX=		.tar.bz2
 
 CATEGORIES=		misc
