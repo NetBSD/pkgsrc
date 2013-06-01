@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12225 2013/06/01 07:24:05 wiz Exp $
+$NetBSD: TODO,v 1.12226 2013/06/01 14:23:06 shattered Exp $
 
 Suggested new packages
 ======================
@@ -387,7 +387,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o autoconf-archive-20130406
 	o autoconvert-0.3.16
 	o autogen-5.17.4
-	o avcheck-0.91
 	o avidemux-2.6
 	o avl-2.0.2a
 	o awesome-3.5
@@ -399,7 +398,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o benchfft-3.1
-	o bftpd-3.7
 	o biew-6.1.0
 	o bioperl-1.5.0
 	o blender-2.67
@@ -482,8 +480,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhid-5.3
 	o diffstat-1.57
 	o dillo-3.0.3
-	o dinotrace-9.3e
-	o dinotrace-mode-9.3e
 	o doclifter-2.10
 	o dpkg-1.16.9 [pkg/47234]
 	o dri-7.8.2 [wip]
@@ -1113,7 +1109,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o totem-3.4.1
-	o tpb-0.6.4
 	o trac-1.0.1
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
