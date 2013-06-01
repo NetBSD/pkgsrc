@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.13 2007/11/15 12:09:52 rillig Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.14 2013/06/01 19:31:52 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -12,17 +12,19 @@
 #
 # The following targets are defined by bsd.pkg.clean.mk:
 #
-#    clean-depends is the target which descends into dependencies'
-#	package directories and invokes the "clean" action.
+# clean-depends:
+#	descends into dependencies' package directories and invokes the
+#	"clean" action.
 #
-#    do-clean is the target that does the actual cleaning, which
-#	involves removing the work directory and other temporary
-#	files used by the package.
+# do-clean:
+#	does the actual cleaning, which involves removing the work
+#	directory and other temporary files used by the package.
 #
-#    clean is the target that is invoked by the user to perform
-#	the "clean" action.
+# clean:
+#	is invoked by the user to perform the "clean" action.
 #
-#    cleandir is an alias for "clean".
+# cleandir:
+#	an alias for "clean".
 #
 
 CLEANDEPENDS?=	no
