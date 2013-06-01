@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1873 2013/06/01 03:47:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1874 2013/06/01 06:50:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3007,3 +3007,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs-snapshot to 24.3.50.20130527 [minskim 2013-05-31]
 	Updated security/p5-Crypt-Twofish to 2.17 [obache 2013-06-01]
 	Updated devel/p5-Devel-Size to 0.79 [obache 2013-06-01]
+	Updated x11/libXext to 1.3.2 [wiz 2013-06-01]
