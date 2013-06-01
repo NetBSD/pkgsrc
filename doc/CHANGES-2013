@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1872 2013/06/01 02:26:14 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1873 2013/06/01 03:47:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3006,3 +3006,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/glib2 to 2.36.2 [prlw1 2013-05-31]
 	Updated editors/emacs-snapshot to 24.3.50.20130527 [minskim 2013-05-31]
 	Updated security/p5-Crypt-Twofish to 2.17 [obache 2013-06-01]
+	Updated devel/p5-Devel-Size to 0.79 [obache 2013-06-01]
