@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_ssl_SSL__CTX__add__session.pod,v 1.1 2013/06/01 08:03:55 sbd Exp $
+
+Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
+
+--- doc/ssl/SSL_CTX_add_session.pod.orig	2013-02-11 15:02:48.000000000 +0000
++++ doc/ssl/SSL_CTX_add_session.pod
+@@ -58,7 +58,7 @@ The following values are returned by all
+  the same (identical) session twice. In case of the remove operation, the
+  session was not found in the cache.
+ 
+-=item 1
++=item Z<>1
+  
+  The operation succeeded.
+ 
