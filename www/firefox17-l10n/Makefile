@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/01 08:14:33 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/01 08:21:57 ryoon Exp $
 #
 
 FIREFOX_VER=	17.0.6esr
@@ -27,5 +27,5 @@ FIREFOX_LOCALES=af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da	\
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox17/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
 
-.include "../../www/firefox/xpi.mk"
+.include "../../devel/xulrunner17/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
