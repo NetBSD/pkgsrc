@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_ssl_SSL__session__reused.pod,v 1.1 2013/06/01 08:03:55 sbd Exp $
+
+Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
+
+--- doc/ssl/SSL_session_reused.pod.orig	2013-02-11 15:02:48.000000000 +0000
++++ doc/ssl/SSL_session_reused.pod
+@@ -31,7 +31,7 @@ The following return values can occur:
+ 
+ A new session was negotiated.
+ 
+-=item 1
++=item Z<>1
+ 
+ A session was reused.
+ 
