@@ -1,0 +1,4 @@
+Paperkey extracts secret bytes from GnuPG key and prints them. To
+reconstruct, you re-enter those bytes (whether by hand or via OCR)
+and paperkey can use them to transform your existing public key
+into a secret key.
