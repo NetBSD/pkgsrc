@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2013/05/26 17:25:30 stacktic Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/01 15:43:47 stacktic Exp $
 #
 
-GIT_COMMIT=		07383d
+GIT_COMMIT=		89cccf
 DISTNAME=		${GIT_COMMIT}
-PKGNAME=		fs-utils-20130519
+PKGNAME=		fs-utils-20130601
 
 CATEGORIES=		filesystems
 MASTER_SITES=		-http://nodeload.github.com/stacktic/fs-utils/tar.gz/${GIT_COMMIT}
