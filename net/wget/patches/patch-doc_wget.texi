@@ -1,0 +1,48 @@
+$NetBSD: patch-doc_wget.texi,v 1.1 2013/06/01 07:22:51 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- doc/wget.texi.orig	2012-08-04 08:41:52.000000000 +0000
++++ doc/wget.texi
+@@ -2106,32 +2106,32 @@ Wget may return one of several error cod
+ 
+ 
+ @table @asis
+-@item 0
++@item "0"
+ No problems occurred.
+ 
+-@item 1
++@item "1"
+ Generic error code.
+ 
+-@item 2
++@item "2"
+ Parse error---for instance, when parsing command-line options, the
+ @samp{.wgetrc} or @samp{.netrc}...
+ 
+-@item 3
++@item "3"
+ File I/O error.
+ 
+-@item 4
++@item "4"
+ Network failure.
+ 
+-@item 5
++@item "5"
+ SSL verification failure.
+ 
+-@item 6
++@item "6"
+ Username/password authentication failure.
+ 
+-@item 7
++@item "7"
+ Protocol errors.
+ 
+-@item 8
++@item "8"
+ Server issued an error response.
+ @end table
+ 
