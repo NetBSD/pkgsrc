@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/05/26 17:25:30 stacktic Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/01 15:43:47 stacktic Exp $
 bin/fsu_cat
 bin/fsu_chflags
 bin/fsu_chmod
