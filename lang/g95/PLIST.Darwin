@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2013/06/01 14:44:01 tron Exp $
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crt2.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_s.10.4.dylib
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_s.10.5.dylib
