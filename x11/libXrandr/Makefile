@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/29 05:06:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.14 2013/06/01 07:15:52 wiz Exp $
 
-DISTNAME=		libXrandr-1.4.0
+DISTNAME=		libXrandr-1.4.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
