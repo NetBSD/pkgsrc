@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.45 2013/05/31 12:39:39 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2013/06/01 14:05:13 shattered Exp $
 #
 
-DISTNAME=	dinotrace-9.3c
-PKGREVISION=	3
+DISTNAME=	dinotrace-9.4c
 CATEGORIES=	cad
-MASTER_SITES=	http://www.veripool.com/ftp/
+MASTER_SITES=	http://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.veripool.com/dinotrace/
+HOMEPAGE=	http://www.veripool.org/dinotrace/
 COMMENT=	Tool for viewing the output of digital simulators
+
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		YES

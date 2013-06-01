@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/03/02 02:46:15 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2013/06/01 14:05:13 shattered Exp $
 
-SHA1 (dinotrace-9.3c.tgz) = ed37f7fde4f69d42ee3904d363b35fd1be0a44bc
-RMD160 (dinotrace-9.3c.tgz) = 545d60ef99e7e878cc9380fef805deca6ad77cce
-Size (dinotrace-9.3c.tgz) = 521395 bytes
+SHA1 (dinotrace-9.4c.tgz) = f7c2dd5c33119e267512a7534dc0633aa9cbc3bb
+RMD160 (dinotrace-9.4c.tgz) = e5a104b29a90a5e3d1475201fc219fcd6ffcb1b5
+Size (dinotrace-9.4c.tgz) = 785793 bytes
