@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/09/12 10:12:52 sno Exp $
+$NetBSD: distinfo,v 1.4 2013/06/01 03:46:57 obache Exp $
 
-SHA1 (Devel-Size-0.78.tar.gz) = ff6d603a7db664cecb73b210a99a631b7c30f7af
-RMD160 (Devel-Size-0.78.tar.gz) = 0fcf2b6118b79b625561c8d4ec80eaf67932e669
-Size (Devel-Size-0.78.tar.gz) = 68256 bytes
+SHA1 (Devel-Size-0.79.tar.gz) = f3ad8debbcbd4129754f0e6c3454a30ae75204c7
+RMD160 (Devel-Size-0.79.tar.gz) = fa604c5b230047a22f06861031dea6e5fdd8b68d
+Size (Devel-Size-0.79.tar.gz) = 69068 bytes
