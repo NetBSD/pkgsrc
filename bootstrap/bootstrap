@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.192 2013/05/11 23:42:44 ryoon Exp $
+# $NetBSD: bootstrap,v 1.193 2013/06/01 12:15:54 tron Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -497,6 +497,9 @@ Darwin)
 	osrev=`uname -r`
 	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
 	case "$macosx_version" in
+	10.[7-8])
+		packagemaker=/Applications/PackageMaker.app/Contents/MacOS/PackageMaker
+		;;
 	10.[0-4])
 		packagemaker=/Developer/Tools/packagemaker
 		;;
