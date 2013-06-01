@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/03/21 05:05:06 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/01 22:42:49 dholland Exp $
 
 DISTNAME=	kernel_ppp_mppe-0.0.4-src
 PKGNAME=	mppe-lkm-0.0.4
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 NO_CONFIGURE=	yes
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-[12345]*-*
 MAKE_ENV+=	KMODDIR=${PREFIX}/lkm
 WRKSRC=		${WRKDIR}/mppe-lkm
 KPM_SRC=	${WRKDIR}/${DISTNAME:C/-src$//}
