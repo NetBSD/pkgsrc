@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2013/05/31 12:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2013/06/01 23:15:42 wiz Exp $
 
 DISTNAME=	wesnoth-1.10.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -43,9 +43,6 @@ REPLACE_PYTHON+=	data/tools/unit_tree/TeamColorizer
 REPLACE_PYTHON+=	data/tools/unit_tree/overview.py
 REPLACE_PYTHON+=	utils/ai_test/*.py
 REPLACE_PYTHON+=	utils/*.py
-
-REPLACE_RUBY=		data/tools/terrain2wiki.rb
-.include "../../lang/ruby/replace.mk"
 
 REPLACE_SH+=		data/tools/castle-cutter/mk-castle.sh
 REPLACE_SH+=		data/tools/castle-cutter/mk-all-castles.sh
