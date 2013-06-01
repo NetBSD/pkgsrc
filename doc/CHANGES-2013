@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1878 2013/06/01 12:50:40 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1879 2013/06/01 14:04:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3012,3 +3012,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/pango to 1.34.1 [wiz 2013-06-01]
 	Updated security/p5-GnuPG-Interface to 0.46 [wiz 2013-06-01]
 	Updated net/p5-NetAddr-IP to 4.069 [tron 2013-06-01]
+	Updated devel/rcs to 5.9.0nb1 [ryoon 2013-06-01]
