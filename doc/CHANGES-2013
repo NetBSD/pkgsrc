@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1881 2013/06/01 14:44:22 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1882 2013/06/01 15:45:21 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3019,3 +3019,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated cad/dinotrace to 9.4c [shattered 2013-06-01]
 	Updated cad/dinotrace-mode to 9.4c [shattered 2013-06-01]
 	Updated lang/g95 to 0.93nb2 [tron 2013-06-01]
+	Updated misc/rump to 20130601 [stacktic 2013-06-01]
+	Updated filesystems/fs-utils to 20130601 [stacktic 2013-06-01]
