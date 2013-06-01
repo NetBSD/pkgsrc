@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1880 2013/06/01 14:23:06 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.1881 2013/06/01 14:44:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3018,3 +3018,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/avcheck to 0.9.1 [shattered 2013-06-01]
 	Updated cad/dinotrace to 9.4c [shattered 2013-06-01]
 	Updated cad/dinotrace-mode to 9.4c [shattered 2013-06-01]
+	Updated lang/g95 to 0.93nb2 [tron 2013-06-01]
