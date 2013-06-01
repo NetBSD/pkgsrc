@@ -1,20 +1,23 @@
-$NetBSD: patch-aa,v 1.4 2010/05/27 14:14:30 obache Exp $
+$NetBSD: patch-aa,v 1.5 2013/06/01 12:13:04 shattered Exp $
 
---- Makefile.in.orig	2010-04-05 00:22:43.000000000 +0000
+--- Makefile.in.orig	2012-02-20 00:49:26.000000000 +0000
 +++ Makefile.in
-@@ -26,15 +26,9 @@ bftpd: $(OBJS)
+@@ -26,18 +26,9 @@ bftpd: $(OBJS)
  $(OBJS): $(HEADERS) Makefile
  
  install: all
+-	mkdir -p $(DESTDIR)/$(prefix)/sbin
 -	$(INSTALL) -g 0 -m 700 -o 0 bftpd $(DESTDIR)/$(prefix)/sbin
+-	mkdir -p $(DESTDIR)/$(mandir)/man8
 -	$(INSTALL) -g 0 -m 644 -o 0 bftpd.8 $(DESTDIR)/$(mandir)/man8
--	[ -f $(DESTDIR)/etc/bftpd.conf ] || \
--		$(INSTALL) -g 0 -m 600 -o 0 bftpd.conf $(DESTDIR)/etc
--	mkdir -p $(DESTDIR)/var/log
--	touch $(DESTDIR)/var/log/bftpd.log
--	chmod 644 $(DESTDIR)/var/log/bftpd.log
--	mkdir -p $(DESTDIR)/var/run/bftpd
--	chmod 755 $(DESTDIR)/var/run/bftpd
+-	mkdir -p $(DESTDIR)/$(prefix)/etc
+-	[ -f $(DESTDIR)/$(prefix)/etc/bftpd.conf ] || \
+-		$(INSTALL) -g 0 -m 600 -o 0 bftpd.conf $(DESTDIR)/$(prefix)/etc
+-	mkdir -p $(DESTDIR)/$(prefix)/var/log
+-	touch $(DESTDIR)/$(prefix)/var/log/bftpd.log
+-	chmod 644 $(DESTDIR)/$(prefix)/var/log/bftpd.log
+-	mkdir -p $(DESTDIR)/$(prefix)/var/run/bftpd
+-	chmod 755 $(DESTDIR)/$(prefix)/var/run/bftpd
 +	$(INSTALL) -m 700 bftpd $(DESTDIR)/$(prefix)/sbin
 +	$(INSTALL) -m 644 bftpd.8 $(DESTDIR)/$(mandir)/man8
 +	$(INSTALL) -m 600 bftpd.conf $(DESTDIR)/$(prefix)/share/examples/bftpd
