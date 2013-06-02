@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.22 2013/05/31 06:17:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.23 2013/06/02 11:08:29 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -81,3 +81,5 @@ Pullup ticket #4142 - requested by spz
 devel/rt3: security update
 Pullup ticket #4143 - requested by spz
 www/apache-tomcat6: security update
+Pullup ticket #4148 - requested by tron
+www/apache22: security patch
