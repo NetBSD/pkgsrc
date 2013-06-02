@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1887 2013/06/02 08:01:44 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1888 2013/06/02 11:25:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3026,3 +3026,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/openjdk7 to 1.7.21 [ryoon 2013-06-02]
 	Updated www/icedtea-web to 1.5pre [ryoon 2013-06-02]
 	Updated devel/mercurial to 2.6.2 [wiz 2013-06-02]
+	Updated lang/newlisp to 10.5.0 [ryoon 2013-06-02]
