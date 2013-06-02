@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1883 2013/06/01 23:15:53 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1884 2013/06/02 01:48:57 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/rump to 20130601 [stacktic 2013-06-01]
 	Updated filesystems/fs-utils to 20130601 [stacktic 2013-06-01]
 	Updated games/wesnoth to 1.10.5nb4 [wiz 2013-06-01]
+	Added devel/py-tabular version 0.1 [dholland 2013-06-02]
