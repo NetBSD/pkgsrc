@@ -1,0 +1,86 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/06/02 06:15:44 ryoon Exp $
+
+* cp -a is not portable, DragonFly 3.2.2 has not -a option of cp at least.
+
+--- Makefile.am.orig	2013-05-20 14:22:44.000000000 +0000
++++ Makefile.am
+@@ -240,9 +240,9 @@ if ENABLE_PLUGIN
+ endif
+ 	${INSTALL_DATA} $(NETX_DIR)/lib/classes.jar $(DESTDIR)$(datadir)/$(PACKAGE_NAME)/netx.jar
+ 	${INSTALL_DATA} $(NETX_SRCDIR)/javaws_splash.png $(DESTDIR)$(datadir)/$(PACKAGE_NAME)/javaws_splash.png
+-	${INSTALL_PROGRAM} launcher.build/$(javaws) $(DESTDIR)$(bindir)
++	${INSTALL_SCRIPT} launcher.build/$(javaws) $(DESTDIR)$(bindir)
+ 	${INSTALL_DATA} extra-lib/about.jar $(DESTDIR)$(datadir)/$(PACKAGE_NAME)/about.jar
+-	${INSTALL_PROGRAM} launcher.build/$(itweb_settings) $(DESTDIR)$(bindir)
++	${INSTALL_SCRIPT} launcher.build/$(itweb_settings) $(DESTDIR)$(bindir)
+ 
+ install-data-local:
+ 	${mkinstalldirs} -d $(DESTDIR)$(mandir)/man1
+@@ -251,15 +251,15 @@ install-data-local:
+ if ENABLE_DOCS
+ 	${mkinstalldirs} $(DESTDIR)$(htmldir)
+ 	(cd ${abs_top_builddir}/docs/netx; \
+-	 for files in $$(find . -type f); \
++	 for files in *; \
+ 	 do \
+-	   ${INSTALL_DATA} -D $${files} $(DESTDIR)$(htmldir)/netx/$${files}; \
++	   ${INSTALL_DATA} $${files} $(DESTDIR)$(htmldir)/netx/; \
+ 	 done)
+ if ENABLE_PLUGIN
+ 	(cd ${abs_top_builddir}/docs/plugin; \
+-	 for files in $$(find . -type f); \
++	 for files in *; \
+ 	 do \
+-	   ${INSTALL_DATA} -D $${files} $(DESTDIR)$(htmldir)/plugin/$${files}; \
++	   ${INSTALL_DATA} $${files} $(DESTDIR)$(htmldir)/plugin/; \
+ 	 done)
+ endif
+ endif
+@@ -454,21 +454,21 @@ if !HAVE_JAVA7
+ endif
+ 
+ stamps/netx.stamp: netx-source-files.txt stamps/bootstrap-directory.stamp
+-	mkdir -p $(NETX_DIR)
++	mkdir -p $(NETX_DIR)/net/sourceforge/jnlp/resources
+ 	$(BOOT_DIR)/bin/javac $(IT_JAVACFLAGS) \
+ 	    -d $(NETX_DIR) \
+ 	    -sourcepath $(NETX_SRCDIR) \
+ 	    -bootclasspath $(RUNTIME) \
+ 	    @netx-source-files.txt
+ 	(cd $(NETX_RESOURCE_DIR); \
+-	 for files in $$(find . -type f); \
++	 for files in *; \
+ 	 do \
+-	   ${INSTALL_DATA} -D $${files} \
+-	   $(NETX_DIR)/net/sourceforge/jnlp/resources/$${files}; \
++	   ${INSTALL_DATA} $${files} \
++	   $(NETX_DIR)/net/sourceforge/jnlp/resources/; \
+ 	 done)
+-	cp -a $(NETX_SRCDIR)/net/sourceforge/jnlp/runtime/pac-funcs.js \
++	cp -RpP $(NETX_SRCDIR)/net/sourceforge/jnlp/runtime/pac-funcs.js \
+ 	  $(NETX_DIR)/net/sourceforge/jnlp/runtime
+-	cp -a build.properties $(NETX_DIR)/net/sourceforge/jnlp/
++	cp -RpP build.properties $(NETX_DIR)/net/sourceforge/jnlp/
+ 	mkdir -p stamps
+ 	touch $@
+ 
+@@ -499,15 +499,15 @@ extra-source-files.txt:
+ 	find $(abs_top_srcdir)/extra -name '*.java' | sort > $@
+ 
+ stamps/extra-class-files.stamp: extra-source-files.txt stamps/netx.stamp
+-	mkdir -p extra-lib
++	mkdir -p ${NETX_EXTRA_DIST_DIR}
+ 	$(BOOT_DIR)/bin/javac $(IT_JAVACFLAGS) -d extra-lib \
+           -sourcepath $(abs_top_srcdir)/extra -cp netx.build \
+           -bootclasspath $(RUNTIME) @extra-source-files.txt
+ 	(cd $(NETX_EXTRA_DIR); \
+-	 for files in $$(find . -type f); \
++	 for files in *; \
+ 	 do \
+-	   ${INSTALL_DATA} -D $${files} \
+-	   $(NETX_EXTRA_DIST_DIR)/$${files}; \
++	   ${INSTALL_DATA} $${files} \
++	   $(NETX_EXTRA_DIST_DIR)/; \
+ 	 done)
+ 	mkdir -p stamps
+ 	touch $@
