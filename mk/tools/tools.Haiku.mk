@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.5 2010/08/25 10:43:34 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.6 2013/06/02 03:04:22 obache Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -32,7 +32,11 @@ TOOLS_PLATFORM.find?=		/bin/find
 TOOLS_PLATFORM.ftp?=		/bin/ftp
 TOOLS_PLATFORM.gawk?=		/bin/gawk
 TOOLS_PLATFORM.gm4?=		/boot/common/bin/m4
+.if exists(/bin/make)
 TOOLS_PLATFORM.gmake?=		/bin/make
+.elif exists(/boot/common/bin/make)
+TOOLS_PLATFORM.gmake?=		/boot/common/bin/make
+.endif
 TOOLS_PLATFORM.grep?=		/bin/grep
 #TOOLS_PLATFORM.groff?=		/usr/bin/groff
 .if exists(/bin/sed)
