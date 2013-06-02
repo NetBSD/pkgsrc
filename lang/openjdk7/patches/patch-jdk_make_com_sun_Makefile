@@ -1,0 +1,29 @@
+$NetBSD: patch-jdk_make_com_sun_Makefile,v 1.1 2013/06/02 06:12:28 ryoon Exp $
+
+* From rhino.patch.
+
+--- jdk/make/com/sun/Makefile.orig	2012-08-10 17:21:29.000000000 +0000
++++ jdk/make/com/sun/Makefile
+@@ -31,13 +31,6 @@ BUILDDIR = ../..
+ PRODUCT = sun
+ include $(BUILDDIR)/common/Defs.gmk
+ 
+-ifndef OPENJDK
+-  ORG_EXISTS := $(call DirExists,$(CLOSED_SRC)/share/classes/sun/org,,)
+-  ifneq ("$(ORG_EXISTS)", "") 
+-    SCRIPT_SUBDIR = script
+-  endif
+-endif
+-
+ # jarsigner is part of JRE
+ SUBDIRS = java security net/ssl jarsigner
+ 
+@@ -45,7 +38,7 @@ SUBDIRS_management = jmx
+ SUBDIRS_desktop    = image
+ SUBDIRS_enterprise = crypto/provider jndi \
+                      org rowset net/httpserver
+-SUBDIRS_misc       = $(SCRIPT_SUBDIR) tracing servicetag nio demo
++SUBDIRS_misc       = script tracing servicetag nio demo
+ 
+ # Omit mirror since it's built with the apt tool.
+ SUBDIRS_tools      = tools

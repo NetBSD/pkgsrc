@@ -1,13 +1,13 @@
-$NetBSD: patch-bk,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bk,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/make/java/npt/Makefile.orig	2009-10-17 16:49:37.000000000 +0200
+--- jdk/make/java/npt/Makefile.orig	2013-05-29 03:57:57.000000000 +0000
 +++ jdk/make/java/npt/Makefile
-@@ -70,7 +70,7 @@ ifeq ($(PLATFORM), bsd)
-   ifeq ($(OS_VENDOR), Apple)
-     OTHER_LDLIBS += -liconv
-   else
--    ifneq ($(OS_NAME), netbsd)
-+    ifeq ($(OS_NAME), freebsd)
-       CPPFLAGS += -I$(PACKAGE_PATH)/include
-       OTHER_LDLIBS += -L$(PACKAGE_PATH)/lib -liconv
-     endif
+@@ -76,7 +76,7 @@ endif
+ 
+ # Add location of iconv headers
+ ifeq ($(PLATFORM), bsd)
+-  ifneq ($(OS_NAME), netbsd)
++  ifeq ($(OS_NAME), freebsd)
+     CPPFLAGS += -I$(PACKAGE_PATH)/include
+     OTHER_LDLIBS += -L$(PACKAGE_PATH)/lib -liconv
+   endif

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2013/06/02 06:12:28 ryoon Exp $
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2012-05-12 08:57:44.793207000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2013-05-29 03:57:57.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
 @@ -131,8 +131,11 @@
  # include <inttypes.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
  #endif
  
  #ifdef __APPLE__
-@@ -335,7 +338,12 @@ void os::Bsd::initialize_system_info() {
+@@ -342,7 +345,12 @@ void os::Bsd::initialize_system_info() {
    int mib[2];
    size_t len;
    int cpu_val;
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
  
    /* get processors count via hw.ncpus sysctl */
    mib[0] = CTL_HW;
-@@ -352,21 +360,26 @@ void os::Bsd::initialize_system_info() {
+@@ -359,21 +367,26 @@ void os::Bsd::initialize_system_info() {
     * instead of hw.physmem because we need size of allocatable memory
     */
    mib[0] = CTL_HW;
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
  #endif
  }
  #else
-@@ -2039,7 +2052,9 @@ void * os::dll_load(const char *filename
+@@ -2165,7 +2178,9 @@ void * os::dll_load(const char *filename
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
@@ -75,7 +75,7 @@ $NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -3559,7 +3574,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -3668,7 +3683,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.7 2012/11/03 20:03:03 joerg Exp $
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
  #elif defined(__APPLE__) || defined(__NetBSD__)
    struct sched_param sp;
-@@ -3587,7 +3602,7 @@ OSReturn os::get_native_priority(const T
+@@ -3696,7 +3711,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;

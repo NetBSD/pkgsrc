@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2013/05/14 19:16:43 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2013/06/02 06:12:28 ryoon Exp $
 
-DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
-PKGNAME=	openjdk7-1.7.0.147.20110811
-PKGREVISION=	9
+DISTNAME=	openjdk-7u6-fcs-src-b24-09_aug_2012
+PKGNAME=	openjdk7-1.7.21
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
@@ -17,7 +16,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # diff between distfile and bsd-port branch. To check out, use:
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
-PATCHFILES+=	jdk-7-bsd-port-147.20110811.diff.bz2
+PATCH_DIST_STRIP=	-p1
+PATCHFILES+=	jdk-7u21-20130526.diff
 PATCH_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}
 
 CACERTS=	cacerts-20091013.tar.bz2
@@ -71,7 +71,8 @@ MAKE_ENV+=	CLASSPATH=
 
 MAKE_ENV+=	EXTRA_CFLAGS="-DDEFAULT_LIBPATH=\\\"${PREFIX}/lib/jni:${PREFIX}/lib:/lib:/usr/lib\\\""
 BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
-MAKE_ENV+=	LD_LIBRARY_PATH=${BUILDDIR}/lib/${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
+LD_LIBRARY_PATH=	${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
+MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk7/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
 
 PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
@@ -126,7 +127,7 @@ post-extract:
 	  ${WRKSRC}/jdk/src/share/classes
 	cd ${WRKDIR}/${ICEDTEA_WEB}/netx && pax -rw . \
 	  ${WRKSRC}/jdk/src/share/classes
-	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/${ICEDTEA}/patches/rhino.patch
+#	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/${ICEDTEA}/patches/rhino.patch
 	mv ${WRKDIR}/bootstrap/bin/java ${WRKDIR}/bootstrap/bin/java-real
 	printf '#!/bin/sh\nexec %s/bootstrap/bin/java-real -mx256m "$$@"\n' \
 	    ${WRKDIR} > ${WRKDIR}/bootstrap/bin/java
@@ -160,7 +161,8 @@ ${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
 
 ${WRKDIR}/cacerts.out:
 	for cert in ${WRKDIR}/cacerts/*.crt; do			\
-		${ECHO} yes | LC_ALL=C ${BUILDDIR}/bin/keytool		\
+		${ECHO} yes | LD_LIBRARY_PATH=${LD_LIBRARY_PATH} \
+		  LC_ALL=C ${BUILDDIR}/bin/keytool		\
 		  -importcert						\
 		  -keystore ${.TARGET}					\
 		  -alias `${ECHO} $$cert | sed 's,.*/\\([^/]*\\)\\.crt,\\1,'` \
@@ -186,6 +188,7 @@ MAKE_ENV+=	PTHREAD_STACKSIZE=1024
 TOOLS_PLATFORM.unzip=
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build

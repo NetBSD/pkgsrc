@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-ba,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- hotspot/src/share/vm/utilities/macros.hpp.orig	2009-10-17 16:49:37.000000000 +0200
+--- hotspot/src/share/vm/utilities/macros.hpp.orig	2012-08-10 16:28:55.000000000 +0000
 +++ hotspot/src/share/vm/utilities/macros.hpp
-@@ -148,7 +148,7 @@
+@@ -161,7 +161,7 @@
  #define NOT_WINDOWS(code) code
  #endif
  
