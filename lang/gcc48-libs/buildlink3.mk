@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/04/01 21:06:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/06/02 18:12:22 adam Exp $
 
 BUILDLINK_TREE+=	gcc48-libs
 
@@ -25,7 +25,7 @@ WRAPPER_TARGETS+=	${SPECS_LIBGCC}
 
 GCC_SUBPREFIX=		gcc48
 GCC_PREFIX=		${BUILDLINK_PREFIX.gcc48-libs}/${GCC_SUBPREFIX}
-GCC_TARGET_MACHINE?= 	${MACHINE_GNU_PLATFORM}
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
 # XXX: Using %M requires patched version of gcc (e.g. lang/gcc48)
 ${SPECS_LIBGCC}:
@@ -40,4 +40,5 @@ _WRAP_EXTRA_ARGS.FC+=	-specs ${SPECS_LIBGCC}
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # GCC48_LIBS_BUILDLINK3_MK
+
 BUILDLINK_TREE+=	-gcc48-libs
