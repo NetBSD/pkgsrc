@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1745 2013/05/26 01:39:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.1746 2013/06/02 01:48:09 dholland Exp $
 #
 
 COMMENT=	Development utilities
@@ -1402,6 +1402,7 @@ SUBDIR+=	py-stompclient
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sysctl
+SUBDIR+=	py-tabular
 SUBDIR+=	py-testtools
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
