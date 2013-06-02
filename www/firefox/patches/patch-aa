@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
 
 --- configure.in.orig	2013-05-11 19:19:23.000000000 +0000
 +++ configure.in
@@ -100,11 +100,11 @@ $NetBSD: patch-aa,v 1.10 2013/05/23 13:12:13 ryoon Exp $
          MOZ_WEBRTC=
          ;;
 -    *-linux*|*-mingw*|*-darwin*)
-+    *-netbsd*)
++    *-netbsd*|*-dragonfly*)
 +        dnl Custom socketvar.h is not compatible with NetBSD.
 +        MOZ_WEBRTC=
 +        ;;
-+    *-linux*|*-mingw*|*-darwin*|*-dragonfly*|*-freebsd*|*-openbsd*)
++    *-linux*|*-mingw*|*-darwin*|*-freebsd*|*-openbsd*)
          dnl Leave enabled
          ;;
      *)
