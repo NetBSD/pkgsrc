@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.3 2009/11/08 17:57:46 tnn Exp $
+$NetBSD: patch-ap,v 1.4 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2009-11-08 11:51:19.000000000 +0100
+--- jdk/src/solaris/native/sun/awt/fontpath.c.orig	2013-05-29 03:57:58.000000000 +0000
 +++ jdk/src/solaris/native/sun/awt/fontpath.c
-@@ -70,8 +70,8 @@ extern Display *awt_display;
+@@ -72,8 +72,8 @@ extern Display *awt_display;
  #define FONTCONFIG_DLL_VERSIONED X11_PATH "/lib/" VERSIONED_JNI_LIB_NAME("fontconfig", "1")
  #define FONTCONFIG_DLL X11_PATH "/lib/" JNI_LIB_NAME("fontconfig")
  #else
@@ -13,7 +13,7 @@ $NetBSD: patch-ap,v 1.3 2009/11/08 17:57:46 tnn Exp $
  #endif
  
  #define MAXFDIRS 512    /* Max number of directories that contain fonts */
-@@ -163,6 +163,27 @@ static char *fullLinuxFontPath[] = {
+@@ -181,6 +181,27 @@ static char *fullLinuxFontPath[] = {
      NULL, /* terminates the list */
  };
  #endif
@@ -41,7 +41,7 @@ $NetBSD: patch-ap,v 1.3 2009/11/08 17:57:46 tnn Exp $
  
  static char **getFontConfigLocations();
  
-@@ -525,6 +546,7 @@ static char *getPlatformFontPathChars(JN
+@@ -545,6 +566,7 @@ static char *getPlatformFontPathChars(JN
  #else /* IF SOLARIS */
      knowndirs = fullSolarisFontPath;
  #endif
