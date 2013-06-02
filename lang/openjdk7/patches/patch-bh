@@ -1,8 +1,8 @@
-$NetBSD: patch-bh,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bh,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- hotspot/make/defs.make.orig	2009-10-17 16:49:37.000000000 +0200
+--- hotspot/make/defs.make.orig	2012-08-10 16:23:01.000000000 +0000
 +++ hotspot/make/defs.make
-@@ -125,6 +125,9 @@ ifeq ($(OS),)
+@@ -124,6 +124,9 @@ ifeq ($(OS),)
    ifeq ($(OS), Darwin)
      OS=bsd
    endif
