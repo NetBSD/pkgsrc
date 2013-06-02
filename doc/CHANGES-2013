@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1891 2013/06/02 17:35:07 stacktic Exp $
+$NetBSD: CHANGES-2013,v 1.1892 2013/06/02 18:17:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3030,3 +3030,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/mdoclint to 1.21 [wiz 2013-06-02]
 	Updated devel/py-distribute to 0.6.45 [wiz 2013-06-02]
 	Updated misc/rump to 20130602 [stacktic 2013-06-02]
+	Updated lang/gcc48 to 4.8.1 [adam 2013-06-02]
+	Updated lang/gcc48-libs to 4.8.1nb1 [adam 2013-06-02]
+	Updated games/scummvm to 1.6.0 [adam 2013-06-02]
