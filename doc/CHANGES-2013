@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1889 2013/06/02 12:00:10 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1890 2013/06/02 14:23:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3028,3 +3028,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mercurial to 2.6.2 [wiz 2013-06-02]
 	Updated lang/newlisp to 10.5.0 [ryoon 2013-06-02]
 	Updated textproc/mdoclint to 1.21 [wiz 2013-06-02]
+	Updated devel/py-distribute to 0.6.45 [wiz 2013-06-02]
