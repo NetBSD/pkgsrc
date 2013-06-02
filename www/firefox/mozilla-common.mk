@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2013/06/02 06:48:37 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -149,3 +149,8 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.if (${OPSYS} == "Linux") || (${OPSYS} == "Darwin") || \
+(${OPSYS} == "FreeBSD") || (${OPSYS} == "OpenBSD")
+.include "../../graphics/libv4l/buildlink3.mk"
+.endif
+
