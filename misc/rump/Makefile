@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/06/01 15:42:03 stacktic Exp $
+# $NetBSD: Makefile,v 1.21 2013/06/02 17:33:58 stacktic Exp $
 #
 
-VERSION=		20130601
+VERSION=		20130602
 PKGNAME=		rump-${VERSION}
 DISTNAME=		buildrump-${VERSION}
 EXTRACT_SUFX=		.tar.bz2
