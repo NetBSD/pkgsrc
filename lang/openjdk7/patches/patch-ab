@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2012/05/22 05:57:50 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/make/common/shared/Sanity.gmk.orig	2012-05-06 14:17:19.000000000 +0000
+--- jdk/make/common/shared/Sanity.gmk.orig	2012-08-10 17:21:34.000000000 +0000
 +++ jdk/make/common/shared/Sanity.gmk
-@@ -517,12 +517,7 @@ sane-variant:
+@@ -521,12 +521,7 @@ sane-variant:
  # LD_LIBRARY_PATH should not be set, unless you are insane.
  ######################################################
  sane-ld_library_path:
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2012/05/22 05:57:50 joerg Exp $
  
  ######################################################
  # LD_LIBRARY_PATH_64 should not be set, unless you are insane.
-@@ -809,7 +804,8 @@ ifdef OPENJDK
+@@ -813,7 +808,8 @@ ifdef OPENJDK
  	@(($(CD) $(BUILDDIR)/tools/freetypecheck && $(MAKE)) || \
  	    $(ECHO) "Failed to build freetypecheck." ) > $@
  

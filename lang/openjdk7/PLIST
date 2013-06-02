@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/08/21 22:57:54 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/06/02 06:12:28 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -27,6 +27,7 @@ java/openjdk7/bin/javac
 java/openjdk7/bin/javadoc
 java/openjdk7/bin/javah
 java/openjdk7/bin/javap
+java/openjdk7/bin/jcmd
 java/openjdk7/bin/jconsole
 java/openjdk7/bin/jdb
 java/openjdk7/bin/jhat
@@ -51,12 +52,10 @@ java/openjdk7/bin/serialver
 java/openjdk7/bin/servertool
 java/openjdk7/bin/tnameserv
 java/openjdk7/bin/unpack200
-${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/Xusage.txt
-${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjsig.so
-${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjvm.so
 java/openjdk7/bin/wsgen
 java/openjdk7/bin/wsimport
 java/openjdk7/bin/xjc
+java/openjdk7/demo/README
 java/openjdk7/demo/applets/ArcTest/ArcCanvas.class
 java/openjdk7/demo/applets/ArcTest/ArcControls.class
 java/openjdk7/demo/applets/ArcTest/ArcTest.class
@@ -356,43 +355,61 @@ java/openjdk7/jre/bin/rmiregistry
 java/openjdk7/jre/bin/servertool
 java/openjdk7/jre/bin/tnameserv
 java/openjdk7/jre/bin/unpack200
+${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/Xusage.txt
+${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjsig.diz
+${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjsig.so
+${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjvm.diz
+${PLIST.i386}java/openjdk7/jre/lib/${ARCH}/client/libjvm.so
 java/openjdk7/jre/lib/${ARCH}/headless/libmawt.so
 java/openjdk7/jre/lib/${ARCH}/jexec
 java/openjdk7/jre/lib/${ARCH}/jli/libjli.so
 java/openjdk7/jre/lib/${ARCH}/jvm.cfg
+java/openjdk7/jre/lib/${ARCH}/libattach.diz
 java/openjdk7/jre/lib/${ARCH}/libattach.so
 java/openjdk7/jre/lib/${ARCH}/libawt.so
+java/openjdk7/jre/lib/${ARCH}/libdt_socket.diz
 java/openjdk7/jre/lib/${ARCH}/libdt_socket.so
 java/openjdk7/jre/lib/${ARCH}/libfontmanager.so
+java/openjdk7/jre/lib/${ARCH}/libhprof.diz
 java/openjdk7/jre/lib/${ARCH}/libhprof.so
+java/openjdk7/jre/lib/${ARCH}/libinstrument.diz
 java/openjdk7/jre/lib/${ARCH}/libinstrument.so
 java/openjdk7/jre/lib/${ARCH}/libj2gss.so
 java/openjdk7/jre/lib/${ARCH}/libj2pcsc.so
 java/openjdk7/jre/lib/${ARCH}/libj2pkcs11.so
 java/openjdk7/jre/lib/${ARCH}/libjaas_unix.so
 java/openjdk7/jre/lib/${ARCH}/libjava.so
+java/openjdk7/jre/lib/${ARCH}/libjava_crw_demo.diz
 java/openjdk7/jre/lib/${ARCH}/libjava_crw_demo.so
 java/openjdk7/jre/lib/${ARCH}/libjawt.so
 java/openjdk7/jre/lib/${ARCH}/libjdwp.so
 java/openjdk7/jre/lib/${ARCH}/libjpeg.so
+java/openjdk7/jre/lib/${ARCH}/libjsdt.diz
 java/openjdk7/jre/lib/${ARCH}/libjsdt.so
+java/openjdk7/jre/lib/${ARCH}/libjsig.diz
 java/openjdk7/jre/lib/${ARCH}/libjsig.so
 java/openjdk7/jre/lib/${ARCH}/libjsound.so
 java/openjdk7/jre/lib/${ARCH}/liblcms.so
+java/openjdk7/jre/lib/${ARCH}/libmanagement.diz
 java/openjdk7/jre/lib/${ARCH}/libmanagement.so
 java/openjdk7/jre/lib/${ARCH}/libmlib_image.so
 java/openjdk7/jre/lib/${ARCH}/libnet.so
 java/openjdk7/jre/lib/${ARCH}/libnio.so
+java/openjdk7/jre/lib/${ARCH}/libnpt.diz
 java/openjdk7/jre/lib/${ARCH}/libnpt.so
 java/openjdk7/jre/lib/${ARCH}/librmi.so
+java/openjdk7/jre/lib/${ARCH}/libsaproc.diz
 java/openjdk7/jre/lib/${ARCH}/libsaproc.so
 java/openjdk7/jre/lib/${ARCH}/libsplashscreen.so
 java/openjdk7/jre/lib/${ARCH}/libsunec.so
 java/openjdk7/jre/lib/${ARCH}/libunpack.so
+java/openjdk7/jre/lib/${ARCH}/libverify.diz
 java/openjdk7/jre/lib/${ARCH}/libverify.so
 java/openjdk7/jre/lib/${ARCH}/libzip.so
 java/openjdk7/jre/lib/${ARCH}/server/Xusage.txt
+java/openjdk7/jre/lib/${ARCH}/server/libjsig.diz
 java/openjdk7/jre/lib/${ARCH}/server/libjsig.so
+java/openjdk7/jre/lib/${ARCH}/server/libjvm.diz
 java/openjdk7/jre/lib/${ARCH}/server/libjvm.so
 java/openjdk7/jre/lib/${ARCH}/xawt/libmawt.so
 java/openjdk7/jre/lib/applet/.keep
@@ -440,7 +457,6 @@ java/openjdk7/jre/lib/psfontj2d.properties
 java/openjdk7/jre/lib/resources.jar
 java/openjdk7/jre/lib/rhino.jar
 java/openjdk7/jre/lib/rt.jar
-${PLIST.jce}java/openjdk7/jre/lib/security/README.txt
 java/openjdk7/jre/lib/security/US_export_policy.jar
 java/openjdk7/jre/lib/security/cacerts
 java/openjdk7/jre/lib/security/java.policy
@@ -473,6 +489,7 @@ java/openjdk7/jre/lib/zi/Africa/Freetown
 java/openjdk7/jre/lib/zi/Africa/Gaborone
 java/openjdk7/jre/lib/zi/Africa/Harare
 java/openjdk7/jre/lib/zi/Africa/Johannesburg
+java/openjdk7/jre/lib/zi/Africa/Juba
 java/openjdk7/jre/lib/zi/Africa/Kampala
 java/openjdk7/jre/lib/zi/Africa/Khartoum
 java/openjdk7/jre/lib/zi/Africa/Kigali
@@ -537,6 +554,7 @@ java/openjdk7/jre/lib/zi/America/Cayman
 java/openjdk7/jre/lib/zi/America/Chicago
 java/openjdk7/jre/lib/zi/America/Chihuahua
 java/openjdk7/jre/lib/zi/America/Costa_Rica
+java/openjdk7/jre/lib/zi/America/Creston
 java/openjdk7/jre/lib/zi/America/Cuiaba
 java/openjdk7/jre/lib/zi/America/Curacao
 java/openjdk7/jre/lib/zi/America/Danmarkshavn
@@ -675,6 +693,7 @@ java/openjdk7/jre/lib/zi/Asia/Dubai
 java/openjdk7/jre/lib/zi/Asia/Dushanbe
 java/openjdk7/jre/lib/zi/Asia/Gaza
 java/openjdk7/jre/lib/zi/Asia/Harbin
+java/openjdk7/jre/lib/zi/Asia/Hebron
 java/openjdk7/jre/lib/zi/Asia/Ho_Chi_Minh
 java/openjdk7/jre/lib/zi/Asia/Hong_Kong
 java/openjdk7/jre/lib/zi/Asia/Hovd
@@ -907,6 +926,7 @@ java/openjdk7/lib/sa-jdi.jar
 java/openjdk7/lib/tools.jar
 java/openjdk7/man/ja
 java/openjdk7/man/ja_JP.UTF-8/man1/appletviewer.1
+java/openjdk7/man/ja_JP.UTF-8/man1/apt.1
 java/openjdk7/man/ja_JP.UTF-8/man1/extcheck.1
 java/openjdk7/man/ja_JP.UTF-8/man1/idlj.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jar.1
@@ -916,6 +936,7 @@ java/openjdk7/man/ja_JP.UTF-8/man1/javac.1
 java/openjdk7/man/ja_JP.UTF-8/man1/javadoc.1
 java/openjdk7/man/ja_JP.UTF-8/man1/javah.1
 java/openjdk7/man/ja_JP.UTF-8/man1/javap.1
+java/openjdk7/man/ja_JP.UTF-8/man1/jcmd.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jconsole.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jdb.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jhat.1
@@ -927,6 +948,7 @@ java/openjdk7/man/ja_JP.UTF-8/man1/jsadebugd.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstack.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstat.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstatd.1
+java/openjdk7/man/ja_JP.UTF-8/man1/jvisualvm.1
 java/openjdk7/man/ja_JP.UTF-8/man1/keytool.1
 java/openjdk7/man/ja_JP.UTF-8/man1/native2ascii.1
 java/openjdk7/man/ja_JP.UTF-8/man1/orbd.1
@@ -944,6 +966,7 @@ java/openjdk7/man/ja_JP.UTF-8/man1/wsgen.1
 java/openjdk7/man/ja_JP.UTF-8/man1/wsimport.1
 java/openjdk7/man/ja_JP.UTF-8/man1/xjc.1
 java/openjdk7/man/man1/appletviewer.1
+java/openjdk7/man/man1/apt.1
 java/openjdk7/man/man1/extcheck.1
 java/openjdk7/man/man1/idlj.1
 java/openjdk7/man/man1/jar.1
@@ -953,6 +976,7 @@ java/openjdk7/man/man1/javac.1
 java/openjdk7/man/man1/javadoc.1
 java/openjdk7/man/man1/javah.1
 java/openjdk7/man/man1/javap.1
+java/openjdk7/man/man1/jcmd.1
 java/openjdk7/man/man1/jconsole.1
 java/openjdk7/man/man1/jdb.1
 java/openjdk7/man/man1/jhat.1
@@ -964,6 +988,7 @@ java/openjdk7/man/man1/jsadebugd.1
 java/openjdk7/man/man1/jstack.1
 java/openjdk7/man/man1/jstat.1
 java/openjdk7/man/man1/jstatd.1
+java/openjdk7/man/man1/jvisualvm.1
 java/openjdk7/man/man1/keytool.1
 java/openjdk7/man/man1/native2ascii.1
 java/openjdk7/man/man1/orbd.1
@@ -981,6 +1006,7 @@ java/openjdk7/man/man1/wsgen.1
 java/openjdk7/man/man1/wsimport.1
 java/openjdk7/man/man1/xjc.1
 java/openjdk7/release
+java/openjdk7/sample/README
 java/openjdk7/sample/forkjoin/mergesort/MergeDemo.java
 java/openjdk7/sample/forkjoin/mergesort/MergeSort.java
 java/openjdk7/sample/jmx/jmx-scandir/build.properties
