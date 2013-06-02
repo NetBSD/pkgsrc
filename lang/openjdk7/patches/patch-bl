@@ -1,8 +1,8 @@
-$NetBSD: patch-bl,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bl,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/make/java/instrument/Makefile.orig	2009-10-17 16:49:37.000000000 +0200
+--- jdk/make/java/instrument/Makefile.orig	2013-05-29 03:57:57.000000000 +0000
 +++ jdk/make/java/instrument/Makefile
-@@ -111,7 +111,7 @@ ifeq ($(PLATFORM), bsd)
+@@ -115,7 +115,7 @@ ifneq (,$(findstring $(PLATFORM), macosx
      LDFLAGS += -Wl,--whole-archive
      LDFLAGS += $(OUTPUTDIR)/tmp/java/jli/$(OBJDIRNAME)/static/libjli.a
      LDFLAGS += -Wl,--no-whole-archive

@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-at,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/src/share/classes/sun/applet/AppletPanel.java.orig	2009-09-17 09:52:11.000000000 +0200
+--- jdk/src/share/classes/sun/applet/AppletPanel.java.orig	2013-05-29 03:57:58.000000000 +0000
 +++ jdk/src/share/classes/sun/applet/AppletPanel.java
-@@ -67,7 +67,7 @@ abstract class AppletPanel extends Panel
+@@ -68,7 +68,7 @@ abstract class AppletPanel extends Panel
      /**
       * The applet (if loaded).
       */
@@ -11,3 +11,32 @@ $NetBSD: patch-at,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
  
      /**
       * Applet will allow initialization.  Should be
+@@ -162,7 +162,8 @@ abstract class AppletPanel extends Panel
+      * Creates a thread to run the applet. This method is called
+      * each time an applet is loaded and reloaded.
+      */
+-    synchronized void createAppletThread() {
++	//Overridden by NetxPanel.
++    protected synchronized void createAppletThread() {
+         // Create a thread group for the applet, and start a new
+         // thread to load the applet.
+         String nm = "applet-" + getCode();
+@@ -306,7 +307,7 @@ abstract class AppletPanel extends Panel
+     /**
+      * Get an event from the queue.
+      */
+-    synchronized AppletEvent getNextEvent() throws InterruptedException {
++    protected synchronized AppletEvent getNextEvent() throws InterruptedException {
+         while (queue == null || queue.isEmpty()) {
+             wait();
+         }
+@@ -692,7 +693,8 @@ abstract class AppletPanel extends Panel
+      * applet event processing so that it can be gracefully interrupted from
+      * things like HotJava.
+      */
+-    private void runLoader() {
++	//Overridden by NetxPanel.
++    protected void runLoader() {
+         if (status != APPLET_DISPOSE) {
+             showAppletStatus("notdisposed");
+             return;
