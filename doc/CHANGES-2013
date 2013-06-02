@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1892 2013/06/02 18:17:05 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1893 2013/06/02 21:57:01 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3033,3 +3033,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc48 to 4.8.1 [adam 2013-06-02]
 	Updated lang/gcc48-libs to 4.8.1nb1 [adam 2013-06-02]
 	Updated games/scummvm to 1.6.0 [adam 2013-06-02]
+	Added x11/xf86-input-acecad version 1.5.0 [rodent 2013-06-02]
