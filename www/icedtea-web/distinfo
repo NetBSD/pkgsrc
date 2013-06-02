@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/12/21 13:09:31 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/06/02 06:15:44 ryoon Exp $
 
-SHA1 (61e08e67b176.tar.bz2) = 3db5488f3c0ea1b9c83a74632d300d8717c9b478
-RMD160 (61e08e67b176.tar.bz2) = c0dd67a6ae982f09b3675c164b5decab4f7e140f
-Size (61e08e67b176.tar.bz2) = 609340 bytes
-SHA1 (patch-plugin_icedteanp_IcedTeaNPPlugin.cc) = 8d87811957d664e905586b2aca3413218bf2a8ed
+SHA1 (icedtea-web-9e1f7dc48c20.tar.bz2) = e213b628eef92ddd2fe11267e6159e0d7409e548
+RMD160 (icedtea-web-9e1f7dc48c20.tar.bz2) = c5d36a058072ec485903804dfe2928a12ecca909
+Size (icedtea-web-9e1f7dc48c20.tar.bz2) = 978193 bytes
+SHA1 (patch-Makefile.am) = f7554d80efe54e362f8ababc4614700f47a67b3b
