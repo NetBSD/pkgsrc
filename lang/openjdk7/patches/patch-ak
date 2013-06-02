@@ -1,27 +1,28 @@
-$NetBSD: patch-ak,v 1.4 2012/05/22 05:57:50 joerg Exp $
+$NetBSD: patch-ak,v 1.5 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/make/common/Defs-bsd.gmk.orig	2012-05-06 14:17:19.000000000 +0000
+--- jdk/make/common/Defs-bsd.gmk.orig	2013-05-29 03:57:57.000000000 +0000
 +++ jdk/make/common/Defs-bsd.gmk
-@@ -230,8 +230,7 @@ ifeq ($(OS_VENDOR), Apple)
-   LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=-Xlinker -rpath -Xlinker @loader_path/%)
-   LDFLAGS_COMMON += -Xlinker -install_name -Xlinker @rpath/$(@F)
- else
--  LDFLAGS_COMMON += -Xlinker -z -Xlinker origin -Xlinker -rpath -Xlinker \$$ORIGIN
--  LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=-Xlinker -z -Xlinker origin -Xlinker -rpath -Xlinker \$$ORIGIN/%)
-+  LDFLAGS_COMMON += -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}/server -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}
- endif
+@@ -336,8 +336,8 @@ Z_ORIGIN_FLAG/zero  = -Xlinker -z -Xlink
+ 
+ LDFLAG_Z_ORIGIN = $(Z_ORIGIN_FLAG/$(ARCH_FAMILY))
+ 
+-LDFLAGS_COMMON += $(LDFLAG_Z_ORIGIN) -Xlinker -rpath -Xlinker \$$ORIGIN
+-LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=$(LDFLAG_Z_ORIGIN) -Xlinker -rpath -Xlinker \$$ORIGIN/%)
++LDFLAGS_COMMON += -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}/server -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}
++
  
  #
-@@ -299,7 +298,7 @@ VM_NAME         = server
- ifeq ($(OS_VENDOR),Apple)
- JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
- else
--JVMLIB          = -Xlinker -rpath -Xlinker $(LIBDIR)/$(LIBARCH)/$(VM_NAME) -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
+ # -L paths for finding and -ljava
+@@ -399,7 +399,7 @@ endif
+ # the library itself should not.
+ #
+ VM_NAME         = server
+-JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
 +JVMLIB          = -Xlinker -rpath -Xlinker ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH} -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
- endif
  JAVALIB         = -ljava $(JVMLIB)
  
-@@ -365,6 +364,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
+ #
+@@ -462,6 +462,14 @@ ifeq ($(OS_VENDOR), OpenBSD)
    SYSTEM_ZLIB = true
  endif
  

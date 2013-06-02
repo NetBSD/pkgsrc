@@ -1,8 +1,16 @@
-$NetBSD: patch-ao,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-ao,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/make/common/Release.gmk.orig	2009-01-06 21:21:32.000000000 +0100
+--- jdk/make/common/Release.gmk.orig	2013-05-29 03:57:57.000000000 +0000
 +++ jdk/make/common/Release.gmk
-@@ -1065,7 +1065,8 @@ initial-image-jdk:: initial-image-jdk-se
+@@ -842,6 +842,7 @@ initial-image-jre:: initial-image-jre-se
+ 	$(CP) $(RT_JAR) $(JRE_IMAGE_DIR)/lib/rt.jar
+ 	$(CP) $(RESOURCES_JAR) $(JRE_IMAGE_DIR)/lib/resources.jar
+ 	$(CP) $(JSSE_JAR) $(JRE_IMAGE_DIR)/lib/jsse.jar
++	$(CP) $(RHINO_JAR) $(JRE_IMAGE_DIR)/lib/rhino.jar
+ ifneq ($(JFR_JAR),)
+ 	$(CP) $(JFR_JAR) $(JRE_IMAGE_DIR)/lib/jfr.jar
+ endif
+@@ -1170,7 +1171,8 @@ initial-image-jdk:: initial-image-jdk-se
  	@#
  	@# Swing BeanInfo generation
  	@#

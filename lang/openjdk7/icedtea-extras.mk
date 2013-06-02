@@ -1,19 +1,19 @@
-# $NetBSD: icedtea-extras.mk,v 1.10 2011/08/21 22:57:54 tnn Exp $
+# $NetBSD: icedtea-extras.mk,v 1.11 2013/06/02 06:12:28 ryoon Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
 
 DIST_SUBDIR=			openjdk7
 
-ICEDTEA=			icedtea7-8ac25d11a9e5
-ICEDTEA_TGZ=			8ac25d11a9e5.tar.bz2
-SITES.${ICEDTEA_TGZ}=		http://icedtea.classpath.org/hg/icedtea7/archive/
+ICEDTEA=			icedtea7-02bbff3d71ff
+ICEDTEA_TGZ=			icedtea7-02bbff3d71ff.tar.bz2
+SITES.${ICEDTEA_TGZ}=		-http://icedtea.classpath.org/hg/icedtea7/archive/02bbff3d71ff.tar.bz2
 DISTFILES+=			${ICEDTEA_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_TGZ}
 
-ICEDTEA_WEB=			icedtea-web-61e08e67b176
-ICEDTEA_WEB_TGZ=		61e08e67b176.tar.bz2
-SITES.${ICEDTEA_WEB_TGZ}=	http://icedtea.classpath.org/hg/icedtea-web/archive/
+ICEDTEA_WEB=			icedtea-web-9e1f7dc48c20
+ICEDTEA_WEB_TGZ=		icedtea-web-9e1f7dc48c20.tar.bz2
+SITES.${ICEDTEA_WEB_TGZ}=	-http://icedtea.classpath.org/hg/icedtea-web/archive/9e1f7dc48c20.tar.bz2
 DISTFILES+=			${ICEDTEA_WEB_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_WEB_TGZ}
 
@@ -24,7 +24,7 @@ DISTFILES+=			${RHINO_TGZ}
 EXTRACT_ONLY+=			${RHINO_TGZ}
 
 # fixme: Should depend on devel/apache-ant?
-ANT=				apache-ant-1.8.1
+ANT=				apache-ant-1.8.4
 ANT_TGZ=			${ANT}-bin.tar.bz2
 SITES.${ANT_TGZ}=		http://archive.apache.org/dist/ant/binaries/
 DISTFILES+=			${ANT_TGZ}

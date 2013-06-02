@@ -1,13 +1,45 @@
-$NetBSD: patch-al,v 1.2 2011/08/21 22:57:55 tnn Exp $
+$NetBSD: patch-al,v 1.3 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2011-08-20 11:24:21.000000000 +0000
+--- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2013-06-01 14:10:31.000000000 +0000
 +++ jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java
-@@ -68,7 +68,7 @@ public class DefaultFileSystemProvider {
+@@ -28,6 +28,8 @@ package sun.nio.fs;
+ import java.nio.file.spi.FileSystemProvider;
+ import java.security.AccessController;
+ import java.security.PrivilegedAction;
++import java.util.Set;
++import java.util.HashSet;
+ import sun.security.action.GetPropertyAction;
+ 
+ /**
+@@ -37,6 +39,14 @@ import sun.security.action.GetPropertyAc
+ public class DefaultFileSystemProvider {
+     private DefaultFileSystemProvider() { }
+ 
++    private static final Set<String> validFileSystemProviders
++        = new HashSet<String>();
++    static {
++        validFileSystemProviders.add("sun.nio.fs.SolarisFileSystemProvider");
++        validFileSystemProviders.add("sun.nio.fs.LinuxFileSystemProvider");
++        validFileSystemProviders.add("sun.nio.fs.BsdFileSystemProvider");
++    }
++
+     @SuppressWarnings("unchecked")
+     private static FileSystemProvider createProvider(final String cn) {
+         return AccessController
+@@ -64,11 +74,15 @@ public class DefaultFileSystemProvider {
+     public static FileSystemProvider create() {
+         String osname = AccessController
+             .doPrivileged(new GetPropertyAction("os.name"));
++        String fileSystemProvider = System
++            .getProperty("java.nio.file.spi.DefaultFileSystemProvider");
++        if (validFileSystemProviders.contains(fileSystemProvider))
++            return createProvider(fileSystemProvider);
+         if (osname.equals("SunOS"))
              return createProvider("sun.nio.fs.SolarisFileSystemProvider");
          if (osname.equals("Linux"))
              return createProvider("sun.nio.fs.LinuxFileSystemProvider");
--        if (osname.endsWith("BSD") || osname.equals("Darwin"))
-+        if (osname.endsWith("BSD") || osname.equals("Darwin") || osname.equals("DragonFly"))
+-        if (osname.endsWith("BSD") || osname.equals("Darwin") || osname.contains("OS X"))
++        if (osname.endsWith("BSD") || osname.equals("Darwin") || osname.contains("OS X") || osname.equals("DragonFly"))
              return createProvider("sun.nio.fs.BsdFileSystemProvider");
          throw new AssertionError("Platform not recognized");
      }

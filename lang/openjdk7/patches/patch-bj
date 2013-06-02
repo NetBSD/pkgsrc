@@ -1,8 +1,8 @@
-$NetBSD: patch-bj,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bj,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp.orig	2009-10-17 16:49:37.000000000 +0200
+--- hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp.orig	2012-08-10 16:28:55.000000000 +0000
 +++ hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp
-@@ -243,6 +243,9 @@ inline int g_isnan(float  f) { return is
+@@ -252,6 +252,9 @@ inline int g_isnan(float  f) { return is
  inline int g_isnan(double f) { return isnand(f); }
  #elif defined(__APPLE__)
  inline int g_isnan(double f) { return isnan(f); }

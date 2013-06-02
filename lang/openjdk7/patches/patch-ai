@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2009/10/14 11:26:15 tnn Exp $
+$NetBSD: patch-ai,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- hotspot/src/os/bsd/vm/attachListener_bsd.cpp.orig	2009-10-12 18:15:48.000000000 +0200
+--- hotspot/src/os/bsd/vm/attachListener_bsd.cpp.orig	2012-08-10 16:24:15.000000000 +0000
 +++ hotspot/src/os/bsd/vm/attachListener_bsd.cpp
-@@ -320,11 +320,16 @@ BsdAttachOperation* BsdAttachListener::d
+@@ -345,11 +345,16 @@ BsdAttachOperation* BsdAttachListener::d
  #ifdef _ALLBSD_SOURCE
      uid_t puid;
      gid_t pgid;
