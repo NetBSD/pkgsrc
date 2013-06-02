@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bg,v 1.2 2013/06/02 06:12:28 ryoon Exp $
 
---- jdk/src/solaris/native/java/net/PlainDatagramSocketImpl.c.orig	2009-10-17 16:49:37.000000000 +0200
+--- jdk/src/solaris/native/java/net/PlainDatagramSocketImpl.c.orig	2013-05-29 03:57:58.000000000 +0000
 +++ jdk/src/solaris/native/java/net/PlainDatagramSocketImpl.c
-@@ -352,7 +352,7 @@ Java_java_net_PlainDatagramSocketImpl_di
+@@ -357,7 +357,7 @@ Java_java_net_PlainDatagramSocketImpl_di
  #ifdef AF_INET6
          if (ipv6_available()) {
              struct sockaddr_in6 *him6 = (struct sockaddr_in6 *)&addr;
@@ -11,7 +11,7 @@ $NetBSD: patch-bg,v 1.1 2009/10/18 10:21:01 tnn Exp $
              him6->sin6_family = AF_INET6;
  #else
              him6->sin6_family = AF_UNSPEC;
-@@ -362,7 +362,7 @@ Java_java_net_PlainDatagramSocketImpl_di
+@@ -367,7 +367,7 @@ Java_java_net_PlainDatagramSocketImpl_di
  #endif
          {
              struct sockaddr_in *him4 = (struct sockaddr_in*)&addr;
