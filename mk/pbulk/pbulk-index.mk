@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.17 2013/06/02 00:10:29 sbd Exp $
+#	$NetBSD: pbulk-index.mk,v 1.18 2013/06/02 04:41:39 sbd Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -52,7 +52,8 @@ _PBULK_MULTI_DEFAULT.ruby=	RUBY_VERSION_DEFAULT
 # the default value first.  This is important for packages that
 # don't follow the module naming conventions.
 
-.for _t in ${_PBULK_MULTI}
+.if !defined(NO_MULTI_PKG)
+. for _t in ${_PBULK_MULTI}
 .  if defined(${_PBULK_MULTI_LIST.${_t}}) && !empty(${_PBULK_MULTI_LIST.${_t}})
 .    if ${${_PBULK_MULTI_LIST.${_t}}:[\#]} != 1 || \
         !empty(${_PBULK_MULTI_LIST.${_t}}:N${_PBULK_MULTI_DEFAULT.${_t}})
@@ -62,7 +63,8 @@ _PBULK_SORTED_LIST.${_t}:= \
 	${${_PBULK_MULTI_LIST.${_t}}:N${${_PBULK_MULTI_DEFAULT.${_t}}}}
 .    endif
 .  endif
-.endfor
+. endfor
+.endif
 
 .if !defined(_PBULK_MULTI_NEEDED)
 # No multi-package handling needed, directly print the item.
