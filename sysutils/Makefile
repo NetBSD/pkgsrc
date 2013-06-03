@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.577 2013/05/27 08:37:13 sbd Exp $
+# $NetBSD: Makefile,v 1.578 2013/06/03 11:22:12 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -400,6 +400,7 @@ SUBDIR+=	slocate
 SUBDIR+=	smartmontools
 SUBDIR+=	smbldap-tools
 SUBDIR+=	socket
+SUBDIR+=	spice-protocol
 SUBDIR+=	sredird
 SUBDIR+=	sshsh
 SUBDIR+=	storage-manager
