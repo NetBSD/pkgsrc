@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/02/16 11:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/03 10:04:31 wiz Exp $
 #
 
 DISTNAME=		audacious-1.5.1
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tbz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.144 2013/05/31 12:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2013/06/03 10:04:50 wiz Exp $
 
 .include "Makefile.common"
-PKGREVISION=		17
+PKGREVISION=		18
 
 COMMENT=	Open Source cross-platform word processor
 

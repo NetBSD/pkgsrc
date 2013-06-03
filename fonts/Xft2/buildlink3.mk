@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2011/11/01 06:01:11 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2013/06/03 10:04:56 wiz Exp $
 
 BUILDLINK_TREE+=	Xft2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	Xft2
 XFT2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1
-BUILDLINK_ABI_DEPENDS.Xft2+=	Xft2>=2.1.7nb4
+BUILDLINK_ABI_DEPENDS.Xft2+=	Xft2>=2.1.7nb5
 BUILDLINK_PKGSRCDIR.Xft2?=	../../fonts/Xft2
 
 .include "../../fonts/fontconfig/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2013/04/08 11:17:14 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2013/06/03 10:05:13 wiz Exp $
 
 BUILDLINK_TREE+=	graphviz
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	graphviz
 GRAPHVIZ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.26.3
-BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=2.26.3nb4
+BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=2.26.3nb25
 BUILDLINK_PKGSRCDIR.graphviz?=	../../graphics/graphviz
 
 # doxygen PLIST varies with pangocairo of PKG_OPTIONS

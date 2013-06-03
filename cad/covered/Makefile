@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 13:25:11 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/03 10:04:37 wiz Exp $
 #
 
 DISTNAME=	covered-0.4.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=covered/}
 

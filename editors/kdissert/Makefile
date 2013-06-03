@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2013/05/09 07:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.45 2013/06/03 10:04:52 wiz Exp $
 #
 
 DISTNAME=	kdissert-1.0.7
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	editors
 MASTER_SITES=	http://freehackers.org/~tnagy/kdissert/
 EXTRACT_SUFX=	.tar.bz2

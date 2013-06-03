@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/02/16 11:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/03 10:04:47 wiz Exp $
 #
 
 DISTNAME=	m17n-lib-1.6.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel converters editors inputmethod textproc time
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 

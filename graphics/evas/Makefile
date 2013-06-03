@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/01/12 15:34:24 hans Exp $
-#
+# $NetBSD: Makefile,v 1.12 2013/06/03 10:05:09 wiz Exp $
 
 PKGNAME=	evas-${EVAS_VERSION}
+PKGREVISION=	1
 COMMENT=	Enlightened Canvas Library
 
 .include "Makefile.common"

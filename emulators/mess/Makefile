@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/02/16 11:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/06/03 10:04:55 wiz Exp $
 
 DISTNAME=	mame0148s
 PKGNAME=	${DISTNAME:S/mame0/mess-0./:S/s$//}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	http://mamedev.org/downloader.php?file=releases/
 
 COMMENT=	Multi Emulator Super System
