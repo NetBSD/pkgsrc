@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2013/02/16 11:19:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2013/06/03 10:05:08 wiz Exp $
 #
 
 BUILDLINK_TREE+=	clutter-cairo
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	clutter-cairo
 CLUTTER_CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clutter-cairo+=	clutter-cairo>=0.8.0
-BUILDLINK_ABI_DEPENDS.clutter-cairo+=	clutter-cairo>=0.8.2nb15
+BUILDLINK_ABI_DEPENDS.clutter-cairo+=	clutter-cairo>=0.8.2nb16
 BUILDLINK_PKGSRCDIR.clutter-cairo?=	../../graphics/clutter-cairo
 
 .include "../../graphics/cairo/buildlink3.mk"
