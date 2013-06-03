@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/09/11 23:04:22 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/06/03 08:22:59 tron Exp $
 
 DISTNAME=	lapack-lite-3.1.1
 PKGNAME=	lapack-3.1.1
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		c fortran77
+USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		YES
 BUILD_TARGET=		lapacklib
 
