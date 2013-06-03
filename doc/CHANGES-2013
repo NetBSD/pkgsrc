@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1901 2013/06/03 15:41:34 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1902 2013/06/03 21:22:33 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3045,3 +3045,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/spice-protocol version 0.12.5 [rodent 2013-06-03]
 	Updated sysutils/libpciaccess to 0.13.1nb3 [wiz 2013-06-03]
 	Updated pkgtools/x11-links to 0.75 [tron 2013-06-03]
+	Added devel/openrcs version 20110824192219 [asau 2013-06-03]
