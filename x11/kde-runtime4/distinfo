@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/05/22 07:11:58 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2013/06/03 10:23:33 jperkin Exp $
 
 SHA1 (kde-runtime-4.10.3.tar.xz) = 22869b2ee7eb4b5b341a6d596dd904c0b0b812d1
 RMD160 (kde-runtime-4.10.3.tar.xz) = 707da4cb365f283d6e5f9af69b7bb8d109c9d8cc
@@ -11,4 +11,5 @@ SHA1 (patch-af) = 1a8f15ac1c8dadd59fe00ca7ca304ba41521f896
 SHA1 (patch-ag) = 5ca9064552379792c32577875d07562d3f736ab7
 SHA1 (patch-ai) = 3742a827c4b18cde06828ff585d3130062803b9a
 SHA1 (patch-ak) = 4fee3877613afddf179a7a8376586a6391b53c89
+SHA1 (patch-kioslave_nfs_nfs__prot__xdr.c) = 3b779d367a90dbdf158e8f299b4f1de818a6180a
 SHA1 (patch-kwalletd_backend_blowfish.h) = 23bd9bf9671a770d203a10c46dc602145d2b9457
