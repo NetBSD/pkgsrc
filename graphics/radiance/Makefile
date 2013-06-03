@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2013/01/26 21:37:58 adam Exp $
+# $NetBSD: Makefile,v 1.36 2013/06/03 10:05:20 wiz Exp $
 #
 
 DISTNAME=	rad3R6P1
 PKGNAME=	radiance-3.6.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.radiance-online.org/software/non-cvs/	\
 		http://www.radiance-online.org/software/

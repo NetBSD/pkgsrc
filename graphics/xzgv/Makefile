@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2013/02/16 11:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2013/06/03 10:05:22 wiz Exp $
 #
 
 DISTNAME=	xzgv-0.9.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xzgv/}
 
