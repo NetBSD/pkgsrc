@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/09/11 23:04:17 asau Exp $
-#
+# $NetBSD: Makefile,v 1.31 2013/06/03 08:04:56 tron Exp $
 
 DISTNAME=	blas
 PKGNAME=	blas-1.1
@@ -16,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 WRKSRC=			${WRKDIR}/BLAS
-USE_LANGUAGES=		c fortran77
+USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
 
 # Pass along the major and minor of the version number as the major and
