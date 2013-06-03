@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/05/16 06:37:24 richard Exp $
+# $NetBSD: Makefile,v 1.18 2013/06/03 02:28:18 rodent Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-drivers-1.12
+PKGNAME=	modular-xorg-drivers-1.13
 CATEGORIES=	meta-pkgs drivers x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -14,8 +14,10 @@ META_PACKAGE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+DEPENDS+=	xf86-input-acecad-[0-9]*:../../x11/xf86-input-acecad
 DEPENDS+=	xf86-input-keyboard-[0-9]*:../../x11/xf86-input-keyboard
 DEPENDS+=	xf86-input-mouse-[0-9]*:../../x11/xf86-input-mouse
+DEPENDS+=	xf86-input-penmount-[0-9]*:../../x11/xf86-input-penmount
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-input-vmmouse-[0-9]*:../../x11/xf86-input-vmmouse
 .endif
@@ -29,6 +31,7 @@ DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
 # cyrix deprecated in Xorg 7.4
 #DEPENDS+=	xf86-video-cyrix-[0-9]*:../../x11/xf86-video-cyrix
+DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
 DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
@@ -38,6 +41,7 @@ DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
+DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
 # nsc deprecated in Xorg 7.4
 #DEPENDS+=	xf86-video-nsc-[0-9]*:../../x11/xf86-video-nsc
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
