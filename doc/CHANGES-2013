@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1897 2013/06/03 08:13:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1898 2013/06/03 11:21:18 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3038,3 +3038,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/xf86-video-fbdev version 0.4.3 [rodent 2013-06-03]
 	Added x11/xf86-video-newport version 0.2.4 [rodent 2013-06-03]
 	Updated sysutils/cdrtools to 3.01alpha15 [wiz 2013-06-03]
+	Added sysutils/spice-protocol version 0.12.5 [rodent 2013-06-03]
