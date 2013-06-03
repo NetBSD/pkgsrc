@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2013/05/31 12:42:30 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2013/06/03 10:06:07 wiz Exp $
 
 DISTNAME=	WindowMaker-0.95.4
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://windowmaker.info/pub/source/release/
 EXTRACT_SUFX=	.tar.gz
