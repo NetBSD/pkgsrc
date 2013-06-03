@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1898 2013/06/03 11:21:18 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1899 2013/06/03 11:50:29 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -2987,6 +2987,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Added wm/libWindowsWM version 1.0.1 [rodent 2013-05-31]
 	Moved x11/applewmproto to wm/applewmproto [rodent 2013-05-31]
 	Moved x11/libAppleWM to wm/libAppleWM [rodent 2013-05-31]
+	Updated meta-pkgs/modular-xorg-protos to 1.1 [rodent 2013-05-31]
+	Updated meta-pkgs/modular-xorg-libs to 1.1 [rodent 2013-05-31]
 	Added fonts/libXfontcache version 1.0.5 [rodent 2013-05-31]
 	Updated x11/libXinerama to 1.1.3 [wiz 2013-05-31]
 	Updated x11/libXp to 1.0.2 [wiz 2013-05-31]
@@ -2996,6 +2998,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXxf86vm to 1.1.3 [wiz 2013-05-31]
 	Updated x11/libXtst to 1.2.2 [wiz 2013-05-31]
 	Updated lang/perl5 to 5.18.0 [adam 2013-05-31]
+	Updated meta-pkgs/modular-xorg-apps to 1.14 [rodent 2013-05-31]
 	Updated lang/nodejs to 0.10.9 [fhajny 2013-05-31]
 	Updated net/rabbitmq to 3.1.1 [fhajny 2013-05-31]
 	Updated devel/p5-Class-ErrorHandler to 0.02 [schmonz 2013-05-31]
@@ -3036,6 +3039,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/xf86-input-acecad version 1.5.0 [rodent 2013-06-02]
 	Added x11/xf86-input-penmount version 1.5.0 [rodent 2013-06-03]
 	Added x11/xf86-video-fbdev version 0.4.3 [rodent 2013-06-03]
+	Updated meta-pkgs/modular-xorg-drivers to 1.13 [rodent 2013-06-03]
 	Added x11/xf86-video-newport version 0.2.4 [rodent 2013-06-03]
 	Updated sysutils/cdrtools to 3.01alpha15 [wiz 2013-06-03]
 	Added sysutils/spice-protocol version 0.12.5 [rodent 2013-06-03]
