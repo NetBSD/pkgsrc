@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1896 2013/06/03 01:35:40 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1897 2013/06/03 08:13:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3037,3 +3037,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/xf86-input-penmount version 1.5.0 [rodent 2013-06-03]
 	Added x11/xf86-video-fbdev version 0.4.3 [rodent 2013-06-03]
 	Added x11/xf86-video-newport version 0.2.4 [rodent 2013-06-03]
+	Updated sysutils/cdrtools to 3.01alpha15 [wiz 2013-06-03]
