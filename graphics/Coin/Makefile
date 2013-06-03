@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/02/16 11:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/06/03 10:05:06 wiz Exp $
 
 DISTNAME=		Coin-2.4.4
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		graphics
 MASTER_SITES=		http://ftp.coin3d.org/coin/src/all/
 

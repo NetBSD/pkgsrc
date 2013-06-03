@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2013/01/26 21:36:27 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2013/06/03 10:05:09 wiz Exp $
 
 BUILDLINK_TREE+=	evas
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evas
 EVAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas+=	evas>=1.1.0beta
-BUILDLINK_ABI_DEPENDS.evas?=	evas>=1.1.0
+BUILDLINK_ABI_DEPENDS.evas?=	evas>=1.1.0nb1
 BUILDLINK_PKGSRCDIR.evas?=	../../graphics/evas
 
 .include "../../devel/eet/buildlink3.mk"

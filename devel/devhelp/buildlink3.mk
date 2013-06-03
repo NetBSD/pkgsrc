@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2013/05/24 18:23:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2013/06/03 10:04:44 wiz Exp $
 
 BUILDLINK_TREE+=	devhelp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	devhelp
 DEVHELP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.devhelp+=	devhelp>=0.12nb1
-BUILDLINK_ABI_DEPENDS.devhelp+=	devhelp>=2.32.0nb20
+BUILDLINK_ABI_DEPENDS.devhelp+=	devhelp>=2.32.0nb22
 BUILDLINK_PKGSRCDIR.devhelp?=	../../devel/devhelp
 
 .include "../../devel/gettext-lib/buildlink3.mk"

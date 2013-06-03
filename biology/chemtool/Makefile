@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2013/02/16 11:20:25 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/06/03 10:04:37 wiz Exp $
 
 DISTNAME=	chemtool-1.6.13
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	biology
 MASTER_SITES=	http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 
