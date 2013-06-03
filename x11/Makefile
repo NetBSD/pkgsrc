@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2013/06/03 00:23:48 rodent Exp $
+# $NetBSD: Makefile,v 1.693 2013/06/03 00:49:22 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -504,6 +504,7 @@ SUBDIR+=	xf86-video-ati
 SUBDIR+=	xf86-video-chips
 SUBDIR+=	xf86-video-cirrus
 SUBDIR+=	xf86-video-cyrix
+SUBDIR+=	xf86-video-fbdev
 SUBDIR+=	xf86-video-glint
 SUBDIR+=	xf86-video-i128
 SUBDIR+=	xf86-video-i740
