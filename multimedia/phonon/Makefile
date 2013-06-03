@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2013/05/21 12:13:14 markd Exp $
+# $NetBSD: Makefile,v 1.33 2013/06/03 10:05:43 wiz Exp $
 
 DISTNAME=	phonon-4.6.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.6.0/src/}
 EXTRACT_SUFX=	.tar.xz
