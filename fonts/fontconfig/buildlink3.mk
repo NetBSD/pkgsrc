@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.30 2013/06/03 10:04:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2013/06/03 15:18:40 tron Exp $
 
 BUILDLINK_TREE+=	fontconfig
 
 .if !defined(FONTCONFIG_BUILDLINK3_MK)
 FONTCONFIG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.4.2
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.10.93nb1
 BUILDLINK_ABI_DEPENDS.fontconfig+=	fontconfig>=2.10.93nb1
 BUILDLINK_PKGSRCDIR.fontconfig?=	../../fonts/fontconfig
 
