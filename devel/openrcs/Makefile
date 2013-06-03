@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/06/03 21:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2013/06/03 21:17:25 asau Exp $
 
 DISTNAME=	openrcs-20110824192219
 CATEGORIES=	devel
@@ -16,8 +16,5 @@ USE_LIBTOOL=	yes
 
 pre-configure:
 	cd $(WRKSRC) && $(CONFIG_SHELL) bootstrap
-
-.include "../../mk/bsd.prefs.mk"
-DISTDIR:=	$(PKGSRCDIR)/$(PKGPATH)	# override it!
 
 .include "../../mk/bsd.pkg.mk"
