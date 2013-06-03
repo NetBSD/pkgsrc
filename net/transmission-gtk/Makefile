@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/04/21 00:52:22 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/03 10:05:49 wiz Exp $
 
 PKGNAME=	${DISTNAME:C:-:-gtk-:}
-PKGREVISION=	1
+PKGREVISION=	2
 
 USE_LANGUAGES+=		c c++
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}

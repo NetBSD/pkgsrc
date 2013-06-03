@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2013/04/25 03:53:12 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2013/06/03 10:05:52 wiz Exp $
 
 BUILDLINK_TREE+=	libspectre
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libspectre
 LIBSPECTRE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libspectre+=	libspectre>=0.2.1
-BUILDLINK_ABI_DEPENDS.libspectre+=	libspectre>=0.2.7nb4
+BUILDLINK_ABI_DEPENDS.libspectre+=	libspectre>=0.2.7nb6
 BUILDLINK_PKGSRCDIR.libspectre?=	../../print/libspectre
 
 .include "../../print/ghostscript/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/03/16 07:21:22 obache Exp $
+# $NetBSD: Makefile,v 1.15 2013/06/03 10:05:45 wiz Exp $
 #
 
 DISTNAME=		cacti-0.8.8a
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://www.cacti.net/downloads/
 
