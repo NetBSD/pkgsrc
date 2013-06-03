@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.691 2013/06/02 21:58:01 rodent Exp $
+# $NetBSD: Makefile,v 1.692 2013/06/03 00:23:48 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -494,6 +494,7 @@ SUBDIR+=	xeyes
 SUBDIR+=	xf86-input-acecad
 SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-input-mouse
+SUBDIR+=	xf86-input-penmount
 SUBDIR+=	xf86-input-vmmouse
 SUBDIR+=	xf86-input-void
 SUBDIR+=	xf86-video-apm
