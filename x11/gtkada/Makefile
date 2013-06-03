@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:42:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/03 10:06:14 wiz Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11
 MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 		http://dragonlace.mirrors.ada.cx/src/
