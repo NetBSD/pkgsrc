@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.693 2013/06/03 00:49:22 rodent Exp $
+# $NetBSD: Makefile,v 1.694 2013/06/03 01:36:12 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -513,6 +513,7 @@ SUBDIR+=	xf86-video-intel
 SUBDIR+=	xf86-video-mach64
 SUBDIR+=	xf86-video-mga
 SUBDIR+=	xf86-video-neomagic
+SUBDIR+=	xf86-video-newport
 SUBDIR+=	xf86-video-nsc
 SUBDIR+=	xf86-video-nv
 SUBDIR+=	xf86-video-nvxbox
