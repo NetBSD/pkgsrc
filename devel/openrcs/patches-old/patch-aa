@@ -1,0 +1,14 @@
+ftp http://chl.be/openrcs/openrcs-20110824192219.tar.gz
+
+
+--- bootstrap.orig	2010-08-25 00:08:11.000000000 +0200
++++ bootstrap	2013-05-13 11:07:07.711993011 +0200
+@@ -35,7 +35,7 @@
+ 
+ # Check for automake
+ amvers="no"
+-for v in 10 9 8 7 6 5; do
++for v in 13 12 11 10 9 8 7 6 5; do
+   if automake-1.${v} --version >/dev/null 2>&1; then
+     amvers="-1.${v}"
+     break
