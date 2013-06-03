@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/03 10:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/03 10:05:17 wiz Exp $
 
 ###########################################################################
 ###########################################################################
@@ -60,7 +60,7 @@ CFLAGS+=	${_COMPILER_ABI_FLAG.${ABI}}
 # We are going to want libtool to find the same versions of the C, C++,
 # and Fortran compilers.
 #
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++ fortran
 CONFIGURE_ARGS+=	--disable-ltdl-install
 
 USE_TOOLS+=		echo
