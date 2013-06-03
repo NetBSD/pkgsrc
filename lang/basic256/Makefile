@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2013/05/09 07:40:01 adam Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/03 10:05:26 wiz Exp $
 #
 
 DISTNAME=	basic256_0.9.6.71
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kidbasic/}
 EXTRACT_SUFX=	.tgz

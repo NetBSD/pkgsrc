@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 19:51:06 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/03 10:05:59 wiz Exp $
 #
 
 DISTNAME=		grub-2.00
 PKGNAME=		grub2-2.00
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}

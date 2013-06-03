@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/03/02 19:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/03 10:05:49 wiz Exp $
 
 PKGNAME=	${DISTNAME:C:-:-qt-:}
+PKGREVISION=	1
 
 USE_LANGUAGES+=		c c++
 MAKE_ENV+=		QTDIR=${QTDIR}

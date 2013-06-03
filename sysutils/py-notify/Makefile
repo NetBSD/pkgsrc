@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2013/04/05 11:10:12 rodent Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/03 10:06:01 wiz Exp $
 #
 
 DISTNAME=	py-notify-0.2.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}/1}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES= 	http://download.gna.org/py-notify/
 
