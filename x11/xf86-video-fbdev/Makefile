@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/06/03 00:48:23 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/03 00:49:22 rodent Exp $
 
 DISTNAME=	xf86-video-fbdev-0.4.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Video driver for framebuffer device
 LICENSE=	x11
