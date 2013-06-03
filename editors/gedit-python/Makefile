@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/06/03 10:04:51 wiz Exp $
 #
 
 DISTNAME=		gedit-2.30.4
 PKGNAME=		gedit-python-2.30.4
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.30/}
 EXTRACT_SUFX=		.tar.bz2

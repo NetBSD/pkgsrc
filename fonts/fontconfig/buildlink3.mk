@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2012/07/31 18:12:28 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2013/06/03 10:04:56 wiz Exp $
 
 BUILDLINK_TREE+=	fontconfig
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fontconfig
 FONTCONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.4.2
-BUILDLINK_ABI_DEPENDS.fontconfig+=	fontconfig>=2.8.0nb2
+BUILDLINK_ABI_DEPENDS.fontconfig+=	fontconfig>=2.10.93nb1
 BUILDLINK_PKGSRCDIR.fontconfig?=	../../fonts/fontconfig
 
 .include "../../devel/zlib/buildlink3.mk"
