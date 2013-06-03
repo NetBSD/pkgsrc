@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/10 17:59:41 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/03 11:16:16 rodent Exp $
 #
 
 DISTNAME=	aspell6-csb-0.02-0
@@ -14,6 +14,11 @@ LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
+
+.include "../../mk/bsd.prefs.mk"
+.if ${PKG_FORMAT} == "pkg" && ${OPSYS} == "Linux"
+BROKEN=	Non-ASCII PLIST and thus problem with libarchive on glibc systems.
+.endif
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
