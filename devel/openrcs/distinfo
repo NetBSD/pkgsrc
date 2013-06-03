@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/06/03 21:15:35 asau Exp $
+
+SHA1 (openrcs-20110824192219.tar.gz) = 582ca78a9efcc193c18d82fae0617468bdc75b1d
+RMD160 (openrcs-20110824192219.tar.gz) = 266fd50d49da2fbacd2a7c05e2f545a3a19331ad
+Size (openrcs-20110824192219.tar.gz) = 106878 bytes
+SHA1 (patch-bootstrap) = d520fefce0a555d23332d8629ac59c7d1eb5558e
