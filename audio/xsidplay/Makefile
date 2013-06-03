@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2013/02/16 11:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2013/06/03 10:04:36 wiz Exp $
 #
 
 DISTNAME=	xsidplay-1.6.5.1a
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio x11
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
