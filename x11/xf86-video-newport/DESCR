@@ -1,0 +1,3 @@
+This is an unaccelerated driver for the SGI newport cards (a.k.a. XL) as found
+in the SGI Indy and Indigo2. Both the 8bit and 24bit versions are tested and
+working.
