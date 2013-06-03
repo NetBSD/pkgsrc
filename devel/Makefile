@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1746 2013/06/02 01:48:09 dholland Exp $
+# $NetBSD: Makefile,v 1.1747 2013/06/03 21:21:40 asau Exp $
 #
 
 COMMENT=	Development utilities
@@ -512,6 +512,7 @@ SUBDIR+=	opal
 SUBDIR+=	open-vcdiff
 SUBDIR+=	opencm
 SUBDIR+=	opengrok
+SUBDIR+=	openrcs
 SUBDIR+=	orc
 SUBDIR+=	ossp-uuid
 SUBDIR+=	p5-Acme-PlayCode
