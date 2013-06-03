@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1894 2013/06/03 00:22:35 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1895 2013/06/03 00:48:38 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3035,3 +3035,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/scummvm to 1.6.0 [adam 2013-06-02]
 	Added x11/xf86-input-acecad version 1.5.0 [rodent 2013-06-02]
 	Added x11/xf86-input-penmount version 1.5.0 [rodent 2013-06-03]
+	Added x11/xf86-video-fbdev version 0.4.3 [rodent 2013-06-03]
