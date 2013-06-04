@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/05/31 12:42:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2013/06/04 07:38:49 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -20,6 +20,7 @@ COMMENT=		Userland Tools for Xen 4.1.x
 LICENSE=		gnu-gpl-v2
 
 #DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 
 # XXX add version check: Xen requires dev86 >= 0.16.14
 BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
@@ -190,7 +191,6 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
-.include "../../devel/py-curses/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
