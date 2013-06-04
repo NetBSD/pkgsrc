@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1907 2013/06/04 04:43:58 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1908 2013/06/04 06:40:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3051,3 +3051,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/xf86-video-suncg14 version 1.1.2 [rodent 2013-06-04]
 	Added x11/xf86-video-sunffb version 1.2.2 [rodent 2013-06-04]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14 [rodent 2013-06-04]
+	Updated textproc/icu to 51.2 [adam 2013-06-04]
