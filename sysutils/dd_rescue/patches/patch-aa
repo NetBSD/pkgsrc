@@ -1,14 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2010/11/05 08:32:19 ghen Exp $
+$NetBSD: patch-aa,v 1.3 2013/06/04 00:47:46 mef Exp $
 
---- Makefile.orig	2010-10-11 09:37:37.000000000 +0000
-+++ Makefile
-@@ -6,9 +6,6 @@ VERSION = 1.23
+Make it portable.
+
+--- Makefile.orig	2013-03-31 04:33:15.000000000 +0900
++++ Makefile	2013-04-08 16:56:38.000000000 +0900
+@@ -6,9 +6,6 @@ VERSION = 1.33
  
  DESTDIR = 
  
 -CC = gcc
--RPM_OPT_FLAGS = -O2 -Wall -g
+-RPM_OPT_FLAGS = -Os -Wall -g
 -CFLAGS = $(RPM_OPT_FLAGS) $(EXTRA_CFLAGS)
+ CFLAGS_OPT = $(CFLAGS) -O3
  INSTALL = install
  INSTALLFLAGS = -s
- prefix = $(DESTDIR)/usr

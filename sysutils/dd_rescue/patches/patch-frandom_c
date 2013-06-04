@@ -1,0 +1,17 @@
+$NetBSD: patch-frandom_c,v 1.1 2013/06/04 00:47:46 mef Exp $
+
+frandom.c:19:23: fatal error: asm/errno.h: No such file or directory
+compilation terminated.
+
+--- frandom.c.orig	2013-02-10 17:06:41.000000000 +0900
++++ frandom.c	2013-04-08 17:18:43.000000000 +0900
+@@ -16,7 +16,8 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <asm/errno.h>
++/* #include <asm/errno.h> */
++#define ENOMEM 12	/* Out of memory */ 
+ #include <unistd.h>
+ #include <time.h>
+ #include <sys/time.h>
