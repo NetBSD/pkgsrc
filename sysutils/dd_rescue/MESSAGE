@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/06/04 14:55:03 mef Exp $
+
+README file is available at ${PREFIX}/share/doc/dd_rescue/README
+or `dd_rescue -h' for help, thank you.
+===========================================================================
