@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2013/06/03 10:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/06/04 22:15:55 tron Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.28.6
-PKGREVISION=		9
+PKGREVISION=		10
 
 .include "Makefile.common"
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2013/06/03 10:04:36 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/04 22:15:43 tron Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/pulse/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 COMMENT=	The PulseAudio output plugin for xine-lib
 

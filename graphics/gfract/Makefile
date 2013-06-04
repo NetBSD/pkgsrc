@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2013/06/03 10:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2013/06/04 22:16:18 tron Exp $
 #
 
 DISTNAME=		gfract-0.32
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://www.oskusoft.com/osku/gfract/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gfract-palettes-0.1.tar.gz
