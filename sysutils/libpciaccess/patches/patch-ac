@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.14 2013/06/03 14:19:38 wiz Exp $
+$NetBSD: patch-ac,v 1.15 2013/06/04 10:16:00 obache Exp $
 
 Improve NetBSD support. From Michael Lorenz <macallan@NetBSD.org>.
 Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
@@ -930,7 +930,7 @@ Enable boot_vga support only if WSDISPLAYIO_GET_BUSID is defined.
 +#if defined(WSDISPLAYIO_GET_BUSID)
 +	.boot_vga = pci_device_netbsd_boot_vga,
 +#else
-+	.boot_vga = NULL
++	.boot_vga = NULL,
 +#endif
 +	.open_legacy_io = pci_device_netbsd_open_legacy_io,
 +	.read32 = pci_device_netbsd_read32,
