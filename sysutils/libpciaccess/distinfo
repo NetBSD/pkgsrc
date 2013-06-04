@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2013/06/03 14:19:38 wiz Exp $
+$NetBSD: distinfo,v 1.22 2013/06/04 10:16:00 obache Exp $
 
 SHA1 (libpciaccess-0.13.1.tar.bz2) = ae4dcf27a1b52c6a1fd90b21165fbaecae34e8ac
 RMD160 (libpciaccess-0.13.1.tar.bz2) = 2e4c94bd782e98d360664cc0ce3d5ad2d1b0045c
 Size (libpciaccess-0.13.1.tar.bz2) = 352351 bytes
-SHA1 (patch-ac) = c881a4112674e123e1eaa7577a83d91df76ffb76
+SHA1 (patch-ac) = 254cb4ce079f64f80ec56b5caaae8390b214411e
 SHA1 (patch-configure.ac) = 7c5042225016fcd47e8cfd8242c0533ea86b8c5e
 SHA1 (patch-scanpci_Makefile.am) = 086fead04b4a2e506a35aca5d5fe82395708e90c
 SHA1 (patch-scanpci_scanpci.c) = 795d0572af9afb13af60f878f9f44d40edb33463
