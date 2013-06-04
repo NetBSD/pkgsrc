@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2013/06/03 10:06:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2013/06/04 22:17:09 tron Exp $
 
 BUILDLINK_TREE+=	xfce4-xkb-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-xkb-plugin
 XFCE4_XKB_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-xkb-plugin+=	xfce4-xkb-plugin>=0.4.3
-BUILDLINK_ABI_DEPENDS.xfce4-xkb-plugin+=	xfce4-xkb-plugin>=0.4.3nb16
+BUILDLINK_ABI_DEPENDS.xfce4-xkb-plugin+=	xfce4-xkb-plugin>=0.4.3nb17
 BUILDLINK_PKGSRCDIR.xfce4-xkb-plugin?=	../../sysutils/xfce4-xkb-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

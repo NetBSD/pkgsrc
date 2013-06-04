@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2013/06/03 10:04:55 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/04 22:16:02 tron Exp $
 
 DISTNAME=	yabause-0.9.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yabause/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/06/03 10:04:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/04 22:15:40 tron Exp $
 
 DISTNAME=	libcanberra-0.26
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/libcanberra/
 

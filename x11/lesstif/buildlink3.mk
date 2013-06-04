@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2013/06/03 10:06:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2013/06/04 22:17:27 tron Exp $
 
 BUILDLINK_TREE+=	lesstif
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lesstif
 LESSTIF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lesstif+=	lesstif>=0.95.0nb1
-BUILDLINK_ABI_DEPENDS.lesstif+=	lesstif>=0.95.2nb3
+BUILDLINK_ABI_DEPENDS.lesstif+=	lesstif>=0.95.2nb4
 BUILDLINK_PKGSRCDIR.lesstif?=	../../x11/lesstif
 
 _MOTIFBASE=	${BUILDLINK_PREFIX.lesstif}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/06/03 10:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/04 22:16:48 tron Exp $
 #
 
 DISTNAME=	libass-0.10.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://libass.googlecode.com/files/
 EXTRACT_SUFX=	.tar.xz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2013/06/03 10:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2013/06/04 22:17:27 tron Exp $
 #
 
 DISTNAME=	libgnomekbd-2.32.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomekbd/2.32/}
 EXTRACT_SUFX=	.tar.bz2

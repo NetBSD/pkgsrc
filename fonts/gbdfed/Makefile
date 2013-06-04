@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/06/03 10:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/06/04 22:16:03 tron Exp $
 #
 
 DISTNAME=	gbdfed-1.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.math.nmsu.edu/~mleisher/Software/gbdfed/
 EXTRACT_SUFX=	.tbz2

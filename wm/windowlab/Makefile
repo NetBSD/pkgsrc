@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/06/03 10:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/04 22:17:14 tron Exp $
 #
 
 DISTNAME=	windowlab-1.33
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm
 MASTER_SITES=	http://nickgravgaard.com/windowlab/
 EXTRACT_SUFX=	.tar

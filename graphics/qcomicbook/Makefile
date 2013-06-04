@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/06/03 10:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/04 22:16:26 tron Exp $
 #
 
 DISTNAME=		qcomicbook-0.9.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		graphics
 MASTER_SITES=		http://qcomicbook.org/releases/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/06/03 10:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/06/04 22:15:56 tron Exp $
 
 DISTNAME=	rubysdl-2.1.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rubysdl/SDL/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel audio graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2013/06/03 10:05:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2013/06/04 22:16:39 tron Exp $
 
 BUILDLINK_TREE+=	xfce4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4
 XFCE4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4+=	xfce4>=4.6.0
-BUILDLINK_ABI_DEPENDS.xfce4+=	xfce4>=4.6.1nb24
+BUILDLINK_ABI_DEPENDS.xfce4+=	xfce4>=4.6.1nb25
 BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
 
 .include "../../audio/xfce4-mixer/buildlink3.mk"

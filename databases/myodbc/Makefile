@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2013/06/03 10:04:42 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/06/04 22:15:48 tron Exp $
 
 DISTNAME=	mysql-connector-odbc-5.2.2-src
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/:S/-src$//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-ODBC/5.2/}
 

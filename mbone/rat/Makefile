@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2013/06/03 10:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2013/06/04 22:16:39 tron Exp $
 #
 
 DISTNAME=	rat-3.0.28
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mbone
 MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/3.0.28/
 
