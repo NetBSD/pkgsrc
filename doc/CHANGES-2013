@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1920 2013/06/04 21:24:10 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1921 2013/06/04 21:24:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/meld to 1.7.3 [wiz 2013-06-04]
 	Updated textproc/xapian to 1.2.15 [schmonz 2013-06-04]
 	Updated textproc/xapian-omega to 1.2.15 [schmonz 2013-06-04]
+	Updated textproc/p5-Search-Xapian to 1.2.15.0 [schmonz 2013-06-04]
