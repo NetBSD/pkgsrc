@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1904 2013/06/04 02:22:50 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1905 2013/06/04 03:24:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3048,3 +3048,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/openrcs version 20110824192219 [asau 2013-06-03]
 	Updated sysutils/dd_rescue to 1.33 [mef 2013-06-04]
 	Added x11/xf86-video-suncg3 version 1.1.2 [rodent 2013-06-04]
+	Added x11/xf86-video-suncg14 version 1.1.2 [rodent 2013-06-04]
