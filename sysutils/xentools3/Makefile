@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/05/31 12:42:05 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.35 2013/06/04 07:38:49 wiz Exp $
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
@@ -14,6 +13,7 @@ COMMENT=	Userland Tools for Xen
 
 #DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 
 MAKE_JOBS_SAFE=	no
 
@@ -205,7 +205,6 @@ post-install:
 .include "../../textproc/py-xml/buildlink3.mk"
 #.include "../../devel/zlib/buildlink3.mk"
 #.include "../../www/curl/buildlink3.mk"
-.include "../../devel/py-curses/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

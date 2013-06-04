@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/04 07:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/04 07:38:49 wiz Exp $
 #
 
 DISTNAME=	bpython-0.12
@@ -13,6 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9.1:../../devel/py-urwid
@@ -28,7 +29,6 @@ PKG_SUGGESTED_OPTIONS=  # empty
 .include "../../x11/py-gtk2/buildlink3.mk"
 .endif
 
-.include "../../devel/py-curses/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

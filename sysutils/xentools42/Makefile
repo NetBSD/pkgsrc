@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:42:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/04 07:38:49 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -16,7 +16,6 @@ SITES.ipxe-git-v${VERSION_IPXE}.tar.gz +=	http://xenbits.xensource.com/xen-extfi
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xen.org/
 COMMENT=		Userland Tools for Xen 4.2.x
-
 LICENSE=		gnu-gpl-v2
 
 # XXX add version check: Xen requires dev86 >= 0.16.14
@@ -24,6 +23,7 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 .if !exists(/usr/bin/iasl)
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
+DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 
 PKG_SYSCONFSUBDIR=	xen
 
@@ -247,7 +247,6 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
-.include "../../devel/py-curses/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
