@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1916 2013/06/04 18:04:19 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1917 2013/06/04 18:18:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3056,10 +3056,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libX11 to 1.6.0 [wiz 2013-06-04]
 	Updated devel/lua-filesystem to 1.6.2 [fhajny 2013-06-04]
 	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
-	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
 	Updated devel/p5-Test-BDD-Cucumber to 0.15 [schmonz 2013-06-04]
 	Updated x11/gtk2 to 2.24.17nb3 [obache 2013-06-04]
 	Updated databases/mysql55-client to 5.5.32 [adam 2013-06-04]
 	Updated databases/mysql55-server to 5.5.32 [adam 2013-06-04]
 	Updated www/ap2-perl to 2.0.8 [adam 2013-06-04]
 	Updated pkgtools/x11-links to 0.76 [tron 2013-06-04]
+	Updated databases/mysql56-client to 5.6.12 [adam 2013-06-04]
+	Updated databases/mysql56-server to 5.6.12 [adam 2013-06-04]
