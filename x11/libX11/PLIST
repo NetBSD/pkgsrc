@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/07/10 03:03:01 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/06/04 07:57:13 wiz Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -11,7 +11,6 @@ include/X11/Xregion.h
 include/X11/Xresource.h
 include/X11/Xutil.h
 include/X11/cursorfont.h
-lib/X11/Xcms.txt
 lib/libX11-xcb.la
 lib/libX11.la
 lib/pkgconfig/x11-xcb.pc
@@ -836,6 +835,7 @@ man/man3/XwcTextPropertyToTextList.3
 man/man5/Compose.5
 man/man5/XCompose.5
 share/X11/XErrorDB
+share/X11/Xcms.txt
 share/X11/locale/C/Compose
 share/X11/locale/C/XI18N_OBJS
 share/X11/locale/C/XLC_LOCALE
@@ -918,15 +918,9 @@ share/X11/locale/iso8859-9e/XLC_LOCALE
 share/X11/locale/ja.JIS/Compose
 share/X11/locale/ja.JIS/XI18N_OBJS
 share/X11/locale/ja.JIS/XLC_LOCALE
-share/X11/locale/ja.S90/Compose
-share/X11/locale/ja.S90/XI18N_OBJS
-share/X11/locale/ja.S90/XLC_LOCALE
 share/X11/locale/ja.SJIS/Compose
 share/X11/locale/ja.SJIS/XI18N_OBJS
 share/X11/locale/ja.SJIS/XLC_LOCALE
-share/X11/locale/ja.U90/Compose
-share/X11/locale/ja.U90/XI18N_OBJS
-share/X11/locale/ja.U90/XLC_LOCALE
 share/X11/locale/ja/Compose
 share/X11/locale/ja/XI18N_OBJS
 share/X11/locale/ja/XLC_LOCALE
