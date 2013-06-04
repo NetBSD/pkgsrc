@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/11 23:25:08 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2013/06/04 07:35:15 wiz Exp $
 
 DISTNAME=	lshell-0.9.15.1
 CATEGORIES=	shells python
@@ -9,6 +8,8 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://ghantoos.org/limited-shell-lshell/
 COMMENT=	Lshell restricts user's environment to specified commands
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 PKG_GROUPS=	lshellg
 PKG_SHELL=	bin/lshell
@@ -37,5 +38,4 @@ CONF_FILES=		${PREFIX}/${EGDIR}/lshell.conf \
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/py-readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
