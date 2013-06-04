@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2013/06/03 10:05:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2013/06/04 22:16:23 tron Exp $
 
 BUILDLINK_TREE+=	libkipi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkipi
 LIBKIPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkipi+=	libkipi>=0.1.5<4.0
-BUILDLINK_ABI_DEPENDS.libkipi+=	libkipi>=0.1.6nb20
+BUILDLINK_ABI_DEPENDS.libkipi+=	libkipi>=0.1.6nb21
 BUILDLINK_PKGSRCDIR.libkipi?=	../../graphics/libkipi-kde3
 
 .include "../../x11/kdelibs3/buildlink3.mk"

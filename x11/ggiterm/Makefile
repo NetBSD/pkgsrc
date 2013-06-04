@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/06/03 10:06:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/06/04 22:17:18 tron Exp $
 #
 
 DISTNAME=		ggiterm-0.7.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ggiterm/}
 

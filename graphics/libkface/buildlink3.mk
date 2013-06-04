@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2013/06/03 10:05:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2013/06/04 22:16:23 tron Exp $
 
 BUILDLINK_TREE+=	libkface
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkface
 LIBKFACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkface+=	libkface>=2.5.0
-BUILDLINK_ABI_DEPENDS.libkface?=	libkface>=3.2.0nb1
+BUILDLINK_ABI_DEPENDS.libkface?=	libkface>=3.2.0nb2
 BUILDLINK_PKGSRCDIR.libkface?=	../../graphics/libkface
 
 .include "../../graphics/opencv/buildlink3.mk"
