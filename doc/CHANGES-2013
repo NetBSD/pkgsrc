@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1909 2013/06/04 07:13:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1910 2013/06/04 07:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3053,3 +3053,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-drivers to 1.14 [rodent 2013-06-04]
 	Updated textproc/icu to 51.2 [adam 2013-06-04]
 	Updated x11/xterm to 293nb2 [wiz 2013-06-04]
+	Updated x11/libX11 to 1.6.0 [wiz 2013-06-04]
