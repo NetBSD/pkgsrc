@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/06/03 10:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/06/04 22:17:09 tron Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ XFCE4_VERSION=	0.2.0
 
 DISTNAME=	thunar-volman-${XFCE4_VERSION}
 PKGNAME=	${DISTNAME:S/thunar/xfce4/}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/thunar-volman/
 COMMENT=	Thunar volume manager

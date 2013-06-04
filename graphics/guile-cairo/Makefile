@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/06/03 10:05:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/04 22:16:20 tron Exp $
 #
 
 DISTNAME=	guile-cairo-1.4.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gna.org/guile-cairo/
 
