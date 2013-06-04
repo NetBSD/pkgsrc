@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1912 2013/06/04 09:32:36 roy Exp $
+$NetBSD: CHANGES-2013,v 1.1913 2013/06/04 09:40:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3057,3 +3057,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/lua-filesystem to 1.6.2 [fhajny 2013-06-04]
 	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
 	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
+	Updated devel/p5-Test-BDD-Cucumber to 0.15 [schmonz 2013-06-04]
