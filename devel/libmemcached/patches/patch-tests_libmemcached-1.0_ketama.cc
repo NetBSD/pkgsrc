@@ -1,4 +1,4 @@
-$NetBSD: patch-tests_libmemcached-1.0_ketama.cc,v 1.1 2013/05/09 13:50:54 joerg Exp $
+$NetBSD: patch-tests_libmemcached-1.0_ketama.cc,v 1.2 2013/06/04 21:17:17 fhajny Exp $
 
 --- tests/libmemcached-1.0/ketama.cc.orig	2013-05-05 20:35:41.000000000 +0000
 +++ tests/libmemcached-1.0/ketama.cc
@@ -14,7 +14,7 @@ $NetBSD: patch-tests_libmemcached-1.0_ketama.cc,v 1.1 2013/05/09 13:50:54 joerg 
  
  #include <tests/ketama.h>
  #include <tests/ketama_test_cases.h>
-+#include <cstdint>
++#include <stdint.h>
  
  test_return_t ketama_compatibility_libmemcached(memcached_st *)
  {
