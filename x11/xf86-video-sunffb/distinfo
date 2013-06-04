@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/04 03:34:23 rodent Exp $
+
+SHA1 (xf86-video-sunffb-1.2.2.tar.bz2) = 6391d795b6bb1fa5f38c81e0a46fbc003c9a941e
+RMD160 (xf86-video-sunffb-1.2.2.tar.bz2) = 306c17040a1c095b9c5b11b26a71bcf15f8bcf2c
+Size (xf86-video-sunffb-1.2.2.tar.bz2) = 334827 bytes
