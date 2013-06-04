@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12232 2013/06/04 00:55:14 mef Exp $
+$NetBSD: TODO,v 1.12233 2013/06/04 03:34:44 rodent Exp $
 
 Suggested new packages
 ======================
@@ -1192,7 +1192,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-intel-2.21.8
 	o xf86-video-mga-1.9.100
 	o xf86-video-sisusb-0.9.4
-	o xf86-video-sunffb-1.2.1 [unpackaged]
 	o xf86-video-voodoo-1.2.4
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xfce4-4.10
