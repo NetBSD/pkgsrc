@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12233 2013/06/04 03:34:44 rodent Exp $
+$NetBSD: TODO,v 1.12234 2013/06/04 04:46:12 rodent Exp $
 
 Suggested new packages
 ======================
@@ -294,8 +294,7 @@ Suggested new packages
 	xf86-input-tek4957, xf86-input-ur98, xf86-video-amd, xf86-video-dummy,
 	xf86-video-glide, xf86-video-impact,
 	xf86-video-modesetting, xf86-video-omap, xf86-video-qxl,
-	xf86-video-sisusb, xf86-video-sunbw2, xf86-video-suncg3,
-	xf86-video-suncg6, xf86-video-suncg14, xf86-video-sunffb,
+	xf86-video-sisusb, xf86-video-sunbw2, xf86-video-suncg6, 
 	xf86-video-sunleo, xf86-video-suntcx, xf86-video-v4l,
 	xf86-video-vermilion, xf86-video-voodoo, xf86-video-xgi,
 	xf86-video-xgixp
