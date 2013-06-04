@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/06/03 10:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/06/04 22:17:31 tron Exp $
 #
 
 DISTNAME=	qwtplot3d-0.2.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwtplot3d/}
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2013/06/03 10:06:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2013/06/04 22:17:27 tron Exp $
 
 BUILDLINK_TREE+=	libXfont
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libXfont
 LIBXFONT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libXfont+=	libXfont>=1.2.0
-BUILDLINK_ABI_DEPENDS.libXfont+=	libXfont>=1.4.5nb1
+BUILDLINK_ABI_DEPENDS.libXfont+=	libXfont>=1.4.5nb2
 BUILDLINK_PKGSRCDIR.libXfont?=	../../x11/libXfont
 
 .include "../../graphics/freetype2/buildlink3.mk"

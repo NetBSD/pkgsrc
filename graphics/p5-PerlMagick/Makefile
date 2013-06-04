@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2013/06/03 10:05:18 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2013/06/04 22:16:24 tron Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	p5pma
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
