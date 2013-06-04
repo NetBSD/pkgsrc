@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2013/06/03 10:04:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/04 22:16:03 tron Exp $
 #
 
 DISTNAME=	ttf2pt1-3.4.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ttf2pt1/}
 EXTRACT_SUFX=	.tgz

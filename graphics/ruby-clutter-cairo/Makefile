@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2013/06/03 10:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/06/04 22:16:26 tron Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-clutter-cairo-${VERSION}
 COMMENT=		Ruby binding for Clutter Cairo library
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		graphics
 
 DEPENDS+=	${RUBY_PKGPREFIX}-clutter-core>=${VERSION}:../../graphics/ruby-clutter-core

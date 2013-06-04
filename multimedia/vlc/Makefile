@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.155 2013/06/03 10:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2013/06/04 22:16:51 tron Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		27
+PKGREVISION=		28
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
 			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/

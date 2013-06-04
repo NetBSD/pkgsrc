@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2013/06/03 10:04:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2013/06/04 22:15:50 tron Exp $
 
 BUILDLINK_TREE+=	blib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	blib
 BLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.blib+=	blib>=1.0.2nb1
-BUILDLINK_ABI_DEPENDS.blib+=	blib>=1.0.2nb21
+BUILDLINK_ABI_DEPENDS.blib+=	blib>=1.0.2nb22
 BUILDLINK_PKGSRCDIR.blib?=	../../devel/blib
 
 .include "../../x11/gtk2/buildlink3.mk"

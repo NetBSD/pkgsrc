@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2013/06/03 10:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/06/04 22:16:25 tron Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
 PKGNAME=	${PYPKGPREFIX}-gdchart-0.6
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics python
 MASTER_SITES=	http://www.nullcube.com/software/pygdchart.html
 

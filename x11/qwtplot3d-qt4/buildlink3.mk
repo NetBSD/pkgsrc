@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2013/06/03 10:06:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2013/06/04 22:17:31 tron Exp $
 
 BUILDLINK_TREE+=	qwtplot3d
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qwtplot3d
 QWTPLOT3D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qwtplot3d+=	qwtplot3d>=0.2.7
-BUILDLINK_ABI_DEPENDS.qwtplot3d+=	qwtplot3d>=0.2.7nb18
+BUILDLINK_ABI_DEPENDS.qwtplot3d+=	qwtplot3d>=0.2.7nb19
 BUILDLINK_PKGSRCDIR.qwtplot3d?=	../../x11/qwtplot3d-qt4
 
 .include "../../x11/qt4-libs/buildlink3.mk"

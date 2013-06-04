@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/06/03 10:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/06/04 22:17:28 tron Exp $
 #
 
 DISTNAME=		matchbox-desktop-0.9.1
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		x11
 MASTER_SITES=		http://matchbox-project.org/sources/matchbox-desktop/0.9/
 EXTRACT_SUFX=		.tar.bz2

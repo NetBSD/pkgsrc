@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/06/03 10:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/04 22:17:18 tron Exp $
 
 VERS=		6129
-PKGREVISION=	10
+PKGREVISION=	11
 DISTNAME=	fltk-2.0.x-r${VERS}
 PKGNAME=	fltk2-2.0pre${VERS}
 CATEGORIES=	x11

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2013/06/03 10:06:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2013/06/04 22:17:17 tron Exp $
 
 BUILDLINK_TREE+=	blt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	blt
 BLT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.blt+=		blt>=2.4z
-BUILDLINK_ABI_DEPENDS.blt+=	blt>=2.4znb4
+BUILDLINK_ABI_DEPENDS.blt+=	blt>=2.4znb5
 BUILDLINK_PKGSRCDIR.blt?=	../../x11/blt
 
 .include "../../lang/tcl/buildlink3.mk"
