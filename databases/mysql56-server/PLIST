@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/20 08:06:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/06/04 18:17:25 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -297,6 +297,7 @@ share/mysql/test/extra/rpl_tests/rpl_stm_EE_err2.test
 share/mysql/test/extra/rpl_tests/rpl_stm_create_if_not_exists.test
 share/mysql/test/extra/rpl_tests/rpl_stop_middle_group.test
 share/mysql/test/extra/rpl_tests/rpl_stop_slave.test
+share/mysql/test/extra/rpl_tests/rpl_stress_test.inc
 share/mysql/test/extra/rpl_tests/rpl_sv_relay_space.test
 share/mysql/test/extra/rpl_tests/rpl_temp_error.test
 share/mysql/test/extra/rpl_tests/rpl_test_framework.inc
@@ -503,13 +504,20 @@ share/mysql/test/include/implicit_commit_helper.inc
 share/mysql/test/include/index_merge1.inc
 share/mysql/test/include/index_merge2.inc
 share/mysql/test/include/index_merge_2sweeps.inc
+share/mysql/test/include/index_merge_delete.inc
+share/mysql/test/include/index_merge_insert-and-replace.inc
+share/mysql/test/include/index_merge_intersect_dml.inc
+share/mysql/test/include/index_merge_multi_col_setup.inc
 share/mysql/test/include/index_merge_ror.inc
 share/mysql/test/include/index_merge_ror_cpk.inc
+share/mysql/test/include/index_merge_single_col_setup.inc
+share/mysql/test/include/index_merge_update.inc
 share/mysql/test/include/innodb-index.inc
 share/mysql/test/include/innodb-util.inc
 share/mysql/test/include/innodb_pk_extension.inc
 share/mysql/test/include/innodb_rollback_on_timeout.inc
 share/mysql/test/include/innodb_trx_weight.inc
+share/mysql/test/include/install_semisync.inc
 share/mysql/test/include/io_thd_fault_injection.inc
 share/mysql/test/include/ipv6.inc
 share/mysql/test/include/ipv6_clients.inc
@@ -687,6 +695,7 @@ share/mysql/test/include/testdb_only.inc
 share/mysql/test/include/tpcb.inc
 share/mysql/test/include/tpcb_disk_data.inc
 share/mysql/test/include/truncate_file.inc
+share/mysql/test/include/uninstall_semisync.inc
 share/mysql/test/include/unsafe_binlog.inc
 share/mysql/test/include/uses_vardir.inc
 share/mysql/test/include/varchar.inc
@@ -1082,8 +1091,12 @@ share/mysql/test/r/help.result
 share/mysql/test/r/host_cache_size_functionality.result
 share/mysql/test/r/implicit_char_to_num_conversion.result
 share/mysql/test/r/implicit_commit.result
+share/mysql/test/r/index_merge_delete.result
 share/mysql/test/r/index_merge_innodb.result
+share/mysql/test/r/index_merge_insert-and-replace.result
+share/mysql/test/r/index_merge_intersect_dml.result
 share/mysql/test/r/index_merge_myisam.result
+share/mysql/test/r/index_merge_update.result
 share/mysql/test/r/information_schema-big.result
 share/mysql/test/r/information_schema.result
 share/mysql/test/r/information_schema_chmod.result
@@ -3741,6 +3754,7 @@ share/mysql/test/suite/innodb_fts/r/innodb_fts_misc_1.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_misc_debug.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_multiple_index.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_opt.result
+share/mysql/test/suite/innodb_fts/r/innodb_fts_plugin.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_proximity.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_stopword_charset.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_transaction.result
@@ -3768,6 +3782,7 @@ share/mysql/test/suite/innodb_fts/t/innodb_fts_misc_1.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_misc_debug.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_multiple_index.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_opt.test
+share/mysql/test/suite/innodb_fts/t/innodb_fts_plugin.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_proximity.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_stopword_charset.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_transaction.test
@@ -5985,6 +6000,7 @@ share/mysql/test/suite/rpl/r/rpl_get_lock.result
 share/mysql/test/suite/rpl/r/rpl_get_master_version_and_clock.result
 share/mysql/test/suite/rpl/r/rpl_grant.result
 share/mysql/test/suite/rpl/r/rpl_grant_plugin.result
+share/mysql/test/suite/rpl/r/rpl_group_commit_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_gtid_empty_group.result
 share/mysql/test/suite/rpl/r/rpl_gtid_execution.result
 share/mysql/test/suite/rpl/r/rpl_gtid_failover.result
@@ -6197,7 +6213,10 @@ share/mysql/test/suite/rpl/r/rpl_row_wide_table.result
 share/mysql/test/suite/rpl/r/rpl_savepoint.result
 share/mysql/test/suite/rpl/r/rpl_seconds_behind_master.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_semi_sync_event.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_group_commit_deadlock.result
+share/mysql/test/suite/rpl/r/rpl_semi_sync_non_group_commit_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_sequential.result
 share/mysql/test/suite/rpl/r/rpl_server_id1.result
 share/mysql/test/suite/rpl/r/rpl_server_id2.result
@@ -6418,6 +6437,7 @@ share/mysql/test/suite/rpl/t/rpl_grant.test
 share/mysql/test/suite/rpl/t/rpl_grant_plugin-master.opt
 share/mysql/test/suite/rpl/t/rpl_grant_plugin-slave.opt
 share/mysql/test/suite/rpl/t/rpl_grant_plugin.test
+share/mysql/test/suite/rpl/t/rpl_group_commit_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_gtid_empty_group-master.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_empty_group-slave.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_empty_group.test
@@ -6749,9 +6769,18 @@ share/mysql/test/suite/rpl/t/rpl_seconds_behind_master.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_deadlock-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_deadlock-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_semi_sync_event-master.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_event-slave.opt
 share/mysql/test/suite/rpl/t/rpl_semi_sync_event.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_group_commit_deadlock-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_group_commit_deadlock-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_group_commit_deadlock.test
+share/mysql/test/suite/rpl/t/rpl_semi_sync_non_group_commit_deadlock-master.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_non_group_commit_deadlock-slave.opt
+share/mysql/test/suite/rpl/t/rpl_semi_sync_non_group_commit_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_sequential-master.opt
 share/mysql/test/suite/rpl/t/rpl_sequential-slave.opt
 share/mysql/test/suite/rpl/t/rpl_sequential.test
@@ -7182,6 +7211,7 @@ share/mysql/test/suite/sys_vars/r/innodb_limit_optimistic_insert_debug_basic.res
 share/mysql/test/suite/sys_vars/r/innodb_lock_wait_timeout_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_locks_unsafe_for_binlog_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_log_buffer_size_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_log_checkpoint_now_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_log_compressed_pages_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_log_file_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_log_files_in_group_basic.result
@@ -7779,6 +7809,7 @@ share/mysql/test/suite/sys_vars/t/innodb_limit_optimistic_insert_debug_basic.tes
 share/mysql/test/suite/sys_vars/t/innodb_lock_wait_timeout_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_locks_unsafe_for_binlog_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_log_buffer_size_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_log_checkpoint_now_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_log_compressed_pages_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_log_file_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_log_files_in_group_basic.test
@@ -8511,8 +8542,12 @@ share/mysql/test/t/host_cache_size_functionality.test
 share/mysql/test/t/implicit_char_to_num_conversion.test
 share/mysql/test/t/implicit_commit-master.opt
 share/mysql/test/t/implicit_commit.test
+share/mysql/test/t/index_merge_delete.test
 share/mysql/test/t/index_merge_innodb.test
+share/mysql/test/t/index_merge_insert-and-replace.test
+share/mysql/test/t/index_merge_intersect_dml.test
 share/mysql/test/t/index_merge_myisam.test
+share/mysql/test/t/index_merge_update.test
 share/mysql/test/t/information_schema-big.test
 share/mysql/test/t/information_schema.test
 share/mysql/test/t/information_schema_chmod.test
