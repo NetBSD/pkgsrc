@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/04/20 08:06:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/06/04 13:31:21 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -103,6 +103,7 @@ share/mysql/romanian/errmsg.sys
 share/mysql/russian/errmsg.sys
 share/mysql/serbian/errmsg.sys
 share/mysql/slovak/errmsg.sys
+share/mysql/solaris/postinstall-solaris
 share/mysql/spanish/errmsg.sys
 share/mysql/sql-bench/sql-bench/Data/ATIS/aircraft.txt
 share/mysql/sql-bench/sql-bench/Data/ATIS/airline.txt
@@ -443,6 +444,7 @@ share/mysql/test/include/index_merge_ror_cpk.inc
 share/mysql/test/include/innodb-index.inc
 share/mysql/test/include/innodb_rollback_on_timeout.inc
 share/mysql/test/include/innodb_trx_weight.inc
+share/mysql/test/include/install_semisync.inc
 share/mysql/test/include/io_thd_fault_injection.inc
 share/mysql/test/include/ipv6.inc
 share/mysql/test/include/ipv6_clients.inc
@@ -578,6 +580,7 @@ share/mysql/test/include/testdb_only.inc
 share/mysql/test/include/tpcb.inc
 share/mysql/test/include/tpcb_disk_data.inc
 share/mysql/test/include/truncate_file.inc
+share/mysql/test/include/uninstall_semisync.inc
 share/mysql/test/include/unsafe_binlog.inc
 share/mysql/test/include/uses_vardir.inc
 share/mysql/test/include/varchar.inc
