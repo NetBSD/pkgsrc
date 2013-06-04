@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:32 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/04 07:35:14 wiz Exp $
 #
 
 VERS=			0.53.0
@@ -26,6 +26,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/egg.mk"
-#.include "../../devel/py-readline/buildlink3.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
