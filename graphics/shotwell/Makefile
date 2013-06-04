@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2013/06/03 10:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2013/06/04 22:16:27 tron Exp $
 #
 
 DISTNAME=		shotwell-0.11.6
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		graphics
 MASTER_SITES=		http://yorba.org/download/shotwell/0.11/
 EXTRACT_SUFX=		.tar.bz2

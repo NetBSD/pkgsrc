@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/06/03 10:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/04 22:16:44 tron Exp $
 
 DISTNAME=	nepomuk-widgets-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Nepomuk Meta Data Library
 
