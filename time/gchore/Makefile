@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/06/03 10:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/06/04 22:17:10 tron Exp $
 #
 
 DISTNAME=	gchore-1.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gchore/}
 

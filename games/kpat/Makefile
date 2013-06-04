@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/06/03 10:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/04 22:16:08 tron Exp $
 
 DISTNAME=	kpat-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 COMMENT=	a multiplicity of different solitaire games
 

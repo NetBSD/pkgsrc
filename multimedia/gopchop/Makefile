@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2013/06/03 10:05:41 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2013/06/04 22:16:47 tron Exp $
 #
 
 DISTNAME=		gopchop-1.1.8
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gopchop/} \
 			http://outflux.net/unix/software/GOPchop/download/
