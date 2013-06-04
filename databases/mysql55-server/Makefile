@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2013/05/20 19:33:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2013/06/04 13:31:21 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	mysqs
 COMMENT=	MySQL 5, a free SQL database (server)
 
@@ -58,11 +57,13 @@ REPLACE_PERL+=		mysql-test/lib/My/SafeProcess/safe_process.pl
 REPLACE_PERL+=		mysql-test/lib/v1/mysql-test-run.pl
 REPLACE_PERL+=		mysql-test/mysql-stress-test.pl
 REPLACE_PERL+=		mysql-test/mysql-test-run.pl
+REPLACE_PERL+=		mysql-test/std_data/checkDBI_DBD-mysql.pl
 REPLACE_PERL+=		mysql-test/suite/engines/rr_trx/run_stress_tx_rr.pl
 REPLACE_PERL+=		mysql-test/suite/funcs_1/lib/DataGen_local.pl
 REPLACE_PERL+=		mysql-test/suite/funcs_1/lib/DataGen_modify.pl
 REPLACE_PERL+=		mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl
 REPLACE_PERL+=		mysql-test/mtr
+REPLACE_PERL+=		sql-bench/*.sh
 
 INSTALLATION_DIRS=	bin
 
