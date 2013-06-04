@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/06/03 10:05:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2013/06/04 07:45:01 wiz Exp $
 
 DISTNAME=		matplotlib-1.2.0
 PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-1.2.0
@@ -11,6 +10,8 @@ FETCH_USING=		curl
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matplotlib.sourceforge.net/
 COMMENT=		Tk frontend for matplotlib
+
+DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
@@ -36,6 +37,5 @@ post-patch:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
