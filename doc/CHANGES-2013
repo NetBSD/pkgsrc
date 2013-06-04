@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1917 2013/06/04 18:18:44 adam Exp $
+$NetBSD: CHANGES-2013,v 1.1918 2013/06/04 18:52:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3064,3 +3064,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/x11-links to 0.76 [tron 2013-06-04]
 	Updated databases/mysql56-client to 5.6.12 [adam 2013-06-04]
 	Updated databases/mysql56-server to 5.6.12 [adam 2013-06-04]
+	Updated devel/meld to 1.7.3 [wiz 2013-06-04]
