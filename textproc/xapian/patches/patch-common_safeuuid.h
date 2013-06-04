@@ -1,10 +1,10 @@
-$NetBSD: patch-common_safeuuid.h,v 1.2 2012/01/10 01:03:29 schmonz Exp $
+$NetBSD: patch-common_safeuuid.h,v 1.3 2013/06/04 21:27:02 schmonz Exp $
 
 Fix build with newer GCC.
 
---- common/safeuuid.h.orig	2011-11-26 02:56:21.000000000 +0000
+--- common/safeuuid.h.orig	2013-04-17 00:03:07.000000000 +0000
 +++ common/safeuuid.h
-@@ -54,6 +54,7 @@ inline void uuid_unparse_lower(uuid_t uu
+@@ -55,6 +55,7 @@ inline void uuid_unparse_lower(uuid_t uu
  
  // FreeBSD/NetBSD UUID API.
  # include <uuid.h>
