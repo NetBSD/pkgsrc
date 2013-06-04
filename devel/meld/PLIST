@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/04/21 14:46:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/06/04 18:51:59 wiz Exp $
 bin/meld
 lib/meld/meld/__init__.py
 lib/meld/meld/__init__.pyc
@@ -194,6 +194,7 @@ share/locale/en_CA/LC_MESSAGES/meld.mo
 share/locale/en_GB/LC_MESSAGES/meld.mo
 share/locale/eo/LC_MESSAGES/meld.mo
 share/locale/es/LC_MESSAGES/meld.mo
+share/locale/eu/LC_MESSAGES/meld.mo
 share/locale/fi/LC_MESSAGES/meld.mo
 share/locale/fr/LC_MESSAGES/meld.mo
 share/locale/gl/LC_MESSAGES/meld.mo
@@ -233,10 +234,12 @@ share/meld/icons/filter-nonvc-24.png
 share/meld/icons/filter-normal-24.png
 share/meld/icons/meld-locked.png
 share/meld/icons/meld-unlocked.png
+share/meld/icons/meld-vc-icon.png
 share/meld/icons/vc-add-24.png
 share/meld/icons/vc-checkout-24.png
 share/meld/icons/vc-commit-24.png
 share/meld/icons/vc-icon.png
+share/meld/icons/vc-push-24.png
 share/meld/icons/vc-remove-24.png
 share/meld/icons/vc-resolve-24.png
 share/meld/icons/vc-update-24.png
