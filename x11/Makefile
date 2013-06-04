@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2013/06/04 02:25:07 rodent Exp $
+# $NetBSD: Makefile,v 1.696 2013/06/04 03:25:01 rodent Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -527,6 +527,7 @@ SUBDIR+=	xf86-video-savage
 SUBDIR+=	xf86-video-siliconmotion
 SUBDIR+=	xf86-video-sis
 SUBDIR+=	xf86-video-suncg3
+SUBDIR+=	xf86-video-suncg14
 SUBDIR+=	xf86-video-tdfx
 SUBDIR+=	xf86-video-tga
 SUBDIR+=	xf86-video-trident
