@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1913 2013/06/04 09:40:40 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.1914 2013/06/04 13:05:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3058,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
 	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
 	Updated devel/p5-Test-BDD-Cucumber to 0.15 [schmonz 2013-06-04]
+	Updated x11/gtk2 to 2.24.17nb3 [obache 2013-06-04]
