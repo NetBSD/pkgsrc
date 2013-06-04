@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/04 09:21:26 fhajny Exp $
 #
 
-DISTNAME=		luafilesystem-1.5.0
+DISTNAME=		luafilesystem-1.6.2
 PKGNAME=		${DISTNAME:S/lua/lua-/}
 CATEGORIES=		devel
 MASTER_SITES=		http://github.com/downloads/keplerproject/luafilesystem/
@@ -9,6 +9,7 @@ MASTER_SITES=		http://github.com/downloads/keplerproject/luafilesystem/
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://keplerproject.github.com/luafilesystem/
 COMMENT=		File system related library for Lua
+LICENSE=		mit
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		lib
