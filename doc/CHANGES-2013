@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1914 2013/06/04 13:05:22 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1915 2013/06/04 13:51:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3059,3 +3059,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/openresolv to 3.5.5 [roy 2013-06-04]
 	Updated devel/p5-Test-BDD-Cucumber to 0.15 [schmonz 2013-06-04]
 	Updated x11/gtk2 to 2.24.17nb3 [obache 2013-06-04]
+	Updated databases/mysql55-client to 5.5.32 [adam 2013-06-04]
+	Updated databases/mysql55-server to 5.5.32 [adam 2013-06-04]
+	Updated www/ap2-perl to 2.0.8 [adam 2013-06-04]
