@@ -1,7 +1,8 @@
-$NetBSD: patch-am,v 1.5 2013/05/29 11:11:12 wiz Exp $
---- mono/io-layer/io.c.orig	2012-12-05 17:44:35.000000000 +0000
+$NetBSD: patch-am,v 1.6 2013/06/05 17:03:55 jperkin Exp $
+
+--- mono/io-layer/io.c.orig	2013-04-25 09:07:19.000000000 +0000
 +++ mono/io-layer/io.c
-@@ -3376,7 +3376,7 @@ guint32 GetTempPath (guint32 len, gunich
+@@ -3405,7 +3405,7 @@ guint32 GetTempPath (guint32 len, gunich
  	return(ret);
  }
  
@@ -9,4 +10,13 @@ $NetBSD: patch-am,v 1.5 2013/05/29 11:11:12 wiz Exp $
 +#if (defined(HAVE_GETFSSTAT) && defined(HAVE_SYS_STATFS_H))
  /* Darwin has getfsstat */
  gint32 GetLogicalDriveStrings (guint32 len, gunichar2 *buf)
+ {
+@@ -4227,7 +4227,7 @@ get_fstypename (gchar *utfpath)
+ }
+ 
+ /* Linux has struct statfs which has a different layout */
+-#if defined (PLATFORM_MACOSX) || defined (__linux__) || defined(PLATFORM_BSD) || defined(__native_client__)
++#if defined (PLATFORM_MACOSX) || defined (__linux__) || defined(PLATFORM_BSD) || defined(__native_client__) || defined(PLATFORM_SOLARIS)
+ gboolean
+ GetVolumeInformation (const gunichar2 *path, gunichar2 *volumename, int volumesize, int *outserial, int *maxcomp, int *fsflags, gunichar2 *fsbuffer, int fsbuffersize)
  {
