@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1925 2013/06/05 19:47:48 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1926 2013/06/05 19:53:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3073,3 +3073,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_47 to 4.7.12 [taca 2013-06-05]
 	Updated www/typo3_60 to 6.0.6 [taca 2013-06-05]
 	Updated pkgtools/x11-links to 0.78 [tron 2013-06-05]
+	Added security/ssdeep version 2.9 [khorben 2013-06-05]
