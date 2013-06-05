@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1991 2013/06/03 23:27:14 riastradh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1992 2013/06/05 08:19:57 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -153,7 +153,11 @@ ${_var_}+=	${${_var_}.*}
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 
-PKGSRC_SETENV?=	${SETENV} -i
+# To sanitise environment set PKGSRC_SETENV=${SETENV} -i
+# This will however cause build failures (e.g. "www/firefox"). Settings
+# like "ALLOW_VULNERABLE_PACKAGES" will also not be correctly passed
+# to dependence builds.
+PKGSRC_SETENV?=	${SETENV}
 
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:M*:Q}
