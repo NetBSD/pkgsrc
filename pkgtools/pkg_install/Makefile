@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2013/06/05 04:24:58 obache Exp $
+# $NetBSD: Makefile,v 1.197 2013/06/05 18:20:55 riastradh Exp $
 
 # Notes to package maintainers:
 #
@@ -89,8 +89,6 @@ MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
 .if !empty(CC_VERSION:Mclang*)
 MAKE_FLAGS+=		ACTIVE_CC=clang
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 VERSION!=		${AWK} '/PKGTOOLS_VERSION/ {print $$3}' \
 			${FILESDIR}/lib/version.h
