@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/06/04 22:15:52 tron Exp $
+# $NetBSD: Makefile,v 1.33 2013/06/05 14:51:22 taca Exp $
 #
 
 DISTNAME=	gobject-introspection-1.36.0
@@ -39,7 +39,7 @@ CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 
-CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-doctool --disable-tests
 # needed for tests only
 #.include "../../graphics/cairo/buildlink3.mk"
 #.include "../../graphics/cairo-gobject/buildlink3.mk"
