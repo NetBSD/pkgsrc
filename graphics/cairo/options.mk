@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2012/11/01 08:54:46 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2013/06/05 08:13:56 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=	--disable-gl
 PLIST.x11=		yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build # only for configure
