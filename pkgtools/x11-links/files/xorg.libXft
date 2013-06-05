@@ -1,0 +1,18 @@
+# $NetBSD: xorg.libXft,v 1.1 2013/06/05 12:26:57 tron Exp $
+#
+include/X11/Xft/XftFreetype.h
+lib/libXft.1.0.dylib
+lib/libXft.1.1.dylib
+lib/libXft.1.dylib
+lib/libXft.2.1.2.dylib
+lib/libXft.2.dylib
+lib/libXft.a
+lib/libXft.dylib
+lib/libXft.la
+lib/libXft.so.1
+lib/libXft.so.1.0
+lib/libXft.so.1.1
+lib/libXft.so.3
+lib/libXft.so.3.0
+lib/libXft.so.7.0
+lib/libXft.so.8.0
