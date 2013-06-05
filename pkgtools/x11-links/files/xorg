@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.21 2013/01/11 10:37:58 ryoon Exp $
+# $NetBSD: xorg,v 1.22 2013/06/05 12:26:57 tron Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -112,7 +112,6 @@ include/X11/Xaw/Viewport.h
 include/X11/Xaw/ViewportP.h
 include/X11/Xaw/XawImP.h
 include/X11/Xaw/XawInit.h
-include/X11/Xft/XftFreetype.h
 include/X11/XprintAppUtil/xpapputil.h
 include/X11/XprintUtil/xprintutil.h
 include/X11/bitmaps/1x1
@@ -371,21 +370,6 @@ lib/libXfontcache.so.1.2
 lib/libXfontcache.so.2
 lib/libXfontcache.so.2.0
 lib/libXfontcache.so.4.0
-lib/libXft.1.0.dylib
-lib/libXft.1.1.dylib
-lib/libXft.1.dylib
-lib/libXft.2.1.2.dylib
-lib/libXft.2.dylib
-lib/libXft.dylib
-lib/libXft.a
-lib/libXft.la
-lib/libXft.so.1
-lib/libXft.so.1.0
-lib/libXft.so.1.1
-lib/libXft.so.3
-lib/libXft.so.3.0
-lib/libXft.so.7.0
-lib/libXft.so.8.0
 lib/libXi.6.1.0.dylib
 lib/libXi.6.0.0.dylib
 lib/libXi.6.0.dylib
