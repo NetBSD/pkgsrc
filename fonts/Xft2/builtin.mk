@@ -1,4 +1,11 @@
-# $NetBSD: builtin.mk,v 1.18 2012/03/19 12:34:12 joerg Exp $
+# $NetBSD: builtin.mk,v 1.19 2013/06/05 07:15:08 tron Exp $
+
+.if !defined(USE_BUILTIN.fontconfig)
+.include "../../fonts/fontconfig/builtin.mk"
+.endif
+.if !defined(USE_BUILTIN.Xrender)
+.include "../../x11/Xrender/builtin.mk"
+.endif
 
 BUILTIN_PKG:=	Xft2
 
@@ -51,10 +58,10 @@ MAKEVARS+=	BUILTIN_PKG.Xft2
 # versions of any of these, then also use the pkgsrc version of
 # Xft2.
 #
-.if defined(USE_BUILTIN.Xrender) && !empty(USE_BUILTIN.Xrender:M[nN][oO])
+.if !empty(USE_BUILTIN.Xrender:M[nN][oO])
 USE_BUILTIN.Xft2=	no
 .endif
-.if defined(USE_BUILTIN.fontconfig) && !empty(USE_BUILTIN.fontconfig:M[nN][oO])
+.if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
 USE_BUILTIN.Xft2=	no
 .endif
 
