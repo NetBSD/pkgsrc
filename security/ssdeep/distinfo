@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/05 19:49:36 khorben Exp $
+
+SHA1 (ssdeep-2.9.tar.gz) = d2845aaa1ebddad177750c57d47918308608c48d
+RMD160 (ssdeep-2.9.tar.gz) = 88df55f99a05cfc128d5e65079547713b72e9426
+Size (ssdeep-2.9.tar.gz) = 369135 bytes
