@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/05/16 16:25:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/06/05 15:20:06 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -914,10 +914,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/MultipartBody.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/Observer/Log.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/Response.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/SOCKS5.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/SocketWrapper.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/Net/URL2.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/PEAR/Exception.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/HTTP_Request2/generate-list.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/HTTP_Request2/public-suffix-list.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/public-suffix-list.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/prototype/prototype.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/builder.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/controls.js
