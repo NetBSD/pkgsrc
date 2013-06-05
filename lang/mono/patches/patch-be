@@ -1,6 +1,6 @@
-$NetBSD: patch-be,v 1.2 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-be,v 1.3 2013/06/05 17:03:55 jperkin Exp $
 
---- support/sys-mman.c.orig	2012-12-05 17:44:30.000000000 +0000
+--- support/sys-mman.c.orig	2013-04-25 09:01:57.000000000 +0000
 +++ support/sys-mman.c
 @@ -7,7 +7,6 @@
   * Copyright (C) 2004-2006 Jonathan Pryor
@@ -10,7 +10,17 @@ $NetBSD: patch-be,v 1.2 2013/05/29 11:11:12 wiz Exp $
  
  #ifdef PLATFORM_MACOSX
  /* For mincore () */
-@@ -105,8 +104,13 @@ Mono_Posix_Syscall_mremap (void *old_add
+@@ -21,6 +20,9 @@
+ #include <sys/types.h>
+ #include <sys/mman.h>
+ #include <errno.h>
++#ifdef __sun
++#include <unistd.h>
++#endif
+ 
+ #include "map.h"
+ #include "mph.h"
+@@ -105,8 +107,13 @@ Mono_Posix_Syscall_mremap (void *old_add
  	if (Mono_Posix_FromMremapFlags (flags, &_flags) == -1)
  		return MAP_FAILED;
  
