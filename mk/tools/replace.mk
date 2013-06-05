@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.258 2013/05/21 07:13:50 sbd Exp $
+# $NetBSD: replace.mk,v 1.259 2013/06/05 13:26:35 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1106,7 +1106,7 @@ TOOLS_PATH.iceauth=	${X11BASE}/bin/iceauth
 TOOLS_DEPENDS.iceauth?=		iceauth-[0-9]*:../../x11/iceauth
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.iceauth=iceauth
 TOOLS_PATH.iceauth=		${TOOLS_PREFIX.iceauth}/bin/iceauth
-TOOLS_CREATE.iceauth=		iceauth
+TOOLS_CREATE+=			iceauth
 .  endif
 .endif
 
@@ -1119,7 +1119,7 @@ TOOLS_PATH.mkfontdir=	${X11BASE}/bin/mkfontdir
 TOOLS_DEPENDS.mkfontdir?=	mkfontdir-[0-9]*:../../fonts/mkfontdir
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontdir=mkfontdir
 TOOLS_PATH.mkfontdir=		${TOOLS_PREFIX.mkfontdir}/bin/mkfontdir
-TOOLS_CREATE.mkfontdir=		mkfontdir
+TOOLS_CREATE+=			mkfontdir
 .  endif
 .endif
 
@@ -1132,7 +1132,7 @@ TOOLS_PATH.mkfontscale=	${X11BASE}/bin/mkfontscale
 TOOLS_DEPENDS.mkfontscale?=	mkfontscale-[0-9]*:../../fonts/mkfontscale
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontscale=mkfontscale
 TOOLS_PATH.mkfontscale=		${TOOLS_PREFIX.mkfontscale}/bin/mkfontscale
-TOOLS_CREATE.mkfontscale=	mkfontscale
+TOOLS_CREATE+=			mkfontscale
 .  endif
 .endif
 
@@ -1145,7 +1145,7 @@ TOOLS_PATH.bdftopcf=	${X11BASE}/bin/bdftopcf
 TOOLS_DEPENDS.bdftopcf?=	bdftopcf-[0-9]*:../../fonts/bdftopcf
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=bdftopcf
 TOOLS_PATH.bdftopcf=		${TOOLS_PREFIX.bdftopcf}/bin/bdftopcf
-TOOLS_CREATE.bdftopcf=		bdftopcf
+TOOLS_CREATE+=			bdftopcf
 .  endif
 .endif
 
@@ -1158,7 +1158,7 @@ TOOLS_PATH.ucs2any=	${X11BASE}/bin/ucs2any
 TOOLS_DEPENDS.ucs2any?=		font-util-[0-9]*:../../fonts/font-util
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ucs2any=ucs2any
 TOOLS_PATH.ucs2any=		${TOOLS_PREFIX.ucs2any}/bin/ucs2any
-TOOLS_CREATE.ucs2any=		ucs2any
+TOOLS_CREATE+=			ucs2any
 .  endif
 .endif
 
@@ -1171,7 +1171,7 @@ TOOLS_PATH.bdftruncate=	${X11BASE}/bin/bdftruncate
 TOOLS_DEPENDS.bdftruncate?=	font-util-[0-9]*:../../fonts/font-util
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftruncate=bdftruncate
 TOOLS_PATH.bdftruncate=		${TOOLS_PREFIX.bdftruncate}/bin/bdftruncate
-TOOLS_CREATE.bdftruncate=	bdftruncate
+TOOLS_CREATE+=			bdftruncate
 .  endif
 .endif
 
@@ -1184,7 +1184,7 @@ TOOLS_PATH.xauth=	${X11BASE}/bin/xauth
 TOOLS_DEPENDS.xauth?=		xauth-[0-9]*:../../x11/xauth
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xauth=xauth
 TOOLS_PATH.xauth=		${TOOLS_PREFIX.xauth}/bin/xauth
-TOOLS_CREATE.xauth=		xauth
+TOOLS_CREATE+=			xauth
 .  endif
 .endif
 
@@ -1197,7 +1197,7 @@ TOOLS_PATH.xinit=	${X11BASE}/bin/xinit
 TOOLS_DEPENDS.xinit?=		xinit-[0-9]*:../../x11/xinit
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xinit=xinit
 TOOLS_PATH.xinit=		${TOOLS_PREFIX.xinit}/bin/xinit
-TOOLS_CREATE.xinit=		xinit
+TOOLS_CREATE+=			xinit
 .  endif
 .endif
 
@@ -1210,7 +1210,7 @@ TOOLS_PATH.xmessage=	${X11BASE}/bin/xmessage
 TOOLS_DEPENDS.xmessage?=		xmessage-[0-9]*:../../x11/xmessage
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmessage=xmessage
 TOOLS_PATH.xmessage=		${TOOLS_PREFIX.xmessage}/bin/xmessage
-TOOLS_CREATE.xmessage=		xmessage
+TOOLS_CREATE+=			xmessage
 .  endif
 .endif
 
