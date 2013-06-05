@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/05 19:57:01 khorben Exp $
+
+SHA1 (php-ssdeep/ssdeep-1.0.2.tgz) = e3f31deaac931435c75bd309a504a3688147159f
+RMD160 (php-ssdeep/ssdeep-1.0.2.tgz) = 7335e6ca5e290e346ab8dfeee495bb43b567ff50
+Size (php-ssdeep/ssdeep-1.0.2.tgz) = 6549 bytes
