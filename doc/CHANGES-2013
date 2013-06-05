@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1924 2013/06/05 15:21:49 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1925 2013/06/05 19:47:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3061,7 +3061,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql55-client to 5.5.32 [adam 2013-06-04]
 	Updated databases/mysql55-server to 5.5.32 [adam 2013-06-04]
 	Updated www/ap2-perl to 2.0.8 [adam 2013-06-04]
-	Updated pkgtools/x11-links to 0.76 [tron 2013-06-04]
 	Updated databases/mysql56-client to 5.6.12 [adam 2013-06-04]
 	Updated databases/mysql56-server to 5.6.12 [adam 2013-06-04]
 	Updated devel/meld to 1.7.3 [wiz 2013-06-04]
@@ -3073,3 +3072,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_45 to 4.5.27 [taca 2013-06-05]
 	Updated www/typo3_47 to 4.7.12 [taca 2013-06-05]
 	Updated www/typo3_60 to 6.0.6 [taca 2013-06-05]
+	Updated pkgtools/x11-links to 0.78 [tron 2013-06-05]
