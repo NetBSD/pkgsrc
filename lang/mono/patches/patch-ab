@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.29 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-ab,v 1.30 2013/06/05 17:03:55 jperkin Exp $
+
+Add __C99FEATURES__ to SunOS defines for additional math functions.
+
 --- configure.orig	2013-04-25 09:08:54.000000000 +0000
 +++ configure
 @@ -3843,7 +3843,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
@@ -38,7 +41,15 @@ $NetBSD: patch-ab,v 1.29 2013/05/29 11:11:12 wiz Exp $
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -24527,7 +24531,7 @@ LIBC="libc.so.6"
+@@ -21395,6 +21399,7 @@ $as_echo_n "checking for Solaris XPG4 su
+ 			if test -f /usr/lib/libxnet.so; then
+ 				CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE=500"
+ 	    			CPPFLAGS="$CPPFLAGS -D__EXTENSIONS__"
++	    			CPPFLAGS="$CPPFLAGS -D__C99FEATURES__"
+ 				CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE_EXTENDED=1"
+            			LIBS="$LIBS -lxnet"
+   	    			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -24527,7 +24532,7 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
@@ -47,7 +58,7 @@ $NetBSD: patch-ab,v 1.29 2013/05/29 11:11:12 wiz Exp $
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -25132,10 +25136,12 @@ case "$host" in
+@@ -25132,10 +25137,12 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
@@ -63,7 +74,7 @@ $NetBSD: patch-ab,v 1.29 2013/05/29 11:11:12 wiz Exp $
      	LIBC="libc.so"
  	INTL="libintl.so"
  	SQLITE="libsqlite.so"
-@@ -26162,7 +26168,6 @@ else
+@@ -26162,7 +26169,6 @@ else
  fi
  
  

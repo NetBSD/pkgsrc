@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.90 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: distinfo,v 1.91 2013/06/05 17:03:55 jperkin Exp $
 
 SHA1 (mono-3.0.10.tar.bz2) = 7646d3ecb2dc2e7fd12c7fc661e7a500b9833e64
 RMD160 (mono-3.0.10.tar.bz2) = d2c4dc64b233f51f6ec8be4ee1f3ef08f0099057
 Size (mono-3.0.10.tar.bz2) = 81844036 bytes
 SHA1 (patch-aa) = 688e02cd43716476f3f1baae9116a6aa7e186b2b
-SHA1 (patch-ab) = 831209f075d306b28c9ea5208ec21261b9aae7a0
+SHA1 (patch-ab) = 47e3e90674e757fc662455f8a7cdf0ac6d3ecc5b
 SHA1 (patch-ac) = 9666a8e30aedacf46d4817161cc0036fa59b12d8
 SHA1 (patch-ad) = 27a75f7f4a8db6ecfd6bea420dacd911d123a1ae
 SHA1 (patch-ae) = 6431e119a26f89c691c27858d64c8ccc7f8c0e31
@@ -14,7 +14,7 @@ SHA1 (patch-ai) = 43cd820c3c683ba5990776ecaf8ce1cca531d03f
 SHA1 (patch-aj) = b4d65a823849e3e94457a5e361b53b49038fdd04
 SHA1 (patch-ak) = fc8d177ffdb4b8ec2b62d8fcb2a84e09c1737f0a
 SHA1 (patch-al) = 40f8616bd0d4152ab21573d1647ef44018228908
-SHA1 (patch-am) = 0c535d2034a1141ab0ad2f860b587813540b1071
+SHA1 (patch-am) = d314692858b6d3ac45e8363ee1992071834f17e0
 SHA1 (patch-ap) = c0ac836a4d0bc09895b262ff2b455fb172532e7a
 SHA1 (patch-aq) = 6465c4d1076d96b43f985580fdcf8b608bc29da1
 SHA1 (patch-ar) = 03a0542582f05da5b3d0193aa7124aae7c14e1ef
@@ -22,7 +22,7 @@ SHA1 (patch-as) = 20104c1898c6335a1cecd9331413dbd1eef7b257
 SHA1 (patch-ba) = c967b7d01c872cacdf2557623674eb6e1954a44a
 SHA1 (patch-bc) = e1adbcd8ad1b9ddbe94774e4a59c5c4aab3a2a37
 SHA1 (patch-bd) = 44db6cd138dd87b0e5540b4dce264776c5c3b7b7
-SHA1 (patch-be) = 834362bcb839de68a4e508ae4eeccb575d44d50d
+SHA1 (patch-be) = 895a7ab941b37202076faf94b98baf7d17f3d86c
 SHA1 (patch-bf) = 4dec79a18ee77d29c1eac6a556939478912a3f45
 SHA1 (patch-bg) = 019f20c4a916569a0ef31d4c44f87eaac26e253b
 SHA1 (patch-bh) = 82747732a771783d5368672810684eefba1a8ee3
@@ -38,11 +38,15 @@ SHA1 (patch-dh) = d0f32afdeecefbd12df00d41809b405fdb56cbe0
 SHA1 (patch-di) = 2e590f0491edf6ab8d253f99a23c6b9644ac3bc5
 SHA1 (patch-dj) = 2a3b4ab8b8eaf2aa0a10c867596ba3eb8d12a1b9
 SHA1 (patch-dk) = 9173254d4de1dc138a1b6559f7319473581c6dc4
-SHA1 (patch-dl) = 306d2af8933997e35637bb6d305450f6b9224d71
+SHA1 (patch-dl) = e2508749a8682102fa2bf877e3ee43c1444efdb1
 SHA1 (patch-dm) = bbdb71d2554f19ed7c0b390f78fa0fd82c68a5c5
 SHA1 (patch-dn) = e451f01452869be5a42fafe9b547fa298a1c4b3b
 SHA1 (patch-do) = 6cd2e8c6d9321243a1fd9462aef992e1f33daef9
 SHA1 (patch-man_mprof-report.1) = fccadd7c284a3ce50919534b6dacb2da002edef8
 SHA1 (patch-mono_io-layer_sockets.c) = 8c4f5fbc3469831a1c03680ed493b96c3b50199c
+SHA1 (patch-mono_profiler_proflog.c) = 23e43af9d35d9fcb41a3d79b01d5494169fa15c2
 SHA1 (patch-mono_utils_mono-compiler.h) = 76822de9dde03bac11a16c4cc687728566d98235
+SHA1 (patch-mono_utils_mono-mmap.c) = 24a4bff061db6e5f6722a933b7f5cf843610e5f1
 SHA1 (patch-po_Makefile.in) = 514f96172178f9cc2959d9bce3fb96e8c6710d99
+SHA1 (patch-support_signal.c) = 411a22a62398a6f2c03f511090148e1b3bc76baf
+SHA1 (patch-support_time.c) = abe7180538fcc7b3c0cdc31cbc36e2edbf42cd4c
