@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2013/05/10 00:49:00 riastradh Exp $
+# $NetBSD: Makefile,v 1.196 2013/06/05 04:24:58 obache Exp $
 
 # Notes to package maintainers:
 #
@@ -52,6 +52,8 @@ CHECK_PERMS=		no
 # dependencies. If that is ever changed in a incompatible way, this has to
 # be rethought.
 USE_NATIVE_GCC=		yes
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(_PKGSRC_BARRIER) && empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
