@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/05/16 16:25:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/06/05 15:19:21 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2972,6 +2972,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/BackendInterfa
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/CleanStateNotMemorized.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/IllegalObjectType.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InconsistentQuerySettings.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InvalidClass.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InvalidNumberOfConstraints.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Persistence/Exception/InvalidPropertyType.php
