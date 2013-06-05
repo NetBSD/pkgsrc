@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/06/04 22:17:27 tron Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/05 08:23:55 tron Exp $
 
 DISTNAME=	libXft-2.3.1
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://fontconfig.org/
+HOMEPAGE=	http://www.freedesktop.org/wiki/Software/Xft/
 COMMENT=	Library for configuring and customizing font access
 
 CONFLICTS+=	Xft2-[0-9]*
