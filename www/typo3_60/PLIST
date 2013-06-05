@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/16 16:30:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/05 15:20:49 taca Exp $
 ${EGDIR}/LocalConfiguration.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -915,10 +915,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/MultipartBody.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/Observer/Log.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/Response.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/SOCKS5.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/HTTP/Request2/SocketWrapper.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/Net/URL2.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/PEAR/Exception.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/HTTP_Request2/generate-list.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/HTTP_Request2/public-suffix-list.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/pear/data/public-suffix-list.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/prototype/prototype.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/builder.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/scriptaculous/controls.js
@@ -3037,6 +3038,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/FormProtection/BackendForm
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/FormProtection/Fixtures/FormProtectionTesting.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/FormProtection/FormProtectionFactoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/FormProtection/InstallToolFormProtectionTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Html/HtmlParserTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Html/RteHtmlParserTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Imaging/GraphicalFunctionsTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Localization/Parser/Fixtures/fr.locallang.xlf
