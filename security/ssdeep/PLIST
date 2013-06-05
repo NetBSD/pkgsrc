@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/05 19:49:36 khorben Exp $
+bin/ssdeep
+include/fuzzy.h
+lib/libfuzzy.la
+man/man1/ssdeep.1
