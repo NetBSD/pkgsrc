@@ -1,8 +1,10 @@
-$NetBSD: patch-dl,v 1.2 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-dl,v 1.3 2013/06/05 17:03:55 jperkin Exp $
 
---- mono/utils/dlmalloc.c.orig	2012-12-05 17:44:35.000000000 +0000
+SunOS needs unistd.h for sysconf().
+
+--- mono/utils/dlmalloc.c.orig	2013-04-25 09:01:42.000000000 +0000
 +++ mono/utils/dlmalloc.c
-@@ -1207,7 +1207,7 @@ int mspace_mallopt(int, int);
+@@ -1207,11 +1207,14 @@ int mspace_mallopt(int, int);
  #ifndef LACKS_UNISTD_H
  #include <unistd.h>     /* for sbrk */
  #else /* LACKS_UNISTD_H */
@@ -11,3 +13,10 @@ $NetBSD: patch-dl,v 1.2 2013/05/29 11:11:12 wiz Exp $
  extern void*     sbrk(ptrdiff_t);
  #endif /* FreeBSD etc */
  #endif /* LACKS_UNISTD_H */
+ #endif /* HAVE_MMAP */
++#ifdef __sun
++#include <unistd.h> /* for sysconf */
++#endif
+ 
+ #ifndef WIN32
+ #ifndef malloc_getpagesize
