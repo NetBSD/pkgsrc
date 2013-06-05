@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1923 2013/06/05 15:17:15 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1924 2013/06/05 15:21:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3070,3 +3070,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Search-Xapian to 1.2.15.0 [schmonz 2013-06-04]
 	Updated pkgtools/x11-links to 0.74 [tron 2013-06-05]
 	Updated www/contao211-translations to 201305310 [taca 2013-06-05]
+	Updated www/typo3_45 to 4.5.27 [taca 2013-06-05]
+	Updated www/typo3_47 to 4.7.12 [taca 2013-06-05]
+	Updated www/typo3_60 to 6.0.6 [taca 2013-06-05]
