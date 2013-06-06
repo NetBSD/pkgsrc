@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2013/06/06 16:49:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.139 2013/06/06 19:05:45 jperkin Exp $
 
 DISTNAME=	mono-3.0.10
 PKGREVISION=	1
@@ -129,13 +129,18 @@ SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
 SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
 
+PLIST_VARS=	monodoc
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-ULIMIT_CMD_datasize=	ulimit -d 262144
-ULIMIT_CMD_stacksize=	ulimit -s 10240
+CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
 CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
+ULIMIT_CMD_datasize=	ulimit -d 262144
+ULIMIT_CMD_stacksize=	ulimit -s 10240
+.else
+PLIST.monodoc=		yes
 .endif
 
 post-install:
