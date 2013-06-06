@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1930 2013/06/06 03:00:33 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1931 2013/06/06 03:02:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3080,3 +3080,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind98 to 9.8.5pl1 [taca 2013-06-06]
 	Updated net/bind96 to 9.6.3.1.ESV.9pl1 [taca 2013-06-06]
 	Updated meta-pkgs/bulk-medium to 20130606 [taca 2013-06-06]
+	Removed net/bind97 [taca 2013-06-06]
