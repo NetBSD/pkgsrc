@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/06/04 22:17:01 tron Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/06 12:55:01 wiz Exp $
 #
 
 DISTNAME=	keepassx-0.4.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
 

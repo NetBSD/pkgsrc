@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/06/04 22:17:17 tron Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/06 12:53:59 wiz Exp $
 #
 
 DISTNAME=	Locker-0.2.1
 PKGNAME=	deforaos-locker-0.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://www.defora.org/os/download/download/3703/
 

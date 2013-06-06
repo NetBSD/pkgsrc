@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2013/06/04 22:16:57 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2013/06/06 12:54:00 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-wavelan-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-wavelan-plugin
 XFCE4_WAVELAN_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-wavelan-plugin+=	xfce4-wavelan-plugin>=0.5.3
-BUILDLINK_ABI_DEPENDS.xfce4-wavelan-plugin+=	xfce4-wavelan-plugin>=0.5.4nb17
+BUILDLINK_ABI_DEPENDS.xfce4-wavelan-plugin+=	xfce4-wavelan-plugin>=0.5.4nb18
 BUILDLINK_PKGSRCDIR.xfce4-wavelan-plugin?=	../../net/xfce4-wavelan-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"
