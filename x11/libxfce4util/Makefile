@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2013/06/04 22:17:27 tron Exp $
+# $NetBSD: Makefile,v 1.33 2013/06/06 12:55:19 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	libxfce4util-${XFCE4_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	x11
 COMMENT=	Xfce basic library
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2013/06/04 22:15:58 tron Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/06 12:54:16 wiz Exp $
 #
 
 .include "../../editors/gedit3/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/gedit/gedit3-spell/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Spell-check plugin for gedit
 

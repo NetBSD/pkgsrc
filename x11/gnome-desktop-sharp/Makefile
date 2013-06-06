@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2013/06/04 22:17:18 tron Exp $
+# $NetBSD: Makefile,v 1.49 2013/06/06 12:53:45 wiz Exp $
 #
 
 DISTNAME=	gnome-desktop-sharp-2.26.0
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop-sharp/2.26/}
 

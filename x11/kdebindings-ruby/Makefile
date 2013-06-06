@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2013/06/04 22:17:26 tron Exp $
+# $NetBSD: Makefile,v 1.43 2013/06/06 12:53:52 wiz Exp $
 
 DISTNAME=	kdebindings-${_KDE_VERSION}
 PKGNAME=	kdebindings-ruby-${_KDE_VERSION}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	x11
 COMMENT=	Ruby bindings for the KDE integrated X11 desktop
 

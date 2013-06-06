@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2013/06/04 22:17:13 tron Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/06 12:55:09 wiz Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
 DISTNAME=		icecc-2.9
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icecc/}
 DISTFILES=		icecc-2.9.tar.bz2		\

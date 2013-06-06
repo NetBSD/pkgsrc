@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2013/06/04 22:16:32 tron Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/06 12:54:38 wiz Exp $
 #
 
 DISTNAME=		scim-fcitx.3.1.1
 PKGNAME=		scim-fcitx-3.1.1
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 EXTRACT_SUFX=		.tar.bz2

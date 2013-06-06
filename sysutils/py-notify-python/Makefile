@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/06/04 22:17:08 tron Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/06 12:53:59 wiz Exp $
 #
 
 DISTNAME=	notify-python-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	sysutils
 MASTER_SITES= \
  http://www.galago-project.org/files/releases/source/notify-python/

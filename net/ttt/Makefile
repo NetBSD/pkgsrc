@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/06/04 22:16:56 tron Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/06 12:54:58 wiz Exp $
 #
 
 DISTNAME=	ttt-1.8.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.sonycsl.co.jp/pub/kjc/
 

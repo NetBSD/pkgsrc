@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/06/04 22:16:39 tron Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/06 12:54:45 wiz Exp $
 #
 
 DISTNAME=		wbd-1.0ucl4
 PKGNAME=		wbd-1.0p4
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mbone tk
 MASTER_SITES=		http://www-mice.cs.ucl.ac.uk/multimedia/software/wbd/1.0ucl4/
 

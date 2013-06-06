@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2013/06/04 22:17:33 tron Exp $
+# $NetBSD: Makefile,v 1.55 2013/06/06 12:55:23 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfdesktop-${XFCE4_VERSION}
 PKGNAME=	xfce4-desktop-${XFCE4_VERSION}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11
 COMMENT=	Xfce desktop background manager
 

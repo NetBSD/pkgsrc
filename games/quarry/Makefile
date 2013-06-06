@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/06/04 22:16:11 tron Exp $
+# $NetBSD: Makefile,v 1.27 2013/06/06 12:54:26 wiz Exp $
 #
 
 DISTNAME=	quarry-0.2.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	http://download.gna.org/quarry/
 

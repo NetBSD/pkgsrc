@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/06/04 22:15:44 tron Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/06 12:54:07 wiz Exp $
 #
 
 DISTNAME=	magic-7.5.188
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/magic/archive/
 EXTRACT_SUFX=	.tgz
