@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/06/04 22:15:50 tron Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/06 12:54:11 wiz Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
 PKGNAME=		bouml-${BOUMLVERSION}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		http://bouml.free.fr/files/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/06/04 22:15:56 tron Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/06 12:54:14 wiz Exp $
 #
 
 DISTNAME=	valide-0.4.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	devel
 MASTER_SITES=	http://valide.googlecode.com/files/
 

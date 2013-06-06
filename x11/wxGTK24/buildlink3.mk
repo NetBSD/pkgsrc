@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2013/06/04 22:17:33 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2013/06/06 12:53:51 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	wxGTK24
 WXGTK24_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxGTK24+=	wxGTK24>=2.4.2
-BUILDLINK_ABI_DEPENDS.wxGTK24+=	wxGTK24>=2.4.2nb33
+BUILDLINK_ABI_DEPENDS.wxGTK24+=	wxGTK24>=2.4.2nb34
 BUILDLINK_PKGSRCDIR.wxGTK24?=	../../x11/wxGTK24
 
 .include "../../devel/pangox-compat/buildlink3.mk"

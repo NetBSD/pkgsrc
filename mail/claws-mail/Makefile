@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2013/06/04 22:16:34 tron Exp $
+# $NetBSD: Makefile,v 1.57 2013/06/06 12:54:40 wiz Exp $
 
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/claws-mail
@@ -6,7 +6,7 @@ INSTALLATION_DIRS+=	share/claws-mail
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X based e-mail and netnews client

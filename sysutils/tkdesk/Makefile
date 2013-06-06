@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/06/04 22:17:08 tron Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/06 12:55:06 wiz Exp $
 #
 
 DISTNAME=	tkdesk-2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tkdesk.sourceforge.net/dist/
 

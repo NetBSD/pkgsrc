@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2013/06/04 22:17:13 tron Exp $
+# $NetBSD: Makefile,v 1.46 2013/06/06 12:55:09 wiz Exp $
 
-PKGREVISION=		5
+PKGREVISION=		6
 COMMENT=		Small, fast and light-weight window manager
 
 CONFLICTS+=		icewm-gnome-[0-9]* icewm-imlib-[0-9]*

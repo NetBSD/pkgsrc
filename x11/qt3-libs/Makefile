@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2013/06/04 22:17:30 tron Exp $
+# $NetBSD: Makefile,v 1.89 2013/06/06 12:53:41 wiz Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
-PKGREVISION=	24
+PKGREVISION=	25
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	C++ X GUI toolkit
 

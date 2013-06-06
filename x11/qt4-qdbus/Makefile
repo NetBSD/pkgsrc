@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2013/06/04 22:17:31 tron Exp $
+# $NetBSD: Makefile,v 1.35 2013/06/06 12:53:42 wiz Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-qdbus-${QTVERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	QT DBus support
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2013/06/04 22:17:11 tron Exp $
+# $NetBSD: Makefile,v 1.35 2013/06/06 12:54:00 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	0.6.1
 
 DISTNAME=	xfce4-datetime-plugin-${XFCE4_VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	time
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-datetime-plugin/
 EXTRACT_SUFX=	.tar.bz2

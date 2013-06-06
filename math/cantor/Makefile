@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/06/04 22:16:37 tron Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/06 12:54:43 wiz Exp $
 
 DISTNAME=	cantor-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 COMMENT=	KDE frontend to mathematical software
 

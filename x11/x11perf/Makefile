@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/06/04 22:17:33 tron Exp $
+# $NetBSD: Makefile,v 1.11 2013/06/06 12:55:22 wiz Exp $
 #
 
 DISTNAME=		x11perf-1.5.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2

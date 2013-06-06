@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2013/06/04 22:17:28 tron Exp $
+# $NetBSD: Makefile,v 1.79 2013/06/06 12:53:40 wiz Exp $
 
 PKGVER=		2.3.3
 DISTNAME=	openmotif-${PKGVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.ics.com/openmotif/2.3/2.3.3/
 MASTER_SITES+=	ftp://ftp.ics.com/openmotif/2.3/2.3.3/

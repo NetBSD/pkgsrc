@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/06/04 22:16:46 tron Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/06 12:53:50 wiz Exp $
 #
 
 DISTNAME=	clutter-gst-1.2.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	multimedia
 MASTER_SITES=	http://source.clutter-project.org/sources/clutter-gst/1.2/
 

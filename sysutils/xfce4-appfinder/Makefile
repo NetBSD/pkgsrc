@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2013/06/04 22:17:08 tron Exp $
+# $NetBSD: Makefile,v 1.33 2013/06/06 12:55:06 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-appfinder-${XFCE4_VERSION}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	sysutils
 COMMENT=	Xfce application finder
 

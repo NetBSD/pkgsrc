@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2013/06/04 22:16:23 tron Exp $
+# $NetBSD: Makefile,v 1.71 2013/06/06 12:53:48 wiz Exp $
 
 DISTNAME=	librsvg-2.36.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.36/}
 EXTRACT_SUFX=	.tar.xz

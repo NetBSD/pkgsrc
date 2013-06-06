@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/06/04 22:17:07 tron Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/06 12:53:57 wiz Exp $
 
 DISTNAME=	libnotify-0.4.5
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
 EXTRACT_SUFX=	.tar.bz2

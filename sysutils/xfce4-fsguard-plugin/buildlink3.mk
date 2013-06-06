@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2013/06/04 22:17:09 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2013/06/06 12:54:00 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-fsguard-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-fsguard-plugin
 XFCE4_FSGUARD_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-fsguard-plugin+=	xfce4-fsguard-plugin>=0.4.0
-BUILDLINK_ABI_DEPENDS.xfce4-fsguard-plugin+=	xfce4-fsguard-plugin>=0.4.0nb17
+BUILDLINK_ABI_DEPENDS.xfce4-fsguard-plugin+=	xfce4-fsguard-plugin>=0.4.0nb18
 BUILDLINK_PKGSRCDIR.xfce4-fsguard-plugin?=	../../sysutils/xfce4-fsguard-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

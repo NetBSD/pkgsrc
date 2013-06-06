@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/06/04 22:16:17 tron Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/06 12:54:29 wiz Exp $
 #
 
 DISTNAME=	frameworks-0.3.7
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics
 MASTER_SITES=	http://frameworks.polycrystal.org/release/
 SITES.frameworks.png=	http://frameworks.polycrystal.org/images/
