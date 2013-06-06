@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/06/04 22:16:05 tron Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/06 12:54:21 wiz Exp $
 
 DISTNAME=	granatier-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 COMMENT=	clone of the classic Bomberman game
 

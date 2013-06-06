@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2013/06/04 22:16:25 tron Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/06 12:54:34 wiz Exp $
 #
 
 DISTNAME=	pygoocanvas-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygoocanvas/0.14/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/06/04 22:16:33 tron Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/06 12:54:39 wiz Exp $
 #
 
 DISTNAME=	scim-unikey-0.3.1
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://scim-unikey.googlecode.com/files/
 
