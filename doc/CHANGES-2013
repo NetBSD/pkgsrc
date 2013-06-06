@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1927 2013/06/05 19:58:16 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.1928 2013/06/06 01:52:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3075,3 +3075,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/x11-links to 0.78 [tron 2013-06-05]
 	Added security/ssdeep version 2.9 [khorben 2013-06-05]
 	Added security/php-ssdeep version 1.0.2 [khorben 2013-06-05]
+	Updated textproc/py-html2text to 3.200.3 [schmonz 2013-06-06]
