@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2013/06/02 08:29:06 spz Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2013/06/06 14:07:23 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -72,14 +72,6 @@ SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
-
-# When MACHINAE_ARCH == "arm", libjpeg-turbo should be enabled.
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
-CONFIGURE_ARGS+=	--enable-libjpeg-turbo
-.else
-CONFIGURE_ARGS+=	--disable-libjpeg-turbo
-.endif
 
 PLIST_VARS+=	sps vorbis tremor
 
