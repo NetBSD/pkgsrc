@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1932 2013/06/06 09:17:25 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1933 2013/06/06 14:09:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3082,3 +3082,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/bulk-medium to 20130606 [taca 2013-06-06]
 	Removed net/bind97 [taca 2013-06-06]
 	Updated misc/vimpager to 1.8.2 [obache 2013-06-06]
+	Updated www/firefox to 21.0nb6 [ryoon 2013-06-06]
+	Updated www/seamonkey to 2.18beta4nb4 [ryoon 2013-06-06]
