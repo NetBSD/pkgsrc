@@ -1,9 +1,8 @@
-$NetBSD: patch-configure.in,v 1.2 2012/10/10 03:07:12 taca Exp $
+$NetBSD: patch-configure.in,v 1.3 2013/06/06 02:55:03 taca Exp $
 
-* Use separate @LIBREADLINE@ AC_SUBST.
 * Avoid using "==" for argument of test(1).
 
---- configure.in.orig	2012-09-27 00:35:19.000000000 +0000
+--- configure.in.orig	2013-06-04 18:30:02.000000000 +0000
 +++ configure.in
 @@ -157,7 +157,7 @@ case "$use_python" in
  			AC_PATH_PROGS(PYTHON, $use_python)
@@ -14,31 +13,3 @@ $NetBSD: patch-configure.in,v 1.2 2012/10/10 03:07:12 taca Exp $
  		then
  			case "$use_python" in
  			unspec)
-@@ -2322,23 +2322,18 @@ AC_SUBST(ISC_PLATFORM_NEEDSTRLCAT)
- 
- AC_ARG_WITH(readline,
-         [  --with-readline[=LIBSPEC]    specify readline library [default -lreadline]],
--        readline="$withval", readline="-lreadline")
-+        readline="$withval", readline="readline")
- case "$readline" in
- no)	;;
- *)
- 	if test "x$readline" = "xyes"
- 	then
--		readline=-lreadline
--	fi
--	saved_LIBS="$LIBS"
--	LIBS="$LIBS $readline"
--	AC_CHECK_FUNCS(readline)
--	if test "$ac_cv_func_readline" = "no" 
--	then
--		LIBS="$saved_LIBS"
-+		readline=readline
- 	fi
-+	AC_CHECK_LIB($readline, [readline], LIBREADLINE=-lreadline)
-         ;;
- esac
-+AC_SUBST(LIBREADLINE)
- 
- 
- ISC_PRINT_OBJS=

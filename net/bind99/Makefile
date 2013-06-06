@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2013/05/31 12:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/06/06 02:55:03 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/ \
 		http://ftp.belnet.be/pub/mirror/ftp.isc.org/isc/bind9/${BIND_VERSION}/
@@ -15,7 +14,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.9.2-P2
+BIND_VERSION=	9.9.3-P1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,7 +52,7 @@ PKG_USERS=		${BIND_USER}:${BIND_GROUP}
 PKG_GECOS.${BIND_USER}=	Named pseudo-user
 PKG_HOME.${BIND_USER}=	${BIND_DIR}
 
-DOCS=			CHANGES FAQ README REDIRECT-NOTES
+DOCS=			CHANGES FAQ README
 
 FILES_SUBST+=		BIND_GROUP=${BIND_GROUP:Q} \
 			BIND_USER=${BIND_USER:Q} PAX=${PAX:Q}
