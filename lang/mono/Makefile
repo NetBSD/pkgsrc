@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2013/06/05 17:03:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.138 2013/06/06 16:49:23 jperkin Exp $
 
 DISTNAME=	mono-3.0.10
 PKGREVISION=	1
@@ -132,8 +132,10 @@ SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=			ac_cv_func_getdomainname=no
-CONFIGURE_ENV+=			ac_cv_func_setdomainname=no
+ULIMIT_CMD_datasize=	ulimit -d 262144
+ULIMIT_CMD_stacksize=	ulimit -s 10240
+CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
+CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
 .endif
 
 post-install:
