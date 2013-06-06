@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2013/06/04 22:16:52 tron Exp $
+# $NetBSD: Makefile,v 1.37 2013/06/06 12:54:54 wiz Exp $
 
 DISTNAME=	dcsharp-0.11.1
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	net
 MASTER_SITES=	http://dcsharp.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

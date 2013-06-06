@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/06/04 22:16:43 tron Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/06 12:54:48 wiz Exp $
 
 DISTNAME=	kodos-2.4.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kodos/}
 

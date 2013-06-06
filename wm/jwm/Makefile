@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/06/04 22:17:13 tron Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/06 12:55:09 wiz Exp $
 #
 
 DISTNAME=		jwm-2.1.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		wm x11
 MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/ \
 			${MASTER_SITE_SOURCEFORGE:=jwm/}
