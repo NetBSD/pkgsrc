@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.7 2011/06/09 06:21:38 schmonz Exp $
+$NetBSD: patch-aa,v 1.8 2013/06/06 01:52:01 schmonz Exp $
 
 Small cleanup patch from Debian.
 
---- html2text.py.orig	2011-03-08 23:35:25.000000000 +0000
+--- html2text.py.orig	2012-01-07 15:00:40.000000000 +0000
 +++ html2text.py
-@@ -305,6 +305,7 @@ class _html2text(HTMLParser.HTMLParser):
+@@ -479,6 +479,7 @@ class HTML2Text(HTMLParser.HTMLParser):
              if has_key(attrs, 'src'):
                  attrs['href'] = attrs['src']
                  alt = attrs.get('alt', '')
 +                alt = re.sub('\n', ' ', alt)
-                 i = self.previousIndex(attrs)
-                 if i is not None:
-                     attrs = self.a[i]
-@@ -325,7 +326,7 @@ class _html2text(HTMLParser.HTMLParser):
-         if tag in ["ol", "ul"]:
-             if start:
-                 self.list.append({'name':tag, 'num':0})
+                 if self.inline_links:
+                     self.o("![")
+                     self.o(alt)
+@@ -512,7 +513,7 @@ class HTML2Text(HTMLParser.HTMLParser):
+                     list_style = tag
+                 numbering_start = list_numbering_start(attrs)
+                 self.list.append({'name':list_style, 'num':numbering_start})
 -            else:
 +            elif self.list:
                  if self.list: self.list.pop()
-             
-             self.p()
+             self.lastWasList = True
+         else:

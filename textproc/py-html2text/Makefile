@@ -1,26 +1,18 @@
-# $NetBSD: Makefile,v 1.25 2012/10/25 06:56:50 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/06/06 01:52:01 schmonz Exp $
 #
 
-DISTNAME=		aaronsw-${GHNAME}-${GHVERSION}-0-g${GHCOMMIT}
-PKGREVISION=		1
-GHNAME=			html2text
-GHVERSION=		3.02
-GHCOMMIT=		d9bf7d6
-PKGNAME=		${PYPKGPREFIX}-${GHNAME}-${GHVERSION}
+DISTNAME=		html2text-3.200.3
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
-MASTER_SITES=		https://github.com/aaronsw/html2text/tarball/${GHVERSION}/
+MASTER_SITES=		http://pypi.python.org/packages/source/h/html2text/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.aaronsw.com/2002/html2text/
 COMMENT=		Convert HTML into easy-to-read plain ASCII text
 LICENSE=		gnu-gpl-v2
 
-FETCH_USING=		curl
-
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_SELF_CONFLICT=		yes
-
-WRKSRC=			${WRKDIR}/aaronsw-${GHNAME}-${GHCOMMIT}
 
 NO_BUILD=		yes
 
