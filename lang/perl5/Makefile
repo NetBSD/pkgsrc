@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2013/05/31 10:55:15 adam Exp $
+# $NetBSD: Makefile,v 1.202 2013/06/06 14:20:14 jperkin Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -75,6 +75,12 @@ SUBST_VARS.policysh+=	PKGMANDIR
 SUBST_VARS.policysh+=	LOCALBASE
 SUBST_VARS.policysh+=	PTHREAD_LDFLAGS
 
+# Avoid the ${TOOLS_BIN} path getting written to installed files.
+SUBST_CLASSES+=		toolsbin
+SUBST_STAGE.toolsbin=	pre-configure
+SUBST_FILES.toolsbin=	Configure
+SUBST_VARS.toolsbin=	TOOLS_RM
+
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Cygwin"
 #
 # The Perl build attempts to work around case-insensitivity problems on
@@ -97,7 +103,7 @@ CONFIGURE_ARGS+=	-Duseshrplib
 # Perl embeds the full paths to the following tools in several installed
 # files, so make sure the paths to the ones in ${TOOLS_DIR} aren't used.
 #
-USE_TOOLS+=		hostname ln sed test
+USE_TOOLS+=		hostname ln rm sed test
 SUBST_VARS.policysh+=	TOOLS_HOSTNAME_CMD
 SUBST_VARS.policysh+=	TOOLS_LN
 TOOLS_ALIASES.sed+=	${TOOLS_SED:T}
@@ -154,13 +160,6 @@ SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
 SUBST_SED.mirbsd-paths=		-e 's,/usr/mpkg,${PREFIX},g'
 SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
 .endif
-
-# Remove a spurious workdir reference
-SUBST_CLASSES+=		rm
-SUBST_STAGE.rm=		pre-install
-SUBST_FILES.rm=		lib/Config_heavy.pl
-SUBST_MESSAGE.rm=	Do not use tools version of rm.
-SUBST_SED.rm=	-e "s!^rm_try='/.*/\\.tools/bin/rm -f!rm_try='/bin/rm -f!"
 
 # Replace our perl as the interpreter
 REPLACE_PERL+=		cpan/Config-Perl-V/V.pm
