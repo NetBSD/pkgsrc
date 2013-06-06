@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/05/31 12:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/06 15:04:18 gdt Exp $
 
 .include "../../devel/scmgit/Makefile.version"
 
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://git.or.cz/
 COMMENT=	Web interface for GIT repositories
 
