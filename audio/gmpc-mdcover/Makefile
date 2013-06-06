@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/06/04 22:15:40 tron Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/06 12:54:03 wiz Exp $
 #
 
 DISTNAME=	gmpc-mdcover-0.20.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/0.20.0/
 

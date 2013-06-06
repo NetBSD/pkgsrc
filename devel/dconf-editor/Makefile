@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2013/06/04 22:15:50 tron Exp $
+# $NetBSD: Makefile,v 1.22 2013/06/06 12:54:12 wiz Exp $
 
 .include "../../devel/dconf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dconf/dconf-editor/}
-PKGREVISION=	2
+PKGREVISION=	3
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/dconf/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/dconf/patches

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/06/04 22:17:12 tron Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/06 12:55:08 wiz Exp $
 #
 
 DISTNAME=	cwm-3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	wm
 MASTER_SITES=	http://monkey.org/~marius/cwm/
 

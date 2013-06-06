@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2013/06/04 22:17:14 tron Exp $
+# $NetBSD: Makefile,v 1.37 2013/06/06 12:55:10 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	4.6.0
 DISTNAME=	xfwm4-themes-${XFCE4_VERSION}
 PKGNAME=	xfce4-wm-themes-${XFCE4_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	wm
 COMMENT=	Xfce window manager themes
 
