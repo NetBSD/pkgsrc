@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/03/27 12:08:24 pettai Exp $
+# $NetBSD: options.mk,v 1.7 2013/06/06 02:55:03 taca Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.bind99
 PKG_SUPPORTED_OPTIONS=  bind-dig-sigchase bind-xml-statistics-server
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--with-dlz-filesystem
 .endif
 
 .if !empty(PKG_OPTIONS:Mrrl)
-PATCHFILES=rl-9.9.2-P2.patch
+PATCHFILES=rl-9.9.3-P1.patch
 PATCH_SITES=http://ss.vix.su/~vjs/
 .endif
 
