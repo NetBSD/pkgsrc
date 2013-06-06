@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/06/04 22:15:47 tron Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/06 12:54:09 wiz Exp $
 #
 
 DISTNAME=	Phone-0.3.11
 PKGNAME=	deforaos-phone-0.3.11
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	comms net
 MASTER_SITES=	http://www.defora.org/os/download/download/3721/
 

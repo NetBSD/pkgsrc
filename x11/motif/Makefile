@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 22:17:28 tron Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/06 12:53:40 wiz Exp $
 
 PKGVER=		2.3.4
-PKGREVISION=	5
+PKGREVISION=	6
 DISTNAME=	motif-${PKGVER}-src
 PKGNAME=	motif-${PKGVER}
 CATEGORIES=	x11

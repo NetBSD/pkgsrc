@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2013/06/04 22:16:22 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2013/06/06 12:53:44 wiz Exp $
 
 BUILDLINK_TREE+=	libkdcraw
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkdcraw
 LIBKDCRAW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=4.8.0
-BUILDLINK_ABI_DEPENDS.libkdcraw?=	libkdcraw>=4.10.3nb2
+BUILDLINK_ABI_DEPENDS.libkdcraw?=	libkdcraw>=4.10.3nb3
 BUILDLINK_PKGSRCDIR.libkdcraw?=	../../graphics/libkdcraw
 
 .include "../../x11/kdelibs4/buildlink3.mk"

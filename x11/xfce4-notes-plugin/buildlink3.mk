@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2013/06/04 22:17:34 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2013/06/06 12:54:00 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-notes-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-notes-plugin
 XFCE4_NOTES_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-notes-plugin+=	xfce4-notes-plugin>=1.6.0
-BUILDLINK_ABI_DEPENDS.xfce4-notes-plugin+=	xfce4-notes-plugin>=1.6.0nb17
+BUILDLINK_ABI_DEPENDS.xfce4-notes-plugin+=	xfce4-notes-plugin>=1.6.0nb18
 BUILDLINK_PKGSRCDIR.xfce4-notes-plugin?=	../../x11/xfce4-notes-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"
