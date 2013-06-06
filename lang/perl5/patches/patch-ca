@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.14 2013/05/31 10:55:15 adam Exp $
+$NetBSD: patch-ca,v 1.15 2013/06/06 14:20:14 jperkin Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 
@@ -61,6 +61,15 @@ $NetBSD: patch-ca,v 1.14 2013/05/31 10:55:15 adam Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
+@@ -4819,7 +4820,7 @@ lib_ext=$_a
+ obj_ext=$_o
+ path_sep=$p_
+ 
+-rm_try="$rm -f try try$_exe a.out .out try.[cho] try.$_o core core.try* try.core*"
++rm_try="@TOOLS_RM@ -f try try$_exe a.out .out try.[cho] try.$_o core core.try* try.core*"
+ 
+ : Which makefile gets called first.  This is used by make depend.
+ case "$firstmakefile" in
 @@ -6486,7 +6487,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
