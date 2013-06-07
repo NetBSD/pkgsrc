@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1936 2013/06/07 12:28:52 tron Exp $
+$NetBSD: CHANGES-2013,v 1.1937 2013/06/07 13:57:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3087,3 +3087,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Reporter to 1.59 [wen 2013-06-07]
 	Updated lang/nodejs to 0.10.10 [fhajny 2013-06-07]
 	Updated www/squid3 to 3.3.5nb3 [tron 2013-06-07]
+	Updated lang/php53 to 5.3.26 [taca 2013-06-07]
+	Updated lang/php54 to 5.4.16 [taca 2013-06-07]
