@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/05/31 12:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/06/07 13:28:56 gdt Exp $
 
 DISTNAME=	fftw-3.3.3
 PKGREVISION=	1
@@ -13,11 +13,17 @@ LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		c fortran77
+USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
+
+# The next lines are fodder for a fortran option.
+# Swapping the comments doesn't change the PLIST.  So what's the
+# benefit of not?
+USE_LANGUAGES+=		fortran77
+# CONFIGURE_ARGS+=	--disable-fortran
 
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
 INFO_FILES=		yes
