@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1935 2013/06/07 07:59:41 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.1936 2013/06/07 12:28:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey to 2.18beta4nb4 [ryoon 2013-06-06]
 	Updated devel/p5-Test-Reporter to 1.59 [wen 2013-06-07]
 	Updated lang/nodejs to 0.10.10 [fhajny 2013-06-07]
+	Updated www/squid3 to 3.3.5nb3 [tron 2013-06-07]
