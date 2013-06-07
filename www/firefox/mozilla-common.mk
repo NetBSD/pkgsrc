@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2013/06/06 14:07:23 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2013/06/07 15:15:23 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
+CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
