@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2013/05/31 12:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2013/06/07 07:17:15 obache Exp $
 
 DISTNAME=	openssl-1.0.1e
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -22,7 +22,7 @@ BUILD_DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 .include "../../mk/compiler.mk"
 
 EXTRACT_USING=		gtar
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		fgrep gmake perl
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
 
