@@ -1,11 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2013/06/05 07:15:08 tron Exp $
-
-.if !defined(USE_BUILTIN.fontconfig)
-.include "../../fonts/fontconfig/builtin.mk"
-.endif
-.if !defined(USE_BUILTIN.Xrender)
-.include "../../x11/Xrender/builtin.mk"
-.endif
+# $NetBSD: builtin.mk,v 1.20 2013/06/07 17:43:40 dholland Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -53,17 +46,6 @@ MAKEVARS+=	BUILTIN_PKG.Xft2
 ### Determine whether we should use the built-in implementation if it
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
-#
-# These are dependencies of Xft2.  If we need to use the pkgsrc
-# versions of any of these, then also use the pkgsrc version of
-# Xft2.
-#
-.if !empty(USE_BUILTIN.Xrender:M[nN][oO])
-USE_BUILTIN.Xft2=	no
-.endif
-.if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
-USE_BUILTIN.Xft2=	no
-.endif
 
 .if !defined(USE_BUILTIN.Xft2)
 .  if ${PREFER.Xft2} == "pkgsrc"
