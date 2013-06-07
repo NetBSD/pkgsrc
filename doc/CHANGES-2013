@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1937 2013/06/07 13:57:21 taca Exp $
+$NetBSD: CHANGES-2013,v 1.1938 2013/06/07 15:51:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3089,3 +3089,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.3.5nb3 [tron 2013-06-07]
 	Updated lang/php53 to 5.3.26 [taca 2013-06-07]
 	Updated lang/php54 to 5.4.16 [taca 2013-06-07]
+	Updated devel/apache-ant to 1.9.1 [ryoon 2013-06-07]
