@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2013/06/06 12:53:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2013/06/07 15:57:47 ryoon Exp $
 
 BUILDLINK_TREE+=	motif
 
@@ -11,9 +11,10 @@ BUILDLINK_PKGSRCDIR.motif?=	../../x11/motif
 
 _MOTIFBASE=	${BUILDLINK_PREFIX.motif}
 MOTIFLIB=	${COMPILER_RPATH_FLAG}${_MOTIFBASE}/lib \
-		-L${_MOTIFBASE}/lib -lXm
+		-L${_MOTIFBASE}/lib -lXm -lXft
 
 BUILDLINK_TRANSFORM+=	rm:-lXp
+BUILDLINK_TRANSFORM+=	l:Xm:Xm:Xft
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/06 12:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/07 15:57:47 ryoon Exp $
 
 PKGVER=		2.3.4
 PKGREVISION=	6
@@ -45,6 +45,8 @@ CONFIGURE_ARGS+= \
 		--x-libraries=${X11BASE}/lib
 
 CONFIGURE_ARGS+= --disable-printing
+
+BUILDLINK_TRANSFORM+=	l:Xft:Xft:fontconfig
 
 # Don't compress manual pages as they include each other.
 .undef MANZ
