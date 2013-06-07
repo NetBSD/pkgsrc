@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.10 2009/07/28 07:01:56 rillig Exp $
+# $NetBSD: show.mk,v 1.11 2013/06/07 00:41:39 obache Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -157,3 +157,14 @@ show-all-${g}: .PHONY
 .  endfor
 	@echo ""
 .endfor
+
+.PHONY: show-depends-options
+show-depends-options:
+	${RUN}                                                          \
+	${_DEPENDS_WALK_CMD} ${PKGPATH} |                               \
+	while read dir; do                                              \
+		${ECHO} "===> Options for $${dir}" &&                   \
+		cd ${.CURDIR}/../../$$dir &&                            \
+		${RECURSIVE_MAKE} ${MAKEFLAGS} show-options;            \
+	done
+
