@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.222 2013/06/07 17:15:54 dholland Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.223 2013/06/08 20:23:02 dholland Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,8 +131,10 @@ _ok_:=yes
 .for _pkg_ in ${BUILDLINK_TREE}
 # work around PR 47888
 _enter_:=${_pkg_:M-*}
+# work around another bug in netbsd-5's make (fixed in HEAD)
+_use_:=${USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss]}
 
-.  if ${_pkg_} == x11-links || ${_pkg_} == -x11-links
+.  if "${_pkg_}" == "x11-links" || "${_pkg_}" == "-x11-links"
      # (nothing)
 .  elif empty(_enter_)
      # entering a package (in the buildlink tree)
@@ -141,7 +143,7 @@ _enter_:=${_pkg_:M-*}
      _ok_:=yes
 .  else
      # leaving a package (in the buildlink tree)
-.    if !empty(USE_BUILTIN.${_pkg_:S/^-//}:M[Yy][Ee][Ss])
+.    if !empty(_use_)
        # this package is going to use the builtin version
 .      if ${_ok_} == no
          # not ok for it to be builtin; force it to pkgsrc
