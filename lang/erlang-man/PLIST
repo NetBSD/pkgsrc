@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/01/23 21:46:06 asau Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/06/08 06:48:24 asau Exp $
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameter_compile.1
 lib/erlang/man/man1/epmd.1
@@ -174,7 +174,6 @@ lib/erlang/man/man3/erl_prim_loader.3
 lib/erlang/man/man3/erl_prim_loader_stub.3
 lib/erlang/man/man3/erl_recomment.3
 lib/erlang/man/man3/erl_scan.3
-lib/erlang/man/man3/erl_set_memory_block.3
 lib/erlang/man/man3/erl_syntax.3
 lib/erlang/man/man3/erl_syntax_lib.3
 lib/erlang/man/man3/erl_tar.3
@@ -234,12 +233,6 @@ lib/erlang/man/man3/init_stub.3
 lib/erlang/man/man3/instrument.3
 lib/erlang/man/man3/int.3
 lib/erlang/man/man3/interceptors.3
-lib/erlang/man/man3/inviso.3
-lib/erlang/man/man3/inviso_as_lib.3
-lib/erlang/man/man3/inviso_lfm.3
-lib/erlang/man/man3/inviso_lfm_tpfreader.3
-lib/erlang/man/man3/inviso_rt.3
-lib/erlang/man/man3/inviso_rt_meta.3
 lib/erlang/man/man3/io.3
 lib/erlang/man/man3/io_lib.3
 lib/erlang/man/man3/lcnt.3
@@ -289,7 +282,6 @@ lib/erlang/man/man3/os_mon_mib.3
 lib/erlang/man/man3/os_sup.3
 lib/erlang/man/man3/otp_mib.3
 lib/erlang/man/man3/overload.3
-lib/erlang/man/man3/packages.3
 lib/erlang/man/man3/percept.3
 lib/erlang/man/man3/percept_profile.3
 lib/erlang/man/man3/pg.3
@@ -349,7 +341,9 @@ lib/erlang/man/man3/snmpm_user.3
 lib/erlang/man/man3/sofs.3
 lib/erlang/man/man3/ssh.3
 lib/erlang/man/man3/ssh_channel.3
+lib/erlang/man/man3/ssh_client_key_api.3
 lib/erlang/man/man3/ssh_connection.3
+lib/erlang/man/man3/ssh_server_key_api.3
 lib/erlang/man/man3/ssh_sftp.3
 lib/erlang/man/man3/ssh_sftpd.3
 lib/erlang/man/man3/ssl.3
@@ -506,7 +500,6 @@ lib/erlang/man/man3/wxMouseEvent.3
 lib/erlang/man/man3/wxMoveEvent.3
 lib/erlang/man/man3/wxMultiChoiceDialog.3
 lib/erlang/man/man3/wxNavigationKeyEvent.3
-lib/erlang/man/man3/wxNcPaintEvent.3
 lib/erlang/man/man3/wxNotebook.3
 lib/erlang/man/man3/wxNotebookEvent.3
 lib/erlang/man/man3/wxNotifyEvent.3
@@ -619,6 +612,7 @@ lib/erlang/man/man6/os_mon.6
 lib/erlang/man/man6/runtime_tools.6
 lib/erlang/man/man6/sasl.6
 lib/erlang/man/man6/snmp.6
+lib/erlang/man/man6/ssh.6
 lib/erlang/man/man6/ssl.6
 lib/erlang/man/man6/stdlib.6
 lib/erlang/man/man6/test_server.6
