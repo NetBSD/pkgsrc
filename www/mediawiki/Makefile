@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2013/05/31 12:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2013/06/08 07:26:53 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.wikimedia.org/mediawiki/${VER}/
 
@@ -10,17 +9,20 @@ HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.2:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.2:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.3.2:../../textproc/php-intl
+
 EGDIR=			share/examples/mediawiki
 MEDIAWIKI=		${PREFIX}/share/mediawiki
-
 INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-VER=			1.20
-PVER=			6
+VER=			1.21
+PVER=			1
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -44,12 +46,17 @@ SUBST_SED.paths=	-e "s,@MEDIAWIKI@,${MEDIAWIKI},g"
 SUBST_CLASSES+=		sh
 SUBST_STAGE.sh=		post-patch
 SUBST_MESSAGE.sh=	Fixing path to sh
-SUBST_FILES.sh+=	bin/ulimit-tvf.sh bin/ulimit.sh bin/ulimit4.sh
 SUBST_FILES.sh+=	maintenance/storage/make-blobs
 SUBST_FILES.sh+=	maintenance/dev/install.sh maintenance/dev/installphp.sh
 SUBST_FILES.sh+=	maintenance/dev/installmw.sh maintenance/dev/start.sh
-SUBST_FILES.sh+=	extensions/WikiEditor/modules/images/toolbar/png24/generate.sh
+SUBST_FILES.sh+=	includes/limit.sh
 SUBST_SED.sh=		-e "s|/bin/bash|${SH}|"
+
+SUBST_CLASSES+=		sh2
+SUBST_STAGE.sh2=	post-patch
+SUBST_MESSAGE.sh2=	Fixing path to sh
+SUBST_FILES.sh2+=	maintenance/mwjsduck-gen
+SUBST_SED.sh2=		-e "s|/usr/bin/env sh|${SH}|"
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	post-patch
@@ -68,20 +75,14 @@ SUBST_SED.python=	-e "s,/usr/bin/python,${PYTHONBIN},"
 SUBST_CLASSES+=		python2
 SUBST_STAGE.python2=	post-patch
 SUBST_MESSAGE.python2=	Fixing python path
-SUBST_FILES.python2+=	includes/zhtable/Makefile.py
+SUBST_FILES.python2+=	maintenance/language/zhtable/Makefile.py
 SUBST_SED.python2=	-e "s,/usr/bin/env python,${PYTHONBIN},"
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
 SUBST_STAGE.php=	post-patch
-SUBST_FILES.php+=	includes/normal/UtfNormalTest2.php tests/RunSeleniumTests.php
-SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
-
-SUBST_CLASSES+=		php2
-SUBST_MESSAGE.php2=	Fixing the path of php.
-SUBST_STAGE.php2=	post-patch
-SUBST_FILES.php2+=	tests/phpunit/phpunit.php
-SUBST_SED.php2=          -e "s,/usr/bin/env php,${PREFIX}/bin/php,g"
+SUBST_FILES.php+=	includes/normal/UtfNormalTest2.php
+SUBST_SED.php=          -e "s,/usr/bin/env php,${PREFIX}/bin/php,g"
 
 post-extract:
 	${CP} ${FILESDIR}/mediawiki.conf ${WRKDIR}/mediawiki.conf
