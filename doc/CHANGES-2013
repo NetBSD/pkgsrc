@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1940 2013/06/07 16:30:39 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.1941 2013/06/08 01:12:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3092,3 +3092,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apache-ant to 1.9.1 [ryoon 2013-06-07]
 	Updated editors/OmegaT to 3.0.3 [ryoon 2013-06-07]
 	Updated mail/postfix to 2.9.6nb4 [jperkin 2013-06-07]
+	Updated www/p5-Mojolicious to 4.12 [wen 2013-06-08]
