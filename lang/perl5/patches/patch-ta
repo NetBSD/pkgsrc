@@ -1,4 +1,4 @@
-$NetBSD: patch-ta,v 1.5 2013/05/31 10:55:15 adam Exp $
+$NetBSD: patch-ta,v 1.6 2013/06/08 21:32:25 schmonz Exp $
 
 On NetBSD, filesystems may be mounted with the noatime option.
 
@@ -9,7 +9,7 @@ On NetBSD, filesystems may be mounted with the noatime option.
  		is( $mtime, 500000000 + $delta, 'mtime' );
  	    }
 -	    elsif ($^O eq 'haiku') {
-+	    elsif ($^O eq 'haiku' || $^O eq 'netbsd')) {
++	    elsif ($^O eq 'haiku' || $^O eq 'netbsd') {
              SKIP: {
  		    skip "atime not updated", 1;
  		}
