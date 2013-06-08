@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1942 2013/06/08 06:49:38 asau Exp $
+$NetBSD: CHANGES-2013,v 1.1943 2013/06/08 07:28:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3096,3 +3096,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/erlang to 16.1 [asau 2013-06-08]
 	Updated lang/erlang-doc to 16.1 [asau 2013-06-08]
 	Updated lang/erlang-man to 16.1 [asau 2013-06-08]
+	Updated www/mediawiki to 1.21.1 [wen 2013-06-08]
