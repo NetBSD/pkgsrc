@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1944 2013/06/08 10:54:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1945 2013/06/08 13:40:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3098,3 +3098,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/erlang-man to 16.1 [asau 2013-06-08]
 	Updated www/mediawiki to 1.21.1 [wen 2013-06-08]
 	Updated devel/automake to 1.13.3 [wiz 2013-06-08]
+	Updated graphics/fotoxx to 13.06.1 [ryoon 2013-06-08]
