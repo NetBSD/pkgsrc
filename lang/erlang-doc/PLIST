@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/01/23 21:46:06 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/06/08 06:48:24 asau Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -53,7 +53,6 @@ lib/erlang/doc/efficiency_guide/users_guide.html
 lib/erlang/doc/embedded/embedded_nt.html
 lib/erlang/doc/embedded/embedded_solaris.html
 lib/erlang/doc/embedded/users_guide.html
-lib/erlang/doc/embedded/vxworks.html
 lib/erlang/doc/erlang-logo.png
 lib/erlang/doc/getting_started/conc_prog.html
 lib/erlang/doc/getting_started/intro.html
@@ -67,10 +66,12 @@ lib/erlang/doc/index.html
 lib/erlang/doc/installation_guide/INSTALL-CROSS.html
 lib/erlang/doc/installation_guide/INSTALL-WIN32.html
 lib/erlang/doc/installation_guide/INSTALL.html
+lib/erlang/doc/installation_guide/MARKDOWN.html
 lib/erlang/doc/installation_guide/install-binary.html
 lib/erlang/doc/installation_guide/source/INSTALL-CROSS.html
 lib/erlang/doc/installation_guide/source/INSTALL-WIN32.html
 lib/erlang/doc/installation_guide/source/INSTALL.html
+lib/erlang/doc/installation_guide/source/MARKDOWN.html
 lib/erlang/doc/installation_guide/users_guide.html
 lib/erlang/doc/installation_guide/verification.html
 lib/erlang/doc/js/erlresolvelinks.js
@@ -140,6 +141,7 @@ lib/erlang/doc/tutorial/port_driver.gif
 lib/erlang/doc/tutorial/users_guide.html
 lib/erlang/erts-${VERSION.erts}/doc/html/absform.html
 lib/erlang/erts-${VERSION.erts}/doc/html/alt_dist.html
+lib/erlang/erts-${VERSION.erts}/doc/html/communication.html
 lib/erlang/erts-${VERSION.erts}/doc/html/crash_dump.html
 lib/erlang/erts-${VERSION.erts}/doc/html/driver.html
 lib/erlang/erts-${VERSION.erts}/doc/html/driver_entry.html
@@ -151,7 +153,6 @@ lib/erlang/erts-${VERSION.erts}/doc/html/erl_ext_dist.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erl_ext_fig.gif
 lib/erlang/erts-${VERSION.erts}/doc/html/erl_nif.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erl_prim_loader.html
-lib/erlang/erts-${VERSION.erts}/doc/html/erl_set_memory_block.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erlang.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erlc.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erlsrv.html
@@ -479,7 +480,6 @@ lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_transport.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameter_using.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/diameterc.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/index.html
-lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/notes.gif
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/notes.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/release_notes.html
 lib/erlang/lib/diameter-${VERSION.diameter}/doc/html/users_guide.html
@@ -718,21 +718,6 @@ lib/erlang/lib/inets-${VERSION.inets}/doc/html/tftp.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/html/users_guide.html
 lib/erlang/lib/inets-${VERSION.inets}/doc/pdf/inets-${VERSION.inets}.pdf
 lib/erlang/lib/inets-${VERSION.inets}/info
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/index.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso.eix
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_as_lib.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_chapter.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_lfm.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_lfm_tpfreader.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_rt.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_rt_meta.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/inviso_users_guide_pic1.gif
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/notes.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/release_notes.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/html/users_guide.html
-lib/erlang/lib/inviso-${VERSION.inviso}/doc/pdf/inviso-${VERSION.inviso}.pdf
-lib/erlang/lib/inviso-${VERSION.inviso}/info
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/index.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/allclasses-frame.html
 lib/erlang/lib/jinterface-${VERSION.jinterface}/doc/html/java/allclasses-noframe.html
@@ -838,7 +823,6 @@ lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/net_adm.html
 lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/net_kernel.html
 lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/notes.html
 lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/os.html
-lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/packages.html
 lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/pg2.html
 lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/release_notes.html
 lib/erlang/lib/kernel-${VERSION.kernel}/doc/html/rpc.html
@@ -1117,6 +1101,8 @@ lib/erlang/lib/reltool-${VERSION.reltool}/doc/html/reltool_usage.html
 lib/erlang/lib/reltool-${VERSION.reltool}/doc/html/users_guide.html
 lib/erlang/lib/reltool-${VERSION.reltool}/doc/pdf/reltool-${VERSION.reltool}.pdf
 lib/erlang/lib/reltool-${VERSION.reltool}/info
+lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/DTRACE.html
+lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/SYSTEMTAP.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/dbg.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/dyntrace.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/erts_alloc_config.html
@@ -1125,6 +1111,7 @@ lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/notes.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/release_notes.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/runtime_tools.eix
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/runtime_tools_app.html
+lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/users_guide.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/pdf/runtime_tools-${VERSION.runtime_tools}.pdf
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/info
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/alarm_handler.html
@@ -1224,15 +1211,23 @@ lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/users_guide.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/warning.gif
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/pdf/snmp-${VERSION.snmp}.pdf
 lib/erlang/lib/snmp-${VERSION.snmp}/info
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/SSH_app.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/SSH_protocols.png
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/index.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/introduction.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/notes.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/release_notes.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh.eix
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_channel.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_client_key_api.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_connection.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_protocol.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_server_key_api.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_sftp.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/ssh_sftpd.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/users_guide.html
+lib/erlang/lib/ssh-${VERSION.ssh}/doc/html/using_ssh.html
 lib/erlang/lib/ssh-${VERSION.ssh}/doc/pdf/ssh-${VERSION.ssh}.pdf
 lib/erlang/lib/ssh-${VERSION.ssh}/info
 lib/erlang/lib/ssl-${VERSION.ssl}/doc/html/index.html
@@ -1314,9 +1309,6 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/timer.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/unicode.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/unicode_usage.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/users_guide.html
-lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/ushell1.gif
-lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/ushell2.gif
-lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/ushell3.gif
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/win32reg.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/zip.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/pdf/stdlib-${VERSION.stdlib}.pdf
@@ -1567,7 +1559,6 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMouseEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMoveEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxMultiChoiceDialog.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNavigationKeyEvent.html
-lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNcPaintEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNotebook.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNotebookEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNotifyEvent.html

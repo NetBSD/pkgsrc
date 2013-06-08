@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_wx_configure.in,v 1.1 2012/04/12 12:14:13 asau Exp $
+$NetBSD: patch-lib_wx_configure.in,v 1.2 2013/06/08 06:48:24 asau Exp $
 
---- lib/wx/configure.in.orig	2011-12-14 10:22:11.000000000 +0000
+--- lib/wx/configure.in.orig	2013-02-25 19:21:31.000000000 +0000
 +++ lib/wx/configure.in
 @@ -71,7 +71,7 @@ WXERL_CAN_BUILD_DRIVER=true
  
@@ -11,12 +11,12 @@ $NetBSD: patch-lib_wx_configure.in,v 1.1 2012/04/12 12:14:13 asau Exp $
     CFLAGS="-Owx"
  fi
  
-@@ -307,7 +307,7 @@ dnl 
+@@ -336,7 +336,7 @@ dnl
  if test "$cross_compiling" = "yes"; then
      echo "Cross compilation of the wx driver is not supported yet, wx will NOT be usable" > ./CONF_INFO
      WXERL_CAN_BUILD_DRIVER=false
 -elif test  X"$MIXED_CYGWIN_VC" == X"no" -a X"$MIXED_MSYS_VC" == X"no"; then
 +elif test  X"$MIXED_CYGWIN_VC" = X"no" -a X"$MIXED_MSYS_VC" = X"no"; then
-     m4_include(wxwin.m4)
- 
-     AM_OPTIONS_WXCONFIG
+     WX_VERSION=`wx-config --version`
+     case $WX_VERSION in
+          2.8.*)
