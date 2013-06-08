@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.13 2013/01/03 13:46:28 ryoon Exp $
+$NetBSD: patch-aa,v 1.14 2013/06/08 13:39:39 ryoon Exp $
 
 * Pass LDFLAGS from pkgsrc's Makefile
 
---- Makefile.orig	2013-01-01 07:43:06.000000000 +0000
+--- Makefile.orig	2013-06-05 08:02:57.000000000 +0000
 +++ Makefile
-@@ -13,7 +13,7 @@ SHAREDIR = $(PREFIX)/share/fotoxx
+@@ -14,7 +14,7 @@ DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
  LOCALESDIR = $(SHAREDIR)/locales
  DOCDIR = $(PREFIX)/share/doc/fotoxx
@@ -13,12 +13,3 @@ $NetBSD: patch-aa,v 1.13 2013/01/03 13:46:28 ryoon Exp $
  MENUFILE = $(PREFIX)/share/applications/kornelix-fotoxx.desktop
  
  CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-3.0`
-@@ -23,7 +23,7 @@ ALLFILES = fotoxx.o f.menus.o f.file.o f
-            f.xform.o f.retouch.o f.retouch2.o f.art.o f.comp.o zfuncs.o
- 
- fotoxx: $(ALLFILES)
--	$(CXX) $(LDFLAGS) -o fotoxx $(ALLFILES) $(LIBS) -ltiff -lpng
-+	$(CXX) $(LDFLAGS) -o fotoxx $(ALLFILES) $(LIBS) -ltiff -lpng ${LDFLAGS}
- 
- fotoxx.o: $(FOTOXX) fotoxx.h
- 	$(CXX) $(CFLAGS) -o fotoxx.o $(FOTOXX)
