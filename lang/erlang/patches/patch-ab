@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.5 2013/01/23 21:46:06 asau Exp $
+$NetBSD: patch-ab,v 1.6 2013/06/08 06:48:24 asau Exp $
 
 Build all .java files.
 
---- make/otp.mk.in.orig	2012-12-06 18:02:12.000000000 +0100
-+++ make/otp.mk.in	2013-01-23 10:57:42.812471921 +0100
-@@ -180,7 +180,7 @@
+--- make/otp.mk.in.orig	2013-02-25 19:21:31.000000000 +0000
++++ make/otp.mk.in
+@@ -179,7 +179,7 @@ endif
  
  
  $(JAVA_DEST_ROOT)$(JAVA_CLASS_SUBDIR)%.class: %.java
--	CLASSPATH=$(CLASSPATH) $(JAVA) $(JAVA_OPTIONS) -d $(JAVA_DEST_ROOT) $<
-+	CLASSPATH=$(CLASSPATH) $(JAVA) $(JAVA_OPTIONS) -d $(JAVA_DEST_ROOT) *.java
+-	$(javac_verbose)CLASSPATH=$(CLASSPATH) $(JAVA) $(JAVA_OPTIONS) -d $(JAVA_DEST_ROOT) $<
++	$(javac_verbose)CLASSPATH=$(CLASSPATH) $(JAVA) $(JAVA_OPTIONS) -d $(JAVA_DEST_ROOT) *.java
  
  # ----------------------------------------------------
  #	Emacs byte code compiling
