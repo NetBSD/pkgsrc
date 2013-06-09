@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/10/21 19:37:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/06/09 08:26:48 ryoon Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
@@ -19,6 +19,7 @@ share/enscript/88595.enc
 share/enscript/88597.enc
 share/enscript/88599.enc
 share/enscript/a2ps.hdr
+share/enscript/afm/MustRead.html
 share/enscript/afm/agd.afm
 share/enscript/afm/agdo.afm
 share/enscript/afm/agw.afm
