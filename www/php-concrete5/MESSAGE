@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2013/06/09 04:11:01 ryoon Exp $
+$NetBSD: MESSAGE,v 1.6 2013/06/09 04:43:43 ryoon Exp $
 
-To use concrete5 with Apache 2.2, you will need to perform the following steps.
+To use concrete5 with Apache 2.4, you will need to perform the following steps.
 
 1. Install www/apache24 and www/ap-php
 
