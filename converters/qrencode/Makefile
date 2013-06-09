@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2013/02/16 11:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/06/09 13:48:50 rodent Exp $
 #
 
-DISTNAME=	qrencode-3.4.1
-PKGREVISION=	1
+DISTNAME=	qrencode-3.4.2
 CATEGORIES=	converters
 MASTER_SITES=	http://fukuchi.org/works/qrencode/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	alaric@kitten-technologies.co.uk
-HOMEPAGE=	http://fukuchi.org/works/qrencode/index.html.en
+HOMEPAGE=	http://fukuchi.org/works/qrencode/
 COMMENT=	QR Code generator
 LICENSE=	gnu-lgpl-v2.1
 
@@ -24,5 +24,8 @@ CONFIGURE_ARGS+= --without-tests
 
 PKGCONFIG_OVERRIDE+=	libqrencode.pc.in
 
+.include "options.mk"
+
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
