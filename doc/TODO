@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12262 2013/06/09 16:55:38 ryoon Exp $
+$NetBSD: TODO,v 1.12263 2013/06/09 21:19:47 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1139,7 +1139,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webkit-gtk-2.0.2
 	o webmin-1.630
 	o websvn-2.3.2
-	o weechat-0.4.1
 	o windowlab-1.40
 	o wine-1.4.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.5.31 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
