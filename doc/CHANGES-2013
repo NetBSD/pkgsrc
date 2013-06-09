@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1974 2013/06/09 21:15:20 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.1975 2013/06/09 21:19:47 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/dillo to 3.0.3 [ryoon 2013-06-09]
 	Updated archivers/gzip to 1.5 [ryoon 2013-06-09]
 	Updated shells/bash to 4.2nb3 [bsiegert 2013-06-09]
+	Updated chat/weechat to 0.4.1 [tonio 2013-06-09]
