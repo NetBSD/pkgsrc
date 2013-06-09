@@ -1,0 +1,19 @@
+$NetBSD: patch-src_gui_curses_CMakeLists_txt,v 1.1 2013/06/09 21:19:02 tonio Exp $
+
+Test for ncursesw
+
+--- src/gui/curses/CMakeLists.txt.orig	2013-06-09 20:57:43.000000000 +0000
++++ src/gui/curses/CMakeLists.txt
+@@ -34,9 +34,11 @@ SET(EXECUTABLE weechat-curses)
+ 
+ FIND_PACKAGE(Ncurses)
+ IF(NCURSES_FOUND)
++  CHECK_INCLUDE_FILES(ncursesw/term.h HAVE_NCURSES_TERM_H)
++  CHECK_INCLUDE_FILES(ncursesw/curses.h HAVE_NCURSESW_CURSES_H)
+   CHECK_INCLUDE_FILES(ncursesw/ncurses.h NCURSESW_HEADERS)
+   IF(NCURSESW_HEADERS)
+-    ADD_DEFINITIONS(-DHAVE_NCURSESW_CURSES_H)
++    ADD_DEFINITIONS(-DHAVE_NCURSESW_NCURSES_H)
+   ELSE(NCURSESW_HEADERS)
+     CHECK_INCLUDE_FILES(ncurses.h NCURSES_HEADERS)
+     IF(NCURSES_HEADERS)

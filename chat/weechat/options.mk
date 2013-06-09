@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2012/06/13 11:33:30 abs Exp $
+# $NetBSD: options.mk,v 1.10 2013/06/09 21:19:02 tonio Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 PKG_SUPPORTED_OPTIONS=	charset gnutls python lua wide-curses perl ruby
@@ -9,10 +9,10 @@ PKG_SUGGESTED_OPTIONS=	charset gnutls
 PLIST_VARS+=		charset lua plugin python perl ruby
 
 .if !empty(PKG_OPTIONS:Mcharset)
-CONFIGURE_ARGS+=	--enable-charset
+CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=ON
 PLIST.charset=		yes
 .else
-CONFIGURE_ARGS+=	--disable-charset
+CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
@@ -27,36 +27,36 @@ CONFIGURE_ARGS+=	--disable-charset
 
 .if !empty(PKG_OPTIONS:Mpython)
 .include "../../lang/python/extension.mk"
-CONFIGURE_ARGS+=	--enable-python
+CMAKE_ARGS+=		-DENABLE_PYTHON:BOOL=ON
 PLIST.python=		yes
 .else
-CONFIGURE_ARGS+=	--disable-python
+CMAKE_ARGS+=		-DENABLE_PYTHON:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-lua
+CMAKE_ARGS+=		-DENABLE_LUA:BOOL=ON
 PLIST.lua=		yes
 .else
-CONFIGURE_ARGS+=	--disable-lua
+CMAKE_ARGS+=		-DENABLE_LUA:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
 .include "../../lang/perl5/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-perl
+CMAKE_ARGS+=		-DENABLE_PERL:BOOL=ON
 USE_TOOLS+=		perl
 PLIST.perl=		yes
 .else
-CONFIGURE_ARGS+=	--disable-perl
+CMAKE_ARGS+=		-DENABLE_PERL:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mruby)
 .include "../../lang/ruby/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ruby
+CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=ON
 USE_TOOLS+=		ruby
 PLIST.ruby=		yes
 .else
-CONFIGURE_ARGS+=	--disable-ruby
+CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython) || \
