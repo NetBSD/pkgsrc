@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1975 2013/06/09 21:19:47 tonio Exp $
+$NetBSD: CHANGES-2013,v 1.1976 2013/06/09 22:53:35 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/gzip to 1.5 [ryoon 2013-06-09]
 	Updated shells/bash to 4.2nb3 [bsiegert 2013-06-09]
 	Updated chat/weechat to 0.4.1 [tonio 2013-06-09]
+	Updated comms/spandsp to 0.0.6pre21 [rodent 2013-06-09]
