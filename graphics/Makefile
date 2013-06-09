@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2013/05/28 02:54:07 rodent Exp $
+# $NetBSD: Makefile,v 1.651 2013/06/09 13:25:56 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -181,6 +181,7 @@ SUBDIR+=	gnome-icon-theme-symbolic
 SUBDIR+=	gnuplot
 SUBDIR+=	gocr
 SUBDIR+=	goocanvas
+SUBDIR+=	goocanvas2
 SUBDIR+=	goocanvasmm
 SUBDIR+=	gource
 SUBDIR+=	gphoto2
