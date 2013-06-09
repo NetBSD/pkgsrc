@@ -1,19 +1,5 @@
-$NetBSD: distinfo,v 1.13 2012/07/03 18:22:08 joerg Exp $
+$NetBSD: distinfo,v 1.14 2013/06/09 14:35:12 ryoon Exp $
 
-SHA1 (cpio-2.6.tar.gz) = 5a4ea156519909994fe05933dc823abcf07e3e21
-RMD160 (cpio-2.6.tar.gz) = 8246bdd08ab8727f9a8042d33ddfe3a6332476b8
-Size (cpio-2.6.tar.gz) = 556018 bytes
-SHA1 (patch-ac) = df24b60d612ac59ef82a5d09a16a8be5a6d674ec
-SHA1 (patch-ae) = c5f7d7f0574d37951caba9de05b9017c842c5980
-SHA1 (patch-ag) = 04364ee26f2301f6ddefd2a2bc2b1fff3686411f
-SHA1 (patch-ah) = f7e17682c2f6783e72310ef1d82a1bfca376e5ce
-SHA1 (patch-ai) = c3ad35aa4fe9c82e5110c52c61ca3405915e19ab
-SHA1 (patch-aj) = 1a4f796692cdad64297590acea33f371c903fa66
-SHA1 (patch-ak) = 9f795bf2f600ec31cf760ea0e5a0fc1c014fd143
-SHA1 (patch-al) = 3c1e71ad7a10c80e8ec82718ee44d138641eb18e
-SHA1 (patch-am) = d380ee141b218c568abc69ad90def03add91cde5
-SHA1 (patch-an) = 943fe81aba7846bd8349cc2e31ab9525e019e99f
-SHA1 (patch-ao) = 53c7b6bc1e00a0203665e12807b3388204f838c3
-SHA1 (patch-ap) = cf1ca21394e4e437e64fc83837e08b0aba26d41e
-SHA1 (patch-aq) = d1536000401bbe2d1d32833f5871242e3ba1ddf6
-SHA1 (patch-lib_argp_fmtstream_h) = 10e997a11d06cafd66e9644f69db61fef62097a9
+SHA1 (cpio-2.11.tar.gz) = 2c44a44195edf157060cb0b335a01ee0ece3169a
+RMD160 (cpio-2.11.tar.gz) = 1442c8dcf07d8ef9fcda0b7727aab52fe84161ba
+Size (cpio-2.11.tar.gz) = 1428330 bytes
