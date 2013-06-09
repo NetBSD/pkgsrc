@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2013/06/09 02:11:34 ryoon Exp $
+
+--- configure.orig	2013-05-26 07:24:31.000000000 +0000
++++ configure
+@@ -19195,7 +19195,7 @@ See \`config.log' for more details" "$LI
+ fi
+ 
+ use_md=""
+-if test "x$have_osx" == "xyes"; then
++if test "x$have_osx" = "xyes"; then
+   use_md="apple"
+ 
+ $as_echo "#define USE_APPLE_MD 1" >>confdefs.h
