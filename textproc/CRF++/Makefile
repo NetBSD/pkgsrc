@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/22 13:07:47 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/09 07:02:14 obache Exp $
 #
 
 DISTNAME=	CRF++-0.58
@@ -13,6 +13,12 @@ LICENSE=	gnu-lgpl-v2.1 OR 2-clause-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=		gmake
+.endif
 
 PTHREAD_AUTO_VARS=	yes
 SUBST_CLASSES+=			pthread_flags
