@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2013/05/12 06:11:17 richard Exp $
+# $NetBSD: Makefile.common,v 1.26 2013/06/09 13:22:55 obache Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -56,6 +56,10 @@ CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-introspection
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
