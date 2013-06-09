@@ -1,22 +1,21 @@
-$NetBSD: patch-aa,v 1.9 2010/02/14 20:19:25 snj Exp $
+$NetBSD: patch-aa,v 1.10 2013/06/09 16:29:33 ryoon Exp $
 
---- dpid/Makefile.in.orig	2010-02-11 02:20:00.000000000 -0800
-+++ dpid/Makefile.in	2010-02-14 09:55:43.000000000 -0800
-@@ -335,15 +335,15 @@ distclean-compile:
+--- dpid/Makefile.in.orig	2013-03-14 15:03:53.000000000 +0000
++++ dpid/Makefile.in
+@@ -377,6 +377,7 @@ distclean-compile:
  @am__fastdepCC_FALSE@	$(COMPILE) -c `$(CYGPATH_W) '$<'`
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
 +	$(MKDIR_P) "$(DESTDIR)$(datadir)/examples/$(PACKAGE)"
  	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
- 	for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	if test -n "$$list"; then \
+ 	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+@@ -387,8 +388,7 @@ install-sysconfDATA: $(sysconf_DATA)
  	  echo "$$d$$p"; \
  	done | $(am__base_list) | \
  	while read files; do \
 -	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
 -	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
-+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datadir)/examples/$(PACKAGE)'"; \
 +	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datadir)/examples/$(PACKAGE)" || exit $$?; \
  	done
  
