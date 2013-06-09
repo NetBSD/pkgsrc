@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2013/06/06 12:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2013/06/09 06:03:33 ryoon Exp $
 
-DISTNAME=		bochs-2.6
-PKGREVISION=		6
+DISTNAME=		bochs-2.6.2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -68,7 +67,6 @@ CONFIGURE_ARGS+=	--enable-fpu
 CONFIGURE_ARGS+=	--enable-vmx=2
 #CONFIGURE_ARGS+=	--enable-3dnow
 CONFIGURE_ARGS+=	--enable-alignment-check
-CONFIGURE_ARGS+=	--enable-misaligned-sse
 #CONFIGURE_ARGS+=	--enable-gdb-stub
 CONFIGURE_ARGS+=	--enable-gameport
 
