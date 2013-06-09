@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1960 2013/06/09 08:51:53 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1961 2013/06/09 08:58:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3114,3 +3114,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/enscript to 1.6.6 [ryoon 2013-06-09]
 	Updated misc/less to 458 [ryoon 2013-06-09]
 	Updated games/puzzles to 9861 [wiz 2013-06-09]
+	Updated security/otpCalc to 0.97 [ryoon 2013-06-09]
