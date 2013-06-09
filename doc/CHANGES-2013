@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1959 2013/06/09 08:37:02 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1960 2013/06/09 08:51:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3113,3 +3113,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/xchm to 1.22 [ryoon 2013-06-09]
 	Updated print/enscript to 1.6.6 [ryoon 2013-06-09]
 	Updated misc/less to 458 [ryoon 2013-06-09]
+	Updated games/puzzles to 9861 [wiz 2013-06-09]
