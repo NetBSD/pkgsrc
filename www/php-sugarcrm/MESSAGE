@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/02/26 12:37:46 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2013/06/09 04:40:03 ryoon Exp $
 
 To use SugerCRM with Apache 2.4 and PHP 5.4, you will need to perform
 the following steps.
@@ -16,11 +16,11 @@ the following steps.
    or higher.
 
 	# cat ${PREFIX}/etc/php.ini | grep upload_max_filesize
-	upload_max_filesize = 6M
+	upload_max_filesize = 7M
 
 4. Install MySQL database server.
 
-	# cd databases/mysql51-server
+	# cd databases/mysql55-server
 	# make install
 
 5. Start MySQL server, and setup MySQL server
