@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/12/24 02:43:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/09 05:19:53 ryoon Exp $
 #
 
-DISTNAME=	sencha-sns-1.0.3
+DISTNAME=	sencha-sns-1.3.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
@@ -49,6 +49,18 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/php
 REPLACE.php.new=	${PHPDIR}/bin/php
 REPLACE_FILES.php=	cake/console/cake.php
+
+CONF_FILES_PERMS=	${PREFIX}/share/sencha-sns/app/config/core.php-dist \
+			${PREFIX}/share/sencha-sns/app/config/core.php \
+			${APACHE_USER} ${APACHE_GROUP} 640
+
+CONF_FILES_PERMS+=	${PREFIX}/share/sencha-sns/cake/console/templates/skel/config/database.php.default \
+			${PREFIX}/share/sencha-sns/cake/console/templates/skel/config/database.php \
+			${APACHE_USER} ${APACHE_GROUP} 640
+
+pre-install:
+	cd ${WRKSRC} && \
+	${MV} app/config/core.php app/config/core.php-dist
 
 do-install:
 	cd ${WRKSRC} && pax -rw -pmp * .htaccess \
