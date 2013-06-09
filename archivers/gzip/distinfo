@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/02/02 14:42:43 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/06/09 16:55:08 ryoon Exp $
 
-SHA1 (gzip-1.3.12.tar) = 330eb5f1b3dfab13a491352cb00b6573e5b55a5f
-RMD160 (gzip-1.3.12.tar) = 6845dfba2a275f4de488c3fb97e64405838a5005
-Size (gzip-1.3.12.tar) = 1822720 bytes
+SHA1 (gzip-1.5.tar.gz) = 56a80da7b032107372d3f3343bed7c7af452a826
+RMD160 (gzip-1.5.tar.gz) = 641a4a095a44174e924569c051a089c86081c7ac
+Size (gzip-1.5.tar.gz) = 1114684 bytes
 SHA1 (patch-aa) = 77b3cb5c2824f88295eb8c8c7c46c4ca23b776c4
-SHA1 (patch-ab) = 42309926f601998b97051aadc31ad44413716029
-SHA1 (patch-ac) = 8ef4b7105ca9b201079f5cf8799642e12184fda4
-SHA1 (patch-ad) = 082ced7d4a89a49b750525cc71bbf9a9abfc5b9e
-SHA1 (patch-ae) = a1d245c5cf055e9bd35fb7e810d5183a71cbfc74
-SHA1 (patch-af) = 28639dbe11ed8ce81bd1c29248b53af6cea55b88
-SHA1 (patch-ag) = 6b499fe28525643bfd5e5ece73fcd221eb9f964f
-SHA1 (patch-ah) = 0f92048912c2e682ba28d93bf5f309774d337790
+SHA1 (patch-ab) = 53f75c7852c29dc00098c756dfd68b2831df13ed
