@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12255 2013/06/09 13:28:41 obache Exp $
+$NetBSD: TODO,v 1.12256 2013/06/09 14:35:46 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcal-3.6.3
 	o gcin-1.5.5
 	o gcombust-0.1.55
-	o gcpio-2.10
 	o gdal-1.9.2
 	o gdb-7.5.1 [wip]
 	o gdb-7.6
