@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2013/06/09 13:25:14 obache Exp $
+
+SHA1 (goocanvas-2.0.1.tar.bz2) = 8676d48d8ce05ecb8a5146d2a2b451b5e0f799f9
+RMD160 (goocanvas-2.0.1.tar.bz2) = 60047524beccbfbb40add17986273dde9b8ff9c7
+Size (goocanvas-2.0.1.tar.bz2) = 595203 bytes
+SHA1 (patch-src_goocanvas.c) = 62a21b55a3fc2628badd74d078f6d940258eb4df
+SHA1 (patch-src_goocanvas.h) = 799422cdec55c5fdf8b09326a42990549db3ba18
+SHA1 (patch-src_goocanvasellipse.h) = 4303037140fcc0149cac97d860a70ffa569b4a06
+SHA1 (patch-src_goocanvasgrid.c) = 5f645fd97b17f86d7a2e24aa9b4e733a7325f6aa
+SHA1 (patch-src_goocanvasgrid.h) = 5b6334b5d77bc7689e7320f2db02ae8370a84545
+SHA1 (patch-src_goocanvasgroup.h) = 501886270f6f5a24694f92e58e4c2130b77df580
+SHA1 (patch-src_goocanvasimage.h) = 2871b449adfd2a66cc0b638b2da1e2b49a41b013
+SHA1 (patch-src_goocanvasitem.c) = ff52d9af6594634c17c0176e3ced233ad906953c
+SHA1 (patch-src_goocanvasitem.h) = 28eaf4039e86baaa63a1116da1362be17c5c2075
+SHA1 (patch-src_goocanvasitemmodel.c) = 51da2c585cda984bf94b2e37209a95347718f5a7
+SHA1 (patch-src_goocanvasitemmodel.h) = fe90cb89a56c859f60d0aa98e6d1e5e306fa2f66
+SHA1 (patch-src_goocanvasitemsimple.c) = f11b11029642542c2f78cb8f8150a0d7cbd30ae7
+SHA1 (patch-src_goocanvasitemsimple.h) = 8237ab5cf6b17b2e63287f5f73cc32232cc88146
+SHA1 (patch-src_goocanvaspath.c) = f8f285cf9b629fe757a6b63eff48e073a43bfc9b
+SHA1 (patch-src_goocanvaspath.h) = cf619be685985e3ed6a3a13f6d9684c28533c09a
+SHA1 (patch-src_goocanvaspolyline.h) = 946355a904d0d57c3a60052ad3312533fc6ed3ac
+SHA1 (patch-src_goocanvasrect.h) = 1b3a24cc0ffb274c67de4c436c7da2aed9926b8f
+SHA1 (patch-src_goocanvasstyle.h) = 848542ff4f147b5392f479df11ad819e75139551
+SHA1 (patch-src_goocanvastable.h) = 6c2dfdd2b05dfbaa24f89a6f22ea4dfb2639d356
+SHA1 (patch-src_goocanvastext.h) = 0ae55d05add3d5b64f7b411d8bf55bcf55515de8
+SHA1 (patch-src_goocanvasutils.h) = 459e3893fb4f455166f29abee85265508ab25f2d
+SHA1 (patch-src_goocanvaswidget.h) = 3de23659f3f12bd093038a8e789331b655d98033
