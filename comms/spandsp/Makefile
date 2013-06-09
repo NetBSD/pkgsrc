@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/01/26 21:36:15 adam Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/09 22:36:12 rodent Exp $
 #
 
-DISTNAME=	spandsp-0.0.6pre18
-PKGREVISION=	2
+DISTNAME=	spandsp-0.0.6pre21
 CATEGORIES=	comms
 MASTER_SITES=	http://www.soft-switch.org/downloads/spandsp/
 EXTRACT_SUFX=	.tgz
@@ -14,16 +13,19 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/spandsp-0.0.6
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_TOOLS+=	gsed pkg-config
+USE_LANGUAGES=	c c++ fortran77
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	spandsp.pc.in
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 
+.include "options.mk"
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/DueDiligence ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
