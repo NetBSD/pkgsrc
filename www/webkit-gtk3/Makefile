@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2013/06/06 12:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/09 13:22:55 obache Exp $
 
 .include "../../www/webkit-gtk/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk3/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 COMMENT=	GTK3 port of the WebKit browser engine
 
@@ -18,7 +18,10 @@ print-PLIST-from-gtk:
 	-e 's/webkit-1.0.pc/webkitgtk-3.0.pc/'			\
 	-e 's/webkit-1.0/webkit-3.0/'				\
 	-e 's/webkit-2.0/webkit-3.0/'				\
+	-e 's/webkitgtk-2.0.mo/webkitgtk-3.0.mo/'			\
 	-e 's/webkitgtk-1.0/webkitgtk-3.0/'			\
+	-e 's/JSCore-1.0/JSCore-3.0/'				\
+	-e 's/WebKit-1.0/WebKit-3.0/'				\
 	../../www/webkit-gtk/PLIST
 
 .include "../../x11/gtk3/buildlink3.mk"

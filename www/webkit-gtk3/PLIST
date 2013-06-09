@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/11/03 18:11:47 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/09 13:22:55 obache Exp $
 bin/jsc-3
 include/webkitgtk-3.0/JavaScriptCore/JSBase.h
 include/webkitgtk-3.0/JavaScriptCore/JSContextRef.h
@@ -308,10 +308,14 @@ include/webkitgtk-3.0/webkit2/WebKitWebView.h
 include/webkitgtk-3.0/webkit2/WebKitWebViewBase.h
 include/webkitgtk-3.0/webkit2/WebKitWindowProperties.h
 include/webkitgtk-3.0/webkit2/webkit2.h
+lib/girepository-1.0/JSCore-3.0.typelib
+lib/girepository-1.0/WebKit-3.0.typelib
 lib/libjavascriptcoregtk-3.0.la
 lib/libwebkitgtk-3.0.la
 lib/pkgconfig/javascriptcoregtk-3.0.pc
 lib/pkgconfig/webkitgtk-3.0.pc
+share/gir-1.0/JSCore-3.0.gir
+share/gir-1.0/WebKit-3.0.gir
 share/locale/ar/LC_MESSAGES/webkitgtk-3.0.mo
 share/locale/bg/LC_MESSAGES/webkitgtk-3.0.mo
 share/locale/cs/LC_MESSAGES/webkitgtk-3.0.mo
