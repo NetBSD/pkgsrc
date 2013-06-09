@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2012/06/01 12:29:46 gdt Exp $
+$NetBSD: distinfo,v 1.11 2013/06/09 06:10:22 ryoon Exp $
 
-SHA1 (wdiff-1.1.2.tar.gz) = 5b3ab95bd6a77fce8f194069ac0ac823593258fc
-RMD160 (wdiff-1.1.2.tar.gz) = f2a66cc04b346b404ad80763a156288947582d8c
-Size (wdiff-1.1.2.tar.gz) = 1397234 bytes
+SHA1 (wdiff-1.2.1.tar.gz) = 6b5c7c97252cfe607bb1db7db148061be7259a7e
+RMD160 (wdiff-1.2.1.tar.gz) = f2ff16e7eda7767bfbd299f15c3dc34c2afbde5d
+Size (wdiff-1.2.1.tar.gz) = 1425114 bytes
