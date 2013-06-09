@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2011/09/01 09:22:30 jnemeth Exp $
+$NetBSD: distinfo,v 1.3 2013/06/09 22:36:12 rodent Exp $
 
-SHA1 (spandsp-0.0.6pre18.tgz) = 66d85049ad3942471e0ef5e9d9312c4d0a9dd4f8
-RMD160 (spandsp-0.0.6pre18.tgz) = cfbce55ab6fae0b6e433af00f020930f9d0bd300
-Size (spandsp-0.0.6pre18.tgz) = 3241122 bytes
-SHA1 (patch-aa) = 808f65446ad04343096d7a25aeec0b26047833db
-SHA1 (patch-ab) = 547058f6a9983a0b61ce674bac712c1ed8767900
+SHA1 (spandsp-0.0.6pre21.tgz) = 6b4084ac700cbce2cbfe8e3050a0252ba00657d3
+RMD160 (spandsp-0.0.6pre21.tgz) = 183a8e42d45f7b026064d696a361f0b64dad68bb
+Size (spandsp-0.0.6pre21.tgz) = 3278758 bytes
+SHA1 (patch-aa) = 9367cb23f8413d6adcff23ddecda914d9de27e0c
+SHA1 (patch-ab) = 11162d011e061172140b766c6c5fe7714f662eb8
 SHA1 (patch-src_gsm0610__rpe.c) = c35359c79940923e6cb0667df101410c179acc96
