@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.24 2013/06/07 16:36:58 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.25 2013/06/09 20:16:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -85,3 +85,10 @@ Pullup ticket #4148 - requested by tron
 www/apache22: security patch
 Pullup ticket #4150 - requested by taca
 devel/transifex-client: security update
+Pullup ticket #4149 - requested by taca
+lang/ruby193-base: security update
+Pullup ticket #4154 - requested by obache
+fonts/efont-unicode: build fix
+fonts/ja-naga10: build fix
+Pullup ticket #4155 - requested by taca
+lang/php54: security update
