@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2013/06/06 12:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/06/09 08:36:28 wiz Exp $
 
-DISTNAME=	puzzles-r9840
+DISTNAME=	puzzles-r9861
 PKGNAME=	${DISTNAME:S/-r/-/}
-PKGREVISION=	3
 CATEGORIES=	games
 # distfile changes daily
 MASTER_SITES=	# http://www.chiark.greenend.org.uk/~sgtatham/puzzles/
