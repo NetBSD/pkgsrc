@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/30 11:41:42 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 12:12:27 rodent Exp $
 #
 
 DISTNAME=	oclock-1.0.3
@@ -15,6 +15,8 @@ PREV_PKGPATH=	x11/oclock
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+MAKE_FLAGS+=	appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
