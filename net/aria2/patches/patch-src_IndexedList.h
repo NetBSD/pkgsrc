@@ -1,8 +1,8 @@
-$NetBSD: patch-src_IndexedList.h,v 1.1 2013/05/04 12:50:38 joerg Exp $
+$NetBSD: patch-src_IndexedList.h,v 1.2 2013/06/09 02:11:34 ryoon Exp $
 
---- src/IndexedList.h.orig	2013-05-03 11:55:44.000000000 +0000
+--- src/IndexedList.h.orig	2013-05-26 07:23:55.000000000 +0000
 +++ src/IndexedList.h
-@@ -68,7 +68,7 @@ struct IndexedListIterator {
+@@ -64,7 +64,7 @@ struct IndexedListIterator {
    typedef ValueType value_type;
    typedef PointerType pointer;
    typedef ReferenceType reference;
