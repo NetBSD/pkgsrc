@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/08/10 17:50:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/06/09 07:26:32 ryoon Exp $
 bin/xchm
 share/locale/be/LC_MESSAGES/xchm.mo
 share/locale/bg/LC_MESSAGES/xchm.mo
@@ -6,6 +6,7 @@ share/locale/cs/LC_MESSAGES/xchm.mo
 share/locale/de/LC_MESSAGES/xchm.mo
 share/locale/es/LC_MESSAGES/xchm.mo
 share/locale/fr/LC_MESSAGES/xchm.mo
+share/locale/gr/LC_MESSAGES/xchm.mo
 share/locale/hu/LC_MESSAGES/xchm.mo
 share/locale/it/LC_MESSAGES/xchm.mo
 share/locale/lv/LC_MESSAGES/xchm.mo
