@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12253 2013/06/09 08:58:49 ryoon Exp $
+$NetBSD: TODO,v 1.12254 2013/06/09 08:59:31 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -914,10 +914,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
-	o php-concrete5-5.6.1.2
 	o php-jpgraph-3.0.6
-	o php-sugarcrm-6.5.12
-	o php-tt-rss-1.7.9
 	o php-tiki6-6.10
 	o phpmyadmin-4.0.2
 	o picard-1.2
