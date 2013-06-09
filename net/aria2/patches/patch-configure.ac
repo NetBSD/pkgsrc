@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/06/09 02:11:34 ryoon Exp $
+
+--- configure.ac.orig	2013-05-26 07:23:55.000000000 +0000
++++ configure.ac
+@@ -350,7 +350,7 @@ if test "x$with_libcares" = "xyes"; then
+ fi
+ 
+ use_md=""
+-if test "x$have_osx" == "xyes"; then
++if test "x$have_osx" = "xyes"; then
+   use_md="apple"
+   AC_DEFINE([USE_APPLE_MD], [1], [What message digest implementation to use])
+ else
