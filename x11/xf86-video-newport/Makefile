@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/03 01:35:22 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/09 12:37:18 rodent Exp $
 
 DISTNAME=	xf86-video-newport-0.2.4
 CATEGORIES=	x11
@@ -15,6 +15,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 .include "options.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
