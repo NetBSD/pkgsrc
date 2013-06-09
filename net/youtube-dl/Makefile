@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2013/04/22 17:18:00 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2013/06/09 01:52:47 ryoon Exp $
 
-VERSION_DATE=	2013.04.11
+VERSION_DATE=	2013.05.23
 DISTNAME=	youtube-dl
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//g}
 CATEGORIES=	net
-MASTER_SITES=	http://youtube-dl.org/downloads/2013.04.11/
+MASTER_SITES=	http://youtube-dl.org/downloads/${VERSION_DATE}/
 EXTRACT_SUFX=	# none
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
@@ -25,7 +25,7 @@ REPLACE_PYTHON+=	${DISTNAME}
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
+#FETCH_USING=	curl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} \
