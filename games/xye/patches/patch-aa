@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2009/09/15 11:43:02 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2013/06/09 06:30:14 ryoon Exp $
 
---- src/options.cpp.orig	2009-07-27 03:02:29.000000000 +0200
+--- src/options.cpp.orig	2013-06-09 06:21:13.000000000 +0000
 +++ src/options.cpp
-@@ -21,6 +21,7 @@ Permission is granted to anyone to use t
- #include "options.h"
- #include "gen.h"
- 
+@@ -24,6 +24,7 @@ Permission is granted to anyone to use t
+ #include<map>
+ #include<algorithm>
+ #include<string>
 +#include <unistd.h>
  
- #include<iostream>
- #include<fstream>
+ using std::string;
+ 
