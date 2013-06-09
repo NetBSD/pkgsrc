@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.12 2009/07/09 05:04:03 snj Exp $
+$NetBSD: patch-ac,v 1.13 2013/06/09 16:29:33 ryoon Exp $
 
---- src/Makefile.in.orig	2009-07-08 20:27:51.000000000 -0700
-+++ src/Makefile.in	2009-07-08 20:28:37.000000000 -0700
-@@ -321,7 +321,7 @@ dillo_SOURCES = \
+--- src/Makefile.in.orig	2013-03-14 15:03:54.000000000 +0000
++++ src/Makefile.in
+@@ -416,7 +416,7 @@ dillo_SOURCES = \
+ 	xembed.cc \
  	xembed.hh
  
- EXTRA_DIST = chg srch keysrc
--sysconf_DATA = keysrc
-+sysconf_DATA =
+-dist_sysconf_DATA = domainrc keysrc
++dist_sysconf_DATA = 
+ EXTRA_DIST = chg srch
  all: all-recursive
  
- .SUFFIXES:
