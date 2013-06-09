@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/06/04 22:15:55 tron Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/09 06:48:44 jperkin Exp $
 
 DISTNAME=		pygobject-3.8.2
 PKGNAME=		${PYPKGPREFIX}-gobject3-3.8.2
@@ -13,6 +13,7 @@ COMMENT=		Python bindings for glib2 gobject
 LICENSE=		gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
