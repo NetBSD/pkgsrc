@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12259 2013/06/09 16:30:32 ryoon Exp $
+$NetBSD: TODO,v 1.12260 2013/06/09 16:31:51 taca Exp $
 
 Suggested new packages
 ======================
@@ -840,7 +840,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-server-1.4.6
 	o muse-0.9.2
 	o mypaint-1.1.0
-	o mysql-5.1.69
+	o mysql-5.1.70
 	o nagios-3.4.4
 	o nagios-3.5.0
 	o nano-2.3.2
@@ -979,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o root-5.34.01
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o roundcube-0.9.1 [taca]
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
