@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/04 02:21:44 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/09 12:37:18 rodent Exp $
 
 DISTNAME=	xf86-video-suncg3-1.1.2
 CATEGORIES=	x11
@@ -13,6 +13,12 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"

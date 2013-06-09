@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/02 21:56:42 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/09 12:34:50 rodent Exp $
 
 DISTNAME=	xf86-input-acecad-1.5.0
 CATEGORIES=	x11
@@ -13,6 +13,12 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
