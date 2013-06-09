@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 14:58:18 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/09 13:00:47 obache Exp $
 
 DISTNAME=	efont-unicode-bdf-0.4.2
 PKGNAME=	${DISTNAME:S/-bdf//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://openlab.ring.gr.jp/efont/dist/unicode-bdf/
 EXTRACT_SUFX=	.tar.bz2
