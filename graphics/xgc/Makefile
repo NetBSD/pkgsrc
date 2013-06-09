@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/28 03:47:57 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 12:12:26 rodent Exp $
 #
 
 DISTNAME=	xgc-1.0.4
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex pkg-config
+
+MAKE_FLAGS+=	appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
