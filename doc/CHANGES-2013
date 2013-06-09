@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1965 2013/06/09 13:28:16 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1966 2013/06/09 13:28:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/ja-naga10 to 1.1nb2 [obache 2013-06-09]
 	Updated www/webkit-gtk to 1.10.2nb8 [obache 2013-06-09]
 	Updated www/webkit-gtk3 to 1.10.2nb6 [obache 2013-06-09]
+	Added graphics/goocanvas2 version 2.0.1 [obache 2013-06-09]
