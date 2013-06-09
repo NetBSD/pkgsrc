@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/02/06 08:32:06 jnemeth Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/09 22:36:12 rodent Exp $
+
+Fix portability failure.
 
 --- configure.orig	2011-02-06 01:41:29.000000000 +0000
 +++ configure
