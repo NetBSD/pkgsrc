@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12258 2013/06/09 15:40:59 ryoon Exp $
+$NetBSD: TODO,v 1.12259 2013/06/09 16:30:32 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-1.0.2
 	o dhid-5.3
 	o diffstat-1.57
-	o dillo-3.0.3
 	o doclifter-2.11
 	o dpkg-1.16.9 [pkg/47234]
 	o dri-7.8.2 [wip]
