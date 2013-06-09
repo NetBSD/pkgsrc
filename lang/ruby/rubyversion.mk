@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.95 2013/02/22 16:20:47 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.95.2.1 2013/06/09 19:35:15 tron Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -110,7 +110,7 @@
 #
 # RUBY_VERSION_FULL
 #	Version of Ruby including patchlevel.
-#	
+#
 # RUBY_BASE
 #	Name of ruby base package's name.
 #
@@ -176,7 +176,7 @@
 #
 # RUBY_GEM_BASE
 #	common GEM directory.
-#	
+#
 # GEM_HOME
 #	version specific GEM directory.
 #
@@ -206,7 +206,7 @@ RUBY193_VERSION=	1.9.3
 
 # patch
 RUBY18_PATCHLEVEL=	pl371
-RUBY193_PATCHLEVEL=	p392
+RUBY193_PATCHLEVEL=	p429
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
@@ -216,17 +216,24 @@ RUBY193_API_VERSION=	1.9.1
 RUBY_VERSION_DEFAULT?=	193
 
 RUBY_VERSION_SUPPORTED?= 193 18
-RUBY_VER?=		${RUBY_VERSION_DEFAULT}
-
-# If package support only one version, use it.
-.if ${RUBY_VERSION_SUPPORTED:[\#]} == 1
-RUBY_VER=		${RUBY_VERSION_SUPPORTED}
-RUBY_VERSION_DEFAULT=	${RUBY_VERSION_SUPPORTED}
-.endif
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
 .  if ${rv} == ${RUBY_VERSION_REQD}
+RUBY_VER=	${rv}
+.  endif
+. endfor
+.elif !defined(RUBY_VER)
+. for rv in ${RUBY_VERSION_SUPPORTED}
+.  if ${rv} == ${RUBY_VERSION_DEFAULT}
+RUBY_VER=	${rv}
+.  endif
+. endfor
+.endif
+
+.if !defined(RUBY_VER)
+. for rv in ${RUBY_VERSION_SUPPORTED}
+.  if !defined(RUBY_VER)
 RUBY_VER=	${rv}
 .  endif
 . endfor
@@ -246,8 +253,10 @@ RUBY_ABI_VERSION=	${RUBY_VERSION}
 PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 .endif
 
+.if !empty(RUBY_VERSION)
 RUBY_PATCHLEVEL=	${RUBY${RUBY_VER}_PATCHLEVEL}
 RUBY_API_VERSION=	${RUBY${RUBY_VER}_API_VERSION}
+.endif
 
 # Variable assignment for multi-ruby packages
 MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
@@ -336,6 +345,10 @@ _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR
 .elif ${OPSYS} == "SunOS"
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}
  _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${_RUBY_API_MINOR}
+.elif ${OPSYS} == "Cygwin"
+RUBY_SHLIB=		${RUBY_VER}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}.dll.a
+RUBY_SHLIBALIAS=	bin/cygruby${RUBY_VER}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}.dll
+RUBY_STATICLIB=		${RUBY_VER}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}-static.a
 .endif
 
 .if !empty(_RUBY_SHLIBALIAS)
@@ -415,14 +428,11 @@ MAKE_ENV+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 MAKEFLAGS+=		RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
 
 #
-# PLIST
+# PLIST_VARS for x11/ruby-tk package.
 #
-PLIST_VARS+=		ruby18 ruby19 ruby193
-.if ${RUBY_VER} == "18"
-PLIST.ruby18=		yes
-.elif ${RUBY_VER} == "193"
+PLIST_VARS+=		ruby19
+.if ${RUBY_VER} != "18"
 PLIST.ruby19=		yes
-PLIST.ruby193=		yes
 .endif
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
