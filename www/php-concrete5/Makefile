@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/12/25 19:54:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/09 04:11:01 ryoon Exp $
 #
 
-DISTNAME=	concrete5.6.0.2
-PKGREVISION=	1
+DISTNAME=	concrete5.6.1.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
 CATEGORIES=	www
-MASTER_SITES=	http://www.concrete5.org/download_file/-/view/44326/8497/
+MASTER_SITES=	http://www.concrete5.org/download_file/-/view/51635/8497/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -45,6 +44,10 @@ REPLACE_PYTHON+=	concrete/libraries/3rdparty/htmldiff.py
 do-install:
 	cd ${WRKSRC} && ${FIND} . -type f \! -name '*.orig' -print | \
 		pax -rw ${DESTDIR}${PREFIX}/${C5DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${C5DIR}/packages
+	${TOUCH} ${DESTDIR}${PREFIX}/${C5DIR}/packages/.keep
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${C5DIR}/files
+	${TOUCH} ${DESTDIR}${PREFIX}/${C5DIR}/files/.keep
 
 .include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
