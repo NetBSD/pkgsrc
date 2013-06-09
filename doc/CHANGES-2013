@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1948 2013/06/09 02:12:01 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1949 2013/06/09 04:11:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-owncloud to 5.0.7 [ryoon 2013-06-09]
 	Updated net/youtube-dl to 20130523 [ryoon 2013-06-09]
 	Updated net/aria2 to 1.17.1 [ryoon 2013-06-09]
+	Updated www/php-concrete5 to 5.6.1.2 [ryoon 2013-06-09]
