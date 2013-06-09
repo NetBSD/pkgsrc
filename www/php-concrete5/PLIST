@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/06 14:52:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/09 04:11:01 ryoon Exp $
+share/concrete5/.DS_Store
 share/concrete5/INSTALL
 share/concrete5/LICENSE.TXT
 share/concrete5/concrete/blocks/autonav/add.php
@@ -201,7 +202,6 @@ share/concrete5/concrete/blocks/slideshow/fileset_row_include.php
 share/concrete5/concrete/blocks/slideshow/form_setup_html.php
 share/concrete5/concrete/blocks/slideshow/icon.png
 share/concrete5/concrete/blocks/slideshow/image_row_include.php
-share/concrete5/concrete/blocks/slideshow/tools/map_display.php.bak
 share/concrete5/concrete/blocks/slideshow/view.css
 share/concrete5/concrete/blocks/slideshow/view.php
 share/concrete5/concrete/blocks/survey/add.php
@@ -391,6 +391,7 @@ share/concrete5/concrete/controllers/dashboard/system/registration/profiles/cont
 share/concrete5/concrete/controllers/dashboard/system/registration/public_registration/controller.php
 share/concrete5/concrete/controllers/dashboard/system/seo/bulk_seo_tool.php
 share/concrete5/concrete/controllers/dashboard/system/seo/controller.php
+share/concrete5/concrete/controllers/dashboard/system/seo/excluded.php
 share/concrete5/concrete/controllers/dashboard/system/seo/search_index.php
 share/concrete5/concrete/controllers/dashboard/system/seo/statistics.php
 share/concrete5/concrete/controllers/dashboard/system/seo/tracking_codes/controller.php
@@ -544,6 +545,7 @@ share/concrete5/concrete/core/controllers/single_pages/dashboard/system/registra
 share/concrete5/concrete/core/controllers/single_pages/dashboard/system/registration/public_registration.php
 share/concrete5/concrete/core/controllers/single_pages/dashboard/system/seo.php
 share/concrete5/concrete/core/controllers/single_pages/dashboard/system/seo/bulk_seo_tool.php
+share/concrete5/concrete/core/controllers/single_pages/dashboard/system/seo/excluded.php
 share/concrete5/concrete/core/controllers/single_pages/dashboard/system/seo/search_index.php
 share/concrete5/concrete/core/controllers/single_pages/dashboard/system/seo/statistics.php
 share/concrete5/concrete/core/controllers/single_pages/dashboard/system/seo/tracking_codes.php
@@ -571,6 +573,7 @@ share/concrete5/concrete/core/controllers/single_pages/profile/friends.php
 share/concrete5/concrete/core/controllers/single_pages/profile/messages.php
 share/concrete5/concrete/core/controllers/single_pages/register.php
 share/concrete5/concrete/core/controllers/single_pages/upgrade.php
+share/concrete5/concrete/core/helpers/ajax.php
 share/concrete5/concrete/core/helpers/array.php
 share/concrete5/concrete/core/helpers/date.php
 share/concrete5/concrete/core/helpers/encryption.php
@@ -595,6 +598,7 @@ share/concrete5/concrete/core/helpers/navigation.php
 share/concrete5/concrete/core/helpers/number.php
 share/concrete5/concrete/core/helpers/pagination.php
 share/concrete5/concrete/core/helpers/rating.php
+share/concrete5/concrete/core/helpers/security.php
 share/concrete5/concrete/core/helpers/spellchecker.php
 share/concrete5/concrete/core/helpers/text.php
 share/concrete5/concrete/core/helpers/url.php
@@ -631,8 +635,9 @@ share/concrete5/concrete/core/libraries/database_item_list.php
 share/concrete5/concrete/core/libraries/environment.php
 share/concrete5/concrete/core/libraries/environment_record.php
 share/concrete5/concrete/core/libraries/events.php
+share/concrete5/concrete/core/libraries/file/importer.php
+share/concrete5/concrete/core/libraries/file/inspector.php
 share/concrete5/concrete/core/libraries/file/types.php
-share/concrete5/concrete/core/libraries/file_importer.php
 share/concrete5/concrete/core/libraries/file_type_inspector.php
 share/concrete5/concrete/core/libraries/flv_file_type_inspector.php
 share/concrete5/concrete/core/libraries/image_file_type_inspector.php
@@ -651,6 +656,10 @@ share/concrete5/concrete/core/libraries/newsflow.php
 share/concrete5/concrete/core/libraries/newsflow_item.php
 share/concrete5/concrete/core/libraries/newsflow_slot_item.php
 share/concrete5/concrete/core/libraries/object.php
+share/concrete5/concrete/core/libraries/page_cache/library.php
+share/concrete5/concrete/core/libraries/page_cache/record.php
+share/concrete5/concrete/core/libraries/page_cache/types/file.php
+share/concrete5/concrete/core/libraries/page_cache/unknown_record.php
 share/concrete5/concrete/core/libraries/private_message_mail_importer.php
 share/concrete5/concrete/core/libraries/request.php
 share/concrete5/concrete/core/libraries/update.php
@@ -912,6 +921,7 @@ share/concrete5/concrete/css/ccm_app/twitter_bootstrap/component-animations.less
 share/concrete5/concrete/css/ccm_app/twitter_bootstrap/dropdowns.less
 share/concrete5/concrete/css/ccm_app/twitter_bootstrap/forms.less
 share/concrete5/concrete/css/ccm_app/twitter_bootstrap/grid.less
+share/concrete5/concrete/css/ccm_app/twitter_bootstrap/grid_frontend.less
 share/concrete5/concrete/css/ccm_app/twitter_bootstrap/hero-unit.less
 share/concrete5/concrete/css/ccm_app/twitter_bootstrap/labels-badges.less
 share/concrete5/concrete/css/ccm_app/twitter_bootstrap/layouts.less
@@ -1121,6 +1131,7 @@ share/concrete5/concrete/flash/uploader/images/file_ppt.png
 share/concrete5/concrete/flash/uploader/images/file_xls.png
 share/concrete5/concrete/flash/uploader/images/file_zip.png
 share/concrete5/concrete/flash/uploader/uploader.swf
+share/concrete5/concrete/helpers/ajax.php
 share/concrete5/concrete/helpers/array.php
 share/concrete5/concrete/helpers/concrete/asset_library.php
 share/concrete5/concrete/helpers/concrete/avatar.php
@@ -1160,6 +1171,7 @@ share/concrete5/concrete/helpers/concrete/upgrade/version_552.php
 share/concrete5/concrete/helpers/concrete/upgrade/version_560.php
 share/concrete5/concrete/helpers/concrete/upgrade/version_5601.php
 share/concrete5/concrete/helpers/concrete/upgrade/version_5602.php
+share/concrete5/concrete/helpers/concrete/upgrade/version_561.php
 share/concrete5/concrete/helpers/concrete/urls.php
 share/concrete5/concrete/helpers/concrete/user.php
 share/concrete5/concrete/helpers/concrete/validation.php
@@ -1186,6 +1198,7 @@ share/concrete5/concrete/helpers/navigation.php
 share/concrete5/concrete/helpers/number.php
 share/concrete5/concrete/helpers/pagination.php
 share/concrete5/concrete/helpers/rating.php
+share/concrete5/concrete/helpers/security.php
 share/concrete5/concrete/helpers/spellchecker.php
 share/concrete5/concrete/helpers/text.php
 share/concrete5/concrete/helpers/url.php
@@ -1373,6 +1386,8 @@ share/concrete5/concrete/images/icons/filetypes/mp4.png
 share/concrete5/concrete/images/icons/filetypes/mpe.png
 share/concrete5/concrete/images/icons/filetypes/mpeg.png
 share/concrete5/concrete/images/icons/filetypes/mpg.png
+share/concrete5/concrete/images/icons/filetypes/ogg.png
+share/concrete5/concrete/images/icons/filetypes/ogv.png
 share/concrete5/concrete/images/icons/filetypes/pdf.png
 share/concrete5/concrete/images/icons/filetypes/php.png
 share/concrete5/concrete/images/icons/filetypes/png.png
@@ -1391,6 +1406,7 @@ share/concrete5/concrete/images/icons/filetypes/tmp.png
 share/concrete5/concrete/images/icons/filetypes/ttf.png
 share/concrete5/concrete/images/icons/filetypes/txt.png
 share/concrete5/concrete/images/icons/filetypes/url.png
+share/concrete5/concrete/images/icons/filetypes/webm.png
 share/concrete5/concrete/images/icons/filetypes/wma.png
 share/concrete5/concrete/images/icons/filetypes/wmv.png
 share/concrete5/concrete/images/icons/filetypes/xls.png
@@ -1547,19 +1563,18 @@ share/concrete5/concrete/js/bootstrap/bootstrap.dropdown.js
 share/concrete5/concrete/js/bootstrap/bootstrap.popover.js
 share/concrete5/concrete/js/bootstrap/bootstrap.tooltip.js
 share/concrete5/concrete/js/bootstrap/bootstrap.transitions.js
-share/concrete5/concrete/js/bootstrap/build/bootstrap.js
 share/concrete5/concrete/js/ccm.app.js
 share/concrete5/concrete/js/ccm.base.js
+share/concrete5/concrete/js/ccm.dashboard.js
 share/concrete5/concrete/js/ccm.spellchecker.js
-share/concrete5/concrete/js/ccm_app/_jquery.colorpicker.js
-share/concrete5/concrete/js/ccm_app/_jquery.hoverIntent.js
-share/concrete5/concrete/js/ccm_app/_jquery.liveupdate.js
-share/concrete5/concrete/js/ccm_app/_jquery.metadata.js
-share/concrete5/concrete/js/ccm_app/build/ccm.app.js
 share/concrete5/concrete/js/ccm_app/chosen.jquery.js
 share/concrete5/concrete/js/ccm_app/dashboard.js
 share/concrete5/concrete/js/ccm_app/filemanager.js
+share/concrete5/concrete/js/ccm_app/jquery.colorpicker.js
 share/concrete5/concrete/js/ccm_app/jquery.cookie.js
+share/concrete5/concrete/js/ccm_app/jquery.hoverIntent.js
+share/concrete5/concrete/js/ccm_app/jquery.liveupdate.js
+share/concrete5/concrete/js/ccm_app/jquery.metadata.js
 share/concrete5/concrete/js/ccm_app/layouts.js
 share/concrete5/concrete/js/ccm_app/legacy_dialog.js
 share/concrete5/concrete/js/ccm_app/newsflow.js
@@ -1766,7 +1781,7 @@ share/concrete5/concrete/js/tiny_mce/plugins/searchreplace/editor_plugin_src.js
 share/concrete5/concrete/js/tiny_mce/plugins/searchreplace/js/searchreplace.js
 share/concrete5/concrete/js/tiny_mce/plugins/searchreplace/langs/en_dlg.js
 share/concrete5/concrete/js/tiny_mce/plugins/searchreplace/searchreplace.htm
-share/concrete5/concrete/js/tiny_mce/plugins/spellchecker/changelog
+share/concrete5/concrete/js/tiny_mce/plugins/spellchecker/changelog.txt
 share/concrete5/concrete/js/tiny_mce/plugins/spellchecker/classes/EnchantSpell.php
 share/concrete5/concrete/js/tiny_mce/plugins/spellchecker/classes/GoogleSpell.php
 share/concrete5/concrete/js/tiny_mce/plugins/spellchecker/classes/PSpell.php
@@ -3140,6 +3155,10 @@ share/concrete5/concrete/libraries/marketplace.php
 share/concrete5/concrete/libraries/model.php
 share/concrete5/concrete/libraries/newsflow.php
 share/concrete5/concrete/libraries/object.php
+share/concrete5/concrete/libraries/page_cache/library.php
+share/concrete5/concrete/libraries/page_cache/record.php
+share/concrete5/concrete/libraries/page_cache/types/file.php
+share/concrete5/concrete/libraries/page_cache/unknown_record.php
 share/concrete5/concrete/libraries/request.php
 share/concrete5/concrete/libraries/update.php
 share/concrete5/concrete/libraries/view.php
@@ -3154,6 +3173,7 @@ share/concrete5/concrete/mail/private_message_response_enabled.php
 share/concrete5/concrete/mail/spam_detected.php
 share/concrete5/concrete/mail/user_register.php
 share/concrete5/concrete/mail/user_register_approval_required.php
+share/concrete5/concrete/mail/user_registered_approval_complete.php
 share/concrete5/concrete/mail/validate_user_email.php
 share/concrete5/concrete/models/area.php
 share/concrete5/concrete/models/attribute/categories/collection.php
@@ -3475,6 +3495,7 @@ share/concrete5/concrete/single_pages/dashboard/system/registration/profiles.php
 share/concrete5/concrete/single_pages/dashboard/system/registration/public_registration.php
 share/concrete5/concrete/single_pages/dashboard/system/registration/view.php
 share/concrete5/concrete/single_pages/dashboard/system/seo/bulk_seo_tool.php
+share/concrete5/concrete/single_pages/dashboard/system/seo/excluded.php
 share/concrete5/concrete/single_pages/dashboard/system/seo/search_index.php
 share/concrete5/concrete/single_pages/dashboard/system/seo/statistics.php
 share/concrete5/concrete/single_pages/dashboard/system/seo/tracking_codes.php
@@ -3508,6 +3529,7 @@ share/concrete5/concrete/single_pages/register.php
 share/concrete5/concrete/single_pages/upgrade.php
 share/concrete5/concrete/single_pages/user_error.php
 share/concrete5/concrete/startup/autoload.php
+share/concrete5/concrete/startup/check_page_cache.php
 share/concrete5/concrete/startup/config_check.php
 share/concrete5/concrete/startup/config_check_complete.php
 share/concrete5/concrete/startup/debug_logging.php
@@ -3521,8 +3543,10 @@ share/concrete5/concrete/startup/magic_quotes_gpc_check.php
 share/concrete5/concrete/startup/maintenance_mode_check.php
 share/concrete5/concrete/startup/optional_menu_buttons.php
 share/concrete5/concrete/startup/packages.php
+share/concrete5/concrete/startup/permission_cache_check.php
 share/concrete5/concrete/startup/process.php
 share/concrete5/concrete/startup/required.php
+share/concrete5/concrete/startup/security.php
 share/concrete5/concrete/startup/session.php
 share/concrete5/concrete/startup/shutdown.php
 share/concrete5/concrete/startup/timezone.php
@@ -3746,24 +3770,7 @@ share/concrete5/concrete/tools/workflow/categories/page.php
 share/concrete5/concrete/tools/workflow/dialogs/approve_page_preview.php
 share/concrete5/concrete/tools/workflow/dialogs/change_page_permissions.php
 share/concrete5/config/site_theme_paths.php
+share/concrete5/files/.keep
 share/concrete5/index.php
+share/concrete5/packages/.keep
 share/concrete5/robots.txt
-@pkgdir share/concrete5/updates
-@pkgdir share/concrete5/tools
-@pkgdir share/concrete5/themes
-@pkgdir share/concrete5/single_pages
-@pkgdir share/concrete5/page_types
-@pkgdir share/concrete5/packages
-@pkgdir share/concrete5/models
-@pkgdir share/concrete5/mail
-@pkgdir share/concrete5/libraries
-@pkgdir share/concrete5/languages
-@pkgdir share/concrete5/js
-@pkgdir share/concrete5/jobs
-@pkgdir share/concrete5/helpers
-@pkgdir share/concrete5/files
-@pkgdir share/concrete5/elements
-@pkgdir share/concrete5/css
-@pkgdir share/concrete5/controllers
-@pkgdir share/concrete5/concrete/packages
-@pkgdir share/concrete5/blocks
