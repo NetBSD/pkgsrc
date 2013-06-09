@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2012/10/23 10:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/09 15:26:45 ryoon Exp $
 #
 
-DISTNAME=	ctwm-3.8a
-PKGREVISION=	5
+DISTNAME=	ctwm-3.8.1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://ctwm.free.lp.se/dist/
 
