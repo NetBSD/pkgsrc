@@ -1,30 +1,30 @@
-$NetBSD: patch-ab,v 1.1 2007/11/08 19:26:53 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2013/06/09 16:55:08 ryoon Exp $
 
---- unpack.c.orig	1993-08-13 08:35:00.000000000 +0100
+--- unpack.c.orig	2012-01-01 08:53:58.000000000 +0000
 +++ unpack.c
-@@ -12,7 +12,6 @@ static char rcsid[] = "$Id: unpack.c,v 1
+@@ -21,7 +21,6 @@
+ #include "tailor.h"
  #include "gzip.h"
- #include "crypt.h"
  
 -#define MIN(a,b) ((a) <= (b) ? (a) : (b))
  /* The arguments must not have side effects. */
  
  #define MAX_BITLEN 25
-@@ -132,7 +131,7 @@ local void read_tree()
- 	/* Remember where the literals of this length start in literal[] : */
- 	lit_base[len] = base;
- 	/* And read the literals: */
--	for (n = leaves[len]; n > 0; n--) {
-+	for (n = leaves[len]; n > 0 && base < LITERALS; n--) { 
- 	    literal[base++] = (uch)get_byte();
- 	}
+@@ -145,7 +144,7 @@ local void read_tree()
+         /* Remember where the literals of this length start in literal[] : */
+         lit_base[len] = base;
+         /* And read the literals: */
+-        for (n = leaves[len]; n > 0; n--) {
++        for (n = leaves[len]; n > 0 && base < LITERALS; n--) {
+             literal[base++] = (uch)get_byte();
+         }
      }
-@@ -168,7 +167,7 @@ local void build_tree()
+@@ -181,7 +180,7 @@ local void build_tree()
      prefixp = &prefix_len[1<<peek_bits];
      for (len = 1; len <= peek_bits; len++) {
- 	int prefixes = leaves[len] << (peek_bits-len); /* may be 0 */
--	while (prefixes--) *--prefixp = (uch)len;
-+	while (prefixes-- && prefixp > prefix_len) *--prefixp = (uch)len;
+         int prefixes = leaves[len] << (peek_bits-len); /* may be 0 */
+-        while (prefixes--) *--prefixp = (uch)len;
++        while (prefixes-- && prefixp > prefix_len) *--prefixp = (uch)len;
      }
      /* The length of all other codes is unknown: */
      while (prefixp > prefix_len) *--prefixp = 0;
