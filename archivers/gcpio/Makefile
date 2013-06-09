@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.45 2012/12/06 11:38:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2013/06/09 14:35:12 ryoon Exp $
 #
 
-DISTNAME=	cpio-2.6
+DISTNAME=	cpio-2.11
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	10
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=cpio/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/cpio/cpio.html
 COMMENT=	GNU copy-in/out (cpio) with remote magnetic tape (rmt) support
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	gtar-base-[0-9]*
 
@@ -29,6 +28,8 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 CONFIGURE_ARGS+=	--program-prefix=g
 
 PLIST_VARS+=	rmt
+
+CHECK_FILES_SKIP+=	lib/charset.alias
 
 .include "../../mk/bsd.prefs.mk"
 
