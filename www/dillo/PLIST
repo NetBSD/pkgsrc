@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2011/12/02 13:06:31 is Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/06/09 16:29:33 ryoon Exp $
 bin/dillo
+bin/dillo-install-hyphenation
 bin/dpid
 bin/dpidc
 lib/dillo/dpi/bookmarks/bookmarks.dpi
@@ -26,5 +27,6 @@ share/doc/dillo/README
 share/doc/dillo/Selection.txt
 share/doc/dillo/user_help.html
 share/examples/dillo/dillorc
+share/examples/dillo/domainrc
 share/examples/dillo/dpidrc
 share/examples/dillo/keysrc
