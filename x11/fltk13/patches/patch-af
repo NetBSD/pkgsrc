@@ -1,13 +1,14 @@
-$NetBSD: patch-af,v 1.1.1.1 2011/12/01 16:35:13 is Exp $
+$NetBSD: patch-af,v 1.2 2013/06/09 16:09:35 ryoon Exp $
 
---- makeinclude.in.orig	2010-12-23 14:24:29.000000000 +0000
+--- makeinclude.in.orig	2012-12-05 14:53:03.000000000 +0000
 +++ makeinclude.in
-@@ -147,19 +147,19 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
+@@ -138,20 +138,20 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
  
  .o$(EXEEXT):
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(LDFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
+ 	$(OSX_ONLY) ../fltk-config --post $@
  
  .c.o:
  	echo Compiling $<...
