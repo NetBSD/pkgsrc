@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/02/24 06:58:32 obache Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2013/06/09 19:35:15 tron Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -84,6 +84,14 @@ CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
 .endif
 
 #
+# Win32 support (for Cygwin)
+#
+PLIST_VARS+=	win32
+.if ${OPSYS} == "Cygwin"
+PLIST.win32=	yes
+.endif
+
+#
 # IRIX work around which should be fixed.
 #
 PLIST_VARS+=	io
@@ -99,9 +107,9 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 .endif
 
 #
-# work around for Linux
+# work around for Linux and Cygwin
 #
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Cygwin"
 CONFIGURE_ENV+=	MKDIR_P=${MKDIR:Q}
 .endif
 
