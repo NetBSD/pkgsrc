@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.17 2011/12/02 13:06:31 is Exp $
+$NetBSD: patch-ab,v 1.18 2013/06/09 16:29:33 ryoon Exp $
 
---- Makefile.in.orig	2011-09-21 17:30:15.000000000 +0000
+--- Makefile.in.orig	2013-03-14 15:03:54.000000000 +0000
 +++ Makefile.in
-@@ -244,7 +244,7 @@ top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
+@@ -280,7 +280,7 @@ top_srcdir = @top_srcdir@
  SUBDIRS = lout dw dlib dpip src doc dpid dpi test
+ dist_bin_SCRIPTS = dillo-install-hyphenation
  EXTRA_DIST = Doxyfile dillorc install-dpi-local d_size.h
 -sysconf_DATA = dillorc
 +sysconf_DATA =
