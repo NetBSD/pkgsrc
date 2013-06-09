@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.34 2012/01/22 11:23:35 obache Exp $
+$NetBSD: distinfo,v 1.35 2013/06/09 16:29:33 ryoon Exp $
 
-SHA1 (dillo-3.0.2.tar.bz2) = 1d1258ee7d18c8ca0eabaf100f2f611c6be03f87
-RMD160 (dillo-3.0.2.tar.bz2) = 418fa4926a86290dbbbc36942ceb1bac1d3bd407
-Size (dillo-3.0.2.tar.bz2) = 640894 bytes
-SHA1 (patch-aa) = df4222ae9a0bd58af4c5481f920b60893145dbc1
-SHA1 (patch-ab) = 2cb89a6fd5bcb19b83de94fed6a67605f83b4764
-SHA1 (patch-ac) = f129ed7bb341211895fc51a7b70a81c94e70b158
+SHA1 (dillo-3.0.3.tar.bz2) = c47286ca0dfcf9e471b8062310ae1cd5dd719441
+RMD160 (dillo-3.0.3.tar.bz2) = ade7a3333b8206eafc01c3b10b7cdf8e9e36af6c
+Size (dillo-3.0.3.tar.bz2) = 685824 bytes
+SHA1 (patch-aa) = c2aa2246657de4c0ee526b2edb6fbe8841bf94e7
+SHA1 (patch-ab) = 1ac5ebd14f5b6e89a3dc02d86fe0062b2448d33b
+SHA1 (patch-ac) = c8627276e633731c8aeef06b59a77cb039f55bff
 SHA1 (patch-ad) = dbae6a09285673771ff95ff3b40fe113f4b09726
+SHA1 (patch-dillorc) = 41650b232a354de6d1a68738f27f6ec445410610
