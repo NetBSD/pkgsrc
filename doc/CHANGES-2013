@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1977 2013/06/10 01:11:52 mef Exp $
+$NetBSD: CHANGES-2013,v 1.1978 2013/06/10 01:25:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3067,6 +3067,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/xapian to 1.2.15 [schmonz 2013-06-04]
 	Updated textproc/xapian-omega to 1.2.15 [schmonz 2013-06-04]
 	Updated textproc/p5-Search-Xapian to 1.2.15.0 [schmonz 2013-06-04]
+	Updated sysutils/dd_rescue to 1.33 [mef 2013-06-04]
 	Updated pkgtools/x11-links to 0.74 [tron 2013-06-05]
 	Updated www/contao211-translations to 201305310 [taca 2013-06-05]
 	Updated www/typo3_45 to 4.5.27 [taca 2013-06-05]
