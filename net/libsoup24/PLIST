@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/04/27 12:09:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/06/10 08:35:59 obache Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -51,10 +51,14 @@ include/libsoup-2.4/libsoup/soup.h
 ${PLIST.gnome}include/libsoup-gnome-2.4/libsoup/soup-cookie-jar-sqlite.h
 ${PLIST.gnome}include/libsoup-gnome-2.4/libsoup/soup-gnome-features.h
 ${PLIST.gnome}include/libsoup-gnome-2.4/libsoup/soup-gnome.h
+lib/girepository-1.0/Soup-2.4.typelib
+${PLIST.gnome}lib/girepository-1.0/SoupGNOME-2.4.typelib
 lib/libsoup-2.4.la
 ${PLIST.gnome}lib/libsoup-gnome-2.4.la
 lib/pkgconfig/libsoup-2.4.pc
 ${PLIST.gnome}lib/pkgconfig/libsoup-gnome-2.4.pc
+share/gir-1.0/Soup-2.4.gir
+${PLIST.gnome}share/gir-1.0/SoupGNOME-2.4.gir
 share/gtk-doc/html/libsoup-2.4/SoupAddress.html
 share/gtk-doc/html/libsoup-2.4/SoupAuth.html
 share/gtk-doc/html/libsoup-2.4/SoupAuthDomain.html
