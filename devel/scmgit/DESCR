@@ -1,3 +1,3 @@
 This package is a meta package, collecting the components normally
 expected to be installed for the GIT distributed version control
-suite (the tool itself, and the man pages).
+suite (the tool itself, the tk-based browser gitk, and the man pages).
