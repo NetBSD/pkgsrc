@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/06/04 22:16:28 tron Exp $
+# $NetBSD: Makefile,v 1.26 2013/06/10 18:56:45 joerg Exp $
 
 DISTNAME=	skencil-0.6.17
 PKGREVISION=	11
@@ -45,4 +45,5 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
