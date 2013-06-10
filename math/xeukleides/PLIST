@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/02 05:33:32 obache Exp $
-bin/xeukleides
-man/man1/xeukleides.1
