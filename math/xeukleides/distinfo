@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/09/02 05:33:32 obache Exp $
-
-SHA1 (xeukleides.1.0.1.tar.gz) = 330979e593c5b1e8a2c3391751fe1a52af6762e5
-RMD160 (xeukleides.1.0.1.tar.gz) = 338beacb97247360165dd5806f6544198c31b8ef
-Size (xeukleides.1.0.1.tar.gz) = 54985 bytes
-SHA1 (patch-aa) = 8edbb83e9ab948d443cf50fe5be4d883ffbf9f50
