@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.2 2013/03/26 11:41:01 jperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2013/06/10 21:49:21 markd Exp $
 
 New Makefile.in patch, no libtool
 
@@ -54,11 +54,12 @@ New Makefile.in patch, no libtool
  	@list='$(PKG_TCL_SOURCES)'; for p in $$list; do \
  	  if test -f $(srcdir)/$$p; then \
  	    destp=`basename $$p`; \
-@@ -554,9 +564,10 @@ install-lib-binaries:
+@@ -554,9 +564,11 @@ install-lib-binaries:
  	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pkglibdir)/$$destp; \
  	  fi; \
  	done
 +	mkdir -p $(DESTDIR)$(pkglibdir)/tcl/expect$(PACKAGE_VERSION)
++	ln -fs ../../$(PKG_LIB_FILE) $(DESTDIR)$(pkglibdir)/tcl/expect$(PACKAGE_VERSION)/
  	@if test "x$(SHARED_BUILD)" = "x1"; then \
  	    echo " Install pkgIndex.tcl $(DESTDIR)$(pkglibdir)"; \
 -	    $(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(pkglibdir); \
