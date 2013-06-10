@@ -1,0 +1,5 @@
+A Euclidean drawing language compiler which allows one to typeset
+geometry figures within a (La)TeX document. This program is also useful
+to convert such figures into EPS format or into various other vector
+graphic formats.
+This package is legacy version.
