@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/11/19 02:53:27 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/06/10 18:56:05 joerg Exp $
 
 SHA1 (ragel-6.7.tar.gz) = bf12b634f5a25e5ba305edfee59a455069ed3b0a
 RMD160 (ragel-6.7.tar.gz) = 003a29121bd44cdcdddd0721524fe90cf421c05d
@@ -7,3 +7,4 @@ SHA1 (patch-aapl_avlcommon.h) = b0023b24e2ead4e196f2cacb58b9cd5b0b02b655
 SHA1 (patch-aapl_bstcommon.h) = 2d672f350c72a332de62396ef05cd05482a82b31
 SHA1 (patch-aapl_bubblesort.h) = 05233121bf82b91c4fdb65a2a2b7589ff27b820e
 SHA1 (patch-aapl_mergesort.h) = 42fc0fa8eadd476f599ee05b83f150a04993ad76
+SHA1 (patch-ragel_javacodegen.cpp) = f5095d5b36d795bf1b1a50626bd057296254dc8b
