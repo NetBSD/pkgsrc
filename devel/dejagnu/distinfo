@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2008/06/16 13:45:55 joerg Exp $
+$NetBSD: distinfo,v 1.10 2013/06/10 01:09:48 mef Exp $
 
-SHA1 (dejagnu-1.4.4.tar.gz) = fd82ffd396eba5b595f76d2f4a068cb7fcc6cffb
-RMD160 (dejagnu-1.4.4.tar.gz) = 5f00f4ce6ce24aad611be500e80c40fc816dc66a
-Size (dejagnu-1.4.4.tar.gz) = 1080346 bytes
-SHA1 (patch-ab) = 3be83f8ae3e20b50101a39501d863bf8bbb484a2
-SHA1 (patch-ac) = fefab5a22ed6ab4061f5fd4413d6c56cfda1cfd5
+SHA1 (dejagnu-1.5.tar.gz) = bd84c71e0587af0278a9b6a404d6da1b92df66cd
+RMD160 (dejagnu-1.5.tar.gz) = e2ded4f1f5b94a86734538a1091ec6738c4c9c99
+Size (dejagnu-1.5.tar.gz) = 576269 bytes
+SHA1 (patch-Makefile.am) = 3c04ff25ae62899912dbd00a0fc0921446d8f13d
+SHA1 (patch-Makefile.in) = 97f54b7cdd2409764957a7dceccf95babc9a47c7
