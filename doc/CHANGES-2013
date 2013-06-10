@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1981 2013/06/10 11:57:49 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1982 2013/06/10 12:00:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libsoup24 to 2.42.2nb3 [obache 2013-06-10]
 	Updated sysutils/ndesk-dbus to 0.6.1anb9 [obache 2013-06-10]
 	Updated archivers/gzip to 1.5nb1 [ryoon 2013-06-10]
+	Added sysutils/dbus-sharp version 0.7.0 [obache 2013-06-10]
