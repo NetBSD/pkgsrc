@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.25 2013/06/09 20:16:27 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.26 2013/06/10 13:12:52 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -92,3 +92,9 @@ fonts/efont-unicode: build fix
 fonts/ja-naga10: build fix
 Pullup ticket #4155 - requested by taca
 lang/php54: security update
+Pullup ticket #4156 - requested by taca
+lang/php53: security update
+Pullup ticket #4157 - requested by taca
+lang/php/phpversion.mk: update PHP versions after security update
+Pullup ticket #4158 - requested by taca
+lang/php53: fix build with "suhosi" option
