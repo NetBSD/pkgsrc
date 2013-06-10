@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/10 12:03:52 obache Exp $
+lib/mono/dbus-sharp-glib-1.0/dbus-sharp-glib.dll
+lib/mono/gac/dbus-sharp-glib/1.0.0.0__5675b0c3093115b5/dbus-sharp-glib.dll
+lib/mono/gac/dbus-sharp-glib/1.0.0.0__5675b0c3093115b5/dbus-sharp-glib.dll.config
+lib/mono/gac/dbus-sharp-glib/1.0.0.0__5675b0c3093115b5/dbus-sharp-glib.dll.mdb
+lib/pkgconfig/dbus-sharp-glib-1.0.pc
