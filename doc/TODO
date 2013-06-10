@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12265 2013/06/10 02:51:08 mef Exp $
+$NetBSD: TODO,v 1.12266 2013/06/10 12:35:00 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm-891
 	o etm2-2.1.5 [etm successor]
 	o ettercap-0.7.4
-	o eukleides-1.5.4
 	o evince-3.8.2
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
