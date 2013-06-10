@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.6 2012/09/16 21:50:16 cheusov Exp $
+# $NetBSD: options.mk,v 1.7 2013/06/10 11:35:13 gdt Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scmgit
 PKG_SUPPORTED_OPTIONS=	python
-PKG_SUGGESTED_OPTIONS=	python
+# python is not suggested because upstream's INSTALL does not list python
+# as a dependency and because all it does is install a python module,
+# which does not seem worth the dependency for everyone else.
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
