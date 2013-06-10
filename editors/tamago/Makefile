@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/02/17 19:18:03 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2013/06/10 21:51:04 jnemeth Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
@@ -13,7 +13,8 @@ COMMENT=	CJK characters inputting system for emacs + leim
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	prefix=${DESTDIR:Q}${PREFIX}
 # XXX please someone adjust paths and PLIST for XEmacs...
-EMACS_VERSIONS_ACCEPTED=	emacs23 emacs23nox \
+EMACS_VERSIONS_ACCEPTED=	emacs24 emacs24nox \
+				emacs23 emacs23nox \
 				emacs22 emacs22nox \
 				emacs21 emacs21nox \
 				emacs20
