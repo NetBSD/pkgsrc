@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/10 11:59:38 obache Exp $
+
+SHA1 (dbus-sharp-0.7.0.tar.gz) = 7e7b05aadb6a289cd862dc630a36d9b87b5b84cb
+RMD160 (dbus-sharp-0.7.0.tar.gz) = 6f24068ea649d86282cabf11b633074165c2ed9f
+Size (dbus-sharp-0.7.0.tar.gz) = 127651 bytes
