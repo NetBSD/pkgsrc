@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2013/06/03 11:22:12 rodent Exp $
+# $NetBSD: Makefile,v 1.579 2013/06/10 12:05:08 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -71,6 +71,8 @@ SUBDIR+=	dbus
 SUBDIR+=	dbus-glib
 SUBDIR+=	dbus-python-common
 SUBDIR+=	dbus-qt3
+SUBDIR+=	dbus-sharp
+SUBDIR+=	dbus-sharp-glib
 SUBDIR+=	dc-tools
 SUBDIR+=	dd_rescue
 SUBDIR+=	dd_rhelp
