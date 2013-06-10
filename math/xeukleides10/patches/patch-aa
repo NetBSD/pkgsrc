@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 2013/06/10 12:27:05 ryoon Exp $
+
+eukleides.info is already installed with eukleides package
+
+--- Makefile.orig	2005-05-27 15:08:29.000000000 +0000
++++ Makefile
+@@ -10,7 +10,7 @@ YACC = bison -d
+ include Config
+ 
+ BINDIR = $(PREFIX)/bin
+-MANDIR = $(PREFIX)/man/man1
++MANDIR = $(PREFIX)/${PKGMANDIR}/man1
+ INFODIR = $(PREFIX)/info
+ PAPER = --texinfo=@afourpaper
+ DOC = eukleides.info eukleides.dvi eukleides.ps
+@@ -43,12 +43,9 @@ dvi : eukleides.texi
+ book : dvi
+ 	dvips -f eukleides.dvi > eukleides.ps
+ 
+-install : $(BIN) man info
++install : $(BIN) man
+ 	install -d $(BINDIR) ; \
+-	install -s $(BIN) $(BINDIR) ; \
+-	install -d $(INFODIR) ; \
+-	install-info eukleides.info $(INFODIR)/dir ; \
+-	install -m 0644 eukleides.info $(INFODIR)
++	install -s $(BIN) $(BINDIR)
+ 
+ uninstall :
+ 	rm -f $(BINDIR)/$(BIN) ; \
