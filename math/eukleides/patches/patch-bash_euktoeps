@@ -1,0 +1,13 @@
+$NetBSD: patch-bash_euktoeps,v 1.1 2013/06/10 12:24:29 ryoon Exp $
+
+--- bash/euktoeps.orig	2010-04-27 06:31:00.000000000 +0000
++++ bash/euktoeps
+@@ -31,7 +31,7 @@ USAGE
+ exit $1
+ }
+ 
+-args=$(getopt -o i:l::#:d:vh --long include:,locale::,interactive:,data:,version,help \
++args=$(@GETOPT@ -o i:l::#:d:vh --long include:,locale::,interactive:,data:,version,help \
+        -n 'Euktoeps' -- "$@")
+ 
+ if [ $? -ne 0 ]
