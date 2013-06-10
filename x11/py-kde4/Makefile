@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/06/06 12:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/10 15:45:30 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 DISTNAME=	pykde4-${_KDE_VERSION}
@@ -26,6 +26,18 @@ SUBST_CLASSES+=	pykdeuic4
 SUBST_STAGE.pykdeuic4=	post-build
 SUBST_FILES.pykdeuic4=	tools/pykdeuic4/pykdeuic4.py
 SUBST_SED.pykdeuic4=	-e 's:/usr/bin/env python$$:${PYTHONBIN}:'
+
+.include "../../mk/bsd.prefs.mk"
+
+# pid_t in the SunOS 32-bit environment is long, not int.
+.if ${OPSYS} == "SunOS" && ${ABI} == "32"
+SUBST_CLASSES+=		pid32
+SUBST_STAGE.pid32=	pre-build
+SUBST_FILES.pid32=	sip/kdecore/typedefs.sip
+SUBST_FILES.pid32+=	sip/kdeui/kstartupinfo.sip
+SUBST_SED.pid32=	-e '/QList.*int.*pids/s/int/pid_t/'
+SUBST_SED.pid32+=	-e '/typedef.*int.*pid_t/s/int/long/'
+.endif
 
 #post-extract:
 #	${CP} ${FILESDIR}/FindPolkitQt.cmake ${WRKSRC}/cmake/modules
