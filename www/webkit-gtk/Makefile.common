@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2013/06/09 13:22:55 obache Exp $
+# $NetBSD: Makefile.common,v 1.27 2013/06/10 08:38:52 obache Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -74,7 +74,7 @@ BUILDLINK_API_DEPENDS.png+= png>=1.5.1beta08
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.30
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.34.2
+BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.42.2nb3
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
