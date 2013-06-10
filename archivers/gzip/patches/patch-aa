@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2007/11/08 19:26:53 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/10 11:56:58 ryoon Exp $
 
---- gzip.h.orig	1993-08-13 08:35:00.000000000 +0100
+--- gzip.h.orig	2012-01-01 08:53:58.000000000 +0000
 +++ gzip.h
-@@ -199,6 +199,8 @@ extern int test;           /* check .z f
+@@ -204,6 +204,8 @@ extern int test;           /* check .z f
  extern int to_stdout;      /* output to stdout (-c) */
  extern int save_orig_name; /* set if original name must be saved */
  
