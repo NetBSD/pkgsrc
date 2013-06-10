@@ -1,13 +1,11 @@
-GIT is a "directory content manager" designed to handle absolutely massive
-projects with speed and efficiency, and the release of the 2.6.12 (and later)
-versions of the Linux kernel as well as more and more other projects switching
-to it would indicate that it does this task well.
+Git is a free and open source distributed version control system
+designed to handle everything from small to very large projects with
+speed and efficiency.
 
-GIT falls in the category of distributed version control software, similar
-to e.g. GNU Arch or Monotone (or, in the commercial world, BitKeeper). Every
-GIT working directory is a full-fledged repository with full revision tracking
-capabilities, not dependent on network access to a central server.
+Git is easy to learn and has a tiny footprint with lightning fast
+performance. It outclasses SCM tools like Subversion, CVS, Perforce,
+and ClearCase with features like cheap local branching, convenient
+staging areas, and multiple workflows.
 
-This package contains only the program itself, and not the man pages.
-It also optionally contains a TK-based repository browser and python
-bindings.
+This package contains only the git program (and subcommands).  It does
+not contain man pages or the tk-based repository browser.
