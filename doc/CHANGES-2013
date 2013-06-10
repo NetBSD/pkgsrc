@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1983 2013/06/10 12:04:05 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1984 2013/06/10 12:35:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3137,3 +3137,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/gzip to 1.5nb1 [ryoon 2013-06-10]
 	Added sysutils/dbus-sharp version 0.7.0 [obache 2013-06-10]
 	Added sysutils/dbus-sharp-glib version 0.5.0 [obache 2013-06-10]
+	Updated math/eukleides to 1.5.4 [ryoon 2013-06-10]
+	Added math/eukleides10 version 1.0.3 [ryoon 2013-06-10]
+	Renamed math/xeukleides to math/xeukleides10 [ryoon 2013-06-10]
