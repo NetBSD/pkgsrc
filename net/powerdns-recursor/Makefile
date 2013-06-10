@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/19 22:35:15 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2013/06/10 18:59:09 joerg Exp $
 #
 
 DISTNAME=		pdns-recursor-3.3
@@ -30,7 +30,7 @@ CONF_FILES+=		${EGDIR}/recursor.conf-dist \
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
+CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .endif
 
 .include "options.mk"
