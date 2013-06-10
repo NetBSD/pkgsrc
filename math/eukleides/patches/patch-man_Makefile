@@ -1,0 +1,15 @@
+$NetBSD: patch-man_Makefile,v 1.1 2013/06/10 12:24:29 ryoon Exp $
+
+* Install plain (not-gzipped) man pages.
+
+--- man/Makefile.orig	2010-04-27 06:31:00.000000000 +0000
++++ man/Makefile
+@@ -3,7 +3,7 @@
+ 
+ include ../Config
+ 
+-MAN_PAGES := $(addsuffix .gz, $(wildcard *.1))
++MAN_PAGES := $(wildcard *.1)
+ 
+ man: $(MAN_PAGES)
+ 
