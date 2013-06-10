@@ -1,28 +1,43 @@
-# $NetBSD: Makefile,v 1.19 2012/09/11 23:04:18 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/10 12:24:29 ryoon Exp $
 
-DISTNAME=	eukleides.1.0.3
-PKGNAME=	eukleides-1.0.3
+DISTNAME=	eukleides-1.5.4
 CATEGORIES=	math
-MASTER_SITES=	http://www.eukleides.org/download/
+MASTER_SITES=	http://www.eukleides.org/files/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tsadowski@gmx.net
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.eukleides.org/
 COMMENT=	Euclidean geometry drawing language
+LICENSE=	gnu-gpl-v3
 
-MAKE_JOBS_SAFE=	no
+DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
-DEPENDS+=	pstoedit>=3.31:../../graphics/pstoedit
-
-BUILD_TARGET=	eukleides
-USE_TOOLS+=	bash:run bison gmake makeinfo lex
+USE_TOOLS+=	bash:run gmake lex makeinfo yacc
 INFO_FILES=	yes
 
-REPLACE_BASH=	euk2edit euk2eps
+REPLACE_BASH=	bash/*
+
+BUILDLINK_TRANSFORM+=	l:ncurses:curses
+
+FIND_PREFIX:=		GETOPTDIR=getopt
+.include "../../mk/find-prefix.mk"
+
+SUBST_CLASSES+=		getopt
+SUBST_STAGE.getopt=	pre-configure
+SUBST_MESSAGE.getopt=	Replacing getopt.
+SUBST_FILES.getopt=	bash/euktoeps
+SUBST_SED.getopt+=	-e 's,@GETOPT@,${GETOPTDIR}/bin/getopt,'
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			PREFIX=${DESTDIR}${PREFIX}			\
-			BINPATH=${DESTDIR}${PREFIX}/bin			\
-			INFODIR=${DESTDIR}${PREFIX}/${PKGINFODIR}	\
-			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+			BIN_DIR=${DESTDIR}${PREFIX}/bin			\
+			INFO_DIR=${DESTDIR}${PREFIX}/${PKGINFODIR}	\
+			DOC_DIR=${DESTDIR}${PREFIX}/share/eukleides	\
+			MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+pre-install:
+	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
+
+.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
