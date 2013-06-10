@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2012/10/06 14:25:13 asau Exp $
+# $NetBSD: Makefile.common,v 1.18 2013/06/10 03:09:01 dholland Exp $
 # used by inputmethod/ja-freewnn-server/Makefile
 # used by inputmethod/ja-freewnn-lib/Makefile
 
@@ -12,8 +12,8 @@ HOMEPAGE=	http://freewnn.sourceforge.jp/
 COMMENT=	Japanese/Chinese/Korean input method
 LICENSE=	gnu-gpl-v2
 
+MAKE_JOBS_SAFE=	no
 USE_LIBTOOL=	YES
-
 GNU_CONFIGURE=	YES
 
 FILESDIR=       ${.CURDIR}/../../inputmethod/ja-freewnn-lib/files
