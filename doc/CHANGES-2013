@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1978 2013/06/10 01:25:56 mef Exp $
+$NetBSD: CHANGES-2013,v 1.1979 2013/06/10 08:36:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/weechat to 0.4.1 [tonio 2013-06-09]
 	Updated comms/spandsp to 0.0.6pre21 [rodent 2013-06-09]
 	Updated devel/dejagnu to 1.5 [mef 2013-06-10]
+	Updated net/libsoup24 to 2.42.2nb3 [obache 2013-06-10]
