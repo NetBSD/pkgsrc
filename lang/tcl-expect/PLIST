@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/08/21 21:33:58 marino Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/06/10 21:49:21 markd Exp $
 bin/autoexpect
 bin/autopasswd
 bin/cryptdir
@@ -28,6 +28,7 @@ include/tcldbg.h
 lib/libexpect${SONUM}.a
 lib/libexpect${SONUM}.so
 lib/libexpect${SONUM}.so.1.0
+lib/tcl/expect${BASEVER}/libexpect${SONUM}.so
 lib/tcl/expect${BASEVER}/pkgIndex.tcl
 man/man1/autoexpect.1
 man/man1/cryptdir.1
