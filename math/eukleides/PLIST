@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/05 23:01:15 jlam Exp $
-bin/euk2edit
-bin/euk2eps
+@comment $NetBSD: PLIST,v 1.7 2013/06/10 12:24:29 ryoon Exp $
 bin/eukleides
+bin/euktoeps
+bin/euktopdf
+bin/euktopst
+bin/euktotex
 info/eukleides.info
-man/man1/euk2edit.1
-man/man1/euk2eps.1
 man/man1/eukleides.1
+man/man1/euktoeps.1
+man/man1/euktopdf.1
+man/man1/euktopst.1
+man/man1/euktotex.1
+share/eukleides/examples/greenwich.euk
+share/eukleides/examples/sundial.euk
+share/eukleides/examples/vonkoch.euk
+share/texmf/tex/latex/eukleides/eukleides.sty
+share/texmf/tex/latex/eukleides/eukleides.tex

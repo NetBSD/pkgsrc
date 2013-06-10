@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2013/06/10 12:24:29 ryoon Exp $
+
+* Create installation target, bin/, directory.
+
+--- Makefile.orig	2010-04-27 06:31:00.000000000 +0000
++++ Makefile
+@@ -41,6 +41,7 @@ install: $(INSTALL_BINARIES) install_scr
+          install_man install_exm
+ 
+ $(INSTALL_BINARIES):
++	${BSD_INSTALL_PROGRAM_DIR} ${BIN_DIR}
+ 	@export BINARY=$(basename $@) && $(MAKEC) build install
+ 
+ install_scr:

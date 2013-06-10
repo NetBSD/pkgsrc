@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/06/10 12:24:29 ryoon Exp $
+
+euktoesp, euktopdf, and euktotex require LaTeX.
+You should install your favorite LaTeX.
+===========================================================================
