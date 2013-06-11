@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2001 2013/06/11 14:04:26 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2002 2013/06/11 14:05:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3157,3 +3157,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/gitolite to 3.5.1 [ryoon 2013-06-11]
 	Updated devel/rt4 to 4.0.13 [ryoon 2013-06-11]
 	Updated devel/coccinelle to 1.0.0rc17 [ryoon 2013-06-11]
+	Updated textproc/coccigrep to 1.12 [ryoon 2013-06-11]
