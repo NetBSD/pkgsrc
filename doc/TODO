@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12267 2013/06/11 09:15:05 wiz Exp $
+$NetBSD: TODO,v 1.12268 2013/06/11 11:55:28 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gaupol-0.22
-	o gcal-3.6.3
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gdal-1.9.2
