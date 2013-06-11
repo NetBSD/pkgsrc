@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2013/06/06 12:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/06/11 16:28:54 ryoon Exp $
 
-DISTNAME=	qbrew-0.3.5
-PKGREVISION=	13
+DISTNAME=	qbrew-0.4.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.usermode.org/code/
 
@@ -11,14 +10,17 @@ COMMENT=	Homebrewer's recipe calculator
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
+CONFIGURE_ARGS+=	--qtdir=${QTDIR}
+
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
