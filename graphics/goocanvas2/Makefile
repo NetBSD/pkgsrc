@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/09 13:25:14 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/11 08:00:40 obache Exp $
 #
 
 DISTNAME=	goocanvas-2.0.1
@@ -17,6 +17,9 @@ USE_TOOLS+=		pkg-config msgfmt gmake
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	goocanvas-2.0.pc.in
+
+TOOLS_NOOP+=		python
+CONFIGURE_ARGS+=	--enable-python=no
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../devel/glib2/buildlink3.mk"
