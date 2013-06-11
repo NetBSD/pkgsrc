@@ -1,49 +1,41 @@
-$NetBSD: patch-ad,v 1.10 2011/11/08 15:26:12 taca Exp $
+$NetBSD: patch-ad,v 1.11 2013/06/11 14:55:54 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/installer.rb.orig	2011-08-26 00:30:44.000000000 +0000
+--- lib/rubygems/installer.rb.orig	2013-02-21 21:50:03.000000000 +0000
 +++ lib/rubygems/installer.rb
-@@ -85,6 +85,9 @@ class Gem::Installer
-   #          for a signed-gems-only policy.
+@@ -89,6 +89,9 @@ class Gem::Installer
+   #                      foo_exec18.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
    # :install_dir:: The directory to install the gem into.
 +  # :install_root:: The directory to use as a buildroot for "destdir"-style
 +  #		  installation.  All paths during installation are relative
 +  #               to the buildroot.
-   # :format_executable:: Format the executable the same as the ruby executable.
-   #                      If your ruby is ruby18, foo_exec will be installed as
-   #                      foo_exec18.
-@@ -283,7 +286,11 @@ class Gem::Installer
-     # If the user has asked for the gem to be installed in a directory that is
-     # the system gem directory, then use the system bin directory, else create
-     # (or use) a new bin dir under the gem_home.
--    bindir = @bin_dir || Gem.bindir(gem_home)
-+    bindir = @bin_dir || (Gem.bindir @gem_home, @install_root)
-+
-+    unless @install_root.nil? or @install_root == ""
-+      bindir = File.join(@install_root, bindir)
-+    end
- 
-     Dir.mkdir bindir unless File.exist? bindir
-     raise Gem::FilePermissionError.new(bindir) unless File.writable? bindir
-@@ -416,6 +423,7 @@ class Gem::Installer
-       :exec_format  => false,
+   # :security_policy:: Use the specified security policy.  See Gem::Security
+   # :user_install:: Indicate that the gem should be unpacked into the users
+   #                 personal gem directory.
+@@ -538,7 +541,8 @@ class Gem::Installer
+       :env_shebang  => false,
        :force        => false,
        :install_dir  => Gem.dir,
+-      :only_install_dir => false
++      :only_install_dir => false,
 +      :install_root => nil,
      }.merge options
  
      @env_shebang         = options[:env_shebang]
-@@ -427,6 +435,11 @@ class Gem::Installer
-     @wrappers            = options[:wrappers]
-     @bin_dir             = options[:bin_dir]
-     @development         = options[:development]
+@@ -553,8 +557,13 @@ class Gem::Installer
+     # If the user has asked for the gem to be installed in a directory that is
+     # the system gem directory, then use the system bin directory, else create
+     # (or use) a new bin dir under the gem_home.
+-    @bin_dir             = options[:bin_dir] || Gem.bindir(gem_home)
 +    install_root         = options[:install_root]
++    @bin_dir             = options[:bin_dir] || Gem.bindir(gem_home, install_root)
+     @development         = options[:development]
 +    unless install_root.nil? or install_root == ""
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
 +    end
  
-     raise "NOTE: Installer option :source_index is dead" if
-       options[:source_index]
+     @build_args          = options[:build_args] || Gem::Command.build_args
+   end

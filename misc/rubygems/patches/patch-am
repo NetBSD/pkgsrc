@@ -1,19 +1,32 @@
-$NetBSD: patch-am,v 1.3 2011/08/12 15:50:44 taca Exp $
+$NetBSD: patch-am,v 1.4 2013/06/11 14:55:54 taca Exp $
 
 Make sure to setup under DESTDIR.
 
---- lib/rubygems/commands/setup_command.rb.orig	2011-05-26 04:01:53.000000000 +0000
+--- lib/rubygems/commands/setup_command.rb.orig	2013-02-12 20:04:54.000000000 +0000
 +++ lib/rubygems/commands/setup_command.rb
-@@ -110,7 +110,7 @@ By default, this RubyGems will install g
+@@ -143,7 +143,7 @@ By default, this RubyGems will install g
  
      uninstall_old_gemcutter
  
--    install_rdoc
-+    install_rdoc install_destdir
+-    documentation_success = install_rdoc
++    documentation_success = install_rdoc install_destdir
  
      say
      if @verbose then
-@@ -221,16 +221,20 @@ TEXT
+@@ -160,7 +160,11 @@ By default, this RubyGems will install g
+     release_notes = File.join Dir.pwd, 'History.txt'
+ 
+     release_notes = if File.exist? release_notes then
+-                      history = File.read release_notes
++                      if RUBY_VERSION != "1.8.7"
++                        history = File.read release_notes, :encoding => 'utf-8'
++                      else
++                        history = File.read release_notes
++                      end
+                       history = history.sub(/^# coding:.*?^=/m, '')
+ 
+                       text = history.split(HISTORY_HEADER)
+@@ -295,11 +299,15 @@ TEXT
      end
    end
  
@@ -27,12 +40,15 @@ Make sure to setup under DESTDIR.
 +      FileUtils.mkdir_p gem_doc_dir unless File.exist?(gem_doc_dir)
 +    end
 +
-     if File.writable? gem_doc_dir and
+     begin
+       Gem.ensure_gem_subdirectories Gem.dir
+     rescue SystemCallError
+@@ -310,7 +318,7 @@ TEXT
         (not File.exist? rubygems_doc_dir or
          File.writable? rubygems_doc_dir) then
        say "Removing old RubyGems RDoc and ri" if @verbose
 -      Dir[File.join(Gem.dir, 'doc', 'rubygems-[0-9]*')].each do |dir|
-+      Dir[File.join(gem_doc_dir, 'doc', 'rubygems-[0-9]*')].each do |dir|
++      Dir[File.join(gem_doc_dir, 'rubygems-[0-9]*')].each do |dir|
          rm_rf dir
        end
  
