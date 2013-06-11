@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/04 11:51:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/11 19:51:27 asau Exp $
 bin/clj
 lib/java/clojure/clojure.jar
 share/doc/${PKGNAME}/CommonLispFormat.markdown
@@ -20,24 +20,19 @@ share/examples/${PKGNAME}/test_clojure/control.clj
 share/examples/${PKGNAME}/test_clojure/data.clj
 share/examples/${PKGNAME}/test_clojure/data_structures.clj
 share/examples/${PKGNAME}/test_clojure/def.clj
+share/examples/${PKGNAME}/test_clojure/edn.clj
 share/examples/${PKGNAME}/test_clojure/errors.clj
 share/examples/${PKGNAME}/test_clojure/evaluation.clj
+share/examples/${PKGNAME}/test_clojure/fn.clj
 share/examples/${PKGNAME}/test_clojure/for.clj
 share/examples/${PKGNAME}/test_clojure/genclass.clj
 share/examples/${PKGNAME}/test_clojure/genclass/examples.clj
+share/examples/${PKGNAME}/test_clojure/generators.clj
 share/examples/${PKGNAME}/test_clojure/java/io.clj
 share/examples/${PKGNAME}/test_clojure/java/javadoc.clj
 share/examples/${PKGNAME}/test_clojure/java/shell.clj
 share/examples/${PKGNAME}/test_clojure/java_interop.clj
 share/examples/${PKGNAME}/test_clojure/keywords.clj
-share/examples/${PKGNAME}/test_clojure/load.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic0.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic1.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic2.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic3.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic4.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic5.clj
-share/examples/${PKGNAME}/test_clojure/load/cyclic6.clj
 share/examples/${PKGNAME}/test_clojure/logic.clj
 share/examples/${PKGNAME}/test_clojure/macros.clj
 share/examples/${PKGNAME}/test_clojure/main.clj
@@ -58,6 +53,7 @@ share/examples/${PKGNAME}/test_clojure/protocols/examples.clj
 share/examples/${PKGNAME}/test_clojure/protocols/hash_collisions.clj
 share/examples/${PKGNAME}/test_clojure/protocols/more_examples.clj
 share/examples/${PKGNAME}/test_clojure/reader.clj
+share/examples/${PKGNAME}/test_clojure/reducers.clj
 share/examples/${PKGNAME}/test_clojure/reflect.clj
 share/examples/${PKGNAME}/test_clojure/refs.clj
 share/examples/${PKGNAME}/test_clojure/repl.clj
