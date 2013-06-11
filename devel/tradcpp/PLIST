@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/11 04:21:21 dholland Exp $
+bin/tradcpp
