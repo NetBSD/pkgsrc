@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/21 13:59:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/11 13:55:16 ryoon Exp $
 share/rt4/bin/rt
 share/rt4/bin/rt-crontool
 share/rt4/bin/rt-mailgate
@@ -348,9 +348,11 @@ share/rt4/data/html/Helpers/Autocomplete/CustomFieldValues
 share/rt4/data/html/Helpers/Autocomplete/Groups
 share/rt4/data/html/Helpers/Autocomplete/Owners
 share/rt4/data/html/Helpers/Autocomplete/Users
+share/rt4/data/html/Helpers/Autocomplete/autohandler
 share/rt4/data/html/Helpers/TicketHistory
 share/rt4/data/html/Helpers/Toggle/ShowRequestor
 share/rt4/data/html/Helpers/Toggle/TicketBookmark
+share/rt4/data/html/Helpers/autohandler
 share/rt4/data/html/Install/Basics.html
 share/rt4/data/html/Install/DatabaseDetails.html
 share/rt4/data/html/Install/DatabaseType.html
@@ -1202,6 +1204,7 @@ share/rt4/lib/RT/Handle.pm
 share/rt4/lib/RT/I18N.pm
 share/rt4/lib/RT/I18N/cs.pm
 share/rt4/lib/RT/I18N/de.pm
+share/rt4/lib/RT/I18N/fr.pm
 share/rt4/lib/RT/I18N/i_default.pm
 share/rt4/lib/RT/I18N/ru.pm
 share/rt4/lib/RT/Installer.pm
