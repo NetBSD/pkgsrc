@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2012/11/17 11:50:14 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2013/06/11 14:03:19 ryoon Exp $
 
-SHA1 (coccinelle-1.0.0-rc15.tgz) = 6af06856d895a9e83dfaae42db4f648335eda66d
-RMD160 (coccinelle-1.0.0-rc15.tgz) = 6f819c1490fec0e9e73ef579beb68ef1491ae5bb
-Size (coccinelle-1.0.0-rc15.tgz) = 3328556 bytes
+SHA1 (coccinelle-1.0.0-rc17.tgz) = 5c13e521578e20d3805f571dc86931cbd8d63ccd
+RMD160 (coccinelle-1.0.0-rc17.tgz) = 53dd59bdeb632db64187db37b27225b8f9f861a3
+Size (coccinelle-1.0.0-rc17.tgz) = 2991126 bytes
 SHA1 (patch-Makefile) = 5708ac8ee4af869e8b9b03d309daf5ca67e3f162

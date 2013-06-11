@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2012/11/17 11:50:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/11 14:03:19 ryoon Exp $
 
-DISTNAME=	coccinelle-1.0.0-rc15
+DISTNAME=	coccinelle-1.0.0-rc17
 PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	devel
 MASTER_SITES=	http://coccinelle.lip6.fr/distrib/
