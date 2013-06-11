@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.12 2012/04/22 08:11:54 taca Exp $
+$NetBSD: patch-aa,v 1.13 2013/06/11 14:55:54 taca Exp $
 
 * Relax to allow some attribute could be nil.
 * Complete "http://" to homepage attribute if it isn't begin with it.
 * Accpet date with Time, but ignore time part.
 
---- lib/rubygems/specification.rb.orig	2012-04-13 22:21:48.000000000 +0000
+--- lib/rubygems/specification.rb.orig	2013-02-12 20:04:55.000000000 +0000
 +++ lib/rubygems/specification.rb
-@@ -118,6 +118,12 @@ class Gem::Specification
+@@ -164,6 +164,12 @@ class Gem::Specification
      @@default_value[k].nil?
    }
  
@@ -19,16 +19,7 @@ $NetBSD: patch-aa,v 1.12 2012/04/22 08:11:54 taca Exp $
    ######################################################################
    # :section: Required gemspec attributes
  
-@@ -1000,7 +1006,7 @@ class Gem::Specification
-     # way to do it.
-     @date = case date
-             when String then
--              if /\A(\d{4})-(\d{2})-(\d{2})\Z/ =~ date then
-+              if /\A(\d{4})-(\d{2})-(\d{2})/ =~ date then
-                 Time.utc($1.to_i, $2.to_i, $3.to_i)
- 
-               # Workaround for where the date format output from psych isn't
-@@ -1987,7 +1993,24 @@ class Gem::Specification
+@@ -2317,7 +2323,24 @@ class Gem::Specification
      normalize
  
      nil_attributes = self.class.non_nil_attributes.find_all do |name|
@@ -54,13 +45,14 @@ $NetBSD: patch-aa,v 1.12 2012/04/22 08:11:54 taca Exp $
      end
  
      unless nil_attributes.empty? then
-@@ -2090,10 +2113,15 @@ class Gem::Specification
+@@ -2455,10 +2478,15 @@ class Gem::Specification
        raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
      end
  
 -    if homepage and not homepage.empty? and
 -       homepage !~ /\A[a-z][a-z\d+.-]*:/i then
 -      raise Gem::InvalidSpecificationException,
+-            "\"#{homepage}\" is not a URI"
 +    if homepage and not homepage.empty?
 +      if @homepage =~ /\A[a-z][a-z\d+.-]*/i and
 +          @homepage !~ /\A[a-z][a-z\d+.-]*:/i
@@ -68,7 +60,7 @@ $NetBSD: patch-aa,v 1.12 2012/04/22 08:11:54 taca Exp $
 +      end
 +      if homepage !~ /\A[a-z][a-z\d+.-]*:/i then
 +        raise Gem::InvalidSpecificationException,
-             "\"#{homepage}\" is not a URI"
++              "\"#{homepage}\" is not a URI"
 +      end
      end
  

@@ -1,19 +1,31 @@
-$NetBSD: patch-ag,v 1.9 2011/08/12 15:50:44 taca Exp $
+$NetBSD: patch-ag,v 1.10 2013/06/11 14:55:54 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/uninstaller.rb.orig	2011-05-26 04:01:53.000000000 +0000
+--- lib/rubygems/uninstaller.rb.orig	2013-02-12 20:04:55.000000000 +0000
 +++ lib/rubygems/uninstaller.rb
-@@ -51,6 +51,12 @@ class Gem::Uninstaller
+@@ -51,6 +51,11 @@ class Gem::Uninstaller
+     @force_ignore      = options[:ignore]
      @bin_dir           = options[:bin_dir]
      @format_executable = options[:format_executable]
- 
 +    install_root = options[:install_root]
 +    unless install_root.nil? or install_root == ""
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
 +    end
+ 
+     # Indicate if development dependencies should be checked when
+     # uninstalling. (default: false)
+@@ -199,7 +204,11 @@ class Gem::Uninstaller
+              end
+ 
+     if remove then
+-      bin_dir = @bin_dir || Gem.bindir(spec.base_dir)
++      bin_dir = @bin_dir || (Gem.bindir @gem_home, @install_root)
 +
-     # only add user directory if install_dir is not set
-     @user_install = false
-     @user_install = options[:user_install] unless options[:install_dir]
++      unless @install_root.nil? or @install_root == ""
++        bindir = File.join(@install_root, bindir)
++      end
+ 
+       raise Gem::FilePermissionError, bin_dir unless File.writable? bin_dir
+ 

@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.6 2011/11/08 15:26:12 taca Exp $
+$NetBSD: patch-af,v 1.7 2013/06/11 14:55:54 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/commands/uninstall_command.rb.orig	2011-08-27 00:43:50.000000000 +0000
+--- lib/rubygems/commands/uninstall_command.rb.orig	2013-02-12 20:04:54.000000000 +0000
 +++ lib/rubygems/commands/uninstall_command.rb
-@@ -21,6 +21,11 @@ class Gem::Commands::UninstallCommand < 
+@@ -22,6 +22,11 @@ class Gem::Commands::UninstallCommand < 
        options[:all] = value
      end
  

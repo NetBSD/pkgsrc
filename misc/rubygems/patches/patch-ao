@@ -1,12 +1,12 @@
-$NetBSD: patch-ao,v 1.4 2012/04/22 08:11:54 taca Exp $
+$NetBSD: patch-ao,v 1.5 2013/06/11 14:55:54 taca Exp $
 
 Don't hard code config file's path for gem.
 
---- lib/rubygems/config_file.rb.orig	2012-03-22 21:25:48.000000000 +0000
+--- lib/rubygems/config_file.rb.orig	2013-02-12 20:04:55.000000000 +0000
 +++ lib/rubygems/config_file.rb
-@@ -47,32 +47,7 @@ class Gem::ConfigFile
+@@ -56,32 +56,7 @@ class Gem::ConfigFile
  
-   PLATFORM_DEFAULTS = {}
+   # :stopdoc:
  
 -  system_config_path =
 -    begin
@@ -36,5 +36,5 @@ Don't hard code config file's path for gem.
 -    end
 +  system_config_path = '@PKG_SYSCONFDIR@'
  
-   SYSTEM_WIDE_CONFIG_FILE = File.join system_config_path, 'gemrc'
+   # :startdoc:
  
