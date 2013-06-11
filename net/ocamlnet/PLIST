@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/04/03 12:43:29 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/06/11 14:50:43 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/equeue
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netcgi2-plex
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netplex
@@ -196,6 +196,8 @@ lib/ocaml/site-lib/netplex/netplex_log.cmi
 lib/ocaml/site-lib/netplex/netplex_log.mli
 lib/ocaml/site-lib/netplex/netplex_main.cmi
 lib/ocaml/site-lib/netplex/netplex_main.mli
+lib/ocaml/site-lib/netplex/netplex_mbox.cmi
+lib/ocaml/site-lib/netplex/netplex_mbox.mli
 lib/ocaml/site-lib/netplex/netplex_mp.cmi
 lib/ocaml/site-lib/netplex/netplex_mp.mli
 lib/ocaml/site-lib/netplex/netplex_mt.cmi
