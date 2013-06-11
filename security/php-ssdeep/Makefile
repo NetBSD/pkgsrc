@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/05 19:57:01 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/11 01:12:23 khorben Exp $
 #
 
 MODNAME=		ssdeep
@@ -9,6 +9,9 @@ MAINTAINER=		khorben@defora.org
 HOMEPAGE=		http://treffynnon.github.io/php_ssdeep/
 COMMENT=		PHP extension for ssdeep
 LICENSE=		artistic
+
+CONFIGURE_ARGS+=	SSDEEP_INCLUDEDIR=${PREFIX}/include
+CONFIGURE_ARGS+=	SSDEEP_LIB_DIR=${PREFIX}/lib
 
 CONFLICTS=		php-ssdeep-[0-9]*
 
