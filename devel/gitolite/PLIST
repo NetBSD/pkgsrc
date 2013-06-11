@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/14 18:55:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/11 13:37:20 ryoon Exp $
 bin/gitolite
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Common.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Conf.pm
@@ -44,6 +44,7 @@ libexec/gitolite/commands/info
 libexec/gitolite/commands/list-dangling-repos
 libexec/gitolite/commands/lock
 libexec/gitolite/commands/mirror
+libexec/gitolite/commands/owns
 libexec/gitolite/commands/perms
 libexec/gitolite/commands/print-default-rc
 libexec/gitolite/commands/push
@@ -72,6 +73,7 @@ libexec/gitolite/triggers/post-compile/update-git-daemon-access-list
 libexec/gitolite/triggers/post-compile/update-gitweb-access-list
 libexec/gitolite/triggers/post-compile/update-gitweb-daemon-from-options
 libexec/gitolite/triggers/renice
+libexec/gitolite/triggers/set-default-roles
 libexec/gitolite/triggers/upstream
 share/gitolite
 @pkgdir share/doc/gitolite
