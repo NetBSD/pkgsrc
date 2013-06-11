@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12271 2013/06/11 14:05:50 ryoon Exp $
+$NetBSD: TODO,v 1.12272 2013/06/11 15:21:30 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1010,7 +1010,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o shotwell-0.14.1
 	o showfont-1.0.4 [wip]
 	o sign-1.0.7
-	o simage-1.7.0
 	o simulavr-0.1.2.2
 	o singularity-0.30c
 	o sitescooper-3.1.2
