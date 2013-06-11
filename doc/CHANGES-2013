@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1989 2013/06/11 07:39:33 wen Exp $
+$NetBSD: CHANGES-2013,v 1.1990 2013/06/11 07:43:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/tradcpp version 0.1 [dholland 2013-06-11]
 	Updated www/p5-Dancer to 1.3115 [wen 2013-06-11]
 	Updated textproc/p5-Text-CSV_XS to 0.99 [wen 2013-06-11]
+	Updated textproc/p5-Text-CSV to 1.30 [wen 2013-06-11]
