@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/03 11:24:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/06/11 09:14:55 wiz Exp $
 info/autoconf-archive.info
 share/aclocal/ax_absolute_header.m4
 share/aclocal/ax_ac_append_to_file.m4
@@ -129,6 +129,9 @@ share/aclocal/ax_check_docbook_xslt_min.m4
 share/aclocal/ax_check_dos_filesys.m4
 share/aclocal/ax_check_func_in.m4
 share/aclocal/ax_check_gd.m4
+share/aclocal/ax_check_gl.m4
+share/aclocal/ax_check_glu.m4
+share/aclocal/ax_check_glut.m4
 share/aclocal/ax_check_gnu_make.m4
 share/aclocal/ax_check_icu.m4
 share/aclocal/ax_check_java_home.m4
@@ -328,8 +331,10 @@ share/aclocal/ax_lib_oracle_oci.m4
 share/aclocal/ax_lib_orbit2.m4
 share/aclocal/ax_lib_postgresql.m4
 share/aclocal/ax_lib_readline.m4
+share/aclocal/ax_lib_samtools.m4
 share/aclocal/ax_lib_socket_nsl.m4
 share/aclocal/ax_lib_sqlite3.m4
+share/aclocal/ax_lib_tabix.m4
 share/aclocal/ax_lib_taglib.m4
 share/aclocal/ax_lib_trace.m4
 share/aclocal/ax_lib_upnp.m4
@@ -485,6 +490,7 @@ share/aclocal/ax_with_dmalloc.m4
 share/aclocal/ax_with_mpatrol.m4
 share/aclocal/ax_with_prog.m4
 share/aclocal/ax_xercesc.m4
+share/aclocal/ax_xsdcxx.m4
 share/aclocal/ax_xtra_classpath.m4
 share/aclocal/ax_zoneinfo.m4
 share/autoconf-archive/AUTHORS
