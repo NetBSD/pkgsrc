@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2012/12/14 14:42:53 wiz Exp $
+$NetBSD: distinfo,v 1.12 2013/06/11 20:05:37 asau Exp $
 
-SHA1 (gprolog-1.4.2.tar.gz) = 76d366910e50e56aa06c98a0a8903f98ec7f1c21
-RMD160 (gprolog-1.4.2.tar.gz) = 724af5c067860ed427304b1344bb498d7a908ade
-Size (gprolog-1.4.2.tar.gz) = 3358528 bytes
+SHA1 (gprolog-1.4.4.tar.gz) = 658b0efa5d916510dcddbbd980d90bc4d43a6e58
+RMD160 (gprolog-1.4.4.tar.gz) = 081ad0e6a2edd47de63db79ab1dc65a0e0d341da
+Size (gprolog-1.4.4.tar.gz) = 3538152 bytes

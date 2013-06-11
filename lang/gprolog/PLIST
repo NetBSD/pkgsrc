@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/14 14:42:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/11 20:05:37 asau Exp $
 bin/fd2c
 bin/gplc
 bin/gprolog
@@ -10,7 +10,6 @@ lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ChangeLog
 lib/${PKGNAME}/NEWS
 lib/${PKGNAME}/README
-lib/${PKGNAME}/gprolog.ico
 lib/${PKGNAME}/VERSION
 lib/${PKGNAME}/bin/fd2c
 lib/${PKGNAME}/bin/gplc
@@ -19,6 +18,7 @@ lib/${PKGNAME}/bin/hexgplc
 lib/${PKGNAME}/bin/ma2asm
 lib/${PKGNAME}/bin/pl2wam
 lib/${PKGNAME}/bin/wam2ma
+lib/${PKGNAME}/gprolog.ico
 lib/${PKGNAME}/include/fd_to_c.h
 lib/${PKGNAME}/include/gprolog.h
 lib/${PKGNAME}/lib/all_fd_bips.o
@@ -31,11 +31,9 @@ lib/${PKGNAME}/lib/libengine_pl.a
 lib/${PKGNAME}/lib/liblinedit.a
 lib/${PKGNAME}/lib/top_level.o
 share/doc/gprolog/compil-scheme.eps
-share/doc/gprolog/compil-scheme.gif
 share/doc/gprolog/compil-scheme.pdf
 share/doc/gprolog/contents_motif.gif
 share/doc/gprolog/debug-box.eps
-share/doc/gprolog/debug-box.gif
 share/doc/gprolog/debug-box.pdf
 share/doc/gprolog/gprolog.chm
 share/doc/gprolog/gprolog.dvi
@@ -118,10 +116,11 @@ share/doc/gprolog/html/gprolog070.html
 share/doc/gprolog/html/gprolog071.html
 share/doc/gprolog/html/gprolog072.html
 share/doc/gprolog/html/gprolog073.html
-share/doc/gprolog/html/gprolog074.html
 share/doc/gprolog/html/index.html
 share/doc/gprolog/html/next_motif.gif
 share/doc/gprolog/html/previous_motif.gif
+share/doc/gprolog/logo.eps
+share/doc/gprolog/logo.pdf
 share/examples/gprolog/ExamplesC/Makefile
 share/examples/gprolog/ExamplesC/README
 share/examples/gprolog/ExamplesC/examp.pl
