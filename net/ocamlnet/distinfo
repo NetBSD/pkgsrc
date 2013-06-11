@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2013/04/03 12:43:29 jaapb Exp $
+$NetBSD: distinfo,v 1.11 2013/06/11 14:50:43 jaapb Exp $
 
-SHA1 (ocamlnet-3.6.3.tar.gz) = 9cf4b8eb293313140ee89ef8be9fa146b97abcce
-RMD160 (ocamlnet-3.6.3.tar.gz) = f20868f19090afd7c3c48904c5f76556de4b4e03
-Size (ocamlnet-3.6.3.tar.gz) = 3290612 bytes
+SHA1 (ocamlnet-3.6.5.tar.gz) = 74b2cc1a71d59063a156f70d0e8a25066209264f
+RMD160 (ocamlnet-3.6.5.tar.gz) = 7983dd005f3de1c8ad7aaad3fd0d512402e23e02
+Size (ocamlnet-3.6.5.tar.gz) = 3339680 bytes
 SHA1 (patch-Makefile.rules) = ffe0b4a56e2b1f0449ee6ceedaeffdb5b5abbc9a
 SHA1 (patch-src_netsys_netsys__c.c) = 0d188b95cae496cb0c535de5cfb2e0935c5ee0c0

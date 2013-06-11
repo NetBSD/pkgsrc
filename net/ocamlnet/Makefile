@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/04/03 12:43:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2013/06/11 14:50:43 jaapb Exp $
 #
 
-DISTNAME=		ocamlnet-3.6.3
+DISTNAME=		ocamlnet-3.6.5
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 
