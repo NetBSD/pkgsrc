@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2013 2013/06/11 19:51:41 asau Exp $
+$NetBSD: CHANGES-2013,v 1.2014 2013/06/11 22:22:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3169,3 +3169,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sbcl to 1.1.8 [asau 2013-06-11]
 	Updated lang/algol68g to 2.6 [asau 2013-06-11]
 	Updated lang/clojure to 1.5.1 [asau 2013-06-11]
+	Updated shells/posh to 0.12 [makoto 2013-06-11]
