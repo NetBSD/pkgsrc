@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/02/06 15:53:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/06/11 15:00:18 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -32,7 +32,9 @@ ${GEM_LIBDIR}/lib/rdoc/context.rb
 ${GEM_LIBDIR}/lib/rdoc/context/section.rb
 ${GEM_LIBDIR}/lib/rdoc/cross_reference.rb
 ${GEM_LIBDIR}/lib/rdoc/encoding.rb
+${GEM_LIBDIR}/lib/rdoc/erb_partial.rb
 ${GEM_LIBDIR}/lib/rdoc/erbio.rb
+${GEM_LIBDIR}/lib/rdoc/extend.rb
 ${GEM_LIBDIR}/lib/rdoc/generator.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/darkfish.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/json_index.rb
@@ -43,16 +45,20 @@ ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_footer.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_head.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_VCS_info.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_classes.rhtml
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_extends.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_in_files.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_includes.rhtml
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_installed.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_methods.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_navigation.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_pages.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_parent.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_search.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_sections.rhtml
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_sidebar_table_of_contents.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/class.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/add.png
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/arrow_up.png
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/brick.png
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/brick_link.png
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/images/bug.png
@@ -82,21 +88,33 @@ ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/js/jquery.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/js/search.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/page.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/rdoc.css
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/servlet_not_found.rhtml
+${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/servlet_root.rhtml
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/table_of_contents.rhtml
+${GEM_LIBDIR}/lib/rdoc/generator/template/json_index/.document
 ${GEM_LIBDIR}/lib/rdoc/generator/template/json_index/js/navigation.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/json_index/js/searcher.js
 ${GEM_LIBDIR}/lib/rdoc/ghost_method.rb
 ${GEM_LIBDIR}/lib/rdoc/include.rb
 ${GEM_LIBDIR}/lib/rdoc/known_classes.rb
+${GEM_LIBDIR}/lib/rdoc/markdown.kpeg
+${GEM_LIBDIR}/lib/rdoc/markdown.rb
+${GEM_LIBDIR}/lib/rdoc/markdown/entities.rb
+${GEM_LIBDIR}/lib/rdoc/markdown/literals_1_8.kpeg
+${GEM_LIBDIR}/lib/rdoc/markdown/literals_1_8.rb
+${GEM_LIBDIR}/lib/rdoc/markdown/literals_1_9.kpeg
+${GEM_LIBDIR}/lib/rdoc/markdown/literals_1_9.rb
 ${GEM_LIBDIR}/lib/rdoc/markup.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/attr_changer.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/attr_span.rb
-${GEM_LIBDIR}/lib/rdoc/markup/attribute.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/attribute_manager.rb
+${GEM_LIBDIR}/lib/rdoc/markup/attributes.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/blank_line.rb
+${GEM_LIBDIR}/lib/rdoc/markup/block_quote.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/document.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/formatter.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/formatter_test_case.rb
+${GEM_LIBDIR}/lib/rdoc/markup/hard_break.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/heading.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/include.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/indented_paragraph.rb
@@ -115,7 +133,9 @@ ${GEM_LIBDIR}/lib/rdoc/markup/to_bs.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_html.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_html_crossref.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_html_snippet.rb
+${GEM_LIBDIR}/lib/rdoc/markup/to_joined_paragraph.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_label.rb
+${GEM_LIBDIR}/lib/rdoc/markup/to_markdown.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_rdoc.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_table_of_contents.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/to_test.rb
@@ -128,6 +148,8 @@ ${GEM_LIBDIR}/lib/rdoc/normal_module.rb
 ${GEM_LIBDIR}/lib/rdoc/options.rb
 ${GEM_LIBDIR}/lib/rdoc/parser.rb
 ${GEM_LIBDIR}/lib/rdoc/parser/c.rb
+${GEM_LIBDIR}/lib/rdoc/parser/changelog.rb
+${GEM_LIBDIR}/lib/rdoc/parser/markdown.rb
 ${GEM_LIBDIR}/lib/rdoc/parser/rd.rb
 ${GEM_LIBDIR}/lib/rdoc/parser/ruby.rb
 ${GEM_LIBDIR}/lib/rdoc/parser/ruby_tools.rb
@@ -149,21 +171,45 @@ ${GEM_LIBDIR}/lib/rdoc/ri/store.rb
 ${GEM_LIBDIR}/lib/rdoc/ruby_lex.rb
 ${GEM_LIBDIR}/lib/rdoc/ruby_token.rb
 ${GEM_LIBDIR}/lib/rdoc/rubygems_hook.rb
+${GEM_LIBDIR}/lib/rdoc/servlet.rb
 ${GEM_LIBDIR}/lib/rdoc/single_class.rb
 ${GEM_LIBDIR}/lib/rdoc/stats.rb
 ${GEM_LIBDIR}/lib/rdoc/stats/normal.rb
 ${GEM_LIBDIR}/lib/rdoc/stats/quiet.rb
 ${GEM_LIBDIR}/lib/rdoc/stats/verbose.rb
+${GEM_LIBDIR}/lib/rdoc/store.rb
 ${GEM_LIBDIR}/lib/rdoc/task.rb
 ${GEM_LIBDIR}/lib/rdoc/test_case.rb
 ${GEM_LIBDIR}/lib/rdoc/text.rb
 ${GEM_LIBDIR}/lib/rdoc/token_stream.rb
 ${GEM_LIBDIR}/lib/rdoc/tom_doc.rb
 ${GEM_LIBDIR}/lib/rdoc/top_level.rb
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Amps and angle encoding.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Auto links.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Backslash escapes.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Blockquotes with code blocks.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Code Blocks.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Code Spans.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Hard-wrapped paragraphs with list-like lines.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Horizontal rules.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Inline HTML (Advanced).text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Inline HTML (Simple).text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Inline HTML comments.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Links, inline style.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Links, reference style.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Links, shortcut references.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Literal quotes in titles.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Markdown Documentation - Basics.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Markdown Documentation - Syntax.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Nested blockquotes.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Ordered and unordered lists.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Strong and em together.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Tabs.text
+${GEM_LIBDIR}/test/MarkdownTest_1.0.3/Tidyness.text
 ${GEM_LIBDIR}/test/README
 ${GEM_LIBDIR}/test/binary.dat
 ${GEM_LIBDIR}/test/hidden.zip.txt
-${GEM_LIBDIR}/test/test.ja.large.rdoc
+${GEM_LIBDIR}/test/test.ja.largedoc
 ${GEM_LIBDIR}/test/test.ja.rdoc
 ${GEM_LIBDIR}/test/test.ja.txt
 ${GEM_LIBDIR}/test/test.txt
@@ -179,15 +225,20 @@ ${GEM_LIBDIR}/test/test_rdoc_context.rb
 ${GEM_LIBDIR}/test/test_rdoc_context_section.rb
 ${GEM_LIBDIR}/test/test_rdoc_cross_reference.rb
 ${GEM_LIBDIR}/test/test_rdoc_encoding.rb
+${GEM_LIBDIR}/test/test_rdoc_extend.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_darkfish.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_json_index.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_markup.rb
 ${GEM_LIBDIR}/test/test_rdoc_generator_ri.rb
 ${GEM_LIBDIR}/test/test_rdoc_include.rb
+${GEM_LIBDIR}/test/test_rdoc_markdown.rb
+${GEM_LIBDIR}/test/test_rdoc_markdown_test.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_attribute_manager.rb
+${GEM_LIBDIR}/test/test_rdoc_markup_attributes.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_document.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_formatter.rb
+${GEM_LIBDIR}/test/test_rdoc_markup_hard_break.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_heading.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_include.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_indented_paragraph.rb
@@ -200,7 +251,9 @@ ${GEM_LIBDIR}/test/test_rdoc_markup_to_bs.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_html.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_html_crossref.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_html_snippet.rb
+${GEM_LIBDIR}/test/test_rdoc_markup_to_joined_paragraph.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_label.rb
+${GEM_LIBDIR}/test/test_rdoc_markup_to_markdown.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_rdoc.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_table_of_contents.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_to_tt_only.rb
@@ -211,6 +264,8 @@ ${GEM_LIBDIR}/test/test_rdoc_normal_module.rb
 ${GEM_LIBDIR}/test/test_rdoc_options.rb
 ${GEM_LIBDIR}/test/test_rdoc_parser.rb
 ${GEM_LIBDIR}/test/test_rdoc_parser_c.rb
+${GEM_LIBDIR}/test/test_rdoc_parser_changelog.rb
+${GEM_LIBDIR}/test/test_rdoc_parser_markdown.rb
 ${GEM_LIBDIR}/test/test_rdoc_parser_rd.rb
 ${GEM_LIBDIR}/test/test_rdoc_parser_ruby.rb
 ${GEM_LIBDIR}/test/test_rdoc_parser_simple.rb
@@ -222,11 +277,13 @@ ${GEM_LIBDIR}/test/test_rdoc_rdoc.rb
 ${GEM_LIBDIR}/test/test_rdoc_require.rb
 ${GEM_LIBDIR}/test/test_rdoc_ri_driver.rb
 ${GEM_LIBDIR}/test/test_rdoc_ri_paths.rb
-${GEM_LIBDIR}/test/test_rdoc_ri_store.rb
 ${GEM_LIBDIR}/test/test_rdoc_ruby_lex.rb
+${GEM_LIBDIR}/test/test_rdoc_ruby_token.rb
 ${GEM_LIBDIR}/test/test_rdoc_rubygems_hook.rb
+${GEM_LIBDIR}/test/test_rdoc_servlet.rb
 ${GEM_LIBDIR}/test/test_rdoc_single_class.rb
 ${GEM_LIBDIR}/test/test_rdoc_stats.rb
+${GEM_LIBDIR}/test/test_rdoc_store.rb
 ${GEM_LIBDIR}/test/test_rdoc_task.rb
 ${GEM_LIBDIR}/test/test_rdoc_text.rb
 ${GEM_LIBDIR}/test/test_rdoc_token_stream.rb

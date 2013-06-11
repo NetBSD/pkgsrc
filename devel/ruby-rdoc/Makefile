@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/06 03:45:12 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/11 15:00:18 taca Exp $
 
 DISTNAME=	rdoc-${RUBY_RDOC_VERSION}
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 
 RUBY_JSON_REQD=	1.4
 MAKE_ENV+=	RUBYLIB=${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_LIBDIR}/lib
+GEM_PATH=	${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_LIBDIR}:${PREFIX}/${GEM_HOME}
 
 pre-configure:
 	${FIND} ${WRKSRC}/lib/rdoc/generator/template/darkfish/images \

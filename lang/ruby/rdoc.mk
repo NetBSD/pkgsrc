@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.14 2013/03/07 16:53:01 taca Exp $
+# $NetBSD: rdoc.mk,v 1.15 2013/06/11 15:00:18 taca Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
@@ -20,7 +20,7 @@ _RUBY_RDOC_MK=	# defined
 #
 # current rdoc versions.
 #
-RUBY_RDOC_VERSION=	3.12.2
+RUBY_RDOC_VERSION=	4.0.1
 
 .if !empty(RUBY_RDOC_REQD)
 
