@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1995 2013/06/11 12:59:26 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.1996 2013/06/11 13:03:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/autoconf-archive to 2013.06.09 [wiz 2013-06-11]
 	Updated time/gcal to 3.6.3 [ryoon 2013-06-11]
 	Updated emulators/gpsim to 0.26.1 [ryoon 2013-06-11]
+	Updated devel/gputils to 1.2.0 [ryoon 2013-06-11]
