@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.43 2013/05/31 12:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/06/11 19:34:14 asau Exp $
 
-DISTNAME=		mercury-compiler-11.07
-PKGNAME=		mercury-11.07
-PKGREVISION=		2
+DISTNAME=		mercury-srcdist-13.05.1-beta-2013-05-28
+PKGNAME=		mercury-13.05.1beta
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
+MASTER_SITES=		http://dl.mercurylang.org/release/ \
+			ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 			http://www.mercury.cs.mu.oz.au/download/files/ \
 			${MASTER_SITE_SUNSITE:=devel/lang/mercury/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cs.mu.oz.au/research/mercury/
+HOMEPAGE=		http://www.mercurylang.org/
 COMMENT=		Modern logic/functional programming language
 
 GNU_CONFIGURE=		yes
@@ -34,6 +34,7 @@ BUILD_MAKE_FLAGS+=	INSTALL_MAN_DIR=${INSTALL_PREFIX:Q}/${PKGMANDIR:Q}
 BUILD_MAKE_FLAGS+=	MERCURY_COMPILER=${INSTALL_PREFIX:Q}/bin/mercury_compile
 #BUILD_MAKE_FLAGS+=	PARALLEL=$(MAKE_JOBS:D-j$(MAKE_JOBS))
 
+CHECK_PORTABILITY_SKIP+=	boehm_gc/configure
 CHECK_INTERPRETER_SKIP+=	lib/mercury/reconf/scripts/mtags.in
 
 post-patch:

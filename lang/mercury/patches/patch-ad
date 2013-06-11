@@ -1,26 +1,26 @@
-$NetBSD: patch-ad,v 1.3 2004/02/14 03:04:31 kristerw Exp $
+$NetBSD: patch-ad,v 1.4 2013/06/11 19:34:14 asau Exp $
 
---- doc/Mmakefile.orig	Fri Nov 29 08:06:19 2002
-+++ doc/Mmakefile	Fri Feb 13 23:26:07 2004
-@@ -177,7 +177,7 @@
+--- doc/Mmakefile.orig	2013-05-28 04:00:38.000000000 +0000
++++ doc/Mmakefile
+@@ -239,7 +239,7 @@ mdb_command_test.inp: generate_mdb_comma
  # Note that some modules are just implementation details of the library,
  # so they are not documented.
  
--library-menu.texi_pp: $(LIBRARY_DIR)/*.m
-+library-menu.texi_pp:
+-library-menu.texi_pp: ../VERSION $(LIBRARY_DIR)/*.m
++library-menu.texi_pp: ../VERSION
  	{ 								\
  	echo "";							\
  	for filename in $(LIBRARY_DIR)/*.m; do				\
-@@ -199,7 +199,7 @@
+@@ -293,7 +293,7 @@ library-menu.texi_pp: ../VERSION $(LIBRA
  	done;								\
  	} > library-menu.texi_pp
  
--library-chapters.texi_pp: $(LIBRARY_DIR)/[a-z]*.m
-+library-chapters.texi_pp:
+-library-chapters.texi_pp: ../VERSION $(LIBRARY_DIR)/[a-z]*.m
++library-chapters.texi_pp: ../VERSION
  	for filename in $(LIBRARY_DIR)/[a-z]*.m; do 			\
  		case $$filename in					\
- 			$(LIBRARY_DIR)/mer_std.m)			\
-@@ -271,7 +271,7 @@
+ 			$(LIBRARY_DIR)/backjump.m)			\
+@@ -398,7 +398,7 @@ install_dirs:
  
  .PHONY: install_info
  install_info: $(INFOPAGES) install_dirs
