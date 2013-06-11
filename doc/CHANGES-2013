@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2006 2013/06/11 15:00:51 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2007 2013/06/11 15:03:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3162,3 +3162,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/rubygems to 2.0.3 [taca 2013-06-11]
 	Updated net/ocamlnet to 3.6.5 [jaapb 2013-06-11]
 	Updated devel/ruby-rdoc to 4.0.1 [taca 2013-06-11]
+	Updated databases/ruby-odbc to 0.99995 [taca 2013-06-11]
