@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2004 2013/06/11 14:56:25 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2005 2013/06/11 14:59:04 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/coccigrep to 1.12 [ryoon 2013-06-11]
 	Updated fonts/umefont-ttf to 0.452 [ryoon 2013-06-11]
 	Updated misc/rubygems to 2.0.3 [taca 2013-06-11]
+	Updated net/ocamlnet to 3.6.5 [jaapb 2013-06-11]
