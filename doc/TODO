@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12274 2013/06/11 16:29:26 ryoon Exp $
+$NetBSD: TODO,v 1.12275 2013/06/11 22:22:21 mef Exp $
 
 Suggested new packages
 ======================
@@ -922,7 +922,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o posh-0.5.5
 	o postal-0.72
 	o powermanga-0.91
 	o powwow-1.2.16
