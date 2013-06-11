@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1987 2013/06/11 04:22:06 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.1988 2013/06/11 07:27:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3143,3 +3143,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-Test-TCP to 1.30 [wen 2013-06-11]
 	Updated sysutils/dbus-sharp to 0.7.0nb1 [obache 2013-06-11]
 	Added devel/tradcpp version 0.1 [dholland 2013-06-11]
+	Updated www/p5-Dancer to 1.3115 [wen 2013-06-11]
