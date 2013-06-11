@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2015 2013/06/11 22:58:22 tron Exp $
+$NetBSD: CHANGES-2013,v 1.2016 2013/06/11 23:07:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/clojure to 1.5.1 [asau 2013-06-11]
 	Updated shells/posh to 0.12 [makoto 2013-06-11]
 	Updated net/wireshark to 1.8.8 [tron 2013-06-11]
+	Updated devel/tradcpp to 0.2 [dholland 2013-06-11]
