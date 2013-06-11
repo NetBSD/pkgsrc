@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1986 2013/06/11 02:30:01 obache Exp $
+$NetBSD: CHANGES-2013,v 1.1987 2013/06/11 04:22:06 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3142,3 +3142,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Renamed math/xeukleides to math/xeukleides10 [ryoon 2013-06-10]
 	Updated net/p5-Test-TCP to 1.30 [wen 2013-06-11]
 	Updated sysutils/dbus-sharp to 0.7.0nb1 [obache 2013-06-11]
+	Added devel/tradcpp version 0.1 [dholland 2013-06-11]
