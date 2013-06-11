@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2012/08/11 18:51:16 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2013/06/11 11:54:47 ryoon Exp $
 
-SHA1 (gcal-3.6.2.tar.bz2) = 565b282c402777d00162bbd3b40ce97e11ae4a2b
-RMD160 (gcal-3.6.2.tar.bz2) = 44fb30c05ef43017be0afe7c587cb579a3cb5954
-Size (gcal-3.6.2.tar.bz2) = 2222541 bytes
-SHA1 (patch-lib_fflush.c) = 164c516dbf1c37a8250e1434fcc6952cd912c018
-SHA1 (patch-lib_fseeko.c) = e43873083855739c6d216884411623245bc6323e
+SHA1 (gcal-3.6.3.tar.gz) = 90832718e9a1eb4fecdbaf2baae419e6a2f64523
+RMD160 (gcal-3.6.3.tar.gz) = bc69eb8fa43f3e369f4cf0cbb2a290927e5bc12e
+Size (gcal-3.6.3.tar.gz) = 2994182 bytes
+SHA1 (patch-lib_fflush.c) = b3d43f81a12cfc3528cb75764b3713e927b31bca
+SHA1 (patch-lib_fseeko.c) = 7f4ed174d6b45413fc7153dd84c86e715c659a3a
