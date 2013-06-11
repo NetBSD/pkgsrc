@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.1993 2013/06/11 09:15:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.1994 2013/06/11 11:55:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.14 [wen 2013-06-11]
 	Updated archivers/gzip to 1.6 [adam 2013-06-11]
 	Updated devel/autoconf-archive to 2013.06.09 [wiz 2013-06-11]
+	Updated time/gcal to 3.6.3 [ryoon 2013-06-11]
