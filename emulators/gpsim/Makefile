@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2013/06/06 12:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2013/06/11 12:58:42 ryoon Exp $
 #
 
-DISTNAME=	gpsim-0.21.11
-PKGREVISION=	19
+DISTNAME=	gpsim-0.26.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsim/}
 
