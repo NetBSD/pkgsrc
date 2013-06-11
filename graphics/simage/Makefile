@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2013/02/16 11:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/06/11 15:20:27 ryoon Exp $
 
-DISTNAME=		simage-1.6.1
-PKGREVISION=		13
+DISTNAME=		simage-1.7.0
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.coin3d.org/pub/coin/src/
+MASTER_SITES=		https://bitbucket.org/Coin3D/coin/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Library for image format loaders and front-ends
+LICENSE=		public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
