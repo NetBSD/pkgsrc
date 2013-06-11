@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2006/05/14 16:50:54 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/11 15:22:47 ryoon Exp $
 
---- configure.orig	2005-09-19 21:57:49.000000000 +0000
+--- configure.orig	2010-03-02 13:20:09.000000000 +0000
 +++ configure
-@@ -25221,7 +25221,7 @@ fi;
+@@ -24066,7 +24066,7 @@ fi
  
- echo "$as_me:$LINENO: checking if user is simian" >&5
- echo $ECHO_N "checking if user is simian... $ECHO_C" >&6
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if user is simian" >&5
+ $as_echo_n "checking if user is simian... " >&6; }
 -case `hostname -d 2>/dev/null || domainname 2>/dev/null || hostname` in
 +case `domainname 2>/dev/null || hostname` in
  *.sim.no | sim.no )
