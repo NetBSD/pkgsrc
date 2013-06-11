@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 23:25:09 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/11 22:21:38 mef Exp $
 #
 
-DISTNAME=	posh_0.3.14
+DISTNAME=	posh_0.12
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/posh
 COMMENT=	Debian Policy-compliant Ordinary SHell
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
