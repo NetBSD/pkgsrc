@@ -1,22 +1,32 @@
-$NetBSD: patch-ah,v 1.10 2011/11/08 15:26:12 taca Exp $
+$NetBSD: patch-ah,v 1.11 2013/06/11 14:55:54 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems.rb.orig	2011-08-27 00:43:50.000000000 +0000
+--- lib/rubygems.rb.orig	2013-02-21 22:01:26.000000000 +0000
 +++ lib/rubygems.rb
-@@ -327,7 +327,10 @@ module Gem
+@@ -286,11 +286,17 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
 -  def self.bindir(install_dir=Gem.dir)
 +  def self.bindir(install_dir=Gem.dir, install_root=nil)
-+    unless install_root.nil?
-+      install_dir = install_dir.sub(install_root, "")
-+    end
      # TODO: move to Gem::Dirs
-     return File.join install_dir, 'bin' unless
-       install_dir.to_s == Gem.default_dir.to_s
-@@ -619,12 +622,12 @@ module Gem
+-    return File.join install_dir, 'bin' unless
+-      install_dir.to_s == Gem.default_dir.to_s
+-    Gem.default_bindir
++    if install_dir.to_s == Gem.default_dir.to_s
++      install_dir = Gem.default_bindir
++    else
++      install_dir = File.join install_dir, 'bin'
++    end
++    unless install_root.nil?
++      install_dir = File.join install_root, install_dir
++    end
++    install_dir
+   end
+ 
+   ##
+@@ -538,12 +544,12 @@ module Gem
    ##
    # The index to insert activated gem paths into the $LOAD_PATH.
    #
@@ -29,9 +39,9 @@ Add install_root option for pkgsrc's rubygems support.
 -    index = $LOAD_PATH.index ConfigMap[:sitelibdir]
 +    index = $LOAD_PATH.index ConfigMap[:vendorlibdir]
  
-     if QUICKLOADER_SUCKAGE then
-       $LOAD_PATH.each_with_index do |path, i|
-@@ -799,6 +802,7 @@ module Gem
+     index
+   end
+@@ -716,6 +722,7 @@ module Gem
      prefix = File.dirname RUBYGEMS_DIR
  
      if prefix != File.expand_path(ConfigMap[:sitelibdir]) and
