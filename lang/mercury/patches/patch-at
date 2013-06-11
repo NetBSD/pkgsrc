@@ -1,15 +1,15 @@
-$NetBSD: patch-at,v 1.2 2012/01/30 05:40:02 asau Exp $
+$NetBSD: patch-at,v 1.3 2013/06/11 19:34:14 asau Exp $
 
 Support shared libraries.
 
---- configure.orig	2010-07-18 12:40:26.000000000 +0400
-+++ configure	2010-07-20 22:56:53.000000000 +0400
-@@ -11869,7 +11869,7 @@
+--- configure.orig	2013-05-28 05:23:38.000000000 +0000
++++ configure
+@@ -11250,7 +11250,7 @@ $as_echo "yes" >&6; }
          EXT_FOR_SHARED_LIB=so
          EXT_FOR_LINK_WITH_PIC_OBJECTS=o
          ;;
 -    i*86-*-freebsd*)
 +    i*86-*-freebsd*|*-netbsd*)
          # From Cornelis van der Laan <nils@ims.uni-stuttgart.de>
-         { echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
