@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.14 2013/03/02 18:21:39 joerg Exp $
+$NetBSD: distinfo,v 1.15 2013/06/11 13:31:58 ryoon Exp $
 
-SHA1 (xcircuit-3.4.26.tgz) = cf3eda5c788376a09cca6a35ee120a3f12a08c33
-RMD160 (xcircuit-3.4.26.tgz) = fd9beb37f16670505ee9aadc394d6e722947d645
-Size (xcircuit-3.4.26.tgz) = 1054942 bytes
-SHA1 (patch-aa) = 8ac2a3398cbd74ca0248737c753816dee4367f97
-SHA1 (patch-ab) = 32c3f7d2d798a5c6772eaff60c894e183eb5bca6
-SHA1 (patch-ac) = 5921bc94c2288f6d1811fe5a72f136a0ef0f25e6
-SHA1 (patch-libraries.c) = 821927852dd11834a024cb1f972874b26fe9788c
-SHA1 (patch-undo.c) = 125cabb16656a6af09f8eb37be0eff6cfc3f29ca
+SHA1 (xcircuit-3.7.50.tgz) = f3d0d7213d42bf7db1110454f8a3f74239d338f5
+RMD160 (xcircuit-3.7.50.tgz) = 2c416e939810a3e0fd82fa7411e89c3f12bc890e
+Size (xcircuit-3.7.50.tgz) = 1649046 bytes
+SHA1 (patch-aa) = 914d486e9f7c8ed421fbc747d3a49b4cc210d845
+SHA1 (patch-ab) = fe940fa499e8a4a7b717a7c8dfe6aca21500bd5e
