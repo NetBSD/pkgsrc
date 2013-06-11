@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2005/11/10 22:25:13 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2013/06/11 22:21:38 mef Exp $
+
+date: 2005-11-11 07:25:13 +0900;  author: joerg;  state: Exp;
+Depend on errno.h to provide errno.
 
 --- sh.h.orig	2005-11-10 22:22:51.000000000 +0000
 +++ sh.h
