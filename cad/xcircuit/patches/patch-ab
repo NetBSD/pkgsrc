@@ -1,26 +1,41 @@
-$NetBSD: patch-ab,v 1.10 2008/01/05 20:59:00 rillig Exp $
+$NetBSD: patch-ab,v 1.11 2013/06/11 13:31:58 ryoon Exp $
 
---- configure.orig	2006-06-09 17:54:33.000000000 +0000
+--- configure.orig	2012-08-15 11:45:19.000000000 +0000
 +++ configure
-@@ -7765,7 +7765,7 @@ if test "${enable_double_buffer+set}" = 
+@@ -3794,12 +3794,12 @@ static char *f (char * (*g) (char **, in
+    proper ANSI mode.  Curiously '\x00'!='x' always comes out true, for an
+    array size at least.  It's necessary to write '\x00'==0 to get something
+    that's true only with -std.  */
+-int osf4_cc_array ['\x00' == 0 ? 1 : -1];
++int osf4_cc_array ['\x00' = 0 ? 1 : -1];
  
+ /* IBM C 6 for AIX is almost-ANSI by default, but it replaces macro parameters
+    inside strings and character constants.  */
+ #define FOO(x) 'x'
+-int xlc6_cc_array[FOO(a) == 'x' ? 1 : -1];
++int xlc6_cc_array[FOO(a) = 'x' ? 1 : -1];
+ 
+ int test (int i, double x);
+ struct s1 {int (*f) (int a);};
+@@ -6006,7 +6006,7 @@ if test "${enable_double_buffer+set}" = 
+   enableval=$enable_double_buffer;
  else
  
 -  if test "x$xc_with_GL" == "x" ; then
 +  if test "x$xc_with_GL" = "x" ; then
-     cat >>confdefs.h <<\_ACEOF
- #define DOUBLEBUFFER 1
- _ACEOF
-@@ -8144,7 +8144,7 @@ if test "${with_tcl+set}" = set; then
-   withval="$with_tcl"
+     $as_echo "#define DOUBLEBUFFER 1" >>confdefs.h
  
+   else
+@@ -6223,7 +6223,7 @@ xc_with_tk_libraries=""
+ if test "${with_tcl+set}" = set; then :
+   withval=$with_tcl;
    xc_with_tcl=$withval
 -  if test "$withval" == "no" -o "$withval" == "NO"; then
 +  if test "$withval" = "no" -o "$withval" = "NO"; then
        xc_with_tcl=""
    fi
  
-@@ -8735,12 +8735,12 @@ if test "x$xc_with_tcl" != "x" ; then
+@@ -6625,12 +6625,12 @@ if test "x$xc_with_tcl" != "x" ; then
    if test "x${xc_with_tcl_includes}" != "x" ; then
      if test -r "${xc_with_tcl_includes}/tcl.h" ; then
        TCL_INC_DIR=${xc_with_tcl_includes}
@@ -35,32 +50,3 @@ $NetBSD: patch-ab,v 1.10 2008/01/05 20:59:00 rillig Exp $
      for dir in \
       ${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION} \
       ${TCL_PREFIX}/include \
-@@ -8794,7 +8794,7 @@ fi
- 
- if test "x$xc_with_tcl" != "x" ; then
-   case $target in
--    *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|*-*-openbsd*|OpenBSD-*)
-+    *-sunos4*|*-*-netbsd|*-*-netbsdelf|NetBSD-*|FreeBSD-*|OpenBSD-*|*-*-dragonfly*)
-       TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
-       TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
-       ;;
-@@ -9246,7 +9246,7 @@ fi
-       EXTRA_LIB_SPECS="-ldl"
-       ;;
- 
--    *-netbsd*|*-freebsd*|*-openbsd*)
-+    *-netbsd*|*-freebsd*|*-openbsd*|*-*-dragonfly*)
-       # Not available on all versions:  check for include file.
-       if test "${ac_cv_header_dlfcn_h+set}" = set; then
-   echo "$as_me:$LINENO: checking for dlfcn.h" >&5
-@@ -9393,8 +9393,8 @@ fi
- 
- 
-       if test "$test_ok" = yes; then
--        SHLIB_CFLAGS="-fpic"
--        SHLIB_LD="ld"
-+        SHLIB_CFLAGS="-fPIC"
-+        SHLIB_LD=$CC
-         LDDL_FLAGS="-shared"
-       fi
-       ;;
