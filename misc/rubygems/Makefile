@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.50 2013/02/03 16:04:04 taca Exp $
+# $NetBSD: Makefile,v 1.51 2013/06/11 14:55:54 taca Exp $
 
-DISTNAME=	rubygems-1.8.25
+DISTNAME=	rubygems-2.0.3
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://production.cf.rubygems.org/rubygems/ \
-		http://rubyforge.org/frs/download.php/75309/
+MASTER_SITES=	http://production.cf.rubygems.org/rubygems/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.rubygems.org/
+HOMEPAGE=	https://rubygems.org/
 COMMENT=	Ruby standard for publishing and managing third party libraries
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
