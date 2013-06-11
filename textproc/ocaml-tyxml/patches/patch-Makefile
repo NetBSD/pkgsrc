@@ -1,11 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2012/06/04 13:13:15 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2013/06/11 14:52:40 jaapb Exp $
 
-Changes to Makefile for DESTDIR support
---- Makefile.orig	2012-02-24 18:16:01.000000000 +0000
+--- Makefile.orig	2012-12-07 15:15:22.000000000 +0000
 +++ Makefile
-@@ -53,18 +53,18 @@ files/META.tyxml: files/META.in Makefile
+@@ -52,19 +52,20 @@ files/META.tyxml: files/META.in Makefile
+ 	  $< > $@
  
  install:
++	mkdir -p ${INSTALLDIR}
  	$(OCAMLFIND) install ${PACKAGENAME} \
 -	  -patch-version ${VERSION} \
 +	  -patch-version ${VERSION} -destdir ${INSTALLDIR} \
