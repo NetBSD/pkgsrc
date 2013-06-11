@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2003 2013/06/11 14:18:45 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2004 2013/06/11 14:56:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3159,3 +3159,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/coccinelle to 1.0.0rc17 [ryoon 2013-06-11]
 	Updated textproc/coccigrep to 1.12 [ryoon 2013-06-11]
 	Updated fonts/umefont-ttf to 0.452 [ryoon 2013-06-11]
+	Updated misc/rubygems to 2.0.3 [taca 2013-06-11]
