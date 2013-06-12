@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2016 2013/06/11 23:07:24 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.2017 2013/06/12 11:01:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3172,3 +3172,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/posh to 0.12 [makoto 2013-06-11]
 	Updated net/wireshark to 1.8.8 [tron 2013-06-11]
 	Updated devel/tradcpp to 0.2 [dholland 2013-06-11]
+	Updated devel/acr to 0.8.6 [ryoon 2013-06-12]
