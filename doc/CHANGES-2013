@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2023 2013/06/12 14:05:29 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2024 2013/06/12 14:09:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/RTx-Shredder [wiz 2013-06-12]
 	Updated devel/p5-Devel-LexAlias to 0.05 [wiz 2013-06-12]
 	Updated devel/p5-Scope-Upper to 0.22 [wiz 2013-06-12]
+	Removed devel/gdbada [wiz 2013-06-12]
