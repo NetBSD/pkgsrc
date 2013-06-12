@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2012/01/17 21:43:19 sbd Exp $
-#
+# $NetBSD: Makefile.common,v 1.11 2013/06/12 12:35:35 wiz Exp $
 
 DISTNAME=		ce-${VERSION}
 VERSION=		4.6
@@ -14,7 +13,7 @@ COMMENT=		Chet's Emacs: small, fast emacs-like editor
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-ce-malloc
 CONFIGURE_ARGS+=	--with-curses
 

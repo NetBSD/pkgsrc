@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2012/01/17 21:43:21 sbd Exp $
+# $NetBSD: Makefile.common,v 1.16 2013/06/12 12:35:36 wiz Exp $
 #
 
 DISTNAME=	catdoc-0.94.2
@@ -15,7 +15,7 @@ PATCHDIR=		${.CURDIR}/../../textproc/catdoc/patches
 USE_FEATURES=		glob
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_LIBDIR=	${PREFIX}/share
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
 CONFIGURE_ARGS+=	--with-install-root=${DESTDIR}
 
 CPPFLAGS+=		-Dunix -D__unix
