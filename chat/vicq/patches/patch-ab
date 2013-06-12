@@ -1,7 +1,22 @@
-$NetBSD: patch-ab,v 1.3 2007/12/29 21:29:55 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2013/06/12 12:11:49 wiz Exp $
 
---- ../../vicq.orig	Mon Apr 15 18:55:17 2002
-+++ ../../vicq
+--- vicq.orig	2002-04-15 16:55:17.000000000 +0000
++++ vicq	2013-06-12 12:09:25.000000000 +0000
+@@ -557,12 +557,12 @@
+ 
+ change status to 'Free for chat'
+ 
+-=back
+-
+ =item B<offline>
+ 
+ change status to 'Offline/Disconnect'
+ 
++=back
++
+ =head2 Contact list managment
+ 
+ =over 4
 @@ -2010,7 +2010,7 @@
  		$config{log_path} = expand_file($config{log_path});
  		$config{log_path}.='/' unless $config{log_path}=~/\/$/;
