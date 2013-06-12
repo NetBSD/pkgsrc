@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2013/06/12 20:25:18 drochner Exp $
+
+avoid pollution
+
+--- setup.py.orig	2013-05-15 19:13:31.000000000 +0000
++++ setup.py
+@@ -52,7 +52,7 @@ setup(
+     author_email="alastair@porter.net.nz",
+     url="https://github.com/alastair/python-musicbrainz-ngs",
+     packages=['musicbrainzngs'],
+-    package_data={'musicbrainzngs': ['CHANGES',
++    xpackage_data={'musicbrainzngs': ['CHANGES',
+                                      '../docs/*',
+                                      '../examples/*',
+                                      '../test/data/*.xml',
