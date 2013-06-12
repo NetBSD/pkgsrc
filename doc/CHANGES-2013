@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2017 2013/06/12 11:01:24 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2018 2013/06/12 12:00:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3173,3 +3173,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/wireshark to 1.8.8 [tron 2013-06-11]
 	Updated devel/tradcpp to 0.2 [dholland 2013-06-11]
 	Updated devel/acr to 0.8.6 [ryoon 2013-06-12]
+	Updated security/crypto++ to 5.6.2 [ryoon 2013-06-12]
