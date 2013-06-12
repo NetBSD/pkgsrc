@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12276 2013/06/12 11:01:24 ryoon Exp $
+$NetBSD: TODO,v 1.12277 2013/06/12 12:00:41 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -451,7 +451,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cpio-2.9
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
-	o cryptopp-5.6.0
 	o csound5-5.13
 	o cups-1.6.2
 	o cvs2p4-2.5.5 [schmonz]
