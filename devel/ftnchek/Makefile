@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/31 11:16:58 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/12 12:35:35 wiz Exp $
 
 DISTNAME=	ftnchek-3.2.2
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.dsm.fordham.edu/~ftnchek/
 COMMENT=	Static analyzer for Fortran programs
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec
+CONFIGURE_ARGS+=--libdir=${PREFIX}/libexec
 CONFIGURE_ARGS+=--disable-submodel
 
 USE_TOOLS+=	soelim
