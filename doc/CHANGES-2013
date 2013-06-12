@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2026 2013/06/12 14:49:48 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2027 2013/06/12 14:55:29 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/gdbada [wiz 2013-06-12]
 	Added devel/p5-Module-Install-AuthorTests version 0.002 [wiz 2013-06-12]
 	Added devel/p5-Module-Install-Repository version 0.06 [wiz 2013-06-12]
+	Updated editors/vim-share to 7.3.1140 [morr 2013-06-12]
