@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2012/05/16 16:16:46 bouyer Exp $
+$NetBSD: distinfo,v 1.14 2013/06/12 14:37:15 wiz Exp $
 
 SHA1 (sympa-6.1.11.tar.gz) = c4a175ad4af894262d83d39cfc148e0037d883e9
 RMD160 (sympa-6.1.11.tar.gz) = 4398d67353b2c6460b86892afa0bd417498eff9c
@@ -7,3 +7,7 @@ SHA1 (patch-aa) = c28355fd3fcc0cff74bdbf73859c1b9d0741e8df
 SHA1 (patch-ab) = c13e973fa3bc92f450aee00fad1553e003080c96
 SHA1 (patch-ac) = 87527936892090b310919ca55576aaeba795cb3b
 SHA1 (patch-af) = 901f6ddf04dffccc3b148c2465a23de6cd57f832
+SHA1 (patch-doc_man8_alias__manager.pod.in) = fa5f5c21ed169e27dbd0adfa695b1942642666cc
+SHA1 (patch-doc_man8_archived.pod.in) = 525a5dc49015c84659c92265d3af970ee8905453
+SHA1 (patch-doc_man8_bounced.pod.in) = 0e54fe7170d4f1db22be24682b03e204a6dc014b
+SHA1 (patch-doc_man8_sympa.pod) = f0d6218e315d29b38fa226b8b10a47efd1a8f182
