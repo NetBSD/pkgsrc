@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2028 2013/06/12 15:29:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2029 2013/06/12 20:28:59 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3183,3 +3183,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Module-Install-Repository version 0.06 [wiz 2013-06-12]
 	Updated editors/vim-share to 7.3.1140 [morr 2013-06-12]
 	Updated misc/stellarium to 0.12.1nb5 [wiz 2013-06-12]
+	Updated lang/yap to 6.3.3 [asau 2013-06-12]
