@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4029 2013/05/12 14:08:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.4030 2013/06/12 12:10:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -5322,7 +5322,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated ham/hamlib to 1.2.15.3 [gdt 2012-11-02]
 	Updated devel/bison to 2.6.4 [wiz 2012-11-03]
 	Updated audio/pulseaudio to 2.1 [ryoon 2012-11-03]
-	Updated ham/fldigi to 3.21.58 [makoto 2012-11-03]
+	Updated ham/fldigi to 3.21.58 [mef 2012-11-03]
 	Updated graphics/viewnior to 1.3 [ryoon 2012-11-03]
 	Added devel/py-hgtools version 2.0.2 [imil 2012-11-03]
 	Added net/py-irclib version 3.4.2 [imil 2012-11-03]
