@@ -1,0 +1,12 @@
+$NetBSD: patch-doc_man8_alias__manager.pod.in,v 1.1 2013/06/12 14:37:15 wiz Exp $
+
+Set encoding for perl-5.18.
+
+--- doc/man8/alias_manager.pod.in.orig	2010-03-30 10:10:09.000000000 +0000
++++ doc/man8/alias_manager.pod.in
+@@ -1,3 +1,5 @@
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ alias_manager (or alias_manager.pl) - manage Sympa aliases
