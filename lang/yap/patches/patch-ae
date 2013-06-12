@@ -1,14 +1,14 @@
-$NetBSD: patch-ae,v 1.1 2010/02/11 20:43:49 asau Exp $
+$NetBSD: patch-ae,v 1.2 2013/06/12 20:28:41 asau Exp $
 
---- C/c_interface.c.orig	2008-06-17 17:37:48.000000000 +0400
-+++ C/c_interface.c	2009-02-06 22:53:50.000000000 +0300
-@@ -326,6 +326,9 @@
- #if HAVE_STDARG_H
- #include <stdarg.h>
- #endif
-+#if USE_SYSTEM_MALLOC
-+#include <stdlib.h>
-+#endif
- #if HAVE_STRING_H
- #include <string.h>
- #endif
+--- C/c_interface.c.orig	2013-01-19 20:37:25.000000000 +0100
++++ C/c_interface.c	2013-03-07 12:03:41.320513600 +0100
+@@ -360,9 +360,6 @@
+ #ifdef CUT_C
+ #include "cut_c.h"
+ #endif /* CUT_C */
+-#if HAVE_MALLOC_H
+-#include <malloc.h>
+-#endif
+ 
+ #if !HAVE_STRNCPY
+ #define strncpy(X,Y,Z) strcpy(X,Y)

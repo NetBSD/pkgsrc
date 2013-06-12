@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.14 2012/06/16 19:34:49 asau Exp $
+$NetBSD: distinfo,v 1.15 2013/06/12 20:28:41 asau Exp $
 
-SHA1 (yap-6.2.2.tar.gz) = a02f80cac67c287645b2ced9502f5ea24a07f1c3
-RMD160 (yap-6.2.2.tar.gz) = 6355a618d3322802d14940591d031a5587ef3e59
-Size (yap-6.2.2.tar.gz) = 5499811 bytes
+SHA1 (yap-6.3.3.tar.gz) = d191e419e5cf74b11e003aae5fe148f3f2f26ac5
+RMD160 (yap-6.3.3.tar.gz) = 6c92880670d58b1e885cbb52709b61773db65808
+Size (yap-6.3.3.tar.gz) = 7879301 bytes
 SHA1 (patch-aa) = 113f443f57fac208632701fc7eddca18d98d240d
 SHA1 (patch-ad) = e3765c0d6729b4d531cdea59dc8e442055091d10
-SHA1 (patch-ae) = cf4a79ccd0c34e42ca3d8a108619a9974288cde6
+SHA1 (patch-ae) = 1bc060490ff5e2ba698a4f680a6d030f69683e01
 SHA1 (patch-af) = a042950ee63fac0f5863c3caa3f7c07227c46b4b
 SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
-SHA1 (patch-aj) = 61a53b4ef921270544edc79ddcb0f816824fd3ce
-SHA1 (patch-packages_swi-minisat2_C_Solver.C) = 1f4ec1fa258d61906d59d8a236d40653d16f0cd3
-SHA1 (patch-packages_swi-minisat2_C_SolverTypes.h) = 37b7ba75614340d09c9d82d5f29e66cbdfbded94
+SHA1 (patch-aj) = 9d8c1cde65c52f963f72b4f5364e611db96e59c7
+SHA1 (patch-packages_pldoc_Makefile.in) = b4c5fe1bd49fd29498b106615ee8015161e5211b
