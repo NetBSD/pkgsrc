@@ -1,4 +1,4 @@
-# $NetBSD: gmake.mk,v 1.2 2013/05/21 07:13:50 sbd Exp $
+# $NetBSD: gmake.mk,v 1.3 2013/06/12 20:37:43 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,4 +62,13 @@ _TOOLS_USE_PKGSRC.gmake!=						\
 .    endfor
 .  endif
 MAKEVARS+=	_TOOLS_USE_PKGSRC.gmake
+.endif
+
+# XXX Kludge to prevent pkgsrc's internal variable TARGET_ARCH for
+# cross-compilation from leaking into gmake's environment, where it
+# will break the default rules.  Remove either when we start using
+# `env -i' for the build phase or when we replace TARGET_ARCH by
+# TARGET_MACHINE_PLATFORM.
+.if defined(TARGET_ARCH)
+MAKE_ENV+=	TARGET_ARCH=
 .endif
