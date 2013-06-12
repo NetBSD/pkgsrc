@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2013/06/12 20:29:21 drochner Exp $
+
+Python-2.6 compatibility
+
+--- beetsplug/random.py.orig	2013-06-06 04:58:04.000000000 +0000
++++ beetsplug/random.py
+@@ -40,7 +40,9 @@ def random_item(lib, opts, args):
+         # Group the objects by artist so we can sample from them.
+         key = attrgetter('albumartist')
+         objs.sort(key=key)
+-        objs_by_artists = {artist: list(v) for artist, v in groupby(objs, key)}
++        objs_by_artists = {}
++        for artist, v in groupby(objs, key):
++            objs_by_artists[artist] = list(v)
+ 
+         objs = []
+         for _ in range(opts.number):

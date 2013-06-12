@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/04 13:27:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/06/12 20:29:21 drochner Exp $
 bin/beet
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -69,6 +69,9 @@ ${PYSITELIB}/beets/util/pipeline.pyo
 ${PYSITELIB}/beets/vfs.py
 ${PYSITELIB}/beets/vfs.pyc
 ${PYSITELIB}/beets/vfs.pyo
+${PYSITELIB}/beetsplug/beatport.py
+${PYSITELIB}/beetsplug/beatport.pyc
+${PYSITELIB}/beetsplug/beatport.pyo
 ${PYSITELIB}/beetsplug/bench.py
 ${PYSITELIB}/beetsplug/bench.pyc
 ${PYSITELIB}/beetsplug/bench.pyo
@@ -84,6 +87,12 @@ ${PYSITELIB}/beetsplug/chroma.pyo
 ${PYSITELIB}/beetsplug/convert.py
 ${PYSITELIB}/beetsplug/convert.pyc
 ${PYSITELIB}/beetsplug/convert.pyo
+${PYSITELIB}/beetsplug/discogs.py
+${PYSITELIB}/beetsplug/discogs.pyc
+${PYSITELIB}/beetsplug/discogs.pyo
+${PYSITELIB}/beetsplug/duplicates.py
+${PYSITELIB}/beetsplug/duplicates.pyc
+${PYSITELIB}/beetsplug/duplicates.pyo
 ${PYSITELIB}/beetsplug/echonest_tempo.py
 ${PYSITELIB}/beetsplug/echonest_tempo.pyc
 ${PYSITELIB}/beetsplug/echonest_tempo.pyo
@@ -122,6 +131,9 @@ ${PYSITELIB}/beetsplug/mbcollection.pyo
 ${PYSITELIB}/beetsplug/mbsync.py
 ${PYSITELIB}/beetsplug/mbsync.pyc
 ${PYSITELIB}/beetsplug/mbsync.pyo
+${PYSITELIB}/beetsplug/missing.py
+${PYSITELIB}/beetsplug/missing.pyc
+${PYSITELIB}/beetsplug/missing.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo
