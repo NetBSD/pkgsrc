@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/05/31 12:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/06/12 12:11:48 wiz Exp $
 
 DISTNAME=	vicq-0.4.1
 PKGREVISION=	8
@@ -9,25 +9,30 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq.old/
 COMMENT=	Simple icq client written in perl
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Term-ReadLine>=1.11:../../devel/p5-Term-ReadLine
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/vicq/Net/vICQ
+WRKSRC=			${WRKDIR}/vicq
+CONFIGURE_DIRS=		Net/vICQ
 TEST_TARGET=		# disabled
 
-REPLACE_PERL=		../../vicq
+REPLACE_PERL=		vicq
 PERL5_PACKLIST=		auto/Net/vICQ/.packlist
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/vicq
 
-post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/vicq/vicq ${DESTDIR}${PREFIX}/bin
-	${PREFIX}/bin/pod2man ${WRKDIR}/vicq/vicq --section=1 \
+post-build:
+	${PREFIX}/bin/pod2man ${WRKSRC}/vicq --section=1 \
 	    --release="vICQ ${DISTNAME:C/.*-//}" \
-	    --center="vICQ manual page" >  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vicq.1
-	${INSTALL_DATA} ${WRKDIR}/vicq/vicqrc.example ${DESTDIR}${PREFIX}/share/examples/vicq
+	    --center="vICQ manual page" >  ${WRKSRC}/vicq.1
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/vicq ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/vicqrc.example ${DESTDIR}${PREFIX}/share/examples/vicq
+	${INSTALL_DATA} ${WRKSRC}/vicq.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
