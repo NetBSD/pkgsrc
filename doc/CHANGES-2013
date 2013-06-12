@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2019 2013/06/12 12:07:04 mef Exp $
+$NetBSD: CHANGES-2013,v 1.2020 2013/06/12 12:08:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3169,7 +3169,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sbcl to 1.1.8 [asau 2013-06-11]
 	Updated lang/algol68g to 2.6 [asau 2013-06-11]
 	Updated lang/clojure to 1.5.1 [asau 2013-06-11]
-	Updated shells/posh to 0.12 [makoto 2013-06-11]
+	Updated shells/posh to 0.12 [mef 2013-06-11]
 	Updated net/wireshark to 1.8.8 [tron 2013-06-11]
 	Updated devel/tradcpp to 0.2 [dholland 2013-06-11]
 	Updated devel/acr to 0.8.6 [ryoon 2013-06-12]
