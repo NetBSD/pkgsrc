@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1748 2013/06/11 04:21:37 dholland Exp $
+# $NetBSD: Makefile,v 1.1749 2013/06/12 12:40:11 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -13,7 +13,6 @@ SUBDIR+=	ProjectCenter
 SUBDIR+=	RBTools
 SUBDIR+=	RTFM
 SUBDIR+=	RTx-RightsMatrix
-SUBDIR+=	RTx-Shredder
 SUBDIR+=	Renaissance
 SUBDIR+=	SDL
 SUBDIR+=	SDL-intro-en
