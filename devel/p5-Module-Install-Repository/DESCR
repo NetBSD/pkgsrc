@@ -1,0 +1,2 @@
+The Perl 5 module Module::Install::Repository automatically sets
+the repository URL from a svn/svk/git checkout.

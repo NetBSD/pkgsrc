@@ -1,0 +1,2 @@
+The Perl 5 module Module::Install::AuthorTests provides a way
+to define tests only to be run by the module authors.
