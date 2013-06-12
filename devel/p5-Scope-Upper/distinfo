@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/10/24 09:35:25 hiramatsu Exp $
+$NetBSD: distinfo,v 1.7 2013/06/12 14:05:14 wiz Exp $
 
-SHA1 (Scope-Upper-0.18.tar.gz) = 301dda3315db6789271420176c5de67acde43445
-RMD160 (Scope-Upper-0.18.tar.gz) = a74c1a5d9922be2254f8ff543757bfad4e6e5168
-Size (Scope-Upper-0.18.tar.gz) = 68660 bytes
+SHA1 (Scope-Upper-0.22.tar.gz) = e2d1ab6ceb1801371204073ac459b94876bb811a
+RMD160 (Scope-Upper-0.22.tar.gz) = 7e29ffbd9d6dfe1a64548fbb3ff8c7013c6a0d05
+Size (Scope-Upper-0.22.tar.gz) = 77710 bytes
