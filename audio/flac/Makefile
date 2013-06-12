@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2012/09/11 23:59:36 asau Exp $
+# $NetBSD: Makefile,v 1.47 2013/06/12 20:31:51 wiz Exp $
 
-DISTNAME=	flac-1.2.1
-PKGREVISION=	1
+DISTNAME=	flac-1.3.0
 CATEGORIES=	audio archivers
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
+MASTER_SITES=	http://downloads.xiph.org/releases/flac/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://flac.sourceforge.net/
+HOMEPAGE=	http://xiph.org/flac/
 COMMENT=	Free lossless audio codec
 LICENSE=	modified-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2.1
 
