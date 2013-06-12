@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2020 2013/06/12 12:08:46 mef Exp $
+$NetBSD: CHANGES-2013,v 1.2021 2013/06/12 12:40:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/acr to 0.8.6 [ryoon 2013-06-12]
 	Updated security/crypto++ to 5.6.2 [ryoon 2013-06-12]
 	Updated shells/posh to 0.12.1 [mef 2013-06-12]
+	Removed devel/RTx-Shredder [wiz 2013-06-12]
