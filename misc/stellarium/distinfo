@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2013/05/14 12:41:34 joerg Exp $
+$NetBSD: distinfo,v 1.29 2013/06/12 15:29:13 wiz Exp $
 
 SHA1 (stellarium-0.12.1.tar.gz) = 0a7fbe913d4e37e6ff281f81e67dc7831796b41c
 RMD160 (stellarium-0.12.1.tar.gz) = 5b0d181388d3e37b285fc2be8953832498d7b8ca
@@ -6,6 +6,7 @@ Size (stellarium-0.12.1.tar.gz) = 74127605 bytes
 SHA1 (patch-ab) = 5ecb4a06f44520ec3fb3f17816b1f84dd2bcd28c
 SHA1 (patch-ad) = 8257570ab31b25e4b90714125d5b8c7bfebd7240
 SHA1 (patch-ae) = e6ee27b2b0914eb25a7e35b58dcadefb0fd349e0
+SHA1 (patch-doc_stellarium.pod.cmake) = 654973a21459f86857aa674000cdba42ae2b8e01
 SHA1 (patch-src_StelMainGraphicsView.cpp) = 4428ce8676784116b39a2e2ea692940f5b2c8f97
 SHA1 (patch-src_core_StelUtils.cpp) = 0693cd4832eb06f25413b76bb4d00a681b992a88
 SHA1 (patch-src_core_modules_Skybright.cpp) = 7b6369fce6fa77b7007023136d7e8aebafd5c627
