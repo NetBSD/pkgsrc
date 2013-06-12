@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1750 2013/06/12 14:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.1751 2013/06/12 14:49:09 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -919,9 +919,11 @@ SUBDIR+=	p5-Module-ExtractUse
 SUBDIR+=	p5-Module-Find
 SUBDIR+=	p5-Module-Implementation
 SUBDIR+=	p5-Module-Install
+SUBDIR+=	p5-Module-Install-AuthorTests
 SUBDIR+=	p5-Module-Install-PadrePlugin
 SUBDIR+=	p5-Module-Install-RTx
 SUBDIR+=	p5-Module-Install-ReadmeFromPod
+SUBDIR+=	p5-Module-Install-Repository
 SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Install-XSUtil
 SUBDIR+=	p5-Module-Load
