@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/14 09:25:04 abs Exp $
+$NetBSD: distinfo,v 1.2 2013/06/12 13:51:03 wiz Exp $
 
-SHA1 (Devel-LexAlias-0.04.tar.gz) = 8075bc5efa95247c293f5fc9568f17c961bb7965
-RMD160 (Devel-LexAlias-0.04.tar.gz) = 4be3f519225e1ba491f91fcfdb893f2908d144d5
-Size (Devel-LexAlias-0.04.tar.gz) = 2888 bytes
+SHA1 (Devel-LexAlias-0.05.tar.gz) = 1b4cfecfed53761916f242a49056a3134cd3929d
+RMD160 (Devel-LexAlias-0.05.tar.gz) = d1c52eab4c44d49f3d73c18c43276687872eaf98
+Size (Devel-LexAlias-0.05.tar.gz) = 3123 bytes
