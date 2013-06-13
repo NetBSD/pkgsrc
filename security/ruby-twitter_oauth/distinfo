@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/12/23 07:09:36 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/06/13 13:22:42 obache Exp $
 
-SHA1 (twitter_oauth-0.4.4.gem) = 897222ae249d29e4c4c02162a0d34399883654a3
-RMD160 (twitter_oauth-0.4.4.gem) = ffe689f2b681cd4a961a350707d0e094c612a14d
-Size (twitter_oauth-0.4.4.gem) = 11776 bytes
+SHA1 (twitter_oauth-0.4.92.gem) = 69b683f27694178958f6fafdbe2e946cf08e2850
+RMD160 (twitter_oauth-0.4.92.gem) = bb1e81ab2d280d664abb3596379a16783a59b977
+Size (twitter_oauth-0.4.92.gem) = 13312 bytes
