@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/16 12:26:20 obache Exp $
-${RUBY_VENDORARCHLIB}/clutter.${RUBY_DLEXT}

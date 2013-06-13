@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/05/06 17:36:33 dholland Exp $
-
-SHA1 (rbclutter-0.8.0.tar.gz) = 79de176bd8e58e2004a426701772fd7218c3a8ee
-RMD160 (rbclutter-0.8.0.tar.gz) = 83e1d158e55d139c199f443a180df57c966510ab
-Size (rbclutter-0.8.0.tar.gz) = 219540 bytes
-SHA1 (patch-aa) = dca66284911305b023059308eb48c624dde73eab
-SHA1 (patch-ab) = 9dfe8538376477fae291a27b9aa7c7d0790e4634
-SHA1 (patch-clutter-gst_rbcluttergst_h) = 34b3d869787395ae99cedbb465f8efb9bfff8352
-SHA1 (patch-clutter_rbclutter_h) = 98ec7996fd354a346eee332303e56d60dff8d859
