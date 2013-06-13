@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1 2013/06/13 14:27:50 joerg Exp $
+
+--- configure.in.orig	2013-06-13 11:02:41.000000000 +0000
++++ configure.in
+@@ -408,7 +408,7 @@ else   # -z "${LIBXML2}"
+ #include <libxml/parser.h>
+ #endif
+ int 
+-main(int argc, char *argv)
++main(int argc, char **argv)
+ {
+   xmlCheckVersion(20000);
+   return(0);
