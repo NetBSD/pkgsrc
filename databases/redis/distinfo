@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/06/13 17:41:34 mspo Exp $
+
+SHA1 (redis-2.6.13.tar.gz) = 2ef8ea6a67465b6c5a5ea49241313d3dbc0de11b
+RMD160 (redis-2.6.13.tar.gz) = 1ec794536cb0d920b1fdabebf4c372a1320ab0e9
+Size (redis-2.6.13.tar.gz) = 994331 bytes
+SHA1 (patch-ab) = 1faa0907ec5a47fb1f4f325a3002725006477466
+SHA1 (patch-ac) = 51f06c5a0724cadd19acca5f8319d652d70bb251
