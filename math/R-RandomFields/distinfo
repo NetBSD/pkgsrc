@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/01 17:46:27 brook Exp $
+$NetBSD: distinfo,v 1.2 2013/06/13 14:27:21 joerg Exp $
 
 SHA1 (R/RandomFields_2.0.54.tar.gz) = 58ba27eaf42977552ae49fb2044871b32340c691
 RMD160 (R/RandomFields_2.0.54.tar.gz) = 216538e7ec971624b258dfc4d37f5be999c45160
 Size (R/RandomFields_2.0.54.tar.gz) = 493065 bytes
+SHA1 (patch-src_MLE.cc) = 859ea7c42d6b680f7f03d81292f34df75249558f
+SHA1 (patch-src_getNset.cc) = 49d769a7254de108442a97d0966acb4110c9306f
+SHA1 (patch-src_userinterfaces.cc) = 195b7e9c27b297c7e13124c873b159bf19969eae
