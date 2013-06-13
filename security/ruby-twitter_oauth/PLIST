@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/11 08:53:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/13 13:22:42 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.textile
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/lib/twitter_oauth/direct_messages.rb
 ${GEM_LIBDIR}/lib/twitter_oauth/favorites.rb
 ${GEM_LIBDIR}/lib/twitter_oauth/friendships.rb
 ${GEM_LIBDIR}/lib/twitter_oauth/geo.rb
+${GEM_LIBDIR}/lib/twitter_oauth/help.rb
 ${GEM_LIBDIR}/lib/twitter_oauth/lists.rb
 ${GEM_LIBDIR}/lib/twitter_oauth/notifications.rb
 ${GEM_LIBDIR}/lib/twitter_oauth/saved_searches.rb
