@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2040 2013/06/13 13:53:35 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2041 2013/06/13 14:03:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3200,3 +3200,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed grahics/ruby-clutter-core [obache 2013-06-13]
 	Removed grahics/ruby-clutter-gtk [obache 2013-06-13]
 	Removed multimedia/ruby-clutter-gst [obache 2013-06-13]
+	Removed grahics/clutter08 [obache 2013-06-13]
+	Removed grahics/clutter08-gtk [obache 2013-06-13]
+	Removed grahics/clutter-cairo [obache 2013-06-13]
+	Removed multimedia/clutter08-gst [obache 2013-06-13]
