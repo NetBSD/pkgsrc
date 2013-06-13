@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/04/07 10:57:19 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/13 13:32:53 obache Exp $
 
-DISTNAME=	notify-0.5.1
+DISTNAME=	notify-0.5.2
 CATEGORIES=	security
 
 MAINTAINER=	obache@NetBSD.org
