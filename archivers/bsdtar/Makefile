@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/06/13 16:25:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/13 21:36:46 jperkin Exp $
 #
 
 DISTNAME=	bsdtar-2.8.4
@@ -19,6 +19,9 @@ GNU_CONFIGURE=	yes
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
+CHECK_BUILTIN.openssl:=	yes
+.include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl:=	no
 
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
 CPPFLAGS+=	-I${WRKDIR}/bzip2
@@ -28,14 +31,16 @@ LDFLAGS+=	-L${WRKDIR}/bzip2
 CPPFLAGS+=	-I${WRKDIR}/zlib
 LDFLAGS+=	-L${WRKDIR}/zlib
 .endif
+.if empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--without-openssl
+.endif
 
 FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
 FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
 
 CONFIGURE_ARGS+=	--enable-bsdtar=static --disable-cpio \
-			--disable-shared --without-xml2 --without-expat \
-			--without-openssl
+			--disable-shared --without-xml2 --without-expat
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
