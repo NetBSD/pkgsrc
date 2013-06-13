@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2012/09/11 19:46:56 asau Exp $
+# $NetBSD: Makefile,v 1.37 2013/06/13 16:24:13 jperkin Exp $
 #
 
 DISTNAME=	libarchive-2.8.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--disable-bsdtar --without-expat --without-xml2 \
-			--disable-bsdcpio
+			--disable-bsdcpio --without-openssl
 
 do-extract:
 	${CP} -r ${FILESDIR} ${WRKSRC}
