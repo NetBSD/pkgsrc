@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2038 2013/06/13 13:22:59 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2039 2013/06/13 13:33:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-json to 1.8.0 [obache 2013-06-13]
 	Updated textproc/ruby-json-pure to 1.8.0 [obache 2013-06-13]
 	Updated security/ruby-twitter_oauth to 0.4.92 [obache 2013-06-13]
+	Updated sysutils/ruby-notify to 0.5.2 [obache 2013-06-13]
