@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/09/11 19:46:53 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/13 16:25:19 jperkin Exp $
 #
 
 DISTNAME=	bsdtar-2.8.4
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -33,7 +34,8 @@ FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
 
 CONFIGURE_ARGS+=	--enable-bsdtar=static --disable-cpio \
-			--disable-shared --without-xml2 --without-expat
+			--disable-shared --without-xml2 --without-expat \
+			--without-openssl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
