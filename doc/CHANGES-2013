@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2047 2013/06/13 17:42:30 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.2048 2013/06/13 20:11:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3210,3 +3210,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/libarchive to 2.8.4nb2 [jperkin 2013-06-13]
 	Updated archivers/bsdtar to 2.8.4nb1 [jperkin 2013-06-13]
 	Updated databases/redis to 2.6.13 [mspo 2013-06-13]
+	Updated lang/nodejs to 0.10.11 [fhajny 2013-06-13]
