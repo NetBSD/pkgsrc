@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/05/09 13:57:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/06/13 21:41:02 joerg Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -166,6 +166,7 @@ share/vim/${VIM_SUBDIR}/lang/fi/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/fr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ga/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/it/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/ja.euc-jp/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ja.sjis/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ja/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ko.UTF-8/LC_MESSAGES/vim.mo
