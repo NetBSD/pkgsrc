@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.651 2013/06/09 13:25:56 obache Exp $
+# $NetBSD: Makefile,v 1.652 2013/06/13 13:47:25 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -414,10 +414,6 @@ SUBDIR+=	resize_image
 SUBDIR+=	ristretto
 SUBDIR+=	ruby-RMagick
 SUBDIR+=	ruby-chunky_png
-SUBDIR+=	ruby-clutter
-SUBDIR+=	ruby-clutter-cairo
-SUBDIR+=	ruby-clutter-core
-SUBDIR+=	ruby-clutter-gtk
 SUBDIR+=	ruby-color
 SUBDIR+=	ruby-color-japanese
 SUBDIR+=	ruby-color-tools
