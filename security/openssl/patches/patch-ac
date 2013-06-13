@@ -1,11 +1,12 @@
-$NetBSD: patch-ac,v 1.40 2013/02/08 15:58:02 jperkin Exp $
+$NetBSD: patch-ac,v 1.41 2013/06/13 07:51:26 adam Exp $
 
 * Avoid -fast on Solaris, creates non-portable packages which depend on
   host-specific CPU features.
+* Allow absolute paths in CFLAGS, e.g. -isysroot /path
 
 --- Configure.orig	2012-03-14 22:20:40.000000000 +0000
 +++ Configure
-@@ -223,8 +223,8 @@ my %table=(
+@@ -225,8 +225,8 @@ my %table=(
  "solaris64-x86_64-gcc","gcc:-m64 -O3 -Wall -DL_ENDIAN::-D_REENTRANT::-lsocket -lnsl -ldl:SIXTY_FOUR_BIT_LONG RC4_CHUNK DES_INT DES_UNROLL:${x86_64_asm}:elf:dlfcn:solaris-shared:-fPIC:-m64 -shared -static-libgcc:.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR):::/64",
   
  #### Solaris x86 with Sun C setups
@@ -16,7 +17,7 @@ $NetBSD: patch-ac,v 1.40 2013/02/08 15:58:02 jperkin Exp $
  
  #### SPARC Solaris with GNU C setups
  "solaris-sparcv7-gcc","gcc:-O3 -fomit-frame-pointer -Wall -DB_ENDIAN -DBN_DIV2W::-D_REENTRANT::-lsocket -lnsl -ldl:BN_LLONG RC4_CHAR RC4_CHUNK DES_UNROLL BF_PTR:${no_asm}:dlfcn:solaris-shared:-fPIC:-shared:.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
-@@ -336,6 +336,7 @@ my %table=(
+@@ -338,6 +338,7 @@ my %table=(
  #
  "osf1-alpha-gcc", "gcc:-O3::(unknown):::SIXTY_FOUR_BIT_LONG RC4_CHUNK DES_UNROLL DES_RISC1:${alpha_asm}:dlfcn:alpha-osf1-shared:::.so",
  "osf1-alpha-cc",  "cc:-std1 -tune host -O4 -readonly_strings::(unknown):::SIXTY_FOUR_BIT_LONG RC4_CHUNK:${alpha_asm}:dlfcn:alpha-osf1-shared:::.so",
@@ -24,7 +25,7 @@ $NetBSD: patch-ac,v 1.40 2013/02/08 15:58:02 jperkin Exp $
  "tru64-alpha-cc", "cc:-std1 -tune host -fast -readonly_strings::-pthread:::SIXTY_FOUR_BIT_LONG RC4_CHUNK:${alpha_asm}:dlfcn:alpha-osf1-shared::-msym:.so",
  
  ####
-@@ -421,6 +422,25 @@ my %table=(
+@@ -423,6 +424,25 @@ my %table=(
  "BSD-ia64",	"gcc:-DL_ENDIAN -DTERMIOS -O3 -Wall::${BSDthreads}:::SIXTY_FOUR_BIT_LONG RC4_CHUNK DES_UNROLL DES_INT:${ia64_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  "BSD-x86_64",	"gcc:-DL_ENDIAN -DTERMIOS -O3 -Wall::${BSDthreads}:::SIXTY_FOUR_BIT_LONG RC4_CHUNK DES_INT DES_UNROLL:${x86_64_asm}:elf:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  
@@ -50,7 +51,23 @@ $NetBSD: patch-ac,v 1.40 2013/02/08 15:58:02 jperkin Exp $
  "bsdi-elf-gcc",     "gcc:-DPERL5 -DL_ENDIAN -fomit-frame-pointer -O3 -march=i486 -Wall::(unknown)::-ldl:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  
  "nextstep",	"cc:-O -Wall:<libc.h>:(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:::",
-@@ -1672,7 +1692,7 @@ while (<IN>)
+@@ -865,13 +885,13 @@ PROCESS_ARGS:
+ 			# The check for the option is there so scripts aren't
+ 			# broken
+ 			}
+-		elsif (/^[-+]/)
++		elsif (/^[-+\/]/)
+ 			{
+ 			if (/^-[lL](.*)$/ or /^-Wl,/)
+ 				{
+ 				$libs.=$_." ";
+ 				}
+-			elsif (/^-[^-]/ or /^\+/)
++			elsif (/^-[^-]/ or /^\+/ or /^\//)
+ 				{
+ 				$_ =~ s/%([0-9a-f]{1,2})/chr(hex($1))/gei;
+ 				$flags.=$_." ";
+@@ -1674,7 +1694,7 @@ while (<IN>)
  	elsif ($shared_extension ne "" && $shared_extension =~ /^\.s([ol])\.[^\.]*\.[^\.]*$/)
  		{
  		my $sotmp = $1;

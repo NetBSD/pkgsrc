@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.32 2013/02/01 12:34:15 hans Exp $
+# $NetBSD: builtin.mk,v 1.33 2013/06/13 07:51:26 adam Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -265,7 +265,7 @@ BUILD_DEFS+=	SSLDIR SSLCERTS SSLKEYS
 # If we are using the builtin version, check whether it has a *.pc
 # files or not.  If the latter, generate fake ones.
 .  if !empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
-BUILDLINK_TARGETS+=     openssl-fake-pc
+BUILDLINK_TARGETS+=	openssl-fake-pc
 
 .    if !defined(HAS_OPENSSL_FAKE_PC)
 HAS_OPENSSL_FAKE_PC=
