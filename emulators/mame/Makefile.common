@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2013/01/21 12:53:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2013/06/13 14:27:59 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -28,6 +28,8 @@ UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile
 # 0.141 has too many conversion warnings
 MAKE_ENV=		NOWERROR=1
+# we don't want to pull in qt4
+MAKE_ENV=		NO_USE_QTDEBUG=1
 
 .  include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN:Mbig}
