@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2013/06/13 21:43:26 joerg Exp $
+
+--- configure.orig	2013-06-13 17:12:24.000000000 +0000
++++ configure
+@@ -3984,10 +3984,10 @@ test "$make_type" = "GNU Make" && GNUMAK
+ echo "${ECHO_T}$make_type" >&6; }
+ 
+ 
+-{ echo "$as_me:$LINENO: checking whether the linker accepts -export-dynamic" >&5
+-echo $ECHO_N "checking whether the linker accepts -export-dynamic... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking whether the linker accepts -Wl,-export-dynamic" >&5
++echo $ECHO_N "checking whether the linker accepts -Wl,-export-dynamic... $ECHO_C" >&6; }
+ OLDLDFLAGS=$LDFLAGS
+-LDFLAGS="$LDFLAGS -export-dynamic"
++LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
+ if test "$cross_compiling" = yes; then
+   ac_export_dynamic=no
+ else

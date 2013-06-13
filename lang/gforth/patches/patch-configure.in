@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.in,v 1.1 2013/06/13 21:43:26 joerg Exp $
+
+--- configure.in.orig	2013-06-13 17:24:38.000000000 +0000
++++ configure.in
+@@ -182,9 +182,9 @@ test "$make_type" = "GNU Make" && GNUMAK
+ AC_MSG_RESULT($make_type)
+ AC_SUBST(GNUMAKE)
+ 
+-AC_MSG_CHECKING([whether the linker accepts -export-dynamic])
++AC_MSG_CHECKING([whether the linker accepts -Wl,-export-dynamic])
+ OLDLDFLAGS=$LDFLAGS
+-LDFLAGS="$LDFLAGS -export-dynamic"
++LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
+ dnl AC_TRY_LINK gives false positive on rs6000-ibm-aix4.2.1.0
+ dnl AC_TRY_LINK(,,ac_export_dynamic=yes,ac_export_dynamic=no)
+ AC_TRY_RUN(main(){exit(0);},ac_export_dynamic=yes,ac_export_dynamic=no,ac_export_dynamic=no)
