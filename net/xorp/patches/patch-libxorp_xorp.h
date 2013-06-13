@@ -1,4 +1,4 @@
-$NetBSD: patch-libxorp_xorp.h,v 1.2 2012/07/03 17:36:10 joerg Exp $
+$NetBSD: patch-libxorp_xorp.h,v 1.3 2013/06/13 21:48:09 joerg Exp $
 
 --- libxorp/xorp.h.orig	2009-01-05 18:30:58.000000000 +0000
 +++ libxorp/xorp.h
@@ -10,7 +10,18 @@ $NetBSD: patch-libxorp_xorp.h,v 1.2 2012/07/03 17:36:10 joerg Exp $
  using namespace std;
  #endif
  
-@@ -173,9 +174,7 @@ using namespace std::rel_ops;
+@@ -130,10 +131,6 @@ using namespace std;
+ 
+ #include "xorp_osdep_mid.h"
+ 
+-#if defined (__cplusplus) && !defined(__STL_NO_NAMESPACES)
+-using namespace std::rel_ops;
+-#endif
+-
+ /*
+  * Misc. definitions that may be missing from the system header files.
+  * TODO: this should go to a different header file.
+@@ -173,9 +170,7 @@ using namespace std::rel_ops;
  #define FALSE (0)
  #define TRUE (!FALSE)
  #endif /* TRUE, FALSE */
