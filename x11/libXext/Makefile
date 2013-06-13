@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/06/01 06:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/06/13 22:30:41 joerg Exp $
 
 DISTNAME=		libXext-1.3.2
 CATEGORIES=		x11 devel
@@ -25,12 +25,8 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-.endif
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

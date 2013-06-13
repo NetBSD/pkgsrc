@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2013/06/04 22:17:28 tron Exp $
+# $NetBSD: Makefile,v 1.79 2013/06/13 22:30:41 joerg Exp $
 #
 
 DISTNAME=	xorg-server-1.12.4
@@ -125,13 +125,8 @@ BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.11
 BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.1.0
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-.endif
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "options.mk"
 
