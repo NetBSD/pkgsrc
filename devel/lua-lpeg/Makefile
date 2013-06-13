@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/01/06 13:49:26 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/13 22:13:58 alnsn Exp $
 #
 
-DISTNAME=	lpeg-0.10.2
+DISTNAME=	lpeg-0.12
 PKGNAME=	${DISTNAME:S/lpeg/lua-lpeg/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.inf.puc-rio.br/~roberto/lpeg/
@@ -14,17 +14,20 @@ LICENSE=	mit
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile
-BUILD_TARGET=	lpeg.so
+BUILD_TARGET=	linux
+TEST_TARGET=	test
 
-LPEG_PIC=	-fPIC
-CFLAGS+=	${LPEG_PIC}
+SUBST_CLASSES+=		inc-path
+SUBST_STAGE.inc-path=	pre-build
+SUBST_MESSAGE.inc-path=	Fixing Lua include path.
+SUBST_FILES.inc-path=	makefile
+SUBST_SED.inc-path=	-e 's|^LUADIR[ \].*|LUADIR = ${PREFIX}/include|'
 
-SUBST_CLASSES+=		pic
-SUBST_STAGE.pic=	pre-build
-SUBST_MESSAGE.pic=	Fixing PIC flag.
-SUBST_FILES.pic=	makefile
-SUBST_SED.pic=		-e 's/-fpic/${LPEG_PIC}/g'
-SUBST_SED.pic+=		-e 's/^CFLAGS[ ]*=/CFLAGS+=/'
+SUBST_CLASSES+=		interp
+SUBST_STAGE.interp=	pre-build
+SUBST_MESSAGE.interp=	Fixing Lua include path.
+SUBST_FILES.interp=	test.lua
+SUBST_SED.interp=	-e 's|^\#!.*|\#!${PREFIX}/bin/lua|'
 
 LPEG_HTML_DIR=		share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR} ${LPEG_HTML_DIR}
@@ -35,6 +38,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/re.lua \
 	                ${DESTDIR}${PREFIX}/${LUA_LDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.html \
+	                ${DESTDIR}${PREFIX}/${LPEG_HTML_DIR}
+	${INSTALL_DATA} ${WRKSRC}/lpeg-128.gif \
+	                ${DESTDIR}${PREFIX}/${LPEG_HTML_DIR}
+	${INSTALL_DATA} ${WRKSRC}/HISTORY \
 	                ${DESTDIR}${PREFIX}/${LPEG_HTML_DIR}
 
 .include "../../lang/lua/module.mk"
