@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2044 2013/06/13 14:28:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2045 2013/06/13 16:24:28 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/MesaLib to 7.11.2nb2 [wiz 2013-06-13]
 	Updated emulators/mame to 0.149 [wiz 2013-06-13]
 	Updated emulators/mess to 0.149 [wiz 2013-06-13]
+	Updated archivers/libarchive to 2.8.4nb2 [jperkin 2013-06-13]
