@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/14 11:04:35 obache Exp $
-
-SHA1 (clutter-cairo-0.8.2.tar.gz) = 2ef3c4383166c5ed77060e206f1240d70b3451ed
-RMD160 (clutter-cairo-0.8.2.tar.gz) = 01780bb414e7c398bfaa37cd365baec55cd5b4de
-Size (clutter-cairo-0.8.2.tar.gz) = 341500 bytes
