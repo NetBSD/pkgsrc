@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/06/04 22:16:25 tron Exp $
+# $NetBSD: Makefile,v 1.32 2013/06/13 14:26:14 joerg Exp $
 
 DISTNAME=	Imaging-1.1.7
 PKGNAME=	${PYPKGPREFIX}-imagingtk-1.1.7
@@ -29,4 +29,5 @@ post-install:
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
