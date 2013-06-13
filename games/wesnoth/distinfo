@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2012/11/20 07:47:32 adam Exp $
+$NetBSD: distinfo,v 1.49 2013/06/13 21:41:48 joerg Exp $
 
 SHA1 (wesnoth-1.10.5.tar.bz2) = 13761982c63ef776fa72044d5391ca4ae970a25a
 RMD160 (wesnoth-1.10.5.tar.bz2) = 39788ebb7e77a948161f02a1620d2fa283fa6051
@@ -7,3 +7,5 @@ SHA1 (patch-CMakeLists.txt) = 1f17a95793db0d311508f1ff93f9aacedc7782f9
 SHA1 (patch-ae) = 9e0ee531c33da80565791d81f716b313fa85af18
 SHA1 (patch-af) = 411fda4c3f19b68cab0b0a702d2b012066e3cdb4
 SHA1 (patch-ah) = b63017ae43c4748aced31ab64dc141682e535ff2
+SHA1 (patch-src_construct__dialog.hpp) = 9c317fd98cffd5dd9948bdf7c08de1182321a269
+SHA1 (patch-src_filechooser.cpp) = dd5ab8a45a72616d7678f3d7b6783a094c94bce1
