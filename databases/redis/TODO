@@ -2,3 +2,4 @@ CVE-2013-0178
 CVE-2013-0180
 
 On a pkgsrc default install, redis listens to more than localhost.
+-- The NetBSD example rc script no longer does this
