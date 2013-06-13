@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/06/04 07:57:13 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/06/13 22:30:41 joerg Exp $
 
 DISTNAME=		libX11-1.6.0
 CATEGORIES=		x11 devel
@@ -35,14 +35,8 @@ LDFLAGS.MirBSD+=	-pthread
 
 BUILDLINK_API_DEPENDS.libxcb+=libxcb>=1.8.1
 
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-.endif
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
