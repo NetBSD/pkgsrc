@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2013/02/06 23:22:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/13 13:02:38 obache Exp $
 
-DISTNAME=	ruby-ldap-0.9.12
+DISTNAME=	ruby-ldap-0.9.13
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
-PKGREVISION=	2
 CATEGORIES=	databases ruby
 
 MAINTAINER=	obache@NetBSD.org
