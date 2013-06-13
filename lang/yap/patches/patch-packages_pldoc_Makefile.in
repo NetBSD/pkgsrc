@@ -1,0 +1,13 @@
+$NetBSD: patch-packages_pldoc_Makefile.in,v 1.1 2013/06/13 21:44:06 joerg Exp $
+
+--- packages/pldoc/Makefile.in.orig	2013-06-13 17:35:04.000000000 +0000
++++ packages/pldoc/Makefile.in
+@@ -37,7 +37,7 @@ html-install:	install-examples
+ install-examples::
+ 		mkdir -p $(DESTDIR)$(EXDIR)
+ 		(cd $(srcdir)/server && $(INSTALL_DATA) $(EXAMPLES) $(DESTDIR)$(EXDIR))
+-		(cd server && $(INSTALL_PROGRAM) $(EXAMPLEEXE) $(DESTDIR)$(EXDIR))
++		(cd server && $(INSTALL_SCRIPT) $(EXAMPLEEXE) $(DESTDIR)$(EXDIR))
+ 
+ uninstall::
+ 		(cd $(LIBDIR) && rm -f $(LIBPL))
