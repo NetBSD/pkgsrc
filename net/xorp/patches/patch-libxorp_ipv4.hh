@@ -1,8 +1,24 @@
-$NetBSD: patch-libxorp_ipv4.hh,v 1.1 2013/05/30 15:37:24 joerg Exp $
+$NetBSD: patch-libxorp_ipv4.hh,v 1.2 2013/06/13 21:48:09 joerg Exp $
 
---- libxorp/ipv4.hh.orig	2013-04-29 19:22:58.000000000 +0000
+--- libxorp/ipv4.hh.orig	2009-01-05 18:30:58.000000000 +0000
 +++ libxorp/ipv4.hh
-@@ -506,7 +506,7 @@ public:
+@@ -273,6 +273,15 @@ public:
+      * right-hand operand.
+      */
+     bool operator<(const IPv4& other) const;
++    bool operator>(const IPv4& other) const {
++	return other < *this;
++    }
++    bool operator>=(const IPv4& other) const {
++	return *this > other || *this == other;
++    }
++    bool operator<=(const IPv4& other) const {
++	return *this < other || *this == other;
++    }
+ 
+     /**
+      * Equality Operator
+@@ -506,7 +515,7 @@ public:
       * @return address size in number of octets.
       */
      static size_t addr_bytelen() {
