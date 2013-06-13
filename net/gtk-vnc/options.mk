@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2012/08/20 11:34:58 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2013/06/13 07:02:34 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk-vnc
-PKG_SUPPORTED_OPTIONS=	python plugin vnc-sasl pulseaudio
+PKG_SUPPORTED_OPTIONS=	python vnc-sasl pulseaudio
 PKG_SUGGESTED_OPTIONS=	python vnc-sasl
 
 .include "../../mk/bsd.options.mk"
@@ -14,13 +14,6 @@ PLIST.python=	yes
 CONFIGURE_ARGS+=	--with-python
 .else
 CONFIGURE_ARGS+=	--without-python
-.endif
-
-PLIST_VARS+=	plugin
-.if !empty(PKG_OPTIONS:Mplugin)
-.include "../../devel/xulrunner/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-plugin=yes
-PLIST.plugin=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mvnc-sasl)

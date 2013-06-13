@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/06/06 12:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2013/06/13 07:02:34 obache Exp $
 #
 
-DISTNAME=	gtk-vnc-0.5.1
-PKGREVISION=	11
+DISTNAME=	gtk-vnc-0.5.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-vnc/0.5/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/gtk-vnc
 COMMENT=	VNC viewer widget for GTK
+LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--with-coroutine=gthread
 
 # idea from arch linux PKGBUILD
 CONFIGURE_SCRIPT=	../configure
+CONFIGURE_DIRS=		gtk2-build gtk3-build
 BUILD_DIRS=		gtk2-build gtk3-build
 INSTALL_DIRS=		gtk2-build gtk3-build
 
@@ -36,10 +37,10 @@ pre-configure:
 
 do-configure:
 	cd ${WRKSRC}/gtk2-build \
-	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} \
+	&& ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} \
 	--with-gtk=2.0
 	cd ${WRKSRC}/gtk3-build \
-	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} \
+	&& ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} \
 	--with-gtk=3.0
 
 #VIEW_REQUIRED=0.6.0
