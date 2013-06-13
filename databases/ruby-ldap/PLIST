@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/03 02:16:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/13 13:02:38 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
@@ -30,33 +30,6 @@ ${GEM_LIBDIR}/test/bind-ssl.rb
 ${GEM_LIBDIR}/test/bind.rb
 ${GEM_LIBDIR}/test/compare.rb
 ${GEM_LIBDIR}/test/conf.rb
-${GEM_LIBDIR}/test/cookbooks/apt/metadata.rb
-${GEM_LIBDIR}/test/cookbooks/apt/providers/repository.rb
-${GEM_LIBDIR}/test/cookbooks/apt/recipes/cacher-client.rb
-${GEM_LIBDIR}/test/cookbooks/apt/recipes/cacher.rb
-${GEM_LIBDIR}/test/cookbooks/apt/recipes/default.rb
-${GEM_LIBDIR}/test/cookbooks/apt/resources/repository.rb
-${GEM_LIBDIR}/test/cookbooks/nginx/attributes/default.rb
-${GEM_LIBDIR}/test/cookbooks/nginx/definitions/nginx_site.rb
-${GEM_LIBDIR}/test/cookbooks/nginx/metadata.rb
-${GEM_LIBDIR}/test/cookbooks/nginx/recipes/default.rb
-${GEM_LIBDIR}/test/cookbooks/nginx/recipes/source.rb
-${GEM_LIBDIR}/test/cookbooks/openldap/attributes/default.rb
-${GEM_LIBDIR}/test/cookbooks/openldap/metadata.rb
-${GEM_LIBDIR}/test/cookbooks/openldap/recipes/auth.rb
-${GEM_LIBDIR}/test/cookbooks/openldap/recipes/client.rb
-${GEM_LIBDIR}/test/cookbooks/openldap/recipes/default.rb
-${GEM_LIBDIR}/test/cookbooks/openldap/recipes/server.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/attributes/default.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/metadata.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/recipes/client.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/recipes/default.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/recipes/server.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/recipes/server_debian.rb
-${GEM_LIBDIR}/test/cookbooks/postgresql/recipes/server_redhat.rb
-${GEM_LIBDIR}/test/cookbooks/sqlite/metadata.rb
-${GEM_LIBDIR}/test/cookbooks/sqlite/recipes/default.rb
-${GEM_LIBDIR}/test/cookbooks/vagrant_main/recipes/default.rb
 ${GEM_LIBDIR}/test/delete.rb
 ${GEM_LIBDIR}/test/ext.rb
 ${GEM_LIBDIR}/test/misc1.rb
