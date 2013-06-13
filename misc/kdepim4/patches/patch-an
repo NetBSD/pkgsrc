@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.2 2013/02/27 19:29:33 markd Exp $
+$NetBSD: patch-an,v 1.3 2013/06/13 14:29:37 joerg Exp $
 
 libassuan2 support from
 http://websvn.kde.org/?view=revision&revision=1078528
@@ -21,7 +21,18 @@ Work around moc inability to parse a boost macro
  
  #include <vector>
  #include <map>
-@@ -116,13 +118,18 @@ static const unsigned int INIT_SOCKET_FL
+@@ -91,10 +93,6 @@
+ 
+ #include <errno.h>
+ 
+-#ifdef __GNUC__
+-# include <ext/algorithm> // for is_sorted
+-#endif
+-
+ #ifdef Q_OS_WIN32
+ # include <io.h>
+ # include <process.h>
+@@ -116,13 +114,18 @@ static const unsigned int INIT_SOCKET_FL
  static const int FOR_READING = 0;
  static const unsigned int MAX_ACTIVE_FDS = 32;
  
@@ -42,7 +53,7 @@ Work around moc inability to parse a boost macro
  };
  
  static inline gpg_error_t assuan_process_done_msg( assuan_context_t ctx, gpg_error_t err, const char * err_msg ) {
-@@ -240,7 +247,8 @@ Q_SIGNALS:
+@@ -240,7 +243,8 @@ Q_SIGNALS:
  public Q_SLOTS:
      void slotReadActivity( int ) {
          assert( ctx );
@@ -52,7 +63,7 @@ Work around moc inability to parse a boost macro
              //if ( err == -1 || gpg_err_code(err) == GPG_ERR_EOF ) {
                  topHalfDeletion();
                  if ( nohupedCommands.empty() )
-@@ -296,15 +304,17 @@ private:
+@@ -296,15 +300,17 @@ private:
      }
  
  private:
@@ -72,7 +83,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
  
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
-@@ -317,7 +327,7 @@ private:
+@@ -317,7 +323,7 @@ private:
          //return gpg_error( GPG_ERR_UNKNOWN_OPTION );
      }
  
@@ -81,7 +92,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -344,7 +354,7 @@ private:
+@@ -344,7 +350,7 @@ private:
          return assuan_process_done( ctx_, 0 );
      }
  
@@ -90,7 +101,7 @@ Work around moc inability to parse a boost macro
          if ( !QByteArray( line ).trimmed().isEmpty() ) {
              static const QString errorString = i18n("CAPABILITIES does not take arguments");
              return assuan_process_done_msg( ctx_, gpg_error( GPG_ERR_ASS_PARAMETER ), errorString );
-@@ -357,7 +367,7 @@ private:
+@@ -357,7 +363,7 @@ private:
          return assuan_process_done( ctx_, assuan_send_data( ctx_, capabilities, sizeof capabilities - 1 ) );
      }
  
@@ -99,7 +110,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -386,7 +396,7 @@ private:
+@@ -386,7 +392,7 @@ private:
          return assuan_process_done( ctx_, assuan_send_data( ctx_, ba.constData(), ba.size() ) );
      }
  
@@ -108,7 +119,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -400,7 +410,7 @@ private:
+@@ -400,7 +406,7 @@ private:
          return assuan_process_done( ctx_, 0 );
      }
  
@@ -117,7 +128,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -418,7 +428,7 @@ private:
+@@ -418,7 +424,7 @@ private:
  
      // format: TAG (FD|FD=\d+|FILE=...)
      template <bool in, typename T_memptr>
@@ -126,7 +137,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -498,19 +508,19 @@ private:
+@@ -498,19 +504,19 @@ private:
  
      }
  
@@ -150,7 +161,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx_ ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx_ ) );
  
-@@ -572,7 +582,7 @@ private:
+@@ -572,7 +578,7 @@ private:
      }
  
      template <typename T_memptr, typename T_memptr2>
@@ -159,7 +170,7 @@ Work around moc inability to parse a boost macro
          assert( assuan_get_pointer( ctx ) );
          AssuanServerConnection::Private & conn = *static_cast<AssuanServerConnection::Private*>( assuan_get_pointer( ctx ) );
  
-@@ -656,11 +666,11 @@ private:
+@@ -656,11 +662,11 @@ private:
          return assuan_process_done( ctx, 0 );
      }
  
@@ -173,7 +184,14 @@ Work around moc inability to parse a boost macro
          return recipient_sender_handler( &Private::senders, &Private::informativeSenders, ctx, line, true );
      }
  
-@@ -792,11 +802,15 @@ AssuanServerConnection::Private::Private
+@@ -785,18 +791,18 @@ AssuanServerConnection::Private::Private
+       sessionId( 0 ),
+       factories( factories_ )
+ {
+-#ifdef __GNUC__
+-    assert( __gnu_cxx::is_sorted( factories_.begin(), factories_.end(), _detail::ByName<std::less>() ) );
+-#endif
+-
      if ( fd == ASSUAN_INVALID_FD )
          throw Exception( gpg_error( GPG_ERR_INV_ARG ), "pre-assuan_init_socket_server_ext" );
  
@@ -192,7 +210,7 @@ Work around moc inability to parse a boost macro
  
      // for callbacks, associate the context with this connection:
      assuan_set_pointer( ctx.get(), this );
-@@ -824,34 +838,34 @@ AssuanServerConnection::Private::Private
+@@ -824,34 +830,34 @@ AssuanServerConnection::Private::Private
  
  
      // register our INPUT/OUTPUT/MESSGAE/FILE handlers:
@@ -239,7 +257,7 @@ Work around moc inability to parse a boost macro
          throw Exception( err, "register \"CAPABILITIES\" handler" );
  
      assuan_set_hello_line( ctx.get(), "GPG UI server (Kleopatra/" KLEOPATRA_VERSION_STRING ") ready to serve" );
-@@ -904,20 +918,14 @@ class InquiryHandler : public QObject {
+@@ -904,20 +910,14 @@ class InquiryHandler : public QObject {
      Q_OBJECT
  public:
  
@@ -261,7 +279,7 @@ Work around moc inability to parse a boost macro
      {
          assert( cb_data );
          InquiryHandler * this_ = static_cast<InquiryHandler*>(cb_data);
-@@ -926,26 +934,9 @@ public:
+@@ -926,26 +926,9 @@ public:
          delete this_;
          return 0;
      }
@@ -288,7 +306,7 @@ Work around moc inability to parse a boost macro
  
  Q_SIGNALS:
      void signal( int rc, const QByteArray & data, const QByteArray & keyword );
-@@ -1157,20 +1148,13 @@ int AssuanCommand::inquire( const char *
+@@ -1157,20 +1140,13 @@ int AssuanCommand::inquire( const char *
      if ( d->nohup )
          return makeError( GPG_ERR_INV_OP );
  
@@ -309,7 +327,7 @@ Work around moc inability to parse a boost macro
  }
  
  void AssuanCommand::done( const GpgME::Error& err, const QString & details ) {
-@@ -1262,7 +1246,7 @@ const std::vector<KMime::Types::Mailbox>
+@@ -1262,7 +1238,7 @@ const std::vector<KMime::Types::Mailbox>
      return d->senders;
  }
  

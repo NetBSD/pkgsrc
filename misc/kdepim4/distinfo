@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2013/02/27 19:29:33 markd Exp $
+$NetBSD: distinfo,v 1.19 2013/06/13 14:29:37 joerg Exp $
 
 SHA1 (kdepim-4.4.11.1.tar.bz2) = 49dd6cc8406b0ef4bb681bfc0de6ad9368b4b5b2
 RMD160 (kdepim-4.4.11.1.tar.bz2) = 51394b9dcb3aecc4f108e87de37c21e3af820ee1
@@ -17,10 +17,13 @@ SHA1 (patch-ak) = ba5152d71810759b4bcbe526f7d05eeb8ed8944b
 SHA1 (patch-akregator_plugins_mk4storage_CMakeLists.txt) = 804c66cd07ae0d5f71c4e6ff05be65e6c438e4cb
 SHA1 (patch-al) = 55c77b3ad49e97e304778f56379cabb62af95e07
 SHA1 (patch-am) = 862ed0d6c699146945bb6c5aff8aaec8030ce101
-SHA1 (patch-an) = 3f7da9f127a6bd7f97602b6faa5d2376f18fc7b0
+SHA1 (patch-an) = 90a94a03333b864aa09920bd1bee6aaeadf59336
 SHA1 (patch-ao) = e8c93353d3d73662a55589dc71ceb8d7e03426bd
 SHA1 (patch-ap) = cf6854d683345d51c6d9f19286d73fea693a241a
 SHA1 (patch-kalarm_CMakeLists.txt) = 6799c123f626c50b8bef7ca3e720f899938accdc
+SHA1 (patch-kleopatra_models_keylistmodel.cpp) = 7d9aed6b7c8be03967ef72a3f5db91ef09e856f7
+SHA1 (patch-kleopatra_utils_classify.cpp) = 8387bc4aec59aa416fe98ad0c9eb892103c459b4
+SHA1 (patch-kleopatra_utils_stl__util.h) = e7ef42fc26500a2dbbde3749b8115ba0f3918841
 SHA1 (patch-kmail_imapaccountbase.h) = 0f04ffe6e936bdd8ca5823be3d711a41965c64c8
 SHA1 (patch-kmail_networkaccount.h) = 0e1f95fcabad758fcd75a1c0e6605fcf7e57dd2b
 SHA1 (patch-knode_CMakeLists.txt) = 0f3fcf56b46ff0b82fbadb3602947b6235db5234
