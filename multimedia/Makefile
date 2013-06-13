@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2013/05/21 12:24:48 markd Exp $
+# $NetBSD: Makefile,v 1.211 2013/06/13 13:47:25 obache Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -161,7 +161,6 @@ SUBDIR+=	py-ming
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	regionset
 SUBDIR+=	replex
-SUBDIR+=	ruby-clutter-gst
 SUBDIR+=	ruby-gnome2-gstreamer
 SUBDIR+=	ruby-ming
 SUBDIR+=	schroedinger
