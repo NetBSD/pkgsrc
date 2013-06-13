@@ -1,0 +1,37 @@
+$NetBSD: patch-configure.in,v 1.1 2013/06/13 21:44:06 joerg Exp $
+
+--- configure.in.orig	2013-06-13 17:40:11.000000000 +0000
++++ configure.in
+@@ -1193,8 +1193,8 @@ case "$target_os" in
+           if test "$have_dl" = "yes"
+ 	  then
+ 	    SO="so"
+-            SHLIB_LD="$CC -shared -export-dynamic"
+-            SHLIB_CXX_LD="$CXX -shared -export-dynamic"
++            SHLIB_LD="$CC -shared -Wl,-export-dynamic"
++            SHLIB_CXX_LD="$CXX -shared -Wl,-export-dynamic"
+             DO_SECOND_LD=""
+ 	    LIBS="$LIBS -ldl"
+ 	    case "$target_cpu" in
+@@ -1263,8 +1263,8 @@ case "$target_os" in
+ 	  then
+ 	    #this tells ld to export all non-static symbols,
+ 	    #otherwise no external predicates.
+-            SHLIB_LD="$CC -shared -export-dynamic"
+-            SHLIB_CXX_LD="$CXX -shared -export-dynamic"
++            SHLIB_LD="$CC -shared -Wl,-export-dynamic"
++            SHLIB_CXX_LD="$CXX -shared -Wl,-export-dynamic"
+             DO_SECOND_LD=""
+             SO="sl"
+ 	    SHLIB_CFLAGS="+z $CFLAGS"
+@@ -1391,8 +1391,8 @@ dnl Linux has both elf and a.out, in thi
+ 	  LDFLAGS="-Wl,--export-dynamic $LDFLAGS"
+ 	  SHLIB_CFLAGS="-fPIC $CFLAGS"
+ 	  SHLIB_CXXFLAGS="-fPIC $CXXFLAGS"
+-	  SHLIB_LD="$CC -shared -export-dynamic"
+-          SHLIB_CXX_LD="$CXX -shared -export-dynamic"
++	  SHLIB_LD="$CC -shared -Wl,-export-dynamic"
++          SHLIB_CXX_LD="$CXX -shared -Wl,-export-dynamic"
+           DO_SECOND_LD=""
+ 	  SO="so"
+ 	  INSTALL_DLLS=""

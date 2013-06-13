@@ -1,0 +1,37 @@
+$NetBSD: patch-configure,v 1.1 2013/06/13 21:44:06 joerg Exp $
+
+--- configure.orig	2013-06-13 17:40:09.000000000 +0000
++++ configure
+@@ -8099,8 +8099,8 @@ fi
+           if test "$have_dl" = "yes"
+ 	  then
+ 	    SO="so"
+-            SHLIB_LD="$CC -shared -export-dynamic"
+-            SHLIB_CXX_LD="$CXX -shared -export-dynamic"
++            SHLIB_LD="$CC -shared -Wl,-export-dynamic"
++            SHLIB_CXX_LD="$CXX -shared -Wl,-export-dynamic"
+             DO_SECOND_LD=""
+ 	    LIBS="$LIBS -ldl"
+ 	    case "$target_cpu" in
+@@ -8170,8 +8170,8 @@ fi
+ 	  then
+ 	    #this tells ld to export all non-static symbols,
+ 	    #otherwise no external predicates.
+-            SHLIB_LD="$CC -shared -export-dynamic"
+-            SHLIB_CXX_LD="$CXX -shared -export-dynamic"
++            SHLIB_LD="$CC -shared -Wl,-export-dynamic"
++            SHLIB_CXX_LD="$CXX -shared -Wl,-export-dynamic"
+             DO_SECOND_LD=""
+             SO="sl"
+ 	    SHLIB_CFLAGS="+z $CFLAGS"
+@@ -8378,8 +8378,8 @@ fi
+ 	  LDFLAGS="-Wl,--export-dynamic $LDFLAGS"
+ 	  SHLIB_CFLAGS="-fPIC $CFLAGS"
+ 	  SHLIB_CXXFLAGS="-fPIC $CXXFLAGS"
+-	  SHLIB_LD="$CC -shared -export-dynamic"
+-          SHLIB_CXX_LD="$CXX -shared -export-dynamic"
++	  SHLIB_LD="$CC -shared -Wl,-export-dynamic"
++          SHLIB_CXX_LD="$CXX -shared -Wl,-export-dynamic"
+           DO_SECOND_LD=""
+ 	  SO="so"
+ 	  INSTALL_DLLS=""
