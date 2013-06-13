@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/06 12:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/13 22:30:41 joerg Exp $
 
 DISTNAME=	xdm-1.1.11
 PKGREVISION=	4
@@ -48,12 +48,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
 CFLAGS+=	-fno-strict-aliasing
 .endif
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-.endif
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-random-device=/dev/urandom

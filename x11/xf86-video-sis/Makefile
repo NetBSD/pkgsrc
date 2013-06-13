@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/05/16 06:27:55 richard Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/13 22:30:41 joerg Exp $
 #
 
 DISTNAME=	xf86-video-sis-0.10.7
@@ -18,12 +18,8 @@ USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-.endif
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4

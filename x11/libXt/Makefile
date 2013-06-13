@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/05/31 08:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/13 22:30:41 joerg Exp $
 
 DISTNAME=		libXt-1.1.4
 CATEGORIES=		x11 devel
@@ -34,12 +34,8 @@ CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-.endif
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
