@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:08 joerg Exp $
-include/clutter-0.8/clutter-cairo/clutter-cairo.h
-lib/libclutter-cairo-0.8.la
-lib/pkgconfig/clutter-cairo-0.8.pc
