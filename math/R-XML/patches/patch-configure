@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2013/06/13 14:27:50 joerg Exp $
+
+--- configure.orig	2013-06-13 11:00:58.000000000 +0000
++++ configure
+@@ -4541,7 +4541,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <libxml/parser.h>
+ #endif
+ int
+-main(int argc, char *argv)
++main(int argc, char **argv)
+ {
+   xmlCheckVersion(20000);
+   return(0);

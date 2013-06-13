@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/04/15 22:33:33 brook Exp $
+$NetBSD: distinfo,v 1.3 2013/06/13 14:27:50 joerg Exp $
 
 SHA1 (R/XML_3.9-4.tar.gz) = 36fbbd8df0abd6c7fdeb5f606e89f6171a2c4399
 RMD160 (R/XML_3.9-4.tar.gz) = 7f5ad42eea9f790e34ffe72cc12b7b5020882148
 Size (R/XML_3.9-4.tar.gz) = 923501 bytes
+SHA1 (patch-configure) = 594acfce620f3f3852c529924f9903088d0c6ba8
+SHA1 (patch-configure.in) = cf1d85bc75c194071e95c5c6a7530b8869d18e61
