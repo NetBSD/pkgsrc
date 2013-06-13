@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2013/06/13 13:47:25 obache Exp $
+# $NetBSD: Makefile,v 1.212 2013/06/13 14:01:34 obache Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -14,7 +14,6 @@ SUBDIR+=	bsdav
 SUBDIR+=	ccxstream
 SUBDIR+=	cfourcc
 SUBDIR+=	clutter-gst
-SUBDIR+=	clutter08-gst
 SUBDIR+=	deforaos-player
 SUBDIR+=	dirac
 SUBDIR+=	divxplayer
