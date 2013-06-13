@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2034 2013/06/13 13:00:44 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2035 2013/06/13 13:02:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3190,3 +3190,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/py-trueskill to 0.4.1 [wiz 2013-06-12]
 	Updated net/gtk-vnc to 0.5.2 [obache 2013-06-13]
 	Updated sysutils/dbus to 1.6.12 [wiz 2013-06-13]
+	Updated databases/ruby-ldap to 0.9.13 [obache 2013-06-13]
