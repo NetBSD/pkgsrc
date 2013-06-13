@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2036 2013/06/13 13:16:04 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2037 2013/06/13 13:18:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3192,3 +3192,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/dbus to 1.6.12 [wiz 2013-06-13]
 	Updated databases/ruby-ldap to 0.9.13 [obache 2013-06-13]
 	Updated textproc/ruby-json to 1.8.0 [obache 2013-06-13]
+	Updated textproc/ruby-json-pure to 1.8.0 [obache 2013-06-13]
