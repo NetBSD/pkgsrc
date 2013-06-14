@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/01/07 13:46:21 christos Exp $
+$NetBSD: distinfo,v 1.3 2013/06/14 20:49:41 dholland Exp $
 
 SHA1 (openafs-1.7.11-src.tar.bz2) = 7baa664ea521520a3355c6d8ab7cafff004e7d97
 RMD160 (openafs-1.7.11-src.tar.bz2) = 4e6c61496989b69544d0039a9fd6ca8627fc4df0
@@ -17,7 +17,7 @@ SHA1 (patch-src-cf-osconf.m4) = e3b6488cc2e8891c03014c6774a55f04106cb25a
 SHA1 (patch-src-config-param.amd64_nbsd70.h) = 045a2cc33103c53e3141ad02074e12482069fcb2
 SHA1 (patch-src-config-param.i386_nbsd70.h) = f72c6cc7dc2b8f27971fac7978392a921befed22
 SHA1 (patch-src-config-param.nbsd60.h) = 5fd8fb7b9250cd00e47f4f971fd076daff08b592
-SHA1 (patch-src-config-param.nbsd70.h) = 9879d7484c9951d972c599f048451ee3f30c6391
+SHA1 (patch-src-config-param.nbsd70.h) = 3641f9833336a7bbbac17309a819090c48dcd738
 SHA1 (patch-src-config-shlib-build.in) = 7f9665b966fde23540724ce4b7c08690618cf564
 SHA1 (patch-src-config-shlib-install.in) = 5ccbc19116d09f6bb42eba8be6811d7f72345dee
 SHA1 (patch-src-crypto-hcrypto-kernel-config.h) = 6bb549f6d2ac09faa7a3f5f74396d379c37387b7
