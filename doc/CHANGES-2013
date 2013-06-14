@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2052 2013/06/14 08:21:17 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2053 2013/06/14 08:22:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3215,3 +3215,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXrender to 0.9.8 [wiz 2013-06-14]
 	Updated x11/libXvMC to 1.0.8 [wiz 2013-06-14]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.291 [obache 2013-06-14]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.90 [obache 2013-06-14]
