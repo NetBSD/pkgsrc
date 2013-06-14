@@ -138,6 +138,7 @@ elinks-exmode		Enable vi-like command entry.
 elinks-fastmem		Allow direct use of system memory allocation functions.
 elinks-html-highlight	Enable HTML highlighting using DOM engine.
 elinks-root-exec	Allow elinks to run as root.
+emacs-w3m		W3m browser extention.
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 embedded-server		Enable embedded server support for MySQL.
 enchant			Add spell checking support using enchant.
