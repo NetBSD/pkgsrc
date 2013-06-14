@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2013/05/31 22:53:23 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.30 2013/06/14 21:04:03 wiz Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -6,7 +6,7 @@
 
 # When updating this package, please apply patch-ak to configure.in and
 # then run a matching version of autoconf to regen patch-aa.
-DISTNAME=	glib-2.36.2
+DISTNAME=	glib-2.36.3
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
 MASTER_SITES=	ftp://ftp.gtk.org/pub/glib/${PKGVERSION_NOREV:R}/ \
