@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/06/14 21:15:24 wiz Exp $
 
-DISTNAME=	kpcli-1.7
-PKGREVISION=	1
+DISTNAME=	kpcli-2.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kpcli/}
 EXTRACT_SUFX=	.pl
@@ -12,7 +10,6 @@ HOMEPAGE=	http://kpcli.sourceforge.net/
 COMMENT=	Command line interface to KeePass password safes
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=	p5-Sort-Naturally-[0-9]*:../../devel/p5-Sort-Naturally
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Term-ShellUI-[0-9]*:../../devel/p5-Term-ShellUI
