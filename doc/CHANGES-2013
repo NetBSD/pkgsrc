@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2074 2013/06/14 21:15:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2075 2013/06/14 21:18:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3239,3 +3239,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/help2man to 1.43.2 [wiz 2013-06-14]
 	Updated misc/py-anki2 to 2.0.11 [wiz 2013-06-14]
 	Updated security/kpcli to 2.1 [wiz 2013-06-14]
+	Updated databases/tdb to 1.2.12 [wiz 2013-06-14]
