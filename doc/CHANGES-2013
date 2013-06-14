@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2058 2013/06/14 11:16:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2059 2013/06/14 13:44:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3224,3 +3224,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc48-libs to 4.8.1nb2 [jperkin 2013-06-14]
 	Added security/py-itsdangerous version 0.21 [kleink 2013-06-14]
 	Updated misc/dpkg to 1.16.10 [obache 2013-06-14]
+	Added net/twittering-mode version 3.0.0 [mef 2013-06-14]

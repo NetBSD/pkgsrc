@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.970 2013/06/06 03:00:57 taca Exp $
+# $NetBSD: Makefile,v 1.971 2013/06/14 13:43:05 mef Exp $
 #
 
 COMMENT=	Networking tools
@@ -665,6 +665,7 @@ SUBDIR+=	tsclient
 SUBDIR+=	tsocks
 SUBDIR+=	tspc
 SUBDIR+=	ttt
+SUBDIR+=	twittering-mode
 SUBDIR+=	twitux
 SUBDIR+=	ucarp
 SUBDIR+=	ucspi-ssl
