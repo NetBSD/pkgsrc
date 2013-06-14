@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2051 2013/06/14 07:41:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2052 2013/06/14 08:21:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3214,3 +3214,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk to 11.4.0nb5 [jnemeth 2013-06-14]
 	Updated x11/libXrender to 0.9.8 [wiz 2013-06-14]
 	Updated x11/libXvMC to 1.0.8 [wiz 2013-06-14]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.291 [obache 2013-06-14]
