@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2060 2013/06/14 14:42:54 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2061 2013/06/14 15:44:40 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3226,3 +3226,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/dpkg to 1.16.10 [obache 2013-06-14]
 	Added net/twittering-mode version 3.0.0 [mef 2013-06-14]
 	Updated net/ruby-tw to 0.4.2 [tsutsui 2013-06-14]
+	Updated games/onscripter to 20130411 [tsutsui 2013-06-14]
