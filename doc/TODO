@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12278 2013/06/12 12:40:11 wiz Exp $
+$NetBSD: TODO,v 1.12279 2013/06/14 11:15:33 obache Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhid-5.3
 	o diffstat-1.57
 	o doclifter-2.11
-	o dpkg-1.16.9 [pkg/47234]
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2013.56
