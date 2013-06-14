@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2066 2013/06/14 20:14:51 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.2067 2013/06/14 20:17:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3231,4 +3231,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-domain_name to 0.5.12 [taca 2013-06-14]
 	Updated databases/ruby-sequel to 3.48.0 [taca 2013-06-14]
 	Updated devel/swig2 to 2.0.10 [wiz 2013-06-14]
-	Updated chat/mu-conference to 0.8.81nb4 [gdt 2013-06-14]
+	Updated chat/mu-conference to 0.8.81 [gdt 2013-06-14]
