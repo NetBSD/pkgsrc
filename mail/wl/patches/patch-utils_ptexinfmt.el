@@ -1,10 +1,10 @@
-$NetBSD: patch-utils_ptexinfmt.el,v 1.1 2013/06/14 03:46:30 mef Exp $
+$NetBSD: patch-utils_ptexinfmt.el,v 1.2 2013/06/14 04:56:47 mef Exp $
 
-Loading `/usr/pkgsrc/mail/wl/work/wl-2.14.0/utils/ptexinfmt.el': old-style backquotes detected!
-Wrong number of arguments: put, 2
-INFODIR is /usr/pkgsrc/mail/wl/work/.destdir/usr/pkg/info
+ Loading `/usr/pkgsrc/mail/wl/work/wl-2.14.0/utils/ptexinfmt.el': old-style backquotes detected!
+ Wrong number of arguments: put, 2
+ INFODIR is /usr/pkgsrc/mail/wl/work/.destdir/usr/pkg/info
 
-*** [info] Error code 255
+ *** [info] Error code 255
 
 --- utils/ptexinfmt.el.orig	2005-02-24 17:16:41.000000000 +0900
 +++ utils/ptexinfmt.el	2013-06-14 11:50:27.000000000 +0900
