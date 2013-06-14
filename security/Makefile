@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.471 2013/06/05 19:57:40 khorben Exp $
+# $NetBSD: Makefile,v 1.472 2013/06/14 09:41:25 kleink Exp $
 #
 
 COMMENT=	Security tools
@@ -322,6 +322,7 @@ SUBDIR+=	py-crypto
 SUBDIR+=	py-cryptopp
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-gnupg
+SUBDIR+=	py-itsdangerous
 SUBDIR+=	py-keyring
 SUBDIR+=	py-lasso
 SUBDIR+=	py-m2crypto
