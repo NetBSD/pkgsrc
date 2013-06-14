@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/07/14 02:16:46 dholland Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/06/14 03:44:40 mef Exp $
 ${EMACS_INFOPREFIX}/wl-ja.info
 ${EMACS_INFOPREFIX}/wl.info
 ${EMACS_LISPPREFIX}/wl/acap.el
@@ -133,6 +133,8 @@ ${FOR_emacs23}${EMACS_LISPPREFIX}/wl/wl-e21.el
 ${FOR_emacs23}${EMACS_LISPPREFIX}/wl/wl-e21.elc
 ${FOR_emacs23nox}${EMACS_LISPPREFIX}/wl/wl-e21.el
 ${FOR_emacs23nox}${EMACS_LISPPREFIX}/wl/wl-e21.elc
+${FOR_emacs24}${EMACS_LISPPREFIX}/wl/wl-e21.el
+${FOR_emacs24}${EMACS_LISPPREFIX}/wl/wl-e21.elc
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/wl/wl-xmas.el
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/wl/wl-xmas.elc
 ${EMACS_LISPPREFIX}/wl/wl-expire.el
