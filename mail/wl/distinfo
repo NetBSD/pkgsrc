@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.17 2013/06/14 03:44:40 mef Exp $
+$NetBSD: distinfo,v 1.18 2013/06/14 04:56:47 mef Exp $
 
 SHA1 (wl-2.14.0.tar.gz) = 75b93013444cb27ca540462afbaefdce0e157b3f
 RMD160 (wl-2.14.0.tar.gz) = 1a5aa025fc05cbcf2a7d390b1804cc1b22f5df2b
 Size (wl-2.14.0.tar.gz) = 1101505 bytes
-SHA1 (patch-aa) = ede97cce8b2574737a91941a905e067c940fb50a
+SHA1 (patch-aa) = 848a4dda06c77f94c05ea770056690065b0c6c93
 SHA1 (patch-ad) = 74e15c41f2f3521833e126809c713e65509fe5ce
 SHA1 (patch-ae) = fac4a79a5c8e315c7c92ba17eb3316c5f6338c4f
 SHA1 (patch-ba) = 34bd7b7d06020aefad90b0b563b10c5877acdc1d
-SHA1 (patch-utils_ptexinfmt.el) = 2ee8e64ef759b2185ed31cc93396fcbeb827cc41
+SHA1 (patch-utils_ptexinfmt.el) = 0699218d01fe2cc4c24fbf0ad1c00ff7d476269b
