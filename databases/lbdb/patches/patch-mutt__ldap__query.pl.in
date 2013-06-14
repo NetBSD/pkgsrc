@@ -1,9 +1,9 @@
-$NetBSD: patch-mutt__ldap__query.pl,v 1.1 2013/06/12 12:38:20 wiz Exp $
+$NetBSD: patch-mutt__ldap__query.pl.in,v 1.1 2013/06/14 18:30:43 dholland Exp $
 
 Fix bug in man page noted by perl-5.18's pod2man.
 
---- mutt_ldap_query.pl.orig	2013-06-12 12:13:03.000000000 +0000
-+++ mutt_ldap_query.pl
+--- mutt_ldap_query.pl.in.orig	2013-06-12 12:13:03.000000000 +0000
++++ mutt_ldap_query.pl.in
 @@ -539,6 +539,8 @@ multiple searches for email addresses ba
  just like this one 8-)
   http://www.spinnaker.de/lbdb/
