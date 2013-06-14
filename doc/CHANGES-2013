@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2062 2013/06/14 16:47:54 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2063 2013/06/14 16:49:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3228,3 +3228,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-tw to 0.4.2 [tsutsui 2013-06-14]
 	Updated games/onscripter to 20130411 [tsutsui 2013-06-14]
 	Updated converters/ruby-unf to 0.1.1 [taca 2013-06-14]
+	Updated net/ruby-domain_name to 0.5.12 [taca 2013-06-14]
