@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2061 2013/06/14 15:44:40 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2062 2013/06/14 16:47:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3227,3 +3227,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/twittering-mode version 3.0.0 [mef 2013-06-14]
 	Updated net/ruby-tw to 0.4.2 [tsutsui 2013-06-14]
 	Updated games/onscripter to 20130411 [tsutsui 2013-06-14]
+	Updated converters/ruby-unf to 0.1.1 [taca 2013-06-14]
