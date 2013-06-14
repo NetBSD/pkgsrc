@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/06/12 12:38:20 wiz Exp $
+$NetBSD: distinfo,v 1.12 2013/06/14 18:30:43 dholland Exp $
 
 SHA1 (lbdb_0.35.1.tar.gz) = 33c7767b248cc4289894e0a4b07ed55142484ecc
 RMD160 (lbdb_0.35.1.tar.gz) = 1c202c532db93f3dec066b762f75a28e37d01d1a
 Size (lbdb_0.35.1.tar.gz) = 108502 bytes
 SHA1 (patch-aa) = c74a4d95037e9d5e5cc0742e5f05ef80a35db5e6
 SHA1 (patch-ab) = 7120edcd8588f2195b5c1afbb127245b182eb533
-SHA1 (patch-mutt__ldap__query.pl) = eb1f53338c677202dc6142ec19e3f49e3e15e9a0
+SHA1 (patch-mutt__ldap__query.pl.in) = f7e4fd16edac8dab9971af453caf14414d39493c
