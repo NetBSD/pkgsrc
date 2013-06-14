@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/14 13:41:46 mef Exp $
+share/emacs/site-lisp/a-files/twittering-mode.el
