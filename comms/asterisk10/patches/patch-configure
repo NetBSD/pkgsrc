@@ -1,8 +1,17 @@
-$NetBSD: patch-configure,v 1.6 2012/10/09 01:36:32 jnemeth Exp $
+$NetBSD: patch-configure,v 1.7 2013/06/14 23:53:03 jnemeth Exp $
 
---- configure.orig	2012-08-09 19:11:01.000000000 +0000
+--- configure.orig	2012-10-18 19:53:08.000000000 +0000
 +++ configure
-@@ -23605,7 +23605,7 @@ $as_echo "user CFLAGS present" >&6; }
+@@ -19348,7 +19348,7 @@ done
+ 
+ 
+ 
+-for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob htonll ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap ntohll newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl
++for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob htonll ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap ntohll newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strftime_l strptime_l strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl
+ do
+ as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { $as_echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -23647,7 +23647,7 @@ $as_echo "user CFLAGS present" >&6; }
  else
  	{ $as_echo "$as_me:$LINENO: result: no" >&5
  $as_echo "no" >&6; }
@@ -11,7 +20,7 @@ $NetBSD: patch-configure,v 1.6 2012/10/09 01:36:32 jnemeth Exp $
  fi
  
  
-@@ -24494,6 +24494,148 @@ fi
+@@ -24536,6 +24536,148 @@ fi
  
  
  
@@ -160,7 +169,7 @@ $NetBSD: patch-configure,v 1.6 2012/10/09 01:36:32 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -29069,6 +29211,8 @@ _ACEOF
+@@ -29111,6 +29253,8 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -169,7 +178,7 @@ $NetBSD: patch-configure,v 1.6 2012/10/09 01:36:32 jnemeth Exp $
  #include <ifaddrs.h>
  int
  main ()
-@@ -55829,10 +55973,10 @@ cat >>confdefs.h <<\_ACEOF
+@@ -55871,10 +56015,10 @@ cat >>confdefs.h <<\_ACEOF
  #define HAVE_SBIN_LAUNCHD 1
  _ACEOF
  
