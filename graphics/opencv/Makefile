@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2013/06/06 12:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/06/14 21:28:42 wiz Exp $
 
-DISTNAME=	OpenCV-2.4.3
-PKGNAME=	${DISTNAME:S/a$//:tl}
-PKGREVISION=	6
+DISTNAME=	opencv-2.4.5
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	anthony.mallet@laas.fr
 HOMEPAGE=	http://code.opencv.org/projects/OpenCV/wiki/WikiStart
