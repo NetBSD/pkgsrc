@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2013/05/16 05:17:17 obache Exp $
+$NetBSD: distinfo,v 1.16 2013/06/14 08:20:57 obache Exp $
 
-SHA1 (flash-plugin-11.2.202.285-release.i386.rpm) = e3ae2fc13fbb14d21373ef4ee11d018b956cd8f8
-RMD160 (flash-plugin-11.2.202.285-release.i386.rpm) = b193bda09e12c0645496682679bade3a905c68c8
-Size (flash-plugin-11.2.202.285-release.i386.rpm) = 6903151 bytes
+SHA1 (flash-plugin-11.2.202.291-release.i386.rpm) = 8c5759bfd97c9f82da83b82a7d6eda2ea744bf38
+RMD160 (flash-plugin-11.2.202.291-release.i386.rpm) = 0183d946fd81b9e3bd6f7ff40281a0c8bf71053b
+Size (flash-plugin-11.2.202.291-release.i386.rpm) = 6903067 bytes
