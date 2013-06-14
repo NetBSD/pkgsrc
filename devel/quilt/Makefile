@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/06/14 18:17:21 mspo Exp $
 #
 
 DISTNAME=	quilt-0.48
@@ -11,7 +11,7 @@ HOMEPAGE=	http://savannah.nongnu.org/projects/quilt
 COMMENT=	Tools to manage series of patches
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	bash:run gettext-tools gmake msgfmt perl:run gsed:run
+USE_TOOLS+=	bash:run gettext-tools gmake msgfmt perl:run gsed
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--with-date=${PREFIX}/bin/gdate
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
 .endif
 
-CONFIGURE_ARGS+=	--with-sed=${SED}
+CONFIGURE_ARGS+=	--with-sed=${PREFIX}/bin/gsed
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 CONFIGURE_ARGS+=	--without-rpmbuild
 CONFIGURE_ARGS+=	--without-getopt
