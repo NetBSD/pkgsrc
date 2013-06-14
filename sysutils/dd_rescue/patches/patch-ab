@@ -1,11 +1,27 @@
-$NetBSD: patch-ab,v 1.6 2013/06/04 00:47:46 mef Exp $
+$NetBSD: patch-ab,v 1.7 2013/06/14 01:07:58 mef Exp $
 
+(1) clang flags:
+dd_rescue.c:1494:22: warning: implicit declaration of function 'basename' is invalid in C99 [-Wimplicit-function-declaration]
+        const char* ibase = basename(inm);
+(2)
 See http://gnats.netbsd.org/38620
 dd_rescue: (fatal): allocation of aligned buffer failed!
 
+(3) clang flags:
+dd_recue.c:(.text+0x12b4): undefined reference to `mypread'
+dd_rescue.c:(.text+0x1374): undefined reference to `mypwrite'
+
 --- dd_rescue.c.orig	2013-03-31 04:24:34.000000000 +0900
-+++ dd_rescue.c	2013-04-08 17:03:27.000000000 +0900
-@@ -121,6 +121,10 @@ _syscall6(long, splice, int, fdin, loff_
++++ dd_rescue.c	2013-06-13 16:44:35.000000000 +0900
+@@ -83,6 +83,7 @@
+ #include <limits.h>
+ #include <sys/time.h>
+ #include <sys/stat.h>
++#include <libgen.h>
+ 
+ #include "frandom.h"
+ #include "list.h"
+@@ -121,6 +122,10 @@
  # endif
  #endif
  
@@ -16,7 +32,25 @@ dd_rescue: (fatal): allocation of aligned buffer failed!
  /* fwd decls */
  int cleanup();
  
-@@ -1452,6 +1456,11 @@ unsigned char* zalloc_buf(unsigned int b
+@@ -740,7 +745,7 @@
+ 	return ln;
+ }
+ 
+-inline ssize_t mypread(int fd, void* bf, size_t sz, off_t off)
++static inline ssize_t mypread(int fd, void* bf, size_t sz, off_t off)
+ {
+ 	if (i_repeat) {
+ 		if (i_rep_init)
+@@ -762,7 +767,7 @@
+ 		return pread(fd, bf, sz, off);
+ }
+ 
+-inline ssize_t mypwrite(int fd, void* bf, size_t sz, off_t off)
++static inline ssize_t mypwrite(int fd, void* bf, size_t sz, off_t off)
+ {
+ 	if (o_chr)
+ 		return write(fd, bf, sz);
+@@ -1452,6 +1457,11 @@
  	unsigned char *ptr;
  #ifdef O_DIRECT
  	void *mp;
