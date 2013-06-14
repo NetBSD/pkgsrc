@@ -1,8 +1,8 @@
-$NetBSD: patch-src-config-param.nbsd70.h,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
+$NetBSD: patch-src-config-param.nbsd70.h,v 1.2 2013/06/14 20:49:41 dholland Exp $
 
 --- src/config/param.nbsd70.h.orig	2012-04-28 19:35:22.000000000 -0400
 +++ src/config/param.nbsd70.h	2012-04-28 19:35:13.000000000 -0400
-@@ -0,0 +1,169 @@
+@@ -0,0 +1,171 @@
 +/* NetBSD shared section */
 +
 +#ifndef	AFS_PARAM_COMMON_H
@@ -168,6 +168,8 @@ $NetBSD: patch-src-config-param.nbsd70.h,v 1.1 2012/08/30 17:37:55 jakllsch Exp 
 +#include <sys/uio.h>
 +#include <sys/socket.h>
 +#endif
++
++#define ROOTINO	UFS_ROOTINO
 +
 +#endif /* !defined(UKERNEL) */
 +
