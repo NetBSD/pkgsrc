@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2011/12/17 16:16:37 marino Exp $
+$NetBSD: distinfo,v 1.11 2013/06/14 21:43:49 dholland Exp $
 
 SHA1 (Mail-ClamAV-0.29.tar.gz) = ee5fe9ae950c7c420ca58760f66b2be5f700e20c
 RMD160 (Mail-ClamAV-0.29.tar.gz) = 98465a690fc26d5fe4aac448ca4fc3b715dba4a6
 Size (Mail-ClamAV-0.29.tar.gz) = 17426 bytes
+SHA1 (patch-ClamAV.pm) = 8220c5a93947b39a461e4bcb545a407e847ad048
 SHA1 (patch-Makefile.PL) = 2b2a8e9b8fa306a2f7af2da5f4984b0f1ebada6e
