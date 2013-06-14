@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.7 2012/01/17 15:44:43 adam Exp $
+$NetBSD: patch-ad,v 1.8 2013/06/14 21:06:22 wiz Exp $
 
---- doc/Makefile.in.orig	2012-01-10 20:21:06.000000000 +0000
+--- doc/Makefile.in.orig	2013-06-05 19:59:41.000000000 +0000
 +++ doc/Makefile.in
-@@ -1107,7 +1107,7 @@ GDOC_MAN_EXTRA_ARGS = -module $(PACKAGE)
- 	-copyright "2002-2012 Simon Josefsson" \
+@@ -1154,7 +1154,7 @@ GDOC_MAN_EXTRA_ARGS = -module $(PACKAGE)
+ 	-copyright "2002-2013 Simon Josefsson" \
  	-verbatimcopying
  
 -BUILT_SOURCES = Makefile.gdoc
