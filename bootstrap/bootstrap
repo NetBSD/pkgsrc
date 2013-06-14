@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.193 2013/06/01 12:15:54 tron Exp $
+# $NetBSD: bootstrap,v 1.194 2013/06/14 15:07:37 tron Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -505,6 +505,12 @@ Darwin)
 		;;
 	*)
 		packagemaker=/Developer/usr/bin/packagemaker
+		;;
+	esac
+	case "$macosx_version" in
+	10.[8-9])
+		need_awk=yes
+		need_sed=yes
 		;;
 	esac
 	unset osrev macosx_version
