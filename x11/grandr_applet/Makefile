@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/06/06 12:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/06/14 06:36:31 dholland Exp $
 #
 
 DISTNAME=	grandr_applet-0.4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://dekorte.homeip.net/download/grandr-applet/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dekorte.homeip.net/download/grandr-applet/
-COMMENT=	Frontend (gnome-panel) to the X RandR extension
+COMMENT=	GNOME panel applet for controlling the X RandR extension
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
