@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2013/04/10 05:27:08 jnemeth Exp $
+$NetBSD: distinfo,v 1.27 2013/06/14 23:53:03 jnemeth Exp $
 
 SHA1 (asterisk-10.12.2/asterisk-10.12.2.tar.gz) = 4c1e681223b9e86a74d5c8a57dc4da87045a1656
 RMD160 (asterisk-10.12.2/asterisk-10.12.2.tar.gz) = ec365462b3f9668906b3d1bf5b7342fb39cc7e2c
@@ -13,10 +13,10 @@ SHA1 (patch-apps_app__queue.c) = 6fc4edbf9386e2ff39a63a1c3a3d9fe2ea27d187
 SHA1 (patch-apps_app__sms.c) = d89b27a9df04d4da98d562241c07d25d182baefc
 SHA1 (patch-build__tools_mkpkgconfig) = 2bd3c0e24bc6d721cc234feb19b64a57106fcbe4
 SHA1 (patch-channels_chan__oss.c) = fccfa6fca010294ed2d3ab87fc31f436d67f49fa
-SHA1 (patch-configure) = e114b113b5b2733edfd138d48740d65dda6d639e
-SHA1 (patch-configure.ac) = fa39e67fe998d0fe7dfb5fb3988f2be712b3b29f
+SHA1 (patch-configure) = 49b17e4661cf1ef98342774ad4f2bb377326dee5
+SHA1 (patch-configure.ac) = a68fce7769679a8f40fc266711b80dcccdc15cad
 SHA1 (patch-contrib_scripts_vmail.cgi) = 650b9bbf3e322d1ad351932cfe6f747baa8f35e4
-SHA1 (patch-include_asterisk_autoconfig.h.in) = 1d658b1997b3664cf34d01f1903fa38c8c986ee2
+SHA1 (patch-include_asterisk_autoconfig.h.in) = 90f8688b17f181775319e0c92e353a969b09c93f
 SHA1 (patch-include_asterisk_endian.h) = 41c1a9a9e02fe394bc9261f5559e931b1378ea28
 SHA1 (patch-include_asterisk_inline__api.h) = ff43d14e2608dd08d7d03799dfe9847f9f7f5666
 SHA1 (patch-include_asterisk_lock.h) = fc7b4934e5f53a09066802daa054300895cf7bcf
@@ -27,6 +27,7 @@ SHA1 (patch-main_features.c) = 1932f46e435f38b0f03b25ce98767fccd4f83ec7
 SHA1 (patch-main_manager.c) = 05e65a5d3d06a674c55a5b2d5779fd62aff26b7d
 SHA1 (patch-main_netsock.c) = 92542984c6f35fab53d1d107880a51743e3419c6
 SHA1 (patch-main_sched.c) = 3a1ef5a384a7fa7329abf2babdacf3dd1d57a041
+SHA1 (patch-main_stdtime_localtime.c) = f2234055c370854b43a7a3a6b06226aeeb1dbe96
 SHA1 (patch-main_utils.c) = 6d0fd44963149b0561ae179771b7e9fd80fa00b9
 SHA1 (patch-pbx_pbx__dundi.c) = 0645ee88c18f94b90ed051cfe100414300f2763f
 SHA1 (patch-sounds_Makefile) = 579c38e483bb0631fa1c4ea67fca24462caac41e

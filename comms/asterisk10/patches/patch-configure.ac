@@ -1,8 +1,17 @@
-$NetBSD: patch-configure.ac,v 1.3 2012/10/09 01:36:32 jnemeth Exp $
+$NetBSD: patch-configure.ac,v 1.4 2013/06/14 23:53:03 jnemeth Exp $
 
---- configure.ac.orig	2012-08-09 19:11:01.000000000 +0000
+--- configure.ac.orig	2012-10-18 19:53:08.000000000 +0000
 +++ configure.ac
-@@ -1004,7 +1004,7 @@ if $(${CC} -march=native -S -o /dev/null
+@@ -571,7 +571,7 @@ AC_FUNC_STRNLEN
+ AC_FUNC_STRTOD
+ AC_FUNC_UTIME_NULL
+ AC_FUNC_VPRINTF
+-AC_CHECK_FUNCS([asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob htonll ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap ntohll newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl])
++AC_CHECK_FUNCS([asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob htonll ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap ntohll newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strftime_l strptime_l strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl])
+ 
+ # NOTE: we use AC_CHECK_LIB to get -lm into the arguments for later checks,
+ # so that AC_CHECK_FUNCS can detect functions in that library.
+@@ -1005,7 +1005,7 @@ if $(${CC} -march=native -S -o /dev/null
  	fi
  else
  	AC_MSG_RESULT(no)
@@ -11,7 +20,7 @@ $NetBSD: patch-configure.ac,v 1.3 2012/10/09 01:36:32 jnemeth Exp $
  fi
  AC_SUBST(AST_NATIVE_ARCH)
  
-@@ -1084,6 +1084,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
+@@ -1085,6 +1085,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
  AC_CHECK_HEADER([libkern/OSAtomic.h],
                  [AC_DEFINE_UNQUOTED([HAVE_OSX_ATOMICS], 1, [Define to 1 if OSX atomic operations are supported.])])
  
