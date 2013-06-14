@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2054 2013/06/14 08:54:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2055 2013/06/14 09:02:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3217,3 +3217,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.291 [obache 2013-06-14]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.90 [obache 2013-06-14]
 	Updated textproc/urlview to 0.9nb4 [wiz 2013-06-14]
+	Updated multimedia/ming to 0.4.5 [obache 2013-06-14]
+	Updated multimedia/py-ming to 0.4.5 [obache 2013-06-14]
+	Updated multimedia/php-ming to 0.4.5 [obache 2013-06-14]
