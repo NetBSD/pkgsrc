@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2050 2013/06/14 07:40:51 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2051 2013/06/14 07:41:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3213,3 +3213,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/nodejs to 0.10.11 [fhajny 2013-06-13]
 	Updated comms/asterisk to 11.4.0nb5 [jnemeth 2013-06-14]
 	Updated x11/libXrender to 0.9.8 [wiz 2013-06-14]
+	Updated x11/libXvMC to 1.0.8 [wiz 2013-06-14]
