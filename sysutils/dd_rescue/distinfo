@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/06/04 00:47:46 mef Exp $
+$NetBSD: distinfo,v 1.8 2013/06/14 01:07:58 mef Exp $
 
 SHA1 (dd_rescue-1.33.tar.gz) = cb21524fec919d32b7263b7999e2c8b26e7273cd
 RMD160 (dd_rescue-1.33.tar.gz) = ed39efddcf3fa6708926cb31c9b32020e0d59208
 Size (dd_rescue-1.33.tar.gz) = 36923 bytes
 SHA1 (patch-aa) = ae11e96371b3b815b066a2dcedd869c90d4b89ff
-SHA1 (patch-ab) = 4ff83cbe0528f8d3db0c0af4d1e135ebad055561
+SHA1 (patch-ab) = b590da5113cf4367b52d2042f036acbe6e330fbe
 SHA1 (patch-frandom_c) = dd3c300df7a2f6cee6c981507c1dd17b39c47fb2
