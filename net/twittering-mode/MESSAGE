@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/06/14 13:41:46 mef Exp $
+;;  You may set following lines in your init file (~/.emacs etc)
+;; (add-to-list 'load-path "/path/to/installed/dir") ;; if you need
+    (require 'twittering-mode)
+    (setq twittering-username "your_account_name")
+;; http://www.emacswiki.org/emacs/TwitteringMode
+;; Show icons (requires wget)
+    (twittering-icon-mode)
+;; Update your timeline each 300 seconds (5 minutes)
+    (setq twittering-timer-interval 300)
+;; Directory to store buddy icons
+    (setq twittering-tmp-dir "/tmp/twittering-tmp-dir")
+;; sometimes you may need following line
+    (setq twittering-auth-method 'xauth)
+;; work-around for twitter problem (occasionally you may need this)
+;; Don't set this for regular use.
+;;    (setq twittering-allow-insecure-server-cert t)
+===========================================================================
