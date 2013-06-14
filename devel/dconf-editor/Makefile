@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/06/06 12:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/06/14 04:59:03 dholland Exp $
 
 .include "../../devel/dconf/Makefile.common"
 
@@ -9,6 +9,7 @@ DISTINFO_FILE=	${.CURDIR}/../../devel/dconf/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/dconf/patches
 
 CONFIGURE_ARGS+= --enable-editor
+CONFIGURE_ARGS+= --disable-man
 
 BUILD_DIRS=	editor
 INSTALL_DIRS=	editor
