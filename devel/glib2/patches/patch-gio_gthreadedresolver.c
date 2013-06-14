@@ -1,6 +1,6 @@
-$NetBSD: patch-gio_gthreadedresolver.c,v 1.1 2013/04/25 12:10:48 joerg Exp $
+$NetBSD: patch-gio_gthreadedresolver.c,v 1.2 2013/06/14 21:04:03 wiz Exp $
 
---- gio/gthreadedresolver.c.orig	2013-04-23 20:38:28.000000000 +0000
+--- gio/gthreadedresolver.c.orig	2013-06-09 22:07:09.000000000 +0000
 +++ gio/gthreadedresolver.c
 @@ -369,6 +369,8 @@ g_resolver_record_type_to_rrtype (GResol
    g_return_val_if_reached (-1);
@@ -11,8 +11,8 @@ $NetBSD: patch-gio_gthreadedresolver.c,v 1.1 2013/04/25 12:10:48 joerg Exp $
  static GList *
  g_resolver_records_from_res_query (const gchar      *rrname,
                                     gint              rrtype,
-@@ -474,6 +476,7 @@ g_resolver_records_from_res_query (const
- 
+@@ -482,6 +484,7 @@ g_resolver_records_from_res_query (const
+   else
      return records;
  }
 +#pragma GCC diagnostic pop
