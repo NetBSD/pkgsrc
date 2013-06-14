@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/06/10 18:59:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2013/06/14 22:13:03 dholland Exp $
 #
 
 DISTNAME=		pdns-recursor-3.3
@@ -27,6 +27,12 @@ INSTALL_MAKE_FLAGS+=	CONFIGDIR=${EGDIR} MANDIR=${PREFIX}/${PKGMANDIR}
 
 CONF_FILES+=		${EGDIR}/recursor.conf-dist \
 			${PKG_SYSCONFDIR}/recursor.conf
+
+SUBST_CLASSES+=			whitespace
+SUBST_STAGE.whitespace=		pre-configure
+SUBST_MESSAGE.whitespace=	Fixing C++ semantic whitespace.
+SUBST_FILES.whitespace=		pdns_recursor.cc
+SUBST_SED.whitespace=		-e 's|"VERSION"|" VERSION "|'
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
