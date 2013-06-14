@@ -1,13 +1,13 @@
-$NetBSD: patch-cj,v 1.9 2013/04/19 22:21:41 prlw1 Exp $
+$NetBSD: patch-cj,v 1.10 2013/06/14 21:04:03 wiz Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
 https://bugzilla.gnome.org/show_bug.cgi?id=641350
 
---- glib/tests/Makefile.in.orig	2013-03-25 21:07:18.000000000 +0000
+--- glib/tests/Makefile.in.orig	2013-06-09 22:53:46.000000000 +0000
 +++ glib/tests/Makefile.in
-@@ -91,7 +91,7 @@ am__EXEEXT_3 = array-test$(EXEEXT) async
+@@ -119,7 +119,7 @@ am__EXEEXT_3 = array-test$(EXEEXT) async
  	keyfile$(EXEEXT) list$(EXEEXT) logging$(EXEEXT) \
  	mainloop$(EXEEXT) mappedfile$(EXEEXT) markup-parse$(EXEEXT) \
  	markup-collect$(EXEEXT) markup-escape$(EXEEXT) \
@@ -16,7 +16,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  	node$(EXEEXT) once$(EXEEXT) option-context$(EXEEXT) \
  	option-argv0$(EXEEXT) pattern$(EXEEXT) private$(EXEEXT) \
  	protocol$(EXEEXT) queue$(EXEEXT) rand$(EXEEXT) \
-@@ -287,10 +287,6 @@ markup_subparser_SOURCES = markup-subpar
+@@ -315,10 +315,6 @@ markup_subparser_SOURCES = markup-subpar
  markup_subparser_OBJECTS = markup-subparser.$(OBJEXT)
  markup_subparser_LDADD = $(LDADD)
  markup_subparser_DEPENDENCIES = $(top_builddir)/glib/libglib-2.0.la
@@ -27,7 +27,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  mutex_SOURCES = mutex.c
  mutex_OBJECTS = mutex.$(OBJEXT)
  mutex_LDADD = $(LDADD)
-@@ -485,7 +481,7 @@ SOURCES = $(1bit_emufutex_SOURCES) 1bit-
+@@ -513,7 +509,7 @@ SOURCES = $(1bit_emufutex_SOURCES) 1bit-
  	$(gwakeup_SOURCES) $(gwakeup_fallback_SOURCES) hash.c hmac.c \
  	hook.c hostutils.c include.c keyfile.c list.c logging.c \
  	mainloop.c mappedfile.c markup-collect.c markup-escape.c \
@@ -36,7 +36,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  	node.c once.c option-argv0.c option-context.c pattern.c \
  	private.c protocol.c queue.c rand.c rec-mutex.c regex.c \
  	rwlock.c scannerapi.c sequence.c shell.c slice.c slist.c \
-@@ -501,7 +497,7 @@ DIST_SOURCES = $(1bit_emufutex_SOURCES) 
+@@ -529,7 +525,7 @@ DIST_SOURCES = $(1bit_emufutex_SOURCES) 
  	$(gwakeup_SOURCES) $(am__gwakeup_fallback_SOURCES_DIST) hash.c \
  	hmac.c hook.c hostutils.c include.c keyfile.c list.c logging.c \
  	mainloop.c mappedfile.c markup-collect.c markup-escape.c \
@@ -45,7 +45,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  	node.c once.c option-argv0.c option-context.c pattern.c \
  	private.c protocol.c queue.c rand.c rec-mutex.c regex.c \
  	rwlock.c scannerapi.c sequence.c shell.c slice.c slist.c \
-@@ -770,7 +766,7 @@ TEST_PROGS = array-test asyncqueue atomi
+@@ -815,7 +811,7 @@ TEST_PROGS = array-test asyncqueue atomi
  	environment error fileutils gdatetime gvariant gwakeup hash \
  	hmac hook hostutils keyfile list logging mainloop mappedfile \
  	markup-parse markup-collect markup-escape markup-subparser \
@@ -54,18 +54,18 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  	pattern private protocol queue rand rec-mutex regex rwlock \
  	scannerapi sequence shell slice slist sort spawn-multithreaded \
  	spawn-singlethread strfuncs string testing test-printf thread \
-@@ -965,9 +961,7 @@ markup-parse$(EXEEXT): $(markup_parse_OB
- markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) $(EXTRA_markup_subparser_DEPENDENCIES) 
+@@ -1051,9 +1047,7 @@ markup-subparser$(EXEEXT): $(markup_subp
  	@rm -f markup-subparser$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(markup_subparser_OBJECTS) $(markup_subparser_LDADD) $(LIBS)
+ 
 -mem-overflow$(EXEEXT): $(mem_overflow_OBJECTS) $(mem_overflow_DEPENDENCIES) $(EXTRA_mem_overflow_DEPENDENCIES) 
 -	@rm -f mem-overflow$(EXEEXT)
 -	$(AM_V_CCLD)$(LINK) $(mem_overflow_OBJECTS) $(mem_overflow_LDADD) $(LIBS)
 +
+ 
  mutex$(EXEEXT): $(mutex_OBJECTS) $(mutex_DEPENDENCIES) $(EXTRA_mutex_DEPENDENCIES) 
  	@rm -f mutex$(EXEEXT)
- 	$(AM_V_CCLD)$(LINK) $(mutex_OBJECTS) $(mutex_LDADD) $(LIBS)
-@@ -1128,7 +1122,6 @@ distclean-compile:
+@@ -1251,7 +1245,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-escape.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-parse.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-subparser.Po@am__quote@
