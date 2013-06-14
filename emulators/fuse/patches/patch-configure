@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/06/14 20:53:04 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2013-06-14 20:38:14.000000000 +0000
++++ configure
+@@ -17868,7 +17868,7 @@ if test "$desktopdir" = yes; then
+ else
+   DESKTOP_DATADIR="$datadir"
+ fi
+- if test "$desktopdir" == yes; then
++ if test "$desktopdir" = yes; then
+   DESKTOP_DATADIR_TRUE=
+   DESKTOP_DATADIR_FALSE='#'
+ else
