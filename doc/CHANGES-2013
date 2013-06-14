@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2067 2013/06/14 20:17:25 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.2068 2013/06/14 20:51:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-sequel to 3.48.0 [taca 2013-06-14]
 	Updated devel/swig2 to 2.0.10 [wiz 2013-06-14]
 	Updated chat/mu-conference to 0.8.81 [gdt 2013-06-14]
+	Updated emulators/libspectrum to 1.1.1 [wiz 2013-06-14]
