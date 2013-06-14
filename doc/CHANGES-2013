@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2057 2013/06/14 09:42:35 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2058 2013/06/14 11:16:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3223,3 +3223,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc47-libs to 4.7.3nb2 [jperkin 2013-06-14]
 	Updated lang/gcc48-libs to 4.8.1nb2 [jperkin 2013-06-14]
 	Added security/py-itsdangerous version 0.21 [kleink 2013-06-14]
+	Updated misc/dpkg to 1.16.10 [obache 2013-06-14]
