@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.14 2013/01/28 11:29:29 tron Exp $
+# $NetBSD: checksum,v 1.15 2013/06/14 15:09:47 tron Exp $
 #
 # Copyright (c) 2006, 2007 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -78,9 +78,6 @@ set -e		# exit on errors
 : ${ECHO:=echo}
 : ${SED:=sed}
 : ${TEST:=test}
-
-# Work around problematic UTF-8 handling in "sed" under Mac OS X Mountain Lion.
-LC_ALL=C; export LC_ALL
 
 self="${0##*/}"
 
