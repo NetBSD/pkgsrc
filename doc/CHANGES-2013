@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2075 2013/06/14 21:18:30 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2076 2013/06/14 21:28:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3240,3 +3240,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-anki2 to 2.0.11 [wiz 2013-06-14]
 	Updated security/kpcli to 2.1 [wiz 2013-06-14]
 	Updated databases/tdb to 1.2.12 [wiz 2013-06-14]
+	Updated graphics/opencv to 2.4.5 [wiz 2013-06-14]

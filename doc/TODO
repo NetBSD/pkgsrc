@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12287 2013/06/14 21:18:31 wiz Exp $
+$NetBSD: TODO,v 1.12288 2013/06/14 21:28:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -863,7 +863,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
-	o opencv-2.4.5
 	o opendkim-2.8.3 [pkg/47843]
 	o opengrok-0.11.1
 	o openmortal-0.7.1
