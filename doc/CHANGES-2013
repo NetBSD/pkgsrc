@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2055 2013/06/14 09:02:22 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2056 2013/06/14 09:05:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3220,3 +3220,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ming to 0.4.5 [obache 2013-06-14]
 	Updated multimedia/py-ming to 0.4.5 [obache 2013-06-14]
 	Updated multimedia/php-ming to 0.4.5 [obache 2013-06-14]
+	Updated lang/gcc47-libs to 4.7.3nb2 [jperkin 2013-06-14]
+	Updated lang/gcc48-libs to 4.8.1nb2 [jperkin 2013-06-14]
