@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/12/03 13:04:24 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/06/14 21:28:42 wiz Exp $
 bin/opencv_createsamples
 bin/opencv_haartraining
 bin/opencv_performance
@@ -29,6 +29,7 @@ include/opencv2/core/gpumat.hpp
 include/opencv2/core/internal.hpp
 include/opencv2/core/mat.hpp
 include/opencv2/core/opengl_interop.hpp
+include/opencv2/core/opengl_interop_deprecated.hpp
 include/opencv2/core/operations.hpp
 include/opencv2/core/types_c.h
 include/opencv2/core/version.hpp
@@ -70,12 +71,14 @@ include/opencv2/flann/sampling.h
 include/opencv2/flann/saving.h
 include/opencv2/flann/simplex_downhill.h
 include/opencv2/flann/timer.h
+include/opencv2/gpu/device/block.hpp
 include/opencv2/gpu/device/border_interpolate.hpp
 include/opencv2/gpu/device/color.hpp
 include/opencv2/gpu/device/common.hpp
 include/opencv2/gpu/device/datamov_utils.hpp
 include/opencv2/gpu/device/detail/color_detail.hpp
-include/opencv2/gpu/device/detail/reduction_detail.hpp
+include/opencv2/gpu/device/detail/reduce.hpp
+include/opencv2/gpu/device/detail/reduce_key_val.hpp
 include/opencv2/gpu/device/detail/transform_detail.hpp
 include/opencv2/gpu/device/detail/type_traits_detail.hpp
 include/opencv2/gpu/device/detail/vec_distance_detail.hpp
@@ -85,8 +88,10 @@ include/opencv2/gpu/device/filters.hpp
 include/opencv2/gpu/device/funcattrib.hpp
 include/opencv2/gpu/device/functional.hpp
 include/opencv2/gpu/device/limits.hpp
+include/opencv2/gpu/device/reduce.hpp
 include/opencv2/gpu/device/saturate_cast.hpp
 include/opencv2/gpu/device/scan.hpp
+include/opencv2/gpu/device/simd_functions.hpp
 include/opencv2/gpu/device/static_check.hpp
 include/opencv2/gpu/device/transform.hpp
 include/opencv2/gpu/device/type_traits.hpp
@@ -96,6 +101,7 @@ include/opencv2/gpu/device/vec_math.hpp
 include/opencv2/gpu/device/vec_traits.hpp
 include/opencv2/gpu/device/warp.hpp
 include/opencv2/gpu/device/warp_reduce.hpp
+include/opencv2/gpu/device/warp_shuffle.hpp
 include/opencv2/gpu/devmem2d.hpp
 include/opencv2/gpu/gpu.hpp
 include/opencv2/gpu/gpumat.hpp
@@ -112,7 +118,9 @@ include/opencv2/legacy/legacy.hpp
 include/opencv2/legacy/streams.hpp
 include/opencv2/ml/ml.hpp
 include/opencv2/nonfree/features2d.hpp
+include/opencv2/nonfree/gpu.hpp
 include/opencv2/nonfree/nonfree.hpp
+include/opencv2/nonfree/ocl.hpp
 include/opencv2/objdetect/objdetect.hpp
 include/opencv2/opencv.hpp
 include/opencv2/opencv_modules.hpp
@@ -131,6 +139,10 @@ include/opencv2/stitching/detail/warpers.hpp
 include/opencv2/stitching/detail/warpers_inl.hpp
 include/opencv2/stitching/stitcher.hpp
 include/opencv2/stitching/warpers.hpp
+include/opencv2/superres/optical_flow.hpp
+include/opencv2/superres/superres.hpp
+include/opencv2/ts/gpu_perf.hpp
+include/opencv2/ts/gpu_test.hpp
 include/opencv2/ts/ts.hpp
 include/opencv2/ts/ts_gtest.h
 include/opencv2/ts/ts_perf.hpp
@@ -190,6 +202,9 @@ lib/libopencv_photo.so.${PKGVERSION}
 lib/libopencv_stitching.so
 lib/libopencv_stitching.so.2.4
 lib/libopencv_stitching.so.${PKGVERSION}
+lib/libopencv_superres.so
+lib/libopencv_superres.so.2.4
+lib/libopencv_superres.so.${PKGVERSION}
 lib/libopencv_ts.so
 lib/libopencv_ts.so.2.4
 lib/libopencv_ts.so.${PKGVERSION}
@@ -204,25 +219,6 @@ ${PLIST.python}${PYSITELIB}/cv.py
 ${PLIST.python}${PYSITELIB}/cv2.so
 share/OpenCV/OpenCVConfig-version.cmake
 share/OpenCV/OpenCVConfig.cmake
-share/OpenCV/doc/CMakeLists.txt
-share/OpenCV/doc/acircles_pattern.png
-share/OpenCV/doc/check_docs_whitelist.txt
-share/OpenCV/doc/haartraining.htm
-share/OpenCV/doc/license.txt
-share/OpenCV/doc/opencv-logo-white.png
-share/OpenCV/doc/opencv-logo.png
-share/OpenCV/doc/opencv-logo2.png
-share/OpenCV/doc/opencv.jpg
-share/OpenCV/doc/opencv2manager.pdf
-share/OpenCV/doc/opencv2refman.pdf
-share/OpenCV/doc/opencv_cheatsheet.pdf
-share/OpenCV/doc/opencv_tutorials.pdf
-share/OpenCV/doc/opencv_user.pdf
-share/OpenCV/doc/packaging.txt
-share/OpenCV/doc/pattern.png
-share/OpenCV/doc/vidsurv/Blob_Tracking_Modules.doc
-share/OpenCV/doc/vidsurv/Blob_Tracking_Tests.doc
-share/OpenCV/doc/vidsurv/TestSeq.doc
 share/OpenCV/haarcascades/haarcascade_eye.xml
 share/OpenCV/haarcascades/haarcascade_eye_tree_eyeglasses.xml
 share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml
@@ -243,6 +239,7 @@ share/OpenCV/haarcascades/haarcascade_mcs_righteye.xml
 share/OpenCV/haarcascades/haarcascade_mcs_upperbody.xml
 share/OpenCV/haarcascades/haarcascade_profileface.xml
 share/OpenCV/haarcascades/haarcascade_righteye_2splits.xml
+share/OpenCV/haarcascades/haarcascade_smile.xml
 share/OpenCV/haarcascades/haarcascade_upperbody.xml
 share/OpenCV/lbpcascades/lbpcascade_frontalface.xml
 share/OpenCV/lbpcascades/lbpcascade_profileface.xml
