@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12283 2013/06/14 21:06:31 wiz Exp $
+$NetBSD: TODO,v 1.12284 2013/06/14 21:07:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o harfbuzz-0.9.18
 	o haskell-mode-1.45
 	o hdf-4.2.7
-	o help2man-1.43.2
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.1
