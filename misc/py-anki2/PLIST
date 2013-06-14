@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/25 10:34:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/06/14 21:13:24 wiz Exp $
 bin/anki
 man/man1/anki.1
 share/anki/LICENSE
@@ -28,6 +28,7 @@ share/anki/anki/importing/base.py
 share/anki/anki/importing/csvfile.py
 share/anki/anki/importing/mnemo.py
 share/anki/anki/importing/noteimp.py
+share/anki/anki/importing/pauker.py
 share/anki/anki/importing/supermemo_xml.py
 share/anki/anki/js.py
 share/anki/anki/lang.py
@@ -425,6 +426,10 @@ share/anki/thirdparty/httplib2/cacerts.txt
 share/anki/thirdparty/httplib2/iri2uri.py
 share/anki/thirdparty/httplib2/socks.py
 share/anki/thirdparty/pyaudio.py
+share/anki/thirdparty/send2trash/__init__.py
+share/anki/thirdparty/send2trash/plat_osx.py
+share/anki/thirdparty/send2trash/plat_other.py
+share/anki/thirdparty/send2trash/plat_win.py
 share/anki/tools/anki-wait.bat
 share/anki/tools/build_ui.sh
 share/anki/tools/tests.sh
