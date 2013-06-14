@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/06/14 18:17:21 mspo Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/14 18:19:17 mspo Exp $
 #
 
 DISTNAME=	quilt-0.48
@@ -18,6 +18,7 @@ USE_TOOLS+=	bash:run gettext-tools gmake msgfmt perl:run gsed
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-cp=${CP}
 CONFIGURE_ARGS+=	--with-date=${DATE}
+CONFIGURE_ARGS+=	--with-sed=${SED}
 .  if exists(/usr/bin/patch)
 CONFIGURE_ARGS+=	--with-patch=/usr/bin/patch
 .  else
@@ -31,9 +32,9 @@ DEPENDS+=		patch>=2.4:../../devel/patch
 CONFIGURE_ARGS+=	--with-cp=${PREFIX}/bin/gcp
 CONFIGURE_ARGS+=	--with-date=${PREFIX}/bin/gdate
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
+CONFIGURE_ARGS+=	--with-sed=${PREFIX}/bin/gsed
 .endif
 
-CONFIGURE_ARGS+=	--with-sed=${PREFIX}/bin/gsed
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 CONFIGURE_ARGS+=	--without-rpmbuild
 CONFIGURE_ARGS+=	--without-getopt
