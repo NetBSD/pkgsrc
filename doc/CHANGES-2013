@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2072 2013/06/14 21:07:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2073 2013/06/14 21:13:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/glib2 to 2.36.3 [wiz 2013-06-14]
 	Updated devel/libidn to 1.27 [wiz 2013-06-14]
 	Updated converters/help2man to 1.43.2 [wiz 2013-06-14]
+	Updated misc/py-anki2 to 2.0.11 [wiz 2013-06-14]
