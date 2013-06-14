@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2064 2013/06/14 16:52:18 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2065 2013/06/14 18:41:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3230,3 +3230,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/ruby-unf to 0.1.1 [taca 2013-06-14]
 	Updated net/ruby-domain_name to 0.5.12 [taca 2013-06-14]
 	Updated databases/ruby-sequel to 3.48.0 [taca 2013-06-14]
+	Updated devel/swig2 to 2.0.10 [wiz 2013-06-14]
