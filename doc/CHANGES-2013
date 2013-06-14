@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2070 2013/06/14 21:04:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2071 2013/06/14 21:06:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3235,3 +3235,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/libspectrum to 1.1.1 [wiz 2013-06-14]
 	Updated emulators/fuse to 1.1.1 [wiz 2013-06-14]
 	Updated devel/glib2 to 2.36.3 [wiz 2013-06-14]
+	Updated devel/libidn to 1.27 [wiz 2013-06-14]
