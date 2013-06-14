@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2013/04/06 13:01:26 rodent Exp $
+# $NetBSD: Makefile.common,v 1.7 2013/06/14 09:00:19 obache Exp $
 #
 # used by multimedia/php-ming/Makefile
 # used by multimedia/py-ming/Makefile
 
-MING_VERSION=	0.4.4
+MING_VERSION=	0.4.5
 DISTNAME=	ming-${MING_VERSION}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ming/}
 
