@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.18 2013/05/16 08:31:07 obache Exp $
+# $NetBSD: checksum.mk,v 1.19 2013/06/14 15:09:47 tron Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -52,7 +52,7 @@ checksum checksum-phase:
 .endif
 
 _DISTINFO_CMD=	${PKGSRC_SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q} \
-			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q} LC_ALL=C	\
+			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q}	\
 		${AWK} -f ${PKGSRCDIR}/mk/checksum/distinfo.awk --
 
 .if exists(${DISTDIR})
