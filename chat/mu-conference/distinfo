@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/02/04 12:05:45 adam Exp $
+$NetBSD: distinfo,v 1.5 2013/06/14 20:13:17 gdt Exp $
 
-SHA1 (mu-conference_0.8.tar.gz) = 99b9c68a6415eea3b0c8e840b4ec91e9cc48f2cb
-RMD160 (mu-conference_0.8.tar.gz) = a60f8a367b791306c595f63694de1624a52e7b46
-Size (mu-conference_0.8.tar.gz) = 110356 bytes
+SHA1 (mu-conference-0.8.81.tar.gz) = 8d40a7e36c4bb5ca9d8290f12eda6a3b10993447
+RMD160 (mu-conference-0.8.81.tar.gz) = dcb036b3679eaba2a405f6f7f79b8ec1b4fa3391
+Size (mu-conference-0.8.81.tar.gz) = 247649 bytes
 SHA1 (patch-src_Makefile) = afd3f211c7a9d53c482531303ad8e2125d77a395
 SHA1 (patch-src_jabberd_Makefile) = 4ee5ee36e5fe63af88bfb7f7c92dd5deb8ab594d
 SHA1 (patch-src_jcomp_Makefile) = 7d99e2a682dcbfc68976761646b834593184131e

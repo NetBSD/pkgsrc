@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2013/03/16 16:53:33 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/14 20:13:17 gdt Exp $
 
-DISTNAME=	mu-conference_0.8
-PKGNAME=	${DISTNAME:S/_/-/}
+DISTNAME=	mu-conference-0.8.81
+#The DISTFILE used to have _ separating name and version,
+#but gdt accidentally didn't do that when making 0.8.81
+#PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	http://download.gna.org/mu-conference/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://gna.org/projects/mu-conference/
 COMMENT=	Implementation of the XEP-0045 Multi-User Chat protocol
 LICENSE=	gnu-gpl-v2
