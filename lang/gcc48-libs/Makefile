@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/02 18:12:22 adam Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/14 09:01:41 jperkin Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC48_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc48 package so that with the dependence pattern
 ## '{gcc48,gcc48-libs}>=4.8.*' pkg_all will choose gcc48-libs over gcc48.
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,10 +30,10 @@ BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC48_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc4
 FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC48_DIST_VERSION}*
 .include "../../mk/find-prefix.mk"
 
-GCC_SUBPREFIX=		${GCC_PKGNAME}
-GCC_PREFIX=		${GCC_PKG_PREFIX}/${GCC_SUBPREFIX}
-GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-BUILD_DEFS+=		GCC_TARGET_MACHINE
+LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
+LIBGCC_PREFIX=		${GCC_PKG_PREFIX}/${LIBGCC_SUBPREFIX}
+LIBGCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+BUILD_DEFS+=		LIBGCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
@@ -44,22 +44,22 @@ SHLIB_EXT=	so
 
 LIBRARY_FILES=	${WRKDIR}/lib_files
 
-GENERATE_PLIST+= ${SED} -e 's,^,${GCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
+GENERATE_PLIST+= ${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${LIBGCC_TARGET_MACHINE}/,' \
 			${LIBRARY_FILES};
 GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-	   ${ECHO} '@pkgdir ${GCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
+	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${LIBGCC_TARGET_MACHINE}/lib' ;
 
 ${LIBRARY_FILES}:
 	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC48_DIST_VERSION}*' |		\
-	${SED} -n -e's,^${GCC_PREFIX}/,,' -e'/libexec\//d'		\
+	${SED} -n -e's,^${LIBGCC_PREFIX}/,,' -e'/libexec\//d'		\
 		-e'/libgij/d;/libgcj/d;/libjvm/d'			\
 		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
 
 do-install: ${LIBRARY_FILES}
-	${TEST} -d ${DESTDIR}${GCC_PREFIX}/${GCC_TARGET_MACHINE}/lib ||	\
-		${MKDIR} ${DESTDIR}${GCC_PREFIX}/${GCC_TARGET_MACHINE}/lib
-	cd ${GCC_PREFIX} && 						\
-	  ${PAX} -rw ${DESTDIR}${GCC_PREFIX}/${GCC_TARGET_MACHINE} <${LIBRARY_FILES}
+	${TEST} -d ${DESTDIR}${LIBGCC_PREFIX}/${LIBGCC_TARGET_MACHINE}/lib ||	\
+		${MKDIR} ${DESTDIR}${LIBGCC_PREFIX}/${LIBGCC_TARGET_MACHINE}/lib
+	cd ${LIBGCC_PREFIX} && 						\
+	  ${PAX} -rw ${DESTDIR}${LIBGCC_PREFIX}/${LIBGCC_TARGET_MACHINE} <${LIBRARY_FILES}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
