@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2013/04/06 04:11:44 rodent Exp $
+# $NetBSD: Makefile,v 1.55 2013/06/15 16:08:09 taca Exp $
 
-DISTNAME=	roundcubemail-0.8.6-dep
+DISTNAME=	roundcubemail-0.9.1-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -10,13 +10,14 @@ HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.8.1:../../mail/pear-Mail_Mime
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.5.0:../../databases/pear-MDB2
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.3:../../mail/pear-Auth_SASL
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=4.3.1:../../security/php-mcrypt
+
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_IDNA2>=0.1.1:../../net/pear-Net_IDNA2
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.8.1:../../mail/pear-Mail_Mime
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.3:../../mail/pear-Auth_SASL
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
@@ -86,16 +87,15 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	bin/*.sh
+REPLACE_FILES.php=	bin/cleandb.sh bin/decrypt.sh bin/indexcontacts.sh
+REPLACE_FILES.php+=	bin/installto.sh bin/moduserprefs.sh bin/msgexport.sh
+REPLACE_FILES.php+=	bin/msgimport.sh bin/update.sh bin/updatecss.sh
+REPLACE_FILES.php+=	bin/updatedb.sh
 
-.include "../../mk/apache.mk"
-.include "options.mk"
+REPLACE_PYTHON=		plugins/password/helpers/chpass-wrapper.py
 
 post-extract:
 	${CP} ${FILESDIR}/roundcube.conf ${WRKSRC}/roundcube.conf
-
-pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
@@ -121,7 +121,8 @@ do-install:
 
 .for i in ${PAX_DIRS}
 	${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/${i}
-	cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${RCDIR}/${i}
+	cd ${WRKSRC}/${i} && ${FIND} . -type f \! -name "*.orig" -print | \
+		${PAX} -rw ${DESTDIR}${RCDIR}/${i}
 	${FIND} ${DESTDIR}${RCDIR}/${i} -type f | \
 		${XARGS} ${CHMOD} ${SHAREMODE}
 	${FIND} ${DESTDIR}${RCDIR}/${i} -type d | \
@@ -136,4 +137,7 @@ do-install:
 			${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php
 .endfor
 
+.include "../../mk/apache.mk"
+.include "options.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,75 +1,60 @@
-# $NetBSD: options.mk,v 1.7 2012/09/15 13:24:13 obache Exp $
+# $NetBSD: options.mk,v 1.8 2013/06/15 16:08:09 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
-PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=		mysql pgsql
+PKG_OPTIONS_REQUIRED_GROUPS=	db converters
+PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite
+PKG_OPTIONS_GROUP.converters=	iconv multibyte
 
-PKG_SUPPORTED_OPTIONS=		iconv ldap multibyte mcrypt sockets gd
-# Following the recommendations in INSTALL the iconv, multibyte, gd and
-# mcrypt PHP extensions are all 'recommended' requirements
-PKG_SUGGESTED_OPTIONS=		mysql iconv multibyte mcrypt sockets gd
-
-.if ${PKG_PHP_VERSION} == "53"
-PKG_OPTIONS_GROUP.db+=		sqlite
-.endif
+PKG_SUPPORTED_OPTIONS=		ldap sockets gd
+PKG_SUGGESTED_OPTIONS=		mysql iconv sockets gd
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Use mysql backend
+### Use mysql backend.
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.1:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_mysql>1.5:../../databases/pear-MDB2_Driver_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 .endif
 
 ###
-### Use postgresql backend
+### Use postgresql backend.
 ###
 .if !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_pgsql>=1.5:../../databases/pear-MDB2_Driver_pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql-[0-9]*:../../databases/php-pdo_pgsql
 .endif
 
 ###
-### Use sqlite backend
+### Use sqlite backend.
 ###
 .if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PHP_PKG_PREFIX}-sqlite-[0-9]*:../../databases/php-sqlite
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_sqlite>1.5:../../databases/pear-MDB2_Driver_sqlite
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite-[0-9]*:../../databases/php-pdo_sqlite
 .endif
 
 ###
-### Use iconv
+### Use iconv.
 ###
 .if !empty(PKG_OPTIONS:Miconv)
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.1:../../converters/php-iconv
 .endif
 
 ###
-### Use OpenLDAP for storing data
-###
-.if !empty(PKG_OPTIONS:Mldap)
-DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.3.1:../../databases/php-ldap
-.endif
-
-###
-### Use mbstring
+### Use mbstring.
 ###
 .if !empty(PKG_OPTIONS:Mmultibyte)
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.1:../../converters/php-mbstring
 .endif
 
 ###
-### Use mcrypt
+### Use OpenLDAP for storing data.
 ###
-.if !empty(PKG_OPTIONS:Mmcrypt)
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=4.3.1:../../security/php-mcrypt
+.if !empty(PKG_OPTIONS:Mldap)
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.3.1:../../databases/php-ldap
 .endif
 
 ###
-### Use sockets
+### Use sockets, required by managesieve and password plugins.
 ###
 .if !empty(PKG_OPTIONS:Msockets)
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=4.3.1:../../net/php-sockets
