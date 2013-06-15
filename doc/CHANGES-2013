@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2085 2013/06/15 06:58:53 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2086 2013/06/15 09:42:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3252,3 +3252,23 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ruby-rcairo to 1.12.6 [obache 2013-06-15]
 	Updated mail/mailagent to 3.0.73nb4 [obache 2013-06-15]
 	Updated x11/wxGTK28 to 2.8.12nb1 [ryoon 2013-06-15]
+	Updated meta-pkgs/ruby-gnome2 to 2.0.2 [obache 2013-06-15]
+	Updated devel/ruby-gnome2-atk to 2.0.2 [obache 2013-06-15]
+	Updated devel/ruby-gnome2-gio to 2.0.2 [obache 2013-06-15]
+	Updated devel/ruby-gnome2-glib to 2.0.2 [obache 2013-06-15]
+	Updated devel/ruby-gnome2-gobject-introspection to 2.0.2 [obache 2013-06-15]
+	Updated devel/ruby-gnome2-pango to 2.0.2 [obache 2013-06-15]
+	Added graphics/ruby-gnome2-cairo-gobject version 2.0.2 [obache 2013-06-15]
+	Updated graphics/ruby-gnome2-gdk3 to 2.0.2 [obache 2013-06-15]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 2.0.2 [obache 2013-06-15]
+	Updated graphics/ruby-gnome2-goocanvas to 2.0.2 [obache 2013-06-15]
+	Updated graphics/ruby-gnome2-rsvg to 2.0.2 [obache 2013-06-15]
+	Updated multimedia/ruby-gnome2-gstreamer to 2.0.2 [obache 2013-06-15]
+	Updated print/ruby-gnome2-poppler to 2.0.2 [obache 2013-06-15]
+	Added www/ruby-gnome2-webkit-gtk version 2.0.2 [obache 2013-06-15]
+	Added www/ruby-gnome2-webkit-gtk2 version 2.0.2 [obache 2013-06-15]
+	Updated x11/ruby-gnome2-gtk to 2.0.2 [obache 2013-06-15]
+	Updated x11/ruby-gnome2-gtk3 to 2.0.2 [obache 2013-06-15]
+	Updated x11/ruby-gnome2-vte to 2.0.2 [obache 2013-06-15]
+	Updated x11/ruby-gnome2-gtksourceview2 to 2.0.2 [obache 2013-06-15]
+	Updated x11/ruby-gnome2-gtksourceview3 to 2.0.2 [obache 2013-06-15]
