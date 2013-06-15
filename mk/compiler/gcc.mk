@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.137 2013/06/13 10:45:46 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.138 2013/06/15 19:06:31 joerg Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -830,15 +830,11 @@ ${_GCC_${_var_}}:
 .  endif
 .endfor
 
-# On older NetBSD systems and where the Fortran compiler doesn't exist,
-# force the use of f2c-f77 or some other fortran.
+# On systems without a Fortran compiler, pull one in if needed.
+# The default is g95 as it supports a modern dialect, but it can
+# be overriden in mk.conf to use only f2c.
 #
-.if !empty(USE_LANGUAGES:Mfortran)
 PKGSRC_FORTRAN?=g95
-.endif
-#.if !empty(USE_LANGUAGES:Mfortran77)
-PKGSRC_FORTRAN?=f2c
-#.endif
 
 _GCC_NEEDS_A_FORTRAN=	no
 .if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !exists(${FCPATH})
