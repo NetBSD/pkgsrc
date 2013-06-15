@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2098 2013/06/15 19:59:53 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.2099 2013/06/15 20:25:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3284,3 +3284,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/mimedefang to 2.74 [pettai 2013-06-15]
 	Updated mail/opendkim to 2.8.3 [pettai 2013-06-15]
 	Updated security/dnssec-tools to 1.14 [pettai 2013-06-15]
+	Updated net/py-libpcap to 0.6.4 [adam 2013-06-15]
+	Updated net/scapy to 2.2.0 [adam 2013-06-15]
