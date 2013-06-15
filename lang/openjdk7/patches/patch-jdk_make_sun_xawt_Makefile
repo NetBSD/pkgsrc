@@ -1,0 +1,25 @@
+$NetBSD: patch-jdk_make_sun_xawt_Makefile,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+GCC support.
+
+--- jdk/make/sun/xawt/Makefile.orig	2013-06-11 09:37:03.894233474 +0000
++++ jdk/make/sun/xawt/Makefile
+@@ -58,7 +58,7 @@ endif
+ 
+ # For Xrender extension.
+ ifeq ($(PLATFORM), solaris)
+-LDFLAGS += -L/usr/openwin/sfw/lib$(ISA_DIR) -R/usr/openwin/sfw/lib$(ISA_DIR)
++LDFLAGS += -Wl,-R$(OPENWIN_LIB)
+ endif
+ 
+ ifeq ($(PLATFORM), linux)
+@@ -170,6 +170,9 @@ endif
+ # we will set a flag indicating this mismatch and the JDK source file
+ # will interpret it to resolve the problem.
+ ifeq ($(PLATFORM), solaris)
++  ifeq ($(CC_VERSION), gcc)
++    CPPFLAGS += -I$(OPENWIN_HOME)/include
++  endif # CC_VERSION
+   CPPFLAGS += -I$(OPENWIN_HOME)/include/X11/extensions
+   OS_VERSION := $(shell uname -r)
+   XRENDER_H := $(OPENWIN_HOME)/share/include/X11/extensions/Xrender.h

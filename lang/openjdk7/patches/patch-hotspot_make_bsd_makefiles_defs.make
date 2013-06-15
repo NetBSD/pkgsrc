@@ -1,4 +1,6 @@
-$NetBSD: patch-hotspot_make_bsd_makefiles_defs.make,v 1.2 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-hotspot_make_bsd_makefiles_defs.make,v 1.3 2013/06/15 09:31:05 jperkin Exp $
+
+64-bit support.
 
 --- hotspot/make/bsd/makefiles/defs.make.orig	2013-05-29 03:57:57.000000000 +0000
 +++ hotspot/make/bsd/makefiles/defs.make
