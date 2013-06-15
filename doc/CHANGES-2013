@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2092 2013/06/15 15:05:03 imil Exp $
+$NetBSD: CHANGES-2013,v 1.2093 2013/06/15 16:09:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3278,3 +3278,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/deforaos-panel to 0.2.18 [khorben 2013-06-15]
 	Updated comms/deforaos-phone to 0.3.12 [khorben 2013-06-15]
 	Updated sysutils/salt to 0.15.3 [imil 2013-06-15]
+	Updated mail/roundcube to 0.9.1 [taca 2013-06-15]
