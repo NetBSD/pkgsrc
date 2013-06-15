@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2082 2013/06/15 04:59:27 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2083 2013/06/15 05:14:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3249,3 +3249,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/wxGTK28-contrib to 2.8.12 [ryoon 2013-06-15]
 	Updated net/amule to 2.3.1 [ryoon 2013-06-15]
 	Updated security/ruby-twitter_oauth to 0.4.93 [obache 2013-06-15]
+	Updated graphics/ruby-rcairo to 1.12.6 [obache 2013-06-15]
