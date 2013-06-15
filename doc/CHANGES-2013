@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2100 2013/06/15 21:01:16 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.2101 2013/06/15 21:03:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3287,3 +3287,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/py-libpcap to 0.6.4 [adam 2013-06-15]
 	Updated net/scapy to 2.2.0 [adam 2013-06-15]
 	Added textproc/ocaml-csv version 1.3.0 [jaapb 2013-06-15]
+	Updated net/libpcap to 1.4.0 [adam 2013-06-15]
+	Updated net/tcpdump to 4.4.0 [adam 2013-06-15]
