@@ -1,8 +1,0 @@
-$NetBSD: patch-ba,v 1.5 2013/06/15 02:30:57 ryoon Exp $
-
-deal with CVE-2009-2369. (chunks 2 + 3)
-
-Fix build with png-1.5. (chunks 1 + 4)
-http://trac.wxwidgets.org/ticket/12896 for first one, other
-one already fixed in SVN head.
-
