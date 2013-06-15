@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2013/05/04 12:59:47 joerg Exp $
+$NetBSD: distinfo,v 1.19 2013/06/15 02:34:19 ryoon Exp $
 
-SHA1 (aMule-2.2.6.tar.bz2) = 369bb950897c3f1f59fc1190ac7034113ac253d0
-RMD160 (aMule-2.2.6.tar.bz2) = 9483eb1907803d3a6ac375c4d85a7b0cbd895daa
-Size (aMule-2.2.6.tar.bz2) = 4722143 bytes
-SHA1 (patch-aa) = 64b0812f361cfda37c19849b428b6ce1e31ca885
+SHA1 (aMule-2.3.1.tar.bz2) = 25bcef92b06cb34849afaf052e2cd66b4a8454c2
+RMD160 (aMule-2.3.1.tar.bz2) = 7bc5ceea196f9ba0aa0687a694cc82354a0210fc
+Size (aMule-2.3.1.tar.bz2) = 4565232 bytes
+SHA1 (patch-aa) = adf28d4ef0f693fea3e103c02c632ac91423b303
 SHA1 (patch-src_OScopeCtrl.cpp) = d9ee907eeb49c3f54972b4d1cabdd64c6d4b88d5
 SHA1 (patch-src_ObservableQueue.h) = 7d6b402662a3b9b67f0324d1b6d3119623d8ea77
