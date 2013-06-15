@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2012/03/12 10:39:13 fhajny Exp $
+$NetBSD: patch-aa,v 1.6 2013/06/15 02:30:57 ryoon Exp $
 
---- configure.orig	2009-03-06 12:17:38.000000000 +0000
+--- configure.orig	2011-03-22 12:16:57.000000000 +0000
 +++ configure
 @@ -1962,7 +1962,7 @@ _ACEOF
  
@@ -51,60 +51,7 @@ $NetBSD: patch-aa,v 1.5 2012/03/12 10:39:13 fhajny Exp $
  
  if test "$build" != "$host" -a "$GCC" = yes; then
                      if cross_root=`$CC -print-prog-name=ld 2>/dev/null`; then
-@@ -26379,9 +26381,9 @@ echo "${ECHO_T}$ac_cv_header_png_h" >&6
- 
- 
-             if test "$ac_cv_header_png_h" = "yes"; then
--                echo "$as_me:$LINENO: checking for png_check_sig in -lpng" >&5
--echo $ECHO_N "checking for png_check_sig in -lpng... $ECHO_C" >&6
--if test "${ac_cv_lib_png_png_check_sig+set}" = set; then
-+                echo "$as_me:$LINENO: checking for png_sig_cmp in -lpng" >&5
-+echo $ECHO_N "checking for png_sig_cmp in -lpng... $ECHO_C" >&6
-+if test "${ac_cv_lib_png_png_sig_cmp+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -26399,11 +26401,11 @@ extern "C"
- #endif
- /* We use char because int might match the return type of a gcc2
-    builtin and then its argument prototype would still apply.  */
--char png_check_sig ();
-+char png_sig_cmp ();
- int
- main ()
- {
--png_check_sig ();
-+png_sig_cmp ();
-   ;
-   return 0;
- }
-@@ -26429,20 +26431,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_png_png_check_sig=yes
-+  ac_cv_lib_png_png_sig_cmp=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_png_png_check_sig=no
-+ac_cv_lib_png_png_sig_cmp=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_check_sig" >&5
--echo "${ECHO_T}$ac_cv_lib_png_png_check_sig" >&6
--if test $ac_cv_lib_png_png_check_sig = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_png_png_sig_cmp" >&5
-+echo "${ECHO_T}$ac_cv_lib_png_png_sig_cmp" >&6
-+if test $ac_cv_lib_png_png_sig_cmp = yes; then
-   PNG_LINK=" -lpng -lz"
- fi
- 
-@@ -39478,6 +39480,9 @@ echo "$as_me: WARNING: BeOS threads are 
+@@ -39590,6 +39592,9 @@ echo "$as_me: WARNING: BeOS threads are 
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
                  ;;
@@ -114,7 +61,7 @@ $NetBSD: patch-aa,v 1.5 2012/03/12 10:39:13 fhajny Exp $
            *-*-freebsd*)
                                                  THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
                  ;;
-@@ -39611,7 +39616,7 @@ echo $ECHO_N "checking if more special f
+@@ -39723,7 +39728,7 @@ echo $ECHO_N "checking if more special f
                                                                                                                  LDFLAGS="-L/usr/lib/threads $LDFLAGS"
                  flag="-D_THREAD_SAFE"
                  ;;
@@ -123,7 +70,7 @@ $NetBSD: patch-aa,v 1.5 2012/03/12 10:39:13 fhajny Exp $
                  flag="-D_THREAD_SAFE"
                  ;;
              *-hp-hpux* )
-@@ -48532,7 +48537,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+@@ -48648,7 +48653,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
              SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
          fi
  
@@ -132,7 +79,7 @@ $NetBSD: patch-aa,v 1.5 2012/03/12 10:39:13 fhajny Exp $
              PIC_FLAG="-dynamic -fPIC"
          fi
          if test "x$XLCC" = "xyes"; then
-@@ -49099,6 +49104,7 @@ EOF
+@@ -49215,6 +49220,7 @@ EOF
  
        powerpc-apple-macos* | \
        *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
@@ -140,7 +87,7 @@ $NetBSD: patch-aa,v 1.5 2012/03/12 10:39:13 fhajny Exp $
        *-*-mirbsd* | \
        *-*-sunos4* | \
        *-*-osf* | \
-@@ -49142,7 +49148,7 @@ echo "$as_me: error: unknown system type
+@@ -49258,7 +49264,7 @@ echo "$as_me: error: unknown system type
  
      case "${BAKEFILE_HOST}" in
        *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
