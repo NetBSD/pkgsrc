@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.33 2012/03/20 06:14:30 taca Exp $
+# $NetBSD: modules.mk,v 1.34 2013/06/15 09:11:27 obache Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -112,6 +112,7 @@ ruby-extconf-configure:
 .elif defined(USE_RUBY_SETUP) && empty(USE_RUBY_SETUP:M[nN][oO])
 
 RUBY_SETUP?=		setup.rb
+RUBY_SETUP_SUBDIRS?=	.
 
 .if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-setup>=3.4.0:../../devel/ruby-setup
@@ -121,14 +122,16 @@ BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-setup>=3.4.0:../../devel/ruby-setup
 do-configure:	ruby-setup-configure
 
 ruby-setup-configure:
+.for d in ${RUBY_SETUP_SUBDIRS}
 .if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
 	@${ECHO_MSG} "===>  Use pkgsrc's ruby-setup"
-	${RUN}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}/${d}; \
 		${CP} ${PREFIX}/${RUBY_VENDORLIB}/setup.rb ${RUBY_SETUP}
 .endif
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to configure"
-	${RUN}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_SETUP} config ${CONFIGURE_ARGS}
+.  endfor
 .endif
 
 .if !target(do-build)
@@ -136,8 +139,10 @@ do-build:	ruby-setup-build
 
 ruby-setup-build:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to build"
-	${RUN}cd ${WRKSRC}; \
+.for d in ${RUBY_SETUP_SUBDIRS}
+	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} setup
+.endfor
 .endif
 
 .if !target(do-install)
@@ -150,8 +155,10 @@ _RUBY_SETUP_INSTALLARGS+=   --prefix=${DESTDIR:Q}
 
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to ${INSTALL_TARGET}"
-	${RUN}cd ${WRKSRC}; \
+.for d in ${RUBY_SETUP_SUBDIRS}
+	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} ${_RUBY_SETUP_INSTALLARGS}
+.endfor
 .endif
 
 #
