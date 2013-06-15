@@ -1,116 +1,116 @@
-$NetBSD: patch-aa,v 1.9 2009/06/06 13:08:27 obache Exp $
+$NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
 
 * pthread flags portabilities
 * avoid check for gettext>=0.11.5
 * fixes to install all supported L10N man pages
 
---- configure.orig	2009-05-16 07:38:31.000000000 +0000
+--- configure.orig	2011-11-11 20:59:26.000000000 +0000
 +++ configure
-@@ -1998,7 +1998,8 @@ echo "${ECHO_T}yes" >&6
+@@ -3364,7 +3364,8 @@ case $host_os in *\ *) host_os=`echo "$h
+ $as_echo_n "checking if this is a FreeBSD 4 or earlier system... " >&6; }
+ 		if test x"`uname -s`" = xFreeBSD && test 0`uname -r | cut -c 1` -lt 5; then :
  
- else
- 
--			MULELDFLAGS="$MULELDFLAGS -lpthread"
+-			MULELDFLAGS="$MULELDFLAGS -pthread"
 +			MULELDFLAGS="$MULELDFLAGS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
 +			MULECFLAGS="$MULECFLAGS ${PTHREAD_CFLAGS}"
- 			echo "$as_me:$LINENO: result: no" >&5
- echo "${ECHO_T}no" >&6
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
  
-@@ -18080,7 +18081,7 @@ _ACEOF
+@@ -13760,7 +13761,7 @@ $as_echo "#define HAVE_DCGETTEXT 1" >>co
+   INCINTL=-I\${top_builddir}/intl
  fi
  
+-	if test x$USE_NLS = xyes; then :
++	if test xno = xyes; then :
  
--	if test x$USE_NLS = xyes; then
-+	if test xno = xyes; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for autopoint" >&5
+ $as_echo_n "checking for autopoint... " >&6; }
+@@ -13800,7 +13801,7 @@ $as_echo_n "checking for requested langu
  
- 	echo "$as_me:$LINENO: checking for autopoint" >&5
- echo $ECHO_N "checking for autopoint... $ECHO_C" >&6
-@@ -18116,7 +18117,7 @@ echo $ECHO_N "checking for requested lan
+ 	if test ${enable_amule_daemon:-no} = yes; then :
  
- 	if test "$AMULE_DAEMON" = "yes"; then
- 
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    AMULE_DAEMON_MANPAGES=`ls -1 ${srcdir}/docs/man/amuled.* | sed -e 's:.*/::g'`
  else
  
-@@ -18136,7 +18137,7 @@ fi
+@@ -13818,7 +13819,7 @@ fi
  
- 	if test "$AMULECMD" = "yes"; then
+ 	if test ${enable_amulecmd:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    AMULECMD_MANPAGES=`ls -1 ${srcdir}/docs/man/amulecmd.* | sed -e 's:.*/::g'`
  else
  
-@@ -18156,7 +18157,7 @@ fi
+@@ -13836,7 +13837,7 @@ fi
  
- 	if test "$WEB" = "yes"; then
+ 	if test ${enable_webserver:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
-   WEB_MANPAGES=`ls -1 ${srcdir}/docs/man/amuleweb.* | sed -e 's:.*/::g'`
+   WEBSERVER_MANPAGES=`ls -1 ${srcdir}/docs/man/amuleweb.* | sed -e 's:.*/::g'`
  else
  
-@@ -18176,7 +18177,7 @@ fi
+@@ -13854,7 +13855,7 @@ fi
  
- 	if test "$AMULE_GUI" = "yes"; then
+ 	if test ${enable_amule_gui:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    AMULE_GUI_MANPAGES=`ls -1 ${srcdir}/docs/man/amulegui.* | sed -e 's:.*/::g'`
  else
  
-@@ -18196,7 +18197,7 @@ fi
+@@ -13872,7 +13873,7 @@ fi
  
- 	if test "$CAS" = "yes"; then
+ 	if test ${enable_cas:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    CAS_MANPAGES=`ls -1 ${srcdir}/src/utils/cas/docs/cas.* | sed -e 's:.*/::g'`
  else
  
-@@ -18216,7 +18217,7 @@ fi
+@@ -13890,7 +13891,7 @@ fi
  
- 	if test "$WXCAS" = "yes"; then
+ 	if test ${enable_wxcas:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    WXCAS_MANPAGES=`ls -1 ${srcdir}/src/utils/wxCas/docs/wxcas.* | sed -e 's:.*/::g'`
  else
  
-@@ -18236,7 +18237,7 @@ fi
+@@ -13908,7 +13909,7 @@ fi
  
- 	if test "$ED2K" = "yes"; then
+ 	if test ${enable_ed2k:-yes} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    ED2K_MANPAGES=`ls -1 ${srcdir}/docs/man/ed2k.* | sed -e 's:.*/::g'`
  else
  
-@@ -18256,7 +18257,7 @@ fi
+@@ -13926,7 +13927,7 @@ fi
  
- 	if test "$ALC" = "yes"; then
+ 	if test ${enable_alc:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    ALC_MANPAGES=`ls -1 ${srcdir}/src/utils/aLinkCreator/docs/alc.* | sed -e 's:.*/::g'`
  else
  
-@@ -18276,7 +18277,7 @@ fi
+@@ -13944,7 +13945,7 @@ fi
  
- 	if test "$ALCC" = "yes"; then
+ 	if test ${enable_alcc:-no} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    ALCC_MANPAGES=`ls -1 ${srcdir}/src/utils/aLinkCreator/docs/alcc.* | sed -e 's:.*/::g'`
  else
  
-@@ -18296,7 +18297,7 @@ fi
+@@ -13962,7 +13963,7 @@ fi
  
- 	if test "$MONOLITHIC" = "yes"; then
+ 	if test ${enable_monolithic:-yes} = yes; then :
  
--		if test -z "$LINGUAS"; then
+-		if test -z "$LINGUAS"; then :
 +		if test -z "$LINGUAS" -o "$LINGUAS" = "%UNSET%"; then
    MONOLITHIC_MANPAGES=`ls -1 ${srcdir}/docs/man/amule.* | sed -e 's:.*/::g'`
  else

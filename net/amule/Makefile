@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2013/06/12 12:01:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2013/06/15 02:34:19 ryoon Exp $
 
-DISTNAME=	aMule-2.2.6
-PKGNAME=	${DISTNAME:S/aMule/amule/}
-PKGREVISION=	21
+DISTNAME=	aMule-2.3.1
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amule/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-wx-config=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config
 CONFIGURE_ARGS+=	--with-crypto-prefix=${BUILDLINK_PREFIX.cryptopp}
 CONFIGURE_ARGS+=	--with-language=all
+CONFIGURE_ARGS+=	--enable-xas
 
 .include "options.mk"
 
