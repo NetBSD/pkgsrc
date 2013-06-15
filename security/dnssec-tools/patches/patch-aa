@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/07/22 21:08:26 pettai Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/15 19:57:20 pettai Exp $
+
+Add (PKG_)PREFIX support
 
 --- Makefile.in.orig	2010-06-30 14:51:12.000000000 +0000
 +++ Makefile.in
