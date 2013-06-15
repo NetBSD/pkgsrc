@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/05/05 12:26:23 imil Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/06/15 15:04:39 imil Exp $
 bin/salt
 bin/salt-call
 bin/salt-cp
@@ -275,9 +275,9 @@ ${PYSITELIB}/salt/modules/linux_lvm.pyo
 ${PYSITELIB}/salt/modules/linux_sysctl.py
 ${PYSITELIB}/salt/modules/linux_sysctl.pyc
 ${PYSITELIB}/salt/modules/linux_sysctl.pyo
-${PYSITELIB}/salt/modules/locale.py
-${PYSITELIB}/salt/modules/locale.pyc
-${PYSITELIB}/salt/modules/locale.pyo
+${PYSITELIB}/salt/modules/localemod.py
+${PYSITELIB}/salt/modules/localemod.pyc
+${PYSITELIB}/salt/modules/localemod.pyo
 ${PYSITELIB}/salt/modules/locate.py
 ${PYSITELIB}/salt/modules/locate.pyc
 ${PYSITELIB}/salt/modules/locate.pyo
