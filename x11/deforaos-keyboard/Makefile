@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/06/06 12:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/15 12:27:47 khorben Exp $
 #
 
 DISTNAME=	Keyboard-0.2.1
 PKGNAME=	deforaos-keyboard-0.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	http://www.defora.org/os/download/download/3696/
 
@@ -24,5 +24,4 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
