@@ -1,0 +1,2 @@
+This is a pure OCaml library to read and write CSV (comma separated value)
+files.
