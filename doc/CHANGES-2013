@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2079 2013/06/15 02:13:23 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2080 2013/06/15 02:32:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3245,3 +3245,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/lutok to 0.3 [jmmv 2013-06-15]
 	Updated devel/kyua-cli to 0.6nb2 [jmmv 2013-06-15]
 	Updated misc/rubygems to 2.0.3nb1 [taca 2013-06-15]
+	Updated x11/wxGTK28 to 2.8.12 [ryoon 2013-06-15]
+	Updated x11/wxGTK28-contrib to 2.8.12 [ryoon 2013-06-15]
