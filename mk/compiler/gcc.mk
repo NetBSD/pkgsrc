@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.138 2013/06/15 19:06:31 joerg Exp $
+# $NetBSD: gcc.mk,v 1.139 2013/06/15 21:50:43 asau Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -290,11 +290,11 @@ _NEED_GCC48=	yes
 # Assume by default that GCC will only provide a C compiler.
 LANGUAGES.gcc?=	c
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 objc
+LANGUAGES.gcc=	c c++ fortran77 objc
 .elif !empty(_NEED_GCC3:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 java objc
+LANGUAGES.gcc=	c c++ fortran77 java objc
 .elif !empty(_NEED_GCC34:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 objc
+LANGUAGES.gcc=	c c++ fortran77 objc
 .elif !empty(_NEED_GCC44:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 java objc
 .elif !empty(_NEED_GCC45:M[yY][eE][sS])
@@ -340,7 +340,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
 _USE_GCC_SHLIB?=	yes
@@ -372,7 +371,6 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 _GCC_PKGSRCDIR=		../../lang/gcc34
 _GCC_DEPENDENCY=	gcc34>=${_GCC_REQD}:../../lang/gcc34
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mobjc)
 _USE_GCC_SHLIB?=	yes
@@ -514,7 +512,7 @@ _USE_GCC_SHLIB?=	yes
 _IGNORE_GCC3F77=	yes
 MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  endif
-.  if !defined(_IGNORE_GCC3F77) && (!empty(_LANGUAGES.gcc:Mfortran) || !empty(_LANGUAGES.gcc:Mfortran77))
+.  if !defined(_IGNORE_GCC3F77) && !empty(_LANGUAGES.gcc:Mfortran77)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
 _USE_GCC_SHLIB?=	yes
