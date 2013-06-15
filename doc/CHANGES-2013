@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2097 2013/06/15 19:04:00 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.2098 2013/06/15 19:59:53 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3283,3 +3283,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/validns to 0.7 [pettai 2013-06-15]
 	Updated mail/mimedefang to 2.74 [pettai 2013-06-15]
 	Updated mail/opendkim to 2.8.3 [pettai 2013-06-15]
+	Updated security/dnssec-tools to 1.14 [pettai 2013-06-15]
