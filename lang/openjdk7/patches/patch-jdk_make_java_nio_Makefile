@@ -1,0 +1,16 @@
+$NetBSD: patch-jdk_make_java_nio_Makefile,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+Ensure we pick up the main flags.
+
+--- jdk/make/java/nio/Makefile.orig	2013-02-20 17:07:30.000000000 +0000
++++ jdk/make/java/nio/Makefile
+@@ -34,6 +34,9 @@ PRODUCT = java
+ OTHER_JAVACFLAGS += -Xmaxwarns 1000 -Xlint:serial -Werror
+ include $(BUILDDIR)/common/Defs.gmk
+ 
++LDDFLAGS += $(LDFLAGS_COMMON_$(ARCH))
++CPPFLAGS += $(CFLAGS_REQUIRED_$(ARCH))
++
+ NIO_SRC = $(SHARE_SRC)/classes/java/nio
+ NIO_GEN = $(GENSRCDIR)/java/nio
+ 
