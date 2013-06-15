@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/05/09 07:39:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/15 19:18:00 jaapb Exp $
 #
 
 PKGNAME=	ocaml-sqlite3-${VERSION}
 DISTNAME=	sqlite3-ocaml-${VERSION}
-VERSION=	2.0.2
-PKGREVISION=	3
+VERSION=	2.0.4
 CATEGORIES=	databases
 MASTER_SITES=	https://bitbucket.org/mmottl/sqlite3-ocaml/downloads/
 FETCH_USING=	curl
