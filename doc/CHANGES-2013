@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2090 2013/06/15 12:48:26 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.2091 2013/06/15 12:57:13 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/deforaos-browser to 0.4.12 [khorben 2013-06-15]
 	Updated multimedia/deforaos-player to 0.1.6 [khorben 2013-06-15]
 	Updated x11/deforaos-panel to 0.2.18 [khorben 2013-06-15]
+	Updated comms/deforaos-phone to 0.3.12 [khorben 2013-06-15]
