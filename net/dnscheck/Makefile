@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/15 21:18:49 pettai Exp $
 #
 
-DISTNAME=	dotse-dnscheck-1.2.6-0-g86a5c69
-PKGNAME=	dnscheck-1.2.6
-PKGREVISION=	2
+DISTNAME=	dotse-dnscheck-1.4.1-0-ga93f48c
+PKGNAME=	dnscheck-1.4.1
 CATEGORIES=	net perl5
-MASTER_SITES=	-https://github.com/dotse/dnscheck/tarball/1.2.6
+MASTER_SITES=	-https://github.com/dotse/dnscheck/tarball/1.4.1
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/dotse/dnscheck/
@@ -24,6 +23,9 @@ DEPENDS+=	p5-IO-Socket-INET6>=2.51:../../net/p5-IO-Socket-INET6
 DEPENDS+=	p5-Mail-RFC822-Address-[0-9]*:../../mail/p5-Mail-RFC822-Address
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-Config-Any-[0-9]*:../../devel/p5-Config-Any
+DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
+DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
@@ -31,16 +33,17 @@ DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 
 REPLACE_PERL+=  lib/DNSCheck.pm lib/DNSCheck/*.pm
 REPLACE_PERL+=  lib/DNSCheck/Lookup/*.pm lib/DNSCheck/Test/*.pm
+REPLACE_PERL+=  apps/dnscheck-packetcheck
 
 PERL5_PACKLIST=	auto/DNSCheck/.packlist
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
 
-WRKSRC=         ${WRKDIR}/dotse-dnscheck-b73204b/engine
+WRKSRC=         ${WRKDIR}/dotse-dnscheck-f058797/engine
 SYSCONFDIR=     `${BASENAME} ${PKG_SYSCONFDIR}`
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=	${EGDIR}/config.yaml ${PKG_SYSCONFDIR}/${PKGBASE}/config.yaml
-CONF_FILES+=	${EGDIR}/policy.yaml ${PKG_SYSCONFDIR}/${PKGBASE}/policy.yaml
+#CONF_FILES=	${EGDIR}/config.yaml ${PKG_SYSCONFDIR}/${PKGBASE}/config.yaml
+#CONF_FILES+=	${EGDIR}/policy.yaml ${PKG_SYSCONFDIR}/${PKGBASE}/policy.yaml
 
 BUILD_DEFS+=    IPV6_READY
 
@@ -55,9 +58,9 @@ OWN_DIRS=		${SYSCONFDIR}/${PKGBASE}
 post-patch:
 	${RM} ${WRKSRC}/lib/DNSCheck/Config.pm.orig
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/config.yaml ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/policy.yaml ${DESTDIR}${EGDIR}/
+#post-install:
+#	${INSTALL_DATA} ${WRKSRC}/config.yaml ${DESTDIR}${EGDIR}/
+#	${INSTALL_DATA} ${WRKSRC}/policy.yaml ${DESTDIR}${EGDIR}/
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
