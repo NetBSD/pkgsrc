@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12293 2013/06/15 19:04:00 pettai Exp $
+$NetBSD: TODO,v 1.12294 2013/06/15 20:25:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -982,7 +982,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sarg-2.2.5
 	o sawfish-1.9.91
 	o scala-2.10.0
-	o scapy-2.2.0
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
