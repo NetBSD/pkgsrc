@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2009/06/09 12:30:02 hasso Exp $
+$NetBSD: patch-ab,v 1.2 2013/06/15 20:24:19 adam Exp $
 
 --- scapy/arch/unix.py.orig	2009-02-01 22:30:20 +0200
 +++ scapy/arch/unix.py	2009-06-09 14:33:21 +0300
-@@ -160,7 +160,7 @@ def read_routes6():
+@@ -163,7 +163,7 @@ def read_routes6():
              lspl = l.split()
              d,nh,fl = lspl[:3]
              dev = lspl[5+mtu_present+prio_present]
