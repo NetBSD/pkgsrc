@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.5 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-ak,v 1.6 2013/06/15 09:31:05 jperkin Exp $
+
+Additional rpaths.
 
 --- jdk/make/common/Defs-bsd.gmk.orig	2013-05-29 03:57:57.000000000 +0000
 +++ jdk/make/common/Defs-bsd.gmk

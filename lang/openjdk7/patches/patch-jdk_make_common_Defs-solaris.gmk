@@ -1,0 +1,23 @@
+$NetBSD: patch-jdk_make_common_Defs-solaris.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+GCC support.
+
+--- jdk/make/common/Defs-solaris.gmk.orig	2013-02-20 17:07:30.000000000 +0000
++++ jdk/make/common/Defs-solaris.gmk
+@@ -44,6 +44,10 @@
+ # Note: CPPFLAGS are used in C and C++ compiles.
+ #
+ 
++ifdef USE_GCC
++  include $(JDK_TOPDIR)/make/common/Defs-$(PLATFORM)-gcc.gmk
++else
++
+ # Get shared JDK settings
+ include $(JDK_MAKE_SHARED_DIR)/Defs.gmk
+ 
+@@ -799,3 +803,5 @@ SA_DEBUGINFO_NAME = $(LIB_PREFIX)saproc.
+ SA_DIZ_NAME = $(LIB_PREFIX)saproc.diz
+ INCLUDE_SA=true
+ 
++endif # USE_GCC
++

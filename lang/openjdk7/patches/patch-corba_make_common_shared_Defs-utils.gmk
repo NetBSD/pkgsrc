@@ -1,0 +1,15 @@
+$NetBSD: patch-corba_make_common_shared_Defs-utils.gmk,v 1.1 2013/06/15 09:31:05 jperkin Exp $
+
+Use pkgsrc unzip.
+
+--- corba/make/common/shared/Defs-utils.gmk.orig	2013-02-20 04:35:29.000000000 +0000
++++ corba/make/common/shared/Defs-utils.gmk
+@@ -136,7 +136,7 @@ TR             = $(UTILS_USR_BIN_PATH)tr
+ TRUE           = $(UTILS_COMMAND_PATH)true
+ UNAME          = $(UTILS_COMMAND_PATH)uname
+ UNIQ           = $(UTILS_USR_BIN_PATH)uniq
+-UNZIP          = $(UTILS_USR_BIN_PATH)unzip
++UNZIP          = $(UTILS_DEVTOOL_PATH)unzip
+ UNZIPSFX       = $(UTILS_DEVTOOL_PATH)unzipsfx
+ WC             = $(UTILS_USR_BIN_PATH)wc
+ WHICH          = $(UTILS_USR_BIN_PATH)which

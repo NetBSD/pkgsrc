@@ -1,0 +1,15 @@
+$NetBSD: patch-corba_make_common_shared_Platform.gmk,v 1.1 2013/06/15 09:31:05 jperkin Exp $
+
+Avoid warnings when building in a zone.
+
+--- corba/make/common/shared/Platform.gmk.orig	2013-02-20 04:35:29.000000000 +0000
++++ corba/make/common/shared/Platform.gmk
+@@ -143,7 +143,7 @@ ifeq ($(SYSTEM_UNAME), SunOS)
+     REQUIRED_FREE_SPACE=1040000
+   endif
+   # How much RAM does this machine have:
+-  MB_OF_MEMORY=$(shell /etc/prtconf | fgrep 'Memory size:' | expand | cut -d' ' -f3)
++  MB_OF_MEMORY=$(shell /usr/sbin/prtconf 2>&1 | fgrep 'Memory size:' | expand | cut -d' ' -f3)
+ endif
+ 
+ # Platform settings specific to Linux

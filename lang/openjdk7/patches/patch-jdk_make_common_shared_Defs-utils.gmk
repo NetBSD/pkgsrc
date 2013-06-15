@@ -1,0 +1,14 @@
+$NetBSD: patch-jdk_make_common_shared_Defs-utils.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+Use pkgsrc zip commands.
+
+--- jdk/make/common/shared/Defs-utils.gmk.orig	2013-03-10 22:22:12.950670029 +0000
++++ jdk/make/common/shared/Defs-utils.gmk
+@@ -254,3 +254,7 @@ ifeq ($(PLATFORM), macosx)
+   # Builtin shell command, no -e option needed
+   ECHO         = echo
+ endif
++
++ZIPEXE     = $(PKGSRC_ZIPEXE)
++UNZIP      = $(PKGSRC_UNZIP)
++UNZIPSFX   = $(PKGSRC_UNZIPSFX)

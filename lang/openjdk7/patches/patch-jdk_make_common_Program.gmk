@@ -1,0 +1,36 @@
+$NetBSD: patch-jdk_make_common_Program.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+GCC support.
+
+--- jdk/make/common/Program.gmk.orig	2013-06-11 09:37:03.843509400 +0000
++++ jdk/make/common/Program.gmk
+@@ -65,7 +65,10 @@ program: $(ACTUAL_PROGRAM)
+ ifndef CROSS_COMPILE_ARCH
+   # reuse the mapfiles in the launcher's directory, the same should
+   # be applicable to the tool launchers as well.
+-  FILES_m = $(BUILDDIR)/java/main/java/mapfile-$(ARCH)
++  # Except when the makefile requests a specific mapfile.
++  ifndef FILES_m
++    FILES_m = $(BUILDDIR)/java/main/java/mapfile-$(ARCH)
++  endif # ! FILES_m
+   include $(BUILDDIR)/common/Mapfile-vers.gmk
+ endif
+ 
+@@ -110,6 +113,7 @@ ifneq (,$(findstring $(PLATFORM), linux
+   LDFLAGS += -L $(LIBDIR)/$(LIBARCH)/jli
+   OTHER_LDLIBS += -ljli
+   ifeq ($(PLATFORM), solaris)
++    LDFLAGS += -R ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}/jli
+     ifeq ($(ARCH_DATA_MODEL), 32)
+       LDFLAGS += -R \$$ORIGIN/../lib/$(LIBARCH)/jli
+       LDFLAGS += -R \$$ORIGIN/../jre/lib/$(LIBARCH)/jli
+@@ -124,6 +128,9 @@ ifneq (,$(findstring $(PLATFORM), linux
+     LDFLAGS += -Wl,-rpath -Wl,\$$ORIGIN/../lib/$(LIBARCH)/jli
+     LDFLAGS += -Wl,-rpath -Wl,\$$ORIGIN/../jre/lib/$(LIBARCH)/jli
+   endif # PLATFORM LINUX
++  ifeq ($(SYSTEM_ZLIB),true)
++    OTHER_LDLIBS += $(ZLIB_LIBS)
++  endif # SYSTEM_ZLIB
+ endif # PLATFORM linux solaris
+ 
+ ifeq ($(PLATFORM), windows)

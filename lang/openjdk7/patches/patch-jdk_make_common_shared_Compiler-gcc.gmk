@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_common_shared_Compiler-gcc.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+GCC needs -shared not -G.
+
+--- jdk/make/common/shared/Compiler-gcc.gmk.orig	2013-02-20 17:07:30.000000000 +0000
++++ jdk/make/common/shared/Compiler-gcc.gmk
+@@ -80,7 +80,7 @@ ifeq ($(PLATFORM), solaris)
+   CXX            = $(COMPILER_PATH)g++
+ 
+   # Option used to create a shared library
+-  SHARED_LIBRARY_FLAG = -G
++  SHARED_LIBRARY_FLAG = -shared
+   
+ endif
+ 
