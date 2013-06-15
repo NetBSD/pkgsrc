@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.4 2013/06/11 14:55:54 taca Exp $
+$NetBSD: patch-am,v 1.5 2013/06/15 02:12:48 taca Exp $
 
 Make sure to setup under DESTDIR.
 
---- lib/rubygems/commands/setup_command.rb.orig	2013-02-12 20:04:54.000000000 +0000
+--- lib/rubygems/commands/setup_command.rb.orig	2013-03-11 20:40:09.000000000 +0000
 +++ lib/rubygems/commands/setup_command.rb
-@@ -143,7 +143,7 @@ By default, this RubyGems will install g
+@@ -145,7 +145,7 @@ By default, this RubyGems will install g
  
      uninstall_old_gemcutter
  
@@ -13,7 +13,7 @@ Make sure to setup under DESTDIR.
  
      say
      if @verbose then
-@@ -160,7 +160,11 @@ By default, this RubyGems will install g
+@@ -162,7 +162,11 @@ By default, this RubyGems will install g
      release_notes = File.join Dir.pwd, 'History.txt'
  
      release_notes = if File.exist? release_notes then
@@ -26,7 +26,7 @@ Make sure to setup under DESTDIR.
                        history = history.sub(/^# coding:.*?^=/m, '')
  
                        text = history.split(HISTORY_HEADER)
-@@ -295,11 +299,15 @@ TEXT
+@@ -306,11 +310,15 @@ TEXT
      end
    end
  
@@ -43,7 +43,7 @@ Make sure to setup under DESTDIR.
      begin
        Gem.ensure_gem_subdirectories Gem.dir
      rescue SystemCallError
-@@ -310,7 +318,7 @@ TEXT
+@@ -321,7 +329,7 @@ TEXT
         (not File.exist? rubygems_doc_dir or
          File.writable? rubygems_doc_dir) then
        say "Removing old RubyGems RDoc and ri" if @verbose
