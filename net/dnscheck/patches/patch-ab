@@ -1,15 +1,20 @@
-$NetBSD: patch-ab,v 1.1.1.1 2012/05/08 22:39:39 pettai Exp $
+$NetBSD: patch-ab,v 1.2 2013/06/15 21:18:49 pettai Exp $
 
-Look for the configuration files in SYSCONFDIR instead of share
+Look for the configuration files in SYSCONFDIR instead of /etc
 
---- ./lib/DNSCheck/Config.pm.orig	2009-04-04 13:49:09.000000000 +0200
-+++ ./lib/DNSCheck/Config.pm	2009-04-04 13:49:43.000000000 +0200
-@@ -52,7 +52,7 @@
+--- lib/DNSCheck/Config.pm.orig	2013-04-11 15:53:42.000000000 +0000
++++ lib/DNSCheck/Config.pm
+@@ -58,11 +58,11 @@ sub new {
+         croak 'Configuration file ' . $arg{'configfile'} . ' not readable';
+     }
  
-     my %arg = @_;
+-    my $config = _get_with_path( $arg{'configfile'}, _catfile( $arg{'configdir'}, 'config.yaml' ), '/etc/dnscheck/config.yaml', );
++    my $config = _get_with_path( $arg{'configfile'}, _catfile( $arg{'configdir'}, 'config.yaml' ), '@SYSCONFDIR@/dnscheck/config.yaml', );
  
--    $self->{configdir} = catfile($Config{'siteprefix'}, 'share/dnscheck');
-+    $self->{configdir} = catfile($Config{'siteprefix'}, '@SYSCONFDIR@/dnscheck');
-     $self->{configdir} = $arg{'configdir'} if defined($arg{'configdir'});
+     my $default_policy = _get_with_path( _catfile( dist_dir( 'DNSCheck' ), 'policy.yaml' ) );
  
-     $self->{sitedir} = $self->{configdir};
+-    my $policy = _get_with_path( $arg{'policyfile'}, _catfile( $arg{'policydir'}, 'policy.yaml' ), '/etc/dnscheck/policy.yaml', );
++    my $policy = _get_with_path( $arg{'policyfile'}, _catfile( $arg{'policydir'}, 'policy.yaml' ), '@SYSCONFDIR@/dnscheck/policy.yaml', );
+ 
+     my $locale;
+     if ( $arg{'localefile'} ) {
