@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/06/09 06:30:14 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2013/06/15 19:53:14 joerg Exp $
 
 SHA1 (xye-0.12.1.tar.gz) = 82bea042934ade4ff43984ac210dab39b87f0939
 RMD160 (xye-0.12.1.tar.gz) = 852f7ff50b98688011d43be1c984a08367e35e82
 Size (xye-0.12.1.tar.gz) = 2850776 bytes
 SHA1 (patch-aa) = 141a40923c4de3ea7df7975f1b4bd2303fde2ea5
-SHA1 (patch-src_gen.cpp) = 52065cbf92adeb27204b9ee4041b1b7862b7825f
+SHA1 (patch-src_editorsave.cpp) = 40be6484c31c2960bcabe690520f4af2253e3231
+SHA1 (patch-src_gen.cpp) = 51ea8d4fd96c7846f195e4e942cfc3f69041a5b3
