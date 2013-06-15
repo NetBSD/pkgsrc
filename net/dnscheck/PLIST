@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/08 22:39:39 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/15 21:18:49 pettai Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Config.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Locale.pm
@@ -16,20 +16,24 @@ ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Delegation.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Host.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Mail.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Nameserver.pm
-${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/SMTP.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/SOA.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/DNSCheck/Test/Zone.pm
-${PERL5_SUB_INSTALLVENDORLIB}/MockBootstrap.pm
-${PERL5_SUB_INSTALLVENDORLIB}/MockResolver.pm
+${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/config.yaml
+${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/en.yaml
+${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/nl.yaml
+${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/policy.yaml
+${PERL5_SUB_INSTALLVENDORLIB}/auto/share/dist/DNSCheck/sv.yaml
 ${PERL5_SUB_INSTALLVENDORARCH}/auto/DNSCheck/.packlist
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-12hourmailer
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-dispatcher
+${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-dnssecmailer
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-hostsyntax
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-preflight
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-zonediff
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-12hourmailer.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-dispatcher.1
+${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-dnssecmailer.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-hostsyntax.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-preflight.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-zonediff.1
@@ -51,11 +55,6 @@ ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Delegation.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Host.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Mail.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Nameserver.3
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::SMTP.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::SOA.3
 ${PERL5_SUB_INSTALLVENDORMAN3DIR}/DNSCheck::Test::Zone.3
-share/dnscheck/locale/en.yaml
-share/dnscheck/locale/nl.yaml
-share/dnscheck/locale/sv.yaml
-share/examples/dnscheck/config.yaml
-share/examples/dnscheck/policy.yaml
+@pkgdir share/examples/dnscheck
