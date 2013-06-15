@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/02/06 18:07:04 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/06/15 21:01:22 adam Exp $
 bin/pcap-config
 include/pcap-bpf.h
 include/pcap-int.h
@@ -79,6 +79,6 @@ man/man3/pcap_strerror.3
 man/man3/pcap_tstamp_type_name_to_val.3
 man/man3/pcap_tstamp_type_val_to_name.3
 man/man5/pcap-savefile.5
-man/man7/pcap-tstamp.7
 man/man7/pcap-filter.7
 man/man7/pcap-linktype.7
+man/man7/pcap-tstamp.7
