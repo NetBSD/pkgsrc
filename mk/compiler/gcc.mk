@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.139 2013/06/15 21:50:43 asau Exp $
+# $NetBSD: gcc.mk,v 1.140 2013/06/15 21:52:11 asau Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -468,7 +468,7 @@ _GCC_PKGSRCDIR=		../../lang/gcc48
 _GCC_DEPENDENCY=	gcc48>=${_GCC_REQD}:../../lang/gcc48
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
-        !empty(_LANGUAGES.gcc:Mfortran88) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
         !empty(_LANGUAGES.gcc:Mgo) || \
         !empty(_LANGUAGES.gcc:Mobjc) || \
         !empty(_LANGUAGES.gcc:Mobj-c++)
