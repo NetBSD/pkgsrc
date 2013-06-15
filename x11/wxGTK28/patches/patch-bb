@@ -1,4 +1,0 @@
-$NetBSD: patch-bb,v 1.3 2013/06/15 02:30:57 ryoon Exp $
-
-deal with CVE-2009-2369.
-
