@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.5 2012/01/14 15:36:24 taca Exp $
+$NetBSD: patch-af,v 1.6 2013/06/15 16:08:09 taca Exp $
 
 Honor PKG_SYSCONFDIR.
 
---- program/include/iniset.php.orig	2012-01-06 16:01:53.000000000 +0000
+--- program/include/iniset.php.orig	2013-04-15 20:43:00.000000000 +0000
 +++ program/include/iniset.php
-@@ -47,7 +47,7 @@ if (!defined('INSTALL_PATH')) {
+@@ -44,7 +44,7 @@ if (!defined('INSTALL_PATH')) {
  }
  
  if (!defined('RCMAIL_CONFIG_DIR')) {
@@ -12,4 +12,4 @@ Honor PKG_SYSCONFDIR.
 +    define('RCMAIL_CONFIG_DIR', '@PKG_SYSCONFDIR@');
  }
  
- // make sure path_separator is defined
+ if (!defined('RCUBE_LOCALIZATION_DIR')) {

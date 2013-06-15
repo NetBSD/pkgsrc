@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2012/01/14 15:36:24 taca Exp $
+$NetBSD: patch-ab,v 1.8 2013/06/15 16:08:09 taca Exp $
 
 * Use db-local.inc.php for local configuration.
 
---- config/db.inc.php.dist.orig	2011-09-28 10:16:54.000000000 +0000
+--- config/db.inc.php.dist.orig	2013-04-15 20:42:59.000000000 +0000
 +++ config/db.inc.php.dist
-@@ -61,3 +61,6 @@ $rcmail_config['db_sequence_searches'] =
- 
- // end db config file
+@@ -58,5 +58,6 @@ $rcmail_config['db_sequence_contacts'] =
+ $rcmail_config['db_sequence_contactgroups'] = 'contactgroups_ids';
+ $rcmail_config['db_sequence_searches'] = 'search_ids';
  
 +include_once('db-local.inc.php');
-+
-+?>
+ 
+ // end db config file

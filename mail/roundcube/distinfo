@@ -1,9 +1,28 @@
-$NetBSD: distinfo,v 1.29 2013/03/28 17:24:39 taca Exp $
+$NetBSD: distinfo,v 1.30 2013/06/15 16:08:09 taca Exp $
 
-SHA1 (roundcubemail-0.8.6-dep.tar.gz) = 78c7ab53f2cc1c79a5151833e911cbb0b670cd10
-RMD160 (roundcubemail-0.8.6-dep.tar.gz) = 01fdde16ddf8d399e9aaa3522637cdf74ea2a66e
-Size (roundcubemail-0.8.6-dep.tar.gz) = 3199668 bytes
+SHA1 (roundcubemail-0.9.1-dep.tar.gz) = 48ad1e44eaffc079bb3b5af24ce69feb6aa0315b
+RMD160 (roundcubemail-0.9.1-dep.tar.gz) = 0181bae162a64258cfe49076dcdfe590d1fccab5
+Size (roundcubemail-0.9.1-dep.tar.gz) = 3483626 bytes
 SHA1 (patch-aa) = 4946fab1dd1a809d32de7fa16b9eb1075eb8424a
-SHA1 (patch-ab) = ac9f7ac488f9c309fd1b30a8ecec73e52b245c11
-SHA1 (patch-ac) = 89320be22d84d6099e44897d604fa0fe49e0fe60
-SHA1 (patch-af) = e2bae396f049b2c5030f24e539b7f418a3d09d78
+SHA1 (patch-ab) = 19b62d4a24d9b1ccc476f8d3fbe5f386faf6c553
+SHA1 (patch-ac) = ea60a00f8d53f36e069f4b61962ff97c980edb20
+SHA1 (patch-af) = c0534978e19174d058ac3002692a6bed4e535dc7
+SHA1 (patch-installer_config.php) = 6788454eddf4db96f5bd561c9dc45397383797e0
+SHA1 (patch-installer_rcube__install.php) = edcfbff2255fe818bd028310d829879d731fefc9
+SHA1 (patch-plugins_zipdownload_zipdownload.php) = c0605e036959d5082bd3cde2cf37bb5838cb5623
+SHA1 (patch-program_include_rcmail.php) = 8a23e2ffd974983023c98b866c5d7a6e7984e3f8
+SHA1 (patch-program_lib_Roundcube_rcube__cache.php) = ce92d42b294a1cde1d8223b6d5dae46d819754de
+SHA1 (patch-program_lib_Roundcube_rcube__config.php) = fafc1102722ededc9b16272ba515598026c175c2
+SHA1 (patch-program_lib_Roundcube_rcube__db.php) = d7f08a12a3d6131be88d84132b38d2bf2b7b0b2f
+SHA1 (patch-program_lib_Roundcube_rcube__db__pgsql.php) = c3cc7651cb38d5a50cca1d7e4b232f2aa3b4a72b
+SHA1 (patch-program_lib_Roundcube_rcube__imap.php) = 468e9100366dfc9110dda95d27f40b4fb7e075af
+SHA1 (patch-program_lib_Roundcube_rcube__imap__cache.php) = 526e2b2b645a32077116950a4cb2b531b34a649b
+SHA1 (patch-program_lib_Roundcube_rcube__mime.php) = ff74d19a6bfce728db75ad2d3950fe762144e859
+SHA1 (patch-program_lib_Roundcube_rcube__washtml.php) = d62fb13f45b1dd687bcb367ceb1a7229a0c8177f
+SHA1 (patch-program_steps_mail_compose.inc) = 8b9a4ce69eced4c284aee0b69278ff78071da851
+SHA1 (patch-program_steps_mail_func.inc) = 5e722794ee5d55c5aad7319998f5c396daae3918
+SHA1 (patch-program_steps_mail_show.inc) = f60e27ecece1477c813e6645c6178b1beef41199
+SHA1 (patch-skins_classic_print.css) = 2b6d51f3685566a135a2a6291e50109e13726e05
+SHA1 (patch-skins_larry_mail.css) = b88a2a90ed0388e3f5020e6eddc5a4f64b333aba
+SHA1 (patch-skins_larry_print.css) = d0119e711921cf7751a67ce98481f9ad3f0c19fc
+SHA1 (patch-skins_larry_templates_message.html) = 5d997fced39c74590bab3898c63fa40a69f43f99
