@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/05/06 14:45:41 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/06/15 00:30:31 jmmv Exp $
 
-SHA1 (lutok-0.2.tar.gz) = ca44640bba4bd50aca28e2ed10fb2ec99f14573f
-RMD160 (lutok-0.2.tar.gz) = ee91a8acf896baac276fab7d748d6e695702cf24
-Size (lutok-0.2.tar.gz) = 492333 bytes
-SHA1 (patch-debug.hpp) = a917bbc468d883b86e2283b37134b32be6a73a05
-SHA1 (patch-state.hpp) = 8eb974f60eeaca5c0c097cc155d1056564cd9c49
+SHA1 (lutok-0.3.tar.gz) = d140be06d96a25cdd42a09240a35d11e1c7496b2
+RMD160 (lutok-0.3.tar.gz) = 52b6953768075c7b3efe8262948fc8139ce4fc78
+Size (lutok-0.3.tar.gz) = 523296 bytes
