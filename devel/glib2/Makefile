@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2013/05/31 22:53:23 prlw1 Exp $
+# $NetBSD: Makefile,v 1.216 2013/06/15 19:18:26 adam Exp $
 
 .include "Makefile.common"
 
@@ -42,16 +42,16 @@ LIBS.SunOS+=		-lnsl -lsocket
 CPPFLAGS.SunOS+=	-DBSD_COMP
 
 .if ${OBJECT_FMT} == "ELF"
-. if ${OPSYS} == "SunOS"
-.  if ${ABI} == 32
+.  if ${OPSYS} == "SunOS"
+.    if ${ABI} == 32
 # Solaris libelf in 32-bit mode does not support largefile.  We patch files
 # individually to force _FILE_OFFSET_BITS=32 but need to turn back on -lelf
 # after configure disabled it.
 CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
+.    endif
+.  else
+.  include "../../devel/libelf/buildlink3.mk"
 .  endif
-. else
-.include "../../devel/libelf/buildlink3.mk"
-. endif
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
