@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.28 2013/06/11 09:39:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.29 2013/06/15 16:03:20 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -98,3 +98,7 @@ Pullup ticket #4157 - requested by taca
 lang/php/phpversion.mk: update PHP versions after security update
 Pullup ticket #4158 - requested by taca
 lang/php53: fix build with "suhosi" option
+Pullup ticket #4160 - requested by obache
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4161 - requested by obache
+multimedia/adobe-flash-plugin10.1: security update
