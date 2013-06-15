@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.24 2013/05/31 12:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/15 06:09:37 obache Exp $
 
 DISTNAME=		mailagent-3.0.73
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:S/by-module/by-authors\/id\/RAM/g}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Sophisticated automatic mail-processing tool
+LICENSE=		artistic
+
+DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 USE_TOOLS+=		perl:run
 
