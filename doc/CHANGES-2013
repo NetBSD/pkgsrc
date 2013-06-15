@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2083 2013/06/15 05:14:45 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2084 2013/06/15 06:09:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3250,3 +3250,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/amule to 2.3.1 [ryoon 2013-06-15]
 	Updated security/ruby-twitter_oauth to 0.4.93 [obache 2013-06-15]
 	Updated graphics/ruby-rcairo to 1.12.6 [obache 2013-06-15]
+	Updated mail/mailagent to 3.0.73nb4 [obache 2013-06-15]
