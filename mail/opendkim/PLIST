@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/01/05 17:05:07 pettai Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/06/15 19:03:31 pettai Exp $
 include/opendkim/dkim.h
 lib/libopendkim.la
 lib/pkgconfig/opendkim.pc
@@ -32,6 +32,8 @@ share/doc/opendkim/dkim.html
 share/doc/opendkim/dkim_add_querymethod.html
 share/doc/opendkim/dkim_add_xtag.html
 share/doc/opendkim/dkim_alg_t.html
+share/doc/opendkim/dkim_atps_check.html
+share/doc/opendkim/dkim_atps_t.html
 share/doc/opendkim/dkim_body.html
 share/doc/opendkim/dkim_canon_t.html
 share/doc/opendkim/dkim_cbstat.html
@@ -76,6 +78,7 @@ share/doc/opendkim/dkim_getsighdr.html
 share/doc/opendkim/dkim_getsighdr_d.html
 share/doc/opendkim/dkim_getsiglist.html
 share/doc/opendkim/dkim_getsignature.html
+share/doc/opendkim/dkim_getsslbuf.html
 share/doc/opendkim/dkim_getuser.html
 share/doc/opendkim/dkim_header.html
 share/doc/opendkim/dkim_init.html
@@ -114,6 +117,7 @@ share/doc/opendkim/dkim_set_signature_handle.html
 share/doc/opendkim/dkim_set_signature_handle_free.html
 share/doc/opendkim/dkim_set_signature_tagvalues.html
 share/doc/opendkim/dkim_set_signer.html
+share/doc/opendkim/dkim_set_trust_anchor.html
 share/doc/opendkim/dkim_set_user_context.html
 share/doc/opendkim/dkim_setpartial.html
 share/doc/opendkim/dkim_sig_getbh.html
@@ -125,6 +129,7 @@ share/doc/opendkim/dkim_sig_getdomain.html
 share/doc/opendkim/dkim_sig_geterror.html
 share/doc/opendkim/dkim_sig_geterrorstr.html
 share/doc/opendkim/dkim_sig_getflags.html
+share/doc/opendkim/dkim_sig_gethashes.html
 share/doc/opendkim/dkim_sig_getidentity.html
 share/doc/opendkim/dkim_sig_getkeysize.html
 share/doc/opendkim/dkim_sig_getqueries.html
@@ -133,15 +138,18 @@ share/doc/opendkim/dkim_sig_getselector.html
 share/doc/opendkim/dkim_sig_getsignalg.html
 share/doc/opendkim/dkim_sig_getsignedhdrs.html
 share/doc/opendkim/dkim_sig_getsigntime.html
+share/doc/opendkim/dkim_sig_getsslbuf.html
 share/doc/opendkim/dkim_sig_gettagvalue.html
 share/doc/opendkim/dkim_sig_hdrsigned.html
 share/doc/opendkim/dkim_sig_ignore.html
 share/doc/opendkim/dkim_sig_process.html
+share/doc/opendkim/dkim_sig_seterror.html
 share/doc/opendkim/dkim_sig_syntax.html
 share/doc/opendkim/dkim_sigerror.html
 share/doc/opendkim/dkim_siginfo.html
 share/doc/opendkim/dkim_sigkey_t.html
 share/doc/opendkim/dkim_sign.html
+share/doc/opendkim/dkim_signhdrs.html
 share/doc/opendkim/dkim_ssl_version.html
 share/doc/opendkim/dkim_stat.html
 share/doc/opendkim/dkim_verify.html
@@ -149,6 +157,7 @@ share/doc/opendkim/dns.html
 share/doc/opendkim/example.com.ldif
 share/doc/opendkim/index.html
 share/doc/opendkim/opendkim
+share/doc/opendkim/opendkim-default-keygen
 share/doc/opendkim/opendkim-fixipaddrs.pl
 share/doc/opendkim/opendkim-spam-ignore-cmdswitch.patch
 share/doc/opendkim/opendkim.conf.sample
@@ -156,8 +165,10 @@ share/doc/opendkim/opendkim.conf.simple
 share/doc/opendkim/opendkim.conf.simple-verify
 share/doc/opendkim/opendkim.ldif
 share/doc/opendkim/opendkim.schema
+share/doc/opendkim/opendkim.service
 share/doc/opendkim/opendkim.spec.in
 share/doc/opendkim/opendkim.xml
 share/doc/opendkim/overview.html
 share/doc/opendkim/stats.lua
+share/examples/opendkim/opendkim.conf.sample
 share/examples/rc.d/opendkim
