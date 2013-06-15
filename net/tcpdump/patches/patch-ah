@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.3 2013/02/06 19:45:26 jperkin Exp $
+$NetBSD: patch-ah,v 1.4 2013/06/15 21:02:03 adam Exp $
 
 Fix VERSION dependency, or install will fail on case-insensitive file-system.
 Don't install another copy.
 
 --- Makefile.in.orig	2012-06-12 16:56:20.000000000 +0000
 +++ Makefile.in
-@@ -395,7 +395,7 @@ strsep.o: $(srcdir)/missing/strsep.c
+@@ -312,7 +312,7 @@ strsep.o: $(srcdir)/missing/strsep.c
  version.o: version.c
  	$(CC) $(FULL_CFLAGS) -c version.c
  
@@ -14,7 +14,7 @@ Don't install another copy.
  	@rm -f $@
  	if grep GIT ${srcdir}/VERSION >/dev/null; then \
  		read ver <${srcdir}/VERSION; \
-@@ -409,7 +409,6 @@ install: all
+@@ -326,7 +326,6 @@ install: all
  	[ -d $(DESTDIR)$(sbindir) ] || \
  	    (mkdir -p $(DESTDIR)$(sbindir); chmod 755 $(DESTDIR)$(sbindir))
  	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)$(sbindir)/$(PROG)
