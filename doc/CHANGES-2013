@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2078 2013/06/15 00:32:03 jmmv Exp $
+$NetBSD: CHANGES-2013,v 1.2079 2013/06/15 02:13:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3244,3 +3244,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk10 to 10.12.2nb6 [jnemeth 2013-06-14]
 	Updated devel/lutok to 0.3 [jmmv 2013-06-15]
 	Updated devel/kyua-cli to 0.6nb2 [jmmv 2013-06-15]
+	Updated misc/rubygems to 2.0.3nb1 [taca 2013-06-15]
