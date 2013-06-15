@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2013/05/06 14:46:58 joerg Exp $
+$NetBSD: distinfo,v 1.15 2013/06/15 00:31:34 jmmv Exp $
 
 SHA1 (kyua-cli-0.6.tar.gz) = 85453765a497d381570d6f658d90038af894a90f
 RMD160 (kyua-cli-0.6.tar.gz) = a60e317639e60fd688a76297791670b680e7d505
@@ -13,6 +13,7 @@ SHA1 (patch-store_transaction.cpp) = 98179f580b2d2f053f3d51c6ddd923af03de5941
 SHA1 (patch-store_transaction.hpp) = 5c4066c41d4b56d304aff5a12bf9f765e8abed09
 SHA1 (patch-utils_cmdline_exceptions.cpp) = f1e524db998802d3979595abd496ae609b32a1ea
 SHA1 (patch-utils_cmdline_exceptions.hpp) = 7f893a224b263aaefde1232ab594c403849581f1
+SHA1 (patch-utils_config_lua_module.cpp) = d3d178a77773c4bcc4d85df18f48981ec957c31f
 SHA1 (patch-utils_config_tree.hpp) = b5cef0e44597c2a1c9936c51050c5e77d22add0f
 SHA1 (patch-utils_datetime.cpp) = cb5fd42fb737f8fe862a3bddcd1ecba27d71be8f
 SHA1 (patch-utils_datetime.hpp) = 458d6c061f6bb4363c0e107660fd169abf04cb7c
