@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2013/06/06 12:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/15 12:56:27 khorben Exp $
 #
 
-DISTNAME=	Phone-0.3.11
-PKGNAME=	deforaos-phone-0.3.11
-PKGREVISION=	6
+DISTNAME=	Phone-0.3.12
+PKGNAME=	deforaos-phone-0.3.12
 CATEGORIES=	comms net
-MASTER_SITES=	http://www.defora.org/os/download/download/3721/
+MASTER_SITES=	http://www.defora.org/os/download/download/4296/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -16,8 +15,22 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+AUTO_MKDIRS=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/phone.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/phone.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/phonectl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/phonectl.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "options.mk"
 
@@ -26,5 +39,4 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/sofia-sip/buildlink3.mk"
 .include "../../x11/deforaos-locker/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
