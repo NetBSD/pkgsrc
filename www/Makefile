@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.970 2013/05/24 08:08:16 adam Exp $
+# $NetBSD: Makefile,v 1.971 2013/06/15 19:54:37 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -622,6 +622,8 @@ SUBDIR+=	ruby-div
 SUBDIR+=	ruby-erubis
 SUBDIR+=	ruby-faraday
 SUBDIR+=	ruby-fcgi
+SUBDIR+=	ruby-gnome2-webkit-gtk
+SUBDIR+=	ruby-gnome2-webkit-gtk2
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-http_router
