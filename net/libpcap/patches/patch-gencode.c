@@ -1,4 +1,4 @@
-$NetBSD: patch-gencode.c,v 1.1 2013/02/06 18:07:04 jperkin Exp $
+$NetBSD: patch-gencode.c,v 1.2 2013/06/15 21:01:22 adam Exp $
 
 * Correctly limit Linux interfaces to Linux-only.
 
@@ -13,7 +13,7 @@ $NetBSD: patch-gencode.c,v 1.1 2013/02/06 18:07:04 jperkin Exp $
  #include <linux/types.h>
  #include <linux/if_packet.h>
  #include <linux/filter.h>
-@@ -7583,7 +7583,7 @@ gen_inbound(dir)
+@@ -7533,7 +7533,7 @@ gen_inbound(dir)
  		 * check it, otherwise give up as this link-layer type
  		 * has nothing in the packet data.
  		 */
