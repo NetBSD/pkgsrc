@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2094 2013/06/15 16:43:32 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.2095 2013/06/15 16:53:04 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3280,3 +3280,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/salt to 0.15.3 [imil 2013-06-15]
 	Updated mail/roundcube to 0.9.1 [taca 2013-06-15]
 	Updated security/opendnssec to 1.3.14 [pettai 2013-06-15]
+	Updated security/validns to 0.7 [pettai 2013-06-15]
