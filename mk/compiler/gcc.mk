@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.140 2013/06/15 21:52:11 asau Exp $
+# $NetBSD: gcc.mk,v 1.141 2013/06/15 22:32:18 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -830,7 +830,7 @@ ${_GCC_${_var_}}:
 
 # On systems without a Fortran compiler, pull one in if needed.
 # The default is g95 as it supports a modern dialect, but it can
-# be overriden in mk.conf to use only f2c.
+# be overridden in mk.conf to use only f2c.
 #
 PKGSRC_FORTRAN?=g95
 
