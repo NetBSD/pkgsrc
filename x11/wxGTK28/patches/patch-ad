@@ -1,6 +1,0 @@
-$NetBSD: patch-ad,v 1.2 2013/06/15 02:30:57 ryoon Exp $
-
-avoid conflicts with GSocket in glib >= 2.21 as per
-
-	http://trac.wxwidgets.org/ticket/10883
-
