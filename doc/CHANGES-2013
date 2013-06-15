@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2086 2013/06/15 09:42:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2087 2013/06/15 12:22:22 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3272,3 +3272,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-gnome2-vte to 2.0.2 [obache 2013-06-15]
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.0.2 [obache 2013-06-15]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.0.2 [obache 2013-06-15]
+	Updated x11/deforaos-libdesktop to 0.0.10 [khorben 2013-06-15]
