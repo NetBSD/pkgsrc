@@ -1,12 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2011/03/06 03:47:27 dholland Exp $
+$NetBSD: patch-ae,v 1.2 2013/06/15 06:09:37 obache Exp $
 
---- agent/filter/misc.c~	2001-03-17 18:31:21.000000000 +0000
+--- agent/filter/misc.c.orig	2001-03-17 18:31:21.000000000 +0000
 +++ agent/filter/misc.c
-@@ -36,14 +36,15 @@
+@@ -36,14 +36,16 @@
   *
   */
  
 +#include <stdlib.h>
++#include <stdio.h>
 +#include <string.h>
 +
  #include "config.h"
