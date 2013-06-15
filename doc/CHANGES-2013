@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2080 2013/06/15 02:32:33 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2081 2013/06/15 02:34:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3247,3 +3247,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/rubygems to 2.0.3nb1 [taca 2013-06-15]
 	Updated x11/wxGTK28 to 2.8.12 [ryoon 2013-06-15]
 	Updated x11/wxGTK28-contrib to 2.8.12 [ryoon 2013-06-15]
+	Updated net/amule to 2.3.1 [ryoon 2013-06-15]
