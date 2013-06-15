@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/30 22:48:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/06/15 00:30:31 jmmv Exp $
 include/lutok/c_gate.hpp
 include/lutok/debug.hpp
 include/lutok/exceptions.hpp
@@ -63,7 +63,24 @@ share/doc/lutok/html/classes.html
 share/doc/lutok/html/closed.png
 share/doc/lutok/html/doxygen.css
 share/doc/lutok/html/doxygen.png
+share/doc/lutok/html/dynsections.js
 share/doc/lutok/html/files.html
+share/doc/lutok/html/ftv2blank.png
+share/doc/lutok/html/ftv2cl.png
+share/doc/lutok/html/ftv2doc.png
+share/doc/lutok/html/ftv2folderclosed.png
+share/doc/lutok/html/ftv2folderopen.png
+share/doc/lutok/html/ftv2lastnode.png
+share/doc/lutok/html/ftv2link.png
+share/doc/lutok/html/ftv2mlastnode.png
+share/doc/lutok/html/ftv2mnode.png
+share/doc/lutok/html/ftv2mo.png
+share/doc/lutok/html/ftv2node.png
+share/doc/lutok/html/ftv2ns.png
+share/doc/lutok/html/ftv2plastnode.png
+share/doc/lutok/html/ftv2pnode.png
+share/doc/lutok/html/ftv2splitbar.png
+share/doc/lutok/html/ftv2vertline.png
 share/doc/lutok/html/functions.html
 share/doc/lutok/html/functions_func.html
 share/doc/lutok/html/functions_vars.html
@@ -76,6 +93,7 @@ share/doc/lutok/html/namespacemembers.html
 share/doc/lutok/html/namespacemembers_func.html
 share/doc/lutok/html/namespaces.html
 share/doc/lutok/html/nav_f.png
+share/doc/lutok/html/nav_g.png
 share/doc/lutok/html/nav_h.png
 share/doc/lutok/html/open.png
 share/doc/lutok/html/search/all_5f.html
@@ -196,6 +214,8 @@ share/doc/lutok/html/search/variables_6f.html
 share/doc/lutok/html/search/variables_6f.js
 share/doc/lutok/html/search/variables_73.html
 share/doc/lutok/html/search/variables_73.js
+share/doc/lutok/html/sync_off.png
+share/doc/lutok/html/sync_on.png
 share/doc/lutok/html/tab_a.png
 share/doc/lutok/html/tab_b.png
 share/doc/lutok/html/tab_h.png
