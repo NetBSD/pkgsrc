@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2013/06/04 22:16:27 tron Exp $
+# $NetBSD: Makefile,v 1.34 2013/06/15 05:14:33 obache Exp $
 
-DISTNAME=		rcairo-1.12.4
+DISTNAME=		rcairo-1.12.6
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		graphics
-MASTER_SITES=		-http://nodeload.github.com/rcairo/rcairo/zip/v${PKGVERSION_NOREV}
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		-https://codeload.github.com/rcairo/rcairo/tar.gz/v${PKGVERSION_NOREV}
 
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://cairographics.org/rcairo/
