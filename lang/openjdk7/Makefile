@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/06/04 22:16:33 tron Exp $
+# $NetBSD: Makefile,v 1.50 2013/06/15 09:31:05 jperkin Exp $
 
 DISTNAME=	openjdk-7u6-fcs-src-b24-09_aug_2012
 PKGNAME=	openjdk7-1.7.21
@@ -71,8 +71,8 @@ MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
 
 MAKE_ENV+=	EXTRA_CFLAGS="-DDEFAULT_LIBPATH=\\\"${PREFIX}/lib/jni:${PREFIX}/lib:/lib:/usr/lib\\\""
-BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
-LD_LIBRARY_PATH=	${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
+BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/:S/SunOS/solaris/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
+LD_LIBRARY_PATH=	${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${BUILDDIR}/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/jli:${WRKDIR}/bootstrap/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}/server
 MAKE_ENV+=	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/java/openjdk7/jre/lib/${MACHINE_ARCH:S/x86_64/amd64/}
 
@@ -80,6 +80,37 @@ PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
 PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 
 .include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
+MAKE_ENV+=	USE_GCC=1
+MAKE_ENV+=	ARCH_DATA_MODEL=${ABI:Q}
+.endif
+
+# SmartOS has ccs tools in /usr/bin
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		ccspath
+SUBST_STAGE.ccspath=	pre-build
+SUBST_FILES.ccspath=	jdk/make/common/shared/Defs-utils.gmk
+SUBST_FILES.ccspath+=	hotspot/make/solaris/makefiles/build_vm_def.sh
+SUBST_SED.ccspath=	-e 's/UNIXCCS_PATH/UNIXCOMMAND_PATH/g'
+SUBST_SED.ccspath+=	-e 's,/usr/ccs/bin,/usr/bin,g'
+.endif
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		mapfix
+SUBST_STAGE.mapfix=	pre-build
+SUBST_FILES.mapfix=	jdk/make/com/sun/java/pack/mapfile-vers
+SUBST_FILES.mapfix+=	jdk/make/java/main/java/mapfile-amd64
+SUBST_FILES.mapfix+=	jdk/make/java/main/java/mapfile-i586
+SUBST_SED.mapfix=	-e '/__fsr_init_value/d'
+SUBST_SED.mapfix+=	-e '/__progname/d'
+
+# environ should only be removed from this file (added by patches)
+SUBST_CLASSES+=		mapfix2
+SUBST_STAGE.mapfix2=	pre-build
+SUBST_FILES.mapfix2=	jdk/make/com/sun/java/pack/mapfile-vers
+SUBST_SED.mapfix2=	-e '/environ/d'
+.endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
@@ -117,9 +148,12 @@ SUBST_FILES.fontpaths+=		jdk/src/solaris/native/sun/awt/fontpath.c
 SUBST_SED.fontpaths=		-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.fontpaths+=		-e 's|@BUILDLINK_PREFIX.fontconfig@|${BUILDLINK_PREFIX.fontconfig}|g'
 
-PLIST_VARS+=	i386 jce
+PLIST_VARS+=	i386 jce manja
 .if ${MACHINE_ARCH} == "i386"
 PLIST.i386=	yes
+.endif
+.if ${OPSYS} != "SunOS"
+PLIST.manja=	yes
 .endif
 
 post-extract:
@@ -129,15 +163,28 @@ post-extract:
 	cd ${WRKDIR}/${ICEDTEA_WEB}/netx && pax -rw . \
 	  ${WRKSRC}/jdk/src/share/classes
 #	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/${ICEDTEA}/patches/rhino.patch
-	mv ${WRKDIR}/bootstrap/bin/java ${WRKDIR}/bootstrap/bin/java-real
-	printf '#!/bin/sh\nexec %s/bootstrap/bin/java-real -mx256m "$$@"\n' \
-	    ${WRKDIR} > ${WRKDIR}/bootstrap/bin/java
-	chmod a+x ${WRKDIR}/bootstrap/bin/java
+.if ${OPSYS} == "SunOS"
+	${MKDIR} ${ALT_BOOTDIR}/bin
+	${LN} -s ${JDK_BOOTDIR}/include ${ALT_BOOTDIR}/include
+	${LN} -s ${JDK_BOOTDIR}/lib ${ALT_BOOTDIR}/lib
+	printf '#!/bin/sh\nexec %s/bin/java -mx256m "$$@"\n' \
+	    ${JDK_BOOTDIR} > ${ALT_BOOTDIR}/bin/java
+.else
+	mv ${ALT_BOOTDIR}/bin/java ${ALT_BOOTDIR}/bin/java-real
+	printf '#!/bin/sh\nexec %s/bin/java-real -mx256m "$$@"\n' \
+	    ${ALT_BOOTDIR} > ${ALT_BOOTDIR}/bin/java
+.endif
+	chmod a+x ${ALT_BOOTDIR}/bin/java
 .for t in idlj jar javac javah javap native2ascii rmic
-	mv ${WRKDIR}/bootstrap/bin/${t} ${WRKDIR}/bootstrap/bin/${t}-real
-	printf '#!/bin/sh\n\nexec %s/bootstrap/bin/${t}-real -J-mx256m "$$@"\n' \
-	    ${WRKDIR} > ${WRKDIR}/bootstrap/bin/${t}
-	chmod a+x ${WRKDIR}/bootstrap/bin/${t}
+.if ${OPSYS} == "SunOS"
+	printf '#!/bin/sh\n\nexec %s/bin/${t} -J-mx256m "$$@"\n' \
+	    ${JDK_BOOTDIR} > ${ALT_BOOTDIR}/bin/${t}
+.else
+	mv ${ALT_BOOTDIR}/bin/${t} ${ALT_BOOTDIR}/bin/${t}-real
+	printf '#!/bin/sh\n\nexec %s/bin/${t}-real -J-mx256m "$$@"\n' \
+	    ${ALT_BOOTDIR} > ${ALT_BOOTDIR}/bin/${t}
+.endif
+	chmod a+x ${ALT_BOOTDIR}/bin/${t}
 .endfor
 
 do-build: ${WRKDIR}/stage3-done
@@ -145,9 +192,9 @@ do-build: ${WRKDIR}/stage3-done
 # stage 1 builds a native JDK using the bootstrap binaries
 ${WRKDIR}/stage1-done:
 	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	rm -rf ${WRKDIR}/bootstrap
-	cd ${BUILDDIR} && mv j2sdk-image ${WRKDIR}/bootstrap
-	rm -rf ${BUILDDIR}
+	rm -rf ${ALT_BOOTDIR}
+	cd ${BUILDDIR} && mv j2sdk-image ${ALT_BOOTDIR}
+	mv ${BUILDDIR} ${BUILDDIR}-stage1
 	touch ${WRKDIR}/stage1-done
 
 # stage 2 rebuilds the JDK using native tools
@@ -187,6 +234,14 @@ MAKE_ENV+=	PTHREAD_STACKSIZE=1024
 
 .if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.unzip=
+.endif
+
+# Include binutils for objcopy and GNU strip on SmartOS
+.if ${OS_VARIANT} == "SmartOS"
+.include "../../devel/binutils/buildlink3.mk"
+BUILDLINK_DEPMETHOD.binutils?=	build
+MAKE_ENV+=	ALT_OBJCOPY=${PREFIX}/bin/gobjcopy
+MAKE_ENV+=	STRIP=${PREFIX}/bin/gstrip
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

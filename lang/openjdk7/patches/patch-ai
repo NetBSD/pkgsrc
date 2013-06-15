@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-ai,v 1.3 2013/06/15 09:31:05 jperkin Exp $
+
+Support older NetBSD.
 
 --- hotspot/src/os/bsd/vm/attachListener_bsd.cpp.orig	2012-08-10 16:24:15.000000000 +0000
 +++ hotspot/src/os/bsd/vm/attachListener_bsd.cpp

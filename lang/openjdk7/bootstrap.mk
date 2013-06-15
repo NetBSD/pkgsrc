@@ -1,7 +1,7 @@
-# $NetBSD: bootstrap.mk,v 1.7 2012/05/16 08:55:45 marino Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2013/06/15 09:31:05 jperkin Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[56].*-i386 NetBSD-[56].*-x86_64
-ONLY_FOR_PLATFORM+=	DragonFly-[23].*-*
+ONLY_FOR_PLATFORM+=	DragonFly-[23].*-* SunOS-*-*
 
 BOOT.nb5-i386=		bootstrap-jdk7-bin-netbsd-5-i386-20110811.tar.bz2
 BOOT.nb5-amd64=		bootstrap-jdk7-bin-netbsd-5-amd64-20110811.tar.bz2
@@ -51,6 +51,12 @@ EXTRACT_ONLY+=		${BOOT.df213-amd64}
 .if !empty(DISTFILES:M*20110811*) || make(distinfo)
 DISTFILES+=		${BOOT.common-20110811}
 EXTRACT_ONLY+=		${BOOT.common-20110811}
+.endif
+
+.if ${OPSYS} == "SunOS"
+BUILD_DEPENDS+=		sun-jdk7-[0-9]*:../../lang/sun-jdk7
+JDK_BOOTDIR=		${PREFIX}/java/sun-7
+MAKE_ENV+=		ALT_JDK_IMPORT_PATH=${JDK_BOOTDIR}
 .endif
 
 ALT_BOOTDIR=		${WRKDIR}/bootstrap
