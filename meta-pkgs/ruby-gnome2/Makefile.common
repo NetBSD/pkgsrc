@@ -1,16 +1,19 @@
-# $NetBSD: Makefile.common,v 1.32 2013/05/08 12:47:05 obache Exp $
+# $NetBSD: Makefile.common,v 1.33 2013/06/15 09:39:33 obache Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
 # used by devel/ruby-gnome2-glib/Makefile
 # used by devel/ruby-gnome2-gobject-introspection/Makefile
 # used by devel/ruby-gnome2-pango/Makefile
+# used by graphics/ruby-gnome2-cairo-gobject/Makefile
 # used by graphics/ruby-gnome2-gdk3/Makefile
 # used by graphics/ruby-gnome2-gdkpixbuf/Makefile
 # used by graphics/ruby-gnome2-goocanvas/Makefile
 # used by graphics/ruby-gnome2-rsvg/Makefile
 # used by multimedia/ruby-gnome2-gstreamer/Makefile
 # used by print/ruby-gnome2-poppler/Makefile
+# used by www/ruby-gnome2-webkit-gtk/Makefile
+# used by www/ruby-gnome2-webkit-gtk2/Makefile
 # used by x11/ruby-gnome2-gtk/Makefile
 # used by x11/ruby-gnome2-gtk3/Makefile
 # used by x11/ruby-gnome2-gtksourceview2/Makefile
@@ -28,7 +31,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		2.0.0
+VERSION=		2.0.2
 USE_RUBY_EXTCONF?=	yes
 CONFIGURE_ENV+=		RUBYOPT="-Ku"
 
