@@ -1,15 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2013/06/15 19:03:31 pettai Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/06/15 19:19:25 pettai Exp $
 include/opendkim/dkim.h
 lib/libopendkim.la
 lib/pkgconfig/opendkim.pc
-man/man5/opendkim.conf.5
 man/man8/opendkim-genkey.8
 man/man8/opendkim-genzone.8
 man/man8/opendkim-testadsp.8
 man/man8/opendkim-testkey.8
 man/man8/opendkim-testmsg.8
-man/man8/opendkim.8
-sbin/opendkim
 sbin/opendkim-genkey
 sbin/opendkim-genzone
 sbin/opendkim-testadsp
@@ -170,5 +167,3 @@ share/doc/opendkim/opendkim.spec.in
 share/doc/opendkim/opendkim.xml
 share/doc/opendkim/overview.html
 share/doc/opendkim/stats.lua
-share/examples/opendkim/opendkim.conf.sample
-share/examples/rc.d/opendkim
