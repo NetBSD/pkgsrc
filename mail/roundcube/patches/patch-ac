@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.6 2012/12/05 15:38:01 taca Exp $
+$NetBSD: patch-ac,v 1.7 2013/06/15 16:08:09 taca Exp $
 
 Honor PKG_SYSCONFDIR.
 
---- installer/index.php.orig	2012-11-10 14:16:57.000000000 +0000
+--- installer/index.php.orig	2013-04-15 20:42:59.000000000 +0000
 +++ installer/index.php
-@@ -43,7 +43,7 @@ ini_set('error_reporting', E_ALL&~E_NOTI
- ini_set('display_errors', 1);
+@@ -41,7 +41,7 @@ ini_set('display_errors', 1);
  
  define('INSTALL_PATH', realpath(dirname(__FILE__) . '/../').'/');
--define('RCMAIL_CONFIG_DIR', INSTALL_PATH . 'config');
+ define('RCUBE_INSTALL_PATH', INSTALL_PATH);
+-define('RCUBE_CONFIG_DIR', INSTALL_PATH . 'config/');
 +define('RCMAIL_CONFIG_DIR', '@PKG_SYSCONFDIR@');
- define('RCMAIL_CHARSET', 'UTF-8');
  
  $include_path  = INSTALL_PATH . 'program/lib' . PATH_SEPARATOR;
+ $include_path .= INSTALL_PATH . 'program/include' . PATH_SEPARATOR;
