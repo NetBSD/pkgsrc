@@ -1,10 +1,23 @@
-$NetBSD: patch-ar,v 1.2 2011/01/29 22:50:32 jnemeth Exp $
+$NetBSD: patch-ar,v 1.3 2013/06/15 20:51:11 jnemeth Exp $
 
 # Reported upstream as https://issues.asterisk.org/view.php?id=18705
 
---- include/asterisk/autoconfig.h.in.orig	2010-11-09 20:33:05.000000000 +0000
+--- include/asterisk/autoconfig.h.in.orig	2013-02-27 14:11:39.000000000 +0000
 +++ include/asterisk/autoconfig.h.in
-@@ -864,6 +864,9 @@
+@@ -816,6 +816,12 @@
+ /* Define to 1 if you have the `strstr' function. */
+ #undef HAVE_STRSTR
+ 
++/* Define to 1 if you have the `strptime_l' function. */
++#undef HAVE_STRPTIME_L
++
++/* Define to 1 if you have the `strftime_l' function. */
++#undef HAVE_STRFTIME_L
++
+ /* Define to 1 if you have the `strtod' function. */
+ #undef HAVE_STRTOD
+ 
+@@ -891,6 +897,9 @@
  /* Define to 1 if you have the <syslog.h> header file. */
  #undef HAVE_SYSLOG_H
  
