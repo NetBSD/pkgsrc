@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2011/02/25 15:43:51 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2013/06/15 20:24:19 adam Exp $
 
---- scapy/arch/__init__.py.orig	2009-09-23 14:27:36.000000000 +0000
+--- scapy/arch/__init__.py.orig	2010-08-10 23:09:39.000000000 +0000
 +++ scapy/arch/__init__.py
-@@ -46,6 +46,7 @@ NETBSD = sys.platform.startswith("netbsd
+@@ -50,6 +50,7 @@ NETBSD = sys.platform.startswith("netbsd
  DARWIN=sys.platform.startswith("darwin")
  SOLARIS=sys.platform.startswith("sunos")
  WINDOWS=sys.platform.startswith("win32")
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2011/02/25 15:43:51 drochner Exp $
  
  X86_64 = not WINDOWS and (os.uname()[4] == 'x86_64')
  
-@@ -67,7 +68,7 @@ if LINUX:
+@@ -71,7 +72,7 @@ if LINUX:
      from linux import *
      if scapy.config.conf.use_pcap or scapy.config.conf.use_dnet:
          from pcapdnet import *
