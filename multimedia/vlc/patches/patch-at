@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.1 2011/01/24 18:54:04 drochner Exp $
+$NetBSD: patch-at,v 1.2 2013/06/15 22:57:58 wiz Exp $
 
---- bin/override.c.orig	2011-01-24 11:11:26.000000000 +0000
+--- bin/override.c.orig	2013-06-15 22:57:03.000000000 +0000
 +++ bin/override.c
 @@ -27,7 +27,7 @@
  
@@ -11,3 +11,12 @@ $NetBSD: patch-at,v 1.1 2011/01/24 18:54:04 drochner Exp $
   && (defined (__ELF__) && !defined (__sun__))
  /* Solaris crashes on printf("%s", NULL); which is legal, but annoying. */
  
+@@ -120,7 +120,7 @@ static void *getsym (const char *name)
+  *
+  * Some evil libraries modify the environment. We currently ignore the calls as
+  * they could crash the process. This may cause funny behaviour though. */
+-int putenv (char *str)
++int putenv (const char *str)
+ {
+     if (override)
+     {
