@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12288 2013/06/14 21:28:52 wiz Exp $
+$NetBSD: TODO,v 1.12289 2013/06/15 02:32:33 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1144,7 +1144,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-2.19.6
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
-	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.6
 	o x264-devel-20130608
