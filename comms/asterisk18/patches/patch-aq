@@ -1,8 +1,17 @@
-$NetBSD: patch-aq,v 1.14 2013/05/18 01:00:43 jnemeth Exp $
+$NetBSD: patch-aq,v 1.15 2013/06/15 20:51:11 jnemeth Exp $
 
---- configure.orig	2013-01-30 17:44:11.000000000 +0000
+--- configure.orig	2013-02-27 14:11:39.000000000 +0000
 +++ configure
-@@ -16688,7 +16688,7 @@ $as_echo "user CFLAGS present" >&6; }
+@@ -14751,7 +14751,7 @@ fi
+ done
+ 
+ 
+-for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob htonll ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap ntohll newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl
++for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob htonll ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap ntohll newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strptime_l strftime_l strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
+@@ -16717,7 +16717,7 @@ $as_echo "user CFLAGS present" >&6; }
  else
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
@@ -11,7 +20,7 @@ $NetBSD: patch-aq,v 1.14 2013/05/18 01:00:43 jnemeth Exp $
  fi
  
  
-@@ -17148,6 +17148,146 @@ fi
+@@ -17177,6 +17177,146 @@ fi
  
  
  
@@ -158,7 +167,7 @@ $NetBSD: patch-aq,v 1.14 2013/05/18 01:00:43 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -18262,6 +18402,8 @@ $as_echo_n "checking if \"struct ifaddrs
+@@ -18291,6 +18431,8 @@ $as_echo_n "checking if \"struct ifaddrs
  
  	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
