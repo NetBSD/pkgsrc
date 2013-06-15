@@ -1,0 +1,31 @@
+$NetBSD: patch-jdk_make_sun_awt_mawt.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+Fix "Extraneous text after `ifeq' directive".
+
+--- jdk/make/sun/awt/mawt.gmk.orig	2013-06-14 12:22:13.564220901 +0000
++++ jdk/make/sun/awt/mawt.gmk
+@@ -193,7 +193,7 @@ endif
+ #
+ # Other extra flags needed for compiling.
+ #
+-ifneq ($(PLATFORM), bsd))
++ifneq ($(PLATFORM), bsd)
+ CPPFLAGS += -I$(CUPS_HEADERS_PATH)
+ 
+ ifndef HEADLESS
+@@ -245,13 +245,13 @@ ifeq ($(PLATFORM), linux)
+                         $(wildcard /usr/include/X11/extensions))
+ endif
+ 
+-ifeq ($(PLATFORM), bsd))
++ifeq ($(PLATFORM), bsd)
+   CPPFLAGS += -I$(OPENWIN_HOME)/include/X11/extensions \
+               -I$(OPENWIN_HOME)/include \
+               -DX11_PATH=\"$(X11_PATH)\" -DPACKAGE_PATH=\"$(PACKAGE_PATH)\"
+ endif
+ 
+-ifeq ($(PLATFORM), macosx))
++ifeq ($(PLATFORM), macosx)
+   CPPFLAGS += -I$(OPENWIN_HOME)/include/X11/extensions \
+               -I$(OPENWIN_HOME)/include 
+ endif

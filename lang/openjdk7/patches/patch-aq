@@ -1,4 +1,6 @@
-$NetBSD: patch-aq,v 1.5 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-aq,v 1.6 2013/06/15 09:31:05 jperkin Exp $
+
+Support __progname.
 
 --- jdk/make/java/main/java/mapfile-amd64.orig	2012-08-10 17:21:36.000000000 +0000
 +++ jdk/make/java/main/java/mapfile-amd64

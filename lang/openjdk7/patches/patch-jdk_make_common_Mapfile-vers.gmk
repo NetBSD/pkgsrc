@@ -1,0 +1,42 @@
+$NetBSD: patch-jdk_make_common_Mapfile-vers.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+GCC support.
+
+--- jdk/make/common/Mapfile-vers.gmk.orig	2013-02-20 17:07:30.000000000 +0000
++++ jdk/make/common/Mapfile-vers.gmk
+@@ -50,14 +50,16 @@ ifeq ($(VARIANT), OPT)
+   ifndef FILES_m
+     FILES_m =        mapfile-vers
+   endif
+-  
++
++ifneq ($(CC_VERSION), gcc)
+   # If we are re-ordering functions in this solaris library, we need to make
+   # sure that -xF is added to the compile lines. This option is critical and
+   # enables the functions to be reordered.
+   ifdef FILES_reorder
+     CFLAGS_OPT   += -xF
+     CXXFLAGS_OPT += -xF
+-  endif
++  endif # FILES_reorder
++endif # USE_GCC
+ 
+ INIT += $(TEMPDIR)/mapfile-vers
+ 
+@@ -70,9 +72,15 @@ $(TEMPDIR)/mapfile-vers : $(FILES_m) $(F
+ endif # VARIANT
+ 
+ ifndef LDNOMAP
++ifneq ($(CC_VERSION), gcc)
+   LDMAPFLAGS_OPT =  -M$(TEMPDIR)/mapfile-vers
+   LDMAPFLAGS_DBG =  $(FILES_m:%=-M%)
+-endif
++else
++  ## proper passthrough for gcc
++  LDMAPFLAGS_OPT =  -Xlinker -M$(TEMPDIR)/mapfile-vers
++  LDMAPFLAGS_DBG =  $(FILES_m:%=-Xlinker -M%)
++endif # USE_GCC
++endif # LDNOMAP
+ 
+ endif # PLATFORM
+ 

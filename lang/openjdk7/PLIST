@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/06/02 15:32:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/06/15 09:31:05 jperkin Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -925,7 +925,7 @@ java/openjdk7/lib/jconsole.jar
 java/openjdk7/lib/orb.idl
 java/openjdk7/lib/sa-jdi.jar
 java/openjdk7/lib/tools.jar
-java/openjdk7/man/ja
+${PLIST.manja}java/openjdk7/man/ja
 java/openjdk7/man/ja_JP.UTF-8/man1/appletviewer.1
 java/openjdk7/man/ja_JP.UTF-8/man1/apt.1
 java/openjdk7/man/ja_JP.UTF-8/man1/extcheck.1

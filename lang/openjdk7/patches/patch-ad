@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-ad,v 1.5 2013/06/15 09:31:05 jperkin Exp $
+
+DragonFly support.
 
 --- corba/make/common/shared/Platform.gmk.orig	2012-08-10 16:10:07.000000000 +0000
 +++ corba/make/common/shared/Platform.gmk

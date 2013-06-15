@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-aa,v 1.9 2013/06/15 09:31:05 jperkin Exp $
+
+DragonFly support.
 
 --- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2013-05-29 03:57:57.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp

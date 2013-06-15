@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.2 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-ao,v 1.3 2013/06/15 09:31:05 jperkin Exp $
+
+Support rhino.
 
 --- jdk/make/common/Release.gmk.orig	2013-05-29 03:57:57.000000000 +0000
 +++ jdk/make/common/Release.gmk

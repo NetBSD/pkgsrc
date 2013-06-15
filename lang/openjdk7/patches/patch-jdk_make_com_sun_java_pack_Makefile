@@ -1,0 +1,31 @@
+$NetBSD: patch-jdk_make_com_sun_java_pack_Makefile,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+
+GCC support.
+
+--- jdk/make/com/sun/java/pack/Makefile.orig	2013-02-20 17:07:30.000000000 +0000
++++ jdk/make/com/sun/java/pack/Makefile
+@@ -109,6 +109,15 @@ endif
+ endif #LINUX
+ endif #PLATFORM
+ 
++# gcc on solaris; this makes a library, too, so the -Wl, will appear on the LDDFLAGS. it needs to be removed for the exe build
++LINKER_EXE = $(LINKER)
++ifeq ($(PLATFORM), solaris) 
++  ifeq ($(CC_VERSION), gcc)
++    REPLACE=-Wl,-soname=lib$(LIBRARY).so
++    LINKER_EXE = $(subst $(REPLACE),,$(LINKER))
++  endif # CC_VERSION
++endif # PLATFORM
++
+ UNPACK_EXE = $(BINDIR)/unpack200$(EXE_SUFFIX)
+ 
+ UNPACK_EXE_FILES_cpp =  $(filter-out jni.cpp,$(FILES_cpp))
+@@ -157,7 +166,7 @@ $(UNPACK_EXE): $(UNPACK_EXE_FILES_o) upd
+ 	$(prep-target)
+ 	$(RM) $(TEMPDIR)/mapfile-vers
+ 	$(CP) mapfile-vers-unpack200 $(TEMPDIR)/mapfile-vers
+-	$(LINKER)  $(LDDFLAGS) $(UNPACK_EXE_FILES_o) $(RES) $(LIBCXX) $(LDOUTPUT)$(TEMPDIR)/unpack200$(EXE_SUFFIX)
++	$(LINKER_EXE)  $(LDDFLAGS) $(UNPACK_EXE_FILES_o) $(RES) $(LIBCXX) $(LDOUTPUT)$(TEMPDIR)/unpack200$(EXE_SUFFIX)
+ ifdef MT
+ 	$(MT) /manifest $(OBJDIR)/unpack200$(EXE_SUFFIX).manifest /outputresource:$(TEMPDIR)/unpack200$(EXE_SUFFIX);#1
+ endif
