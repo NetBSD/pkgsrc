@@ -1,10 +1,10 @@
-$NetBSD: patch-test_rubygems_test__gem.rb,v 1.3 2013/06/11 14:55:54 taca Exp $
+$NetBSD: patch-test_rubygems_test__gem.rb,v 1.4 2013/06/15 02:12:48 taca Exp $
 
 Use vendorlibdir.
 
---- test/rubygems/test_gem.rb.orig	2013-02-12 20:20:45.000000000 +0000
+--- test/rubygems/test_gem.rb.orig	2013-03-11 21:10:40.000000000 +0000
 +++ test/rubygems/test_gem.rb
-@@ -952,12 +952,12 @@ class TestGem < Gem::TestCase
+@@ -964,12 +964,12 @@ class TestGem < Gem::TestCase
    end
  
    def test_self_prefix_sitelibdir
