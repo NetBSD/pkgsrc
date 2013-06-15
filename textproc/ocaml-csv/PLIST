@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/15 20:53:03 jaapb Exp $
+bin/csvtool
+lib/ocaml/site-lib/csv/META
+${PLIST.opt}lib/ocaml/site-lib/csv/csv.a
+lib/ocaml/site-lib/csv/csv.cma
+lib/ocaml/site-lib/csv/csv.cmi
+${PLIST.opt}lib/ocaml/site-lib/csv/csv.cmx
+${PLIST.opt}lib/ocaml/site-lib/csv/csv.cmxa
+${PLIST.opt}lib/ocaml/site-lib/csv/csv.cmxs
+lib/ocaml/site-lib/csv/csv.mli
