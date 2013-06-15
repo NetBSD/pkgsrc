@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/15 09:39:34 obache Exp $
+${RUBY_VENDORLIB}/webkit-gtk2.rb
