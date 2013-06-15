@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2011/02/25 15:43:51 drochner Exp $
+$NetBSD: distinfo,v 1.5 2013/06/15 20:24:19 adam Exp $
 
-SHA1 (scapy-2.1.1.tar.gz) = c82236970bf93e00d0f5d4d165f410745e648d95
-RMD160 (scapy-2.1.1.tar.gz) = d368795789458344ad771834de7188974a4db252
-Size (scapy-2.1.1.tar.gz) = 1924541 bytes
-SHA1 (patch-aa) = 5a54f2878848cb66511282719d7f941fc4da6700
-SHA1 (patch-ab) = 3d32f4e010180ebe9f9309877c1822f53c247151
-SHA1 (patch-ac) = 8dd118db16e8c86803ac715475b5e962314d2034
-SHA1 (patch-ad) = e4e41ea79d90121c068e475fdd6fcd0968407071
-SHA1 (patch-ae) = c9e4728e158b02244c50f053fa2a6c64562b4c83
+SHA1 (scapy-2.2.0.tar.gz) = ae0a9947a08a01a84abde9db12fed074ac888e47
+RMD160 (scapy-2.2.0.tar.gz) = 0cb0e14e6e84ba6a22b0afd7f2913a98888a418e
+Size (scapy-2.2.0.tar.gz) = 972996 bytes
+SHA1 (patch-aa) = 37bb1d60a04604c26a518dc0d13d5df601fd295c
+SHA1 (patch-ab) = 12f7c4d0ae505d357692c05de658e393a0526ba1
+SHA1 (patch-ac) = d8ad1882d9b31e65dc3f7636e4caac9377805daf
+SHA1 (patch-ad) = f3647e471ba1168e054a5160d47fb0870243fb4b
+SHA1 (patch-ae) = bedc1c849c53648f394ebf843435c675729e69e7
 SHA1 (patch-af) = 7dbdecbdfbc5348d0e0f2276113cac88ff766580
