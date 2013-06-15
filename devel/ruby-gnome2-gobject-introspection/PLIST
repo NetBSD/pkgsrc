@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/16 12:25:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/06/15 09:39:33 obache Exp $
 lib/pkgconfig/ruby-gobject-introspection.pc
 ${RUBY_VENDORLIB}/gobject-introspection.rb
+${RUBY_VENDORLIB}/gobject-introspection/boxed-info.rb
 ${RUBY_VENDORLIB}/gobject-introspection/callable-info.rb
 ${RUBY_VENDORLIB}/gobject-introspection/collection-reader.rb
 ${RUBY_VENDORLIB}/gobject-introspection/interface-info.rb
