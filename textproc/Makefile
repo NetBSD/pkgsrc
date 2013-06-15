@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.729 2013/05/22 13:16:28 obache Exp $
+# $NetBSD: Makefile,v 1.730 2013/06/15 20:56:34 jaapb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -327,6 +327,7 @@ SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	nxml-mode
 SUBDIR+=	o3read
+SUBDIR+=	ocaml-csv
 SUBDIR+=	ocaml-expat
 SUBDIR+=	ocaml-text
 SUBDIR+=	ocaml-tyxml
