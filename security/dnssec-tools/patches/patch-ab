@@ -1,10 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/07/22 21:08:26 pettai Exp $
+$NetBSD: patch-ab,v 1.2 2013/06/15 19:57:20 pettai Exp $
 
---- validator/apps/Makefile.in.orig	2010-07-18 17:14:45.000000000 +0000
+Don't install configuration files etc.
+
+--- validator/apps/Makefile.in.orig	2012-09-24 21:57:17.000000000 +0000
 +++ validator/apps/Makefile.in
-@@ -74,4 +74,4 @@ install:
- 	$(LIBTOOLIN) $(GETNAME) $(DESTDIR)/$(bindir)	
- 	$(LIBTOOLIN) $(CHECK_CONF) $(DESTDIR)/$(bindir)	
- 	$(MKPATH) `echo $(DESTDIR)/@VALIDATOR_TESTCASES@ | sed 's#/[^/]*$$##'`
--	$(CP) selftests.dist $(DESTDIR)/@VALIDATOR_TESTCASES@
-+	#$(CP) selftests.dist $(DESTDIR)/@VALIDATOR_TESTCASES@
+@@ -90,4 +90,4 @@ install:
+ 	$(LIBTOOLIN) $(CHECK_CONF) $(DESTDIR)$(bindir)
+ 	$(LIBTOOLIN) $(DANECHK) $(DESTDIR)$(bindir)
+ 	$(MKPATH) `echo $(DESTDIR)@VALIDATOR_TESTCASES@ | sed 's#/[^/]*$$##'`
+-	$(CP) selftests.dist $(DESTDIR)@VALIDATOR_TESTCASES@
++	#$(CP) selftests.dist $(DESTDIR)@VALIDATOR_TESTCASES@
