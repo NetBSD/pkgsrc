@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2077 2013/06/14 23:53:29 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.2078 2013/06/15 00:32:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3242,3 +3242,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/tdb to 1.2.12 [wiz 2013-06-14]
 	Updated graphics/opencv to 2.4.5 [wiz 2013-06-14]
 	Updated comms/asterisk10 to 10.12.2nb6 [jnemeth 2013-06-14]
+	Updated devel/lutok to 0.3 [jmmv 2013-06-15]
+	Updated devel/kyua-cli to 0.6nb2 [jmmv 2013-06-15]
