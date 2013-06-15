@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.13 2012/03/12 10:39:52 fhajny Exp $
+$NetBSD: distinfo,v 1.14 2013/06/15 02:30:57 ryoon Exp $
 
-SHA1 (wxGTK-2.8.10-libtool.diff.bz2) = 62ff30c26efdd73252bed2d07b82a9b9d3ef890f
-RMD160 (wxGTK-2.8.10-libtool.diff.bz2) = 64e1c32caa4bd6a0503bce4764e3ddc1cba68f8a
-Size (wxGTK-2.8.10-libtool.diff.bz2) = 154573 bytes
-SHA1 (wxGTK-2.8.10.tar.bz2) = 1e4bee16a423efeef665ed70e82b6e7dc5468cf4
-RMD160 (wxGTK-2.8.10.tar.bz2) = b007de9b19ef4830d9f484c0d12595a14e66d432
-Size (wxGTK-2.8.10.tar.bz2) = 9365627 bytes
-SHA1 (patch-aa) = a7a0d3b223e4e523a8903c89404fefc3de57a82c
+SHA1 (wxGTK-2.8.12-libtool.diff.bz2) = f2c9b8a06c08101325ffe09ad77f4800f7aa8730
+RMD160 (wxGTK-2.8.12-libtool.diff.bz2) = 05b763aa44a8e8c8ad565af2a188d7c6437f2133
+Size (wxGTK-2.8.12-libtool.diff.bz2) = 152004 bytes
+SHA1 (wxGTK-2.8.12.tar.bz2) = a8d31ef924ae49e97690646b13d5a2a7be7dda10
+RMD160 (wxGTK-2.8.12.tar.bz2) = c401f141ed9fb085c7b79a2f0db788ce6ae9309f
+Size (wxGTK-2.8.12.tar.bz2) = 9292767 bytes
+SHA1 (patch-aa) = ad2fcc73ffe0db67cb9ef5fe87fb1248f7b7675c
 SHA1 (patch-ab) = 82960daef0616824718f3c04929871aeb0e258a2
 SHA1 (patch-ac) = 50cf253797f2dee8b9dab08d138d0070e25e7a8c
-SHA1 (patch-ad) = b07a55257347633edb8997201c82f83619d1d650
-SHA1 (patch-ba) = a715fe740cdd17428527b25e546cd1f8873c2d37
-SHA1 (patch-bb) = 27855267bd13a1db65cafc96eaba1ef7f71dc65f
+SHA1 (patch-ad) = b9fcf183ca9a53c696c75d526b82e55bc7a05f9f
+SHA1 (patch-ba) = 12a792ef6a82b136b24a5f0b5136c97779c96fc2
+SHA1 (patch-bb) = 25316b4c542ffc91e8a2ca6bfedbaac2d7fcebce
 SHA1 (patch-ca) = 7da457e1dbafb42766aa87c1ca9baca675e211ed
 SHA1 (patch-cb) = 8e3ca3df50ef678656787201317a2d2b385c861e

@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.4 2011/01/24 15:34:31 wiz Exp $
+$NetBSD: patch-ba,v 1.5 2013/06/15 02:30:57 ryoon Exp $
 
 deal with CVE-2009-2369. (chunks 2 + 3)
 
@@ -6,62 +6,3 @@ Fix build with png-1.5. (chunks 1 + 4)
 http://trac.wxwidgets.org/ticket/12896 for first one, other
 one already fixed in SVN head.
 
---- src/common/imagpng.cpp.orig	2009-03-06 12:17:40.000000000 +0000
-+++ src/common/imagpng.cpp
-@@ -529,7 +529,7 @@ wxPNGHandler::LoadFile(wxImage *image,
-     png_structp png_ptr = png_create_read_struct
-                           (
-                             PNG_LIBPNG_VER_STRING,
--                            (voidp) NULL,
-+                            NULL,
-                             wx_png_error,
-                             wx_png_warning
-                           );
-@@ -568,18 +568,16 @@ wxPNGHandler::LoadFile(wxImage *image,
-     if (!image->Ok())
-         goto error;
- 
--    lines = (unsigned char **)malloc( (size_t)(height * sizeof(unsigned char *)) );
-+    // initialize all line pointers to NULL to ensure that they can be safely
-+    // free()d if an error occurs before all of them could be allocated
-+    lines = (unsigned char **)calloc(height, sizeof(unsigned char *));
-     if ( !lines )
-         goto error;
- 
-     for (i = 0; i < height; i++)
-     {
-         if ((lines[i] = (unsigned char *)malloc( (size_t)(width * (sizeof(unsigned char) * 4)))) == NULL)
--        {
--            for ( unsigned int n = 0; n < i; n++ )
--                free( lines[n] );
-             goto error;
--        }
-     }
- 
-     png_read_image( png_ptr, lines );
-@@ -588,16 +586,20 @@ wxPNGHandler::LoadFile(wxImage *image,
- #if wxUSE_PALETTE
-     if (color_type == PNG_COLOR_TYPE_PALETTE)
-     {
--        const size_t ncolors = info_ptr->num_palette;
-+        png_colorp palette;
-+        int ncolors;
-+
-+        png_get_PLTE( png_ptr, info_ptr, &palette, &ncolors);
-+
-         unsigned char* r = new unsigned char[ncolors];
-         unsigned char* g = new unsigned char[ncolors];
-         unsigned char* b = new unsigned char[ncolors];
- 
--        for (size_t j = 0; j < ncolors; j++)
-+        for (int j = 0; j < ncolors; j++)
-         {
--            r[j] = info_ptr->palette[j].red;
--            g[j] = info_ptr->palette[j].green;
--            b[j] = info_ptr->palette[j].blue;
-+            r[j] = palette[j].red;
-+            g[j] = palette[j].green;
-+            b[j] = palette[j].blue;
-         }
- 
-         image->SetPalette(wxPalette(ncolors, r, g, b));

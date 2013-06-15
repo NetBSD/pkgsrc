@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.14 2012/10/29 05:06:56 asau Exp $
+# $NetBSD: Makefile.common,v 1.15 2013/06/15 02:30:57 ryoon Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
 
-DISTNAME=		wxGTK-2.8.10
+DISTNAME=		wxGTK-2.8.12
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
 EXTRACT_SUFX=		.tar.bz2
