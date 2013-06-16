@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/02/11 02:07:37 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/16 17:17:04 taca Exp $
 
-DISTNAME=	net-sftp-2.1.1
+DISTNAME=	net-sftp-2.1.2
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
