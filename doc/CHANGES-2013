@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2131 2013/06/16 13:01:33 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2132 2013/06/16 14:30:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3330,3 +3330,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/gst123 to 0.3.3 [ryoon 2013-06-16]
 	Updated misc/iselect to 1.4.0 [ryoon 2013-06-16]
 	Updated audio/moc to 2.4.4 [ryoon 2013-06-16]
+	Updated databases/ruby-data_objects to 0.10.13 [taca 2013-06-16]
+	Updated databases/ruby-do_mysql to 0.10.13 [taca 2013-06-16]
+	Updated databases/ruby-do_postgres to 0.10.13 [taca 2013-06-16]
+	Updated databases/ruby-do_sqlite3 to 0.10.13 [taca 2013-06-16]
