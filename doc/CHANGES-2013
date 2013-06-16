@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2107 2013/06/16 06:32:19 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2108 2013/06/16 07:21:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3298,3 +3298,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-base to 1.8.3.1 [adam 2013-06-16]
 	Updated devel/scmgit-docs to 1.8.3.1 [adam 2013-06-16]
 	Updated www/gitweb to 1.8.3.1 [adam 2013-06-16]
+	Updated graphics/pngcrush to 1.7.63 [adam 2013-06-16]
