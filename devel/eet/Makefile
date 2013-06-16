@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/02/06 23:20:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/16 18:56:04 sno Exp $
 #
 
-DISTNAME=	eet-1.5.0
-PKGREVISION=	3
+DISTNAME=	eet-1.7.7
 CATEGORIES=	devel archivers
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Library for speedy storage, retrieval, and compression
-
 LICENSE=	2-clause-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
