@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/04 22:16:58 tron Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/16 23:25:01 asau Exp $
 #
 
 DISTNAME=		hplip-3.13.5
@@ -23,7 +23,7 @@ BUILD_DEFS+=            CUPS_USER CUPS_GROUP VARBASE
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++ # fortran
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 USE_TOOLS+=		perl:run
 
