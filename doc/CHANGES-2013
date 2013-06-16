@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2136 2013/06/16 14:44:20 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2137 2013/06/16 14:47:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3338,3 +3338,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkgin to 0.6.4 [imil 2013-06-16]
 	Updated databases/ruby-pg to 0.15.0 [taca 2013-06-16]
 	Updated devel/hoe to 3.6.2 [taca 2013-06-16]
+	Updated devel/ZenTest to 4.9.2 [taca 2013-06-16]
