@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/15 08:18:53 pettai Exp $
+$NetBSD: distinfo,v 1.2 2013/06/16 10:01:00 pettai Exp $
 
-SHA1 (log4shib-1.0.4.tar.gz) = 28db40713d5cb73d4df980c1519a0022d06b83f9
-RMD160 (log4shib-1.0.4.tar.gz) = b288250631d0de51665837500a2f3fd8f53c3c64
-Size (log4shib-1.0.4.tar.gz) = 487529 bytes
+SHA1 (log4shib-1.0.6.tar.gz) = bb18ead98c3942bbf9f0fc9569e1338fe2bcf844
+RMD160 (log4shib-1.0.6.tar.gz) = 0264b1b6d59c3bcd9b57e15fb85171f4918d2c54
+Size (log4shib-1.0.6.tar.gz) = 571088 bytes
