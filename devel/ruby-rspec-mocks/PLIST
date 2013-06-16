@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/16 16:45:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/06/16 16:25:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -84,6 +84,7 @@ ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_7611_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_8165_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_830_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/bug_report_957_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/combining_implementation_instructions_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/configuration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/double_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/failing_argument_matchers_spec.rb
