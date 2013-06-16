@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2115 2013/06/16 08:58:28 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2116 2013/06/16 09:09:16 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3306,3 +3306,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/cgicc to 3.2.10 [ryoon 2013-06-16]
 	Updated graphics/rabbit to 2.0.9 [obache 2013-06-16]
 	Updated net/mikutter to 0.2.2.1264 [obache 2013-06-16]
+	Updated net/py-dpkt to 1.8 [pettai 2013-06-16]
