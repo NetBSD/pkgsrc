@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2013/06/13 21:35:24 wiz Exp $
+$NetBSD: distinfo,v 1.80 2013/06/16 04:16:59 obache Exp $
 
 SHA1 (Mesa-7.11.2/MesaGLUT-7.11.2.tar.bz2) = 2e6e730204800a0748b301a5f58b86332699788b
 RMD160 (Mesa-7.11.2/MesaGLUT-7.11.2.tar.bz2) = bb2b140375aa13df79fcdb60a7ad0a63622dc531
@@ -27,6 +27,6 @@ SHA1 (patch-src_mesa_drivers_dri_intel_intel__context.c) = 21d3c08a27817a6358b88
 SHA1 (patch-src_mesa_drivers_dri_intel_intel__context.h) = 6d394e704636134768a6cb5a200ebcc7bc3f52ed
 SHA1 (patch-src_mesa_drivers_dri_mach64_mach64__context.h) = fe95c6610de4c1482c568463aca82f53ed0df900
 SHA1 (patch-src_mesa_drivers_x11_Makefile) = 17b72d2b74d89fbd8db05491cfcf253bb856b139
-SHA1 (patch-src_mesa_main_compiler.h) = 88acf55488d74675f16e851012e23c129e679722
+SHA1 (patch-src_mesa_main_compiler.h) = b164781b541cb83b64597facbb7a7e21d8bdb686
 SHA1 (patch-src_mesa_main_imports.c) = d0c50004c749e4c5c136ac2ed50a6989ca90065f
 SHA1 (patch-src_mesa_main_imports.h) = f5a96195b3a14294ca3389c9fe17a6076c46db8a
