@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2165 2013/06/16 18:28:27 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2166 2013/06/16 18:56:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3328,6 +3328,31 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-carddav to 0.5.0 [wiz 2013-06-16]
 	Updated devel/py-requests to 1.2.1nb1 [wiz 2013-06-16]
 	Updated multimedia/gst123 to 0.3.3 [ryoon 2013-06-16]
+	Added x11/elementary-icon-theme version 3.0 [sno 2013-06-16]
+	Added x11/elementary version 1.7.7 [sno 2013-06-16]
+	Added x11/enlightenment version 0.17.3 [sno 2013-06-16]
+	Added devel/eio version 1.7.7 [sno 2013-06-16]
+	Updated devel/ecore to 1.7.7 [sno 2013-06-16]
+	Updated devel/eet to 1.7.7 [sno 2013-06-16]
+	Updated devel/eina to 1.7.7 [sno 2013-06-16]
+	Updated graphics/edje to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-buffer to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-edb to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-eet to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-gif to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-jpeg to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-pmaps to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-png to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-sdl-16 to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-sdl to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-software-x11 to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-svg to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-tiff to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas-xpm to 1.7.7 [sno 2013-06-16]
+	Updated graphics/evas to 1.7.7 [sno 2013-06-16]
+	Updated lang/embryo to 1.7.7 [sno 2013-06-16]
+	Updated sysutils/edbus to 1.7.7 [sno 2013-06-16]
+	Updated sysutils/efreet to 1.7.7 [sno 2013-06-16]
 	Updated misc/iselect to 1.4.0 [ryoon 2013-06-16]
 	Updated audio/moc to 2.4.4 [ryoon 2013-06-16]
 	Updated databases/ruby-data_objects to 0.10.13 [taca 2013-06-16]

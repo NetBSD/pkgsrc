@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2013/06/16 18:56:06 sno Exp $
+
+--- configure.ac.orig	2012-08-26 13:26:31.000000000 +0000
++++ configure.ac
+@@ -723,7 +723,7 @@ AC_DEFINE_UNQUOTED(ELEMENTARY_BASE_DIR, 
+ EFL_CHECK_BUILD_EXAMPLES([enable_build_examples="yes"], [enable_build_examples="no"])
+ EFL_CHECK_INSTALL_EXAMPLES([enable_install_examples="yes"], [enable_install_examples="no"])
+ 
+-AC_TRY_COMPILE([
++AC_TRY_LINK([
+ # define _GNU_SOURCE 1
+ #include <unistd.h>
+ ], [
+@@ -732,7 +732,7 @@ extern char **environ;
+   AC_DEFINE(HAVE_ENVIRON, 1, [extern environ exists])
+ ])
+ 
+-AC_TRY_COMPILE([
++AC_TRY_LINK([
+ #include <stdlib.h>
+ ], [
+ clearenv();
