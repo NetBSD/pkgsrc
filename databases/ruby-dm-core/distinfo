@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/12/16 14:31:58 taca Exp $
+$NetBSD: distinfo,v 1.4 2013/06/16 14:34:53 taca Exp $
 
-SHA1 (dm-core-1.2.0.gem) = 30857529a0b7b07d32e2baf74c0c70f061270669
-RMD160 (dm-core-1.2.0.gem) = fe393c908ef1bdc53362c522ba212edd01b9f5ff
-Size (dm-core-1.2.0.gem) = 199168 bytes
+SHA1 (dm-core-1.2.1.gem) = c3de1d17884d9b010f94cd99340e08518b0037be
+RMD160 (dm-core-1.2.1.gem) = 30c98e1bf926190e3d0f483afb716711f28b25f7
+Size (dm-core-1.2.1.gem) = 196608 bytes
