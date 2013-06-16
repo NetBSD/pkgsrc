@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2013/03/10 08:07:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/06/16 17:05:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Dependencies.txt
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO.rdoc
@@ -16,7 +17,6 @@ ${GEM_LIBDIR}/lib/mail/check_delivery_params.rb
 ${GEM_LIBDIR}/lib/mail/configuration.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/nil.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/object.rb
-${GEM_LIBDIR}/lib/mail/core_extensions/shell_escape.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/smtp.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/string.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/string/access.rb
