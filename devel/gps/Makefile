@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/06/06 12:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/16 23:13:39 asau Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake sed perl awk pkg-config
 
 GPS_VERSION=		5.0.1
-USE_LANGUAGES=		c ada c++ fortran
+USE_LANGUAGES=		c ada c++
 MY_CONFIGURE_ENV+=	ADA_PROJECT_PATH=${APP}
 MY_CONFIGURE_ENV+=	PYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
 APP=			${PREFIX}/lib/gnat
