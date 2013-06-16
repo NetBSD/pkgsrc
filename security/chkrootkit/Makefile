@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2013/04/06 21:07:35 rodent Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/16 10:11:58 shattered Exp $
 #
 
-DISTNAME=		chkrootkit-0.47
-PKGREVISION=		1
+DISTNAME=		chkrootkit-0.49
+#KGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 
