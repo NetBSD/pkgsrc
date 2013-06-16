@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12295 2013/06/16 02:23:51 obache Exp $
+$NetBSD: TODO,v 1.12296 2013/06/16 06:32:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -986,7 +986,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scilab-5.5.3
 	o scm-5e7
 	o scmcvs-1.12.13
-	o scmgit-1.8.3
 	o scripts-1.0.1
 	o scrollz-1.9.99
 	o scrotwm-0.11.0
