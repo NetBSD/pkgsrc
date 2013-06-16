@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2013/02/11 02:58:54 taca Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/16 16:50:36 taca Exp $
 
-DISTNAME=	test-unit-2.5.4
+DISTNAME=	test-unit-2.5.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://test-unit.rubyforge.org/
+HOMEPAGE=	https://github.com/test-unit/test-unit/
 COMMENT=	Improved version of Test::Unit
 LICENSE=	ruby-license
 
