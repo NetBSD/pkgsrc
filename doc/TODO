@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12302 2013/06/16 09:44:40 ryoon Exp $
+$NetBSD: TODO,v 1.12303 2013/06/16 10:16:15 shattered Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.8.1
-	o chkrootkit-0.49
 	o chktex-1.7.2
 	o chromium-0.9.15
 	o chromium-bsu-0.9.15.1
@@ -727,7 +726,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.10.0
 	o libchamplain08-0.12.3
-	o libdiscid-0.5
 	o libextractor-1.0.0
 	o libflash-0.4.13
 	o libfolks-0.8.0

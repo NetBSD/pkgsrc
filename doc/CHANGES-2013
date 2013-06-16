@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2125 2013/06/16 10:06:58 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2126 2013/06/16 10:16:15 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3323,3 +3323,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-padrino-gen to 0.11.2 [obache 2013-06-16]
 	Updated www/ruby-padrino-helpers to 0.11.2 [obache 2013-06-16]
 	Updated www/ruby-padrino-mailer to 0.11.2 [obache 2013-06-16]
+	Updated audio/libdiscid to 0.5.0 [shattered 2013-06-16]
+	Updated security/chkrootkit to 0.49 [shattered 2013-06-16]
