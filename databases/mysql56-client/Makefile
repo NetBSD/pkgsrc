@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/04 18:17:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/16 20:39:12 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=	mysqc
@@ -36,4 +36,13 @@ post-install:
 .endif
 
 .include "../../devel/readline/buildlink3.mk"
+
+CMAKE_ARGS+=	-DWITH_EDITLINE=system
+.if !empty(USE_BUILTIN.readline:M[yY][eE][sS]) && !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.readline}/lib/libedit.so
+.else
+CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.readline}/lib/libreadline.so
+.endif
+CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.readline}/include/readline
+
 .include "../../mk/bsd.pkg.mk"

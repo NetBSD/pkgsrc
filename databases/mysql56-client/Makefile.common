@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2013/06/04 18:17:25 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2013/06/16 20:39:12 joerg Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -15,7 +15,6 @@ DISTINFO_FILE?=		${.CURDIR}/../../databases/mysql56-client/distinfo
 PATCHDIR?=		${.CURDIR}/../../databases/mysql56-client/patches
 
 USE_CMAKE=		yes
-USE_GNU_READLINE=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake perl:run
 
@@ -62,14 +61,10 @@ CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
 # always use our own readline, not MySQL bundled one
-CMAKE_ARGS+=		-DWITH_LIBEDIT=OFF
-CMAKE_ARGS+=		-DUSE_NEW_READLINE_INTERFACE=ON
-CMAKE_ARGS+=		-DREADLINE_LIBRARY=readline
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
 CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET:Q}
-BROKEN_READLINE_DETECTION=	yes # At least on RHEL 5.6
 
 # MySQL 5 depends on builtin functions enabled with i486 and later with GCC.
 .if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mi386)
