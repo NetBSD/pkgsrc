@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12296 2013/06/16 06:32:19 adam Exp $
+$NetBSD: TODO,v 1.12297 2013/06/16 08:09:44 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avl-2.0.2a
 	o awesome-3.5
 	o baci-20040415
-	o balance-3.54
 	o balsa-2.4.9
 	o barcode-0.99
 	o bbkeys-0.9.0
