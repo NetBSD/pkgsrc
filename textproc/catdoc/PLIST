@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/16 09:08:52 ryoon Exp $
 bin/catdoc
 bin/catppt
 bin/xls2csv
 man/man1/catdoc.1
 man/man1/catppt.1
 man/man1/xls2csv.1
+share/applications/wordview.desktop
 share/catdoc/8859-1.txt
 share/catdoc/8859-10.txt
 share/catdoc/8859-11.txt
@@ -21,6 +22,8 @@ share/catdoc/8859-8.txt
 share/catdoc/8859-9.txt
 share/catdoc/ascii.replchars
 share/catdoc/ascii.specchars
+share/catdoc/big5.txt
+share/catdoc/cns11643.txt
 share/catdoc/cp1250.txt
 share/catdoc/cp1251.txt
 share/catdoc/cp1252.txt
@@ -44,6 +47,10 @@ share/catdoc/cp865.txt
 share/catdoc/cp866.txt
 share/catdoc/cp869.txt
 share/catdoc/cp874.txt
+share/catdoc/hangul.txt
+share/catdoc/jis0201.txt
+share/catdoc/jis0208.txt
+share/catdoc/jis0212.txt
 share/catdoc/koi8-r.txt
 share/catdoc/koi8-u.txt
 share/catdoc/mac-arabic.txt
@@ -52,6 +59,8 @@ share/catdoc/mac-cyrillic.txt
 share/catdoc/mac-greek.txt
 share/catdoc/mac-hebrew.txt
 share/catdoc/mac-roman.txt
+share/catdoc/shiftjis.txt
 share/catdoc/tex.replchars
 share/catdoc/tex.specchars
 share/catdoc/us-ascii.txt
+share/pixmaps/wordview.xpm
