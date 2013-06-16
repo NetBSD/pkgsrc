@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2123 2013/06/16 09:41:41 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2124 2013/06/16 10:01:29 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-http_router to 0.11.0 [obache 2013-06-16]
 	Updated security/ykpers to 1.13.0 [pettai 2013-06-16]
 	Updated cross/dasm to 2.20.11 [ryoon 2013-06-16]
+	Updated devel/log4shib to 1.0.6 [pettai 2013-06-16]
