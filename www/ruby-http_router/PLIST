@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 12:43:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:36:23 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -29,25 +28,28 @@ ${GEM_LIBDIR}/js/package.json
 ${GEM_LIBDIR}/js/test/test.coffee
 ${GEM_LIBDIR}/js/test/test.js
 ${GEM_LIBDIR}/lib/http_router.rb
+${GEM_LIBDIR}/lib/http_router/generation_helper.rb
+${GEM_LIBDIR}/lib/http_router/generator.rb
 ${GEM_LIBDIR}/lib/http_router/node.rb
-${GEM_LIBDIR}/lib/http_router/node/arbitrary.rb
+${GEM_LIBDIR}/lib/http_router/node/abstract_request_node.rb
 ${GEM_LIBDIR}/lib/http_router/node/free_regex.rb
 ${GEM_LIBDIR}/lib/http_router/node/glob.rb
 ${GEM_LIBDIR}/lib/http_router/node/glob_regex.rb
+${GEM_LIBDIR}/lib/http_router/node/host.rb
 ${GEM_LIBDIR}/lib/http_router/node/lookup.rb
 ${GEM_LIBDIR}/lib/http_router/node/path.rb
 ${GEM_LIBDIR}/lib/http_router/node/regex.rb
-${GEM_LIBDIR}/lib/http_router/node/request.rb
+${GEM_LIBDIR}/lib/http_router/node/request_method.rb
 ${GEM_LIBDIR}/lib/http_router/node/root.rb
+${GEM_LIBDIR}/lib/http_router/node/scheme.rb
 ${GEM_LIBDIR}/lib/http_router/node/spanning_regex.rb
+${GEM_LIBDIR}/lib/http_router/node/user_agent.rb
 ${GEM_LIBDIR}/lib/http_router/node/variable.rb
-${GEM_LIBDIR}/lib/http_router/rack.rb
-${GEM_LIBDIR}/lib/http_router/rack/builder.rb
-${GEM_LIBDIR}/lib/http_router/rack/url_map.rb
-${GEM_LIBDIR}/lib/http_router/regex_route.rb
+${GEM_LIBDIR}/lib/http_router/regex_route_generation.rb
 ${GEM_LIBDIR}/lib/http_router/request.rb
 ${GEM_LIBDIR}/lib/http_router/response.rb
 ${GEM_LIBDIR}/lib/http_router/route.rb
+${GEM_LIBDIR}/lib/http_router/route_helper.rb
 ${GEM_LIBDIR}/lib/http_router/util.rb
 ${GEM_LIBDIR}/lib/http_router/version.rb
 ${GEM_LIBDIR}/test/common/generate.txt
