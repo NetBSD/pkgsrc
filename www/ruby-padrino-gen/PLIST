@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 14:31:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 10:04:09 obache Exp $
 bin/padrino-gen
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -20,7 +20,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/mocks/rr.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/activerecord.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/couchrest.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/datamapper.rb
-${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/mini_record.rb
+${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/minirecord.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/mongoid.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/mongomapper.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/orms/mongomatic.rb
@@ -63,7 +63,12 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/project/config/boot.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/project/public/favicon.ico
 ${GEM_LIBDIR}/lib/padrino-gen/generators/runner.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/Gemfile.tt
+${GEM_LIBDIR}/lib/padrino-gen/generators/templates/Rakefile.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/controller.rb.tt
+${GEM_LIBDIR}/lib/padrino-gen/generators/templates/gem/README.md.tt
+${GEM_LIBDIR}/lib/padrino-gen/generators/templates/gem/gemspec.tt
+${GEM_LIBDIR}/lib/padrino-gen/generators/templates/gem/lib/libname.tt
+${GEM_LIBDIR}/lib/padrino-gen/generators/templates/gem/lib/libname/version.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/helper.rb.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/initializer.rb.tt
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/mailer.rb.tt
@@ -82,10 +87,11 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/static/ujs/mootools.js
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/static/ujs/prototype.js
 ${GEM_LIBDIR}/lib/padrino-gen/generators/templates/static/ujs/right.js
 ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/activerecord.rb
+${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/database.rb
 ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/datamapper.rb
+${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/minirecord.rb
 ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/mongoid.rb
 ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/mongomapper.rb
-${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/seed.rb
 ${GEM_LIBDIR}/lib/padrino-gen/padrino-tasks/sequel.rb
 ${GEM_LIBDIR}/padrino-gen.gemspec
 ${GEM_LIBDIR}/test/fixtures/admin_template.rb
