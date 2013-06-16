@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.37 2013/05/24 15:08:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2013/06/16 14:37:33 imil Exp $
 #
 
-DISTNAME=		pkgin-0.6.3.1.1
-PKGREVISION=		2
+GHCOMMIT=		3859170568fbe4fe21b5660dbaeca8d65ac10f1b
+DISTNAME=		${GHCOMMIT}
+PKGNAME=		pkgin-0.6.4
 CATEGORIES=		pkgtools
-MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
+MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
+FETCH_USING=		curl
 
 MAINTAINER=		imil@NetBSD.org
 HOMEPAGE=		http://pkgin.net/
@@ -18,7 +20,7 @@ CONF_FILES=		${EGDIR}/repositories.conf.example		\
 OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
-WRKSRC=			${WRKDIR}/pkgin
+WRKSRC=			${WRKDIR}/pkgin-${GHCOMMIT}
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -53,7 +55,7 @@ DEPENDS+=		pkg_install>=20110215:../../pkgtools/pkg_install
 # those have official repositories
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Minix"
 pre-install:
-	${GREP} -i ${OPSYS} ${WRKSRC}/REPOSITORIES >> 		\
+	${GREP} -i ${OPSYS} ${WRKSRC}/REPOSITORIES >> 			\
 		${WRKSRC}/repositories.conf
 .endif
 
