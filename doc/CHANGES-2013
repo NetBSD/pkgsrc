@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2155 2013/06/16 16:42:35 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2156 2013/06/16 16:51:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3357,3 +3357,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-sexp-processor to 4.2.1 [taca 2013-06-16]
 	Updated devel/ruby-stomp to 1.2.9 [taca 2013-06-16]
 	Updated devel/ruby-subexec to 0.2.3 [taca 2013-06-16]
+	Updated devel/ruby-test-unit to 2.5.5 [taca 2013-06-16]
