@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2013/05/16 05:53:59 richard Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/16 02:01:54 obache Exp $
 
-DISTNAME=	xf86-input-mouse-1.8.1
+DISTNAME=	xf86-input-mouse-1.9.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
