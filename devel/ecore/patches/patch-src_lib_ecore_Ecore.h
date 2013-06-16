@@ -1,14 +1,15 @@
-$NetBSD: patch-src_lib_ecore_Ecore.h,v 1.1 2012/05/21 06:21:41 marino Exp $
+$NetBSD: patch-src_lib_ecore_Ecore.h,v 1.2 2013/06/16 18:56:04 sno Exp $
 
---- src/lib/ecore/Ecore.h.orig	2012-05-21 05:28:16.000000000 +0000
+DragonflyBSD needs that, too
+
+--- src/lib/ecore/Ecore.h.orig	2013-01-09 13:46:27.000000000 +0000
 +++ src/lib/ecore/Ecore.h
-@@ -295,7 +295,8 @@
+@@ -356,7 +356,7 @@ sudo make install
  
  #ifdef _WIN32
  # include <winsock2.h>
--#elif (defined (__FreeBSD__) && (__FreeBSD_version >= 420001)) || defined (__OpenBSD__)
-+#elif (defined (__FreeBSD__) && (__FreeBSD_version >= 420001)) \
-+    || defined (__OpenBSD__) || defined(__DragonFly__)
+-#elif defined (__FreeBSD__) || defined (__OpenBSD__)
++#elif defined (__FreeBSD__) || defined (__OpenBSD__) || defined(__DragonFly__)
  # include <sys/select.h>
  # include <signal.h>
- #else
+ #elif defined (__ANDROID__)
