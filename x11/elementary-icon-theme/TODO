@@ -1,0 +1,8 @@
+should I use libexec/icon-name-mapping ?
+
+how to get png files? does it matter? test this
+
+maybe skip these checks?
+=> Checking for non-existent script interpreters in elementary-icon-theme-2.7.1
+=> Checking for missing run-time search paths in elementary-icon-theme-2.7.1
+=> Checking for work-directory references in elementary-icon-theme-2.7.1
