@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 14:29:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 10:04:09 obache Exp $
 bin/padrino
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -10,7 +10,11 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/padrino
 ${GEM_LIBDIR}/lib/padrino-core.rb
 ${GEM_LIBDIR}/lib/padrino-core/application.rb
+${GEM_LIBDIR}/lib/padrino-core/application/flash.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/rendering.rb
+${GEM_LIBDIR}/lib/padrino-core/application/rendering/extensions/erubis.rb
+${GEM_LIBDIR}/lib/padrino-core/application/rendering/extensions/haml.rb
+${GEM_LIBDIR}/lib/padrino-core/application/rendering/extensions/slim.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/routing.rb
 ${GEM_LIBDIR}/lib/padrino-core/application/showexceptions.rb
 ${GEM_LIBDIR}/lib/padrino-core/caller.rb
@@ -45,6 +49,7 @@ ${GEM_LIBDIR}/lib/padrino-core/locale/uk.yml
 ${GEM_LIBDIR}/lib/padrino-core/locale/zh_cn.yml
 ${GEM_LIBDIR}/lib/padrino-core/locale/zh_tw.yml
 ${GEM_LIBDIR}/lib/padrino-core/logger.rb
+${GEM_LIBDIR}/lib/padrino-core/module.rb
 ${GEM_LIBDIR}/lib/padrino-core/mounter.rb
 ${GEM_LIBDIR}/lib/padrino-core/reloader.rb
 ${GEM_LIBDIR}/lib/padrino-core/router.rb
@@ -53,6 +58,11 @@ ${GEM_LIBDIR}/lib/padrino-core/support_lite.rb
 ${GEM_LIBDIR}/lib/padrino-core/tasks.rb
 ${GEM_LIBDIR}/lib/padrino-core/version.rb
 ${GEM_LIBDIR}/padrino-core.gemspec
+${GEM_LIBDIR}/test/fixtures/app_gem/Gemfile
+${GEM_LIBDIR}/test/fixtures/app_gem/app/app.rb
+${GEM_LIBDIR}/test/fixtures/app_gem/app_gem.gemspec
+${GEM_LIBDIR}/test/fixtures/app_gem/lib/app_gem.rb
+${GEM_LIBDIR}/test/fixtures/app_gem/lib/app_gem/version.rb
 ${GEM_LIBDIR}/test/fixtures/apps/.components
 ${GEM_LIBDIR}/test/fixtures/apps/.gitignore
 ${GEM_LIBDIR}/test/fixtures/apps/complex.rb
@@ -68,8 +78,10 @@ ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/mini_shoulda.rb
 ${GEM_LIBDIR}/test/test_application.rb
 ${GEM_LIBDIR}/test/test_core.rb
+${GEM_LIBDIR}/test/test_csrf_protection.rb
 ${GEM_LIBDIR}/test/test_dependencies.rb
 ${GEM_LIBDIR}/test/test_filters.rb
+${GEM_LIBDIR}/test/test_flash.rb
 ${GEM_LIBDIR}/test/test_locale.rb
 ${GEM_LIBDIR}/test/test_logger.rb
 ${GEM_LIBDIR}/test/test_mounter.rb
@@ -79,4 +91,5 @@ ${GEM_LIBDIR}/test/test_rendering.rb
 ${GEM_LIBDIR}/test/test_restful_routing.rb
 ${GEM_LIBDIR}/test/test_router.rb
 ${GEM_LIBDIR}/test/test_routing.rb
+${GEM_LIBDIR}/test/test_support_lite.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
