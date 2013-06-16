@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12300 2013/06/16 09:22:20 ryoon Exp $
+$NetBSD: TODO,v 1.12301 2013/06/16 09:41:41 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -457,7 +457,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dar-2.4.10
 	o darcs-2.4
 	o dasher-4.11
-	o dasm-2.20.11
 	o dbench-4.0
 	o dcc-1.3.141
 	o ddclient-3.7.3
