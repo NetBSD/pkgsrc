@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/06/13 22:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/16 13:34:30 obache Exp $
 
 DISTNAME=	xdm-1.1.11
 PKGREVISION=	4
@@ -48,7 +48,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
 CFLAGS+=	-fno-strict-aliasing
 .endif
 
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .if ${OPSYS} == "NetBSD"

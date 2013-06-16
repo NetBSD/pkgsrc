@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2013/06/13 22:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.80 2013/06/16 13:34:30 obache Exp $
 #
 
 DISTNAME=	xorg-server-1.12.4
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
 .if !empty(USE_TOOLS:Mauto*)
-BUILD_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
+TOOLS_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
 .endif
 
 DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
