@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/09/16 06:27:17 taca Exp $
+$NetBSD: distinfo,v 1.4 2013/06/16 16:53:30 taca Exp $
 
-SHA1 (uuidtools-2.1.3.gem) = ca097f0c376c59c7ed34cf6996e6fbf9f24e6563
-RMD160 (uuidtools-2.1.3.gem) = 5bbbe5692b3770dea6b80e3b9ddb8fa3d778f5d6
-Size (uuidtools-2.1.3.gem) = 22528 bytes
+SHA1 (uuidtools-2.1.4.gem) = 9718ddd0db4ad3995670e54f95cc3bce965ceced
+RMD160 (uuidtools-2.1.4.gem) = ef6ea0d50ddc38f9ea46b851a2c8ac6a06f459c2
+Size (uuidtools-2.1.4.gem) = 25600 bytes
