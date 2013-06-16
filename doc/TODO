@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12306 2013/06/16 12:39:16 ryoon Exp $
+$NetBSD: TODO,v 1.12307 2013/06/16 13:01:33 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-6.2.0
 	o mnemosyne-2.2.1
-	o moc-2.4.4
 	o modular-xorg-server-1.14.1
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
