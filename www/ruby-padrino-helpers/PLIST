@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 14:39:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 10:04:09 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/padrino-helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/asset_tag_helpers.rb
+${GEM_LIBDIR}/lib/padrino-helpers/breadcrumb_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_builder/abstract_form_builder.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_builder/standard_form_builder.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_helpers.rb
@@ -85,6 +86,9 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engine.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/current_engines/_slim.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_erb.erb
+${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_haml.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/erb/test.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/explicit_engine.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/haml/test.haml

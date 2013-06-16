@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/02/11 14:30:57 taca Exp $
+$NetBSD: distinfo,v 1.2 2013/06/16 10:04:08 obache Exp $
 
-SHA1 (padrino-cache-0.10.7.gem) = e486206a69eef68649a9782aeecc64a44a36d32b
-RMD160 (padrino-cache-0.10.7.gem) = d68208cb6db1f342648a6e4755c0d4b90f0d6775
-Size (padrino-cache-0.10.7.gem) = 14848 bytes
+SHA1 (padrino-cache-0.11.2.gem) = 682d678dab1d8dbd25807c998af4e224832edad6
+RMD160 (padrino-cache-0.11.2.gem) = 30230756363344f21807542700fca8fd8d43d73a
+Size (padrino-cache-0.11.2.gem) = 15872 bytes
