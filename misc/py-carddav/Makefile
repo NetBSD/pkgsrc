@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 09:57:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2013/06/16 10:25:09 wiz Exp $
 
-DISTNAME=	pycarddav0.3.4
-PKGNAME=	${DISTNAME:S/pycarddav/${PYPKGPREFIX}-carddav-/}
+DISTNAME=	pyCardDAV-0.5.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyCardDAV/carddav/}
 CATEGORIES=	misc
 MASTER_SITES=	http://lostpackets.de/pycarddav/downloads/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pycarddav.lostpackets.de/
@@ -19,21 +17,19 @@ DEPENDS+=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
 
 USE_LANGUAGES=	# none
 
-SUBST_CLASSES=		env
-SUBST_MESSAGE.env=	Fixing path to python interpreter.
-SUBST_FILES.env=	pc_query pycardsyncer
-SUBST_SED.env+=		-e "s,/usr/bin/env python,${PYTHONBIN},"
-SUBST_STAGE.env=	pre-build
+REPLACE_PYTHON=		pycarddav/ui.py
+REPLACE_PYTHON+=	pycarddav/controllers.py
+REPLACE_PYTHON+=	pycarddav/model.py
+REPLACE_PYTHON+=	pycarddav/carddav.py
+REPLACE_PYTHON+=	pycarddav/backend.py
+REPLACE_PYTHON+=	pycarddav/__init__.py
 
 INSTALLATION_DIRS= bin share/doc/py-carddav share/examples/py-carddav
 
-do-build:
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pc_query ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/pycardsyncer ${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/README* ${DESTDIR}${PREFIX}/share/doc/py-carddav
 	${INSTALL_DATA} ${WRKSRC}/pycard.conf.sample ${DESTDIR}${PREFIX}/share/examples/py-carddav
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

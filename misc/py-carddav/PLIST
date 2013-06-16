@@ -1,6 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 15:20:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 10:25:09 wiz Exp $
 bin/pc_query
+bin/pycard-import
 bin/pycardsyncer
-share/doc/py-carddav/README.html
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/pycarddav/__init__.py
+${PYSITELIB}/pycarddav/__init__.pyc
+${PYSITELIB}/pycarddav/__init__.pyo
+${PYSITELIB}/pycarddav/backend.py
+${PYSITELIB}/pycarddav/backend.pyc
+${PYSITELIB}/pycarddav/backend.pyo
+${PYSITELIB}/pycarddav/carddav.py
+${PYSITELIB}/pycarddav/carddav.pyc
+${PYSITELIB}/pycarddav/carddav.pyo
+${PYSITELIB}/pycarddav/controllers.py
+${PYSITELIB}/pycarddav/controllers.pyc
+${PYSITELIB}/pycarddav/controllers.pyo
+${PYSITELIB}/pycarddav/model.py
+${PYSITELIB}/pycarddav/model.pyc
+${PYSITELIB}/pycarddav/model.pyo
+${PYSITELIB}/pycarddav/ui.py
+${PYSITELIB}/pycarddav/ui.pyc
+${PYSITELIB}/pycarddav/ui.pyo
 share/doc/py-carddav/README.rst
+share/doc/py-carddav/README.txt
 share/examples/py-carddav/pycard.conf.sample
