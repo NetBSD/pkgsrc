@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/27 11:49:55 marino Exp $
+# $NetBSD: Makefile,v 1.11 2013/06/16 23:09:50 asau Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 AWS_VERSION=		2.10.0.1
 USE_TOOLS+=		gmake makeinfo sed gawk
-USE_LANGUAGES=  	c ada c++ fortran
+USE_LANGUAGES=  	c ada c++
 
 # Note: c++ and fortran aren't used, but gprconfig probes for them.
 # When that happens, pkgsrc wrapper emits a warning message which causes
