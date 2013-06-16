@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2102 2013/06/15 21:21:17 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.2103 2013/06/16 00:31:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3290,3 +3290,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libpcap to 1.4.0 [adam 2013-06-15]
 	Updated net/tcpdump to 4.4.0 [adam 2013-06-15]
 	Updated net/dnscheck to 1.4.1 [pettai 2013-06-15]
+	Updated inputmethod/libskk to 1.0.1 [ryoon 2013-06-16]
