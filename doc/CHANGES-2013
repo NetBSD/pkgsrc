@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2121 2013/06/16 09:36:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2122 2013/06/16 09:39:38 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3313,3 +3313,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-sinatra-contrib to 1.4.0 [obache 2013-06-16]
 	Updated security/ykclient to 2.10 [pettai 2013-06-16]
 	Updated www/ruby-http_router to 0.11.0 [obache 2013-06-16]
+	Updated security/ykpers to 1.13.0 [pettai 2013-06-16]
