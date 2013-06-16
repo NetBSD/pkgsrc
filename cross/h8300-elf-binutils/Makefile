@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/09 13:47:25 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/16 20:33:17 mef Exp $
 
 DISTNAME=	binutils-2.19.1
 PKGNAME=	cross-h8300-elf-${DISTNAME}
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Cross utility for h8300-elf
+LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 H8300_PREFIX=	${PREFIX}/cross-h8300-elf
 
@@ -42,7 +43,14 @@ post-install:
 		${LN} -s ${H8300_PREFIX}/bin/"$$f" \
 		  ${DESTDIR}${PREFIX}/bin/"$$f" || exit 1; \
 	done
-	${MV} ${DESTDIR}${H8300_PREFIX}/lib/libiberty.a \
-	      ${DESTDIR}${H8300_PREFIX}/lib/libiberty_binutils.a
+# copy libiberty.a under the different name from compiler
+# PATH differs between clang and gcc:
+	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a; do \
+		if [ -f ${DESTDIR}${H8300_PREFIX}/lib/$$d ]; then \
+			${MV} ${DESTDIR}${H8300_PREFIX}/lib/$$d \
+			      ${DESTDIR}${H8300_PREFIX}/lib/libiberty_binutils.a; \
+		break; \
+		fi; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
