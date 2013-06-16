@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2164 2013/06/16 17:32:48 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.2165 2013/06/16 18:28:27 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3368,3 +3368,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ruby-net-sftp to 2.1.2 [taca 2013-06-16]
 	Updated textproc/ruby-diff-lcs to 1.2.4 [taca 2013-06-16]
 	Updated x11/xdm3d to 1.0nb6 [dholland 2013-06-16]
+	Updated emulators/qemu to 1.4.2 [tsutsui 2013-06-16]
