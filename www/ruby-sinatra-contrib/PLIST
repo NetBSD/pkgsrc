@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 13:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:21:38 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/sinatra/test_helpers.rb
 ${GEM_LIBDIR}/sinatra-contrib.gemspec
 ${GEM_LIBDIR}/spec/capture_spec.rb
 ${GEM_LIBDIR}/spec/config_file/key_value.yml
+${GEM_LIBDIR}/spec/config_file/key_value.yml.erb
 ${GEM_LIBDIR}/spec/config_file/key_value_override.yml
 ${GEM_LIBDIR}/spec/config_file/missing_env.yml
 ${GEM_LIBDIR}/spec/config_file/with_envs.yml
@@ -35,10 +36,6 @@ ${GEM_LIBDIR}/spec/content_for/different_key.erb
 ${GEM_LIBDIR}/spec/content_for/different_key.erubis
 ${GEM_LIBDIR}/spec/content_for/different_key.haml
 ${GEM_LIBDIR}/spec/content_for/different_key.slim
-${GEM_LIBDIR}/spec/content_for/footer.erb
-${GEM_LIBDIR}/spec/content_for/footer.erubis
-${GEM_LIBDIR}/spec/content_for/footer.haml
-${GEM_LIBDIR}/spec/content_for/footer.slim
 ${GEM_LIBDIR}/spec/content_for/layout.erb
 ${GEM_LIBDIR}/spec/content_for/layout.erubis
 ${GEM_LIBDIR}/spec/content_for/layout.haml
