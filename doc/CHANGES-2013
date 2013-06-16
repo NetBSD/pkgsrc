@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2124 2013/06/16 10:01:29 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.2125 2013/06/16 10:06:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3316,3 +3316,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ykpers to 1.13.0 [pettai 2013-06-16]
 	Updated cross/dasm to 2.20.11 [ryoon 2013-06-16]
 	Updated devel/log4shib to 1.0.6 [pettai 2013-06-16]
+	Updated www/ruby-padrino to 0.11.2 [obache 2013-06-16]
+	Updated www/ruby-padrino-admin to 0.11.2 [obache 2013-06-16]
+	Updated www/ruby-padrino-cache to 0.11.2 [obache 2013-06-16]
+	Updated www/ruby-padrino-core to 0.11.2 [obache 2013-06-16]
+	Updated www/ruby-padrino-gen to 0.11.2 [obache 2013-06-16]
+	Updated www/ruby-padrino-helpers to 0.11.2 [obache 2013-06-16]
+	Updated www/ruby-padrino-mailer to 0.11.2 [obache 2013-06-16]
