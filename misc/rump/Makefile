@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/06/02 17:33:58 stacktic Exp $
+# $NetBSD: Makefile,v 1.22 2013/06/16 20:42:06 joerg Exp $
 #
 
 VERSION=		20130602
@@ -23,6 +23,10 @@ WRKSRC=			${WRKDIR}/buildrump
 
 do-build:
 	cd ${WRKSRC} && ./buildrump.sh -r tools build install
+
+pre-install:
+	rm -rf ${WRKSRC}/rump/share/man/cat*
+	rmdir ${WRKSRC}/rump/share/man/man* || true
 
 do-install:
 	cd ${WRKSRC}/rump && ${PAX} -wr lib include share ${DESTDIR}${PREFIX}/
