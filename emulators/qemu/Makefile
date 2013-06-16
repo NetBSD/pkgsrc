@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2013/05/31 12:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2013/06/16 18:27:25 tsutsui Exp $
 
-DISTNAME=		qemu-1.3.1
-PKGREVISION=		1
+DISTNAME=		qemu-1.4.2
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -60,8 +59,6 @@ SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			hw/marvell_88w8618_audio.c \
 			hw/milkymist-ac97.c \
 			hw/mips_fulong2e.c \
-			hw/mips_jazz.c \
-			hw/mips_malta.c \
 			hw/omap2.c \
 			hw/palm.c \
 			hw/pcspk.c \
