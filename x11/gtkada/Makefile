@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/06/06 12:53:58 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/16 23:17:11 asau Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
@@ -17,7 +17,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config perl makeinfo pkg-config
-USE_LANGUAGES=		c ada c++ fortran
+USE_LANGUAGES=		c ada c++
 MAKE_JOBS_SAFE=		no
 
 GTKADA_VERSION=		2.22
