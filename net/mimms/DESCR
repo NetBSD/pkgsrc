@@ -1,0 +1,22 @@
+mimms is a program designed to allow you to download streams using
+the MMS protocol and save them to your computer, as opposed to
+watching them live. Similar functionality is available in full
+media player suites such as Xine, MPlayer, and VLC, but mimms is
+quick and easy to use and, for the time being, remains a useful
+program.
+
+Originally, mimms was forked directly from the last known version
+of mmsclient, which was for years unmaintained. mimms was started
+with the following goals:
+
+* Keep a working copy of "mmsclient" (now "mimms") well maintained
+* Fix lots of the bugs that were in mmsclient
+* Extend the functionality of the program in useful ways
+
+Since the 2.x series, mimms shares no code with mmsclient, and
+actually does all of it's MMS operations using libmms, a library
+based off of the xine-improved mmsclient code, which is designed
+to allow multiple implementations of MMS clients without requiring
+a fragmented code base. The mimms 3.x series is implemented entirely
+in python, and is freed from the details of the MMS protocol and
+architecture dependence, and can focus on usability.
