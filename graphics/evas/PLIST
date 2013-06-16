@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2011/12/05 17:33:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/06/16 18:56:05 sno Exp $
 include/evas-1/Evas.h
+include/evas-1/Evas_GL.h
 lib/evas/modules/engines/software_generic/${MODULE_ARCH}/module.la
 lib/evas/modules/loaders/bmp/${MODULE_ARCH}/module.la
 lib/evas/modules/loaders/generic/${MODULE_ARCH}/module.la
@@ -11,6 +12,7 @@ lib/libevas.la
 lib/pkgconfig/evas.pc
 share/doc/evas/AUTHORS
 share/doc/evas/COPYING
+share/evas/checkme
 share/evas/examples/aspect.edc
 share/evas/examples/cube1.png
 share/evas/examples/enlightenment.png
@@ -21,9 +23,11 @@ share/evas/examples/evas-events.c
 share/evas/examples/evas-hints.c
 share/evas/examples/evas-images.c
 share/evas/examples/evas-images2.c
+share/evas/examples/evas-images3.c
 share/evas/examples/evas-init-shutdown.c
 share/evas/examples/evas-map-utils.c
 share/evas/examples/evas-object-manipulation.c
+share/evas/examples/evas-smart-interface.c
 share/evas/examples/evas-smart-object.c
 share/evas/examples/evas-stacking.c
 share/evas/examples/evas-text.c

@@ -1,0 +1,10 @@
+Enlightenment has grown to be much more than a window manager.
+It has many systems that have grown on their own to support development
+of the next version (0.17) and all the effort is going into solidifying
+these systems to be more than solid to build on.
+This has lead to a lot of code being produced that is useful far
+and beyond a window manager. The idea is to share as much code
+as possible with other programs, and so a small army of shared libraries
+has evolved for Enlightenment. This page attempts to cover some
+of these (especially the more interesting ones) to give a good insight
+into why they exist, what they do, how to use them, and where they are going.
