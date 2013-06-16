@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/11 11:31:19 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 08:50:42 pettai Exp $
 ${PYSITELIB}/dpkt/__init__.py
 ${PYSITELIB}/dpkt/__init__.pyc
 ${PYSITELIB}/dpkt/__init__.pyo
@@ -65,6 +65,9 @@ ${PYSITELIB}/dpkt/icmp.pyo
 ${PYSITELIB}/dpkt/icmp6.py
 ${PYSITELIB}/dpkt/icmp6.pyc
 ${PYSITELIB}/dpkt/icmp6.pyo
+${PYSITELIB}/dpkt/ieee80211.py
+${PYSITELIB}/dpkt/ieee80211.pyc
+${PYSITELIB}/dpkt/ieee80211.pyo
 ${PYSITELIB}/dpkt/igmp.py
 ${PYSITELIB}/dpkt/igmp.pyc
 ${PYSITELIB}/dpkt/igmp.pyo
@@ -77,6 +80,9 @@ ${PYSITELIB}/dpkt/ip6.pyo
 ${PYSITELIB}/dpkt/ipx.py
 ${PYSITELIB}/dpkt/ipx.pyc
 ${PYSITELIB}/dpkt/ipx.pyo
+${PYSITELIB}/dpkt/llc.py
+${PYSITELIB}/dpkt/llc.pyc
+${PYSITELIB}/dpkt/llc.pyo
 ${PYSITELIB}/dpkt/loopback.py
 ${PYSITELIB}/dpkt/loopback.pyc
 ${PYSITELIB}/dpkt/loopback.pyo
@@ -113,9 +119,15 @@ ${PYSITELIB}/dpkt/pppoe.pyo
 ${PYSITELIB}/dpkt/qq.py
 ${PYSITELIB}/dpkt/qq.pyc
 ${PYSITELIB}/dpkt/qq.pyo
+${PYSITELIB}/dpkt/radiotap.py
+${PYSITELIB}/dpkt/radiotap.pyc
+${PYSITELIB}/dpkt/radiotap.pyo
 ${PYSITELIB}/dpkt/radius.py
 ${PYSITELIB}/dpkt/radius.pyc
 ${PYSITELIB}/dpkt/radius.pyo
+${PYSITELIB}/dpkt/rfb.py
+${PYSITELIB}/dpkt/rfb.pyc
+${PYSITELIB}/dpkt/rfb.pyo
 ${PYSITELIB}/dpkt/rip.py
 ${PYSITELIB}/dpkt/rip.pyc
 ${PYSITELIB}/dpkt/rip.pyo
@@ -125,6 +137,9 @@ ${PYSITELIB}/dpkt/rpc.pyo
 ${PYSITELIB}/dpkt/rtp.py
 ${PYSITELIB}/dpkt/rtp.pyc
 ${PYSITELIB}/dpkt/rtp.pyo
+${PYSITELIB}/dpkt/rx.py
+${PYSITELIB}/dpkt/rx.pyc
+${PYSITELIB}/dpkt/rx.pyo
 ${PYSITELIB}/dpkt/sccp.py
 ${PYSITELIB}/dpkt/sccp.pyc
 ${PYSITELIB}/dpkt/sccp.pyo
@@ -140,9 +155,15 @@ ${PYSITELIB}/dpkt/sll.pyo
 ${PYSITELIB}/dpkt/smb.py
 ${PYSITELIB}/dpkt/smb.pyc
 ${PYSITELIB}/dpkt/smb.pyo
+${PYSITELIB}/dpkt/snoop.py
+${PYSITELIB}/dpkt/snoop.pyc
+${PYSITELIB}/dpkt/snoop.pyo
 ${PYSITELIB}/dpkt/ssl.py
 ${PYSITELIB}/dpkt/ssl.pyc
 ${PYSITELIB}/dpkt/ssl.pyo
+${PYSITELIB}/dpkt/ssl_ciphersuites.py
+${PYSITELIB}/dpkt/ssl_ciphersuites.pyc
+${PYSITELIB}/dpkt/ssl_ciphersuites.pyo
 ${PYSITELIB}/dpkt/stp.py
 ${PYSITELIB}/dpkt/stp.pyc
 ${PYSITELIB}/dpkt/stp.pyo
