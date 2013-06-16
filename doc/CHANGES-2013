@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2127 2013/06/16 10:25:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2128 2013/06/16 11:49:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3326,3 +3326,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/libdiscid to 0.5.0 [shattered 2013-06-16]
 	Updated security/chkrootkit to 0.49 [shattered 2013-06-16]
 	Updated misc/py-carddav to 0.5.0 [wiz 2013-06-16]
+	Updated devel/py-requests to 1.2.1nb1 [wiz 2013-06-16]
