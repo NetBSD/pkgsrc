@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/03/16 12:39:22 obache Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/16 09:12:18 obache Exp $
 
-DISTNAME=	sinatra-1.3.6
+DISTNAME=	sinatra-1.4.3
 CATEGORIES=	www
 
 MAINTAINER=	obache@NetBSD.org
@@ -9,8 +9,8 @@ COMMENT=	Classy web-development dressed in a DSL
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.4<2:../../www/ruby-rack
-DEPENDS+=	${RUBY_PKGPREFIX}-rack-protection>=1.3<2:../../www/ruby-rack-protection
-DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.3.3<2:../../textproc/ruby-tilt
+DEPENDS+=	${RUBY_PKGPREFIX}-rack-protection>=1.4<2:../../www/ruby-rack-protection
+DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.3.4<2:../../textproc/ruby-tilt
 
 RUBY_RDOC_REQD=	3.0
 
