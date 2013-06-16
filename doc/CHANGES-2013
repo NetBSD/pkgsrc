@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2132 2013/06/16 14:30:41 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2133 2013/06/16 14:35:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-do_mysql to 0.10.13 [taca 2013-06-16]
 	Updated databases/ruby-do_postgres to 0.10.13 [taca 2013-06-16]
 	Updated databases/ruby-do_sqlite3 to 0.10.13 [taca 2013-06-16]
+	Updated databases/ruby-dm-core to 1.2.1 [taca 2013-06-16]
