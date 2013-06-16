@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2012/01/11 19:06:24 hans Exp $
+$NetBSD: distinfo,v 1.9 2013/06/16 13:00:59 ryoon Exp $
 
-SHA1 (moc-2.4.3.tar.bz2) = d9b54636f51f5366e94b684ddff3e869b1c634ac
-RMD160 (moc-2.4.3.tar.bz2) = 34470535b16ab329a9055b05550028ceb0a860f7
-Size (moc-2.4.3.tar.bz2) = 459706 bytes
+SHA1 (moc-2.4.4.tar.bz2) = e56ee13aa17c177f0afc42efe3804ebbbf46d4db
+RMD160 (moc-2.4.4.tar.bz2) = d757650b3d8ed4f830212f41d12af7144ecba29b
+Size (moc-2.4.4.tar.bz2) = 699724 bytes
 SHA1 (patch-ab) = 91c80cc251cd1c245613e3c41907629a7934bda3
-SHA1 (patch-ac) = d8c11caf51841021bc3d9999e1454922e89a370c
+SHA1 (patch-ac) = 3a1ef7b9249c4e6818e434065ed3537d883e0e6a
 SHA1 (patch-ad) = 9a242fdc116fa173354d4ebd93d624c8c4580b6a
 SHA1 (patch-playlist__file.c) = 1026a40068a75e5076d3b6d661e5c47f7f0a418e
