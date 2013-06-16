@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/23 17:19:09 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/06/16 20:42:46 joerg Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -31,5 +31,11 @@ post-patch:
 		include/socks.h > ${WRKSRC}/include/socks.h.new;	\
 	${MV} include/socks.h.new include/socks.h
 	@${ECHO} "sockd 0.0.0.0 0.0.0.0" >> ${WRKSRC}/socks.conf
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=return-type
+.endif
 
 .include "../../mk/bsd.pkg.mk"
