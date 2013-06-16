@@ -1,0 +1,23 @@
+$NetBSD: patch-bin_perload,v 1.1 2013/06/16 00:56:44 mef Exp $
+
+Extracting agent/magent (with variable substitutions)
+perl ../bin/perload -o magent > mailagent
+$* is no longer supported at ../bin/perload line 463.
+Can't locate getopt.pl in @INC (@INC contains:
+....
+.) at ../bin/perload line 40.
+ *** Error code 2
+
+--- bin/perload.orig	2001-03-18 03:31:36.000000000 +0900
++++ bin/perload	2013-06-15 12:18:17.000000000 +0900
+@@ -37,8 +37,8 @@ $current_package = 'main';		# Current pa
+ $init_emitted = 0;				# True when dataloading stamp was emitted
+ $in_function = 0;
+ 
+-require 'getopt.pl';
+-&Getopt;
++use Getopt::Std;
++getopt();
+ 
+ while (<>) {
+ 	if ($. == 1 && /^(:|#).*perl/) {	# Invocation stub
