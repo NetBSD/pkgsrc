@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2168 2013/06/16 19:21:37 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2169 2013/06/16 21:12:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3396,3 +3396,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/qemu to 1.4.2 [tsutsui 2013-06-16]
 	Updated net/p5-IO-Socket-INET6 to 2.70 [sno 2013-06-16]
 	Updated net/p5-Net-Server to 2.007 [sno 2013-06-16]
+	Updated net/libmms to 0.6.2 [wiz 2013-06-16]
