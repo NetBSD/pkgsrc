@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2013/06/16 18:56:06 sno Exp $
+
+Shut up, pkglint
+
+--- src/lib/eio_file.c.orig	2012-04-03 14:49:00.000000000 +0000
++++ src/lib/eio_file.c
+@@ -606,6 +606,8 @@ eio_file_copy_do(Ecore_Thread *thread, E
+    Eina_File *f;
+ #ifdef HAVE_SPLICE
+    struct stat buf;
++#endif
++#if defined(HAVE_SPLICE) || defined(HAVE_XATTR)
+    int in = -1;
+ #endif
+    mode_t md;

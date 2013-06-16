@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/05 17:41:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 18:56:05 sno Exp $
 bin/e-notify-send
+bin/e_dbus_async_client_test
+bin/e_dbus_async_server_test
 bin/e_dbus_bluez_test
 bin/e_dbus_connman0_7x_test
 bin/e_dbus_notification_daemon

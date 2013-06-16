@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/05 17:20:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/06/16 18:56:04 sno Exp $
 bin/eet
 include/eet-1/Eet.h
 lib/libeet.la

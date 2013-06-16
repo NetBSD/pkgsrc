@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/12 11:39:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/16 18:56:04 sno Exp $
 include/eina-1/Eina.h
 include/eina-1/eina/eina_accessor.h
 include/eina-1/eina/eina_array.h

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/06/16 18:56:06 sno Exp $
+
+SHA1 (elementary-1.7.7.tar.bz2) = cff6de3f496139cd806575f5c36a05e2b00f64fc
+RMD160 (elementary-1.7.7.tar.bz2) = 71a25877149998791f7a9581b59330a8026fbbe5
+Size (elementary-1.7.7.tar.bz2) = 9360420 bytes
+SHA1 (patch-aa) = f52eda6a696da177ec1a6302244095cdeeae1e0f
+SHA1 (patch-ab) = 91c3a70d71d5d8fc9410c0fbe668ff343d59509b
