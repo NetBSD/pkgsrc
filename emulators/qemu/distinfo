@@ -1,18 +1,16 @@
-$NetBSD: distinfo,v 1.81 2013/03/29 15:26:26 tsutsui Exp $
+$NetBSD: distinfo,v 1.82 2013/06/16 18:27:25 tsutsui Exp $
 
-SHA1 (qemu-1.3.1.tar.bz2) = 5a3ef5273b3f39418e90680b144001f97d27c2c2
-RMD160 (qemu-1.3.1.tar.bz2) = 2e2ccdcd5bfa58ce2f3a3efb348f8e9840a26ca3
-Size (qemu-1.3.1.tar.bz2) = 10283677 bytes
-SHA1 (patch-configure) = 34ae5e65bc5beb45637303a02c42e9ede33564b6
-SHA1 (patch-ef) = fd9f0ca22b1f3c3950a0ea69ba32252265d2285a
-SHA1 (patch-eg) = 4be8e74d134e0736fa65977d885a9dd3b12e653b
-SHA1 (patch-eh) = 02ada323ac9ba0acf8e4d0746bc7d58abb24b288
-SHA1 (patch-en) = a2fdf12d46cb25004f5f0f6b3e187c59863e3b20
-SHA1 (patch-et) = 019de3390becbf629f4158f6ea0326ccdb9bc28f
-SHA1 (patch-hw_ppc__newworld.c) = 9f8f337e7619444ceaf80a2bccf5a9545f6bc991
-SHA1 (patch-hw_ppc__oldworld.c) = a77c01a03afb9e5d4aef4d85a7585bb77d8fdd6a
-SHA1 (patch-hw_xilinx__axienet.c) = 9a4c73c8dcf745d31661e0c88d683530d153feaf
-SHA1 (patch-ioport.c) = 3a9fc61cbf72a8cea29d1d168113b48c2f4968a9
-SHA1 (patch-memory.c) = cb67615b7632ec0006507a0270d841955bcb7e8b
-SHA1 (patch-net_tap-bsd.c) = eb5e994a57c6f4291e34af9198ea007dbc21b191
-SHA1 (patch-slirp_tcp__subr.c) = 51ae78f3f04eae9a22568afdbf6e3b2bc3d34187
+SHA1 (qemu-1.4.2.tar.bz2) = 7e01e57e7385dba76125f69829aa78e98acdce4f
+RMD160 (qemu-1.4.2.tar.bz2) = 4b136a6f2192b07aaf04270a60c9326635d8865a
+Size (qemu-1.4.2.tar.bz2) = 10416877 bytes
+SHA1 (patch-ef) = 0b7dc779b174c842c529443e59ffaccbfe8616de
+SHA1 (patch-eg) = ce5adc1c45f6a7d6d6a63ec6c97ba146ff6e9e63
+SHA1 (patch-eh) = 72302ffd1a56dc4fa8d19b3095c9111331a20621
+SHA1 (patch-en) = d4396209ddca3b53f2e4664087550a9660708537
+SHA1 (patch-et) = 8c52e10d92e30226b02f9cb017efa28880124467
+SHA1 (patch-hw_xilinx__axienet.c) = e31f00c01a30d5447c771cceca413f247b67ea14
+SHA1 (patch-ioport.c) = a8f85248039de4d572f3af754d1e29ef9f83d8d7
+SHA1 (patch-memory.c) = ca15c0cfd20b54bee0f8ec769a9047b5cd76e4f3
+SHA1 (patch-net_tap-bsd.c) = 4d21ea8dd639db2a98ef9e341c3b863c9be965e2
+SHA1 (patch-slirp_tcp__subr.c) = c134e0fe0ce6b8fc92a630c98891b4c3e56cc861
+SHA1 (patch-util_hbitmap.c) = 8c3d42d9b594efc1b5eb0ccfb5d110bd63eaa9f0
