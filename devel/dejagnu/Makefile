@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/06/10 01:09:48 mef Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/16 04:54:51 mef Exp $
 #
 
-DISTNAME=	dejagnu-1.5
+DISTNAME=	dejagnu-1.5.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=dejagnu/}
 
