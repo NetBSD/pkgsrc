@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2013/06/14 13:43:05 mef Exp $
+# $NetBSD: Makefile,v 1.972 2013/06/16 21:21:30 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -281,6 +281,7 @@ SUBDIR+=	mcast-tools
 SUBDIR+=	md-whois
 SUBDIR+=	microdc2
 SUBDIR+=	mikutter
+SUBDIR+=	mimms
 SUBDIR+=	miniupnpd
 SUBDIR+=	miredo
 SUBDIR+=	mirror
