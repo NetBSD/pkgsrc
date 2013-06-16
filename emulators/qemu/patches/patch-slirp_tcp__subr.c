@@ -1,6 +1,6 @@
-$NetBSD: patch-slirp_tcp__subr.c,v 1.3 2012/09/11 17:13:45 asau Exp $
+$NetBSD: patch-slirp_tcp__subr.c,v 1.4 2013/06/16 18:27:25 tsutsui Exp $
 
---- slirp/tcp_subr.c.orig	2012-09-05 14:03:06.000000000 +0000
+--- slirp/tcp_subr.c.orig	2013-05-24 13:37:57.000000000 +0000
 +++ slirp/tcp_subr.c
 @@ -341,6 +341,8 @@ int tcp_fconnect(struct socket *so)
      setsockopt(s,SOL_SOCKET,SO_REUSEADDR,(char *)&opt,sizeof(opt ));

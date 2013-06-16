@@ -1,8 +1,8 @@
-$NetBSD: patch-en,v 1.5 2012/09/11 17:13:45 asau Exp $
+$NetBSD: patch-en,v 1.6 2013/06/16 18:27:25 tsutsui Exp $
 
---- tcg/arm/tcg-target.h.orig	2012-09-05 14:03:07.000000000 +0000
+--- tcg/arm/tcg-target.h.orig	2013-05-24 13:37:58.000000000 +0000
 +++ tcg/arm/tcg-target.h
-@@ -85,7 +85,7 @@ static inline void flush_icache_range(tc
+@@ -84,7 +84,7 @@ static inline void flush_icache_range(tc
                                        tcg_target_ulong stop)
  {
  #if QEMU_GNUC_PREREQ(4, 1)
