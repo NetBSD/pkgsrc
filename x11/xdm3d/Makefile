@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2012/10/29 05:07:01 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/16 17:32:06 dholland Exp $
 
 DISTNAME=		xdm3d-1.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
+
+PATCHFILES=		xdm3d-jumbo-patch-20130616.gz
+PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xdm3d/
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hijinks.com/~spade/linux/XBanner/
