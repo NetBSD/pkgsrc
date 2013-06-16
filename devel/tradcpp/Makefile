@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/11 23:07:01 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/16 12:56:10 obache Exp $
 #
 
 DISTNAME=	tradcpp-0.2
@@ -11,6 +11,6 @@ COMMENT=	Traditional (K&R-style) C preprocessor
 LICENSE=	modified-bsd
 
 USE_BSD_MAKEFILE=	yes
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
