@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 09:57:24 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/16 12:38:43 ryoon Exp $
 #
 
-DISTNAME=		iselect-1.2.0
-PKGREVISION=		2
+DISTNAME=		iselect-1.4.0
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.ossp.org/pkg/tool/iselect/ \
 			ftp://ftp.ntua.gr/pub/utils/ossp/tool/iselect/
