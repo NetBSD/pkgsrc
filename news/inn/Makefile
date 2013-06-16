@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2013/05/31 12:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2013/06/16 21:42:00 wiz Exp $
 
 DISTNAME=		inn-2.5.3
 PKGREVISION=		3
@@ -60,9 +60,9 @@ USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
 LDFLAGS.SunOS+= -lsocket -lnsl
 
-DEPENDS+=		p5-MIME-tools>0:../../mail/p5-MIME-tools
-DEPENDS+=		p5-GD>0:../../graphics/p5-GD
-DEPENDS+=		gnupg>0:../../security/gnupg
+DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
+DEPENDS+=		p5-GD-[0-9]*:../../graphics/p5-GD
+DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 
 ## Please note that USE_DESTDIR=yes only works for this package if the user
 ## and group already exist
