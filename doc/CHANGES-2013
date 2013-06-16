@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2106 2013/06/16 05:40:43 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2107 2013/06/16 06:32:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3294,3 +3294,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-input-mouse to 1.9.0 [obache 2013-06-16]
 	Updated devel/dejagnu to 1.5.1 [mef 2013-06-16]
 	Updated databases/py-sqlalchemy to 0.7.10 [adam 2013-06-16]
+	Updated devel/scmgit to 1.8.3.1 [adam 2013-06-16]
+	Updated devel/scmgit-base to 1.8.3.1 [adam 2013-06-16]
+	Updated devel/scmgit-docs to 1.8.3.1 [adam 2013-06-16]
+	Updated www/gitweb to 1.8.3.1 [adam 2013-06-16]
