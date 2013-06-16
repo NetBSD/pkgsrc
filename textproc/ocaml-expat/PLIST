@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/10 11:25:57 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:45:19 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/expat
 lib/ocaml/site-lib/expat/META
 lib/ocaml/site-lib/expat/dllmlexpat.so
 ${PLIST.opt}lib/ocaml/site-lib/expat/expat.a
 lib/ocaml/site-lib/expat/expat.cma
 ${PLIST.opt}lib/ocaml/site-lib/expat/expat.cmxa
+${PLIST.opt}lib/ocaml/site-lib/expat/expat.cmxs
 lib/ocaml/site-lib/expat/expat.cmi
 lib/ocaml/site-lib/expat/expat.mli
 lib/ocaml/site-lib/expat/libmlexpat.a
