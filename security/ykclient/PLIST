@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/13 15:16:00 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:35:54 pettai Exp $
 bin/ykclient
 include/ykclient.h
+include/ykclient_errors.h
 include/ykclient_server_response.h
+include/ykclient_version.h
 lib/libykclient.la
+man/man1/ykclient.1
