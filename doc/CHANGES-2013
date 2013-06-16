@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2161 2013/06/16 17:09:47 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2162 2013/06/16 17:17:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3363,3 +3363,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-mime-types to 1.23 [taca 2013-06-16]
 	Updated mail/ruby-mail to 2.5.4 [taca 2013-06-16]
 	Updated net/ruby-addressable to 2.3.4 [taca 2013-06-16]
+	Updated security/ruby-net-ssh to 2.6.7 [taca 2013-06-16]
+	Updated security/ruby-net-scp to 1.1.1 [taca 2013-06-16]
+	Updated security/ruby-net-sftp to 2.1.2 [taca 2013-06-16]
