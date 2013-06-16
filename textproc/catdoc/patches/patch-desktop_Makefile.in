@@ -1,0 +1,22 @@
+$NetBSD: patch-desktop_Makefile.in,v 1.1 2013/06/16 09:08:52 ryoon Exp $
+
+* Create target directory with standard way.
+* DESTDIR support.
+
+--- desktop/Makefile.in.orig	2012-12-03 17:59:19.000000000 +0000
++++ desktop/Makefile.in
+@@ -20,10 +20,10 @@ all:
+ clean:
+ 
+ install: all
+-	../mkinstalldirs $(prefix)$(desktopdir)
+-	../mkinstalldirs $(prefix)$(iconsdir)
+-	$(INSTALL) -m 644 wordview.desktop $(prefix)$(desktopdir)/wordview.desktop
+-	$(INSTALL) -m 644 wordview.xpm $(prefix)$(iconsdir)/wordview.xpm
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(prefix)$(desktopdir)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(prefix)$(iconsdir)
++	${BSD_INSTALL_DATA} wordview.desktop ${DESTDIR}$(prefix)$(desktopdir)/wordview.desktop
++	${BSD_INSTALL_DATA} wordview.xpm ${DESTDIR}$(prefix)$(iconsdir)/wordview.xpm
+ 
+ distclean: clean
+ 	rm Makefile
