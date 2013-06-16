@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/31 01:12:01 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/16 23:06:10 asau Exp $
 
 DISTNAME=	libWindowsWM-1.0.1
 CATEGORIES=	wm x11
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++ fortran
+USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gsed pkg-config
 
 PKGCONFIG_OVERRIDE+=	windowswm.pc.in
