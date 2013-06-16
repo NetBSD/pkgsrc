@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/03/14 16:42:13 taca Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/16 15:23:39 taca Exp $
 
-DISTNAME=	rake-10.0.3
+DISTNAME=	rake-10.0.4
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
