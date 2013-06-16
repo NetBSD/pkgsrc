@@ -1,24 +1,22 @@
-$NetBSD: patch-ad,v 1.1 2010/02/25 07:15:42 agc Exp $
+$NetBSD: patch-ad,v 1.2 2013/06/16 10:11:58 shattered Exp $
 
-modern NetBSD has PAM too
-
---- chkrootkit	2010/02/24 22:13:30	1.1
-+++ chkrootkit	2010/02/24 22:12:34
-@@ -476,7 +476,7 @@
+--- chkrootkit.orig	2009-07-30 14:10:54.000000000 +0000
++++ chkrootkit
+@@ -509,7 +509,7 @@ ${ROOTDIR}/usr/include/syslogs.h ${ROOTD
  
  
         ### OpenBSD rootkit v1
--       if [ "$SYSTEM" != "SunOS" -a ! -f /usr/lib/security/libgcj.security ]
-+       if [ "$SYSTEM" != "SunOS" -a "$SYSTEM" != "NetBSD" -a ! -f /usr/lib/security/libgcj.security ]
+-       if [ \( "$SYSTEM" != "SunOS" -a ${SYSTEM} != "Linux" \) -a ! -f /usr/lib/security/libgcj.security ]
++       if [ "$SYSTEM" != "SunOS" -a "$SYSTEM" != "Linux" -a "$SYSTEM" != "NetBSD" -a ! -f /usr/lib/security/libgcj.security ]
            then
            expertmode_output "${find} ${ROOTDIR}usr/lib/security"
         fi
-@@ -893,7 +893,7 @@
+@@ -931,7 +931,7 @@ ${find} ${ROOTDIR}usr/sbin -name in.slog
     fi
  
     ### OpenBSD rootkit v1
--   if [ "${SYSTEM}" != "SunOS" -a ! -f ${ROOTDIR}usr/lib/security/libgcj.security ]; then
-+   if [ "${SYSTEM}" != "SunOS" -a "$SYSTEM" != "NetBSD" -a ! -f ${ROOTDIR}usr/lib/security/libgcj.security ]; then
+-   if [ \( "${SYSTEM}" != "SunOS" -a ${SYSTEM} != "Linux" \) -a ! -f ${ROOTDIR}usr/lib/security/libgcj.security ]; then
++   if [ "$SYSTEM" != "SunOS" -a "$SYSTEM" != "Linux" -a "$SYSTEM" != "NetBSD" -a ! -f /usr/lib/security/libgcj.security ]; then
        files=""
        if [ "${QUIET}" != "t" ];then printn "Searching for OBSD rk v1... "; fi
        files=`${find} ${ROOTDIR}usr/lib/security 2>/dev/null`
