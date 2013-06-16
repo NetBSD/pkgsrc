@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/16 14:31:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/06/16 14:34:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -137,6 +139,7 @@ ${GEM_LIBDIR}/spec/public/property/text_spec.rb
 ${GEM_LIBDIR}/spec/public/property/time_spec.rb
 ${GEM_LIBDIR}/spec/public/property_spec.rb
 ${GEM_LIBDIR}/spec/public/resource_spec.rb
+${GEM_LIBDIR}/spec/public/resource/state_spec.rb
 ${GEM_LIBDIR}/spec/public/sel_spec.rb
 ${GEM_LIBDIR}/spec/public/setup_spec.rb
 ${GEM_LIBDIR}/spec/public/shared/association_collection_shared_spec.rb
