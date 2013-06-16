@@ -1,8 +1,8 @@
-$NetBSD: patch-src_mesa_main_compiler.h,v 1.2 2013/05/18 05:55:41 obache Exp $
+$NetBSD: patch-src_mesa_main_compiler.h,v 1.3 2013/06/16 04:16:59 obache Exp $
 
 --- src/mesa/main/compiler.h.orig	2011-11-23 01:09:52.000000000 +0000
 +++ src/mesa/main/compiler.h
-@@ -248,7 +248,17 @@ extern "C" {
+@@ -248,7 +248,26 @@ extern "C" {
   * Try to use a runtime test instead.
   * For now, only used by some DRI hardware drivers for color/texel packing.
   */
@@ -15,13 +15,22 @@ $NetBSD: patch-src_mesa_main_compiler.h,v 1.2 2013/05/18 05:55:41 obache Exp $
 +#include <sys/endian.h>
 +#endif
 +
-+#if (defined(BYTE_ORDER) && defined(BIG_ENDIAN) && BYTE_ORDER == BIG_ENDIAN) ||\
-+	(defined(_BYTE_ORDER) && defined(_BIG_ENDIAN) && _BYTE_ORDER == _BIG_ENDIAN) ||\
-+	(defined(__sun) && defined(_BIG_ENDIAN))
++#if defined(BYTE_ORDER) && defined(BIG_ENDIAN)
++#  if BYTE_ORDER == BIG_ENDIAN
++#define MESA_BIG_ENDIAN 1
++#  endif
++#elif defined(_BYTE_ORDER) && defined(_BIG_ENDIAN)
++#  if _BYTE_ORDER == _BIG_ENDIAN
++#define MESA_BIG_ENDIAN 1
++#  endif
++#elif defined(__sun) && defined(_BIG_ENDIAN)
++#define MESA_BIG_ENDIAN 1
++#endif
++#if MESA_BIG_ENDIAN == 1
  #if defined(__linux__)
  #include <byteswap.h>
  #define CPU_TO_LE32( x )	bswap_32( x )
-@@ -263,6 +273,9 @@ static INLINE GLuint CPU_TO_LE32(GLuint
+@@ -263,11 +282,13 @@ static INLINE GLuint CPU_TO_LE32(GLuint 
             ((x & 0x00ff0000) >>  8) |
             ((x & 0xff000000) >> 24));
  }
@@ -31,3 +40,8 @@ $NetBSD: patch-src_mesa_main_compiler.h,v 1.2 2013/05/18 05:55:41 obache Exp $
  #else /*__linux__ */
  #include <sys/endian.h>
  #define CPU_TO_LE32( x )	bswap32( x )
+ #endif /*__linux__*/
+-#define MESA_BIG_ENDIAN 1
+ #else
+ #define CPU_TO_LE32( x )	( x )
+ #define MESA_LITTLE_ENDIAN 1
