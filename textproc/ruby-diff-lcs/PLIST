@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/11 02:41:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/16 17:21:49 taca Exp $
 bin/htmldiff
 bin/ldiff
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -17,7 +17,6 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/autotest/discover.rb
 ${GEM_LIBDIR}/bin/htmldiff
 ${GEM_LIBDIR}/bin/ldiff
-${GEM_LIBDIR}/diff-lcs.gemspec
 ${GEM_LIBDIR}/docs/COPYING.txt
 ${GEM_LIBDIR}/docs/artistic.txt
 ${GEM_LIBDIR}/lib/diff-lcs.rb
@@ -33,6 +32,7 @@ ${GEM_LIBDIR}/lib/diff/lcs/ldiff.rb
 ${GEM_LIBDIR}/lib/diff/lcs/string.rb
 ${GEM_LIBDIR}/spec/change_spec.rb
 ${GEM_LIBDIR}/spec/diff_spec.rb
+${GEM_LIBDIR}/spec/hunk_spec.rb
 ${GEM_LIBDIR}/spec/issues_spec.rb
 ${GEM_LIBDIR}/spec/lcs_spec.rb
 ${GEM_LIBDIR}/spec/patch_spec.rb
