@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/11 11:31:19 pettai Exp $
+$NetBSD: distinfo,v 1.2 2013/06/16 08:50:42 pettai Exp $
 
-SHA1 (dpkt-1.6.tar.gz) = 2a5ee8b44968b38ad4ee15112212ffc0ed2d8a5a
-RMD160 (dpkt-1.6.tar.gz) = e6e5f5a5d439d7c6eb165f5899903c167fd21551
-Size (dpkt-1.6.tar.gz) = 116518 bytes
-SHA1 (patch-aa) = 0e85ce2df69538e65a8a4ac933d63da9c27c14c2
+SHA1 (dpkt-1.8.tar.gz) = 4dd4d8b384177fcfbad3891798ff5779bb39ee2a
+RMD160 (dpkt-1.8.tar.gz) = 6c52dd753897ea10b15b9a67ef0303464bbfc7eb
+Size (dpkt-1.8.tar.gz) = 76311 bytes
