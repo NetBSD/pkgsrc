@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2170 2013/06/16 21:21:39 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2171 2013/06/16 21:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3398,3 +3398,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-Net-Server to 2.007 [sno 2013-06-16]
 	Updated net/libmms to 0.6.2 [wiz 2013-06-16]
 	Added net/mimms version 3.2 [wiz 2013-06-16]
+	Updated security/dnssec-tools to 1.14nb1 [wiz 2013-06-16]
