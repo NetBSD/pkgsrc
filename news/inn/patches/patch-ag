@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.11 2010/01/16 09:46:17 spz Exp $
+$NetBSD: patch-ag,v 1.12 2013/06/16 21:41:47 wiz Exp $
 
---- control/pgpverify.in.orig	2009-05-21 20:08:33.000000000 +0000
+--- control/pgpverify.in.orig	2012-06-15 18:25:36.000000000 +0000
 +++ control/pgpverify.in
 @@ -131,7 +131,7 @@
  # Path to pgp binary; for PGP 5.0, set the path to the pgpv binary.  If
@@ -11,3 +11,27 @@ $NetBSD: patch-ag,v 1.11 2010/01/16 09:46:17 spz Exp $
  
  # If you keep your keyring somewhere that is not the default used by pgp,
  # uncomment the next line and set appropriately.  If you have INN and the
+@@ -738,19 +738,19 @@ B<pgpverify> may exit with the following
+ 
+ The control message had a good PGP signature.
+ 
+-=item 1
++=item "1"
+ 
+ The control message had no PGP signature.
+ 
+-=item 2
++=item "2"
+ 
+ The control message had an unknown PGP signature.
+ 
+-=item 3
++=item "3"
+ 
+ The control message had a bad PGP signature.
+ 
+-=item 255
++=item "255"
+ 
+ A problem occurred not directly related to PGP analysis of signature.
+ 
