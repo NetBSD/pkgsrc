@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/06/14 23:53:03 jnemeth Exp $
+# $NetBSD: Makefile,v 1.50 2013/06/16 22:10:13 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -17,6 +17,9 @@ OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
+
+# known to have issues on i386, block the package until the bug is fixed
+NOT_FOR_PLATFORM=	NetBSD-*-i386
 
 CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
