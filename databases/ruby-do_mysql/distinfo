@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/02/13 15:13:37 taca Exp $
+$NetBSD: distinfo,v 1.6 2013/06/16 14:29:07 taca Exp $
 
-SHA1 (do_mysql-0.10.12.gem) = 83a98015ecea81c4000262427565c337576b3fc1
-RMD160 (do_mysql-0.10.12.gem) = 04311dccdbecf17726695fd34556f25d81eb89c4
-Size (do_mysql-0.10.12.gem) = 28160 bytes
+SHA1 (do_mysql-0.10.13.gem) = d53368dcf0c71f9a755e54b7dce3627fcdcb50c7
+RMD160 (do_mysql-0.10.13.gem) = b3b9cde323106ab3464f7491b322e3baab875a48
+Size (do_mysql-0.10.13.gem) = 29184 bytes
