@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/03/17 16:10:00 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/06/16 15:30:18 taca Exp $
 
-SHA1 (daemon_controller-1.1.2.gem) = 0925e8a891d8c38540cd3b59b8f4faf964fb73e0
-RMD160 (daemon_controller-1.1.2.gem) = 7a625bce69107736ff55d43573fc5c3fb0548594
-Size (daemon_controller-1.1.2.gem) = 26624 bytes
+SHA1 (daemon_controller-1.1.4.gem) = ffd8583e9f1c96913da404a27d4e293838fc2bc7
+RMD160 (daemon_controller-1.1.4.gem) = 1e5140299cba05a8a3e7718ddb078164c97a953a
+Size (daemon_controller-1.1.4.gem) = 28160 bytes
