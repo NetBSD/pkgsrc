@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/16 18:56:06 sno Exp $
+include/eio-1/Eio.h
+include/eio-1/eio_inline_helper.x
+lib/libeio.la
+lib/pkgconfig/eio.pc
+share/doc/eio/AUTHORS
+share/doc/eio/COPYING
+@pkgdir share/eio/examples

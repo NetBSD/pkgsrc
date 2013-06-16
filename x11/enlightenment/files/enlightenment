@@ -1,0 +1,13 @@
+# $NetBSD: enlightenment,v 1.1 2013/06/16 18:56:06 sno Exp $
+#
+# PAM configuration for the "enlightenment" service
+#
+
+# auth
+auth            include         display_manager
+
+# account
+account         include         display_manager
+
+# session
+session         include         display_manager

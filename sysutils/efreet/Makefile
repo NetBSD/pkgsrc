@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 22:17:04 tron Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/16 18:56:05 sno Exp $
 #
 
-DISTNAME=	efreet-1.1.0
-PKGREVISION=	5
+DISTNAME=	efreet-1.7.7
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
-
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes

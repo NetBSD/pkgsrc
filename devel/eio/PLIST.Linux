@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2013/06/16 18:56:06 sno Exp $
+include/ecore-1/Ecore_Fb.h
+lib/libecore_fb.la
+lib/pkgconfig/ecore-fb.pc

@@ -1,7 +1,20 @@
-# $NetBSD: Makefile.common,v 1.12 2012/10/06 14:10:47 asau Exp $
-# used by graphics/evas-png/Makefile
+# $NetBSD: Makefile.common,v 1.13 2013/06/16 18:56:05 sno Exp $
 
-EVAS_VERSION=	1.1.0
+# used by graphics/evas-buffer/Makefile
+# used by graphics/evas-edb/Makefile
+# used by graphics/evas-eet/Makefile
+# used by graphics/evas-gif/Makefile
+# used by graphics/evas-jpeg/Makefile
+# used by graphics/evas-pmaps/Makefile
+# used by graphics/evas-png/Makefile
+# used by graphics/evas-sdl/Makefile
+# used by graphics/evas-sdl-16/Makefile
+# used by graphics/evas-software-x11/Makefile
+# used by graphics/evas-svg/Makefile
+# used by graphics/evas-tiff/Makefile
+# used by graphics/evas-xpm/Makefile
+
+EVAS_VERSION=	1.7.7
 DISTNAME=	evas-${EVAS_VERSION}
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/releases/
@@ -9,6 +22,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
+LICENSE=	2-clause-bsd
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/evas/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/evas/patches
@@ -20,7 +34,7 @@ USE_TOOLS+=	gmake pkg-config
 .for mod in software-ddraw software-16-ddraw direct3d software-16-wince \
 	software-xlib software-16-x11 software-xcb directfb sdl \
 	sdl-primitive fb buffer software-qtopia gl-xlib quartz gl-glew \
-	xrender-x11 xrender-xcb glitz-x11
+	xrender-x11 xrender-xcb glitz-x11 wayland-shm wayland-egl
 .  if defined(EVAS_ENGINES) && !empty(EVAS_ENGINES:M${mod})
 CONFIGURE_ARGS+=	--enable-${mod}
 .  else
@@ -36,13 +50,16 @@ CONFIGURE_ARGS+=	--disable-image-loader-${mod}
 .  endif
 .endfor
 
+CONFIGURE_ENV+=	ACLOCAL=: AUTOCONF=: AUTOMAKE=:
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:M*-powerpc)
 CONFIGURE_ARGS+=	--enable-cpu-altivec
 .endif
 
-MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-1.1.0
+# currently it is like it is
+MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-${EVAS_VERSION}
 PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=        { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 

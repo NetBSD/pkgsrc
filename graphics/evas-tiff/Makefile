@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/06/04 22:16:17 tron Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/16 18:56:05 sno Exp $
 
 PKGNAME=	evas-tiff-${EVAS_VERSION}
 
@@ -7,8 +7,6 @@ COMMENT=	Evas TIFF image loader
 EVAS_IMAGE_LOADERS=	tiff
 
 .include "../../graphics/evas/Makefile.common"
-
-PKGREVISION=	5
 
 BUILD_DIRS=	src/modules/loaders/tiff src/modules/savers/tiff
 MAKE_FLAGS+=	module_la_LIBADD="\$${EINA_LIBS} \$${EVIL_LIBS} \$${evas_image_loader_tiff_libs} ${BUILDLINK_PREFIX.evas}/lib/libevas.la" \

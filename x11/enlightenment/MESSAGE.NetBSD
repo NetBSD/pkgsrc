@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2013/06/16 18:56:06 sno Exp $
+
+Please copy the enlightement file to your /etc/pam.d
+in order to make user authentication work in e17.
+
+===========================================================================
