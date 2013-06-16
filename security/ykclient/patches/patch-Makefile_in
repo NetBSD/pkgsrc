@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile_in,v 1.1 2012/03/19 03:07:45 dholland Exp $
+$NetBSD: patch-Makefile_in,v 1.2 2013/06/16 09:35:54 pettai Exp $
 
 - Makefile is not MAKE_JOBS_SAFE as shipped.
 
---- Makefile.in~	2011-11-23 13:09:01.000000000 +0000
+--- Makefile.in.orig	2013-05-15 12:13:08.000000000 +0000
 +++ Makefile.in
-@@ -874,7 +874,7 @@ distcleancheck: distclean
+@@ -1016,7 +1016,7 @@ distcleancheck: distclean
  	       exit 1; } >&2
  check-am: all-am
  check: check-recursive
--all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(HEADERS)
-+all-am: Makefile $(LTLIBRARIES) .WAIT $(PROGRAMS) $(HEADERS)
+-all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(MANS) $(HEADERS)
++all-am: Makefile $(LTLIBRARIES) .WAIT $(PROGRAMS) $(MANS) $(HEADERS)
  install-binPROGRAMS: install-libLTLIBRARIES
  
  installdirs: installdirs-recursive

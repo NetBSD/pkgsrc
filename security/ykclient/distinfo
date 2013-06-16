@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/11/10 19:17:26 pettai Exp $
+$NetBSD: distinfo,v 1.5 2013/06/16 09:35:54 pettai Exp $
 
-SHA1 (ykclient-2.9.tar.gz) = b3f8e0fffec6fa078375a4adee0f7cd968ea27f0
-RMD160 (ykclient-2.9.tar.gz) = 45faf6b80432a975d1b060d5ac8548fa82c160f4
-Size (ykclient-2.9.tar.gz) = 352183 bytes
-SHA1 (patch-Makefile_in) = 813bf32fafc2ebadea27a3ccdcb7f93ac3c3bde4
+SHA1 (ykclient-2.10.tar.gz) = b8818820097bb64395e33dba988aa8bc562ac8fd
+RMD160 (ykclient-2.10.tar.gz) = e392340fa2d53590cec066a038c5eebbc62073ca
+Size (ykclient-2.10.tar.gz) = 372407 bytes
+SHA1 (patch-Makefile_in) = 53b8a09cc74faf193017f7cc2f8a01aa0f748d01
