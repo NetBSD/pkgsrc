@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2013/05/01 17:16:06 stacktic Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2013/06/16 20:42:06 joerg Exp $
 lib/librump.a
 lib/librumpclient.a
 lib/librumpclient_pic.a
@@ -369,12 +369,6 @@ lib/librumpvfs_pic.a
 lib/librumpvfs.so
 lib/librumpvfs.so.0
 lib/librumpvfs.so.0.0
-share/man/cat3/rump.0
-share/man/cat3/rumpclient.0
-share/man/cat3/rump_etfs.0
-share/man/cat3/rump_lwproc.0
-share/man/cat3/rumpuser.0
-share/man/cat7/rump_sp.0
 share/man/man3/rump.3
 share/man/man3/rumpclient.3
 share/man/man3/rump_etfs.3
@@ -395,18 +389,3 @@ include/rump/rumpuser.h
 include/rump/rumpvfs_if_pub.h
 include/rump/rumpvnode_if.h
 include/rump/scsitest.h
-@pkgdir share/man/man9
-@pkgdir share/man/man8
-@pkgdir share/man/man6
-@pkgdir share/man/man5
-@pkgdir share/man/man4
-@pkgdir share/man/man2
-@pkgdir share/man/man1
-@pkgdir share/man/cat9
-@pkgdir share/man/cat8
-@pkgdir share/man/cat6
-@pkgdir share/man/cat5
-@pkgdir share/man/cat4
-@pkgdir share/man/cat2
-@pkgdir share/man/cat1
-@pkgdir include/rump
