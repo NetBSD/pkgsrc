@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2013/03/16 20:07:29 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/16 09:39:07 pettai Exp $
 #
 
-DISTNAME=	ykpers-1.11.3
+DISTNAME=	ykpers-1.13.0
 CATEGORIES=	security
-MASTER_SITES=	http://yubikey-personalization.googlecode.com/files/
+MASTER_SITES=	http://yubico.github.io/yubikey-personalization/releases/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/yubikey-personalization/
+HOMEPAGE=	http://yubico.github.io/yubikey-personalization/
 COMMENT=	Yubico's YubiKey re-programming toolkit
 LICENSE=	modified-bsd
 
