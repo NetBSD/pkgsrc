@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12299 2013/06/16 09:11:16 ryoon Exp $
+$NetBSD: TODO,v 1.12300 2013/06/16 09:22:20 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o courier-imap-4.13
 	o covered-0.7.9
 	o covered-current-20090802
-	o cpio-2.9
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
 	o csound5-5.13
