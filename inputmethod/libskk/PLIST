@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/22 13:21:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 00:30:53 ryoon Exp $
 bin/skk
 include/libskk/libskk.h
 lib/libskk.la
@@ -13,6 +13,7 @@ share/libskk/rules/act/keymap/latin.json
 share/libskk/rules/act/keymap/wide-latin.json
 share/libskk/rules/act/metadata.json
 share/libskk/rules/act/rom-kana/default.json
+share/libskk/rules/azik/keymap/common.json
 share/libskk/rules/azik/keymap/default.json
 share/libskk/rules/azik/keymap/hankaku-katakana.json
 share/libskk/rules/azik/keymap/hiragana.json
