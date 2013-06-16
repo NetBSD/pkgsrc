@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2139 2013/06/16 15:08:33 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2140 2013/06/16 15:11:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ZenTest to 4.9.2 [taca 2013-06-16]
 	Updated devel/ruby-ffi to 1.9.0 [taca 2013-06-16]
 	Updated devel/ruby-gettext_i18n_rails to 0.10.0 [taca 2013-06-16]
+	Updated devel/ruby-io-console to 0.4.2nb1 [taca 2013-06-16]
