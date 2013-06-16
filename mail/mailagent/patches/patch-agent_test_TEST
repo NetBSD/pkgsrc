@@ -1,0 +1,20 @@
+$NetBSD: patch-agent_test_TEST,v 1.1 2013/06/16 00:56:44 mef Exp $
+
+Can't locate getopt.pl in @INC (@INC contains:
+...
+at ./TEST line 57.  
+ *** Error  code 2
+
+--- agent/test/TEST.orig	2001-03-18 03:31:28.000000000 +0900
++++ agent/test/TEST	2013-06-15 12:21:11.000000000 +0900
+@@ -54,8 +54,8 @@ $ENV{'LOCKEXT'} = $cfsh'd_flexfnam eq 'd
+ $failed = 0;
+ $how_many = 0;
+ 
+-require 'getopt.pl';
+-&Getopt;
++use Getopt::Std;
++getopt();
+ 
+ $mailagent = 'mailagent';			# Default program (dataloaded version)
+ $mailagent = 'magent' if $opt_n;	# Use non-dataloaded version
