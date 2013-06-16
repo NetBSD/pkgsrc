@@ -1,14 +1,37 @@
-$NetBSD: distinfo,v 1.10 2011/11/24 14:09:47 joerg Exp $
+$NetBSD: distinfo,v 1.11 2013/06/16 20:40:40 joerg Exp $
 
 SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
 Size (CriticalMass-1.0.2.tar.bz2) = 5122126 bytes
 SHA1 (patch-aa) = a5caa2facea22cd5e7d208540626ed2163d81f18
+SHA1 (patch-game_BitmapManager.cpp) = 31265aeb2f97b642ca8d7f862de13e6442287a27
+SHA1 (patch-game_CallbackManager.cpp) = 6c5a7285397e52f3792420cc3bd775b6c0bd1c67
+SHA1 (patch-game_CallbackManager.hpp) = 8eb7c0830fe883b75e23c163d488dd1ef5e1980b
+SHA1 (patch-game_FontManager.cpp) = 13e99966beba8b27e9bd1de41859fb7c6745b111
+SHA1 (patch-game_Input.cpp) = a7b8587fc7a11879017a439e1a22b351c1819af2
+SHA1 (patch-game_Input.hpp) = 25cda998a93075d527f79938f27e2f7d70248125
+SHA1 (patch-game_ModelManager.cpp) = 5f2bd67348673aefb8fb2b45e8e899e9afbff2d7
+SHA1 (patch-game_ModelManager.hpp) = f12fdc00bc675480f39671dc0019637672b09814
+SHA1 (patch-game_ParticleGroup.cpp) = f027845125e3ea383976a3062f704a03d74865c4
+SHA1 (patch-game_ParticleGroup.hpp) = 97b7cf075ea4ca33bc55d69ba3b21f90bb2002a9
+SHA1 (patch-game_ParticleGroupManager.hpp) = f88c5fa653de8defa40e8de5ac4485307e317e0d
+SHA1 (patch-game_SampleManager.cpp) = e4b7178222d91d186b1dc104dbdb7c73082bb067
+SHA1 (patch-game_SelectableFactory.cpp) = 885893f1f5b7f9faddcdcb9723bea879c0241f7f
+SHA1 (patch-game_SelectableFactory.hpp) = 99fab8bf9857f3e5b298caf08e3752870801daf6
+SHA1 (patch-game_WeaponDepot.cpp) = bc58e929983e1db2597f58c76b8567274a864133
+SHA1 (patch-game_WeaponDepot.hpp) = 3e54c85932c9c1dec781b5a6c57f0c855b40854f
 SHA1 (patch-game_main.cpp) = 9dbf9b3de9de4ce97b0ed99ab4f4c983159124c0
 SHA1 (patch-tinyxml_tinyxml.cpp) = e25526fff0121795c1a54089b87ede52eb86f124
 SHA1 (patch-tinyxml_tinyxmlparser.cpp) = 236ff1cbd6fe83045df28022a6b02f9f65da4ee8
-SHA1 (patch-utils_ResourceManager.cpp) = a491869a5b6a99e281bb5de88c7c86ad5996fa00
+SHA1 (patch-tools_Packer.cpp) = 06f2ce956fd627ef2293c3650238996b3f800d4c
+SHA1 (patch-utils_Config.cpp) = 9f146ad01fbea62270a20c5f9ed5a1e70a6c60ce
+SHA1 (patch-utils_Config.hpp) = c2bdaceef30711421c0c77ad680d01cb062f16a9
+SHA1 (patch-utils_FindHash.hpp) = b98aac8e4008adeb51fa9c0d3a08d10b44633b4f
+SHA1 (patch-utils_ResourceCache.hpp) = e127f87ae94e6f9260f130bb22cdb92a8650d496
+SHA1 (patch-utils_ResourceManager.cpp) = 3234b06c4b5a448aba2e3902deaba501033af88f
+SHA1 (patch-utils_ResourceManager.hpp) = 8f29cfb3bf2aa1844f5987abddf854594b229f5c
 SHA1 (patch-utils_Value.hpp) = e5b6700167a6fc3dd1275cda4b17cab85d68d22d
 SHA1 (patch-utils_zStream.cpp) = b94b48862bbcfbdfbe84d7d1e6bf8133921d80aa
 SHA1 (patch-utils_zStreamBufferImplZLib.cpp) = ad7a4bc3d6a36274d2a71e0d6201b20461274b89
+SHA1 (patch-utilsgl_GLBitmapCollection.hpp) = dd94e5bc9c71ff3d05a475f10f4f30afb3cc91f7
 SHA1 (patch-utilssdl_PNG.cpp) = bf46226338a75c50c25f273f8b6cd956eb7d656c
