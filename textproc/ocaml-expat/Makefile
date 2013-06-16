@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/12/26 10:27:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/16 09:45:19 jaapb Exp $
 #
 
 DISTNAME=	ocaml-expat-0.9.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://mmzeeman.home.xs4all.nl/ocaml/
 
@@ -19,7 +20,7 @@ PLIST_VARS+=	opt
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64") || \
     (${MACHINE_ARCH} == "arm")
 PLIST.opt=	yes
-BUILD_TARGET+=	allopt
+BUILD_TARGET+=	allopt expat.cmxs
 .endif
 
 .include "../../devel/ocaml-findlib/buildlink3.mk"
