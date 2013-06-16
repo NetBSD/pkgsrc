@@ -1,25 +1,25 @@
-$NetBSD: patch-eg,v 1.5 2012/09/11 17:13:45 asau Exp $
+$NetBSD: patch-eg,v 1.6 2013/06/16 18:27:25 tsutsui Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
 
---- hw/etraxfs_eth.c.orig	2012-09-05 14:03:06.000000000 +0000
+--- hw/etraxfs_eth.c.orig	2013-05-24 13:37:57.000000000 +0000
 +++ hw/etraxfs_eth.c
-@@ -184,7 +184,7 @@ static void mdio_read_req(struct qemu_md
+@@ -185,7 +185,7 @@ static void mdio_read_req(struct qemu_md
  
- 	phy = bus->devs[bus->addr];
- 	if (phy && phy->read)
--		bus->data = phy->read(phy, bus->req);
-+		bus->data = (*phy->read)(phy, bus->req);
- 	else 
- 		bus->data = 0xffff;
- }
-@@ -354,7 +354,7 @@ static void eth_validate_duplex(struct f
- 	int new_mm = 0;
+     phy = bus->devs[bus->addr];
+     if (phy && phy->read) {
+-        bus->data = phy->read(phy, bus->req);
++        bus->data = (*phy->read)(phy, bus->req);
+     } else {
+         bus->data = 0xffff;
+     }
+@@ -359,7 +359,7 @@ static void eth_validate_duplex(struct f
+     int new_mm = 0;
  
- 	phy = eth->mdio_bus.devs[eth->phyaddr];
--	phy_duplex = !!(phy->read(phy, 18) & (1 << 11));
-+	phy_duplex = !!((*phy->read)(phy, 18) & (1 << 11));
- 	mac_duplex = !!(eth->regs[RW_REC_CTRL] & 128);
+     phy = eth->mdio_bus.devs[eth->phyaddr];
+-    phy_duplex = !!(phy->read(phy, 18) & (1 << 11));
++    phy_duplex = !!((*phy->read)(phy, 18) & (1 << 11));
+     mac_duplex = !!(eth->regs[RW_REC_CTRL] & 128);
  
- 	if (mac_duplex != phy_duplex)
+     if (mac_duplex != phy_duplex) {
