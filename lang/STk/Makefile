@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 20:11:35 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/06/16 11:47:13 ryoon Exp $
 
 DISTNAME=	STk-4.0.1
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://kaolin.unice.fr/pub/STk/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://kaolin.unice.fr/STk/
+HOMEPAGE=		http://kaolin.essi.fr/STk/
 COMMENT=	Scheme interpreter with full access to the Tk graphical package
 
 CONFLICTS+=	snow-[0-9]*
