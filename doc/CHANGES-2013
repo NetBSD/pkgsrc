@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2149 2013/06/16 16:18:27 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2150 2013/06/16 16:22:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3351,3 +3351,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-inline to 3.12.2 [taca 2013-06-16]
 	Updated devel/ruby-minitest to 5.0.4 [taca 2013-06-16]
 	Updated devel/ruby-mocha to 0.14.0 [taca 2013-06-16]
+	Updated devel/ruby-rbtree to 0.4.1 [taca 2013-06-16]
