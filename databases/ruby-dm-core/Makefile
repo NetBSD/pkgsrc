@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2012/07/31 11:45:22 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/16 14:34:53 taca Exp $
 
-DISTNAME=	dm-core-1.2.0
-PKGREVISION=	1
+DISTNAME=	dm-core-1.2.1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/datamapper/dm-core
+HOMEPAGE=	https://github.com/datamapper/dm-core/
 COMMENT=	Object/Relational Mapper for Ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.2.4<3:../../net/ruby-addressable
-
-OVERRIDE_GEMSPEC+= addressable~>2.3
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3<3:../../net/ruby-addressable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
