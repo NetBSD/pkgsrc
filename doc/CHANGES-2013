@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2163 2013/06/16 17:22:20 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2164 2013/06/16 17:32:48 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3367,3 +3367,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ruby-net-scp to 1.1.1 [taca 2013-06-16]
 	Updated security/ruby-net-sftp to 2.1.2 [taca 2013-06-16]
 	Updated textproc/ruby-diff-lcs to 1.2.4 [taca 2013-06-16]
+	Updated x11/xdm3d to 1.0nb6 [dholland 2013-06-16]
