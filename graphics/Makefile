@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2013/06/13 14:01:34 obache Exp $
+# $NetBSD: Makefile,v 1.654 2013/06/16 03:03:14 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -415,6 +415,7 @@ SUBDIR+=	ruby-color
 SUBDIR+=	ruby-color-japanese
 SUBDIR+=	ruby-color-tools
 SUBDIR+=	ruby-gd
+SUBDIR+=	ruby-gnome2-cairo-gobject
 SUBDIR+=	ruby-gnome2-gdk3
 SUBDIR+=	ruby-gnome2-gdkpixbuf
 SUBDIR+=	ruby-gnome2-goocanvas
