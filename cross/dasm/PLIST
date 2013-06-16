@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/20 16:24:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:40:58 ryoon Exp $
 bin/dasm
+bin/ftohex
+share/dasm/dasm.txt
+share/dasm/ftohex.txt
