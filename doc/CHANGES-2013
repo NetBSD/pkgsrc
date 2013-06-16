@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2118 2013/06/16 09:12:33 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2119 2013/06/16 09:21:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3310,3 +3310,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/catdoc to 0.94.4 [ryoon 2013-06-16]
 	Updated textproc/catdoc-tk to 0.94.4 [ryoon 2013-06-16]
 	Updated www/ruby-sinatra to 1.4.3 [obache 2013-06-16]
+	Updated www/ruby-sinatra-contrib to 1.4.0 [obache 2013-06-16]
