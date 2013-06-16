@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/06/16 09:08:52 ryoon Exp $
+
+* Install mn pages in doc directory.
+
+--- Makefile.in.orig	2012-12-03 17:59:19.000000000 +0000
++++ Makefile.in
+@@ -9,9 +9,10 @@ all:
+ 	done
+ 
+ install:
+-	for i in src doc charsets desktop; do\
++	for i in src charsets desktop; do\
+ 	   (cd $$i; $(MAKE) install);\
+ 	done
++	cd doc && ${MAKE} install-catdoc
+ clean:
+ 	for i in src doc charsets desktop; do\
+ 	   (cd $$i; $(MAKE) clean);\

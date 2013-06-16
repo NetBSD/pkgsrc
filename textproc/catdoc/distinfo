@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2007/06/21 19:25:47 minskim Exp $
+$NetBSD: distinfo,v 1.10 2013/06/16 09:08:52 ryoon Exp $
 
-SHA1 (catdoc-0.94.2.tar.gz) = 50ce9d7cb24ad6b10a856c9c24183e2b0a11ca04
-RMD160 (catdoc-0.94.2.tar.gz) = 59eb7a026fd3a2dae74a3e7f01a58266f7efaf72
-Size (catdoc-0.94.2.tar.gz) = 146012 bytes
-SHA1 (patch-aa) = 7190b66e2dc0c68844b560ce59a7fad5fb0453c0
-SHA1 (patch-ac) = 573aad7759f1975e27216023f45663c2a17febff
-SHA1 (patch-af) = 2441e50fcb3c829c39d3f62086e871701d735df2
+SHA1 (catdoc_0.94.4.orig.tar.gz) = 26c9addb221543288c013ecadf4f6fb0c9eca13e
+RMD160 (catdoc_0.94.4.orig.tar.gz) = 719c1030fa9506c2402a6e2dcd1335ae7594e1a9
+Size (catdoc_0.94.4.orig.tar.gz) = 679156 bytes
+SHA1 (patch-Makefile.in) = 68860b5f8f48471bfddc66803ac027d56d8ae78a
+SHA1 (patch-ac) = 054c786d0b047302b89f5f8e2847481a115a40f8
+SHA1 (patch-desktop_Makefile.in) = da1d4903d0b236af684f97f72b8d6f16b7c925a3
+SHA1 (patch-doc_Makefile.in) = dfe11be92aa209e2d282719678eeb63928088747
