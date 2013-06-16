@@ -1,0 +1,52 @@
+$NetBSD: patch-src_parallel.pod,v 1.1 2013/06/16 21:46:35 wiz Exp $
+
+Fix build with perl-5.18, which does not like unescaped numbers after =item.
+
+--- src/parallel.pod.orig	2013-01-21 22:43:00.000000000 +0000
++++ src/parallel.pod
+@@ -522,18 +522,18 @@ Print a summary of the options to GNU B<
+ 
+ =over 3
+ 
+-=item 0
++=item "0"
+ 
+ Do not halt if a job fails. Exit status will be the number of jobs
+ failed. This is the default.
+ 
+-=item 1
++=item "1"
+ 
+ Do not start new jobs if a job fails, but complete the running jobs
+ including cleanup. The exit status will be the exit status from the
+ last failing job.
+ 
+-=item 2
++=item "2"
+ 
+ Kill off all jobs immediately and exit without cleanup. The exit
+ status will be the exit status from the failing job.
+@@ -2724,19 +2724,19 @@ If B<--halt-on-error> 0 or not specified
+ 
+ =over 6
+ 
+-=item 0
++=item "0"
+ 
+ All jobs ran without error.
+ 
+-=item 1-253
++=item "1-253"
+ 
+ Some of the jobs failed. The exit status gives the number of failed jobs
+ 
+-=item 254
++=item "254"
+ 
+ More than 253 jobs failed.
+ 
+-=item 255
++=item "255"
+ 
+ Other error.
+ 
