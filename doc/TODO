@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12303 2013/06/16 10:16:15 shattered Exp $
+$NetBSD: TODO,v 1.12304 2013/06/16 10:25:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.10.0
-	o py-carddav-0.4.1
 	o py-dateutil-2.0
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
