@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/06/13 22:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/16 13:34:30 obache Exp $
 
 DISTNAME=		libXext-1.3.2
 CATEGORIES=		x11 devel
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .include "../../mk/compiler.mk"
 
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"

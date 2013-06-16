@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/06/13 22:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/16 13:34:30 obache Exp $
 #
 
 DISTNAME=	xf86-video-sis-0.10.7
@@ -18,7 +18,7 @@ USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .if ${OPSYS} == "SunOS"
