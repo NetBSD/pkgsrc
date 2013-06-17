@@ -1,4 +1,4 @@
-# $NetBSD: termcap.builtin.mk,v 1.8 2012/10/31 03:28:40 asau Exp $
+# $NetBSD: termcap.builtin.mk,v 1.9 2013/06/17 05:44:27 obache Exp $
 
 BUILTIN_PKG:=	termcap
 
@@ -19,11 +19,10 @@ BUILTIN_FIND_GREP.H_TERMLIB:=	tgetent
 ###
 .if !defined(IS_BUILTIN.termcap)
 IS_BUILTIN.termcap=	no
-.  if !empty(BUILTIN_LIB_FOUND.terminfo:M[yY][eE][sS]) || \
-      !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS]) || \
-      !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS]) || \
-      !empty(BUILTIN_LIB_FOUND.termlib:M[yY][eE][sS]) || \
-      !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
+.  if empty(H_TERM:M__nonexistent__) && empty(H_TERM:M${LOCALBASE}/*) || \
+      empty(H_TERMCAP:M__nonexistent__) && empty(H_TERMCAP:M${LOCALBASE}/*) || \
+      empty(H_TERMLIB:M__nonexistent__) && empty(H_TERMLIB:M${LOCALBASE}/*) || \
+      !empty(BUILTIN_LIB_FOUND.termlib:M[yY][eE][sS])
 IS_BUILTIN.termcap=	yes
 .  endif
 .endif
