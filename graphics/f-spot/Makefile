@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2013/06/06 12:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2013/06/17 12:44:54 wiz Exp $
 #
 
 DISTNAME=	f-spot-0.8.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -51,7 +51,7 @@ GCONF_SCHEMAS=	f-spot.schemas
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
