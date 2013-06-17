@@ -1,0 +1,113 @@
+$NetBSD: patch-da,v 1.1 2013/06/17 12:43:28 wiz Exp $
+
+--- libgc/include/private/gcconfig.h.orig	2011-04-18 07:23:28.000000000 -0400
++++ libgc/include/private/gcconfig.h	2011-10-13 20:10:24.000000000 -0400
+@@ -361,6 +361,9 @@
+ #   define OPENBSD
+ #   define mach_type_known
+ # endif
++# if defined(__DragonFly__)
++# define FREEBSD
++# endif
+ # if defined(FREEBSD) && (defined(i386) || defined(__i386__))
+ #   define I386
+ #   define mach_type_known
+@@ -700,6 +703,10 @@
+ #   endif
+ #   ifdef NETBSD
+ #	define OS_TYPE "NETBSD"
++#       ifndef USE_MMAP
++#         define USE_MMAP
++#       endif
++#       define USE_MMAP_ANON
+ #	define HEURISTIC2
+ #	ifdef __ELF__
+ #	  define DATASTART GC_data_start
+@@ -891,6 +898,10 @@
+ #   ifdef NETBSD
+ #     define ALIGNMENT 4
+ #     define OS_TYPE "NETBSD"
++#     ifndef USE_MMAP
++#       define USE_MMAP
++#     endif
++#     define USE_MMAP_ANON
+ #     define HEURISTIC2
+       extern char etext[];
+ #     define DATASTART GC_data_start
+@@ -1062,6 +1073,10 @@
+ #   endif
+ #   ifdef NETBSD
+ #     define OS_TYPE "NETBSD"
++#     ifndef USE_MMAP
++#       define USE_MMAP
++#     endif
++#     define USE_MMAP_ANON
+ #     define HEURISTIC2
+ #     ifdef __ELF__
+ #	define DATASTART GC_data_start
+@@ -1374,6 +1389,10 @@
+ #   endif
+ #   ifdef NETBSD
+ #	define OS_TYPE "NETBSD"
++#       ifndef USE_MMAP
++#           define USE_MMAP
++#       endif
++#       define USE_MMAP_ANON
+ #	ifdef __ELF__
+ #	    define DYNAMIC_LOADING
+ #	endif
+@@ -1534,6 +1553,10 @@
+ #   if defined(NETBSD)
+ #     define ALIGNMENT 4
+ #     define OS_TYPE "NETBSD"
++#     ifndef USE_MMAP
++#         define USE_MMAP
++#     endif
++#     define USE_MMAP_ANON
+ #     define HEURISTIC2
+ #     define USE_GENERIC_PUSH_REGS
+ #     ifdef __ELF__
+@@ -1660,6 +1683,10 @@
+ #   endif
+ #   ifdef NETBSD
+ #	define OS_TYPE "NETBSD"
++#       ifndef USE_MMAP
++#           define USE_MMAP
++#       endif
++#       define USE_MMAP_ANON
+ #	define HEURISTIC2
+ #	define DATASTART GC_data_start
+ #	define ELFCLASS32 32
+@@ -1923,6 +1950,10 @@
+ #   define ALIGNMENT 4
+ #   ifdef NETBSD
+ #       define OS_TYPE "NETBSD"
++#       ifndef USE_MMAP
++#           define USE_MMAP
++#       endif
++#       define USE_MMAP_ANON
+ #       define HEURISTIC2
+ #	ifdef __ELF__
+ #          define DATASTART GC_data_start
+@@ -2020,6 +2051,10 @@
+ #   endif
+ #   ifdef NETBSD
+ #      define OS_TYPE "NETBSD"
++#      ifndef USE_MMAP
++#          define USE_MMAP
++#      endif
++#      define USE_MMAP_ANON
+ #      define HEURISTIC2
+ #      define DATASTART GC_data_start
+ #       define USE_GENERIC_PUSH_REGS
+@@ -2131,6 +2166,10 @@
+ #   endif
+ #   ifdef NETBSD
+ #	define OS_TYPE "NETBSD"
++#       ifndef USE_MMAP
++#         define USE_MMAP
++#       endif
++#       define USE_MMAP_ANON
+ #	ifdef __ELF__
+ #	    define DYNAMIC_LOADING
+ #	endif
