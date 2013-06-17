@@ -1,0 +1,15 @@
+$NetBSD: patch-server_munin-update.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- server/munin-update.in.orig	2005-04-15 20:31:22.000000000 +0000
++++ server/munin-update.in
+@@ -1210,6 +1210,8 @@ sub sanitise_fieldname
+ 
+ 1;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-update - A program to gather data from machines running munin-node

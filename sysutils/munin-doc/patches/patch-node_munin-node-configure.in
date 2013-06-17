@@ -1,0 +1,15 @@
+$NetBSD: patch-node_munin-node-configure.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- node/munin-node-configure.in.orig	2005-04-15 20:29:18.000000000 +0000
++++ node/munin-node-configure.in
+@@ -553,6 +553,8 @@ sub get_plugins
+ 
+ 1;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-node-configure - A program to view configurations for munin-node

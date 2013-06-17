@@ -1,0 +1,12 @@
+$NetBSD: patch-server_munin-cron.pod,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- server/munin-cron.pod.orig	2005-04-15 20:29:18.000000000 +0000
++++ server/munin-cron.pod
+@@ -1,3 +1,5 @@
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-cron - A program to batch other munin programs
