@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/11 15:00:18 taca Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/17 15:27:32 taca Exp $
 
 DISTNAME=	rdoc-${RUBY_RDOC_VERSION}
 CATEGORIES=	devel
@@ -9,7 +9,6 @@ COMMENT=	Produces HTML and command-line documentation for Ruby projects
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
 RUBY_JSON_REQD=	1.4
-MAKE_ENV+=	RUBYLIB=${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_LIBDIR}/lib
 GEM_PATH=	${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_LIBDIR}:${PREFIX}/${GEM_HOME}
 
 pre-configure:
