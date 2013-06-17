@@ -1,0 +1,15 @@
+$NetBSD: patch-server_munin-graph.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- server/munin-graph.in.orig	2005-04-15 20:31:22.000000000 +0000
++++ server/munin-graph.in
+@@ -1092,6 +1092,8 @@ sub escape
+ 
+ 1;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-graph - A program to create graphs from data contained in rrd-files.
