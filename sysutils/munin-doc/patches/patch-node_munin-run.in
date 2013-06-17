@@ -1,0 +1,15 @@
+$NetBSD: patch-node_munin-run.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- node/munin-run.in.orig	2005-04-15 20:31:21.000000000 +0000
++++ node/munin-run.in
+@@ -625,6 +625,8 @@ sub get_var
+ 
+ 1;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-run - A program to run munin-node plugins from the command line
