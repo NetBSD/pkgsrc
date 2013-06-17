@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- configure.orig	2011-09-15 20:12:44.000000000 +0300
++++ configure	2011-10-28 17:51:31.000000000 +0300
+@@ -3834,7 +3834,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+ 		host_win32=yes
+ 		if test "x$cross_compiling" = "xno"; then
+ 			target_win32=yes
+-			if test "x$host" == "x$build"; then
++			if test "x$host" = "x$build"; then
+ 
+ $as_echo "#define TARGET_WIN32 1" >>confdefs.h
+ 
+@@ -3876,12 +3876,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+ 		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
+ 		libmono_ldflags="-pthread"
+ 		need_link_unlink=yes
+-		libdl="-ldl"
++		libdl="-ldl /libexec/ld.elf_so"
+ 		libgc_threads=pthreads
+ 		with_sigaltstack=no
+ 		use_sigposix=yes
++		cat >>confdefs.h <<\_ACEOF
++#define PTHREAD_POINTER_ID 1
++_ACEOF
+ 		;;
+-	*-*-*freebsd*)
++	*-*-*freebsd* | *-*-*dragonfly*)
+ 		host_win32=no
+ 		if test "x$PTHREAD_CFLAGS" = "x"; then
+ 			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
+@@ -3897,7 +3900,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+ 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
+ 			libmono_ldflags="$PTHREAD_LIBS"
+ 		fi
+-		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
++		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6 -D_GNU_SOURCE -D_REENTRANT -DUSE_MMAP -DUSE_MUNMAP"
++		libmono_cflags="$libmono_cflags -D_REENTRANT"
+ 		need_link_unlink=yes
+ 
+ $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
+@@ -22821,7 +22825,7 @@ LIBC="libc.so.6"
+ INTL="libc.so.6"
+ SQLITE="libsqlite.so.0"
+ SQLITE3="libsqlite3.so.0"
+-X11="libX11.so"
++X11="@X11BASE@/lib/libX11.so"
+ 
+ sizeof_register="SIZEOF_VOID_P"
+ 
+@@ -23379,10 +23383,12 @@ case "$host" in
+ 	X11="libX11.dylib"
+ 	;;
+      *-*-*netbsd*)
+-	LIBC="libc.so.12"
+-	INTL="libintl.so.0"
++	LIBC="libc.so"
++	INTL="libintl.so"
++	SQLITE="libsqlite.so"
++	SQLITE3="libsqlite3.so"
+ 	;;
+-    *-*-*freebsd*)
++    *-*-*freebsd* | *-*-*dragonfly*)
+     	LIBC="libc.so"
+ 	INTL="libintl.so"
+ 	SQLITE="libsqlite.so"

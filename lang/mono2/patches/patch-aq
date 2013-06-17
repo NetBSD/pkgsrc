@@ -1,0 +1,12 @@
+$NetBSD: patch-aq,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- data/net_4_0/Makefile.in.orig	2010-10-07 18:33:36.000000000 +0300
++++ data/net_4_0/Makefile.in	2010-10-07 18:33:55.000000000 +0300
+@@ -264,7 +264,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = 
+-monodir = $(sysconfdir)/mono/4.0
++monodir = $(datadir)/examples/mono/4.0
+ EXTRA_DIST = machine.config \
+ 	      web.config \
+ 	      DefaultWsdlHelpGenerator.aspx \

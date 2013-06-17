@@ -1,0 +1,12 @@
+$NetBSD: patch-bg,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/metadata/socket-io.c.orig	2011-02-23 21:21:01.000000000 +0200
++++ mono/metadata/socket-io.c	2011-04-25 12:21:56.000000000 +0300
+@@ -2998,7 +2998,7 @@ extern MonoBoolean ves_icall_System_Net_
+ 	struct sockaddr_in6 saddr6;
+ 	struct addrinfo *info = NULL, hints;
+ 	gint32 family;
+-	char hostname[1024] = {0};
++	char hostname[NI_MAXHOST] = {0};
+ 	int flags = 0;
+ #else
+ 	struct in_addr inaddr;

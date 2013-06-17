@@ -1,0 +1,12 @@
+$NetBSD: patch-dh,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/mini/mini-x86.c.orig	2010-10-05 22:59:29.000000000 +0300
++++ mono/mini/mini-x86.c	2010-10-07 18:37:19.000000000 +0300
+@@ -248,7 +248,7 @@
+ 
+ static X86_Reg_No param_regs [] = { 0 };
+ 
+-#if defined(TARGET_WIN32) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(TARGET_WIN32) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #define SMALL_STRUCTS_IN_REGS
+ static X86_Reg_No return_regs [] = { X86_EAX, X86_EDX };
+ #endif

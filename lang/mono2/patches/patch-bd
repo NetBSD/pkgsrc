@@ -1,0 +1,11 @@
+$NetBSD: patch-bd,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mcs/build/config-default.make.orig	2010-04-22 18:38:03.000000000 +0300
++++ mcs/build/config-default.make	2010-04-29 09:44:38.000000000 +0300
+@@ -19,6 +19,7 @@
+ endif
+ prefix = /usr/local
+ exec_prefix = $(prefix)
++mandir = $(prefix)/man
+ mono_libdir = $(exec_prefix)/lib
+ sysconfdir = $(prefix)/etc
+ #RUNTIME = mono

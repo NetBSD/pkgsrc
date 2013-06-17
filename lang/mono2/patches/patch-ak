@@ -1,0 +1,37 @@
+$NetBSD: patch-ak,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- libgc/pthread_support.c.orig	2011-01-04 19:39:55.000000000 +0200
++++ libgc/pthread_support.c	2011-03-17 16:14:10.000000000 +0200
+@@ -68,8 +68,8 @@
+ 
+ # if (defined(GC_DGUX386_THREADS) || defined(GC_OSF1_THREADS) || \
+       defined(GC_DARWIN_THREADS) || defined(GC_AIX_THREADS)) || \
+-      defined(GC_NETBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
+-      defined(GC_OPENBSD_THREADS)
++      defined(GC_NETBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) && \
++      !defined(USE_COMPILER_TLS) || defined(GC_OPENBSD_THREADS)
+ #   define USE_PTHREAD_SPECIFIC
+ # endif
+ 
+@@ -1175,6 +1175,22 @@
+ #define __d10_sleep sleep
+ #endif /* GC_DGUX386_THREADS */
+ 
++#undef nanosleep
++#undef usleep
++#undef sleep
++
++/* A wrapper for the standard C nanosleep function     */
++int WRAP_FUNC(nanosleep) (const struct timespec *rqtp, struct timespec *rmtp)
++{
++    int result;
++
++    GC_start_blocking();
++    result = REAL_FUNC(nanosleep)(rqtp, rmtp);
++    GC_end_blocking();
++
++    return result;
++}
++
+ /* A wrapper for the standard C sleep function	*/
+ int WRAP_FUNC(sleep) (unsigned int seconds)
+ {
