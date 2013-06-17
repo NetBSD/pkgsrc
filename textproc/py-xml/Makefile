@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/10/25 06:56:52 asau Exp $
-#
+# $NetBSD: Makefile,v 1.21 2013/06/17 13:33:47 wiz Exp $
 
 DISTNAME=	PyXML-0.8.4
 PKGNAME=	${PYPKGPREFIX}-xml-0.8.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyxml/}
 
@@ -21,6 +20,9 @@ FIX_RPATH+=		EXPAT_LDFLAGS
 
 PYXML_SCRIPTS=	scripts/xmlproc_parse \
 		scripts/xmlproc_val
+
+REPLACE_PYTHON+=	xml/dom/ext/c14n.py
+REPLACE_PYTHON+=	xml/dom/html/GenerateHtml.py
 
 post-extract:
 .for s in ${PYXML_SCRIPTS}
