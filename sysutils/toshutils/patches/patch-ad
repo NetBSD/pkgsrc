@@ -1,4 +1,9 @@
-$NetBSD: patch-ad,v 1.3 2009/09/18 09:37:01 obache Exp $
+$NetBSD: patch-ad,v 1.4 2013/06/17 06:15:39 dholland Exp $
+
+- destdir support
+- drop -m486 as compilers don't recognize it any more
+- add rpaths (shouldn't this use X11BASE and COMPILER_RPATH_FLAG?)
+- add -li386 (shouldn't this be OS-dependent?)
 
 --- src/Makefile.in.orig	1999-12-17 13:07:03.000000000 +0000
 +++ src/Makefile.in
@@ -11,6 +16,15 @@ $NetBSD: patch-ad,v 1.3 2009/09/18 09:37:01 obache Exp $
  MANDESTDIR = @mandir@
  YACC = @YACC@
  LEX = @LEX@
+@@ -40,7 +40,7 @@ LDFLAGS = -s
+ 
+ PROGRAMS = @PROGRAMS@
+ CC = @CC@
+-CFLAGS = -m486 -O2 -Wall -I../pixmaps @OS_CFLAGS@ @DEBUGFLAGS@ @GTK_CFLAGS@
++CFLAGS = -O2 -Wall -I../pixmaps @OS_CFLAGS@ @DEBUGFLAGS@ @GTK_CFLAGS@
+ 
+ 
+ FANOBJS = fan.o sci.o hci.o
 @@ -62,8 +62,8 @@ OBJS = sci.o hci.o fan.o svpw.o hotkey.o
  #
  # if your X11R6 libraries don't need X_LOCALE, remove -DX_LOCALE
@@ -22,8 +36,16 @@ $NetBSD: patch-ad,v 1.3 2009/09/18 09:37:01 obache Exp $
  GTKLIBS = @GTK_LIBS@
  GTKFLAGS = @GTK_CFLAGS@
  XMESSAGE = @XMESSAGE@
-@@ -88,37 +88,37 @@ sci.o: sci.c
- 	$(CC) -m486 -Wall -c sci.c
+@@ -82,43 +82,43 @@ lex.yy.c: parsetime.l
+ 	$(LEX) -i parsetime.l
+ 
+ hci.o: hci.c
+-	$(CC) -m486 -Wall -c hci.c
++	$(CC) -Wall -c hci.c
+ 
+ sci.o: sci.c
+-	$(CC) -m486 -Wall -c sci.c
++	$(CC) -Wall -c sci.c
  
  fan: $(FANOBJS)
 -	$(CC) $(LDFLAGS) -o $@ $(FANOBJS)
@@ -35,8 +57,9 @@ $NetBSD: patch-ad,v 1.3 2009/09/18 09:37:01 obache Exp $
  
  hotkey: $(HOTOBJS)
 -	$(CC) $(LDFLAGS) -o $@ $(HOTOBJS) $(XLIBS)
+-	
 +	$(CC) $(LDFLAGS) -o $@ $(HOTOBJS) $(XLIBS) -li386
- 	
++
  dispswitch: $(DISPOBJS)
 -	$(CC) $(LDFLAGS) -o $@ $(DISPOBJS) $(GTKLIBS)
 +	$(CC) $(LDFLAGS) -o $@ $(DISPOBJS) $(GTKLIBS) -li386
