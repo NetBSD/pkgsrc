@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2013/06/06 12:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2013/06/17 12:44:55 wiz Exp $
 #
 
 DISTNAME=		gtk-sharp-2.12.10
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-sharp/2.12/}
 EXTRACT_SUFX=		.tar.bz2
@@ -35,7 +35,7 @@ SUBST_FILES.relprefix=	${PKGCONFIG_OVERRIDE}
 SUBST_SED.relprefix=	-e 's|$${pcfiledir}/../..|@prefix@|g'
 
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
