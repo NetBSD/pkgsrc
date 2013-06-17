@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.699 2013/06/16 18:56:04 sno Exp $
+# $NetBSD: Makefile,v 1.700 2013/06/17 08:44:07 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -50,7 +50,7 @@ SUBDIR+=	efltk
 SUBDIR+=	egtk
 SUBDIR+=	elementary
 SUBDIR+=	elementary-icon-theme
-SUBDIR+=	enligthenment
+SUBDIR+=	enlightenment
 SUBDIR+=	eterm
 SUBDIR+=	evieext
 SUBDIR+=	fast-user-switch-applet
