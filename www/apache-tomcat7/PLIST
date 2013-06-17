@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/05/19 13:05:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/17 15:07:54 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -149,6 +149,7 @@ share/tomcat/webapps/docs/html-manager-howto.html
 share/tomcat/webapps/docs/images/add.gif
 share/tomcat/webapps/docs/images/asf-logo.gif
 share/tomcat/webapps/docs/images/code.gif
+share/tomcat/webapps/docs/images/cors-flowchart.png
 share/tomcat/webapps/docs/images/design.gif
 share/tomcat/webapps/docs/images/docs.gif
 share/tomcat/webapps/docs/images/fix.gif
