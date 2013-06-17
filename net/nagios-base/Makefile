@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/06/04 22:16:55 tron Exp $
+# $NetBSD: Makefile,v 1.45 2013/06/17 17:35:28 bouyer Exp $
 #
 
 DISTNAME=		nagios-3.4.3
@@ -83,6 +83,14 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/nagios.conf.dist ${DESTDIR}/${EGDIR}/nagios.conf
+	${INSTALL_DATA} ${WRKDIR}/netbsd40.gd2 \
+	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
+	${INSTALL_DATA} ${WRKDIR}/netbsd40.gif \
+	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
+	${INSTALL_DATA} ${WRKDIR}/netbsd40.jpg \
+	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
+	${INSTALL_DATA} ${WRKDIR}/netbsd40.png \
+	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
