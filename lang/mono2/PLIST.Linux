@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2013/06/17 12:43:28 wiz Exp $
+bin/mono-sgen
+bin/mono-sgen-gdb.py
+lib/libmonosgen-2.0.la
+lib/mono/2.0/mcs.exe.so
+lib/mono/2.0/mscorlib.dll.so
+lib/pkgconfig/monosgen-2.pc

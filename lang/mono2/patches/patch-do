@@ -1,0 +1,13 @@
+$NetBSD: patch-do,v 1.1 2013/06/17 12:43:28 wiz Exp $
+
+--- libgc/headers.c.orig	2011-10-13 20:12:06.000000000 -0400
++++ libgc/headers.c	2011-10-13 20:11:50.000000000 -0400
+@@ -139,6 +139,8 @@
+     register unsigned i;
+     
+     GC_all_nils = (bottom_index *)GC_scratch_alloc((word)sizeof(bottom_index));
++    if (GC_all_nils == NULL)
++	ABORT("out of memory");
+     BZERO(GC_all_nils, sizeof(bottom_index));
+     for (i = 0; i < TOP_SZ; i++) {
+         GC_top_index[i] = GC_all_nils;

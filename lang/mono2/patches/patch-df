@@ -1,0 +1,12 @@
+$NetBSD: patch-df,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- support/mph.h.orig	2010-04-22 18:37:47.000000000 +0300
++++ support/mph.h	2010-04-29 09:50:38.000000000 +0300
+@@ -36,7 +36,7 @@
+ #include <stdint.h>             /* for SIZE_MAX */
+ #endif
+ 
+-#if __APPLE__ || __BSD__ || __FreeBSD__ || __OpenBSD__
++#if __APPLE__ || __BSD__ || __FreeBSD__ || __OpenBSD__ || __NetBSD__ || __DragonFly__
+ #define MPH_ON_BSD
+ #endif
+ 
