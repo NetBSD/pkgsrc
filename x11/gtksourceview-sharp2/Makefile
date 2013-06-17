@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2013/06/06 12:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2013/06/17 12:44:55 wiz Exp $
 
 DISTNAME=	gtksourceview-sharp-2.0-0.12
 PKGNAME=	${DISTNAME:S/-2.0-/2-/}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gtksourceview-sharp2/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFLICTS=	gtksourceview-sharp-2.0-[0-9]*
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"

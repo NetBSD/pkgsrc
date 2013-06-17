@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.139 2013/06/06 19:05:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.140 2013/06/17 12:44:54 wiz Exp $
 
 DISTNAME=	mono-3.0.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
-COMMENT=	Open source implementation of the .NET Development Framework
+COMMENT=	Open source implementation of the .NET Development Framework (v3)
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
 MAKE_JOBS_SAFE=	no

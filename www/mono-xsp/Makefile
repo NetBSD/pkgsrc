@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/05/09 07:39:20 adam Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/17 12:44:55 wiz Exp $
 
 DISTNAME=	xsp-2.10.2
 PKGNAME=	mono-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/xsp/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,5 +26,5 @@ SUBST_SED.unwrap_mk=		-e 's,^MAKEINFO = .*,MAKEINFO = makeinfo,'
 SUBST_SED.unwrap_mk+=		-e 's,^PKG_CONFIG = .*,PKG_CONFIG = ${PREFIX}/bin/pkg-config,'
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

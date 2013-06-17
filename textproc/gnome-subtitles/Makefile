@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2013/06/06 12:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2013/06/17 12:44:55 wiz Exp $
 
 DISTNAME=	gnome-subtitles-1.1
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	multimedia textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnome-subtitles/}
 
@@ -23,7 +23,7 @@ DEPENDS+=	enchant>=1.3:../../textproc/enchant
 DEPENDS+=	gtkspell>=2.0:../../textproc/gtkspell
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

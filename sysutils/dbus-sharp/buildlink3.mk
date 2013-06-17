@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/06/10 11:59:38 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/06/17 12:44:55 wiz Exp $
 
 BUILDLINK_TREE+=	dbus-sharp
 
@@ -6,9 +6,10 @@ BUILDLINK_TREE+=	dbus-sharp
 DBUS_SHARP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dbus-sharp+=	dbus-sharp>=0.7.0
+BUILDLINK_ABI_DEPENDS.dbus-sharp?=	dbus-sharp>=0.7.0nb2
 BUILDLINK_PKGSRCDIR.dbus-sharp?=	../../sysutils/dbus-sharp
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .endif	# DBUS_SHARP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-dbus-sharp

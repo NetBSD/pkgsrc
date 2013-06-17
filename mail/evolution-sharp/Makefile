@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/05/24 18:23:37 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/06/17 12:44:54 wiz Exp $
 #
 
 DISTNAME=	evolution-sharp-0.20.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	evolution-sharp.pc.in
 USE_TOOLS+=		gmake pkg-config
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.0
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/05/09 07:39:20 adam Exp $
+# $NetBSD: Makefile,v 1.10 2013/06/17 12:44:55 wiz Exp $
 
 DISTNAME=		sublib-0.9
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		multimedia textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sublib/}
 EXTRACT_SUFX=		.zip
@@ -20,5 +20,5 @@ SUBST_MESSAGE.fix-prefix=	Fixing library installation directory
 SUBST_FILES.fix-prefix=		data/sublib.pc.in
 SUBST_SED.fix-prefix=		-e 's,@libdir@,@libdir@/mono,'
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

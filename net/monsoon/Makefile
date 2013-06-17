@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2013/06/06 12:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2013/06/17 12:44:54 wiz Exp $
 
 DISTNAME=	monsoon-0.20
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	net
 MASTER_SITES=	http://www.monsoon-project.org/jaws/data/files/
 
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake gtar intltool perl pkg-config msgfmt
 EXTRACT_USING=	gtar
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../net/mono-nat/buildlink3.mk"
 .include "../../net/monotorrent/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

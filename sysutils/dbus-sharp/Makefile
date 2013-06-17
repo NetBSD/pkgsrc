@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/06/11 02:29:40 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/17 12:44:55 wiz Exp $
 #
 
 DISTNAME=	dbus-sharp-0.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cloud.github.com/downloads/mono/dbus-sharp/
 
@@ -17,5 +17,5 @@ USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	dbus-sharp-1.0.pc.in
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
