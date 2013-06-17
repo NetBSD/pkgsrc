@@ -1,0 +1,15 @@
+$NetBSD: patch-server_munin-html.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- server/munin-html.in.orig	2005-04-15 20:31:22.000000000 +0000
++++ server/munin-html.in
+@@ -597,6 +597,8 @@ sub get_png_size
+ logger("munin-html finished");
+ close $log;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-html - A program to draw html-pages on an Munin installation
