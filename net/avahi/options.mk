@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/04/21 00:58:46 rodent Exp $
+# $NetBSD: options.mk,v 1.4 2013/06/17 12:44:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk2 gtk3 mono python qt3
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--enable-introspection=no
 
 .if !empty(PKG_OPTIONS:Mmono)
 .include "../../x11/gtk-sharp/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 CONFIGURE_ARGS+=	--disable-monodoc # XXX broken
 PLIST.mono=		yes
 .else
