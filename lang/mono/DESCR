@@ -4,3 +4,5 @@ that is working to develop an open source, Unix version of the Microsoft
 build and deploy cross-platform .NET Applications.  The project will
 implement various technologies developed by Microsoft that have now been
 submitted to the ECMA for standardization.
+
+This package contains the currently unstable major version 3 of mono.

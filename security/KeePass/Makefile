@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 22:17:01 tron Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 12:44:54 wiz Exp $
 #
 
 DISTNAME=	KeePass-2.21
@@ -12,7 +12,7 @@ HOMEPAGE=	http://keepass.info/
 COMMENT=	Free, open source, light-weight and easy-to-use password manager
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	mono>=2.6:../../lang/mono
+DEPENDS+=	mono>=2.6<3:../../lang/mono2
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

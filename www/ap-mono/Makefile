@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/05/09 07:40:34 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/17 12:44:55 wiz Exp $
 
 DISTNAME=	mod_mono-2.10
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mod_mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,7 @@ USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE=	no
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../www/mono-xsp/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

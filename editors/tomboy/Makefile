@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2013/06/06 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/06/17 12:44:54 wiz Exp $
 #
 
 DISTNAME=		tomboy-1.2.1
-PKGREVISION=		29
+PKGREVISION=		30
 CATEGORIES=		editors misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/tomboy/1.2/}
 
@@ -28,7 +28,7 @@ BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
 BUILDLINK_API_DEPENDS.mono-addins+=	mono-addins>=0.3.1
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 # evolution needs gmime-sharp
 #.include "../../mail/evolution/buildlink3.mk"
 #.include "../../mail/gmime-sharp/buildlink3.mk"

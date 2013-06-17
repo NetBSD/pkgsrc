@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/05/09 07:40:02 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/17 12:44:54 wiz Exp $
 
 DISTNAME=	mono-basic-2.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono-basic/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,5 +29,5 @@ SUBST_MESSAGE.fix-mandir=	Fixing man path
 SUBST_FILES.fix-mandir=		build/config.make
 SUBST_SED.fix-mandir=		-e 's,share/man,man,'
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
