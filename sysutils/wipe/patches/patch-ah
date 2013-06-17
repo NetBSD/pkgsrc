@@ -1,8 +1,28 @@
-$NetBSD: patch-ah,v 1.1 2005/11/10 16:31:25 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2013/06/17 05:37:22 dholland Exp $
 
---- blkdev.c.orig	2005-11-10 16:15:38.000000000 +0000
+- DragonFly BSD's partinfo is not the standard BSD partinfo.
+- Don't declare own errno.
+
+--- blkdev.c.orig	2003-08-03 23:07:29.000000000 +0000
 +++ blkdev.c
-@@ -63,7 +63,6 @@
+@@ -44,10 +44,15 @@
+ # endif
+ #endif
+ 
+-#ifdef HAVE_SYS_DISKLABEL_H
++#ifdef __DragonFly__
++# include <sys/diskslice.h>
++# define BSD_BLKDEV
++#else
++#ifdef HAVE_SYS_DISKLABEL_H)
+ # include <sys/disklabel.h>
+ # define BSD_BLKDEV
+ #endif
++#endif
+ 
+ #ifndef LINUX_BLKDEV
+ # ifndef BSD_BLKDEV
+@@ -63,7 +68,6 @@
  #include "wipe.h"
  #include "blkdev.h"
  
@@ -10,3 +30,26 @@ $NetBSD: patch-ah,v 1.1 2005/11/10 16:31:25 joerg Exp $
  extern int exit_code;
  extern char *argvzero;
  extern struct opt_s options;
+@@ -182,14 +186,20 @@ public int destroy_blkdev(struct file_s 
+       options.sectors = tmp;
+ #endif
+ 
+-#ifdef BSD_BLKDEV
++#if defined(BSD_BLKDEV)
++# if defined(__DragonFly__)
++      options.sectors = pinfo.media_blocks;
++# else
+       options.sectors = pinfo.part->p_size;
++# endif
+ #endif
+     }
+ 
+   if (options.sector_size == 0)
+     {
+-#ifdef BSD_BLKDEV
++#if defined(__DragonFly__)
++      options.sector_size = pinfo.media_blocks;
++#elif defined(BSD_BLKDEV)
+       options.sector_size = pinfo.disklab->d_secsize;
+ #else
+       options.sector_size = SECTOR_SIZE;
