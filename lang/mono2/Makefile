@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/17 12:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/17 13:14:41 jperkin Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	3
@@ -144,7 +144,15 @@ SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
 SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
 
+.include "../../mk/bsd.prefs.mk"
+
 CPPFLAGS.NetBSD+=	-D_KMEMUSER
+CPPFLAGS.SunOS+=	-D__C99FEATURES__
+
+.if ${OPSYS} == "SunOS"
+ULIMIT_CMD_datasize=	ulimit -d 262144
+ULIMIT_CMD_stacksize=	ulimit -s 10240
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
