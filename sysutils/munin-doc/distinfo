@@ -1,7 +1,18 @@
-$NetBSD: distinfo,v 1.4 2010/12/20 08:40:19 he Exp $
+$NetBSD: distinfo,v 1.5 2013/06/17 13:28:28 wiz Exp $
 
 SHA1 (munin_1.3.2.tar.gz) = 575c1dc3373e2e001accd1920fd815d9b875c95a
 RMD160 (munin_1.3.2.tar.gz) = 7bcc16d00ad28731041015ef240144ed0c4fdeb4
 Size (munin_1.3.2.tar.gz) = 309319 bytes
-SHA1 (patch-aa) = 88e5e98f6ea901d1291c73812a92ba452fe76570
-SHA1 (patch-ad) = 8accd3875324035f2c95903fc37cee4b4a55948a
+SHA1 (patch-aa) = b98b1b1683928688fd15dbaf964d77e5daa285eb
+SHA1 (patch-ad) = d3630a400eced497b6f0ca2bfd43d57512364b1d
+SHA1 (patch-node_munin-node-configure-snmp.in) = 5bc8eb427ea12867a7d93d464fb960b0346db7b3
+SHA1 (patch-node_munin-node-configure.in) = 13077cdda2a46da0b860a7f53b5131810acbd8a2
+SHA1 (patch-node_munin-node.conf.pod) = 0b29baf932c4bc98df6d4e26ee1c2e62ed73bafa
+SHA1 (patch-node_munin-node.in) = 7752355592ad0112dcbdd40959a481dd73ae19b5
+SHA1 (patch-node_munin-run.in) = f2a18421c881e76592ad7d6d2bf1cc9607a8d544
+SHA1 (patch-server_munin-cron.pod) = d2c2af47a7e935a385e752b9686b187512087ae4
+SHA1 (patch-server_munin-graph.in) = 3bfc3be349eca97bc62a821ad6573f3d02e3fa2c
+SHA1 (patch-server_munin-html.in) = 2739d0002d60a3d9d2c731ab7a6e0e06f6974fb5
+SHA1 (patch-server_munin-limits.in) = ad30244579736ee2934667dc6e35244135f4e0ae
+SHA1 (patch-server_munin-update.in) = edfb0449fa706e368f209059e1d0d78d21b07f56
+SHA1 (patch-server_munin.conf.pod) = 6d02fe31cf22bf6e08d9f4b12f73ccf85377f01e

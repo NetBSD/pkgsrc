@@ -1,0 +1,15 @@
+$NetBSD: patch-node_munin-node.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- node/munin-node.in.orig	2005-04-15 20:31:21.000000000 +0000
++++ node/munin-node.in
+@@ -1059,6 +1059,8 @@ sub get_var
+ 
+ 1;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-node - A daemon to gather information in cooperation with the main
