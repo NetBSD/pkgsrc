@@ -1,0 +1,15 @@
+$NetBSD: patch-server_munin-limits.in,v 1.1 2013/06/17 13:28:28 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- server/munin-limits.in.orig	2005-04-15 20:29:18.000000000 +0000
++++ server/munin-limits.in
+@@ -567,6 +567,8 @@ sub logger {
+ 
+ close $log;
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ munin-limits - A program to check for any off-limit values
