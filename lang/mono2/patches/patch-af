@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/metadata/Makefile.in.orig	2010-10-05 23:00:37.000000000 +0300
++++ mono/metadata/Makefile.in	2010-10-07 18:29:35.000000000 +0300
+@@ -163,7 +163,7 @@
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) \
+ 	$(libmonoruntime_static_la_CFLAGS) $(CFLAGS) \
+ 	$(libmonoruntime_static_la_LDFLAGS) $(LDFLAGS) -o $@
+-libmonoruntime_la_LIBADD =
++libmonoruntime_la_LIBADD = $(ICU_LIBS)
+ am__libmonoruntime_la_SOURCES_DIST = console-unix.c console-win32.c \
+ 	appdomain.c assembly.c attach.h attach.c boehm-gc.c \
+ 	char-conversions.h cil-coff.h class.c class-internals.h \

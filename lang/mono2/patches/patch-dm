@@ -1,0 +1,22 @@
+$NetBSD: patch-dm,v 1.1 2013/06/17 12:43:28 wiz Exp $
+
+--- mono/utils/mono-time.c.orig	2010-11-12 10:24:41.000000000 +0000
++++ mono/utils/mono-time.c
+@@ -57,7 +57,7 @@ mono_100ns_datetime (void)
+ #include <sys/time.h>
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ #endif
+@@ -67,7 +67,7 @@ mono_100ns_datetime (void)
+ static gint64
+ get_boot_time (void)
+ {
+-#if defined(PLATFORM_MACOSX) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(PLATFORM_MACOSX) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ 	int mib [2];
+ 	size_t size;
+ 	time_t now;
