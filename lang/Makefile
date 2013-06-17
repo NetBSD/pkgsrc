@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2013/05/26 04:14:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.348 2013/06/17 12:43:39 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -105,6 +105,7 @@ SUBDIR+=	mercury
 SUBDIR+=	minischeme
 SUBDIR+=	mit-scheme-bin
 SUBDIR+=	mono
+SUBDIR+=	mono2
 SUBDIR+=	mono-basic
 SUBDIR+=	moscow_ml
 SUBDIR+=	mpd
