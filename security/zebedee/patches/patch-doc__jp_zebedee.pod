@@ -1,0 +1,43 @@
+$NetBSD: patch-doc__jp_zebedee.pod,v 1.1 2013/06/17 13:18:58 wiz Exp $
+
+Fix build with perl-5.18.
+
+--- doc_jp/zebedee.pod.orig	2001-04-12 18:08:29.000000000 +0000
++++ doc_jp/zebedee.pod
+@@ -1,3 +1,5 @@
++=encoding euc-jp
++
+ =head1 NAME
+ 
+ Zebedee --- シンプルでフリーでセキュアなトンネルプログラム
+@@ -1078,6 +1080,8 @@ B<L<logfile|/item_logfile>> キーワードで
+ 
+ メッセージはログが取られたレベルに従ってインデントされる。
+ 
++=back
++
+ =head3 廃止されたキーワード(Obsolete Keywords)
+ 
+ 
+@@ -1097,8 +1101,6 @@ B<Zebedee>の開発は長く続いているので、キ
+ これはB<Zebedee>クライアントが接続を待つポート(あるいはポートのリスト)である。
+ これは「トンネル仕様」の最初の部分と等しい。
+ 
+-=back
+-
+ =item B<localport>
+ 
+ 
+@@ -1131,10 +1133,10 @@ B<Zebedee>サーバがローカルマシンのポート
+ (B<Zebedee>サーバはターゲットホスト上のそのポートに接続する)を意味する。
+ これは「トンネル仕様」の最後の部分と等しい。
+ 
+-=head3 その他のオプション(Other Options)
++=back
+ 
++=head3 その他のオプション(Other Options)
+ 
+-=back
+ 
+ 
+ 設定ファイルに対応するものを持たないコマンドオプション
