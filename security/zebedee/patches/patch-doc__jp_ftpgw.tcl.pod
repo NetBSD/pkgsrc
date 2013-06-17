@@ -1,0 +1,12 @@
+$NetBSD: patch-doc__jp_ftpgw.tcl.pod,v 1.1 2013/06/17 13:18:58 wiz Exp $
+
+Fix build with perl-5.18.
+
+--- doc_jp/ftpgw.tcl.pod.orig	2001-04-12 18:08:03.000000000 +0000
++++ doc_jp/ftpgw.tcl.pod
+@@ -1,3 +1,5 @@
++=encoding euc-jp
++
+ =head1 NAME
+ 
+ ftpgw.tcl --- トンネリングを可能にする FTPゲートウエイスクリプト
