@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/23 18:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/06/17 11:46:28 joerg Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -54,6 +54,12 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/srptelnet.1
 	${INSTALL_PROGRAM} ${WRKSRC}/ftp/ftp/ftp ${DESTDIR}${PREFIX}/bin/srpftp
 	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/srpftp.1
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=return-type
+.endif
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
