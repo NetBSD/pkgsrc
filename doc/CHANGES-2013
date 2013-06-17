@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2175 2013/06/17 07:01:51 agc Exp $
+$NetBSD: CHANGES-2013,v 1.2176 2013/06/17 11:18:56 wiz Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3409,3 +3409,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/tradcpp to 0.3 [dholland 2013-06-17]
 	Updated lang/perl5 to 5.18.0nb1 [wiz 2013-06-17]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q2 branch [agc 2013-06-17]
+	Updated security/p5-Crypt-DH to 0.07 [wiz 2013-06-17]
