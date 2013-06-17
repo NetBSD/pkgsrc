@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/05/31 12:42:02 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2013/06/17 13:28:34 wiz Exp $
 
 VERS=		1.3.2
 DISTNAME=	munin_${VERS}
@@ -11,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://munin-monitoring.org/
 COMMENT=	System monitoring tool, documentation
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	htmldoc>=0:../../www/htmldoc
 BUILD_DEPENDS+= html2text>=0:../../textproc/html2text
