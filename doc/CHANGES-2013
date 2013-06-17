@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2181 2013/06/17 19:09:57 alnsn Exp $
+$NetBSD: CHANGES-2013,v 1.2182 2013/06/17 19:16:33 alnsn Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3217,7 +3217,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/bsdtar to 2.8.4nb1 [jperkin 2013-06-13]
 	Updated databases/redis to 2.6.13 [mspo 2013-06-13]
 	Updated lang/nodejs to 0.10.11 [fhajny 2013-06-13]
-	Updates devel/lua-lpeg to 0.12 [alnsn 2013-01-06]
+	Updates devel/lua-lpeg to 0.12 [alnsn 2013-06-14]
 	Updated comms/asterisk to 11.4.0nb5 [jnemeth 2013-06-14]
 	Updated x11/libXrender to 0.9.8 [wiz 2013-06-14]
 	Updated x11/libXvMC to 1.0.8 [wiz 2013-06-14]
