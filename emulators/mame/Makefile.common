@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2013/06/13 14:27:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2013/06/17 11:45:27 joerg Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -30,6 +30,18 @@ MAKE_FILE=		makefile
 MAKE_ENV=		NOWERROR=1
 # we don't want to pull in qt4
 MAKE_ENV=		NO_USE_QTDEBUG=1
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=cast-align \
+			-Wno-error=constant-logical-operand \
+			-Wno-error=sometimes-uninitialized \
+			-Wno-error=shift-count-overflow \
+			-Wno-error=unused-private-field \
+			-Wno-error=tautological-constant-out-of-range-compare \
+			-Wno-error=tautological-compare \
+			-Wno-error=self-assign-field
+.endif
 
 .  include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN:Mbig}
