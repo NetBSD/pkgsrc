@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/06/08 19:03:34 he Exp $
+$NetBSD: patch-ad,v 1.2 2013/06/17 13:28:28 wiz Exp $
 
---- Makefile.orig	2004-12-22 22:33:47.000000000 +0100
+--- Makefile.orig	2005-04-15 20:37:29.000000000 +0000
 +++ Makefile
-@@ -35,8 +35,6 @@ install-main: build
+@@ -37,8 +37,6 @@ install-main: build
  	$(INSTALL) -m 0644 server/style.css $(CONFDIR)/templates/
  	$(INSTALL) -m 0644 server/definitions.html $(CONFDIR)/templates/
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/06/08 19:03:34 he Exp $
  	$(INSTALL) -m 0755 build/server/munin-cron $(BINDIR)/
  
  	$(INSTALL) -m 0755 build/server/munin-update $(LIBDIR)/
-@@ -71,7 +69,6 @@ install-node-non-snmp: build
+@@ -73,7 +71,6 @@ install-node-non-snmp: build
  
  	$(INSTALL) -m 0755 build/node/munin-node $(SBINDIR)/
  	$(INSTALL) -m 0755 build/node/munin-node-configure $(SBINDIR)/
