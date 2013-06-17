@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2177 2013/06/17 11:25:51 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2178 2013/06/17 15:08:30 ryoon Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3411,3 +3411,4 @@ Changes to the packages collection and infrastructure in 2013:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q2 branch [agc 2013-06-17]
 	Updated security/p5-Crypt-DH to 0.07 [wiz 2013-06-17]
 	Updated security/p5-Crypt-IDEA to 1.08nb6 [wiz 2013-06-17]
+	Updated www/apache-tomcat7 to 7.0.41 [ryoon 2013-06-17]
