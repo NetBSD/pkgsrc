@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/12/14 18:49:51 manu Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/06/17 17:35:28 bouyer Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -222,6 +222,10 @@ share/nagios/images/logos/ng-switch40.jpg
 share/nagios/images/logos/ng-switch40.png
 share/nagios/images/logos/notebook.gd2
 share/nagios/images/logos/notebook.gif
+share/nagios/images/logos/netbsd40.gd2
+share/nagios/images/logos/netbsd40.gif
+share/nagios/images/logos/netbsd40.jpg
+share/nagios/images/logos/netbsd40.png
 share/nagios/images/logos/novell40.gd2
 share/nagios/images/logos/novell40.gif
 share/nagios/images/logos/novell40.jpg
