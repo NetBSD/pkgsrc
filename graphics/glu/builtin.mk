@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.13 2012/03/19 12:34:14 joerg Exp $
+# $NetBSD: builtin.mk,v 1.14 2013/06/17 05:27:50 dholland Exp $
 
 BUILTIN_PKG:=	glu
 
-BUILTIN_FIND_FILES_VAR:=	H_GLU
+BUILTIN_FIND_FILES_VAR:=	H_GLU PC_GLU
 BUILTIN_FIND_FILES.H_GLU=	${X11BASE}/include/GL/glu.h
+BUILTIN_FIND_FILES.PC_GLU=	${X11BASE}/lib/pkgconfig/glu.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -12,7 +13,9 @@ BUILTIN_FIND_FILES.H_GLU=	${X11BASE}/include/GL/glu.h
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.glu)
-.  if empty(H_GLU:M__nonexistent__)
+.  if empty(PC_GLU:M__nonexistent__)
+IS_BUILTIN.glu=	yes
+.  elif empty(H_GLU:M__nonexistent__)
 IS_BUILTIN.glu=	yes
 .  else
 IS_BUILTIN.glu=	no
@@ -25,10 +28,16 @@ MAKEVARS+=	IS_BUILTIN.glu
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.glu) && \
-    !empty(IS_BUILTIN.glu:M[yY][eE][sS]) && \
-    empty(H_GLU:M__nonexistent__)
-.  include "../../graphics/Mesa/version.mk"
+    !empty(IS_BUILTIN.glu:M[yY][eE][sS])
+.  if empty(PC_GLU:M__nonexistent__)
+BUILTIN_VERSION.Mesa!= ${SED} -n -e 's/Version: //p' ${PC_GLU}
+.  elif empty(H_GLU:M__nonexistent__)
+.    include "../../graphics/Mesa/version.mk"
+.  else # ?
+BUILTIN_VERSION.Mesa:= 0.something-weird-happened
+.  endif
 BUILTIN_PKG.glu=	glu-${BUILTIN_VERSION.Mesa}
+MAKEVARS+=	BUILTIN_VERSION.Mesa
 .endif
 MAKEVARS+=	BUILTIN_PKG.glu
 
