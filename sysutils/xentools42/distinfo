@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/05/27 22:26:27 prlw1 Exp $
+$NetBSD: distinfo,v 1.5 2013/06/17 13:47:20 wiz Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -18,9 +18,9 @@ SHA1 (patch-.._Config.mk) = ec5ba76be10e43cb1b2d37686e35d5fb81d8de80
 SHA1 (patch-.._config_NetBSD.mk) = 90893326dcce4e3e2ef273f22ec5ddf5af0f7cd8
 SHA1 (patch-.._config_StdGNU.mk) = 3f93999038bd9d25277803cd1d969dc5733b593f
 SHA1 (patch-.._docs_man_xend-config.sxp.pod.5) = 36afc7b063f83adfe5b927ed0be586b102684020
-SHA1 (patch-.._docs_man_xl.cfg.pod.5) = b9d19131ffb8a917a92c9878b86ea3dbc16dc0c8
+SHA1 (patch-.._docs_man_xl.cfg.pod.5) = 8f580bc91f346167999d91a279855c6e2710a8cc
 SHA1 (patch-.._docs_man_xl.conf.pod.5) = 4009ff6aefb0a770ed42d096117dc97f8f55997f
-SHA1 (patch-.._docs_man_xl.pod.1) = bd6272abed11c60c7c5ae88ae54377a3bfb921ed
+SHA1 (patch-.._docs_man_xl.pod.1) = 740ad6f53e113b755bc6b04abce4ec9ba08eb815
 SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = a693a79a1f1c16548f62f7da1fa58fa28030990f
 SHA1 (patch-.._docs_man_xm.pod.1) = 975b7570da4bf9fd9cb79539fbd36b8dfbcbd571
 SHA1 (patch-.._docs_man_xmdomain.cfg.pod.5) = 5563a72e203e789a86f4166c71ddb3fcff5215c6
