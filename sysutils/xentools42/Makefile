@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/04 07:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/17 13:55:38 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -93,16 +93,16 @@ REPLACE_PYTHON+=	xenmon/xenmon.py
 
 SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	pre-configure
-SUBST_FILES.perlpath=	tools/firmware/rombios/makesym.perl
-SUBST_FILES.perlpath+=	tools/qemu-xen-traditional/texi2pod.pl
-SUBST_FILES.perlpath+=	tools/examples/xeninfo.pl
-SUBST_FILES.perlpath+=	tools/include/xen-external/bsd-sys-queue-h-seddery
-SUBST_FILES.perlpath+=	tools/qemu-xen/scripts/texi2pod.pl
-SUBST_FILES.perlpath+=	tools/qemu-xen/scripts/get_maintainer.pl
-SUBST_FILES.perlpath+=	tools/qemu-xen/scripts/checkpatch.pl
-SUBST_FILES.perlpath+=	tools/xm-test/mkreport
-SUBST_FILES.perlpath+=	tools/libxl/libxl_save_msgs_gen.pl
-SUBST_FILES.perlpath+=	tools/libxl/check-libxl-api-rules
+SUBST_FILES.perlpath=	../tools/firmware/rombios/makesym.perl
+SUBST_FILES.perlpath+=	../tools/qemu-xen-traditional/texi2pod.pl
+SUBST_FILES.perlpath+=	../tools/examples/xeninfo.pl
+SUBST_FILES.perlpath+=	../tools/include/xen-external/bsd-sys-queue-h-seddery
+SUBST_FILES.perlpath+=	../tools/qemu-xen/scripts/texi2pod.pl
+SUBST_FILES.perlpath+=	../tools/qemu-xen/scripts/get_maintainer.pl
+SUBST_FILES.perlpath+=	../tools/qemu-xen/scripts/checkpatch.pl
+SUBST_FILES.perlpath+=	../tools/xm-test/mkreport
+SUBST_FILES.perlpath+=	../tools/libxl/libxl_save_msgs_gen.pl
+SUBST_FILES.perlpath+=	../tools/libxl/check-libxl-api-rules
 SUBST_FILES.perlpath+=	../../ipxe/src/Makefile
 SUBST_FILES.perlpath+=	../../ipxe/src/drivers/infiniband/qib_genbits.pl
 SUBST_FILES.perlpath+=	../../ipxe/src/include/gpxe/efi/import.pl
