@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 07:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/17 13:32:59 jperkin Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.6<0.7:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7<0.8:../../databases/py-sqlalchemy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
