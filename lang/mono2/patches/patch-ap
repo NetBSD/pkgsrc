@@ -1,0 +1,26 @@
+$NetBSD: patch-ap,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mcs/jay/Makefile.orig	2010-10-05 22:59:29.000000000 +0300
++++ mcs/jay/Makefile	2010-10-07 18:31:50.000000000 +0300
+@@ -21,19 +21,19 @@
+ install-local:
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/bin
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/share/jay
+-	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/share/man/man1
++	$(MKINSTALLDIRS) $(DESTDIR)$(mandir)/man1
+ 	$(INSTALL_BIN) jay $(DESTDIR)$(prefix)/bin
+ 	for datafile in $(datafiles) ; do \
+ 	   $(INSTALL_DATA) $$datafile $(DESTDIR)$(prefix)/share/jay ; \
+ 	done
+-	$(INSTALL_DATA) jay.1 $(DESTDIR)$(prefix)/share/man/man1
++	$(INSTALL_DATA) jay.1 $(DESTDIR)$(mandir)/man1
+ 
+ uninstall-local:
+ 	-rm -f $(DESTDIR)$(prefix)/bin/jay
+ 	for datafile in $(datafiles) ; do \
+ 	   rm -f $(DESTDIR)$(prefix)/share/jay/$$datafile || : ; \
+ 	done
+-	-rm -f $(DESTDIR)$(prefix)/share/man/man1/jay.1
++	-rm -f $(DESTDIR)$(mandir)/man1/jay.1
+ endif
+ 
+ csproj-local:

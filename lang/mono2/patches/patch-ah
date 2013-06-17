@@ -1,0 +1,69 @@
+$NetBSD: patch-ah,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/utils/mono-semaphore.c.orig	2011-01-04 19:39:55.000000000 +0200
++++ mono/utils/mono-semaphore.c	2011-01-08 18:52:28.000000000 +0200
+@@ -22,7 +22,7 @@
+ #  ifdef USE_MACH_SEMA
+ #    define TIMESPEC mach_timespec_t
+ #    define WAIT_BLOCK(a,b) semaphore_timedwait (*(a), *(b))
+-#  elif defined(__OpenBSD__)
++#  elif (defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
+ #    define TIMESPEC struct timespec
+ #    define WAIT_BLOCK(a) sem_trywait(a)
+ #  else
+@@ -34,12 +34,13 @@
+ int
+ mono_sem_timedwait (MonoSemType *sem, guint32 timeout_ms, gboolean alertable)
+ {
++#if (defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
++	uint32_t timeout = timeout_ms;
++#else
+ 	TIMESPEC ts, copy;
+ 	struct timeval t;
+-	int res = 0;
+-#if defined(__OpenBSD__)
+-	int timeout;
+ #endif
++	int res = 0;
+ 
+ #ifndef USE_MACH_SEMA
+ 	if (timeout_ms == 0)
+@@ -48,6 +49,19 @@
+ 	if (timeout_ms == (guint32) 0xFFFFFFFF)
+ 		return mono_sem_wait (sem, alertable);
+ 
++#if (defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
++	if (timeout < 50)
++		timeout += 50;
++	do {
++		if ((res = WAIT_BLOCK(sem)) == 0)
++			break;
++		usleep(50000);
++		timeout -= 50;
++		if (alertable)  /* XXX: Not on EINTR */
++			return -1;
++	} while (timeout > 50);
++#else
++
+ #ifdef USE_MACH_SEMA
+ 	memset (&t, 0, sizeof (TIMESPEC));
+ #else
+@@ -59,19 +73,6 @@
+ 		ts.tv_nsec -= NSEC_PER_SEC;
+ 		ts.tv_sec++;
+ 	}
+-#if defined(__OpenBSD__)
+-	timeout = ts.tv_sec;
+-	while (timeout) {
+-		if ((res = WAIT_BLOCK (sem)) == 0)
+-			return res;
+-
+-		if (alertable)
+-			return -1;
+-
+-		usleep (ts.tv_nsec / 1000);
+-		timeout--;
+-	}
+-#else
+ 	copy = ts;
+ 	while ((res = WAIT_BLOCK (sem, &ts)) == -1 && errno == EINTR) {
+ 		struct timeval current;

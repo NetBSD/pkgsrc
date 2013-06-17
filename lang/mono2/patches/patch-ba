@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/cil/Makefile.in.orig	2011-09-15 20:12:39.000000000 +0300
++++ mono/cil/Makefile.in	2011-10-28 15:43:18.000000000 +0300
+@@ -506,7 +506,7 @@ uninstall-am: uninstall-defDATA uninstal
+ 	uninstall-xmlDATA
+ 
+ opcode.def: make-opcodes-def.pl cil-opcodes.xml
+-	perl $(srcdir)/make-opcodes-def.pl $(srcdir)/cil-opcodes.xml $@.tmp
++	$(PERL) $(srcdir)/make-opcodes-def.pl $(srcdir)/cil-opcodes.xml $@.tmp
+ 	mv $@.tmp $@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.

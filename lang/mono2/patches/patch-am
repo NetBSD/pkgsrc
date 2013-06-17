@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/io-layer/io.c.orig	2011-06-10 05:45:49.000000000 +0300
++++ mono/io-layer/io.c	2011-06-10 05:50:38.000000000 +0300
+@@ -3589,7 +3589,7 @@ guint32 GetTempPath (guint32 len, gunich
+ 	return(ret);
+ }
+ 
+-#ifdef HAVE_GETFSSTAT
++#if (defined(HAVE_GETFSSTAT) && defined(HAVE_SYS_STATFS_H))
+ /* Darwin has getfsstat */
+ gint32 GetLogicalDriveStrings (guint32 len, gunichar2 *buf)
+ {

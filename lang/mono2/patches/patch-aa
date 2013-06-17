@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/io-layer/collection.c.orig	2010-07-26 13:00:10.000000000 +0300
++++ mono/io-layer/collection.c	2010-07-26 13:00:48.000000000 +0300
+@@ -60,7 +60,11 @@
+ 
+ #if defined(HAVE_PTHREAD_ATTR_SETSTACKSIZE)
+         if (set_stacksize == 0) {
++#ifdef PTHREAD_STACK_MIN
+ 			ret = pthread_attr_setstacksize (&attr, MAX (65536, PTHREAD_STACK_MIN));
++#else
++			ret = pthread_attr_setstacksize (&attr, 65536);
++#endif
+ 			g_assert (ret == 0);
+         } else if (set_stacksize == 1) {
+ 			ret = pthread_attr_setstacksize (&attr, 131072);

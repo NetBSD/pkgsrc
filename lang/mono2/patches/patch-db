@@ -1,0 +1,31 @@
+$NetBSD: patch-db,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- mono/utils/mono-proclib.c.orig	2012-01-30 18:01:23.000000000 +0000
++++ mono/utils/mono-proclib.c
+@@ -14,11 +14,13 @@
+ #endif
+ 
+ /* FIXME: bsds untested */
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ #include <sys/param.h>
+ #include <sys/types.h>
+ #include <sys/sysctl.h>
++#ifndef __DragonFly__
+ #include <sys/proc.h>
++#endif
+ #if defined(__APPLE__)
+ #include <mach/mach.h>
+ #endif
+@@ -33,6 +35,12 @@
+ #    define kinfo_pid_member kp_proc.p_pid
+ #    define kinfo_name_member kp_proc.p_comm
+ #  endif
++#elif defined(__DragonFly__)
++#define kinfo_pid_member kp_pid
++#define kinfo_name_member kp_comm
++#elif defined(__NetBSD__) /* NetBSD 6.99.16+ hide struct kinfo_proc */
++#define kinfo_pid_member p_pid
++#define kinfo_name_member p_comm
+ #else
+ #define kinfo_pid_member ki_pid
+ #define kinfo_name_member ki_comm

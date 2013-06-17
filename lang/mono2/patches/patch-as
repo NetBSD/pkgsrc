@@ -1,0 +1,18 @@
+$NetBSD: patch-as,v 1.1 2013/06/17 12:43:28 wiz Exp $
+
+From FreeBSD: https://bugzilla.novell.com/show_bug.cgi?id=528830
+
+--- mono/metadata/appdomain.c.orig	2010-06-11 15:16:39.000000000 +0300
++++ mono/metadata/appdomain.c	2010-06-11 15:18:02.000000000 +0300
+@@ -2359,6 +2359,11 @@ mono_domain_try_unload (MonoDomain *doma
+ 			/* The icall wrapper will execute the abort */
+ 			CloseHandle (thread_handle);
+ 			return;
++		} else if (!mono_thread_has_appdomain_ref (mono_thread_current (), domain) && !(mono_thread_interruption_requested ())) {
++			if (!domain->friendly_name) {
++				CloseHandle (thread_handle);
++				return;
++			}
+ 		}
+ 	}
+ 	CloseHandle (thread_handle);

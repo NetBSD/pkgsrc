@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2013/06/17 12:43:28 wiz Exp $
+--- data/Makefile.in.orig	2010-10-05 23:00:34.000000000 +0300
++++ data/Makefile.in	2010-10-07 18:25:56.000000000 +0300
+@@ -284,7 +284,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = net_2_0 $(am__append_1)
+-monodir = $(sysconfdir)/mono
++monodir = $(datadir)/examples/mono
+ EXTRA_DIST = \
+ 	config.in \
+ 	browscap.ini mono.supp mono.d README ChangeLog \
