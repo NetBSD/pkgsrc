@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.45 2013/06/17 17:35:28 bouyer Exp $
+# $NetBSD: Makefile,v 1.46 2013/06/17 19:48:19 bouyer Exp $
 #
 
 DISTNAME=		nagios-3.4.3
 PKGNAME=		${DISTNAME:S/-/-base-/}
-#PKGREVISION=		0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net sysutils
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
+DISTFILES+=		nagios-netbsd40-icons.tar.gz
+SITES.nagios-netbsd40-icons.tar.gz= ${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nagios.org/
