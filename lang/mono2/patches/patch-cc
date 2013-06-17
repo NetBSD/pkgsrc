@@ -1,0 +1,33 @@
+$NetBSD: patch-cc,v 1.1 2013/06/17 12:43:28 wiz Exp $
+
+Currently mono is not copying the domain default context for some of
+the newly created threads. This leads to some problems with programs
+that use remoting stack, for example monodevelop that is unusable -
+it doesn't compile and run projects. The following hack fixes the
+issue until further investigations for pkgsrc-2010Q3 release.
+
+Bug tracking: https://bugzilla.novell.com/show_bug.cgi?id=599485
+
+
+--- mono/metadata/domain.c.old	2010-10-03 20:58:27.000000000 +0300
++++ mono/metadata/domain.c	2010-10-03 21:03:13.000000000 +0300
+@@ -2154,7 +2154,18 @@ mono_context_set (MonoAppContext * new_c
+ MonoAppContext * 
+ mono_context_get (void)
+ {
+-	return GET_APPCONTEXT ();
++	MonoAppContext *retval = GET_APPCONTEXT();
++#ifdef __NetBSD__
++	/*
++	 * We gotta find out why context is sometime NULL for newly threads
++	 * Until then use default context if it's not set
++	 */
++	if(retval == NULL) {
++		retval = ves_icall_System_AppDomain_InternalGetDefaultContext();
++		mono_context_set(retval);
++	}
++#endif
++	return retval;
+ }
+ 
+ /* LOCKING: the caller holds the lock for this domain */
