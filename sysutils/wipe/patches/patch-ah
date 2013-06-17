@@ -1,20 +1,26 @@
-$NetBSD: patch-ah,v 1.2 2013/06/17 05:37:22 dholland Exp $
+$NetBSD: patch-ah,v 1.3 2013/06/17 06:09:06 dholland Exp $
 
-- DragonFly BSD's partinfo is not the standard BSD partinfo.
 - Don't declare own errno.
+- DragonFly BSD's partinfo is not the standard BSD partinfo.
+- NetBSD no longer supports the partinfo ioctl. Use the
+  available alternatives, which is kind of messy.
 
 --- blkdev.c.orig	2003-08-03 23:07:29.000000000 +0000
 +++ blkdev.c
-@@ -44,10 +44,15 @@
+@@ -44,10 +44,20 @@
  # endif
  #endif
  
--#ifdef HAVE_SYS_DISKLABEL_H
-+#ifdef __DragonFly__
++#if defined(__DragonFly__)
 +# include <sys/diskslice.h>
 +# define BSD_BLKDEV
++#elif defined(__NetBSD__)
++# include <sys/disklabel.h>
++# include <sys/disk.h>
++# include <sys/param.h> /* for DEV_BSIZE, XXX */
++# define BSD_BLKDEV
 +#else
-+#ifdef HAVE_SYS_DISKLABEL_H)
+ #ifdef HAVE_SYS_DISKLABEL_H
  # include <sys/disklabel.h>
  # define BSD_BLKDEV
  #endif
@@ -22,7 +28,7 @@ $NetBSD: patch-ah,v 1.2 2013/06/17 05:37:22 dholland Exp $
  
  #ifndef LINUX_BLKDEV
  # ifndef BSD_BLKDEV
-@@ -63,7 +68,6 @@
+@@ -63,7 +73,6 @@
  #include "wipe.h"
  #include "blkdev.h"
  
@@ -30,7 +36,48 @@ $NetBSD: patch-ah,v 1.2 2013/06/17 05:37:22 dholland Exp $
  extern int exit_code;
  extern char *argvzero;
  extern struct opt_s options;
-@@ -182,14 +186,20 @@ public int destroy_blkdev(struct file_s 
+@@ -128,7 +137,13 @@ public int destroy_blkdev(struct file_s 
+   int code;
+ 
+ #ifdef BSD_BLKDEV
++#ifdef DIOCGPART
+   struct partinfo pinfo;
++#else
++  struct disklabel lab;
++  struct dkwedge_info dkw;
++  int use_dkw;
++#endif
+ #endif
+ 
+ #ifdef NO_BLKDEV
+@@ -160,12 +175,26 @@ public int destroy_blkdev(struct file_s 
+     }
+ 
+ #ifdef BSD_BLKDEV
++# ifdef DIOCGPART
+   if (ioctl(f->fd, DIOCGPART, &pinfo))
+     {
+       fprintf(stderr, "\r%s: ioctl failed, can't get disklabel for `%s': %s\n",
+ 	      argvzero, f->name, strerror(errno));
+       exit_code = errno; return FAILED;
+     }
++# else
++  if (ioctl(f->fd, DIOCGDINFO, &lab) == 0) {
++     use_dkw = 0;
++  }
++  else if (ioctl(f->fd, DIOCGWEDGEINFO, &dkw) == 0) {
++     use_dkw = 1;
++  }
++  else {
++     fprintf(stderr, "\r%s: ioctl failed, can't get disklabel for `%s': %s\n",
++	     argvzero, f->name, strerror(errno));
++     exit_code = errno; return FAILED;
++  }
++# endif
+ #endif
+ 
+   if (options.sectors == 0)
+@@ -182,15 +211,35 @@ public int destroy_blkdev(struct file_s 
        options.sectors = tmp;
  #endif
  
@@ -39,7 +86,12 @@ $NetBSD: patch-ah,v 1.2 2013/06/17 05:37:22 dholland Exp $
 +# if defined(__DragonFly__)
 +      options.sectors = pinfo.media_blocks;
 +# else
++#  if defined(DIOCGPART)
        options.sectors = pinfo.part->p_size;
++#  else
++      options.sectors = use_dkw ?
++	 dkw.dkw_size : lab.d_partitions[DISKPART(f->st.st_rdev)].p_size;
++#  endif
 +# endif
  #endif
      }
@@ -50,6 +102,16 @@ $NetBSD: patch-ah,v 1.2 2013/06/17 05:37:22 dholland Exp $
 +#if defined(__DragonFly__)
 +      options.sector_size = pinfo.media_blocks;
 +#elif defined(BSD_BLKDEV)
++# if defined(DIOCGPART)
        options.sector_size = pinfo.disklab->d_secsize;
++# else
++      /*
++       * XXX: we ought to use DIOCGDISKINFO to get the sector size,
++       * but that requires proplib and probably 500+ lines of code.
++       * So punt and use DEV_BSIZE...
++       */
++      options.sector_size = use_dkw ? DEV_BSIZE : lab.d_secsize;
++# endif
  #else
        options.sector_size = SECTOR_SIZE;
+ #endif
