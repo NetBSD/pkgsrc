@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/16 18:56:06 sno Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/18 23:34:33 jperkin Exp $
 #
 
 DISTNAME=	eio-1.7.7
@@ -18,6 +18,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	share/doc/eio
+
+.include "../../mk/compiler.mk"
+
+.if empty(PKGSRC_COMPILER:Msunpro)
+BUILDLINK_TRANSFORM+=	rm:-mt
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING \
