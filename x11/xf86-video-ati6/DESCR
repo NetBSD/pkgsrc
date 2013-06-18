@@ -1,0 +1,5 @@
+This is the video driver for ATI Radeon cards for the modular Xorg
+server.
+
+This package contains the major version 6 of the driver, before
+DRI1/UMS/etc removal.

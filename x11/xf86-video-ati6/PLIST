@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/18 08:53:22 wiz Exp $
+lib/xorg/modules/drivers/ati_drv.la
+lib/xorg/modules/drivers/radeon_drv.la
+lib/xorg/modules/multimedia/theatre200_drv.la
+lib/xorg/modules/multimedia/theatre_detect_drv.la
+lib/xorg/modules/multimedia/theatre_drv.la
+man/man4/ati.4
+man/man4/radeon.4
