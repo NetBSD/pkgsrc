@@ -1,0 +1,14 @@
+$NetBSD: patch-wml__docs_wml__intro.pod,v 1.1 2013/06/18 19:34:05 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- wml_docs/wml_intro.pod.orig	2001-06-19 01:14:09.000000000 +0000
++++ wml_docs/wml_intro.pod
+@@ -3,6 +3,7 @@
+ ##  Copyright (c) 1997 Ralf S. Engelschall, All Rights Reserved. 
+ ##
+ 
++=encoding iso-8859-1
+ =head1 NAME
+ 
+ WML Introduction - An introduction to WML's basic concepts

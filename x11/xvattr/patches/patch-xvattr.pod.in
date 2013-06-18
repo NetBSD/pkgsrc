@@ -1,0 +1,14 @@
+$NetBSD: patch-xvattr.pod.in,v 1.1 2013/06/18 19:36:43 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- xvattr.pod.in.orig	2002-03-03 20:08:28.000000000 +0000
++++ xvattr.pod.in
+@@ -1,5 +1,7 @@
+ =pod
+ 
++=encoding iso-8859-1
++
+ =head1 NAME
+ 
+ @PACKAGE@ - Query/Set X11 XVideo Setting(s)
