@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2013/06/16 20:39:12 joerg Exp $
+# $NetBSD: Makefile.common,v 1.7 2013/06/18 19:59:35 joerg Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -110,5 +110,15 @@ SUBST_FILES.scr=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
 SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
+
+.include "../../devel/readline/buildlink3.mk"
+
+CMAKE_ARGS+=	-DWITH_EDITLINE=system
+.if !empty(USE_BUILTIN.readline:M[yY][eE][sS]) && !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.readline}/lib/libedit.so
+.else
+CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.readline}/lib/libreadline.so
+.endif
+CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.readline}/include/readline
 
 .include "../../devel/zlib/buildlink3.mk"
