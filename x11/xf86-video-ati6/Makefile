@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/06/18 08:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/18 17:13:11 wiz Exp $
 
-DISTNAME=	xf86-video-ati-6.14.5
+DISTNAME=	xf86-video-ati-6.14.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
