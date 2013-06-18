@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2013/03/08 17:47:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2013/06/18 13:24:55 jmmv Exp $
 
-DISTNAME=	sysbuild-2.5
+DISTNAME=	sysbuild-2.6
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -90,6 +90,6 @@ do-install:
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/env.sh ${DESTDIR}${PREFIX}/share/sysbuild
 
-BUILDLINK_API_DEPENDS.shtk+=	shtk>=1.1
+BUILDLINK_API_DEPENDS.shtk+=	shtk>=1.2
 .include "../../devel/shtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
