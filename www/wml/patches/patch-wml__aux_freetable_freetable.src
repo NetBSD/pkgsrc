@@ -1,0 +1,14 @@
+$NetBSD: patch-wml__aux_freetable_freetable.src,v 1.1 2013/06/18 19:34:05 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- wml_aux/freetable/freetable.src.orig	2000-05-01 20:21:30.000000000 +0000
++++ wml_aux/freetable/freetable.src
+@@ -219,6 +219,7 @@ $$cell =~ s/<col>/$col/gi;
+ 
+ ##EOF##
+ 
++=encoding iso-8859-2
+ =head1 NAME
+ 
+ freetable - tool for making HTML tables generation easier

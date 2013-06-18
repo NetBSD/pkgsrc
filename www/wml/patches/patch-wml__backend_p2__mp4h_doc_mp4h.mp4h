@@ -1,0 +1,15 @@
+$NetBSD: patch-wml__backend_p2__mp4h_doc_mp4h.mp4h,v 1.1 2013/06/18 19:34:05 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- wml_backend/p2_mp4h/doc/mp4h.mp4h.orig	2002-07-05 20:22:49.000000000 +0000
++++ wml_backend/p2_mp4h/doc/mp4h.mp4h
+@@ -48,7 +48,7 @@ to write my own macro-processor.
+ Instead of rewriting it from scratch, I preferred using another
+ macro-processor engine. I chose
+ <URL src="http://www.gnu.org/software/m4/" name="GNU &m4;" />,
+-written by René Seindal, because of its numerous advantages :
++written by Rene Seindal, because of its numerous advantages :
+ this software is stable, robust and very well documented.
+ This version of &mp4h; is derived from GNU &m4; version 1.4n, which is a
+ development version.

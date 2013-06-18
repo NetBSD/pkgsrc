@@ -1,0 +1,14 @@
+$NetBSD: patch-wml__backend_p6__asubst_asubst.src,v 1.1 2013/06/18 19:34:05 wiz Exp $
+
+Fix build with perl-5.18's pod2man.
+
+--- wml_backend/p6_asubst/asubst.src.orig	2002-04-20 21:18:58.000000000 +0000
++++ wml_backend/p6_asubst/asubst.src
+@@ -265,6 +265,7 @@ exit(0);
+ ##EOF##
+ __END__
+ 
++=encoding iso-8859-1
+ =head1 NAME
+ 
+ asubst - Area Substitution
