@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2013/06/01 15:43:47 stacktic Exp $
+$NetBSD: distinfo,v 1.13 2013/06/18 18:52:10 wiz Exp $
 
 SHA1 (89cccf.tar.gz) = ea6e5458616347b874a7bba3c5a942a80745934d
 RMD160 (89cccf.tar.gz) = a4abf18762cb3628e663ae23d99d3d660462a99d
 Size (89cccf.tar.gz) = 493836 bytes
+SHA1 (patch-lib_mount__v7fs.c) = 9ff801f0f128ca361da80b18cd7a398826e60813
