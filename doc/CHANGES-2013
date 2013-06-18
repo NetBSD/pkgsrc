@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2187 2013/06/18 17:13:26 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2188 2013/06/18 19:24:29 wiz Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3419,3 +3419,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/shtk to 1.2 [jmmv 2013-06-18]
 	Updated sysutils/sysbuild to 2.6 [jmmv 2013-06-18]
 	Updated x11/xf86-video-ati6 to 6.14.6 [wiz 2013-06-18]
+	Updated textproc/po4a to 0.23nb11 [wiz 2013-06-18]
