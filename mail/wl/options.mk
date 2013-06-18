@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/04/12 22:43:04 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2013/06/18 09:19:21 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wl
 PKG_SUPPORTED_OPTIONS=	emacs-w3m
-PKG_SUGGESTED_OPTIONS=	emacs-w3m
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
