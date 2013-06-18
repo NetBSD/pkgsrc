@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/06/01 15:43:47 stacktic Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/18 18:52:43 wiz Exp $
 #
 
 GIT_COMMIT=		89cccf
@@ -12,7 +12,7 @@ MAINTAINER=		stacktic@NetBSD.org
 HOMEPAGE=		https://github.com/stacktic/fs-utils
 COMMENT=		Tools to access/modify a file system image through RUMP
 LICENSE=		2-clause-bsd
-DEPENDS+=		rump-2013[0-9]*:../../misc/rump
+DEPENDS+=		rump>=20130101:../../misc/rump
 
 ONLY_FOR_PLATFORM=	Linux-*-* SunOS-*-* NetBSD-*-* DragonFly-*-*
 
@@ -22,7 +22,8 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/fs-utils-${GIT_COMMIT}
 
-GNU_CONFIGURE=
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 .include "../../misc/rump/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
