@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/18 07:19:56 dholland Exp $
 
 .include "Makefile.common"
 
@@ -9,9 +9,8 @@ PKGREVISION=	1
 COMMENT+=	Base plugins
 
 USE_TOOLS+=	perl:run
-
+MAKE_JOBS_SAFE=		no
 PKGCONFIG_OVERRIDE+=	pkgconfig/*.pc.in
-
 REPLACE_PERL+=		tools/gst-visualise-m.m
 
 # only useful if gstreamer was built with the "gstcheck" option
