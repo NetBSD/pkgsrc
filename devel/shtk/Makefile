@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/03/08 17:45:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/18 13:23:22 jmmv Exp $
 
-DISTNAME=	shtk-1.1
+DISTNAME=	shtk-1.2
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
