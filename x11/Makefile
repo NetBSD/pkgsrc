@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.700 2013/06/17 08:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.701 2013/06/18 08:53:36 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -504,6 +504,7 @@ SUBDIR+=	xf86-video-apm
 SUBDIR+=	xf86-video-ark
 SUBDIR+=	xf86-video-ast
 SUBDIR+=	xf86-video-ati
+SUBDIR+=	xf86-video-ati6
 SUBDIR+=	xf86-video-chips
 SUBDIR+=	xf86-video-cirrus
 SUBDIR+=	xf86-video-cyrix
