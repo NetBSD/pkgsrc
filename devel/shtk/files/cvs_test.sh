@@ -121,6 +121,19 @@ checkout__permission_denied_body() {
 }
 
 
+atf_test_case checkout__cvs_fails
+checkout__cvs_fails_body() {
+    init_cvsroot "${MOCK_CVSROOT}" src
+    if ( shtk_cvs_checkout "${MOCK_CVSROOT}" src "foo" $(pwd)/usr/src ) >out 2>err
+    then
+        atf_fail "Checkout succeeded, but should not"
+    else
+        grep "CVS checkout failed" err >/dev/null \
+            || atf_fail "Expected error message not found"
+    fi
+}
+
+
 atf_test_case update__ok
 update__ok_body() {
     init_cvsroot "${MOCK_CVSROOT}" first second
@@ -170,6 +183,19 @@ update__does_not_exist_body() {
 }
 
 
+atf_test_case update__cvs_fails
+update__cvs_fails_body() {
+    init_cvsroot "${MOCK_CVSROOT}" src
+    cvs -d "${MOCK_CVSROOT}" checkout src
+    if ( shtk_cvs_update "${MOCK_CVSROOT}" "foo" src ) >out 2>err; then
+        atf_fail "Update succeeded, but should not"
+    else
+        grep "CVS update failed" err >/dev/null \
+            || atf_fail "Expected error message not found"
+    fi
+}
+
+
 atf_init_test_cases() {
     atf_add_test_case fetch
 
@@ -177,8 +203,10 @@ atf_init_test_cases() {
     atf_add_test_case checkout__different_name
     atf_add_test_case checkout__already_exists
     atf_add_test_case checkout__permission_denied
+    atf_add_test_case checkout__cvs_fails
 
     atf_add_test_case update__ok
     atf_add_test_case update__resume_checkout
     atf_add_test_case update__does_not_exist
+    atf_add_test_case update__cvs_fails
 }

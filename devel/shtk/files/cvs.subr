@@ -76,7 +76,7 @@ shtk_cvs_checkout() {
         || shtk_cli_error "Failed to create ${directory}"
     ( cd "${directory}"/.cvs-checkout &&
         shtk_process_run cvs -d"${cvsroot}" -q checkout -P ${rflag} \
-	"${module}" )
+	"${module}" ) || shtk_cli_error "CVS checkout failed"
     mv "${directory}"/.cvs-checkout/"${module}"/* "${directory}"/ \
         || true  # Maybe the checkout yielded no files...
     rm -rf "${directory}"/.cvs-checkout
@@ -107,5 +107,6 @@ shtk_cvs_update() {
     fi
 
     ( cd "${directory}" && \
-        shtk_process_run cvs -d"${cvsroot}" -q update -d -P ${rflag} )
+        shtk_process_run cvs -d"${cvsroot}" -q update -d -P ${rflag} ) \
+	|| shtk_cli_error "CVS update failed"
 }
