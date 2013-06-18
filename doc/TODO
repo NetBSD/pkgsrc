@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12310 2013/06/17 15:17:26 ryoon Exp $
+$NetBSD: TODO,v 1.12311 2013/06/18 14:09:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,10 +381,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aspell-nb-2.0.10
 	o asymptote-2.23
 	o aterm-1.0.1
+	o attica-0.4.2
 	o audacious-plugins-2.4.4
 	o audacity-2.0.2 [wip (audacity-devel)]
 	o autoconvert-0.3.16
 	o autogen-5.17.4
+	o automake-1.13.4
 	o avidemux-2.6
 	o avl-2.0.2a
 	o awesome-3.5
@@ -409,7 +411,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o byacc-20130304
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-0.9.34
+	o calibre-0.9.35
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -465,7 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-1.0.2
 	o dhid-5.3
 	o diffstat-1.57
-	o doclifter-2.11
+	o doclifter-2.12
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2013.56
@@ -480,7 +482,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o efax-gtk-3.2.12
 	o egtk-0.3.6.2
 	o ekiga-4.0.1
-	o electric-9.03
+	o electric-9.04
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -646,6 +648,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.9.9
 	o hanzim-3.5
+	o haproxy-1.4.24
 	o harfbuzz-0.9.18
 	o haskell-mode-1.45
 	o hdf-4.2.7
@@ -789,6 +792,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o midori-0.5
 	o milkytracker-0.90.85
+	o milter-manager-1.8.7
 	o mined-2012.22
 	o miniupnpd-1.8
 	o minivmac-3.2.3
@@ -845,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nulib2-220
 	o nut-18.9
 	o nxtvepg-2.8.1
+	o ocaml-findlib-1.4
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
@@ -888,7 +893,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-jpgraph-3.0.6
 	o php-tt-rss-1.8
 	o php-tiki6-6.10
-	o phpmyadmin-4.0.3
+	o phpmyadmin-4.0.4
 	o picard-1.2
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -928,14 +933,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cairo-1.10.0
 	o py-dateutil-2.0
 	o py-game-1.9.1 [needs portmidi]
+	o py-gdata-2.0.18
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-moin-1.9.7
+	o py-qt5-5.0.0
+	o py-setuptools-0.7.2
 	o py-simplejson-3.3.0
+	o py-sip-4.14.7
 	o py-sybase-0.37
 	o qbrew-0.3.9
 	o qemu-1.5
 	o qnetwalk-1.4
+	o qt4-qscintilla-2.7.2
 	o qt5-libs-5.0.2
 	o quagga-0.99.22.1
 	o quilt-0.60
@@ -1128,7 +1138,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130608
+	o x264-devel-20130615
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
