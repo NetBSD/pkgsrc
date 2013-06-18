@@ -619,6 +619,35 @@ EOF
 }
 
 
+atf_test_case build__cvs_fails
+build__cvs_fails_body() {
+    create_mock_cvsroot "${MOCK_CVSROOT}"
+    mkdir sysbuild
+    cd sysbuild
+    atf_check -o ignore -e ignore cvs -d"${MOCK_CVSROOT}" checkout -P src
+    cd -
+
+    create_mock_binary cvs yes
+    PATH="$(pwd):${PATH}"
+
+    atf_check -s exit:1 -o save:stdout -e save:stderr sysbuild \
+        -c /dev/null -o CVSROOT="${MOCK_CVSROOT}" -o CVSTAG=invalid build
+
+    cat >expout <<EOF
+Command: cvs
+Directory: ${HOME}/sysbuild/src
+Arg: -d${MOCK_CVSROOT}
+Arg: -q
+Arg: update
+Arg: -d
+Arg: -P
+Arg: -rinvalid
+
+EOF
+    atf_check -o file:expout cat commands.log
+}
+
+
 atf_test_case config__builtins
 config__builtins_body() {
     cat >expout <<EOF
@@ -1114,6 +1143,7 @@ atf_init_test_cases() {
     atf_add_test_case build__hooks__ok
     atf_add_test_case build__hooks__pre_fail
     atf_add_test_case build__hooks__post_fail
+    atf_add_test_case build__cvs_fails
 
     atf_add_test_case config__builtins
     atf_add_test_case config__path__components
