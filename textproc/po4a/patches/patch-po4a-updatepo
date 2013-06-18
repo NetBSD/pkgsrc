@@ -1,0 +1,15 @@
+$NetBSD: patch-po4a-updatepo,v 1.1 2013/06/18 19:24:07 wiz Exp $
+
+Fix perl-5.18 warning: tempfile cannot be called as method.
+
+--- po4a-updatepo.orig	2013-06-18 18:53:13.000000000 +0000
++++ po4a-updatepo
+@@ -178,7 +178,7 @@ map { die wrap_msg(gettext("po4a-updatep
+ 	if $_ eq '-'  && !-e '-'} @pofiles;
+ 
+ my ($pot_filename);
+-(undef,$pot_filename)=File::Temp->tempfile("po4a-updatepoXXXX",
++(undef,$pot_filename)=File::Temp::tempfile("po4a-updatepoXXXX",
+ 					   DIR    => "/tmp",
+ 					   SUFFIX => ".pot",
+ 					   OPEN   => 0,
