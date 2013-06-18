@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2185 2013/06/18 08:54:09 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2186 2013/06/18 13:25:29 jmmv Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3416,3 +3416,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/lmms to 0.4.15 [ryoon 2013-06-17]
 	Updated net/nagios-base to 3.4.3nb8 [bouyer 2013-06-17]
 	Added x11/xf86-video-ati6 version 6.14.5 [wiz 2013-06-18]
+	Updated devel/shtk to 1.2 [jmmv 2013-06-18]
+	Updated sysutils/sysbuild to 2.6 [jmmv 2013-06-18]
