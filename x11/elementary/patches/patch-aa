@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2013/06/16 18:56:06 sno Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/19 00:29:02 jperkin Exp $
 
---- configure.ac.orig	2012-08-26 13:26:31.000000000 +0000
+Fix Solaris support.
+
+--- configure.ac.orig	2013-05-11 18:48:05.000000000 +0000
 +++ configure.ac
-@@ -723,7 +723,7 @@ AC_DEFINE_UNQUOTED(ELEMENTARY_BASE_DIR, 
+@@ -82,6 +82,10 @@ case "$host_os" in
+     MODULE_ARCH="$host_os-$host_cpu"
+     MODULE_EDJE="$host_os-$host_cpu"
+     ;;
++  solaris*)
++    MODULE_ARCH="solaris-$host_cpu-v_maj.v_min.v_mic"
++    MODULE_EDJE="solaris-$host_cpu-${EDJE_VERSION}"
++    ;;
+   *)
+     MODULE_ARCH="$host_os-$host_cpu-v_maj.v_min.v_mic"
+     MODULE_EDJE="$host_os-$host_cpu-${EDJE_VERSION}"
+@@ -723,7 +727,7 @@ AC_DEFINE_UNQUOTED(ELEMENTARY_BASE_DIR,
  EFL_CHECK_BUILD_EXAMPLES([enable_build_examples="yes"], [enable_build_examples="no"])
  EFL_CHECK_INSTALL_EXAMPLES([enable_install_examples="yes"], [enable_install_examples="no"])
  
@@ -11,7 +24,7 @@ $NetBSD: patch-aa,v 1.1 2013/06/16 18:56:06 sno Exp $
  # define _GNU_SOURCE 1
  #include <unistd.h>
  ], [
-@@ -732,7 +732,7 @@ extern char **environ;
+@@ -732,7 +736,7 @@ extern char **environ;
    AC_DEFINE(HAVE_ENVIRON, 1, [extern environ exists])
  ])
  
