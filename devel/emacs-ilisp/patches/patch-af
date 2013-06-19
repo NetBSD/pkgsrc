@@ -1,15 +1,16 @@
-$NetBSD: patch-af,v 1.1 2009/08/19 00:45:34 uwe Exp $
+$NetBSD: patch-af,v 1.2 2013/06/19 13:12:01 mef Exp $
 
---- ilisp-xfr.el.orig	2002-05-24 00:41:42.000000000 +0400
-+++ ilisp-xfr.el
-@@ -45,7 +45,9 @@
+--- ilisp-xfr.el.orig	2002-05-24 05:41:42.000000000 +0900
++++ ilisp-xfr.el	2013-06-19 19:02:24.000000000 +0900
+@@ -45,7 +45,10 @@ If we have a complete sexp, send it.  Ot
  		;;       25/11/94 Marco Antoniotti
  		(when (or (eq +ilisp-emacs-version-id+ 'fsf-19)
  			  (eq +ilisp-emacs-version-id+ 'fsf-20)
 -			  (eq +ilisp-emacs-version-id+ 'fsf-21))
 +			  (eq +ilisp-emacs-version-id+ 'fsf-21)
 +			  (eq +ilisp-emacs-version-id+ 'fsf-22)
-+			  (eq +ilisp-emacs-version-id+ 'fsf-23))
++			  (eq +ilisp-emacs-version-id+ 'fsf-23)
++			  (eq +ilisp-emacs-version-id+ 'fsf-24))
  		  (setq comint-input-ring-index nil))
  		;; Nuke symbol table
  		(setq ilisp-original nil)
