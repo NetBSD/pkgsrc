@@ -1,10 +1,10 @@
-$NetBSD: patch-modules_ts_src_ts.cpp,v 1.1 2013/06/12 10:13:58 jperkin Exp $
+$NetBSD: patch-modules_ts_src_ts.cpp,v 1.2 2013/06/19 11:54:04 fhajny Exp $
 
-Avoid std::string conflict.
+Avoid std::foo conflict.
 
---- modules/ts/src/ts.cpp.orig	2012-07-25 22:55:31.000000000 +0000
+--- modules/ts/src/ts.cpp.orig	2013-04-05 09:00:20.000000000 +0000
 +++ modules/ts/src/ts.cpp
-@@ -557,7 +557,7 @@ void TS::vprintf( int streams, const cha
+@@ -562,7 +562,7 @@ void TS::vprintf( int streams, const cha
      for( int i = 0; i < MAX_IDX; i++ )
          if( (streams & (1 << i)) )
          {
@@ -13,3 +13,12 @@ Avoid std::string conflict.
              // in the new GTest-based framework we do not use
              // any output files (except for the automatically generated xml report).
              // if a test fails, all the buffers are printed, so we do not want to duplicate the information and
+@@ -617,7 +617,7 @@ void smoothBorder(Mat& img, const Scalar
+     Scalar s;
+     uchar *p = NULL;
+     int n = 100/delta;
+-    int nR = std::min(n, (img.rows+1)/2), nC = std::min(n, (img.cols+1)/2);
++    int nR = ::std::min(n, (img.rows+1)/2), nC = ::std::min(n, (img.cols+1)/2);
+ 
+     int r, c, i;
+     for(r=0; r<nR; r++)
