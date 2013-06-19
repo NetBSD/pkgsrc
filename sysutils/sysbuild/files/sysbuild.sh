@@ -38,7 +38,7 @@ shtk_import process
 
 # List of valid configuration variables.
 #
-# Please remember to update sysbuild(1) if you change this list.
+# Please remember to update sysbuild.conf(5) if you change this list.
 SYSBUILD_CONFIG_VARS="BUILD_ROOT BUILD_TARGETS CVSROOT CVSTAG INCREMENTAL_BUILD
                       MACHINES MKVARS NJOBS RELEASEDIR SRCDIR UPDATE_SOURCES
                       XSRCDIR"
