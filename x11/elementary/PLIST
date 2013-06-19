@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/16 18:56:06 sno Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/19 00:29:02 jperkin Exp $
 bin/elementary_config
 bin/elementary_quicklaunch
 bin/elementary_run
@@ -151,7 +151,7 @@ include/elementary-1/elm_widget_thumb.h
 include/elementary-1/elm_widget_video.h
 include/elementary-1/elm_widget_web.h
 include/elementary-1/elm_win.h
-lib/edje/modules/elm/netbsd-${MACHINE_ARCH}-1.0.0/module.la
+lib/edje/modules/elm/${LOWER_OPSYS}-${MACHINE_ARCH}-1.0.0/module.la
 lib/elementary/modules/access_output/${MODULE_ARCH}/module.la
 lib/elementary/modules/datetime_input_ctxpopup/${MODULE_ARCH}/module.la
 lib/elementary/modules/test_entry/${MODULE_ARCH}/module.la

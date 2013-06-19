@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
+$NetBSD: patch-ab,v 1.2 2013/06/19 00:29:02 jperkin Exp $
 
---- configure.orig	2013-06-15 12:14:08.000000000 +0000
+Fix Solaris support.
+
+--- configure.orig	2013-05-11 19:55:58.000000000 +0000
 +++ configure
 @@ -1,13 +1,11 @@
  #! /bin/sh
@@ -50,7 +52,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  if test "x$CONFIG_SHELL" = x; then
    as_bourne_compatible="if test -n \"\${ZSH_VERSION+set}\" && (emulate sh) >/dev/null 2>&1; then :
    emulate sh
-@@ -169,7 +192,8 @@ if ( set x; as_fn_ret_success y && test 
+@@ -169,7 +192,8 @@ if ( set x; as_fn_ret_success y && test
  else
    exitcode=1; echo positional parameters were not saved.
  fi
@@ -1198,7 +1200,18 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      ac_cv_path_ac_pt_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
      $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
-@@ -13920,6 +13997,7 @@ requirement_elm=""
+@@ -13886,6 +13963,10 @@ case "$host_os" in
+     MODULE_ARCH="$host_os-$host_cpu"
+     MODULE_EDJE="$host_os-$host_cpu"
+     ;;
++  solaris*)
++    MODULE_ARCH="solaris-$host_cpu-1.7.7"
++    MODULE_EDJE="solaris-$host_cpu-${EDJE_VERSION}"
++    ;;
+   *)
+     MODULE_ARCH="$host_os-$host_cpu-1.7.7"
+     MODULE_EDJE="$host_os-$host_cpu-${EDJE_VERSION}"
+@@ -13920,6 +14001,7 @@ requirement_elm=""
  
  
  
@@ -1206,7 +1219,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
  	if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
-@@ -13940,7 +14018,7 @@ do
+@@ -13940,7 +14022,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
      for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1215,7 +1228,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      ac_cv_path_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
      $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
-@@ -13983,7 +14061,7 @@ do
+@@ -13983,7 +14065,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
      for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1224,7 +1237,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      ac_cv_path_ac_pt_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
      $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
-@@ -14074,6 +14152,7 @@ if test -n "$EVIL_CFLAGS"; then
+@@ -14074,6 +14156,7 @@ if test -n "$EVIL_CFLAGS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EVIL_CFLAGS=`$PKG_CONFIG --cflags "evil" 2>/dev/null`
@@ -1232,7 +1245,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14090,6 +14169,7 @@ if test -n "$EVIL_LIBS"; then
+@@ -14090,6 +14173,7 @@ if test -n "$EVIL_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EVIL_LIBS=`$PKG_CONFIG --libs "evil" 2>/dev/null`
@@ -1240,7 +1253,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14109,9 +14189,9 @@ else
+@@ -14109,9 +14193,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1252,7 +1265,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$EVIL_PKG_ERRORS" >&5
-@@ -14126,7 +14206,6 @@ installed software in a non-standard pre
+@@ -14126,7 +14210,6 @@ installed software in a non-standard pre
  Alternatively, you may set the environment variables EVIL_CFLAGS
  and EVIL_LIBS to avoid the need to call pkg-config.
  See the pkg-config man page for more details." "$LINENO" 5
@@ -1260,7 +1273,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  elif test $pkg_failed = untried; then
       	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
-@@ -14142,7 +14221,6 @@ See the pkg-config man page for more det
+@@ -14142,7 +14225,6 @@ See the pkg-config man page for more det
  
  To get pkg-config, see <http://pkg-config.freedesktop.org/>.
  See \`config.log' for more details" "$LINENO" 5; }
@@ -1268,7 +1281,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
  	EVIL_CFLAGS=$pkg_cv_EVIL_CFLAGS
  	EVIL_LIBS=$pkg_cv_EVIL_LIBS
-@@ -14179,6 +14257,7 @@ if test -n "$EVIL_CFLAGS"; then
+@@ -14179,6 +14261,7 @@ if test -n "$EVIL_CFLAGS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EVIL_CFLAGS=`$PKG_CONFIG --cflags "evil" 2>/dev/null`
@@ -1276,7 +1289,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14195,6 +14274,7 @@ if test -n "$EVIL_LIBS"; then
+@@ -14195,6 +14278,7 @@ if test -n "$EVIL_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EVIL_LIBS=`$PKG_CONFIG --libs "evil" 2>/dev/null`
@@ -1284,7 +1297,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14214,9 +14294,9 @@ else
+@@ -14214,9 +14298,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1296,7 +1309,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$EVIL_PKG_ERRORS" >&5
-@@ -14231,7 +14311,6 @@ installed software in a non-standard pre
+@@ -14231,7 +14315,6 @@ installed software in a non-standard pre
  Alternatively, you may set the environment variables EVIL_CFLAGS
  and EVIL_LIBS to avoid the need to call pkg-config.
  See the pkg-config man page for more details." "$LINENO" 5
@@ -1304,7 +1317,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  elif test $pkg_failed = untried; then
       	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
-@@ -14247,7 +14326,6 @@ See the pkg-config man page for more det
+@@ -14247,7 +14330,6 @@ See the pkg-config man page for more det
  
  To get pkg-config, see <http://pkg-config.freedesktop.org/>.
  See \`config.log' for more details" "$LINENO" 5; }
@@ -1312,7 +1325,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
  	EVIL_CFLAGS=$pkg_cv_EVIL_CFLAGS
  	EVIL_LIBS=$pkg_cv_EVIL_LIBS
-@@ -14707,6 +14785,7 @@ if test -n "$ELEMENTARY_CFLAGS"; then
+@@ -14707,6 +14789,7 @@ if test -n "$ELEMENTARY_CFLAGS"; then
      edje >= 1.7.7
  
  " 2>/dev/null`
@@ -1320,7 +1333,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14750,6 +14829,7 @@ if test -n "$ELEMENTARY_LIBS"; then
+@@ -14750,6 +14833,7 @@ if test -n "$ELEMENTARY_LIBS"; then
      edje >= 1.7.7
  
  " 2>/dev/null`
@@ -1328,7 +1341,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14769,7 +14849,7 @@ else
+@@ -14769,7 +14853,7 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1337,7 +1350,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      eina >= 1.7.7
      eet >= 1.7.7
      evas >= 1.7.7
-@@ -14780,7 +14860,7 @@ fi
+@@ -14780,7 +14864,7 @@ fi
  
  " 2>&1`
          else
@@ -1346,7 +1359,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      eina >= 1.7.7
      eet >= 1.7.7
      evas >= 1.7.7
-@@ -14813,7 +14893,6 @@ installed software in a non-standard pre
+@@ -14813,7 +14897,6 @@ installed software in a non-standard pre
  Alternatively, you may set the environment variables ELEMENTARY_CFLAGS
  and ELEMENTARY_LIBS to avoid the need to call pkg-config.
  See the pkg-config man page for more details." "$LINENO" 5
@@ -1354,7 +1367,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  elif test $pkg_failed = untried; then
       	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
-@@ -14829,7 +14908,6 @@ See the pkg-config man page for more det
+@@ -14829,7 +14912,6 @@ See the pkg-config man page for more det
  
  To get pkg-config, see <http://pkg-config.freedesktop.org/>.
  See \`config.log' for more details" "$LINENO" 5; }
@@ -1362,7 +1375,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
  	ELEMENTARY_CFLAGS=$pkg_cv_ELEMENTARY_CFLAGS
  	ELEMENTARY_LIBS=$pkg_cv_ELEMENTARY_LIBS
-@@ -14855,6 +14933,7 @@ if test -n "$ELEMENTARY_ECORE_IMF_CFLAGS
+@@ -14855,6 +14937,7 @@ if test -n "$ELEMENTARY_ECORE_IMF_CFLAGS
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_ECORE_IMF_CFLAGS=`$PKG_CONFIG --cflags "ecore-imf >= 1.7.7" 2>/dev/null`
@@ -1370,7 +1383,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14871,6 +14950,7 @@ if test -n "$ELEMENTARY_ECORE_IMF_LIBS";
+@@ -14871,6 +14954,7 @@ if test -n "$ELEMENTARY_ECORE_IMF_LIBS";
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_ECORE_IMF_LIBS=`$PKG_CONFIG --libs "ecore-imf >= 1.7.7" 2>/dev/null`
@@ -1378,7 +1391,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14890,9 +14970,9 @@ else
+@@ -14890,9 +14974,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1390,7 +1403,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_ECORE_IMF_PKG_ERRORS" >&5
-@@ -14942,6 +15022,7 @@ if test -n "$ELEMENTARY_ECORE_CON_CFLAGS
+@@ -14942,6 +15026,7 @@ if test -n "$ELEMENTARY_ECORE_CON_CFLAGS
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_ECORE_CON_CFLAGS=`$PKG_CONFIG --cflags "ecore-con >= 1.7.7" 2>/dev/null`
@@ -1398,7 +1411,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14958,6 +15039,7 @@ if test -n "$ELEMENTARY_ECORE_CON_LIBS";
+@@ -14958,6 +15043,7 @@ if test -n "$ELEMENTARY_ECORE_CON_LIBS";
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_ECORE_CON_LIBS=`$PKG_CONFIG --libs "ecore-con >= 1.7.7" 2>/dev/null`
@@ -1406,7 +1419,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -14977,9 +15059,9 @@ else
+@@ -14977,9 +15063,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1418,7 +1431,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_ECORE_CON_PKG_ERRORS" >&5
-@@ -15029,6 +15111,7 @@ if test -n "$EIO_CFLAGS"; then
+@@ -15029,6 +15115,7 @@ if test -n "$EIO_CFLAGS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EIO_CFLAGS=`$PKG_CONFIG --cflags "eio" 2>/dev/null`
@@ -1426,7 +1439,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15045,6 +15128,7 @@ if test -n "$EIO_LIBS"; then
+@@ -15045,6 +15132,7 @@ if test -n "$EIO_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EIO_LIBS=`$PKG_CONFIG --libs "eio" 2>/dev/null`
@@ -1434,7 +1447,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15064,9 +15148,9 @@ else
+@@ -15064,9 +15152,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1446,7 +1459,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$EIO_PKG_ERRORS" >&5
-@@ -15123,6 +15207,7 @@ if test -n "$EMOTION_CFLAGS"; then
+@@ -15123,6 +15211,7 @@ if test -n "$EMOTION_CFLAGS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EMOTION_CFLAGS=`$PKG_CONFIG --cflags "emotion" 2>/dev/null`
@@ -1454,7 +1467,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15139,6 +15224,7 @@ if test -n "$EMOTION_LIBS"; then
+@@ -15139,6 +15228,7 @@ if test -n "$EMOTION_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_EMOTION_LIBS=`$PKG_CONFIG --libs "emotion" 2>/dev/null`
@@ -1462,7 +1475,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15158,9 +15244,9 @@ else
+@@ -15158,9 +15248,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1474,7 +1487,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$EMOTION_PKG_ERRORS" >&5
-@@ -15218,6 +15304,7 @@ if test -n "$ELEMENTARY_X_CFLAGS"; then
+@@ -15218,6 +15308,7 @@ if test -n "$ELEMENTARY_X_CFLAGS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_X_CFLAGS=`$PKG_CONFIG --cflags "ecore-x >= 1.7.7" 2>/dev/null`
@@ -1482,7 +1495,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15234,6 +15321,7 @@ if test -n "$ELEMENTARY_X_LIBS"; then
+@@ -15234,6 +15325,7 @@ if test -n "$ELEMENTARY_X_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_X_LIBS=`$PKG_CONFIG --libs "ecore-x >= 1.7.7" 2>/dev/null`
@@ -1490,7 +1503,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15253,9 +15341,9 @@ else
+@@ -15253,9 +15345,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1502,7 +1515,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_X_PKG_ERRORS" >&5
-@@ -15312,6 +15400,7 @@ if test -n "$ELEMENTARY_FB_CFLAGS"; then
+@@ -15312,6 +15404,7 @@ if test -n "$ELEMENTARY_FB_CFLAGS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_FB_CFLAGS=`$PKG_CONFIG --cflags "ecore-fb >= 1.7.7" 2>/dev/null`
@@ -1510,7 +1523,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15328,6 +15417,7 @@ if test -n "$ELEMENTARY_FB_LIBS"; then
+@@ -15328,6 +15421,7 @@ if test -n "$ELEMENTARY_FB_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_FB_LIBS=`$PKG_CONFIG --libs "ecore-fb >= 1.7.7" 2>/dev/null`
@@ -1518,7 +1531,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15347,9 +15437,9 @@ else
+@@ -15347,9 +15441,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1530,7 +1543,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_FB_PKG_ERRORS" >&5
-@@ -15405,6 +15495,7 @@ if test -n "$ELEMENTARY_PSL1GHT_CFLAGS";
+@@ -15405,6 +15499,7 @@ if test -n "$ELEMENTARY_PSL1GHT_CFLAGS";
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_PSL1GHT_CFLAGS=`$PKG_CONFIG --cflags "ecore-psl1ght >= 1.7.7" 2>/dev/null`
@@ -1538,7 +1551,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15421,6 +15512,7 @@ if test -n "$ELEMENTARY_PSL1GHT_LIBS"; t
+@@ -15421,6 +15516,7 @@ if test -n "$ELEMENTARY_PSL1GHT_LIBS"; t
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_PSL1GHT_LIBS=`$PKG_CONFIG --libs "ecore-psl1ght >= 1.7.7" 2>/dev/null`
@@ -1546,7 +1559,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15440,9 +15532,9 @@ else
+@@ -15440,9 +15536,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1558,7 +1571,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_PSL1GHT_PKG_ERRORS" >&5
-@@ -15498,6 +15590,7 @@ if test -n "$ELEMENTARY_SDL_CFLAGS"; the
+@@ -15498,6 +15594,7 @@ if test -n "$ELEMENTARY_SDL_CFLAGS"; the
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_SDL_CFLAGS=`$PKG_CONFIG --cflags "ecore-sdl >= 1.7.7" 2>/dev/null`
@@ -1566,7 +1579,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15514,6 +15607,7 @@ if test -n "$ELEMENTARY_SDL_LIBS"; then
+@@ -15514,6 +15611,7 @@ if test -n "$ELEMENTARY_SDL_LIBS"; then
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_SDL_LIBS=`$PKG_CONFIG --libs "ecore-sdl >= 1.7.7" 2>/dev/null`
@@ -1574,7 +1587,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15533,9 +15627,9 @@ else
+@@ -15533,9 +15631,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1586,7 +1599,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_SDL_PKG_ERRORS" >&5
-@@ -15591,6 +15685,7 @@ if test -n "$ELEMENTARY_COCOA_CFLAGS"; t
+@@ -15591,6 +15689,7 @@ if test -n "$ELEMENTARY_COCOA_CFLAGS"; t
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_COCOA_CFLAGS=`$PKG_CONFIG --cflags "ecore-cocoa >= 1.7.7" 2>/dev/null`
@@ -1594,7 +1607,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15607,6 +15702,7 @@ if test -n "$ELEMENTARY_COCOA_LIBS"; the
+@@ -15607,6 +15706,7 @@ if test -n "$ELEMENTARY_COCOA_LIBS"; the
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_COCOA_LIBS=`$PKG_CONFIG --libs "ecore-cocoa >= 1.7.7" 2>/dev/null`
@@ -1602,7 +1615,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15626,9 +15722,9 @@ else
+@@ -15626,9 +15726,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1614,7 +1627,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_COCOA_PKG_ERRORS" >&5
-@@ -15684,6 +15780,7 @@ if test -n "$ELEMENTARY_WIN32_CFLAGS"; t
+@@ -15684,6 +15784,7 @@ if test -n "$ELEMENTARY_WIN32_CFLAGS"; t
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_WIN32_CFLAGS=`$PKG_CONFIG --cflags "ecore-win32 >= 1.7.7" 2>/dev/null`
@@ -1622,7 +1635,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15700,6 +15797,7 @@ if test -n "$ELEMENTARY_WIN32_LIBS"; the
+@@ -15700,6 +15801,7 @@ if test -n "$ELEMENTARY_WIN32_LIBS"; the
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_WIN32_LIBS=`$PKG_CONFIG --libs "ecore-win32 >= 1.7.7" 2>/dev/null`
@@ -1630,7 +1643,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15719,9 +15817,9 @@ else
+@@ -15719,9 +15821,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1642,7 +1655,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_WIN32_PKG_ERRORS" >&5
-@@ -15777,6 +15875,7 @@ if test -n "$ELEMENTARY_WINCE_CFLAGS"; t
+@@ -15777,6 +15879,7 @@ if test -n "$ELEMENTARY_WINCE_CFLAGS"; t
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_WINCE_CFLAGS=`$PKG_CONFIG --cflags "ecore-wince >= 1.7.7" 2>/dev/null`
@@ -1650,7 +1663,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15793,6 +15892,7 @@ if test -n "$ELEMENTARY_WINCE_LIBS"; the
+@@ -15793,6 +15896,7 @@ if test -n "$ELEMENTARY_WINCE_LIBS"; the
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_WINCE_LIBS=`$PKG_CONFIG --libs "ecore-wince >= 1.7.7" 2>/dev/null`
@@ -1658,7 +1671,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15812,9 +15912,9 @@ else
+@@ -15812,9 +15916,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1670,7 +1683,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_WINCE_PKG_ERRORS" >&5
-@@ -15870,6 +15970,7 @@ if test -n "$ELEMENTARY_WAYLAND_CFLAGS";
+@@ -15870,6 +15974,7 @@ if test -n "$ELEMENTARY_WAYLAND_CFLAGS";
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_WAYLAND_CFLAGS=`$PKG_CONFIG --cflags "ecore-wayland" 2>/dev/null`
@@ -1678,7 +1691,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15886,6 +15987,7 @@ if test -n "$ELEMENTARY_WAYLAND_LIBS"; t
+@@ -15886,6 +15991,7 @@ if test -n "$ELEMENTARY_WAYLAND_LIBS"; t
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_ELEMENTARY_WAYLAND_LIBS=`$PKG_CONFIG --libs "ecore-wayland" 2>/dev/null`
@@ -1686,7 +1699,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15905,9 +16007,9 @@ else
+@@ -15905,9 +16011,9 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1698,7 +1711,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$ELEMENTARY_WAYLAND_PKG_ERRORS" >&5
-@@ -15970,6 +16072,7 @@ if test -n "$ELEMENTARY_EDBUS_CFLAGS"; t
+@@ -15970,6 +16076,7 @@ if test -n "$ELEMENTARY_EDBUS_CFLAGS"; t
    pkg_cv_ELEMENTARY_EDBUS_CFLAGS=`$PKG_CONFIG --cflags "
          edbus >= 1.7.7
         " 2>/dev/null`
@@ -1706,7 +1719,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -15992,6 +16095,7 @@ if test -n "$ELEMENTARY_EDBUS_LIBS"; the
+@@ -15992,6 +16099,7 @@ if test -n "$ELEMENTARY_EDBUS_LIBS"; the
    pkg_cv_ELEMENTARY_EDBUS_LIBS=`$PKG_CONFIG --libs "
          edbus >= 1.7.7
         " 2>/dev/null`
@@ -1714,7 +1727,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16011,11 +16115,11 @@ else
+@@ -16011,11 +16119,11 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1728,7 +1741,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          edbus >= 1.7.7
         " 2>&1`
          fi
-@@ -16088,6 +16192,7 @@ if test -n "$ELEMENTARY_EFREET_CFLAGS"; 
+@@ -16088,6 +16196,7 @@ if test -n "$ELEMENTARY_EFREET_CFLAGS";
          efreet-mime >= 1.7.7
          efreet-trash >= 1.7.7
         " 2>/dev/null`
@@ -1736,7 +1749,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16116,6 +16221,7 @@ if test -n "$ELEMENTARY_EFREET_LIBS"; th
+@@ -16116,6 +16225,7 @@ if test -n "$ELEMENTARY_EFREET_LIBS"; th
          efreet-mime >= 1.7.7
          efreet-trash >= 1.7.7
         " 2>/dev/null`
@@ -1744,7 +1757,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16135,13 +16241,13 @@ else
+@@ -16135,13 +16245,13 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1760,7 +1773,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          efreet >= 1.7.7
          efreet-mime >= 1.7.7
          efreet-trash >= 1.7.7
-@@ -16210,6 +16316,7 @@ if test -n "$ELEMENTARY_EWEATHER_CFLAGS"
+@@ -16210,6 +16320,7 @@ if test -n "$ELEMENTARY_EWEATHER_CFLAGS"
    pkg_cv_ELEMENTARY_EWEATHER_CFLAGS=`$PKG_CONFIG --cflags "
          eweather
         " 2>/dev/null`
@@ -1768,7 +1781,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16232,6 +16339,7 @@ if test -n "$ELEMENTARY_EWEATHER_LIBS"; 
+@@ -16232,6 +16343,7 @@ if test -n "$ELEMENTARY_EWEATHER_LIBS";
    pkg_cv_ELEMENTARY_EWEATHER_LIBS=`$PKG_CONFIG --libs "
          eweather
         " 2>/dev/null`
@@ -1776,7 +1789,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16251,11 +16359,11 @@ else
+@@ -16251,11 +16363,11 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1790,7 +1803,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          eweather
         " 2>&1`
          fi
-@@ -16322,6 +16430,7 @@ if test -n "$ELEMENTARY_EMAP_CFLAGS"; th
+@@ -16322,6 +16434,7 @@ if test -n "$ELEMENTARY_EMAP_CFLAGS"; th
    pkg_cv_ELEMENTARY_EMAP_CFLAGS=`$PKG_CONFIG --cflags "
          emap
         " 2>/dev/null`
@@ -1798,7 +1811,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16344,6 +16453,7 @@ if test -n "$ELEMENTARY_EMAP_LIBS"; then
+@@ -16344,6 +16457,7 @@ if test -n "$ELEMENTARY_EMAP_LIBS"; then
    pkg_cv_ELEMENTARY_EMAP_LIBS=`$PKG_CONFIG --libs "
          emap
         " 2>/dev/null`
@@ -1806,7 +1819,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16363,11 +16473,11 @@ else
+@@ -16363,11 +16477,11 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1820,7 +1833,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          emap
         " 2>&1`
          fi
-@@ -16436,6 +16546,7 @@ if test -n "$ELEMENTARY_ETHUMB_CFLAGS"; 
+@@ -16436,6 +16550,7 @@ if test -n "$ELEMENTARY_ETHUMB_CFLAGS";
    pkg_cv_ELEMENTARY_ETHUMB_CFLAGS=`$PKG_CONFIG --cflags "
          ethumb_client
         " 2>/dev/null`
@@ -1828,7 +1841,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16458,6 +16569,7 @@ if test -n "$ELEMENTARY_ETHUMB_LIBS"; th
+@@ -16458,6 +16573,7 @@ if test -n "$ELEMENTARY_ETHUMB_LIBS"; th
    pkg_cv_ELEMENTARY_ETHUMB_LIBS=`$PKG_CONFIG --libs "
          ethumb_client
         " 2>/dev/null`
@@ -1836,7 +1849,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16477,11 +16589,11 @@ else
+@@ -16477,11 +16593,11 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1850,7 +1863,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          ethumb_client
         " 2>&1`
          fi
-@@ -16548,6 +16660,7 @@ if test -n "$ELEMENTARY_WEB_CFLAGS"; the
+@@ -16548,6 +16664,7 @@ if test -n "$ELEMENTARY_WEB_CFLAGS"; the
    pkg_cv_ELEMENTARY_WEB_CFLAGS=`$PKG_CONFIG --cflags "
          ewebkit
         " 2>/dev/null`
@@ -1858,7 +1871,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16570,6 +16683,7 @@ if test -n "$ELEMENTARY_WEB_LIBS"; then
+@@ -16570,6 +16687,7 @@ if test -n "$ELEMENTARY_WEB_LIBS"; then
    pkg_cv_ELEMENTARY_WEB_LIBS=`$PKG_CONFIG --libs "
          ewebkit
         " 2>/dev/null`
@@ -1866,7 +1879,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  else
    pkg_failed=yes
  fi
-@@ -16589,11 +16703,11 @@ else
+@@ -16589,11 +16707,11 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -1880,7 +1893,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
          ewebkit
         " 2>&1`
          fi
-@@ -16804,7 +16918,7 @@ do
+@@ -16804,7 +16922,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
      for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1889,7 +1902,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      ac_cv_prog_efl_have_doxygen="yes"
      $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
-@@ -16853,7 +16967,7 @@ do
+@@ -16853,7 +16971,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
      for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1898,7 +1911,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      ac_cv_prog_efl_have_doxygen="yes"
      $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
-@@ -17008,6 +17122,13 @@ fi
+@@ -17008,6 +17126,13 @@ fi
  
  
  
@@ -1912,7 +1925,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether NLS is requested" >&5
  $as_echo_n "checking whether NLS is requested... " >&6; }
      # Check whether --enable-nls was given.
-@@ -17115,7 +17236,7 @@ do
+@@ -17115,7 +17240,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
      for ac_exec_ext in '' $ac_executable_extensions; do
@@ -1921,7 +1934,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      ac_cv_path_GMSGFMT="$as_dir/$ac_word$ac_exec_ext"
      $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
-@@ -19090,14 +19211,15 @@ extern char **environ;
+@@ -19090,14 +19215,15 @@ extern char **environ;
    return 0;
  }
  _ACEOF
@@ -1939,7 +1952,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -19114,14 +19236,15 @@ clearenv();
+@@ -19114,14 +19240,15 @@ clearenv();
    return 0;
  }
  _ACEOF
@@ -1957,7 +1970,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  
  ac_config_files="$ac_config_files Makefile elementary.spec elementary.pc doc/Makefile doc/Doxyfile doc/widgets/Makefile src/Makefile src/lib/Makefile src/lib/Elementary.h src/bin/Makefile src/modules/Makefile src/modules/access_output/Makefile src/modules/datetime_input_ctxpopup/Makefile src/modules/test_entry/Makefile src/modules/test_map/Makefile src/edje_externals/Makefile src/examples/Makefile data/Makefile data/themes/Makefile data/images/Makefile data/objects/Makefile data/desktop/Makefile data/edje_externals/Makefile config/Makefile config/default/Makefile config/standard/Makefile config/mobile/Makefile $po_makefile_in"
  
-@@ -19234,6 +19357,14 @@ LIBOBJS=$ac_libobjs
+@@ -19234,6 +19361,14 @@ LIBOBJS=$ac_libobjs
  LTLIBOBJS=$ac_ltlibobjs
  
  
@@ -1972,7 +1985,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
   if test -n "$EXEEXT"; then
    am__EXEEXT_TRUE=
    am__EXEEXT_FALSE='#'
-@@ -19609,16 +19740,16 @@ if (echo >conf$$.file) 2>/dev/null; then
+@@ -19609,16 +19744,16 @@ if (echo >conf$$.file) 2>/dev/null; then
      # ... but there are two gotchas:
      # 1) On MSYS, both `ln -s file dir' and `ln file dir' fail.
      # 2) DJGPP < 2.04 has no symlinks; `ln -s' creates a wrapper executable.
@@ -1993,7 +2006,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  fi
  rm -f conf$$ conf$$.exe conf$$.dir/conf$$.file conf$$.file
  rmdir conf$$.dir 2>/dev/null
-@@ -19678,28 +19809,16 @@ else
+@@ -19678,28 +19813,16 @@ else
    as_mkdir_p=false
  fi
  
@@ -2032,7 +2045,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  
  # Sed expression to map a string onto a valid CPP name.
  as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
-@@ -19721,7 +19840,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+@@ -19721,7 +19844,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
  # values after options handling.
  ac_log="
  This file was extended by elementary $as_me 1.7.7, which was
@@ -2041,7 +2054,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -19787,10 +19906,10 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
+@@ -19787,10 +19910,10 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
  ac_cs_config="`$as_echo "$ac_configure_args" | sed 's/^ //; s/[\\""\`\$]/\\\\&/g'`"
  ac_cs_version="\\
  elementary config.status 1.7.7
@@ -2054,7 +2067,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
  This config.status script is free software; the Free Software Foundation
  gives unlimited permission to copy, distribute and modify it."
  
-@@ -19881,7 +20000,7 @@ fi
+@@ -19881,7 +20004,7 @@ fi
  _ACEOF
  cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1
  if \$ac_cs_recheck; then
@@ -2063,7 +2076,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
    shift
    \$as_echo "running CONFIG_SHELL=$SHELL \$*" >&6
    CONFIG_SHELL='$SHELL'
-@@ -20829,7 +20948,7 @@ $as_echo "$as_me: executing $ac_file com
+@@ -20829,7 +20952,7 @@ $as_echo "$as_me: executing $ac_file com
  
    case $ac_file$ac_mode in
      "depfiles":C) test x"$AMDEP_TRUE" != x"" || {
@@ -2072,7 +2085,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
    # are listed without --file.  Let's play safe and only enable the eval
    # if we detect the quoting.
    case $CONFIG_FILES in
-@@ -20842,7 +20961,7 @@ $as_echo "$as_me: executing $ac_file com
+@@ -20842,7 +20965,7 @@ $as_echo "$as_me: executing $ac_file com
      # Strip MF so we end up with the name of the file.
      mf=`echo "$mf" | sed -e 's/:.*$//'`
      # Check whether this is an Automake generated Makefile or not.
@@ -2081,7 +2094,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/16 18:56:06 sno Exp $
      # some people rename them; so instead we look at the file content.
      # Grep'ing the first line is not enough: some people post-process
      # each Makefile.in and add a new line on top of each file to say so.
-@@ -20876,21 +20995,19 @@ $as_echo X"$mf" |
+@@ -20876,21 +20999,19 @@ $as_echo X"$mf" |
        continue
      fi
      # Extract the definition of DEPDIR, am__include, and am__quote
