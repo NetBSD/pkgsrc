@@ -8,4 +8,7 @@ domain0).  domain0 has privileges to access the physical hardware (PCI
 and ISA devices), administrate other domains and provide virtual
 devices (disks and network) to other domains.
 
-This package contains the Xen3 kernel itself.
+This package contains the 3.1 Xen3 kernel itself.  PCI passthrough is
+supported.  Both non-PAE and PAE versions of xen are provided for
+i386; one must use XEN3_DOM[0U] and XEN3PAE_DOM[0U] kernels, respectively.
+3.1 is no longer maintained upstream.
