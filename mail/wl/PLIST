@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/06/14 03:44:40 mef Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/06/19 13:31:02 mef Exp $
 ${EMACS_INFOPREFIX}/wl-ja.info
 ${EMACS_INFOPREFIX}/wl.info
 ${EMACS_LISPPREFIX}/wl/acap.el
@@ -209,7 +209,7 @@ ${FOR_emacs_x}share/wl/pipe.xpm
 ${FOR_emacs_x}share/wl/plugged.xpm
 ${FOR_emacs_x}share/wl/pop.xpm
 ${FOR_emacs_x}share/wl/queue.xpm
-${FOR_emacs_x}${PLIST.emacs-w3m}share/wl/shimbun.xpm
+${FOR_emacs_x}share/wl/shimbun.xpm
 ${FOR_emacs_x}share/wl/trash-e.xpm
 ${FOR_emacs_x}share/wl/trash.xpm
 ${FOR_emacs_x}share/wl/unplugged.xpm
