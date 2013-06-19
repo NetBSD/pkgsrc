@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/06/19 12:13:39 jperkin Exp $
+
+Unconditionally install the gdb script.
+
+--- src/Makefile.in.orig	2008-05-14 22:54:48.000000000 +0000
++++ src/Makefile.in
+@@ -618,7 +618,7 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ install-exec-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+-	test ! -z "$(GDB_CMD_FILE)" && $(INSTALL_DATA) $(srcdir)/gdb.scr $(DESTDIR)$(pkgdatadir)/ || :
++	test ! -z "x$(GDB_CMD_FILE)" && $(INSTALL_DATA) $(srcdir)/gdb.scr $(DESTDIR)$(pkgdatadir)/ || :
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
