@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.29 2013/06/15 16:03:20 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.30 2013/06/19 14:44:21 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -102,3 +102,5 @@ Pullup ticket #4160 - requested by obache
 multimedia/adobe-flash-plugin11: security update
 Pullup ticket #4161 - requested by obache
 multimedia/adobe-flash-plugin10.1: security update
+Pullup ticket #4162 - requested by wiz
+sysutils/dbus: security update
