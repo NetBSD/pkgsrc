@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 19:51:36 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/19 14:03:41 gdt Exp $
 #
 
 DISTNAME=	xen-2.0.7-install-x86_32
 PKGNAME=	xenkernel20-2.0.7
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=	.tgz
