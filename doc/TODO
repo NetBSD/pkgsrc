@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12311 2013/06/18 14:09:30 wiz Exp $
+$NetBSD: TODO,v 1.12312 2013/06/19 09:21:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -657,7 +657,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hiawatha-9.1
 	o highlight-3.14
 	o honeyd-1.5c
-	o horde-5.1.0
+	o horde-5.1.1
 	o host-20070128
 	o html2wml-0.4.11
 	o htop-1.0.2
@@ -674,7 +674,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.5.5
 	o imapsync-1.452
-	o imp-6.1.1
+	o imp-6.1.2
 	o ingo-3.1.1
 	o inspircd-1.2.1
 	o instiki-0.13
@@ -710,7 +710,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o knights-2.5.0
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-4.1.0
+	o kronolith-4.1.1
 	o krusader-2.0
 	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
@@ -949,7 +949,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt5-libs-5.0.2
 	o quagga-0.99.22.1
 	o quilt-0.60
-	o racket-5.3.4
+	o racket-5.3.5
 	o radiance-3.7.2
 	o raine-0.61.1
 	o rat-4.2.25
@@ -1036,6 +1036,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
+	o subversion-1.8.0
 	o subversion-base-1.7.10
 	o sudo-1.8.6p8
 	o swatch-3.2.3
