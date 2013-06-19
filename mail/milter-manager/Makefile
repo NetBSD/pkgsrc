@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/03/14 12:30:41 obache Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/19 13:08:57 obache Exp $
 #
 
 DISTNAME=	milter-manager-1.8.6
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://milter-manager.sourceforge.net/
 COMMENT=	Milter to use milters effectively
+
+RUBY_VERSION_SUPPORTED=	193
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt
