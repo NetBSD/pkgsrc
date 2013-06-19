@@ -1,0 +1,18 @@
+$NetBSD: patch-data_etc_Makefile.in,v 1.1 2013/06/19 15:07:41 jperkin Exp $
+
+Install etc files to examples area.
+
+--- data/etc/Makefile.in.orig	2013-05-11 20:07:16.000000000 +0000
++++ data/etc/Makefile.in
+@@ -403,9 +403,9 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ version_info = @version_info@
+ MAINTAINERCLEANFILES = Makefile.in
+-filesdir = $(sysconfdir)/enlightenment
++filesdir = $(prefix)/share/examples/enlightenment
+ files_DATA = $(am__append_1)
+-menusdir = $(sysconfdir)/xdg/menus
++menusdir = $(prefix)/share/examples/enlightenment
+ menus_DATA = $(am__append_2)
+ EXTRA_DIST = $(files_DATA) $(menus_DATA)
+ all: all-am
