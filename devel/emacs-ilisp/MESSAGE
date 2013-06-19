@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/06/19 13:12:00 mef Exp $
+To test the function easily:
+(1) Install any one of lisp environments, for example, lang/clisp.
+(2) M-x load-library ilisp RET
+    M-x ilisp-mode RET
+    Select Dialect. One example is clisp-hs in this case.
+    Then you will see Interactive Lisp prompt.
+===========================================================================

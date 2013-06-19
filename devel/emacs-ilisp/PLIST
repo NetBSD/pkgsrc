@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/10/09 02:18:16 kim Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/06/19 13:12:00 mef Exp $
 share/doc/emacs-ilisp/INSTALLATION
 share/doc/emacs-ilisp/README
 ${EMACS_LISPPREFIX}/ilisp/allegro.lisp
@@ -34,6 +34,8 @@ ${FOR_emacs22}${EMACS_LISPPREFIX}/ilisp/ilfsf21.elc
 ${FOR_emacs22nox}${EMACS_LISPPREFIX}/ilisp/ilfsf21.elc
 ${FOR_emacs23}${EMACS_LISPPREFIX}/ilisp/ilfsf21.elc
 ${FOR_emacs23nox}${EMACS_LISPPREFIX}/ilisp/ilfsf21.elc
+${FOR_emacs24}${EMACS_LISPPREFIX}/ilisp/ilfsf21.elc
+${FOR_emacs24nox}${EMACS_LISPPREFIX}/ilisp/ilfsf21.elc
 ${EMACS_LISPPREFIX}/ilisp/ilisp-acl.el
 ${EMACS_LISPPREFIX}/ilisp/ilisp-acl.elc
 ${EMACS_LISPPREFIX}/ilisp/ilisp-aut.el
