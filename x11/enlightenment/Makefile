@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/06/16 18:56:06 sno Exp $
+# $NetBSD: Makefile,v 1.28 2013/06/19 15:07:40 jperkin Exp $
 #
 
 DISTNAME=	enlightenment-0.17.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,26 +19,38 @@ USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config automake autoconf
 
 PKG_SYSCONFSUBDIR=	enlightenment
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 
 EGDIR=		${PREFIX}/share/examples/enlightenment
 CONF_FILES=	${EGDIR}/sysactions.conf \
-		${PKG_SYSCONFDIR}/sysactions.conf \
-		${PKG_SYSCONFDIR}/enlightenment/sysactions.conf \
-		${PKG_SYSCONFDIR}/xdg/menus/enlightenment.menu
+		${PKG_SYSCONFDIR}/sysactions.conf
+CONF_FILES+=	${EGDIR}/enlightenment.menu \
+		${PKG_SYSCONFBASE}/xdg/menus/enlightenment.menu
 
 CONFIGURE_ARGS+=	--disable-mount-hal --disable-mount-udisks \
 			--disable-mount-eeze
 CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
 
+BUILD_DEFS+=		PKG_SYSCONFBASE
+
 INSTALLATION_DIRS=	${EGDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		solhost
+SUBST_STAGE.solhost=	pre-configure
+SUBST_FILES.solhost=	configure
+SUBST_SED.solhost=	-e '/^MODULE_ARCH=/s/.host_os/solaris/'
+.endif
+
 pre-install:
+	${INSTALL_DATA} ${WRKSRC}/data/etc/enlightenment.menu ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/data/etc/sysactions.conf ${DESTDIR}${EGDIR}
 
 PKGCONFIG_OVERRIDE=	enlightenment.pc.in
 
-MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-ver-pre-svn-08
+MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-${PKGVERSION}
 PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=        { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
