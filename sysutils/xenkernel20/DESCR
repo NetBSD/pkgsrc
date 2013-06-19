@@ -8,4 +8,5 @@ domain0).  domain0 has privileges to access the physical hardware (PCI
 and ISA devices), administrate other domains and provide virtual
 devices (disks and network) to other domains.
 
-This package contains the Xen kernel itself.
+This package contains the 2.0 Xen kernel itself.  Xen 2.0 is obsolete
+and well beyond no longer maintained.
