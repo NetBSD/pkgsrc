@@ -1,0 +1,18 @@
+$NetBSD: patch-ilisp-dia_el,v 1.1 2013/06/19 13:12:01 mef Exp $
+
+(With Emacs-24.3)
+In toplevel form:
+ilisp-acl.el:33:1:Error: Invalid function: (\` (progn (defvar ((\, hook)) 
+
+--- ilisp-dia.el.orig	2002-01-25 20:48:33.000000000 +0900
++++ ilisp-dia.el	2013-06-19 13:58:23.000000000 +0900
+@@ -120,8 +120,7 @@ inferior LISP.  PARENT is the name of th
+ 	(hook (read (format "%s-hook" dialect)))
+ 	(program (read (format "%s-program" dialect)))
+ 	(dialects (format "%s" dialect)))
+-    (`
+-     (progn
++    (` (progn
+        (defvar (, hook) nil (, (format "*Inferior %s hook." full-name)))
+        (defvar (, program) nil
+ 	 (, (format "*Inferior %s default program." full-name)))

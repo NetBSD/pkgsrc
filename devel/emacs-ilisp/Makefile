@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/02/17 19:17:58 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/19 13:12:00 mef Exp $
 #
 
 DISTNAME=	ilisp-20021222
@@ -10,11 +10,18 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilisp/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/ilisp/
 COMMENT=	Emacs interface to embedded Lisp process
+#LICENSE=	# ILISP License, see COPYING file.
 
 MAKE_ENV+=	EMACS=${EMACS_BIN:Q}
 BUILD_TARGET=	compile
 
 SITELISP=	${EMACS_LISPPREFIX}/ilisp
+
+SUBST_CLASSES+=			string-to-int
+SUBST_STAGE.string-to-int=	post-patch
+SUBST_MESSAGE.string-to-int=	obsolete function (as of 22.1); use `string-to-number' instead
+SUBST_FILES.string-to-int+=	ilisp-acl.el
+SUBST_SED.string-to-int=	-e 's/string-to-int/string-to-number/'
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/emacs-ilisp
