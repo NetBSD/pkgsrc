@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/06/20 09:03:46 obache Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/20 09:12:13 obache Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
 COMMENT=	Set of Ruby language bindings for GNOME2
 CATEGORIES=	meta-pkgs gnome
-
-RUBY_VERSION_SUPPORTED=	193
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}:../../devel/ruby-gnome2-gio
