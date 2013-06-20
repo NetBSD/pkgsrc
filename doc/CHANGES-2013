@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2189 2013/06/20 09:08:05 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2190 2013/06/20 21:42:53 morr Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3421,3 +3421,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-ati6 to 6.14.6 [wiz 2013-06-18]
 	Updated textproc/po4a to 0.23nb11 [wiz 2013-06-18]
 	Updated www/apache24 to 2.4.4nb3 [taca 2013-06-20]
+	Updated net/haproxy to 1.4.24 [morr 2013-06-20]
