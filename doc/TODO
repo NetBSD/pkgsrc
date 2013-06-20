@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12312 2013/06/19 09:21:38 wiz Exp $
+$NetBSD: TODO,v 1.12313 2013/06/20 11:37:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -890,6 +890,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
+	o php-5.5
 	o php-jpgraph-3.0.6
 	o php-tt-rss-1.8
 	o php-tiki6-6.10
@@ -925,6 +926,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o puf-1.0.0
 	o pulseaudio-4.0
 	o puzzle-9173
+	o puzzles-9872
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -975,6 +977,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.41
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
+	o samba-3.6.16
 	o samba-4.0.6 [wip]
 	o sarg-2.2.5
 	o sawfish-1.9.91
