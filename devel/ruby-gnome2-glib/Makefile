@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/19 13:40:29 obache Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/20 09:12:14 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-glib-${VERSION}
@@ -7,8 +7,6 @@ CATEGORIES=		devel
 
 CONFLICTS+=		ruby-gnome2-glib-[0-9]*
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-glib-[0-9]*
-
-RUBY_VERSION_SUPPORTED=	193
 
 RUBY_EXTCONF_SUBDIRS=	glib2
 

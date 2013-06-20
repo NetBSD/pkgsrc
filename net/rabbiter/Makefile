@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/20 09:03:46 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/20 09:12:13 obache Exp $
 #
 
 DISTNAME=	rabbiter-2.0.0
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://rabbit-shocker.org/en/rabbiter/
 COMMENT=	Twitter client for Rabbit
 LICENSE=	gnu-gpl-v2 # or later
-
-RUBY_VERSION_SUPPORTED=	193
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rabbit>=2.0.0:../../graphics/rabbit
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=1.1.4:../../devel/ruby-gnome2-gio
