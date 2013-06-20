@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/06/19 13:40:30 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/20 09:12:14 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-webkit-gtk-${VERSION}
 COMMENT=		Ruby binding of WebKitGTK+
 CATEGORIES=		www
-
-RUBY_VERSION_SUPPORTED=	193
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk3>=${VERSION}:../../x11/ruby-gnome2-gtk3
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel/ruby-gnome2-gobject-introspection
