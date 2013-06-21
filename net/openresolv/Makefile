@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/06/04 09:32:03 roy Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/21 04:46:38 dsainty Exp $
 #
 
 DISTNAME=		openresolv-3.5.5
@@ -14,6 +14,7 @@ LICENSE=		modified-bsd
 
 USE_LANGUAGES=		# none
 HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/resolvconf
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
