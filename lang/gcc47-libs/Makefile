@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/06/14 09:01:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2013/06/21 09:40:47 jperkin Exp $
 
 GCC_PKGNAME=	gcc47
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC47_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc47 package so that with the dependence pattern
 ## '{gcc47,gcc47-libs}>=4.7.*' pkg_all will choose gcc47-libs over gcc47.
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -32,8 +32,8 @@ FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC47_DIST_VERSION}*
 
 LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
 LIBGCC_PREFIX=		${GCC_PKG_PREFIX}/${LIBGCC_SUBPREFIX}
-LIBGCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-BUILD_DEFS+=		LIBGCC_TARGET_MACHINE
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
@@ -44,10 +44,10 @@ SHLIB_EXT=	so
 
 LIBRARY_FILES=	${WRKDIR}/lib_files
 
-GENERATE_PLIST+= ${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${LIBGCC_TARGET_MACHINE}/,' \
+GENERATE_PLIST+= ${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
 			${LIBRARY_FILES};
 GENERATE_PLIST+= ${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${LIBGCC_TARGET_MACHINE}/lib' ;
+	   ${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
 
 ${LIBRARY_FILES}:
 	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC47_DIST_VERSION}*' |		\
@@ -56,10 +56,10 @@ ${LIBRARY_FILES}:
 		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
 
 do-install: ${LIBRARY_FILES}
-	${TEST} -d ${DESTDIR}${LIBGCC_PREFIX}/${LIBGCC_TARGET_MACHINE}/lib ||	\
-		${MKDIR} ${DESTDIR}${LIBGCC_PREFIX}/${LIBGCC_TARGET_MACHINE}/lib
+	${TEST} -d ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib ||	\
+		${MKDIR} ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib
 	cd ${LIBGCC_PREFIX} && 						\
-	  ${PAX} -rw ${DESTDIR}${LIBGCC_PREFIX}/${LIBGCC_TARGET_MACHINE} <${LIBRARY_FILES}
+	  ${PAX} -rw ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE} <${LIBRARY_FILES}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
