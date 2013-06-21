@@ -1,15 +1,9 @@
-$NetBSD: patch-configure,v 1.2 2013/06/15 21:01:22 adam Exp $
+$NetBSD: patch-configure,v 1.3 2013/06/21 13:35:06 jperkin Exp $
+
+Ensure consistent manual page locations.
 
 --- configure.orig	2013-03-25 14:51:40.000000000 +0000
 +++ configure
-@@ -8835,7 +8835,6 @@ echo "${ECHO_T}$ac_cv_lbl_have_siocglifc
- 			#
- 			# Needed for common functions used by pcap-[dlpi,libdlpi].c
- 			#
--		 	SSRC="dlpisubs.c"
- 			;;
- 
- 		*)
 @@ -9986,8 +9985,6 @@ fi
  # Individual cases can override this.
  #
