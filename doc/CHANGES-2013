@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2192 2013/06/21 13:35:22 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.2193 2013/06/21 13:37:33 jperkin Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3424,4 +3424,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/haproxy to 1.4.24 [morr 2013-06-20]
 	Updated lang/gcc47-libs to 4.7.3nb3 [jperkin 2013-06-21]
 	Updated lang/gcc48-libs to 4.8.1nb3 [jperkin 2013-06-21]
-	Updated net/libpcap to 1 [jperkin 2013-06-21]
+	Updated net/libpcap to 1.4.0nb1 [jperkin 2013-06-21]
