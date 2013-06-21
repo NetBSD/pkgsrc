@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2190 2013/06/20 21:42:53 morr Exp $
+$NetBSD: CHANGES-2013,v 1.2191 2013/06/21 09:41:43 jperkin Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3422,3 +3422,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/po4a to 0.23nb11 [wiz 2013-06-18]
 	Updated www/apache24 to 2.4.4nb3 [taca 2013-06-20]
 	Updated net/haproxy to 1.4.24 [morr 2013-06-20]
+	Updated lang/gcc47-libs to 4.7.3nb3 [jperkin 2013-06-21]
+	Updated lang/gcc48-libs to 4.8.1nb3 [jperkin 2013-06-21]
