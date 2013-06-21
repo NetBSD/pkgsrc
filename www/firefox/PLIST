@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2013/05/23 13:12:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.66 2013/06/21 23:11:42 ryoon Exp $
 bin/firefox
 include/firefox/AbstractMediaDecoder.h
 include/firefox/AccEvent.h
@@ -216,12 +216,6 @@ include/firefox/inISearchObserver.h
 include/firefox/inISearchProcess.h
 include/firefox/ipc/IPCMessageUtils.h
 include/firefox/jArray.h
-include/firefox/jconfig.h
-include/firefox/jerror.h
-include/firefox/jinclude.h
-include/firefox/jmorecfg.h
-include/firefox/jpegint.h
-include/firefox/jpeglib.h
 include/firefox/js-config.h
 include/firefox/js.msg
 include/firefox/js/Anchor.h
