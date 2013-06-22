@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/06/06 12:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/22 20:18:25 jperkin Exp $
 
 DISTNAME=	kde-baseapps-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -16,9 +16,11 @@ REPLACE_RUBY+=	dolphin/src/settings/services/servicemenuinstallation
 REPLACE_RUBY+=	dolphin/src/settings/services/servicemenudeinstallation
 
 REPLACE_INTERPRETER+=	xdg-open
-REPLACE.scheme.old=	.*/bin/env xdg-open
-REPLACE.scheme.new=	${PREFIX}/bin/xdg-open
-REPLACE_FILES.scheme=	lib/konq/Templates/Program.desktop
+REPLACE.xdg-open.old=	.*/bin/env xdg-open
+REPLACE.xdg-open.new=	${PREFIX}/bin/xdg-open
+REPLACE_FILES.xdg-open=	lib/konq/Templates/Program.desktop
+
+CHECK_INTERPRETER_SKIP=	share/kde/templates/.source/Program.desktop
 
 .include "../../lang/ruby/replace.mk"
 
