@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2195 2013/06/22 09:21:34 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2196 2013/06/22 09:27:12 sno Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3427,3 +3427,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libpcap to 1.4.0nb1 [jperkin 2013-06-21]
 	Updated www/firefox to 21.0nb7 [ryoon 2013-06-21]
 	Updated databases/p5-SQL-Statement to 1.405 [sno 2013-06-22]
+	Updated textproc/p5-Text-CSV_XS to 1.01 [sno 2013-06-22]
