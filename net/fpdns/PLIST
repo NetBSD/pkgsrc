@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/08 12:03:07 wiz Exp $
-bin/fpdns.pl
-man/man1/fpdns.1
+@comment $NetBSD: PLIST,v 1.2 2013/06/22 22:35:13 pettai Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Net/DNS/Fingerprint.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Net/DNS/REPLACE
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Net/DNS/Fingerprint/.packlist
+${PERL5_SUB_INSTALLVENDORBIN}/fpdns
+${PERL5_SUB_INSTALLVENDORMAN1DIR}/fpdns.1
