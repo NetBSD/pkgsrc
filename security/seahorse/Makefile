@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2013/06/06 12:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2013/06/22 22:54:10 jperkin Exp $
 
 DISTNAME=	seahorse-2.32.0
 PKGREVISION=	21
@@ -41,6 +41,7 @@ GCONF_SCHEMAS= 	seahorse.schemas
 .include "../../security/gnome-keyring/buildlink3.mk"
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
 #.include "../../devel/libglade/buildlink3.mk"
