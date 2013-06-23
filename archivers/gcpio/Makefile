@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2013/06/09 14:35:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2013/06/23 13:46:28 ryoon Exp $
 #
 
 DISTNAME=	cpio-2.11
 PKGNAME=	g${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=cpio/}
 
@@ -24,6 +25,8 @@ AUTO_MKDIRS=	yes
 TEST_TARGET=		check
 
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
+CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl=yes
+CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
