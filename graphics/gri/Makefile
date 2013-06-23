@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/05/31 12:41:06 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2013/06/23 18:12:46 dholland Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	4
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
+BUILD_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf automake gmake gs:run makeinfo perl
