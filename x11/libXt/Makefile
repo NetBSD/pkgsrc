@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/06/13 22:30:41 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2013/06/23 05:39:56 obache Exp $
 
 DISTNAME=		libXt-1.1.4
 CATEGORIES=		x11 devel
@@ -34,7 +34,7 @@ CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 
 .include "../../mk/compiler.mk"
 
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../x11/libSM/buildlink3.mk"
