@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2198 2013/06/23 05:23:01 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2199 2013/06/23 06:03:39 tsutsui Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3430,3 +3430,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Text-CSV_XS to 1.01 [sno 2013-06-22]
 	Updated net/fpdns to 20130404 [pettai 2013-06-22]
 	Updated graphics/png to 1.6.2nb1 [tsutsui 2013-06-23]
+	Updated x11/mlterm to 3.2.0nb5 [tsutsui 2013-06-23]
