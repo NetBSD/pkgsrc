@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_com_sun_jmx_Makefile,v 1.1 2013/06/23 17:39:43 jperkin Exp $
+
+Disable SunOS multiarch.
+
+--- jdk/make/com/sun/jmx/Makefile.orig	2012-08-10 17:21:31.000000000 +0000
++++ jdk/make/com/sun/jmx/Makefile
+@@ -106,7 +106,7 @@ FILES_ties   = $(subst javax/management/
+ 
+ RMIC_JAVA = $(OUTPUTDIR)/bin/java
+ # need to treat 64bit solaris differently
+-ifeq ($(PLATFORM)-$(LIBARCH), solaris-amd64)
++ifeq ($(PLATFORM)-$(LIBARCH), NOMULTIARCHsolaris-amd64)
+ RMIC_JAVA = $(OUTPUTDIR)/bin/amd64/java
+ endif
+ ifeq ($(PLATFORM)-$(LIBARCH), solaris-sparcv9)
