@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2013/06/06 12:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2013/06/23 18:17:33 dholland Exp $
 
 DISTNAME=	nxtvepg-2.7.6
 PKGREVISION=	7
@@ -16,6 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 			NetBSD-[2-9]*-*
 
 USE_TOOLS+=	gmake perl:run
+DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
