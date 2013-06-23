@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_sun_rmi_rmi_Makefile,v 1.1 2013/06/23 17:39:43 jperkin Exp $
+
+Disable SunOS multiarch.
+
+--- jdk/make/sun/rmi/rmi/Makefile.orig	2013-06-18 11:53:51.077890050 +0000
++++ jdk/make/sun/rmi/rmi/Makefile
+@@ -93,7 +93,7 @@ ifeq ($(PLATFORM), linux)
+   BUILD_TARGETS += bin
+ endif
+ ifeq ($(PLATFORM), solaris)
+-  ifeq ($(ARCH_DATA_MODEL), 32)
++  ifneq ($(ARCH_DATA_MODEL), NOMULTIARCH64)
+     BUILD_TARGETS += bin
+   endif
+ endif

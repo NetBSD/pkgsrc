@@ -1,6 +1,8 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.1 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.2 2013/06/23 17:39:43 jperkin Exp $
 
 GCC support.
+
+Disable SunOS multiarch.
 
 --- hotspot/make/solaris/makefiles/gcc.make.orig	2012-08-10 16:23:14.000000000 +0000
 +++ hotspot/make/solaris/makefiles/gcc.make
@@ -28,7 +30,17 @@ GCC support.
  
  ARCHFLAG = $(ARCHFLAG/$(BUILDARCH))
  
-@@ -103,6 +115,11 @@ ifdef CC_INTERP
+@@ -82,7 +94,8 @@ ARCHFLAG/amd64   = -m64 -march=k8
+ 
+ # Optional sub-directory in /usr/lib where BUILDARCH libraries are kept.
+ ISA_DIR=$(ISA_DIR/$(BUILDARCH))
+-ISA_DIR/amd64=/amd64
++ISA_DIR/amd64=
++NOMULTIARCHISA_DIR/amd64=/amd64
+ ISA_DIR/i486=
+ ISA_DIR/sparcv9=/64
+ 
+@@ -103,6 +116,11 @@ ifdef CC_INTERP
    CFLAGS += -DCC_INTERP
  endif
  
@@ -40,7 +52,7 @@ GCC support.
  # Keep temporary files (.ii, .s)
  ifdef NEED_ASM
    CFLAGS += -save-temps
-@@ -113,9 +130,18 @@ endif
+@@ -113,9 +131,18 @@ endif
  
  # Compiler warnings are treated as errors 
  WARNINGS_ARE_ERRORS = -Werror 
@@ -62,7 +74,7 @@ GCC support.
  # Special cases 
  CFLAGS_WARN/BYFILE = $(CFLAGS_WARN/$@)$(CFLAGS_WARN/DEFAULT$(CFLAGS_WARN/$@))  
  
-@@ -173,7 +199,7 @@ MAPFLAG = -Xlinker -M -Xlinker FILENAME
+@@ -173,7 +200,7 @@ MAPFLAG = -Xlinker -M -Xlinker FILENAME
  endif 
  
  # Use $(SONAMEFLAG:SONAME=soname) to specify the intrinsic name of a shared obj
@@ -71,7 +83,7 @@ GCC support.
  
  # Build shared library
  SHARED_FLAG = -shared
-@@ -181,17 +207,34 @@ SHARED_FLAG = -shared
+@@ -181,17 +208,34 @@ SHARED_FLAG = -shared
  #------------------------------------------------------------------------
  # Debug flags
  
