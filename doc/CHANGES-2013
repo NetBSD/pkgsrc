@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2200 2013/06/23 12:20:12 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.2201 2013/06/23 13:47:22 ryoon Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3431,3 +3431,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/fpdns to 0.10.0pre20130404 [pettai 2013-06-22]
 	Updated graphics/png to 1.6.2nb1 [tsutsui 2013-06-23]
 	Updated x11/mlterm to 3.2.0nb5 [tsutsui 2013-06-23]
+	Updated archivers/gcpio to 2.11nb1 [ryoon 2013-06-23]
