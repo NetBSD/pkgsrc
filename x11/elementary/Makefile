@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/16 18:56:06 sno Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/23 18:50:08 dholland Exp $
 #
 
 DISTNAME=	elementary-1.7.7
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_TOOLS+=	autoconf # because I patched configure.ac
+USE_TOOLS+=	autoconf automake # because I patched configure.ac
 USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE=	elementary
