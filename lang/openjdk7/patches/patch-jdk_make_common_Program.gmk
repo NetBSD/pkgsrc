@@ -1,8 +1,8 @@
-$NetBSD: patch-jdk_make_common_Program.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+$NetBSD: patch-jdk_make_common_Program.gmk,v 1.2 2013/06/23 17:39:43 jperkin Exp $
 
 GCC support.
 
---- jdk/make/common/Program.gmk.orig	2013-06-11 09:37:03.843509400 +0000
+--- jdk/make/common/Program.gmk.orig	2013-06-18 09:09:41.950128156 +0000
 +++ jdk/make/common/Program.gmk
 @@ -65,7 +65,10 @@ program: $(ACTUAL_PROGRAM)
  ifndef CROSS_COMPILE_ARCH
@@ -16,14 +16,24 @@ GCC support.
    include $(BUILDDIR)/common/Mapfile-vers.gmk
  endif
  
-@@ -110,6 +113,7 @@ ifneq (,$(findstring $(PLATFORM), linux
+@@ -110,12 +113,13 @@ ifneq (,$(findstring $(PLATFORM), linux
    LDFLAGS += -L $(LIBDIR)/$(LIBARCH)/jli
    OTHER_LDLIBS += -ljli
    ifeq ($(PLATFORM), solaris)
 +    LDFLAGS += -R ${PREFIX}/java/openjdk7/jre/lib/${LIBARCH}/jli
      ifeq ($(ARCH_DATA_MODEL), 32)
-       LDFLAGS += -R \$$ORIGIN/../lib/$(LIBARCH)/jli
-       LDFLAGS += -R \$$ORIGIN/../jre/lib/$(LIBARCH)/jli
+-      LDFLAGS += -R \$$ORIGIN/../lib/$(LIBARCH)/jli
+-      LDFLAGS += -R \$$ORIGIN/../jre/lib/$(LIBARCH)/jli
++#     LDFLAGS += -R \$$ORIGIN/../lib/$(LIBARCH)/jli
++#     LDFLAGS += -R \$$ORIGIN/../jre/lib/$(LIBARCH)/jli
+     else # ! ARCH_DATA_MODEL 64-bit
+-      LDFLAGS += -R \$$ORIGIN/../../lib/$(LIBARCH)/jli
+-      LDFLAGS += -R \$$ORIGIN/../../jre/lib/$(LIBARCH)/jli
++#     LDFLAGS += -R \$$ORIGIN/../../lib/$(LIBARCH)/jli
++#     LDFLAGS += -R \$$ORIGIN/../../jre/lib/$(LIBARCH)/jli
+     endif # ARCH_DATA_MODEL
+   endif # PLATFORM SOLARIS
+   ifeq ($(PLATFORM), linux)
 @@ -124,6 +128,9 @@ ifneq (,$(findstring $(PLATFORM), linux
      LDFLAGS += -Wl,-rpath -Wl,\$$ORIGIN/../lib/$(LIBARCH)/jli
      LDFLAGS += -Wl,-rpath -Wl,\$$ORIGIN/../jre/lib/$(LIBARCH)/jli
