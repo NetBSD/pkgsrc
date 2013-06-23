@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_java_Makefile,v 1.1 2013/06/23 17:39:43 jperkin Exp $
+
+Disable SunOS multiarch.
+
+--- jdk/make/java/Makefile.orig	2013-06-18 11:53:51.041002241 +0000
++++ jdk/make/java/Makefile
+@@ -48,7 +48,7 @@ SUBDIRS_misc       = npt java_crw_demo j
+ 
+ 
+ ifeq ($(PLATFORM), solaris)
+-  ifeq ($(ARCH_DATA_MODEL), 32)
++  ifneq ($(ARCH_DATA_MODEL), NOMULTIARCH64)
+     SUBDIRS += jexec
+   endif
+ endif # PLATFORM
