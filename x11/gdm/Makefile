@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2013/06/06 12:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2013/06/23 18:00:19 jperkin Exp $
 #
 
 DISTNAME=	gdm-2.20.11
@@ -121,7 +121,7 @@ PLIST.dmx=		yes
 PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 
 PLIST_VARS+=		gdmopen
-.if exists(/usr/include/linux/vt.h)
+.if exists(/usr/include/linux/vt.h) || ${OPSYS} == "SunOS"
 PLIST.gdmopen=		yes
 .endif
 PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
