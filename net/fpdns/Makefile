@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/06/22 22:35:13 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/23 12:18:34 pettai Exp $
 #
 
-#DISTNAME=	kirei-fpdns-23eb0bf
 DISTNAME=	fpdns-20130404
+PKGNAME=	fpdns-0.10.0pre20130404
 CATEGORIES=	net
 MASTER_SITES=	-https://github.com/kirei/fpdns/archive/20130404.zip
 EXTRACT_SUFX=	.zip
