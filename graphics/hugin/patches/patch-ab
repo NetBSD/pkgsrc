@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2011/01/13 13:52:53 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2013/06/23 19:00:14 dholland Exp $
 
 --- CMakeModules/FindPNG.cmake.orig	2010-09-28 22:06:45.000000000 +0000
 +++ CMakeModules/FindPNG.cmake
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.6 2011/01/13 13:52:53 wiz Exp $
    find_library_with_debug(PNG_LIBRARIES
      WIN32_DEBUG_POSTFIX d
      NAMES png libpng libpng14 wxpng
-+    NAMES png libpng png15 libpng15 wxpng
++    NAMES png libpng png15 libpng15 png16 libpng16 wxpng
      PATHS /usr/lib /usr/local/lib ${SOURCE_BASE_DIR}/lpng142/lib ${SOURCE_BASE_DIR}/lpng141/lib ${SOURCE_BASE_DIR}/lpng140/lib ${wxWidgets_LIB_DIR}
    )
  
