@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12314 2013/06/20 21:42:53 morr Exp $
+$NetBSD: TODO,v 1.12315 2013/06/23 15:04:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -320,7 +320,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.8.5.9
+	o ImageMagick-6.8.6.1
 	o MAMEDiff-2.30
 	o Mesa-9.1.3
 	o MesaLib-9.1.3
@@ -369,6 +369,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
+	o apr-1.4.8
+	o apr-util-1.5.2
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
@@ -450,6 +452,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csound5-5.13
 	o cups-1.6.2
+	o curl-7.31.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
@@ -547,6 +550,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gap-4r4p9
 	o gated-3.6
 	o gaupol-0.22
+	o gbrainy-2.21
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gdal-1.9.2
@@ -722,6 +726,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o level9-4.1
 	o lgeneral-1.2.3
 	o libAppleWM-1.4.1
+	o libXv-1.0.9
 	o libarchive-3.0.4
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
@@ -804,6 +809,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
 	o monit-5.1.1
+	o mono-3.0.12
 	o moserial-2.30.0 [GNOME 2.30]
 	o mosh-1.2.4
 	o mousetweaks-2.32.1 [GNOME 2.32]
@@ -815,7 +821,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpop-1.0.28
 	o mserv-devel-0.41
 	o mu-0.9.9.5
-	o multitail-5.2.10
+	o multitail-5.2.13
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
@@ -878,7 +884,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
-	o parallel-20130422
+	o parallel-20130622
 	o pari-2.5.3
 	o patch-2.7.1
 	o patchutils-0.3.2
@@ -913,6 +919,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.22.5
 	o postal-0.72
 	o powermanga-0.91
 	o powwow-1.2.16
@@ -931,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-beets-1.2.1
 	o py-cairo-1.10.0
 	o py-dateutil-2.0
 	o py-game-1.9.1 [needs portmidi]
@@ -1141,7 +1149,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130615
+	o x264-devel-20130622
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
@@ -1156,7 +1164,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-intel-2.21.9
+	o xf86-video-intel-2.21.10
 	o xf86-video-mga-1.9.100
 	o xf86-video-modesetting-0.7.0 [wip]
 	o xf86-video-sisusb-0.9.4
