@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2013/06/16 08:58:06 obache Exp $
+# $NetBSD: Makefile,v 1.68 2013/06/23 01:09:43 tsutsui Exp $
 #
 
 DISTNAME=	mikutter.0.2.2.1264
@@ -24,7 +24,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../devel/ruby-memoize
 DEPENDS+=	${RUBY_PKGPREFIX}-bsearch>=1.5:../../devel/ruby-bsearch
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable-[0-9]*:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array-[0-9]*:../../misc/ruby-typed-array
-#DEPENDS+=	${RUBY_PKGPREFIX}-test-unmit-[0-9]*:../../devel/ruby-test-unit
+#DEPENDS+=	${RUBY_PKGPREFIX}-test-unit-[0-9]*:../../devel/ruby-test-unit
 # notify-send
 DEPENDS+=	{libnotify-[0-9]*,libnotify07-[0-9]*}:../../sysutils/libnotify
 
