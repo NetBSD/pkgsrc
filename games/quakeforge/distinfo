@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/03/28 21:25:52 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/06/23 05:28:09 dholland Exp $
 
 SHA1 (quakeforge-0.5.5.tar.gz) = 3ceb229b3d777b6c5e0cb1530b4547b20737f402
 RMD160 (quakeforge-0.5.5.tar.gz) = d22b29498e950bfdf96169bafee6409fca1a8e11
@@ -27,7 +27,7 @@ SHA1 (patch-au) = 5fbe311a03bc65e39e501b38f50a9c42b298a03a
 SHA1 (patch-av) = 8ba99fa13916ab9efd881a89760307fc5863e9d5
 SHA1 (patch-aw) = d02d3a0cfbb47ad2f73e3ee523aed2964a8fcbae
 SHA1 (patch-include_QF_llist.h) = 34b69e99ca69d4564d7100b0e3bcd8d8a024ec94
-SHA1 (patch-include_QF_mathlib.h) = bb25e8798ff1339731e2fbb0f8e7c4ae7ba86e68
+SHA1 (patch-include_QF_mathlib.h) = 4ac3847ae96c053d42085a942fc9100858f81080
 SHA1 (patch-include_r__dynamic.h) = e37cd1d4e242db48793c29c2b78aa78eb14d138d
 SHA1 (patch-include_r__local.h) = 7bb3b46ea3835489a20609739bd7a8dc79b36c96
 SHA1 (patch-libs_util_llist.c) = d41fdac88ac1c9dbccd1bffd512f7e34ae381860
