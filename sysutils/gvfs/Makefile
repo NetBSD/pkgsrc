@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2013/06/06 12:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2013/06/23 18:16:34 jperkin Exp $
 #
 
 DISTNAME=	gvfs-1.6.7
@@ -69,6 +69,8 @@ CONFIGURE_ARGS+=	--disable-fuse
 .endif
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE=500 -D__EXTENSIONS__
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.23.4
 .include "../../devel/glib2/modules.mk"
