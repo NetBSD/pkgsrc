@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/06/22 19:49:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2013/06/23 16:59:16 jperkin Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	3
@@ -37,8 +37,8 @@ SED_TRANSFORMS+=	-e 's,u_int16_t,uint16_t,g'
 SED_TRANSFORMS+=	-e 's,u_int32_t,uint32_t,g' 
 SED_TRANSFORMS+=	-e "s,@prefix@,${PREFIX},g"
 SED_TRANSFORMS+=	-e "s,@exec_prefix@,${PREFIX},g"
-SED_TRANSFORMS+=	-e "s,@LIBUSB_VERSION@,${PKGVERSION:C/nb[0-9]*$//},g"
-SED_TRANSFORMS+=	-e "s,@VERSION@,${PKGVERSION:C/nb[0-9]*$//},g"
+SED_TRANSFORMS+=	-e "s,@LIBUSB_VERSION@,${PKGVERSION_NOREV},g"
+SED_TRANSFORMS+=	-e "s,@VERSION@,${PKGVERSION_NOREV},g"
 SED_TRANSFORMS+=	-e "s,@includedir@,${PREFIX}/include,g"
 SED_TRANSFORMS+=	-e "s,@libdir@,${PREFIX}/lib,g"
 SED_TRANSFORMS+=	-e "s,@OSLIBS@,,g"
