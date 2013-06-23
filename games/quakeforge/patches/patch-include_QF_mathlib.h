@@ -1,4 +1,4 @@
-$NetBSD: patch-include_QF_mathlib.h,v 1.2 2013/06/23 05:28:09 dholland Exp $
+$NetBSD: patch-include_QF_mathlib.h,v 1.3 2013/06/23 19:54:42 dholland Exp $
 
 --- include/QF/mathlib.h.orig	2013-03-28 15:01:01.000000000 +0000
 +++ include/QF/mathlib.h
@@ -10,7 +10,7 @@ $NetBSD: patch-include_QF_mathlib.h,v 1.2 2013/06/23 05:28:09 dholland Exp $
 -extern inline qboolean R_CullSphere (const vec3_t origin, const float radius);
 -extern inline float VectorNormalize (vec3_t v);	// returns vector length
  #ifndef IMPLEMENT_R_Cull
-+#if defined(__CLANG__) || !defined(__GNUC__) || defined(__GNC_STDC_INLINE__)
++#if defined(__clang__) || !defined(__GNUC__) || defined(__GNC_STDC_INLINE__)
 +inline
 +#else
  extern inline
@@ -22,7 +22,7 @@ $NetBSD: patch-include_QF_mathlib.h,v 1.2 2013/06/23 05:28:09 dholland Exp $
  }
  
  #ifndef IMPLEMENT_R_Cull
-+#if defined(__CLANG__) || !defined(__GNUC__) || defined(__GNC_STDC_INLINE__)
++#if defined(__clang__) || !defined(__GNUC__) || defined(__GNC_STDC_INLINE__)
 +inline
 +#else
  extern inline
@@ -34,7 +34,7 @@ $NetBSD: patch-include_QF_mathlib.h,v 1.2 2013/06/23 05:28:09 dholland Exp $
  }
  
  #ifndef IMPLEMENT_VectorNormalize
-+#if defined(__CLANG__) || !defined(__GNUC__) || defined(__GNC_STDC_INLINE__)
++#if defined(__clang__) || !defined(__GNUC__) || defined(__GNC_STDC_INLINE__)
 +inline
 +#else
  extern inline
