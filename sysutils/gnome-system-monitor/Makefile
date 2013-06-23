@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/06/06 12:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/06/23 17:05:41 jperkin Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.28.2
@@ -19,7 +19,13 @@ USE_LANGUAGES=		c c++
 
 CONFLICTS+=		gnome2-system-monitor-[0-9]*
 
+.include "../../mk/bsd.prefs.mk"
+
+# XXX: bound this check better
+.if ${OPSYS} != "SunOS"
 LIBS+=			-lutil
+.endif
+
 GCONF_SCHEMAS+=		gnome-system-monitor.schemas
 
 .include "../../devel/GConf/schemas.mk"
