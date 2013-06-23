@@ -1,5 +1,13 @@
---- util/misc.c.orig	2013-06-23 11:14:52.000000000 +0200
-+++ util/misc.c	2013-06-23 11:16:27.000000000 +0200
+$NetBSD: patch-util_misc.c,v 1.2 2013/06/23 09:45:52 obache Exp $
+
+* prevent to crash, as PR pkg/47777
+  taken from Red Hat Bug 199770:
+    https://bugzilla.redhat.com/show_bug.cgi?id=199770
+  upstream bug #668:
+    http://sourceforge.net/p/nedit/bugs/668/
+
+--- util/misc.c.orig	2004-08-09 22:20:00.000000000 +0000
++++ util/misc.c
 @@ -383,7 +383,10 @@ Boolean FindBestVisual(Display *display,
  	*colormap = cachedColormap;
  	return (*visual == DefaultVisual(display, screen));
