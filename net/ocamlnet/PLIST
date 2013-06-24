@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/06/11 14:50:43 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/24 15:11:38 jperkin Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/equeue
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netcgi2-plex
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netplex
@@ -17,6 +17,7 @@
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netsys
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/rpc-generator
 ${PLIST.ssl}@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/rpc-ssl
+${PLIST.xti}@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/rpc-xtl
 ${PLIST.ssl}@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/equeue-ssl
 lib/ocaml/site-lib/equeue/META
 ${PLIST.opt}lib/ocaml/site-lib/equeue/equeue.a
@@ -643,6 +644,17 @@ ${PLIST.ssl}lib/ocaml/site-lib/rpc-ssl/rpc_ssl.mli
 ${PLIST.ssl}${PLIST.opt}lib/ocaml/site-lib/rpc-ssl/rpc_ssl.cmxa
 ${PLIST.ssl}${PLIST.opt}lib/ocaml/site-lib/rpc-ssl/rpc_ssl.p.a
 ${PLIST.ssl}${PLIST.opt}lib/ocaml/site-lib/rpc-ssl/rpc_ssl.p.cmxa
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/META
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/dllrpc_xti.so
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/librpc_xti.a
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/librpc_xti.p.a
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti.a
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti.cma
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti.cmxa
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti.p.a
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti.p.cmxa
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti_client.cmi
+${PLIST.xti}lib/ocaml/site-lib/rpc-xti/rpc_xti_client.mli
 lib/ocaml/site-lib/shell/META
 ${PLIST.opt}lib/ocaml/site-lib/shell/shell.a
 lib/ocaml/site-lib/shell/shell.cma
@@ -683,4 +695,5 @@ ${PLIST.opt}lib/ocaml/site-lib/smtp/smtp.p.cmxa
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/netsys
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/rpc-generator
 ${PLIST.ssl}@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/rpc-ssl
+${PLIST.xti}@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/rpc-xti
 ${PLIST.ssl}@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/equeue-ssl
