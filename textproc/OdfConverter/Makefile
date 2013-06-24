@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/06/17 12:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/24 05:32:28 dholland Exp $
 #
 
 DISTNAME=	OdfAddinForOffice-src-3.0
@@ -14,7 +14,7 @@ COMMENT=	Converter between Microsoft Office 2007 and OpenOffice formats
 LICENSE=	modified-bsd
 
 # mono-basic DLLs are required at run-time (but not at build time).
-DEPENDS+=	mono-basic-[0-9]*:../../lang/mono2-basic
+DEPENDS+=	mono-basic-[0-9]*:../../lang/mono-basic
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config
