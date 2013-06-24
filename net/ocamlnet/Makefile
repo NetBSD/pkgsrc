@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/06/11 14:50:43 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/24 15:11:38 jperkin Exp $
 #
 
 DISTNAME=		ocamlnet-3.6.5
@@ -20,17 +20,22 @@ CONFIGURE_ARGS+=	-without-nethttpd -without-rpc-auth-dh -disable-gtk2 \
 USE_TOOLS+=		gmake
 BUILD_TARGET=		all
 
-PLIST_VARS=		opt ssl
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS=		opt ssl xti
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=		opt
 PLIST.opt=		yes
 .endif
+.if ${OPSYS} == "SunOS"
+PLIST.xti=		yes
+.endif
 
 SUBPKGDIRS=		equeue netcgi2-plex netplex pop rpc-ssl equeue-ssl \
 			netclient netshm rpc shell netcamlbox netgssapi \
 			netstring rpc-auth-local smtp netcgi2 netmulticore \
-			netsys rpc-generator
+			netsys rpc-generator rpc-xti
 
 INSTALLATION_DIRS=	lib/ocaml/site-lib
 
