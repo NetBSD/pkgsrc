@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/05/31 12:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2013/06/24 13:44:20 jperkin Exp $
 
 DISTNAME=	neon-0.29.6
 PKGREVISION=	4
@@ -23,6 +23,8 @@ PKGCONFIG_OVERRIDE=	neon.pc.in
 TEST_TARGET=		check
 #selftest needs perl
 USE_TOOLS+=		perl
+
+LDFLAGS.SunOS+=		-lintl
 
 post-build:
 	cd ${WRKSRC}/doc/man && \
