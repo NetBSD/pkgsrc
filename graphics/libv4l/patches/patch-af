@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.4 2012/04/18 17:47:22 hans Exp $
+$NetBSD: patch-af,v 1.5 2013/06/24 15:57:21 jperkin Exp $
 
 * XXXX
 * `mode_t' is promoted to `int' when passed through `...'.
+* Fix SunOS 64-bit.
 
 --- libv4l2/v4l2convert.c.orig	2008-08-26 12:32:39.000000000 +0000
 +++ libv4l2/v4l2convert.c
@@ -45,7 +46,7 @@ $NetBSD: patch-af,v 1.4 2012/04/18 17:47:22 hans Exp $
  /* Check that open/read/mmap is not a define */
  #if defined open || defined read || defined mmap
  #error open/read/mmap is a prepocessor macro !!
-@@ -61,7 +76,7 @@ LIBV4L_PUBLIC int open (const char *file
+@@ -61,7 +80,7 @@ LIBV4L_PUBLIC int open (const char *file
      mode_t mode;
  
      va_start (ap, oflag);
@@ -54,3 +55,33 @@ $NetBSD: patch-af,v 1.4 2012/04/18 17:47:22 hans Exp $
  
      fd = syscall(SYS_open, file, oflag, mode);
  
+@@ -92,6 +111,7 @@ LIBV4L_PUBLIC int open (const char *file
+   return fd;
+ }
+ 
++#if !(defined(__sun) && defined(_LP64))
+ LIBV4L_PUBLIC int open64(const char *file, int oflag, ...)
+ {
+   int fd;
+@@ -114,6 +134,7 @@ LIBV4L_PUBLIC int open64(const char *fil
+ 
+   return fd;
+ }
++#endif
+ 
+ LIBV4L_PUBLIC int close(int fd)
+ {
+@@ -148,11 +169,13 @@ LIBV4L_PUBLIC void *mmap(void *start, si
+   return v4l2_mmap(start, length, prot, flags, fd, offset);
+ }
+ 
++#if !(defined(__sun) && defined(_LP64))
+ LIBV4L_PUBLIC void *mmap64(void *start, size_t length, int prot, int flags, int fd,
+   __off64_t offset)
+ {
+   return v4l2_mmap(start, length, prot, flags, fd, offset);
+ }
++#endif
+ 
+ LIBV4L_PUBLIC int munmap(void *start, size_t length)
+ {
