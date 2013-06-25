@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2013/06/08 06:48:24 asau Exp $
+$NetBSD: distinfo,v 1.32 2013/06/25 10:06:34 jperkin Exp $
 
 SHA1 (erlang/otp_src_R16B.tar.gz) = a538c64a4fd9ed16a29f981321f0830a3da02bae
 RMD160 (erlang/otp_src_R16B.tar.gz) = e786a8c7ba578ed9612cd7e46565f48b7435390b
@@ -9,6 +9,8 @@ SHA1 (patch-am) = 11ff769b6954f950d6447e69b033cdc0bfa767e9
 SHA1 (patch-ao) = a4ee17b0a81415d541cb55d76b3c1ecc3148c2c2
 SHA1 (patch-ay) = 7d1a7f79e8c3ea909b2f4476d9ff271ed1318234
 SHA1 (patch-erts_emulator_sys_common_erl__mseg.c) = 087b9c33bfd2b58c5e961b6d8a1c10be09358936
+SHA1 (patch-lib_os__mon_c__src_ferrule.c) = ba09f2546613e8184cc9a400ec6571839cbd4be5
 SHA1 (patch-lib_os__mon_c__src_memsup.c) = 1a6ae70dff9e6468c9c84d3fe1964dab6624a8c3
+SHA1 (patch-lib_os__mon_c__src_mod__syslog.c) = cf50d11f9448a6a7f7327ca9ba18772270eb6080
 SHA1 (patch-lib_wx_configure) = 995744de7390813683257050f19c51e87a3bb58f
 SHA1 (patch-lib_wx_configure.in) = f38d2ed003dfd1d069f6a08a73e7971c135759d8
