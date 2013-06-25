@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2204 2013/06/24 16:17:36 morr Exp $
+$NetBSD: CHANGES-2013,v 1.2205 2013/06/25 13:35:17 kleink Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3435,3 +3435,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/magicpoint to 1.13anb18 [wiz 2013-06-23]
 	Updated x11/libXv to 1.0.9 [wiz 2013-06-23]
 	Updated www/wordpress to 3.5.2 [morr 2013-06-24]
+	Updated www/py-flask-login to 0.2.3 [kleink 2013-06-25]
+	Updated www/py-flask-frozen to 0.11 [kleink 2013-06-25]
