@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/03/13 09:29:51 kleink Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/25 13:32:32 kleink Exp $
 
-DISTNAME=	Frozen-Flask-0.10
-PKGNAME=	${PYPKGPREFIX}-flask-frozen-0.10
+DISTNAME=	Frozen-Flask-0.11
+PKGNAME=	${PYPKGPREFIX}-flask-frozen-0.11
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Frozen-Flask/
 
@@ -12,6 +12,9 @@ LICENSE=	modified-bsd
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 USE_LANGUAGES=	# empty
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	31 32
 
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.7:../../www/py-flask
 
