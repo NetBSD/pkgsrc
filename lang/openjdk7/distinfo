@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.25 2013/06/23 17:39:43 jperkin Exp $
+$NetBSD: distinfo,v 1.26 2013/06/26 12:52:34 ryoon Exp $
 
-SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
-RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
-Size (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
 SHA1 (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = d9e3e83dd9664cfe1dcd4841c082db3f559af922
 RMD160 (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = a23e122b76b3dfed5be7bef3388041649df0b346
 Size (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = 4257152 bytes
@@ -27,6 +24,18 @@ Size (openjdk7/bootstrap-jdk7-bin-netbsd-6-amd64-20110811.tar.bz2) = 4082640 byt
 SHA1 (openjdk7/bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2) = baa7e0b2010c1cf918a88654b36db39935e532a4
 RMD160 (openjdk7/bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2) = 791f8db986905f2477adcb1784fea957cd9501d2
 Size (openjdk7/bootstrap-jdk7-bin-netbsd-6-i386-20110811.tar.bz2) = 3622007 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = e18704c72646ef4f66e37ea7a2feb8dad9008079
+RMD160 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = b661b7a434d7d3c27614a2527b0fb2ed065d1f05
+Size (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz) = 20011172 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = d7994e2a485c3e4eca44e81f4215bb4c35b54d04
+RMD160 (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = bb9ba4fc83ec276c5e8decd53a6523eca1f6b819
+Size (openjdk7/bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz) = 21142004 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz) = b9445fa4cc4674ba8b9330e45ae65c597f5fca10
+RMD160 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz) = aa2443fa202f3ed8694b6d0e4031622b5da52283
+Size (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz) = 20874080 bytes
+SHA1 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = aa44be237fac1b7c9b4044ea32cab9a0c2fb3ab2
+RMD160 (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = 5422564d6a5ba590b0906fdbb9de20091d7dabf2
+Size (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = 21676584 bytes
 SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
 RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
 Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
@@ -112,7 +121,7 @@ SHA1 (patch-hotspot_src_os_posix_vm_os__posix.cpp) = da6017447c5537048fcf04198c4
 SHA1 (patch-hotspot_src_os_solaris_dtrace_jhelper.d) = 43ae9934ce7cf477f7968bcf9ba3c57e98f65cc8
 SHA1 (patch-hotspot_src_os_solaris_vm_decoder__solaris.cpp) = 3be8a96525ead1df18a40b18dccfad4ef2765d47
 SHA1 (patch-hotspot_src_os_solaris_vm_os__solaris.cpp) = cf7c6226ad7c322f43df900be0e69686ca3a7a57
-SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = 7d244b859debf4f68e49fe6fb36fe2598951fcdb
+SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = 57b4c2a2851ce1bc11faf6066ed274695d856c97
 SHA1 (patch-jdk_make_com_sun_Makefile) = 7b3b8163a4343b820f50b00babd4363c141ada67
 SHA1 (patch-jdk_make_com_sun_java_pack_Makefile) = bb258d4c2235ea780810d980b84b90a0380f3b46
 SHA1 (patch-jdk_make_com_sun_jmx_Makefile) = 65fa2d6191311766cdb5d9933d760cae7955f664
