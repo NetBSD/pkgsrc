@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2013/05/23 11:22:44 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2013/06/26 11:51:50 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace
 PKG_SUGGESTED_OPTIONS=	openssl
 
-.if ${OPSYS} == "SunOS" && exists(/usr/sbin/dtrace)
+.if (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin") \
+    && exists(/usr/sbin/dtrace)
 PKG_SUGGESTED_OPTIONS+=	dtrace
 .endif
 
