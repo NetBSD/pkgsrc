@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/31 12:42:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/26 14:26:47 joerg Exp $
 #
 
 DISTNAME=	etckeeper_1.3
@@ -71,7 +71,7 @@ do-install:
 
 .PHONY:gen-cf-files
 gen-cf-files:
-	${ECHO} '# $$NetBSD: Makefile,v 1.2 2013/05/31 12:42:00 wiz Exp $$'	>cf-files.mk
+	grep '[$$]NetBSD' >cf-files.mk
 	${ECHO} '#'		>>cf-files.mk
 	${SH} -c 'cd ${WRKSRC} && ${LS} -1 *.d/*' | 			\
 	${SED} -e'/\.orig$$/d' -e's@^@CF_FILES+= @' >>cf-files.mk
