@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2013/06/11 23:34:48 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2013/06/26 15:50:30 joerg Exp $
 
 DISTNAME=	eukleides-1.5.4
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.eukleides.org/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +39,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 pre-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
 
-.include "../../mk/curses.buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../print/kpathsea/texmf.mk"
 .include "../../mk/bsd.pkg.mk"
