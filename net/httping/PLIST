@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/05 18:02:42 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/26 12:39:24 ryoon Exp $
 bin/httping
 man/man1/httping.1
+man/nl/man1/httping-nl.1
+share/doc/httping/license.OpenSSL
+share/doc/httping/license.txt
+share/doc/httping/readme.txt
+share/locale/nl/LC_MESSAGES/httping.mo
