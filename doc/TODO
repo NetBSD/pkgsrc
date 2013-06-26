@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12317 2013/06/24 12:27:55 mef Exp $
+$NetBSD: TODO,v 1.12318 2013/06/26 12:06:37 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o autogen-5.17.4
 	o automake-1.13.4
 	o avidemux-2.6
-	o avl-2.0.2a
+	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o awesome-3.5
 	o baci-20040415
 	o balsa-2.4.9
