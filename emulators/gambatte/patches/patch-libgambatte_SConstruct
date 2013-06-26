@@ -1,0 +1,19 @@
+$NetBSD: patch-libgambatte_SConstruct,v 1.1 2013/06/26 21:25:02 joerg Exp $
+
+--- libgambatte/SConstruct.orig	2013-06-26 20:24:31.000000000 +0000
++++ libgambatte/SConstruct
+@@ -1,10 +1,13 @@
++import os
++
+ global_cflags = ARGUMENTS.get('CFLAGS', '-Wall -Wextra -O2 -fomit-frame-pointer')
+ global_cxxflags = ARGUMENTS.get('CXXFLAGS', global_cflags + ' -fno-exceptions -fno-rtti')
+ global_defines = ' -DHAVE_STDINT_H -DCHAR_WIDTH_8'
+ 
+ env = Environment(CPPPATH = ['src', 'include', '../common'],
+                   CFLAGS = global_cflags + global_defines,
+-                  CXXFLAGS = global_cxxflags + global_defines)
++                  CXXFLAGS = global_cxxflags + global_defines,
++                  ENV = { 'PATH': os.environ['PATH'] })
+ 
+ sourceFiles = Split('''
+ 			src/bitmap_font.cpp
