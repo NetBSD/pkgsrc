@@ -1,18 +1,10 @@
-$NetBSD: patch-media_webrtc_trunk_third__party_libyuv_libyuv.gyp,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_third__party_libyuv_libyuv.gyp,v 1.2 2013/06/26 11:32:12 ryoon Exp $
 
---- media/webrtc/trunk/third_party/libyuv/libyuv.gyp.orig	2013-05-11 19:19:44.000000000 +0000
+--- media/webrtc/trunk/third_party/libyuv/libyuv.gyp.orig	2013-06-17 22:13:19.000000000 +0000
 +++ media/webrtc/trunk/third_party/libyuv/libyuv.gyp
-@@ -9,6 +9,7 @@
- {
-   'variables': {
-      'use_system_libjpeg%': 0,
-+     'yuv_disable_asm%': 0,
-   },
-   'targets': [
-     {
-@@ -50,6 +51,11 @@
-         ],
-       },
+@@ -58,6 +58,11 @@
+         }],
+       ],
        'conditions': [
 +        ['yuv_disable_asm==1', {
 +          'defines': [
