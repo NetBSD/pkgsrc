@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2207 2013/06/26 11:32:51 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2208 2013/06/26 11:34:27 ryoon Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-frozen to 0.11 [kleink 2013-06-25]
 	Updated x11/mlterm to 3.2.0nb6 [tsutsui 2013-06-26]
 	Updated www/firefox to 22.0 [ryoon 2013-06-26]
+	Updated www/firefox-l10n to 22.0 [ryoon 2013-06-26]
