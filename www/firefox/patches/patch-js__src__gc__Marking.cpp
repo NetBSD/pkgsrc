@@ -1,4 +1,4 @@
-$NetBSD: patch-js__src__gc__Marking.cpp,v 1.1 2013/06/21 23:11:42 ryoon Exp $
+$NetBSD: patch-js__src__gc__Marking.cpp,v 1.2 2013/06/26 11:32:12 ryoon Exp $
 
 # HG changeset patch
 # User Martin Husemann <martin@netbsd.org>
@@ -8,14 +8,9 @@ $NetBSD: patch-js__src__gc__Marking.cpp,v 1.1 2013/06/21 23:11:42 ryoon Exp $
 Bug 871101:  Make "kind" a full uintptr_t value so it overwrites its pointer union counterpart for sure r=billm
 
 diff js/src/gc/Marking.cpp js/src/gc/Marking.cpp
---- js/src/gc/Marking.cpp
+--- js/src/gc/Marking.cpp.orig	2013-06-17 22:13:09.000000000 +0000
 +++ js/src/gc/Marking.cpp
-@@ -1199,17 +1199,17 @@ gc::PushArena(GCMarker *gcmarker, ArenaH
-         break;
-     }
- }
- 
- struct SlotArrayLayout
+@@ -1143,7 +1143,7 @@ struct SlotArrayLayout
  {
      union {
          HeapSlot *end;
@@ -24,9 +19,3 @@ diff js/src/gc/Marking.cpp js/src/gc/Marking.cpp
      };
      union {
          HeapSlot *start;
-         uintptr_t index;
-     };
-     JSObject *obj;
- 
-     static void staticAsserts() {
-

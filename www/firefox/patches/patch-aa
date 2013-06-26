@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
+$NetBSD: patch-aa,v 1.12 2013/06/26 11:32:12 ryoon Exp $
 
---- configure.in.orig	2013-05-11 19:19:23.000000000 +0000
+--- configure.in.orig	2013-06-17 22:12:58.000000000 +0000
 +++ configure.in
-@@ -1404,6 +1404,17 @@ if test "$GNU_CC"; then
+@@ -1388,6 +1388,17 @@ if test "$GNU_CC"; then
      CFLAGS=$_SAVE_CFLAGS
-     AC_SUBST(HAVE_TOOLCHAIN_SUPPORT_MSSSE3)
+     AC_SUBST(HAVE_TOOLCHAIN_SUPPORT_MSSE4_1)
  
 +    # Check for -msse4.1 on $CC
 +    AC_MSG_CHECKING([if toolchain supports -msse4.1 option])
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -2848,6 +2862,7 @@ EOF
+@@ -2862,6 +2876,7 @@ EOF
  #pragma GCC visibility push(hidden)
  #pragma GCC visibility push(default)
  #include <string.h>
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
  #pragma GCC visibility pop
  
  __attribute__ ((visibility ("default"))) void Func() {
-@@ -2856,7 +2871,7 @@ __attribute__ ((visibility ("default")))
+@@ -2870,7 +2885,7 @@ __attribute__ ((visibility ("default")))
  }
  EOF
                         ac_cv_have_visibility_builtin_bug=no
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
                           ac_cv_have_visibility_builtin_bug=yes
                         else
                           if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -3018,6 +3033,9 @@ dnl ====================================
+@@ -3032,6 +3047,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3319,6 +3337,9 @@ AC_CACHE_CHECK(
+@@ -3333,6 +3351,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -3989,6 +4010,14 @@ if test -n "$YASM"; then
+@@ -3995,6 +4016,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -4016,11 +4045,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -4022,11 +4051,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -95,41 +95,26 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -5212,7 +5237,11 @@ if test -n "$MOZ_WEBRTC"; then
-         dnl Make sure doesn't get matched by *-linux*
-         MOZ_WEBRTC=
+@@ -5260,7 +5285,7 @@ if test -n "$MOZ_WEBRTC"; then
+             MOZ_WEBRTC=
+         fi
          ;;
 -    *-linux*|*-mingw*|*-darwin*)
-+    *-netbsd*|*-dragonfly*)
-+        dnl Custom socketvar.h is not compatible with NetBSD.
-+        MOZ_WEBRTC=
-+        ;;
-+    *-linux*|*-mingw*|*-darwin*|*-freebsd*|*-openbsd*)
++    *-linux*|*-mingw*|*-darwin*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
          dnl Leave enabled
          ;;
      *)
-@@ -5263,6 +5292,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5314,6 +5339,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VP8_ENCODER=1
      MOZ_VP8_ERROR_CONCEALMENT=1
  
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
 +
-     dnl OpenSLES is only available in Android 2.3 and later; we'll change this
-     dnl hard dependency to a dynamic load with graceful runtime failure before
-     dnl we make --enable-webrtc on by default in Android (bug 815905)
-@@ -5299,8 +5331,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
- AC_SUBST(MOZ_SCTP)
- AC_SUBST(MOZ_SRTP)
- 
--case "$target_cpu" in
--arm*)
-+case "$target" in
-+arm-*-linux*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
-     MOZ_SAMPLE_TYPE_S16=1
-     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
-     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -5704,7 +5736,7 @@ MOZ_ALSA=)
+     if test "$MOZ_WIDGET_TOOLKIT" != "gonk"; then
+        dnl OpenSLES is only available in Android 2.3 and later; we'll change this
+        dnl hard dependency to a dynamic load with graceful runtime failure before
+@@ -5727,7 +5755,7 @@ MOZ_ALSA=)
  
  if test -n "$MOZ_ALSA"; then
      AC_DEFINE(MOZ_CUBEB)
@@ -138,7 +123,7 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
           [echo "$MOZ_ALSA_PKG_ERRORS"
            AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
  fi
-@@ -8311,16 +8343,26 @@ MOZ_ARG_DISABLE_BOOL(necko-wifi,
+@@ -8413,16 +8441,26 @@ MOZ_ARG_DISABLE_BOOL(necko-wifi,
      NECKO_WIFI=,
      NECKO_WIFI=1)
  
@@ -175,8 +160,8 @@ $NetBSD: patch-aa,v 1.11 2013/06/02 06:48:37 ryoon Exp $
  fi
  
  if test "$NECKO_WIFI"; then
-@@ -8981,6 +9023,27 @@ elif test "${OS_TARGET}" = "Android"; th
-    fi
+@@ -9102,6 +9140,27 @@ if test -z "$HAVE_TOOLCHAIN_SUPPORT_MSSE
+   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D yuv_disable_asm=1"
  fi
  
 +# Keep libcubeb and audio_device backends in sync
