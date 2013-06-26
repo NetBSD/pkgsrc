@@ -1,0 +1,12 @@
+$NetBSD: patch-bin_smtp-vilter_Makefile,v 1.1 2013/06/26 21:19:08 joerg Exp $
+
+--- bin/smtp-vilter/Makefile.orig	2013-06-26 21:06:08.000000000 +0000
++++ bin/smtp-vilter/Makefile
+@@ -23,7 +23,6 @@ CLEANFILES+=	y.tab.h rt-dynamic
+ 
+ MAN=		smtp-vilter.8 smtp-vilter.conf.5
+ 
+-BINOWN = 	root
+ BINMOD =	0555
+ .if ${OS} == "NetBSD"
+ BINDIR=		/usr/pkg/sbin
