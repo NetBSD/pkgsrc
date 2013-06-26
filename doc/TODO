@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12318 2013/06/26 12:06:37 ryoon Exp $
+$NetBSD: TODO,v 1.12319 2013/06/26 12:40:19 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -664,7 +664,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o host-20070128
 	o html2wml-0.4.11
 	o htop-1.0.2
-	o httping-2.3.1
 	o httptunnel-3.3
 	o hugin-2012.0.0
 	o hylafax-6.0.5
