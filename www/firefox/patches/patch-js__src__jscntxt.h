@@ -1,4 +1,4 @@
-$NetBSD: patch-js__src__jscntxt.h,v 1.1 2013/06/21 23:11:42 ryoon Exp $
+$NetBSD: patch-js__src__jscntxt.h,v 1.2 2013/06/26 11:32:12 ryoon Exp $
 
 From bugzilla, bug 840242, attachment v1
 Use the runtime page size to control arena decommit.
@@ -7,14 +7,9 @@ As a side effect, this removes the hard coded page-size == 4k requirement.
 
 
 diff js/src/jscntxt.h js/src/jscntxt.h
---- js/src/jscntxt.h
+--- js/src/jscntxt.h.orig	2013-06-17 22:13:11.000000000 +0000
 +++ js/src/jscntxt.h
-@@ -1132,16 +1132,25 @@ struct JSRuntime : public JS::shadow::Ru
-     JSTraceDataOp       gcBlackRootsTraceOp;
-     void                *gcBlackRootsData;
-     JSTraceDataOp       gcGrayRootsTraceOp;
-     void                *gcGrayRootsData;
- 
+@@ -1101,6 +1101,15 @@ struct JSRuntime : js::RuntimeFriendFiel
      /* Stack of thread-stack-allocated GC roots. */
      js::AutoGCRooter   *autoGCRooters;
  
@@ -29,9 +24,4 @@ diff js/src/jscntxt.h js/src/jscntxt.h
 +
      /* Strong references on scripts held for PCCount profiling API. */
      js::ScriptAndCountsVector *scriptAndCountsVector;
- 
-     /* Well-known numbers held for use by this runtime's contexts. */
-     js::Value           NaNValue;
-     js::Value           negativeInfinityValue;
-     js::Value           positiveInfinityValue;
  

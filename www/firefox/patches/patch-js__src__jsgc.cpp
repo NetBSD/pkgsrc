@@ -1,6 +1,7 @@
-$NetBSD: patch-js__src__jsgc.cpp,v 1.1 2013/06/21 23:11:42 ryoon Exp $
+$NetBSD: patch-js__src__jsgc.cpp,v 1.2 2013/06/26 11:32:12 ryoon Exp $
 
-From bugzilla, bug 840242, attachment v1
+From bugzilla, bug 840242,
+https://hg.mozilla.org/integration/mozilla-inbound/rev/49e4ff129351
 Use the runtime page size to control arena decommit.
 
 As a side effect, this removes the hard coded page-size == 4k requirement.

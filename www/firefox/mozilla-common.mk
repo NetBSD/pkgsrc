@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6 2013/06/21 23:11:42 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.7 2013/06/26 11:32:12 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -23,7 +23,6 @@ GCC_REQD+=		4.5
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
-CHECK_INTERPRETER_SKIP+=lib/xulrunner-sdk/sdk/bin/xpt.py
 
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
@@ -67,6 +66,8 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+#BUILD_MAKE_FLAGS+=		MOZ_WEBRTC_IN_LIBXUL=1
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
@@ -141,8 +142,4 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.if (${OPSYS} == "Linux") || (${OPSYS} == "Darwin") || \
-(${OPSYS} == "FreeBSD") || (${OPSYS} == "OpenBSD")
-.include "../../graphics/libv4l/buildlink3.mk"
-.endif
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-js__src__gc__Memory.h,v 1.1 2013/06/21 23:11:42 ryoon Exp $
+$NetBSD: patch-js__src__gc__Memory.h,v 1.2 2013/06/26 11:32:12 ryoon Exp $
 
 From bugzilla, bug 840242, attachment v1
 Use the runtime page size to control arena decommit.
@@ -7,14 +7,9 @@ As a side effect, this removes the hard coded page-size == 4k requirement.
 
 
 diff js/src/gc/Memory.h js/src/gc/Memory.h
---- js/src/gc/Memory.h
+--- js/src/gc/Memory.h.orig	2013-06-17 22:13:09.000000000 +0000
 +++ js/src/gc/Memory.h
-@@ -10,30 +10,41 @@
- #include <stddef.h>
- #include "jsgc.h"
- 
- namespace js {
- namespace gc {
+@@ -16,23 +16,34 @@ namespace gc {
  
  // Sanity check that our compiled configuration matches the currently running
  // instance and initialize any runtime data needed for allocation.
@@ -55,5 +50,3 @@ diff js/src/gc/Memory.h js/src/gc/Memory.h
  
  } // namespace gc
  } // namespace js
- 
- #endif // jsgc_memory_h___
