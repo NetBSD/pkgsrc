@@ -1,0 +1,13 @@
+$NetBSD: patch-src_gwaei_Makefile.in,v 1.1 2013/06/26 21:18:21 joerg Exp $
+
+--- src/gwaei/Makefile.in.orig	2013-06-26 20:40:33.000000000 +0000
++++ src/gwaei/Makefile.in
+@@ -310,7 +310,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = include/gwaei ui help
+ ACLOCAL_AMFLAGS = -I m4
+-DEFINITIONS = -DLOCALEDIR=\"$(localedir)\" -DVERSION=\"$(VERSION)\" -DPACKAGE=\"$(PACKAGE)\" -DDATADIR2=\"$(datadir)\" -DLIBDIR=\"$(libdir)\" -DENCHANT=\"$(ENCHANT)\" -DGWAEI_LOCALEDIR=\"${GWAEI_LOCALEDIR}\" -DGTK_DISABLE_DEPRECATED -DG_SEAL_ENABLE
++DEFINITIONS = -DLOCALEDIR=\"$(localedir)\" -DVERSION=\"$(VERSION)\" -DPACKAGE=\"$(PACKAGE)\" -DDATADIR2=\"$(datadir)\" -DLIBDIR=\"$(libdir)\" -DENCHANT=\"$(ENCHANT)\" -DGWAEI_LOCALEDIR=\"${GWAEI_LOCALEDIR}\" -DG_SEAL_ENABLE
+ gwaei_SOURCES = gwaei.c common.c main.c main-callbacks.c \
+ 	settings-callbacks.c settings.c radsearchtool.c \
+ 	radsearchtool-callbacks.c printing.c main-tabs.c \
