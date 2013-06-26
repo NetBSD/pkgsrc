@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/05/30 15:36:29 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/06/26 21:25:59 joerg Exp $
 
 SHA1 (libcassandra-20101010.tar.gz) = 457dcf1fd24ad310c63eefb3b532f58835f326ef
 RMD160 (libcassandra-20101010.tar.gz) = e3e05861d1c1173d2492d49442aa68ee429d7b8f
@@ -6,7 +6,7 @@ Size (libcassandra-20101010.tar.gz) = 873233 bytes
 SHA1 (patch-aa) = 9cfe12f0fe26514bd7216d49e83248073cf26f4c
 SHA1 (patch-libcassandra_cassandra.cc) = 88d78156cbdbf51e0bd59326e72ca230de3a7688
 SHA1 (patch-libcassandra_cassandra.h) = 751a4b2847e52c87bbd9ccbf05bdcd62dfbb9ae3
-SHA1 (patch-libcassandra_cassandra__factory.cc) = 7582d397c21f81f8cd5b84669204e6e2dfe93e96
+SHA1 (patch-libcassandra_cassandra__factory.cc) = fb5daea713f9b6a2df05c1dd2a2a033f49360cbe
 SHA1 (patch-libcassandra_cassandra__factory.h) = 602752ecd9d692bef0c692ba54098a75df4047c6
 SHA1 (patch-libcassandra_keyspace__factory.cc) = 9ac440c383243fd11e13147e9375e62c48847ebc
 SHA1 (patch-libcassandra_keyspace__factory.h) = bd611da5e673ce38a5eb811e6196a903a5a80ff8
