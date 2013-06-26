@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2013/06/16 03:03:14 obache Exp $
+# $NetBSD: Makefile,v 1.655 2013/06/26 20:14:05 joerg Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -88,8 +88,6 @@ SUBDIR+=	evas-gif
 SUBDIR+=	evas-jpeg
 SUBDIR+=	evas-pmaps
 SUBDIR+=	evas-png
-SUBDIR+=	evas-sdl
-SUBDIR+=	evas-sdl-16
 SUBDIR+=	evas-software-x11
 SUBDIR+=	evas-svg
 SUBDIR+=	evas-tiff
