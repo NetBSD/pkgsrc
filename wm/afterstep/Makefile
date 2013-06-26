@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2013/06/06 12:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2013/06/26 21:17:44 joerg Exp $
 
 DISTNAME=	AfterStep-2.2.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -21,6 +21,14 @@ REPLACE_PERL+=		tools/ascommand.pl tools/installastheme.pl.in tools/makeastheme.
 REPLACE_BASH+=		tools/importasmenu
 
 INSTALLATION_DIRS+=	share/gnome/wm-properties
+
+.include "../../mk/bsd.prefs.mk"
+
+# for backtrace
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+LIBS+=	-lexecinfo
+MAKE_ENV+=	EXTRA_LIBRARIES=-lexecinfo
+.endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
