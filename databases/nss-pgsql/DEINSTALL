@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL
+# $NetBSD: DEINSTALL,v 1.2 2013/06/26 14:16:44 joerg Exp $
 
 case ${STAGE} in
 POST-DEINSTALL)
