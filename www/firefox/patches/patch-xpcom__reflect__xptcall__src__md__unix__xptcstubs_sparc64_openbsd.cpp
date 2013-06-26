@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom__reflect__xptcall__src__md__unix__xptcstubs_sparc64_openbsd.cpp,v 1.1 2013/06/21 23:11:42 ryoon Exp $
+$NetBSD: patch-xpcom__reflect__xptcall__src__md__unix__xptcstubs_sparc64_openbsd.cpp,v 1.2 2013/06/26 11:32:12 ryoon Exp $
 
 # HG changeset patch
 # User Martin Husemann <martin@netbsd.org>
@@ -10,14 +10,9 @@ Bug 867914: Declare SharedStub as returning nsresult in xptcstubs_sparc64_openbs
 Fixes a build issue on NetBSD/sparc64, no apparent fallout on OpenBSD/sparc64
 
 diff xpcom/reflect/xptcall/src/md/unix/xptcstubs_sparc64_openbsd.cpp xpcom/reflect/xptcall/src/md/unix/xptcstubs_sparc64_openbsd.cpp
---- xpcom/reflect/xptcall/src/md/unix/xptcstubs_sparc64_openbsd.cpp
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_sparc64_openbsd.cpp.orig	2013-06-17 22:13:29.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_sparc64_openbsd.cpp
-@@ -78,17 +78,17 @@ PrepareAndDispatch(nsXPTCStubBase* self,
-     result = self->mOuter->CallMethod((uint16_t)methodIndex, info, dispatchParams);
- 
-     if(dispatchParams != paramBuffer)
-         delete [] dispatchParams;
- 
+@@ -83,7 +83,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
      return result;
  }
  
@@ -26,9 +21,3 @@ diff xpcom/reflect/xptcall/src/md/unix/xptcstubs_sparc64_openbsd.cpp xpcom/refle
  
  #define STUB_ENTRY(n) \
  nsresult nsXPTCStubBase::Stub##n() \
- { \
- 	int dummy; /* defeat tail-call optimization */ \
- 	return SharedStub(n, &dummy); \
- }
- 
-
