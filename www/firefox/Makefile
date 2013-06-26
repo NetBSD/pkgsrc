@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.131 2013/06/21 23:11:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.132 2013/06/26 11:32:12 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	21.0
+MOZ_BRANCH=	22.0
 MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-PKGREVISION=	7
+PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -37,6 +36,11 @@ LDFLAGS.Linux=		-lnspr4
 
 .include "../../www/firefox/mozilla-common.mk"
 .include "options.mk"
+
+CHECK_INTERPRETER_SKIP+=lib/firefox/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=lib/firefox/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=lib/firefox/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=lib/firefox/sdk/bin/xpt.py
 
 MOZILLA=firefox
 MOZILLA_ICON=	${WRKSRC}/dist/firefox/browser/chrome/icons/default/default48.png
