@@ -1,4 +1,4 @@
-$NetBSD: patch-rec__channel.cc,v 1.1 2012/02/28 10:49:29 roy Exp $
+$NetBSD: patch-rec__channel.cc,v 1.2 2013/06/26 15:52:22 joerg Exp $
 
 We need to include cstring
 
@@ -12,3 +12,21 @@ We need to include cstring
  #include <unistd.h>
  #include <sys/types.h>
  #include <sys/stat.h>
+@@ -46,7 +47,7 @@ int RecursorControlChannel::listen(const
+   d_local.sun_family=AF_UNIX;
+   strcpy(d_local.sun_path, fname.c_str());
+     
+-  if(bind(d_fd, (sockaddr*)&d_local,sizeof(d_local))<0) 
++  if(::bind(d_fd, (sockaddr*)&d_local,sizeof(d_local))<0) 
+     throw AhuException("Unable to bind to controlsocket '"+fname+"': "+string(strerror(errno)));
+ 
+   return d_fd;
+@@ -84,7 +85,7 @@ void RecursorControlChannel::connect(con
+   if(err < 0 && errno!=ENOENT)
+     throw AhuException("Unable to remove local controlsocket: "+string(strerror(errno)));
+ 
+-  if(bind(d_fd, (sockaddr*)&d_local,sizeof(d_local))<0) {
++  if(::bind(d_fd, (sockaddr*)&d_local,sizeof(d_local))<0) {
+     unlink(d_local.sun_path);
+     close(d_fd);
+     d_fd=-1;
