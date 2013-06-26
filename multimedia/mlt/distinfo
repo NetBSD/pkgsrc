@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.4 2012/11/21 22:24:27 abs Exp $
+$NetBSD: distinfo,v 1.5 2013/06/26 21:59:10 joerg Exp $
 
 SHA1 (mlt-0.8.6.tar.gz) = 616e807ba9f8fd8d6c9f87cb04416885c471596c
 RMD160 (mlt-0.8.6.tar.gz) = 354130bdd1d42e55f01703d2eac25a947d86f377
 Size (mlt-0.8.6.tar.gz) = 1104163 bytes
 SHA1 (patch-configure) = 52cc702fd561d45699bb7d5dce2b43a80fb9d474
+SHA1 (patch-src_framework_mlt__properties.c) = b8113fc58f0dce0d70cb4a0ba7534723e7924ad5
+SHA1 (patch-src_framework_mlt__property.c) = 61ea83f6d20c139741d5bb95456f0d1a4a9b3fa4
+SHA1 (patch-src_framework_mlt__property.h) = b6aec829f7f9f876711984c2edaba245a968e90d
 SHA1 (patch-src_modules_videostab_stab_estimate.c) = 58549c2ee2780604c043637a25dd39e92f90b7ce
