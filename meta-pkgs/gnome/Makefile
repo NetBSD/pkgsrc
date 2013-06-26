@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2012/04/18 06:39:32 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2013/06/26 22:06:17 joerg Exp $
 
 DISTNAME=	gnome-2.26.2
 PKGREVISION=	4
@@ -43,7 +43,7 @@ DEPENDS+=	gcalctool>=5.26.2:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.26.0:../../editors/gconf-editor
 #DEPENDS+=	gdm>=2.26.1:../../x11/gdm
 DEPENDS+=	gdm>=2.20.10:../../x11/gdm
-DEPENDS+=	gedit>=2.26.2:../../editors/gedit
+DEPENDS+=	gedit>=2.26.2<3:../../editors/gedit
 DEPENDS+=	gio-fam>=2.26.1:../../sysutils/gio-fam
 DEPENDS+=	gnome-applets>=2.26.1:../../x11/gnome-applets
 DEPENDS+=	gnome-backgrounds>=2.24.1:../../graphics/gnome-backgrounds
