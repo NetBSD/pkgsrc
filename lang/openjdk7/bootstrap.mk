@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.8 2013/06/15 09:31:05 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.9 2013/06/26 12:52:34 ryoon Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[56].*-i386 NetBSD-[56].*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-[23].*-* SunOS-*-*
@@ -10,7 +10,19 @@ BOOT.nb6-amd64=		bootstrap-jdk7-bin-netbsd-6-amd64-20110811.tar.bz2
 BOOT.df213-i386=	bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811A.tar.xz
 # 1.7 partial bootstrap:
 BOOT.df213-amd64=	bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811A.tar.xz
+BOOT.df33prebump-i386=	bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz
+BOOT.df33prebump-amd64=	bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz
+BOOT.df35-i386=		bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz
+BOOT.df35-amd64=	bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz
 BOOT.common-20110811=	bootstrap-jdk7-bin-common-20110811.tar.bz2
+
+DFBSDBOOTSTRAPSITE=	http://dl.wolfpond.org/openjdk7/
+SITES.bootstrap-jdk7-bin-dragonfly-2.13-i386-20110811A.tar.xz=	${DFBSDBOOTSTRAPSITE}
+SITES.bootstrap-jdk7-bin-dragonfly-2.13-amd64-20110811A.tar.xz=	${DFBSDBOOTSTRAPSITE}
+SITES.bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz=	${DFBSDBOOTSTRAPSITE}
+SITES.bootstrap-openjdk-7.9.05_2.dfly-3.3-amd64.tar.xz=	${DFBSDBOOTSTRAPSITE}
+SITES.bootstrap-openjdk-7.21.11.dfly-3.5-i386.tar.xz=	${DFBSDBOOTSTRAPSITE}
+SITES.bootstrap-openjdk-7.21.11.dfly-3.5-amd64.tar.xz=	${DFBSDBOOTSTRAPSITE}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.nb5-i386}
@@ -36,16 +48,36 @@ DISTFILES+=		${BOOT.nb6-amd64}
 EXTRACT_ONLY+=		${BOOT.nb6-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDragonFly-*-i386) || make(distinfo)
-MASTER_SITES+=		http://dl.wolfpond.org/openjdk7/
+.if !empty(MACHINE_PLATFORM:MDragonFly-2.[0-9]*-i386) || \
+    !empty(MACHINE_PLATFORM:MDragonFly-3.[0-2]*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.df213-i386}
 EXTRACT_ONLY+=		${BOOT.df213-i386}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDragonFly-*-x86_64) || make(distinfo)
-MASTER_SITES+=		http://dl.wolfpond.org/openjdk7/
+.if !empty(MACHINE_PLATFORM:MDragonFly-2.[0-9]*-x86_64) || \
+    !empty(MACHINE_PLATFORM:MDragonFly-3.[0-2]*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.df213-amd64}
 EXTRACT_ONLY+=		${BOOT.df213-amd64}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDragonFly-3.[3-4]*-i386) || make(distinfo)
+DISTFILES+=		${BOOT.df33prebump-i386}
+EXTRACT_ONLY+=		${BOOT.df33prebump-i386}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDragonFly-3.[3-4]*-x86_64) || make(distinfo)
+DISTFILES+=		${BOOT.df33prebump-amd64}
+EXTRACT_ONLY+=		${BOOT.df33prebump-amd64}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDragonFly-3.[5-9]*-i386) || make(distinfo)
+DISTFILES+=		${BOOT.df35-i386}
+EXTRACT_ONLY+=		${BOOT.df35-i386}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDragonFly-3.[5-9]*-x86_64) || make(distinfo)
+DISTFILES+=		${BOOT.df35-amd64}
+EXTRACT_ONLY+=		${BOOT.df35-amd64}
 .endif
 
 .if !empty(DISTFILES:M*20110811*) || make(distinfo)
