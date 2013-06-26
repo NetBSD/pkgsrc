@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/13 20:11:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/26 11:53:02 jperkin Exp $
 #
 
 DISTNAME=	node-v0.10.11
@@ -56,5 +56,9 @@ CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 .if ${OPSYS} == "NetBSD"
 BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 .endif
+
+pre-install:
+	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
+
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
