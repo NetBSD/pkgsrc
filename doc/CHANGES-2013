@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2209 2013/06/26 12:40:19 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2210 2013/06/26 12:54:36 ryoon Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3441,3 +3441,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 22.0 [ryoon 2013-06-26]
 	Updated www/firefox-l10n to 22.0 [ryoon 2013-06-26]
 	Updated net/httping to 2.3.3 [ryoon 2013-06-26]
+	Updated lang/openjdk7 to 1.7.21nb3 [ryoon 2013-06-26]
