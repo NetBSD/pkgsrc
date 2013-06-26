@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/06 12:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/26 21:25:02 joerg Exp $
 #
 
 DISTNAME=	gambatte_src-0.4.1
@@ -25,8 +25,8 @@ SUBST_STAGE.sdl=	pre-build
 .include "options.mk"
 
 do-build:
-	cd ${WRKSRC}/libgambatte && ${SETENV} ${MAKE_ENV} scons
-	cd ${WRKSRC}/gambatte_sdl && ${SETENV} ${MAKE_ENV} scons
+	cd ${WRKSRC}/libgambatte && ${PKGSRC_SETENV} ${MAKE_ENV} scons
+	cd ${WRKSRC}/gambatte_sdl && ${PKGSRC_SETENV} ${MAKE_ENV} scons
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gambatte_sdl/gambatte_sdl \

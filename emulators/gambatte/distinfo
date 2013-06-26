@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.3 2011/08/14 19:05:03 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/06/26 21:25:02 joerg Exp $
 
 SHA1 (gambatte_src-0.4.1.tar.gz) = 1374720b9cad35b2dace20822bf9b4b2ea0d2059
 RMD160 (gambatte_src-0.4.1.tar.gz) = 2b09971498c8f474c71c5e53cbaf444df84b28f8
 Size (gambatte_src-0.4.1.tar.gz) = 263391 bytes
 SHA1 (patch-aa) = 96fd6b152afa1ec603864068b747ac50ec830b7d
 SHA1 (patch-ab) = c9d7cf6ca8bfa98c0d970a60ecfc34812756447e
+SHA1 (patch-gambatte__sdl_SConstruct) = 0d09014df7f0c1f23597366ad59612df6c61b67d
 SHA1 (patch-gambatte__sdl_src_gambatte__sdl.cpp) = 896c97289976a85c69fe291a9a7df2995809f7ca
+SHA1 (patch-libgambatte_SConstruct) = ced1c6a50627ce856b3d8a81f13b3d1c96514168

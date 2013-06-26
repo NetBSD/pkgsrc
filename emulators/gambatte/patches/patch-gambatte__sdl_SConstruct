@@ -1,0 +1,20 @@
+$NetBSD: patch-gambatte__sdl_SConstruct,v 1.1 2013/06/26 21:25:02 joerg Exp $
+
+--- gambatte_sdl/SConstruct.orig	2013-06-26 20:25:50.000000000 +0000
++++ gambatte_sdl/SConstruct
+@@ -1,3 +1,5 @@
++import os
++
+ global_cflags = ARGUMENTS.get('CFLAGS', '-Wall -Wextra -O2 -fomit-frame-pointer')
+ global_cxxflags = ARGUMENTS.get('CXXFLAGS', global_cflags + ' -fno-exceptions -fno-rtti')
+ global_defines = ' -DHAVE_STDINT_H'
+@@ -6,7 +8,8 @@ env = Environment(CPPPATH = ['src', '../
+                   LIBS = ['gambatte'],
+                   LIBPATH = '../libgambatte',
+                   CFLAGS = global_cflags + global_defines,
+-                  CXXFLAGS = global_cxxflags + global_defines)
++                  CXXFLAGS = global_cxxflags + global_defines,
++                  ENV = { 'PATH': os.environ['PATH'] })
+ 
+ env.ParseConfig('sdl-config --cflags --libs')
+ 
