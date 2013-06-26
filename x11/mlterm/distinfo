@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2013/06/23 06:02:39 tsutsui Exp $
+$NetBSD: distinfo,v 1.33 2013/06/26 11:29:47 tsutsui Exp $
 
 SHA1 (mlterm-3.2.0.tar.gz) = 66478d4f345bb2fe225c498b585797e66f2f931f
 RMD160 (mlterm-3.2.0.tar.gz) = b14f5304e690eb300093ce905f89c89f1a5f4bb7
@@ -6,7 +6,7 @@ Size (mlterm-3.2.0.tar.gz) = 3509742 bytes
 SHA1 (patch-configure) = b09182d7cb0ceb73557cf9e568445ad2d46aa04c
 SHA1 (patch-etc_font-fb) = 95a39d6e2aa56ecc745edec3d324f3dcf57b3b39
 SHA1 (patch-mkf_lib_mkf__ucs4__map.c) = 1bec2e100d5a53a84ca81436389c5cf2ce67f34b
-SHA1 (patch-xwindow_fb_x__display.c) = 8a78d78036e83928c4a81dc41510789ea420aa75
+SHA1 (patch-xwindow_fb_x__display.c) = 20bbfc87028828eeec33b3bc8bdbba93766ff9a1
 SHA1 (patch-xwindow_fb_x__font.c) = a55515411ed9063e609eb70bddf40ad6c486376b
 SHA1 (patch-xwindow_fb_x__window.c) = bbeafd847b6654bec9dd517bf669194e964a2758
 SHA1 (patch-xwindow_win32_x__font.c) = 3c33fe26bbac54ee6ec9ad6add086f8903269a31
