@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.2 2013/05/16 16:13:59 taca Exp $
+$NetBSD: patch-lib_rubygems_dependency__installer.rb,v 1.3 2013/06/27 16:35:44 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
@@ -12,7 +12,7 @@ Add install_root option for pkgsrc's rubygems support.
    # :prerelease:: Allow prerelease versions.  See #install.
    # :security_policy:: See Gem::Installer::new and Gem::Security.
    # :user_install:: See Gem::Installer.new
-@@ -69,7 +73,12 @@ class Gem::DependencyInstaller
+@@ -69,7 +70,12 @@ class Gem::DependencyInstaller
      @installed_gems = []
  
      @install_dir = options[:install_dir] || Gem.dir
@@ -26,7 +26,7 @@ Add install_root option for pkgsrc's rubygems support.
  
      # Set with any errors that SpecFetcher finds while search through
      # gemspecs for a dep
-@@ -290,6 +299,7 @@ class Gem::DependencyInstaller
+@@ -290,6 +296,7 @@ class Gem::DependencyInstaller
                                  :format_executable   => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir         => @install_dir,
