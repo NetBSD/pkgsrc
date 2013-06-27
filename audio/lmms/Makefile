@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/06/17 15:16:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/27 15:48:11 joerg Exp $
 #
 
 DISTNAME=		lmms-0.4.15
@@ -44,6 +44,7 @@ BUILDLINK_ABI_DEPENDS.SDL+=	SDL>=1.2.11
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
