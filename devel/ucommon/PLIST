@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/17 00:51:20 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/27 01:36:25 rodent Exp $
 bin/args
 bin/car
 bin/commoncpp-config
@@ -62,15 +62,18 @@ include/ucommon/ucommon.h
 include/ucommon/unicode.h
 include/ucommon/vector.h
 include/ucommon/xml.h
-lib/libcommoncpp.so
-lib/libcommoncpp.so.6
-lib/libcommoncpp.so.${PKGVERSION}
-lib/libucommon.so
-lib/libucommon.so.6
-lib/libucommon.so.${PKGVERSION}
-lib/libusecure.so
-lib/libusecure.so.6
-lib/libusecure.so.${PKGVERSION}
+${PLIST.static}lib/libcommoncpp.a
+${PLIST.dynamic}lib/libcommoncpp.so
+${PLIST.dynamic}lib/libcommoncpp.so.6
+${PLIST.dynamic}lib/libcommoncpp.so.${PKGVERSION}
+${PLIST.static}lib/libucommon.a
+${PLIST.dynamic}lib/libucommon.so
+${PLIST.dynamic}lib/libucommon.so.6
+${PLIST.dynamic}lib/libucommon.so.${PKGVERSION}
+${PLIST.static}lib/libusecure.a
+${PLIST.dynamic}lib/libusecure.so
+${PLIST.dynamic}lib/libusecure.so.6
+${PLIST.dynamic}lib/libusecure.so.${PKGVERSION}
 lib/pkgconfig/commoncpp.pc
 lib/pkgconfig/ucommon.pc
 man/man1/args.1

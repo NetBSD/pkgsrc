@@ -1,9 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/04/17 00:51:20 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/06/27 01:36:25 rodent Exp $
 
 BUILDLINK_TREE+=	ucommon
 
 .if !defined(UCOMMON_BUILDLINK3_MK)
 UCOMMON_BUILDLINK3_MK:=
+
+pkgbase := ucommon
+.include "../../mk/pkg-build-options.mk"
+
+
+.if !empty(PKG_BUILD_OPTIONS.ucommon:Mstatic)
+BUILDLINK_DEPMETHOD.ucommon?=	build
+.endif
 
 BUILDLINK_API_DEPENDS.ucommon+=	ucommon>=5.0.6
 BUILDLINK_PKGSRCDIR.ucommon?=	../../devel/ucommon
