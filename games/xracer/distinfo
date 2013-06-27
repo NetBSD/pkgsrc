@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/10/26 20:22:12 joerg Exp $
+$NetBSD: distinfo,v 1.10 2013/06/27 15:49:43 joerg Exp $
 
 SHA1 (xracer-0.96.9.tar.gz) = 8c7a4f0be46ee83bbb588f6c5834340f519a3059
 RMD160 (xracer-0.96.9.tar.gz) = 1e9611dd55b1a3f0bf681a7051fcbb37bec47a6e
@@ -23,3 +23,11 @@ SHA1 (patch-ar) = be958b29fdf3fdb82df9b0cc6f1c152371c7a858
 SHA1 (patch-as) = 5f22c78bec9b9fab9feb2cae73afc251f4367066
 SHA1 (patch-include_xracer-craft.h) = b53a6f89f29263451ea111a44a5b84eb91721c1f
 SHA1 (patch-include_xracer-player.h) = 6a7f33c926d74c1d2ee9dc21d91acbf269b57f6c
+SHA1 (patch-src_game.c) = cb5a73dde445eec2aa924e61be4f1fd0c3e9135e
+SHA1 (patch-src_jpeg.c) = 8549eccb261e3169381ff6c101895ed2815d6c78
+SHA1 (patch-src_math.c) = c358f346184092e1e68f21ec8ba82e253093fb97
+SHA1 (patch-src_mpeg_store.c) = 13cf0c3625be119c68825961282beb50a3aa4a70
+SHA1 (patch-src_player.c) = e2a8305257f38073b03fbd39a95c1a35542506af
+SHA1 (patch-src_text.c) = bec183a1fb701e4bf854df52012e22bf87053891
+SHA1 (patch-src_utils.c) = d8fc536848a3e116528af64b7f97fd50667f7af1
+SHA1 (patch-src_video.c) = fa81bfea35390ab48c024433288b2252dada39d1
