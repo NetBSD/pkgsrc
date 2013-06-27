@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2211 2013/06/27 01:37:48 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2212 2013/06/27 01:39:38 rodent Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3443,3 +3443,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/httping to 2.3.3 [ryoon 2013-06-26]
 	Updated lang/openjdk7 to 1.7.21nb3 [ryoon 2013-06-26]
 	Updated devel/ucommon to 6.0.5 [rodent 2013-06-27]
+	Updated net/ccrtp to 2.0.6 [rodent 2013-06-27]
