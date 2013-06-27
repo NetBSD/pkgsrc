@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/01/27 07:51:37 morr Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/06/27 08:04:57 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -785,7 +785,6 @@ share/wordpress/wp-includes/js/swfupload/plugins/swfupload.cookies.js
 share/wordpress/wp-includes/js/swfupload/plugins/swfupload.queue.js
 share/wordpress/wp-includes/js/swfupload/plugins/swfupload.speed.js
 share/wordpress/wp-includes/js/swfupload/plugins/swfupload.swfobject.js
-share/wordpress/wp-includes/js/swfupload/swfupload-all.js
 share/wordpress/wp-includes/js/swfupload/swfupload.js
 share/wordpress/wp-includes/js/swfupload/swfupload.swf
 share/wordpress/wp-includes/js/thickbox/loadingAnimation.gif
