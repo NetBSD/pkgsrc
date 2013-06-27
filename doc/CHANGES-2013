@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2216 2013/06/27 16:18:49 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2217 2013/06/27 16:42:57 taca Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3448,3 +3448,14 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/fbreader to 0.99.4 [ryoon 2013-06-27]
 	Updated www/contao30 to 3.0.6nb1 [taca 2013-06-27]
 	Updated www/contao31 to 3.1.1 [taca 2013-06-27]
+	Updated lang/ruby18-base to 1.8.7.374 [taca 2013-06-27]
+	Updated lang/ruby18 to 1.8.7.374 [taca 2013-06-27]
+	Updated lang/ruby193-base to 1.9.3p448 [taca 2013-06-27]
+	Updated databases/ruby-gdbm to 1.9.3p448 [taca 2013-06-27]
+	Updated devel/ruby-curses to 1.9.3p448 [taca 2013-06-27]
+	Updated devel/ruby-fiddle to 1.9.3p448 [taca 2013-06-27]
+	Updated devel/ruby-readline to 1.9.3p448 [taca 2013-06-27]
+	Updated x11/ruby-tk to 1.9.3p448 [taca 2013-06-27]
+	Updated lang/ruby193 to 1.9.3p448 [taca 2013-06-27]
+	Updated lang/ruby to 1.9.3p448 [taca 2013-06-27]
+	Updated devel/ruby-mode to 1.9.3p448 [taca 2013-06-27]
