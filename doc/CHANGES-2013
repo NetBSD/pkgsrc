@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2213 2013/06/27 01:41:36 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2214 2013/06/27 14:22:00 ryoon Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ucommon to 6.0.5 [rodent 2013-06-27]
 	Updated net/ccrtp to 2.0.6 [rodent 2013-06-27]
 	Updated net/libzrtpcpp to 2.3.3 [rodent 2013-06-27]
+	Updated misc/fbreader to 0.99.4 [ryoon 2013-06-27]

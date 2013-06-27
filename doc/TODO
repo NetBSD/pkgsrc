@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12319 2013/06/26 12:40:19 ryoon Exp $
+$NetBSD: TODO,v 1.12320 2013/06/27 14:22:00 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -515,7 +515,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ezmlm-idx-5.1.2 [schmonz]
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fbreader-0.99.4
 	o fcitx-3.6.2
 	o felt-3.07
 	o fetchmail-6.3.23
