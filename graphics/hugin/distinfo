@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.10 2013/06/23 19:00:14 dholland Exp $
+$NetBSD: distinfo,v 1.11 2013/06/27 15:51:49 joerg Exp $
 
 SHA1 (hugin-2010.4.0.tar.bz2) = 47f25c0a8b97c27108e567bcd22203c87f268d07
 RMD160 (hugin-2010.4.0.tar.bz2) = f97b8d37470443eb81c3e915e5f5efa91227b135
 Size (hugin-2010.4.0.tar.bz2) = 11009978 bytes
 SHA1 (patch-ab) = 54f574d677b37569d4269efda5f0f2c6ab23432a
 SHA1 (patch-ac) = aac60aa6d3b99a632fce03749660e10ea82ad028
+SHA1 (patch-src_celeste_Utilities.cpp) = e25f3f971745be18d4752523529a96146d1dc259
 SHA1 (patch-src_foreign_vigra_vigra__impex_png_cxx) = 43ee756664ca8232b3006b76f12fb8ef55711575
+SHA1 (patch-src_foreign_vigra_vigra_cachedfileimage.hxx) = 0cf622fd8e0bc4dbaa32df5afd92a8b55f311439
+SHA1 (patch-src_foreign_zthread_include_zthread_Guard.h) = ad6ebe3c0ca9b8cc659a70848b6449036c4ef0d2
+SHA1 (patch-src_hugin1_icpfind_AutoCtrlPointCreator.cpp) = 7df1c978ef81f4d3fae46cc12aaa4d5917c4cb04
