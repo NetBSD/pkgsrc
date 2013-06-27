@@ -1,0 +1,25 @@
+$NetBSD: patch-fbreader_Makefile,v 1.1 2013/06/27 14:21:09 ryoon Exp $
+
+* Link to -lX11 etc.
+* Libtoolized.
+
+--- fbreader/Makefile.orig	2012-11-30 12:41:25.000000000 +0000
++++ fbreader/Makefile
+@@ -22,7 +22,7 @@ all: .resources
+ 		fi; \
+ 	done;
+ 	@echo -n 'Linking $(TARGET) ...'
+-	@$(LD) $(LDFLAGS) -o $(TARGET) `find src -name *.o` $(TEXT_LIBS) $(CORE_LIBS) $(ZLUI_LIB) -lsqlite3
++	@${LIBTOOL} --mode=link --tag=CC $(LD) $(LDFLAGS) -o $(TARGET) `find src -name *.lo` $(TEXT_LIBS) $(CORE_LIBS) $(ZLUI_LIB) -lsqlite3 -rpath ${BUILDLINK_X11_DIR}/lib
+ 	@echo ' OK'
+ 
+ FBSHAREDIR = $(DESTDIR)$(SHAREDIR)/FBReader
+@@ -35,7 +35,7 @@ APPIMAGEDIR_REAL = $(subst %application_
+ 
+ do_install:
+ 	@install -d $(DESTDIR)$(BINDIR)
+-	@install $(TARGET) $(DESTDIR)$(BINDIR)/FBReader
++	@${LIBTOOL} --mode=install install $(TARGET) $(DESTDIR)$(BINDIR)
+ 	@install -d $(FBSHAREDIR)
+ 	@install -d $(FBSHAREDIR)/help
+ 	@./scripts/install_help.sh $(VARIANT) $(FBSHAREDIR)/help

@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/01 12:40:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/27 14:21:09 ryoon Exp $
 bin/FBReader
-lib/libzlcore.so
-lib/libzlcore.so.0.99
-lib/libzlcore.so.${PKGVERSION}
-lib/libzltext.so
-lib/libzltext.so.0.99
-lib/libzltext.so.${PKGVERSION}
-lib/libzlui.so
-lib/libzlui.so.0.99
-lib/libzlui.so.${PKGVERSION}
+lib/libzlcore.la
+lib/libzltext.la
+lib/libzlui.la
 share/FBReader/default/config.xml
 share/FBReader/default/external.xml
 share/FBReader/default/fullscreen_toolbar.xml
@@ -63,9 +57,12 @@ share/FBReader/resources/zh.xml
 share/pixmaps/FBReader.png
 share/pixmaps/FBReader/addBook.png
 share/pixmaps/FBReader/advancedSearchOnNetwork.png
+share/pixmaps/FBReader/back_button.png
+share/pixmaps/FBReader/back_button_disabled.png
 share/pixmaps/FBReader/bookInfo.png
 share/pixmaps/FBReader/booktree-author.png
 share/pixmaps/FBReader/booktree-book.png
+share/pixmaps/FBReader/booktree-catalog.png
 share/pixmaps/FBReader/booktree-tag.png
 share/pixmaps/FBReader/byAuthor.png
 share/pixmaps/FBReader/byTag.png
@@ -73,6 +70,8 @@ share/pixmaps/FBReader/fb2.png
 share/pixmaps/FBReader/findNext.png
 share/pixmaps/FBReader/findPrevious.png
 share/pixmaps/FBReader/folder.png
+share/pixmaps/FBReader/forward_button.png
+share/pixmaps/FBReader/forward_button_disabled.png
 share/pixmaps/FBReader/gotoHome.png
 share/pixmaps/FBReader/html.png
 share/pixmaps/FBReader/mobipocket.png
@@ -82,15 +81,21 @@ share/pixmaps/FBReader/palm.png
 share/pixmaps/FBReader/plucker.png
 share/pixmaps/FBReader/preferences.png
 share/pixmaps/FBReader/redo.png
+share/pixmaps/FBReader/refresh-icon-1.png
+share/pixmaps/FBReader/refresh-icon-2.png
+share/pixmaps/FBReader/refresh-icon.svg
 share/pixmaps/FBReader/rotate.png
 share/pixmaps/FBReader/rtf.png
 share/pixmaps/FBReader/search.png
+share/pixmaps/FBReader/search_icon.png
 share/pixmaps/FBReader/searchresult.png
 share/pixmaps/FBReader/showHelp.png
 share/pixmaps/FBReader/showLibrary.png
 share/pixmaps/FBReader/showNetLibrary.png
+share/pixmaps/FBReader/showNetworkLibrary.png
 share/pixmaps/FBReader/showReading.png
 share/pixmaps/FBReader/showRecent.png
+share/pixmaps/FBReader/spinner.gif
 share/pixmaps/FBReader/tcr.png
 share/pixmaps/FBReader/toc.png
 share/pixmaps/FBReader/undo.png
@@ -145,4 +150,5 @@ share/zlibrary/resources/sv.xml
 share/zlibrary/resources/uk.xml
 share/zlibrary/resources/vi.xml
 share/zlibrary/resources/zh.xml
+share/zlibrary/style.qss
 share/zlibrary/unicode.xml.gz
