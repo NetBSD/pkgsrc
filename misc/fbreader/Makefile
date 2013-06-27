@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2013/06/06 12:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/06/27 14:21:09 ryoon Exp $
 #
 
-DISTNAME=	fbreader-sources-0.99.2
+DISTNAME=	fbreader-sources-0.99.4
 PKGNAME=	${DISTNAME:S/-sources//}
-PKGREVISION=	9
 CATEGORIES=	misc
 MASTER_SITES=	http://www.fbreader.org/files/desktop/
 EXTRACT_SUFX=	.tgz
@@ -15,11 +14,11 @@ LICENSE=	gnu-gpl-v2 AND modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 MAKE_ENV+=	INSTALLDIR=${PREFIX}
 MAKE_ENV+=	DESTDIR=${DESTDIR}
-MAKE_ENV+=	LDFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_ENV+=	TARGET_ARCH=desktop
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,4 +38,13 @@ CPPFLAGS+=	-DDO_ICONV_CAST
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/liblinebreak/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/Xrender/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
