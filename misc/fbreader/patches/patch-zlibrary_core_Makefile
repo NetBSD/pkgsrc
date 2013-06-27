@@ -1,0 +1,35 @@
+$NetBSD: patch-zlibrary_core_Makefile,v 1.1 2013/06/27 14:21:09 ryoon Exp $
+
+* Libtoolized.
+
+--- zlibrary/core/Makefile.orig	2012-11-30 12:41:25.000000000 +0000
++++ zlibrary/core/Makefile
+@@ -11,7 +11,7 @@ ifeq "$(ZLSHARED)" "yes"
+     TARGET_SONAME = libzlcore.$(SOVERSION).dylib
+     TARGET_SHORTNAME = libzlcore.dylib
+   else
+-    TARGET = libzlcore.so.$(VERSION)
++    TARGET = libzlcore.la
+     TARGET_SONAME = libzlcore.so.$(SOVERSION)
+     TARGET_SHORTNAME = libzlcore.so
+   endif
+@@ -50,7 +50,7 @@ $(TARGET): .objects
+ 	@echo -n 'Creating $@ ...'
+ 	@$(RM_QUIET) $(TARGET)
+ ifeq "$(ZLSHARED)" "yes"
+-	@$(LD) $(LDFLAGS) -shared -Wl,-soname,$(TARGET_SONAME) -o $(TARGET) -lc $(patsubst %, %/*.o, $(SUBDIRS)) $(XML_LIBS) $(ARCHIVER_LIBS)
++	@${LIBTOOL} --mode=link --tag=CXX $(LD) $(LDFLAGS) -Wl,-soname,$(TARGET_SONAME) -o $(TARGET) -lc $(patsubst %, %/*.lo, $(SUBDIRS)) $(XML_LIBS) $(ARCHIVER_LIBS) -rpath ${PREFIX}/lib
+ #@$(LD) $(LDFLAGS) -dynamiclib -dylinker_install_name $(TARGET_SONAME) -o $(TARGET) -lc $(patsubst %, %/*.o, $(SUBDIRS)) $(XML_LIBS) $(ARCHIVER_LIBS) $(ZLUI_LIB) -ldl -liconv
+ 	@ln -sf $(TARGET) $(TARGET_SONAME)
+ 	@ln -sf $(TARGET) $(TARGET_SHORTNAME)
+@@ -83,9 +83,7 @@ do_install:
+ 	fi
+ ifeq "$(ZLSHARED)" "yes"
+ 	@install -d $(DESTDIR)$(LIBDIR)
+-	@install $(TARGET) $(DESTDIR)$(LIBDIR)
+-	@ln -sf $(TARGET) $(DESTDIR)$(LIBDIR)/$(TARGET_SONAME)
+-	@ln -sf $(TARGET) $(DESTDIR)$(LIBDIR)/$(TARGET_SHORTNAME)
++	@${LIBTOOL} --mode=install install $(TARGET) $(DESTDIR)$(LIBDIR)
+ endif
+ 
+ do_install_dev:
