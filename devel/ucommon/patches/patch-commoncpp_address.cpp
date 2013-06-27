@@ -1,4 +1,7 @@
-$NetBSD: patch-commoncpp_address.cpp,v 1.1 2013/04/29 21:19:15 joerg Exp $
+$NetBSD: patch-commoncpp_address.cpp,v 1.2 2013/06/27 01:36:25 rodent Exp $
+
+Be explicit that the local version of bitset is wanted, not the STL
+version in std for C++11 libraries.
 
 --- commoncpp/address.cpp.orig	2013-04-28 14:29:48.000000000 +0000
 +++ commoncpp/address.cpp
