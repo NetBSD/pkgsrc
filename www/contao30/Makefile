@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/04/08 11:17:24 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/27 16:11:20 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 
@@ -87,8 +88,6 @@ do-install:
 	cd ${WRKSRC}/system; \
 		pax -rw ${WWW_SYSFILES} \
 			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system
-#	${INSTALL_DATA} ${WRKSRC}/templates/.htaccess \
-#		${DESTDIR}${PREFIX}/${CT_WEBDIR}/templates
 	cd ${WRKSRC}; pax -rw ${EG_DATA} ${DESTDIR}${PREFIX}/${CT_EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/.htaccess.default \
 		${DESTDIR}${PREFIX}/${CT_EGDIR}/htaccess.default
