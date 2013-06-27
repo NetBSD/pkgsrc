@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2215 2013/06/27 16:12:38 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2216 2013/06/27 16:18:49 taca Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3447,4 +3447,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libzrtpcpp to 2.3.3 [rodent 2013-06-27]
 	Updated misc/fbreader to 0.99.4 [ryoon 2013-06-27]
 	Updated www/contao30 to 3.0.6nb1 [taca 2013-06-27]
-	Updated www/contao31 to 3.1.1nb1 [taca 2013-06-27]
+	Updated www/contao31 to 3.1.1 [taca 2013-06-27]
