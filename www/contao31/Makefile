@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/06/27 16:11:54 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/27 16:17:55 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 
@@ -66,8 +65,7 @@ SUBST_SED.php+=		-e "s|\#!/.*php|\#!${PREFIX}/bin/php|"
 SUBST_STAGE.php=	post-configure
 
 WWW_FILES=	.gitignore README.md assets contao index.php share templates
-WWW_SYSFILES=	.htaccess bin cache/.htaccess cron docs helper \
-		initialize.php logs/.htaccess modules themes tmp/.htaccess
+WWW_SYSFILES=	.htaccess bin cron docs helper initialize.php modules themes
 
 INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
 
@@ -81,14 +79,13 @@ pre-configure:
 pre-install:
 	cd ${WRKSRC}; ${RM} -fr files/music_academy templates/music_academy.sql
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
+	cd ${WRKSRC}/assets/ace && ${FIND} . -type f -exec chmod -x {} \;
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
 	cd ${WRKSRC}/system; \
 		pax -rw ${WWW_SYSFILES} \
 			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system
-#	${INSTALL_DATA} ${WRKSRC}/templates/.htaccess \
-#		${DESTDIR}${PREFIX}/${CT_WEBDIR}/templates
 	cd ${WRKSRC}; pax -rw ${EG_DATA} ${DESTDIR}${PREFIX}/${CT_EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/.htaccess.default \
 		${DESTDIR}${PREFIX}/${CT_EGDIR}/htaccess.default
