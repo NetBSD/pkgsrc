@@ -1,11 +1,15 @@
-$NetBSD: distinfo,v 1.5 2013/06/17 15:16:47 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2013/06/27 15:48:11 joerg Exp $
 
 SHA1 (lmms-0.4.15.tar.bz2) = 7dc0a616291fa6e5f917e0e6f926e4c427b3c16c
 RMD160 (lmms-0.4.15.tar.bz2) = d660769cda53e0d6ca15f2e578478e8f27dbb851
 Size (lmms-0.4.15.tar.bz2) = 14211150 bytes
 SHA1 (patch-CMakeLists.txt) = e48c68a6d96df7dbdb760c5d8414d262262ffd8a
+SHA1 (patch-plugins_ladspa__effect_calf_src_calf_buffer.h) = b9d6f50680775cecbe0f485cf8f9c8d6172568a3
+SHA1 (patch-plugins_ladspa__effect_calf_src_calf_fixed__point.h) = a77ecd2ab667aa3dbd436878b568ed499da7114b
+SHA1 (patch-plugins_zynaddsubfx_fltk_FL_Fl__Widget.H) = 000762568741d957bf342b23c4eeb6353fc574db
 SHA1 (patch-plugins_zynaddsubfx_fltk_configh.cmake.in) = 332db7257adba4a2b884bf68065f067f02734409
 SHA1 (patch-plugins_zynaddsubfx_fltk_src_numericsort.c) = 3461f6e532d4d47c27f0d36daf1deb61922b4fc0
 SHA1 (patch-plugins_zynaddsubfx_fltk_src_scandir.c) = 2ca4b691b1be385ca34f04c634e04126dc2efbd9
+SHA1 (patch-plugins_zynaddsubfx_src_Effects_Alienwah.cpp) = 89babf5b6a06899dfbaa8201383d9a20b78fabe8
 SHA1 (patch-src_core_audio_AudioAlsa.cpp) = 7fe90c5be3f4a45a67b9ca87bcd26cd074ad2976
 SHA1 (patch-src_core_audio_AudioOss.cpp) = 13d1f848a8ba94afa91d8ebee6326d246cf1a690
