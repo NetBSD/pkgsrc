@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2013/06/26 21:17:44 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2013/06/27 15:52:19 joerg Exp $
 
 DISTNAME=	AfterStep-2.2.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -13,6 +13,7 @@ COMMENT=	Window manager based on the look and feel of the NeXTStep interface
 LICENSE=	mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=		bash:run gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
