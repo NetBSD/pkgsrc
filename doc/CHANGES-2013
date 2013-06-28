@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2218 2013/06/28 08:31:33 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2219 2013/06/28 08:35:50 rodent Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3460,3 +3460,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ruby to 1.9.3p448 [taca 2013-06-27]
 	Updated devel/ruby-mode to 1.9.3p448 [taca 2013-06-27]
 	Updated textproc/ispell-sk to 0.3.2 [rodent 2013-06-28]
+	Updated textproc/aspell-ga to 4.6.0 [rodent 2013-06-28]
