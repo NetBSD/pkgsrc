@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2007/04/13 09:11:20 dsainty Exp $
+$NetBSD: patch-ab,v 1.5 2013/06/28 15:03:55 ryoon Exp $
 
---- doc/mini-howto/Makefile.in.orig	2005-06-09 13:19:08.000000000 +0300
-+++ doc/mini-howto/Makefile.in	2005-06-09 13:19:21.000000000 +0300
-@@ -15,7 +15,7 @@
+--- doc/mini-howto/Makefile.in.orig	2013-03-09 12:40:15.000000000 +0000
++++ doc/mini-howto/Makefile.in
+@@ -16,7 +16,7 @@
  @SET_MAKE@
  
  VPATH = @srcdir@
 -pkgdatadir = $(datadir)/@PACKAGE@
 +pkgdatadir = $(datadir)/doc/@PACKAGE@
- pkglibdir = $(libdir)/@PACKAGE@
  pkgincludedir = $(includedir)/@PACKAGE@
- am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkglibexecdir = $(libexecdir)/@PACKAGE@
