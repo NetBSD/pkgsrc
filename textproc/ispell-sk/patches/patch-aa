@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2013/04/24 02:20:42 rodent Exp $
+$NetBSD: patch-aa,v 1.2 2013/06/28 08:30:19 rodent Exp $
 
---- Makefile.orig	2004-02-27 14:50:43.000000000 +0100
-+++ Makefile	2004-09-12 22:50:13.000000000 +0200
-@@ -1,17 +1,18 @@
+Don't hardcode ${DESTDIR} nor ${PREFIX}, and install correctly.
+
+--- Makefile.orig	2006-07-16 13:39:05.000000000 +0000
++++ Makefile
+@@ -1,14 +1,15 @@
 -DESTDIR=/usr/lib/ispell
-+INSTALLDIR=${PREFIX}/lib/
++INSTALLDIR=${PREFIX}/lib
 +BUILDHASH=${PREFIX}/bin/buildhash
  
  all: slovak.hash
@@ -17,13 +19,9 @@ $NetBSD: patch-aa,v 1.1 2013/04/24 02:20:42 rodent Exp $
 +	${BSD_INSTALL_DATA} slovak.hash ${DESTDIR}$(INSTALLDIR)
 +	${BSD_INSTALL_DATA} slovak.aff ${DESTDIR}$(INSTALLDIR)
  
- slovak.words:
--	cat *.words | sort -u -f > slovak.words
-+	${CAT} *.words | ${SORT} -u -f > slovak.words
- 
  slovak.hash: slovak.aff slovak.words
 -	buildhash slovak.words slovak.aff slovak.hash
-+	${BUILDHASH} slovak.words slovak.aff slovak.hash
++	$(BUILDHASH) slovak.words slovak.aff slovak.hash
  
  clean:
- 	rm -f slovak.words slovak.words.cnt slovak.words.stat slovak.hash *~
+ 	rm -f slovak.stat slovak.hash *~ slovak.words.cnt slovak.words.stat
