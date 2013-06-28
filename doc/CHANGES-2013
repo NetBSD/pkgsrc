@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2220 2013/06/28 15:04:38 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2221 2013/06/28 19:31:16 tsutsui Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3462,3 +3462,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ispell-sk to 0.3.2 [rodent 2013-06-28]
 	Updated textproc/aspell-ga to 4.6.0 [rodent 2013-06-28]
 	Updated archivers/dar to 2.4.10 [ryoon 2013-06-28]
+	Updated emulators/qemu to 1.4.2nb1 [tsutsui 2013-06-28]
