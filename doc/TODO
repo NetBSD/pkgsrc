@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12320 2013/06/27 14:22:00 ryoon Exp $
+$NetBSD: TODO,v 1.12321 2013/06/28 08:37:32 rodent Exp $
 
 Suggested new packages
 ======================
@@ -680,8 +680,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
-	o ispell-gaeilge-4.1
-	o ispell-slovak-0.3.2
+	o ispell-ga-4.6
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
