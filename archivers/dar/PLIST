@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/08/20 16:02:23 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/06/28 15:03:55 ryoon Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -60,8 +60,8 @@ include/dar/tuyau.hpp
 include/dar/user_group_bases.hpp
 include/dar/user_interaction.hpp
 include/dar/wrapperlib.hpp
-lib/libdar${DARBITS}.la
-lib/pkgconfig/libdar${DARBITS}.pc
+lib/libdar64.la
+lib/pkgconfig/libdar64.pc
 man/man1/dar.1
 man/man1/dar_cp.1
 man/man1/dar_manager.1
@@ -72,13 +72,21 @@ share/dar/samples/JH-readme.txt
 share/dar/samples/JH_dar_archiver.options
 share/dar/samples/JH_darrc
 share/dar/samples/MyBackup.sh.tar.gz
+share/dar/samples/PN_backup-root.options
+share/dar/samples/PN_backup-root.sh
+share/dar/samples/PN_backup-storage.options
+share/dar/samples/PN_backup-storage.sh
+share/dar/samples/PN_ftpbackup.sh
+share/dar/samples/Patrick_Nagel_Note.txt
 share/dar/samples/README
 share/dar/samples/automatic_backup
 share/dar/samples/automatic_backup.txt
+share/dar/samples/available_space.duc
 share/dar/samples/cdbackup.sh
 share/dar/samples/cluster_digital_backups.sh
 share/dar/samples/cluster_digital_readme.txt
 share/dar/samples/dar_backup
+share/dar/samples/dar_backups.sh
 share/dar/samples/dar_par.dcf
 share/dar/samples/dar_par_create.duc
 share/dar/samples/dar_par_test.duc
