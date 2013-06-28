@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12321 2013/06/28 08:37:32 rodent Exp $
+$NetBSD: TODO,v 1.12322 2013/06/28 10:00:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -1119,6 +1119,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.8.1
 	o visual-regexp-3.1
+	o vlc-2.0.7
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
@@ -1178,6 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xli-2006.11.10
 	o xmbdfed-4.6
 	o xmcd-3.3.2
+	o xml-security-c-1.7.2
 	o xml2-0.5
 	o xmlsec1-1.2.19
 	o xmlstarlet-1.4.2
