@@ -1,8 +1,11 @@
-$NetBSD: patch-ag,v 1.1 2012/02/06 05:37:40 matt Exp $
+$NetBSD: patch-ag,v 1.2 2013/06/29 08:24:53 mrg Exp $
 
---- src/cpus/cpu_arm_instr.cc.orig	2012-02-06 05:14:31.000000000 +0000
-+++ src/cpus/cpu_arm_instr.cc
-@@ -2631,6 +2631,7 @@ X(to_be_translated)
+enable all CPSR->SPSR copy values, instead of hard coding 3 out of 15.
+
+
+--- src/cpus/cpu_arm_instr.cc.orig	2010-02-14 09:33:54.000000000 +0000
++++ src/cpus/cpu_arm_instr.cc	2013-06-29 07:03:52.000000000 +0000
+@@ -2631,6 +2631,7 @@
  					ic->f = cond_instr(bx);
  			}
  			ic->arg[0] = (size_t)(&cpu->cd.arm.r[rm]);
@@ -10,3 +13,36 @@ $NetBSD: patch-ag,v 1.1 2012/02/06 05:37:40 matt Exp $
                          break;
                  }
  		if ((iword & 0x0fb00ff0) == 0x1000090) {
+@@ -2682,6 +2683,7 @@
+ 		    (iword & 0x0fb0f000) == 0x0320f000) {
+ 			/*  msr: move to [S|C]PSR from a register or
+ 			    immediate value  */
++			uint32_t mask;
+ 			if (iword & 0x02000000) {
+ 				if (iword & 0x00400000)
+ 					ic->f = cond_instr(msr_imm_spsr);
+@@ -2703,14 +2705,16 @@
+ 				imm = (imm >> 2) | ((imm & 3) << 30);
+ 			ic->arg[0] = imm;
+ 			ic->arg[2] = (size_t)(&cpu->cd.arm.r[rm]);
+-			switch ((iword >> 16) & 15) {
+-			case 1:	ic->arg[1] = 0x000000ff; break;
+-			case 8:	ic->arg[1] = 0xff000000; break;
+-			case 9:	ic->arg[1] = 0xff0000ff; break;
+-			default:if (!cpu->translation_readahead)
+-					fatal("unimpl a: msr regform\n");
+-				goto bad;
+-			}
++			ic->arg[1] = 0;
++			mask = (iword >> 16) & 15;
++			if (mask & 1)
++				ic->arg[1] |= 0x000000ff;
++			if (mask & 2)
++				ic->arg[1] |= 0x0000ff00;
++			if (mask & 4)
++				ic->arg[1] |= 0x00ff0000;
++			if (mask & 8)
++				ic->arg[1] |= 0xff000000;
+ 			break;
+ 		}
+ 		if ((iword & 0x0fbf0fff) == 0x010f0000) {
