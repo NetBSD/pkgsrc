@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2013/06/23 01:30:06 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.29 2013/06/29 20:29:46 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -83,3 +83,5 @@ share/locale/de/LC_MESSAGES/mlconfig.mo
 share/locale/ja/LC_MESSAGES/mlconfig.mo
 share/locale/vi/LC_MESSAGES/mlconfig.mo
 share/locale/zh_TW/LC_MESSAGES/mlconfig.mo
+${PLIST.fb}share/mlterm/kbd/kbd.six
+${PLIST.fb}share/mlterm/kbd/pressed_kbd.six
