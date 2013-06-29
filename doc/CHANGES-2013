@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2223 2013/06/29 08:59:45 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2224 2013/06/29 09:21:26 sno Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3472,3 +3472,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-subversion to 1.7.10 [obache 2013-06-29]
 	Updated devel/ruby-subversion to 1.7.10 [obache 2013-06-29]
 	Updated www/ap2-subversion to 1.7.10 [obache 2013-06-29]
+	Updated devel/p5-Try-Tiny to 0.12 [sno 2013-06-29]
