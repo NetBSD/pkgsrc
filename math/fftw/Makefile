@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/06/07 13:28:56 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2013/06/29 18:59:43 tsutsui Exp $
 
 DISTNAME=	fftw-3.3.3
 PKGREVISION=	1
@@ -19,11 +19,7 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 
-# The next lines are fodder for a fortran option.
-# Swapping the comments doesn't change the PLIST.  So what's the
-# benefit of not?
-USE_LANGUAGES+=		fortran77
-# CONFIGURE_ARGS+=	--disable-fortran
+.include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
 INFO_FILES=		yes
