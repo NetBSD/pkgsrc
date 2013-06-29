@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2222 2013/06/29 08:00:23 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2223 2013/06/29 08:59:45 obache Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3465,3 +3465,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/qemu to 1.4.2nb1 [tsutsui 2013-06-28]
 	Updated devel/subversion16 to 1.6.23 [obache 2013-06-29]
 	Updated devel/subversion16-base to 1.6.23 [obache 2013-06-29]
+	Updated devel/subversion to 1.7.10 [obache 2013-06-29]
+	Updated devel/subversion-base to 1.7.10 [obache 2013-06-29]
+	Updated devel/java-subversion to 1.7.10 [obache 2013-06-29]
+	Updated devel/p5-subversion to 1.7.10 [obache 2013-06-29]
+	Updated devel/py-subversion to 1.7.10 [obache 2013-06-29]
+	Updated devel/ruby-subversion to 1.7.10 [obache 2013-06-29]
+	Updated www/ap2-subversion to 1.7.10 [obache 2013-06-29]
