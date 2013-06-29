@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2229 2013/06/29 12:35:30 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2230 2013/06/29 20:31:00 tsutsui Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3478,3 +3478,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/rabbit to 2.1.0 [obache 2013-06-29]
 	Updated mail/milter-manager to 1.8.7 [obache 2013-06-29]
 	Updated mail/milter-manager to 1.8.9 [obache 2013-06-29]
+	Updated x11/mlterm to 3.2.1 [tsutsui 2013-06-29]
