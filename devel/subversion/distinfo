@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.83 2013/04/13 12:57:40 ryoon Exp $
+$NetBSD: distinfo,v 1.84 2013/06/29 08:56:56 obache Exp $
 
-SHA1 (subversion-1.7.9.tar.bz2) = 453757bae78a800997559f2232483ab99238ec1e
-RMD160 (subversion-1.7.9.tar.bz2) = cd600f3aee929a3c766e87bcee296ef6be6eb97f
-Size (subversion-1.7.9.tar.bz2) = 6040347 bytes
+SHA1 (subversion-1.7.10.tar.bz2) = a4f3de0a13b034b0eab4d35512c6c91a4abcf4f5
+RMD160 (subversion-1.7.10.tar.bz2) = 1919161092ef6014cdfcbf52e22a576744468fd2
+Size (subversion-1.7.10.tar.bz2) = 5952121 bytes
 SHA1 (patch-ad) = ae54d77447c2ef746bca21f755aa7c255c9521b9
 SHA1 (patch-ae) = 9be99291ffb37eb10859a98cb25dee4228136a00
