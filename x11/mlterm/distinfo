@@ -1,15 +1,8 @@
-$NetBSD: distinfo,v 1.33 2013/06/26 11:29:47 tsutsui Exp $
+$NetBSD: distinfo,v 1.34 2013/06/29 20:29:46 tsutsui Exp $
 
-SHA1 (mlterm-3.2.0.tar.gz) = 66478d4f345bb2fe225c498b585797e66f2f931f
-RMD160 (mlterm-3.2.0.tar.gz) = b14f5304e690eb300093ce905f89c89f1a5f4bb7
-Size (mlterm-3.2.0.tar.gz) = 3509742 bytes
-SHA1 (patch-configure) = b09182d7cb0ceb73557cf9e568445ad2d46aa04c
-SHA1 (patch-etc_font-fb) = 95a39d6e2aa56ecc745edec3d324f3dcf57b3b39
-SHA1 (patch-mkf_lib_mkf__ucs4__map.c) = 1bec2e100d5a53a84ca81436389c5cf2ce67f34b
-SHA1 (patch-xwindow_fb_x__display.c) = 20bbfc87028828eeec33b3bc8bdbba93766ff9a1
-SHA1 (patch-xwindow_fb_x__font.c) = a55515411ed9063e609eb70bddf40ad6c486376b
-SHA1 (patch-xwindow_fb_x__window.c) = bbeafd847b6654bec9dd517bf669194e964a2758
-SHA1 (patch-xwindow_win32_x__font.c) = 3c33fe26bbac54ee6ec9ad6add086f8903269a31
-SHA1 (patch-xwindow_x__screen.c) = 1408ec3a64a9b6f9455bd1937c2a9a78600986c2
-SHA1 (patch-xwindow_x__shortcut.c) = 8ec6c9a5dcfbc68d034a4d1c359ac7402684c9f9
-SHA1 (patch-xwindow_xlib_x__window.c) = dc1ca6adb74e0cbd086ba81ad448edcc5ec78743
+SHA1 (mlterm-3.2.1.tar.gz) = 67c2036ab3e280b4da5e3935ca56f0166d160eab
+RMD160 (mlterm-3.2.1.tar.gz) = ca550a1efe99b903303308db6bd49649b9a10d71
+Size (mlterm-3.2.1.tar.gz) = 3529721 bytes
+SHA1 (patch-configure) = e912c9ee89cd338bc4f0b40bccf38dd2587cda6d
+SHA1 (patch-configure.in) = 2f175e1ac4f933940197d8dff1f429ffb6e7538f
+SHA1 (patch-etc_font-fb) = 019d92cafbbae85629ae2914adcfca9d01f347d0
