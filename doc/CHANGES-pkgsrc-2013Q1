@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.31 2013/06/23 07:37:12 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q1,v 1.1.2.32 2013/06/29 23:38:42 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q1 branch:
@@ -110,3 +110,5 @@ Pullup ticket #4164 - requested by morr
 net/haproxy: security update
 Pullup ticket #4165 - requested by morr
 net/haproxy: security update
+Pullup ticket #4166 - requested by morr
+www/wordpress: security update
