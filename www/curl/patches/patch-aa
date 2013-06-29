@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.21 2013/02/11 12:20:44 wiz Exp $
+$NetBSD: patch-aa,v 1.22 2013/06/29 19:24:57 spz Exp $
 
---- configure.orig	2013-02-06 09:47:26.000000000 +0000
+--- configure.orig	2013-06-21 22:29:35.000000000 +0000
 +++ configure
-@@ -3635,6 +3635,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3646,6 +3646,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.21 2013/02/11 12:20:44 wiz Exp $
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16373,7 +16374,7 @@ squeeze() {
+@@ -16634,7 +16635,7 @@ squeeze() {
  
  
        #
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.21 2013/02/11 12:20:44 wiz Exp $
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21261,15 +21262,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21496,15 +21497,15 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
             LIBS="$gss_libs $LIBS"
          elif test "$GSSAPI_ROOT" != "yes"; then
             LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff"
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.21 2013/02/11 12:20:44 wiz Exp $
    fi
  else
    CPPFLAGS="$save_CPPFLAGS"
-@@ -24833,19 +24834,19 @@ $as_echo "$as_me: WARNING: You need an l
+@@ -25070,19 +25071,19 @@ $as_echo "$as_me: WARNING: You need an l
  $as_echo "yes" >&6; }
          if test "x$OPENSSL_ENABLED" = "x1"; then
            versioned_symbols_flavour="OPENSSL_"
