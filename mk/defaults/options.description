@@ -168,6 +168,7 @@ fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
 ffmpeg			Enable ffmpeg support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
+fftw-fortran		Enable Fortran support.
 finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 firefox3		Use firefox3 as gecko rendering engine.
