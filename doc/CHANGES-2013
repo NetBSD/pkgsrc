@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2225 2013/06/29 09:25:40 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2226 2013/06/29 09:29:17 sno Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3474,3 +3474,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ap2-subversion to 1.7.10 [obache 2013-06-29]
 	Updated devel/p5-Try-Tiny to 0.12 [sno 2013-06-29]
 	Updated devel/p5-PathTools to 3.40 [sno 2013-06-29]
+	Updated www/p5-Apache-LogFormat-Compiler to 0.13 [sno 2013-06-29]
