@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/06/30 03:14:43 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2013/06/30 14:14:10 rodent Exp $
 #
 
 DISTNAME=	Cg-3.1_April2012_x86${DIST_ARCH}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://developer.download.nvidia.com/cg/Cg_3.1/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://developer.nvidia.com/cg-toolkit
 COMMENT=	Compiler for the Cg 3.1 language
 LICENSE=	nvidia-license
