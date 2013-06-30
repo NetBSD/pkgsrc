@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/11/26 20:07:12 imil Exp $
+$NetBSD: distinfo,v 1.3 2013/06/30 20:16:15 rodent Exp $
 
-SHA1 (compiz-bcop-0.8.4.tar.gz) = 9bcc69497cbb3a8240ad9daf74c5200895558066
-RMD160 (compiz-bcop-0.8.4.tar.gz) = 641249985256c6a7ca78d558833ad775230450a9
-Size (compiz-bcop-0.8.4.tar.gz) = 88897 bytes
+SHA1 (compiz-bcop-0.8.8.tar.gz) = 29ae346c708b81bedf19c85cd6758bf1e39b2335
+RMD160 (compiz-bcop-0.8.8.tar.gz) = 833152f47935c55970a3bf522f99499f8de6791e
+Size (compiz-bcop-0.8.8.tar.gz) = 93555 bytes
