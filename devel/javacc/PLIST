@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/06/30 12:31:42 ryoon Exp $
 bin/javacc
 bin/jjdoc
+bin/jjrun
 bin/jjtree
 lib/java/javacc.jar
 share/doc/javacc/CharStream.html
 share/doc/javacc/JJDoc.html
 share/doc/javacc/JJTree.html
+share/doc/javacc/JavaCC.html
+share/doc/javacc/JavaCC.txt
 share/doc/javacc/LICENSE
 share/doc/javacc/apiroutines.html
 share/doc/javacc/commandline.html
@@ -26,6 +29,7 @@ share/doc/javacc/mailinglist.html
 share/doc/javacc/simpleREADME.html
 share/doc/javacc/support.html
 share/doc/javacc/tokenmanager.html
+share/examples/javacc/CORBA-IDL/Hello.idl
 share/examples/javacc/CORBA-IDL/IDL.jj
 share/examples/javacc/CORBA-IDL/README
 share/examples/javacc/GUIParsing/ParserVersion/CalcGUI.java
@@ -82,19 +86,20 @@ share/examples/javacc/Interpreter/odd.spl
 share/examples/javacc/Interpreter/sqrt.spl
 share/examples/javacc/JJTreeExamples/ASTMyID.java
 share/examples/javacc/JJTreeExamples/ASTMyOtherID.java
+share/examples/javacc/JJTreeExamples/Eg4DumpVisitor.java
 share/examples/javacc/JJTreeExamples/README
 share/examples/javacc/JJTreeExamples/build.xml
 share/examples/javacc/JJTreeExamples/eg1.jjt
 share/examples/javacc/JJTreeExamples/eg2.jjt
 share/examples/javacc/JJTreeExamples/eg3.jjt
 share/examples/javacc/JJTreeExamples/eg4.jjt
-share/examples/javacc/JJTreeExamples/eg4DumpVisitor.java
 share/examples/javacc/JavaCCGrammar/JavaCC.jj
 share/examples/javacc/JavaGrammars/1.5/Java1.5.jj
+share/examples/javacc/JavaGrammars/1.5/JavaGenerics.java
 share/examples/javacc/JavaGrammars/1.5/Main.java
+share/examples/javacc/JavaGrammars/1.5/MyToken.java
 share/examples/javacc/JavaGrammars/1.5/README
 share/examples/javacc/JavaGrammars/1.5/Test.java
-share/examples/javacc/JavaGrammars/1.5/Token.java
 share/examples/javacc/JavaGrammars/1.5/build.xml
 share/examples/javacc/JavaGrammars/Java1.0.2.jj
 share/examples/javacc/JavaGrammars/Java1.0.2LS.jj
