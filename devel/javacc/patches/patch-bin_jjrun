@@ -1,0 +1,31 @@
+$NetBSD: patch-bin_jjrun,v 1.1 2013/06/30 12:31:42 ryoon Exp $
+
+--- bin/jjrun.orig	2009-08-31 22:27:03.000000000 +0000
++++ bin/jjrun
+@@ -133,8 +133,8 @@ build: ${JAR}
+ # make ${JAR}: build the jar file 
+ ${JAR}: ${SOURCES} ${MANIFEST}
+ 	@echo ${MAKEFILE}: Building ${JAR}...
+-	javac ${SOURCES}
+-	jar cvfm ${JAR} ${MANIFEST} ${CLASSES}
++	@PKG_JAVA_HOME@/bin/javac ${SOURCES}
++	@PKG_JAVA_HOME@/bin/jar cvfm ${JAR} ${MANIFEST} ${CLASSES}
+ 	rm ${CLASSES}
+ 
+ # make clean: remove all generated jar files
+@@ -145,7 +145,7 @@ clean:
+ # make ${SOURCES}: compile the jj file into java sources
+ ${SOURCES}: ${JJ}
+ 	@echo ${MAKEFILE}: Compiling ${JJ}...
+-	@javacc ${JJ}
++	@PREFIX@/bin/javacc ${JJ}
+ 	touch -c ${BOILERSOURCES}
+ 
+ # make ${MANIFEST}: rule to make
+@@ -175,5 +175,5 @@ make -f $MAKEFILE
+ 
+ # Execute the jar file
+ echo $PROGNAME: Executing $PROJECT.jar...
+-java -jar $PROJECT.jar
++@PKG_JAVA_HOME@/bin/java -jar $PROJECT.jar
+ 

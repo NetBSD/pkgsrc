@@ -1,0 +1,16 @@
+$NetBSD: patch-bin_jjtree,v 1.1 2013/06/30 12:31:42 ryoon Exp $
+
+--- bin/jjtree.orig	2009-08-31 22:27:03.000000000 +0000
++++ bin/jjtree
+@@ -1,9 +1,9 @@
+ #!/bin/sh
+-JAR="`dirname $0`/lib/javacc.jar"
++JAR="@PREFIX@/lib/java/javacc.jar"
+ 
+ case "`uname`" in
+      CYGWIN*) JAR="`cygpath --windows -- "$JAR"`" ;;
+ esac
+ 
+-java -classpath "$JAR" jjtree "$@"
++@PKG_JAVA_HOME@/bin/java -classpath "$JAR" jjtree "$@"
+ 
