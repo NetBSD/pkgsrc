@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/06/30 20:53:46 rodent Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/30 22:01:10 rodent Exp $
 #
 
 PKGVER=		0.8.8
@@ -47,8 +47,6 @@ GCONF_SCHEMAS+=		compiz-vpswitch.schemas
 GCONF_SCHEMAS+=		compiz-wall.schemas
 GCONF_SCHEMAS+=		compiz-winrules.schemas
 GCONF_SCHEMAS+=		compiz-workarounds.schemas
-
-CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
