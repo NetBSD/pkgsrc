@@ -1,42 +1,40 @@
-# $NetBSD: Makefile,v 1.48 2013/06/04 22:16:25 tron Exp $
+# $NetBSD: Makefile,v 1.49 2013/06/30 15:13:09 ryoon Exp $
 
-DISTNAME=	pl231src
-PKGNAME=	ploticus-2.31pl4
-PKGREVISION=	12
+DISTNAME=	ploticus242_src
+PKGNAME=	ploticus-2.42
 CATEGORIES=	graphics
-MASTER_SITES=	http://ploticus.sourceforge.net/download/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ploticus/}
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://ploticus.sourceforge.net/
 COMMENT=	Versatile data visualization engine
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
-NO_CONFIGURE=		yes
+WRKSRC=			${WRKDIR}/${DISTNAME:S/_src//}
 
-BUILD_TARGET=	ploticus
-MANSRC=		${WRKDIR}/${DISTNAME}/man
-PREFABSRC=	${WRKDIR}/${DISTNAME}/prefabs
+BUILD_DIRS=	src
+BUILD_TARGET=	pl
 
-DOCDST=		${PREFIX}/share/doc/ploticus
-PREFABDST=	${PREFIX}/share/ploticus
+DOCSRC=		${WRKSRC}/pltestsuite
+PREFABSRC=	${WRKSRC}/prefabs
+
+DOCDST=		share/doc/ploticus
+PREFABDST=	share/ploticus
 
 MAKE_ENV+=	XLIBS="-L${X11BASE}/lib -lX11"
 MAKE_ENV+=	XINCLUDEDIR="-I${X11BASE}/include"
 
-INSTALLATION_DIRS=	bin
+SUBST_CLASSES+=		prefab
+SUBST_STAGE.prefab=	pre-configure
+SUBST_MESSAGE.prefab=	Hardcode PLOTICUS_PREFABS.
+SUBST_FILES.prefab=	src/pl.h
+SUBST_VARS.prefab=	PREFIX
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pl ${DESTDIR}${PREFIX}/bin/pl
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFABDST}
-.for file in \
-	README chron.pl chunk_area chunk_chronfilter chunk_doheatmap \
-	chunk_heatmapfilter chunk_logstubs chunk_logtics chunk_read \
-	chunk_setstd chunk_stackareafilter chunk_title chunk_vdistfilter \
-	chunk_xaxis chunk_yaxis compare.pl cumufrac.pl dist.pl draw.pl \
-	heatmap.pl lines.pl multidist.pl pie.pl processdata.pl scat.pl \
-	stack.pl vbars.pl vdist.pl
-	${INSTALL_DATA} ${PREFABSRC}/${file} ${DESTDIR}${PREFABDST}/${file}
-.endfor
+INSTALLATION_DIRS+=	${DOCDST} ${PREFABDST}
+
+post-install:
+	${INSTALL_DATA} ${DOCSRC}/* ${DESTDIR}${PREFIX}/${DOCDST}
+	${INSTALL_DATA} ${PREFABSRC}/* ${DESTDIR}${PREFIX}/${PREFABDST}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"

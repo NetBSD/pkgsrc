@@ -1,0 +1,69 @@
+$NetBSD: patch-src_Makefile,v 1.1 2013/06/30 15:13:09 ryoon Exp $
+
+* zlib is also needed explicitly.
+
+--- src/Makefile.orig	2013-06-07 17:05:43.000000000 +0000
++++ src/Makefile
+@@ -7,7 +7,7 @@
+ 
+ 
+ # defaults..
+-CC = gcc
++#CC = gcc
+ PLATFORM = UNIX
+ RMCOM = rm -f
+ NOX11 = -DNOX11
+@@ -91,10 +91,10 @@ NOX11 = -DNOX11
+ 
+ 
+ ########### Option 1: use bundled GD16 (PNG only).  Requires libpng and zlib.
+-exetarget: plpng 
+-GD16LIBS = -lpng -lz
+-GD16H =  -I/usr/local/include
+-ZFLAG = -DWZ
++#exetarget: plpng 
++#GD16LIBS = -lpng -lz
++#GD16H =  -I/usr/local/include
++#ZFLAG = -DWZ
+ ### These should remain commented unless your libs are not in usual places, then alter to suit...
+ ### GD16LIBS = /home/scg/lib/libpng.a /home/scg/lib/libz.a
+ ### GD16H = -I/home/scg/lib
+@@ -103,11 +103,11 @@ ZFLAG = -DWZ
+ # exetarget: pl 
+ 
+ ########### Option 3: use your own GD resource.  Requires GD 1.84+, libpng, zlib, libjpeg
+-# exetarget: plgd18 
+-# GD18LIBS = -lgd -lpng -lz -ljpeg 
+-# GD18H = 
+-# GDFREETYPE = 
+-# ZFLAG = -DWZ
++exetarget: plgd18 
++GD18LIBS = -lgd -lpng -lz -ljpeg 
++GD18H = 
++GDFREETYPE = 
++ZFLAG = -DWZ
+ 
+ ########### Option 4: use your own GD resource with FreeType2 (ttf) fonts enabled.  
+ ###########           Requires GD 1.84+, libpng, zlib, libjpeg and libfreetype
+@@ -188,9 +188,9 @@ GD13 = grgd13.o devstuff13.o gd13.o 
+ GD16 = grgd16.o devstuff16.o gd16.o gd_io.o gd_io_dp.o gd_io_file.o gd_png.o 
+ GD = gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o
+ 
+-LIBS = $(XLIBS) -lm $(ADDLIBS) 
++LIBS = ${LDFLAGS} $(XLIBS) -lm $(ADDLIBS) -lz
+ 
+-CFLAGS = $(FPIC) $(WALL) -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(LOCALE_FLAG) \
++CFLAGS += $(FPIC) $(WALL) -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(LOCALE_FLAG) \
+   $(NOGD) $(NOX11) $(NOPS) $(NOSVG) $(NOSWF) $(XINCLUDEDIR) $(MINGH) 
+ 
+ OBJ = proc_annotate.o proc_areadef.o proc_axis.o proc_bars.o proc_rect.o proc_breakaxis.o \
+@@ -263,7 +263,8 @@ devgrgd:
+ 
+ 
+ install:
+-	cp $(EXE) $(INSTALLBIN)
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} $(EXE) ${DESTDIR}${PREFIX}/bin
+ 
+ clean:
+ 	$(RMCOM) *.o gd??files 
