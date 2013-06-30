@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/06/06 12:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/06/30 20:11:47 rodent Exp $
 #
 
-PKGVER=		0.8.4
+PKGVER=		0.8.8
 DISTNAME=	libcompizconfig-${PKGVER}
-PKGREVISION=	20
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -25,6 +24,14 @@ PKGCONFIG_OVERRIDE=	libcompizconfig.pc.in
 
 INSTALLATION_DIRS=	${EGDIR}
 
+.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/libinotify/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wm/compiz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
