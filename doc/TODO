@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12328 2013/06/30 11:50:22 ryoon Exp $
+$NetBSD: TODO,v 1.12329 2013/06/30 12:32:15 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jabberd-1.6.1.1
 	o jamvm-1.5.4 [pkg/45604]
 	o java-db3-3.87
-	o javacc-5.0
 	o jcabc2ps-20070110
 	o jed-0.99-18
 	o john-1.8.0
