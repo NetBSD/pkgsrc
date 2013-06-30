@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/06/30 15:17:18 ryoon Exp $
 
-SHA1 (ploticus-1.41/plnode141.tar.gz) = e1410caf28c75eb40f89c96d83ee10dfb4f77cb3
-RMD160 (ploticus-1.41/plnode141.tar.gz) = f992756dfcfd5163771c66dbaf5049eb7a660fe4
-Size (ploticus-1.41/plnode141.tar.gz) = 1457873 bytes
+SHA1 (ploticus-2.00/plnode200.tar.gz) = 34274a03d0c41fae5690633663e3d4114b9d7a6d
+RMD160 (ploticus-2.00/plnode200.tar.gz) = d8674dbacd629e28970a89c361e7d2b695294236
+Size (ploticus-2.00/plnode200.tar.gz) = 1671372 bytes
