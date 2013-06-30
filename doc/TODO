@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12331 2013/06/30 13:41:33 ryoon Exp $
+$NetBSD: TODO,v 1.12332 2013/06/30 15:03:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -521,7 +521,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o firefox-22.0
 	o fisg-0.3.12
 	o fish-2.0
 	o flashplayer-0.4.13
@@ -610,6 +609,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.2
 	o gnuchess-6.0.3
+	o gnumeric112-1.12.3
 	o gnutls-3.2.1
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
@@ -655,6 +655,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o harfbuzz-0.9.18
 	o haskell-mode-1.45
 	o hdf-4.2.7
+	o help2man-1.43.3
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.2
@@ -739,6 +740,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnome-keyring-3.8.0
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgpg-error-1.12
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.3.0
@@ -801,7 +803,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o miredo-1.2.4
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-6.2.0
+	o mkvtoolnix-6.3.0
 	o mnemosyne-2.2.1
 	o modular-xorg-server-1.14.2
 	o molden-4.8 [after which PR 40252 can be closed]
@@ -818,6 +820,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpg123-1.15.4
 	o mpop-1.0.28
 	o mserv-devel-0.41
+	o mtr-0.85
 	o mu-0.9.9.5
 	o multitail-5.2.13
 	o munin-doc-1.4.6
@@ -939,17 +942,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-beets-1.2.1
 	o py-cairo-1.10.0
 	o py-dateutil-2.0
+	o py-distribute-0.6.46
 	o py-game-1.9.1 [needs portmidi]
 	o py-gdata-2.0.18
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-moin-1.9.7
+	o py-psycopg2-2.5.1
 	o py-qt5-5.0.0
 	o py-setuptools-0.7.2
 	o py-simplejson-3.3.0
 	o py-sip-4.14.7
 	o py-sybase-0.37
-	o qemu-1.5
+	o qemu-1.5.1
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.7.2
 	o qt5-libs-5.0.2
@@ -1150,7 +1155,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130622
+	o x264-devel-20130629
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
