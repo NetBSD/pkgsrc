@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/10/11 12:43:50 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2013/06/30 09:43:31 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.a68g
 PKG_SUPPORTED_OPTIONS=	plotutils pgsql
-PKG_SUGGESTED_OPTIONS=	plotutils pgsql
+PKG_SUGGESTED_OPTIONS=	plotutils
 
 .include "../../mk/bsd.options.mk"
 
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--without-plotutils
 # So maybe this DEPENDS is undesirable.
 .if !empty(PKG_OPTIONS:Mpgsql)
 CONFIGURE_ARGS+=	--with-pgsql
+.include "../../mk/pgsql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-pgsql
 .endif
