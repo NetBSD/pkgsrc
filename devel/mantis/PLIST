@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/12/25 21:49:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/06/30 11:47:44 ryoon Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/examples/mantis/config_inc.php
@@ -40,6 +40,7 @@ share/mantis/admin/test_langs.php
 share/mantis/admin/upgrade_unattended.php
 share/mantis/admin/upgrade_warning.php
 share/mantis/api/soap/mantisconnect.php
+share/mantis/api/soap/mantisconnect.wsdl
 share/mantis/api/soap/mc_account_api.php
 share/mantis/api/soap/mc_api.php
 share/mantis/api/soap/mc_config_api.php
@@ -919,6 +920,7 @@ share/mantis/plugins/MantisCoreFormatting/lang/strings_catalan.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_chinese_simplified.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_chinese_traditional.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_czech.txt
+share/mantis/plugins/MantisCoreFormatting/lang/strings_danish.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_dutch.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_english.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_finnish.txt
@@ -930,6 +932,7 @@ share/mantis/plugins/MantisCoreFormatting/lang/strings_hungarian.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_interlingua.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_italian.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_japanese.txt
+share/mantis/plugins/MantisCoreFormatting/lang/strings_korean.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_lithuanian.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_macedonian.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_norwegian_bokmal.txt
@@ -949,6 +952,7 @@ share/mantis/plugins/MantisCoreFormatting/lang/strings_swedish.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_swissgerman.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_tagalog.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_turkish.txt
+share/mantis/plugins/MantisCoreFormatting/lang/strings_ukrainian.txt
 share/mantis/plugins/MantisCoreFormatting/lang/strings_vietnamese.txt
 share/mantis/plugins/MantisCoreFormatting/pages/config.php
 share/mantis/plugins/MantisCoreFormatting/pages/config_edit.php
@@ -977,6 +981,7 @@ share/mantis/plugins/MantisGraph/lang/strings_hungarian.txt
 share/mantis/plugins/MantisGraph/lang/strings_interlingua.txt
 share/mantis/plugins/MantisGraph/lang/strings_italian.txt
 share/mantis/plugins/MantisGraph/lang/strings_japanese.txt
+share/mantis/plugins/MantisGraph/lang/strings_korean.txt
 share/mantis/plugins/MantisGraph/lang/strings_lithuanian.txt
 share/mantis/plugins/MantisGraph/lang/strings_macedonian.txt
 share/mantis/plugins/MantisGraph/lang/strings_norwegian_bokmal.txt
@@ -996,6 +1001,7 @@ share/mantis/plugins/MantisGraph/lang/strings_swedish.txt
 share/mantis/plugins/MantisGraph/lang/strings_swissgerman.txt
 share/mantis/plugins/MantisGraph/lang/strings_tagalog.txt
 share/mantis/plugins/MantisGraph/lang/strings_turkish.txt
+share/mantis/plugins/MantisGraph/lang/strings_ukrainian.txt
 share/mantis/plugins/MantisGraph/lang/strings_vietnamese.txt
 share/mantis/plugins/MantisGraph/pages/bug_graph_bycategory.php
 share/mantis/plugins/MantisGraph/pages/bug_graph_bystatus.php
@@ -1039,6 +1045,7 @@ share/mantis/plugins/XmlImportExport/lang/strings_catalan.txt
 share/mantis/plugins/XmlImportExport/lang/strings_chinese_simplified.txt
 share/mantis/plugins/XmlImportExport/lang/strings_chinese_traditional.txt
 share/mantis/plugins/XmlImportExport/lang/strings_czech.txt
+share/mantis/plugins/XmlImportExport/lang/strings_danish.txt
 share/mantis/plugins/XmlImportExport/lang/strings_dutch.txt
 share/mantis/plugins/XmlImportExport/lang/strings_english.txt
 share/mantis/plugins/XmlImportExport/lang/strings_finnish.txt
@@ -1050,6 +1057,7 @@ share/mantis/plugins/XmlImportExport/lang/strings_hungarian.txt
 share/mantis/plugins/XmlImportExport/lang/strings_interlingua.txt
 share/mantis/plugins/XmlImportExport/lang/strings_italian.txt
 share/mantis/plugins/XmlImportExport/lang/strings_japanese.txt
+share/mantis/plugins/XmlImportExport/lang/strings_korean.txt
 share/mantis/plugins/XmlImportExport/lang/strings_lithuanian.txt
 share/mantis/plugins/XmlImportExport/lang/strings_macedonian.txt
 share/mantis/plugins/XmlImportExport/lang/strings_norwegian_bokmal.txt
