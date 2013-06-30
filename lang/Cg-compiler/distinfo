@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:03:05 agc Exp $
+$NetBSD: distinfo,v 1.4 2013/06/30 03:14:43 rodent Exp $
 
-SHA1 (CgLinux-1.3.0408-0400.tar.gz) = 56adb5f8e9859f422e21a6f71d0dc832c7e0fb69
-RMD160 (CgLinux-1.3.0408-0400.tar.gz) = 4e2b27defaaf59999246bf30ae6d1a50d1861dd3
-Size (CgLinux-1.3.0408-0400.tar.gz) = 4901909 bytes
+SHA1 (Cg-3.1_April2012_x86.tgz) = b0cdbcacd85716a80a90b7c65b817b6931df9d5b
+RMD160 (Cg-3.1_April2012_x86.tgz) = 43c0834948b48a18ca6511b59bc98e82c0e53bc4
+Size (Cg-3.1_April2012_x86.tgz) = 23332348 bytes
+SHA1 (Cg-3.1_April2012_x86_64.tgz) = 7e3d70fcb2246a577654e6b7fb141db907560c53
+RMD160 (Cg-3.1_April2012_x86_64.tgz) = eb2dbe1883297efa6ab1dc7f091b5a8d5dbbfdba
+Size (Cg-3.1_April2012_x86_64.tgz) = 24829131 bytes
