@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/06/11 19:40:22 asau Exp $
+$NetBSD: distinfo,v 1.4 2013/06/30 09:43:31 ryoon Exp $
 
-SHA1 (algol68g-2.6.tar.gz) = a054de1a74b84adec43ea1db4cd8ac0798e0fd3e
-RMD160 (algol68g-2.6.tar.gz) = 1b32b3974c76056392dc15fc932c67b2c5d09d75
-Size (algol68g-2.6.tar.gz) = 613372 bytes
+SHA1 (algol68g-2.7.tar.gz) = b12f9ec9a70297f289b8e59c990788c08b11d759
+RMD160 (algol68g-2.7.tar.gz) = d52fe93c9ac81d57033f88c9de9a2c1694af72da
+Size (algol68g-2.7.tar.gz) = 666918 bytes
