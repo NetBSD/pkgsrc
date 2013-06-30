@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2235 2013/06/30 12:32:15 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2236 2013/06/30 13:39:48 ryoon Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3484,3 +3484,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/libprelude-perl to 0.9.24.1nb7 [sno 2013-06-30]
 	Updated devel/mantis to 1.2.15 [ryoon 2013-06-30]
 	Updated devel/javacc to 5.0 [ryoon 2013-06-30]
+	Updated editors/biew to 6.1.0 [ryoon 2013-06-30]
