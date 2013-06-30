@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2244 2013/06/30 22:19:44 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2245 2013/06/30 22:21:10 rodent Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3485,9 +3485,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mantis to 1.2.15 [ryoon 2013-06-30]
 	Updated devel/javacc to 5.0 [ryoon 2013-06-30]
 	Updated editors/biew to 6.1.0 [ryoon 2013-06-30]
+	Updated lang/Cg-compiler to 3.1 [rodent 2013-06-30]
 	Updated graphics/ploticus to 2.42 [ryoon 2013-06-30]
 	Updated graphics/ploticus-examples to 2.00 [ryoon 2013-06-30]
-	Updated lang/Cg-compiler to 3.1 [rodent 2013-06-30]
 	Updated devel/compizconfig-backend-gconf to 0.8.8 [rodent 2013-06-30]
 	Updated devel/libcompizconfig to 0.8.8 [rodent 2013-06-30]
 	Updated devel/compiz-bcop to 0.8.8 [rodent 2013-06-30]
