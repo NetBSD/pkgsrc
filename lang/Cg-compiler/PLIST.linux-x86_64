@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.linux-x86_64,v 1.1 2013/06/30 03:14:43 rodent Exp $
+${EMULSUBDIRSLASH}lib64/libCg.so
+${EMULSUBDIRSLASH}lib64/libCgGL.so
