@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2013/06/06 12:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/06/30 20:53:46 rodent Exp $
 #
 
-PKGVER=		0.8.4
+PKGVER=		0.8.8
 PKGNAME=	compiz-fusion-plugins-main-${PKGVER}
 DISTNAME=	compiz-plugins-main-${PKGVER}
-PKGREVISION=	19
 CATEGORIES=	wm x11
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -14,14 +13,13 @@ COMMENT=	Compositing window manager - main plugins
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool pkg-config msgfmt gmake
+USE_TOOLS+=		gmake intltool msgfmt msgmerge pkg-config xgettext
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	compiz-text.pc.in
 
-CONFIGURE_ARGS+=	--disable-inotify
 CONFIGURE_ARGS+=	--enable-schemas
 
 GCONF_SCHEMAS+=		compiz-animation.schemas
@@ -50,7 +48,15 @@ GCONF_SCHEMAS+=		compiz-wall.schemas
 GCONF_SCHEMAS+=		compiz-winrules.schemas
 GCONF_SCHEMAS+=		compiz-workarounds.schemas
 
+CONFIGURE_ARGS+=	--disable-nls
+
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
+BUILDLINK_API_DEPENDS.compiz-bcop+=	compiz-bcop>=0.7.3
 .include "../../devel/compiz-bcop/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../wm/compiz/buildlink3.mk"
