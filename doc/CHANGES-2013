@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2241 2013/06/30 22:16:37 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2242 2013/06/30 22:17:28 rodent Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3491,3 +3491,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/compizconfig-backend-gconf to 0.8.8 [rodent 2013-06-30]
 	Updated devel/libcompizconfig to 0.8.8 [rodent 2013-06-30]
 	Updated devel/compiz-bcop to 0.8.8 [rodent 2013-06-30]
+	Updated wm/compiz to 0.8.8 [rodent 2013-06-30]
