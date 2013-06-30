@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/06/06 12:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/30 20:08:41 rodent Exp $
 #
 
-PKGVER=		0.8.4
+PKGVER=		0.8.8
 DISTNAME=	compizconfig-backend-gconf-${PKGVER}
-PKGREVISION=	18
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -16,7 +15,13 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
+.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libcompizconfig/buildlink3.mk"
 .include "../../wm/compiz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
