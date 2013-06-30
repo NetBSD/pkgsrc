@@ -1,7 +1,16 @@
-This is the NVIDIA Cg compiler/toolkit for Linux that includes:
+The award-winning Cg Toolkit enables software developers to add the latest
+interactive effects to real-time applications with a comprehensive solution that
+works across platforms and graphics APIs containing:
 
-    o NVIDIA Cg toolkit documentation
-    o NVIDIA Cg compiler
-    o NVIDIA Cg runtime libraries for OpenGL
-    o Example shaders written in the Cg language
-    o Example applications that use the Cg runtime to manage Cg programs
+ * Compiler for the Cg 3.1 language
+ * Cg/CgFX Runtime libraries for OpenGL and Direct3D
+ * User's Manual and documentation on the Cg Language, Runtime APIs, Cg
+	Library, CgFX States, and Cg Profiles
+ * Numerous Cg examples
+
+Supporting dozens of different OpenGL and DirectX profile targets, Cg allows you
+to incorporate stunning, interactive effects within your 3D applications and
+share them between other Cg applications, across graphics APIs, and most
+operating systems (Windows XP, Vista and Windows 7, Mac OS X for Leopard, Snow
+Leopard & Lion, Linux 32-bit & 64-bit) and balance effect complexities with
+client GPU capabilities.
