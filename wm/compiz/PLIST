@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2010/03/16 11:06:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/06/30 20:30:09 rodent Exp $
 bin/compiz
 bin/gtk-window-decorator
-${PLIST.kde}bin/kde-window-decorator
+${PLIST.kde3}bin/kde-window-decorator
 include/compiz/compiz-common.h
 include/compiz/compiz-core.h
 include/compiz/compiz-cube.h
@@ -21,7 +21,8 @@ lib/compiz/libgconf.la
 lib/compiz/libglib.la
 lib/compiz/libgnomecompat.la
 lib/compiz/libini.la
-${PLIST.kde}lib/compiz/libkconfig.la
+${PLIST.inotify}lib/compiz/libinotify.la
+${PLIST.kde3}lib/compiz/libkconfig.la
 lib/compiz/libminimize.la
 lib/compiz/libmove.la
 lib/compiz/libobs.la
@@ -41,7 +42,7 @@ lib/compiz/libzoom.la
 lib/libdecoration.la
 lib/pkgconfig/compiz-cube.pc
 lib/pkgconfig/compiz-gconf.pc
-${PLIST.kde}lib/pkgconfig/compiz-kconfig.pc
+${PLIST.kde3}lib/pkgconfig/compiz-kconfig.pc
 lib/pkgconfig/compiz-scale.pc
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
@@ -66,7 +67,7 @@ share/compiz/ini.xml
 share/compiz/inotify.xml
 ${PLIST.kde}share/compiz/kcfg.xslt
 share/compiz/kconfig.xml
-${PLIST.kde}share/compiz/kconfig.xslt
+${PLIST.kde3}share/compiz/kconfig.xslt
 share/compiz/minimize.xml
 share/compiz/move.xml
 share/compiz/obs.xml
@@ -135,7 +136,7 @@ ${PLIST.kde}share/kde/config.kcfg/compiz-glib.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-gnomecompat.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-ini.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-inotify.kcfg
-${PLIST.kde}share/kde/config.kcfg/compiz-kconfig.kcfg
+${PLIST.kde3}share/kde/config.kcfg/compiz-kconfig.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-minimize.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-move.kcfg
 ${PLIST.kde}share/kde/config.kcfg/compiz-obs.kcfg
