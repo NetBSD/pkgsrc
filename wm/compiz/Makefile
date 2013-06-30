@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2013/06/06 12:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2013/06/30 20:30:09 rodent Exp $
 #
 
-PKGVER=		0.8.4
+PKGVER=		0.8.8
 DISTNAME=	compiz-${PKGVER}
-PKGREVISION=	36
 CATEGORIES=	wm x11
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -13,7 +12,7 @@ COMMENT=	Compositing window manager
 LICENSE=	mit
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool pkg-config msgfmt gmake
+USE_TOOLS+=		gmake intltool msgfmt msgmerge pkg-config xgettext
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -56,54 +55,39 @@ GCONF_SCHEMAS+=		${COMPIZ_GCONF_SCHEMAS}
 PKGCONFIG_OVERRIDE+=	compiz.pc.in
 PKGCONFIG_OVERRIDE+=	libdecoration/libdecoration.pc.in
 
-CONFIGURE_ARGS+=	--disable-inotify
-
-PKG_SUPPORTED_OPTIONS=	gnome kde
-PKG_SUGGESTED_OPTIONS=	gnome
-PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
-
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	metadata/decoration.xml.in
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
+
+.include "options.mk"
+
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 post-install:
 .for schema in ${COMPIZ_GCONF_SCHEMAS}
 	${INSTALL_DATA} ${WRKSRC}/metadata/${schema} ${DESTDIR}${PREFIX}/share/gconf/schemas
 .endfor
 
-.include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
-
 # this is as much as needed for the basic window decorator
+BUILDLINK_DEPMETHOD.pango=	build
+.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-librsvg
-PLIST.gnome=		yes
-.include "../../x11/gnome-control-center/buildlink3.mk"
-.include "../../wm/metacity/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mkde)
-PLIST.kde=		yes
-.include "../../x11/kdebase3/buildlink3.mk"
-.include "../../sysutils/dbus-qt3/buildlink3.mk"
-.endif
-
 # While we don't use threads, we link against libpthread because
-# some plugins do it.
+# some plugins do it. Same for dlopen.
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
@@ -115,7 +99,10 @@ PLIST.kde=		yes
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXrender+=	libXrender>=0.9.3
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
