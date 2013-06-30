@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.6 2013/01/03 15:19:53 adam Exp $
+$NetBSD: patch-ac,v 1.7 2013/06/30 12:58:37 obache Exp $
 
 --- Makefile.rules.orig	2012-10-12 21:48:14.000000000 +0000
 +++ Makefile.rules
+@@ -97,7 +97,7 @@ endif
+ $(LLVMBuildMakeFrag): $(PROJ_SRC_ROOT)/Makefile.rules \
+ 		      $(PROJ_OBJ_ROOT)/Makefile.config
+ 	$(Echo) Constructing LLVMBuild project information.
+-	$(Verb) $(LLVMBuildTool) \
++	$(Verb) python $(LLVMBuildTool) \
+ 	  --native-target "$(TARGET_NATIVE_ARCH)" \
+ 	  --enable-targets "$(TARGETS_TO_BUILD)" \
+ 	  --enable-optional-components "$(OPTIONAL_COMPONENTS)" \
 @@ -638,11 +638,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), 
    ifneq ($(HOST_OS), Darwin)
      ifdef TOOLNAME
