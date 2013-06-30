@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/06 14:11:14 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/30 15:17:18 ryoon Exp $
 #
 
-DISTNAME=	plnode141
-PKGNAME=	ploticus-examples-1.41
-PKGREVISION=	1
+DISTNAME=	plnode200
+PKGNAME=	ploticus-examples-2.00
 CATEGORIES=	graphics
 MASTER_SITES=	http://gd.tuwien.ac.at/visual/ploticus/download/
 
@@ -22,7 +21,6 @@ EXDIR=		${PREFIX}/share/examples/ploticus
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXDIR}
-	cd ${WRKSRC} && pax -rw -pp doc gallery tabgallery thumbnails thumbpng ${DESTDIR}${EXDIR}
+	cd ${WRKSRC} && pax -rw -pp index.html doc gallery man tabgallery thumbnails thumbpng ${DESTDIR}${EXDIR}
 
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
