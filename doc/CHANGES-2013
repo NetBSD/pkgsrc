@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2238 2013/06/30 15:17:41 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2239 2013/06/30 22:14:07 rodent Exp $
 
 ##################################################################
 # PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
@@ -3487,3 +3487,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/biew to 6.1.0 [ryoon 2013-06-30]
 	Updated graphics/ploticus to 2.42 [ryoon 2013-06-30]
 	Updated graphics/ploticus-examples to 2.00 [ryoon 2013-06-30]
+	Updated lang/Cg-compiler to 3.1 [rodent 2013-06-30]
