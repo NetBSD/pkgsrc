@@ -1,26 +1,43 @@
-$NetBSD: patch-aa,v 1.3 2003/07/22 12:27:08 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2013/06/30 13:39:05 ryoon Exp $
 
---- makefile.orig	Sun Dec 30 18:05:47 2001
+* Install with BSD_INSTALL tools.
+
+--- makefile.orig	2009-09-23 07:17:50.000000000 +0000
 +++ makefile
-@@ -59,18 +59,18 @@ TARGET_OS=unix
- # Try it if you have problems with compilation due to assembler errors.
- # Note that it is not the same as specifying TARGET_PLATFORM=generic.
- #------------------------------------------------------------------------------
--HOST_CFLAGS=
-+HOST_CFLAGS=-I${PREFIX}/include -D__int8_t_defined -DLIBDIR='"${PREFIX}/share"'
+@@ -264,23 +264,19 @@ biewlib/sysdep/ia32/qnx/3sto3r.o:       
+ endif
  
- # Please add any host specific linker flags here
- #------------------------------------------------------------------------------
--HOST_LDFLAGS=
-+HOST_LDFLAGS=-L${PREFIX}/lib -Wl,-R${PREFIX}/lib
- 
- ###########################################################################
- # Here comes Unix-specific configuration, see unix.txt for details.
- # Please select screen library, valid values are:
- # vt100, slang, curses (default)
- #--------------------------------------------------------------------------
--TARGET_SCREEN_LIB=curses
-+TARGET_SCREEN_LIB=slang
- 
- # Please select if you want to use mouse. Valid values are:
- # n(default), y
+ install:
+-ifeq ($(INSTALL),)
+-	@echo "*** 'install' utility was not found and you can't run automatic"
+-	@echo "*** installation. Please download 'fileutils' from ftp://ftp.gnu.org and"
+-	@echo "*** install them to have possibility perform autiomatic installation"
+-	@echo "*** of this project" 
+-	@exit 1
+-endif
+-	$(INSTALL) -D -m 755 $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
+-	$(INSTALL) -D -c -m 644 doc/biew.1 $(DESTDIR)$(PREFIX)/man/man1/biew.1
+-	$(INSTALL) -D -c -m 644 bin_rc/biew.hlp $(DESTDIR)$(DATADIR)/biew.hlp
+-	mkdir --parents $(DESTDIR)$(DATADIR)/skn
+-	$(INSTALL) -D -c -m 644 bin_rc/skn/*.skn $(DESTDIR)$(DATADIR)/skn
+-	mkdir --parents $(DESTDIR)$(DATADIR)/syntax
+-	$(INSTALL) -D -c -m 644 bin_rc/syntax/*.stx $(DESTDIR)$(DATADIR)/syntax
+-	mkdir --parents $(DESTDIR)$(DATADIR)/xlt/russian
+-	$(INSTALL) -D -c -m 644 bin_rc/xlt/russian/*.xlt $(DESTDIR)$(DATADIR)/xlt/russian
+-	$(INSTALL) -D -c -m 644 bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DESTDIR)$(DATADIR)/xlt
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(PREFIX)/bin
++	${BSD_INSTALL_PROGRAM} $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} doc/biew.1 $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1/biew.1
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(DATADIR)
++	${BSD_INSTALL_DATA} bin_rc/biew.hlp $(DESTDIR)$(DATADIR)/biew.hlp
++	mkdir -p $(DESTDIR)$(DATADIR)/skn
++	${BSD_INSTALL_DATA} bin_rc/skn/*.skn $(DESTDIR)$(DATADIR)/skn
++	mkdir -p $(DESTDIR)$(DATADIR)/syntax
++	${BSD_INSTALL_DATA} bin_rc/syntax/*.stx $(DESTDIR)$(DATADIR)/syntax
++	mkdir -p $(DESTDIR)$(DATADIR)/xlt/russian
++	${BSD_INSTALL_DATA} bin_rc/xlt/russian/*.xlt $(DESTDIR)$(DATADIR)/xlt/russian
++	${BSD_INSTALL_DATA} bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DESTDIR)$(DATADIR)/xlt
+ uninstall:
+ 	$(RM) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
+ 	$(RM) $(DESTDIR)$(DATADIR)/skn/*
