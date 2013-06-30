@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 2013/06/30 11:35:23 sno Exp $
+
+Fixing missing RPATH for perl bindings
+
+--- bindings/low-level/perl/Makefile.PL.in.orig	2009-05-12 07:49:42.000000000 +0000
++++ bindings/low-level/perl/Makefile.PL.in
+@@ -6,7 +6,7 @@ use Cwd "abs_path";
+ 
+ my %attributs = (NAME => 'Prelude',
+ 		 INC => '-I@top_srcdir@ -I@top_builddir@/src/include -I@top_srcdir@/src/include -I@top_builddir@/src/libprelude-error',
+-		 LIBS => ["-L@top_builddir@/src/.libs -lprelude", "-L$ENV{LIBDIR} -lprelude @LIBPRELUDE_LIBS@ @LIBADD_DL@ @LTLIBTHREAD@" ],
++		 LIBS => ["-L@top_builddir@/src/.libs -lprelude @LIBPRELUDE_LIBS@", "-L$ENV{LIBDIR} -lprelude @LIBPRELUDE_LIBS@ @LIBADD_DL@ @LTLIBTHREAD@" ],
+ 		 LDDLFLAGS => "-L@top_builddir@/src/.libs $Config{lddlflags}");
+ 
+ if ( abs_path("@top_srcdir@") ne abs_path("@top_builddir@") ) {
