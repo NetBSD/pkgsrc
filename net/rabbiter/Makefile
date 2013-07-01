@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/20 09:12:13 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/01 10:42:16 joerg Exp $
 #
 
 DISTNAME=	rabbiter-2.0.0
@@ -16,6 +16,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=1.1.4:../../devel/ruby-gnome2-gio
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter_oauth-[0-9]*:../../security/ruby-twitter_oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter-stream>=0.1.6:../../net/ruby-twitter-stream
 CONFLICTS+=	${RUBY_PKGPREFIX}-rabbit<2.0.0
+
+RUBY_VERSION_SUPPORTED=	193
 
 USE_RUBY_SETUP=		yes
 USE_RUBY_SETUP_PKG=	yes
