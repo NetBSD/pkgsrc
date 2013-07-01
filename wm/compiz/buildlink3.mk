@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2013/06/30 20:30:09 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2013/07/01 09:11:03 obache Exp $
 
 BUILDLINK_TREE+=	compiz
 
@@ -12,22 +12,22 @@ BUILDLINK_PKGSRCDIR.compiz?=	../../wm/compiz
 pkgbase := compiz
 .include "../../mk/pkg-build-options.mk"
 
-#.if !empty(PKG_BUILD_OPTIONS:Mfuse)
+#.if !empty(PKG_BUILD_OPTIONS.compiz:Mfuse)
 #.include "../../filesystems/fuse/buildlink3.mk"
 #.endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mgnome)
+.if !empty(PKG_BUILD_OPTIONS.compiz:Mgnome)
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mkde3)
+.if !empty(PKG_BUILD_OPTIONS.compiz:Mkde3)
 .include "../../x11/kdebase3/buildlink3.mk"
 .endif
 
 # XXX NLS is supposed to be optional, but it doens't appear to be.
-#.if !empty(PKG_BUILD_OPTIONS:Mnls)
+#.if !empty(PKG_BUILD_OPTIONS.compiz:Mnls)
 #.include "../../devel/gettext-lib/buildlink3.mk"
 #.endif
 
