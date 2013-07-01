@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.31 2013/06/06 12:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/01 14:40:18 ryoon Exp $
 #
 
-DISTNAME=	gtick-0.3.10
-PKGREVISION=	19
+DISTNAME=	gtick-0.5.2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.antcom.de/gtick/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.antcom.de/gtick/
 COMMENT=	Metronome application using GTK2+
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -23,13 +23,8 @@ SUBST_STAGE.oss=	pre-configure
 SUBST_FILES.oss=	src/globals.h
 SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
-SUBST_CLASSES+=		header
-SUBST_MESSAGE.header=	Fixing include dependency.
-SUBST_STAGE.header=	pre-configure
-SUBST_FILES.header=	src/dsp.c
-SUBST_SED.header=	-e 's/FreeBSD__)/& || defined(__NetBSD__)/g'
-
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
