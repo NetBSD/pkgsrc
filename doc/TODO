@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12333 2013/06/30 15:15:24 ryoon Exp $
+$NetBSD: TODO,v 1.12334 2013/07/01 14:41:10 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -630,7 +630,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gstreamer-1.1.1
 	o gtexinfo-5.1
 	o gthumb-3.2.2
-	o gtick-0.4.2
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtkmm-3.8.0 [see wip/gtkmm3]
