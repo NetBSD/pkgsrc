@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.16 2011/11/23 16:25:07 is Exp $
+$NetBSD: distinfo,v 1.17 2013/07/01 10:43:50 joerg Exp $
 
 SHA1 (icsi-finger-1.0.29.tar.Z) = 7c61ce8c847ff6e40ecc3de909c3db1a4b996d04
 RMD160 (icsi-finger-1.0.29.tar.Z) = 5047e636538ae66cf0ba3e170dc3a3edb31f317a
 Size (icsi-finger-1.0.29.tar.Z) = 302729 bytes
 SHA1 (patch-aa) = d68de6daa5a9ebaeb57cd5afd723f502a72d7dc5
 SHA1 (patch-ab) = d8a719d78288aad8ab3a7159f332afdd59231ebb
-SHA1 (patch-ac) = e3759d714eafae1cc6a8e974d8a79f065f7efe24
+SHA1 (patch-ac) = 6348df24858979b42b99ad7f34b2f388c602d3bd
 SHA1 (patch-ad) = de1489cf9860bd412a43a875a43eae69dd559606
 SHA1 (patch-ae) = 7613ee307bb047d5e5c794b829dcd1cb1c8edb81
 SHA1 (patch-ah) = 9e3b5dc141395d36140f4b1166bad7429f3a0977
