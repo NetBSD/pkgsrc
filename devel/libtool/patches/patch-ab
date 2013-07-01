@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
+$NetBSD: patch-ab,v 1.76 2013/07/01 15:59:06 bsiegert Exp $
 
---- configure.orig	2011-10-17 10:18:58.000000000 +0000
+--- configure.orig	2013-06-27 16:54:36.000000000 +0000
 +++ configure
+@@ -5335,7 +5335,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | mirbsd* | darwin* | dragonfly*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
 @@ -5829,12 +5829,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    lt_cv_deplibs_check_method=pass_all
    ;;
@@ -326,7 +335,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    netbsd*)
      lt_cv_sys_dlopen_deplibs=yes
      ;;
-@@ -13536,9 +13627,7 @@ func_stripname_cnf ()
+@@ -13536,9 +13624,7 @@ func_stripname_cnf ()
    esac
  } # func_stripname_cnf
  
@@ -337,7 +346,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    ac_ext=cpp
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -13786,7 +13875,10 @@ $RM -r conftest*
+@@ -13786,7 +13872,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
@@ -349,7 +358,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
  
    if test -n "$compiler"; then
-@@ -14282,7 +14374,7 @@ fi
+@@ -14282,7 +14371,7 @@ fi
    allow_undefined_flag_CXX="$_lt_dar_allow_undefined"
    case $cc_basename in
       ifort*) _lt_dar_can_shared=yes ;;
@@ -358,7 +367,30 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    if test "$_lt_dar_can_shared" = "yes"; then
      output_verbose_link_cmd=func_echo_all
-@@ -14665,15 +14757,12 @@ fi
+@@ -14651,6 +14740,22 @@ fi
+         ld_shlibs_CXX=no
+ 	;;
+ 
++      mirbsd*)
++	if test -f /usr/libexec/ld.so; then
++	  hardcode_direct_CXX=yes
++	  hardcode_shlibpath_var_CXX=no
++	  hardcode_direct_absolute_CXX=yes
++	  archive_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
++	  archive_expsym_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-retain-symbols-file,$export_symbols -o $lib'
++	  hardcode_libdir_flag_spec_CXX='${wl}-rpath,$libdir'
++	  export_dynamic_flag_spec_CXX='${wl}-E'
++	  whole_archive_flag_spec_CXX="$wlarc"'--whole-archive$convenience '"$wlarc"'--no-whole-archive'
++	  output_verbose_link_cmd='echo'
++	else
++	  ld_shlibs_CXX=no
++	fi
++	;;
++
+       mvs*)
+         case $cc_basename in
+           cxx*)
+@@ -14665,15 +14770,12 @@ fi
  	;;
  
        netbsd*)
@@ -380,7 +412,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -14853,9 +14942,9 @@ fi
+@@ -14853,9 +14955,9 @@ fi
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      no_undefined_flag_CXX=' ${wl}-z ${wl}defs'
  	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
@@ -392,7 +424,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
  	        # Commands to make compiler produce verbose output that lists
  	        # what "hidden" libraries, object files and flags are used when
-@@ -14864,9 +14953,9 @@ fi
+@@ -14864,9 +14966,9 @@ fi
  	      else
  	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
  	        # platform.
@@ -404,7 +436,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
  	        # Commands to make compiler produce verbose output that lists
  	        # what "hidden" libraries, object files and flags are used when
-@@ -15236,9 +15325,15 @@ lt_prog_compiler_static_CXX=
+@@ -15236,9 +15338,15 @@ lt_prog_compiler_static_CXX=
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -421,7 +453,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -15316,6 +15411,9 @@ lt_prog_compiler_static_CXX=
+@@ -15316,6 +15424,9 @@ lt_prog_compiler_static_CXX=
  	    ;;
  	esac
  	;;
@@ -431,7 +463,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -15513,6 +15611,9 @@ lt_prog_compiler_static_CXX=
+@@ -15513,6 +15624,9 @@ lt_prog_compiler_static_CXX=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -441,7 +473,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    *djgpp*)
      lt_prog_compiler_pic_CXX=
      ;;
-@@ -16184,7 +16285,7 @@ dgux*)
+@@ -16184,7 +16298,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -450,7 +482,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -16198,7 +16299,7 @@ freebsd* | dragonfly*)
+@@ -16198,7 +16312,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -459,7 +491,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -16221,13 +16322,24 @@ freebsd* | dragonfly*)
+@@ -16221,13 +16335,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -485,7 +517,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  gnu*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -16315,12 +16427,7 @@ interix[3-9]*)
+@@ -16315,12 +16440,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -499,7 +531,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -16419,19 +16526,36 @@ fi
+@@ -16419,19 +16539,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -546,7 +578,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -16457,7 +16581,7 @@ newsos6)
+@@ -16457,7 +16594,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -555,7 +587,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -16465,7 +16589,7 @@ openbsd*)
+@@ -16465,7 +16602,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -564,7 +596,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -17039,7 +17163,10 @@ $RM -r conftest*
+@@ -17039,7 +17176,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
@@ -576,7 +608,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
    GCC=$G77
    if test -n "$compiler"; then
-@@ -17131,9 +17258,16 @@ lt_prog_compiler_static_F77=
+@@ -17131,9 +17271,16 @@ lt_prog_compiler_static_F77=
        ;;
  
      darwin* | rhapsody*)
@@ -594,7 +626,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      haiku*)
-@@ -17161,6 +17295,13 @@ lt_prog_compiler_static_F77=
+@@ -17161,6 +17308,13 @@ lt_prog_compiler_static_F77=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -608,7 +640,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -17313,6 +17454,15 @@ lt_prog_compiler_static_F77=
+@@ -17313,6 +17467,15 @@ lt_prog_compiler_static_F77=
        esac
        ;;
  
@@ -624,7 +656,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      newsos6)
        lt_prog_compiler_pic_F77='-KPIC'
        lt_prog_compiler_static_F77='-Bstatic'
-@@ -17388,6 +17538,9 @@ lt_prog_compiler_static_F77=
+@@ -17388,6 +17551,9 @@ lt_prog_compiler_static_F77=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -634,7 +666,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    *djgpp*)
      lt_prog_compiler_pic_F77=
      ;;
-@@ -17918,16 +18071,28 @@ _LT_EOF
+@@ -17918,16 +18084,28 @@ _LT_EOF
        fi
        ;;
  
@@ -669,7 +701,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_F77=no
-@@ -18324,7 +18489,7 @@ fi
+@@ -18324,7 +18502,7 @@ fi
    allow_undefined_flag_F77="$_lt_dar_allow_undefined"
    case $cc_basename in
       ifort*) _lt_dar_can_shared=yes ;;
@@ -678,7 +710,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    if test "$_lt_dar_can_shared" = "yes"; then
      output_verbose_link_cmd=func_echo_all
-@@ -18498,13 +18663,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -18498,13 +18676,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_F77=yes
        ;;
  
@@ -709,7 +741,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        hardcode_direct_F77=yes
        hardcode_shlibpath_var_F77=no
        ;;
-@@ -18518,6 +18695,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -18518,6 +18708,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -721,7 +753,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      openbsd*)
-@@ -19126,7 +19308,7 @@ dgux*)
+@@ -19126,7 +19321,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -730,7 +762,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -19140,7 +19322,7 @@ freebsd* | dragonfly*)
+@@ -19140,7 +19335,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -739,7 +771,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -19163,13 +19345,24 @@ freebsd* | dragonfly*)
+@@ -19163,13 +19358,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -765,7 +797,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  gnu*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -19257,12 +19450,7 @@ interix[3-9]*)
+@@ -19257,12 +19463,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -779,7 +811,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -19355,19 +19543,36 @@ fi
+@@ -19355,19 +19556,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -826,7 +858,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -19393,7 +19598,7 @@ newsos6)
+@@ -19393,7 +19611,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -835,7 +867,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -19401,7 +19606,7 @@ openbsd*)
+@@ -19401,7 +19619,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -844,7 +876,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -19966,7 +20171,10 @@ $RM -r conftest*
+@@ -19966,7 +20184,10 @@ $RM -r conftest*
      *) break;;
    esac
  done
@@ -856,7 +888,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
  
    if test -n "$compiler"; then
-@@ -20203,9 +20411,16 @@ lt_prog_compiler_static_FC=
+@@ -20203,9 +20424,16 @@ lt_prog_compiler_static_FC=
        ;;
  
      darwin* | rhapsody*)
@@ -874,7 +906,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      haiku*)
-@@ -20233,6 +20448,13 @@ lt_prog_compiler_static_FC=
+@@ -20233,6 +20461,13 @@ lt_prog_compiler_static_FC=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -888,7 +920,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -20385,6 +20607,15 @@ lt_prog_compiler_static_FC=
+@@ -20385,6 +20620,15 @@ lt_prog_compiler_static_FC=
        esac
        ;;
  
@@ -904,7 +936,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      newsos6)
        lt_prog_compiler_pic_FC='-KPIC'
        lt_prog_compiler_static_FC='-Bstatic'
-@@ -20460,6 +20691,9 @@ lt_prog_compiler_static_FC=
+@@ -20460,6 +20704,9 @@ lt_prog_compiler_static_FC=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -914,7 +946,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    *djgpp*)
      lt_prog_compiler_pic_FC=
      ;;
-@@ -20990,16 +21224,28 @@ _LT_EOF
+@@ -20990,16 +21237,28 @@ _LT_EOF
        fi
        ;;
  
@@ -949,7 +981,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_FC=no
-@@ -21396,7 +21642,7 @@ fi
+@@ -21396,7 +21655,7 @@ fi
    allow_undefined_flag_FC="$_lt_dar_allow_undefined"
    case $cc_basename in
       ifort*) _lt_dar_can_shared=yes ;;
@@ -958,7 +990,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    if test "$_lt_dar_can_shared" = "yes"; then
      output_verbose_link_cmd=func_echo_all
-@@ -21570,13 +21816,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -21570,13 +21829,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_FC=yes
        ;;
  
@@ -989,7 +1021,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        hardcode_direct_FC=yes
        hardcode_shlibpath_var_FC=no
        ;;
-@@ -21590,6 +21848,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -21590,6 +21861,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -1001,7 +1033,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      openbsd*)
-@@ -22198,7 +22461,7 @@ dgux*)
+@@ -22198,7 +22474,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -1010,7 +1042,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -22212,7 +22475,7 @@ freebsd* | dragonfly*)
+@@ -22212,7 +22488,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -1019,7 +1051,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -22235,13 +22498,24 @@ freebsd* | dragonfly*)
+@@ -22235,13 +22511,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -1045,7 +1077,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  gnu*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -22329,12 +22603,7 @@ interix[3-9]*)
+@@ -22329,12 +22616,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -1059,7 +1091,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -22427,19 +22696,36 @@ fi
+@@ -22427,19 +22709,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -1106,7 +1138,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -22465,7 +22751,7 @@ newsos6)
+@@ -22465,7 +22764,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -1115,7 +1147,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -22473,7 +22759,7 @@ openbsd*)
+@@ -22473,7 +22772,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -1124,7 +1156,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -22883,7 +23169,10 @@ for cc_temp in $compiler""; do
+@@ -22883,7 +23182,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -1136,7 +1168,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
  
  # Go did not exist at the time GCC didn't implicitly link libc in.
-@@ -23003,9 +23292,16 @@ lt_prog_compiler_static_GO=
+@@ -23003,9 +23305,16 @@ lt_prog_compiler_static_GO=
        ;;
  
      darwin* | rhapsody*)
@@ -1154,7 +1186,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      haiku*)
-@@ -23033,6 +23329,13 @@ lt_prog_compiler_static_GO=
+@@ -23033,6 +23342,13 @@ lt_prog_compiler_static_GO=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -1168,7 +1200,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -23185,6 +23488,15 @@ lt_prog_compiler_static_GO=
+@@ -23185,6 +23501,15 @@ lt_prog_compiler_static_GO=
        esac
        ;;
  
@@ -1184,7 +1216,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      newsos6)
        lt_prog_compiler_pic_GO='-KPIC'
        lt_prog_compiler_static_GO='-Bstatic'
-@@ -23260,6 +23572,9 @@ lt_prog_compiler_static_GO=
+@@ -23260,6 +23585,9 @@ lt_prog_compiler_static_GO=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -1194,7 +1226,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    *djgpp*)
      lt_prog_compiler_pic_GO=
      ;;
-@@ -23790,16 +24105,28 @@ _LT_EOF
+@@ -23790,16 +24118,28 @@ _LT_EOF
        fi
        ;;
  
@@ -1229,7 +1261,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_GO=no
-@@ -24208,7 +24535,7 @@ fi
+@@ -24208,7 +24548,7 @@ fi
    allow_undefined_flag_GO="$_lt_dar_allow_undefined"
    case $cc_basename in
       ifort*) _lt_dar_can_shared=yes ;;
@@ -1238,7 +1270,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    if test "$_lt_dar_can_shared" = "yes"; then
      output_verbose_link_cmd=func_echo_all
-@@ -24381,13 +24708,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -24381,13 +24721,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_GO=yes
        ;;
  
@@ -1269,7 +1301,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        hardcode_direct_GO=yes
        hardcode_shlibpath_var_GO=no
        ;;
-@@ -24401,6 +24740,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -24401,6 +24753,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -1281,7 +1313,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      openbsd*)
-@@ -24980,7 +25324,10 @@ for cc_temp in $compiler""; do
+@@ -24980,7 +25337,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done
@@ -1293,7 +1325,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
  
  
  # GCJ did not exist at the time GCC didn't implicitly link libc in.
-@@ -25100,9 +25447,16 @@ lt_prog_compiler_static_GCJ=
+@@ -25100,9 +25460,16 @@ lt_prog_compiler_static_GCJ=
        ;;
  
      darwin* | rhapsody*)
@@ -1311,7 +1343,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      haiku*)
-@@ -25130,6 +25484,13 @@ lt_prog_compiler_static_GCJ=
+@@ -25130,6 +25497,13 @@ lt_prog_compiler_static_GCJ=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -1325,7 +1357,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -25282,6 +25643,15 @@ lt_prog_compiler_static_GCJ=
+@@ -25282,6 +25656,15 @@ lt_prog_compiler_static_GCJ=
        esac
        ;;
  
@@ -1341,7 +1373,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      newsos6)
        lt_prog_compiler_pic_GCJ='-KPIC'
        lt_prog_compiler_static_GCJ='-Bstatic'
-@@ -25357,6 +25727,9 @@ lt_prog_compiler_static_GCJ=
+@@ -25357,6 +25740,9 @@ lt_prog_compiler_static_GCJ=
  
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -1351,7 +1383,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    *djgpp*)
      lt_prog_compiler_pic_GCJ=
      ;;
-@@ -25887,16 +26260,28 @@ _LT_EOF
+@@ -25887,16 +26273,28 @@ _LT_EOF
        fi
        ;;
  
@@ -1386,7 +1418,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs_GCJ=no
-@@ -26305,7 +26690,7 @@ fi
+@@ -26305,7 +26703,7 @@ fi
    allow_undefined_flag_GCJ="$_lt_dar_allow_undefined"
    case $cc_basename in
       ifort*) _lt_dar_can_shared=yes ;;
@@ -1395,7 +1427,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
    esac
    if test "$_lt_dar_can_shared" = "yes"; then
      output_verbose_link_cmd=func_echo_all
-@@ -26478,13 +26863,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -26478,13 +26876,25 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        link_all_deplibs_GCJ=yes
        ;;
  
@@ -1426,7 +1458,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        hardcode_direct_GCJ=yes
        hardcode_shlibpath_var_GCJ=no
        ;;
-@@ -26498,6 +26895,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -26498,6 +26908,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -1438,7 +1470,7 @@ $NetBSD: patch-ab,v 1.75 2013/05/13 12:53:42 adam Exp $
        ;;
  
      openbsd*)
-@@ -27075,7 +27477,10 @@ for cc_temp in $compiler""; do
+@@ -27075,7 +27490,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
  done

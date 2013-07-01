@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.27 2013/04/12 13:44:08 joerg Exp $
+$NetBSD: patch-ac,v 1.28 2013/07/01 15:59:06 bsiegert Exp $
 
---- libltdl/config/ltmain.sh.orig	2011-10-17 10:19:35.000000000 +0000
+--- libltdl/config/ltmain.sh.orig	Mon Oct 17 10:19:11 2011
 +++ libltdl/config/ltmain.sh
 @@ -133,8 +133,9 @@ $lt_unset CDPATH
  # function.
@@ -14,3 +14,71 @@ $NetBSD: patch-ac,v 1.27 2013/04/12 13:44:08 joerg Exp $
  : ${CP="cp -f"}
  test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
  : ${MAKE="make"}
+@@ -7391,6 +7392,7 @@ func_mode_link ()
+ 	# Calculate the version variables.
+ 	major=
+ 	versuffix=
++	versuffix2=
+ 	verstring=
+ 	case $version_type in
+ 	none) ;;
+@@ -7451,6 +7453,7 @@ func_mode_link ()
+ 	  func_arith $current - $age
+ 	  major=.$func_arith_result
+ 	  versuffix="$major.$age.$revision"
++	  versuffix2="$major.$age"
+ 	  ;;
+ 
+ 	osf)
+@@ -7511,8 +7514,10 @@ func_mode_link ()
+ 	  esac
+ 	  if test "$need_version" = no; then
+ 	    versuffix=
++	    versuffix2=
+ 	  else
+ 	    versuffix=".0.0"
++	    versuffix2=".0.0"
+ 	  fi
+ 	fi
+ 
+@@ -7520,6 +7525,7 @@ func_mode_link ()
+ 	if test "$avoid_version" = yes && test "$need_version" = no; then
+ 	  major=
+ 	  versuffix=
++	  versuffix2=
+ 	  verstring=""
+ 	fi
+ 
+@@ -7630,7 +7636,7 @@ func_mode_link ()
+ 	  *-*-netbsd*)
+ 	    # Don't link with libc until the a.out ld.so is fixed.
+ 	    ;;
+-	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
++	  *-*-openbsd* | *-*-mirbsd* | *-*-freebsd* | *-*-dragonfly*)
+ 	    # Do not include libc due to us having libc/libc_r.
+ 	    ;;
+ 	  *-*-sco3.2v5* | *-*-sco5v6*)
+@@ -7653,6 +7659,7 @@ func_mode_link ()
+ 	libname_save=$libname
+ 	release_save=$release
+ 	versuffix_save=$versuffix
++	versuffix2_save=$versuffix2
+ 	major_save=$major
+ 	# I'm not sure if I'm treating the release correctly.  I think
+ 	# release should show up in the -l (ie -lgmp5) so we don't want to
+@@ -7659,6 +7666,7 @@ func_mode_link ()
+ 	# add it in twice.  Is that correct?
+ 	release=""
+ 	versuffix=""
++	versuffix2=""
+ 	major=""
+ 	newdeplibs=
+ 	droppeddeps=no
+@@ -7935,6 +7943,7 @@ EOF
+ 	  ;;
+ 	esac
+ 	versuffix=$versuffix_save
++	versuffix2=$versuffix2_save
+ 	major=$major_save
+ 	release=$release_save
+ 	libname=$libname_save
