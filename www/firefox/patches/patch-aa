@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2013/06/26 11:32:12 ryoon Exp $
+$NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
 
 --- configure.in.orig	2013-06-17 22:12:58.000000000 +0000
 +++ configure.in
@@ -123,6 +123,15 @@ $NetBSD: patch-aa,v 1.12 2013/06/26 11:32:12 ryoon Exp $
           [echo "$MOZ_ALSA_PKG_ERRORS"
            AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
  fi
+@@ -8332,7 +8360,7 @@ if test "$MOZ_ENABLE_SKIA"; then
+     AC_DEFINE(GR_DLL)
+   fi
+ 
+-  if test "${CPU_ARCH}" != "ppc" -a "${CPU_ARCH}" != "ppc64"; then
++  if test "${CPU_ARCH}" != "ppc" -a "${CPU_ARCH}" != "ppc64" -a "${CPU_ARCH}" != "sparc"; then
+     MOZ_ENABLE_SKIA_GPU=1
+     AC_DEFINE(USE_SKIA_GPU)
+     AC_SUBST(MOZ_ENABLE_SKIA_GPU)
 @@ -8413,16 +8441,26 @@ MOZ_ARG_DISABLE_BOOL(necko-wifi,
      NECKO_WIFI=,
      NECKO_WIFI=1)
