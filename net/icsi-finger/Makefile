@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/04/06 14:58:20 rodent Exp $
+# $NetBSD: Makefile,v 1.25 2013/07/01 10:43:50 joerg Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.29
@@ -19,6 +19,14 @@ XMPLDT=		${XMPLD}/targets
 INSTALLATION_DIRS=	bin libexec sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/examples/icsi-finger/targets
+
+TOOLS_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CPPFLAGS+=	-Wno-error=return-type
+.endif
 
 pre-configure:
 		chmod +w ${WRKSRC}/config.h
