@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2268 2013/07/02 13:58:57 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2269 2013/07/02 14:48:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added games/solarus version 1.0.1 [rodent 2013-07-02]
 	Added audio/tap-plugins version 0.7.2 [rodent 2013-07-02]
 	Updated lang/scheme48 to 1.9 [wen 2013-07-02]
+	Updated devel/p5-System-Command to 1.100 [wen 2013-07-02]
