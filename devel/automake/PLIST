@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/05/18 14:48:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/07/02 06:37:00 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -28,8 +28,8 @@ share/aclocal-${PKG_DIR_VERSION}/lex.m4
 share/aclocal-${PKG_DIR_VERSION}/lispdir.m4
 share/aclocal-${PKG_DIR_VERSION}/maintainer.m4
 share/aclocal-${PKG_DIR_VERSION}/make.m4
-share/aclocal-${PKG_DIR_VERSION}/minuso.m4
 share/aclocal-${PKG_DIR_VERSION}/missing.m4
+share/aclocal-${PKG_DIR_VERSION}/prog-cc-c-o.m4
 share/aclocal-${PKG_DIR_VERSION}/mkdirp.m4
 share/aclocal-${PKG_DIR_VERSION}/obsolete.m4
 share/aclocal-${PKG_DIR_VERSION}/options.m4
@@ -54,6 +54,7 @@ share/automake-${PKG_DIR_VERSION}/Automake/General.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Getopt.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Item.pm
 share/automake-${PKG_DIR_VERSION}/Automake/ItemDef.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Language.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Location.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Options.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Rule.pm
