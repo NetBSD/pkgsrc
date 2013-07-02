@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2278 2013/07/02 21:01:35 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2279 2013/07/02 21:03:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3520,3 +3520,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/fabric to 1.6.1 [gls 2013-07-02]
 	Updated wm/pekwm to 0.1.17 [gls 2013-07-02]
 	Updated misc/fbreader to 0.99.4nb1 [wiz 2013-07-02]
+	Updated x11/libdrm to 2.4.46 [wiz 2013-07-02]
