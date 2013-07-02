@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2265 2013/07/02 11:43:59 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2266 2013/07/02 11:52:52 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3507,3 +3507,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/cityhash version 1.1.1 [rodent 2013-07-02]
 	Added time/libgcal version 0.9.6 [rodent 2013-07-02]
 	Added mail/nmzmail version 1.1 [rodent 2013-07-02]
+	Added games/solarus version 1.0.1 [rodent 2013-07-02]
