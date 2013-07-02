@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2012/09/10 17:38:45 gls Exp $
+$NetBSD: patch-aa,v 1.9 2013/07/02 20:33:37 gls Exp $
 
 Fix installation dirs
 
---- data/Makefile.in.orig	2012-08-03 14:16:42.000000000 +0000
+--- data/Makefile.in.orig	2013-05-26 12:01:43.000000000 +0000
 +++ data/Makefile.in
-@@ -236,7 +236,7 @@ EXTRA_DIST = autoproperties autoproperti
+@@ -263,7 +263,7 @@ EXTRA_DIST = autoproperties autoproperti
  	mouse mouse_system mouse_click mouse_sloppy \
  	start vars
  

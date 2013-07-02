@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2013/06/06 12:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2013/07/02 20:33:37 gls Exp $
 #
 
-DISTNAME=	pekwm-0.1.16
-PKGREVISION=	4
+DISTNAME=	pekwm-0.1.17
 CATEGORIES=	wm
 MASTER_SITES=	http://www.pekwm.org/projects/pekwm/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +11,7 @@ HOMEPAGE=	http://www.pekwm.org/
 COMMENT=	Window manager based on aewm++
 LICENSE=	gnu-gpl-v2
 
+FETCH_USING=	curl
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
