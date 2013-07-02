@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2262 2013/07/02 11:11:53 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2263 2013/07/02 11:22:47 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3504,3 +3504,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/py-kombu version 2.5.12 [rodent 2013-07-02]
 	Added parallel/py-billiard version 2.7.3.30 [rodent 2013-07-02]
 	Added textproc/py-anyjson version 0.3.3 [rodent 2013-07-02]
+	Added textproc/cityhash version 1.1.1 [rodent 2013-07-02]
