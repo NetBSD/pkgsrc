@@ -1,0 +1,18 @@
+Its an ANSI C library that does allow communication with google calendar and
+contacts, useful if you need to support this in a C or C++ application.
+
+Currently, libgcal implements:
+
+ - authentication
+ - get all events/contacts
+ - atom stream parsing
+ - access to individual events/contacts
+ - add/delete/edit using gcal objects
+ - add/delete/edit using raw XML
+ - query for updated events/contacts
+ - use of http proxy
+ - timezone
+ - contact photo download/upload
+ - google data protocol GCalendar 2.0 and Contacts 3.0
+ - can be used with a C++ application
+ - google hosted accounts (i.e. joe@foobar.com)
