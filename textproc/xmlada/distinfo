@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.5 2012/07/08 20:03:08 marino Exp $
+$NetBSD: distinfo,v 1.6 2013/07/02 22:13:56 marino Exp $
 
-SHA1 (xmlada-4.2.0.0.tar.bz2) = b52984f60cf6b1486495ea92ea9dca7d0892ebc3
-RMD160 (xmlada-4.2.0.0.tar.bz2) = 494e4c6a93bbe18251633bb4a7ac452821a38a93
-Size (xmlada-4.2.0.0.tar.bz2) = 668384 bytes
-SHA1 (patch-aa) = 62d64940a043ddeeb72eb69944fc2572f142191b
-SHA1 (patch-ab) = 3fa075e307471b09eb5db49972fcb7807d41ac53
-SHA1 (patch-ac) = 7fbfbd51f0b6aa3da4a87e4c7c53945de789bd17
-SHA1 (patch-ad) = da995bf7e4a55c7db5fe799013326bd36d202328
-SHA1 (patch-ae) = 83b036e9f6baec6a5fdf0861b85578cea75c4a4d
-SHA1 (patch-af) = 8ee0ce0bac567ff2d3d144ce255ab6e4aef71e79
+SHA1 (xmlada-4.4.0.0.tar.bz2) = 285e98269160428e9387a3b3b3b82c1aef4b9c62
+RMD160 (xmlada-4.4.0.0.tar.bz2) = 389328c6582e96a139694ce854e1fdc8af6d892b
+Size (xmlada-4.4.0.0.tar.bz2) = 632217 bytes
+SHA1 (patch-Makefile.in) = f2829a9b097cfc0a8e1545594b5fadf799a10374
+SHA1 (patch-dom_dom.gpr) = f5afdec46fac3cd07755d6bb47a83b715e54ba64
+SHA1 (patch-input__sources_input__sources.gpr) = 4bcf4dfb0323cd6e4a6739cd2a4c8d3989c23ca2
+SHA1 (patch-sax_sax.gpr) = aed5573f7e28efbb01103726255ed11faca17018
+SHA1 (patch-schema_schema.gpr) = f2664a832992d4e5e7647e0de84b8da54caad7ec
