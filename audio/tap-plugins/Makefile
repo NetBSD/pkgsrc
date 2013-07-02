@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/07/02 12:03:24 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/02 12:04:57 rodent Exp $
 #
 
 DISTNAME=	tap-plugins-0.7.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tap-plugins/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://tap-plugins.sourceforge.net/ladspa.html
 COMMENT=	Tom's Audio Processing plugins
 LICENSE=	gnu-gpl-v2
