@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2276 2013/07/02 20:25:27 gls Exp $
+$NetBSD: CHANGES-2013,v 1.2277 2013/07/02 20:33:55 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/abcl to 1.2.1 [asau 2013-07-02]
 	Updated x11/x3270 to 3.3.12ga13 [gls 2013-07-02]
 	Updated sysutils/fabric to 1.6.1 [gls 2013-07-02]
+	Updated wm/pekwm to 0.1.17 [gls 2013-07-02]
