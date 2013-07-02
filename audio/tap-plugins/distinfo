@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/02 12:03:24 rodent Exp $
+
+SHA1 (tap-plugins-0.7.2.tar.gz) = f3f9da0c7141f222bd964ada1b6b709e02052d89
+RMD160 (tap-plugins-0.7.2.tar.gz) = 2a55c58a58b32ab7a86eedae46336eebf031ced0
+Size (tap-plugins-0.7.2.tar.gz) = 70961 bytes
