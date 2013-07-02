@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2013/07/02 12:17:30 joerg Exp $
+
+--- configure.orig	2013-07-01 13:23:18.000000000 +0000
++++ configure
+@@ -500,16 +500,6 @@ _cdefos="-DDATADIR='\"$_datadir\"'"
+ cc_name=`$_cc -v 2>&1 | tail -n 1 | cut -d ' ' -f 1`
+ cc_version=`$_cc -dumpversion`
+ 
+-echocheck "C compiler name"
+-echores $cc_name
+-case $cc_name in
+-    gcc)
+-    ;;
+-    *)
+-      die "Unknown compiler name $cc_name. Project required GCC"
+-    ;;
+-esac
+-
+ echocheck "C compiler version"
+ echores $cc_version
+ case $cc_version in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/30 13:39:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2013/07/02 12:17:30 joerg Exp $
 #
 
 DISTNAME=	biew-${BIEWVER:S/.//g}-src
@@ -22,6 +22,10 @@ MAKE_FILE=	makefile
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-no-integrated-as
+.endif
 
 LIBS.SunOS+=	-lrt
 MAKE_ENV+=	OS_LIBS=${LIBS:Q}
