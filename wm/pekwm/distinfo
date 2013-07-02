@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2012/12/12 21:06:20 gls Exp $
+$NetBSD: distinfo,v 1.17 2013/07/02 20:33:37 gls Exp $
 
-SHA1 (pekwm-0.1.16.tar.bz2) = d066b87e8a5d5209763ec1f20e01a9fd6df9370b
-RMD160 (pekwm-0.1.16.tar.bz2) = 078bde89f47dc4c168236dcf5e66c3e294724630
-Size (pekwm-0.1.16.tar.bz2) = 401550 bytes
-SHA1 (patch-aa) = b45b1649b558b3c136aeff44ef013af3b208247d
-SHA1 (patch-src_x11.cc) = 2e9977dee9ff09da190e81c30f5441b607b31d9e
+SHA1 (pekwm-0.1.17.tar.bz2) = d1434a1fa44edbf98dcd690f579461ddb1a63b1f
+RMD160 (pekwm-0.1.17.tar.bz2) = 760c145ac137ae9efcdbf138589554f19dc8332c
+Size (pekwm-0.1.17.tar.bz2) = 405742 bytes
+SHA1 (patch-aa) = 5540f05c9b753a26bad03a8a90f1a5b5946a9801
+SHA1 (patch-data_scripts_pekwm__screenshot.sh) = 454047e3ceb4ee71c92a65c57677b2a994d49b7c
