@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# $NetBSD: xl2tpd,v 1.1 2013/07/02 00:22:16 christos Exp $
+#
+
+# PROVIDE: xl2tpd
+# REQUIRE: ipsec
+
+$_rc_subr_loaded . /etc/rc.subr
+
+name="xl2tpd"
+rcvar=$name
+start_cmd="xl2tpd_start"
+stop_cmd="xl2tpd_stop"
+
+xl2tpd_start()
+{
+	if [ -f /etc/xl2tpd/xl2tpd.conf ]; then
+		print_rc_normal "Starting L2TP service."
+		mkdir -p /var/run/xl2tpd
+		chmod 700 /var/run/xl2tpd
+		/usr/pkg/sbin/xl2tpd
+	fi
+}
+
+xl2tpd_stop()
+{
+	if [ -f /var/run/xl2tpd.pid ]; then
+		print_rc_normal "Stopping L2TP service."
+		kill "$(cat /var/run/xl2tpd.pid)"
+	fi
+}
+
+load_rc_config $name
+run_rc_command "$1"
