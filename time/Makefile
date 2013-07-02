@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2013/05/27 10:52:14 rodent Exp $
+# $NetBSD: Makefile,v 1.126 2013/07/02 11:39:17 rodent Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -39,6 +39,7 @@ SUBDIR+=	jday
 SUBDIR+=	kronolith
 SUBDIR+=	ktimer
 SUBDIR+=	leapsunpack
+SUBDIR+=	libgcal
 SUBDIR+=	libical
 SUBDIR+=	lmclock
 SUBDIR+=	logtime
