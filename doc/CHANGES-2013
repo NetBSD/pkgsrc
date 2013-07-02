@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2274 2013/07/02 19:34:26 asau Exp $
+$NetBSD: CHANGES-2013,v 1.2275 2013/07/02 20:20:54 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3516,3 +3516,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/lldpd to 0.7.5 [mef 2013-07-02]
 	Updated devel/log4cplus to 1.1.1nb1 [sno 2013-07-02]
 	Updated lang/abcl to 1.2.1 [asau 2013-07-02]
+	Updated x11/x3270 to 3.3.12ga13 [gls 2013-07-02]
