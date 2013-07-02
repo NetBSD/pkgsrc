@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.19 2013/06/30 12:58:37 obache Exp $
+$NetBSD: distinfo,v 1.20 2013/07/02 10:33:02 adam Exp $
 
-SHA1 (clang-3.2.src.tar.gz) = b0515298c4088aa294edc08806bd671f8819f870
-RMD160 (clang-3.2.src.tar.gz) = 99468c17f3262d8af5dd5a6672fb958a72963ffc
-Size (clang-3.2.src.tar.gz) = 8805311 bytes
-SHA1 (llvm-3.2.src.tar.gz) = 42d139ab4c9f0c539c60f5ac07486e9d30fc1280
-RMD160 (llvm-3.2.src.tar.gz) = 924d85e6129a49b1b639be472b365bed7cd49072
-Size (llvm-3.2.src.tar.gz) = 12275252 bytes
+SHA1 (cfe-3.3.src.tar.gz) = ccd6dbf2cdb1189a028b70bcb8a22509c25c74c8
+RMD160 (cfe-3.3.src.tar.gz) = ff5d684c83b0c1aa36595dcb457da80b58eaf58f
+Size (cfe-3.3.src.tar.gz) = 9425539 bytes
+SHA1 (llvm-3.3.src.tar.gz) = c6c22d5593419e3cb47cbcf16d967640e5cce133
+RMD160 (llvm-3.3.src.tar.gz) = 22878ad746c50b02a7ac8713dd6f8c95c7af4220
+Size (llvm-3.3.src.tar.gz) = 13602421 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
-SHA1 (patch-ac) = ea5d76979c9cee4fa9012f29150e6b0f08f9f497
+SHA1 (patch-ac) = d94fdd7508302e6fb6acbf58f7b2305c3db5cf08
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
-SHA1 (patch-include_llvm_Support_CFG.h) = 7ea9caf7f483f65c33e79a5e03bc02a48ffdd1f3
-SHA1 (patch-lib_Target_X86_X86JITInfo.cpp) = 8090d84a164a85ac3d2fccc475d2eeb541574f56
-SHA1 (patch-tools_clang_lib_Driver_ToolChains.cpp) = 1e184e83636b4089e694a079e168188cb60b7e9c
-SHA1 (patch-tools_clang_lib_Driver_Tools.cpp) = 5359329457a2acf7854beef19369679074b44f43
-SHA1 (patch-tools_clang_lib_Frontend_InitHeaderSearch.cpp) = 3c85154a49d0b762fc367584d0faee169516d2b9
-SHA1 (patch-tools_clang_test_Driver_dragonfly.c) = 7e2cf2e40bce1037eb229f8cb399d095385f293e
+SHA1 (patch-utils_lit_utils_check-coverage) = aec7c140d5b9e8cc38a0022533a5848d6b1ff0b8
+SHA1 (patch-utils_lit_utils_check-sdist) = df63c41b07f7531e787b54f6994458869023b66c

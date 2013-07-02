@@ -1,0 +1,14 @@
+$NetBSD: patch-utils_lit_utils_check-sdist,v 1.1 2013/07/02 10:33:02 adam Exp $
+
+Portability fix.
+
+--- utils/lit/utils/check-sdist.orig	2013-06-05 10:35:39.000000000 +0000
++++ utils/lit/utils/check-sdist
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-if [ $# == 1 ]; then
++if [ $# = 1 ]; then
+     cd $1
+ fi
+ 
