@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2251 2013/07/02 01:13:39 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2252 2013/07/02 06:36:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3494,3 +3494,4 @@ Changes to the packages collection and infrastructure in 2013:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q2 branch [agc 2013-07-01]
 	Added net/xl2tpd version 20130626 [christos 2013-07-01]
 	Updated mail/rss2email to 3.5 [schmonz 2013-07-02]
+	Updated devel/mercurial to 2.6.3 [wiz 2013-07-02]
