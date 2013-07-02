@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/05/02 09:22:21 degroote Exp $
+$NetBSD: distinfo,v 1.9 2013/07/02 13:57:22 wen Exp $
 
-SHA1 (scheme48-1.8.tgz) = 75299fe9de4bf239fc1d5a7dfa2ec377e0e98df1
-RMD160 (scheme48-1.8.tgz) = 2685ea2c2ce9e5ff1408a1f588182e07f6d3822b
-Size (scheme48-1.8.tgz) = 3173151 bytes
-SHA1 (patch-aa) = 26bf0db2ea9158b5d075ebd20e38a2ab22cc5b2b
+SHA1 (scheme48-1.9.tgz) = 8fd78d328a8c39ecd848e849ade094c30c2bb4ba
+RMD160 (scheme48-1.9.tgz) = 273f7de5d3775d80e91e8e8876e0d1328320d9e2
+Size (scheme48-1.9.tgz) = 3945425 bytes
