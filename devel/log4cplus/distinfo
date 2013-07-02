@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/27 15:05:06 reed Exp $
+$NetBSD: distinfo,v 1.2 2013/07/02 08:59:03 sno Exp $
 
-SHA1 (log4cplus-1.0.4.tar.bz2) = b8ca1b01b23788ac04f25a7bdaaaca7e366c7312
-RMD160 (log4cplus-1.0.4.tar.bz2) = ce93517a1afa9d38180d23e80ac602e2a738bc19
-Size (log4cplus-1.0.4.tar.bz2) = 420708 bytes
+SHA1 (log4cplus-1.1.1.tar.bz2) = 3a86b2e124091c9345ee1bac81ca1fb3773fad60
+RMD160 (log4cplus-1.1.1.tar.bz2) = 44b15552265bc59387b33ea59549fdc2a7a61339
+Size (log4cplus-1.1.1.tar.bz2) = 538692 bytes
