@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/16 00:44:34 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/02 08:59:03 sno Exp $
 #
 
-DISTNAME=	log4cplus-1.0.4
+DISTNAME=	log4cplus-1.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=log4cplus/}
 EXTRACT_SUFX=	.tar.bz2
