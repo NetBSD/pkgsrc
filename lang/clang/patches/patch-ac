@@ -1,17 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2013/06/30 12:58:37 obache Exp $
+$NetBSD: patch-ac,v 1.8 2013/07/02 10:33:02 adam Exp $
 
---- Makefile.rules.orig	2012-10-12 21:48:14.000000000 +0000
+--- Makefile.rules.orig	2013-05-03 21:53:50.000000000 +0000
 +++ Makefile.rules
-@@ -97,7 +97,7 @@ endif
- $(LLVMBuildMakeFrag): $(PROJ_SRC_ROOT)/Makefile.rules \
- 		      $(PROJ_OBJ_ROOT)/Makefile.config
- 	$(Echo) Constructing LLVMBuild project information.
--	$(Verb) $(LLVMBuildTool) \
-+	$(Verb) python $(LLVMBuildTool) \
- 	  --native-target "$(TARGET_NATIVE_ARCH)" \
- 	  --enable-targets "$(TARGETS_TO_BUILD)" \
- 	  --enable-optional-components "$(OPTIONAL_COMPONENTS)" \
-@@ -638,11 +638,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), 
+@@ -640,11 +640,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), 
    ifneq ($(HOST_OS), Darwin)
      ifdef TOOLNAME
        LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
@@ -23,7 +14,7 @@ $NetBSD: patch-ac,v 1.7 2013/06/30 12:58:37 obache Exp $
    endif
  else
    ifneq ($(DARWIN_MAJVERS),4)
-@@ -838,9 +833,6 @@ endif
+@@ -842,9 +837,6 @@ endif
  # in the file so they get built before dependencies
  #---------------------------------------------------------
  
@@ -33,7 +24,7 @@ $NetBSD: patch-ac,v 1.7 2013/06/30 12:58:37 obache Exp $
  # To create other directories, as needed, and timestamp their creation
  %/.dir:
  	$(Verb) $(MKDIR) $* > /dev/null
-@@ -975,7 +967,9 @@ install-local::
+@@ -979,7 +971,9 @@ install-local::
  uninstall-local::
  	$(Echo) UnInstall circumvented with NO_INSTALL
  else
@@ -44,7 +35,7 @@ $NetBSD: patch-ac,v 1.7 2013/06/30 12:58:37 obache Exp $
  	$(Echo) Installing Configuration Files To $(DESTDIR)$(PROJ_etcdir)
  	$(Verb)for file in $(CONFIG_FILES); do \
            if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
-@@ -1397,7 +1391,7 @@ install-local:: $(DestArchiveLib)
+@@ -1401,7 +1395,7 @@ install-local:: $(DestArchiveLib)
  $(DestArchiveLib): $(LibName.A) $(DESTDIR)$(PROJ_libdir)
  	$(Echo) Installing $(BuildMode) Archive Library $(DestArchiveLib)
  	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_libdir)
