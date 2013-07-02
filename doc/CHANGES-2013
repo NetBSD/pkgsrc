@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2271 2013/07/02 15:39:10 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2272 2013/07/02 16:36:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3513,3 +3513,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-System-Command to 1.100 [wen 2013-07-02]
 	Updated devel/p5-Git-Repository to 1.306 [wen 2013-07-02]
 	Updated mail/dovecot2 to 2.2.4 [adam 2013-07-02]
+	Updated net/lldpd to 0.7.5 [mef 2013-07-02]
