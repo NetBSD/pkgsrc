@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:06 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/02 12:12:48 joerg Exp $
 
 DISTNAME=		imake-1.0.5
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,24 +13,15 @@ COMMENT=		Imake and other utilities from modular X.org
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config makedepend:run
 
+DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 DEPENDS+=		xorg-cf-files>=1.0.3:../../x11/xorg-cf-files
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 CONFIGURE_ENV+=		HAS_PERL=no
+CONFIGURE_ENV+=		RAWCPP=${PREFIX}/bin/tradcpp
+CPPFLAGS+=		-DRAWCPP=\"${PREFIX}/bin/tradcpp\"
 
 REPLACE_SH+=		mkhtmlindex.sh
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-# clang's cpp destroys whitespace, particularly hard tabs in makefiles,
-# which is fatal for imake.
-DEPENDS+=ucpp-[0-9]*:../../devel/ucpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="ucpp -s"
-
-.elif empty(PKGSRC_COMPILER:Mgcc)
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
-
-.endif
 
 # This required with some C preprocessors and not others,
 # but is harmless when not required.
