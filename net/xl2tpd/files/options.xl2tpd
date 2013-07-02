@@ -1,0 +1,23 @@
+# /etc/ppp/options.xl2tpd
+#debug
+auth
+name "xl2tpd"
+# CCP seems to confuse Android clients, better turn it off
+#noccp
+#novj
+#novjccomp
+#nopcomp
+#noaccomp
+require-mschap
+require-mschap-v2
+ms-dns 192.168.2.9
+lcp-echo-interval 120
+lcp-echo-failure 10
+idle 1800
+connect-delay 5000
+#nodefaultroute
+#noipdefault
+
+proxyarp
+mtu 1400
+mru 1400
