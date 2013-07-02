@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2258 2013/07/02 08:59:18 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2259 2013/07/02 10:33:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3499,3 +3499,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/gbrainy to 2.21 [wiz 2013-07-02]
 	Updated archivers/unrar to 5.0.7 [wiz 2013-07-02]
 	Updated devel/log4cplus to 1.1.1 [sno 2013-07-02]
+	Updated math/glpk to 4.51 [adam 2013-07-02]
+	Updated lang/clang to 3.3 [adam 2013-07-02]
