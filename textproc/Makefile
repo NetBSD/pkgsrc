@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.730 2013/06/15 20:56:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.731 2013/07/02 11:12:59 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -580,6 +580,7 @@ SUBDIR+=	py-Tempita
 SUBDIR+=	py-Unidecode
 SUBDIR+=	py-Whoosh
 SUBDIR+=	py-X
+SUBDIR+=	py-anyjson
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cmTemplate
