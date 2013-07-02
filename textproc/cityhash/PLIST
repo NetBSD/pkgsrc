@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/02 11:22:21 rodent Exp $
+include/city.h
+lib/libcityhash.la
+share/doc/cityhash/COPYING
+share/doc/cityhash/NEWS
+share/doc/cityhash/README
