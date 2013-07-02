@@ -1,10 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2248 2013/07/01 14:41:10 ryoon Exp $
-
-##################################################################
-# PLEASE NOTE THAT PKGSRC IS NOW IN A FREEZE FOR INFRASTRUCTURE
-# CHANGES AND NEW PACKAGES IN PREPARATION FOR THE PKGSRC-2013Q2
-# BRANCH.
-##################################################################
+$NetBSD: CHANGES-2013,v 1.2248.2.1 2013/07/02 00:22:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3497,3 +3491,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/lettuce to 0.2.18 [rodent 2013-06-30]
 	Updated sysutils/spice-protocol to 0.12.6 [rodent 2013-06-30]
 	Updated audio/gtick to 0.5.2 [ryoon 2013-07-01]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q2 branch [agc 2013-07-01]
