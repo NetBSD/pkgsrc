@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/09/10 17:38:45 gls Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/07/02 20:33:37 gls Exp $
 bin/pekwm
 man/man1/pekwm.1
 share/examples/pekwm/autoproperties
@@ -13,6 +13,7 @@ share/examples/pekwm/mouse_sloppy
 share/examples/pekwm/mouse_system
 share/examples/pekwm/start
 share/examples/pekwm/vars
+share/pekwm/scripts/pekwm_screenshot.sh
 share/pekwm/scripts/pekwm_themeset.sh
 share/pekwm/scripts/pekwm_ws_menu.sh
 share/pekwm/themes/default-plain/theme
