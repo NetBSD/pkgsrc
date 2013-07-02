@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/05/09 05:42:53 mef Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/02 16:35:13 mef Exp $
 
-DISTNAME=		lldpd-0.7.2
+DISTNAME=		lldpd-0.7.5
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -12,14 +12,13 @@ LICENSE=		isc
 # if available. To avoid this, use `--without-readline` as a configure
 # option.
 
-NOT_FOR_PLATFORM=	DragonFly-*-*
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
+BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		lldpd
 PKG_GROUPS=		_lldpd
