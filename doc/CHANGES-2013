@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2257 2013/07/02 06:41:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2258 2013/07/02 08:59:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3498,3 +3498,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/automake to 1.14 [wiz 2013-07-02]
 	Updated games/gbrainy to 2.21 [wiz 2013-07-02]
 	Updated archivers/unrar to 5.0.7 [wiz 2013-07-02]
+	Updated devel/log4cplus to 1.1.1 [sno 2013-07-02]
