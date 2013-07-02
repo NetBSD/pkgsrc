@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/06/06 12:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2013/07/02 01:14:40 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-20110918
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://pcb.gpleda.org/
+HOMEPAGE=	http://pcb.geda-project.org/
 COMMENT=	Printed circuit board layout system
 LICENSE=	gnu-gpl-v2
 
