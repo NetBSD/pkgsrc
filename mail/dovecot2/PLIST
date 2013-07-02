@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/05/23 19:45:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/07/02 15:38:19 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -370,6 +370,8 @@ include/dovecot/rfc822-parser.h
 include/dovecot/safe-memset.h
 include/dovecot/safe-mkdir.h
 include/dovecot/safe-mkstemp.h
+include/dovecot/sasl-client-private.h
+include/dovecot/sasl-client.h
 include/dovecot/sasl-server.h
 include/dovecot/sdbox-file.h
 include/dovecot/sdbox-storage.h
@@ -559,6 +561,7 @@ share/doc/dovecot/wiki/Design.AuthProcess.txt
 share/doc/dovecot/wiki/Design.AuthProtocol.txt
 share/doc/dovecot/wiki/Design.Buffers.txt
 share/doc/dovecot/wiki/Design.Code.txt
+share/doc/dovecot/wiki/Design.DoveadmProtocol.txt
 share/doc/dovecot/wiki/Design.Dsync.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
 share/doc/dovecot/wiki/Design.Indexes.MailIndexApi.txt
@@ -634,6 +637,7 @@ share/doc/dovecot/wiki/Migration.BincIMAP.txt
 share/doc/dovecot/wiki/Migration.Courier.txt
 share/doc/dovecot/wiki/Migration.Cyrus.txt
 share/doc/dovecot/wiki/Migration.Dsync.txt
+share/doc/dovecot/wiki/Migration.Gmail.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
 share/doc/dovecot/wiki/Migration.Online.txt
