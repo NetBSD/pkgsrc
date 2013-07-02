@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/02 11:37:34 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/02 11:39:17 rodent Exp $
 #
 
 DISTNAME=	libgcal-0.9.6
@@ -6,7 +6,7 @@ CATEGORIES=	time
 MASTER_SITES=	http://libgcal.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libgcal/
 COMMENT=	C library allows communication with google calendar and contacts
 LICENSE=	modified-bsd
