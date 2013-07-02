@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2259 2013/07/02 10:33:31 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2260 2013/07/02 11:05:44 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3501,3 +3501,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/log4cplus to 1.1.1 [sno 2013-07-02]
 	Updated math/glpk to 4.51 [adam 2013-07-02]
 	Updated lang/clang to 3.3 [adam 2013-07-02]
+	Added net/py-kombu version 2.5.12 [rodent 2013-07-02]
