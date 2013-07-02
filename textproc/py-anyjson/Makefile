@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/02 11:11:29 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/02 11:15:55 rodent Exp $
 #
 
 DISTNAME=	anyjson-0.3.3
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/a/anyjson/
 
-MAINTAINER=	rodent@netbsd.org
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://bitbucket.org/runeh/anyjson/
 COMMENT=	Wraps the JSON implementation available in a common interface
 LICENSE=	modified-bsd
