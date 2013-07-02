@@ -1,9 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/06/07 02:13:39 schmonz Exp $
+$NetBSD: MESSAGE,v 1.2 2013/07/02 01:13:30 schmonz Exp $
 
 Just before upgrading to 3.x:
 
 $ r2e run
 $ r2e opmlexport feeds.xml
+
+Just after upgrading from 2.x:
+
+$ r2e new
+$ vi ~/.rss2email/config.py ~/.config/rss2email.cfg  # keep custom settings
+$ r2e opmlimport feeds.xml
+$ r2e run --no-send
 
 ===========================================================================
