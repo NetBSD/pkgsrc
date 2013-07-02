@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.731 2013/07/02 11:12:59 rodent Exp $
+# $NetBSD: Makefile,v 1.732 2013/07/02 11:23:36 rodent Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -116,6 +116,7 @@ SUBDIR+=	cawf
 SUBDIR+=	cdif
 SUBDIR+=	chasen
 SUBDIR+=	chasen-base
+SUBDIR+=	cityhash
 SUBDIR+=	cmigemo
 SUBDIR+=	coccigrep
 SUBDIR+=	colorit
