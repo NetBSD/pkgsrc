@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.360 2013/04/16 15:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.361 2013/07/02 11:53:48 rodent Exp $
 #
 
 COMMENT=	Games
@@ -291,6 +291,7 @@ SUBDIR+=	sirius
 SUBDIR+=	six
 SUBDIR+=	sjeng
 SUBDIR+=	sl
+SUBDIR+=	solarus
 SUBDIR+=	spaceracer
 SUBDIR+=	spellcast
 SUBDIR+=	spider
