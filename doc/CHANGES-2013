@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2273 2013/07/02 18:36:31 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2274 2013/07/02 19:34:26 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3515,3 +3515,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.4 [adam 2013-07-02]
 	Updated net/lldpd to 0.7.5 [mef 2013-07-02]
 	Updated devel/log4cplus to 1.1.1nb1 [sno 2013-07-02]
+	Updated lang/abcl to 1.2.1 [asau 2013-07-02]
