@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.972 2013/06/16 21:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.973 2013/07/02 00:22:54 christos Exp $
 #
 
 COMMENT=	Networking tools
@@ -722,6 +722,7 @@ SUBDIR+=	x2vnc
 SUBDIR+=	xfce4-wavelan-plugin
 SUBDIR+=	xfindproxy
 SUBDIR+=	xipdump
+SUBDIR+=	xl2tpd
 SUBDIR+=	xmftp
 SUBDIR+=	xnap
 SUBDIR+=	xorp
