@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2338 2013/07/03 16:11:54 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2339 2013/07/03 16:13:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/p5-Lingua-EN-Words2Nums version 0.18 [sno 2013-07-03]
 	Added textproc/p5-Lingua-EN-FindNumber version 1.2 [sno 2013-07-03]
 	Added textproc/p5-Lingua-EN-Number-IsOrdinal version 0.04 [sno 2013-07-03]
+	Added textproc/p5-String-Compare-ConstantTime version 0.300 [sno 2013-07-03]
