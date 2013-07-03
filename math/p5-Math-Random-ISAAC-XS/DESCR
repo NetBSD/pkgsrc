@@ -1,0 +1,10 @@
+This module implements the same interface as Math::Random::ISAAC and can
+be used as a drop-in replacement. This is the recommended implementation
+of the module, based on Bob Jenkins' reference implementation in C.
+
+Selecting the backend to use manually really only has two uses:
+
+    * If you are trying to avoid the small overhead incurred with
+      dispatching method calls to the appropriate backend modules.
+    * If you are testing the module for performance and wish to
+      explicitly decide which module you would like to use.
