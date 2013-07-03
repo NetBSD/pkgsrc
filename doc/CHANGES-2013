@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2350 2013/07/03 16:41:50 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2351 2013/07/03 16:48:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3593,3 +3593,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Sub-Exporter-Progressive to 0.001010 [sno 2013-07-03]
 	Updated devel/p5-Syntax-Keyword-Junction to 0.003004 [sno 2013-07-03]
 	Updated devel/p5-Perl-PrereqScanner to 1.016 [sno 2013-07-03]
+	Updated textproc/p5-Lingua-EN-Inflect-Phrase to 0.18 [sno 2013-07-03]
