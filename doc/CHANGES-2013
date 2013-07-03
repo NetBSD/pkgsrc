@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2317 2013/07/03 13:36:48 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2318 2013/07/03 13:38:58 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3559,3 +3559,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Getopt-Long to 2.40 [sno 2013-07-03]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.093 [sno 2013-07-03]
 	Updated devel/p5-App-Cmd to 0.320 [sno 2013-07-03]
+	Added security/libguardtime version 0.3.11 [jperkin 2013-07-03]
+	Added security/guardtime version 1.0.12 [jperkin 2013-07-03]
