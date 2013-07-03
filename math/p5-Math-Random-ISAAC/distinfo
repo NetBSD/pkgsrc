@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 14:33:32 sno Exp $
+
+SHA1 (Math-Random-ISAAC-1.004.tar.gz) = 0d2e423559ed28d842e6907e3944d6c5b6f2705f
+RMD160 (Math-Random-ISAAC-1.004.tar.gz) = 6a77fc0f57b92e9331c233a0f59d77acae7d8fe0
+Size (Math-Random-ISAAC-1.004.tar.gz) = 34445 bytes
