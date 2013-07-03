@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2283 2013/07/03 06:27:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2284 2013/07/03 06:42:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3525,3 +3525,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/p5-Sys-Syslog to 0.33 [sno 2013-07-03]
 	Updated devel/p5-Log-Dispatch to 2.40 [sno 2013-07-03]
 	Updated x11/libXi to 1.7.2 [wiz 2013-07-03]
+	Added converters/p5-Sereal-Decoder version 0.36 [sno 2013-07-03]
