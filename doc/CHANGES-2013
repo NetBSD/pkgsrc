@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2325 2013/07/03 14:30:49 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2326 2013/07/03 14:33:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3568,3 +3568,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Sub-Exporter to 0.986 [sno 2013-07-03]
 	Added math/p5-Algorithm-Cluster version 1.50 [sno 2013-07-03]
 	Added math/p5-Math-Random-ISAAC-XS version 1.004 [sno 2013-07-03]
+	Added math/p5-Math-Random-ISAAC version 1.004 [sno 2013-07-03]
