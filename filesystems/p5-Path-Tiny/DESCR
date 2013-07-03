@@ -1,0 +1,21 @@
+This module attempts to provide a small, fast utility for working with
+file paths. It is friendlier to use than File::Spec and provides easy
+access to functions from several other core file handling modules.
+
+It doesn't attempt to be as full-featured as IO::All or Path::Class,
+nor does it try to work for anything except Unix-like and Win32 platforms.
+Even then, it might break if you try something particularly obscure or
+tortuous. (Quick! What does this mean: ///../../..//./././a//b/.././c/././?
+And how does it differ on Win32?)
+
+All paths are forced to have Unix-style forward slashes. Stringifying the
+object gives you back the path (after some clean up).
+
+File input/output methods flock handles before reading or writing, as
+appropriate.
+
+The *_utf8 methods (slurp_utf8, lines_utf8, etc.) operate in raw mode
+without CRLF translation. Installing Unicode::UTF8 0.58 or later will speed
+up several of them and is highly recommended.
+
+It uses autodie internally, so most failures will be thrown as exceptions.
