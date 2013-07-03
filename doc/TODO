@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12346 2013/07/03 08:21:52 wiz Exp $
+$NetBSD: TODO,v 1.12347 2013/07/03 08:37:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -934,7 +934,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cairo-1.10.0
 	o py-dateutil-2.0
 	o py-game-1.9.1 [needs portmidi]
-	o py-gdata-2.0.18
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-moin-1.9.7
