@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/06/17 12:44:53 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2013/07/03 15:58:02 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
 PKG_SUPPORTED_OPTIONS=	csharp java erlang python perl php ruby
@@ -79,7 +79,8 @@ CONFIGURE_ARGS+=	--with-php
 CONFIGURE_ARGS+=	--with-php_extension
 CONFIGURE_ARGS+=	--enable-gen-php
 PLIST.php=		yes
-DIST_SUBDIR=		#
+# XXX: avoid override from php Makefile.common
+EXTRACT_SUFX=		.tar.gz
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/Makefile.common"
