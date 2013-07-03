@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2331 2013/07/03 15:40:01 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2332 2013/07/03 15:45:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3574,3 +3574,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added filesystems/p5-Path-Tiny version 0.024 [sno 2013-07-03]
 	Updated devel/p5-MooseX-Types to 0.36 [sno 2013-07-03]
 	Added filesystems/p5-MooseX-Types-Path-Tiny version 0.006 [sno 2013-07-03]
+	Added devel/p5-MooseX-Types-LogAny version 0.001001 [sno 2013-07-03]
