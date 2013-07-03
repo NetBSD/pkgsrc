@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.36 2013/03/09 10:25:28 tron Exp $
+$NetBSD: distinfo,v 1.37 2013/07/03 08:17:16 wiz Exp $
 
-SHA1 (mtr-0.84.tar.gz) = 7c8dc6a0412edaf32ebc94c8f765b14ae59e6163
-RMD160 (mtr-0.84.tar.gz) = 784eaea461e15080c0546e08a0907ca16949de40
-Size (mtr-0.84.tar.gz) = 286912 bytes
-SHA1 (patch-asn.c) = 2491e791d393e30ade331337f9818775ece02295
-SHA1 (patch-dns.h) = 80b939a566180bfba72a1df82cf790f773b1c7d4
+SHA1 (mtr-0.85.tar.gz) = 77204a1a577cfca30c79c43a8fa3daafd280f1b8
+RMD160 (mtr-0.85.tar.gz) = 0ca692799d3b4d4358d02f72787e8705c061c817
+Size (mtr-0.85.tar.gz) = 534196 bytes
