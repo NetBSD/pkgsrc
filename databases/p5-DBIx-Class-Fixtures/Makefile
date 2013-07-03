@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/05/31 12:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/07/03 18:59:10 sno Exp $
 
-DISTNAME=	DBIx-Class-Fixtures-1.001013
+DISTNAME=	DBIx-Class-Fixtures-1.001018
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Class-Accessor-Grouped>=0.06:../../devel/p5-Class-Accessor-Grouped
 DEPENDS+=	p5-Config-Any>=0.08:../../devel/p5-Config-Any
 DEPENDS+=	p5-DBIx-Class>=0.0.08102:../../databases/p5-DBIx-Class
-DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.04006:../../databases/p5-DBIx-Class-Schema-Loader
+DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.07000:../../databases/p5-DBIx-Class-Schema-Loader
 DEPENDS+=	p5-Data-Dump-Streamer>=2.05:../../devel/p5-Data-Dump-Streamer
 DEPENDS+=	p5-Data-Visitor>=0.15:../../devel/p5-Data-Visitor
 DEPENDS+=	p5-DateTime>=0.41:../../time/p5-DateTime
@@ -26,6 +25,8 @@ DEPENDS+=	p5-Hash-Merge>=0.10:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
 # YAML::Syck 0.88 provides JSON::Syck 0.26
 DEPENDS+=	p5-YAML-Syck>=0.88:../../textproc/p5-YAML-Syck
+
+BUILD_DEPENDD+=	p5-DBIx-Class-InflateColumn-FS-[0-9]*:../../databases/p5-DBIx-Class-InflateColumn-FS
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBIx/Class/Fixtures/.packlist
