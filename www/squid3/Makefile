@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2013/06/07 12:28:39 tron Exp $
+# $NetBSD: Makefile,v 1.14 2013/07/03 12:47:11 adam Exp $
 
-DISTNAME=	squid-3.3.5
-PKGREVISION=	3
+DISTNAME=	squid-3.3.6
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/ \
 		${SQUID_MASTER_SITES}
