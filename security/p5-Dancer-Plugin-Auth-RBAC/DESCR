@@ -1,0 +1,10 @@
+Dancer::Plugin::Auth::RBAC is an authentication framework and role-based
+access control system. As a role-based access control system
+Dancer::Plugin::Auth::RBAC can be complex but will give you the most
+flexibilty over all other access control philosophies.
+
+The Dancer::Plugin::Auth::RBAC plugin provides your application with the
+ability to easily authenticate and restrict access to specific users and
+groups by providing a tried and tested RBAC (role-based access control)
+system. Dancer::Plugin::Auth::RBAC provides this level of sophistication
+with minimal configuration.
