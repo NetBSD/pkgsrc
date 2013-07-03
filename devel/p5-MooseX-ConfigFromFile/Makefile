@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 12:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/07/03 16:30:59 sno Exp $
 
-DISTNAME=	MooseX-ConfigFromFile-0.04
+DISTNAME=	MooseX-ConfigFromFile-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -12,11 +11,16 @@ COMMENT=	Abstract Moose role for setting attributes from a configfile
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=0.35:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-Types-Path-Class>=0.04:../../devel/p5-MooseX-Types-Path-Class
+DEPENDS+=	p5-MooseX-Types-Path-Tiny>=0.005:../../filesystems/p5-MooseX-Types-Path-Tiny
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
+BUILD_DEPENDS+=	p5-Test-CheckDeps>=0.002:../../devel/p5-Test-CheckDeps
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
 
 USE_LANGUAGES=	# empty
 
