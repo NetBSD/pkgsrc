@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2013/06/06 14:08:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.99 2013/07/03 13:49:28 joerg Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
+PKGREVISION=	1
 SM_VER=		2.18b4
 #LIGHTNINGVER=	1.9
 PKGREVISION=	4
