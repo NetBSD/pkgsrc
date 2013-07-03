@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2013/06/10 12:31:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.253 2013/07/03 14:36:49 sno Exp $
 
 COMMENT=	Mathematics
 
@@ -150,6 +150,7 @@ SUBDIR+=	openaxiom
 SUBDIR+=	openfst
 SUBDIR+=	ordCalc
 SUBDIR+=	otter
+SUBDIR+=	p5-Algorithm-Cluster
 SUBDIR+=	p5-Excel-Template
 SUBDIR+=	p5-Excel-Template-Plus
 SUBDIR+=	p5-Math-Base36
@@ -167,6 +168,8 @@ SUBDIR+=	p5-Math-Pari
 SUBDIR+=	p5-Math-Permute-List
 SUBDIR+=	p5-Math-Prime-Util
 SUBDIR+=	p5-Math-Random
+SUBDIR+=	p5-Math-Random-ISAAC
+SUBDIR+=	p5-Math-Random-ISAAC-XS
 SUBDIR+=	p5-Math-Random-MT
 SUBDIR+=	p5-Math-Random-MT-Auto
 SUBDIR+=	p5-Math-Random-MT-Perl
@@ -174,6 +177,7 @@ SUBDIR+=	p5-Math-Round
 SUBDIR+=	p5-Math-VecStat
 SUBDIR+=	p5-Number-Compare
 SUBDIR+=	p5-Number-Latin
+SUBDIR+=	p5-Number-Tolerant
 SUBDIR+=	p5-Roman
 SUBDIR+=	p5-Set-Crontab
 SUBDIR+=	p5-Set-Infinite
