@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/03 13:37:36 jperkin Exp $
+bin/gtime
+bin/gtime-sign
+bin/gtime-test
+bin/gtime-verify
+man/man1/gtime-test.1
+man/man1/gtime.1
+share/doc/gtime/run-tests.sh
+share/doc/gtime/tap-functions
+share/doc/gtime/TestData.txt
+share/doc/gtime/TestData.txt.gtts
+share/doc/gtime/trust.pem
