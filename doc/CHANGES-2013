@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2279 2013/07/02 21:03:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2280 2013/07/03 00:41:33 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3521,3 +3521,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated wm/pekwm to 0.1.17 [gls 2013-07-02]
 	Updated misc/fbreader to 0.99.4nb1 [wiz 2013-07-02]
 	Updated x11/libdrm to 2.4.46 [wiz 2013-07-02]
+	Updated devel/tig to 1.1 [rodent 2013-07-03]
