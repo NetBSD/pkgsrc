@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:50 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/03 00:41:14 rodent Exp $
 #
 
-DISTNAME=	tig-0.17
+DISTNAME=	tig-1.1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jonas.nitro.dk/tig/
 COMMENT=	Ncurses-based GIT repository tool
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
