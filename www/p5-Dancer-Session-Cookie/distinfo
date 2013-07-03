@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 17:44:29 sno Exp $
+
+SHA1 (Dancer-Session-Cookie-0.22.tar.gz) = e59ab1c2e3246ca1e99d29237fe5a5976d8c4c8d
+RMD160 (Dancer-Session-Cookie-0.22.tar.gz) = 0a3a5358cd18d6e777db7a03c2691b9ab2217afa
+Size (Dancer-Session-Cookie-0.22.tar.gz) = 20279 bytes

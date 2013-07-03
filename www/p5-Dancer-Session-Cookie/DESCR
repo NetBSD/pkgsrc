@@ -1,0 +1,9 @@
+This module implements a session engine for sessions stored entirely in
+cookies. Usually only session id is stored in cookies and the session data
+itself is saved in some external storage, e.g. database. This module allows
+to avoid using external storage at all.
+
+Since server cannot trust any data returned by client in cookies, this
+module uses cryptography to ensure integrity and also secrecy. The data
+your application stores in sessions is completely protected from both
+tampering and analysis on the client-side.
