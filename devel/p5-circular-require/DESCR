@@ -1,0 +1,22 @@
+Perl by default just ignores cycles in require statements - if Foo.pm does
+use Bar and Bar.pm does use Foo, doing use Foo elsewhere will start loading
+Foo.pm, then hit the use statement, start loading Bar.pm, hit the use
+statement, notice that Foo.pm has already started loading and ignore it,
+and continue loading Bar.pm. But Foo.pm hasn't finished loading yet, so if
+Bar.pm uses anything from Foo.pm (which it likely does, if it's loading it),
+those won't be accessible while the body of Bar.pm is being executed. This
+can lead to some very confusing errors, especially if introspection is
+happening at load time (make_immutable in Moose classes, for example). This
+module generates a warning whenever a module is skipped due to being loaded,
+if that module has not finished executing.
+
+This module works as a pragma, and typically pragmas have lexical scope.
+Lexical scope doesn't make a whole lot of sense for this case though,
+because the effect it's tracking isn't lexical (what does it mean to disable
+the pragma inside of a cycle vs. outside of a cycle? does disabling it
+within a cycle cause it to always be disabled for that cycle, or only if
+it's disabled at the point where the warning would otherwise be generated?
+etc.), but dynamic scope (the scope that, for instance, local uses) does,
+and that's how this module works. Saying no circular::require enables the
+module for the current dynamic scope, and use circular::require disables
+it for the current dynamic scope. Hopefully, this will just do what you mean.
