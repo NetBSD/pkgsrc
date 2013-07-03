@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 13:33:50 jperkin Exp $
+
+SHA1 (libgt-0.3.11-src.tgz) = f49266494506e17dc7fca90d1ef119018cee2da0
+RMD160 (libgt-0.3.11-src.tgz) = f1829c968119f542628394f2261e980935acb7b5
+Size (libgt-0.3.11-src.tgz) = 545138 bytes
