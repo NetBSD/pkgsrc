@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 07:13:42 sno Exp $
+
+SHA1 (Module-Build-Tiny-0.024.tar.gz) = b1979cc6f202ec5e9f707df2e22231e70162dc63
+RMD160 (Module-Build-Tiny-0.024.tar.gz) = b3287cb4031027e54448df2546ea4f74e08e9130
+Size (Module-Build-Tiny-0.024.tar.gz) = 19286 bytes
