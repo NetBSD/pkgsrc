@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2013/05/23 13:25:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.36 2013/07/03 13:49:28 joerg Exp $
 bin/seamonkey
 include/seamonkey/AbstractMediaDecoder.h
 include/seamonkey/AccEvent.h
@@ -218,12 +218,6 @@ include/seamonkey/inISearchObserver.h
 include/seamonkey/inISearchProcess.h
 include/seamonkey/ipc/IPCMessageUtils.h
 include/seamonkey/jArray.h
-include/seamonkey/jconfig.h
-include/seamonkey/jerror.h
-include/seamonkey/jinclude.h
-include/seamonkey/jmorecfg.h
-include/seamonkey/jpegint.h
-include/seamonkey/jpeglib.h
 include/seamonkey/js-config.h
 include/seamonkey/js.msg
 include/seamonkey/js/Anchor.h
