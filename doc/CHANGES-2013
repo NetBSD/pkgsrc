@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2280 2013/07/03 00:41:33 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2281 2013/07/03 06:13:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3522,3 +3522,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/fbreader to 0.99.4nb1 [wiz 2013-07-02]
 	Updated x11/libdrm to 2.4.46 [wiz 2013-07-02]
 	Updated devel/tig to 1.1 [rodent 2013-07-03]
+	Updated sysutils/p5-Sys-Syslog to 0.33 [sno 2013-07-03]
