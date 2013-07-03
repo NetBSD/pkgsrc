@@ -1,0 +1,4 @@
+This Module is intended to provide an interface to the strongest available
+source of non-blocking randomness on the current platform. Platforms
+currently supported are anything supporting /dev/urandom and versions of
+Windows greater than or equal to Windows 2000.
