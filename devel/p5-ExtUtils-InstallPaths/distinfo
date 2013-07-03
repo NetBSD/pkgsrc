@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 07:07:52 sno Exp $
+
+SHA1 (ExtUtils-InstallPaths-0.009.tar.gz) = ee48c4334bdf36e2aaff33df4c91bd39379c2883
+RMD160 (ExtUtils-InstallPaths-0.009.tar.gz) = 3f2e47498de61bd699cbd994d6325f358b22bdc1
+Size (ExtUtils-InstallPaths-0.009.tar.gz) = 18496 bytes
