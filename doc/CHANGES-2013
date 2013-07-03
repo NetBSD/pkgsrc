@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2344 2013/07/03 16:27:08 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2345 2013/07/03 16:28:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3587,3 +3587,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Probe-Perl to 0.02 [sno 2013-07-03]
 	Updated converters/p5-JSON-Any to 1.30 [sno 2013-07-03]
 	Updated devel/p5-CPAN-Uploader to 0.103004 [sno 2013-07-03]
+	Updated devel/p5-Devel-TraceUse to 2.09 [sno 2013-07-03]
