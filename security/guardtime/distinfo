@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 13:37:36 jperkin Exp $
+
+SHA1 (gtime-1.0-12.tar.gz) = ed4649f807fc6cf9d125d9ad999ebb368939dbcc
+RMD160 (gtime-1.0-12.tar.gz) = b3d7f9bd8ae10292c64ca60fbeb2c7d23da8c71e
+Size (gtime-1.0-12.tar.gz) = 115134 bytes
