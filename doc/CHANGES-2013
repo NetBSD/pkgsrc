@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2308 2013/07/03 09:04:45 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2309 2013/07/03 10:45:29 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3550,3 +3550,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-indirect version 0.30 [sno 2013-07-03]
 	Updated devel/p5-Lexical-SealRequireHints to 0.007 [sno 2013-07-03]
 	Added devel/p5-multidimensional version 0.011 [sno 2013-07-03]
+	Added devel/ocaml-batteries version 2.0 [jaapb 2013-07-03]
