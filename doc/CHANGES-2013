@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2311 2013/07/03 12:48:08 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2312 2013/07/03 13:09:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3553,3 +3553,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/ocaml-batteries version 2.0 [jaapb 2013-07-03]
 	Updated pkgtools/bootstrap-mk-files to 20130703 [jperkin 2013-07-03]
 	Updated www/squid3 to 3.3.6 [adam 2013-07-03]
+	Updated devel/p5-Module-CoreList to 2.92 [sno 2013-07-03]
