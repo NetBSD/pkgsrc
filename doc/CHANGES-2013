@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2320 2013/07/03 13:41:57 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2321 2013/07/03 13:44:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3563,3 +3563,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/libguardtime version 0.3.11 [jperkin 2013-07-03]
 	Added security/guardtime version 1.0.12 [jperkin 2013-07-03]
 	Updated converters/p5-JSON-XS to 2.340 [sno 2013-07-03]
+	Updated devel/p5-Log-Any to 0.15 [sno 2013-07-03]
