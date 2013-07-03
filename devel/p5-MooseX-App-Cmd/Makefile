@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/03 16:33:11 sno Exp $
 #
 
-DISTNAME=	MooseX-App-Cmd-0.09
+DISTNAME=	MooseX-App-Cmd-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -23,7 +22,7 @@ DEPENDS+=	p5-MooseX-Has-Options-[0-9]*:../../devel/p5-MooseX-Has-Options
 DEPENDS+=	p5-MooseX-MarkAsMethods-[0-9]*:../../devel/p5-MooseX-MarkAsMethods
 
 # For test target
-BUILD_DEPENDS+= p5-MooseX-ConfigFromFile-[0-9]*:../../devel/p5-MooseX-ConfigFromFile
+BUILD_DEPENDS+=	p5-MooseX-ConfigFromFile>=0.08:../../devel/p5-MooseX-ConfigFromFile
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 BUILD_DEPENDS+=	p5-Test-use-ok-[0-9]*:../../devel/p5-Test-use-ok
