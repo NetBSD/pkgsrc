@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2323 2013/07/03 13:54:11 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2324 2013/07/03 14:26:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3566,3 +3566,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Log-Any to 0.15 [sno 2013-07-03]
 	Updated devel/p5-Log-Any-Adapter to 0.11 [sno 2013-07-03]
 	Updated devel/p5-Sub-Exporter to 0.986 [sno 2013-07-03]
+	Added math/p5-Algorithm-Cluster version 1.50 [sno 2013-07-03]
