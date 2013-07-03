@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2303 2013/07/03 08:38:56 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2304 2013/07/03 08:41:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3545,3 +3545,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Package-Stash-XS to 0.26 [sno 2013-07-03]
 	Updated www/py-gdata to 2.0.18 [wiz 2013-07-03]
 	Updated devel/p5-Package-Stash to 0.34 [sno 2013-07-03]
+	Added devel/p5-circular-require version 0.10 [sno 2013-07-03]
