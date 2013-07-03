@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2013/07/02 19:47:48 adam Exp $
+# $NetBSD: Makefile,v 1.70 2013/07/03 18:19:24 wiz Exp $
 
 DISTNAME=	unrarsrc-5.0.7
 PKGNAME=	${DISTNAME:S/src//}
@@ -24,6 +24,8 @@ USE_TOOLS+=	gmake
 
 MAKE_FILE=	makefile
 MAKEFLAGS+=	CXX=${CXX:Q} CXXFLAGS=${CXXFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
+# usually set in Makefile, but overridden by line above
+LDFLAGS+=	-pthread
 
 WRKSRC=		${WRKDIR}/unrar
 
