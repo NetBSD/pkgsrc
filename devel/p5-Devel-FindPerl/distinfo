@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 06:59:46 sno Exp $
+
+SHA1 (Devel-FindPerl-0.006.tar.gz) = 764f5dbd8b1a47493dc64de269dc4d5a7d3924cd
+RMD160 (Devel-FindPerl-0.006.tar.gz) = 98ae705e4c0ff3d0da5c4d01eaddb107eb52b1f5
+Size (Devel-FindPerl-0.006.tar.gz) = 12118 bytes
