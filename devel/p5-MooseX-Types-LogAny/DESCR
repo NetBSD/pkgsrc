@@ -1,0 +1,5 @@
+The motivation behind this modules is that Log::Any::Adapter::Null does
+not inherit from Log::Any::Adapter::Base which all of the other adapters
+do. Moose will not allow a type union of undefined types unless they are
+Moose classes. This module allows you to simply use the LogAny type which
+has done the union for you.
