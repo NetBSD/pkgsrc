@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/06/08 13:39:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2013/07/03 14:52:02 ryoon Exp $
 #
 
 DISTNAME=	fotoxx-13.06.1
@@ -34,14 +34,6 @@ INSTALL_TARGET=	install
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(/usr/include/execinfo.h)
-.  if (${OPSYS} == "NetBSD")
-LDFLAGS+=	-lexecinfo
-.  endif
-.else
-.include "../../devel/libexecinfo/buildlink3.mk"
-.endif
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
@@ -54,6 +46,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/desktop-directories
 
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
