@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:39:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/03 14:48:00 ryoon Exp $
 
 DISTNAME=	mpqc-2.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpqc/}
 EXTRACT_SUFX=	.tar.bz2
