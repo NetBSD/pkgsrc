@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2315 2013/07/03 13:31:39 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2316 2013/07/03 13:34:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3557,3 +3557,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-PPI-XS to 0.902 [sno 2013-07-03]
 	Updated devel/p5-Module-Pluggable to 4.8 [sno 2013-07-03]
 	Updated devel/p5-Getopt-Long to 2.40 [sno 2013-07-03]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.093 [sno 2013-07-03]
