@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2293 2013/07/03 07:25:02 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2294 2013/07/03 07:27:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3535,3 +3535,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Module-Build-Tiny version 0.024 [sno 2013-07-03]
 	Added devel/p5-Test-FailWarnings version 0.005 [sno 2013-07-03]
 	Added devel/p5-Devel-Hide version 0.0009 [sno 2013-07-03]
+	Added devel/p5-Test-Without-Module version 0.17 [sno 2013-07-03]
