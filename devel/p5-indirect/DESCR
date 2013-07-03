@@ -1,0 +1,10 @@
+When enabled, this pragma warns about indirect method calls that are
+present in your code.
+
+This pragma currently does not warn for core functions (print, say, exec
+or system). This may change in the future, or may be added as optional
+features that would be enabled by passing options to unimport.
+
+In http://www.shadowcat.co.uk/blog/matt-s-trout/indirect-but-still-fatal,
+Matt S. Trout gives an example of an undesirable indirect method call on
+a block that can cause a particularly bewildering error.
