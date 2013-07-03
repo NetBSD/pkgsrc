@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2011/04/10 10:24:47 ryoon Exp $
+$NetBSD: patch-aa,v 1.4 2013/07/03 00:41:14 rodent Exp $
 
-Don't make/install PDF.
+Don't make/install PDF, and be sure to install test-graph.
 
---- Makefile.orig	2011-03-07 01:50:11.000000000 +0000
+--- Makefile.orig	2012-10-12 12:51:47.000000000 +0000
 +++ Makefile
-@@ -40,7 +40,7 @@ SOURCE	= tig.c tig.h io.c io.h graph.c g
- TXTDOC	= tig.1.txt tigrc.5.txt manual.txt NEWS README INSTALL BUGS TODO
+@@ -45,7 +45,7 @@ SOURCE	= tig.c tig.h io.c io.h graph.c g
+ TXTDOC	= tig.1.txt tigrc.5.txt manual.txt NEWS README INSTALL BUGS
  MANDOC	= tig.1 tigrc.5 tigmanual.7
  HTMLDOC = tig.1.html tigrc.5.html manual.html README.html NEWS.html
 -ALLDOC	= $(MANDOC) $(HTMLDOC) manual.html-chunked manual.pdf
@@ -13,3 +13,12 @@ Don't make/install PDF.
  
  # Never include the release number in the tarname for tagged
  # versions.
+@@ -72,7 +72,7 @@ doc-html: $(HTMLDOC)
+ 
+ install: all
+ 	mkdir -p $(DESTDIR)$(bindir) && \
+-	for prog in $(PROGS); do \
++	for prog in $(PROGS) $(TESTS); do \
+ 		install -p -m 0755 "$$prog" "$(DESTDIR)$(bindir)"; \
+ 	done
+ 

@@ -1,8 +1,8 @@
-$NetBSD: patch-tig_c,v 1.1 2011/07/31 22:15:36 dholland Exp $
+$NetBSD: patch-tig_c,v 1.2 2013/07/03 00:41:14 rodent Exp $
 
---- tig.c.orig	2011-03-07 01:50:11.000000000 +0000
+--- tig.c.orig	2012-10-12 12:51:45.000000000 +0000
 +++ tig.c
-@@ -1897,12 +1897,12 @@ redraw_display(bool clear)
+@@ -2444,17 +2444,17 @@ redraw_display(bool clear)
   */
  
  #define TOGGLE_MENU \
@@ -12,9 +12,16 @@ $NetBSD: patch-tig_c,v 1.1 2011/07/31 22:15:36 dholland Exp $
  	TOGGLE_(AUTHOR,    'A', "author names",      &opt_author, author_map) \
  	TOGGLE_(GRAPHIC,   '~', "graphics",          &opt_line_graphics, graphic_map) \
 -	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, NULL) \
--	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, NULL)
 +	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, (struct enum_map *)NULL) \
-+	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, (struct enum_map *)NULL)
+ 	TOGGLE_(FILENAME,  '#', "file names",        &opt_filename, filename_map) \
+ 	TOGGLE_(IGNORE_SPACE, 'W', "space changes",  &opt_ignore_space, ignore_space_map) \
+ 	TOGGLE_(COMMIT_ORDER, 'l', "commit order",   &opt_commit_order, commit_order_map) \
+-	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, NULL) \
+-	TOGGLE_(CHANGES,   'C', "local change display", &opt_show_changes, NULL) \
+-	TOGGLE_(ID,        'X', "commit ID display", &opt_show_id, NULL)
++	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, (struct enum_map *)NULL) \
++	TOGGLE_(CHANGES,   'C', "local change display", &opt_show_changes, (struct enum_map *)NULL) \
++	TOGGLE_(ID,        'X', "commit ID display", &opt_show_id, (struct enum_map *)NULL)
  
- static void
+ static bool
  toggle_option(enum request request)
