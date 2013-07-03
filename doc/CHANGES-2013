@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2347 2013/07/03 16:33:22 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2348 2013/07/03 16:37:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Devel-TraceUse to 2.09 [sno 2013-07-03]
 	Updated devel/p5-MooseX-ConfigFromFile to 0.11 [sno 2013-07-03]
 	Updated devel/p5-MooseX-App-Cmd to 0.10 [sno 2013-07-03]
+	Updated devel/p5-Sub-Exporter-Progressive to 0.001010 [sno 2013-07-03]
