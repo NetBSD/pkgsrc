@@ -1,0 +1,15 @@
+Module::Path provides a single function, module_path(), which will find
+where a module is installed locally.
+
+It works by looking in all the directories in @INC for an appropriately
+named file:
+
+    * Foo::Bar becomes Foo/Bar.pm, using the correct directory path
+      separator for your operating system.
+    * Iterate over @INC, ignoring any references (see "require" in
+      "perlfunc" if you're surprised to hear that you might find references
+      in @INC).
+    * For each directory in @INC, append the partial path (Foo/Bar.pm),
+      again using the correct directory path separator. If the resulting
+      file exists, return this path.
+    * If no file was found, return undef.
