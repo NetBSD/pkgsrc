@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2289 2013/07/03 07:06:09 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2290 2013/07/03 07:08:06 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-ExtUtils-Config version 0.007 [sno 2013-07-03]
 	Added devel/p5-Devel-FindPerl version 0.006 [sno 2013-07-03]
 	Added devel/p5-ExtUtils-Helpers version 0.021 [sno 2013-07-03]
+	Added devel/p5-ExtUtils-InstallPaths version 0.009 [sno 2013-07-03]
