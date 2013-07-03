@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 16:13:38 sno Exp $
+
+SHA1 (String-Compare-ConstantTime-0.300.tar.gz) = fcc96a6f87067ac1e2ada686018d3ea54ed19bb0
+RMD160 (String-Compare-ConstantTime-0.300.tar.gz) = 0f4f37bce2ba0b2bc821d09eb76247d673586715
+Size (String-Compare-ConstantTime-0.300.tar.gz) = 5210 bytes
