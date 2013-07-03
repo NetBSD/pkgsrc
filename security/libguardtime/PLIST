@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/03 13:33:50 jperkin Exp $
+include/gt_base.h
+include/gt_http.h
+include/gt_png.h
+lib/libgtbase.la
+lib/libgthttp.la
+lib/libgtpng.la
+share/doc/libgt/changelog
+share/doc/libgt/license.curl.txt
+share/doc/libgt/license.openssl.txt
+share/doc/libgt/license.txt
