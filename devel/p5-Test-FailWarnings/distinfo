@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 07:22:45 sno Exp $
+
+SHA1 (Test-FailWarnings-0.005.tar.gz) = 1024aeb9a442dc1c35bae16fa7f4c54cb140646b
+RMD160 (Test-FailWarnings-0.005.tar.gz) = a5483e285755e5494b3004888a9fb4d06e7c543c
+Size (Test-FailWarnings-0.005.tar.gz) = 13799 bytes
