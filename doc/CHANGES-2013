@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2365 2013/07/03 19:07:20 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2366 2013/07/03 20:01:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3608,3 +3608,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001018 [sno 2013-07-03]
 	Updated databases/p5-DBIx-Class-InflateColumn-IP to 0.02003 [sno 2013-07-03]
 	Updated databases/p5-DBIx-Class-Helpers to 2.018001 [sno 2013-07-03]
+	Updated net/samba to 3.6.16 [adam 2013-07-03]
