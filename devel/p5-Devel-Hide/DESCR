@@ -1,0 +1,13 @@
+Given a list of Perl modules/filenames, this module makes require and use
+statements fail (no matter the specified files/modules are installed or
+not).
+
+They die with a message like:
+
+    Can't locate Module/ToHide.pm (hidden)
+
+The intent of this module is to allow Perl developers to test for
+alternative behavior when some modules are not available. In a Perl
+installation, where many modules are already installed, there is a
+chance to screw things up because you take for granted things that
+may not be there in other machines.
