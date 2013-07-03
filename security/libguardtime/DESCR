@@ -1,0 +1,3 @@
+The GuardTime Client SDK for C is intended for software developers who
+want to integrate GuardTime Keyless Signature Service (KSS) into their
+C and C++ based applications.
