@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/03 08:34:12 sno Exp $
 
-DISTNAME=	Package-Stash-XS-0.25
+DISTNAME=	Package-Stash-XS-0.26
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
 
@@ -11,7 +10,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Package-Stash-XS/
 COMMENT=	Perl 5 module providing a better correct Package::Stash implementation
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=	c
 
