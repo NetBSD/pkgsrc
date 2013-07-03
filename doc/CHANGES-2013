@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2298 2013/07/03 08:17:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2299 2013/07/03 08:18:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3540,3 +3540,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/help2man to 1.43.3 [wiz 2013-07-03]
 	Updated security/libgpg-error to 1.12 [wiz 2013-07-03]
 	Updated net/mtr to 0.85 [wiz 2013-07-03]
+	Updated security/pinentry to 0.8.3 [wiz 2013-07-03]
