@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:40:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/07/03 08:38:45 sno Exp $
 #
 
-DISTNAME=	Package-Stash-0.33
+DISTNAME=	Package-Stash-0.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
 
@@ -12,12 +11,15 @@ HOMEPAGE=	http://search.cpan.org/dist/Package-Stash/
 COMMENT=	Perl 5 module providing routines for manipulating stashes
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-DEPENDS+=	p5-Package-Stash-XS-[0-9]*:../../devel/p5-Package-Stash-XS
-DEPENDS+=	p5-Dist-CheckConflicts>=0.02:../../devel/p5-Dist-CheckConflicts
-DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+CONFLICTS+=	p5-MooseX-Method-Signatures<=0.36
 
+DEPENDS+=	p5-Dist-CheckConflicts>=0.02:../../devel/p5-Dist-CheckConflicts
+DEPENDS+=	p5-Module-Implementation>=0.06:../../devel/p5-Module-Implementation
+DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+DEPENDS+=	p5-Package-Stash-XS>=0.26:../../devel/p5-Package-Stash-XS
+
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	{perl>=5.10.1,-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
