@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2335 2013/07/03 16:02:47 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2336 2013/07/03 16:06:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3578,3 +3578,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-MooseX-Types-Stringlike version 0.001 [sno 2013-07-03]
 	Added security/p5-Crypt-URandom version 0.34 [sno 2013-07-03]
 	Added security/p5-Dancer-Plugin-Auth-RBAC version 1.110.720 [sno 2013-07-03]
+	Added textproc/p5-Lingua-EN-Words2Nums version 0.18 [sno 2013-07-03]
