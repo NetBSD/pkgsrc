@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2302 2013/07/03 08:37:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2303 2013/07/03 08:38:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3544,3 +3544,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-distribute to 0.6.46 [wiz 2013-07-03]
 	Updated devel/p5-Package-Stash-XS to 0.26 [sno 2013-07-03]
 	Updated www/py-gdata to 2.0.18 [wiz 2013-07-03]
+	Updated devel/p5-Package-Stash to 0.34 [sno 2013-07-03]
