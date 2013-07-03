@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2326 2013/07/03 14:33:47 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2327 2013/07/03 15:06:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/p5-Algorithm-Cluster version 1.50 [sno 2013-07-03]
 	Added math/p5-Math-Random-ISAAC-XS version 1.004 [sno 2013-07-03]
 	Added math/p5-Math-Random-ISAAC version 1.004 [sno 2013-07-03]
+	Added filesystems/p5-Module-Path version 0.09 [sno 2013-07-03]
