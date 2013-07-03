@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2296 2013/07/03 08:11:45 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2297 2013/07/03 08:12:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3538,3 +3538,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Test-Without-Module version 0.17 [sno 2013-07-03]
 	Added devel/p5-bareword-filehandles version 0.003 [sno 2013-07-03]
 	Updated converters/help2man to 1.43.3 [wiz 2013-07-03]
+	Updated security/libgpg-error to 1.12 [wiz 2013-07-03]
