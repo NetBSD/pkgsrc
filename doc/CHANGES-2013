@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2295 2013/07/03 07:29:19 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2296 2013/07/03 08:11:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3537,3 +3537,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Devel-Hide version 0.0009 [sno 2013-07-03]
 	Added devel/p5-Test-Without-Module version 0.17 [sno 2013-07-03]
 	Added devel/p5-bareword-filehandles version 0.003 [sno 2013-07-03]
+	Updated converters/help2man to 1.43.3 [wiz 2013-07-03]
