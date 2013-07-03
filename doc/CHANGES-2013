@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2355 2013/07/03 17:44:43 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2356 2013/07/03 18:18:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07035 [sno 2013-07-03]
 	Added www/p5-Session-Storage-Secure version 0.007 [sno 2013-07-03]
 	Added www/p5-Dancer-Session-Cookie version 0.22 [sno 2013-07-03]
+	Updated databases/p5-SQL-Abstract to 1.74 [sno 2013-07-03]
