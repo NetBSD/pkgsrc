@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/07/03 16:37:38 sno Exp $
+$NetBSD: distinfo,v 1.4 2013/07/03 18:26:44 schmonz Exp $
 
 SHA1 (Sub-Exporter-Progressive-0.001010.tar.gz) = 8423c14d38c3e67513a40fed2f42ed1c308ca78b
 RMD160 (Sub-Exporter-Progressive-0.001010.tar.gz) = 7e1d41dac67679773ff289493027c71f12bbff2a
 Size (Sub-Exporter-Progressive-0.001010.tar.gz) = 5762 bytes
-SHA1 (patch-aa) = 37cda0883406822eb9270cc45c790a9554cf9a25
