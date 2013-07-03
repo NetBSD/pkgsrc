@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12347 2013/07/03 08:37:52 wiz Exp $
+$NetBSD: TODO,v 1.12348 2013/07/03 09:14:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csound5-5.13
 	o cups-1.6.2
-	o curl-7.31.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
@@ -924,7 +923,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o puf-1.0.0
 	o pulseaudio-4.0
 	o puzzle-9173
-	o puzzles-9888
+	o puzzles-9891
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1040,8 +1039,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
-	o subversion-1.8.0
-	o subversion-base-1.7.10
+	o subversion-base-1.8.0
 	o sudo-1.8.6p8
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
