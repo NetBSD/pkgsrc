@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.105 2013/07/01 13:53:27 martin Exp $
+$NetBSD: distinfo,v 1.105.2.1 2013/07/03 08:45:27 tron Exp $
 
 SHA1 (firefox-22.0.source.tar.bz2) = db2d5b028b6ea95b5f006b46e153f50f7a52bf80
 RMD160 (firefox-22.0.source.tar.bz2) = 9f206a786fcc366cb0ea03c4a5140809d1402272
@@ -53,7 +53,7 @@ SHA1 (patch-js_src_jscompartment.h) = 33708bc67f1c05f776dbb9c048ddf91f0eea25ca
 SHA1 (patch-js_src_jstypedarray.cpp) = 520d085871dfd640bbd693f59424612d3f0f539e
 SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = 77685fc735bde4e592a3ddc29fa05b13a694fa8a
 SHA1 (patch-js_src_vm_ObjectImpl-inl.h) = e6dda53d189c1e2e24735ea17d6b779d933342d7
-SHA1 (patch-mb) = 4e268868b6a526a0911d677875bda7ef975afc1c
+SHA1 (patch-mb) = 43500266e3a918ee311396c20e7edf1e2efafd94
 SHA1 (patch-md) = 7fd607a3edd2ea5f7a5671fc6d06fba69c46c36f
 SHA1 (patch-me) = 2ff755782bd35caded8934000d039976dad44103
 SHA1 (patch-media_libsoundtouch_src_cpu__detect__x86.cpp) = 061b46d1ee33c055a5b39e6b20f47b80bcde0c86
@@ -116,7 +116,6 @@ SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = 15e9466d60e60f93a27fe23aadfea6e1d59ad0bc
 SHA1 (patch-toolkit_library_Makefile.in) = 0c91d647f0f3a4653d39f11c9d8fd63611235932
 SHA1 (patch-toolkit_toolkit.mozbuild) = 07e87d977cee59c0f5a5d14a8d41dc2a4230c01e
-SHA1 (patch-xa) = 9182485283599a96663358bdc680c5cdb1d94a78
 SHA1 (patch-xb) = 30eea880b40cee45d1235d3292fead4b5a54bbaa
 SHA1 (patch-xc) = 8575fdac2b47966ccfb5e1cc7ca8505163e358c9
 SHA1 (patch-xe) = ca4c87dbf9bb09e0e6c270d0fa76fc69a7d6df7f
