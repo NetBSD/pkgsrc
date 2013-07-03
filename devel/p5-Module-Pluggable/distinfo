@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/09/10 10:57:16 sno Exp $
+$NetBSD: distinfo,v 1.9 2013/07/03 13:28:31 sno Exp $
 
-SHA1 (Module-Pluggable-4.3.tar.gz) = 770798928c61dd24a3ad34962f8ba0d9cf2f8c23
-RMD160 (Module-Pluggable-4.3.tar.gz) = 505adf68283830e9b7e94ff216bef3bef9d42c92
-Size (Module-Pluggable-4.3.tar.gz) = 26066 bytes
+SHA1 (Module-Pluggable-4.8.tar.gz) = 957acb3990e50a350dc9a9eb2cb33686b2d1b8e3
+RMD160 (Module-Pluggable-4.8.tar.gz) = 84eaf2f561c8d3e745735088bd78d310d4f11443
+Size (Module-Pluggable-4.8.tar.gz) = 27074 bytes
