@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2349 2013/07/03 16:39:41 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2350 2013/07/03 16:41:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3592,3 +3592,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-App-Cmd to 0.10 [sno 2013-07-03]
 	Updated devel/p5-Sub-Exporter-Progressive to 0.001010 [sno 2013-07-03]
 	Updated devel/p5-Syntax-Keyword-Junction to 0.003004 [sno 2013-07-03]
+	Updated devel/p5-Perl-PrereqScanner to 1.016 [sno 2013-07-03]
