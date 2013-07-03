@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2013/04/17 01:19:49 rodent Exp $
+# $NetBSD: Makefile,v 1.121 2013/07/03 07:01:18 sno Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -57,6 +57,8 @@ SUBDIR+=	p5-MARC-Crosswalk-DublinCore
 SUBDIR+=	p5-MIME-Base32
 SUBDIR+=	p5-MIME-Base64
 SUBDIR+=	p5-MIME-Base64-URLSafe
+SUBDIR+=	p5-Sereal-Decoder
+SUBDIR+=	p5-Sereal-Encoder
 SUBDIR+=	p5-Text-Iconv
 SUBDIR+=	p5-Unicode-Collate
 SUBDIR+=	p5-Unicode-IMAPUtf7
