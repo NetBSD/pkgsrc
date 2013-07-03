@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2286 2013/07/03 06:52:49 sno Exp $
+$NetBSD: CHANGES-2013,v 1.2287 2013/07/03 06:56:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3528,3 +3528,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added converters/p5-Sereal-Decoder version 0.36 [sno 2013-07-03]
 	Added converters/p5-Sereal-Encoder version 0.36 [sno 2013-07-03]
 	Added devel/p5-Carp-Always version 0.12 [sno 2013-07-03]
+	Added devel/p5-ExtUtils-Config version 0.007 [sno 2013-07-03]
