@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2013/05/23 08:16:56 wen Exp $
+$NetBSD: distinfo,v 1.17 2013/07/03 13:38:50 sno Exp $
 
-SHA1 (JSON-2.58.tar.gz) = d278466392e544385029dcf61267a019a36535e7
-RMD160 (JSON-2.58.tar.gz) = 73c01902ae327271e3e05417acd8a8711a6144f4
-Size (JSON-2.58.tar.gz) = 84435 bytes
+SHA1 (JSON-2.59.tar.gz) = 8a82c442088ffa0d605747fd5e65f51e037aad94
+RMD160 (JSON-2.59.tar.gz) = 74d0fac60af9ad206755f4996c32884f9291a1c7
+Size (JSON-2.59.tar.gz) = 83997 bytes
