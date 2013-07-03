@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/03 18:54:50 sno Exp $
+
+SHA1 (DBIx-Class-InflateColumn-FS-0.01007.tar.gz) = 2bf309df9934b7c7822916986704a33ffac1df4c
+RMD160 (DBIx-Class-InflateColumn-FS-0.01007.tar.gz) = 60964f6548b5bfea2efa1cc7227d29e32a4e8231
+Size (DBIx-Class-InflateColumn-FS-0.01007.tar.gz) = 31302 bytes
