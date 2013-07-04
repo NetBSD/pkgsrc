@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2012/05/07 08:40:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2013/07/04 21:42:40 adam Exp $
 bin/gimp
 bin/gimp-2.8
 bin/gimp-console
@@ -530,6 +530,7 @@ share/gimp/2.0/dynamics/Basic/Pen-Generic.gdyn
 share/gimp/2.0/dynamics/Basic/Pencil-Generic.gdyn
 share/gimp/2.0/dynamics/Basic/Pencil-Shader.gdyn
 share/gimp/2.0/dynamics/Basic/Pressure-Opacity.gdyn
+share/gimp/2.0/dynamics/Color-From-Gradient.gdyn
 share/gimp/2.0/dynamics/Dynamics-Off.gdyn
 share/gimp/2.0/dynamics/FX/Confetti.gdyn
 share/gimp/2.0/dynamics/FX/Perspective.gdyn
@@ -1077,6 +1078,7 @@ share/gimp/2.0/tool-presets/FX/Fill-Paper.gtp
 share/gimp/2.0/tool-presets/FX/Glow-Lights.gtp
 share/gimp/2.0/tool-presets/FX/Smooth-Clone.gtp
 share/gimp/2.0/tool-presets/FX/Vignette.gtp
+share/gimp/2.0/tool-presets/Paint/Airbrush-Color-From-Gradient.gtp
 share/gimp/2.0/tool-presets/Paint/Airbrush.gtp
 share/gimp/2.0/tool-presets/Paint/Basic-Knife.gtp
 share/gimp/2.0/tool-presets/Paint/Basic-Round-Detail.gtp
@@ -1084,6 +1086,8 @@ share/gimp/2.0/tool-presets/Paint/Basic-Round.gtp
 share/gimp/2.0/tool-presets/Paint/Bristles.gtp
 share/gimp/2.0/tool-presets/Paint/Eraser-Hard.gtp
 share/gimp/2.0/tool-presets/Paint/Noise.gtp
+share/gimp/2.0/tool-presets/Paint/Paintbrush-Color-From-Gradient.gtp
+share/gimp/2.0/tool-presets/Paint/Pencil-Color-From-Gradient.gtp
 share/gimp/2.0/tool-presets/Paint/Smudge-Rough.gtp
 share/gimp/2.0/tool-presets/Paint/Smudge-Soft.gtp
 share/gimp/2.0/tool-presets/Paint/Soft-Oil.gtp
