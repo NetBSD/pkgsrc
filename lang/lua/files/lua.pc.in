@@ -1,0 +1,21 @@
+# $NetBSD: lua.pc.in,v 1.1 2013/07/04 18:04:42 adam Exp $
+# lua.pc is not any longer distributed, but is still required by other packages.
+
+prefix= @PREFIX@
+INSTALL_BIN= ${prefix}/bin
+INSTALL_INC= ${prefix}/include
+INSTALL_LIB= ${prefix}/lib
+INSTALL_MAN= ${prefix}/man/man1
+INSTALL_LMOD= ${prefix}/share/lua/@VER@
+INSTALL_CMOD= ${prefix}/lib/lua/@VER@
+
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Lua
+Description: An Extensible Extension Language
+Version: @REV@
+Requires: 
+Libs: -L${libdir} -llua -lm
+Cflags: -I${includedir}

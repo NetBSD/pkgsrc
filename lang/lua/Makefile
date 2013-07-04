@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/10/02 20:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.50 2013/07/04 18:04:42 adam Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 CATEGORIES=	lang
@@ -22,10 +22,8 @@ MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
 MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
 
-MAKE_FLAGS+=	CC=cc
-
-DOCDIR=		${PREFIX}/share/doc/lua
-EGDIR=		${PREFIX}/share/examples/lua
+PKGCONFIG_OVERRIDE=	${WRKSRC}/lua.pc
+INSTALLATION_DIRS+=	lib/pkgconfig share/doc/lua
 
 .if ${OPSYS} == "FreeBSD"
 BUILD_TARGET=	freebsd
@@ -43,36 +41,16 @@ BUILD_TARGET=	aix
 BUILD_TARGET=	generic
 .endif
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/etc/lua.pc
-
-INSTALLATION_DIRS+=	lib/pkgconfig
-
-SUBST_CLASSES+=		pc-prefix
-SUBST_FILES.pc-prefix+=	${WRKSRC}/etc/lua.pc
-SUBST_SED.pc-prefix+=	-e "s,/usr/local,${PREFIX},"
-SUBST_STAGE.pc-prefix=	post-build
+pre-configure:
+	sed	-e 's,@PREFIX@,${PREFIX},g' \
+		-e 's,@VER@,${PKGVERSION_NOREV:R},g' \
+		-e 's,@REV@,${PKGVERSION_NOREV},g' \
+		${FILESDIR}/lua.pc.in > ${WRKSRC}/lua.pc
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	set -e; \
-	cd ${WRKSRC}; for f in README COPYRIGHT HISTORY; do		\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR};		\
-	done
-	set -e; \
-	cd ${WRKSRC}/doc; for f in *.html *.gif; do			\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR};		\
-	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	set -e; \
-	cd ${WRKSRC}/test; for f in README *.lua; do			\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR};		\
-	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/etc
-	set -e; \
-	cd ${WRKSRC}/etc; for f in README *.c *.ico *.lua; do \
-		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR}/etc;		\
-	done
-	${INSTALL_DATA} ${WRKSRC}/etc/lua.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/lua.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/doc/*.??? ${DESTDIR}${PREFIX}/share/doc/lua
+	${INSTALL_DATA} ${WRKSRC}/doc/*.???? ${DESTDIR}${PREFIX}/share/doc/lua
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
