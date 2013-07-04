@@ -1,0 +1,24 @@
+$NetBSD: patch-doc_asn2deb.pod,v 1.1 2013/07/04 21:33:14 adam Exp $
+
+Remove non-printable characters.
+
+--- doc/asn2deb.pod.orig	2013-07-04 22:14:32.000000000 +0200
++++ doc/asn2deb.pod	2013-07-04 22:22:33.000000000 +0200
+@@ -5,8 +5,8 @@
+ 
+ =head1 SYNOPSIS
+ 
+-B<asn2deb> [-a I<ASN.1 file>] [--asn=I<ASN.1 file>] [B<-d >I<opts>] [B<--dbopts=>I<opts>] [B<-e >I<address>]
+-[B<--email=>I<address>] [B<-h>] [B<--help>] [B<-n >I<name>] [B<--name=>I<name>] [B<-p>] [B<--preserve>] [B<-v>] [B<--version>]
++B<asn2deb> [-aI<ASN.1file>] [--asn=I<ASN.1file>] [B<-d>I<opts>] [B<--dbopts=>I<opts>] [B<-e>I<address>]
++[B<--email=>I<address>] [B<-h>] [B<--help>] [B<-n>I<name>] [B<--name=>I<name>] [B<-p>] [B<--preserve>] [B<-v>] [B<--version>]
+ 
+ =head1 DESCRIPTION
+ 
+@@ -72,4 +72,4 @@
+ 
+ =head1 COPYRIGHT
+ 
+-Copyright (C) 2003, 2005 W. Borger
+\ No newline at end of file
++Copyright (C) 2003, 2005 W. Borger
