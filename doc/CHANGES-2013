@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2379 2013/07/04 14:13:45 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2380 2013/07/04 15:22:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3623,3 +3623,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/goffice0.10 to 0.10.3 [wiz 2013-07-04]
 	Updated math/gnumeric112 to 1.12.3 [wiz 2013-07-04]
 	Updated lang/openjdk7 to 1.7.25 [ryoon 2013-07-04]
+	Updated devel/apr-util to 1.5.2 [wiz 2013-07-04]
