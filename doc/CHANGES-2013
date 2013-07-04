@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2390 2013/07/04 17:17:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2391 2013/07/04 19:31:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3634,3 +3634,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/pinentry to 0.8.3nb1 [wiz 2013-07-04]
 	Updated security/libtasn1 to 3.1 [wiz 2013-07-04]
 	Updated www/serf to 1.2.1 [wiz 2013-07-04]
+	Updated devel/subversion to 1.8.0 [wiz 2013-07-04]
