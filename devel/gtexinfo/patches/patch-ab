@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2008/09/01 17:53:47 christos Exp $
+$NetBSD: patch-ab,v 1.13 2013/07/04 16:19:16 wiz Exp $
 
---- info/Makefile.in.orig	2008-04-18 10:34:57.000000000 +0300
-+++ info/Makefile.in	2008-09-01 19:43:58.000000000 +0300
-@@ -439,7 +439,8 @@
+--- info/Makefile.in.orig	2013-03-12 22:56:43.000000000 +0000
++++ info/Makefile.in
+@@ -942,7 +942,8 @@ AM_CPPFLAGS = \
    -I$(top_builddir)/gnulib/lib			\
    -DLOCALEDIR=\"$(localedir)\" 			\
    -DINFODIR=\"$(infodir)\"			\
@@ -10,5 +10,5 @@ $NetBSD: patch-ab,v 1.12 2008/09/01 17:53:47 christos Exp $
 +  -DINFODIR2=\"$(infodir2)\"			\
 +  -DPKGSRC_INFOPATH=\"$(PKGSRC_INFOPATH)\"
  
- LDADD = ../lib/libtxi.a $(top_builddir)/gnulib/lib/libgnu.a \
-         $(TERMLIBS) $(LIBINTL)
+ LDADD = $(top_builddir)/gnulib/lib/libgnu.a $(TERMLIBS) $(LIBINTL)
+ infokey_LDADD = $(top_builddir)/gnulib/lib/libgnu.a $(LIBINTL)

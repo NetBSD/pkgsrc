@@ -1,8 +1,8 @@
-$NetBSD: patch-util_texi2dvi,v 1.1 2013/01/13 20:44:55 apb Exp $
+$NetBSD: patch-util_texi2dvi,v 1.2 2013/07/04 16:19:16 wiz Exp $
 
---- util/texi2dvi.orig	2008-09-18 18:46:01.000000000 +0000
+--- util/texi2dvi.orig	2013-03-12 22:56:34.000000000 +0000
 +++ util/texi2dvi
-@@ -24,10 +24,10 @@
+@@ -25,10 +25,10 @@
  # If possible, please send a copy of the output of the script called with
  # the `--debug' option when making a bug report.
  
@@ -17,12 +17,3 @@ $NetBSD: patch-util_texi2dvi,v 1.1 2013/01/13 20:44:55 apb Exp $
  
  # No failure shall remain unpunished.
  set -e
-@@ -127,7 +127,7 @@ test -n "$TEX" && test -d "$TEX" && unse
-   test_local () {
-     local foo=foo
-   }
--  test_local
-+  test_local 2>/dev/null || exit 1
-   test $foo = bar
- ) || local () {
-   case $1 in
