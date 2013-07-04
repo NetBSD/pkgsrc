@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2013/06/04 13:04:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.85 2013/07/04 21:29:05 adam Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -272,6 +272,7 @@ lib/gtk-2.0/2.10.0/immodules/im-cyrillic-translit.la
 lib/gtk-2.0/2.10.0/immodules/im-inuktitut.la
 lib/gtk-2.0/2.10.0/immodules/im-ipa.la
 lib/gtk-2.0/2.10.0/immodules/im-multipress.la
+${PLIST.quartz}lib/gtk-2.0/2.10.0/immodules/im-quartz.la
 lib/gtk-2.0/2.10.0/immodules/im-thai.la
 lib/gtk-2.0/2.10.0/immodules/im-ti-er.la
 lib/gtk-2.0/2.10.0/immodules/im-ti-et.la
