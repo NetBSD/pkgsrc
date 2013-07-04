@@ -1,0 +1,17 @@
+$NetBSD: patch-doc_idl2deb.pod,v 1.1 2013/07/04 21:33:14 adam Exp $
+
+Remove non-printable characters.
+
+--- doc/idl2deb.pod.orig	2013-07-04 22:23:37.000000000 +0200
++++ doc/idl2deb.pod	2013-07-04 22:24:00.000000000 +0200
+@@ -5,8 +5,8 @@
+ 
+ =head1 SYNOPSIS
+ 
+-B<idl2deb> [B<-d >I<opts>] [B<--dbopts=>I<opts>] [B<-e >I<address>] [B<--email=>I<address>] [-i I<idlfile>]
+-[--idl=I<idlfile>] [B<-h>] [B<--help>] [B<-n >I<name>] [B<--name=>I<name>] [B<-p>] [B<--preserve>] [B<-v>] [B<--version>]
++B<idl2deb> [B<-d>I<opts>] [B<--dbopts=>I<opts>] [B<-e>I<address>] [B<--email=>I<address>] [-iI<idlfile>]
++[--idl=I<idlfile>] [B<-h>] [B<--help>] [B<-n>I<name>] [B<--name=>I<name>] [B<-p>] [B<--preserve>] [B<-v>] [B<--version>]
+ 
+ 
+ =head1 DESCRIPTION
