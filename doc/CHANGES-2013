@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2368 2013/07/04 03:42:22 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.2369 2013/07/04 05:40:14 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3611,3 +3611,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.16 [adam 2013-07-03]
 	Updated devel/p5-Tree-DAG_Node to 1.12 [wen 2013-07-04]
 	Updated net/mtr to 0.85nb1 [dholland 2013-07-04]
+	Updated graphics/p5-GD to 2.46nb10 [dholland 2013-07-04]
