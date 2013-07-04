@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2367 2013/07/04 00:11:39 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2368 2013/07/04 03:42:22 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3610,3 +3610,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBIx-Class-Helpers to 2.018001 [sno 2013-07-03]
 	Updated net/samba to 3.6.16 [adam 2013-07-03]
 	Updated devel/p5-Tree-DAG_Node to 1.12 [wen 2013-07-04]
+	Updated net/mtr to 0.85nb1 [dholland 2013-07-04]
