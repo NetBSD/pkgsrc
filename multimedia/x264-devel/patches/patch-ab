@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
+$NetBSD: patch-ab,v 1.18 2013/07/04 16:43:55 wiz Exp $
 
---- Makefile.orig	2012-11-07 21:45:03.000000000 +0000
+--- Makefile.orig	2013-07-03 20:45:03.000000000 +0000
 +++ Makefile
-@@ -99,9 +99,9 @@ endif
+@@ -101,9 +101,9 @@ endif
  ifdef ARCH_X86
  ASFLAGS += -I$(SRCPATH)/common/x86/
  SRCS   += common/x86/mc-c.c common/x86/predict-c.c
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
  endif
  endif
  
-@@ -121,7 +121,7 @@ ASMSRC += common/arm/cpu-a.S common/arm/
+@@ -123,7 +123,7 @@ ASMSRC += common/arm/cpu-a.S common/arm/
            common/arm/dct-a.S common/arm/quant-a.S common/arm/deblock-a.S \
            common/arm/predict-a.S
  SRCS   += common/arm/mc-c.c common/arm/predict-c.c
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
  endif
  endif
  
-@@ -129,7 +129,7 @@ endif
+@@ -131,7 +131,7 @@ endif
  ifeq ($(ARCH),UltraSPARC)
  ifeq ($(findstring HIGH_BIT_DEPTH, $(CONFIG)),)
  ASMSRC += common/sparc/pixel.asm
@@ -32,8 +32,8 @@ $NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
  endif
  endif
  
-@@ -145,20 +145,23 @@ OBJSO  += $(if $(RC), x264res.dll.o)
- endif
+@@ -154,20 +154,23 @@ GENERATED += common/oclobj.h
+ SRCS += common/opencl.c encoder/slicetype-cl.c
  endif
  
 -OBJS   += $(SRCS:%.c=%.o)
@@ -52,29 +52,29 @@ $NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
 +lib-static: libx264.la
  lib-shared: $(SONAME)
  
--$(LIBX264): .depend $(OBJS) $(OBJASM)
+-$(LIBX264): $(GENERATED) .depend $(OBJS) $(OBJASM)
 -	rm -f $(LIBX264)
 -	$(AR)$@ $(OBJS) $(OBJASM)
 -	$(if $(RANLIB), $(RANLIB) $@)
-+libx264.la: .depend $(OBJS) $(OBJASM)
++libx264.la: $(GENERATED) .depend $(OBJS) $(OBJASM)
 +	${LIBTOOL} --mode=link \
 +	${CC} -o libx264.la -rpath ${PREFIX}/lib -version-info 0 \
 +	$(OBJS) $(OBJASM) ${LDFLAGS}
  
- $(SONAME): .depend $(OBJS) $(OBJASM) $(OBJSO)
+ $(SONAME): $(GENERATED) .depend $(OBJS) $(OBJASM) $(OBJSO)
  	$(LD)$@ $(OBJS) $(OBJASM) $(OBJSO) $(SOFLAGS) $(LDFLAGS)
-@@ -169,17 +172,17 @@ x264: x264$(EXE)
+@@ -178,17 +181,17 @@ x264: x264$(EXE)
  checkasm: checkasm$(EXE)
  endif
  
--x264$(EXE): .depend $(OBJCLI) $(CLI_LIBX264)
+-x264$(EXE): $(GENERATED) .depend $(OBJCLI) $(CLI_LIBX264)
 -	$(LD)$@ $(OBJCLI) $(CLI_LIBX264) $(LDFLAGSCLI) $(LDFLAGS)
-+x264$(EXE): .depend $(OBJCLI) libx264.la
++x264$(EXE): $(GENERATED) .depend $(OBJCLI) libx264.la
 +	${LIBTOOL} --mode=link $(LD)$@ $(OBJCLI) libx264.la $(LDFLAGSCLI) $(LDFLAGS)
  
--checkasm$(EXE): .depend $(OBJCHK) $(LIBX264)
+-checkasm$(EXE): $(GENERATED) .depend $(OBJCHK) $(LIBX264)
 -	$(LD)$@ $(OBJCHK) $(LIBX264) $(LDFLAGS)
-+checkasm$(EXE): .depend $(OBJCHK) libx264.la
++checkasm$(EXE): $(GENERATED) .depend $(OBJCHK) libx264.la
 +	${LIBTOOL} --mode=link $(LD)$@ $+ $(LDFLAGS)
  
  $(OBJS) $(OBJASM) $(OBJSO) $(OBJCLI) $(OBJCHK): .depend
@@ -88,7 +88,7 @@ $NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
  
  %.o: %.S
  	$(AS) $(ASFLAGS) -o $@ $<
-@@ -238,8 +241,7 @@ distclean: clean
+@@ -247,8 +250,7 @@ distclean: clean
  	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def
  
  install-cli: cli
@@ -98,7 +98,7 @@ $NetBSD: patch-ab,v 1.17 2012/11/08 20:28:09 adam Exp $
  
  install-lib-dev:
  	install -d $(DESTDIR)$(includedir)
-@@ -250,8 +252,7 @@ install-lib-dev:
+@@ -259,8 +261,7 @@ install-lib-dev:
  	install -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
