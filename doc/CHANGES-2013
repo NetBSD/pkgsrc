@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2376 2013/07/04 13:14:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2377 2013/07/04 14:11:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sun-jdk7 to 7.0.25 [obache 2013-07-04]
 	Updated databases/py-psycopg2 to 2.5.1 [wiz 2013-07-04]
 	Updated print/poppler to 0.22.5 [wiz 2013-07-04]
+	Updated misc/goffice0.10 to 0.10.3 [wiz 2013-07-04]
