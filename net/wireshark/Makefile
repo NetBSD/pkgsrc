@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.103 2013/06/11 22:57:58 tron Exp $
+# $NetBSD: Makefile,v 1.104 2013/07/04 21:33:14 adam Exp $
 
-DISTNAME=		wireshark-1.8.8
-CATEGORIES=		net
-MASTER_SITES=		http://www.wireshark.org/download/src/ \
-			${MASTER_SITE_SOURCEFORGE:=wireshark/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	wireshark-1.10.0
+CATEGORIES=	net
+MASTER_SITES=	http://www.wireshark.org/download/src/ \
+		${MASTER_SITE_SOURCEFORGE:=wireshark/}
+EXTRACT_SUFX=	.tar.bz2
 
-OWNER=			tron@NetBSD.org
-HOMEPAGE=		http://www.wireshark.org/
-COMMENT=		Network protocol analyzer
-LICENSE=		gnu-gpl-v2
+OWNER=		tron@NetBSD.org
+HOMEPAGE=	http://www.wireshark.org/
+COMMENT=	Network protocol analyzer
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=		ethereal-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config yacc lex
 
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty
-CHECK_PORTABILITY_SKIP+= packaging/macosx/*/*
+CHECK_PORTABILITY_SKIP+=packaging/macosx/*/*
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static=no
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}

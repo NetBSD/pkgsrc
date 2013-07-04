@@ -1,15 +1,14 @@
-$NetBSD: patch-aa,v 1.11 2012/08/20 08:34:44 christos Exp $
+$NetBSD: patch-aa,v 1.12 2013/07/04 21:33:14 adam Exp $
 
---- ui/gtk/time_shift_dlg.c.orig	2012-06-05 19:33:15.000000000 +0300
-+++ ui/gtk/time_shift_dlg.c	2012-08-19 19:30:08.000000000 +0300
-@@ -90,6 +90,10 @@
-  */
- static GtkWidget *time_shift_frame_w;
- 
+--- ui/time_shift.c.orig	2013-07-04 20:20:31.000000000 +0000
++++ ui/time_shift.c
+@@ -29,6 +29,9 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <math.h>
 +#ifndef HAVE_FLOORL
 +#define floorl(a) floor((double)(a))
 +#endif
-+
- void
- time_shift_cb(GtkWidget *w _U_, gpointer d _U_)
- {
+ 
+ #include <glib.h>
+ 
