@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2013/07/03 07:01:18 sno Exp $
+# $NetBSD: Makefile,v 1.122 2013/07/04 15:59:11 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -61,6 +61,7 @@ SUBDIR+=	p5-Sereal-Decoder
 SUBDIR+=	p5-Sereal-Encoder
 SUBDIR+=	p5-Text-Iconv
 SUBDIR+=	p5-Unicode-Collate
+SUBDIR+=	p5-Unicode-EastAsianWidth
 SUBDIR+=	p5-Unicode-IMAPUtf7
 SUBDIR+=	p5-Unicode-Map
 SUBDIR+=	p5-Unicode-Map8
