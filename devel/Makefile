@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1755 2013/07/03 15:56:47 sno Exp $
+# $NetBSD: Makefile,v 1.1756 2013/07/04 04:32:15 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -582,7 +582,7 @@ SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Memcached
 SUBDIR+=	p5-Cache-Simple-TimedExpiry
 SUBDIR+=	p5-Capture-Tiny
-SUBDIR+=	p5-Carp-Any
+SUBDIR+=	p5-Carp-Always
 SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Carp-Assert-More
 SUBDIR+=	p5-Carp-Clan
@@ -702,8 +702,8 @@ SUBDIR+=	p5-Devel-Dumpvar
 SUBDIR+=	p5-Devel-EvalContext
 SUBDIR+=	p5-Devel-Events
 SUBDIR+=	p5-Devel-Events-Objects
-SUBDIR+=	p5-Devel-FindRef
 SUBDIR+=	p5-Devel-FindPerl
+SUBDIR+=	p5-Devel-FindRef
 SUBDIR+=	p5-Devel-Gladiator
 SUBDIR+=	p5-Devel-GlobalDestruction
 SUBDIR+=	p5-Devel-Hide
@@ -1276,8 +1276,8 @@ SUBDIR+=	p5-asa
 SUBDIR+=	p5-autobox
 SUBDIR+=	p5-autobox-Core
 SUBDIR+=	p5-autodie
-SUBDIR+=	p5-boolean
 SUBDIR+=	p5-bareword-filehandles
+SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-circular-require
 SUBDIR+=	p5-common-sense
