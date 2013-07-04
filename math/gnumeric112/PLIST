@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/03 15:54:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/07/04 14:12:09 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -527,6 +527,7 @@ share/gnome/help/gnumeric/C/figures/formula-dmedian.png
 share/gnome/help/gnumeric/C/figures/gnumeric-icon-24.png
 share/gnome/help/gnumeric/C/figures/gnumeric-labelled.png
 share/gnome/help/gnumeric/C/figures/gnumeric-power-example.png
+share/gnome/help/gnumeric/C/figures/graph-axes-grid.png
 share/gnome/help/gnumeric/C/figures/graph-components.png
 share/gnome/help/gnumeric/C/figures/graph-example-area.png
 share/gnome/help/gnumeric/C/figures/graph-example-bar.png
@@ -576,6 +577,9 @@ share/gnome/help/gnumeric/C/figures/graphs-types-ring.png
 share/gnome/help/gnumeric/C/figures/graphs-types-stock.png
 share/gnome/help/gnumeric/C/figures/graphs-types-surface.png
 share/gnome/help/gnumeric/C/figures/graphs-types-xyplot.png
+share/gnome/help/gnumeric/C/figures/icon-locked.png
+share/gnome/help/gnumeric/C/figures/icon-unlocked.png
+share/gnome/help/gnumeric/C/figures/icon-visible.png
 share/gnome/help/gnumeric/C/figures/info-area.png
 share/gnome/help/gnumeric/C/figures/menu-context-col-row-header.png
 share/gnome/help/gnumeric/C/figures/menu-context-graph-order.png
@@ -591,6 +595,7 @@ share/gnome/help/gnumeric/C/figures/menu-data-import.png
 share/gnome/help/gnumeric/C/figures/menu-data-labelled.png
 share/gnome/help/gnumeric/C/figures/menu-edit-delete-cells.png
 share/gnome/help/gnumeric/C/figures/menu-edit-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-edit-modify-names.png
 share/gnome/help/gnumeric/C/figures/menu-edit-paste-special.png
 share/gnome/help/gnumeric/C/figures/menu-edit-select.png
 share/gnome/help/gnumeric/C/figures/menu-file-labelled.png
@@ -599,7 +604,9 @@ share/gnome/help/gnumeric/C/figures/menu-format-column.png
 share/gnome/help/gnumeric/C/figures/menu-format-labelled.png
 share/gnome/help/gnumeric/C/figures/menu-format-sheet.png
 share/gnome/help/gnumeric/C/figures/menu-help-labelled.png
+share/gnome/help/gnumeric/C/figures/menu-insert-comment.png
 share/gnome/help/gnumeric/C/figures/menu-insert-fw.png
+share/gnome/help/gnumeric/C/figures/menu-insert-hyperlink.png
 share/gnome/help/gnumeric/C/figures/menu-insert-labelled.png
 share/gnome/help/gnumeric/C/figures/menu-insert-names.png
 share/gnome/help/gnumeric/C/figures/menu-statistics-labelled.png
@@ -695,6 +702,7 @@ share/gnome/help/gnumeric/C/figures/worksheet-data-1.png
 share/gnome/help/gnumeric/C/figures/worksheet-data-2.png
 share/gnome/help/gnumeric/C/figures/worksheet-data-3.png
 share/gnome/help/gnumeric/C/figures/worksheet-data-4.png
+share/gnome/help/gnumeric/C/figures/worksheet-managing-dialog.png
 share/gnome/help/gnumeric/C/figures/worksheet-rows-1.png
 share/gnome/help/gnumeric/C/figures/worksheet-running-calc-1.png
 share/gnome/help/gnumeric/C/files-email.xml
