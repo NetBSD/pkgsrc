@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/06/15 09:31:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/07/04 14:13:05 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -707,6 +707,7 @@ java/openjdk7/jre/lib/zi/Asia/Kamchatka
 java/openjdk7/jre/lib/zi/Asia/Karachi
 java/openjdk7/jre/lib/zi/Asia/Kashgar
 java/openjdk7/jre/lib/zi/Asia/Kathmandu
+java/openjdk7/jre/lib/zi/Asia/Khandyga
 java/openjdk7/jre/lib/zi/Asia/Kolkata
 java/openjdk7/jre/lib/zi/Asia/Krasnoyarsk
 java/openjdk7/jre/lib/zi/Asia/Kuala_Lumpur
@@ -745,6 +746,7 @@ java/openjdk7/jre/lib/zi/Asia/Thimphu
 java/openjdk7/jre/lib/zi/Asia/Tokyo
 java/openjdk7/jre/lib/zi/Asia/Ulaanbaatar
 java/openjdk7/jre/lib/zi/Asia/Urumqi
+java/openjdk7/jre/lib/zi/Asia/Ust-Nera
 java/openjdk7/jre/lib/zi/Asia/Vientiane
 java/openjdk7/jre/lib/zi/Asia/Vladivostok
 java/openjdk7/jre/lib/zi/Asia/Yakutsk
