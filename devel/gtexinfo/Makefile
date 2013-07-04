@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2013/01/13 20:44:55 apb Exp $
+# $NetBSD: Makefile,v 1.83 2013/07/04 16:19:16 wiz Exp $
 
-DISTNAME=		texinfo-4.13a
+DISTNAME=		texinfo-5.1
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
@@ -11,14 +10,23 @@ HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info documentation utilities
 LICENSE=		gnu-gpl-v3
 
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+# otherwise, package installs copies of them itself
+DEPENDS+=		p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
+DEPENDS+=		p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
+DEPENDS+=		p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsianWidth
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/texinfo-4.13 # just for 4.13a
-
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-external-libintl-perl
+CONFIGURE_ARGS+=	--with-external-Text-Unidecode
+CONFIGURE_ARGS+=	--with-external-Unicode-EastAsianWidth
+
 INFO_FILES=		yes
 TEST_TARGET=		check
 PLIST_SRC=		${PKGDIR}/PLIST
+USE_TOOLS+=		perl:run
 
 PKGSRC_INFOPATH=	${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}
 MAKE_ENV+=		PKGSRC_INFOPATH=${PKGSRC_INFOPATH:Q}
