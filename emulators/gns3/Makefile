@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/03/01 21:29:14 markd Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/04 17:03:18 wiz Exp $
 
 DISTNAME=	GNS3-0.8.3.1-src
 PKGNAME=	gns3-0.8.3.1
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gns-3/GNS3/0.8.3.1/}
 EXTRACT_SUFX=	.tar.bz2
