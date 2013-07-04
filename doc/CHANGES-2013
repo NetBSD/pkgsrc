@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2370 2013/07/04 06:43:24 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2371 2013/07/04 12:05:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3613,3 +3613,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mtr to 0.85nb1 [dholland 2013-07-04]
 	Updated graphics/p5-GD to 2.46nb10 [dholland 2013-07-04]
 	Updated devel/py-setuptools to 0.7.7 [wiz 2013-07-04]
+	Updated devel/gnome-common to 3.6.0nb2 [wiz 2013-07-04]
