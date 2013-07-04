@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2387 2013/07/04 17:03:11 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2388 2013/07/04 17:05:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3631,3 +3631,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/attica to 0.4.2 [wiz 2013-07-04]
 	Updated mail/akonadi to 1.9.2 [wiz 2013-07-04]
 	Updated x11/py-sip to 4.14.7 [wiz 2013-07-04]
+	Updated security/pinentry to 0.8.3nb1 [wiz 2013-07-04]
