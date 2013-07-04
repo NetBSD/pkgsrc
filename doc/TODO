@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12354 2013/07/04 15:29:51 taca Exp $
+$NetBSD: TODO,v 1.12355 2013/07/04 16:19:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gsharutils-4.13.4
 	o gss-1.0.2
 	o gstreamer-1.1.1
-	o gtexinfo-5.1
 	o gthumb-3.2.2
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
