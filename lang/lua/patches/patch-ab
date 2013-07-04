@@ -1,80 +1,74 @@
-$NetBSD: patch-ab,v 1.14 2012/03/12 15:49:27 wiz Exp $
+$NetBSD: patch-ab,v 1.15 2013/07/04 18:04:42 adam Exp $
 
---- src/Makefile.orig	2012-02-13 20:41:22.000000000 +0000
+--- src/Makefile.orig	2012-12-27 10:51:43.000000000 +0000
 +++ src/Makefile
-@@ -7,8 +7,8 @@
+@@ -6,8 +6,7 @@
  # Your platform. See PLATS for possible values.
  PLAT= none
  
 -CC= gcc
--CFLAGS= -O2 -Wall $(MYCFLAGS)
-+CC?= gcc
-+CFLAGS+= -Wall $(MYCFLAGS)
- AR= ar rcu
- RANLIB= ranlib
- RM= rm -f
-@@ -18,22 +18,32 @@ MYCFLAGS=
- MYLDFLAGS=
+-CFLAGS= -O2 -Wall -DLUA_COMPAT_ALL $(SYSCFLAGS) $(MYCFLAGS)
++CFLAGS+= -Wall -DLUA_COMPAT_ALL $(SYSCFLAGS) $(MYCFLAGS)
+ LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
+ LIBS= -lm $(SYSLIBS) $(MYLIBS)
+ 
+@@ -24,23 +23,28 @@ MYLDFLAGS=
  MYLIBS=
+ MYOBJS=
  
 +.SUFFIXES:	.lo
 +.c.lo:
 +	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) -c $<
-+LV=	5:1
++LV=	5:2
 +
- # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
+ # == END OF USER SETTINGS -- NO NEED TO CHANGE ANYTHING BELOW THIS LINE =======
  
  PLATS= aix ansi bsd freebsd generic linux macosx mingw posix solaris
  
 -LUA_A=	liblua.a
--CORE_O=	lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o \
-+LUA_XA=	liblua.a
 +LUA_A=	liblua.la
-+XCORE_O=	lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o \
- 	lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o  \
- 	lundump.o lvm.o lzio.o
--LIB_O=	lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o \
-+XLIB_O=	lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o \
- 	lstrlib.o loadlib.o linit.o
-+CORE_O=	$(XCORE_O:.o=.lo)
-+LIB_O=	$(XLIB_O:.o=.lo)
+ CORE_O=	lapi.o lcode.o lctype.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o \
+ 	lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o \
+ 	ltm.o lundump.o lvm.o lzio.o
+ LIB_O=	lauxlib.o lbaselib.o lbitlib.o lcorolib.o ldblib.o liolib.o \
+ 	lmathlib.o loslib.o lstrlib.o ltablib.o loadlib.o linit.o
+-BASE_O= $(CORE_O) $(LIB_O) $(MYOBJS)
++BASE_O= $(CORE_O:.o=.lo) $(LIB_O:.o=.lo) $(MYOBJS:.o=.lo)
  
  LUA_T=	lua
 -LUA_O=	lua.o
-+LUA_XO=	lua.o
-+LUA_O=	$(LUA_XO:.o=.lo)
++LUA_O=	lua.lo
  
  LUAC_T=	luac
--LUAC_O=	luac.o print.o
-+LUAC_XO=	luac.o print.o
-+LUAC_O=	$(LUAC_XO:.o=.lo)
+-LUAC_O=	luac.o
++LUAC_O=	luac.lo
  
- ALL_O= $(CORE_O) $(LIB_O) $(LUA_O) $(LUAC_O)
+ ALL_O= $(BASE_O) $(LUA_O) $(LUAC_O)
  ALL_T= $(LUA_A) $(LUA_T) $(LUAC_T)
-@@ -48,14 +58,13 @@ o:	$(ALL_O)
+@@ -56,14 +60,13 @@ o:	$(ALL_O)
  a:	$(ALL_A)
  
- $(LUA_A): $(CORE_O) $(LIB_O)
--	$(AR) $@ $(CORE_O) $(LIB_O)	# DLL needs all object files
+ $(LUA_A): $(BASE_O)
+-	$(AR) $@ $(BASE_O)
 -	$(RANLIB) $@
-+	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} -o $@ ${CORE_O} ${LIB_O} -rpath ${PREFIX}/lib -version-info ${LV} ${LIBS}
++	${LIBTOOL} --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $(BASE_O) -rpath ${PREFIX}/lib -version-info ${LV} ${LIBS}
  
  $(LUA_T): $(LUA_O) $(LUA_A)
--	$(CC) -o $@ $(MYLDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
-+	${LIBTOOL} --tag=CC --mode=link $(CC) -o $@ ${LDFLAGS} $(LUA_O) $(LUA_A) $(LIBS)
+-	$(CC) -o $@ $(LDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
++	${LIBTOOL} --tag=CC --mode=link $(CC) -o $@ $(LDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
  
  $(LUAC_T): $(LUAC_O) $(LUA_A)
--	$(CC) -o $@ $(MYLDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
-+	${LIBTOOL} --tag=CC --mode=link $(CC) -static -o $@ ${LDFLAGS} $(LUAC_O) $(LUA_A) $(LIBS)
+-	$(CC) -o $@ $(LDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
++	${LIBTOOL} --tag=CC --mode=link $(CC) -static -o $@ $(LDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
  
  clean:
  	$(RM) $(ALL_T) $(ALL_O)
-@@ -87,7 +96,7 @@ ansi:
- 	$(MAKE) all MYCFLAGS=-DLUA_ANSI
+@@ -95,7 +98,7 @@ ansi:
+ 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_ANSI"
  
  bsd:
--	$(MAKE) all MYCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN" MYLIBS="-Wl,-E"
-+	$(MAKE) all MYCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN -DLUA_USE_READLINE" MYLIBS="-Wl,-E -lreadline -lhistory"
+-	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN" SYSLIBS="-Wl,-E"
++	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN -DLUA_USE_READLINE" SYSLIBS="-Wl,-E -lreadline -lhistory"
  
  freebsd:
- 	$(MAKE) all MYCFLAGS="-DLUA_USE_LINUX" MYLIBS="-Wl,-E -lreadline"
+ 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -lreadline"
