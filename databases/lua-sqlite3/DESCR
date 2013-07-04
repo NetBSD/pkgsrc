@@ -1,0 +1,11 @@
+Lua-Sqlite3 is a binding of Sqlite3 for Lua.
+
+Lua-Sqlite3 is unique in contrast to other database bindings that it consists
+of two layers. The first layer translates the SQLite 3 implementation's C API
+to Lua. The first layer is called the backend. The second layers are frontend
+layers, written in Lua. These layers provide a nice and smart view of the
+database
+
+Currently, Lua-Sqlite3 implements two frontends:
+* A specialiced frontend which provides all sqlite3 capabilities.
+* A LuaSQL compatible frontend as used on the Kepler Project.
