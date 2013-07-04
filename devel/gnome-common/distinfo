@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2013/01/22 22:12:04 wiz Exp $
+$NetBSD: distinfo,v 1.12 2013/07/04 12:05:26 wiz Exp $
 
 SHA1 (gnome-common-3.6.0.tar.xz) = 63a99fb27f8288595d516ee927929036312a86e1
 RMD160 (gnome-common-3.6.0.tar.xz) = 6c672c672f7e1ec437375b88f05acdda9c5ccf17
 Size (gnome-common-3.6.0.tar.xz) = 143636 bytes
-SHA1 (patch-macros2_gnome-autogen.sh) = 7dc95d33abad49c0d0805a6d5f1b2ffa63d56686
+SHA1 (patch-macros2_gnome-autogen.sh) = 73d54fa4c87527ea754edcc4d9de96d05ca66b63
