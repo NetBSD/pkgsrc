@@ -1,10 +1,10 @@
-$NetBSD: patch-gnulib_lib_mbuiter.h,v 1.1 2011/02/06 13:04:04 obache Exp $
+$NetBSD: patch-gnulib_lib_mbuiter.h,v 1.2 2013/07/04 16:19:16 wiz Exp $
 
 * http://savannah.gnu.org/bugs/?24687
 
---- gnulib/lib/mbuiter.h.orig	2007-12-25 23:57:18.000000000 +0000
+--- gnulib/lib/mbuiter.h.orig	2013-02-19 22:25:29.000000000 +0000
 +++ gnulib/lib/mbuiter.h
-@@ -125,8 +125,10 @@ mbuiter_multi_next (struct mbuiter_multi
+@@ -130,8 +130,10 @@ mbuiter_multi_next (struct mbuiter_multi
  {
    if (iter->next_done)
      return;
@@ -15,7 +15,7 @@ $NetBSD: patch-gnulib_lib_mbuiter.h,v 1.1 2011/02/06 13:04:04 obache Exp $
    /* Handle most ASCII characters quickly, without calling mbrtowc().  */
    if (is_basic (*iter->cur.ptr))
      {
-@@ -137,6 +139,7 @@ mbuiter_multi_next (struct mbuiter_multi
+@@ -142,6 +144,7 @@ mbuiter_multi_next (struct mbuiter_multi
        iter->cur.wc = *iter->cur.ptr;
        iter->cur.wc_valid = true;
      }
@@ -23,9 +23,9 @@ $NetBSD: patch-gnulib_lib_mbuiter.h,v 1.1 2011/02/06 13:04:04 obache Exp $
    else
      {
        assert (mbsinit (&iter->state));
-@@ -178,6 +181,7 @@ mbuiter_multi_next (struct mbuiter_multi
- 	    iter->in_shift = false;
- 	}
+@@ -183,6 +186,7 @@ mbuiter_multi_next (struct mbuiter_multi
+             iter->in_shift = false;
+         }
      }
 +#endif
    iter->next_done = true;

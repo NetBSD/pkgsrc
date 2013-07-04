@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.11 2008/09/01 17:53:47 christos Exp $
+$NetBSD: patch-ac,v 1.12 2013/07/04 16:19:16 wiz Exp $
 
---- info/filesys.h.orig	2007-07-02 00:20:29.000000000 +0300
-+++ info/filesys.h	2008-09-01 19:43:58.000000000 +0300
-@@ -78,7 +78,7 @@
+--- info/filesys.h.orig	2013-02-23 00:11:25.000000000 +0000
++++ info/filesys.h
+@@ -78,7 +78,7 @@ extern int is_dir_name (char *filename);
  
  /* The default value of INFOPATH. */
  #if !defined (DEFAULT_INFOPATH)
--#  define DEFAULT_INFOPATH ".:/usr/local/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info"
-+#  define DEFAULT_INFOPATH ".:" PKGSRC_INFOPATH ":/usr/local/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info"
+-#  define DEFAULT_INFOPATH ".:PATH:/usr/local/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info"
++#  define DEFAULT_INFOPATH ".:" PKGSRC_INFOPATH ":PATH:/usr/local/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info"
  #endif /* !DEFAULT_INFOPATH */
  
  #if !defined (S_ISREG) && defined (S_IFREG)
