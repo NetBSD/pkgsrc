@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/06/05 13:47:51 obache Exp $
+# $NetBSD: Makefile,v 1.17 2013/07/04 15:33:41 dholland Exp $
 #
 
 DISTNAME=	jisx0213fonts-0.0
@@ -28,7 +28,7 @@ do-extract:
 do-build:
 	@cd ${WRKSRC}; \
 	for f in ${FONTS}; do \
-		bdftopcf $${f}.bdf | \
+		${TOOLS_PATH.bdftopcf} $${f}.bdf | \
 		${GZIP_CMD} -c >$${f}.pcf.gz; \
 	done
 
