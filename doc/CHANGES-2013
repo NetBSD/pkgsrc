@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2378 2013/07/04 14:12:20 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2379 2013/07/04 14:13:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3622,3 +3622,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/poppler to 0.22.5 [wiz 2013-07-04]
 	Updated misc/goffice0.10 to 0.10.3 [wiz 2013-07-04]
 	Updated math/gnumeric112 to 1.12.3 [wiz 2013-07-04]
+	Updated lang/openjdk7 to 1.7.25 [ryoon 2013-07-04]
