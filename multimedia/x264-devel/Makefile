@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2013/05/10 05:39:20 riastradh Exp $
+# $NetBSD: Makefile,v 1.42 2013/07/04 16:43:55 wiz Exp $
 
-SNAPSHOT_DATE=	20130115
+SNAPSHOT_DATE=	20130703
 
 DISTNAME=	x264-snapshot-${SNAPSHOT_DATE}-2245
 PKGNAME=	x264-devel-${SNAPSHOT_DATE}
@@ -50,6 +50,7 @@ HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${BASH}
 CONFIGURE_ARGS+=	--enable-pic	# uses libtool's -prefer-pic
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-opencl
 MAKE_ENV+=		SH=${SH:Q}
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
