@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.12 2013/03/24 07:09:24 spz Exp $
+$NetBSD: patch-aa,v 1.13 2013/07/04 13:13:55 wiz Exp $
+
+Use installed copy of poppler library so we can have a separate
+poppler-glib package.
 
 --- glib/Makefile.in.orig	2013-02-10 10:48:37.000000000 +0000
 +++ glib/Makefile.in
