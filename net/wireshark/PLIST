@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/10/04 20:15:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/07/04 21:33:14 adam Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -6,6 +6,7 @@ bin/editcap
 bin/mergecap
 bin/randpkt
 bin/rawshark
+bin/reordercap
 bin/text2pcap
 bin/tshark
 ${PLIST.gtk2}bin/wireshark
@@ -25,6 +26,7 @@ lib/wireshark/plugins/${PKGVERSION}/stats_tree.la
 lib/wireshark/plugins/${PKGVERSION}/unistim.la
 lib/wireshark/plugins/${PKGVERSION}/wimax.la
 lib/wireshark/plugins/${PKGVERSION}/wimaxasncp.la
+lib/wireshark/plugins/${PKGVERSION}/wimaxmacphy.la
 man/man1/capinfos.1
 man/man1/dftest.1
 man/man1/dumpcap.1
@@ -32,6 +34,7 @@ man/man1/editcap.1
 man/man1/mergecap.1
 man/man1/randpkt.1
 man/man1/rawshark.1
+man/man1/reordercap.1
 man/man1/text2pcap.1
 man/man1/tshark.1
 ${PLIST.gtk2}man/man1/wireshark.1
@@ -45,8 +48,12 @@ ${PLIST.lua}share/wireshark/console.lua
 share/wireshark/dfilters
 share/wireshark/dftest.html
 share/wireshark/diameter/AlcatelLucent.xml
+share/wireshark/diameter/ChinaTelecom.xml
 share/wireshark/diameter/Cisco.xml
 share/wireshark/diameter/Ericsson.xml
+share/wireshark/diameter/Nokia.xml
+share/wireshark/diameter/NokiaSiemensNetworks.xml
+share/wireshark/diameter/SKT.xml
 share/wireshark/diameter/TGPPGmb.xml
 share/wireshark/diameter/TGPPRx.xml
 share/wireshark/diameter/TGPPS9.xml
@@ -91,7 +98,10 @@ share/wireshark/ipmap.html
 share/wireshark/manuf
 share/wireshark/mergecap.html
 share/wireshark/pdml2html.xsl
+share/wireshark/profiles/Bluetooth/colorfilters
+share/wireshark/profiles/Classic/colorfilters
 share/wireshark/radius/README.radius_dictionary
+share/wireshark/radius/custom.includes
 share/wireshark/radius/dictionary
 share/wireshark/radius/dictionary.3com
 share/wireshark/radius/dictionary.3gpp
@@ -200,9 +210,12 @@ share/wireshark/radius/dictionary.rfc4818
 share/wireshark/radius/dictionary.rfc4849
 share/wireshark/radius/dictionary.rfc5090
 share/wireshark/radius/dictionary.rfc5176
+share/wireshark/radius/dictionary.rfc5447
 share/wireshark/radius/dictionary.rfc5580
 share/wireshark/radius/dictionary.rfc5607
 share/wireshark/radius/dictionary.rfc5904
+share/wireshark/radius/dictionary.rfc6519
+share/wireshark/radius/dictionary.rfc6572
 share/wireshark/radius/dictionary.riverstone
 share/wireshark/radius/dictionary.roaringpenguin
 share/wireshark/radius/dictionary.shasta
@@ -234,6 +247,7 @@ share/wireshark/radius/dictionary.xedia
 share/wireshark/radius/dictionary.zyxel
 share/wireshark/randpkt.html
 share/wireshark/rawshark.html
+share/wireshark/reordercap.html
 share/wireshark/services
 share/wireshark/smi_modules
 share/wireshark/text2pcap.html
