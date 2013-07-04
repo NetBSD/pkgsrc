@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2011/12/06 02:02:10 obache Exp $
+# $NetBSD: options.mk,v 1.12 2013/07/04 19:31:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.subversion
 PKG_SUPPORTED_OPTIONS=	apr1 serf sasl
@@ -6,6 +6,7 @@ PKG_SUPPORTED_OPTIONS=	apr1 serf sasl
 .if !defined(PKG_APACHE_DEFAULT) || empty(PKG_APACHE_DEFAULT:Mapache2)
 PKG_SUGGESTED_OPTIONS=	apr1
 .endif
+PKG_SUGGESTED_OPTIONS+=	serf
 
 # Note that this file is included as part of several packages.
 # Therefore this file defines options and includes some but not all of
@@ -13,17 +14,13 @@ PKG_SUGGESTED_OPTIONS=	apr1
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	serf neon
+PLIST_VARS+=	serf
 
 .if !empty(PKG_OPTIONS:Mserf)
 DAV_RA=		serf
 PLIST.serf=	yes
+BUILDLINK_ABI_DEPENDS.serf+=    serf>=1.2.1
 .  include "../../www/serf/buildlink3.mk"
-.else
-BUILDLINK_API_DEPENDS.neon+=	neon>=0.25.0
-DAV_RA=		neon
-PLIST.neon=	yes
-.  include "../../www/neon/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msasl)

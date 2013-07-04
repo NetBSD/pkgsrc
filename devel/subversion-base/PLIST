@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.21 2013/02/09 13:22:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/07/04 19:31:15 wiz Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
 bin/svnlook
+bin/svnmucc
 bin/svnrdump
 bin/svnserve
 bin/svnsync
@@ -60,7 +61,6 @@ ${PLIST.db4}lib/libsvn_fs_base-1.la
 lib/libsvn_fs_util-1.la
 lib/libsvn_ra-1.la
 lib/libsvn_ra_local-1.la
-${PLIST.neon}lib/libsvn_ra_neon-1.la
 ${PLIST.serf}lib/libsvn_ra_serf-1.la
 lib/libsvn_ra_svn-1.la
 lib/libsvn_repos-1.la
@@ -70,6 +70,7 @@ man/man1/svn.1
 man/man1/svnadmin.1
 man/man1/svndumpfilter.1
 man/man1/svnlook.1
+man/man1/svnmucc.1
 man/man1/svnrdump.1
 man/man1/svnsync.1
 man/man1/svnversion.1
