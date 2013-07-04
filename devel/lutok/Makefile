@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2013/06/15 00:30:31 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/07/04 21:27:57 adam Exp $
 
 DISTNAME=	lutok-0.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://lutok.googlecode.com/files/
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/kyua/
+HOMEPAGE=	http://code.google.com/p/lutok/
 COMMENT=	Lightweight C++ API for Lua
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=		yes
-MAKE_JOBS_SAFE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS=		pkg-config
+GNU_CONFIGURE=		yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lutok
 PKG_SUPPORTED_OPTIONS=	tests

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/10/02 21:25:55 asau Exp $
+# $NetBSD: Makefile,v 1.31 2013/07/04 21:27:56 adam Exp $
 #
 
 DISTNAME=	tokyotyrant-1.1.41
+PKGREVISION=	1
 CATEGORIES=	databases net
 MASTER_SITES=	${HOMEPAGE}
 
