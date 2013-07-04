@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2391 2013/07/04 19:31:32 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2392 2013/07/04 21:43:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3635,3 +3635,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/libtasn1 to 3.1 [wiz 2013-07-04]
 	Updated www/serf to 1.2.1 [wiz 2013-07-04]
 	Updated devel/subversion to 1.8.0 [wiz 2013-07-04]
+	Updated lang/lua to 5.2.2 [adam 2013-07-04]
+	Added databases/lua-sqlite3 version 0.4.1 [adam 2013-07-04]
+	Updated x11/gtk2 to 2.24.20 [adam 2013-07-04]
+	Updated net/wireshark to 1.10.0 [adam 2013-07-04]
+	Updated graphics/gimp to 2.8.6 [adam 2013-07-04]
