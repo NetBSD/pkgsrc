@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/04 18:06:24 adam Exp $
+lib/lua/libluasqlite3-loader.lua
+lib/lua/libluasqlite3.so
+lib/lua/luasql-sqlite3.lua
+lib/lua/sqlite3.lua

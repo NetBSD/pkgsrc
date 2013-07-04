@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2013/07/04 18:06:24 adam Exp $
+
+nm -D is not portable, but -llua is needed anyway.
+
+--- configure.orig	2013-07-04 17:48:44.000000000 +0000
++++ configure
+@@ -3513,7 +3513,6 @@ fi
+ echo "$as_me:$LINENO: checking if we need -llua" >&5
+ echo $ECHO_N "checking if we need -llua... $ECHO_C" >&6
+ need_llua=yes
+-nm -D "$LUA" | $EGREP "T lua_open$" >/dev/null && need_llua=no
+ echo "$as_me:$LINENO: result: $need_llua" >&5
+ echo "${ECHO_T}$need_llua" >&6
+ if test $need_llua = yes; then
