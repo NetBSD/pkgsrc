@@ -1,4 +1,7 @@
-$NetBSD: patch-as,v 1.3 2011/10/20 16:32:57 drochner Exp $
+$NetBSD: patch-as,v 1.4 2013/07/04 13:13:55 wiz Exp $
+
+Use installed poppler library so we can have a separate poppler-cpp
+package.
 
 --- cpp/tests/Makefile.in.orig	2011-06-27 18:45:14.000000000 +0000
 +++ cpp/tests/Makefile.in
