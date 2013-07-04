@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2382 2013/07/04 16:19:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2383 2013/07/04 16:24:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3626,3 +3626,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apr-util to 1.5.2 [wiz 2013-07-04]
 	Added converters/p5-Unicode-EastAsianWidth version 1.33 [wiz 2013-07-04]
 	Updated devel/gtexinfo to 5.1 [wiz 2013-07-04]
+	Updated devel/apr to 1.4.8 [wiz 2013-07-04]
