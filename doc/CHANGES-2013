@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2392 2013/07/04 21:43:25 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2393 2013/07/04 23:31:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3640,3 +3640,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/gtk2 to 2.24.20 [adam 2013-07-04]
 	Updated net/wireshark to 1.10.0 [adam 2013-07-04]
 	Updated graphics/gimp to 2.8.6 [adam 2013-07-04]
+	Updated archivers/xz to 5.0.5 [adam 2013-07-05]
