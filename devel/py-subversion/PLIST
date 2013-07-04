@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:49:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/07/04 19:31:14 wiz Exp $
 lib/libsvn_swig_py-1.la
 ${PYSITELIB}/libsvn/__init__.py
 ${PYSITELIB}/libsvn/__init__.pyc
@@ -56,3 +56,4 @@ share/examples/subversion/python/putfile.py
 share/examples/subversion/python/revplist.py
 share/examples/subversion/python/svnlook.py
 share/examples/subversion/python/svnshell.py
+share/examples/subversion/python/walk-config-auth.py
