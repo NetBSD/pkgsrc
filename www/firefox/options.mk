@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2013/06/26 11:32:12 ryoon Exp $
+# $NetBSD: options.mk,v 1.15 2013/07/04 08:07:09 martin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -37,12 +37,13 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug --enable-debug-symbols
+CONFIGURE_ARGS+=	--enable-debug="-g -O0" --enable-debug-symbols --disable-optimize
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-install-strip
+CONFIGURE_ARGS+=	--enable-optimize=-O2 
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)

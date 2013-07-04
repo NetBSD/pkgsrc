@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.7 2013/06/26 11:32:12 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.8 2013/07/04 08:07:09 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,7 +26,7 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
-CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
+CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--enable-svg --enable-mathml
