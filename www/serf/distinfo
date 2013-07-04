@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/02/22 15:38:44 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/07/04 17:17:28 wiz Exp $
 
-SHA1 (serf-1.1.1.tar.bz2) = 1ec4689ef57e7c28e7371df00d0ccc3e32ef6457
-RMD160 (serf-1.1.1.tar.bz2) = b73b71d0ed13a630609aac2ad38dd0cb8faee07c
-Size (serf-1.1.1.tar.bz2) = 169853 bytes
+SHA1 (serf-1.2.1.tar.bz2) = f65fbbd72926c8e7cf0dbd4ada03b0d226f461fd
+RMD160 (serf-1.2.1.tar.bz2) = 49036f303a7737981276fa451a66a3b5bccc201f
+Size (serf-1.2.1.tar.bz2) = 190464 bytes
