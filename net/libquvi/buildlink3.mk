@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2011/10/16 08:08:29 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/07/04 21:27:58 adam Exp $
 
 BUILDLINK_TREE+=	libquvi
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libquvi
 LIBQUVI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libquvi+=	libquvi>=0.4.0
+BUILDLINK_ABI_DEPENDS.libquvi?=	libquvi>=0.4.1nb3
 BUILDLINK_PKGSRCDIR.libquvi?=	../../net/libquvi
 
 .include "../../lang/lua/buildlink3.mk"
