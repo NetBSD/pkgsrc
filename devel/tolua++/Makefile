@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:51 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/04 21:27:57 adam Exp $
 #
 
 DISTNAME=	tolua++-1.0.93
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.codenix.com/~tolua/
 EXTRACT_SUFX=	.tar.bz2
