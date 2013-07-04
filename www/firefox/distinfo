@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.106 2013/07/02 07:18:18 martin Exp $
+$NetBSD: distinfo,v 1.107 2013/07/04 08:07:09 martin Exp $
 
 SHA1 (firefox-22.0.source.tar.bz2) = db2d5b028b6ea95b5f006b46e153f50f7a52bf80
 RMD160 (firefox-22.0.source.tar.bz2) = 9f206a786fcc366cb0ea03c4a5140809d1402272
@@ -22,7 +22,6 @@ SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598
 SHA1 (patch-config_system-headers) = 5957acc2b4d14a1a9e71791bca3eb76c448a02b2
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-extensions_auth_nsAuthGSSAPI.cpp) = 548886fc4a86a988f3f91650061ddc04f37653a8
-SHA1 (patch-gfx__2d__Blur.cpp) = 7dc3825acc303f5a67a46249da7656ec653e2721
 SHA1 (patch-gfx__skia__include__core__SkPreConfig.h) = 447b3a311bfb25a0519b60b105ac360d3fe74370
 SHA1 (patch-gfx_skia_Makefile.in) = ddc7e4a375f4cfd7dd76c5b37835bbcd3ad13cf1
 SHA1 (patch-gfx_skia_src_sfnt_SkOTTable__head.h) = 493fced792610ea1ce5ab6b1e043ef36b33f8279
