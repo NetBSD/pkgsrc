@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2012/10/02 23:47:59 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/07/05 16:15:59 ryoon Exp $
 #
 
-DISTNAME=		mp3splt-2.4
+DISTNAME=		mp3splt-2.5.2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 
@@ -13,6 +13,7 @@ LICENSE=		gnu-gpl-v2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=	 	yes
 USE_FEATURES= 	 	getopt_long
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--disable-nls
 
