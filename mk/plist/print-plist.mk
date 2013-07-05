@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.23 2013/02/20 09:19:08 wiz Exp $
+# $NetBSD: print-plist.mk,v 1.24 2013/07/05 15:31:54 jperkin Exp $
 
 ###
 ### Automatic PLIST generation
@@ -26,7 +26,7 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
 	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
 	gsub(/^${PKGLOCALEDIR}\/locale/, "share/locale");		\
-	gsub("^${PKGGNUDIR}", "gnu/");					\
+	gsub("^${PKGGNUDIR:S/\/$$//}/", "gnu/");			\
 	gsub("^${PKGINFODIR}/", "info/");				\
 	gsub("^${PKGMANDIR}/", "man/");
 _PRINT_PLIST_AWK_SUBST+=}
@@ -175,7 +175,6 @@ print-PLIST:
 				/${DESTDIR:S|/|\\/|g:S/+/\\\\+/g}${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
 				/${PKG_DBDIR:S|/|\\/|g}\// { next; }	\
 				{ sub("${DESTDIR:S/+/\\\\\\+/g}${PREFIX}/\\\\./", ""); }	\
-				{ sub("^${PKGGNUDIR}", "gnu/"); }	\
 				{ sub("^${PKGINFODIR}/", "info/"); }	\
 				{ sub("^${PKGMANDIR}/", "man/"); }	\
 				/^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}(\/|$$)/ { next; } \
