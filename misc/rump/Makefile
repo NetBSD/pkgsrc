@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2013/06/16 20:42:06 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2013/07/05 17:20:59 stacktic Exp $
 #
 
-VERSION=		20130602
+VERSION=		20130705
 PKGNAME=		rump-${VERSION}
 DISTNAME=		buildrump-${VERSION}
-EXTRACT_SUFX=		.tar.bz2
 
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/stacktic/
@@ -26,7 +25,7 @@ do-build:
 
 pre-install:
 	rm -rf ${WRKSRC}/rump/share/man/cat*
-	rmdir ${WRKSRC}/rump/share/man/man* || true
+	rmdir ${WRKSRC}/rump/share/man/man* || ${TRUE}
 
 do-install:
 	cd ${WRKSRC}/rump && ${PAX} -wr lib include share ${DESTDIR}${PREFIX}/
