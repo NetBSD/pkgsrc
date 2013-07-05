@@ -1,20 +1,19 @@
-$NetBSD: patch-system.mk,v 1.2 2012/04/23 21:37:48 wiz Exp $
+$NetBSD: patch-system-autodetect.mk,v 1.1 2013/07/05 14:27:56 wiz Exp $
 
 Adapt for pkgsrc.
 
---- system.mk.orig	2012-04-23 16:41:31.000000000 +0000
-+++ system.mk
-@@ -8,7 +8,8 @@
- 
+--- system-autodetect.mk.orig	2013-03-02 21:02:30.000000000 +0000
++++ system-autodetect.mk
+@@ -9,7 +9,7 @@
  # Installation path prefix. Unless you know what you're doing, the default
  # of /usr/local is likely the correct choice.
+ #DIST: PREFIX=/usr/local
 -PREFIX=/usr/local
-+# set by pkgsrc
 +#PREFIX=/usr/local
  
  # Unless you are creating a package conforming to some OS's standards, you
  # probably do not want to modify the following directories:
-@@ -16,11 +17,12 @@ PREFIX=/usr/local
+@@ -17,11 +17,12 @@ PREFIX=/usr/local
  # Main binaries
  BINDIR=$(PREFIX)/bin
  # Configuration .lua files
@@ -28,7 +27,7 @@ Adapt for pkgsrc.
  # Some documents
  DOCDIR=$(PREFIX)/share/doc/notion
  # Nothing at the moment
-@@ -53,7 +55,8 @@ LOCALEDIR=$(PREFIX)/share/locale
+@@ -54,7 +55,8 @@ LOCALEDIR=$(PREFIX)/share/locale
  
  # Flags to link with libdl. Even if PRELOAD_MODULES=1, you may need this
  # setting (for e.g. Lua, when not instructed by pkg-config).
@@ -38,7 +37,7 @@ Adapt for pkgsrc.
  
  
  ##
-@@ -66,8 +69,8 @@ DL_LIBS=-ldl
+@@ -67,8 +69,8 @@ DL_LIBS=-ldl
  
  # Default to paths and names that should work for a build installed from the
  # official Lua 5.1 source tarball.
@@ -47,9 +46,9 @@ Adapt for pkgsrc.
 +LUA_DIR=$(PREFIX)
 +LUA_LIBS=${LINKER_RPATH_FLAG}$(LUA_DIR)/lib -L$(LUA_DIR)/lib -llua
  LUA_INCLUDES = -I$(LUA_DIR)/include
- LUA=$(LUA_DIR)/bin/lua
- LUAC=$(LUA_DIR)/bin/luac
-@@ -100,11 +103,12 @@ endif # LUA_MANUAL
+ 
+ ifneq ($(shell which lua),)
+@@ -132,11 +134,12 @@ endif # lua manual
  ##
  
  # Paths
@@ -64,7 +63,7 @@ Adapt for pkgsrc.
  X11_INCLUDES=-I$(X11_PREFIX)/include
  
  # XFree86 libraries up to 4.3.0 have a bug that can cause a segfault.
-@@ -132,7 +136,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
+@@ -164,7 +167,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
  #DEFINES += -DCF_NO_LOCALE -DCF_NO_GETTEXT
  
  # On some other systems you may need to explicitly link against libintl.
@@ -73,12 +72,3 @@ Adapt for pkgsrc.
  # You may also need to give the location of its headers. The following
  # should work on Mac OS X (which needs the above option as well) with
  # macports.
-@@ -146,7 +150,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
- # You may uncomment this if you know that your system C libary provides
- # asprintf and  vasprintf. (GNU libc does.) If HAS_SYSTEM_ASPRINTF is not
- # defined, an implementation provided in libtu/sprintf_2.2/ is used. 
--#HAS_SYSTEM_ASPRINTF=1
-+HAS_SYSTEM_ASPRINTF=1
- 
- # The following setting is needed with GNU libc for clock_gettime and the
- # monotonic clock. Other systems may not need it, or may not provide a

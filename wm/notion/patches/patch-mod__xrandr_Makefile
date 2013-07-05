@@ -1,0 +1,18 @@
+$NetBSD: patch-mod__xrandr_Makefile,v 1.1 2013/07/05 14:27:56 wiz Exp $
+
+Install into examples directory, let pkgsrc framework deal with config files.
+
+--- mod_xrandr/Makefile.orig	2013-03-02 21:05:13.000000000 +0000
++++ mod_xrandr/Makefile
+@@ -27,9 +27,9 @@ include $(TOPDIR)/build/rules.mk
+ ######################################
+ 
+ _install: module_install
+-	$(INSTALLDIR) $(DESTDIR)$(ETCDIR)
++	$(INSTALLDIR) $(DESTDIR)$(EXAMPLEDIR)
+ 	for i in $(ETC); do \
+-		$(INSTALL) -m $(DATA_MODE) $$i $(DESTDIR)$(ETCDIR); \
++		$(INSTALL) -m $(DATA_MODE) $$i $(DESTDIR)$(EXAMPLEDIR); \
+ 	done
+ 
+ ######################################
