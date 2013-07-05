@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2013/03/22 18:05:10 marino Exp $
+$NetBSD: patch-aa,v 1.8 2013/07/05 13:33:40 ryoon Exp $
 
-Add DragonFly
+* Add DragonFly
+* Fix giflib 5.0 build.
 
 --- configure.ac.orig	2013-03-05 08:24:59.000000000 +0000
 +++ configure.ac
@@ -78,7 +79,17 @@ Add DragonFly
    netbsd | openbsd )
      if test -f $CRT_DIR/crti.o; then
  
-@@ -2834,7 +2869,7 @@ mail_lock=no
+@@ -2661,7 +2696,8 @@ if test "${HAVE_X11}" = "yes" && test "$
+   AC_CHECK_HEADER(gif_lib.h,
+ # EGifPutExtensionLast only exists from version libungif-4.1.0b1.
+ # Earlier versions can crash Emacs.
+-    [AC_CHECK_LIB(gif, EGifPutExtensionLast, HAVE_GIF=yes, HAVE_GIF=maybe)])
++# EGifPutExtensionLast) has been deprecated in giflib 5.0.0 or later.
++    [AC_CHECK_LIB(gif, EGifPutExtensionTrailer, HAVE_GIF=yes, HAVE_GIF=maybe)])
+ 
+   if test "$HAVE_GIF" = yes; then
+     LIBGIF=-lgif
+@@ -2834,7 +2870,7 @@ mail_lock=no
  case "$opsys" in
    aix4-2) mail_lock="lockf" ;;
  
@@ -87,7 +98,7 @@ Add DragonFly
  
    ## On GNU/Linux systems, both methods are used by various mail programs.
    ## I assume most people are using newer mailers that have heard of flock.
-@@ -2988,6 +3023,11 @@ case "$opsys" in
+@@ -2988,6 +3024,11 @@ case "$opsys" in
    ##  option to use it.
    darwin) LIBS_TERMCAP="-lncurses" ;;
  
@@ -99,7 +110,7 @@ Add DragonFly
    gnu*) test -z "$LIBS_TERMCAP" && LIBS_TERMCAP="-lncurses" ;;
  
    freebsd)
-@@ -3439,7 +3479,7 @@ case $opsys in
+@@ -3439,7 +3480,7 @@ case $opsys in
  esac
  
  case $opsys in
@@ -108,7 +119,7 @@ Add DragonFly
      AC_DEFINE(DONT_REOPEN_PTY, 1, [Define if process.c does not need to
        close a pty to make it a controlling terminal (it is already a
        controlling terminal of the subprocess, because we did ioctl TIOCSCTTY).])
-@@ -3545,7 +3585,7 @@ case $opsys in
+@@ -3545,7 +3586,7 @@ case $opsys in
      AC_DEFINE(FIRST_PTY_LETTER, ['p'])
      ;;
  
@@ -117,7 +128,7 @@ Add DragonFly
      dnl if HAVE_GRANTPT
      if test "x$ac_cv_func_grantpt" = xyes; then
        AC_DEFINE(UNIX98_PTYS, 1, [Define if the system has Unix98 PTYs.])
-@@ -3628,7 +3668,7 @@ AH_TEMPLATE(SIGNALS_VIA_CHARACTERS, [Mak
+@@ -3628,7 +3669,7 @@ AH_TEMPLATE(SIGNALS_VIA_CHARACTERS, [Mak
  case $opsys in
    dnl Perry Smith <pedz@ddivt1.austin.ibm.com> says this is correct for AIX.
    dnl thomas@mathematik.uni-bremen.de says this is needed for IRIX.
@@ -126,7 +137,7 @@ Add DragonFly
      AC_DEFINE(SIGNALS_VIA_CHARACTERS, 1)
      ;;
  
-@@ -3725,6 +3765,10 @@ else                            dnl !ema
+@@ -3725,6 +3766,10 @@ else                            dnl !ema
        AC_DEFINE(PENDING_OUTPUT_COUNT(FILE), [((FILE)->_p - (FILE)->_bf._base)])
        ;;
  
@@ -137,7 +148,7 @@ Add DragonFly
      unixware)
        AC_DEFINE(PENDING_OUTPUT_COUNT(FILE), [((FILE)->__ptr - (FILE)->__base)])
        ;;
-@@ -3782,7 +3826,7 @@ AH_TEMPLATE(TAB3, [Undocumented.])
+@@ -3782,7 +3827,7 @@ AH_TEMPLATE(TAB3, [Undocumented.])
  case $opsys in
    darwin) AC_DEFINE(TAB3, OXTABS) ;;
  
@@ -146,7 +157,7 @@ Add DragonFly
      AC_DEFINE(TABDLY, OXTABS, [Undocumented.])
      AC_DEFINE(TAB3, OXTABS)
      ;;
-@@ -3859,7 +3903,7 @@ if test x$GCC = xyes; then
+@@ -3859,7 +3904,7 @@ if test x$GCC = xyes; then
  else
    case $opsys in
      dnl irix: Tested on Irix 6.5.  SCM worked on earlier versions.
@@ -155,7 +166,7 @@ Add DragonFly
        AC_DEFINE(GC_SETJMP_WORKS, 1)
        ;;
    esac
-@@ -3959,7 +4003,7 @@ case $opsys in
+@@ -3959,7 +4004,7 @@ case $opsys in
      AC_DEFINE(BSD_SYSTEM_AHB, 1, [Define if AH_BOTTOM should change BSD_SYSTEM.])
      ;;
  
@@ -164,7 +175,7 @@ Add DragonFly
      AC_DEFINE(BSD4_2, [])
      AC_PREPROC_IFELSE([AC_LANG_PROGRAM([[
  #ifndef BSD_SYSTEM
-@@ -4415,7 +4459,7 @@ LIB_GCC=
+@@ -4415,7 +4460,7 @@ LIB_GCC=
  if test "x$GCC" = "xyes" && test "x$ORDINARY_LINK" != "xyes"; then
  
    case "$opsys" in
