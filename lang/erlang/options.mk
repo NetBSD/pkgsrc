@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/04/16 07:28:14 fhajny Exp $
+# $NetBSD: options.mk,v 1.6 2013/07/05 12:42:48 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -69,5 +69,5 @@ PLIST.dtrace=		yes
 .endif
 
 # Help generate optional PLIST parts:
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\/erlang\/lib\/hipe-${VERSION.hipe}\//) {$$0 = "$${PLIST.hipe}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /dtrace_user/) {$$0 = "$${PLIST.dtrace}" $$0;}}
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/erlang\/lib\/odbc-${VERSION.odbc}\//) {$$0 = "$${PLIST.odbc}" $$0;}}
