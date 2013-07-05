@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:33 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/05 13:57:58 jaapb Exp $
 #
 
-DISTNAME=		findlib-1.3.3
+DISTNAME=		findlib-1.4
 PKGNAME=		ocaml-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
-MAINTAINER=		jaapb@kerguelen.org
+MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://www.camlcity.org/
 COMMENT=		Library finder for OCaml
 LICENSE=		mit
