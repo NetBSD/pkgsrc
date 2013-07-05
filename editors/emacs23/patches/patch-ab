@@ -1,8 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2013/02/17 04:59:42 dholland Exp $
+$NetBSD: patch-ab,v 1.2 2013/07/05 13:36:12 ryoon Exp $
 
---- work/emacs-23.2/configure.orig	2010-05-08 12:10:16.000000000 +0900
-+++ configure	2010-05-12 20:32:23.000000000 +0900
-@@ -1995,7 +1995,7 @@
+* Add DragonFly support.
+* Fix giflib detection with giflib 5.0.
+
+--- configure.orig	2012-01-19 15:01:37.000000000 +0000
++++ configure
+@@ -2468,7 +2468,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
@@ -11,7 +14,7 @@ $NetBSD: patch-ab,v 1.1 2013/02/17 04:59:42 dholland Exp $
  
  
  
-@@ -2652,6 +2652,14 @@
+@@ -3082,6 +3082,14 @@ case "${canonical}" in
        amd64-*-freebsd*|x86_64-*-freebsd*) machine=amdx86-64 ;;
      esac
    ;;
@@ -26,7 +29,7 @@ $NetBSD: patch-ab,v 1.1 2013/02/17 04:59:42 dholland Exp $
  
    ## FreeBSD kernel + glibc based userland
    *-*-kfreebsd*gnu* )
-@@ -9849,9 +9857,9 @@
+@@ -7249,9 +7257,9 @@ if test "${HAVE_NS}" = yes; then
    window_system=nextstep
    with_xft=no
    # set up packaging dirs
@@ -37,3 +40,30 @@ $NetBSD: patch-ab,v 1.1 2013/02/17 04:59:42 dholland Exp $
       prefix=${ns_appresdir}
    fi
  fi
+@@ -10099,9 +10107,9 @@ if test "${HAVE_X11}" = "yes" && test "$
+ if test "x$ac_cv_header_gif_lib_h" = x""yes; then :
+   # EGifPutExtensionLast only exists from version libungif-4.1.0b1.
+ # Earlier versions can crash Emacs.
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EGifPutExtensionLast in -lgif" >&5
+-$as_echo_n "checking for EGifPutExtensionLast in -lgif... " >&6; }
+-if test "${ac_cv_lib_gif_EGifPutExtensionLast+set}" = set; then :
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EGifPutExtensionTrailer in -lgif" >&5
++$as_echo_n "checking for EGifPutExtensionTrailer in -lgif... " >&6; }
++if test "${ac_cv_lib_gif_EGifPutExtensionLast+set}" = set; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -10115,11 +10123,11 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char EGifPutExtensionLast ();
++char EGifPutExtensionTrailer ();
+ int
+ main ()
+ {
+-return EGifPutExtensionLast ();
++return EGifPutExtensionTrailer ();
+   ;
+   return 0;
+ }
