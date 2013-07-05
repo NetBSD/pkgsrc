@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/23 21:37:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/07/05 14:27:56 wiz Exp $
 bin/notion
-bin/pwm3plus
+bin/notionflux
 lib/notion/bin/ion-completefile
 lib/notion/bin/ion-statusd
 lib/notion/lc/de.lc
@@ -16,6 +16,7 @@ lib/notion/lc/ioncore_wd.lc
 lib/notion/lc/ioncore_winprops.lc
 lib/notion/lc/mod_dock.lc
 lib/notion/lc/mod_menu.lc
+lib/notion/lc/mod_notionflux.lc
 lib/notion/lc/mod_query.lc
 lib/notion/lc/mod_query_chdir.lc
 lib/notion/lc/mod_sm.lc
@@ -31,6 +32,7 @@ lib/notion/lc/statusd_mail.lc
 lib/notion/mod/de.so
 lib/notion/mod/mod_dock.so
 lib/notion/mod/mod_menu.so
+lib/notion/mod/mod_notionflux.so
 lib/notion/mod/mod_query.so
 lib/notion/mod/mod_sm.so
 lib/notion/mod/mod_sp.so
@@ -40,11 +42,8 @@ lib/notion/mod/mod_xinerama.so
 lib/notion/mod/mod_xkbevents.so
 lib/notion/mod/mod_xrandr.so
 man/cs/man1/notion.1
-man/cs/man1/pwm3.1
 man/fi/man1/notion.1
-man/fi/man1/pwm3.1
 man/man1/notion.1
-man/man1/pwm3.1
 share/doc/notion/ChangeLog
 share/doc/notion/LICENSE
 share/doc/notion/README
@@ -56,15 +55,14 @@ share/examples/notion/cfg_layouts.lua
 share/examples/notion/cfg_menu.lua
 share/examples/notion/cfg_notion.lua
 share/examples/notion/cfg_notioncore.lua
-share/examples/notion/cfg_pwm.lua
 share/examples/notion/cfg_query.lua
 share/examples/notion/cfg_sp.lua
 share/examples/notion/cfg_statusbar.lua
 share/examples/notion/cfg_tiling.lua
+share/examples/notion/cfg_xrandr.lua
 share/examples/notion/contrib/LICENSE
 share/examples/notion/contrib/README
 share/examples/notion/contrib/create_gitindex.sh
-share/examples/notion/contrib/exact-version
 share/examples/notion/contrib/index.html
 share/examples/notion/contrib/index_git.html
 share/examples/notion/contrib/install-scripts.sh
@@ -83,6 +81,7 @@ share/examples/notion/contrib/scripts/closeorkill.lua
 share/examples/notion/contrib/scripts/collapse.lua
 share/examples/notion/contrib/scripts/ctrl_statusbar.lua
 share/examples/notion/contrib/scripts/cwin_sp.lua
+share/examples/notion/contrib/scripts/display_by_tag.lua
 share/examples/notion/contrib/scripts/document_menus.lua
 share/examples/notion/contrib/scripts/enumerate.lua
 share/examples/notion/contrib/scripts/environment_placement_hook.lua
@@ -217,6 +216,7 @@ share/locale/fi/LC_MESSAGES/notion.mo
 share/locale/fr/LC_MESSAGES/notion.mo
 share/notion/ion-completeman
 share/notion/ion-runinxterm
+share/notion/notion-lock
 share/notion/welcome.cs.txt
 share/notion/welcome.fi.txt
 share/notion/welcome.txt
