@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/07/04 12:25:31 obache Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/05 02:42:02 obache Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -102,9 +102,11 @@ create-library-symlinks:
 	${RUN}${LN} -fs ${X11_LIBDIR}/libXi.so.6 ${DESTDIR}${ARCH_LIBDIR}
 	${RUN}${LN} -fs ${X11_LIBDIR}/libXt.so.6 ${DESTDIR}${ARCH_LIBDIR}
 	${RUN}${LN} -fs ${X11_LIBDIR}/libXtst.so.6 ${DESTDIR}${ARCH_LIBDIR}
+.  if ${EMUL_OPSYS} == "linux"
 	${RUN}${LN} -fs ${ALSA_LIBDIR}/libasound.so.2 ${DESTDIR}${ARCH_LIBDIR}
 	${RUN}${LN} -fs ${ODBC_LIBDIR}/libodbc.so ${DESTDIR}${ARCH_LIBDIR}
 	${RUN}${LN} -fs ${ODBC_LIBDIR}/libodbcinst.so ${DESTDIR}${ARCH_LIBDIR}
+.  endif
 
 PLIST.native=	yes
 .endif
