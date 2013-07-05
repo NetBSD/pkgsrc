@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/07/04 21:27:58 adam Exp $
-#
+# $NetBSD: Makefile,v 1.11 2013/07/05 14:27:56 wiz Exp $
 
-DISTNAME=	notion-3-2012042300-src
+DISTNAME=	notion-3-2013030200-src
 PKGNAME=	${DISTNAME:S/3-/3./:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=notion/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,11 +26,11 @@ EGFILES+=	cfg_layouts.lua
 EGFILES+=	cfg_menu.lua
 EGFILES+=	cfg_notion.lua
 EGFILES+=	cfg_notioncore.lua
-EGFILES+=	cfg_pwm.lua
 EGFILES+=	cfg_query.lua
 EGFILES+=	cfg_sp.lua
 EGFILES+=	cfg_statusbar.lua
 EGFILES+=	cfg_tiling.lua
+EGFILES+=	cfg_xrandr.lua
 EGFILES+=	look.lua
 EGFILES+=	look_brownsteel.lua
 EGFILES+=	look_clean.lua
