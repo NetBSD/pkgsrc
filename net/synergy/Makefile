@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/05/11 21:40:14 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2013/07/05 21:34:12 joerg Exp $
 #
 
 DISTNAME=		synergy-1.3.8-Source
 PKGNAME=		${DISTNAME:S/-Source//}
+PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		http://synergy.googlecode.com/files/
 
