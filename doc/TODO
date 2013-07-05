@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12362 2013/07/04 21:43:25 adam Exp $
+$NetBSD: TODO,v 1.12363 2013/07/05 13:30:32 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gentoo-0.20.1
 	o gfract-0.33
 	o ghc-7.6
-	o giflib-5.0.4
 	o gifsicle-1.48
 	o gimp-docs-en-2.8.0
 	o gkrellm-2.3.5
