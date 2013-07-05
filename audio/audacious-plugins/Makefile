@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/07/05 13:29:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2013/07/05 15:10:00 jperkin Exp $
 #
 
 DISTNAME=		audacious-plugins-1.5.1
@@ -55,7 +55,6 @@ PLIST.oss=	yes
 .elif ${OPSYS} == "DragonFly"
 PLIST.oss=	yes
 .elif ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
 CPPFLAGS.SunOS=	-D__EXTENSIONS__ -D__uint32_t=uint32_t -D__uint64_t=uint64_t
 CONFIGURE_ARGS+=	--enable-oss4
 PLIST.oss4=	yes
