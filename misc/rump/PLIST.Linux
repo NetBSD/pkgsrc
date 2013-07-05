@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.3 2013/07/05 17:20:59 stacktic Exp $
 lib/librumphijack_pic.a
 lib/librumphijack.so
 lib/librumphijack.so.0

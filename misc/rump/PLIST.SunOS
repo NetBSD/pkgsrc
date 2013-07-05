@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.SunOS,v 1.2 2013/07/05 17:20:59 stacktic Exp $
 lib/librumpkern_sys_sunos.a
 lib/librumpkern_sys_sunos_pic.a
 lib/librumpkern_sys_sunos.so
