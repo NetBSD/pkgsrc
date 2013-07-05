@@ -1,10 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2013/07/05 13:46:13 ryoon Exp $
+$NetBSD: patch-ab,v 1.7 2013/07/05 13:47:02 ryoon Exp $
 
 Caution: the extra cpp checking (the three hunks containing "Should be
 one line") is manually hacked and not reflected in configure.in; do
 not regenerate configure with autoconf without merging it. This
 checking is required because somewhere between gcc 4.1 and 4.5 cpp
 started doing regrettable things with backslash-escaped newlines.
+
+* Fix build on NetBSD 6.99.23, gcc -E -traditional-cpp with native X
+  results syntax error. Use -traditional-cpp for Makefile generation only.
 
 --- configure.orig	2000-06-12 20:05:56.000000000 +0000
 +++ configure
