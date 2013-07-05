@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 13:25:13 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/05 15:10:00 jperkin Exp $
 #
 
 DISTNAME=		gplcver-2.12a.src
@@ -17,11 +17,6 @@ MAKE_FILE=		makefile.freebsd
 BUILDLINK_LIBS.dl=	${BUILDLINK_LDADD.dl}
 
 INSTALLATION_DIRS=	bin lib/gplcver/pli_incs
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-export-dynamic
-.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 
