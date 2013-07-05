@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/02/06 23:23:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2013/07/05 14:47:41 jperkin Exp $
 #
 
 DISTNAME=	vsftpd-2.3.4
@@ -39,6 +39,13 @@ SUBST_STAGE.paths=	post-patch
 MAKE_ENV+=		LIBS=${LIBS:Q}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" && ${OS_VERSION} == "5.11"
+SUBST_CLASSES+=		dirfd
+SUBST_STAGE.dirfd=	pre-build
+SUBST_FILES.dirfd=	port/solaris_bogons.h
+SUBST_SED.dirfd=	-e '/dirfd_extras/d'
+.endif
 
 VSFTPD_USER?=	vsftpd
 VSFTPD_GROUP?=	vsftpd
