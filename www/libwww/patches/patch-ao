@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1 2003/04/03 18:05:34 jschauma Exp $
+$NetBSD: patch-ao,v 1.2 2013/07/05 21:06:02 joerg Exp $
 
---- modules/expat/xmlparse/Makefile.am.orig	Thu Apr  3 12:49:06 2003
-+++ modules/expat/xmlparse/Makefile.am	Thu Apr  3 12:49:19 2003
+--- modules/expat/xmlparse/Makefile.am.orig	2000-06-14 08:53:42.000000000 +0000
++++ modules/expat/xmlparse/Makefile.am
 @@ -1,6 +1,6 @@
  ## Process this file with Automake to create Makefile.in.
  
@@ -10,3 +10,12 @@ $NetBSD: patch-ao,v 1.1 2003/04/03 18:05:34 jschauma Exp $
  
  CFLAGS = @CFLAGS@ -DXML_NS
  
+@@ -17,7 +17,7 @@ libxmlparse_la_SOURCES = \
+ 	hashtable.c \
+ 	xmlparse.c
+ 
+-libxmlparse_la_LDFLAGS = -rpath $(libdir)
++libxmlparse_la_LDFLAGS = -rpath $(libdir) ../xmltok/libxmltok.la
+ 
+ pkginclude_HEADERS = \
+ 	xmlparse.h
