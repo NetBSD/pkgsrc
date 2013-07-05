@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/07/05 13:29:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2013/07/05 15:10:00 jperkin Exp $
 #
 
 DISTNAME=	awesome-3.4.13
@@ -47,12 +47,7 @@ BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=		-liconv
-BUILDLINK_TRANSFORM+=	rm:-export-dynamic
-.endif
+LDFLAGS.SunOS+=		-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
