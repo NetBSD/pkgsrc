@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2013/03/22 18:05:10 marino Exp $
+$NetBSD: patch-ab,v 1.8 2013/07/05 13:33:40 ryoon Exp $
 
-Add DragonFly
+* Add DragonFly
+* Fix giflib 5.0 build.
 
 --- configure.orig	2013-03-08 08:13:36.000000000 +0000
 +++ configure
@@ -102,6 +103,31 @@ Add DragonFly
    netbsd | openbsd )
      if test -f $CRT_DIR/crti.o; then
  
+@@ -12766,8 +12825,8 @@ if test "${HAVE_X11}" = "yes" && test "$
+ if test "x$ac_cv_header_gif_lib_h" = xyes; then :
+   # EGifPutExtensionLast only exists from version libungif-4.1.0b1.
+ # Earlier versions can crash Emacs.
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EGifPutExtensionLast in -lgif" >&5
+-$as_echo_n "checking for EGifPutExtensionLast in -lgif... " >&6; }
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EGifPutExtensionTrailer in -lgif" >&5
++$as_echo_n "checking for EGifPutExtensionTrailer in -lgif... " >&6; }
+ if ${ac_cv_lib_gif_EGifPutExtensionLast+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+@@ -12782,11 +12841,11 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char EGifPutExtensionLast ();
++char EGifPutExtensionTrailer ();
+ int
+ main ()
+ {
+-return EGifPutExtensionLast ();
++return EGifPutExtensionTrailer ();
+   ;
+   return 0;
+ }
 @@ -13404,7 +13463,7 @@ mail_lock=no
  case "$opsys" in
    aix4-2) mail_lock="lockf" ;;
