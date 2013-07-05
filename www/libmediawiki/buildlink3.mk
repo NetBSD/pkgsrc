@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/06/06 12:53:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2013/07/05 13:29:44 ryoon Exp $
 
 BUILDLINK_TREE+=	libmediawiki
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmediawiki
 LIBMEDIAWIKI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmediawiki+=	libmediawiki>=2.5.0
-BUILDLINK_ABI_DEPENDS.libmediawiki?=	libmediawiki>=3.2.0nb3
+BUILDLINK_ABI_DEPENDS.libmediawiki?=	libmediawiki>=3.2.0nb4
 BUILDLINK_PKGSRCDIR.libmediawiki?=	../../www/libmediawiki
 
 .include "../../x11/kdelibs4/buildlink3.mk"

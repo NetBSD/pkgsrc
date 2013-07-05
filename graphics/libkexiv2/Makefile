@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2013/06/06 12:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/07/05 13:29:35 ryoon Exp $
 #
 
 DISTNAME=	libkexiv2-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 COMMENT=	KDE wrapper around exiv2
 

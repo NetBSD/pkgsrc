@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2013/06/06 12:54:06 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2013/07/05 13:29:28 ryoon Exp $
 
 DISTNAME=	WSoundPrefs-1.1.1
 PKGNAME=	wsoundprefs-1.1.1
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	audio wm windowmaker
 MASTER_SITES=	# ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 
