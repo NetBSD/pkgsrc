@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.433 2013/07/04 18:08:02 adam Exp $
+# $NetBSD: Makefile,v 1.434 2013/07/05 21:05:07 joerg Exp $
 
 COMMENT=	Databases
 
@@ -399,6 +399,7 @@ SUBDIR+=	ruby-vapor
 SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
 SUBDIR+=	slony1
+SUBDIR+=	soci
 SUBDIR+=	sqlite
 SUBDIR+=	sqlite3
 SUBDIR+=	sqlite3-docs
