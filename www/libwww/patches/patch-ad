@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2003/04/03 18:05:34 jschauma Exp $
+$NetBSD: patch-ad,v 1.6 2013/07/05 21:06:02 joerg Exp $
 
---- Library/src/Makefile.am.orig	Wed May 29 12:09:13 2002
-+++ Library/src/Makefile.am	Thu Apr  3 12:53:38 2003
+--- Library/src/Makefile.am.orig	2002-05-29 16:09:13.000000000 +0000
++++ Library/src/Makefile.am
 @@ -1,6 +1,6 @@
  ## Process this file with Automake to create Makefile.in.
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.5 2003/04/03 18:05:34 jschauma Exp $
  
  lib_LTLIBRARIES = \
  	libwwwutils.la \
-@@ -253,7 +253,7 @@
+@@ -253,7 +253,7 @@ libwwwhttp_la_SOURCES = \
  	HTPEP.c
  
  libwwwhttp_la_DEPENDENCIES = \
@@ -19,7 +19,32 @@ $NetBSD: patch-ad,v 1.5 2003/04/03 18:05:34 jschauma Exp $
  
  libwwwnews_la_SOURCES = \
  	WWWNews.h \
-@@ -387,9 +387,8 @@
+@@ -311,6 +311,13 @@ libwwwdir_la_SOURCES = \
+ 	HTDir.h \
+ 	HTDir.c
+ 
++libwwwapp_la_LDFLAGS = \
++	@WWWZIP@ \
++	@WWWXML@
++libwwwapp_la_DEPENDENCIES = \
++	@WWWZIP@ \
++	@WWWXML@
++
+ libwwwapp_la_SOURCES = \
+ 	WWWApp.h \
+ 	HTAccess.h \
+@@ -366,7 +373,9 @@ libwwwxml_la_DEPENDENCIES = \
+ 	../../modules/expat/xmltok/libxmltok.la \
+ 	../../modules/expat/xmlparse/libxmlparse.la
+ 
+-libwwwxml_la_LDFLAGS = -rpath $(libdir)
++libwwwxml_la_LDFLAGS = -rpath $(libdir) \
++	../../modules/expat/xmltok/libxmltok.la \
++	../../modules/expat/xmlparse/libxmlparse.la
+ 
+ libwwwzip_la_SOURCES = \
+ 	WWWZip.h \
+@@ -387,9 +396,8 @@ libwwwsql_la_SOURCES = \
  libwwwsql_la_LDFLAGS = -rpath $(libdir)
  
  INCLUDES = \
