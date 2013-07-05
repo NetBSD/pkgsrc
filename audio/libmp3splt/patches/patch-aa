@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2010/11/30 19:16:23 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2013/07/05 16:12:31 ryoon Exp $
 
---- src/oformat_parser.c.orig	2010-09-06 21:12:05.000000000 +0000
+--- src/oformat_parser.c.orig	2013-03-19 21:25:31.000000000 +0000
 +++ src/oformat_parser.c
-@@ -760,7 +760,7 @@ static char splt_of_get_number_of_digits
-   if (total_time > 0)
+@@ -335,7 +335,7 @@ char splt_of_get_number_of_digits_from_t
+   }
+ 
+   long minutes = total_time / 100 / 60;
+-  int i = (int) (log10l((long double) minutes));
++  int i = (int) (log10((double) minutes));
+   char number_of_digits = (char) (i + '1');
+   if (number_of_digits == '1')
    {
-     long minutes = total_time / 100 / 60;
--    int i = (int) (log10l((long double) minutes));
-+    int i = (int) (log10((double) minutes));
-     char number_of_digits = (char) (i + '1');
-     if (number_of_digits == '1')
-     {
