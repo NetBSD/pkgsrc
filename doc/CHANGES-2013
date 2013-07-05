@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2398 2013/07/05 14:25:58 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.2399 2013/07/05 14:28:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/giflib-util to 5.0.4 [ryoon 2013-07-05]
 	Updated net/mosh to 1.2.4 [ryoon 2013-07-05]
 	Updated devel/ocaml-findlib to 1.4 [jaapb 2013-07-05]
+	Updated wm/notion to 3.2013030200 [wiz 2013-07-05]
