@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/07/04 21:27:58 adam Exp $
+# $NetBSD: Makefile,v 1.17 2013/07/05 21:12:45 joerg Exp $
 #
 
-DISTNAME=	podofo-0.9.1
-PKGREVISION=	8
+DISTNAME=	podofo-0.9.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=podofo/}
 
@@ -14,14 +13,14 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+CMAKE_ARGS+=	-DPODOFO_BUILD_SHARED:BOOL=TRUE -DPODOFO_BUILD_STATIC:BOOL=TRUE
 CMAKE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FT2BUILD:PATH=${BUILDLINK_PREFIX.freetype2}/include
 CMAKE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
-CFLAGS+=	-fPIC
-CXXFLAGS+=	-fPIC
 
 .include "options.mk"
 
 # tests-depend on cppunit (for unit tests)
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
