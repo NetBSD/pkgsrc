@@ -1,6 +1,7 @@
-$NetBSD: patch-ax,v 1.1 2011/01/24 09:42:40 wiz Exp $
+$NetBSD: patch-ax,v 1.2 2013/07/05 13:43:44 ryoon Exp $
 
-Fix build with png-1.5.
+* Fix build with png-1.5.
+* Fix build with giflib 5.0.
 
 --- src/xfns.c.orig	2002-12-06 17:05:35.000000000 +0000
 +++ src/xfns.c
@@ -25,3 +26,21 @@ Fix build with png-1.5.
      {
      error:
        if (png_ptr)
+@@ -9759,7 +9763,7 @@ gif_load (f, img)
+ 	}
+ 
+       /* Open the GIF file.  */
+-      gif = DGifOpenFileName (XSTRING (file)->data);
++      gif = DGifOpenFileName (XSTRING (file)->data, NULL);
+       if (gif == NULL)
+ 	{
+ 	  image_error ("Cannot open `%s'", file, Qnil);
+@@ -9775,7 +9779,7 @@ gif_load (f, img)
+       memsrc.len = STRING_BYTES (XSTRING (specified_data));
+       memsrc.index = 0;
+ 
+-      gif = DGifOpen(&memsrc, gif_read_from_memory);
++      gif = DGifOpen(&memsrc, gif_read_from_memory, NULL);
+       if (!gif)
+ 	{
+ 	  image_error ("Cannot open memory source `%s'", img->spec, Qnil);
