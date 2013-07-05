@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/28 06:31:02 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/05 23:35:35 rodent Exp $
 #
 
-DISTNAME=		web.py-0.36
+DISTNAME=		web.py-0.37
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		www python
 MASTER_SITES=	http://webpy.org/static/
 
@@ -14,5 +13,8 @@ LICENSE=		public-domain
 
 USE_LANGUAGES=		#none
 
+REPLACE_PYTHON+=	web/__init__.py web/utils.py
+
+.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
