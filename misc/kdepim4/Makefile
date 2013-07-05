@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2013/06/06 12:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/07/05 13:29:38 ryoon Exp $
 
 #DISTNAME=	kdepim-${_KDE_VERSION}
 DISTNAME=	kdepim-4.4.11.1
 PKGNAME=	${DISTNAME:S/-4/4-4/}
 MASTER_SITES=	${MASTER_SITE_KDE:=kdepim-4.4.11.1/src/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 EXTRACT_SUFX=	.tar.bz2
