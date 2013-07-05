@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/07/05 13:39:05 ryoon Exp $
+
+* Use giflib instead of libungif.
+
+--- src/Makefile.in.orig	2008-07-11 08:52:53.000000000 +0000
++++ src/Makefile.in
+@@ -441,7 +441,7 @@ XFT_LIBS=@XFT_LIBS@
+ 
+ #if HAVE_GIF
+ #ifndef LIBGIF
+-#define LIBGIF -lungif
++#define LIBGIF -lgif
+ #endif /* not defined LIBGIF */
+ #else /* not HAVE_GIF */
+ #define LIBGIF
