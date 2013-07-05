@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2394 2013/07/05 00:19:56 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2395 2013/07/05 13:30:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gimp to 2.8.6 [adam 2013-07-04]
 	Updated archivers/xz to 5.0.5 [adam 2013-07-05]
 	Updated textproc/p5-Pod-Spell to 1.04 [wen 2013-07-05]
+	Updated graphics/giflib to 5.0.4 [ryoon 2013-07-05]
