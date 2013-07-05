@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2013/06/14 09:00:19 obache Exp $
+# $NetBSD: Makefile,v 1.24 2013/07/05 13:29:41 ryoon Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
 MODNAME=		ming
+PKGREVISION=		1
 CATEGORIES+=		multimedia
 DIST_SUBDIR?=		#empty
 EXTRACT_SUFX=		.tar.gz
