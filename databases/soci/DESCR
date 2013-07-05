@@ -1,0 +1,3 @@
+SOCI is a database access libary for C++.  It provides a natural
+interface with extensive STL integration.  A number of major database
+servers are accessable.
