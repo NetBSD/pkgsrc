@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/06/08 06:48:24 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/07/05 12:42:48 jperkin Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -2956,6 +2956,19 @@ lib/erlang/lib/observer-${VERSION.observer}/src/observer_tv_wx.erl
 lib/erlang/lib/observer-${VERSION.observer}/src/observer_wx.erl
 lib/erlang/lib/observer-${VERSION.observer}/src/ttb.erl
 lib/erlang/lib/observer-${VERSION.observer}/src/ttb_et.erl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/c_src/odbcserver.c
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/c_src/odbcserver.h
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.app
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.appup
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.beam
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc_app.beam
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc_sup.beam
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/include/odbc.hrl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/priv/bin/odbcserver
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc.erl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc_app.erl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc_internal.hrl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc_sup.erl
 lib/erlang/lib/orber-${VERSION.orber}/COSS/CosNaming/CosNaming.hrl
 lib/erlang/lib/orber-${VERSION.orber}/COSS/CosNaming/CosNaming_Binding.erl
 lib/erlang/lib/orber-${VERSION.orber}/COSS/CosNaming/CosNaming_BindingIterator.erl
@@ -3401,6 +3414,7 @@ lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/include/observer_backend.h
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/dyntrace.so
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/trace_file_drv.so
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/trace_ip_drv.so
+${PLIST.dtrace}lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/obj/dtrace_user.o
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/priv/obj/dyntrace.o
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/src/appmon_info.erl
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/src/dbg.erl
