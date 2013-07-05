@@ -1,40 +1,24 @@
-$NetBSD: patch-bin_fsc,v 1.1 2011/09/30 07:56:14 yyamano Exp $
+$NetBSD: patch-bin_fsc,v 1.2 2013/07/05 14:40:33 ryoon Exp $
 
 Hardwire paths to installed files and Java binary.
 
---- bin/fsc.orig	2011-08-29 16:44:20.000000000 +0000
+--- bin/fsc.orig	2013-06-06 18:41:45.000000000 +0000
 +++ bin/fsc
-@@ -48,23 +48,7 @@ case "`uname`" in
- esac
- 
- # Finding the root folder for this Scala distribution
--SOURCE=$0;
--SCRIPT=`basename "$SOURCE"`;
--while [ -h "$SOURCE" ]; do
--    SCRIPT=`basename "$SOURCE"`;
--    LOOKUP=`ls -ld "$SOURCE"`;
--    TARGET=`expr "$LOOKUP" : '.*-> \(.*\)$'`;
--    if expr "${TARGET:-.}/" : '/.*/$' > /dev/null; then
--        SOURCE=${TARGET:-.};
--    else
--        SOURCE=`dirname "$SOURCE"`/${TARGET:-.};
--    fi;
--done;
--
--# see #2092
--SCALA_HOME=`dirname "$SOURCE"`
--SCALA_HOME=`cd "$SCALA_HOME"; pwd -P`
--SCALA_HOME=`cd "$SCALA_HOME"/..; pwd`
-+SCALA_HOME=@SCALA_HOME@
- 
- # Remove spaces from SCALA_HOME on windows
- if $cygwin; then
-@@ -150,7 +134,7 @@ if [ -z "$JAVACMD" -a -n "$JAVA_HOME" -a
-     JAVACMD="$JAVA_HOME/bin/java"
+@@ -68,7 +68,7 @@ if uname | grep -q ^MINGW; then
  fi
  
--"${JAVACMD:=java}" \
-+"${JAVACMD:=@JAVA_HOME@/bin/java}" \
+ # Finding the root folder for this Scala distribution
+-SCALA_HOME="$(findScalaHome)"
++SCALA_HOME="@SCALA_HOME@"
+ SEP=":"
+ 
+ # Possible additional command line options
+@@ -192,7 +192,7 @@ fi
+ # be quoted: otherwise an empty string will appear as a command line
+ # argument, and java will think that is the program to run.
+ execCommand \
+-  "${JAVACMD:=java}" \
++  "${JAVACMD:=@JAVA_HOME@/bin/java}" \
    $JAVA_OPTS \
    "${java_args[@]}" \
-   ${CPSELECT}${TOOL_CLASSPATH} \
+   $(classpathArgs) \
