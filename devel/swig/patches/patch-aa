@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/02/04 15:39:39 taca Exp $
+$NetBSD: patch-aa,v 1.5 2013/07/06 23:11:51 wiz Exp $
 
---- Source/Makefile.in.orig	2008-06-25 08:26:52.000000000 +0900
+--- Source/Makefile.in.orig	2008-06-24 23:26:52.000000000 +0000
 +++ Source/Makefile.in
 @@ -437,47 +437,7 @@ all: $(BUILT_SOURCES)
  

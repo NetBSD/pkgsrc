@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/12/03 23:55:14 obache Exp $
+$NetBSD: patch-ab,v 1.5 2013/07/06 23:11:51 wiz Exp $
 
---- configure.orig	2006-11-21 07:31:44.000000000 +0900
+--- configure.orig	2008-06-24 23:26:52.000000000 +0000
 +++ configure
-@@ -8010,19 +8010,19 @@ echo $ECHO_N "checking for Ocaml version
+@@ -8805,19 +8805,19 @@ echo $ECHO_N "checking for Ocaml version
  	isolate_b_regex='\([0-9]\+\).*'
  	for ver_part in $nodots_a ; do
  		b_ver_part=`echo "$ver_b" | sed -e 's/'"$isolate_b_regex"'/\1/'`
