@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/06/23 18:50:08 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.3 2013/07/06 10:50:32 wiz Exp $
 
 DISTNAME=	elementary-1.7.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	autoconf automake # because I patched configure.ac
 USE_TOOLS+=	gmake
+# override for hardcoded aclocal-1.13 in configure script
+CONFIGURE_ENV+=	ACLOCAL='aclocal'
+# override for hardcoded automake-1.13 in Makefiles
+MAKEFLAGS+=	AUTOMAKE="automake -af"
 
 PKGCONFIG_OVERRIDE=	elementary
 
@@ -37,6 +41,7 @@ MAKE_FLAGS+=	MODULE_ARCH=${MODULE_ARCH}
 .include "../../graphics/evas-jpeg/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../devel/eio/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 #.include "../../devel/ewheather/buildlink3.mk"
 #.include "../../devel/emap/buildlink3.mk"
 #.include "../../devel/ethumb/buildlink3.mk"
