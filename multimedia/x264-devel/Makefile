@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/07/06 10:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/07/06 21:57:45 wiz Exp $
 
 SNAPSHOT_DATE=	20130703
 
@@ -19,8 +19,6 @@ LICENSE=	gnu-gpl-v2
 CFLAGS+=	-DHAVE_STDLIB_H
 .endif
 
-.include "../../mk/compiler.mk"
-
 # The assembler implementations don't use position independent code
 # and therefore break the builds on a lot of platforms because we use
 # "libtool" to create shared libraries. We therefore need to switch
@@ -30,12 +28,6 @@ CFLAGS+=	-DHAVE_STDLIB_H
 	(!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*))) || \
       ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-asm
-.  elif !empty(CC_VERSION:Mgcc-4.[2345]*)
-CFLAGS+=-mstackrealign -mpreferred-stack-boundary=4
-.  elif !empty(CC_VERSION:Mgcc-[123]*) \
-   || !empty(CC_VERSION:Mgcc-4.[01]*) \
-   || empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=        --disable-asm
 .  else
 BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 .  endif
