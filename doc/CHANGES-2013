@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2433 2013/07/06 22:33:11 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2434 2013/07/06 23:19:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3683,3 +3683,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/gupnp-av to 0.12.2 [ryoon 2013-07-06]
 	Added games/py-ranking version 0.3.1 [kleink 2013-07-06]
 	Updated devel/allegro to 4.4.2nb2 [wiz 2013-07-06]
+	Updated x11/xterm to 294 [wiz 2013-07-06]
