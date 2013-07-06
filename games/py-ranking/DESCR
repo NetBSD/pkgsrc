@@ -1,0 +1,6 @@
+In most cases, enumerate (a Python standard function) is the best tool
+to make a ranking. But how about tie scores?
+
+This module implements Ranking that looks like enumerate but generates
+ranks instead of indexes and various strategies to assign ranks to
+tie scores.
