@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2013/04/08 11:17:22 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2013/07/06 01:24:14 rodent Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prngd/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		rodent@NetBSD.org
 HOMEPAGE=		http://prngd.sourceforge.net/
 COMMENT=		Pseudo Random Number Generator Daemon
 
