@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2418 2013/07/06 01:06:14 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2419 2013/07/06 07:08:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3667,3 +3667,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/p5-Locale-Maketext-Gettext version 1.28 [rodent 2013-07-06]
 	Added textproc/p5-HTML-FormatText-WithLinks version 0.14 [rodent 2013-07-06]
 	Added textproc/p5-HTML-FormatText-WithLinks-AndTables version 0.02 [rodent 2013-07-06]
+	Updated multimedia/mplayer-share to 1.1.1 [ryoon 2013-07-06]
+	Updated multimedia/mplayer to 1.1.1 [ryoon 2013-07-06]
