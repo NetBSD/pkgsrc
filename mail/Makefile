@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.434 2013/07/02 11:44:44 rodent Exp $
+# $NetBSD: Makefile,v 1.435 2013/07/06 00:49:58 rodent Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -209,6 +209,7 @@ SUBDIR+=	p5-Mail-Audit
 SUBDIR+=	p5-Mail-Box
 SUBDIR+=	p5-Mail-ClamAV
 SUBDIR+=	p5-Mail-DKIM
+SUBDIR+=	p5-Mail-DeliveryStatus-BounceParser
 SUBDIR+=	p5-Mail-Ezmlm
 SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
