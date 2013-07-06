@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2426 2013/07/06 15:15:58 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2427 2013/07/06 16:02:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3676,3 +3676,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/libspf2 to 1.2.10 [tron 2013-07-06]
 	Updated databases/ocaml-dbm to 1.0 [jaapb 2013-07-06]
 	Updated www/firefox-l10n to 22.0nb1 [ryoon 2013-07-06]
+	Updated x11/gtksourceview3 to 3.8.1 [ryoon 2013-07-06]
