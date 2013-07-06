@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1756 2013/07/04 04:32:15 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1757 2013/07/06 00:45:13 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -764,6 +764,7 @@ SUBDIR+=	p5-ExtUtils-XSBuilder
 SUBDIR+=	p5-ExtUtils-XSpp
 SUBDIR+=	p5-File-BOM
 SUBDIR+=	p5-File-BaseDir
+SUBDIR+=	p5-File-Binary
 SUBDIR+=	p5-File-ChangeNotify
 SUBDIR+=	p5-File-ConfigDir
 SUBDIR+=	p5-File-DesktopEntry
@@ -861,6 +862,7 @@ SUBDIR+=	p5-IO-Tty
 SUBDIR+=	p5-IO-Util
 SUBDIR+=	p5-IO-Zlib
 SUBDIR+=	p5-IO-stringy
+SUBDIR+=	p5-IPC-Cache
 SUBDIR+=	p5-IPC-Cmd
 SUBDIR+=	p5-IPC-DirQueue
 SUBDIR+=	p5-IPC-PubSub
@@ -1085,6 +1087,7 @@ SUBDIR+=	p5-Proc-Queue
 SUBDIR+=	p5-Proc-Simple
 SUBDIR+=	p5-Proc-Wait3
 SUBDIR+=	p5-Proc-WaitStat
+SUBDIR+=	p5-Python-Serialise-Marshal
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
 SUBDIR+=	p5-Regexp-Assemble
@@ -1270,6 +1273,7 @@ SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-Wx-Perl-DataWalker
 SUBDIR+=	p5-XSLoader
+SUBDIR+=	p5-accessors-fast
 SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
 SUBDIR+=	p5-asa
@@ -1281,6 +1285,7 @@ SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-circular-require
 SUBDIR+=	p5-common-sense
+SUBDIR+=	p5-constant-def
 SUBDIR+=	p5-constant
 SUBDIR+=	p5-enum
 SUBDIR+=	p5-ex-lib
