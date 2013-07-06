@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/02/20 15:39:37 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/07/06 22:31:53 wiz Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -120,8 +120,8 @@ info/allegro.info
 lib/allegro/${PKGVERSION}/alleg-dga2.so
 lib/allegro/${PKGVERSION}/modules.lst
 lib/liballeg.so
-lib/liballeg.so.4.4
 lib/liballeg.so.${PKGVERSION}
+lib/liballeg.so.4.4
 lib/liballeggl.a
 lib/libjpgalleg.a
 lib/libloadpng.a
@@ -131,6 +131,7 @@ lib/pkgconfig/allegrogl.pc
 lib/pkgconfig/jpgalleg.pc
 lib/pkgconfig/loadpng.pc
 lib/pkgconfig/logg.pc
+share/aclocal/allegro.m4
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/CHANGES
 share/doc/${PKGNAME}/THANKS
