@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2411 2013/07/06 00:41:49 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2412 2013/07/06 00:49:07 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3660,3 +3660,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Python-Serialise-Marshal version 0.02 [rodent 2013-07-06]
 	Added devel/p5-constant-def version 0.01 [rodent 2013-07-06]
 	Added devel/p5-accessors-fast version 0.03 [rodent 2013-07-06]
+	Added mail/p5-Mail-DeliveryStatus-BounceParser version 1.532 [rodent 2013-07-06]
