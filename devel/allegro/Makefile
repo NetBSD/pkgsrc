@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2013/02/16 11:20:41 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.38 2013/07/06 22:31:53 wiz Exp $
 
 DISTNAME=	allegro-4.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
@@ -33,6 +32,11 @@ PKGCONFIG_OVERRIDE+=	misc/loadpng.pc.in
 PKGCONFIG_OVERRIDE+=	misc/allegrogl.pc.in
 PKGCONFIG_OVERRIDE+=	misc/jpgalleg.pc.in
 PKGCONFIG_OVERRIDE+=	misc/allegro.pc.in
+
+INSTALLATION_DIRS=	share/aclocal
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/misc/allegro.m4 ${DESTDIR}${PREFIX}/share/aclocal
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
