@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/06 00:59:04 rodent Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/File/Inplace.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/File/Inplace/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/File::Inplace.3
