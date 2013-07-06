@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/06 00:30:52 rodent Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/File/Binary.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/File/Binary/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/File::Binary.3
