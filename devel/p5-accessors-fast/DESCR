@@ -1,0 +1,2 @@
+This module was created as an alternative to use fields, and uses
+Class::Accessor::Fast as a base. Creates accessors at compiletime.
