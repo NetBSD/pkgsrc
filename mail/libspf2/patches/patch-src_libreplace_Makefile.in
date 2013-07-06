@@ -1,18 +1,19 @@
-$NetBSD: patch-src_libreplace_Makefile.in,v 1.1 2013/03/04 17:31:56 jperkin Exp $
+$NetBSD: patch-src_libreplace_Makefile.in,v 1.2 2013/07/06 11:09:26 tron Exp $
 
 Ensure libreplace contains at least one symbol.
 
---- src/libreplace/Makefile.in.orig	2008-11-04 15:33:01.000000000 +0000
-+++ src/libreplace/Makefile.in
-@@ -60,6 +60,7 @@ am__depfiles_maybe = depfiles
- @AMDEP_TRUE@	$(DEPDIR)/__ns_initparse.Plo \
- @AMDEP_TRUE@	$(DEPDIR)/__ns_msg_getflag.Plo \
- @AMDEP_TRUE@	$(DEPDIR)/__ns_name_uncompress.Plo \
-+@AMDEP_TRUE@	$(DEPDIR)/ensure_libreplace_symbol.Plo \
- @AMDEP_TRUE@	$(DEPDIR)/getopt_long_only.Plo \
- @AMDEP_TRUE@	$(DEPDIR)/malloc.Plo $(DEPDIR)/memcmp.Plo \
- @AMDEP_TRUE@	$(DEPDIR)/realloc.Plo $(DEPDIR)/strncasecmp.Plo
-@@ -255,6 +256,7 @@ distclean-compile:
+--- src/libreplace/Makefile.in.orig	2012-02-20 07:31:47.000000000 +0000
++++ src/libreplace/Makefile.in	2013-07-06 11:57:16.000000000 +0100
+@@ -38,7 +38,7 @@
+ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+ 	__ns_get16.c __ns_initparse.c __ns_msg_getflag.c \
+ 	__ns_name_uncompress.c getopt_long_only.c malloc.c memcmp.c \
+-	realloc.c strncasecmp.c
++	realloc.c strncasecmp.c ensure_libreplace_symbol.c
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+@@ -290,6 +290,7 @@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/__ns_initparse.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/__ns_msg_getflag.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/__ns_name_uncompress.Plo@am__quote@
