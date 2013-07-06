@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/06 01:05:56 rodent Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/HTML/FormatText/WithLinks/AndTables.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/HTML/FormatText/WithLinks/AndTables/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/HTML::FormatText::WithLinks::AndTables.3
