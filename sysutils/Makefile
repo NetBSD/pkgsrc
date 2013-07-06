@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2013/06/10 12:05:08 obache Exp $
+# $NetBSD: Makefile,v 1.580 2013/07/06 01:00:01 rodent Exp $
 #
 
 COMMENT=	System utilities
@@ -318,6 +318,7 @@ SUBDIR+=	open-vm-tools
 SUBDIR+=	openxenmanager
 SUBDIR+=	osname
 SUBDIR+=	p5-File-Copy-Recursive
+SUBDIR+=	p5-File-Inplace
 SUBDIR+=	p5-File-Remove
 SUBDIR+=	p5-File-chmod
 SUBDIR+=	p5-Filesys-Df
