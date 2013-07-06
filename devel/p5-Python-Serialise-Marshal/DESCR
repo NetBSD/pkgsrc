@@ -1,0 +1,4 @@
+Marshalling is a method of serialising files in Python (another method,
+Pickling, is also available). It is the method that Mailman uses to store its
+config files. This module is an attempt to write a pure Perl implementation of
+the algorithm.
