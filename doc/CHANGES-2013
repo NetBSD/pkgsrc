@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2408 2013/07/06 00:35:37 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2409 2013/07/06 00:38:49 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3657,3 +3657,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-File-Binary version 1.7 [rodent 2013-07-06]
 	Added devel/p5-IPC-Cache version 0.02 [rodent 2013-07-06]
 	Added math/p5-Math-Complex version 1.59 [rodent 2013-07-06]
+	Added devel/p5-Python-Serialise-Marshal version 0.02 [rodent 2013-07-06]
