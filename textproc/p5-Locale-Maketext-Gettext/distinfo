@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/06 01:01:37 rodent Exp $
+
+SHA1 (Locale-Maketext-Gettext-1.28.tar.gz) = 6c89bd772685b3c0653cde9a693602fe2f25575b
+RMD160 (Locale-Maketext-Gettext-1.28.tar.gz) = 7c66c4c67b64cd38f051cfd377f594be1d7eb4ce
+Size (Locale-Maketext-Gettext-1.28.tar.gz) = 55013 bytes
