@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.11 2013/06/14 09:00:19 obache Exp $
+$NetBSD: distinfo,v 1.12 2013/07/06 07:43:13 ryoon Exp $
 
 SHA1 (ming-0.4.5.tar.gz) = 97c201040729917bf7c62da9616a87f4a920f473
 RMD160 (ming-0.4.5.tar.gz) = 9ef9cf769a03c6e356dca299c85e06a2cdd6a155
 Size (ming-0.4.5.tar.gz) = 15029578 bytes
 SHA1 (patch-ae) = 614e322330d2d2ab1e0ef1beadf1395014ecd880
-SHA1 (patch-php__ext_ming.c) = 36cf34f63b6ccafd48b4035073c0a3d1d984f7b4
-SHA1 (patch-test_actionscript_ActionScriptTest.c) = 730ef68fb3e7714da2783d396809b8f8ca5e1bf7
+SHA1 (patch-src_blocks_gifdbl.c) = a33f2dda09620961211ac367e872d994231d3f20
+SHA1 (patch-src_libming.h) = 49cab5c2d31115ea9ab909cea88dfc52f1bdbee0
+SHA1 (patch-util_gif2dbl.c) = 04383fd7a43af02d9e85e8bea0fa2328cfdfc617
+SHA1 (patch-util_gif2mask.c) = 5a87deca141b561725725a32971e68837ac6f4e1
