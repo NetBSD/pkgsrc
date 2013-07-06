@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/06 00:56:25 rodent Exp $
+
+SHA1 (Class-DBI-BaseDSN-1.22.tar.gz) = bed611bf9c9dac2a52d37af03855f726e2cd6898
+RMD160 (Class-DBI-BaseDSN-1.22.tar.gz) = 9e60e1eac9a0d6683b451895e0c7af43fc5661a1
+Size (Class-DBI-BaseDSN-1.22.tar.gz) = 3412 bytes
