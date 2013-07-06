@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.972 2013/07/03 17:51:43 sno Exp $
+# $NetBSD: Makefile,v 1.973 2013/07/06 00:53:22 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -242,6 +242,7 @@ SUBDIR+=	p5-Apache-LogFormat-Compiler
 SUBDIR+=	p5-Apache-Reload
 SUBDIR+=	p5-Apache-SSI
 SUBDIR+=	p5-Apache-Session
+SUBDIR+=	p5-Apache-Session-SharedMem
 SUBDIR+=	p5-Apache-Session-Wrapper
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-Apache2-AuthCASSimple
