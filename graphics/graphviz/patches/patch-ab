@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.20 2011/10/18 22:34:06 sbd Exp $
+$NetBSD: patch-ab,v 1.21 2013/07/06 23:14:07 wiz Exp $
 
 --- configure.orig	2010-01-26 16:01:10.000000000 +0000
 +++ configure
@@ -61,6 +61,15 @@ $NetBSD: patch-ab,v 1.20 2011/10/18 22:34:06 sbd Exp $
              fi
          fi
  
+@@ -25403,7 +25413,7 @@ fi
+ 
+         { $as_echo "$as_me:$LINENO: checking for Lua compiling and linking" >&5
+ $as_echo_n "checking for Lua compiling and linking... " >&6; }
+-        LUA_TEST=`LT=luatest.c ; echo "#include <lua.h>" > $LT;  echo "#include <lualib.h>" >> $LT; echo "int main() { luaopen_base((lua_State *)lua_open()); return 0; }" >> $LT ; $CC -Wall $LT -o $LT.out $LUA_INCLUDES $LUA_LIBS $CFLAGS $LDFLAGS 1>/dev/null 2>&1 ; echo $?; rm -f $LT $LT.out 1>/dev/null 2>&1`
++        LUA_TEST=`LT=luatest.c ; echo "#include <lua.h>" > $LT;  echo "#include <lualib.h>" >> $LT; echo "int main() { luaopen_base((lua_State *)luaL_newstate()); return 0; }" >> $LT ; $CC -Wall $LT -o $LT.out $LUA_INCLUDES $LUA_LIBS $CFLAGS $LDFLAGS 1>/dev/null 2>&1 ; echo $?; rm -f $LT $LT.out 1>/dev/null 2>&1`
+         if test "x$LUA_TEST" != "x0" ; then
+           { $as_echo "$as_me:$LINENO: result: no" >&5
+ $as_echo "no" >&6; }
 @@ -25535,8 +25545,8 @@ $as_echo "no" >&6; }
  fi
  
@@ -113,7 +122,7 @@ $NetBSD: patch-ab,v 1.20 2011/10/18 22:34:06 sbd Exp $
  		sincos(PI/2.0,&sinx,&cosx);
  		assert(sinx>0.9999999);
  		assert(sinx<1.0000001);
-@@ -38777,7 +38789,7 @@ else
+@@ -38777,7 +38791,7 @@ else
      use_gv_tcl="Yes"
    fi
    if test "x$use_gd" != "xYes"; then
