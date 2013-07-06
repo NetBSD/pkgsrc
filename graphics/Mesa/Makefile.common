@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.74 2013/05/16 05:04:56 richard Exp $
+# $NetBSD: Makefile.common,v 1.75 2013/07/06 21:56:13 wiz Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -24,6 +24,8 @@ HOMEPAGE=		http://www.mesa3d.org/
 WRKSRC=			${WRKDIR}/Mesa-${MESA_VERSION}
 DIST_SUBDIR=		Mesa-${MESA_PKGVERSION}
 
+BUILDLINK_API_DEPENDS.glproto+=	glproto>=1.4.11
+.include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
