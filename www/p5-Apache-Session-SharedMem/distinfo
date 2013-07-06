@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/06 00:51:58 rodent Exp $
+
+SHA1 (Apache-Session-SharedMem-0.6.tar.gz) = c561816928d225df13ba95012a8c8758c3053f36
+RMD160 (Apache-Session-SharedMem-0.6.tar.gz) = a2ee8813a80d9351c05403475240e9269e299ce2
+Size (Apache-Session-SharedMem-0.6.tar.gz) = 3911 bytes

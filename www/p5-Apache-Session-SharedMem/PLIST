@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/06 00:51:58 rodent Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Apache/Session/SharedMem.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Apache/Session/Store/SharedMem.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Apache/Session/SharedMem/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Apache::Session::SharedMem.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Apache::Session::Store::SharedMem.3

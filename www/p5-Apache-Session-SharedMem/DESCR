@@ -1,0 +1,2 @@
+This module is an implementation of Apache::Session. It uses IPC::Cache to store
+session variables in shared memory.
