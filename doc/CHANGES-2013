@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2431 2013/07/06 16:22:50 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2432 2013/07/06 17:38:09 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3681,3 +3681,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/gupnp to 0.20.3 [ryoon 2013-07-06]
 	Updated net/gupnp-dlna to 0.10.2 [ryoon 2013-07-06]
 	Updated net/gupnp-av to 0.12.2 [ryoon 2013-07-06]
+	Added games/py-ranking version 0.3.1 [kleink 2013-07-06]
