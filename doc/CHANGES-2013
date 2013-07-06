@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2422 2013/07/06 10:50:41 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2423 2013/07/06 10:58:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3672,3 +3672,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/jenkins to 1.509.2 [ryoon 2013-07-06]
 	Updated x11/sakura to 3.1.0 [ryoon 2013-07-06]
 	Updated x11/elementary to 1.7.7nb1 [wiz 2013-07-06]
+	Updated devel/ocaml-findlib to 1.4nb1 [jaapb 2013-07-06]
