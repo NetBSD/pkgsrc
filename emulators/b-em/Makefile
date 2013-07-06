@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/07/02 06:40:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2013/07/06 22:32:53 wiz Exp $
 
 DISTNAME=	B-emv2.2Linux
 PKGNAME=	b-em-2.2
@@ -47,6 +46,7 @@ do-install:
 	${CP} -R ${WRKSRC}/ddnoise/* ${DESTDIR}${BEMDATADIR}/ddnoise
 	${FIND} ${DESTDIR}${BEMDATADIR} -type f -exec chmod 644 {} \;
 
+BUILDLINK_API_DEPENDS.allegro+=	allegro>=4.4.2nb2
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
