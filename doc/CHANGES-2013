@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2413 2013/07/06 00:52:22 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2414 2013/07/06 00:56:50 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3662,3 +3662,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-accessors-fast version 0.03 [rodent 2013-07-06]
 	Added mail/p5-Mail-DeliveryStatus-BounceParser version 1.532 [rodent 2013-07-06]
 	Added www/p5-Apache-Session-SharedMem version 0.6 [rodent 2013-07-06]
+	Added databases/p5-Class-DBI-BaseDSN version 1.22 [rodent 2013-07-06]
