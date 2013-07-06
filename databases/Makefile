@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.434 2013/07/05 21:05:07 joerg Exp $
+# $NetBSD: Makefile,v 1.435 2013/07/06 00:57:34 rodent Exp $
 
 COMMENT=	Databases
 
@@ -109,6 +109,7 @@ SUBDIR+=	p5-CatalystX-CRUD-Model-RDBO
 SUBDIR+=	p5-CatalystX-CRUD-ModelAdapter-DBIC
 SUBDIR+=	p5-Class-DBI
 SUBDIR+=	p5-Class-DBI-AbstractSearch
+SUBDIR+=	p5-Class-DBI-BaseDSN
 SUBDIR+=	p5-Class-DBI-Pg
 SUBDIR+=	p5-Class-DBI-Plugin
 SUBDIR+=	p5-Class-DBI-Plugin-DeepAbstractSearch
