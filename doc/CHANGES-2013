@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2435 2013/07/06 23:21:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2436 2013/07/06 23:26:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3685,3 +3685,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/allegro to 4.4.2nb2 [wiz 2013-07-06]
 	Updated x11/xterm to 294 [wiz 2013-07-06]
 	Updated graphics/lcms2 to 2.5 [wiz 2013-07-06]
+	Updated graphics/ImageMagick to 6.8.6.3 [wiz 2013-07-06]
