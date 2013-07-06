@@ -1,0 +1,2 @@
+IPC::Cache is a perl module that implements an object storage space where data
+is persisted across process boundaries.
