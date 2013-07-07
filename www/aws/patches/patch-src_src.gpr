@@ -1,8 +1,10 @@
-$NetBSD: patch-src_src.gpr,v 1.2 2013/04/27 11:49:56 marino Exp $
+$NetBSD: patch-src_src.gpr,v 1.3 2013/07/07 23:46:50 marino Exp $
 
---- src/src.gpr.orig	2011-01-25 20:52:57.000000000 +0000
+Fix RUNPATH
+
+--- src/src.gpr.orig	2013-07-03 01:11:54.000000000 +0000
 +++ src/src.gpr
-@@ -77,7 +77,7 @@ project Src is
+@@ -67,7 +67,7 @@ library project Src is
              when "Windows_NT" =>
                 for Library_Options use ("-lwsock32", "-lws2_32");
              when others =>
@@ -11,12 +13,12 @@ $NetBSD: patch-src_src.gpr,v 1.2 2013/04/27 11:49:56 marino Exp $
           end case;
  
           case Shared.LDAP is
-@@ -88,7 +88,7 @@ project Src is
+@@ -78,7 +78,7 @@ library project Src is
                         Project'Library_Options & ("-lwldap32");
                    when others =>
                       for Library_Options use
 -                       Project'Library_Options & ("-lldap");
 +                       Project'Library_Options & ("-L@PREFIX@/lib", "-lldap");
                 end case;
+ 
              when "Disabled" =>
-                null;

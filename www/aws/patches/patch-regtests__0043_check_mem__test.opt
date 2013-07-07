@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2011/02/11 16:48:53 drochner Exp $
+$NetBSD: patch-regtests__0043_check_mem__test.opt,v 1.1 2013/07/07 23:46:50 marino Exp $
+
+Disable unsupported memory test for BSD
 
 --- regtests/0043_check_mem/test.opt.orig	2010-12-13 14:42:37 +0000
 +++ regtests/0043_check_mem/test.opt

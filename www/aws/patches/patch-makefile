@@ -1,0 +1,14 @@
+$NetBSD: patch-makefile,v 1.1 2013/07/07 23:46:50 marino Exp $
+
+Prevent empty ${EXAMPLESDIR}/bin directory from being created
+
+--- makefile.orig	2013-07-03 01:11:54.000000000 +0000
++++ makefile
+@@ -390,7 +390,6 @@ endif
+ 	$(MKDIR) -p $(DESTDIR)$(I_AGP)
+ 	$(MKDIR) -p $(DESTDIR)$(I_TPL)
+ 	$(MKDIR) -p $(DESTDIR)$(I_IMG)
+-	$(MKDIR) -p $(DESTDIR)$(I_SBN)
+ 	$(MKDIR) -p $(DESTDIR)$(I_PLG)
+ 	$(MKDIR) -p $(DESTDIR)$(I_WEL)
+ 

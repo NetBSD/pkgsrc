@@ -1,0 +1,14 @@
+$NetBSD: patch-config__projects__aws.gpr,v 1.1 2013/07/07 23:46:50 marino Exp $
+
+BSD doesn't use libdl although DragonFly will tolerate it.
+
+--- config/projects/aws.gpr.orig	2013-07-03 01:11:54.000000000 +0000
++++ config/projects/aws.gpr
+@@ -22,7 +22,6 @@ with "aws/aws_crypto_lib";
+ with "aws/aws_ssl_support";
+ with "aws/aws_ssl_lib";
+ with "aws/aws_ssl_error_lib";
+-with "aws/aws_dl_lib";
+ with "aws/aws_shared";
+ with "aws/aws_config";
+ 

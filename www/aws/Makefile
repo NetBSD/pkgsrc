@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/06/16 23:09:50 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/07 23:46:50 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
-PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,9 +11,9 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/aws/
 COMMENT=	Adacore Ada Web Server and framework
 LICENSE=	gnu-gpl-v2
 
-AWS_VERSION=		2.10.0.1
-USE_TOOLS+=		gmake makeinfo sed gawk
-USE_LANGUAGES=  	c ada c++
+AWS_VERSION=		3.1.0.0
+USE_TOOLS+=		gmake makeinfo sed awk
+USE_LANGUAGES=  	c ada c++ fortran
 
 # Note: c++ and fortran aren't used, but gprconfig probes for them.
 # When that happens, pkgsrc wrapper emits a warning message which causes
@@ -23,7 +22,9 @@ USE_LANGUAGES=  	c ada c++
 
 .include "options.mk"
 
-MAKE_ENV+=	ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+MAKE_ENV+=		AWK=awk
+CONFIGURE_ARGS+=	LPATH=${PREFIX}/lib ZPATH=/usr/lib
 
 # Link options were added for the aws library
 # "-R" option disables all rpaths except adalib and compiler libs.  This is
@@ -38,26 +39,10 @@ SUBST_FILES.rpath=	src/src.gpr include/include.gpr \
 			demos/test_ldap/test_ldap.gpr
 SUBST_SED.rpath=	-e "s,@ADDITIONAL_RPATH@,${ADDITIONAL_RPATH}," \
 			-e "s,@PREFIX@,${PREFIX},g"
-ADDITIONAL_RPATH=	${PREFIX}/lib:${PREFIX}/lib/aws/native/relocatable
+ADDITIONAL_RPATH=	${PREFIX}/lib:${PREFIX}/lib/aws/relocatable
 
 GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
-GENERATE_PLIST+= ${FIND} bin/aws_password;
-GENERATE_PLIST+= ${FIND} bin/awsres;
-GENERATE_PLIST+= ${FIND} bin/templates2ada;
-GENERATE_PLIST+= ${FIND} bin/templatespp;
-GENERATE_PLIST+= ${FIND} bin/webxref;
-GENERATE_PLIST+= ${FIND} bin/wsdl2aws;
-GENERATE_PLIST+= ${FIND} include/aws/        -name \* -type f | ${SORT} -dr;
-GENERATE_PLIST+= ${FIND} lib/aws/            -name \* -type f | ${SORT} -dr;
-GENERATE_PLIST+= ${FIND} lib/gnat/aws/       -name \* -type f | ${SORT};
-GENERATE_PLIST+= ${FIND} lib/gnat/aws.gpr;
-GENERATE_PLIST+= ${FIND} share/doc/aws/      -name \* -type f | ${SORT};
-GENERATE_PLIST+= ${FIND} share/examples/aws/ -name \* -type f | ${SORT} -dr;
-GENERATE_PLIST+= ${FIND} share/gps/plug-ins/ada2wsdl.xml;
-GENERATE_PLIST+= ${FIND} share/gps/plug-ins/aws.py;
-GENERATE_PLIST+= ${FIND} share/gps/plug-ins/aws.xml;
-GENERATE_PLIST+= ${FIND} share/gps/plug-ins/aws_api.xml;
-GENERATE_PLIST+= ${FIND} share/gps/plug-ins/wsdl2aws.xml;
+GENERATE_PLIST+= ${FIND} * -type f | ${SORT};
 
 do-configure:
 	cd ${WRKSRC} && ${GMAKE} setup ${CONFIGURE_ARGS}
@@ -66,11 +51,12 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} build build_doc
 
 do-test: install
-	cd ${WRKSRC}/regtests && python${PYVERSSUFFIX} testsuite.py
+	cd ${WRKSRC}/regtests && ${SETENV} ${MAKE_ENV} \
+		python${PYVERSSUFFIX} testsuite.py
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${GMAKE} install
-	${TOUCH} ${DESTDIR}${PREFIX}/share/examples/aws/bin/IGNORE.ME
+	@cd ${DESTDIR}/${PREFIX} && ${FIND} * -type d -empty -exec rmdir {} \;
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
