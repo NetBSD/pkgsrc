@@ -1,0 +1,22 @@
+$NetBSD: patch-templates_parser__docs__makefile,v 1.1 2013/07/07 23:46:50 marino Exp $
+
+Remove PDF documentation to avoid pulling in many dependencies.
+
+--- templates_parser/docs/makefile.orig	2013-07-03 01:13:24.000000000 +0000
++++ templates_parser/docs/makefile
+@@ -43,7 +43,7 @@ GFLAGS	  = -I../src -I../include
+ GNATMAKE_FLAGS ?= -q
+ 
+ DOCS	  = templates_parser.info templates_parser.html \
+-		templates_parser.txt templates_parser.pdf
++		templates_parser.txt
+ 
+ APIFILES    = ../src/templates_parser.ads.texi \
+ 	      ../src/templates_parser-debug.ads.texi \
+@@ -139,5 +139,5 @@ endif
+ 		*.aux *.cp* *.fn *.ky *.pg *.toc *.tp *.vr *.dvi *.log \
+ 		*.exe templates_parser*.ads.texi ada.sed \
+ 		templates_parser.tar.gz
+-	-rm -f templates_parser.html templates_parser.pdf \
++	-rm -f templates_parser.html \
+ 		templates_parser.info* templates_parser.txt
