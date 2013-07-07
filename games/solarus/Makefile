@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/02 11:52:27 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/07 17:41:31 rodent Exp $
 
-DISTNAME=	solarus-1.0.1-src
+VERSION=	1.0.4
+DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
 CATEGORIES=	games
 MASTER_SITES=	http://www.solarus-games.org/downloads/solarus/
@@ -10,7 +11,7 @@ HOMEPAGE=	http://www.solarus-games.org/solarus/
 COMMENT=	Open-source Zelda-like 2D game engine licensed under GPL
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/solarus-1.0.1
+WRKSRC=		${WRKDIR}/solarus-${VERSION}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
