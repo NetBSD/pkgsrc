@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2465 2013/07/07 15:26:25 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2466 2013/07/07 15:27:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3716,3 +3716,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-odbc to 0.99995nb1 [taca 2013-07-07]
 	Updated databases/ruby-pg to 0.15.0nb1 [taca 2013-07-07]
 	Updated devel/ruby-rbtree to 0.4.1nb1 [taca 2013-07-07]
+	Updated graphics/ruby-gd to 0.8.0nb12 [taca 2013-07-07]
