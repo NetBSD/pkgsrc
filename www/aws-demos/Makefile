@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/04/27 13:02:48 marino Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/07 23:47:40 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGNAME=	aws-demos-${AWS_VERSION}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +12,9 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/aws/
 COMMENT=	Adacore Ada Web Server demonstration programs
 LICENSE=	gnu-gpl-v2
 
-AWS_VERSION=		2.10.0.1
-USE_TOOLS+=		gmake makeinfo sed gawk
-USE_LANGUAGES=		c ada
+AWS_VERSION=		3.1.0.0
+USE_TOOLS+=		gmake makeinfo sed awk
+USE_LANGUAGES=		c ada c++ fortran
 PATCHDIR=		${.CURDIR}/../../www/aws/patches
 DISTINFO_FILE=		${.CURDIR}/../../www/aws/distinfo
 CONFIGURE_ARGS+=	GCC=ada
@@ -23,8 +22,11 @@ CONFIGURE_ARGS+=	PROCESSORS=1
 CONFIGURE_ARGS+=	PYTHON=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	XMLADA=true
 CONFIGURE_ARGS+=	prefix=${PREFIX}
+CONFIGURE_ARGS+=	DEBUG=true
 
-MAKE_ENV+=	ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
+MAKE_ENV+=		AWK=awk
+CONFIGURE_ARGS+=	LPATH=${PREFIX}/lib ZPATH=/usr/lib
 
 SUBST_CLASSES+= 	lpath
 SUBST_STAGE.lpath=	post-patch
@@ -33,8 +35,11 @@ SUBST_FILES.lpath=	demos/test_ldap/test_ldap.gpr
 SUBST_SED.lpath=	-e 's|@PREFIX@|${PREFIX}|g'
 
 DEMO_DIRS+=	auth
+DEMO_DIRS+=	autobahn
+DEMO_DIRS+=	cert
 DEMO_DIRS+=	com
 DEMO_DIRS+=	dispatch
+DEMO_DIRS+=	dowload_manager
 DEMO_DIRS+=	hello_world
 DEMO_DIRS+=	hotplug
 DEMO_DIRS+=	jabber_demo
@@ -46,12 +51,14 @@ DEMO_DIRS+=	soap_vs
 DEMO_DIRS+=	split
 DEMO_DIRS+=	test_mail
 DEMO_DIRS+=	text_input
+DEMO_DIRS+=	upload
 DEMO_DIRS+=	vh_demo
 DEMO_DIRS+=	web_block
 DEMO_DIRS+=	web_block_ajax
 DEMO_DIRS+=	web_block_ajax_templates
 DEMO_DIRS+=	web_elements
 DEMO_DIRS+=	web_mail
+DEMO_DIRS+=	websockets
 DEMO_DIRS+=	wps
 DEMO_DIRS+=	ws
 DEMO_DIRS+=	zdemo
@@ -78,8 +85,17 @@ DEMO_DIRS+=		runme
 PLIST.ssl=		yes
 .endif
 
+.if !empty(BUILT_AWS:Mgnutls)
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+CONFIGURE_ARGS+=	SOCKET=gnutls
+DEMO_DIRS+=		agent
+DEMO_DIRS+=		runme
+PLIST.ssl=		yes
+.endif
+
 do-configure:
-	${MKDIR} ${WRKSRC}/.build/native/debug/static/obj
 	cd ${WRKSRC} && ${GMAKE} setup ${CONFIGURE_ARGS}
 
 do-build:
@@ -95,8 +111,6 @@ do-install:
 .endfor
 
 .include "../../www/aws/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/gnatpython/buildlink3.mk"
 .include "../../devel/gprbuild-aux/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
