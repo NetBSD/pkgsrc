@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.80 2012/12/12 20:49:01 marino Exp $
+# $NetBSD: compiler.mk,v 1.81 2013/07/07 09:06:23 marino Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -97,6 +97,12 @@ _ACCEPTABLE_COMPILERS+=	${_compiler_}
 .  endfor
 .else
 _ACCEPTABLE_COMPILERS+=	${_COMPILERS}
+.endif
+
+# Currently only gcc-based compilers support Ada
+# Override PKGSRC_COMPILER if Ada language specified
+.if !empty(USE_LANGUAGES:Mada)
+PKGSRC_COMPILER=	gcc
 .endif
 
 .if defined(_ACCEPTABLE_COMPILERS)
