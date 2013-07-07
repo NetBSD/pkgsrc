@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/07/07 08:10:14 wiz Exp $
+
+SHA1 (go1.1.1.src.tar.gz) = f365aed8183e487a48a66ace7bf36e5974dffbb3
+RMD160 (go1.1.1.src.tar.gz) = ad1f043583b4eda92d10088ba4d51afb1688f77d
+Size (go1.1.1.src.tar.gz) = 9045336 bytes
+SHA1 (patch-src_pkg_os_signal_signal__test.go) = f2f24f8a1d5ed0417ab24223ad5828e4894df93c
+SHA1 (patch-src_run.bash) = c69fee7d696deb8e60f012eec1695312a2f3c59c
