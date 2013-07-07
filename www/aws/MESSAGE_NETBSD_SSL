@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE_NETBSD_SSL,v 1.1.1.1 2011/02/11 16:48:52 drochner Exp $
-Due to the combination of an old version of the gcc library in NetBSD 5+
-(/usr/lib/libgcc.*) and a recently discovered bug in gnatmake/gprbuild,
-it is not possible to build the Ada Web Server with SSL support at this
-time.  This means https:// will not function.  Sorry!
-===========================================================================

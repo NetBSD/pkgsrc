@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2011/02/11 16:48:53 drochner Exp $
+$NetBSD: patch-ssl__crypto_lib.gpr,v 1.1 2013/07/07 23:46:50 marino Exp $
+
+BSD doesn't use libdl although DragonFly will tolerate it.
 
 --- ssl/crypto_lib.gpr.orig	2010-12-20 12:41:17 +0000
 +++ ssl/crypto_lib.gpr
