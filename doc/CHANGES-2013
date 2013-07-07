@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2458 2013/07/07 15:01:30 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2459 2013/07/07 15:03:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3708,3 +3708,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php54 to 5.4.17 [taca 2013-07-07]
 	Updated math/R-XML to 3.98.1.1 [wen 2013-07-07]
 	Updated lang/ruby193-base to 1.9.3p448nb1 [taca 2013-07-07]
+	Updated misc/rubygems to 2.0.3nb2 [taca 2013-07-07]
