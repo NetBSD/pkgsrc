@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2455 2013/07/07 12:19:33 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2456 2013/07/07 13:38:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3705,3 +3705,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R-shapefiles to 0.7 [wen 2013-07-07]
 	Updated math/R-sgeostat to 1.0.25 [wen 2013-07-07]
 	Updated graphics/py-cairo to 1.10.0 [wiz 2013-07-07]
+	Updated lang/php54 to 5.4.17 [taca 2013-07-07]
