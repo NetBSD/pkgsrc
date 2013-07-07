@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/15 13:13:17 brook Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/07 12:02:36 wen Exp $
 #
 
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Functions to read and write ESRI shapefiles
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	shapefiles
-R_PKGVER=	0.6
+R_PKGVER=	0.7
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
