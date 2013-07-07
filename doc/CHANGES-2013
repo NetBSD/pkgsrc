@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2468 2013/07/07 15:33:23 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2469 2013/07/07 15:35:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3719,3 +3719,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ruby-gd to 0.8.0nb12 [taca 2013-07-07]
 	Updated math/ruby-narray to 0.6.0.8nb1 [taca 2013-07-07]
 	Updated security/ruby-shadow to 2.2.0nb1 [taca 2013-07-07]
+	Updated textproc/ruby-libxml to 2.6.0nb1 [taca 2013-07-07]
