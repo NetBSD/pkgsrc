@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.2 2013/07/03 08:46:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.3 2013/07/07 15:37:36 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -7,3 +7,5 @@ Created pkgsrc-2013Q2 branch [agc 2013-07-02 00:05 UTC]
 
 Pullup ticket #4168 - requested by martin
 www/firefox: build fix
+Pullup ticket #4170 - requested by ryoon
+www/firefox-l10n: installation fix
