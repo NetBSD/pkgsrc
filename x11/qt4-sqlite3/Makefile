@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2013/06/06 12:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2013/07/07 18:13:57 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-sqlite3-${QTVERSION}
-PKGREVISION=	6
 COMMENT=	Qt4 sqlite3 driver
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include

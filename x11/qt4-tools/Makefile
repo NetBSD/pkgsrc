@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2013/06/06 12:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2013/07/07 18:13:57 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}
-PKGREVISION=	5
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
@@ -52,13 +51,12 @@ QTPROG_LT+=	assistant designer linguist
 .endif
 
 do-install:
-.for prog in ${QTPROG_BIN}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
-		${DESTDIR}${QTPREFIX}/bin/${prog:tl}
+.for f in ${QTPROG_BIN}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${f} ${DESTDIR}${QTPREFIX}/bin/${f:tl}
 .endfor
-.for prog in ${QTPROG_LT}
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
-		${DESTDIR}${QTPREFIX}/bin/${prog:tl}
+.for f in ${QTPROG_LT}
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${f} \
+		${DESTDIR}${QTPREFIX}/bin/${f:tl}
 .endfor
 	cd ${WRKSRC}/tools/assistant/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
@@ -66,16 +64,16 @@ do-install:
 		${MAKE_PROGRAM} install_designer_headers
 	cd ${WRKSRC}/tools/designer/src/uitools && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_quitools_headers
-.for lib in QtCLucene QtDesigner QtDesignerComponents QtHelp QtUiTools
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
+.for f in QtCLucene QtDesigner QtDesignerComponents QtHelp QtUiTools
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed -e "s:${WRKSRC}:${QTPREFIX}:g" \
-		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
-	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
+		${WRKSRC}/lib/pkgconfig/${f}.pc > ${WRKDIR}/${f}.pc
+	${INSTALL_DATA} ${WRKDIR}/${f}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 .endfor
-.for lib in qdeclarativeview qt3supportwidgets qwebview
+.for f in qdeclarativeview qt3supportwidgets qwebview
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/designer/lib${lib}.la \
+		${WRKSRC}/plugins/designer/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/plugins/designer/
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/tools/linguist/phrasebooks/*.qph \
@@ -83,6 +81,6 @@ do-install:
 	cp -R ${WRKSRC}/mkspecs ${DESTDIR}${QTPREFIX}
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
