@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/06 03:45:17 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/07 09:30:28 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	R's eXtensible Time Series
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	xts
-R_PKGVER=	0.9-3
+R_PKGVER=	0.9-5
 
 USE_LANGUAGES+=	c fortran
 
