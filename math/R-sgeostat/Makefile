@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/04/15 15:43:26 brook Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/07 12:10:58 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -6,10 +6,10 @@ MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/sgeostat/
 COMMENT=	Object-oriented framework for geostatistical modeling in S+
-# LICENSE=	file LICENSE
+LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	sgeostat
-R_PKGVER=	1.0-24
+R_PKGVER=	1.0-25
 
 USE_LANGUAGES=	c fortran
 
