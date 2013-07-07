@@ -1,0 +1,24 @@
+$NetBSD: patch-test_api_Makefile.in,v 1.1 2013/07/07 10:19:04 wiz Exp $
+
+If not linking against icu, we need to link against libharfbuzz itself.
+
+--- test/api/Makefile.in.orig	2013-05-28 21:20:43.000000000 +0000
++++ test/api/Makefile.in
+@@ -148,6 +148,9 @@ test_unicode_OBJECTS = test_unicode-test
+ @HAVE_GLIB_TRUE@am__DEPENDENCIES_2 =  \
+ @HAVE_GLIB_TRUE@	$(top_builddir)/src/libharfbuzz.la \
+ @HAVE_GLIB_TRUE@	$(am__DEPENDENCIES_1)
++@HAVE_GLIB_TRUE@@HAVE_ICU_FALSE@test_unicode_DEPENDENCIES =  \
++@HAVE_GLIB_TRUE@@HAVE_ICU_FALSE@	$(am__DEPENDENCIES_2) \
++@HAVE_GLIB_TRUE@@HAVE_ICU_FALSE@	$(top_builddir)/src/libharfbuzz.la
+ @HAVE_GLIB_TRUE@@HAVE_ICU_TRUE@test_unicode_DEPENDENCIES =  \
+ @HAVE_GLIB_TRUE@@HAVE_ICU_TRUE@	$(am__DEPENDENCIES_2) \
+ @HAVE_GLIB_TRUE@@HAVE_ICU_TRUE@	$(top_builddir)/src/libharfbuzz-icu.la
+@@ -390,6 +393,7 @@ MAINTAINERCLEANFILES = 
+ @HAVE_GLIB_TRUE@test_unicode_CPPFLAGS = $(AM_CPPFLAGS) $(GLIB_CFLAGS) \
+ @HAVE_GLIB_TRUE@	$(am__append_2)
+ @HAVE_GLIB_TRUE@@HAVE_ICU_TRUE@test_unicode_LDADD = $(LDADD) $(top_builddir)/src/libharfbuzz-icu.la
++@HAVE_GLIB_TRUE@@HAVE_ICU_FALSE@test_unicode_LDADD = $(LDADD) $(top_builddir)/src/libharfbuzz.la
+ @HAVE_GLIB_TRUE@test_cplusplus_SOURCES = test-cplusplus.cc
+ @HAVE_GLIB_TRUE@test_c_CPPFLAGS = $(AM_CPPFLAGS) $(am__append_4) \
+ @HAVE_GLIB_TRUE@	$(am__append_6)
