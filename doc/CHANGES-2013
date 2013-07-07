@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2444 2013/07/07 10:09:37 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2445 2013/07/07 10:19:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3694,3 +3694,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R-zoo to 1.7.10 [wen 2013-07-07]
 	Updated math/R-xts to 0.9.5 [wen 2013-07-07]
 	Updated devel/py-setuptools to 0.8 [richard 2013-07-07]
+	Updated fonts/harfbuzz to 0.9.18 [wiz 2013-07-07]
