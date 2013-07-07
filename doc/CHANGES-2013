@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2474 2013/07/07 18:16:27 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2475 2013/07/07 18:17:33 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3733,3 +3733,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/qt4-qdbus to 4.8.5 [adam 2013-07-07]
 	Updated x11/qt4-sqlite3 to 4.8.5 [adam 2013-07-07]
 	Updated x11/qt4-tiff to 4.8.5 [adam 2013-07-07]
+	Updated games/solarus to 1.0.4 [rodent 2013-07-07]
