@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2473 2013/07/07 16:07:54 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2474 2013/07/07 18:16:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3724,3 +3724,12 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-rdoc to 4.0.1nb1 [taca 2013-07-07]
 	Updated devel/ruby-stream to 0.5nb2 [taca 2013-07-07]
 	Updated textproc/ruby-xslt to 0.9.9nb2 [taca 2013-07-07]
+	Updated x11/qt4-libs to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-tools to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-docs to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-mng to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-mysql to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-pgsql to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-qdbus to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-sqlite3 to 4.8.5 [adam 2013-07-07]
+	Updated x11/qt4-tiff to 4.8.5 [adam 2013-07-07]
