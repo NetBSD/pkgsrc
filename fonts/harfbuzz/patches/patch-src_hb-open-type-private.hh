@@ -1,4 +1,9 @@
-$NetBSD: patch-src_hb-open-type-private.hh,v 1.1 2013/02/03 05:13:26 ryoon Exp $
+$NetBSD: patch-src_hb-open-type-private.hh,v 1.2 2013/07/07 10:23:14 wiz Exp $
+
+Fix build with gcc 4.2.1 of FreeBSD 9.1.
+
+Patch is taken from
+https://build.opensuse.org/package/view_file?file=mozilla-gcc43.patch&package=MozillaFirefox&project=home%3AWernerFink%3Abranches%3Amozilla
 
 --- src/hb-open-type-private.hh.orig	2013-01-08 22:13:42.000000000 +0000
 +++ src/hb-open-type-private.hh
