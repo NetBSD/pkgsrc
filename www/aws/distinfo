@@ -1,26 +1,17 @@
-$NetBSD: distinfo,v 1.6 2013/04/27 13:02:48 marino Exp $
+$NetBSD: distinfo,v 1.7 2013/07/07 23:46:50 marino Exp $
 
-SHA1 (aws-2.10.0.1.tar.bz2) = 3ea20d4328951089f93caa3693eb24d67cf76594
-RMD160 (aws-2.10.0.1.tar.bz2) = 8d6c2e9e681f18b16bbd79e76e6b65bb8f07a871
-Size (aws-2.10.0.1.tar.bz2) = 1386481 bytes
-SHA1 (patch-ac) = 1985aca4185538590cea3d939f095b69495eb0fa
-SHA1 (patch-ad) = 6bfa89f2837cc0dca4f5c391b7e05e74a3d85181
-SHA1 (patch-ae) = 44f66219a999b90d626f8f581942ae4f406e6c18
-SHA1 (patch-af) = b3f6ca145cede4df4e101c9cd0fd255e2ad23d3f
-SHA1 (patch-ag) = 5c5122daa913cc541fcd05d61f5b67a989a00b4d
-SHA1 (patch-ba) = 334c40657793f0a6bcec295cc07329ca96bc8372
-SHA1 (patch-bb) = e2db43dd317b01b9d0e97c481b2851b19469667b
-SHA1 (patch-bc) = b4f9926351a0ab3c5e5c73601093266f0d8efaaa
-SHA1 (patch-bd) = b640a61fe75e9bfd06ea6a546ba827a71631517c
-SHA1 (patch-be) = c07e84b8f669e1aec7368a5be0fbcb91b37b32fe
-SHA1 (patch-bf) = 22fe61a2441649cf2bb2c9b6b22008562ca7127f
-SHA1 (patch-bg) = ebbba6439c4cdbeb2f0e1afaec9c46f429e408b9
-SHA1 (patch-bh) = 59f370db7e47d5fb18fa239dfc3396703f7251c8
-SHA1 (patch-bi) = 3878eb24a44a23f119d78aad5b0c5bcfce1fc4a2
-SHA1 (patch-bj) = 6e138dbe344600ea870e33b030662422cadf6cbc
-SHA1 (patch-bk) = 7be4ff0eefa89a24d942fc38c55f81864dd483de
-SHA1 (patch-demos_test__ldap_test__ldap.gpr) = 0271d8c429f8fd3014ff169ded61f4b282243a38
+SHA1 (aws-3.1.0.0.tar.bz2) = a8135b10bad5a751840858acb305cbb01b5558db
+RMD160 (aws-3.1.0.0.tar.bz2) = d7c8dc904a0a91a8754aae8d07eb8b015fbf3b1f
+Size (aws-3.1.0.0.tar.bz2) = 1529933 bytes
+SHA1 (patch-config__projects__aws.gpr) = 3a93507e35c30bb6cf376409b681303bf7e39d7a
+SHA1 (patch-demos_test__ldap_test__ldap.gpr) = eeb126ab85442cc47b6a8844c4c4eea1b697be72
+SHA1 (patch-docs__gentexifile) = 0613450bb248a17659ae0a435a3e8ca64d29cd0c
+SHA1 (patch-docs__makefile) = 6f36ef4688b542ec100882014d3c1842c1d00dd8
 SHA1 (patch-docs_docs.gpr) = acbe31da756c0cc3ee86132eedd0f0cc0ae6dd0e
-SHA1 (patch-include_include.gpr) = 8e65a8238077df79fedaafa8b95eb51c8897b6c0
-SHA1 (patch-src_soap_soap-message-xml.adb) = d7b84968c615c017fb33536d177ce8b4557e29dc
-SHA1 (patch-src_src.gpr) = 18480f2478c6fa3a1a7939f2a9fbdc4bd09178e3
+SHA1 (patch-include_include.gpr) = 1c407b9769e10106cd521241986f569146879af1
+SHA1 (patch-makefile) = 31a316463838c7ab38edcd92ee2a376043065832
+SHA1 (patch-regtests__0043_check_mem__test.opt) = abe81a8c9aeb10faac6ea9469408dd89b1c85a65
+SHA1 (patch-src_src.gpr) = 6b7d6732724dbcc5da5e917ee2f2f5d597b3441b
+SHA1 (patch-ssl__crypto_lib.gpr) = e6624d49c72e3dea73ad2b66044f0da5e7ef0a99
+SHA1 (patch-templates_parser__docs__gentexifile) = d9019f7ee865d38e3cf3f4fb08d942e1a6bb1367
+SHA1 (patch-templates_parser__docs__makefile) = a26ea46580397c06c7a1148cdf9be44545bb124e
