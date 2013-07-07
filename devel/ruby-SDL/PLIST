@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/10 05:08:23 taca Exp $
-${GEM_HOME}/cache/rubysdl-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.7 2013/07/07 15:24:19 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/NEWS.en
@@ -100,4 +100,4 @@ ${GEM_LIBDIR}/sample/testgl.rb
 ${GEM_LIBDIR}/sample/testgl_old.rb
 ${GEM_LIBDIR}/sample/testsprite.rb
 ${GEM_LIBDIR}/sample/transformblit.rb
-${GEM_HOME}/specifications/rubysdl-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
