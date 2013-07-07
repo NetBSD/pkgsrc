@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/01/12 22:59:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/07/07 18:13:56 adam Exp $
 lib/pkgconfig/Qt3Support.pc
 lib/pkgconfig/QtCore.pc
 lib/pkgconfig/QtDeclarative.pc
@@ -23,6 +23,7 @@ qt4/bin/uic3
 qt4/imports/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.la
 qt4/imports/Qt/labs/gestures/libqmlgesturesplugin.la
 qt4/imports/Qt/labs/particles/libqmlparticlesplugin.la
+qt4/imports/Qt/labs/shaders/libqmlshadersplugin.la
 qt4/imports/QtWebKit/libqmlwebkitplugin.la
 qt4/lib/libQt3Support.la
 qt4/lib/libQtCore.la
@@ -43,6 +44,7 @@ qt4/lib/libjscore.la
 qt4/lib/libwebcore.la
 qt4/plugins/accessible/libqtaccessiblecompatwidgets.la
 qt4/plugins/accessible/libqtaccessiblewidgets.la
+${PLIST.mac}qt4/plugins/bearer/libqcorewlanbearer.la
 qt4/plugins/bearer/libqgenericbearer.la
 qt4/plugins/codecs/libqcncodecs.la
 qt4/plugins/codecs/libqjpcodecs.la
