@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2013/07/04 14:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/07/07 06:28:05 richard Exp $
 
-EGG_VERSION=		0.7.7
+EGG_VERSION=		0.8
 DISTNAME=		setuptools-${EGG_VERSION}
 EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
@@ -34,6 +34,18 @@ PYSETUPINSTALLARGS+=	--root=/
 .if ${OPSYS} == "Darwin"
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
+
+#remove garbage old 0.6x PKG-INFO
+post-extract:
+	${RM} ${WRKSRC}/setuptools.egg-info/EGG-INFO/PKG-INFO
+	${RMDIR} ${WRKSRC}/setuptools.egg-info/EGG-INFO
+
+#remove .orig remnants prior to install
+pre-install:
+	${RM} ${WRKSRC}/setuptools.egg-info/*.orig
+
+post-install:
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
