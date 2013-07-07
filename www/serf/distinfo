@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/07/04 17:17:28 wiz Exp $
+$NetBSD: distinfo,v 1.6 2013/07/07 01:18:46 obache Exp $
 
 SHA1 (serf-1.2.1.tar.bz2) = f65fbbd72926c8e7cf0dbd4ada03b0d226f461fd
 RMD160 (serf-1.2.1.tar.bz2) = 49036f303a7737981276fa451a66a3b5bccc201f
 Size (serf-1.2.1.tar.bz2) = 190464 bytes
+SHA1 (patch-buckets_ssl__buckets.c) = f940e1703d3a8cf879d5a563cf57826f027ed8e1
