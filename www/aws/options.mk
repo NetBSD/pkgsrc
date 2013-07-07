@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/04/27 13:02:48 marino Exp $
+# $NetBSD: options.mk,v 1.7 2013/07/07 23:46:50 marino Exp $
 
 
 # xmlada is built-in (not optional) due to gprbuild dependency
@@ -10,7 +10,9 @@
 # support IPv6. For that reason, the option name is not "inet6".
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aws
-PKG_SUPPORTED_OPTIONS=	ssl ldap ipv6 debug disable-shared-rt relocatable
+PKG_OPTIONS_OPTIONAL_GROUPS=	slayer
+PKG_OPTIONS_GROUP.slayer=	ssl gnutls
+PKG_SUPPORTED_OPTIONS=	ldap inet6 debug disable-shared-rt relocatable
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.prefs.mk"
@@ -44,13 +46,17 @@ CONFIGURE_ARGS+=	ZLIB=true
 ###################
 
 .if !empty(PKG_OPTIONS:Mssl)
-.if $(OPSYS) == "NetBSD"
-MESSAGE_SRC=	MESSAGE_NETBSD_SSL
-.else
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+= SOCKET=openssl
 .endif
+
+.if !empty(PKG_OPTIONS:Mgnutls)
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+CONFIGURE_ARGS+= SOCKET=gnutls
 .endif
+
 
 ####################
 ##  LDAP Support  ##
@@ -68,9 +74,6 @@ CONFIGURE_ARGS+= LDAP=true
 PLIST_VARS+= ipv6 noipv6
 .if !empty(PKG_OPTIONS:Mipv6)
 CONFIGURE_ARGS+= IPv6=true
-PLIST.ipv6= yes
-.else
-PLIST.noipv6= yes
 .endif
 
 #####################
