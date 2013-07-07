@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2454 2013/07/07 12:12:24 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2455 2013/07/07 12:19:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R-spacetime to 1.0.5 [wen 2013-07-07]
 	Updated math/R-shapefiles to 0.7 [wen 2013-07-07]
 	Updated math/R-sgeostat to 1.0.25 [wen 2013-07-07]
+	Updated graphics/py-cairo to 1.10.0 [wiz 2013-07-07]
