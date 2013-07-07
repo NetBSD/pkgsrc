@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2460 2013/07/07 15:04:48 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2461 2013/07/07 15:08:08 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3710,3 +3710,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ruby193-base to 1.9.3p448nb1 [taca 2013-07-07]
 	Updated misc/rubygems to 2.0.3nb2 [taca 2013-07-07]
 	Added devel/mm-common version 0.9.6 [rodent 2013-07-07]
+	Added x11/gtksourceviewmm version 3.2.0 [rodent 2013-07-07]
