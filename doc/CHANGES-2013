@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2451 2013/07/07 11:49:09 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2452 2013/07/07 11:54:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3701,3 +3701,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R-splancs to 2.01.33 [wen 2013-07-07]
 	Updated math/R-intervals to 0.14.0 [wen 2013-07-07]
 	Added x11/gtkmm3 version 3.8.0 [wiz 2013-07-07]
+	Updated math/R-spacetime to 1.0.5 [wen 2013-07-07]
