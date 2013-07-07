@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2446 2013/07/07 10:38:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2447 2013/07/07 11:09:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3696,3 +3696,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-setuptools to 0.8 [richard 2013-07-07]
 	Updated fonts/harfbuzz to 0.9.18 [wiz 2013-07-07]
 	Updated games/puzzles to 9893 [wiz 2013-07-07]
+	Updated math/R-statmod to 1.4.17 [wen 2013-07-07]
