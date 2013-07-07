@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2447 2013/07/07 11:09:06 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2448 2013/07/07 11:17:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3697,3 +3697,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/harfbuzz to 0.9.18 [wiz 2013-07-07]
 	Updated games/puzzles to 9893 [wiz 2013-07-07]
 	Updated math/R-statmod to 1.4.17 [wen 2013-07-07]
+	Updated math/R-sp to 1.0.11 [wen 2013-07-07]
