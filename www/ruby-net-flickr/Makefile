@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 13:13:31 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/07 16:16:51 taca Exp $
 
 DISTNAME=	net-flickr-0.0.1
 CATEGORIES=	www
@@ -10,8 +10,6 @@ COMMENT=	Flickr REST client
 LICENSE=	modified-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.5:../../textproc/ruby-hpricot
-
-GEM_CLEANBUILD=	ext/patron/*
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
