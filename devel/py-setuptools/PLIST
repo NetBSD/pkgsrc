@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/07/04 06:43:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/07/07 06:28:05 richard Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -12,14 +12,11 @@ ${PYSITELIB}/easy_install.pyo
 ${PYSITELIB}/pkg_resources.py
 ${PYSITELIB}/pkg_resources.pyc
 ${PYSITELIB}/pkg_resources.pyo
-${PYSITELIB}/${EGG_INFODIR}/EGG-INFO/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt.orig
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt.orig
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/setuptools/__init__.py
@@ -106,6 +103,9 @@ ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
+${PYSITELIB}/setuptools/compat.py
+${PYSITELIB}/setuptools/compat.pyc
+${PYSITELIB}/setuptools/compat.pyo
 ${PYSITELIB}/setuptools/py24compat.py
 ${PYSITELIB}/setuptools/py24compat.pyc
 ${PYSITELIB}/setuptools/py24compat.pyo
