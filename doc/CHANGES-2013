@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2438 2013/07/07 00:20:38 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2439 2013/07/07 00:29:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/ImageMagick to 6.8.6.3 [wiz 2013-07-06]
 	Updated graphics/p5-PerlMagick to 6.8.6.3 [wiz 2013-07-06]
 	Updated textproc/p5-Text-Xslate to 2.0008 [wen 2013-07-07]
+	Updated textproc/p5-XML-LibXSLT to 1.81 [wen 2013-07-07]
