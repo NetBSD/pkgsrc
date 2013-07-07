@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2013/06/06 12:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2013/07/07 18:13:56 adam Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	7
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt4-libs/Makefile.common"
@@ -29,6 +28,7 @@ CONFIGURE_ARGS+=	-openssl-linked
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
 .endif
 
 INSTALLATION_DIRS=	lib/pkgconfig
@@ -36,6 +36,7 @@ INSTALLATION_DIRS+=	${QTPREFIX}/bin
 INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/folderlistmodel
 INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/gestures
 INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/particles
+INSTALLATION_DIRS+=	${QTPREFIX}/imports/Qt/labs/shaders
 INSTALLATION_DIRS+=	${QTPREFIX}/imports/QtWebKit
 INSTALLATION_DIRS+=	${QTPREFIX}/include
 INSTALLATION_DIRS+=	${QTPREFIX}/lib
@@ -60,8 +61,8 @@ SUBST_FILES.no-libtool=		translations/Makefile
 SUBST_SED.no-libtool=		-e '/@: IGNORE THIS LINE/s,=.*$$,= @:,'
 
 do-install:
-.for prog in moc rcc uic
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
+.for f in moc rcc uic
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${f} ${DESTDIR}${QTPREFIX}/bin/
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic3 \
 		${DESTDIR}${QTPREFIX}/bin/
@@ -74,47 +75,59 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/imports/Qt/labs/particles/libqmlparticlesplugin.la \
 		${DESTDIR}${QTPREFIX}/imports/Qt/labs/particles/
-	 ${LIBTOOL} --mode=install ${INSTALL_LIB} \
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/imports/Qt/labs/shaders/libqmlshadersplugin.la \
+		${DESTDIR}${QTPREFIX}/imports/Qt/labs/shaders/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/imports/QtWebKit/libqmlwebkitplugin.la \
 		${DESTDIR}${QTPREFIX}/imports/QtWebKit/
-.for incl in corelib declarative gui multimedia network opengl qt3support script scripttools sql svg testlib xml xmlpatterns 3rdparty/webkit/Source/WebKit/qt
-	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
+.for f in corelib declarative gui multimedia network opengl qt3support script scripttools sql svg testlib xml xmlpatterns 3rdparty/webkit/Source/WebKit/qt
+	cd ${WRKSRC}/src/${f} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore webcore
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
+.for f in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore webcore
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
 		-e "s:${QTPREFIX}/lib/lib\\([A-Za-z3]*\\)\\.la:-l\\1:g" \
-		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
-	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
+		${WRKSRC}/lib/pkgconfig/${f}.pc > ${WRKDIR}/${f}.pc
+	${INSTALL_DATA} ${WRKDIR}/${f}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/tools/porting/src/q3porting.xml ${DESTDIR}${QTPREFIX}
-.for plug in qtaccessiblecompatwidgets qtaccessiblewidgets
+.for f in qtaccessiblecompatwidgets qtaccessiblewidgets
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/accessible/lib${plug}.la \
+		${WRKSRC}/plugins/accessible/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/plugins/accessible/
 .endfor
+#.for f in qcorewlanbearer qgenericbearer
+.if ${OPSYS} == "Darwin"
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/bearer/libqcorewlanbearer.la \
+		${DESTDIR}${QTPREFIX}/plugins/bearer/
+.endif
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/bearer/libqgenericbearer.la \
 		${DESTDIR}${QTPREFIX}/plugins/bearer/
-.for codec in qcncodecs qjpcodecs qkrcodecs qtwcodecs
+#.endfor
+.for f in qcncodecs qjpcodecs qkrcodecs qtwcodecs
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/codecs/lib${codec}.la \
+		${WRKSRC}/plugins/codecs/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/plugins/codecs/
 .endfor
-.for plug in qglgraphicssystem qtracegraphicssystem
+.for f in qglgraphicssystem qtracegraphicssystem
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/graphicssystems/lib${plug}.la \
+		${WRKSRC}/plugins/graphicssystems/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/plugins/graphicssystems/
 .endfor
+.for f in qsvgicon
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/iconengines/libqsvgicon.la \
+		${WRKSRC}/plugins/iconengines/lib${f}.la \
 		${DESTDIR}/${QTPREFIX}/plugins/iconengines/
-.for plug in qgif qico qjpeg qsvg qtga
+.endfor
+.for f in qgif qico qjpeg qsvg qtga
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/imageformats/lib${plug}.la \
+		${WRKSRC}/plugins/imageformats/lib${f}.la \
 		${DESTDIR}${QTPREFIX}/plugins/imageformats/
 .endfor
 .if ${OPSYS} == "Darwin"
