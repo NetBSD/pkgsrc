@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1757 2013/07/06 00:45:13 rodent Exp $
+# $NetBSD: Makefile,v 1.1758 2013/07/07 15:05:42 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -470,6 +470,7 @@ SUBDIR+=	mercurial
 SUBDIR+=	mico
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
+SUBDIR+=	mm-common
 SUBDIR+=	mono-addins
 SUBDIR+=	mono-tools
 SUBDIR+=	monodevelop
