@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2013/05/26 18:43:17 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2013/07/07 10:37:56 wiz Exp $
 
 Rename "net" to "netgame" so there's less chances of conflicts
 with other packages.
 
---- Makefile.orig	2013-05-26 00:35:23.000000000 +0000
-+++ Makefile
+--- Makefile.gtk.orig	2013-05-26 00:35:23.000000000 +0000
++++ Makefile.gtk
 @@ -38,7 +38,7 @@ all: $(BINPREFIX)blackbox $(BINPREFIX)br
  		$(BINPREFIX)loopysolver $(BINPREFIX)magnets \
  		$(BINPREFIX)magnetssolver $(BINPREFIX)map \
