@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/07/07 11:46:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/07/07 16:13:13 rodent Exp $
 
 BUILDLINK_TREE+=	gtkmm3
 
@@ -14,6 +14,10 @@ BUILDLINK_PKGSRCDIR.gtkmm3?=	../../x11/gtkmm3
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif	# GTKMM3_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gtkmm3
