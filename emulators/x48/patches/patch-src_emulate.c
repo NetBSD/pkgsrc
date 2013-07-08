@@ -1,4 +1,6 @@
-$NetBSD: patch-src_emulate.c,v 1.1 2013/01/17 15:51:26 joerg Exp $
+$NetBSD: patch-src_emulate.c,v 1.2 2013/07/08 08:37:10 he Exp $
+
+Add static to an inline function.
 
 --- src/emulate.c.orig	2013-01-16 14:12:03.000000000 +0000
 +++ src/emulate.c
