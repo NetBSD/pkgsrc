@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/07/07 10:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/07/08 22:39:21 tron Exp $
 
 DISTNAME=	harfbuzz-0.9.18
 CATEGORIES=	fonts
@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE=	harfbuzz.pc.in
 
 CONFIGURE_ARGS+=	--with-cairo=no
 CONFIGURE_ARGS+=	--with-icu=no
+CONFIGURE_ARGS+=	--with-coretext=auto
 
 LDFLAGS.OpenBSD+=	-lz
 
