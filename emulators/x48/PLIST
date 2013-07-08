@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:10 joerg Exp $
-bin/x48
-bin/dump2rom
+@comment $NetBSD: PLIST,v 1.3 2013/07/08 08:37:10 he Exp $
 bin/checkrom
+bin/dump2rom
 bin/mkcard
+bin/x48
 lib/X11/app-defaults/X48
+lib/x48/gxrom-r
+lib/x48/sxrom-e
+man/man1/x48.1
 share/doc/x48/CARDS.doc
 share/doc/x48/INSTALLING
 share/doc/x48/ROMDump.doc

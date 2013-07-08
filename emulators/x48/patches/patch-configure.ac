@@ -1,0 +1,26 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/07/08 08:37:10 he Exp $
+
+Add some tests for various PTY- and TTY-related functions.
+
+--- configure.ac.orig	2011-11-15 03:03:40.000000000 +0000
++++ configure.ac
+@@ -79,6 +79,19 @@ fi
+ 
+ # Checks for libraries.
+ AC_CHECK_LIB([GL], [XCloseDisplay])
++AC_SEARCH_LIBS([grantpt], [c], [
++	AC_DEFINE([HAVE_GRANTPT], 1, [Has grantpt() function])
++])
++AC_SEARCH_LIBS([ptsname_r], [c], [
++	AC_DEFINE([HAVE_PTSNAME_R], 1, [Has ptsname_r() function])
++])
++AC_SEARCH_LIBS([cfsetspeed], [c], [
++	AC_DEFINE([HAVE_CFSETSPEED], 1, [Has cfsetspeed() function])
++])
++AC_SEARCH_LIBS([openpty], [util], [
++	AC_DEFINE([HAVE_OPENPTY], 1, [Has openpty() function])
++	LIBS=-lutil ${LIBS}
++])
+ 
+ # Checks for header files.
+ AC_HEADER_STDC

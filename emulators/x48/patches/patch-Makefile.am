@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/07/08 08:37:10 he Exp $
+
+Can't use $< in non-implicit rule.
+
+--- Makefile.am.orig	2011-11-15 03:03:40.000000000 +0000
++++ Makefile.am
+@@ -9,7 +9,7 @@ EXTRA_DIST=rpm/x48.spec \
+  debian/dirs debian/docs debian/menu debian/README.Debian debian/rules
+ 
+ X48 : src/X48.ad
+-	cp $< $@
++	cp src/X48.ad $@
+ 
+ appdefault_DATA = X48
+ 
