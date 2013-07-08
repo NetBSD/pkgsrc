@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2481 2013/07/08 08:37:58 he Exp $
+$NetBSD: CHANGES-2013,v 1.2482 2013/07/08 08:39:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3739,3 +3739,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-pywebdav to 0.9.8 [richard 2013-07-08]
 	Updated security/gnutls to 3.2.1 [wiz 2013-07-08]
 	Updated emulators/x48 to 0.6.4 [he 2013-07-08]
+	Updated x11/xterm to 295 [wiz 2013-07-08]
