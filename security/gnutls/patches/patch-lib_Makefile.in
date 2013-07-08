@@ -1,0 +1,13 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2013/07/08 08:30:01 wiz Exp $
+
+--- lib/Makefile.in.orig	2013-07-07 13:37:03.000000000 +0000
++++ lib/Makefile.in
+@@ -350,7 +350,7 @@ am_libgnutls_la_OBJECTS = $(am__objects_
+ libgnutls_la_OBJECTS = $(am_libgnutls_la_OBJECTS)
+ libgnutls_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(libgnutls_la_LDFLAGS) $(LDFLAGS) -o $@
++	$(libgnutls_la_LDFLAGS) $(LDFLAGS) -lgmp -o $@
+ @ENABLE_CXX_TRUE@libgnutlsxx_la_DEPENDENCIES = libgnutls.la
+ am__libgnutlsxx_la_SOURCES_DIST = gnutlsxx.cpp
+ @ENABLE_CXX_TRUE@am_libgnutlsxx_la_OBJECTS =  \
