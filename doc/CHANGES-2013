@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2476 2013/07/07 18:28:13 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2477 2013/07/08 03:35:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3734,3 +3734,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/qt4-qdbus to 4.8.5 [adam 2013-07-07]
 	Updated x11/qt4-sqlite3 to 4.8.5 [adam 2013-07-07]
 	Updated x11/qt4-tiff to 4.8.5 [adam 2013-07-07]
+	Updated mail/roundcube to 0.9.2nb1 [taca 2013-07-08]
