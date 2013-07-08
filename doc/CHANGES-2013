@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2485 2013/07/08 09:19:02 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2486 2013/07/08 10:16:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3743,3 +3743,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/py-icalendar to 3.5 [wiz 2013-07-08]
 	Updated devel/py-distribute to 0.6.49 [wiz 2013-07-08]
 	Updated finance/gnucash to 2.4.13 [wiz 2013-07-08]
+	Updated finance/gnucash-docs to 2.4.2 [wiz 2013-07-08]
