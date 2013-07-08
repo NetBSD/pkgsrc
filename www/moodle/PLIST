@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/05/23 08:04:37 wen Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/07/08 13:52:08 wen Exp $
 share/examples/moodle/moodle.conf
 share/moodle/.jshintrc
 share/moodle/.shifter.json
@@ -12,6 +12,7 @@ share/moodle/admin/blocks.php
 share/moodle/admin/category.php
 share/moodle/admin/cli/automated_backups.php
 share/moodle/admin/cli/cron.php
+share/moodle/admin/cli/fix_deleted_users.php
 share/moodle/admin/cli/install.php
 share/moodle/admin/cli/install_database.php
 share/moodle/admin/cli/maintenance.php
@@ -240,6 +241,9 @@ share/moodle/admin/tool/phpunit/lang/en/tool_phpunit.php
 share/moodle/admin/tool/phpunit/settings.php
 share/moodle/admin/tool/phpunit/version.php
 share/moodle/admin/tool/phpunit/webrunner.php
+share/moodle/admin/tool/profiling/export.php
+share/moodle/admin/tool/profiling/import.php
+share/moodle/admin/tool/profiling/import_form.php
 share/moodle/admin/tool/profiling/index.php
 share/moodle/admin/tool/profiling/lang/en/tool_profiling.php
 share/moodle/admin/tool/profiling/settings.php
@@ -403,6 +407,7 @@ share/moodle/auth/cas/cas_form.html
 share/moodle/auth/cas/cli/sync_users.php
 share/moodle/auth/cas/config.html
 share/moodle/auth/cas/db/install.php
+share/moodle/auth/cas/db/upgrade.php
 share/moodle/auth/cas/lang/en/auth_cas.php
 share/moodle/auth/cas/languages.php
 share/moodle/auth/cas/version.php
@@ -435,6 +440,7 @@ share/moodle/auth/ldap/auth.php
 share/moodle/auth/ldap/cli/sync_users.php
 share/moodle/auth/ldap/config.html
 share/moodle/auth/ldap/db/install.php
+share/moodle/auth/ldap/db/upgrade.php
 share/moodle/auth/ldap/lang/en/auth_ldap.php
 share/moodle/auth/ldap/ntlmsso_attempt.php
 share/moodle/auth/ldap/ntlmsso_finish.php
@@ -731,7 +737,8 @@ share/moodle/backup/util/dbops/backup_question_dbops.class.php
 share/moodle/backup/util/dbops/backup_structure_dbops.class.php
 share/moodle/backup/util/dbops/restore_controller_dbops.class.php
 share/moodle/backup/util/dbops/restore_dbops.class.php
-share/moodle/backup/util/dbops/tests/dbops_test.php
+share/moodle/backup/util/dbops/tests/backup_dbops_test.php
+share/moodle/backup/util/dbops/tests/restore_dbops_test.php
 share/moodle/backup/util/destinations/tests/destinations_test.php
 share/moodle/backup/util/factories/backup_factory.class.php
 share/moodle/backup/util/factories/convert_factory.class.php
@@ -1632,6 +1639,7 @@ share/moodle/files/coursefilesedit_form.php
 share/moodle/files/externallib.php
 share/moodle/files/index.php
 share/moodle/files/renderer.php
+share/moodle/files/tests/externallib_test.php
 share/moodle/filter/activitynames/db/install.php
 share/moodle/filter/activitynames/filter.php
 share/moodle/filter/activitynames/lang/en/filter_activitynames.php
@@ -1945,6 +1953,7 @@ share/moodle/install/lang/bg/install.php
 share/moodle/install/lang/bg/langconfig.php
 share/moodle/install/lang/bg/moodle.php
 share/moodle/install/lang/bn/admin.php
+share/moodle/install/lang/bn/error.php
 share/moodle/install/lang/bn/install.php
 share/moodle/install/lang/bn/langconfig.php
 share/moodle/install/lang/bn/moodle.php
@@ -1990,6 +1999,11 @@ share/moodle/install/lang/dv/error.php
 share/moodle/install/lang/dv/install.php
 share/moodle/install/lang/dv/langconfig.php
 share/moodle/install/lang/dv/moodle.php
+share/moodle/install/lang/dz/admin.php
+share/moodle/install/lang/dz/error.php
+share/moodle/install/lang/dz/install.php
+share/moodle/install/lang/dz/langconfig.php
+share/moodle/install/lang/dz/moodle.php
 share/moodle/install/lang/el/admin.php
 share/moodle/install/lang/el/error.php
 share/moodle/install/lang/el/install.php
@@ -2027,6 +2041,7 @@ share/moodle/install/lang/eu/install.php
 share/moodle/install/lang/eu/langconfig.php
 share/moodle/install/lang/eu/moodle.php
 share/moodle/install/lang/fa/admin.php
+share/moodle/install/lang/fa/error.php
 share/moodle/install/lang/fa/install.php
 share/moodle/install/lang/fa/langconfig.php
 share/moodle/install/lang/fa/moodle.php
@@ -2037,7 +2052,9 @@ share/moodle/install/lang/fi/langconfig.php
 share/moodle/install/lang/fi/moodle.php
 share/moodle/install/lang/fil/langconfig.php
 share/moodle/install/lang/fil/moodle.php
+share/moodle/install/lang/fj/admin.php
 share/moodle/install/lang/fj/langconfig.php
+share/moodle/install/lang/fj/moodle.php
 share/moodle/install/lang/fo/langconfig.php
 share/moodle/install/lang/fo/moodle.php
 share/moodle/install/lang/fr/admin.php
@@ -2050,7 +2067,9 @@ share/moodle/install/lang/fr_ca/langconfig.php
 share/moodle/install/lang/fr_ca/moodle.php
 share/moodle/install/lang/ga/error.php
 share/moodle/install/lang/ga/langconfig.php
+share/moodle/install/lang/ga/moodle.php
 share/moodle/install/lang/gd/langconfig.php
+share/moodle/install/lang/gd/moodle.php
 share/moodle/install/lang/gl/admin.php
 share/moodle/install/lang/gl/error.php
 share/moodle/install/lang/gl/install.php
@@ -2059,6 +2078,7 @@ share/moodle/install/lang/gl/moodle.php
 share/moodle/install/lang/gu/error.php
 share/moodle/install/lang/gu/langconfig.php
 share/moodle/install/lang/gu/moodle.php
+share/moodle/install/lang/ha/langconfig.php
 share/moodle/install/lang/he/admin.php
 share/moodle/install/lang/he/error.php
 share/moodle/install/lang/he/install.php
@@ -2123,6 +2143,8 @@ share/moodle/install/lang/ko/langconfig.php
 share/moodle/install/lang/ko/moodle.php
 share/moodle/install/lang/la/langconfig.php
 share/moodle/install/lang/la/moodle.php
+share/moodle/install/lang/lb/admin.php
+share/moodle/install/lang/lb/langconfig.php
 share/moodle/install/lang/lo/admin.php
 share/moodle/install/lang/lo/install.php
 share/moodle/install/lang/lo/langconfig.php
@@ -2169,6 +2191,7 @@ share/moodle/install/lang/ms/admin.php
 share/moodle/install/lang/ms/install.php
 share/moodle/install/lang/ms/langconfig.php
 share/moodle/install/lang/ms/moodle.php
+share/moodle/install/lang/my/langconfig.php
 share/moodle/install/lang/ne/langconfig.php
 share/moodle/install/lang/nl/admin.php
 share/moodle/install/lang/nl/error.php
@@ -2185,6 +2208,7 @@ share/moodle/install/lang/no/moodle.php
 share/moodle/install/lang/no_gr/langconfig.php
 share/moodle/install/lang/no_gr/moodle.php
 share/moodle/install/lang/oc_es/langconfig.php
+share/moodle/install/lang/pan/langconfig.php
 share/moodle/install/lang/pl/admin.php
 share/moodle/install/lang/pl/error.php
 share/moodle/install/lang/pl/install.php
@@ -2270,8 +2294,11 @@ share/moodle/install/lang/ta_lk/install.php
 share/moodle/install/lang/ta_lk/langconfig.php
 share/moodle/install/lang/ta_lk/moodle.php
 share/moodle/install/lang/te/admin.php
+share/moodle/install/lang/te/error.php
+share/moodle/install/lang/te/install.php
 share/moodle/install/lang/te/langconfig.php
 share/moodle/install/lang/te/moodle.php
+share/moodle/install/lang/tg/admin.php
 share/moodle/install/lang/tg/error.php
 share/moodle/install/lang/tg/install.php
 share/moodle/install/lang/tg/langconfig.php
@@ -2297,6 +2324,7 @@ share/moodle/install/lang/tr/install.php
 share/moodle/install/lang/tr/langconfig.php
 share/moodle/install/lang/tr/moodle.php
 share/moodle/install/lang/tt/langconfig.php
+share/moodle/install/lang/uk/admin.php
 share/moodle/install/lang/uk/install.php
 share/moodle/install/lang/uk/langconfig.php
 share/moodle/install/lang/uk/moodle.php
@@ -2307,6 +2335,7 @@ share/moodle/install/lang/uz/install.php
 share/moodle/install/lang/uz/langconfig.php
 share/moodle/install/lang/uz/moodle.php
 share/moodle/install/lang/vi/admin.php
+share/moodle/install/lang/vi/error.php
 share/moodle/install/lang/vi/install.php
 share/moodle/install/lang/vi/langconfig.php
 share/moodle/install/lang/vi/moodle.php
@@ -4173,6 +4202,7 @@ share/moodle/lib/testing/generator/component_generator_base.php
 share/moodle/lib/testing/generator/data_generator.php
 share/moodle/lib/testing/generator/lib.php
 share/moodle/lib/testing/generator/module_generator.php
+share/moodle/lib/testing/generator/repository_generator.php
 share/moodle/lib/testing/lib.php
 share/moodle/lib/testing/tests/generator_test.php
 share/moodle/lib/tests/accesslib_test.php
@@ -4187,6 +4217,7 @@ share/moodle/lib/tests/behat/behat_permissions.php
 share/moodle/lib/tests/behat/behat_transformations.php
 share/moodle/lib/tests/blocklib_test.php
 share/moodle/lib/tests/code_test.php
+share/moodle/lib/tests/completionlib_advanced_test.php
 share/moodle/lib/tests/completionlib_test.php
 share/moodle/lib/tests/componentlib_test.php
 share/moodle/lib/tests/conditionlib_test.php
@@ -4195,6 +4226,7 @@ share/moodle/lib/tests/coursecatlib_test.php
 share/moodle/lib/tests/csslib_test.php
 share/moodle/lib/tests/csvclass_test.php
 share/moodle/lib/tests/datalib_test.php
+share/moodle/lib/tests/environment_test.php
 share/moodle/lib/tests/eventslib_test.php
 share/moodle/lib/tests/externallib_test.php
 share/moodle/lib/tests/filelib_test.php
@@ -4378,7 +4410,9 @@ share/moodle/lib/yui/build/moodle-core-tooltip/moodle-core-tooltip.js
 share/moodle/lib/yui/dragdrop/dragdrop.js
 share/moodle/lib/yui/license.txt
 share/moodle/lib/yui/src/blocks/build.json
+share/moodle/lib/yui/src/blocks/js/blockregion.js
 share/moodle/lib/yui/src/blocks/js/blocks.js
+share/moodle/lib/yui/src/blocks/js/manager.js
 share/moodle/lib/yui/src/blocks/meta/blocks.json
 share/moodle/lib/yui/src/chooserdialogue/build.json
 share/moodle/lib/yui/src/chooserdialogue/js/chooserdialogue.js
@@ -10217,7 +10251,8 @@ share/moodle/question/type/multichoice/question.php
 share/moodle/question/type/multichoice/questiontype.php
 share/moodle/question/type/multichoice/renderer.php
 share/moodle/question/type/multichoice/styles.css
-share/moodle/question/type/multichoice/tests/question_test.php
+share/moodle/question/type/multichoice/tests/question_multi_test.php
+share/moodle/question/type/multichoice/tests/question_single_test.php
 share/moodle/question/type/multichoice/tests/questiontype_test.php
 share/moodle/question/type/multichoice/tests/upgradelibnewqe_test.php
 share/moodle/question/type/multichoice/tests/walkthrough_test.php
@@ -10412,16 +10447,19 @@ share/moodle/repository/alfresco/db/access.php
 share/moodle/repository/alfresco/lang/en/repository_alfresco.php
 share/moodle/repository/alfresco/lib.php
 share/moodle/repository/alfresco/pix/icon.png
+share/moodle/repository/alfresco/tests/generator/lib.php
 share/moodle/repository/alfresco/version.php
 share/moodle/repository/boxnet/db/access.php
 share/moodle/repository/boxnet/lang/en/repository_boxnet.php
 share/moodle/repository/boxnet/lib.php
 share/moodle/repository/boxnet/pix/icon.png
+share/moodle/repository/boxnet/tests/generator/lib.php
 share/moodle/repository/boxnet/version.php
 share/moodle/repository/coursefiles/db/access.php
 share/moodle/repository/coursefiles/lang/en/repository_coursefiles.php
 share/moodle/repository/coursefiles/lib.php
 share/moodle/repository/coursefiles/pix/icon.png
+share/moodle/repository/coursefiles/tests/generator/lib.php
 share/moodle/repository/coursefiles/version.php
 share/moodle/repository/draftfiles_ajax.php
 share/moodle/repository/draftfiles_manager.php
@@ -10431,6 +10469,7 @@ share/moodle/repository/dropbox/lang/en/repository_dropbox.php
 share/moodle/repository/dropbox/lib.php
 share/moodle/repository/dropbox/locallib.php
 share/moodle/repository/dropbox/pix/icon.png
+share/moodle/repository/dropbox/tests/generator/lib.php
 share/moodle/repository/dropbox/thumbnail.php
 share/moodle/repository/dropbox/version.php
 share/moodle/repository/equella/callback.php
@@ -10438,6 +10477,7 @@ share/moodle/repository/equella/db/access.php
 share/moodle/repository/equella/lang/en/repository_equella.php
 share/moodle/repository/equella/lib.php
 share/moodle/repository/equella/pix/icon.png
+share/moodle/repository/equella/tests/generator/lib.php
 share/moodle/repository/equella/version.php
 share/moodle/repository/filepicker.js
 share/moodle/repository/filepicker.php
@@ -10445,23 +10485,27 @@ share/moodle/repository/filesystem/db/access.php
 share/moodle/repository/filesystem/lang/en/repository_filesystem.php
 share/moodle/repository/filesystem/lib.php
 share/moodle/repository/filesystem/pix/icon.png
+share/moodle/repository/filesystem/tests/generator/lib.php
 share/moodle/repository/filesystem/version.php
 share/moodle/repository/flickr/db/access.php
 share/moodle/repository/flickr/lang/en/repository_flickr.php
 share/moodle/repository/flickr/lib.php
 share/moodle/repository/flickr/pix/icon.png
+share/moodle/repository/flickr/tests/generator/lib.php
 share/moodle/repository/flickr/version.php
 share/moodle/repository/flickr_public/db/access.php
 share/moodle/repository/flickr_public/image.php
 share/moodle/repository/flickr_public/lang/en/repository_flickr_public.php
 share/moodle/repository/flickr_public/lib.php
 share/moodle/repository/flickr_public/pix/icon.png
+share/moodle/repository/flickr_public/tests/generator/lib.php
 share/moodle/repository/flickr_public/version.php
 share/moodle/repository/googledocs/db/access.php
 share/moodle/repository/googledocs/db/upgrade.php
 share/moodle/repository/googledocs/lang/en/repository_googledocs.php
 share/moodle/repository/googledocs/lib.php
 share/moodle/repository/googledocs/pix/icon.png
+share/moodle/repository/googledocs/tests/generator/lib.php
 share/moodle/repository/googledocs/version.php
 share/moodle/repository/lib.php
 share/moodle/repository/local/db/access.php
@@ -10469,18 +10513,21 @@ share/moodle/repository/local/db/install.php
 share/moodle/repository/local/lang/en/repository_local.php
 share/moodle/repository/local/lib.php
 share/moodle/repository/local/pix/icon.png
+share/moodle/repository/local/tests/generator/lib.php
 share/moodle/repository/local/version.php
 share/moodle/repository/manage_instances.php
 share/moodle/repository/merlot/db/access.php
 share/moodle/repository/merlot/lang/en/repository_merlot.php
 share/moodle/repository/merlot/lib.php
 share/moodle/repository/merlot/pix/icon.png
+share/moodle/repository/merlot/tests/generator/lib.php
 share/moodle/repository/merlot/version.php
 share/moodle/repository/picasa/db/access.php
 share/moodle/repository/picasa/db/upgrade.php
 share/moodle/repository/picasa/lang/en/repository_picasa.php
 share/moodle/repository/picasa/lib.php
 share/moodle/repository/picasa/pix/icon.png
+share/moodle/repository/picasa/tests/generator/lib.php
 share/moodle/repository/picasa/version.php
 share/moodle/repository/recent/db/access.php
 share/moodle/repository/recent/db/install.php
@@ -10489,6 +10536,7 @@ share/moodle/repository/recent/lib.php
 share/moodle/repository/recent/pix/icon.png
 share/moodle/repository/recent/tests/behat/add_recent.feature
 share/moodle/repository/recent/tests/behat/behat_repository_recent.php
+share/moodle/repository/recent/tests/generator/lib.php
 share/moodle/repository/recent/version.php
 share/moodle/repository/repository_ajax.php
 share/moodle/repository/repository_callback.php
@@ -10498,12 +10546,14 @@ share/moodle/repository/s3/db/access.php
 share/moodle/repository/s3/lang/en/repository_s3.php
 share/moodle/repository/s3/lib.php
 share/moodle/repository/s3/pix/icon.png
+share/moodle/repository/s3/tests/generator/lib.php
 share/moodle/repository/s3/version.php
 share/moodle/repository/tests/behat/behat_filepicker.php
 share/moodle/repository/tests/behat/cancel_add_file.feature
 share/moodle/repository/tests/behat/create_folders.feature
 share/moodle/repository/tests/behat/delete_files.feature
 share/moodle/repository/tests/behat/zip_and_unzip.feature
+share/moodle/repository/tests/generator_test.php
 share/moodle/repository/tests/repository_test.php
 share/moodle/repository/upgrade.txt
 share/moodle/repository/upload/db/access.php
@@ -10513,6 +10563,7 @@ share/moodle/repository/upload/lib.php
 share/moodle/repository/upload/pix/icon.png
 share/moodle/repository/upload/tests/behat/behat_repository_upload.php
 share/moodle/repository/upload/tests/behat/upload_file.feature
+share/moodle/repository/upload/tests/generator/lib.php
 share/moodle/repository/upload/version.php
 share/moodle/repository/url/db/access.php
 share/moodle/repository/url/db/install.php
@@ -10520,23 +10571,27 @@ share/moodle/repository/url/lang/en/repository_url.php
 share/moodle/repository/url/lib.php
 share/moodle/repository/url/locallib.php
 share/moodle/repository/url/pix/icon.png
+share/moodle/repository/url/tests/generator/lib.php
 share/moodle/repository/url/version.php
 share/moodle/repository/user/db/access.php
 share/moodle/repository/user/db/install.php
 share/moodle/repository/user/lang/en/repository_user.php
 share/moodle/repository/user/lib.php
 share/moodle/repository/user/pix/icon.png
+share/moodle/repository/user/tests/generator/lib.php
 share/moodle/repository/user/version.php
 share/moodle/repository/webdav/db/access.php
 share/moodle/repository/webdav/lang/en/repository_webdav.php
 share/moodle/repository/webdav/lib.php
 share/moodle/repository/webdav/pix/icon.png
+share/moodle/repository/webdav/tests/generator/lib.php
 share/moodle/repository/webdav/version.php
 share/moodle/repository/wikimedia/db/access.php
 share/moodle/repository/wikimedia/db/install.php
 share/moodle/repository/wikimedia/lang/en/repository_wikimedia.php
 share/moodle/repository/wikimedia/lib.php
 share/moodle/repository/wikimedia/pix/icon.png
+share/moodle/repository/wikimedia/tests/generator/lib.php
 share/moodle/repository/wikimedia/version.php
 share/moodle/repository/wikimedia/wikimedia.php
 share/moodle/repository/youtube/db/access.php
@@ -10544,6 +10599,7 @@ share/moodle/repository/youtube/db/install.php
 share/moodle/repository/youtube/lang/en/repository_youtube.php
 share/moodle/repository/youtube/lib.php
 share/moodle/repository/youtube/pix/icon.png
+share/moodle/repository/youtube/tests/generator/lib.php
 share/moodle/repository/youtube/version.php
 share/moodle/rss/file.php
 share/moodle/rss/index.html
@@ -10898,7 +10954,11 @@ share/moodle/theme/bootstrapbase/config.php
 share/moodle/theme/bootstrapbase/javascript/html5shiv.js
 share/moodle/theme/bootstrapbase/javascript/moodlebootstrap.js
 share/moodle/theme/bootstrapbase/lang/en/theme_bootstrapbase.php
-share/moodle/theme/bootstrapbase/layout/general.php
+share/moodle/theme/bootstrapbase/layout/columns1.php
+share/moodle/theme/bootstrapbase/layout/columns2.php
+share/moodle/theme/bootstrapbase/layout/columns3.php
+share/moodle/theme/bootstrapbase/layout/embedded.php
+share/moodle/theme/bootstrapbase/layout/secure.php
 share/moodle/theme/bootstrapbase/less/README
 share/moodle/theme/bootstrapbase/less/bootstrap/accordion.less
 share/moodle/theme/bootstrapbase/less/bootstrap/alerts.less
@@ -10958,6 +11018,7 @@ share/moodle/theme/bootstrapbase/less/moodle/grade.less
 share/moodle/theme/bootstrapbase/less/moodle/message.less
 share/moodle/theme/bootstrapbase/less/moodle/modules.less
 share/moodle/theme/bootstrapbase/less/moodle/question.less
+share/moodle/theme/bootstrapbase/less/moodle/reports.less
 share/moodle/theme/bootstrapbase/less/moodle/responsive.less
 share/moodle/theme/bootstrapbase/less/moodle/tables.less
 share/moodle/theme/bootstrapbase/less/moodle/undo.less
@@ -11079,7 +11140,11 @@ share/moodle/theme/canvas/version.php
 share/moodle/theme/clean/README.txt
 share/moodle/theme/clean/config.php
 share/moodle/theme/clean/lang/en/theme_clean.php
-share/moodle/theme/clean/layout/general.php
+share/moodle/theme/clean/layout/columns1.php
+share/moodle/theme/clean/layout/columns2.php
+share/moodle/theme/clean/layout/columns3.php
+share/moodle/theme/clean/layout/embedded.php
+share/moodle/theme/clean/layout/secure.php
 share/moodle/theme/clean/lib.php
 share/moodle/theme/clean/pix/favicon.ico
 share/moodle/theme/clean/pix/screenshot.jpg
@@ -11490,7 +11555,7 @@ share/moodle/theme/sky_high/pix/body.jpg
 share/moodle/theme/sky_high/pix/breadcrumb.png
 share/moodle/theme/sky_high/pix/dock.jpg
 share/moodle/theme/sky_high/pix/favicon.ico
-share/moodle/theme/sky_high/pix/footer-rtl.jpg
+share/moodle/theme/sky_high/pix/footer-rtl.png
 share/moodle/theme/sky_high/pix/footer.png
 share/moodle/theme/sky_high/pix/header-rtl.jpg
 share/moodle/theme/sky_high/pix/header.gif
