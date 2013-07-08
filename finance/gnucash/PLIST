@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2012/09/13 14:12:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2013/07/08 09:18:51 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -199,6 +199,7 @@ include/gnucash/policy.h
 include/gnucash/pricecell.h
 include/gnucash/print-session.h
 include/gnucash/qof-gobject.h
+include/gnucash/qof-string-cache.h
 include/gnucash/qof.h
 include/gnucash/qofbackend-p.h
 include/gnucash/qofbackend.h
