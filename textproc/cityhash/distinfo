@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/02 11:22:21 rodent Exp $
+$NetBSD: distinfo,v 1.2 2013/07/08 00:56:45 rodent Exp $
 
 SHA1 (cityhash-1.1.1.tar.gz) = 74342b9161bc762e4c14627a9281bef2d3cb5eed
 RMD160 (cityhash-1.1.1.tar.gz) = bac8c85686a8153afcc1defd3c93021b1da56f40
 Size (cityhash-1.1.1.tar.gz) = 376456 bytes
+SHA1 (patch-src_city.cc) = 9319333f53808ca6396876630c5d2c08bca15f79
