@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/07/03 08:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/07/08 08:50:09 wiz Exp $
 
-DISTNAME=	distribute-0.6.46
+DISTNAME=	distribute-0.6.49
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/d/distribute/
