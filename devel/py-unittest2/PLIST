@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/08 04:52:48 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/08 16:17:20 wiz Exp $
 bin/unit2
-bin/unit2-2.7
+bin/unit2-${PYVERSSUFFIX}
 bin/unit2.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
