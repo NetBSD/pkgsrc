@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12383 2013/07/08 08:30:12 wiz Exp $
+$NetBSD: TODO,v 1.12384 2013/07/08 08:48:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
+	o apache2-2.0.65
+	o apache22-2.2.25
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
@@ -489,7 +491,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eog-plugins-3.6.1
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
-	o eric4-4.5.11
+	o eric4-4.5.13
 	o eric5-5.3.4
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -599,6 +601,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.4.13
 	o gnucash-docs-2.4.2
 	o gnuchess-6.0.3
 	o gob-2.0.19
@@ -855,6 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Perl-Tidy-20121207
 	o p5-cairo-1.100
 	o p5-clutter-1.110
+	o p5-glib2-1.301
 	o p5-gtk2-1.300
 	o p5-pango-1.224
 	o p5-sybperl-2.18
@@ -913,9 +917,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-beets-1.2.1
 	o py-dateutil-2.0
+	o py-distribute-0.6.49
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
+	o py-icalendar-3.5
 	o py-moin-1.9.7
 	o py-qt5-5.0.0
 	o py-simplejson-3.3.0
@@ -1115,6 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
+	o x264-devel-20130706
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.5
