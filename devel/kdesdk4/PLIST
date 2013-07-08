@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/04/03 10:52:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/07/08 19:50:15 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -476,6 +476,7 @@ lib/kde4/kuiviewerpart.so
 lib/kde4/libkbytearrayedit.so
 lib/kde4/oktetapart.so
 lib/kde4/plugins/designer/oktetadesignerplugin.so
+lib/kde4/pothumbnail.so
 lib/kde4/quithumbnail.so
 lib/libkasten2controllers.so
 lib/libkasten2controllers.so.0.2.0
@@ -1118,6 +1119,7 @@ share/kde/config.kcfg/fileviewhgpluginsettings.kcfg
 share/kde/config.kcfg/fileviewsvnpluginsettings.kcfg
 share/kde/config.kcfg/kapptemplate.kcfg
 share/kde/config.kcfg/lokalize.kcfg
+share/kde/config.kcfg/pocreatorsettings.kcfg
 share/kde/config.kcfg/structviewpreferences.kcfg
 share/kde/config/okteta-structures.knsrc
 share/kde4/services/ServiceMenus/subversion.desktop
@@ -1136,6 +1138,7 @@ share/kde4/services/komparepart.desktop
 share/kde4/services/kuiviewer_part.desktop
 share/kde4/services/oktetapart.desktop
 share/kde4/services/perldoc.protocol
+share/kde4/services/pothumbnail.desktop
 share/kde4/services/svn+file.protocol
 share/kde4/services/svn+http.protocol
 share/kde4/services/svn+https.protocol
