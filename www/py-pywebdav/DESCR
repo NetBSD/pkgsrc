@@ -1,0 +1,6 @@
+Python WebDAV implementation (level 1 and 2) that features a library that
+enables you to integrate WebDAV server capabilities to your application.
+
+A fully working example on how to use the library is included. You can find a
+server in the DAVServer package. This server is fully functional and can even
+be run as daemon.
