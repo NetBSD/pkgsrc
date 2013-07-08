@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1758 2013/07/07 15:05:42 rodent Exp $
+# $NetBSD: Makefile,v 1.1759 2013/07/08 04:53:58 richard Exp $
 #
 
 COMMENT=	Development utilities
@@ -1431,6 +1431,7 @@ SUBDIR+=	py-tabular
 SUBDIR+=	py-testtools
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
+SUBDIR+=	py-unittest2
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-virtualenv
