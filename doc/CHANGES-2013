@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2483 2013/07/08 08:49:26 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2484 2013/07/08 08:50:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3741,3 +3741,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/x48 to 0.6.4 [he 2013-07-08]
 	Updated x11/xterm to 295 [wiz 2013-07-08]
 	Updated time/py-icalendar to 3.5 [wiz 2013-07-08]
+	Updated devel/py-distribute to 0.6.49 [wiz 2013-07-08]
