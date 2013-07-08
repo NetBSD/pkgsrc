@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/08 07:53:11 jklos Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/07/08 17:49:32 jklos Exp $
 bin/libxl-save-helper
 bin/lsevtchn
 bin/pygrub
@@ -817,9 +817,3 @@ share/xen/qemu/vgabios-cirrus.bin
 share/xen/qemu/vgabios.bin
 share/xen/qemu/video.x
 @pkgdir share/examples/xen/auto
-etc/qemu/target-x86_64.conf
-share/doc/qemu/qemu-doc.html
-share/doc/qemu/qemu-tech.html
-share/man/man1/qemu-img.1
-share/man/man1/qemu.1
-share/man/man8/qemu-nbd.8
