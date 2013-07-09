@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2013/06/28 19:30:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.111 2013/07/09 17:00:58 tsutsui Exp $
 
-DISTNAME=		qemu-1.4.2
-PKGREVISION=		1
+DISTNAME=		qemu-1.5.1
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -40,38 +39,6 @@ CONF_FILES=		${EGDIR}/target-x86_64.conf \
 EGDIR=			${PREFIX}/share/examples/qemu
 INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
 PKG_SYSCONFSUBDIR=	qemu
-
-# Avoid clash with system include file:
-pre-patch:
-	mv ${WRKSRC}/audio/audio.h ${WRKSRC}/audio/qaudio.h
-
-SUBST_CLASSES+=		qaudio
-SUBST_STAGE.qaudio=	pre-configure
-SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
-			audio/*.c \
-			hw/ac97.c \
-			hw/adlib.c \
-			hw/cs4231a.c \
-			hw/es1370.c \
-			hw/gus.c \
-			hw/hda-audio.c \
-			hw/lm4549.c \
-			hw/lm4549.h \
-			hw/marvell_88w8618_audio.c \
-			hw/milkymist-ac97.c \
-			hw/mips_fulong2e.c \
-			hw/omap2.c \
-			hw/palm.c \
-			hw/pcspk.c \
-			hw/sb16.c \
-			hw/spitz.c \
-			hw/tsc210x.c \
-			hw/usb/dev-audio.c \
-			hw/wm8750.c \
-			hw/z2.c \
-			ui/vnc.h
-SUBST_SED.qaudio=	-e s,audio.h\",qaudio.h\",g
-SUBST_MESSAGE.qaudio=	Fixing audio.h confusion
 
 REPLACE_PERL+=		scripts/texi2pod.pl
 

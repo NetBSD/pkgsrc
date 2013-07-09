@@ -1,9 +1,9 @@
-$NetBSD: patch-memory.c,v 1.4 2013/06/16 18:27:25 tsutsui Exp $
+$NetBSD: patch-memory.c,v 1.5 2013/07/09 17:00:58 tsutsui Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
 
---- memory.c.orig	2013-05-24 13:37:57.000000000 +0000
+--- memory.c.orig	2013-06-26 21:47:29.000000000 +0000
 +++ memory.c
 @@ -313,7 +313,7 @@ static void memory_region_read_accessor(
      if (mr->flush_coalesced_mmio) {
