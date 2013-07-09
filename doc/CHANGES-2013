@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2501 2013/07/09 17:13:44 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2502 2013/07/09 17:25:29 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3762,3 +3762,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/qemu to 1.5.1 [tsutsui 2013-07-09]
 	Updated www/py-werkzeug to 0.9.1 [kleink 2013-07-09]
 	Updated www/py-werkzeug-docs to 0.9.1 [kleink 2013-07-09]
+	Updated www/py-flask to 0.10.1 [kleink 2013-07-09]
