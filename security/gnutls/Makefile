@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2013/07/08 08:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2013/07/09 11:11:11 wiz Exp $
 
 DISTNAME=	gnutls-3.2.1
 CATEGORIES=	security devel
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--without-p11-kit
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=	--disable-openssl-compatibility
 CONFIGURE_ARGS+=	--disable-guile
+LDFLAGS.SunOS=		-lrt
 
 TEST_TARGET=		check
 INFO_FILES=		yes
