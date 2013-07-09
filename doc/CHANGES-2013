@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2491 2013/07/09 08:36:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2492 2013/07/09 10:25:01 he Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3749,3 +3749,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/apache-tomcat7 to 7.0.42 [ryoon 2013-07-08]
 	Updated mail/dovecot2-pigeonhole to 0.4.1 [taca 2013-07-08]
 	Updated net/wireshark to 1.10.0nb1 [wiz 2013-07-09]
+	Updated emulators/x48 to 0.6.4nb1 [he 2013-07-09]
