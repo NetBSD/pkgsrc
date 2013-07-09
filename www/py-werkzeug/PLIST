@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/16 23:12:06 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/07/09 17:11:42 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/werkzeug/__init__.py
 ${PYSITELIB}/werkzeug/__init__.pyc
 ${PYSITELIB}/werkzeug/__init__.pyo
+${PYSITELIB}/werkzeug/_compat.py
+${PYSITELIB}/werkzeug/_compat.pyc
+${PYSITELIB}/werkzeug/_compat.pyo
 ${PYSITELIB}/werkzeug/_internal.py
 ${PYSITELIB}/werkzeug/_internal.pyc
 ${PYSITELIB}/werkzeug/_internal.pyo
@@ -28,9 +31,6 @@ ${PYSITELIB}/werkzeug/contrib/iterio.pyo
 ${PYSITELIB}/werkzeug/contrib/jsrouting.py
 ${PYSITELIB}/werkzeug/contrib/jsrouting.pyc
 ${PYSITELIB}/werkzeug/contrib/jsrouting.pyo
-${PYSITELIB}/werkzeug/contrib/kickstart.py
-${PYSITELIB}/werkzeug/contrib/kickstart.pyc
-${PYSITELIB}/werkzeug/contrib/kickstart.pyo
 ${PYSITELIB}/werkzeug/contrib/limiter.py
 ${PYSITELIB}/werkzeug/contrib/limiter.pyc
 ${PYSITELIB}/werkzeug/contrib/limiter.pyo
@@ -103,9 +103,6 @@ ${PYSITELIB}/werkzeug/security.pyo
 ${PYSITELIB}/werkzeug/serving.py
 ${PYSITELIB}/werkzeug/serving.pyc
 ${PYSITELIB}/werkzeug/serving.pyo
-${PYSITELIB}/werkzeug/templates.py
-${PYSITELIB}/werkzeug/templates.pyc
-${PYSITELIB}/werkzeug/templates.pyo
 ${PYSITELIB}/werkzeug/test.py
 ${PYSITELIB}/werkzeug/test.pyc
 ${PYSITELIB}/werkzeug/test.pyo
