@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2013/07/04 21:33:14 adam Exp $
+# $NetBSD: Makefile,v 1.105 2013/07/09 08:36:38 wiz Exp $
 
 DISTNAME=	wireshark-1.10.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -32,6 +33,23 @@ CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
 
 PTHREAD_OPTS+=		require
 
+PYTHON_FOR_BUILD_ONLY=	yes
+REPLACE_PYTHON+=	help/faq.py
+REPLACE_PYTHON+=	tools/asn2deb
+REPLACE_PYTHON+=	tools/asn2wrs.py
+REPLACE_PYTHON+=	tools/dfilter-test.py
+REPLACE_PYTHON+=	tools/ftsanity.py
+REPLACE_PYTHON+=	tools/html2text.py
+REPLACE_PYTHON+=	tools/idl2deb
+REPLACE_PYTHON+=	tools/indexcap.py
+REPLACE_PYTHON+=	tools/make-dissector-reg.py
+REPLACE_PYTHON+=	tools/make-tap-reg.py
+REPLACE_PYTHON+=	tools/msnchat
+REPLACE_PYTHON+=	tools/ncp2222.py
+REPLACE_PYTHON+=	tools/netscreen2dump.py
+REPLACE_PYTHON+=	tools/pkt-from-core.py
+REPLACE_PYTHON+=	tools/rdps.py
+
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
@@ -51,5 +69,6 @@ BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
