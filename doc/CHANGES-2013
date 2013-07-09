@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2490 2013/07/08 15:25:26 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2491 2013/07/09 08:36:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3748,3 +3748,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/moodle to 2.5.1 [wen 2013-07-08]
 	Updated www/apache-tomcat7 to 7.0.42 [ryoon 2013-07-08]
 	Updated mail/dovecot2-pigeonhole to 0.4.1 [taca 2013-07-08]
+	Updated net/wireshark to 1.10.0nb1 [wiz 2013-07-09]
