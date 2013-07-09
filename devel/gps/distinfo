@@ -1,20 +1,14 @@
-$NetBSD: distinfo,v 1.7 2012/07/08 20:23:50 marino Exp $
+$NetBSD: distinfo,v 1.8 2013/07/09 10:16:02 marino Exp $
 
-SHA1 (gps-5.0.1.tar.bz2) = 5fc7fba2d80b2b405c60b0a4ecc6c4d2792a3829
-RMD160 (gps-5.0.1.tar.bz2) = 17d90cd493cca50a70ebb4118b69ebba759b964a
-Size (gps-5.0.1.tar.bz2) = 9303980 bytes
-SHA1 (patch-aa) = 4a590aa2a38797548a44e3974f3534aa36138ab0
-SHA1 (patch-ab) = 59c13a902436f3953a467b914e8b3c01443263c6
-SHA1 (patch-ac) = 4c350aa10b82aef2baaf29465ffec30942ed6c0d
-SHA1 (patch-ada__module_core_src_ada__semantic__tree-generics.adb) = 2992967f3aa4fce3eb85cd67033d8f4f96c768eb
-SHA1 (patch-ae) = 30d8f07a0115ddd6820f907806eaf41360297f67
-SHA1 (patch-af) = b54e4b5076bbdcb67953856d668c9e9bde72f3ea
-SHA1 (patch-ak) = 415e7a0017ce22fa28657dcafabc6ebc7c151582
-SHA1 (patch-al) = cf6fb268ebce1895c22686c987d24a4f031aba01
-SHA1 (patch-am) = bb0257d86161abd39d9d8a952a0a20d921d401dc
-SHA1 (patch-an) = 9a12bfd2950fe4fc06a72f5970ff125cdddb6f82
-SHA1 (patch-distrib_gnat__switches_awk) = d3e3ad94662fa3a8a32237e0cd630d071f153267
-SHA1 (patch-gps_gps.gpr) = 2f6dd86b6588fcade4618bf5189894b092f4a9d8
-SHA1 (patch-prj_editor_src_gpr__creation.adb) = 2b1a19e491468e4a5190d52aa8eb3d93e3dcc8c1
-SHA1 (patch-refactoring_core_src_refactoring-services.adb) = 6753f334182696e38aa31c298d5bf9a957ce83b8
-SHA1 (patch-toolchains_editor_core_src_toolchains-parsers.ads) = a8443c4204cf23757b42d3330e52b46b80d52ec3
+SHA1 (gps-5.2.1-1-src.tgz) = 5e69d59e2e64a3ec5a35c7fb0cb29d0950e156e7
+RMD160 (gps-5.2.1-1-src.tgz) = 2ca95998ecc5eb7930e0b645cc550e99fe144177
+Size (gps-5.2.1-1-src.tgz) = 27925475 bytes
+SHA1 (patch-Makefile.in) = 2920de21e7e0f65c76fe406fd7f47abc80dbaf38
+SHA1 (patch-common_tty_terminals.c) = b85725f52f929dae0f3a1b44fe5166e576fed325
+SHA1 (patch-docs_Makefile.in) = 2463ed0b59b2806ffe84adb9a949fc43aea13a6a
+SHA1 (patch-gnatlib-gnat_src-mlib-utl.adb) = f21bde7ca7e379a11ebbd11bc499ca487d6fe9bf
+SHA1 (patch-gnatlib_aclocal.m4) = 9dc1e6ee113d2b0e86ddc719dcec6fac634ed4b9
+SHA1 (patch-gnatlib_configure) = b1daedfcd766bf4713464988bb1d7977364e84d2
+SHA1 (patch-gnatlib_gnatcoll__shared.gpr.in) = 4c0d7544ea6adeafce9d2460bf347dfeb09ef286
+SHA1 (patch-gnatlib_src_gnatcoll__readline.gpr.in) = c56494c1d5ab68d22ae967b4f686a73b7dbaccf0
+SHA1 (patch-gps_gps.gpr) = 708943c00a8e35a22ab57d1fc0bf7978e7ed6311

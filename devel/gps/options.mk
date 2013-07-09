@@ -1,22 +1,30 @@
-# $NetBSD: options.mk,v 1.4 2013/04/08 11:17:11 rodent Exp $
+# $NetBSD: options.mk,v 1.5 2013/07/09 10:16:02 marino Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gps
-PKG_SUPPORTED_OPTIONS=	syslog python sqlite
-PKG_SUGGESTED_OPTIONS=	syslog sqlite
-
-PLIST_VARS+=	pysupport
+PKG_SUPPORTED_OPTIONS=	syslog sqlite readline python pgsql
+PKG_SUGGESTED_OPTIONS=	syslog sqlite readline python
 
 .include "../../mk/bsd.options.mk"
+
+
+################
+##  READLINE  ##
+################
+
+.if !empty(PKG_OPTIONS:Mreadline)
+CONFIGURE_ARGS+= --enable-gpl
+.include "../../devel/readline/buildlink3.mk"
+.else
+CONFIGURE_ARGS+= --disable-readline
+.endif
 
 
 ######################
 ##  SYSLOG SUPPORT  ##
 ######################
 
-.if !empty(PKG_OPTIONS:Msyslog)
-CONFIGURE_ARGS+= --enable-syslog=yes
-.else
-CONFIGURE_ARGS+= --enable-syslog=no
+.if empty(PKG_OPTIONS:Msyslog)
+CONFIGURE_ARGS+= --disable-syslog
 .endif
 
 
@@ -25,8 +33,9 @@ CONFIGURE_ARGS+= --enable-syslog=no
 ######################
 
 .if !empty(PKG_OPTIONS:Msqlite)
-CONFIGURE_ARGS+= --with-sqlite=${PREFIX}
-.include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+= --with-sqlite=embedded
+.else
+CONFIGURE_ARGS+= --without-sqlite
 .endif
 
 
@@ -36,7 +45,7 @@ CONFIGURE_ARGS+= --with-sqlite=${PREFIX}
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 CONFIGURE_ARGS+= --with-postgresql=${PREFIX}
-.include "../../databases/postgresql90-client/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 
@@ -44,22 +53,13 @@ CONFIGURE_ARGS+= --with-postgresql=${PREFIX}
 ##  PYTHON / PYGTK SUPPORT  ##
 ##############################
 
-#
-# Something is wrong with the pkgsrc versions of Python.  Both
-# versions 2.6 and 2.7 will cause a core dump of gps because they
-# contain undefined symbols in their dynamically loaded libraries.
-# Since no version of Python < 3 can work with GPS, this option
-# has been removed from the list.
-#
-
-.if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+= --with-python=${PREFIX}
-CONFIGURE_ARGS+= --enable-shared-python=no
-CONFIGURE_ARGS+= --enable-pygtk
-PLIST.pysupport= yes
+# It appears that GPS can no longer be built without python
+# Leave it as a (default) option until confirmed
+.if empty(PKG_OPTIONS:Mpython)
+CONFIGURE_ARGS+= --without-python --disable-pygtk --disable-pygobject
+.else
+MY_CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ARGS+=	--with-python=${PREFIX}
 .include "../../lang/python/pyversion.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= --without-python
-CONFIGURE_ARGS+= --disable-pygtk
 .endif
