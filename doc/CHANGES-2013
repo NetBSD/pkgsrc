@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2504 2013/07/09 18:23:01 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2505 2013/07/09 18:38:09 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3765,3 +3765,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask to 0.10.1 [kleink 2013-07-09]
 	Updated devel/tradcpp to 0.3.1 [dholland 2013-07-09]
 	Updated www/py-flask-wtf to 0.8.4 [kleink 2013-07-09]
+	Updated www/py-flask-login to 0.2.5 [kleink 2013-07-09]
