@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2013/01/09 19:02:42 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/09 16:55:41 kleink Exp $
 
-DISTNAME=	blinker-1.2
+DISTNAME=	blinker-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/blinker/
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://discorporate.us/projects/Blinker/
+HOMEPAGE=	http://pythonhosted.org/blinker/
 COMMENT=	Fast, simple object-to-object and broadcast signaling
 LICENSE=	mit
 
