@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/07/08 08:37:10 he Exp $
+# $NetBSD: Makefile,v 1.17 2013/07/09 10:24:22 he Exp $
 #
 
 DISTNAME=	x48-0.6.4
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x48.berlios/}
 DISTFILES=	${PKGNAME}${EXTRACT_SUFX}
@@ -21,20 +22,22 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 DATADIR=	lib/x48
+APPDEFS=	lib/X11/app-defaults
 
 INSTALLATION_DIRS+=	share/doc/x48/romdump
 INSTALLATION_DIRS+=	${DATADIR}
-INSTALLATION_DIRS+=	lib/X11/app-defaults
+INSTALLATION_DIRS+=	${APPDEFS}
 
 CONFIGURE_ARGS=	--disable-shm
 
 CPPFLAGS+=	-DHAVE_STDLIB
+CPPFLAGS+=	-DX11APPDEFS=\"${PREFIX}/${APPDEFS}\"
 
 SUBST_CLASSES=	fix-ad
 SUBST_STAGE.fix-ad=	post-configure
 SUBST_MESSAGE.fix-ad=	Fix default rom path
-SUBST_FILES.fix-ad=	X48.ad
-SUBST_SED.fix-ad=	-e 's,"rom.dump,"${DATADIR}/gxrom-r,'
+SUBST_FILES.fix-ad=	src/X48.ad
+SUBST_SED.fix-ad=	-e 's,rom.dump,${PREFIX}/${DATADIR}/gxrom-r,'
 
 
 pre-configure:
