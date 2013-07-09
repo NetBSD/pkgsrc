@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/06/14 09:41:01 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/09 16:49:16 kleink Exp $
 
-DISTNAME=	itsdangerous-0.21
+DISTNAME=	itsdangerous-0.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	http://pypi.python.org/packages/source/i/itsdangerous/
