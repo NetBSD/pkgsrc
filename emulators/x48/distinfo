@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/07/08 08:37:10 he Exp $
+$NetBSD: distinfo,v 1.9 2013/07/09 10:24:22 he Exp $
 
 SHA1 (gxrom-r.bz2) = c60a83cd57681c3cb359f0cd2505ede686fdb4c8
 RMD160 (gxrom-r.bz2) = 1dafce5902310161cb60f3dde401941565fd031c
@@ -14,3 +14,4 @@ SHA1 (patch-configure.ac) = 55f1033b0f49e0a296290a1af83f6772e5783f0d
 SHA1 (patch-src_emulate.c) = 75a62b9038a07baff779ed7fad46252e276e69b0
 SHA1 (patch-src_global.h) = 48f076bdf72fb7a6df92e1bb961997fb3844ab30
 SHA1 (patch-src_serial.c) = 9b681d0d94ad53c9d770e54d56eddbda900627b1
+SHA1 (patch-src_x48_x11.c) = 4615a57f65e23f4352ea2717306f0095ef9464b0
