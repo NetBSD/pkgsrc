@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.121 2013/05/26 18:21:46 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.122 2013/07/09 21:06:12 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -133,6 +133,7 @@ INTERACTIVE_STAGE=      configure install
 	artistic artistic-2.0
 	boost-license
 	cc-by-sa-v3.0
+	cc0-1.0-universal
 	cddl-1.0
 	cpl-1.0
 	epl-v1.0
