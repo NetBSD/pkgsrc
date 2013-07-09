@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2492 2013/07/09 10:25:01 he Exp $
+$NetBSD: CHANGES-2013,v 1.2493 2013/07/09 10:55:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3750,3 +3750,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2-pigeonhole to 0.4.1 [taca 2013-07-08]
 	Updated net/wireshark to 1.10.0nb1 [wiz 2013-07-09]
 	Updated emulators/x48 to 0.6.4nb1 [he 2013-07-09]
+	Updated devel/xulrunner17 to 17.0.7 [ryoon 2013-07-09]
+	Updated www/firefox17 to 17.0.7 [ryoon 2013-07-09]
