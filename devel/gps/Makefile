@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2013/06/16 23:13:39 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/07/09 10:16:02 marino Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
-PKGREVISION=	20
 CATEGORIES=	devel
-MASTER_SITES=	http://downloads.dragonlace.net/src/ \
-		http://dragonlace.mirrors.ada.cx/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://downloads.dragonlace.net/src/
+DISTFILES=	gps-5.2.1-1-src.tgz
 
 MAINTAINER=	draco@marino.st
 HOMEPAGE=	http://www.adacore.com/home/products/gnatpro/toolsuite/gps/
@@ -16,20 +14,36 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake sed perl awk pkg-config
 
-GPS_VERSION=		5.0.1
+GPS_VERSION=		5.2.1
 USE_LANGUAGES=		c ada c++
 MY_CONFIGURE_ENV+=	ADA_PROJECT_PATH=${APP}
-MY_CONFIGURE_ENV+=	PYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
+MY_MAKE_ENV+=		PROCESSORS=${MAKE_JOBS} \
+			ADA_PROJECT_PATH=${APP}
 APP=			${PREFIX}/lib/gnat
+WRKSRC=			${WRKDIR}/gps-release-ide-${GPS_VERSION}-src
+MAKE_JOBS_SAFE=		yes
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-gmp=${PREFIX}
+CONFIGURE_ARGS+=	--disable-shared --with-gmp=${PREFIX}
+
+SUBST_CLASSES+= 	coll python
+SUBST_STAGE.coll=	post-patch
+SUBST_FILES.coll=	gnatlib/src/gnatcoll_readline.gpr.in
+SUBST_SED.coll=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_STAGE.python=	post-patch
+SUBST_FILES.python=	share/plug-ins/gps_utils/console_process.py
+SUBST_SED.python=	-e "s|/usr/bin/python|${PYTHONBIN}|"
+
+GENERATE_PLIST= cd ${DESTDIR}${PREFIX}; \
+		${FIND} * \( -type f -or -type l \) | ${SORT};
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} \
+		./configure ${CONFIGURE_ARGS}
+
 do-build:
-	cd ${WRKSRC} && ${SETENV} ADA_PROJECT_PATH=${APP} gmake default
+	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} gmake default 
 
 pre-install:
 .if !empty(PKG_OPTIONS:Mpython)
@@ -37,7 +51,16 @@ pre-install:
 	${PY_COMPILE_ALL} ${WRKSRC}/share/library
 .endif
 
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gps/html/users_guide/_sources
+	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gps/html/tutorial/_sources
+	cd ${DESTDIR}${PREFIX}; ${FIND} * -type d -empty -print | xargs rmdir
+
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+.include "../../lang/python/application.mk"
 .include "../../x11/gtkada/buildlink3.mk"
 .include "../../textproc/xmlada/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/gprbuild-aux/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

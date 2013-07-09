@@ -1,4 +1,6 @@
-$NetBSD: patch-gps_gps.gpr,v 1.2 2012/05/16 17:56:49 marino Exp $
+$NetBSD: patch-gps_gps.gpr,v 1.3 2013/07/09 10:16:02 marino Exp $
+
+Add binutils 2.22+ support
 
 --- gps/gps.gpr.orig	2012-01-28 15:08:25.689555000 +0000
 +++ gps/gps.gpr
