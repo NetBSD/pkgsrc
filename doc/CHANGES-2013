@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2499 2013/07/09 16:56:47 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2500 2013/07/09 17:02:40 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3759,3 +3759,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/py-gtk2 to 2.24.0nb14 [tsutsui 2013-07-09]
 	Updated security/py-itsdangerous to 0.22 [kleink 2013-07-09]
 	Updated devel/py-blinker to 1.3 [kleink 2013-07-09]
+	Updated emulators/qemu to 1.5.1 [tsutsui 2013-07-09]
