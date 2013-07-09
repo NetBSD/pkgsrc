@@ -1,8 +1,8 @@
-$NetBSD: patch-user-exec.c,v 1.1 2013/06/27 14:09:35 tsutsui Exp $
+$NetBSD: patch-user-exec.c,v 1.2 2013/07/09 17:00:58 tsutsui Exp $
 
 Add OS dependent code for NetBSD/arm.
 
---- user-exec.c.orig	2013-05-24 13:37:58.000000000 +0000
+--- user-exec.c.orig	2013-06-26 21:47:30.000000000 +0000
 +++ user-exec.c
 @@ -428,19 +428,31 @@ int cpu_signal_handler(int host_signum, 
  
