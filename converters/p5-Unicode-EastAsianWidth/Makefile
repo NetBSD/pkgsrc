@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/04 15:58:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/09 21:39:32 wiz Exp $
 
 DISTNAME=	Unicode-EastAsianWidth-1.33
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Unicode-EastAsianWidth/
 COMMENT=	Perl5 module that provides properties of East Asian characters
-#LICENSE=	cc0-1.0
+LICENSE=	cc0-1.0-universal
 
 PERL5_PACKLIST=	auto/Unicode/EastAsianWidth/.packlist
 
