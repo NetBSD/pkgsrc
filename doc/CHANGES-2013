@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2497 2013/07/09 15:52:32 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2498 2013/07/09 16:50:25 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3757,3 +3757,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/thunderbird-l10n to 17.0.7 [ryoon 2013-07-09]
 	Updated math/fftw to 3.3.3nb2 [tsutsui 2013-07-09]
 	Updated x11/py-gtk2 to 2.24.0nb14 [tsutsui 2013-07-09]
+	Updated security/py-itsdangerous to 0.22 [kleink 2013-07-09]
