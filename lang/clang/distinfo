@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2013/07/02 10:33:02 adam Exp $
+$NetBSD: distinfo,v 1.21 2013/07/09 08:11:05 richard Exp $
 
 SHA1 (cfe-3.3.src.tar.gz) = ccd6dbf2cdb1189a028b70bcb8a22509c25c74c8
 RMD160 (cfe-3.3.src.tar.gz) = ff5d684c83b0c1aa36595dcb457da80b58eaf58f
@@ -9,5 +9,6 @@ Size (llvm-3.3.src.tar.gz) = 13602421 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
 SHA1 (patch-ac) = d94fdd7508302e6fb6acbf58f7b2305c3db5cf08
 SHA1 (patch-ad) = ad1f6720e4c73e57fce10ba968b03637a133602d
+SHA1 (patch-include_llvm_Support_Host.h) = 102a76575b94f3d1b5fe0b138eb0ad54efd08b05
 SHA1 (patch-utils_lit_utils_check-coverage) = aec7c140d5b9e8cc38a0022533a5848d6b1ff0b8
 SHA1 (patch-utils_lit_utils_check-sdist) = df63c41b07f7531e787b54f6994458869023b66c
