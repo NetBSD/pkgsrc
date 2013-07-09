@@ -1,8 +1,8 @@
-$NetBSD: patch-net_tap-bsd.c,v 1.3 2013/06/16 18:27:25 tsutsui Exp $
+$NetBSD: patch-net_tap-bsd.c,v 1.4 2013/07/09 17:00:58 tsutsui Exp $
 
 Make it understand "-net tap,ifname=tap3" on NetBSD.
 
---- net/tap-bsd.c.orig	2013-05-24 13:37:57.000000000 +0000
+--- net/tap-bsd.c.orig	2013-06-26 21:47:29.000000000 +0000
 +++ net/tap-bsd.c
 @@ -44,7 +44,7 @@ int tap_open(char *ifname, int ifname_si
      struct stat s;
