@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.46 2012/07/27 14:38:26 jperkin Exp $
+# $NetBSD: tools.Darwin.mk,v 1.47 2013/07/09 15:22:31 jperkin Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -6,9 +6,8 @@ TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.bash?=		/bin/bash
-# Darwin's bison is too old (1.28).
-# TOOLS_PLATFORM.bison?=		/usr/bin/bison
-# TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
+TOOLS_PLATFORM.bison?=		/usr/bin/bison
+TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
 .if exists(/usr/bin/bsdtar)
 TOOLS_PLATFORM.bsdtar?=		/usr/bin/bsdtar
 .endif
