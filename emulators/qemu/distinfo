@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.84 2013/06/28 19:30:28 tsutsui Exp $
+$NetBSD: distinfo,v 1.85 2013/07/09 17:00:58 tsutsui Exp $
 
-SHA1 (qemu-1.4.2.tar.bz2) = 7e01e57e7385dba76125f69829aa78e98acdce4f
-RMD160 (qemu-1.4.2.tar.bz2) = 4b136a6f2192b07aaf04270a60c9326635d8865a
-Size (qemu-1.4.2.tar.bz2) = 10416877 bytes
-SHA1 (patch-ef) = 0b7dc779b174c842c529443e59ffaccbfe8616de
-SHA1 (patch-eg) = ce5adc1c45f6a7d6d6a63ec6c97ba146ff6e9e63
-SHA1 (patch-eh) = 72302ffd1a56dc4fa8d19b3095c9111331a20621
-SHA1 (patch-en) = d4396209ddca3b53f2e4664087550a9660708537
-SHA1 (patch-et) = 8c52e10d92e30226b02f9cb017efa28880124467
-SHA1 (patch-hw_xilinx__axienet.c) = e31f00c01a30d5447c771cceca413f247b67ea14
-SHA1 (patch-ioport.c) = a8f85248039de4d572f3af754d1e29ef9f83d8d7
-SHA1 (patch-memory.c) = ca15c0cfd20b54bee0f8ec769a9047b5cd76e4f3
-SHA1 (patch-net_tap-bsd.c) = 4d21ea8dd639db2a98ef9e341c3b863c9be965e2
-SHA1 (patch-slirp_tcp__subr.c) = c134e0fe0ce6b8fc92a630c98891b4c3e56cc861
-SHA1 (patch-user-exec.c) = 6400647b4a08885ebd4bd8f57d19d3fdb66ae434
-SHA1 (patch-util_hbitmap.c) = 8c3d42d9b594efc1b5eb0ccfb5d110bd63eaa9f0
-SHA1 (patch-util_qemu-thread-posix.c) = 04be1ce985dad2ffd78c300b8e1dd10fced1641a
+SHA1 (qemu-1.5.1.tar.bz2) = 1e1339dffb01c98f33ec8451266cee1adf3b41be
+RMD160 (qemu-1.5.1.tar.bz2) = 22cdf2860f0fdb2907c57d33ea82db9bb0139c59
+Size (qemu-1.5.1.tar.bz2) = 11931754 bytes
+SHA1 (patch-ef) = 871ccf29463dec1bd56d7f7808248c5b1af4d4d6
+SHA1 (patch-et) = bc96fbe2869042f9a77716cfe3c5342262e7b489
+SHA1 (patch-hw_display_omap__dss.c) = af89754a9a078a5b52240473d85351bd447623c0
+SHA1 (patch-hw_net_etraxfs__eth.c) = a6ac71e3a2a605bbabc52792db1d063dcb7764c2
+SHA1 (patch-hw_net_xilinx__axienet.c) = 02461c2cd2985c352626e46ba93844606783460e
+SHA1 (patch-include_qemu_thread-posix.h) = 7722055df516a8bcd01d36ea0474d2bbfbe27eaa
+SHA1 (patch-ioport.c) = a1bb22c6e22c0b0f3acacfa2023f7b45463e0041
+SHA1 (patch-memory.c) = b18fa7273a52e387943062e03c90501c4d9b30f4
+SHA1 (patch-net_tap-bsd.c) = 8f97df5f23212d6b748786a4ab417520abc6b066
+SHA1 (patch-slirp_tcp__subr.c) = 430157ea8a92fe1d6fc4f1f22ea5530641315fe1
+SHA1 (patch-user-exec.c) = 41f8bfdd86cbaa974ceb91571a2b2293b9df5153
+SHA1 (patch-util_hbitmap.c) = 372fcbad5272205cd354bc7760ead77e017b07d1
+SHA1 (patch-util_qemu-thread-posix.c) = 0f3ce555b4d1328a869a374bf58eee3bda320cc2
