@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2502 2013/07/09 17:25:29 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2503 2013/07/09 17:40:36 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3763,3 +3763,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-werkzeug to 0.9.1 [kleink 2013-07-09]
 	Updated www/py-werkzeug-docs to 0.9.1 [kleink 2013-07-09]
 	Updated www/py-flask to 0.10.1 [kleink 2013-07-09]
+	Updated devel/tradcpp to 0.3.1 [dholland 2013-07-09]
