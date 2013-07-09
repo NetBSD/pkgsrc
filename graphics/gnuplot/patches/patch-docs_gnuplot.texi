@@ -1,0 +1,19 @@
+$NetBSD: patch-docs_gnuplot.texi,v 1.1 2013/07/09 08:50:34 wiz Exp $
+
+Fix
+> ./gnuplot.texi:17653: raising the section level of @subsubsection which is too low                                                                                                                                
+seen with texinfo-5.1.
+
+More complete fix in
+http://sourceforge.net/p/gnuplot/bugs/1226/
+
+--- docs/gnuplot.texi.orig	2013-04-12 17:26:15.000000000 +0000
++++ docs/gnuplot.texi
+@@ -17564,6 +17564,7 @@ if/else statements.  See `if`.
+ 
+ @node complete_list_of_terminals,  , Terminal_types, Terminal_types
+ @section complete list of terminals
++@subsection output formats
+ 
+ @c ?complete list of terminals
+ @cindex terminal
