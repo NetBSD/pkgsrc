@@ -1,0 +1,26 @@
+$NetBSD: patch-docs_Makefile.in,v 1.1 2013/07/09 10:14:53 marino Exp $
+
+The gtkada Reference Manual can only be built with GPS which requires
+gtkada.  This is obviously a circular reference.  It would be possible
+to split the Reference Manual into a separate package that requires
+GPS, but rather than do that, a pregenerated version has been tarballed
+as a separate distfile and this patch installs that instead.
+
+--- docs/Makefile.in.orig	2013-07-01 09:42:48.000000000 +0000
++++ docs/Makefile.in
+@@ -4,13 +4,12 @@ CP=cp -p
+ MKDIR=mkdir -p
+ 
+ all:: 
+-	${MAKE} -C gtkada_rm
+-	${MAKE} -C gtkada_ug html latexpdf
++	${MAKE} -C gtkada_ug html 
+ 
+ install::
+-	${MAKE} -C gtkada_rm install
+ 	$(MKDIR) ${DESTDIR}$(docdir)/gtkada_ug/
+ 	-$(CP) -r gtkada_ug/_build/html/* ${DESTDIR}$(docdir)/gtkada_ug/
++	$(CP) -r gtkada_rm_pregen/gtkada_rm ${DESTDIR}$(docdir)/
+ 
+ clean::
+ 	${MAKE} -C gtkada_rm clean

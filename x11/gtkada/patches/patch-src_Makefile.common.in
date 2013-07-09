@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.common.in,v 1.1 2013/07/09 10:14:53 marino Exp $
+
+Avoid possible bad configuration detection of openGL and gnome.
+
+--- src/Makefile.common.in.orig	2013-07-01 09:42:47.000000000 +0000
++++ src/Makefile.common.in
+@@ -14,8 +14,8 @@ MAJOR    = @GTKADA_MAJOR_VERSION@
+ MINOR    = @GTKADA_MINOR_VERSION@
+ MICRO    = @GTKADA_MICRO_VERSION@
+ GTK_LIBS = @GTK_LIBS_FOR_GNATMAKE@
+-HAVE_OPENGL   = @HAVE_OPENGL@
+-HAVE_GNOME    = @HAVE_GNOME@
++HAVE_OPENGL   = False
++HAVE_GNOME    = False
+ BUILD_TYPE      = @BUILD_TYPE@
+ DEFAULT_LIBRARY_TYPE=@DEFAULT_LIBRARY_TYPE@
+ 

@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2013/06/16 23:17:11 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/07/09 10:14:53 marino Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
-PKGREVISION=	15
 CATEGORIES=	x11
-MASTER_SITES=	http://downloads.dragonlace.net/src/ \
-		http://dragonlace.mirrors.ada.cx/src/
+MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	gtkada-rm-${GTKADA_VERSION}${EXTRACT_SUFX}
@@ -15,28 +13,43 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
 COMMENT=	Ada graphical toolkit based on Gtk+
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config perl makeinfo pkg-config
-USE_LANGUAGES=		c ada c++
-MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		gmake perl pkg-config
+USE_LANGUAGES=		c ada c++ fortran
+MAKE_JOBS_SAFE=		yes
 
-GTKADA_VERSION=		2.22
-CONFIGURE_ARGS+=	--disable-nls
+GTKADA_VERSION=		2.24.4.0
 PKGCONFIG_OVERRIDE+=	projects/gtkada.pc.in
+CONFIGURE_ARGS+=	--enable-nls \
+			--with-GL=no
+MAKE_ENV+=		PROCESSORS=${MAKE_JOBS}
 
-SUBST_CLASSES+= 	gate
-SUBST_STAGE.gate=	pre-configure
-SUBST_MESSAGE.gate=	Override tools for gate executable
-SUBST_FILES.gate=	src/tools/gate.in
-SUBST_SED.gate= 	-e "s,@DIFF@,${TOOLS_PLATFORM.diff},"
-SUBST_SED.gate+=	-e "s,@PATCH@,${TOOLS_PLATFORM.patch},"
+SUBST_CLASSES+= 	docs lgnat
+SUBST_STAGE.docs=	post-patch
+SUBST_FILES.docs=	Makefile.in
+SUBST_SED.docs=		-e 's/^all: \(.*\)/all: \1 docs/g'
+SUBST_STAGE.lgnat=	post-patch
+SUBST_FILES.lgnat=	src/tools/Makefile.in testgtk/Makefile.in
+SUBST_SED.lgnat=	-e 's|-largs|-largs -lgnat|'
+
+GENERATE_PLIST=	cd ${DESTDIR}${PREFIX}; \
+		${FIND} * \( -type f -or -type l \) | ${SORT};
 
 do-configure:
-	# OpenGL, Gnome, and glade are normally detected automatically, but
-	# at least with OpenGL, there is an installation bug.  Rather than
-	# test everything, patch-ad just disables support for these features.
-	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} \
+		./configure ${CONFIGURE_ARGS}
 
-# gtk2 includes atk, glib and pango among others
+do-build:
+	# This target is recreated because -j cannot be set, but
+	# MAKE_JOBS_SAFE=yes is needed for PROCESSORS value
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gmake all
+
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gtkada/gtkada_ug/_sources
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
