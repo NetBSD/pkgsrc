@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/04/19 21:05:45 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/07/10 01:29:21 schmonz Exp $
 
-SHA1 (Text-Markdown-Discount-0.02.tar.gz) = 101ec221011ef099599e90bec5ae0f0cea6c6e25
-RMD160 (Text-Markdown-Discount-0.02.tar.gz) = 29b4b24d76c1687ddd48568ae674b87acd8b1b20
-Size (Text-Markdown-Discount-0.02.tar.gz) = 180943 bytes
-SHA1 (patch-configure.sh) = 046ca124f1db6e659f9d950c1bda5ecb570d4224
+SHA1 (Text-Markdown-Discount-0.04.tar.gz) = 2b7142cc0155116c86a773d615d5237b5ecab78e
+RMD160 (Text-Markdown-Discount-0.04.tar.gz) = 573967da08bf95360724c77391539bdaa02dce2f
+Size (Text-Markdown-Discount-0.04.tar.gz) = 176644 bytes
+SHA1 (patch-configure.sh) = 1bd30e048a8924bfda9b1286fd8c77fe4439eed0
