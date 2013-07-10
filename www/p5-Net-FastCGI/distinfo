@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/11/17 07:58:01 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2013/07/10 02:41:46 schmonz Exp $
 
-SHA1 (Net-FastCGI-0.13.tar.gz) = 9fa8622ccdf4be3b0f9b382b9a21653e6991cad3
-RMD160 (Net-FastCGI-0.13.tar.gz) = c5acbbe4fb6104a8376672b4dfa713df1fba839a
-Size (Net-FastCGI-0.13.tar.gz) = 42434 bytes
+SHA1 (Net-FastCGI-0.14.tar.gz) = a3b0f8f1b47e4f17b5373003207391525d953bea
+RMD160 (Net-FastCGI-0.14.tar.gz) = 65aeea3b1f5b8594e1b359db4b0aab94633ccac5
+Size (Net-FastCGI-0.14.tar.gz) = 43651 bytes
