@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2508 2013/07/10 01:29:27 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2509 2013/07/10 01:37:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3769,3 +3769,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-FindBin-libs to 1.8 [schmonz 2013-07-10]
 	Updated devel/p5-Ouch to 0.0402 [schmonz 2013-07-10]
 	Updated textproc/p5-Text-Markdown-Discount to 0.04 [schmonz 2013-07-10]
+	Updated devel/p5-File-chdir to 0.1008 [schmonz 2013-07-10]
