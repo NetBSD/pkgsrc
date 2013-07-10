@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2506 2013/07/10 01:16:30 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2507 2013/07/10 01:19:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3767,3 +3767,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-wtf to 0.8.4 [kleink 2013-07-09]
 	Updated www/py-flask-login to 0.2.5 [kleink 2013-07-09]
 	Updated devel/p5-FindBin-libs to 1.8 [schmonz 2013-07-10]
+	Updated devel/p5-Ouch to 0.0402 [schmonz 2013-07-10]
