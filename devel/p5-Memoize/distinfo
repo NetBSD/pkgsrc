@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/03/22 15:52:53 sno Exp $
+$NetBSD: distinfo,v 1.7 2013/07/10 01:58:44 schmonz Exp $
 
-SHA1 (Memoize-1.02.tar.gz) = e737c7b8be4fedf3849298efd16e6aab35bd4579
-RMD160 (Memoize-1.02.tar.gz) = ed9cfbbd13c3ebef97bf4a14dd4b380dd71cd9eb
-Size (Memoize-1.02.tar.gz) = 47090 bytes
+SHA1 (Memoize-1.03.tgz) = 90c989112741f43d8abc37b5c270517c5cecf1f8
+RMD160 (Memoize-1.03.tgz) = 4a83a51799cf8956d514d9f1e3fea71a02142d93
+Size (Memoize-1.03.tgz) = 47026 bytes
