@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2522 2013/07/10 02:41:51 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2523 2013/07/10 02:43:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-URI-Escape-XS to 0.08nb3 [schmonz 2013-07-10]
 	Updated devel/p5-Test-HexString to 0.03 [schmonz 2013-07-10]
 	Updated www/p5-Net-FastCGI to 0.14 [schmonz 2013-07-10]
+	Updated www/p5-URI-Escape-XS to 0.10 [schmonz 2013-07-10]
