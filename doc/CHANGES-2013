@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2514 2013/07/10 02:12:00 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2515 2013/07/10 02:14:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3775,3 +3775,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-RSS to 1.54 [schmonz 2013-07-10]
 	Updated textproc/p5-XML-Feed to 0.52 [schmonz 2013-07-10]
 	Updated devel/p5-Test-Harness to 3.28 [schmonz 2013-07-10]
+	Updated devel/p5-Test-Exception to 0.32 [schmonz 2013-07-10]
