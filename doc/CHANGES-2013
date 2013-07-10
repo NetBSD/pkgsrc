@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2516 2013/07/10 02:17:12 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2517 2013/07/10 02:21:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3777,3 +3777,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Harness to 3.28 [schmonz 2013-07-10]
 	Updated devel/p5-Test-Exception to 0.32 [schmonz 2013-07-10]
 	Updated devel/p5-Modern-Perl to 1.20121103 [schmonz 2013-07-10]
+	Updated databases/p5-DB_File to 1.829 [schmonz 2013-07-10]
