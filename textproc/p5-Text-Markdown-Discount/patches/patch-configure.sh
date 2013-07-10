@@ -1,8 +1,10 @@
-$NetBSD: patch-configure.sh,v 1.1 2012/04/19 21:05:46 joerg Exp $
+$NetBSD: patch-configure.sh,v 1.2 2013/07/10 01:29:21 schmonz Exp $
 
---- discount-2.1.2/configure.sh.orig	2012-04-19 14:00:16.000000000 +0000
-+++ discount-2.1.2/configure.sh
-@@ -76,11 +76,11 @@ AC_C_INLINE
+Fix messed up configure.sh.
+
+--- discount-2.1.5a/configure.sh.orig	2012-09-13 22:47:28.000000000 +0000
++++ discount-2.1.5a/configure.sh
+@@ -87,11 +87,11 @@ AC_C_INLINE
  AC_SCALAR_TYPES sub hdr
  AC_CHECK_BASENAME
  
@@ -17,7 +19,7 @@ $NetBSD: patch-configure.sh,v 1.1 2012/04/19 21:05:46 joerg Exp $
      AC_DEFINE 'INITRNG(x)' 'srand((unsigned int)x)'
  else
      AC_DEFINE 'INITRNG(x)' '(void)1'
-@@ -102,7 +102,7 @@ else
+@@ -113,7 +113,7 @@ else
      AC_DEFINE 'COINTOSS()' '1'
  fi
  
@@ -26,7 +28,7 @@ $NetBSD: patch-configure.sh,v 1.1 2012/04/19 21:05:46 joerg Exp $
      :
  elif AC_CHECK_FUNCS stricmp; then
      AC_DEFINE strcasecmp stricmp
-@@ -110,7 +110,7 @@ else
+@@ -121,7 +121,7 @@ else
      AC_FAIL "$TARGET requires either strcasecmp() or stricmp()"
  fi
  
@@ -35,7 +37,7 @@ $NetBSD: patch-configure.sh,v 1.1 2012/04/19 21:05:46 joerg Exp $
      :
  elif AC_CHECK_FUNCS strnicmp; then
      AC_DEFINE strncasecmp strnicmp
-@@ -118,7 +118,7 @@ else
+@@ -129,7 +129,7 @@ else
      AC_FAIL "$TARGET requires either strncasecmp() or strnicmp()"
  fi
  
