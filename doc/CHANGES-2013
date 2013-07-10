@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2512 2013/07/10 02:02:16 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2513 2013/07/10 02:09:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3773,3 +3773,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-ack to 2.04 [schmonz 2013-07-10]
 	Updated devel/p5-Memoize to 1.03 [schmonz 2013-07-10]
 	Updated textproc/p5-XML-RSS to 1.54 [schmonz 2013-07-10]
+	Updated textproc/p5-XML-Feed to 0.52 [schmonz 2013-07-10]
