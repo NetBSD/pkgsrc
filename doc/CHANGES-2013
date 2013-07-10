@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2520 2013/07/10 02:35:15 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2521 2013/07/10 02:38:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3781,3 +3781,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/p5-MIME-Base64 to 3.14 [schmonz 2013-07-10]
 	Updated databases/p5-DBD-SQLite to 1.39 [schmonz 2013-07-10]
 	Updated www/p5-URI-Escape-XS to 0.08nb3 [schmonz 2013-07-10]
+	Updated devel/p5-Test-HexString to 0.03 [schmonz 2013-07-10]
