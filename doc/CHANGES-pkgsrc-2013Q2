@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.4 2013/07/08 11:39:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.5 2013/07/10 13:54:40 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -11,3 +11,5 @@ Pullup ticket #4170 - requested by ryoon
 www/firefox-l10n: installation fix
 Pullup ticket #4173 - requested by rodent
 audio/libfishsound: build fix
+Pullup ticket #4174 - requested by ryoon
+audio/nas: bug fix patch
