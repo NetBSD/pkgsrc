@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/04/20 14:38:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2013/07/10 01:44:55 schmonz Exp $
 
-SHA1 (ack-2.00.tar.gz) = 46bc8b2d5ca32dd51b215b45543f58080898c06b
-RMD160 (ack-2.00.tar.gz) = 9776b45775f2b550d8240e16916d7f0b05953694
-Size (ack-2.00.tar.gz) = 185079 bytes
+SHA1 (ack-2.04.tar.gz) = 9576a3d77fad1fd94e2b1ed1684779e3980646f8
+RMD160 (ack-2.04.tar.gz) = 29eb86356f51f60667ce216ad24d3de0d25b8feb
+Size (ack-2.04.tar.gz) = 209885 bytes
