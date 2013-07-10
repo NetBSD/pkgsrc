@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/10 01:29:21 schmonz Exp $
 #
 
-DISTNAME=		Text-Markdown-Discount-0.02
+DISTNAME=		Text-Markdown-Discount-0.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
@@ -12,6 +11,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Text-Markdown-Discount/
 COMMENT=		Convert Markdown to (X)HTML
 LICENSE=		${PERL5_LICENSE}
 
+WRKSRC=			${WRKDIR}/sekimura-text-markdown-discount-c45fb0c
 PERL5_PACKLIST=		auto/Text/Markdown/Discount/.packlist
 USE_LANGUAGES=		c
 
