@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/07/05 16:12:30 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/07/10 14:44:53 ryoon Exp $
 
 SHA1 (libmp3splt-0.8.2.tar.gz) = 5c8539391e26d047c30360b1dde2c08e6a02061f
 RMD160 (libmp3splt-0.8.2.tar.gz) = e2f1930248e3b8d4cd80739a1e2c661ba025f2a6
 Size (libmp3splt-0.8.2.tar.gz) = 671071 bytes
 SHA1 (patch-aa) = 972a873d88848ec70eff330201398cc50775239b
-SHA1 (patch-src_socket__manager.c) = 66254075e2a4c9303e8879a932add7d9886eeb87
+SHA1 (patch-src_socket__manager.c) = 308133cef80255606ed5fc971e10373c9f85dbd8
