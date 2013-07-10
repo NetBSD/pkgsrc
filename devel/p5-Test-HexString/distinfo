@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/10 13:38:56 seb Exp $
+$NetBSD: distinfo,v 1.2 2013/07/10 02:38:52 schmonz Exp $
 
-SHA1 (Test-HexString-0.02.tar.gz) = f7dbf0446cb7f20ae8f336069c2d77472f4f51a0
-RMD160 (Test-HexString-0.02.tar.gz) = 84863787bc1a49671b87b74a8494204c2a52aa37
-Size (Test-HexString-0.02.tar.gz) = 11847 bytes
+SHA1 (Test-HexString-0.03.tar.gz) = d2469426e0feeb659b2e512e955ae6e5e631cf0c
+RMD160 (Test-HexString-0.03.tar.gz) = 30d00b0ad78f1fc091634e8eaf8c4cb9ae6baefd
+Size (Test-HexString-0.03.tar.gz) = 12484 bytes
