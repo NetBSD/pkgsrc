@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1759 2013/07/08 04:53:58 richard Exp $
+# $NetBSD: Makefile,v 1.1760 2013/07/11 04:03:01 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1274,8 +1274,8 @@ SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-Wx-Perl-DataWalker
 SUBDIR+=	p5-XSLoader
-SUBDIR+=	p5-accessors-fast
 SUBDIR+=	p5-accessors
+SUBDIR+=	p5-accessors-fast
 SUBDIR+=	p5-aliased
 SUBDIR+=	p5-asa
 SUBDIR+=	p5-autobox
@@ -1286,8 +1286,8 @@ SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-circular-require
 SUBDIR+=	p5-common-sense
-SUBDIR+=	p5-constant-def
 SUBDIR+=	p5-constant
+SUBDIR+=	p5-constant-def
 SUBDIR+=	p5-enum
 SUBDIR+=	p5-ex-lib
 SUBDIR+=	p5-experimental
