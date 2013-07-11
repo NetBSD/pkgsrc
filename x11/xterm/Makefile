@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2013/07/11 09:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2013/07/11 11:44:07 wiz Exp $
 
 DISTNAME=	xterm-296
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/ \
 		http://www.sfr-fresh.com/unix/misc/
@@ -19,7 +20,6 @@ CONFIGURE_ARGS+=	--enable-88-color
 CONFIGURE_ARGS+=	--enable-256-color
 CONFIGURE_ARGS+=	--enable-paste64
 CONFIGURE_ARGS+=	--enable-readline-mouse
-CONFIGURE_ARGS+=	--enable-toolbar	# Resource disabled by default
 
 CONFIGURE_ARGS.standard=# empty
 CONFIGURE_ARGS.3d=	--with-Xaw3d
