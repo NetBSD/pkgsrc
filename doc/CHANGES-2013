@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2539 2013/07/11 11:44:16 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2540 2013/07/11 11:55:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3798,3 +3798,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed x11/xsetmode [wiz 2013-07-11]
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1 [wiz 2013-07-11]
 	Updated x11/xterm to 296nb1 [wiz 2013-07-11]
+	Updated www/ikiwiki to 3.20130711 [schmonz 2013-07-11]
