@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/11/25 22:24:39 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/07/11 14:05:14 sborrill Exp $
 
 SHA1 (dansguardian-2.8.0.6.source.tar.gz) = 6d82eed13536a64a2f6711fa221756fa0bfe19f0
 RMD160 (dansguardian-2.8.0.6.source.tar.gz) = cf3493b26b4fcd5b366a6fe472e3c6c9e3cfe6d3
@@ -10,6 +10,8 @@ SHA1 (patch-FatController.cpp) = 1e3eb5d866f5ec5edda9f3e6e8e7a2b107e99d04
 SHA1 (patch-ListContainer.cpp) = e38034615e831c9dd45eb861f97a6c2cf381e631
 SHA1 (patch-RegExp.cpp) = a1b56dedd627afaaf00aac8285874b508db348d4
 SHA1 (patch-Socket.cpp) = f8c6f13266f33bb03ffac57ca4734708640b1c77
+SHA1 (patch-String.cpp) = 543ac3b2a04666cbe1560a9431e5d3040c80aeac
+SHA1 (patch-String.hpp) = beda3ffb28fa1dcd00f6383e9896b3fdbf7de1fa
 SHA1 (patch-SysV.cpp) = bc173150d4663d90672298361589bfd8919d519b
 SHA1 (patch-UDSocket.cpp) = d047b546a9bee74ff8dbccfe66bf75f2e61738a5
 SHA1 (patch-aa) = c4af2622ee48dedb15f5a22874c1c1bff5ea51ef
