@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2534 2013/07/11 09:06:33 mrg Exp $
+$NetBSD: CHANGES-2013,v 1.2535 2013/07/11 09:37:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3793,3 +3793,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/cdrtools to 3.01alpha16 [wiz 2013-07-11]
 	Updated security/libsodium to 0.4.2 [wiz 2013-07-11]
 	Updated www/bozohttpd to 20130711 [mrg 2013-07-11]
+	Updated x11/xterm to 296 [wiz 2013-07-11]
