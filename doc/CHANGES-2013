@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2536 2013/07/11 10:40:28 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2537 2013/07/11 10:42:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3795,3 +3795,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/bozohttpd to 20130711 [mrg 2013-07-11]
 	Updated x11/xterm to 296 [wiz 2013-07-11]
 	Removed x11/xsetpointer [wiz 2013-07-11]
+	Removed x11/xsetmode [wiz 2013-07-11]
