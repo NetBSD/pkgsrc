@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2531 2013/07/11 06:09:51 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2532 2013/07/11 07:04:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3790,3 +3790,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-TimeDate to 2.30 [schmonz 2013-07-10]
 	Updated textproc/p5-Text-Sass to 0.97 [wen 2013-07-11]
 	Updated www/ikiwiki to 3.20130710 [schmonz 2013-07-11]
+	Updated sysutils/cdrtools to 3.01alpha16 [wiz 2013-07-11]
