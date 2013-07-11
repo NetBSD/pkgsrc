@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.734 2013/07/06 01:08:47 rodent Exp $
+# $NetBSD: Makefile,v 1.735 2013/07/11 04:05:15 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -353,8 +353,8 @@ SUBDIR+=	p5-Feed-Find
 SUBDIR+=	p5-File-ReadBackwards
 SUBDIR+=	p5-Filter
 SUBDIR+=	p5-FormValidator-Simple
-SUBDIR+=	p5-HTML-FormatText-WithLinks-AndTables
 SUBDIR+=	p5-HTML-FormatText-WithLinks
+SUBDIR+=	p5-HTML-FormatText-WithLinks-AndTables
 SUBDIR+=	p5-Kwalify
 SUBDIR+=	p5-Lingua-EN-FindNumber
 SUBDIR+=	p5-Lingua-EN-Inflect
