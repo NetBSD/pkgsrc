@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2529 2013/07/10 08:13:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2530 2013/07/11 04:53:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3788,3 +3788,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-LWP-Protocol-https to 6.04 [schmonz 2013-07-10]
 	Updated www/p5-CGI to 3.63 [schmonz 2013-07-10]
 	Updated time/p5-TimeDate to 2.30 [schmonz 2013-07-10]
+	Updated textproc/p5-Text-Sass to 0.97 [wen 2013-07-11]
