@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:47:12 joerg Exp $
-bin/xsetmode
-man/man1/xsetmode.1
