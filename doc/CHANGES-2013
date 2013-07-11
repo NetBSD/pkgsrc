@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2532 2013/07/11 07:04:07 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2533 2013/07/11 08:22:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Text-Sass to 0.97 [wen 2013-07-11]
 	Updated www/ikiwiki to 3.20130710 [schmonz 2013-07-11]
 	Updated sysutils/cdrtools to 3.01alpha16 [wiz 2013-07-11]
+	Updated security/libsodium to 0.4.2 [wiz 2013-07-11]
