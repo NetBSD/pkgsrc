@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.703 2013/07/07 15:08:53 rodent Exp $
+# $NetBSD: Makefile,v 1.704 2013/07/11 10:40:28 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -643,7 +643,6 @@ SUBDIR+=	xsel
 SUBDIR+=	xservers
 SUBDIR+=	xset
 SUBDIR+=	xsetmode
-SUBDIR+=	xsetpointer
 SUBDIR+=	xsetroot
 SUBDIR+=	xsm
 SUBDIR+=	xsnow
