@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12390 2013/07/10 16:20:40 dholland Exp $
+$NetBSD: TODO,v 1.12391 2013/07/11 07:00:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -415,6 +415,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
+	o cdrtools-3.01alpha16
 	o celestia-1.6.0
 	o cfitsio-3.310
 	o chasen-2.4.5
@@ -461,7 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.9.7
-	o denemo-1.0.2
+	o denemo-1.0.4
 	o dhid-5.3
 	o diffstat-1.57
 	o doclifter-2.12
@@ -501,7 +502,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm-891
 	o etm2-2.1.5 [etm successor]
 	o ettercap-0.7.6
-	o evince-3.8.2
+	o evince-3.8.3
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-mapi-0.32.2 [GNOME 2.32]
@@ -513,6 +514,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
+	o ffmpeg-20130710.2.0
 	o file-5.14
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -558,6 +560,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.17
 	o gentoo-0.20.1
+	o gettext-0.18.3
 	o gfract-0.33
 	o ghc-7.6
 	o gifsicle-1.48
@@ -619,7 +622,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gsharutils-4.13.4
 	o gss-1.0.2
 	o gstreamer-1.1.1
-	o gthumb-3.2.2
+	o gthumb-3.2.3
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -733,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmicrohttpd-0.9.27
 	o libnasl-2.3.1
 	o libnids-1.24
+	o libntlm-1.4
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libreoffice-4.0
@@ -749,14 +753,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o licq-1.3.8
-	o liferea-1.8.15
+	o liferea-1.10.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
 	o lsh-2.1
-	o lwm-1.2.2
+	o lwm-1.2.3
 	o lyx-2.0.6
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
@@ -1038,7 +1042,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o telepathy-gabble-0.16.6
-	o tellico-2.3.7
+	o tellico-2.3.8
 	o teseq-1.1
 	o tesseract-3.02.02
 	o tetrinetx-1.40c
@@ -1083,6 +1087,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vala-0.20.1
 	o vbetool-1.1
 	o vera-1.17
+	o veusz-1.18
 	o vfu-4.09
 	o vicq-0.4.2
 	o vifm-0.7.5
@@ -1126,6 +1131,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcmsdb-1.0.4 [unpackaged]
 	o xdesktopwaves-1.3
 	o xemacs-current-21.5.31
+	o xentools43-4.3.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-input-keyboard-1.7.0
