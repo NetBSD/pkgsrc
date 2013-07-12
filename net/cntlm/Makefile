@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:14 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/12 10:44:59 jperkin Exp $
 #
 
 DISTNAME=	cntlm-0.35.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cntlm/}
 

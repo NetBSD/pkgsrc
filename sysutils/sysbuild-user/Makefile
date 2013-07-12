@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/03/08 17:49:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/12 10:45:03 jperkin Exp $
 
 DISTNAME=	sysbuild-user-1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
