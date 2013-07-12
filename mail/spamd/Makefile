@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 12:19:32 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/12 10:44:58 jperkin Exp $
 
 DISTNAME=		spamd-20060330
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 

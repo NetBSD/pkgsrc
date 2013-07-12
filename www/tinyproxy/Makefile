@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2013/02/06 23:24:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/12 10:45:05 jperkin Exp $
 #
 
 DISTNAME=	tinyproxy-1.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tinyproxy/}
 

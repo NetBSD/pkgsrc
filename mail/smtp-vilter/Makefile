@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/06/15 22:49:06 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/12 10:44:58 jperkin Exp $
 
 DISTNAME=		smtp-vilter-1.3.8
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz
-PKGREVISION=		2
+PKGREVISION=		3
 
 MAINTAINER=		marc@msys.ch
 HOMEPAGE=		http://www.etc.msys.ch/software/smtp-vilter/

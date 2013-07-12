@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/01/03 13:56:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/12 10:45:04 jperkin Exp $
 #
 
 JETTYVER=	7.6.8.v20121106
 DISTNAME=	jetty-distribution-${JETTYVER}
 PKGNAME=	${DISTNAME:S/distribution-//:S/.v/./}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.eclipse.org/jetty/${JETTYVER}/dist/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 23:48:12 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/07/12 10:44:52 jperkin Exp $
 #
 
 DISTNAME=		ubs-0.17
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 

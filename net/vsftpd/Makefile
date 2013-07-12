@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2013/07/05 14:47:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2013/07/12 10:45:01 jperkin Exp $
 #
 
 DISTNAME=	vsftpd-2.3.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://security.appspot.com/downloads/ \
 		${MASTER_SITE_LOCAL}

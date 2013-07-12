@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2013/04/08 11:17:21 rodent Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/12 10:45:02 jperkin Exp $
 
 DISTNAME=	pks-0.9.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security www
 MASTER_SITES+=	http://www.mit.edu/people/marc/pks/ \
 	${MASTER_SITE_SOURCEFORGE:=pks/}
