@@ -1,12 +1,18 @@
-# $NetBSD: options.mk,v 1.23 2013/02/23 23:54:02 ryoon Exp $
+# $NetBSD: options.mk,v 1.24 2013/07/12 12:24:10 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail mozilla-lightning
+PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail \
+PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc
 
 PLIST_VARS+=	gnome jemalloc
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
+.endif
+
+# On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
+.if (${OPSYS} == "FreeBSD") || (${OPSYS} == "Linux") || (${OPSYS} == "OpenBSD")
+PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -42,9 +48,16 @@ CONFIGURE_ARGS+=	--enable-install-strip
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
 CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/calendar-timezones.xpi
 XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/gdata-provider*.xpi
 XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/lightning*.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
+.endif
+
+PLIST_VARS+=            webrtc
+.if !empty(PKG_OPTIONS:Mwebrtc)
+.include "../../graphics/libv4l/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-webrtc
+.else
+CONFIGURE_ARGS+=	--disable-webrtc
 .endif

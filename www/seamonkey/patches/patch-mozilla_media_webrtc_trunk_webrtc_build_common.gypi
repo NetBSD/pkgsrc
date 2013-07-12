@@ -1,7 +1,19 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_build_common.gypi,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_build_common.gypi,v 1.2 2013/07/12 12:24:10 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/build/common.gypi.orig	2013-05-03 03:08:06.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/build/common.gypi.orig	2013-06-20 04:35:16.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/build/common.gypi
+@@ -71,9 +71,9 @@
+     'enable_data_logging%': 0,
+ 
+     # Disable these to not build components which can be externally provided.
+-    'build_libjpeg%': 1,
++    'build_libjpeg%': 0,
+     'build_libyuv%': 1,
+-    'build_libvpx%': 1,
++    'build_libvpx%': 0,
+ 
+     # Enable to use the Mozilla internal settings.
+     'build_with_mozilla%': 0,
 @@ -124,6 +124,11 @@
          # and Java Implementation
          'enable_android_opensl%': 0,
@@ -14,7 +26,7 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_build_common.gypi,v 1.1 2013/05
        ['OS=="ios"', {
          'enable_video%': 0,
          'enable_protobuf%': 0,
-@@ -210,6 +215,18 @@
+@@ -215,6 +220,18 @@
            }],
          ],
        }],

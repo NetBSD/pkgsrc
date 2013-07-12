@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_mtransport_third__party_nICEr_src_util_mbslen.c,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+$NetBSD: patch-mozilla_media_mtransport_third__party_nICEr_src_util_mbslen.c,v 1.2 2013/07/12 12:24:10 ryoon Exp $
 
---- mozilla/media/mtransport/third_party/nICEr/src/util/mbslen.c.orig	2013-05-03 03:08:06.000000000 +0000
+--- mozilla/media/mtransport/third_party/nICEr/src/util/mbslen.c.orig	2013-06-20 04:35:15.000000000 +0000
 +++ mozilla/media/mtransport/third_party/nICEr/src/util/mbslen.c
 @@ -43,9 +43,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  #include <locale.h>
@@ -53,7 +53,7 @@ $NetBSD: patch-mozilla_media_mtransport_third__party_nICEr_src_util_mbslen.c,v 1
  
  #ifdef WIN32
      if (!setlocale(LC_CTYPE, 0))
-@@ -98,18 +106,18 @@ mbslen(const char *s, size_t *ncharsp)
+@@ -99,18 +107,18 @@ mbslen(const char *s, size_t *ncharsp)
          ABORT(R_NOT_FOUND);
  #endif
  
@@ -75,4 +75,4 @@ $NetBSD: patch-mozilla_media_mtransport_third__party_nICEr_src_util_mbslen.c,v 1
 +#endif /* HAVE_XLOCALE */
      {
          if (nbytes == (size_t)-1)   /* should never happen */ {
-             assert(0);
+             ABORT(R_INTERNAL);

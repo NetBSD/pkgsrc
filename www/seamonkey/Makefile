@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.99 2013/07/03 13:49:28 joerg Exp $
+# $NetBSD: Makefile,v 1.100 2013/07/12 12:24:10 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	1
-SM_VER=		2.18b4
+SM_VER=		2.19
 #LIGHTNINGVER=	1.9
-PKGREVISION=	4
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} \
-		${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
+#${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} 
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
 DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
 #		lightning-${LIGHTNINGVER}.source.tar.bz2
 #SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
@@ -19,8 +17,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
 
-#WRKSRC=		${WRKDIR}/comm-release
-WRKSRC=		${WRKDIR}/comm-beta
+WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
@@ -35,11 +32,16 @@ ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || \
-     ${OPSYS} == "DragonFly") && \
-    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
-.endif
+#.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || \
+#     ${OPSYS} == "DragonFly") && \
+#    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+#BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
+#.endif
+
+CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/xpt.py
 
 #post-extract:
 #	cd ${WRKSRC} && ${RM} -r calendar
