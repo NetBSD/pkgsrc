@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2542 2013/07/12 00:12:08 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2543 2013/07/12 10:42:24 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3802,3 +3802,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php53 to 5.3.27 [taca 2013-07-12]
 	Updated net/pear-Net_SMTP to 1.6.2 [taca 2013-07-12]
 	Updated mail/pear-Mail_Mime to 1.8.8 [taca 2013-07-12]
+	Updated sysutils/user_cygwin to 20130712 [jperkin 2013-07-12]
+	Updated sysutils/user_darwin to 20130712 [jperkin 2013-07-12]
+	Updated sysutils/user_interix to 20130712 [jperkin 2013-07-12]
+	Updated sysutils/user_irix to 20130712 [jperkin 2013-07-12]
