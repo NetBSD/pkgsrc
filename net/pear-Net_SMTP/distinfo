@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/08/20 14:12:07 taca Exp $
+$NetBSD: distinfo,v 1.10 2013/07/12 00:10:04 taca Exp $
 
-SHA1 (pear/Net_SMTP-1.6.1.tgz) = 3acd10587aea13fc49a5ff48d6d011430f19aee4
-RMD160 (pear/Net_SMTP-1.6.1.tgz) = ce02c57345f7ba7c1d97de97d32f158833d5c937
-Size (pear/Net_SMTP-1.6.1.tgz) = 13164 bytes
+SHA1 (pear/Net_SMTP-1.6.2.tgz) = f2bc027fa581205b6043b8e7916dd7b65ae660ed
+RMD160 (pear/Net_SMTP-1.6.2.tgz) = 5894d8299008e59676950412e1545caab02c2a05
+Size (pear/Net_SMTP-1.6.2.tgz) = 13077 bytes
