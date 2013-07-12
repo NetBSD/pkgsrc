@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2549 2013/07/12 21:33:22 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2550 2013/07/12 22:38:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3812,3 +3812,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/openresolv to 3.5.6 [roy 2013-07-12]
 	Updated shells/esh to 0.8nb4 [wiz 2013-07-12]
 	Updated www/squid3 to 3.3.7 [adam 2013-07-12]
+	Updated textproc/py-libxslt to 1.1.28 [adam 2013-07-12]
