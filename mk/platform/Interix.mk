@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.69 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: Interix.mk,v 1.70 2013/07/12 10:41:58 jperkin Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -85,7 +85,7 @@ TYPE?=		type				# Shell builtin
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 _PKG_USER_HOME?=	# empty by default
-_USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
+_USER_DEPENDS=		user-interix>=20130712:../../sysutils/user_interix
 
 CPP_PRECOMP_FLAGS?=	# unset
 CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
