@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12392 2013/07/11 07:04:07 wiz Exp $
+$NetBSD: TODO,v 1.12393 2013/07/12 17:17:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -770,7 +770,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeztxt-1.60
 	o manedit-1.2.1
 	o matchbox-panel-0.9.3
-	o mc-4.8.8
+	o mc-4.8.9
 	o mcsim-5.5.0
 	o mdds-0.7.0
 	o mdocml-1.12.1
@@ -1037,7 +1037,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-36.0
+	o tea-36.0.2
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o telepathy-gabble-0.16.6
