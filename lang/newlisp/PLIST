@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/02 11:24:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/07/12 13:37:38 ryoon Exp $
 bin/newlisp
 bin/${PKGNAME}
 bin/newlisp-edit
@@ -69,6 +69,5 @@ share/${PKGNAME}/modules/zlib.lsp
 share/${PKGNAME}/newLISP128.png
 share/${PKGNAME}/util/httpd-conf.lsp
 share/${PKGNAME}/util/link.lsp
-share/${PKGNAME}/util/nanorc
 share/${PKGNAME}/util/newlisp.vim
 share/${PKGNAME}/util/syntax.cgi
