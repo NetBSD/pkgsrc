@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/05/31 12:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/07/12 10:45:05 jperkin Exp $
 
 DISTNAME=	squidGuard-1.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://www.squidguard.org/Downloads/ \
 		http://www.squidguard.org/Downloads/Patches/1.4/

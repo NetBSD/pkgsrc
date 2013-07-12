@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/07/02 16:35:13 mef Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/12 10:44:59 jperkin Exp $
 
 DISTNAME=		lldpd-0.7.5
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 

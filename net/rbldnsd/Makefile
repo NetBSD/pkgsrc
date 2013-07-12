@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 17:19:05 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/12 10:45:00 jperkin Exp $
 #
 
 DISTNAME=	rbldnsd_0.996b
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.corpit.ru/mjt/rbldnsd/
 

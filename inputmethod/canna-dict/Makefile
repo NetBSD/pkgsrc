@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 14:25:10 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/07/12 10:44:55 jperkin Exp $
 
-PKGREVISION=	2
+PKGREVISION=	3
 CANNA_MODULE=	dict
 
 MAKE_JOBS_SAFE=	no

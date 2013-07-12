@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2013/05/31 12:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2013/07/12 10:44:56 jperkin Exp $
 
 DISTNAME=	exim-4.80.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
