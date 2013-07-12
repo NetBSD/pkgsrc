@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/03/13 12:35:15 obache Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/12 10:41:58 jperkin Exp $
 #
 
-DISTNAME=		user-20130313
+DISTNAME=		user-cygwin-20130712
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
