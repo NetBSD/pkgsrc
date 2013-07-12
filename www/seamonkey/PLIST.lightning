@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.9 2013/05/23 13:25:30 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.10 2013/07/12 12:24:10 ryoon Exp $
 include/seamonkey/calBaseCID.h
 include/seamonkey/calIAlarm.h
 include/seamonkey/calIAlarmService.h
@@ -51,13 +51,6 @@ include/seamonkey/calIWcapSession.h
 include/seamonkey/calIWeekInfoService.h
 include/seamonkey/calInternalInterfaces.h
 include/seamonkey/ical.h
-lib/seamonkey/extensions/calendar-timezones@mozilla.org/chrome.manifest
-lib/seamonkey/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezones-en-US/locale/en-US/timezones.properties
-lib/seamonkey/extensions/calendar-timezones@mozilla.org/chrome/calendar-timezones/skin/addon-icon32.png
-lib/seamonkey/extensions/calendar-timezones@mozilla.org/defaults/preferences/preferences.js
-lib/seamonkey/extensions/calendar-timezones@mozilla.org/install.rdf
-lib/seamonkey/extensions/calendar-timezones@mozilla.org/timezones.sqlite
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceDate.js
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome.manifest
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.dtd
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.properties
@@ -105,6 +98,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calL
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calMonthGridPrinter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calOutlookCSVImportExport.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calProtocolHandler.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceDate.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceInfo.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRelation.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calStartupService.js

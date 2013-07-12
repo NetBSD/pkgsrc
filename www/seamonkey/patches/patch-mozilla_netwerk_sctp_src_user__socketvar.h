@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_netwerk_sctp_src_user__socketvar.h,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_sctp_src_user__socketvar.h,v 1.2 2013/07/12 12:24:11 ryoon Exp $
 
---- mozilla/netwerk/sctp/src/user_socketvar.h.orig	2013-05-03 03:08:09.000000000 +0000
+--- mozilla/netwerk/sctp/src/user_socketvar.h.orig	2013-06-20 04:35:18.000000000 +0000
 +++ mozilla/netwerk/sctp/src/user_socketvar.h
 @@ -47,7 +47,7 @@
  /* #include <sys/_lock.h>  was 0 byte file */
@@ -11,23 +11,17 @@ $NetBSD: patch-mozilla_netwerk_sctp_src_user__socketvar.h,v 1.1 2013/05/23 13:25
  #include <sys/uio.h>
  #endif
  #define SOCK_MAXADDRLEN 255
-@@ -64,16 +64,18 @@
+@@ -64,11 +64,11 @@
  #define ERESTART (-1)
  #endif
  
--#if !defined(__Userspace_os_Darwin)
-+#if !defined(__Userspace_os_Darwin) && !defined(__Userspace_os_NetBSD)
+-#if !defined(__Userspace_os_Darwin) && !defined(__Userspace_os_OpenBSD)
++#if !defined(__Userspace_os_Darwin) && !defined(__Userspace_os_OpenBSD) && !defined(__Userspace_os_NetBSD)
  enum	uio_rw { UIO_READ, UIO_WRITE };
  #endif
  
-+#if !defined(__Userspace_os_NetBSD)
+-#if !defined(__Userspace_os_OpenBSD)
++#if !defined(__Userspace_os_OpenBSD) && !defined(__Userspace_os_NetBSD)
  /* Segment flag values. */
  enum uio_seg {
  	UIO_USERSPACE,		/* from user data space */
- 	UIO_SYSSPACE,		/* from system space */
- 	UIO_NOCOPY		/* don't copy, already in object */
- };
-+#endif
- 
- struct proc {
-     int stub; /* struct proc is a dummy for __Userspace__ */
