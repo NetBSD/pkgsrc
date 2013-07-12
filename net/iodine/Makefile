@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/12/12 13:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/12 10:44:59 jperkin Exp $
 
 DISTNAME=		iodine-0.6.0-rc1
 PKGNAME=		iodine-0.6.0rc1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://code.kryo.se/iodine/
 
