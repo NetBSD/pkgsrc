@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2013/07/12 17:25:09 wiz Exp $
 
 DISTNAME=		esh-0.8
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 
@@ -11,15 +11,14 @@ COMMENT=		Unix shell with Lisp-like syntax
 WRKSRC=			${WRKDIR}/esh
 PKG_SHELL=		bin/esh
 INFO_FILES=		yes
-INSTALLATION_DIRS=	bin ${PKGINFODIR} share/doc/esh share/examples/esh \
-			share/emacs/site-lisp
+INSTALLATION_DIRS=	bin ${PKGINFODIR} share/doc/esh share/examples/esh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/esh ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/examples/*.esh 			\
 	    ${DESTDIR}${PREFIX}/share/examples/esh
 	${INSTALL_DATA} ${WRKSRC}/emacs/esh-mode.el 			\
-	    ${DESTDIR}${PREFIX}/share/emacs/site-lisp
+	    ${DESTDIR}${PREFIX}/share/examples/esh
 	cd ${WRKSRC}/doc; for f in *.info *.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};		\
