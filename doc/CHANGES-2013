@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2541 2013/07/12 00:08:35 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2542 2013/07/12 00:12:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3800,3 +3800,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xterm to 296nb1 [wiz 2013-07-11]
 	Updated www/ikiwiki to 3.20130711 [schmonz 2013-07-11]
 	Updated lang/php53 to 5.3.27 [taca 2013-07-12]
+	Updated net/pear-Net_SMTP to 1.6.2 [taca 2013-07-12]
+	Updated mail/pear-Mail_Mime to 1.8.8 [taca 2013-07-12]
