@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.41 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: IRIX.mk,v 1.42 2013/07/12 10:41:58 jperkin Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -33,7 +33,7 @@ ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 _PKG_USER_HOME?=	/dev/null # to match other system accounts
-_USER_DEPENDS=		user-[0-9]*:../../sysutils/user_irix
+_USER_DEPENDS=		user-irix>=20130712:../../sysutils/user_irix
 
 _OPSYS_EMULDIR.irix=	# empty
 
