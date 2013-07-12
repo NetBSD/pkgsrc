@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2540 2013/07/11 11:55:53 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2541 2013/07/12 00:08:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1 [wiz 2013-07-11]
 	Updated x11/xterm to 296nb1 [wiz 2013-07-11]
 	Updated www/ikiwiki to 3.20130711 [schmonz 2013-07-11]
+	Updated lang/php53 to 5.3.27 [taca 2013-07-12]
