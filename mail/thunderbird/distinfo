@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.124 2013/07/09 21:25:24 wiz Exp $
+$NetBSD: distinfo,v 1.125 2013/07/13 19:33:19 joerg Exp $
 
 SHA1 (enigmail-1.4.5.tar.gz) = 16d0450a9f5fb4de0e9cc5b9f8091dce4b070aaf
 RMD160 (enigmail-1.4.5.tar.gz) = 860a1ca813fd2ccae69ac0afe07affd39611e56a
@@ -39,7 +39,7 @@ SHA1 (patch-bi) = bc44d47f386901d261a7a5401520a3905cb29d5a
 SHA1 (patch-config_baseconfig.mk) = f5494ace3f5947715cf6918b7d3e19c25fa26bf8
 SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = a6d40c6b92aee607fb4f18d5a7c97b3d7833c74a
 SHA1 (patch-ipc_chromium_src_base_debug__util__posic.cc) = 84e3588ede7c1c0a03b23e5aa054e0c1ab2cfe27
-SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 5f792d717f6373270dbee4aa9dbe278cc12d5f92
+SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 0cdd5aea37d40ab7731e23a1c6ca1f8d55976d88
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 882b0987defaed4475317b8c500d3dffeb9d0866
 SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = 1207a1e779ea0d48cb41f6a98edbe22f187b309b
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 9f38c64f080464c33c94cc6898365cee7aa2fec7
@@ -47,6 +47,7 @@ SHA1 (patch-ipc_chromium_src_chrome_common_ipc__channel__posix.h) = 02e19237e21c
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = eac8b51b30b39bbb97da2e97c525fbbec7d98865
 SHA1 (patch-js_src_jscpucfg.h) = 493889df7e21be8a6b5d5b3854b908da70552de8
 SHA1 (patch-ldap_sdks_c-sdk_build.mk) = 171d81697d136abb6e02cb81445cd88fd8580de2
+SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 7ec5d09a1e329a3a7c13e6bbf654b591a4d65422
 SHA1 (patch-mb) = 36ddeba4276196109b5a72b77a2143dada92df34
 SHA1 (patch-md) = ccb29b96c105b6c63d3c85967bed56840b974cf4
 SHA1 (patch-me) = 17b108eb9f0ec40ab34aa58f511a5c1ee6a3a127
@@ -74,7 +75,9 @@ SHA1 (patch-mozilla_ipc_chromium_chromium-config.mk) = 3a502f13a41636f2e793f03fb
 SHA1 (patch-mozilla_ipc_chromium_src_base_base__paths.h) = 1550fd2f3961ded7a17e821208d1bfe6f549e6ac
 SHA1 (patch-mozilla_ipc_chromium_src_base_dir__reader__bsd.h) = 1a7779a9fd682739caeb7219548f5d2d479fc302
 SHA1 (patch-mozilla_ipc_chromium_src_base_dir__reader__posix.h) = 0c95e25bc77d775c37be342087c5e6591c90de8d
+SHA1 (patch-mozilla_ipc_chromium_src_base_file__util.cc) = bbd90990ef3fa03a8106c183173bdb4e438bf655
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__loop.cc) = c8b5440d8886c97a54a759cad49cb129304a29de
+SHA1 (patch-mozilla_ipc_chromium_src_base_pickle.cc) = a2f0a38443f4b0273f8863543f8323719d10f429
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread.h) = b39c8cfa98fcf0c78e63b234c705f6efce9577d8
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util.h) = f73dd24bcde49fdafe0495589efc81a96ccb3b5f
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc) = 25d4903bcf815e2da30902b18330cb3803e48cc6
