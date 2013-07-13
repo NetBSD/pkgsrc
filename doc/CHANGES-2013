@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2563 2013/07/13 12:03:49 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2564 2013/07/13 12:08:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Mouse to 1.11 [wen 2013-07-13]
 	Updated graphics/p5-cairo to 1.103 [wen 2013-07-13]
 	Updated math/ruby-spreadsheet to 0.8.6 [obache 2013-07-13]
+	Updated www/p5-Plack to 1.0028 [wen 2013-07-13]
