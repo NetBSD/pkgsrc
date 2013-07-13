@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/13 10:38:32 wiz Exp $
+
+SHA1 (jansson-2.4.tar.gz) = 994b84fd0b5d9050d01d250c7f90f038a3eeeed0
+RMD160 (jansson-2.4.tar.gz) = 36d31aa220df478c1e6d19e343404b0cbec6360c
+Size (jansson-2.4.tar.gz) = 401597 bytes
