@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2553 2013/07/13 09:26:12 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2554 2013/07/13 09:32:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3816,3 +3816,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-BSD-Resource to 1.29.07 [wen 2013-07-13]
 	Updated textproc/p5-XML-Bare to 0.53 [wen 2013-07-13]
 	Updated devel/p5-IO-All to 0.46 [wen 2013-07-13]
+	Updated devel/p5-Devel-PatchPerl to 0.96 [wen 2013-07-13]
