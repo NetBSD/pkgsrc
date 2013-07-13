@@ -1,4 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2013/07/04 17:04:58 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2013/07/13 23:04:46 wiz Exp $
+#
+# The following packages use the same distfile, even if they
+# currently do not use a common Makefile fragment. Please look at
+# them when updating this package
+# pkgsrc/security/pinentry-gtk
+# pkgsrc/security/pinentry-gtk2
+# pkgsrc/security/pinentry-qt
+# pkgsrc/security/pinentry-qt4
 
 DISTNAME=		pinentry-0.8.3
 PKGREVISION=		1
