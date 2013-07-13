@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2012/10/08 12:19:12 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/07/13 19:23:36 joerg Exp $
 #
 
-DISTNAME=	gmime-2.2.25
-PKGREVISION=	6
+DISTNAME=	gmime-2.6.15
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.6/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spruce.sourceforge.net/gmime/
@@ -17,11 +17,14 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--disable-mono
-PKGCONFIG_OVERRIDE+=	gmime-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gmime-2.6.pc.in
 TEST_TARGET=		check
+
+BUILDLINK_DEPMETHOD.libgpg-error=	build
 
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
