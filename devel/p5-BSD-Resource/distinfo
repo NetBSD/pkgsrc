@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2010/03/15 17:05:44 sno Exp $
+$NetBSD: distinfo,v 1.14 2013/07/13 08:32:13 wen Exp $
 
-SHA1 (BSD-Resource-1.2904.tar.gz) = d2e72784536dfaf92529e5437c1c18eb6921b1d8
-RMD160 (BSD-Resource-1.2904.tar.gz) = 238fe2ab3bcd42b270b83f90993bd0fa30d907a6
-Size (BSD-Resource-1.2904.tar.gz) = 59419 bytes
+SHA1 (BSD-Resource-1.2907.tar.gz) = c80b07439057a2e5cc4fcca07363c032aaf5c5c8
+RMD160 (BSD-Resource-1.2907.tar.gz) = 53bf562584f44571e3576fcb5a06794f581bb7e3
+Size (BSD-Resource-1.2907.tar.gz) = 66646 bytes
