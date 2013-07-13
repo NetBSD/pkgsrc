@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.5 2012/11/23 07:17:54 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.6 2013/07/13 19:33:19 joerg Exp $
 
---- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2012-11-19 22:42:22.000000000 +0000
+--- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2013-06-20 16:39:04.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/file_util_posix.cc
 @@ -33,7 +33,7 @@
  #include "base/time.h"
@@ -11,3 +11,12 @@ $NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.5 2012/11/23 07:17
  #define stat64 stat
  #endif
  
+@@ -392,7 +392,7 @@ bool CreateTemporaryFileName(FilePath* p
+ FILE* CreateAndOpenTemporaryShmemFile(FilePath* path) {
+   FilePath directory;
+   if (!GetShmemTempDir(&directory))
+-    return false;
++    return NULL;
+ 
+   return CreateAndOpenTemporaryFileInDir(directory, path);
+ }
