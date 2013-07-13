@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2569 2013/07/13 18:12:17 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2570 2013/07/13 18:51:34 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3832,3 +3832,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-AnyEvent-IRC to 0.97 [wen 2013-07-13]
 	Updated devel/p5-Dist-CheckConflicts to 0.08 [wen 2013-07-13]
 	Updated databases/p5-DBD-SQLite to 1.39nb1 [schmonz 2013-07-13]
+	Updated devel/tradcpp to 0.4 [dholland 2013-07-13]
