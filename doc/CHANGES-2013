@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2562 2013/07/13 11:58:14 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2563 2013/07/13 12:03:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.297 [obache 2013-07-13]
 	Updated devel/p5-Mouse to 1.11 [wen 2013-07-13]
 	Updated graphics/p5-cairo to 1.103 [wen 2013-07-13]
+	Updated math/ruby-spreadsheet to 0.8.6 [obache 2013-07-13]
