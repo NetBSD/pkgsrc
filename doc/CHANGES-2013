@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2555 2013/07/13 09:39:09 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2556 2013/07/13 10:38:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-IO-All to 0.46 [wen 2013-07-13]
 	Updated devel/p5-Devel-PatchPerl to 0.96 [wen 2013-07-13]
 	Updated devel/p5-local-lib to 1.008010 [wen 2013-07-13]
+	Added textproc/jansson version 2.4 [wiz 2013-07-13]
