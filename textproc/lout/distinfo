@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2011/12/12 19:08:34 joerg Exp $
+$NetBSD: distinfo,v 1.11 2013/07/13 08:20:24 shattered Exp $
 
-SHA1 (lout-3.38.tar.gz) = 2c4aec500dc27a00298f8265b9249d74d97e5466
-RMD160 (lout-3.38.tar.gz) = 8835b223f67b383bdbb1d4105a28e002745d4dbb
-Size (lout-3.38.tar.gz) = 2147395 bytes
+SHA1 (lout-3.40.tar.gz) = adb7f632202319a370eaada162fa52cf334f40b3
+RMD160 (lout-3.40.tar.gz) = d1da2583f1727abf4ccb74d2128c26deacca2ef9
+Size (lout-3.40.tar.gz) = 2172651 bytes
 SHA1 (patch-aa) = 07c26cf0c9baa6f29c7fec4af38fda802175bbb1
