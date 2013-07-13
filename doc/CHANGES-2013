@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2550 2013/07/12 22:38:04 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2551 2013/07/13 08:33:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/esh to 0.8nb4 [wiz 2013-07-12]
 	Updated www/squid3 to 3.3.7 [adam 2013-07-12]
 	Updated textproc/py-libxslt to 1.1.28 [adam 2013-07-12]
+	Updated devel/p5-BSD-Resource to 1.29.07 [wen 2013-07-13]
