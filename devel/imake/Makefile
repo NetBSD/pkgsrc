@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/07/02 12:12:48 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2013/07/13 07:42:51 obache Exp $
 
 DISTNAME=		imake-1.0.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2

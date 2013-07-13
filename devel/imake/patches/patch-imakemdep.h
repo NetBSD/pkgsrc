@@ -1,4 +1,4 @@
-$NetBSD: patch-imakemdep.h,v 1.2 2013/07/02 12:12:48 joerg Exp $
+$NetBSD: patch-imakemdep.h,v 1.3 2013/07/13 07:42:52 obache Exp $
 
 --- imakemdep.h.orig	2012-03-08 05:47:32.000000000 +0000
 +++ imakemdep.h
@@ -100,3 +100,13 @@ $NetBSD: patch-imakemdep.h,v 1.2 2013/07/02 12:12:48 joerg Exp $
  	"-I.",		/* add current directory to include path */
  #   if !defined(__NetBSD_Version__) || __NetBSD_Version__ < 103080000
  #    ifdef unix
+@@ -380,9 +300,6 @@ const char *cpp_argv[ARGUMENTS] = {
+     defined(__GNUC__) || defined(__GLIBC__)
+ #    ifdef __i386__
+ 	"-D__i386__",
+-#     if defined(__GNUC__) && (__GNUC__ >= 3)
+-	"-m32",
+-#     endif
+ #    endif
+ #    ifdef __i486__
+ 	"-D__i486__",
