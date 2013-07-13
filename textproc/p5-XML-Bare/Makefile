@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/13 08:52:17 wen Exp $
 #
 
-DISTNAME=	XML-Bare-0.52
+DISTNAME=	XML-Bare-0.53
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -14,6 +13,12 @@ LICENSE=	gnu-gpl-v2
 
 PERL5_PACKLIST=	auto/XML/Bare/.packlist
 USE_LANGUAGES=	c
+
+SUBST_CLASSES+=		perl
+SUBST_MESSAGE.perl=	Fixing the path of perl.
+SUBST_STAGE.perl=	post-patch
+SUBST_FILES.perl=	Bare.pm
+SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
