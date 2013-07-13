@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/26 23:01:39 mspo Exp $
+$NetBSD: distinfo,v 1.2 2013/07/13 12:58:58 wen Exp $
 
-SHA1 (AnyEvent-IRC-0.96.tar.gz) = 8768a2ce0b0455f397aa25f54a808cc54ad34b02
-RMD160 (AnyEvent-IRC-0.96.tar.gz) = 82d681686e2a7eecb9145995442e16afc7efee71
-Size (AnyEvent-IRC-0.96.tar.gz) = 28832 bytes
+SHA1 (AnyEvent-IRC-0.97.tar.gz) = 771cdb815f7d3800ae5ed4fd5e7e41b55db151ec
+RMD160 (AnyEvent-IRC-0.97.tar.gz) = 172b629c301bbf732b41e14a8b0ac72cb7784b1e
+Size (AnyEvent-IRC-0.97.tar.gz) = 29270 bytes
