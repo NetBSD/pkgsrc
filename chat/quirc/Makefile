@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/06/06 12:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/07/13 19:21:33 joerg Exp $
 #
 
 DISTNAME=	quirc-0.9.84
@@ -27,7 +27,7 @@ SUBST_SED.T85+=		-e 's,8.3,8.5,g'
 SUBST_SED.T85+=		-e 's,83,85,g'
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && autoreconf -i
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
