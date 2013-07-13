@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2551 2013/07/13 08:33:27 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2552 2013/07/13 08:53:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3814,3 +3814,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.3.7 [adam 2013-07-12]
 	Updated textproc/py-libxslt to 1.1.28 [adam 2013-07-12]
 	Updated devel/p5-BSD-Resource to 1.29.07 [wen 2013-07-13]
+	Updated textproc/p5-XML-Bare to 0.53 [wen 2013-07-13]
