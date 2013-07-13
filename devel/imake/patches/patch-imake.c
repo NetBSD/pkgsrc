@@ -1,6 +1,6 @@
-$NetBSD: patch-imake.c,v 1.1 2013/07/02 12:12:48 joerg Exp $
+$NetBSD: patch-imake.c,v 1.2 2013/07/13 07:42:52 obache Exp $
 
---- imake.c.orig	2013-06-13 22:21:17.000000000 +0000
+--- imake.c.orig	2012-03-08 05:47:32.000000000 +0000
 +++ imake.c
 @@ -1336,54 +1336,8 @@ get_gcc_version(FILE *inFile, char *name
  static boolean
