@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.5 2013/03/07 13:15:29 obache Exp $
+# $NetBSD: metadata.mk,v 1.6 2013/07/13 09:10:35 obache Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -293,7 +293,7 @@ ${_PRESERVE_FILE}:
 _SIZE_PKG_FILE=		${PKG_DB_TMPDIR}/+SIZE_PKG
 _METADATA_TARGETS+=	${_SIZE_PKG_FILE}
 
-${_SIZE_PKG_FILE}: plist
+${_SIZE_PKG_FILE}: ${PLIST}
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN} \
 	${CAT} ${PLIST} |						\
