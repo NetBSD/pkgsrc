@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2013/03/06 16:21:13 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.2.4.1 2013/07/14 16:10:54 tron Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -7,8 +7,8 @@ COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/technetwork/java/index.html
-DOWNLOAD=	http://www.oracle.com/technetwork/java/javase/downloads/index.html
-ARCHIVE=	http://www.oracle.com/technetwork/java/archive-139210.html
+DOWNLOAD=	http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
+ARCHIVE=	http://www.oracle.com/technetwork/java/javase/archive-139210.html
 
 RESTRICTED=	Redistribution of repackaged binaries not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}
@@ -16,16 +16,14 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-EMUL_PLATFORMS=		linux-i386 linux-x86_64
+EMUL_PLATFORMS=		linux-i386 linux-x86_64 solaris-i386 solaris-x86_64
 
 USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
+.if ${EMUL_OPSYS} == "solaris"
 DIST_OS=		solaris
-EMUL_ARCH=		${MACHINE_ARCH}	# XXX: re-use EMUL_ARCH as it is simpler
-EMUL_PLATFORMS=		# empty, uses native binaries
 .else
 DIST_OS=		linux
 EMUL_MODULES.linux=	compat locale x11
@@ -74,11 +72,9 @@ FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
 FETCH_MESSAGE+=	" from:"
 FETCH_MESSAGE+=	"	${DOWNLOAD}"
 FETCH_MESSAGE+=	"	or ${ARCHIVE}"
-.if ${DIST_OS} == "linux"
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
-FETCH_MESSAGE+=	" license, then choose 'Linux tar.gz file'."
-.endif
+FETCH_MESSAGE+=	" license, then choose '${EMUL_OPSYS} tar.gz file'."
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}

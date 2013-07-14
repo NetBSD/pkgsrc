@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.1 2012/12/11 14:47:17 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.1.6.1 2013/07/14 16:10:54 tron Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -510,6 +510,7 @@ java/sun-7/lib/zi/Asia/Kamchatka
 java/sun-7/lib/zi/Asia/Karachi
 java/sun-7/lib/zi/Asia/Kashgar
 java/sun-7/lib/zi/Asia/Kathmandu
+java/sun-7/lib/zi/Asia/Khandyga
 java/sun-7/lib/zi/Asia/Kolkata
 java/sun-7/lib/zi/Asia/Krasnoyarsk
 java/sun-7/lib/zi/Asia/Kuala_Lumpur
@@ -548,6 +549,7 @@ java/sun-7/lib/zi/Asia/Thimphu
 java/sun-7/lib/zi/Asia/Tokyo
 java/sun-7/lib/zi/Asia/Ulaanbaatar
 java/sun-7/lib/zi/Asia/Urumqi
+java/sun-7/lib/zi/Asia/Ust-Nera
 java/sun-7/lib/zi/Asia/Vientiane
 java/sun-7/lib/zi/Asia/Vladivostok
 java/sun-7/lib/zi/Asia/Yakutsk
