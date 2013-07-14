@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2589 2013/07/14 17:34:08 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2590 2013/07/14 17:37:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3853,3 +3853,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/unrealircd to 3.2.10.1 [rodent 2013-07-14]
 	Updated games/bzflag to 2.4.2 [rodent 2013-07-14]
 	Updated devel/cppcheck to 1.60.1 [wiz 2013-07-14]
+	Updated devel/py-setuptools to 0.9 [wiz 2013-07-14]
