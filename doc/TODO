@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12398 2013/07/14 15:43:16 rodent Exp $
+$NetBSD: TODO,v 1.12399 2013/07/14 17:34:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o courier-imap-4.13
 	o covered-0.7.9
 	o covered-current-20090802
-	o cppcheck-1.60.1
 	o cross-h8300-elf-binutils-2.23.2 [wip]
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
