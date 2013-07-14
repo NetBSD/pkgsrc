@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 17:18:56 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/14 15:07:07 rodent Exp $
 #
 
 DISTNAME=		partysip-2.2.3
@@ -20,5 +20,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/partysip.conf ${DESTDIR}${PREFIX}/share/examples
 
 .include "../../devel/libosip/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
