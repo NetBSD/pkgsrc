@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/14 02:55:34 wen Exp $
+
+SHA1 (Crypt-Random-TESHA2-0.01.tar.gz) = 0bf3122ad7c7e4443574780627e74aa776964b6f
+RMD160 (Crypt-Random-TESHA2-0.01.tar.gz) = 31836e951abbc9e52e66e3c169908ca92be8f5bb
+Size (Crypt-Random-TESHA2-0.01.tar.gz) = 22255 bytes
