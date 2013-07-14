@@ -1,0 +1,4 @@
+Bytes::Random::Secure provides two interfaces for obtaining crypto-quality
+random bytes. The simple interface is built around plain functions. For greater
+control over the Random Number Generator's seeding, there is an Object Oriented
+interface that provides much more flexibility.
