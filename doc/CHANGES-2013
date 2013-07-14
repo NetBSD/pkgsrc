@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2590 2013/07/14 17:37:10 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2591 2013/07/14 17:55:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3854,3 +3854,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/bzflag to 2.4.2 [rodent 2013-07-14]
 	Updated devel/cppcheck to 1.60.1 [wiz 2013-07-14]
 	Updated devel/py-setuptools to 0.9 [wiz 2013-07-14]
+	Updated www/squid3 to 3.3.8 [adam 2013-07-14]
