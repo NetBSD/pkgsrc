@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/07/07 06:28:05 richard Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/07/14 17:37:02 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -22,6 +22,21 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
+${PYSITELIB}/setuptools/_backport/__init__.py
+${PYSITELIB}/setuptools/_backport/__init__.pyc
+${PYSITELIB}/setuptools/_backport/__init__.pyo
+${PYSITELIB}/setuptools/_backport/hashlib/__init__.py
+${PYSITELIB}/setuptools/_backport/hashlib/__init__.pyc
+${PYSITELIB}/setuptools/_backport/hashlib/__init__.pyo
+${PYSITELIB}/setuptools/_backport/hashlib/_sha.py
+${PYSITELIB}/setuptools/_backport/hashlib/_sha.pyc
+${PYSITELIB}/setuptools/_backport/hashlib/_sha.pyo
+${PYSITELIB}/setuptools/_backport/hashlib/_sha256.py
+${PYSITELIB}/setuptools/_backport/hashlib/_sha256.pyc
+${PYSITELIB}/setuptools/_backport/hashlib/_sha256.pyo
+${PYSITELIB}/setuptools/_backport/hashlib/_sha512.py
+${PYSITELIB}/setuptools/_backport/hashlib/_sha512.pyc
+${PYSITELIB}/setuptools/_backport/hashlib/_sha512.pyo
 ${PYSITELIB}/setuptools/archive_util.py
 ${PYSITELIB}/setuptools/archive_util.pyc
 ${PYSITELIB}/setuptools/archive_util.pyo
@@ -91,6 +106,9 @@ ${PYSITELIB}/setuptools/command/upload.pyo
 ${PYSITELIB}/setuptools/command/upload_docs.py
 ${PYSITELIB}/setuptools/command/upload_docs.pyc
 ${PYSITELIB}/setuptools/command/upload_docs.pyo
+${PYSITELIB}/setuptools/compat.py
+${PYSITELIB}/setuptools/compat.pyc
+${PYSITELIB}/setuptools/compat.pyo
 ${PYSITELIB}/setuptools/depends.py
 ${PYSITELIB}/setuptools/depends.pyc
 ${PYSITELIB}/setuptools/depends.pyo
@@ -103,9 +121,6 @@ ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
-${PYSITELIB}/setuptools/compat.py
-${PYSITELIB}/setuptools/compat.pyc
-${PYSITELIB}/setuptools/compat.pyo
 ${PYSITELIB}/setuptools/py24compat.py
 ${PYSITELIB}/setuptools/py24compat.pyc
 ${PYSITELIB}/setuptools/py24compat.pyo
