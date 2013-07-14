@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/08/06 13:57:23 mspo Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/07/14 14:51:49 rodent Exp $
 include/ares.h
 include/ares_build.h
 include/ares_dns.h
@@ -7,6 +7,7 @@ include/ares_version.h
 lib/libcares.la
 lib/pkgconfig/libcares.pc
 man/man3/ares_cancel.3
+man/man3/ares_create_query.3
 man/man3/ares_destroy.3
 man/man3/ares_destroy_options.3
 man/man3/ares_dup.3
@@ -22,6 +23,8 @@ man/man3/ares_gethostbyname.3
 man/man3/ares_gethostbyname_file.3
 man/man3/ares_getnameinfo.3
 man/man3/ares_getsock.3
+man/man3/ares_inet_ntop.3
+man/man3/ares_inet_pton.3
 man/man3/ares_init.3
 man/man3/ares_init_options.3
 man/man3/ares_library_cleanup.3
