@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/11/22 11:38:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/14 14:51:49 rodent Exp $
 #
 
-DISTNAME=	c-ares-1.9.1
-PKGNAME=	libcares-1.9.1
+DISTNAME=	c-ares-1.10.0
+PKGNAME=	${DISTNAME:S/c-/libc/1}
 CATEGORIES=	net
 MASTER_SITES=	http://c-ares.haxx.se/download/
 
