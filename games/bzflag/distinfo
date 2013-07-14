@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2013/02/26 10:29:06 joerg Exp $
+$NetBSD: distinfo,v 1.15 2013/07/14 15:48:14 rodent Exp $
 
-SHA1 (bzflag-2.0.16.tar.gz) = 5d4c949038c4a0a873d58f656fab8f9288cb73ff
-RMD160 (bzflag-2.0.16.tar.gz) = 93393b8cc0afd3922706b9e7e0e7fa99e8ac17e7
-Size (bzflag-2.0.16.tar.gz) = 12146215 bytes
+SHA1 (bzflag-2.4.2.tar.gz) = d5926e58b89ec989aa8a11b75080908f18254bba
+RMD160 (bzflag-2.4.2.tar.gz) = b42a7f8554c3d73e25db39c27a9499cbc7350348
+Size (bzflag-2.4.2.tar.gz) = 17423705 bytes
 SHA1 (patch-ad) = 626ff20e3b73f77734995732f34869550f590d5e
 SHA1 (patch-include_VotingArbiter.h) = 2d6348c5c7a834f29462d028f003866243959e56
