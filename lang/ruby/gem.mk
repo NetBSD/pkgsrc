@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.21 2013/07/07 15:16:38 taca Exp $
+# $NetBSD: gem.mk,v 1.22 2013/07/14 21:08:17 jperkin Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -363,7 +363,7 @@ _gem-build-cleanbuild:
 		*)	continue ;;					\
 		esac;							\
 		if [ -e ${WRKSRC:Q}"/$$file" ]; then			\
-			&& continue;					\
+			continue;					\
 		elif [ -d "$$file" ]; then				\
 			rfile=`echo $$file | ${SED} -e 's|^\./||'`;	\
 			${ECHO} "rmdir "${GEM_NAME}"/$$rfile";		\
