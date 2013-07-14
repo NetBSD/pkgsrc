@@ -1,0 +1,17 @@
+$NetBSD: patch-postgrey,v 1.1 2013/07/14 21:57:09 wiz Exp $
+
+Fix postgrey with perl-5.18.
+
+--- postgrey.orig	2010-05-04 20:51:52.000000000 +0000
++++ postgrey
+@@ -552,6 +552,10 @@ sub main()
+     if($opt{dbdir}) {
+         $opt{dbdir} =~ /^(.*)$/; $opt{dbdir} = $1;
+     }
++    # untaint pidfile
++    if($opt{pidfile}) {
++        $opt{pidfile} =~ /^(.*)$/; $opt{pidfile} = $1;
++    }
+ 
+     # determine proper "logsock" for Sys::Syslog
+     my $syslog_logsock;
