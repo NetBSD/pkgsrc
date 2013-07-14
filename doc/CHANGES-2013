@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2585 2013/07/14 14:55:43 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2586 2013/07/14 15:03:35 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-LibXML to 2.0019 [wen 2013-07-14]
 	Updated net/libcares to 1.10.0 [rodent 2013-07-14]
 	Updated devel/libosip to 4.0.0 [rodent 2013-07-14]
+	Updated net/aria2 to 1.17.1nb1 [rodent 2013-07-14]
