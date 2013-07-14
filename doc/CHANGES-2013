@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2580 2013/07/14 06:33:03 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2581 2013/07/14 06:38:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/p5-Bytes-Random-Secure version 0.26 [wen 2013-07-14]
 	Updated math/p5-Math-Prime-Util to 0.29 [wen 2013-07-14]
 	Updated security/p5-Digest-MD4 to 1.9 [wen 2013-07-14]
+	Updated security/p5-Digest-MD5 to 2.53 [wen 2013-07-14]
