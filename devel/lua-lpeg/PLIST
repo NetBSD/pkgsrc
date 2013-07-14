@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/13 22:13:58 alnsn Exp $
-lib/lua/5.1/lpeg.so
+@comment $NetBSD: PLIST,v 1.3 2013/07/14 20:31:45 alnsn Exp $
+${LUA_CDIR}/lpeg.so
 share/doc/lua-lpeg/lpeg.html
 share/doc/lua-lpeg/re.html
 share/doc/lua-lpeg/lpeg-128.gif
 share/doc/lua-lpeg/HISTORY
-share/lua/5.1/re.lua
+${LUA_LDIR}/re.lua
