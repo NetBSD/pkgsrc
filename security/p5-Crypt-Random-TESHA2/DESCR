@@ -1,0 +1,5 @@
+Crypt::Random::TESHA2 generate random numbers using entropy gathered from
+timer/scheduler jitter. This can be used to generate non-pseudorandom data
+to seed a PRNG (e.g. srand/rand, Math::Random::MT, etc.) or CSPRNG (e.g. AES-CTR
+or Math::Random::ISAAC). You may use it directly or as part of a random source
+module that first checks for O/S randomness sources.
