@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2592 2013/07/14 20:29:36 alnsn Exp $
+$NetBSD: CHANGES-2013,v 1.2593 2013/07/14 21:48:52 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3856,3 +3856,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-setuptools to 0.9 [wiz 2013-07-14]
 	Updated www/squid3 to 3.3.8 [adam 2013-07-14]
 	Updated devel/lua-penlight to 1.1.1 [alnsn 2013-07-14]
+	Added lang/LuaJIT2 version 2.0.2 [alnsn 2013-07-14]
