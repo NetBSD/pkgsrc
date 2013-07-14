@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/03 16:02:33 sno Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/14 01:14:04 wen Exp $
 #
 
 DISTNAME=		Dancer-Plugin-Auth-RBAC-1.110720
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Dancer/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Dancer-Plugin-Auth-RBAC/
 COMMENT=		Dancer Authentication, Security and Role-Based Access Control Framework
-LICENSE=		$(PERL5_LICENSE)
+LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
