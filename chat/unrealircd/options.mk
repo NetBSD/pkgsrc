@@ -1,18 +1,14 @@
-# $NetBSD: options.mk,v 1.11 2012/06/12 15:45:55 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2013/07/14 15:42:34 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
-PKG_OPTIONS_REQUIRED_GROUPS=	role
-PKG_OPTIONS_GROUP.role=		unrealircd-leaf unrealircd-hub
-
-PKG_SUPPORTED_OPTIONS=	inet6 unrealircd-nospoof unrealircd-leaf
-PKG_SUPPORTED_OPTIONS+=	unrealircd-ziplinks unrealircd-remoteinc ssl
-PKG_SUPPORTED_OPTIONS+=	unrealircd-chroot unrealircd-prefixaq
-PKG_SUPPORTED_OPTIONS+=	unrealircd-showlistmodes unrealircd-topicisnuhost
-PKG_SUPPORTED_OPTIONS+=	unrealircd-shunnotices unrealircd-operoverride-verify
+PKG_SUPPORTED_OPTIONS=	inet6 unrealircd-nospoof unrealircd-ziplinks
+PKG_SUPPORTED_OPTIONS+= unrealircd-remoteinc ssl unrealircd-chroot
+PKG_SUPPORTED_OPTIONS+=	unrealircd-prefixaq unrealircd-showlistmodes
+PKG_SUPPORTED_OPTIONS+= unrealircd-topicisnuhost unrealircd-shunnotices
+PKG_SUPPORTED_OPTIONS+= unrealircd-operoverride-verify inet6
 PKG_SUPPORTED_OPTIONS+=	unrealircd-no-operoverride unrealircd-disableusermod
-PKG_SUGGESTED_OPTIONS=	inet6 unrealircd-showlistmodes unrealircd-hub \
-			unrealircd-prefixaq
+PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes unrealircd-prefixaq
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,6 +19,7 @@ PKG_SUGGESTED_OPTIONS=	inet6 unrealircd-showlistmodes unrealircd-hub \
 CONFIGURE_ARGS+=	--enable-inet6
 MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
 .else
+CONFIGURE_ARGS+=	--disable-inet6
 CONFIGURE_ENV+=		ac_cv_ip6=no
 .endif
 
@@ -39,15 +36,6 @@ CONFIGURE_ARGS+=	--enable-ssl=${SSLBASE:Q}
 ###
 .if !empty(PKG_OPTIONS:Munrealircd-nospoof)
 CONFIGURE_ARGS+=	--enable-nospoof
-.endif
-
-###
-### Compile as a hub or leaf server
-###
-.if !empty(PKG_OPTIONS:Munrealircd-hub)
-CONFIGURE_ARGS+=	--enable-hub
-.	elif !empty(PKG_OPTIONS:Munrealircd-leaf)
-CONFIGURE_ARGS+=	--enable-leaf
 .endif
 
 ###
