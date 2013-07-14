@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2577 2013/07/14 04:44:58 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2578 2013/07/14 06:03:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3841,3 +3841,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Digest-SHA to 5.85 [wen 2013-07-14]
 	Added security/p5-Crypt-Random-TESHA2 version 0.0.1 [wen 2013-07-14]
 	Added security/p5-Crypt-Random-Seed version 0.03 [wen 2013-07-14]
+	Added security/p5-Bytes-Random-Secure version 0.26 [wen 2013-07-14]
