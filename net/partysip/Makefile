@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/07/14 15:07:07 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2013/07/14 15:07:47 rodent Exp $
 #
 
 DISTNAME=		partysip-2.2.3
@@ -9,6 +9,7 @@ MASTER_SITES=		http://savannah.gnu.org/download/partysip/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/partysip/partysip.html
 COMMENT=		SIP proxy server
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-config-dir=/etc
