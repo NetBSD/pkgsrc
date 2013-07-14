@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.5 2013/07/10 13:54:40 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.6 2013/07/14 16:11:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -13,3 +13,8 @@ Pullup ticket #4173 - requested by rodent
 audio/libfishsound: build fix
 Pullup ticket #4174 - requested by ryoon
 audio/nas: bug fix patch
+Pullup ticket #4175 - requested by obache
+multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4176 - requested by obache
+lang/sun-jdk7: security update
+lang/sun-jre7: security update
