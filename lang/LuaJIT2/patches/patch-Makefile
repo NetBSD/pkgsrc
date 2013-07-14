@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2013/07/14 21:42:00 alnsn Exp $
+
+Fix installation.
+
+--- Makefile.orig	2013-06-03 19:00:00.000000000 +0000
++++ Makefile
+@@ -24,7 +24,6 @@ ABIVER=  5.1
+ # Change the installation path as needed. This automatically adjusts
+ # the paths in src/luaconf.h, too. Note: PREFIX must be an absolute path!
+ #
+-export PREFIX= /usr/local
+ ##############################################################################
+ 
+ DPREFIX= $(DESTDIR)$(PREFIX)
+@@ -39,7 +38,7 @@ INSTALL_LMODD= $(INSTALL_SHARE)/lua
+ INSTALL_LMOD= $(INSTALL_LMODD)/$(ABIVER)
+ INSTALL_CMODD= $(INSTALL_LIB)/lua
+ INSTALL_CMOD= $(INSTALL_CMODD)/$(ABIVER)
+-INSTALL_MAN= $(INSTALL_SHARE)/man/man1
++INSTALL_MAN= $(DPREFIX)/man/man1
+ INSTALL_PKGCONFIG= $(INSTALL_LIB)/pkgconfig
+ 
+ INSTALL_TNAME= luajit-$(VERSION)

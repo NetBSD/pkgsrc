@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/07/14 21:42:00 alnsn Exp $
+bin/luajit
+bin/luajit-${PKGVERSION}
+include/luajit-2.0/lauxlib.h
+include/luajit-2.0/lua.h
+include/luajit-2.0/lua.hpp
+include/luajit-2.0/luaconf.h
+include/luajit-2.0/luajit.h
+include/luajit-2.0/lualib.h
+lib/libluajit-5.1.a
+lib/libluajit-5.1.so
+lib/libluajit-5.1.so.${PKGVERSION}
+lib/pkgconfig/luajit.pc
+share/luajit-${PKGVERSION}/jit/bc.lua
+share/luajit-${PKGVERSION}/jit/bcsave.lua
+share/luajit-${PKGVERSION}/jit/dis_arm.lua
+share/luajit-${PKGVERSION}/jit/dis_mips.lua
+share/luajit-${PKGVERSION}/jit/dis_mipsel.lua
+share/luajit-${PKGVERSION}/jit/dis_ppc.lua
+share/luajit-${PKGVERSION}/jit/dis_x64.lua
+share/luajit-${PKGVERSION}/jit/dis_x86.lua
+share/luajit-${PKGVERSION}/jit/dump.lua
+share/luajit-${PKGVERSION}/jit/v.lua
+share/luajit-${PKGVERSION}/jit/vmdef.lua
+man/man1/luajit.1
+@pkgdir share/lua/5.1
+@pkgdir lib/lua/5.1
