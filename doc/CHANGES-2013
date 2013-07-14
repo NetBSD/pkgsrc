@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2582 2013/07/14 06:43:02 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2583 2013/07/14 06:48:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Digest-MD4 to 1.9 [wen 2013-07-14]
 	Updated security/p5-Digest-MD5 to 2.53 [wen 2013-07-14]
 	Updated textproc/p5-Text-CSV to 1.32 [wen 2013-07-14]
+	Updated textproc/p5-XML-LibXML to 2.0019 [wen 2013-07-14]
