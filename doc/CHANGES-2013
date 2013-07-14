@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2571 2013/07/13 19:15:27 joerg Exp $
+$NetBSD: CHANGES-2013,v 1.2572 2013/07/14 00:21:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3835,3 +3835,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Dist-CheckConflicts to 0.08 [wen 2013-07-13]
 	Updated databases/p5-DBD-SQLite to 1.39nb1 [schmonz 2013-07-13]
 	Updated devel/tradcpp to 0.4 [dholland 2013-07-13]
+	Updated devel/p5-App-cpanminus to 1.6923 [wen 2013-07-14]
