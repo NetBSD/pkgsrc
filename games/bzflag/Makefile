@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.44 2013/05/31 12:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2013/07/14 15:48:14 rodent Exp $
 
-DISTNAME=	bzflag-2.0.16
-PKGREVISION=	5
+DISTNAME=	bzflag-2.4.2
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
 MAINTAINER=	blymn@NetBSD.org
 HOMEPAGE=	http://bzflag.org/
 COMMENT=	OpenGL tank game
+LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
@@ -38,5 +38,6 @@ CHECK_PORTABILITY_SKIP+=	debian/*
 .include "../../net/libcares/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
