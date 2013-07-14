@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2586 2013/07/14 15:03:35 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2587 2013/07/14 15:43:16 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3850,3 +3850,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libcares to 1.10.0 [rodent 2013-07-14]
 	Updated devel/libosip to 4.0.0 [rodent 2013-07-14]
 	Updated net/aria2 to 1.17.1nb1 [rodent 2013-07-14]
+	Updated chat/unrealircd to 3.2.10.1 [rodent 2013-07-14]
