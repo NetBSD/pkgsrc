@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2013/07/15 01:42:47 ryoon Exp $
+
+--- acinclude.m4.orig	2005-08-28 17:26:59.000000000 +0900
++++ acinclude.m4
+@@ -65,3 +65,23 @@ AC_DEFUN([EL_GETPW_R_DRAFT],
+        AC_MSG_RESULT(yes)],
+       [AC_MSG_RESULT(no)])
+ ])
++
++AC_DEFUN([EL_PRAGMA_WEAK],
++[
++    AC_MSG_CHECKING([if we can use C pragma weak SYM])
++    AC_RUN_IFELSE([#include <stdio.h>
++                   #pragma weak ___non_existent_function___
++                   extern void ___non_existent_function___(void);
++                   int main(void) {
++                       if (___non_existent_function___ == 0) {
++                           return 0;
++                       }
++                       else {
++                           return 1;
++                       }
++                   }],
++                   [AC_DEFINE([HAVE_PRAGMA_WEAK], 1, [Define to 1 if we can use C pragma weak SYM.])
++                    AC_MSG_RESULT(yes)],
++                   [AC_MSG_RESULT(no)],
++                   [AC_MSG_RESULT(cross compiling; assumed `no')])
++])
+\ No newline at end of file
