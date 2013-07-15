@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/13 20:11:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/07/15 12:11:44 fhajny Exp $
 bin/node
 bin/npm
 lib/dtrace/node.d
@@ -274,11 +274,13 @@ lib/node_modules/npm/lib/utils/error-handler.js
 lib/node_modules/npm/lib/utils/fetch.js
 lib/node_modules/npm/lib/utils/find-prefix.js
 lib/node_modules/npm/lib/utils/gently-rm.js
+lib/node_modules/npm/lib/utils/is-git-url.js
 lib/node_modules/npm/lib/utils/lifecycle.js
 lib/node_modules/npm/lib/utils/link.js
 lib/node_modules/npm/lib/utils/tar.js
 lib/node_modules/npm/lib/version.js
 lib/node_modules/npm/lib/view.js
+lib/node_modules/npm/lib/visnup.js
 lib/node_modules/npm/lib/whoami.js
 lib/node_modules/npm/lib/xmas.js
 lib/node_modules/npm/man/man1/README.1
@@ -620,7 +622,6 @@ lib/node_modules/npm/node_modules/node-gyp/gyp/tools/graphviz.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/tools/pretty_gyp.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/tools/pretty_sln.py
 lib/node_modules/npm/node_modules/node-gyp/gyp/tools/pretty_vcproj.py
-lib/node_modules/npm/node_modules/node-gyp/legacy/common.gypi
 lib/node_modules/npm/node_modules/node-gyp/lib/build.js
 lib/node_modules/npm/node_modules/node-gyp/lib/clean.js
 lib/node_modules/npm/node_modules/node-gyp/lib/configure.js
@@ -657,6 +658,7 @@ lib/node_modules/npm/node_modules/npm-registry-client/node_modules/couch-login/c
 lib/node_modules/npm/node_modules/npm-registry-client/node_modules/couch-login/package.json
 lib/node_modules/npm/node_modules/npm-registry-client/package.json
 lib/node_modules/npm/node_modules/npm-user-validate/.npmignore
+lib/node_modules/npm/node_modules/npm-user-validate/.travis.yml
 lib/node_modules/npm/node_modules/npm-user-validate/LICENSE
 lib/node_modules/npm/node_modules/npm-user-validate/README.md
 lib/node_modules/npm/node_modules/npm-user-validate/npm-user-validate.js
@@ -706,7 +708,6 @@ lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-packa
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/README.md
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/extract_description.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/is_valid.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/typos.json
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/.npmignore
@@ -1013,14 +1014,22 @@ lib/node_modules/npm/node_modules/retry/package.json
 lib/node_modules/npm/node_modules/rimraf/AUTHORS
 lib/node_modules/npm/node_modules/rimraf/LICENSE
 lib/node_modules/npm/node_modules/rimraf/README.md
+lib/node_modules/npm/node_modules/rimraf/bin.js
 lib/node_modules/npm/node_modules/rimraf/package.json
 lib/node_modules/npm/node_modules/rimraf/rimraf.js
+lib/node_modules/npm/node_modules/semver/.npmignore
 lib/node_modules/npm/node_modules/semver/LICENSE
+lib/node_modules/npm/node_modules/semver/Makefile
 lib/node_modules/npm/node_modules/semver/README.md
 lib/node_modules/npm/node_modules/semver/bin/semver
+lib/node_modules/npm/node_modules/semver/foot.js
+lib/node_modules/npm/node_modules/semver/head.js
 lib/node_modules/npm/node_modules/semver/package.json
+lib/node_modules/npm/node_modules/semver/semver.browser.js
+lib/node_modules/npm/node_modules/semver/semver.browser.js.gz
 lib/node_modules/npm/node_modules/semver/semver.js
-lib/node_modules/npm/node_modules/semver/test.js
+lib/node_modules/npm/node_modules/semver/semver.min.js
+lib/node_modules/npm/node_modules/semver/semver.min.js.gz
 lib/node_modules/npm/node_modules/sha/.npmignore
 lib/node_modules/npm/node_modules/sha/README.md
 lib/node_modules/npm/node_modules/sha/index.js
