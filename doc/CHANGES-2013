@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2600 2013/07/15 02:07:56 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2601 2013/07/15 02:20:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3864,3 +3864,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Class-C3 to 0.25 [wen 2013-07-15]
 	Added devel/editline version 3.1.20130712 [ryoon 2013-07-15]
 	Updated multimedia/clutter-gst to 2.0.4 [obache 2013-07-15]
+	Removed graphics/py-clutter [obache 2013-07-15]
+	Removed graphics/py-clutter-gtk [obache 2013-07-15]
+	Removed multimedia/py-clutter-gst [obache 2013-07-15]

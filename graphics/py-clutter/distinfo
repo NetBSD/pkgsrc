@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2010/12/03 05:43:23 obache Exp $
-
-SHA1 (pyclutter-1.0.2.tar.gz) = c3a7abed60798a97e993773791c9b11c85bf0513
-RMD160 (pyclutter-1.0.2.tar.gz) = 0e48bb8c53c78397dc9943bf0cba966002d70cea
-Size (pyclutter-1.0.2.tar.gz) = 628308 bytes
-SHA1 (patch-aa) = c606bda8c6caa402f595fe57140c081919354d54
-SHA1 (patch-ab) = dfdc43f7221662d4f3f0cf482e5e54ace4fbaa95
