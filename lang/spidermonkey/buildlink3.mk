@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2012/05/07 01:53:42 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2013/07/15 02:02:24 ryoon Exp $
 
 BUILDLINK_TREE+=	spidermonkey
 
@@ -15,7 +15,7 @@ BUILDLINK_ABI_DEPENDS.spidermonkey+=	spidermonkey>=1.5nb8
 .endif
 BUILDLINK_PKGSRCDIR.spidermonkey?=	../../lang/spidermonkey
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 
 pkgbase := spidermonkey
 .include "../../mk/pkg-build-options.mk"

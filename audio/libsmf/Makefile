@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/15 10:03:40 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/15 02:02:17 ryoon Exp $
 #
 
 DISTNAME=	libsmf-1.3
@@ -18,5 +18,5 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	smf.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

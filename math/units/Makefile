@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/12/06 11:42:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/15 02:02:26 ryoon Exp $
 
 DISTNAME=	units-2.01
 CATEGORIES=	math
@@ -22,6 +22,6 @@ REPLACE_PYTHON=	units_cur
 post-install:
 	${LN} -sf ${PREFIX}/bin/gunits ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/units
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

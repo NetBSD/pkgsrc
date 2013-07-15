@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2013/06/23 18:12:46 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2013/07/15 02:02:22 ryoon Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	4
@@ -27,5 +27,5 @@ pre-configure:
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
