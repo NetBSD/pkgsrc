@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
+$NetBSD: patch-ab,v 1.6.2.1 2013/07/15 22:32:24 tron Exp $
 
---- configure.orig	2013-04-10 07:50:37.000000000 +0000
+--- configure.orig	2013-07-11 17:08:25.000000000 +0000
 +++ configure
 @@ -14121,7 +14121,7 @@ EOF
    PHP_VAR_SUBST="$PHP_VAR_SUBST SAPI_CGI_PATH"
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
      
    if test "$PHP_SAPI" != "default"; then
  { echo "configure: error: 
-@@ -23462,7 +23462,7 @@ fi
+@@ -23465,7 +23465,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -25453,7 +25453,7 @@ echo "configure:25433: checking bundled 
+@@ -25456,7 +25456,7 @@ echo "configure:25433: checking bundled 
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
      
    
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
        
    
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -36315,7 +36315,7 @@ fi
+@@ -36318,7 +36318,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -50360,7 +50360,7 @@ fi
+@@ -50659,7 +50659,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -84478,7 +84478,7 @@ fi
+@@ -84777,7 +84777,7 @@ fi
      if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.6 2013/04/12 16:59:51 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -107641,12 +107641,7 @@ old_CC=$CC
+@@ -107940,12 +107940,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"

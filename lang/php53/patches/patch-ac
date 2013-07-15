@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2013/02/17 13:10:13 taca Exp $
+$NetBSD: patch-ac,v 1.5.4.1 2013/07/15 22:32:24 tron Exp $
 
---- ext/gd/config.m4.orig	2011-05-12 08:19:37.000000000 +0000
+--- ext/gd/config.m4.orig	2013-07-10 17:43:08.000000000 +0000
 +++ ext/gd/config.m4
 @@ -45,18 +45,7 @@ dnl Checks for the configure options
  dnl
