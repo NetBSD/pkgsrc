@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/06/27 16:37:16 taca Exp $
+# $NetBSD: Makefile,v 1.36 2013/07/15 02:02:21 ryoon Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -27,5 +27,4 @@ post-install:
 .include "options.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/06 20:27:24 rodent Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/15 02:02:25 ryoon Exp $
 
 DISTNAME=	bc-1.06
 PKGREVISION=	3
@@ -14,5 +14,5 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
 INFO_FILES=		yes
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

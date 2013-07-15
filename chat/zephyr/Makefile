@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 00:02:47 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/07/15 02:02:18 ryoon Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -60,7 +60,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${ZEPHYR_DOCDIR}
 .endfor
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../net/hesiod/buildlink3.mk"
 .include "../../net/libares/buildlink3.mk"
 .include "../../security/kth-krb4/buildlink3.mk"

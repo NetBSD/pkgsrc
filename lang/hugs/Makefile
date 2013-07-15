@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2013/06/18 19:58:48 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2013/07/15 02:02:23 ryoon Exp $
 
 DISTNAME=	hugs98-Sep2006
 PKGNAME=	hugs98-200609
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	ice_cv_traditional_cpp=${PREFIX}/bin/tradcpp
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
-.  include "../../devel/readline/buildlink3.mk"
+.  include "../../mk/readline.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	ac_cv_lib_readline_readline=no
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 13:25:13 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/07/15 02:02:18 ryoon Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -21,7 +21,6 @@ CONFLICTS+=	gnucap-2006-07-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
-USE_GNU_READLINE=	YES
 GNU_CONFIGURE=		YES
 
 INSTALLATION_DIRS=	share/gnucap/manual/html

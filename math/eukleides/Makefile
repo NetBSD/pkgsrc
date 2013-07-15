@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/06/26 15:50:30 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2013/07/15 02:02:25 ryoon Exp $
 
 DISTNAME=	eukleides-1.5.4
 PKGREVISION=	1
@@ -39,7 +39,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 pre-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
 .include "../../mk/bsd.pkg.mk"

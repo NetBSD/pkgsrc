@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/05/31 12:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2013/07/15 02:02:24 ryoon Exp $
 #
 
 VERSION=		4.8.0
@@ -92,5 +92,5 @@ pre-install:
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

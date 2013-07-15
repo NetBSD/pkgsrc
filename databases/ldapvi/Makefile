@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/04/13 07:55:03 ghen Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/15 02:02:19 ryoon Exp $
 
 DISTNAME=		ldapvi-1.7
 PKGREVISION=		9
@@ -11,7 +11,6 @@ COMMENT=		Interactive LDAP client
 
 GNU_CONFIGURE=		yes
 USE_NCURSES=		yes
-USE_GNU_READLINE=	yes
 
 USE_TOOLS+=		gmake pkg-config
 MAKE_FILE=		GNUmakefile

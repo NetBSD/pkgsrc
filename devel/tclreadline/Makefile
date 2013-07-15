@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:50 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/15 02:02:21 ryoon Exp $
 #
 
 DISTNAME=	tclreadline-2.1.0
@@ -35,5 +35,5 @@ post-install:
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

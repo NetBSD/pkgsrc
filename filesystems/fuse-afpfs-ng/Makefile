@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 16:08:30 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/07/15 02:02:22 ryoon Exp $
 
 DISTNAME=	afpfs-ng-0.8.1
 PKGNAME=	fuse-${DISTNAME}
@@ -20,7 +20,7 @@ REPLACE_SH+=	fuse/afpfs
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 

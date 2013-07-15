@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/09/12 00:24:39 asau Exp $
+# $NetBSD: Makefile,v 1.33 2013/07/15 02:02:17 ryoon Exp $
 #
 
 DISTNAME=	id3ed-1.10.4
@@ -19,7 +19,5 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 
 # uses rl_startup_hook
-USE_GNU_READLINE=	yes
-
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

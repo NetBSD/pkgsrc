@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/04/06 13:24:20 rodent Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:29 ryoon Exp $
 
 DISTNAME=	devtodo-0.1.20
 PKGREVISION=	3
@@ -11,7 +11,6 @@ COMMENT=	Display and manage a list of items that are outstanding
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_GNU_READLINE=	# uses rl_startup_hook()
 GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/devtodo
@@ -30,5 +29,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/${cfile} ${DESTDIR}${EGDIR}
 .endfor
 
+# uses rl_startup_hook()
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

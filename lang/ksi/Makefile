@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/04/06 20:27:23 rodent Exp $
+# $NetBSD: Makefile,v 1.22 2013/07/15 02:02:23 ryoon Exp $
 
 DISTNAME=		ksi-3.9.0
 CATEGORIES=		lang
@@ -15,11 +15,11 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		makeinfo
 INFO_FILES=		yes
 MAKE_ENV+=		GC_PREFIX=${BUILDLINK_PREFIX.boehm-gc:Q}
-USE_GNU_READLINE=	# uses rl_event_hook() interface
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/boehm-gc/buildlink3.mk"
+# uses rl_event_hook() interface
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"

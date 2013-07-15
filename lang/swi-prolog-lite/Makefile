@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/02 20:11:55 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/07/15 02:02:24 ryoon Exp $
 
 .include "Makefile.common"
 
@@ -10,7 +10,6 @@ COMMENT=		ISO/Edinburgh-style Prolog compiler
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
-USE_GNU_READLINE=	yes # uses rl_event_hook() interface
 
 CONFIGURE_ENV+=		PL=swi-prolog
 CONFIGURE_ENV+=		ARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
@@ -38,6 +37,7 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/swi-prolog-${SWIPLVERS}/library/shlib.pl
 
 .include "../../devel/ncurses/buildlink3.mk"
+# uses rl_event_hook() interface
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

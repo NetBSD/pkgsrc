@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/21 21:07:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.27 2013/07/15 02:02:24 ryoon Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
@@ -64,5 +64,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/*.tbl ${DESTDIR}${PREFIX}/include
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

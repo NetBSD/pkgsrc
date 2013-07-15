@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2013/05/09 07:39:18 adam Exp $
+# $NetBSD: Makefile,v 1.53 2013/07/15 02:02:27 ryoon Exp $
 #
 
 DISTNAME=	yaz-4.1.6
@@ -28,7 +28,7 @@ REPLACE.tclsh.new=	${TCLSH}
 REPLACE_FILES.tclsh=	util/yaz-asncomp
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/06/06 12:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2013/07/15 02:02:28 ryoon Exp $
 #
 
 DISTNAME=	honeyd-1.5b
@@ -35,7 +35,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libdnsres/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

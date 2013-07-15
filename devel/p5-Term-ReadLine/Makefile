@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/05/31 12:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:21 ryoon Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.20
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE} # see README
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_READLINE=	yes
 PERL5_PACKLIST=		auto/Term/ReadLine/Gnu/.packlist
 
 MAKE_PARAMS+=	--includedir=${PREFIX}/include --libdir=${PREFIX}/lib

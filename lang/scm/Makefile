@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/02 20:11:53 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/07/15 02:02:24 ryoon Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -41,7 +41,7 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
 
 INSTALLATION_DIRS=	${PKGINFODIR} share/scm
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 
 post-extract:
 	${SED} -e "s|@SLIB_PREFIX@|"${SLIB_PREFIX:Q}"|g"		\

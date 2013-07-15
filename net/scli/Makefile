@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/23 17:19:07 asau Exp $
+# $NetBSD: Makefile,v 1.31 2013/07/15 02:02:27 ryoon Exp $
 #
 
 DISTNAME=		scli-0.3.1
@@ -13,13 +13,13 @@ COMMENT=		SNMP command line interface
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake
 
-USE_GNU_READLINE=	yes # history_list
 BUILDLINK_API_DEPENDS.readline+=	readline>=4.0
 
 INFO_FILES=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+# history_list
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/gnet/buildlink3.mk"
 .include "../../net/gsnmp/buildlink3.mk"

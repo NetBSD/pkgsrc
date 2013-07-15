@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/05/31 12:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/07/15 02:02:17 ryoon Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -119,7 +119,7 @@ post-extract:
 		${CP} ${FILESDIR}/atomicity.h ${WRKSRC}/config/os/netbsd
 
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

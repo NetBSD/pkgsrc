@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/06/12 20:28:41 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/15 02:02:25 ryoon Exp $
 
 DISTNAME=		yap-6.3.3
 CATEGORIES=		lang
@@ -16,8 +16,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS=		gmake
 
 CONFIGURE_ENV+=		INDENT=${TRUE:Q}
-
-USE_GNU_READLINE=	yes
 
 # debug option:
 #CONFIGURE_ARGS+=	--enable-debug-yap

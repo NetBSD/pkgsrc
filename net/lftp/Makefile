@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2013/05/31 12:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2013/07/15 02:02:27 ryoon Exp $
 
 DISTNAME=	lftp-4.4.6
 PKGREVISION=	1
@@ -17,7 +17,6 @@ LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_READLINE=	yes	# uses _rl_mark_modified_lines
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -50,6 +49,7 @@ post-install: post-install-perl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+# uses _rl_mark_modified_lines
 .include "../../devel/readline/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

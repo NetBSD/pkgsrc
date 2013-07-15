@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2013/07/03 20:00:47 adam Exp $
+# $NetBSD: Makefile,v 1.236 2013/07/15 02:02:27 ryoon Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -47,7 +47,6 @@ USE_TOOLS+=		gmake mktemp perl:run pkg-config
 REPLACE_PERL=		script/findsmb.in
 
 BROKEN_GETTEXT_DETECTION=yes
-USE_GNU_READLINE=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}

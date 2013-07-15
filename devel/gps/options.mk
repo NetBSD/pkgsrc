@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/07/09 10:16:02 marino Exp $
+# $NetBSD: options.mk,v 1.6 2013/07/15 02:02:20 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gps
 PKG_SUPPORTED_OPTIONS=	syslog sqlite readline python pgsql
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=	syslog sqlite readline python
 
 .if !empty(PKG_OPTIONS:Mreadline)
 CONFIGURE_ARGS+= --enable-gpl
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .else
 CONFIGURE_ARGS+= --disable-readline
 .endif

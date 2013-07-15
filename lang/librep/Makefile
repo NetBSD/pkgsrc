@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/10/02 20:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.60 2013/07/15 02:02:23 ryoon Exp $
 #
 
 DISTNAME=		librep-0.91.0
@@ -12,7 +12,6 @@ HOMEPAGE=		http://librep.sourceforge.net/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
 USE_TOOLS+=		gmake makeinfo
-USE_GNU_READLINE=	yes # uses rl_basic_quote_characters
 USE_LIBTOOL=		yes
 # we have a symlink to libtool
 DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
@@ -45,5 +44,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+# uses rl_basic_quote_characters
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
