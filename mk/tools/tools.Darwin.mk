@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.47 2013/07/09 15:22:31 jperkin Exp $
+# $NetBSD: tools.Darwin.mk,v 1.48 2013/07/15 08:51:21 jperkin Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -6,8 +6,11 @@ TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.bash?=		/bin/bash
-TOOLS_PLATFORM.bison?=		/usr/bin/bison
-TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
+# Native bison (at least up to version 2.3 in OSX Lion) does not work
+# well in the tools environment and cannot locate m4sugar.m4 without
+# BISON_PKGDATADIR being set.  For now just pull in the pkgsrc tool.
+#TOOLS_PLATFORM.bison?=		/usr/bin/bison
+#TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
 .if exists(/usr/bin/bsdtar)
 TOOLS_PLATFORM.bsdtar?=		/usr/bin/bsdtar
 .endif
