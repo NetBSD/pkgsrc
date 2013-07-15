@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2608 2013/07/15 18:16:21 tron Exp $
+$NetBSD: CHANGES-2013,v 1.2609 2013/07/15 19:47:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libgee0.8 to 0.8.7 [wiz 2013-07-15]
 	Updated devel/editline to 3.1.20130712nb1 [ryoon 2013-07-15]
 	Updated www/apache22 to 2.2.25 [tron 2013-07-15]
+	Updated devel/mr to 1.20130710 [schmonz 2013-07-15]
