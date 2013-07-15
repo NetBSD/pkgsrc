@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2013/06/13 14:01:34 obache Exp $
+# $NetBSD: Makefile,v 1.213 2013/07/15 02:20:54 obache Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -154,7 +154,6 @@ SUBDIR+=	phonon-backend-vlc
 SUBDIR+=	php-ming
 SUBDIR+=	pitivi
 SUBDIR+=	pspvc
-SUBDIR+=	py-clutter-gst
 SUBDIR+=	py-gstreamer0.10
 SUBDIR+=	py-ming
 SUBDIR+=	realplayer-codecs
