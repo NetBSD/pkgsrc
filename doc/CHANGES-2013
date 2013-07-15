@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2595 2013/07/15 01:15:38 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2596 2013/07/15 01:20:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/LuaJIT2 version 2.0.2 [alnsn 2013-07-14]
 	Updated mail/postgrey to 1.33nb8 [wiz 2013-07-14]
 	Updated archivers/p5-Archive-Tar to 1.92 [wen 2013-07-15]
+	Added graphics/cogl version 1.14.0 [obache 2013-07-15]
