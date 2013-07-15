@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12402 2013/07/15 02:07:56 obache Exp $
+$NetBSD: TODO,v 1.12403 2013/07/15 12:55:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-plugins-2.4.4
 	o audacity-2.0.2 [wip (audacity-devel)]
 	o autoconvert-0.3.16
-	o autogen-5.17.4
+	o autogen-5.18
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o awesome-3.5
@@ -723,7 +723,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.13.1
-	o libgee-0.10.0
+	o libgee-0.10.2
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.8.0
 	o libgnomedb-3.1.2
@@ -836,6 +836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nulib2-220
 	o nut-18.9
 	o nxtvepg-2.8.1
+	o ocrad-0.22
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
@@ -1139,7 +1140,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-intel-2.21.11
+	o xf86-video-intel-2.21.12
 	o xf86-video-mga-1.9.100
 	o xf86-video-modesetting-0.8.0 [wip]
 	o xf86-video-sisusb-0.9.4
@@ -1179,6 +1180,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
+	o xvkbd-3.5
 	o xwpe-1.5.30a
 	o xzip-182
 	o yafc-1.1
