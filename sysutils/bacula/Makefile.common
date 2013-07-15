@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2013/03/04 21:57:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.62 2013/07/15 02:02:28 ryoon Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
 CONFIGURE_ARGS+=	--with-sbin-perm=0755
 CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
-CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-smartalloc
@@ -77,6 +77,6 @@ EXAMPLESDIR=		${PREFIX}/share/examples/bacula
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

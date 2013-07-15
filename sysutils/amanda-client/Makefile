@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/10/23 19:50:51 asau Exp $
+# $NetBSD: Makefile,v 1.58 2013/07/15 02:02:28 ryoon Exp $
 #
 
 PKGNAME=		amanda-client-${AMANDA_VERSION}
@@ -57,5 +57,5 @@ post-install:
 		${DESTDIR}${PREFIX}/libexec/amanda
 
 .include "../../sysutils/amanda-common/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

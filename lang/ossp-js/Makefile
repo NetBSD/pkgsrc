@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 12:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/07/15 02:02:23 ryoon Exp $
 #
 
 DISTNAME=	js-1.6.20070208
@@ -48,5 +48,5 @@ CONFIGURE_ENV+=		LIBM="-lm"
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

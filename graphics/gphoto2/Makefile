@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/10/06 14:10:56 asau Exp $
+# $NetBSD: Makefile,v 1.58 2013/07/15 02:02:22 ryoon Exp $
 
 DISTNAME=	gphoto2-2.4.14
 CATEGORIES=	graphics
@@ -19,15 +19,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cdk-prefix=${BUILDLINK_PREFIX.cdk}
 CONFIGURE_ARGS+=	--with-jpeg-prefix=${JPEGBASE}
 
-# uses rl_completion_matches() (NetBSD 3.* don't have) and rl_copy_text()
-USE_GNU_READLINE=	yes
-
 CFLAGS.Darwin+= -D_DARWIN_C_SOURCE
 
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+# uses rl_completion_matches() (NetBSD 3.* don't have) and rl_copy_text()
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

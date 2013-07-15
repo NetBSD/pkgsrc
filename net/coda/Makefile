@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/07/15 02:02:26 ryoon Exp $
 #
 
 DISTNAME=	coda-6.9.5
@@ -25,7 +25,7 @@ REPLACE_PERL=	coda-src/scripts/tape.pl coda-src/scripts/volmunge
 .include "../../devel/lwp/buildlink3.mk"
 .include "../../devel/rpc2/buildlink3.mk"
 .include "../../devel/rvm/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/application.mk"
 
