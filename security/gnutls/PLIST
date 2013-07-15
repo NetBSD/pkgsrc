@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2013/07/08 08:30:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2013/07/15 08:19:15 wiz Exp $
 bin/certtool
 bin/danetool
 bin/gnutls-cli
@@ -94,6 +94,7 @@ man/man3/gnutls_certificate_set_pin_function.3
 man/man3/gnutls_certificate_set_retrieve_function.3
 man/man3/gnutls_certificate_set_retrieve_function2.3
 man/man3/gnutls_certificate_set_rsa_export_params.3
+man/man3/gnutls_certificate_set_trust_list.3
 man/man3/gnutls_certificate_set_verify_flags.3
 man/man3/gnutls_certificate_set_verify_function.3
 man/man3/gnutls_certificate_set_verify_limits.3
@@ -132,6 +133,7 @@ man/man3/gnutls_cipher_get_id.3
 man/man3/gnutls_cipher_get_iv_size.3
 man/man3/gnutls_cipher_get_key_size.3
 man/man3/gnutls_cipher_get_name.3
+man/man3/gnutls_cipher_get_tag_size.3
 man/man3/gnutls_cipher_init.3
 man/man3/gnutls_cipher_list.3
 man/man3/gnutls_cipher_set_iv.3
@@ -171,6 +173,9 @@ man/man3/gnutls_dh_params_import_pkcs3.3
 man/man3/gnutls_dh_params_import_raw.3
 man/man3/gnutls_dh_params_init.3
 man/man3/gnutls_dh_set_prime_bits.3
+man/man3/gnutls_digest_get_id.3
+man/man3/gnutls_digest_get_name.3
+man/man3/gnutls_digest_list.3
 man/man3/gnutls_dtls_cookie_send.3
 man/man3/gnutls_dtls_cookie_verify.3
 man/man3/gnutls_dtls_get_data_mtu.3
@@ -186,6 +191,7 @@ man/man3/gnutls_ecc_curve_get_size.3
 man/man3/gnutls_ecc_curve_list.3
 man/man3/gnutls_error_is_fatal.3
 man/man3/gnutls_error_to_alert.3
+man/man3/gnutls_est_record_overhead_size.3
 man/man3/gnutls_fingerprint.3
 man/man3/gnutls_global_deinit.3
 man/man3/gnutls_global_init.3
@@ -196,8 +202,10 @@ man/man3/gnutls_global_set_mem_functions.3
 man/man3/gnutls_global_set_mutex.3
 man/man3/gnutls_global_set_time_function.3
 man/man3/gnutls_handshake.3
+man/man3/gnutls_handshake_description_get_name.3
 man/man3/gnutls_handshake_get_last_in.3
 man/man3/gnutls_handshake_get_last_out.3
+man/man3/gnutls_handshake_set_hook_function.3
 man/man3/gnutls_handshake_set_max_packet_length.3
 man/man3/gnutls_handshake_set_post_client_hello_function.3
 man/man3/gnutls_handshake_set_private_extensions.3
@@ -536,6 +544,7 @@ man/man3/gnutls_record_disable_padding.3
 man/man3/gnutls_record_get_direction.3
 man/man3/gnutls_record_get_discarded.3
 man/man3/gnutls_record_get_max_size.3
+man/man3/gnutls_record_overhead_size.3
 man/man3/gnutls_record_recv.3
 man/man3/gnutls_record_recv_seq.3
 man/man3/gnutls_record_send.3
