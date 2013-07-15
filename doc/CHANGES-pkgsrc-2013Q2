@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.7 2013/07/15 20:20:24 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.8 2013/07/15 22:32:55 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -20,3 +20,11 @@ lang/sun-jdk7: security update
 lang/sun-jre7: security update
 Pullup ticket #4184 - requested by tron
 www/apache22: security update
+Pullup ticket #4177 - requested by taca
+x11/libXi: security update
+Pullup ticket #4178 - requested by taca
+www/squid3: security update
+Pullup ticket #4182 - requested by taca
+mail/roundcube: dependency fix
+Pullup ticket #4183 - requested by taca
+lang/php53: security update
