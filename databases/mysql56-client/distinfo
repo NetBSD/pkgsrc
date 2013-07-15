@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/07/15 02:04:36 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2013/07/15 12:13:43 ryoon Exp $
 
 SHA1 (mysql-5.6.12.tar.gz) = 852e168fd39bb24adf8805642be20a59042c2e6c
 RMD160 (mysql-5.6.12.tar.gz) = 0088072e353f21fe0b079fe7c26500c822c76819
@@ -16,6 +16,7 @@ SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my_net.h) = b08aa36921efd023f9ecaac4cd3fb8a16d200abd
 SHA1 (patch-include_my_pthread.h) = ff3bf1fddd04edd7804d810f79de64387464b5ca
 SHA1 (patch-include_myisam.h) = c554a594ea0169cb725cfdfe5accaf231eebdc23
+SHA1 (patch-libmysql_CMakeLists.txt) = 6169cb9f88e4022b83b3d9103b1f8e80ad8143d8
 SHA1 (patch-libmysql_libmysql.c) = ad78143ca78b7c512e86677b3dd59e497357f289
 SHA1 (patch-libmysqld_lib__sql.cc) = ffdd74cece2d7795cb4d8d738f81c2c8dc040a7d
 SHA1 (patch-mysql-test_CMakeLists.txt) = b7dd562d55678b13ac487aa0ee59bf2551af1f9d
