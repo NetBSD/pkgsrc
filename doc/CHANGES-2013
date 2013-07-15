@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2597 2013/07/15 01:26:41 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2598 2013/07/15 01:29:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3861,3 +3861,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/p5-Archive-Tar to 1.92 [wen 2013-07-15]
 	Added graphics/cogl version 1.14.0 [obache 2013-07-15]
 	Updated graphics/clutter to 1.14.4 [obache 2013-07-15]
+	Updated devel/p5-Class-C3 to 0.25 [wen 2013-07-15]
