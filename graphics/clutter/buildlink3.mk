@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2013/06/06 12:53:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2013/07/15 01:25:59 obache Exp $
 #
 
 BUILDLINK_TREE+=	clutter
@@ -22,10 +22,12 @@ BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=7.0
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/cogl/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .endif # CLUTTER_BUILDLINK3_MK
 

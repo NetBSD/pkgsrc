@@ -1,38 +1,39 @@
-# $NetBSD: Makefile,v 1.39 2013/06/06 12:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/07/15 01:25:59 obache Exp $
 #
 
-DISTNAME=	clutter-1.2.14
-PKGREVISION=	14
+DISTNAME=	clutter-1.14.4
 CATEGORIES=	graphics
-MASTER_SITES=	http://source.clutter-project.org/sources/clutter/1.2/
-#		${MASTER_SITE_GNOME:=sources/clutter/1.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter/1.14/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://clutter-project.org/
+HOMEPAGE=	http://blog.gnome.org/clutter/
 COMMENT=	Open GL based interactive canvas library
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
+USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=	--with-json=system
-
-PKGCONFIG_OVERRIDE+=	clutter/cogl/cogl/cogl.pc.in
-PKGCONFIG_OVERRIDE+=	clutter/x11/clutter-x11.pc.in
-PKGCONFIG_OVERRIDE+=	clutter/win32/clutter-win32.pc.in
-PKGCONFIG_OVERRIDE+=	clutter.pc.in
+PKGCONFIG_OVERRIDE+=	clutter/cally/cally.pc.in
+PKGCONFIG_OVERRIDE+=	clutter/clutter.pc.in
 
 .include "options.mk"
 
 TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
+.include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
+.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.31.19
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.30.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
-.include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.8.0
+BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.10.0
+.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.14.0
+.include "../../graphics/cogl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.12.0
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
