@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/06/05 22:00:35 jperkin Exp $
+# $NetBSD: options.mk,v 1.4 2013/07/15 09:24:57 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -37,7 +37,7 @@ PKG_SUGGESTED_OPTIONS+=		64bitnone
 PKG_SUGGESTED_OPTIONS+=		64bitauto
 .endif
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS" 
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS" 
 PKG_SUGGESTED_OPTIONS+=		dtrace
 .endif
 
