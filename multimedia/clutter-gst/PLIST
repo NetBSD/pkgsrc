@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2010/03/11 04:07:58 obache Exp $
-include/clutter-1.0/clutter-gst/clutter-gst-util.h
-include/clutter-1.0/clutter-gst/clutter-gst-version.h
-include/clutter-1.0/clutter-gst/clutter-gst-video-sink.h
-include/clutter-1.0/clutter-gst/clutter-gst-video-texture.h
-include/clutter-1.0/clutter-gst/clutter-gst.h
-lib/libclutter-gst-1.0.la
-lib/pkgconfig/clutter-gst-1.0.pc
+@comment $NetBSD: PLIST,v 1.5 2013/07/15 02:06:54 obache Exp $
+include/clutter-gst-2.0/clutter-gst/clutter-gst-enum-types.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst-player.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst-types.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst-util.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst-version.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst-video-sink.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst-video-texture.h
+include/clutter-gst-2.0/clutter-gst/clutter-gst.h
+${PLIST.introspection}lib/girepository-1.0/ClutterGst-2.0.typelib
+lib/gstreamer-1.0/libgstclutter.la
+lib/libclutter-gst-2.0.la
+lib/pkgconfig/clutter-gst-2.0.pc
+${PLIST.introspection}share/gir-1.0/ClutterGst-2.0.gir
+share/gtk-doc/html/clutter-gst/ClutterGstPlayer.html
 share/gtk-doc/html/clutter-gst/ClutterGstVideoSink.html
 share/gtk-doc/html/clutter-gst/ClutterGstVideoTexture.html
 share/gtk-doc/html/clutter-gst/ch01.html
 share/gtk-doc/html/clutter-gst/ch02.html
 share/gtk-doc/html/clutter-gst/clutter-gst-Utilities.html
 share/gtk-doc/html/clutter-gst/clutter-gst-Versioning-Macros.html
-share/gtk-doc/html/clutter-gst/clutter-gst.devhelp
 share/gtk-doc/html/clutter-gst/clutter-gst.devhelp2
 share/gtk-doc/html/clutter-gst/home.png
 share/gtk-doc/html/clutter-gst/index.html
