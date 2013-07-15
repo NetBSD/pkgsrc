@@ -1,3 +1,0 @@
-Clutter-Qt is a library providing facilities to integrate Clutter into Qt
-applications. It provides a Qt widget, ClutterQt, for embedding the
-default ClutterStage into any parent QtWidget.
