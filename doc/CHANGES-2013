@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2603 2013/07/15 08:19:55 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2604 2013/07/15 12:11:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3869,3 +3869,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed multimedia/py-clutter-gst [obache 2013-07-15]
 	Removed graphics/clutter-qt [obache 2013-07-15]
 	Updated security/gnutls to 3.2.2 [wiz 2013-07-15]
+	Updated lang/nodejs to 0.10.13 [fhajny 2013-07-15]
