@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.63 2012/07/09 17:36:30 wiz Exp $
+# $NetBSD: deprecated.map,v 1.64 2013/07/15 08:09:21 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -157,3 +157,6 @@ NO_MTREE		You can just remove it.
 SETGIDGAME		Use USE_GAMESGROUP instead.
 GAMEGRP			Use GAMES_GROUP instead.
 GAMEOWN			Use GAMES_USER instead.
+
+# July 2013
+USE_GNU_READLINE	Include "../../devel/readline/buildlink3.mk" instead.

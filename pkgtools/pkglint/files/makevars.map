@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.233 2013/05/07 08:45:06 wiz Exp $
+# $NetBSD: makevars.map,v 1.234 2013/07/15 08:09:21 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -716,7 +716,6 @@ USE_CROSSBASE		Yes [m:s]
 USE_FEATURES		List of Identifier [$package]
 USE_GNU_CONFIGURE_HOST	YesNo [$package]
 USE_GNU_ICONV		Yes [m:s,c:s,o:s]
-USE_GNU_READLINE	Yes [m:s,c:s,o:s]
 USE_IMAKE		Yes [m:s]
 USE_JAVA		{ run yes build } [$package]
 USE_JAVA2		{ YES yes no 1.4 1.5 6 7 } [$package]
