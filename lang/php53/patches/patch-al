@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2010/05/28 15:31:04 joerg Exp $
+$NetBSD: patch-al,v 1.1.26.1 2013/07/15 22:32:24 tron Exp $
 
---- ext/pdo_mysql/config.m4.orig	2010-05-28 15:19:37.000000000 +0000
+--- ext/pdo_mysql/config.m4.orig	2013-07-10 17:43:08.000000000 +0000
 +++ ext/pdo_mysql/config.m4
 @@ -158,7 +158,7 @@ if test "$PHP_PDO_MYSQL" != "no"; then
    fi
