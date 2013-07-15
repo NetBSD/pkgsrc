@@ -659,8 +659,6 @@ unicode			Enable support for Unicode.
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
 unrealircd-disableusermod	Disable /sethost, /setident, /chgname, /chghost, and /chgident.
-unrealircd-hub		IRC hub server.
-unrealircd-leaf		IRC leaf node server.
 unrealircd-no-operoverride	Disable operator override.
 unrealircd-nospoof	Enable anti-spoof protection for older TCP/IP stacks.
 unrealircd-operoverride-verify	Require opers to /invite themselves into a +s or +p channel.
