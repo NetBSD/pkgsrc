@@ -1,18 +1,27 @@
-# $NetBSD: options.mk,v 1.4 2010/11/17 21:13:09 drochner Exp $
+# $NetBSD: options.mk,v 1.5 2013/07/15 01:25:59 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
-PKG_SUPPORTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	introspection x11
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	x11 osx
+PLIST_VARS+=	introspection x11 osx
+
+.if !empty(PKG_OPTIONS:Mintrospection)
+PLIST.introspection=	yes
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
+BUILDLINK_DEPMETHOD.gobject-introspection+=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-intrpspection=yes
+.else
+CONFIGURE_ARGS+=	--enable-intrpspection=no
+.endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=		yes
-CONFIGURE_ARGS+=	--with-x
-CONFIGURE_ARGS+=	--with-flavour=glx
+CONFIGURE_ARGS+=	--enable-x11-backend
 CONFIGURE_ARGS+=	--with-imagebackend=gdk-pixbuf
 CONFIGURE_ARGS+=	--enable-xinput
 BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=7.0
@@ -28,7 +37,6 @@ CONFIGURE_ARGS+=	--without-x
 .include "../../mk/bsd.prefs.mk"
 .  if ${OPSYS} == Darwin
 PLIST.osx=		yes
-CONFIGURE_ARGS+=	--with-flavour=osx
-CONFIGURE_ARGS+=	--with-imagebackend=quartz
+CONFIGURE_ARGS+=	--with-quartz-backend
 .  endif
 .endif
