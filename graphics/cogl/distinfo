@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/15 01:19:04 obache Exp $
+
+SHA1 (cogl-1.14.0.tar.xz) = ff9a60b54fe79eb336af9c1b686f71f6af6f84f9
+RMD160 (cogl-1.14.0.tar.xz) = 69a87d46c21999bde675a518ab3cbb5dfa159131
+Size (cogl-1.14.0.tar.xz) = 1656520 bytes

@@ -1,0 +1,15 @@
+Cogl is a small open source library for using 3D graphics hardware for
+rendering. The API departs from the flat state machine style of OpenGL and is
+designed to make it easy to write orthogonal components that can render without
+stepping on each others toes.
+
+As well as aiming for a nice API, we think having a single library as opposed
+to an API specification like OpenGL has a few advantages too; like being
+able to paper over the inconsistencies/bugs of different OpenGL
+implementations in a centralized place, not to mention the myriad of OpenGL
+extensions. It also means we are in a better position to provide utility
+APIs that help software developers since they only need to be implemented
+once and there is no risk of inconsistency between implementations.
+
+Having other backends, besides OpenGL, such as drm, Gallium or D3D are
+options we are interested in for the future.
