@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/07/05 13:29:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2013/07/15 02:02:22 ryoon Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
@@ -27,9 +27,7 @@ CFLAGS.SunOS+=	-std=c99 -D__EXTENSIONS__
 .include "options.mk"
 
 PLIST_VARS+=		editline
-CHECK_BUILTIN.readline:=	yes
-.include "../../devel/readline/builtin.mk"
-CHECK_BUILTIN.readline:=	no
+.include "../../mk/readline.builtin.mk"
 
 .if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
 PLIST.editline=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 16:08:31 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/15 02:02:22 ryoon Exp $
 
 DISTNAME=	djmount-0.71
 PKGNAME=	fuse-${DISTNAME}
@@ -13,8 +13,6 @@ COMMENT=	FUSE filesystem for accessing Media Server content via UPnP
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
-
-USE_GNU_READLINE=	yes
 
 CONFIGURE_ARGS+=	--with-external-libupnp
 CONFIGURE_ARGS+=	--with-libupnp-prefix=${BUILDLINK_PREFIX.libupnp}

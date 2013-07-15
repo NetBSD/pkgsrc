@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/09 07:40:02 adam Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/15 02:02:23 ryoon Exp $
 #
 
 DISTNAME=	konoha-1.0.0-952
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

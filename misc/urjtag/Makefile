@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 09:57:39 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/15 02:02:26 ryoon Exp $
 #
 
 DISTNAME=	urjtag-0.10
@@ -19,7 +19,7 @@ REPLACE_SH=		src/bsdl2jtag
 post-extract:
 	${CP} ${FILESDIR}/usbprog.c ${WRKSRC}/src/tap/cable
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libftdi/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

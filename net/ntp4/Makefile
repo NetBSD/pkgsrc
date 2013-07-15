@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2013/05/31 12:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2013/07/15 02:02:27 ryoon Exp $
 #
 
 DISTNAME=	ntp-4.2.4p8
@@ -67,5 +67,5 @@ CONFIGURE_ARGS+=	--with-openssl-incdir=${SSLBASE}/include
 CONFIGURE_ARGS+=	--with-openssl-libdir=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-crypto=openssl
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

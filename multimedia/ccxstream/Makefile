@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 09:20:58 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/15 02:02:26 ryoon Exp $
 #
 
 DISTNAME=	ccxstream-1.0.15
@@ -26,5 +26,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/PORTING ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/${DOCDIR}
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

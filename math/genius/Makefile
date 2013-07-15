@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2013/06/06 12:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2013/07/15 02:02:25 ryoon Exp $
 #
 
 DISTNAME=		genius-1.0.16
@@ -17,7 +17,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
-USE_GNU_READLINE=	yes
 
 .include "options.mk"
 

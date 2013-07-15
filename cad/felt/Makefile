@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2012/10/08 13:25:12 asau Exp $
+# $NetBSD: Makefile,v 1.37 2013/07/15 02:02:18 ryoon Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
-PKGREVISION=	4
+PKGREVISION=		4
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=felt/}
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
@@ -22,8 +22,6 @@ MAKE_ENV+=		CCOPTS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDOPTS=${LDFLAGS:M*:Q}
 MAKE_ENV+=		SH=${SH:Q}
 
-USE_GNU_READLINE=	YES # uses remove_history() and history_list()
-
 INSTALLATION_DIRS+=	lib/X11/app-defaults share/doc/felt share/examples/felt
 INSTALLATION_DIRS+=	share/examples/felt share/doc/felt
 
@@ -36,6 +34,7 @@ post-install:
 		COPYING CHANGELOG TODO ${DESTDIR}${PREFIX}/share/doc/felt
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/felt
 
+# uses remove_history() and history_list()
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 

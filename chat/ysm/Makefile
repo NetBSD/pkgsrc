@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 00:02:47 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/07/15 02:02:18 ryoon Exp $
 
 DISTNAME=	ysmv7_2_9_9_1
 PKGNAME=	ysm-2.9.9.1
@@ -11,8 +11,8 @@ COMMENT=	The 'You Sick Me' terminal based ICQ client
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
-USE_GNU_READLINE=	YES # rl_delete_text
 
+# rl_delete_text
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

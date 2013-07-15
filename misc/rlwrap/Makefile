@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/15 02:02:26 ryoon Exp $
 #
 
 DISTNAME=	rlwrap-0.37
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 
 .include "options.mk"
 
-USE_GNU_READLINE=	yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake perl:run
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 13:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/07/15 02:02:18 ryoon Exp $
 #
 
 DISTNAME=	verilog-0.9.4
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.9/
 
@@ -23,5 +24,5 @@ TEST_TARGET=		check
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

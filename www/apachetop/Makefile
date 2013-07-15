@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/28 06:30:10 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/07/15 02:02:29 ryoon Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -19,6 +19,6 @@ INCOMPAT_CURSES=	NetBSD-1.5*-*
 INCOMPAT_CURSES=	NetBSD-1.6-* NetBSD-1.6.*-* NetBSD-1.6[A-Q]-*
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

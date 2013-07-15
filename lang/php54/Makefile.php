@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.4 2012/07/27 00:21:03 obache Exp $
+# $NetBSD: Makefile.php,v 1.5 2013/07/15 02:02:24 ryoon Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
 
@@ -99,7 +99,6 @@ CONFIGURE_ARGS+=	--enable-maintainer-zts
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
-USE_GNU_READLINE=	yes
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 .else

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/01/26 22:10:13 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/07/15 02:02:18 ryoon Exp $
 
 DISTNAME=		avrdude-5.11
 PKGREVISION=		1
@@ -15,8 +15,6 @@ BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
 BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 MAKE_JOBS_SAFE=		no
-
-USE_GNU_READLINE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

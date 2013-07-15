@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/02/06 23:23:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2013/07/15 02:02:29 ryoon Exp $
 
 DISTNAME=		cadaver-0.23.3
 PKGREVISION=		2
@@ -21,7 +21,7 @@ LIBS+=			${BUILDLINK_LDADD.termcap}
 #INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR:Q}${PREFIX:Q}/bin		\
 #			mandir=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"

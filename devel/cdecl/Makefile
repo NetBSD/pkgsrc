@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/10/31 11:16:44 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/07/15 02:02:20 ryoon Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utility to explain and compose C and C++ declarations
 
 BUILD_TARGET=		cdecl
-# missing rl_completion_matches
-USE_GNU_READLINE=	yes
 USE_TOOLS+=		lex yacc
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX} \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -23,5 +21,6 @@ INSTALLATION_DIRS=	bin ${EGDIR} ${PKGMANDIR}/man1
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/testset* ${DESTDIR}${EGDIR}
 
+# missing rl_completion_matches
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

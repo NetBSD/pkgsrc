@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2013/04/06 20:27:16 rodent Exp $
+# $NetBSD: Makefile,v 1.64 2013/07/15 02:02:17 ryoon Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -36,7 +36,7 @@ post-install:
 .endfor
 
 .include "../../audio/gsm/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/rx/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

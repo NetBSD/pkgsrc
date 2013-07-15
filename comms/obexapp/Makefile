@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/03/15 08:23:05 plunky Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:18 ryoon Exp $
 #
 
 DISTNAME=	obexapp-1.4.15
@@ -48,6 +48,6 @@ post-extract:
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2013/06/04 22:16:38 tron Exp $
+# $NetBSD: Makefile,v 1.117 2013/07/15 02:02:25 ryoon Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	3
@@ -22,7 +22,6 @@ OCTAVE_VER=	3.6.4
 BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
 .endif
 
-USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gsed gmake:run makeinfo perl pkg-config bison
 GNU_CONFIGURE=		yes

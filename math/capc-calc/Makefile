@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/09/11 23:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.43 2013/07/15 02:02:25 ryoon Exp $
 #
 
 DISTNAME=	calc-2.12.4.1
@@ -23,5 +23,5 @@ INSTALL_MAKE_FLAGS+=	T=${DESTDIR}
 TEST_TARGET=	check
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

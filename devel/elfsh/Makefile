@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:55 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/07/15 02:02:20 ryoon Exp $
 #
 
 VERS=		0.51b3
@@ -16,8 +16,6 @@ COMMENT=	ELF format exploration shell
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
-USE_GNU_READLINE=	yes
 
 SUBST_CLASSES+=		elfsh
 SUBST_STAGE.elfsh=	post-patch

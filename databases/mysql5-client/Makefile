@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/05/31 12:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/07/15 02:02:19 ryoon Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 PKGREVISION=		3
@@ -38,5 +38,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/mysql/my-${f}.cnf
 .endfor
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

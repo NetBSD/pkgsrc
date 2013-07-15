@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/11 23:04:16 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/15 02:02:25 ryoon Exp $
 #
 
 DISTNAME=	aamath-0.3
@@ -24,5 +24,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aamath ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/aamath.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

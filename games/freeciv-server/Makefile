@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/05/23 15:02:53 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2013/07/15 02:02:22 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -11,7 +11,6 @@ USE_TOOLS+=	automake autoconf
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
-USE_GNU_READLINE=	yes
 CONFIGURE_ARGS+=	--disable-make-data
 CONFIGURE_ARGS+=	--enable-client=no
 CONFIGURE_ARGS+=	--disable-gtktest

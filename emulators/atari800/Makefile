@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/05/19 07:35:56 adam Exp $
+# $NetBSD: Makefile,v 1.51 2013/07/15 02:02:21 ryoon Exp $
 
 DISTNAME=	atari800-3.0.0
 CATEGORIES=	emulators
@@ -36,7 +36,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/*.rom ${WRKDIR}/*.xfd ${WRKDIR}/*.atr \
 		${WRKSRC}/atari800.cfg ${DESTDIR}${PREFIX}/share/atari800/
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"

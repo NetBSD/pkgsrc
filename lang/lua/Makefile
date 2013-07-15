@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/07/04 18:04:42 adam Exp $
+# $NetBSD: Makefile,v 1.51 2013/07/15 02:02:23 ryoon Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 CATEGORIES=	lang
@@ -52,6 +52,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.??? ${DESTDIR}${PREFIX}/share/doc/lua
 	${INSTALL_DATA} ${WRKSRC}/doc/*.???? ${DESTDIR}${PREFIX}/share/doc/lua
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

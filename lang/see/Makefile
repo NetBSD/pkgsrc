@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/07/15 02:02:24 ryoon Exp $
 #
 
 DISTNAME=	see-3.0.1376
@@ -30,5 +30,5 @@ post-install:
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

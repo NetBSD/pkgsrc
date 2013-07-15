@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2013/02/06 23:22:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2013/07/15 02:02:24 ryoon Exp $
 
 .include "dist.mk"
 
@@ -175,7 +175,6 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/libpython2.6.sl.1.0
 .endif
 
-USE_GNU_READLINE=			yes
 BUILDLINK_DEPMETHOD.readline=		build
 
 .include "../../archivers/bzip2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/02/06 23:20:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2013/07/15 02:02:18 ryoon Exp $
 
 DISTNAME=	ekg-1.7
 PKGREVISION=	7
@@ -10,7 +10,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://ekg.chmurka.net/
 COMMENT=	Experimental Gadu-Gadu Client (Polish instant messaging system)
 
-USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		gmake pkg-config

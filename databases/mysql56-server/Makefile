@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/15 02:02:19 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -86,6 +86,6 @@ CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 
 BUILDLINK_AUTO_DIRS.mysql-client=	no
 .include "../../databases/mysql56-client/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

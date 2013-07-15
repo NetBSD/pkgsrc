@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 21:25:15 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/07/15 02:02:19 ryoon Exp $
 #
 
 DISTNAME=	abook-0.6.0pre2
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
-USE_GNU_READLINE=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../converters/libiconv/buildlink3.mk"

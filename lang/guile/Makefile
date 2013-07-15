@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2013/05/31 12:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2013/07/15 02:02:23 ryoon Exp $
 
 DISTNAME=		guile-1.8.8
 PKGREVISION=		3
@@ -15,7 +15,6 @@ CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
-USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
 INFO_FILES=		YES
 PKGCONFIG_OVERRIDE=	guile-1.8.pc.in
