@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/12 13:37:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/15 02:02:23 ryoon Exp $
 #
 
 DISTNAME=	newlisp-10.5.3
@@ -25,5 +25,5 @@ SUBST_FILES.interpreter=	guiserver/*lsp util/syntax.cgi util/newlispdoc
 SUBST_SED.interpreter=		-e 's,/usr/bin/newlisp,${PREFIX}/bin/newlisp,'
 SUBST_SED.interpreter+=		-e 's,/usr/bin/env newlisp,${PREFIX}/bin/newlisp,'
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

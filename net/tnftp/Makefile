@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/02/16 09:34:38 obache Exp $
+# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:27 ryoon Exp $
 
 DISTNAME=		tnftp-20070806
 SVR4_PKGNAME=		tnftp
@@ -31,12 +31,12 @@ do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 	@${RM} -f ${WRKSRC}/INSTALL
 
-# Use readline/builtin.mk to check for an editline library on the
+# Use mk/readline.builtin.mk to check for an editline library on the
 # system.  If we use the system editline library, then use the built-in
 # termcap library.
 #
 CHECK_BUILTIN.readline:=	yes
-.include "../../devel/readline/builtin.mk"
+.include "../../mk/readline.builtin.mk"
 CHECK_BUILTIN.readline:=	no
 
 .if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/02/06 23:23:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/15 02:02:28 ryoon Exp $
 
 OPENSC_PKG_VERSION=	0.12.2
 DISTNAME=		opensc-${OPENSC_PKG_VERSION}
@@ -44,7 +44,7 @@ post-install:
 .include "../../textproc/docbook-xsl/buildlink3.mk"
 
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 .include "../../security/openssl/buildlink3.mk"

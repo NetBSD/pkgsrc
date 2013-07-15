@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2013/05/15 11:55:20 adam Exp $
+# $NetBSD: Makefile,v 1.56 2013/07/15 02:02:23 ryoon Exp $
 
 DISTNAME=	gawk-4.1.0
 CATEGORIES=	lang
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_GNU_READLINE=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
