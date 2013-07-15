@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/02/06 23:23:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2013/07/15 02:02:28 ryoon Exp $
 #
 
 DISTNAME=		krb4-1.2.2
@@ -59,12 +59,12 @@ PLIST.glob=			yes
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-readline=yes \
-	--with-readline-lib=${BUILDLINK_PREFIX.readline}/lib \
-	--with-readline-include=${BUILDLINK_PREFIX.readline}/include/readline \
+	--with-readline-lib=${BUILDLINK_PREFIX.editlinereadline}/lib \
+	--with-readline-include=${BUILDLINK_PREFIX.editlinereadline}/include/readline \
 	ac_cv_funclib_bswap16=yes \
 	ac_cv_funclib_bswap32=yes
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .endif
 
 PLIST_VARS+=	glob wantdes

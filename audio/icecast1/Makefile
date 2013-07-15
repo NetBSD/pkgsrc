@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2012/09/12 00:24:39 asau Exp $
+# $NetBSD: Makefile,v 1.30 2013/07/15 02:02:17 ryoon Exp $
 #
 
 DISTNAME=	icecast-1.3.12
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/icecast/
 
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-readline \
 			--with-libwrap \
 			--with-python \
 			--sysconfdir=${PKG_SYSCONFDIR:Q}
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.editlinereadline}/include/readline
 CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}
 LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
 PTHREAD_OPTS+=		require
@@ -49,7 +49,7 @@ SUBST_FILES.ice=	src/icetypes.h
 SUBST_SED.ice=		-e 's/@SOURCE_BUFFSIZE@/${ICECAST_SOURCE_BUFFSIZE}/'
 SUBST_SED.ice+=		-e 's/@CHUNKLEN@/${ICECAST_CHUNKLEN}/'
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

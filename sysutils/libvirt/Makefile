@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/02/06 23:23:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2013/07/15 02:02:28 ryoon Exp $
 
 DISTNAME=	libvirt-0.9.3
 PKGREVISION=	9
@@ -68,7 +68,7 @@ RCD_SCRIPTS=            libvirtd
 .include "../../lang/python/extension.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/06/06 12:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/07/15 02:02:26 ryoon Exp $
 #
 
 DISTNAME=	usbprog-0.2.0
@@ -19,7 +19,7 @@ USE_LIBTOOL=	yes
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

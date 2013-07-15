@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2013/06/06 12:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2013/07/15 02:02:24 ryoon Exp $
 
 DISTNAME=	smalltalk-3.2.4
 PKGREVISION=	15
@@ -14,7 +14,6 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-sparc *-*-powerpc
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gawk gmake makeinfo pkg-config zip
-USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-system-ltdl
