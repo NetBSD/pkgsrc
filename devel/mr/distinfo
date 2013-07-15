@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2013/05/05 20:43:42 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2013/07/15 19:47:42 schmonz Exp $
 
-SHA1 (mr_1.15.tar.gz) = 663b709887fcada5ffea4d52f38d8d45503f9f79
-RMD160 (mr_1.15.tar.gz) = 3574ac983c68879f8fd1e04e1addbbd9d202fba4
-Size (mr_1.15.tar.gz) = 40028 bytes
+SHA1 (myrepos_1.20130710.tar.gz) = 0916a46b7e488ef671f131bc804b292d3d18a97e
+RMD160 (myrepos_1.20130710.tar.gz) = a51164d059e1d84b8f5a26dd0378049a8781f9f4
+Size (myrepos_1.20130710.tar.gz) = 42425 bytes
+SHA1 (patch-Makefile) = 621d99130490700bc6cd7ac776f98251fa609bae
 SHA1 (patch-mr) = 9e53c78cda93e39fb91ced9f83144b4ac138ea32
