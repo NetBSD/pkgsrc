@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.655 2013/06/26 20:14:05 joerg Exp $
+# $NetBSD: Makefile,v 1.656 2013/07/15 02:13:52 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -54,6 +54,7 @@ SUBDIR+=	clutter-gtk
 SUBDIR+=	clutter-mx
 SUBDIR+=	clutter-qt
 SUBDIR+=	cnxtview
+SUBDIR+=	cogl
 SUBDIR+=	comix
 SUBDIR+=	compface
 SUBDIR+=	cpia2view
