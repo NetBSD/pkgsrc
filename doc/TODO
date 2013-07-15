@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12400 2013/07/14 17:37:11 wiz Exp $
+$NetBSD: TODO,v 1.12401 2013/07/15 01:26:42 obache Exp $
 
 Suggested new packages
 ======================
@@ -430,7 +430,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
-	o clutter-1.14.4
 	o clutter-gst-2.0.4
 	o cmake-fedora-1.0.5
 	o colorize-0.3.4
