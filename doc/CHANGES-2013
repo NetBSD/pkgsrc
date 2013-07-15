@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2601 2013/07/15 02:20:54 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2602 2013/07/15 02:26:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3867,3 +3867,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed graphics/py-clutter [obache 2013-07-15]
 	Removed graphics/py-clutter-gtk [obache 2013-07-15]
 	Removed multimedia/py-clutter-gst [obache 2013-07-15]
+	Removed graphics/clutter-qt [obache 2013-07-15]
