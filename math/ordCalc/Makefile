@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/11 23:04:25 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/15 02:02:26 ryoon Exp $
 #
 
 ORDCALCVER=	0.2
@@ -35,6 +35,6 @@ do-install:
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

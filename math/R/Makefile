@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2013/06/06 12:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2013/07/15 02:02:25 ryoon Exp $
 
 DISTNAME=		R-2.15.1
 PKGREVISION=		7
@@ -21,7 +21,6 @@ INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_TOOLS+=		pkg-config
-USE_GNU_READLINE=	yes		# uses callback interface
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
@@ -129,6 +128,7 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+# uses callback interface
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

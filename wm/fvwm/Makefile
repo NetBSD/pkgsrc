@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/06/06 12:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/07/15 02:02:29 ryoon Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	4
@@ -20,7 +20,6 @@ FVWM_VER=	2.6.5
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
-USE_GNU_READLINE=	YES
 USE_TOOLS+=		perl:run tar
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}

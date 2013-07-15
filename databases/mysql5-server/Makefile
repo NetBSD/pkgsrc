@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2013/07/15 02:02:19 ryoon Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		2
@@ -60,7 +60,7 @@ CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 # a build-time dependency.
 #
 BUILDLINK_DEPMETHOD.readline=	build
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 
 post-configure:
 	cd ${WRKSRC}/include && cp -f config.h my_config.h

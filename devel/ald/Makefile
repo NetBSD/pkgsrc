@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:16:34 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/07/15 02:02:20 ryoon Exp $
 #
 
 DISTNAME=	ald-0.1.7
@@ -15,5 +15,5 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 GNU_CONFIGURE=	YES
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

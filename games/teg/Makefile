@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/06/06 12:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2013/07/15 02:02:22 ryoon Exp $
 
 DISTNAME=		teg-0.11.1
 PKGREVISION=		37
@@ -18,5 +18,5 @@ GCONF_SCHEMAS+=	teg.schemas
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
