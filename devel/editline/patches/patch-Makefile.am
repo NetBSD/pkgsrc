@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/07/15 15:14:29 ryoon Exp $
+
+* Create history.h symlink like NetBSD base libedit.
+
+--- Makefile.am.orig	2011-08-02 08:07:56.000000000 +0000
++++ Makefile.am
+@@ -7,3 +7,6 @@ SUBDIRS = src examples doc
+ EXTRA_DIST = libedit.pc.in
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libedit.pc
++
++install-data-local:
++	cd ${DESTDIR}${PREFIX}/include/editline && ln -s readline.h history.h

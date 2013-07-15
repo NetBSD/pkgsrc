@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/07/15 01:42:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/15 15:14:29 ryoon Exp $
 #
 
 DISTNAME=		libedit-20130712-3.1
 PKGNAME=		editline-3.1.20130712
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.thrysoee.dk/editline/
 

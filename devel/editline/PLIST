@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/15 01:42:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/15 15:14:29 ryoon Exp $
+include/editline/history.h
 include/editline/readline.h
 include/histedit.h
 lib/libedit.la
