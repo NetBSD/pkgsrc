@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2012/06/12 15:45:57 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2013/07/15 02:02:25 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -152,6 +152,5 @@ LOOKUP_LIBS+=		-lspf2
 .if !empty(PKG_OPTIONS:Mreadline)
 LOCAL_MAKEFILE_OPTIONS+=USE_READLINE=yes
 LOOKUP_LIBS+=		-lreadline
-USE_GNU_READLINE=	yes
 .  include "../../devel/readline/buildlink3.mk"
 .endif

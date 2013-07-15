@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/06 20:27:22 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2013/07/15 02:02:23 ryoon Exp $
 
 DISTNAME=		guile-1.6.8
 PKGREVISION=		5
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/1.6
 USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
-USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
 INFO_FILES=		yes
 

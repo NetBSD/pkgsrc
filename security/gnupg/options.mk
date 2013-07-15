@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2013/01/07 12:26:56 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2013/07/15 02:02:27 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
 PKG_SUPPORTED_OPTIONS=	curl ldap readline
@@ -42,7 +42,6 @@ CFLAGS+=		-m68060
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
-USE_GNU_READLINE=	yes
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=  --with-readline=${BUILDLINK_PREFIX.readline}
 .else

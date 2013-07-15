@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/05/29 22:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2013/07/15 02:02:27 ryoon Exp $
 
 DISTNAME=	gnupg-2.0.20
 PKGNAME=	${DISTNAME:S/gnupg/gnupg2/}
@@ -41,7 +41,7 @@ BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pth/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2012/01/09 17:31:56 drochner Exp $
+# $NetBSD: Makefile.common,v 1.43 2013/07/15 02:02:21 ryoon Exp $
 #
 # used by editors/abiword-plugins/Makefile
 
@@ -30,7 +30,7 @@ PATCHDIR=	${.CURDIR}/../../editors/abiword/patches
 .include "../../converters/wv/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
