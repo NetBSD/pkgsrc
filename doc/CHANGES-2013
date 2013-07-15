@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2598 2013/07/15 01:29:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2599 2013/07/15 01:43:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added graphics/cogl version 1.14.0 [obache 2013-07-15]
 	Updated graphics/clutter to 1.14.4 [obache 2013-07-15]
 	Updated devel/p5-Class-C3 to 0.25 [wen 2013-07-15]
+	Added devel/editline version 3.1.20130712 [ryoon 2013-07-15]
