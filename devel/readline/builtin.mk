@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.17 2008/02/29 22:41:13 jlam Exp $
+# $NetBSD: builtin.mk,v 1.18 2013/07/15 01:54:25 ryoon Exp $
 
 BUILTIN_PKG:=	readline
 
-BUILTIN_FIND_LIBS:=		edit readline history
+BUILTIN_FIND_LIBS:=		readline history
 BUILTIN_FIND_FILES_VAR:=	H_READLINE _BLTN_H_READLINE
 BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
 				/usr/include/readline.h
@@ -66,16 +66,6 @@ USE_BUILTIN.readline!=							\
 .        endif
 .      endfor
 .    endif
-# XXX
-# XXX By default, assume that the native editline library is good enough
-# XXX to replace GNU readline if it provides the readline-compatibility
-# XXX headers.
-# XXX
-.    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
-        !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS]) && \
-	empty(_BLTN_H_READLINE:M__nonexistent__)
-USE_BUILTIN.readline=	yes
-.    endif
 #
 # Some platforms don't have a readline/editline implementation that can
 # replace GNU readline.
@@ -90,15 +80,6 @@ USE_BUILTIN.readline=	no
 .endif
 MAKEVARS+=	USE_BUILTIN.readline
 
-# If USE_GNU_READLINE is defined, then force the use of a GNU readline
-# implementation.
-#
-.if defined(USE_GNU_READLINE)
-.  if !empty(IS_BUILTIN.readline:M[nN][oO])
-USE_BUILTIN.readline=	no
-.  endif
-.endif
-
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -107,18 +88,7 @@ CHECK_BUILTIN.readline?=	no
 .if !empty(CHECK_BUILTIN.readline:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
-.    if !empty(BUILTIN_LIB_FOUND.history:M[Nn][Oo]) && \
-	!empty(BUILTIN_LIB_FOUND.readline:M[Yy][Ee][Ss])
 BUILDLINK_TRANSFORM+=	l:history:readline:${BUILTIN_LIBNAME.termcap}
-.    endif
-.    if !empty(BUILTIN_LIB_FOUND.history:M[nN][oO]) && \
-	!empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
-.    endif
-.    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
-	!empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
-.    endif
 .  endif
 
 .endif	# CHECK_BUILTIN.readline
