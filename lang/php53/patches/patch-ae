@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/03/16 15:31:58 taca Exp $
+$NetBSD: patch-ae,v 1.1.1.1.28.1 2013/07/15 22:32:24 tron Exp $
 
---- ext/pdo/config.m4.orig	2008-07-25 13:46:24.000000000 +0000
+--- ext/pdo/config.m4.orig	2013-07-10 17:43:08.000000000 +0000
 +++ ext/pdo/config.m4
 @@ -37,20 +37,6 @@ if test "$PHP_PDO" != "no"; then
  

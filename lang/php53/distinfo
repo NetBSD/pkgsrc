@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.65 2013/06/09 22:23:24 taca Exp $
+$NetBSD: distinfo,v 1.65.2.1 2013/07/15 22:32:24 tron Exp $
 
-SHA1 (php-5.3.26.tar.bz2) = d2f97da600b640d618a8790dab22b519aa87b056
-RMD160 (php-5.3.26.tar.bz2) = a902aef59683dc7b051c81111b2995f8d5ebad93
-Size (php-5.3.26.tar.bz2) = 11430170 bytes
+SHA1 (php-5.3.27.tar.bz2) = 4f95682940ebe1bc1a93812d593460625a2aae64
+RMD160 (php-5.3.27.tar.bz2) = c2887004859f32b25229ffe52d86270c8de194b7
+Size (php-5.3.27.tar.bz2) = 11432791 bytes
 SHA1 (suhosin-patch-5.3.25-0.9.10.patch.bz2) = ce5883b05daf91e8a44fffbfa4d3989ac3311dd1
 RMD160 (suhosin-patch-5.3.25-0.9.10.patch.bz2) = 6c4d0cfe070802481121be465b66d3cefe44da83
 Size (suhosin-patch-5.3.25-0.9.10.patch.bz2) = 32447 bytes
-SHA1 (patch-aa) = b0dc6cd0b2103d5858280202506b33322a98496e
-SHA1 (patch-ab) = 7e9aab00e1d5f18e320ef5e513c0ff6833a5b69a
-SHA1 (patch-ac) = b6eb40116f3770464120b6ea9061624609b9564e
-SHA1 (patch-ad) = 1608c58860a43b4e31df8646b5ded253ec9aa881
-SHA1 (patch-ae) = e590db60a60f4e5ef2da4e5edb786335a67a3d56
-SHA1 (patch-af) = 1618b23fd6d090ce5aa929208416028724278bfc
-SHA1 (patch-ag) = 37225805be13ec76d8ac17833da8115e99b78745
-SHA1 (patch-ah) = b20c29c64b3099f77855a5ec28960dc1c4f65c83
-SHA1 (patch-ai) = d4766893a2c47a4e4a744248dda265b0a9a66a1f
-SHA1 (patch-aj) = 8698b3caa6299843c7483473b0cb18ceffa3dada
-SHA1 (patch-al) = fbbee5502e0cd1c47c6e7c15e0d54746414ec32e
-SHA1 (patch-ext_standard_basic__functions.c) = 18596d281017760293189d87d19de9c5c772232d
-SHA1 (patch-main_streams_cast.c) = c169ccb73dc660e40eff9f9e168374f35eedadad
-SHA1 (patch-php__mssql.c) = b46c688ff2d8da33ca2f9beb0eb9182b6edf7e23
-SHA1 (patch-sapi_fpm_php-fpm.conf.in) = 6453d0cea05c0f86dcabc95a656532a0ed084aed
+SHA1 (patch-aa) = fd930d0d9b1c60e8c7c514cfb6864b61ce4d158d
+SHA1 (patch-ab) = 5e8f0b91426656cb7f9272d17586ce40ab0fb547
+SHA1 (patch-ac) = e8a7218d74f2f4093acca2160693c9a245e4cfc7
+SHA1 (patch-ad) = 6b42868f41335ddfa5a8c1e982819166b05e4ad2
+SHA1 (patch-ae) = 3a354cb5c1253eb375041d8ee8549c2f663e6c74
+SHA1 (patch-af) = 4f5aac4c52ce576f4489cb1f06fdb672745a8fdb
+SHA1 (patch-ag) = 84af84bc1144ac8a1fce931edcedd4a3ad0f2fda
+SHA1 (patch-ah) = 697156508da2d837a1ea1a41f036eab4fb87e94b
+SHA1 (patch-ai) = 9659f73eef1b4fcca9b844bdaa785ac6d5e582a1
+SHA1 (patch-aj) = 181658ae523bd60f67750566711fc078b49191b7
+SHA1 (patch-al) = fe534d7d50a529e3c7d0ffed76afdb70bb55a521
+SHA1 (patch-ext_standard_basic__functions.c) = 017fd25e646af4d7eb2a0bd13b3c8da34eaee8c5
+SHA1 (patch-main_streams_cast.c) = d68b69c9418a8780b1610b8755487771f7c46a5a
+SHA1 (patch-php__mssql.c) = 524c4e5d7ede0e503049bf1febec58e0c4a29aa4
+SHA1 (patch-sapi_fpm_php-fpm.conf.in) = 86137a37e74badf99c46d1ba7ca5d85f42bedfce
