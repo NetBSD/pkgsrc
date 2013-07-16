@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/10 13:09:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2013/07/16 17:00:50 tron Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -6,9 +6,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/ext/unf_ext/Makefile
 ${GEM_LIBDIR}/ext/unf_ext/extconf.rb
-${GEM_LIBDIR}/ext/unf_ext/mkmf.log
 ${GEM_LIBDIR}/ext/unf_ext/unf.cc
 ${GEM_LIBDIR}/ext/unf_ext/unf/normalizer.hh
 ${GEM_LIBDIR}/ext/unf_ext/unf/table.hh
@@ -16,7 +14,6 @@ ${GEM_LIBDIR}/ext/unf_ext/unf/trie/char_stream.hh
 ${GEM_LIBDIR}/ext/unf_ext/unf/trie/node.hh
 ${GEM_LIBDIR}/ext/unf_ext/unf/trie/searcher.hh
 ${GEM_LIBDIR}/ext/unf_ext/unf/util.hh
-${GEM_LIBDIR}/ext/unf_ext/unf_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/unf_ext.rb
 ${GEM_LIBDIR}/lib/unf_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/unf_ext/version.rb

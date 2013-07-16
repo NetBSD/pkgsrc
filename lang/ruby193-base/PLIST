@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/04/04 13:31:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2013/07/16 17:00:50 tron Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -957,6 +957,7 @@ ${RUBY_EG}/webrick/httpproxy.rb
 ${RUBY_EG}/webrick/httpsd.rb
 @pkgdir ${RUBY_SITEARCHLIB}
 @pkgdir ${RUBY_VENDORARCHLIB}
+@pkgdir ${GEM_HOME}/build_info
 @pkgdir ${GEM_HOME}/cache
 @pkgdir ${GEM_HOME}/doc
 @pkgdir ${RUBY_SITERIDIR}

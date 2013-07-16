@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.11 2013/06/11 14:55:54 taca Exp $
+$NetBSD: patch-ad,v 1.11.2.1 2013/07/16 17:00:51 tron Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/installer.rb.orig	2013-02-21 21:50:03.000000000 +0000
+--- lib/rubygems/installer.rb.orig	2013-03-05 21:25:39.000000000 +0000
 +++ lib/rubygems/installer.rb
 @@ -89,6 +89,9 @@ class Gem::Installer
    #                      foo_exec18.
@@ -39,3 +39,14 @@ $NetBSD: patch-ad,v 1.11 2013/06/11 14:55:54 taca Exp $
  
      @build_args          = options[:build_args] || Gem::Command.build_args
    end
+@@ -773,7 +782,9 @@ EOF
+   def write_build_info_file
+     return if @build_args.empty?
+ 
+-    open spec.build_info_file, 'w' do |io|
++    build_info_file = (@options[:install_root].nil?) ? spec.build_info_file :
++      File.join(@options[:install_root], spec.build_info_file)
++    open build_info_file, 'w' do |io|
+       @build_args.each do |arg|
+         io.puts arg
+       end
