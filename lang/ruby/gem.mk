@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.20 2013/04/08 11:17:15 rodent Exp $
+# $NetBSD: gem.mk,v 1.20.2.1 2013/07/16 17:00:50 tron Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -140,6 +140,8 @@ USE_RAKE?=		YES
 .endif
 
 # print-PLIST support
+PRINT_PLIST_AWK+=	/${GEM_NAME}\.info$$/ \
+			{ gsub(/${GEM_NAME}\.info/, "$${GEM_NAME}.info"); }
 PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
 			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
 PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
@@ -226,9 +228,9 @@ MAKE_ENV+=	GEM_PATH=${GEM_PATH}
 
 # Directory for the Gem to install
 GEM_NAME?=	${DISTNAME}
-GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
-GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
 GEM_CACHEDIR=	${GEM_HOME}/cache
+GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
+GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
 
 # Installed gems have wrapper scripts that call the right interpreter,
 # regardless of the #! line at the head of a script, so we can skip
@@ -262,10 +264,10 @@ post-extract: gem-extract
 gem-extract: fake-home
 .  for _gem_ in ${DISTFILES:M*.gem}
 	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
-		${RUBYGEM} unpack ${_DISTDIR:Q}${_gem_:Q}
+		${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
 	${RUN} cd ${WRKDIR} && \
 		${SETENV} ${MAKE_ENV} TZ=UTC ${RUBYGEM_ENV} \
-		${RUBYGEM} spec --ruby ${_DISTDIR:Q}${_gem_:Q} > ${_gem_}spec
+		${RUBYGEM} spec --ruby ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
 .  endfor
 .endif
 
@@ -360,12 +362,15 @@ _gem-build-cleanbuild:
 		${GEM_CLEANBUILD:@.p.@./${.p.}) ;;@}			\
 		*)	continue ;;					\
 		esac;							\
-		[ ! -e ${WRKSRC:Q}"/$$file" ] || continue;		\
-		if [ -d "$$file" ]; then				\
-			${ECHO} "rmdir "${GEM_NAME}"/$$file";		\
+		if [ -e ${WRKSRC:Q}"/$$file" ]; then			\
+			continue;					\
+		elif [ -d "$$file" ]; then				\
+			rfile=`echo $$file | ${SED} -e 's|^\./||'`;	\
+			${ECHO} "rmdir "${GEM_NAME}"/$$rfile";		\
 			rmdir $$file;					\
-		else							\
-			${ECHO} "rm "${GEM_NAME}"/$$file";		\
+		elif [ -f "$$file" ]; then				\
+			rfile=`echo $$file | ${SED} -e 's|^\./||'`;	\
+			${ECHO} "rm "${GEM_NAME}"/$$rfile";		\
 			rm -f $$file;					\
 		fi;							\
 	done

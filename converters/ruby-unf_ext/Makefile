@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/03/10 13:09:33 taca Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2013/07/16 17:00:50 tron Exp $
 
 DISTNAME=	unf_ext-0.0.6
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +10,6 @@ COMMENT=	Unicode Normalization Form support library for CRuby
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-GEM_CLEANBUILD=	Makefile *.o unf_ext.${RUBY_DLEXT} mkmf.log
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
