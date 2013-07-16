@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.9 2013/07/16 17:01:48 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.10 2013/07/16 20:00:45 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -31,3 +31,7 @@ lang/php53: security update
 Pullup ticket #4179 - requested by taca
 misc/rubygems: build fix
 textproc/ruby-xslt: build fix
+Pullup ticket #4180 - requested by taca
+devel/ruby-rdoc: bug fix patch
+Pullup ticket #4181 - requested by taca
+devel/ruby-stream: build fix
