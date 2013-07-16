@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2013/06/11 15:00:18 taca Exp $
+$NetBSD: distinfo,v 1.11.2.1 2013/07/16 19:12:27 tron Exp $
 
 SHA1 (rdoc-4.0.1.gem) = b41e44037be75a7d61fc5f76692d48dae8cb339b
 RMD160 (rdoc-4.0.1.gem) = 0a1702de20305f8e211ff06a0f82e45d695a4af8
 Size (rdoc-4.0.1.gem) = 467456 bytes
+SHA1 (patch-lib_rdoc_parser_c.rb) = c63f03341feb4440fa7c07be4619f31302db5372
