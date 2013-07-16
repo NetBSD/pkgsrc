@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/08 15:37:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.7.14.1 2013/07/16 17:00:50 tron Exp $
+${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog

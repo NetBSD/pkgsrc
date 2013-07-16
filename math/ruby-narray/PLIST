@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/11 09:27:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.4.1 2013/07/16 17:00:51 tron Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/MANIFEST
@@ -16,7 +16,6 @@ ${GEM_LIBDIR}/src/extconf.rb
 ${GEM_LIBDIR}/src/lib/narray_ext.rb
 ${GEM_LIBDIR}/src/lib/nmatrix.rb
 ${GEM_LIBDIR}/src/mkmath.rb
-${GEM_LIBDIR}/src/mkmf.log
 ${GEM_LIBDIR}/src/mknafunc.rb
 ${GEM_LIBDIR}/src/mkop.rb
 ${GEM_LIBDIR}/src/na_array.c
@@ -29,7 +28,6 @@ ${GEM_LIBDIR}/src/na_random.c
 ${GEM_LIBDIR}/src/narray.c
 ${GEM_LIBDIR}/src/narray.def
 ${GEM_LIBDIR}/src/narray.h
-${GEM_LIBDIR}/src/narray.so
 ${GEM_LIBDIR}/src/narray_config.h
 ${GEM_LIBDIR}/src/narray_local.h
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
