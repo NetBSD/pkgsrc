@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/03/17 16:06:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2013/07/16 17:00:50 tron Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
@@ -9,6 +9,5 @@ ${GEM_LIBDIR}/dict.h
 ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/lib/rbtree.${RUBY_DLEXT}
 ${GEM_LIBDIR}/rbtree.c
-${GEM_LIBDIR}/rbtree.${RUBY_DLEXT}
 ${GEM_LIBDIR}/test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

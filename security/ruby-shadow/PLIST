@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2013/04/10 09:25:21 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2013/07/16 17:00:51 tron Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/MANIFEST
-${GEM_LIBDIR}/Makefile
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/README.euc
 ${GEM_LIBDIR}/depend
 ${GEM_LIBDIR}/extconf.rb
-${GEM_LIBDIR}/lib/shadow.so
-${GEM_LIBDIR}/mkmf.log
+${GEM_LIBDIR}/lib/shadow.${RUBY_DLEXT}
 ${GEM_LIBDIR}/ruby-shadow.gemspec
 ${GEM_LIBDIR}/shadow.c
-${GEM_LIBDIR}/shadow.o
-${GEM_LIBDIR}/shadow.so
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

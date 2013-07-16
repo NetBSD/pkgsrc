@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2013/06/13 13:02:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2013/07/16 17:00:50 tron Exp $
+${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/FAQ
-${GEM_LIBDIR}/Makefile
 ${GEM_LIBDIR}/NOTES
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/TODO
@@ -12,7 +12,7 @@ ${GEM_LIBDIR}/conn.c
 ${GEM_LIBDIR}/entry.c
 ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/ldap.c
-${GEM_LIBDIR}/lib/ldap.so
+${GEM_LIBDIR}/lib/ldap.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/ldap/control.rb
 ${GEM_LIBDIR}/lib/ldap/ldif.rb
 ${GEM_LIBDIR}/lib/ldap/schema.rb

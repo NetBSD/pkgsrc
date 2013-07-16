@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/06/11 14:55:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.22.2.1 2013/07/16 17:00:51 tron Exp $
 bin/gem${RUBY_VER}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rubygems.rb
@@ -108,5 +108,3 @@ ${RUBY_VENDORLIB}/rubygems/validator.rb
 ${RUBY_VENDORLIB}/rubygems/version.rb
 ${RUBY_VENDORLIB}/rubygems/version_option.rb
 ${RUBY_VENDORLIB}/ubygems.rb
-@pkgdir lib/ruby/gems/1.9.3/specifications
-@pkgdir lib/ruby/gems/1.9.3/build_info
