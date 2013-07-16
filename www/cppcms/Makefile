@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/16 10:12:48 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/16 14:37:20 joerg Exp $
 
 DISTNAME=	cppcms-1.0.4
 CATEGORIES=	www devel
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN}
+CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN} -DDISABLE_GCRYPT=yes
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
