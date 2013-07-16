@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2013/07/16 02:12:26 rodent Exp $
+
+Pull in NetBSD compatibility headers for use with other headers.
+
+--- tools/sip_reg.c.orig	2012-11-15 17:51:44.000000000 +0000
++++ tools/sip_reg.c
+@@ -56,8 +56,14 @@
+ 
+ #if !defined(WIN32) && !defined(_WIN32_WCE) && !defined(__arc__)
+ #define _GNU_SOURCE
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat/config.h>	/* needed for the other headers */
++#include <nbcompat/cdefs.h>	/* needed for the other headers */
++#include <nbcompat/getopt.h>
++#else
+ #include <getopt.h>
+ #endif
++#endif
+ 
+ #define PROG_NAME "sipreg"
+ #define PROG_VER  "1.0"
