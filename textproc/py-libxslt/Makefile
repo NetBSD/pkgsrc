@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2013/07/12 22:36:54 adam Exp $
+# $NetBSD: Makefile,v 1.41 2013/07/16 22:29:07 joerg Exp $
 
 DISTNAME=	libxslt-1.1.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	ftp://xmlsoft.org/libxslt/ \
 		http://xmlsoft.org/sources/
@@ -11,6 +12,7 @@ HOMEPAGE=	http://xmlsoft.org/XSLT/
 COMMENT=	Python wrapper for libxslt
 LICENSE=	mit # with no-advertising clause
 
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.8:../../textproc/py-libxml2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
