@@ -1,0 +1,319 @@
+$NetBSD: patch-bin_cppcms__run,v 1.1 2013/07/16 10:12:48 joerg Exp $
+
+--- bin/cppcms_run.orig	2013-01-02 22:26:03.000000000 +0000
++++ bin/cppcms_run
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env bash
++#!/bin/sh
+ 
+ ############################################################################
+ #                                                                             
+@@ -8,8 +8,7 @@
+ #
+ ############################################################################
+ 
+-locate_server()
+-{
++locate_server() {
+ 	NAME=$1
+ 	if [ "$WEB_SERVER" != "" ] ; then
+ 		return
+@@ -29,7 +28,7 @@ locate_server()
+ 			return
+ 		fi
+ 	done
+-	if [ "$2" == "exit" ] ; then
++	if [ "$2" = "exit" ] ; then
+ 		echo "Failed to locate server $NAME, exitting"
+ 		echo "Try providing PATH valiable"
+ 		exit 1
+@@ -39,7 +38,7 @@ locate_server()
+ lighttpd() {
+ 
+ locate_server lighttpd $1
+-[ "$WEB_SERVER" == "" ] && return
++[ "$WEB_SERVER" = "" ] && return
+ 
+ CONFIG_FILE=$DIR/lighty.conf
+ 
+@@ -47,7 +46,7 @@ case $API in
+ 	fastcgi) ;;
+ 	scgi) ;;
+ 	http)	if [ "$SOCKET" != "" ]; then
+-			if [ "$1" == "exit" ]; then
++			if [ "$1" = "exit" ]; then
+ 				echo "http is supported over TCP/IP only" ; exit 1 
+ 			else
+ 				WEB_SERVER=""
+@@ -57,7 +56,7 @@ case $API in
+ 
+ 		;;
+ 	*) 
+-		if [ "$1" == "exit" ]; then
++		if [ "$1" = "exit" ]; then
+ 			echo "Mod $API is not supported by lightppd" ; exit 1 
+ 		else
+ 			WEB_SERVER=""
+@@ -66,7 +65,7 @@ case $API in
+ 	;;
+ esac
+ 
+-if [ "$API" == "http" ]; then
++if [ "$API" = "http" ]; then
+ 	LIGHTTPD_MODULE=proxy
+ else
+ 	LIGHTTPD_MODULE=$API
+@@ -175,12 +174,12 @@ nginx()
+ 
+ locate_server nginx $1
+ 
+-[ "$WEB_SERVER" == "" ] && return
++[ "$WEB_SERVER" = "" ] && return
+ 
+ case $API in
+ 	fastcgi) ;;
+ 	scgi) 	if [ "$HTTP_HEADERS" != "true" ] ; then
+-			if [ "$1" == "exit" ]; then
++			if [ "$1" = "exit" ]; then
+ 				echo "service.generate_http_headers is false, nginx SCGI module requires it to be set to true"
+ 				exit 1
+ 			else
+@@ -190,7 +189,7 @@ case $API in
+ 		fi
+ 		;;
+ 	http)	if [ "$SOCKET" != "" ]; then
+-			if [ "$1" == "exit" ]; then
++			if [ "$1" = "exit" ]; then
+ 				echo "http is supported over TCP/IP only" ; exit 1 
+ 			else
+ 				WEB_SERVER=""
+@@ -200,8 +199,8 @@ case $API in
+ 
+ 		;;
+ 	*) 
+-		if [ "$1" == "exit" ]; then
+-			echo "Mod $API is not supported by lightppd" ; exit 1 
++		if [ "$1" = "exit" ]; then
++			echo "Mod $API is not supported by nginx" ; exit 1 
+ 		else
+ 			WEB_SERVER=""
+ 			return
+@@ -289,7 +288,7 @@ http {
+         }
+ EOF
+ 
+-if [ "$API" == "fastcgi" ]; then 
++if [ "$API" = "fastcgi" ]; then 
+ 
+ cat >>$CONFIG_FILE <<EOF
+ 
+@@ -319,7 +318,7 @@ cat >>$CONFIG_FILE <<EOF
+ 	}
+ EOF
+ 
+-elif [ "$API" == "scgi" ] ; then
++elif [ "$API" = "scgi" ] ; then
+ 
+ cat >>$CONFIG_FILE <<EOF
+ 
+@@ -370,8 +369,7 @@ WEB_SERVER="$WEB_SERVER -c $CONFIG_FILE"
+ }
+ 
+ 
+-apache()
+-{
++apache() {
+ 
+ locate_server apache2
+ locate_server httpd2 
+@@ -379,8 +377,8 @@ locate_server apache
+ locate_server httpd $1
+ 
+ 
+-[ "$WEB_SERVER" == "" ] && return
+-if [ "$APACHE_MOD_DIR" == "" ] ; then
++[ "$WEB_SERVER" = "" ] && return
++if [ "$APACHE_MOD_DIR" = "" ] ; then
+ 	for p in /usr/lib/apache2/modules \
+ 		 /usr/local/lib/apache2/modules \
+ 		 /opt/lib/apache2/modules \
+@@ -419,8 +417,8 @@ if [ "$APACHE_MOD_DIR" == "" ] ; then
+ 	done
+ fi
+ 
+-if [ "$APACHE_MOD_DIR" == "" ] ; then
+-	if [ "$1" == "exit" ] ; then
++if [ "$APACHE_MOD_DIR" = "" ] ; then
++	if [ "$1" = "exit" ] ; then
+ 		echo "Can't find apache modules directory try specifing APACHE_MOD_DIR"
+ 		exit 1;
+ 	else
+@@ -430,8 +428,8 @@ if [ "$APACHE_MOD_DIR" == "" ] ; then
+ fi
+ 
+ 
+-if ! [ -f "$APACHE_MOD_DIR/mod_fastcgi.$APACHE_MOD_EXT" ] && [ "$API" == "fastcgi" ]; then
+-	if [ "$1" == "exit" ] ; then 
++if ! [ -f "$APACHE_MOD_DIR/mod_fastcgi.$APACHE_MOD_EXT" ] && [ "$API" = "fastcgi" ]; then
++	if [ "$1" = "exit" ] ; then 
+ 		echo "Can't find apache fastcgi modue"
+ 		exit 1
+ 	else
+@@ -439,8 +437,8 @@ if ! [ -f "$APACHE_MOD_DIR/mod_fastcgi.$
+ 	fi
+ fi
+ 
+-if ! [ -f "$APACHE_MOD_DIR/mod_scgi.$APACHE_MOD_EXT" ] && [ "$API" == "scgi" ]; then
+-	if [ "$1" == "exit" ] ; then 
++if ! [ -f "$APACHE_MOD_DIR/mod_scgi.$APACHE_MOD_EXT" ] && [ "$API" = "scgi" ]; then
++	if [ "$1" = "exit" ] ; then 
+ 		echo "Can't find apache scgi modue"
+ 		exit 1
+ 	else
+@@ -448,8 +446,8 @@ if ! [ -f "$APACHE_MOD_DIR/mod_scgi.$APA
+ 	fi
+ fi
+ 
+-if ! [ -f "$APACHE_MOD_DIR/mod_proxy_http.$APACHE_MOD_EXT" ] && [ "$API" == "http" ]; then
+-	if [ "$1" == "exit" ] ; then 
++if ! [ -f "$APACHE_MOD_DIR/mod_proxy_http.$APACHE_MOD_EXT" ] && [ "$API" = "http" ]; then
++	if [ "$1" = "exit" ] ; then 
+ 		echo "Can't find apache proxy_http modue"
+ 		exit 1
+ 	else
+@@ -457,8 +455,8 @@ if ! [ -f "$APACHE_MOD_DIR/mod_proxy_htt
+ 	fi
+ fi
+ 
+-if [ "$API" == "scgi" ] && [ "$SOCKET" != "" ]; then
+-	if [ "$1" == "exit" ] ; then 
++if [ "$API" = "scgi" ] && [ "$SOCKET" != "" ]; then
++	if [ "$1" = "exit" ] ; then 
+ 		echo "Apache2 supports scgi over tcp sockets only"
+ 		exit 1
+ 	else
+@@ -514,7 +512,7 @@ cat >$DIR/apache.conf << EOF
+ 	LoadModule mime_module $APACHE_MOD_DIR/mod_mime.$APACHE_MOD_EXT
+ EOF
+ 
+-if [ "$API" == "fastcgi" ];
++if [ "$API" = "fastcgi" ];
+ then
+ 
+ 
+@@ -529,7 +527,7 @@ cat >>$DIR/apache.conf <<EOF
+ EOF
+ 
+ 
+-elif [ "$API" == "scgi" ];
++elif [ "$API" = "scgi" ];
+ then
+ 
+ 
+@@ -538,7 +536,7 @@ cat >>$DIR/apache.conf <<EOF
+ 	SCGIMount $SCRIPT $SERVICE_IP:$SERVICE_PORT
+ EOF
+ 
+-elif [ "$API" == "http" ]; 
++elif [ "$API" = "http" ]; 
+ then
+ 
+ 
+@@ -559,8 +557,7 @@ WEB_SERVER="$WEB_SERVER -f $DIR/apache.c
+ 
+ }
+ 
+-find_param()
+-{
++find_param() {
+ 	if [ -e ./cppcms_config_find_param ]; then
+ 		./cppcms_config_find_param $2 $1
+ 	else
+@@ -568,8 +565,7 @@ find_param()
+ 	fi
+ }
+ 
+-help()
+-{
++help() {
+ 	echo "Usage cppcms_run [-e] [ -S server ] [-p port] [-h host] \\"
+ 	echo "                 [-r /document/root ] [-s /script ]"
+ 	echo "                 program -c config.txt [ additional parameters ]"
+@@ -593,21 +589,21 @@ PORT=8080
+ ROOT=`pwd`
+ 
+ while ! [ -e "$1" ] ; do
+-	if [ "$1" == "-s" ] ;  then
++	if [ "$1" = "-s" ] ;  then
+ 		SCRIPT="$2"
+ 		shift
+-	elif [ "$1" == "-S" ] ; then
++	elif [ "$1" = "-S" ] ; then
+ 		TRY_SETUP="$2"
+ 		shift
+-	elif [ "$1" == "-h" ]; then
++	elif [ "$1" = "-h" ]; then
+ 		HOST="$2"
+ 		shift
+-	elif [ "$1" == "-p" ]; then
++	elif [ "$1" = "-p" ]; then
+ 		PORT="$2";
+ 		shift
+-	elif [ "$1" == "-e" ]; then
++	elif [ "$1" = "-e" ]; then
+ 		NO_APP=yes
+-	elif [ "$1" == "-r" ]; then
++	elif [ "$1" = "-r" ]; then
+ 		ROOT="$2"
+ 		shift
+ 	else
+@@ -618,13 +614,13 @@ done
+ 
+ PROGRAM="$1"
+ 
+-if [ "$2" != "-c" ] || [ "$3" == "" ] ; then
++if [ "$2" != "-c" ] || [ "$3" = "" ] ; then
+ 	help
+ fi
+ 
+ APP_CONFIG_FILE="$3"
+ 
+-if [ "$SCRIPT" == "" ] ; then
++if [ "$SCRIPT" = "" ] ; then
+ 	SCRIPT="/$PROGRAM"
+ fi
+ 
+@@ -636,17 +632,17 @@ SERVICE_PORT=`find_param $APP_CONFIG_FIL
+ API=`find_param $APP_CONFIG_FILE service.api`
+ HTTP_HEADERS=`find_param $APP_CONFIG_FILE service.generate_http_headers`
+ 
+-if [ "$API" == "" ] ; then
++if [ "$API" = "" ] ; then
+ 	echo "Can't find service.api or service.socket in $APP_CONFIG_FILE"
+ 	echo "Aborting"
+ 	exit 1
+ fi
+ 
+-if [ "$SERVICE_IP" == "" ]; then
++if [ "$SERVICE_IP" = "" ]; then
+ 	SERVICE_IP=127.0.0.1
+ fi
+ 
+-if [ "$SOCKET" == "" ] && [ "$SERVICE_PORT" == "" ] ; then
++if [ "$SOCKET" = "" ] && [ "$SERVICE_PORT" = "" ] ; then
+ 	echo "Can't find service.socket or service.ip and service.port in $APP_CONFIG_FILE"
+ 	echo "Aborting"
+ 	exit 1
+@@ -682,9 +678,9 @@ if [ "$TRY_SETUP" != "" ]; then
+ 	esac
+ else
+ 	lighttpd 
+-	[ "$WEB_SERVER" == "" ] && nginx
+-	[ "$WEB_SERVER" == "" ] && apache 
+-	if [ "$WEB_SERVER" == "" ]; then
++	[ "$WEB_SERVER" = "" ] && nginx
++	[ "$WEB_SERVER" = "" ] && apache 
++	if [ "$WEB_SERVER" = "" ]; then
+ 		echo "Can't find sutiable web server (nginx/lighttpd/apache)"
+ 		echo "You may try to change PATH variable. In case of Apache2"
+ 		echo "You may want to define APACHE_MOD_DIR variable"
