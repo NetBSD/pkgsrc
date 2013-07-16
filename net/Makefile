@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.974 2013/07/02 11:06:30 rodent Exp $
+# $NetBSD: Makefile,v 1.975 2013/07/16 02:13:30 rodent Exp $
 #
 
 COMMENT=	Networking tools
@@ -247,6 +247,7 @@ SUBDIR+=	libdlna
 SUBDIR+=	libdmapsharing
 SUBDIR+=	libdmapsharing3
 SUBDIR+=	libdnet
+SUBDIR+=	libexosip
 SUBDIR+=	libfetch
 SUBDIR+=	libgdata
 SUBDIR+=	libktorrent
