@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.8 2013/07/15 22:32:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.9 2013/07/16 17:01:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -28,3 +28,6 @@ Pullup ticket #4182 - requested by taca
 mail/roundcube: dependency fix
 Pullup ticket #4183 - requested by taca
 lang/php53: security update
+Pullup ticket #4179 - requested by taca
+misc/rubygems: build fix
+textproc/ruby-xslt: build fix
