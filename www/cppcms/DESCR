@@ -1,0 +1,4 @@
+CppCMS is a free high performance web development framework.
+It uses modern C++ and a design borrowing heavily from frameworks
+like Django or Java Servlets to handle very high load levels while
+minimizing CPU and memory use.
