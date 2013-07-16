@@ -1,9 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2013/06/30 20:30:09 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2013/07/16 22:22:04 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
 PKG_SUPPORTED_OPTIONS=	fuse gnome inotify kde3 kde4
-PKG_SUGGESTED_OPTIONS+=	inotify
 PLIST_VARS+=		gnome inotify kde kde3
+
+.if ${OPSYS} != "SunOS"
+PKG_SUGGESTED_OPTIONS+=	inotify
+.endif
 
 .include "../../mk/bsd.options.mk"
 
