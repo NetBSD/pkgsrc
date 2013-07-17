@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2013/06/15 13:53:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2013/07/17 19:31:52 adam Exp $
 
-DISTNAME=	libidn-1.27
+DISTNAME=	libidn-1.28
 CATEGORIES=	devel
 MASTER_SITES=	ftp://alpha.gnu.org/pub/gnu/libidn/ \
 		${MASTER_SITE_GNU:=libidn/}
@@ -35,5 +35,4 @@ TEST_TARGET=		check
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
