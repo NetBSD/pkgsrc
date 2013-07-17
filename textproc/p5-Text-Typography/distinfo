@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/11 04:31:37 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2013/07/17 21:18:23 schmonz Exp $
 
 SHA1 (Text-Typography-0.01.tar.gz) = 8b2c146759276898b838066aae9a53341dd80e85
 RMD160 (Text-Typography-0.01.tar.gz) = c9b9f3778e36c7edaa7363d81df22d20091cc7ac
 Size (Text-Typography-0.01.tar.gz) = 7913 bytes
+SHA1 (patch-lib_Text_Typography.pm) = 83ff252473bd6fb66db299761eb5b51902079d15
