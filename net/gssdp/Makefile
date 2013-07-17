@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/07/06 16:06:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2013/07/17 13:31:33 drochner Exp $
 #
 
 DISTNAME=	gssdp-0.14.3
@@ -12,6 +12,7 @@ COMMENT=	Simple Service Discovery Protocol library and device sniffer
 LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+= --without-gtk
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
@@ -21,5 +22,4 @@ PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala020/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
