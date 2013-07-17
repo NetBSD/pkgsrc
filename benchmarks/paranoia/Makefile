@@ -1,18 +1,12 @@
-# $NetBSD: Makefile,v 1.20.8.1 2013/07/17 12:42:04 gdt Exp $
+# $NetBSD: Makefile,v 1.20.8.2 2013/07/17 12:43:31 gdt Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
-PKGREVISION=		1
 CATEGORIES=		benchmarks
 MASTER_SITES=		${MASTER_SITE_NETLIB:=paranoia/}
 EXTRACT_SUFX=		.c
 
-# Not really the HOMEPAGE:
-# HOMEPAGE=		http://people.sc.fsu.edu/~jburkardt/c_src/paranoia/paranoia.html
-# An alteranative MASTER_SITE:
-# http://people.sc.fsu.edu/~jburkardt/c_src/paranoia/paranoia.c
-
-MAINTAINER=		gdt@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Highly paranoid test of IEEE 754 conformance
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -21,12 +15,8 @@ WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin
 
-# The use of -ffloat-store in CFLAGS is controversial.  The point of
-# the program is to test the compiler/machine environment, and
-# therefore this Makefile should not set non-default flags.
-
 do-build:
-	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -o paranoia paranoia.c -lm)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -ffloat-store -o paranoia paranoia.c -lm)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/paranoia ${DESTDIR}${PREFIX}/bin
