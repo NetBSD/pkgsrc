@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2611 2013/07/16 16:26:10 manu Exp $
+$NetBSD: CHANGES-2013,v 1.2612 2013/07/17 06:13:54 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3877,3 +3877,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mr to 1.20130710 [schmonz 2013-07-15]
 	Added net/libexosip version 4.0.0 [rodent 2013-07-16]
 	Updated parallel/hwloc to 1.7.1 [manu 2013-07-15]
+	Updated x11/xorg-cf-files to 1.0.4nb6 [dholland 2013-07-17]
