@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/07/06 16:16:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/17 14:44:19 drochner Exp $
 #
 
 DISTNAME=	gupnp-dlna-0.10.2
@@ -15,7 +15,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-PKGCONFIG_OVERRIDE+=	gupnp-dlna-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	gupnp-dlna-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gupnp-dlna-gst-2.0.pc.in
+#PKGCONFIG_OVERRIDE+=	gupnp-dlna-metadata-2.0.pc.in
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -23,7 +25,6 @@ PKGCONFIG_OVERRIDE+=	gupnp-dlna-1.0.pc.in
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.29.2
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
