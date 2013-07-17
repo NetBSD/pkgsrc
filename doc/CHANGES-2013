@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2615 2013/07/17 13:00:42 tron Exp $
+$NetBSD: CHANGES-2013,v 1.2616 2013/07/17 15:53:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3881,3 +3881,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated news/pan to 0.139nb10 [wiz 2013-07-17]
 	Updated net/mikutter to 0.2.2.1297 [obache 2013-07-17]
 	Updated net/mrtg to 2.17.4 [tron 2013-07-17]
+	Updated net/gupnp-dlna to 0.10.2nb1 [drochner 2013-07-17]
