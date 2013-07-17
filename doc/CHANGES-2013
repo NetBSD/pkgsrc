@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2617 2013/07/17 21:18:57 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2618 2013/07/17 21:23:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mrtg to 2.17.4 [tron 2013-07-17]
 	Updated net/gupnp-dlna to 0.10.2nb1 [drochner 2013-07-17]
 	Updated textproc/p5-Text-Typography to 0.01nb3 [schmonz 2013-07-17]
+	Updated devel/libidn to 1.28 [adam 2013-07-17]
