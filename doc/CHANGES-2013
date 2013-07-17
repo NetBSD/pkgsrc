@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2612 2013/07/17 06:13:54 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.2613 2013/07/17 07:41:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/libexosip version 4.0.0 [rodent 2013-07-16]
 	Updated parallel/hwloc to 1.7.1 [manu 2013-07-15]
 	Updated x11/xorg-cf-files to 1.0.4nb6 [dholland 2013-07-17]
+	Updated news/pan to 0.139nb10 [wiz 2013-07-17]
