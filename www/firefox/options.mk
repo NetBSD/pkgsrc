@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.15 2013/07/04 08:07:09 martin Exp $
+# $NetBSD: options.mk,v 1.16 2013/07/17 11:00:13 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug mozilla-jemalloc gnome pulseaudio webrtc
 PLIST_VARS+=		gnome jemalloc debug
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 .endif
 

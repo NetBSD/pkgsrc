@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2013/06/26 11:32:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.133 2013/07/17 11:00:13 jperkin Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	22.0
@@ -29,6 +29,14 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox ${COMPILER_RPATH_FLAG}${P
 LDFLAGS.SunOS+=		-lm
 
 ALL_ENV+=		MOZILLA_PKG_NAME=firefox
+
+.include "../../mk/bsd.prefs.mk"
+
+# Avoid ld "invalid section index" errors.
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-fdata-sections
+BUILDLINK_TRANSFORM+=	rm:-ffunction-sections
+.endif
 
 LDFLAGS.DragonFly=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD=	-lplc4 -lnspr4
