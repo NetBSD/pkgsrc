@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/07/15 02:02:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/17 21:22:40 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	mysqc
 COMMENT=	MySQL 5, a free SQL database (client)
 
@@ -35,5 +36,4 @@ post-install:
 .  endfor
 .endif
 
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
