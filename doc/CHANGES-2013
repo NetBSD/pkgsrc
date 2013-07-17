@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2614 2013/07/17 11:28:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2615 2013/07/17 13:00:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xorg-cf-files to 1.0.4nb6 [dholland 2013-07-17]
 	Updated news/pan to 0.139nb10 [wiz 2013-07-17]
 	Updated net/mikutter to 0.2.2.1297 [obache 2013-07-17]
+	Updated net/mrtg to 2.17.4 [tron 2013-07-17]
