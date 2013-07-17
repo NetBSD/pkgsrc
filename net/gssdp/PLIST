@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/11 10:56:48 drochner Exp $
-bin/gssdp-device-sniffer
+@comment $NetBSD: PLIST,v 1.5 2013/07/17 13:31:33 drochner Exp $
 include/gssdp-1.0/libgssdp/gssdp-client.h
 include/gssdp-1.0/libgssdp/gssdp-error.h
 include/gssdp-1.0/libgssdp/gssdp-resource-browser.h
@@ -9,7 +8,6 @@ lib/girepository-1.0/GSSDP-1.0.typelib
 lib/libgssdp-1.0.la
 lib/pkgconfig/gssdp-1.0.pc
 share/gir-1.0/GSSDP-1.0.gir
-share/gssdp/gssdp-device-sniffer.ui
 share/gtk-doc/html/gssdp/GSSDPClient.html
 share/gtk-doc/html/gssdp/GSSDPResourceBrowser.html
 share/gtk-doc/html/gssdp/GSSDPResourceGroup.html
