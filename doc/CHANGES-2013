@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2613 2013/07/17 07:41:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2614 2013/07/17 11:28:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3879,3 +3879,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/hwloc to 1.7.1 [manu 2013-07-15]
 	Updated x11/xorg-cf-files to 1.0.4nb6 [dholland 2013-07-17]
 	Updated news/pan to 0.139nb10 [wiz 2013-07-17]
+	Updated net/mikutter to 0.2.2.1297 [obache 2013-07-17]
