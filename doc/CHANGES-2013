@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2620 2013/07/17 21:48:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2621 2013/07/17 21:48:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3886,3 +3886,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libidn to 1.28 [adam 2013-07-17]
 	Updated fonts/mkfontscale to 1.1.1 [wiz 2013-07-17]
 	Updated x11/xfd to 1.1.2 [wiz 2013-07-17]
+	Updated x11/xhost to 1.0.6 [wiz 2013-07-17]
