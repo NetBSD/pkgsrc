@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/05/20 00:58:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2013/07/17 12:24:41 obache Exp $
 
 BUILDLINK_TREE+=	pilot-link-libs
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.pilot-link-libs?=	../../comms/pilot-link-libs
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .endif # PILOT_LINK_LIBS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pilot-link-libs
