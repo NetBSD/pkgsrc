@@ -1,10 +1,10 @@
-$NetBSD: patch-hints_darwin.sh,v 1.3 2013/07/17 20:06:05 adam Exp $
+$NetBSD: patch-hints_darwin.sh,v 1.4 2013/07/18 07:21:02 adam Exp $
 
 Don't set MACOSX_DEPLOYMENT_TARGET.
 
---- hints/darwin.sh.orig	2013-07-17 21:57:17.000000000 +0200
-+++ hints/darwin.sh	2013-07-17 21:58:23.000000000 +0200
-@@ -183,10 +183,6 @@
+--- hints/darwin.sh.orig	2013-05-07 14:45:09.000000000 +0000
++++ hints/darwin.sh
+@@ -183,10 +183,6 @@ case "$osvers" in
     ;;
  *) 
     lddlflags="${ldflags} -bundle -undefined dynamic_lookup"
