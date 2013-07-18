@@ -1,4 +1,4 @@
-# $NetBSD: readline.builtin.mk,v 1.1 2013/07/15 01:54:25 ryoon Exp $
+# $NetBSD: readline.builtin.mk,v 1.2 2013/07/18 14:59:04 ryoon Exp $
 #
 
 BUILTIN_PKG:=	editlinereadline
@@ -15,14 +15,16 @@ BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
 .if !defined(IS_BUILTIN.editlinereadline)
-IS_BUILTIN.readline=	no
+IS_BUILTIN.editlinereadline=	no
 .  if empty(H_READLINE:M__nonexistent__) && \
       empty(H_READLINE:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.readline:M[yY][eE][sS])
+IS_BUILTIN.readline=	yes
 IS_BUILTIN.editlinereadline=	yes
 .  else if empty(_BLTN_H_READLINE:M__nonexistent__) && \
 	   !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
 	   !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+IS_BUILTIN.editline=	yes
 IS_BUILTIN.editlinereadline=	yes
 .  endif
 .endif
