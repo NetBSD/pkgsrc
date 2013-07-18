@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.3 2013/05/29 15:09:49 wiz Exp $
+# $NetBSD: mksandbox,v 1.4 2013/07/18 16:07:22 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -112,7 +112,7 @@ Linux)
 	fi
 	paxprog=""
 	sedprog=/bin/sed
-	sandboxMountDirs="$sandboxMountDirs /proc /usr/kerberos"
+	sandboxMountDirs="$sandboxMountDirs /proc /lib64 /usr/lib64 /usr/kerberos"
 	;;
 NetBSD)
 	bmakeprog=make
@@ -288,6 +288,9 @@ for d in $sandboxMountDirs; do
 	esac
 	$mkdirprog $sandbox$d;
 	$mountprog $mountflags -r $mounthost$d $sandbox$d;
+	case "$opsys" in
+	Linux)	$mountprog $mountflags -o remount,bind,ro $mounthost$d $sandbox$d ;;
+	esac
 	echo "$mounthost$d $d ro \\" >> $sandbox_script
 done
 for d in $sandboxWriteDirs; do
