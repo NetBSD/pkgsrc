@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2013/07/12 16:46:02 roy Exp $
+# $NetBSD: Makefile,v 1.22 2013/07/18 04:59:11 obache Exp $
 #
 
 DISTNAME=		openresolv-3.5.6
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/openresolv/
-:x
 MASTER_SITES+=		http://roy.aydogan.net/openresolv/
 EXTRACT_SUFX=		.tar.bz2
 
