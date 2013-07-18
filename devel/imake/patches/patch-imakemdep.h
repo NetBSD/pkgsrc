@@ -1,7 +1,28 @@
-$NetBSD: patch-imakemdep.h,v 1.3 2013/07/13 07:42:52 obache Exp $
+$NetBSD: patch-imakemdep.h,v 1.4 2013/07/18 08:01:30 dholland Exp $
+
+ - Configure for pkgsrc: never set FIXUP_CPP_WHITESPACE as pkgsrc now
+always uses a whitespace-preserving cpp and fixing it twice causes
+bizarre lossage.
+
+ - Remove all the "logic" for guessing how to invoke cpp, and get it
+via RAWCPP defined on the command line.
+
+ - Make argv[0] for invoking cpp "cpp" by default.
+
+ - Do not pass -m32 to cpp; it is not portable, valid, or even a
+reasonable thing to do.
 
 --- imakemdep.h.orig	2012-03-08 05:47:32.000000000 +0000
 +++ imakemdep.h
+@@ -237,7 +237,7 @@ in this Software without prior written a
+  *     all colons).  One way to tell if you need this is to see whether or not
+  *     your Makefiles have no tabs in them and lots of @@ strings.
+  */
+-#  if defined(sun) || defined(SYSV) || defined(SVR4) || defined(hcx) || defined(WIN32) || defined(__SCO__) || (defined(AMOEBA) && defined(CROSS_COMPILE)) || defined(__QNX__) || defined(__sgi) || defined(__UNIXOS2__) || defined(__UNIXWARE__)
++#  if 0
+ #   define FIXUP_CPP_WHITESPACE
+ #  endif
+ #  ifdef WIN32
 @@ -265,87 +265,7 @@ in this Software without prior written a
   *     If the cpp you need is not in /lib/cpp, define DEFAULT_CPP.
   */
