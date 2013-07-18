@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2013/02/16 11:16:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/07/18 06:27:34 wiz Exp $
 bin/libpng-config
 bin/libpng16-config
+bin/png-fix-itxt
+bin/pngfix
 include/libpng16/png.h
 include/libpng16/pngconf.h
 include/libpng16/pnglibconf.h
