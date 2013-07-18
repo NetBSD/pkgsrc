@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/18 11:59:28 sborrill Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/18 12:07:43 sborrill Exp $
 #
 
 VERSION=	6.2.0
@@ -28,10 +28,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libxenserver.so.${MAJOR}.${MINOR} ${DESTDIR}${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/libxenserver.so ${DESTDIR}${PREFIX}/lib
 	cd ${WRKSRC}/include/xen/api && pax -rw *.h ${DESTDIR}${PREFIX}/include/xen/api
-.for example in test_event_handling.c test_failures.c test_vm_ops.c
-	${INSTALL_DATA} ${WRKSRC}/test/${example} \
-	    ${DESTDIR}${PREFIX}/share/examples/libxenserver
-.endfor
+	cd ${WRKSRC}/test &&  pax -rw *.c ${DESTDIR}${PREFIX}/share/examples/libxenserver
 
 .include "../../mk/bsd.prefs.mk"
 
