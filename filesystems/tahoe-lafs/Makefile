@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/07/12 10:44:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2013/07/18 00:09:32 gdt Exp $
 #
 
 VERSION=	1.10.0
@@ -46,7 +46,14 @@ DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
 
-#1.9.1 seems ok
+# Note that there is an upstream (inherited from setuptools) bug
+#   https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1258#comment:29 that
+# will cause a build to fail if there is a package with bad modes
+# installed.  If you get mysterious failures, pkg_delete the installed
+# version.
+
+# OK: 1.9.1, 1.9.2, 1.10a2
+# BAD: 1.10a1
 #BAD_DISTFILE_MODES=yes
 .if defined(BAD_DISTFILE_MODES)
 # Distfile has files mode 600, which leads to root-owned 600 files in
