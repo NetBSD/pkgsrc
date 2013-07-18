@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/04/04 16:01:55 dholland Exp $
+$NetBSD: distinfo,v 1.8 2013/07/18 12:07:24 joerg Exp $
 
 SHA1 (easyedit-jumbo-patch-20130404.gz) = 6662be387286d2147a0a840347d94c7b1a075635
 RMD160 (easyedit-jumbo-patch-20130404.gz) = ae340af9ae6decf5a65130759eda2a3cfcf17132
@@ -7,3 +7,4 @@ SHA1 (ee-1.4.6.src.tgz) = 6be7d03eade441a6c409b9d441ba2c144e26b157
 RMD160 (ee-1.4.6.src.tgz) = 2ed8ad3123c5443b29f5db142ad367d67028da27
 Size (ee-1.4.6.src.tgz) = 70511 bytes
 SHA1 (patch-ac) = cf3c94a42825a86941a40a8a66c7f413c51d0ac7
+SHA1 (patch-new__curse.c) = 49c0b3d675c4d6de672a7acc85c70aff01ca0703
