@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/05/29 15:57:09 agc Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/18 16:07:22 jperkin Exp $
 
-DISTNAME=	mksandbox-1.0
+DISTNAME=	mksandbox-1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
