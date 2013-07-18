@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/17 09:54:02 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2013/07/18 11:59:28 sborrill Exp $
 
-SHA1 (libxenserver-5.6.100-1-src.tar.bz2) = 7f7c04e1719f03e341daa85c4c6802f9d62966f6
-RMD160 (libxenserver-5.6.100-1-src.tar.bz2) = f44ddf26aef471ae1771c3ccd0d7f31d079878a1
-Size (libxenserver-5.6.100-1-src.tar.bz2) = 97237 bytes
+SHA1 (XenServer-6.2.0-SDK.zip) = 09d35add52ab85a5de10841c45022c86dcf948fa
+RMD160 (XenServer-6.2.0-SDK.zip) = b9f8326fe5512582ffdd2d73db1c36b3522b54ae
+Size (XenServer-6.2.0-SDK.zip) = 10367600 bytes
 SHA1 (patch-Makefile) = d2159549bf4307411ab9b99f4beb3c3ab2cb411b
-SHA1 (patch-xen_common.c) = 9d4ffe6157106d0b41565c4f58bc271bce4c87bf
+SHA1 (patch-xen_common.c) = b750589e7c7bcd33fedca8a564371251eeb1f3c9
