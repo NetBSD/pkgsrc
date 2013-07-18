@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/05/09 13:50:14 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/18 12:01:29 joerg Exp $
 #
 
 DISTNAME=	glog-0.3.3
 PKGNAME=	google-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://google-glog.googlecode.com/files/
 
