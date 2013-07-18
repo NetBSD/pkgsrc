@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/01/16 21:02:20 sbd Exp $
+$NetBSD: distinfo,v 1.9 2013/07/18 12:07:25 joerg Exp $
 
 SHA1 (gap4r3.tar.gz) = 448d473fdba177aa4ba7d64542cec8bb770e3d61
 RMD160 (gap4r3.tar.gz) = 4b034ae874b7b7c8ed64e2b999a06a444b5c960e
@@ -9,3 +9,4 @@ Size (fix4r3n5.tar.gz) = 1267032 bytes
 SHA1 (patch-aa) = b5ba0bdfc14f0c2bc61fca65656cb1a8b217146a
 SHA1 (patch-ab) = bb7142d80f71ae0f2b97ff44d24d5fe0e9fa5431
 SHA1 (patch-ac) = 871235a83b52271373faa79ee6d38b86ba072f7f
+SHA1 (patch-src_sysfiles.c) = 0b39d190bed901d9d98fa35b254d0d1c9f2a8815
