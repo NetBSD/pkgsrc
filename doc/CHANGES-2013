@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2628 2013/07/18 20:34:47 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2629 2013/07/18 22:17:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libxenserver to 6.2.0 [sborrill 2013-07-18]
 	Updated pkgtools/mksandbox to 1.1 [jperkin 2013-07-18]
 	Updated devel/py-mako to 0.8.1 [adam 2013-07-18]
+	Updated lang/perl5 to 5.18.0nb2 [wiz 2013-07-18]
