@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2013/07/17 12:24:41 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2013/07/18 04:51:02 obache Exp $
 
 BUILDLINK_TREE+=	libgda
 
@@ -19,7 +19,7 @@ pkgbase := libgda
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../mk.readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif # LIBGDA_BUILDLINK3_MK
 
