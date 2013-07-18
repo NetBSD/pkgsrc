@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/05/31 12:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/07/18 20:19:03 joerg Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -35,7 +35,7 @@ MODDIR=			${PREFIX}/share/${PKGBASE}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf --force
+	cd ${WRKSRC} && autoreconf --force -i
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ices \
