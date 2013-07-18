@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:21:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/18 11:59:28 sborrill Exp $
 #
 
-DISTNAME=	libxenserver-5.6.100-1-src
-PKGNAME=	${DISTNAME:S/-1-src//}
-PKGREVISION=	4
+VERSION=	6.2.0
+DISTNAME=	XenServer-${VERSION}-SDK
+PKGNAME=	libxenserver-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://community.citrix.com/download/attachments/38633496/
+MASTER_SITES=	http://downloadns.citrix.com.edgesuite.net/7289/
 
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://community.citrix.com/cdn/xs/sdks/
 COMMENT=	Citrix XenServer SDK for C
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_SUFX=	.tar.bz2
-WRKSRC=		${WRKDIR}/libxenserver
-MAJOR=		1
-MINOR=		3
+EXTRACT_SUFX=	.zip
+WRKSRC=		${WRKDIR}/XenServer-SDK/libxenserver/src
+MAJOR=		2
+MINOR=		0
 BUILD_TARGET=	libxenserver.so
 USE_TOOLS+=	gmake pax
 
