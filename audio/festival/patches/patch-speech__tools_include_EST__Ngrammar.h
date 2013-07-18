@@ -1,7 +1,7 @@
-$NetBSD: patch-speech__tools_include_EST__Ngrammar.h,v 1.1 2013/07/18 11:57:42 joerg Exp $
+$NetBSD: patch-speech__tools_include_EST__Ngrammar.h,v 1.2 2013/07/18 20:19:51 joerg Exp $
 
---- spech_tools/include/EST_Ngrammar.h.orig	2013-07-17 14:46:59.000000000 +0000
-+++ spech_tools/include/EST_Ngrammar.h
+--- speech_tools/include/EST_Ngrammar.h.orig	2013-07-17 14:46:59.000000000 +0000
++++ speech_tools/include/EST_Ngrammar.h
 @@ -538,18 +538,18 @@ public:
  						     double floor);
      friend EST_write_status save_ngram_htk_ascii(const EST_String filename, 
