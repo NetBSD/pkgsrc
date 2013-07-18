@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2013/05/09 13:50:14 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/07/18 12:01:29 joerg Exp $
 
 SHA1 (glog-0.3.3.tar.gz) = ed40c26ecffc5ad47c618684415799ebaaa30d65
 RMD160 (glog-0.3.3.tar.gz) = 27fb1bd4156f6715b84d59293d96d1cadc79ea7a
 Size (glog-0.3.3.tar.gz) = 509676 bytes
+SHA1 (patch-src_demangle.cc) = a5c0ed2b5069894a52735cc691fd12997c77a8cd
 SHA1 (patch-src_glog_stl__logging.h.in) = c86472e0f87ca99e91a5ecdb8c33affdb6679c26
