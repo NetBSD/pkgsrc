@@ -1,7 +1,21 @@
-$NetBSD: patch-hints_netbsd.sh,v 1.3 2013/01/03 10:11:34 dholland Exp $
+$NetBSD: patch-hints_netbsd.sh,v 1.4 2013/07/18 22:17:33 wiz Exp $
 
---- hints/netbsd.sh~	2012-10-11 18:20:45.000000000 +0000
+--whole-archive is a linker flag, not a compiler flag
+Better defaults for paths.
+
+--- hints/netbsd.sh.orig	2013-05-01 02:52:55.000000000 +0000
 +++ hints/netbsd.sh
+@@ -41,8 +41,8 @@ case "$osvers" in
+ # system gcc to build correctly, so check for it
+ echo 'int f(void) { return 0; }' >try.c
+ if ${cc:-cc} $cccdlflags -c try.c -otry.o 2>&1 &&
+-   ${cc:-cc} --whole-archive $lddlflags try.o -otry.so 2>&1 ; then
+-    lddlflags="--whole-archive $lddlflags"
++   ${cc:-cc} -Wl,--whole-archive $lddlflags try.o -otry.so 2>&1 ; then
++    lddlflags="-Wl,--whole-archive $lddlflags"
+ fi
+ rm try.c try.o try.so 2>/dev/null
+ EOCBU
 @@ -186,10 +186,12 @@ esac
  EOCBU
  
