@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2624 2013/07/18 07:31:36 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2625 2013/07/18 08:04:40 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xrandr to 1.4.1 [wiz 2013-07-17]
 	Updated graphics/png to 1.6.3 [wiz 2013-07-18]
 	Updated graphics/pngcrush to 1.7.66 [adam 2013-07-18]
+	Updated devel/imake to 1.0.5nb3 [dholland 2013-07-18]
