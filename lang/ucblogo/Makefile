@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/04/08 11:17:16 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2013/07/18 12:05:09 joerg Exp $
 
 DISTNAME=	ucblogo-5.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.berkeley.edu/pub/ucblogo/
 # Not at GNU mirrors yet
