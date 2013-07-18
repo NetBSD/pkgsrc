@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2005/12/05 20:49:55 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2013/07/18 12:07:24 joerg Exp $
 
---- tty.c.orig	1995-01-29 15:24:55.000000000 -0500
+--- tty.c.orig	1995-01-29 20:24:55.000000000 +0000
 +++ tty.c
-@@ -26,7 +26,7 @@
+@@ -13,6 +13,7 @@ static char *rcs_id="$Id: tty.c,v 2.1 19
+ #endif /* lint */
+ 
+ #include "config.h"
++#include <termios.h>
+ 
+ /* 
+  * Functions get_pty() and pty_search() in this file are adopted from
+@@ -26,7 +27,7 @@ static char *rcs_id="$Id: tty.c,v 2.1 19
  # define	TTYDEV		"/dev/pty/ttyxx"
  #else   /* !hpux */
  # define	PTYCHAR1	"pqrstuvwxyzPQRSTUVWXYZ"
@@ -11,7 +19,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/05 20:49:55 rillig Exp $
  # define	PTYDEV		"/dev/ptyxx"
  # define	TTYDEV		"/dev/ttyxx"
  #endif  /* !hpux */
-@@ -39,6 +39,10 @@ extern char *ptsname();
+@@ -39,6 +40,10 @@ extern char *ptsname();
  # include <sys/utsname.h>
  #endif
  
@@ -22,7 +30,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/05 20:49:55 rillig Exp $
  static char ptydev[32];
  static char ttydev[32];
  static int pty_search();
-@@ -61,7 +65,7 @@ int get_pty (pty)
+@@ -61,7 +66,7 @@ int get_pty (pty)
  	    return 0;
  #endif /* SYSV && SYSV386 */
  
@@ -31,7 +39,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/05 20:49:55 rillig Exp $
  	{
  	    if ((*pty = open ("/dev/ptmx", O_RDWR)) < 0)
  		return 1;
-@@ -414,7 +418,10 @@ void make_raw(oldtermptr, newtermptr)
+@@ -414,7 +419,10 @@ void make_raw(oldtermptr, newtermptr)
  
  /******************************* UTMP stuffs *******************************/
  
@@ -42,7 +50,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/05 20:49:55 rillig Exp $
  #ifdef	HAS_UTMPX
  
  # include <utmpx.h>
-@@ -428,6 +435,10 @@ void make_raw(oldtermptr, newtermptr)
+@@ -428,6 +436,10 @@ void make_raw(oldtermptr, newtermptr)
  # define getutid	getutxid
  # define pututline	pututxline
  
@@ -53,7 +61,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/05 20:49:55 rillig Exp $
  #endif
  
  #ifdef USE_SYSV_UTMP
-@@ -507,8 +518,10 @@ void addutmp()
+@@ -507,8 +519,10 @@ void addutmp()
  	utmp.ut_pid = getpid();
  
  # ifdef	HAS_UTMPX
