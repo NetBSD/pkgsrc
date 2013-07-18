@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2626 2013/07/18 12:00:17 sborrill Exp $
+$NetBSD: CHANGES-2013,v 1.2627 2013/07/18 16:07:37 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3892,3 +3892,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.66 [adam 2013-07-18]
 	Updated devel/imake to 1.0.5nb3 [dholland 2013-07-18]
 	Updated devel/libxenserver to 6.2.0 [sborrill 2013-07-18]
+	Updated pkgtools/mksandbox to 1.1 [jperkin 2013-07-18]
