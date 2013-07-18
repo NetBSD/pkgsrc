@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/07/18 12:07:43 sborrill Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/18 13:05:48 sborrill Exp $
 #
 
 VERSION=	6.2.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://downloadns.citrix.com.edgesuite.net/7289/
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://community.citrix.com/cdn/xs/sdks/
 COMMENT=	Citrix XenServer SDK for C
-LICENSE=	gnu-gpl-v2
+LICENSE=	2-clause-bsd
 
 EXTRACT_SUFX=	.zip
 WRKSRC=		${WRKDIR}/XenServer-SDK/libxenserver/src
