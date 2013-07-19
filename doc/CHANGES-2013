@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2634 2013/07/19 14:01:22 degroote Exp $
+$NetBSD: CHANGES-2013,v 1.2635 2013/07/19 18:04:55 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3900,3 +3900,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/ejabberd to 2.1.13 [fhajny 2013-07-19]
 	Updated www/yaws to 1.96 [fhajny 2013-07-19]
 	Updated mail/imapfilter to 2.55 [degroote 2013-07-19]
+	Updated www/py-werkzeug to 0.9.2 [kleink 2013-07-19]
+	Updated www/py-werkzeug-docs to 0.9.2 [kleink 2013-07-19]
