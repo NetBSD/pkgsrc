@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/10/28 02:52:33 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2013/07/19 12:58:20 joerg Exp $
 
 --- Makefile.in.orig	2004-11-05 18:53:48.000000000 -0700
 +++ Makefile.in	2004-11-05 20:50:47.000000000 -0700
@@ -14,3 +14,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/10/28 02:52:33 minskim Exp $
  
  IMAKE_CFLAGS	= @IMAKE_CFLAGS@
  EXTRA_CFLAGS	= @EXTRA_CFLAGS@
+@@ -30,7 +30,7 @@
+ manext		= 1
+ bindir		= $(exec_prefix)/bin
+ libdir		= $(exec_prefix)/lib
+-mandir		= $(prefix)/share/man/man$(manext)
++mandir		= $(prefix)/man/man$(manext)
+ appsdir		= $(libdir)/X11/app-defaults
+ 
+ #### End of system configuration section. ####
