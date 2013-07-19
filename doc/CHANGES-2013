@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2629 2013/07/18 22:17:44 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2630 2013/07/19 05:53:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3895,3 +3895,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/mksandbox to 1.1 [jperkin 2013-07-18]
 	Updated devel/py-mako to 0.8.1 [adam 2013-07-18]
 	Updated lang/perl5 to 5.18.0nb2 [wiz 2013-07-18]
+	Updated x11/xconsole to 1.0.6 [wiz 2013-07-19]
