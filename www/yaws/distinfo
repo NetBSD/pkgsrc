@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/26 13:46:43 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2013/07/19 09:53:34 fhajny Exp $
 
-SHA1 (yaws-1.91.tar.gz) = 832665fd306ea19a433e3085055f39a5124205ef
-RMD160 (yaws-1.91.tar.gz) = 62fe994fe40b136c53d5b3b0ae62c134feeba39c
-Size (yaws-1.91.tar.gz) = 878620 bytes
+SHA1 (yaws-1.96.tar.gz) = ca6f49f69c71081d8e13e4406d5e20e8af2fa53d
+RMD160 (yaws-1.96.tar.gz) = 00c3c687bcea0f2ce1a63f746c03a8ac2862e88e
+Size (yaws-1.96.tar.gz) = 1226822 bytes
 SHA1 (patch-ai) = fff8d3007722922d1b40ab579817626616740be6
-SHA1 (patch-configure.in) = 0592a6c78f4b16c30dc0737b600f806cbd97fa45
+SHA1 (patch-configure.in) = ec43bc2c8668d340f2cb5fa3f719448946cc9fe7
