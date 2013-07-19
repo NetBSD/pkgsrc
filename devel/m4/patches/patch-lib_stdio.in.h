@@ -1,10 +1,8 @@
-$NetBSD: patch-lib_stdio.in.h,v 1.1 2013/07/19 12:13:36 ryoon Exp $
+$NetBSD: patch-lib_stdio.in.h,v 1.2 2013/07/19 14:49:28 ryoon Exp $
 
+glibc 2.16's /usr/include/stdio.h does not provide gets(3) anymore,
+and this line causes breakage.
 From: http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/sys-devel/m4/files/m4-1.4.16-no-gets.patch
-Gnulib intentionally does not have a gets module, and now that C11
-and glibc have dropped it, we should be more proactive about warning
-any user on a platform that still has a declaration of this dangerous
-interface.
 
 --- lib/stdio.in.h.orig	2011-03-01 16:39:29.000000000 +0000
 +++ lib/stdio.in.h
