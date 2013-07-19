@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/01/21 13:19:12 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2013/07/19 05:53:07 wiz Exp $
 
-DISTNAME=	xconsole-1.0.5
+DISTNAME=	xconsole-1.0.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
