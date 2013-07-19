@@ -1,13 +1,10 @@
-# $NetBSD: builtin.mk,v 1.18 2013/07/15 01:54:25 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.19 2013/07/19 14:35:37 ryoon Exp $
 
 BUILTIN_PKG:=	readline
 
 BUILTIN_FIND_LIBS:=		readline history
 BUILTIN_FIND_FILES_VAR:=	H_READLINE _BLTN_H_READLINE
 BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
-				/usr/include/readline.h
-BUILTIN_FIND_FILES._BLTN_H_READLINE=	\
-				/usr/include/readline/readline.h	\
 				/usr/include/readline.h
 BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 
@@ -70,7 +67,10 @@ USE_BUILTIN.readline!=							\
 # Some platforms don't have a readline/editline implementation that can
 # replace GNU readline.
 #
-_INCOMPAT_READLINE?=	SunOS-*-* Darwin-[567].*-* Interix-*-*
+_INCOMPAT_READLINE?=	Darwin-[567].*-* Interix-*-*
+.    if defined(OS_VARIANT) && empty(OS_VARIANT:MOmniOS)
+_INCOMPAT_READLINE+=	SunOS-*-*
+.    endif
 .    for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
 USE_BUILTIN.readline=	no

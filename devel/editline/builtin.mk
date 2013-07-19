@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.1 2013/07/15 01:42:47 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.2 2013/07/19 14:35:37 ryoon Exp $
 
 BUILTIN_PKG:=	editline
 
 BUILTIN_FIND_LIBS:=		edit
 BUILTIN_FIND_FILES_VAR:=	H_EDITLINE
-BUILTIN_FIND_FILES.H_EDITLINE=	/usr/include/readline/readline.h
+BUILTIN_FIND_FILES.H_EDITLINE=	/usr/include/editline/readline.h \
+				/usr/include/readline/readline.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -45,8 +46,41 @@ USE_BUILTIN.editline=	yes
 .    endif
 MAKEVARS+=	USE_BUILTIN.readline
 
+.if !empty(H_EDITLINE:M/usr/include/editline/readline.h)
+BUILDLINK_TARGETS+=	buildlink-readline-readline-h
+BUILDLINK_TARGETS+=	buildlink-readline-history-h
+.endif
+
 BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
 BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
 .endif
+
+.  if !target(buildlink-readline-readline-h)
+.PHONY: buildlink-readline-readline-h
+buildlink-readline-readline-h:
+	${RUN}								\
+	src=${H_EDITLINE:Q};						\
+	dest=${BUILDLINK_DIR}"/include/readline/readline.h";		\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
+		fname=`${BASENAME} $$src`;				\
+		${ECHO_BUILDLINK_MSG} "Linking $$fname -> readline.h.";	\
+		${MKDIR} `${DIRNAME} "$$dest"`;				\
+		${LN} -s "$$src" "$$dest";				\
+	fi
+.  endif
+
+.  if !target(buildlink-readline-history-h)
+.PHONY: buildlink-readline-history-h
+buildlink-readline-history-h:
+	${RUN}								\
+	src=${H_EDITLINE:Q};						\
+	dest=${BUILDLINK_DIR}"/include/readline/history.h";		\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
+		fname=`${BASENAME} $$src`;				\
+		${ECHO_BUILDLINK_MSG} "Linking $$fname -> history.h.";	\
+		${MKDIR} `${DIRNAME} "$$dest"`;				\
+		${LN} -s "$$src" "$$dest";				\
+	fi
+.  endif
 
 .endif	# CHECK_BUILTIN.readline
