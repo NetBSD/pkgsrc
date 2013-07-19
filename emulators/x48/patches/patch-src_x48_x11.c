@@ -1,4 +1,4 @@
-$NetBSD: patch-src_x48_x11.c,v 1.1 2013/07/09 10:24:22 he Exp $
+$NetBSD: patch-src_x48_x11.c,v 1.2 2013/07/19 12:51:11 joerg Exp $
 
 Pick X11 application defaults from path specified in the package
 Makefile.
@@ -16,3 +16,12 @@ Makefile.
  
    /* 3. Values in $XUSERFILESEARCHPATH/X48, or $XAPPLRESDIR/X48 */
  
+@@ -3833,7 +3834,7 @@ int first_key = 0;
+ 
+ int last_button = -1;
+ 
+-extern char *get_stack(void);
++extern void get_stack(void);
+ 
+ int
+ #ifdef __FunctionProto__
