@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2012/05/20 21:07:25 marino Exp $
+$NetBSD: patch-configure,v 1.2 2013/07/19 08:16:36 adam Exp $
 
---- configure.orig	2011-12-18 23:22:41.000000000 +0000
+--- configure.orig	2013-05-02 09:13:30.000000000 +0000
 +++ configure
-@@ -17110,6 +17110,14 @@ $as_echo "#define ZMQ_FORCE_MUTEXES 1" >
+@@ -17064,6 +17064,14 @@ $as_echo "#define ZMQ_FORCE_MUTEXES 1" >
  
          fi
          ;;

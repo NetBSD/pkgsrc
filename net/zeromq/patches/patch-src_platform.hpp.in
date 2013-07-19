@@ -1,10 +1,10 @@
-$NetBSD: patch-src_platform.hpp.in,v 1.1 2012/05/20 21:07:25 marino Exp $
+$NetBSD: patch-src_platform.hpp.in,v 1.2 2013/07/19 08:16:36 adam Exp $
 
---- src/platform.hpp.in.orig	2012-05-20 20:57:44.478200000 +0000
+--- src/platform.hpp.in.orig	2013-05-02 09:13:31.000000000 +0000
 +++ src/platform.hpp.in
 @@ -178,9 +178,12 @@
- /* Have Cygwin */
- #undef ZMQ_HAVE_CYGWIN
+ /* Have eventfd extension. */
+ #undef ZMQ_HAVE_EVENTFD
  
 -/* Have FreeBSD OS */
 +/* Have FreeBSD OS -or- DragonFly OS */
