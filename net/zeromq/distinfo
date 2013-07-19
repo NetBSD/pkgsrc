@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/01/24 11:28:03 obache Exp $
+$NetBSD: distinfo,v 1.8 2013/07/19 08:16:36 adam Exp $
 
-SHA1 (zeromq-2.2.0.tar.gz) = e4bc024c33d3e62f658640625e061ce4e8bd1ff1
-RMD160 (zeromq-2.2.0.tar.gz) = 63c6ca84c292a72ffb0e18f1a97a6fa744a6be7c
-Size (zeromq-2.2.0.tar.gz) = 1900378 bytes
-SHA1 (patch-configure) = 8e184b534e8fbb97e4007af08f6d305d00899081
-SHA1 (patch-src_platform.hpp.in) = d1063de1699f2cda9f1421417062083b8fc4a0a2
-SHA1 (patch-src_tcp_socket.cpp) = ecc7c0b8b70dfc436a6422d230faa7bb4fef70ee
+SHA1 (zeromq-3.2.3.tar.gz) = 6857a3a0e908eca58f7c0f90e2ba4695f6700957
+RMD160 (zeromq-3.2.3.tar.gz) = b31bccf91f639b67dad56ef1265db73467780515
+Size (zeromq-3.2.3.tar.gz) = 2072758 bytes
+SHA1 (patch-configure) = b04b304545c098af4b17d164b4bbbfc20a3de230
+SHA1 (patch-src_platform.hpp.in) = 6467b1bdbbd163a3132e81d516f8c5b0c660792e
