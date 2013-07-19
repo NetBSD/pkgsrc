@@ -1,4 +1,4 @@
-# $NetBSD: readline.buildlink3.mk,v 1.2 2013/07/18 14:59:04 ryoon Exp $
+# $NetBSD: readline.buildlink3.mk,v 1.3 2013/07/19 14:35:37 ryoon Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any readline implementation instead of one particular one.  The available
@@ -43,10 +43,12 @@ CHECK_BUILTIN.editlinereadline:=	no
 #
 .if defined(IS_BUILTIN.editline) && \
 	!empty(IS_BUILTIN.editline:M[Yy][Ee][Ss])
-READLINE_DEFAULT=	editline
-.else if defined(IS_BUILTIN.readline) && \
+READLINE_DEFAULT?=	editline
+.elif defined(IS_BUILTIN.readline) && \
 	!empty(IS_BUILTIN.readline:M[Yy][Ee][Ss])
-READLINE_DEFAULT=	readline
+READLINE_DEFAULT?=	readline
+.else
+READLINE_DEFAULT?=	editline
 .endif
 
 
