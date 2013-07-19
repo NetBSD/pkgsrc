@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/07/09 18:37:22 kleink Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/19 18:06:18 kleink Exp $
 
-DISTNAME=	Flask-Login-0.2.5
+DISTNAME=	Flask-Login-0.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Login/
