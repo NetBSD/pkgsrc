@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/01 12:23:52 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/19 12:57:28 joerg Exp $
 #
 
 DISTNAME=	pam_p11-0.1.5
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config autoconf automake
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -f
+	cd ${WRKSRC} && autoreconf -f -i
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/libp11/buildlink3.mk"
