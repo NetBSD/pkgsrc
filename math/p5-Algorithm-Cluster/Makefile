@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/03 14:26:03 sno Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/19 12:52:10 joerg Exp $
 #
 
 DISTNAME=	Algorithm-Cluster-1.50
@@ -14,6 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Algorithm/Cluster/.packlist
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
