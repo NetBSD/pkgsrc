@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/05/31 12:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/07/19 03:52:29 manu Exp $
 
 DISTNAME=	openmpi-1.6.4
 PKGREVISION=	1
@@ -20,7 +20,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
-CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
