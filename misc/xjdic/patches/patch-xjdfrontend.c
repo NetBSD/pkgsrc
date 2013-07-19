@@ -1,8 +1,16 @@
-$NetBSD: patch-xjdfrontend.c,v 1.1 2013/01/17 16:00:02 joerg Exp $
+$NetBSD: patch-xjdfrontend.c,v 1.2 2013/07/19 12:54:58 joerg Exp $
 
---- xjdfrontend.c.orig	2013-01-16 14:01:40.000000000 +0000
+--- xjdfrontend.c.orig	2013-07-19 10:14:06.000000000 +0000
 +++ xjdfrontend.c
-@@ -2917,10 +2917,7 @@ void FiltSet()
+@@ -26,6 +26,7 @@
+ #include <stdlib.h>
+ #include <signal.h>
+ #include <errno.h>
++#include <termios.h>
+ 
+ #define HAVE_LOCALE
+ #ifdef HAVE_LOCALE
+@@ -2917,10 +2918,7 @@ void FiltSet()
  
  /*                  M A I N                                      */
  
