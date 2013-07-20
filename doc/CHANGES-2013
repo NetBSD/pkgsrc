@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2645 2013/07/20 10:20:56 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.2646 2013/07/20 11:57:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3915,3 +3915,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/nspr to 4.10 [ryoon 2013-07-20]
 	Updated devel/nss to 3.15.1 [ryoon 2013-07-20]
 	Updated pkgtools/mksandbox to 1.2 [jperkin 2013-07-20]
+	Updated devel/scmgit to 1.8.3.3 [adam 2013-07-20]
+	Updated devel/scmgit-base to 1.8.3.3 [adam 2013-07-20]
+	Updated devel/scmgit-docs to 1.8.3.3 [adam 2013-07-20]
+	Updated www/gitweb to 1.8.3.3 [adam 2013-07-20]
