@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/19 11:39:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/07/20 15:56:18 wiz Exp $
 bin/akonadi_agent_launcher
 bin/akonadi_agent_server
 bin/akonadi_control
 bin/akonadi_rds
 bin/akonadictl
 bin/akonadiserver
+bin/asapcat
 include/akonadi/private/akonadiprotocolinternals_export.h
 include/akonadi/private/capabilities_p.h
 include/akonadi/private/imapparser_p.h
 include/akonadi/private/imapset_p.h
 include/akonadi/private/notificationmessage_p.h
+include/akonadi/private/notificationmessagev2_p.h
 include/akonadi/private/protocol_p.h
 include/akonadi/private/xdgbasedirs_p.h
 lib/cmake/Akonadi/AkonadiConfig.cmake
