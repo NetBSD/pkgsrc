@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/07/04 14:11:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/07/20 15:44:10 wiz Exp $
 include/libgoffice-0.10/goffice/app/error-info.h
 include/libgoffice-0.10/goffice/app/file.h
 include/libgoffice-0.10/goffice/app/go-cmd-context-impl.h
@@ -258,6 +258,7 @@ share/gtk-doc/html/goffice-0.10/GogAxisLine.html
 share/gtk-doc/html/goffice-0.10/GogAxisMap.html
 share/gtk-doc/html/goffice-0.10/GogChart.html
 share/gtk-doc/html/goffice-0.10/GogChartMap.html
+share/gtk-doc/html/goffice-0.10/GogColorScale.html
 share/gtk-doc/html/goffice-0.10/GogDataEditor.html
 share/gtk-doc/html/goffice-0.10/GogDataset.html
 share/gtk-doc/html/goffice-0.10/GogErrorBar.html
