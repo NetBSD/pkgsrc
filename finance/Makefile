@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/27 19:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/07/20 16:48:46 richard Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -14,6 +14,7 @@ SUBDIR+=	p5-Data-Currency
 SUBDIR+=	p5-Finance-Currency-Convert-WebserviceX
 SUBDIR+=	p5-Finance-Quote
 SUBDIR+=	p5-Locale-Currency-Format
+SUBDIR+=	py-vatnumber
 SUBDIR+=	ruby-activemerchant
 SUBDIR+=	ruby-braintree
 SUBDIR+=	tclticker
