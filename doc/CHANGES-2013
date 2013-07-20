@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2636 2013/07/19 18:07:01 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2637 2013/07/20 04:02:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3903,3 +3903,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-werkzeug to 0.9.2 [kleink 2013-07-19]
 	Updated www/py-werkzeug-docs to 0.9.2 [kleink 2013-07-19]
 	Updated www/py-flask-login to 0.2.6 [kleink 2013-07-19]
+	Updated lang/ruby193-base to 1.9.3p448nb2 [taca 2013-07-20]
