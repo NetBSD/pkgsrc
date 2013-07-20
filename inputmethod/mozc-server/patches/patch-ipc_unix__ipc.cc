@@ -1,13 +1,13 @@
-$NetBSD: patch-ipc_unix__ipc.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-ipc_unix__ipc.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- ipc/unix_ipc.cc.orig	2013-03-29 04:33:26.000000000 +0000
+--- ipc/unix_ipc.cc.orig	2013-07-17 02:37:50.000000000 +0000
 +++ ipc/unix_ipc.cc
 @@ -28,7 +28,7 @@
  // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  
  // skip all if non-Linux or Android.
 -#if defined(OS_LINUX) && !defined(OS_ANDROID)
-+#if (defined(OS_LINUX) && !defined(OS_ANDROID)) || defined(OS_NETBSD)
++#if defined(OS_LINUX) && !defined(OS_ANDROID) || defined(OS_NETBSD)
  
  #include "ipc/ipc.h"
  
@@ -20,10 +20,13 @@ $NetBSD: patch-ipc_unix__ipc.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
    struct ucred peer_cred;
    int peer_cred_len = sizeof(peer_cred);
    if (getsockopt(socket, SOL_SOCKET, SO_PEERCRED,
-@@ -145,6 +145,22 @@ bool IsPeerValid(int socket, pid_t *pid)
-   *pid = peer_cred.pid;
- #endif  // __arm__
+@@ -143,7 +143,23 @@ bool IsPeerValid(int socket, pid_t *pid)
+   }
  
+   *pid = peer_cred.pid;
+-#endif  // __arm__
++#endif  // __arm__, OS_NETBSD
++
 +#if defined(OS_NETBSD)
 +  struct unpcbid peer_cred;
 +  int peer_cred_len = sizeof(peer_cred);
@@ -39,7 +42,6 @@ $NetBSD: patch-ipc_unix__ipc.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
 +    return false;
 +  }
 +#endif
-+
+ 
    return true;
  }
- 

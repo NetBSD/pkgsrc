@@ -1,17 +1,26 @@
-$NetBSD: patch-base_system__util.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-base_system__util.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- base/system_util.cc.orig	2013-03-29 04:33:43.000000000 +0000
+--- base/system_util.cc.orig	2013-07-17 02:38:04.000000000 +0000
 +++ base/system_util.cc
-@@ -421,7 +421,7 @@ string SystemUtil::GetServerDirectory() 
+@@ -421,14 +421,14 @@ string SystemUtil::GetServerDirectory() 
  #elif defined(OS_MACOSX)
    return MacUtil::GetServerDirectory();
  
 -#elif defined(OS_LINUX)
 +#elif defined(OS_LINUX) || defined(OS_NETBSD)
-   // TODO(mazda): Not to use hardcoded path.
-   return kMozcServerDirectory;
- #endif  // OS_WIN, OS_MACOSX, OS_LINUX
-@@ -610,7 +610,7 @@ bool GetCurrentSessionId(DWORD *session_
+ #if defined(MOZC_SERVER_DIRECTORY)
+   return MOZC_SERVER_DIRECTORY;
+ #else
+-  return "/usr/lib/mozc";
++  return "@PREFIX@/libexec";
+ #endif  // MOZC_SERVER_DIRECTORY
+ 
+-#endif  // OS_WIN, OS_MACOSX, OS_LINUX
++#endif  // OS_WIN, OS_MACOSX, OS_LINUX, OS_NETBSD
+ }
+ 
+ string SystemUtil::GetServerPath() {
+@@ -616,7 +616,7 @@ bool GetCurrentSessionId(DWORD *session_
  #endif  // OS_WIN
  
  string SystemUtil::GetDesktopNameAsString() {
@@ -20,7 +29,7 @@ $NetBSD: patch-base_system__util.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
    const char *display = getenv("DISPLAY");
    if (display == NULL) {
      return "";
-@@ -809,7 +809,7 @@ bool SystemUtil::IsPlatformSupported() {
+@@ -815,7 +815,7 @@ bool SystemUtil::IsPlatformSupported() {
  #if defined(OS_MACOSX)
    // TODO(yukawa): support Mac.
    return true;
@@ -29,17 +38,23 @@ $NetBSD: patch-base_system__util.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
    // TODO(yukawa): support Linux.
    return true;
  #elif defined(OS_WIN)
-@@ -1098,6 +1098,9 @@ string SystemUtil::GetOSVersionString() 
+@@ -1104,10 +1104,13 @@ string SystemUtil::GetOSVersionString() 
  #elif defined(OS_LINUX)
    const string ret = "Linux";
    return ret;
+-#else  // !OS_WIN && !OS_MACOSX && !OS_LINUX
 +#elif defined(OS_NETBSD)
 +  const string ret = "NetBSD";
 +  return ret;
- #else  // !OS_WIN && !OS_MACOSX && !OS_LINUX
++#else  // !OS_WIN && !OS_MACOSX && !OS_LINUX && !OS_NETBSD
    const string ret = "Unknown";
    return ret;
-@@ -1145,7 +1148,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
+-#endif  // OS_WIN, OS_MACOSX, OS_LINUX
++#endif  // OS_WIN, OS_MACOSX, OS_LINUX, OS_NETBSD
+ }
+ 
+ bool SystemUtil::MacOSVersionIsGreaterOrEqual(int32 major,
+@@ -1151,7 +1154,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
      return 0;
    }
    return total_memory;

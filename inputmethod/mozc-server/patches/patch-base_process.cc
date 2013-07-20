@@ -1,6 +1,6 @@
-$NetBSD: patch-base_process.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-base_process.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- base/process.cc.orig	2013-03-29 04:33:43.000000000 +0000
+--- base/process.cc.orig	2013-07-17 02:38:04.000000000 +0000
 +++ base/process.cc
 @@ -46,7 +46,7 @@
  #include "base/mac_process.h"
@@ -11,15 +11,17 @@ $NetBSD: patch-base_process.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
  #include <fcntl.h>
  #include <signal.h>
  #include <spawn.h>  // for posix_spawn().
-@@ -121,7 +121,7 @@ bool Process::OpenBrowser(const string &
+@@ -121,8 +121,8 @@ bool Process::OpenBrowser(const string &
    return ShellExecuteInSystemDir(L"open", wurl.c_str(), NULL, SW_SHOW);
  #endif
  
 -#ifdef OS_LINUX
+-  static const char kBrowserCommand[] = "/usr/bin/xdg-open";
 +#if defined(OS_LINUX) || defined(OS_NETBSD)
-   static const char kBrowserCommand[] = "/usr/bin/xdg-open";
++  static const char kBrowserCommand[] = "@PREFIX@/bin/xdg-open";
    // xdg-open which uses kfmclient or gnome-open internally works both on KDE
    // and GNOME environments.
+   return SpawnProcess(kBrowserCommand, url);
 @@ -205,7 +205,7 @@ bool Process::SpawnProcess(const string 
    }
  #endif

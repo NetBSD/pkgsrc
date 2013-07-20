@@ -1,8 +1,8 @@
-$NetBSD: patch-gui_config__dialog_keymap__editor.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-gui_config__dialog_keymap__editor.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- gui/config_dialog/keymap_editor.cc.orig	2013-03-29 04:33:49.000000000 +0000
+--- gui/config_dialog/keymap_editor.cc.orig	2013-07-17 02:38:20.000000000 +0000
 +++ gui/config_dialog/keymap_editor.cc
-@@ -449,7 +449,7 @@ bool KeyMapEditorDialog::Update() {
+@@ -448,13 +448,13 @@ bool KeyMapEditorDialog::Update() {
    *keymap_table += invisible_keymap_table_;
  
    if (new_ime_switch_keymap != ime_switch_keymap_) {
@@ -11,3 +11,10 @@ $NetBSD: patch-gui_config__dialog_keymap__editor.cc,v 1.1 2013/04/29 09:52:17 ry
      QMessageBox::information(
          this,
          windowTitle(),
+         tr("The keymaps for IME ON and Reconversion will be "
+            "applied after new applications."));
+-#endif  // OS_WIN || OS_LINUX
++#endif  // OS_WIN || OS_LINUX || OS_NETBSD
+     ime_switch_keymap_ = new_ime_switch_keymap;
+   }
+ 

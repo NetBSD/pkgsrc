@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2013/04/29 09:52:16 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
 #
 
-DISTNAME=	mozc-1.10.1390.102
+DISTNAME=	mozc-1.11.1502.102
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://mozc.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -37,15 +37,10 @@ SUBST_STAGE.gyp=	pre-configure
 SUBST_MESSAGE.gyp=	Fix gyp defaults
 SUBST_FILES.gyp+=	base/base.gyp
 SUBST_FILES.gyp+=	base/process.cc
+SUBST_FILES.gyp+=	base/system_util.cc
 SUBST_FILES.gyp+=	handwriting/zinnia_handwriting.cc
 SUBST_FILES.gyp+=	unix/ibus/gen_mozc_xml.py
-SUBST_FILES.gyp+=	gui/qt_rcc.gypi
-SUBST_FILES.gyp+=	gui/qt_moc.gypi
-SUBST_FILES.gyp+=	gui/qt_uic.gypi
-SUBST_FILES.gyp+=	gui/qt_libraries.gypi
-SUBST_FILES.gyp+=	base/const.h
-SUBST_FILES.gyp+=	build_mozc.py
-SUBST_FILES.gyp+=	protobuf/genproto.gypi
+SUBST_FILES.gyp+=	gyp/common.gypi
 SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
 SUBST_VARS.gyp+=	PREFIX QTDIR
 
