@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/07/20 16:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/07/20 16:56:18 wiz Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -36,6 +36,7 @@ SUBDIR+=	usrp-docs
 SUBDIR+=	wwl
 SUBDIR+=	xdx
 SUBDIR+=	xlog
+SUBDIR+=	xnec2c
 SUBDIR+=	yaesu
 
 .include "../mk/misc/category.mk"
