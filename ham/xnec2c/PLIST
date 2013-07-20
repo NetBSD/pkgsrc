@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/20 16:56:07 wiz Exp $
+bin/xnec2c
+share/doc/xnec2c/NEC2-bug.txt
+share/doc/xnec2c/NearFieldCalcs.txt
+share/doc/xnec2c/images/charges.png
+share/doc/xnec2c/images/currents.png
+share/doc/xnec2c/images/excitation.png
+share/doc/xnec2c/images/freq_plots.png
+share/doc/xnec2c/images/nec2_edit.png
+share/doc/xnec2c/images/radiation.png
+share/doc/xnec2c/images/wire.png
+share/doc/xnec2c/nec2c.txt
+share/doc/xnec2c/xnec2c.html
