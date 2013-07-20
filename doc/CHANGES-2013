@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2641 2013/07/20 07:41:39 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2642 2013/07/20 08:05:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3911,3 +3911,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/youtube-dl to 20130719 [ryoon 2013-07-20]
 	Updated databases/pgadmin3 to 1.16.1 [richard 2013-07-20]
 	Updated textproc/py-xlwt to 0.7.5 [richard 2013-07-20]
+	Updated www/php-owncloud to 5.0.9 [ryoon 2013-07-20]
