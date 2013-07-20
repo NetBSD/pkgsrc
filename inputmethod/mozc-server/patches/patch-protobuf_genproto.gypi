@@ -1,28 +1,13 @@
-$NetBSD: patch-protobuf_genproto.gypi,v 1.1 2013/04/29 09:52:18 ryoon Exp $
+$NetBSD: patch-protobuf_genproto.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- protobuf/genproto.gypi.orig	2013-03-29 04:33:43.000000000 +0000
+--- protobuf/genproto.gypi.orig	2013-07-17 02:38:05.000000000 +0000
 +++ protobuf/genproto.gypi
-@@ -33,19 +33,19 @@
-     'wrapper_path': '<(DEPTH)/build_tools/protoc_wrapper.py',
+@@ -34,7 +34,7 @@
+     'protoc_command': 'protoc<(EXECUTABLE_SUFFIX)',
    },
    'conditions': [
--    ['target_platform!="linux"', {
+-    ['target_platform!="Linux"', {
 +    ['target_platform!="Linux" and target_platform!="NetBSD"', {
        'variables': {
--        'protoc_command%': '<(mozc_build_tools_dir)/protoc<(EXECUTABLE_SUFFIX)',
-+        'protoc_command%': '@PREFIX@/bin/protoc<(EXECUTABLE_SUFFIX)',
+         'protoc_wrapper_additional_options': ['--protoc_dir=<(mozc_build_tools_dir)'],
        },
-     }, {  # else
-       'conditions': [
-         ['use_libprotobuf==0', {
-           'variables': {
--            'protoc_command%': '<(mozc_build_tools_dir)/protoc<(EXECUTABLE_SUFFIX)',
-+            'protoc_command%': '@PREFIX@/bin/protoc<(EXECUTABLE_SUFFIX)',
-           },
-         }, {  # else
-           'variables': {
--            'protoc_command%': 'protoc<(EXECUTABLE_SUFFIX)',
-+            'protoc_command%': '@PREFIX@/bin/protoc<(EXECUTABLE_SUFFIX)',
-           },
-         }],
-       ],
