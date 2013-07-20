@@ -1,29 +1,27 @@
-# $NetBSD: Makefile,v 1.61 2013/05/31 12:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2013/07/20 08:57:20 ryoon Exp $
 #
 
 DISTNAME=	nspr-${NSPR_RELEASE}
-NSPR_RELEASE=	4.9.6
-PKGREVISION=	1
+NSPR_RELEASE=	4.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/projects/nspr/index.html
 COMMENT=	Platform-neutral API for system level and libc like functions
+LICENSE=	mpl-2.0
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla
-
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBSUBDIR=nspr
-CONFIGURE_DIRS=		nsprpub
+CONFIGURE_DIRS=		nspr
 
 USE_TOOLS+=		autoconf213 gmake perl
-REPLACE_PERL+=		nsprpub/pr/src/misc/compile-et.pl
+REPLACE_PERL+=		nspr/pr/src/misc/compile-et.pl
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-pthreads
@@ -34,14 +32,14 @@ CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
 SUBST_CLASSES+=			nspr-config
 SUBST_STAGE.nspr-config=	pre-configure
 SUBST_MESSAGE.nspr-config=	Fixing nspr-config run path
-SUBST_FILES.nspr-config=	nsprpub/config/nspr-config.in
+SUBST_FILES.nspr-config=	nspr/config/nspr-config.in
 SUBST_SED.nspr-config=		-e 's|-L$$libdir|"${COMPILER_RPATH_FLAG}$$libdir -L$$libdir"|g'
 
 .if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=			exec_path
 SUBST_STAGE.exec_path=		pre-configure
 SUBST_MESSAGE.exec_path=	Fixing @executable_path
-SUBST_FILES.exec_path=		nsprpub/configure.in
+SUBST_FILES.exec_path=		nspr/configure.in
 SUBST_SED.exec_path=		-e 's,@executable_path,${PREFIX}/lib/nspr,g'
 .endif
 
@@ -55,7 +53,7 @@ SO_SUFFIX=		so.1.0
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 PLIST_VARS+=		sun4u_32
-# see nsprpub/pr/src/md/unix/Makefile.in
+# see nspr/pr/src/md/unix/Makefile.in
 # for the bit about 32-bit sun4u machines installing an extra file.
 # That is why we have this specific test and modify the PLIST
 .if ${OPSYS} == "SunOS"
@@ -80,7 +78,7 @@ BUILDLINK_PASSTHRU_DIRS+=	Developer/Headers/FlatCarbon
 .endif
 
 pre-configure:
-	cd ${WRKSRC}/nsprpub && autoconf
+	cd ${WRKSRC}/nspr && autoconf
 
 post-build:
 	set -e; ( \

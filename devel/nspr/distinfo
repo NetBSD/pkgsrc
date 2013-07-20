@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.25 2013/04/13 11:32:03 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2013/07/20 08:57:20 ryoon Exp $
 
-SHA1 (nspr-4.9.6.tar.gz) = 4de89141c62f1a8e93f8dabe0ecb6cf30f8802df
-RMD160 (nspr-4.9.6.tar.gz) = 8b8fcf5306ed3720d8e21749d78d76dc6585d82f
-Size (nspr-4.9.6.tar.gz) = 1163033 bytes
-SHA1 (patch-ab) = be61b86f8a66dbf92737b02c0e5b1fe514b40f41
-SHA1 (patch-ac) = 97aa60a256db4af9768a7b6645942c9daa63a265
-SHA1 (patch-ae) = 4f04f2a55c88fe2047a50361f85f2393571574dd
-SHA1 (patch-ag) = c464669b099bdea548c43c44ec80798a53902586
-SHA1 (patch-az) = c1378dea8e25892b03903b9ae24486f45e23de9e
-SHA1 (patch-ba) = 9d4058f2a3a290429b26cb8335dd5b188bccc96d
-SHA1 (patch-nsprpub_pr_include_md__dragonfly.cfg) = a0271ee172122098ab6c9c91935efead9a373e3f
-SHA1 (patch-nsprpub_pr_include_md__pth.h) = 3cec0d00ecd6e04df152a5fb3fd97eb8fabc462b
-SHA1 (patch-nsprpub_pr_include_md_prosdep.h) = 12645672eacb116a5cfb51260486d04e9de4449c
-SHA1 (patch-nsprpub_pr_src_md_unix_uxrng.c) = bd84dfd23b2884106a20fbfaede1d3ae94bc0284
-SHA1 (patch-nsprpub_pr_src_pthreads_ptio.c) = 1cf8a6e20b35e2969f0e65fba26e853c65d1d9c7
-SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = c628df7628099d3c93a8b01089971637ec81d471
+SHA1 (nspr-4.10.tar.gz) = 10dbf68c07497dab30be09db526931c885d5a7e9
+RMD160 (nspr-4.10.tar.gz) = 9810c38741c5df0efe8c97c6c6a80deaca682331
+Size (nspr-4.10.tar.gz) = 1103862 bytes
+SHA1 (patch-ab) = d93c055bbb12bd9edf5f21138a93898d6b3b3c73
+SHA1 (patch-ac) = 128f721ad93a10b59c2be3c611d510da9dd64fa2
+SHA1 (patch-ae) = c6cf30927792140d867bb4dc3adf19786f6cdbe0
+SHA1 (patch-ag) = 653d4bc8cc4eced8f628cfb738c5d99cc1a6cf24
+SHA1 (patch-az) = 9731da9565ae94b4e82bf66f6640e8e5e3a1744e
+SHA1 (patch-ba) = 141b354b9ec0423a9c671d5eaca05cf16daac312
+SHA1 (patch-nsprpub_pr_include_md__dragonfly.cfg) = 54d3fbd4c515290395b66f6b9e736a01a8318244
+SHA1 (patch-nsprpub_pr_include_md__pth.h) = 1745efd2354199897fc0f180b1a0e2557d0db25f
+SHA1 (patch-nsprpub_pr_include_md_prosdep.h) = dd90cda6251aeeb10f02ef594c02484237195155
+SHA1 (patch-nsprpub_pr_src_md_unix_uxrng.c) = 1d0f4ef5560ccdd7bf7097e987a06a34fc49621c
+SHA1 (patch-nsprpub_pr_src_pthreads_ptio.c) = f83cc645a7114bf122adf62fd69808ad00bb989a
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 78c4b1063d6998b9cc135a99b425f9008753922d
