@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/05 21:14:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/20 05:07:15 ryoon Exp $
 bin/youtube-dl
+man/man1/youtube-dl.1
+share/bash-completion/completions/youtube-dl
