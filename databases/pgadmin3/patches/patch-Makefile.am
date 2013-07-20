@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/07/20 05:10:42 richard Exp $
+
+Suppress hack for creating hhp.cached file in help_dir
+and use pkgsrc supplied $(MAKE) for building sphinx
+
+--- Makefile.am.orig	2012-08-02 14:28:59.000000000 +0000
++++ Makefile.am
+@@ -71,8 +71,8 @@ endif
+ 
+ # We need to ensure the help cache is world writeable
+ install-data-hook:
+-	touch $(help_dir)/docs/en_US/pgadmin3.hhp.cached
+-	chmod 0666 $(help_dir)/docs/en_US/pgadmin3.hhp.cached
++#	touch $(help_dir)/docs/en_US/pgadmin3.hhp.cached
++#	chmod 0666 $(help_dir)/docs/en_US/pgadmin3.hhp.cached
+ if SPHINX_BUILD
+ 	if [ -d $(top_srcdir)/docs/en_US/_build/htmlhelp ]; then cp -R $(top_srcdir)/docs/en_US/_build/htmlhelp/* $(help_dir)/docs/en_US/; fi
+ 
+@@ -94,7 +94,7 @@ style:
+ # Create HTML docs
+ doc:
+ if SPHINX_BUILD
+-	cd $(top_srcdir)/docs/en_US && make -f Makefile.sphinx SPHINXBUILD=${SPHINX_BUILD} htmlhelp
++	cd $(top_srcdir)/docs/en_US && $(MAKE) -f Makefile.sphinx SPHINXBUILD=${SPHINX_BUILD} htmlhelp
+ endif
+ 
+ all: doc

@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2013/07/20 05:10:42 richard Exp $
+
+copy patch details from patch-acinclude.m4 to suppress ld
+option -as-needed which is not supported on solaris.
+
+--- configure.orig	2012-12-03 16:02:14.000000000 +0000
++++ configure
+@@ -6011,6 +6011,10 @@ $as_echo "failed" >&6; }
+ 				*-apple-darwin*)
+ 					;;
+ 
++				*solaris*)
++				LDFLAGS="$LDFLAGS"
++				;;
++
+ 				*)
+ 					LDFLAGS="$LDFLAGS -Wl,-as-needed"
+ 					;;
