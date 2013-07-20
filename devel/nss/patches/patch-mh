@@ -1,7 +1,7 @@
-$NetBSD: patch-mh,v 1.1 2012/04/18 21:01:42 ryoon Exp $
+$NetBSD: patch-mh,v 1.2 2013/07/20 09:28:12 ryoon Exp $
 
---- security/nss/lib/Makefile.orig	2011-03-18 23:34:05.000000000 +0000
-+++ security/nss/lib/Makefile
+--- nss/lib/Makefile.orig	2011-03-18 23:34:05.000000000 +0000
++++ nss/lib/Makefile
 @@ -70,7 +70,7 @@ endif
  
  ifndef MOZILLA_CLIENT
