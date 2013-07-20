@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2646 2013/07/20 11:57:37 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2647 2013/07/20 12:50:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3919,3 +3919,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-base to 1.8.3.3 [adam 2013-07-20]
 	Updated devel/scmgit-docs to 1.8.3.3 [adam 2013-07-20]
 	Updated www/gitweb to 1.8.3.3 [adam 2013-07-20]
+	Updated devel/cmake to 2.8.11.2 [ryoon 2013-07-20]
