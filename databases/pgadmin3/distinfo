@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2010/11/05 20:21:18 adam Exp $
+$NetBSD: distinfo,v 1.9 2013/07/20 05:10:42 richard Exp $
 
-SHA1 (pgadmin3-1.12.1.tar.gz) = 6b8b09cdbd76d09bc8a84f6f6ebd852d5a76c575
-RMD160 (pgadmin3-1.12.1.tar.gz) = 26b7bafcf72c0ee9ac6f153ac02535626f4c7bcf
-Size (pgadmin3-1.12.1.tar.gz) = 15106786 bytes
-SHA1 (patch-aa) = 53bb8be237acce254d50a9b7a33bdc054a5a9b4a
-SHA1 (patch-ab) = 266fcf43dbb507a920d3b2c4446ea86d4cc599af
-SHA1 (patch-ac) = debdeb377a4496001fdc535bdc4039aa74088c3c
-SHA1 (patch-ad) = 140b014beee22447a5cf10d86767f099eb378222
+SHA1 (pgadmin3-1.16.1.tar.gz) = f5eaa8184d9e30662eec3a7bf639258eb8a658a3
+RMD160 (pgadmin3-1.16.1.tar.gz) = b2830f6dcc9b22592cc196e27b2e844a3717e1a9
+Size (pgadmin3-1.16.1.tar.gz) = 13783723 bytes
+SHA1 (patch-Makefile.am) = a3a9b705eb74d66fda228c2ce13c61c50d88a84a
+SHA1 (patch-acinclude.m4) = 3402690e3446ed068bceb9ea4711171e851d58df
+SHA1 (patch-configure) = 0803a3d1ef954bedbbb181858b135e622bc1642e
+SHA1 (patch-pgadmin_gqb_gqbView.cpp) = 1a0248ba837f068c7304c97f5f022ae566b6dab9
+SHA1 (patch-xtra_pgscript_file_test_execute.sh) = e0af8b239c9bd1d2b62053224f225acb7fcee17b
