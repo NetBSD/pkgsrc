@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.975 2013/07/16 10:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.976 2013/07/20 13:46:16 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -579,6 +579,7 @@ SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
 SUBDIR+=	py-flask-babelex
+SUBDIR+=	py-flask-cache
 SUBDIR+=	py-flask-flatpages
 SUBDIR+=	py-flask-frozen
 SUBDIR+=	py-flask-login
