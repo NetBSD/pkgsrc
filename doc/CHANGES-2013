@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2649 2013/07/20 15:44:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2650 2013/07/20 15:50:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3922,3 +3922,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/cmake to 2.8.11.2 [ryoon 2013-07-20]
 	Added www/py-flask-cache version 0.12 [kleink 2013-07-20]
 	Updated misc/goffice0.10 to 0.10.4 [wiz 2013-07-20]
+	Updated math/gnumeric112 to 1.12.4 [wiz 2013-07-20]
