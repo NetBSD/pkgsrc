@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2653 2013/07/20 16:56:40 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2654 2013/07/20 16:56:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3926,3 +3926,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/akonadi to 1.10.0 [wiz 2013-07-20]
 	Updated finance/py-vatnumber to 1.1 [richard 2013-07-20]
 	Added ham/nec2c version 1.1 [wiz 2013-07-20]
+	Added ham/xnec2c version 2.3beta [wiz 2013-07-20]
