@@ -1,9 +1,17 @@
-$NetBSD: patch-gyp_common.gypi,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- gyp/common.gypi.orig	2013-03-29 04:33:42.000000000 +0000
+--- gyp/common.gypi.orig	2013-07-17 02:38:04.000000000 +0000
 +++ gyp/common.gypi
-@@ -132,7 +132,7 @@
-     'conditions': [
+@@ -101,6 +101,7 @@
+       '-include base/namespace.h',
+       '-pipe',
+       '-pthread',
++      '-std=c++0x',
+     ],
+     # linux_cflags will be used in Linux except for NaCl.
+     'linux_cflags': [
+@@ -150,7 +151,7 @@
+       }],
        # enable_gtk_renderer represents if mozc_renderer is supported on Linux
        # or not.
 -      ['target_platform=="Linux" and language=="japanese"', {
@@ -11,7 +19,16 @@ $NetBSD: patch-gyp_common.gypi,v 1.1 2013/04/29 09:52:17 ryoon Exp $
          'enable_gtk_renderer%': 1,
        }, { # else
          'enable_gtk_renderer%': 0,
-@@ -283,12 +283,12 @@
+@@ -206,7 +207,7 @@
+ 
+     # server_dir represents the directory where mozc_server is
+     # installed. This option is only for Linux.
+-    'server_dir%': '/usr/lib/mozc',
++    'server_dir%': '@PREFIX@/libexec',
+ 
+     # use_libprotobuf represents if protobuf library is used or not.
+     # This option is only for Linux.
+@@ -309,12 +310,12 @@
            # additional suffix except for Japanese so that multiple
            # converter processes can coexist. Note that Mozc on ChromeOS does
            # not use IPC so this kind of special treatment is not required.
@@ -26,7 +43,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.1 2013/04/29 09:52:17 ryoon Exp $
              'ldflags': [
                '<@(linux_ldflags)',
              ],
-@@ -447,7 +447,7 @@
+@@ -473,7 +474,7 @@
            },
          },
          'conditions': [
@@ -35,7 +52,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.1 2013/04/29 09:52:17 ryoon Exp $
              'cflags': [
                '<@(debug_extra_cflags)',
              ],
-@@ -485,7 +485,7 @@
+@@ -511,7 +512,7 @@
            },
          },
          'conditions': [
@@ -44,7 +61,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.1 2013/04/29 09:52:17 ryoon Exp $
              'cflags': [
                '<@(release_extra_cflags)',
              ],
-@@ -785,6 +785,22 @@
+@@ -825,6 +826,22 @@
            }],
          ],
        }],

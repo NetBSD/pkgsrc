@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/04/29 09:52:18 ryoon Exp $
+$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
 * Fix for pkgsrc installation.
 
---- unix/ibus/gen_mozc_xml.py.orig	2013-03-29 04:33:43.000000000 +0000
+--- unix/ibus/gen_mozc_xml.py.orig	2013-07-17 02:37:50.000000000 +0000
 +++ unix/ibus/gen_mozc_xml.py
 @@ -49,7 +49,7 @@ IBUS_COMPONENT_PROPS = {
      'description': '%s Component',

@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2013/06/06 12:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/20 04:34:53 ryoon Exp $
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	3
 
 INSTALLATION_DIRS+=	libexec share/ibus share/icons share/ibus/component \
 			share/ibus-mozc
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
+DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
