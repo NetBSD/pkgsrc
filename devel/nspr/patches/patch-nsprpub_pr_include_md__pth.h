@@ -1,7 +1,7 @@
-$NetBSD: patch-nsprpub_pr_include_md__pth.h,v 1.2 2012/08/28 13:29:17 ryoon Exp $
+$NetBSD: patch-nsprpub_pr_include_md__pth.h,v 1.3 2013/07/20 08:57:20 ryoon Exp $
 
 --- nsprpub/pr/include/md/_pth.h.orig	2012-05-18 21:55:29.000000000 +0000
-+++ nsprpub/pr/include/md/_pth.h
++++ nspr/pr/include/md/_pth.h
 @@ -114,7 +114,7 @@
  #define _PT_PTHREAD_COPY_THR_HANDLE(st, dt)   (dt) = (st)
  #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(SOLARIS) \
