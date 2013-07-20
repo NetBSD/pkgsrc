@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/10/23 08:09:14 wulf Exp $
+# $NetBSD: Makefile,v 1.25 2013/07/20 16:46:55 wiz Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -27,6 +27,7 @@ SUBDIR+=	grig
 SUBDIR+=	hamlib
 SUBDIR+=	linpsk
 SUBDIR+=	locator
+SUBDIR+=	nec2c
 SUBDIR+=	tfkiss
 SUBDIR+=	tlf
 SUBDIR+=	tnt
