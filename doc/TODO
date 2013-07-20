@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12404 2013/07/17 21:23:49 adam Exp $
+$NetBSD: TODO,v 1.12405 2013/07/20 04:03:47 taca Exp $
 
 Suggested new packages
 ======================
@@ -881,8 +881,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pgadmin3-1.16.1 [pkg/47261]
-	o php-5.5
+	o php-5.5.1 [taca]
 	o php-jpgraph-3.0.6
+	o php-owncloud-5.0.9
 	o php-sugarcrm-6.5.14
 	o php-tt-rss-1.8
 	o php-tiki6-6.10
@@ -903,6 +904,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
+	o postfix-2.9.7
+	o postfix-2.10.1
 	o powermanga-0.91
 	o powwow-1.2.16
 	o prboom-2.5.0.8
