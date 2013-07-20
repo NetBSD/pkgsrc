@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.736 2013/07/13 10:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.737 2013/07/20 07:48:02 richard Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -623,6 +623,7 @@ SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-textile
 SUBDIR+=	py-vobject
 SUBDIR+=	py-xlrd
+SUBDIR+=	py-xlwt
 SUBDIR+=	py-xml
 SUBDIR+=	py-yamcha
 SUBDIR+=	py-yaml
