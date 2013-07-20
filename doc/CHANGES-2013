@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2642 2013/07/20 08:05:34 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2643 2013/07/20 08:57:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3912,3 +3912,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/pgadmin3 to 1.16.1 [richard 2013-07-20]
 	Updated textproc/py-xlwt to 0.7.5 [richard 2013-07-20]
 	Updated www/php-owncloud to 5.0.9 [ryoon 2013-07-20]
+	Updated devel/nspr to 4.10 [ryoon 2013-07-20]
