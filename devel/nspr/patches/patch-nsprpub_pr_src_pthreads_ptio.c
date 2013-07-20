@@ -1,7 +1,7 @@
-$NetBSD: patch-nsprpub_pr_src_pthreads_ptio.c,v 1.2 2012/08/28 13:29:17 ryoon Exp $
+$NetBSD: patch-nsprpub_pr_src_pthreads_ptio.c,v 1.3 2013/07/20 08:57:20 ryoon Exp $
 
 --- nsprpub/pr/src/pthreads/ptio.c.orig	2012-03-06 13:14:21.000000000 +0000
-+++ nsprpub/pr/src/pthreads/ptio.c
++++ nspr/pr/src/pthreads/ptio.c
 @@ -180,7 +180,8 @@ static PRBool _pr_ipv6_v6only_on_by_defa
      || defined(LINUX) || defined(__GNU__) || defined(__GLIBC__) \
      || defined(FREEBSD) || defined(NETBSD) || defined(OPENBSD) \
