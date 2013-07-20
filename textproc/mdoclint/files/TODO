@@ -1,4 +1,4 @@
-# $NetBSD: TODO,v 1.1.1.1 2009/03/01 21:25:39 wiz Exp $
+# $NetBSD: TODO,v 1.2 2013/07/20 21:50:55 wiz Exp $
 . check for font changes in .Bd -literal (.Fd, .No, ...)
 . add checks for only allowed values after .Bl/.Bd/...
 . compare internal with external section name
@@ -7,7 +7,7 @@
 [. Nm doesn't need an argument, most of the time (?)]
 . .Nm "": remove if not needed
 . count correct matching of .Bd/.Ed, .Rs/.Re and similar
-. check AUTHORS sections for usage of .An name Aq email@host
+. check AUTHORS sections for usage of .An name Aq Mt email@host
 . recognize more section headers?
 . check .Rs/.Re contents?
 . empty lines in .Bd -literal ignored -- groff ignores them, too...
