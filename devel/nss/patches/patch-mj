@@ -1,9 +1,9 @@
-$NetBSD: patch-mj,v 1.1 2012/04/18 21:01:42 ryoon Exp $
+$NetBSD: patch-mj,v 1.2 2013/07/20 09:28:12 ryoon Exp $
 
 Add DragonFly support.
 
---- security/coreconf/arch.mk.orig	2009-06-29 18:15:11.000000000 +0200
-+++ security/coreconf/arch.mk
+--- nss/coreconf/arch.mk.orig	2009-06-29 18:15:11.000000000 +0200
++++ nss/coreconf/arch.mk
 @@ -146,7 +146,7 @@ endif
  # IRIX 6.5-ALPHA-1289139620.
  #

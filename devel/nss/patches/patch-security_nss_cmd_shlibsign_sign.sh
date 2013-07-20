@@ -1,11 +1,11 @@
-$NetBSD: patch-security_nss_cmd_shlibsign_sign.sh,v 1.1 2012/04/18 21:01:42 ryoon Exp $
+$NetBSD: patch-security_nss_cmd_shlibsign_sign.sh,v 1.2 2013/07/20 09:28:12 ryoon Exp $
 
 This tries to dlopen libsoftokn3.so which is linked against sqlite3,
 so we need a directory containing libsqlite3.so in the search path,
 beside the directory containing libsoftokn3.so itself.
 
---- security/nss/cmd/shlibsign/sign.sh.orig	2011-06-15 21:57:52.000000000 +0000
-+++ security/nss/cmd/shlibsign/sign.sh
+--- nss/cmd/shlibsign/sign.sh.orig	2011-06-15 21:57:52.000000000 +0000
++++ nss/cmd/shlibsign/sign.sh
 @@ -26,7 +26,7 @@ WIN*)
      export LIBPATH
      SHLIB_PATH=${1}/lib:${4}:$SHLIB_PATH
