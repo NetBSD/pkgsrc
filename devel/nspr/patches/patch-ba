@@ -1,9 +1,9 @@
-$NetBSD: patch-ba,v 1.1 2012/04/18 20:57:33 ryoon Exp $
+$NetBSD: patch-ba,v 1.2 2013/07/20 08:57:20 ryoon Exp $
 
 pthread_t may be 64-bit, avoid casting it.
 
 --- nsprpub/pr/include/private/pprthred.h.orig	2009-11-02 22:43:08.000000000 +0100
-+++ nsprpub/pr/include/private/pprthred.h
++++ nspr/pr/include/private/pprthred.h
 @@ -51,6 +51,8 @@
  #include <os2.h>
  #endif
