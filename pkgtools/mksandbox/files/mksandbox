@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.4 2013/07/18 16:07:22 jperkin Exp $
+# $NetBSD: mksandbox,v 1.5 2013/07/20 10:20:42 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -26,7 +26,9 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Usage: mksandbox [--mounthost=host] [--pkgsrc=dir] [--src=srcdir] [--verbose] [--without-x] [--xsrc=xsrcdir] sandbox-dir
+# Usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]
+#		   [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]
+#		   [--without-pkgsrc] [--without-x] [--verbose] sandbox-dir
 #
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
 # build), using null mounts.
@@ -34,6 +36,9 @@
 pkgsrc=/usr/pkgsrc
 src=/usr/src
 xsrc=/usr/xsrc
+rodirs=
+rwdirs=
+with_pkgsrc=yes
 with_x=yes
 
 kernel=""
@@ -44,8 +49,10 @@ sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /va
 
 usage()
 {
-	echo "usage: mksandbox [--mounthost=host] [--pkgsrc=dir] [--src=srcdir] [--verbose] [--without-x] [--xsrc=xsrcdir] sandbox-dir"
-	exit 1
+	echo "usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]"
+	echo "                 [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]"
+	echo "                 [--without-pkgsrc] [--without-x] [--verbose] sandbox-dir"
+ 	exit 1
 }
 
 err()
@@ -112,7 +119,8 @@ Linux)
 	fi
 	paxprog=""
 	sedprog=/bin/sed
-	sandboxMountDirs="$sandboxMountDirs /proc /lib64 /usr/lib64 /usr/kerberos"
+	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos"
+	sandboxWriteDirs="$sandboxWriteDirs /proc"
 	;;
 NetBSD)
 	bmakeprog=make
@@ -163,14 +171,17 @@ esac
 
 while [ $# -gt 0 ]; do
 	case "$1" in
-	--mounthost=*)	mounthost=`echo $1 | $sedprog -e 's|^--mounthost=||'` ;;
-	--pkgsrc=*)	pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
-	--src=*)	src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
-	--xsrc=*)	xsrc=`echo $1 | $sedprog -e 's|^--xsrc=||'` ;;
-	--without-x)	with_x=no ;;
-	--verbose)	set -x ;;
-	-*)		usage ;;
-	*)		break ;;
+	--mounthost=*)		mounthost=`echo $1 | $sedprog -e 's|^--mounthost=||'` ;;
+	--pkgsrc=*)		pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
+	--src=*)		src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
+	--xsrc=*)		xsrc=`echo $1 | $sedprog -e 's|^--xsrc=||'` ;;
+	--rodirs=*)		rodirs=`echo $1 | $sedprog -e 's|^--rodirs=||'` ;;
+	--rwdirs=*)		rwdirs=`echo $1 | $sedprog -e 's|^--rwdirs=||'` ;;
+	--without-pkgsrc)	with_pkgsrc=no ;;
+	--without-x)		with_x=no ;;
+	--verbose)		set -x ;;
+	-*)			usage ;;
+	*)			break ;;
 	esac
 	shift
 done
@@ -191,7 +202,7 @@ if [ -n "$mounthost" ]; then
 	mounthost="$mounthost:"
 fi
 
-if [ ! -d $pkgsrc ]; then
+if [ ! -d $pkgsrc -a "$with_pkgsrc" = "yes" ]; then
 	err "pkgsrc directory $pkgsrc does not exist."
 fi
 
@@ -206,13 +217,15 @@ fi
 sandbox=$1
 sandbox_script="$sandbox/sandbox"
 
-packages=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=PACKAGES)`
-distfiles=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=DISTDIR)`
-localbase=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=LOCALBASE)`
-pkg_dbdir=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=PKG_DBDIR)`
-localpatches=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=LOCALPATCHES)`
+if [ "$with_pkgsrc" = "yes" ]; then
+	packages=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=PACKAGES)`
+	distfiles=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=DISTDIR)`
+	localbase=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=LOCALBASE)`
+	pkg_dbdir=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=PKG_DBDIR)`
+	localpatches=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=LOCALPATCHES)`
 
-test -d "$localpatches" || echo "WARNING: LOCALPATCHES directory does not exist - ignoring"
+	test -d "$localpatches" || echo "WARNING: LOCALPATCHES directory does not exist - ignoring"
+fi
 
 $mkdirprog $sandbox
 cat > $sandbox_script <<EOS
@@ -239,8 +252,10 @@ if [ ! -z "$kernel" ]; then
 	$cpprog $kernel $sandbox
 fi
 
-echo "Checking package hierarchy in $localbase and package database in $pkg_dbdir exist"
-$mkdirprog $sandbox/$localbase $sandbox/$pkg_dbdir
+if [ "$with_pkgsrc" = "yes" ]; then
+	echo "Checking package hierarchy in $localbase and package database in $pkg_dbdir exist"
+	$mkdirprog $sandbox/$localbase $sandbox/$pkg_dbdir
+fi
 
 echo "Make and populate $sandbox/dev"
 $mkdirprog $sandbox/dev
@@ -328,10 +343,27 @@ if [ "$need_src" = "yes" ]; then
 	echo "$mounthost$src /usr/src ro \\" >> $sandbox_script
 fi
 
-echo "Mount $pkgsrc from $sandbox"
-$mkdirprog $sandbox/usr/pkgsrc
-$mountprog $mountflags $mounthost$pkgsrc $sandbox/usr/pkgsrc
-echo "$mounthost$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
+if [ "$with_pkgsrc" = "yes" ]; then
+	echo "Mount $pkgsrc from $sandbox"
+	$mkdirprog $sandbox/usr/pkgsrc
+	$mountprog $mountflags $mounthost$pkgsrc $sandbox/usr/pkgsrc
+	echo "$mounthost$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
+
+	echo "Mounting $packages and $distfiles from $sandbox"
+	$mkdirprog $sandbox/$packages $sandbox/$distfiles
+	$mkdirprog $packages $distfiles
+	$mountprog $mountflags $mounthost$packages $sandbox/$packages
+	$mountprog $mountflags $mounthost$distfiles $sandbox/$distfiles
+	echo "$mounthost$packages $packages rw \\" >> $sandbox_script
+	echo "$mounthost$distfiles $distfiles rw \\" >> $sandbox_script
+
+	if [ -n "$localpatches" ] && [ -d "$localpatches" ]; then
+		echo "Mounting $localpatches from $sandbox"
+		$mkdirprog $sandbox/$localpatches
+		$mountprog $mountflags $mounthost$localpatches $sandbox/$localpatches
+		echo "$mounthost$localpatches $localpatches rw \\" >> $sandbox_script
+	fi
+fi
 
 if [ "$need_xsrc" = "yes" ]; then
 	echo "Mount $xsrc from $sandbox"
@@ -340,19 +372,25 @@ if [ "$need_xsrc" = "yes" ]; then
 	echo "$mounthost$xsrc /usr/xsrc ro \\" >> $sandbox_script
 fi
 
-echo "Mounting $packages and $distfiles from $sandbox"
-$mkdirprog $sandbox/$packages $sandbox/$distfiles
-$mkdirprog $packages $distfiles
-$mountprog $mountflags $mounthost$packages $sandbox/$packages
-$mountprog $mountflags $mounthost$distfiles $sandbox/$distfiles
-echo "$mounthost$packages $packages rw \\" >> $sandbox_script
-echo "$mounthost$distfiles $distfiles rw \\" >> $sandbox_script
+if [ -n "$rodirs" ]; then
+	for dir in `echo $rodirs | $sedprog -e 's/,/ /g'`; do
+		echo "Mount $dir from $sandbox"
+		$mkdirprog $sandbox$dir
+		$mountprog $mountflags -r $mounthost$dir $sandbox$dir
+		case "$opsys" in
+		Linux)	$mountprog $mountflags -o remount,bind,ro $mounthost$dir $sandbox$dir ;;
+		esac
+		echo "$mounthost$dir $dir ro \\" >> $sandbox_script
+	done
+fi
 
-if [ -n "$localpatches" ] && [ -d "$localpatches" ]; then
-	echo "Mounting $localpatches from $sandbox"
-	$mkdirprog $sandbox/$localpatches
-	$mountprog $mountflags $mounthost$localpatches $sandbox/$localpatches
-	echo "$mounthost$localpatches $localpatches rw \\" >> $sandbox_script
+if [ -n "$rwdirs" ]; then
+	for dir in `echo $rwdirs | $sedprog -e 's/,/ /g'`; do
+		echo "Mount $dir from $sandbox"
+		$mkdirprog $sandbox$dir
+		$mountprog $mountflags $mounthost$dir $sandbox$dir
+		echo "$mounthost$dir $dir rw \\" >> $sandbox_script
+	done
 fi
 
 cat >> $sandbox_script <<EOS

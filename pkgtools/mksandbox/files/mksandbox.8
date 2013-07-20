@@ -1,4 +1,4 @@
-.\" $NetBSD: mksandbox.8,v 1.4 2013/05/29 15:14:49 wiz Exp $
+.\" $NetBSD: mksandbox.8,v 1.5 2013/07/20 10:20:42 jperkin Exp $
 .\"
 .\" Copyright (c) 2012 Thomas Klausner <wiz@NetBSD.org>
 .\" All rights reserved.
@@ -32,11 +32,14 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl Fl mounthost Ns = Ns Ar host
+.Op Fl Fl rodirs Ns = Ns Ar dir,...
+.Op Fl Fl rwdirs Ns = Ns Ar dir,...
 .Op Fl Fl pkgsrc Ns = Ns Ar dir
 .Op Fl Fl src Ns = Ns Ar srcdir
-.Op Fl Fl verbose
-.Op Fl Fl without-x
 .Op Fl Fl xsrc Ns = Ns Ar xsrcdir
+.Op Fl Fl without-x
+.Op Fl Fl without-pkgsrc
+.Op Fl Fl verbose
 .Ar sandbox-dir
 .Sh DESCRIPTION
 .Nm
@@ -51,6 +54,10 @@ The following options are available:
 Use
 .Ar host
 as the mount host.
+.It Fl Fl rodirs Ns = Ns Ar dir,...
+Mount additional directories read-only.
+.It Fl Fl rwdirs Ns = Ns Ar dir,...
+Mount additional directories read-write.
 .It Fl Fl pkgsrc Ns = Ns Ar dir
 Look for the pkgsrc files in
 .Ar dir
@@ -64,10 +71,6 @@ src files in
 instead of the default
 .Pa /usr/src
 (only needed for some packages that compile kernel modules).
-.It Fl Fl verbose
-More verbose output.
-.It Fl Fl without-x
-Do not include X files in the sandbox.
 .It Fl Fl xsrc Ns = Ns Ar xsrcdir
 Look for the
 .Nx
@@ -76,6 +79,12 @@ xsrc files in
 instead of the default
 .Pa /usr/xsrc
 (only needed for some packages).
+.It Fl Fl without-pkgsrc
+Do not mount pkgsrc directories in the sandbox.
+.It Fl Fl without-x
+Do not include X files in the sandbox.
+.It Fl Fl verbose
+More verbose output.
 .El
 .Sh USAGE
 After
