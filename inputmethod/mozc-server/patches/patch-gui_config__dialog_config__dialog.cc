@@ -1,8 +1,8 @@
-$NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
 
---- gui/config_dialog/config_dialog.cc.orig	2013-03-29 04:33:48.000000000 +0000
+--- gui/config_dialog/config_dialog.cc.orig	2013-07-17 02:38:18.000000000 +0000
 +++ gui/config_dialog/config_dialog.cc
-@@ -96,21 +96,21 @@ ConfigDialog::ConfigDialog()
+@@ -97,21 +97,21 @@ ConfigDialog::ConfigDialog()
    setWindowTitle(tr("Mozc Preferences"));
  #endif  // OS_MACOSX
  
@@ -52,6 +52,6 @@ $NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.1 2013/04/29 09:52:17 ry
  
 -#if defined(OS_WIN) || defined(OS_LINUX)
 +#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_NETBSD)
-   if (initial_preedit_method_ !=
-       static_cast<int>(config.preedit_method()) ||
-       initial_use_keyboard_to_change_preedit_method_ !=
+   if ((initial_preedit_method_ !=
+        static_cast<int>(config.preedit_method())) ||
+       (initial_use_keyboard_to_change_preedit_method_ !=
