@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2013/05/29 09:59:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2013/07/20 12:49:26 ryoon Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -112,6 +112,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeTestWatcomVersion.c
 share/cmake-${CMAKE_API}/Modules/CMakeUnixFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS10FindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS11FindMake.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeVS12FindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS6BackwardCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS6FindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS71FindMake.cmake
