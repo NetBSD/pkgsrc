@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12415 2013/07/21 19:37:30 wiz Exp $
+$NetBSD: TODO,v 1.12416 2013/07/21 20:11:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -618,7 +618,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grilo-plugins-0.2.8
 	o groff-1.22.2
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
-	o gsl-1.16
 	o gss-1.0.2
 	o gstreamer-1.1.1
 	o gthumb-3.2.3
