@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2013/02/18 04:25:07 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2013/07/21 12:28:32 shattered Exp $
 
- - support NetBSD and Irix
+ - support Irix
  - check for _LP64
 
 --- port.h.orig	2003-06-05 01:00:07.000000000 +0000
@@ -14,16 +14,6 @@ $NetBSD: patch-aa,v 1.5 2013/02/18 04:25:07 dholland Exp $
  # define BIND_4_8	1	/* XXX this should be ``#include "ERROR!!!"''*/
  #endif
  
-@@ -154,7 +154,8 @@ typedef int		bool_t;		/* boolean type */
-  */
- #if defined(__NAMESER) && (!defined(__GLIBC__) || ((__RES - 0) > 19991006)) && \
- 	((__NAMESER - 0) >= 19991006 || \
--	 (defined(__FreeBSD__) && (__NAMESER - 0) >= 19961001))
-+	 (defined(__FreeBSD__) && (__NAMESER - 0) >= 19961001)) && \
-+	 !defined(__NetBSD__)
- # define HAVE_GETIPNODEBYNAME	1
- # define HAVE_GETIPNODEBYADDR	1
- # define HAVE_FREEHOSTENT	1
 @@ -236,7 +237,7 @@ typedef u_char		nbuf_t;
  #endif
  
