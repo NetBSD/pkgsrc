@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.8 2012/11/01 19:33:19 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/07/21 11:29:55 shattered Exp $
 
-SHA1 (xaric-0.12.1.tar.gz) = d01fc8d8189e18f3824cdccb539a97c1862ecdbe
-RMD160 (xaric-0.12.1.tar.gz) = b78cd4496510642a967b1d173e150d3cbe836b5c
-Size (xaric-0.12.1.tar.gz) = 435998 bytes
-SHA1 (patch-Makefile.in) = 48dbe2a994c7192bebbf47847380692a35e91f29
-SHA1 (patch-aa) = 25948e1723987bf93f713895d6f8ac5d23a1e404
-SHA1 (patch-ab) = 33e89f44a22ed2ad3b14546e9f669013eb503ddd
-SHA1 (patch-source_iflist.c) = bb5d38525bbf45caeaf04ce3ac88196ba2001e6f
-SHA1 (patch-source_ircterm.c) = a9350d030d3c9312df13af0a1826edc1755e784e
-SHA1 (patch-source_window.c) = ff92117c115a741f6d4cb605315cb04187a01c28
+SHA1 (xaric-0.13.6.tar.gz) = ed10e395dea29fdf7bbc0d65389d789d7d4ca09b
+RMD160 (xaric-0.13.6.tar.gz) = a63aaa1fce98b195c23530ca4730ea5792ae1b52
+Size (xaric-0.13.6.tar.gz) = 479754 bytes
+SHA1 (patch-source_iflist.c) = 32647096ba2dcbb258676d70ccd147b508f931bd
+SHA1 (patch-source_ircterm.c) = 166b658d9fb41e69b0101bdeb0d524e71d745621
