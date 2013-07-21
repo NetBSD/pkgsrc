@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/07/21 11:34:51 shattered Exp $
 bin/fisg
 share/examples/fisg/example.cfg
 share/examples/fisg/users.cfg
 share/fisg/blue-h.png
 share/fisg/blue-v.png
+share/fisg/c64.css
+share/fisg/grayblue.css
 share/fisg/green-h.png
 share/fisg/green-v.png
 share/fisg/happy1.gif
@@ -12,9 +14,9 @@ share/fisg/happy3.gif
 share/fisg/happy4.gif
 share/fisg/happy5.gif
 share/fisg/happy6.gif
+share/fisg/pisg.css
 share/fisg/red-h.png
 share/fisg/red-v.png
-share/fisg/style-c64.css
-share/fisg/style-pisg.css
+share/fisg/simple.css
 share/fisg/yellow-h.png
 share/fisg/yellow-v.png
