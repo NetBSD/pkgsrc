@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/07/05 13:29:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2013/07/21 02:43:56 taca Exp $
 
 DISTNAME=	imlib2-ruby-0.5.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://pablotron.org/software/imlib2-ruby/
 COMMENT=	Imlib2 bindings for Ruby
 LICENSE=	mit
 
-GEM_CLEANBUILD=		Makefile *.o imlib2.${RUBY_DLEXT} mkmf.log
+GEM_CLEANBUILD=	Makefile *.o imlib2.${RUBY_DLEXT} mkmf.log .RUBYARCHDIR.time
 OVERRIDE_GEMSPEC=	:name=imlib2-ruby
 BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
 
