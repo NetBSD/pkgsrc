@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.976 2013/07/20 13:46:16 kleink Exp $
+# $NetBSD: Makefile,v 1.977 2013/07/21 14:21:23 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -327,6 +327,7 @@ SUBDIR+=	p5-Continuity
 SUBDIR+=	p5-Corona
 SUBDIR+=	p5-Dancer
 SUBDIR+=	p5-Dancer-Session-Cookie
+SUBDIR+=	p5-Dancer2
 SUBDIR+=	p5-Data-URIEncode
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-Client
