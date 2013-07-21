@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2655 2013/07/21 02:34:54 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2656 2013/07/21 02:37:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added ham/nec2c version 1.1 [wiz 2013-07-20]
 	Added ham/xnec2c version 2.3beta [wiz 2013-07-20]
 	Added lang/ruby200-base version 2.0.0p247 [taca 2013-07-21]
+	Added lang/ruby200 version 2.0.0p247 [taca 2013-07-21]
