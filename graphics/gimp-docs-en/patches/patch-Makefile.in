@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/07/21 17:20:48 ryoon Exp $
+
+--- Makefile.in.orig	2012-05-27 22:53:06.000000000 +0000
++++ Makefile.in
+@@ -271,11 +271,11 @@ MAKE_IMAGE_LINKS_FLAGS = -v $(am__append
+ # XML files excluding automatically generated files
+ src_file_predicates = \
+ 	-name '*.xml' \
+-	-not -name '$(notdir $(AUTHORS_DOCBOOK_XML))'
++	! -name '$(notdir $(AUTHORS_DOCBOOK_XML))'
+ 
+ src_dir_predicates = -name images -prune -o -type d -print
+ pot_file_predicates = -type f
+-po_file_predicates = -type f -not -name "$(COMPENDIUM)"
++po_file_predicates = -type f ! -name "$(COMPENDIUM)"
+ xml_file_predicates = -name '*.xml'
+ 
+ # list of authors and contributors (no DocBook)

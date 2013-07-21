@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2011/09/20 11:09:46 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.3 2013/07/21 17:20:48 ryoon Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -13,6 +13,7 @@
 # used by graphics/gimp-docs-sv/Makefile
 # used by graphics/gimp-docs-zh_CN/Makefile
 
+DISTNAME=	gimp-help-${GIMPDOCVER}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/help/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,19 +22,29 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docs.gimp.org/
 LICENSE=	gnu-fdl-v1.2
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+
+DISTINFO_FILE=	${.CURDIR}/../../graphics/gimp-docs-en/distinfo
+PATCHDIR=	${.CURDIR}/../../graphics/gimp-docs-en/patches
+
+CONFIGURE_ENV=	ALL_LINGUAS=${HELPLANGUAGE}
+
+MAKE_FLAGS=	VERBOSE=2
+
+REPLACE_PYTHON=	tools/xml2po.py
+
 CONFLICTS=	gimp-docs<=2.4.0
 SUPERSEDES=	gimp-docs<=2.4.0
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+GIMPDOCVER=	2.8.0
 
-WRKSRC=		${WRKDIR}/gimp-help-2
+GNU_CONFIGURE=	yes
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake msgfmt perl:build
 
 MAKE_ENV+=	DATDIR=${PREFIX}/share
+CONFIGURE_ARGS+=	--without-gimp
 
-pre-patch:
-	${RM} ${WRKSRC}/INSTALL
-
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
