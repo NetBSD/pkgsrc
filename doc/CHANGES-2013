@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2670 2013/07/21 14:24:46 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2671 2013/07/21 14:52:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3949,3 +3949,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/mirmon to 2.8 [shattered 2013-07-21]
 	Updated net/host to 20070128 [shattered 2013-07-21]
 	Added www/p5-Dancer2 version 0.05 [wen 2013-07-21]
+	Updated textproc/p5-String-ToIdentifier-EN to 0.10 [wen 2013-07-21]
