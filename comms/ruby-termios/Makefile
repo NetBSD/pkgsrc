@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/12/05 12:12:23 taca Exp $
+# $NetBSD: Makefile,v 1.26 2013/07/21 02:38:24 taca Exp $
 
 DISTNAME=	ruby-termios-0.9.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -10,7 +10,8 @@ HOMEPAGE=	http://arika.org/ruby/termios
 COMMENT=	Ruby extension to termios library
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-GEM_CLEANBUILD=	Makefile *.o *.time termios.${RUBY_DLEXT} mkmf.log
+GEM_CLEANBUILD=	Makefile *.o *.time termios.${RUBY_DLEXT} mkmf.log \
+		.RUBYARCHDIR.time
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
