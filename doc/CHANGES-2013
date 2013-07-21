@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2674 2013/07/21 15:50:19 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.2675 2013/07/21 15:58:41 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3954,3 +3954,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-Net-FTPSSL to 0.22 [wen 2013-07-21]
 	Updated devel/SDL_gfx to 2.0.24 [shattered 2013-07-21]
 	Updated mail/dcc to 1.3.147 [shattered 2013-07-21]
+	Updated print/hplip to 3.13.6 [schnoebe 2013-07-21]
