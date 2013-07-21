@@ -1,15 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2010/09/29 12:24:48 obache Exp $
+$NetBSD: patch-ab,v 1.6 2013/07/21 12:28:32 shattered Exp $
 
 --- Makefile.BSD.orig	2004-08-12 22:30:04.000000000 +0200
 +++ Makefile.BSD
-@@ -124,7 +127,6 @@ CWARNFLAGS += -Wcomment
- CWARNFLAGS += -Wtraditional
- CWARNFLAGS += -Wcast-qual
- # -Wid-clash-LEN is sadly no longer supported in 3.2.2
--CWARNFLAGS += -Wid-clash-30
- CWARNFLAGS += -Wpointer-arith
- CWARNFLAGS += -Wshadow
- #
 @@ -167,7 +169,6 @@ __GNULD__ ?= 1
  .if ${__GNULD__} >= 1
  LDFLAGS += -W
