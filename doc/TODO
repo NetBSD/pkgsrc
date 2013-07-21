@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12417 2013/07/21 20:25:47 wiz Exp $
+$NetBSD: TODO,v 1.12418 2013/07/21 20:32:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -922,7 +922,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-qt5-5.0.0
-	o py-setuptools-0.9.6
 	o py-simplejson-3.3.0
 	o py-sybase-0.37
 	o qnetwalk-1.4
