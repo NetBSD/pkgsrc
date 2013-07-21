@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2662 2013/07/21 07:58:48 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2663 2013/07/21 09:42:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3935,3 +3935,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Rose-HTML-Objects to 0.618 [wen 2013-07-21]
 	Updated www/p5-Dancer to 1.3116 [wen 2013-07-21]
 	Updated devel/p5-MooX-Types-MooseLike to 0.24 [wen 2013-07-21]
+	Updated sysutils/libpciaccess to 0.13.2 [wiz 2013-07-21]
