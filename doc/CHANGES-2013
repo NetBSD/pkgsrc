@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2658 2013/07/21 06:56:26 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.2659 2013/07/21 07:03:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3931,3 +3931,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/ruby200 version 2.0.0p247 [taca 2013-07-21]
 	Updated devel/ruby-mode to 2.0.0p247 [taca 2013-07-21]
 	Updated comms/asterisk to 11.5.0 [jnemeth 2013-07-21]
+	Updated www/p5-HTTP-Tiny to 0.034 [wen 2013-07-21]
