@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2013/06/23 13:46:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/07/21 10:31:26 shattered Exp $
 bin/gcpio
 gnu/bin/cpio
 gnu/man/man1/cpio.1
 gnu/man/man1/mt.1
 info/cpio.info
-lib/charset.alias
 libexec/grmt
 man/man1/gcpio.1
 man/man1/gmt.1
