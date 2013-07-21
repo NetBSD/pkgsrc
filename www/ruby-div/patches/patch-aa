@@ -1,17 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2010/09/10 13:04:25 taca Exp $
+$NetBSD: patch-aa,v 1.2 2013/07/21 02:49:58 taca Exp $
 
-Avoid to use "ftools" which has deprecated in ruby19.
+* Avoid to use "ftools" which has deprecated in ruby19.
+* Use RbConfig instead of Config.
 
 --- install.rb.orig	2003-08-13 15:18:29.000000000 +0000
 +++ install.rb
-@@ -1,6 +1,6 @@
+@@ -1,8 +1,8 @@
  require 'rbconfig'
  require 'find'
 -require 'ftools'
 +require 'fileutils'
  
- include Config
+-include Config
++include RbConfig
  
+ $srcdir = CONFIG["srcdir"]
+ $version = CONFIG["MAJOR"]+"."+CONFIG["MINOR"]
 @@ -30,12 +30,12 @@ def install_rb(srcdir = nil, destdir = $
    for f in dir
      next if f == "."
