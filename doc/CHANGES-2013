@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2667 2013/07/21 12:05:29 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2668 2013/07/21 12:16:34 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Exception-Class to 1.37 [wen 2013-07-21]
 	Updated textproc/p5-YAML-LibYAML to 0.41 [wen 2013-07-21]
 	Updated graphics/py-pycha to 0.6.0 [richard 2013-07-21]
+	Updated textproc/py-relatorio to 0.5.7 [richard 2013-07-21]
