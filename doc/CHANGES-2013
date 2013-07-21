@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2678 2013/07/21 17:20:54 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.2679 2013/07/21 17:23:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3958,3 +3958,16 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated biology/hmmer to 3.0 [wen 2013-07-21]
 	Updated databases/ocaml-dbm to 1.0nb2 [jaapb 2013-07-21]
 	Updated comms/asterisk18 to 1.8.23.0 [jnemeth 2013-07-21]
+	Updated graphics/gimp-docs-de to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-en to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-es to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-fr to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-it to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-ja to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-ko to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-nl to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-nn to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-pl to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-ru to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-sv to 2.8.0 [ryoon 2013-07-21]
+	Updated graphics/gimp-docs-zh_CN to 2.8.0 [ryoon 2013-07-21]
