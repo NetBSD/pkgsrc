@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2677 2013/07/21 17:07:18 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.2678 2013/07/21 17:20:54 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3957,3 +3957,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/hplip to 3.13.6 [schnoebe 2013-07-21]
 	Updated biology/hmmer to 3.0 [wen 2013-07-21]
 	Updated databases/ocaml-dbm to 1.0nb2 [jaapb 2013-07-21]
+	Updated comms/asterisk18 to 1.8.23.0 [jnemeth 2013-07-21]
