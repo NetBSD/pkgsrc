@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2013/07/21 10:58:49 shattered Exp $
+
+Avoid compiler warning.
+
+--- ripOLE/ole.c.orig	2008-10-31 16:17:32.000000000 +0000
++++ ripOLE/ole.c
+@@ -512,7 +512,7 @@ int OLE_print_sector( struct OLE_object 
+ 			int j;
+ 			for (j = current_byte -31; j <=current_byte; j++)
+ 			{
+-				if (isalnum(*(sector +j))) printf("%c",*(sector+j));
++				if (isalnum((int)*(sector +j))) printf("%c",*(sector+j));
+ 				else printf(".");
+ 			}
+ 			printf("\n");
