@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/01/31 21:45:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/07/21 20:24:52 wiz Exp $
 bin/autopoint
 bin/envsubst
 bin/gettext
@@ -23,6 +23,10 @@ bin/recode-sr-latin
 bin/xgettext
 include/gettext-po.h
 info/gettext.info
+lib/gettext/hostname
+lib/gettext/project-id
+lib/gettext/urlget
+lib/gettext/user-email
 lib/libgettextlib.la
 lib/libgettextpo.la
 lib/libgettextsrc.la
@@ -112,6 +116,7 @@ share/doc/gettext/textdomain.3.html
 share/doc/gettext/tutorial.html
 share/doc/gettext/xgettext.1.html
 share/gettext/archive.dir.tar.xz
+share/gettext/msgunfmt.tcl
 share/locale/be/LC_MESSAGES/gettext-runtime.mo
 share/locale/be/LC_MESSAGES/gettext-tools.mo
 share/locale/bg/LC_MESSAGES/gettext-runtime.mo
