@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 13:04:25 taca Exp $
+$NetBSD: distinfo,v 1.3 2013/07/21 02:49:58 taca Exp $
 
 SHA1 (div-1.3.2.tar.gz) = 22b4517c5101f522b0b801be80220da42423a94a
 RMD160 (div-1.3.2.tar.gz) = 60c8fcc6675feaf93546f091adc64c103a8ea006
 Size (div-1.3.2.tar.gz) = 86749 bytes
-SHA1 (patch-aa) = 3624e7da6230d231b2a876221cd11a3983f77d61
+SHA1 (patch-aa) = 054b2e9ce1deadc54c28af6431481899619fa01c
