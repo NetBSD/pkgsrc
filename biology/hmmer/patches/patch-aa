@@ -1,63 +1,28 @@
-$NetBSD: patch-aa,v 1.4 2009/07/08 15:20:04 joerg Exp $
-
---- Makefile.in.orig	2003-10-04 21:01:16.000000000 +0200
+$NetBSD: patch-aa,v 1.5 2013/07/21 15:58:51 wen Exp $
+replace "mkdir -p" with ${MKDIR} 
+--- Makefile.in.orig	2013-07-21 23:25:33.000000000 +0000
 +++ Makefile.in
-@@ -30,11 +30,12 @@ prefix      = @prefix@
- exec_prefix = @exec_prefix@
- BINDIR      = @bindir@
- MANDIR      = @mandir@
-+INSTBIN     = ${BSD_INSTALL_PROGRAM}
+@@ -51,7 +51,7 @@ CPPFLAGS  = @CPPFLAGS@
  
- # how to install the man pages; 
- # cp is generally fine, unless you preformat your pages.
+ # Other tools
  #
 -INSTMAN   = cp
 +INSTMAN   = ${BSD_INSTALL_MAN}
- MANSUFFIX = 1
- 
- # your compiler and compiler flags
-@@ -109,13 +110,13 @@ src/libhmmer.a: 
- #          installs man pages in MANDIR/man1/  (e.g. if MANSUFFIX is 1)
- #          Creates these directories if they don't exist.
- install: 
--	mkdir -p ${BINDIR}
--	-mkdir -p ${MANDIR}/man${MANSUFFIX}
-+	${MKDIR} ${DESTDIR}${BINDIR}
-+	-${MKDIR} ${DESTDIR}${MANDIR}/man${MANSUFFIX}
- 	for file in $(PROGS) $(PVMPROGS); do\
--	   cp src/$$file $(BINDIR)/;\
-+	   $(INSTBIN) src/$$file ${DESTDIR}$(BINDIR)/;\
+ AR        = @AR@ rcv
+ LN        = ln
+ RANLIB    = @RANLIB@
+@@ -176,11 +176,11 @@ testsuite: libraries
+ #          may be set on a make command line when building contrib RPMs).
+ install: libraries programs
+ 	cd ${PMARKDIR}; ${MAKE} profmark_progs
+-	-mkdir -p ${DESTDIR}${bindir}
++	-${MKDIR} ${DESTDIR}${bindir}
+ 	for file in $(PROGS); do\
+-	   cp ${SRCDIR}/$$file ${DESTDIR}${bindir}/;\
++	   ${BSD_INSTALL_PROGRAM} ${SRCDIR}/$$file ${DESTDIR}${bindir}/;\
  	done
- 	-for file in hmmer $(PROGS); do\
--	   $(INSTMAN) documentation/man/$$file.man $(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
-+	   $(INSTMAN) documentation/man/$$file.man ${DESTDIR}$(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
- 	done
- 
- # uninstall: Reverses the steps of "make install".
-@@ -133,7 +134,7 @@ uninstall: 
- #          subdir, remove everything but binaries and Makefiles.
- #
- bindist:
--	mkdir binaries
-+	${MKDIR} binaries
- 	for prog in $(PROGS); do\
- 	   (cd binaries; ln -s ../src/$$prog .);\
- 	done
-@@ -205,7 +206,7 @@ dist:	
- 	# in testsuite. 
- 	#
- 	cp ssdk/sqc ${BASENAME}-${RELEASE}/testsuite/
--	mkdir ${BASENAME}-${RELEASE}/ssdk
-+	${MKDIR} ${BASENAME}-${RELEASE}/ssdk
- 	cp ssdk/rmanprocess.pl ${BASENAME}-${RELEASE}/ssdk/
- 	# 
- 	# Make the configure scripts from configure.ac
-@@ -288,7 +289,7 @@ dist:	
- #               directory.
- #
- ftpdist:
--	mkdir -p ${FTPDIR}
-+	${MKDIR} ${FTPDIR}
- 	cp -f hmmer-$(RELEASE)/00README         ${FTPDIR}
- 	cp -f hmmer-$(RELEASE)/COPYRIGHT        ${FTPDIR}
- 	cp -f hmmer-$(RELEASE)/INSTALL          ${FTPDIR}
+-#	-mkdir -p ${DESTDIR}/${MANDIR}/man${MANSUFFIX}
++#	-${MKDIR} ${DESTDIR}/${MANDIR}/man${MANSUFFIX}
+ #	-for file in hmmer $(PROGS); do\
+ #	   $(INSTMAN) documentation/man/$$file.man ${DESTDIR}$(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
+ #	done

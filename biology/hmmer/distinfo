@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/07/16 14:53:19 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/07/21 15:58:51 wen Exp $
 
-SHA1 (hmmer-2.3.2.tar.gz) = aa34cb97cbc43ff3bd92dd111ba5677298fe2d40
-RMD160 (hmmer-2.3.2.tar.gz) = 4bf25fc71f332849c76b0a05bca24e88241cee67
-Size (hmmer-2.3.2.tar.gz) = 1024933 bytes
-SHA1 (patch-aa) = 1d5eae739096ec6398e7cd71b92019d76a677d50
+SHA1 (hmmer-3.0.tar.gz) = 77803c0bdb3ab07b7051a4c68c0564de31940c6d
+RMD160 (hmmer-3.0.tar.gz) = 681967fd0d2c0104ca9e080688d9652a187a8b45
+Size (hmmer-3.0.tar.gz) = 3952015 bytes
+SHA1 (patch-aa) = 8d0d3be4401590c20d102b7e0ebadcb1b6c03066
