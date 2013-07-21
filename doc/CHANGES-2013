@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2672 2013/07/21 14:59:53 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2673 2013/07/21 15:07:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3951,3 +3951,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-Dancer2 version 0.05 [wen 2013-07-21]
 	Updated textproc/p5-String-ToIdentifier-EN to 0.10 [wen 2013-07-21]
 	Updated net/p5-Nmap-Parser to 1.31 [wen 2013-07-21]
+	Updated net/p5-Net-FTPSSL to 0.22 [wen 2013-07-21]
