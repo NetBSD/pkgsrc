@@ -1,0 +1,3 @@
+XCB util-cursor module provides the following libraries:
+
+  - cursor: port of libxcursor

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/21 21:44:18 wiz Exp $
+include/xcb/xcb_cursor.h
+lib/libxcb-cursor.la
+lib/pkgconfig/xcb-cursor.pc
