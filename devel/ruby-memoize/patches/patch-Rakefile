@@ -1,11 +1,16 @@
-$NetBSD: patch-Rakefile,v 1.1.1.1 2011/02/25 02:34:13 obache Exp $
+$NetBSD: patch-Rakefile,v 1.2 2013/07/21 02:40:46 taca Exp $
 
 * install into vendorlibdir
 * staged installation
 
 --- Rakefile.orig	2009-08-08 14:36:30.000000000 +0000
 +++ Rakefile
-@@ -5,7 +5,10 @@ include Config
+@@ -1,11 +1,14 @@
+ require 'rake'
+ require 'rake/testtask'
+ require 'rbconfig'
+-include Config
++include RbConfig
  
  desc 'Install the memoize library (non-gem)'
  task :install do
