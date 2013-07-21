@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2012/10/31 11:16:32 asau Exp $
+# $NetBSD: Makefile,v 1.39 2013/07/21 14:13:45 shattered Exp $
 
-DISTNAME=	SDL_gfx-2.0.23
+DISTNAME=	SDL_gfx-2.0.24
 CATEGORIES=	devel
-MASTER_SITES=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlgfx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
+HOMEPAGE=	http://www.ferzkopp.net/joomla/content/view/19/14/
 COMMENT=	Basic drawing routines for SDL
 LICENSE=	zlib
 
