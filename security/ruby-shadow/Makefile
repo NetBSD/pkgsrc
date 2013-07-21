@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/07/07 15:32:56 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/21 02:51:28 taca Exp $
 
 SHADOW_VER=	2.2.0
 DISTNAME=	ruby-shadow-${SHADOW_VER}
@@ -12,7 +12,7 @@ COMMENT=	Access to shadow passwords on Linux and Solaris
 
 USE_TOOLS+=		gmake
 
-GEM_CLEANBUILD=	Makefile *.o mkmf.log shadow.${RUBY_DLEXT}
+GEM_CLEANBUILD=	Makefile *.o mkmf.log shadow.${RUBY_DLEXT} .RUBYARCHDIR.time
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-shadow-[0-9]*
 
