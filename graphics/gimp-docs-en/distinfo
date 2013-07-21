@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/20 07:50:43 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/07/21 17:20:48 ryoon Exp $
 
-SHA1 (gimp-help-2.6.1-html-en.tar.bz2) = cba93e3b3c35d1c78d91b5f424458c927272bb3c
-RMD160 (gimp-help-2.6.1-html-en.tar.bz2) = 4fdc31e2f7ba1f9011725a1ff4b87fe107da9431
-Size (gimp-help-2.6.1-html-en.tar.bz2) = 28726945 bytes
+SHA1 (gimp-help-2.8.0.tar.bz2) = c76209660dedc4b969115f6a9e16f4c600dc1d6a
+RMD160 (gimp-help-2.8.0.tar.bz2) = 0bee8864b86889e800a3870fe5eb0cf92db3ef2c
+Size (gimp-help-2.8.0.tar.bz2) = 132408834 bytes
+SHA1 (patch-Makefile.in) = e78332cbcad1417e15d34ae11097210f46b087b1
+SHA1 (patch-po_de_menus_view.po) = 4931228f7282b5b911189592fd34b2a8e68d0062
