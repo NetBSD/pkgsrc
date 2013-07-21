@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12414 2013/07/21 17:23:17 ryoon Exp $
+$NetBSD: TODO,v 1.12415 2013/07/21 19:37:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o byacc-20130304
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-0.9.39
+	o calibre-0.9.40
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -558,6 +558,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o genius-1.0.17
 	o gentoo-0.20.1
 	o gettext-0.18.3
+	o gettext-lib-0.18.3
+	o gettext-tools-0.18.3
 	o gfract-0.33
 	o ghc-7.6
 	o gifsicle-1.48
@@ -616,6 +618,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grilo-plugins-0.2.8
 	o groff-1.22.2
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
+	o gsl-1.16
 	o gss-1.0.2
 	o gstreamer-1.1.1
 	o gthumb-3.2.3
@@ -637,6 +640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.9.9
 	o hanzim-3.5
+	o harfbuzz-0.9.19
 	o haskell-mode-1.45
 	o hatari-1.7.0
 	o hdf-4.2.7
@@ -787,7 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
 	o monit-5.1.1
-	o mono-3.0.12
+	o mono-3.1.2
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.8.0
@@ -922,6 +926,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-qt5-5.0.0
+	o py-setuptools-0.9.6
 	o py-simplejson-3.3.0
 	o py-sybase-0.37
 	o qnetwalk-1.4
@@ -1101,7 +1106,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.0.3
+	o webkit-gtk-2.0.4
 	o webmin-1.630
 	o websvn-2.3.2
 	o windowlab-1.40
