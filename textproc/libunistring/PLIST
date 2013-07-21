@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/14 23:06:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/21 10:31:26 shattered Exp $
 include/unicase.h
 include/uniconv.h
 include/unictype.h
@@ -19,7 +19,6 @@ include/unitypes.h
 include/uniwbrk.h
 include/uniwidth.h
 info/libunistring.info
-lib/charset.alias
 lib/libunistring.la
 share/doc/libunistring/libunistring_1.html
 share/doc/libunistring/libunistring_10.html
