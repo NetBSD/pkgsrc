@@ -1,26 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2009/02/16 22:14:43 snj Exp $
---- Makefile.orig	2003-02-18 02:59:18.000000000 -0800
-+++ Makefile	2003-09-28 18:41:07.000000000 -0700
-@@ -1,11 +1,19 @@
+$NetBSD: patch-aa,v 1.3 2013/07/21 11:34:51 shattered Exp $
+
+--- Makefile.orig	2004-09-28 04:51:55.000000000 +0000
++++ Makefile
+@@ -1,18 +1,13 @@
  #
  # Makefile for UNIX
  #
--RM=rm
+-# Installation prefix
+-PREFIX=/usr/local
+-
+-# C-compiler, flags and linker flags
 -CC=gcc
--CFLAGS= -g -O2 -Wall
-+#RM=rm
-+#CC=gcc
-+#CFLAGS= -g -O2 -Wall
- 
- FISGEXE=fisg
- TARGETS=$(FISGEXE) strmatch
+-CFLAGS=-g -W -Wall
+-LDFLAGS=
+-
+-# Miscellaneous
+-RM=rm
+-INSTALL=install -c -m 755
+-BINPATH=
+-EXEEXT=
  
  include Makefile.gen
 +
 +install: $(FISGEXE)
-+	$(BSD_INSTALL_PROGRAM) $(FISGEXE) $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) $(FISGBIN) $(DESTDIR)$(PREFIX)/bin
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/fisg
 +	$(BSD_INSTALL_DATA) ../example.cfg $(DESTDIR)$(PREFIX)/share/examples/fisg
 +	$(BSD_INSTALL_DATA) ../users.cfg $(DESTDIR)$(PREFIX)/share/examples/fisg
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/fisg
-+	$(BSD_INSTALL_DATA) ../data/* $(DESTDIR)$(PREFIX)/share/fisg
++	$(BSD_INSTALL_DATA) ../data/*.* $(DESTDIR)$(PREFIX)/share/fisg
