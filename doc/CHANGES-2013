@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2665 2013/07/21 10:38:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2666 2013/07/21 11:25:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3938,3 +3938,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/libpciaccess to 0.13.2 [wiz 2013-07-21]
 	Added devel/p5-MooX-Types-MooseLike-Numeric version 1.01 [wen 2013-07-21]
 	Updated devel/p5-Exception-Class to 1.37 [wen 2013-07-21]
+	Updated textproc/p5-YAML-LibYAML to 0.41 [wen 2013-07-21]
