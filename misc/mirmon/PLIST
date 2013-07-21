@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/07/21 10:44:03 shattered Exp $
 bin/mirmon
 man/man1/mirmon.1
 share/examples/mirmon/mirmon.conf
@@ -106,3 +106,5 @@ share/mirmon/icons/mmz11.gif
 share/mirmon/icons/mmz12.gif
 share/mirmon/icons/mmz13.gif
 share/mirmon/icons/mmz14.gif
+share/mirmon/icons/vbrb.gif
+share/mirmon/icons/vbrw.gif
