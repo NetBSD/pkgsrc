@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.95 2013/07/12 10:44:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.96 2013/07/21 06:55:53 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-11.4.0
+DISTNAME=	asterisk-11.5.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-PKGREVISION=	6
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
@@ -134,12 +133,18 @@ SUBST_SED.configs+=	-e "s|/usr/local/man|${ASTMANDIR}|"
 SUBST_SED.configs+=	-e "s|/usr/local|${PREFIX}|"
 SUBST_SED.configs+=	-e "s|/var|${VARBASE}|"
 
-# XXX gross hack, remove when atomics properly implemented
 .if (${OPSYS} == "NetBSD")
+# XXX gross hack, remove when atomics properly implemented
 SUBST_CLASSES+=		atomics
 SUBST_STAGE.atomics=	post-configure
 SUBST_FILES.atomics=	include/asterisk/autoconfig.h
 SUBST_SED.atomics=	-e "s|^\#define HAVE_GCC_ATOMICS 1|\#undef HAVE_GCC_ATOMICS|"
+
+# XXX gross hack, IP_PKTINFO in NetBSD isn't compatible with Linux
+SUBST_CLASSES+=		pktinfo
+SUBST_STAGE.pktinfo=	post-configure
+SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
+SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
 .endif
 
 RCD_SCRIPTS=		asterisk
@@ -206,7 +211,7 @@ post-patch:
 
 post-install:
 # check sounds directory for current versions when upgrading package
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.23.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.24.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
 	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.4.13.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -232,6 +237,7 @@ post-install:
 	cp -r ${WRKSRC}/doc/Asterisk-Admin-Guide ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/Asterisk-Admin-Guide
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
