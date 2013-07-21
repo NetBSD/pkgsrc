@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2666 2013/07/21 11:25:56 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2667 2013/07/21 12:05:29 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-MooX-Types-MooseLike-Numeric version 1.01 [wen 2013-07-21]
 	Updated devel/p5-Exception-Class to 1.37 [wen 2013-07-21]
 	Updated textproc/p5-YAML-LibYAML to 0.41 [wen 2013-07-21]
+	Updated graphics/py-pycha to 0.6.0 [richard 2013-07-21]
