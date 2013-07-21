@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.6 2013/05/26 00:43:23 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.7 2013/07/21 15:56:37 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -86,7 +86,6 @@ share/doc/${PKGNAME}/systray.html
 share/doc/${PKGNAME}/troubleshooting.html
 share/doc/${PKGNAME}/uninstalling.html
 share/doc/${PKGNAME}/upgrading.html
-share/examples/hplip/cron.daily/hplip_cron
 share/examples/hplip/hp/hplip.conf
 share/examples/hplip/udev/rules.d/56-hpmud.rules
 share/hal/fdi/preprobe/10osvendor/20-hplip-devices.fdi
@@ -221,6 +220,7 @@ share/hplip/firmware.py
 share/hplip/firmware.pyc
 share/hplip/hpdio.py
 share/hplip/hpdio.pyc
+share/hplip/hplip_clean.sh
 share/hplip/hpssd.py
 share/hplip/hpssd.pyc
 share/hplip/info.py
@@ -499,6 +499,7 @@ share/hplip/ppd/HP/hp-designjet_t1120ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1120ps_44in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1200_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1300_postscript-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_t1500-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t2300_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t7100ps-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t7100ps_monochrome-ps.ppd.gz
@@ -506,6 +507,7 @@ share/hplip/ppd/HP/hp-designjet_t770_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t770ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_44in-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_t920-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z5200_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
@@ -861,6 +863,8 @@ share/hplip/ppd/HP/hp-envy_110_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-envy_110_series.ppd.gz
 share/hplip/ppd/HP/hp-envy_120_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-envy_120_series.ppd.gz
+share/hplip/ppd/HP/hp-envy_4500_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-envy_4500_series.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1000-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1000.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1005_series-hpijs.ppd.gz
