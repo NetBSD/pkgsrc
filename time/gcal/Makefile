@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/06/11 11:54:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2013/07/21 09:11:43 shattered Exp $
 #
 
 DISTNAME=		gcal-3.6.3
@@ -15,8 +15,6 @@ USE_PKGLOCALEDIR=	yes
 INFO_FILES=		yes
 
 USE_TOOLS+=		msgfmt xgettext msgmerge awk
-
-CHECK_FILES_SKIP+=	lib/charset.alias
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
