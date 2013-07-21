@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/20 15:08:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/21 02:34:28 taca Exp $
 ${RUBY_VENDORLIB}/fiddle.rb
 ${RUBY_VENDORLIB}/fiddle/closure.rb
+${PLIST.ruby200}${RUBY_VENDORLIB}/fiddle/cparser.rb
 ${RUBY_VENDORLIB}/fiddle/function.rb
+${PLIST.ruby200}${RUBY_VENDORLIB}/fiddle/import.rb
+${PLIST.ruby200}${RUBY_VENDORLIB}/fiddle/pack.rb
+${PLIST.ruby200}${RUBY_VENDORLIB}/fiddle/struct.rb
+${PLIST.ruby200}${RUBY_VENDORLIB}/fiddle/types.rb
+${PLIST.ruby200}${RUBY_VENDORLIB}/fiddle/value.rb
 ${RUBY_VENDORARCHLIB}/fiddle.${RUBY_DLEXT}
