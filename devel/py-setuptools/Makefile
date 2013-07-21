@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2013/07/17 17:18:12 richard Exp $
+# $NetBSD: Makefile,v 1.28 2013/07/21 20:31:52 wiz Exp $
 
-EGG_VERSION=		0.9
+EGG_VERSION=		0.9.6
 DISTNAME=		setuptools-${EGG_VERSION}
 EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
@@ -35,12 +35,8 @@ PYSETUPINSTALLARGS+=	--root=/
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 
-#remove garbage old 0.6x PKG-INFO
-post-extract:
-	${RM} ${WRKSRC}/setuptools.egg-info/EGG-INFO/PKG-INFO
-	${RMDIR} ${WRKSRC}/setuptools.egg-info/EGG-INFO
-
 post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/entry_points.txt.orig
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*
 
 .include "../../lang/python/application.mk"
