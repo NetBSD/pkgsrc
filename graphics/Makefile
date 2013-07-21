@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2013/07/15 02:26:39 obache Exp $
+# $NetBSD: Makefile,v 1.659 2013/07/21 12:02:18 richard Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -389,6 +389,7 @@ SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
+SUBDIR+=	py-pycha
 SUBDIR+=	py-pyfits
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
