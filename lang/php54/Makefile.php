@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.php,v 1.5 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile.php,v 1.6 2013/07/21 17:29:47 taca Exp $
 # used by lang/php54/Makefile
 # used by www/ap-php/Makefile
+# used by www/php-fpm/Makefile
 
 .include "../../lang/php54/Makefile.common"
 
@@ -11,7 +12,7 @@ USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 BUILD_DEFS+=		VARBASE
-PLIST_VARS+=		suhosin dtrace
+PLIST_VARS+=		dtrace
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
@@ -38,43 +39,20 @@ CONFIGURE_ARGS+=	--disable-json
 CONFIGURE_ARGS+=	--enable-cgi
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
+
 .include "../../textproc/libxml2/buildlink3.mk"
 
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline # suhosin
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
 .endif
 
-#SUBST_CLASSES+=		ini
-#SUBST_STAGE.ini=	post-patch
-#SUBST_FILES.ini=	php.ini-development
-#SUBST_FILES.ini+=	php.ini-production
-#SUBST_SED.ini=		-e "s|\\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
-#SUBST_MESSAGE.ini=	Fixing default ini files.
-
 .include "../../mk/bsd.options.mk"
-
-#.if !empty(PKG_OPTIONS:Msuhosin)
-#SUHOSIN_PHPVER=		5.4.0
-#.  if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS}
-#PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
-#PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
-#PKG_FAIL_REASON+=	"an updated patch is released or temporarily"
-#PKG_FAIL_REASON+=	"build this package without the suhosin option."
-#.  else
-#PATCH_SITES=		http://download.suhosin.org/
-#PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
-#PATCH_DIST_STRIP=	-p1
-#PLIST.suhosin=		yes
-#MESSAGE_SRC=		${.CURDIR}/../../lang/php54/MESSAGE
-#MESSAGE_SRC+=		${.CURDIR}/../../lang/php54/MESSAGE.suhosin
-#.  endif
-#.endif
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
