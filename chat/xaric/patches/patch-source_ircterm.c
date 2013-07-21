@@ -1,17 +1,17 @@
-$NetBSD: patch-source_ircterm.c,v 1.1 2012/02/16 16:13:51 hans Exp $
+$NetBSD: patch-source_ircterm.c,v 1.2 2013/07/21 11:29:55 shattered Exp $
 
---- source/ircterm.c.orig	2001-11-24 09:07:57.000000000 +0100
-+++ source/ircterm.c	2012-01-24 20:14:53.277926058 +0100
-@@ -99,10 +99,12 @@ static int term_LE_cursor_left (void);
- static int term_null_function (void);
+--- ircterm.c.orig	2010-01-09 09:26:08.000000000 +0000
++++ ircterm.c
+@@ -97,10 +97,12 @@ static int term_LE_cursor_left(void);
+ static int term_null_function(void);
  
  /* these are missing on some systems */
 +#ifndef __sun
- extern char *tgetstr ();
- extern int tgetent ();
- extern char *getenv ();
+ extern char *tgetstr();
+ extern int tgetent();
+ extern char *getenv();
  extern char *tgoto(const char *, int, int);
 +#endif
  
- 
  /* Setup the low level terminal disipline */
+ static void setup_tty(void)
