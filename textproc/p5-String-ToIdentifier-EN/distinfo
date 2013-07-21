@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/14 08:08:04 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2013/07/21 14:51:32 wen Exp $
 
-SHA1 (String-ToIdentifier-EN-0.05.tar.gz) = a5b9ab109bde32262c98a00b82937648f27f2b1a
-RMD160 (String-ToIdentifier-EN-0.05.tar.gz) = fa479beca7c56937d04f43030f365161c203c743
-Size (String-ToIdentifier-EN-0.05.tar.gz) = 34109 bytes
+SHA1 (String-ToIdentifier-EN-0.10.tar.gz) = a92779c815acc9ffe01bc3d89ac5a0b10f1e3c9e
+RMD160 (String-ToIdentifier-EN-0.10.tar.gz) = fe21658cf9f19374d7349a54cc116415e0995d88
+Size (String-ToIdentifier-EN-0.10.tar.gz) = 19089 bytes
