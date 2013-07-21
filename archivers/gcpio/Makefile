@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2013/06/23 13:46:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2013/07/21 10:31:26 shattered Exp $
 #
 
 DISTNAME=	cpio-2.11
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=cpio/}
 
@@ -31,8 +31,6 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 CONFIGURE_ARGS+=	--program-prefix=g
 
 PLIST_VARS+=	rmt
-
-CHECK_FILES_SKIP+=	lib/charset.alias
 
 .include "../../mk/bsd.prefs.mk"
 

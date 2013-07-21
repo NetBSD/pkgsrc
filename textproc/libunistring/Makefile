@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/12/06 00:10:26 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/21 10:31:26 shattered Exp $
 #
 
 DISTNAME=	libunistring-0.9.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/libunistring/
 
