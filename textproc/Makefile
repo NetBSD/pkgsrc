@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.737 2013/07/20 07:48:02 richard Exp $
+# $NetBSD: Makefile,v 1.738 2013/07/21 12:15:29 richard Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -618,6 +618,7 @@ SUBDIR+=	py-mecab
 SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
+SUBDIR+=	py-relatorio
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-textile

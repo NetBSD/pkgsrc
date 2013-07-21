@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/21 12:15:29 richard Exp $
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/relatorio/__init__.py
+${PYSITELIB}/relatorio/__init__.pyc
+${PYSITELIB}/relatorio/__init__.pyo
+${PYSITELIB}/relatorio/reporting.py
+${PYSITELIB}/relatorio/reporting.pyc
+${PYSITELIB}/relatorio/reporting.pyo
+${PYSITELIB}/relatorio/templates/__init__.py
+${PYSITELIB}/relatorio/templates/__init__.pyc
+${PYSITELIB}/relatorio/templates/__init__.pyo
+${PYSITELIB}/relatorio/templates/base.py
+${PYSITELIB}/relatorio/templates/base.pyc
+${PYSITELIB}/relatorio/templates/base.pyo
+${PYSITELIB}/relatorio/templates/chart.py
+${PYSITELIB}/relatorio/templates/chart.pyc
+${PYSITELIB}/relatorio/templates/chart.pyo
+${PYSITELIB}/relatorio/templates/opendocument.py
+${PYSITELIB}/relatorio/templates/opendocument.pyc
+${PYSITELIB}/relatorio/templates/opendocument.pyo
+${PYSITELIB}/relatorio/templates/pdf.py
+${PYSITELIB}/relatorio/templates/pdf.pyc
+${PYSITELIB}/relatorio/templates/pdf.pyo
