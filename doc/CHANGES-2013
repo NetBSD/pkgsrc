@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2668 2013/07/21 12:16:34 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2669 2013/07/21 12:32:21 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3835,6 +3835,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Dist-CheckConflicts to 0.08 [wen 2013-07-13]
 	Updated databases/p5-DBD-SQLite to 1.39nb1 [schmonz 2013-07-13]
 	Updated devel/tradcpp to 0.4 [dholland 2013-07-13]
+	Updated textproc/lout to 3.40 [shattered 2013-07-13]
 	Updated devel/p5-App-cpanminus to 1.6923 [wen 2013-07-14]
 	Updated devel/p5-Date-Manip to 6.40 [wen 2013-07-14]
 	Updated devel/p5-boolean to 0.30 [wen 2013-07-14]
@@ -3941,3 +3942,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-YAML-LibYAML to 0.41 [wen 2013-07-21]
 	Updated graphics/py-pycha to 0.6.0 [richard 2013-07-21]
 	Updated textproc/py-relatorio to 0.5.7 [richard 2013-07-21]
+	Updated archivers/gsharutils to 4.13.4 [shattered 2013-07-21]
+	Updated chat/fisg to 0.13.2 [shattered 2013-07-21]
+	Updated chat/xaric to 0.13.6 [shattered 2013-07-21]
+	Updated mail/ripmime to 1.4.0.10 [shattered 2013-07-21]
+	Updated misc/mirmon to 2.8 [shattered 2013-07-21]
+	Updated net/host to 20070128 [shattered 2013-07-21]
