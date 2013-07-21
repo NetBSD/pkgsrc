@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2012/12/06 11:38:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2013/07/21 09:03:19 shattered Exp $
 
-DISTNAME=	sharutils-4.11.1
-PKGREVISION=	2
+DISTNAME=	sharutils-4.13.4
 PKGNAME=	g${DISTNAME}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=sharutils/}
@@ -28,6 +27,9 @@ CONFIGURE_ENV+=		SH=${TOOLS_SH}
 CONFIGURE_ARGS+=	--program-prefix=g
 
 .include "../../mk/bsd.prefs.mk"
+
+pre-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/charset.alias
 
 post-install:
 .for f in shar unshar
