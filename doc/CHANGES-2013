@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2680 2013/07/21 20:11:20 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2681 2013/07/21 20:25:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3972,3 +3972,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gimp-docs-sv to 2.8.0 [ryoon 2013-07-21]
 	Updated graphics/gimp-docs-zh_CN to 2.8.0 [ryoon 2013-07-21]
 	Updated math/gsl to 1.16 [wiz 2013-07-21]
+	Updated devel/gettext to 0.18.3 [wiz 2013-07-21]
