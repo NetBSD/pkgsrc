@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/06/16 23:25:01 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/07/21 15:56:37 schnoebe Exp $
 #
 
-DISTNAME=		hplip-3.13.5
-PKGREVISION=		3
+DISTNAME=		hplip-3.13.6
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
