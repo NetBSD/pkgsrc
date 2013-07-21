@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 12:19:30 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/21 10:58:49 shattered Exp $
 #
 
-DISTNAME=	ripmime-1.4.0.2
+DISTNAME=	ripmime-1.4.0.10
 CATEGORIES=	mail
 MASTER_SITES=	http://www.pldaniels.com/ripmime/
 
