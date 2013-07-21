@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.100 2013/06/27 16:32:03 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.101 2013/07/21 02:27:45 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 193
+#		Possible values: 18 193 200
 #		Default: 193
 #
 # RUBY_BUILD_RDOC
@@ -41,14 +41,14 @@
 # RUBY_VERSION_SUPPORTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 18 193
+#		Possible values: 18 193 200
 #		Default: 18 193
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
 #	as editing mode for emacs.  In this case, package's name would begin
 #	with "ruby-".  Otherwise, the package's name is begin with
-#	${RUBY_PKGPREFIX}; "ruby18" or "ruby193".
+#	${RUBY_PKGPREFIX}; "ruby18", "ruby193" or "ruby200".
 #
 #		Possible values: Yes No
 #		Default: No
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 18 193
+#		Possible values: 18 193 200
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -203,19 +203,22 @@ _RUBYVERSION_MK=	# defined
 # current supported Ruby's version
 RUBY18_VERSION=		1.8.7
 RUBY193_VERSION=	1.9.3
+RUBY200_VERSION=	2.0.0
 
 # patch
 RUBY18_PATCHLEVEL=	pl374
 RUBY193_PATCHLEVEL=	p448
+RUBY200_PATCHLEVEL=	p247
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
 RUBY193_API_VERSION=	1.9.1
+RUBY200_API_VERSION=	2.0.0
 
 #
 RUBY_VERSION_DEFAULT?=	193
 
-RUBY_VERSION_SUPPORTED?= 193 18
+RUBY_VERSION_SUPPORTED?= 200 193 18
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
@@ -247,6 +250,10 @@ RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL:S/pl/./}
 RUBY_ABI_VERSION=	${RUBY18_API_VERSION}
 .elif ${RUBY_VER} == "193"
 RUBY_VERSION=		${RUBY193_VERSION}
+RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+.elif ${RUBY_VER} == "200"
+RUBY_VERSION=		${RUBY200_VERSION}
 RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 .else
@@ -430,9 +437,12 @@ MAKEFLAGS+=		RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
 #
 # PLIST_VARS for x11/ruby-tk package.
 #
-PLIST_VARS+=		ruby19
+PLIST_VARS+=		ruby19 ruby200
 .if ${RUBY_VER} != "18"
 PLIST.ruby19=		yes
+. if ${RUBY_VER} != "193"
+PLIST.ruby200=		yes
+. endif
 .endif
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
