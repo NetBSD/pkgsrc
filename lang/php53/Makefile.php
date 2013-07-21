@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.php,v 1.36 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile.php,v 1.37 2013/07/21 17:29:47 taca Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
+# used by www/php-fpm/Makefile
 
 .include "../../lang/php53/Makefile.common"
 
@@ -39,6 +40,7 @@ CONFIGURE_ARGS+=	--disable-json
 CONFIGURE_ARGS+=	--enable-cgi
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
+
 .include "../../textproc/libxml2/buildlink3.mk"
 
 # Note: This expression is the same as ${PKGBASE}, but the latter is
@@ -46,13 +48,6 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts suhosin readline
 PKG_SUGGESTED_OPTIONS+=	inet6 ssl
-
-#SUBST_CLASSES+=		ini
-#SUBST_STAGE.ini=	post-patch
-#SUBST_FILES.ini=	php.ini-development
-#SUBST_FILES.ini+=	php.ini-production
-#SUBST_SED.ini=		-e "s|\\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
-#SUBST_MESSAGE.ini=	Fixing default ini files.
 
 .include "../../mk/bsd.options.mk"
 
