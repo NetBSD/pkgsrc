@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12416 2013/07/21 20:11:20 wiz Exp $
+$NetBSD: TODO,v 1.12417 2013/07/21 20:25:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -557,9 +557,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.17
 	o gentoo-0.20.1
-	o gettext-0.18.3
-	o gettext-lib-0.18.3
-	o gettext-tools-0.18.3
 	o gfract-0.33
 	o ghc-7.6
 	o gifsicle-1.48
