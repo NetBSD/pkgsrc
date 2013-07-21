@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/02/22 16:23:52 taca Exp $
+# $NetBSD: Makefile,v 1.30 2013/07/21 03:00:37 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Ruby editing mode for Emacs
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
 WRKSRC=			${RUBY_WRKSRC}/misc
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/misc
-RUBY_VERSION_SUPPORTED=	193
+RUBY_VERSION_SUPPORTED=	200
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
 SRCS=			inf-ruby.el ruby-electric.el ruby-mode.el \
