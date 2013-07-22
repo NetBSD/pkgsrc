@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2690 2013/07/22 18:00:50 morr Exp $
+$NetBSD: CHANGES-2013,v 1.2691 2013/07/22 19:41:31 degroote Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3986,3 +3986,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/vlc2 to 2.0.7 [drochner 2013-07-22]
 	Updated net/libfetch to 2.34nb2 [jperkin 2013-07-22]
 	Updated x11/rxvt-unicode to 9.18 [morr 2013-07-22]
+	Added devel/lua-gi version 0.7.1 [degroote 2013-07-22]
