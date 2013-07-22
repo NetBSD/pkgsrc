@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opengl,v 1.2 2011/12/07 20:09:19 drochner Exp $
+@comment $NetBSD: PLIST.opengl,v 1.3 2013/07/22 14:24:17 drochner Exp $
 bin/xscreensaver-gl-helper
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antmaze
@@ -63,6 +63,7 @@ libexec/xscreensaver/config/hypnowheel.xml
 libexec/xscreensaver/config/jigglypuff.xml
 libexec/xscreensaver/config/jigsaw.xml
 libexec/xscreensaver/config/juggler3d.xml
+libexec/xscreensaver/config/kaleidocycle.xml
 libexec/xscreensaver/config/klein.xml
 libexec/xscreensaver/config/lament.xml
 libexec/xscreensaver/config/lavalite.xml
@@ -81,6 +82,7 @@ libexec/xscreensaver/config/polyhedra.xml
 libexec/xscreensaver/config/polytopes.xml
 libexec/xscreensaver/config/providence.xml
 libexec/xscreensaver/config/pulsar.xml
+libexec/xscreensaver/config/quasicrystal.xml
 libexec/xscreensaver/config/queens.xml
 libexec/xscreensaver/config/rubik.xml
 libexec/xscreensaver/config/rubikblocks.xml
@@ -99,6 +101,7 @@ libexec/xscreensaver/config/tangram.xml
 libexec/xscreensaver/config/timetunnel.xml
 libexec/xscreensaver/config/topblock.xml
 libexec/xscreensaver/config/tronbit.xml
+libexec/xscreensaver/config/unknownpleasures.xml
 libexec/xscreensaver/config/voronoi.xml
 libexec/xscreensaver/crackberg
 libexec/xscreensaver/cube21
@@ -133,6 +136,7 @@ libexec/xscreensaver/hypnowheel
 libexec/xscreensaver/jigglypuff
 libexec/xscreensaver/jigsaw
 libexec/xscreensaver/juggler3d
+libexec/xscreensaver/kaleidocycle
 libexec/xscreensaver/klein
 libexec/xscreensaver/lament
 libexec/xscreensaver/lavalite
@@ -151,6 +155,7 @@ libexec/xscreensaver/polyhedra
 libexec/xscreensaver/polytopes
 libexec/xscreensaver/providence
 libexec/xscreensaver/pulsar
+libexec/xscreensaver/quasicrystal
 libexec/xscreensaver/queens
 libexec/xscreensaver/rubik
 libexec/xscreensaver/rubikblocks
@@ -169,6 +174,7 @@ libexec/xscreensaver/tangram
 libexec/xscreensaver/timetunnel
 libexec/xscreensaver/topblock
 libexec/xscreensaver/tronbit
+libexec/xscreensaver/unknownpleasures
 libexec/xscreensaver/voronoi
 man/man6/antinspect.6
 man/man6/antmaze.6
@@ -218,6 +224,7 @@ man/man6/hypnowheel.6
 man/man6/jigglypuff.6
 man/man6/jigsaw.6
 man/man6/juggler3d.6
+man/man6/kaleidocycle.6
 man/man6/klein.6
 man/man6/lament.6
 man/man6/lavalite.6
@@ -236,6 +243,7 @@ man/man6/polyhedra.6
 man/man6/polytopes.6
 man/man6/providence.6
 man/man6/pulsar.6
+man/man6/quasicrystal.6
 man/man6/queens.6
 man/man6/rubik.6
 man/man6/rubikblocks.6
@@ -254,5 +262,6 @@ man/man6/tangram.6
 man/man6/timetunnel.6
 man/man6/topblock.6
 man/man6/tronbit.6
+man/man6/unknownpleasures.6
 man/man6/voronoi.6
 man/man6/xscreensaver-gl-helper.6
