@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2686 2013/07/22 12:00:50 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2687 2013/07/22 12:18:05 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3978,3 +3978,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXfont to 1.4.6 [wiz 2013-07-22]
 	Updated editors/emacs-snapshot to 24.3.50.20130713 [minskim 2013-07-22]
 	Updated devel/py-pyparsing to 2.0.1 [richard 2013-07-22]
+	Updated graphics/py-pydot to 1.0.28 [richard 2013-07-22]
