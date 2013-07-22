@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2688 2013/07/22 16:14:41 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.2689 2013/07/22 16:27:15 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3882,6 +3882,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated news/pan to 0.139nb10 [wiz 2013-07-17]
 	Updated net/mikutter to 0.2.2.1297 [obache 2013-07-17]
 	Updated net/mrtg to 2.17.4 [tron 2013-07-17]
+	Updated net/gupnp-tools to 0.8.6 [drochner 2013-07-17]
 	Updated net/gupnp-dlna to 0.10.2nb1 [drochner 2013-07-17]
 	Updated textproc/p5-Text-Typography to 0.01nb3 [schmonz 2013-07-17]
 	Updated devel/libidn to 1.28 [adam 2013-07-17]
@@ -3979,4 +3980,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs-snapshot to 24.3.50.20130713 [minskim 2013-07-22]
 	Updated devel/py-pyparsing to 2.0.1 [richard 2013-07-22]
 	Updated graphics/py-pydot to 1.0.28 [richard 2013-07-22]
+	Updated audio/py-beets to 1.2.1 [drochner 2013-07-22]
+	Updated x11/xscreensaver to 5.22 [drochner 2013-07-22]
+	Updated multimedia/gstreamer1 to 1.0.8 [drochner 2013-07-22]
+	Updated multimedia/vlc2 to 2.0.7 [drochner 2013-07-22]
 	Updated net/libfetch to 2.34nb2 [jperkin 2013-07-22]
