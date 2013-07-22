@@ -1,0 +1,32 @@
+$NetBSD: patch-ca,v 1.1 2013/07/22 15:01:33 drochner Exp $
+
+if !HAVE_USELOCALE, just define "uselocale", nothing else
+fixes build on NetBSD
+
+--- include/vlc_fixups.h.orig	2013-06-29 12:47:02.000000000 +0000
++++ include/vlc_fixups.h
+@@ -210,23 +210,12 @@ int unsetenv (const char *);
+ 
+ /* locale.h */
+ #ifndef HAVE_USELOCALE
+-#define LC_NUMERIC_MASK  0
+-#define LC_MESSAGES_MASK 0
+-typedef void *locale_t;
++#include <locale.h>
+ static inline locale_t uselocale(locale_t loc)
+ {
+     (void)loc;
+     return NULL;
+ }
+-static inline void freelocale(locale_t loc)
+-{
+-    (void)loc;
+-}
+-static inline locale_t newlocale(int mask, const char * locale, locale_t base)
+-{
+-    (void)mask; (void)locale; (void)base;
+-    return NULL;
+-}
+ #endif
+ 
+ /* Alignment of critical static data structures */
