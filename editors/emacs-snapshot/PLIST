@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2013/05/31 23:20:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.32 2013/07/22 08:13:56 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1695,6 +1695,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/edebug.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/edebug.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-base.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-base.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-core.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-core.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
@@ -1992,6 +1994,8 @@ share/emacs/${EMACS_VERSION}/lisp/ffap.el.gz
 share/emacs/${EMACS_VERSION}/lisp/ffap.elc
 share/emacs/${EMACS_VERSION}/lisp/filecache.el.gz
 share/emacs/${EMACS_VERSION}/lisp/filecache.elc
+share/emacs/${EMACS_VERSION}/lisp/filenotify.el.gz
+share/emacs/${EMACS_VERSION}/lisp/filenotify.elc
 share/emacs/${EMACS_VERSION}/lisp/files-x.el.gz
 share/emacs/${EMACS_VERSION}/lisp/files-x.elc
 share/emacs/${EMACS_VERSION}/lisp/files.el.gz
@@ -2266,10 +2270,6 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/rtree.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/rtree.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/score-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/score-mode.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/shr-color.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/shr-color.elc
-share/emacs/${EMACS_VERSION}/lisp/gnus/shr.el.gz
-share/emacs/${EMACS_VERSION}/lisp/gnus/shr.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-manage.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-manage.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/sieve-mode.el.gz
@@ -2708,6 +2708,8 @@ share/emacs/${EMACS_VERSION}/lisp/net/eudcb-mab.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/eudcb-mab.elc
 share/emacs/${EMACS_VERSION}/lisp/net/eudcb-ph.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/eudcb-ph.elc
+share/emacs/${EMACS_VERSION}/lisp/net/eww.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/eww.elc
 share/emacs/${EMACS_VERSION}/lisp/net/gnutls.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/gnutls.elc
 share/emacs/${EMACS_VERSION}/lisp/net/goto-addr.el.gz
@@ -2760,6 +2762,10 @@ share/emacs/${EMACS_VERSION}/lisp/net/sasl.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/sasl.elc
 share/emacs/${EMACS_VERSION}/lisp/net/secrets.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/secrets.elc
+share/emacs/${EMACS_VERSION}/lisp/net/shr-color.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/shr-color.elc
+share/emacs/${EMACS_VERSION}/lisp/net/shr.el.gz
+share/emacs/${EMACS_VERSION}/lisp/net/shr.elc
 share/emacs/${EMACS_VERSION}/lisp/net/snmp-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/net/snmp-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/net/soap-client.el.gz
@@ -2901,6 +2907,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/old-whitespace.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/old-whitespace.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/options.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/options.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/otodo-mode.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/otodo-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/patcomp.el
 share/emacs/${EMACS_VERSION}/lisp/obsolete/pc-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/pc-mode.elc
@@ -3383,6 +3391,8 @@ share/emacs/${EMACS_VERSION}/lisp/progmodes/pascal.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/pascal.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/perl-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/perl-mode.elc
+share/emacs/${EMACS_VERSION}/lisp/progmodes/prog-mode.el.gz
+share/emacs/${EMACS_VERSION}/lisp/progmodes/prog-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/prolog.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/prolog.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/ps-mode.el.gz
