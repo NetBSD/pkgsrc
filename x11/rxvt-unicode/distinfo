@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.19 2013/01/21 09:16:54 morr Exp $
+$NetBSD: distinfo,v 1.20 2013/07/22 17:55:21 morr Exp $
 
-SHA1 (rxvt-unicode-9.16.tar.bz2) = 1b721969d6a6ed0f84529a29cfff0a05aee015ab
-RMD160 (rxvt-unicode-9.16.tar.bz2) = d316e1ba06e9609417e472f74a0541ca8674424c
-Size (rxvt-unicode-9.16.tar.bz2) = 898089 bytes
+SHA1 (rxvt-unicode-9.18.tar.bz2) = 5d12639c4b17019357ee62c08916b826e5d03259
+RMD160 (rxvt-unicode-9.18.tar.bz2) = 0429b78d85bdedbfa7a33dd749fb5e72582bb75f
+Size (rxvt-unicode-9.18.tar.bz2) = 897170 bytes
 SHA1 (patch-Makefile.in) = 1c2890e2057d062f823f944fc2ecd2258f14b61e
-SHA1 (patch-configure) = 67b631d3b3cb2f3b501dd08fd5c7d2151072017d
+SHA1 (patch-configure) = bd8a6fb21a02f7df6c29a932de10fdc2213ae8b0
 SHA1 (patch-doc_Makefile.in) = 8465193e21878a18ae467dc50a336a65f1bd4de7
+SHA1 (patch-src_perl_tabbed) = 158768ec1fb39fe0c7db3a2b5b0e6690e1fadd6e
