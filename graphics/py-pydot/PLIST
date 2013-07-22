@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/22 12:16:18 richard Exp $
+${PYSITELIB}/dot_parser.py
+${PYSITELIB}/dot_parser.pyc
+${PYSITELIB}/dot_parser.pyo
+${PYSITELIB}/pydot.py
+${PYSITELIB}/pydot.pyc
+${PYSITELIB}/pydot.pyo
