@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/24 22:00:51 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/22 16:14:25 jperkin Exp $
 
 LIB=		fetch
 SRCS=		fetch.c common.c ftp.c http.c file.c
@@ -13,7 +13,7 @@ MKPROFILE=	no
 .include <bsd.own.mk>
 
 CPPFLAGS+=	-I.
-CPPFLAGS+=	-D_LARGEFILE_SOURCE -D_LARGE_FILES
+CPPFLAGS+=	-D_LARGEFILE_SOURCE -D_LARGE_FILES -D_FILE_OFFSET_BITS=64
 
 FETCH_WITH_INET6?=	no
 FETCH_WITH_OPENSSL?=	no
