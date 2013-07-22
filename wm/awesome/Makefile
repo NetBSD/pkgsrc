@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2013/07/05 15:10:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2013/07/22 19:47:18 degroote Exp $
 #
 
-DISTNAME=	awesome-3.4.13
-PKGREVISION=	11
+DISTNAME=	awesome-3.5.1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -25,8 +24,6 @@ CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR:C/\/xdg\/awesome//}
 CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ:Q}
 CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
 
-REPLACE_BASH+=	build-utils/gperf.sh
-
 EGDIR=		${PREFIX}/share/examples/awesome
 CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
 
@@ -47,15 +44,21 @@ BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
+DEPENDS+=		lua-gi-[0-9]*:../../devel/lua-gi
+
 LDFLAGS.SunOS+=		-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gperf/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
