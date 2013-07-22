@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/07/22 19:38:07 degroote Exp $
+
+SHA1 (0.7.1.tar.gz) = ae1268852b38507c9324e89aa3d950602b5ae8e1
+RMD160 (0.7.1.tar.gz) = 87852dfbc6f3f9944df56324aadbaab6e3b2b802
+Size (0.7.1.tar.gz) = 268327 bytes
+SHA1 (patch-Makefile) = ecba51fb9bc78c08e89bebfc981206a2587e63f4
