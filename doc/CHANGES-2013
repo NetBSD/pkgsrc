@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2685 2013/07/22 08:15:41 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.2686 2013/07/22 12:00:50 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/xcb-util-cursor version 0.0.99 [wiz 2013-07-21]
 	Updated x11/libXfont to 1.4.6 [wiz 2013-07-22]
 	Updated editors/emacs-snapshot to 24.3.50.20130713 [minskim 2013-07-22]
+	Updated devel/py-pyparsing to 2.0.1 [richard 2013-07-22]
