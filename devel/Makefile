@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1763 2013/07/22 11:59:53 richard Exp $
+# $NetBSD: Makefile,v 1.1764 2013/07/22 19:40:04 degroote Exp $
 #
 
 COMMENT=	Development utilities
@@ -441,6 +441,7 @@ SUBDIR+=	log4shib
 SUBDIR+=	ltsa
 SUBDIR+=	lua-alt-getopt
 SUBDIR+=	lua-filesystem
+SUBDIR+=	lua-gi
 SUBDIR+=	lua-lpeg
 SUBDIR+=	lua-lrexlib
 SUBDIR+=	lua-lrexlib-onig
