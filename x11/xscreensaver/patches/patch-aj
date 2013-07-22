@@ -1,16 +1,16 @@
-$NetBSD: patch-aj,v 1.3 2010/05/08 16:53:06 tez Exp $
+$NetBSD: patch-aj,v 1.4 2013/07/22 14:24:17 drochner Exp $
 
---- hacks/fireworkx.c.orig	Mon Mar 22 14:35:24 2010
-+++ hacks/fireworkx.c	Mon Mar 22 14:36:56 2010
-@@ -231,7 +231,11 @@
-   f++;
-   s += f->flash/(1+(f->cx - x)*(f->cx - x)+(f->cy - y)*(f->cy - y));
- 
+--- hacks/fireworkx.c.orig	2013-07-05 18:54:55.000000000 +0000
++++ hacks/fireworkx.c
+@@ -141,7 +141,11 @@ static void render_light_map(struct stat
+ 		for (x = 0; x < st->width; x += 2, v += SHELLCOUNT)
+ 		{
+ 			float f;
 +#ifdef HAVE_SQRTF
-   l = sqrtf(s);
+ 			f = sqrtf((fs->cx - x) * (fs->cx - x) + (fs->cy - y) * (fs->cy - y)) + 4.0;
 +#else
-+  l = sqrt(s);
++			f = sqrt((fs->cx - x) * (fs->cx - x) + (fs->cy - y) * (fs->cy - y)) + 4.0;
 +#endif
- 
-   t = l + sim[0];
-   dim[0] = (t > 255 ? 255 : t);	
+ 			f = FLASH_ZOOM / f;
+ 			f += pow(f,0.1) * frand(0.0001); /* dither */
+ 			st->light_map[v] = f;
