@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/22 11:59:53 richard Exp $
+${PYSITELIB}/pyparsing.py
+${PYSITELIB}/pyparsing.pyc
+${PYSITELIB}/pyparsing.pyo
