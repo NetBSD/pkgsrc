@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2011/12/07 20:09:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.39 2013/07/22 14:24:17 drochner Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -72,6 +72,7 @@ libexec/xscreensaver/config/greynetic.xml
 libexec/xscreensaver/config/halftone.xml
 libexec/xscreensaver/config/halo.xml
 libexec/xscreensaver/config/helix.xml
+libexec/xscreensaver/config/hexadrop.xml
 libexec/xscreensaver/config/hopalong.xml
 libexec/xscreensaver/config/ifs.xml
 libexec/xscreensaver/config/imsmap.xml
@@ -167,6 +168,7 @@ libexec/xscreensaver/greynetic
 libexec/xscreensaver/halftone
 libexec/xscreensaver/halo
 libexec/xscreensaver/helix
+libexec/xscreensaver/hexadrop
 libexec/xscreensaver/hopalong
 libexec/xscreensaver/ifs
 libexec/xscreensaver/imsmap
@@ -287,6 +289,7 @@ man/man6/greynetic.6
 man/man6/halftone.6
 man/man6/halo.6
 man/man6/helix.6
+man/man6/hexadrop.6
 man/man6/hopalong.6
 man/man6/ifs.6
 man/man6/imsmap.6
