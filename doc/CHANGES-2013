@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2689 2013/07/22 16:27:15 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.2690 2013/07/22 18:00:50 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/gstreamer1 to 1.0.8 [drochner 2013-07-22]
 	Updated multimedia/vlc2 to 2.0.7 [drochner 2013-07-22]
 	Updated net/libfetch to 2.34nb2 [jperkin 2013-07-22]
+	Updated x11/rxvt-unicode to 9.18 [morr 2013-07-22]
