@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/15 18:34:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/07/22 14:31:35 drochner Exp $
 include/gstreamer-1.0/gst/basecamerabinsrc/gstbasecamerasrc.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabin-enum.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstcamerabinpreview.h
@@ -46,6 +46,7 @@ lib/gstreamer-1.0/libgstpcapparse.la
 lib/gstreamer-1.0/libgstpnm.la
 lib/gstreamer-1.0/libgstrawparse.la
 lib/gstreamer-1.0/libgstremovesilence.la
+lib/gstreamer-1.0/libgstrfbsrc.la
 lib/gstreamer-1.0/libgstrtpmux.la
 lib/gstreamer-1.0/libgstrtpvp8.la
 lib/gstreamer-1.0/libgstscaletempoplugin.la
