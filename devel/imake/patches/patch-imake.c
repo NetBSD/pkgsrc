@@ -1,8 +1,8 @@
-$NetBSD: patch-imake.c,v 1.3 2013/07/13 07:43:59 obache Exp $
+$NetBSD: patch-imake.c,v 1.4 2013/07/23 06:48:21 wiz Exp $
 
---- imake.c.orig	2013-06-13 22:21:17.000000000 +0000
+--- imake.c.orig	2013-07-23 04:53:04.000000000 +0000
 +++ imake.c
-@@ -1336,54 +1336,8 @@ get_gcc_version(FILE *inFile, char *name
+@@ -1337,54 +1337,8 @@ get_gcc_version(FILE *inFile, char *name
  static boolean
  get_gcc(char *cmd)
  {
@@ -58,4 +58,4 @@ $NetBSD: patch-imake.c,v 1.3 2013/07/13 07:43:59 obache Exp $
 +	return TRUE;
  }
  
- #if defined CROSSCOMPILE || !defined __UNIXOS2__
+ #ifdef CROSSCOMPILE
