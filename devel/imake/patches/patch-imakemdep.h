@@ -1,4 +1,4 @@
-$NetBSD: patch-imakemdep.h,v 1.4 2013/07/18 08:01:30 dholland Exp $
+$NetBSD: patch-imakemdep.h,v 1.5 2013/07/23 06:48:21 wiz Exp $
 
  - Configure for pkgsrc: never set FIXUP_CPP_WHITESPACE as pkgsrc now
 always uses a whitespace-preserving cpp and fixing it twice causes
@@ -12,18 +12,18 @@ via RAWCPP defined on the command line.
  - Do not pass -m32 to cpp; it is not portable, valid, or even a
 reasonable thing to do.
 
---- imakemdep.h.orig	2012-03-08 05:47:32.000000000 +0000
+--- imakemdep.h.orig	2013-07-23 04:53:04.000000000 +0000
 +++ imakemdep.h
-@@ -237,7 +237,7 @@ in this Software without prior written a
+@@ -229,7 +229,7 @@ in this Software without prior written a
   *     all colons).  One way to tell if you need this is to see whether or not
   *     your Makefiles have no tabs in them and lots of @@ strings.
   */
--#  if defined(sun) || defined(SYSV) || defined(SVR4) || defined(hcx) || defined(WIN32) || defined(__SCO__) || (defined(AMOEBA) && defined(CROSS_COMPILE)) || defined(__QNX__) || defined(__sgi) || defined(__UNIXOS2__) || defined(__UNIXWARE__)
+-#  if defined(sun) || defined(SYSV) || defined(SVR4) || defined(hcx) || defined(WIN32) || defined(__SCO__) || (defined(AMOEBA) && defined(CROSS_COMPILE)) || defined(__QNX__) || defined(__sgi) || defined(__UNIXWARE__)
 +#  if 0
  #   define FIXUP_CPP_WHITESPACE
  #  endif
  #  ifdef WIN32
-@@ -265,87 +265,7 @@ in this Software without prior written a
+@@ -257,79 +257,7 @@ in this Software without prior written a
   *     If the cpp you need is not in /lib/cpp, define DEFAULT_CPP.
   */
  #  if !defined (CROSSCOMPILE) || defined (CROSSCOMPILE_CPP)
@@ -56,9 +56,6 @@ reasonable thing to do.
 -#   if defined(_IBMR2) && !defined(DEFAULT_CPP)
 -#    define DEFAULT_CPP "/usr/ccs/lib/cpp"
 -#   endif
--#   if defined(sun) && (defined(SVR4) || defined(__svr4__) || defined(__SVR4) || defined(__sol__))
--#    define DEFAULT_CPP "/usr/ccs/lib/cpp"
--#   endif
 -#   ifdef __bsdi__
 -#    define DEFAULT_CPP "/usr/bin/cpp"
 -#   endif
@@ -86,10 +83,6 @@ reasonable thing to do.
 -#   ifdef __minix_vmd
 -#    define DEFAULT_CPP "/usr/lib/cpp"
 -#   endif
--#   if defined(__UNIXOS2__)
--/* expects cpp in PATH */
--#    define DEFAULT_CPP "cpp"
--#   endif
 -#   ifdef __CYGWIN__
 -#    define DEFAULT_CC "gcc"
 -#    define DEFAULT_CPP "/usr/bin/cpp"
@@ -107,12 +100,11 @@ reasonable thing to do.
 -#     define DEFAULT_CC "gcc"
 -#    endif
 -#   endif
--
 +#    define DEFAULT_CPP RAWCPP
+ 
  #  endif /* !defined (CROSSCOMPILE) || defined (CROSSCOMPILE_CPP) */
  /*
-  * Step 5:  cpp_argv
-@@ -367,7 +287,7 @@ in this Software without prior written a
+@@ -352,7 +280,7 @@ in this Software without prior written a
  #  define	ARGUMENTS 50	/* number of arguments in various arrays */
  #  if !defined (CROSSCOMPILE) || defined (CROSSCOMPILE_CPP)
  const char *cpp_argv[ARGUMENTS] = {
@@ -121,7 +113,7 @@ reasonable thing to do.
  	"-I.",		/* add current directory to include path */
  #   if !defined(__NetBSD_Version__) || __NetBSD_Version__ < 103080000
  #    ifdef unix
-@@ -380,9 +300,6 @@ const char *cpp_argv[ARGUMENTS] = {
+@@ -365,9 +293,6 @@ const char *cpp_argv[ARGUMENTS] = {
      defined(__GNUC__) || defined(__GLIBC__)
  #    ifdef __i386__
  	"-D__i386__",
