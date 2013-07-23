@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.55 2013/05/17 03:40:02 dsainty Exp $
+# $NetBSD: Linux.mk,v 1.56 2013/07/23 13:01:05 ryoon Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -75,7 +75,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 .endif
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
-_OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
+_OPSYS_HAS_OSSAUDIO=	no	# libossaudio is unavailable
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type
