@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2696 2013/07/23 06:50:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2697 2013/07/23 10:56:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3992,3 +3992,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/imake to 1.0.6 [wiz 2013-07-23]
 	Updated devel/makedepend to 1.0.5 [wiz 2013-07-23]
 	Updated x11/xorg-cf-files to 1.0.5 [wiz 2013-07-23]
+	Updated www/php-tt-rss to 1.9 [ryoon 2013-07-23]
