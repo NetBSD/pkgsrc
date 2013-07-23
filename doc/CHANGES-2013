@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2692 2013/07/22 19:48:21 degroote Exp $
+$NetBSD: CHANGES-2013,v 1.2693 2013/07/23 06:45:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/rxvt-unicode to 9.18 [morr 2013-07-22]
 	Added devel/lua-gi version 0.7.1 [degroote 2013-07-22]
 	Updated wm/awesome to 3.5.1 [degroote 2013-07-22]
+	Updated x11/videoproto to 2.3.2 [wiz 2013-07-23]
