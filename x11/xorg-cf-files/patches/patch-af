@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2012/07/02 15:55:03 jperkin Exp $
+$NetBSD: patch-af,v 1.5 2013/07/23 06:50:39 wiz Exp $
 
 Run-time path fix for Solaris for the X client libraries.  Without this
 patch, libraries such as libXext.so will not contain a run-time link path
@@ -9,30 +9,30 @@ Disable Solaris64bitSubdir, at least until multi-arch is supported.
 
 Use pkgsrc CC, CXX, CFLAGS and INSTALL.
 
---- sun.cf.orig	Fri Oct 16 21:45:42 2009
-+++ sun.cf	Tue Jun 26 09:27:13 2012
-@@ -430,7 +430,7 @@
- #  endif
- # endif
- # if OSMinorVersion > 3
+--- sun.cf.orig	2013-07-23 05:23:14.000000000 +0000
++++ sun.cf
+@@ -432,7 +432,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ # if OSMinorVersion > 10
+ #  define InstallCmd	    /usr/gnu/bin/install
+ # elif OSMinorVersion > 3
 -#  define InstallCmd	    /usr/ucb/install
 +#  define InstallCmd	    @@INSTALL@@
  # endif
  #ifndef LargefileDefines
  # if (OSMajorVersion > 5) || (OSMajorVersion == 5 && OSMinorVersion >= 6)
-@@ -669,19 +669,19 @@
+@@ -682,29 +682,29 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
  # endif
  # if HasGcc2
  #  ifndef CcCmd
 -#   define CcCmd gcc
 +#   define CcCmd @@PKGSRC_CC@@
- #  endif
++#  endif
 +#  ifndef CppCmd
 +#   define CppCmd @@PKGSRC_CPP@@
 +#  endif
 +#  ifndef CplusplusCmd
 +#   define CplusplusCmd @@PKGSRC_CXX@@
-+#  endif
+ #  endif
  #  ifndef AsCmd
  #   define AsCmd CcCmd -c -x assembler
  #  endif
@@ -48,7 +48,6 @@ Use pkgsrc CC, CXX, CFLAGS and INSTALL.
  #  endif
  #  if !defined(SharedLibraryLoadFlags) && !defined(SharedLibraryLdCmd)
  #   if OSMajorVersion == 5 && OSMinorVersion > 6 && defined(i386Architecture)
-@@ -688,10 +688,10 @@
      /* This is to work around what appears to be a PIC bug in some gcc/egcs
         versions that shows up with the Solaris 7/x86 <ctype.h>. */
  #    define SharedLibraryLdCmd $(LD)
@@ -61,7 +60,7 @@ Use pkgsrc CC, CXX, CFLAGS and INSTALL.
  #   endif
  #  endif
  # else
-@@ -840,7 +840,7 @@
+@@ -853,7 +853,7 @@ MAPFILES_FOR_PROGS = Mapfile_BssAlign Ma
  # endif
  #endif
  
