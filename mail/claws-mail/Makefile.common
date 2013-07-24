@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2011/06/27 19:46:50 gls Exp $
+# $NetBSD: Makefile.common,v 1.12 2013/07/24 15:26:11 drochner Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v3
 DISTINFO_FILE=	${.CURDIR}/../../mail/claws-mail/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/claws-mail/patches
 
-.include	"../../mail/claws-mail/openssl.mk"
-
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES+=		c
 USE_LIBTOOL=		YES
@@ -28,26 +26,35 @@ CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 
 CONFIGURE_ARGS+=        --enable-enchant
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--enable-compface
-CONFIGURE_ARGS+=	--disable-smime
-CONFIGURE_ARGS+=	--disable-gpgme
 CONFIGURE_ARGS+=	--disable-pgpcore-plugin
 CONFIGURE_ARGS+=	--disable-pgpmime-plugin
 CONFIGURE_ARGS+=	--disable-pgpinline-plugin
-CONFIGURE_ARGS+=	--disable-trayicon-plugin
-CONFIGURE_ARGS+=	--disable-image-viewer-plugin
-CONFIGURE_ARGS+=	--disable-clamav-plugin
-CONFIGURE_ARGS+=	--disable-dillo-viewer-plugin
-CONFIGURE_ARGS+=	--disable-mathml-viewer-plugin
-CONFIGURE_ARGS+=	--disable-gnomeprint
 BUILDLINK_ABI_DEPENDS.libetpan+=	libetpan>=0.57
 CONFIGURE_ARGS+=	--enable-libetpan
 CONFIGURE_ARGS+=	--disable-bogofilter-plugin
 CONFIGURE_ARGS+=	--disable-spamassassin-plugin
 
+CONFIGURE_ARGS+=	--disable-acpi_notifier-plugin
+CONFIGURE_ARGS+=	--disable-address_keeper-plugin
+CONFIGURE_ARGS+=	--disable-archive-plugin
+CONFIGURE_ARGS+=	--disable-att_remover-plugin
+CONFIGURE_ARGS+=	--disable-attachwarner-plugin
+CONFIGURE_ARGS+=	--disable-bsfilter-plugin
+CONFIGURE_ARGS+=	--disable-clamd-plugin
+CONFIGURE_ARGS+=	--disable-fancy-plugin
+CONFIGURE_ARGS+=	--disable-fetchinfo-plugin
+CONFIGURE_ARGS+=	--disable-mailmbox-plugin
+CONFIGURE_ARGS+=	--disable-newmail-plugin
+CONFIGURE_ARGS+=	--disable-notification-plugin
+CONFIGURE_ARGS+=	--disable-rssyl-plugin
+CONFIGURE_ARGS+=	--disable-spam_report-plugin
+CONFIGURE_ARGS+=	--disable-tnef_parse-plugin
+CONFIGURE_ARGS+=	--disable-perl-plugin
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/libetpan/buildlink3.mk"
+#.include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
