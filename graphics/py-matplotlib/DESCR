@@ -8,3 +8,6 @@ interface familiar to python users, and several high resolution output
 formats are supported.
 
 Tutorial: http://matplotlib.sourceforge.net/tutorial.html
+
+This is the base package which supports only non-GUI graphics output.
+For interactive graphics, install one of graphics/py-matplotlib-{gtk2,tk}.
