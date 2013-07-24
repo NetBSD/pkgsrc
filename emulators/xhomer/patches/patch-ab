@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2013/07/24 21:15:54 shattered Exp $
+
+--- term_x11.c.orig	2003-12-13 16:06:36.000000000 +0000
++++ term_x11.c
+@@ -61,9 +61,9 @@
+ #include <sys/shm.h>
+ #endif
+ #ifdef DGA
+-#include <X11/extensions/xf86dga.h>
++#include <X11/extensions/Xxf86dga.h>
+ #ifndef DGA2
+-#include <X11/extensions/xf86vmode.h>
++#include <X11/extensions/Xxf86vmode.h>
+ #endif
+ #include <unistd.h>
+ #endif
