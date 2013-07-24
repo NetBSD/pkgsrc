@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/04/08 17:22:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/07/24 11:03:59 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -146,6 +146,9 @@ ${PYSITELIB}/veusz/embed.pyo
 ${PYSITELIB}/veusz/embed_remote.py
 ${PYSITELIB}/veusz/embed_remote.pyc
 ${PYSITELIB}/veusz/embed_remote.pyo
+${PYSITELIB}/veusz/examples/axis_function.vsz
+${PYSITELIB}/veusz/examples/axis_function_linked.csv
+${PYSITELIB}/veusz/examples/axis_function_linked.vsz
 ${PYSITELIB}/veusz/examples/bar_labels.dat
 ${PYSITELIB}/veusz/examples/bar_labels.vsz
 ${PYSITELIB}/veusz/examples/bar_options.vsz
@@ -157,6 +160,7 @@ ${PYSITELIB}/veusz/examples/contour.vsz
 ${PYSITELIB}/veusz/examples/dataset_operations.vsz
 ${PYSITELIB}/veusz/examples/datebar.dat
 ${PYSITELIB}/veusz/examples/datebar.vsz
+${PYSITELIB}/veusz/examples/dsexpressions.vsz
 ${PYSITELIB}/veusz/examples/embedexample.py
 ${PYSITELIB}/veusz/examples/example_csv.csv
 ${PYSITELIB}/veusz/examples/example_csv.vsz
@@ -164,9 +168,11 @@ ${PYSITELIB}/veusz/examples/example_import.vsz
 ${PYSITELIB}/veusz/examples/example_import_1.dat
 ${PYSITELIB}/veusz/examples/example_import_2.dat
 ${PYSITELIB}/veusz/examples/fit.vsz
+${PYSITELIB}/veusz/examples/fixed_aspect.vsz
 ${PYSITELIB}/veusz/examples/functions.vsz
 ${PYSITELIB}/veusz/examples/hatching.vsz
 ${PYSITELIB}/veusz/examples/histo.vsz
+${PYSITELIB}/veusz/examples/histogramming.vsz
 ${PYSITELIB}/veusz/examples/inside.vsz
 ${PYSITELIB}/veusz/examples/isolatedaxes.vsz
 ${PYSITELIB}/veusz/examples/labels.dat
@@ -336,6 +342,9 @@ ${PYSITELIB}/veusz/widgets/axis.pyo
 ${PYSITELIB}/veusz/widgets/axisbroken.py
 ${PYSITELIB}/veusz/widgets/axisbroken.pyc
 ${PYSITELIB}/veusz/widgets/axisbroken.pyo
+${PYSITELIB}/veusz/widgets/axisfunction.py
+${PYSITELIB}/veusz/widgets/axisfunction.pyc
+${PYSITELIB}/veusz/widgets/axisfunction.pyo
 ${PYSITELIB}/veusz/widgets/axisticks.py
 ${PYSITELIB}/veusz/widgets/axisticks.pyc
 ${PYSITELIB}/veusz/widgets/axisticks.pyo
@@ -430,6 +439,7 @@ ${PYSITELIB}/veusz/windows/datanavigator.py
 ${PYSITELIB}/veusz/windows/datanavigator.pyc
 ${PYSITELIB}/veusz/windows/datanavigator.pyo
 ${PYSITELIB}/veusz/windows/icons/button_axis-broken.svg
+${PYSITELIB}/veusz/windows/icons/button_axis-function.svg
 ${PYSITELIB}/veusz/windows/icons/button_axis.svg
 ${PYSITELIB}/veusz/windows/icons/button_bar.svg
 ${PYSITELIB}/veusz/windows/icons/button_boxplot.svg
