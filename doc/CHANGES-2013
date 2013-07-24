@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2701 2013/07/24 16:17:27 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.2702 2013/07/24 22:16:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4004,3 +4004,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/grilo-plugins to 0.2.8 [drochner 2013-07-24]
 	Updated www/liferea-current to 1.8.15 [drochner 2013-07-24]
 	Updated mail/claws-mail to 3.9.2 [drochner 2013-07-24]
+	Updated pkgtools/mksandbox to 1.3 [jperkin 2013-07-24]
