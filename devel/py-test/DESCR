@@ -1,0 +1,11 @@
+The ``py.test`` testing tool makes it easy to write small tests, yet
+scales to support complex functional testing.  It provides
+- auto-discovery of test modules and functions,
+- detailed info on failing `assert statements
+  (no need to remember ``self.assert*`` names)
+- modular fixtures for managing small or parametrized long-lived
+  test resources.
+- multi-paradigm support: you can use ``py.test`` to run test suites based
+  on unittest (or trial), nose
+- single-source compatibility to Python2.4 all the way up to Python3.3,
+  PyPy-1.9 and Jython-2.5.1.
