@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2698 2013/07/23 13:30:09 hauke Exp $
+$NetBSD: CHANGES-2013,v 1.2699 2013/07/24 06:36:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3994,3 +3994,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xorg-cf-files to 1.0.5 [wiz 2013-07-23]
 	Updated www/php-tt-rss to 1.9 [ryoon 2013-07-23]
 	Updated net/netatalk to 2.2.5 [hauke 2013-07-23]
+	Updated x11/iceauth to 1.0.6 [wiz 2013-07-24]
