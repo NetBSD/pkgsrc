@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1764 2013/07/22 19:40:04 degroote Exp $
+# $NetBSD: Makefile,v 1.1765 2013/07/24 10:49:26 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -1415,6 +1415,7 @@ SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
+SUBDIR+=	py-py
 SUBDIR+=	py-pyev
 SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysvn
@@ -1432,6 +1433,7 @@ SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sysctl
 SUBDIR+=	py-tabular
+SUBDIR+=	py-test
 SUBDIR+=	py-testtools
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
