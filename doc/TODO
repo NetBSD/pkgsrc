@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12422 2013/07/24 03:59:28 taca Exp $
+$NetBSD: TODO,v 1.12423 2013/07/24 11:26:22 drochner Exp $
 
 Suggested new packages
 ======================
@@ -554,7 +554,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o genius-1.0.17
 	o gentoo-0.20.1
 	o gfract-0.33
 	o ghc-7.6
@@ -611,7 +610,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.0.0
 	o gramps3-3.4.4
 	o graphviz-2.30.1
-	o grilo-plugins-0.2.8
 	o groff-1.22.2
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
@@ -1079,7 +1077,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vala-0.20.1
 	o vbetool-1.1
 	o vera-1.17
-	o veusz-1.18
 	o vfu-4.09
 	o vicq-0.4.2
 	o vifm-0.7.5
