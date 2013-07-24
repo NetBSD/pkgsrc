@@ -1,8 +1,0 @@
-The Dillo HTML Viewer plugin is an HTML renderer plugin for Claws
-Mail. It features:
-
-	* Basic rendering of HTML message parts
-	* Optional fetching and displaying of remote images
-	* Browsing the web from within of Claws Mail
-
-It uses Dillo's --local option by default for safe browsing.
