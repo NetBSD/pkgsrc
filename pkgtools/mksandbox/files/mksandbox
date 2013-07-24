@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.5 2013/07/20 10:20:42 jperkin Exp $
+# $NetBSD: mksandbox,v 1.6 2013/07/24 22:16:26 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -150,7 +150,7 @@ SunOS)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/xpg4/bin/sed
-	sandboxMountDirs="/bin /sbin /kernel /lib /proc /opt/SUNWspro /usr/X11R6 /usr/5bin /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/sadm /usr/ucb /usr/ucblib /usr/xpg4 /var/mail /var/sadm"
+	sandboxMountDirs="/bin /sbin /kernel /lib /proc /opt/SUNWspro /usr/X11R6 /usr/5bin /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/sadm /usr/sfw /usr/ucb /usr/ucblib /usr/xpg4 /var/mail /var/sadm"
 	sandboxEmptyDirs="$sandboxEmptyDirs /usr/tmp /var/tmp"
 	;;
 *)
@@ -265,10 +265,8 @@ Darwin|FreeBSD)
 	$mountprog -t devfs devfs $sandbox/dev
 	;;
 SunOS)
-	/usr/sbin/devfsadm -r $sandbox
-	if [ -f /usr/ucblib/ucblinks.awk -a -x /usr/ucb/ucblinks ]; then
-		/usr/ucb/ucblinks -r $sandbox
-	fi
+	$mountprog -F lofs -r /dev $sandbox/dev
+	$mountprog -F fd fd $sandbox/dev/fd
 	;;
 Linux)
 	$mountprog $mountflags /dev $sandbox/dev
@@ -319,10 +317,13 @@ echo "Making /tmp in $sandbox"
 $mkdirprog $sandbox/tmp $sandbox/var/tmp
 $chmodprog 1777 $sandbox/tmp $sandbox/var/tmp
 
-echo "Making /var/games in $sandbox"
-$mkdirprog $sandbox/var/games
-$chownprog games:games $sandbox/var/games
-$chmodprog 2775 $sandbox/var/games
+$idprog games >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+	echo "Making /var/games in $sandbox"
+	$mkdirprog $sandbox/var/games
+	$chownprog games:games $sandbox/var/games
+	$chmodprog 2775 $sandbox/var/games
+fi
 
 for d in $sandboxEmptyDirs; do
 	test -d $d || continue
@@ -415,6 +416,10 @@ xmount)
 	Linux)
 		$mountprog $mountflags /dev \$sandbox/dev
 		;;
+	SunOS)
+		$mountprog -F lofs -r /dev \$sandbox/dev
+		$mountprog -F fd fd \$sandbox/dev/fd
+		;;
 	esac
 	;;
 xumount)
@@ -428,6 +433,10 @@ xumount)
 	done
 	case \$opsys in
 	Darwin|FreeBSD|Linux)
+		umount \$sandbox/dev
+		;;
+	SunOS)
+		umount \$sandbox/dev/fd
 		umount \$sandbox/dev
 		;;
 	esac
