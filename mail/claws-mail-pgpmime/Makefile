@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2013/06/06 12:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/07/24 15:29:22 drochner Exp $
 #
 
 PLUGIN_NAME=	pgpmime
-PKGREVISION=	8
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Handles PGP/MIME signed and/or encrypted mails
 
-CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-pgpcore-plugin
 CONFIGURE_ARGS+=	--enable-pgpmime-plugin
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/06/04 22:16:34 tron Exp $
+# $NetBSD: Makefile,v 1.28 2013/07/24 15:29:22 drochner Exp $
 #
 
 PLUGIN_NAME=	bogofilter
-PKGREVISION=	4
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
