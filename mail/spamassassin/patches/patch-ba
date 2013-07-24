@@ -1,0 +1,25 @@
+$NetBSD: patch-ba,v 1.4 2013/07/24 16:17:02 drochner Exp $
+
+prepare for SUBST
+
+--- sa-update.raw.orig	2011-06-06 23:59:19.000000000 +0000
++++ sa-update.raw
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w -T
++#!/usr/pkg/bin/perl -w -T
+ 
+ # <@LICENSE>
+ # Licensed to the Apache Software Foundation (ASF) under one or more
+@@ -281,10 +281,10 @@ my $GPGPath;
+ if ($GPG_ENABLED || $opt{'import'}) {
+   # find GPG in the PATH
+   # bug 4958: for *NIX it's "gpg", in Windows it's "gpg.exe"
+-  $GPGPath = 'gpg' . $Config{_exe};
++  $GPGPath = '@GPGPATH@' . $Config{_exe};
+   dbg("gpg: Searching for '$GPGPath'");
+ 
+-  if ($GPGPath = Mail::SpamAssassin::Util::find_executable_in_env_path($GPGPath)) {
++  if (-f $GPGPath) {
+     dbg("gpg: found $GPGPath");
+ 
+     # bug 5030: if GPGPath has a space, put it in quotes
