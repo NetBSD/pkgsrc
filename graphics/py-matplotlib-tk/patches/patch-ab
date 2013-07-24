@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2012/12/17 11:52:43 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2013/07/24 11:13:56 drochner Exp $
 
---- setup.py.orig	2012-11-08 02:24:12.000000000 +0000
+--- setup.py.orig	2013-03-26 13:04:37.000000000 +0000
 +++ setup.py
 @@ -141,12 +141,12 @@ if not check_for_numpy(__version__numpy_
  if not check_for_freetype():
@@ -37,10 +37,10 @@ $NetBSD: patch-ab,v 1.6 2012/12/17 11:52:43 drochner Exp $
          build_gtkagg(ext_modules, packages)
          rc['backend'] = 'GTKAgg'
  
-@@ -322,12 +322,12 @@ distrib = setup(name="matplotlib",
-       interfaces and hardcopy output formats.  There is a 'pylab' mode
+@@ -323,12 +323,12 @@ distrib = setup(name="matplotlib",
        which emulates matlab graphics
        """,
+       download_url="https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-{0}/matplotlib-{0}.tar.gz".format(__version__),
 -      packages = packages,
 +#      packages = packages,
        platforms='any',
