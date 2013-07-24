@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/03/15 19:10:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/07/24 11:15:55 drochner Exp $
 bin/genius
 ${PLIST.x11}bin/gnome-genius
 include/genius/compil.h
@@ -74,7 +74,6 @@ share/gnome/help/genius/C/figures/line_plot_graph.png
 share/gnome/help/genius/C/figures/parametric.png
 share/gnome/help/genius/C/figures/parametric_graph.png
 share/gnome/help/genius/C/figures/surface_graph.png
-share/gnome/help/genius/C/gel-function-list.xml
 share/gnome/help/genius/C/genius.xml
 share/gnome/help/genius/C/legal.xml
 share/gnome/help/genius/cs/figures/genius_window.png
