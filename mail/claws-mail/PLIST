@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/07/02 19:07:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/07/24 15:26:11 drochner Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -22,9 +22,11 @@ include/claws-mail/addrindex.h
 include/claws-mail/addritem.h
 include/claws-mail/addrquery.h
 include/claws-mail/addrselect.h
+include/claws-mail/advsearch.h
 include/claws-mail/alertpanel.h
 include/claws-mail/autofaces.h
 include/claws-mail/browseldap.h
+include/claws-mail/claws-features.h
 include/claws-mail/codeconv.h
 include/claws-mail/common/base64.h
 include/claws-mail/common/claws.h
@@ -54,7 +56,6 @@ include/claws-mail/common/version.h
 include/claws-mail/common/xml.h
 include/claws-mail/common/xmlprops.h
 include/claws-mail/compose.h
-include/claws-mail/config.h
 include/claws-mail/crash.h
 include/claws-mail/customheader.h
 include/claws-mail/displayheader.h
@@ -142,6 +143,7 @@ include/claws-mail/matcher.h
 include/claws-mail/matcher_parser.h
 include/claws-mail/matcher_parser_lex.h
 include/claws-mail/matcher_parser_parse.h
+include/claws-mail/matchertypes.h
 include/claws-mail/mbox.h
 include/claws-mail/message_search.h
 include/claws-mail/messageview.h
@@ -191,6 +193,7 @@ include/claws-mail/privacy.h
 include/claws-mail/procheader.h
 include/claws-mail/procmime.h
 include/claws-mail/procmsg.h
+include/claws-mail/proctypes.h
 include/claws-mail/quote_fmt.h
 include/claws-mail/quote_fmt_lex.h
 include/claws-mail/quote_fmt_parse.h
@@ -210,6 +213,7 @@ include/claws-mail/undo.h
 include/claws-mail/unmime.h
 include/claws-mail/uri_opener.h
 include/claws-mail/vcard.h
+include/claws-mail/viewtypes.h
 include/claws-mail/wizard.h
 lib/pkgconfig/claws-mail.pc
 man/man1/claws-mail.1
@@ -230,6 +234,7 @@ share/locale/en_GB/LC_MESSAGES/claws-mail.mo
 share/locale/es/LC_MESSAGES/claws-mail.mo
 share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
+share/locale/he/LC_MESSAGES/claws-mail.mo
 share/locale/hu/LC_MESSAGES/claws-mail.mo
 share/locale/id_ID/LC_MESSAGES/claws-mail.mo
 share/locale/it/LC_MESSAGES/claws-mail.mo
