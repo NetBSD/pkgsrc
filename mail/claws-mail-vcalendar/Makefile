@@ -1,29 +1,17 @@
-# $NetBSD: Makefile,v 1.43 2013/06/06 12:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/07/24 15:29:22 drochner Exp $
 #
 
-DISTNAME=	vcalendar-2.0.13
-PKGNAME=	claws-mail-vcalendar-2.0.13
-PKGREVISION=	11
-CATEGORIES=	mail
-MASTER_SITES=	http://claws-mail.org/downloads/plugins/
+PLUGIN_NAME=    vcalendar
+.include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enable vCalendar message handling
 
-#PLIST_SRC+=	PLIST
+USE_TOOLS+=	perl
+
+CONFIGURE_ARGS+= --enable-${PLUGIN_NAME}-plugin
+PLIST_SRC+=	PLIST
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 
-.include "../../mk/bsd.prefs.mk"
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES+=	c
-
-.include "../../mail/claws-mail/Makefile.vers"
-.include "../../mail/claws-mail/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,27 +1,16 @@
-# $NetBSD: Makefile,v 1.38 2013/06/06 12:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2013/07/24 15:29:22 drochner Exp $
 #
 
-DISTNAME=	notification_plugin-0.30
-PKGNAME=	claws-mail-notification-0.30
-PKGREVISION=	8
-CATEGORIES=	mail
-MASTER_SITES=	http://claws-mail.org/downloads/plugins/
+PLUGIN_NAME=    notification
+.include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Provides various ways to notify the user of new and unread email
 
+CONFIGURE_ARGS+= --enable-${PLUGIN_NAME}-plugin
+
+PLIST_SRC+=	PLIST
+
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 
-.include "../../mk/bsd.prefs.mk"
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES+=	c
-
-.include "../../mail/claws-mail/Makefile.vers"
-.include "../../mail/claws-mail/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
