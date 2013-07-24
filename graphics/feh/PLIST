@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/03/15 18:43:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/07/24 11:01:59 drochner Exp $
 bin/feh
 bin/feh-cam
 bin/gen-cam-menu
@@ -16,7 +16,8 @@ share/doc/feh/examples/themes
 share/feh/fonts/black.style
 share/feh/fonts/menu.style
 share/feh/fonts/yudit.ttf
-share/feh/images/logo.svg
+share/feh/images/feh.png
+share/feh/images/feh.svg
 share/feh/images/menubg_aluminium.png
 share/feh/images/menubg_aqua.png
 share/feh/images/menubg_black.png
