@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2013/04/10 16:29:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/07/24 11:22:59 drochner Exp $
 lib/grilo-0.2/grl-apple-trailers.xml
 lib/grilo-0.2/grl-bliptv.xml
 lib/grilo-0.2/grl-bookmarks.xml
 lib/grilo-0.2/grl-filesystem.xml
-lib/grilo-0.2/grl-flickr.xml
 lib/grilo-0.2/grl-gravatar.xml
 lib/grilo-0.2/grl-jamendo.xml
 lib/grilo-0.2/grl-lastfm-albumart.xml
 lib/grilo-0.2/grl-local-metadata.xml
+lib/grilo-0.2/grl-magnatune.xml
 lib/grilo-0.2/grl-metadata-store.xml
 lib/grilo-0.2/grl-optical-media.xml
 lib/grilo-0.2/grl-podcasts.xml
@@ -18,11 +18,11 @@ lib/grilo-0.2/libgrlappletrailers.la
 lib/grilo-0.2/libgrlbliptv.la
 lib/grilo-0.2/libgrlbookmarks.la
 lib/grilo-0.2/libgrlfilesystem.la
-lib/grilo-0.2/libgrlflickr.la
 lib/grilo-0.2/libgrlgravatar.la
 lib/grilo-0.2/libgrljamendo.la
 lib/grilo-0.2/libgrllastfm-albumart.la
 lib/grilo-0.2/libgrllocalmetadata.la
+lib/grilo-0.2/libgrlmagnatune.la
 lib/grilo-0.2/libgrlmetadatastore.la
 lib/grilo-0.2/libgrloptical-media.la
 lib/grilo-0.2/libgrlpodcasts.la
