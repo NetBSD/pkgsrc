@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2013/06/06 12:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2013/07/24 11:13:56 drochner Exp $
 #
 
-DISTNAME=		matplotlib-1.2.0
-PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-1.2.0
-PKGREVISION=		4
+DISTNAME=		matplotlib-1.2.1
+PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-1.2.1
 CATEGORIES=		graphics python
 MASTER_SITES=		https://github.com/downloads/matplotlib/matplotlib/
 FETCH_USING=		curl
