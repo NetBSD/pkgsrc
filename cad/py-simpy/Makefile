@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 13:25:15 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/07/24 10:54:14 drochner Exp $
 #
 
-DISTNAME=		SimPy-2.1.0
+DISTNAME=		SimPy-2.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=		cad math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=simpy/} \
@@ -16,9 +16,9 @@ PYDISTUTILSPKG=	yes
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib
 
-do-test:
-	${RUN} cd ${WRKSRC}; \
-	${SETENV} ${TEST_ENV} ${PYTHONBIN} SimPy/testSimPy.py
+# needs py-test (pkgsrc/devel/py-test)
+#do-test:
+#	${SETENV} ${TEST_ENV} ${PYTHONBIN} -c "import SimPy; SimPy.test()"
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
