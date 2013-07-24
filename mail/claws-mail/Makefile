@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2013/06/06 12:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2013/07/24 15:26:11 drochner Exp $
 
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/claws-mail
@@ -6,7 +6,6 @@ INSTALLATION_DIRS+=	share/claws-mail
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	12
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X based e-mail and netnews client
@@ -18,6 +17,8 @@ PKGCONFIG_OVERRIDE+=	claws-mail.pc.in
 
 PKG_SYSCONFSUBDIR=	claws-mail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+CONFIGURE_ENV+=	ac_cv_path_GPGME_CONFIG=no
 
 .include "../../mk/bsd.prefs.mk"
 
