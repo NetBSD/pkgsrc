@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2013/05/31 12:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2013/07/24 16:17:02 drochner Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.3.2
 PKGNAME=	spamassassin-3.3.2
@@ -29,7 +29,6 @@ PLIST_SUBST+=   RULESARCHIVE=${RULESARCHIVE:Q}
 PLIST_SUBST+=   RULESARCHIVEASC=${RULESARCHIVEASC:Q}
 PLIST_SUBST+=   RULESARCHIVESHA=${RULESARCHIVESHA:Q}
 
-DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
