@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.3 2013/07/24 15:26:11 drochner Exp $
+
+--- src/plugins/pgpcore/sgpgme.c.orig	2013-05-08 08:46:17.000000000 +0000
++++ src/plugins/pgpcore/sgpgme.c
+@@ -271,6 +271,7 @@ gchar *sgpgme_sigstat_info_full(gpgme_ct
+ 		gpgme_key_t key;
+ 		gpgme_error_t err;
+ 		const gchar *keytype, *keyid, *uid;
++		time_t ts;
+ 		
+ 		err = gpgme_get_key(ctx, sig->fpr, &key, 0);
+ 
+@@ -294,7 +295,8 @@ gchar *sgpgme_sigstat_info_full(gpgme_ct
+ 		}
+ 
+ 		memset(buf, 0, sizeof(buf));
+-		fast_strftime(buf, sizeof(buf)-1, prefs_common_get_prefs()->date_format, localtime_r(&sig->timestamp, &lt));
++		ts = sig->timestamp;
++		fast_strftime(buf, sizeof(buf)-1, prefs_common_get_prefs()->date_format, localtime_r(&ts, &lt));
+ 		g_string_append_printf(siginfo,
+ 			_("Signature made on %s using %s key ID %s\n"),
+ 			buf, keytype, keyid);
