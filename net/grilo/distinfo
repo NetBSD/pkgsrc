@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/04/10 16:26:46 drochner Exp $
+$NetBSD: distinfo,v 1.4 2013/07/24 11:18:57 drochner Exp $
 
-SHA1 (grilo-0.2.5.tar.xz) = 5223f8442988f044c1d160324e3b43dc3af9e278
-RMD160 (grilo-0.2.5.tar.xz) = 4182f97071a2e0cffd396efa5d45d5fc91691dd9
-Size (grilo-0.2.5.tar.xz) = 513660 bytes
-SHA1 (patch-aa) = c500be3e7995f506253bf4f41bd26014240adb55
+SHA1 (grilo-0.2.6.tar.xz) = 31d100d903f85c694a5c360609f67456c9045e3a
+RMD160 (grilo-0.2.6.tar.xz) = 8eac96de57af78597ce252bca08625bdeb6e6921
+Size (grilo-0.2.6.tar.xz) = 534272 bytes
+SHA1 (patch-aa) = f6fc0162db91b714dd6da51ec232b6d75e456cb2
