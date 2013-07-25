@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/07/24 15:29:22 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2013/07/25 09:46:50 drochner Exp $
 #
 
 PLUGIN_NAME=    tnef_parse
@@ -8,7 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Handles TNEF attachments from Outlook
 
 CONFIGURE_ARGS+= --enable-${PLUGIN_NAME}-plugin
-#PLIST_SRC+=	PLIST
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 
