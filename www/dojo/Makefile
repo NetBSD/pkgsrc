@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/02/06 23:23:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/25 14:36:23 darcy Exp $
 # FreeBSD Id: ports/www/dojo/Makefile,v 1.14 2011/08/20 17:27:37 ohauer Exp
 
 DISTNAME=		dojo-release-1.7.2
@@ -41,5 +41,4 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -wr dojox ${DESTDIR}${WWWDIR}/
 	${INSTALL_DATA} ${WRKSRC}/dojo.conf ${DESTDIR}${CONFDIR}/
 
-.include "../../www/apache22/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
