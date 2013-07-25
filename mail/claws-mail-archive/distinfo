@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2012/07/02 19:08:42 drochner Exp $
-
-SHA1 (archive-0.6.12.tar.gz) = 7b438ecefb60595d6ff746a5fd328d66dd64175a
-RMD160 (archive-0.6.12.tar.gz) = 1727f4d474063091374e3cb57565004821411e26
-Size (archive-0.6.12.tar.gz) = 463134 bytes
