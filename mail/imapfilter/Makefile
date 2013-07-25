@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.36 2013/07/19 13:58:56 degroote Exp $
+# $NetBSD: Makefile,v 1.37 2013/07/25 13:25:08 degroote Exp $
 
-DISTNAME= 		v${VERSION}
-PKGNAME=		imapfilter-${VERSION}
+DISTNAME=		imapfilter-${VERSION}
 VERSION=		2.5.5
 CATEGORIES=		mail
-MASTER_SITES=	http://github.com/lefcha/imapfilter/archive/
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=  -https://codeload.github.com/lefcha/imapfiler/tar.gz/${VERSION}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://imapfilter.hellug.gr/
 COMMENT=		Mail filtering utility for the IMAP
+LICENSE=		mit
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-WRKSRC=     ${WRKDIR}/imapfilter-${VERSION}
+FETCH_USING=   curl
+WRKSRC= 		${WRKDIR}/lefcha-imapfilter-ef03d60
 
 INSTALLATION_DIRS=	share/examples/imapfilter
 
