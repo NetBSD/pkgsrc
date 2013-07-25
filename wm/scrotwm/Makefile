@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 12:42:23 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/07/25 08:30:58 wiz Exp $
 
 DISTNAME=	scrotwm-0.9.22
 CATEGORIES=	wm
 MASTER_SITES=	https://opensource.conformal.com/snapshots/scrotwm/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	lsm5@fedoraproject.org
 HOMEPAGE=	http://www.scrotwm.org/
 COMMENT=	Small dynamic tiling window manager for X11
 
