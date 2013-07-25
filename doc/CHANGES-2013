@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2706 2013/07/25 13:49:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2707 2013/07/25 13:59:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4009,3 +4009,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/gnupg to 1.4.14 [wiz 2013-07-25]
 	Updated security/libgcrypt to 1.5.3 [wiz 2013-07-25]
 	Updated security/p5-Crypt-DES to 2.07 [wen 2013-07-25]
+	Updated security/p5-Crypt-IDEA to 1.10 [wen 2013-07-25]
