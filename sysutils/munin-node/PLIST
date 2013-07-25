@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/12/11 12:09:23 abs Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/07/25 11:41:25 he Exp $
 lib/munin/plugins/acpi
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -22,6 +22,7 @@ ${PLIST.linux}lib/munin/plugins/df_abs
 lib/munin/plugins/df_inode
 lib/munin/plugins/dhcpd3
 ${PLIST.linux}lib/munin/plugins/entropy
+${PLIST.netbsd}lib/munin/plugins/entropy
 lib/munin/plugins/exim_mailqueue
 lib/munin/plugins/exim_mailqueue_alt
 lib/munin/plugins/exim_mailstats
