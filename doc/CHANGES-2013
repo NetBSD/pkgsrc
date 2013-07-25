@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2703 2013/07/25 11:42:06 he Exp $
+$NetBSD: CHANGES-2013,v 1.2704 2013/07/25 11:50:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4006,3 +4006,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/claws-mail to 3.9.2 [drochner 2013-07-24]
 	Updated pkgtools/mksandbox to 1.3 [jperkin 2013-07-24]
 	Updated sysutils/munin-node to 1.3.2nb15 [he 2013-07-25]
+	Updated security/gnupg to 1.4.14 [wiz 2013-07-25]
