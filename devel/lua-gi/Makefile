@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/07/22 19:38:07 degroote Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/25 13:05:18 degroote Exp $
 #
 
+DISTNAME=	lgi-${VERSION}
 PKGNAME=	lua-gi-${VERSION}
 VERSION=	0.7.1
-DISTNAME=	${VERSION}
-CATEGORIES=		devel
-MASTER_SITES=	http://github.com/pavouk/lgi/archive/
+CATEGORIES=	devel
+MASTER_SITES=	-https://codeload.github.com/pavouk/lgi/tar.gz/${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pavouk/lgi
@@ -14,8 +14,8 @@ LICENSE=	mit
 
 USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config gmake
-
-WRKSRC=		${WRKDIR}/lgi-${VERSION}
+FETCH_USING=	curl
+WRKSRC=		${WRKDIR}/pavouk-lgi-1bbf1bc
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
