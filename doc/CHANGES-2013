@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2704 2013/07/25 11:50:59 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2705 2013/07/25 11:52:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/mksandbox to 1.3 [jperkin 2013-07-24]
 	Updated sysutils/munin-node to 1.3.2nb15 [he 2013-07-25]
 	Updated security/gnupg to 1.4.14 [wiz 2013-07-25]
+	Updated security/libgcrypt to 1.5.3 [wiz 2013-07-25]
