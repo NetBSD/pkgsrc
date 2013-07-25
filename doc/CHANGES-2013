@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2708 2013/07/25 14:36:23 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2709 2013/07/25 14:48:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Crypt-DES to 2.07 [wen 2013-07-25]
 	Updated security/p5-Crypt-IDEA to 1.10 [wen 2013-07-25]
 	Updated devel/p5-App-cpanminus to 1.6932 [wen 2013-07-25]
+	Updated www/p5-PSGI to 1.102 [wen 2013-07-25]
