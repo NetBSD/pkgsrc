@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2013/07/18 22:17:33 wiz Exp $
+# $NetBSD: Makefile,v 1.208 2013/07/26 10:59:53 ryoon Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -121,6 +121,7 @@ LIBSWANTED.Cygwin=	m crypt dl
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.DragonFly=	m crypt
 LIBSWANTED.FreeBSD=	m crypt
+LIBSWANTED.GNUkFreeBSD=	m crypt dl nsl
 LIBSWANTED.HPUX=	cl pthread $$libswanted # see Perl's README.hpux
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.Interix=	m dl
