@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2710 2013/07/25 15:13:22 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2711 2013/07/26 09:17:13 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4013,3 +4013,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-App-cpanminus to 1.6932 [wen 2013-07-25]
 	Updated www/p5-PSGI to 1.102 [wen 2013-07-25]
 	Updated devel/py-pip to 1.4 [wen 2013-07-25]
+	Updated www/py-werkzeug to 0.9.3 [kleink 2013-07-26]
+	Updated www/py-werkzeug-docs to 0.9.3 [kleink 2013-07-26]
