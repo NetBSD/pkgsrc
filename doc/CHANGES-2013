@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2712 2013/07/26 09:34:23 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.2713 2013/07/26 09:39:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4016,3 +4016,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-werkzeug to 0.9.3 [kleink 2013-07-26]
 	Updated www/py-werkzeug-docs to 0.9.3 [kleink 2013-07-26]
 	Updated lang/nodejs to 0.10.15 [fhajny 2013-07-26]
+	Updated pkgtools/bootstrap-mk-files to 20130727 [ryoon 2013-07-26]
