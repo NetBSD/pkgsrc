@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.25 2012/05/22 06:00:11 joerg Exp $
+$NetBSD: patch-aa,v 1.26 2013/07/26 11:27:02 ryoon Exp $
 
---- config.orig	2011-07-15 19:59:31.000000000 +0000
+--- config.orig	2013-02-11 15:26:04.000000000 +0000
 +++ config
 @@ -49,6 +49,7 @@ done
  # First get uname entries that we use below
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.25 2012/05/22 06:00:11 joerg Exp $
  [ "$RELEASE" ] || RELEASE=`(uname -r) 2>/dev/null` || RELEASE="unknown"
  [ "$SYSTEM" ] || SYSTEM=`(uname -s) 2>/dev/null`  || SYSTEM="unknown"
  [ "$BUILD" ] || VERSION=`(uname -v) 2>/dev/null` || VERSION="unknown"
-@@ -154,6 +155,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+@@ -162,6 +163,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "mips4-sgi-irix64"; exit 0
  	;;
  
@@ -21,7 +21,18 @@ $NetBSD: patch-aa,v 1.25 2012/05/22 06:00:11 joerg Exp $
      Linux:[2-9].*)
  	echo "${MACHINE}-whatever-linux2"; exit 0
  	;;
-@@ -210,12 +215,12 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+@@ -170,6 +175,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+ 	echo "${MACHINE}-whatever-linux1"; exit 0
+ 	;;
+ 
++    GNU/kFreeBSD:*)
++	echo "${MACHINE}-whatever-gnukfreebsd"; exit 0
++	;;
++
+     GNU*)
+ 	echo "hurd-x86"; exit 0;
+ 	;;
+@@ -218,12 +227,12 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "${MACHINE}-whatever-freebsd"; exit 0
  	;;
  
@@ -37,7 +48,7 @@ $NetBSD: patch-aa,v 1.25 2012/05/22 06:00:11 joerg Exp $
  	;;
  
      OpenBSD:*)
-@@ -661,13 +666,18 @@ case "$GUESSOS" in
+@@ -728,12 +737,19 @@ case "$GUESSOS" in
  	;;
    *-*-sunos4)		OUT="sunos-$CC" ;;
  
@@ -51,14 +62,13 @@ $NetBSD: patch-aa,v 1.25 2012/05/22 06:00:11 joerg Exp $
    powerpc64-*-*bsd*)	OUT="BSD-generic64"; options="$options -DB_ENDIAN" ;;
    sparc64-*-*bsd*)	OUT="BSD-sparc64" ;;
    ia64-*-*bsd*)		OUT="BSD-ia64" ;;
--  amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
--  *86*-*-*bsd*)		# mimic ld behaviour when it's looking for libc...
-+  amd64-*-*bsd*|x86_64-*-dragonfly*)	OUT="BSD-x86_64" ;;
-+  *86*-*-*bsd*|*-dragonfly*) # mimic ld behaviour when it's looking for libc...
+   amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
++  i386-*-dragonfly*|x86_64-*-dragonfly*)	OUT="DragonFly-${MACHINE_ARCH}";;
++  i386-*-gnukfreebsd*|x86_64-*-gnukfreebsd*)	OUT="GNU/kFreeBSD-${MACHINE}";;
+   *86*-*-*bsd*)		# mimic ld behaviour when it's looking for libc...
  			if [ -L /usr/lib/libc.so ]; then	# [Free|Net]BSD
  			    libc=/usr/lib/libc.so
- 			else					# OpenBSD
-@@ -680,6 +690,8 @@ case "$GUESSOS" in
+@@ -747,6 +763,8 @@ case "$GUESSOS" in
  			esac ;;
    *-*-*bsd*)		OUT="BSD-generic32" ;;
  
