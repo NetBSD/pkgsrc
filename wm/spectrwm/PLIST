@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/26 17:55:37 wiz Exp $
+bin/scrotwm
+bin/spectrwm
+lib/libswmhack.so.0.0
+man/man1/spectrwm.1
+man/man1/spectrwm_es.1
+man/man1/spectrwm_it.1
+man/man1/spectrwm_pt.1
+man/man1/spectrwm_ru.1
+share/examples/spectrwm/baraction.sh
+share/examples/spectrwm/buildver.sh
+share/examples/spectrwm/initscreen.sh
+share/examples/spectrwm/release.sh
+share/examples/spectrwm/screenshot.sh
+share/examples/spectrwm/spectrwm.conf
+share/examples/spectrwm/spectrwm_cz.conf
+share/examples/spectrwm/spectrwm_es.conf
+share/examples/spectrwm/spectrwm_fr.conf
+share/examples/spectrwm/spectrwm_fr_ch.conf
+share/examples/spectrwm/spectrwm_se.conf
+share/examples/spectrwm/spectrwm_us.conf
