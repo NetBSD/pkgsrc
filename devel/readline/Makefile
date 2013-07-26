@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2013/04/17 09:09:57 obache Exp $
+# $NetBSD: Makefile,v 1.54 2013/07/26 13:13:12 ryoon Exp $
 
 DISTNAME=	readline-6.2
 CATEGORIES=	devel
@@ -17,8 +17,6 @@ INFO_FILES=		yes
 
 BUILD_TARGET=		all-libtool
 INSTALL_TARGET=		install-libtool
-
-LDFLAGS.Cygwin+=	-no-undefined
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
