@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12424 2013/07/25 08:43:53 wiz Exp $
+$NetBSD: TODO,v 1.12425 2013/07/26 11:47:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -747,6 +747,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
+	o logrotate-3.8.5 [pkg/48073]
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
 	o lsh-2.1
@@ -799,7 +800,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mypaint-1.1.0
 	o mysql-5.1.70
 	o nagios-3.4.4
-	o nagios-3.5.0
+	o nagios-3.5.0 [pkg/48082]
 	o nano-2.3.2
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
