@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.11 2013/07/22 09:45:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.12 2013/07/26 09:18:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -37,3 +37,7 @@ Pullup ticket #4181 - requested by taca
 devel/ruby-stream: build fix
 Pullup ticket #4186 - requested by taca
 x11/ruby-tk: build fix
+Pullup ticket #4187 - requested by wiz
+security/gnupg: security update
+Pullup ticket #4188 - requested by wiz
+security/libgcrypt: security update
