@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.60 2013/01/07 21:53:53 wiz Exp $
+$NetBSD: distinfo,v 1.60.4.1 2013/07/26 09:07:48 tron Exp $
 
-SHA1 (gnupg-1.4.13.tar.bz2) = 17a75c54d292bd0923f0a1817a1b02ded37d1de1
-RMD160 (gnupg-1.4.13.tar.bz2) = a3d6f2ca2dd46d8b97e1790d0b1738dc4a1cedd6
-Size (gnupg-1.4.13.tar.bz2) = 3685873 bytes
+SHA1 (gnupg-1.4.14.tar.bz2) = 6202181ba2871fb3448c751a573b4ae0c4770806
+RMD160 (gnupg-1.4.14.tar.bz2) = a834d1d4933b8927bfefb3936baa76f12ce7fc1d
+Size (gnupg-1.4.14.tar.bz2) = 3687929 bytes
 SHA1 (patch-ab) = 24e200a04f8f31e53e22dc80ed079570cb5de8d8
-SHA1 (patch-cipher_idea.c) = 09103b07c00b195ea3f46c963bccdc64148e5c31
