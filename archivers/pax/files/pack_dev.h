@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.h,v 1.3 2008/04/29 05:46:09 martin Exp $	*/
+/*	$NetBSD: pack_dev.h,v 1.4 2013/07/26 12:37:41 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -32,12 +32,7 @@
 #ifndef	_PACK_DEV_H
 #define	_PACK_DEV_H
 
-#ifdef __CYGWIN__
-typedef	__dev32_t	portdev_t;
-#else
-typedef	dev_t		portdev_t;
-#endif
-typedef	portdev_t pack_t(int, u_long [], const char **);
+typedef	dev_t pack_t(int, u_long [], const char **);
 
 pack_t	*pack_find(const char *);
 pack_t	 pack_native;
