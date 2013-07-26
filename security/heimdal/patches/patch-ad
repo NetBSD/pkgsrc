@@ -1,10 +1,36 @@
-$NetBSD: patch-ad,v 1.11 2012/08/07 13:54:22 obache Exp $
+$NetBSD: patch-ad,v 1.12 2013/07/26 12:40:06 ryoon Exp $
 
-* Not using lib${ABI} in pkgsrc.
-* improve detection of __sync_add_and_fetch, avoid compiler optimization.
+* GNU/kFreeBSD parts: use host of Debian GNU/kFreeBSD 7.0.
 
 --- configure.orig	2012-01-11 13:04:10.000000000 +0000
 +++ configure
+@@ -6779,7 +6779,7 @@ ia64-*-hpux*)
+   rm -rf conftest*
+   ;;
+ 
+-x86_64-*kfreebsd*-gnu|x86_64-*linux*|ppc*-*linux*|powerpc*-*linux*| \
++x86_64-*kfreebsd*-gnu|x86_64-*-gnukfreebsd*|x86_64-*linux*|ppc*-*linux*|powerpc*-*linux*| \
+ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
+   # Find out which ABI we are using.
+   echo 'int i;' > conftest.$ac_ext
+@@ -6791,7 +6791,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+     case `/usr/bin/file conftest.o` in
+       *32-bit*)
+ 	case $host in
+-	  x86_64-*kfreebsd*-gnu)
++	  x86_64-*kfreebsd*-gnu|x86_64-*-gnukfreebsd*)
+ 	    LD="${LD-ld} -m elf_i386_fbsd"
+ 	    ;;
+ 	  x86_64-*linux*)
+@@ -6810,7 +6810,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+ 	;;
+       *64-bit*)
+ 	case $host in
+-	  x86_64-*kfreebsd*-gnu)
++	  x86_64-*kfreebsd*-gnu|x86_64-*-gnukfreebsd*)
+ 	    LD="${LD-ld} -m elf_x86_64_fbsd"
+ 	    ;;
+ 	  x86_64-*linux*)
 @@ -12702,7 +12702,11 @@ fi #if test -n "$GCC"; then
  esac
  
@@ -18,6 +44,15 @@ $NetBSD: patch-ad,v 1.11 2012/08/07 13:54:22 obache Exp $
  
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for __attribute__" >&5
+@@ -14245,7 +14249,7 @@ case "$host" in
+ 		;;
+ 	esac
+ 	;;
+-*-*-kfreebsd*-gnu*)
++*-*-kfreebsd*-gnu*|x86_64-*-gnukfreebsd*)
+ 	native_pthread_support=yes
+ 	PTHREAD_CFLAGS=-pthread
+ 	PTHREAD_LIBADD=-pthread
 @@ -26547,7 +26551,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  int
  main ()
