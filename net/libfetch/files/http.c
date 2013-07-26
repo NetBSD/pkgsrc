@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.32 2012/04/07 15:27:21 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.33 2013/07/26 10:21:41 ryoon Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -63,8 +63,12 @@
  * SUCH DAMAGE.
  */
 
-#if defined(__linux__) || defined(__MINT__)
+#if defined(__linux__) || defined(__MINT__) || defined(__FreeBSD_kernel__)
 /* Keep this down to Linux or MiNT, it can create surprises elsewhere. */
+/*
+   __FreeBSD_kernel__ is defined for GNU/kFreeBSD.
+   See http://glibc-bsd.alioth.debian.org/porting/PORTING .
+*/
 #define _GNU_SOURCE
 #endif
 
