@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.6 2013/04/06 02:49:57 obache Exp $
+#	$Id: os.sh,v 1.7 2013/07/26 09:38:15 ryoon Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -194,6 +194,9 @@ CYGWIN_*)
 	case $MACHINE in
 	i?86)	MACHINE_ARCH=i386;;
 	esac
+	;;
+GNU/kFreeBSD)
+	MACHINE_ARCH=$MACHINE
 	;;
 esac
 
