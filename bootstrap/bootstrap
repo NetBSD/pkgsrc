@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.194 2013/06/14 15:07:37 tron Exp $
+# $NetBSD: bootstrap,v 1.195 2013/07/26 09:38:15 ryoon Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -341,8 +341,10 @@ esac
 
 # On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
 # whose echo(1) is not BSD-compatible.
+# On all Debian GNU/kFreeBSD 7.0, /bin/sh is a symlink to /bin/dash, and
+# use /bin/bash. bootstrap forces /bin/bash is used.
 dash_echo_test=`$bootstrap_sh -c 'echo "\\100"'`
-if [ "$dash_echo_test" = "@" ]; then
+if [ "$opsys" != "GNUkFreeBSD" ] && [ "$dash_echo_test" = "@" ]; then
 	{ echo "ERROR: Your shell's echo command is not BSD-compatible."
 	  echo "ERROR: Please select another shell by setting the environment"
 	  echo "ERROR: variable SH."
@@ -531,6 +533,14 @@ FreeBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
+	;;
+GNUkFreeBSD)
+	root_group=root
+	need_bsd_install=no
+	need_awk=yes
+	need_sed=no
+	set_opsys=no
+	machine_arch=`uname -m`
 	;;
 Haiku)
 	root_user=`id -un`
@@ -949,6 +959,14 @@ fi
 
 BOOTSTRAP_MKCONF=${wrkdir}/mk.conf
 cp ${TARGET_MKCONF} ${BOOTSTRAP_MKCONF}
+
+# On all Debian GNU/kFreeBSD 7, /bin/sh is a symlink to /bin/dash, and
+# use /bin/bash.
+if [ "$opsys" = "GNUkFreeBSD" -a "$bootstrap_sh_set" != "set" ]; then
+	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${BOOTSTRAP_MKCONF}
+	echo $opsys
+fi
 
 # sbin is used by pkg_install, share/mk by bootstrap-mk-files
 mkdir_p $wrkdir/sbin $wrkdir/share/mk
