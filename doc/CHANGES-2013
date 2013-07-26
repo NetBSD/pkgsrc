@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2711 2013/07/26 09:17:13 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2712 2013/07/26 09:34:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-pip to 1.4 [wen 2013-07-25]
 	Updated www/py-werkzeug to 0.9.3 [kleink 2013-07-26]
 	Updated www/py-werkzeug-docs to 0.9.3 [kleink 2013-07-26]
+	Updated lang/nodejs to 0.10.15 [fhajny 2013-07-26]
