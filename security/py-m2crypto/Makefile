@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/02/06 23:23:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2013/07/26 09:50:21 fhajny Exp $
 #
 
 DISTNAME=		M2Crypto-0.21.1
@@ -17,6 +17,8 @@ LICENSE=		m2crypto-license
 # in pkgsrc and against which I fixed m2crypto to compile.
 # -- wiz 20060115
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7i{,nb*}
+
+PYSETUPBUILDARGS=	build_ext --openssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/egg.mk"
