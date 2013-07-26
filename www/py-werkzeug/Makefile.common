@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2013/07/19 18:03:42 kleink Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/07/26 09:16:00 kleink Exp $
 
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-0.9.2
+DISTNAME=	Werkzeug-0.9.3
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/W/Werkzeug/
 
