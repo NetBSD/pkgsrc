@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 18:28:27 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/27 11:58:08 tsutsui Exp $
 
 DISTNAME=		misaki_bdf_2012-06-03
 PKGNAME=		${DISTNAME:S/-//g:S/misaki_bdf_/misaki-fonts-1.0./}
@@ -31,7 +31,7 @@ INSTALL_DOCS=		misaki.txt \
 
 do-build:
 .for filename in ${INSTALL_FONTS}
-	${TOOLS_PATH.bdftopcf}  -o ${WRKSRC}/${filename:S/bdf/pcf/} ${WRKSRC}/${filename}
+	bdftopcf -o ${WRKSRC}/${filename:S/bdf/pcf/} ${WRKSRC}/${filename}
 	${GZIP_CMD} ${WRKSRC}/${filename:S/bdf/pcf/}
 .endfor
 
