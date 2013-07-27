@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2722 2013/07/27 05:25:04 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2723 2013/07/27 06:24:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4028,3 +4028,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind98 to 9.8.5pl2 [taca 2013-07-27]
 	Updated devel/p5-Moo to 1.003000 [wen 2013-07-27]
 	Updated devel/p5-MooseX-Aliases to 0.11 [wen 2013-07-27]
+	Updated meta-pkgs/modular-xorg-protos to 1.2 [wiz 2013-07-27]
