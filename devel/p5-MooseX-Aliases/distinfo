@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/16 06:26:31 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2013/07/27 05:23:44 wen Exp $
 
-SHA1 (MooseX-Aliases-0.10.tar.gz) = c616e725f38dd07771407d37f77c616ed80539b9
-RMD160 (MooseX-Aliases-0.10.tar.gz) = 67b4d2d8d28fa30f50ceb8ccbe0669591ae4db58
-Size (MooseX-Aliases-0.10.tar.gz) = 16903 bytes
+SHA1 (MooseX-Aliases-0.11.tar.gz) = e4ff6232b030b2208ebe689f30fa89d9db33ee81
+RMD160 (MooseX-Aliases-0.11.tar.gz) = bc69e1da67c7639434d2a8c8a8547aeba9abddfa
+Size (MooseX-Aliases-0.11.tar.gz) = 17732 bytes
