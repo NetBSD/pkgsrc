@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2013/06/06 12:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/27 12:54:04 tsutsui Exp $
 
-SNAPSHOTDATE=		20120618
+SNAPSHOTDATE=		20130727
 DISTNAME=		xnp2-${SNAPSHOTDATE}
 PKGNAME=		xnp2-0.83pl${SNAPSHOTDATE}
-PKGREVISION=		8
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.asahi-net.or.jp/~aw9k-nnk/np2/
+MASTER_SITES=		http://www.nonakap.org/np2/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tsutsui@NetBSD.org
-HOMEPAGE=		http://www.asahi-net.or.jp/~aw9k-nnk/np2/
+HOMEPAGE=		http://www.nonakap.org/np2/
 COMMENT=		Neko Project II PC-9801 emulator
 LICENSE=		modified-bsd
 
