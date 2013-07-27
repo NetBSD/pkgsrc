@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2729 2013/07/27 08:40:08 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2730 2013/07/27 09:01:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4035,3 +4035,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-Daemonize to 0.18 [wen 2013-07-27]
 	Updated devel/p5-MooseX-Has-Options to 0.003 [wen 2013-07-27]
 	Updated devel/p5-MooseX-LazyRequire to 0.10 [wen 2013-07-27]
+	Updated devel/p5-MooseX-Method-Signatures to 0.44 [wen 2013-07-27]
