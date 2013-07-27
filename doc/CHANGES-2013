@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2731 2013/07/27 10:23:46 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.2732 2013/07/27 12:57:20 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4037,3 +4037,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-LazyRequire to 0.10 [wen 2013-07-27]
 	Updated devel/p5-MooseX-Method-Signatures to 0.44 [wen 2013-07-27]
 	Updated net/ocamlnet to 3.6.6 [jaapb 2013-07-27]
+	Updated emulators/xnp2 to 0.83pl20130727 [tsutsui 2013-07-27]
