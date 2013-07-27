@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.12 2013/07/26 09:18:56 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.13 2013/07/27 11:50:57 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -41,3 +41,7 @@ Pullup ticket #4187 - requested by wiz
 security/gnupg: security update
 Pullup ticket #4188 - requested by wiz
 security/libgcrypt: security update
+Pullup ticket #4189 - requested by taca
+net/bind99: security update
+Pullup ticket #4190 - requested by taca
+net/bind98: security update
