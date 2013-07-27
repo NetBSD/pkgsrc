@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2732 2013/07/27 12:57:20 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2733 2013/07/27 22:38:51 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4038,3 +4038,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-Method-Signatures to 0.44 [wen 2013-07-27]
 	Updated net/ocamlnet to 3.6.6 [jaapb 2013-07-27]
 	Updated emulators/xnp2 to 0.83pl20130727 [tsutsui 2013-07-27]
+	Updated net/youtube-dl to 20130725.2 [tron 2013-07-27]
