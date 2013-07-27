@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 18:28:24 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/07/27 11:58:07 tsutsui Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -36,7 +36,7 @@ do-build:
 	cd ${WRKSRC}; \
 	for i in *.bdf; do \
 		p=`basename $$i .bdf`.pcf; \
-		${TOOLS_PATH.bdftopcf} -o $$p $$i; \
+		bdftopcf -o $$p $$i; \
 		${GZIP_CMD} -c $$p > $$p.gz; \
 	done
 

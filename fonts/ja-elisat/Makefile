@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/08 11:17:13 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2013/07/27 11:58:07 tsutsui Exp $
 
 DISTNAME=		elisat10
 PKGNAME=		ja-elisat-1.0
@@ -21,7 +21,7 @@ do-build:
 	cd ${WRKSRC}; \
 	for i in *.bdf; do \
 		p=`basename $$i .bdf`.pcf; \
-		${TOOLS_PATH.bdftopcf} -o $$p $$i; \
+		bdftopcf -o $$p $$i; \
 		${GZIP_CMD} -c $$p > $$p.gz; \
 	done
 
