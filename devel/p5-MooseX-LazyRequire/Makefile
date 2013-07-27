@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/27 08:39:10 wen Exp $
 #
 
-DISTNAME=	MooseX-LazyRequire-0.08
+DISTNAME=	MooseX-LazyRequire-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -13,7 +12,6 @@ COMMENT=	Required attributes which fail only when trying to use them
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=0.94:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-aliased>=0.30:../../devel/p5-aliased
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
