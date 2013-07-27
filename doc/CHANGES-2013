@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2720 2013/07/27 03:21:48 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2721 2013/07/27 05:18:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4026,3 +4026,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Role-Tiny to 1.003001 [wen 2013-07-27]
 	Updated net/bind99 to 9.9.3pl2 [taca 2013-07-27]
 	Updated net/bind98 to 9.8.5pl2 [taca 2013-07-27]
+	Updated devel/p5-Moo to 1.003000 [wen 2013-07-27]
