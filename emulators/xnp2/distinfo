@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/06/23 10:12:02 tsutsui Exp $
+$NetBSD: distinfo,v 1.3 2013/07/27 12:54:04 tsutsui Exp $
 
-SHA1 (xnp2-20120618.tar.bz2) = 01c259391953e16bd992d1acaec5a6be6c198c80
-RMD160 (xnp2-20120618.tar.bz2) = c46f5cebfbb8dcd05d50dcb869d051971621f8de
-Size (xnp2-20120618.tar.bz2) = 1678433 bytes
+SHA1 (xnp2-20130727.tar.bz2) = e00a41cb1061a488991307e9f9aaf1f3e95b0159
+RMD160 (xnp2-20130727.tar.bz2) = 563f220c88caf3919750a60b90f90fa8c7188bdf
+Size (xnp2-20130727.tar.bz2) = 1665261 bytes
