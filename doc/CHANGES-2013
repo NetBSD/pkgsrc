@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2727 2013/07/27 08:11:18 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2728 2013/07/27 08:30:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated filesystems/p5-Path-Tiny to 0.027 [wen 2013-07-27]
 	Updated devel/p5-MooseX-Getopt to 0.56 [wen 2013-07-27]
 	Updated devel/p5-MooseX-Daemonize to 0.18 [wen 2013-07-27]
+	Updated devel/p5-MooseX-Has-Options to 0.003 [wen 2013-07-27]
