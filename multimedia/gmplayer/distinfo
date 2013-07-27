@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2013/07/25 08:23:04 wiz Exp $
+$NetBSD: distinfo,v 1.83 2013/07/27 05:00:25 obache Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -18,9 +18,9 @@ Size (mplayer/CornerMP-aqua-1.4.tar.bz2) = 243154 bytes
 SHA1 (mplayer/Cyrus-1.2.tar.bz2) = 20bbb63114e8c0438770c1d1682296f37833968c
 RMD160 (mplayer/Cyrus-1.2.tar.bz2) = c4d4593a358456d98a1d94e14e263a902add6828
 Size (mplayer/Cyrus-1.2.tar.bz2) = 228461 bytes
-SHA1 (mplayer/MPlayer-1.1.tar.gz) = e46e3294bc96daabe604e4e195721e4f2d1e5b48
-RMD160 (mplayer/MPlayer-1.1.tar.gz) = 0369e57677c0c30f3b05f80ee1c4d8d7d1217e63
-Size (mplayer/MPlayer-1.1.tar.gz) = 17018391 bytes
+SHA1 (mplayer/MPlayer-1.1.1.tar.xz) = ba2f3bd1442d04b17b0143680850273d928689c1
+RMD160 (mplayer/MPlayer-1.1.1.tar.xz) = 745b3fdf684ba7614dbec2a7143188b7c9cca3a1
+Size (mplayer/MPlayer-1.1.1.tar.xz) = 11202492 bytes
 SHA1 (mplayer/MidnightLove-1.6.tar.bz2) = 27d1105777c1195adbe33f04741bf4be939d3a7f
 RMD160 (mplayer/MidnightLove-1.6.tar.bz2) = 44886ffed5e6167324727fab42251866c6f1ca2c
 Size (mplayer/MidnightLove-1.6.tar.bz2) = 539665 bytes
