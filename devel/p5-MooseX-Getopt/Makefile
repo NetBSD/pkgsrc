@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/05/31 12:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/07/27 07:57:49 wen Exp $
 #
 
-DISTNAME=	MooseX-Getopt-0.47
+DISTNAME=	MooseX-Getopt-0.56
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -16,12 +15,13 @@ DEPENDS+=	p5-Getopt-Long-Descriptive>=0.081:../../devel/p5-Getopt-Long-Descripti
 DEPENDS+=	p5-Moose>=0.56:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
 
-BUILD_DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
+BUILD_DEPENDS+=	p5-Path-Tiny>=0.009:../../filesystems/p5-Path-Tiny
 BUILD_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
 BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Test-CheckDeps>=0.002:../../devel/p5-Test-CheckDeps
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Getopt/.packlist
