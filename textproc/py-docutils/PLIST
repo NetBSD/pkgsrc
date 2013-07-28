@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/04/02 03:05:03 rodent Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/07/28 12:47:46 wiz Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2man.py
@@ -40,6 +40,9 @@ ${PYSITELIB}/docutils/languages/ca.pyo
 ${PYSITELIB}/docutils/languages/cs.py
 ${PYSITELIB}/docutils/languages/cs.pyc
 ${PYSITELIB}/docutils/languages/cs.pyo
+${PYSITELIB}/docutils/languages/da.py
+${PYSITELIB}/docutils/languages/da.pyc
+${PYSITELIB}/docutils/languages/da.pyo
 ${PYSITELIB}/docutils/languages/de.py
 ${PYSITELIB}/docutils/languages/de.pyc
 ${PYSITELIB}/docutils/languages/de.pyo
@@ -182,6 +185,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/ca.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/cs.py
 ${PYSITELIB}/docutils/parsers/rst/languages/cs.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/cs.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/da.py
+${PYSITELIB}/docutils/parsers/rst/languages/da.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/da.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/de.py
 ${PYSITELIB}/docutils/parsers/rst/languages/de.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/de.pyo
