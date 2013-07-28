@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1765 2013/07/24 10:49:26 drochner Exp $
+# $NetBSD: Makefile,v 1.1766 2013/07/28 00:11:50 tonnerre Exp $
 #
 
 COMMENT=	Development utilities
@@ -1092,6 +1092,7 @@ SUBDIR+=	p5-Proc-Simple
 SUBDIR+=	p5-Proc-Wait3
 SUBDIR+=	p5-Proc-WaitStat
 SUBDIR+=	p5-Python-Serialise-Marshal
+SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
 SUBDIR+=	p5-Regexp-Assemble
