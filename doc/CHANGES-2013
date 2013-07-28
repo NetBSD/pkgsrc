@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2736 2013/07/28 11:21:51 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2737 2013/07/28 11:33:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-RT-Authen-ExternalAuth version 0.17 [root 2013-07-28]
 	Updated devel/meld to 1.7.4 [wiz 2013-07-28]
 	Updated sysutils/logrotate to 3.8.5 [obache 2013-07-28]
+	Updated misc/howm to 1.4.1 [obache 2013-07-28]
