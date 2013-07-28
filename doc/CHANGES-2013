@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2747 2013/07/28 20:46:27 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2748 2013/07/28 20:52:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4055,3 +4055,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-setuptools to 0.9.8 [wiz 2013-07-28]
 	Updated devel/py-virtualenv to 1.10 [wiz 2013-07-28]
 	Updated devel/guile-www to 2.37 [wiz 2013-07-28]
+	Updated mail/akonadi to 1.10.2 [wiz 2013-07-28]
