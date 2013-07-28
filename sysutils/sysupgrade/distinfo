@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/28 23:37:14 jmmv Exp $
+
+SHA1 (sysupgrade-1.5.tar.gz) = 3141ee4728d6d3b680ed04f552369031bb3b3b09
+RMD160 (sysupgrade-1.5.tar.gz) = 5b1d7c6d45643f2f03bff1df16739a6751d0ceda
+Size (sysupgrade-1.5.tar.gz) = 75833 bytes
