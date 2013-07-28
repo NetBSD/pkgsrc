@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2738 2013/07/28 12:44:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2739 2013/07/28 12:47:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4044,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/logrotate to 3.8.5 [obache 2013-07-28]
 	Updated misc/howm to 1.4.1 [obache 2013-07-28]
 	Updated devel/bison to 3.0 [wiz 2013-07-28]
+	Updated textproc/py-docutils to 0.11 [wiz 2013-07-28]
