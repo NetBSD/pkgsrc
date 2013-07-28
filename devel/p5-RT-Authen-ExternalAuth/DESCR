@@ -1,0 +1,2 @@
+The Perl 5 module RT::Authen::ExternalAuth provides support for external
+authentication sources for the RT ticket system.
