@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:48 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/28 17:26:08 kleink Exp $
 #
 
-DISTNAME=	cssutils-0.9.9
+DISTNAME=	cssutils-0.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://cssutils.googlecode.com/files/ \
-		http://pypi.python.org/packages/source/c/cssutils/
+MASTER_SITES=	http://pypi.python.org/packages/source/c/cssutils/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rhialto@falu.nl
