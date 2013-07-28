@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.977 2013/07/21 14:21:23 wen Exp $
+# $NetBSD: Makefile,v 1.978 2013/07/28 17:48:05 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -585,6 +585,7 @@ SUBDIR+=	py-flask-flatpages
 SUBDIR+=	py-flask-frozen
 SUBDIR+=	py-flask-login
 SUBDIR+=	py-flask-rest
+SUBDIR+=	py-flask-script
 SUBDIR+=	py-flask-sqlalchemy
 SUBDIR+=	py-flask-uploads
 SUBDIR+=	py-flask-wtf
