@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.978 2013/07/28 17:48:05 kleink Exp $
+# $NetBSD: Makefile,v 1.979 2013/07/28 17:52:24 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -608,6 +608,7 @@ SUBDIR+=	py-simpletal
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-tornado
 SUBDIR+=	py-uwsgi
+SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
 SUBDIR+=	py-webpy
 SUBDIR+=	py-werkzeug
