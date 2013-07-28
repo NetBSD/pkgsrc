@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2742 2013/07/28 17:56:18 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2743 2013/07/28 20:40:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4050,3 +4050,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-flask-script version 0.5.3 [kleink 2013-07-28]
 	Added www/py-webassets version 0.8 [kleink 2013-07-28]
 	Added www/py-flask-assets version 0.8 [kleink 2013-07-28]
+	Updated misc/py-anki2 to 2.0.12 [wiz 2013-07-28]
