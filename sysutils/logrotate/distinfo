@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/05/07 20:30:22 gls Exp $
+$NetBSD: distinfo,v 1.6 2013/07/28 11:21:23 obache Exp $
 
-SHA1 (logrotate-3.8.4.tar.gz) = 81d9aeefa6b1c77fe4917a87d9b771a60ff6b920
-RMD160 (logrotate-3.8.4.tar.gz) = 576ff6e1b05a54da14d208abe697b27c754cf881
-Size (logrotate-3.8.4.tar.gz) = 55610 bytes
+SHA1 (logrotate-3.8.5.tar.gz) = b3bd6eb5f84c243b328252db651e4826fd726b8b
+RMD160 (logrotate-3.8.5.tar.gz) = 759b1806ea08bd2c45bbc175ea1efaca255994b7
+Size (logrotate-3.8.5.tar.gz) = 57818 bytes
 SHA1 (patch-examples_logrotate-default) = df9671836392d99f2b31116aee18e51996dee173
 SHA1 (patch-examples_logrotate.cron) = 02981cb2b49e3f3f500fcb3db9b5dcb5fe62bddc
-SHA1 (patch-logrotate.8) = 7f6ff0fe636e15a2b2f03438fbaa012aa1a1eba0
+SHA1 (patch-logrotate.8) = 0bf7d9cfbc2f5dfff42a82b523926b9c8d0362a0
