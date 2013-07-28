@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2740 2013/07/28 13:22:14 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2741 2013/07/28 17:27:18 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4046,3 +4046,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/bison to 3.0 [wiz 2013-07-28]
 	Updated textproc/py-docutils to 0.11 [wiz 2013-07-28]
 	Updated mail/milter-manager to 2.0.0 [obache 2013-07-28]
+	Updated textproc/py-cssutils to 0.9.10 [kleink 2013-07-28]
