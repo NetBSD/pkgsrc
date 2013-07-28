@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2746 2013/07/28 20:44:55 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2747 2013/07/28 20:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4054,3 +4054,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/py-billiard to 2.7.3.31 [wiz 2013-07-28]
 	Updated devel/py-setuptools to 0.9.8 [wiz 2013-07-28]
 	Updated devel/py-virtualenv to 1.10 [wiz 2013-07-28]
+	Updated devel/guile-www to 2.37 [wiz 2013-07-28]
