@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/15 21:18:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/28 23:30:44 jmmv Exp $
 bin/shtk
+lib/pkgconfig/shtk.pc
 man/man1/shtk.1
+share/aclocal/shtk.m4
+share/doc/shtk/AUTHORS
+share/doc/shtk/COPYING
+share/doc/shtk/NEWS
+share/doc/shtk/README
 share/shtk/base.subr
 share/shtk/bootstrap.subr
 share/shtk/cli.subr
