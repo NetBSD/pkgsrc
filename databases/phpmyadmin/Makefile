@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.117 2013/07/29 20:01:02 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
-PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.xz
@@ -30,7 +29,7 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	3.5.8.1
+DIST_VERSION=	3.5.8.2
 DOC_FILES=	ChangeLog Documentation.txt LICENSE README \
 		RELEASE-DATE-${DIST_VERSION}
 
