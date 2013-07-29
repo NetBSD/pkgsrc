@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2753 2013/07/29 16:23:13 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2754 2013/07/29 16:42:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4063,3 +4063,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/qemu to 1.5.2 [adam 2013-07-29]
 	Updated lang/php53 to 5.3.27nb1 [taca 2013-07-29]
 	Updated lang/php54 to 5.4.17nb1 [taca 2013-07-29]
+	Added lang/php55 version 5.5.1 [taca 2013-07-29]
