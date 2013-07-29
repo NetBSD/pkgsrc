@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1766 2013/07/28 00:11:50 tonnerre Exp $
+# $NetBSD: Makefile,v 1.1767 2013/07/29 16:44:09 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1334,6 +1334,7 @@ SUBDIR+=	php-gmp
 SUBDIR+=	php-libawl
 SUBDIR+=	php-memcache
 SUBDIR+=	php-mode
+SUBDIR+=	php-opcache
 SUBDIR+=	php-pcntl
 SUBDIR+=	php-posix
 SUBDIR+=	php-shmop
