@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2011/05/06 05:30:34 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/07/29 23:39:42 obache Exp $
 #
 
 BUILDLINK_TREE+=	zeromq
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	zeromq
 ZEROMQ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.zeromq+=	zeromq>=2.0.11
-BUILDLINK_ABI_DEPENDS.zeromq+=	zeromq>=2.1.0
+BUILDLINK_ABI_DEPENDS.zeromq+=	zeromq>=3.1.0
 BUILDLINK_PKGSRCDIR.zeromq?=	../../net/zeromq
 
 .include "../../mk/bsd.fast.prefs.mk"
