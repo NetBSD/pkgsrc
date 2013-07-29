@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/28 20:44:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/07/29 10:23:16 wiz Exp $
 bin/virtualenv
-bin/virtualenv-2.7
+bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
