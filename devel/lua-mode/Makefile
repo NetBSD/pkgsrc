@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2013/02/17 19:17:59 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/07/29 20:35:00 wiz Exp $
 
-DISTNAME=	lua-mode-20110121
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-EXTRACT_SUFX=	.zip
-PKGREVISION=	1
+DISTNAME=	rel-${VERSION}
+VERSION=	20130419
+PKGNAME=	${EMACS_PKGNAME_PREFIX}lua-mode-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://luaforge.net/frs/download.php/4792/
+MASTER_SITES=	https://github.com/immerrr/lua-mode/archive/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://luaforge.net/projects/lua-mode/
+HOMEPAGE=	https://github.com/immerrr/lua-mode/
 COMMENT=	Emacs major mode for editing Lua code
+LICENSE=	gnu-gpl-v2 # or newer
 
-WRKSRC=			${WRKDIR}
+WRKSRC=			${WRKDIR}/lua-mode-rel-${VERSION}
 
 USE_LANGUAGES=		# none
 NO_CONFIGURE=		yes
