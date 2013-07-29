@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/26 17:55:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/29 06:42:32 wiz Exp $
 bin/scrotwm
 bin/spectrwm
+lib/libswmhack.so
+lib/libswmhack.so.0
 lib/libswmhack.so.0.0
 man/man1/spectrwm.1
 man/man1/spectrwm_es.1
