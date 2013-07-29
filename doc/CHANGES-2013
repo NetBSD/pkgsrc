@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2755 2013/07/29 16:44:35 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2756 2013/07/29 16:47:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4065,3 +4065,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php54 to 5.4.17nb1 [taca 2013-07-29]
 	Added lang/php55 version 5.5.1 [taca 2013-07-29]
 	Added devel/php-opcache version 5.5.1 [taca 2013-07-29]
+	Added meta-pkgs/php55-extensions version 5.5.1 [taca 2013-07-29]
