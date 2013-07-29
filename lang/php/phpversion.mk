@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.37 2013/07/21 17:29:47 taca Exp $
+# $NetBSD: phpversion.mk,v 1.38 2013/07/29 16:38:12 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -10,7 +10,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 53 54
+#	Possible: 53 54 55
 #	Default: 54
 #
 # === Infrastructure variables ===
@@ -27,12 +27,12 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 53 54
+#	Possible: 53 54 55
 #	Default: 54 53
 #
 # PHP_CHECK_INSTALLED
 #	Check installed version of PHP.  Should be used lang/php53,
-#	and lang/php54 only.
+#	lang/php54 and lang/php55 only.
 #
 #	Possible: Yes No
 #	Default: Yes
@@ -42,7 +42,7 @@
 # PKG_PHP_VERSION
 #	The selected PHP version.
 #
-#	Possible: 53 54
+#	Possible: 53 54 55
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PHP_BASE_VERS
@@ -66,7 +66,7 @@
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
 #
-#	Example: php53, php54
+#	Example: php53, php54, php55
 #
 # PHP_EXTENSION_DIR
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
@@ -99,7 +99,7 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 .include "../../mk/bsd.prefs.mk"
 
 PHP_VERSION_DEFAULT?=		54
-PHP_VERSIONS_ACCEPTED?=		54 53
+PHP_VERSIONS_ACCEPTED?=		54 55 53
 
 # transform the list into individual variables
 .for pv in ${PHP_VERSIONS_ACCEPTED}
@@ -107,7 +107,10 @@ _PHP_VERSION_${pv}_OK=	yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/php/20120301)
+.if exists(${LOCALBASE}/lib/php/20130620)
+_PHP_VERSION_55_INSTALLED=	yes
+_PHP_INSTALLED=			yes
+.elif exists(${LOCALBASE}/lib/php/20120301)
 _PHP_VERSION_54_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/20090626) || exists(${LOCALBASE}/include/php/Zend/zend_gc.h)
@@ -155,7 +158,7 @@ MULTI+=	PHP_VERSION_REQD=${_PHP_VERSION}
 
 # export some of internal variables
 PKG_PHP_VERSION:=	${_PHP_VERSION:C/\.[0-9]//}
-PKG_PHP:=		php-${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
+PKG_PHP:=		PHP${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
 
 # currently we have only PHP 5.x packages.
 PKG_PHP_MAJOR_VERS:=	5
@@ -191,6 +194,11 @@ PHPPKGSRCDIR=		../../lang/php54
 PHP_BASE_VERS=		${PHP54_VERSION}
 PHP_PKG_PREFIX=		php54
 PHP_EXTENSION_DIR=	lib/php/${PHP54_RELDATE}
+.elif ${_PHP_VERSION} == "55"
+PHPPKGSRCDIR=		../../lang/php55
+PHP_BASE_VERS=		${PHP55_VERSION}
+PHP_PKG_PREFIX=		php55
+PHP_EXTENSION_DIR=	lib/php/${PHP55_RELDATE}
 .else
 # force an error
 PKG_SKIP_REASON+=	"${PKG_PHP} is not a valid package"
