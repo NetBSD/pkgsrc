@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.85 2013/07/09 17:00:58 tsutsui Exp $
+$NetBSD: distinfo,v 1.86 2013/07/29 13:10:26 adam Exp $
 
-SHA1 (qemu-1.5.1.tar.bz2) = 1e1339dffb01c98f33ec8451266cee1adf3b41be
-RMD160 (qemu-1.5.1.tar.bz2) = 22cdf2860f0fdb2907c57d33ea82db9bb0139c59
-Size (qemu-1.5.1.tar.bz2) = 11931754 bytes
+SHA1 (qemu-1.5.2.tar.bz2) = 932c04cdb227e1553c79a43bbf7552a433c815a9
+RMD160 (qemu-1.5.2.tar.bz2) = db8509d58d1cc461cca28f35e69efd7c0143be07
+Size (qemu-1.5.2.tar.bz2) = 11932902 bytes
 SHA1 (patch-ef) = 871ccf29463dec1bd56d7f7808248c5b1af4d4d6
 SHA1 (patch-et) = bc96fbe2869042f9a77716cfe3c5342262e7b489
 SHA1 (patch-hw_display_omap__dss.c) = af89754a9a078a5b52240473d85351bd447623c0

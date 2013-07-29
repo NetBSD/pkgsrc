@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.111 2013/07/09 17:00:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.112 2013/07/29 13:10:26 adam Exp $
 
-DISTNAME=		qemu-1.5.1
-CATEGORIES=		emulators
-MASTER_SITES=		http://wiki.qemu.org/download/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	qemu-1.5.2
+CATEGORIES=	emulators
+MASTER_SITES=	http://wiki.qemu.org/download/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.qemu.org/
-COMMENT=		CPU emulator using dynamic translation
-LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.qemu.org/
+COMMENT=	CPU emulator using dynamic translation
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
