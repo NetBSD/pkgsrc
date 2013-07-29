@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/02/11 10:05:30 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2013/07/29 20:35:00 wiz Exp $
 
-SHA1 (lua-mode-20110121.zip) = 0565a55bf6941e9d82a9e16c4578bb205dc09a5c
-RMD160 (lua-mode-20110121.zip) = ab5531e70add93804d02970754b7a422fae6dee6
-Size (lua-mode-20110121.zip) = 12956 bytes
+SHA1 (rel-20130419.tar.gz) = 8c199a29fba43185f7d1c1735b2ecf4fb1ef037e
+RMD160 (rel-20130419.tar.gz) = ad210b679ab26c5dd32d7a7d8d657aeb2d9bbcd3
+Size (rel-20130419.tar.gz) = 26236 bytes
