@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2013/07/21 17:29:47 taca Exp $
+# $NetBSD: Makefile.common,v 1.29 2013/07/29 03:59:44 taca Exp $
 # used by lang/php53/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php53-extensions/Makefile
@@ -13,7 +13,6 @@
 
 PHP_VERSION_REQD=	53
 PHP_BASE_VERS=		${PHP53_VERSION}
-PHP_CHECK_INSTALLED=	No
 
 .include "../../lang/php/common.mk"
 
