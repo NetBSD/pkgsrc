@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2750 2013/07/29 06:42:41 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2751 2013/07/29 13:11:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4060,3 +4060,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/sysbuild to 2.7 [jmmv 2013-07-28]
 	Updated sysutils/sysupgrade to 1.5 [jmmv 2013-07-28]
 	Updated wm/spectrwm to 2.3.0 [wiz 2013-07-29]
+	Updated emulators/qemu to 1.5.2 [adam 2013-07-29]
