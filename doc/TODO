@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12441 2013/07/29 16:47:54 taca Exp $
+$NetBSD: TODO,v 1.12442 2013/07/29 21:12:26 tron Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-1.6.0 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.5.31 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wireshark-1.10.1
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
