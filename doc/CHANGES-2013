@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2757 2013/07/29 18:17:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2758 2013/07/29 20:03:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/php-opcache version 5.5.1 [taca 2013-07-29]
 	Added meta-pkgs/php55-extensions version 5.5.1 [taca 2013-07-29]
 	Updated finance/gnucash to 2.4.13nb1 [wiz 2013-07-29]
+	Updated databases/phpmyadmin to 3.5.8.2 [tron 2013-07-29]
