@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2760 2013/07/29 21:12:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2761 2013/07/29 21:12:26 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4070,3 +4070,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/phpmyadmin to 3.5.8.2 [tron 2013-07-29]
 	Updated devel/lua-mode to 20130419 [wiz 2013-07-29]
 	Updated meta-pkgs/modular-xorg-protos to 1.3 [wiz 2013-07-29]
+	Updated net/wireshark to 1.10.1 [tron 2013-07-29]
