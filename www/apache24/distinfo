@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/06/20 09:06:45 taca Exp $
+$NetBSD: distinfo,v 1.9.2.1 2013/07/30 20:17:50 tron Exp $
 
-SHA1 (httpd-2.4.4.tar.bz2) = 0c5ab7f876aa10fbe8bfab2c34f8dd3dc76db16c
-RMD160 (httpd-2.4.4.tar.bz2) = 2e22389d9dc9ad98d6b6727c25b8fdca4f7868f6
-Size (httpd-2.4.4.tar.bz2) = 4780289 bytes
+SHA1 (httpd-2.4.6.tar.bz2) = 16d8ec72535ded65d035122b0d944b0e64eaa2a2
+RMD160 (httpd-2.4.6.tar.bz2) = 27baf9cdfc60f578c1f692137cd2d4b608e3361d
+Size (httpd-2.4.6.tar.bz2) = 4949897 bytes
 SHA1 (patch-aa) = 2d92b1340aaae40289421f164346348c6d7fe839
 SHA1 (patch-ab) = a3edcc20b7654e0446c7d442cda1510b23e5d324
 SHA1 (patch-ac) = 9f86d845df30316d22bce677a4b176f51007ba0d
@@ -16,8 +16,3 @@ SHA1 (patch-aw) = 43cd64df886853ef7b75b91ed20183f329fcc9df
 SHA1 (patch-include_ap__config.h) = 1d056e2d4db80ec97aaf755b6dd6aff69ed2cd96
 SHA1 (patch-modules_ssl_ssl__private.h) = 7751a99a794957cbea19ff8d1a3e83bf8f276604
 SHA1 (patch-server_core__filters.c) = 331672c9a65691229518f31dcdae64382b392287
-SHA1 (patch-support_htdbm.c) = df36815435a664fecedde63c5662f33ffc65fd33
-SHA1 (patch-support_htdigest.c) = 9c06c4c8b96ce9fc8cb9dd89c9fc5b1db0fbbbde
-SHA1 (patch-support_htpasswd.c) = 7af6cb63c99fa21def1d7dba3b8cdca10c423065
-SHA1 (patch-support_passwd__common.c) = 3a111a89213059bd9693e7fac9bac1aeef41a2d9
-SHA1 (patch-support_passwd__common.h) = 1ba7cef3b0ff79947456254678956b849bab8e71
