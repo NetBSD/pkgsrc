@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.7 2013/07/26 09:38:15 ryoon Exp $
+#	$Id: os.sh,v 1.8 2013/07/30 12:27:20 ryoon Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -44,7 +44,7 @@ MACHINE_ARCH=`uname -p 2>/dev/null || echo $MACHINE`
 # there is at least one case of `uname -p` outputting
 # a bunch of usless drivel
 case "$MACHINE_ARCH" in
-*[!A-Za-z0-9_-]*) MACHINE_ARCH="$MACHINE";;
+unknown|*[!A-Za-z0-9_-]*) MACHINE_ARCH="$MACHINE";;
 esac
         
 # we need this here, and it is not always available...
