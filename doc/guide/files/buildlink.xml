@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.35 2013/07/30 03:38:38 ryoon Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.36 2013/07/30 07:14:09 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -128,7 +128,7 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
 
       <listitem>
 	<para><filename>readline.buildlink3.mk</filename> checks for a
-	system-provided GNU readline or ediline (libedit) installation,
+	system-provided GNU readline or editline (libedit) installation,
 	or adds a dependency on <filename role="pkg">devel/readline</filename>,
 	<filename role="pkg">devel/editline</filename>. The user can set
 	<varname>READLINE_DEFAULT</varname> to choose readline implementation.
