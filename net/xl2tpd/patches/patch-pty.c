@@ -1,12 +1,21 @@
-$NetBSD: patch-pty.c,v 1.1 2013/07/02 00:22:17 christos Exp $
+$NetBSD: patch-pty.c,v 1.2 2013/07/30 19:15:30 christos Exp $
 
 Fix pty allocation to use openpty(3) for all BSD's
 Fix closing slave bug.
 Set the pty queue size if we have it.
+Set set _NETBSRC_SOURCE for older NetBSD versions and sockaddr_storage.
 
---- pty.c	2013-06-17 06:17:24.000000000 -0400
-+++ pty.c	2013-06-24 15:53:14.000000000 -0400
-@@ -25,10 +25,10 @@
+--- pty.c.orig	2013-06-17 06:17:24.000000000 -0400
++++ pty.c	2013-07-30 14:58:46.000000000 -0400
+@@ -17,6 +17,7 @@
+ #define _ISOC99_SOURCE
+ #define _XOPEN_SOURCE
+ #define _BSD_SOURCE
++#define _NETBSD_SOURCE
+ #define _XOPEN_SOURCE_EXTENDED
+ 
+ #include <stdlib.h>
+@@ -25,10 +26,10 @@
  #include <errno.h>
  #include <stdio.h>
  #include <fcntl.h>
@@ -18,7 +27,7 @@ Set the pty queue size if we have it.
  #ifdef SOLARIS
  #define PTY00 "/dev/ptyXX"
  #define PTY10 "pqrstuvwxyz"
-@@ -41,13 +41,12 @@
+@@ -41,13 +42,12 @@
  #define PTY01 "0123456789abcdef"
  #endif
  
@@ -36,7 +45,7 @@ Set the pty queue size if we have it.
  int getPtyMaster_pty (char *tty10, char *tty01)
  {
      char *p10;
-@@ -110,56 +109,63 @@
+@@ -110,56 +110,63 @@
  
      return fd;
  }
