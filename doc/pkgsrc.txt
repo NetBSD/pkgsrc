@@ -4724,9 +4724,9 @@ issues:
     MOTIF_TYPE to "dt", "lesstif", "motif" or "openmotif" to choose which Motif
     version will be used.
 
-  * readline.buildlink3.mk checks for a system-provided GNU readline or ediline
-    (libedit) installation, or adds a dependency on devel/readline, devel/
-    editline. The user can set READLINE_DEFAULT to choose readline
+  * readline.buildlink3.mk checks for a system-provided GNU readline or
+    editline (libedit) installation, or adds a dependency on devel/readline,
+    devel/editline. The user can set READLINE_DEFAULT to choose readline
     implementation. If your package really needs GNU readline library, its
     Makefile should include devel/readline/buildlink3.mk instead of
     readline.buildlink3.mk.
