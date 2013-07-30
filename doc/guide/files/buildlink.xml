@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.34 2013/04/21 15:20:46 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.35 2013/07/30 03:38:38 ryoon Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -124,6 +124,17 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
 	<quote>lesstif</quote>, <quote>motif</quote> or
 	<quote>openmotif</quote> to choose
 	which Motif version will be used.</para>
+      </listitem>
+
+      <listitem>
+	<para><filename>readline.buildlink3.mk</filename> checks for a
+	system-provided GNU readline or ediline (libedit) installation,
+	or adds a dependency on <filename role="pkg">devel/readline</filename>,
+	<filename role="pkg">devel/editline</filename>. The user can set
+	<varname>READLINE_DEFAULT</varname> to choose readline implementation.
+	If your package really needs GNU readline library, its Makefile
+	should include <filename>devel/readline/buildlink3.mk</filename>
+	instead of <filename>readline.buildlink3.mk</filename>.</para>
       </listitem>
 
       <listitem>
