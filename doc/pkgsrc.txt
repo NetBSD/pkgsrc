@@ -4724,6 +4724,13 @@ issues:
     MOTIF_TYPE to "dt", "lesstif", "motif" or "openmotif" to choose which Motif
     version will be used.
 
+  * readline.buildlink3.mk checks for a system-provided GNU readline or ediline
+    (libedit) installation, or adds a dependency on devel/readline, devel/
+    editline. The user can set READLINE_DEFAULT to choose readline
+    implementation. If your package really needs GNU readline library, its
+    Makefile should include devel/readline/buildlink3.mk instead of
+    readline.buildlink3.mk.
+
   * oss.buildlink3.mk defines several variables that may be used by packages
     that use the Open Sound System (OSS) API.
 
@@ -6633,6 +6640,7 @@ variable with "=" instead of "+=". The licenses accepted by default are:
         artistic artistic-2.0
         boost-license
         cc-by-sa-v3.0
+        cc0-1.0-universal
         cddl-1.0
         cpl-1.0
         epl-v1.0
