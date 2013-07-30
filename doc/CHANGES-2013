@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2767 2013/07/30 19:15:24 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2768 2013/07/30 19:52:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4078,3 +4078,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apache-ant to 1.9.2 [tez 2013-07-30]
 	Updated textproc/mdoclint to 1.22 [wiz 2013-07-30]
 	Updated textproc/markdown-mode to 2.0 [wiz 2013-07-30]
+	Added security/PACK version 0.0.3 [wiz 2013-07-30]
