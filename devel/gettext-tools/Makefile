@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/01/31 21:45:05 adam Exp $
+# $NetBSD: Makefile,v 1.21 2013/07/30 13:28:40 ryoon Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -26,6 +26,11 @@ INFO_FILES=		yes
 
 BROKEN_GETTEXT_DETECTION=	yes
 USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Cygwin"
+BUILDLINK_TRANSFORM+=	rm:-Wl,--disable-auto-import
+.endif
 
 post-install:
 	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install DESTDIR=${DESTDIR}
