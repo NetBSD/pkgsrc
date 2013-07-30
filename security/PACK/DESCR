@@ -1,0 +1,8 @@
+PACK (Password Analysis and Cracking Toolkit) is a collection of
+utilities developed to aid in analysis of password lists and
+enhancing cracking of passwords using smart rule generation. It
+can be used to reverse word mangling rules, generate source words
+and optimize password masks for the Hashcat family of tools.
+
+NOTE: The toolkit itself is not able to crack passwords, but instead
+designed to make operation of password crackers more efficient.
