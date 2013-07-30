@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.35 2013/07/30 18:46:29 wiz Exp $
+# $NetBSD: mdoclint,v 1.36 2013/07/30 18:50:07 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -46,14 +46,14 @@ use constant {
 use vars qw(
     	$opt_A $opt_a $opt_D $opt_d $opt_e $opt_F $opt_f $opt_H $opt_h $opt_l
 	$opt_m
-	$opt_n $opt_O $opt_o $opt_P $opt_p $opt_r $opt_S $opt_s $opt_v $opt_w
+	$opt_n $opt_o $opt_P $opt_p $opt_r $opt_S $opt_s $opt_v $opt_w
 	$opt_X $opt_x
 );
 
 
 my $arch=`uname -m`;
 chomp($arch);
-my $options="AaDdeFfHhlmnOoPprSsvwXx";
+my $options="AaDdeFfHhlmnoPprSsvwXx";
 
 sub usage
 	{
@@ -270,11 +270,11 @@ sub handle_options
 	# default to all warnings if no flag is set
 	unless ($opt_A or $opt_a or $opt_D or $opt_d or $opt_e
 		or $opt_f or $opt_H or $opt_l
-		or $opt_m or $opt_n or $opt_O
+		or $opt_m or $opt_n
 		or $opt_o or $opt_P or $opt_p or $opt_r
 		or $opt_S or $opt_s or $opt_X or $opt_x) {
 		$opt_A = $opt_a = $opt_D = $opt_d = $opt_f = $opt_m =
-		    $opt_n = $opt_O = $opt_o = $opt_P = $opt_p = $opt_r = $opt_S =
+		    $opt_n = $opt_o = $opt_P = $opt_p = $opt_r = $opt_S =
 		    $opt_s = $opt_X = $opt_x = 1;
 		$opt_e = $opt_l = 1 if NETBSD;
 	}
