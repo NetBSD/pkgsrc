@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.75 2013/03/26 15:08:53 schmonz Exp $
+$NetBSD: TODO,v 1.76 2013/07/30 19:50:04 wiz Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -60,3 +60,7 @@ if package A conflicts with B, then B should also conflict with A.
   point out problems that only occur on case-sensitive filesystems. For
   example, devel/p5-Net-LDAP and devel/p5-Net-ldap should be considered
   different paths.
+
+%
+
+* Warn about using REPLACE_PYTHON without including application.mk.
