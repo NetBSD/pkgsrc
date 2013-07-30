@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.36 2013/07/30 18:50:07 wiz Exp $
+# $NetBSD: mdoclint,v 1.37 2013/07/30 18:51:15 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -248,19 +248,6 @@ sub warning
 my $order = " !\"#\$\%&'()*+,-./:;<=>?[\\]^_{|}~".
 	"0123456789".
 	"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-
-sub forder {
-	my ($a, $b, $c, $len, $i);
-	$a = $_[0];
-	$b = $_[1];
-	$len = (length($a) < length($b))? length($a) : length($b);
-	for($i = 0; $i<=$len; $i++) {
-		$c = (index($order,substr($a,$i,1)) <=> index($order,substr($b,$i,1)));
-		if($c){ return $c };
-	}
-	return (length($a) <=> length($b));
-}
-
 
 sub handle_options
 {
