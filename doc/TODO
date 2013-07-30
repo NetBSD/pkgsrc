@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12443 2013/07/30 11:53:11 ryoon Exp $
+$NetBSD: TODO,v 1.12444 2013/07/30 13:15:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap2-transform-0.6.0
 	o apache-ant-1.9.2
 	o apache2-2.0.65
-	o apache24-2.4.6
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
@@ -566,7 +565,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.14.2
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
-	o glpk-4.52
+	o glpk-4.52.1
 	o glu-9.1.3
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -613,6 +612,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.22.2
 	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
+	o gssdp-0.14.4
 	o gstreamer-1.1.1
 	o gthumb-3.2.3
 	o gtk-gnutella-0.98.4
@@ -625,6 +625,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtranslator-1.9.6
 	o guile-2.0.9
 	o guile-gtk-2.0
+	o gupnp-0.20.4
 	o gwaei-3.6.2
 	o gworkspace-0.9.2
 	o gxine-0.5.907
@@ -773,6 +774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mgetty+sendfax-1.1.35
 	o midori-0.5
 	o milkytracker-0.90.85
+	o milter-manager-2.0.0
 	o mined-2012.22
 	o miniupnpd-1.8
 	o minivmac-3.2.3
@@ -825,7 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nulib2-220
-	o nut-18.9
+	o nut-18.10
 	o nxtvepg-2.8.1
 	o ocrad-0.22
 	o olvwm-4.5
@@ -1087,7 +1089,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o vifm-0.7.5
-	o vinagre-3.8.1
+	o vinagre-3.8.3
 	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.8.1
 	o visual-regexp-3.1
