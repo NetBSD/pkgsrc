@@ -1,4 +1,4 @@
-$NetBSD: patch-BSDmakefile,v 1.1 2013/02/27 12:38:12 ryoon Exp $
+$NetBSD: patch-BSDmakefile,v 1.2 2013/07/30 13:56:20 ryoon Exp $
 
 --- BSDmakefile.orig	2012-12-19 17:49:56.000000000 +0000
 +++ BSDmakefile
@@ -9,7 +9,7 @@ $NetBSD: patch-BSDmakefile,v 1.1 2013/02/27 12:38:12 ryoon Exp $
 +VERSION=        0.78
 +
 +CFLAGS+=	-D_FILE_OFFSET_BITS=64
-+
++LDFLAGS+=	-no-undefined
 +
 +OBJS=		cdb_init.o cdb_find.o cdb_findnext.o cdb_seq.o cdb_seek.o \
 +		cdb_unpack.o \
