@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/12 12:23:58 hauke Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/07/31 10:20:27 hauke Exp $
 bin/pyblosxom-cmd
 ${PYSITELIB}/Pyblosxom/__init__.py
 ${PYSITELIB}/Pyblosxom/__init__.pyc
@@ -60,6 +60,9 @@ ${PYSITELIB}/Pyblosxom/flavours/rss20.flav/content_type
 ${PYSITELIB}/Pyblosxom/flavours/rss20.flav/foot
 ${PYSITELIB}/Pyblosxom/flavours/rss20.flav/head
 ${PYSITELIB}/Pyblosxom/flavours/rss20.flav/story
+${PYSITELIB}/Pyblosxom/memcache.py
+${PYSITELIB}/Pyblosxom/memcache.pyc
+${PYSITELIB}/Pyblosxom/memcache.pyo
 ${PYSITELIB}/Pyblosxom/plugin_utils.py
 ${PYSITELIB}/Pyblosxom/plugin_utils.pyc
 ${PYSITELIB}/Pyblosxom/plugin_utils.pyo
