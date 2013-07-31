@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2774 2013/07/31 10:23:50 he Exp $
+$NetBSD: CHANGES-2013,v 1.2775 2013/07/31 11:49:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4086,3 +4086,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/puzzles to 9976 [wiz 2013-07-31]
 	Updated net/p5-Net-DNS to 0.69nb1 [he 2013-07-31]
 	Updated net/fpdns to 0.10.0pre20130404nb1 [he 2013-07-31]
+	Updated devel/nspr to 4.10nb1 [ryoon 2013-07-31]
