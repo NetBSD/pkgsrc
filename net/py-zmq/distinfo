@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/01/24 12:37:58 obache Exp $
+$NetBSD: distinfo,v 1.5 2013/07/31 03:20:44 rodent Exp $
 
-SHA1 (pyzmq-2.2.0.1.tar.gz) = 54e261cc42e85920f9453a90a2c336c38c73fe40
-RMD160 (pyzmq-2.2.0.1.tar.gz) = bc22c053d532124b569b59fb9a35914865b9ecc8
-Size (pyzmq-2.2.0.1.tar.gz) = 789996 bytes
+SHA1 (pyzmq-13.1.0.tar.gz) = 775fcff7777d220f06f5ff9e531822d63a5671c0
+RMD160 (pyzmq-13.1.0.tar.gz) = 2d7d79240c2544241830c68e5b9ba12bd8e0f7bd
+Size (pyzmq-13.1.0.tar.gz) = 838742 bytes
