@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2013/07/05 14:51:43 wiz Exp $
+$NetBSD: distinfo,v 1.20 2013/07/31 14:11:57 wiz Exp $
 
 SHA1 (lilypond-2.16.2.tar.gz) = 1eb3b0e5c117a8669dba19ab28f933351e51e39a
 RMD160 (lilypond-2.16.2.tar.gz) = bbb68ef05e81d8d9f5cf7ac26cffb5ab3935c61a
@@ -92,6 +92,7 @@ SHA1 (patch-lily_paper-outputter-scheme.cc) = f367bf8b92d71e77a8684feee7c36a2cc5
 SHA1 (patch-lily_paper-outputter.cc) = ab31467616005c48f91d99d18ccc17e319f57684
 SHA1 (patch-lily_paper-score-scheme.cc) = d594b707174c52d7cf53f6d66ad4674630442733
 SHA1 (patch-lily_paper-score.cc) = 3de40fdc4a7f2b47b5a1e18d77085031a28da192
+SHA1 (patch-lily_parser.yy) = 3314a19713680f4e0b1449c86d2b60c58931a49a
 SHA1 (patch-lily_performance-scheme.cc) = 51e20914d8dd4e79d165d9d2d7fd7688a972d328
 SHA1 (patch-lily_performance.cc) = c0e798ce519b991809a508fdb80bf9ca03f4a94f
 SHA1 (patch-lily_performer-group.cc) = b7d3cd889a781907aebcbecf9e84eeefbc30bf64
