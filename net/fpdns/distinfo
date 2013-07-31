@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/06/22 22:35:13 pettai Exp $
+$NetBSD: distinfo,v 1.3 2013/07/31 10:23:17 he Exp $
 
-SHA1 (fpdns-20130404.zip) = 782d2cc9dc34bda3e6b1201875a4718a497536ec
-RMD160 (fpdns-20130404.zip) = 69bb402a330ce4f86339b9674dcb957220a63619
-Size (fpdns-20130404.zip) = 973665 bytes
+SHA1 (20130404.tar.gz) = 3c3b33df1861a1a9901601d6c2252b2427ba8763
+RMD160 (20130404.tar.gz) = a2e8113c53533c813d81b01223f8b2e5b2407d12
+Size (20130404.tar.gz) = 931723 bytes
+SHA1 (patch-lib_Net_DNS_Fingerprint.pm) = aa48ba2e8e0752762448d4fc71bd378d308ac364
