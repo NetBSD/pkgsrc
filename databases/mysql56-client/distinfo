@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/07/29 13:39:06 prlw1 Exp $
+$NetBSD: distinfo,v 1.9 2013/07/31 09:51:38 adam Exp $
 
-SHA1 (mysql-5.6.12.tar.gz) = c48ae4061c23db89de7ebd2d25abbc36283bab69
-RMD160 (mysql-5.6.12.tar.gz) = 235b2c7b52ca40b98b08d0b27ebd0154d71f6a83
-Size (mysql-5.6.12.tar.gz) = 35853760 bytes
+SHA1 (mysql-5.6.13.tar.gz) = 06e1d856cfb1f98844ef92af47d4f4f7036ef294
+RMD160 (mysql-5.6.13.tar.gz) = 22411eda9da0d931a44ab0710ded76c065cd05e6
+Size (mysql-5.6.13.tar.gz) = 35951160 bytes
 SHA1 (patch-CMakeLists.txt) = 1889afcd79a271d3f9ac0e234c449ef6aa8ca818
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
@@ -16,7 +16,7 @@ SHA1 (patch-include_my_compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my_net.h) = b08aa36921efd023f9ecaac4cd3fb8a16d200abd
 SHA1 (patch-include_my_pthread.h) = ff3bf1fddd04edd7804d810f79de64387464b5ca
 SHA1 (patch-include_myisam.h) = c554a594ea0169cb725cfdfe5accaf231eebdc23
-SHA1 (patch-libmysql_CMakeLists.txt) = 6169cb9f88e4022b83b3d9103b1f8e80ad8143d8
+SHA1 (patch-libmysql_CMakeLists.txt) = fbb012525eb90d4f171d6fa63ed4343bbb02d2d3
 SHA1 (patch-libmysql_libmysql.c) = ad78143ca78b7c512e86677b3dd59e497357f289
 SHA1 (patch-libmysqld_lib__sql.cc) = ffdd74cece2d7795cb4d8d738f81c2c8dc040a7d
 SHA1 (patch-mysql-test_CMakeLists.txt) = b7dd562d55678b13ac487aa0ee59bf2551af1f9d
@@ -30,11 +30,11 @@ SHA1 (patch-sql-common_client.c) = f9ecb9bb381d44ca8b551a27150fc40da887a5e9
 SHA1 (patch-sql_CMakeLists.txt) = 83c1e50de6b53a0af5ff010f248dd595745b3eb5
 SHA1 (patch-sql_event__db__repository.cc) = 7a7f95b9db61c690aa6edf55503311a13def59ec
 SHA1 (patch-sql_field.cc) = 54bd0505251714d18840c79260a18dec92fd3d23
-SHA1 (patch-sql_field.h) = bf0d326ffb0ddf6ce31d962c2ddb1cde5042697d
+SHA1 (patch-sql_field.h) = 4b337a623bf1b63190ffa1dfb5575fd32e01825a
 SHA1 (patch-sql_field__conv.cc) = 10847e2fc2b7bb078b125877ffd9efbbc2ba6b28
 SHA1 (patch-sql_ha__ndbcluster.cc) = f46816ab5437ef4b2618e83dc6efa6009acf5167
 SHA1 (patch-sql_ha__partition.cc) = 712dfefe65f6671c3c834ab07111f828b44b9b92
-SHA1 (patch-sql_handler.cc) = e41db8bfae19a7638048ccc37a9f9511f4304b35
+SHA1 (patch-sql_handler.cc) = 7d4dc521c9c8d63148c412d04e1446025dcbf4bd
 SHA1 (patch-sql_handler.h) = e45c9fab750910ef7f02a714c1a4684303cb05a0
 SHA1 (patch-sql_item.cc) = cf523f4377788ca2342d6913f22e6e2be21e7b94
 SHA1 (patch-sql_item.h) = 8b8be81418254aac383464e9b358268343a9a55d
@@ -78,7 +78,7 @@ SHA1 (patch-sql_sql__load.cc) = 2deaed8591f8de74c785551e25c446f1495f6761
 SHA1 (patch-sql_sql__optimizer.cc) = 0dd2fbe662fb9f5295fdc5f56b5bb31e21ef2b6e
 SHA1 (patch-sql_sql__optimizer.h) = 6104052027b9270540a7050d546a0d013ae86b8c
 SHA1 (patch-sql_sql__parse.cc) = 762aa7c8f535cfc31d0af64d8398bf45b83a01f2
-SHA1 (patch-sql_sql__partition.cc) = af69c918da14566b45beb757902b03b83aa8e36f
+SHA1 (patch-sql_sql__partition.cc) = cf44a45c08bab81bc7a19673295aa4552c633021
 SHA1 (patch-sql_sql__planner.cc) = f3540275174e4ab68950c579d424a2bc118eb292
 SHA1 (patch-sql_sql__prepare.cc) = 886ee8ca5863704ddf172eb746c092f308e6ca1c
 SHA1 (patch-sql_sql__prepare.h) = 30b520b1dea2b8d8225c528ba58b9231d94a85dd

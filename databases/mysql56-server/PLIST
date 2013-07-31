@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/06/04 18:17:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/07/31 09:51:38 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -185,11 +185,14 @@ share/mysql/test/README.stress
 share/mysql/test/collections/README
 share/mysql/test/collections/README.experimental
 share/mysql/test/collections/default.daily
+share/mysql/test/collections/default.daily-valgrind
 share/mysql/test/collections/default.experimental
 share/mysql/test/collections/default.push
+share/mysql/test/collections/default.push-valgrind
 share/mysql/test/collections/default.release
 share/mysql/test/collections/default.release.done
 share/mysql/test/collections/default.weekly
+share/mysql/test/collections/default.weekly-valgrind
 share/mysql/test/collections/disabled-daily.list
 share/mysql/test/collections/disabled-gtid-on.list
 share/mysql/test/collections/disabled-per-push.list
@@ -428,6 +431,7 @@ share/mysql/test/include/have_cp866.inc
 share/mysql/test/include/have_cp932.inc
 share/mysql/test/include/have_crypt.inc
 share/mysql/test/include/have_csv.inc
+share/mysql/test/include/have_daemon_example_plugin.inc
 share/mysql/test/include/have_dbi_dbd-mysql.inc
 share/mysql/test/include/have_debug.inc
 share/mysql/test/include/have_debug_sync.inc
@@ -606,6 +610,7 @@ share/mysql/test/include/read_many_rows.inc
 share/mysql/test/include/relocate_binlogs.inc
 share/mysql/test/include/report-features.test
 share/mysql/test/include/restart_mysqld.inc
+share/mysql/test/include/restart_readonly_mysqld.inc
 share/mysql/test/include/restart_slave_sql.inc
 share/mysql/test/include/rowid_order.inc
 share/mysql/test/include/rpl_change_topology.inc
@@ -3756,6 +3761,7 @@ share/mysql/test/suite/innodb_fts/r/innodb_fts_multiple_index.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_opt.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_plugin.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_proximity.result
+share/mysql/test/suite/innodb_fts/r/innodb_fts_result_cache_limit.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_stopword_charset.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_transaction.result
 share/mysql/test/suite/innodb_fts/t/disabled.def
@@ -3784,6 +3790,7 @@ share/mysql/test/suite/innodb_fts/t/innodb_fts_multiple_index.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_opt.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_plugin.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_proximity.test
+share/mysql/test/suite/innodb_fts/t/innodb_fts_result_cache_limit.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_stopword_charset.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_transaction.test
 share/mysql/test/suite/jp/include/trim_sjis.inc
@@ -5116,6 +5123,8 @@ share/mysql/test/suite/perfschema/include/connection_setup.inc
 share/mysql/test/suite/perfschema/include/digest_cleanup.inc
 share/mysql/test/suite/perfschema/include/digest_execution.inc
 share/mysql/test/suite/perfschema/include/digest_setup.inc
+share/mysql/test/suite/perfschema/include/disable_instruments.inc
+share/mysql/test/suite/perfschema/include/enable_instruments.inc
 share/mysql/test/suite/perfschema/include/event_aggregate_cleanup.inc
 share/mysql/test/suite/perfschema/include/event_aggregate_load.inc
 share/mysql/test/suite/perfschema/include/event_aggregate_setup.inc
@@ -5124,6 +5133,7 @@ share/mysql/test/suite/perfschema/include/hostcache_dump.inc
 share/mysql/test/suite/perfschema/include/hostcache_set_state.inc
 share/mysql/test/suite/perfschema/include/no_protocol.inc
 share/mysql/test/suite/perfschema/include/privilege.inc
+share/mysql/test/suite/perfschema/include/rpl_statements_truncate.inc
 share/mysql/test/suite/perfschema/include/schema.inc
 share/mysql/test/suite/perfschema/include/setup_helper.inc
 share/mysql/test/suite/perfschema/include/sizing_auto.inc
@@ -5347,6 +5357,7 @@ share/mysql/test/suite/perfschema/r/read_only.result
 share/mysql/test/suite/perfschema/r/relaylog.result
 share/mysql/test/suite/perfschema/r/rollback_table_io.result
 share/mysql/test/suite/perfschema/r/rpl_gtid_func.result
+share/mysql/test/suite/perfschema/r/rpl_statements.result
 share/mysql/test/suite/perfschema/r/schema.result
 share/mysql/test/suite/perfschema/r/selects.result
 share/mysql/test/suite/perfschema/r/server_init.result
@@ -5704,6 +5715,9 @@ share/mysql/test/suite/perfschema/t/relaylog-slave.opt
 share/mysql/test/suite/perfschema/t/relaylog.test
 share/mysql/test/suite/perfschema/t/rollback_table_io.test
 share/mysql/test/suite/perfschema/t/rpl_gtid_func.test
+share/mysql/test/suite/perfschema/t/rpl_statements-master.opt
+share/mysql/test/suite/perfschema/t/rpl_statements-slave.opt
+share/mysql/test/suite/perfschema/t/rpl_statements.test
 share/mysql/test/suite/perfschema/t/schema.test
 share/mysql/test/suite/perfschema/t/selects-master.opt
 share/mysql/test/suite/perfschema/t/selects.test
@@ -6352,7 +6366,6 @@ share/mysql/test/suite/rpl/t/rpl_change_master_crash_safe.test
 share/mysql/test/suite/rpl/t/rpl_change_master_dbug.test
 share/mysql/test/suite/rpl/t/rpl_charset.test
 share/mysql/test/suite/rpl/t/rpl_charset_sjis.test
-share/mysql/test/suite/rpl/t/rpl_check_gtid-slave.opt
 share/mysql/test/suite/rpl/t/rpl_check_gtid.test
 share/mysql/test/suite/rpl/t/rpl_checksum-master.opt
 share/mysql/test/suite/rpl/t/rpl_checksum.test
@@ -7201,8 +7214,10 @@ share/mysql/test/suite/sys_vars/r/innodb_ft_enable_stopword_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_ft_max_token_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_ft_min_token_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_ft_num_word_optimize_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_ft_result_cache_limit_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_ft_server_stopword_table_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_ft_sort_pll_degree_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_ft_total_cache_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_ft_user_stopword_table_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_io_capacity_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_io_capacity_max_basic.result
@@ -7485,6 +7500,7 @@ share/mysql/test/suite/sys_vars/r/rpl_semi_sync_master_trace_level_basic.result
 share/mysql/test/suite/sys_vars/r/rpl_semi_sync_master_wait_no_slave_basic.result
 share/mysql/test/suite/sys_vars/r/rpl_semi_sync_slave_enabled_basic.result
 share/mysql/test/suite/sys_vars/r/rpl_semi_sync_slave_trace_level_basic.result
+share/mysql/test/suite/sys_vars/r/rpl_stop_slave_timeout_basic.result
 share/mysql/test/suite/sys_vars/r/secure_auth_basic.result
 share/mysql/test/suite/sys_vars/r/secure_auth_func.result
 share/mysql/test/suite/sys_vars/r/secure_file_priv.result
@@ -7799,8 +7815,10 @@ share/mysql/test/suite/sys_vars/t/innodb_ft_enable_stopword_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_ft_max_token_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_ft_min_token_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_ft_num_word_optimize_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_ft_result_cache_limit_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_ft_server_stopword_table_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_ft_sort_pll_degree_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_ft_total_cache_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_ft_user_stopword_table_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_io_capacity_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_io_capacity_max_basic.test
@@ -8130,6 +8148,7 @@ share/mysql/test/suite/sys_vars/t/rpl_semi_sync_slave_enabled_basic-master.opt
 share/mysql/test/suite/sys_vars/t/rpl_semi_sync_slave_enabled_basic.test
 share/mysql/test/suite/sys_vars/t/rpl_semi_sync_slave_trace_level_basic-master.opt
 share/mysql/test/suite/sys_vars/t/rpl_semi_sync_slave_trace_level_basic.test
+share/mysql/test/suite/sys_vars/t/rpl_stop_slave_timeout_basic.test
 share/mysql/test/suite/sys_vars/t/secure_auth_basic.test
 share/mysql/test/suite/sys_vars/t/secure_auth_func-master.opt
 share/mysql/test/suite/sys_vars/t/secure_auth_func.test

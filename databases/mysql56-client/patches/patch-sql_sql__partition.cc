@@ -1,17 +1,8 @@
-$NetBSD: patch-sql_sql__partition.cc,v 1.1 2013/05/06 14:41:08 joerg Exp $
+$NetBSD: patch-sql_sql__partition.cc,v 1.2 2013/07/31 09:51:38 adam Exp $
 
---- sql/sql_partition.cc.orig	2013-05-05 20:56:04.000000000 +0000
+--- sql/sql_partition.cc.orig	2013-07-10 16:17:27.000000000 +0000
 +++ sql/sql_partition.cc
-@@ -3294,7 +3294,7 @@ uint32 get_partition_id_cols_list_for_en
-     }
-     else 
-     {
--      DBUG_RETURN(list_index + test(!tailf));
-+      DBUG_RETURN(list_index + my_test(!tailf));
-     }
-   } while (max_list_index >= min_list_index);
-   if (cmp > 0)
-@@ -3370,7 +3370,7 @@ uint32 get_list_array_idx_for_endpoint(p
+@@ -3377,7 +3377,7 @@ uint32 get_list_array_idx_for_endpoint(p
      }
      else 
      {
@@ -20,7 +11,7 @@ $NetBSD: patch-sql_sql__partition.cc,v 1.1 2013/05/06 14:41:08 joerg Exp $
      }
    } while (max_list_index >= min_list_index);
  notfound:
-@@ -5846,7 +5846,7 @@ static bool mysql_change_partitions(ALTE
+@@ -5853,7 +5853,7 @@ static bool mysql_change_partitions(ALTE
    if (mysql_trans_commit_alter_copy_data(thd))
      error= 1;                                /* The error has been reported */
  
@@ -29,16 +20,7 @@ $NetBSD: patch-sql_sql__partition.cc,v 1.1 2013/05/06 14:41:08 joerg Exp $
  }
  
  
-@@ -7720,7 +7720,7 @@ uint32 get_partition_id_cols_range_for_e
-                                        loc_part_id * num_columns,
-                                        nparts, tailf);
-       if (!res)
--        loc_part_id += test(include_endpoint);
-+        loc_part_id += my_test(include_endpoint);
-       else if (res > 0)
-         loc_part_id++;
-     }
-@@ -7902,7 +7902,7 @@ int get_part_iter_for_interval_via_mappi
+@@ -7967,7 +7967,7 @@ int get_part_iter_for_interval_via_mappi
          index-in-ordered-array-of-list-constants (for LIST) space.
        */
        store_key_image_to_rec(field, min_value, field_len);
@@ -47,7 +29,7 @@ $NetBSD: patch-sql_sql__partition.cc,v 1.1 2013/05/06 14:41:08 joerg Exp $
        part_iter->part_nums.start= get_endpoint(part_info, 1, include_endp);
        if (!can_match_multiple_values && part_info->part_expr->null_value)
        {
-@@ -7937,7 +7937,7 @@ int get_part_iter_for_interval_via_mappi
+@@ -8002,7 +8002,7 @@ int get_part_iter_for_interval_via_mappi
    else
    {
      store_key_image_to_rec(field, max_value, field_len);
@@ -56,7 +38,7 @@ $NetBSD: patch-sql_sql__partition.cc,v 1.1 2013/05/06 14:41:08 joerg Exp $
      part_iter->part_nums.end= get_endpoint(part_info, 0, include_endp);
      if (check_zero_dates &&
          !zero_in_start_date &&
-@@ -8104,8 +8104,8 @@ int get_part_iter_for_interval_via_walki
+@@ -8169,8 +8169,8 @@ int get_part_iter_for_interval_via_walki
    if ((ulonglong)b - (ulonglong)a == ~0ULL)
      DBUG_RETURN(-1);
  
