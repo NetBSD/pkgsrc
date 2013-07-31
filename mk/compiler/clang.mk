@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.12 2013/05/29 13:19:02 joerg Exp $
+# $NetBSD: clang.mk,v 1.13 2013/07/31 06:37:27 adam Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -41,7 +41,7 @@ PKG_CPP:=		${CPPPATH}
 
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -v 2>&1
-CC_VERSION!=		${CCPATH} --version 2>&1 | ${SED} -n "s/clang version /clang-/p" 
+CC_VERSION!=		${CCPATH} --version 2>&1 | ${SED} -n "s/^.* version /clang-/p" 
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		clang
