@@ -1,21 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2013/05/09 06:40:27 adam Exp $
+$NetBSD: patch-ab,v 1.4 2013/07/31 18:25:28 adam Exp $
 
 Disable ucontext.h detection, which leads to problems on some platforms.
 Shell portabibility fix.
 Disable univeral binary build on Mac OS X.
 
---- configure.orig	2013-03-14 16:58:22.000000000 +0000
+--- configure.orig	2013-06-18 19:55:25.000000000 +0000
 +++ configure
-@@ -19773,7 +19773,7 @@ fi
+@@ -16437,7 +16437,7 @@ fi
  
  
  
 -for ac_header in limits.h unistd.h ucontext.h
 +for ac_header in limits.h unistd.h
  do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
- if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -20524,7 +20524,7 @@ LIB_SUFFIX=""
+ as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
+@@ -17212,7 +17212,7 @@ LIB_SUFFIX=""
  lib_suffix_valid="no"
  
  lib_namespace=""
@@ -24,7 +24,7 @@ Disable univeral binary build on Mac OS X.
      cat >>confdefs.h <<_ACEOF
  #define IMATH_INTERNAL_NAMESPACE Imath_${ILMBASE_VERSION_API}
  _ACEOF
-@@ -20545,7 +20545,7 @@ _ACEOF
+@@ -17233,7 +17233,7 @@ _ACEOF
      lib_namespace="${ILMBASE_VERSION_API}"
      LIB_SUFFIX="${ILMBASE_VERSION_API}"
      lib_suffix_valid="yes"
@@ -33,7 +33,7 @@ Disable univeral binary build on Mac OS X.
      cat >>confdefs.h <<_ACEOF
  #define IMATH_INTERNAL_NAMESPACE Imath
  _ACEOF
-@@ -20583,7 +20583,7 @@ _ACEOF
+@@ -17271,7 +17271,7 @@ _ACEOF
  fi
  
  
@@ -41,17 +41,17 @@ Disable univeral binary build on Mac OS X.
 +if test "x${lib_suffix_valid}" = xyes ; then
  LIB_SUFFIX_DASH="-${LIB_SUFFIX}"
  
+  if true; then
+@@ -17306,7 +17306,7 @@ else
+ fi
  
-@@ -20622,7 +20622,7 @@ else
-   custom_public_namespace=no
- fi;
  
 -if test "x${custom_public_namespace}" == xyes ; then
 +if test "x${custom_public_namespace}" = xyes ; then
-     { echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&5
- echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&2;}
+     { $as_echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&5
+ $as_echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&2;}
      cat >>confdefs.h <<\_ACEOF
-@@ -20640,7 +20640,7 @@ _ACEOF
+@@ -17324,7 +17324,7 @@ _ACEOF
  
      public_namespace=""
      custom_public_namespace=no
@@ -60,27 +60,17 @@ Disable univeral binary build on Mac OS X.
      cat >>confdefs.h <<\_ACEOF
  #define IMATH_NAMESPACE Imath
  _ACEOF
-@@ -20690,23 +20690,7 @@ else
- fi;
+@@ -17373,12 +17373,10 @@ else
+ fi
  
-   if test "${osx_arch}" != default ; then
+ 
+-  if test "${osx_arch}" != default ; then
 -          osx_arch_flags="-arch ${osx_arch// / -arch }"
++  if false ; then
       CXXFLAGS="$CXXFLAGS $osx_arch_flags"
--
--          if test "$enable_dependency_tracking" != no ; then
--        osx_arch_array=( ${osx_arch} )
--        if test ${#osx_arch_array[@]} -gt 1 ; then
--          { { echo "$as_me:$LINENO: error: building multiple OS X architectures requires --disable-dependency-tracking.
--Please re-run configure with these options:
--  --enable-osx-arch=\"${osx_arch}\" --disable-dependency-tracking
--  		  " >&5
--echo "$as_me: error: building multiple OS X architectures requires --disable-dependency-tracking.
--Please re-run configure with these options:
--  --enable-osx-arch=\"${osx_arch}\" --disable-dependency-tracking
--  		  " >&2;}
--   { (exit 1); exit 1; }; }
--        fi
--     fi
-   fi
  
-     # Check whether --enable-osx-sdk or --disable-osx-sdk was given.
+           if test "$enable_dependency_tracking" != no ; then
+-        osx_arch_array=( ${osx_arch} )
+         if test ${#osx_arch_array[@]} -gt 1 ; then
+           { { $as_echo "$as_me:$LINENO: error: building multiple OS X architectures requires --disable-dependency-tracking.
+ Please re-run configure with these options:
