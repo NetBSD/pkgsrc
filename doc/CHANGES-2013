@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2768 2013/07/30 19:52:36 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2769 2013/07/31 03:21:01 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4079,3 +4079,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/mdoclint to 1.22 [wiz 2013-07-30]
 	Updated textproc/markdown-mode to 2.0 [wiz 2013-07-30]
 	Added security/PACK version 0.0.3 [wiz 2013-07-30]
+	Updated net/py-zmq to 13.1.0 [rodent 2013-07-31]
