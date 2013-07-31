@@ -1,7 +1,16 @@
-@comment $NetBSD: PLIST,v 1.15 2013/02/10 05:55:07 manu Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/07/31 06:53:21 adam Exp $
+include/openvpn-plugin.h
+${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
+lib/openvpn/plugins/openvpn-plugin-down-root.la
 man/man8/openvpn.8
 sbin/openvpn
-include/openvpn-plugin.h
+share/doc/openvpn/COPYING
+share/doc/openvpn/COPYRIGHT.GPL
+share/doc/openvpn/README
+share/doc/openvpn/README.IPv6
+${PLIST.pam}share/doc/openvpn/README.auth-pam
+share/doc/openvpn/README.down-root
+share/doc/openvpn/README.polarssl
 share/doc/openvpn/management-notes.txt
 share/examples/openvpn/config/README
 share/examples/openvpn/config/client.conf
@@ -36,14 +45,3 @@ share/examples/openvpn/scripts/bridge-stop
 share/examples/openvpn/scripts/ucn.pl
 share/examples/openvpn/scripts/verify-cn
 share/examples/rc.d/openvpn
-share/doc/openvpn/COPYING
-share/doc/openvpn/COPYRIGHT.GPL
-share/doc/openvpn/README
-share/doc/openvpn/README.IPv6
-${PLIST.pam}share/doc/openvpn/README.auth-pam
-share/doc/openvpn/README.down-root
-share/doc/openvpn/README.polarssl
-${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.so
-${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
-lib/openvpn/plugins/openvpn-plugin-down-root.so
-lib/openvpn/plugins/openvpn-plugin-down-root.la
