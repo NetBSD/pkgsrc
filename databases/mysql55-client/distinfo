@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.24 2013/07/17 21:22:40 adam Exp $
+$NetBSD: distinfo,v 1.25 2013/07/31 18:51:41 adam Exp $
 
-SHA1 (mysql/mysql-5.5.32.tar.gz) = 4f9accac6de6fcca4d729a3b0f98fc76ffb73867
-RMD160 (mysql/mysql-5.5.32.tar.gz) = e59a9166a93fd873ef4fc7afa70204dc16c1f662
-Size (mysql/mysql-5.5.32.tar.gz) = 24589274 bytes
+SHA1 (mysql-5.5.33.tar.gz) = 40c6d63e8a959458737f6fa485d3598c12aef670
+RMD160 (mysql-5.5.33.tar.gz) = a2574b2ff320b0b4f93fb3a616f4ebbacd31f641
+Size (mysql-5.5.33.tar.gz) = 24680463 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = a1ac666efa953a98455a726e5db359c903d699b6
 SHA1 (patch-CMakeLists.txt) = 0c4263762d2d9fafd84b25038cae57a87fed339d
 SHA1 (patch-client_completion_hash.cc) = e27fd7072a8206380f0a932b1a31d2843c985cbf

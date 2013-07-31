@@ -1,13 +1,11 @@
-# $NetBSD: Makefile.common,v 1.29 2013/07/17 21:22:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2013/07/31 18:51:41 adam Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
 
-DISTNAME=	mysql-5.5.32
+DISTNAME=	mysql-5.5.33
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.5/}
-# XXX: distfile got changed; remove the following line on next update
-DIST_SUBDIR=	mysql
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/
@@ -17,7 +15,6 @@ DISTINFO_FILE?=		${.CURDIR}/../../databases/mysql55-client/distinfo
 PATCHDIR?=		${.CURDIR}/../../databases/mysql55-client/patches
 
 USE_CMAKE=		yes
-USE_GNU_READLINE=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake perl:run
 
