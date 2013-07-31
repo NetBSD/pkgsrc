@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2772 2013/07/31 07:12:38 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2773 2013/07/31 09:48:36 he Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4084,3 +4084,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/glpk to 4.52.1 [adam 2013-07-31]
 	Updated devel/p5-Data-UUID to 1.219 [wiz 2013-07-31]
 	Updated games/puzzles to 9976 [wiz 2013-07-31]
+	Updated net/p5-Net-DNS to 0.69nb1 [he 2013-07-31]
