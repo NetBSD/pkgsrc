@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2770 2013/07/31 07:05:17 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2771 2013/07/31 07:10:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4082,3 +4082,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/py-zmq to 13.1.0 [rodent 2013-07-31]
 	Updated net/openvpn to 2.3.2 [adam 2013-07-31]
 	Updated math/glpk to 4.52.1 [adam 2013-07-31]
+	Updated devel/p5-Data-UUID to 1.219 [wiz 2013-07-31]
