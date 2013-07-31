@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.7 2013/05/08 17:49:11 adam Exp $
+$NetBSD: patch-aa,v 1.8 2013/07/31 18:26:07 adam Exp $
 
 Shell portability fix: see
 https://savannah.nongnu.org/bugs/index.php?22222
 
---- configure.orig	2013-03-14 17:03:39.000000000 +0000
+--- configure.orig	2013-07-12 00:09:23.000000000 +0000
 +++ configure
-@@ -18981,7 +18981,7 @@ else
-   multithread=yes
- fi;
+@@ -15664,7 +15664,7 @@ else
+ fi
+ 
  
 -if test x$PKG_CONFIG == xno && test "x${multithread}" != xno ; then
 +if test x$PKG_CONFIG = xno && test "x${multithread}" != xno ; then
  
  
  
-@@ -20980,7 +20980,7 @@ LIB_SUFFIX=""
+@@ -17689,7 +17689,7 @@ LIB_SUFFIX=""
  lib_suffix_valid="no"
  
  lib_namespace="Imf"
@@ -23,7 +23,7 @@ https://savannah.nongnu.org/bugs/index.php?22222
      cat >>confdefs.h <<_ACEOF
  #define OPENEXR_IMF_INTERNAL_NAMESPACE Imf_${OPENEXR_VERSION_API}
  _ACEOF
-@@ -20993,7 +20993,7 @@ _ACEOF
+@@ -17702,7 +17702,7 @@ _ACEOF
      lib_namespace="Imf_${OPENEXR_VERSION_API}"
      LIB_SUFFIX="Imf_${OPENEXR_VERSION_API}"
      lib_suffix_valid="yes"
@@ -32,7 +32,7 @@ https://savannah.nongnu.org/bugs/index.php?22222
      cat >>confdefs.h <<_ACEOF
  #define OPENEXR_IMF_INTERNAL_NAMESPACE Imf
  _ACEOF
-@@ -21016,7 +21016,7 @@ _ACEOF
+@@ -17725,7 +17725,7 @@ _ACEOF
  fi
  
  
@@ -40,17 +40,17 @@ https://savannah.nongnu.org/bugs/index.php?22222
 +if test "x${lib_suffix_valid}" = xyes ; then
  LIB_SUFFIX_DASH="-${LIB_SUFFIX}"
  
+  if true; then
+@@ -17760,7 +17760,7 @@ else
+ fi
  
-@@ -21055,7 +21055,7 @@ else
-   custom_usr_namespace=no
- fi;
  
 -if test "x${custom_usr_namespace}" == xyes ; then
 +if test "x${custom_usr_namespace}" = xyes ; then
-     { echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to 'Imf'" >&5
- echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to 'Imf'" >&2;}
+     { $as_echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to 'Imf'" >&5
+ $as_echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to 'Imf'" >&2;}
      cat >>confdefs.h <<_ACEOF
-@@ -21063,7 +21063,7 @@ echo "$as_me: WARNING: Enabling 'custom 
+@@ -17768,7 +17768,7 @@ $as_echo "$as_me: WARNING: Enabling 'cus
  _ACEOF
  
      usr_namespace="Imf"
@@ -59,12 +59,12 @@ https://savannah.nongnu.org/bugs/index.php?22222
      cat >>confdefs.h <<_ACEOF
  #define OPENEXR_IMF_NAMESPACE Imf
  _ACEOF
-@@ -22620,7 +22622,7 @@ enable large stack optimizations        
+@@ -20498,7 +20498,7 @@ enable large stack optimizations        
  internal library namespace                      $lib_namespace
- user-client namespace                           $usr_namespace" >&6
+ user-client namespace                           $usr_namespace" >&6; }
  
 -if test "x$build_osxuniversal" == xyes; then
 +if test "x$build_osxuniversal" = xyes; then
- echo "$as_me:$LINENO: result:
+ { $as_echo "$as_me:$LINENO: result:
  build OS X universal binaries                   $build_osxuniversal" >&5
- echo "${ECHO_T}
+ $as_echo "
