@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2013/07/15 02:02:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/31 09:51:38 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	mysqs
 COMMENT=	MySQL 5, a free SQL database (server)
 
@@ -86,6 +85,5 @@ CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 
 BUILDLINK_AUTO_DIRS.mysql-client=	no
 .include "../../databases/mysql56-client/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
