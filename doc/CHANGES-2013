@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2776 2013/07/31 17:42:21 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2777 2013/07/31 18:27:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4089,3 +4089,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-Net-DNS to 0.69nb1 [he 2013-07-31]
 	Updated net/fpdns to 0.10.0pre20130404nb1 [he 2013-07-31]
 	Updated devel/nspr to 4.10nb1 [ryoon 2013-07-31]
+	Updated graphics/ilmbase to 2.0.1 [adam 2013-07-31]
+	Updated graphics/openexr to 2.0.1 [adam 2013-07-31]
