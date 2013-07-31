@@ -1,16 +1,16 @@
-$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1 2013/07/15 12:13:43 ryoon Exp $
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.2 2013/07/31 09:51:38 adam Exp $
 
 * Generate libmysqlclient.so.18.0.0 file and libmysqlclient_r.so.18.0.0 symlink
   on FreeBSD to supress PLIST divergence.
 
---- libmysql/CMakeLists.txt.orig	2013-05-21 15:18:39.000000000 +0000
+--- libmysql/CMakeLists.txt.orig	2013-07-10 16:17:29.000000000 +0000
 +++ libmysql/CMakeLists.txt
-@@ -203,7 +203,7 @@ IF(NOT DISABLE_SHARED)
+@@ -215,7 +215,7 @@ IF(NOT DISABLE_SHARED)
      COMPONENT SharedLibraries)
    IF(UNIX)
      # libtool compatability
 -    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR APPLE)
 +    IF(CMAKE_SYSTEM_NAME MATCHES APPLE)
        SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
-     ELSEIF(CMAKE_SYSTEM_NAME MATCHES "HP-UX")
-       SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}.0")
+     ELSE()
+       SET(OS_SHARED_LIB_VERSION
