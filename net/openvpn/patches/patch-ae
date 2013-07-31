@@ -1,9 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2013/02/10 05:55:07 manu Exp $
+$NetBSD: patch-ae,v 1.7 2013/07/31 06:53:21 adam Exp $
 
---- configure.ac.orig	2012-11-29 20:47:57.000000000 +0000
-+++ configure.ac	2013-01-28 09:26:04.000000000 +0000
-@@ -418,8 +418,9 @@
- 	sys/time.h sys/ioctl.h sys/stat.h \
+--- configure.ac.orig	2013-05-31 12:00:25.000000000 +0000
++++ configure.ac
+@@ -419,6 +419,7 @@ AC_CHECK_HEADERS([ \
  	sys/mman.h sys/file.h sys/wait.h \
  	unistd.h signal.h libgen.h stropts.h \
  	syslog.h pwd.h grp.h \
@@ -11,9 +10,7 @@ $NetBSD: patch-ae,v 1.6 2013/02/10 05:55:07 manu Exp $
  	sys/sockio.h sys/uio.h linux/sockios.h \
  	linux/types.h sys/poll.h sys/epoll.h err.h \
  ])
- 
-@@ -432,8 +433,11 @@
- #endif
+@@ -433,6 +434,9 @@ SOCKET_INCLUDES="
  #ifdef HAVE_SYS_SOCKET_H
  #include <sys/socket.h>
  #endif
@@ -23,4 +20,16 @@ $NetBSD: patch-ae,v 1.6 2013/02/10 05:55:07 manu Exp $
  #ifdef HAVE_NETINET_IN_H
  #include <netinet/in.h>
  #endif
- #ifdef HAVE_WINDOWS_H
+@@ -496,6 +500,12 @@ AC_CHECK_TYPE(
+ 	,
+ 	[[${SOCKET_INCLUDES}]]
+ )
++AC_CHECK_MEMBER(
++	[struct in_pktinfo.ipi_spec_dst],
++	[AC_DEFINE([HAVE_IPI_SPEC_DST], [1], [struct in_pktinfo.ipi_spec_dst needed for IP_PKTINFO support])],
++	,
++	[[${SOCKET_INCLUDES}]]
++)
+ AC_CHECK_TYPE(
+ 	[struct sockaddr_in6],
+ 	,
