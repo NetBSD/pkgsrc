@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.14 2013/07/30 20:18:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.15 2013/07/31 15:19:10 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -47,3 +47,5 @@ Pullup ticket #4190 - requested by taca
 net/bind98: security update
 Pullup ticket #4193 - requested by ryoon
 www/apache24: security update
+Pullup ticket #4194 - requested by is
+lang/swi-prolog-lite: bug fix patch
