@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2012/10/02 20:11:55 asau Exp $
+# $NetBSD: Makefile,v 1.20.6.1 2013/07/31 15:18:44 tron Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		swi-prolog-lite-${SWIPLVERS}
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler
@@ -32,10 +32,6 @@ REPLACE.swipl.new=	${PREFIX}/bin/swi-prolog
 REPLACE_FILES.swipl+=	library/dialect/sicstus/swipl-lfr.pl
 
 TEST_TARGET=		check
-
-post-install:
-	${INSTALL_DATA} ${FILESDIR}/shlib.pl \
-		${DESTDIR}${PREFIX}/lib/swi-prolog-${SWIPLVERS}/library/shlib.pl
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
