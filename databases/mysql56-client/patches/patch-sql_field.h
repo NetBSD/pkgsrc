@@ -1,8 +1,13 @@
-$NetBSD: patch-sql_field.h,v 1.1 2013/05/06 14:41:08 joerg Exp $
+$NetBSD: patch-sql_field.h,v 1.2 2013/07/31 09:51:38 adam Exp $
 
---- sql/field.h.orig	2013-05-05 20:53:17.000000000 +0000
+--- sql/field.h.orig	2013-07-10 16:17:27.000000000 +0000
 +++ sql/field.h
-@@ -887,10 +887,10 @@ public:
+@@ -891,14 +891,14 @@ public:
+ 
+     */
+     return real_maybe_null() ?
+-      test(null_ptr[row_offset] & null_bit) : table->null_row;
++      my_test(null_ptr[row_offset] & null_bit) : table->null_row;
    }
  
    bool is_real_null(my_ptrdiff_t row_offset= 0) const
@@ -15,7 +20,7 @@ $NetBSD: patch-sql_field.h,v 1.1 2013/05/06 14:41:08 joerg Exp $
  
    void set_null(my_ptrdiff_t row_offset= 0)
    {
-@@ -3652,9 +3652,9 @@ public:
+@@ -3670,9 +3670,9 @@ public:
    {
      DBUG_ASSERT(ptr == a || ptr == b);
      if (ptr == a)
