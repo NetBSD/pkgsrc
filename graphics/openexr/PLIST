@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/05/08 17:49:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/07/31 18:26:07 adam Exp $
 bin/exrenvmap
 bin/exrheader
 bin/exrmakepreview
@@ -107,10 +107,10 @@ share/doc/OpenEXR-${PKGVERSION}/examples/generalInterfaceTiledExamples.h
 share/doc/OpenEXR-${PKGVERSION}/examples/lowLevelIoExamples.cpp
 share/doc/OpenEXR-${PKGVERSION}/examples/lowLevelIoExamples.h
 share/doc/OpenEXR-${PKGVERSION}/examples/main.cpp
+share/doc/OpenEXR-${PKGVERSION}/examples/namespaceAlias.h
 share/doc/OpenEXR-${PKGVERSION}/examples/previewImageExamples.cpp
 share/doc/OpenEXR-${PKGVERSION}/examples/previewImageExamples.h
 share/doc/OpenEXR-${PKGVERSION}/examples/rgbaInterfaceExamples.cpp
 share/doc/OpenEXR-${PKGVERSION}/examples/rgbaInterfaceExamples.h
 share/doc/OpenEXR-${PKGVERSION}/examples/rgbaInterfaceTiledExamples.cpp
 share/doc/OpenEXR-${PKGVERSION}/examples/rgbaInterfaceTiledExamples.h
-share/doc/OpenEXR-2.0.0/examples/namespaceAlias.h
