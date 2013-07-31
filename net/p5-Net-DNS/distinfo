@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.25 2012/12/06 13:09:04 wen Exp $
+$NetBSD: distinfo,v 1.26 2013/07/31 09:47:52 he Exp $
 
 SHA1 (Net-DNS-0.69.tar.gz) = 2c84cdbd121b6b50bf9528fe8f474bf0915e85c6
 RMD160 (Net-DNS-0.69.tar.gz) = cae86f2c9589f5bac0d93199a2563bc4d6a34b46
 Size (Net-DNS-0.69.tar.gz) = 190234 bytes
+SHA1 (patch-lib_Net_DNS_Header.pm) = 8f0873c90acfbfaccd12b3daef99e4a20cc90ee3
