@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2013/07/21 10:58:49 shattered Exp $
+$NetBSD: patch-aa,v 1.5 2013/08/01 20:19:55 shattered Exp $
 
---- Makefile.orig	2008-11-07 03:33:33.000000000 +0000
+--- Makefile.orig	2011-12-05 08:46:23.000000000 +0000
 +++ Makefile
 @@ -15,7 +15,7 @@ VERSION=0.1.14
  #	use our recommended settings.
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.4 2013/07/21 10:58:49 shattered Exp $
  
  # OLE decoding is still considered to be 'beta' mode - so it 
  #	disabled in the stable release of ripMIME for now
+@@ -26,7 +26,7 @@ CFLAGS=-Wall -g -I. -O2 -Werror
+ #	mailpacks@pldaniels.com
+ #
+ COMPONENTS= -DRIPOLE
+-LIBS= 
++#LIBS= 
+ #COMPONENTS= 
+ 
+ #  DEBUGGING Related Flags
