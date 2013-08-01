@@ -1,0 +1,13 @@
+$NetBSD: patch-Completion_X_Command___mplayer,v 1.1 2013/08/01 06:08:33 wiz Exp $
+
+--- Completion/X/Command/_mplayer.orig	2012-01-29 18:27:45.000000000 +0000
++++ Completion/X/Command/_mplayer
+@@ -115,7 +115,7 @@ case "$state" in
+     _tags files urls
+     while _tags; do
+       _requested files expl 'video file' _files -g \
+-         "*.(#i)(asf|asx|avi|flac|flv|m1v|m2p|m2v|m4v|mjpg|mka|mkv|mov|mp3|mp4|mpe|mpeg|mpg|ogg|ogm|qt|rm|vob|wav|webm|wma|wmv)(-.)" && ret=0
++         "*.(#i)(asf|asx|avi|flac|flv|m1v|m2p|m2v|m4v|mjpg|mka|mkv|mov|mp3|mp4|mpe|mpeg|mpg|ogg|ogm|qt|rm|ts|vob|wav|webm|wma|wmv)(-.)" && ret=0
+       if _requested urls; then
+         while _next_label urls expl URL; do
+           _urls "$expl[@]" && ret=0
