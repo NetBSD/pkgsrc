@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2781 2013/08/01 06:09:29 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2782 2013/08/01 08:26:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added fonts/tex-nanumtype1 version 3.0 [minskim 2013-08-01]
 	Added fonts/tex-nanumtype1-doc version 3.0 [minskim 2013-08-01]
 	Updated shells/zsh to 5.0.2nb2 [wiz 2013-08-01]
+	Updated x11/gtkmm to 2.24.4 [adam 2013-08-01]
