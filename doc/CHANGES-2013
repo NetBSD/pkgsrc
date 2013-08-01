@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2783 2013/08/01 10:29:44 bouyer Exp $
+$NetBSD: CHANGES-2013,v 1.2784 2013/08/01 12:41:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/zsh to 5.0.2nb2 [wiz 2013-08-01]
 	Updated x11/gtkmm to 2.24.4 [adam 2013-08-01]
 	Updated mail/spamassassin to 3.3.2nb5 [bouyer 2013-08-01]
+	Updated converters/skf to 1.99.6 [obache 2013-08-01]
