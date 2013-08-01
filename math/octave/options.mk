@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2012/06/06 23:14:10 asau Exp $
+# $NetBSD: options.mk,v 1.6 2013/08/01 18:44:06 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.octave
 PKG_SUPPORTED_OPTIONS=	glpk graphicsmagick hdf5 qhull
-PKG_SUGGESTED_OPTIONS=	glpk hdf5 qhull
+PKG_SUGGESTED_OPTIONS=	hdf5 qhull
 
 .include "../../mk/bsd.options.mk"
 
