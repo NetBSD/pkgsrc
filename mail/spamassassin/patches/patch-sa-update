@@ -1,0 +1,24 @@
+$NetBSD: patch-sa-update,v 1.1 2013/08/01 10:29:00 bouyer Exp $
+
+from https://issues.apache.org/SpamAssassin/show_bug.cgi?id=6872,
+fix for new Net::DNS
+
+Index: sa-update.raw
+===================================================================
+--- sa-update.raw	(revision 1421187)
++++ sa-update	(working copy)
+@@ -1136,9 +1136,11 @@
+   if ($RR) {
+     foreach my $rr ($RR->answer) {
+       my $text = $rr->rdatastr;
+-      local($1);
+-      $text =~ /^"(.*)"$/;
+-      push @result, $1;
++      if (defined $text && $text ne '') {
++        local($1);
++        $text =~ s/^"(.*)"\z/$1/s;
++        push(@result,$text);
++      }
+     }
+   }
+   else {
