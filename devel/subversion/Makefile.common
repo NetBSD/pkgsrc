@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2013/02/09 13:22:09 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.39 2013/08/01 09:27:44 wiz Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -40,7 +40,7 @@ GNU_CONFIGURE=		YES
 .include "../../devel/subversion-base/options.mk"
 
 .if !empty(PKG_OPTIONS:Mserf)
-CONFIGURE_ARGS+=	--with-serf=${BUILDLINK_PREFIX.serf} --without-neon
+CONFIGURE_ARGS+=	--with-serf=${BUILDLINK_PREFIX.serf}
 .else
 CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
 .endif
