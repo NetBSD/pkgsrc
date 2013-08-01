@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2013/07/15 08:19:15 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2013/08/01 20:00:59 adam Exp $
 
-DISTNAME=	gnutls-3.2.2
+DISTNAME=	gnutls-3.2.3
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.2/
 EXTRACT_SUFX=	.tar.xz

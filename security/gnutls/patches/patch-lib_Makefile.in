@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_Makefile.in,v 1.2 2013/07/15 08:19:15 wiz Exp $
+$NetBSD: patch-lib_Makefile.in,v 1.3 2013/08/01 20:00:59 adam Exp $
 
---- lib/Makefile.in.orig	2013-07-13 09:54:21.000000000 +0000
+--- lib/Makefile.in.orig	2013-07-29 14:23:14.000000000 +0000
 +++ lib/Makefile.in
-@@ -379,7 +379,7 @@ am_libgnutls_la_OBJECTS = $(am__objects_
+@@ -369,7 +369,7 @@ am_libgnutls_la_OBJECTS = $(am__objects_
  libgnutls_la_OBJECTS = $(am_libgnutls_la_OBJECTS)
  libgnutls_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -11,12 +11,3 @@ $NetBSD: patch-lib_Makefile.in,v 1.2 2013/07/15 08:19:15 wiz Exp $
  @ENABLE_CXX_TRUE@libgnutlsxx_la_DEPENDENCIES = libgnutls.la
  am__libgnutlsxx_la_SOURCES_DIST = gnutlsxx.cpp
  @ENABLE_CXX_TRUE@am_libgnutlsxx_la_OBJECTS =  \
-@@ -1845,7 +1845,7 @@ libgnutls_la_LIBADD = ../gl/libgnu.la x5
- 	auth/libgnutls_auth.la algorithms/libgnutls_alg.la \
- 	extras/libgnutls_extras.la $(am__append_8) $(am__append_11) \
- 	$(am__append_14) $(thirdparty_libadd)
--thirdparty_libadd = $(LTLIBZ) $(LTLIBINTL) $(LIBSOCKET) \
-+thirdparty_libadd = $(LTLIBZ) $(LTLIBINTL) $(LIBSOCKET) $(LIBRT) \
- 	$(LTLIBPTHREAD) $(LTLIBICONV) $(P11_KIT_LIBS) $(LIB_SELECT) \
- 	$(TSS_LIBS) $(am__append_12) $(am__append_13) $(am__append_17)
- @HAVE_LD_OUTPUT_DEF_TRUE@defexecdir = $(bindir)
