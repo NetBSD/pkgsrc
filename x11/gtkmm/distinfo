@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.45 2013/05/26 09:14:57 adam Exp $
+$NetBSD: distinfo,v 1.46 2013/08/01 08:24:50 adam Exp $
 
-SHA1 (gtkmm-2.24.3.tar.xz) = 5e42a21c2b66e5a7d97a4f417d01ee310cdd39a6
-RMD160 (gtkmm-2.24.3.tar.xz) = 73ce5dd1787403dc85a8412a32b5215bab27e5ae
-Size (gtkmm-2.24.3.tar.xz) = 10475704 bytes
-SHA1 (patch-gdk_gdkmm_color.h) = 1e4efea103ef07520a1de6d077d7dcead6df6cd6
+SHA1 (gtkmm-2.24.4.tar.xz) = e99866b0cb5a0d7387a7cef79253177310020b3d
+RMD160 (gtkmm-2.24.4.tar.xz) = 771a6f3dd348fd5fc9c4456837df4151df366197
+Size (gtkmm-2.24.4.tar.xz) = 10262212 bytes
 SHA1 (patch-gdk_gdkmm_pixbufanimationiter.h) = d2b1620ed341a52ff4c7b9fca4c14b3ca43ddabc
-SHA1 (patch-gdk_gdkmm_types.h) = 9daeb374c52009e48360d32b2c068510c464daa8
-SHA1 (patch-gtk_gtkmm_main.h) = 91b47841bc1fb5442a3acd36240a7b16f0c7f3d6
