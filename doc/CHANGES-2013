@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2786 2013/08/01 12:59:50 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2787 2013/08/01 20:02:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/skf to 1.99.6 [obache 2013-08-01]
 	Updated www/ruby-faraday to 0.8.8 [obache 2013-08-01]
 	Updated www/ruby-httpclient to 2.3.4.1 [obache 2013-08-01]
+	Updated security/gnutls to 3.2.3 [adam 2013-08-01]
