@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/07/21 10:58:49 shattered Exp $
+$NetBSD: distinfo,v 1.6 2013/08/01 20:19:55 shattered Exp $
 
 SHA1 (ripmime-1.4.0.10.tar.gz) = 296f657f2f664b713751178fb589d5c64dc7b6ae
 RMD160 (ripmime-1.4.0.10.tar.gz) = 312f6ca37e73a5a024dd8cf07e6b969b6d7a952d
 Size (ripmime-1.4.0.10.tar.gz) = 174610 bytes
-SHA1 (patch-aa) = 6642b5f5547ac7f0e0c63ca148a95cc77cce4f9a
+SHA1 (patch-aa) = 9fc681acd369555f17027a6ea1e84566e36b18c1
 SHA1 (patch-ab) = 08d4cb2519f4f0dd062ca717185b597e4edd09f9
 SHA1 (patch-ac) = 188092463ece3302806952fec1efc06000391e36
