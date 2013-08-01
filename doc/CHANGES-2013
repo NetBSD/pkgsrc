@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2780 2013/08/01 05:33:36 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.2781 2013/08/01 06:09:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated geography/viking to 1.4.2 [gdt 2013-08-01]
 	Added fonts/tex-nanumtype1 version 3.0 [minskim 2013-08-01]
 	Added fonts/tex-nanumtype1-doc version 3.0 [minskim 2013-08-01]
+	Updated shells/zsh to 5.0.2nb2 [wiz 2013-08-01]
