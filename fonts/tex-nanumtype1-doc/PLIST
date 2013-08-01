@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/01 05:31:21 minskim Exp $
+share/texmf-dist/doc/fonts/nanumtype1/COPYING
+share/texmf-dist/doc/fonts/nanumtype1/README
+share/texmf-dist/doc/fonts/nanumtype1/nanum-sampler.pdf
+share/texmf-dist/doc/fonts/nanumtype1/nanum-sampler.tex

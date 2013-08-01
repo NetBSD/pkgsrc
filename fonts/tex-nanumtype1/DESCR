@@ -1,0 +1,9 @@
+Nanum is a unicode font designed especially for Korean-language
+script. The font was designed by Sandoll Communication and
+Fontrix; it includes the sans serif (gothic), serif (myeongjo),
+pen script and brush script typefaces. The package provides
+Type1 subfonts converted from Nanum Myeongjo (Regular and
+ExtraBold) and Nanum Gothic (Regular and Bold) OTFs. C70, LUC,
+T1, and TS1 font definition files are also provided. (The
+package does not include OpenType/TrueType files, which are
+available from Naver)
