@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2013/07/15 08:19:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2013/08/01 20:00:59 adam Exp $
 bin/certtool
 bin/danetool
 bin/gnutls-cli
@@ -448,11 +448,14 @@ man/man3/gnutls_pkcs7_set_crt_raw.3
 man/man3/gnutls_prf.3
 man/man3/gnutls_prf_raw.3
 man/man3/gnutls_priority_certificate_type_list.3
+man/man3/gnutls_priority_cipher_list.3
 man/man3/gnutls_priority_compression_list.3
 man/man3/gnutls_priority_deinit.3
 man/man3/gnutls_priority_ecc_curve_list.3
 man/man3/gnutls_priority_get_cipher_suite_index.3
 man/man3/gnutls_priority_init.3
+man/man3/gnutls_priority_kx_list.3
+man/man3/gnutls_priority_mac_list.3
 man/man3/gnutls_priority_protocol_list.3
 man/man3/gnutls_priority_set.3
 man/man3/gnutls_priority_set_direct.3
