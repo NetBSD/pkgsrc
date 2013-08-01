@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2785 2013/08/01 12:53:48 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2786 2013/08/01 12:59:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4101,3 +4101,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/spamassassin to 3.3.2nb5 [bouyer 2013-08-01]
 	Updated converters/skf to 1.99.6 [obache 2013-08-01]
 	Updated www/ruby-faraday to 0.8.8 [obache 2013-08-01]
+	Updated www/ruby-httpclient to 2.3.4.1 [obache 2013-08-01]
