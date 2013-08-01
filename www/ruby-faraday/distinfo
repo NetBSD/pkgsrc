@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/04/07 11:18:57 obache Exp $
+$NetBSD: distinfo,v 1.4 2013/08/01 12:53:26 obache Exp $
 
-SHA1 (faraday-0.8.7.gem) = 261723bdf2d2d65f6eb0647e13643c68a5f4b2cc
-RMD160 (faraday-0.8.7.gem) = 00d4dd83805f59e352fb805f6179bb26d132eca5
-Size (faraday-0.8.7.gem) = 39936 bytes
+SHA1 (faraday-0.8.8.gem) = db52f834a6320210ea2509c187ab9b88c4079d6a
+RMD160 (faraday-0.8.8.gem) = 2f286a012bb65c17277d2c02728f74f64341e599
+Size (faraday-0.8.8.gem) = 43008 bytes
