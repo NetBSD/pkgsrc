@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/05/25 11:08:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/08/02 12:17:57 ryoon Exp $
 bin/xulrunner17
 include/xulrunner17/.mkdir.done
 include/xulrunner17/AccEvent.h
@@ -2538,10 +2538,6 @@ include/xulrunner17/ycbcr_to_rgb565.h
 include/xulrunner17/yuv_convert.h
 include/xulrunner17/yuv_row.h
 include/xulrunner17/zipstruct.h
-lib/pkgconfig/libxul-embedding.pc
-lib/pkgconfig/libxul.pc
-lib/pkgconfig/mozilla-js.pc
-lib/pkgconfig/mozilla-plugin.pc
 lib/xulrunner17/pkgconfig/libxul-embedding.pc
 lib/xulrunner17/pkgconfig/libxul.pc
 lib/xulrunner17/pkgconfig/mozilla-js.pc
