@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2013/05/31 12:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2013/08/02 06:00:00 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -66,7 +66,7 @@ TEX_FORMATS=	"aleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\n
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
-.include "../../print/texlive-tetex/format.mk"
+.include "../../print/tex-tetex/format.mk"
 
 REPLACE_PERL=	texk/tetex/texdoctk
 
