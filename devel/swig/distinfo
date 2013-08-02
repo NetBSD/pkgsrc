@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2013/07/06 23:11:51 wiz Exp $
+$NetBSD: distinfo,v 1.14 2013/08/02 13:24:10 jaapb Exp $
 
 SHA1 (swig-1.3.36.tar.gz) = eed715da3200f45cfe688a64ab6630eadf118ae4
 RMD160 (swig-1.3.36.tar.gz) = bd57f6837de1dc3aebefd9ad23a52235deefcd33
@@ -7,5 +7,5 @@ SHA1 (patch-Lib_lua_luaruntime.swg) = 0ba6aa9a053522bea896bf27dee7ffb55ed4a2be
 SHA1 (patch-Lib_std_std__container.i) = e4bb2b51b88651adfcec63318d8a228e7f3f8971
 SHA1 (patch-Source_Modules_lua.cxx) = 946c2475f3fefa2f15a629d965c620c5de8a2002
 SHA1 (patch-aa) = 23ab2782b586bc550e97eb0e599e182c58fc57f2
-SHA1 (patch-ab) = dce47bdffbd0d600aff8ca2486e4d9458c739549
 SHA1 (patch-ad) = f5787be95bb896cdba0f42587c4f586caed9b7a2
+SHA1 (patch-configure) = 38e8787087364f5b8b5cc2fdb909ffff83681a9e
