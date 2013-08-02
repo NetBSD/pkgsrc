@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2013/08/02 07:03:49 adam Exp $
 
 .include "dist.mk"
 
@@ -98,6 +98,12 @@ REPLACE_INTERPRETER+=	py33
 REPLACE.py33.old=	.*python[^ ]*
 REPLACE.py33.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.py33=	Lib/*.py Lib/*/*.py Lib/*/*/*.py Lib/*/*/*/*.py
+
+SUBST_CLASSES+=		findlib
+SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
+SUBST_STAGE.findlib=	pre-configure
+SUBST_FILES.findlib=	Lib/distutils/unixccompiler.py
+SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 
 CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
 
