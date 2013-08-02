@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.3 2013/05/26 17:56:09 wiz Exp $
+$NetBSD: patch-am,v 1.4 2013/08/02 07:03:50 adam Exp $
 
 --- setup.py.orig	2013-05-15 16:33:00.000000000 +0000
 +++ setup.py
@@ -103,7 +103,19 @@ $NetBSD: patch-am,v 1.3 2013/05/26 17:56:09 wiz Exp $
          else:                                   # Linux and other unices
              macros = dict()
              libraries = ['rt']
-@@ -2155,7 +2186,7 @@ def main():
+@@ -1906,10 +1937,7 @@ class PyBuildExt(build_ext):
+             depends = ['_decimal/docstrings.h']
+         else:
+             srcdir = sysconfig.get_config_var('srcdir')
+-            include_dirs = [os.path.abspath(os.path.join(srcdir,
+-                                                         'Modules',
+-                                                         '_decimal',
+-                                                         'libmpdec'))]
++            include_dirs = ['Modules/_decimal/libmpdec']
+             libraries = []
+             sources = [
+               '_decimal/_decimal.c',
+@@ -2155,7 +2183,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
