@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2787 2013/08/01 20:02:09 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2788 2013/08/02 12:19:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4103,3 +4103,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-faraday to 0.8.8 [obache 2013-08-01]
 	Updated www/ruby-httpclient to 2.3.4.1 [obache 2013-08-01]
 	Updated security/gnutls to 3.2.3 [adam 2013-08-01]
+	Updated devel/xulrunner17 to 17.0.7nb1 [ryoon 2013-08-02]
