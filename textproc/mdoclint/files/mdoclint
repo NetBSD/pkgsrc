@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.38 2013/07/30 19:07:23 wiz Exp $
+# $NetBSD: mdoclint,v 1.39 2013/08/02 13:16:54 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -44,7 +44,7 @@ use constant {
 };
 
 use vars qw(
-    	$opt_A $opt_a $opt_D $opt_d $opt_e $opt_F $opt_f $opt_H $opt_h $opt_l
+	$opt_A $opt_a $opt_D $opt_d $opt_e $opt_F $opt_f $opt_H $opt_h $opt_l
 	$opt_m
 	$opt_n $opt_o $opt_P $opt_p $opt_r $opt_S $opt_s $opt_v $opt_w
 	$opt_X $opt_x
@@ -58,7 +58,7 @@ my $options="AaDdeFfHhlmnoPprSsvwXx";
 sub usage
 	{
 	my $default = OPENBSD ? "-AaDdfmnoPprSsXx" : "-AaDdeflmnoPprSsXx";
-	
+
 	print STDERR <<"EOF";
 mdoclint: verify man page correctness
 usage:	mdoclint [-$options] file ...
@@ -378,7 +378,7 @@ sub set_section_header
 	$section_header = join(' ', $s->parse_macro_args($section_header));
 
 	end_of_section($s);
-	
+
 	if ($section_header eq 'SEE ALSO') {
 		$s->{in_section} = SECTION_SEE_ALSO;
 	} elsif ($section_header eq 'AUTHORS') {
