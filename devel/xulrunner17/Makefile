@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/07/09 10:53:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2013/08/02 12:17:57 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner17-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
@@ -77,7 +77,5 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/xulrunner17-sdk/sdk/lib
 	ln -s ${PREFIX}/lib/xulrunner17/lib \
 	  ${DESTDIR}${PREFIX}/lib/xulrunner17-sdk/lib
-	${INSTALL_DATA} ${WRKSRC}/xulrunner/installer/*pc \
-		${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
