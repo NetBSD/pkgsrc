@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2013/06/06 12:53:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2013/08/02 12:17:57 ryoon Exp $
 
 BUILDLINK_TREE+=	xulrunner17
 
@@ -15,6 +15,8 @@ BUILDLINK_FILES.xulrunner17+=		lib/xulrunner17/include/*.h
 
 BUILDLINK_LIBDIRS.xulrunner17+=		lib/xulrunner17/lib
 BUILDLINK_FILES.xulrunner17+=		lib/xulrunner17/lib/*.so
+BUILDLINK_FILES.xulrunner17+=		lib/xulrunner17/pkgconfig/*pc
+BUILDLINK_FNAME_TRANSFORM.xulrunner17+=	-e "s|lib/xulrunner17/pkgconfig|lib/pkgconfig|"
 
 pkgbase := xulrunner17
 .include "../../mk/pkg-build-options.mk"
