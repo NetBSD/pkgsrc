@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2013/07/15 02:20:54 obache Exp $
+# $NetBSD: Makefile,v 1.214 2013/08/03 08:30:03 ryoon Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -73,6 +73,7 @@ SUBDIR+=	gst-plugins1-ogg
 SUBDIR+=	gst-plugins1-resindvd
 SUBDIR+=	gst-plugins1-theora
 SUBDIR+=	gst-plugins1-ugly
+SUBDIR+=	gst-plugins1-v4l2
 SUBDIR+=	gst-plugins1-vpx
 SUBDIR+=	gst-plugins1-x264
 SUBDIR+=	gst123
