@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2798 2013/08/03 15:08:47 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2799 2013/08/03 17:05:56 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4115,3 +4115,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mercurial to 2.7 [wiz 2013-08-03]
 	Updated multimedia/ffmpeg010 to 20130731.0.10.8 [obache 2013-08-03]
 	Updated converters/fribidi to 0.19.5nb2 [wiz 2013-08-03]
+	Updated net/mrtg to 2.17.4nb1 [tron 2013-08-03]
