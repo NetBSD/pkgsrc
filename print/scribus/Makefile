@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2013/06/06 12:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2013/08/03 11:09:13 obache Exp $
 
 DISTNAME=		scribus-1.3.3.14
 PKGREVISION=		17
@@ -21,6 +21,7 @@ USE_CMAKE=	yes
 
 LDFLAGS.DragonFly=	-lX11
 
+CONFIGURE_ENV+=		FREETYPE_DIR=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--with-extra-includes=${PREFIX}/include
 CONFIGURE_ARGS+=	--with-extra-libs=${PREFIX}/lib
