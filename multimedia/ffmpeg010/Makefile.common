@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2013/04/11 11:26:23 drochner Exp $
+# $NetBSD: Makefile.common,v 1.8 2013/08/03 09:22:58 obache Exp $
 # used by multimedia/ffmpeg010/Makefile
 
 DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-DISTVERSION=	0.10.7
+DISTVERSION=	0.10.8
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg010/patches
 
 HAS_CONFIGURE=	YES
