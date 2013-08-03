@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/07/06 01:24:14 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2013/08/03 14:44:28 rodent Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
@@ -21,6 +21,8 @@ SUBST_MESSAGE.path=	Fixing paths in man page.
 SUBST_FILES.path=	prngd.man
 SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.path+=	-e 's,/var,${VARBASE},g'
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
