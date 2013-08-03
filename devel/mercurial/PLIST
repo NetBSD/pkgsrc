@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2013/05/03 21:26:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2013/08/03 08:30:05 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -292,6 +292,7 @@ ${PYSITELIB}/mercurial/hbisect.pyo
 ${PYSITELIB}/mercurial/help.py
 ${PYSITELIB}/mercurial/help.pyc
 ${PYSITELIB}/mercurial/help.pyo
+${PYSITELIB}/mercurial/help/common.txt
 ${PYSITELIB}/mercurial/help/config.txt
 ${PYSITELIB}/mercurial/help/dates.txt
 ${PYSITELIB}/mercurial/help/diffs.txt
@@ -299,7 +300,10 @@ ${PYSITELIB}/mercurial/help/environment.txt
 ${PYSITELIB}/mercurial/help/extensions.txt
 ${PYSITELIB}/mercurial/help/filesets.txt
 ${PYSITELIB}/mercurial/help/glossary.txt
+${PYSITELIB}/mercurial/help/hg.1.txt
+${PYSITELIB}/mercurial/help/hgignore.5.txt
 ${PYSITELIB}/mercurial/help/hgignore.txt
+${PYSITELIB}/mercurial/help/hgrc.5.txt
 ${PYSITELIB}/mercurial/help/hgweb.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
 ${PYSITELIB}/mercurial/help/multirevs.txt
@@ -550,6 +554,7 @@ ${PYSITELIB}/mercurial/templates/map-cmdline.bisect
 ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
+${PYSITELIB}/mercurial/templates/map-cmdline.phases
 ${PYSITELIB}/mercurial/templates/map-cmdline.xml
 ${PYSITELIB}/mercurial/templates/monoblue/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/monoblue/branches.tmpl
@@ -599,6 +604,7 @@ ${PYSITELIB}/mercurial/templates/paper/search.tmpl
 ${PYSITELIB}/mercurial/templates/paper/shortlog.tmpl
 ${PYSITELIB}/mercurial/templates/paper/shortlogentry.tmpl
 ${PYSITELIB}/mercurial/templates/paper/tags.tmpl
+${PYSITELIB}/mercurial/templates/raw/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/raw/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/raw/error.tmpl
 ${PYSITELIB}/mercurial/templates/raw/fileannotate.tmpl
@@ -607,9 +613,11 @@ ${PYSITELIB}/mercurial/templates/raw/graph.tmpl
 ${PYSITELIB}/mercurial/templates/raw/graphedge.tmpl
 ${PYSITELIB}/mercurial/templates/raw/graphnode.tmpl
 ${PYSITELIB}/mercurial/templates/raw/index.tmpl
+${PYSITELIB}/mercurial/templates/raw/logentry.tmpl
 ${PYSITELIB}/mercurial/templates/raw/manifest.tmpl
 ${PYSITELIB}/mercurial/templates/raw/map
 ${PYSITELIB}/mercurial/templates/raw/notfound.tmpl
+${PYSITELIB}/mercurial/templates/raw/search.tmpl
 ${PYSITELIB}/mercurial/templates/rss/bookmarkentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/bookmarks.tmpl
 ${PYSITELIB}/mercurial/templates/rss/branchentry.tmpl
