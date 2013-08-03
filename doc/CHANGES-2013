@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2795 2013/08/03 07:45:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2796 2013/08/03 08:30:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added multimedia/gst-plugins1-v4l2 version 1.0.8 [ryoon 2013-08-03]
 	Added x11/xfwp version 1.0.3 [wiz 2013-08-03]
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.1 [wiz 2013-08-03]
+	Updated devel/mercurial to 2.7 [wiz 2013-08-03]
