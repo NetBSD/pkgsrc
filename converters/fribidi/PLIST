@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/03/15 18:40:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/08/03 15:08:38 wiz Exp $
 bin/fribidi
 include/fribidi/fribidi-arabic.h
 include/fribidi/fribidi-begindecls.h
@@ -44,11 +44,8 @@ man/man3/fribidi_parse_charset.3
 man/man3/fribidi_remove_bidi_marks.3
 man/man3/fribidi_reorder_line.3
 man/man3/fribidi_reorder_nsm_status.3
-man/man3/fribidi_set_debug.3
 man/man3/fribidi_set_mirroring.3
 man/man3/fribidi_set_reorder_nsm.3
 man/man3/fribidi_shape.3
 man/man3/fribidi_shape_mirroring.3
 man/man3/fribidi_unicode_to_charset.3
-man/man3/fribidi_unicode_version.3
-man/man3/fribidi_version_info.3
