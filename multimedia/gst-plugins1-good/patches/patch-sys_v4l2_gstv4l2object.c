@@ -1,9 +1,8 @@
-$NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.1 2012/11/29 08:24:42 ryoon Exp $
+$NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.2 2013/08/03 08:29:22 ryoon Exp $
 
-* take care some video standard macros added by V4L2 in Linux 2.6.17
-  (not in NetBSD)
+* take care some video standard macros added by V4L2
 
---- sys/v4l2/gstv4l2object.c.orig	2012-10-25 10:55:59.000000000 +0000
+--- sys/v4l2/gstv4l2object.c.orig	2013-04-26 09:30:32.000000000 +0000
 +++ sys/v4l2/gstv4l2object.c
 @@ -338,8 +338,12 @@ gst_v4l2_tv_norm_get_type (void)
        {V4L2_STD_NTSC, "NTSC", "NTSC"},
@@ -35,3 +34,13 @@ $NetBSD: patch-sys_v4l2_gstv4l2object.c,v 1.1 2012/11/29 08:24:42 ryoon Exp $
  
        {0, NULL, NULL}
      };
+@@ -1500,8 +1508,8 @@ gst_v4l2_object_get_caps_info (GstV4l2Ob
+ #ifdef V4L2_PIX_FMT_PWC2
+     } else if (g_str_equal (mimetype, "video/x-pwc2")) {
+       fourcc = V4L2_PIX_FMT_PWC2;
+-    }
+ #endif
++    }
+ 
+     if (dimensions) {
+       const gchar *interlace_mode;
