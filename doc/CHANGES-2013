@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2791 2013/08/03 04:40:48 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2792 2013/08/03 04:47:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4108,3 +4108,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffplay to 1.2.2 [adam 2013-08-02]
 	Updated fonts/vlgothic-ttf to 20130607 [ryoon 2013-08-03]
 	Updated textproc/groonga to 3.0.6 [obache 2013-08-03]
+	Added graphics/gst-plugins1-cairo version 1.0.8 [ryoon 2013-08-03]
