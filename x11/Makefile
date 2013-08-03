@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.706 2013/07/21 21:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.707 2013/08/03 07:29:58 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -568,6 +568,7 @@ SUBDIR+=	xflame
 SUBDIR+=	xfontsel
 SUBDIR+=	xforms
 SUBDIR+=	xfstt
+SUBDIR+=	xfwp
 SUBDIR+=	xgamma
 SUBDIR+=	xgas
 SUBDIR+=	xglobe
