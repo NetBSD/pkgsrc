@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2013/01/20 09:49:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2013/08/03 04:26:01 ryoon Exp $
 #
 
-DISTNAME=	VLGothic-20121230
+DISTNAME=	VLGothic-20130607
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=vlgothic/57732/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=vlgothic/58961/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yamajun@ofug.net
