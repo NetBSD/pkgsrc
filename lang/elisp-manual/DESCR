@@ -1,25 +1,16 @@
-  Most of the GNU Emacs text editor is written in the programming
-language called Emacs Lisp.  You can write new code in Emacs Lisp and
-install it as an extension to the editor.  However, Emacs Lisp is more
-than a mere ``extension language''; it is a full computer programming
-language in its own right.  You can use it as you would any other
-programming language.
+Herein is found the programming manual for elisp (Emacs Lisp), the
+dialect of Lisp used to extend (and write applications inside) GNU
+Emacs.
 
-  Because Emacs Lisp is designed for use in an editor, it has special
-features for scanning and parsing text as well as features for handling
-files, buffers, displays, subprocesses, and so on.  Emacs Lisp is
-closely integrated with the editing facilities; thus, editing commands
-are functions that can also conveniently be called from Lisp programs,
-and parameters for customization are ordinary Lisp variables.
+Because Emacs Lisp is designed for use in an editor, it has special
+features for scanning and parsing text as well as features for
+handling files, buffers, displays, subprocesses, and so on. All Emacs
+editing commands are available.
 
-  This manual attempts to be a full description of Emacs Lisp.  For a
-beginner's introduction to Emacs Lisp, see ``An Introduction to
-Emacs Lisp Programming,'' by Bob Chassell, also published by the Free
-Software Foundation.  This manual presumes considerable familiarity with
-the use of Emacs for editing; see ``The GNU Emacs Manual'' for this
-basic information.
+This manual attempts to be a full description of Emacs Lisp.  For a
+beginner's introduction to Emacs Lisp, see ``An Introduction to Emacs
+Lisp Programming,'' by Bob Chassell. Also see ``The GNU Emacs Manual''.
 
-  Generally speaking, the earlier chapters describe features of Emacs
-Lisp that have counterparts in many programming languages, and later
-chapters describe features that are peculiar to Emacs Lisp or relate
-specifically to editing.
+This package contains the manual corresponding to Emacs 21.x. For
+Emacs 22 and up, the Lisp manual is included in the main Emacs
+distribution and consequently in the main Emacs package.
