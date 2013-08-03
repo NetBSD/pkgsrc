@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12450 2013/08/02 12:02:46 wiz Exp $
+$NetBSD: TODO,v 1.12451 2013/08/03 04:40:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -609,7 +609,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps3-3.4.4
 	o graphviz-2.30.1
 	o groff-1.22.2
-	o groonga-2.1.1 [pthread_mutexattr_setpshared() is missing on NetBSD-5]
 	o gss-1.0.2
 	o gssdp-0.14.4
 	o gstreamer-1.1.1
