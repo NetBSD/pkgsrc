@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2013/07/22 14:29:43 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2013/08/03 08:29:22 ryoon Exp $
 #
 # used by audio/gst-plugins1-flac/Makefile
-## used by multimedia/gst-plugins1-v4l2/Makefile (broken)
+# used by multimedia/gst-plugins1-v4l2/Makefile
 # used by audio/gst-plugins1-jack/Makefile
+# used by graphics/gst-plugins1-cairo/Makefile
 # used by graphics/gst-plugins1-jpeg/Makefile
 # used by graphics/gst-plugins1-png/Makefile
 # used by audio/gst-plugins1-oss/Makefile
