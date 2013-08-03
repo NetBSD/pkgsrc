@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2013/07/17 13:00:29 tron Exp $
+$NetBSD: distinfo,v 1.33 2013/08/03 17:05:17 tron Exp $
 
 SHA1 (mrtg-2.17.4.tar.gz) = 5ae0e659001c613b847237a6b223b26cb7a8ab0f
 RMD160 (mrtg-2.17.4.tar.gz) = cea76ad3685375770520ebbccd0ad4b6adafff1f
@@ -6,3 +6,4 @@ Size (mrtg-2.17.4.tar.gz) = 1096879 bytes
 SHA1 (patch-aa) = 2874cd59371db10fbc4ff6c29e3a917a4b8eec55
 SHA1 (patch-ab) = bf367e6c43030a9cb64a88336b66932d7e05025c
 SHA1 (patch-ac) = 24ae08714f896ca0f1724454b8ad47c32412c018
+SHA1 (patch-lib__mrtg2__SNMP_Session.pm) = ab19dfdab6951a1b375bf2433f794293ed191bf4
