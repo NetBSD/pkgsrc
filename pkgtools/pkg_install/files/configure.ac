@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.37 2013/02/10 12:46:56 obache Exp $
+dnl $NetBSD: configure.ac,v 1.38 2013/08/03 11:45:14 obache Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -133,7 +133,7 @@ AC_CHECK_SIZEOF(long long)
 AC_CHECK_SIZEOF(size_t, [#include <stdlib.h>])
 
 case $host in
-*-*-hpux*)
+*-*-bsdi*|*-*-hpux*|*-*-osf*)
 	AC_DEFINE(MISSING_SIZE_T_SUPPORT)
 	AH_TEMPLATE([MISSING_SIZE_T_SUPPORT], [
 	Define to 1 if the `z' modifider for printf is missing.

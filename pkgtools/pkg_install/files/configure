@@ -5034,7 +5034,7 @@ _ACEOF
 
 
 case $host in
-*-*-hpux*)
+*-*-bsdi*|*-*-hpux*|*-*-osf*)
 	$as_echo "#define MISSING_SIZE_T_SUPPORT 1" >>confdefs.h
 
 
