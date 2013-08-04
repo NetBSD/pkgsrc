@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/21 12:35:31 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/08/04 09:22:25 adam Exp $
 
 SHA1 (jbigkit-2.0.tar.gz) = cfb7d3121f02a74bfb229217858a0d149b6589ef
 RMD160 (jbigkit-2.0.tar.gz) = 4b1b8358203c2bd86e034703d666c1453c60e572
 Size (jbigkit-2.0.tar.gz) = 435027 bytes
-SHA1 (patch-aa) = 3a38112fef5d83ba86787ef7e04bb78ed1690d4b
-SHA1 (patch-ab) = 85c63f8e915121ef36d43d4428f74b9c87a0c9f5
+SHA1 (patch-aa) = f11a943be8a0061dc535d210a4374721e453abe9
+SHA1 (patch-ab) = 0e8cc75d45ca6d3ca475d37b486f97284618d205
