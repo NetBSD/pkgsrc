@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2801 2013/08/04 02:44:57 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2802 2013/08/04 02:45:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4118,3 +4118,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/mrtg to 2.17.4nb1 [tron 2013-08-03]
 	Updated mail/getmail to 4.42.0 [schmonz 2013-08-03]
 	Updated devel/apr0 to 0.9.20.2.0.65 [obache 2013-08-04]
+	Updated www/apache2 to 2.0.65 [obache 2013-08-04]
