@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2802 2013/08/04 02:45:58 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2803 2013/08/04 07:29:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4119,3 +4119,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/getmail to 4.42.0 [schmonz 2013-08-03]
 	Updated devel/apr0 to 0.9.20.2.0.65 [obache 2013-08-04]
 	Updated www/apache2 to 2.0.65 [obache 2013-08-04]
+	Updated x11/xload to 1.1.2 [wiz 2013-08-04]
