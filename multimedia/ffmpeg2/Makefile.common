@@ -1,0 +1,96 @@
+# $NetBSD: Makefile.common,v 1.1 2013/08/04 10:29:02 adam Exp $
+# used by multimedia/ffmpeg2/Makefile
+# used by multimedia/ffplay2/Makefile
+
+DISTNAME=	ffmpeg-2.0
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.ffmpeg.org/releases/
+EXTRACT_SUFX=	.tar.bz2
+
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
+
+PREV_PKGPATH=	multimedia/ffmpeg-devel
+PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg2/patches
+
+USE_LANGUAGES=		c99
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake texi2html pod2man
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--cc=${CC:Q}
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--disable-stripping
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-pthreads
+CONFIGURE_ARGS+=	--enable-gpl
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+
+CONFIGURE_ARGS+=	--progs-suffix=2
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/ffmpeg2
+CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg2
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg2
+CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg2
+
+PLIST_VARS+=		opencl
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-opencl
+PLIST.opencl=		yes
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-amd3dnow
+CONFIGURE_ARGS+=	--disable-amd3dnowext
+CONFIGURE_ARGS+=	--disable-mmx
+CONFIGURE_ARGS+=	--disable-sse
+CONFIGURE_ARGS+=	--disable-ssse3
+.else
+CONFIGURE_ARGS+=	--enable-runtime-cpudetect
+.endif
+
+# No posix_memalign() in NetBSD 4.0 and earlier
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
+CONFIGURE_ARGS+=	--enable-memalign-hack
+.endif
+
+# Let's not put garbage into /tmp
+CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
+
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "SunOS" && empty(CC_VERSION:Mgcc*)
+SUBST_CLASSES+=		sunwspro
+SUBST_MESSAGE.sunwspro=	Fixing compiler options for SunStudio C compiler.
+SUBST_STAGE.sunwspro=	post-configure
+SUBST_FILES.sunwspro=	config.mak
+SUBST_SED.sunwspro=	-e "s/-O /-KPIC -DPIC /"
+SUBST_SED.sunwspro+=	-e "s/-O3/-xO2/g"
+SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
+SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
+.endif
+
+BUILD_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
+
+REPLACE_PERL+=	doc/texi2pod.pl
+REPLACE_SH+=	configure version.sh
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	ffserver.c
+SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
+SUBST_MESSAGE.conf=	Fixing configuration path.
+
+PLIST_SRC+=	${PKGDIR}/PLIST
+
+MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q}
+# LOCALBASE=${LOCALBASE:Q}
+
+pre-configure:
+	mkdir ${WRKSRC}/tmp
+
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
