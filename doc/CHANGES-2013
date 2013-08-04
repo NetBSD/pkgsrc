@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2806 2013/08/04 13:02:25 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2807 2013/08/04 13:48:34 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4127,3 +4127,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/freetype2 to 2.4.12 [wiz 2013-08-04]
 	Updated math/ruby-spreadsheet to 0.8.8 [obache 2013-08-04]
 	Updated www/opera to 12.16 [obache 2013-08-04]
+	Updated www/py-flask-sqlalchemy to 1.0 [kleink 2013-08-04]
