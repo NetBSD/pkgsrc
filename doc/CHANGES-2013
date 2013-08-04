@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2804 2013/08/04 10:39:06 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2805 2013/08/04 11:38:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added multimedia/ffmpeg2 version 2.0 [adam 2013-08-04]
 	Added multimedia/ffplay2 version 2.0 [adam 2013-08-04]
 	Updated graphics/freetype2 to 2.4.12 [wiz 2013-08-04]
+	Updated math/ruby-spreadsheet to 0.8.8 [obache 2013-08-04]
