@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.28 2013/04/08 11:17:10 rodent Exp $
+# $NetBSD: Makefile.common,v 1.29 2013/08/04 10:20:24 adam Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
 
-DISTNAME=	mysql-5.1.67
+DISTNAME=	mysql-5.1.71
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.1/}
 
@@ -32,12 +32,11 @@ PKG_GROUPS_VARS+=	MYSQL_GROUP
 
 # MYSQL_CHARSET		default character set
 # MYSQL_EXTRA_CHARSET	additional character set to be compiled in.
-#
 MYSQL_CHARSET?=		latin1
 MYSQL_EXTRA_CHARSET?=	all
 
 CONFIGURE_ARGS+=	--enable-thread-safe-client
-CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--without-libwrap
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
@@ -52,7 +51,6 @@ BUILD_DEFS+=		VARBASE
 # We always use our own readline.  Note that these --without-* settings
 # are confusing, but they just mean "don't use the included readline
 # or libedit".
-#
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-libedit
 
@@ -62,8 +60,7 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--with-low-memory
-CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib:Q}
-
+CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET:Q}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET:Q}
 
@@ -72,10 +69,8 @@ CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET:Q}
 CONFIGURE_ARGS+=	--enable-assembler
 .endif
 
-#
 # MySQL 5.1 depends on builtin functions which enabled with i486 and
 # later with GCC.
-#
 .if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mi386)
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
@@ -117,7 +112,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 TOOLS_PLATFORM.diff=	# empty
 .endif
 
-SUBST_CLASSES=		mk
+SUBST_CLASSES+=		mk
 SUBST_STAGE.mk=		pre-configure
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in	\
 			mysys/Makefile.in strings/Makefile.in
