@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.195 2013/07/26 09:38:15 ryoon Exp $
+# $NetBSD: bootstrap,v 1.196 2013/08/04 01:19:19 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -299,6 +299,12 @@ copy_src()
 		mkdir_p $wrkdir/$_dst
 	fi
 	$cpprog -r $_src/* $wrkdir/$_dst
+	if [ -f $wrkdir/$_dst/config.guess ]; then
+		$cpprog $pkgsrcdir/mk/gnu-config/config.guess $wrkdir/$_dst/
+	fi
+	if [ -f $wrkdir/$_dst/config.sub ]; then
+		$cpprog $pkgsrcdir/mk/gnu-config/config.sub $wrkdir/$_dst/
+	fi
 }
 
 get_optarg()
