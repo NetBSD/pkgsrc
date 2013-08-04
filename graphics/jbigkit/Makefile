@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 14:11:00 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2013/08/04 09:22:25 adam Exp $
 
 DISTNAME=	jbigkit-2.0
 CATEGORIES=	graphics
@@ -10,20 +9,20 @@ HOMEPAGE=	http://www.cl.cam.ac.uk/~mgk25/jbigkit/
 COMMENT=	JBIG-KIT lossless image compression library
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake
 
-WRKSRC=	${WRKDIR}/jbigkit
+WRKSRC=		${WRKDIR}/jbigkit
 
 TEST_TARGET=	test
 
-MAKE_JOBS_SAFE=	no
+CFLAGS+=	-I../libjbig
+MAKEFLAGS+=	CC=${CC:Q} CFLAGS=${CFLAGS:Q}
 
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc/jbig
 
 do-install:
-	${RUN} \
-	cd ${WRKSRC}/libjbig; \
+	${RUN} cd ${WRKSRC}/libjbig; \
 	for h in *.h; do \
 		${INSTALL_DATA} "$${h}" ${DESTDIR}${PREFIX}/include; \
 	done; \

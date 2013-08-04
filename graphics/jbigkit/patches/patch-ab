@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/01/21 12:35:31 obache Exp $
+$NetBSD: patch-ab,v 1.2 2013/08/04 09:22:25 adam Exp $
 
 libtoolize
 
 --- pbmtools/Makefile.orig	2008-08-25 22:26:39.000000000 +0000
 +++ pbmtools/Makefile
-@@ -7,35 +7,38 @@ CC = gcc
+@@ -7,27 +7,30 @@ CC = gcc
  # Options for the compiler
  CFLAGS = -g -Wall -ansi -pedantic -I../libjbig # --coverage
  
@@ -19,7 +19,7 @@ libtoolize
  
 -pbmtojbg: pbmtojbg.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
-+pbmtojbg: pbmtojbg.lo ../libjbig/libjbig.la
++pbmtojbg: pbmtojbg.lo
 +	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la
  
 -jbgtopbm: jbgtopbm.o ../libjbig/libjbig.a
@@ -29,12 +29,12 @@ libtoolize
  
 -pbmtojbg85: pbmtojbg85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
-+pbmtojbg85: pbmtojbg85.lo ../libjbig/libjbig85.la
++pbmtojbg85: pbmtojbg85.lo
 +	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la
  
 -jbgtopbm85: jbgtopbm85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
-+jbgtopbm85: jbgtopbm85.lo ../libjbig/libjbig85.la
++jbgtopbm85: jbgtopbm85.lo
 +	${LIBTOOL} --mode=link --tag=CC $(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la
  
 -jbgtopbm.o: jbgtopbm.c ../libjbig/jbig.h
@@ -46,17 +46,5 @@ libtoolize
 +jbgtopbm85.lo: jbgtopbm85.c ../libjbig/jbig85.h
 +pbmtojbg85.lo: pbmtojbg85.c ../libjbig/jbig85.h
  
--../libjbig/libjbig.a: ../libjbig/jbig.c ../libjbig/jbig.h \
-+../libjbig/libjbig.la: ../libjbig/jbig.c ../libjbig/jbig.h \
+ ../libjbig/libjbig.a: ../libjbig/jbig.c ../libjbig/jbig.h \
  	../libjbig/jbig_ar.c ../libjbig/jbig_ar.h
--	make -C ../libjbig libjbig.a
-+	make -C ../libjbig libjbig.la
- 
--../libjbig/libjbig85.a: ../libjbig/jbig85.c ../libjbig/jbig85.h \
-+../libjbig/libjbig85.la: ../libjbig/jbig85.c ../libjbig/jbig85.h \
- 	../libjbig/jbig_ar.c ../libjbig/jbig_ar.h
--	make -C ../libjbig libjbig85.a
-+	make -C ../libjbig libjbig85.la
- 
- test: test82 test85
- 
