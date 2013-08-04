@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2803 2013/08/04 07:29:08 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2804 2013/08/04 10:39:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4120,3 +4120,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apr0 to 0.9.20.2.0.65 [obache 2013-08-04]
 	Updated www/apache2 to 2.0.65 [obache 2013-08-04]
 	Updated x11/xload to 1.1.2 [wiz 2013-08-04]
+	Updated databases/mysql51-client to 5.1.71 [adam 2013-08-04]
+	Updated databases/mysql51-server to 5.1.71 [adam 2013-08-04]
+	Added multimedia/ffmpeg2 version 2.0 [adam 2013-08-04]
+	Added multimedia/ffplay2 version 2.0 [adam 2013-08-04]
+	Updated graphics/freetype2 to 2.4.12 [wiz 2013-08-04]
