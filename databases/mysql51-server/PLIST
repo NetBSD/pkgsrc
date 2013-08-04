@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/01/21 08:58:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/08/04 10:20:24 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -225,7 +225,6 @@ share/mysql-test/include/endspace.inc
 share/mysql-test/include/file_does_not_exist.inc
 share/mysql-test/include/force_restart.inc
 share/mysql-test/include/force_restart_if_skipped.inc
-share/mysql-test/include/get_binlog_dump_thread_id.inc
 share/mysql-test/include/get_relay_log_pos.inc
 share/mysql-test/include/gis_generic.inc
 share/mysql-test/include/gis_keys.inc
@@ -456,7 +455,6 @@ share/mysql-test/lib/My/Options.pm
 share/mysql-test/lib/My/Platform.pm
 share/mysql-test/lib/My/SafeProcess.pm
 share/mysql-test/lib/My/SafeProcess/Base.pm
-share/mysql-test/lib/My/SafeProcess/safe_process.pl
 share/mysql-test/lib/My/SysInfo.pm
 share/mysql-test/lib/My/Test.pm
 share/mysql-test/lib/mtr_cases.pm
@@ -2676,6 +2674,7 @@ share/mysql-test/suite/innodb/r/innodb_bug12400341.result
 share/mysql-test/suite/innodb/r/innodb_bug12661768.result
 share/mysql-test/suite/innodb/r/innodb_bug13510739.result
 share/mysql-test/suite/innodb/r/innodb_bug13635833.result
+share/mysql-test/suite/innodb/r/innodb_bug14676111.result
 share/mysql-test/suite/innodb/r/innodb_bug14704286.result
 share/mysql-test/suite/innodb/r/innodb_bug21704.result
 share/mysql-test/suite/innodb/r/innodb_bug30423.result
@@ -2741,6 +2740,7 @@ share/mysql-test/suite/innodb/t/innodb_bug12661768.test
 share/mysql-test/suite/innodb/t/innodb_bug13510739.test
 share/mysql-test/suite/innodb/t/innodb_bug13635833.test
 share/mysql-test/suite/innodb/t/innodb_bug14007649.test
+share/mysql-test/suite/innodb/t/innodb_bug14676111.test
 share/mysql-test/suite/innodb/t/innodb_bug14704286.test
 share/mysql-test/suite/innodb/t/innodb_bug21704.test
 share/mysql-test/suite/innodb/t/innodb_bug30423.test
@@ -2825,6 +2825,7 @@ share/mysql-test/suite/innodb_plugin/r/innodb_bug12400341.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug13510739.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug13635833.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug14007649.result
+share/mysql-test/suite/innodb_plugin/r/innodb_bug14676111.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug21704.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug30423.result
 share/mysql-test/suite/innodb_plugin/r/innodb_bug30919.result
@@ -2923,6 +2924,7 @@ share/mysql-test/suite/innodb_plugin/t/innodb_bug12400341.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug13510739.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug13635833.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug14007649.test
+share/mysql-test/suite/innodb_plugin/t/innodb_bug14676111.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug21704.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug30423.test
 share/mysql-test/suite/innodb_plugin/t/innodb_bug30919-master.opt
