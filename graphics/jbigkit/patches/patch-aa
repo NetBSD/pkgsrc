@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/01/21 12:35:31 obache Exp $
+$NetBSD: patch-aa,v 1.2 2013/08/04 09:22:25 adam Exp $
 
 libtoolize
 
@@ -15,7 +15,7 @@ libtoolize
  
 -tstcodec: tstcodec.o jbig.o jbig_ar.o
 -	$(CC) $(CFLAGS) -o tstcodec $+
-+all: libjbig.la tstcodec tstcodec85
++all: libjbig.la libjbig85.la tstcodec tstcodec85
  
 -tstcodec85: tstcodec85.o jbig85.o jbig_ar.o
 -	$(CC) $(CFLAGS) -o tstcodec85 $+
