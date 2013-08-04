@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2013/03/28 21:43:07 joerg Exp $
+$NetBSD: distinfo,v 1.47 2013/08/04 16:06:21 adam Exp $
 
 SHA1 (inkscape-0.48.4.tar.bz2) = 5f26f6ad191d1e7c2a9fb69a438722beb172224c
 RMD160 (inkscape-0.48.4.tar.bz2) = b089ced7694a9803fac8588d93e7e6239c71d3e8
@@ -17,6 +17,7 @@ SHA1 (patch-ap) = cd29bd178dc2c6c9456bc09d6663d6a25acc7da1
 SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
 SHA1 (patch-src_2geom_basic-intersection.cpp) = 743b13293191a74d4c0c22231e5ed7866219dfee
 SHA1 (patch-src_2geom_solve-bezier-parametric.cpp) = 71cca994451b1e7d5aba625600089d1e4a47888e
+SHA1 (patch-src_Makefile.in) = 4c07142f3a554a01d4c2b352df27c0a83ac4352b
 SHA1 (patch-src_color-profile.cpp) = 14932b25ed333925518d5140b3691a29e155cd9a
 SHA1 (patch-src_display_nr-filter-gaussian.cpp) = 344109eb4360560bfe8481b25588ef37e5140135
 SHA1 (patch-src_dom_io_domstream.cpp) = 6b525b8e730e4497afdf1da0ae27f0dc69bfad40
