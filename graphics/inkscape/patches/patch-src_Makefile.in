@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/08/04 16:06:21 adam Exp $
+
+--export-dynamic gives an error on OS X.
+
+--- src/Makefile.in.orig	2012-12-15 16:56:07.000000000 +0000
++++ src/Makefile.in
+@@ -3014,7 +3015,7 @@ DISTCLEANFILES = \
+ libinkscape_a_SOURCES = $(ink_common_sources)
+ inkscape_LDADD = $(all_libs)
+ @PLATFORM_OSX_FALSE@inkscape_LDFLAGS = -Wl,--export-dynamic $(kdeldflags) $(mwindows)
+-@PLATFORM_OSX_TRUE@inkscape_LDFLAGS = --export-dynamic $(kdeldflags) $(mwindows)
++@PLATFORM_OSX_TRUE@inkscape_LDFLAGS = $(kdeldflags) $(mwindows)
+ inkview_LDADD = $(all_libs)
+ inkview_LDFLAGS = $(mwindows) 
+ 
