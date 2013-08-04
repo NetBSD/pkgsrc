@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/08/02 13:24:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.36 2013/08/04 09:59:24 jaapb Exp $
 
 DISTNAME=	swig-1.3.36
 PKGREVISION=	4
@@ -28,7 +28,7 @@ CONFLICTS=		swig-build-[0-9]*
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
 BUILD_TARGET=		swig
 
-USE_TOOLS+=		gmake pax perl
+USE_TOOLS+=		gmake pax
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
