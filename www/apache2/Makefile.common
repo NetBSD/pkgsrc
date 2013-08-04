@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2011/09/21 11:06:09 obache Exp $
+# $NetBSD: Makefile.common,v 1.29 2013/08/04 02:45:42 obache Exp $
 
 # used by devel/apr0/Makefile
 
@@ -6,8 +6,8 @@ DISTNAME=		httpd-${APACHE_VERSION}
 EXTRACT_SUFX=		.tar.bz2
 # When updating this version be sure to update the checksum and remove
 # any PKGREVISION for devel/apr also.
-APACHE_VERSION=		2.0.64
-APR_VERSION=		0.9.19
+APACHE_VERSION=		2.0.65
+APR_VERSION=		0.9.20
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
