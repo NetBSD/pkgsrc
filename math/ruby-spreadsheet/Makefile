@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2013/07/13 12:03:33 obache Exp $
+# $NetBSD: Makefile,v 1.24 2013/08/04 11:38:31 obache Exp $
 #
 
-DISTNAME=	spreadsheet-0.8.6
+DISTNAME=	spreadsheet-0.8.8
 CATEGORIES=	math
 
 MAINTAINER=	obache@NetBSD.org
