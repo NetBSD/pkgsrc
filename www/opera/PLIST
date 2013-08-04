@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2013/04/06 08:56:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/08/04 13:02:07 obache Exp $
 bin/opera
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
 lib/opera/gstreamer/plugins/libgstoperavp8.so
 lib/opera/liboperagtk2.so
-${PLIST.linux}lib/opera/liboperagtk3.so
 lib/opera/liboperakde4.so
 lib/opera/opera
 ${PLIST.linux}lib/opera/opera_autoupdatechecker
