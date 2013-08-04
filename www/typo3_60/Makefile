@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/05 15:20:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/04 16:26:05 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-VER=		6.0.6
+VER=		6.0.8
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
@@ -58,6 +58,8 @@ OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR}/${d} ${REAL_ROOT_USER} \
 	${APACHE_GROUP} 0770
 CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
 .endfor
+
+CHECK_INTERPRETER_SKIP = share/typo3/typo3_src-6.0.8/typo3/contrib/flowplayer/plugins/flowplayer.captions/example/flvtool2-cuepoints.sh
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/README
