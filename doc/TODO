@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12451 2013/08/03 04:40:48 obache Exp $
+$NetBSD: TODO,v 1.12452 2013/08/04 10:39:06 adam Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o felt-3.07
 	o fetchmail-6.3.23
 	o fetchyahoo-2.14.0
-	o ffmpeg-20130710.2.0
 	o file-5.14
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -801,7 +800,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-server-1.4.6
 	o muse-0.9.2
 	o mypaint-1.1.0
-	o mysql-5.1.70
 	o nagios-3.5.0 [pkg/48082]
 	o nano-2.3.2
 	o nap-1.5.3
