@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2012/12/07 16:01:16 adam Exp $
+$NetBSD: patch-ac,v 1.10 2013/08/04 18:00:52 adam Exp $
 
---- Makefile.orig	2012-08-06 15:59:08.000000000 +0000
+--- Makefile.orig	2013-07-22 14:11:22.000000000 +0000
 +++ Makefile
-@@ -106,7 +106,7 @@ ifneq ($(STRIP),)
+@@ -105,7 +105,7 @@ ifneq ($(STRIP),)
  endif
  
  lib/$(LIB.SHARED): $(LIB.SOBJS)
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.9 2012/12/07 16:01:16 adam Exp $
  ifneq ($(LN),)
  	$(LN) $(LIB.SHARED) lib/$(LIB.SONAME)
  	$(LN) $(LIB.SHARED) lib/$(LIB.DEVLNK)
-@@ -190,13 +190,13 @@ bin:
+@@ -203,13 +203,13 @@ bin:
  	mkdir bin
  
  bin/$(GLEWINFO.BIN): $(GLEWINFO.BIN.OBJ) lib/$(LIB.SHARED)
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.9 2012/12/07 16:01:16 adam Exp $
  ifneq ($(STRIP),)
  	$(STRIP) -x $@
  endif
-@@ -218,16 +218,16 @@ install:     install.include install.lib
+@@ -231,16 +231,16 @@ install:     install.include install.lib
  install.mx:  install.include install.lib.mx install.pkgconfig.mx
  
  install.lib: glew.lib
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.9 2012/12/07 16:01:16 adam Exp $
  endif
  
  # development files
-@@ -235,50 +235,50 @@ ifeq ($(filter-out mingw% cygwin,$(SYSTE
+@@ -248,50 +248,50 @@ ifeq ($(filter-out mingw% cygwin,$(SYSTE
  	$(INSTALL) -m 0644 lib/$(LIB.DEVLNK) $(LIBDIR)/
  endif
  ifneq ($(LN),)
