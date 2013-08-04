@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/04 10:29:02 adam Exp $
+bin/ffplay2
