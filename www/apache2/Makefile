@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.142 2013/07/12 10:45:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.143 2013/08/04 02:45:42 obache Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	6
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
 COMMENT=	Apache HTTP (Web) server, version 2
+LICENSE=	apache-2.0
 
 CONFLICTS=	apache-*ssl-[0-9]* apache6-[0-9]*
-
-CVE_2011_3192=	CVE-2011-3192-${APACHE_VERSION}-byterange-fixes.patch
-PATCHFILES+=	${CVE_2011_3192}
-SITES.${CVE_2011_3192}=	${MASTER_SITE_APACHE:=httpd/patches/apply_to_${APACHE_VERSION}/}
 
 BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
