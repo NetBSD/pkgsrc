@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/07/09 18:22:12 kleink Exp $
+$NetBSD: distinfo,v 1.4 2013/08/04 14:58:42 kleink Exp $
 
 SHA1 (Flask-WTF-0.8.4.tar.gz) = b358c5f1f06a8f5a1508d9a0352fd773f3c9fde5
 RMD160 (Flask-WTF-0.8.4.tar.gz) = da850e2da16bc8a88c723790df1dd022d093aeef
 Size (Flask-WTF-0.8.4.tar.gz) = 237765 bytes
+SHA1 (patch-flask__wtf_recaptcha_widgets.py) = fb8be817708e9edd4391929981edb77715c945dd
