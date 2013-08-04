@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2809 2013/08/04 18:01:51 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2810 2013/08/04 18:29:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4132,3 +4132,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_47 to 4.7.14 [taca 2013-08-04]
 	Updated www/typo3_60 to 6.0.8 [taca 2013-08-04]
 	Updated graphics/glew to 1.10.0 [adam 2013-08-04]
+	Updated graphics/p5-Image-ExifTool to 9.27 [adam 2013-08-04]
