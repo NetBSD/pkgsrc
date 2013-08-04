@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2013/05/31 12:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2013/08/04 18:28:51 adam Exp $
 
-DISTNAME=	Image-ExifTool-${VERSION}
+# Author requests that we package only "production" versions.
+# Check http://owl.phy.queensu.ca/~phil/exiftool/history.html
+DISTNAME=	Image-ExifTool-9.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/} \
 		http://owl.phy.queensu.ca/~phil/exiftool/
@@ -12,9 +13,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://owl.phy.queensu.ca/~phil/exiftool/
 COMMENT=	Perl module and program to read EXIF information
 LICENSE=	${PERL5_LICENSE}
-
-# Author requests that we package only "production" versions.
-VERSION=	9.01
 
 PERL5_PACKLIST=	auto/Image/ExifTool/.packlist
 
