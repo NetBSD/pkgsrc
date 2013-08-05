@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12453 2013/08/04 13:02:25 obache Exp $
+$NetBSD: TODO,v 1.12454 2013/08/05 12:12:42 obache Exp $
 
 Suggested new packages
 ======================
@@ -800,7 +800,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-server-1.4.6
 	o muse-0.9.2
 	o mypaint-1.1.0
-	o nagios-3.5.0 [pkg/48082]
 	o nano-2.3.2
 	o nap-1.5.3
 	o nautilus-actions-2.30.3 [GNOME 2.30]
