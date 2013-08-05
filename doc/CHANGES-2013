@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2811 2013/08/05 02:11:46 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.2812 2013/08/05 07:09:52 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4134,3 +4134,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/glew to 1.10.0 [adam 2013-08-04]
 	Updated graphics/p5-Image-ExifTool to 9.27 [adam 2013-08-04]
 	Updated devel/cvs-fast-export to 0.5 [gdt 2013-08-05]
+	Updated misc/raspberrypi-userland to 20130803 [skrll 2013-08-05]
