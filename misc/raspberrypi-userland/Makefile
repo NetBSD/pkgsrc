@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/04/01 21:02:02 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/05 07:06:22 skrll Exp $
 #
 
-DISTNAME=	raspberrypi-userland-20130128
+DISTNAME=	raspberrypi-userland-20130803
 CATEGORIES=	misc
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/rpi/
+MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/skrll/rpi/
 
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://github.com/jaredmcneill/userland
