@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/06/17 17:35:28 bouyer Exp $
+$NetBSD: distinfo,v 1.17 2013/08/05 10:43:55 obache Exp $
 
-SHA1 (nagios-3.4.3.tar.gz) = 3e9b73b9e219829ec4dca6ffe44106401d430ad3
-RMD160 (nagios-3.4.3.tar.gz) = 34121ab4e2a6d400f55db452133542dd3a7a324d
-Size (nagios-3.4.3.tar.gz) = 1784746 bytes
+SHA1 (nagios-3.4.4.tar.gz) = 19aaa4eda92a2837fe29ebcbe85140aef50e90cd
+RMD160 (nagios-3.4.4.tar.gz) = 328fefc30d03b18bf757d619f36ea6747ea4efdc
+Size (nagios-3.4.4.tar.gz) = 1786507 bytes
 SHA1 (nagios-netbsd40-icons.tar.gz) = 62919c22c5d5dc3f603c3320578431e93dfdd9fe
 RMD160 (nagios-netbsd40-icons.tar.gz) = 96ad67a107dad095213ddbf58debcfd5b46d6dee
 Size (nagios-netbsd40-icons.tar.gz) = 5659 bytes
