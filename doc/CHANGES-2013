@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2818 2013/08/05 17:58:33 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2819 2013/08/05 19:32:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4144,3 +4144,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/py-flask-mail version 0.9.0 [kleink 2013-08-05]
 	Added www/py-flask-principal version 0.4.0 [kleink 2013-08-05]
 	Added www/py-flask-security version 1.6.8 [kleink 2013-08-05]
+	Updated games/openttd to 1.3.2 [adam 2013-08-05]
+	Updated games/openttd-data to 0.4.7 [adam 2013-08-05]
