@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2012/04/28 06:56:43 adam Exp $
+$NetBSD: patch-aa,v 1.11 2013/08/05 19:24:35 adam Exp $
 
 Compile 'strip' test with CFLAGS, so -isysroot can be passed on OSX.
 Correct library detection on NetBSD.
-Fix version checking of ICU 49 and above.
 
 --- config.lib.orig	2012-04-15 11:55:05.000000000 +0000
 +++ config.lib
@@ -24,12 +23,3 @@ Fix version checking of ICU 49 and above.
  			eval "$2=`ls -1 /usr/pkg/include/$4*.h 2>/dev/null | egrep \"\/$5\$\"`"
  			eval "res=\$$2"
  			if [ -z "$res" ]; then
-@@ -2864,7 +2864,7 @@ detect_icu() {
- 
- 	version=`$icu_config --version 2>/dev/null`
- 	ret=$?
--	shortversion=`echo $version | cut -c 1,3`
-+	shortversion=`echo $version | cut -c 1,2`
- 	log 2 "executing $icu_config --version"
- 	log 2 "  returned $version"
- 	log 2 "  exit code $ret"
