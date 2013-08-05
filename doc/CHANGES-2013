@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2817 2013/08/05 12:47:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2818 2013/08/05 17:58:33 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4140,3 +4140,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/nagios-base to 3.5.0 [obache 2013-08-05]
 	Updated graphics/opencv to 2.4.6.1 [fhajny 2013-08-05]
 	Updated net/mikutter to 0.2.2.1318 [obache 2013-08-05]
+	Added security/py-passlib version 1.6.1 [kleink 2013-08-05]
+	Added www/py-flask-mail version 0.9.0 [kleink 2013-08-05]
+	Added www/py-flask-principal version 0.4.0 [kleink 2013-08-05]
+	Added www/py-flask-security version 1.6.8 [kleink 2013-08-05]
