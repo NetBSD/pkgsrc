@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/05 17:52:56 kleink Exp $
+
+SHA1 (Flask-Principal-0.4.0.tar.gz) = a49ba2c21d2e06ecf71c4589bc8380d24f68e496
+RMD160 (Flask-Principal-0.4.0.tar.gz) = e62c000fedecee251e66a893a8121368017edab6
+Size (Flask-Principal-0.4.0.tar.gz) = 5452 bytes

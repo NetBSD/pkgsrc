@@ -1,0 +1,6 @@
+Flask-Principal provides a very loose framework to tie in providers
+of two types of service (Authentication, User information), often
+located in different parts of a web application.
+
+Looseness of the framework is provided by using signals as the
+interface.
