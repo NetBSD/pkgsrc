@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.39 2013/08/02 13:16:54 wiz Exp $
+# $NetBSD: mdoclint,v 1.40 2013/08/05 10:08:25 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -74,7 +74,6 @@ usage:	mdoclint [-$options] file ...
 	-l	warn about unknown libraries
 	-m	warn about man pages that are not in mdoc(7) format
 	-n	warn about .Nd's ending in '.'
-	-O	warn about unsorted .It arguments
 	-o	warn about non-empty .Os strings
 	-P	warn about paragraph problems
 	-p	warn about punctuation problems
@@ -244,10 +243,6 @@ sub warning
 	}
 	print STDOUT "$self->{fn}:$extra$self->{ln}: ", join('', @_), "\n";
 }
-
-my $order = " !\"#\$\%&'()*+,-./:;<=>?[\\]^_{|}~".
-	"0123456789".
-	"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 sub handle_options
 {
