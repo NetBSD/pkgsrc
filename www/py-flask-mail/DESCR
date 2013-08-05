@@ -1,0 +1,3 @@
+The Flask-Mail extension provides a simple interface to set up SMTP
+with your Flask application and to send messages from your views
+and scripts.
