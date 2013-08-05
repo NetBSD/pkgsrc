@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12455 2013/08/05 12:13:37 obache Exp $
+$NetBSD: TODO,v 1.12456 2013/08/05 12:15:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -1175,7 +1175,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zeromq-3.2
 	o zile-2.4.9
 	o zim-0.60
 	o zoom-1.1.3
