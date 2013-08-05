@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2810 2013/08/04 18:29:46 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2811 2013/08/05 02:11:46 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4133,3 +4133,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_60 to 6.0.8 [taca 2013-08-04]
 	Updated graphics/glew to 1.10.0 [adam 2013-08-04]
 	Updated graphics/p5-Image-ExifTool to 9.27 [adam 2013-08-04]
+	Updated devel/cvs-fast-export to 0.5 [gdt 2013-08-05]
