@@ -1,7 +1,10 @@
+$NetBSD: patch-ad,v 1.10 2013/08/05 11:22:29 obache Exp $
+
 --- html/Makefile.in.orig	2012-02-13 21:40:42.000000000 +0100
 +++ html/Makefile.in	2012-10-05 15:13:58.000000000 +0200
-@@ -6,9 +6,9 @@
- exec_prefix=@exec_prefix@
+--- html/Makefile.in.orig	2012-02-13 20:40:42.000000000 +0000
++++ html/Makefile.in
+@@ -7,7 +7,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
@@ -10,9 +13,7 @@
  HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
- COMMAND_OPTS=@COMMAND_OPTS@
-@@ -33,57 +33,57 @@
- 
+@@ -34,55 +34,55 @@ distclean: clean
  devclean: distclean
  
  install:
@@ -113,4 +114,3 @@
  
  install-unstripped:
  	$(MAKE) install
- 

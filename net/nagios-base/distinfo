@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.17 2013/08/05 10:43:55 obache Exp $
+$NetBSD: distinfo,v 1.18 2013/08/05 11:22:29 obache Exp $
 
-SHA1 (nagios-3.4.4.tar.gz) = 19aaa4eda92a2837fe29ebcbe85140aef50e90cd
-RMD160 (nagios-3.4.4.tar.gz) = 328fefc30d03b18bf757d619f36ea6747ea4efdc
-Size (nagios-3.4.4.tar.gz) = 1786507 bytes
+SHA1 (nagios-3.5.0.tar.gz) = 972e76c638b7d3f15d994eaa8fce0e4907d5d6e1
+RMD160 (nagios-3.5.0.tar.gz) = d75a764486fd3dc0462fb49924698754852d39be
+Size (nagios-3.5.0.tar.gz) = 1789376 bytes
 SHA1 (nagios-netbsd40-icons.tar.gz) = 62919c22c5d5dc3f603c3320578431e93dfdd9fe
 RMD160 (nagios-netbsd40-icons.tar.gz) = 96ad67a107dad095213ddbf58debcfd5b46d6dee
 Size (nagios-netbsd40-icons.tar.gz) = 5659 bytes
-SHA1 (patch-aa) = 7f08522be804aec2b439f0a550f2f0fdb26c827b
-SHA1 (patch-ab) = 37beee7195879806a2cd44cde2f376e07fc13470
-SHA1 (patch-ac) = 66a112e4545e54f408f0e53f4ed05e4720713c48
-SHA1 (patch-ad) = 475c22bdcf41d590dae8309a7f410a53ae9cc872
+SHA1 (patch-aa) = 2e8c278785de40073d7d39d3dc94696268af28e9
+SHA1 (patch-ab) = d15eb8913b28ed12664ee224941270e75857ecc1
+SHA1 (patch-ac) = a948575bd26e3b0d835c62cb96cba2657b38ffee
+SHA1 (patch-ad) = a5e4956aab0f002ec9076f65da013e7fb094027d
 SHA1 (patch-ae) = 35418dbe26f2e7c14d6a98951e62247344ae80b0
 SHA1 (patch-af) = a91ab37f16e8adda3146a2dde7273ebf841ef9af
 SHA1 (patch-ag) = ae13cf98b7e2f68304406ebab80292c5c4c8ea30
