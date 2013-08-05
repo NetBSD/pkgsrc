@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2812 2013/08/05 07:09:52 skrll Exp $
+$NetBSD: CHANGES-2013,v 1.2813 2013/08/05 09:54:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/p5-Image-ExifTool to 9.27 [adam 2013-08-04]
 	Updated devel/cvs-fast-export to 0.5 [gdt 2013-08-05]
 	Updated misc/raspberrypi-userland to 20130803 [skrll 2013-08-05]
+	Updated www/p5-Dancer2 to 0.07 [wen 2013-08-05]
