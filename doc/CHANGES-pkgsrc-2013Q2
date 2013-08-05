@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.18 2013/08/05 07:50:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.19 2013/08/05 10:10:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -63,3 +63,6 @@ Pullup ticket #4198 - requested by taca
 www/typo3_47: security update
 Pullup ticket #4199 - requested by taca
 www/typo3_60: security update
+Pullup ticket #4200 - requested by spz
+databases/mysql55-client: distfile update
+databases/mysql55-server: distfile update
