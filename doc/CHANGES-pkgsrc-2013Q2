@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.17 2013/08/04 18:35:43 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.18 2013/08/05 07:50:09 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -55,3 +55,11 @@ Pullup ticket #4191 - requested by tron
 databases/phpmyadmin: security update
 Pullup ticket #4192 - requested by tron
 net/wireshark: security update
+Pullup ticket #4196 - requested by taca
+lang/php54: security patch
+Pullup ticket #4197 - requested by taca
+www/typo3_45: security update
+Pullup ticket #4198 - requested by taca
+www/typo3_47: security update
+Pullup ticket #4199 - requested by taca
+www/typo3_60: security update
