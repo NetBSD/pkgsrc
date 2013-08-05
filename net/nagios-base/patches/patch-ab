@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2011/04/08 22:37:25 morr Exp $
+$NetBSD: patch-ab,v 1.7 2013/08/05 11:22:29 obache Exp $
 
---- cgi/Makefile.in.orig	2010-08-28 13:01:25.000000000 +0000
+--- cgi/Makefile.in.orig	2010-10-23 10:00:59.000000000 +0000
 +++ cgi/Makefile.in
 @@ -15,7 +15,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2011/04/08 22:37:25 morr Exp $
  HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -199,9 +199,9 @@ install-unstripped:
+@@ -201,9 +201,9 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:

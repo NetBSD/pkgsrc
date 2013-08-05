@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
+$NetBSD: patch-aa,v 1.11 2013/08/05 11:22:29 obache Exp $
 
---- Makefile.in.orig	2012-04-25 14:30:47.000000000 +0200
-+++ Makefile.in	2012-10-04 18:40:13.000000000 +0200
-@@ -23,19 +23,18 @@
- prefix=@prefix@
+--- Makefile.in.orig	2012-04-25 12:30:47.000000000 +0000
++++ Makefile.in
+@@ -24,17 +24,16 @@ prefix=@prefix@
  exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CHECKRESULTDIR=@CHECKRESULTDIR@
@@ -24,9 +23,7 @@ $NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
- USE_EVENTBROKER=@USE_EVENTBROKER@
-@@ -71,76 +70,8 @@
- all:
+@@ -72,74 +71,6 @@ all:
  	cd $(SRC_BASE) && $(MAKE)
  	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
@@ -101,9 +98,7 @@ $NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
  
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
- 
-@@ -233,16 +164,12 @@
- 	$(MAKE) install-exfoliation	
+@@ -234,14 +165,10 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:
@@ -120,9 +115,7 @@ $NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
  	@echo ""
  	@echo "*** Main program, CGIs and HTML files installed ***"
  	@echo ""
- 	@echo "You can continue with installing Nagios as follows (type 'make'"
-@@ -260,22 +187,22 @@
- 	@echo ""
+@@ -261,20 +188,20 @@ install-basic:
  
  
  install-config:
@@ -157,9 +150,7 @@ $NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
  	@echo ""
  	@echo "*** Config files installed ***"
  	@echo ""
- 	@echo "Remember, these are *SAMPLE* config files.  You'll need to read"
-@@ -290,10 +217,17 @@
- 	@echo "*** Nagios/Apache conf file installed ***"
+@@ -291,8 +218,15 @@ install-webconf:
  	@echo ""
  	
  install-exfoliation:
@@ -177,9 +168,7 @@ $NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
  
  	@echo ""
  	@echo "*** Exfoliation theme installed ***"
- 	@echo "NOTE: Use 'make install-classicui' to revert to classic Nagios theme";
-@@ -319,9 +253,12 @@
- 	@echo ""
+@@ -320,7 +254,10 @@ install-daemoninit:
  
  
  install-commandmode:
@@ -191,4 +180,3 @@ $NetBSD: patch-aa,v 1.10 2012/12/14 18:49:51 manu Exp $
  	chmod g+s $(DESTDIR)$(LOGDIR)/rw
  
  	@echo ""
- 	@echo "*** External command directory configured ***"

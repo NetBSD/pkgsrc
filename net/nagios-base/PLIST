@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/08/05 10:53:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/08/05 11:22:29 obache Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -383,4 +383,6 @@ share/nagios/stylesheets/summary.css
 share/nagios/stylesheets/tac.css
 share/nagios/stylesheets/trends.css
 @pkgdir share/nagios/ssi
+@pkgdir share/nagios/media
+@pkgdir share/nagios/docs/images
 @pkgdir etc/nagios/objects

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.8 2011/11/27 19:49:16 joerg Exp $
+$NetBSD: patch-ac,v 1.9 2013/08/05 11:22:29 obache Exp $
 
---- base/Makefile.in.orig	2009-06-17 03:57:21.000000000 +0000
+--- base/Makefile.in.orig	2010-10-23 10:00:59.000000000 +0000
 +++ base/Makefile.in
 @@ -36,7 +36,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.8 2011/11/27 19:49:16 joerg Exp $
  HTMLDIR=@datarootdir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -202,9 +202,9 @@ install-unstripped:
+@@ -204,9 +204,9 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:
