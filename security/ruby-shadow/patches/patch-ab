@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2013/04/10 09:25:22 tonnerre Exp $
+$NetBSD: patch-ab,v 1.2 2013/08/05 15:00:15 fhajny Exp $
 
 Handle OSX-like password APIs.
 
@@ -65,9 +65,9 @@ Handle OSX-like password APIs.
 +		      NULL);
 +}
 +#else
-+static VALUE convert_pw_struct( spwd *entry )
++static VALUE convert_pw_struct( struct spwd *entry )
 +{
-+  result = rb_struct_new(rb_sPasswdEntry,
++  VALUE result = rb_struct_new(rb_sPasswdEntry,
 +		      rb_tainted_str_new2(entry->sp_namp),
 +		      rb_tainted_str_new2(entry->sp_pwdp),
 +		      INT2FIX(entry->sp_lstchg),
