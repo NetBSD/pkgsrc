@@ -1,14 +1,16 @@
-$NetBSD: patch-Makefile.setting.in,v 1.1 2012/04/28 06:56:43 adam Exp $
+$NetBSD: patch-Makefile.setting.in,v 1.2 2013/08/05 19:24:35 adam Exp $
 
---- Makefile.setting.in.orig	2012-04-15 11:55:05.000000000 +0000
+--- Makefile.setting.in.orig	2013-07-27 15:09:40.000000000 +0000
 +++ Makefile.setting.in
-@@ -9,13 +9,16 @@ SETTINGSGEN      = !!SETTINGSGEN!!
+@@ -9,14 +9,17 @@ SETTINGSGEN      = !!SETTINGSGEN!!
  ENDIAN_CHECK     = !!ENDIAN_CHECK!!
  SRC_DIR          = !!SRC_DIR!!
  CXX_BUILD        = !!CXX_BUILD!!
 -CFLAGS_BUILD     = !!CFLAGS_BUILD!!
+-CXXFLAGS_BUILD   = !!CXXFLAGS_BUILD!!
 -LDFLAGS_BUILD    = !!LDFLAGS_BUILD!!
 +CFLAGS_BUILD     = !!CFLAGS!! !!CFLAGS_BUILD!!
++CXXFLAGS_BUILD   = !!CXXFLAGS!! !!CXXFLAGS_BUILD!!
 +LDFLAGS_BUILD    = !!LDFLAGS!! !!LDFLAGS_BUILD!! !!LIBS!!
  STAGE            = !!STAGE!!
  SETTING_OBJS_DIR = !!SETTING_OBJS_DIR!!
