@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/01/17 20:01:54 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/05 08:40:14 wiz Exp $
 
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:C/-[^-]*$//}-docs-${DISTNAME:C/[^-]*-//}
+PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 
 COMMENT=	Python WSGI Utility Library (HTML documentation)
 
