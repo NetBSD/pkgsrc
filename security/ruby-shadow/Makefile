@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/07/21 02:51:28 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/05 15:00:15 fhajny Exp $
 
 SHADOW_VER=	2.2.0
 DISTNAME=	ruby-shadow-${SHADOW_VER}
 PKGNAME=	${RUBY_PKGPREFIX}-shadow-${SHADOW_VER}
 PKGREVISION=	1
-CATEGORIES=	database
+CATEGORIES=	databases security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/apalmblad/ruby-shadow
