@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/05/26 01:52:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/05 02:10:07 gdt Exp $
 #
 
-DISTNAME=	cvs-fast-export-0.4
+DISTNAME=	cvs-fast-export-0.5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.catb.org/~esr/cvs-fast-export/
 
