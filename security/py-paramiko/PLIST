@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/11/27 22:13:32 gls Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/08/06 18:11:28 gls Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
+${PYSITELIB}/paramiko/_winapi.py
+${PYSITELIB}/paramiko/_winapi.pyc
+${PYSITELIB}/paramiko/_winapi.pyo
 ${PYSITELIB}/paramiko/agent.py
 ${PYSITELIB}/paramiko/agent.pyc
 ${PYSITELIB}/paramiko/agent.pyo
