@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2821 2013/08/06 18:11:39 gls Exp $
+$NetBSD: CHANGES-2013,v 1.2822 2013/08/06 18:28:42 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4148,3 +4148,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/openttd-data to 0.4.7 [adam 2013-08-05]
 	Updated www/awstats to 7.2 [adam 2013-08-06]
 	Updated security/py-paramiko to 1.11.0 [gls 2013-08-06]
+	Updated sysutils/fabric to 1.7.0 [gls 2013-08-06]
