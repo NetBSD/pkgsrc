@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/07/02 13:57:22 wen Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/08/06 19:57:42 asau Exp $
 bin/scheme-r5rs
 bin/scheme-srfi-7
 bin/scheme48
@@ -16,23 +16,7 @@ lib/${PKGNAME}/scheme48.image
 lib/${PKGNAME}/scheme48vm
 lib/${PKGNAME}/srfi-27.so
 man/man1/scheme48.1
-share/doc/manual-Z-G-D-1.gif
-share/doc/manual-Z-H-1.html
-share/doc/manual-Z-H-10.html
-share/doc/manual-Z-H-11.html
-share/doc/manual-Z-H-2.html
-share/doc/manual-Z-H-3.html
-share/doc/manual-Z-H-4.html
-share/doc/manual-Z-H-5.html
-share/doc/manual-Z-H-6.html
-share/doc/manual-Z-H-7.html
-share/doc/manual-Z-H-8.html
-share/doc/manual-Z-H-9.html
-share/doc/manual-Z-S.css
-share/doc/manual.html
 share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/deriving.txt
-share/doc/${PKGNAME}/hacking.txt
 share/doc/${PKGNAME}/html/manual-Z-G-D-1.gif
 share/doc/${PKGNAME}/html/manual-Z-H-1.html
 share/doc/${PKGNAME}/html/manual-Z-H-10.html
@@ -48,14 +32,8 @@ share/doc/${PKGNAME}/html/manual-Z-H-9.html
 share/doc/${PKGNAME}/html/manual-Z-S.css
 share/doc/${PKGNAME}/html/manual.html
 share/doc/${PKGNAME}/html/unicode-Z-G-1.gif
-share/doc/${PKGNAME}/install.txt
-share/doc/${PKGNAME}/io.txt
+share/doc/${PKGNAME}/manual.pdf
 share/doc/${PKGNAME}/manual.ps
-share/doc/${PKGNAME}/news.txt
-share/doc/${PKGNAME}/no-leaf-env.txt
-share/doc/${PKGNAME}/todo.txt
-share/doc/${PKGNAME}/type.txt
-share/doc/unicode-Z-G-1.gif
 share/${PKGNAME}/big/array.scm
 share/${PKGNAME}/big/big-util.scm
 share/${PKGNAME}/big/callback.scm
