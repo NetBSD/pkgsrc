@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/04/21 21:31:34 imil Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/06 18:47:23 gls Exp $
 #
 
-VERSION=		fce9cea592f7132898a419e07e704d45b4e81d4f
+VERSION=		b79718f8f69d17a075b7a626e32c1ed1200445f8
 DISTNAME=		${VERSION}
-PKGNAME=		cuisine-0.5.8
+PKGNAME=		cuisine-0.6.4
 CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/sebastien/cuisine/archive/
 FETCH_USING=		curl
