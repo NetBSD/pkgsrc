@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2013/08/06 18:11:28 gls Exp $
-#
+# $NetBSD: Makefile,v 1.17 2013/08/06 20:12:18 wiz Exp $
 
 DISTNAME=		paramiko-1.11.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		security
 MASTER_SITES=		http://pypi.python.org/packages/source/p/paramiko/
-FETCH_USING=		curl
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/paramiko/paramiko/
