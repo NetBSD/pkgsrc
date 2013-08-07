@@ -1,13 +1,15 @@
-$NetBSD: patch-ai,v 1.2 2009/08/27 15:26:41 hasso Exp $
+$NetBSD: patch-ai,v 1.3 2013/08/07 02:41:30 mef Exp $
 
---- gas/Makefile.in.orig	2009-01-14 09:50:17 +0100
-+++ gas/Makefile.in
-@@ -262,7 +262,7 @@ target_vendor = @target_vendor@
- te_file = @te_file@
- AUTOMAKE_OPTIONS = 1.8 cygnus dejagnu
+Avoid installing po (nls) files
+
+--- gas/Makefile.in.orig	2011-06-14 00:18:47.000000000 +0900
++++ gas/Makefile.in	2012-02-06 21:51:43.000000000 +0900
+@@ -281,7 +281,7 @@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = 1.11 dejagnu foreign no-dist
  ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
 -SUBDIRS = doc po
 +SUBDIRS = doc
- # Automake should figure this out on its own.  It doesn't, because
- # of the "cygnus" option.  But distclean still wants it.
- DIST_SUBDIRS = $(SUBDIRS)
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if
