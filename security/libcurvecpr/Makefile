@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/08/07 04:54:06 agc Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/07 05:01:45 agc Exp $
 
 DISTNAME=	master
 PKGNAME=	libcurvecpr-20130806
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/ecdh.html
 COMMENT=	Uses elliptic-curve cryptography to encrypt and authenticate data
-LICENSE=	modified-bsd
+LICENSE=	public-domain
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
