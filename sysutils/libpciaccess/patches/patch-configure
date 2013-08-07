@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2013/07/21 09:42:40 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2013/08/07 10:12:43 markd Exp $
 
 Fix
   CCLD     scanpci
@@ -11,8 +11,9 @@ Fix
 @@ -18015,10 +18015,10 @@ case $host_os in
  	*netbsd*)
  		case $host in
- 		*i386*)
+-		*i386*)
 -			PCIACCESS_LIBS="-li386 -lpci"
++		*i[3-9]86*)
 +			PCIACCESS_LIBS="$PCIACCESS_LIBS -li386 -lpci"
  			;;
  		*x86_64*|*amd64*)
