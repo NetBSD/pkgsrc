@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.7 2012/12/12 23:44:40 dsainty Exp $
+$NetBSD: distinfo,v 1.8 2013/08/07 03:11:35 mef Exp $
 
-SHA1 (gcc-core-4.4.1.tar.bz2) = 7e18b5f49b77a78e0ccd31c82c6220c5756da754
-RMD160 (gcc-core-4.4.1.tar.bz2) = 6545aea8ad1c9ae55cb0f12991456a0dd3bc490d
-Size (gcc-core-4.4.1.tar.bz2) = 25747208 bytes
-SHA1 (gcc-g++-4.4.1.tar.bz2) = 921c8c18287cabc4c515b4a52c70e445160bd161
-RMD160 (gcc-g++-4.4.1.tar.bz2) = 67b2774d14eea8272b214f0d879e70fb6920b3bf
-Size (gcc-g++-4.4.1.tar.bz2) = 5936040 bytes
-SHA1 (patch-aa) = 17ee1942842186c4336d72bb8223bdb3023c85c1
-SHA1 (patch-ab) = 4a3ab9719a6714933954a120ad8c594c3a4a2e1f
-SHA1 (patch-ac) = 14dbe72be88bd6fb0fd8671494454a6d4c11c4b7
-SHA1 (patch-gcc_cp_cfns.h) = 747e918b167d120965de09f9ef3b563e8f8afdf6
-SHA1 (patch-gcc_toplev.h) = 4378a41650336b91b376fcf158570290e1ef3714
+SHA1 (gcc-core-4.5.3.tar.bz2) = 5edd2a4ae5a265df716550079995c0a0bc7be564
+RMD160 (gcc-core-4.5.3.tar.bz2) = ef6b9cddc3bcd9884766645659d03f460aab443d
+Size (gcc-core-4.5.3.tar.bz2) = 28252641 bytes
+SHA1 (gcc-g++-4.5.3.tar.bz2) = fde6d16c2d4a2ab21abeaa7dc8e73e22557e8a2d
+RMD160 (gcc-g++-4.5.3.tar.bz2) = 5ef37a35671b475c1f86962dfa796133c80e6549
+Size (gcc-g++-4.5.3.tar.bz2) = 6475820 bytes
+SHA1 (patch-ab) = 4396719b8398cf9eb1f939c447dede250ceb4e26
+SHA1 (patch-gcc_config_avr_driver-avr_c) = 882b1ef0f9bb12338e1b0de2941d2d4164039082
+SHA1 (patch-gcc_cp_cfns.h) = d657e8ecde1fc73eebccb4f790f3b266ee2d7a6d
+SHA1 (patch-libiberty_Makefile.in) = 063c763dc379faf5c74cd0d50ec0d8e26f246bb0

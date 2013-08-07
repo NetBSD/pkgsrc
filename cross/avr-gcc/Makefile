@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/05/31 12:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/08/07 03:11:35 mef Exp $
 
-DISTNAME=		gcc-4.4.1
-PKGNAME=		avr-gcc-4.4.1
-PKGREVISION=		5
+DISTNAME=		gcc-4.5.3
+PKGNAME=		avr-gcc-4.5.3
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,26 +9,29 @@ DISTFILES=		${DISTNAME:S/-/-core-/}${EXTRACT_SUFX} \
 			${DISTNAME:S/-/-g++-/}${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		GNU gcc-4.4 for Atmel AVR 8-bit RISC microcontrollers
+COMMENT=		GNU gcc-4.5 for Atmel AVR 8-bit RISC microcontrollers
+LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
-BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		bison gmake lex perl tar msgfmt pod2man
+
+USE_TOOLS+=		bison gmake lex perl tar msgfmt autoconf pod2man
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 
-CONFIGURE_ARGS+=	--target=avr --disable-nls
+CONFIGURE_ARGS+=	--target=avr
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-multilib
 
 MAKE_ENV+=		MACHINE_ARCH=avr
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 CFLAGS_FOR_BUILD:=	${CFLAGS}
-MAVE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
+MAKE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
 CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
-MAVE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
+MAKE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
 CFLAGS=			# empty
 CXXFLAGS=		# empty
 
@@ -48,4 +50,6 @@ INSTALLATION_DIRS+=	avr/bin
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
+# mpc is required since gcc-4.5.x
+.include "../../math/mpcomplex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

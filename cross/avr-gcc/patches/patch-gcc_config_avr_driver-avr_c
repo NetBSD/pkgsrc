@@ -1,0 +1,42 @@
+$NetBSD: patch-gcc_config_avr_driver-avr_c,v 1.1 2013/08/07 03:11:35 mef Exp $
+
+gcc-4.5.3/gcc/config/avr/driver-avr.c:58:5: error: non-void function 'avr_device_to_arch' should return a value [-Wreturn-type]
+
+--- gcc/config/avr/driver-avr.c.orig	2009-06-24 04:14:11.000000000 +0900
++++ gcc/config/avr/driver-avr.c	2013-07-04 17:47:24.000000000 +0900
+@@ -55,7 +55,7 @@ const char *
+ avr_device_to_arch (int argc, const char **argv)
+ {
+   if (0 == argc)
+-    return;
++    return NULL;
+ 
+   avr_set_current_device (argv[0]);
+ 
+@@ -71,7 +71,7 @@ avr_device_to_data_start (int argc, cons
+   char data_section_start_str[16];
+ 
+   if (0 == argc)
+-    return;  
++    return NULL;  
+ 
+   avr_set_current_device (argv[0]);
+   
+@@ -93,7 +93,7 @@ const char *
+ avr_device_to_startfiles (int argc, const char **argv)
+ {
+   if (0 == argc)
+-    return;
++    return NULL;
+ 
+   avr_set_current_device (argv[0]);
+ 
+@@ -106,7 +106,7 @@ const char *
+ avr_device_to_devicelib (int argc, const char **argv)
+ {
+   if (0 == argc)
+-    return;
++    return NULL;
+ 
+   avr_set_current_device (argv[0]);
+ 
