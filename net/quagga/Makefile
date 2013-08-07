@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.45 2013/07/12 10:45:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2013/08/07 14:05:15 gdt Exp $
 #
 
-DISTNAME=	quagga-0.99.21
-PKGREVISION=	3
+DISTNAME=	quagga-0.99.22.3
 CATEGORIES=	net
-MASTER_SITES=	http://www.quagga.net/download/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/quagga/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.quagga.net/
+HOMEPAGE=	http://www.nongnu.org/quagga/
 COMMENT=	Free multithreaded routing daemon software
 LICENSE=	gnu-gpl-v2
 
