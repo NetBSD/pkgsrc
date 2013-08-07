@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.14 2013/08/06 12:23:37 drochner Exp $
+$NetBSD: distinfo,v 1.15 2013/08/07 11:06:39 drochner Exp $
 
-SHA1 (putty-0.62.tar.gz) = 5898438614117ee7e3704fc3f30a3c4bf2041380
-RMD160 (putty-0.62.tar.gz) = 48324416005eb4b14654fc9e0e14d39f20971507
-Size (putty-0.62.tar.gz) = 1783106 bytes
-SHA1 (patch-CVE-2013-4852-1) = 9f81e7b1c1135f153d7af1c4ca264d0af8df0cd8
-SHA1 (patch-CVE-2013-4852-2) = ca90d823b5ea59e4759fd48f63c28f0c8a3378da
-SHA1 (patch-import.c) = 2d88e956bb04e66a836992347e1252eeca78e8de
+SHA1 (putty-0.63.tar.gz) = 195c0603ef61082b91276faa8d4246ea472bba3b
+RMD160 (putty-0.63.tar.gz) = cf28d88a5f0e1db6c21bb0308bd59ed4d6399e5f
+Size (putty-0.63.tar.gz) = 1887913 bytes
+SHA1 (patch-import.c) = da6a34ec3412985858babb28821296c40e30d96b
 SHA1 (patch-ldisc.c) = e4dd89bfb2ddcb47aad46cc7c311f424aa6ab6be
-SHA1 (patch-terminal.c) = bed37a83bb7afc56ff34d48f8079b37d9db0f948
-SHA1 (patch-timing.c) = b836da7194aa72ac88d94951070dc65f11978703
+SHA1 (patch-timing.c) = 9dd79fde390878960e97c456628bbd5dcbcd07f9
 SHA1 (patch-unix_Makefile.gtk) = 0ad8226e2ad8e6e40d3eb9ddef4b22e7d07b7895
-SHA1 (patch-unix_gtkfont_c) = 0e57d4f49466ac73fb0d8cc8efb635e6f8a37f44
-SHA1 (patch-unix_gtkwin.c) = c62d1888b93476972180d14b1fd06d0ab8c8b04b
-SHA1 (patch-unix_uxnet.c) = 50e39093ece97b189da4a736713b59ed72c162d9
-SHA1 (patch-unix_uxucs.c) = c8a2c4a5f0f50a0c87ec643acd7a02f16dba576f
-SHA1 (patch-windows_window.c) = 0c9f4ad5870e63793278d6f04cae88154611e596
+SHA1 (patch-unix_gtkwin.c) = ccabdde03fda8bbc24d659a440fe48f96ab5d867
+SHA1 (patch-unix_uxnet.c) = 2d1c2939721993fe5616c2fe3f1935c03a31bb35
+SHA1 (patch-unix_uxucs.c) = a2a5021b515c3bade1126ed062bdc1eece1ca0f9
+SHA1 (patch-windows_window.c) = e851bad963967429131286c18e39d1ac4add4ae7
