@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2830 2013/08/07 05:35:01 mef Exp $
+$NetBSD: CHANGES-2013,v 1.2831 2013/08/07 06:33:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4156,3 +4156,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated cross/avr-libc to 1.8.0 [mef 2013-08-07]
 	Added security/libcurvecpr version 20130806 [agc 2013-08-06]
 	Updated cross/avr-gdb to 7.6 [mef 2013-08-07]
+	Updated databases/redis to 2.6.14 [adam 2013-08-07]
