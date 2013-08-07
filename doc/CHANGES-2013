@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2833 2013/08/07 14:05:32 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.2834 2013/08/07 16:50:45 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4159,3 +4159,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/redis to 2.6.14 [adam 2013-08-07]
 	Updated www/firefox to 23.0 [ryoon 2013-08-07]
 	Updated net/quagga to 0.99.22.3 [gdt 2013-08-07]
+	Updated security/putty to 0.63 [drochner 2013-08-07]
+	Updated net/filezilla to 3.7.2 [drochner 2013-08-07]
