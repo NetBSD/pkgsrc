@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2831 2013/08/07 06:33:31 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2832 2013/08/07 12:18:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4157,3 +4157,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/libcurvecpr version 20130806 [agc 2013-08-06]
 	Updated cross/avr-gdb to 7.6 [mef 2013-08-07]
 	Updated databases/redis to 2.6.14 [adam 2013-08-07]
+	Updated www/firefox to 23.0 [ryoon 2013-08-07]
