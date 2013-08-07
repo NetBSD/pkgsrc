@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2825 2013/08/06 20:14:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2826 2013/08/07 02:44:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4151,3 +4151,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/fabric to 1.7.0 [gls 2013-08-06]
 	Updated sysutils/cuisine to 0.6.4 [gls 2013-08-06]
 	Updated security/clusterssh to 4.01.05 [gls 2013-08-06]
+	Updated cross/avr-binutils to 2.23.2 [mef 2013-08-07]
