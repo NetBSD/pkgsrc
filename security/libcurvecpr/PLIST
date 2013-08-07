@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/08/07 04:54:06 agc Exp $
+include/curvecpr.h
+include/curvecpr/block.h
+include/curvecpr/bytes.h
+include/curvecpr/chicago.h
+include/curvecpr/client.h
+include/curvecpr/messager.h
+include/curvecpr/packet.h
+include/curvecpr/server.h
+include/curvecpr/session.h
+include/curvecpr/util.h
+lib/libcurvecpr.la
+lib/pkgconfig/libcurvecpr.pc
