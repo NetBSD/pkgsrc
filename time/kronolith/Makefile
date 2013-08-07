@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/03/16 07:21:23 obache Exp $
+# $NetBSD: Makefile,v 1.22 2013/08/07 19:19:58 bouyer Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www time
 MASTER_SITES=	http://ftp.horde.org/pub/kronolith/ \
 		ftp://ftp.horde.org/pub/kronolith/
@@ -25,7 +25,7 @@ EGDIR=		${PREFIX}/share/examples/kronolith
 HORDEDIR=	${PREFIX}/share/horde
 KRONOLITHDIR=	${HORDEDIR}/kronolith
 KRONOLITHVER=	2.3.6
-PAXDIRS=	js lib locale po scripts templates themes
+PAXDIRS=	calendars feed js lib locale po scripts templates themes
 
 INSTALLATION_DIRS+=	${DOCDIR}
 INSTALLATION_DIRS+=	${EGDIR}
