@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 00:10:29 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/08/07 05:34:14 mef Exp $
 
-DISTNAME=	gdb-5.3
-PKGNAME=	avr-gdb-5.3
-PKGREVISION=	3
+DISTNAME=	gdb-7.6
+PKGNAME=	${DISTNAME:S/^/avr-/}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNU gdb for Atmel AVR 8-bit RISC microcontrollers
+LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--program-prefix=avr
 
 INSTALLATION_DIRS=	bin
+TEST_TARGET=		check
 
 pre-configure:
 	cd ${WRKSRC} ; ${RM} -rf dejagnu expect sim tcl texinfo

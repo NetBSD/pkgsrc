@@ -1,0 +1,24 @@
+$NetBSD: patch-opcodes_configure,v 1.1 2013/08/07 05:34:14 mef Exp $
+
+Revert to gdb-7.5.1 to avoid following error
+(But why this is necessary is unkown yet).
+
+Configuring in ./opcodes
+....
+checking for gcc option to accept ISO C89... none needed
+checking for library containing strerror... none required
+./configure.lineno: 3236: Syntax error: Bad substitution
+gmake[1]: *** [configure-opcodes] Error 1
+gmake[1]: Leaving directory `/usr/pkgsrc/wip/gdb76/work/gdb-7.6'
+
+--- opcodes/configure.orig	2013-07-03 10:59:20.000000000 +0900
++++ opcodes/configure	2013-07-03 12:02:37.000000000 +0900
+@@ -3216,7 +3216,7 @@
+ # We currently only use the version number for the name of any shared
+ # library.  For user convenience, we always use the same version
+ # number that BFD is using.
+-BFD_VERSION=`${srcdir}/../bfd/configure --version | sed -n -e '1s,.* ,,p'`
++BFD_VERSION=`sed -n -e 's/^.._INIT_AUTOMAKE.*,[        ]*\([^  ]*\)[   ]*).*/\1/p' < ${srcdir}/../bfd/configure.in`
+ 
+ am__api_version='1.11'
+ 

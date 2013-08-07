@@ -1,0 +1,27 @@
+$NetBSD: patch-bfd_bfd-in2_h,v 1.1 2013/08/07 05:34:14 mef Exp $
+
+Avoid following problem by clang-3.2
+----------------
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I. -I./../include -DHAVE_bfd_elf32_avr_vec -DHAVE_bfd_elf32_little_generic_vec -DHAVE_bfd_elf32_big_generic_vec -I./../intl -DBINDIR=\"/usr/pkg/bin\" -I/usr/include -W -Wall -Wstrict-prototypes -Wmissing-prototypes -Wshadow -Werror -O2 -I/usr/include -MT opncls.lo -MD -MP -MF .deps/opncls.Tpo -c opncls.c -o opncls.o
+opncls.c:263:5: error: expression result unused [-Werror,-Wunused-value]
+    bfd_set_cacheable (nbfd, TRUE);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./bfd.h:529:67: note: expanded from macro 'bfd_set_cacheable'
+#define bfd_set_cacheable(abfd,bool) (((abfd)->cacheable = bool), TRUE)
+                                                                  ^~~~
+./bfd.h:134:14: note: expanded from macro 'TRUE'
+#define TRUE 1
+             ^
+1 error generated.
+
+--- bfd/bfd-in2.h.orig	2013-02-28 06:39:18.000000000 +0900
++++ bfd/bfd-in2.h	2013-07-04 21:57:46.000000000 +0900
+@@ -526,7 +526,7 @@ extern void warn_deprecated (const char 
+ 
+ #define bfd_get_symbol_leading_char(abfd) ((abfd)->xvec->symbol_leading_char)
+ 
+-#define bfd_set_cacheable(abfd,bool) (((abfd)->cacheable = bool), TRUE)
++#define bfd_set_cacheable(abfd,bool) ((abfd)->cacheable = bool)
+ 
+ extern bfd_boolean bfd_cache_close
+   (bfd *abfd);
