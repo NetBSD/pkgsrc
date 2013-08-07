@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2009/08/27 15:26:41 hasso Exp $
+$NetBSD: patch-ab,v 1.3 2013/08/07 02:41:30 mef Exp $
 
---- bfd/Makefile.in.orig	2009-02-02 11:44:39 +0100
-+++ bfd/Makefile.in
-@@ -1222,7 +1222,8 @@ installdirs-am:
- 	for dir in "$(DESTDIR)$(bfdlibdir)"; do \
- 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+Avoid installing info file.
+
+--- bfd/Makefile.in.orig	2011-11-21 20:55:49.000000000 +0900
++++ bfd/Makefile.in	2012-02-06 22:14:51.000000000 +0900
+@@ -1713,7 +1713,6 @@
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
--install: install-recursive
-+#install: install-recursive
-+install:
+ install: $(BUILT_SOURCES)
+-	$(MAKE) $(AM_MAKEFLAGS) install-recursive
  install-exec: install-exec-recursive
  install-data: install-data-recursive
  uninstall: uninstall-recursive

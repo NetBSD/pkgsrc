@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.2 2009/08/27 15:26:41 hasso Exp $
+$NetBSD: patch-af,v 1.3 2013/08/07 02:41:30 mef Exp $
+
+Avoid installing info (which duplicates with other CPU)
 
 --- gas/doc/Makefile.in.orig	2008-08-15 10:31:50 +0200
 +++ gas/doc/Makefile.in
