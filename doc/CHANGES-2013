@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2827 2013/08/07 03:12:21 mef Exp $
+$NetBSD: CHANGES-2013,v 1.2828 2013/08/07 03:18:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4153,3 +4153,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/clusterssh to 4.01.05 [gls 2013-08-06]
 	Updated cross/avr-binutils to 2.23.2 [mef 2013-08-07]
 	Updated cross/avr-gcc to 4.5.3 [mef 2013-08-07]
+	Updated cross/avr-libc to 1.8.0 [mef 2013-08-07]
