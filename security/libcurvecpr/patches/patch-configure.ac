@@ -1,0 +1,24 @@
+$NetBSD: patch-configure.ac,v 1.1.1.1 2013/08/07 04:54:06 agc Exp $
+
+New in autoconf-1.12
+
+--- configure.ac	2013/08/07 04:25:57	1.1
++++ configure.ac	2013/08/07 04:26:18
+@@ -11,7 +11,7 @@
+ AC_SUBST(CURVECPR_LIBRARY_VERSION)
+ 
+ # Checks for programs.
+-AM_PROG_AR
++m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
+ 
+ AC_PROG_CC
+ AC_PROG_CPP
+@@ -25,7 +25,7 @@
+ PKG_PROG_PKG_CONFIG
+ 
+ # Checks for libraries.
+-PKG_CHECK_MODULES([CHECK], [check >= 0.9.8])
++#PKG_CHECK_MODULES([CHECK], [check >= 0.9.8])
+ AC_SEARCH_LIBS([clock_gettime], [rt posix4])
+ AC_CHECK_LIB([sodium], [sodium_init], [], [AC_MSG_ERROR([missing libsodium])])
+ 
