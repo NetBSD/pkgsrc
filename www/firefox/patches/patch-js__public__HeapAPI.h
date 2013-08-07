@@ -1,4 +1,4 @@
-$NetBSD: patch-js__public__HeapAPI.h,v 1.2 2013/06/26 11:32:12 ryoon Exp $
+$NetBSD: patch-js__public__HeapAPI.h,v 1.3 2013/08/07 12:17:54 ryoon Exp $
 
 From bugzilla, bug 840242,
 https://hg.mozilla.org/integration/mozilla-inbound/rev/49e4ff129351
@@ -8,9 +8,9 @@ As a side effect, this removes the hard coded page-size == 4k requirement.
 
 
 +++ js/public/HeapAPI.h
---- js/public/HeapAPI.h.orig	2013-05-11 21:19:32.000000000 +0200
-+++ js/public/HeapAPI.h	2013-06-09 21:27:12.000000000 +0200
-@@ -11,24 +11,7 @@
+--- js/public/HeapAPI.h.orig	2013-07-30 00:58:18.000000000 +0000
++++ js/public/HeapAPI.h
+@@ -13,24 +13,7 @@
  namespace js {
  namespace gc {
  
@@ -20,7 +20,7 @@ As a side effect, this removes the hard coded page-size == 4k requirement.
 - * Note: The freelist supports a maximum arena shift of 15.
 - * Note: Do not use JS_CPU_SPARC here, this header is used outside JS.
 - */
--#if (defined(SOLARIS) || defined(__FreeBSD__)) && \
+-#if (defined(SOLARIS) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)) && \
 -    (defined(__sparc) || defined(__sparcv9) || defined(__ia64))
 -const size_t PageShift = 13;
 -const size_t ArenaShift = PageShift;

@@ -1,0 +1,8 @@
+$NetBSD: patch-dist_stl__wrappers_ios,v 1.1 2013/08/07 12:17:54 ryoon Exp $
+
+--- dist/stl_wrappers/ios.orig	2013-08-04 08:03:50.000000000 +0000
++++ dist/stl_wrappers/ios
+@@ -0,0 +1,3 @@
++#pragma GCC visibility push(default)
++#include_next <ios>
++#pragma GCC visibility pop

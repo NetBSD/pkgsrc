@@ -1,4 +1,4 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.2 2013/08/07 12:17:54 ryoon Exp $
 
 --- config/baseconfig.mk.orig	2013-01-04 23:44:28.000000000 +0000
 +++ config/baseconfig.mk
@@ -12,7 +12,7 @@ $NetBSD: patch-config_baseconfig.mk,v 1.1 2013/05/23 13:12:13 ryoon Exp $
 +includedir := $(includedir)/${MOZILLA_PKG_NAME}
 +idldir = $(datadir)/idl/${MOZILLA_PKG_NAME}
 +installdir = $(libdir)/${MOZILLA_PKG_NAME}
-+sdkdir = $(libdir)/${MOZILLA_PKG_NAME}
++sdkdir = $(libdir)/${MOZILLA_PKG_NAME}-sdk
  DIST = $(DEPTH)/dist
  
  # We do magic with OBJ_SUFFIX in config.mk, the following ensures we don't
