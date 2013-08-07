@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_audio__device.gypi,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_audio__device.gypi,v 1.2 2013/08/07 12:17:54 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/audio_device/audio_device.gypi.orig	2013-05-11 19:19:45.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/audio_device/audio_device.gypi.orig	2013-07-30 00:58:52.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/audio_device/audio_device.gypi
 @@ -45,11 +45,15 @@
          'dummy/audio_device_utility_dummy.h',
@@ -20,7 +20,7 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_audio__device.gyp
          ['OS=="ios"', {
            'include_dirs': [
              'ios',
-@@ -77,14 +81,8 @@
+@@ -78,14 +82,8 @@
          }],
          ['include_internal_audio_device==1', {
            'sources': [
@@ -35,8 +35,8 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_audio__device.gyp
              'linux/latebindingsymboltable_linux.cc',
              'linux/latebindingsymboltable_linux.h',
              'ios/audio_device_ios.cc',
-@@ -134,28 +132,36 @@
-               ],
+@@ -126,28 +124,36 @@
+               },
              }],
              ['OS=="linux"', {
 -              'defines': [

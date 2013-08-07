@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
+$NetBSD: patch-aa,v 1.14 2013/08/07 12:17:54 ryoon Exp $
 
---- configure.in.orig	2013-06-17 22:12:58.000000000 +0000
+--- configure.in.orig	2013-07-30 00:57:59.000000000 +0000
 +++ configure.in
-@@ -1388,6 +1388,17 @@ if test "$GNU_CC"; then
+@@ -1411,6 +1411,17 @@ if test "$GNU_CC"; then
      CFLAGS=$_SAVE_CFLAGS
      AC_SUBST(HAVE_TOOLCHAIN_SUPPORT_MSSE4_1)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
      # Turn on GNU-specific warnings:
      # -Wall - turn on a lot of warnings
      # -Wpointer-arith - good to have
-@@ -2066,6 +2077,9 @@ ia64*-hpux*)
+@@ -2088,6 +2099,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
          MC=mc.exe
      fi
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -2862,6 +2876,7 @@ EOF
+@@ -2887,6 +2901,7 @@ EOF
  #pragma GCC visibility push(hidden)
  #pragma GCC visibility push(default)
  #include <string.h>
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
  #pragma GCC visibility pop
  
  __attribute__ ((visibility ("default"))) void Func() {
-@@ -2870,7 +2885,7 @@ __attribute__ ((visibility ("default")))
+@@ -2895,7 +2910,7 @@ __attribute__ ((visibility ("default")))
  }
  EOF
                         ac_cv_have_visibility_builtin_bug=no
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
                           ac_cv_have_visibility_builtin_bug=yes
                         else
                           if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -3032,6 +3047,9 @@ dnl ====================================
+@@ -3057,6 +3072,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3333,6 +3351,9 @@ AC_CACHE_CHECK(
+@@ -3358,6 +3376,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -3995,6 +4016,14 @@ if test -n "$YASM"; then
+@@ -4012,6 +4033,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -4022,11 +4051,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -4039,11 +4068,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -95,26 +95,48 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -5260,7 +5285,7 @@ if test -n "$MOZ_WEBRTC"; then
-             MOZ_WEBRTC=
-         fi
-         ;;
--    *-linux*|*-mingw*|*-darwin*)
-+    *-linux*|*-mingw*|*-darwin*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+@@ -5270,7 +5295,7 @@ dnl --enable-webrtc to override.  Can di
+ dnl the master list above.
+ if test -n "$MOZ_WEBRTC"; then
+     case "$target" in
+-    *-linux*|*-mingw*|*-darwin*|*-android*|*-linuxandroid*)
++    *-linux*|*-mingw*|*-darwin*|*-android*|*-linuxandroid*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
          dnl Leave enabled
          ;;
      *)
-@@ -5314,6 +5339,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5323,6 +5348,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VP8_ENCODER=1
      MOZ_VP8_ERROR_CONCEALMENT=1
  
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
 +
-     if test "$MOZ_WIDGET_TOOLKIT" != "gonk"; then
-        dnl OpenSLES is only available in Android 2.3 and later; we'll change this
-        dnl hard dependency to a dynamic load with graceful runtime failure before
-@@ -5727,7 +5755,7 @@ MOZ_ALSA=)
+ dnl enable once Signaling lands
+     MOZ_WEBRTC_SIGNALING=1
+     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
+@@ -5349,15 +5377,18 @@ AC_SUBST(MOZ_SRTP)
+ 
+ dnl Use integers over floats for audio on B2G and Android, because audio
+ dnl backends for those platforms don't support floats.
+-if test "$OS_TARGET" = "Android"; then
++case "$target" in
++*-android*|*-linuxandroid*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+     MOZ_SAMPLE_TYPE_S16=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
+-else
++;;
++*)
+     MOZ_SAMPLE_TYPE_FLOAT32=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_FLOAT32)
+     AC_SUBST(MOZ_SAMPLE_TYPE_FLOAT32)
+-fi
++;;
++esac
+ 
+ dnl ========================================================
+ dnl = Disable Speech API code
+@@ -5707,7 +5738,7 @@ MOZ_ALSA=)
  
  if test -n "$MOZ_ALSA"; then
      AC_DEFINE(MOZ_CUBEB)
@@ -123,7 +145,16 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
           [echo "$MOZ_ALSA_PKG_ERRORS"
            AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
  fi
-@@ -8332,7 +8360,7 @@ if test "$MOZ_ENABLE_SKIA"; then
+@@ -6410,7 +6441,7 @@ MOZ_ARG_ENABLE_BOOL(gtest,
+     MOZ_ENABLE_GTEST= )
+ 
+ if test -n "$MOZ_ENABLE_GTEST"; then
+-    if test "${OS_TARGET}" = "WINNT" -o "${OS_TARGET}" = "Darwin" -o "${OS_TARGET}" = "Linux" -o "${OS_TARGET}" = "Android"; then
++    if test "${OS_TARGET}" = "WINNT" -o "${OS_TARGET}" = "Darwin" -o "${OS_TARGET}" = "Linux" -o "${OS_TARGET}" = "Android" -o "${OS_TARGET}" = "NetBSD"; then
+         MOZ_ENABLE_GTEST=1
+         GTEST_HAS_RTTI=0
+         AC_DEFINE(MOZ_ENABLE_GTEST)
+@@ -8330,7 +8361,7 @@ if test "$MOZ_ENABLE_SKIA"; then
      AC_DEFINE(GR_DLL)
    fi
  
@@ -132,7 +163,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
      MOZ_ENABLE_SKIA_GPU=1
      AC_DEFINE(USE_SKIA_GPU)
      AC_SUBST(MOZ_ENABLE_SKIA_GPU)
-@@ -8413,16 +8441,26 @@ MOZ_ARG_DISABLE_BOOL(necko-wifi,
+@@ -8411,16 +8442,26 @@ MOZ_ARG_DISABLE_BOOL(necko-wifi,
      NECKO_WIFI=,
      NECKO_WIFI=1)
  
@@ -169,7 +200,7 @@ $NetBSD: patch-aa,v 1.13 2013/07/01 13:53:27 martin Exp $
  fi
  
  if test "$NECKO_WIFI"; then
-@@ -9102,6 +9140,27 @@ if test -z "$HAVE_TOOLCHAIN_SUPPORT_MSSE
+@@ -9114,6 +9155,27 @@ if test -z "$HAVE_TOOLCHAIN_SUPPORT_MSSE
    EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D yuv_disable_asm=1"
  fi
  
