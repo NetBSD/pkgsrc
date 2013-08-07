@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.12 2013/08/07 16:46:23 drochner Exp $
+
+buffer overflow
+
+--- tifficc/tiffdiff.c.orig	2009-10-30 15:57:46.000000000 +0000
++++ tifficc/tiffdiff.c
+@@ -633,7 +633,7 @@ void CreateCGATS(const char* TiffName1, 
+     cmsIT8SetSheetType(hIT8, "TIFFDIFF");
+     
+    
+-    sprintf(Buffer, "Differences between %s and %s", TiffName1, TiffName2);
++    snprintf(Buffer, sizeof(Buffer), "Differences between %s and %s", TiffName1, TiffName2);
+   
+     cmsIT8SetComment(hIT8, Buffer);
+ 

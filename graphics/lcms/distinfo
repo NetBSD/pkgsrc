@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.24 2010/06/16 15:17:58 drochner Exp $
+$NetBSD: distinfo,v 1.25 2013/08/07 16:46:23 drochner Exp $
 
 SHA1 (lcms-1.19.tar.gz) = d5b075ccffc0068015f74f78e4bc39138bcfe2d4
 RMD160 (lcms-1.19.tar.gz) = 530615c061dccdcb64d75c6fab148dd565bb6c91
 Size (lcms-1.19.tar.gz) = 927752 bytes
+SHA1 (patch-aa) = 3144d0b902ad77cfaed8b02e96f6f6f18644bc07
+SHA1 (patch-ab) = 6238598248d0321fe40bc09919ad8fbe5cdb887d

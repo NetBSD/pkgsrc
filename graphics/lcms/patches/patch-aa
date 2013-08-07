@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.13 2013/08/07 16:46:23 drochner Exp $
+
+buffer overflows
+
+--- samples/icctrans.c.orig	2009-10-30 15:57:45.000000000 +0000
++++ samples/icctrans.c
+@@ -500,7 +500,7 @@ void PrintRange(const char* C, double v,
+ 
+     Prefix[0] = 0;
+     if (!lTerse)
+-        sprintf(Prefix, "%s=", C);
++        snprintf(Prefix, sizeof(Prefix), "%s=", C);
+ 
+     if (InHexa)
+     {
+@@ -648,7 +648,7 @@ void PrintResults(WORD Encoded[], icColo
+ static
+ void GetLine(char* Buffer)
+ {    
+-    scanf("%s", Buffer);
++    scanf("%4095s", Buffer);
+     
+     if (toupper(Buffer[0]) == 'Q') { // Quit?
+ 
