@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.8 2013/07/04 08:07:09 martin Exp $
+# $NetBSD: mozilla-common.mk,v 1.9 2013/08/07 12:17:54 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -24,12 +24,15 @@ GCC_REQD+=		4.5
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 
-CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-CONFIGURE_ARGS+=	--enable-svg --enable-mathml
+CONFIGURE_ARGS+=	--enable-svg
+CONFIGURE_ARGS+=	--enable-mathml
+CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
@@ -38,7 +41,8 @@ CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-jpeg
-CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
@@ -46,6 +50,20 @@ CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
+
+CONFIGURE_ARGS+=	--disable-elf-hack
+CONFIGURE_ARGS+=	--disable-elf-dynstr-gc
+CONFIGURE_ARGS+=	--disable-gconf
+CONFIGURE_ARGS+=	--enable-gio
+CONFIGURE_ARGS+=	--enable-extensions=gio
+CONFIGURE_ARGS+=	--disable-mochitest
+CONFIGURE_ARGS+=	--enable-canvas
+#CONFIGURE_ARGS+=	--enable-readline
+CONFIGURE_ARGS+=	--disable-installer
+CONFIGURE_ARGS+=	--enable-url-classifier
+#CONFIGURE_ARGS+=	--enable-startup-notification
+CONFIGURE_ARGS+=	--enable-shared-js
+CONFIGURE_ARGS+=	--with-system-ply
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
