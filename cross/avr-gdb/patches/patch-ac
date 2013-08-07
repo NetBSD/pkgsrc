@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/10/13 18:25:59 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2013/08/07 05:34:14 mef Exp $
+
+ERROR: [check-portability.awk] => Found test ... == ...:
 
 --- gdb/config/djgpp/djconfig.sh.orig	2002-02-25 17:09:45.000000000 +0100
 +++ gdb/config/djgpp/djconfig.sh	2006-10-13 20:25:02.000000000 +0200
