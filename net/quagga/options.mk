@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2013/07/15 02:02:27 ryoon Exp $
+# $NetBSD: options.mk,v 1.8 2013/08/07 14:05:15 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quagga
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--disable-ripngd
 ###
 .if !empty(PKG_OPTIONS:Mquagga-vtysh)
 # uses rl_pending_input
+USE_GNU_READLINE=	yes
 .  include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-vtysh
 PLIST_CAT+=		${PKGDIR}/PLIST.vtysh
