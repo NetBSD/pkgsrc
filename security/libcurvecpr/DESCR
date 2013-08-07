@@ -1,0 +1,13 @@
+libcurvecpr is a low-level, networking-independent implementation of
+Daniel J.  Bernstein's CurveCP.
+
+libcurvecpr is based on a system of callbacks that must be implemented
+by library users.  Like the reference CurveCP implementation, the
+client, server, and message-handling portions of libcurvecpr are
+entirely independent of each other.
+
+This means that while it's slightly more effort to build software
+based on libcurvecpr than other packages, it provides complete freedom
+to use any underlying mechanism for handling network traffic you want
+- whether it's an IPC connection to another program, standard
+poll(2)-type functionality, or libev.
