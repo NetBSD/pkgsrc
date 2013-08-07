@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:17:24 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/08/07 21:07:25 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-1.1.0
+DISTNAME=	lmdbg-1.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
@@ -11,7 +11,7 @@ HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
 COMMENT=	Lightweight Modular malloc Debugger
 LICENSE=	mit
 
-BUILD_DEPENDS+=		mk-configure>=0.23.0:../../devel/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.24.0:../../devel/mk-configure
 DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
@@ -27,6 +27,8 @@ REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	scripts/lmdbg-*.in
+
+MAKE_ENV+=		AWK=${AWK:Q}
 
 post-install:
 	cd ${WRKSRC} && \
