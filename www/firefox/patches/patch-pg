@@ -1,6 +1,6 @@
-$NetBSD: patch-pg,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-pg,v 1.2 2013/08/07 12:17:54 ryoon Exp $
 
---- xulrunner/installer/mozilla-nspr.pc.in.orig	2013-01-04 23:44:47.000000000 +0000
+--- xulrunner/installer/mozilla-nspr.pc.in.orig	2013-07-30 00:59:18.000000000 +0000
 +++ xulrunner/installer/mozilla-nspr.pc.in
 @@ -5,7 +5,5 @@ includedir=%includedir%
  Name: NSPR
@@ -10,5 +10,5 @@ $NetBSD: patch-pg,v 1.1 2013/05/23 13:12:13 ryoon Exp $
 -Cflags: %FULL_NSPR_CFLAGS%
 -
 -
-+Libs: -Wl,-R${prefix}/lib/xulrunner -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lplds4 -lplc4 -lnspr4 -pthread
++Libs: -Wl,-R${prefix}/lib/xulrunner -Wl,-R${prefix}/lib/xulrunner -Wl,-R${prefix}/lib/xulrunner -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lplds4 -lplc4 -lnspr4 -pthread
 +Cflags: -I${includedir}
