@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.479 2013/08/05 17:42:52 kleink Exp $
+# $NetBSD: Makefile,v 1.480 2013/08/07 04:55:10 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -117,6 +117,7 @@ SUBDIR+=	libassuan
 SUBDIR+=	libassuan2
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
+SUBDIR+=	libcurvecpr
 SUBDIR+=	libdes
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
