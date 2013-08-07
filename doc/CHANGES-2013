@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2832 2013/08/07 12:18:35 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2833 2013/08/07 14:05:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4158,3 +4158,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated cross/avr-gdb to 7.6 [mef 2013-08-07]
 	Updated databases/redis to 2.6.14 [adam 2013-08-07]
 	Updated www/firefox to 23.0 [ryoon 2013-08-07]
+	Updated net/quagga to 0.99.22.3 [gdt 2013-08-07]
