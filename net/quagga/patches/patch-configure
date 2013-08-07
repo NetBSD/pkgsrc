@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2013/05/20 13:49:07 fhajny Exp $
+$NetBSD: patch-configure,v 1.3 2013/08/07 14:05:15 gdt Exp $
 
 Extend ip_mreq hack to DragonFlyBSD and SunOS.
---- configure.orig	2012-05-01 20:48:03.000000000 +0000
+--- configure.orig	2013-08-07 13:54:57.000000000 +0000
 +++ configure
-@@ -16472,6 +16472,8 @@ main ()
+@@ -16637,6 +16637,8 @@ main ()
  {
- #if (defined(__FreeBSD__) && ((__FreeBSD_version >= 500022 && __FreeBSD_version < 700000) || (__FreeBSD_version < 500000 && __FreeBSD_version >= 440000))) || (defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 106010000)
+ #if (defined(__FreeBSD__) && ((__FreeBSD_version >= 500022 && __FreeBSD_version < 700000) || (__FreeBSD_version < 500000 && __FreeBSD_version >= 440000))) || (defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 106010000) || defined(__OpenBSD__) || defined(__APPLE__)
    return (0);
 +#elif defined(__DragonFly__) || defined(__sun)
 +  return (0);
