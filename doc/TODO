@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12457 2013/08/05 19:32:00 adam Exp $
+$NetBSD: TODO,v 1.12458 2013/08/07 06:33:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -929,7 +929,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
-	o redis-2.6.14
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
 	o rio500-0.8.1
