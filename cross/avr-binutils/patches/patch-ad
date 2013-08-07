@@ -1,14 +1,15 @@
-$NetBSD: patch-ad,v 1.2 2009/08/27 15:26:41 hasso Exp $
+$NetBSD: patch-ad,v 1.3 2013/08/07 02:41:30 mef Exp $
 
---- etc/Makefile.in.orig	2007-03-27 20:09:32 +0200
-+++ etc/Makefile.in
-@@ -64,7 +64,8 @@ PDFFILES = standards.pdf configure.pdf
+Avoid installing info (which duplicates with other CPU)
+
+--- etc/Makefile.in.orig	2010-11-21 04:37:57.000000000 +0900
++++ etc/Makefile.in	2012-02-06 21:50:04.000000000 +0900
+@@ -64,7 +64,7 @@
  HTMLFILES = standards.html configure.html
  
  all: info
--install: install-info
-+#install: install-info
-+install:
+-install install-strip: install-info
++install install-strip:
  
  uninstall:
  
