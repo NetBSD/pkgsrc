@@ -1,0 +1,16 @@
+$NetBSD: patch-libiberty_Makefile.in,v 1.1 2013/08/07 03:11:35 mef Exp $
+
+To avoid duplication (conflict) with other cross tool-chain,
+just not install libiberty.a
+
+--- libiberty/Makefile.in.orig	2010-03-02 15:09:56.000000000 +0900
++++ libiberty/Makefile.in	2013-07-04 12:01:10.000000000 +0900
+@@ -321,7 +321,7 @@ libiberty.html : $(srcdir)/libiberty.tex
+ @MAINT@	echo stamp > stamp-functions
+ 
+ INSTALL_DEST = @INSTALL_DEST@
+-install: install_to_$(INSTALL_DEST) install-subdir
++install: 
+ 
+ # This is tricky.  Even though CC in the Makefile contains
+ # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the

@@ -1,4 +1,4 @@
-gcc-3.0 configured as cross-compiler for Atmel AVR 8-bit RISC
+gcc-4.5 configured as cross-compiler for Atmel AVR 8-bit RISC
 microcontrollers.
 
 This package includes a basic C++ compiler, although this currently
