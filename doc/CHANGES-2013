@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2837 2013/08/08 07:51:46 morr Exp $
+$NetBSD: CHANGES-2013,v 1.2838 2013/08/08 12:56:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk to 11.5.0nb1 [jnemeth 2013-08-08]
 	Updated fonts/tex-nanumtype1 to 3.0nb1 [minskim 2013-08-08]
 	Updated www/wordpress to 3.6 [morr 2013-08-08]
+	Updated www/firefox-l10n to 23.0 [ryoon 2013-08-08]
