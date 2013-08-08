@@ -1,8 +1,8 @@
-$NetBSD: patch-main_manager.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
+$NetBSD: patch-main_manager.c,v 1.2 2013/08/08 00:45:10 jnemeth Exp $
 
---- main/manager.c.orig	2012-10-17 19:22:46.000000000 +0000
+--- main/manager.c.orig	2013-05-13 14:26:57.000000000 +0000
 +++ main/manager.c
-@@ -1827,7 +1827,7 @@ static char *handle_showmanconn(struct a
+@@ -1850,7 +1850,7 @@ static char *handle_showmanconn(struct a
  	struct mansession_session *session;
  	time_t now = time(NULL);
  #define HSMCONN_FORMAT1 "  %-15.15s  %-55.55s  %-10.10s  %-10.10s  %-8.8s  %-8.8s  %-5.5s  %-5.5s\n"
@@ -11,7 +11,7 @@ $NetBSD: patch-main_manager.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  	int count = 0;
  	struct ao2_iterator i;
  
-@@ -1848,7 +1848,7 @@ static char *handle_showmanconn(struct a
+@@ -1871,7 +1871,7 @@ static char *handle_showmanconn(struct a
  	i = ao2_iterator_init(sessions, 0);
  	while ((session = ao2_iterator_next(&i))) {
  		ao2_lock(session);
@@ -20,3 +20,16 @@ $NetBSD: patch-main_manager.c,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
  		count++;
  		ao2_unlock(session);
  		unref_mansession(session);
+@@ -7203,9 +7203,11 @@ static char *handle_manager_show_events(
+ 	return CLI_SUCCESS;
+ }
+ 
++RAII_DECL(struct ao2_container *, events, ao2_cleanup);
++
+ static char *handle_manager_show_event(struct ast_cli_entry *e, int cmd, struct ast_cli_args *a)
+ {
+-	RAII_VAR(struct ao2_container *, events, NULL, ao2_cleanup);
++	RAII_VAR(struct ao2_container *, events, NULL);
+ 	struct ao2_iterator it_events;
+ 	struct ast_xml_doc_item *item, *temp;
+ 	int length;
