@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2835 2013/08/08 00:45:36 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.2836 2013/08/08 00:59:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4162,3 +4162,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/putty to 0.63 [drochner 2013-08-07]
 	Updated net/filezilla to 3.7.2 [drochner 2013-08-07]
 	Updated comms/asterisk to 11.5.0nb1 [jnemeth 2013-08-08]
+	Updated fonts/tex-nanumtype1 to 3.0nb1 [minskim 2013-08-08]
