@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2836 2013/08/08 00:59:48 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.2837 2013/08/08 07:51:46 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/filezilla to 3.7.2 [drochner 2013-08-07]
 	Updated comms/asterisk to 11.5.0nb1 [jnemeth 2013-08-08]
 	Updated fonts/tex-nanumtype1 to 3.0nb1 [minskim 2013-08-08]
+	Updated www/wordpress to 3.6 [morr 2013-08-08]
