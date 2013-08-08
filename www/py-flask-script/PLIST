@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/28 17:47:18 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/08 17:59:30 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_script/__init__.py
 ${PYSITELIB}/flask_script/__init__.pyc
 ${PYSITELIB}/flask_script/__init__.pyo
+${PYSITELIB}/flask_script/_compat.py
+${PYSITELIB}/flask_script/_compat.pyc
+${PYSITELIB}/flask_script/_compat.pyo
 ${PYSITELIB}/flask_script/cli.py
 ${PYSITELIB}/flask_script/cli.pyc
 ${PYSITELIB}/flask_script/cli.pyo
