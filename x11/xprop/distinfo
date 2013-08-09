@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/06/03 18:23:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2013/08/09 09:21:24 wiz Exp $
 
-SHA1 (xprop-1.2.1.tar.bz2) = d531be0f5f2b7758216ea4d7890f88c42c5fa3fd
-RMD160 (xprop-1.2.1.tar.bz2) = 562e7b905b6ab10338a7285e211edb483d45b948
-Size (xprop-1.2.1.tar.bz2) = 133712 bytes
+SHA1 (xprop-1.2.2.tar.bz2) = f62e85e333132ea746fee7d99ca20a9e5b24e77b
+RMD160 (xprop-1.2.2.tar.bz2) = c2d96890a93582d0254757f57158611ce4ba71a0
+Size (xprop-1.2.2.tar.bz2) = 145556 bytes
