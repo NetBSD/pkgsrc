@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2842 2013/08/09 07:55:04 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2843 2013/08/09 09:21:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4173,3 +4173,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django-mptt to 0.6.0 [adam 2013-08-09]
 	Updated www/py-django-reversion to 1.7.1 [adam 2013-08-09]
 	Updated www/py-django-cms to 2.4.2 [adam 2013-08-09]
+	Updated x11/xprop to 1.2.2 [wiz 2013-08-09]
