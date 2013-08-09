@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2012/10/29 05:07:19 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2013/08/09 09:21:24 wiz Exp $
 
-DISTNAME=	xprop-1.2.1
+DISTNAME=	xprop-1.2.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
