@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/05/03 16:23:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/08/09 11:47:57 drochner Exp $
 bin/stellarium
 man/man1/stellarium.1
 share/applications/stellarium.desktop
@@ -270,6 +270,7 @@ share/stellarium/landscapes/garching/description.fr.utf8
 share/stellarium/landscapes/garching/description.nb.utf8
 share/stellarium/landscapes/garching/description.pt_BR.utf8
 share/stellarium/landscapes/garching/description.ru.utf8
+share/stellarium/landscapes/garching/description.uk.utf8
 share/stellarium/landscapes/garching/garching-gl1.png
 share/stellarium/landscapes/garching/garching-gl2.png
 share/stellarium/landscapes/garching/garching-gl3.png
@@ -285,6 +286,7 @@ share/stellarium/landscapes/guereins/description.fr.utf8
 share/stellarium/landscapes/guereins/description.nb.utf8
 share/stellarium/landscapes/guereins/description.pt_BR.utf8
 share/stellarium/landscapes/guereins/description.ru.utf8
+share/stellarium/landscapes/guereins/description.uk.utf8
 share/stellarium/landscapes/guereins/guereins1.png
 share/stellarium/landscapes/guereins/guereins2.png
 share/stellarium/landscapes/guereins/guereins3.png
@@ -304,6 +306,7 @@ share/stellarium/landscapes/hurricane/description.fr.utf8
 share/stellarium/landscapes/hurricane/description.nb.utf8
 share/stellarium/landscapes/hurricane/description.pt_BR.utf8
 share/stellarium/landscapes/hurricane/description.ru.utf8
+share/stellarium/landscapes/hurricane/description.uk.utf8
 share/stellarium/landscapes/hurricane/hurricane1.png
 share/stellarium/landscapes/hurricane/hurricane2.png
 share/stellarium/landscapes/hurricane/hurricane3.png
@@ -323,6 +326,7 @@ share/stellarium/landscapes/mars/description.fr.utf8
 share/stellarium/landscapes/mars/description.nb.utf8
 share/stellarium/landscapes/mars/description.pt_BR.utf8
 share/stellarium/landscapes/mars/description.ru.utf8
+share/stellarium/landscapes/mars/description.uk.utf8
 share/stellarium/landscapes/mars/landscape.ini
 share/stellarium/landscapes/mars/mars.png
 share/stellarium/landscapes/moon/apollo17.png
@@ -335,6 +339,7 @@ share/stellarium/landscapes/moon/description.fr.utf8
 share/stellarium/landscapes/moon/description.nb.utf8
 share/stellarium/landscapes/moon/description.pt_BR.utf8
 share/stellarium/landscapes/moon/description.ru.utf8
+share/stellarium/landscapes/moon/description.uk.utf8
 share/stellarium/landscapes/moon/landscape.ini
 share/stellarium/landscapes/ocean/description.ar.utf8
 share/stellarium/landscapes/ocean/description.be.utf8
@@ -345,6 +350,7 @@ share/stellarium/landscapes/ocean/description.fr.utf8
 share/stellarium/landscapes/ocean/description.nb.utf8
 share/stellarium/landscapes/ocean/description.pt_BR.utf8
 share/stellarium/landscapes/ocean/description.ru.utf8
+share/stellarium/landscapes/ocean/description.uk.utf8
 share/stellarium/landscapes/ocean/landscape.ini
 share/stellarium/landscapes/ocean/ocean1.png
 share/stellarium/landscapes/ocean/ocean2.png
@@ -364,6 +370,7 @@ share/stellarium/landscapes/saturn/description.fr.utf8
 share/stellarium/landscapes/saturn/description.nb.utf8
 share/stellarium/landscapes/saturn/description.pt_BR.utf8
 share/stellarium/landscapes/saturn/description.ru.utf8
+share/stellarium/landscapes/saturn/description.uk.utf8
 share/stellarium/landscapes/saturn/landscape.ini
 share/stellarium/landscapes/saturn/saturn-256.png
 share/stellarium/landscapes/trees/description.ar.utf8
@@ -375,6 +382,7 @@ share/stellarium/landscapes/trees/description.fr.utf8
 share/stellarium/landscapes/trees/description.nb.utf8
 share/stellarium/landscapes/trees/description.pt_BR.utf8
 share/stellarium/landscapes/trees/description.ru.utf8
+share/stellarium/landscapes/trees/description.uk.utf8
 share/stellarium/landscapes/trees/landscape.ini
 share/stellarium/landscapes/trees/trees_512.png
 share/stellarium/nebulae/default/etaCarinae_gzotti.png
@@ -548,6 +556,11 @@ share/stellarium/scripts/analemma.ssc
 share/stellarium/scripts/common_objects.inc
 share/stellarium/scripts/constellations_tour.ssc
 share/stellarium/scripts/earth_1.ssc
+share/stellarium/scripts/earth_2.ssc
+share/stellarium/scripts/earth_3.ssc
+share/stellarium/scripts/earth_4.ssc
+share/stellarium/scripts/earth_5.ssc
+share/stellarium/scripts/earth_6.ssc
 share/stellarium/scripts/landscapes.ssc
 share/stellarium/scripts/lunar_partial.ssc
 share/stellarium/scripts/lunar_total.ssc
@@ -623,6 +636,7 @@ share/stellarium/skycultures/arabic/description.ar.utf8
 share/stellarium/skycultures/arabic/description.be.utf8
 share/stellarium/skycultures/arabic/description.en.utf8
 share/stellarium/skycultures/arabic/description.fr.utf8
+share/stellarium/skycultures/arabic/description.hu.utf8
 share/stellarium/skycultures/arabic/description.pt_BR.utf8
 share/stellarium/skycultures/arabic/description.ru.utf8
 share/stellarium/skycultures/arabic/description.uk.utf8
@@ -679,6 +693,7 @@ share/stellarium/skycultures/egyptian/constellations_boundaries.dat
 share/stellarium/skycultures/egyptian/constellationship.fab
 share/stellarium/skycultures/egyptian/description.ar.utf8
 share/stellarium/skycultures/egyptian/description.be.utf8
+share/stellarium/skycultures/egyptian/description.bs.utf8
 share/stellarium/skycultures/egyptian/description.en.utf8
 share/stellarium/skycultures/egyptian/description.fr.utf8
 share/stellarium/skycultures/egyptian/description.it.utf8
@@ -688,6 +703,33 @@ share/stellarium/skycultures/egyptian/description.ru.utf8
 share/stellarium/skycultures/egyptian/description.uk.utf8
 share/stellarium/skycultures/egyptian/info.ini
 share/stellarium/skycultures/egyptian/star_names.fab
+share/stellarium/skycultures/indian/aquarius.png
+share/stellarium/skycultures/indian/aries.png
+share/stellarium/skycultures/indian/cancer.png
+share/stellarium/skycultures/indian/canis-major.png
+share/stellarium/skycultures/indian/capricornus.png
+share/stellarium/skycultures/indian/constellation_names.eng.fab
+share/stellarium/skycultures/indian/constellations_boundaries.dat
+share/stellarium/skycultures/indian/constellationsart.fab
+share/stellarium/skycultures/indian/constellationship.fab
+share/stellarium/skycultures/indian/description.ar.utf8
+share/stellarium/skycultures/indian/description.bs.utf8
+share/stellarium/skycultures/indian/description.en.utf8
+share/stellarium/skycultures/indian/description.fr.utf8
+share/stellarium/skycultures/indian/description.pt_BR.utf8
+share/stellarium/skycultures/indian/description.ru.utf8
+share/stellarium/skycultures/indian/description.uk.utf8
+share/stellarium/skycultures/indian/gemini.png
+share/stellarium/skycultures/indian/info.ini
+share/stellarium/skycultures/indian/leo.png
+share/stellarium/skycultures/indian/libra.png
+share/stellarium/skycultures/indian/orion.png
+share/stellarium/skycultures/indian/pisces.png
+share/stellarium/skycultures/indian/sagittarius.png
+share/stellarium/skycultures/indian/scorpius.png
+share/stellarium/skycultures/indian/star_names.fab
+share/stellarium/skycultures/indian/taurus.png
+share/stellarium/skycultures/indian/virgo.png
 share/stellarium/skycultures/inuit/blubber-container.png
 share/stellarium/skycultures/inuit/breastbone.png
 share/stellarium/skycultures/inuit/caribou.png
@@ -734,6 +776,7 @@ share/stellarium/skycultures/lakota/constellationsart.fab
 share/stellarium/skycultures/lakota/constellationship.fab
 share/stellarium/skycultures/lakota/description.ar.utf8
 share/stellarium/skycultures/lakota/description.be.utf8
+share/stellarium/skycultures/lakota/description.bs.utf8
 share/stellarium/skycultures/lakota/description.en.utf8
 share/stellarium/skycultures/lakota/description.fr.utf8
 share/stellarium/skycultures/lakota/description.it.utf8
@@ -761,6 +804,7 @@ share/stellarium/skycultures/navajo/constellations_boundaries.dat
 share/stellarium/skycultures/navajo/constellationship.fab
 share/stellarium/skycultures/navajo/description.ar.utf8
 share/stellarium/skycultures/navajo/description.be.utf8
+share/stellarium/skycultures/navajo/description.bs.utf8
 share/stellarium/skycultures/navajo/description.en.utf8
 share/stellarium/skycultures/navajo/description.fr.utf8
 share/stellarium/skycultures/navajo/description.it.utf8
@@ -774,6 +818,7 @@ share/stellarium/skycultures/norse/constellations_boundaries.dat
 share/stellarium/skycultures/norse/constellationship.fab
 share/stellarium/skycultures/norse/description.ar.utf8
 share/stellarium/skycultures/norse/description.be.utf8
+share/stellarium/skycultures/norse/description.bs.utf8
 share/stellarium/skycultures/norse/description.en.utf8
 share/stellarium/skycultures/norse/description.fr.utf8
 share/stellarium/skycultures/norse/description.it.utf8
@@ -819,6 +864,7 @@ share/stellarium/skycultures/tongan/description.en.utf8
 share/stellarium/skycultures/tongan/description.fr.utf8
 share/stellarium/skycultures/tongan/description.pt_BR.utf8
 share/stellarium/skycultures/tongan/description.ru.utf8
+share/stellarium/skycultures/tongan/description.uk.utf8
 share/stellarium/skycultures/tongan/info.ini
 share/stellarium/skycultures/tongan/star_names.fab
 share/stellarium/skycultures/tupi/constellation_names.eng.fab
@@ -937,11 +983,12 @@ share/stellarium/skycultures/western/virgo.png
 share/stellarium/skycultures/western/volans.png
 share/stellarium/skycultures/western/vulpecula.png
 share/stellarium/stars/default/defaultStarsConfig.json
+share/stellarium/stars/default/gcvs_hip_part.dat
 share/stellarium/stars/default/name.fab
-share/stellarium/stars/default/stars_0_0v0_2.cat
-share/stellarium/stars/default/stars_1_0v0_2.cat
-share/stellarium/stars/default/stars_2_0v0_2.cat
-share/stellarium/stars/default/stars_3_1v0_1.cat
+share/stellarium/stars/default/stars_0_0v0_3.cat
+share/stellarium/stars/default/stars_1_0v0_3.cat
+share/stellarium/stars/default/stars_2_0v0_3.cat
+share/stellarium/stars/default/stars_3_1v0_2.cat
 share/stellarium/stars/default/stars_hip_cids_0v0_0.cat
 share/stellarium/stars/default/stars_hip_sp_0v0_0.cat
 share/stellarium/textures/amalthea.png
