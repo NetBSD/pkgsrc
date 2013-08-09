@@ -1,22 +1,22 @@
-$NetBSD: patch-bc,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
+$NetBSD: patch-bc,v 1.2 2013/08/09 11:06:28 drochner Exp $
 
---- scribus/util.cpp.orig	2010-10-31 10:44:16.000000000 +0000
+--- scribus/util.cpp.orig	2013-02-25 18:01:35.000000000 +0000
 +++ scribus/util.cpp
-@@ -35,7 +35,7 @@ for which a new license (GPL+exception) 
+@@ -37,7 +37,7 @@ for which a new license (GPL+exception) 
  
  #include <signal.h>
  
--#if !defined(_WIN32) && !defined(Q_OS_MAC) 
-+#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_NETBSD)
+-#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_HAIKU) 
++#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_NETBSD) && !defined(Q_OS_HAIKU) 
  #include <execinfo.h>
  #include <cxxabi.h>
  #endif
-@@ -937,7 +937,7 @@ void getDashArray(int dashtype, double l
+@@ -946,7 +946,7 @@ void getDashArray(int dashtype, double l
   */
  void printBacktrace ( int nFrames )
  {
--#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_OPENBSD)  && !defined(Q_OS_FREEBSD)
-+#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_OPENBSD)  && !defined(Q_OS_FREEBSD) && !defined(Q_OS_NETBSD)
+-#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_OPENBSD)  && !defined(Q_OS_FREEBSD) && !defined(Q_OS_HAIKU)
++#if !defined(_WIN32) && !defined(Q_OS_MAC) && !defined(Q_OS_OPENBSD)  && !defined(Q_OS_FREEBSD) && !defined(Q_OS_NETBSD) && !defined(Q_OS_HAIKU)
  	void ** trace = new void*[nFrames + 1];
  	char **messages = ( char ** ) NULL;
  	int i, trace_size = 0;
