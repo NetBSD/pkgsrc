@@ -1,10 +1,10 @@
-$NetBSD: patch-src_main.cpp,v 1.1 2013/05/04 12:59:47 joerg Exp $
+$NetBSD: patch-src_main.cpp,v 1.2 2013/08/09 11:47:57 drochner Exp $
 
---- src/main.cpp.orig	2013-05-04 00:38:57.000000000 +0000
+--- src/main.cpp.orig	2013-08-04 06:20:27.000000000 +0000
 +++ src/main.cpp
-@@ -36,6 +36,7 @@
- #ifdef Q_OS_WIN
- #include <windows.h>
+@@ -41,6 +41,7 @@
+ 	#pragma comment(lib,"Winmm.lib")
+ #endif
  #endif //Q_OS_WIN
 +#include <clocale>
  

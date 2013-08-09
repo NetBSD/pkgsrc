@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.29 2013/06/12 15:29:13 wiz Exp $
+$NetBSD: distinfo,v 1.30 2013/08/09 11:47:57 drochner Exp $
 
-SHA1 (stellarium-0.12.1.tar.gz) = 0a7fbe913d4e37e6ff281f81e67dc7831796b41c
-RMD160 (stellarium-0.12.1.tar.gz) = 5b0d181388d3e37b285fc2be8953832498d7b8ca
-Size (stellarium-0.12.1.tar.gz) = 74127605 bytes
-SHA1 (patch-ab) = 5ecb4a06f44520ec3fb3f17816b1f84dd2bcd28c
+SHA1 (stellarium-0.12.2.tar.gz) = 35752a24bdeb461b9c16e8533b13689b05a87105
+RMD160 (stellarium-0.12.2.tar.gz) = 6c8b622c026fba234d4b834faa896fbd82486c48
+Size (stellarium-0.12.2.tar.gz) = 78979347 bytes
 SHA1 (patch-ad) = 8257570ab31b25e4b90714125d5b8c7bfebd7240
 SHA1 (patch-ae) = e6ee27b2b0914eb25a7e35b58dcadefb0fd349e0
 SHA1 (patch-doc_stellarium.pod.cmake) = 654973a21459f86857aa674000cdba42ae2b8e01
-SHA1 (patch-src_StelMainGraphicsView.cpp) = 4428ce8676784116b39a2e2ea692940f5b2c8f97
+SHA1 (patch-src_StelMainGraphicsView.cpp) = fa53b202e2ed392e1a7906db698faa1401b0dc87
 SHA1 (patch-src_core_StelUtils.cpp) = 0693cd4832eb06f25413b76bb4d00a681b992a88
 SHA1 (patch-src_core_modules_Skybright.cpp) = 7b6369fce6fa77b7007023136d7e8aebafd5c627
 SHA1 (patch-src_core_renderer_StelQGLArrayVertexBufferBackend.cpp) = 8e3ec2e3a279d45aa5175f87780c15bbd8abfdee
 SHA1 (patch-src_core_renderer_StelQGLInterleavedArrayVertexBufferBackend.cpp) = 26ac644af6fe577a9187dc33b574bbf132593ede
-SHA1 (patch-src_main.cpp) = 12f7685cb5672c226576223ee2c86b416864ecc3
+SHA1 (patch-src_main.cpp) = 02b39f57ba19b947d76a051d5d0f914d27cac1c8
