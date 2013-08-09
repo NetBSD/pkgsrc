@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2845 2013/08/09 09:26:00 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2846 2013/08/09 11:17:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4176,3 +4176,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xprop to 1.2.2 [wiz 2013-08-09]
 	Updated x11/xset to 1.2.3 [wiz 2013-08-09]
 	Updated x11/xwd to 1.0.6 [wiz 2013-08-09]
+	Updated www/adzap to 20110915 [adam 2013-08-09]
