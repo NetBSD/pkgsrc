@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/06/03 18:25:37 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/08/09 09:23:13 wiz Exp $
 
-SHA1 (xset-1.2.2.tar.bz2) = e48d628259dbe1ff413ec8408b4fee9561c8815c
-RMD160 (xset-1.2.2.tar.bz2) = ec3e0ac304f36163b3fc312674b29810310d3612
-Size (xset-1.2.2.tar.bz2) = 129701 bytes
+SHA1 (xset-1.2.3.tar.bz2) = 62a5e7ec91e6900b798a88ca3b30d25bd5ef3047
+RMD160 (xset-1.2.3.tar.bz2) = 73be7b4ea92f779679c6e4dfd7b632d583117027
+Size (xset-1.2.3.tar.bz2) = 142286 bytes
