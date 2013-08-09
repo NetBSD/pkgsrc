@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.196 2013/08/04 01:19:19 obache Exp $
+# $NetBSD: bootstrap,v 1.197 2013/08/09 12:57:38 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -63,6 +63,7 @@ usage="Usage: $0 "'
     [ --help ]
     [ --mk-fragment <mk.conf> ]
     [ --pkgdbdir <pkgdbdir> ]
+    [ --pkginfodir <pkginfodir> ]
     [ --pkgmandir <pkgmandir> ]
     [ --prefer-pkgsrc <list|yes|no> ]
     [ --prefix <prefix> ]
@@ -371,6 +372,7 @@ echo_msg "bootstrap started: $build_start"
 # whether they will be system wide or user specific
 prefix=
 pkgdbdir=
+pkginfodir=
 pkgmandir=
 sysconfdir=
 varbase=
@@ -388,6 +390,8 @@ while [ $# -gt 0 ]; do
 	--prefix)	prefix="$2"; shift ;;
 	--pkgdbdir=*)	pkgdbdir=`get_optarg "$1"` ;;
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
+	--pkginfodir=*)	pkginfodir=`get_optarg "$1"` ;;
+	--pkginfodir)	pkginfodir="$2"; shift ;;
 	--pkgmandir=*)	pkgmandir=`get_optarg "$1"` ;;
 	--pkgmandir)	pkgmandir="$2"; shift ;;
 	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
@@ -434,6 +438,7 @@ checkarg_sane_absolute_path "$prefix" "--prefix"
 checkarg_sane_absolute_path "$pkgdbdir" "--pkgdbdir"
 checkarg_sane_absolute_path "$sysconfdir" "--sysconfdir"
 checkarg_sane_absolute_path "$varbase" "--varbase"
+checkarg_sane_relative_path "$pkginfodir" "--pkginfodir"
 checkarg_sane_relative_path "$pkgmandir" "--pkgmandir"
 
 # set defaults for system locations if not already set by the user
@@ -449,10 +454,13 @@ fi
 [ -z "$pkgdbdir" ] && pkgdbdir=${varbase}/db/pkg
 
 if [ "$prefix" = "/usr" ]; then
+	[ -z "$pkginfodir" ] && pkginfodir=share/info
 	[ -z "$pkgmandir" ] && pkgmandir=share/man
 else
+	[ -z "$pkginfodir" ] && pkginfodir=info
 	[ -z "$pkgmandir" ] && pkgmandir=man
 fi
+infodir=${prefix}/${pkginfodir}
 mandir=${prefix}/${pkgmandir}
 [ -z "$sysconfdir" ] && sysconfdir=${prefix}/etc
 
@@ -955,6 +963,7 @@ if [ "${sysconfdir}" != "${prefix}/etc" ]; then
 	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${TARGET_MKCONF}
 fi
 echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${TARGET_MKCONF}
+echo "PKGINFODIR=		$pkginfodir" >> ${TARGET_MKCONF}
 echo "PKGMANDIR=		$pkgmandir" >> ${TARGET_MKCONF}
 echo "" >> ${TARGET_MKCONF}
 
@@ -1027,14 +1036,14 @@ bmake="$wrkdir/bin/bmake $make_quiet_flags"
 # build libnbcompat
 echo_msg "Building libnbcompat"
 copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
-run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags)"
+run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags)"
 
 # bootstrap ksh if necessary
 case "$need_ksh" in
 yes)	echo_msg "Bootstrapping ksh"
 	copy_src $pkgsrcdir/shells/pdksh/files ksh
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
-	run_cmd "(cd $wrkdir/ksh && env $BSTRAP_ENV $shprog ./configure $configure_quiet_flags --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake)"
+	run_cmd "(cd $wrkdir/ksh && env $BSTRAP_ENV $shprog ./configure $configure_quiet_flags --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
@@ -1063,7 +1072,7 @@ esac
 case "$need_sed" in
 yes)	echo_msg "Bootstrapping sed"
 	copy_src $pkgsrcdir/textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake)"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/sed/sed $wrkdir/bin/sed"
 	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sed?=		$wrkdir/bin/sed" >> ${BOOTSTRAP_MKCONF}
@@ -1078,7 +1087,7 @@ CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' \
 LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' \
 LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C \
 --enable-bootstrap --prefix=$prefix --sysconfdir=$sysconfdir \
---with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake)"
+--with-pkgdbdir=$pkgdbdir --infodir=$infodir --mandir=$mandir $pkg_install_args && $bmake)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/create/pkg_create $wrkdir/sbin/pkg_create"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/info/pkg_info $wrkdir/sbin/pkg_info"
