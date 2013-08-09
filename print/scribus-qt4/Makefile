@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2013/06/06 12:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/08/09 11:06:28 drochner Exp $
 
-DISTNAME=		scribus-1.4.2
-PKGREVISION=		4
+DISTNAME=		scribus-1.4.3
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=		.tar.xz
@@ -18,7 +17,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DPNG_LIBRARY_RELEASE=${LOCALBASE}/lib
 # XXX not yet
-#CMAKE_ARGS+=	-DWITH_ASPELL:BOOL=OFF -DWANT_HUNSPELL:BOOL=ON
+#CMAKE_ARGS+=	-DWANT_HUNSPELL:BOOL=ON
 
 INSTALLATION_DIRS+=	share/pixmaps
 
@@ -37,7 +36,6 @@ BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/aspell/buildlink3.mk"
 #.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

@@ -1,31 +1,31 @@
-$NetBSD: patch-bb,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
+$NetBSD: patch-bb,v 1.2 2013/08/09 11:06:28 drochner Exp $
 
---- scribus/scclocale.cpp.orig	2010-08-17 19:18:35.000000000 +0000
+--- scribus/scclocale.cpp.orig	2013-02-24 21:48:22.000000000 +0000
 +++ scribus/scclocale.cpp
-@@ -22,7 +22,7 @@ ScCLocale::ScCLocale()
+@@ -24,7 +24,7 @@ ScCLocale::ScCLocale()
  #if defined(Q_WS_WIN)
  	cLocale = _create_locale(LC_ALL, "C");
  #else
--  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD)
-+  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD) and not defined(Q_OS_NETBSD)
+-  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD) and not defined (Q_OS_HAIKU)
++  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD) and not defined(Q_OS_NETBSD) and not defined (Q_OS_HAIKU)
  	cLocale = newlocale(LC_ALL_MASK, "C", NULL);
    #endif
  #endif
-@@ -33,7 +33,7 @@ ScCLocale::~ScCLocale()
+@@ -35,7 +35,7 @@ ScCLocale::~ScCLocale()
  #if defined(Q_WS_WIN)
  	_free_locale(cLocale);
  #else
--  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD)
-+  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD) and not defined(Q_OS_NETBSD)
+-  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD) and not defined (Q_OS_HAIKU)
++  #if not defined(Q_OS_SOLARIS) and not defined(Q_OS_OPENBSD) and not defined (Q_OS_FREEBSD) and not defined(Q_OS_NETBSD) and not defined (Q_OS_HAIKU)
  	freelocale(cLocale);
    #endif
  #endif
-@@ -108,7 +108,7 @@ double ScCLocale::strtod ( const char * 
+@@ -110,7 +110,7 @@ double ScCLocale::strtod ( const char * 
  #if defined(Q_WS_WIN)
  		return _strtod_l(str, endptr, that()->cLocale);
  #else
--  #if defined(Q_OS_SOLARIS) or defined (Q_OS_OPENBSD) or defined (Q_OS_FREEBSD)
-+  #if defined(Q_OS_SOLARIS) or defined (Q_OS_OPENBSD) or defined (Q_OS_FREEBSD) or defined(Q_OS_NETBSD)
+-  #if defined(Q_OS_SOLARIS) or defined (Q_OS_OPENBSD) or defined (Q_OS_FREEBSD) or defined (Q_OS_HAIKU)
++  #if defined(Q_OS_SOLARIS) or defined (Q_OS_OPENBSD) or defined (Q_OS_FREEBSD) or defined(Q_OS_NETBSD) or defined (Q_OS_HAIKU)
  		char *oldlocale=setlocale(LC_NUMERIC, NULL);
  		double result(0.0);
  		setlocale(LC_NUMERIC, "C");
