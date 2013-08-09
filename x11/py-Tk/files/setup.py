@@ -1,4 +1,4 @@
-# $NetBSD: setup.py,v 1.3 2004/03/10 19:29:31 minskim Exp $
+# $NetBSD: setup.py,v 1.4 2013/08/09 15:18:58 adam Exp $
 
 import distutils
 from distutils.core import setup, Extension
@@ -25,7 +25,7 @@ setup(
 			include_dirs=[blincl, x11incl],
 			library_dirs=[bllib, x11lib],
 			runtime_library_dirs=[tclrtlib, tkrtlib, x11rtlib],
-			libraries=['tk', 'tcl', 'X11']
+			libraries=['tk', 'tcl', @X11LIB@]
 		)
 	]
 )
