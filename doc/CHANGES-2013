@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2847 2013/08/09 11:42:20 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2848 2013/08/09 11:49:17 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4176,6 +4176,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xprop to 1.2.2 [wiz 2013-08-09]
 	Updated x11/xset to 1.2.3 [wiz 2013-08-09]
 	Updated x11/xwd to 1.0.6 [wiz 2013-08-09]
+	Updated print/scribus-qt4 to 1.4.3 [drochner 2013-08-09]
 	Updated www/adzap to 20110915 [adam 2013-08-09]
 	Updated devel/subversion to 1.8.1 [obache 2013-08-09]
 	Updated devel/subversion-base to 1.8.1 [obache 2013-08-09]
@@ -4184,3 +4185,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-subversion to 1.8.1 [obache 2013-08-09]
 	Updated devel/ruby-subversion to 1.8.1 [obache 2013-08-09]
 	Updated www/ap2-subversion to 1.8.1 [obache 2013-08-09]
+	Updated misc/stellarium to 0.12.2 [drochner 2013-08-09]
