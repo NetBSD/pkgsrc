@@ -1,11 +1,11 @@
-$NetBSD: patch-src_StelMainGraphicsView.cpp,v 1.1 2013/05/04 12:59:47 joerg Exp $
+$NetBSD: patch-src_StelMainGraphicsView.cpp,v 1.2 2013/08/09 11:47:57 drochner Exp $
 
---- src/StelMainGraphicsView.cpp.orig	2013-05-04 00:38:40.000000000 +0000
+--- src/StelMainGraphicsView.cpp.orig	2013-08-04 06:20:27.000000000 +0000
 +++ src/StelMainGraphicsView.cpp
-@@ -41,6 +41,7 @@
- #include <QtPlugin>
+@@ -42,6 +42,7 @@
  #include <QThread>
  #include <QTimer>
+ #include <QDir>
 +#include <clocale>
  
  #ifndef DISABLE_SCRIPTING
