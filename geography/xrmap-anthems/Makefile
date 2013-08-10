@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/04 09:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/08/10 12:45:15 shattered Exp $
 #
 
-DISTNAME=		anthems-1.1
-PKGNAME=		xrmap-anthems-1.1
-PKGREVISION=		1
+DISTNAME=		anthems-1.3
+PKGNAME=		xrmap-anthems-1.3
 CATEGORIES=		geography
 MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/data/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,12 +13,11 @@ COMMENT=		National anthems (text) for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
 
-WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 INSTALLATION_DIRS=	share/rmap
 USE_TOOLS+=		pax
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pp anthems ${DESTDIR}${PREFIX}/share/rmap
+	cd ${WRKSRC} && pax -rw -pp * ${DESTDIR}${PREFIX}/share/rmap/anthems
 
 .include "../../mk/bsd.pkg.mk"
