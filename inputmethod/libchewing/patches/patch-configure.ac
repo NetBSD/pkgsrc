@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/08/10 09:14:22 obache Exp $
+
+* test(1) portability fix
+
+--- configure.ac.orig	2013-07-28 07:30:39.000000000 +0000
++++ configure.ac
+@@ -87,7 +87,7 @@ AC_SUBST(CC_FOR_BUILD)
+ 
+ # Default CFLAGS
+ AM_CFLAGS="$CFLAGS -Wall"
+-AS_IF([test x$ac_cv_func_asprintf == xyes],
++AS_IF([test x$ac_cv_func_asprintf = xyes],
+       [AM_CPPFLAGS="$AM_CPPFLAGS -D_GNU_SOURCE"])
+ 
+ AX_WITH_CURSES
