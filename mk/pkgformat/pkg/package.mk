@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.2 2013/05/23 13:18:56 obache Exp $
+# $NetBSD: package.mk,v 1.3 2013/08/10 06:05:57 obache Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -49,7 +49,7 @@ package-create: package-remove ${PKGFILE} package-links
 .if ${_USE_DESTDIR} == "no"
 stage-package-create:	package-create
 .else
-stage-package-create:	stage-install stage-package-remove ${STAGE_PKGFILE}
+stage-package-create:	stage-install ${STAGE_PKGFILE}
 .endif
 
 _PKG_ARGS_PACKAGE+=	${_PKG_CREATE_ARGS}
