@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2851 2013/08/10 09:14:43 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2852 2013/08/10 09:33:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4189,3 +4189,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/thunderbird to 17.0.8 [ryoon 2013-08-10]
 	Updated mail/thunderbird-l10n to 17.0.8 [ryoon 2013-08-10]
 	Updated inputmethod/libchewing to 0.3.5 [obache 2013-08-10]
+	Updated inputmethod/scim-chewing to 0.3.5 [obache 2013-08-10]
