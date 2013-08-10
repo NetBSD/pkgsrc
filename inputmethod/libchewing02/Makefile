@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/10 07:11:02 obache Exp $
 #
 
 DISTNAME=	libchewing-0.2.7
 CATEGORIES=	chinese inputmethod
-MASTER_SITES=	http://chewing.csie.net/download/libchewing/
+MASTER_SITES=	http://chewing.googlecode.com/files/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://chewing.csie.net/
+HOMEPAGE=	http://chewing.im/
 COMMENT=	The intelligent phonetic input method library
 
 USE_LIBTOOL=	yes
