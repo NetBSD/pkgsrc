@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/10/08 08:25:10 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/08/10 09:31:37 obache Exp $
 
-SHA1 (scim-chewing-0.3.4.tar.bz2) = f6c8d16f19f17449ee169f1ca787350353e93b05
-RMD160 (scim-chewing-0.3.4.tar.bz2) = 77fefe65d26c0f3369ed7dec0c46e6e986851ab2
-Size (scim-chewing-0.3.4.tar.bz2) = 374182 bytes
+SHA1 (scim-chewing-0.3.5.tar.bz2) = f26ced990f0c9e5d43e271cd6e77583de81a008d
+RMD160 (scim-chewing-0.3.5.tar.bz2) = e174c062d9f603ab08fcffb67d273821ee0ff06c
+Size (scim-chewing-0.3.5.tar.bz2) = 352975 bytes
+SHA1 (patch-configure) = bc99480445633ea0d0fd7e12d17185f1eaabad9c
+SHA1 (patch-configure.ac) = c699dfea2d256c38824c6ccd132a90f7de0ae751
