@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.126 2013/08/10 00:31:20 ryoon Exp $
+$NetBSD: distinfo,v 1.127 2013/08/10 23:26:31 khorben Exp $
 
+SHA1 (enigmail-1.4.5.tar.gz) = 16d0450a9f5fb4de0e9cc5b9f8091dce4b070aaf
+RMD160 (enigmail-1.4.5.tar.gz) = 860a1ca813fd2ccae69ac0afe07affd39611e56a
+Size (enigmail-1.4.5.tar.gz) = 1269207 bytes
 SHA1 (lightning-1.9.source.tar.bz2) = 3cc625649debed6f7403c862f166b771b80b92ce
 RMD160 (lightning-1.9.source.tar.bz2) = 3396533847c05ed37537b9a78d771e55f767bea6
 Size (lightning-1.9.source.tar.bz2) = 113944316 bytes
