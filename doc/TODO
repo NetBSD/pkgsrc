@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12460 2013/08/08 05:48:50 mef Exp $
+$NetBSD: TODO,v 1.12461 2013/08/10 12:51:30 shattered Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.7
 	o denemo-1.0.4
 	o dhid-5.3
-	o diffstat-1.57
 	o doclifter-2.12
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
@@ -1067,7 +1066,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ufoai-2.3.1
 	o uim-1.8.6
 	o unicap-0.9.8
-	o unicode-screensaver-0.4
 	o userppp-030706
 	o utilisp-1.14
 	o vala-0.20.1
@@ -1152,7 +1150,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xpaint-2.9.9
 	o xpr-1.0.4 [unpackaged]
 	o xpuyopuyo-0.9.8
-	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsd-3.3.0
