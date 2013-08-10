@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2848 2013/08/09 11:49:17 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.2849 2013/08/10 00:32:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4186,3 +4186,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-subversion to 1.8.1 [obache 2013-08-09]
 	Updated www/ap2-subversion to 1.8.1 [obache 2013-08-09]
 	Updated misc/stellarium to 0.12.2 [drochner 2013-08-09]
+	Updated mail/thunderbird to 17.0.8 [ryoon 2013-08-10]
