@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/08/10 09:31:37 obache Exp $
+
+* relax required chwing version
+
+--- configure.ac.orig	2012-12-31 05:55:13.000000000 +0000
++++ configure.ac
+@@ -59,7 +59,7 @@ PKG_CHECK_MODULES(SCIM_GTKUTILS,[scim-gt
+ 
+ AC_SUBST(SCIM_VERSION)
+ 
+-PKG_CHECK_MODULES(CHEWING, [chewing = $CHEWING_VERSION])
++PKG_CHECK_MODULES(CHEWING, [chewing >= $CHEWING_VERSION])
+ AC_SUBST(CHEWING_VERSION)
+ 
+ AM_CONDITIONAL(SCIM_BUILD_SETUP, [test "$SCIM_HAS_GTKUTILS" = "yes"])
