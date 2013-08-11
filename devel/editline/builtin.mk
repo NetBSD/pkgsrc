@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2013/07/19 14:35:37 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.3 2013/08/11 07:41:04 obache Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -35,27 +35,23 @@ USE_BUILTIN.editline=	${IS_BUILTIN.editline}
         !empty(IS_BUILTIN.editline:M[yY][eE][sS])
 USE_BUILTIN.editline=	yes
 .    endif
-# XXX
-# XXX By default, assume that the native editline library is good enough
-# XXX to replace GNU readline if it provides the readline-compatibility
-# XXX headers.
-# XXX
-.    if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS]) && \
-	empty(H_EDITLINE:M__nonexistent__)
-USE_BUILTIN.editline=	yes
-.    endif
-MAKEVARS+=	USE_BUILTIN.readline
+MAKEVARS+=	USE_BUILTIN.editline
+.  endif
+.endif
 
-.if !empty(H_EDITLINE:M/usr/include/editline/readline.h)
+CHECK_BUILTIN.editline?=	no
+.if !empty(CHECK_BUILTIN.editline:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
+.    if !empty(H_EDITLINE:M/usr/include/editline/readline.h)
 BUILDLINK_TARGETS+=	buildlink-readline-readline-h
 BUILDLINK_TARGETS+=	buildlink-readline-history-h
-.endif
+.    endif
 
 BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
 BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
-.endif
 
-.  if !target(buildlink-readline-readline-h)
+.    if !target(buildlink-readline-readline-h)
 .PHONY: buildlink-readline-readline-h
 buildlink-readline-readline-h:
 	${RUN}								\
@@ -67,9 +63,9 @@ buildlink-readline-readline-h:
 		${MKDIR} `${DIRNAME} "$$dest"`;				\
 		${LN} -s "$$src" "$$dest";				\
 	fi
-.  endif
+.    endif
 
-.  if !target(buildlink-readline-history-h)
+.    if !target(buildlink-readline-history-h)
 .PHONY: buildlink-readline-history-h
 buildlink-readline-history-h:
 	${RUN}								\
@@ -81,6 +77,6 @@ buildlink-readline-history-h:
 		${MKDIR} `${DIRNAME} "$$dest"`;				\
 		${LN} -s "$$src" "$$dest";				\
 	fi
+.    endif
 .  endif
-
-.endif	# CHECK_BUILTIN.readline
+.endif	# CHECK_BUILTIN.editline
