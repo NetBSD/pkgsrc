@@ -1,11 +1,19 @@
-# $NetBSD: options.mk,v 1.27 2012/10/23 10:24:07 wiz Exp $
+# $NetBSD: options.mk,v 1.28 2013/08/11 07:50:51 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
+PKG_SUPPORTED_OPTIONS+=	editline
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
 PKG_SUGGESTED_OPTIONS=	anthy expat gtk prime uim-fep xim
+
+CHECK_BUILTIN.editline:=	yes
+.include "../../devel/editline/builtin.mk"
+CHECK_BUILTIN.editline:=	no
+.if !empty(USE_BUILTIN.editline:M[Yy][Ee][Ss])
+PKG_SUGGESTED_OPTIONS+=	editline
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -22,6 +30,16 @@ PKG_FAIL_REASON+=	"'qt3' conflict with 'qt' or 'kde' option"
 
 PLIST_VARS+=		helperdata uim-dict-gtk uim-dict-gtk3 uim-dict-helperdata fep
 PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 kde kde3 m17nlib openssl qt qt3 sqlite wnn xim
+PLIST_VARS+=		editline
+
+.if !empty(PKG_OPTIONS:Meditline)
+PLIST.editline=		yes
+.include "../../devel/editline/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editline}
+.else
+CONFIGURE_ARGS+=	--with-libedit=no
+.endif
+
 
 .if !empty(PKG_OPTIONS:Mxim)
 .include "../../x11/libXft/buildlink3.mk"
