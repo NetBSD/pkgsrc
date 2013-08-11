@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2860 2013/08/11 17:57:30 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2861 2013/08/11 19:48:30 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4204,3 +4204,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/libclucene to 2.3.3.4 [jaapb 2013-08-11]
 	Updated multimedia/ffmpeg2 to 2.0.1 [adam 2013-08-11]
 	Updated multimedia/ffplay2 to 2.0.1 [adam 2013-08-11]
+	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.534 [rodent 2013-08-11]
