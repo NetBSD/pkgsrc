@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/07/15 15:14:29 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/08/11 07:42:51 obache Exp $
 
 BUILDLINK_TREE+=	editline
 
@@ -18,7 +18,10 @@ CHECK_BUILTIN.editline:=	yes
 .include "../../devel/editline/builtin.mk"
 CHECK_BUILTIN.editline:=	no
 
+# A built-in editline is always going to use a built-in termcap.
+.if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
 USE_BUILTIN.termcap=	yes
+.endif
 
 .include "../../mk/termcap.buildlink3.mk"
 .endif	# EDITLINE_BUILDLINK3_MK
