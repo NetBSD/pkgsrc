@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2857 2013/08/11 13:24:51 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2858 2013/08/11 15:45:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4197,3 +4197,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/uim to 1.8.6 [obache 2013-08-11]
 	Updated devel/scmgit-base to 1.8.3.3nb1 [schmonz 2013-08-11]
 	Updated x11/mlterm to 3.2.2 [tsutsui 2013-08-11]
+	Updated devel/scmgit to 1.8.3.4 [adam 2013-08-11]
+	Updated devel/scmgit-base to 1.8.3.4 [adam 2013-08-11]
+	Updated devel/scmgit-docs to 1.8.3.4 [adam 2013-08-11]
+	Updated www/gitweb to 1.8.3.4 [adam 2013-08-11]
