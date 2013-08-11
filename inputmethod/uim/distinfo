@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.24 2013/03/06 11:06:55 obache Exp $
+$NetBSD: distinfo,v 1.25 2013/08/11 07:50:51 obache Exp $
 
-SHA1 (uim-1.8.4.tar.bz2) = d2c699ce7a6037accc6f3342db1de8d696f361e9
-RMD160 (uim-1.8.4.tar.bz2) = 9722ae76020db093e0a8f8aa0f146caddcf3fff5
-Size (uim-1.8.4.tar.bz2) = 6494902 bytes
+SHA1 (uim-1.8.6.tar.bz2) = 43b9dbdead6797880e6cfc9c032ecb2d37d42777
+RMD160 (uim-1.8.6.tar.bz2) = 5f94218d82475ac463534ec681769f34547e5707
+Size (uim-1.8.6.tar.bz2) = 6500739 bytes
 SHA1 (patch-ab) = 56a7d5aadd2339f5bacae80b28ce520e6df3d1ab
 SHA1 (patch-ac) = 7c36bc67764925c9d87ad0aa963a53cfd1948224
 SHA1 (patch-ad) = 9c47fa28b6478bf2e720c1c0e7bf7793eb71fbab
