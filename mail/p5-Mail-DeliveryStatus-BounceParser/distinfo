@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/06 00:48:43 rodent Exp $
+$NetBSD: distinfo,v 1.2 2013/08/11 19:27:23 rodent Exp $
 
-SHA1 (Mail-DeliveryStatus-BounceParser-1.532.tar.gz) = 998b604ee118462998dae1865e42b847f7b25fd8
-RMD160 (Mail-DeliveryStatus-BounceParser-1.532.tar.gz) = 01e4c273a8b5e06b3367ea3f56d2e2151ea31625
-Size (Mail-DeliveryStatus-BounceParser-1.532.tar.gz) = 205351 bytes
+SHA1 (Mail-DeliveryStatus-BounceParser-1.534.tar.gz) = 6651598618bcc4e24efb0c6aea8b52c1bfa8bcf2
+RMD160 (Mail-DeliveryStatus-BounceParser-1.534.tar.gz) = 5249a0672ca08f2f09ef0b80c32cf726f3192672
+Size (Mail-DeliveryStatus-BounceParser-1.534.tar.gz) = 209240 bytes
