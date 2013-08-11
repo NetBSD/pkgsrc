@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2861 2013/08/11 19:48:30 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.2862 2013/08/11 20:22:20 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffmpeg2 to 2.0.1 [adam 2013-08-11]
 	Updated multimedia/ffplay2 to 2.0.1 [adam 2013-08-11]
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.534 [rodent 2013-08-11]
+	Updated devel/libgsf to 1.14.28 [richard 2013-08-11]
