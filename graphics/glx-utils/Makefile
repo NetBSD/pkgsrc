@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/06 14:10:55 asau Exp $
+# $NetBSD: Makefile,v 1.10.6.1 2013/08/11 18:29:10 tron Exp $
 
 DISTNAME=	MesaDemos-${MESA_VERSION}
 PKGNAME=	glx-utils-${MESA_VERSION}
@@ -6,6 +6,7 @@ CATEGORIES=	x11 graphics
 COMMENT=	OpenGL glxgears and glxinfo
 
 .include "../../graphics/Mesa/Makefile.common"
+MESA_VERSION=	7.4.4
 
 MESA_PATCHFILES=	# don't track Mesa patchlevels
 
