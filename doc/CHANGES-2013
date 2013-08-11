@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2856 2013/08/11 12:49:50 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.2857 2013/08/11 13:24:51 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey to 2.20 [ryoon 2013-08-11]
 	Updated inputmethod/uim to 1.8.6 [obache 2013-08-11]
 	Updated devel/scmgit-base to 1.8.3.3nb1 [schmonz 2013-08-11]
+	Updated x11/mlterm to 3.2.2 [tsutsui 2013-08-11]
