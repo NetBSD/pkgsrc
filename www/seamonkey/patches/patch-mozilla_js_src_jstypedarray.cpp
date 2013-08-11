@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_jstypedarray.cpp,v 1.1 2013/07/12 12:24:10 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jstypedarray.cpp,v 1.2 2013/08/11 03:18:46 ryoon Exp $
 
---- mozilla/js/src/jstypedarray.cpp.orig	2013-06-20 04:35:08.000000000 +0000
+--- mozilla/js/src/jstypedarray.cpp.orig	2013-08-04 03:05:33.000000000 +0000
 +++ mozilla/js/src/jstypedarray.cpp
-@@ -341,9 +341,9 @@ ArrayBufferObject::uninlineData(JSContex
+@@ -338,9 +338,9 @@ ArrayBufferObject::uninlineData(JSContex
  //                            |            \                             /
  //                      obj->elements       required to be page boundaries
  //
@@ -15,22 +15,21 @@ $NetBSD: patch-mozilla_js_src_jstypedarray.cpp,v 1.1 2013/07/12 12:24:10 ryoon E
  
  bool
  ArrayBufferObject::prepareForAsmJS(JSContext *cx, Handle<ArrayBufferObject*> buffer)
-@@ -364,17 +364,19 @@ ArrayBufferObject::prepareForAsmJS(JSCon
- # endif
- 
+@@ -363,19 +363,19 @@ ArrayBufferObject::prepareForAsmJS(JSCon
      // Enable access to the valid region.
--    JS_ASSERT(buffer->byteLength() % AsmJSAllocationGranularity == 0);
-+    JS_ASSERT(buffer->byteLength() % static const size_t AsmJSMappedSize = PageSize + AsmJSBufferProtectedSize;smJSAllocationGranularity == 0);
+     JS_ASSERT(buffer->byteLength() % AsmJSAllocationGranularity == 0);
  # ifdef XP_WIN
--    if (!VirtualAlloc(p, PageSize + buffer->byteLength(), MEM_COMMIT, PAGE_READWRITE))
+-    if (!VirtualAlloc(p, PageSize + buffer->byteLength(), MEM_COMMIT, PAGE_READWRITE)) {
 +    if (!VirtualAlloc(p, AsmJSPageSize + buffer->byteLength(), MEM_COMMIT, PAGE_READWRITE)) {
+         VirtualFree(p, 0, MEM_RELEASE);
          return false;
-+    }
+     }
  # else
--    if (mprotect(p, PageSize + buffer->byteLength(), PROT_READ | PROT_WRITE))
+-    if (mprotect(p, PageSize + buffer->byteLength(), PROT_READ | PROT_WRITE)) {
 +    if (mprotect(p, AsmJSPageSize + buffer->byteLength(), PROT_READ | PROT_WRITE)) {
+         munmap(p, AsmJSMappedSize);
          return false;
-+    }
+     }
  # endif
  
      // Copy over the current contents of the typed array.
@@ -39,7 +38,7 @@ $NetBSD: patch-mozilla_js_src_jstypedarray.cpp,v 1.1 2013/07/12 12:24:10 ryoon E
      memcpy(data, buffer->dataPointer(), buffer->byteLength());
  
      // Swap the new elements into the ArrayBufferObject.
-@@ -396,8 +398,8 @@ ArrayBufferObject::releaseAsmJSArrayBuff
+@@ -397,8 +397,8 @@ ArrayBufferObject::releaseAsmJSArrayBuff
      ArrayBufferObject &buffer = obj->asArrayBuffer();
      JS_ASSERT(buffer.isAsmJSArrayBuffer());
  

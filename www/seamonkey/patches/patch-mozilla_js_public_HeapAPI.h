@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_public_HeapAPI.h,v 1.1 2013/07/12 12:24:10 ryoon Exp $
+$NetBSD: patch-mozilla_js_public_HeapAPI.h,v 1.2 2013/08/11 03:18:46 ryoon Exp $
 
---- mozilla/js/public/HeapAPI.h.orig	2013-06-20 04:35:06.000000000 +0000
+--- mozilla/js/public/HeapAPI.h.orig	2013-08-04 03:05:30.000000000 +0000
 +++ mozilla/js/public/HeapAPI.h
-@@ -11,24 +11,7 @@
+@@ -13,24 +13,7 @@
  namespace js {
  namespace gc {
  
@@ -12,7 +12,7 @@ $NetBSD: patch-mozilla_js_public_HeapAPI.h,v 1.1 2013/07/12 12:24:10 ryoon Exp $
 - * Note: The freelist supports a maximum arena shift of 15.
 - * Note: Do not use JS_CPU_SPARC here, this header is used outside JS.
 - */
--#if (defined(SOLARIS) || defined(__FreeBSD__)) && \
+-#if (defined(SOLARIS) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)) && \
 -    (defined(__sparc) || defined(__sparcv9) || defined(__ia64))
 -const size_t PageShift = 13;
 -const size_t ArenaShift = PageShift;
