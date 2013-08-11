@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2013/05/18 13:40:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/08/11 13:42:31 obache Exp $
 include/libdrm/drm.h
 include/libdrm/drm_fourcc.h
 include/libdrm/drm_mode.h
 include/libdrm/drm_sarea.h
 include/libdrm/i915_drm.h
-include/libdrm/intel_aub.h
-include/libdrm/intel_bufmgr.h
-include/libdrm/intel_debug.h
+${PLIST.intel}include/libdrm/intel_aub.h
+${PLIST.intel}include/libdrm/intel_bufmgr.h
+${PLIST.intel}include/libdrm/intel_debug.h
 include/libdrm/mach64_drm.h
 include/libdrm/mga_drm.h
 include/libdrm/nouveau.h
@@ -29,10 +29,10 @@ include/libdrm/vmwgfx_drm.h
 include/xf86drm.h
 include/xf86drmMode.h
 lib/libdrm.la
-lib/libdrm_intel.la
+${PLIST.intel}lib/libdrm_intel.la
 lib/libdrm_nouveau.la
 lib/libdrm_radeon.la
 lib/pkgconfig/libdrm.pc
-lib/pkgconfig/libdrm_intel.pc
+${PLIST.intel}lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
