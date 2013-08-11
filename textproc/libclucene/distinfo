@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/04/30 22:29:39 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/08/11 16:06:25 jaapb Exp $
 
-SHA1 (clucene-core-0.9.21b.tar.gz) = aba21d626ba3e66a0cce162b205d97cbb2d666dd
-RMD160 (clucene-core-0.9.21b.tar.gz) = b7307b980da6219638f21a33f201b2b20b0d34bb
-Size (clucene-core-0.9.21b.tar.gz) = 1891099 bytes
-SHA1 (patch-src_CLucene_config_repl__tchar.h) = eba4c2fe2a7dadf59490c916bc12557e4f073aa1
-SHA1 (patch-src_CLucene_index_SegmentMerger.cpp) = 8ee2c0e5636690ccff094ee5f869141758bbfcb9
-SHA1 (patch-src_CLucene_search_FieldCacheImpl.cpp) = 8ec21159b9efbee77f7236e5c7d2db0413328154
-SHA1 (patch-src_CLucene_util_Arrays.h) = ef1200cedb394fcefbaccd2b3e71e58e149fddc7
+SHA1 (clucene-core-2.3.3.4.tar.gz) = 76d6788e747e78abb5abf8eaad78d3342da5f2a4
+RMD160 (clucene-core-2.3.3.4.tar.gz) = 5acfc9c8acd167b3684cfc731a60fd9c5465cc9b
+Size (clucene-core-2.3.3.4.tar.gz) = 2241498 bytes
+SHA1 (patch-CMakeLists.txt) = 1c127bdc90a9f7b3c0f3debe46a9681f3b85df9a
+SHA1 (patch-src_contribs-lib_CMakeLists.txt) = c4cf7505474368a7a7b4b826c5d0a7df1cbc2a63

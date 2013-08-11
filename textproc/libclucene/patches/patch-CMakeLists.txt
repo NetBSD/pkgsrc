@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/08/11 16:06:25 jaapb Exp $
+
+Pkgsrc rewrites CMAKE_MODULE_PATH and it ends up being composed of multiple
+paths. We need to use another variable here or the intended file name will
+be invalid. This software also includes its own versions of Boost and zlib.
+Do not use them.
+Also, if contribs-lib is built, install it.
+--- CMakeLists.txt.orig	2011-03-17 00:21:07.000000000 +0000
++++ CMakeLists.txt
+@@ -153,7 +153,6 @@ GET_BOOST_INCLUDE_PATH(_CL_BOOST_INCLUDE
+ INCLUDE_DIRECTORIES( ${_CL_BOOST_INCLUDE_PATH} )
+ 
+ #include the projects
+-ADD_SUBDIRECTORY (src/ext)
+ ADD_SUBDIRECTORY (src/shared)
+ ADD_SUBDIRECTORY (src/core)
+ ADD_SUBDIRECTORY (src/test)
+@@ -163,13 +162,13 @@ IF ( BUILD_CONTRIBS )
+   SET(BUILD_CONTRIBS_LIB 1)
+ ENDIF ( BUILD_CONTRIBS )
+ IF ( BUILD_CONTRIBS_LIB )
+-  ADD_SUBDIRECTORY (src/contribs-lib EXCLUDE_FROM_ALL)
++  ADD_SUBDIRECTORY (src/contribs-lib)
+ ENDIF ( BUILD_CONTRIBS_LIB )
+ 
+ 
+ #add uninstall command
+ CONFIGURE_FILE(
+-  "${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in"
++  "${CMAKE_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
+   "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+   IMMEDIATE @ONLY)
+   
