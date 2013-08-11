@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2854 2013/08/11 03:19:25 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2855 2013/08/11 07:52:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4194,3 +4194,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/unicode-screensaver to 0.4 [shattered 2013-08-10]
 	Updated textproc/diffstat to 1.57 [shattered 2013-08-10]
 	Updated www/seamonkey to 2.20 [ryoon 2013-08-11]
+	Updated inputmethod/uim to 1.8.6 [obache 2013-08-11]
