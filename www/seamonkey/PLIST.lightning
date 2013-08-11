@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.10 2013/07/12 12:24:10 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.11 2013/08/11 03:18:46 ryoon Exp $
 include/seamonkey/calBaseCID.h
 include/seamonkey/calIAlarm.h
 include/seamonkey/calIAlarmService.h
@@ -15,6 +15,7 @@ include/seamonkey/calICalendarViewController.h
 include/seamonkey/calIChangeLog.h
 include/seamonkey/calIDateTime.h
 include/seamonkey/calIDateTimeFormatter.h
+include/seamonkey/calIDateTimeJS.h
 include/seamonkey/calIDeletedItems.h
 include/seamonkey/calIDuration.h
 include/seamonkey/calIErrors.h
@@ -82,13 +83,17 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calA
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calCachedCalendar.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calCalendarManager.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calCalendarSearchService.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDateTime.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDateTimeFormatter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDavRequestHandlers.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDeletedItems.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calDuration.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calEvent.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calFilter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calFreeBusyService.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calHtmlExport.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calICSService-worker.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calICSService.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calIcsImportExport.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calIcsParser.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calIcsSerializer.js
@@ -97,11 +102,14 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calI
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calListFormatter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calMonthGridPrinter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calOutlookCSVImportExport.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calPeriod.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calProtocolHandler.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceDate.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceInfo.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRecurrenceRule.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calRelation.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calStartupService.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calTimezone.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calTodo.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calTransactionManager.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/calendar-js/calUtils.js
@@ -328,12 +336,15 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/lightning.css
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/mode-switch-icons.png
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/suite-accountCentral.css
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calBackendLoader.js
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calBackendLoader.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calCompositeCalendar.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calCompositeCalendar.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDavCalendar.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDavCalendar.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDefaultACLManager.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calDefaultACLManager.manifest
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calICALJSComponents.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calICSCalendar.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calICSCalendar.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calImportExportModule.js
@@ -354,10 +365,13 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calWc
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calWcapCalendarModule.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calbase.xpt
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/calbaseinternal.xpt
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/caldatetime_icaljs.xpt
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/caldatetime_libical.xpt
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/caldav.xpt
-lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/components.manifest
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/icaljs.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/interfaces.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/libcalbasecomps.so
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/libical.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/lightningTextCalendarConverter.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/lightningTextCalendarConverter.manifest
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/wcap.xpt
@@ -376,6 +390,7 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStora
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageUpgrade.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calXMLUtils.jsm
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/ical.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/timezones.sqlite
 share/idl/seamonkey/calIAlarm.idl
 share/idl/seamonkey/calIAlarmService.idl
@@ -392,6 +407,7 @@ share/idl/seamonkey/calICalendarViewController.idl
 share/idl/seamonkey/calIChangeLog.idl
 share/idl/seamonkey/calIDateTime.idl
 share/idl/seamonkey/calIDateTimeFormatter.idl
+share/idl/seamonkey/calIDateTimeJS.idl
 share/idl/seamonkey/calIDeletedItems.idl
 share/idl/seamonkey/calIDuration.idl
 share/idl/seamonkey/calIErrors.idl

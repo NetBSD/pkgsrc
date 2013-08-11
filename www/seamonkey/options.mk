@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.24 2013/07/12 12:24:10 ryoon Exp $
+# $NetBSD: options.mk,v 1.25 2013/08/11 03:18:46 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail \
 PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc
 
-PLIST_VARS+=	gnome jemalloc
+PLIST_VARS+=	debug gnome jemalloc
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug --enable-debug-symbols
 CONFIGURE_ARGS+=	--disable-install-strip
+PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-install-strip

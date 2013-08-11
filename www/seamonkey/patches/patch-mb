@@ -1,6 +1,6 @@
-$NetBSD: patch-mb,v 1.11 2013/07/12 12:24:10 ryoon Exp $
+$NetBSD: patch-mb,v 1.12 2013/08/11 03:18:46 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2013-06-20 04:35:24.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2013-08-04 03:05:53.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -49,7 +49,7 @@ endif
  endif
@@ -55,7 +55,7 @@ $NetBSD: patch-mb,v 1.11 2013/07/12 12:24:10 ryoon Exp $
 +#
 +ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
 +CPPSRCS                := xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_openbsd.cpp
-+ASFILES                := xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
++ASFILES                := xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_netbsd.s
 +endif
 +#
  # Solaris/SPARC
