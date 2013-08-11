@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/07/02 21:03:16 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2013/08/11 13:42:31 obache Exp $
 
 DISTNAME=		libdrm-2.4.46
 CATEGORIES=		x11 graphics
@@ -38,5 +38,11 @@ CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 
+PLIST_VARS+=	intel
+.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 .include "../../sysutils/libpciaccess/buildlink3.mk"
+PLIST.intel=	yes
+#.else
+#CONFIGURE_ARGS+=	--disable-intel
+.endif
 .include "../../mk/bsd.pkg.mk"
