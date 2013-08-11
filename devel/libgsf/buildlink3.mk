@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2012/09/15 10:04:15 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2013/08/11 20:19:58 richard Exp $
 
 BUILDLINK_TREE+=	libgsf
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.libgsf?=	../../devel/libgsf
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif # LIBGSF_BUILDLINK3_MK
 
