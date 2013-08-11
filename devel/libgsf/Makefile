@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2013/03/14 19:18:50 drochner Exp $
+# $NetBSD: Makefile,v 1.84 2013/08/11 20:19:58 richard Exp $
 #
 
-DISTNAME=	libgsf-1.14.26
+DISTNAME=	libgsf-1.14.28
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,10 +18,9 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
 
-CONFIGURE_ARGS+=	--without-python
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
