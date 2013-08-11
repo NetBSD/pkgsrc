@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2858 2013/08/11 15:45:34 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2859 2013/08/11 16:06:45 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-base to 1.8.3.4 [adam 2013-08-11]
 	Updated devel/scmgit-docs to 1.8.3.4 [adam 2013-08-11]
 	Updated www/gitweb to 1.8.3.4 [adam 2013-08-11]
+	Updated textproc/libclucene to 2.3.3.4 [jaapb 2013-08-11]
