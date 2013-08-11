@@ -1,32 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2013/06/29 20:29:47 tsutsui Exp $
+$NetBSD: patch-configure,v 1.4 2013/08/11 13:23:34 tsutsui Exp $
 
 - setuid root is handled by SPECIAL_PERMS in pkgsrc
-- pull post-3.2.1 fixes:
-  http://mlterm.sf.net/mlterm-3.2.1-fixes.patch
-  > Fix configure error which --with-gui=xlib,fb option causes.
-  > (enbugged at 3.2.1)
 
---- configure.orig	2013-06-29 12:45:20.000000000 +0000
+--- configure.orig	2013-08-05 12:48:56.000000000 +0000
 +++ configure
-@@ -19758,11 +19758,16 @@ if test "$gui" = "fb,xlib" -o "$gui" = "
- 	fi
- 	mkdir -p ${top_srcdir-$srcdir}/fb
- 	for file in ChangeLog Makefile.in common configure etc gtk inputmethod java \
--		main man mlterm script scrollbar xwindow ; do
-+		main man mlterm script scrollbar xwindow doc ; do
- 		cp -R ${top_srcdir-$srcdir}/$file ${top_srcdir-$srcdir}/fb/
- 	done
- fi
- 
-+if test "$gui" = "fb" ; then
-+	MAKE_DIRS="doc/kbd ${MAKE_DIRS}"
-+	OUTPUT_FILES="doc/kbd/Makefile ${OUTPUT_FILES}"
-+fi
-+
- ml_cv_is_posix="yes"
- 
- case "${host_os}" in
-@@ -21332,7 +21337,7 @@ else
+@@ -21337,7 +21337,7 @@ else
  fi
  
  if test "$gui" = "fb" ; then
@@ -35,14 +13,3 @@ $NetBSD: patch-configure,v 1.3 2013/06/29 20:29:47 tsutsui Exp $
  fi
  
  
-@@ -25229,8 +25234,8 @@ subdirs="$subdirs ${SUBDIRS}"
- 
- fi
- 
--MAKE_DIRS="mlterm mlterm/libctl xwindow/libtype xwindow main man etc doc/kbd ${MAKE_DIRS}"
--OUTPUT_FILES="Makefile mlterm/Makefile mlterm/libctl/Makefile xwindow/libtype/Makefile xwindow/Makefile main/Makefile man/Makefile etc/Makefile java/Makefile doc/kbd/Makefile ${OUTPUT_FILES}"
-+MAKE_DIRS="mlterm mlterm/libctl xwindow/libtype xwindow main man etc ${MAKE_DIRS}"
-+OUTPUT_FILES="Makefile mlterm/Makefile mlterm/libctl/Makefile xwindow/libtype/Makefile xwindow/Makefile main/Makefile man/Makefile etc/Makefile java/Makefile ${OUTPUT_FILES}"
- 
- # Check whether --enable-ind was given.
- if test "${enable_ind+set}" = set; then :
