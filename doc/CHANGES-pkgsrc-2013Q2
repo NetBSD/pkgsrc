@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.20 2013/08/06 15:57:40 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.21 2013/08/11 18:29:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -72,3 +72,9 @@ Pullup ticket #4202 - requested by taca
 lang/php54: security update
 Pullup ticket #4203 - requested by bouyer
 mail/dovecot2: bug fix patch
+Pullup ticket #4204 - requested by bouyer
+time/kronolith: packaging fix patch
+Pullup ticket #4205 - requested by khorben
+graphics/glx-utils: build fix
+Pullup ticket #4206 - requested by ryoon
+mail/thunderbird: security update
