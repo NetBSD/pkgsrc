@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2013/06/16 06:31:11 adam Exp $
+# $NetBSD: Makefile,v 1.64 2013/08/11 12:49:44 schmonz Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
 PKGNAME=	scmgit-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=		git<4.9.5nb1		# misc/git
@@ -94,6 +95,8 @@ LDFLAGS.SunOS+=		-lintl -lnsl
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-completion.bash \
+		${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-prompt.sh \
 		${DESTDIR}${EGDIR}
 
 .include "options.mk"
