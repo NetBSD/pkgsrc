@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2867 2013/08/12 09:10:30 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2868 2013/08/12 09:37:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4211,3 +4211,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/libcanberra to 0.27 [obache 2013-08-12]
 	Updated sysutils/notification-daemon to 0.7.6 [obache 2013-08-12]
 	Updated sysutils/gnome-settings-daemon to 2.32.1nb21 [obache 2013-08-12]
+	Updated net/vino to 2.32.2 [obache 2013-08-12]
+	Updated net/vino to 2.32.2 [obache 2013-08-12]
