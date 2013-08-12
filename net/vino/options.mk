@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:02 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2013/08/12 09:36:41 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vino
 PKG_SUPPORTED_OPTIONS+=	avahi inet6 telepathy
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if !empty(PKG_OPTIONS:Mtelepathy)
 CONFIGURE_ARGS+=	--enable-telepathy
+BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.11.6
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-telepathy
