@@ -1,13 +1,13 @@
-$NetBSD: patch-bf,v 1.5 2011/12/16 11:05:24 asau Exp $
+$NetBSD: patch-bf,v 1.5.14.1 2013/08/12 12:20:19 tron Exp $
 
---- Makefile.in.orig	2011-08-03 18:24:05.000000000 +0000
+--- Makefile.in.orig	2013-06-19 07:35:24.000000000 +0000
 +++ Makefile.in
-@@ -2552,7 +2552,7 @@ bin/winbind_krb5_locator.@SHLIBEXT@: $(B
- bin/pam_winbind.@SHLIBEXT@: $(BINARY_PREREQS) $(PAM_WINBIND_OBJ) $(LIBTALLOC) $(LIBWBCLIENT)
+@@ -2864,7 +2864,7 @@ bin/winbind_krb5_locator.@SHLIBEXT@: $(B
+ bin/pam_winbind.@SHLIBEXT@: $(BINARY_PREREQS) $(PAM_WINBIND_OBJ) $(LIBTALLOC) $(LIBTEVENT) $(LIBWBCLIENT)
  	@echo "Linking shared library $@"
  	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_WINBIND_OBJ) -lpam @INIPARSERLIBS@ \
--		$(LIBREPLACE_LIBS) $(LIBTALLOC_LIBS) $(LIBWBCLIENT_LIBS) @SONAMEFLAG@`basename $@`
-+		$(LIBS) $(LIBREPLACE_LIBS) $(LIBTALLOC_LIBS) $(LIBWBCLIENT_LIBS) @SONAMEFLAG@`basename $@`
+-		$(LIBREPLACE_LIBS) $(LIBTALLOC_LIBS) $(LIBTEVENT_LIBS) $(LIBWBCLIENT_LIBS) @SONAMEFLAG@`basename $@`
++		$(LIBS) $(LIBREPLACE_LIBS) $(LIBTALLOC_LIBS) $(LIBTEVENT_LIBS) $(LIBWBCLIENT_LIBS) @SONAMEFLAG@`basename $@`
  
  ##########
  # Plugins:
