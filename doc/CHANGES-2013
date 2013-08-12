@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2873 2013/08/12 18:18:34 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2874 2013/08/12 23:14:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4218,3 +4218,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/seahorse to 2.32.0nb22 [obache 2013-08-12]
 	Updated sysutils/gnome-mount to 0.8nb25 [obache 2013-08-12]
 	Updated security/py-itsdangerous to 0.23 [kleink 2013-08-12]
+	Updated time/p5-Time-Piece to 1.22 [wen 2013-08-12]
