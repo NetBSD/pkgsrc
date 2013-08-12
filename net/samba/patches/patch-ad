@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.18 2011/12/16 11:05:24 asau Exp $
+$NetBSD: patch-ad,v 1.19 2013/08/12 02:45:55 taca Exp $
 
---- VERSION.orig	2010-01-14 10:12:10.000000000 +0000
+--- VERSION.orig	2013-07-29 18:55:18.000000000 +0000
 +++ VERSION
-@@ -84,7 +84,7 @@ SAMBA_VERSION_IS_GIT_SNAPSHOT=
+@@ -84,7 +84,7 @@ SAMBA_VERSION_IS_GIT_SNAPSHOT=no
  #       SAMBA_VERSION_VENDOR_FUNCTION                  #
  #                                                      #
  ########################################################
