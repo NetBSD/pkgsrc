@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2862 2013/08/11 20:22:20 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2863 2013/08/12 02:46:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4206,3 +4206,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffplay2 to 2.0.1 [adam 2013-08-11]
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.534 [rodent 2013-08-11]
 	Updated devel/libgsf to 1.14.28 [richard 2013-08-11]
+	Updated net/samba to 3.6.17 [taca 2013-08-12]
