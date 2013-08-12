@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2013/06/06 12:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2013/08/12 12:28:19 obache Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.30.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.30/}
 EXTRACT_SUFX=	.tar.bz2
@@ -65,7 +65,7 @@ BUILDLINK_API_DEPENDS.libexif+=		libexif>=0.6.12
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=2.23.2
 .include "../../x11/gnome-desktop/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.11.5
