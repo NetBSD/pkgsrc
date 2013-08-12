@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2013/07/03 13:09:35 sno Exp $
+# $NetBSD: Makefile,v 1.43 2013/08/12 23:19:09 wen Exp $
 #
 
-DISTNAME=	Module-CoreList-2.92
+DISTNAME=	Module-CoreList-2.96
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mcl
 CATEGORIES=	devel perl5
