@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.67 2013/06/06 12:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2013/08/12 09:36:41 obache Exp $
 
-DISTNAME=	vino-2.28.3
-PKGREVISION=	21
+DISTNAME=	vino-2.32.2
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.28/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	VNC server for GNOME
+LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -30,7 +30,7 @@ GCONF_SCHEMAS=		vino-server.schemas
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
