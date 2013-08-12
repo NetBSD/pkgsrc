@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1.1.1 2010/12/06 17:01:23 adam Exp $
+$NetBSD: patch-ap,v 1.2 2013/08/12 02:47:32 taca Exp $
 
---- nmbd/nmbd.c.orig	2010-10-07 16:41:16.000000000 +0000
+--- nmbd/nmbd.c.orig	2013-07-24 18:53:49.000000000 +0000
 +++ nmbd/nmbd.c
-@@ -916,6 +916,10 @@ static bool open_sockets(bool isdaemon, 
+@@ -917,6 +917,10 @@ static bool open_sockets(bool isdaemon, 
  		mkdir(lp_lockdir(), 0755);
  	}
  
