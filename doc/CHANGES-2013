@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2874 2013/08/12 23:14:55 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2875 2013/08/12 23:20:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/gnome-mount to 0.8nb25 [obache 2013-08-12]
 	Updated security/py-itsdangerous to 0.23 [kleink 2013-08-12]
 	Updated time/p5-Time-Piece to 1.22 [wen 2013-08-12]
+	Updated devel/p5-Module-CoreList to 2.96 [wen 2013-08-12]
