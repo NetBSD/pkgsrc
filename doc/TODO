@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12465 2013/08/12 08:43:57 wiz Exp $
+$NetBSD: TODO,v 1.12466 2013/08/12 09:37:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -1078,7 +1078,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o vifm-0.7.5
 	o vinagre-3.8.3
-	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.8.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
