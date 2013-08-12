@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.10 2011/12/16 11:05:24 asau Exp $
+$NetBSD: patch-ae,v 1.11 2013/08/12 02:45:55 taca Exp $
 
---- auth/pampass.c.orig	2010-01-14 10:12:10.000000000 +0000
+--- auth/pampass.c.orig	2013-07-29 18:55:18.000000000 +0000
 +++ auth/pampass.c
-@@ -46,6 +46,10 @@
+@@ -48,6 +48,10 @@
  #include <pam/pam_appl.h>
  #endif
  

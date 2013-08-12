@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.6 2011/12/16 22:32:06 asau Exp $
+$NetBSD: patch-ah,v 1.7 2013/08/12 02:45:55 taca Exp $
 
---- libsmb/cliconnect.c.orig	2011-08-09 15:17:47.000000000 +0400
-+++ libsmb/cliconnect.c	2011-08-23 16:04:27.000000000 +0400
-@@ -3523,7 +3523,7 @@
+--- libsmb/cliconnect.c.orig	2013-07-29 18:55:18.000000000 +0000
++++ libsmb/cliconnect.c
+@@ -3538,7 +3538,7 @@ struct cli_state *get_ipc_connect_master
          if (!NT_STATUS_IS_OK(status)) {
                  DEBUG(99, ("No master browsers responded: %s\n",
  			   nt_errstr(status)));

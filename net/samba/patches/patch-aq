@@ -1,10 +1,10 @@
-$NetBSD: patch-aq,v 1.3 2011/12/16 11:05:24 asau Exp $
+$NetBSD: patch-aq,v 1.4 2013/08/12 02:45:55 taca Exp $
 
 Add support for passwd expand gecos
 
---- param/loadparm.c.orig	2011-06-14 11:17:28.000000000 +0000
+--- param/loadparm.c.orig	2013-07-29 18:55:18.000000000 +0000
 +++ param/loadparm.c
-@@ -310,6 +310,7 @@ struct global {
+@@ -325,6 +325,7 @@ struct global {
  	bool bUnixPasswdSync;
  	bool bPasswdChatDebug;
  	int iPasswdChatTimeout;
@@ -12,7 +12,7 @@ Add support for passwd expand gecos
  	bool bTimestampLogs;
  	bool bNTSmbSupport;
  	bool bNTPipeSupport;
-@@ -1297,6 +1298,15 @@ static struct parm_struct parm_table[] =
+@@ -1310,6 +1311,15 @@ static struct parm_struct parm_table[] =
  		.flags		= FLAG_ADVANCED,
  	},
  	{
@@ -28,7 +28,7 @@ Add support for passwd expand gecos
  		.label		= "check password script",
  		.type		= P_STRING,
  		.p_class	= P_GLOBAL,
-@@ -5074,6 +5084,7 @@ static void init_globals(bool first_time
+@@ -5327,6 +5337,7 @@ static void init_globals(bool reinit_glo
  	Globals.bPamPasswordChange = False;
  	Globals.bPasswdChatDebug = False;
  	Globals.iPasswdChatTimeout = 2; /* 2 second default. */
@@ -36,7 +36,7 @@ Add support for passwd expand gecos
  	Globals.bNTPipeSupport = True;	/* Do NT pipes by default. */
  	Globals.bNTStatusSupport = True; /* Use NT status by default. */
  	Globals.bStatCache = True;	/* use stat cache by default */
-@@ -5528,6 +5539,7 @@ FN_GLOBAL_BOOL(lp_pam_password_change, &
+@@ -5809,6 +5820,7 @@ FN_GLOBAL_BOOL(lp_pam_password_change, &
  FN_GLOBAL_BOOL(lp_unix_password_sync, &Globals.bUnixPasswdSync)
  FN_GLOBAL_BOOL(lp_passwd_chat_debug, &Globals.bPasswdChatDebug)
  FN_GLOBAL_INTEGER(lp_passwd_chat_timeout, &Globals.iPasswdChatTimeout)

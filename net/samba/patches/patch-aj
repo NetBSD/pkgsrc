@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.6 2011/12/16 22:32:06 asau Exp $
+$NetBSD: patch-aj,v 1.7 2013/08/12 02:45:55 taca Exp $
 
---- smbd/dir.c.orig	2011-08-09 15:17:47.000000000 +0400
-+++ smbd/dir.c	2011-08-23 16:05:42.000000000 +0400
-@@ -200,7 +200,7 @@
+--- smbd/dir.c.orig	2013-07-29 18:55:18.000000000 +0000
++++ smbd/dir.c
+@@ -202,7 +202,7 @@ static struct dptr_struct *dptr_get(stru
  					      dptr->wcard, dptr->attr))) {
  					DEBUG(4,("dptr_get: Failed to open %s (%s)\n",dptr->path,
  						strerror(errno)));
