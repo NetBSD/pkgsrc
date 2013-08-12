@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2870 2013/08/12 12:28:35 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2871 2013/08/12 12:52:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/vino to 2.32.2 [obache 2013-08-12]
 	Updated chat/empathy to 2.34.0nb30 [obache 2013-08-12]
 	Updated x11/gnome-screensaver to 2.30.2nb17 [obache 2013-08-12]
+	Updated security/seahorse to 2.32.0nb22 [obache 2013-08-12]
