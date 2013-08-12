@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2865 2013/08/12 07:11:23 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2866 2013/08/12 08:35:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4209,3 +4209,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.17 [taca 2013-08-12]
 	Updated net/samba35 to 3.5.22 [taca 2013-08-12]
 	Updated audio/libcanberra to 0.27 [obache 2013-08-12]
+	Updated sysutils/notification-daemon to 0.7.6 [obache 2013-08-12]
