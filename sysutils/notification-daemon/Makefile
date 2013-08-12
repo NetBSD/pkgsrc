@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.34 2013/06/06 12:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2013/08/12 08:35:17 obache Exp $
 #
 
-DISTNAME=	notification-daemon-0.4.0
-PKGREVISION=	20
+DISTNAME=	notification-daemon-0.7.6
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	http://www.galago-project.org/files/releases/source/notification-daemon/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/notification-daemon/0.7/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.galago-project.org/
 COMMENT=	Shows notification messages on the desktop
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt
-
-GCONF_SCHEMAS=	notification-daemon.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,17 +25,12 @@ CONFIGURE_ARGS+=	--with-dbus-sys=${PKG_SYSCONFDIR.dbus}/system.d
 CONFIGURE_ARGS+=	--with-dbus-sys=${PKG_SYSCONFDIR}/dbus-1/system.d
 .endif
 
-.include "../../devel/GConf/schemas.mk"
+.include "../../audio/libcanberra/buildlink3.mk"
+.if empty(PKG_BUILD_OPTIONS.libcanberra:Mgtk3)
+PKG_FAIL_REASON+=	"gtk3 option must be enabled for libcanberra."
+.endif
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.27.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libsexy/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
