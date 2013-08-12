@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.12 2010/11/24 20:51:19 drochner Exp $
+$NetBSD: distinfo,v 1.13 2013/08/12 09:10:09 obache Exp $
 
 SHA1 (gnome-settings-daemon-2.32.1.tar.bz2) = f2550acb4a9fd8f96ead1263ba5739915c303f6e
 RMD160 (gnome-settings-daemon-2.32.1.tar.bz2) = 71aef9419eeca5f9fa59bb55990327c307f9ca31
 Size (gnome-settings-daemon-2.32.1.tar.bz2) = 1331850 bytes
 SHA1 (patch-ac) = 6e77934d2ad8a75a0b476cf26a3ec72ea8160b23
+SHA1 (patch-plugins_a11y-keyboard_gsd-a11y-keyboard-manager.c) = 367d8983fbdd3b26cee56b363954d43e01051d5a
+SHA1 (patch-plugins_xrandr_gsd-xrandr-manager.c) = 8d923fff84961b6ad4a7cecd58985cea66e8825c
