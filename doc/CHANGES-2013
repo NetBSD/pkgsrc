@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2875 2013/08/12 23:20:27 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2876 2013/08/12 23:29:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4220,3 +4220,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/py-itsdangerous to 0.23 [kleink 2013-08-12]
 	Updated time/p5-Time-Piece to 1.22 [wen 2013-08-12]
 	Updated devel/p5-Module-CoreList to 2.96 [wen 2013-08-12]
+	Updated www/p5-Mojolicious to 4.24 [wen 2013-08-12]
