@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.21 2013/08/11 18:29:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.22 2013/08/12 14:21:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -78,3 +78,7 @@ Pullup ticket #4205 - requested by khorben
 graphics/glx-utils: build fix
 Pullup ticket #4206 - requested by ryoon
 mail/thunderbird: security update
+Pullup ticket #4207 - requested by taca
+net/samba: security update
+Pullup ticket #4208 - requested by taca
+net/samba35: security update
