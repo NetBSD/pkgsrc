@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2872 2013/08/12 14:24:54 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2873 2013/08/12 18:18:34 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4217,3 +4217,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/gnome-screensaver to 2.30.2nb17 [obache 2013-08-12]
 	Updated security/seahorse to 2.32.0nb22 [obache 2013-08-12]
 	Updated sysutils/gnome-mount to 0.8nb25 [obache 2013-08-12]
+	Updated security/py-itsdangerous to 0.23 [kleink 2013-08-12]
