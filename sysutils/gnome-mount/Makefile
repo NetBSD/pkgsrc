@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2013/06/06 12:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/08/12 14:24:35 obache Exp $
 #
 
 DISTNAME=		gnome-mount-0.8
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
@@ -28,7 +28,7 @@ post-extract:
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
