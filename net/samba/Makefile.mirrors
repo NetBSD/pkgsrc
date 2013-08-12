@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.mirrors,v 1.9 2012/01/29 22:05:38 taca Exp $
+# $NetBSD: Makefile.mirrors,v 1.9.12.1 2013/08/12 12:20:18 tron Exp $
 #
 # This Makefile fragment contains the mirror sites for fetching Samba.
 
@@ -25,4 +25,4 @@ SAMBA_MIRRORS=	\
 	ftp://ftp.oss.eznetsols.org/samba/ \
 	ftp://us5.samba.org/pub/samba-ftp/ \
 	ftp://download.samba.org/pub/samba/ \
-	http://download.samba.org/samba/ftp/
+	http://www.samba.org/samba/ftp/
