@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2013/06/22 22:54:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.116 2013/08/12 12:52:16 obache Exp $
 
 DISTNAME=	seahorse-2.32.0
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -51,7 +51,7 @@ GCONF_SCHEMAS= 	seahorse.schemas
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"

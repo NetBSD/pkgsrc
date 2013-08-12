@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.35 2010/11/28 12:59:07 drochner Exp $
+$NetBSD: distinfo,v 1.36 2013/08/12 12:52:16 obache Exp $
 
 SHA1 (seahorse-2.32.0.tar.bz2) = 1469884b67483c876cfe5b986a76495739927a99
 RMD160 (seahorse-2.32.0.tar.bz2) = 5599cf02321be038d8aa5bc96174e2cf05c62945
 Size (seahorse-2.32.0.tar.bz2) = 2491230 bytes
 SHA1 (patch-ab) = 999c135e1815be5608caacb077dc9b881226dd30
 SHA1 (patch-ac) = 3df4e4950bc967c964746e55e3ca2fbffb0cddf2
+SHA1 (patch-libseahorse_seahorse-notification.c) = 05d1f2bc5c0de5e6a108ecf3a582589665e26faf
