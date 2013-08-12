@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2013/04/30 20:08:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.53.2.1 2013/08/12 12:20:18 tron Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -26,6 +26,8 @@ include/netapi.h
 include/smb_share_modes.h
 include/talloc.h
 ${PLIST.winbind}include/wbclient.h
+include/tevent.h
+include/tevent_internal.h
 lib/libnetapi.${LIBEXT}
 lib/libnetapi.${LIBEXT}.0
 lib/libsmbclient.${LIBEXT}
@@ -39,6 +41,9 @@ ${PLIST.winbind}lib/libwbclient.${LIBEXT}
 ${PLIST.winbind}lib/libwbclient.${LIBEXT}.0
 ${PLIST.winbind}${NSS_WINBIND}
 ${PLIST.winbind}${NSS_WINS}
+lib/libtevent.${LIBEXT}
+lib/libtevent.${LIBEXT}.0
+lib/libtevent.${LIBEXT}.0.9.11
 lib/samba/auth/script.${LIBEXT}
 lib/samba/charset/CP437.${LIBEXT}
 lib/samba/charset/CP850.${LIBEXT}
