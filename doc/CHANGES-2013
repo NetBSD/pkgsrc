@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2863 2013/08/12 02:46:46 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2864 2013/08/12 02:48:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4207,3 +4207,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 1.534 [rodent 2013-08-11]
 	Updated devel/libgsf to 1.14.28 [richard 2013-08-11]
 	Updated net/samba to 3.6.17 [taca 2013-08-12]
+	Updated net/samba35 to 3.5.22 [taca 2013-08-12]
