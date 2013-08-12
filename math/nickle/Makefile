@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/07/15 02:02:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2013/08/12 02:17:43 obache Exp $
 
 DISTNAME=	nickle-2.77
 CATEGORIES=	math lang
@@ -10,6 +10,9 @@ COMMENT=	Desk calculator language
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
+
+# suppress detection of DOCBOOK
+CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
 
 TEST_TARGET=	check
 
