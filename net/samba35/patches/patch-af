@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.5 2012/12/17 12:01:35 taca Exp $
+$NetBSD: patch-af,v 1.6 2013/08/12 02:47:32 taca Exp $
 
 Patch to join an Active Directory from
 http://www.ogris.de/samba/unix-active-directory.html.
 
---- configure.orig	2012-09-21 08:32:29.000000000 +0000
+--- configure.orig	2013-07-24 19:08:24.000000000 +0000
 +++ configure
-@@ -18255,6 +18255,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
+@@ -18294,6 +18294,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -13,7 +13,7 @@ http://www.ogris.de/samba/unix-active-directory.html.
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -18291,7 +18292,7 @@ fi
+@@ -18330,7 +18331,7 @@ fi
  $as_echo "$BLDSHARED" >&6; }
  
  saved_before_as_needed_ldflags="$LDFLAGS"
@@ -22,7 +22,7 @@ http://www.ogris.de/samba/unix-active-directory.html.
  	saved_ldflags="$LDFLAGS"
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -25255,9 +25256,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -25294,9 +25295,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -35,7 +35,7 @@ http://www.ogris.de/samba/unix-active-directory.html.
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -25269,31 +25270,31 @@ else
+@@ -25308,31 +25309,31 @@ else
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -75,7 +75,7 @@ http://www.ogris.de/samba/unix-active-directory.html.
  _ACEOF
  
  fi
-@@ -34400,31 +34401,39 @@ case "$host_os" in
+@@ -34441,31 +34442,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
@@ -137,7 +137,7 @@ http://www.ogris.de/samba/unix-active-directory.html.
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -34622,6 +34631,16 @@ $as_echo "#define HAVE_PASSWD_PW_AGE 1" 
+@@ -34663,6 +34672,16 @@ $as_echo "#define HAVE_PASSWD_PW_AGE 1" 
  
  fi
  

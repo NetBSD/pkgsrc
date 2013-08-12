@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.15 2013/01/30 11:41:44 taca Exp $
+$NetBSD: distinfo,v 1.16 2013/08/12 02:47:32 taca Exp $
 
-SHA1 (samba-3.5.21.tar.gz) = 4da59c901fe76040201e5a861687580e93a44ddb
-RMD160 (samba-3.5.21.tar.gz) = 6bfa7876f55791bb927d6032987b9c88e658d38e
-Size (samba-3.5.21.tar.gz) = 35377315 bytes
+SHA1 (samba-3.5.22.tar.gz) = 6c807dc64c0cd02bd560c4cfc5fe485964777e49
+RMD160 (samba-3.5.22.tar.gz) = ed8d8f9c5c1123334773fa9d47dca1e32ce54b6b
+Size (samba-3.5.22.tar.gz) = 35385144 bytes
 SHA1 (patch-aa) = 6c8497adce78e8b1dea2a0402d4a980b67b57b8e
 SHA1 (patch-ab) = 0372ff2e3caca866dacd6ed25ae1d02e34a5b567
 SHA1 (patch-ac) = 5b1c0fdb781cb75f81af71ed2695144d4a35e032
 SHA1 (patch-ad) = 447aaf4ea4cc98f0ccd5a3a22e1ffec0e69a3971
 SHA1 (patch-ae) = 6698c698dc64c0f3df159157d182eae6aaa70958
-SHA1 (patch-af) = 247c745717eb6eeadec258b88aa5df9f09d6769c
+SHA1 (patch-af) = b01d199b3ec87074b3fda4edc4dae89ea051e2e9
 SHA1 (patch-ag) = 92fd576c4b05a913051925e461cde9f5a2f2d6bf
-SHA1 (patch-ah) = 6142078efec4263124aa793108c43eef0ce61da4
+SHA1 (patch-ah) = 048843723a1e0de89b2bed1569157902fed94484
 SHA1 (patch-ai) = 0a12dcfabcab7986968493d5f06701d06c3d5386
 SHA1 (patch-aj) = aecf98cf53e6bf6890e0fc9a40e6936df5f20a1a
 SHA1 (patch-ak) = cb51a96310eb7dde14351e4f12b68ce8d52c92c3
@@ -18,16 +18,16 @@ SHA1 (patch-al) = f347808c376922da057256d3614a34b556721a66
 SHA1 (patch-am) = 13744f8a5cce3016c37002079eba3c47077e8d6d
 SHA1 (patch-an) = a9b31b791d979a1062006bbe55375aaab69210a1
 SHA1 (patch-ao) = bc31d3003bdaad141652daff2e0b6b3cafcee8c1
-SHA1 (patch-ap) = 3a47d212b1c29a6b3c46b83903c4f011c28a8c3c
-SHA1 (patch-aq) = c3d1a3045364bebaa6c90967837907bd1de0964b
+SHA1 (patch-ap) = 9aeb4b039b300d31b214662f285ed58ea9a90bb8
+SHA1 (patch-aq) = 153e4746e0f196828f119b8a50eed6081311e9f3
 SHA1 (patch-ar) = 5213b0a3d95d106939c2e268a8538c5e2901079a
 SHA1 (patch-as) = a9fcb1813d55d598bf1226cf004de85701c93e61
 SHA1 (patch-at) = dcfbe79496065559380e5713a758816e538e728b
 SHA1 (patch-au) = f94b27a5792acfa3742b4c07b23b3395b73eba84
-SHA1 (patch-av) = fccde3e48f2b3de3b1adfaa488a67c57696d1a83
-SHA1 (patch-aw) = 36cb31313cdbd1e4670f33924371df5ed3390420
-SHA1 (patch-ba) = 87799a62831b45e6cde8c36fbafbc08596411f98
-SHA1 (patch-bb) = 6283ffa8781d0c069f81e80704a018028e6b2b50
+SHA1 (patch-av) = 3c1ae1bc10b3fd4551e1b3a8b8290e4dd93ef730
+SHA1 (patch-aw) = ebd83ff1c3b7827654a27ea1cf99cf58aa15f29a
+SHA1 (patch-ba) = 0206145c2973f5a78cbae33a3905c288399af864
+SHA1 (patch-bb) = 26a055d036ed3620681f5d043fcb564d17d16628
 SHA1 (patch-bc) = 857e2400c8852f3c878f8d82857e80f214be2aea
 SHA1 (patch-bd) = b78324305bbf67fa4a7dd627e0af1618d2bf7b47
 SHA1 (patch-be) = 2b298e596f2f57a595b83619ba68f6ad95febaaa
