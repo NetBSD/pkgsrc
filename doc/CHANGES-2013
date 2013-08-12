@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2868 2013/08/12 09:37:28 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2869 2013/08/12 10:00:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/gnome-settings-daemon to 2.32.1nb21 [obache 2013-08-12]
 	Updated net/vino to 2.32.2 [obache 2013-08-12]
 	Updated net/vino to 2.32.2 [obache 2013-08-12]
+	Updated chat/empathy to 2.34.0nb30 [obache 2013-08-12]
