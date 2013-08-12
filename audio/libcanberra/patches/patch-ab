@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2010/11/28 21:12:54 adam Exp $
+$NetBSD: patch-ab,v 1.3 2013/08/12 07:09:59 obache Exp $
 
---- src/Makefile.in.orig	2010-10-04 17:52:31.000000000 +0000
+* configure OSS device and library name
+
+--- src/Makefile.in.orig	2011-02-18 00:14:23.000000000 +0000
 +++ src/Makefile.in
-@@ -692,10 +692,10 @@ plugin_LTLIBRARIES = $(am__append_7) $(a
+@@ -732,10 +732,10 @@ plugin_LTLIBRARIES = $(am__append_7) $(a
  @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_change_props=oss_driver_change_props \
  @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_play=oss_driver_play \
  @BUILTIN_OSS_FALSE@@HAVE_OSS_TRUE@	 -Ddriver_cancel=oss_driver_cancel \
