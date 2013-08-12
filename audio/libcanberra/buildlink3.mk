@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2013/06/06 12:53:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2013/08/12 07:09:59 obache Exp $
 
 BUILDLINK_TREE+=	libcanberra
 
@@ -9,8 +9,15 @@ BUILDLINK_API_DEPENDS.libcanberra+=	libcanberra>=0.10
 BUILDLINK_ABI_DEPENDS.libcanberra+=	libcanberra>=0.26nb14
 BUILDLINK_PKGSRCDIR.libcanberra?=	../../audio/libcanberra
 
-#.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+pkgbase := libcanberra
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libcanberra:Mgtk)
 .include "../../x11/gtk2/buildlink3.mk"
+.endif
+.if !empty(PKG_BUILD_OPTIONS.libcanberra:Mgtk3)
+.include "../../x11/gtk3/buildlink3.mk"
+.endif
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .endif # LIBCANBERRA_BUILDLINK3_MK
