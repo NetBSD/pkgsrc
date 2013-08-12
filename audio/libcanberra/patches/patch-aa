@@ -1,13 +1,25 @@
-$NetBSD: patch-aa,v 1.2 2010/11/28 21:12:54 adam Exp $
+$NetBSD: patch-aa,v 1.3 2013/08/12 07:09:59 obache Exp $
 
---- src/oss.c.orig	2010-02-19 23:39:40.000000000 +0000
+* configure OSS device name
+* use more portable macro
+
+--- src/oss.c.orig	2011-02-09 21:02:40.000000000 +0000
 +++ src/oss.c
-@@ -243,7 +243,7 @@ static int open_oss(ca_context *c, struc
- 
-         p = PRIVATE(c);
+@@ -240,7 +240,7 @@ static int open_oss(ca_context *c, struc
+          * multichannel streams. We cannot support those files hence */
+         ca_return_val_if_fail(ca_sound_file_get_nchannels(out->file) <= 2, CA_ERROR_NOTSUPPORTED);
  
 -        if ((out->pcm = open(c->device ? c->device : "/dev/dsp", O_WRONLY | O_NONBLOCK, 0)) < 0)
 +        if ((out->pcm = open(c->device ? c->device : DEVOSSAUDIO, O_WRONLY | O_NONBLOCK, 0)) < 0)
                  goto finish_errno;
  
          if ((mode = fcntl(out->pcm, F_GETFL)) < 0)
+@@ -259,7 +259,7 @@ static int open_oss(ca_context *c, struc
+                 val = AFMT_S16_NE;
+                 break;
+         case CA_SAMPLE_S16RE:
+-#if __BYTE_ORDER == __LITTLE_ENDIAN
++#if _BYTE_ORDER == _LITTLE_ENDIAN
+                 val = AFMT_S16_BE;
+ #else
+                 val = AFMT_S16_LE;
