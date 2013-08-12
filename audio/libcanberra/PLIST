@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.7 2011/05/12 13:39:09 adam Exp $
-${PLIST.gtk}bin/canberra-gtk-play
-${PLIST.gtk}include/canberra-gtk.h
+@comment $NetBSD: PLIST,v 1.8 2013/08/12 07:09:59 obache Exp $
+${PLIST.gtk-any}bin/canberra-gtk-play
+${PLIST.gtk-any}include/canberra-gtk.h
 include/canberra.h
 ${PLIST.gtk}lib/gtk-2.0/modules/libcanberra-gtk-module.la
+${PLIST.gtk3}lib/gtk-3.0/modules/libcanberra-gtk-module.so
+${PLIST.gtk3}lib/gtk-3.0/modules/libcanberra-gtk3-module.la
 lib/${PKGNAME}/libcanberra-gstreamer.la
 lib/${PKGNAME}/libcanberra-multi.la
 lib/${PKGNAME}/libcanberra-null.la
 ${PLIST.oss}lib/${PKGNAME}/libcanberra-oss.la
 ${PLIST.gtk}lib/libcanberra-gtk.la
+${PLIST.gtk3}lib/libcanberra-gtk3.la
 lib/libcanberra.la
 ${PLIST.gtk}lib/pkgconfig/libcanberra-gtk.pc
+${PLIST.gtk3}lib/pkgconfig/libcanberra-gtk3.pc
 lib/pkgconfig/libcanberra.pc
 share/doc/libcanberra/README
 ${PLIST.gtk}share/gconf/schemas/libcanberra.schemas

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/11/28 21:12:54 adam Exp $
+$NetBSD: distinfo,v 1.5 2013/08/12 07:09:59 obache Exp $
 
-SHA1 (libcanberra-0.26.tar.gz) = 31a1cb8757e5da39b4cdc06e523d011578d7a3e3
-RMD160 (libcanberra-0.26.tar.gz) = f58fc2cfa4b35f6a6b2577057b969977f7de3b5d
-Size (libcanberra-0.26.tar.gz) = 463209 bytes
-SHA1 (patch-aa) = 9507099aed0a4609a31274fed219a6ab8e930e24
-SHA1 (patch-ab) = 9c9d6222354a60e39db61cf18f97fd95f1396f88
+SHA1 (libcanberra-0.27.tar.gz) = b2dc2b23109f32a11217b71f87c044f1ef9b7977
+RMD160 (libcanberra-0.27.tar.gz) = 1003bedf3fd6025ad046645f9a88af3d8653a0e5
+Size (libcanberra-0.27.tar.gz) = 490442 bytes
+SHA1 (patch-aa) = ad38999e6c630d1c620c7395df9eb85410b68668
+SHA1 (patch-ab) = 2a5767e0aa29f5dc4f6b6fd15a0f2aaf1f5dd329
