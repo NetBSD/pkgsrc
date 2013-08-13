@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.486 2013/07/02 12:04:57 rodent Exp $
+# $NetBSD: Makefile,v 1.487 2013/08/13 00:47:16 khorben Exp $
 #
 
 COMMENT=	Audio tools
@@ -42,6 +42,7 @@ SUBDIR+=	bladeenc
 SUBDIR+=	blop
 SUBDIR+=	bml
 SUBDIR+=	bmp
+SUBDIR+=	bmp-crossfade
 SUBDIR+=	bmp-esound
 SUBDIR+=	bmp-flac
 SUBDIR+=	bmp-mac
