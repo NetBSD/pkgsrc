@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.28 2013/04/01 20:52:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2013/08/13 17:48:24 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
 ${PYSITELIB}/django/__init__.pyo
-${PYSITELIB}/django/bin/__init__.py
-${PYSITELIB}/django/bin/__init__.pyc
-${PYSITELIB}/django/bin/__init__.pyo
 ${PYSITELIB}/django/bin/daily_cleanup.py
 ${PYSITELIB}/django/bin/daily_cleanup.pyc
 ${PYSITELIB}/django/bin/daily_cleanup.pyo
@@ -585,6 +582,8 @@ ${PYSITELIB}/django/conf/locale/zh_TW/formats.py
 ${PYSITELIB}/django/conf/locale/zh_TW/formats.pyc
 ${PYSITELIB}/django/conf/locale/zh_TW/formats.pyo
 ${PYSITELIB}/django/conf/project_template/manage.py
+${PYSITELIB}/django/conf/project_template/manage.pyc
+${PYSITELIB}/django/conf/project_template/manage.pyo
 ${PYSITELIB}/django/conf/project_template/project_name/__init__.py
 ${PYSITELIB}/django/conf/project_template/project_name/__init__.pyc
 ${PYSITELIB}/django/conf/project_template/project_name/__init__.pyo
@@ -622,6 +621,8 @@ ${PYSITELIB}/django/contrib/admin/actions.py
 ${PYSITELIB}/django/contrib/admin/actions.pyc
 ${PYSITELIB}/django/contrib/admin/actions.pyo
 ${PYSITELIB}/django/contrib/admin/bin/compress.py
+${PYSITELIB}/django/contrib/admin/bin/compress.pyc
+${PYSITELIB}/django/contrib/admin/bin/compress.pyo
 ${PYSITELIB}/django/contrib/admin/filters.py
 ${PYSITELIB}/django/contrib/admin/filters.pyc
 ${PYSITELIB}/django/contrib/admin/filters.pyo
