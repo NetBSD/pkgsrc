@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2013/07/22 08:13:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.33 2013/08/13 07:29:18 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -36,6 +36,7 @@ info/forms.info.gz
 info/gnus.info.gz
 info/htmlfontify.info.gz
 info/idlwave.info.gz
+info/ido.info.gz
 info/info.info.gz
 info/mairix-el.info.gz
 info/message.info.gz
@@ -56,6 +57,7 @@ info/sieve.info.gz
 info/smtpmail.info.gz
 info/speedbar.info.gz
 info/srecode.info.gz
+info/todo-mode.info.gz
 info/tramp.info.gz
 info/url.info.gz
 info/vip.info.gz
@@ -2031,6 +2033,8 @@ share/emacs/${EMACS_VERSION}/lisp/forms.el.gz
 share/emacs/${EMACS_VERSION}/lisp/forms.elc
 share/emacs/${EMACS_VERSION}/lisp/frame.el.gz
 share/emacs/${EMACS_VERSION}/lisp/frame.elc
+share/emacs/${EMACS_VERSION}/lisp/frameset.el.gz
+share/emacs/${EMACS_VERSION}/lisp/frameset.elc
 share/emacs/${EMACS_VERSION}/lisp/fringe.el.gz
 share/emacs/${EMACS_VERSION}/lisp/fringe.elc
 share/emacs/${EMACS_VERSION}/lisp/generic-x.el.gz
@@ -2062,6 +2066,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-bookmark.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-bookmark.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-cache.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-cache.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-icalendar.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-icalendar.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-cite.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-cite.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/gnus-cus.el.gz
@@ -3267,6 +3273,8 @@ share/emacs/${EMACS_VERSION}/lisp/progmodes/asm-mode.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/asm-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/autoconf.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/autoconf.elc
+share/emacs/${EMACS_VERSION}/lisp/progmodes/bat-mode.el.gz
+share/emacs/${EMACS_VERSION}/lisp/progmodes/bat-mode.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/bug-reference.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/bug-reference.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cap-words.el.gz
