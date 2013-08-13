@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2888 2013/08/13 16:05:52 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2889 2013/08/13 16:09:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4233,3 +4233,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/py-notify to 0.2.1nb4 [obache 2013-08-13]
 	Updated sysutils/py-notify-python to 0.1.1nb21 [obache 2013-08-13]
 	Updated mail/p5-MIME-Types to 2.01 [wen 2013-08-13]
+	Updated www/p5-Dancer to 1.3117 [wen 2013-08-13]
