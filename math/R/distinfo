@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.51 2013/05/05 14:57:27 joerg Exp $
+$NetBSD: distinfo,v 1.52 2013/08/13 19:53:30 markd Exp $
 
-SHA1 (R-2.15.1.tar.gz) = f0e6912be6dfc0d1fdc4be66048304d8befe8424
-RMD160 (R-2.15.1.tar.gz) = 84a010906424f3e84b84a71236424a8f2bf1df08
-Size (R-2.15.1.tar.gz) = 24592493 bytes
-SHA1 (patch-ac) = 527234c663ea7f2fe0d6e303cf692aad0276bdbe
-SHA1 (patch-ad) = 9268c33c999ed39f9e8d0769486706bb920c8253
-SHA1 (patch-src_main_format.c) = 96290cd5f2e509a25ab71cd32854b20a43028cf6
+SHA1 (R-3.0.1.tar.gz) = 5cc65476837926fdf04105954ea94efa53ac85ce
+RMD160 (R-3.0.1.tar.gz) = 09910626891c2962b5c05d204b14d59444da0c3b
+Size (R-3.0.1.tar.gz) = 25508280 bytes
+SHA1 (patch-ac) = 25e54a7fc8934d2997ea2eff8836784b45ad2a45
+SHA1 (patch-ad) = 21c2f74ceb41afa72b0b268ba4b1dcb57f01e106
+SHA1 (patch-src_library_stats_src_cov.c) = 23e452472506483ffc33a9c6629274b121cfd161
+SHA1 (patch-src_main_format.c) = f03012b8fbab34ead3f35143fe782ab7c7b29768
+SHA1 (patch-src_nmath_dnbeta.c) = f14c188a4b74a38cec9a62f5eb2ba1ab72ad52d3
+SHA1 (patch-src_nmath_pnbeta.c) = 4a23cb223408d2bb73c6dc42d50659f3589be3ec
+SHA1 (patch-src_nmath_pnchisq.c) = fdf82ef6967b12eb9f44e246bb8660c9a2b55fd3

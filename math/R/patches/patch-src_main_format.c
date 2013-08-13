@@ -1,19 +1,19 @@
-$NetBSD: patch-src_main_format.c,v 1.3 2012/12/17 09:08:47 wen Exp $
+$NetBSD: patch-src_main_format.c,v 1.4 2013/08/13 19:53:30 markd Exp $
 
 NetBSD does not have rintl() or floorl() so use the OpenBSD implementation
 of rintl() in that case.  The same case exists for DragonFly.
 
---- src/main/format.c.orig	2012-04-15 22:05:34.000000000 +0000
+--- src/main/format.c.orig	2013-03-05 23:02:40.000000000 +0000
 +++ src/main/format.c
-@@ -130,6 +130,7 @@ void formatInteger(int *x, int n, int *f
+@@ -130,6 +130,7 @@ void formatInteger(int *x, R_xlen_t n, i
  # define R_nearbyintl rintl
  # else
  # define R_nearbyintl private_nearbyintl
 +# if !defined(__NetBSD__) && !defined(__DragonFly__)
- long double private_nearbyintl(long double x)
+ LDOUBLE private_nearbyintl(LDOUBLE x)
  {
-     long double x1;
-@@ -142,6 +143,55 @@ long double private_nearbyintl(long doub
+     LDOUBLE x1;
+@@ -142,6 +143,55 @@ LDOUBLE private_nearbyintl(LDOUBLE x)
          if (x/2.0 == floorl(x/2.0)) return(x); else return(x1);
      }
  }
