@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2013/07/27 01:35:21 wen Exp $
+# $NetBSD: Makefile,v 1.65 2013/08/13 03:03:25 wen Exp $
 
-DISTNAME=	Moose-2.1004
+DISTNAME=	Moose-2.1005
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -57,6 +57,8 @@ BUILD_DEPENDS+=	p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
 BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
 BUILD_DEPENDS+= p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+BUILD_DEPENDS+=	p5-Test-CheckDeps>=0.006:../../devel/p5-Test-CheckDeps
+BUILD_DEPENDS+=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
 # missing Test::Spelling
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 #BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage # xt/author/pod_coverage.t
