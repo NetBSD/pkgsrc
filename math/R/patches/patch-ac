@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
+$NetBSD: patch-ac,v 1.30 2013/08/13 19:53:30 markd Exp $
 
---- configure.orig	2012-06-14 22:05:51.000000000 +0000
+--- configure.orig	2013-05-08 22:06:02.000000000 +0000
 +++ configure
-@@ -3976,7 +3976,7 @@ fi
+@@ -3967,7 +3967,7 @@ fi
  
  
  if test "${want_R_shlib}" = yes; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  else
    LIBR=
  fi
-@@ -4040,7 +4040,7 @@ fi
+@@ -4031,7 +4031,7 @@ fi
  if test "x${want_lto}" != xno; then
    LTO=-flto
  fi
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
    LTOALL=-flto
  fi
  
-@@ -22963,6 +22963,11 @@ fi
+@@ -23015,6 +23015,11 @@ fi
  	  done
  	  ;;
  	-[lLR]*)
@@ -32,7 +32,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
-@@ -23928,6 +23933,9 @@ cat > conftest.c <<EOF
+@@ -23980,6 +23985,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -24023,6 +24031,9 @@ typedef struct {
+@@ -24075,6 +24083,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -52,7 +52,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -26224,12 +26235,12 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26279,12 +26290,12 @@ $as_echo "$as_me: WARNING: Use of flat n
        SHLIB_LIBADD="-lcc_dynamic"
      fi
      ;;
@@ -68,7 +68,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
      ;;
    hpux*)
      SHLIB_EXT=".sl"
-@@ -26312,8 +26323,15 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26367,8 +26378,15 @@ $as_echo "$as_me: WARNING: Use of flat n
      fcpicflags=
      ;;
    netbsd*)
@@ -85,7 +85,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
        shlib_ldflags="-shared"
      else
        shlib_ldflags="-Bshareable"
-@@ -26335,22 +26353,22 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -26390,22 +26408,22 @@ $as_echo "$as_me: WARNING: Use of flat n
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
  ## so need PIC not pic.  They are the same on other Solaris platforms.
@@ -112,7 +112,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
        cpicflags="-KPIC"
        if test "`basename ${CXX}`" = "CC" ; then
          ## Forte version 7 needs -lCstd: Forte 6 does not.
-@@ -26407,7 +26425,7 @@ fi
+@@ -26466,7 +26484,7 @@ fi
  : ${CPICFLAGS="${cpicflags}"}
  if test -z "${CPICFLAGS}"; then
    case "${host_os}" in
@@ -121,9 +121,9 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
        ;;
      *)
        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: I could not determine CPICFLAGS." >&5
-@@ -26916,6 +26934,14 @@ _ACEOF
+@@ -26984,6 +27002,14 @@ _ACEOF
  ## Cygwin has rintl but not nearbyintl
- for ac_func in expm1 hypot log1p log2 log10 nearbyint nearbyintl powl rint rintl
+ for ac_func in expm1 hypot log1p log1pl log2 log10 nearbyint nearbyintl powl rint rintl
  do
 +case $ac_func in
 +expm1|log1p|log2|log10|nearbyint|nearbyintl|rint|rintl)
@@ -136,7 +136,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  as_ac_Symbol=`$as_echo "ac_cv_have_decl_$ac_func" | $as_tr_sh`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $ac_func exists and is declared" >&5
  $as_echo_n "checking whether $ac_func exists and is declared... " >&6; }
-@@ -26925,24 +26951,12 @@ else
+@@ -26993,24 +27019,12 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <math.h>
@@ -163,7 +163,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
-@@ -29539,6 +29553,15 @@ cat > conftest.c <<EOF
+@@ -29657,6 +29671,15 @@ cat > conftest.c <<EOF
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
  
@@ -179,7 +179,7 @@ $NetBSD: patch-ac,v 1.29 2013/05/05 14:57:27 joerg Exp $
  int main () {
    int iflag;
    F77_SYMBOL(test1)(&iflag);
-@@ -29606,6 +29629,14 @@ else
+@@ -29721,6 +29744,14 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
