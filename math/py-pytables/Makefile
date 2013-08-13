@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/05/14 09:57:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.28 2013/08/13 21:24:37 markd Exp $
 #
 
 DISTNAME=		tables-2.4.0
@@ -21,6 +21,8 @@ PYSETUPBUILDARGS=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 .if !empty(PKG_OPTIONS:Mlzo)
 PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
 .include "../../archivers/lzo/buildlink3.mk"
+.else
+PYSETUPBUILDARGS+=	--lzo=XXX
 .endif
 PYSETUPINSTALLARGS=	${PYSETUPBUILDARGS}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
