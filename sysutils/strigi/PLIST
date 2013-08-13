@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2013/02/09 22:32:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/08/13 11:55:24 abs Exp $
 bin/deepfind
 bin/deepgrep
-bin/luceneindexer
+bin/lucene2indexer
 bin/rdfindexer
 bin/strigiclient
 bin/strigicmd
@@ -81,26 +81,26 @@ lib/cmake/LibStreams/LibStreamsTargets.cmake
 lib/cmake/Strigi/StrigiConfig.cmake
 lib/cmake/Strigi/StrigiConfigVersion.cmake
 lib/libsearchclient.so
-lib/libsearchclient.so.0
 lib/libsearchclient.so.${PKGVERSION}
+lib/libsearchclient.so.0
 lib/libstreamanalyzer.so
-lib/libstreamanalyzer.so.0
 lib/libstreamanalyzer.so.${PKGVERSION}
+lib/libstreamanalyzer.so.0
 lib/libstreams.so
-lib/libstreams.so.0
 lib/libstreams.so.${PKGVERSION}
+lib/libstreams.so.0
 lib/libstrigihtmlgui.so
-lib/libstrigihtmlgui.so.0
 lib/libstrigihtmlgui.so.${PKGVERSION}
+lib/libstrigihtmlgui.so.0
 lib/libstrigiqtdbusclient.so
-lib/libstrigiqtdbusclient.so.0
 lib/libstrigiqtdbusclient.so.${PKGVERSION}
+lib/libstrigiqtdbusclient.so.0
 lib/pkgconfig/libstreamanalyzer.pc
 lib/pkgconfig/libstreams.pc
 lib/strigi/strigiea_digest.so
 lib/strigi/strigiea_jpeg.so
 lib/strigi/strigiea_riff.so
-lib/strigi/strigiindex_clucene.so
+lib/strigi/strigiindex_cluceneng.so
 lib/strigi/strigila_cpp.so
 lib/strigi/strigila_deb.so
 lib/strigi/strigila_namespaceharvester.so
