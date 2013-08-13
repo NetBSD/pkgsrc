@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2891 2013/08/13 19:55:50 markd Exp $
+$NetBSD: CHANGES-2013,v 1.2892 2013/08/13 20:34:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/py-twisted-docs to 13.1.0 [adam 2013-08-13]
 	Updated www/py-django to 1.5.2 [adam 2013-08-13]
 	Updated math/R to 3.0.1 [markd 2013-08-13]
+	Updated net/youtube-dl to 20130809 [tron 2013-08-13]
