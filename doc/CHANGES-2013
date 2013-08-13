@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2880 2013/08/13 01:03:20 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2881 2013/08/13 02:31:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-SOAP-Lite to 1.04 [wen 2013-08-13]
 	Added audio/bmp-crossfade version 0.3.11 [khorben 2013-08-13]
 	Updated www/epiphany to 2.30.6nb28 [obache 2013-08-13]
+	Updated devel/p5-Test-CheckDeps to 0.006 [wen 2013-08-13]
