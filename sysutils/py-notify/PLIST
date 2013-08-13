@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/04/05 11:10:12 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/08/13 09:18:46 obache Exp $
 ${PYSITELIB}/notify/_2_5/__init__.py
 ${PYSITELIB}/notify/_2_5/__init__.pyc
 ${PYSITELIB}/notify/_2_5/__init__.pyo
@@ -39,3 +39,4 @@ ${PYSITELIB}/notify/utils.pyo
 ${PYSITELIB}/notify/variable.py
 ${PYSITELIB}/notify/variable.pyc
 ${PYSITELIB}/notify/variable.pyo
+${PYSITELIB}/${EGG_FILE}
