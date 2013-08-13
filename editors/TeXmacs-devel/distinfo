@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.5 2013/04/10 16:10:19 drochner Exp $
+$NetBSD: distinfo,v 1.6 2013/08/13 10:21:35 joerg Exp $
 
 SHA1 (TeXmacs-1.0.7.19-src.tar.gz) = 855b8252f561b69deb45a3b80f4531a9055ea465
 RMD160 (TeXmacs-1.0.7.19-src.tar.gz) = df43e8e6b9ca6f12bd64e20a4d447309e3cead5e
 Size (TeXmacs-1.0.7.19-src.tar.gz) = 18384340 bytes
+SHA1 (patch-TeXmacs_plugins_python_progs_init-python.scm) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-TeXmacs_plugins_r_src_tm__r.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-TeXmacs_plugins_shell_src_tm__shell.cpp) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-aa) = 95b9e42fe1ff343e891fe299382c3647636eec99
 SHA1 (patch-ac) = 78e437e518a8fb61a0e07ca8279ac5da1e19f8d3
 SHA1 (patch-ad) = 62fee9dd4e3f0102b0741e83c1f7bf637dd8d6e8
@@ -11,3 +14,5 @@ SHA1 (patch-aj) = 7866c3387ece95f8d06face1c7f0a89ef0ce5d56
 SHA1 (patch-al) = f7deed3d692af322aebe1a4068dfd3bde9e87a0a
 SHA1 (patch-ba) = b6c3f8ae26cb0cfe6aaf616384173e4b20f94c11
 SHA1 (patch-bb) = 647339abf556784a567a26cec61c7105bb29825d
+SHA1 (patch-src_Kernel_Types_tree.hpp) = d090dead92075d12c8b0a47f9a30bdda443cfc4b
+SHA1 (patch-src_Typeset_boxes.hpp) = 2666462c42104085d950631f80f5c039636ed0d9
