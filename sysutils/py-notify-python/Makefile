@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/06/06 12:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/08/13 09:38:29 obache Exp $
 #
 
 DISTNAME=	notify-python-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	sysutils
 MASTER_SITES= \
  http://www.galago-project.org/files/releases/source/notify-python/
@@ -31,5 +31,5 @@ post-extract:
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
