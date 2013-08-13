@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2878 2013/08/13 00:44:08 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2879 2013/08/13 00:48:36 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4223,3 +4223,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.24 [wen 2013-08-12]
 	Updated devel/nasm to 2.10.09 [wen 2013-08-13]
 	Updated net/p5-SOAP-Lite to 1.04 [wen 2013-08-13]
+	Added audio/bmp-crossfade version 0.3.11 [khorben 2013-08-13]
