@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/13 00:45:50 khorben Exp $
+lib/bmp/Output/libcrossfade.la
