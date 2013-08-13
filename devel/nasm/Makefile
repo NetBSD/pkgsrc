@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2013/05/31 12:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/08/13 00:17:36 wen Exp $
 
-DISTNAME=	nasm-2.07
-PKGREVISION=	2
+DISTNAME=	nasm-2.10.09
 CATEGORIES=	devel lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nasm/}
+MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/2.10.09/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

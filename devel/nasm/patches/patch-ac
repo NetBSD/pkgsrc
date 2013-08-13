@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2009/07/22 21:21:33 wiz Exp $
-
---- configure.orig	2009-07-20 05:22:31.000000000 +0000
+$NetBSD: patch-ac,v 1.6 2013/08/13 00:17:36 wen Exp $
+Add -Wno-char-subscripts to CFLAGS
+--- configure.orig	2013-08-13 07:58:03.000000000 +0000
 +++ configure
-@@ -4608,7 +4608,7 @@ rm -f core conftest.err conftest.$ac_obj
- { $as_echo "$as_me:$LINENO: checking if $CC accepts -Wall" >&5
+@@ -4299,7 +4299,7 @@ rm -f core conftest.err conftest.$ac_obj
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if $CC accepts -Wall" >&5
  $as_echo_n "checking if $CC accepts -Wall... " >&6; }
   pa_add_cflags__old_cflags="$CFLAGS"
 - CFLAGS="$CFLAGS -Wall"
 + CFLAGS="$CFLAGS -Wall -Wno-char-subscripts"
-  cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
+  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <stdio.h>
