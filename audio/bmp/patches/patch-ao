@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.2 2004/08/31 15:47:56 jmmv Exp $
+$NetBSD: patch-ao,v 1.3 2013/08/13 00:40:27 khorben Exp $
 
---- config.h.in.orig	2004-08-22 15:50:43.000000000 +0200
+--- config.h.in.orig	2005-10-22 10:44:55.000000000 +0000
 +++ config.h.in
 @@ -180,6 +180,9 @@
  /* Define to 1 if you have the `setlocale' function. */
