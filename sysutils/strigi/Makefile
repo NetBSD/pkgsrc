@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/08/13 11:55:24 abs Exp $
+# $NetBSD: Makefile,v 1.38 2013/08/13 20:00:41 markd Exp $
 
 DISTNAME=	strigi-0.7.8
 PKGREVISION=	6
@@ -38,6 +38,7 @@ CMAKE_ARGS+=	-Dtest_LIBS=${RT_LIB_SCHED}
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
+BUILDLINK_API_DEPENDS.libclucene+=	libclucene>=2.3.3.4
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
