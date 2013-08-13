@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/04/20 15:38:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/08/13 17:42:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,11 +7,12 @@ ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/zope/interface/README.ru.txt
-${PYSITELIB}/zope/interface/README.txt
 ${PYSITELIB}/zope/interface/__init__.py
 ${PYSITELIB}/zope/interface/__init__.pyc
 ${PYSITELIB}/zope/interface/__init__.pyo
+${PYSITELIB}/zope/interface/_compat.py
+${PYSITELIB}/zope/interface/_compat.pyc
+${PYSITELIB}/zope/interface/_compat.pyo
 ${PYSITELIB}/zope/interface/_flatten.py
 ${PYSITELIB}/zope/interface/_flatten.pyc
 ${PYSITELIB}/zope/interface/_flatten.pyo
@@ -20,8 +21,6 @@ ${PYSITELIB}/zope/interface/_zope_interface_coptimizations.so
 ${PYSITELIB}/zope/interface/adapter.py
 ${PYSITELIB}/zope/interface/adapter.pyc
 ${PYSITELIB}/zope/interface/adapter.pyo
-${PYSITELIB}/zope/interface/adapter.ru.txt
-${PYSITELIB}/zope/interface/adapter.txt
 ${PYSITELIB}/zope/interface/advice.py
 ${PYSITELIB}/zope/interface/advice.pyc
 ${PYSITELIB}/zope/interface/advice.pyo
@@ -61,9 +60,6 @@ ${PYSITELIB}/zope/interface/document.pyo
 ${PYSITELIB}/zope/interface/exceptions.py
 ${PYSITELIB}/zope/interface/exceptions.pyc
 ${PYSITELIB}/zope/interface/exceptions.pyo
-${PYSITELIB}/zope/interface/human.ru.txt
-${PYSITELIB}/zope/interface/human.txt
-${PYSITELIB}/zope/interface/index.txt
 ${PYSITELIB}/zope/interface/interface.py
 ${PYSITELIB}/zope/interface/interface.pyc
 ${PYSITELIB}/zope/interface/interface.pyo
@@ -79,10 +75,15 @@ ${PYSITELIB}/zope/interface/ro.pyo
 ${PYSITELIB}/zope/interface/tests/__init__.py
 ${PYSITELIB}/zope/interface/tests/__init__.pyc
 ${PYSITELIB}/zope/interface/tests/__init__.pyo
+${PYSITELIB}/zope/interface/tests/advisory_testing.py
+${PYSITELIB}/zope/interface/tests/advisory_testing.pyc
+${PYSITELIB}/zope/interface/tests/advisory_testing.pyo
 ${PYSITELIB}/zope/interface/tests/dummy.py
 ${PYSITELIB}/zope/interface/tests/dummy.pyc
 ${PYSITELIB}/zope/interface/tests/dummy.pyo
-${PYSITELIB}/zope/interface/tests/foodforthought.txt
+${PYSITELIB}/zope/interface/tests/idummy.py
+${PYSITELIB}/zope/interface/tests/idummy.pyc
+${PYSITELIB}/zope/interface/tests/idummy.pyo
 ${PYSITELIB}/zope/interface/tests/ifoo.py
 ${PYSITELIB}/zope/interface/tests/ifoo.pyc
 ${PYSITELIB}/zope/interface/tests/ifoo.pyo
@@ -113,9 +114,15 @@ ${PYSITELIB}/zope/interface/tests/test_document.pyo
 ${PYSITELIB}/zope/interface/tests/test_element.py
 ${PYSITELIB}/zope/interface/tests/test_element.pyc
 ${PYSITELIB}/zope/interface/tests/test_element.pyo
+${PYSITELIB}/zope/interface/tests/test_exceptions.py
+${PYSITELIB}/zope/interface/tests/test_exceptions.pyc
+${PYSITELIB}/zope/interface/tests/test_exceptions.pyo
 ${PYSITELIB}/zope/interface/tests/test_interface.py
 ${PYSITELIB}/zope/interface/tests/test_interface.pyc
 ${PYSITELIB}/zope/interface/tests/test_interface.pyo
+${PYSITELIB}/zope/interface/tests/test_interfaces.py
+${PYSITELIB}/zope/interface/tests/test_interfaces.pyc
+${PYSITELIB}/zope/interface/tests/test_interfaces.pyo
 ${PYSITELIB}/zope/interface/tests/test_odd_declarations.py
 ${PYSITELIB}/zope/interface/tests/test_odd_declarations.pyc
 ${PYSITELIB}/zope/interface/tests/test_odd_declarations.pyo
@@ -128,10 +135,6 @@ ${PYSITELIB}/zope/interface/tests/test_sorting.pyo
 ${PYSITELIB}/zope/interface/tests/test_verify.py
 ${PYSITELIB}/zope/interface/tests/test_verify.pyc
 ${PYSITELIB}/zope/interface/tests/test_verify.pyo
-${PYSITELIB}/zope/interface/tests/unitfixtures.py
-${PYSITELIB}/zope/interface/tests/unitfixtures.pyc
-${PYSITELIB}/zope/interface/tests/unitfixtures.pyo
 ${PYSITELIB}/zope/interface/verify.py
 ${PYSITELIB}/zope/interface/verify.pyc
 ${PYSITELIB}/zope/interface/verify.pyo
-${PYSITELIB}/zope/interface/verify.txt
