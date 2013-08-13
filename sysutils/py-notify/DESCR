@@ -1,1 +1,8 @@
-This package contains Python bindings for libnotify.
+Py-notify is a Python package providing tools for implementing `Observer
+programming pattern`.  These tools include signals, conditions and variables.
+        
+Signals are lists of handlers that are called when signal is emitted. Conditions
+are basically boolean variables coupled with a signal that is emitted when
+condition state changes. They can be combined using standard logical operators
+(*not*, *and*, etc.) into compound conditions. Variables, unlike conditions, can
+hold any Python object, not just booleans, but they cannot be combined.
