@@ -1,0 +1,39 @@
+$NetBSD: patch-src_pynotify.defs,v 1.1 2013/08/13 09:38:29 obache Exp $
+
+* for libnotify-0.7
+
+--- src/pynotify.defs.orig	2006-09-05 07:00:20.000000000 +0000
++++ src/pynotify.defs
+@@ -38,7 +38,6 @@
+     '("const-gchar*" "summary")
+     '("const-gchar*" "message" (null-ok) (default "NULL"))
+     '("const-gchar*" "icon" (null-ok) (default "NULL"))
+-    '("GtkWidget*" "attach" (null-ok) (default "NULL"))
+   )
+ )
+ 
+@@ -53,24 +52,6 @@
+   )
+ )
+ 
+-(define-method attach_to_widget
+-  (of-object "NotifyNotification")
+-  (c-name "notify_notification_attach_to_widget")
+-  (return-type "none")
+-  (parameters
+-    '("GtkWidget*" "attach")
+-  )
+-)
+-
+-(define-method attach_to_status_icon
+-  (of-object "NotifyNotification")
+-  (c-name "notify_notification_attach_to_status_icon")
+-  (return-type "none")
+-  (parameters
+-    '("GtkStatusIcon*" "attach")
+-  )
+-)
+-
+ (define-method show
+   (of-object "NotifyNotification")
+   (c-name "notify_notification_show")
