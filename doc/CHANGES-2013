@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2884 2013/08/13 07:30:16 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.2885 2013/08/13 08:50:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4229,3 +4229,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-CPAN-Meta-Check to 0.007 [wen 2013-08-13]
 	Updated devel/p5-Moose to 2.1005 [wen 2013-08-13]
 	Updated editors/emacs-snapshot to 24.3.50.20130810 [minskim 2013-08-13]
+	Updated x11/zenity to 2.32.1nb14 [obache 2013-08-13]
