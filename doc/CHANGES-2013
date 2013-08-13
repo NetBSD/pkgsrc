@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2876 2013/08/12 23:29:36 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2877 2013/08/13 00:18:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4221,3 +4221,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-Time-Piece to 1.22 [wen 2013-08-12]
 	Updated devel/p5-Module-CoreList to 2.96 [wen 2013-08-12]
 	Updated www/p5-Mojolicious to 4.24 [wen 2013-08-12]
+	Updated devel/nasm to 2.10.09 [wen 2013-08-13]
