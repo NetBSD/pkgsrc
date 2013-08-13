@@ -1,16 +1,13 @@
-# $NetBSD: Makefile.common,v 1.11 2013/02/17 14:53:13 gdt Exp $
+# $NetBSD: Makefile.common,v 1.12 2013/08/13 17:47:41 adam Exp $
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
 
-TWISTED_MAJOR=		12.3
-TWISTED_VERSION=	${TWISTED_MAJOR}.0
-
-DISTNAME=	Twisted-${TWISTED_VERSION}
+DISTNAME=	Twisted-13.1.0
 CATEGORIES=	net python
-MASTER_SITES=	http://twistedmatrix.com/Releases/Twisted/${TWISTED_MAJOR}/
+MASTER_SITES=	http://twistedmatrix.com/Releases/Twisted/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.twistedmatrix.com/
 LICENSE=	mit
 

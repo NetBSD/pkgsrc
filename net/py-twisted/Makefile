@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2013/02/27 15:59:59 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2013/08/13 17:47:41 adam Exp $
 
-PKGNAME=	${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
 .include "../../net/py-twisted/Makefile.common"
 
