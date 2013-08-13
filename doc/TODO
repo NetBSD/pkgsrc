@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12467 2013/08/13 17:51:38 adam Exp $
+$NetBSD: TODO,v 1.12468 2013/08/13 19:55:50 markd Exp $
 
 Suggested new packages
 ======================
@@ -324,7 +324,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Mesa-9.1.6
 	o MesaLib-9.1.6
 	o PAM-0.99.7.1
-	o R-3.0.0
 	o REminiscence-0.1.9
 	o ROMBuild-2.14
 	o SOGo-2.0.7
