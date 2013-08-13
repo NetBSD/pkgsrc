@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.30 2010/11/24 20:59:15 drochner Exp $
+$NetBSD: distinfo,v 1.31 2013/08/13 08:50:14 obache Exp $
 
 SHA1 (zenity-2.32.1.tar.bz2) = 5e75e9200768ecf9eb7f1e6edac7a395ddb47947
 RMD160 (zenity-2.32.1.tar.bz2) = 30b19230d9e1ed478cfd17d2a6942863bcda6763
 Size (zenity-2.32.1.tar.bz2) = 3128666 bytes
+SHA1 (patch-src_notification.c) = 7288f705a1e1ef3ca10cd616682be6a84a45cd3d
