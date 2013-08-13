@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2882 2013/08/13 02:56:32 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2883 2013/08/13 03:04:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4227,3 +4227,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/epiphany to 2.30.6nb28 [obache 2013-08-13]
 	Updated devel/p5-Test-CheckDeps to 0.006 [wen 2013-08-13]
 	Updated devel/p5-CPAN-Meta-Check to 0.007 [wen 2013-08-13]
+	Updated devel/p5-Moose to 2.1005 [wen 2013-08-13]
