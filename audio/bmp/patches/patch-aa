@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2006/07/31 21:43:55 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2013/08/13 00:40:27 khorben Exp $
 
---- beep/softvolume.c.orig	2004-06-20 20:48:54.000000000 +0200
+--- beep/softvolume.c.orig	2004-06-20 18:48:54.000000000 +0000
 +++ beep/softvolume.c
 @@ -117,7 +117,7 @@ soft_volume_set(SoftVolumeConfig * c, gi
   *
