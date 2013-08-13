@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.2 2004/12/25 15:22:37 jmmv Exp $
+$NetBSD: patch-as,v 1.3 2013/08/13 00:40:27 khorben Exp $
 
---- beep/controlsocket.c.orig	2004-12-04 13:05:16.000000000 +0100
+--- beep/controlsocket.c.orig	2005-09-04 22:36:04.000000000 +0000
 +++ beep/controlsocket.c
 @@ -31,6 +31,7 @@
  #include <sys/types.h>

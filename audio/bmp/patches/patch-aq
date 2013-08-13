@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.4 2006/07/31 21:43:55 jmmv Exp $
+$NetBSD: patch-aq,v 1.5 2013/08/13 00:40:27 khorben Exp $
 
---- Output/OSS/Makefile.in.orig	2005-10-22 12:45:02.000000000 +0200
+--- Output/OSS/Makefile.in.orig	2005-10-22 10:45:02.000000000 +0000
 +++ Output/OSS/Makefile.in
 @@ -295,7 +295,7 @@ soundcard.h
  EXTRA_DIST = $(osssources)

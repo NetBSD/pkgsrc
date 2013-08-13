@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.2 2012/09/26 12:55:12 jperkin Exp $
+$NetBSD: patch-an,v 1.3 2013/08/13 00:40:27 khorben Exp $
 
---- configure.orig	Sat Oct 22 10:45:08 2005
-+++ configure	Wed Sep 26 12:31:51 2012
-@@ -28454,7 +28454,7 @@
+--- configure.orig	2005-10-22 10:45:08.000000000 +0000
++++ configure
+@@ -28454,7 +28454,7 @@ fi
  done
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-an,v 1.2 2012/09/26 12:55:12 jperkin Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -28804,7 +28804,7 @@
+@@ -28804,7 +28804,7 @@ case "$host" in
      i386-*-* | i486-*-* | i586-*-* | i686-*-* | i86pc-*-*)
          arch_type=ix86
          case "$host" in
