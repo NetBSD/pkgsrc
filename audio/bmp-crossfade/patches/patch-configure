@@ -1,0 +1,64 @@
+$NetBSD: patch-configure,v 1.1 2013/08/13 00:45:50 khorben Exp $
+
+--- configure.orig	2006-07-14 09:59:20.000000000 +0000
++++ configure
+@@ -20659,11 +20659,11 @@ then
+ _ACEOF
+ 
+ 	exit_patch=found
+-elif test "$PLAYER" == audacious
++elif test "$PLAYER" = audacious
+ then
+ 	# not required for audacious, which has a cleanup callback
+ 	exit_patch="not required for audacious"
+-elif test "$pthreads" == linuxthreads
++elif test "$pthreads" = linuxthreads
+ then
+ 	exit_patch="not required for linuxthreads"
+ else
+@@ -20672,7 +20672,7 @@ fi
+ echo "$as_me:$LINENO: result: $exit_patch" >&5
+ echo "${ECHO_T}$exit_patch" >&6
+ 
+-if test "$exit_patch" == "not found"
++if test "$exit_patch" = "not found"
+ then
+ 	{ echo "$as_me:$LINENO: WARNING: *** $PLAYER_BIN is not patched! ***
+ 
+@@ -20704,7 +20704,7 @@ then
+ _ACEOF
+ 
+ 	songchange_patch=found
+-elif test "$PLAYER" == audacious
++elif test "$PLAYER" = audacious
+ then
+ 	# not required for audacious, which calls flush(0)
+ 	songchange_patch="not required for audacious"
+@@ -20714,7 +20714,7 @@ fi
+ echo "$as_me:$LINENO: result: $result" >&5
+ echo "${ECHO_T}$result" >&6
+ 
+-if test "$songchange_patch" == "not found"
++if test "$songchange_patch" = "not found"
+ then
+ 	{ echo "$as_me:$LINENO: WARNING: *** $PLAYER_BIN is not patched! ***
+ 
+@@ -22592,7 +22592,7 @@ if test "$oss" = yes
+ then
+ 
+ 
+-for ac_header in sys/soundcard.h machine/soundcard.h
++for ac_header in sys/soundcard.h machine/soundcard.h soundcard.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -22745,7 +22745,8 @@ fi
+ done
+ 
+ 	if test "$ac_cv_header_sys_soundcard_h"     = yes -o \
+-	        "$ac_cv_header_machine_soundcard_h" = yes
++	        "$ac_cv_header_machine_soundcard_h" = yes -o \
++	        "$ac_cv_header_soundcard_h" = yes
+ 	then
+ 
+ 
