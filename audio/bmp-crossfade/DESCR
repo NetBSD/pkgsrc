@@ -1,0 +1,20 @@
+  XMMS-Crossfade can be used to remove the gaps between two songs, or to
+smoothly crossfade inbetween.  Features are:
+
+    * Crossfading:
+    * Fadein/Fadeout:
+    * Continuous output:
+    * Gap-Killer:
+    * Automatic detection of live albums:
+    * High quality:
+    * Secondary effect plugin:
+
+  Version 0.1 of XMMS-Crossfade was devised as a replacement plugin for
+the original OSS-plugin that comes with XMMS.  It was talking directly to
+the OSS driver.  Unfortunately, any other platforms (Solaris, AIX), that
+don't support OSS, would not work this way.  As of version 0.2, it can use
+existing plugins for output.  It acts as a kind of crossfading "proxy"
+between XMMS and the output plugin.
+
+  Version 0.3.9 added support for the Beep Media Player, as built in this
+package.
