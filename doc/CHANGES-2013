@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2885 2013/08/13 08:50:32 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2886 2013/08/13 09:19:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4230,3 +4230,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Moose to 2.1005 [wen 2013-08-13]
 	Updated editors/emacs-snapshot to 24.3.50.20130810 [minskim 2013-08-13]
 	Updated x11/zenity to 2.32.1nb14 [obache 2013-08-13]
+	Updated sysutils/py-notify to 0.2.1nb4 [obache 2013-08-13]
