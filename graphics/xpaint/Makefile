@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2013/04/06 21:07:33 rodent Exp $
+# $NetBSD: Makefile,v 1.75 2013/08/14 23:51:08 gsutre Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	10
@@ -11,7 +11,6 @@ HOMEPAGE=	http://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 
 USE_IMAKE=	yes
-USE_TOOLS+=		gmake
 MAKE_ENV+=		XMKMF=${XMKMF:Q}
 MAKE_JOBS_SAFE=		NO
 
