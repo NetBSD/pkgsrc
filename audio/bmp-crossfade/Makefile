@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/13 00:45:50 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/14 01:13:10 khorben Exp $
 #
 
 PKGNAME=		bmp-crossfade-0.3.11
@@ -26,5 +26,7 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/bmp/Output
 .if ${OSS_TYPE} == "none"
 CONFIGURE_ARGS+=	--disable-oss
 .endif
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
