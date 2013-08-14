@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12468 2013/08/13 19:55:50 markd Exp $
+$NetBSD: TODO,v 1.12469 2013/08/14 15:45:21 taca Exp $
 
 Suggested new packages
 ======================
@@ -820,6 +820,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nulib2-220
+	o nullmailer-1.13
 	o nut-18.10
 	o nxtvepg-2.8.1
 	o ocrad-0.22
