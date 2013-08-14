@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2892 2013/08/13 20:34:33 tron Exp $
+$NetBSD: CHANGES-2013,v 1.2893 2013/08/14 04:53:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4241,3 +4241,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django to 1.5.2 [adam 2013-08-13]
 	Updated math/R to 3.0.1 [markd 2013-08-13]
 	Updated net/youtube-dl to 20130809 [tron 2013-08-13]
+	Updated mail/evolution to 2.32.3nb23 [obache 2013-08-14]
