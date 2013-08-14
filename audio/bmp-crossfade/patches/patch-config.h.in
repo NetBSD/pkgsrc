@@ -1,0 +1,14 @@
+$NetBSD: patch-config.h.in,v 1.1 2013/08/14 01:08:49 khorben Exp $
+
+--- config.h.in.orig	2006-07-06 10:00:41.000000000 +0000
++++ config.h.in
+@@ -75,6 +75,9 @@
+ /* Define to 1 if you have the `select' function. */
+ #undef HAVE_SELECT
+ 
++/* Define to 1 if you have the <soundcard.h> header file. */
++#undef HAVE_SOUNDCARD_H
++
+ /* Define to 1 if you have the <stdint.h> header file. */
+ #undef HAVE_STDINT_H
+ 
