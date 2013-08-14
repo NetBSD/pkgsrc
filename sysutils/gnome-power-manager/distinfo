@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/01/20 17:02:55 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/08/14 08:01:48 obache Exp $
 
 SHA1 (gnome-power-manager-2.24.4.tar.bz2) = ea9c895a78761c59fea13701e074946a20c50fe6
 RMD160 (gnome-power-manager-2.24.4.tar.bz2) = c0b16ead610ffeae9d801f8bde44507464808e53
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 1d095932a52528148703ce63bfab81f3a2f316fd
 SHA1 (patch-ac) = 57ade4298abd05dc57af06347dc96dea4683eb51
 SHA1 (patch-ad) = b0a68283600b33f730c3b5b07128858c96c04394
 SHA1 (patch-src-gpm-array-float.h) = e9592fdab1c0ee0beedd49c524ae2fdd4a1eea47
+SHA1 (patch-src_gpm-notify.c) = d8669db0c44405fe65f0b92f74d43186e3e8d63b
