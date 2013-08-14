@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/01/05 12:17:56 obache Exp $
+# $NetBSD: options.mk,v 1.4 2013/08/14 05:40:29 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-mplayer
 PKG_SUPPORTED_OPTIONS=	gnome musicbrainz libgpod
@@ -13,7 +13,7 @@ PLIST_VARS+=	nautilus
 #
 .if !empty(PKG_OPTIONS:Mgnome)
 DEPENDS+=		gnome-power-manager-[0-9]*:../../sysutils/gnome-power-manager
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-nautilus
 CONFIGURE_ARGS+=	--with-libnotify
