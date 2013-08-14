@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2899 2013/08/14 12:51:36 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2900 2013/08/14 13:06:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/gnome-power-manager to 2.24.4nb35 [obache 2013-08-14]
 	Updated security/seahorse-plugins to 2.30.1nb28 [obache 2013-08-14]
 	Added sysutils/ruby-libnotify version 0.5.1 [obache 2013-08-14]
+	Updated net/mikutter to 0.2.2.1328 [obache 2013-08-14]
