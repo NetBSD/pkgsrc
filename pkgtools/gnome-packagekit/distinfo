@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/12/15 09:36:21 marino Exp $
+$NetBSD: distinfo,v 1.6 2013/08/14 05:31:04 obache Exp $
 
 SHA1 (gnome-packagekit-0.4.0.tar.gz) = 8a204535c4a219b8987af756db999ec4f3caa84e
 RMD160 (gnome-packagekit-0.4.0.tar.gz) = 9c1de792b00749ea54fe44d7287cf55228df4bdf
@@ -7,9 +7,12 @@ SHA1 (patch-aa) = e9b6d7a9d8034aad4e418b7c1e6cfe753e560c0a
 SHA1 (patch-ab) = 88522542563043b06358e98fa323eb94b9e34679
 SHA1 (patch-ac) = fb0b16340091eeede5b608645b5aa43a4ab50a9f
 SHA1 (patch-aclocal.m4) = 373799ca82cc0ed53c2fc320ed375162dd417ce8
-SHA1 (patch-ad) = db285ef99ef8822f6417522a908ef976304d18c2
-SHA1 (patch-ae) = 88fd8a4f3a739af9ce06b3ca60a95a7a6ccc1c83
+SHA1 (patch-ad) = bcebb5529821434ea8d100d3c16217b1cc87e8e3
+SHA1 (patch-ae) = 5fe4044c9c2306391c245fedbe70df81f8a07148
 SHA1 (patch-configure) = 0b9e3b098ae84e559fdf74ce5c4945f8211a641d
 SHA1 (patch-configure.ac) = eb7de6a0a607803cfcf6dd7dcfaf86ad8b62a951
 SHA1 (patch-src_gpk-application.c) = 32ec24b11a222a8b77feff38373438779d46a288
+SHA1 (patch-src_gpk-client.c) = c59c0f3f345a8df579f75e07a0a40b867cbc22df
+SHA1 (patch-src_gpk-firmware.c) = 3da4ecae0241b62f709aaa0526d36c19393d0f9f
+SHA1 (patch-src_gpk-hardware.c) = e86606e4990c209d5b800c34843cc14ce405c9e0
 SHA1 (patch-src_gpk-update-viewer.c) = 20365e1f3101038b9864eda6dd5b1c0a66191bd1
