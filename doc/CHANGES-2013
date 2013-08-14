@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2896 2013/08/14 05:59:32 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2897 2013/08/14 08:03:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4245,3 +4245,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/gnome-packagekit to 0.4.0nb28 [obache 2013-08-14]
 	Updated multimedia/gnome-mplayer to 1.0.8nb4 [obache 2013-08-14]
 	Updated x11/gnome-applets to 2.32.1.1nb29 [obache 2013-08-14]
+	Updated sysutils/gnome-power-manager to 2.24.4nb35 [obache 2013-08-14]
