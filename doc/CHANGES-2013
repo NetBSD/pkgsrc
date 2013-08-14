@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2893 2013/08/14 04:53:27 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2894 2013/08/14 05:32:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4242,3 +4242,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R to 3.0.1 [markd 2013-08-13]
 	Updated net/youtube-dl to 20130809 [tron 2013-08-13]
 	Updated mail/evolution to 2.32.3nb23 [obache 2013-08-14]
+	Updated pkgtools/gnome-packagekit to 0.4.0nb28 [obache 2013-08-14]
