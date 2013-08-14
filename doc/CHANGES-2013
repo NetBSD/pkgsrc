@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2894 2013/08/14 05:32:25 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2895 2013/08/14 05:40:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4243,3 +4243,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/youtube-dl to 20130809 [tron 2013-08-13]
 	Updated mail/evolution to 2.32.3nb23 [obache 2013-08-14]
 	Updated pkgtools/gnome-packagekit to 0.4.0nb28 [obache 2013-08-14]
+	Updated multimedia/gnome-mplayer to 1.0.8nb4 [obache 2013-08-14]
