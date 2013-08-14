@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/06/13 13:32:53 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/08/14 08:55:49 obache Exp $
 
 DISTNAME=	notify-0.5.2
-CATEGORIES=	security
+CATEGORIES=	sysutils
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://github.com/jugyo/notify
