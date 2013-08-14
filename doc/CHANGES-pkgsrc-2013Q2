@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.22 2013/08/12 14:21:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.23 2013/08/14 12:47:04 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -82,3 +82,7 @@ Pullup ticket #4207 - requested by taca
 net/samba: security update
 Pullup ticket #4208 - requested by taca
 net/samba35: security update
+Pullup ticket #4210 - requested by wiz
+www/py-werkzeug-docs: packaging fix
+Pullup ticket #4211 - requested by schmonz
+www/cvsweb: Perl compatibility patch
