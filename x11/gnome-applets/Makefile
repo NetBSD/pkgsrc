@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2013/06/06 12:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2013/08/14 05:59:16 obache Exp $
 #
 
 DISTNAME=		gnome-applets-2.32.1.1
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.32/}
 EXTRACT_SUFX=		.tar.bz2
@@ -79,7 +79,7 @@ BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"

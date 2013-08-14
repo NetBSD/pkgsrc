@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2010/12/16 11:37:38 ahoka Exp $
+$NetBSD: distinfo,v 1.29 2013/08/14 05:59:16 obache Exp $
 
 SHA1 (gnome-applets-2.32.1.1.tar.bz2) = 6edc3aea2bd2198b2bdbdb1fa63b481f724c8fe2
 RMD160 (gnome-applets-2.32.1.1.tar.bz2) = 50c8e169b02aa002917f4c6ea0f575522e3ae984
@@ -6,4 +6,6 @@ Size (gnome-applets-2.32.1.1.tar.bz2) = 10083534 bytes
 SHA1 (patch-aa) = 764fc46c7c000e21a1602286443e2633ec743631
 SHA1 (patch-ab) = f880abec6df2254b6541d4e5a894559763ef674b
 SHA1 (patch-ad) = 42fb64b30a031a1ea8f57f47cabdf63475b7987e
+SHA1 (patch-battstat_battstat__applet.c) = e80def5d2298785b716220b9490b4c20fe10241e
+SHA1 (patch-gweather_gweather-applet.c) = f3264b4b94a580974798ad29ebdf7f90e0963a8a
 SHA1 (patch-hal) = 8de5986b77a8ae7f99533eaff7f6a5a5c3069f3d
