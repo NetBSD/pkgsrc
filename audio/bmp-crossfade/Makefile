@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/08/14 01:13:10 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/14 01:16:10 khorben Exp $
 #
 
 PKGNAME=		bmp-crossfade-0.3.11
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.eisenlohr.org/xmms-crossfade/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.eisenlohr.org/xmms-crossfade/
 COMMENT=		Crossfading/Gapless Plugin for BMP
+
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
