@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/08/13 10:22:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/14 14:53:03 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -14,7 +14,7 @@ TEST_TARGET=		test
 
 USE_TOOLS+=		gmake lex pkg-config
 LIBTOOL_OVERRIDE=	# empty
-PHP_CHECK_INSTALLED=	Yes
+PHP_CHECK_INSTALLED=	No
 
 PHP_VERSIONS_ACCEPTED=		55
 
