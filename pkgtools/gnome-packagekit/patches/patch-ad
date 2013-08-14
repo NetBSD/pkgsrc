@@ -1,7 +1,28 @@
-$NetBSD: patch-ad,v 1.1 2009/03/27 09:24:45 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2013/08/14 05:31:04 obache Exp $
+
+* for libnotify-0.7 API change.
+* gtk_status_icon_set_tooltip is deprecated
 
 --- src/gpk-check-update.c.orig	2008-11-24 16:33:50.000000000 +0000
 +++ src/gpk-check-update.c
+@@ -491,7 +491,7 @@ gpk_check_update_critical_updates_warnin
+ 	}
+ 
+ 	/* do the bubble */
+-	notification = notify_notification_new (title, message, "help-browser", NULL);
++	notification = notify_notification_new (title, message, "help-browser");
+ 	if (notification == NULL) {
+ 		egg_warning ("failed to get bubble");
+ 		return;
+@@ -617,7 +617,7 @@ gpk_check_update_check_on_battery (GpkCh
+ 	/* TRANSLATORS: policy says update, but we are on battery and so prompt */
+ 	message = _("Automatic updates are not being installed as the computer is running on battery power");
+ 	/* TRANSLATORS: informs user will not install by default */
+-	notification = notify_notification_new (_("Updates not installed"), message, "help-browser", NULL);
++	notification = notify_notification_new (_("Updates not installed"), message, "help-browser");
+ 	notify_notification_set_timeout (notification, 15000);
+ 	notify_notification_set_urgency (notification, NOTIFY_URGENCY_LOW);
+ 	notify_notification_add_action (notification, "do-not-show-update-not-battery",
 @@ -766,7 +766,7 @@ gpk_check_update_query_updates (GpkCheck
  	/* TRANSLATORS: tooltip: how many updates are waiting to be applied */
  	g_string_append_printf (status_tooltip, ngettext ("There is %d update pending",
@@ -11,3 +32,12 @@ $NetBSD: patch-ad,v 1.1 2009/03/27 09:24:45 wiz Exp $
  
  	/* is policy none? */
  	if (update == GPK_UPDATE_ENUM_NONE) {
+@@ -994,7 +994,7 @@ gpk_check_update_auto_get_upgrades_cb (G
+ 
+ 	/* TRANSLATORS: a distro update is available, e.g. Fedora 8 to Fedora 9 */
+ 	title = _("Distribution upgrades available");
+-	notification = notify_notification_new (title, string->str, "help-browser", NULL);
++	notification = notify_notification_new (title, string->str, "help-browser");
+ 	if (notification == NULL) {
+ 		egg_warning ("failed to get bubble");
+ 		return;
