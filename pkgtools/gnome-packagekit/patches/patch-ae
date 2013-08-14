@@ -1,4 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2009/03/27 09:24:45 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2013/08/14 05:31:04 obache Exp $
+
+* gtk_status_icon_set_tooltip is deprecated
+* for libnotify-0.7 API change
 
 --- src/gpk-watch.c.orig	2008-11-24 16:34:22.000000000 +0000
 +++ src/gpk-watch.c
@@ -29,3 +32,30 @@ $NetBSD: patch-ae,v 1.1 2009/03/27 09:24:45 wiz Exp $
  			gpk_smart_icon_set_icon_name (watch->priv->sicon_restart, icon_name);
  		}
  	}
+@@ -372,7 +372,7 @@ gpk_watch_finished_cb (PkTaskList *tlist
+ 		goto out;
+ 
+ 	/* TRANSLATORS: title: an action has finished, and we are showing the libnotify bubble */
+-	notification = notify_notification_new (_("Task completed"), message, "help-browser", NULL);
++	notification = notify_notification_new (_("Task completed"), message, "help-browser");
+ 	notify_notification_set_timeout (notification, 5000);
+ 	notify_notification_set_urgency (notification, NOTIFY_URGENCY_LOW);
+ 	notify_notification_add_action (notification, "do-not-show-notify-complete",
+@@ -443,7 +443,7 @@ gpk_watch_error_code_cb (PkTaskList *tli
+ 	title_prefix = g_strdup_printf ("%s: %s", _("Package Manager"), title);
+ 
+ 	/* do the bubble */
+-	notification = notify_notification_new (title_prefix, message, "help-browser", NULL);
++	notification = notify_notification_new (title_prefix, message, "help-browser");
+ 	notify_notification_set_timeout (notification, 15000);
+ 	notify_notification_set_urgency (notification, NOTIFY_URGENCY_LOW);
+ 	notify_notification_add_action (notification, "show-error-details",
+@@ -491,7 +491,7 @@ gpk_watch_message_cb (PkTaskList *tlist,
+ 	escaped_details = g_markup_escape_text (details, -1);
+ 
+ 	/* do the bubble */
+-	notification = notify_notification_new (title_prefix, escaped_details, "help-browser", NULL);
++	notification = notify_notification_new (title_prefix, escaped_details, "help-browser");
+ 	notify_notification_set_timeout (notification, NOTIFY_EXPIRES_NEVER);
+ 	notify_notification_set_urgency (notification, NOTIFY_URGENCY_LOW);
+ 	ret = notify_notification_show (notification, &error);
