@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/06/06 12:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/08/14 05:31:04 obache Exp $
 #
 
 DISTNAME=	gnome-packagekit-0.4.0
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	pkgtools gnome
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -37,7 +37,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.30.0
 .include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
