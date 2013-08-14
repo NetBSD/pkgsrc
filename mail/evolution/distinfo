@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2012/09/21 11:49:20 obache Exp $
+$NetBSD: distinfo,v 1.83 2013/08/14 04:35:32 obache Exp $
 
 SHA1 (evolution-2.32.3.tar.bz2) = cc2a2126ef4192193dce50c43c5bb6fc0a57fcde
 RMD160 (evolution-2.32.3.tar.bz2) = 1b64d00a38cf8ad5c273cc4f4aee73124fe818af
@@ -7,7 +7,10 @@ SHA1 (patch-aa) = 6656278d2a54fdc585b4f0708da657ed0afbeec2
 SHA1 (patch-ab) = 792e5f7fdb0dc84fdbe0ef1ade21ce4a391e9328
 SHA1 (patch-ac) = 853fe9f4a28fa1fe1266607b93e4ef9f63969b42
 SHA1 (patch-ad) = 7efe568191ab181ea2b42ddac33db277b69b7d1e
+SHA1 (patch-calendar_gui_alarm-notify_alarm-queue.c) = 6466bcb2a53b2af82407a63d2e6439a985e286a5
 SHA1 (patch-plugins_caldav_caldav-browse-server.c) = c35c4acb0c3d28337d7aa811e81a4ce85ecec7b0
+SHA1 (patch-plugins_mail-notification_mail-notification.c) = 999ea9e55133077d1e3ed8c8dad26158b8e5260f
+SHA1 (patch-plugins_publish-calendar_publish-calendar.c) = 9af3644d68de690126c4cbaf7db9bb2da7b956b4
 SHA1 (patch-ya) = 73872309c1d69d6d10bf04d867cc04ce17e724d3
 SHA1 (patch-yb) = 6d09dceb5405b29cde657eea6fa0fbd004a8bd1f
 SHA1 (patch-yc) = 1312f89cd935dab9fd3bfae860a055d9d2fef794
