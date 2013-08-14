@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2903 2013/08/14 20:17:18 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2904 2013/08/14 20:39:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4254,3 +4254,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php54 to 5.4.17nb2 [taca 2013-08-14]
 	Updated lang/php55 to 5.5.1nb1 [taca 2013-08-14]
 	Updated editors/emacs24 to 24.3nb5 [wiz 2013-08-14]
+	Updated devel/at-spi2-core to 2.8.0nb1 [wiz 2013-08-14]
