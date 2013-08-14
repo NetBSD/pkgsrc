@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/29 13:23:59 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/08/14 04:11:12 obache Exp $
 
 SHA1 (notify-python-0.1.1.tar.bz2) = 490693cf601793f50cef1a3c82ba75025497fc00
 RMD160 (notify-python-0.1.1.tar.bz2) = 52f5b5cc7c01be32525db7a2edc0f3dee41911ef
 Size (notify-python-0.1.1.tar.bz2) = 214514 bytes
+SHA1 (patch-src_pynotify.defs) = 768e19b760802c1953159d642ef70b38be8b4c7d
