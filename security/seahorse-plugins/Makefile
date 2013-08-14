@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2013/06/06 12:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2013/08/14 08:30:06 obache Exp $
 
 DISTNAME=	seahorse-plugins-2.30.1
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.30/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +31,7 @@ GCONF_SCHEMAS+=		seahorse-plugins.schemas
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 # doesn't suffice, configure says:
