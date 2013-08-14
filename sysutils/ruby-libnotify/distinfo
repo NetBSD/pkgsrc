@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/14 12:51:16 obache Exp $
+
+SHA1 (ruby-libnotify-0.5.1.tar.gz) = 49c03da48c80ce962d164338e030114bd99300ef
+RMD160 (ruby-libnotify-0.5.1.tar.gz) = 97285d65f55938b9902841e76e8da69108313a06
+Size (ruby-libnotify-0.5.1.tar.gz) = 25822 bytes
