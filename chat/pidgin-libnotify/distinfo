@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/16 14:28:37 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2013/08/15 08:35:13 obache Exp $
 
 SHA1 (pidgin-libnotify-0.14.tar.gz) = 005e9663c7a36f68b9572341654818720a1e571a
 RMD160 (pidgin-libnotify-0.14.tar.gz) = 39d3f1a6339bb76c774273367b4a2e67c2a4b375
 Size (pidgin-libnotify-0.14.tar.gz) = 316365 bytes
+SHA1 (patch-src_pidgin-libnotify.c) = f786737a8d425d8a2fc275f28a48c8123a082565
