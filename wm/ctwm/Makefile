@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/06/09 15:26:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2013/08/15 20:26:51 rillig Exp $
 #
 
 DISTNAME=	ctwm-3.8.1
@@ -22,6 +22,7 @@ EXTRA_DEFINES+=		-DPATH_TO_M4=\"${TOOLS_PATH.gm4:Q}\"
 # The __EXTENSIONS__ is needed for sigjmp_buf.
 EXTRA_DEFINES.SunOS+=	-D__EXTENSIONS__
 MAKE_ENV+=		EXTRA_DEFINES=${EXTRA_DEFINES:Q}
+AUTO_MKDIRS=		yes
 
 pre-configure:
 	( ${ECHO} 'USER_JPEGLIBDIR = -L${JPEGBASE}/lib ${COMPILER_RPATH_FLAG}${JPEGBASE}/lib'; \
@@ -29,14 +30,10 @@ pre-configure:
 	  ${CAT} ${WRKSRC}/Imakefile.local-template; \
 	) >${WRKSRC}/Imakefile.local
 
-EXAMPLEDIR=${PREFIX}/share/examples/ctwm
-
 pre-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
 .for f in example.ctwmrc levitte.ctwmrc peterc.ctwmrc system.ctwmrc system.ctwmrc.gnome
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/ctwm/
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xsessions
 	${INSTALL_DATA} ${FILESDIR}/ctwm.desktop \
 	    ${DESTDIR}${PREFIX}/share/xsessions/ctwm.desktop
 
