@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2013/07/02 15:38:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2013/08/15 09:42:41 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -75,6 +75,8 @@ include/dovecot/doveadm-settings.h
 include/dovecot/doveadm-util.h
 include/dovecot/doveadm.h
 include/dovecot/dovecot-version.h
+include/dovecot/dsasl-client-private.h
+include/dovecot/dsasl-client.h
 include/dovecot/duplicate.h
 include/dovecot/eacces-error.h
 include/dovecot/env-util.h
@@ -110,8 +112,11 @@ include/dovecot/http-client-private.h
 include/dovecot/http-client.h
 include/dovecot/http-date.h
 include/dovecot/http-header-parser.h
+include/dovecot/http-message-parser.h
 include/dovecot/http-parser.h
+include/dovecot/http-request-parser.h
 include/dovecot/http-response-parser.h
+include/dovecot/http-response.h
 include/dovecot/http-transfer.h
 include/dovecot/http-url.h
 include/dovecot/imap-arg.h
@@ -370,8 +375,6 @@ include/dovecot/rfc822-parser.h
 include/dovecot/safe-memset.h
 include/dovecot/safe-mkdir.h
 include/dovecot/safe-mkstemp.h
-include/dovecot/sasl-client-private.h
-include/dovecot/sasl-client.h
 include/dovecot/sasl-server.h
 include/dovecot/sdbox-file.h
 include/dovecot/sdbox-storage.h
@@ -486,10 +489,13 @@ man/man1/deliver.1
 man/man1/doveadm-altmove.1
 man/man1/doveadm-auth.1
 man/man1/doveadm-config.1
+man/man1/doveadm-deduplicate.1
 man/man1/doveadm-director.1
 man/man1/doveadm-dump.1
+man/man1/doveadm-exec.1
 man/man1/doveadm-expunge.1
 man/man1/doveadm-fetch.1
+man/man1/doveadm-flags.1
 man/man1/doveadm-force-resync.1
 man/man1/doveadm-help.1
 man/man1/doveadm-import.1
@@ -697,6 +703,7 @@ share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.MailboxAlias.txt
 share/doc/dovecot/wiki/Plugins.Notify.txt
 share/doc/dovecot/wiki/Plugins.Snarf.txt
+share/doc/dovecot/wiki/Plugins.Stats.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.Virtual.txt
 share/doc/dovecot/wiki/Plugins.Zlib.txt
