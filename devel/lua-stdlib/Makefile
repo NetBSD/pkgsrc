@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/12/02 09:26:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/15 06:32:06 obache Exp $
 
 .include "../../devel/lua-stdlib/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/stdlib/${LUA_PKGPREFIX}-stdlib/}
+PKGREVISION=		1
 COMMENT=		Standard library for Lua programming language
 MAINTAINER=		cheusov@NetBSD.org
 
