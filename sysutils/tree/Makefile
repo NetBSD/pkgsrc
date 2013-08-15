@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/04/10 10:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/08/15 12:40:06 richard Exp $
 #
 
 DISTNAME=	tree-1.6.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://mama.indstate.edu/linux/tree/
 EXTRACT_SUFX=	.tgz
@@ -12,6 +13,10 @@ COMMENT=	Print a text or HTML tree diagram of a directory structure
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
+NO_CONFIGURE=	yes
+
+CFLAGS+=	-Wall -fomit-frame-pointer
+CFLAGS.linux+=	-DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
 
 MAKE_FLAGS+=		prefix=${PREFIX:Q}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}

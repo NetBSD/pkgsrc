@@ -1,8 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2013/04/10 10:46:26 wiz Exp $
-
-Fix build on systems lacking strverscmp.
-Remove -O4 (doesn't exist in most compilers).
-Fix DESTDIR.
+$NetBSD: patch-Makefile,v 1.2 2013/08/15 12:40:06 richard Exp $
 
 --- Makefile.orig	2011-06-24 14:25:27.000000000 +0000
 +++ Makefile
@@ -11,8 +7,9 @@ Fix DESTDIR.
  # Linux defaults:
  #CFLAGS=-ggdb -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
 -CFLAGS=-O4 -Wall  -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
-+CFLAGS=-DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
- LDFLAGS=-s
+-LDFLAGS=-s
++#CFLAGS=-DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++#LDFLAGS=-s
  
  # Uncomment for FreeBSD:
  #CFLAGS=-O2 -Wall -fomit-frame-pointer
