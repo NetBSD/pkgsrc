@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2012/10/24 15:38:43 joerg Exp $
+$NetBSD: distinfo,v 1.24 2013/08/15 00:05:44 gsutre Exp $
 
 SHA1 (xpaint-2.7.8.1.tar.bz2) = d225254cc15cbc166c392b112b57104657a33aaa
 RMD160 (xpaint-2.7.8.1.tar.bz2) = 8efca6ff71df8635b8ed50e0c6db2b81f2e068cf
@@ -11,5 +11,6 @@ SHA1 (patch-ae) = 5ecb812e962701a6d5f068bb7744c5115b2eb263
 SHA1 (patch-af) = 73f1289ca104f4c53e8d184251d5a84c5c1ec7ab
 SHA1 (patch-ag) = a8eba89d7389a3e0b0973bf3a3c25a76ae7e0d84
 SHA1 (patch-ai) = 38f3532befe2c58cc11d0e055765b6098bbdd9f5
+SHA1 (patch-bitmaps_Imakefile) = c9d566999b13b10e3f7d7d7a60c34ef520597117
 SHA1 (patch-image_h) = 5e8afa76bdd58cd747c13662e0a37fcf5a62256e
 SHA1 (patch-rw_readWritePS.c) = f56b512e888821134d2f7548741a33f0f8b886fd
