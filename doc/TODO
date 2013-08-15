@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12469 2013/08/14 15:45:21 taca Exp $
+$NetBSD: TODO,v 1.12470 2013/08/15 08:54:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,6 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
+	o cdrtools-3.01a17
 	o celestia-1.6.0
 	o cfitsio-3.310
 	o chasen-2.4.5
@@ -459,6 +460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o delegate-9.9.7
 	o denemo-1.0.4
 	o dhid-5.3
+	o digikam-3.3.0
 	o doclifter-2.12
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
@@ -718,7 +720,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.3.0
+	o libkface-3.3.0
+	o libkgeomap-3.3.0
+	o libkvkontakte-3.3.0
 	o libmcs-0.7.2
+	o libmediawiki-3.3.0
 	o libmemcached-1.0.17
 	o libmicrohttpd-0.9.28
 	o libnasl-2.3.1
@@ -779,11 +785,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mksh-47
 	o mkvtoolnix-6.3.0
 	o mnemosyne-2.2.1
+	o mng-2.0.2
 	o modular-xorg-server-1.14.2
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
 	o monit-5.1.1
-	o mono-3.2
+	o mono-3.2.1
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.8.0
@@ -865,6 +872,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pdmenu-1.2.87
 	o pen-0.17.3
+	o perl5-5.18.1
 	o pessulus-2.30.3 [GNOME 2.28]
 	o php-jpgraph-3.0.6
 	o php-sugarcrm-6.5.14
@@ -911,12 +919,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
+	o py-jinja2-2.7.1
 	o py-lxml-3.2.3
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-qt5-5.0.0
 	o py-simplejson-3.3.0
 	o py-sybase-0.37
+	o py-virtualenv-1.10.1
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.7.2
 	o qt5-libs-5.1
@@ -1106,7 +1116,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130803
+	o x264-devel-20130810
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
