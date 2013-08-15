@@ -1,0 +1,3 @@
+The `cdecimal` package is a fast drop-in replacement for the `decimal` module
+in Python's standard library. Both modules provide complete implementations of
+Mike Cowlishaw/IBM's `General Decimal Arithmetic Specification`.
