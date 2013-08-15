@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/04 10:29:02 adam Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/15 10:21:30 adam Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg2/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -40,13 +40,13 @@ post-install:
 # no alignment options needed for gcc >= 4.6 on i386
 .if ${MACHINE_ARCH} == "i386"
 .  if !empty(MACHINE_PLATFORM:MDarwin-*-i386) \
-   || !empty(MACHINE_PLATFORM:MSunOS-*-i386)
+   || !empty(MACHINE_PLATFORM:MSunOS-*-i386) \
+   || !empty(CC_VERSION:Mgcc-[123]*) \
+   || !empty(CC_VERSION:Mgcc-4.[01]*) \
+   || empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	--disable-asm
 .  elif !empty(CC_VERSION:Mgcc-4.[2345]*)
-CFLAGS+=-mstackrealign -mpreferred-stack-boundary=4
-.  elif !empty(CC_VERSION:Mgcc-[123]*) \
-     || !empty(CC_VERSION:Mgcc-4.[01]*) || empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=	--disable-asm
+CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
 .  endif
 .endif
 
