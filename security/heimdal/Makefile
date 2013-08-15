@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2013/07/15 02:02:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2013/08/15 11:15:11 jperkin Exp $
 
 DISTNAME=	heimdal-1.5.2
 PKGREVISION=	8
@@ -49,10 +49,13 @@ CFLAGS.Darwin+=		-DBIND_8_COMPAT
 OPSYSVARS+=		CONFIGURE_ENV
 CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 
-# Heimdal's configure script expects to find the readline.h header as
-# <readline.h>.
+.include "../../mk/readline.buildlink3.mk"
+
+.if ${READLINE_TYPE} == "readline"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.editlinereadline}/include/readline
+.elif ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editlinereadline}
+.endif
 
 PLIST_VARS+=		afskauth hcrypto
 .if ${OPSYS} == "IRIX"
@@ -91,7 +94,6 @@ pre-build:
 	${TOUCH} ${WRKSRC}/po/localefiles
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
