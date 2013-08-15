@@ -1,0 +1,3 @@
+Python binding for open-vcdiff, an encoder and decoder for the format
+described in RFC 3284:  "The VCDIFF Generic Differencing and Compression
+Data Format."
