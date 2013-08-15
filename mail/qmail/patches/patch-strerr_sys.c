@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2011/06/07 02:53:42 schmonz Exp $
+$NetBSD: patch-strerr_sys.c,v 1.1 2013/08/15 15:43:48 schmonz Exp $
 
 Compile on Darwin.
 

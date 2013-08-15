@@ -1,4 +1,6 @@
-$NetBSD: patch-hier.c,v 1.2 2012/03/12 03:53:55 sbd Exp $
+$NetBSD: patch-hier.c,v 1.3 2013/08/15 15:43:48 schmonz Exp $
+
+Don't install a manpage also installed by ucspi-tcp, or any catpages.
 
 --- hier.c.orig	1998-06-15 10:53:16.000000000 +0000
 +++ hier.c
