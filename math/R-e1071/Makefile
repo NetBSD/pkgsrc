@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/15 15:25:09 brook Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/15 09:34:23 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Misc Functions of the Department of Statistics (e1071), TU Wien
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	e1071
-R_PKGVER=	1.6
+R_PKGVER=	1.6-1
 
 USE_LANGUAGES=	c c++
 
