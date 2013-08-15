@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/08/15 10:21:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/15 18:49:10 adam Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg2/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ CONFIGURE_ARGS+=	--enable-avfilter
 #CONFIGURE_ARGS+=	--enable-avfilter-lavf
 CONFIGURE_ARGS+=	--enable-postproc
 
-INSTALLATION_DIRS=	lib share/doc/ffmpeg2 share/examples/ffmpeg2
+INSTALLATION_DIRS=	lib/ffmpeg2 share/doc/ffmpeg2 share/examples/ffmpeg2
 
 CONF_FILES+=	${PREFIX}/share/examples/ffmpeg2/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
