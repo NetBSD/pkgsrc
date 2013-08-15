@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12470 2013/08/15 08:54:36 wiz Exp $
+$NetBSD: TODO,v 1.12471 2013/08/15 09:12:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
-	o cdrtools-3.01a17
 	o celestia-1.6.0
 	o cfitsio-3.310
 	o chasen-2.4.5
