@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2912 2013/08/15 07:16:25 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2913 2013/08/15 08:04:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4263,3 +4263,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/gnome-volume-manager to 2.24.1nb28 [obache 2013-08-15]
 	Updated sysutils/brasero-nautilus to 2.32.1nb22 [obache 2013-08-15]
 	Updated audio/ario to 1.5.1nb20 [obache 2013-08-15]
+	Updated converters/p5-MARC-Charset to 1.35 [wen 2013-08-15]
