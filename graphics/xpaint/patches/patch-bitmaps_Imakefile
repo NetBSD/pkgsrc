@@ -1,0 +1,19 @@
+$NetBSD: patch-bitmaps_Imakefile,v 1.1 2013/08/15 00:05:44 gsutre Exp $
+
+Really protect /* in the assignment of SRCS.  Fixes the following error:
+
+making Makefiles in bitmaps...
+        mv -f Makefile Makefile.bak
+In file included from /usr/pkg/lib/X11/config/Imake.tmpl:2170:0,
+                 from Imakefile.c:16:
+./Imakefile:2:0: error: unterminated comment
+
+--- bitmaps/Imakefile.orig	2002-11-14 10:09:21.000000000 +0000
++++ bitmaps/Imakefile
+@@ -1,5 +1,5 @@
+ MISC = Imakefile
+-SRCS = *\/*
++SRCS = *'/'*
+ 
+ makelist:
+ 	sh -c 'for i in '"$(TEXT) $(SRCS) $(MISC) $(HDRS)"' ; do \
