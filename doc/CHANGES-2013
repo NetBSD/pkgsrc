@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2931 2013/08/15 12:35:14 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2932 2013/08/15 13:22:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4283,3 +4283,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-Rose-DB to 0.771 [wen 2013-08-15]
 	Updated databases/p5-Rose-DB-Object to 0.806 [wen 2013-08-15]
 	Updated databases/p5-Rose-DBx-AutoReconnect to 0.04 [wen 2013-08-15]
+	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.09 [wen 2013-08-15]
