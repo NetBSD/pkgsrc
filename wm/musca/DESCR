@@ -3,13 +3,15 @@ Simple dynamic window manager for X with features nicked from ratpoison and dwm:
  * Musca operates as a tiling window manager by default. It uses manual tiling,
    which means the user determines how the screen is divided into
    non-overlapping frames, with no restrictions on layout. Application windows
-   always fill their assigned frame, with the exception of transient windows and   popup dialog boxes which float above their parent application at the
+   always fill their assigned frame, with the exception of transient windows and
+   popup dialog boxes which float above their parent application at the
    appropriate size. Once visible, applications do not change frames unless so
    instructed.
  * Since not all applications suit tiling, a more traditional stacking window
    manager mode is also available, allowing windows to float at any screen
    location and overlap.
- * There are no built in status bars, panels, tabs or window decorations to take   up screen real estate. If the user wants any of these things, there are
+ * There are no built in status bars, panels, tabs or window decorations to take
+   up screen real estate. If the user wants any of these things, there are
    plenty of external applications available to do the job. Window decoration is
    limited to a slender border, which is coloured to indicate keyboard focus.
  * Windows are placed in named groups which can be used in a similar fashion to

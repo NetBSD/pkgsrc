@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/05/31 12:42:29 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/08/15 20:26:51 rillig Exp $
 #
 
 DISTNAME=	bbkeys-0.8.6
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbkeys.sourceforge.net/
 COMMENT=	General X Window keygrabber
 
-CONFLICTS+=	bbkeys09-*
+CONFLICTS+=	bbkeys09-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
