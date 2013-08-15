@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2906 2013/08/15 02:23:38 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2907 2013/08/15 02:36:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4257,3 +4257,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/at-spi2-core to 2.8.0nb1 [wiz 2013-08-14]
 	Updated math/R-car to 2.0.18 [wen 2013-08-15]
 	Updated math/R-DBI to 0.2.7 [wen 2013-08-15]
+	Updated textproc/p5-XML-LibXML to 2.0100 [wen 2013-08-15]
