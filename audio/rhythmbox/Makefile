@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2013/06/06 12:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2013/08/15 08:04:29 obache Exp $
 #
 
 DISTNAME=	rhythmbox-0.12.8
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,7 +40,7 @@ GCONF_SCHEMAS=		rhythmbox.schemas
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/brasero/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libplist/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"

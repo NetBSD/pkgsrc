@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2012/10/17 13:52:03 drochner Exp $
+$NetBSD: distinfo,v 1.38 2013/08/15 08:04:29 obache Exp $
 
 SHA1 (rhythmbox-0.12.8.tar.bz2) = 5d27923cc29b81d7bfbc73d867d7976a5295f964
 RMD160 (rhythmbox-0.12.8.tar.bz2) = 072d4fa06408ebc181b40147db1575d0ef4c99fe
@@ -9,3 +9,4 @@ SHA1 (patch-ae) = 95bc80c0b6e760613f2e1ad715e05de7b45af0bb
 SHA1 (patch-af) = 8babe8d7e5912f0fbd3a12d0c39dfecf75fef4af
 SHA1 (patch-ag) = de1b458b7a8510f9aded9763947e878597e28b43
 SHA1 (patch-ah) = 2cbaa1c2ed1637b269269a4c8828ebc8d5c8421d
+SHA1 (patch-plugins_status-icon_rb-status-icon-plugin.c) = 2b2e32dadacb5412806df01af068882cc799e7db
