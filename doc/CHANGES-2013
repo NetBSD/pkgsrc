@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2918 2013/08/15 08:54:25 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2919 2013/08/15 09:08:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Aggregate to 0.368 [wen 2013-08-15]
 	Updated chat/pidgin-libnotify to 0.14nb30 [obache 2013-08-15]
 	Updated time/p5-MooseX-Types-DateTime to 0.08 [wen 2013-08-15]
+	Updated security/p5-Crypt-Blowfish to 2.14 [wen 2013-08-15]
