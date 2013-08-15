@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/02/06 23:23:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/15 06:32:06 obache Exp $
 #
 
 DISTNAME=		luasec-0.4
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://luaforge.net/frs/download.php/4255/
 
