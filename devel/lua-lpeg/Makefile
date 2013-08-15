@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/06/13 22:13:58 alnsn Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/15 06:32:05 obache Exp $
 #
 
 DISTNAME=	lpeg-0.12
 PKGNAME=	${DISTNAME:S/lpeg/lua-lpeg/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.inf.puc-rio.br/~roberto/lpeg/
 
