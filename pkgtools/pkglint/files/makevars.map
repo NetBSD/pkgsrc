@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.235 2013/08/15 17:57:44 wiz Exp $
+# $NetBSD: makevars.map,v 1.236 2013/08/15 20:30:43 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -210,6 +210,7 @@ CC			ShellCommand [$system]
 CFLAGS*			List of CFlag [$package_list]
 # ^^ may also be changed by the user
 CHECK_BUILTIN		YesNo [builtin.mk:d,m:s]
+CHECK_BUILTIN.*		YesNo [*:p]
 CHECK_FILES_SKIP	List of Pathmask [m:a,c:a]
 CHECK_FILES_SUPPORTED	YesNo [$package]
 CHECK_HEADERS		YesNo [$user]
@@ -367,6 +368,7 @@ GNU_CONFIGURE_PREFIX	Pathname [m:s]
 HAS_CONFIGURE		Yes [m:s,c:s]
 HEADER_TEMPLATES	List of Pathname [$package_list]
 HOMEPAGE		URL [$package]
+IGNORE_PKG.*		Yes [*:sp]
 INCOMPAT_CURSES		InternalList of PlatformTriple [m:as]
 INCOMPAT_ICONV		InternalList of PlatformTriple
 INFO_DIR		Pathname
