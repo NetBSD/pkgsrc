@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2924 2013/08/15 10:44:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2925 2013/08/15 10:47:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4276,3 +4276,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.5 [adam 2013-08-15]
 	Added devel/SDL2 version 2.0.0 [adam 2013-08-15]
 	Updated devel/py-virtualenv to 1.10.1 [wiz 2013-08-15]
+	Updated x11/pixman to 0.30.2 [wiz 2013-08-15]
