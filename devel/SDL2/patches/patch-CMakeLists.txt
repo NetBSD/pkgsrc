@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/08/15 10:26:16 adam Exp $
+
+Allow in-tree build.
+Handle .dylib extension on Darwin.
+
+--- CMakeLists.txt.orig	2013-08-12 02:57:53.000000000 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,3 @@
+-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+-  message(FATAL_ERROR "Prevented in-tree built. Please create a build directory outside of the SDL source code and call cmake from there")
+-endif()
+ 
+ cmake_minimum_required(VERSION 2.6)
+ project(SDL2 C)
+@@ -1185,10 +1182,15 @@ list(APPEND INCLUDE_FILES ${BIN_INCLUDE_
+ install(FILES ${INCLUDE_FILES} DESTINATION include/SDL2)
+ 
+ if(SDL_SHARED)
++  if(APPLE)
++    set(SO_EXT "dylib")
++  else(APPLE)
++    set(SO_EXT "so")
++  endif(APPLE)
+   install(CODE "
+     execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink
+-    \"libSDL2-2.0.so\" \"libSDL2.so\")")
+-  install(FILES ${SDL2_BINARY_DIR}/libSDL2.so DESTINATION "lib${LIB_SUFFIX}")
++    \"libSDL2-2.0.${SO_EXT}\" \"libSDL2.${SO_EXT}\")")
++  install(FILES ${SDL2_BINARY_DIR}/libSDL2.${SO_EXT} DESTINATION "lib${LIB_SUFFIX}")
+ endif(SDL_SHARED)
+ 
+ if(NOT WINDOWS OR CYGWIN)
