@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/08/20 18:59:50 sno Exp $
+$NetBSD: distinfo,v 1.3 2013/08/15 12:33:00 wen Exp $
 
-SHA1 (Rose-DBx-AutoReconnect-0.03.tar.gz) = 236b0c7aaa7fbae66f5954bc556a5fe6e32723a4
-RMD160 (Rose-DBx-AutoReconnect-0.03.tar.gz) = 96851205cf2763065aaeff0bfaa801e081c9c402
-Size (Rose-DBx-AutoReconnect-0.03.tar.gz) = 3739 bytes
+SHA1 (Rose-DBx-AutoReconnect-0.04.tar.gz) = 3bd241371ba529a34a091b9b6e899df23abf1ac0
+RMD160 (Rose-DBx-AutoReconnect-0.04.tar.gz) = 0c9eb73e699700d0e86067816283223c0970d9af
+Size (Rose-DBx-AutoReconnect-0.04.tar.gz) = 4056 bytes
