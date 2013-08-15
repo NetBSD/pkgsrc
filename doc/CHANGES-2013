@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2937 2013/08/15 17:52:40 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2938 2013/08/15 17:53:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4289,3 +4289,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/py-open-vcdiff to 0.1pre06d46e3de6f7 [joerg 2013-08-15]
 	Updated www/contao211 to 2.11.11nb1 [taca 2013-08-15]
 	Updated www/contao30 to 3.0.6nb2 [taca 2013-08-15]
+	Updated www/contao31 to 3.1.1nb1 [taca 2013-08-15]
