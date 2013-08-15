@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2013/07/23 06:50:39 wiz Exp $
+$NetBSD: patch-af,v 1.6 2013/08/15 08:15:04 jperkin Exp $
 
 Run-time path fix for Solaris for the X client libraries.  Without this
 patch, libraries such as libXext.so will not contain a run-time link path
@@ -11,9 +11,12 @@ Use pkgsrc CC, CXX, CFLAGS and INSTALL.
 
 --- sun.cf.orig	2013-07-23 05:23:14.000000000 +0000
 +++ sun.cf
-@@ -432,7 +432,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+@@ -430,9 +430,9 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ #  endif
+ # endif
  # if OSMinorVersion > 10
- #  define InstallCmd	    /usr/gnu/bin/install
+-#  define InstallCmd	    /usr/gnu/bin/install
++#  define InstallCmd	    @@INSTALL@@
  # elif OSMinorVersion > 3
 -#  define InstallCmd	    /usr/ucb/install
 +#  define InstallCmd	    @@INSTALL@@
