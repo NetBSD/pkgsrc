@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2913 2013/08/15 08:04:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2914 2013/08/15 08:05:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/brasero-nautilus to 2.32.1nb22 [obache 2013-08-15]
 	Updated audio/ario to 1.5.1nb20 [obache 2013-08-15]
 	Updated converters/p5-MARC-Charset to 1.35 [wen 2013-08-15]
+	Updated audio/rhythmbox to 0.12.8nb29 [obache 2013-08-15]
