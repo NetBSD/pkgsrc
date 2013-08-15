@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/08/15 07:16:07 obache Exp $
+# $NetBSD: Makefile,v 1.36 2013/08/15 07:20:27 obache Exp $
 #
 
 DISTNAME=	ario-1.5.1
@@ -37,6 +37,5 @@ BUILDLINK_TRANSFORM+=	rm:-W${fl}
 .include "../../audio/taglib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4.0
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
