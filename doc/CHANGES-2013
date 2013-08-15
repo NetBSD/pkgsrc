@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2938 2013/08/15 17:53:53 taca Exp $
+$NetBSD: CHANGES-2013,v 1.2939 2013/08/15 17:57:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4290,3 +4290,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211 to 2.11.11nb1 [taca 2013-08-15]
 	Updated www/contao30 to 3.0.6nb2 [taca 2013-08-15]
 	Updated www/contao31 to 3.1.1nb1 [taca 2013-08-15]
+	Updated pkgtools/pkglint to 4.132 [wiz 2013-08-15]
