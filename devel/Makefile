@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1767 2013/07/29 16:44:09 taca Exp $
+# $NetBSD: Makefile,v 1.1768 2013/08/15 10:27:09 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -17,6 +17,7 @@ SUBDIR+=	Renaissance
 SUBDIR+=	SDL
 SUBDIR+=	SDL-intro-en
 SUBDIR+=	SDL-intro-ko
+SUBDIR+=	SDL2
 SUBDIR+=	SDL_Pango
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
