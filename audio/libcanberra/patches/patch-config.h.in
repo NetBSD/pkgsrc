@@ -1,0 +1,15 @@
+$NetBSD: patch-config.h.in,v 1.1 2013/08/15 09:45:58 richard Exp $
+
+* better support for solaris which defines _BIG_ENDIAN
+
+--- config.h.in.orig	2011-02-18 00:26:31.000000000 +0000
++++ config.h.in
+@@ -210,7 +210,7 @@
+ /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
+    significant byte first (like Motorola and SPARC, unlike Intel). */
+ #if defined AC_APPLE_UNIVERSAL_BUILD
+-# if defined __BIG_ENDIAN__
++# if defined(__BIG_ENDIAN__) || defined(_BIG_ENDIAN)
+ #  define WORDS_BIGENDIAN 1
+ # endif
+ #else
