@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2013/07/11 11:55:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.112 2013/08/15 14:32:40 schmonz Exp $
 #
 
 DISTNAME=		ikiwiki_3.20130711
@@ -66,6 +66,12 @@ TEST_TARGET=		test
 
 pre-configure:
 	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+TOOLS_PLATFORM.find=	# empty, to force GNU find from pkgsrc findutils
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../lang/python/application.mk"
