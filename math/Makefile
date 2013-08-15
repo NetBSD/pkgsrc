@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2013/07/06 00:36:53 rodent Exp $
+# $NetBSD: Makefile,v 1.255 2013/08/15 09:24:45 wen Exp $
 
 COMMENT=	Mathematics
 
@@ -42,6 +42,7 @@ SUBDIR+=	R-maps
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
 SUBDIR+=	R-pixmap
+SUBDIR+=	R-plyr
 SUBDIR+=	R-randomForest
 SUBDIR+=	R-sgeostat
 SUBDIR+=	R-shapefiles
