@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2935 2013/08/15 17:15:50 joerg Exp $
+$NetBSD: CHANGES-2013,v 1.2936 2013/08/15 17:50:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/py-cdecimal to 2.3 [richard 2013-08-15]
 	Updated devel/p5-Devel-CheckOS to 1.71 [wen 2013-08-15]
 	Added devel/py-open-vcdiff to 0.1pre06d46e3de6f7 [joerg 2013-08-15]
+	Updated www/contao211 to 2.11.11nb1 [taca 2013-08-15]
