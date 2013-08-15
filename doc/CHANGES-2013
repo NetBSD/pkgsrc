@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2920 2013/08/15 09:12:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2921 2013/08/15 09:26:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-MooseX-Types-DateTime to 0.08 [wen 2013-08-15]
 	Updated security/p5-Crypt-Blowfish to 2.14 [wen 2013-08-15]
 	Updated sysutils/cdrtools to 3.01alpha17 [wiz 2013-08-15]
+	Added math/R-plyr version 1.8 [wen 2013-08-15]
