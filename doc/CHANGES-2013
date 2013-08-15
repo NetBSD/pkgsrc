@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2916 2013/08/15 08:21:54 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2917 2013/08/15 08:35:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/rhythmbox to 0.12.8nb29 [obache 2013-08-15]
 	Updated x11/xorg-cf-files to 1.0.5nb1 [jperkin 2013-08-15]
 	Updated devel/p5-Test-Aggregate to 0.368 [wen 2013-08-15]
+	Updated chat/pidgin-libnotify to 0.14nb30 [obache 2013-08-15]
