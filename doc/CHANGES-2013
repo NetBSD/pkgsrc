@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2909 2013/08/15 05:41:51 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2910 2013/08/15 05:46:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-LibXML to 2.0100 [wen 2013-08-15]
 	Updated devel/p5-Scalar-List-Utils to 1.31 [wen 2013-08-15]
 	Updated x11/eekboard to 1.0.5nb10 [obache 2013-08-15]
+	Updated sysutils/gnome-volume-manager to 2.24.1nb28 [obache 2013-08-15]
