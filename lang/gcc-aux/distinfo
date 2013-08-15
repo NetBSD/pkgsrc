@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/04/29 21:34:48 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/08/15 10:58:42 marino Exp $
 
 SHA1 (gcc-4.7.3.tar.bz2) = 69e02737bd6e1a7c6047d801600d39c32b9427ca
 RMD160 (gcc-4.7.3.tar.bz2) = b4ba153b098cad726ecd28195ee445aa542d37ae
@@ -18,6 +18,3 @@ Size (gnat-bootstrap.x86_64.netbsd.tar.bz2) = 30572187 bytes
 SHA1 (gnat-bootstrap.i386.solaris.tar.bz2) = 4962657bfc894a20ad3102c1f6fe8e566b47cb51
 RMD160 (gnat-bootstrap.i386.solaris.tar.bz2) = ae72e76d0aba94451d99b9a70a3c049c9258cc82
 Size (gnat-bootstrap.i386.solaris.tar.bz2) = 43247034 bytes
-SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = cfc0898f37eda462fa27e87ee9e06e5334daedec
-SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = 80154157d9e0ceefe078f1d05b08a9a17bec8503
-SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = e1215dd90c32d7eabfbf82f3f45b91994a61ecc4
