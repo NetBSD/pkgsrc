@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/08/15 10:26:16 adam Exp $
+
+SHA1 (SDL2-2.0.0.tar.gz) = a907eb5203abad6649c1eae0120d96c0a1931350
+RMD160 (SDL2-2.0.0.tar.gz) = 3e29daa152eae2c1a473b8dd413e1b07ce35cd70
+Size (SDL2-2.0.0.tar.gz) = 3623960 bytes
+SHA1 (patch-CMakeLists.txt) = a82312d4063fd57af66bbc7600d1e84573bf5c4d
