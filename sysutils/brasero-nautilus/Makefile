@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2013/06/06 12:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2013/08/15 05:58:53 obache Exp $
 #
 
 DISTNAME=	brasero-2.32.1
 PKGNAME=	brasero-nautilus-2.32.1
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,7 +40,6 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.15
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
