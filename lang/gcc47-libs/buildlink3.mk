@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2013/06/21 09:40:47 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2013/08/15 06:49:54 richard Exp $
 
 BUILDLINK_TREE+=	gcc47-libs
 
@@ -32,9 +32,9 @@ ${SPECS_LIBGCC}:
 	@${ECHO} "*link_libgcc:" >${SPECS_LIBGCC}
 	@${ECHO} "%D $(LINKER_RPATH_FLAG)${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib/%M" >>${SPECS_LIBGCC}
 
-_WRAP_EXTRA_ARGS.CC+=	-specs ${SPECS_LIBGCC}
-_WRAP_EXTRA_ARGS.CXX+=	-specs ${SPECS_LIBGCC}
-_WRAP_EXTRA_ARGS.FC+=	-specs ${SPECS_LIBGCC}
+_WRAP_EXTRA_ARGS.CC+=	-specs=${SPECS_LIBGCC}
+_WRAP_EXTRA_ARGS.CXX+=	-specs=${SPECS_LIBGCC}
+_WRAP_EXTRA_ARGS.FC+=	-specs=${SPECS_LIBGCC}
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
