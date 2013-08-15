@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2921 2013/08/15 09:26:22 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2922 2013/08/15 09:35:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4272,3 +4272,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Crypt-Blowfish to 2.14 [wen 2013-08-15]
 	Updated sysutils/cdrtools to 3.01alpha17 [wiz 2013-08-15]
 	Added math/R-plyr version 1.8 [wen 2013-08-15]
+	Updated math/R-e1071 to 1.6.1 [wen 2013-08-15]
