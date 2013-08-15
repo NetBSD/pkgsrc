@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/06/06 12:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/08/15 05:19:36 obache Exp $
 #
 
 DISTNAME=	eekboard-1.0.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/eekboard/
 
@@ -54,11 +54,10 @@ TEST_TARGET=		check
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
