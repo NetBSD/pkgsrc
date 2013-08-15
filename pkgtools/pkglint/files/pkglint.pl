@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.856 2013/05/26 18:09:24 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.857 2013/08/15 20:30:43 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4253,7 +4253,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				$line->log_warning("${varname} must be a positive integer number.");
 			}
 			if ($line->fname !~ m"(?:^|/)Makefile$") {
-				$line->log_error("${varname} must not be set outside the package Makefile.");
+				$line->log_error("${varname} only makes sense directly in the package Makefile.");
 				$line->explain_error(
 "Usually, different packages using the same Makefile.common have",
 "different dependencies and will be bumped at different times (e.g. for",
@@ -6142,7 +6142,7 @@ sub checkfile_package_Makefile($$) {
 	}
 
 	if (!exists($pkgctx_vardef->{"LICENSE"})) {
-		log_error($fname, NO_LINE_NUMBER, "All packages must define their LICENSE.");
+		log_error($fname, NO_LINE_NUMBER, "Each package must define its LICENSE.");
 	}
 
 	if (exists($pkgctx_vardef->{"GNU_CONFIGURE"}) && exists($pkgctx_vardef->{"USE_LANGUAGES"})) {
@@ -6230,6 +6230,9 @@ sub checkfile_package_Makefile($$) {
 
 			if (dewey_cmp($effective_pkgversion, "<", $suggver)) {
 				$effective_pkgname_line->log_warning("This package should be updated to ${suggver}${comment}.");
+				$effective_pkgname_line->explain_warning(
+"The wishlist for package updates in doc/TODO mentions that a newer",
+"version of this package is available.");
 			}
 			if (dewey_cmp($effective_pkgversion, "==", $suggver)) {
 				$effective_pkgname_line->log_note("The update request to ${suggver} from doc/TODO${comment} has been done.");
@@ -6281,6 +6284,16 @@ sub checkfile_patch($) {
 		CFA CH CHD CLD0 CLD CLA0 CLA
 		UFA UH UL
 	);
+
+	my @comment_explanation = (
+"Each patch must document why it is necessary. If it has been applied",
+"because of a security issue, a reference to the CVE should be mentioned",
+"as well.",
+"",
+"Since it is our goal to have as few patches as possible, all patches",
+"should be sent to the upstream maintainers of the package. After you",
+"have done so, you should add a reference to the bug report containing",
+"the patch.");
 
 	my ($line, $m);
 
@@ -6433,11 +6446,13 @@ sub checkfile_patch($) {
 		}], [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
 			if (!$seen_comment) {
 				$line->log_error("Comment expected.");
+				$line->explain_error(@comment_explanation);
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
 			if (!$seen_comment) {
 				$line->log_error("Comment expected.");
+				$line->explain_error(@comment_explanation);
 			}
 		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
 			$seen_comment = true;
@@ -6450,6 +6465,7 @@ sub checkfile_patch($) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
 				$line->log_error("Comment expected.");
+				$line->explain_error(@comment_explanation);
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_CENTER, re_patch_ufd, PST_UFA, sub() {
@@ -6457,6 +6473,7 @@ sub checkfile_patch($) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
 				$line->log_error("Comment expected.");
+				$line->explain_error(@comment_explanation);
 			}
 		}], [PST_CENTER, undef, PST_TEXT, sub() {
 			$opt_warn_space and $line->log_note("Empty line expected.");
