@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2927 2013/08/15 11:42:53 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2928 2013/08/15 12:18:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/pixman to 0.30.2 [wiz 2013-08-15]
 	Removed pkgtools/tinderbox-dragonfly [marino 2013-08-15]
 	Updated databases/p5-DBI to 1.628 [wen 2013-08-15]
+	Updated databases/p5-SQL-ReservedWords to 0.8 [wen 2013-08-15]
