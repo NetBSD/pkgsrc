@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2934 2013/08/15 15:22:33 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2935 2013/08/15 17:15:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4286,3 +4286,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.09 [wen 2013-08-15]
 	Updated math/py-cdecimal to 2.3 [richard 2013-08-15]
 	Updated devel/p5-Devel-CheckOS to 1.71 [wen 2013-08-15]
+	Added devel/py-open-vcdiff to 0.1pre06d46e3de6f7 [joerg 2013-08-15]
