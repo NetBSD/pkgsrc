@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2932 2013/08/15 13:22:22 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2933 2013/08/15 14:25:15 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4284,3 +4284,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-Rose-DB-Object to 0.806 [wen 2013-08-15]
 	Updated databases/p5-Rose-DBx-AutoReconnect to 0.04 [wen 2013-08-15]
 	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.09 [wen 2013-08-15]
+	Updated math/py-cdecimal to 2.3 [richard 2013-08-15]
