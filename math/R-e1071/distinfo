@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/04/15 15:25:09 brook Exp $
+$NetBSD: distinfo,v 1.4 2013/08/15 09:34:23 wen Exp $
 
-SHA1 (R/e1071_1.6.tar.gz) = 96cd5d7643178580000ce515ca60816a61a5a9d2
-RMD160 (R/e1071_1.6.tar.gz) = fbe7841dc8ec8eb9d4b2ec409fa20a6a0bed1e29
-Size (R/e1071_1.6.tar.gz) = 425215 bytes
+SHA1 (R/e1071_1.6-1.tar.gz) = d95d38445003a8120fc96e73667c9bdd90b77392
+RMD160 (R/e1071_1.6-1.tar.gz) = 76b0f58d4eb758d21795ac1e9a0fb93d6193f319
+Size (R/e1071_1.6-1.tar.gz) = 258910 bytes
