@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2950 2013/08/16 07:43:12 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2951 2013/08/16 08:14:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/dhcpcd-gtk to 0.6.0nb10 [obache 2013-08-16]
 	Updated x11/xfce4-exo to 0.3.101nb21 [obache 2013-08-16]
 	Updated x11/xfce4-settings to 4.6.5nb19 [obache 2013-08-16]
+	Updated time/xfce4-orage to 4.6.1nb19 [obache 2013-08-16]
