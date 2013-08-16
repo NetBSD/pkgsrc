@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2010/09/07 19:12:03 adam Exp $
+$NetBSD: patch-ac,v 1.5 2013/08/16 02:04:25 obache Exp $
 
---- sounds/Makefile.in.orig	2010-08-21 20:53:37.000000000 +0000
+--- sounds/Makefile.in.orig	2013-02-14 20:01:55.000000000 +0000
 +++ sounds/Makefile.in
-@@ -261,7 +261,7 @@ top_srcdir = @top_srcdir@
+@@ -303,7 +303,7 @@ top_srcdir = @top_srcdir@
  balsa_SOUNDS = startup.wav newmail.wav
  balsasoundsdir = $(datadir)/sounds/balsa
  balsasounds_DATA = $(balsa_SOUNDS)
