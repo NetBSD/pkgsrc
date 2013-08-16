@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2013/08/12 09:36:41 obache Exp $
+# $NetBSD: Makefile,v 1.69 2013/08/16 09:20:41 obache Exp $
 
 DISTNAME=	vino-2.32.2
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +31,7 @@ GCONF_SCHEMAS=		vino-server.schemas
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
