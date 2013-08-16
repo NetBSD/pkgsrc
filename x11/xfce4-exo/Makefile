@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/08/16 06:45:12 obache Exp $
+# $NetBSD: Makefile,v 1.33 2013/08/16 09:20:42 obache Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ XFCE4_VERSION=	0.3.101
 
 DISTNAME=	exo-${XFCE4_VERSION}
 PKGNAME=	xfce4-exo-${XFCE4_VERSION}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	x11
 COMMENT=	Xfce extension library
 
@@ -36,7 +36,7 @@ OWN_DIRS+=		${EGDIR}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
