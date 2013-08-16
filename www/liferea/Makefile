@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2013/08/16 02:37:01 obache Exp $
+# $NetBSD: Makefile,v 1.121 2013/08/16 09:20:41 obache Exp $
 
 DISTNAME=		liferea-1.4.28
-PKGREVISION=		34
+PKGREVISION=		35
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -47,7 +47,7 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
