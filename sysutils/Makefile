@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2013/08/14 12:52:25 obache Exp $
+# $NetBSD: Makefile,v 1.582 2013/08/16 09:26:29 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -261,7 +261,6 @@ SUBDIR+=	libgksu
 SUBDIR+=	libgtop
 SUBDIR+=	libirman
 SUBDIR+=	libnotify
-SUBDIR+=	libnotify07
 SUBDIR+=	libol
 SUBDIR+=	liboobs
 SUBDIR+=	libpciaccess
