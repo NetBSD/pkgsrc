@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2953 2013/08/16 08:31:54 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2954 2013/08/16 09:18:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4304,3 +4304,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/xfce4-orage to 4.6.1nb19 [obache 2013-08-16]
 	Updated net/chrony to 1.29 [hannken 2013-08-16]
 	Updated security/heimdal to 1.5.3 [adam 2013-08-16]
+	Updated sysutils/libnotify to 0.7.5 [obache 2013-08-16]
