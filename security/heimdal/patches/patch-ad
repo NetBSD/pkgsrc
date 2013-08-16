@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.12 2013/07/26 12:40:06 ryoon Exp $
+$NetBSD: patch-ad,v 1.13 2013/08/16 08:30:14 adam Exp $
 
 * GNU/kFreeBSD parts: use host of Debian GNU/kFreeBSD 7.0.
 
@@ -53,12 +53,3 @@ $NetBSD: patch-ad,v 1.12 2013/07/26 12:40:06 ryoon Exp $
  	native_pthread_support=yes
  	PTHREAD_CFLAGS=-pthread
  	PTHREAD_LIBADD=-pthread
-@@ -26547,7 +26551,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
- int
- main ()
- {
--unsigned int foo; __sync_add_and_fetch(&foo, 1);
-+unsigned int foo, bar; bar = __sync_add_and_fetch(&foo, 1);
-   ;
-   return 0;
- }
