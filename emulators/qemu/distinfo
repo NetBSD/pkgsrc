@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.86 2013/07/29 13:10:26 adam Exp $
+$NetBSD: distinfo,v 1.87 2013/08/16 21:20:11 adam Exp $
 
-SHA1 (qemu-1.5.2.tar.bz2) = 932c04cdb227e1553c79a43bbf7552a433c815a9
-RMD160 (qemu-1.5.2.tar.bz2) = db8509d58d1cc461cca28f35e69efd7c0143be07
-Size (qemu-1.5.2.tar.bz2) = 11932902 bytes
+SHA1 (qemu-1.6.0.tar.bz2) = 5f754fc128aaafd0c7aee2204d453f4be1ac859e
+RMD160 (qemu-1.6.0.tar.bz2) = e9cd36df6cba757a37dd34b7889f3190e7b6f222
+Size (qemu-1.6.0.tar.bz2) = 12040196 bytes
 SHA1 (patch-ef) = 871ccf29463dec1bd56d7f7808248c5b1af4d4d6
-SHA1 (patch-et) = bc96fbe2869042f9a77716cfe3c5342262e7b489
+SHA1 (patch-et) = 8c876c7ba134345c51f139fa93ea95bcd5146f5d
 SHA1 (patch-hw_display_omap__dss.c) = af89754a9a078a5b52240473d85351bd447623c0
-SHA1 (patch-hw_net_etraxfs__eth.c) = a6ac71e3a2a605bbabc52792db1d063dcb7764c2
+SHA1 (patch-hw_net_etraxfs__eth.c) = 444c6f8a8ad26d9762bfc8a0672afbc7b858fc9d
 SHA1 (patch-hw_net_xilinx__axienet.c) = 02461c2cd2985c352626e46ba93844606783460e
-SHA1 (patch-include_qemu_thread-posix.h) = 7722055df516a8bcd01d36ea0474d2bbfbe27eaa
-SHA1 (patch-ioport.c) = a1bb22c6e22c0b0f3acacfa2023f7b45463e0041
-SHA1 (patch-memory.c) = b18fa7273a52e387943062e03c90501c4d9b30f4
-SHA1 (patch-net_tap-bsd.c) = 8f97df5f23212d6b748786a4ab417520abc6b066
+SHA1 (patch-memory.c) = 4b0452da427c52c17ff4b9c38d2caace1c9ce939
+SHA1 (patch-net_tap-bsd.c) = b87c2af1e63fe7a345bff117ef58fc311763338c
 SHA1 (patch-slirp_tcp__subr.c) = 430157ea8a92fe1d6fc4f1f22ea5530641315fe1
-SHA1 (patch-user-exec.c) = 41f8bfdd86cbaa974ceb91571a2b2293b9df5153
+SHA1 (patch-user-exec.c) = ba20197b7c1209357568817cc56d31f8aa5b1905
 SHA1 (patch-util_hbitmap.c) = 372fcbad5272205cd354bc7760ead77e017b07d1
-SHA1 (patch-util_qemu-thread-posix.c) = 0f3ce555b4d1328a869a374bf58eee3bda320cc2
