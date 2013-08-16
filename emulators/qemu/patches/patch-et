@@ -1,8 +1,8 @@
-$NetBSD: patch-et,v 1.8 2013/07/09 17:00:58 tsutsui Exp $
+$NetBSD: patch-et,v 1.9 2013/08/16 21:20:11 adam Exp $
 
---- Makefile.orig	2013-06-26 21:47:29.000000000 +0000
+--- Makefile.orig	2013-08-15 19:56:23.000000000 +0000
 +++ Makefile
-@@ -324,8 +324,9 @@ install-datadir:
+@@ -329,8 +329,9 @@ endif
  install-confdir:
  	$(INSTALL_DIR) "$(DESTDIR)$(qemu_confdir)"
  
@@ -12,5 +12,5 @@ $NetBSD: patch-et,v 1.8 2013/07/09 17:00:58 tsutsui Exp $
 +	$(INSTALL_DIR) "$(DESTDIR)$(egdir)"
 +	$(INSTALL_DATA) $(SRC_PATH)/sysconfigs/target/target-x86_64.conf "$(DESTDIR)$(egdir)"
  
- install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig install-datadir
- 	$(INSTALL_DIR) "$(DESTDIR)$(bindir)"
+ install: all $(if $(BUILD_DOCS),install-doc) install-sysconfig \
+ install-datadir install-localstatedir
