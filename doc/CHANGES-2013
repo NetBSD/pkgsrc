@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2942 2013/08/16 02:37:20 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2943 2013/08/16 02:43:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4293,3 +4293,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkglint to 4.132 [wiz 2013-08-15]
 	Updated mail/balsa to 2.4.14 [obache 2013-08-16]
 	Updated www/liferea to 1.4.28nb34 [obache 2013-08-16]
+	Updated www/liferea-current to 1.8.15nb1 [obache 2013-08-16]
