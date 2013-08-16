@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2013/08/16 02:04:25 obache Exp $
+# $NetBSD: Makefile,v 1.104 2013/08/16 09:20:40 obache Exp $
 
 DISTNAME=	balsa-2.4.14
+PKGREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://pawsa.fedorapeople.org/balsa/
 EXTRACT_SUFX=	.tar.bz2
@@ -41,7 +42,7 @@ CONF_FILES=	${EGDIR}/balsa.soundlist ${PKG_SYSCONFDIR}/sound/events/balsa.soundl
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"

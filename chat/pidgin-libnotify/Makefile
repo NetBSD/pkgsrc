@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2013/08/15 08:36:55 obache Exp $
+# $NetBSD: Makefile,v 1.34 2013/08/16 09:20:40 obache Exp $
 #
 
 DISTNAME=	pidgin-libnotify-0.14
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim-libnotify/}
 
@@ -17,6 +17,6 @@ USE_TOOLS+=	pkg-config gmake perl msgfmt intltool
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../chat/pidgin/buildlink3.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

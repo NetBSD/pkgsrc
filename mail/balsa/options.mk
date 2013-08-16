@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/10/29 00:18:51 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2013/08/16 09:20:40 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.balsa
-PKG_SUPPORTED_OPTIONS=	compface ldap sqlite ssl
+PKG_SUPPORTED_OPTIONS=	canberra compface ldap sqlite ssl
 PKG_SUGGESTED_OPTIONS=	compface ldap sqlite ssl
 
 .include "../../mk/bsd.options.mk"

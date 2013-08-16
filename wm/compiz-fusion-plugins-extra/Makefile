@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2013/06/30 22:13:40 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2013/08/16 09:20:41 obache Exp $
 #
 
 PKGVER=		0.8.8
 PKGNAME=	compiz-fusion-plugins-extra-${PKGVER}
 DISTNAME=	compiz-plugins-extra-${PKGVER}
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -56,8 +57,7 @@ GCONF_SCHEMAS+=		compiz-widget.schemas
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.compiz-bcop+=	compiz-bcop>=0.7.3
 .include "../../devel/compiz-bcop/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libnotify07+=	libnotify07>=0.6.1
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../wm/compiz-fusion-plugins-main/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../wm/compiz/buildlink3.mk"
