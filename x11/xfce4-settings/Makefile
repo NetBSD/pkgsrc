@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2013/06/06 12:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/08/16 07:42:55 obache Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=		4.6.5
 
 DISTNAME=		xfce4-settings-${XFCE4_VERSION}
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		x11
 COMMENT=		Xfce settings manager
 
@@ -32,7 +32,7 @@ CONF_FILES+=	\
 .include "../../devel/xfconf/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
