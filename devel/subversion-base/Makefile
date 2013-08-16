@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2013/08/11 08:55:01 obache Exp $
+# $NetBSD: Makefile,v 1.86 2013/08/16 11:20:36 jperkin Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -21,6 +21,8 @@ APU_OPTIONS=		PKG_BUILD_OPTIONS.apr-util
 APU_OPTIONS=		PKG_BUILD_OPTIONS.apr
 .endif
 BUILD_DEFS+=		${APU_OPTIONS}
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 .if !empty(PKG_OPTIONS:Mapr1)
 .  include "../../devel/apr/buildlink3.mk"
