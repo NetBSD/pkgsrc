@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2013/08/15 11:15:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.101 2013/08/16 08:30:14 adam Exp $
 
-DISTNAME=	heimdal-1.5.2
-PKGREVISION=	8
+DISTNAME=	heimdal-1.5.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -15,8 +14,6 @@ CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
 CONFLICTS+=	gss-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
-
-MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex
@@ -41,6 +38,13 @@ CONFIGURE_ARGS+=	${ABI:D--with-mips-abi=${ABI}}
 CONFIGURE_ENV+=		COMPILE_ET=no	# build Heimdal's compile_et(1)
 # XXX Grand Central Dispatch is broken in 1.4
 CONFIGURE_ENV+=		ac_cv_funclib_dispatch_async_f=no
+
+.include "../../mk/bdb.buildlink3.mk"
+
+# XXX Don't detect db1 when a newer version is available; otherwise build fails
+.if ${BDB_TYPE} != "db1"
+CONFIGURE_ENV+=		ac_cv_funclib_dbopen=no
+.endif
 
 CFLAGS.Darwin+=		-DBIND_8_COMPAT
 
@@ -75,12 +79,6 @@ SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
 RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
 INFO_FILES=		yes
 
-# Dynamically determine the "replacement" headers for bits needed by
-# Heimdal but are missing in the base system and add them to the PLIST.
-GENERATE_PLIST+=	\
-	( cd ${WRKSRC}/lib/roken && ${BUILD_MAKE_CMD} print-xheaders |	\
-	  ${XARGS} -n 1 | ${SED} -e "s,^,include/krb5/roken/," );
-
 TEST_TARGET=		check
 
 # remove manpages conficting with OpenSSL keeping only the important ones
@@ -95,7 +93,7 @@ pre-build:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
