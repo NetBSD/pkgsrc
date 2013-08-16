@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/08/13 20:00:41 markd Exp $
+# $NetBSD: Makefile,v 1.39 2013/08/16 10:28:13 jperkin Exp $
 
 DISTNAME=	strigi-0.7.8
 PKGREVISION=	6
@@ -26,7 +26,7 @@ RT_LIB_SCHED=	# empty
 .endif
 
 CFLAGS.SunOS+=	-DCMAKE_HAVE_PTHREAD_CREATE
-LDFLAGS.SunOS+=	-mimpure-text -lrt -lsocket
+LDFLAGS.SunOS+=	-mimpure-text -lrt -lsocket -lclucene-shared
 
 CMAKE_ARGS+=	-DENABLE_FFMPEG=OFF
 .if !empty(RT_LIB_SCHED)
