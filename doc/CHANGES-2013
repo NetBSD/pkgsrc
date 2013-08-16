@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2945 2013/08/16 05:53:24 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2946 2013/08/16 06:06:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4296,3 +4296,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/liferea-current to 1.8.15nb1 [obache 2013-08-16]
 	Updated net/twitux to 0.69nb25 [obache 2013-08-16]
 	Updated net/ekiga to 3.2.6nb34 [obache 2013-08-16]
+	Updated www/midori to 0.4.9nb6 [obache 2013-08-16]
