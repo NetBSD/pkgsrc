@@ -1,27 +1,29 @@
-# $NetBSD: Makefile,v 1.30 2013/06/06 12:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/08/16 09:17:33 obache Exp $
 
-DISTNAME=	libnotify-0.4.5
-PKGREVISION=	17
+DISTNAME=	libnotify-0.7.5
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libnotify/0.7/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.galago-project.org/
+HOMEPAGE=	http://developer.gnome.org/libnotify/
 COMMENT=	Desktop notification framework
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	libnotify07-[0-9]*
+SUPERSEDES+=	libnotify07-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	libnotify.pc.in
 
+.include "options.mk"
+
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gtk3=	build
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
