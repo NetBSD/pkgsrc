@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2013/06/06 12:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2013/08/16 06:23:42 obache Exp $
 #
 
 DISTNAME=	mail-notification-5.4
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 EXTRACT_SUFX=	.tar.bz2
@@ -66,7 +66,7 @@ do-install:
 .include "../../mail/gmime24/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
