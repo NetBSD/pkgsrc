@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/09/08 00:22:49 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/08/16 07:42:55 obache Exp $
 
 SHA1 (xfce4-settings-4.6.5.tar.bz2) = c036cc2f3100a46b2649e678dff7c0106b219263
 RMD160 (xfce4-settings-4.6.5.tar.bz2) = a8155346285921f3087795598989df287be8abb4
@@ -6,3 +6,4 @@ Size (xfce4-settings-4.6.5.tar.bz2) = 522389 bytes
 SHA1 (patch-aa) = 104e459ab5b7bd4ac821cacada43f2aa4da23f10
 SHA1 (patch-ab) = 4f23e05cacd765b5be2e101dec29d3c6f5cd839f
 SHA1 (patch-dialogs-keyboard-settings-xfce-keyboard-settings.c) = e011c194084458c65a7f47e27fc03cb8927287b2
+SHA1 (patch-xfce4-settings-helper_accessibility.c) = 190883186f2773ab914ef6be38d387f7aa96e9e4
