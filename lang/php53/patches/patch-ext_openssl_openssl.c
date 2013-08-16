@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_openssl_openssl.c,v 1.1 2013/08/14 15:42:56 taca Exp $
+$NetBSD: patch-ext_openssl_openssl.c,v 1.2 2013/08/16 00:38:13 taca Exp $
 
-Fix for CVE-2013-4073.
+Fix for CVE-2013-4248.
 
 --- ext/openssl/openssl.c.orig	2013-07-10 17:43:08.000000000 +0000
 +++ ext/openssl/openssl.c
