@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2946 2013/08/16 06:06:19 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2947 2013/08/16 06:24:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4297,3 +4297,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/twitux to 0.69nb25 [obache 2013-08-16]
 	Updated net/ekiga to 3.2.6nb34 [obache 2013-08-16]
 	Updated www/midori to 0.4.9nb6 [obache 2013-08-16]
+	Updated mail/mail-notification to 5.4nb28 [obache 2013-08-16]
