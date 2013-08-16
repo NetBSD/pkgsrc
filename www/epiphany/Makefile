@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2013/08/13 01:03:02 obache Exp $
+# $NetBSD: Makefile,v 1.144 2013/08/16 09:20:41 obache Exp $
 #
 
 DISTNAME=	epiphany-2.30.6
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.30/}
 EXTRACT_SUFX=	.tar.bz2
@@ -48,7 +48,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12

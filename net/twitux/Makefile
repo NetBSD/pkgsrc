@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2013/08/16 02:56:03 obache Exp $
+# $NetBSD: Makefile,v 1.33 2013/08/16 09:20:40 obache Exp $
 #
 
 DISTNAME=		twitux-0.69
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=twitux/}
 EXTRACT_SUFX=		.tar.bz2
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--enable-aspell=no
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
