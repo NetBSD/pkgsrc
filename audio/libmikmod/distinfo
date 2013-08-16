@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.14 2012/06/03 21:44:59 wiz Exp $
+$NetBSD: distinfo,v 1.15 2013/08/16 10:36:06 jperkin Exp $
 
 SHA1 (libmikmod-3.2.0.tar.gz) = 6d30f59019872699bdcc9bcf6893eea9d6b12c13
 RMD160 (libmikmod-3.2.0.tar.gz) = 066db43670878914774f16b2c5444acfa8e86f28
 Size (libmikmod-3.2.0.tar.gz) = 873258 bytes
-SHA1 (patch-ab) = afda9a7d29e70e42c037163ac5b2d2742c77daab
 SHA1 (patch-ac) = f35745a0880181c06f9e37c1cfe51e5408b4928d
 SHA1 (patch-ad) = bc4983d181acedc6f32b85aadd3a0011280d3227
