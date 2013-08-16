@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.37 2013/07/26 12:40:06 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2013/08/16 08:30:14 adam Exp $
 
-SHA1 (heimdal-1.5.2.tar.gz) = dd0920a181d18236432e4b3e5eab6e468cda4b89
-RMD160 (heimdal-1.5.2.tar.gz) = 1ab2f835309a916dfbba667d3d0d38a57c312fde
-Size (heimdal-1.5.2.tar.gz) = 6798615 bytes
-SHA1 (patch-ad) = fc7820f21ae6f2aa62126ec360be6d913eef2eb7
+SHA1 (heimdal-1.5.3.tar.gz) = 23f39a099ae862dce1f5f4e5c3720861849a4bd0
+RMD160 (heimdal-1.5.3.tar.gz) = 834660b4c0fe81a3aac4ffd9d8d37d74add1fa70
+Size (heimdal-1.5.3.tar.gz) = 6798305 bytes
+SHA1 (patch-ad) = 3dad4f3dfb19deb37c6b684ddea3e931678c5c6e
 SHA1 (patch-al) = 022d5f3723bd1db7fe5e92eea5d0106851a5d424
 SHA1 (patch-cf_install-catman.sh) = 8eb8ea0c0c8b281c080c85eefc3abbc7dcbe6746
 SHA1 (patch-cf_libtool.m4) = cd229e0e934649cb04c3f39928d1fa12c2474f62
