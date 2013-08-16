@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/21 17:29:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/08/16 15:28:23 taca Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -228,6 +228,9 @@ lib/php/build/run-tests.php
 lib/php/build/scan_makefile_in.awk
 lib/php/build/shtool
 libexec/cgi-bin/php
+man/man1/phar.1
+man/man1/phar.phar.1
+man/man1/php-cgi.1
 man/man1/php-config.1
 man/man1/php.1
 man/man1/phpize.1
