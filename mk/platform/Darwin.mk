@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.53 2013/07/12 10:41:58 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.54 2013/08/16 12:11:17 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -92,8 +92,12 @@ _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
 
+# Comes with a native mit-krb5 implementation
+KRB5_DEFAULT?=		mit-krb5
+
 # Builtin defaults which make sense for this platform.
 PREFER.linux-pam?=	native
+PREFER.mit-krb5?=	native
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
