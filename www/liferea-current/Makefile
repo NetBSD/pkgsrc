@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2013/07/24 11:25:42 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2013/08/16 02:43:30 obache Exp $
 
 DISTNAME=		liferea-1.8.15
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,7 +28,7 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
