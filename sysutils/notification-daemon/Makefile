@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/08/12 08:35:17 obache Exp $
+# $NetBSD: Makefile,v 1.36 2013/08/16 09:20:41 obache Exp $
 #
 
 DISTNAME=	notification-daemon-0.7.6
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/notification-daemon/0.7/}
 EXTRACT_SUFX=	.tar.xz
@@ -31,6 +32,6 @@ PKG_FAIL_REASON+=	"gtk3 option must be enabled for libcanberra."
 .endif
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.27.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
