@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2956 2013/08/16 11:29:52 tron Exp $
+$NetBSD: CHANGES-2013,v 1.2957 2013/08/16 15:29:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/libnotify to 0.7.5 [obache 2013-08-16]
 	Removed sysutils/libnotify07 successor sysutils/libnotify [obache 2013-08-16]
 	Updated net/youtube-dl to 20130815 [tron 2013-08-16]
+	Updated lang/php54 to 5.4.18 [taca 2013-08-16]
