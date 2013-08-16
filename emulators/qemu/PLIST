@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2013/07/09 17:00:58 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.36 2013/08/16 21:20:11 adam Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -122,6 +122,7 @@ share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
 share/qemu/q35-acpi-dsdt.aml
 share/qemu/qemu-icon.bmp
+share/qemu/qemu_logo_no_text.svg
 share/qemu/s390-ccw.img
 share/qemu/s390-zipl.rom
 share/qemu/sgabios.bin

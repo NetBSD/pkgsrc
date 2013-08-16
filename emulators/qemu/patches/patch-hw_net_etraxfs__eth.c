@@ -1,4 +1,4 @@
-$NetBSD: patch-hw_net_etraxfs__eth.c,v 1.1 2013/07/09 17:00:58 tsutsui Exp $
+$NetBSD: patch-hw_net_etraxfs__eth.c,v 1.2 2013/08/16 21:20:11 adam Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
@@ -14,7 +14,7 @@ Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
      } else {
          bus->data = 0xffff;
      }
-@@ -359,7 +359,7 @@ static void eth_validate_duplex(struct f
+@@ -364,7 +364,7 @@ static void eth_validate_duplex(struct f
      int new_mm = 0;
  
      phy = eth->mdio_bus.devs[eth->phyaddr];
