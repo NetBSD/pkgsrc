@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/05/23 19:45:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.24.2.1 2013/08/16 10:19:53 tron Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -75,6 +75,8 @@ include/dovecot/doveadm-settings.h
 include/dovecot/doveadm-util.h
 include/dovecot/doveadm.h
 include/dovecot/dovecot-version.h
+include/dovecot/dsasl-client-private.h
+include/dovecot/dsasl-client.h
 include/dovecot/duplicate.h
 include/dovecot/eacces-error.h
 include/dovecot/env-util.h
@@ -110,8 +112,11 @@ include/dovecot/http-client-private.h
 include/dovecot/http-client.h
 include/dovecot/http-date.h
 include/dovecot/http-header-parser.h
+include/dovecot/http-message-parser.h
 include/dovecot/http-parser.h
+include/dovecot/http-request-parser.h
 include/dovecot/http-response-parser.h
+include/dovecot/http-response.h
 include/dovecot/http-transfer.h
 include/dovecot/http-url.h
 include/dovecot/imap-arg.h
@@ -484,10 +489,13 @@ man/man1/deliver.1
 man/man1/doveadm-altmove.1
 man/man1/doveadm-auth.1
 man/man1/doveadm-config.1
+man/man1/doveadm-deduplicate.1
 man/man1/doveadm-director.1
 man/man1/doveadm-dump.1
+man/man1/doveadm-exec.1
 man/man1/doveadm-expunge.1
 man/man1/doveadm-fetch.1
+man/man1/doveadm-flags.1
 man/man1/doveadm-force-resync.1
 man/man1/doveadm-help.1
 man/man1/doveadm-import.1
@@ -559,6 +567,7 @@ share/doc/dovecot/wiki/Design.AuthProcess.txt
 share/doc/dovecot/wiki/Design.AuthProtocol.txt
 share/doc/dovecot/wiki/Design.Buffers.txt
 share/doc/dovecot/wiki/Design.Code.txt
+share/doc/dovecot/wiki/Design.DoveadmProtocol.txt
 share/doc/dovecot/wiki/Design.Dsync.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
 share/doc/dovecot/wiki/Design.Indexes.MailIndexApi.txt
@@ -634,6 +643,7 @@ share/doc/dovecot/wiki/Migration.BincIMAP.txt
 share/doc/dovecot/wiki/Migration.Courier.txt
 share/doc/dovecot/wiki/Migration.Cyrus.txt
 share/doc/dovecot/wiki/Migration.Dsync.txt
+share/doc/dovecot/wiki/Migration.Gmail.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
 share/doc/dovecot/wiki/Migration.Online.txt
@@ -693,6 +703,7 @@ share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.MailboxAlias.txt
 share/doc/dovecot/wiki/Plugins.Notify.txt
 share/doc/dovecot/wiki/Plugins.Snarf.txt
+share/doc/dovecot/wiki/Plugins.Stats.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.Virtual.txt
 share/doc/dovecot/wiki/Plugins.Zlib.txt
