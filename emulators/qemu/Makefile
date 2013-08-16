@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2013/07/29 13:10:26 adam Exp $
+# $NetBSD: Makefile,v 1.113 2013/08/16 21:20:11 adam Exp $
 
-DISTNAME=	qemu-1.5.2
+DISTNAME=	qemu-1.6.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,13 +26,13 @@ BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
 			${PKG_SYSCONFDIR}/target-x86_64.conf
