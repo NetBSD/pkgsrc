@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2013/06/15 19:18:26 adam Exp $
+# $NetBSD: Makefile,v 1.217 2013/08/17 11:52:36 richard Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@ CATEGORIES=		devel gnome
 
 COMMENT=		Some useful routines for C programming (glib2)
 
-USE_TOOLS+=		msgfmt perl:run
+USE_TOOLS+=		msgfmt perl:run readlink
 
 PKGCONFIG_OVERRIDE+=	glib-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-2.0.pc.in
