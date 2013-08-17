@@ -1,17 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-configure,v 1.2 2013/08/17 13:15:21 taca Exp $
 
---- configure.orig	2013-07-18 14:42:04.000000000 +0000
+--- configure.orig	2013-08-15 20:48:19.000000000 +0000
 +++ configure
-@@ -20784,7 +20784,7 @@ _ACEOF
-   cat>>Makefile.objects<<EOF
- 
- $ac_bdir$ac_hdrobj: $abs_srcdir/$ac_provsrc
--	CFLAGS="\$(CFLAGS_CLEAN)" dtrace -h -C -s $ac_srcdir$ac_provsrc -o \$@ && \$(SED) -ibak 's,PHP_,DTRACE_,g' \$@
-+	CFLAGS="\$(CFLAGS_CLEAN)" dtrace -h -C -s $ac_srcdir$ac_provsrc -o \$@ && \$(SED) 's,PHP_,DTRACE_,g' \$@ > \$@.tmp && mv \$@.tmp \$@
- 
- \$(PHP_DTRACE_OBJS): $ac_bdir$ac_hdrobj
- 
-@@ -23567,7 +23567,7 @@ fi
+@@ -23571,7 +23571,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -20,7 +11,7 @@ $NetBSD: patch-configure,v 1.1 2013/07/29 16:41:02 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -25717,7 +25717,7 @@ $as_echo "yes" >&6; }
+@@ -25721,7 +25721,7 @@ $as_echo "yes" >&6; }
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -29,7 +20,7 @@ $NetBSD: patch-configure,v 1.1 2013/07/29 16:41:02 taca Exp $
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -36774,7 +36774,7 @@ fi
+@@ -36778,7 +36778,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -38,7 +29,7 @@ $NetBSD: patch-configure,v 1.1 2013/07/29 16:41:02 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -48532,7 +48532,7 @@ fi
+@@ -48536,7 +48536,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -47,7 +38,7 @@ $NetBSD: patch-configure,v 1.1 2013/07/29 16:41:02 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -104355,12 +104355,7 @@ old_CC=$CC
+@@ -104360,12 +104360,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"

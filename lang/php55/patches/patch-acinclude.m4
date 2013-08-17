@@ -1,8 +1,8 @@
-$NetBSD: patch-acinclude.m4,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-acinclude.m4,v 1.2 2013/08/17 13:15:21 taca Exp $
 
---- acinclude.m4.orig	2012-05-03 17:10:43.000000000 +0000
+--- acinclude.m4.orig	2013-08-15 20:42:04.000000000 +0000
 +++ acinclude.m4
-@@ -2352,7 +2352,7 @@ AC_DEFUN([PHP_SETUP_OPENSSL],[
+@@ -2354,7 +2354,7 @@ AC_DEFUN([PHP_SETUP_OPENSSL],[
    if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then

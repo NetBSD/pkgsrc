@@ -1,8 +1,8 @@
-$NetBSD: patch-ext_gd_config.m4,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-ext_gd_config.m4,v 1.2 2013/08/17 13:15:21 taca Exp $
 
---- ext/gd/config.m4.orig	2012-05-03 17:10:43.000000000 +0000
+--- ext/gd/config.m4.orig	2013-08-15 20:42:04.000000000 +0000
 +++ ext/gd/config.m4
-@@ -50,18 +50,7 @@ dnl Checks for the configure options
+@@ -49,18 +49,7 @@ dnl Checks for the configure options
  dnl
  
  AC_DEFUN([PHP_GD_ZLIB],[
@@ -22,7 +22,7 @@ $NetBSD: patch-ext_gd_config.m4,v 1.1 2013/07/29 16:41:02 taca Exp $
  			if test -f "$i/include/zlib/zlib.h"; then
  				PHP_ZLIB_DIR="$i"
  				PHP_ZLIB_INCDIR="$i/include/zlib"
-@@ -70,7 +59,6 @@ AC_DEFUN([PHP_GD_ZLIB],[
+@@ -69,7 +58,6 @@ AC_DEFUN([PHP_GD_ZLIB],[
  				PHP_ZLIB_INCDIR="$i/include"
  			fi
  		done
@@ -30,7 +30,7 @@ $NetBSD: patch-ext_gd_config.m4,v 1.1 2013/07/29 16:41:02 taca Exp $
  ])
  
  AC_DEFUN([PHP_GD_VPX],[
-@@ -139,13 +127,13 @@ AC_DEFUN([PHP_GD_PNG],[
+@@ -138,13 +126,13 @@ AC_DEFUN([PHP_GD_PNG],[
        AC_MSG_ERROR([PNG support requires ZLIB. Use --with-zlib-dir=<DIR>])
      fi
  
