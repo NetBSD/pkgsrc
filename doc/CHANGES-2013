@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2964 2013/08/17 16:10:23 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.2965 2013/08/17 18:28:40 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4315,3 +4315,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/glib2 to 2.36.4 [richard 2013-08-17]
 	Updated lang/php55 to 5.5.2 [taca 2013-08-17]
 	Updated www/py-flask-script to 0.6.2 [kleink 2013-08-17]
+	Updated sysutils/salt to 0.16.3 [imil 2013-08-17]
