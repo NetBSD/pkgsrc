@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2013/03/18 14:01:24 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.3 2013/08/17 04:59:07 obache Exp $
 
 .if !defined(GDBUS_CODEGEN_HACKS_MK)
 GDBUS_CODEGEN_HACKS_MK=	# defined
@@ -15,6 +15,15 @@ SUBST_MESSAGE.iconv=	Changing libiconv_open to iconv_open.
 SUBST_FILES.iconv=	configure
 SUBST_SED.iconv=	-e 's,libiconv_open,iconv_open,g'
 .  endif
+.endif
+
+#
+# GLib2>=2.36 depends on builtin functions which enabled with i486 and
+# later with GCC.
+#
+.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5]*-i386)
+GNU_ARCH.i386=		i486
+CFLAGS+=		-march=i486
 .endif
 
 .endif
