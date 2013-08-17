@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.260 2013/06/06 02:17:17 obache Exp $
+# $NetBSD: replace.mk,v 1.261 2013/08/17 12:00:37 richard Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -938,8 +938,8 @@ TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 # there is no native tool available.
 #
 _TOOLS.coreutils=	basename cat chgrp chmod chown cp cut date	\
-			dirname echo env expr false head hostname id	\
-			install ln ls mkdir mv nice printf pwd rm rmdir	\
+			dirname echo env expr false head hostname id install	\
+			ln ls mkdir mv nice printf pwd readlink rm rmdir	\
 			sleep sort tail tee test touch tr true tsort wc
 
 .for _t_ in ${_TOOLS.coreutils}
