@@ -1,6 +1,6 @@
-$NetBSD: patch-php.ini-production,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-php.ini-production,v 1.2 2013/08/17 13:15:21 taca Exp $
 
---- php.ini-production.orig	2012-05-03 17:10:43.000000000 +0000
+--- php.ini-production.orig	2013-08-15 20:42:04.000000000 +0000
 +++ php.ini-production
 @@ -702,7 +702,7 @@ default_mimetype = "text/html"
  ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -22,7 +22,7 @@ $NetBSD: patch-php.ini-production,v 1.1 2013/07/29 16:41:02 taca Exp $
  ; extension_dir = "./"
  ; On windows:
  ; extension_dir = "ext"
-@@ -793,7 +793,7 @@ file_uploads = On
+@@ -797,7 +797,7 @@ file_uploads = On
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
  ; http://php.net/upload-tmp-dir
