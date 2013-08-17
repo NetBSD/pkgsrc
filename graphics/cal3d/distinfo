@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/01/23 17:26:27 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/08/17 11:15:26 joerg Exp $
 
 SHA1 (cal3d-0.9.1.tar.bz2) = 2e0765caddc972f05f70d3a255862ced1276e039
 RMD160 (cal3d-0.9.1.tar.bz2) = f77dcf34a46a9286020592df16f5b16264839d80
@@ -6,6 +6,7 @@ Size (cal3d-0.9.1.tar.bz2) = 2871094 bytes
 SHA1 (patch-aa) = dc308a6e7d0322a354b502d3ca6e9a01e497fa78
 SHA1 (patch-ab) = f3fbda1c69c22f5165fe57a7e1bf05190e88a9c0
 SHA1 (patch-af) = 302a17aebb80a09b35395fc37d3254f0c5a00cb9
+SHA1 (patch-autogen.sh) = c434a05acefd71011e7519e943e5fea3f62deb9b
 SHA1 (patch-src_cal3d_platform.cpp) = 1d664fcc9b62124f089f202e98c74bc8ae99b8ee
 SHA1 (patch-src_cal3d_renderer.cpp) = 6c8ce2adbb1e58ed6ca22abbd0d3ed2672b11901
 SHA1 (patch-src_cal3d_submesh.cpp) = f336288724b501eeba67cb582424acfc0a583c74
