@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2013/05/11 21:37:46 joerg Exp $
+$NetBSD: distinfo,v 1.14 2013/08/17 11:17:08 joerg Exp $
 
 SHA1 (gnuradio-3.3.0.tar.gz) = 41d5c177b173ce73404f5fe539b013c82600f73f
 RMD160 (gnuradio-3.3.0.tar.gz) = ae83bd8a93deaf73d730e2af0d05c9ffc4c98520
@@ -25,6 +25,7 @@ SHA1 (patch-gnuradio-core_src_lib_general_gr__ofdm__frame__sink.cc) = a795109407
 SHA1 (patch-gnuradio-core_src_lib_general_gr__ofdm__mapper__bcv.cc) = 74f8385b428540c7ec764f0841f4bedd130f99c3
 SHA1 (patch-gnuradio-core_src_lib_io_gr__file__descriptor__sink.cc) = 4ac9818b722b5fc9175c4c19fb8a8126ddf48ed2
 SHA1 (patch-gnuradio-core_src_lib_io_gr__file__descriptor__source.cc) = 54f4194ef35e206ef05a6dd35066037529250a57
+SHA1 (patch-gnuradio-core_src_lib_io_ppio__ppdev.h) = c1644ca24ce4ed792ff72e66c64f57165b4531c2
 SHA1 (patch-gnuradio-core_src_lib_io_ppio_ppdev.cc) = dd8a78c0d08c66fe4ee362e73c7be2d7c47d64bb
 SHA1 (patch-gnuradio-core_src_tests_benchmark__vco.cc) = dd09bac9c9419fb8315d66830eedd703486fafd2
 SHA1 (patch-usrp2_firmware_configure.ac) = b79c71afe3d84a15466e37e6ce858ee63c43b62e
