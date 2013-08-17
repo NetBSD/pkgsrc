@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.41 2013/08/11 12:49:44 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.42 2013/08/17 19:09:14 wiz Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
 bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
-${PERL5_SUB_INSTALLARCHLIB}/perllocal.pod
 ${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Git/I18N.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Git/IndexInfo.pm
