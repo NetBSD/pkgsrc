@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2013/06/15 15:04:39 imil Exp $
+# $NetBSD: Makefile,v 1.15 2013/08/17 18:30:02 imil Exp $
 #
 
-DISTNAME=	salt-0.15.3
+DISTNAME=	salt-0.16.3
 CATEGORIES=	sysutils
-MASTER_SITES=	http://pypi.python.org/packages/source/s/salt/
+MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
