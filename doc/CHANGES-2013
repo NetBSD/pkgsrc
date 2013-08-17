@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2958 2013/08/16 21:20:51 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2959 2013/08/17 07:48:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/youtube-dl to 20130815 [tron 2013-08-16]
 	Updated lang/php54 to 5.4.18 [taca 2013-08-16]
 	Updated emulators/qemu to 1.6.0 [adam 2013-08-16]
+	Updated www/firefox to 23.0.1 [ryoon 2013-08-17]
