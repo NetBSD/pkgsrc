@@ -1,13 +1,56 @@
-$NetBSD: patch-ak,v 1.1 2004/12/10 09:30:42 salo Exp $
+$NetBSD: patch-ak,v 1.2 2013/08/17 11:15:58 joerg Exp $
 
---- gdk_imlib/io-gif.c.orig	2002-03-04 18:06:29.000000000 +0100
-+++ gdk_imlib/io-gif.c	2004-12-10 10:00:56.000000000 +0100
-@@ -55,7 +55,7 @@
+--- gdk_imlib/io-gif.c.orig	2002-03-04 17:06:29.000000000 +0000
++++ gdk_imlib/io-gif.c
+@@ -10,6 +10,16 @@ unsigned char loader_gif (FILE *f, int *
+ #else
+ #include <gif_lib.h>
+ 
++static void
++PrintGifError(int ErrorCode) {
++    char *Err = GifErrorString(ErrorCode);
++
++    if (Err != NULL)
++        fprintf(stderr, "GIF-LIB error: %s.\n", Err);
++    else
++        fprintf(stderr, "GIF-LIB undefined error %d.\n", ErrorCode);
++}
++
+ unsigned char      *
+ loader_gif(FILE *f, int *w, int *h, int *t)
+ {
+@@ -22,7 +32,7 @@ loader_gif(FILE *f, int *w, int *h, int 
+   int                 intoffset[] = {0, 4, 2, 1};
+   int                 intjump[] = {8, 8, 4, 2};
+   int                 istransp, transp;
+-  int                 fd;
++  int                 fd, giferror = 0;
+ 
+   done = 0;
+   istransp = 0;
+@@ -30,7 +40,7 @@ loader_gif(FILE *f, int *w, int *h, int 
+   fd = fileno(f);
+   /* Apparently rewind(f) isn't sufficient */
+   lseek(fd, (long) 0, 0);
+-  gif = DGifOpenFileHandle(fd);
++  gif = DGifOpenFileHandle(fd, &giferror);
+ 
+   transp = -1;
+   data = NULL;
+@@ -43,14 +53,14 @@ loader_gif(FILE *f, int *w, int *h, int 
+     {
+       if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
+ 	{
+-	  PrintGifError();
++	  PrintGifError(giferror);
+ 	  rec = TERMINATE_RECORD_TYPE;
+ 	}
+       if ((rec == IMAGE_DESC_RECORD_TYPE) && (!done))
+ 	{
+ 	  if (DGifGetImageDesc(gif) == GIF_ERROR)
+ 	    {
+-	      PrintGifError();
++	      PrintGifError(giferror);
+ 	      rec = TERMINATE_RECORD_TYPE;
  	    }
  	  *w = gif->Image.Width;
- 	  *h = gif->Image.Height;
--	  if(*h > 32767 || *w > 32767)
-+	  if(*h <= 0 || *h > 32767 || *w <= 0 || *w > 32767)
- 	    {
- 	      return NULL;
- 	    }
