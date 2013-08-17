@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.8 2013/08/15 16:26:36 joerg Exp $
+$NetBSD: patch-ab,v 1.9 2013/08/17 15:42:28 joerg Exp $
 
 Middle chunks: Fix build with png-1.5.
 Others: ???
 
 --- Imlib/load.c.orig	2004-09-21 00:23:20.000000000 +0000
 +++ Imlib/load.c
-@@ -4,6 +4,8 @@
+@@ -4,8 +4,20 @@
  #include "Imlib_private.h"
  #include <setjmp.h>
  
@@ -13,8 +13,20 @@ Others: ???
 +
  /*      Split the ID - damages input    */
  
++static void
++PrintGifError(int ErrorCode) {
++    char *Err = GifErrorString(ErrorCode);
++
++    if (Err != NULL)
++        fprintf(stderr, "GIF-LIB error: %s.\n", Err);
++    else
++        fprintf(stderr, "GIF-LIB undefined error %d.\n", ErrorCode);
++}
++
  static char        *
-@@ -41,13 +43,17 @@ _GetExtension(char *file)
+ _SplitID(char *file)
+ {
+@@ -41,13 +53,17 @@ _GetExtension(char *file)
  
  /*
   *     Make sure we don't wrap on our memory allocations
@@ -34,7 +46,7 @@ Others: ???
  }
  
  #ifdef HAVE_LIBJPEG
-@@ -191,12 +197,12 @@ _LoadPNG(ImlibData * id, FILE * f, int *
+@@ -191,12 +207,12 @@ _LoadPNG(ImlibData * id, FILE * f, int *
        png_destroy_read_struct(&png_ptr, NULL, NULL);
        return NULL;
      }
@@ -49,7 +61,7 @@ Others: ???
      {
        png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
        return NULL;
-@@ -254,7 +260,8 @@ _LoadPNG(ImlibData * id, FILE * f, int *
+@@ -254,7 +270,8 @@ _LoadPNG(ImlibData * id, FILE * f, int *
    png_read_image(png_ptr, lines);
    png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
    ptr = data;
@@ -59,7 +71,7 @@ Others: ???
      {
        for (y = 0; y < *h; y++)
  	{
-@@ -279,6 +286,7 @@ _LoadPNG(ImlibData * id, FILE * f, int *
+@@ -279,6 +296,7 @@ _LoadPNG(ImlibData * id, FILE * f, int *
  	    }
  	}
      }
@@ -67,7 +79,7 @@ Others: ???
    else if (color_type == PNG_COLOR_TYPE_GRAY)
      {
        for (y = 0; y < *h; y++)
-@@ -294,6 +302,7 @@ _LoadPNG(ImlibData * id, FILE * f, int *
+@@ -294,6 +312,7 @@ _LoadPNG(ImlibData * id, FILE * f, int *
  	    }
  	}
      }
@@ -75,7 +87,7 @@ Others: ???
    else
      {
        for (y = 0; y < *h; y++)
-@@ -360,7 +369,9 @@ _LoadTIFF(ImlibData * id, FILE *f, char 
+@@ -360,7 +379,9 @@ _LoadTIFF(ImlibData * id, FILE *f, char 
    npix = ww * hh;
    *w = (int)ww;
    *h = (int)hh;
@@ -86,16 +98,39 @@ Others: ???
      {
         TIFFClose(tif);
         return NULL;
-@@ -443,7 +454,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+@@ -432,7 +453,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+   int                 intoffset[] = {0, 4, 2, 1};
+   int                 intjump[] = {8, 8, 4, 2};
+   int                 istransp, transp;
+-  int                 fd;
++  int                 fd, giferror;
+ 
+   done = 0;
+   istransp = 0;
+@@ -443,7 +464,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
    fd = fileno(f);
    /* Apparently rewind(f) isn't sufficient */
    lseek(fd, (long) 0, 0);
 -  gif = DGifOpenFileHandle(fd);
-+  gif = DGifOpenFileHandle(fd, NULL);
++  gif = DGifOpenFileHandle(fd, &giferror);
  
    if (!gif)
      return NULL;
-@@ -463,7 +474,7 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+@@ -451,19 +472,19 @@ _LoadGIF(ImlibData * id, FILE *f, int *w
+     {
+       if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
+ 	{
+-	  PrintGifError();
++	  PrintGifError(giferror);
+ 	  rec = TERMINATE_RECORD_TYPE;
+ 	}
+       if ((rec == IMAGE_DESC_RECORD_TYPE) && (!done))
+ 	{
+ 	  if (DGifGetImageDesc(gif) == GIF_ERROR)
+ 	    {
+-	      PrintGifError();
++	      PrintGifError(giferror);
+ 	      rec = TERMINATE_RECORD_TYPE;
  	    }
  	  *w = gif->Image.Width;
  	  *h = gif->Image.Height;
@@ -104,7 +139,7 @@ Others: ???
  	    {
  	       return NULL;
  	    }
-@@ -1000,7 +1011,12 @@ _LoadXPM(ImlibData * id, FILE *file, int
+@@ -1000,7 +1021,12 @@ _LoadXPM(ImlibData * id, FILE *file, int
    comment = 0;
    quote = 0;
    context = 0;
@@ -117,7 +152,7 @@ Others: ???
    while (!done)
      {
        pc = c;
-@@ -1029,25 +1045,25 @@ _LoadXPM(ImlibData * id, FILE *file, int
+@@ -1029,25 +1055,25 @@ _LoadXPM(ImlibData * id, FILE *file, int
  		{
  		  /* Header */
  		  sscanf(line, "%i %i %i %i", w, h, &ncolors, &cpp);
@@ -147,7 +182,7 @@ Others: ???
  		    {
  		      fprintf(stderr, "IMLIB ERROR: Image height > 32767 pixels for file\n");
  		      free(line);
-@@ -1080,11 +1096,13 @@ _LoadXPM(ImlibData * id, FILE *file, int
+@@ -1080,11 +1106,13 @@ _LoadXPM(ImlibData * id, FILE *file, int
  		    {
  		      int                 slen;
  		      int                 hascolor, iscolor;
@@ -161,7 +196,7 @@ Others: ???
  		      s[0] = 0;
  		      len = strlen(line);
  		      strncpy(cmap[j].str, line, cpp);
-@@ -1107,10 +1125,10 @@ _LoadXPM(ImlibData * id, FILE *file, int
+@@ -1107,10 +1135,10 @@ _LoadXPM(ImlibData * id, FILE *file, int
  				{
  				  if (k >= len)
  				    {
@@ -176,7 +211,7 @@ Others: ???
  				    }
  				  if (col[0])
  				    {
-@@ -1140,14 +1158,17 @@ _LoadXPM(ImlibData * id, FILE *file, int
+@@ -1140,14 +1168,17 @@ _LoadXPM(ImlibData * id, FILE *file, int
  					    }
  					}
  				    }
@@ -197,7 +232,7 @@ Others: ???
  				}
  			    }
  			}
-@@ -1376,12 +1397,12 @@ _LoadPPM(ImlibData * id, FILE * f, int *
+@@ -1376,12 +1407,12 @@ _LoadPPM(ImlibData * id, FILE * f, int *
  	  sscanf(s, "%i %i", w, h);
  	  a = *w;
  	  b = *h;
