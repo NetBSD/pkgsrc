@@ -1,10 +1,10 @@
-$NetBSD: patch-ext_standard_basic__functions.c,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-ext_standard_basic__functions.c,v 1.2 2013/08/17 13:15:21 taca Exp $
 
 Work around VAX FP lack of INF
 
---- ext/standard/basic_functions.c.orig	2012-05-08 05:22:56.000000000 +0000
+--- ext/standard/basic_functions.c.orig	2013-08-15 20:42:04.000000000 +0000
 +++ ext/standard/basic_functions.c
-@@ -3498,7 +3498,7 @@ PHPAPI double php_get_nan(void) /* {{{ *
+@@ -3519,7 +3519,7 @@ PHPAPI double php_get_nan(void) /* {{{ *
  
  PHPAPI double php_get_inf(void) /* {{{ */
  {
