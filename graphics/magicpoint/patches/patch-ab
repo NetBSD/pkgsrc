@@ -1,19 +1,23 @@
-$NetBSD: patch-ab,v 1.5 2011/02/25 17:02:53 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2013/08/17 14:39:24 taca Exp $
+
+* Add Support freetype2.
+* Add some prototypes.
 
 --- mgp.h.orig	2008-01-18 17:43:20.000000000 +0000
 +++ mgp.h
-@@ -64,7 +64,9 @@
+@@ -64,7 +64,10 @@
  #ifdef USE_XFT2
  #include <ft2build.h>
  #include FT_FREETYPE_H
 -#include <fontconfig/fontconfig.h>
 +#include FT_CONFIG_CONFIG_H
++#include <freetype2/freetype/fttypes.h>
 +#include <freetype2/freetype/fterrors.h>
 +#include <freetype2/freetype/freetype.h>
  #include <X11/Xft/Xft.h>
  #ifdef HAVE_ICONV
  #include <iconv.h>
-@@ -308,6 +310,12 @@ struct ctrl_pcache {
+@@ -308,6 +311,12 @@ struct ctrl_pcache {
  struct ctrl {
  	u_char ct_op;
  	u_char ct_flag;
@@ -26,7 +30,7 @@ $NetBSD: patch-ab,v 1.5 2011/02/25 17:02:53 wiz Exp $
  	u_int ct_page;
  	struct ctrl *ct_next;
  	union {
-@@ -507,7 +515,7 @@ struct render_object {
+@@ -507,7 +516,7 @@ struct render_object {
  			float xzoom, yzoom;
  #ifdef USE_IMLIB
  			int zoomonclk;
@@ -35,11 +39,12 @@ $NetBSD: patch-ab,v 1.5 2011/02/25 17:02:53 wiz Exp $
  #endif
  		} image;
  		struct {
-@@ -745,6 +753,11 @@ extern int get_regid __P((char *));
+@@ -745,6 +754,12 @@ extern int get_regid __P((char *));
  extern void draw_line_itemsize __P((struct render_state *, int, int, int));
  extern void draw_line_start __P((struct render_state *));
  extern void draw_line_end __P ((struct render_state *));
 +#ifdef USE_IMLIB
++void manage_pixmap(Pixmap, int, int);
 +int search_zimage(int, int, int);
 +void zoomin_zimage(int);
 +void zoomout_zimage(int);
@@ -47,7 +52,17 @@ $NetBSD: patch-ab,v 1.5 2011/02/25 17:02:53 wiz Exp $
  
  #ifdef USE_M17N
  extern int obj_new_mtext __P((struct render_state *, int, int,
-@@ -843,6 +856,12 @@ extern void usleep __P((u_int));
+@@ -814,6 +829,9 @@ extern XImage *tfc_image __P((struct tfo
+ 
+ /* unimap.c */
+ extern void latin_unicode_map_init();
++#ifdef FREETYPE_CHARSET16
++extern void unicode_map_init();
++#endif
+ 
+ /* embed.c */
+ extern char *embed_fname __P((char *));
+@@ -843,6 +861,12 @@ extern void usleep __P((u_int));
  #define COLOR_BUGFIX
  #endif
  
