@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2961 2013/08/17 10:06:26 richard Exp $
+$NetBSD: CHANGES-2013,v 1.2962 2013/08/17 11:54:23 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 23.0.1 [ryoon 2013-08-17]
 	Updated net/youtube-dl to 20130817 [tron 2013-08-17]
 	Updated net/glib-networking to 2.36.2 [richard 2013-08-17]
+	Updated devel/glib2 to 2.36.4 [richard 2013-08-17]
