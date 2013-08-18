@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2966 2013/08/17 19:09:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2967 2013/08/18 08:07:06 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4317,3 +4317,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-script to 0.6.2 [kleink 2013-08-17]
 	Updated sysutils/salt to 0.16.3 [imil 2013-08-17]
 	Updated devel/scmgit-base to 1.8.3.4nb1 [wiz 2013-08-17]
+	Updated www/nginx to 1.4.2 [imil 2013-08-18]
