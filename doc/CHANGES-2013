@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2968 2013/08/18 08:11:34 imil Exp $
+$NetBSD: CHANGES-2013,v 1.2969 2013/08/18 10:01:47 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4319,3 +4319,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmgit-base to 1.8.3.4nb1 [wiz 2013-08-17]
 	Updated www/nginx to 1.4.2 [imil 2013-08-18]
 	Updated www/nginx-devel to 1.5.3 [imil 2013-08-18]
+	Updated shells/mksh to R48b [bsiegert 2013-08-18]
