@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2013/07/02 12:15:36 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2013/08/18 16:36:31 apb Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGREVISION=		9
@@ -20,7 +20,7 @@ MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=		World
 
-TOOLS_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 
 .include "../../mk/bsd.prefs.mk"
 
