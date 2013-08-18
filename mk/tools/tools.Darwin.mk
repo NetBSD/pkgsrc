@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.48 2013/07/15 08:51:21 jperkin Exp $
+# $NetBSD: tools.Darwin.mk,v 1.49 2013/08/18 11:45:33 tron Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -88,6 +88,7 @@ TOOLS_PLATFORM.pax?=		/bin/pax
 #TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.readlink?=	/usr/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
