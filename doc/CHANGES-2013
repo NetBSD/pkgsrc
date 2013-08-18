@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2970 2013/08/18 10:46:10 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.2971 2013/08/18 11:07:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4322,3 +4322,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated shells/mksh to R48b [bsiegert 2013-08-18]
 	Updated mail/mpop to 1.0.28 [shattered 2013-08-18]
 	Updated misc/teseq to 1.1 [shattered 2013-08-18]
+	Updated geography/geos to 3.4.1 [gdt 2013-08-18]
