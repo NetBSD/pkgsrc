@@ -1,6 +1,4 @@
-$NetBSD: patch-ab,v 1.30 2013/06/05 17:03:55 jperkin Exp $
-
-Add __C99FEATURES__ to SunOS defines for additional math functions.
+$NetBSD: patch-ab,v 1.31 2013/08/18 09:42:31 jmcneill Exp $
 
 --- configure.orig	2013-04-25 09:08:54.000000000 +0000
 +++ configure
@@ -58,7 +56,28 @@ Add __C99FEATURES__ to SunOS defines for additional math functions.
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -25132,10 +25137,12 @@ case "$host" in
+@@ -24765,13 +24770,17 @@ fi
+ 	    NESTED_LIBGC_FLAGS="$NESTED_LIBGC_FLAGS -DHAVE_ARMV6"
+ 		sgen_supported=true
+ 		;;
+-	arm*-linux*)
++	arm*-linux* | arm*-netbsd* | earm*-netbsd*)
+ 		TARGET=ARM;
+ 		arch_target=arm;
+ 		ACCESS_UNALIGNED="no"
+ 		JIT_SUPPORTED=yes
+-		sgen_supported=true
+-		AOT_SUPPORTED="yes"
++		case $host_os in
++		  linux*)
++			sgen_supported=true
++			AOT_SUPPORTED="yes"
++			;;
++		esac
+ 		if test "x$cross_compiling" != "xno"; then
+ 		   # Provide sane defaults when cross-compiling
+ 		   CPPFLAGS="$CPPFLAGS -DARM_FPU_VFP=1 -D__ARM_EABI__ -DHAVE_ARMV6=1"
+@@ -25132,10 +25141,12 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
@@ -74,7 +93,7 @@ Add __C99FEATURES__ to SunOS defines for additional math functions.
      	LIBC="libc.so"
  	INTL="libintl.so"
  	SQLITE="libsqlite.so"
-@@ -26162,7 +26169,6 @@ else
+@@ -26162,7 +26173,6 @@ else
  fi
  
  
