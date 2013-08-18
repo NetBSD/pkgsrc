@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2971 2013/08/18 11:07:01 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.2972 2013/08/18 16:47:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/mpop to 1.0.28 [shattered 2013-08-18]
 	Updated misc/teseq to 1.1 [shattered 2013-08-18]
 	Updated geography/geos to 3.4.1 [gdt 2013-08-18]
+	Updated net/ruby-tw to 0.4.8 [tsutsui 2013-08-18]
