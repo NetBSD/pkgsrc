@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12477 2013/08/18 08:20:47 wiz Exp $
+$NetBSD: TODO,v 1.12478 2013/08/18 10:46:10 shattered Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
 	o mpg123-1.15.4
-	o mpop-1.0.28
 	o mserv-devel-0.41
 	o mu-0.9.9.5
 	o multitail-5.2.13
@@ -1043,7 +1042,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o teem-1.10.0
 	o telepathy-gabble-0.16.6
 	o tellico-2.3.8
-	o teseq-1.1
 	o tesseract-3.02.02
 	o tetrinetx-1.40c
 	o texlive-2012
