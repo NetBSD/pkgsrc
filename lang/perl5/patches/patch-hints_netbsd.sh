@@ -1,11 +1,11 @@
-$NetBSD: patch-hints_netbsd.sh,v 1.4 2013/07/18 22:17:33 wiz Exp $
+$NetBSD: patch-hints_netbsd.sh,v 1.5 2013/08/18 19:42:30 martin Exp $
 
 --whole-archive is a linker flag, not a compiler flag
 Better defaults for paths.
 
---- hints/netbsd.sh.orig	2013-05-01 02:52:55.000000000 +0000
-+++ hints/netbsd.sh
-@@ -41,8 +41,8 @@ case "$osvers" in
+--- hints/netbsd.sh.orig	2013-05-01 04:52:55.000000000 +0200
++++ hints/netbsd.sh	2013-08-18 21:36:59.000000000 +0200
+@@ -41,8 +41,8 @@
  # system gcc to build correctly, so check for it
  echo 'int f(void) { return 0; }' >try.c
  if ${cc:-cc} $cccdlflags -c try.c -otry.o 2>&1 &&
@@ -16,7 +16,17 @@ Better defaults for paths.
  fi
  rm try.c try.o try.so 2>/dev/null
  EOCBU
-@@ -186,10 +186,12 @@ esac
+@@ -96,6 +96,9 @@
+ 	d_setprotoent_r="$undef"
+ 	d_endprotoent_r="$undef"
+ 	d_getservent_r="$undef"
++	d_gethostbyname_r="$undef"
++	d_gethostbyaddr_r="$undef"
++	d_gethostent_r="$undef"
+ 	d_getservbyname_r="$undef"
+ 	d_getservbyport_r="$undef"
+ 	d_setservent_r="$undef"
+@@ -186,10 +189,12 @@
  EOCBU
  
  # Set sensible defaults for NetBSD: look for local software in
