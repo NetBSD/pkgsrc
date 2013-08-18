@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.10 2008/06/16 10:17:56 hauke Exp $
+$NetBSD: patch-aa,v 1.11 2013/08/18 21:29:08 wiz Exp $
 
---- src/ylocale.cc.orig	2007-12-27 19:16:17.000000000 +0100
-+++ src/ylocale.cc	2008-06-08 15:43:51.000000000 +0200
-@@ -153,5 +153,9 @@
+--- src/ylocale.cc.orig	2008-01-05 07:34:25.000000000 +0000
++++ src/ylocale.cc
+@@ -152,7 +152,11 @@ YUChar *YLocale::unicodeString(const YLC
+     char * inbuf((char *) lStr), * outbuf((char *) uStr);
      size_t inlen(lLen), outlen(4 * lLen);
  
 +#if defined(__NetBSD__) || defined(__sun)
@@ -12,3 +13,4 @@ $NetBSD: patch-aa,v 1.10 2008/06/16 10:17:56 hauke Exp $
 +#endif
          warn(_("Invalid multibyte string \"%s\": %s"), lStr, strerror(errno));
  
+     *((YUChar *) outbuf) = 0;
