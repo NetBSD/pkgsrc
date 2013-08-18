@@ -1,15 +1,15 @@
-$NetBSD: patch-ae,v 1.3 2012/01/08 18:37:33 gdt Exp $
+$NetBSD: patch-ae,v 1.4 2013/08/18 11:06:25 gdt Exp $
 
 TODO: explain what's in LDFLAGS.
 TODO: explain why --libs has -L in the first place (vs --ldflags).
 TODO: report upstream.
 
---- tools/geos-config.in.orig	2011-12-12 09:57:21.000000000 +0000
+--- tools/geos-config.in.orig	2013-08-11 04:23:41.000000000 +0000
 +++ tools/geos-config.in
-@@ -38,13 +38,13 @@ case $1 in
-     echo -I${prefix}/include 
-       ;;
+@@ -43,22 +43,22 @@ case $1 in
      --libs)
+       # TODO: make an alias for --clibs
+       # see http://trac.osgeo.org/geos/ticket/497
 -      echo -L${libdir} -lgeos
 +      echo -L${libdir} @LDFLAGS@ -lgeos
        ;;
@@ -17,9 +17,21 @@ TODO: report upstream.
 -      echo -L${libdir} -lgeos_c
 +      echo -L${libdir} @LDFLAGS@ -lgeos_c
        ;;
+     --cclibs)
+-      echo -L${libdir} -lgeos
++      echo -L${libdir} @LDFLAGS@ -lgeos
+       ;;
+     --static-clibs)
+-      echo -L${libdir} -lgeos_c -lgeos -m
++      echo -L${libdir} @LDFLAGS@ -lgeos_c -lgeos -m
+       ;;
+     --static-cclibs)
+-      echo -L${libdir} -lgeos -m
++      echo -L${libdir} @LDFLAGS@ -lgeos -m
+       ;;
      --ldflags)
 -      echo -L${libdir}
-+      echo -L${libdir} @LDFLAGS@
++      echo @LDFLAGS@ -L${libdir}
        ;;
      --includes)
        echo ${prefix}/include
