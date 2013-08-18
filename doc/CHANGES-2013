@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2969 2013/08/18 10:01:47 bsiegert Exp $
+$NetBSD: CHANGES-2013,v 1.2970 2013/08/18 10:46:10 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4320,3 +4320,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/nginx to 1.4.2 [imil 2013-08-18]
 	Updated www/nginx-devel to 1.5.3 [imil 2013-08-18]
 	Updated shells/mksh to R48b [bsiegert 2013-08-18]
+	Updated mail/mpop to 1.0.28 [shattered 2013-08-18]
+	Updated misc/teseq to 1.1 [shattered 2013-08-18]
