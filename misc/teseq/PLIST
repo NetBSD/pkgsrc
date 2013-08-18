@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/28 01:23:41 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/18 10:44:30 shattered Exp $
 bin/reseq
 bin/teseq
 info/teseq.info
-libexec/teseq-post.sed
 man/man1/reseq.1
 man/man1/teseq.1
