@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2013/06/05 08:13:56 tron Exp $
+# $NetBSD: Makefile,v 1.130 2013/08/18 10:17:14 spz Exp $
 
 DISTNAME=	cairo-1.12.14
 PKGREVISION=	4
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-fc
 CONFIGURE_ARGS+=	--enable-gl
 CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps
@@ -45,6 +46,7 @@ CONFIGURE_ENV+=		ac_cv_type___uint128_t=no
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.2.95
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.9
 .include "../../graphics/freetype2/buildlink3.mk"
