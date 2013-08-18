@@ -1,29 +1,21 @@
-@comment $NetBSD: PLIST,v 1.10 2011/06/16 09:24:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/08/18 11:06:25 gdt Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/Angle.h
 include/geos/algorithm/BoundaryNodeRule.h
 include/geos/algorithm/CGAlgorithms.h
 include/geos/algorithm/CentralEndpointIntersector.h
+include/geos/algorithm/Centroid.h
 include/geos/algorithm/CentroidArea.h
 include/geos/algorithm/CentroidLine.h
 include/geos/algorithm/CentroidPoint.h
 include/geos/algorithm/ConvexHull.h
 include/geos/algorithm/ConvexHull.inl
-include/geos/algorithm/ExtractLineByLocation.h
 include/geos/algorithm/HCoordinate.h
 include/geos/algorithm/InteriorPointArea.h
 include/geos/algorithm/InteriorPointLine.h
 include/geos/algorithm/InteriorPointPoint.h
-include/geos/algorithm/LengthIndexOfPoint.h
-include/geos/algorithm/LengthIndexedLine.h
-include/geos/algorithm/LengthLocationMap.h
 include/geos/algorithm/LineIntersector.h
-include/geos/algorithm/LinearGeometryBuilder.h
-include/geos/algorithm/LinearIterator.h
-include/geos/algorithm/LinearLocation.h
-include/geos/algorithm/LocationIndexOfLine.h
-include/geos/algorithm/LocationIndexOfPoint.h
 include/geos/algorithm/MCPointInRing.h
 include/geos/algorithm/MinimumDiameter.h
 include/geos/algorithm/NotRepresentableException.h
@@ -199,10 +191,21 @@ include/geos/io/WKTReader.h
 include/geos/io/WKTReader.inl
 include/geos/io/WKTWriter.h
 include/geos/io/Writer.h
+include/geos/linearref/ExtractLineByLocation.h
+include/geos/linearref/LengthIndexOfPoint.h
+include/geos/linearref/LengthIndexedLine.h
+include/geos/linearref/LengthLocationMap.h
+include/geos/linearref/LinearGeometryBuilder.h
+include/geos/linearref/LinearIterator.h
+include/geos/linearref/LinearLocation.h
+include/geos/linearref/LocationIndexOfLine.h
+include/geos/linearref/LocationIndexOfPoint.h
+include/geos/linearref/LocationIndexedLine.h
 include/geos/noding.h
 include/geos/noding/BasicSegmentString.h
 include/geos/noding/FastNodingValidator.h
 include/geos/noding/FastSegmentSetIntersectionFinder.h
+include/geos/noding/GeometryNoder.h
 include/geos/noding/IntersectionAdder.h
 include/geos/noding/IntersectionFinderAdder.h
 include/geos/noding/IteratedNoder.h
@@ -223,7 +226,6 @@ include/geos/noding/SegmentNodeList.h
 include/geos/noding/SegmentPointComparator.h
 include/geos/noding/SegmentSetMutualIntersector.h
 include/geos/noding/SegmentString.h
-include/geos/noding/SegmentString.inl
 include/geos/noding/SegmentStringUtil.h
 include/geos/noding/SimpleNoder.h
 include/geos/noding/SingleInteriorIntersectionFinder.h
@@ -246,6 +248,7 @@ include/geos/operation.h
 include/geos/operation/GeometryGraphOperation.h
 include/geos/operation/IsSimpleOp.h
 include/geos/operation/buffer/BufferBuilder.h
+include/geos/operation/buffer/BufferInputLineSimplifier.h
 include/geos/operation/buffer/BufferOp.h
 include/geos/operation/buffer/BufferParameters.h
 include/geos/operation/buffer/BufferSubgraph.h
@@ -323,12 +326,13 @@ include/geos/planargraph/NodeMap.h
 include/geos/planargraph/PlanarGraph.h
 include/geos/planargraph/Subgraph.h
 include/geos/planargraph/algorithm/ConnectedSubgraphFinder.h
-include/geos/platform.h
 include/geos/precision.h
 include/geos/precision/CommonBits.h
 include/geos/precision/CommonBitsOp.h
 include/geos/precision/CommonBitsRemover.h
 include/geos/precision/EnhancedPrecisionOp.h
+include/geos/precision/GeometryPrecisionReducer.h
+include/geos/precision/PrecisionReducerCoordinateOperation.h
 include/geos/precision/SimpleGeometryPrecisionReducer.h
 include/geos/profiler.h
 include/geos/simplify/DouglasPeuckerLineSimplifier.h
@@ -341,6 +345,16 @@ include/geos/simplify/TaggedLinesSimplifier.h
 include/geos/simplify/TopologyPreservingSimplifier.h
 include/geos/spatialIndex.h
 include/geos/timeval.h
+include/geos/triangulate/DelaunayTriangulationBuilder.h
+include/geos/triangulate/IncrementalDelaunayTriangulator.h
+include/geos/triangulate/quadedge/LastFoundQuadEdgeLocator.h
+include/geos/triangulate/quadedge/LocateFailureException.h
+include/geos/triangulate/quadedge/QuadEdge.h
+include/geos/triangulate/quadedge/QuadEdgeLocator.h
+include/geos/triangulate/quadedge/QuadEdgeSubdivision.h
+include/geos/triangulate/quadedge/TrianglePredicate.h
+include/geos/triangulate/quadedge/TriangleVisitor.h
+include/geos/triangulate/quadedge/Vertex.h
 include/geos/unload.h
 include/geos/util.h
 include/geos/util/Assert.h
@@ -350,6 +364,7 @@ include/geos/util/GEOSException.h
 include/geos/util/GeometricShapeFactory.h
 include/geos/util/IllegalArgumentException.h
 include/geos/util/IllegalStateException.h
+include/geos/util/Interrupt.h
 include/geos/util/Machine.h
 include/geos/util/TopologyException.h
 include/geos/util/UniqueCoordinateArrayFilter.h
@@ -359,3 +374,4 @@ include/geos/version.h
 include/geos_c.h
 lib/libgeos.la
 lib/libgeos_c.la
+@pkgdir lib/geos
