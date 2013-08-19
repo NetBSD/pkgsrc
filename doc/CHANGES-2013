@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2972 2013/08/18 16:47:58 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.2973 2013/08/19 09:19:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4324,3 +4324,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/teseq to 1.1 [shattered 2013-08-18]
 	Updated geography/geos to 3.4.1 [gdt 2013-08-18]
 	Updated net/ruby-tw to 0.4.8 [tsutsui 2013-08-18]
+	Updated x11/xf86-input-mouse to 1.9.0nb1 [wiz 2013-08-19]
