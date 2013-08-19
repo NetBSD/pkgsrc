@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2013/08/19 04:47:58 taca Exp $
+
+* Not all Gem have source_index method.
+
+--- configure.orig	2013-06-28 02:06:00.000000000 +0000
++++ configure
+@@ -13935,7 +13935,10 @@ fi
+         rescue LoadError
+           ruby_glib2_gem = nil
+         else
+-          ruby_glib2_gem = Gem.source_index.find_name("glib2").first
++          begin
++            ruby_glib2_gem = Gem.source_index.find_name("glib2").first
++          rescue NoMethodError
++          end
+         end
+ 	if ruby_glib2_gem.nil?
+ 	  begin
