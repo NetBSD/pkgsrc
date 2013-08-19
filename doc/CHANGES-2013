@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2975 2013/08/19 12:49:18 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.2976 2013/08/19 13:37:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4327,3 +4327,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-input-mouse to 1.9.0nb1 [wiz 2013-08-19]
 	Updated www/ap2-wsgi to 3.4 [obache 2013-08-19]
 	Updated net/p5-umph to 0.2.5 [ryoon 2013-08-19]
+	Updated net/libquvi-scripts to 0.4.17 [ryoon 2013-08-19]
