@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2974 2013/08/19 10:10:15 obache Exp $
+$NetBSD: CHANGES-2013,v 1.2975 2013/08/19 12:49:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4326,3 +4326,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-tw to 0.4.8 [tsutsui 2013-08-18]
 	Updated x11/xf86-input-mouse to 1.9.0nb1 [wiz 2013-08-19]
 	Updated www/ap2-wsgi to 3.4 [obache 2013-08-19]
+	Updated net/p5-umph to 0.2.5 [ryoon 2013-08-19]
