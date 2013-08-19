@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/08 23:52:25 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/08/19 12:48:28 ryoon Exp $
 
-SHA1 (umph-0.2.0.tar.gz) = c13bdc8508a608b5bffd20ce6bf986aa78cb5e30
-RMD160 (umph-0.2.0.tar.gz) = 554532b16707820da75d831c67e81f6b471aa65d
-Size (umph-0.2.0.tar.gz) = 19825 bytes
+SHA1 (umph-0.2.5.tar.gz) = f333ed13e4bf4ce59fd745f8b4c8bedae4e6c2e7
+RMD160 (umph-0.2.5.tar.gz) = 961a55d60e3d718baee3fa096ad2396175850bef
+Size (umph-0.2.5.tar.gz) = 23687 bytes
