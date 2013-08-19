@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/10/01 07:44:23 wiz Exp $
+$NetBSD: distinfo,v 1.6 2013/08/19 13:36:08 ryoon Exp $
 
-SHA1 (libquvi-scripts-0.4.9.tar.xz) = babeceb964ef583928a3ddb389566432200c9342
-RMD160 (libquvi-scripts-0.4.9.tar.xz) = 0412217834fb1447cbf851f9d74a8b26a1ab82ef
-Size (libquvi-scripts-0.4.9.tar.xz) = 109300 bytes
+SHA1 (libquvi-scripts-0.4.17.tar.xz) = 1b6dbab8af77aa9b260aee69cd6216d218109fc8
+RMD160 (libquvi-scripts-0.4.17.tar.xz) = 1465e063f3a3d87e984ce279177376a7d05a0932
+Size (libquvi-scripts-0.4.17.tar.xz) = 118208 bytes

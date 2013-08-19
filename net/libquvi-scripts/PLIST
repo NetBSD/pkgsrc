@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/01 07:44:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/08/19 13:36:08 ryoon Exp $
 lib/pkgconfig/libquvi-scripts.pc
 man/man7/libquvi-scripts.7
 share/libquvi-scripts/lua/README
@@ -8,23 +8,21 @@ share/libquvi-scripts/lua/util/trim.lua
 share/libquvi-scripts/lua/website/101greatgoals.lua
 share/libquvi-scripts/lua/website/1tvru.lua
 share/libquvi-scripts/lua/website/README
-share/libquvi-scripts/lua/website/academicearth.lua
+share/libquvi-scripts/lua/website/ardmediathek.lua
+share/libquvi-scripts/lua/website/arte.lua
 share/libquvi-scripts/lua/website/audioboo.lua
 share/libquvi-scripts/lua/website/bbc.lua
 share/libquvi-scripts/lua/website/beeg.lua
-share/libquvi-scripts/lua/website/break.lua
+share/libquvi-scripts/lua/website/bikeradar.lua
 share/libquvi-scripts/lua/website/canalplus.lua
 share/libquvi-scripts/lua/website/cbsnews.lua
-share/libquvi-scripts/lua/website/charlierose.lua
 share/libquvi-scripts/lua/website/clipfish.lua
 share/libquvi-scripts/lua/website/dailymotion.lua
 share/libquvi-scripts/lua/website/deviantclip.lua
 share/libquvi-scripts/lua/website/empflix.lua
-share/libquvi-scripts/lua/website/fastjizz.lua
 share/libquvi-scripts/lua/website/foxnews.lua
 share/libquvi-scripts/lua/website/funnyordie.lua
 share/libquvi-scripts/lua/website/gaskrank.lua
-share/libquvi-scripts/lua/website/golem.lua
 share/libquvi-scripts/lua/website/guardian.lua
 share/libquvi-scripts/lua/website/imdb.lua
 share/libquvi-scripts/lua/website/jizzhut.lua
@@ -33,8 +31,7 @@ share/libquvi-scripts/lua/website/keezmovies.lua
 share/libquvi-scripts/lua/website/lego.lua
 share/libquvi-scripts/lua/website/liveleak.lua
 share/libquvi-scripts/lua/website/metacafe.lua
-share/libquvi-scripts/lua/website/mgnetwork.lua
-share/libquvi-scripts/lua/website/pornhub.lua
+share/libquvi-scripts/lua/website/myspass.lua
 share/libquvi-scripts/lua/website/publicsenat.lua
 share/libquvi-scripts/lua/website/quvi/bit.lua
 share/libquvi-scripts/lua/website/quvi/const.lua
@@ -61,10 +58,11 @@ share/libquvi-scripts/lua/website/tvrain.lua
 share/libquvi-scripts/lua/website/videa.lua
 share/libquvi-scripts/lua/website/videobash.lua
 share/libquvi-scripts/lua/website/vimeo.lua
+share/libquvi-scripts/lua/website/wdrmaus.lua
+share/libquvi-scripts/lua/website/wimp.lua
 share/libquvi-scripts/lua/website/xhamster.lua
 share/libquvi-scripts/lua/website/xnxx.lua
 share/libquvi-scripts/lua/website/xvideos.lua
-share/libquvi-scripts/lua/website/yfrog.lua
 share/libquvi-scripts/lua/website/youjizz.lua
 share/libquvi-scripts/lua/website/youtube.lua
 share/libquvi-scripts/version
