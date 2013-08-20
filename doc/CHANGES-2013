@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2977 2013/08/20 11:29:24 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.2978 2013/08/20 15:30:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4329,3 +4329,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-umph to 0.2.5 [ryoon 2013-08-19]
 	Updated net/libquvi-scripts to 0.4.17 [ryoon 2013-08-19]
 	Updated sysutils/smartmontools to 6.2 [shattered 2013-08-20]
+	Updated databases/openldap to 2.4.36 [adam 2013-08-20]
+	Updated databases/openldap-client to 2.4.36 [adam 2013-08-20]
+	Updated databases/openldap-server to 2.4.36 [adam 2013-08-20]
+	Updated databases/openldap-doc to 2.4.36 [adam 2013-08-20]
+	Updated databases/openldap-cloak to 2.4.36 [adam 2013-08-20]
+	Updated databases/openldap-nops to 2.4.36 [adam 2013-08-20]
+	Updated databases/openldap-smbk5pwd to 2.4.36 [adam 2013-08-20]
+	Updated databases/py-ldap to 2.4.13 [adam 2013-08-20]
