@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2013/07/28 09:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/08/20 22:37:06 wiz Exp $
 
 DISTNAME=		meld-1.7.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/1.7/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		dieter.NetBSD@pandora.be
+MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://meldmerge.org/
 COMMENT=		Visual diff and merge tool
 LICENSE=		gnu-gpl-v2
