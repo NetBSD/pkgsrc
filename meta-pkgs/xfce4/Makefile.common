@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2012/05/29 22:58:52 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.45 2013/08/20 22:36:54 wiz Exp $
 
 # used by audio/xfce4-mixer/Makefile
 # used by devel/xfce4-dev-tools/Makefile
@@ -27,7 +27,7 @@
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.6.1/src/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		dieter.NetBSD@pandora.be
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
