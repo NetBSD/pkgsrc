@@ -1,24 +1,12 @@
-$NetBSD: patch-ag,v 1.2 2010/10/25 22:58:56 shattered Exp $
+$NetBSD: patch-ag,v 1.3 2013/08/20 11:07:13 shattered Exp $
 
-Match pkgsrc's --host=i386-sun-solaris2, too.
-Avoid special man page section handling for Solaris (PR 38199).
-
---- configure.orig	2008-03-10 10:44:14.000000000 +0000
+--- configure.orig	2012-10-10 11:54:30.000000000 +0000
 +++ configure
-@@ -8067,7 +8067,7 @@ _ACEOF
- 
- 		os_libs=''
-  ;;
--	*-pc-solaris*)
-+	*-*-solaris*)
- 
- cat >>confdefs.h <<_ACEOF
- #define DEFAULT_MAILER "mailx"
-@@ -8141,13 +8141,8 @@ else
+@@ -6612,13 +6612,8 @@ else
    OS_DARWIN_FALSE=
  fi
  
-- if echo $host_os | grep '^solaris' > /dev/null; then
+- if test "$os_solaris" = "yes"; then
 -  OS_SOLARIS_TRUE=
 -  OS_SOLARIS_FALSE='#'
 -else
@@ -26,5 +14,5 @@ Avoid special man page section handling for Solaris (PR 38199).
    OS_SOLARIS_FALSE=
 -fi
  
-  if echo $host_os | grep '^mingw' > /dev/null; then
-   OS_WIN32_MINGW_TRUE=
+  if test "$os_win32" = "yes"; then
+   OS_WIN32_TRUE=
