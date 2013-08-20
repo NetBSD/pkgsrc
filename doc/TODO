@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12478 2013/08/18 10:46:10 shattered Exp $
+$NetBSD: TODO,v 1.12479 2013/08/20 11:29:24 shattered Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sjeng-11.2
 	o skype-4.1
 	o slock-1.1
-	o smartmontools-6.0
 	o smproxy-1.0.3
 	o snd-10.6
 	o snes9x-1.53
