@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/08/21 10:47:13 shattered Exp $
 
-SHA1 (pircbot-0.9.11.zip) = 3c17bc049f43a0923b0307e36898816a8bada99e
-RMD160 (pircbot-0.9.11.zip) = 6d8ba122e326d1e6afd1cf5c12fd86fa58f5f548
-Size (pircbot-0.9.11.zip) = 117678 bytes
+SHA1 (pircbot-1.5.0.zip) = 64733802c6712fb2760efc22c3d81b4564923ef3
+RMD160 (pircbot-1.5.0.zip) = dc9ce847a1076a26355aed815058d141cf4752f0
+Size (pircbot-1.5.0.zip) = 199450 bytes
