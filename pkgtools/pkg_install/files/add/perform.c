@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.103 2013/01/31 10:25:30 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.104 2013/08/21 11:46:02 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.103 2013/01/31 10:25:30 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.104 2013/08/21 11:46:02 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1559,6 +1559,7 @@ nuke_pkg:
 
 nuke_pkgdb:
 	if (!Fake) {
+		(void) remove_files(pkg->install_logdir, "+*");
 		if (recursive_remove(pkg->install_logdir, 1))
 			warn("Couldn't remove %s", pkg->install_logdir);
 		free(pkg->install_logdir_real);
