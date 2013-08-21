@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.487 2013/08/13 00:47:16 khorben Exp $
+# $NetBSD: Makefile,v 1.488 2013/08/21 15:28:03 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -355,6 +355,7 @@ SUBDIR+=	py-audiotools
 SUBDIR+=	py-beets
 SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
+SUBDIR+=	py-discogs_client
 SUBDIR+=	py-dynampd
 SUBDIR+=	py-id3
 SUBDIR+=	py-id3lib
