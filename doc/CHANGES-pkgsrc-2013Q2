@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.24 2013/08/16 10:20:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.25 2013/08/21 13:00:03 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -88,3 +88,9 @@ Pullup ticket #4211 - requested by schmonz
 www/cvsweb: Perl compatibility patch
 Pullup ticket #4212 - requested by adam
 mail/dovecot2: security update
+Pullup ticket #4213 - requested by spz
+lang/python27: security patch
+Pullup ticket #4214 - requested by bsiegert
+devel/doxygen: build fix
+Pullup ticket #4215 - requested by hannken
+net/chrony: security update
