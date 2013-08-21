@@ -1,32 +1,42 @@
-$NetBSD: patch-ae,v 1.4 2010/02/26 09:27:43 hannken Exp $
+$NetBSD: patch-ae,v 1.4.28.1 2013/08/21 12:59:44 tron Exp $
 
---- examples/chrony.conf.example.orig	2010-02-04 13:07:19.000000000 +0100
-+++ examples/chrony.conf.example	2010-02-26 09:06:48.000000000 +0100
-@@ -2,5 +2,5 @@
+Prepare for SUBST, not processed by configure.
+
+--- examples/chrony.conf.example.orig	2013-08-08 13:58:07.000000000 +0000
++++ examples/chrony.conf.example
+@@ -1,7 +1,7 @@
+ #######################################################################
  #
  # This is an example chrony configuration file.  You should copy it to
 -# /etc/chrony.conf after uncommenting and editing the options that you
 +# @PKG_SYSCONFDIR@/chrony.conf after uncommenting and editing the options that you
  # want to enable.  The more obscure options are not included.  Refer
  # to the documentation for these.
-@@ -90,5 +90,5 @@
+ #
+@@ -89,7 +89,7 @@
+ # immediately so that it doesn't gain or lose any more time.  You
  # generally want this, so it is uncommented.
  
--driftfile /etc/chrony.drift
-+driftfile @VARBASE@/db/chrony.drift
+-driftfile /var/lib/chrony/drift
++driftfile @VARBASE@/lib/chrony/chrony.drift
  
  # If you want to use the program called chronyc to configure aspects of
-@@ -99,5 +99,5 @@
+ # chronyd's operation once it is running (e.g. tell it the Internet link
+@@ -98,7 +98,7 @@ driftfile /var/lib/chrony/drift
+ # exchanges between cooperating machines.)  Again, this option is
  # assumed by default.
  
 -keyfile /etc/chrony.keys
 +keyfile @PKG_SYSCONFDIR@/chrony.keys
  
  # Tell chronyd which numbered key in the file is used as the password
-@@ -130,5 +130,5 @@
+ # for chronyc. (You can pick any integer up to 2**32-1.  '1' is just a
+@@ -129,7 +129,7 @@ commandkey 1
+ # still running and bail out.  If you want to change the path to the PID
  # file, uncomment this line and edit it.  The default path is shown.
  
 -! pidfile /var/run/chronyd.pid
 +! pidfile @VARBASE@/run/chronyd.pid
  
  #######################################################################
+ ### INITIAL CLOCK CORRECTION
