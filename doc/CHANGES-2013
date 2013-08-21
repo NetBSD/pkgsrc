@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2981 2013/08/21 09:06:25 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2982 2013/08/21 09:15:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4340,3 +4340,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-YAML-Tiny to 1.53 [wen 2013-08-21]
 	Updated devel/p5-MooX-Types-MooseLike to 0.25 [wen 2013-08-21]
 	Updated devel/p5-MooseX-Types-LoadableClass to 0.009 [wen 2013-08-21]
+	Updated devel/p5-MooseX-StrictConstructor to 0.19 [wen 2013-08-21]
