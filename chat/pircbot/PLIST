@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/29 17:00:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/08/21 10:47:13 shattered Exp $
 lib/java/pircbot.jar
 share/doc/java/pircbot/allclasses-frame.html
 share/doc/java/pircbot/allclasses-noframe.html
@@ -7,7 +7,10 @@ share/doc/java/pircbot/deprecated-list.html
 share/doc/java/pircbot/help-doc.html
 share/doc/java/pircbot/index-all.html
 share/doc/java/pircbot/index.html
+share/doc/java/pircbot/org/jibble/pircbot/Colors.html
 share/doc/java/pircbot/org/jibble/pircbot/DccChat.html
+share/doc/java/pircbot/org/jibble/pircbot/DccFileTransfer.html
+share/doc/java/pircbot/org/jibble/pircbot/DccManager.html
 share/doc/java/pircbot/org/jibble/pircbot/IdentServer.html
 share/doc/java/pircbot/org/jibble/pircbot/InputThread.html
 share/doc/java/pircbot/org/jibble/pircbot/IrcException.html
@@ -15,7 +18,12 @@ share/doc/java/pircbot/org/jibble/pircbot/NickAlreadyInUseException.html
 share/doc/java/pircbot/org/jibble/pircbot/OutputThread.html
 share/doc/java/pircbot/org/jibble/pircbot/PircBot.html
 share/doc/java/pircbot/org/jibble/pircbot/Queue.html
+share/doc/java/pircbot/org/jibble/pircbot/ReplyConstants.html
+share/doc/java/pircbot/org/jibble/pircbot/User.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/Colors.html
 share/doc/java/pircbot/org/jibble/pircbot/class-use/DccChat.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/DccFileTransfer.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/DccManager.html
 share/doc/java/pircbot/org/jibble/pircbot/class-use/IdentServer.html
 share/doc/java/pircbot/org/jibble/pircbot/class-use/InputThread.html
 share/doc/java/pircbot/org/jibble/pircbot/class-use/IrcException.html
@@ -23,6 +31,8 @@ share/doc/java/pircbot/org/jibble/pircbot/class-use/NickAlreadyInUseException.ht
 share/doc/java/pircbot/org/jibble/pircbot/class-use/OutputThread.html
 share/doc/java/pircbot/org/jibble/pircbot/class-use/PircBot.html
 share/doc/java/pircbot/org/jibble/pircbot/class-use/Queue.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/ReplyConstants.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/User.html
 share/doc/java/pircbot/org/jibble/pircbot/package-frame.html
 share/doc/java/pircbot/org/jibble/pircbot/package-summary.html
 share/doc/java/pircbot/org/jibble/pircbot/package-tree.html
@@ -31,5 +41,6 @@ share/doc/java/pircbot/overview-tree.html
 share/doc/java/pircbot/package-list
 share/doc/java/pircbot/packages.html
 share/doc/java/pircbot/pircbot-style.css
+share/doc/java/pircbot/resources/inherit.gif
 share/doc/java/pircbot/serialized-form.html
 share/doc/java/pircbot/stylesheet.css
