@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/08/21 09:24:05 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2013/08/21 09:24:57 wiz Exp $
 
 DISTNAME=		build-farm-4_11
 PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/:S/_/./}
@@ -14,7 +13,7 @@ LICENSE=		postgresql-license
 
 DEPENDS+=		scmgit-base>=1.6:../../devel/scmgit-base
 DEPENDS+=		p5-libwww>=5.0:../../www/p5-libwww
-DEPENDS+=		p5-Digest-SHA1>=2.13:../../security/p5-Digest-SHA1
+DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/./}
 NO_BUILD=		yes
