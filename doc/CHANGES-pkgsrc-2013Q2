@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.25 2013/08/21 13:00:03 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.26 2013/08/21 22:00:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -94,3 +94,7 @@ Pullup ticket #4214 - requested by bsiegert
 devel/doxygen: build fix
 Pullup ticket #4215 - requested by hannken
 net/chrony: security update
+Pullup ticket #4216 - requested by drochner
+security/putty: security update
+Pullup ticket #4217 - requested by drochner
+net/filezilla: security update
