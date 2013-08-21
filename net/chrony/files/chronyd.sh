@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: chronyd.sh,v 1.4 2002/09/23 07:04:39 grant Exp $
+# $NetBSD: chronyd.sh,v 1.4.84.1 2013/08/21 12:59:44 tron Exp $
 #
 # PROVIDE: chronyd
 # REQUIRE: DAEMON
@@ -9,7 +9,7 @@
 
 name="chronyd"
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/chrony.conf"
 extra_commands="online offline"
 online_cmd="chronyd_online"

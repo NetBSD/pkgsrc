@@ -1,29 +1,14 @@
-$NetBSD: patch-ac,v 1.4 2010/02/26 09:27:43 hannken Exp $
+$NetBSD: patch-ac,v 1.4.28.1 2013/08/21 12:59:44 tron Exp $
 
---- chronyd.8.orig	2010-02-04 13:07:19.000000000 +0100
-+++ chronyd.8
-@@ -25,8 +25,8 @@
+Remove unused variable.
+
+--- sys_netbsd.c.orig	2013-08-08 13:58:07.000000000 +0000
++++ sys_netbsd.c
+@@ -281,7 +281,6 @@ SYS_NetBSD_Initialise(void)
+   };
  
- If \fBchronyd\fR has been installed to its default location
--\fI/usr/local/sbin/chronyd\fR, starting it is simply a matter of entering the
-+\fI@PREFIX@/sbin/chronyd\fR, starting it is simply a matter of entering the
- command:
+   kvm_t *kt;
+-  FILE *fp;
  
--\fI/usr/local/sbin/chronyd\fR
-+\fI@PREFIX@/sbin/chronyd\fR
- 
- Information messages and warnings will be logged to syslog.
-@@ -53,5 +53,5 @@
- \fB\-f\fR \fIconf-file\fR
- This option can be used to specify an alternate location for the
--configuration file (default \fI/etc/chrony.conf\fR).
-+configuration file (default \fI@PKG_SYSCONFDIR@/chrony.conf\fR).
- .TP
- .B \-r
-@@ -103,5 +103,5 @@
- 
- .SH FILES
--\fI/etc/chrony.conf\fR
-+\fI@PKG_SYSCONFDIR@/chrony.conf\fR
- 
- .SH VERSION
+   kt = kvm_open(NULL, NULL, NULL, O_RDONLY, NULL);
+   if (!kt) {
