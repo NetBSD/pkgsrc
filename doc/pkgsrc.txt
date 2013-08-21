@@ -67,8 +67,9 @@ I. The pkgsrc user's guide
             3.3.4. Interix
             3.3.5. IRIX
             3.3.6. Linux
-            3.3.7. OpenBSD
-            3.3.8. Solaris
+            3.3.7. MirBSD
+            3.3.8. OpenBSD
+            3.3.9. Solaris
 
     4. Using pkgsrc
 
@@ -590,7 +591,7 @@ Table 1.1. Platforms supported by pkgsrc
 |---------------------------------------------+------------------|
 |Haiku                                        |     Sep 2010     |
 |---------------------------------------------+------------------|
-|MirBSD                                       |     Aug 2011     |
+|MirBSD                                       |     Jan 2011     |
 |---------------------------------------------+------------------|
 |Minix3                                       |     Nov 2011     |
 |---------------------------------------------+------------------|
@@ -719,8 +720,9 @@ Table of Contents
         3.3.4. Interix
         3.3.5. IRIX
         3.3.6. Linux
-        3.3.7. OpenBSD
-        3.3.8. Solaris
+        3.3.7. MirBSD
+        3.3.8. OpenBSD
+        3.3.9. Solaris
 
 4. Using pkgsrc
 
@@ -1001,8 +1003,9 @@ Table of Contents
     3.3.4. Interix
     3.3.5. IRIX
     3.3.6. Linux
-    3.3.7. OpenBSD
-    3.3.8. Solaris
+    3.3.7. MirBSD
+    3.3.8. OpenBSD
+    3.3.9. Solaris
 
 3.1. Binary distribution
 
@@ -1359,7 +1362,26 @@ linking a C++ shared library and records it, throwing away the -Bstatic and
 libtool-linked C++ shared libraries will have a runtime dependency on the icc
 libraries until this is fixed in libtool.
 
-3.3.7. OpenBSD
+3.3.7. MirBSD
+
+pkgsrc has been tested on MirBSD #10-current (2011 and newer). Older versions
+might also work. Releases before #10 are not supported.
+
+The package tools of the (older) native ports tree, MirPorts, have the same
+names as the ones used by pkgsrc. Care should be taken that the right tools are
+used. When installing packages from source, use the bmake command for pkgsrc
+and mmake for MirPorts.
+
+pkgsrc and MirPorts use the same location for the package database, /var/db/
+pkg. It is strongly recommended to use /usr/pkg/db instead, so that the pkgsrc
+tree is self-contained. This is also the default setting used in the binary
+package builds.
+
+Binary packages for MirBSD/i386 can be found on the pkgsrc ftp server. The
+bootstrap kit there already contains the pkgin package manager. See the pkgsrc
+on MirOS page for more details.
+
+3.3.8. OpenBSD
 
 OpenBSD 5.1 has been tested and supported, other versions may work.
 
@@ -1392,7 +1414,7 @@ with the OpenBSD userland tools. There are several steps:
     .endif
 
 
-3.3.8. Solaris
+3.3.9. Solaris
 
 Solaris 2.6 through 10 are supported on both x86 and sparc. You will need a
 working C compiler. Both gcc 4.5.3 and Sun WorkShop 5 have been tested.
@@ -1417,7 +1439,7 @@ Whichever compiler you use, please ensure the compiler tools and your $prefix
 are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
 {bin,sbin}.
 
-3.3.8.1. If you are using gcc
+3.3.9.1. If you are using gcc
 
 It makes life much simpler if you only use the same gcc consistently for
 building all packages.
@@ -1428,7 +1450,7 @@ gcc used during bootstrapping.
 
 Binary packages of gcc can be found through http://www.sunfreeware.com/.
 
-3.3.8.2. If you are using Sun WorkShop
+3.3.9.2. If you are using Sun WorkShop
 
 You will need at least the following packages installed (from WorkShop 5.0)
 
@@ -1452,7 +1474,7 @@ Note
 The CPP setting might break some packages that use the C preprocessor for
 processing things other than C source code.
 
-3.3.8.3. Building 64-bit binaries with SunPro
+3.3.9.3. Building 64-bit binaries with SunPro
 
 To build 64-bit packages, you just need to have the following lines in your
 mk.conf file:
@@ -1465,7 +1487,7 @@ Note
 This setting has been tested for the SPARC architecture. Intel and AMD machines
 need some more work.
 
-3.3.8.4. Common problems
+3.3.9.4. Common problems
 
 Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
 workaround is to use another shell for the configure scripts, for example by
