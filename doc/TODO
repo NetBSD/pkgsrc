@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12482 2013/08/21 15:41:37 drochner Exp $
+$NetBSD: TODO,v 1.12483 2013/08/21 16:36:58 shattered Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aewm++-1.0.27
 	o alacarte-0.13.2
 	o album-4.09
-	o aliados-0.2.0
 	o alsa-1.0.23
 	o alsa-lib-1.0.27
 	o alsa-plugins-1.0.27
@@ -485,7 +484,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emerillon-0.1.90
 	o enlightenment-1.0.9
 	o eog-plugins-3.6.1
-	o epic4-2.10.2
 	o epiphany-extensions-3.2.0
 	o eric4-4.5.13
 	o eric5-5.3.4
@@ -867,7 +865,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o parallel-20130722
 	o pari-2.5.3
 	o patch-2.7.1
-	o patchutils-0.3.2
 	o pbzip2-1.1.6
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
@@ -885,7 +882,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.9
 	o pingus-0.7.4
 	o pioneers-14.1
-	o pircbot-1.4.6
 	o pks-0.9.6
 	o planner-0.14.6
 	o ploticus-examples-230
@@ -1056,7 +1052,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tile-0.7.4
 	o tinc-1.0.21
 	o tk-8.6
-	o tkcvs-8.2.3
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
