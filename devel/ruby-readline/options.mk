@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/07/15 02:02:21 ryoon Exp $
+# $NetBSD: options.mk,v 1.6 2013/08/21 20:02:50 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ruby
@@ -21,6 +21,10 @@ PKG_SUGGESTED_OPTIONS+=	readline
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mreadline)
-CONFIGURE_ARGS+=	--enable-libedit
 .  include "../../mk/readline.buildlink3.mk"
+.  if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--enable-libedit
+.  else
+CONFIGURE_ARGS+=	--disable-libedit
+.  endif
 .endif
