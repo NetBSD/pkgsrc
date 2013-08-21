@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2988 2013/08/21 11:22:24 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2989 2013/08/21 15:41:37 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4347,3 +4347,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-Params-Validate to 0.18 [wen 2013-08-21]
 	Updated devel/p5-Lexical-Persistence to 1.023 [wen 2013-08-21]
 	Updated textproc/mdoclint to 1.23 [wiz 2013-08-21]
+	Updated misc/goffice0.10 to 0.10.5 [drochner 2013-08-21]
+	Updated math/gnumeric112 to 1.12.5 [drochner 2013-08-21]
+	Updated audio/picard to 1.2 [drochner 2013-08-21]
