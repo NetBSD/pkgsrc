@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2013/05/27 16:24:00 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.5.2.1 2013/08/21 11:47:14 tron Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2815,6 +2815,7 @@ lib/python${PY_VER_SUFFIX}/test/mp_fork_bomb.py
 lib/python${PY_VER_SUFFIX}/test/mp_fork_bomb.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_fork_bomb.pyo
 lib/python${PY_VER_SUFFIX}/test/nokia.pem
+lib/python${PY_VER_SUFFIX}/test/nullbytecert.pem
 lib/python${PY_VER_SUFFIX}/test/nullcert.pem
 lib/python${PY_VER_SUFFIX}/test/outstanding_bugs.py
 lib/python${PY_VER_SUFFIX}/test/outstanding_bugs.pyc
