@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4.34.1 2013/08/21 12:59:44 tron Exp $
 bin/chronyc
-share/doc/chrony/COPYING
-share/doc/chrony/README
-share/doc/chrony/chrony.txt
-share/examples/chrony/chrony.conf.example
-share/examples/chrony/chrony.keys.example
 man/man1/chrony.1
 man/man1/chronyc.1
 man/man5/chrony.conf.5
 man/man8/chronyd.8
 sbin/chronyd
+share/doc/chrony/COPYING
+share/doc/chrony/README
+share/doc/chrony/chrony.txt
+share/examples/chrony/chrony.conf.example
+share/examples/chrony/chrony.keys.example
 share/examples/rc.d/chronyd

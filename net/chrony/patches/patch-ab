@@ -1,28 +1,34 @@
-$NetBSD: patch-ab,v 1.4 2010/02/26 09:27:43 hannken Exp $
+$NetBSD: patch-ab,v 1.4.28.1 2013/08/21 12:59:44 tron Exp $
 
---- chrony.conf.5.orig	2010-02-04 13:07:19.000000000 +0100
-+++ chrony.conf.5
-@@ -4,5 +4,5 @@
+The ctype functions work on integers.
+
+--- cmdparse.c.orig	2013-08-08 13:58:07.000000000 +0000
++++ cmdparse.c
+@@ -203,7 +203,7 @@ CPS_NormalizeLine(char *line)
  
- .SH SYNOPSIS
--.B /etc/chrony.conf
-+.B @PKG_SYSCONFDIR@/chrony.conf
+   /* Remove white-space at beginning and replace white-spaces with space char */
+   for (p = q = line; *p; p++) {
+-    if (isspace(*p)) {
++    if (isspace((unsigned char)(*p))) {
+       if (!space)
+         *q++ = ' ';
+       space = 1;
+@@ -233,15 +233,15 @@ CPS_SplitWord(char *line)
+   char *p = line, *q = line;
  
- .SH DESCRIPTION
-@@ -13,5 +13,5 @@
- Assuming that you have found some servers, you need to set up a
- configuration file to run \fIchrony\fR.  The (compiled-in) default location
--for this file is \fB/etc/chrony.conf\fR.  Assuming that your ntp servers
-+for this file is \fB@PKG_SYSCONFDIR@/chrony.conf\fR.  Assuming that your ntp servers
- are called `a.b.c' and `d.e.f', your \fBchrony.conf\fR file could contain
- as a minimum
-@@ -30,7 +30,7 @@
-      server d.e.f
-      server g.h.i
--     keyfile /etc/chrony.keys
-+     keyfile @PKG_SYSCONFDIR@/chrony.keys
-      commandkey 1
--     driftfile /etc/chrony.drift
-+     driftfile @VARBASE@/db/chrony.drift
+   /* Skip white-space before the word */
+-  while (*q && isspace(*q))
++  while (*q && isspace((unsigned char)(*q)))
+     q++;
  
+   /* Move the word to the beginning */
+-  while (*q && !isspace(*q))
++  while (*q && !isspace((unsigned char)(*q)))
+     *p++ = *q++;
  
+   /* Find the next word */
+-  while (*q && isspace(*q))
++  while (*q && isspace((unsigned char)(*q)))
+     q++;
+ 
+   *p = '\0';
