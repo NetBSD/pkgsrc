@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/04/15 19:43:11 gls Exp $
+$NetBSD: distinfo,v 1.3 2013/08/21 09:24:05 wiz Exp $
 
-SHA1 (build-farm-4_10.tgz) = 2e96cf61e75f76a72a53514e7c08873311b54805
-RMD160 (build-farm-4_10.tgz) = dcd1a323fdf0d1bfcb8d6cf68f563a8a39002e1d
-Size (build-farm-4_10.tgz) = 29846 bytes
+SHA1 (build-farm-4_11.tgz) = 0210e124bdb66d52dac97f9443b412609075c189
+RMD160 (build-farm-4_11.tgz) = 51267518c81939d69d8f49268706f22d417fd026
+Size (build-farm-4_11.tgz) = 31247 bytes
