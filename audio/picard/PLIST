@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/11/06 18:41:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/08/21 15:39:43 drochner Exp $
 bin/picard
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/picard/__init__.py
@@ -13,9 +13,6 @@ ${PYSITELIB}/picard/acoustidmanager.pyo
 ${PYSITELIB}/picard/album.py
 ${PYSITELIB}/picard/album.pyc
 ${PYSITELIB}/picard/album.pyo
-${PYSITELIB}/picard/artist.py
-${PYSITELIB}/picard/artist.pyc
-${PYSITELIB}/picard/artist.pyo
 ${PYSITELIB}/picard/browser/__init__.py
 ${PYSITELIB}/picard/browser/__init__.pyc
 ${PYSITELIB}/picard/browser/__init__.pyo
@@ -28,12 +25,21 @@ ${PYSITELIB}/picard/browser/filelookup.pyo
 ${PYSITELIB}/picard/cluster.py
 ${PYSITELIB}/picard/cluster.pyc
 ${PYSITELIB}/picard/cluster.pyo
+${PYSITELIB}/picard/collection.py
+${PYSITELIB}/picard/collection.pyc
+${PYSITELIB}/picard/collection.pyo
 ${PYSITELIB}/picard/config.py
 ${PYSITELIB}/picard/config.pyc
 ${PYSITELIB}/picard/config.pyo
 ${PYSITELIB}/picard/const.py
 ${PYSITELIB}/picard/const.pyc
 ${PYSITELIB}/picard/const.pyo
+${PYSITELIB}/picard/coverart.py
+${PYSITELIB}/picard/coverart.pyc
+${PYSITELIB}/picard/coverart.pyo
+${PYSITELIB}/picard/coverartarchive.py
+${PYSITELIB}/picard/coverartarchive.pyc
+${PYSITELIB}/picard/coverartarchive.pyo
 ${PYSITELIB}/picard/dataobj.py
 ${PYSITELIB}/picard/dataobj.pyc
 ${PYSITELIB}/picard/dataobj.pyo
@@ -82,11 +88,6 @@ ${PYSITELIB}/picard/mbxml.pyo
 ${PYSITELIB}/picard/metadata.py
 ${PYSITELIB}/picard/metadata.pyc
 ${PYSITELIB}/picard/metadata.pyo
-${PYSITELIB}/picard/musicdns/__init__.py
-${PYSITELIB}/picard/musicdns/__init__.pyc
-${PYSITELIB}/picard/musicdns/__init__.pyo
-${PYSITELIB}/picard/musicdns/avcodec.so
-${PYSITELIB}/picard/musicdns/ofa.so
 ${PYSITELIB}/picard/parsefilename.py
 ${PYSITELIB}/picard/parsefilename.pyc
 ${PYSITELIB}/picard/parsefilename.pyo
@@ -96,9 +97,9 @@ ${PYSITELIB}/picard/plugin.pyo
 ${PYSITELIB}/picard/plugins/__init__.py
 ${PYSITELIB}/picard/plugins/__init__.pyc
 ${PYSITELIB}/picard/plugins/__init__.pyo
-${PYSITELIB}/picard/puidmanager.py
-${PYSITELIB}/picard/puidmanager.pyc
-${PYSITELIB}/picard/puidmanager.pyo
+${PYSITELIB}/picard/releasegroup.py
+${PYSITELIB}/picard/releasegroup.pyc
+${PYSITELIB}/picard/releasegroup.pyo
 ${PYSITELIB}/picard/resources.py
 ${PYSITELIB}/picard/resources.pyc
 ${PYSITELIB}/picard/resources.pyo
@@ -120,6 +121,9 @@ ${PYSITELIB}/picard/ui/__init__.pyo
 ${PYSITELIB}/picard/ui/cdlookup.py
 ${PYSITELIB}/picard/ui/cdlookup.pyc
 ${PYSITELIB}/picard/ui/cdlookup.pyo
+${PYSITELIB}/picard/ui/collectionmenu.py
+${PYSITELIB}/picard/ui/collectionmenu.pyc
+${PYSITELIB}/picard/ui/collectionmenu.pyo
 ${PYSITELIB}/picard/ui/coverartbox.py
 ${PYSITELIB}/picard/ui/coverartbox.pyc
 ${PYSITELIB}/picard/ui/coverartbox.pyo
@@ -207,9 +211,6 @@ ${PYSITELIB}/picard/ui/options/tags.pyo
 ${PYSITELIB}/picard/ui/passworddialog.py
 ${PYSITELIB}/picard/ui/passworddialog.pyc
 ${PYSITELIB}/picard/ui/passworddialog.pyo
-${PYSITELIB}/picard/ui/puidsubmit.py
-${PYSITELIB}/picard/ui/puidsubmit.pyc
-${PYSITELIB}/picard/ui/puidsubmit.pyo
 ${PYSITELIB}/picard/ui/ratingwidget.py
 ${PYSITELIB}/picard/ui/ratingwidget.pyc
 ${PYSITELIB}/picard/ui/ratingwidget.pyo
@@ -282,9 +283,6 @@ ${PYSITELIB}/picard/ui/ui_options_tags.pyo
 ${PYSITELIB}/picard/ui/ui_passworddialog.py
 ${PYSITELIB}/picard/ui/ui_passworddialog.pyc
 ${PYSITELIB}/picard/ui/ui_passworddialog.pyo
-${PYSITELIB}/picard/ui/ui_puidsubmit.py
-${PYSITELIB}/picard/ui/ui_puidsubmit.pyc
-${PYSITELIB}/picard/ui/ui_puidsubmit.pyo
 ${PYSITELIB}/picard/ui/ui_tagsfromfilenames.py
 ${PYSITELIB}/picard/ui/ui_tagsfromfilenames.pyc
 ${PYSITELIB}/picard/ui/ui_tagsfromfilenames.pyo
