@@ -1,15 +1,18 @@
-$NetBSD: patch-aa,v 1.12 2004/04/29 15:46:00 minskim Exp $
+$NetBSD: patch-aa,v 1.13 2013/08/21 10:14:54 shattered Exp $
 
---- doinstall.tcl.orig	2004-03-15 23:40:54.000000000 -0600
+--- doinstall.tcl.orig	2011-11-28 04:59:54.000000000 +0000
 +++ doinstall.tcl
-@@ -2,5 +2,5 @@
+@@ -1,7 +1,7 @@
+ #!/bin/sh
  #-*-tcl-*-
  # the next line restarts using wish \
 -if [ -z "$DISPLAY"  -o "X$1" = "X-nox" ]; then exec tclsh "$0" -- ${1+"$@"}; else exec wish "$0" -- ${1+"$@"}; fi
 +exec tclsh "$0" -- ${1+"$@"}
  
  #
-@@ -34,21 +34,4 @@ proc show_paths {INSTALLROOT} {
+ # Usage: doinstall.tcl [-nox] [destination]
+@@ -31,23 +31,6 @@ proc show_paths {INSTALLROOT} {
+   global LIBDIR BINDIR MANDIR
  
    set_paths $INSTALLROOT
 -
@@ -31,8 +34,10 @@ $NetBSD: patch-aa,v 1.12 2004/04/29 15:46:00 minskim Exp $
 -  }
  }
  
-@@ -100,11 +83,4 @@ proc doinstall { INSTALLROOT } {
-   cd ..
+ proc doinstall { INSTALLROOT } {
+@@ -97,13 +80,6 @@ proc doinstall { INSTALLROOT } {
+   }
+   cd [file join .. ..]
    puts "Finished!"
 -
 -  if {$X} {
@@ -43,7 +48,9 @@ $NetBSD: patch-aa,v 1.12 2004/04/29 15:46:00 minskim Exp $
 -  }
  }
  
-@@ -115,10 +91,5 @@ set X 1
+ ################################################################################
+@@ -112,12 +88,7 @@ set usage "Usage: doinstall.tcl \[-nox\]
+ set X 1
  
  # Check Tcl/TK version
 -if {$tcl_version < 8.3} {
@@ -55,3 +62,4 @@ $NetBSD: patch-aa,v 1.12 2004/04/29 15:46:00 minskim Exp $
 +# This is done by the package Makefile
  
  # See if the user changed them with command-line args
+ set ArgInstallRoot ""
