@@ -1,11 +1,15 @@
-$NetBSD: patch-ad,v 1.3 2010/02/26 09:27:43 hannken Exp $
+$NetBSD: patch-ad,v 1.3.28.1 2013/08/21 12:59:44 tron Exp $
 
---- conf.c.orig	2010-02-04 13:07:19.000000000 +0100
+Prepare for SUBST, not processed by configure.
+
+--- conf.c.orig	2013-08-08 13:58:07.000000000 +0000
 +++ conf.c
-@@ -177,5 +177,5 @@
+@@ -197,7 +197,7 @@ static IPAddr bind_cmd_address4, bind_cm
+ 
  /* Filename to use for storing pid of running chronyd, to prevent multiple
   * chronyds being started. */
 -static char *pidfile = "/var/run/chronyd.pid";
 +static char *pidfile = "@VARBASE@/run/chronyd.pid";
  
- /* Boolean for whether the Linux HZ value has been overridden, and the
+ /* Temperature sensor, update interval and compensation coefficients */
+ static char *tempcomp_file = NULL;

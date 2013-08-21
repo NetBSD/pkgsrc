@@ -1,17 +1,22 @@
-$NetBSD: patch-aa,v 1.4 2010/02/26 09:27:43 hannken Exp $
+$NetBSD: patch-aa,v 1.4.28.1 2013/08/21 12:59:44 tron Exp $
 
---- Makefile.in.orig	2010-02-04 13:07:19.000000000 +0100
+Adapt install target for pkgsrc.
+
+--- Makefile.in.orig	2013-08-08 13:58:07.000000000 +0000
 +++ Makefile.in
-@@ -104,31 +104,14 @@
+@@ -93,35 +93,17 @@ getdate :
+ # seem to vary between systems.
  
  install: chronyd chronyc
+-	[ -d $(DESTDIR)$(SYSCONFDIR) ] || mkdir -p $(DESTDIR)$(SYSCONFDIR)
 -	[ -d $(DESTDIR)$(SBINDIR) ] || mkdir -p $(DESTDIR)$(SBINDIR)
 -	[ -d $(DESTDIR)$(BINDIR) ] || mkdir -p $(DESTDIR)$(BINDIR)
- 	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
+-	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
 -	[ -d $(DESTDIR)$(MANDIR)/man1 ] || mkdir -p $(DESTDIR)$(MANDIR)/man1
 -	[ -d $(DESTDIR)$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)$(MANDIR)/man5
 -	[ -d $(DESTDIR)$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)$(MANDIR)/man8
--	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
+ 	[ -d $(DESTDIR)$(DOCDIR) ] || mkdir -p $(DESTDIR)$(DOCDIR)
+ 	[ -d $(DESTDIR)$(CHRONYVARDIR) ] || mkdir -p $(DESTDIR)$(CHRONYVARDIR)
 -	if [ -f $(DESTDIR)$(SBINDIR)/chronyd ]; then rm -f $(DESTDIR)$(SBINDIR)/chronyd ; fi
 -	if [ -f $(DESTDIR)$(BINDIR)/chronyc ]; then rm -f $(DESTDIR)$(BINDIR)/chronyc ; fi
 -	cp chronyd $(DESTDIR)$(SBINDIR)/chronyd
@@ -43,3 +48,4 @@ $NetBSD: patch-aa,v 1.4 2010/02/26 09:27:43 hannken Exp $
 +	$(BSD_INSTALL_MAN) chrony.conf.5 $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
  
  %.o : %.c
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<
