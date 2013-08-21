@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2012/08/04 13:42:22 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2013/08/21 15:24:00 richard Exp $
 
---- Makefile.in.orig	2012-06-29 23:52:27.000000000 +0000
+--- Makefile.in.orig	2013-08-21 15:21:45.856832073 +0000
 +++ Makefile.in
-@@ -462,11 +462,11 @@ dist_man1_MANS = cjpeg.1 djpeg.1 jpegtra
- DOCS = install.txt coderules.txt filelist.txt jconfig.txt change.log \
- 	rdrle.c wrrle.c BUILDING.txt ChangeLog.txt
+@@ -485,11 +485,11 @@ dist_man1_MANS = cjpeg.1 djpeg.1 jpegtra
+ DOCS = coderules.txt jconfig.txt change.log rdrle.c wrrle.c BUILDING.txt \
+ 	ChangeLog.txt
  
 -docdir = $(datadir)/doc
 +docdir = $(datadir)/doc/libjpeg-turbo
