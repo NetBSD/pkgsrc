@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2984 2013/08/21 09:25:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2985 2013/08/21 09:26:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4343,3 +4343,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-StrictConstructor to 0.19 [wen 2013-08-21]
 	Updated mail/postgrey to 1.33nb9 [wiz 2013-08-21]
 	Updated databases/pgbuildfarm to 4.11 [wiz 2013-08-21]
+	Updated devel/p5-MooseX-Role-WithOverloading to 0.13 [wen 2013-08-21]
