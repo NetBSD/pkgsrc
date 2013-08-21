@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2982 2013/08/21 09:15:44 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2983 2013/08/21 09:20:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4341,3 +4341,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooX-Types-MooseLike to 0.25 [wen 2013-08-21]
 	Updated devel/p5-MooseX-Types-LoadableClass to 0.009 [wen 2013-08-21]
 	Updated devel/p5-MooseX-StrictConstructor to 0.19 [wen 2013-08-21]
+	Updated mail/postgrey to 1.33nb9 [wiz 2013-08-21]
