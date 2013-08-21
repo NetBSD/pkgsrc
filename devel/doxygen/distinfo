@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2013/05/21 14:43:05 wiz Exp $
+$NetBSD: distinfo,v 1.49.2.1 2013/08/21 12:51:24 tron Exp $
 
 SHA1 (doxygen-1.8.4.src.tar.gz) = a363811b932e44d479addbadffcc8257cde60b44
 RMD160 (doxygen-1.8.4.src.tar.gz) = 7087480667cb138c739fae54ca21f77e2099f4eb
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 87c68a2ce598c10d90d775764f4c05739eb51435
 SHA1 (patch-af) = 0942cc0fdcb49e74ce018d7e790dba36b21b4d08
 SHA1 (patch-ah) = db6f117bf1faa3a1ed0b2ca9af81fc4f8d0913f9
 SHA1 (patch-aj) = 1f4822364eb9aeb82084d30b0bc75af504da63f1
+SHA1 (patch-tmake_lib_macosx-c++_tmake.conf) = f6f7414bf8e1c26264211c72991d8dc4222cc738
