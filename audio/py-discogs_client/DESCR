@@ -1,0 +1,2 @@
+This is the official Discogs API client for Python. You can use it to query the
+Discogs music database for metadata on artists, releases, and more.
