@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/05/31 12:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/08/21 10:18:03 shattered Exp $
 #
 
-DISTNAME=		patchutils-0.3.0
-PKGREVISION=		2
+DISTNAME=		patchutils-0.3.2
+#KGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://cyberelk.net/tim/data/patchutils/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +18,7 @@ USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
 
+CHECK_PORTABILITY_SKIP+=tests/rediff2/run-test
 REPLACE_BASH+=		editdiff.in espdiff.in
 USE_TOOLS+=		bash:run
 
