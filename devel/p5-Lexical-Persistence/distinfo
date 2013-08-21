@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/03/16 22:59:37 sno Exp $
+$NetBSD: distinfo,v 1.5 2013/08/21 09:39:05 wen Exp $
 
-SHA1 (Lexical-Persistence-1.020.tar.gz) = c071172ff16c81f2d2a79dad22c6f740368b70e7
-RMD160 (Lexical-Persistence-1.020.tar.gz) = 6b09232043c2decf69c02918b6d0ca1611c51b97
-Size (Lexical-Persistence-1.020.tar.gz) = 12228 bytes
+SHA1 (Lexical-Persistence-1.023.tar.gz) = 0d760edfaf6a2957086d74bf6519ed2aab61d112
+RMD160 (Lexical-Persistence-1.023.tar.gz) = bf972cf62eec94ae8ef597bbd35680e8d887c2b5
+Size (Lexical-Persistence-1.023.tar.gz) = 27609 bytes
