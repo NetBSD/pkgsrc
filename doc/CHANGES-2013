@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2990 2013/08/21 15:58:26 adam Exp $
+$NetBSD: CHANGES-2013,v 1.2991 2013/08/21 16:36:58 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4346,6 +4346,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-Role-WithOverloading to 0.13 [wen 2013-08-21]
 	Updated devel/p5-MooseX-Params-Validate to 0.18 [wen 2013-08-21]
 	Updated devel/p5-Lexical-Persistence to 1.023 [wen 2013-08-21]
+	Updated devel/tkcvs to 8.2.3 [shattered 2013-08-21]
+	Updated devel/patchutils to 0.3.2 [shattered 2013-08-21]
+	Updated emulators/aliados to 0.2.0 [shattered 2013-08-21]
+	Updated chat/epic4 to 2.10.2 [shattered 2013-08-21]
+	Updated chat/pircbot to 1.5.0 [shattered 2013-08-21]
 	Updated textproc/mdoclint to 1.23 [wiz 2013-08-21]
 	Updated misc/goffice0.10 to 0.10.5 [drochner 2013-08-21]
 	Updated math/gnumeric112 to 1.12.5 [drochner 2013-08-21]
