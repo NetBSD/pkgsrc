@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2012/01/09 23:08:56 sbd Exp $
+$NetBSD: distinfo,v 1.12 2013/08/21 10:43:29 shattered Exp $
 
-SHA1 (epic4-2.2.tar.bz2) = 88d4140e693b571ceb8148f98d504a5fefa74076
-RMD160 (epic4-2.2.tar.bz2) = 8f1f1b446bd3260e665093864f1becc0b625be32
-Size (epic4-2.2.tar.bz2) = 623254 bytes
-SHA1 (patch-aa) = c00699223db490c044d07754d73078c4f768e3a3
+SHA1 (epic4-2.10.2.tar.bz2) = 5b6538d9c1465bc861295f54fe375f326921dcb7
+RMD160 (epic4-2.10.2.tar.bz2) = 38af0d56fdb315c4ce47bf531a4e00d79f13eb5f
+Size (epic4-2.10.2.tar.bz2) = 633946 bytes
 SHA1 (patch-source_Makefile.in) = ea4b6520c228b22b43dc391725f3a0d616aeb729
