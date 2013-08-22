@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.82 2013/08/18 10:15:17 bsiegert Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.83 2013/08/22 13:54:51 ryoon Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -148,6 +148,16 @@
 	  when you use the bootstrap script.</para>
 	</listitem>
       </orderedlist>
+    </sect2>
+
+    <sect2 id="gnukfreebsd">
+      <title>GNU/kFreeBSD</title>
+
+      <para>Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now.
+      Debian GNU/kFreeBSD 7.0 or later is tested and supported.</para>
+
+      <para> You should install ncurses (libncurses and libncurses-dev)
+      packages.</para>
     </sect2>
 
     <sect2 id="interix">

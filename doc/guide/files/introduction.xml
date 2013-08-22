@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.29 2013/08/18 10:15:17 bsiegert Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.30 2013/08/22 13:54:51 ryoon Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -199,6 +199,10 @@ minutes!</para>
       <row>
         <entry><ulink url="http://cygwin.com/">Cygwin</ulink></entry>
         <entry align="center">Mar 2013</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.debian.org/ports/kfreebsd-gnu/">GNU/kFreeBSD</ulink></entry>
+        <entry align="center">Jul 2013</entry>
       </row>
     </tbody>
   </tgroup>
