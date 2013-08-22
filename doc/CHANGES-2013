@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3005 2013/08/22 11:06:32 he Exp $
+$NetBSD: CHANGES-2013,v 1.3006 2013/08/22 13:15:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4370,3 +4370,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Catalyst-Action-REST to 1.11 [wen 2013-08-22]
 	Updated print/poppler to 0.24.0 [prlw1 2013-08-22]
 	Updated security/opendnssec to 1.4.1 [he 2013-08-22]
+	Updated security/crypto++ to 5.6.2nb1 [ryoon 2013-08-22]
