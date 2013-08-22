@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3003 2013/08/22 08:47:29 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3004 2013/08/22 09:11:49 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4368,3 +4368,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Catalyst-Devel to 1.39 [wen 2013-08-22]
 	Updated www/p5-Catalyst-Runtime to 5.90042 [wen 2013-08-22]
 	Updated www/p5-Catalyst-Action-REST to 1.11 [wen 2013-08-22]
+	Updated print/poppler to 0.24.0 [prlw1 2013-08-22]

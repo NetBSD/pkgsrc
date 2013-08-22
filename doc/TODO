@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12483 2013/08/21 16:36:58 shattered Exp $
+$NetBSD: TODO,v 1.12484 2013/08/22 09:11:49 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -889,7 +889,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pokerth-0.9.3
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.24.0
 	o postal-0.72
 	o postfix-2.9.7
 	o postfix-2.10.1
