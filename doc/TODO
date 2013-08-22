@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12487 2013/08/22 14:52:23 richard Exp $
+$NetBSD: TODO,v 1.12488 2013/08/22 14:54:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darcs-2.4
 	o dasher-4.11
 	o dbench-4.0
-	o dd_rescue-1.39
+	o dd_rescue-1.40
 	o ddclient-3.7.3
 	o ddrescue-1.17
 	o defendguin-0.0.11
@@ -486,7 +486,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o eog-plugins-3.6.1
 	o epiphany-extensions-3.2.0
 	o eric4-4.5.13
-	o eric5-5.3.4
+	o eric5-5.3.6
 	o erlang-16.2
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -593,6 +593,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-6.0.3
+	o gnupg2-2.0.21
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -634,7 +635,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-9.2
-	o highlight-3.14
+	o highlight-3.15
 	o honeyd-1.5c
 	o horde-5.1.1
 	o html2wml-0.4.11
@@ -850,6 +851,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
 	o p5-Perl-Tidy-20121207
+	o p5-Quota-1.7.0 [pkg/48144]
 	o p5-cairo-1.100
 	o p5-clutter-1.110
 	o p5-glib2-1.301
@@ -917,9 +919,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-lxml-3.2.3
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
-	o py-qt5-5.0.0
+	o py-qt5-5.0.1
 	o py-setuptools-1.0
 	o py-simplejson-3.3.0
+	o py-sip-4.15
 	o py-sybase-0.37
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.7.2
@@ -1015,6 +1018,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sudo-1.8.6p8
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
+	o synergy-1.4.12 [pkg/48141]
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit>=1.0?|GNOME 2.30]
 	o systrace-1.6e
@@ -1046,7 +1050,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tig-1.2
 	o tightvnc-2.0.95
 	o tile-0.7.4
-	o tinc-1.0.21
+	o tinc-1.0.22
 	o tk-8.6
 	o tkgate-1.8.7
 	o tkhylafax-3.2
@@ -1071,7 +1075,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
 	o unicap-0.9.8
-	o unworkable-0.53 [pkg/48124]
 	o userppp-030706
 	o utilisp-1.14
 	o vala-0.20.1
@@ -1087,6 +1090,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
+	o vttest-20130818
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
@@ -1094,8 +1098,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o webkit-gtk-2.0.4
-	o webmin-1.630
+	o webmin-1.650
 	o websvn-2.3.2
+	o wesnoth-1.10.6 [pkg/48139]
 	o windowlab-1.40
 	o wine-1.6.0 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.7.0 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
@@ -1128,7 +1133,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-intel-2.21.14
+	o xf86-video-intel-2.21.15
 	o xf86-video-mga-1.9.100
 	o xf86-video-modesetting-0.8.0 [wip]
 	o xf86-video-neomagic-1.2.8
