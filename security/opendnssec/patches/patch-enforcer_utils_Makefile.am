@@ -1,0 +1,16 @@
+$NetBSD: patch-enforcer_utils_Makefile.am,v 1.1 2013/08/22 11:05:45 he Exp $
+
+Install the conversion scripts.
+
+--- enforcer/utils/Makefile.am.orig	2012-10-24 10:42:52.000000000 +0000
++++ enforcer/utils/Makefile.am
+@@ -43,3 +43,9 @@ EXTRA_DIST = $(srcdir)/migrate_*.pl
+ EXTRA_DIST += $(srcdir)/migrate_adapters_1.*
+ EXTRA_DIST += $(srcdir)/convert_database.pl
+ EXTRA_DIST += $(srcdir)/migrate_zone_delete.mysql
++
++install-data-local: $(EXTRA_DIST)
++	for f in $(EXTRA_DIST); do \
++		$(INSTALL_DATA) "$$f" $(DESTDIR)$(opendnssecdatadir) \
++			|| exit $$?; \
++	done
