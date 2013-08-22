@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3011 2013/08/22 14:52:23 richard Exp $
+$NetBSD: CHANGES-2013,v 1.3012 2013/08/22 15:25:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4380,3 +4380,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/gettext-tools to 0.18.3.1 [adam 2013-08-22]
 	Updated devel/mdds to 0.9.0 [jaapb 2013-08-22]
 	Updated graphics/libjpeg-turbo to 1.3.0 [richard 2013-08-22]
+	Updated lang/camlp5 to 6.11 [jaapb 2013-08-22]
