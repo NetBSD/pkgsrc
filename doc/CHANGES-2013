@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3007 2013/08/22 14:24:16 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3008 2013/08/22 14:31:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4372,3 +4372,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/opendnssec to 1.4.1 [he 2013-08-22]
 	Updated security/crypto++ to 5.6.2nb1 [ryoon 2013-08-22]
 	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.016 [wen 2013-08-22]
+	Updated textproc/p5-XML-LibXML-Simple to 0.93 [wen 2013-08-22]
