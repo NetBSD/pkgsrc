@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2998 2013/08/22 06:59:45 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.2999 2013/08/22 07:05:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4361,5 +4361,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-TryCatch to 1.003002 [wen 2013-08-22]
 	Updated www/p5-Plack-Handler-AnyEvent-HTTPD to 0.03 [wen 2013-08-22]
 	Updated www/p5-Plack-Middleware-Deflater to 0.11 [wen 2013-08-22]
-	Updated www/p5-Plack-Middleware-ReverseProxy to 0.15 [wen 2013-08-13]
+	Updated www/p5-Plack-Middleware-ReverseProxy to 0.15 [wen 2013-08-22]
 	Updated x11/xcb-util-cursor to 0.1.0 [wiz 2013-08-22]
+	Updated www/p5-Plack-Middleware-Session to 0.20 [wen 2013-08-22]
