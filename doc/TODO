@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12484 2013/08/22 09:11:49 prlw1 Exp $
+$NetBSD: TODO,v 1.12485 2013/08/22 14:40:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -550,7 +550,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.20.1
-	o gettext-0.18.3.1
 	o gfract-0.33
 	o ghc-7.6
 	o gifsicle-1.48
