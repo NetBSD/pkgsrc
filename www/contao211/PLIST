@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/08/15 17:50:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/08/22 17:10:04 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/LGPL.txt
@@ -363,11 +363,8 @@ ${CT_WEBDIR}/plugins/tablesort/images/desc.gif
 ${CT_WEBDIR}/plugins/tablesort/js/tablesort-uncompressed.js
 ${CT_WEBDIR}/plugins/tablesort/js/tablesort.js
 ${CT_WEBDIR}/plugins/tcpdf/README.TXT
-${CT_WEBDIR}/plugins/tcpdf/cache/.htaccess
 ${CT_WEBDIR}/plugins/tcpdf/config/lang/eng.php
 ${CT_WEBDIR}/plugins/tcpdf/config/tcpdf_config.php
-${CT_WEBDIR}/plugins/tcpdf/datamatrix.php
-${CT_WEBDIR}/plugins/tcpdf/encodings_maps.php
 ${CT_WEBDIR}/plugins/tcpdf/fonts/courier.php
 ${CT_WEBDIR}/plugins/tcpdf/fonts/freeserif.ctg.z
 ${CT_WEBDIR}/plugins/tcpdf/fonts/freeserif.php
@@ -385,13 +382,14 @@ ${CT_WEBDIR}/plugins/tcpdf/fonts/helvetica.php
 ${CT_WEBDIR}/plugins/tcpdf/fonts/helveticab.php
 ${CT_WEBDIR}/plugins/tcpdf/fonts/helveticabi.php
 ${CT_WEBDIR}/plugins/tcpdf/fonts/helveticai.php
-${CT_WEBDIR}/plugins/tcpdf/htmlcolors.php
 ${CT_WEBDIR}/plugins/tcpdf/images/_blank.png
-${CT_WEBDIR}/plugins/tcpdf/spotcolors.php
+${CT_WEBDIR}/plugins/tcpdf/include/tcpdf_colors.php
+${CT_WEBDIR}/plugins/tcpdf/include/tcpdf_filters.php
+${CT_WEBDIR}/plugins/tcpdf/include/tcpdf_font_data.php
+${CT_WEBDIR}/plugins/tcpdf/include/tcpdf_fonts.php
+${CT_WEBDIR}/plugins/tcpdf/include/tcpdf_images.php
+${CT_WEBDIR}/plugins/tcpdf/include/tcpdf_static.php
 ${CT_WEBDIR}/plugins/tcpdf/tcpdf.php
-${CT_WEBDIR}/plugins/tcpdf/tcpdf_filters.php
-${CT_WEBDIR}/plugins/tcpdf/tcpdf_parser.php
-${CT_WEBDIR}/plugins/tcpdf/unicode_data.php
 ${CT_WEBDIR}/plugins/tinyMCE/langs/ar.js
 ${CT_WEBDIR}/plugins/tinyMCE/langs/bg.js
 ${CT_WEBDIR}/plugins/tinyMCE/langs/br.js
