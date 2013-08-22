@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.6 2013/06/15 16:42:48 pettai Exp $
+$NetBSD: patch-aa,v 1.7 2013/08/22 11:05:45 he Exp $
 
-Install the configuration examples in ${EGDIR}
+Install sample configurations in another directory.
 
---- conf/Makefile.in.orig	2012-05-09 18:50:03.000000000 +0000
+--- conf/Makefile.in.orig	2013-06-27 08:04:17.000000000 +0000
 +++ conf/Makefile.in
-@@ -302,6 +302,7 @@ sharedstatedir = @sharedstatedir@
+@@ -299,6 +299,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
- subdirs = @subdirs@
  sysconfdir = @sysconfdir@/opendnssec
 +EGDIR=@EGDIR@
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -563,19 +564,19 @@ regress: $(RNG)
+@@ -568,19 +569,20 @@ regress: $(RNG)
  		(echo "kasp.xml built")
  
  install-data-hook:
@@ -20,12 +20,12 @@ Install the configuration examples in ${EGDIR}
 -	test -f ${DESTDIR}${sysconfdir}/conf.xml || \
 -		${INSTALL_DATA} -m 0640 conf.xml ${DESTDIR}${sysconfdir}
 -	${INSTALL_DATA} -m 640 conf.xml ${DESTDIR}${sysconfdir}/conf.xml.sample
+-	test -f ${DESTDIR}${sysconfdir}/addns.xml || \
+-		${INSTALL_DATA} addns.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} addns.xml ${DESTDIR}${sysconfdir}/addns.xml.sample
 -	test -f ${DESTDIR}${sysconfdir}/zonelist.xml || \
 -		${INSTALL_DATA} zonelist.xml ${DESTDIR}${sysconfdir}
 -	${INSTALL_DATA} zonelist.xml ${DESTDIR}${sysconfdir}/zonelist.xml.sample
--	test -f ${DESTDIR}${sysconfdir}/zonefetch.xml || \
--		${INSTALL_DATA} -m 0640 zonefetch.xml ${DESTDIR}${sysconfdir}
--	${INSTALL_DATA} -m 640 zonefetch.xml ${DESTDIR}${sysconfdir}/zonefetch.xml.sample
 -	test -f ${DESTDIR}${sysconfdir}/kasp.xml || \
 -		${INSTALL_DATA} kasp.xml ${DESTDIR}${sysconfdir}
 -	${INSTALL_DATA} kasp.xml ${DESTDIR}${sysconfdir}/kasp.xml.sample
@@ -33,15 +33,16 @@ Install the configuration examples in ${EGDIR}
 +	test -f ${DESTDIR}${EGDIR}/conf.xml || \
 +		${INSTALL_DATA} -m 0640 conf.xml ${DESTDIR}${EGDIR}
 +	${INSTALL_DATA} -m 640 conf.xml ${DESTDIR}${EGDIR}/conf.xml.sample
++	test -f ${DESTDIR}${EGDIR}/addns.xml || \
++		${INSTALL_DATA} addns.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} addns.xml ${DESTDIR}${EGDIR}/addns.xml.sample
 +	test -f ${DESTDIR}${EGDIR}/zonelist.xml || \
 +		${INSTALL_DATA} zonelist.xml ${DESTDIR}${EGDIR}
 +	${INSTALL_DATA} zonelist.xml ${DESTDIR}${EGDIR}/zonelist.xml.sample
-+	test -f ${DESTDIR}${EGDIR}/zonefetch.xml || \
-+		${INSTALL_DATA} -m 0640 zonefetch.xml ${DESTDIR}${EGDIR}
-+	${INSTALL_DATA} -m 640 zonefetch.xml ${DESTDIR}${EGDIR}/zonefetch.xml.sample
 +	test -f ${DESTDIR}${EGDIR}/kasp.xml || \
 +		${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}
 +	${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
++
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/07/12 10:45:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2013/08/22 11:05:45 he Exp $
 #
 
-DISTNAME=	opendnssec-1.3.14
-PKGREVISION=	1
+DISTNAME=	opendnssec-1.4.1
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -12,7 +11,6 @@ COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	ldns>=1.6.13:../../net/ldns
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.53:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 BUILD_DEFS+=	VARBASE
@@ -25,7 +23,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ENV+=		RUBY=${RUBY}
 
 ODS_USER?=	opendnssec
 ODS_GROUP?=	opendnssec
@@ -49,12 +46,12 @@ SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-CONF_FILES=	${EGDIR}/conf.xml.sample \
+CONF_FILES+=	${EGDIR}/addns.xml.sample \
+			${ODS_SYSCONFDIR}/addns.xml
+CONF_FILES+=	${EGDIR}/conf.xml.sample \
 			${ODS_SYSCONFDIR}/conf.xml
 CONF_FILES+=	${EGDIR}/kasp.xml.sample \
 			${ODS_SYSCONFDIR}/kasp.xml
-CONF_FILES+=	${EGDIR}/zonefetch.xml.sample \
-			${ODS_SYSCONFDIR}/zonefetch.xml
 CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
 			${ODS_SYSCONFDIR}/zonelist.xml
 
@@ -69,14 +66,6 @@ OWN_DIRS+=		${VARBASE}/opendnssec/signconf
 OWN_DIRS+=		${VARBASE}/opendnssec/signed
 OWN_DIRS+=		${VARBASE}/opendnssec/unsigned
 
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} != 18
-DEPENDS+=	${RUBY_PKGPREFIX}-soap4r>=2.0.3:../../net/ruby-soap4r
-.else
-DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
-.endif
-
 .include "options.mk"
 
 pre-install:
@@ -90,5 +79,4 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
