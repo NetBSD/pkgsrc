@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/21 21:44:18 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/08/22 06:59:35 wiz Exp $
 
-SHA1 (xcb-util-cursor-0.0.99.tar.bz2) = 1e68838f74bcbb4f095346f56b2e08b82478699e
-RMD160 (xcb-util-cursor-0.0.99.tar.bz2) = ebfcea9088e65bbe9ae6d7c4a92f382d97483fdc
-Size (xcb-util-cursor-0.0.99.tar.bz2) = 276739 bytes
-SHA1 (patch-cursor_cursor.h) = 690513cce218bec3e286d8535ad3997cea684b6e
+SHA1 (xcb-util-cursor-0.1.0.tar.bz2) = a7dacd54a0b39433f0e2a19d56364980a660f831
+RMD160 (xcb-util-cursor-0.1.0.tar.bz2) = dd32a4431ec76d38b6bde71bf20b6f5d641dd94d
+Size (xcb-util-cursor-0.1.0.tar.bz2) = 289086 bytes
