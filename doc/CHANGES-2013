@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3014 2013/08/22 17:08:47 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3015 2013/08/22 17:11:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4383,3 +4383,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/camlp5 to 6.11 [jaapb 2013-08-22]
 	Updated graphics/magicpoint to 1.13anb20 [taca 2013-08-22]
 	Updated mail/roundcube to 0.9.3 [taca 2013-08-22]
+	Updated www/contao211 to 2.11.12 [taca 2013-08-22]
+	Updated www/contao211-example to 2.11.12 [taca 2013-08-22]
