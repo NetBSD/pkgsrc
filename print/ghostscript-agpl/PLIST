@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/16 22:25:21 dholland Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/22 21:07:08 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
@@ -43,7 +43,6 @@ man/de/man1/font2c.1
 man/de/man1/gsnd.1
 man/de/man1/pdf2dsc.1
 man/de/man1/pdf2ps.1
-man/de/man1/pdfopt.1
 man/de/man1/printafm.1
 man/de/man1/ps2ascii.1
 man/de/man1/ps2pdf.1
@@ -64,7 +63,6 @@ man/man1/gslp.1
 man/man1/gsnd.1
 man/man1/pdf2dsc.1
 man/man1/pdf2ps.1
-man/man1/pdfopt.1
 man/man1/pf2afm.1
 man/man1/pfbtopfa.1
 man/man1/printafm.1

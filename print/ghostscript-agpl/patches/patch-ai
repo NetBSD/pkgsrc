@@ -1,12 +1,11 @@
-$NetBSD: patch-ai,v 1.1 2013/03/16 22:25:21 dholland Exp $
+$NetBSD: patch-ai,v 1.2 2013/08/22 21:07:08 adam Exp $
 
-replace BSD/Linux specific "qd" printf format specifier by "lld",
-should fix build problem on Solaris reported by Joern Clausen
-per PR pkg/40664
+Replace BSD/Linux specific "qd" printf format specifier by "lld",
+should fix build problem on Solaris reported by Joern Clausen per PR pkg/40664
 
 --- base/mkromfs.c.orig 2009-02-13 12:20:54.000000000 +0100
 +++ base/mkromfs.c
-@@ -1033,7 +1033,7 @@
+@@ -2302,7 +2302,7 @@
  #endif
      fprintf(out,"\n#include \"stdint_.h\"\n");
      fprintf(out,"\n#include \"time_.h\"\n\n");
