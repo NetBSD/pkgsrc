@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3002 2013/08/22 08:34:02 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3003 2013/08/22 08:47:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4367,3 +4367,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-SOAP-Lite to 1.06 [wen 2013-08-22]
 	Updated www/p5-Catalyst-Devel to 1.39 [wen 2013-08-22]
 	Updated www/p5-Catalyst-Runtime to 5.90042 [wen 2013-08-22]
+	Updated www/p5-Catalyst-Action-REST to 1.11 [wen 2013-08-22]
