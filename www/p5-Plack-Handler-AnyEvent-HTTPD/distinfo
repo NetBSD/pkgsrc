@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 12:13:06 seb Exp $
+$NetBSD: distinfo,v 1.2 2013/08/22 04:30:07 wen Exp $
 
-SHA1 (Plack-Handler-AnyEvent-HTTPD-0.01.tar.gz) = e6303e39ce5dd5c57c0f68d562c5a525c0ef9396
-RMD160 (Plack-Handler-AnyEvent-HTTPD-0.01.tar.gz) = 5f458f6fab3843410369a48f1197e2e46a922e49
-Size (Plack-Handler-AnyEvent-HTTPD-0.01.tar.gz) = 43305 bytes
+SHA1 (Plack-Handler-AnyEvent-HTTPD-0.03.tar.gz) = c2c59d97f216f9eceddcfa0f0fb21c9496d5c158
+RMD160 (Plack-Handler-AnyEvent-HTTPD-0.03.tar.gz) = b05d82d4a0de76104e2a4106cbb25567c5b56b61
+Size (Plack-Handler-AnyEvent-HTTPD-0.03.tar.gz) = 23074 bytes
