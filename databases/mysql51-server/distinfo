@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2013/08/04 10:20:24 adam Exp $
+$NetBSD: distinfo,v 1.29 2013/08/22 11:09:46 christos Exp $
 
 SHA1 (mysql-5.1.71.tar.gz) = a71c77c43aa8374ccb6e09f0ad7f225846af59e6
 RMD160 (mysql-5.1.71.tar.gz) = 4077b4aab7297a48b5dc180acf35c9a94bce366c
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = 2a5321738e637a56e57cd6b1b40908d2bf275506
 SHA1 (patch-ab) = 4c485a74d55553d63fc3dbc0350d0aa0068e1fcf
 SHA1 (patch-ac) = bfb6eec77d7c5aa8d2b849632769005dcf2e272c
 SHA1 (patch-ad) = 5fd4db0e04a97289f38a5467bbae5041f4082b51
-SHA1 (patch-ae) = e682e8c7a260706cbfd802885bfe100c0e0d31be
+SHA1 (patch-ae) = 3b9a0822b2fab21dea57b12d005eeae0ef9f66be
 SHA1 (patch-af) = 1e13ba542b4fc2a1d59fc822d06c76bc4e92dc23
 SHA1 (patch-ag) = 85df1a0080376c5aff1a963e5532cb2c1ec5949d
 SHA1 (patch-ah) = a608060cee7aadaf8bcde84016a73131a75dea32
@@ -25,5 +25,8 @@ SHA1 (patch-as) = 8167416a083a011ded19d176bc488c94d9eb7abf
 SHA1 (patch-at) = 307a0785190f8bc175226ce83288cc85f7da4631
 SHA1 (patch-au) = 51291771b994d199fb6de6a17dd7809a7bf39b68
 SHA1 (patch-ax) = dbf68af2d2ded85140aac3602d4f6ce5d68cc78a
+SHA1 (patch-include_my__net.h) = 5cfe4c14ea39ce806c615a87a13c74b48d159ffa
+SHA1 (patch-mysys_my__net.c) = 1ee22921d62ccefc41bc9a81b96a576ce391f054
+SHA1 (patch-mysys_my__thr__init.c) = ee03f554b38b1477ab13912333e09cab340b5f56
 SHA1 (patch-sql_ha_ndbcluster.cc) = eb076bbce9d1d671331b41f50cf0be220cca7c6b
 SHA1 (patch-vio_viossl.c) = ad922587684a635a82c2fa662be7431c63063909
