@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3008 2013/08/22 14:31:19 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3009 2013/08/22 14:40:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4373,3 +4373,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/crypto++ to 5.6.2nb1 [ryoon 2013-08-22]
 	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.016 [wen 2013-08-22]
 	Updated textproc/p5-XML-LibXML-Simple to 0.93 [wen 2013-08-22]
+	Updated devel/gettext to 0.18.3.1 [adam 2013-08-22]
+	Updated devel/gettext-asprintf to 0.18.3.1 [adam 2013-08-22]
+	Updated devel/gettext-lib to 0.18.3.1 [adam 2013-08-22]
+	Updated devel/gettext-m4 to 0.18.3.1 [adam 2013-08-22]
+	Updated devel/gettext-tools to 0.18.3.1 [adam 2013-08-22]
