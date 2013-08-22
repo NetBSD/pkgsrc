@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.110 2013/08/17 07:47:59 ryoon Exp $
+$NetBSD: distinfo,v 1.111 2013/08/22 14:23:35 martin Exp $
 
 SHA1 (firefox-23.0.1.source.tar.bz2) = 937bcd41aa316afff60b04fa4813f59bb9608631
 RMD160 (firefox-23.0.1.source.tar.bz2) = 524f2c2872c39f0496ead812675d84ece1c394ee
@@ -52,6 +52,7 @@ SHA1 (patch-ipc_glue_AsyncChannel.cpp) = 0185791ada8e903943bcd245376486315b1c651
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = fe9ac2d0af8dd4757c93f50e6f74a31697f7e23c
 SHA1 (patch-ipc_ipdl_ipdl_lower.py) = 4025c0a4e149d9b2087331e10b342734fa77a905
 SHA1 (patch-js__public__HeapAPI.h) = 8dc656293d75c92118c19b0fe070542f534bebd4
+SHA1 (patch-js__public__Value.h) = 38892a07c475001bcda87700f50504cb6a3dcedb
 SHA1 (patch-js__src__gc__Marking.cpp) = f2ee6320b2c7c9a4374c0cbb844ae6368ad03a13
 SHA1 (patch-js__src__gc__Memory.cpp) = 905b99349d6c40b402b52cac53b4d9afa732b13a
 SHA1 (patch-js__src__gc__Memory.h) = 4496889c2aa7417fa4e02236dfe0ef39069d436a
