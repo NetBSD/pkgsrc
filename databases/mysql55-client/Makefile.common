@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2013/07/31 18:51:41 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2013/08/22 12:28:08 ryoon Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -112,5 +112,11 @@ SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
 SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
+
+.if !empty(READLINE_TYPE:Mreadline)
+CMAKE_ARGS+=	-DREADLINE_FOUND=system
+.endif
+CMAKE_ARGS+=	-DREADLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
+
 .include "../../devel/zlib/buildlink3.mk"
