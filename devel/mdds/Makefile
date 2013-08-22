@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/02/15 11:54:02 obache Exp $
+# $NetBSD: Makefile,v 1.15 2013/08/22 14:42:57 jaapb Exp $
 #
 
-DISTNAME=	mdds_0.6.1
+DISTNAME=	mdds_0.9.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://multidimalgorithm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +14,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
-INSTALLATION_DIRS=	include/mdds/hash_container
+INSTALLATION_DIRS=	include/mdds/hash_container share/pkgconfig
+PKGCONFIG_OVERRIDE+=	misc/mdds.pc.in
 
 do-build:
 
@@ -28,6 +28,7 @@ do-install:
 		${INSTALL_DATA} $$i \
 			${DESTDIR}${PREFIX}/include/mdds/hash_container; \
 	done
+	${INSTALL_DATA} ${WRKSRC}/misc/mdds.pc ${DESTDIR}${PREFIX}/share/pkgconfig
 
 BUILDLINK_DEPMETHOD.boost-headers?=	build
 .include "../../devel/boost-headers/buildlink3.mk"
