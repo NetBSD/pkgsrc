@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2993 2013/08/22 03:00:07 wen Exp $
+$NetBSD: CHANGES-2013,v 1.2994 2013/08/22 04:16:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/postgrey to 1.34 [adam 2013-08-21]
 	Updated net/unworkable to 0.53 [agc 2013-08-21]
 	Updated devel/p5-Try-Tiny to 0.18 [wen 2013-08-22]
+	Updated devel/p5-TryCatch to 1.003002 [wen 2013-08-22]
