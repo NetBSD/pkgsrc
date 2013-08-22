@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2011/09/27 12:43:20 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/08/22 14:45:13 richard Exp $
 
 SHA1 (cvs-1.11.23.tar.bz2) = a51c531eebaff2dfdcc0fb6d94c8c6e509e06d7d
 RMD160 (cvs-1.11.23.tar.bz2) = ff8c5c6777f1c12ee9134a3cf59e00c2ebaad279
 Size (cvs-1.11.23.tar.bz2) = 2942652 bytes
 SHA1 (patch-aa) = 948f78730d1e7755371838e7915d2706def3b539
-SHA1 (patch-ab) = 2864d35dfcdea456537d296a8efb4ade006913cf
+SHA1 (patch-ab) = 3111210f0ef3c6f31a70f2b585383f6b28aa3b9d
 SHA1 (patch-ac) = 6a93eec69346691e7a442407a906aac30c7c3341
 SHA1 (patch-ad) = 984dc49845ee6d43dead1c54ae1f8371844fa6eb
 SHA1 (patch-ae) = 0e763fe3f62714f094a35482f5e99477adf83784
