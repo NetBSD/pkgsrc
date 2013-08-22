@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/08/16 11:48:41 richard Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/08/22 21:17:00 joerg Exp $
 bin/afslog
 bin/compile_et
 bin/gsstool
@@ -118,8 +118,8 @@ include/krb5/resolve.h
 include/krb5/rfc2459_asn1.h
 include/krb5/roken-common.h
 include/krb5/roken.h
-include/krb5/roken/glob.h
-include/krb5/roken/vis.h
+${PLIST.glob}include/krb5/roken/glob.h
+${PLIST.vis}include/krb5/roken/vis.h
 include/krb5/rtbl.h
 include/krb5/sl.h
 include/krb5/wind.h
