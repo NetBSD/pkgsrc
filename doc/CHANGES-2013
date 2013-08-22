@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2999 2013/08/22 07:05:34 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3000 2013/08/22 07:15:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4364,3 +4364,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Plack-Middleware-ReverseProxy to 0.15 [wen 2013-08-22]
 	Updated x11/xcb-util-cursor to 0.1.0 [wiz 2013-08-22]
 	Updated www/p5-Plack-Middleware-Session to 0.20 [wen 2013-08-22]
+	Updated net/p5-SOAP-Lite to 1.06 [wen 2013-08-22]
