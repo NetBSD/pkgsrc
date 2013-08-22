@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2013/08/16 08:30:14 adam Exp $
+# $NetBSD: Makefile,v 1.102 2013/08/22 21:17:00 joerg Exp $
 
 DISTNAME=	heimdal-1.5.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -14,6 +15,8 @@ CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
 CONFLICTS+=	gss-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
+
+MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex
@@ -60,6 +63,8 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}
 .elif ${READLINE_TYPE} == "editline"
 CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editlinereadline}
 .endif
+
+PLIST_VARS+=		glob vis
 
 PLIST_VARS+=		afskauth hcrypto
 .if ${OPSYS} == "IRIX"
