@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3015 2013/08/22 17:11:04 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3016 2013/08/22 21:08:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4385,3 +4385,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/roundcube to 0.9.3 [taca 2013-08-22]
 	Updated www/contao211 to 2.11.12 [taca 2013-08-22]
 	Updated www/contao211-example to 2.11.12 [taca 2013-08-22]
+	Updated print/ghostscript-agpl to 9.09 [adam 2013-08-22]
