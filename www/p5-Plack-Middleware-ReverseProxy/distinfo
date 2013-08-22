@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/11/11 04:32:49 hiramatsu Exp $
+$NetBSD: distinfo,v 1.3 2013/08/22 04:48:44 wen Exp $
 
-SHA1 (Plack-Middleware-ReverseProxy-0.11.tar.gz) = f36db90bde0965f45813bb3866c42da0404f3a18
-RMD160 (Plack-Middleware-ReverseProxy-0.11.tar.gz) = 7a7d7109b7ab6cc6c2e085b32d531a36b2ee6b55
-Size (Plack-Middleware-ReverseProxy-0.11.tar.gz) = 21868 bytes
+SHA1 (Plack-Middleware-ReverseProxy-0.15.tar.gz) = 813daff3ef29a1cba55275d5e498b368ec1d8ceb
+RMD160 (Plack-Middleware-ReverseProxy-0.15.tar.gz) = 4d03a2e851760e2284166b20b02362d4f1ab482a
+Size (Plack-Middleware-ReverseProxy-0.15.tar.gz) = 22746 bytes
