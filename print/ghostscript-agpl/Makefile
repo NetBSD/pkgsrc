@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/06/04 22:16:58 tron Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/22 21:07:08 adam Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
-PKGREVISION=	4
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
-MASTER_SITES+=	http://ghostscript.com/releases/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
+		http://downloads.ghostscript.com/public/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +22,7 @@ CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-system-libtiff
@@ -89,8 +88,9 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
 	${RM} -rf ${WRKSRC}/freetype
+	${RM} -rf ${WRKSRC}/jbig2dec
 	${RM} -rf ${WRKSRC}/jpeg
-#	${RM} -rf ${WRKSRC}/lcms2
+	${RM} -rf ${WRKSRC}/lcms2
 	${RM} -rf ${WRKSRC}/libpng
 	${RM} -rf ${WRKSRC}/zlib
 
@@ -103,10 +103,14 @@ post-extract:
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
 
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/jbig2dec/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+#.include "../../graphics/openjpeg15/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
