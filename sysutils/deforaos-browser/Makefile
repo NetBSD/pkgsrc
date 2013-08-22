@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2013/06/15 12:33:38 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2013/08/22 08:40:30 obache Exp $
 #
 
 DISTNAME=	Browser-0.4.12
 PKGNAME=	deforaos-browser-0.4.12
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.defora.org/os/download/download/4294/
 
@@ -41,6 +42,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"

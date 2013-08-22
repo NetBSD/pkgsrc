@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/06/15 12:56:27 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2013/08/22 08:35:29 obache Exp $
 #
 
 DISTNAME=	Phone-0.3.12
 PKGNAME=	deforaos-phone-0.3.12
+PKGREVISION=	1
 CATEGORIES=	comms net
 MASTER_SITES=	http://www.defora.org/os/download/download/4296/
 
@@ -38,5 +39,6 @@ post-install:
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/sofia-sip/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/deforaos-locker/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
