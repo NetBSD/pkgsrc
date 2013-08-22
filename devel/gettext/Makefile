@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2013/01/31 21:45:03 adam Exp $
+# $NetBSD: Makefile,v 1.82 2013/08/22 14:39:00 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -30,7 +30,6 @@ USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
 do-install:
 	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install DESTDIR=${DESTDIR}
-	cd ${WRKSRC}/gettext-tools/src && ${MAKE} install-tcl install-exec-local DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/intl && ${MAKE} install-exec install-data DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data DESTDIR=${DESTDIR}
