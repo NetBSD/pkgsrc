@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/06/12 12:00:08 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/08/22 12:53:14 ryoon Exp $
 
 SHA1 (cryptopp562.zip) = ddc18ae41c2c940317cd6efe81871686846fa293
 RMD160 (cryptopp562.zip) = b41af768b3a5ba927dac44ec554dc2095e21b1bb
 Size (cryptopp562.zip) = 1137964 bytes
-SHA1 (patch-aa) = 99569a955773758526969c9893dfbb08aacfdc4d
+SHA1 (patch-aa) = 5897457ab2a8ca894ef88a6d7a4968c6503a4d1e
