@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2012/01/31 14:09:39 rhaen Exp $
+$NetBSD: distinfo,v 1.15 2013/08/22 08:13:14 wen Exp $
 
-SHA1 (Catalyst-Devel-1.36.tar.gz) = 2b0b76ebddee3d062a84df6b9ebdf2ae08f6287d
-RMD160 (Catalyst-Devel-1.36.tar.gz) = 044dff3c0ea0e685eae0a043dec6738b137283db
-Size (Catalyst-Devel-1.36.tar.gz) = 92399 bytes
+SHA1 (Catalyst-Devel-1.39.tar.gz) = bdd16ebdbbaa424ece32ff46f9ba726a44a0b1a7
+RMD160 (Catalyst-Devel-1.39.tar.gz) = 16c35f2b0879ccf6b503c67e62589e3e2de58d32
+Size (Catalyst-Devel-1.39.tar.gz) = 91488 bytes
