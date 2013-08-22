@@ -1,15 +1,17 @@
-# $NetBSD: Makefile.common,v 1.55 2013/07/04 13:13:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.56 2013/08/22 09:11:16 prlw1 Exp $
 #
 # used by print/poppler/Makefile
+# used by print/poppler-cpp/Makefile
 # used by print/poppler-glib/Makefile
 # used by print/poppler-includes/Makefile
 # used by print/poppler-qt4/Makefile
 # used by print/poppler-utils/Makefile
 
-POPPLER_VERS=		0.22.5
+POPPLER_VERS=		0.24.0
 DISTNAME=		poppler-${POPPLER_VERS}
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
+EXTRACT_SUFX=		.tar.xz
 
 HOMEPAGE=		http://poppler.freedesktop.org/
 LICENSE=		gnu-gpl-v2
