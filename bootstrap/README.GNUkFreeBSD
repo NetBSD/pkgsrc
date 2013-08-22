@@ -1,11 +1,11 @@
-$NetBSD: README.GNUkFreeBSD,v 1.2 2013/08/22 13:45:01 ryoon Exp $
+$NetBSD: README.GNUkFreeBSD,v 1.3 2013/08/22 13:45:58 ryoon Exp $
 
 Please read the general README file as well.
 
 ==========================================================================
 
 Debian GNU/kFreeBSD (it is only GNU/kFreeBSD distribution) need either
-libtermcap or libcurses (libncurses).  Installing the distributions
-libncurses-dev package should fix the problem.
+libcurses (libncurses).  Installing the distributions libncurses-dev
+package should fix the problem.
 
 ==========================================================================
