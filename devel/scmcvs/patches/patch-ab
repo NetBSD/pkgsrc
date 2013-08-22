@@ -1,7 +1,23 @@
-$NetBSD: patch-ab,v 1.4 2011/09/22 15:16:26 ryoon Exp $
+$NetBSD: patch-ab,v 1.5 2013/08/22 14:45:13 richard Exp $
+
+http://savannah.nongnu.org/bugs/?39166
+Texinfo-5.1 fails if @sp macro is not followed by a number. The
+numeric argument is mandatory according to Texinfo documentation.
 
 --- doc/cvs.texinfo.orig	2008-05-07 01:15:46.000000000 +0000
 +++ doc/cvs.texinfo
+@@ -111,9 +111,9 @@ approved by the Free Software Foundation
+ @sp 4
+ @comment The title is printed in a large font.
+ @center @titlefont{Version Management}
+-@sp
++@sp 1
+ @center @titlefont{with}
+-@sp
++@sp 1
+ @center @titlefont{CVS}
+ @sp 2
+ @center for @sc{cvs} @value{VERSION}
 @@ -12803,6 +12803,11 @@ additional information and can store the
  a file, or mail it to appropriate persons, or maybe
  post it to a local newsgroup, or@dots{}  Your
