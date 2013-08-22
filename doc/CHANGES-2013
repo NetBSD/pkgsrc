@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.2991 2013/08/21 16:36:58 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.2992 2013/08/22 01:00:38 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4356,3 +4356,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/gnumeric112 to 1.12.5 [drochner 2013-08-21]
 	Updated audio/picard to 1.2 [drochner 2013-08-21]
 	Updated mail/postgrey to 1.34 [adam 2013-08-21]
+	Updated net/unworkable to 0.53 [agc 2013-08-21]
