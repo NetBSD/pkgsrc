@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/09/29 09:37:16 obache Exp $
+$NetBSD: distinfo,v 1.4 2013/08/22 04:14:39 wen Exp $
 
-SHA1 (TryCatch-1.003000.tar.gz) = 270a54fa8ac6aba72cbba5f4d05e1745084ff2ea
-RMD160 (TryCatch-1.003000.tar.gz) = 30bb3377ce6b1a6adeec6cf3d6aa5ea089a153a2
-Size (TryCatch-1.003000.tar.gz) = 87037 bytes
+SHA1 (TryCatch-1.003002.tar.gz) = a6b293b08157987cb26650ea17b15a8eeea93bcb
+RMD160 (TryCatch-1.003002.tar.gz) = 2af3871b285653be3235f6d4dc71c1ed4e0be540
+Size (TryCatch-1.003002.tar.gz) = 89808 bytes
