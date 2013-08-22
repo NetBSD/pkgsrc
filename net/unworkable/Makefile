@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2013/05/23 15:01:05 christos Exp $
+# $NetBSD: Makefile,v 1.12 2013/08/22 00:59:33 agc Exp $
 
-DISTNAME=	unworkable-0.51
-PKGREVISION=	7
+DISTNAME=	unworkable-0.53
 CATEGORIES=	net
-MASTER_SITES=	# http://p2presearch.com/unworkable/dist/
+MASTER_SITES=	http://unworkable.googlecode.com/files/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://p2presearch.com/unworkable/
+HOMEPAGE=	http://code.google.com/p/unworkable/
 COMMENT=	BSD-licensed command-line torrent client
+LICENSE=	isc
 
 USE_TOOLS+=	yacc
 WRKSRC=		${WRKDIR}/unworkable
