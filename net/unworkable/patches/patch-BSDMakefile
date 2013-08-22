@@ -1,0 +1,28 @@
+$NetBSD: patch-BSDMakefile,v 1.1 2013/08/22 00:59:33 agc Exp $
+
+generalise for pkgsrc
+
+--- BSDmakefile.orig	2008-10-05 16:56:25.000000000 -0700
++++ BSDmakefile	2013-08-21 13:26:08.000000000 -0700
+@@ -21,6 +21,7 @@
+ CFLAGS+= -Wmissing-declarations
+ CFLAGS+= -Wshadow -Wpointer-arith -Wcast-qual
+ CFLAGS+= -Wsign-compare -g -ggdb
++CFLAGS+= -Iopenbsd-compat
+ # Uncomment when building shared library
+ #CFLAGS+= -fPIC
+ LDFLAGS+= -L.
+@@ -35,10 +36,12 @@
+ 
+ PROG= unworkable
+ 
+-SRCS= announce.c bencode.c buf.c ctl_server.c network.c parse.y progressmeter.c scheduler.c torrent.c trace.c util.c xmalloc.c
++SRCS= announce.c bencode.c buf.c ctl_server.c network.c parse.y progressmeter.c scheduler.c torrent.c trace.c util.c xmalloc.c sha1.c strtonum.c
+ OBJS= ${SRCS:N*.h:N*.sh:R:S/$/.o/g}
+ MAN= unworkable.1
+ 
++.PATH: ${.CURDIR}:${.CURDIR}/openbsd-compat
++
+ all: ${PROG} unworkable.cat1
+ 
+ ${PROG}: libunworkable.a main.o
