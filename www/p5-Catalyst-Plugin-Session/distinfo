@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2012/01/31 14:22:59 rhaen Exp $
+$NetBSD: distinfo,v 1.12 2013/08/23 14:55:40 wen Exp $
 
-SHA1 (Catalyst-Plugin-Session-0.32.tar.gz) = b3290e58fcbd91e0649c98dcc86362ec3768ccc7
-RMD160 (Catalyst-Plugin-Session-0.32.tar.gz) = 6e11b8fb3623396dd30fb6dcc3f490907c40f8dd
-Size (Catalyst-Plugin-Session-0.32.tar.gz) = 42228 bytes
+SHA1 (Catalyst-Plugin-Session-0.37.tar.gz) = 3b4bfb5657c324b545fd4a9ec7f94af5c46be155
+RMD160 (Catalyst-Plugin-Session-0.37.tar.gz) = 24207fafa989966edc5e73ac9c25eee24fdbdfbc
+Size (Catalyst-Plugin-Session-0.37.tar.gz) = 48383 bytes
