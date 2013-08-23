@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3019 2013/08/23 01:40:04 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3020 2013/08/23 01:47:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4389,3 +4389,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.61 [wen 2013-08-23]
 	Updated databases/p5-CatalystX-CRUD to 0.55 [wen 2013-08-23]
 	Added www/p5-CatalystX-CRUD-Controller-REST version 0.003 [wen 2013-08-23]
+	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.28 [wen 2013-08-23]
