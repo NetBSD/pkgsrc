@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/07/19 18:06:18 kleink Exp $
+$NetBSD: distinfo,v 1.5 2013/08/23 15:33:58 kleink Exp $
 
-SHA1 (Flask-Login-0.2.6.tar.gz) = 5b2d6978c9da564b1782cae4d823ea8802700c44
-RMD160 (Flask-Login-0.2.6.tar.gz) = 55b0a2cb17d962cb92caa10c54bd8e292d2d908c
-Size (Flask-Login-0.2.6.tar.gz) = 10130 bytes
+SHA1 (Flask-Login-0.2.7.tar.gz) = 676eb6be40a7aca15ebbdf234236e457905bdbef
+RMD160 (Flask-Login-0.2.7.tar.gz) = a67bbde1968c9af74ba395cfc821355c5fa229b1
+Size (Flask-Login-0.2.7.tar.gz) = 10199 bytes
