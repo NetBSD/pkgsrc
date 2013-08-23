@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/05/31 12:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/08/23 01:46:25 wen Exp $
 
-DISTNAME=	CatalystX-CRUD-Model-RDBO-0.22
+DISTNAME=	CatalystX-CRUD-Model-RDBO-0.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
@@ -18,6 +17,7 @@ DEPENDS+=	p5-Rose-DB-Object>=0:../../databases/p5-Rose-DB-Object
 DEPENDS+=	p5-Rose-DBx-TestDB>=0:../../databases/p5-Rose-DBx-TestDB
 DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers>=0:../../databases/p5-Rose-DBx-Object-MoreHelpers
 DEPENDS+=	p5-Sort-SQL>=0.05:../../databases/p5-Sort-SQL
+DEPENDS+=	p5-JSON>=2:../../converters/p5-JSON
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/Model/RDBO/.packlist
