@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/01/27 10:31:19 rhaen Exp $
+$NetBSD: distinfo,v 1.8 2013/08/23 14:04:20 wen Exp $
 
-SHA1 (CAM-PDF-1.58.tar.gz) = 1f7dee821e249787add3c79ed56a599072441e94
-RMD160 (CAM-PDF-1.58.tar.gz) = e2b7c5cc8c0b0f4830d6e6a8b424247bac240c08
-Size (CAM-PDF-1.58.tar.gz) = 767167 bytes
+SHA1 (CAM-PDF-1.60.tar.gz) = e228545463b943f55e0711ac4a856f506238efab
+RMD160 (CAM-PDF-1.60.tar.gz) = dbf72f375ce57845f012bcf24443b888266b83d8
+Size (CAM-PDF-1.60.tar.gz) = 767649 bytes
