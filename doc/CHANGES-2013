@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3030 2013/08/23 13:45:28 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3031 2013/08/23 13:52:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/py-qt4 to 4.10.3 [drochner 2013-08-23]
 	Added sysutils/ncdu version 1.10 [wiz 2013-08-23]
 	Updated www/p5-Catalyst-Model-File to 0.10 [wen 2013-08-23]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.10023 [wen 2013-08-23]
