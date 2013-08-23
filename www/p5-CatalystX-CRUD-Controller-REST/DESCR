@@ -1,0 +1,3 @@
+This module extends Catalyst::Controller::REST to work with the
+CatalystX::CRUD::Controller API. It is designed for web services,
+not managing CRUD actions via HTML forms.
