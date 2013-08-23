@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3040 2013/08/23 17:20:16 asau Exp $
+$NetBSD: CHANGES-2013,v 1.3041 2013/08/23 17:20:31 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4413,3 +4413,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-login to 0.2.7 [kleink 2013-08-23]
 	Updated www/py-flask-security to 1.6.9 [kleink 2013-08-23]
 	Updated lang/racket-textual to 5.3.6 [asau 2013-08-23]
+	Updated lang/racket to 5.3.6 [asau 2013-08-23]
