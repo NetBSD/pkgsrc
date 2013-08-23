@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3021 2013/08/23 03:13:44 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3022 2013/08/23 05:09:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4392,3 +4392,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.28 [wen 2013-08-23]
 	Updated lang/php54 to 5.4.19 [taca 2013-08-23]
 	Updated lang/php55 to 5.5.3 [taca 2013-08-23]
+	Updated devel/tig to 1.2 [schmonz 2013-08-23]
