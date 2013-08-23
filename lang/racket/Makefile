@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2013/06/06 12:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2013/08/23 17:19:40 asau Exp $
 
-PKGNAME=	racket-5.3.3
+PKGNAME=	racket-5.3.6
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
-PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
 		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
@@ -51,6 +50,10 @@ REPLACE_INTERPRETER+=	racket
 REPLACE.racket.old=	.*racket
 REPLACE.racket.new=	$(LOCALBASE)/bin/racket
 REPLACE_FILES.racket=	$(REPLACE_RACKET)
+
+post-install:
+	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/png.rkt.orig
+	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/jpeg.rkt.orig
 
 do-test:
 	$(RUN) cd $(WRKSRC)/collects/tests/racket && $(WRKSRC)/src/racket/racket3m -f quiet.rktl
