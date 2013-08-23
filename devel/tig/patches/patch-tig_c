@@ -1,15 +1,15 @@
-$NetBSD: patch-tig_c,v 1.2 2013/07/03 00:41:14 rodent Exp $
+$NetBSD: patch-tig_c,v 1.3 2013/08/23 05:09:28 schmonz Exp $
 
---- tig.c.orig	2012-10-12 12:51:45.000000000 +0000
+--- tig.c.orig	2013-08-10 14:27:10.000000000 +0000
 +++ tig.c
-@@ -2444,17 +2444,17 @@ redraw_display(bool clear)
+@@ -2594,19 +2594,19 @@ redraw_display(bool clear)
   */
  
  #define TOGGLE_MENU \
 -	TOGGLE_(LINENO,    '.', "line numbers",      &opt_line_number, NULL) \
 +	TOGGLE_(LINENO,    '.', "line numbers",      &opt_line_number, (struct enum_map *)NULL) \
- 	TOGGLE_(DATE,      'D', "dates",             &opt_date,	  date_map) \
- 	TOGGLE_(AUTHOR,    'A', "author names",      &opt_author, author_map) \
+ 	TOGGLE_(DATE,      'D', "dates",             &opt_date,	date_map) \
+ 	TOGGLE_(AUTHOR,    'A', "author",            &opt_author, author_map) \
  	TOGGLE_(GRAPHIC,   '~', "graphics",          &opt_line_graphics, graphic_map) \
 -	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, NULL) \
 +	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, (struct enum_map *)NULL) \
@@ -18,10 +18,14 @@ $NetBSD: patch-tig_c,v 1.2 2013/07/03 00:41:14 rodent Exp $
  	TOGGLE_(COMMIT_ORDER, 'l', "commit order",   &opt_commit_order, commit_order_map) \
 -	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, NULL) \
 -	TOGGLE_(CHANGES,   'C', "local change display", &opt_show_changes, NULL) \
--	TOGGLE_(ID,        'X', "commit ID display", &opt_show_id, NULL)
+-	TOGGLE_(ID,        'X', "commit ID display", &opt_show_id, NULL) \
+-	TOGGLE_(FILES,     '%', "file filtering",    &opt_file_filter, NULL) \
+-	TOGGLE_(TITLE_OVERFLOW, '$', "commit title overflow display", &opt_show_title_overflow, NULL) \
 +	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, (struct enum_map *)NULL) \
 +	TOGGLE_(CHANGES,   'C', "local change display", &opt_show_changes, (struct enum_map *)NULL) \
-+	TOGGLE_(ID,        'X', "commit ID display", &opt_show_id, (struct enum_map *)NULL)
++	TOGGLE_(ID,        'X', "commit ID display", &opt_show_id, (struct enum_map *)NULL) \
++	TOGGLE_(FILES,     '%', "file filtering",    &opt_file_filter, (struct enum_map *)NULL) \
++	TOGGLE_(TITLE_OVERFLOW, '$', "commit title overflow display", &opt_show_title_overflow, (struct enum_map *)NULL) \
  
  static bool
- toggle_option(enum request request)
+ toggle_option(struct view *view, enum request request, char msg[SIZEOF_STR])

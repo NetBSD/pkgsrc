@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/07/03 00:41:14 rodent Exp $
+$NetBSD: distinfo,v 1.7 2013/08/23 05:09:28 schmonz Exp $
 
-SHA1 (tig-1.1.tar.gz) = de37817e6b53e91b5a8949a5080daf45478bd45f
-RMD160 (tig-1.1.tar.gz) = fd1c6fe5743ff6618d6885330916f0bf207362d6
-Size (tig-1.1.tar.gz) = 201009 bytes
-SHA1 (patch-aa) = 704c48050f26490e5bf443175c1fcebb03b70647
-SHA1 (patch-tig_c) = acceb51fb483c933c2c5c668ff644995f8b0f425
-SHA1 (patch-tig_h) = b3b3a827742114e8ce36d68a10a76728b579fdcf
+SHA1 (tig-1.2.tar.gz) = 38bff28a205b94623ad0c087a3073c986002dc83
+RMD160 (tig-1.2.tar.gz) = 419d66b2ac5c2daff163a01f0db442a7e1e7b11b
+Size (tig-1.2.tar.gz) = 216724 bytes
+SHA1 (patch-aa) = 2cb821a030f1f40fbdf098d1ffd339f3012b4b81
+SHA1 (patch-tig_c) = a02c564e805670213277fe3c8484a0cd289bcee1
+SHA1 (patch-tig_h) = 81c4623867f80888cdb10109a3cd373937e24f43

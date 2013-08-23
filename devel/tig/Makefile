@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/07/03 00:41:14 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2013/08/23 05:09:28 schmonz Exp $
 #
 
-DISTNAME=	tig-1.1
+DISTNAME=	tig-1.2
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 
