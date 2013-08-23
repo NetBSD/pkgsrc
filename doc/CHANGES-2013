@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3035 2013/08/23 14:18:18 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3036 2013/08/23 14:32:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4408,3 +4408,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-CAM-PDF to 1.60 [wen 2013-08-23]
 	Updated textproc/p5-Data-FormValidator to 4.81 [wen 2013-08-23]
 	Updated www/p5-Catalyst-Plugin-ConfigLoader to 0.32 [wen 2013-08-23]
+	Updated www/p5-Catalyst-Plugin-RequireSSL to 0.07 [wen 2013-08-23]
