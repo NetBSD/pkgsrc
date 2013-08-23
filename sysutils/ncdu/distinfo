@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/08/23 11:31:29 wiz Exp $
+
+SHA1 (ncdu-1.10.tar.gz) = cf3b5fbb5b69cbae5425bfff2660ac3d8224a605
+RMD160 (ncdu-1.10.tar.gz) = 2d3e4f112ed5ce3e42b13d279c240a050bca86f9
+Size (ncdu-1.10.tar.gz) = 131810 bytes
+SHA1 (patch-arg) = 270d69841b302b8c380cf6780d70ab906d25aa54
