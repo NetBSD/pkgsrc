@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.21 2013/05/03 15:48:15 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.22 2013/08/23 11:27:17 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -59,7 +59,7 @@ ${PYSITELIB}/PyQt4/uic/widget-plugins/qscintilla.py
 ${PYSITELIB}/PyQt4/uic/widget-plugins/qtdeclarative.py
 ${PYSITELIB}/PyQt4/uic/widget-plugins/qtwebkit.py
 ${PYSITELIB}/dbus/mainloop/qt.so
-qt4/plugins/designer/libpythonplugin.la
+qt4/plugins/designer/libpyqt4.la
 qt4/qsci/api/python/PyQt4.api
 share/sip${PYVERSSUFFIX}/Qt/Qtmod.sip
 share/sip${PYVERSSUFFIX}/QtCore/QtCoremod.sip
