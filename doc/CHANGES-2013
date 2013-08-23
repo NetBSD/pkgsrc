@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3026 2013/08/23 07:33:14 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3027 2013/08/23 09:01:04 apb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4397,3 +4397,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/p5-Catalyst-View-Email to 0.33 [wen 2013-08-23]
 	Updated www/p5-Catalyst-View-TT to 0.41 [wen 2013-08-23]
 	Updated www/p5-Catalyst-Manual to 5.9007 [wen 2013-08-23]
+	Updated pkgtools/libkver to 0.7.2 [apb 2013-08-23]
