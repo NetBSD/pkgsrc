@@ -1,8 +1,8 @@
-$NetBSD: patch-tig_h,v 1.2 2013/07/03 00:41:14 rodent Exp $
+$NetBSD: patch-tig_h,v 1.3 2013/08/23 05:09:28 schmonz Exp $
 
---- tig.h.orig	2012-10-12 12:51:45.000000000 +0000
+--- tig.h.orig	2013-08-10 14:27:10.000000000 +0000
 +++ tig.h
-@@ -89,7 +89,7 @@
+@@ -93,7 +93,7 @@
  #define MIN(x, y)	((x) < (y) ? (x) :  (y))
  #define MAX(x, y)	((x) > (y) ? (x) :  (y))
  

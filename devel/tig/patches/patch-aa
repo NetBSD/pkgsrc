@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2013/07/03 00:41:14 rodent Exp $
+$NetBSD: patch-aa,v 1.5 2013/08/23 05:09:28 schmonz Exp $
 
 Don't make/install PDF, and be sure to install test-graph.
 
---- Makefile.orig	2012-10-12 12:51:47.000000000 +0000
+--- Makefile.orig	2013-08-10 14:27:12.000000000 +0000
 +++ Makefile
-@@ -45,7 +45,7 @@ SOURCE	= tig.c tig.h io.c io.h graph.c g
+@@ -44,7 +44,7 @@ TESTS	= test-graph
  TXTDOC	= tig.1.txt tigrc.5.txt manual.txt NEWS README INSTALL BUGS
  MANDOC	= tig.1 tigrc.5 tigmanual.7
  HTMLDOC = tig.1.html tigrc.5.html manual.html README.html NEWS.html
@@ -13,7 +13,7 @@ Don't make/install PDF, and be sure to install test-graph.
  
  # Never include the release number in the tarname for tagged
  # versions.
-@@ -72,7 +72,7 @@ doc-html: $(HTMLDOC)
+@@ -71,7 +71,7 @@ doc-html: $(HTMLDOC)
  
  install: all
  	mkdir -p $(DESTDIR)$(bindir) && \
