@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/05/31 12:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/08/23 00:56:03 wen Exp $
 
-DISTNAME=	CatalystX-CRUD-0.52
+DISTNAME=	CatalystX-CRUD-0.55
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
