@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3020 2013/08/23 01:47:25 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3021 2013/08/23 03:13:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4390,3 +4390,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-CatalystX-CRUD to 0.55 [wen 2013-08-23]
 	Added www/p5-CatalystX-CRUD-Controller-REST version 0.003 [wen 2013-08-23]
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.28 [wen 2013-08-23]
+	Updated lang/php54 to 5.4.19 [taca 2013-08-23]
+	Updated lang/php55 to 5.5.3 [taca 2013-08-23]
