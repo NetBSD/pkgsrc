@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2013/04/06 14:09:33 rodent Exp $
+# $NetBSD: Makefile,v 1.19 2013/08/23 17:19:40 asau Exp $
 
-PKGNAME=	racket-textual-5.3.3
+PKGNAME=	racket-textual-5.3.6
 DISTNAME=	$(PKGNAME_NOREV)-src-unix
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
@@ -47,6 +47,9 @@ REPLACE.racket.old=	.*racket
 REPLACE.racket.new=	$(LOCALBASE)/bin/racket
 REPLACE_FILES.racket=	$(REPLACE_RACKET)
 
+post-install:
+	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/png.rkt.orig
+	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/jpeg.rkt.orig
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
