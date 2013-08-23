@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2013/08/16 09:26:29 obache Exp $
+# $NetBSD: Makefile,v 1.583 2013/08/23 11:32:03 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -301,6 +301,7 @@ SUBDIR+=	munin-node
 SUBDIR+=	munin-server
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-sendto
+SUBDIR+=	ncdu
 SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	neb-wipe
