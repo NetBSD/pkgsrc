@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.18 2013/08/07 16:48:49 drochner Exp $
+$NetBSD: distinfo,v 1.19 2013/08/23 10:56:46 drochner Exp $
 
-SHA1 (FileZilla_3.7.2_src.tar.bz2) = 12a241004bf10a4e28fec33c4d7e219dc3f8635e
-RMD160 (FileZilla_3.7.2_src.tar.bz2) = 2e993c7c9fa04e6e72cd9c120df871f4cdc4e09c
-Size (FileZilla_3.7.2_src.tar.bz2) = 3682007 bytes
-SHA1 (patch-CVE-2013-4206) = e4e6d4c5d26449d29a3b9d27956ecc6a255eeac7
-SHA1 (patch-CVE-2013-4208) = fd3a73dc554bf5bc39bac1150dd11594b4556346
+SHA1 (FileZilla_3.7.3_src.tar.bz2) = 34c3dd1943816a916c54e49cbbea51c97ef3f583
+RMD160 (FileZilla_3.7.3_src.tar.bz2) = 8fefebae9f2024dedab9841dc6fe3876305f8d2f
+Size (FileZilla_3.7.3_src.tar.bz2) = 3682494 bytes
 SHA1 (patch-data_makezip.sh.in) = 80acc96fce08e2e0831a4da0613f7b2eaebad465
