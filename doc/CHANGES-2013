@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3048 2013/08/24 02:25:59 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3049 2013/08/24 02:30:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4421,3 +4421,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-Rabbit to 0.3.0 [wen 2013-08-24]
 	Updated textproc/p5-XML-RegExp to 0.04 [wen 2013-08-24]
 	Updated textproc/p5-XML-SAX-Expat to 0.50 [wen 2013-08-24]
+	Updated textproc/p5-XML-SAX-ExpatXS to 1.33 [wen 2013-08-24]
