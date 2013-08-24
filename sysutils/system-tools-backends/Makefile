@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/05/31 12:42:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/08/24 15:34:39 prlw1 Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.1
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		sysutils
 MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.6/
 
