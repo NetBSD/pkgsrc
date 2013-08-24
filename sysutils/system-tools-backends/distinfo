@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2009/12/14 01:39:57 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/08/24 15:34:39 prlw1 Exp $
 
 SHA1 (system-tools-backends-2.6.1.tar.gz) = 1e332ab27c752d8ea3b212f1bcdf18f09295976a
 RMD160 (system-tools-backends-2.6.1.tar.gz) = 266cbd4ae04ee97f5a55cb2d987691ebe41e94ac
@@ -9,4 +9,4 @@ SHA1 (patch-ac) = 8cef6e86faf53b0269fb744adc3fa09c7034fd23
 SHA1 (patch-ad) = fb12dcc969123ff0fe2f102bc923192c1b7c6a2f
 SHA1 (patch-ae) = 4946b7a89fb4a1b54e889c1eb5354b2ef5d11727
 SHA1 (patch-af) = 31a00a1287ff84ade4244c728945cce00a3fcf7f
-SHA1 (patch-ag) = 236c5286ebde33e739f19e2f54d8800f679b1178
+SHA1 (patch-ag) = a39544f9675d20259cdcf525c47e54f47944047a
