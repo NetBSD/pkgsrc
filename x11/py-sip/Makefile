@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2013/08/23 11:25:38 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2013/08/24 11:48:37 drochner Exp $
 
-DISTNAME=	sip-4.15
+DISTNAME=	sip-4.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 devel python
 #MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/sip4/
