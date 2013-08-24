@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3059 2013/08/24 16:15:32 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.3060 2013/08/24 16:17:34 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4432,3 +4432,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added converters/orcus version 0.5.1 [jaapb 2013-08-24]
 	Updated security/ipv6-toolkit to 1.4 [agc 2013-08-24]
 	Added devel/liblangtag version 0.5.1 [jaapb 2013-08-24]
+	Added textproc/libodfgen version 0.0.2 [jaapb 2013-08-24]
