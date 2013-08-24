@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3063 2013/08/24 17:23:06 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.3064 2013/08/24 21:50:43 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4436,3 +4436,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/hplip to 3.13.8 [schnoebe 2013-08-24]
 	Added print/tex-algorithmicx version 2009 [jaapb 2013-08-24]
 	Added print/tex-algorithmicx-doc version 2009 [jaapb 2013-08-24]
+	Updated converters/libwpd to 0.9.9 [jaapb 2013-08-24]
