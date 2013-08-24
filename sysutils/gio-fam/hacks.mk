@@ -1,20 +1,3 @@
-# $NetBSD: hacks.mk,v 1.2 2013/03/18 14:01:25 jperkin Exp $
+# $NetBSD: hacks.mk,v 1.3 2013/08/24 09:36:43 obache Exp $
 
-.if !defined(GIOFAM_HACKS_MK)
-GIOFAM_HACKS_MK=	# defined
-
-.if ${OPSYS} == "Darwin"
-CHECK_BUILTIN.libiconv:=	yes
-.  include "../../converters/libiconv/builtin.mk"
-CHECK_BUILTIN.libiconv:=	no
-.  if !empty(USE_BUILTIN.iconv:M[Yy][Ee][Ss])
-PKG_HACKS+=		darwin-iconv
-SUBST_CLASSES+=		iconv
-SUBST_STAGE.iconv=	pre-configure
-SUBST_MESSAGE.iconv=	Changing libiconv_open to iconv_open.
-SUBST_FILES.iconv=	configure
-SUBST_SED.iconv=	-e 's,libiconv_open,iconv_open,g'
-.  endif
-.endif
-
-.endif
+.sinclude "../../devel/glib2/hacks.mk"
