@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/24 10:57:01 jaapb Exp $
+share/texmf-dist/tex/latex/ntheorem/ntheorem.std
+share/texmf-dist/tex/latex/ntheorem/ntheorem.sty
