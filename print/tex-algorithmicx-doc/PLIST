@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2013/08/24 17:24:45 jaapb Exp $
+share/texmf-dist/doc/latex/algorithmicx/README
+share/texmf-dist/doc/latex/algorithmicx/algorithmicx.pdf
+share/texmf-dist/doc/latex/algorithmicx/algorithmicx.tex
