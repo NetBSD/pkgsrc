@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2013/08/22 21:17:00 joerg Exp $
+# $NetBSD: Makefile,v 1.103 2013/08/24 16:45:08 richard Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	1
@@ -65,6 +65,10 @@ CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editlinereadline}
 .endif
 
 PLIST_VARS+=		glob vis
+.if ${OPSYS} == "SunOS"
+PLIST.vis=	yes
+PLIST.glob=	yes
+.endif
 
 PLIST_VARS+=		afskauth hcrypto
 .if ${OPSYS} == "IRIX"
@@ -74,7 +78,8 @@ PLIST.afskauth=		yes
 .include "../../security/openssl/builtin.mk"
 
 .if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
-    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes))
+    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
+		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
 .endif
 
