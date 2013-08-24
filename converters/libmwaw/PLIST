@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/24 16:09:56 jaapb Exp $
+bin/mwaw2html
+bin/mwaw2raw
+bin/mwaw2text
+bin/mwawFile
+bin/mwawZip
+include/libmwaw-0.1/libmwaw/MWAWDocument.hxx
+include/libmwaw-0.1/libmwaw/MWAWPropertyHandler.hxx
+include/libmwaw-0.1/libmwaw/libmwaw.hxx
+lib/libmwaw-0.1.la
+lib/pkgconfig/libmwaw-0.1.pc
