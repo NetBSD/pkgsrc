@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/24 17:19:57 jaapb Exp $
+share/texmf-dist/tex/latex/algorithmicx/algc.sty
+share/texmf-dist/tex/latex/algorithmicx/algcompatible.sty
+share/texmf-dist/tex/latex/algorithmicx/algmatlab.sty
+share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+share/texmf-dist/tex/latex/algorithmicx/algpascal.sty
+share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
