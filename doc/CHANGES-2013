@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3041 2013/08/23 17:20:31 asau Exp $
+$NetBSD: CHANGES-2013,v 1.3042 2013/08/24 00:03:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-security to 1.6.9 [kleink 2013-08-23]
 	Updated lang/racket-textual to 5.3.6 [asau 2013-08-23]
 	Updated lang/racket to 5.3.6 [asau 2013-08-23]
+	Updated www/p5-Mojolicious to 4.26 [wen 2013-08-24]
