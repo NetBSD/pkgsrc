@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.38 2011/12/08 20:38:39 marino Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.39 2013/08/24 11:30:44 obache Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -70,6 +70,7 @@ TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
+TOOLS_PLATFORM.readlink?=	/usr/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
