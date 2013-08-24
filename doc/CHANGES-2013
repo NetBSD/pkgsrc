@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3058 2013/08/24 16:14:04 agc Exp $
+$NetBSD: CHANGES-2013,v 1.3059 2013/08/24 16:15:32 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4431,3 +4431,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added converters/libmwaw version 0.1.10 [jaapb 2013-08-24]
 	Added converters/orcus version 0.5.1 [jaapb 2013-08-24]
 	Updated security/ipv6-toolkit to 1.4 [agc 2013-08-24]
+	Added devel/liblangtag version 0.5.1 [jaapb 2013-08-24]
