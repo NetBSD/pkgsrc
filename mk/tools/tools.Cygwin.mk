@@ -1,4 +1,4 @@
-# $NetBSD: tools.Cygwin.mk,v 1.3 2013/05/16 08:28:11 obache Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.4 2013/08/24 11:30:44 obache Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
@@ -107,6 +107,7 @@ TOOLS_PLATFORM.pkg-config?=	/bin/pkg-config
 .endif
 TOOLS_PLATFORM.printf?=		/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.readlink?=	/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/bin/sdiff
