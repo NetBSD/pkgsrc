@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/08/24 08:16:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2013/08/24 08:17:56 ryoon Exp $
 #
 
 DISTNAME=		cryptopp562
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cryptopp.com/
 COMMENT=		Free C++ class library of Cryptographic Primitives
+LICENSE=		boost-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
