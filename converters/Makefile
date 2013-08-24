@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2013/08/24 16:10:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.125 2013/08/24 16:13:21 jaapb Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -43,6 +43,7 @@ SUBDIR+=	macfork
 SUBDIR+=	mpack
 SUBDIR+=	nkf
 SUBDIR+=	odt2txt
+SUBDIR+=	orcus
 SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Convert-Color
 SUBDIR+=	p5-Convert-TNEF
