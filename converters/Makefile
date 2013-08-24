@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2013/08/24 16:07:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.124 2013/08/24 16:10:36 jaapb Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -34,6 +34,7 @@ SUBDIR+=	latex2rtf
 SUBDIR+=	libcdr
 SUBDIR+=	libiconv
 SUBDIR+=	libmspub
+SUBDIR+=	libmwaw
 SUBDIR+=	libvisio
 SUBDIR+=	libwpd
 SUBDIR+=	libwpg
