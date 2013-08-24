@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/04/18 04:23:17 agc Exp $
+# $NetBSD: Makefile,v 1.7 2013/08/24 16:12:24 agc Exp $
 
-DISTNAME=	ipv6-toolkit-v1.3.4
+DISTNAME=	ipv6toolkit-v1.4
 PKGNAME=	${DISTNAME:C/-v/-/}
 CATEGORIES=	security net
 MASTER_SITES=	http://www.si6networks.com/tools/ipv6toolkit/
