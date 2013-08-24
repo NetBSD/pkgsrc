@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/05/19 12:49:42 ryoon Exp $
+$NetBSD: distinfo,v 1.9.2.1 2013/08/24 19:45:15 tron Exp $
 
-SHA1 (firefox-17.0.6esr.source.tar.bz2) = ccc24db49e97e9cac943af14ae50be2305fe4c0c
-RMD160 (firefox-17.0.6esr.source.tar.bz2) = 072911be994dfbd2cb9997091640953bf4ac3403
-Size (firefox-17.0.6esr.source.tar.bz2) = 91112621 bytes
+SHA1 (firefox-17.0.8esr.source.tar.bz2) = 2ef8bfcf51f8160590f4450e8bc4a2af32cc2f5e
+RMD160 (firefox-17.0.8esr.source.tar.bz2) = 4db87cbd72899adc3df8822c3550dec644bbd36b
+Size (firefox-17.0.8esr.source.tar.bz2) = 90765879 bytes
 SHA1 (patch-aa) = 31801b051004b2bf74ea9cc060d01def3becc1e3
 SHA1 (patch-ab) = b0d7975a291c63e07773e13b023f71e88c883128
 SHA1 (patch-ac) = 18640ddf00b7da9276fd67d95bd6f1b191a99d4f
@@ -36,6 +36,8 @@ SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598
 SHA1 (patch-config_system-headers) = 02c71493cdbed0b966fe674c736916aa666ea4f0
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-content_media_nsAudioStream.cpp) = 75c9fc45d464ee332271142c3e29b826b6254d49
+SHA1 (patch-dist_stl__wrappers_ios) = a6a6a0b8489c4cbdc56f139125f6c9d9bbc89b08
+SHA1 (patch-dist_stl__wrappers_ostream) = fee1523904368f6dcaa040cebbc8e1d0fca494ca
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 66d023227b46582d30961cfac15506b9f29c23de
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = cba2ea71973b3717b29052e131eb278cec972ebd
 SHA1 (patch-gfx_skia_src_sfnt_SkOTTable__head.h) = a50b21dc02ee5ae2b053ba574b592679350396ad
@@ -48,8 +50,10 @@ SHA1 (patch-ipc_chromium_src_base_base__paths.h) = 0b8e231055cde854f31b9aa443926
 SHA1 (patch-ipc_chromium_src_base_debug__util__posix.cc) = c00b594a40c4222261a0ad4f7ddbc804028aec16
 SHA1 (patch-ipc_chromium_src_base_dir__reader__bsd.h) = 767160e3099d7bd4eb58dc24ed207417acdf098a
 SHA1 (patch-ipc_chromium_src_base_dir__reader__posix.h) = d6dd15f644de3fa755f8c9be9190eb4092295091
-SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 96a5a0d4b61ec69b80db3c9ff212d7a7a3d506f6
+SHA1 (patch-ipc_chromium_src_base_file__util.cc) = 44c4d69baf4164196a68294b834156f2d55294ec
+SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 7ee3464515998902a5ff024a41f9258d4bda21ba
 SHA1 (patch-ipc_chromium_src_base_message__loop.cc) = c53a8962a197a3160087ad31e1a55f647a8d8fc8
+SHA1 (patch-ipc_chromium_src_base_pickle.cc) = be869413066e7daf0e12a513b2c0babf1274c33e
 SHA1 (patch-ipc_chromium_src_base_platform__thread.h) = 1f6eb9d0da16b415df6c2ced4e507d1cbf7dfdae
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = e4560021d85abf96182b8e0c0a5a52e1213fdb31
 SHA1 (patch-ipc_chromium_src_base_process__util.h) = f0e705d9e7951d12225ad132f462527651d3b1be
