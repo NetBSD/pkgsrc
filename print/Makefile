@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2013/08/24 10:58:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.562 2013/08/24 10:59:10 jaapb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -515,6 +515,7 @@ SUBDIR+=	tex-notoccite-doc
 SUBDIR+=	tex-ntgclass
 SUBDIR+=	tex-ntgclass-doc
 SUBDIR+=	tex-ntheorem
+SUBDIR+=	tex-ntheorem-doc
 SUBDIR+=	tex-oberdiek
 SUBDIR+=	tex-oberdiek-doc
 SUBDIR+=	tex-optional
