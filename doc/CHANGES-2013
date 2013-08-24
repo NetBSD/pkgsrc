@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3053 2013/08/24 10:58:38 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.3054 2013/08/24 11:00:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4426,3 +4426,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/crypto++ to 5.6.2nb2 [ryoon 2013-08-24]
 	Added print/tex-ntheorem version 1.31 [jaapb 2013-08-24]
 	Added print/tex-ntheorem-doc version 1.31 [jaapb 2013-08-24]
+	Updated print/teTeX3-texmf to 3.0nb40 [jaapb 2013-08-24]
