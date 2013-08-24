@@ -1,0 +1,2 @@
+Libodfgen is a library providing the ability to generate ODF documents from
+libwpd and libwps API calls.
