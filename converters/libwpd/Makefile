@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2012/10/20 22:04:27 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2013/08/24 21:50:24 jaapb Exp $
 
-DISTNAME=	libwpd-0.9.2
-PKGREVISION=	1
+DISTNAME=	libwpd-0.9.9
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	reed@reedmedia.net
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://libwpd.sourceforge.net/
 COMMENT=	Library for importing and exporting WordPerfect(tm) documents
 LICENSE=	gnu-lgpl-v2.1
