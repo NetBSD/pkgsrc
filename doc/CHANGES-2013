@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3061 2013/08/24 16:45:38 schnoebe Exp $
+$NetBSD: CHANGES-2013,v 1.3062 2013/08/24 17:20:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4434,3 +4434,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/liblangtag version 0.5.1 [jaapb 2013-08-24]
 	Added textproc/libodfgen version 0.0.2 [jaapb 2013-08-24]
 	Updated print/hplip to 3.13.8 [schnoebe 2013-08-24]
+	Added print/tex-algorithmicx version 2009 [jaapb 2013-08-24]
