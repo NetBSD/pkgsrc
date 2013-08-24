@@ -1,0 +1,5 @@
+Enhancements for theorem-like environments: easier control of
+layout; proper placement of endmarks even when the environment
+ends with \end{enumerate} or \end{displaymath} (including
+support for amsmath displayed-equation environments); and
+support for making a list of theorems like \listoffigures.
