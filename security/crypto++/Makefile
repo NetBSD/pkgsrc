@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2013/08/22 13:15:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2013/08/24 08:16:12 ryoon Exp $
 #
 
 DISTNAME=		cryptopp562
 PKGNAME=		cryptopp-5.6.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptopp/}
 EXTRACT_SUFX=		.zip
