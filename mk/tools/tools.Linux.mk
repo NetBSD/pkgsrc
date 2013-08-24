@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.50 2012/10/01 10:25:03 ryoon Exp $
+# $NetBSD: tools.Linux.mk,v 1.51 2013/08/24 10:12:52 tron Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -199,6 +199,7 @@ TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 .endif
 TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.readlink?=	/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 .if exists(/bin/sdiff)
