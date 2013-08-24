@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.738 2013/07/21 12:15:29 richard Exp $
+# $NetBSD: Makefile,v 1.739 2013/08/24 16:18:51 jaapb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -294,6 +294,7 @@ SUBDIR+=	libexttextcat
 SUBDIR+=	liblinebreak
 SUBDIR+=	liblrdf
 SUBDIR+=	libnxml
+SUBDIR+=	libodfgen
 SUBDIR+=	libplist
 SUBDIR+=	libunicode
 SUBDIR+=	libunistring
