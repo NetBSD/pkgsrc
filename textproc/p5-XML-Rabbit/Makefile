@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 12:42:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/08/24 02:17:01 wen Exp $
 
-DISTNAME=	XML-Rabbit-0.2.1
+DISTNAME=	XML-Rabbit-0.3.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
