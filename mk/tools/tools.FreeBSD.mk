@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.36 2012/04/20 08:47:01 obache Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.37 2013/08/24 11:30:44 obache Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -65,6 +65,7 @@ TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
+TOOLS_PLATFORM.readlink?=	/usr/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
