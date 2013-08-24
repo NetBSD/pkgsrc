@@ -1,0 +1,5 @@
+Algorithmicx provides a very flexible, yet easy to use way for inserting good
+looking pseudocode or source code in your papers. It has built in support for
+Pseudocode, Pascal, C, and powerful means to create definitions for any
+programming language. You can easily adapt a Pseudocode style to your native
+language.
