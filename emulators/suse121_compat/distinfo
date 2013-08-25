@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:36:05 obache Exp $
+$NetBSD: distinfo,v 1.1.1.1.12.1 2013/08/25 16:34:46 tron Exp $
 
+SHA1 (suse121/compat-2010.1.31-9.1.1.i586.rpm) = a6b46d15bc5fde711f03537b16d2d2761818c50f
+RMD160 (suse121/compat-2010.1.31-9.1.1.i586.rpm) = 8578a83191c4af926350d08ac9029cae70aa015e
+Size (suse121/compat-2010.1.31-9.1.1.i586.rpm) = 319770 bytes
 SHA1 (suse121/libstdc++33-3.3.3-30.25.2.i586.rpm) = 7528181182be8794cc3ab0e0025c7d78148d5a5e
 RMD160 (suse121/libstdc++33-3.3.3-30.25.2.i586.rpm) = 307b124f3173dc90e3cfc5b9bcdd566b12a6cf74
 Size (suse121/libstdc++33-3.3.3-30.25.2.i586.rpm) = 205477 bytes
