@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3072 2013/08/25 07:45:46 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3073 2013/08/25 07:51:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4445,3 +4445,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added archivers/p5-Archive-Any-Lite version 0.07 [wen 2013-08-25]
 	Updated devel/p5-Module-ExtractUse to 0.31 [wen 2013-08-25]
 	Updated devel/p5-CPAN-Meta to 2.132140 [wen 2013-08-25]
+	Updated devel/p5-Module-CPANTS-Analyse to 0.90.02 [wen 2013-08-25]
