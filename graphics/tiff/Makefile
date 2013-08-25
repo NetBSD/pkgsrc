@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2013/08/15 14:58:46 drochner Exp $
+# $NetBSD: Makefile,v 1.114 2013/08/25 11:48:11 richard Exp $
 
 DISTNAME=	tiff-4.0.3
 PKGREVISION=	4
@@ -38,5 +38,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 # XXX for liblzma; there are more potential suppliers
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
