@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.113 2013/08/16 21:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.114 2013/08/25 02:26:38 jnemeth Exp $
 
 DISTNAME=	qemu-1.6.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qemu.org/
@@ -17,6 +18,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 NOT_FOR_PLATFORM=	NetBSD-5*-*
 
 USE_TOOLS+=		gmake makeinfo perl:build pkg-config
+USE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
@@ -32,6 +34,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
@@ -90,9 +93,9 @@ post-install:
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
