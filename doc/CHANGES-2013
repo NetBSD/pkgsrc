@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3076 2013/08/25 23:52:23 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3077 2013/08/25 23:58:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4449,3 +4449,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/suse121_compat to 12.1nb1 [obache 2013-08-25]
 	Updated textproc/p5-Text-Autoformat to 1.669004 [wen 2013-08-25]
 	Updated textproc/p5-Text-CSV-Encoded to 0.22 [wen 2013-08-25]
+	Updated textproc/p5-Text-DHCPLeases to 1.0 [wen 2013-08-25]
