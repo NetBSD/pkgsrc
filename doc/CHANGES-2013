@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3067 2013/08/25 01:41:19 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3068 2013/08/25 02:27:56 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4440,3 +4440,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/p5-Math-Prime-Util to 0.31 [wen 2013-08-25]
 	Updated math/p5-Math-Random-MT-Auto to 6.22 [wen 2013-08-25]
 	Updated math/p5-Math-Random-MT-Perl to 1.11 [wen 2013-08-25]
+	Updated emulators/qemu to 1.6.0nb1 [jnemeth 2013-08-25]
