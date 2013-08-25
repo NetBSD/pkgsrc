@@ -1,5 +1,8 @@
-$NetBSD: patch-tree.h,v 1.1 2013/08/15 12:40:06 richard Exp $
+$NetBSD: patch-tree.h,v 1.2 2013/08/25 14:29:52 richard Exp $
 
+* solaris defines S_ISDOOR already so undef in order to not
+* undermine program logic.
+*
 --- tree.h.orig	2011-06-24 12:55:58.000000000 +0000
 +++ tree.h
 @@ -59,6 +59,10 @@
