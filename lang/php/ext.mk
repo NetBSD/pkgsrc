@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.29 2012/08/17 15:38:19 taca Exp $
+# $NetBSD: ext.mk,v 1.29.8.1 2013/08/25 16:56:44 tron Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -21,7 +21,9 @@ HOMEPAGE?=		http://pecl.php.net/package/${MODNAME}
 
 .include "../../lang/php/phpversion.mk"
 
+.if defined(PHPPKGSRCDIR)
 .include "${PHPPKGSRCDIR}/Makefile.common"
+.endif
 
 PKGMODNAME?=		${MODNAME:S/-/_/}
 PHPSETUPSUBDIR?=	#empty
@@ -112,6 +114,8 @@ do-patch:
 	done || ${TRUE}
 .endif
 
+.if defined(PHPPKGSRCDIR)
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
+.endif
 
 .endif	# PHPEXT_MK
