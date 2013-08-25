@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.10 2013/08/10 08:56:17 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.11 2013/08/25 01:41:08 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -17,6 +17,10 @@ UNLIMIT_RESOURCES+=	datasize
 # but gcc 4.5.4 of NetBSD 7 generates working binary.
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
 GCC_REQD+=		4.6
+.  if ${MACHINE_ARCH} == "i386"
+# Fix for PR pkg/48152.
+CPPFLAGS+=		-march=i486
+.  endif
 .else
 GCC_REQD+=		4.5
 .endif
