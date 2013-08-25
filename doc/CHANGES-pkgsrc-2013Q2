@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.27 2013/08/24 19:45:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.28 2013/08/25 17:45:05 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -100,3 +100,17 @@ Pullup ticket #4217 - requested by drochner
 net/filezilla: security update
 Pullup ticket #4218 - requested by ryoon
 devel/xulrunner17: security update
+Pullup ticket #4219 - requested by obache
+emulators/suse121_compat: bug fix patch
+Pullup ticket #4220 - requested by taca
+lang/php53: security patch
+Pullup ticket #4221 - requested by taca
+lang/php*: apply framework changes to make pullup requests possible
+Pullup ticket #4222 - requested by taca
+lang/php54: security update
+Pullup ticket #4223 - requested by taca
+www/contao211: bug fix patch
+www/contao30: bug fix patch
+www/contao31: bug fix patch
+Pullup ticket #4224 - requested by taca
+mail/roundcube: security update
