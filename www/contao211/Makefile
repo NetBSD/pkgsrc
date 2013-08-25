@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/04/02 15:29:00 taca Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2013/08/25 17:36:58 tron Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 DIST_SUBDIR=	${CT_DIST_SUBDIR}
@@ -23,7 +24,7 @@ CT_VERS=	211
 USE_TOOLS=	pax
 NO_BUILD=	yes
 
-EG_CONFIG=	agents.php codeMirror.php config.php countries.php \
+EG_CONFIG=	agents.php codeMirror.php countries.php \
 		languages.php tcpdf.php timezones.php tinyFlash.php \
 		tinyMCE.php tinyNews.php
 EG_DATA=	${WWW_EG_FILES} system/config tl_files
@@ -62,10 +63,10 @@ SUBST_STAGE.conf=	post-configure
 WWW_FILES=	CHANGELOG.md GPL.txt LGPL.txt README.md \
 		contao cron.php index.php plugins share.php templates \
 		typolight
-WWW_SYSFILES=	config/.htaccess constants.php contao.css drivers \
-		functions.php html initialize.php interface.php libraries \
-		logs/.htaccess mbstring.php modules scripts/index.html \
-		themes tmp/.htaccess utf8_lookup.php
+WWW_SYSFILES=	config/.htaccess config/config.php constants.php contao.css \
+		drivers functions.php html initialize.php interface.php \
+		libraries logs/.htaccess mbstring.php modules \
+		scripts/index.html themes tmp/.htaccess utf8_lookup.php
 
 INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
 
@@ -86,9 +87,7 @@ do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
 	cd ${WRKSRC}/system; \
 		pax -rw ${WWW_SYSFILES} \
-			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system; \
-		${INSTALL_DATA} config/.htaccess \
-			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system/config
+			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system
 	${INSTALL_DATA} ${WRKSRC}/templates/.htaccess \
 		${DESTDIR}${PREFIX}/${CT_WEBDIR}/templates
 	cd ${WRKSRC}; pax -rw ${EG_DATA} ${DESTDIR}${PREFIX}/${CT_EGDIR}

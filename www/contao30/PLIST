@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/15 15:42:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2013/08/25 17:36:58 tron Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/codemirror/2.32/codemirror.css
@@ -960,6 +960,7 @@ ${CT_WEBDIR}/system/bin/minify
 ${CT_WEBDIR}/system/bin/transifex
 ${CT_WEBDIR}/system/bin/yuicompressor-2.4.6.jar
 ${CT_WEBDIR}/system/cache/.htaccess
+${CT_WEBDIR}/system/config/default.php
 ${CT_WEBDIR}/system/cron/.htaccess
 ${CT_WEBDIR}/system/cron/cron.php
 ${CT_WEBDIR}/system/docs/CHANGELOG.md
@@ -3529,4 +3530,3 @@ ${CT_EGDIR}/system/config/timezones.php
 ${CT_EGDIR}/system/config/tinyFlash.php
 ${CT_EGDIR}/system/config/tinyMCE.php
 ${CT_EGDIR}/system/config/tinyNews.php
-@pkgdir share/contao30/system/config

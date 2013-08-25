@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/04/02 15:29:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2013/08/25 17:36:58 tron Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/LGPL.txt
@@ -1130,6 +1130,7 @@ ${CT_WEBDIR}/plugins/tinyMCE/utils/mctabs.js
 ${CT_WEBDIR}/plugins/tinyMCE/utils/validate.js
 ${CT_WEBDIR}/share.php
 ${CT_WEBDIR}/system/config/.htaccess
+${CT_WEBDIR}/system/config/config.php
 ${CT_WEBDIR}/system/constants.php
 ${CT_WEBDIR}/system/contao.css
 ${CT_WEBDIR}/system/drivers/.htaccess
