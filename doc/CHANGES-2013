@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3070 2013/08/25 06:20:46 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3071 2013/08/25 07:31:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4443,3 +4443,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/qemu to 1.6.0nb1 [jnemeth 2013-08-25]
 	Updated devel/p5-Test-UseAllModules to 0.14 [wen 2013-08-25]
 	Added archivers/p5-Archive-Any-Lite version 0.07 [wen 2013-08-25]
+	Updated devel/p5-Module-ExtractUse to 0.31 [wen 2013-08-25]
