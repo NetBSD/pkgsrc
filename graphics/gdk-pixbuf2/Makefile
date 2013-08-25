@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/05/18 22:01:29 prlw1 Exp $
+# $NetBSD: Makefile,v 1.26 2013/08/25 11:50:28 richard Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -22,6 +22,12 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	ac_cv_sys_file_offset_bits=no
+.endif
 
 _BUILDING_GTK2= yes
 .include "loaders.mk"
