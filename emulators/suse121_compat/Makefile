@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 13:36:05 obache Exp $
+# $NetBSD: Makefile,v 1.1.1.1.12.1 2013/08/25 16:34:46 tron Exp $
 
 DISTNAME=	suse_compat-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 RPMPKGS+=	libstdc++33-3.3.3-30.25.2.${SUSE_ARCH}
 
