@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2013/08/24 10:59:49 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.38 2013/08/25 10:50:42 tron Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2714,6 +2714,7 @@ share/texmf-dist/doc/latex/mwcls/CZYTAJ
 share/texmf-dist/doc/latex/mwcls/ChangeLog
 share/texmf-dist/doc/latex/mwcls/README
 share/texmf-dist/doc/latex/mwcls/mwclsdoc.pdf
+share/texmf-dist/doc/latex/ntheorem/ntheorem.pdf
 share/texmf-dist/doc/latex/onlyamsmath/README
 share/texmf-dist/doc/latex/onlyamsmath/onlyamsmath.dvi
 share/texmf-dist/doc/latex/onlyamsmath/onlyamsmathtest.tex
