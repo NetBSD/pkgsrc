@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56.2.1 2013/07/15 22:11:37 tron Exp $
+# $NetBSD: Makefile,v 1.56.2.2 2013/08/25 17:44:15 tron Exp $
 
-DISTNAME=	roundcubemail-0.9.2-dep
+DISTNAME=	roundcubemail-0.9.3-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -44,9 +43,10 @@ EGDIR=			${PREFIX}/share/examples/roundcube
 DOCDIR=			${PREFIX}/share/doc/roundcube
 PAX_DIRS=		plugins program skins installer
 
-CONF_PLUGINS=		acl additional_message_headers enigma help \
-			jqueryui managesieve newmail_notifier password \
-			redundant_attachments squirrelmail_usercopy
+CONF_PLUGINS=		acl additional_message_headers help \
+			http_authentication jqueryui managesieve \
+			newmail_notifier password redundant_attachments \
+			squirrelmail_usercopy zipdownload
 
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=		VARBASE=${VARBASE} RCDIR=${RCDIR}
