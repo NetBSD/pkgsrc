@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/27 16:17:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2013/08/25 17:36:58 tron Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.0.01/ace.js
@@ -985,6 +985,7 @@ ${CT_WEBDIR}/share/index.php
 ${CT_WEBDIR}/system/.htaccess
 ${CT_WEBDIR}/system/bin/minify
 ${CT_WEBDIR}/system/bin/yuicompressor-2.4.6.jar
+${CT_WEBDIR}/system/config/default.php
 ${CT_WEBDIR}/system/cron/.htaccess
 ${CT_WEBDIR}/system/cron/cron.php
 ${CT_WEBDIR}/system/docs/CHANGELOG.md

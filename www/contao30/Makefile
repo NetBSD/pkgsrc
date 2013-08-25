@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2013/06/27 16:11:20 taca Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2013/08/25 17:36:58 tron Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 
@@ -24,7 +24,7 @@ USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
 EG_CONFIG=	agents.php codeMirror.php constants.php countries.php \
-		default.php languages.php tcpdf.php timezones.php \
+		languages.php tcpdf.php timezones.php \
 		tinyFlash.php tinyMCE.php tinyNews.php
 EG_DATA=	${WWW_EG_FILES} system/config files
 EG_TEMPLATES=	tinymce.css tiny_templates/index.html
@@ -66,9 +66,9 @@ SUBST_SED.php+=		-e "s|\#!/.*php|\#!${PREFIX}/bin/php|"
 SUBST_STAGE.php=	post-configure
 
 WWW_FILES=	.gitignore README.md assets contao index.php share templates
-WWW_SYSFILES=	.htaccess bin cache/.htaccess cron docs helper \
-		initialize.php logs/.htaccess modules themes tmp/.htaccess \
-		vendor
+WWW_SYSFILES=	.htaccess bin cache/.htaccess config/default.php cron docs \
+		helper initialize.php logs/.htaccess modules themes \
+		tmp/.htaccess vendor
 
 INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
 
