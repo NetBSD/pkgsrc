@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8.4.1 2013/08/04 20:24:10 spz Exp $
+# $NetBSD: Makefile,v 1.8.4.2 2013/08/25 17:26:38 tron Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -31,7 +30,7 @@ PLIST_SUBST+=		PHPEXTDIR="${PHP_EXTENSION_DIR}"
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	configure ext/phar/phar/phar.php
+SUBST_FILES.path=	ext/phar/phar/phar.php
 SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
 SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
