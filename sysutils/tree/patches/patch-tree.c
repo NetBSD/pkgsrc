@@ -1,5 +1,8 @@
-$NetBSD: patch-tree.c,v 1.1 2013/08/15 12:40:06 richard Exp $
+$NetBSD: patch-tree.c,v 1.2 2013/08/25 14:29:52 richard Exp $
 
+* ensure that both S_ISPORT and S_ISDOOR are defined prior to ifmt
+* declaration.
+*
 --- tree.c.orig	2011-06-24 14:26:30.000000000 +0000
 +++ tree.c
 @@ -45,7 +45,7 @@ int mb_cur_max;
