@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12491 2013/08/23 17:20:32 asau Exp $
+$NetBSD: TODO,v 1.12492 2013/08/25 14:21:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -405,7 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-0.9.44
+	o calibre-1.0.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.10
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -459,6 +459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhid-5.3
 	o digikam-3.3.0
 	o doclifter-2.12
+	o doxygen-1.8.5
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2013.56
@@ -549,10 +550,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o gentoo-0.20.1
+	o gentoo-0.20.3
 	o gfract-0.33
 	o ghc-7.6
 	o gifsicle-1.48
+	o git-1.8.4
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -722,7 +724,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmcs-0.7.2
 	o libmediawiki-3.3.0
 	o libmemcached-1.0.17
-	o libmicrohttpd-0.9.28
+	o libmicrohttpd-0.9.29
 	o libnasl-2.3.1
 	o libnids-1.24
 	o libntlm-1.4
@@ -841,6 +843,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openscad-2013.06
 	o openslp-2.0.0
 	o openssh-6.2p1
+	o orc-0.4.18
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
@@ -861,7 +864,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
-	o parallel-20130722
+	o parallel-20130822
 	o pari-2.5.3
 	o patch-2.7.1
 	o pbzip2-1.1.6
@@ -915,7 +918,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-jinja2-2.7.1
-	o py-kombu-2.5.13
+	o py-kombu-2.5.14
 	o py-lxml-3.2.3
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
@@ -935,6 +938,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rdesktop-1.8.0
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
+	o redis-2.6.15
 	o rep-gtk-0.90.8.1
 	o resize_image-0.7
 	o rio500-0.8.1
@@ -1113,7 +1117,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20130817
+	o x264-devel-20130824
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
@@ -1139,7 +1143,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xfce4-4.10
 	o xfce4-volman-0.3.80
-	o xfe-1.34
+	o xfe-1.35
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
 	o xhippo-3.5
