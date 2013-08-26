@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3090 2013/08/26 01:55:40 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3091 2013/08/26 09:38:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Text-Template to 1.46 [wen 2013-08-26]
 	Updated textproc/p5-Text-Wrapper to 1.04 [wen 2013-08-26]
 	Updated textproc/p5-Text-Xslate to 2.0009 [wen 2013-08-26]
+	Updated math/ruby-spreadsheet to 0.8.9 [obache 2013-08-26]
