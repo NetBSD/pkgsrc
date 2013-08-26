@@ -1,9 +1,7 @@
-$NetBSD: patch-configure.sh,v 1.2 2013/07/10 01:29:21 schmonz Exp $
+$NetBSD: patch-configure.sh,v 1.3 2013/08/26 00:23:04 wen Exp $
 
-Fix messed up configure.sh.
-
---- discount-2.1.5a/configure.sh.orig	2012-09-13 22:47:28.000000000 +0000
-+++ discount-2.1.5a/configure.sh
+--- discount/configure.sh.orig	2013-08-26 08:16:50.000000000 +0000
++++ discount/configure.sh
 @@ -87,11 +87,11 @@ AC_C_INLINE
  AC_SCALAR_TYPES sub hdr
  AC_CHECK_BASENAME
@@ -24,7 +22,7 @@ Fix messed up configure.sh.
  fi
  
 -if AC_CHECK_FUNCS strcasecmp; then
-+if AC_CHECK_FUNCS 'strcasecmp("X", "x")'; then
++if AC_CHECK_FUNCS 'strcasecmp("X","X")'; then
      :
  elif AC_CHECK_FUNCS stricmp; then
      AC_DEFINE strcasecmp stricmp
@@ -33,7 +31,7 @@ Fix messed up configure.sh.
  fi
  
 -if AC_CHECK_FUNCS strncasecmp; then
-+if AC_CHECK_FUNCS 'strncasecmp("X", "x", 1)'; then
++if AC_CHECK_FUNCS 'strcasecmp("X","X")'; then
      :
  elif AC_CHECK_FUNCS strnicmp; then
      AC_DEFINE strncasecmp strnicmp
@@ -42,7 +40,7 @@ Fix messed up configure.sh.
  fi
  
 -if AC_CHECK_FUNCS fchdir || AC_CHECK_FUNCS getcwd ; then
-+if AC_CHECK_FUNCS 'fchdir(0)' || AC_CHECK_FUNCS 'getcwd((char *)0, 0)'; then
++if AC_CHECK_FUNCS 'fchdir(0)' || AC_CHECK_FUNCS getcwd ; then
      AC_SUB 'THEME' ''
  else
      AC_SUB 'THEME' '#'
