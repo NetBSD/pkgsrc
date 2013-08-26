@@ -1,0 +1,5 @@
+This module subclasses Pod::Parser and converts POD to Markdown.
+
+Literal characters in Pod that are special in Markdown (like
+*asterisks*) are backslash-escaped (except those in verbatim
+blocks or C<code> sections).
