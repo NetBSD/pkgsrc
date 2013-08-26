@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2013/04/21 12:27:11 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/26 09:49:06 obache Exp $
 
-DISTNAME=	text-1.2.1
+DISTNAME=	text-1.2.2
 CATEGORIES=	textproc
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	https://github.com/threedaymonk/text
 COMMENT=	Collection of text algorithms for Ruby
-LICENSE=	ruby-license
+LICENSE=	mit
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
