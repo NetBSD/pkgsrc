@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3084 2013/08/26 01:13:14 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3085 2013/08/26 01:16:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4457,3 +4457,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/p5-Pod-Markdown version 1.322 [wen 2013-08-26]
 	Updated textproc/p5-Text-RecordParser to 1.6.3 [wen 2013-08-26]
 	Updated cross/avr-gdb to 7.6nb1 [mef 2013-08-26]
+	Updated textproc/p5-Text-RewriteRules to 0.25 [wen 2013-08-26]
