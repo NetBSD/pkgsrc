@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/07/27 16:14:58 he Exp $
+$NetBSD: distinfo,v 1.5 2013/08/26 01:49:43 wen Exp $
 
-SHA1 (Text-Wrapper-1.02.tar.gz) = d6dc32314765a8e8c144734846e07bd896aebff1
-RMD160 (Text-Wrapper-1.02.tar.gz) = e4a627b5d566160a9b5c079dcb4dc40ebeb06cf1
-Size (Text-Wrapper-1.02.tar.gz) = 8229 bytes
+SHA1 (Text-Wrapper-1.04.tar.gz) = 49027e4757ede5b895df7fc185e58b0ec166ba10
+RMD160 (Text-Wrapper-1.04.tar.gz) = 0e5027d04340cecc457f52138e0ab74394205641
+Size (Text-Wrapper-1.04.tar.gz) = 18239 bytes
