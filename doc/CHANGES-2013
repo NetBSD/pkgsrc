@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3085 2013/08/26 01:16:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3086 2013/08/26 01:28:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4458,3 +4458,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Text-RecordParser to 1.6.3 [wen 2013-08-26]
 	Updated cross/avr-gdb to 7.6nb1 [mef 2013-08-26]
 	Updated textproc/p5-Text-RewriteRules to 0.25 [wen 2013-08-26]
+	Updated textproc/p5-Text-Tabs+Wrap to 2013.0523 [wen 2013-08-26]
