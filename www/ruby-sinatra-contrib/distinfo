@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/06/16 09:21:38 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/08/26 10:19:23 obache Exp $
 
-SHA1 (sinatra-contrib-1.4.0.gem) = dde128f62e4fd4913d817a5278c918afae7b11d9
-RMD160 (sinatra-contrib-1.4.0.gem) = 68234f1244fc1a130387db3099e524865facb028
-Size (sinatra-contrib-1.4.0.gem) = 50176 bytes
+SHA1 (sinatra-contrib-1.4.1.gem) = 5a091dc585c7caa9998cffbaa77537e79dc88e0c
+RMD160 (sinatra-contrib-1.4.1.gem) = c1211a9eca423f3c45113beafd006090bcdcd520
+Size (sinatra-contrib-1.4.1.gem) = 51712 bytes
