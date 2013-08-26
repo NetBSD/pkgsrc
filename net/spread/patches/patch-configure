@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2013/08/26 15:00:33 fhajny Exp $
+
+Make piddir configurable.
+--- configure.orig	2013-08-26 14:49:35.051354307 +0000
++++ configure
+@@ -3397,14 +3397,6 @@ if test "${with_pid_dir+set}" = set; the
+ fi
+ 
+ 
+-# make sure the directory exists
+-if test ! -d $piddir ; then	
+-	piddir=`eval echo ${sysconfdir}`
+-	case $piddir in
+- 		NONE/*) piddir=`echo $piddir | sed "s~NONE~$ac_default_prefix~"` ;;
+-	esac
+-fi
+-
+ cat >> confdefs.h <<EOF
+ #define _PATH_SPREAD_PIDDIR "$piddir"
+ EOF
