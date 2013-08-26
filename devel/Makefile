@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1770 2013/08/24 16:15:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.1771 2013/08/26 10:00:49 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -687,6 +687,7 @@ SUBDIR+=	p5-Data-ShowTable
 SUBDIR+=	p5-Data-Taxi
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-Data-UUID
+SUBDIR+=	p5-Data-Uniqid
 SUBDIR+=	p5-Data-Visitor
 SUBDIR+=	p5-Date-Business
 SUBDIR+=	p5-Date-Calc
