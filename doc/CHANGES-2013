@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3079 2013/08/26 00:24:05 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3080 2013/08/26 00:28:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4452,3 +4452,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Text-DHCPLeases to 1.0 [wen 2013-08-25]
 	Updated textproc/p5-Text-Format to 0.58 [wen 2013-08-26]
 	Updated textproc/p5-Text-Markdown-Discount to 0.10 [wen 2013-08-26]
+	Updated textproc/p5-Text-MicroTemplate to 0.20 [wen 2013-08-26]
