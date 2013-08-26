@@ -1,15 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/21 12:27:11 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/26 09:49:06 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/text.rb
 ${GEM_LIBDIR}/lib/text/double_metaphone.rb
+${GEM_LIBDIR}/lib/text/figlet.rb
+${GEM_LIBDIR}/lib/text/figlet/font.rb
+${GEM_LIBDIR}/lib/text/figlet/smusher.rb
+${GEM_LIBDIR}/lib/text/figlet/typesetter.rb
 ${GEM_LIBDIR}/lib/text/levenshtein.rb
 ${GEM_LIBDIR}/lib/text/metaphone.rb
 ${GEM_LIBDIR}/lib/text/porter_stemming.rb
 ${GEM_LIBDIR}/lib/text/soundex.rb
 ${GEM_LIBDIR}/lib/text/version.rb
 ${GEM_LIBDIR}/lib/text/white_similarity.rb
+${GEM_LIBDIR}/test/data/big.flf
 ${GEM_LIBDIR}/test/data/big.txt
 ${GEM_LIBDIR}/test/data/chunky.flf
 ${GEM_LIBDIR}/test/data/chunky.txt
@@ -20,6 +25,7 @@ ${GEM_LIBDIR}/test/data/porter_stemming_input.txt
 ${GEM_LIBDIR}/test/data/porter_stemming_output.txt
 ${GEM_LIBDIR}/test/preamble.rb
 ${GEM_LIBDIR}/test/test_double_metaphone.rb
+${GEM_LIBDIR}/test/test_figlet.rb
 ${GEM_LIBDIR}/test/test_levenshtein.rb
 ${GEM_LIBDIR}/test/test_metaphone.rb
 ${GEM_LIBDIR}/test/test_porter_stemming.rb
