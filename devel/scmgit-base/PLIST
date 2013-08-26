@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2013/08/17 19:09:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2013/08/26 16:32:30 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -59,6 +59,7 @@ libexec/git-core/git-bundle
 libexec/git-core/git-cat-file
 libexec/git-core/git-check-attr
 libexec/git-core/git-check-ignore
+libexec/git-core/git-check-mailmap
 libexec/git-core/git-check-ref-format
 libexec/git-core/git-checkout
 libexec/git-core/git-checkout-index
@@ -161,7 +162,6 @@ libexec/git-core/git-remote-ftp
 libexec/git-core/git-remote-ftps
 libexec/git-core/git-remote-http
 libexec/git-core/git-remote-https
-libexec/git-core/git-remote-testpy
 libexec/git-core/git-remote-testsvn
 libexec/git-core/git-repack
 libexec/git-core/git-replace
@@ -240,6 +240,7 @@ share/examples/scmgit/templates/hooks/update.sample
 share/examples/scmgit/templates/info/exclude
 share/locale/da/LC_MESSAGES/git.mo
 share/locale/de/LC_MESSAGES/git.mo
+share/locale/fr/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
 share/locale/it/LC_MESSAGES/git.mo
 share/locale/nl/LC_MESSAGES/git.mo
