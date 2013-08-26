@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3096 2013/08/26 10:31:50 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3097 2013/08/26 11:17:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4471,3 +4471,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/redis to 2.6.15 [fhajny 2013-08-26]
 	Updated www/ruby-sinatra-contrib to 1.4.1 [obache 2013-08-26]
 	Updated net/rabbitmq to 3.1.5 [fhajny 2013-08-26]
+	Updated mail/getmail to 4.43.0 [schmonz 2013-08-26]
