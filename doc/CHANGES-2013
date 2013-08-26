@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3094 2013/08/26 10:11:01 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3095 2013/08/26 10:19:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4469,3 +4469,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Data-Uniqid version 0.12 [abs 2013-08-26]
 	Updated mail/imapsync to 1.564 [abs 2013-08-26]
 	Updated databases/redis to 2.6.15 [fhajny 2013-08-26]
+	Updated www/ruby-sinatra-contrib to 1.4.1 [obache 2013-08-26]
