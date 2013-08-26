@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/05/01 21:28:16 sno Exp $
+$NetBSD: distinfo,v 1.5 2013/08/26 01:27:15 wen Exp $
 
-SHA1 (Text-Tabs+Wrap-2009.0305.tar.gz) = bf588abea7542feede5a082e13bd2b679ad1ace8
-RMD160 (Text-Tabs+Wrap-2009.0305.tar.gz) = 4cd695f413ad1157d8d7646b46ef1620d8d26ddf
-Size (Text-Tabs+Wrap-2009.0305.tar.gz) = 12807 bytes
+SHA1 (Text-Tabs+Wrap-2013.0523.tar.gz) = f4f13083ada37f490a48c63e9d76ea8916a814c3
+RMD160 (Text-Tabs+Wrap-2013.0523.tar.gz) = 0a614c6af79316a81fd8a713f49a477c573bc2e3
+Size (Text-Tabs+Wrap-2013.0523.tar.gz) = 18239 bytes
