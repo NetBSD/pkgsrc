@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3106 2013/08/27 02:38:41 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3107 2013/08/27 03:11:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4484,3 +4484,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Any-Moose to 0.21 [wen 2013-08-27]
 	Updated devel/p5-AnyEvent-XMPP to 0.54 [wen 2013-08-27]
 	Updated www/p5-AnyEvent-HTTP to 2.15 [wen 2013-08-27]
+	Updated www/p5-Plack to 1.0029 [wen 2013-08-27]
