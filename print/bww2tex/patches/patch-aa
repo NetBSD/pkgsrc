@@ -1,8 +1,40 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/01/23 18:16:41 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2013/08/27 18:43:31 wiz Exp $
 
---- grammar.y.orig	Sun Jan 19 16:02:42 2003
-+++ grammar.y	Sun Jan 19 16:02:59 2003
-@@ -697,18 +697,15 @@
+First two chunks: bison-3.0 compat.
+last chunk: support --help and -h.
+
+--- grammar.y.orig	2002-06-03 20:38:03.000000000 +0000
++++ grammar.y
+@@ -105,7 +105,7 @@ bline: bline ebarc { strcat($1,"\\notes"
+                      printf("%s", strcat($1,$2)); free($1); free($2);
+                      $$=malloc(MAXLEN); strcpy($$,reprmorceau);
+                    }
+-bline: bbline      {  $$ = $1
++bline: bbline      {  $$ = $1;
+                    }
+      | bline ebar ebarc { strcat($1,"\\notes");
+                      if(tiearmed) { tiearmed=0; strcat($1,"\\tten0"); }
+@@ -560,8 +560,8 @@ emb: EMBP       { $$ = $1; }
+ tiebeat: TIEBEAT  { $$ = $1; }
+        | TIE BEAT { $$ = $1; }
+        | BEAT TIE { $$ = $2; }
+-       | tiebeat BEAT { $$ = $1 }
+-       | BEAT tiebeat { $$ = $2 }
++       | tiebeat BEAT { $$ = $1; }
++       | BEAT tiebeat { $$ = $2; }
+        ;
+  bar: BAR         { $$ = (char *) malloc(MAXLEN); strcpy($$,$1); }
+     | BEAT bar    { $$ = $2; }
+@@ -605,7 +605,7 @@ tiebeat: TIEBEAT  { $$ = $1; }
+ tline: COMMENT { $$= (char *) malloc(MAXLEN);
+                  strcat(strcpy($$,"%"),$1); free($1);
+                }
+-     | FORMAT  { $$ = $1 }
++     | FORMAT  { $$ = $1; }
+      | text { $$ = (char *) malloc(MAXLEN);
+                if( ntext != 4 || strlen($1) > 0)
+                { if (ntext == 1) {strcat(strcat(strcpy($$,"\\line{\\moyen "),$1)," \\hss}\n"); free($1);}
+@@ -697,18 +697,15 @@ int main (int argc, char **argv)
  
      if (argc > 1)   /* if a file was named, open it for reading*/
      {
