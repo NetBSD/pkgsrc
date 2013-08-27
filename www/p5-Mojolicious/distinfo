@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2013/08/24 00:02:23 wen Exp $
+$NetBSD: distinfo,v 1.27 2013/08/27 02:10:57 wen Exp $
 
-SHA1 (Mojolicious-4.26.tar.gz) = c742270ca1cd4d235927d1b7ebba1944f2085f0a
-RMD160 (Mojolicious-4.26.tar.gz) = 5a8bd4824ccda20460dc4b8a70b772a031c1ad32
-Size (Mojolicious-4.26.tar.gz) = 607093 bytes
+SHA1 (Mojolicious-4.27.tar.gz) = 68efc9858f88dcc40796eb9183b4ab016ef3003d
+RMD160 (Mojolicious-4.27.tar.gz) = cf6c1824b5e56ea5c0af1aa77070adfa5d745a3e
+Size (Mojolicious-4.27.tar.gz) = 596486 bytes
