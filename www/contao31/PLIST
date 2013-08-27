@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/15 17:53:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/08/27 16:08:03 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.0.01/ace.js
@@ -721,6 +721,8 @@ ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/js/typobox.js
 ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/js/typobox_src.js
 ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/js/typolinks.js
 ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/js/typolinks_src.js
+${CT_WEBDIR}/assets/tinymce/plugins/typolinks/langs/cs.js
+${CT_WEBDIR}/assets/tinymce/plugins/typolinks/langs/cs_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/langs/da.js
 ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/langs/da_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/typolinks/langs/de.js
