@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3104 2013/08/27 02:29:05 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3105 2013/08/27 02:33:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/p5-Convert-Color to 0.09 [wen 2013-08-27]
 	Updated devel/p5-AnyEvent to 7.05 [wen 2013-08-27]
 	Updated devel/p5-Any-Moose to 0.21 [wen 2013-08-27]
+	Updated devel/p5-AnyEvent-XMPP to 0.54 [wen 2013-08-27]
