@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/02/13 14:42:59 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2013/08/27 22:11:20 richard Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hunspell
 PKG_SUPPORTED_OPTIONS=		wide-curses
@@ -17,6 +17,7 @@ USE_NCURSES=	yes
 .else
 .  if !empty(PKG_OPTIONS:Mwide-curses)
 .    include "../../devel/ncursesw/buildlink3.mk"
+CPPFLAGS.SunOS+=	-D_XPG6
 .  else
 .    include "../../devel/ncurses/buildlink3.mk"
 .  endif
