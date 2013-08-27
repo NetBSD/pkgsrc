@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.13 2010/09/16 11:09:50 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.14 2013/08/27 18:00:32 tez Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2601,6 +2601,7 @@ lib/python${PY_VER_SUFFIX}/test/lock_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.py
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/nullbytecert.pem
 lib/python${PY_VER_SUFFIX}/test/nullcert.pem
 lib/python${PY_VER_SUFFIX}/test/outstanding_bugs.py
 lib/python${PY_VER_SUFFIX}/test/outstanding_bugs.pyc
