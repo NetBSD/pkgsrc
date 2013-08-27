@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3101 2013/08/27 02:16:41 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3102 2013/08/27 02:19:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4479,3 +4479,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/scamper to 20130824 [markd 2013-08-26]
 	Updated www/p5-Mojolicious to 4.27 [wen 2013-08-27]
 	Updated converters/p5-Convert-BinHex to 1.122 [wen 2013-08-27]
+	Updated converters/p5-Convert-Color to 0.09 [wen 2013-08-27]
