@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.41 2013/04/12 13:44:08 joerg Exp $
+$NetBSD: patch-ad,v 1.42 2013/08/27 15:50:23 joerg Exp $
 
---- libltdl/configure.orig	2013-03-03 13:53:50.000000000 +0000
+--- libltdl/configure.orig	2011-10-17 10:19:47.000000000 +0000
 +++ libltdl/configure
 @@ -5042,12 +5042,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    lt_cv_deplibs_check_method=pass_all
@@ -36,6 +36,15 @@ $NetBSD: patch-ad,v 1.41 2013/04/12 13:44:08 joerg Exp $
    ;;
  
  openbsd*)
+@@ -5686,7 +5693,7 @@ fi
+ 
+ case $host_os in
+   darwin*)
+-    lock_old_archive_extraction=yes ;;
++    lock_old_archive_extraction=no ;;	# work around bug #14579
+   *)
+     lock_old_archive_extraction=no ;;
+ esac
 @@ -7843,7 +7850,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
