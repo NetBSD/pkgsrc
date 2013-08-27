@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2013/07/06 23:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.200 2013/08/27 08:13:20 fhajny Exp $
 
 .include "Makefile.common"
 
@@ -45,7 +45,7 @@ GCC_REQD+=		3.0
 CFLAGS+=		-O
 .endif
 
-PKG_SYSCONFSUBDIR=	ImageMagick
+PKG_SYSCONFSUBDIR=	ImageMagick-${IM_MAJOR_LIB_VER}
 EGDIR=		${PREFIX}/share/examples/ImageMagick
 CONF_FILES=	${EGDIR}/coder.xml ${PKG_SYSCONFDIR}/coder.xml
 CONF_FILES+=	${EGDIR}/colors.xml ${PKG_SYSCONFDIR}/colors.xml
