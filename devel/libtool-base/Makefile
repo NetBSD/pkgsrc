@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2013/07/01 15:59:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.104 2013/08/27 15:50:23 joerg Exp $
 
 ###########################################################################
 ###########################################################################
@@ -26,7 +26,7 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -60,6 +60,7 @@ CFLAGS+=	${_COMPILER_ABI_FLAG.${ABI}}
 #
 USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--disable-ltdl-install
+CONFIGURE_ARGS+=	F77=no FC=no
 
 USE_TOOLS+=		echo
 
