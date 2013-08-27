@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/08/07 03:11:35 mef Exp $
+# $NetBSD: Makefile,v 1.31 2013/08/27 15:41:05 joerg Exp $
 
 DISTNAME=		gcc-4.5.3
 PKGNAME=		avr-gcc-4.5.3
@@ -23,7 +23,7 @@ USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 
 CONFIGURE_ARGS+=	--target=avr
-CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--disable-nls --disable-lto
 CONFIGURE_ARGS+=	--enable-multilib
 
 MAKE_ENV+=		MACHINE_ARCH=avr
