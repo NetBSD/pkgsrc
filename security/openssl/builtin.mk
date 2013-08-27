@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.33 2013/06/13 07:51:26 adam Exp $
+# $NetBSD: builtin.mk,v 1.34 2013/08/27 05:42:34 richard Exp $
 
 BUILTIN_PKG:=	openssl
 
-BUILTIN_FIND_LIBS:=		des
+BUILTIN_FIND_LIBS:=		crypto des ssl
 BUILTIN_FIND_FILES_VAR:=	H_OPENSSLCONF H_OPENSSLV
 BUILTIN_FIND_FILES.H_OPENSSLCONF= /usr/include/openssl/opensslconf.h \
 				/usr/sfw/include/openssl/opensslconf.h \
@@ -34,7 +34,7 @@ MAKEVARS+=	IS_BUILTIN.openssl
     empty(H_OPENSSLV:M__nonexistent__)
 BUILTIN_VERSION.openssl!=						\
 	${AWK} 'BEGIN { hex="0123456789abcdef";				\
-			split("abcdefghijklmnopqrstuvwxyz", alpha, "");	\
+			alpha="abcdefghijklmnopqrstuvwxyz";	\
 		}							\
 		/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
 			major = index(hex, substr($$3, 3, 1)) - 1;	\
@@ -51,7 +51,7 @@ BUILTIN_VERSION.openssl!=						\
 			} else if (i > 26) {				\
 				patchlevel = "a";			\
 			} else {					\
-				patchlevel = alpha[i];			\
+				patchlevel = substr(alpha,i,1);			\
 			}						\
 			printf "%s%s%s%s\n",				\
 				major, minor, teeny, patchlevel;	\
