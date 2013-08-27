@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3112 2013/08/27 08:07:24 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3113 2013/08/27 08:14:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-HTML-FillInForm to 2.20 [wen 2013-08-27]
 	Updated devel/p5-Module-Util to 1.09 [wen 2013-08-27]
 	Updated sysutils/p5-Quota to 1.7.0 [obache 2013-08-27]
+	Updated graphics/ImageMagick to 6.8.6.9 [fhajny 2013-08-27]
