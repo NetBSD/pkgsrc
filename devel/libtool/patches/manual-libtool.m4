@@ -1,7 +1,8 @@
-$NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
---- libltdl/m4/libtool.m4.orig	2013-06-27 18:38:56.000000000 +0200
-+++ libltdl/m4/libtool.m4	2013-06-27 18:39:15.000000000 +0200
-@@ -123,7 +123,10 @@
+$NetBSD: manual-libtool.m4,v 1.37 2013/08/27 15:50:23 joerg Exp $
+
+--- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
++++ libltdl/m4/libtool.m4
+@@ -123,7 +123,10 @@ m4_defun([_LT_CC_BASENAME],
      *) break;;
    esac
  done
@@ -13,7 +14,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
  ])
  
  
-@@ -1098,7 +1101,7 @@
+@@ -1098,7 +1101,7 @@ m4_defun([_LT_DARWIN_LINKER_FEATURES],
    _LT_TAGVAR(allow_undefined_flag, $1)="$_lt_dar_allow_undefined"
    case $cc_basename in
       ifort*) _lt_dar_can_shared=yes ;;
@@ -22,7 +23,16 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    esac
    if test "$_lt_dar_can_shared" = "yes"; then
      output_verbose_link_cmd=func_echo_all
-@@ -1638,7 +1641,7 @@
+@@ -1482,7 +1485,7 @@ fi
+ 
+ case $host_os in
+   darwin*)
+-    lock_old_archive_extraction=yes ;;
++    lock_old_archive_extraction=no ;;	# work around bug #14579
+   *)
+     lock_old_archive_extraction=no ;;
+ esac
+@@ -1638,7 +1641,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -31,7 +41,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -2468,7 +2471,7 @@
+@@ -2468,7 +2471,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -40,7 +50,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -2482,7 +2485,7 @@
+@@ -2482,7 +2485,7 @@ freebsd* | dragonfly*)
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
@@ -49,7 +59,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        need_version=no
        need_lib_prefix=no
        ;;
-@@ -2505,13 +2508,24 @@
+@@ -2505,13 +2508,24 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -75,7 +85,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
  gnu*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -2599,12 +2613,7 @@
+@@ -2599,12 +2613,7 @@ interix[[3-9]]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -89,7 +99,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -2684,19 +2693,36 @@
+@@ -2684,19 +2693,36 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -136,7 +146,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -2722,7 +2748,7 @@
+@@ -2722,7 +2748,7 @@ newsos6)
    ;;
  
  openbsd*)
@@ -145,7 +155,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -2730,7 +2756,7 @@
+@@ -2730,7 +2756,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
      *)				need_version=no  ;;
    esac
@@ -154,7 +164,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -3289,12 +3315,19 @@
+@@ -3289,12 +3315,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -179,7 +189,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    ;;
  
  newos6*)
-@@ -3304,7 +3337,7 @@
+@@ -3304,7 +3337,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -188,7 +198,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    ;;
  
  openbsd*)
-@@ -3913,9 +3946,15 @@
+@@ -3913,9 +3946,15 @@ m4_if([$1], [CXX], [
  	[_LT_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'])
        ;;
      darwin* | rhapsody*)
@@ -205,7 +215,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -3994,6 +4033,9 @@
+@@ -3994,6 +4033,9 @@ m4_if([$1], [CXX], [
  	    ;;
  	esac
  	;;
@@ -215,7 +225,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -4232,9 +4274,16 @@
+@@ -4232,9 +4274,16 @@ m4_if([$1], [CXX], [
        ;;
  
      darwin* | rhapsody*)
@@ -233,7 +243,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        ;;
  
      haiku*)
-@@ -4262,6 +4311,13 @@
+@@ -4262,6 +4311,13 @@ m4_if([$1], [CXX], [
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -247,7 +257,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -4415,6 +4471,15 @@
+@@ -4415,6 +4471,15 @@ m4_if([$1], [CXX], [
        esac
        ;;
  
@@ -263,7 +273,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
      newsos6)
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-KPIC'
        _LT_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
-@@ -4490,6 +4555,9 @@
+@@ -4490,6 +4555,9 @@ m4_if([$1], [CXX], [
  ])
  case $host_os in
    # For platforms which do not support PIC, -DPIC is meaningless:
@@ -273,7 +283,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -4861,16 +4929,28 @@
+@@ -4861,16 +4929,28 @@ _LT_EOF
        fi
        ;;
  
@@ -308,7 +318,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	_LT_TAGVAR(ld_shlibs, $1)=no
-@@ -5342,13 +5422,25 @@
+@@ -5342,13 +5422,25 @@ _LT_EOF
        _LT_TAGVAR(link_all_deplibs, $1)=yes
        ;;
  
@@ -339,7 +349,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        _LT_TAGVAR(hardcode_direct, $1)=yes
        _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
        ;;
-@@ -5362,6 +5454,11 @@
+@@ -5362,6 +5454,11 @@ _LT_EOF
        ;;
  
      *nto* | *qnx*)
@@ -351,7 +361,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        ;;
  
      openbsd*)
-@@ -5819,9 +5916,7 @@
+@@ -5819,9 +5916,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
  [m4_require([_LT_FILEUTILS_DEFAULTS])dnl
  m4_require([_LT_DECL_EGREP])dnl
  m4_require([_LT_PATH_MANIFEST_TOOL])dnl
@@ -362,7 +372,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6538,6 +6633,22 @@
+@@ -6538,6 +6633,22 @@ if test "$_lt_caught_CXX_error" != yes; 
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -385,7 +395,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6552,15 +6663,12 @@
+@@ -6552,15 +6663,12 @@ if test "$_lt_caught_CXX_error" != yes; 
  	;;
  
        netbsd*)
@@ -407,7 +417,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -6740,9 +6848,9 @@
+@@ -6740,9 +6848,9 @@ if test "$_lt_caught_CXX_error" != yes; 
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
  	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
@@ -419,7 +429,7 @@ $NetBSD: manual-libtool.m4,v 1.36 2013/07/01 15:59:06 bsiegert Exp $
  
  	        # Commands to make compiler produce verbose output that lists
  	        # what "hidden" libraries, object files and flags are used when
-@@ -6751,9 +6859,9 @@
+@@ -6751,9 +6859,9 @@ if test "$_lt_caught_CXX_error" != yes; 
  	      else
  	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
  	        # platform.
