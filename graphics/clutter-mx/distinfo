@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/24 18:19:26 drochner Exp $
+$NetBSD: distinfo,v 1.2 2013/08/27 15:52:49 joerg Exp $
 
 SHA1 (mx-1.0.4.tar.bz2) = b82b5a1395b7c2dd9461da10032849895927a70a
 RMD160 (mx-1.0.4.tar.bz2) = 4b88d8fa5d6b7db639a497421f5d322df9f98230
 Size (mx-1.0.4.tar.bz2) = 1132646 bytes
+SHA1 (patch-mx_mx-deform-texture.c) = 6f0a4210948d4612adee84aa3e206f7ce9784e2e
+SHA1 (patch-mx_mx-texture-frame.c) = 595b436763e7ede9450839309eeecf9c67b0ef6f
