@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/08/14 01:16:10 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/27 15:39:53 joerg Exp $
 #
 
 PKGNAME=		bmp-crossfade-0.3.11
@@ -14,6 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 
 LDFLAGS+=		${LIBOSSAUDIO}
 OSS_DEFS+=		-DDEFAULT_OSS_ALT_AUDIO_DEVICE='"${DEVOSSSOUND}"'
