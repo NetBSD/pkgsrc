@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 22:37:12 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/27 15:40:42 joerg Exp $
 
 DISTNAME=	filebench-1.4.9.1
 CATEGORIES=	benchmarks
@@ -14,7 +14,7 @@ USE_TOOLS=	lex
 USE_TOOLS+=	aclocal autoconf automake
 
 pre-configure:
-	cd $(WRKSRC) && aclocal && automake && autoconf
+	cd $(WRKSRC) && aclocal && automake -a && autoconf
 
 post-install:
 	cd $(WRKSRC) && $(INSTALL_DATA) README $(DESTDIR)$(PREFIX)/share/$(PKGBASE)/
