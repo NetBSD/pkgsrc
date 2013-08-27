@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2013/05/30 13:40:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.78 2013/08/27 08:13:57 fhajny Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -90,6 +90,7 @@ include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/module.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/monitor.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/montage.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/morphology.h
+include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/opencl.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/option.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/paint.h
 include/ImageMagick-${IM_MAJOR_LIB_VER}/magick/pixel-accessor.h
@@ -1084,6 +1085,7 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/magick-property.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/magick-wand.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/magick.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/memory.html
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/mime.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/module.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/mogrify.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/monitor.html
@@ -1091,7 +1093,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/montage.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/morphology.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/paint.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/pixel-iterator.html
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/pixel-view.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/pixel-wand.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/profile.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/property.html
@@ -1110,7 +1111,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/wand-view.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/architecture.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/binary-releases.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/changelog.html
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/channel.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/cipher.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/color-management.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/color.html
@@ -1148,7 +1148,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/magick-vector-graphics.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/magick-wand.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/magick.css
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/miff.html
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/mirrors.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/mogrify.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/montage.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/motion-picture.html
@@ -1183,6 +1182,7 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/type-ghostscript.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/type-windows.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/type.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/wand.c
+share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/sponsors.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/support.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/subversion.html
