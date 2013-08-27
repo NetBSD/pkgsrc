@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/07/20 05:10:42 richard Exp $
+# $NetBSD: Makefile,v 1.40 2013/08/27 15:42:06 joerg Exp $
 
 DISTNAME=	pgadmin3-1.16.1
 CATEGORIES=	databases
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 PKG_OPTIONS_VAR=        PKG_OPTIONS.pgadmin3
 PKG_SUPPORTED_OPTIONS=	pgadmin-db-designer doc
 PKG_SUGGESTED_OPTIONS=	pgadmin-db-designer
+
+REPLACE_SH=		pgadmin/ver_svn.sh
 
 .include "../../mk/bsd.options.mk"
 
