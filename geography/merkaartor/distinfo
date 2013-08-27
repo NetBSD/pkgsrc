@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2013/05/25 23:43:25 joerg Exp $
+$NetBSD: distinfo,v 1.12 2013/08/27 15:51:26 joerg Exp $
 
 SHA1 (merkaartor-0.17.2.tar.bz2) = f789141db427bf25bb3b61801fefc98ab0430012
 RMD160 (merkaartor-0.17.2.tar.bz2) = c5c8944872828ba5ada6003cd5821f33899da3cb
@@ -10,5 +10,6 @@ SHA1 (patch-include_builtin-ggl_ggl_geometries_adapted_tuple.hpp) = 1c6537cf8774
 SHA1 (patch-src_Features_Feature.h) = 1d31698414dd0da41377b776b4d6d40510413a1c
 SHA1 (patch-src_Features_Node.h) = 2a63be6047878b8fd31a88ef039e9ca4d050b715
 SHA1 (patch-src_Features_Way.h) = 17de3e44e62124e4244a0b33f1a9f6198b89e375
+SHA1 (patch-src_ImportExport_ImportCSVDialog.cpp) = 3f0c0a03ef46be0bc9d20dfeccee3cd994ed2f57
 SHA1 (patch-src_Maps_Coord.h) = 774d95301d20e11a13c60cfefac6a424fbdfa77d
 SHA1 (patch-src_Maps_Projection.h) = f75dabd1ca64844aaab0255fa3b61d7143bece73
