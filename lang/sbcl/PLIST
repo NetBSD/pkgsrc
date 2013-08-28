@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/12/08 00:40:00 asau Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/08/28 17:43:51 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/Makefile
@@ -123,6 +123,14 @@ lib/sbcl/sb-cover/test-passed
 lib/sbcl/sb-cover/tests.fasl
 lib/sbcl/sb-cover/tests.lisp
 lib/sbcl/sb-executable/sb-executable.fasl
+lib/sbcl/sb-gmp/Makefile
+lib/sbcl/sb-gmp/README.md
+lib/sbcl/sb-gmp/gmp.fasl
+lib/sbcl/sb-gmp/gmp.lisp
+lib/sbcl/sb-gmp/sb-gmp.asd
+lib/sbcl/sb-gmp/sb-gmp.fasl
+lib/sbcl/sb-gmp/test-passed
+lib/sbcl/sb-gmp/tests.lisp
 lib/sbcl/sb-grovel/.cvsignore
 lib/sbcl/sb-grovel/Makefile
 lib/sbcl/sb-grovel/def-to-lisp.fasl
