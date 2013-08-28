@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3118 2013/08/28 04:48:46 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.3119 2013/08/28 11:45:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dcc to 1.3.123nb2 [shattered 2013-08-27]
 	Updated lang/python26 to 2.6.8nb4 [tez 2013-08-27]
 	Updated devel/mr to 1.20130826 [schmonz 2013-08-28]
+	Added sysutils/bsdinstall version 20130828 [jperkin 2013-08-28]
