@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.197 2013/08/09 12:57:38 jperkin Exp $
+# $NetBSD: bootstrap,v 1.198 2013/08/28 12:05:10 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -473,6 +473,7 @@ root_user=root
 bmakexenv=
 bmakexargs=
 need_extras=no
+use_bsdinstall=
 case "$opsys" in
 AIX)
 	root_group=system
@@ -738,6 +739,7 @@ QNX)
 SunOS)
 	root_group=root
 	need_bsd_install=yes
+	use_bsdinstall=yes
 	if [ -x "/usr/gnu/bin/awk" ]; then
 		need_awk=no
 	else
@@ -989,7 +991,11 @@ mkdir_p_early ${wrkdir}
 
 if [ "$need_bsd_install" = "yes" ]; then
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
-	echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${TARGET_MKCONF}
+	if [ "$use_bsdinstall" = "yes" ]; then
+		echo "TOOLS_PLATFORM.install?=	$prefix/bin/bsdinstall" >> ${TARGET_MKCONF}
+	else
+		echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${TARGET_MKCONF}
+	fi
 	echo "TOOLS_PLATFORM.install?=	$wrkdir/bin/install-sh" >> ${BOOTSTRAP_MKCONF}
 fi
 
@@ -1174,7 +1180,13 @@ build_package() {
 echo_msg "Installing packages"
 build_package "pkgtools/bootstrap-mk-files"
 case "$need_bsd_install" in
-yes)	build_package "sysutils/install-sh";;
+yes)
+	if [ "$use_bsdinstall" = "yes" ]; then
+		build_package "sysutils/bsdinstall"
+	else
+		build_package "sysutils/install-sh"
+	fi
+	;;
 esac
 case "$need_ksh" in
 yes)	build_package "shells/pdksh";;
