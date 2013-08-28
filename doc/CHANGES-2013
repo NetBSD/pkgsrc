@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3120 2013/08/28 12:35:06 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3121 2013/08/28 15:53:48 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4499,3 +4499,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mr to 1.20130826 [schmonz 2013-08-28]
 	Added sysutils/bsdinstall version 20130828 [jperkin 2013-08-28]
 	Updated devel/libev to 4.15 [fhajny 2013-08-28]
+	Updated www/py-werkzeug to 0.9.4 [kleink 2013-08-28]
+	Updated www/py-werkzeug-docs to 0.9.4 [kleink 2013-08-28]
