@@ -1,0 +1,2 @@
+This package provides the BSD install(1) program for compatability to
+systems which do not have a native version.
