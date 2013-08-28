@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3121 2013/08/28 15:53:48 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.3122 2013/08/28 17:44:16 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4501,3 +4501,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libev to 4.15 [fhajny 2013-08-28]
 	Updated www/py-werkzeug to 0.9.4 [kleink 2013-08-28]
 	Updated www/py-werkzeug-docs to 0.9.4 [kleink 2013-08-28]
+	Updated lang/sbcl to 1.1.11 [asau 2013-08-28]
