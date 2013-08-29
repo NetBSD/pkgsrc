@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2013/08/29 14:14:34 martin Exp $
+@comment $NetBSD: PLIST,v 1.70 2013/08/29 18:48:25 martin Exp $
 bin/firefox
 include/firefox/AbstractMediaDecoder.h
 include/firefox/AccEvent.h
@@ -1303,7 +1303,7 @@ include/firefox/mozilla/storage/StatementCache.h
 include/firefox/mozilla/storage/Variant.h
 include/firefox/mozilla/storage/Variant_inl.h
 include/firefox/mozilla/threads/nsThreadIDs.h
-include/firefox/mozilla/throw_gcc.h
+${PLIST.throwwrapper}include/firefox/mozilla/throw_gcc.h
 include/firefox/mozilla/unused.h
 include/firefox/mozpngconf.h
 include/firefox/necko-config.h

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.12 2013/08/29 14:14:34 martin Exp $
+# $NetBSD: mozilla-common.mk,v 1.13 2013/08/29 18:48:25 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -98,10 +98,17 @@ SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
-PLIST_VARS+=	sps vorbis tremor glskia
+PLIST_VARS+=	sps vorbis tremor glskia throwwrapper
 
 .if ${MACHINE_ENDIAN} == "1234"
 PLIST.glskia=	yes
+.endif
+
+.if ${MACHINE_ARCH} != "sparc64"
+# For some reasons the configure test for GCC bug 26905 still triggers on
+# sparc64, which makes mozilla skip the installation of a few wrapper headers.
+# Other archs end up with one additional file in the SDK headers
+PLIST.throwwrapper=	yes
 .endif
 
 .if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
