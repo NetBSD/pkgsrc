@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2013/07/07 18:13:56 adam Exp $
+$NetBSD: distinfo,v 1.88 2013/08/29 13:00:41 joerg Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 745f9ebf091696c0d5403ce691dc28c039d77b9e
 RMD160 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 1e7bb099d5d1cda0b663cebe207c846c8d04750d
@@ -60,6 +60,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_RefCountedLeakCounter.
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_StringImpl.h) = d5460bede6b3662df4d9dbec5826db98c6ef4f61
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_ThreadSafeRefCounted.h) = 2d3176beb56697d033387ab10729cfb6681d01c7
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = fa7519ef6ac04cd13be085783f663c329e4a14be
+SHA1 (patch-src_3rdparty_webkit_Source_WebCore_dom_Element.cpp) = 90fd6a884f9fd058210c3011bea2ce695011d2e3
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_features.pri) = d0053dd2732604908fcec294b2a833aeb6d93f40
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 0377066bd28d5eae02e8fcf200da4360c286ad84
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_Timer.cpp) = 6327c7ea52b5a91adc5b96319c29c8ffd994524e
@@ -73,3 +74,5 @@ SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2b282caa298508dc3e9dd8566
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
+SHA1 (patch-src_plugins_accessible_widgets_itemviews.cpp) = 1456fbaacef33f3b2422158d758d02990845048a
+SHA1 (patch-src_scripttools_debugging_qscriptdebuggerconsole.cpp) = eea948f07fd9e595c7813aa485e985407dfcfbf9
