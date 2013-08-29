@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2013/05/09 13:59:35 joerg Exp $
+$NetBSD: distinfo,v 1.15 2013/08/29 12:57:35 joerg Exp $
 
 SHA1 (thunderbird-10.0.12esr.source.tar.bz2) = 260a3baca5eaa80bcc075b08c9f12016d61877de
 RMD160 (thunderbird-10.0.12esr.source.tar.bz2) = 63586fc3460f4522900b84f58805c3a3a9cfe7a6
@@ -75,6 +75,7 @@ SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_ipc__channel__posix.cc) = 515
 SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_ipc__message__utils.h) = f55a0be54139ed8263aefcf1bd43e32cb93c7650
 SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_transport__dib.h) = c451010a3d2c638e70e1fcec876b20eea28cf2cf
 SHA1 (patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp) = 3b4b7d9feacd477e89bfbb2bcebb3becfb8b1827
+SHA1 (patch-mozilla_ipc_ipdl_ipdl_lower.py) = f22685f06447b0160423e8b6dd7cf452cbf1aa21
 SHA1 (patch-mozilla_js_src_build_autoconf_gcc-pr49911.m4) = 8aa13cbba888f0c077137686a7c9c791de58d800
 SHA1 (patch-mozilla_js_src_jscpucfg.h) = 88a31fd62eda3bd7f95cae076a83b418e97e8412
 SHA1 (patch-mozilla_js_src_methodjit_MethodJIT.cpp) = c27d2e4105ea47a0fe2bec42ed2e9192db925c8c
@@ -88,6 +89,7 @@ SHA1 (patch-mozilla_nsprpub_pr_src_md_unix_uxrng.c) = 2f2781c848e12a21e48c9924de
 SHA1 (patch-mozilla_nsprpub_pr_src_pthreads_ptio.c) = 427757f6f67c900b748c8a9f64136006e9f36786
 SHA1 (patch-mozilla_nsprpub_pr_src_pthreads_ptsynch.c) = 211775055f7693814f1431f1c2eab623adeda8c2
 SHA1 (patch-mozilla_xpcom_Makefile.in) = 9428dfcb63383b400a612109688de83666307ccd
+SHA1 (patch-mozilla_xpcom_base_nsTraceRefcntImpl.cpp) = e7d57ee7a47bb0c65a37d7d3d07728381849b878
 SHA1 (patch-mozilla_xpcom_idl-parser_header.py) = 20576ed95f52b4511e1c44bce7d682574b85f630
 SHA1 (patch-mozilla_xulrunner_app_Makefile.in) = b2273dad40cb3b6b492836cdbb7ec2ef7ef3aeac
 SHA1 (patch-mp) = c9bafe6774355e15902eca88eb1356bb1b1be0db
