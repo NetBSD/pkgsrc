@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/08/29 12:58:49 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2013/08/29 13:31:15 joerg Exp $
 #
 
 DISTNAME=	Text-RecordParser-v1.6.3
@@ -38,6 +38,10 @@ USE_TOOLS+=perl
 REPLACE_PERL+=		bin/tab2graph
 REPLACE_PERL+=		bin/tablify
 REPLACE_PERL+=		bin/tabmerge
+
+# File is unwriteable but is generated during the build.
+post-extract:
+	${RM} -f ${WRKSRC}/README.md
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
