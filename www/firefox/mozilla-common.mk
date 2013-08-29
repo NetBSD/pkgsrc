@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.11 2013/08/25 01:41:08 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.12 2013/08/29 14:14:34 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -13,6 +13,7 @@ USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/endian.mk"
 # gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
 # but gcc 4.5.4 of NetBSD 7 generates working binary.
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
@@ -97,7 +98,11 @@ SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
-PLIST_VARS+=	sps vorbis tremor
+PLIST_VARS+=	sps vorbis tremor glskia
+
+.if ${MACHINE_ENDIAN} == "1234"
+PLIST.glskia=	yes
+.endif
 
 .if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
 PLIST.sps=	yes
