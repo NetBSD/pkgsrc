@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.564 2013/08/24 17:23:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.565 2013/08/29 08:11:29 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -166,6 +166,7 @@ SUBDIR+=	tex-acromake-doc
 SUBDIR+=	tex-advdate
 SUBDIR+=	tex-advdate-doc
 SUBDIR+=	tex-algorithm2e
+SUBDIR+=	tex-algorithm2e-doc
 SUBDIR+=	tex-algorithmicx
 SUBDIR+=	tex-algorithmicx-doc
 SUBDIR+=	tex-algorithms
