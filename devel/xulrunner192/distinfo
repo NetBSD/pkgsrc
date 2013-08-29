@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2013/01/09 10:34:03 martin Exp $
+$NetBSD: distinfo,v 1.14 2013/08/29 12:56:49 joerg Exp $
 
 SHA1 (firefox-3.6.28.source.tar.bz2) = adeaa9bdd367878c5b522766e681798178e31577
 RMD160 (firefox-3.6.28.source.tar.bz2) = 87cfca8e3f1df30e06eccffbf994825904eeedbc
@@ -78,7 +78,7 @@ SHA1 (patch-xn) = b0d0943b2bc39d8395055550c0fedfa447a5de01
 SHA1 (patch-xo) = 437cbc7e0ed8777ae2313165f8754759d8eee01d
 SHA1 (patch-xpcom_base_nsAutoRef.h) = 763482028ff87b25fbb3e2c4b43fd29f7a5c769d
 SHA1 (patch-xpcom_base_nsDebugImpl.cpp) = 9dfe9cbd1f6a91ec38d8a4b742f0afe72c7ac7a7
-SHA1 (patch-xpcom_base_nsTraceRefcntImpl.cpp) = 283391c1bdd1933996f8cbf4957f0ce2a911db65
+SHA1 (patch-xpcom_base_nsTraceRefcntImpl.cpp) = 11c564be19018dac54e3ad7c6b39faa2355f8815
 SHA1 (patch-xpcom_glue_nsBaseHashtable.h) = 22846bf7777fc45f2eeab43983d73e4f56d32a2b
 SHA1 (patch-xpcom_glue_nsClassHashtable.h) = b14852d07b8b84131509581d22af916e1139253c
 SHA1 (patch-xpcom_glue_nsEnumeratorUtils.cpp) = b9e6e2fc935993bcdb8fe3669f19c4aa6b5e89c3
