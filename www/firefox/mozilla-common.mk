@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.13 2013/08/29 18:48:25 martin Exp $
+# $NetBSD: mozilla-common.mk,v 1.14 2013/08/29 20:49:26 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -100,7 +100,7 @@ SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
 PLIST_VARS+=	sps vorbis tremor glskia throwwrapper
 
-.if ${MACHINE_ENDIAN} == "1234"
+.if ${MACHINE_ENDIAN} == "little"
 PLIST.glskia=	yes
 .endif
 
