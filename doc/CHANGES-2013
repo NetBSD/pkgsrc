@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3123 2013/08/29 03:01:15 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.3124 2013/08/29 23:15:46 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4503,3 +4503,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-werkzeug-docs to 0.9.4 [kleink 2013-08-28]
 	Updated lang/sbcl to 1.1.11 [asau 2013-08-28]
 	Updated comms/asterisk18 to 1.8.23.1 [jnemeth 2013-08-29]
+	Updated comms/asterisk10 to 10.12.3 [jnemeth 2013-08-29]
