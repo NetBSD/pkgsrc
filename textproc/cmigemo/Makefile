@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:42:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/08/30 13:14:23 obache Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -39,8 +39,5 @@ INSTALL_TARGET=	gcc-install
 
 post-extract:
 	${MV} ${WRKDIR}/${JISYOFILE:R} ${WRKSRC}/dict/SKK-JISYO.L
-
-# no need to fetch SKK dictionaly file
-TOOLS_NOOP+=	curl
 
 .include "../../mk/bsd.pkg.mk"
