@@ -1,4 +1,4 @@
-/*	$NetBSD: setmode.c,v 1.1 2013/08/28 11:42:36 jperkin Exp $	*/
+/*	$NetBSD: setmode.c,v 1.2 2013/08/30 16:54:46 joerg Exp $	*/
 /*	NetBSD: setmode.c,v 1.33 2012/03/21 14:28:32 christos Exp	*/
 
 /*
@@ -62,9 +62,11 @@ __RCSID("NetBSD: setmode.c,v 1.33 2012/03/21 14:28:32 christos Exp");
 #include <stdio.h>
 #endif
 
+#if 0
 #ifdef __weak_alias
 __weak_alias(getmode,_getmode)
 __weak_alias(setmode,_setmode)
+#endif
 #endif
 
 #define	SET_LEN	6		/* initial # of bitcmd struct to malloc */
