@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2013/08/01 20:19:55 shattered Exp $
+$NetBSD: patch-aa,v 1.6 2013/08/30 16:53:45 joerg Exp $
 
 --- Makefile.orig	2011-12-05 08:46:23.000000000 +0000
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.5 2013/08/01 20:19:55 shattered Exp $
  #CFLAGS ?= -Wall -g -O2 -Werror $(CPU_OPTS)
  #CFLAGS=-Wall -g -O2 -Wundef -Wshadow -Wsign-compare -I.
 -CFLAGS=-Wall -g -I. -O2 -Werror
-+CFLAGS?=-Wall -g -I. -O2 -Werror
++#CFLAGS=-Wall -g -I. -O2 -Werror
  
  # OLE decoding is still considered to be 'beta' mode - so it 
  #	disabled in the stable release of ripMIME for now

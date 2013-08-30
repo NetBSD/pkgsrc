@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2013/07/21 10:58:49 shattered Exp $
+$NetBSD: patch-ab,v 1.2 2013/08/30 16:53:45 joerg Exp $
 
 Avoid compiler warning.
 
@@ -9,7 +9,7 @@ Avoid compiler warning.
  			for (j = current_byte -31; j <=current_byte; j++)
  			{
 -				if (isalnum(*(sector +j))) printf("%c",*(sector+j));
-+				if (isalnum((int)*(sector +j))) printf("%c",*(sector+j));
++				if (isalnum((unsigned char)*(sector +j))) printf("%c",*(sector+j));
  				else printf(".");
  			}
  			printf("\n");
