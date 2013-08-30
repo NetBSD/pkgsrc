@@ -1,4 +1,7 @@
-$NetBSD: patch-src_filechooser.cpp,v 1.1 2013/06/13 21:41:48 joerg Exp $
+$NetBSD: patch-src_filechooser.cpp,v 1.2 2013/08/30 08:14:42 obache Exp $
+
+The key argument of std::map must not be const as it can't be assigned
+internally otherwise.
 
 --- src/filechooser.cpp.orig	2013-06-13 20:21:52.000000000 +0000
 +++ src/filechooser.cpp
