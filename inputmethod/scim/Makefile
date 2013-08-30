@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/07/19 10:08:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2013/08/30 16:58:39 joerg Exp $
 #
 
 DISTNAME=		scim-1.4.14
@@ -45,6 +45,8 @@ PTHREAD_AUTO_VARS=	yes
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r=no
 LDFLAGS.SunOS+=		-lsocket -lnsl
+.elif ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r=no
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
