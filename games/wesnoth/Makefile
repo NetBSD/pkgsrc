@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2013/06/06 12:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2013/08/30 08:14:42 obache Exp $
 
-DISTNAME=	wesnoth-1.10.5
-PKGREVISION=	7
+DISTNAME=	wesnoth-1.10.6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		aclocal autoconf autoheader automake pkg-config
+USE_TOOLS+=		pkg-config
 USE_TOOLS+=		perl:run msgfmt
 
 UNLIMIT_RESOURCES+=	datasize
@@ -61,9 +60,8 @@ CXXFLAGS+=	-std=c++11
 
 PLIST_VARS+=		icons
 
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 PLIST.icons=		yes
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .endif
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
