@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.sys.mk,v 1.5 2013/07/03 11:34:27 jperkin Exp $
+#	$NetBSD: SunOS.sys.mk,v 1.6 2013/08/30 14:47:29 jperkin Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
@@ -65,7 +65,7 @@ LINK.F?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
 COMPILE.r?=	${FC} ${FFLAGS} ${RFLAGS} -c
 LINK.r?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
 
-INSTALL?=	${PREFIX}/bin/install-sh
+INSTALL?=	${PREFIX}/bin/bsdinstall
 
 LEX?=		lex
 LFLAGS?=
