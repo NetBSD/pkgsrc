@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/15 13:16:35 brook Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/30 12:56:30 joerg Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -10,6 +10,9 @@ LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	combinat
 R_PKGVER=	0.0-8
+
+post-extract:
+	echo 'exportPattern("^[^\\.]")' > ${WRKSRC}/NAMESPACE
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
