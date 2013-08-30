@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/08/26 00:23:04 wen Exp $
+# $NetBSD: Makefile,v 1.8 2013/08/30 15:49:48 schmonz Exp $
 #
 
 DISTNAME=		Text-Markdown-Discount-0.10
@@ -16,6 +16,9 @@ PERL5_PACKLIST=		auto/Text/Markdown/Discount/.packlist
 USE_LANGUAGES=		c
 
 MAKE_JOBS_SAFE=		no
+
+post-extract:
+	cd ${WRKSRC} && mv discount/VERSION discount/MYVERSION
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

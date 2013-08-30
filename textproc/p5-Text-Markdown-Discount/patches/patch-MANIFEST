@@ -1,0 +1,15 @@
+$NetBSD: patch-MANIFEST,v 1.1 2013/08/30 15:49:49 schmonz Exp $
+
+Fix build on case-insensitive filesystems (e.g., Darwin's).
+
+--- MANIFEST.orig	2013-08-09 20:07:19.000000000 +0000
++++ MANIFEST
+@@ -98,7 +98,7 @@ discount/toc.c
+ discount/tools/checkbits.sh
+ discount/tools/cols.c
+ discount/tools/echo.c
+-discount/VERSION
++discount/MYVERSION
+ discount/version.c.in
+ discount/xml.c
+ discount/xmlpage.c
