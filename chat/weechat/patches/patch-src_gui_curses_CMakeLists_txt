@@ -1,8 +1,8 @@
-$NetBSD: patch-src_gui_curses_CMakeLists_txt,v 1.1 2013/06/09 21:19:02 tonio Exp $
+$NetBSD: patch-src_gui_curses_CMakeLists_txt,v 1.2 2013/08/30 16:56:56 joerg Exp $
 
 Test for ncursesw
 
---- src/gui/curses/CMakeLists.txt.orig	2013-06-09 20:57:43.000000000 +0000
+--- src/gui/curses/CMakeLists.txt.orig	2013-05-20 08:06:14.000000000 +0000
 +++ src/gui/curses/CMakeLists.txt
 @@ -34,9 +34,11 @@ SET(EXECUTABLE weechat-curses)
  
@@ -17,3 +17,14 @@ Test for ncursesw
    ELSE(NCURSESW_HEADERS)
      CHECK_INCLUDE_FILES(ncurses.h NCURSES_HEADERS)
      IF(NCURSES_HEADERS)
+@@ -57,6 +59,10 @@ IF(${CMAKE_SYSTEM_NAME} STREQUAL "OpenBS
+   LIST(APPEND EXTRA_LIBS "pthread")
+ ENDIF(${CMAKE_SYSTEM_NAME} STREQUAL "OpenBSD")
+ 
++IF(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
++  LIST(APPEND EXTRA_LIBS "curses")
++ENDIF(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
++
+ IF(ICONV_LIBRARY)
+   LIST(APPEND EXTRA_LIBS ${ICONV_LIBRARY})
+ ENDIF(ICONV_LIBRARY)
