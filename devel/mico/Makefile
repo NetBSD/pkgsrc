@@ -1,4 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:17:29 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/08/30 16:58:14 joerg Exp $
+#
+
+#
+# If you get an assertion during the build, make sure that the host name
+# can be resolved via /etc/hosts or DNS.
 #
 
 DISTNAME=		mico-2.3.12
