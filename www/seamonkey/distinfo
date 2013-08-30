@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.101 2013/08/11 03:18:46 ryoon Exp $
+$NetBSD: distinfo,v 1.102 2013/08/30 13:00:37 joerg Exp $
 
 SHA1 (enigmail-1.5.2.tar.gz) = 6f9d3be09e3858cfa65795389aa4d79ec2d1a4a9
 RMD160 (enigmail-1.5.2.tar.gz) = 5d638f889d7e0e51c832b3776372b98316d6bd22
@@ -7,7 +7,6 @@ SHA1 (seamonkey-2.20.source.tar.bz2) = 804a86ee3ffcb8eb4d53b0fe16e46d4a5bd14902
 RMD160 (seamonkey-2.20.source.tar.bz2) = 713398932d444f5bb579c889f9a5368c01e01e7c
 Size (seamonkey-2.20.source.tar.bz2) = 139969292 bytes
 SHA1 (patch-aa) = 9bf59ef7aa3dca59f29f02f9467c20806cfe0e76
-SHA1 (patch-aa-toplevel) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-ak) = a36dd36a037a76a40955316200b1f4603b9ed8e9
 SHA1 (patch-al) = 06ddb5f0f55ca02bee0d55ddb5316ddd9099f2d9
 SHA1 (patch-ao) = 330d7ed17b5cee49c408c9bc48edc3cedeb04061
@@ -20,10 +19,13 @@ SHA1 (patch-config_baseconfig.mk) = 3fdb27d227ef0d858b56023b9c709117d5cc5e00
 SHA1 (patch-ldap_sdks_c-sdk_build.mk) = 541604f0f63f5c1b3ce5509260517f68f417eb73
 SHA1 (patch-ldap_sdks_c-sdk_ldap_include_portable.h) = 4ce9e1a0e8f0d05367243e8d2b5118606a35da94
 SHA1 (patch-mail_app_Makefile.in) = d66563480442a43e70715ecabf54ffeda5e5cf79
+SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = fda6823079ef3345cc0c4d1724c71e9735184498
 SHA1 (patch-mb) = ee437f869fa3d5cfd3e0056e97625adb8ea526c8
 SHA1 (patch-mozilla_browser_installer_package-manifest.in) = a61eec2dc12b341bfd84bdda0d70842a627e9c9a
 SHA1 (patch-mozilla_build_autoconf_nss.m4) = 3b05127e72a76ac2f87c8362cbde13ce76485a19
 SHA1 (patch-mozilla_config_baseconfig.mk) = d6f27cdc853e6d026c151bf40cb898428c37455c
+SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
+SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
 SHA1 (patch-mozilla_config_system-headers) = f4ddd48a63041864a9d0c0ad7c573a5c4f49681e
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 400a5af9988d4392d92e493c73bbe61cd1915edb
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = 14038ce0ee2b38db6c7952056a97a65839a2c1a9
@@ -134,6 +136,7 @@ SHA1 (patch-mozilla_netwerk_sctp_src_user__socket.c) = a82b0f6d0d4717bfa593e7f3c
 SHA1 (patch-mozilla_netwerk_sctp_src_user__socketvar.h) = 6d34abb3d8ecc5c8b36bfa594dc11a99facfa13b
 SHA1 (patch-mozilla_security_manager_ssl_src_nsNSSComponent.cpp) = fb67e2a387031f0849b62aa0e660396b65335bb1
 SHA1 (patch-mozilla_toolkit_library_Makefile.in) = e7915dacee2a0bd3983cafd421ffe55ed54a5874
+SHA1 (patch-mozilla_toolkit_mozapps_update_updater_updater.cpp) = 2d4769262671a41950d872f46806374efbbccb37
 SHA1 (patch-mozilla_toolkit_toolkit.mozbuild) = d0510df2e3fb3a7c5dd713b36351e72961788345
 SHA1 (patch-mozilla_toolkit_xre_nsEmbedFunctions.cpp) = 70030e59b2ed09b9bc9827d35e17b12be7f0cd71
 SHA1 (patch-mozilla_xpcom_base_nsStackWalk.cpp) = 6946cbbd8389e35a13ad457b8cbb4da91e0d8925
