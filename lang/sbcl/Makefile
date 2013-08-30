@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/08/28 17:43:51 asau Exp $
+# $NetBSD: Makefile,v 1.50 2013/08/30 22:37:22 joerg Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.1.11
@@ -66,6 +66,12 @@ SUBST_STAGE.fix-gtar=		pre-configure
 SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
 SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
 SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# Missing support for .end
+_WRAP_EXTRA_ARGS.CC+=	-no-integrated-as
+.endif
 
 do-build:
 	cd ${WRKSRC} && ${SH} make.sh --prefix=${PREFIX} --xc-host=${SBCL_BOOT_SYSTEM:Q}
