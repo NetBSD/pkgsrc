@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/05/31 12:42:50 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/08/30 22:41:45 joerg Exp $
 
 DISTNAME=	SVN-Web-0.53
 PKGNAME=	p5-${DISTNAME}
@@ -41,7 +41,7 @@ DEPENDS+=	p5-Template-Plugin-Clickable-[0-9]*:../../www/p5-Template-Plugin-Click
 DEPENDS+=	p5-Template-Plugin-Clickable-Email-[0-9]*:../../www/p5-Template-Plugin-Clickable-Email
 DEPENDS+=	p5-Template-Plugin-Subst-[0-9]*:../../www/p5-Template-Plugin-Subst
 
-MAKE_PARAMS+=		--skip_questions
+MAKE_PARAMS+=		--skip_questions -- "--installdirs vendor"
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/SVN/Web/.packlist
 
