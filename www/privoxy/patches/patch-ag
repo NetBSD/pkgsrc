@@ -1,11 +1,12 @@
-$NetBSD: patch-ag,v 1.4 2011/04/26 21:23:26 mjl Exp $
+$NetBSD: patch-ag,v 1.5 2013/08/30 16:56:09 joerg Exp $
 
---- jbsockets.c.orig	2010-07-26 13:30:09.000000000 +0200
-+++ jbsockets.c	2011-04-26 19:47:46.000000000 +0200
-@@ -1112,6 +1112,13 @@
+--- jbsockets.c.orig	2011-12-10 17:26:30.000000000 +0000
++++ jbsockets.c
+@@ -1240,7 +1240,14 @@ unsigned long resolve_hostname_to_ip(con
  {
     struct sockaddr_in inaddr;
     struct hostent *hostp;
+-#if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS) || defined(HAVE_GETHOSTBYNAME_R_3_ARGS)
 +#if defined(__NetBSD__)
 +   struct hostent result;
 +   struct sockaddr_in raddr;
@@ -13,10 +14,20 @@ $NetBSD: patch-ag,v 1.4 2011/04/26 21:23:26 mjl Exp $
 +
 +   memset(&result, '\0', sizeof(struct hostent));
 +#endif
- #if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS) || defined(HAVE_GETHOSTBYNAME_R_3_ARGS)
++#if (defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS) || defined(HAVE_GETHOSTBYNAME_R_3_ARGS)) && !defined(__NetBSD__)
     struct hostent result;
  #if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS)
-@@ -1163,6 +1170,39 @@
+    char hbuf[HOSTENT_BUFFER_SIZE];
+@@ -1260,7 +1267,7 @@ unsigned long resolve_hostname_to_ip(con
+    if ((inaddr.sin_addr.s_addr = inet_addr(host)) == -1)
+    {
+       unsigned int dns_retries = 0;
+-#if defined(HAVE_GETHOSTBYNAME_R_6_ARGS)
++#if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) && !defined(__NetBSD__)
+       while (gethostbyname_r(host, &result, hbuf,
+                 HOSTENT_BUFFER_SIZE, &hostp, &thd_err)
+              && (thd_err == TRY_AGAIN) && (dns_retries++ < MAX_DNS_RETRIES))
+@@ -1291,6 +1298,39 @@ unsigned long resolve_hostname_to_ip(con
        {
           hostp = NULL;
        }
