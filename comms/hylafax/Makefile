@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2013/04/24 10:06:47 sbd Exp $
+# $NetBSD: Makefile,v 1.69 2013/08/30 16:57:35 joerg Exp $
 
 VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	comms
 MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
 MASTER_SITES_RELEASE=	ftp://ftp.hylafax.org/source/
@@ -66,6 +66,7 @@ CONFIGURE_ENV+=		MACHDEPLIBS=-lrt
 BUILDLINK_API_DEPENDS.libtiff+=	tiff>=4.0.0
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
