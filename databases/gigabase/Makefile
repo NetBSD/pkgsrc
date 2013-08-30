@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 21:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/30 22:33:46 joerg Exp $
 #
 
 DISTNAME=	gigabase-3.82
@@ -18,6 +18,12 @@ USE_TOOLS+=		gmake
 PTHREAD_AUTO_VARS=	yes
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	ac_cv_func_gethostbyname_r=no
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
