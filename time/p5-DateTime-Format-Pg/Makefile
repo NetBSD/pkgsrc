@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:42:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/08/30 14:21:55 wen Exp $
 
-DISTNAME=	DateTime-Format-Pg-0.16005
+DISTNAME=	DateTime-Format-Pg-0.16009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
@@ -16,6 +15,8 @@ DEPENDS+=	p5-DateTime-Format-Builder>=0.72:../../time/p5-DateTime-Format-Builder
 DEPENDS+=	p5-DateTime-TimeZone>=0.05:../../time/p5-DateTime-TimeZone
 
 PERL5_PACKLIST=		auto/DateTime/Format/Pg/.packlist
+
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
