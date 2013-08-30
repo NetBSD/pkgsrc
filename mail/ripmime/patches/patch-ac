@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2013/07/21 10:58:49 shattered Exp $
+$NetBSD: patch-ac,v 1.2 2013/08/30 16:53:45 joerg Exp $
 
 Avoid compiler warning.
 
@@ -10,8 +10,8 @@ Avoid compiler warning.
  	{
 -		c1 = tolower(*ds1);
 -		c2 = tolower(*ds2);
-+		c1 = tolower((int)*ds1);
-+		c2 = tolower((int)*ds2);
++		c1 = tolower((unsigned char)*ds1);
++		c2 = tolower((unsigned char)*ds2);
  
  		if (c1 == c2)
  		{
