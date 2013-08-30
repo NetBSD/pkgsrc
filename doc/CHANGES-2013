@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3132 2013/08/30 08:27:15 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3133 2013/08/30 08:31:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4512,3 +4512,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/wesnoth to 1.10.6 [obache 2013-08-30]
 	Updated time/p5-DateTime-Format-Flexible to 0.25 [wen 2013-08-30]
 	Updated time/p5-DateTime-Format-HTTP to 0.40 [wen 2013-08-30]
+	Updated time/p5-DateTime-Format-ISO8601 to 0.08 [wen 2013-08-30]
