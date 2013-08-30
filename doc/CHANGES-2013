@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3148 2013/08/30 15:31:20 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3149 2013/08/30 15:43:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4528,3 +4528,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-MooseX-Types-DateTime-ButMaintained to 0.16 [wen 2013-08-30]
 	Updated time/p5-Rose-DateTime to 0.538 [wen 2013-08-30]
 	Updated time/p5-Data-ICal to 0.21 [wen 2013-08-30]
+	Updated www/contao211-translations to 201308270 [taca 2013-08-30]
