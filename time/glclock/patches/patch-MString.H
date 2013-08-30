@@ -1,6 +1,6 @@
-$NetBSD: patch-MString.H,v 1.1 2011/11/25 22:19:56 joerg Exp $
+$NetBSD: patch-MString.H,v 1.2 2013/08/30 22:41:16 joerg Exp $
 
---- MString.H.orig	2011-11-25 18:07:40.000000000 +0000
+--- MString.H.orig	2000-06-22 14:58:26.000000000 +0000
 +++ MString.H
 @@ -66,7 +66,7 @@
  #ifndef ___STRING_H___
@@ -19,3 +19,22 @@ $NetBSD: patch-MString.H,v 1.1 2011/11/25 22:19:56 joerg Exp $
  
  //#define STRING_DEBUG
  
+@@ -307,15 +308,15 @@ class String
+ 
+     // m 文字目から n 文字
+     String& Mid(int m, int n = 1) ;
+-    friend String Mid(String s, int m, int n = 1) ;
++    friend String Mid(String s, int m, int n) ;
+ 
+     // 左から n 文字
+     String& Left(int n = 1) ;
+-    friend String Left(const String& s, int n = 1) ;
++    friend String Left(const String& s, int n) ;
+ 
+     // 右から n 文字
+     String& Right(int n = 1) ;
+-    friend String Right(const String& s, int n = 1) ;
++    friend String Right(const String& s, int n) ;
+ 
+ 	String FileDirectory() const ;
+ 	String FileNamePart() const ;
