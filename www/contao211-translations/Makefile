@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/08/30 15:43:05 taca Exp $
+# $NetBSD: Makefile,v 1.30 2013/08/30 15:46:25 taca Exp $
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
@@ -6,6 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	# defined for each distfiles
 DISTFILES=	${CT_DISTFILES}
 EXTRACT_DIR=	${WRKSRC}
+DIST_SUBDIR?=	
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.contao.org/download.html
