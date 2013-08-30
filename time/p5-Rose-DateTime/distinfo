@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/01/26 19:18:26 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2013/08/30 14:57:08 wen Exp $
 
-SHA1 (Rose-DateTime-0.537.tar.gz) = a425b765feed81316ec8b26185158876eee611fc
-RMD160 (Rose-DateTime-0.537.tar.gz) = 3da1af121043cf9042b9721f69354526b2c8dda2
-Size (Rose-DateTime-0.537.tar.gz) = 12466 bytes
+SHA1 (Rose-DateTime-0.538.tar.gz) = 80c8b93035cb563dc8617e08aa331f9bc207b297
+RMD160 (Rose-DateTime-0.538.tar.gz) = a9a077feeb9b8297d6be7f73553288397cf2898e
+Size (Rose-DateTime-0.538.tar.gz) = 12949 bytes
