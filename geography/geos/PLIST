@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/08/18 11:06:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/08/30 16:37:38 gdt Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/Angle.h
@@ -316,6 +316,7 @@ include/geos/operation/valid/RepeatedPointTester.h
 include/geos/operation/valid/SimpleNestedRingTester.h
 include/geos/operation/valid/SweeplineNestedRingTester.h
 include/geos/operation/valid/TopologyValidationError.h
+include/geos/platform.h
 include/geos/planargraph.h
 include/geos/planargraph/DirectedEdge.h
 include/geos/planargraph/DirectedEdgeStar.h
@@ -374,4 +375,3 @@ include/geos/version.h
 include/geos_c.h
 lib/libgeos.la
 lib/libgeos_c.la
-@pkgdir lib/geos
