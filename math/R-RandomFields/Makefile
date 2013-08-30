@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/01 17:46:27 brook Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/30 13:05:00 joerg Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -6,10 +6,10 @@ MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/RandomFields/
 COMMENT=	Simulation and analysis of random fields
-# LICENSE=	GPL (gnu-gpl-v?)
+LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	RandomFields
-R_PKGVER=	2.0.54
+R_PKGVER=	2.0.66
 
 USE_LANGUAGES+=	c c++ fortran
 
