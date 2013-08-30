@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2013/07/03 18:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2013/08/30 10:16:57 wiz Exp $
 
 DISTNAME=	unrarsrc-5.0.7
 PKGNAME=	${DISTNAME:S/src//}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlab.com/rar/
 
@@ -23,16 +24,20 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
 MAKE_FILE=	makefile
+BUILD_TARGET=	all lib
 MAKEFLAGS+=	CXX=${CXX:Q} CXXFLAGS=${CXXFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 # usually set in Makefile, but overridden by line above
 LDFLAGS+=	-pthread
+CXXFLAGS+=	-fPIC
 
 WRKSRC=		${WRKDIR}/unrar
 
-INSTALLATION_DIRS=	bin share/doc/unrar
+INSTALLATION_DIRS=	bin include lib share/doc/unrar
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unrar ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/dll.hpp ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/libunrar.so ${DESTDIR}${PREFIX}/lib
 	cd ${WRKSRC} && ${INSTALL_DATA} readme.txt license.txt	\
 		${DESTDIR}${PREFIX}/share/doc/unrar
 
