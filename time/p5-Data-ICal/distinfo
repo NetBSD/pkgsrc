@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/21 12:34:14 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2013/08/30 15:30:18 wen Exp $
 
-SHA1 (Data-ICal-0.19.tar.gz) = 5b3b56dc1fcffddb779d6942b22793800fd293a0
-RMD160 (Data-ICal-0.19.tar.gz) = d6254a9a8c2e2fa144a1b59144f0af2a5153cd66
-Size (Data-ICal-0.19.tar.gz) = 117278 bytes
+SHA1 (Data-ICal-0.21.tar.gz) = 8a91f99517440b404692a5a3f7deef91aa46a38c
+RMD160 (Data-ICal-0.21.tar.gz) = dd5f92499121d0812bef4ed2ce954193e5157370
+Size (Data-ICal-0.21.tar.gz) = 117530 bytes
