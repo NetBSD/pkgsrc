@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2013/06/13 21:48:09 joerg Exp $
+$NetBSD: distinfo,v 1.22 2013/08/30 22:40:00 joerg Exp $
 
 SHA1 (xorp-1.6.tar.gz) = 366d32068ed76b8ec69958b601d4fbde61ef4cbb
 RMD160 (xorp-1.6.tar.gz) = 32b3f6d03defc816ed983088e61b5e808de17f98
@@ -18,6 +18,7 @@ SHA1 (patch-fea_data__plane_control__socket_click__socket.hh) = 1e0ea2de08a131a9
 SHA1 (patch-fea_data__plane_control__socket_netlink__socket.hh) = 2b2c774a8e9778d438292850f4a310403d019365
 SHA1 (patch-fea_data__plane_control__socket_routing__socket.hh) = 1acad764066424d1fc457ea7e130636257248530
 SHA1 (patch-fea_data__plane_control__socket_windows__rtm__pipe.hh) = 608b22a8507e2a44c5eea26e964c6201e7240420
+SHA1 (patch-fea_data__plane_io_io__ip__socket.cc) = 4e1cd4341e037e288cb636e8ebfa7483d73c311a
 SHA1 (patch-libfeaclient_ifmgr__atoms.hh) = 702363b8346820d92a84ae9798c06b4e2d5b62f9
 SHA1 (patch-libproto_config__node__id.hh) = 83f79e69c5fff84d01bb6ce2f311dd1802bcc92a
 SHA1 (patch-libproto_packet.hh) = a5e8a8fe88bbaf20ef48cf136770fb5f7325b400
