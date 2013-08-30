@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3139 2013/08/30 13:55:27 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3140 2013/08/30 13:58:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4519,3 +4519,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/R-httpRequest to 0.0.9 [joerg 2013-08-30]
 	Updated math/R-hwde to 0.63 [joerg 2013-08-30]
 	Updated time/p5-Convert-NLS_DATE_FORMAT to 0.05 [wen 2013-08-30]
+	Updated time/p5-DateTime-Format-Oracle to 0.06 [wen 2013-08-30]
