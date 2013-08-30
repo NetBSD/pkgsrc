@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3145 2013/08/30 14:47:41 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3146 2013/08/30 14:52:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4525,3 +4525,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-TimeZone to 1.60 [wen 2013-08-30]
 	Updated time/p5-Olson-Abbreviations to 0.04 [wen 2013-08-30]
 	Updated pkgtools/bootstrap-mk-files to 20130830 [jperkin 2013-08-30]
+	Updated time/p5-MooseX-Types-DateTime-ButMaintained to 0.16 [wen 2013-08-30]
