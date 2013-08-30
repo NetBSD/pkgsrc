@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/06/14 21:28:50 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/30 12:54:06 joerg Exp $
 
 CATEGORIES=		math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=		Functions for Bitwise operations on integer vectors
 LICENSE=		gnu-gpl-v2
 
 R_PKGNAME=		bitops
-R_PKGVER=		1.0-4.1
+R_PKGVER=		1.0-6
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
