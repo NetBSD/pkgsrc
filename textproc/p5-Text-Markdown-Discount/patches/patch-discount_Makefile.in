@@ -1,0 +1,47 @@
+$NetBSD: patch-discount_Makefile.in,v 1.1 2013/08/30 15:49:49 schmonz Exp $
+
+Fix build on case-insensitive filesystems (e.g., Darwin's).
+
+--- discount/Makefile.in.orig	2013-07-09 21:38:57.000000000 +0000
++++ discount/Makefile.in
+@@ -25,7 +25,7 @@ all: $(PGMS) $(SAMPLE_PGMS) $(TESTFRAMEW
+ 
+ install: $(PGMS) $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCDIR)
+ 	@INSTALL_PROGRAM@ $(PGMS) $(DESTDIR)$(BINDIR)
+-	./librarian.sh install libmarkdown VERSION $(DESTDIR)$(LIBDIR)
++	./librarian.sh install libmarkdown MYVERSION $(DESTDIR)$(LIBDIR)
+ 	@INSTALL_DATA@ mkdio.h $(DESTDIR)$(INCDIR)
+ 
+ install.everything: install install.samples install.man
+@@ -63,10 +63,10 @@ $(DESTDIR)$(INCDIR):
+ $(DESTDIR)$(LIBDIR):
+ 	@INSTALL_DIR@ $(DESTDIR)$(LIBDIR)
+ 
+-version.o: version.c VERSION
+-	$(CC) -DVERSION=\"`cat VERSION`\" -c version.c
++version.o: version.c MYVERSION
++	$(CC) -DVERSION=\"`cat MYVERSION`\" -c version.c
+ 
+-VERSION:
++MYVERSION:
+ 	@true
+ 
+ tags.o: tags.c blocktags
+@@ -95,7 +95,7 @@ main.o: main.c mkdio.h config.h
+ 	$(CC) -I. -c main.c
+ 
+ $(MKDLIB): $(OBJS)
+-	./librarian.sh make $(MKDLIB) VERSION $(OBJS)
++	./librarian.sh make $(MKDLIB) MYVERSION $(OBJS)
+ 
+ verify: echo tools/checkbits.sh
+ 	@./echo -n "headers ... "; tools/checkbits.sh && echo "GOOD"
+@@ -112,7 +112,7 @@ echo:   tools/echo.c config.h
+ 	
+ clean:
+ 	rm -f $(PGMS) $(TESTFRAMEWORK) $(SAMPLE_PGMS) *.o
+-	rm -f $(MKDLIB) `./librarian.sh files $(MKDLIB) VERSION`
++	rm -f $(MKDLIB) `./librarian.sh files $(MKDLIB) MYVERSION`
+ 
+ distclean spotless: clean
+ 	rm -f @GENERATED_FILES@ @CONFIGURE_FILES@
