@@ -1,10 +1,14 @@
-# $NetBSD: Makefile.common,v 1.39 2013/08/27 16:08:03 taca Exp $
+# $NetBSD: Makefile.common,v 1.40 2013/08/30 15:46:25 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
 # used by www/contao211-translations/Makefile
 # used by www/contao30/Makefile
 #
+
+# Contao master site (on GitHub).
+CT_MASTER_SITE=	https://download.contao.org/ \
+		https://github.com/contao/core/archive/ \
 
 # current release
 CT211_VERSION=	2.11.12
@@ -26,9 +30,6 @@ CT_VERSION=	${CT310_VERSION}
 .if ${CT_VERS} == "211"
 CT_FILES=	tl_files
 .else
-. if ${CT_VERS} == "30"
-CT_DIST_SUBDIR=	contao-20120109
-. endif
 CT_FILES=	files
 FILESDIR=	${.CURDIR}/../../www/contao/files
 .endif
@@ -37,11 +38,16 @@ CT_VER=		${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1\2/}
 CT_VERBASE=	${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1.\2/}
 CT_PKGVER=	${CT_VERSION:S/.RC/rc/}
 
+DIST_SUBDIR?=	contao
+FETCH_USING?=	curl
+
 FILES_SUBST+=	PAX=${PAX} CT_EGDIR=${CT_EGDIR:Q} CT_WEBDIR=${CT_WEBDIR:Q} \
 		WWWGRP=${APACHE_GROUP:Q} WWWOWN=${APACHE_USER:Q}
 MESSAGE_SUBST+=	CT_VER=${CT_VER}
 PLIST_SUBST+=	CT_DOCDIR=${CT_DOCDIR:Q} CT_EGDIR=${CT_EGDIR:Q} \
 		CT_WEBDIR=${CT_WEBDIR:Q}
+
+WRKSRC?=	${WRKDIR}/core-${CT_VERSION}
 
 PRINT_PLIST_AWK+=	/^${CT_WEBDIR:S|/|\\/|g}/ \
 			{ gsub(/${CT_WEBDIR:S|/|\\/|g}/, "$${CT_WEBDIR}"); \
