@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3141 2013/08/30 14:22:56 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3142 2013/08/30 14:27:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4521,3 +4521,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-Convert-NLS_DATE_FORMAT to 0.05 [wen 2013-08-30]
 	Updated time/p5-DateTime-Format-Oracle to 0.06 [wen 2013-08-30]
 	Updated time/p5-DateTime-Format-Pg to 0.16009 [wen 2013-08-30]
+	Updated time/p5-DateTime-Set to 0.32 [wen 2013-08-30]
