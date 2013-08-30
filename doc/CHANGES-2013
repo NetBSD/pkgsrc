@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3128 2013/08/30 08:07:02 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3129 2013/08/30 08:12:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.28 [wen 2013-08-30]
 	Updated time/p5-DateTime to 1.03 [wen 2013-08-30]
 	Updated time/p5-DateTime-Calendar-Discordian to 1.0 [wen 2013-08-30]
+	Updated time/p5-DateTime-Event-ICal to 0.11 [wen 2013-08-30]
