@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3135 2013/08/30 11:01:22 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3136 2013/08/30 12:55:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-Format-ISO8601 to 0.08 [wen 2013-08-30]
 	Updated archivers/unrar to 5.0.7nb1 [wiz 2013-08-30]
 	Updated audio/faad2 to 2.7nb2 [jperkin 2013-08-30]
+	Updated math/R-bitops to 1.0.6 [joerg 2013-08-30]
