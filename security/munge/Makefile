@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/30 20:16:53 asau Exp $
 
 DISTNAME=	munge-0.5.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://munge.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +19,7 @@ OWN_DIRS=	$(VARBASE)/lib/munge $(VARBASE)/log/munge $(VARBASE)/run/munge
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
