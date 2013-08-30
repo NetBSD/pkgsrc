@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3130 2013/08/30 08:16:41 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3131 2013/08/30 08:22:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4510,3 +4510,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-Calendar-Discordian to 1.0 [wen 2013-08-30]
 	Updated time/p5-DateTime-Event-ICal to 0.11 [wen 2013-08-30]
 	Updated games/wesnoth to 1.10.6 [obache 2013-08-30]
+	Updated time/p5-DateTime-Format-Flexible to 0.25 [wen 2013-08-30]
