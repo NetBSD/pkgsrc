@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/08/27 22:28:05 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/08/30 10:19:37 joerg Exp $
 
 SHA1 (soci-3.2.1.tar.gz) = 38f602ec8d61c4563df8ea4d4ed318dc378e7096
 RMD160 (soci-3.2.1.tar.gz) = 3e98139aa904c62dbf7cc6a1fae5fc73042a6364
@@ -7,3 +7,5 @@ SHA1 (patch-CMakeLists.txt) = c66f0b8fd3ca0fedaebedd6943ae0471f7c6ba35
 SHA1 (patch-backends_postgresql_session.cpp) = d816ffc0c4981ef9b2bdcb28e9e4292b519d3e75
 SHA1 (patch-backends_postgresql_soci-postgresql.h) = 1c01ebdad82d4f641024b8e73a4c853f1c83b134
 SHA1 (patch-backends_sqlite3_soci-sqlite3.h) = 688260116f0e35f37f7de8d61366a3397259dc0c
+SHA1 (patch-core_once-temp-type.cpp) = 5d19aa72accd8d3883915283c1380df2ec4c7e5c
+SHA1 (patch-core_once-temp-type.h) = 5c08a4c0f5bba3729bfec2c6930b6145da5e864d
