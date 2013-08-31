@@ -1,15 +1,15 @@
-$NetBSD: patch-src_tags_gnome-cmd-tags-poppler.cc,v 1.1 2012/12/23 03:23:48 dholland Exp $
+$NetBSD: patch-src_tags_gnome-cmd-tags-poppler.cc,v 1.2 2013/08/31 14:54:47 joerg Exp $
 
-Fix build with recent poppler. From Noud de Brouwer in PR 47096.
+Fix build with recent poppler.
 
---- src/tags/gnome-cmd-tags-poppler.cc~	2011-12-06 19:10:29.000000000 +0000
+--- src/tags/gnome-cmd-tags-poppler.cc.orig	2011-12-06 19:10:29.000000000 +0000
 +++ src/tags/gnome-cmd-tags-poppler.cc
 @@ -41,7 +41,7 @@ using namespace std;
  static regex_t rxDate;
  static gboolean rxDate_OK;
  
 -static void noErrorReporting(int pos, char *msg, va_list args)
-+static void noErrorReporting(void *, ErrorCategory, int pos, char *msg)
++static void noErrorReporting(void *, ErrorCategory, Goffset pos, char *msg)
  {
  }
  #endif
