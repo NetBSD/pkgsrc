@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2013/06/04 22:16:14 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2013/08/31 22:19:32 adam Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -26,6 +26,8 @@ pkgbase := cairo
 .include "../../x11/libXrender/buildlink3.mk"
 .endif
 
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
