@@ -1,18 +1,18 @@
-$NetBSD: patch-ag,v 1.3 2013/03/14 16:33:15 taca Exp $
+$NetBSD: patch-ag,v 1.4 2013/08/31 02:04:54 taca Exp $
 
 Use monospace font for mail body.
 
---- public/assets/themes/default/stylesheets/og/co.css.orig	2013-02-06 11:30:24.000000000 +0000
+--- public/assets/themes/default/stylesheets/og/co.css.orig	2013-07-31 09:38:58.000000000 +0000
 +++ public/assets/themes/default/stylesheets/og/co.css
-@@ -225,6 +225,11 @@
- 
- /* -----  Email  ----- */
+@@ -237,6 +237,11 @@
+   	color: #404566;
+ }
  
 +.email .coViewBody {
 +	font-family: osaka-mono,monospace;
 +	font-size: 12px;
 +}
 +
- .email .coViewHeader {
-   	background: #BABFD9;
-   	border-color: #7882BF;
+ .email .coViewIcon {
+   	background: #DBE0FF;
+   	border-color: #BABFD9;

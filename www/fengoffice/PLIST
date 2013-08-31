@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/04/06 12:09:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/08/31 02:04:54 taca Exp $
 ${FO_DIR}/.htaccess
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
@@ -974,6 +974,8 @@ ${FO_DIR}/language/fr_fr/site_interface.php
 ${FO_DIR}/language/fr_fr/slimey.js
 ${FO_DIR}/language/fr_fr/timezones.php
 ${FO_DIR}/language/fr_fr/upgrade.php
+${FO_DIR}/language/hr_hr.php
+${FO_DIR}/language/hr_hr/config.php
 ${FO_DIR}/language/hu_hu.php
 ${FO_DIR}/language/hu_hu/_config.php
 ${FO_DIR}/language/hu_hu/actions.php
@@ -1242,6 +1244,10 @@ ${FO_DIR}/language/ru_ru/slimey.js
 ${FO_DIR}/language/ru_ru/timezones.php
 ${FO_DIR}/language/ru_ru/unknown-words.txt
 ${FO_DIR}/language/ru_ru/upgrade.php
+${FO_DIR}/language/sl_sl.php
+${FO_DIR}/language/sl_sl/_config.php
+${FO_DIR}/language/sr_sr.php
+${FO_DIR}/language/sr_sr/_config.php
 ${FO_DIR}/language/tr_tr.php
 ${FO_DIR}/language/tr_tr/_config.php
 ${FO_DIR}/language/tr_tr/actions.php
@@ -2272,7 +2278,6 @@ ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.M
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/info.ini
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/HTML/4.1.1,ddc9b993d7fc8d4a185e8dbf5b9a0996,1.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/dummy.php
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/EntityLookup/entities.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/Filter/ExtractStyleBlocks.php
@@ -3010,6 +3015,8 @@ ${FO_DIR}/plugins/core_dimensions/language/es_la/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/es_la/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/fr_fr/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/fr_fr/lang.php
+${FO_DIR}/plugins/core_dimensions/language/hr_hr/lang.js
+${FO_DIR}/plugins/core_dimensions/language/hr_hr/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/hu_hu/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/hu_hu/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/id_ba/lang.js
@@ -3034,6 +3041,10 @@ ${FO_DIR}/plugins/core_dimensions/language/ro_ro/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/ro_ro/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/ru_ru/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/ru_ru/lang.php
+${FO_DIR}/plugins/core_dimensions/language/sl_sl/lang.js
+${FO_DIR}/plugins/core_dimensions/language/sl_sl/lang.php
+${FO_DIR}/plugins/core_dimensions/language/sr_sr/lang.js
+${FO_DIR}/plugins/core_dimensions/language/sr_sr/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/tr_tr/lang.js
 ${FO_DIR}/plugins/core_dimensions/language/tr_tr/lang.php
 ${FO_DIR}/plugins/core_dimensions/language/uk_ua/lang.js
@@ -3045,6 +3056,7 @@ ${FO_DIR}/plugins/core_dimensions/language/zh_tw/lang.php
 ${FO_DIR}/plugins/core_dimensions/public/assets/javascript/core_dimensions.js
 ${FO_DIR}/plugins/core_dimensions/templates/quickadd_extra_fields.php
 ${FO_DIR}/plugins/core_dimensions/update.php
+${FO_DIR}/plugins/index.html
 ${FO_DIR}/plugins/mail/CHANGELOG.txt
 ${FO_DIR}/plugins/mail/application/controllers/MailController.class.php
 ${FO_DIR}/plugins/mail/application/helpers/MailUtilities.class.php
@@ -3102,6 +3114,8 @@ ${FO_DIR}/plugins/mail/language/es_la/lang.js
 ${FO_DIR}/plugins/mail/language/es_la/lang.php
 ${FO_DIR}/plugins/mail/language/fr_fr/lang.js
 ${FO_DIR}/plugins/mail/language/fr_fr/lang.php
+${FO_DIR}/plugins/mail/language/hr_hr/lang.js
+${FO_DIR}/plugins/mail/language/hr_hr/lang.php
 ${FO_DIR}/plugins/mail/language/hu_hu/lang.js
 ${FO_DIR}/plugins/mail/language/hu_hu/lang.php
 ${FO_DIR}/plugins/mail/language/id_ba/lang.js
@@ -3126,6 +3140,10 @@ ${FO_DIR}/plugins/mail/language/ro_ro/lang.js
 ${FO_DIR}/plugins/mail/language/ro_ro/lang.php
 ${FO_DIR}/plugins/mail/language/ru_ru/lang.js
 ${FO_DIR}/plugins/mail/language/ru_ru/lang.php
+${FO_DIR}/plugins/mail/language/sl_sl/lang.js
+${FO_DIR}/plugins/mail/language/sl_sl/lang.php
+${FO_DIR}/plugins/mail/language/sr_sr/lang.js
+${FO_DIR}/plugins/mail/language/sr_sr/lang.php
 ${FO_DIR}/plugins/mail/language/tr_tr/lang.js
 ${FO_DIR}/plugins/mail/language/tr_tr/lang.php
 ${FO_DIR}/plugins/mail/language/uk_ua/lang.js
@@ -3170,6 +3188,8 @@ ${FO_DIR}/plugins/workspaces/language/es_la/lang.js
 ${FO_DIR}/plugins/workspaces/language/es_la/lang.php
 ${FO_DIR}/plugins/workspaces/language/fr_fr/lang.js
 ${FO_DIR}/plugins/workspaces/language/fr_fr/lang.php
+${FO_DIR}/plugins/workspaces/language/hr_hr/lang.js
+${FO_DIR}/plugins/workspaces/language/hr_hr/lang.php
 ${FO_DIR}/plugins/workspaces/language/hu_hu/lang.js
 ${FO_DIR}/plugins/workspaces/language/hu_hu/lang.php
 ${FO_DIR}/plugins/workspaces/language/id_ba/lang.js
@@ -3194,6 +3214,10 @@ ${FO_DIR}/plugins/workspaces/language/ro_ro/lang.js
 ${FO_DIR}/plugins/workspaces/language/ro_ro/lang.php
 ${FO_DIR}/plugins/workspaces/language/ru_ru/lang.js
 ${FO_DIR}/plugins/workspaces/language/ru_ru/lang.php
+${FO_DIR}/plugins/workspaces/language/sl_sl/lang.js
+${FO_DIR}/plugins/workspaces/language/sl_sl/lang.php
+${FO_DIR}/plugins/workspaces/language/sr_sr/lang.js
+${FO_DIR}/plugins/workspaces/language/sr_sr/lang.php
 ${FO_DIR}/plugins/workspaces/language/tr_tr/lang.js
 ${FO_DIR}/plugins/workspaces/language/tr_tr/lang.php
 ${FO_DIR}/plugins/workspaces/language/uk_ua/lang.js
@@ -4495,6 +4519,7 @@ ${FO_DIR}/public/assets/javascript/og/modules/doubleListSelCtrl.js
 ${FO_DIR}/public/assets/javascript/og/modules/linkToObjectForm.js
 ${FO_DIR}/public/assets/javascript/og/modules/massmailerForm.js
 ${FO_DIR}/public/assets/javascript/og/modules/memberListView.js
+${FO_DIR}/public/assets/javascript/og/modules/memberSelector.js
 ${FO_DIR}/public/assets/javascript/og/modules/plugins.js
 ${FO_DIR}/public/assets/javascript/og/modules/updatePermissionsForm.js
 ${FO_DIR}/public/assets/javascript/og/ofc.js
@@ -5475,6 +5500,7 @@ ${FO_DIR}/public/upgrade/scripts/AsadoUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/BondiolaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChinchulinUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChivitoUpgradeScript.class.php
+${FO_DIR}/public/upgrade/scripts/ChorizoUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/ChurroUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/DulceDeLecheUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/EmpanadaUpgradeScript.class.php
@@ -5503,6 +5529,7 @@ ${FO_DIR}/public/upgrade/templates/db_migration/1_7_pastafrola.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_0_asado.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_1_molleja.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_2_pamplona.php
+${FO_DIR}/public/upgrade/templates/db_migration/2_3_chorizo.php
 ${FO_DIR}/public/upgrade/templates/installed_version.php
 ${FO_DIR}/public/upgrade/templates/layout.php
 ${FO_DIR}/public/webservices/FilesServices.php

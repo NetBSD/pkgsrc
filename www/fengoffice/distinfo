@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2013/04/06 12:09:25 taca Exp $
+$NetBSD: distinfo,v 1.16 2013/08/31 02:04:54 taca Exp $
 
-SHA1 (fengoffice_2.2.4.1.zip) = d44efa6432ef07de0e5cea2f8382439a1bbe0879
-RMD160 (fengoffice_2.2.4.1.zip) = 9b32e096e614c57772f5b76ea072a1e594ab93c7
-Size (fengoffice_2.2.4.1.zip) = 12372854 bytes
+SHA1 (fengoffice_2.3.1.1.zip) = 02309def84e5d91ff190cc98851ea1b19c331fe7
+RMD160 (fengoffice_2.3.1.1.zip) = 1b5f69e8477e4c12ba81bae7d2a7e4074996f6da
+Size (fengoffice_2.3.1.1.zip) = 12430557 bytes
 SHA1 (patch-aa) = 0162718439c36bbc4c867c943b78854f863929c5
 SHA1 (patch-ac) = 10cdae0fe56a08d0f04e4071ba2eb82112495fe5
-SHA1 (patch-ag) = 3e06d5e9ce3bc679d87d46d5175fee83b95405c1
-SHA1 (patch-plugins_mail_application_helpers_MailUtilities.class.php) = c81163db4100e0e3733ba139811a85aa27c8721e
+SHA1 (patch-ag) = 03f09610de1c7fd41641d4f08eb72876d82b2bbf
+SHA1 (patch-plugins_mail_application_helpers_MailUtilities.class.php) = 7681b2f62181173c70a8edce761b91d9671f5ba2
