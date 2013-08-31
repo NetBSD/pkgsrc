@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2013/05/20 19:17:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/08/31 11:07:33 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -56,6 +56,7 @@ share/doc/sqlite3/c3ref/c_stmtstatus_counter.html
 share/doc/sqlite3/c3ref/c_sync_dataonly.html
 share/doc/sqlite3/c3ref/c_testctrl_always.html
 share/doc/sqlite3/c3ref/c_vtab_constraint_support.html
+share/doc/sqlite3/c3ref/cancel_auto_extension.html
 share/doc/sqlite3/c3ref/changes.html
 share/doc/sqlite3/c3ref/clear_bindings.html
 share/doc/sqlite3/c3ref/close.html
@@ -208,6 +209,7 @@ share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
 share/doc/sqlite3/howtocompile.html
 share/doc/sqlite3/howtocorrupt.html
+share/doc/sqlite3/hp1.html
 share/doc/sqlite3/images/2005osaward.gif
 share/doc/sqlite3/images/SQLite.gif
 share/doc/sqlite3/images/SQLite_big.gif
@@ -256,9 +258,6 @@ share/doc/sqlite3/images/chw.jpg
 share/doc/sqlite3/images/dan1.jpg
 share/doc/sqlite3/images/direct1b.gif
 share/doc/sqlite3/images/drh1.jpg
-share/doc/sqlite3/images/fileformat/._filesystem1.gif
-share/doc/sqlite3/images/fileformat/._master_journal_ptr.gif
-share/doc/sqlite3/images/fileformat/.~lock.indexpage.odg#
 share/doc/sqlite3/images/fileformat/db_connection.gif
 share/doc/sqlite3/images/fileformat/examplepop.gif
 share/doc/sqlite3/images/fileformat/fileio_diagrams.odg
@@ -335,6 +334,7 @@ share/doc/sqlite3/images/nw.gif
 share/doc/sqlite3/images/nw.png
 share/doc/sqlite3/images/powered_by_sqlite.gif
 share/doc/sqlite3/images/private_branch.gif
+share/doc/sqlite3/images/qp/fqp1.gif
 share/doc/sqlite3/images/qp/fruitobstate.gif
 share/doc/sqlite3/images/qp/fruitobstate0.gif
 share/doc/sqlite3/images/qp/fullscan.gif
@@ -423,6 +423,7 @@ share/doc/sqlite3/images/vfs1.gif
 share/doc/sqlite3/index.html
 share/doc/sqlite3/inmemorydb.html
 share/doc/sqlite3/intern-v-extern-blob.html
+share/doc/sqlite3/isolation.html
 share/doc/sqlite3/keyword_index.html
 share/doc/sqlite3/lang.html
 share/doc/sqlite3/lang_aggfunc.html
@@ -471,6 +472,7 @@ share/doc/sqlite3/omitted.html
 share/doc/sqlite3/onefile.html
 share/doc/sqlite3/opcode.html
 share/doc/sqlite3/optoverview.html
+share/doc/sqlite3/partialindex.html
 share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
 share/doc/sqlite3/privatebranch.html
@@ -593,6 +595,9 @@ share/doc/sqlite3/releaselog/3_7_7.html
 share/doc/sqlite3/releaselog/3_7_7_1.html
 share/doc/sqlite3/releaselog/3_7_8.html
 share/doc/sqlite3/releaselog/3_7_9.html
+share/doc/sqlite3/releaselog/3_8_0.html
+share/doc/sqlite3/releaselog/3_8_0_1.html
+share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rtree.html
