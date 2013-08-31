@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3159 2013/08/31 19:15:49 agc Exp $
+$NetBSD: CHANGES-2013,v 1.3160 2013/08/31 20:36:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4543,3 +4543,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/perl5 to 5.18.1 [adam 2013-08-31]
 	Updated databases/p5-gdbm to 5.18.1 [adam 2013-08-31]
 	Updated security/ipv6-toolkit to 1.4nb1 [agc 2013-08-31]
+	Updated graphics/giflib to 5.0.5 [adam 2013-08-31]
+	Updated graphics/giflib-util to 5.0.5 [adam 2013-08-31]
+	Updated multimedia/ffmpeg to 20130827.1.2.3 [adam 2013-08-31]
+	Updated multimedia/ffplay to 1.2.3 [adam 2013-08-31]
