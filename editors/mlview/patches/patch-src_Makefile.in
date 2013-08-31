@@ -1,0 +1,39 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/08/31 14:47:26 joerg Exp $
+
+--- src/Makefile.in.orig	2005-08-07 08:16:38.000000000 +0000
++++ src/Makefile.in
+@@ -393,7 +393,6 @@ libmlview_la_SOURCES = \
+ 	mlview-prefs-category-frame-treeview.cc \
+ 	mlview-prefs-category-frame-treeview.h
+ 
+-
+ libmlviewdbusclient_la_SOURCES = mlview-idbc.cc \
+                                 mlview-idbc.h \
+ 				mlview-editor-dbc.cc \
+@@ -409,7 +408,7 @@ mlview_SOURCES = main.cc
+ mlviewctl_SOURCES = mlviewctl.cc mlview-dbus-cli.cc mlview-dbus-cli.h
+ 
+ LDADD = 
+-mlview_LDADD = libmlview.la recent-files/libeggrecent.la
++mlview_LDADD = libmlview.la
+ mlviewctl_LDADD = libmlviewdbusclient.la
+ 
+ libmlview_la_LDFLAGS = \
+@@ -434,7 +433,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-libmlview_la_LIBADD =
++libmlview_la_LIBADD = recent-files/libeggrecent.la
+ am_libmlview_la_OBJECTS = mlview-object.lo mlview-exception.lo \
+ 	mlview-ustring.lo mlview-app-context.lo mlview-view-factory.lo \
+ 	mlview-view-manager.lo mlview-gvc-iface.lo mlview-old-gvc.lo \
+@@ -478,7 +477,7 @@ PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_mlview_OBJECTS = main.$(OBJEXT)
+ mlview_OBJECTS = $(am_mlview_OBJECTS)
+-mlview_DEPENDENCIES = libmlview.la recent-files/libeggrecent.la
++libmlview_la_DEPENDENCIES = recent-files/libeggrecent.la
+ am_mlviewctl_OBJECTS = mlviewctl.$(OBJEXT) mlview-dbus-cli.$(OBJEXT)
+ mlviewctl_OBJECTS = $(am_mlviewctl_OBJECTS)
+ mlviewctl_DEPENDENCIES = libmlviewdbusclient.la
