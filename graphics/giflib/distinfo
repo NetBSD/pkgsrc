@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2013/08/13 10:20:47 joerg Exp $
+$NetBSD: distinfo,v 1.12 2013/08/31 18:41:33 adam Exp $
 
-SHA1 (giflib-5.0.4.tar.bz2) = af3fdf84e2b9ac5c18e7102835a92e2066c7c9f1
-RMD160 (giflib-5.0.4.tar.bz2) = d8791810f6b4f24fc8e31af269d04b445f138d87
-Size (giflib-5.0.4.tar.bz2) = 629190 bytes
-SHA1 (patch-lib_gif__lib.h) = 05b23c454972d6061a5c1a9f84e904df9bbaf638
+SHA1 (giflib-5.0.5.tar.bz2) = 926fecbcef1c5b1ca9d17257d15a197b8b35e405
+RMD160 (giflib-5.0.5.tar.bz2) = 424fa0fc1ecf21bf6e8b2bc90bd313805c3323ff
+Size (giflib-5.0.5.tar.bz2) = 651559 bytes
