@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2013/08/11 03:18:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2013/08/31 22:10:31 rillig Exp $
 #
 
 DISTNAME=	# empty
@@ -6,7 +6,7 @@ PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
 SM_VER=		2.20
 #LIGHTNINGVER=	1.9
 CATEGORIES=	www
-#${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} 
+#${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
 DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
 #		lightning-${LIGHTNINGVER}.source.tar.bz2
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	unzip
+USE_TOOLS+=	unzip pax
 
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
@@ -67,7 +67,7 @@ post-install:
 	rm -rf ${WRKDIR}/extensions
 	${MKDIR} ${WRKDIR}/extensions
 	${RUN} for e in ${XPI_FILES}; do				\
-	  subdir="`${UNZIP_CMD} -c "$$e" install.rdf | awk '/^    <em:id>/ {sub(".*<em:id>","");sub("</em:id>.*","");print;exit;}'`" &&	\
+	  subdir=`${UNZIP_CMD} -c "$$e" install.rdf | awk '/^    <em:id>/ {sub(".*<em:id>","");sub("</em:id>.*","");print;exit;}'` &&	\
 	  ${MKDIR} "${WRKDIR}/extensions/$$subdir" &&			\
 	  cd "${WRKDIR}/extensions/$$subdir" &&				\
 	  ${UNZIP_CMD} -aqo $$e;					\
