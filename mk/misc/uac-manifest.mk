@@ -1,16 +1,17 @@
-# $NetBSD: uac-manifest.mk,v 1.1 2013/02/10 13:04:08 obache Exp $
+# $NetBSD: uac-manifest.mk,v 1.2 2013/08/31 20:54:07 rillig Exp $
 #
-# This file generate manifest files for Windows.
+# This file generates manifest files for Windows.
+#
 # For Windows Vista or later, executable files including special keywords
-# (install, update, patch, and so on) in its name are expected as requireing
-# privileged permissions by default (UAC).
-# If not, it must be specified with manifest file, or it will be failed to
-#  execute as "Permission denied".
+# (install, update, patch, and so on) in its name are expected to require
+# privileged permissions by default (UAC). If not, it must be specified
+# with a manifest file, or it will fail to execute with a "Permission
+# denied" error message.
 #
 # Package-settable variables:
 #
 # UAC_REQD_EXECS
-#	A list of files requireing manifest file for UAC.
+#	A list of files requiring manifest file for UAC.
 #	Paths are relative to PREFIX.
 #
 #	Default value: not defined
