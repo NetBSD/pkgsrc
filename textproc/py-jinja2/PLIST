@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/05/21 19:51:22 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/08/31 22:33:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -75,6 +75,9 @@ ${PYSITELIB}/jinja2/testsuite/__init__.pyo
 ${PYSITELIB}/jinja2/testsuite/api.py
 ${PYSITELIB}/jinja2/testsuite/api.pyc
 ${PYSITELIB}/jinja2/testsuite/api.pyo
+${PYSITELIB}/jinja2/testsuite/bytecode_cache.py
+${PYSITELIB}/jinja2/testsuite/bytecode_cache.pyc
+${PYSITELIB}/jinja2/testsuite/bytecode_cache.pyo
 ${PYSITELIB}/jinja2/testsuite/core_tags.py
 ${PYSITELIB}/jinja2/testsuite/core_tags.pyc
 ${PYSITELIB}/jinja2/testsuite/core_tags.pyo
