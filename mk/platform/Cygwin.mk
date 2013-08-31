@@ -1,4 +1,4 @@
-# $NetBSD: Cygwin.mk,v 1.13 2013/07/12 10:41:58 jperkin Exp $
+# $NetBSD: Cygwin.mk,v 1.14 2013/08/31 13:45:43 obache Exp $
 #
 # Variable definitions for the Windows with Cygwin.
 
@@ -6,6 +6,7 @@
 ### Platform definitions common to pkgsrc/mk/platform/*.mk
 ###
 
+CPP?=		/bin/cpp
 ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	${GMAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
