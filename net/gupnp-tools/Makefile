@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/07/17 13:35:19 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2013/08/31 14:53:08 joerg Exp $
 #
 
 DISTNAME=	gupnp-tools-0.8.6
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../net/gupnp-av/buildlink3.mk"
