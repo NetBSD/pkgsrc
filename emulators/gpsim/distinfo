@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.15 2013/06/14 20:29:38 dholland Exp $
+$NetBSD: distinfo,v 1.16 2013/08/31 14:48:07 joerg Exp $
 
 SHA1 (gpsim-0.26.1.tar.gz) = 7e1c3cc5a821b3458717a94a09bc484bf6937b25
 RMD160 (gpsim-0.26.1.tar.gz) = 487de6a2508de2d51843a9ed684801778e4fe69a
 Size (gpsim-0.26.1.tar.gz) = 2350841 bytes
 SHA1 (patch-cli_cmd__list.cc) = 73dd63cfb069ab42a059686d3b6618172b967be5
+SHA1 (patch-modules_stimuli.cc) = 90184893804de21638465a800d00ec45095e0d6c
+SHA1 (patch-modules_stimuli.h) = 4611f338c92c19762aea866ce2fea5407955c45f
 SHA1 (patch-modules_switch.cc) = 92c49f422a74aa4e3f68164be4b76d727599436e
 SHA1 (patch-src_bitlog_h) = 5edc59be9ccb3a83f81c1b13b965b2c075d9fc4e
 SHA1 (patch-src_processor.cc) = 34e098666a919b61bd0132ddf3176fd34f74c6d0
