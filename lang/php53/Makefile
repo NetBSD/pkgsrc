@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39.4.2 2013/08/25 16:56:44 tron Exp $
+# $NetBSD: Makefile,v 1.39.4.3 2013/08/31 16:51:50 tron Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -16,6 +16,8 @@ TEST_TARGET=		test
 USE_TOOLS+=		gmake lex pkg-config
 LIBTOOL_OVERRIDE=	# empty
 PHP_CHECK_INSTALLED=	No
+
+PHP_VERSIONS_ACCEPTED?=		53
 
 .include "Makefile.php"
 
