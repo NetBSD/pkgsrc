@@ -1,6 +1,6 @@
-# $NetBSD: c.help,v 1.2 2008/01/10 02:34:09 rillig Exp $
+# $NetBSD: c.help,v 1.3 2013/08/31 20:44:43 rillig Exp $
 
-# This file contains typical error messages from C++ compilers and
+# This file contains typical error messages from C compilers and
 # instructions how to fix them properly.
 
 # === Invalid lvalue in increment ===
@@ -32,4 +32,4 @@
 # 2. In default mode (-Xa), __STDC__ is defined and has the value 0.
 # 3. In conformance mode (-Xc), __STDC__ is defined and has the value 1.
 #
-# Keywords: __STDC__
+# Keywords: __STDC__ sunpro
