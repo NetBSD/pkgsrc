@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2010/09/18 12:11:36 obache Exp $
+$NetBSD: patch-ab,v 1.3 2013/08/31 14:46:48 joerg Exp $
 
 DragonFly support.
 
@@ -13,3 +13,12 @@ DragonFly support.
    if (gethostbyname_r(addr, &hostent, soap->buf, SOAP_BUFLEN, &host, &soap->errnum) < 0)
      host = NULL;
  #elif defined(_AIX43) || ((defined(TRU64) || defined(HP_UX)) && defined(HAVE_GETHOSTBYNAME_R))
+@@ -3320,7 +3320,7 @@ tcp_gethost(struct soap *soap, const cha
+   { host = NULL;
+     soap->errnum = h_errno;
+   }
+-#elif defined(HAVE_GETHOSTBYNAME_R)
++#elif defined(HAVE_GETHOSTBYNAME_R) && !defined(__NetBSD__)
+   host = gethostbyname_r(addr, &hostent, soap->buf, SOAP_BUFLEN, &soap->errnum);
+ #elif defined(VXWORKS)
+   /* If the DNS resolver library resolvLib has been configured in the vxWorks
