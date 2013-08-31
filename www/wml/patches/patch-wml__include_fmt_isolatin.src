@@ -1,0 +1,13 @@
+$NetBSD: patch-wml__include_fmt_isolatin.src,v 1.1 2013/08/31 14:55:13 joerg Exp $
+
+--- wml_include/fmt/isolatin.src.orig	2013-08-31 14:02:16.000000000 +0000
++++ wml_include/fmt/isolatin.src
+@@ -3,6 +3,8 @@
+ ##  Copyright (c) 1997-2001 Ralf S. Engelschall, All Rights Reserved. 
+ ##
+ 
++=encoding ISO-8859-1
++
+ #   the container tag itself
+ <define-tag isolatin endtag=required>
+ {:\
