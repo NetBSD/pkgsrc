@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/07/05 13:47:53 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/08/31 18:41:33 adam Exp $
 
 .include "../../graphics/giflib/Makefile.common"
 
-PKGNAME=	giflib-util-5.0.4
+PKGNAME=	${DISTNAME:S/-/-util-/}
 
 COMMENT=	GIF image format utility
 
@@ -11,8 +10,8 @@ CONFLICTS+=	libungif-[0-9]*
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
-BUILD_DIRS+=	util doc
-HTMLDIR=        share/doc/html/giflib
+BUILD_DIRS+=		util doc
+HTMLDIR=		share/doc/giflib
 INSTALLATION_DIRS=	${HTMLDIR} ${HTMLDIR}/whatsinagif
 
 post-install:
