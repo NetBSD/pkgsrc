@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.23 2011/05/04 09:49:34 obache Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.24 2013/08/31 20:17:37 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -127,7 +127,7 @@ ${_DDIR}: ${_DLIST}
 	if [ "$$pkgs" ]; then ${PKG_INFO} -Q PKGPATH $$pkgs; fi > ${_DDIR}
 
 ${_DLIST}: ${WRKDIR}
-	if ${PKG_INFO} -qe "${PKGWILDCARD}"; then \
+	${RUN} if ${PKG_INFO} -qe "${PKGWILDCARD}"; then \
 		${PKG_INFO} -qr "${PKGWILDCARD}" > ${_DLIST}; \
 	else \
 		${TOUCH} ${_DLIST}; \
