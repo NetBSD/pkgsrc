@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/07/31 18:51:41 adam Exp $
+# $NetBSD: Makefile,v 1.12 2013/08/31 02:08:32 taca Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	mysqc
 COMMENT=	MySQL 5, a free SQL database (client)
 
@@ -25,14 +26,12 @@ REPLACE_PERL+=	scripts/mysqld_multi.sh
 REPLACE_PERL+=	scripts/mysqldumpslow.sh
 REPLACE_PERL+=	scripts/mysqlhotcopy.sh
 
-# Replace manual pages which only include other ones with a symbolic link
-# if manual compression is activated. The manual pages won't work otherwise.
-.if defined(MANZ)
+# Replace manual pages which only include other ones with a symbolic link.
+# It is for manual compression is activated or mandoc(1) is used.
 post-install:
-.  for mf in mysql_client_test_embedded.1 mysqltest_embedded.1
+.for mf in mysql_client_test_embedded.1 mysqltest_embedded.1
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mf}
 	${LN} -s ${mf:S/_embedded//} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mf}
-.  endfor
-.endif
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
