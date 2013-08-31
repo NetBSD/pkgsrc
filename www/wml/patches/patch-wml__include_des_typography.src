@@ -1,0 +1,13 @@
+$NetBSD: patch-wml__include_des_typography.src,v 1.1 2013/08/31 14:55:13 joerg Exp $
+
+--- wml_include/des/typography.src.orig	2013-08-31 14:01:35.000000000 +0000
++++ wml_include/des/typography.src
+@@ -3,6 +3,8 @@
+ ##  Copyright (c) 1997-2001 Ralf S. Engelschall, All Rights Reserved. 
+ ##
+ 
++=encoding ISO-8859-1
++
+ #  The <preserve>/<restore> tags with multiple arguments require WML 2.0.3
+ #use wml::mod::version
+ <require 2.0.3 />
