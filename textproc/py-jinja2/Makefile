@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/05/24 19:30:54 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2013/08/31 22:33:35 adam Exp $
 
-DISTNAME=	Jinja2-2.7
+DISTNAME=	Jinja2-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/J/Jinja2/
@@ -10,7 +10,7 @@ HOMEPAGE=	http://jinja.pocoo.org/2/
 COMMENT=	Small but fast and easy to use stand-alone template engine
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		#none
+USE_LANGUAGES=		# none
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
