@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12498 2013/08/31 15:33:49 adam Exp $
+$NetBSD: TODO,v 1.12499 2013/08/31 22:23:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.9.9
 	o hanzim-3.5
-	o harfbuzz-0.9.19
 	o haskell-mode-1.45
 	o hatari-1.7.0
 	o hdf-4.2.7
@@ -854,7 +853,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
 	o p5-Perl-Tidy-20121207
-	o p5-cairo-1.100
 	o p5-clutter-1.110
 	o p5-glib2-1.301
 	o p5-gtk2-1.300

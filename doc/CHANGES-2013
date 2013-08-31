@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3160 2013/08/31 20:36:32 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3161 2013/08/31 22:23:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4547,3 +4547,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/giflib-util to 5.0.5 [adam 2013-08-31]
 	Updated multimedia/ffmpeg to 20130827.1.2.3 [adam 2013-08-31]
 	Updated multimedia/ffplay to 1.2.3 [adam 2013-08-31]
+	Updated fonts/harfbuzz to 0.9.20 [adam 2013-08-31]
+	Updated graphics/cairo to 1.12.16 [adam 2013-08-31]
+	Updated graphics/cairo-gobject to 1.12.16 [adam 2013-08-31]
