@@ -1,4 +1,4 @@
-# $NetBSD: xpi.mk,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+# $NetBSD: xpi.mk,v 1.2 2013/08/31 22:15:10 rillig Exp $
 #
 # common logic for repackaging mozilla extensions (.xpi files)
 # Used by the {firefox,seamonkey,thunderbird}-l10n packages.
@@ -10,7 +10,7 @@ post-extract: extract-xpi
 .PHONY: extract-xpi
 extract-xpi:
 .for f in ${XPI_FILES}
-	@${MKDIR} ${WRKDIR}/${f:S/.xpi//} && cd ${WRKDIR}/${f:S/.xpi//} && ${UNZIP_CMD} -aqo "${WRKDIR}/${f}"
+	${RUN} ${MKDIR} ${WRKDIR}/${f:S/.xpi//} && cd ${WRKDIR}/${f:S/.xpi//} && ${UNZIP_CMD} -aqo "${WRKDIR}/${f}"
 .endfor
 
 do-install: install-xpi
