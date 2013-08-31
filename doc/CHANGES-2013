@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3151 2013/08/30 16:38:34 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.3152 2013/08/31 02:05:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4531,3 +4531,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211-translations to 201308270 [taca 2013-08-30]
 	Updated www/drupal7 to 7.23 [taca 2013-08-30]
 	Updated geography/geos to 3.4.2 [gdt 2013-08-30]
+	Updated www/fengoffice to 2.3.1.1 [taca 2013-08-31]
