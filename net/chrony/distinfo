@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/08/16 08:30:20 hannken Exp $
+$NetBSD: distinfo,v 1.9 2013/08/31 14:53:45 joerg Exp $
 
 SHA1 (chrony-1.29.tar.gz) = 442fb7d62a6f23bf1057864a3dbdfa55e1b6eb35
 RMD160 (chrony-1.29.tar.gz) = 53518efdd90c4695005d7cc929077985f16887d7
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = df47df974995f9f947b731a4812fb7633fd874a4
 SHA1 (patch-ae) = 133e90d0614ef5961305b952d9a7a4047a2edcc7
 SHA1 (patch-af) = 43c5e0f14aa8a980af83ba4ea5691705a4738064
 SHA1 (patch-ag) = 165daaab8507cca8b29a61af576711c0ec05a3a6
+SHA1 (patch-ntp__io.c) = 9b9503cf63fba28f57aa6da9020ca02b5d198bf9
