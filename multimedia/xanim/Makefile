@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 10:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/08/31 14:52:50 joerg Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia x11
 MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/ \
 		ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/modules/ \
