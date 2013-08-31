@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.236 2013/08/15 20:30:43 rillig Exp $
+# $NetBSD: makevars.map,v 1.237 2013/08/31 18:14:28 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -541,6 +541,7 @@ PKGPATH			Pathname [$system]
 PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
 PKGSRCDIR		Pathname [$system]
+PKGSRCTOP		Yes [m:s]
 PKGTOOLS_ENV		List of ShellWord
 PKGVERSION		Version [$system]
 PKGWILDCARD		Filemask [$system]

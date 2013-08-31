@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.857 2013/08/15 20:30:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.858 2013/08/31 18:14:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2527,6 +2527,13 @@ sub checkline_rcsid_regex($$$) {
 
 	if ($line->text !~ m"^${prefix_regex}\$(${id})(?::[^\$]+|)\$$") {
 		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
+		$line->explain_error(
+"Several files in pkgsrc must contain the CVS Id, so that their current",
+"version can be traced back later from a binary package. This is to",
+"ensure reproducible builds, for example for finding bugs.",
+"",
+"Please insert the text from the above error message (without the quotes)",
+"at this position in the file.");
 		return false;
 	}
 	return true;
@@ -4399,7 +4406,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		},
 
 		Tool => sub {
-			if ($value =~ m"^([-\w]+|\[)(?::(\w+))?$") {
+			if ($varname eq "TOOLS_NOOP" && $op eq "+=") {
+				# no warning for package-defined tool definitions
+
+			} elsif ($value =~ m"^([-\w]+|\[)(?::(\w+))?$") {
 				my ($toolname, $tooldep) = ($1, $2);
 				if (!exists(get_tool_names()->{$toolname})) {
 					$line->log_error("Unknown tool \"${toolname}\".");
@@ -6931,9 +6941,10 @@ sub checkfile_PLIST($) {
 			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
 				my $f = "../../graphics/hicolor-icon-theme/buildlink3.mk";
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
-					$line->log_error("Please .include \"$f\"");
+					$line->log_error("Please .include \"$f\" in the Makefile");
 					$line->explain_error(
-"If hicolor icon themes are installed, icon theme cache must be maintained.");
+"If hicolor icon themes are installed, icon theme cache must be",
+"maintained. The hicolor-icon-theme package takes care of that.");
 				}
 
 			} elsif ($pkgpath ne "graphics/gnome-icon-theme" && $text =~ m"^share/icons/gnome(?:$|/)") {
@@ -7164,12 +7175,14 @@ sub checkdir_root() {
 				next;
 			}
 
-			if (defined($prev_subdir) && $subdir eq $prev_subdir) {
-				$line->log_error("${subdir} must only appear once.");
-			} elsif (defined($prev_subdir) && $subdir lt $prev_subdir) {
-				$line->log_warning("${subdir} should come before ${prev_subdir}.");
-			} else {
+			if (!defined($prev_subdir) || $subdir gt $prev_subdir) {
 				# correctly ordered
+			} elsif ($subdir eq $prev_subdir) {
+				$line->log_error("${subdir} must only appear once.");
+			} elsif ($prev_subdir eq "x11" && $subdir eq "archivers") {
+				# ignore that one, since it is documented in the top-level Makefile
+			} else {
+				$line->log_warning("${subdir} should come before ${prev_subdir}.");
 			}
 
 			$prev_subdir = $subdir;
