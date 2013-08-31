@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2013/07/29 16:41:02 taca Exp $
+# $NetBSD: Makefile.php,v 1.2 2013/08/31 12:31:10 adam Exp $
 # used by lang/php55/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -50,6 +50,8 @@ PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
 .endif
+
+.include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
