@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3156 2013/08/31 07:10:37 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3157 2013/08/31 11:09:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4537,3 +4537,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-File-DesktopEntry to 0.05 [wen 2013-08-31]
 	Updated devel/p5-File-DirCompare to 0.7 [wen 2013-08-31]
 	Updated devel/p5-File-Find-Rule-Perl to 1.13 [wen 2013-08-31]
+	Updated databases/sqlite3 to 3.8.0.1 [adam 2013-08-31]
+	Updated databases/sqlite3-docs to 3.8.0.1 [adam 2013-08-31]
+	Updated databases/sqlite3-tcl to 3.8.0.1 [adam 2013-08-31]
