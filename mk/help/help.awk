@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.26 2009/05/15 21:10:31 rillig Exp $
+# $NetBSD: help.awk,v 1.27 2013/08/31 21:27:53 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -126,8 +126,9 @@ $1 ~ /:$/ && $2 == ".PHONY" {
 NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 	w = ($1 ~ /^\#[A-Z]/) ? substr($1, 2) : ($1 == "#") ? $2 : $1;
 
-	# Reduce FOO.<param> and FOO.${param} to FOO.
+	# Reduce VAR.<param>, VAR.${param} and VAR.* to VAR.
 	sub(/\.[<$].*[>}]$/, "", w);
+	sub(/\.\*$/, "", w);
 
 	if (w ~ /\+=$/) {
 		# Appending to a variable is usually not a definition.
@@ -136,7 +137,7 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 		# Words in mixed case are not taken as keywords. If you
 		# want them anyway, list them in a "Keywords:" line.
 
-	} else if (w !~ /^[A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
+	} else if (w !~ /^[_A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
 		# Keywords must consist only of letters, digits, hyphens
 		# and underscores; except for some trailing type specifier.
 
