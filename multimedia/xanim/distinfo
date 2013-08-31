@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2007/08/05 15:37:34 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/08/31 14:52:50 joerg Exp $
 
 SHA1 (xanim2920.tar.gz) = 8adb5948cc6fd9bba5417aee4d319b5f041830e8
 RMD160 (xanim2920.tar.gz) = dae33cdbd9f20388a067df8269b625f2594cdfb9
@@ -57,3 +57,5 @@ Size (xa1.0_cyuv_linuxPPC.o.gz) = 1287 bytes
 SHA1 (patch-aa) = 4d2f360bca128e979951227b3ff1b645a82ce7f3
 SHA1 (patch-ab) = c9fd497ee20efc699a84367ee36d34f5aff6da66
 SHA1 (patch-ae) = 6023e76bc0471a0810b0789cd24355c06eac02b8
+SHA1 (patch-xa__input.c) = 2033ce6c68b5a87911011b6917705f08482060a2
+SHA1 (patch-xa__x11.c) = d51fea74991e9453c29bf82a7e41bf1b74a98f32
