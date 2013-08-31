@@ -90,6 +90,7 @@ sub show_source($$) {
 	my ($self, $out) = @_;
 
 	if (PkgLint::Logging::get_show_source_flag()) {
+		print $out ("\n");
 		foreach my $line (@{$self->physlines}) {
 			print $out ("> " . $line->[1]);
 		}
