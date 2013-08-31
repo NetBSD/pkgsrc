@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.14 2013/06/12 12:35:35 wiz Exp $
+# $NetBSD: gnu-configure.mk,v 1.15 2013/08/31 20:22:49 rillig Exp $
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
@@ -151,8 +151,7 @@ _SCRIPT.configure-scripts-osdep=					\
 configure-scripts-osdep:
 .if defined(_SCRIPT.configure-scripts-osdep) && !empty(_SCRIPT.configure-scripts-osdep)
 	@${STEP_MSG} "Modifying GNU configure scripts for OS dependent support"
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	cd ${WRKSRC};							\
+	${RUN} cd ${WRKSRC};						\
 	depth=0; pattern=${CONFIGURE_SCRIPT:T};				\
 	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.configure}; do	\
 		for file in $$pattern; do				\
