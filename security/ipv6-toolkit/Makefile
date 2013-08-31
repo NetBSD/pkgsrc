@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/08/24 16:12:24 agc Exp $
+# $NetBSD: Makefile,v 1.8 2013/08/31 19:14:47 agc Exp $
 
 DISTNAME=	ipv6toolkit-v1.4
 PKGNAME=	${DISTNAME:C/-v/-/}
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://www.si6networks.com/tools/ipv6toolkit/
 
@@ -9,6 +10,8 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.si6networks.com/tools/ipv6toolkit
 COMMENT=	IPv6 security assessment and troubleshooting tool
 LICENSE=	gnu-gpl-v3
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 AUTO_MKDIRS=	yes
 
