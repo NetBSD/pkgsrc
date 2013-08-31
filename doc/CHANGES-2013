@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3154 2013/08/31 04:34:03 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3155 2013/08/31 04:43:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4535,3 +4535,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql55-client to 5.5.33nb1 [taca 2013-08-31]
 	Updated databases/mysql56-client to 5.6.13nb1 [taca 2013-08-31]
 	Updated devel/p5-File-DesktopEntry to 0.05 [wen 2013-08-31]
+	Updated devel/p5-File-DirCompare to 0.7 [wen 2013-08-31]
