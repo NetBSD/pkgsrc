@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2013/04/02 02:31:05 sbd Exp $
+$NetBSD: distinfo,v 1.18 2013/08/31 14:44:30 joerg Exp $
 
 SHA1 (magic-7.5.188.tgz) = f7a8dfb90f1d1416bdaf4b056972bc6d406c75d4
 RMD160 (magic-7.5.188.tgz) = b677df676ba2aa9f9e9b211445d577a85a309e27
@@ -38,6 +38,7 @@ SHA1 (patch-plow_PlowMain.c) = 85231c66d036a7310b22eca6cac70538e38c7623
 SHA1 (patch-plow_PlowRules1.c) = 76cb7b0b0bf14e8556db1e0f76ab76ac67896a3e
 SHA1 (patch-plow_PlowRules2.c) = 64a0fbb2cd3b9aa8d5cd8d90778fcb1a4c934614
 SHA1 (patch-textio_textio.h) = 65ff52d07b7b8acd62ae78bb1441ef9dad5c0cf6
+SHA1 (patch-textio_txInput.c) = 3a8cd78b49d7364a762309b2f5380f49a048a4bd
 SHA1 (patch-utils_LIBtextio.c) = 636f5ab202f5ca1bbdc8fc735bd887ce100e2ad4
 SHA1 (patch-windows_windDisp.c) = 7d9d22b016d21158b72177368c928dbd9b61d122
 SHA1 (patch-windows_windows.h) = d644b85becdb840d642fb8c20287783f97a0442e
