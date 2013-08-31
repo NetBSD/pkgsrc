@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/08/24 16:12:24 agc Exp $
+$NetBSD: distinfo,v 1.8 2013/08/31 19:14:47 agc Exp $
 
-SHA1 (ipv6toolkit-v1.4.tar.gz) = 0120041b7f844f49ef6b516e8b1ffbeeb1427788
-RMD160 (ipv6toolkit-v1.4.tar.gz) = 32cb518551e0a1898e5400b9b1468658617ce83b
-Size (ipv6toolkit-v1.4.tar.gz) = 481920 bytes
+SHA1 (ipv6toolkit-1.4/ipv6toolkit-v1.4.tar.gz) = 08648022a9b026ab5adcf1de173d26e56e202d62
+RMD160 (ipv6toolkit-1.4/ipv6toolkit-v1.4.tar.gz) = 9e47985f6ed4b47a8269432fb46fca32baddd501
+Size (ipv6toolkit-1.4/ipv6toolkit-v1.4.tar.gz) = 481666 bytes
 SHA1 (patch-Makefile) = 217b9e8cf7b8478773bbc7ee8971d1fccfde2909
 SHA1 (patch-aa) = 594fb41b77258cae0d3ba81a78144c312728faa8
-SHA1 (patch-tools__tcp6.c) = 72363dc25ebea5acb7dedd91a8fda1abad5242ad
