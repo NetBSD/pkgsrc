@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/24 16:06:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/31 14:45:19 joerg Exp $
 
 DISTNAME=	libmspub-0.0.6
 CATEGORIES=	converters
@@ -17,6 +17,11 @@ USE_LANGUAGES=	c++
 CONFIGURE_ARGS+=	--without-docs
 
 PKGCONFIG_OVERRIDE+=	libmspub.pc.in
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-error=unknown-pragmas -Wno-error=c++11-extensions
+.endif
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
