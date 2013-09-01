@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.46 2012/12/09 00:07:38 adam Exp $
+# $NetBSD: Makefile,v 1.47 2013/09/01 09:56:41 adam Exp $
 
-PKGNAME=	hdf5-${HDF5_VER}
 COMMENT=	Hierarchical Data Format (new generation)
 
 INSTALLATION_DIRS=	bin lib include

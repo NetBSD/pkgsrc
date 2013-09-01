@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/04/06 11:39:25 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/01 09:56:41 adam Exp $
 
-PKGNAME=	hdf5-c++-${HDF5_VER}
+PKGNAME=	${DISTNAME:S/-/-c++-/}
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
 
 USE_LANGUAGES=		c c++
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/examples/${f} \
 	    ${DESTDIR}/${PREFIX}/share/examples/hdf5/c++/
 .endfor
-.for f in ptExampleFL.cpp ptExampleVL.cpp run-hlc++-ex.sh
+.for f in ptExampleFL.cpp run-hlc++-ex.sh
 	${INSTALL_DATA} ${WRKSRC}/hl/c++/examples/${f} \
 	    ${DESTDIR}/${PREFIX}/share/examples/hdf5/hl/c++/
 .endfor
