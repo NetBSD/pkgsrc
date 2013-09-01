@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2013/08/25 06:19:02 wen Exp $
+# $NetBSD: Makefile,v 1.131 2013/09/01 08:28:44 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -39,6 +39,7 @@ SUBDIR+=	lhasa
 SUBDIR+=	libarchive
 SUBDIR+=	libcomprex
 SUBDIR+=	liblzo
+SUBDIR+=	libunrar
 SUBDIR+=	libzip
 SUBDIR+=	lzip
 SUBDIR+=	lziprecover
