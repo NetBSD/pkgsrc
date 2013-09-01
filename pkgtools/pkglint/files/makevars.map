@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.237 2013/08/31 18:14:28 rillig Exp $
+# $NetBSD: makevars.map,v 1.238 2013/09/01 05:30:15 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -697,6 +697,7 @@ TEST_TARGET		List of Identifier [m:s,c:ds]
 TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 } [m:s,c:s]
 TEX_DEPMETHOD		{ build run } [m:s,c:s]
 TEXINFO_REQD		List of Version [$package_list]
+TOOL_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 TOOLS_ALIASES		List of Filename [$system]
 TOOLS_BROKEN		List of Tool [$system]
 TOOLS_CREATE		List of Tool [$system]
