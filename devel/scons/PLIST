@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2012/12/16 15:06:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/09/01 11:41:42 adam Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
 bin/scons-time-${PKGVERSION}
 bin/sconsign
 bin/sconsign-${PKGVERSION}
+lib/${PKGNAME}/${EGG_FILE}
 lib/${PKGNAME}/SCons/Action.py
 lib/${PKGNAME}/SCons/Action.pyc
 lib/${PKGNAME}/SCons/Action.pyo
@@ -458,6 +459,9 @@ lib/${PKGNAME}/SCons/Tool/rpcgen.pyo
 lib/${PKGNAME}/SCons/Tool/rpm.py
 lib/${PKGNAME}/SCons/Tool/rpm.pyc
 lib/${PKGNAME}/SCons/Tool/rpm.pyo
+lib/${PKGNAME}/SCons/Tool/rpmutils.py
+lib/${PKGNAME}/SCons/Tool/rpmutils.pyc
+lib/${PKGNAME}/SCons/Tool/rpmutils.pyo
 lib/${PKGNAME}/SCons/Tool/sgiar.py
 lib/${PKGNAME}/SCons/Tool/sgiar.pyc
 lib/${PKGNAME}/SCons/Tool/sgiar.pyo
@@ -578,7 +582,6 @@ lib/${PKGNAME}/SCons/dblite.pyo
 lib/${PKGNAME}/SCons/exitfuncs.py
 lib/${PKGNAME}/SCons/exitfuncs.pyc
 lib/${PKGNAME}/SCons/exitfuncs.pyo
-lib/${PKGNAME}/${EGG_FILE}
 man/man1/scons-time.1
 man/man1/scons.1
 man/man1/sconsign.1
