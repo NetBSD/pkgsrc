@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/10/07 10:38:50 alnsn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2013/09/01 12:14:06 obache Exp $
 
 BUILDLINK_TREE+=	hdf5
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hdf5
 HDF5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hdf5+=	hdf5>=1.8.7
-BUILDLINK_ABI_DEPENDS.hdf5+=	hdf5>=1.8.7
+BUILDLINK_ABI_DEPENDS.hdf5+=	hdf5>=1.8.11
 BUILDLINK_PKGSRCDIR.hdf5?=	../../devel/hdf5
 
 pkgbase := hdf5
