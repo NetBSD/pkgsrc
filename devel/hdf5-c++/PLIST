@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/07 10:42:18 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/01 09:56:41 adam Exp $
 bin/h5c++
 include/H5AbstractDs.h
 include/H5ArrayType.h
@@ -42,5 +42,4 @@ share/examples/hdf5/c++/readdata.cpp
 share/examples/hdf5/c++/run-c++-ex.sh
 share/examples/hdf5/c++/writedata.cpp
 share/examples/hdf5/hl/c++/ptExampleFL.cpp
-share/examples/hdf5/hl/c++/ptExampleVL.cpp
 share/examples/hdf5/hl/c++/run-hlc++-ex.sh
