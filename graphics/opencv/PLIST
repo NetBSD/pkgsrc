@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/08/08 12:18:49 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/09/01 09:46:13 adam Exp $
 bin/opencv_createsamples
 bin/opencv_haartraining
 bin/opencv_performance
@@ -123,6 +123,8 @@ include/opencv2/nonfree/gpu.hpp
 include/opencv2/nonfree/nonfree.hpp
 include/opencv2/nonfree/ocl.hpp
 include/opencv2/objdetect/objdetect.hpp
+${PLIST.opencl}include/opencv2/ocl/matrix_operations.hpp
+${PLIST.opencl}include/opencv2/ocl/ocl.hpp
 include/opencv2/opencv.hpp
 include/opencv2/opencv_modules.hpp
 include/opencv2/photo/photo.hpp
@@ -197,6 +199,9 @@ lib/libopencv_nonfree.so.2.4.6
 lib/libopencv_objdetect.so
 lib/libopencv_objdetect.so.2.4
 lib/libopencv_objdetect.so.2.4.6
+${PLIST.opencl}lib/libopencv_ocl.so
+${PLIST.opencl}lib/libopencv_ocl.so.2.4
+${PLIST.opencl}lib/libopencv_ocl.so.2.4.6
 lib/libopencv_photo.so
 lib/libopencv_photo.so.2.4
 lib/libopencv_photo.so.2.4.6
