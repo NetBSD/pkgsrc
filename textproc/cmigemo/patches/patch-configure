@@ -1,0 +1,44 @@
+$NetBSD: patch-configure,v 1.1 2013/09/01 05:28:26 obache Exp $
+
+* prefer user select tool via envrinment variable to auto detect one. 
+
+--- configure.orig	2011-02-27 10:45:40.000000000 +0000
++++ configure
+@@ -29,6 +29,7 @@ do
+ done
+ 
+ # Check HTTP access tool
++if test -z "$PROGRAM_HTTP"; then
+ if CHECK_COMMAND curl ; then
+   PROGRAM_HTTP="curl -O"
+ elif CHECK_COMMAND wget ; then
+@@ -39,8 +40,10 @@ else
+   echo "ERROR: Require one of HTTP access tools (curl, wget or fetch)."
+   exit 1
+ fi
++fi
+ 
+ # Check encoding filter
++if TEST -z "$PROGRAM_ENCODEFILTER"; then
+ if CHECK_COMMAND qkc ; then
+   PROGRAM_ENCODEFILTER="qkc -q -u"
+ elif CHECK_COMMAND nkf ; then
+@@ -49,8 +52,10 @@ else
+   echo "ERROR: Require qkc or nkf installed for encode filter."
+   exit 1
+ fi
++fi
+ 
+ # Check install program
++if test -z "$PROGRAM_INSTALL"; then
+ if test -x /usr/ucb/install ; then
+   PROGRAM_INSTALL="/usr/ucb/install"
+ elif test -x /usr/bin/install ; then
+@@ -60,6 +65,7 @@ else
+   echo "WARNING: Can't find install program."
+   echo "         But set it \"/usr/bin/install\".  So need to make sure."
+ fi
++fi
+ 
+ # for Debug
+ if test 0 != 0 ; then
