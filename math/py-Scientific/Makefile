@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2012/09/11 23:04:30 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/09/01 12:14:07 obache Exp $
 
 DISTNAME=	ScientificPython-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://sourcesup.cru.fr/frs/download.php/2309/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/08/13 21:24:37 markd Exp $
+# $NetBSD: Makefile,v 1.29 2013/09/01 12:14:07 obache Exp $
 #
 
 DISTNAME=		tables-2.4.0
 PKGNAME=		${PYPKGPREFIX}-py${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
 
