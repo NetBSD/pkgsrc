@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 17:19:16 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/01 09:19:16 obache Exp $
 #
 
 DISTNAME=	UPnP-Inspector-0.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://coherence.beebits.net/download/
 
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://coherence.beebits.net/
 COMMENT=	UPnP analyzer
 LICENSE=	mit
+
+DEPENDS+=	coherence>=0.6.4:../../net/coherence
+DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 USE_LANGUAGES=	# none
 EGG_NAME=	UPnP_Inspector-0.2.2
