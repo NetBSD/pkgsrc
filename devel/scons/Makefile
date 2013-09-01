@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.19 2012/12/16 15:06:25 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.20 2013/09/01 11:41:42 adam Exp $
 
-CONFLICTS=		scons-devel-[0-9]*
+DISTNAME=	scons-2.3.0
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scons/}
 
-.include "../../devel/scons/Makefile.common"
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.scons.org/
+COMMENT=	Python-based, open-source build system
+LICENSE=	mit
 
-SCONS_VERSION=		2.2.0
+REPLACE_PYTHON+=	script/scons script/scons-time script/sconsign
 
+.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
