@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.24 2013/09/01 06:32:11 obache Exp $
 #
 
 DISTNAME=		pv-0.9.6
@@ -18,6 +18,8 @@ INFO_FILES=		yes
 
 # Don't gzip the installed info file and man pages.
 CONFIGURE_ENV+=		DO_GZIP=${TOOLS_CMD.true}
+
+REPLACE_LOCALEDIR_PATTERNS+=	vars.mk
 
 DOCDIR=			${PREFIX}/share/doc/pv
 INSTALLATION_DIRS=	${DOCDIR}
