@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3168 2013/09/01 09:19:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3169 2013/09/01 12:05:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4558,3 +4558,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.67 [adam 2013-09-01]
 	Added archivers/libunrar version 5.0.7 [wiz 2013-09-01]
 	Updated net/upnpinspector to 0.2.2nb3 [obache 2013-09-01]
+	Updated graphics/libwebp to 0.3.1 [adam 2013-09-01]
+	Updated devel/hdf5 to 1.8.11 [adam 2013-09-01]
+	Updated devel/hdf5-c++ to 1.8.11 [adam 2013-09-01]
+	Updated devel/scons to 2.3.0 [adam 2013-09-01]
