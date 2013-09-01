@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/08/05 12:27:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.42 2013/09/01 09:46:13 adam Exp $
 
 DISTNAME=	opencv-2.4.6.1
 CATEGORIES=	graphics devel
@@ -35,13 +35,18 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 CXXFLAGS+=	-std=c++11
 .endif
 
+PLIST_VARS+=	opencl
+
+.if ${OPSYS} == "Darwin"
+PLIST.opencl=	yes
+.else
+.include "../../x11/gtk2/buildlink3.mk"
+.endif
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.if ${OPSYS} != "Darwin"
-.include "../../x11/gtk2/buildlink3.mk"
-.endif
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
