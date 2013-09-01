@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2013/08/15 15:12:39 richard Exp $
-#
+# $NetBSD: Makefile,v 1.9 2013/09/01 09:53:50 adam Exp $
 
-DISTNAME=	libwebp-0.2.1
-PKGREVISION=	3
+DISTNAME=	libwebp-0.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://webp.googlecode.com/files/
-EXTRACT_SUFX=	.zip
+#EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/speed/webp/index.html
 COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
