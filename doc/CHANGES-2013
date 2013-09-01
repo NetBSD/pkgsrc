@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3166 2013/09/01 07:35:41 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3167 2013/09/01 08:29:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4556,3 +4556,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/lua-expat to 1.2.0.20130831 [ryoon 2013-09-01]
 	Updated fonts/umefont-ttf to 0.454 [ryoon 2013-09-01]
 	Updated graphics/pngcrush to 1.7.67 [adam 2013-09-01]
+	Added archivers/libunrar version 5.0.7 [wiz 2013-09-01]
