@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3162 2013/08/31 22:34:46 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3163 2013/09/01 04:46:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/cairo-gobject to 1.12.16 [adam 2013-08-31]
 	Updated emulators/fuse-utils to 1.1.1 [adam 2013-08-31]
 	Updated textproc/py-jinja2 to 2.7.1 [adam 2013-08-31]
+	Updated net/lua-socket to 3.0rc1 [ryoon 2013-09-01]
