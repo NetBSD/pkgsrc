@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2013/09/01 04:48:21 ryoon Exp $
+
+* Remove -D option of install, BSD install does not support it.
+
+--- Makefile.orig	2013-05-29 22:02:24.000000000 +0000
++++ Makefile
+@@ -27,8 +27,8 @@ src/$(LIBNAME):
+ 	$(CC) $(CF) $(LF) -o $@ src/$(T)lib.c
+ 
+ install:
+-	$(INSTALL_PROGRAM) -D src/$(LIBNAME) $(DESTDIR)$(LUA_CDIR)/$(LIBNAME)
+-	$(INSTALL_PROGRAM) -D src/$T/lom.lua $(DESTDIR)$(LUA_LDIR)/$T/lom.lua
++	$(INSTALL_PROGRAM) src/$(LIBNAME) $(DESTDIR)$(LUA_CDIR)/$(LIBNAME)
++	$(INSTALL_PROGRAM) src/$T/lom.lua $(DESTDIR)$(LUA_LDIR)/$T/lom.lua
+ 
+ clean:
+-	$(RM) src/$(LIBNAME) $(OBJS)
+\ No newline at end of file
++	$(RM) src/$(LIBNAME) $(OBJS)
