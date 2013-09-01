@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.858 2013/08/31 18:14:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.859 2013/09/01 05:30:15 obache Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4974,6 +4974,7 @@ sub checklines_package_Makefile_varorder($) {
 		[ "Dependencies", optional,
 			[
 				[ "BUILD_DEPENDS", many ],
+				[ "TOOL_DEPENDS", many ],
 				[ "DEPENDS", many ],
 			]
 		]
