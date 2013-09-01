@@ -1,34 +1,29 @@
-# $NetBSD: Makefile,v 1.18 2013/08/15 06:32:06 obache Exp $
+# $NetBSD: Makefile,v 1.19 2013/09/01 04:48:21 ryoon Exp $
 #
 
-DISTNAME=	luaexpat-1.2.0
-PKGNAME=	${DISTNAME:S/lua/lua-/}
-PKGREVISION=	1
+DISTNAME=	lua-expat-1f41c74ce686
+PKGNAME=	${LUA_PKGPREFIX}-expat-1.2.0.20130831
 CATEGORIES=	textproc
-MASTER_SITES=	http://matthewwild.co.uk/projects/luaexpat/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://matthewwild.co.uk/projects/projects
+HOMEPAGE=	http://matthewwild.co.uk/projects/luaexpat/
 COMMENT=	XML parser for LUA based on expat
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
-MAKE_FILE=	makefile
 
 CFLAGS+=	-fPIC
 
 MAKE_FLAGS+=	LUA_DIR=${BUILDLINK_PREFIX.lua}
-MAKE_FLAGS+=	LUA_INC=${BUILDLINK_PREFIX.lua}/include
-MAKE_FLAGS+=	EXPAT_INC=${BUILDLINK_PREFIX.expat}/include
+MAKE_FLAGS+=	LUA_CDIR=${PREFIX}/${LUA_CDIR}
+MAKE_FLAGS+=	LUA_LDIR=${PREFIX}/${LUA_LDIR}
+MAKE_FLAGS+=	LUA_INC=-I${BUILDLINK_PREFIX.lua}/include
+MAKE_FLAGS+=	EXPAT_INC=-I${BUILDLINK_PREFIX.expat}/include
 MAKE_FLAGS+=	LUA_VERSION_NUM=${LUA_VERSION_MAJOR}0${LUA_VERSION_MINOR}
 BUILD_TARGET=	lib
 
-INSTALLATION_DIRS=	${LUA_CDIR} ${LUA_LDIR} share/examples/lua
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/src/lxp.so.${PKGVERSION} ${DESTDIR}${PREFIX}/${LUA_CDIR}/lxp.so
-	${INSTALL_DATA} ${WRKSRC}/src/lxp/lom.lua ${DESTDIR}${PREFIX}/${LUA_LDIR}/lom.lua
-	${INSTALL_DATA} ${WRKSRC}/tests/test.lua ${DESTDIR}${PREFIX}/share/examples/lua/lxp.lua
+INSTALLATION_DIRS=	${LUA_CDIR} ${LUA_LDIR}/lxp
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/lua/module.mk"
