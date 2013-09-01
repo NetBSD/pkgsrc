@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/08/30 13:14:23 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/01 05:28:26 obache Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -19,7 +19,7 @@ SKKJISYO_VERS=	201102
 JISYOFILE=	SKK-JISYO.L.${SKKJISYO_VERS}.bz2
 SITES.${SKKJISYO_FILE}=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
 
-BUILD_DEPENDS+= nkf>=2.06:../../converters/nkf
+TOOL_DEPENDS+= nkf>=2.06:../../converters/nkf
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	perl gzip gmake
@@ -27,6 +27,9 @@ USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/cmigemo-default-src
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ENV+=		PROGRAM_INSTALL=${INSTALL:Q}
+CONFIGURE_ENV+=		PROTRAM_ENCODEFILTER="nkf -x"
+CONFIGURE_ENV+=		PROGRAM_HTTP=${TRUE:Q}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 SUBST_CLASSES+=	prefix
