@@ -1,10 +1,10 @@
-$NetBSD: patch-libev_ev.h,v 1.1 2012/11/18 01:54:02 joerg Exp $
+$NetBSD: patch-libev_ev.h,v 1.2 2013/09/02 12:23:43 obache Exp $
 
---- libev/ev.h.orig	2012-11-17 12:01:52.000000000 +0000
+--- libev/ev.h.orig	2013-03-01 11:05:29.000000000 +0000
 +++ libev/ev.h
-@@ -549,8 +549,6 @@ EV_API_DECL struct ev_loop *ev_default_l
+@@ -557,8 +557,6 @@ EV_API_DECL struct ev_loop *ev_default_l
  EV_INLINE struct ev_loop *
- ev_default_loop_uc_ (void)
+ ev_default_loop_uc_ (void) EV_THROW
  {
 -  extern struct ev_loop *ev_default_loop_ptr;
 -
