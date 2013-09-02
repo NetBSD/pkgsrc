@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2013/06/06 12:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2013/09/02 19:50:51 adam Exp $
 #
 
 DISTNAME=	libgnomeprint-2.18.8
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.18/}
 EXTRACT_SUFX=	.tar.bz2

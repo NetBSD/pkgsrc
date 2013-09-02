@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/07/15 02:02:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2013/09/02 19:51:15 adam Exp $
 
 DISTNAME=	fityk-0.9.7
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	math
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fityk/}
 MASTER_SITES=	https://cloud.github.com/downloads/wojdyr/fityk/
