@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2011/12/09 02:08:56 hiramatsu Exp $
+$NetBSD: distinfo,v 1.6 2013/09/02 13:16:26 obache Exp $
 
-SHA1 (Coro-6.07.tar.gz) = 04f308548c2a8ec181570c95acdef68b814d1686
-RMD160 (Coro-6.07.tar.gz) = b543f274d2040c5dbf6274bef9449790b6159679
-Size (Coro-6.07.tar.gz) = 177845 bytes
-SHA1 (patch-aa) = d7d87d47b94013d5d60797f6023671850446d75d
+SHA1 (Coro-6.31.tar.gz) = 37c5ca1d3faa7ac2ea4dd2db1e5a2af0b032b475
+RMD160 (Coro-6.31.tar.gz) = dbc41d6a622cf7a360427a63b1a2e78afe1c68a8
+Size (Coro-6.31.tar.gz) = 185263 bytes
+SHA1 (patch-aa) = 4116ed31979879c16ebee194eb32a4c4c2c4438d
