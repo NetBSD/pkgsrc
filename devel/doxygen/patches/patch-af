@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2009/09/27 01:30:38 minskim Exp $
+$NetBSD: patch-af,v 1.5 2013/09/02 16:38:56 wiz Exp $
 
---- doc/Makefile.in.orig	2008-12-06 13:16:23.000000000 +0000
+--- doc/Makefile.in.orig	2013-07-27 21:46:15.000000000 +0000
 +++ doc/Makefile.in
-@@ -23,7 +23,7 @@ all: language FORCE
+@@ -23,7 +23,7 @@ all: language config.doc FORCE
  	@cp Makefile.latex ../latex/Makefile
  	@sed -e "s/\$$VERSION/$(VERSION)/g" doxygen_manual.tex >../latex/doxygen_manual.tex
  	@sed -e "s/\$$VERSION/$(VERSION)/g" doxygen.sty >../latex/doxygen.sty 
@@ -11,11 +11,12 @@ $NetBSD: patch-af,v 1.4 2009/09/27 01:30:38 minskim Exp $
  
  clean: 
  	rm -rf ../html ../latex *.bak 
-@@ -31,6 +31,6 @@ clean: 
+@@ -31,7 +31,7 @@ clean: 
  language: language.doc 
  
  language.doc: $(wildcard ../src/translator*.h) maintainers.txt language.tpl translator.py
 -	python translator.py
 +	@PYTHONBIN@ translator.py
  
- FORCE:
+ config.doc:  ../src/config.xml ../src/configgen.py
+ 	python ../src/configgen.py -doc ../src/config.xml > config.doc
