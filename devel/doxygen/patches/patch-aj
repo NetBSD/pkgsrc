@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2013/05/21 14:43:05 wiz Exp $
+$NetBSD: patch-aj,v 1.4 2013/09/02 16:38:56 wiz Exp $
 
 make build honor LDFLAGS
 
---- src/doxygen.pro.in.orig	2013-03-24 14:12:01.000000000 +0000
+--- src/doxygen.pro.in.orig	2013-07-28 13:28:16.000000000 +0000
 +++ src/doxygen.pro.in
 @@ -19,6 +19,7 @@ CONFIG       =	console warn_on $extraopt
  HEADERS      =	doxygen.h 
@@ -10,5 +10,5 @@ make build honor LDFLAGS
  unix:LIBS                  += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 -lpthread %%SQLITE3_LIBS%% %%LIBCLANG_LIBS%%
 +unix:TMAKE_LFLAGS          += $(LDFLAGS)
  win32:INCLUDEPATH          += .
- win32-mingw:LIBS           += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 -lpthread %%SQLITE3_LIBS%% %%LIBCLANG_LIBS%%
+ win32-mingw:LIBS           += -L../lib -ldoxygen -ldoxycfg -lqtools -lmd5 -lpthread -llibiconv -lole32 %%SQLITE3_LIBS%% %%LIBCLANG_LIBS%%
  win32-msvc:LIBS            += qtools.lib md5.lib doxygen.lib doxycfg.lib shell32.lib iconv.lib
