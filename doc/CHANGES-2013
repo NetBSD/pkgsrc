@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3173 2013/09/02 11:10:58 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3174 2013/09/02 11:13:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4566,3 +4566,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkgin to 0.6.4nb1 [jperkin 2013-09-02]
 	Updated x11/enlightenment to 0.17.3nb3 [obache 2013-09-02]
 	Updated multimedia/vlc to 1.1.13nb31 [jperkin 2013-09-02]
+	Updated multimedia/vlc2 to 2.0.8nb1 [jperkin 2013-09-02]
