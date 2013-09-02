@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.27 2013/05/29 22:53:36 wiz Exp $
+$NetBSD: distinfo,v 1.28 2013/09/02 16:52:04 wiz Exp $
 
-SHA1 (gnupg-2.0.20.tar.bz2) = 7ddfefa37ee9da89a8aaa8f9059d251b4cd02562
-RMD160 (gnupg-2.0.20.tar.bz2) = 5a506b29a5c42b8b4870f76c99a41eeaf45a0911
-Size (gnupg-2.0.20.tar.bz2) = 4286191 bytes
-SHA1 (patch-CVE-2012-6085) = cbc5ff88eaaebcff9c7bc7983b3d363eff4fcd8b
+SHA1 (gnupg-2.0.21.tar.bz2) = 5ba8cce72eb4fd1a3ac1a282d25d7c7b90d3bf26
+RMD160 (gnupg-2.0.21.tar.bz2) = af86b72afed2a459fb54a56640e9d45ec1fe0992
+Size (gnupg-2.0.21.tar.bz2) = 4300604 bytes
 SHA1 (patch-ai) = 4445d30150518f71f996e3b368a81523daded2e2
 SHA1 (patch-aj) = bfd21504e0d55f99df543912b1cdf2c573de2f98
 SHA1 (patch-al) = ef7c698ed102c4e27bbf707ae5d1fce4c2b5d8d4
