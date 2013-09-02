@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/09/02 10:38:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2013/09/02 11:01:42 jperkin Exp $
 #
 
 GHCOMMIT=		3859170568fbe4fe21b5660dbaeca8d65ac10f1b
@@ -51,7 +51,7 @@ CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
-DEPENDS+=		pkg_install>=20110215:../../pkgtools/pkg_install
+DEPENDS+=		pkg_install>=20130901:../../pkgtools/pkg_install
 
 # those have official repositories
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Minix"
