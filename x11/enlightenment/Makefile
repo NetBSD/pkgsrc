@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2013/07/05 13:29:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2013/09/02 11:08:16 obache Exp $
 #
 
 DISTNAME=	enlightenment-0.17.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -42,6 +42,10 @@ SUBST_CLASSES+=		solhost
 SUBST_STAGE.solhost=	pre-configure
 SUBST_FILES.solhost=	configure
 SUBST_SED.solhost=	-e '/^MODULE_ARCH=/s/.host_os/solaris/'
+.endif
+
+.if ${X11_TYPE} == "modular"
+CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
 .endif
 
 pre-install:
