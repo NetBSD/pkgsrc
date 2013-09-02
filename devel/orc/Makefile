@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/03/15 22:13:02 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/09/02 16:10:39 wiz Exp $
 
-DISTNAME=	orc-0.4.17
+DISTNAME=	orc-0.4.18
 CATEGORIES=	devel
 MASTER_SITES=	http://code.entropywave.com/download/orc/
 
