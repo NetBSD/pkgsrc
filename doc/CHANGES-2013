@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3191 2013/09/02 16:54:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3192 2013/09/02 16:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/dejavu-ttf to 2.34 [wiz 2013-09-02]
 	Updated security/gnupg2 to 2.0.21 [wiz 2013-09-02]
 	Updated games/puzzles to 10035 [wiz 2013-09-02]
+	Updated textproc/raptor2 to 2.0.10 [wiz 2013-09-02]
