@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/04/19 22:11:50 seb Exp $
+$NetBSD: patch-aa,v 1.2 2013/09/02 13:16:26 obache Exp $
 
 Prevent interactive configuration.
 
---- Coro/Makefile.PL.orig	2009-08-22 22:36:23.000000000 +0000
+--- Coro/Makefile.PL.orig	2012-12-07 13:18:19.000000000 +0000
 +++ Coro/Makefile.PL
 @@ -23,9 +23,9 @@ maintainer :)
  
@@ -15,4 +15,4 @@ Prevent interactive configuration.
 +#}
  
  
- $DEFINE .= " -DHAVE_MMAP" if $Config{d_mmap} eq "define" && $Config{d_munmap} eq "define";
+ my $iface;
