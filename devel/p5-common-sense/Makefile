@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/05/31 12:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2013/09/02 12:48:10 obache Exp $
 
-DISTNAME=	common-sense-3.6
+DISTNAME=	common-sense-3.72
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
 
