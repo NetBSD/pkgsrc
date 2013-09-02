@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3184 2013/09/02 16:10:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3185 2013/09/02 16:11:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Async-Interrupt to 1.10 [obache 2013-09-02]
 	Updated sysutils/desktop-file-utils to 0.22 [wiz 2013-09-02]
 	Updated devel/orc to 0.4.18 [wiz 2013-09-02]
+	Updated devel/meld to 1.7.5 [wiz 2013-09-02]
