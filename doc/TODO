@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12502 2013/09/02 16:08:20 wiz Exp $
+$NetBSD: TODO,v 1.12503 2013/09/02 16:10:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -847,7 +847,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openscad-2013.06
 	o openslp-2.0.0
 	o openssh-6.2p1
-	o orc-0.4.18
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
