@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3180 2013/09/02 13:16:40 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3181 2013/09/02 13:26:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4573,3 +4573,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Async-Interrupt to 1.1 [obache 2013-09-02]
 	Updated devel/p5-IO-AIO to 4.18 [obache 2013-09-02]
 	Updated devel/p5-Coro to 6.31 [obache 2013-09-02]
+	Updated www/p5-HTTP-Server-EV to 0.67 [obache 2013-09-02]
