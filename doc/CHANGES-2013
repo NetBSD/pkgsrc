@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3195 2013/09/02 18:40:51 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3196 2013/09/02 21:29:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4588,3 +4588,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/gssdp to 0.14.4 [wiz 2013-09-02]
 	Updated net/gupnp to 0.20.4 [wiz 2013-09-02]
 	Updated print/poppler to 0.24.1 [wiz 2013-09-02]
+	Updated graphics/gd to 2.1.0 [adam 2013-09-02]
+	Updated graphics/p5-GD to 2.50 [adam 2013-09-02]
+	Updated graphics/p5-GDGraph to 1.48 [adam 2013-09-02]
