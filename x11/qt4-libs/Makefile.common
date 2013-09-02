@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2013/07/07 18:13:56 adam Exp $
+# $NetBSD: Makefile.common,v 1.37 2013/09/02 19:51:32 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -90,7 +90,11 @@ SYS_LIBS=		-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
 .elif ${OPSYS} == "Darwin"
+.  if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ARGS+=	-platform macx-llvm
+.  else
 CONFIGURE_ARGS+=	-platform macx-g++
+.  endif
 CONFIGURE_ARGS+=	-no-dwarf2
 CONFIGURE_ARGS+=	-no-framework
 .  if exists(/usr/lib/libresolv.dylib)

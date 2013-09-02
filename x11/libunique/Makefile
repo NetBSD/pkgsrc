@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/06/06 12:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/09/02 19:50:47 adam Exp $
 #
 
 DISTNAME=	libunique-1.1.6
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libunique/1.1/}
 
