@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/06/06 12:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/02 19:51:26 adam Exp $
 #
 
 DISTNAME=	openxenmanager_0.r80+dfsg.orig
 PKGNAME=	openxenmanager-0.0.80
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/o/openxenmanager/}
 

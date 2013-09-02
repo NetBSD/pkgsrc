@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2013/06/06 12:53:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2013/09/02 19:50:43 adam Exp $
 
 BUILDLINK_TREE+=	gdl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdl
 GDL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdl+=	gdl>=0.6.1
-BUILDLINK_ABI_DEPENDS.gdl+=	gdl>=2.26.2nb26
+BUILDLINK_ABI_DEPENDS.gdl+=	gdl>=2.26.2nb27
 BUILDLINK_PKGSRCDIR.gdl?=	../../devel/gdl
 
 .include "../../devel/libglade/buildlink3.mk"

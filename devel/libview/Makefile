@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/06/06 12:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/09/02 19:50:40 adam Exp $
 #
 
 DISTNAME=	libview-0.6.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=view/}
 

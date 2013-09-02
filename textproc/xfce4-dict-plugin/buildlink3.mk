@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2013/06/06 12:53:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2013/09/02 19:50:48 adam Exp $
 
 BUILDLINK_TREE+=	xfce4-dict-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-dict-plugin
 XFCE4_DICT_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-dict-plugin+=	xfce4-dict-plugin>=0.2.1
-BUILDLINK_ABI_DEPENDS.xfce4-dict-plugin+=	xfce4-dict-plugin>=0.2.1nb18
+BUILDLINK_ABI_DEPENDS.xfce4-dict-plugin+=	xfce4-dict-plugin>=0.2.1nb19
 BUILDLINK_PKGSRCDIR.xfce4-dict-plugin?=	../../textproc/xfce4-dict-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2013/06/06 12:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2013/09/02 19:51:08 adam Exp $
 
 DISTNAME=	gliv-1.9.6
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	graphics
 MASTER_SITES=	http://guichaz.free.fr/gliv/files/
 EXTRACT_SUFX=	.tar.bz2

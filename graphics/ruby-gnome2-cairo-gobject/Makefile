@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/06/20 09:12:14 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/02 19:51:09 adam Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-cairo-gobject-${VERSION}
 COMMENT=		Ruby binding of cairo-gobject
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 
 RUBY_EXTCONF_SUBDIRS=	cairo-gobject

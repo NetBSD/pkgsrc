@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2013/06/06 12:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2013/09/02 19:51:16 adam Exp $
 #
 
 DISTNAME=	gkrellflynn-0.8
 PKGNAME=	${DISTNAME:S/gkrell/gkrellm-/}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	misc
 MASTER_SITES=	http://bax.comlab.uni-rostock.de/fileadmin/downloads/
 
