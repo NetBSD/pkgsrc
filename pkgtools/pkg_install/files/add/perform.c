@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.104 2013/08/21 11:46:02 jperkin Exp $	*/
+/*	$NetBSD: perform.c,v 1.105 2013/09/02 10:28:44 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.104 2013/08/21 11:46:02 jperkin Exp $");
+__RCSID("$NetBSD: perform.c,v 1.105 2013/09/02 10:28:44 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -412,9 +412,6 @@ check_already_installed(struct pkg_task *pkg)
 		}
 		return 1;
 	}
-
-	if (Force)
-		return 1;
 
 	/* We can only arrive here for explicitly requested packages. */
 	if (!Automatic && is_automatic_installed(pkg->pkgname)) {
