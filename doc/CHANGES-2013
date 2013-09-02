@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3170 2013/09/02 10:29:00 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3171 2013/09/02 10:38:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4563,3 +4563,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/hdf5-c++ to 1.8.11 [adam 2013-09-01]
 	Updated devel/scons to 2.3.0 [adam 2013-09-01]
 	Updated pkgtools/pkg_install to 20130902 [jperkin 2013-09-02]
+	Updated pkgtools/pkgin to 0.6.4nb1 [jperkin 2013-09-02]
