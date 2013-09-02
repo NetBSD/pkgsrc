@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/11/29 14:21:32 wen Exp $
+$NetBSD: distinfo,v 1.3 2013/09/02 12:42:13 obache Exp $
 
-SHA1 (File-Util-3.32.tar.gz) = cb5a5be242230f429aaa78c31062f80eb85ec124
-RMD160 (File-Util-3.32.tar.gz) = 793a6ccde496ca8316866013259f88070b5d28e3
-Size (File-Util-3.32.tar.gz) = 49081 bytes
+SHA1 (File-Util-3.39.tar.gz) = 08b8cbca30c754e6885213f497fc6859cd8a29ee
+RMD160 (File-Util-3.39.tar.gz) = 70d35f51e047a6d884cb02bee780185f15621d91
+Size (File-Util-3.39.tar.gz) = 61172 bytes
