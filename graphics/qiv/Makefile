@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2013/07/05 13:29:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2013/09/02 19:51:09 adam Exp $
 
 DISTNAME=	qiv-2.2.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://spiegl.de/qiv/download/
 EXTRACT_SUFX=	.tgz

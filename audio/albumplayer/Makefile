@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2013/07/05 15:10:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2013/09/02 19:50:51 adam Exp $
 #
 
 DISTNAME=	albumplayer-0.3.1
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	audio
 MASTER_SITES=	http://rvb.mytanet.de/
 

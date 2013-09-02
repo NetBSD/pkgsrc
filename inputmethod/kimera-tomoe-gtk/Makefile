@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/06/06 12:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/09/02 19:51:12 adam Exp $
 #
 
 DISTNAME=	kimera-tomoe-gtk-0.5
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kimera/24906/}
 

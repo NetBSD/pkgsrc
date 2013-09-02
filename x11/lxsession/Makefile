@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/06/06 12:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/02 19:51:31 adam Exp $
 
 DISTNAME=	lxsession-0.4.6.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 

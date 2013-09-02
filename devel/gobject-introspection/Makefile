@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2013/06/05 14:51:22 taca Exp $
+# $NetBSD: Makefile,v 1.34 2013/09/02 19:50:59 adam Exp $
 #
 
 DISTNAME=	gobject-introspection-1.36.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/1.36/}
 EXTRACT_SUFX=	.tar.xz

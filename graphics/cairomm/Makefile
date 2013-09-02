@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/06/04 22:16:14 tron Exp $
+# $NetBSD: Makefile,v 1.28 2013/09/02 19:50:39 adam Exp $
 
 DISTNAME=	cairomm-1.10.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
