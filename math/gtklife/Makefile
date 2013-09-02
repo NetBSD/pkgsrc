@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2013/06/06 12:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/09/02 19:51:15 adam Exp $
 
 DISTNAME=	gtklife-5.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	math
 MASTER_SITES=	http://ironphoenix.org/tril/gtklife/
 
