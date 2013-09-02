@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2013/07/22 14:25:05 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.56 2013/09/02 19:51:33 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
+PKGREVISION=	1
 COMMENT=	Demo viewer and configuration tool for xscreensaver
 
 CONFLICTS+=	xscreensaver<4.14 xscreensaver-gnome-[0-9]*
