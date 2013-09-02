@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2013/03/15 22:13:02 wiz Exp $
+$NetBSD: distinfo,v 1.10 2013/09/02 16:10:39 wiz Exp $
 
-SHA1 (orc-0.4.17.tar.gz) = 5cb7b3225a23bc4a5771a62e9c94a90d21609632
-RMD160 (orc-0.4.17.tar.gz) = f8973115c16d0b9ac01e68762da28813be68a971
-Size (orc-0.4.17.tar.gz) = 724990 bytes
+SHA1 (orc-0.4.18.tar.gz) = 0119bec2291c878a7953cb041dd080856c986ccf
+RMD160 (orc-0.4.18.tar.gz) = 5a68330127da7e03e8a4d844af72cca9c5f25894
+Size (orc-0.4.18.tar.gz) = 732377 bytes
 SHA1 (patch-ab) = 589967ac10bbfcf1cf557918aed86a93f0d85a2b
