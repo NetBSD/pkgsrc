@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12506 2013/09/02 16:40:02 wiz Exp $
+$NetBSD: TODO,v 1.12507 2013/09/02 16:47:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddclient-3.7.3
 	o ddrescue-1.17
 	o defendguin-0.0.11
-	o dejavu-ttf-2.34
 	o delegate-9.9.7
 	o denemo-1.0.6
 	o dhid-5.3
