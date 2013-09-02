@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.9 2013/07/04 21:27:58 adam Exp $
+# $NetBSD: options.mk,v 1.10 2013/09/02 11:13:00 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad skins sdl pulseaudio x11
 PKG_SUPPORTED_OPTIONS+=		gnome dts rtsp
 # XXX broken
 #PKG_SUPPORTED_OPTIONS+=	dbus
-PKG_SUGGESTED_OPTIONS=		x11 rtsp
+PKG_SUGGESTED_OPTIONS=		faad x11 rtsp
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
@@ -135,8 +135,6 @@ CONFIGURE_ARGS+=	--without-x \
 			--disable-freetype \
 			--disable-snapshot
 .endif
-
-## FAAD support (faad is non-redistributable)
 
 .if !empty(PKG_OPTIONS:Mfaad)
 CONFIGURE_ARGS+=	--enable-faad
