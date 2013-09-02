@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3171 2013/09/02 10:38:16 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3172 2013/09/02 11:08:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4564,3 +4564,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scons to 2.3.0 [adam 2013-09-01]
 	Updated pkgtools/pkg_install to 20130902 [jperkin 2013-09-02]
 	Updated pkgtools/pkgin to 0.6.4nb1 [jperkin 2013-09-02]
+	Updated x11/enlightenment to 0.17.3nb3 [obache 2013-09-02]
