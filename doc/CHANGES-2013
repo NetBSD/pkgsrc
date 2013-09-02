@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3176 2013/09/02 12:42:30 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3177 2013/09/02 12:48:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4569,3 +4569,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/vlc2 to 2.0.8nb1 [jperkin 2013-09-02]
 	Updated devel/p5-EV to 4.15 [obache 2013-09-02]
 	Updated devel/p5-File-Util to 3.39 [obache 2013-09-02]
+	Updated devel/p5-common-sense to 3.72 [obache 2013-09-02]
