@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3186 2013/09/02 16:13:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3187 2013/09/02 16:40:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4579,3 +4579,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/orc to 0.4.18 [wiz 2013-09-02]
 	Updated devel/meld to 1.7.5 [wiz 2013-09-02]
 	Updated devel/py-setuptools to 1.1 [wiz 2013-09-02]
+	Updated devel/doxygen to 1.8.5 [wiz 2013-09-02]
