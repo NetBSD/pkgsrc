@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12505 2013/09/02 16:13:01 wiz Exp $
+$NetBSD: TODO,v 1.12506 2013/09/02 16:40:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhid-5.3
 	o digikam-3.3.0
 	o doclifter-2.12
-	o doxygen-1.8.5
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2013.56
@@ -555,7 +554,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gentoo-0.20.3
 	o gfract-0.33
 	o ghc-7.6
-	o giflib-5.0.5
 	o gifsicle-1.48
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
