@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/03/15 22:13:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/02 16:10:39 wiz Exp $
 bin/orc-bugreport
 bin/orcc
 include/orc-0.4/orc-test/orcarray.h
@@ -66,6 +66,7 @@ share/gtk-doc/html/orc/orc-building.html
 share/gtk-doc/html/orc/orc-concepts.html
 share/gtk-doc/html/orc/orc-misc.html
 share/gtk-doc/html/orc/orc-opcodes.html
+share/gtk-doc/html/orc/orc-program.html
 share/gtk-doc/html/orc/orc-runninging.html
 share/gtk-doc/html/orc/orc-tutorial.html
 share/gtk-doc/html/orc/orc-x86.html
