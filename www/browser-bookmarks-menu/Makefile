@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2013/06/06 12:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2013/09/02 19:51:28 adam Exp $
 #
 
 DISTNAME=	browser-bookmarks-menu-0.6
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=browserbookapp/}
 

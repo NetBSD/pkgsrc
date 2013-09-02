@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/08/16 09:20:41 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/02 19:51:26 adam Exp $
 
 DISTNAME=	ruby-libnotify-0.5.1
 PKGNAME=	${DISTNAME:S/ruby/${RUBY_PKGPREFIX}/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	-https://github.com/vargolo/ruby-libnotify/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
