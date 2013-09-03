@@ -1,0 +1,10 @@
+Squid proxy native log analyser and reports generator with full statistics
+about times, hits, bytes, users, networks, top urls and top domains. Statistic
+reports are oriented toward user and bandwidth control; this is not a pure
+cache statistics generator.
+
+SquidAnalyzer use flat files to store data and don't need any SQL, SQL Lite or
+Berkeley databases.
+
+This log analyzer is incremental and should be run in a daily cron or more
+often on huge network trafic.
