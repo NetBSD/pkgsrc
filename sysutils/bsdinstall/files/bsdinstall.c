@@ -1,4 +1,4 @@
-/*	$NetBSD: bsdinstall.c,v 1.1 2013/08/28 11:42:36 jperkin Exp $	*/
+/*	$NetBSD: bsdinstall.c,v 1.2 2013/09/03 15:27:38 jperkin Exp $	*/
 /*	NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp	*/
 
 /*
@@ -66,7 +66,9 @@ __RCSID("NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp");
 #include <sys/time.h>
 
 #include <ctype.h>
+#ifdef HAVE_ERR_H
 #include <err.h>
+#endif
 #include <errno.h>
 #include <fcntl.h>
 #include <grp.h>
@@ -78,7 +80,11 @@ __RCSID("NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp");
 #endif
 #include <pwd.h>
 #include <stdio.h>
+#if defined(HAVE_NBCOMPAT_H)
+#include <nbcompat/stdlib.h>
+#else
 #include <stdlib.h>
+#endif
 #include <string.h>
 #include <unistd.h>
 #if defined(HAVE_NBCOMPAT_H)
@@ -889,13 +895,17 @@ copy(int from_fd, char *from_name, int to_fd, char *to_name, off_t size)
 		 */
 
 		if (size <= 8 * 1048576) {
-			if ((p = mmap(NULL, (size_t)size, PROT_READ,
+			if ((p = (u_char *)mmap(NULL, (size_t)size, PROT_READ,
 			    MAP_SHARED, from_fd, (off_t)0))
 			    == MAP_FAILED) {
 				goto mmap_failed;
 			}
 #if defined(MADV_SEQUENTIAL) && !defined(__APPLE__)
-			if (madvise(p, (size_t)size, MADV_SEQUENTIAL) == -1
+			if (madvise(
+#  ifdef __sun
+			    (caddr_t)
+#  endif
+			    p, (size_t)size, MADV_SEQUENTIAL) == -1
 			    && errno != EOPNOTSUPP)
 				warnx("madvise: %s", strerror(errno));
 #endif
@@ -928,7 +938,11 @@ copy(int from_fd, char *from_name, int to_fd, char *to_name, off_t size)
 			default:
 				break;
 			}
-			(void)munmap(p, size);
+			(void)munmap(
+#ifdef __sun
+			    (caddr_t)
+#endif
+			    p, size);
 		} else {
  mmap_failed:
 			while ((nr = read(from_fd, buf, sizeof(buf))) > 0) {
