@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3200 2013/09/03 09:25:00 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3201 2013/09/03 09:52:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4595,3 +4595,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/ghostscript-agpl to 9.10 [adam 2013-09-03]
 	Updated devel/libdatrie to 0.2.6 [obache 2013-09-03]
 	Updated devel/libthai to 0.1.19 [obache 2013-09-03]
+	Updated www/p5-Dancer2 to 0.09 [wen 2013-09-03]
