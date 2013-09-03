@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/03 10:08:25 adam Exp $
+bin/squid-analyzer
+man/man3/squidanalyzer.3
+share/examples/squidanalyzer/excluded
+share/examples/squidanalyzer/lang/de_DE.txt
+share/examples/squidanalyzer/lang/en_US.txt
+share/examples/squidanalyzer/lang/fr_FR.txt
+share/examples/squidanalyzer/lang/pt_BR.txt
+share/examples/squidanalyzer/network-aliases
+share/examples/squidanalyzer/squidanalyzer.conf
+share/examples/squidanalyzer/user-aliases
+share/squidanalyzer/flotr2.js
+share/squidanalyzer/images/back-arrow.png
+share/squidanalyzer/images/cursor.png
+share/squidanalyzer/images/domain.png
+share/squidanalyzer/images/info.png
+share/squidanalyzer/images/logo-squidanalyzer.png
+share/squidanalyzer/images/network.png
+share/squidanalyzer/images/user.png
+share/squidanalyzer/sorttable.js
+share/squidanalyzer/squidanalyzer.css
