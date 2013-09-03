@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/03 16:18:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/03 16:22:06 ryoon Exp $
 
 DISTNAME=	slnunicode-1.1apl1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -8,9 +8,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/LuaDist/slnunicode/
 COMMENT=	Unicode library for Lua
-#LICENSE=	# TODO: (see mk/license.mk)
-
-FETCH_USING=	curl
 
 BUILD_TARGET=	unicode.so
 
