@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.740 2013/08/26 00:56:32 wen Exp $
+# $NetBSD: Makefile,v 1.741 2013/09/03 16:19:26 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -309,6 +309,7 @@ SUBDIR+=	lit2epub
 SUBDIR+=	lout
 SUBDIR+=	lq-sp
 SUBDIR+=	lua-expat
+SUBDIR+=	lua-slnunicode
 SUBDIR+=	makeindexk
 SUBDIR+=	makeztxt
 SUBDIR+=	markdown-mode
