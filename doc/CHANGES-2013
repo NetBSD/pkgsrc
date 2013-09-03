@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3203 2013/09/03 11:29:36 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3204 2013/09/03 13:40:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4598,3 +4598,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Dancer2 to 0.09 [wen 2013-09-03]
 	Added www/squidanalyzer version 5.2 [adam 2013-09-03]
 	Updated net/rabbiter to 2.0.1 [obache 2013-09-03]
+	Updated www/c-icap to 0.2.5 [adam 2013-09-03]
+	Updated www/c-icap-modules to 0.2.4 [adam 2013-09-03]
+	Updated www/squidclamav to 6.10 [adam 2013-09-03]
