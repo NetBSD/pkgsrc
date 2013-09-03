@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/08/22 14:42:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2013/09/03 05:24:50 richard Exp $
 #
 
 DISTNAME=	mdds_0.9.0
@@ -6,6 +6,7 @@ PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=	http://multidimalgorithm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
+EXTRACT_USING=	gtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/multidimalgorithm/
