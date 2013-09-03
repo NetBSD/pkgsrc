@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.97 2013/09/03 10:02:54 tron Exp $
+# $NetBSD: Makefile,v 1.98 2013/09/03 10:39:25 obache Exp $
 
 DISTNAME=	libgd-2.1.0
 PKGNAME=	${DISTNAME:S/libgd/gd/}
 CATEGORIES=	graphics
-MASTER_SITES=	https://bitbucket.org/libgd/gd-libgd/downloads/
+MASTER_SITES=	http://cdn.bitbucket.org/libgd/gd-libgd/downloads/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
@@ -14,7 +14,6 @@ COMMENT=	Graphics library for the dynamic creation of images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-FETCH_USING=		curl
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
