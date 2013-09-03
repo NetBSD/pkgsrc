@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2007/03/24 06:49:02 schmonz Exp $
+$NetBSD: patch-ac,v 1.6 2013/09/03 17:50:28 shattered Exp $
 
 --- doc/nullmailer-queue.8.orig	2002-12-23 12:29:20.000000000 -0500
 +++ doc/nullmailer-queue.8
-@@ -30,13 +30,13 @@ This is provided to allow local daemons 
- being bounced by your relay host.
+@@ -31,13 +31,13 @@ being bounced by your relay host. To sen
+ them all on one line separated by a comma.
  .SH OTHER FILES
  .TP
 -.B /var/nullmailer/queue
