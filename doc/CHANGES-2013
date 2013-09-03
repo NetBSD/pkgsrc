@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3204 2013/09/03 13:40:53 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3205 2013/09/03 14:48:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4601,3 +4601,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/c-icap to 0.2.5 [adam 2013-09-03]
 	Updated www/c-icap-modules to 0.2.4 [adam 2013-09-03]
 	Updated www/squidclamav to 6.10 [adam 2013-09-03]
+	Updated databases/p5-DBM-Deep to 2.0009 [wen 2013-09-03]
