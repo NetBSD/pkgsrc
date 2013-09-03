@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2013/08/25 02:26:38 jnemeth Exp $
+# $NetBSD: Makefile,v 1.115 2013/09/03 02:23:52 jnemeth Exp $
 
 DISTNAME=	qemu-1.6.0
 CATEGORIES=	emulators
@@ -18,7 +18,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 NOT_FOR_PLATFORM=	NetBSD-5*-*
 
 USE_TOOLS+=		gmake makeinfo perl:build pkg-config
-USE_NCURSES=		yes
+USE_NCURSES=		yes			# requires resize_term()
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
