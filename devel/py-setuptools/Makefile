@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/09/02 16:12:49 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/09/03 09:03:09 tron Exp $
 
 EGG_VERSION=		1.1
 DISTNAME=		setuptools-${EGG_VERSION}
@@ -36,7 +36,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/entry_points.txt.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/entry_points.txt.orig
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*
 
 .include "../../lang/python/application.mk"
