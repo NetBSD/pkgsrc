@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3196 2013/09/02 21:29:52 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3197 2013/09/03 00:44:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4591,3 +4591,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gd to 2.1.0 [adam 2013-09-02]
 	Updated graphics/p5-GD to 2.50 [adam 2013-09-02]
 	Updated graphics/p5-GDGraph to 1.48 [adam 2013-09-02]
+	Updated www/p5-Mojolicious to 4.30 [wen 2013-09-03]
