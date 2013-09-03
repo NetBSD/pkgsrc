@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3207 2013/09/03 14:58:34 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3208 2013/09/03 16:20:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBM-Deep to 2.0009 [wen 2013-09-03]
 	Updated devel/p5-Getopt-Euclid to 0.4.4 [wen 2013-09-03]
 	Updated devel/p5-UUID-Tiny to 1.04 [wen 2013-09-03]
+	Added textproc/lua-slnunicode version 1.1apl1 [ryoon 2013-09-03]
