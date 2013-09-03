@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3201 2013/09/03 09:52:37 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3202 2013/09/03 10:10:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4596,3 +4596,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/libdatrie to 0.2.6 [obache 2013-09-03]
 	Updated devel/libthai to 0.1.19 [obache 2013-09-03]
 	Updated www/p5-Dancer2 to 0.09 [wen 2013-09-03]
+	Added www/squidanalyzer version 5.2 [adam 2013-09-03]
