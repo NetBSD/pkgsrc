@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3198 2013/09/03 06:39:53 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3199 2013/09/03 09:13:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4593,3 +4593,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/p5-GDGraph to 1.48 [adam 2013-09-02]
 	Updated www/p5-Mojolicious to 4.30 [wen 2013-09-03]
 	Updated print/ghostscript-agpl to 9.10 [adam 2013-09-03]
+	Updated devel/libdatrie to 0.2.6 [obache 2013-09-03]
