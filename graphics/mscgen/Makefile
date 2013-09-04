@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 22:16:24 tron Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/04 12:31:25 obache Exp $
 #
 
 DISTNAME=		mscgen-src-0.20
 PKGNAME=		${DISTNAME:S/-src-/-/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel graphics
 MASTER_SITES=		http://www.mcternan.me.uk/mscgen/software/
 
