@@ -100,7 +100,7 @@ GAMEDIRMODE=		0775
 
 PAM_DEFAULT?=		openpam
 
-PREFER.zlib?=		pkgsrc
-PREFER.bzip2?=		pkgsrc
-PREFER.curses?=		pkgsrc
-PREFER.termcap?=	pkgsrc
+_OPSYS_PREFER.zlib?=	pkgsrc
+_OPSYS_PREFER.bzip2?=	pkgsrc
+_OPSYS_PREFER.curses?=	pkgsrc
+_OPSYS_PREFER.termcap?=	pkgsrc
