@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/07/15 01:25:59 obache Exp $
+# $NetBSD: options.mk,v 1.6 2013/09/04 17:22:13 prlw1 Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
@@ -14,9 +14,9 @@ PLIST.introspection=	yes
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-intrpspection=yes
+CONFIGURE_ARGS+=	--enable-introspection=yes
 .else
-CONFIGURE_ARGS+=	--enable-intrpspection=no
+CONFIGURE_ARGS+=	--enable-introspection=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
