@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 15:31:00 taca Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/04 02:38:06 taca Exp $
 #
 
-DIST_SUBDIR=	${CT_DIST_SUBDIR}
 LICENSE=	gnu-lgpl-v3
 
 CT_VERS=	211
