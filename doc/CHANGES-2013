@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3209 2013/09/03 17:55:48 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.3210 2013/09/04 09:24:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4607,3 +4607,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/lua-slnunicode version 1.1apl1 [ryoon 2013-09-03]
 	Updated mail/nullmailer to 1.13 [shattered 2013-09-03]
 	Updated x11/xdesktopwaves to 1.3 [shattered 2013-09-03]
+	Updated devel/mercurial to 2.7.1 [wiz 2013-09-04]
