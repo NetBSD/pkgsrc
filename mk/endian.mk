@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.6 2009/01/14 17:27:37 sketch Exp $
+# $NetBSD: endian.mk,v 1.7 2013/09/04 08:26:28 joerg Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -15,6 +15,8 @@
 # .endif
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "../../mk/compiler.mk"
 
 .if !defined(MACHINE_ENDIAN)
 .  if exists(/usr/include/endian.h)
@@ -41,7 +43,7 @@ MACHINE_ENDIAN!=							\
 	  ${ECHO} "\#define BYTE_ORDER 1234";				\
 	  ${ECHO} "\#endif";						\
 	  ${ECHO} "\#endif";						\
-	  ${ECHO} "BYTE_ORDER"; } | ${CC} -E - |			\
+	  ${ECHO} "BYTE_ORDER"; } | ${CCPATH} -E - |			\
 	{ while read line; do						\
 		case $$line in						\
 		1234)	${ECHO} "little"; exit 0 ;;			\
