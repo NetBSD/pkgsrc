@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.54 2013/08/16 12:11:17 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.55 2013/09/04 15:14:45 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -96,8 +96,8 @@ _USE_RPATH=		no	# don't add rpath to LDFLAGS
 KRB5_DEFAULT?=		mit-krb5
 
 # Builtin defaults which make sense for this platform.
-PREFER.linux-pam?=	native
-PREFER.mit-krb5?=	native
+_OPSYS_PREFER.linux-pam?=	native
+_OPSYS_PREFER.mit-krb5?=	native
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
