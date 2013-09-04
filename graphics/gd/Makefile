@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2013/09/03 10:39:25 obache Exp $
+# $NetBSD: Makefile,v 1.99 2013/09/04 09:39:20 jperkin Exp $
 
 DISTNAME=	libgd-2.1.0
 PKGNAME=	${DISTNAME:S/libgd/gd/}
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 REPLACE_PERL+=		src/bdftogd
 PTHREAD_AUTO_VARS=	yes
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
