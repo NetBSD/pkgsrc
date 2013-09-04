@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2013/06/04 22:16:18 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2013/09/04 12:31:24 obache Exp $
 
 BUILDLINK_TREE+=	gdchart
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdchart
 GDCHART_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdchart+=	gdchart>=0.11.4nb1
-BUILDLINK_ABI_DEPENDS.gdchart+=	gdchart>=0.11.5nb11
+BUILDLINK_ABI_DEPENDS.gdchart+=	gdchart>=0.11.5nb13
 BUILDLINK_PKGSRCDIR.gdchart?=	../../graphics/gdchart
 
 .include "../../graphics/gd/buildlink3.mk"
