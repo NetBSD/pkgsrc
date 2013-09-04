@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.11 2010/05/19 09:12:15 sbd Exp $
+# $NetBSD: bsd.builtin.mk,v 1.12 2013/09/04 15:14:45 jperkin Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -124,14 +124,29 @@
 
 .for _pkg_ in ${BUILTIN_PKG}
 #
-# Define PREFER.<pkg> to be either "pkgsrc" or "native" depending on
-# whether to prefer the pkgsrc or native versions of software that's
-# also part of the base system.  Its value is determined from the
-# user-settable values PREFER_PKGSRC and PREFER_NATIVE.  Preferences are
-# determined by the most specific instance of the package in either
-# PREFER_PKGSRC or PREFER_NATIVE.  If a package is specified in neither
-# or in both variables, then PREFER_PKGSRC has precedence over
-# PREFER_NATIVE.
+# Define PREFER.<pkg> to be either "pkgsrc" or "native" depending on whether
+# to prefer the pkgsrc or native version of a particular package.  Its value
+# is determined by a number of variables described below.
+#
+# PREFER.<pkg>
+#	This variable has the highest precedence, and should generally only be
+#	used by packages when it is known that a specific version should always
+#	be used or avoided.
+#
+# PREFER_PKGSRC
+# PREFER_NATIVE
+#	These user-settable variables either take "yes" or a list of package
+#	names.  The "yes" form has a lower precedence than a specific package,
+#	so the most common case is to set one variable to "yes" and then override
+#	specific packages in the other variable.
+#
+#	If a package is specified in neither or in both variables, then the
+#	PREFER_PKGSRC setting takes precedence.
+#
+# _OPSYS_PREFER.<pkg>
+#	This variable should only be set in mk/platform files, and provides a
+#	per-platform default that takes precedence over "yes" in PREFER_* but is
+#	overridden by a more specific package name match.
 #
 _BLTN_PREFER.${_pkg_}=	pkgsrc
 .  if !empty(PREFER_NATIVE:M[yY][eE][sS])
@@ -139,6 +154,9 @@ _BLTN_PREFER.${_pkg_}=	native
 .  endif
 .  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
 _BLTN_PREFER.${_pkg_}=	pkgsrc
+.  endif
+.  if defined(_OPSYS_PREFER.${_pkg_})
+_BLTN_PREFER.${_pkg_}=	${_OPSYS_PREFER.${_pkg_}}
 .  endif
 .  if !empty(PREFER_NATIVE:M${_pkg_})
 _BLTN_PREFER.${_pkg_}=	native
