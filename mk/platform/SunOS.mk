@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.55 2013/08/27 05:43:20 richard Exp $
+# $NetBSD: SunOS.mk,v 1.56 2013/09/04 15:14:45 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -41,10 +41,10 @@ MOTIF_TYPE_DEFAULT?=	motif
 KRB5_DEFAULT?=		mit-krb5
 
 # Builtin defaults which make sense for this platform.
-PREFER.libexecinfo?=	native
-PREFER.mit-krb5?=	native
-#PREFER.openssl?=	pkgsrc
-PREFER.solaris-pam?=	native
+_OPSYS_PREFER.libexecinfo?=	native
+_OPSYS_PREFER.mit-krb5?=	native
+_OPSYS_PREFER.openssl?=		pkgsrc
+_OPSYS_PREFER.solaris-pam?=	native
 
 _OPSYS_EMULDIR.solaris=		# empty
 _OPSYS_EMULDIR.solaris32=	# empty

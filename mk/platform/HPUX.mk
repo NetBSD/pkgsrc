@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.22 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: HPUX.mk,v 1.23 2013/09/04 15:14:45 jperkin Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -70,8 +70,8 @@ KRB5_DEFAULT?=		mit-krb5
 
 # Builtin openssl and zlib have issues. Prefer pkgsrc's until we know which
 # versions work.
-PREFER.openssl?=	pkgsrc
-PREFER.zlib?=		pkgsrc
+_OPSYS_PREFER.openssl?=	pkgsrc
+_OPSYS_PREFER.zlib?=	pkgsrc
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
