@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2013/08/23 11:25:38 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2013/09/05 15:27:42 drochner Exp $
 
---- configure.py.orig	2013-08-21 05:25:44.000000000 +0000
+--- configure.py.orig	2012-02-10 10:03:04.000000000 +0000
 +++ configure.py
 @@ -19,6 +19,7 @@ import sys
  import os
@@ -9,8 +9,8 @@ $NetBSD: patch-aa,v 1.7 2013/08/23 11:25:38 drochner Exp $
 +import imp
  from distutils import sysconfig
  
- try:
-@@ -218,7 +219,7 @@ def set_platform_directories():
+ import siputils
+@@ -211,7 +212,7 @@ def set_platform_directories():
  
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.7 2013/08/23 11:25:38 drochner Exp $
  
  
  def patch_files():
-@@ -271,7 +272,7 @@ def create_config(module, template, macr
+@@ -264,7 +265,7 @@ def create_config(module, template, macr
          "sip_version":      sip_version,
          "sip_version_str":  sip_version_str,
          "platform":         opts.platform,
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.7 2013/08/23 11:25:38 drochner Exp $
          "sip_inc_dir":      opts.sipincdir,
          "sip_mod_dir":      opts.sipmoddir,
          "default_bin_dir":  plat_bin_dir,
-@@ -305,11 +306,19 @@ def create_makefiles(macros):
+@@ -297,11 +298,19 @@ def create_makefiles(macros):
  
      sipconfig.inform("Creating top level Makefile...")
  
