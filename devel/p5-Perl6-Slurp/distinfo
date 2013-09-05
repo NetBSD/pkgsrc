@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/06/07 11:57:54 abs Exp $
+$NetBSD: distinfo,v 1.2 2013/09/05 19:23:11 wiz Exp $
 
-SHA1 (Perl6-Slurp-0.03.tar.gz) = f4b98d6144e786cf13fa56ee3105e214ed803acf
-RMD160 (Perl6-Slurp-0.03.tar.gz) = 1739d3c9249c42427ac2097c098b102893a34d10
-Size (Perl6-Slurp-0.03.tar.gz) = 7120 bytes
+SHA1 (Perl6-Slurp-0.051003.tar.gz) = 4a616a1de1535f38643dbc826a361f864d703b51
+RMD160 (Perl6-Slurp-0.051003.tar.gz) = 5c479ec9360fa8bdc351c696cd1ba3202b74d6c6
+Size (Perl6-Slurp-0.051003.tar.gz) = 9831 bytes
