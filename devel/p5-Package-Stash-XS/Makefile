@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/07/03 08:34:12 sno Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/05 18:44:35 wiz Exp $
 
-DISTNAME=	Package-Stash-XS-0.26
+DISTNAME=	Package-Stash-XS-0.28
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
