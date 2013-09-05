@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3262 2013/09/05 18:58:40 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3263 2013/09/05 19:04:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4663,3 +4663,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-File-Temp to 0.23 [wiz 2013-09-05]
 	Updated devel/p5-IO-HTML to 1.00 [wiz 2013-09-05]
 	Updated devel/p5-IO-Compress to 2.062 [wiz 2013-09-05]
+	Updated devel/p5-Params-Validate to 1.08 [wiz 2013-09-05]
