@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3238 2013/09/05 18:22:21 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3239 2013/09/05 18:26:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBIx-Class-Cursor-Cached to 1.1.2 [wiz 2013-09-05]
 	Updated devel/p5-Path-Class to 0.32 [wiz 2013-09-05]
 	Updated textproc/p5-YAML-Syck to 1.27 [wiz 2013-09-05]
+	Updated databases/p5-DBIx-Class-Fixtures to 1.001020 [wiz 2013-09-05]
