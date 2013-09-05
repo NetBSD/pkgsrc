@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3220 2013/09/05 06:44:39 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3221 2013/09/05 06:51:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4618,3 +4618,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-CheckManifest to 1.26 [wen 2013-09-05]
 	Updated devel/p5-Test-Command-Simple to 0.04 [wen 2013-09-05]
 	Updated devel/p5-Test-Compile to 0.24 [wen 2013-09-05]
+	Updated devel/p5-Test-FailWarnings to 0.007 [wen 2013-09-05]
