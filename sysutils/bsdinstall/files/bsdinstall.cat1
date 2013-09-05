@@ -1,0 +1,158 @@
+
+BSDINSTALL(1)             BSD General Commands Manual            BSDINSTALL(1)
+
+NNAAMMEE
+     bbssddiinnssttaallll -- install binaries
+
+SSYYNNOOPPSSIISS
+     bbssddiinnssttaallll [--bbccpprrssUU] [--aa _c_o_m_m_a_n_d] [--BB _s_u_f_f_i_x] [--DD _d_e_s_t_d_i_r] [--ff _f_l_a_g_s]
+                [--gg _g_r_o_u_p] [--hh _h_a_s_h] [--ll _l_i_n_k_f_l_a_g_s] [--MM _m_e_t_a_l_o_g] [--mm _m_o_d_e]
+                [--NN _d_b_d_i_r] [--oo _o_w_n_e_r] [--SS _s_t_r_i_p_f_l_a_g] [--TT _t_a_g_s] _f_i_l_e_1 _f_i_l_e_2
+     bbssddiinnssttaallll [--bbccpprrssUU] [--aa _c_o_m_m_a_n_d] [--BB _s_u_f_f_i_x] [--DD _d_e_s_t_d_i_r] [--ff _f_l_a_g_s]
+                [--gg _g_r_o_u_p] [--hh _h_a_s_h] [--ll _l_i_n_k_f_l_a_g_s] [--MM _m_e_t_a_l_o_g] [--mm _m_o_d_e]
+                [--NN _d_b_d_i_r] [--oo _o_w_n_e_r] [--SS _s_t_r_i_p_f_l_a_g] [--TT _t_a_g_s] _f_i_l_e_1 _._._. _f_i_l_e_N
+                _d_i_r_e_c_t_o_r_y
+     bbssddiinnssttaallll --dd [--ppUU] [--aa _c_o_m_m_a_n_d] [--DD _d_e_s_t_d_i_r] [--gg _g_r_o_u_p] [--MM _m_e_t_a_l_o_g]
+                [--mm _m_o_d_e] [--NN _d_b_d_i_r] [--oo _o_w_n_e_r] [--TT _t_a_g_s] _d_i_r_e_c_t_o_r_y _._._.
+
+DDEESSCCRRIIPPTTIIOONN
+     The file(s) are copied (or linked if the --ll option is specified) to the
+     target file or directory.  If the destination is a directory, then the
+     _f_i_l_e is copied into _d_i_r_e_c_t_o_r_y with its original filename.  If the target
+     file already exists, it is either renamed to _f_i_l_e_._o_l_d if the --bb option is
+     given or overwritten if permissions allow; an alternate backup suffix may
+     be specified via the --BB option's argument.
+
+     --aa _c_o_m_m_a_n_d        Run _c_o_m_m_a_n_d on the target after installation and strip-
+                       ping (--ss), but before ownership, permissions or time-
+                       stamps are set and before renaming (--rr) occurs.
+                       _c_o_m_m_a_n_d is invoked via the sh(1) shell, allowing a sin-
+                       gle --aa argument be to specified to bbssddiinnssttaallll which the
+                       shell can then tokenize.
+
+     --BB _s_u_f_f_i_x         Use _s_u_f_f_i_x as the backup suffix if --bb is given.  If
+                       _s_u_f_f_i_x contains a '%' sign, a numbered backup will be
+                       performed, and the %-pattern will be expanded using
+                       sprintf(3), given an integer counter as the backup num-
+                       ber.  The counter used starts from 0, and the first
+                       available name resulting from the expansion is used.
+
+     --bb                Backup any existing files before overwriting them by
+                       renaming them to _f_i_l_e_._o_l_d. _S_e_e --BB for specifying a dif-
+                       ferent backup suffix.
+
+     --cc                Copy the file.  This is the default behavior; the flag
+                       is maintained for backwards compatibility only.
+
+     --DD _d_e_s_t_d_i_r        Specify the DESTDIR (top of the file hierarchy) that
+                       the items are installed in to.  If --MM _m_e_t_a_l_o_g is in
+                       use, a leading string of ``_d_e_s_t_d_i_r'' will be removed
+                       from the file names logged to the _m_e_t_a_l_o_g.  This option
+                       does not affect where the actual files are installed.
+
+     --dd                Create directories.  Missing parent directories are
+                       created as required.
+
+     --ff _f_l_a_g_s          Specify the target's file flags.  (See chflags(1) for a
+                       list of possible flags and their meanings.)
+
+     --gg _g_r_o_u_p          Specify a group.
+
+     --hh _h_a_s_h           When copying, calculate the digest of the files with
+                       _h_a_s_h to store in the --MM _m_e_t_a_l_o_g.  Supported digests:
+
+                             nnoonnee    No hash.  This is the default.
+
+                             mmdd55     The MD5 cryptographic message digest.
+
+                             rrmmdd116600  The RMD-160 cryptographic message digest.
+
+                             sshhaa11    The SHA-1 cryptographic message digest.
+
+                             sshhaa225566  The 256-bits SHA-2 cryptographic message
+                                     digest of the file.
+
+                             sshhaa338844  The 384-bits SHA-2 cryptographic message
+                                     digest of the file.
+
+                             sshhaa551122  The 512-bits SHA-2 cryptographic message
+                                     digest of the file.
+
+     --ll _l_i_n_k_f_l_a_g_s      Instead of copying the file make a link to the source.
+                       The type of the link is determined by the _l_i_n_k_f_l_a_g_s
+                       argument.  Valid _l_i_n_k_f_l_a_g_s are: _a (absolute), _r (rela-
+                       tive), _h (hard), _s (symbolic), _m (mixed).  Absolute and
+                       relative have effect only for symbolic links.  Mixed
+                       links are hard links for files on the same filesystem,
+                       symbolic otherwise.
+
+     --MM _m_e_t_a_l_o_g        Write the metadata associated with each item installed
+                       to _m_e_t_a_l_o_g in an mtree(8) ``full path'' specification
+                       line.  The metadata includes: the file name and file
+                       type, and depending upon other options, the owner,
+                       group, file flags, modification time, and tags.
+
+     --mm _m_o_d_e           Specify an alternative mode.  The default mode is set
+                       to rwxr-xr-x (0755).  The specified mode may be either
+                       an octal or symbolic value; see chmod(1) for a descrip-
+                       tion of possible mode values.
+
+     --NN _d_b_d_i_r          Use the user database text file _m_a_s_t_e_r_._p_a_s_s_w_d and group
+                       database text file _g_r_o_u_p from _d_b_d_i_r, rather than using
+                       the results from the system's getpwnam(3) and
+                       getgrnam(3) (and related) library calls.
+
+     --oo _o_w_n_e_r          Specify an owner.
+
+     --pp                Preserve the source files access and modification
+                       times.
+
+     --rr                Install to a temporary file and then rename the file to
+                       its final destination name.  This can be used for pre-
+                       cious files, to avoid truncation of the original when
+                       error conditions (filesystem full etc.) occur.
+
+     --SS _s_t_r_i_p_f_l_a_g_s     bbssddiinnssttaallll passes _s_t_r_i_p_f_l_a_g_s as option arguments to
+                       strip(1).  When --SS is used, strip(1) is invoked via the
+                       sh(1) shell, allowing a single --SS argument be to speci-
+                       fied to bbssddiinnssttaallll which the shell can then tokenize.
+                       Normally, bbssddiinnssttaallll invokes strip(1) directly.  This
+                       flag implies --ss.
+
+     --ss                bbssddiinnssttaallll exec's the command strip(1) to strip bina-
+                       ries so that bsdinstall can be portable over a large
+                       number of systems and binary types.  If the environment
+                       variable STRIP is set, it is used as the strip(1) pro-
+                       gram.
+
+     --TT _t_a_g_s           Specify the mtree(8) tags to write out for the file
+                       when using --MM _m_e_t_a_l_o_g.
+
+     --UU                Indicate that bsdinstall is running unprivileged, and
+                       that it should not try to change the owner, the group,
+                       or the file flags of the destination.  The information
+                       that would have been updated can be stored in a log
+                       file with --MM _m_e_t_a_l_o_g.
+
+     By default, bbssddiinnssttaallll preserves all file flags, with the exception of
+     the ``nodump'' flag.
+
+     The bbssddiinnssttaallll utility attempts to prevent copying a file onto itself.
+
+     Installing _/_d_e_v_/_n_u_l_l creates an empty file.
+
+EENNVVIIRROONNMMEENNTT
+     STRIP       The program used to strip installed binaries when the --ss
+                 option is used.  If unspecified, _/_u_s_r_/_b_i_n_/_s_t_r_i_p is used.
+
+EEXXIITT SSTTAATTUUSS
+     The bbssddiinnssttaallll utility exits 0 on success, and >0 if an error occurs.
+
+SSEEEE AALLSSOO
+     chflags(1), chgrp(1), chmod(1), cp(1), mv(1), strip(1), chown(8),
+     mtree(8)
+
+HHIISSTTOORRYY
+     The bbssddiinnssttaallll utility appeared in 4.2BSD.
+
+BSD                               May 1, 2009                              BSD
