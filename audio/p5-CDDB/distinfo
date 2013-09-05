@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/09/06 10:41:53 wiz Exp $
+$NetBSD: distinfo,v 1.6 2013/09/05 19:59:34 wiz Exp $
 
-SHA1 (CDDB-1.220.tar.gz) = dab0787db2219882bf1a5f0338d31aa9d4bc2049
-RMD160 (CDDB-1.220.tar.gz) = 9e3ea67dc0cb806b48ef262bc412035d36693d02
-Size (CDDB-1.220.tar.gz) = 23760 bytes
+SHA1 (CDDB-1.222.tar.gz) = 9505935a3267e26022035f8997b536ca54011396
+RMD160 (CDDB-1.222.tar.gz) = 69b64617e46068b906c073f03605a5a2f3e5854f
+Size (CDDB-1.222.tar.gz) = 45771 bytes
