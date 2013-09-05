@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3234 2013/09/05 15:32:19 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.3235 2013/09/05 17:58:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4635,3 +4635,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Test-Warnings version 0.008 [wen 2013-09-05]
 	Updated sysutils/bsdinstall to 20130905 [jperkin 2013-09-05]
 	Updated lang/nodejs to 0.10.18 [fhajny 2013-09-05]
+	Updated databases/p5-DBICx-TestDatabase to 0.05 [wiz 2013-09-05]
