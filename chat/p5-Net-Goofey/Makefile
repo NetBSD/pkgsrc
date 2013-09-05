@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2013/05/31 12:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/09/05 20:02:25 wiz Exp $
 
 DISTNAME=	Net-Goofey-1.5
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	7
 CATEGORIES=	chat perl5
-MASTER_SITES=	http://notdoneliving.net/code/Net-Goofey/
+MASTER_SITES=	# http://notdoneliving.net/code/Net-Goofey/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://notdoneliving.net/code/
+#HOMEPAGE=	http://notdoneliving.net/code/
 COMMENT=	Perl module for communicating with a Goofey server
 LICENSE=	${PERL5_LICENSE}
 
