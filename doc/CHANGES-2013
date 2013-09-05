@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3275 2013/09/05 19:39:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3276 2013/09/05 19:41:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-IO-Socket-INET6 to 2.71 [wiz 2013-09-05]
 	Updated security/p5-Net-SSLeay to 1.55 [wiz 2013-09-05]
 	Updated security/p5-IO-Socket-SSL to 1.953 [wiz 2013-09-05]
+	Updated www/p5-URI-FromHash to 0.04 [wiz 2013-09-05]
