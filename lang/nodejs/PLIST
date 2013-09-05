@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/07/26 09:34:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/09/05 14:46:19 fhajny Exp $
 bin/node
 bin/npm
 lib/dtrace/node.d
@@ -54,6 +54,7 @@ lib/node_modules/npm/doc/api/npm-version.md
 lib/node_modules/npm/doc/api/npm-view.md
 lib/node_modules/npm/doc/api/npm-whoami.md
 lib/node_modules/npm/doc/api/npm.md
+lib/node_modules/npm/doc/api/repo.md
 lib/node_modules/npm/doc/cli/npm-adduser.md
 lib/node_modules/npm/doc/cli/npm-bin.md
 lib/node_modules/npm/doc/cli/npm-bugs.md
@@ -100,6 +101,7 @@ lib/node_modules/npm/doc/cli/npm-version.md
 lib/node_modules/npm/doc/cli/npm-view.md
 lib/node_modules/npm/doc/cli/npm-whoami.md
 lib/node_modules/npm/doc/cli/npm.md
+lib/node_modules/npm/doc/cli/repo.md
 lib/node_modules/npm/doc/files/npm-folders.md
 lib/node_modules/npm/doc/files/npmrc.md
 lib/node_modules/npm/doc/files/package.json.md
@@ -152,6 +154,7 @@ lib/node_modules/npm/html/doc/api/npm-version.html
 lib/node_modules/npm/html/doc/api/npm-view.html
 lib/node_modules/npm/html/doc/api/npm-whoami.html
 lib/node_modules/npm/html/doc/api/npm.html
+lib/node_modules/npm/html/doc/api/repo.html
 lib/node_modules/npm/html/doc/cli/npm-adduser.html
 lib/node_modules/npm/html/doc/cli/npm-bin.html
 lib/node_modules/npm/html/doc/cli/npm-bugs.html
@@ -198,6 +201,7 @@ lib/node_modules/npm/html/doc/cli/npm-version.html
 lib/node_modules/npm/html/doc/cli/npm-view.html
 lib/node_modules/npm/html/doc/cli/npm-whoami.html
 lib/node_modules/npm/html/doc/cli/npm.html
+lib/node_modules/npm/html/doc/cli/repo.html
 lib/node_modules/npm/html/doc/files/npm-folders.html
 lib/node_modules/npm/html/doc/files/npm-global.html
 lib/node_modules/npm/html/doc/files/npm-json.html
@@ -251,6 +255,7 @@ lib/node_modules/npm/lib/prefix.js
 lib/node_modules/npm/lib/prune.js
 lib/node_modules/npm/lib/publish.js
 lib/node_modules/npm/lib/rebuild.js
+lib/node_modules/npm/lib/repo.js
 lib/node_modules/npm/lib/restart.js
 lib/node_modules/npm/lib/root.js
 lib/node_modules/npm/lib/run-script.js
@@ -333,6 +338,7 @@ lib/node_modules/npm/man/man1/npm-version.1
 lib/node_modules/npm/man/man1/npm-view.1
 lib/node_modules/npm/man/man1/npm-whoami.1
 lib/node_modules/npm/man/man1/npm.1
+lib/node_modules/npm/man/man1/repo.1
 lib/node_modules/npm/man/man3/npm-bin.3
 lib/node_modules/npm/man/man3/npm-bugs.3
 lib/node_modules/npm/man/man3/npm-commands.3
@@ -371,6 +377,7 @@ lib/node_modules/npm/man/man3/npm-version.3
 lib/node_modules/npm/man/man3/npm-view.3
 lib/node_modules/npm/man/man3/npm-whoami.3
 lib/node_modules/npm/man/man3/npm.3
+lib/node_modules/npm/man/man3/repo.3
 lib/node_modules/npm/man/man5/npm-folders.5
 lib/node_modules/npm/man/man5/npm-global.5
 lib/node_modules/npm/man/man5/npm-json.5
@@ -475,6 +482,13 @@ lib/node_modules/npm/node_modules/fstream/lib/reader.js
 lib/node_modules/npm/node_modules/fstream/lib/socket-reader.js
 lib/node_modules/npm/node_modules/fstream/lib/writer.js
 lib/node_modules/npm/node_modules/fstream/package.json
+lib/node_modules/npm/node_modules/github-url-from-git/.npmignore
+lib/node_modules/npm/node_modules/github-url-from-git/History.md
+lib/node_modules/npm/node_modules/github-url-from-git/Makefile
+lib/node_modules/npm/node_modules/github-url-from-git/Readme.md
+lib/node_modules/npm/node_modules/github-url-from-git/index.js
+lib/node_modules/npm/node_modules/github-url-from-git/package.json
+lib/node_modules/npm/node_modules/github-url-from-git/test.js
 lib/node_modules/npm/node_modules/glob/.npmignore
 lib/node_modules/npm/node_modules/glob/.travis.yml
 lib/node_modules/npm/node_modules/glob/LICENSE
@@ -721,6 +735,7 @@ lib/node_modules/npm/node_modules/read/node_modules/mute-stream/mute.js
 lib/node_modules/npm/node_modules/read/node_modules/mute-stream/package.json
 lib/node_modules/npm/node_modules/read/package.json
 lib/node_modules/npm/node_modules/read/rs.js
+lib/node_modules/npm/node_modules/request/.npmignore
 lib/node_modules/npm/node_modules/request/LICENSE
 lib/node_modules/npm/node_modules/request/README.md
 lib/node_modules/npm/node_modules/request/index.js
@@ -740,14 +755,9 @@ lib/node_modules/npm/node_modules/request/node_modules/forever-agent/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/forever-agent/README.md
 lib/node_modules/npm/node_modules/request/node_modules/forever-agent/index.js
 lib/node_modules/npm/node_modules/request/node_modules/forever-agent/package.json
-lib/node_modules/npm/node_modules/request/node_modules/form-data/.npmignore
-lib/node_modules/npm/node_modules/request/node_modules/form-data/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/form-data/License
-lib/node_modules/npm/node_modules/request/node_modules/form-data/Makefile
 lib/node_modules/npm/node_modules/request/node_modules/form-data/Readme.md
 lib/node_modules/npm/node_modules/request/node_modules/form-data/lib/form_data.js
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node-form-data.sublime-project
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node-form-data.sublime-workspace
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/README.md
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/component.json
@@ -766,7 +776,6 @@ lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/co
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json
 lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json
 lib/node_modules/npm/node_modules/request/node_modules/form-data/package.json
-lib/node_modules/npm/node_modules/request/node_modules/form-data/sftp-config.json
 lib/node_modules/npm/node_modules/request/node_modules/hawk/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/hawk/.travis.yml
 lib/node_modules/npm/node_modules/request/node_modules/hawk/LICENSE
@@ -790,16 +799,6 @@ lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/RE
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/images/boom.png
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/index.js
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/.npmignore
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/.travis.yml
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/LICENSE
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/Makefile
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/README.md
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/images/hoek.png
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/index.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/lib/escape.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/lib/index.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/node_modules/hoek/package.json
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/package.json
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/cryptiles/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/cryptiles/.travis.yml
@@ -828,16 +827,6 @@ lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/ex
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/index.js
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/.npmignore
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/.travis.yml
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/LICENSE
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/Makefile
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/README.md
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/images/hoek.png
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/index.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/lib/escape.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/lib/index.js
-lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/node_modules/hoek/package.json
 lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/package.json
 lib/node_modules/npm/node_modules/request/node_modules/hawk/package.json
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/.dir-locals.el
@@ -961,6 +950,7 @@ lib/node_modules/npm/node_modules/request/tests/ssl/ca/server.key
 lib/node_modules/npm/node_modules/request/tests/ssl/npm-ca.crt
 lib/node_modules/npm/node_modules/request/tests/ssl/test.crt
 lib/node_modules/npm/node_modules/request/tests/ssl/test.key
+lib/node_modules/npm/node_modules/request/tests/test-agentOptions.js
 lib/node_modules/npm/node_modules/request/tests/test-basic-auth.js
 lib/node_modules/npm/node_modules/request/tests/test-body.js
 lib/node_modules/npm/node_modules/request/tests/test-defaults.js
@@ -1016,7 +1006,6 @@ lib/node_modules/npm/node_modules/semver/bin/semver
 lib/node_modules/npm/node_modules/semver/foot.js
 lib/node_modules/npm/node_modules/semver/head.js
 lib/node_modules/npm/node_modules/semver/package.json
-lib/node_modules/npm/node_modules/semver/r.js
 lib/node_modules/npm/node_modules/semver/semver.browser.js
 lib/node_modules/npm/node_modules/semver/semver.browser.js.gz
 lib/node_modules/npm/node_modules/semver/semver.js
@@ -1026,6 +1015,24 @@ lib/node_modules/npm/node_modules/sha/.npmignore
 lib/node_modules/npm/node_modules/sha/LICENSE
 lib/node_modules/npm/node_modules/sha/README.md
 lib/node_modules/npm/node_modules/sha/index.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/LICENSE
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/README.md
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/duplex.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/examples/CAPSLOCKTYPER.JS
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/examples/typer-fsr.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/examples/typer.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/fs.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_duplex.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_passthrough.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_readable.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_transform.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_writable.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/package.json
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/passthrough.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/readable.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/transform.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/writable.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/zlib.js
 lib/node_modules/npm/node_modules/sha/package.json
 lib/node_modules/npm/node_modules/slide/LICENSE
 lib/node_modules/npm/node_modules/slide/README.md
