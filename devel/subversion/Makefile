@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2013/08/09 11:38:58 obache Exp $
+# $NetBSD: Makefile,v 1.53 2013/09/05 07:07:46 adam Exp $
 
 PKGNAME=	subversion-${SVNVER}
 COMMENT=	Version control system, meta-package
 
-META_PACKAGE=	# empty
+META_PACKAGE=	yes
 
 .include "../../devel/subversion/Makefile.common"
 

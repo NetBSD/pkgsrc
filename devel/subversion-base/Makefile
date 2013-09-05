@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2013/08/16 11:20:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.87 2013/09/05 07:07:46 adam Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -39,7 +39,6 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.15.1
 PLIST_VARS+=		db4
 .if !empty(PKG_OPTIONS:Mapr1) && !empty(PKG_BUILD_OPTIONS.apr-util:Mdb4)
 PLIST.db4=		yes
-#CONFIGURE_ARGS+=	--with-berkeley-db=:${BUILDLINK_PREFIX.db4:Q}/include:${BUILDLINK_PREFIX.db4:Q}/lib:${BUILDLINK_LDADD.db4:S/^-l//:Q}
 CONFIGURE_ARGS+=	--with-berkeley-db
 .else
 CONFIGURE_ARGS+=	--without-berkeley-db
