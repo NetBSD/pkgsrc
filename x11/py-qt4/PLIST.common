@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.22 2013/08/23 11:27:17 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.23 2013/09/05 15:29:05 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
