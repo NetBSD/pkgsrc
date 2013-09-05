@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3213 2013/09/04 21:05:47 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.3214 2013/09/05 00:50:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-apps to 1.14.1.2 [wiz 2013-09-04]
 	Updated meta-pkgs/modular-xorg-protos to 1.4 [wiz 2013-09-04]
 	Updated www/ikiwiki to 3.20130904.1 [schmonz 2013-09-04]
+	Updated www/p5-Task-Plack to 0.28 [wen 2013-09-05]
