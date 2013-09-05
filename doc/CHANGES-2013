@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3251 2013/09/05 18:43:35 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3252 2013/09/05 18:44:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4652,3 +4652,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Module-Implementation to 0.07 [wiz 2013-09-05]
 	Updated devel/p5-Sub-Exporter-GlobExporter to 0.003 [wiz 2013-09-05]
 	Updated devel/p5-Dist-CheckConflicts to 0.09 [wiz 2013-09-05]
+	Updated devel/p5-Package-Stash-XS to 0.28 [wiz 2013-09-05]
