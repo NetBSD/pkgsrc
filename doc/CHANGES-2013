@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3232 2013/09/05 12:20:58 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3233 2013/09/05 14:46:26 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.1 [wiz 2013-09-05]
 	Added devel/p5-Test-Warnings version 0.008 [wen 2013-09-05]
 	Updated sysutils/bsdinstall to 20130905 [jperkin 2013-09-05]
+	Updated lang/nodejs to 0.10.18 [fhajny 2013-09-05]
