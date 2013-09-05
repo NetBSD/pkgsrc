@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3248 2013/09/05 18:39:43 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3249 2013/09/05 18:41:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4649,3 +4649,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-AppConfig-Std to 1.08 [wiz 2013-09-05]
 	Updated devel/p5-Bit-Vector to 7.3 [wiz 2013-09-05]
 	Updated devel/p5-Data-OptList to 0.108 [wiz 2013-09-05]
+	Updated devel/p5-Module-Implementation to 0.07 [wiz 2013-09-05]
