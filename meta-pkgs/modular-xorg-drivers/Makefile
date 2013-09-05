@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/06/04 04:43:38 rodent Exp $
+# $NetBSD: Makefile,v 1.20 2013/09/05 08:30:13 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-drivers-1.14
+PKGNAME=	modular-xorg-drivers-1.14.1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -25,7 +25,11 @@ DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
 DEPENDS+=	xf86-video-apm-[0-9]*:../../x11/xf86-video-apm
 DEPENDS+=	xf86-video-ark-[0-9]*:../../x11/xf86-video-ark
 DEPENDS+=	xf86-video-ast-[0-9]*:../../x11/xf86-video-ast
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=	xf86-video-ati6-[0-9]*:../../x11/xf86-video-ati6
+.else
 DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
+.endif
 # chips deprecated in Xorg 7.7
 #DEPENDS+=	xf86-video-chips-[0-9]*:../../x11/xf86-video-chips
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
