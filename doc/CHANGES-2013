@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3253 2013/09/05 18:46:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3254 2013/09/05 18:47:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4654,3 +4654,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Dist-CheckConflicts to 0.09 [wiz 2013-09-05]
 	Updated devel/p5-Package-Stash-XS to 0.28 [wiz 2013-09-05]
 	Updated devel/p5-Package-Stash to 0.36 [wiz 2013-09-05]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.062 [wiz 2013-09-05]
