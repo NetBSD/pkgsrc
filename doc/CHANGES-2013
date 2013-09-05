@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3247 2013/09/05 18:38:25 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3248 2013/09/05 18:39:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4648,3 +4648,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/p5-GD-SecurityImage to 1.72 [wiz 2013-09-05]
 	Updated devel/p5-AppConfig-Std to 1.08 [wiz 2013-09-05]
 	Updated devel/p5-Bit-Vector to 7.3 [wiz 2013-09-05]
+	Updated devel/p5-Data-OptList to 0.108 [wiz 2013-09-05]
