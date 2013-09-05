@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3286 2013/09/05 19:56:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3287 2013/09/05 19:58:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4687,3 +4687,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Crypt-CBC to 2.33 [wiz 2013-09-05]
 	Updated security/p5-Crypt-Rijndael to 1.11 [wiz 2013-09-05]
 	Updated www/p5-HTML-Template-Pro to 0.9510 [wiz 2013-09-05]
+	Updated textproc/p5-Encode to 2.54 [wiz 2013-09-05]
