@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2013/08/23 11:27:17 drochner Exp $
+$NetBSD: patch-aa,v 1.10 2013/09/05 15:29:05 drochner Exp $
 
---- configure.py.orig	2013-08-21 05:50:47.000000000 +0000
+--- configure.py.orig	2013-04-21 12:01:57.000000000 +0000
 +++ configure.py
 @@ -345,7 +345,7 @@ class ConfigurePyQt4:
          pyqt_modules.append("QtCore")
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.9 2013/08/23 11:27:17 drochner Exp $
          check_module("QtMultimedia", "QAudioDeviceInfo",
                  "new QAudioDeviceInfo()")
          check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
-@@ -371,8 +371,8 @@ class ConfigurePyQt4:
-         check_module("QtTest", "QtTest", "QTest::qSleep(0)")
+@@ -369,8 +369,8 @@ class ConfigurePyQt4:
          check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
+         check_module("QtXml", "qdom.h", "new QDomDocument()")
          check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
 -        check_module("phonon", "phonon/videowidget.h",
 -                "new Phonon::VideoWidget()")
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.9 2013/08/23 11:27:17 drochner Exp $
          check_module("QtAssistant", "qassistantclient.h",
                  "new QAssistantClient(\"foo\")", extra_lib_dirs=ass_lib_dirs,
                  extra_libs=ass_libs)
-@@ -2092,11 +2092,7 @@ int main(int argc, char **argv)
+@@ -2093,11 +2093,7 @@ int main(int argc, char **argv)
  
      out << QLibraryInfo::licensee() << '\\n';
  
