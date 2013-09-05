@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3270 2013/09/05 19:25:59 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3271 2013/09/05 19:28:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4671,3 +4671,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-File-Temp to 0.23.01 [wiz 2013-09-05]
 	Updated devel/p5-Perl6-Slurp to 0.051003 [wiz 2013-09-05]
 	Updated devel/p5-Tree-DAG_Node to 1.14 [wiz 2013-09-05]
+	Updated devel/p5-version to 0.9904 [wiz 2013-09-05]
