@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3256 2013/09/05 18:49:38 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3257 2013/09/05 18:51:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.062 [wiz 2013-09-05]
 	Updated devel/p5-Compress-Raw-Zlib to 2.062 [wiz 2013-09-05]
 	Updated devel/p5-Devel-Symdump to 2.1000 [wiz 2013-09-05]
+	Updated textproc/p5-Pod-Coverage to 0.23 [wiz 2013-09-05]
