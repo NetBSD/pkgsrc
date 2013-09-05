@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3280 2013/09/05 19:48:16 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3281 2013/09/05 19:49:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4681,3 +4681,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-LibXML to 2.0104 [wiz 2013-09-05]
 	Updated graphics/p5-Image-Info to 1.36 [wiz 2013-09-05]
 	Updated textproc/p5-ack to 2.08 [wiz 2013-09-05]
+	Updated textproc/p5-Pod-POM to 0.28 [wiz 2013-09-05]
