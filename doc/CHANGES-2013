@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3224 2013/09/05 07:10:14 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3225 2013/09/05 07:15:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4628,3 +4628,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-subversion to 1.8.3 [adam 2013-09-05]
 	Updated devel/ruby-subversion to 1.8.3 [adam 2013-09-05]
 	Updated www/ap2-subversion to 1.8.3 [adam 2013-09-05]
+	Updated devel/p5-Test-File-ShareDir to 0.3.3 [wen 2013-09-05]
