@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3231 2013/09/05 08:53:20 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3232 2013/09/05 12:20:58 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4635,3 +4635,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Module-Build-Tiny to 0.026 [wen 2013-09-05]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.1 [wiz 2013-09-05]
 	Added devel/p5-Test-Warnings version 0.008 [wen 2013-09-05]
+	Updated sysutils/bsdinstall to 20130905 [jperkin 2013-09-05]
