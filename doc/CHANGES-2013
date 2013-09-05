@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3235 2013/09/05 17:58:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3236 2013/09/05 18:05:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/bsdinstall to 20130905 [jperkin 2013-09-05]
 	Updated lang/nodejs to 0.10.18 [fhajny 2013-09-05]
 	Updated databases/p5-DBICx-TestDatabase to 0.05 [wiz 2013-09-05]
+	Updated databases/p5-DBIx-Class-Cursor-Cached to 1.1.2 [wiz 2013-09-05]
