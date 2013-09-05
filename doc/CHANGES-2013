@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3217 2013/09/05 01:34:58 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3218 2013/09/05 06:31:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Plack-App-Proxy to 0.29 [wen 2013-09-05]
 	Updated devel/p5-Test-Aggregate to 0.370 [wen 2013-09-05]
 	Updated devel/p5-Test-CPAN-Meta-YAML to 0.22 [wen 2013-09-05]
+	Updated devel/p5-Test-CheckManifest to 1.26 [wen 2013-09-05]
