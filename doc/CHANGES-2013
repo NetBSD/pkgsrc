@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3226 2013/09/05 07:47:26 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3227 2013/09/05 07:52:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4630,3 +4630,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ap2-subversion to 1.8.3 [adam 2013-09-05]
 	Updated devel/p5-Test-File-ShareDir to 0.3.3 [wen 2013-09-05]
 	Updated devel/p5-Test-Fixture-DBIC-Schema to 0.04 [wen 2013-09-05]
+	Updated devel/p5-Test-Inline to 2.213 [wen 2013-09-05]
