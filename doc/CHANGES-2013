@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3257 2013/09/05 18:51:08 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3258 2013/09/05 18:52:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -448,7 +448,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.1.13nb1 [bouyer 2013-01-26]
 	Updated databases/p5-ORLite to 1.98 [rhaen 2013-01-26]
 	Updated devel/p5-Devel-Cover to 0.99 [rhaen 2013-01-26]
-	Updated devel/p5-Error to 1.7019 [rhaen 2013-01-26]
+	Updated devel/p5-Error to 1.17019 [rhaen 2013-01-26]
 	Updated devel/p5-Class-Method-Modifiers to 2.00 [rhaen 2013-01-26]
 	Updated databases/p5-DBI to 1.623 [rhaen 2013-01-26]
 	Updated devel/p5-Any-Moose to 0.20 [rhaen 2013-01-26]
@@ -4658,3 +4658,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Compress-Raw-Zlib to 2.062 [wiz 2013-09-05]
 	Updated devel/p5-Devel-Symdump to 2.1000 [wiz 2013-09-05]
 	Updated textproc/p5-Pod-Coverage to 0.23 [wiz 2013-09-05]
+	Updated devel/p5-Error to 0.17021 [wiz 2013-09-05]
