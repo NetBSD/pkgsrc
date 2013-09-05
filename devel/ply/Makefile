@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.16 2013/04/06 13:09:24 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2013/09/05 20:29:48 wiz Exp $
 
-DISTNAME=	ply-3.3
-PKGREVISION=	1
+DISTNAME=	ply-3.4
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.dabeaz.com/ply/
 
 MAINTAINER=	nonaka@NetBSD.org
 HOMEPAGE=	http://www.dabeaz.com/ply/
 COMMENT=	Python Lex-Yacc
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 
 DOCDIR=	${PREFIX}/share/doc/ply
 EGDIR=	${PREFIX}/share/examples/ply
