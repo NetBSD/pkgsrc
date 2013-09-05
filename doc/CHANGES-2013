@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3223 2013/09/05 07:08:04 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3224 2013/09/05 07:10:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4621,3 +4621,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-FailWarnings to 0.007 [wen 2013-09-05]
 	Updated devel/p5-Test-File-Contents to 0.21 [wen 2013-09-05]
 	Updated filesystems/p5-Path-Tiny to 0.031 [wen 2013-09-05]
+	Updated devel/subversion to 1.8.3 [adam 2013-09-05]
+	Updated devel/subversion-base to 1.8.3 [adam 2013-09-05]
+	Updated devel/java-subversion to 1.8.3 [adam 2013-09-05]
+	Updated devel/p5-subversion to 1.8.3 [adam 2013-09-05]
+	Updated devel/py-subversion to 1.8.3 [adam 2013-09-05]
+	Updated devel/ruby-subversion to 1.8.3 [adam 2013-09-05]
+	Updated www/ap2-subversion to 1.8.3 [adam 2013-09-05]
