@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/08/28 11:42:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/05 12:19:49 jperkin Exp $
 
-DISTNAME=	bsdinstall-20130828
+DISTNAME=	bsdinstall-20130905
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +13,7 @@ BOOTSTRAP_PKG=	yes
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES=		nbcompat
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
