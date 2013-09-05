@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3283 2013/09/05 19:53:10 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3284 2013/09/05 19:54:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Pod-POM to 0.28 [wiz 2013-09-05]
 	Updated www/p5-Pod-POM-Web to 1.19 [wiz 2013-09-05]
 	Updated www/p5-Template-Toolkit to 2.25 [wiz 2013-09-05]
+	Updated security/p5-Crypt-CBC to 2.33 [wiz 2013-09-05]
