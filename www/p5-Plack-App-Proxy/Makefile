@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/08/27 04:53:35 wen Exp $
+# $NetBSD: Makefile,v 1.10 2013/09/05 00:53:39 wen Exp $
 
-DISTNAME=	Plack-App-Proxy-0.28
+DISTNAME=	Plack-App-Proxy-0.29
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
