@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3242 2013/09/05 18:30:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3243 2013/09/05 18:31:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4643,3 +4643,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBIx-Class-Helpers to 2.018002 [wiz 2013-09-05]
 	Updated databases/p5-DBIx-Class-RDBOHelpers to 0.10 [wiz 2013-09-05]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07036 [wiz 2013-09-05]
+	Updated databases/p5-DBIx-DBSchema to 0.40 [wiz 2013-09-05]
