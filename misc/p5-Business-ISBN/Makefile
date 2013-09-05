@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/09/05 19:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/09/05 20:25:25 wiz Exp $
 
 DISTNAME=		Business-ISBN-2.06
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,9 @@ COMMENT=		Perl5 module to work with International Standard Book Numbers (ISBNs)
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Business-ISBN-Data>=20081020:../../misc/p5-Business-ISBN-Data
-DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
+# noted as requested by Makefile.PL, but not used?
+# also, p5-URI is depending on this package, so thsi introduces a cycle
+#DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/Business/ISBN/.packlist
 
