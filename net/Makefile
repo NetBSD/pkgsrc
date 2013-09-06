@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.975 2013/07/16 02:13:30 rodent Exp $
+# $NetBSD: Makefile,v 1.976 2013/09/06 11:02:38 fhajny Exp $
 #
 
 COMMENT=	Networking tools
@@ -508,6 +508,7 @@ SUBDIR+=	powerdns-mysql
 SUBDIR+=	powerdns-pgsql
 SUBDIR+=	powerdns-recursor
 SUBDIR+=	powerdns-sqlite
+SUBDIR+=	powerdns-sqlite3
 SUBDIR+=	pppd
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
