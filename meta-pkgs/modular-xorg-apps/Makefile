@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2013/09/04 18:02:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/09/06 08:18:06 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-apps-1.14.1.2
+PKGNAME=	modular-xorg-apps-1.14.1.3
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 DISTFILES=	# empty
@@ -9,6 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg application meta-package
+LICENSE=	public-domain
 
 META_PACKAGE=	yes
 
@@ -32,6 +33,7 @@ DEPENDS+=	x11perf-[0-9]*:../../x11/x11perf
 DEPENDS+=	xauth-[0-9]*:../../x11/xauth
 DEPENDS+=	xbacklight-[0-9]*:../../x11/xbacklight
 DEPENDS+=	xcalc-[0-9]*:../../x11/xcalc
+DEPENDS+=	xclipboard-[0-9]*:../../x11/xclipboard
 DEPENDS+=	xclock-[0-9]*:../../time/xclock
 DEPENDS+=	xconsole-[0-9]*:../../x11/xconsole
 DEPENDS+=	xcursorgen-[0-9]*:../../x11/xcursorgen
