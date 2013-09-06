@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/09/06 11:01:57 fhajny Exp $
+lib/pdns/libgsqlite3backend.la
