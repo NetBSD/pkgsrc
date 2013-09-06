@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/08/04 16:26:05 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/06 14:16:46 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,9 +16,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-VER=		6.0.8
+VER=		6.0.9
 NO_BUILD=	yes
-USE_TOOLS+=	pax
+USE_TOOLS+=	bash:run pax
 
 TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
@@ -29,11 +29,6 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	typo3/cli_dispatch.phpsh
-
-REPLACE_INTERPRETER+=	sh
-REPLACE.sh.old=		/bin/bash
-REPLACE.sh.new=		/bin/sh
-REPLACE_FILES.sh=	typo3/contrib/flowplayer/flowplayer.captions/example/flvtool2-cuepoints.sh
 
 TYPO3DATADIRS=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
 		typo3conf typo3conf/ext typo3conf/l10n typo3temp uploads \
@@ -59,7 +54,10 @@ OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR}/${d} ${REAL_ROOT_USER} \
 CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
 .endfor
 
-CHECK_INTERPRETER_SKIP = share/typo3/typo3_src-6.0.8/typo3/contrib/flowplayer/plugins/flowplayer.captions/example/flvtool2-cuepoints.sh
+REPLACE_INTERPRETER+=	sh
+REPLACE.sh.old=		/bin/bash
+REPLACE.sh.new=		${TOOLS_PATH.bash}
+REPLACE_FILES.sh=	typo3/contrib/flowplayer/plugins/flowplayer.captions/example/flvtool2-cuepoints.sh
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/README
