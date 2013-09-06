@@ -1,4 +1,6 @@
-$NetBSD: patch-src_dns_dns__lookup.c,v 1.1 2013/02/26 19:56:18 garbled Exp $
+$NetBSD: patch-src_dns_dns__lookup.c,v 1.2 2013/09/06 14:08:18 taca Exp $
+
+Fix runtime problem when mysql PKG_OPTIONS is enabled.
 
 --- src/dns/dns_lookup.c.orig	2013-02-26 19:34:50.000000000 +0000
 +++ src/dns/dns_lookup.c
