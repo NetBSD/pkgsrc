@@ -1,0 +1,1437 @@
+$NetBSD: patch-configure,v 1.1 2013/09/06 21:30:00 wiz Exp $
+
+--- configure.orig	2013-08-01 17:39:03.000000000 +0000
++++ configure
+@@ -3466,11 +3466,18 @@ case "${host_os}" in
+ 	# For the build number: months since Jan 2000, day of month from the timestamp
+ 	# For the revision number: hour, minute from the timestamp
+ 	if test $GRAPHVIZ_VERSION_MICRO != "0"; then
+-		GRAPHVIZ_VERSION_BUILD=`expr \( ${GRAPHVIZ_VERSION_MICRO:0:4} - 2000 \) \* 12 + ${GRAPHVIZ_VERSION_MICRO:4:2}`${GRAPHVIZ_VERSION_MICRO:6:2}
+-		GRAPHVIZ_VERSION_REVISION=${GRAPHVIZ_VERSION_MICRO:9:4}
++		# JR: patch from Michael van Elst:
++		#     if we have a shellm we should have a working awk, too
++		eval `echo "$GRAPHVIZ_VERSION_MICRO" | awk '{
++			print "GRAPHVIZ_VERSION_BUILD=" \
++				(substr($1,1,4)-2000)*12+substr($1,5,2) \
++				substr($1,7,2)
++			print "GRAPHVIZ_VERSION_REVISION=" \
++				substr($1,10,4)
++		}'`
+ 	fi
+ 	;;
+-esac
++esac 
+ 
+ 
+ 
+@@ -3479,7 +3486,7 @@ case "${host_os}" in
+   *linux* )
+     case "${host_cpu}" in
+       powerpc64 | s390x | x86_64 | sparc64 )
+-        LIBPOSTFIX="64"
++        LIBPOSTFIX=""
+         ;;
+     esac
+     ;;
+@@ -3590,7 +3597,7 @@ cat >>confdefs.h <<_ACEOF
+ #define NO_POSTSCRIPT_ALIAS $NO_POSTSCRIPT_ALIAS
+ _ACEOF
+ 
+- if test "x$UWIN" == "xyes" -o "x$CYGWIN" == "xyes" -o "x$MINGW32" == "xyes"; then
++ if test "x$UWIN" = "xyes" -o "x$CYGWIN" == "xyes" -o "x$MINGW32" == "xyes"; then
+   WITH_WIN32_TRUE=
+   WITH_WIN32_FALSE='#'
+ else
+@@ -3598,7 +3605,7 @@ else
+   WITH_WIN32_FALSE=
+ fi
+ 
+- if test "x$DARWIN9" == "xyes"; then
++ if test "x$DARWIN9" = "xyes"; then
+   WITH_DARWIN9_TRUE=
+   WITH_DARWIN9_FALSE='#'
+ else
+@@ -4151,7 +4158,7 @@ if ! `cmp -s $srcdir/ast_common.h.in ast
+ fi
+ 
+ 
+-if test "x${prefix}" == "xNONE"; then
++if test "x${prefix}" = "xNONE"; then
+ 	prefix=${ac_default_prefix}
+ 
+ fi
+@@ -4174,7 +4181,7 @@ if test "${enable_static+set}" = set; th
+   enableval=$enable_static;
+ fi
+ 
+-if test "x$enable_static" == "xyes"; then
++if test "x$enable_static" = "xyes"; then
+ 	# Check whether --enable-static was given.
+ if test "${enable_static+set}" = set; then :
+   enableval=$enable_static; p=${PACKAGE-default}
+@@ -4238,7 +4245,7 @@ fi
+ 
+         use_static="No (disabled by default)"
+ fi
+- if test "x$enable_static" == "xyes"; then
++ if test "x$enable_static" = "xyes"; then
+   ENABLE_STATIC_TRUE=
+   ENABLE_STATIC_FALSE='#'
+ else
+@@ -4326,7 +4333,7 @@ fi
+ 
+ 
+ fi
+- if test "x$enable_shared" == "xyes"; then
++ if test "x$enable_shared" = "xyes"; then
+   ENABLE_SHARED_TRUE=
+   ENABLE_SHARED_FALSE='#'
+ else
+@@ -13390,7 +13397,7 @@ if test "${with_tclsh+set}" = set; then 
+ fi
+ 
+ 
+-if test "x$TCLSH" == "x"; then
++if test "x$TCLSH" = "x"; then
+   for ac_prog in tclsh8.6 tclsh8.5 tclsh8.4 tclsh8.3 tclsh
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+@@ -13436,7 +13443,7 @@ fi
+   test -n "$TCLSH" && break
+ done
+ 
+-#  if test "x$TCLSH" == "x"; then
++#  if test "x$TCLSH" = "x"; then
+ #    AC_MSG_ERROR([Unable to find a tclsh. Tclsh is a required program for building graphviz, independent of wether tcl-based graphviz products are built])
+ #    use_tcl="No (tclsh unavailable)"
+ #  fi
+@@ -17641,6 +17648,9 @@ test -n "$RC" || RC="false"
+ 	    ;;
+ 	*-sgi-irix* )
+ 	    ;;
++	*-ibm-aix* )
++	    CC=cc_r
++	    ;;
+     esac
+ else
+     for ac_prog in windres
+@@ -17739,7 +17749,7 @@ _ACEOF
+ 
+ fi
+ 
+- if test "x$RC" == "xrc"; then
++ if test "x$RC" = "xrc"; then
+   RC_IS_RC_TRUE=
+   RC_IS_RC_FALSE='#'
+ else
+@@ -17747,7 +17757,7 @@ else
+   RC_IS_RC_FALSE=
+ fi
+ 
+- if test "x$RC" == "xwindres"; then
++ if test "x$RC" = "xwindres"; then
+   RC_IS_WINDRES_TRUE=
+   RC_IS_WINDRES_FALSE='#'
+ else
+@@ -18250,7 +18260,7 @@ fi
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_type_socklen_t" >&5
+ $as_echo "$ac_cv_type_socklen_t" >&6; }
+-if test $ac_cv_type_socklen_t == no; then
++if test $ac_cv_type_socklen_t = no; then
+ 
+ $as_echo "#define socklen_t unsigned" >>confdefs.h
+ 
+@@ -19832,7 +19842,7 @@ fi
+     LDFLAGS="$save_LDFLAGS"
+     CFLAGS="$save_CFLAGS"
+   else
+-    if test "x$DARWIN9" == "xyes"; then
++    if test "x$DARWIN9" = "xyes"; then
+       LIBLTDL_LDFLAGS="-Wl,-unexported_symbol,_lt_*"
+     fi
+   fi
+@@ -19878,7 +19888,7 @@ else
+   with_efence=no
+ fi
+ 
+-if test "x$with_efence" == "xyes"; then
++if test "x$with_efence" = "xyes"; then
+ 	LIBS="$LIBS -lefence"
+ fi
+ 
+@@ -20566,7 +20576,7 @@ fi
+ 
+ fi
+ 
+-if test "x$no_x" == "xyes"; then
++if test "x$no_x" = "xyes"; then
+   use_xlib="No (disabled or unavailable)"
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: X11 not available." >&5
+ $as_echo "$as_me: WARNING: X11 not available." >&2;}
+@@ -20645,7 +20655,7 @@ $as_echo "yes" >&6; }
+ 	HAVE_XRENDER="yes"
+ fi
+ fi
+- if test "x$use_xlib" == "xYes"; then
++ if test "x$use_xlib" = "xYes"; then
+   WITH_X_TRUE=
+   WITH_X_FALSE='#'
+ else
+@@ -20653,7 +20663,7 @@ else
+   WITH_X_FALSE=
+ fi
+ 
+- if test "x$,HAVE_XRENDER" == "xyes"; then
++ if test "x$,HAVE_XRENDER" = "xyes"; then
+   WITH_XRENDER_TRUE=
+   WITH_XRENDER_FALSE='#'
+ else
+@@ -20711,7 +20721,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-  if test "x$SWIG" == "x"; then
++  if test "x$SWIG" = "x"; then
+     use_swig="No (swig not available)"
+   else
+     SWIG_VERSION=`$SWIG -version 2>&1 | $EGREP Version | cut -d ' ' -f 3`
+@@ -20726,7 +20736,7 @@ fi
+         fi
+       fi
+     fi
+-    if test "x$SWIG" == "x"; then
++    if test "x$SWIG" = "x"; then
+       { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: The version of swig is too old." >&5
+ $as_echo "$as_me: WARNING: The version of swig is too old." >&2;}
+       use_swig="No (swig too old)"
+@@ -20799,7 +20809,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$MCS" == "x"; then
++      if test "x$MCS" = "x"; then
+         use_sharp="No (mcs not available)"
+       else
+         use_sharp="Yes"
+@@ -20811,7 +20821,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_sharp" == "xYes"; then
++ if test "x$use_sharp" = "xYes"; then
+   WITH_SHARP_TRUE=
+   WITH_SHARP_FALSE='#'
+ else
+@@ -20875,7 +20885,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$GO" == "x"; then
++      if test "x$GO" = "x"; then
+         use_go="No (GO compiler not available)"
+       else
+         GO_INCLUDES=
+@@ -20900,7 +20910,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_go" == "xYes"; then
++ if test "x$use_go" = "xYes"; then
+   WITH_GO_TRUE=
+   WITH_GO_FALSE='#'
+ else
+@@ -20969,7 +20979,7 @@ fi
+   test -n "$GUILE" && break
+ done
+ 
+-      if test "x$GUILE" == "x"; then
++      if test "x$GUILE" = "x"; then
+         use_guile="No (guile not available)"
+       else
+         GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* \+\([0-9\.]\+\)$/\1/ p'`
+@@ -20984,7 +20994,7 @@ done
+             fi
+           fi
+         fi
+-        if test "x$GUILE" == "x"; then
++        if test "x$GUILE" = "x"; then
+ 	  use_guile="No (guile is too old)"
+         else
+           GUILE_INCLUDES=
+@@ -21226,7 +21236,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_guile" == "xYes"; then
++ if test "x$use_guile" = "xYes"; then
+   WITH_GUILE_TRUE=
+   WITH_GUILE_FALSE='#'
+ else
+@@ -21290,7 +21300,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$IO" == "x"; then
++      if test "x$IO" = "x"; then
+         use_io="No (io not available)"
+       else
+         use_io="Yes"
+@@ -21302,7 +21312,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_io" == "xYes"; then
++ if test "x$use_io" = "xYes"; then
+   WITH_IO_TRUE=
+   WITH_IO_FALSE='#'
+ else
+@@ -21366,7 +21376,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$JAVA" == "x"; then
++      if test "x$JAVA" = "x"; then
+         use_java="No (java not available)"
+       else
+         for try_java_include in \
+@@ -21419,7 +21429,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_java" == "xYes"; then
++ if test "x$use_java" = "xYes"; then
+   WITH_JAVA_TRUE=
+   WITH_JAVA_FALSE='#'
+ else
+@@ -21483,7 +21493,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$LUA" == "x"; then
++      if test "x$LUA" = "x"; then
+         use_lua="No (lua not available)"
+       else
+         ac_save_CPPFLAGS="$CPPFLAGS"
+@@ -21540,7 +21550,7 @@ fi
+            LDFLAGS="$LDFLAGS -L$lua_lib"
+         fi
+ 
+-        if test "x$LUA_INCLUDES" == "x" -a "x$LUA_LIBS" == "x" ; then
++        if test "x$LUA_INCLUDES" = "x" -a "x$LUA_LIBS" == "x" ; then
+             PKGCONFIG=""
+             for ac_prog in pkg-config
+ do
+@@ -21590,14 +21600,14 @@ $as_echo_n "checking for Lua headers and
+ 	        echo
+ 	        for l in "$lua_suffix" "" "52" "5.2" "51" "5.1" "50" "5.0" ; do
+ 	            pkgconfig_lua_found=`$PKGCONFIG --exists lua$l 2>/dev/null`
+-	            if test "x$?" == "x0" ; then
++	            if test "x$?" = "x0" ; then
+ 		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
+                         LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
+                         LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
+-		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
++		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
+ 
+ 		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
+-		        if test  "x$?" == "x0"; then
++		        if test  "x$?" = "x0"; then
+ 		           LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lualib$l`
+ 		           LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lualib$l`
+ 		        fi
+@@ -21607,7 +21617,7 @@ $as_echo_n "checking for Lua headers and
+             fi
+         fi
+ 
+-        if test "x$LUA_INCLUDES" == "x" -o "x$LUA_LIBS" == "x" ; then
++        if test "x$LUA_INCLUDES" = "x" -o "x$LUA_LIBS" == "x" ; then
+             LUACONFIG=""
+             for ac_prog in lua-config lua-config52 lua-config5.2 lua-config51 lua-config5.1 lua-config50 lua-config5.0
+ do
+@@ -21658,11 +21668,11 @@ $as_echo_n "checking for Lua headers and
+                 LUA_INCLUDES=`$LUACONFIG --include`
+                 LUA_LIBS=`$LUACONFIG --libs`
+ 	        LUA_VERSION="5.0.x"
+-	        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/5.0"
++	        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/5.0"
+             fi
+         fi
+ 
+-        if test "x$LUA_INCLUDES" == "x" -o "x$LUA_LIBS" == "x" ; then
++        if test "x$LUA_INCLUDES" = "x" -o "x$LUA_LIBS" == "x" ; then
+             { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Lua headers and libraries" >&5
+ $as_echo_n "checking for Lua headers and libraries... " >&6; }
+ 	    echo
+@@ -21682,7 +21692,7 @@ else
+ fi
+ 
+ 
+-            if test "x$ac_found_lua_header" == "xyes" -a "x$ac_found_liblua_header" == "xyes"; then
++            if test "x$ac_found_lua_header" = "xyes" -a "x$ac_found_liblua_header" == "xyes"; then
+                 LUA_INCLUDES="$CFLAGS"
+             fi
+             for l in "$lua_suffix" "" "52" "5.2" "51" "5.1" "50" "5.0" ; do
+@@ -21730,7 +21740,7 @@ else
+   ac_found_lua_lib="no"
+ fi
+ 
+-                if test "x$ac_found_lua_lib" == "xyes" ; then
++                if test "x$ac_found_lua_lib" = "xyes" ; then
+ 	            LUA_VERSION=">=5.1.0"
+ 
+ 	            LUA_LIBS="$LDFLAGS -llua$l -lm"
+@@ -21786,7 +21796,7 @@ else
+   ac_found_liblua_lib="no"
+ fi
+ 
+-		    if test "x$ac_found_liblua_lib" == "xyes" ; then
++		    if test "x$ac_found_liblua_lib" = "xyes" ; then
+ 		       LUA_VERSION="5.0.x"
+ 
+ 		       LUA_LIBS="$LUA_LFLAGS -llualib$l"
+@@ -21831,7 +21841,7 @@ $as_echo "$as_me: WARNING:
+     fi
+   fi
+ fi
+- if test "x$use_lua" == "xYes"; then
++ if test "x$use_lua" = "xYes"; then
+   WITH_LUA_TRUE=
+   WITH_LUA_FALSE='#'
+ else
+@@ -21896,7 +21906,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$OCAML" == "x"; then
++      if test "x$OCAML" = "x"; then
+         use_ocaml="No (ocaml not available)"
+       else
+         # Extract the first word of "ocamlopt", so it can be a program name with args.
+@@ -21936,8 +21946,8 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-        OCAML_INCLUDES=-I/usr/lib$LIBPOSTFIX/ocaml
+-        OCAML_LIBS=-L/usr/lib$LIBPOSTFIX/ocaml
++        OCAML_INCLUDES=-I${PREFIX}/lib$LIBPOSTFIX/ocaml
++        OCAML_LIBS=-L${PREFIX}/lib$LIBPOSTFIX/ocaml
+         save_CPPFLAGS=$CPPFLAGS
+         CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
+         ac_fn_c_check_header_mongrel "$LINENO" "caml/mlvalues.h" "ac_cv_header_caml_mlvalues_h" "$ac_includes_default"
+@@ -21961,7 +21971,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_ocaml" == "xYes"; then
++ if test "x$use_ocaml" = "xYes"; then
+   WITH_OCAML_TRUE=
+   WITH_OCAML_FALSE='#'
+ else
+@@ -22033,7 +22043,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PERL" == "x"; then
++      if test "x$PERL" = "x"; then
+         use_perl="No (perl not available)"
+       else
+         if test $PERL -e 'exit !($] <= 5.004)' > /dev/null 2>&1 ; then
+@@ -22075,7 +22085,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_perl" == "xYes"; then
++ if test "x$use_perl" = "xYes"; then
+   WITH_PERL_TRUE=
+   WITH_PERL_FALSE='#'
+ else
+@@ -22144,16 +22154,16 @@ fi
+   test -n "$PHP" && break
+ done
+ 
+-      if test "x$PHP" == "x"; then
++      if test "x$PHP" = "x"; then
+         use_php="No (php not available)"
+       else
+-        if test -d /usr/include/php5; then
+-          PHP_INCLUDES="-I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/Zend -I/usr/include/php5/TSRM"
++        if test -d ${PREFIX}/include/php5; then
++          PHP_INCLUDES="-I${PREFIX}/include/php5 -I${PREFIX}/include/php5/main -I${PREFIX}/include/php5/Zend -I${PREFIX}/include/php5/TSRM"
+         else
+-          PHP_INCLUDES="-I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM"
++          PHP_INCLUDES="-I${PREFIX}/include/php -I${PREFIX}/include/php/main -I${PREFIX}/include/php/Zend -I${PREFIX}/include/php/TSRM"
+         fi
+-        PHP_INSTALL_DIR="/usr/lib${LIBPOSTFIX}/php/modules"
+-        PHP_INSTALL_DATADIR="/usr/share/php"
++        PHP_INSTALL_DIR="${PREFIX}/lib${LIBPOSTFIX}/php/modules"
++        PHP_INSTALL_DATADIR="${PREFIX}/share/php"
+         PHP_LIBS=
+         save_CPPFLAGS=$CPPFLAGS
+         CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
+@@ -22180,7 +22190,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_php" == "xYes"; then
++ if test "x$use_php" = "xYes"; then
+   WITH_PHP_TRUE=
+   WITH_PHP_FALSE='#'
+ else
+@@ -22244,11 +22254,11 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PYTHON" == "x"; then
++      if test "x$PYTHON" = "x"; then
+         use_python="No (python not available)"
+       else
+         PYTHON_VERSION=`$PYTHON -V 2>&1 | $EGREP Python | cut -d ' ' -f 2`
+-        if test "x$PYTHON_VERSION" == "x"; then
++        if test "x$PYTHON_VERSION" = "x"; then
+           PYTHON=
+         else
+           PYTHON_VERSION_MAJOR=`echo $PYTHON_VERSION | cut -d '.' -f 1`
+@@ -22265,7 +22275,7 @@ fi
+           fi
+         fi
+       fi
+-      if test "x$PYTHON" == "x"; then
++      if test "x$PYTHON" = "x"; then
+ 	use_python="No (python is too old)"
+       else
+         PYTHON_PREFIX=`$PYTHON -c "import sys; print sys.prefix"`
+@@ -22296,7 +22306,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_python" == "xYes"; then
++ if test "x$use_python" = "xYes"; then
+   WITH_PYTHON_TRUE=
+   WITH_PYTHON_FALSE='#'
+ else
+@@ -22360,11 +22370,11 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PYTHON23" == "x"; then
++      if test "x$PYTHON23" = "x"; then
+         use_python23="No (python23 not available)"
+       else
+         PYTHON23_VERSION=`$PYTHON23 -V 2>&1 | $EGREP Python | cut -d ' ' -f 2`
+-        if test "x$PYTHON23_VERSION" == "x"; then
++        if test "x$PYTHON23_VERSION" = "x"; then
+           PYTHON23=
+         else
+           PYTHON23_VERSION_MAJOR=`echo $PYTHON23_VERSION | cut -d '.' -f 1`
+@@ -22381,7 +22391,7 @@ fi
+           fi
+         fi
+       fi
+-      if test "x$PYTHON23" == "x"; then
++      if test "x$PYTHON23" = "x"; then
+ 	use_python23="No (python2.3 is too old)"
+       else
+         PYTHON23_PREFIX=`$PYTHON23 -c "import sys; print sys.prefix"`
+@@ -22412,7 +22422,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_python23" == "xYes"; then
++ if test "x$use_python23" = "xYes"; then
+   WITH_PYTHON23_TRUE=
+   WITH_PYTHON23_FALSE='#'
+ else
+@@ -22476,11 +22486,11 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PYTHON24" == "x"; then
++      if test "x$PYTHON24" = "x"; then
+         use_python24="No (python24 not available)"
+       else
+         PYTHON24_VERSION=`$PYTHON24 -V 2>&1 | $EGREP Python | cut -d ' ' -f 2`
+-        if test "x$PYTHON24_VERSION" == "x"; then
++        if test "x$PYTHON24_VERSION" = "x"; then
+           PYTHON24=
+         else
+           PYTHON24_VERSION_MAJOR=`echo $PYTHON24_VERSION | cut -d '.' -f 1`
+@@ -22497,7 +22507,7 @@ fi
+           fi
+         fi
+       fi
+-      if test "x$PYTHON24" == "x"; then
++      if test "x$PYTHON24" = "x"; then
+ 	use_python24="No (python2.4 is too old)"
+       else
+         PYTHON24_PREFIX=`$PYTHON24 -c "import sys; print sys.prefix"`
+@@ -22528,7 +22538,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_python24" == "xYes"; then
++ if test "x$use_python24" = "xYes"; then
+   WITH_PYTHON24_TRUE=
+   WITH_PYTHON24_FALSE='#'
+ else
+@@ -22592,11 +22602,11 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PYTHON25" == "x"; then
++      if test "x$PYTHON25" = "x"; then
+         use_python25="No (python25 not available)"
+       else
+         PYTHON25_VERSION=`$PYTHON25 -V 2>&1 | $EGREP Python | cut -d ' ' -f 2`
+-        if test "x$PYTHON25_VERSION" == "x"; then
++        if test "x$PYTHON25_VERSION" = "x"; then
+           PYTHON25=
+         else
+           PYTHON25_VERSION_MAJOR=`echo $PYTHON25_VERSION | cut -d '.' -f 1`
+@@ -22613,7 +22623,7 @@ fi
+           fi
+         fi
+       fi
+-      if test "x$PYTHON25" == "x"; then
++      if test "x$PYTHON25" = "x"; then
+ 	use_python25="No (python2.5 is too old)"
+       else
+         PYTHON25_PREFIX=`$PYTHON25 -c "import sys; print sys.prefix"`
+@@ -22644,7 +22654,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_python25" == "xYes"; then
++ if test "x$use_python25" = "xYes"; then
+   WITH_PYTHON25_TRUE=
+   WITH_PYTHON25_FALSE='#'
+ else
+@@ -22708,11 +22718,11 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PYTHON26" == "x"; then
++      if test "x$PYTHON26" = "x"; then
+         use_python26="No (python26 not available)"
+       else
+         PYTHON26_VERSION=`$PYTHON26 -V 2>&1 | $EGREP Python | cut -d ' ' -f 2`
+-        if test "x$PYTHON26_VERSION" == "x"; then
++        if test "x$PYTHON26_VERSION" = "x"; then
+           PYTHON26=
+         else
+           PYTHON26_VERSION_MAJOR=`echo $PYTHON26_VERSION | cut -d '.' -f 1`
+@@ -22729,7 +22739,7 @@ fi
+           fi
+         fi
+       fi
+-      if test "x$PYTHON26" == "x"; then
++      if test "x$PYTHON26" = "x"; then
+ 	use_python26="No (python2.6 is too old)"
+       else
+         PYTHON26_PREFIX=`$PYTHON26 -c "import sys; print sys.prefix"`
+@@ -22760,7 +22770,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_python26" == "xYes"; then
++ if test "x$use_python26" = "xYes"; then
+   WITH_PYTHON26_TRUE=
+   WITH_PYTHON26_FALSE='#'
+ else
+@@ -22824,11 +22834,11 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-      if test "x$PYTHON27" == "x"; then
++      if test "x$PYTHON27" = "x"; then
+         use_python27="No (python27 not available)"
+       else
+         PYTHON27_VERSION=`$PYTHON27 -V 2>&1 | $EGREP Python | cut -d ' ' -f 2`
+-        if test "x$PYTHON27_VERSION" == "x"; then
++        if test "x$PYTHON27_VERSION" = "x"; then
+           PYTHON27=
+         else
+           PYTHON27_VERSION_MAJOR=`echo $PYTHON27_VERSION | cut -d '.' -f 1`
+@@ -22845,7 +22855,7 @@ fi
+           fi
+         fi
+       fi
+-      if test "x$PYTHON27" == "x"; then
++      if test "x$PYTHON27" = "x"; then
+ 	use_python27="No (python2.7 is too old)"
+       else
+         PYTHON27_PREFIX=`$PYTHON27 -c "import sys; print sys.prefix"`
+@@ -22876,7 +22886,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_python27" == "xYes"; then
++ if test "x$use_python27" = "xYes"; then
+   WITH_PYTHON27_TRUE=
+   WITH_PYTHON27_FALSE='#'
+ else
+@@ -22983,7 +22993,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_r" == "xYes"; then
++ if test "x$use_r" = "xYes"; then
+   WITH_R_TRUE=
+   WITH_R_FALSE='#'
+ else
+@@ -23163,17 +23173,17 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-          if test "x$RUBY" == "x"; then
++          if test "x$RUBY" = "x"; then
+ 	    use_ruby="No (ruby not available)"
+           else
+             RUBY_CFLAGS="-I`$RUBY $srcdir/config/config_ruby.rb archdir`"
+ 	    # hack for powerpc-darwin8 (10.4)
+-	    if test "x$DARWIN" == "xyes"; then
++	    if test "x$DARWIN" = "xyes"; then
+ 	      RUBY_CFLAGS=`echo $RUBY_CFLAGS | sed 's/powerpc/universal/'`
+ 	    fi
+             RUBY_LIBS="-L`$RUBY $srcdir/config/config_ruby.rb lib` `$RUBY -rrbconfig -e \"puts Config::CONFIG['LIBRUBYARG_SHARED']\"`"
+             RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+-	    if test "x$RUBY_INSTALL_DIR" == "x"; then
++	    if test "x$RUBY_INSTALL_DIR" = "x"; then
+ 	  	  RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb sitearchdir`"
+ 	    fi
+             save_CPPFLAGS=$CPPFLAGS
+@@ -23233,17 +23243,17 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-          if test "x$RUBY" == "x"; then
++          if test "x$RUBY" = "x"; then
+ 	    use_ruby="No (ruby not available)"
+           else
+             RUBY_CFLAGS="-I`$RUBY $srcdir/config/config_ruby.rb archdir`"
+ 	    # hack for powerpc-darwin8 (10.4)
+-	    if test "x$DARWIN" == "xyes"; then
++	    if test "x$DARWIN" = "xyes"; then
+ 	      RUBY_CFLAGS=`echo $RUBY_CFLAGS | sed 's/powerpc/universal/'`
+ 	    fi
+             RUBY_LIBS="-L`$RUBY $srcdir/config/config_ruby.rb lib` `$RUBY -rrbconfig -e \"puts Config::CONFIG['LIBRUBYARG_SHARED']\"`"
+             RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+-	    if test "x$RUBY_INSTALL_DIR" == "x"; then
++	    if test "x$RUBY_INSTALL_DIR" = "x"; then
+ 	  	  RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb sitearchdir`"
+ 	    fi
+             save_CPPFLAGS=$CPPFLAGS
+@@ -23305,7 +23315,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-          if test "x$RUBY" == "x"; then
++          if test "x$RUBY" = "x"; then
+             use_ruby="No (ruby not available)"
+           else
+             RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+@@ -23412,17 +23422,17 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-          if test "x$RUBY" == "x"; then
++          if test "x$RUBY" = "x"; then
+ 	    use_ruby="No (ruby not available)"
+           else
+             RUBY_CFLAGS="-I`$RUBY $srcdir/config/config_ruby.rb archdir`"
+ 	    # hack for powerpc-darwin8 (10.4)
+-	    if test "x$DARWIN" == "xyes"; then
++	    if test "x$DARWIN" = "xyes"; then
+ 	      RUBY_CFLAGS=`echo $RUBY_CFLAGS | sed 's/powerpc/universal/'`
+ 	    fi
+             RUBY_LIBS="-L`$RUBY $srcdir/config/config_ruby.rb lib` `$RUBY -rrbconfig -e \"puts Config::CONFIG['LIBRUBYARG_SHARED']\"`"
+             RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+-	    if test "x$RUBY_INSTALL_DIR" == "x"; then
++	    if test "x$RUBY_INSTALL_DIR" = "x"; then
+ 	  	  RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb sitearchdir`"
+ 	    fi
+             save_CPPFLAGS=$CPPFLAGS
+@@ -23482,17 +23492,17 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-          if test "x$RUBY" == "x"; then
++          if test "x$RUBY" = "x"; then
+ 	    use_ruby="No (ruby not available)"
+           else
+             RUBY_CFLAGS="-I`$RUBY $srcdir/config/config_ruby.rb archdir`"
+ 	    # hack for powerpc-darwin8 (10.4)
+-	    if test "x$DARWIN" == "xyes"; then
++	    if test "x$DARWIN" = "xyes"; then
+ 	      RUBY_CFLAGS=`echo $RUBY_CFLAGS | sed 's/powerpc/universal/'`
+ 	    fi
+             RUBY_LIBS="-L`$RUBY $srcdir/config/config_ruby.rb lib` `$RUBY -rrbconfig -e \"puts Config::CONFIG['LIBRUBYARG_SHARED']\"`"
+             RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+-	    if test "x$RUBY_INSTALL_DIR" == "x"; then
++	    if test "x$RUBY_INSTALL_DIR" = "x"; then
+ 	  	  RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb sitearchdir`"
+ 	    fi
+             save_CPPFLAGS=$CPPFLAGS
+@@ -23554,7 +23564,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-          if test "x$RUBY" == "x"; then
++          if test "x$RUBY" = "x"; then
+             use_ruby="No (ruby not available)"
+           else
+             RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+@@ -23605,7 +23615,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-        if test "x$RUBY" == "x"; then
++        if test "x$RUBY" = "x"; then
+           use_ruby="No (ruby not available)"
+         else
+           RUBY_INSTALL_DIR="`$RUBY $srcdir/config/config_ruby.rb vendorarchdir`"
+@@ -23621,7 +23631,7 @@ fi
+     fi
+   fi
+ fi
+- if test "x$use_ruby" == "xYes"; then
++ if test "x$use_ruby" = "xYes"; then
+   WITH_RUBY_TRUE=
+   WITH_RUBY_FALSE='#'
+ else
+@@ -23643,7 +23653,7 @@ if test "x$enable_tcl" != "xyes"; then
+   use_tcl="No (disabled)"
+ fi
+ 
+-if test "x$use_tcl" == "x"; then
++if test "x$use_tcl" = "x"; then
+   TCL_VERSION_FOUND=`echo 'puts [info tclversion]' | $TCLSH`
+ 
+   # can't assume ksh on all architectures
+@@ -23680,7 +23690,7 @@ fi
+   CPPFLAGS=$save_CPPFLAGS
+ fi
+ 
+-if test "x$use_tcl" == "x"; then
++if test "x$use_tcl" = "x"; then
+   # Some systems don't have Tcl.  Don't build
+   # the Tcl products if we don't have the library.
+   if test -f ${TCLSH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
+@@ -23707,9 +23717,9 @@ $as_echo "$as_me: WARNING: Unable to fin
+   TCL_INSTALL_DIR="${TCLSH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tcl${TCL_VERSION_FOUND}"
+ fi
+ 
+-if test "x$use_tcl" == "x"; then
++if test "x$use_tcl" = "x"; then
+   # TCL STUBS support is required
+-  if test "x${TCL_SUPPORTS_STUBS}" == "x1"; then
++  if test "x${TCL_SUPPORTS_STUBS}" = "x1"; then
+     use_tcl="Yes"
+     TCL_CFLAGS="${TCL_CFLAGS} -DUSE_TCL_STUBS"
+ 
+@@ -23726,7 +23736,7 @@ fi
+ 
+ 
+ 
+- if test "x$use_tcl" == "xYes"; then
++ if test "x$use_tcl" = "xYes"; then
+   WITH_TCL_TRUE=
+   WITH_TCL_FALSE='#'
+ else
+@@ -23795,14 +23805,14 @@ $as_echo "$as_me: WARNING: No Tcl. The T
+     use_tk="No (no tcl)"
+ fi
+ 
+-if test "x$use_tk" == "x"; then
++if test "x$use_tk" = "x"; then
+ 
+ # Check whether --with-wish was given.
+ if test "${with_wish+set}" = set; then :
+   withval=$with_wish; WISH=$withval
+ fi
+ 
+-    if test "x$WISH" == "x"; then
++    if test "x$WISH" = "x"; then
+         for ac_prog in wish8.6 wish8.5 wish8.4 wish8.3 wish
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+@@ -23848,7 +23858,7 @@ fi
+   test -n "$WISH" && break
+ done
+ 
+-        if test "x$WISH" == "x"; then
++        if test "x$WISH" = "x"; then
+             { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find a wish. The Tk packages will not be built" >&5
+ $as_echo "$as_me: WARNING: Unable to find a wish. The Tk packages will not be built" >&2;}
+             use_tk="No (wish not found)"
+@@ -23856,7 +23866,7 @@ $as_echo "$as_me: WARNING: Unable to fin
+     fi
+ fi
+ 
+-if test "x$use_tk" == "x"; then
++if test "x$use_tk" = "x"; then
+     #TK_VERSION_FOUND=`echo 'puts [[info tkversion]]' | $WISH`
+     #
+     # No such var as tkversion.  Use tclversion instead.
+@@ -23908,7 +23918,7 @@ done
+     CPPFLAGS=$save_CPPFLAGS
+ fi
+ 
+-if test "x$use_tk" == "x"; then
++if test "x$use_tk" = "x"; then
+     # Some systems don't have Tcl.  Don't build
+     # Some systems have Tcl, but not Tk.  Don't build
+     # the Tk products if we don't have the library.
+@@ -23935,13 +23945,13 @@ $as_echo "$as_me: WARNING: Unable to fin
+     fi
+ fi
+ 
+-if test "x$use_tk" == "x"; then
++if test "x$use_tk" = "x"; then
+     use_tk="Yes"
+     TK_SUBDIRS="tkstubs tkspline"
+ else
+     TK_SUBDIRS=""
+ fi
+- if test "x$use_tk" == "xYes"; then
++ if test "x$use_tk" = "xYes"; then
+   WITH_TK_TRUE=
+   WITH_TK_FALSE='#'
+ else
+@@ -23951,7 +23961,7 @@ fi
+ 
+ 
+ # NB. No TK_SUPPORTS_STUBS set by tkConfig.sh
+-if test "${TCL_SUPPORTS_STUBS}" == "1"; then
++if test "${TCL_SUPPORTS_STUBS}" = "1"; then
+     TK_CFLAGS="${TK_CFLAGS} -DUSE_TK_STUBS"
+ fi
+ 
+@@ -24005,7 +24015,7 @@ else
+   tk_checkSocket=1
+ fi
+ 
+-if test "$tk_checkSocket" == 1; then
++if test "$tk_checkSocket" = 1; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lsocket" >&5
+ $as_echo_n "checking for main in -lsocket... " >&6; }
+ if ${ac_cv_lib_socket_main+:} false; then :
+@@ -24043,7 +24053,7 @@ else
+ fi
+ 
+ fi
+-if test "$tk_checkBoth" == 1; then
++if test "$tk_checkBoth" = 1; then
+   tk_oldLibs=$LIBS
+   LIBS="$LIBS -lsocket -lnsl"
+   ac_fn_c_check_func "$LINENO" "accept" "ac_cv_func_accept"
+@@ -24239,7 +24249,7 @@ fi
+   LDFLAGS=$save_LDFLAGS
+   CPPFLAGS=$save_CPPFLAGS
+ fi
+-if test "x$use_expat" == "x"; then
++if test "x$use_expat" = "x"; then
+   use_expat="Yes"
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -24338,7 +24348,7 @@ fi
+   LDFLAGS=$save_LDFLAGS
+   CPPFLAGS=$save_CPPFLAGS
+ fi
+-if test "x$use_devil" == "x"; then
++if test "x$use_devil" = "x"; then
+   use_devil="Yes"
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -24349,7 +24359,7 @@ _ACEOF
+ 
+ fi
+ 
+- if test "x$use_devil" == "xYes"; then
++ if test "x$use_devil" = "xYes"; then
+   WITH_DEVIL_TRUE=
+   WITH_DEVIL_FALSE='#'
+ else
+@@ -24531,7 +24541,7 @@ else
+   WITH_XAW_FALSE=
+ fi
+ 
+-if test "x$with_xaw" == "xno"; then
++if test "x$with_xaw" = "xno"; then
+     if test "x$no_x" != "xyes"; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Lefty cannot be built" >&5
+ $as_echo "$as_me: WARNING: Lefty cannot be built" >&2;}
+@@ -24719,7 +24729,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_webp" == "xYes"; then
++ if test "x$use_webp" = "xYes"; then
+   WITH_WEBP_TRUE=
+   WITH_WEBP_FALSE='#'
+ else
+@@ -24824,7 +24834,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_poppler" == "xYes"; then
++ if test "x$use_poppler" = "xYes"; then
+   WITH_POPPLER_TRUE=
+   WITH_POPPLER_FALSE='#'
+ else
+@@ -24929,7 +24939,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_rsvg" == "xYes"; then
++ if test "x$use_rsvg" = "xYes"; then
+   WITH_RSVG_TRUE=
+   WITH_RSVG_FALSE='#'
+ else
+@@ -24962,7 +24972,7 @@ else
+ fi
+ 
+ 
+-      if test "x$use_ghostscript" == "x"; then
++      if test "x$use_ghostscript" = "x"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lgs" >&5
+ $as_echo_n "checking for main in -lgs... " >&6; }
+ if ${ac_cv_lib_gs_main+:} false; then :
+@@ -24999,7 +25009,7 @@ else
+   use_ghostscript="No (missing lib)"
+ fi
+ 
+-        if test "x$use_ghostscript" == "x"; then
++        if test "x$use_ghostscript" = "x"; then
+           use_ghostscript="Yes"
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -25012,7 +25022,7 @@ _ACEOF
+      fi
+   fi
+ fi
+- if test "x$use_ghostscript" == "xYes"; then
++ if test "x$use_ghostscript" = "xYes"; then
+   WITH_GS_TRUE=
+   WITH_GS_FALSE='#'
+ else
+@@ -25035,9 +25045,9 @@ if test "x$with_visio" != "xyes"; then
+   use_visio="No (disabled by default - experimental)"
+ else
+ #  AC_CHECK_HEADER(visio/visio.h, VISIO_CFLAGS="",use_visio="No (missing headers)")
+-#  if test "x$use_visio" == "x"; then
++#  if test "x$use_visio" = "x"; then
+ #    AC_CHECK_LIB(visio, main, VISIO_LIBS="-lgs", use_visio="No (missing lib)")
+-#    if test "x$use_visio" == "x"; then
++#    if test "x$use_visio" = "x"; then
+       use_visio="Yes"
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -25049,7 +25059,7 @@ _ACEOF
+ #    fi
+ #  fi
+ fi
+- if test "x$use_visio" == "xYes"; then
++ if test "x$use_visio" = "xYes"; then
+   WITH_VISIO_TRUE=
+   WITH_VISIO_FALSE='#'
+ else
+@@ -25155,7 +25165,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_pangocairo" == "xYes"; then
++ if test "x$use_pangocairo" = "xYes"; then
+   WITH_PANGOCAIRO_TRUE=
+   WITH_PANGOCAIRO_FALSE='#'
+ else
+@@ -25165,7 +25175,7 @@ fi
+ 
+ 
+ # see if pango uses a fontconfig/freetype2 backend
+-if test "x$use_pangocairo" == "xYes"; then
++if test "x$use_pangocairo" = "xYes"; then
+     save_LIBS=$LIBS
+ 
+ pkg_failed=no
+@@ -25374,7 +25384,7 @@ _ACEOF
+ fi
+   fi
+ fi
+- if test "x$use_lasi" == "xYes"; then
++ if test "x$use_lasi" = "xYes"; then
+   WITH_LASI_TRUE=
+   WITH_LASI_FALSE='#'
+ else
+@@ -25479,7 +25489,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_glitz" == "xYes"; then
++ if test "x$use_glitz" = "xYes"; then
+   WITH_GLITZ_TRUE=
+   WITH_GLITZ_FALSE='#'
+ else
+@@ -25581,8 +25591,8 @@ fi
+ fi
+ 
+ # pkgconfig for freetype2 did not exist in redhat[78]
+-if test "x$use_freetype" == "x"; then
+-    if test "x$FREETYPE_DIR" == "xyes"; then
++if test "x$use_freetype" = "x"; then
++    if test "x$FREETYPE_DIR" = "xyes"; then
+ 	# Extract the first word of "freetype-config", so it can be a program name with args.
+ set dummy freetype-config; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -25682,7 +25692,7 @@ $as_echo "$as_me: WARNING: freetype libr
+     fi
+ fi
+ 
+-if test "x$use_freetype" == "xYes"; then
++if test "x$use_freetype" = "xYes"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_FREETYPE2 1
+@@ -25691,7 +25701,7 @@ _ACEOF
+ 
+ 
+ fi
+- if test "x$ue_freetype" == "xYes"; then
++ if test "x$ue_freetype" = "xYes"; then
+   WITH_FREETYPE2_TRUE=
+   WITH_FREETYPE2_FALSE='#'
+ else
+@@ -25793,8 +25803,8 @@ fi
+ fi
+ 
+ # just in case pkgconfig for fontconfig does not exist
+-if test "x$use_fontconfig" == "x"; then
+-    if test "x$FONTCONFIG_DIR" == "xyes"; then
++if test "x$use_fontconfig" = "x"; then
++    if test "x$FONTCONFIG_DIR" = "xyes"; then
+ 	# Extract the first word of "fontconfig-config", so it can be a program name with args.
+ set dummy fontconfig-config; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -25894,7 +25904,7 @@ $as_echo "$as_me: WARNING: fontconfig li
+     fi
+ fi
+ 
+-if test "x$use_fontconfig" == "xYes"; then
++if test "x$use_fontconfig" = "xYes"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_FONTCONFIG 1
+@@ -25903,7 +25913,7 @@ _ACEOF
+ 
+ 
+ fi
+- if test "x$use_fontconfig" == "xYes"; then
++ if test "x$use_fontconfig" = "xYes"; then
+   WITH_FONTCONFIG_TRUE=
+   WITH_FONTCONFIG_FALSE='#'
+ else
+@@ -26008,7 +26018,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_gdk_pixbuf" == "xYes"; then
++ if test "x$use_gdk_pixbuf" = "xYes"; then
+   WITH_GDK_PIXBUF_TRUE=
+   WITH_GDK_PIXBUF_FALSE='#'
+ else
+@@ -26113,7 +26123,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_gtk" == "xYes"; then
++ if test "x$use_gtk" = "xYes"; then
+   WITH_GTK_TRUE=
+   WITH_GTK_FALSE='#'
+ else
+@@ -26218,7 +26228,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_gtkgl" == "xYes"; then
++ if test "x$use_gtkgl" = "xYes"; then
+   WITH_GTKGL_TRUE=
+   WITH_GTKGL_FALSE='#'
+ else
+@@ -26323,7 +26333,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_gtkglext" == "xYes"; then
++ if test "x$use_gtkglext" = "xYes"; then
+   WITH_GTKGLEXT_TRUE=
+   WITH_GTKGLEXT_FALSE='#'
+ else
+@@ -26428,7 +26438,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_gts" == "xYes"; then
++ if test "x$use_gts" = "xYes"; then
+   WITH_GTS_TRUE=
+   WITH_GTS_FALSE='#'
+ else
+@@ -26533,7 +26543,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_glade" == "xYes"; then
++ if test "x$use_glade" = "xYes"; then
+   WITH_GLADE_TRUE=
+   WITH_GLADE_FALSE='#'
+ else
+@@ -26638,7 +26648,7 @@ _ACEOF
+ 
+ fi
+ fi
+- if test "x$use_ming" == "xYes"; then
++ if test "x$use_ming" = "xYes"; then
+   WITH_MING_TRUE=
+   WITH_MING_FALSE='#'
+ else
+@@ -26858,7 +26868,7 @@ fi
+     use_qt="No (qmake not found)"
+   fi
+ fi
+- if test "x$use_qt" == "xYes"; then
++ if test "x$use_qt" = "xYes"; then
+   WITH_QT_TRUE=
+   WITH_QT_FALSE='#'
+ else
+@@ -26895,7 +26905,7 @@ _ACEOF
+     use_quartz="No (missing ApplicationServices.framework)"
+   fi
+ fi
+- if test "x$use_quartz" == "xYes"; then
++ if test "x$use_quartz" = "xYes"; then
+   WITH_QUARTZ_TRUE=
+   WITH_QUARTZ_FALSE='#'
+ else
+@@ -26908,7 +26918,7 @@ fi
+ 
+ # Check whether --with-platformsdkincludedir was given.
+ if test "${with_platformsdkincludedir+set}" = set; then :
+-  withval=$with_platformsdkincludedir; PLATFORMSDKINCLUDE=$withval; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE//'\\'/\\\\}; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE_ESCAPED// /\\ }
++  withval=$with_platformsdkincludedir; PLATFORMSDKINCLUDE=$withval; PLATFORMSDKINCLUDE_ESCAPED=`echo ${PLATFORMSDKINCLUDE} | sed "s/'\\'/\\\\/g" | sed "s/ /\\ /g"`
+ fi
+ 
+ 
+@@ -26955,7 +26965,7 @@ _ACEOF
+ $as_echo "$as_me: WARNING: --with-gdiplus requires valid --with-platformsdkincludedir and --with-platformsdklibdir." >&2;}
+   fi
+ fi
+- if test "x$use_gdiplus" == "xYes"; then
++ if test "x$use_gdiplus" = "xYes"; then
+   WITH_GDIPLUS_TRUE=
+   WITH_GDIPLUS_FALSE='#'
+ else
+@@ -26978,7 +26988,7 @@ if test "x$with_libgd" != "xyes"; then
+   use_gd="No (disabled)"
+ fi
+ 
+-if test "x$use_gd" == "x"; then
++if test "x$use_gd" = "x"; then
+       # Extract the first word of "gdlib-config", so it can be a program name with args.
+ set dummy gdlib-config; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -27027,28 +27037,28 @@ fi
+         GD_MINORVERSION=`$GDLIB_CONFIG --minorversion`
+         GD_REVISION=`$GDLIB_CONFIG --revision`
+         for f in `$GDLIB_CONFIG --features` ; do
+-	    if test "$f" == "GD_PNG"; then
++	    if test "$f" = "GD_PNG"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GD_PNG 1
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_JPEG"; then
++	    if test "$f" = "GD_JPEG"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GD_JPEG 1
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_XPM"; then
++	    if test "$f" = "GD_XPM"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GD_XPM 1
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_FONTCONFIG"; then
++	    if test "$f" = "GD_FONTCONFIG"; then
+ 		HAVE_GD_FONTCONFIG=1
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -27056,7 +27066,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_FREETYPE"; then
++	    if test "$f" = "GD_FREETYPE"; then
+ 		HAVE_GD_FREETYPE=1
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -27064,21 +27074,21 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_GIF"; then
++	    if test "$f" = "GD_GIF"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GD_GIF 1
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_GIFANIM"; then
++	    if test "$f" = "GD_GIFANIM"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GD_GIFANIM 1
+ _ACEOF
+ 
+ 	    fi
+-	    if test "$f" == "GD_OPENPOLYGON"; then
++	    if test "$f" = "GD_OPENPOLYGON"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GD_OPENPOLYGON 1
+@@ -27087,11 +27097,11 @@ _ACEOF
+ 	    fi
+         done
+ 
+-	if test "x$HAVE_GD_FONTCONFIG" == "x"; then
++	if test "x$HAVE_GD_FONTCONFIG" = "x"; then
+             { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Your libgd was not built with freetype support. This may result in problems displaying fonts." >&5
+ $as_echo "$as_me: WARNING: Your libgd was not built with freetype support. This may result in problems displaying fonts." >&2;}
+ 	fi
+-	if test "x$HAVE_GD_FREETYPE" == "x"; then
++	if test "x$HAVE_GD_FREETYPE" = "x"; then
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Your libgd was not built with fontconfig support. This may result in problems resolving fonts." >&5
+ $as_echo "$as_me: WARNING: Your libgd was not built with fontconfig support. This may result in problems resolving fonts." >&2;}
+         fi
+@@ -27124,19 +27134,19 @@ $as_echo "$as_me: WARNING: GD library ve
+ $as_echo "$as_me: WARNING: GD gdlib-config not found" >&2;}
+       fi
+   # prevent explicit use of -I/usr/include as it breaks mingw cross-compiles
+-  if test "x$GD_INCLUDES" == "x-I/usr/include"; then
++  if test "x$GD_INCLUDES" = "x-I/usr/include"; then
+      GD_INCLUDES="";
+   fi
+   # prevent explicit use of -L/usr/lib or -L/usr/lib64, unnecessary clutter
+-  if test "x$GD_LDFLAGS" == "x-L/usr/lib"; then
++  if test "x$GD_LDFLAGS" = "x-L/usr/lib"; then
+      GD_LDFLAGS="";
+   fi
+-  if test "x$GD_LDFLAGS" == "x-L/usr/lib64"; then
++  if test "x$GD_LDFLAGS" = "x-L/usr/lib64"; then
+      GD_LDFLAGS="";
+   fi
+ 
+-  if test "x$use_gd" == "x"; then
+-    if test "x$with_libgd" == "xyes"; then
++  if test "x$use_gd" = "x"; then
++    if test "x$with_libgd" = "xyes"; then
+     # see if we can use the external gd lib
+       save_CPPFLAGS=$CPPFLAGS
+       save_LDFLAGS=$LDFLAGS
+@@ -27168,7 +27178,7 @@ $as_echo "$as_me: WARNING: Optional GD l
+ fi
+ 
+ 
+-      if test "x$use_gd" == "x"; then
++      if test "x$use_gd" = "x"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lgd" >&5
+ $as_echo_n "checking for main in -lgd... " >&6; }
+ if ${ac_cv_lib_gd_main+:} false; then :
+@@ -27225,7 +27235,7 @@ fi
+ 
+ 
+ fi
+- if test "x$with_libgd" == "xyes"; then
++ if test "x$with_libgd" = "xyes"; then
+   WITH_LIBGD_TRUE=
+   WITH_LIBGD_FALSE='#'
+ else
+@@ -27378,15 +27388,15 @@ TCL_PKGINDEX=""
+ TCL_PKGINDEX_GD=""
+ TCL_PKGINDEX_SWIG=""
+ TK_PKGINDEX=""
+-if test "$use_tcl" == "Yes"; then
++if test "$use_tcl" = "Yes"; then
+     TCL_PKGINDEX="tcldot/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
+-    if test "x$with_libgd" == "xyes"; then
++    if test "x$with_libgd" = "xyes"; then
+ 	TCL_PKGINDEX_GD="gdtclft/pkgIndex.tcl"
+     fi
+     if test "x$SWIG" != "x"; then
+ 	TCL_PKGINDEX_SWIG="gv/pkgIndex.tcl"
+     fi
+-    if test "$use_tk" == "Yes"; then
++    if test "$use_tk" = "Yes"; then
+         TK_PKGINDEX="tkspline/pkgIndex.tcl"
+     fi
+ fi
+@@ -27415,7 +27425,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ fi
+- if test "x$use_sfdp" == "xYes"; then
++ if test "x$use_sfdp" = "xYes"; then
+   WITH_SFDP_TRUE=
+   WITH_SFDP_FALSE='#'
+ else
+@@ -27473,7 +27483,7 @@ _ACEOF
+ 
+   fi
+ fi
+- if test "x$use_smyrna" == "xYes"; then
++ if test "x$use_smyrna" = "xYes"; then
+   WITH_SMYRNA_TRUE=
+   WITH_SMYRNA_FALSE='#'
+ else
+@@ -27504,7 +27514,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ fi
+- if test "x$use_cgraph" == "xYes"; then
++ if test "x$use_cgraph" = "xYes"; then
+   WITH_CGRAPH_TRUE=
+   WITH_CGRAPH_FALSE='#'
+ else
+@@ -27533,7 +27543,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ fi
+- if test "x$use_ortho" == "xYes"; then
++ if test "x$use_ortho" = "xYes"; then
+   WITH_ORTHO_TRUE=
+   WITH_ORTHO_FALSE='#'
+ else
+@@ -27590,7 +27600,7 @@ _ACEOF
+ 
+   fi
+ fi
+- if test "x$use_ipsepcola" == "xYes"; then
++ if test "x$use_ipsepcola" = "xYes"; then
+   WITH_IPSEPCOLA_TRUE=
+   WITH_IPSEPCOLA_FALSE='#'
+ else
+@@ -31136,7 +31148,7 @@ else
+     use_gv_tcl="Yes"
+   fi
+   if test "x$use_gd" != "xYes"; then
+-    if test "x$use_gd" == "xYes (internal)"; then
++    if test "x$use_gd" = "xYes (internal)"; then
+         use_gdtclft="Yes"
+     else
+         use_gdtclft="No (gd not available)"
