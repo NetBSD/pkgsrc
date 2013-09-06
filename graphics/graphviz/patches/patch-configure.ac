@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
+$NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
 
---- configure.ac.orig	2010-01-26 16:00:29.000000000 +0000
+--- configure.ac.orig	2013-08-01 17:35:15.000000000 +0000
 +++ configure.ac
-@@ -83,13 +83,24 @@ AC_SUBST(GVPLUGIN_VERSION)
+@@ -83,13 +83,24 @@ AC_SUBST([GVPLUGIN_VERSION])
  GRAPHVIZ_VERSION_BUILD=0
  GRAPHVIZ_VERSION_REVISION=0
  case "${host_os}" in
@@ -34,13 +34,13 @@ $NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
 @@ -101,7 +112,7 @@ case "${host_os}" in
    *linux* )
      case "${host_cpu}" in
-       powerpc64 | s390x | x86_64 )
+       powerpc64 | s390x | x86_64 | sparc64 )
 -        LIBPOSTFIX="64"
 +        LIBPOSTFIX=""
          ;;
      esac
      ;;
-@@ -802,7 +813,7 @@ else
+@@ -880,7 +891,7 @@ else
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
@@ -48,8 +48,8 @@ $NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
 +		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
      
  		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
- 		        if test  "x$?" = "x0"; then
-@@ -824,7 +835,7 @@ else
+ 		        if test  "x$?" == "x0"; then
+@@ -902,7 +913,7 @@ else
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
              fi
          fi
      
-@@ -914,8 +925,8 @@ else
+@@ -992,8 +1003,8 @@ else
          use_ocaml="No (ocaml not available)"
        else
          AC_CHECK_PROG(OCAML_OPT,ocamlopt,ocamlopt)
@@ -69,8 +69,8 @@ $NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          AC_CHECK_HEADER(caml/mlvalues.h,[
-@@ -1008,13 +1019,13 @@ else
-       if test "x$PHP" = "x"; then
+@@ -1086,13 +1097,13 @@ else
+       if test "x$PHP" == "x"; then
          use_php="No (php not available)"
        else
 -        if test -d /usr/include/php5; then
@@ -88,7 +88,7 @@ $NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
          PHP_LIBS=
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -2325,7 +2336,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
+@@ -2571,7 +2582,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
  
  AC_ARG_WITH(platformsdkincludedir,
    [AS_HELP_STRING([--with-platformsdkincludedir=DIR],[use Platform SDK (Windows) includes from DIR])],
@@ -97,20 +97,7 @@ $NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
  
  AC_ARG_WITH(platformsdklibdir,
    [AS_HELP_STRING([--with-platformsdklibdir=DIR],[use Platform SDK (Windows) libraries from DIR])],
-@@ -2896,10 +2907,12 @@ AC_MSG_CHECKING(if have working sincos()
- AC_RUN_IFELSE([AC_LANG_SOURCE([[
- 	#include <stdio.h>
- 	#include <assert.h>
-+	#include <time.h>
- 	#define PI 3.14159265358979323846
- 	extern void sincos(double x, double *s, double *c);
- 	int main () {
- 		double sinx=0.0, cosx=1.0;
-+		sincos(time(NULL)&1,&sinx,&cosx);
- 		sincos(PI/2.0,&sinx,&cosx);
- 		assert(sinx>0.9999999);
- 		assert(sinx<1.0000001);
-@@ -3158,7 +3171,7 @@ else
+@@ -3222,7 +3233,7 @@ else
      use_gv_tcl="Yes"
    fi
    if test "x$use_gd" != "xYes"; then
