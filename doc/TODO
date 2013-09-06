@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12519 2013/09/06 17:23:59 wiz Exp $
+$NetBSD: TODO,v 1.12520 2013/09/06 21:30:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramofile-1.6P
 	o gramps-4.0.1
 	o gramps3-3.4.4
-	o graphviz-2.30.1
 	o groff-1.22.2
 	o gss-1.0.2
 	o gstreamer-1.1.1
