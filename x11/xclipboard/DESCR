@@ -1,0 +1,4 @@
+Contains the xcutsel and xclipboard programs which help with managing the X
+server clipboard.
+
+This is from the modular X.org X11 project.
