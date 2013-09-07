@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3301 2013/09/07 14:51:12 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3302 2013/09/07 17:37:24 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sun-jdk6 to 6.0.45nb1 [ryoon 2013-09-07]
 	Updated lang/sun-jdk7 to 7.0.25nb1 [ryoon 2013-09-07]
 	Updated www/mediawiki to 1.21.2 [wen 2013-09-07]
+	Updated graphics/gnome-icon-theme-symbolic to 3.8.3 [prlw1 2013-09-07]
