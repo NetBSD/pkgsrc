@@ -1,4 +1,8 @@
-$NetBSD: patch-config_config__perl.pl,v 1.1 2013/09/06 21:30:00 wiz Exp $
+$NetBSD: patch-config_config__perl.pl,v 1.2 2013/09/07 18:48:43 wiz Exp $
+
+1. chunk: add rpath for pkgsrc
+2. chunk: perl-5.18 fix, see
+http://www.graphviz.org/mantisbt/view.php?id=2359
 
 --- config/config_perl.pl.orig	2013-08-01 17:35:15.000000000 +0000
 +++ config/config_perl.pl

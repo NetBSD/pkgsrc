@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.43 2013/09/06 21:30:00 wiz Exp $
+$NetBSD: distinfo,v 1.44 2013/09/07 18:48:43 wiz Exp $
 
 SHA1 (graphviz-2.32.0.tar.gz) = a64f4a409012d13d18338ecb8bd7253083ebc35e
 RMD160 (graphviz-2.32.0.tar.gz) = b0a63b7466d88b1dc4cfccc19d632ca2c5440407
 Size (graphviz-2.32.0.tar.gz) = 23756717 bytes
-SHA1 (patch-config_config__perl.pl) = cacf14b41c46b979ed57752fbd406480b54a1445
-SHA1 (patch-configure) = 3da4f52cbe0e1522be23dab6661f7eb997565220
+SHA1 (patch-config_config__perl.pl) = 1ce416cb296c8566c6a5279d6f4193f7403fe6c3
+SHA1 (patch-configure) = 6a1afc3fcff9dea3dd6caa70fbf1cbb2bada1c3f
 SHA1 (patch-configure.ac) = 250812ce53541373e101142200d109fd16da9ac9
 SHA1 (patch-lib_gvc_Makefile.in) = 44c514720a840574c9aa75f4c67798471138a642
 SHA1 (patch-plugin_gd_Makefile.am) = 81de41e7589eaf7682a21636155840123a7716ab

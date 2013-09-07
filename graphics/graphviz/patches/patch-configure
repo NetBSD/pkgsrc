@@ -1,4 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2013/09/06 21:30:00 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2013/09/07 18:48:43 wiz Exp $
+
+1. chunk: undocumented
+2. chunk: use the same path for all platforms in pkgsrc
+most other chunks: fix 'use unportable test(1) construct, see:
+http://www.graphviz.org/mantisbt/view.php?id=2357
 
 --- configure.orig	2013-08-01 17:39:03.000000000 +0000
 +++ configure
