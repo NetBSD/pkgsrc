@@ -1,6 +1,6 @@
-$NetBSD: patch-protobuf_genproto.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-protobuf_genproto.gypi,v 1.3 2013/09/07 18:42:14 ryoon Exp $
 
---- protobuf/genproto.gypi.orig	2013-07-17 02:38:05.000000000 +0000
+--- protobuf/genproto.gypi.orig	2013-08-28 05:26:13.000000000 +0000
 +++ protobuf/genproto.gypi
 @@ -34,7 +34,7 @@
      'protoc_command': 'protoc<(EXECUTABLE_SUFFIX)',

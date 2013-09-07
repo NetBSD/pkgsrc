@@ -1,6 +1,6 @@
-$NetBSD: patch-gyp_common.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.3 2013/09/07 18:42:14 ryoon Exp $
 
---- gyp/common.gypi.orig	2013-07-17 02:38:04.000000000 +0000
+--- gyp/common.gypi.orig	2013-08-28 05:26:13.000000000 +0000
 +++ gyp/common.gypi
 @@ -101,6 +101,7 @@
        '-include base/namespace.h',
@@ -28,6 +28,15 @@ $NetBSD: patch-gyp_common.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
  
      # use_libprotobuf represents if protobuf library is used or not.
      # This option is only for Linux.
+@@ -300,7 +301,7 @@
+           ['channel_dev==1', {
+             'defines': ['CHANNEL_DEV'],
+           }],
+-          ['not(OS=="linux" and use_libprotobuf!=0)', {
++          ['not((OS=="linux" or OS=="netbsd") and use_libprotobuf!=0)', {
+             'include_dirs': [
+               '../protobuf/files/src',
+             ],
 @@ -309,12 +310,12 @@
            # additional suffix except for Japanese so that multiple
            # converter processes can coexist. Note that Mozc on ChromeOS does
@@ -43,7 +52,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
              'ldflags': [
                '<@(linux_ldflags)',
              ],
-@@ -473,7 +474,7 @@
+@@ -485,7 +486,7 @@
            },
          },
          'conditions': [
@@ -52,7 +61,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
              'cflags': [
                '<@(debug_extra_cflags)',
              ],
-@@ -511,7 +512,7 @@
+@@ -523,7 +524,7 @@
            },
          },
          'conditions': [
@@ -61,7 +70,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.2 2013/07/20 04:34:53 ryoon Exp $
              'cflags': [
                '<@(release_extra_cflags)',
              ],
-@@ -825,6 +826,22 @@
+@@ -832,6 +833,22 @@
            }],
          ],
        }],

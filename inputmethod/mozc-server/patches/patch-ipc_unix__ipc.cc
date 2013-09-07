@@ -1,13 +1,13 @@
-$NetBSD: patch-ipc_unix__ipc.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-ipc_unix__ipc.cc,v 1.3 2013/09/07 18:42:14 ryoon Exp $
 
---- ipc/unix_ipc.cc.orig	2013-07-17 02:37:50.000000000 +0000
+--- ipc/unix_ipc.cc.orig	2013-08-28 05:25:59.000000000 +0000
 +++ ipc/unix_ipc.cc
 @@ -28,7 +28,7 @@
  // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  
  // skip all if non-Linux or Android.
 -#if defined(OS_LINUX) && !defined(OS_ANDROID)
-+#if defined(OS_LINUX) && !defined(OS_ANDROID) || defined(OS_NETBSD)
++#if (defined(OS_LINUX) && !defined(OS_ANDROID)) || defined(OS_NETBSD)
  
  #include "ipc/ipc.h"
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ipc_unix__ipc.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
  
    *pid = peer_cred.pid;
 -#endif  // __arm__
-+#endif  // __arm__, OS_NETBSD
++#endif  // __arm__ || OS_NETBSD
 +
 +#if defined(OS_NETBSD)
 +  struct unpcbid peer_cred;
