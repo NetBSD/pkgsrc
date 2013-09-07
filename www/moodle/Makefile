@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/07/08 13:52:08 wen Exp $
+# $NetBSD: Makefile,v 1.22 2013/09/07 07:31:40 adam Exp $
 
 DISTNAME=	moodle-2.5.1
 CATEGORIES=	www
@@ -15,6 +15,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.2.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.2.0:../../net/php-xmlrpc
+# XXX php-zlib is probably not required -- verify on next update
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.2.0:../../net/php-soap
@@ -45,8 +46,10 @@ CONF_FILES=		${PREFIX}/${EGDIR}/moodle.conf \
 			${PKG_SYSCONFDIR}/moodle.conf
 OWN_DIRS_PERMS+=	${MOODLEDATADIR} ${APACHE_USER} ${APACHE_GROUP} 0750
 
-NO_CONFIGURE=		YES
-NO_BUILD=		YES
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+
+.include "../../mk/apache.mk"
 
 SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
@@ -54,6 +57,10 @@ SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	../moodle.conf
 SUBST_SED.conf=		-e "s,@MOODLEDIR@,${MOODLEDIR},g"
 SUBST_SED.conf+=	-e "s,@MOODLEDATADIR@,${MOODLEDATADIR},g"
+.if ${PKG_APACHE} == "apache24"
+SUBST_SED.conf+=	-e "/Order allow,deny/d"
+SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
+.endif
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
@@ -92,5 +99,4 @@ post-install:
 	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MOODLEDATADIR}
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
