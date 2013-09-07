@@ -1,6 +1,6 @@
-$NetBSD: patch-base_system__util.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-base_system__util.cc,v 1.3 2013/09/07 18:42:14 ryoon Exp $
 
---- base/system_util.cc.orig	2013-07-17 02:38:04.000000000 +0000
+--- base/system_util.cc.orig	2013-08-28 05:26:13.000000000 +0000
 +++ base/system_util.cc
 @@ -421,14 +421,14 @@ string SystemUtil::GetServerDirectory() 
  #elif defined(OS_MACOSX)
@@ -20,7 +20,16 @@ $NetBSD: patch-base_system__util.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
  }
  
  string SystemUtil::GetServerPath() {
-@@ -616,7 +616,7 @@ bool GetCurrentSessionId(DWORD *session_
+@@ -493,7 +493,7 @@ string SystemUtil::GetUserNameAsString()
+   return ppw->pw_name;
+ 
+ #else  // OS_ANDROID
+-  // OS_MACOSX or OS_LINUX
++  // OS_MACOSX or OS_LINUX, OS_NETBSD
+   struct passwd pw, *ppw;
+   char buf[1024];
+   CHECK_EQ(0, getpwuid_r(geteuid(), &pw, buf, sizeof(buf), &ppw));
+@@ -653,7 +653,7 @@ string GetSessionIdString() {
  #endif  // OS_WIN
  
  string SystemUtil::GetDesktopNameAsString() {
@@ -29,7 +38,16 @@ $NetBSD: patch-base_system__util.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
    const char *display = getenv("DISPLAY");
    if (display == NULL) {
      return "";
-@@ -815,7 +815,7 @@ bool SystemUtil::IsPlatformSupported() {
+@@ -683,7 +683,7 @@ string SystemUtil::GetDesktopNameAsStrin
+   }
+ 
+   return (session_id + "." + window_station_name + "." + desktop_name);
+-#endif  // OS_LINUX, OS_MACOSX, OS_WIN
++#endif  // OS_LINUX, OS_MACOSX, OS_WIN, OS_NETBSD
+ }
+ 
+ #ifdef OS_WIN
+@@ -858,7 +858,7 @@ bool SystemUtil::IsPlatformSupported() {
  #if defined(OS_MACOSX)
    // TODO(yukawa): support Mac.
    return true;
@@ -38,7 +56,7 @@ $NetBSD: patch-base_system__util.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
    // TODO(yukawa): support Linux.
    return true;
  #elif defined(OS_WIN)
-@@ -1104,10 +1104,13 @@ string SystemUtil::GetOSVersionString() 
+@@ -1157,10 +1157,13 @@ string SystemUtil::GetOSVersionString() 
  #elif defined(OS_LINUX)
    const string ret = "Linux";
    return ret;
@@ -54,7 +72,7 @@ $NetBSD: patch-base_system__util.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
  }
  
  bool SystemUtil::MacOSVersionIsGreaterOrEqual(int32 major,
-@@ -1151,7 +1154,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
+@@ -1204,7 +1207,7 @@ uint64 SystemUtil::GetTotalPhysicalMemor
      return 0;
    }
    return total_memory;

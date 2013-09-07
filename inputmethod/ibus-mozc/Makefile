@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2013/09/02 19:51:11 adam Exp $
+# $NetBSD: Makefile,v 1.12 2013/09/07 18:42:14 ryoon Exp $
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	1
 
 INSTALLATION_DIRS+=	libexec share/ibus share/icons share/ibus/component \
 			share/ibus-mozc
@@ -13,11 +12,14 @@ DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
 		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} ${_MAKE_JOBS} \
-			unix/ibus/ibus.gyp:ibus_mozc
+			unix/ibus/ibus.gyp:ibus_mozc \
+			renderer/renderer.gyp:mozc_renderer
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/ibus_mozc \
 		${DESTDIR}${PREFIX}/libexec/ibus-engine-mozc
+	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/mozc_renderer \
+		${DESTDIR}${PREFIX}/libexec
 	${INSTALL_DATA} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/obj/gen/unix/ibus/mozc.xml \
 		${DESTDIR}${PREFIX}/share/ibus/component
 .for f in ui-alpha_full ui-alpha_half ui-dictionary ui-direct \

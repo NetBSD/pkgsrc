@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/18 11:36:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/07 18:42:14 ryoon Exp $
 libexec/ibus-engine-mozc
+libexec/mozc_renderer
 share/ibus-mozc/product_icon.png
 share/ibus/component/mozc.xml
 share/icons/mozc-alpha_full.png

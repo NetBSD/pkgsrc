@@ -1,6 +1,6 @@
-$NetBSD: patch-gui_qt__libraries.gypi,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-gui_qt__libraries.gypi,v 1.2 2013/09/07 18:42:14 ryoon Exp $
 
---- gui/qt_libraries.gypi.orig	2013-03-29 04:33:25.000000000 +0000
+--- gui/qt_libraries.gypi.orig	2013-08-28 05:26:12.000000000 +0000
 +++ gui/qt_libraries.gypi
 @@ -84,7 +84,7 @@
          '$(SDKROOT)/System/Library/Frameworks/Carbon.framework',
