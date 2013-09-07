@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2013/04/25 13:32:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2013/09/07 09:11:52 ryoon Exp $
 
 DISTNAME=	jdk-6u45-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk6-6.0.45
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 LICENSE=	sun-jdk6-license
@@ -27,10 +28,14 @@ DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/x64/i586/}
 .endif
 
 PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
+PLIST_SUBST+=	JAVA_ARCH="${JAVA_ARCH}"
 
 # Remove parts that are in common with the JRE
 #
 post-extract:
+	${MKDIR} ${WRKSRC}/lib/${JAVA_ARCH}
+	${MV} ${WRKSRC}/jre/lib/${JAVA_ARCH}/libattach.so ${WRKSRC}/lib/${JAVA_ARCH}
+	${MV} ${WRKSRC}/jre/lib/${JAVA_ARCH}/libsaproc.so ${WRKSRC}/lib/${JAVA_ARCH}
 	common=`${AWK} '/^#.*/ { next } /^$$/ { next } { print }' ${FILESDIR}/common`; \
 	cd ${WRKSRC}; for i in $$common; do				\
 		if [ -d $$i ]; then					\
