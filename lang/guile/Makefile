@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2013/07/15 02:02:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.102 2013/09/07 11:53:23 gdt Exp $
 
 DISTNAME=		guile-1.8.8
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -53,7 +53,8 @@ CONFIGURE_ARGS+=	ac_cv_type_complex_double=no
 .endif
 
 .if ${OPSYS} == "Darwin"
-CPPFLAGS+=		-Dmacosx
+#This define has been reported to break builds on 10.8.
+#CPPFLAGS+=		-Dmacosx
 
 # Darwin does not use -rpath, so back out the patch that adds it.  It
 # is not clear that guile works properly if directories with modules
