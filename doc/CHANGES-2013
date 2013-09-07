@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3302 2013/09/07 17:37:24 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.3303 2013/09/07 18:43:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4704,3 +4704,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sun-jdk7 to 7.0.25nb1 [ryoon 2013-09-07]
 	Updated www/mediawiki to 1.21.2 [wen 2013-09-07]
 	Updated graphics/gnome-icon-theme-symbolic to 3.8.3 [prlw1 2013-09-07]
+	Updated inputmethod/mozc-elisp to 1.11.1522.102 [ryoon 2013-09-07]
+	Updated inputmethod/mozc-server to 1.11.1522.102 [ryoon 2013-09-07]
+	Updated inputmethod/mozc-tool to 1.11.1522.102 [ryoon 2013-09-07]
+	Updated inputmethod/ibus-mozc to 1.11.1522.102 [ryoon 2013-09-07]
