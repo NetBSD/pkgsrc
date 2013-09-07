@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/06/08 07:26:53 wen Exp $
+# $NetBSD: Makefile,v 1.34 2013/09/07 14:49:42 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 VER=			1.21
-PVER=			1
+PVER=			2
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -82,6 +82,8 @@ SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
 SUBST_STAGE.php=	post-patch
 SUBST_FILES.php+=	includes/normal/UtfNormalTest2.php
+SUBST_FILES.php+=	tests/RunSeleniumTests.php
+SUBST_FILES.php+=	tests/phpunit/phpunit.php
 SUBST_SED.php=          -e "s,/usr/bin/env php,${PREFIX}/bin/php,g"
 
 post-extract:
