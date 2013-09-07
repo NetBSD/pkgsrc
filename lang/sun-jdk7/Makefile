@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/07/04 12:25:31 obache Exp $
+# $NetBSD: Makefile,v 1.12 2013/09/07 09:11:53 ryoon Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -6,6 +6,7 @@
 
 DISTNAME=	jdk-7u25-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk7-7.0.25
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
@@ -33,10 +34,14 @@ DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/x64/i586/}
 .endif
 
 PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
+PLIST_SUBST+=	JAVA_ARCH="${JAVA_ARCH}"
 
 # Remove parts that are in common with the JRE
 #
 post-extract:
+	${MKDIR} ${WRKSRC}/lib/${JAVA_ARCH}
+	${MV} ${WRKSRC}/jre/lib/${JAVA_ARCH}/libattach.so ${WRKSRC}/lib/${JAVA_ARCH}
+	${MV} ${WRKSRC}/jre/lib/${JAVA_ARCH}/libsaproc.so ${WRKSRC}/lib/${JAVA_ARCH}
 	common=`${AWK} '/^#.*/ { next } /^$$/ { next } { print }' ${FILESDIR}/common`; \
 	cd ${WRKSRC}; for i in $$common; do				\
 		if [ -d $$i ]; then					\
