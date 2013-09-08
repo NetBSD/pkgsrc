@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.198 2013/08/28 12:05:10 jperkin Exp $
+# $NetBSD: bootstrap,v 1.199 2013/09/08 16:29:28 ryoon Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -548,6 +548,14 @@ FreeBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
+	;;
+FreeMiNT)
+	root_group=root
+	need_bsd_install=no
+	need_awk=no
+	need_sed=no
+	set_opsys=no
+	machine_arch=m68k
 	;;
 GNUkFreeBSD)
 	root_group=root
