@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/29 03:23:11 rodent Exp $
+$NetBSD: distinfo,v 1.2 2013/09/08 08:25:44 wiz Exp $
 
-SHA1 (xfindproxy-1.0.2.tar.bz2) = 26da3f96eeeae0deeb10797dc0b8479c1fe16924
-RMD160 (xfindproxy-1.0.2.tar.bz2) = b7c857297298488ecd600148efe8679b6e552f61
-Size (xfindproxy-1.0.2.tar.bz2) = 103429 bytes
+SHA1 (xfindproxy-1.0.3.tar.bz2) = ac068e0fcca5775685052d0c1915eedbf0c01c78
+RMD160 (xfindproxy-1.0.3.tar.bz2) = e74b7cc02b41776ae9e89bd17af814dbfece4894
+Size (xfindproxy-1.0.3.tar.bz2) = 117989 bytes
