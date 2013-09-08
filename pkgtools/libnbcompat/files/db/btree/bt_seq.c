@@ -1,4 +1,4 @@
-/*	$NetBSD: bt_seq.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: bt_seq.c,v 1.2 2013/09/08 12:02:03 ryoon Exp $	*/
 /*	NetBSD: bt_seq.c,v 1.17 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: bt_seq.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: bt_seq.c,v 1.2 2013/09/08 12:02:03 ryoon Exp $");
 
 #include <sys/types.h>
 
@@ -90,7 +90,7 @@ __bt_seq(const DB *dbp, DBT *key, DBT *data, u_int flags)
 	}
 
 	/*
-	 * If scan unitialized as yet, or starting at a specific record, set
+	 * If scan uninitialized as yet, or starting at a specific record, set
 	 * the scan to a specific key.  Both __bt_seqset and __bt_seqadv pin
 	 * the page the cursor references if they're successful.
 	 */
