@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3323 2013/09/08 08:25:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3324 2013/09/08 08:25:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4730,3 +4730,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXv to 1.0.10 [wiz 2013-09-08]
 	Updated x11/libSM to 1.2.2 [wiz 2013-09-08]
 	Updated time/xclock to 1.0.7 [wiz 2013-09-08]
+	Updated net/xfindproxy to 1.0.3 [wiz 2013-09-08]
