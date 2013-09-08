@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.80 2013/02/10 12:38:52 obache Exp $
+dnl $NetBSD: configure.ac,v 1.81 2013/09/08 16:24:43 ryoon Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -41,7 +41,7 @@ AC_CHECK_HEADERS([alloca.h assert.h ctype.h dirent.h endian.h err.h errno.h \
 	sys/file.h sys/mkdev.h sys/ndir.h sys/param.h sys/socket.h sys/stat.h \
 	sys/statfs.h sys/statvfs.h sys/time.h sys/ttycom.h sys/types.h \
 	sys/uio.h sys/vfs.h sysexits.h termcap.h time.h tzfile.h unistd.h \
-	util.h utime.h
+	util.h utime.h sys/mman.h
 ])
 AC_CHECK_HEADERS([sys/mount.h], [:], [:], [
 	AC_INCLUDES_DEFAULT
