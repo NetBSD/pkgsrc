@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/18 19:21:04 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/08 09:42:23 prlw1 Exp $
 include/libwnck-3.0/libwnck/application.h
 include/libwnck-3.0/libwnck/class-group.h
 include/libwnck-3.0/libwnck/libwnck.h
@@ -47,6 +47,7 @@ share/gtk-doc/html/libwnck-3.0/ix13.html
 share/gtk-doc/html/libwnck-3.0/ix14.html
 share/gtk-doc/html/libwnck-3.0/left.png
 share/gtk-doc/html/libwnck-3.0/libwnck-3.0.devhelp2
+share/gtk-doc/html/libwnck-3.0/libwnck-Icons-Functions.html
 share/gtk-doc/html/libwnck-3.0/libwnck-Miscellaneous-Functions.html
 share/gtk-doc/html/libwnck-3.0/libwnck-Resource-Usage-of-X-Clients.html
 share/gtk-doc/html/libwnck-3.0/libwnck-Version-Information.html
@@ -102,6 +103,7 @@ share/locale/it/LC_MESSAGES/libwnck-3.0.mo
 share/locale/ja/LC_MESSAGES/libwnck-3.0.mo
 share/locale/ka/LC_MESSAGES/libwnck-3.0.mo
 share/locale/kk/LC_MESSAGES/libwnck-3.0.mo
+share/locale/km/LC_MESSAGES/libwnck-3.0.mo
 share/locale/kn/LC_MESSAGES/libwnck-3.0.mo
 share/locale/ko/LC_MESSAGES/libwnck-3.0.mo
 share/locale/ku/LC_MESSAGES/libwnck-3.0.mo
