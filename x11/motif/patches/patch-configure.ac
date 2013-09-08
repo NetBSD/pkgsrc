@@ -1,4 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/01/22 12:04:10 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/09/08 07:23:56 ryoon Exp $
+
+* Second part: fix build under OS X 10.8.4 with clang.
+  http://bugs.motifzone.net/show_bug.cgi?id=1625
 
 --- configure.ac.orig	2012-10-22 14:50:39.000000000 +0000
 +++ configure.ac
@@ -16,3 +19,11 @@ $NetBSD: patch-configure.ac,v 1.1 2013/01/22 12:04:10 ryoon Exp $
  AM_PROG_LIBTOOL
  
  AC_EXEEXT
+@@ -110,6 +109,7 @@ AC_TYPE_SIZE_T
+ AC_HEADER_TIME
+ AC_STRUCT_TM
+ AC_TYPE_UID_T
++WEAK_ALIAS_SUPPORT
+ 
+ dnl Checks for library functions.
+ AC_FUNC_ALLOCA
