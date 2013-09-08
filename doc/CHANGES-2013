@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3314 2013/09/08 06:30:22 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3315 2013/09/08 07:40:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3 to 3.8.0.2 [adam 2013-09-08]
 	Updated databases/sqlite3-docs to 3.8.0.2 [adam 2013-09-08]
 	Updated databases/sqlite3-tcl to 3.8.0.2 [adam 2013-09-08]
+	Updated mail/p5-Email-Abstract to 3.006 [wen 2013-09-08]
