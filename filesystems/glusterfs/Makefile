@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2013/02/26 10:27:09 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2013/09/08 03:38:52 manu Exp $
 #
 
-DISTNAME=	glusterfs-3.3.1
+DISTNAME=	glusterfs-3.4.0
+#PKGREVISION=	1
 CATEGORIES=	filesystems
-MASTER_SITES=	http://download.gluster.org/pub/gluster/glusterfs/3.3/3.3.1/
+MASTER_SITES=	http://download.gluster.org/pub/gluster/glusterfs/3.4/3.4.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gluster.org/
@@ -14,6 +15,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		flex bison
 
+CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}\ -DDEBUG
 
@@ -72,7 +74,6 @@ PLIST_SUBST+=		VARBASE=${VARBASE}
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
-CPPFLAGS.NetBSD+=	-D_KMEMUSER
 
 post-build:
 	 cp ${WRKSRC}/doc/glusterd.vol ${WRKSRC}/doc/glusterd.vol.sample
