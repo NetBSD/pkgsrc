@@ -108,6 +108,9 @@
 /* Define to 1 if you have the <sha1.h> header file. */
 #undef HAVE_SHA1_H
 
+/* Define to 1 if you have the <sha2.h> header file. */
+#undef HAVE_SHA2_H
+
 /* Define to 1 if you have the <stdarg.h> header file. */
 #undef HAVE_STDARG_H
 
@@ -122,6 +125,9 @@
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the `SHA512_File' function. */
+#undef HAVE_SHA512_FILE
 
 /* Define to 1 if you have the `strchr' function. */
 #undef HAVE_STRCHR
