@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.41 2013/09/04 02:38:31 taca Exp $
+# $NetBSD: Makefile.common,v 1.42 2013/09/08 11:11:04 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
 # used by www/contao211-translations/Makefile
-# used by www/contao30/Makefile
 # used by www/contao31/Makefile
 #
 
@@ -13,15 +12,12 @@ CT_MASTER_SITE=	https://download.contao.org/ \
 
 # current release
 CT211_VERSION=	2.11.12
-CT300_VERSION=	3.0.6
 CT310_VERSION=	3.1.2
 
 CT_VERS?=	211
 
 .if ${CT_VERS} == "211"
 CT_VERSION=	${CT211_VERSION}
-.elif ${CT_VERS} == "30"
-CT_VERSION=	${CT300_VERSION}
 .elif ${CT_VERS} == "31"
 CT_VERSION=	${CT310_VERSION}
 .else
