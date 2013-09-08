@@ -1,0 +1,12 @@
+$NetBSD: patch-konq-plugins_sidebar_Makefile.in,v 1.1 2013/09/08 16:35:24 joerg Exp $
+
+--- konq-plugins/sidebar/delicious/Makefile.in.orig	2013-09-04 10:50:03.000000000 +0000
++++ konq-plugins/sidebar/delicious/Makefile.in
+@@ -964,6 +964,7 @@ tagListItem.lo: tagListItem.moc 
+ $(srcdir)/tagListItem.cpp: widget.h 
+ plugin.o: plugin.moc 
+ nmcheck-am: nmcheck
++$(srcdir)/plugin_skel.cpp: widget.h 
+ $(srcdir)/plugin.cpp: widget.h 
+ tagListItem.o: tagListItem.moc 
+ mainWidget.o: mainWidget.moc 
