@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3305 2013/09/07 21:32:18 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.3306 2013/09/08 01:31:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-mozc to 1.11.1522.102 [ryoon 2013-09-07]
 	Updated net/ruby-tw to 0.5.0 [tsutsui 2013-09-07]
 	Updated x11/gtk3 to 3.8.4 [prlw1 2013-09-07]
+	Updated www/p5-Mojolicious to 4.33 [wen 2013-09-08]
