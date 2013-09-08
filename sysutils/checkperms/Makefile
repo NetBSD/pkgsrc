@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/04/06 14:58:21 rodent Exp $
+# $NetBSD: Makefile,v 1.28 2013/09/08 16:33:59 joerg Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -16,9 +16,7 @@ USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mclang*)
-MAKE_FLAGS+=		ACTIVE_CC=clang
-.endif
+MAKE_FLAGS+=		CWARNFLAGS.clang=-Wno-error=missing-noreturn
 
 .include "../../mk/bsd.prefs.mk"
 
