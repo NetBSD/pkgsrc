@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/09/11 23:19:35 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/09/08 16:20:10 ryoon Exp $
 #
 
-DISTNAME=		mtree-20120308
+DISTNAME=		mtree-20130908
 CATEGORIES=		pkgtools sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
