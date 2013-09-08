@@ -1,5 +1,5 @@
 /* install-info -- create Info directory entry(ies) for an Info file.
-   $Id: install-info.c,v 1.2 2011/11/11 23:45:21 joerg Exp $
+   $Id: install-info.c,v 1.3 2013/09/08 16:31:13 joerg Exp $
 
    Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003 Free Software
    Foundation, Inc.
@@ -138,8 +138,7 @@ struct option longopts[] =
 
 /* VARARGS1 */
 void
-error (s1, s2, s3)
-     char *s1, *s2, *s3;
+error (const char *s1, const char *s2, const char *s3)
 {
   fprintf (stderr, "%s: ", progname);
   fprintf (stderr, s1, s2, s3);
@@ -148,8 +147,7 @@ error (s1, s2, s3)
 
 /* VARARGS1 */
 void
-warning (s1, s2, s3)
-     char *s1, *s2, *s3;
+warning (const char *s1, const char *s2, const char *s3)
 {
   fprintf (stderr, _("%s: warning: "), progname);
   fprintf (stderr, s1, s2, s3);
@@ -159,8 +157,7 @@ warning (s1, s2, s3)
 /* Print error message and exit.  */
 
 void
-fatal (s1, s2, s3)
-     char *s1, *s2, *s3;
+fatal (const char *s1, const char *s2, const char *s3)
 {
   error (s1, s2, s3);
   xexit (1);
@@ -196,8 +193,7 @@ xrealloc (obj, size)
 /* Return a newly-allocated string
    whose contents concatenate those of S1, S2, S3.  */
 char *
-concat (s1, s2, s3)
-     char *s1, *s2, *s3;
+concat (const char *s1, const char *s2, const char *s3)
 {
   int len1 = strlen (s1), len2 = strlen (s2), len3 = strlen (s3);
   char *result = (char *) xmalloc (len1 + len2 + len3 + 1);
@@ -214,9 +210,7 @@ concat (s1, s2, s3)
    copied from starting at STRING.  */
 
 char *
-copy_string (string, size)
-     char *string;
-     int size;
+copy_string (const char *string, int size)
 {
   int i;
   char *copy = (char *) xmalloc (size + 1);
@@ -229,8 +223,7 @@ copy_string (string, size)
 /* Print fatal error message based on errno, with file name NAME.  */
 
 void
-pfatal_with_name (name)
-     char *name;
+pfatal_with_name (const char *name)
 {
   char *s = concat ("", strerror (errno), _(" for %s"));
   fatal (s, name, 0);
@@ -348,10 +341,7 @@ strip_info_suffix (fname)
    TERM_CHAR) and still match.  */
 
 static int
-menu_item_equal (item, term_char, name)
-     char *item;
-     char term_char;
-     char *name;
+menu_item_equal (const char *item, char term_char, const char *name)
 {
   unsigned name_len = strlen (name);
   /* First, ITEM must actually match NAME (usually it won't).  */
@@ -361,7 +351,7 @@ menu_item_equal (item, term_char, name)
       /* Then, `foobar' doesn't match `foo', so be sure we've got all of
          ITEM.  The various suffixes should never actually appear in the
          dir file, but sometimes people put them in.  */
-      static char *suffixes[]
+      static const char *suffixes[]
         = { "", ".info.gz", ".info", ".inf", ".gz",
 #ifdef __MSDOS__
             ".inz", ".igz",
@@ -371,7 +361,7 @@ menu_item_equal (item, term_char, name)
       ret = 0;
       for (i = 0; !ret && suffixes[i]; i++)
         {
-          char *suffix = suffixes[i];
+          const char *suffix = suffixes[i];
           unsigned suffix_len = strlen (suffix);
           ret = strncasecmp (item + name_len, suffix, suffix_len) == 0
                 && item[name_len + suffix_len] == term_char;
