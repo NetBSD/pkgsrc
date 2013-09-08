@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2013/01/23 10:20:33 rhaen Exp $
+$NetBSD: distinfo,v 1.10 2013/09/08 10:52:29 wen Exp $
 
-SHA1 (Email-MIME-1.911.tar.gz) = 4dbb08bbf88bdbc86a52fa81aca2e159ca01f0e4
-RMD160 (Email-MIME-1.911.tar.gz) = ebe53fb4174e5c73002879eab73becb868372fdc
-Size (Email-MIME-1.911.tar.gz) = 106142 bytes
+SHA1 (Email-MIME-1.924.tar.gz) = b809a3755d9b75836c14206165671ab2d56a0ee0
+RMD160 (Email-MIME-1.924.tar.gz) = dc47ddde9822836214203b8962343b63e15793ec
+Size (Email-MIME-1.924.tar.gz) = 111251 bytes
