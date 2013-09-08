@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.20 2011/06/18 22:39:46 bsiegert Exp $
+#	$NetBSD: Makefile.in,v 1.21 2013/09/08 16:32:14 ryoon Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.20 2011/06/18 22:39:46 bsiegert Exp $
+#	$Id: Makefile.in,v 1.21 2013/09/08 16:32:14 ryoon Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -142,4 +142,8 @@ DPADD+=${LIBUTIL}
 
 # A simple unit-test driver to help catch regressions
 accept test:
+.if ${OS} != "FreeMiNT"
 	cd ${.CURDIR}/unit-tests && ${.MAKE} -r -m / TEST_MAKE=${TEST_MAKE:U${.OBJDIR}/${PROG:T}} ${.TARGET}
+.else
+	true
+.endif
