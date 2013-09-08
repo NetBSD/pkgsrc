@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/03/15 20:59:52 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2013/09/08 01:51:24 wen Exp $
 
-SHA1 (Test-More-Behaviour-1.0.0.tar.gz) = e11fc445cea2a78ea975b3680a409861c072e344
-RMD160 (Test-More-Behaviour-1.0.0.tar.gz) = 210a31ccede08a1a669174979ae7a56c6f23e065
-Size (Test-More-Behaviour-1.0.0.tar.gz) = 6516 bytes
+SHA1 (Test-More-Behaviour-1.0.1.tar.gz) = e870c481a272ed086bb74496e8854565d2cf983e
+RMD160 (Test-More-Behaviour-1.0.1.tar.gz) = 6d905aa3d983feff3f38f1aed63d9773a8b01be4
+Size (Test-More-Behaviour-1.0.1.tar.gz) = 6494 bytes
