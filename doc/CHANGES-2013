@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3333 2013/09/08 10:53:29 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3334 2013/09/08 11:11:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4740,3 +4740,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/p5-Email-MIME-ContentType to 1.017 [wen 2013-09-08]
 	Updated mail/p5-Email-MIME-Encodings to 1.315 [wen 2013-09-08]
 	Updated mail/p5-Email-MIME to 1.924 [wen 2013-09-08]
+	Removed www/contao30-example [taca 2013-09-08]
+	Removed www/contao30 [taca 2013-09-08]
