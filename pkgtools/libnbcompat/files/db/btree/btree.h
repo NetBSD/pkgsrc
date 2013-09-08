@@ -1,4 +1,4 @@
-/*	$NetBSD: btree.h,v 1.3 2008/10/28 15:06:26 joerg Exp $	*/
+/*	$NetBSD: btree.h,v 1.4 2013/09/08 12:02:03 ryoon Exp $	*/
 /*	NetBSD: btree.h,v 1.16 2008/08/26 21:18:38 joerg Exp 	*/
 
 /*-
@@ -186,7 +186,7 @@ typedef struct _rinternal {
 #define NRINTERNAL							\
 	BTLALIGN(sizeof(recno_t) + sizeof(pgno_t))
 
-/* Copy a RINTERAL entry to the page. */
+/* Copy a RINTERNAL entry to the page. */
 #define	WR_RINTERNAL(p, nrecs, pgno) do {				\
 	*(recno_t *)(void *)p = nrecs;					\
 	p += sizeof(recno_t);						\
