@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3342 2013/09/08 13:50:06 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3343 2013/09/08 14:08:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/p5-Email-Sender to 1.300006 [wen 2013-09-08]
 	Updated mail/p5-Email-Simple to 2.202 [wen 2013-09-08]
 	Updated mail/p5-Email-Stuff to 2.104 [wen 2013-09-08]
+	Updated mail/p5-Email-Valid to 1.192 [wen 2013-09-08]
