@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3313 2013/09/08 05:15:25 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3314 2013/09/08 06:30:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4718,3 +4718,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Taint to 1.06 [wen 2013-09-08]
 	Updated devel/p5-Test-WWW-Selenium to 1.36 [wen 2013-09-08]
 	Updated devel/p5-Test-YAML-Meta to 0.20 [wen 2013-09-08]
+	Updated databases/sqlite3 to 3.8.0.2 [adam 2013-09-08]
+	Updated databases/sqlite3-docs to 3.8.0.2 [adam 2013-09-08]
+	Updated databases/sqlite3-tcl to 3.8.0.2 [adam 2013-09-08]
