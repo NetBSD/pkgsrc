@@ -1,4 +1,4 @@
-/*	$NetBSD: rec_close.c,v 1.1 2008/10/10 00:21:44 joerg Exp $	*/
+/*	$NetBSD: rec_close.c,v 1.2 2013/09/08 16:24:43 ryoon Exp $	*/
 /*	NetBSD: rec_close.c,v 1.15 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,11 +33,13 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: rec_close.c,v 1.1 2008/10/10 00:21:44 joerg Exp $");
+__RCSID("$NetBSD: rec_close.c,v 1.2 2013/09/08 16:24:43 ryoon Exp $");
 
 #include <sys/types.h>
 #include <sys/uio.h>
+#if HAVE_SYS_MMAN_H
 #include <sys/mman.h>
+#endif
 
 #include <assert.h>
 #include <errno.h>
@@ -76,8 +78,10 @@ __rec_close(DB *dbp)
 
 	/* Committed to closing. */
 	status = RET_SUCCESS;
+#if !defined(__MINT__)
 	if (F_ISSET(t, R_MEMMAPPED) && munmap(t->bt_smap, t->bt_msize))
 		status = RET_ERROR;
+#endif
 
 	if (!F_ISSET(t, R_INMEM)) {
 		if (F_ISSET(t, R_CLOSEFP)) {

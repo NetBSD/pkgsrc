@@ -428,6 +428,9 @@
 /* Define to 1 if you have the <sys/file.h> header file. */
 #undef HAVE_SYS_FILE_H
 
+/* Define to 1 if you have the <sys/mman.h> header file. */
+#undef HAVE_SYS_MMAN_H
+
 /* Define to 1 if you have the <sys/mkdev.h> header file. */
 #undef HAVE_SYS_MKDEV_H
 
