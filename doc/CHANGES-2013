@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3311 2013/09/08 05:05:55 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3312 2013/09/08 05:09:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4716,3 +4716,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-POE-Client-TCP to 1.12 [wen 2013-09-08]
 	Updated devel/p5-Test-Script-Run to 0.05 [wen 2013-09-08]
 	Updated devel/p5-Test-Taint to 1.06 [wen 2013-09-08]
+	Updated devel/p5-Test-WWW-Selenium to 1.36 [wen 2013-09-08]
