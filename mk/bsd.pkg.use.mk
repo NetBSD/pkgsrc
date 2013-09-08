@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.54 2013/05/10 09:07:37 obache Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.55 2013/09/08 16:32:17 joerg Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -20,7 +20,7 @@
 #
 
 .if defined(USE_BSD_MAKEFILE)
-MAKE_ENV+=		${BSD_MAKE_ENV} INSTALL=${TOOLS_INSTALL:Q}
+MAKE_ENV+=		${BSD_MAKE_ENV} INSTALL=${TOOLS_INSTALL:Q} HAVE_LLVM=${HAVE_LLVM:Q} HAVE_GCC=${HAVE_GCC:Q}
 .endif
 
 .if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
