@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.8 2013/07/30 12:27:20 ryoon Exp $
+#	$Id: os.sh,v 1.9 2013/09/08 16:32:14 ryoon Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -197,6 +197,9 @@ CYGWIN_*)
 	;;
 GNU/kFreeBSD)
 	MACHINE_ARCH=$MACHINE
+	;;
+FreeMiNT)
+	MACHINE_ARCH=m68k
 	;;
 esac
 
