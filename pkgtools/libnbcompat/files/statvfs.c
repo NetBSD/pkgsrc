@@ -1,4 +1,4 @@
-/*	$NetBSD: statvfs.c,v 1.5 2008/09/08 20:20:23 joerg Exp $	*/
+/*	$NetBSD: statvfs.c,v 1.6 2013/09/08 16:24:43 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -78,7 +78,11 @@ fs2vfs(struct statvfs *vfs, const struct statfs *sfs)
 	vfs->f_asyncwrites= 0;		/* XXX */
 
 	(void) memcpy(&vfs->f_fsidx, &sfs->f_fsid, sizeof(fsid_t));
+#if !defined(__MINT__)
 	vfs->f_fsid = sfs->f_fsid.val[0];
+#else
+	vfs->f_fsid = sfs->f_fsid;
+#endif
 
 #if HAVE_STRUCT_STATFS_F_IOSIZE
 	vfs->f_namemax = sfs->f_name_max;

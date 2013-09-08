@@ -1,4 +1,4 @@
-/*	$NetBSD: mpool.c,v 1.5 2010/04/20 00:32:23 joerg Exp $	*/
+/*	$NetBSD: mpool.c,v 1.6 2013/09/08 16:24:43 ryoon Exp $	*/
 /*	NetBSD: mpool.c,v 1.18 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: mpool.c,v 1.5 2010/04/20 00:32:23 joerg Exp $");
+__RCSID("$NetBSD: mpool.c,v 1.6 2013/09/08 16:24:43 ryoon Exp $");
 
 #include <nbcompat/queue.h>
 #include <sys/stat.h>
@@ -97,7 +97,11 @@ mpool_open(void *key, int fd, pgno_t pagesize, pgno_t maxcache)
 	if (fstat(fd, &sb))
 		return (NULL);
 	if (!S_ISREG(sb.st_mode)) {
+#if defined(__MINT__)
+		errno = EACCES;
+#else
 		errno = ESPIPE;
+#endif
 		return (NULL);
 	}
 
