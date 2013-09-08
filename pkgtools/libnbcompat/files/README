@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.18 2007/07/21 14:39:25 tnn Exp $
+$NetBSD: README,v 1.19 2013/09/08 16:24:43 ryoon Exp $
 
  0 Introduction
  ==============
@@ -79,6 +79,17 @@ on the following operating systems:
 
 	HPUX-11.11-hppa			<tnn@NetBSD.org>
 	Interix-3.5-i586		<tnn@NetBSD.org>
+
+libnbcompat-20130908 has been tested to build and install correctly
+on the following operating systems:
+
+	Debian GNU/kFreeBSD/amd64 7.1	<ryoon@NetBSD.org>
+	Sun Solaris/amd64 10u8		<ryoon@NetBSD.org>
+	NetBSD/amd64 6.99.23		<ryoon@NetBSD.org>
+	FreeBSD/amd64 9.1		<ryoon@NetBSD.org>
+	OpenBSD/amd64 5.3		<ryoon@NetBSD.org>
+	DragonFly/amd64 3.4.1		<ryoon@NetBSD.org>
+	Debian GNU/Linux/amd64 7.1	<ryoon@NetBSD.org>
 
  3 Usage
  =======
