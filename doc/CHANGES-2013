@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3335 2013/09/08 12:05:51 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3336 2013/09/08 12:13:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed www/contao30-example [taca 2013-09-08]
 	Removed www/contao30 [taca 2013-09-08]
 	Updated mail/p5-Email-MIME-Attachment-Stripper to 1.317 [wen 2013-09-08]
+	Updated mail/p5-Email-Reply to 1.203 [wen 2013-09-08]
