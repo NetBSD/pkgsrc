@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2013/02/21 22:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2013/09/08 16:29:43 joerg Exp $
 
 DISTNAME=	rpm2pkg-3.2.3
 CATEGORIES=	pkgtools
@@ -16,6 +16,7 @@ CONFLICTS+=	suse-base<=6.4
 MANCOMPRESSED_IF_MANZ=	yes
 USE_BSD_MAKEFILE=	yes
 USE_LANGUAGES=		c99
+MAKE_FLAGS+=		CWARNFLAGS.clang=-Wno-error=missing-noreturn
 
 MAKE_ENV+=	FILESDIR=${FILESDIR:Q}
 MAKE_FILE=	${FILESDIR}/Makefile
