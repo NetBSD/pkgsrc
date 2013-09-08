@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3307 2013/09/08 01:46:47 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3308 2013/09/08 01:52:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/gtk3 to 3.8.4 [prlw1 2013-09-07]
 	Updated www/p5-Mojolicious to 4.33 [wen 2013-09-08]
 	Updated devel/p5-Test-Kwalitee to 1.14 [wen 2013-09-08]
+	Updated devel/p5-Test-More-Behaviour to 1.0.1 [wen 2013-09-08]
