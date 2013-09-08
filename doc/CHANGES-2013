@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3308 2013/09/08 01:52:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3309 2013/09/08 04:57:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4713,3 +4713,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.33 [wen 2013-09-08]
 	Updated devel/p5-Test-Kwalitee to 1.14 [wen 2013-09-08]
 	Updated devel/p5-Test-More-Behaviour to 1.0.1 [wen 2013-09-08]
+	Updated devel/p5-Test-POE-Client-TCP to 1.12 [wen 2013-09-08]
