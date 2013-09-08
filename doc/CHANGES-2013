@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3322 2013/09/08 08:24:08 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3323 2013/09/08 08:25:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4729,3 +4729,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libXrandr to 1.4.2 [wiz 2013-09-08]
 	Updated x11/libXv to 1.0.10 [wiz 2013-09-08]
 	Updated x11/libSM to 1.2.2 [wiz 2013-09-08]
+	Updated time/xclock to 1.0.7 [wiz 2013-09-08]
