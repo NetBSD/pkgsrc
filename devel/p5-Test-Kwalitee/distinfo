@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/31 00:36:19 he Exp $
+$NetBSD: distinfo,v 1.2 2013/09/08 01:45:49 wen Exp $
 
-SHA1 (Test-Kwalitee-1.01.tar.gz) = 8f99765f3a5e563b50638d082b90e6129d6fee7a
-RMD160 (Test-Kwalitee-1.01.tar.gz) = b13158ed18a5c97417c5a8d2274b856f1f14ba5e
-Size (Test-Kwalitee-1.01.tar.gz) = 4211 bytes
+SHA1 (Test-Kwalitee-1.14.tar.gz) = a9d6a603f035e2a519cd04eb3faf891a0d6ad0db
+RMD160 (Test-Kwalitee-1.14.tar.gz) = a8466111a5c3b1b7b237e7777af7cf0cb433e87d
+Size (Test-Kwalitee-1.14.tar.gz) = 21997 bytes
