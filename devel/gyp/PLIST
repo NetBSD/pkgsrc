@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/18 11:32:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/08 16:33:25 ryoon Exp $
 bin/gyp
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/gyp/MSVSNew.py
 ${PYSITELIB}/gyp/MSVSNew.pyc
 ${PYSITELIB}/gyp/MSVSNew.pyo
@@ -19,12 +23,12 @@ ${PYSITELIB}/gyp/MSVSToolFile.pyo
 ${PYSITELIB}/gyp/MSVSUserFile.py
 ${PYSITELIB}/gyp/MSVSUserFile.pyc
 ${PYSITELIB}/gyp/MSVSUserFile.pyo
+${PYSITELIB}/gyp/MSVSUtil.py
+${PYSITELIB}/gyp/MSVSUtil.pyc
+${PYSITELIB}/gyp/MSVSUtil.pyo
 ${PYSITELIB}/gyp/MSVSVersion.py
 ${PYSITELIB}/gyp/MSVSVersion.pyc
 ${PYSITELIB}/gyp/MSVSVersion.pyo
-${PYSITELIB}/gyp/SCons.py
-${PYSITELIB}/gyp/SCons.pyc
-${PYSITELIB}/gyp/SCons.pyo
 ${PYSITELIB}/gyp/__init__.py
 ${PYSITELIB}/gyp/__init__.pyc
 ${PYSITELIB}/gyp/__init__.pyo
@@ -73,15 +77,18 @@ ${PYSITELIB}/gyp/generator/ninja.pyo
 ${PYSITELIB}/gyp/generator/ninja_test.py
 ${PYSITELIB}/gyp/generator/ninja_test.pyc
 ${PYSITELIB}/gyp/generator/ninja_test.pyo
-${PYSITELIB}/gyp/generator/scons.py
-${PYSITELIB}/gyp/generator/scons.pyc
-${PYSITELIB}/gyp/generator/scons.pyo
 ${PYSITELIB}/gyp/generator/xcode.py
 ${PYSITELIB}/gyp/generator/xcode.pyc
 ${PYSITELIB}/gyp/generator/xcode.pyo
+${PYSITELIB}/gyp/generator/xcode_test.py
+${PYSITELIB}/gyp/generator/xcode_test.pyc
+${PYSITELIB}/gyp/generator/xcode_test.pyo
 ${PYSITELIB}/gyp/input.py
 ${PYSITELIB}/gyp/input.pyc
 ${PYSITELIB}/gyp/input.pyo
+${PYSITELIB}/gyp/input_test.py
+${PYSITELIB}/gyp/input_test.pyc
+${PYSITELIB}/gyp/input_test.pyo
 ${PYSITELIB}/gyp/mac_tool.py
 ${PYSITELIB}/gyp/mac_tool.pyc
 ${PYSITELIB}/gyp/mac_tool.pyo
