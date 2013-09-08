@@ -1,4 +1,4 @@
-/*	$NetBSD: compare.c,v 1.6 2010/03/21 16:30:17 joerg Exp $	*/
+/*	$NetBSD: compare.c,v 1.7 2013/09/08 16:20:10 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)compare.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: compare.c,v 1.6 2010/03/21 16:30:17 joerg Exp $");
+__RCSID("$NetBSD: compare.c,v 1.7 2013/09/08 16:20:10 ryoon Exp $");
 #endif
 #endif /* not lint */
 
@@ -87,10 +87,13 @@ __RCSID("$NetBSD: compare.c,v 1.6 2010/03/21 16:30:17 joerg Exp $");
 #endif
 #endif
 #ifndef NO_SHA2
-#if HAVE_SHA2_H
+#if HAVE_SHA2_H && HAVE_SHA512_FILE
 #include <sha2.h>
+#else
+#include <nbcompat/sha2.h>
 #endif
 #endif
+
 
 #include "extern.h"
 

@@ -16,7 +16,7 @@ AC_CHECK_LIB(util, fparseln)
 # Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([ctype.h dirent.h err.h errno.h fcntl.h fnmatch.h fts.h \
-	grp.h limits.h md5.h netdb.h pwd.h rmd160.h sha1.h \
+	grp.h limits.h md5.h netdb.h pwd.h rmd160.h sha1.h sha2.h \
 	stdarg.h stddef.h stdio.h stdlib.h string.h time.h unistd.h \
 	util.h vis.h])
 AC_CHECK_HEADERS([sys/cdefs.h sys/param.h sys/queue.h sys/stat.h sys/types.h])
@@ -39,7 +39,7 @@ AC_HEADER_TIME
 
 # Checks for library functions.
 AC_REPLACE_FNMATCH
-AC_CHECK_FUNCS([endgrent endpwent getcwd gethostname mkdir strchr strpbrk strstr strtol strtoul])
+AC_CHECK_FUNCS([endgrent endpwent getcwd gethostname mkdir SHA256_File strchr strpbrk strstr strtol strtoul])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
