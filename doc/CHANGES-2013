@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3361 2013/09/09 19:25:43 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3362 2013/09/09 19:26:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4773,3 +4773,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/py-OpenSSL to 0.13.1 [drochner 2013-09-09]
 	Added x11/xf86-video-dummy version 0.3.7 [wiz 2013-09-09]
 	Updated x11/xf86-video-vesa to 2.3.3 [wiz 2013-09-09]
+	Updated meta-pkgs/modular-xorg-drivers to 1.14.2 [wiz 2013-09-09]
