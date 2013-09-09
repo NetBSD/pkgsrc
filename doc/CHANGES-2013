@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3372 2013/09/09 22:26:26 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3373 2013/09/09 22:35:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4784,3 +4784,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/flickcurl to 1.25 [wiz 2013-09-09]
 	Updated time/py-pytz to 2013d [wiz 2013-09-09]
 	Updated x11/xf86-video-neomagic to 1.2.8 [wiz 2013-09-09]
+	Updated x11/xf86-video-ast to 0.98.0 [wiz 2013-09-09]
