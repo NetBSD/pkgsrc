@@ -1,25 +1,17 @@
-Tool to check and undelete partitions.
+Disk is powerful free data recovery software! It was primarily designed
+to help recover lost partitions and/or make non-booting disks bootable
+again when these symptoms are caused by faulty software, certain types of
+viruses or human error (such as accidentally deleting a Partition Table).
+Partition table recovery using TestDisk is really easy.
 
-Supported filesystems:
-- BeFS ( BeOS )
-- BSD disklabel ( FreeBSD/OpenBSD/NetBSD )
-- CramFS (Compressed File System)
-- DOS/Windows FAT12, FAT16 and FAT32
-- Windows exFAT
-- HFS, Hierarchical File System
-- JFS, IBM's Journaled File System
-- Linux Ext2 and Ext3
-- Linux Raid
-- Linux Swap (versions 1 and 2)
-- LVM and LVM2, Linux Logical Volume Manager
-- Netware NSS
-- NTFS ( Windows NT/2K/XP/2003 )
-- ReiserFS 3.5 and 3.6
-- UFS (Sun/BSD/...)
-- XFS, SGI's Journaled File System
-
-Known to work on:
-* DOS/Win9x/NT4/2k/XP/2k3
-* GNU/Linux
-* FreeBSD, NetBSD, OpenBSD
-* Sun Solaris (minimal support)
+TestDisk can
+ * Fix partition table, recover deleted partition
+ * Recover FAT32 boot sector from its backup
+ * Rebuild FAT12/FAT16/FAT32 boot sector
+ * Fix FAT tables
+ * Rebuild NTFS boot sector
+ * Recover NTFS boot sector from its backup
+ * Fix MFT using MFT mirror
+ * Locate ext2/ext3/ext4 Backup SuperBlock
+ * Undelete files from FAT, exFAT, NTFS and ext2 filesystem
+ * Copy files from deleted FAT, exFAT, NTFS and ext2/ext3/ext4 partitions.
