@@ -1,0 +1,43 @@
+$NetBSD: patch-ah,v 1.1 2013/09/09 13:54:44 wiz Exp $
+
+--- git-gui/Makefile.orig	2010-12-16 02:52:11.000000000 +0000
++++ git-gui/Makefile
+@@ -48,11 +48,11 @@ endif
+ RM_RF     ?= rm -rf
+ RMDIR     ?= rmdir
+ 
+-INSTALL_D0 = $(INSTALL) -d -m 755 # space is required here
++INSTALL_D0 = $(BSD_INSTALL_DATA_DIR) # space is required here
+ INSTALL_D1 =
+-INSTALL_R0 = $(INSTALL) -m 644 # space is required here
++INSTALL_R0 = $(BSD_INSTALL_DATA)  # space is required here
+ INSTALL_R1 =
+-INSTALL_X0 = $(INSTALL) -m 755 # space is required here
++INSTALL_X0 = $(BSD_INSTALL_SCRIPT) # space is required here
+ INSTALL_X1 =
+ INSTALL_A0 = find # space is required here
+ INSTALL_A1 = | cpio -pud
+@@ -76,11 +76,11 @@ ifndef V
+ 	QUIET_2DEVNULL = 2>/dev/null
+ 
+ 	INSTALL_D0 = dir=
+-	INSTALL_D1 = && echo ' ' DEST $$dir && $(INSTALL) -d -m 755 "$$dir"
++	INSTALL_D1 = && echo ' ' DEST $$dir && $(BSD_INSTALL_DATA_DIR) "$$dir"
+ 	INSTALL_R0 = src=
+-	INSTALL_R1 = && echo '   ' INSTALL 644 `basename $$src` && $(INSTALL) -m 644 $$src
++	INSTALL_R1 = && echo '   ' INSTALL 644 `basename $$src` && $(BSD_INSTALL_DATA) $$src
+ 	INSTALL_X0 = src=
+-	INSTALL_X1 = && echo '   ' INSTALL 755 `basename $$src` && $(INSTALL) -m 755 $$src
++	INSTALL_X1 = && echo '   ' INSTALL 755 `basename $$src` && $(BSD_INSTALL_SCRIPT) $$src
+ 	INSTALL_A0 = src=
+ 	INSTALL_A1 = && echo '   ' INSTALL '   ' `basename "$$src"` && find "$$src" | cpio -pud
+ 
+@@ -105,7 +105,7 @@ endif
+ 
+ ifeq ($(uname_S),Darwin)
+ 	TKFRAMEWORK = /Library/Frameworks/Tk.framework/Resources/Wish.app
+-	ifeq ($(shell echo "$(uname_R)" | awk -F. '{if ($$1 >= 9) print "y"}')_$(shell test -d $(TKFRAMEWORK) || echo n),y_n)
++	ifeq ($(shell echo "$(uname_R)" | awk -F. '{if ($$1 >= 8) print "y"}')_$(shell test -d $(TKFRAMEWORK) || echo n),y_n)
+ 		TKFRAMEWORK = /System/Library/Frameworks/Tk.framework/Resources/Wish.app
+ 		ifeq ($(shell test -d $(TKFRAMEWORK) || echo n),n)
+ 			TKFRAMEWORK = /System/Library/Frameworks/Tk.framework/Resources/Wish\ Shell.app
