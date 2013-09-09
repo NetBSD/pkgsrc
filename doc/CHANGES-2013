@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3352 2013/09/09 09:44:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3353 2013/09/09 11:32:12 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4760,3 +4760,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xmodmap to 1.0.8 [wiz 2013-09-09]
 	Updated x11/xrdb to 1.1.0 [wiz 2013-09-09]
 	Updated x11/libX11 to 1.6.2 [wiz 2013-09-09]
+	Updated misc/stellarium to 0.12.3 [drochner 2013-09-09]
