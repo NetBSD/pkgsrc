@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 2013/09/09 13:54:44 wiz Exp $
+
+Beginnings of emacs support, not enabled yet.  We must use mk/emacs.mk.
+
+--- contrib/emacs/Makefile.orig	2008-08-17 16:43:06.000000000 -0400
++++ contrib/emacs/Makefile
+@@ -12,8 +12,8 @@ RM ?= rm -f
+ all: $(ELC)
+ 
+ install: all
+-	$(INSTALL) -d $(DESTDIR)$(emacsdir)
+-	$(INSTALL_ELC) $(ELC:.elc=.el) $(ELC) $(DESTDIR)$(emacsdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(emacsdir)
++	${BSD_INSTALL_DATA} $(ELC:.elc=.el) $(ELC) $(DESTDIR)$(emacsdir)
+ 
+ %.elc: %.el
+ 	$(EMACS) -batch -f batch-byte-compile $<
