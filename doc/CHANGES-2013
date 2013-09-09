@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3348 2013/09/09 09:34:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3349 2013/09/09 09:38:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4756,3 +4756,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ipv6-toolkit to 1.4.1 [agc 2013-09-08]
 	Updated x11/xinit to 1.3.3 [wiz 2013-09-09]
 	Updated x11/xkill to 1.0.4 [wiz 2013-09-09]
+	Updated x11/xlsclients to 1.1.3 [wiz 2013-09-09]
