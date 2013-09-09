@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3345 2013/09/08 16:25:32 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3346 2013/09/09 06:44:12 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/p5-Email-Valid to 1.192 [wen 2013-09-08]
 	Updated pkgtools/mtree to 20130908 [ryoon 2013-09-08]
 	Updated pkgtools/libnbcompat to 20130908 [ryoon 2013-09-08]
+	Updated security/ipv6-toolkit to 1.4.1 [agc 2013-09-08]
