@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2013/08/09 11:47:57 drochner Exp $
+# $NetBSD: Makefile,v 1.77 2013/09/09 11:30:26 drochner Exp $
 
-DISTNAME=	stellarium-0.12.2
+DISTNAME=	stellarium-0.12.3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stellarium/}
 
@@ -28,7 +28,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-parameter
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
 
-# needs phonon
+# needs phonon (Qt phonon, not KDE's)
 CMAKE_ARGS+=	-DENABLE_SOUND:BOOL=FALSE
 
 .include "../../converters/libiconv/buildlink3.mk"
