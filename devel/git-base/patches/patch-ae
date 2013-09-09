@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2013/09/09 13:54:44 wiz Exp $
+
+In pkgsrc, all Perl modules are installed into vendor_perl, not
+site_perl.
+
+--- perl/Makefile.orig	2008-08-17 16:43:06.000000000 -0400
++++ perl/Makefile
+@@ -13,7 +13,7 @@ ifndef V
+ endif
+ 
+ all install instlibdir: $(makfile)
+-	$(QUIET)$(MAKE) -f $(makfile) $@
++	$(QUIET)$(MAKE) -f $(makfile) INSTALLDIRS=vendor $@
+ 
+ clean:
+ 	$(QUIET)test -f $(makfile) && $(MAKE) -f $(makfile) $@ || exit 0
