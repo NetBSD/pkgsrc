@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/09 11:56:57 obache Exp $
+libexec/ibus-engine-libthai
+libexec/ibus-setup-libthai
+share/ibus-libthai/icons/ibus-libthai.svg
+share/ibus/component/libthai.xml
+share/locale/th/LC_MESSAGES/ibus-libthai.mo
