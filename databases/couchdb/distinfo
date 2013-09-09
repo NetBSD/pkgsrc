@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/04/24 12:22:37 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2013/09/09 13:39:10 fhajny Exp $
 
-SHA1 (apache-couchdb-1.3.0.tar.gz) = 1085297fcabb020f407283aba1f74302c9923fa0
-RMD160 (apache-couchdb-1.3.0.tar.gz) = 0803f388673c181eff6ee287a76203a780c0ce8b
-Size (apache-couchdb-1.3.0.tar.gz) = 3420515 bytes
+SHA1 (apache-couchdb-1.4.0.tar.gz) = 28ef17c7036fe9133010d53d026eff38a1e308ba
+RMD160 (apache-couchdb-1.4.0.tar.gz) = 7276842985f3126bee711398dd9b7c837683183d
+Size (apache-couchdb-1.4.0.tar.gz) = 3422107 bytes
 SHA1 (patch-aa) = 9b3666dd90392304f43cbf6b42a1476d7956871c
 SHA1 (patch-ab) = f07acca555013b1bfde95bdd056cccd9a551440a
 SHA1 (patch-ac) = b5dd1be18110655b1494278b168cf1971e1ca872
