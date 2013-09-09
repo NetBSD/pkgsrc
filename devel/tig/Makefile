@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/08/23 05:09:28 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2013/09/09 14:07:59 wiz Exp $
 
 DISTNAME=	tig-1.2
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-DEPENDS+=	scmgit-[0-9]*:../../devel/scmgit
+DEPENDS+=	git-[0-9]*:../../devel/git
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
