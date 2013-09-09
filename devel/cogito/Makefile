@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:39:58 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2013/09/09 14:07:58 wiz Exp $
 
 DISTNAME=		cogito-0.18.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		http://www.kernel.org/pub/software/scm/cogito/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://git.or.cz/cogito/
 COMMENT=		Version control system of the Linux kernel
 
-DEPENDS+=		scmgit-[0-9]*:../../devel/scmgit
+DEPENDS+=		git-[0-9]*:../../devel/git
 
 USE_TOOLS+=		gmake bash:run perl:run
 USE_TOOLS+=		fgrep:run grep:run mktemp:run xargs:run

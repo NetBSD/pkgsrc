@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:13 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/09 14:07:59 wiz Exp $
 
 DISTNAME=	calypso-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net time
 MASTER_SITES=	http://keithp.com/calypso/
 
@@ -11,7 +11,7 @@ COMMENT=	CardDAV/CalDAV server
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.1c:../../textproc/py-vobject
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 #WRKSRC=		${WRKDIR}/calypso
 

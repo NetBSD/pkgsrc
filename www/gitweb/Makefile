@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2013/06/16 06:31:12 adam Exp $
+# $NetBSD: Makefile,v 1.18 2013/09/09 14:07:59 wiz Exp $
 
-.include "../../devel/scmgit/Makefile.version"
+.include "../../devel/git/Makefile.version"
 
 DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -12,10 +13,10 @@ HOMEPAGE=	http://git.or.cz/
 COMMENT=	Web interface for GIT repositories
 
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
-DEPENDS+=	scmgit-base>=${GIT_VERSION}:../../devel/scmgit-base
+DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
 DEPENDS+=	p5-Time-HiRes>=1.9725:../../time/p5-Time-HiRes
 
-DISTINFO_FILE=	${.CURDIR}/../../devel/scmgit-base/distinfo
+DISTINFO_FILE=	${.CURDIR}/../../devel/git-base/distinfo
 
 USE_TOOLS+=	gmake perl:run
 

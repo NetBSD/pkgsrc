@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:40:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/09/09 14:07:59 wiz Exp $
 
 DISTNAME=	Padre-Plugin-Git-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Capture-Tiny>=0.03:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Padre>=0.67:../../editors/p5-Padre
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Git/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

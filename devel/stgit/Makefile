@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2013/05/31 12:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/09/09 14:07:59 wiz Exp $
 
 DISTNAME=	stgit-0.14.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	http://homepage.ntlworld.com/cmarinas/stgit/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+= xmlto-[0-9]*:../../textproc/xmlto
-DEPENDS+=	scmgit-base>=1.5.2:../../devel/scmgit-base
+DEPENDS+=	git-base>=1.5.2:../../devel/git-base
 
 AUTO_MKDIRS=	yes
 USE_TOOLS+=	bash:run perl gmake
