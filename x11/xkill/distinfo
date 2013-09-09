@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 18:17:25 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/09/09 09:34:49 wiz Exp $
 
-SHA1 (xkill-1.0.3.tar.bz2) = bab7b9c7f3bc053d743eb339cf5fa496bace57e5
-RMD160 (xkill-1.0.3.tar.bz2) = 58d4a613c2076fb376e8c5fc739adedb3f223d0c
-Size (xkill-1.0.3.tar.bz2) = 107790 bytes
+SHA1 (xkill-1.0.4.tar.bz2) = 3a9c253ed698ae2e6c176a6f4a5a7d43497818f6
+RMD160 (xkill-1.0.4.tar.bz2) = dcd99ec1a2134105d2a309e4eb7f04e19766878e
+Size (xkill-1.0.4.tar.bz2) = 124828 bytes
