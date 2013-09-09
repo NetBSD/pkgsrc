@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3364 2013/09/09 19:35:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3365 2013/09/09 20:28:01 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2 [wiz 2013-09-09]
 	Updated x11/xf86-video-ati to 7.2.0 [wiz 2013-09-09]
 	Updated fonts/fontconfig to 2.10.95 [wiz 2013-09-09]
+	Updated devel/p5-Tree-DAG_Node to 1.16 [prlw1 2013-09-09]
