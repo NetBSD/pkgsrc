@@ -1,8 +1,6 @@
-$NetBSD: patch-config_config__perl.pl,v 1.2 2013/09/07 18:48:43 wiz Exp $
+$NetBSD: patch-config_config__perl.pl,v 1.3 2013/09/09 20:35:07 wiz Exp $
 
-1. chunk: add rpath for pkgsrc
-2. chunk: perl-5.18 fix, see
-http://www.graphviz.org/mantisbt/view.php?id=2359
+add rpath for pkgsrc
 
 --- config/config_perl.pl.orig	2013-08-01 17:35:15.000000000 +0000
 +++ config/config_perl.pl
@@ -15,12 +13,3 @@ http://www.graphviz.org/mantisbt/view.php?id=2359
  }
  if ($ARGV[0] eq "PERL_INCLUDES") {
  	$archlib = $Config{archlib};
-@@ -14,7 +14,7 @@ if ($ARGV[0] eq "PERL_INSTALL_DIR") {
- 
- 	my $d;
- 
--	foreach $d qw(installvendorarch vendorarch installsitearch sitearch) {
-+	foreach $d (qw(installvendorarch vendorarch installsitearch sitearch)) {
- 		if (exists($Config{$d}) and defined($Config{$d}) and
- 			($Config{$d} ne '') ) {
- 			print "$Config{$d}";

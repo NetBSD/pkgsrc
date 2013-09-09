@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2013/09/06 21:30:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2013/09/09 20:35:07 wiz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -102,6 +102,7 @@ lib/libgvc.la
 lib/libgvpr.la
 lib/libpathplan.la
 lib/libxdot.la
+${PLIST.lua}lib/lua/gv.so
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/gv.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/gv.so
 lib/pkgconfig/libcdt.pc
