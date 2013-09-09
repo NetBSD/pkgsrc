@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/03 09:03:09 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/09/09 20:37:42 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -22,9 +22,6 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
-${PYSITELIB}/setuptools/version.py
-${PYSITELIB}/setuptools/version.pyc
-${PYSITELIB}/setuptools/version.pyo
 ${PYSITELIB}/setuptools/_backport/__init__.py
 ${PYSITELIB}/setuptools/_backport/__init__.pyc
 ${PYSITELIB}/setuptools/_backport/__init__.pyo
@@ -127,6 +124,9 @@ ${PYSITELIB}/setuptools/package_index.pyo
 ${PYSITELIB}/setuptools/py24compat.py
 ${PYSITELIB}/setuptools/py24compat.pyc
 ${PYSITELIB}/setuptools/py24compat.pyo
+${PYSITELIB}/setuptools/py26compat.py
+${PYSITELIB}/setuptools/py26compat.pyc
+${PYSITELIB}/setuptools/py26compat.pyo
 ${PYSITELIB}/setuptools/py27compat.py
 ${PYSITELIB}/setuptools/py27compat.pyc
 ${PYSITELIB}/setuptools/py27compat.pyo
@@ -196,3 +196,6 @@ ${PYSITELIB}/setuptools/tests/test_test.pyo
 ${PYSITELIB}/setuptools/tests/test_upload_docs.py
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyc
 ${PYSITELIB}/setuptools/tests/test_upload_docs.pyo
+${PYSITELIB}/setuptools/version.py
+${PYSITELIB}/setuptools/version.pyc
+${PYSITELIB}/setuptools/version.pyo
