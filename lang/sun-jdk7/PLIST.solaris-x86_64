@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.1 2013/03/06 16:58:57 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.2 2013/09/09 08:38:06 jperkin Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -127,6 +127,8 @@ java/sun-7/include/solaris/jni_md.h
 java/sun-7/jre
 java/sun-7/lib/ct.sym
 java/sun-7/lib/dt.jar
+java/sun-7/lib/${JAVA_ARCH}/libattach.so
+java/sun-7/lib/${JAVA_ARCH}/libsaproc.so
 java/sun-7/lib/ir.idl
 java/sun-7/lib/jconsole.jar
 java/sun-7/lib/orb.idl
