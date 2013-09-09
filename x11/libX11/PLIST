@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/06/04 07:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/09/09 09:45:52 wiz Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -927,6 +927,9 @@ share/X11/locale/ja/XLC_LOCALE
 share/X11/locale/ja_JP.UTF-8/Compose
 share/X11/locale/ja_JP.UTF-8/XI18N_OBJS
 share/X11/locale/ja_JP.UTF-8/XLC_LOCALE
+share/X11/locale/km_KH.UTF-8/Compose
+share/X11/locale/km_KH.UTF-8/XI18N_OBJS
+share/X11/locale/km_KH.UTF-8/XLC_LOCALE
 share/X11/locale/ko/Compose
 share/X11/locale/ko/XI18N_OBJS
 share/X11/locale/ko/XLC_LOCALE
@@ -965,6 +968,9 @@ share/X11/locale/pt_BR.UTF-8/XLC_LOCALE
 share/X11/locale/ru_RU.UTF-8/Compose
 share/X11/locale/ru_RU.UTF-8/XI18N_OBJS
 share/X11/locale/ru_RU.UTF-8/XLC_LOCALE
+share/X11/locale/sr_CS.UTF-8/Compose
+share/X11/locale/sr_CS.UTF-8/XI18N_OBJS
+share/X11/locale/sr_CS.UTF-8/XLC_LOCALE
 share/X11/locale/tatar-cyr/Compose
 share/X11/locale/tatar-cyr/XI18N_OBJS
 share/X11/locale/tatar-cyr/XLC_LOCALE
