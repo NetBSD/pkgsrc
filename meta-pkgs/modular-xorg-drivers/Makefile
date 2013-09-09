@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/09/09 19:26:26 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/09/09 22:52:12 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
@@ -36,7 +36,7 @@ DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
 # cyrix deprecated in Xorg 7.4
 #DEPENDS+=	xf86-video-cyrix-[0-9]*:../../x11/xf86-video-cyrix
-DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-fbdev
+DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-dummy
 DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
 DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
