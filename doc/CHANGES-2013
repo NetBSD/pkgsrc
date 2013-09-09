@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3357 2013/09/09 14:05:08 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3358 2013/09/09 14:08:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4765,3 +4765,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/varnish to 3.0.4 [fhajny 2013-09-09]
 	Updated databases/couchdb to 1.4.0 [fhajny 2013-09-09]
 	Updated databases/redis to 2.6.16 [fhajny 2013-09-09]
+	Renamed devel/scmgit to devel/git [wiz 2013-09-09]
+	Renamed devel/scmgit-base to devel/git-base [wiz 2013-09-09]
+	Renamed devel/scmgit-docs to devel/git-docs [wiz 2013-09-09]
+	Renamed devel/scmgit-gitk to devel/git-gitk [wiz 2013-09-09]
