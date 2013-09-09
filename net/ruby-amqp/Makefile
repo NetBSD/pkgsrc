@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2013/04/08 11:17:19 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2013/09/09 12:29:26 fhajny Exp $
 
 DISTNAME=	amqp-0.9.10
 CATEGORIES=	net
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/ruby-amqp/amqp
 COMMENT=	AMQP client implementation in Ruby/EventMachine
 LICENSE=	ruby-license
