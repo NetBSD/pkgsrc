@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3370 2013/09/09 20:43:39 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3371 2013/09/09 20:44:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/global to 6.2.9 [wiz 2013-09-09]
 	Updated misc/dialog to 1.2.20130902 [wiz 2013-09-09]
 	Updated net/flickcurl to 1.25 [wiz 2013-09-09]
+	Updated time/py-pytz to 2013d [wiz 2013-09-09]
