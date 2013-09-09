@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1772 2013/09/05 08:51:47 wen Exp $
+# $NetBSD: Makefile,v 1.1773 2013/09/09 14:07:58 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -233,6 +233,10 @@ SUBDIR+=	gettext-tools
 SUBDIR+=	gflib
 SUBDIR+=	giblib
 SUBDIR+=	gindent
+SUBDIR+=	git
+SUBDIR+=	git-base
+SUBDIR+=	git-docs
+SUBDIR+=	git-gitk
 SUBDIR+=	gitolite
 SUBDIR+=	glade
 SUBDIR+=	glade3
@@ -1602,10 +1606,6 @@ SUBDIR+=	rx
 SUBDIR+=	sablecc
 SUBDIR+=	scintilla
 SUBDIR+=	scmcvs
-SUBDIR+=	scmgit
-SUBDIR+=	scmgit-base
-SUBDIR+=	scmgit-docs
-SUBDIR+=	scmgit-gitk
 SUBDIR+=	scons
 SUBDIR+=	sdcc
 SUBDIR+=	semantic
