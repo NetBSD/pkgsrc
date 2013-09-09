@@ -1,0 +1,17 @@
+IBus-LibThai is a Thai input method engine for IBus, based on the LibThai
+library.
+
+Currently, it provides 3 keyboard layouts internally:
+  - Ketmanee
+  - Pattachote
+  - TIS-820.2538
+(Thai XKB symbols are also supported.)
+
+The input method also filters out invalid input sequences with 3 levels of
+strictness:
+  - Passthrough (no check)
+  - Basic Check
+  - Srict Check
+
+For applications that support surrounding text retrieval/deletion,
+it can also correct the invalid input sequences.
