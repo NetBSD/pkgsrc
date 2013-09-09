@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/06/11 13:37:20 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.13 2013/09/09 14:07:58 wiz Exp $
 
 GLVER=		3.5.1
 DISTNAME=	gitolite-${GLVER}
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v${GLVER}.tar.gz
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/sitaramc/gitolite/wiki
 COMMENT=	Gitolite allows you to host Git repositories easily and securely
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	scmgit-base>=1.6.6:../../devel/scmgit-base
+DEPENDS+=	git-base>=1.6.6:../../devel/git-base
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax perl:run
