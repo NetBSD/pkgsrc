@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/09/05 08:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/09/09 19:26:26 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-drivers-1.14.1
+PKGNAME=	modular-xorg-drivers-1.14.2
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -9,6 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg driver meta-package
+LICENSE=	public-domain
 
 META_PACKAGE=	yes
 
@@ -35,6 +36,7 @@ DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
 # cyrix deprecated in Xorg 7.4
 #DEPENDS+=	xf86-video-cyrix-[0-9]*:../../x11/xf86-video-cyrix
+DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-fbdev
 DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
 DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
