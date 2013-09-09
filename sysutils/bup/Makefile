@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2013/09/09 14:07:59 wiz Exp $
 
 DISTNAME=	bup-0.25rc1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	# manually packaged since master site is git repository
 # and only available via https
@@ -21,7 +20,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # needs changing on each update
 DOCDIR=		${WRKDIR}/lelutin-bup-7e0bc2e

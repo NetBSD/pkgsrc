@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/06/06 03:00:07 taca Exp $
+# $NetBSD: Makefile,v 1.11 2013/09/09 14:07:59 wiz Exp $
 
-DISTNAME=	bulk-medium-20130606
+DISTNAME=	bulk-medium-20130909
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -63,9 +63,9 @@ BUILD_DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
 BUILD_DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
 BUILD_DEPENDS+=	postgresql84-client-[0-9]*:../../databases/postgresql84-client
 BUILD_DEPENDS+=	postgresql91-client-[0-9]*:../../databases/postgresql91-client
-BUILD_DEPENDS+=	scmgit-[0-9]*:../../devel/scmgit
-BUILD_DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
-BUILD_DEPENDS+=	scmgit-docs-[0-9]*:../../devel/scmgit-docs
+BUILD_DEPENDS+=	git-[0-9]*:../../devel/git
+BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+BUILD_DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 BUILD_DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
 BUILD_DEPENDS+=	emacs24>=24<25:../../editors/emacs24
 BUILD_DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages

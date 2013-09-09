@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2013/05/26 01:48:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2013/09/09 14:07:58 wiz Exp $
 
 DISTNAME=	fromcvs-fromcvs-184311d
 # Bump simply to 0.0.0.133, I am not sure...
 PKGNAME=	fromcvs-0.0.0.133
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	-http://gitorious.org/fromcvs/fromcvs/archive-tarball/184311d
 EXTRACT_SUFX=	.tar.gz
