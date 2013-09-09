@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/04/21 03:14:15 mspo Exp $
+# $NetBSD: Makefile,v 1.18 2013/09/09 12:22:45 fhajny Exp $
 #
 
-DISTNAME=	varnish-3.0.3
-#PKGREVISION=	4
+DISTNAME=	varnish-3.0.4
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf pkg-config gmake
+USE_TOOLS+=	pkg-config gmake
 BUILD_DEFS+=	VARBASE
 
 EGDIR=			${PREFIX}/share/examples/varnish
@@ -55,9 +54,7 @@ CONFIGURE_ENV+=	VCC_CC="gcc ${_COMPILER_ABI_FLAG.${ABI}} -fpic -shared -o %o %s"
 .  endif
 .endif
 
-pre-configure:
-	cd ${WRKSRC} && autoconf
-
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
