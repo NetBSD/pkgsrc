@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3355 2013/09/09 12:22:52 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3356 2013/09/09 13:39:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4763,3 +4763,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/stellarium to 0.12.3 [drochner 2013-09-09]
 	Added inputmethod/ibus-libthai version 0.1.0 [obache 2013-09-09]
 	Updated www/varnish to 3.0.4 [fhajny 2013-09-09]
+	Updated databases/couchdb to 1.4.0 [fhajny 2013-09-09]
