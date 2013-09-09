@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/12/08 23:51:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/09/09 20:39:14 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -59,21 +59,21 @@ share/gtags/icons/pglobe.png
 share/gtags/icons/right.png
 share/gtags/icons/text.png
 share/gtags/icons/top.png
-share/gtags/jquery/images/file.gif
-share/gtags/jquery/images/folder-closed.gif
-share/gtags/jquery/images/folder.gif
-share/gtags/jquery/images/minus.gif
-share/gtags/jquery/images/plus.gif
-share/gtags/jquery/images/treeview-black-line.gif
-share/gtags/jquery/images/treeview-black.gif
-share/gtags/jquery/images/treeview-default-line.gif
-share/gtags/jquery/images/treeview-default.gif
-share/gtags/jquery/images/treeview-famfamfam-line.gif
-share/gtags/jquery/images/treeview-famfamfam.gif
-share/gtags/jquery/images/treeview-gray-line.gif
-share/gtags/jquery/images/treeview-gray.gif
-share/gtags/jquery/images/treeview-red-line.gif
-share/gtags/jquery/images/treeview-red.gif
+share/gtags/jquery/images/file.png
+share/gtags/jquery/images/folder-closed.png
+share/gtags/jquery/images/folder.png
+share/gtags/jquery/images/minus.png
+share/gtags/jquery/images/plus.png
+share/gtags/jquery/images/treeview-black-line.png
+share/gtags/jquery/images/treeview-black.png
+share/gtags/jquery/images/treeview-default-line.png
+share/gtags/jquery/images/treeview-default.png
+share/gtags/jquery/images/treeview-famfamfam-line.png
+share/gtags/jquery/images/treeview-famfamfam.png
+share/gtags/jquery/images/treeview-gray-line.png
+share/gtags/jquery/images/treeview-gray.png
+share/gtags/jquery/images/treeview-red-line.png
+share/gtags/jquery/images/treeview-red.png
 share/gtags/jquery/jquery.js
 share/gtags/jquery/jquery.suggest.css
 share/gtags/jquery/jquery.suggest.js
