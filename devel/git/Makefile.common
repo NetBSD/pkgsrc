@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.common,v 1.1 2013/09/09 13:56:27 wiz Exp $
+#
+# used by devel/git-base/Makefile
+# used by devel/git-docs/Makefile
+# used by devel/git-gitk/Makefile
+
+.include "../../devel/git/Makefile.version"
+
+DISTNAME=	git-${GIT_VERSION}
+CATEGORIES=	devel scm
+MASTER_SITES?=	http://git-core.googlecode.com/files/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE?=	http://git-scm.com/
+LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+PATCHDIR=	${.CURDIR}/../../devel/git-base/patches
+DISTINFO_FILE=	${.CURDIR}/../../devel/git-base/distinfo
+
+USE_TOOLS+=		gmake tar sh
+
+PKG_SYSCONFSUBDIR=	git
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-shell=${SH:Q}
+CONFIGURE_ARGS+=	TAR=${TAR:Q}
+CONFIGURE_ARGS+=	--mandir=${${PREFIX}/${PKGMANDIR}:L:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

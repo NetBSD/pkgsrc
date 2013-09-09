@@ -1,0 +1,6 @@
+# $NetBSD: Makefile.version,v 1.1 2013/09/09 13:56:27 wiz Exp $
+#
+# used by devel/git/Makefile.common
+# used by www/gitweb/Makefile
+
+GIT_VERSION=	1.8.4
