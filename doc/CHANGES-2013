@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3366 2013/09/09 20:35:17 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3367 2013/09/09 20:37:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4778,3 +4778,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/fontconfig to 2.10.95 [wiz 2013-09-09]
 	Updated devel/p5-Tree-DAG_Node to 1.16 [prlw1 2013-09-09]
 	Updated graphics/graphviz to 2.34.0 [wiz 2013-09-09]
+	Updated devel/py-setuptools to 1.1.4 [wiz 2013-09-09]
