@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3363 2013/09/09 19:30:04 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3364 2013/09/09 19:35:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-vesa to 2.3.3 [wiz 2013-09-09]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2 [wiz 2013-09-09]
 	Updated x11/xf86-video-ati to 7.2.0 [wiz 2013-09-09]
+	Updated fonts/fontconfig to 2.10.95 [wiz 2013-09-09]
