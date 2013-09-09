@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3358 2013/09/09 14:08:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3359 2013/09/09 17:52:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4769,3 +4769,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Renamed devel/scmgit-base to devel/git-base [wiz 2013-09-09]
 	Renamed devel/scmgit-docs to devel/git-docs [wiz 2013-09-09]
 	Renamed devel/scmgit-gitk to devel/git-gitk [wiz 2013-09-09]
+	Updated sysutils/testdisk to 6.14 [drochner 2013-09-09]
+	Updated security/py-OpenSSL to 0.13.1 [drochner 2013-09-09]
