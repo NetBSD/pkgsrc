@@ -1,13 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/09/09 20:35:07 wiz Exp $
 
---- configure.ac.orig	2013-08-01 17:35:15.000000000 +0000
+--- configure.ac.orig	2013-09-07 01:07:52.000000000 +0000
 +++ configure.ac
-@@ -83,13 +83,24 @@ AC_SUBST([GVPLUGIN_VERSION])
- GRAPHVIZ_VERSION_BUILD=0
- GRAPHVIZ_VERSION_REVISION=0
- case "${host_os}" in
--  *uwin* | *cygwin* | *mingw32* )
-+  *uwin* | *cygwin* | *mingw32* ) 
+@@ -87,9 +87,20 @@ case "${host_os}" in
  	# Windows version numbers
  	# For the build number: months since Jan 2000, day of month from the timestamp
  	# For the revision number: hour, minute from the timestamp
@@ -20,7 +15,7 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
 +		GRAPHVIZ_VERSION_REVISION=0
 +	else
 +		# JR: patch from Michael van Elst:
-+		#     if we have a shellm we should have a working awk, too
++		#     if we have a shell, we should have a working awk, too
 +		eval `echo "$GRAPHVIZ_VERSION_MICRO" | awk '{
 +			print "GRAPHVIZ_VERSION_BUILD=" \
 +				(substr($1,1,4)-2000)*12+substr($1,5,2) \
@@ -31,16 +26,22 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
  	fi
  	;;
  esac
-@@ -101,7 +112,7 @@ case "${host_os}" in
-   *linux* )
-     case "${host_cpu}" in
-       powerpc64 | s390x | x86_64 | sparc64 )
--        LIBPOSTFIX="64"
-+        LIBPOSTFIX=""
-         ;;
-     esac
-     ;;
-@@ -880,7 +891,7 @@ else
+@@ -103,14 +114,12 @@ if test -z "$LIBPOSTFIX"; then
+     *linux* )
+       case "${host_cpu}" in
+         aarch64 | powerpc64 | s390x | x86_64 | sparc64 )
+-          LIBPOSTFIX="64"
+           ;;
+       esac
+       ;;
+     *solaris* )
+       case "${host_cpu}" in
+         x86_64 | sparc64 )
+-          LIBPOSTFIX="/64"
+           ;;
+       esac
+       ;;
+@@ -889,7 +898,7 @@ else
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
                          LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
@@ -48,8 +49,8 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
 +		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
      
  		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
- 		        if test  "x$?" == "x0"; then
-@@ -902,7 +913,7 @@ else
+ 		        if test  "x$?" = "x0"; then
+@@ -911,7 +920,7 @@ else
                  LUA_INCLUDES=`$LUACONFIG --include`
                  LUA_LIBS=`$LUACONFIG --libs`
  	        LUA_VERSION="5.0.x"
@@ -58,7 +59,7 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
              fi
          fi
      
-@@ -992,8 +1003,8 @@ else
+@@ -1001,8 +1010,8 @@ else
          use_ocaml="No (ocaml not available)"
        else
          AC_CHECK_PROG(OCAML_OPT,ocamlopt,ocamlopt)
@@ -69,8 +70,8 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $OCAML_INCLUDES"
          AC_CHECK_HEADER(caml/mlvalues.h,[
-@@ -1086,13 +1097,13 @@ else
-       if test "x$PHP" == "x"; then
+@@ -1095,13 +1104,13 @@ else
+       if test "x$PHP" = "x"; then
          use_php="No (php not available)"
        else
 -        if test -d /usr/include/php5; then
@@ -88,7 +89,7 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
          PHP_LIBS=
          save_CPPFLAGS=$CPPFLAGS
          CPPFLAGS="$CPPFLAGS $PHP_INCLUDES"
-@@ -2571,7 +2582,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
+@@ -2621,7 +2630,7 @@ dnl INCLUDES and LIBS for PLATFORMSDK
  
  AC_ARG_WITH(platformsdkincludedir,
    [AS_HELP_STRING([--with-platformsdkincludedir=DIR],[use Platform SDK (Windows) includes from DIR])],
@@ -97,12 +98,3 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/06 21:30:00 wiz Exp $
  
  AC_ARG_WITH(platformsdklibdir,
    [AS_HELP_STRING([--with-platformsdklibdir=DIR],[use Platform SDK (Windows) libraries from DIR])],
-@@ -3222,7 +3233,7 @@ else
-     use_gv_tcl="Yes"
-   fi
-   if test "x$use_gd" != "xYes"; then
--    if test "x$use_gd" == "xYes (internal)"; then
-+    if test "x$use_gd" = "xYes (internal)"; then
-         use_gdtclft="Yes"
-     else
-         use_gdtclft="No (gd not available)"
