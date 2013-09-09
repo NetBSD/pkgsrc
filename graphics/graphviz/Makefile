@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2013/09/06 21:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2013/09/09 15:29:43 jperkin Exp $
 
 DISTNAME=	graphviz-2.32.0
 CATEGORIES=	graphics
@@ -63,7 +63,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
 
 # Prevent another config.status run.
 pre-build:
-	touch ${WRKSRC}/Makefile
+	touch ${WRKSRC}/Makefile ${WRKSRC}/graphviz_version.h
 
 # Remove temporary files and directories created by re-linking "libgv_lua.la".
 post-install:
