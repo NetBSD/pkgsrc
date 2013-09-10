@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/11/21 02:21:07 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/10 08:43:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-fonts-1.1
@@ -9,6 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg font meta-package
+LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 

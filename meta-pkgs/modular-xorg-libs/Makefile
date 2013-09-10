@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/06/06 12:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/09/10 08:43:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-libs-1.1
@@ -10,6 +10,7 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg library meta-package
+LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 
