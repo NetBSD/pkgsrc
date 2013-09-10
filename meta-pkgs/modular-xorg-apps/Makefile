@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/09/06 08:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/09/10 08:43:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.14.1.3
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg application meta-package
-LICENSE=	public-domain
+LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 

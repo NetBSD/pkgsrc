@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/04 18:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/10 08:43:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-protos-1.4
@@ -9,6 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg application meta-package for prototypes
+LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 
