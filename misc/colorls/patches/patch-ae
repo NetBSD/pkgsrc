@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2011/06/14 13:25:57 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2013/09/10 14:24:20 joerg Exp $
 
 --- print.c.orig	1996-12-21 23:40:58.000000000 +0000
 +++ print.c
@@ -37,7 +37,31 @@ $NetBSD: patch-ae,v 1.3 2011/06/14 13:25:57 wiz Exp $
  void
  printscol(dp)
  	DISPLAY *dp;
-@@ -124,10 +145,14 @@ printlong(dp)
+@@ -97,8 +118,8 @@ printlong(dp)
+ 		if (f_inode)
+ 			(void)printf("%*lu ", dp->s_inode, (u_long)sp->st_ino);
+ 		if (f_size)
+-			(void)printf("%*qd ",
+-			    dp->s_block, howmany(sp->st_blocks, blocksize));
++			(void)printf("%*lld ",
++			    dp->s_block, (long long)howmany(sp->st_blocks, blocksize));
+ 		(void)strmode(sp->st_mode, buf);
+ 		np = p->fts_pointer;
+ 		(void)printf("%s %*u %-*s  %-*s  ", buf, dp->s_nlink,
+@@ -114,20 +135,24 @@ printlong(dp)
+ 				(void)printf("%3d, %3d ",
+ 				    major(sp->st_rdev), minor(sp->st_rdev));
+ 		else if (dp->bcfile)
+-			(void)printf("%*s%*qd ",
+-			    8 - dp->s_size, "", dp->s_size, sp->st_size);
++			(void)printf("%*s%*lld ",
++			    8 - dp->s_size, "", dp->s_size, (long long)sp->st_size);
+ 		else
+-			(void)printf("%*qd ", dp->s_size, sp->st_size);
++			(void)printf("%*lld ", dp->s_size, (long long)sp->st_size);
+ 		if (f_accesstime)
+ 			printtime(sp->st_atime);
+ 		else if (f_statustime)
  			printtime(sp->st_ctime);
  		else
  			printtime(sp->st_mtime);
@@ -80,10 +104,14 @@ $NetBSD: patch-ae,v 1.3 2011/06/14 13:25:57 wiz Exp $
  			endcol += colwidth;
  		}
  		(void)putchar('\n');
-@@ -219,9 +256,13 @@ printaname(p, inodefield, sizefield)
+@@ -217,11 +254,15 @@ printaname(p, inodefield, sizefield)
+ 	if (f_inode)
+ 		chcnt += printf("%*lu ", (int)inodefield, (u_long)sp->st_ino);
  	if (f_size)
- 		chcnt += printf("%*qd ",
- 		    (int)sizefield, howmany(sp->st_blocks, blocksize));
+-		chcnt += printf("%*qd ",
+-		    (int)sizefield, howmany(sp->st_blocks, blocksize));
++		chcnt += printf("%*lld ",
++		    (int)sizefield, (long long)howmany(sp->st_blocks, blocksize));
 +	if (f_color)
 +		(void)colortype(sp->st_mode);
  	chcnt += printf("%s", p->fts_name);
