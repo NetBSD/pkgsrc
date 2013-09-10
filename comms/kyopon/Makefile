@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 03:45:07 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2013/09/10 14:14:02 joerg Exp $
 
 DISTNAME=		kyopon-0.5
 CATEGORIES=		comms
@@ -11,6 +11,9 @@ COMMENT=		Tool to manipulate data of Kyocera PHS handset
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*
 
 USE_BSD_MAKEFILE=	yes
+
+CWARNFLAGS.clang=	-Wno-error=pointer-sign
+MAKE_ENV+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
