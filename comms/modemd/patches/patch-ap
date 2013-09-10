@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.3 2011/11/25 21:34:34 joerg Exp $
+$NetBSD: patch-ap,v 1.4 2013/09/10 14:15:11 joerg Exp $
 
 --- outgoing/listen.c.orig	1996-04-30 07:02:48.000000000 +0000
 +++ outgoing/listen.c
@@ -21,3 +21,12 @@ $NetBSD: patch-ap,v 1.3 2011/11/25 21:34:34 joerg Exp $
  
  void listener (port, addr, forkp)
       int port;
+@@ -116,7 +119,7 @@ void listener (port, addr, forkp)
+   do {
+     int pid;
+     struct sockaddr_in name;
+-    int namelen = sizeof name;
++    socklen_t namelen = sizeof name;
+     if ((clientSock =
+ 	 accept (mpoolSock, (struct sockaddr *)&name, &namelen)) < 0)
+       {
