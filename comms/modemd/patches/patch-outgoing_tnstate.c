@@ -1,4 +1,4 @@
-$NetBSD: patch-outgoing_tnstate.c,v 1.1 2011/12/19 13:25:22 wiz Exp $
+$NetBSD: patch-outgoing_tnstate.c,v 1.2 2013/09/10 14:15:11 joerg Exp $
 
 Add missing header files (for cleanup()).
 
@@ -13,3 +13,12 @@ Add missing header files (for cleanup()).
  
  unsigned char	doopt[] = { IAC, DO, '%', 'c', 0 };
  unsigned char	dont[] = { IAC, DONT, '%', 'c', 0 };
+@@ -105,7 +107,7 @@ telrcv()
+ 			state = TS_DATA;
+ 			/* Strip off \n or \0 after a \r */
+ 			if (his_state_is_wont(TELOPT_BINARY)
+-			    && (c == 0) || (c == '\n')) {
++			    && ((c == 0) || (c == '\n'))) {
+ 				break;
+ 			}
+ 			/* FALL THROUGH */

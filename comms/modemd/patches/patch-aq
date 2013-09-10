@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.3 2011/11/25 21:34:34 joerg Exp $
+$NetBSD: patch-aq,v 1.4 2013/09/10 14:15:11 joerg Exp $
 
 --- incoming/connect.c.orig	1996-04-30 07:02:43.000000000 +0000
 +++ incoming/connect.c
@@ -20,3 +20,12 @@ $NetBSD: patch-aq,v 1.3 2011/11/25 21:34:34 joerg Exp $
  
  static void pump PROTO ((int, int));
  
+@@ -85,7 +87,7 @@ int tcp_connect (tty)
+   name.sin_family = AF_INET;
+ 
+   /* Allow numeric or symbolic port names... */
+-  if (se = getservbyname (modemcap.connect_port, "tcp"))
++  if ((se = getservbyname (modemcap.connect_port, "tcp")))
+     name.sin_port = se -> s_port;
+   else
+     name.sin_port = htons (atoi (modemcap.connect_port));
