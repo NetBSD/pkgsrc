@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/09/09 22:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/09/10 08:43:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg driver meta-package
-LICENSE=	public-domain
+LICENSE=	2-clause-bsd
 
 META_PACKAGE=	yes
 
