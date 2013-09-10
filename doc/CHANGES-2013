@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3376 2013/09/10 03:03:04 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3377 2013/09/10 07:19:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/moodle to 2.5.2 [wen 2013-09-10]
 	Updated time/p5-Time-Duration to 1.1 [wen 2013-09-10]
 	Updated time/p5-Time-Elapsed to 0.31 [wen 2013-09-10]
+	Updated devel/p5-Date-Manip to 6.41 [wen 2013-09-10]
