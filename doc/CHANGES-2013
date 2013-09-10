@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3379 2013/09/10 11:43:14 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3380 2013/09/10 15:37:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4791,3 +4791,18 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Date-Manip to 6.41 [wen 2013-09-10]
 	Updated graphics/digikam to 3.2.0nb7 [wiz 2013-09-10]
 	Updated security/xml-security-c to 1.7.2 [obache 2013-09-10]
+	Added databases/postgresql93 version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-client version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-server version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-docs version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-adminpack version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-datatypes version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-dblink version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-fuzzystrmatch version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-monitoring version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-pgcrypto version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-plperl version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-plpython version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-pltcl version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-replicationtools version 9.3.0 [adam 2013-09-10]
+	Added databases/postgresql93-upgrade version 9.3.0 [adam 2013-09-10]
