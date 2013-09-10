@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3375 2013/09/10 02:59:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3376 2013/09/10 03:03:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4787,3 +4787,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-ast to 0.98.0 [wiz 2013-09-09]
 	Updated www/moodle to 2.5.2 [wen 2013-09-10]
 	Updated time/p5-Time-Duration to 1.1 [wen 2013-09-10]
+	Updated time/p5-Time-Elapsed to 0.31 [wen 2013-09-10]
