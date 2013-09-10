@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/09/11 23:19:37 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/09/10 14:39:54 joerg Exp $
 #
 
 DISTNAME=	pkg_select-20090308
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -19,6 +19,11 @@ INSTALLATION_DIRS+=	${EXAMPLEDIR} share/pkg_select
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EXAMPLEDIR}/${PKGBASE}.conf.example	\
 			${PKG_SYSCONFDIR}/${PKGBASE}.conf
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
+.endif
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
