@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/04/01 12:33:04 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2013/09/10 14:42:19 joerg Exp $
 #
 
 DISTNAME=	bkpupsd-2.2.1
@@ -39,5 +39,10 @@ RCD_SCRIPT_SRC.bkpupsd=	# need to avoid automatic handling
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.ja ${DESTDIR}${DOCDIR}
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
+.endif
 
 .include "../../mk/bsd.pkg.mk"
