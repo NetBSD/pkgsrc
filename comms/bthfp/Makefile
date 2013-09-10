@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 11:24:39 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/09/10 14:13:40 joerg Exp $
 
 DISTNAME=		bthfp-0.1
+PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		http://homepages.rya-online.net/plunky/
 DISTFILES=		bthfp-0.1.tar.gz
