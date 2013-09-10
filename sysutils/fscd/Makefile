@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/11/12 10:37:10 jdf Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/10 14:43:23 joerg Exp $
 #
 
 DISTNAME=	fscd-1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://komkon2.de/
 
@@ -16,6 +17,11 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9].*-* FreeBSD-[4-9].*-* OpenBSD-*-* DragonFly-*-* 
 
 RCD_SCRIPTS=	fscd
 INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fscadm/fscadm ${DESTDIR}${PREFIX}/sbin
