@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 14:09:34 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2013/09/10 11:42:52 obache Exp $
 
-DISTNAME=	xml-security-c-1.6.1
-PKGREVISION=	1
+DISTNAME=	xml-security-c-1.7.2
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=/santuario/c-library/}
 
