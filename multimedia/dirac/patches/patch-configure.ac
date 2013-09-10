@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/09/10 14:25:24 joerg Exp $
+
+--- configure.ac.orig	2013-09-10 09:37:50.000000000 +0000
++++ configure.ac
+@@ -68,6 +68,8 @@ use_msvc=no
+ AC_SUBST([LIBFLAGS],[])
+ AC_SUBST([LIBEXT],[])
+ case "$CXX" in
++	clang*|CLANG*)
++		;;
+ 		cl*|CL*)
+ 		CXXFLAGS="-nologo -W1 -EHsc -DWIN32"
+ 		if test x"$enable_shared" = "xyes"; then

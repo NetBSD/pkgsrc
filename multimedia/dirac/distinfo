@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/06/11 17:27:02 joerg Exp $
+$NetBSD: distinfo,v 1.4 2013/09/10 14:25:24 joerg Exp $
 
 SHA1 (dirac-1.0.2.tar.gz) = 895aaad832a54b754e58f77c87d38c0c37752b0b
 RMD160 (dirac-1.0.2.tar.gz) = 0af65c4216230b5418667081cecb7bdcdc853d2e
 Size (dirac-1.0.2.tar.gz) = 918366 bytes
+SHA1 (patch-configure) = 62966412a9809f30269a1da8e540ab9a64a59f9d
+SHA1 (patch-configure.ac) = a216c8cfda7b8bd743005481fd6d6816c17ea6bd
