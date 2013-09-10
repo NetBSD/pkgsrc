@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3380 2013/09/10 15:37:36 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3381 2013/09/10 16:27:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4806,3 +4806,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/postgresql93-pltcl version 9.3.0 [adam 2013-09-10]
 	Added databases/postgresql93-replicationtools version 9.3.0 [adam 2013-09-10]
 	Added databases/postgresql93-upgrade version 9.3.0 [adam 2013-09-10]
+	Updated lang/ruby193-base to 1.9.3p448nb4 [taca 2013-09-10]
+	Updated lang/ruby200-base to 2.0.0p247nb1 [taca 2013-09-10]
