@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2011/09/12 07:17:14 dholland Exp $
+$NetBSD: patch-ac,v 1.6 2013/09/10 14:12:38 joerg Exp $
 
 - ...
 - cope with 64-bit off_t
@@ -89,7 +89,7 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 07:17:14 dholland Exp $
 +        if (size < ((off_t)1 << 32))		/* From FreeBSD */
 +          seekto = random() % (size / Chunk);
 +        else
-+          seekto = ((off_t)random() << 32 + random()) % (size / Chunk);
++          seekto = (((off_t)random() << 32) + random()) % (size / Chunk);
 +        doseek(seekto, fd,
  	  ((lseek_count++ % UpdateSeek) == 0));
  	if (read(seek_control[0], seek_tickets, 1) != 1)
