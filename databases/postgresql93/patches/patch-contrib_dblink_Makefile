@@ -1,0 +1,12 @@
+$NetBSD: patch-contrib_dblink_Makefile,v 1.1 2013/09/10 15:32:32 adam Exp $
+
+--- contrib/dblink/Makefile.orig	2013-09-02 20:53:17.000000000 +0000
++++ contrib/dblink/Makefile
+@@ -4,7 +4,6 @@ MODULE_big = dblink
+ OBJS	= dblink.o
+ PG_CPPFLAGS = -I$(libpq_srcdir)
+ SHLIB_LINK = $(libpq)
+-SHLIB_PREREQS = submake-libpq
+ 
+ EXTENSION = dblink
+ DATA = dblink--1.1.sql dblink--1.0--1.1.sql dblink--unpackaged--1.0.sql
