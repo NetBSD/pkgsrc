@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:00 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/09/10 14:43:42 joerg Exp $
 
 DISTNAME=	easydiskpasswd-1.0
 PKGREVISION=	1
@@ -16,6 +16,11 @@ INSTALLATION_DIRS=	bin
 # we depend on SCIOCCOMMAND, a header defining sense codes
 # and the "make" infrastructure
 ONLY_FOR_PLATFORM= NetBSD-[3-9]*-*
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
+.endif
 
 do-extract:
 	${CP} ${FILESDIR}/easydiskpasswd.c ${FILESDIR}/Makefile ${WRKSRC}
