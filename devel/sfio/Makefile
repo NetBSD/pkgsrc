@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:45 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/09/10 14:18:11 joerg Exp $
 #
 
 # pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
@@ -24,6 +24,11 @@ MAKE_FLAGS+=	MKPROFILE=yes
 WRKSRC=		${WRKDIR}
 
 AUTO_MKDIRS=			yes
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=parentheses
+.endif
 
 post-patch:
 	${MV} ${WRKSRC}/man/man3/sfio.3 ${WRKSRC}/man/man3/sfio.3.in
