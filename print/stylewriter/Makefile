@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2013/04/24 10:06:52 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2013/09/10 14:41:18 joerg Exp $
 #
 
 DISTNAME=	stylewriter
 PKGNAME=	stylewriter-0.9.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/
 
@@ -18,6 +18,9 @@ USE_TOOLS+=	gs:run
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	sbin
+
+CWARNFLAGS.clang=	-Wno-error=pointer-sign
+MAKE_ENV+=	CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 FILTER_DIR=	libexec/stylewriter
