@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/31 11:16:40 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/09/10 14:16:22 joerg Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		1
@@ -19,6 +19,9 @@ USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
 
 INSTALLATION_DIRS=	bin lib/bcc ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+
+CWARNFLAGS.clang=	-Wno-error=logical-op-parentheses -Wno-error=array-bounds
+MAKE_FLAGS+=	CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
