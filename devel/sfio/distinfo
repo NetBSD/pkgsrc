@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/12/19 14:19:43 wiz Exp $
+$NetBSD: distinfo,v 1.9 2013/09/10 14:18:11 joerg Exp $
 
 SHA1 (sfio_1999.src.unix.cpio) = 6fd3a711ca8f95190c0859934f57a66d02c842a4
 RMD160 (sfio_1999.src.unix.cpio) = 379148273c9979f7a5a921a338465b7579a6ac5e
@@ -21,3 +21,5 @@ SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcseekable.c) = daa5b79246462fe474dc72b4dba3
 SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcsubstream.c) = 57acce973b885a97ef783cab5ffafd07666fca61
 SHA1 (patch-src_lib_sfio_Sfio__dc_sfdctee.c) = a21856a2c6db519e5dda508c7dd3358aef5ffe13
 SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcunion.c) = 95c2113db9c1ff1c9ee7c9388a1324033a7fe697
+SHA1 (patch-src_lib_sfio_Stdio__b_sfstdio.c) = 027041928450e67fdfce77928b52a5889a287f15
+SHA1 (patch-src_lib_sfio_Stdio__b_vsscanf.c) = 39408d8de53c168b4602506bb0be466e481a0769
