@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2011/09/29 21:00:19 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2013/09/10 14:45:05 joerg Exp $
 
 --- libcdcx.c.orig	2005-09-09 13:38:48.000000000 +0000
 +++ libcdcx.c
@@ -10,6 +10,24 @@ $NetBSD: patch-ad,v 1.2 2011/09/29 21:00:19 wiz Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
+@@ -164,7 +165,7 @@ u_long *vals, *colors, backcolor;
+   colwidth = barwidth / cols;
+   
+   for (lcv = 0 ; lcv < n ; lcv++) {
+-    snprintf(buf, sizeof(buf), "%s = %d", names[lcv], vals[lcv]);
++    snprintf(buf, sizeof(buf), "%s = %lu", names[lcv], vals[lcv]);
+     XSetForeground(xdpy->dpy, gc, colors[lcv]);
+     XDrawImageString(xdpy->dpy, win, gc, x, get_fontheight(font) + y,
+               buf, strlen(buf));
+@@ -252,7 +253,7 @@ u_long *vals, *colors, backcolor;
+   colwidth = barwidth / cols;
+   
+   for (lcv = 0 ; lcv < n ; lcv++) {
+-    snprintf(buf, sizeof(buf), "%s = %d", names[lcv], vals[lcv]);
++    snprintf(buf, sizeof(buf), "%s = %lu", names[lcv], vals[lcv]);
+     XSetForeground(xdpy->dpy, gc, colors[lcv]);
+     XDrawImageString(xdpy->dpy, win, gc, x, get_fontheight(font) + y,
+               buf, strlen(buf));
 @@ -285,7 +286,7 @@ struct graph *create_graph(nlines, title
  int nlines;
  char *title;
