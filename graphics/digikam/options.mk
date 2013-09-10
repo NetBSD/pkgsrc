@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.4 2013/05/21 13:04:09 markd Exp $
+# $NetBSD: options.mk,v 1.5 2013/09/10 11:23:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.digikam
-PKG_SUPPORTED_OPTIONS=	lensfun liblqr pim
+PKG_SUPPORTED_OPTIONS=	debug lensfun liblqr pim
 PKG_SUGGESTED_OPTIONS=	liblqr pim
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+.endif
 
 .if !empty(PKG_OPTIONS:Mlensfun)
 .include "../../graphics/lensfun/buildlink3.mk"
