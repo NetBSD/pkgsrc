@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2011/12/07 15:17:30 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2013/09/10 14:38:22 joerg Exp $
 
---- tcpdmerge.c.orig	2011-12-07 13:44:48.000000000 +0000
+--- tcpdmerge.c.orig	2013-09-10 11:20:39.000000000 +0000
 +++ tcpdmerge.c
 @@ -45,7 +45,8 @@
  #include <stdlib.h>
@@ -12,3 +12,12 @@ $NetBSD: patch-aa,v 1.2 2011/12/07 15:17:30 joerg Exp $
  #ifdef __STDC__
  #include <stdarg.h>
  #else
+@@ -60,7 +61,7 @@ char version[] = "1.0";
+ char *program_name;
+ 
+ void error(const char *fmt, ...);
+-void usage(void)__attribute__((volatile));
++void usage(void)__attribute__((__noreturn__));
+ void merge_files(char file1_file_name[], char file2_file_name[],
+                  char write_file_name[]);
+ void make_tmp_file( char filename[], pcap_t **pcap, 
