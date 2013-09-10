@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2006/08/04 22:59:02 rillig Exp $
+$NetBSD: patch-ac,v 1.3 2013/09/10 14:44:28 joerg Exp $
 
---- same.c.orig	2004-07-16 19:30:01.000000000 +0200
-+++ same.c	2006-08-05 00:57:39.680842400 +0200
+--- same.c.orig	2004-07-16 17:30:01.000000000 +0000
++++ same.c
 @@ -106,10 +106,9 @@
   * - There is a 1024 (BUFSIZE) character limit to pathnames when using 
   *   symlinks.
@@ -88,6 +88,15 @@ $NetBSD: patch-ac,v 1.2 2006/08/04 22:59:02 rillig Exp $
      unsigned int crc;
      const char *name;
      unsigned int hash = 0;
+@@ -587,7 +583,7 @@ static void *p_malloc(unsigned int hash,
+     void *data;
+ 
+     if (size > sizeof(pool->data)) {
+-	fprintf(stderr, "Warning: p_malloc() of size %u\n", size);
++	fprintf(stderr, "Warning: p_malloc() of size %zu\n", size);
+ 	return malloc(size);
+     }
+ 
 @@ -659,7 +655,7 @@ static struct name_entry *alloc_name_ent
      return entry;
  }
