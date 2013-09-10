@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/09/09 13:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/10 08:17:38 wiz Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (base package)
 
-CONFLICTS+=		git<4.9.5nb1		# misc/git
 CONFLICTS+=		scmgit-base-[0-9]*
 
 DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
