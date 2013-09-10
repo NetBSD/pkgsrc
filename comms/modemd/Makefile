@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 11:24:42 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/09/10 14:15:11 joerg Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.vix.com/pub/modemd/
 
