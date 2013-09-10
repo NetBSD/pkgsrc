@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2009/02/07 17:31:29 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/09/10 14:19:06 joerg Exp $
 
 SHA1 (xroach-4.4/xroach.tar) = 63b8f70508bf767ddfa971aa1f75c9efa52e52f3
 RMD160 (xroach-4.4/xroach.tar) = d479f741fe5b483375290d43a870d06dcf0e200b
 Size (xroach-4.4/xroach.tar) = 86016 bytes
 SHA1 (patch-aa) = a6bacf1dfa69ec7633b05bb829ffb14a182f6382
-SHA1 (patch-ab) = 2ea9f1bbae7214f7706901f85af73652c6d21331
+SHA1 (patch-ab) = 72fbcc22c5debedd8f3a3cd2bd88e2587430cb23
