@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.in,v 1.1 2013/09/10 14:20:47 joerg Exp $
+
+--- configure.in.orig	2013-09-10 12:13:18.000000000 +0000
++++ configure.in
+@@ -92,7 +92,7 @@ dnl Testing libs should use libtool but 
+ dnl This isn't a problem during the build because libtool is always used.
+ dnl Wish I could use $LIBTOOL, but it is written for Makefile use.
+ save_CC="$CC"
+-CC="$SHELL ./libtool $CC"
++CC="$SHELL ./libtool --mode=link $CC"
+ AC_CHECK_LIB(gii,giiInit,foo=bar,
+   AC_MSG_ERROR([LibGII is not properly installed on the system.
+ 		You need LibGII for building LibGIC. Please compile
+@@ -108,7 +108,7 @@ dnl Testing libs should use libtool but 
+ dnl This isn't a problem during the build because libtool is always used.
+ dnl Wish I could use $LIBTOOL, but it is written for Makefile use.
+ save_CC="$CC"
+-CC="$SHELL ./libtool $CC"
++CC="$SHELL ./libtool --mode=link $CC"
+ AC_CHECK_LIB(ggi,ggiInit,foo=bar,ggi_missing_part=yes)
+ CC="$save_CC"
+ 
