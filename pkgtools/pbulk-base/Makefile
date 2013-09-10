@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/01/14 14:33:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2013/09/10 14:38:51 joerg Exp $
 
 DISTNAME=	pbulk-base-0.47
 COMMENT=	Core components of the modular bulk build framework
@@ -10,6 +10,8 @@ USE_TOOLS+=	groff nroff
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 USE_BSD_MAKEFILE=	yes
+
+MAKE_FLAGS+=		CWARNFLAGS.clang=-Wno-error=missing-noreturn
 
 CONFLICTS=	pbulk<0.39
 
