@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 19:50:52 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/10 14:42:05 joerg Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
@@ -31,6 +31,10 @@ SUBST_FILES.dir=	bcmfw.8 bcmfw.c
 SUBST_SED.dir=		-e 's,BCM2033-,${PREFIX}/${FIRMWARE_DIR}/&,'
 SUBST_STAGE.dir=	post-patch
 SUBST_MESSAGE.dir=	Fixing path to firmware directory.
+
+USE_BSD_MAKEFILE=	yes
+
+MAKE_FLAGS+=		CWARNFLAGS.clang=-Wno-error=tautological-compare
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bcmfw ${DESTDIR}${PREFIX}/sbin
