@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3382 2013/09/10 16:34:01 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3383 2013/09/10 18:17:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4809,3 +4809,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ruby193-base to 1.9.3p448nb4 [taca 2013-09-10]
 	Updated lang/ruby200-base to 2.0.0p247nb1 [taca 2013-09-10]
 	Updated misc/rubygems to 2.0.8 [taca 2013-09-10]
+	Updated devel/p5-File-pushd to 1.005 [adam 2013-09-10]
