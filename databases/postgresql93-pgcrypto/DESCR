@@ -1,0 +1,3 @@
+The ``pgcrypto'' PostgreSQL contrib module implements a number of
+cryptographic functions - general hashing, password hashing, PGP encryption,
+raw encryption, random data.
