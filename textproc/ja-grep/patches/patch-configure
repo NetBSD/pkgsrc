@@ -1,0 +1,12 @@
+$NetBSD: patch-configure,v 1.1 2013/09/10 14:45:48 joerg Exp $
+
+--- configure.orig	2013-09-10 11:49:57.000000000 +0000
++++ configure
+@@ -2942,6 +2942,7 @@ done
+ 
+ 
+ case "$ac_cv_prog_CC" in
++ clang*) ;;
+  cl*)  cat >> confdefs.h <<\EOF
+ #define alloca _alloca
+ EOF
