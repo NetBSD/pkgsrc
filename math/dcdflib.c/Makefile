@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/11 23:04:17 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/09/10 14:23:05 joerg Exp $
 
 DISTNAME=	dcdflib.c-1.1
 PKGREVISION=	1
@@ -12,7 +12,9 @@ COMMENT=	Library of C Routines for Cumulative Distribution Functions
 WRKSRC=		${WRKDIR}/dcdflib.c
 BUILD_DIRS=	src
 DIST_SUBDIR=	${PKGNAME_NOREV}
-MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
+CWARNFLAGS.clang=	-Wno-error=logical-op-parentheses
+MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q} \
+		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	include lib share/doc/dcdflib.c
