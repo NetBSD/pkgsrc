@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/06/21 20:47:28 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2013/09/10 14:13:40 joerg Exp $
 
---- bthfp.c.orig	2008-06-21 14:42:12.000000000 +0000
+--- bthfp.c.orig	2006-09-13 08:16:29.000000000 +0000
 +++ bthfp.c
 @@ -480,8 +480,8 @@ accept_sco(int fd, short ev, void *arg)
  
@@ -13,3 +13,21 @@ $NetBSD: patch-aa,v 1.1 2008/06/21 20:47:28 joerg Exp $
  		close(sc);
  		sc = -1;
  		return;
+@@ -854,7 +854,7 @@ recv_rfcomm(int fd, short ev, void *arg)
+ {
+ 	struct result_code *rc;
+ 	char buf[256], *code, *next;
+-	size_t len;
++	ssize_t len;
+ 
+ 	/* XXX what if buf is not large enough? */
+ 
+@@ -895,7 +895,7 @@ recv_rfcomm(int fd, short ev, void *arg)
+ 		len -= 2;
+ 
+ 		if (verbose)
+-			printf("> %.*s\n", next - code, code);
++			printf("> %.*s\n", (int)(next - code), code);
+ 
+ 		for (rc = result_codes ; rc->code != NULL ; rc++) {
+ 			if (strncmp(code, rc->code, rc->strlen) == 0) {
