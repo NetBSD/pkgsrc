@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2006/01/20 01:19:23 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2013/09/10 14:41:18 joerg Exp $
 
---- lpstyl.c.orig	2006-01-20 01:13:29.000000000 +0000
+--- lpstyl.c.orig	1999-03-31 09:05:21.000000000 +0000
 +++ lpstyl.c
 @@ -1015,10 +1015,13 @@ size_t readFileScanline(char *bufK, char
  					if((i & 0x03) == 0)
@@ -35,3 +35,22 @@ $NetBSD: patch-aa,v 1.1 2006/01/20 01:19:23 joerg Exp $
  			}
  			else
  			{
+@@ -1327,7 +1330,7 @@ void sendEncodedData(unsigned char *buff
+ 
+ 	if(verbose)
+ 	{
+-		fprintf(stderr, "%s: Sending encoded data (0x%x bytes).\n", 
++		fprintf(stderr, "%s: Sending encoded data (0x%zx bytes).\n", 
+ 				ProcName, size);
+ 	}	
+ 	begin[0] = 'G';
+@@ -1827,7 +1830,8 @@ void waitStatus(int stat, int canHandleP
+ static int inputBack = -1;
+ size_t inputRead(void *buffer, size_t size)
+ {
+-	size_t result = 0, len = 0;
++	size_t result = 0;
++	ssize_t len = 0;
+ 	
+ 	if((inputBack != -1) && (size > result))
+ 	{
