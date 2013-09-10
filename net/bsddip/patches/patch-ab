@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
+$NetBSD: patch-ab,v 1.2 2013/09/10 14:26:49 joerg Exp $
 
---- tty.c.orig	Sat Jul  1 01:41:05 1995
-+++ tty.c	Sat Sep  9 08:37:14 1995
-@@ -140,9 +140,10 @@
+--- tty.c.orig	1995-06-30 23:41:05.000000000 +0000
++++ tty.c
+@@ -140,9 +140,10 @@ int  tty_nomesg ( void )
  int  tty_lock ( char *path, int mode )
  {
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
  
  
    if ( mode )					/* locking on ?		*/
-@@ -152,32 +153,71 @@
+@@ -152,32 +153,71 @@ int  tty_lock ( char *path, int mode )
        return 0;					/* standard input	*/
      }
  
@@ -103,7 +103,7 @@ $NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
  
      /*
       *  Make sure UUCP owns the lockfile.  Required by some packages.
-@@ -215,7 +255,26 @@
+@@ -215,7 +255,26 @@ int  tty_lock ( char *path, int mode )
    return 0;
  }
  
@@ -130,7 +130,16 @@ $NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
  
  /*
   *  Find a serial speed code in the table.
-@@ -965,7 +1024,6 @@
+@@ -482,7 +541,7 @@ int  tty_set_disc ( int disc )
+   }
+ 
+ 
+-  if ( ( disc == SLIPDISC ) )
++  if ( disc == SLIPDISC )
+   {
+ 
+     int	 tmp_unit = -1;
+@@ -965,7 +1024,6 @@ int  tty_open ( char *name )
    char	*sp;
    char	path [ MAXPATHLEN ];
  
@@ -138,7 +147,7 @@ $NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
    /*
     *  Try opening the TTY device.
     */
-@@ -985,8 +1043,10 @@
+@@ -985,8 +1043,10 @@ int  tty_open ( char *name )
      else
        sp = name;
  
@@ -151,7 +160,7 @@ $NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
      {
        (void) fprintf ( stderr, "DIP: tty: open(%s, RW): %s\n",
  						path, strerror ( errno ) );
-@@ -1118,10 +1178,4 @@
+@@ -1118,10 +1178,5 @@ int  tty_open ( char *name )
    {
      return 0 ;
    }
@@ -161,15 +170,5 @@ $NetBSD: patch-ab,v 1.1 2006/06/30 16:17:27 tron Exp $
 -   * OK, all done.  Lock this terminal line.
 -   */
 -  return tty_lock ( sp, 1 );
++  return 0;
  }
---- daemon.c.orig	Sat Jul  1 01:41:05 1995
-+++ daemon.c	Sat Sep  9 08:20:00 1995
-@@ -168,6 +168,8 @@
-     openlog ( "DIP", LOG_PID, LOG_DAEMON );
-   }
- 
-+  /* note the race condition here; ick! */
-+  tty_relock();
- 
-   (void) signal ( SIGALRM, sig_catcher );
-   (void) alarm ( mydip.timeout );
