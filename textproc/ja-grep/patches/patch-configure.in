@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1 2013/09/10 14:45:48 joerg Exp $
+
+--- configure.in.orig	2013-09-10 11:49:55.000000000 +0000
++++ configure.in
+@@ -42,6 +42,8 @@ AC_REPLACE_FUNCS(memchr stpcpy)
+ 
+ dnl for VC++
+ case "$ac_cv_prog_CC" in
++ clang*)
++   ;;
+  cl*)  AC_DEFINE(alloca, _alloca) ;;
+  *)    ;;
+ esac
