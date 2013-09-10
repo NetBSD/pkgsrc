@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/07/08 13:52:08 wen Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/09/10 02:41:18 wen Exp $
 share/examples/moodle/moodle.conf
 share/moodle/.jshintrc
 share/moodle/.shifter.json
@@ -1060,6 +1060,7 @@ share/moodle/blocks/navigation/edit_form.php
 share/moodle/blocks/navigation/lang/en/block_navigation.php
 share/moodle/blocks/navigation/renderer.php
 share/moodle/blocks/navigation/styles.css
+share/moodle/blocks/navigation/tests/behat/view_my_courses.feature
 share/moodle/blocks/navigation/version.php
 share/moodle/blocks/navigation/yui/build/moodle-block_navigation-navigation/moodle-block_navigation-navigation-debug.js
 share/moodle/blocks/navigation/yui/build/moodle-block_navigation-navigation/moodle-block_navigation-navigation-min.js
@@ -1263,7 +1264,8 @@ share/moodle/calendar/preferences_form.php
 share/moodle/calendar/renderer.php
 share/moodle/calendar/set.php
 share/moodle/calendar/tests/calendarical_test.php
-share/moodle/calendar/tests/externallib_tests.php
+share/moodle/calendar/tests/externallib_test.php
+share/moodle/calendar/tests/lib_test.php
 share/moodle/calendar/upgrade.txt
 share/moodle/calendar/view.php
 share/moodle/calendar/yui/build/moodle-calendar-eventmanager/assets/skins/sam/eventmanager.css
@@ -1824,6 +1826,7 @@ share/moodle/grade/grading/form/rubric/renderer.php
 share/moodle/grade/grading/form/rubric/rubriceditor.php
 share/moodle/grade/grading/form/rubric/styles.css
 share/moodle/grade/grading/form/rubric/version.php
+share/moodle/grade/grading/form/upgrade.txt
 share/moodle/grade/grading/lib.php
 share/moodle/grade/grading/manage.php
 share/moodle/grade/grading/pick.php
@@ -1957,8 +1960,11 @@ share/moodle/install/lang/bn/error.php
 share/moodle/install/lang/bn/install.php
 share/moodle/install/lang/bn/langconfig.php
 share/moodle/install/lang/bn/moodle.php
+share/moodle/install/lang/bs/admin.php
+share/moodle/install/lang/bs/error.php
 share/moodle/install/lang/bs/install.php
 share/moodle/install/lang/bs/langconfig.php
+share/moodle/install/lang/bs/moodle.php
 share/moodle/install/lang/ca/admin.php
 share/moodle/install/lang/ca/error.php
 share/moodle/install/lang/ca/install.php
@@ -2085,6 +2091,7 @@ share/moodle/install/lang/he/install.php
 share/moodle/install/lang/he/langconfig.php
 share/moodle/install/lang/he/moodle.php
 share/moodle/install/lang/he_kids/langconfig.php
+share/moodle/install/lang/hi/admin.php
 share/moodle/install/lang/hi/langconfig.php
 share/moodle/install/lang/hi/moodle.php
 share/moodle/install/lang/hr/admin.php
@@ -2551,6 +2558,7 @@ share/moodle/lib/behat/behat_field_manager.php
 share/moodle/lib/behat/behat_files.php
 share/moodle/lib/behat/classes/behat_command.php
 share/moodle/lib/behat/classes/behat_config_manager.php
+share/moodle/lib/behat/classes/behat_selectors.php
 share/moodle/lib/behat/classes/util.php
 share/moodle/lib/behat/features/bootstrap/behat_init_context.php
 share/moodle/lib/behat/form_field/behat_form_checkbox.php
@@ -4044,6 +4052,7 @@ share/moodle/lib/phpunit/classes/basic_testcase.php
 share/moodle/lib/phpunit/classes/database_driver_testcase.php
 share/moodle/lib/phpunit/classes/hint_resultprinter.php
 share/moodle/lib/phpunit/classes/message_sink.php
+share/moodle/lib/phpunit/classes/phpmailer_sink.php
 share/moodle/lib/phpunit/classes/unittestcase.php
 share/moodle/lib/phpunit/classes/util.php
 share/moodle/lib/phpunit/generatorlib.php
@@ -8105,6 +8114,7 @@ share/moodle/mod/forum/tests/behat/track_read_posts.feature
 share/moodle/mod/forum/tests/externallib_test.php
 share/moodle/mod/forum/tests/generator/lib.php
 share/moodle/mod/forum/tests/generator_test.php
+share/moodle/mod/forum/tests/lib_test.php
 share/moodle/mod/forum/unsubscribeall.php
 share/moodle/mod/forum/upgrade.txt
 share/moodle/mod/forum/user.php
@@ -9911,6 +9921,7 @@ share/moodle/portfolio/flickr/lang/en/portfolio_flickr.php
 share/moodle/portfolio/flickr/lib.php
 share/moodle/portfolio/flickr/version.php
 share/moodle/portfolio/googledocs/db/upgrade.php
+share/moodle/portfolio/googledocs/db/upgradelib.php
 share/moodle/portfolio/googledocs/lang/en/portfolio_googledocs.php
 share/moodle/portfolio/googledocs/lib.php
 share/moodle/portfolio/googledocs/version.php
@@ -9921,6 +9932,7 @@ share/moodle/portfolio/mahara/lib.php
 share/moodle/portfolio/mahara/preconfig.php
 share/moodle/portfolio/mahara/version.php
 share/moodle/portfolio/picasa/db/upgrade.php
+share/moodle/portfolio/picasa/db/upgradelib.php
 share/moodle/portfolio/picasa/lang/en/portfolio_picasa.php
 share/moodle/portfolio/picasa/lib.php
 share/moodle/portfolio/picasa/version.php
@@ -10068,12 +10080,14 @@ share/moodle/question/format/multianswer/tests/fixtures/questions.multianswer.tx
 share/moodle/question/format/multianswer/tests/multianswerformat_test.php
 share/moodle/question/format/multianswer/version.php
 share/moodle/question/format/upgrade.txt
-share/moodle/question/format/webct/TODO.txt
 share/moodle/question/format/webct/format.php
 share/moodle/question/format/webct/lang/en/qformat_webct.php
+share/moodle/question/format/webct/tests/fixtures/sample_webct.txt
+share/moodle/question/format/webct/tests/webctformat_test.php
 share/moodle/question/format/webct/version.php
 share/moodle/question/format/xhtml/format.php
 share/moodle/question/format/xhtml/lang/en/qformat_xhtml.php
+share/moodle/question/format/xhtml/lib.php
 share/moodle/question/format/xhtml/version.php
 share/moodle/question/format/xhtml/xhtml.css
 share/moodle/question/format/xml/format.php
@@ -10502,6 +10516,7 @@ share/moodle/repository/flickr_public/tests/generator/lib.php
 share/moodle/repository/flickr_public/version.php
 share/moodle/repository/googledocs/db/access.php
 share/moodle/repository/googledocs/db/upgrade.php
+share/moodle/repository/googledocs/db/upgradelib.php
 share/moodle/repository/googledocs/lang/en/repository_googledocs.php
 share/moodle/repository/googledocs/lib.php
 share/moodle/repository/googledocs/pix/icon.png
@@ -10524,6 +10539,7 @@ share/moodle/repository/merlot/tests/generator/lib.php
 share/moodle/repository/merlot/version.php
 share/moodle/repository/picasa/db/access.php
 share/moodle/repository/picasa/db/upgrade.php
+share/moodle/repository/picasa/db/upgradelib.php
 share/moodle/repository/picasa/lang/en/repository_picasa.php
 share/moodle/repository/picasa/lib.php
 share/moodle/repository/picasa/pix/icon.png
@@ -11006,6 +11022,7 @@ share/moodle/theme/bootstrapbase/less/moodle.less
 share/moodle/theme/bootstrapbase/less/moodle/admin.less
 share/moodle/theme/bootstrapbase/less/moodle/backup-restore.less
 share/moodle/theme/bootstrapbase/less/moodle/blocks.less
+share/moodle/theme/bootstrapbase/less/moodle/bootstrapoverride.less
 share/moodle/theme/bootstrapbase/less/moodle/buttons.less
 share/moodle/theme/bootstrapbase/less/moodle/calendar.less
 share/moodle/theme/bootstrapbase/less/moodle/core.less
