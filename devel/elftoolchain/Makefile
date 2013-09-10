@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:16:55 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/10 14:16:52 joerg Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -20,6 +20,9 @@ MAKE_JOBS_SAFE=	no
 USE_BSD_MAKEFILE=	yes
 MAKE_ENV+=		${BSD_MAKE_ENV}
 MAKE_FLAGS+=		MKPROFILE=yes
+
+CWARNFLAGS.clang=	-Wno-error=missing-noreturn -Wno-error=constant-logical-operand
+MAKE_FLAGS+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 INSTALLATION_DIRS=	bin lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1 ${PKGMANDIR}/html1
