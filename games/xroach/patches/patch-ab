@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2001/12/07 09:22:13 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2013/09/10 14:19:06 joerg Exp $
 
---- xroach.c.orig	Fri Jun  4 21:47:09 1993
+--- xroach.c.orig	1993-06-04 19:47:09.000000000 +0000
 +++ xroach.c
-@@ -77,7 +77,7 @@
+@@ -77,7 +77,7 @@ int CalcRootVisible();
  int MarkHiddenRoaches();
  Pixel AllocNamedColor();
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/07 09:22:13 wiz Exp $
  main(ac, av)
  int ac;
  char *av[];
-@@ -115,7 +115,7 @@
+@@ -115,7 +115,7 @@ char *av[];
  	}
      }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/07 09:22:13 wiz Exp $
      
      /*
         Catch some signals so we can erase any visible roaches.
-@@ -212,6 +212,8 @@
+@@ -212,6 +212,8 @@ char *av[];
      CoverRoot();
      
      XCloseDisplay(display);
@@ -29,3 +29,12 @@ $NetBSD: patch-ab,v 1.2 2001/12/07 09:22:13 wiz Exp $
  }
  
  #define USEPRT(msg) fprintf(stderr, msg)
+@@ -465,7 +467,7 @@ CalcRootVisible()
+     Region covered;
+     Region visible;
+     Window *children;
+-    int nChildren;
++    unsigned int nChildren;
+     Window dummy;
+     XWindowAttributes wa;
+     int wx;
