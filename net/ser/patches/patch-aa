@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2011/03/20 11:46:34 obache Exp $
+$NetBSD: patch-aa,v 1.5 2013/09/10 14:37:50 joerg Exp $
 
 --- Makefile.defs.orig	2004-07-27 11:38:33.000000000 +0000
 +++ Makefile.defs
@@ -57,7 +57,27 @@ $NetBSD: patch-aa,v 1.4 2011/03/20 11:46:34 obache Exp $
  
  #set some vars from the environment (and not make builtins)
  CC   := $(shell echo "$${CC}")
-@@ -384,6 +395,10 @@ ifeq ($(ARCH), i386)
+@@ -173,6 +184,19 @@ ifneq (,$(findstring gcc, $(CC_LONGVER))
+ 				 	's/3\../3.0/')
+ endif
+ 
++ifneq (,$(findstring clang, $(CC_LONGVER)))
++	CC_NAME=gcc
++	CC_VER=$(CC) $(shell $(CC) --version|head -n 1| \
++				 sed -e 's/^[^0-9]*\([0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\).*/\1/' -e 's/^[^0-9]*\([0-9][0-9]*\.[0-9][0-9]*\).*/\1/')
++	# sun sed is a little brain damaged => this complicated expression
++	MKDEP=$(CC) -MM 
++	#transform gcc version into 2.9x or 3.0
++	CC_SHORTVER=$(shell echo "$(CC_VER)" | cut -d" " -f 2| \
++				 sed -e 's/[^0-9]*-\(.*\)/\1/'| \
++				 sed -e 's/2\.9.*/2.9x/' -e 's/3\..\..*/3.0/' -e \
++				 	's/3\../3.0/')
++endif
++
+ ifneq (, $(findstring Sun, $(CC_LONGVER)))
+ 	CC_NAME=suncc
+ 	CC_SHORTVER=$(shell echo "$(CC_LONGVER)"|head -n 1| \
+@@ -384,6 +408,10 @@ ifeq ($(ARCH), i386)
  	use_fast_lock=yes
  endif
  
@@ -68,7 +88,7 @@ $NetBSD: patch-aa,v 1.4 2011/03/20 11:46:34 obache Exp $
  ifeq ($(ARCH), sparc64)
  ifeq 	($(CC_NAME), gcc)
  	use_fast_lock=yes
-@@ -639,6 +654,7 @@ ifeq	($(CC_NAME), suncc)
+@@ -639,6 +667,7 @@ ifeq	($(CC_NAME), suncc)
  endif
  
  endif #mode=release
@@ -76,7 +96,7 @@ $NetBSD: patch-aa,v 1.4 2011/03/20 11:46:34 obache Exp $
  
  
  #*FLAGS used for compiling the modules
-@@ -743,6 +759,19 @@ ifeq ($(OS), netbsd)
+@@ -743,6 +772,19 @@ ifeq ($(OS), netbsd)
  	LIBS= -lfl 
  endif
  
