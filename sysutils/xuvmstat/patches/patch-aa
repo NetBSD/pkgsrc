@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2011/09/29 21:00:19 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2013/09/10 14:45:05 joerg Exp $
 
 --- xuvmstat.c.orig	2005-09-09 13:38:48.000000000 +0000
 +++ xuvmstat.c
@@ -53,12 +53,14 @@ $NetBSD: patch-aa,v 1.10 2011/09/29 21:00:19 wiz Exp $
          gettimeofday(&tv, NULL);
          /* NEW GRAPH DATA HERE */
  
-@@ -186,7 +187,7 @@ int was_timeout;
+@@ -185,8 +186,8 @@ int was_timeout;
+   y += 5;
  
    XSetFont(xdpy->dpy, gc, fnt_fixed->fid); 
-   snprintf(buf, sizeof(buf),"The UVM system manages %d %d-byte pages",
+-  snprintf(buf, sizeof(buf),"The UVM system manages %d %d-byte pages",
 -	   cexp.npages, cexp.pagesize);
-+	   curexp.npages, curexp.pagesize);
++  snprintf(buf, sizeof(buf),"The UVM system manages %jd %jd-byte pages",
++	   (intmax_t)curexp.npages, (intmax_t)curexp.pagesize);
    XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
    y += get_fontheight(fnt_fixed) + 5;
@@ -219,8 +221,8 @@ $NetBSD: patch-aa,v 1.10 2011/09/29 21:00:19 wiz Exp $
      y += get_fontheight(fnt_fixed) + 5;
  
 +#if __NetBSD_Version__ >= 599002100
-+    snprintf(buf, sizeof(buf), " woke=%d, revs=%d",
-+	curexp.pdwoke, curexp.pdrevs);
++    snprintf(buf, sizeof(buf), " woke=%jd, revs=%jd",
++	(intmax_t)curexp.pdwoke, (intmax_t)curexp.pdrevs);
 +#else
      snprintf(buf, sizeof(buf), " woke=%d, revs=%d, swout=%d",
 -	cexp.pdwoke, cexp.pdrevs, cexp.pdswout);
@@ -230,23 +232,26 @@ $NetBSD: patch-aa,v 1.10 2011/09/29 21:00:19 wiz Exp $
  		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 1;
  
-     snprintf(buf, sizeof(buf), " scans=%d, anon_scans=%d, obj_scans=%d",
+-    snprintf(buf, sizeof(buf), " scans=%d, anon_scans=%d, obj_scans=%d",
 -	cexp.pdscans, cexp.pdanscan, cexp.pdobscan);
-+	curexp.pdscans, curexp.pdanscan, curexp.pdobscan);
++    snprintf(buf, sizeof(buf), " scans=%jd, anon_scans=%jd, obj_scans=%jd",
++	(intmax_t)curexp.pdscans, (intmax_t)curexp.pdanscan, (intmax_t)curexp.pdobscan);
      XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 1;
  
-     snprintf(buf, sizeof(buf), " busy=%d, freed=%d, pending=%d",
+-    snprintf(buf, sizeof(buf), " busy=%d, freed=%d, pending=%d",
 -	cexp.pdbusy, cexp.pdfreed, cexp.pdpending);
-+	curexp.pdbusy, curexp.pdfreed, curexp.pdpending);
++    snprintf(buf, sizeof(buf), " busy=%jd, freed=%jd, pending=%jd",
++	(intmax_t)curexp.pdbusy, (intmax_t)curexp.pdfreed, (intmax_t)curexp.pdpending);
      XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 1;
  
-     snprintf(buf, sizeof(buf), " reactivate=%d, deactivate=%d, pageouts=%d",
+-    snprintf(buf, sizeof(buf), " reactivate=%d, deactivate=%d, pageouts=%d",
 -	cexp.pdreact, cexp.pddeact, cexp.pdpageouts);
-+	curexp.pdreact, curexp.pddeact, curexp.pdpageouts);
++    snprintf(buf, sizeof(buf), " reactivate=%jd, deactivate=%jd, pageouts=%jd",
++	(intmax_t)curexp.pdreact, (intmax_t)curexp.pddeact, (intmax_t)curexp.pdpageouts);
      XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 1;
