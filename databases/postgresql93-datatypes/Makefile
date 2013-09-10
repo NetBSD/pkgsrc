@@ -1,0 +1,26 @@
+# $NetBSD: Makefile,v 1.1 2013/09/10 15:32:32 adam Exp $
+
+PKGNAME=	${DISTNAME:C/-/93-datatypes-/}
+COMMENT=	PostgreSQL data types support modules
+
+DEPENDS+=	postgresql93-server>=${PKGVERSION_NOREV}:../../databases/postgresql93-server
+
+.include "../../databases/postgresql93/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-ossp-uuid
+# because global pg_config.h is included, we have to define this
+CPPFLAGS+=		-DHAVE_UUID_H
+
+BUILD_DIRS+=		contrib/citext
+BUILD_DIRS+=		contrib/hstore
+BUILD_DIRS+=		contrib/intarray
+BUILD_DIRS+=		contrib/isn
+BUILD_DIRS+=		contrib/ltree
+BUILD_DIRS+=		contrib/lo
+BUILD_DIRS+=		contrib/uuid-ossp
+BUILD_DIRS+=		contrib/unaccent
+BUILD_MAKE_FLAGS=	PGXS=1
+
+.include "../../databases/postgresql93-client/buildlink3.mk"
+.include "../../devel/ossp-uuid/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
