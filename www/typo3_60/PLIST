@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2.2.1 2013/08/05 07:48:04 spz Exp $
+@comment $NetBSD: PLIST,v 1.2.2.2 2013/09/10 10:56:12 tron Exp $
 ${EGDIR}/LocalConfiguration.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2897,6 +2897,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Collection/AbstractF
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Collection/FolderBasedFileCollection.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Collection/StaticFileCollection.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Driver/AbstractDriver.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Driver/AbstractHierarchicalFilesystemDriver.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Driver/DriverRegistry.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Driver/LocalDriver.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Exception.php
@@ -2950,6 +2951,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/ResourceCompressor.p
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/ResourceFactory.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/ResourceInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/ResourceStorage.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Security/StoragePermissionsAspect.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Service/FileProcessingService.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Service/FrontendContentAdapterService.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Resource/Service/ImageProcessingService.php
@@ -2987,6 +2989,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/MathUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/MonitorUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/PathUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/PhpOptionsUtility.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/ResourceUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/RootlineUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/StringUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/VersionNumberUtility.php
@@ -3084,12 +3087,12 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/DriverRegi
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/Fixtures/Dummy.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/Fixtures/LocalDriverFilenameFilter.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Driver/LocalDriverTest.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FactoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FileReferenceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FileTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/FolderTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ProcessedFileRepositoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Repository/AbstractRepositoryTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceFactoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceStorageTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Service/FrontendContentAdapterServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Service/IndexerServiceTest.php
@@ -3111,6 +3114,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/HttpUtilityTest.ph
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/MailUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/MathUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/PathUtilityTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ResourceUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/RootlineUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/StringUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/VersionNumberUtilityTest.php
@@ -3118,6 +3122,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/UnitTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/ext_icon.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/ext_localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cshmanual/Classes/Controller/HelpModuleController.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cshmanual/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cshmanual/ext_emconf.php
@@ -4120,6 +4125,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/GroupedForVie
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/IfViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Link/EmailViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Link/ExternalViewHelperTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Link/PageViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/RenderChildrenViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/RenderViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Security/IfAuthenticatedViewHelperTest.php
