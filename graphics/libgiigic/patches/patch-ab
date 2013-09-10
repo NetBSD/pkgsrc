@@ -1,7 +1,25 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/03/25 02:52:07 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2013/09/10 14:20:47 joerg Exp $
 
---- configure.orig	2004-11-30 23:41:39.000000000 +0100
+--- configure.orig	2004-11-30 22:41:39.000000000 +0000
 +++ configure
+@@ -9595,7 +9595,7 @@ echo "$as_me: error: Either wrong includ
+ fi
+ 
+ save_CC="$CC"
+-CC="$SHELL ./libtool $CC"
++CC="$SHELL ./libtool --mode=link $CC"
+ echo "$as_me:$LINENO: checking for giiInit in -lgii" >&5
+ echo $ECHO_N "checking for giiInit in -lgii... $ECHO_C" >&6
+ if test "${ac_cv_lib_gii_giiInit+set}" = set; then
+@@ -9678,7 +9678,7 @@ CC="$save_CC"
+ 
+ ggi_missing_part=no
+ save_CC="$CC"
+-CC="$SHELL ./libtool $CC"
++CC="$SHELL ./libtool --mode=link $CC"
+ echo "$as_me:$LINENO: checking for ggiInit in -lggi" >&5
+ echo $ECHO_N "checking for ggiInit in -lggi... $ECHO_C" >&6
+ if test "${ac_cv_lib_ggi_ggiInit+set}" = set; then
 @@ -10210,7 +10210,7 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
