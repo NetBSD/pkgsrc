@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2012/03/01 16:25:16 hans Exp $
+$NetBSD: patch-ac,v 1.6 2013/09/10 14:24:20 joerg Exp $
 
 --- ls.c.orig	1996-12-21 23:40:58.000000000 +0000
 +++ ls.c
@@ -148,6 +148,15 @@ $NetBSD: patch-ac,v 1.5 2012/03/01 16:25:16 hans Exp $
  				cur->fts_pointer = np;
  			}
  		}
+@@ -500,7 +535,7 @@ display(p, list)
+ 		d.s_inode = strlen(buf);
+ 		(void)snprintf(buf, sizeof(buf), "%lu", maxnlink);
+ 		d.s_nlink = strlen(buf);
+-		(void)snprintf(buf, sizeof(buf), "%qu", maxsize);
++		(void)snprintf(buf, sizeof(buf), "%llu", (long long)maxsize);
+ 		d.s_size = strlen(buf);
+ 		d.s_user = maxuser;
+ 	}
 @@ -521,7 +556,11 @@ display(p, list)
   */
  static int
