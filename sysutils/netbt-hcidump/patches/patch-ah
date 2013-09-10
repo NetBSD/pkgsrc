@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.3 2012/05/21 07:01:32 plunky Exp $
+$NetBSD: patch-ah,v 1.4 2013/09/10 14:44:03 joerg Exp $
 
---- parser/parser.h.orig	2012-04-20 19:28:19.000000000 +0000
+--- parser/parser.h.orig	2012-11-30 08:29:41.000000000 +0000
 +++ parser/parser.h
 @@ -36,7 +36,7 @@ struct frame {
  	uint32_t	data_len;
@@ -11,3 +11,15 @@ $NetBSD: patch-ah,v 1.3 2012/05/21 07:01:32 plunky Exp $
  	uint8_t		in;
  	uint8_t		master;
  	uint16_t	handle;
+@@ -134,9 +134,9 @@ static inline void p_indent(int level, s
+ 				localtime_r(&t, &tm);
+ 				printf("%04d-%02d-%02d %02d:%02d:%02d.%06lu ",
+ 					tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,
+-					tm.tm_hour, tm.tm_min, tm.tm_sec, f->ts.tv_usec);
++					tm.tm_hour, tm.tm_min, tm.tm_sec, (unsigned long)f->ts.tv_usec);
+ 			} else
+-				printf("%8lu.%06lu ", f->ts.tv_sec, f->ts.tv_usec);
++				printf("%8lu.%06lu ", f->ts.tv_sec, (unsigned long)f->ts.tv_usec);
+ 		}
+ 		printf("%c ", (f->in ? '>' : '<'));
+ 		parser.state = 1;
