@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/11 05:36:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/11 05:54:45 obache Exp $
 bin/nwdiag
 bin/packetdiag
 bin/rackdiag
@@ -53,6 +53,9 @@ ${PYSITELIB}/nwdiag/utils/rst/__init__.pyo
 ${PYSITELIB}/nwdiag/utils/rst/directives.py
 ${PYSITELIB}/nwdiag/utils/rst/directives.pyc
 ${PYSITELIB}/nwdiag/utils/rst/directives.pyo
+${PYSITELIB}/nwdiag/utils/rst/nodes.py
+${PYSITELIB}/nwdiag/utils/rst/nodes.pyc
+${PYSITELIB}/nwdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/nwdiag_sphinxhelper.py
 ${PYSITELIB}/nwdiag_sphinxhelper.pyc
 ${PYSITELIB}/nwdiag_sphinxhelper.pyo
@@ -95,6 +98,9 @@ ${PYSITELIB}/packetdiag/utils/rst/__init__.pyo
 ${PYSITELIB}/packetdiag/utils/rst/directives.py
 ${PYSITELIB}/packetdiag/utils/rst/directives.pyc
 ${PYSITELIB}/packetdiag/utils/rst/directives.pyo
+${PYSITELIB}/packetdiag/utils/rst/nodes.py
+${PYSITELIB}/packetdiag/utils/rst/nodes.pyc
+${PYSITELIB}/packetdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/packetdiag_sphinxhelper.py
 ${PYSITELIB}/packetdiag_sphinxhelper.pyc
 ${PYSITELIB}/packetdiag_sphinxhelper.pyo
@@ -119,6 +125,9 @@ ${PYSITELIB}/rackdiag/metrics.pyo
 ${PYSITELIB}/rackdiag/parser.py
 ${PYSITELIB}/rackdiag/parser.pyc
 ${PYSITELIB}/rackdiag/parser.pyo
+${PYSITELIB}/rackdiag/tests/test_builder.py
+${PYSITELIB}/rackdiag/tests/test_builder.pyc
+${PYSITELIB}/rackdiag/tests/test_builder.pyo
 ${PYSITELIB}/rackdiag/tests/test_pep8.py
 ${PYSITELIB}/rackdiag/tests/test_pep8.pyc
 ${PYSITELIB}/rackdiag/tests/test_pep8.pyo
@@ -137,6 +146,11 @@ ${PYSITELIB}/rackdiag/utils/rst/__init__.pyo
 ${PYSITELIB}/rackdiag/utils/rst/directives.py
 ${PYSITELIB}/rackdiag/utils/rst/directives.pyc
 ${PYSITELIB}/rackdiag/utils/rst/directives.pyo
+${PYSITELIB}/rackdiag/utils/rst/nodes.py
+${PYSITELIB}/rackdiag/utils/rst/nodes.pyc
+${PYSITELIB}/rackdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/rackdiag_sphinxhelper.py
 ${PYSITELIB}/rackdiag_sphinxhelper.pyc
 ${PYSITELIB}/rackdiag_sphinxhelper.pyo
+man/man1/nwdiag.1
+man/man1/rackdiag.1
