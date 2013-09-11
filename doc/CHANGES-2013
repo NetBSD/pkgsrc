@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3396 2013/09/11 13:41:24 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3397 2013/09/11 13:48:46 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4830,3 +4830,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-actionmailer32 to 3.2.14 [taca 2013-09-11]
 	Updated devel/ruby-railties32 to 3.2.14 [taca 2013-09-11]
 	Updated www/ruby-rails32 to 3.2.14 [taca 2013-09-11]
+	Updated databases/pgadmin3 to 1.18.0 [richard 2013-09-11]
