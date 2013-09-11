@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3395 2013/09/11 13:17:56 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3396 2013/09/11 13:41:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4822,3 +4822,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/wireshark to 1.10.2 [tron 2013-09-11]
 	Updated databases/soci to 3.2.2nb2 [joerg 2013-09-11]
 	Updated security/polarssl to 1.2.8 [obache 2013-09-11]
+	Updated devel/ruby-activesupport32 to 3.2.14 [taca 2013-09-11]
+	Updated devel/ruby-activemodel32 to 3.2.14 [taca 2013-09-11]
+	Updated databases/ruby-activerecord32 to 3.2.14 [taca 2013-09-11]
+	Updated www/ruby-activeresource32 to 3.2.14 [taca 2013-09-11]
+	Updated www/ruby-actionpack32 to 3.2.14 [taca 2013-09-11]
+	Updated mail/ruby-actionmailer32 to 3.2.14 [taca 2013-09-11]
+	Updated devel/ruby-railties32 to 3.2.14 [taca 2013-09-11]
+	Updated www/ruby-rails32 to 3.2.14 [taca 2013-09-11]
