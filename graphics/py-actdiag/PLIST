@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/11/19 19:57:29 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/11 05:45:09 obache Exp $
 bin/actdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -48,6 +48,9 @@ ${PYSITELIB}/actdiag/utils/rst/__init__.pyo
 ${PYSITELIB}/actdiag/utils/rst/directives.py
 ${PYSITELIB}/actdiag/utils/rst/directives.pyc
 ${PYSITELIB}/actdiag/utils/rst/directives.pyo
+${PYSITELIB}/actdiag/utils/rst/nodes.py
+${PYSITELIB}/actdiag/utils/rst/nodes.pyc
+${PYSITELIB}/actdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/actdiag_sphinxhelper.py
 ${PYSITELIB}/actdiag_sphinxhelper.pyc
 ${PYSITELIB}/actdiag_sphinxhelper.pyo
