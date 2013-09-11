@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.22 2013/07/14 21:08:17 jperkin Exp $
+# $NetBSD: gem.mk,v 1.23 2013/09/11 13:22:15 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -9,8 +9,8 @@
 #	Minimum version of required rubygems.  Ruby base packages contain:
 #
 #		ruby18-base:	none
-#		ruby193-base:	1.8.11
-#		ruby200-base:	2.0.0
+#		ruby193-base:	1.8.23
+#		ruby200-base:	2.0.3
 #
 #	If newer version of rubygems is resuiqred, set RUBYGEMS_REQD to
 #	minimum version.
