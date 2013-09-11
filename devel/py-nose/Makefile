@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/02/26 10:24:27 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/11 09:38:53 prlw1 Exp $
 #
 
-DISTNAME=	nose-1.1.2
+DISTNAME=	nose-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 #MASTER_SITES=	http://python-nose.googlecode.com/files/
