@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/11 02:53:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/09/11 02:56:10 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -48,9 +48,12 @@ ${PYSITELIB}/blockdiag/imagedraw/svg.pyo
 ${PYSITELIB}/blockdiag/imagedraw/textfolder.py
 ${PYSITELIB}/blockdiag/imagedraw/textfolder.pyc
 ${PYSITELIB}/blockdiag/imagedraw/textfolder.pyo
-${PYSITELIB}/blockdiag/imagedraw/utils.py
-${PYSITELIB}/blockdiag/imagedraw/utils.pyc
-${PYSITELIB}/blockdiag/imagedraw/utils.pyo
+${PYSITELIB}/blockdiag/imagedraw/utils/__init__.py
+${PYSITELIB}/blockdiag/imagedraw/utils/__init__.pyc
+${PYSITELIB}/blockdiag/imagedraw/utils/__init__.pyo
+${PYSITELIB}/blockdiag/imagedraw/utils/ellipse.py
+${PYSITELIB}/blockdiag/imagedraw/utils/ellipse.pyc
+${PYSITELIB}/blockdiag/imagedraw/utils/ellipse.pyo
 ${PYSITELIB}/blockdiag/metrics.py
 ${PYSITELIB}/blockdiag/metrics.pyc
 ${PYSITELIB}/blockdiag/metrics.pyo
@@ -326,12 +329,12 @@ ${PYSITELIB}/blockdiag/utils/collections.pyo
 ${PYSITELIB}/blockdiag/utils/config.py
 ${PYSITELIB}/blockdiag/utils/config.pyc
 ${PYSITELIB}/blockdiag/utils/config.pyo
-${PYSITELIB}/blockdiag/utils/ellipse.py
-${PYSITELIB}/blockdiag/utils/ellipse.pyc
-${PYSITELIB}/blockdiag/utils/ellipse.pyo
 ${PYSITELIB}/blockdiag/utils/fontmap.py
 ${PYSITELIB}/blockdiag/utils/fontmap.pyc
 ${PYSITELIB}/blockdiag/utils/fontmap.pyo
+${PYSITELIB}/blockdiag/utils/functools.py
+${PYSITELIB}/blockdiag/utils/functools.pyc
+${PYSITELIB}/blockdiag/utils/functools.pyo
 ${PYSITELIB}/blockdiag/utils/images.py
 ${PYSITELIB}/blockdiag/utils/images.pyc
 ${PYSITELIB}/blockdiag/utils/images.pyo
@@ -350,6 +353,9 @@ ${PYSITELIB}/blockdiag/utils/rst/__init__.pyo
 ${PYSITELIB}/blockdiag/utils/rst/directives.py
 ${PYSITELIB}/blockdiag/utils/rst/directives.pyc
 ${PYSITELIB}/blockdiag/utils/rst/directives.pyo
+${PYSITELIB}/blockdiag/utils/rst/nodes.py
+${PYSITELIB}/blockdiag/utils/rst/nodes.pyc
+${PYSITELIB}/blockdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/blockdiag/utils/urlutil.py
 ${PYSITELIB}/blockdiag/utils/urlutil.pyc
 ${PYSITELIB}/blockdiag/utils/urlutil.pyo
