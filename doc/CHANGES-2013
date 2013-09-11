@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3384 2013/09/10 21:36:40 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.3385 2013/09/11 02:56:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/rubygems to 2.0.8 [taca 2013-09-10]
 	Updated devel/p5-File-pushd to 1.005 [adam 2013-09-10]
 	Updated mail/rss2email to 3.6 [schmonz 2013-09-10]
+	Updated graphics/py-blockdiag to 1.2.4 [obache 2013-09-11]
