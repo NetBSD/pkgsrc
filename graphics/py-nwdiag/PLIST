@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/11/19 20:00:06 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/11 05:36:38 obache Exp $
 bin/nwdiag
 bin/packetdiag
 bin/rackdiag
@@ -17,12 +17,12 @@ ${PYSITELIB}/nwdiag/builder.pyo
 ${PYSITELIB}/nwdiag/command.py
 ${PYSITELIB}/nwdiag/command.pyc
 ${PYSITELIB}/nwdiag/command.pyo
-${PYSITELIB}/nwdiag/elements.py
-${PYSITELIB}/nwdiag/elements.pyc
-${PYSITELIB}/nwdiag/elements.pyo
 ${PYSITELIB}/nwdiag/drawer.py
 ${PYSITELIB}/nwdiag/drawer.pyc
 ${PYSITELIB}/nwdiag/drawer.pyo
+${PYSITELIB}/nwdiag/elements.py
+${PYSITELIB}/nwdiag/elements.pyc
+${PYSITELIB}/nwdiag/elements.pyo
 ${PYSITELIB}/nwdiag/metrics.py
 ${PYSITELIB}/nwdiag/metrics.pyc
 ${PYSITELIB}/nwdiag/metrics.pyo
@@ -107,12 +107,12 @@ ${PYSITELIB}/rackdiag/builder.pyo
 ${PYSITELIB}/rackdiag/command.py
 ${PYSITELIB}/rackdiag/command.pyc
 ${PYSITELIB}/rackdiag/command.pyo
-${PYSITELIB}/rackdiag/elements.py
-${PYSITELIB}/rackdiag/elements.pyc
-${PYSITELIB}/rackdiag/elements.pyo
 ${PYSITELIB}/rackdiag/drawer.py
 ${PYSITELIB}/rackdiag/drawer.pyc
 ${PYSITELIB}/rackdiag/drawer.pyo
+${PYSITELIB}/rackdiag/elements.py
+${PYSITELIB}/rackdiag/elements.pyc
+${PYSITELIB}/rackdiag/elements.pyo
 ${PYSITELIB}/rackdiag/metrics.py
 ${PYSITELIB}/rackdiag/metrics.pyc
 ${PYSITELIB}/rackdiag/metrics.pyo
