@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/05 21:04:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/11 12:22:33 joerg Exp $
 include/soci/backend-loader.h
 include/soci/blob-exchange.h
 include/soci/blob.h
@@ -13,9 +13,11 @@ include/soci/error.h
 include/soci/exchange-traits.h
 include/soci/into-type.h
 include/soci/into.h
+${PLIST.mysql}include/soci/mysql/common.h
+${PLIST.mysql}include/soci/mysql/soci-mysql.h
 include/soci/once-temp-type.h
-include/soci/postgresql/common.h
-include/soci/postgresql/soci-postgresql.h
+${PLIST.pgsql}include/soci/postgresql/common.h
+${PLIST.pgsql}include/soci/postgresql/soci-postgresql.h
 include/soci/prepare-temp-type.h
 include/soci/procedure.h
 include/soci/query_transformation.h
@@ -32,8 +34,8 @@ include/soci/soci-config.h
 include/soci/soci-platform.h
 include/soci/soci-simple.h
 include/soci/soci.h
-include/soci/sqlite3/common.h
-include/soci/sqlite3/soci-sqlite3.h
+${PLIST.sqlite}include/soci/sqlite3/common.h
+${PLIST.sqlite}include/soci/sqlite3/soci-sqlite3.h
 include/soci/statement.h
 include/soci/transaction.h
 include/soci/type-conversion-traits.h
@@ -54,11 +56,15 @@ lib/libsoci_empty.a
 lib/libsoci_empty.so
 lib/libsoci_empty.so.3.2
 lib/libsoci_empty.so.${PKGVERSION}
-lib/libsoci_postgresql.a
-lib/libsoci_postgresql.so
-lib/libsoci_postgresql.so.3.2
-lib/libsoci_postgresql.so.${PKGVERSION}
-lib/libsoci_sqlite3.a
-lib/libsoci_sqlite3.so
-lib/libsoci_sqlite3.so.3.2
-lib/libsoci_sqlite3.so.${PKGVERSION}
+${PLIST.mysql}lib/libsoci_mysql.a
+${PLIST.mysql}lib/libsoci_mysql.so
+${PLIST.mysql}lib/libsoci_mysql.so.3.2
+${PLIST.mysql}lib/libsoci_mysql.so.${PKGVERSION}
+${PLIST.pgsql}lib/libsoci_postgresql.a
+${PLIST.pgsql}lib/libsoci_postgresql.so
+${PLIST.pgsql}lib/libsoci_postgresql.so.3.2
+${PLIST.pgsql}lib/libsoci_postgresql.so.${PKGVERSION}
+${PLIST.sqlite}lib/libsoci_sqlite3.a
+${PLIST.sqlite}lib/libsoci_sqlite3.so
+${PLIST.sqlite}lib/libsoci_sqlite3.so.3.2
+${PLIST.sqlite}lib/libsoci_sqlite3.so.${PKGVERSION}
