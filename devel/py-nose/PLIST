@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/17 18:30:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/09/11 09:38:53 prlw1 Exp $
 bin/nosetests-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/nose/__init__.py
 ${PYSITELIB}/nose/__init__.pyc
 ${PYSITELIB}/nose/__init__.pyo
+${PYSITELIB}/nose/__main__.py
+${PYSITELIB}/nose/__main__.pyc
+${PYSITELIB}/nose/__main__.pyo
 ${PYSITELIB}/nose/case.py
 ${PYSITELIB}/nose/case.pyc
 ${PYSITELIB}/nose/case.pyo
@@ -129,9 +132,15 @@ ${PYSITELIB}/nose/sphinx/pluginopts.pyo
 ${PYSITELIB}/nose/suite.py
 ${PYSITELIB}/nose/suite.pyc
 ${PYSITELIB}/nose/suite.pyo
-${PYSITELIB}/nose/tools.py
-${PYSITELIB}/nose/tools.pyc
-${PYSITELIB}/nose/tools.pyo
+${PYSITELIB}/nose/tools/__init__.py
+${PYSITELIB}/nose/tools/__init__.pyc
+${PYSITELIB}/nose/tools/__init__.pyo
+${PYSITELIB}/nose/tools/nontrivial.py
+${PYSITELIB}/nose/tools/nontrivial.pyc
+${PYSITELIB}/nose/tools/nontrivial.pyo
+${PYSITELIB}/nose/tools/trivial.py
+${PYSITELIB}/nose/tools/trivial.pyc
+${PYSITELIB}/nose/tools/trivial.pyo
 ${PYSITELIB}/nose/twistedtools.py
 ${PYSITELIB}/nose/twistedtools.pyc
 ${PYSITELIB}/nose/twistedtools.pyo
