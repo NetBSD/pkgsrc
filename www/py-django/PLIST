@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2013/08/13 17:48:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2013/09/11 16:50:38 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
@@ -4430,6 +4430,9 @@ ${PYSITELIB}/django/contrib/sessions/middleware.pyo
 ${PYSITELIB}/django/contrib/sessions/models.py
 ${PYSITELIB}/django/contrib/sessions/models.pyc
 ${PYSITELIB}/django/contrib/sessions/models.pyo
+${PYSITELIB}/django/contrib/sessions/serializers.py
+${PYSITELIB}/django/contrib/sessions/serializers.pyc
+${PYSITELIB}/django/contrib/sessions/serializers.pyo
 ${PYSITELIB}/django/contrib/sessions/tests.py
 ${PYSITELIB}/django/contrib/sessions/tests.pyc
 ${PYSITELIB}/django/contrib/sessions/tests.pyo
