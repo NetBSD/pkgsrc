@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/23 09:00:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/11 06:45:47 adam Exp $
 bin/slon
 bin/slonik
 bin/slony_logshipper
-lib/postgresql/slony1_funcs.so
+lib/postgresql/slony1_funcs.${PKGVERSION}.so
 share/postgresql/slon.conf-sample
-share/postgresql/slony1_base.sql
-share/postgresql/slony1_base.v83.sql
-share/postgresql/slony1_base.v84.sql
-share/postgresql/slony1_funcs.sql
-share/postgresql/slony1_funcs.v83.sql
-share/postgresql/slony1_funcs.v84.sql
+share/postgresql/slony1_base.${PKGVERSION}.sql
+share/postgresql/slony1_base.v83.${PKGVERSION}.sql
+share/postgresql/slony1_base.v84.${PKGVERSION}.sql
+share/postgresql/slony1_funcs.${PKGVERSION}.sql
+share/postgresql/slony1_funcs.v83.${PKGVERSION}.sql
+share/postgresql/slony1_funcs.v84.${PKGVERSION}.sql
