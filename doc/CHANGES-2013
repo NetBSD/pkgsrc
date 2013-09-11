@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3389 2013/09/11 06:46:28 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3390 2013/09/11 07:39:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4816,3 +4816,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/py-actdiag to 0.4.3 [obache 2013-09-11]
 	Updated www/squid3 to 3.3.9 [adam 2013-09-11]
 	Updated databases/slony1 to 2.2.0 [adam 2013-09-11]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.310 [obache 2013-09-11]
