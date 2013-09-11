@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/05/31 12:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/09/11 15:50:32 ryoon Exp $
 
-DISTNAME=	libvpx-v1.1.0
+DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://webm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -74,5 +73,6 @@ BUILD_TARGET=	# none
 post-extract:
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
