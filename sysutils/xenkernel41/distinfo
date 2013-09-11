@@ -1,27 +1,12 @@
-$NetBSD: distinfo,v 1.18 2013/07/13 19:43:21 joerg Exp $
+$NetBSD: distinfo,v 1.19 2013/09/11 18:00:33 drochner Exp $
 
-SHA1 (xen-4.1.5.tar.gz) = 38f098cdbcf4612a6e059e6ad332e68bbfc8bf4d
-RMD160 (xen-4.1.5.tar.gz) = 265d6a9faee6cf9314f4ed647604f7b43c327f52
-Size (xen-4.1.5.tar.gz) = 10421420 bytes
-SHA1 (patch-CVE-2013-1918_1) = 7403c3cc0b6481edf581591885843ee24154da06
-SHA1 (patch-CVE-2013-1918_10) = 3aa6a519013fa3275ad389533e9ebcf0f29e24b7
-SHA1 (patch-CVE-2013-1918_11) = 57ddcc8afcab390a1ac027a6a063677c89310662
-SHA1 (patch-CVE-2013-1918_12) = 3d768316139ea189219de4dff13fc1190fbe27a2
-SHA1 (patch-CVE-2013-1918_13) = bccb34626942b17ed0097977d5a16adcf7acd746
-SHA1 (patch-CVE-2013-1918_2) = b5a5ddf9549ba4064f587fa6769730158a165bd6
-SHA1 (patch-CVE-2013-1918_3) = bd6b95c3c359638f1cb95bb9b4119836cb421fea
-SHA1 (patch-CVE-2013-1918_4) = e6e6648cdf81e543f5c410b1083b97bdd9a08ea6
-SHA1 (patch-CVE-2013-1918_5) = 0bc2755b024d14d53e83b47621f6a550538b5347
-SHA1 (patch-CVE-2013-1918_6) = 027711424053ebae1093ff7d4be2353113612b5c
-SHA1 (patch-CVE-2013-1918_7) = 77414ec5283278433a15a96e91ed5842326370b9
-SHA1 (patch-CVE-2013-1918_8) = 1abd13678a24365ab651483fb3e3feeb2c0248ce
-SHA1 (patch-CVE-2013-1918_9) = 28a34dda25693501c78043f550009dba53fa9e62
-SHA1 (patch-CVE-2013-1952) = b8976b41cc0520993f3c424030f7c9aa8a9be1f3
+SHA1 (xen-4.1.6.1.tar.gz) = e5f15feb0821578817a65ede16110c6eac01abd0
+RMD160 (xen-4.1.6.1.tar.gz) = bff11421fc44a26f2cc3156713267abcb36d7a19
+Size (xen-4.1.6.1.tar.gz) = 10428485 bytes
 SHA1 (patch-Config.mk) = a43ed1b3304d6383dc093acd128a7f373d0ca266
 SHA1 (patch-xen_Makefile) = d1c7e4860221f93d90818f45a77748882486f92b
 SHA1 (patch-xen_arch_x86_Rules.mk) = 6b9b4bfa28924f7d3f6c793a389f1a7ac9d228e2
 SHA1 (patch-xen_arch_x86_cpu_mcheck_vmce.c) = 5afd01780a13654f1d21bf1562f6431c8370be0b
-SHA1 (patch-xen_arch_x86_time.c) = 2dedd8ea1d372ecffea70aad448756dd3688cfba
-SHA1 (patch-xen_common_libelf_libelf-private.h) = c364d8f247342c62d0d32fe9f4714f83f977719a
+SHA1 (patch-xen_arch_x86_time.c) = 1611959c08ad79e3f042ac70c8d9d57b60225289
 SHA1 (patch-xen_drivers_char_console_c) = 0fe186369602ccffaeec6f4bfbee8bb4298d3ff0
 SHA1 (patch-xen_include_xen_stdarg.h) = e9df974a9b783ed442ab17497198432cb9844b70
