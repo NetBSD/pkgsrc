@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3400 2013/09/11 15:17:43 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3401 2013/09/11 15:19:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4834,3 +4834,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/perl5 to 5.18.1nb1 [jperkin 2013-09-11]
 	Updated audio/ruby-taglib to 0.6.0 [taca 2013-09-11]
 	Updated databases/ruby-sequel to 4.2.0 [taca 2013-09-11]
+	Updated databases/ruby-pg to 0.16.0 [taca 2013-09-11]
