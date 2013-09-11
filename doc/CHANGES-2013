@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3401 2013/09/11 15:19:24 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3402 2013/09/11 15:51:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/ruby-taglib to 0.6.0 [taca 2013-09-11]
 	Updated databases/ruby-sequel to 4.2.0 [taca 2013-09-11]
 	Updated databases/ruby-pg to 0.16.0 [taca 2013-09-11]
+	Updated multimedia/libvpx to 1.2.0 [ryoon 2013-09-11]
