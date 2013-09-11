@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/11/19 19:54:39 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/09/11 02:53:05 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -293,12 +293,12 @@ ${PYSITELIB}/blockdiag/tests/test_builder_node.pyo
 ${PYSITELIB}/blockdiag/tests/test_builder_separate.py
 ${PYSITELIB}/blockdiag/tests/test_builder_separate.pyc
 ${PYSITELIB}/blockdiag/tests/test_builder_separate.pyo
-${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.py
-${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyc
-${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyo
 ${PYSITELIB}/blockdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/blockdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/blockdiag/tests/test_generate_diagram.pyo
+${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.py
+${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyc
+${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyo
 ${PYSITELIB}/blockdiag/tests/test_parser.py
 ${PYSITELIB}/blockdiag/tests/test_parser.pyc
 ${PYSITELIB}/blockdiag/tests/test_parser.pyo
