@@ -1,0 +1,13 @@
+$NetBSD: patch-SConstruct,v 1.1 2013/09/11 09:46:27 joerg Exp $
+
+--- SConstruct.orig	2013-09-11 09:42:09.000000000 +0000
++++ SConstruct
+@@ -146,7 +146,7 @@ if sys.platform == 'win32':
+                  True),
+     )
+ 
+-env = Environment(variables=opts,
++env = Environment(variables=opts, ENV=os.environ,
+                   tools=('default', 'textfile',),
+                   CPPPATH=['.', ],
+                   )
