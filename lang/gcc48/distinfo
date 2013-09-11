@@ -1,20 +1,21 @@
-$NetBSD: distinfo,v 1.7 2013/06/12 19:46:01 wiz Exp $
+$NetBSD: distinfo,v 1.8 2013/09/11 19:05:19 martin Exp $
 
-SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
-RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
-Size (ecj-4.5.jar) = 1470676 bytes
 SHA1 (gcc-4.8.1.tar.bz2) = 4e655032cda30e1928fcc3f00962f4238b502169
 RMD160 (gcc-4.8.1.tar.bz2) = a92c8fb9e70ad2a1caa9b3a79639a096f04382e0
 Size (gcc-4.8.1.tar.bz2) = 86753166 bytes
 SHA1 (patch-gcc_Makefile.in) = b2bceb34537de1cf704f18a59aa4e4d4a4551c62
 SHA1 (patch-gcc_config.gcc) = ac175c5eecf3dd53508479b30bf5c59cc0a5fca9
+SHA1 (patch-gcc_config.host) = 1b1e11cd199eb93f49443d51c0063b09b7327858
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
 SHA1 (patch-gcc_config_dragonfly.h) = 82f549cdc7543b4bf413a44d481ef42b10f59c82
 SHA1 (patch-gcc_config_dragonfly.opt) = 92f615c73c2e94664bae5b5935ab8b09bca15f73
+SHA1 (patch-gcc_config_host-netbsd.c) = 8f13b09dd7006d456cd1c66e895be504e9537880
 SHA1 (patch-gcc_config_i386_dragonfly.h) = 0d3f785434c02beb9c4561fe59842a970e8f7896
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
+SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = a4b670d0c54c410d38715b7a2a572a7048e3ec5e
 SHA1 (patch-gcc_fortran_f95-lang.c) = 06470dbee79f8c762675d3060a870b7dd9ba38f8
+SHA1 (patch-gcc_ggc-common.c) = fa577bc25260d7e6304f166686ba51c0b677d7f6
 SHA1 (patch-gcc_ginclude_stddef.h) = 50be7c9469ac58c79e10abda5e7cfef5f91dd249
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-include_libiberty.h) = ad2c64e9a14405c89b02ff68811b1c889405d0a1
