@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/07/07 15:22:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/09/11 15:18:55 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
@@ -15,12 +15,16 @@ ${GEM_LIBDIR}/README.ja.rdoc
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Rakefile.cross
+${GEM_LIBDIR}/ext/errorcodes.def
+${GEM_LIBDIR}/ext/errorcodes.rb
+${GEM_LIBDIR}/ext/errorcodes.txt
 ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/ext/gvl_wrappers.c
 ${GEM_LIBDIR}/ext/gvl_wrappers.h
 ${GEM_LIBDIR}/ext/pg.c
 ${GEM_LIBDIR}/ext/pg.h
 ${GEM_LIBDIR}/ext/pg_connection.c
+${GEM_LIBDIR}/ext/pg_errors.c
 ${GEM_LIBDIR}/ext/pg_result.c
 ${GEM_LIBDIR}/ext/vc/pg.sln
 ${GEM_LIBDIR}/ext/vc/pg_18/pg.vcproj
