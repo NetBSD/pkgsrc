@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/11/19 20:02:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/11 05:39:48 obache Exp $
 #
 
-DISTNAME=	seqdiag-0.8.1
+DISTNAME=	seqdiag-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/s/seqdiag/
