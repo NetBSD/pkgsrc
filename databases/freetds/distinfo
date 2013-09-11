@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.19 2011/08/19 07:54:04 adam Exp $
+$NetBSD: distinfo,v 1.20 2013/09/11 16:11:44 jperkin Exp $
 
 SHA1 (freetds-0.91.tar.gz) = 3ab06c8e208e82197dc25d09ae353d9f3be7db52
 RMD160 (freetds-0.91.tar.gz) = 1d33d4c4414d0793d83c87a8224bac181528fdb0
 Size (freetds-0.91.tar.gz) = 2136329 bytes
 SHA1 (patch-aa) = 3c1df8f94c18b88915795a3a7596d5c282782a4a
 SHA1 (patch-ac) = f5ae8f79adf5e2e227fb7b9e41334659713589ad
+SHA1 (patch-include_ctlib.h) = ed4a550228714373167b2548504003404847563f
 SHA1 (patch-src_apps_Makefile.in) = 490630759ae5a4c470d5151bf22217bfa218d8d8
