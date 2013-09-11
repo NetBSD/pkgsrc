@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3386 2013/09/11 05:40:10 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3387 2013/09/11 05:45:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/rss2email to 3.6 [schmonz 2013-09-10]
 	Updated graphics/py-blockdiag to 1.2.4 [obache 2013-09-11]
 	Updated graphics/py-seqdiag to 0.8.2 [obache 2013-09-11]
+	Updated graphics/py-actdiag to 0.4.3 [obache 2013-09-11]
