@@ -29,6 +29,9 @@ xen_precmd()
 xen_startcmd()
 {
 	printf "Starting xenservices: xenstored, xenconsoled.\n"
+	if test ! -r ${required_files}; then
+		warn "${required_files} is not readable."
+	fi
 	XENSTORED_ARGS=" --pid-file ${XENSTORED_PIDFILE}"
 	if [ -n "${XENSTORED_TRACE}" ]; then
 		XENSTORED_ARGS="${XENSTORED_ARGS} -T /var/log/xen/xenstored-trace.log"
