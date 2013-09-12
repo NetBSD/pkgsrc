@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/09/12 14:04:41 ryoon Exp $
+
+SHA1 (gemlib-CVS-20130415.tar.bz2) = b65ecef6c57199188b5160c6ae59faa387c39133
+RMD160 (gemlib-CVS-20130415.tar.bz2) = 61448953aea0698897d5ac9084f94d015198c43b
+Size (gemlib-CVS-20130415.tar.bz2) = 216651 bytes
+SHA1 (patch-CONFIGVARS) = d5a4933758a8e14512b7cbc0d5bcd827b4989180
+SHA1 (patch-gemlib_Makefile) = 2c209e75ddc1444209a97e4404945e679af142f9
