@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3423 2013/09/12 23:37:54 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.3424 2013/09/12 23:38:25 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4865,3 +4865,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/wordpress to 3.6.1 [morr 2013-09-12]
 	Updated textproc/xmlrpc-c to 1.25.25 [adam 2013-09-12]
 	Updated sysutils/xenkernel42 to 4.2.3 [prlw1 2013-09-12]
+	Updated sysutils/xentools42 to 4.2.3 [prlw1 2013-09-12]
