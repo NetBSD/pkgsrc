@@ -1,0 +1,15 @@
+$NetBSD: patch-pml-2.03_pmlsrc_Makefile.16,v 1.1 2013/09/12 14:03:58 ryoon Exp $
+
+--- pml-2.03/pmlsrc/Makefile.16.orig	2013-09-09 14:31:41.000000000 +0000
++++ pml-2.03/pmlsrc/Makefile.16
+@@ -20,8 +20,8 @@ CROSSLIB = $(CROSSDIR)/lib
+ CROSSBIN = $(CROSSDIR)/bin
+ CROSSINC = $(CROSSDIR)/include
+ 
+-AR = /dsrg/bammi/cross-gcc/bin/car
+-CC = $(CROSSBIN)/mgcc
++AR = ${ARDIR}/m68k-atari-mint-ar
++CC = ${WRKSRC}/${CONFIGURE_DIRS}/gcc/xgcc -B${WRKSRC}/${CONFIGURE_DIRS}/gcc -B${FREEMINT_PREFIX}/bin -B${FREEMINT_PREFIX}/lib -isystem ${FREEMINT_PREFIX}/m68k-atari-mint/include -isystem ${FREEMINT_PREFIX}/sys-include
+ CFLAGS = -mshort -O2 -fomit-frame-pointer -DIEEE -DNO_DBUG -I.
+ 
+ LIB = $(CROSSLIB)

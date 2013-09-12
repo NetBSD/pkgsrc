@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2013/09/12 14:03:58 ryoon Exp $
+
+SHA1 (gcc-4.6.4-mint-20130415.patch.bz2) = bd2e88f2b862cc404f47144fb67375b1fe17291b
+RMD160 (gcc-4.6.4-mint-20130415.patch.bz2) = d3cafafb1caa1a1eb915c5f15f4063d6a70ac4ee
+Size (gcc-4.6.4-mint-20130415.patch.bz2) = 11059 bytes
+SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
+RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
+Size (gcc-4.6.4.tar.bz2) = 72006076 bytes
+SHA1 (pml-2.03-mint-20110207.patch.bz2) = 45c39230860fa2300cdaa342dec6e9ff99376186
+RMD160 (pml-2.03-mint-20110207.patch.bz2) = 314666dfc9e34865ab322d48385ddd9e8b87ad37
+Size (pml-2.03-mint-20110207.patch.bz2) = 11230 bytes
+SHA1 (pml-2.03.tar.bz2) = 07b5c70a704b06e24d6a64e8b5333d98804aa178
+RMD160 (pml-2.03.tar.bz2) = 60a31723cb5078a2f889757e6a02b873b444ddb7
+Size (pml-2.03.tar.bz2) = 52753 bytes
+SHA1 (patch-pml-2.03_pmlsrc_Makefile.16) = 7fac2276e5e176c6dd53ac8a040f038f54fcb992
+SHA1 (patch-pml-2.03_pmlsrc_Makefile.32) = 768e842b9ebad9627cbe662617e4e534aae3206c
