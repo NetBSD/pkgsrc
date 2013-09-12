@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3405 2013/09/12 06:24:18 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3406 2013/09/12 10:33:45 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4839,3 +4839,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django to 1.5.3 [adam 2013-09-11]
 	Updated sysutils/xenkernel41 to 4.1.6.1 [drochner 2013-09-11]
 	Updated emulators/simulavr to 1.0.0 [mef 2013-09-12]
+	Updated textproc/mdocml to 1.12.0nb3 [jperkin 2013-09-12]
