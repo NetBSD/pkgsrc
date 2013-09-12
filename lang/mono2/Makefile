@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/17 13:14:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/12 20:13:41 jperkin Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	3
@@ -149,8 +149,12 @@ SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
 CPPFLAGS.NetBSD+=	-D_KMEMUSER
 CPPFLAGS.SunOS+=	-D__C99FEATURES__
 
-.if ${OPSYS} == "SunOS"
+.if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 ULIMIT_CMD_datasize=	ulimit -d 262144
+ULIMIT_CMD_stacksize=	ulimit -s 10240
+.elif !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
+CONFIGURE_ARGS+=	--with-sigaltstack=no
+ULIMIT_CMD_datasize=	ulimit -d 524288
 ULIMIT_CMD_stacksize=	ulimit -s 10240
 .endif
 
