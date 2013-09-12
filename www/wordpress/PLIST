@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/08/08 07:50:58 morr Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/09/12 17:19:59 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -208,8 +208,6 @@ share/wordpress/wp-admin/js/accordion.js
 share/wordpress/wp-admin/js/accordion.min.js
 share/wordpress/wp-admin/js/cat.js
 share/wordpress/wp-admin/js/cat.min.js
-share/wordpress/wp-admin/js/categories.js
-share/wordpress/wp-admin/js/categories.min.js
 share/wordpress/wp-admin/js/color-picker.js
 share/wordpress/wp-admin/js/color-picker.min.js
 share/wordpress/wp-admin/js/comment.js
@@ -218,8 +216,6 @@ share/wordpress/wp-admin/js/common.js
 share/wordpress/wp-admin/js/common.min.js
 share/wordpress/wp-admin/js/custom-background.js
 share/wordpress/wp-admin/js/custom-background.min.js
-share/wordpress/wp-admin/js/custom-fields.js
-share/wordpress/wp-admin/js/custom-fields.min.js
 share/wordpress/wp-admin/js/custom-header.js
 share/wordpress/wp-admin/js/customize-controls.js
 share/wordpress/wp-admin/js/customize-controls.min.js
