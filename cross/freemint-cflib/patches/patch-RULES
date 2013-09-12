@@ -1,0 +1,15 @@
+$NetBSD: patch-RULES,v 1.1 2013/09/12 14:05:26 ryoon Exp $
+
+* Compile cflib only.
+
+--- RULES.orig	2013-04-15 21:40:49.000000000 +0000
++++ RULES
+@@ -22,7 +22,7 @@ distclean: distclean-recursive
+ 	rm -f foobar foo bar baz junk schrott muell
+ 	rm -rf .deps $(GENFILES)
+ 
+-install: all-here install-recursive
++#install: all-here install-recursive
+ 
+ uninstall: uninstall-recursive
+ 
