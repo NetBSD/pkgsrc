@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.34 2008/08/27 12:24:06 markd Exp $
+$NetBSD: distinfo,v 1.35 2013/09/12 20:50:54 jperkin Exp $
 
 SHA1 (kdetoys-3.5.10.tar.bz2) = 04d63656e4306e6266d018709975188ef9804949
 RMD160 (kdetoys-3.5.10.tar.bz2) = 319ea23ef3ffd0e2e178e1b94302f1d2ace55b47
 Size (kdetoys-3.5.10.tar.bz2) = 3272160 bytes
+SHA1 (patch-kmoon_kmoonwidget.cpp) = 07ae0a01c72b1ca4b5dc10fc0acaf2d8489ccc58
