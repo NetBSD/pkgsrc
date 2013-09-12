@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.7 2012/03/04 19:49:41 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.8 2013/09/12 11:18:40 jperkin Exp $
 #
 
 srcdir	= @srcdir@
@@ -44,7 +44,11 @@ install: all
 	${INSTALL} -m 555 ${PROG} ${DESTDIR}${bindir}/`echo ${PROG}|sed '$(transform)'`
 .if !empty(MANINSTALL:Mcatinstall)
 	-mkdir -p ${DESTDIR}${mandircat1}
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${DESTDIR}${mandircat1}/`echo ${PROG}|sed '$(transform)'`.1
+.  else
 	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${DESTDIR}${mandircat1}/`echo ${PROG}|sed '$(transform)'`.0
+.  endif
 .endif
 
 clean:
