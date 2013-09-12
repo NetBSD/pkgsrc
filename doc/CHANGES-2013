@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3409 2013/09/12 11:20:39 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3410 2013/09/12 11:26:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4843,3 +4843,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/groff to 1.20.1nb11 [jperkin 2013-09-12]
 	Updated pkgtools/bootstrap-mk-files to 20130912 [jperkin 2013-09-12]
 	Updated mail/milter-regex to 1.7nb2 [jperkin 2013-09-12]
+	Updated lang/f2c to 20100903nb1 [jperkin 2013-09-12]
