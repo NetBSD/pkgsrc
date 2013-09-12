@@ -1,0 +1,31 @@
+$NetBSD: patch-mintlib-CVS-20130415_configvars,v 1.1 2013/09/12 14:02:01 ryoon Exp $
+
+--- mintlib-CVS-20130415/configvars.orig	2013-04-15 21:27:28.000000000 +0000
++++ mintlib-CVS-20130415/configvars
+@@ -12,7 +12,7 @@ VERSION=0.59.2
+ # get installed.  You have to take car yourself that the libraries
+ # and include files and so on will get installed in the right place
+ # The easiest way to do this is to change "prefix", see below.
+-#CROSS=yes
++CROSS=yes
+ 
+ # Silent build or verbose
+ AM_DEFAULT_VERBOSITY = 1
+@@ -47,7 +47,7 @@ WITH_V4E_LIB=yes
+ # need be.  When cross-compiling you will usually want to set this
+ # to "/usr/m68k-atari-mint".
+ ifeq ($(CROSS),yes)
+- prefix=/usr/m68k-atari-mint
++ prefix=${DESTDIR}${FREEMINT_PREFIX}/m68k-atari-mint
+ else
+  prefix=/usr
+ endif
+@@ -83,7 +83,7 @@ endif
+ # Define this to the name of your C compiler.  You need at least 
+ # gcc 2.7.2.  Older versions will not work.  If you use an older
+ # gcc than 2.95.2 you will run into severe problems.
+-CC=$(toolprefix)gcc
++CC=${WRKSRC}/${CONFIGURE_DIRS}/gcc/xgcc -B${WRKSRC}/${CONFIGURE_DIRS}/gcc -B${FREEMINT_PREFIX}/bin -B${FREEMINT_PREFIX}/lib -isystem ${FREEMINT_PREFIX}/include -isystem ${FREEMINT_PREFIX}/sys-include
+ 
+ # Only used when cross-compiling:
+ # Define this to the size (in bytes) of a long double for your 
