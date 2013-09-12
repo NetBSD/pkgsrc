@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3412 2013/09/12 13:01:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3413 2013/09/12 13:25:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/f2c to 20100903nb1 [jperkin 2013-09-12]
 	Updated x11/xterm to 297 [wiz 2013-09-12]
 	Updated graphics/png to 1.6.4 [wiz 2013-09-12]
+	Updated sysutils/dbus to 1.6.14 [wiz 2013-09-12]
