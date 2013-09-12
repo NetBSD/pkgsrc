@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile,v 1.4 2013/09/12 10:33:29 jperkin Exp $
+
+Install preconv and roff with 'mandoc-' prefix to avoid conflict with groff.
+
+--- Makefile.orig	2011-10-08 20:07:21.000000000 +0000
++++ Makefile
+@@ -392,12 +392,15 @@ install: all
+ 	mkdir -p $(DESTDIR)$(MANDIR)/man3
+ 	mkdir -p $(DESTDIR)$(MANDIR)/man7
+ 	mkdir -p $(DESTDIR)$(MANDIR)/man8
+-	$(INSTALL_PROGRAM) mandoc preconv demandoc $(DESTDIR)$(BINDIR)
++	$(INSTALL_PROGRAM) mandoc demandoc $(DESTDIR)$(BINDIR)
++	$(INSTALL_PROGRAM) preconv $(DESTDIR)$(BINDIR)/mandoc-preconv
+ 	$(INSTALL_LIB) libmandoc.a $(DESTDIR)$(LIBDIR)
+ 	$(INSTALL_LIB) man.h mdoc.h mandoc.h $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_MAN) mandoc.1 preconv.1 demandoc.1 $(DESTDIR)$(MANDIR)/man1
++	$(INSTALL_MAN) mandoc.1 demandoc.1 $(DESTDIR)$(MANDIR)/man1
++	$(INSTALL_MAN) preconv.1 $(DESTDIR)$(MANDIR)/man1/mandoc-preconv.1
+ 	$(INSTALL_MAN) mandoc.3 $(DESTDIR)$(MANDIR)/man3
+-	$(INSTALL_MAN) man.7 mdoc.7 roff.7 eqn.7 tbl.7 mandoc_char.7 $(DESTDIR)$(MANDIR)/man7
++	$(INSTALL_MAN) man.7 mdoc.7 eqn.7 tbl.7 mandoc_char.7 $(DESTDIR)$(MANDIR)/man7
++	$(INSTALL_MAN) roff.7 $(DESTDIR)$(MANDIR)/man7/mandoc-roff.7
+ 	$(INSTALL_DATA) example.style.css $(DESTDIR)$(EXAMPLEDIR)
+ 
+ installwww: www
