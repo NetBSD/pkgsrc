@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/09/12 11:26:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2013/09/12 13:10:19 jperkin Exp $
 
 DISTNAME=	f2c-20100903	# see notes below
 PKGREVISION=	1
@@ -45,10 +45,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/f2c ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/f2c-f77 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/f2c.1t ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/f2c.1
-.if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+.if !empty(MANINSTALL:Mcatinstall)
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
 	${INSTALL_DATA} ${WRKSRC}/f2c.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/f2c.1
-.else
+.  else
 	${INSTALL_DATA} ${WRKSRC}/f2c.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/f2c.0
+.  endif
 .endif
 .for f in changes f2c.ps f2c.pdf
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/f2c/${f}
