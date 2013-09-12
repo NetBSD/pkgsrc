@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2013/09/03 02:23:52 jnemeth Exp $
+# $NetBSD: Makefile,v 1.116 2013/09/12 15:44:13 jperkin Exp $
 
 DISTNAME=	qemu-1.6.0
 CATEGORIES=	emulators
@@ -76,6 +76,8 @@ CONFIGURE_ARGS+=	--disable-bsd-user
 PLIST.nbd=		YES
 .elif !empty(OPSYS:MLinux)
 USER_EMUL=		${UE_ARCHS}
+PLIST.nbd=		YES
+.elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 PLIST.nbd=		YES
 .endif
 
