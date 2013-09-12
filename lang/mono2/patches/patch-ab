@@ -1,7 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2013/06/17 12:43:28 wiz Exp $
---- configure.orig	2011-09-15 20:12:44.000000000 +0300
-+++ configure	2011-10-28 17:51:31.000000000 +0300
-@@ -3834,7 +3834,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+$NetBSD: patch-ab,v 1.2 2013/09/12 20:13:41 jperkin Exp $
+
+Support 64-bit SunOS.
+
+--- configure.orig	2012-02-01 20:48:05.000000000 +0000
++++ configure
+@@ -3699,7 +3699,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		host_win32=yes
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -10,7 +13,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/17 12:43:28 wiz Exp $
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -3876,12 +3876,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -3741,12 +3741,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -28,7 +31,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/17 12:43:28 wiz Exp $
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3897,7 +3900,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -3762,7 +3765,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -38,7 +41,7 @@ $NetBSD: patch-ab,v 1.1 2013/06/17 12:43:28 wiz Exp $
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -22821,7 +22825,7 @@ LIBC="libc.so.6"
+@@ -23481,7 +23485,7 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
@@ -47,7 +50,19 @@ $NetBSD: patch-ab,v 1.1 2013/06/17 12:43:28 wiz Exp $
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -23379,10 +23383,12 @@ case "$host" in
+@@ -23580,6 +23584,11 @@ rm -f core conftest.err conftest.$ac_obj
+ 		JIT_SUPPORTED=yes
+ 		jit_wanted=true
+ 		case $host_os in
++		  solaris*)
++			LIBC="libc.so"
++			INTL="libintl.so"
++			have_visibility_hidden=no
++			;;
+ 		  linux*)
+ 			sgen_supported=true
+ 			AOT_SUPPORTED="yes"
+@@ -24039,10 +24048,12 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
