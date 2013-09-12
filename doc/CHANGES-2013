@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3419 2013/09/12 16:13:38 schnoebe Exp $
+$NetBSD: CHANGES-2013,v 1.3420 2013/09/12 16:36:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4860,3 +4860,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/aranym to 0.9.15 [ryoon 2013-09-12]
 	Updated net/p5-Net to 1.23 [adam 2013-09-12]
 	Updated print/hplip to 3.13.9 [schnoebe 2013-09-12]
+	Removed databases/mysql5-client [adam 2013-09-12]
+	Removed databases/mysql5-server [adam 2013-09-12]
