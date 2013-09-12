@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:54 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/12 11:15:12 jperkin Exp $
 
 DISTNAME=	sex-1.0
 PKGREVISION=	1
@@ -10,6 +10,7 @@ COMMENT=	Yet another program for spouting silly, random phrases
 
 AUTO_MKDIRS=		yes
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS=		nroff
 INSTALLATION_DIRS+=	${PKGMANDIR}/cat6
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/04/06 03:45:17 rodent Exp $
+# $NetBSD: Makefile,v 1.28 2013/09/12 11:15:12 jperkin Exp $
 
 DISTNAME=	ls
 PKGNAME=	colorls-2.2
@@ -12,6 +12,7 @@ COMMENT=	Uses color with ls(1) to display file attributes
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_FEATURES+=		fts_open
+USE_TOOLS=		nroff
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

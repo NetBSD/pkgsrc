@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 17:18:14 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/09/12 11:15:12 jperkin Exp $
 #
 
 DISTNAME=	choparp-20021107
@@ -10,6 +10,8 @@ HOMEPAGE=	http://choparp.sourceforge.net/
 COMMENT=	Simple proxy arp daemon
 
 NOT_FOR_PLATFORM=	Interix-*-* # does not have bpf(4) device
+
+USE_TOOLS=	nroff
 
 MANCOMPRESSED_IF_MANZ=	yes
 MAKE_ENV+=	${BSD_MAKE_ENV}
