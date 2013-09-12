@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/05/31 12:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2013/09/12 11:18:40 jperkin Exp $
 #
 
 DISTNAME=	pkgdiff-1.4
@@ -68,7 +68,11 @@ do-install:
 .for f in mkpatches patchdiff pkgdiff pkgvi feedback-patches
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
 .  if !empty(MANINSTALL:Mcatinstall)
+.    if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_MAN} ${WRKSRC}/${f}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/${f}.1
+.    else
 	${INSTALL_MAN} ${WRKSRC}/${f}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+.    endif
 .  endif
 .  if !empty(MANINSTALL:Mmaninstall)
 	${INSTALL_MAN} ${FILESDIR}/${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
