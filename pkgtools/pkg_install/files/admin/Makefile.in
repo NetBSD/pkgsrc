@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.25 2012/10/21 09:08:56 joerg Exp $
+# $NetBSD: Makefile.in,v 1.26 2013/09/12 11:03:10 jperkin Exp $
 
 srcdir=		@srcdir@
 
@@ -65,9 +65,15 @@ install:
 .if defined(MANINSTALL) && !empty(MANINSTALL:Mcatinstall)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat1dir)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat8dir)
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	$(INSTALL) -m 444 $(PROG).cat ${DESTDIR}$(cat1dir)/$(PROG).1
+	$(INSTALL) -m 444 audit-packages.cat ${DESTDIR}$(cat8dir)/audit-packages.8
+	$(INSTALL) -m 444 download-vulnerability-list.cat ${DESTDIR}$(cat8dir)/download-vulnerability-list.8
+.  else
 	$(INSTALL) -m 444 $(PROG).cat ${DESTDIR}$(cat1dir)/$(PROG).0
 	$(INSTALL) -m 444 audit-packages.cat ${DESTDIR}$(cat8dir)/audit-packages.0
 	$(INSTALL) -m 444 download-vulnerability-list.cat ${DESTDIR}$(cat8dir)/download-vulnerability-list.0
+.  endif
 .endif
 
 audit-packages: audit-packages.sh.in
