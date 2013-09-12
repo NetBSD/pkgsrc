@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3410 2013/09/12 11:26:43 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3411 2013/09/12 12:59:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4844,3 +4844,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/bootstrap-mk-files to 20130912 [jperkin 2013-09-12]
 	Updated mail/milter-regex to 1.7nb2 [jperkin 2013-09-12]
 	Updated lang/f2c to 20100903nb1 [jperkin 2013-09-12]
+	Updated x11/xterm to 297 [wiz 2013-09-12]
