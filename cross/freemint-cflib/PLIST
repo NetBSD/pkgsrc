@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 14:05:26 ryoon Exp $
+cross-freemint/include/cflib.h
+cross-freemint/lib/libcflib.a
+cross-freemint/lib/m5475/libcflib.a
+cross-freemint/lib/m68020-60/libcflib.a
+cross-freemint/stguide/cflib.hyp
+cross-freemint/stguide/cflib.ref
