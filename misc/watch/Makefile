@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/08 09:57:40 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/09/12 11:15:12 jperkin Exp $
 
 DISTNAME=	procps-3.2.6
 PKGNAME=	watch-3.2.6
@@ -11,6 +11,8 @@ COMMENT=	Watch a program with update intervals
 LICENSE=	gnu-gpl-v2
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS=		nroff
+
 MAKE_FILE=	${FILESDIR}/Makefile
 MAKE_ENV+=	LIBS=${LIBS:Q}
 
