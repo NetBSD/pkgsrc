@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2013/02/16 11:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2013/09/12 14:31:58 ryoon Exp $
 
 DISTNAME=	hatari-${HATARI_VER}
-HATARI_VER=	1.6.2
-PKGREVISION=	1
+HATARI_VER=	1.7.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.tuxfamily.org/hatari/${HATARI_VER}/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +25,7 @@ SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing python
 SUBST_FILES.fix-python+=	tools/hconsole/example.py
+SUBST_FILES.fix-python+=	tools/debugger/hatari_profile.py
 SUBST_FILES.fix-python+=	tools/hconsole/hconsole.py
 SUBST_FILES.fix-python+=	python-ui/gentypes.py
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
