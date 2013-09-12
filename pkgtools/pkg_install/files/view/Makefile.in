@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.6 2008/03/10 12:14:32 wiz Exp $
+# $NetBSD: Makefile.in,v 1.7 2013/09/12 11:03:10 jperkin Exp $
 
 prefix=		@prefix@
 exec_prefix=	@exec_prefix@
@@ -30,6 +30,14 @@ install:
 	@for script in $(SCRIPTS); do \
 		echo "$(INSTALL) -m 444 $$script.1 ${DESTDIR}$(man1dir)/$$script.1"; \
 		$(INSTALL) -m 444 $$script.1 ${DESTDIR}$(man1dir)/$$script.1; \
-		echo "$(INSTALL) -m 444 $$script.cat1 ${DESTDIR}$(cat1dir)/$$script.0"; \
-		$(INSTALL) -m 444 $$script.cat1 ${DESTDIR}$(cat1dir)/$$script.0; \
+		case "$(CATMAN_SECTION_SUFFIX)" in \
+		[Yy][Ee][Ss]) \
+			echo "$(INSTALL) -m 444 $$script.cat1 ${DESTDIR}$(cat1dir)/$$script.1"; \
+			$(INSTALL) -m 444 $$script.cat1 ${DESTDIR}$(cat1dir)/$$script.1; \
+			;; \
+		*) \
+			echo "$(INSTALL) -m 444 $$script.cat1 ${DESTDIR}$(cat1dir)/$$script.0"; \
+			$(INSTALL) -m 444 $$script.cat1 ${DESTDIR}$(cat1dir)/$$script.0; \
+			;; \
+		esac; \
 	done
