@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/05/04 12:43:50 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/12 14:20:56 fhajny Exp $
 #
 
-DISTNAME=	libmemcached-1.0.4
+DISTNAME=	libmemcached-1.0.17
 CATEGORIES=	devel
-MASTER_SITES=	http://launchpad.net/libmemcached/1.0/${PKGVERSION}/+download/
+MASTER_SITES=	http://launchpad.net/libmemcached/1.0/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libmemcached.org/
@@ -18,16 +18,17 @@ USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	support/libmemcached.pc.in
 
 .include "../../mk/bsd.prefs.mk"
-# Avoid building 64bit on a 32bit bootstrap (affects SunOS)
-.if defined(ABI) && empty(ABI:M64)
-CONFIGURE_ARGS+=	--disable-64bit
-.endif
+.include "options.mk"
 
-# for backtrace
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=	-lexecinfo
-.endif
+CONFIGURE_ARGS+=--enable-jobserver=no
 
 CPPFLAGS+=	-D__STDC_FORMAT_MACROS
 
+LIBS.SunOS+=	-lsocket
+
+post-configure:
+	${ECHO} '#define HAVE_MEMCACHED_BINARY 1' >> ${WRKSRC}/mem_config.h
+	${ECHO} '#define MEMCACHED_BINARY "${PREFIX}/bin/memcached"' >> ${WRKSRC}/mem_config.h
+
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

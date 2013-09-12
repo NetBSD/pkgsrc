@@ -1,17 +1,17 @@
-$NetBSD: patch-tests_libmemcached-1.0_pool.cc,v 1.2 2013/06/04 21:17:17 fhajny Exp $
+$NetBSD: patch-tests_libmemcached-1.0_pool.cc,v 1.3 2013/09/12 14:20:56 fhajny Exp $
 
---- tests/libmemcached-1.0/pool.cc.orig	2013-05-05 20:36:30.000000000 +0000
+Use stdint.
+--- tests/libmemcached-1.0/pool.cc.orig	2013-04-03 04:22:00.000000000 +0000
 +++ tests/libmemcached-1.0/pool.cc
-@@ -34,7 +34,7 @@
+@@ -34,6 +34,7 @@
   *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
   */
--
 +#define __STDC_CONSTANT_MACROS
- #include <config.h>
- #include <libtest/test.hpp>
  
-@@ -44,6 +44,7 @@ using namespace libtest;
+ #include <mem_config.h>
+ #include <libtest/test.hpp>
+@@ -44,6 +45,7 @@ using namespace libtest;
  #include <iostream>
  #include <string>
  #include <cerrno>
