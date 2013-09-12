@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 14:03:58 ryoon Exp $
+cross-freemint/m68k-atari-mint/include/math.h
+cross-freemint/m68k-atari-mint/lib/libm.a
+cross-freemint/m68k-atari-mint/m5475/libm.a
+cross-freemint/m68k-atari-mint/m68020-60/libm.a
