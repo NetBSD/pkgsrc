@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3407 2013/09/12 10:39:40 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3408 2013/09/12 10:56:50 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4841,3 +4841,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/simulavr to 1.0.0 [mef 2013-09-12]
 	Updated textproc/mdocml to 1.12.0nb3 [jperkin 2013-09-12]
 	Updated textproc/groff to 1.20.1nb11 [jperkin 2013-09-12]
+	Updated pkgtools/bootstrap-mk-files to 20130912 [jperkin 2013-09-12]
