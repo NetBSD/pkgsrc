@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 14:06:21 ryoon Exp $
+cross-freemint/lib/libldg.a
+cross-freemint/lib/m5475/libldg.a
+cross-freemint/lib/m68020-60/libldg.a
