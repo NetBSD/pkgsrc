@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.56 2013/09/04 15:14:45 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.57 2013/09/12 11:01:47 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -11,6 +11,7 @@ PS?=		/bin/ps
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
 
+CATMAN_SECTION_SUFFIX?=	yes
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
