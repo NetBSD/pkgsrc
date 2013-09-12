@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.8 2010/02/20 07:05:52 rillig Exp $
+# $NetBSD: plist-man.awk,v 1.9 2013/09/12 11:01:47 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,6 +41,9 @@
 ###
 ### Certain environment variables must be set prior to running this script:
 ###
+### CATMAN_SECTION_SUFFIX is a yes/no variable that determines whether to use
+###	the catman page section as the suffix or .0 if not.
+###
 ### IMAKE_MANINSTALL specifies how imake-using packages install man pages.
 ###	Valid values are:
 ###
@@ -72,6 +75,7 @@ BEGIN {
 	MANINSTALL = getenv("MANINSTALL", "maninstall catinstall")
 	MANZ = getenv("MANZ", "no")
 	PKGMANDIR = getenv("PKGMANDIR", "man")
+	CATMAN_SECTION_SUFFIX = getenv("CATMAN_SECTION_SUFFIX", "no")
 }
 
 ###
@@ -103,7 +107,11 @@ BEGIN {
 /^([^\/]*\/)+man[1-9ln]\/[^\/]*\.[0-9ln]$/ {
 	n = split($0, components, "/")
 	sub("man", "cat", components[n-1])
-	section = "0"
+	if (CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/) {
+		section = substr(components[n-1], 4, 1)
+	} else {
+		section = "0"
+	}
 	sub("[0-9ln]$", section, components[n])
 	$0 = join(components, 1, n, "/")
 }
@@ -137,4 +145,14 @@ BEGIN {
 /^[^@]/ && \
 /^man\/([^\/]*\/)?(man[1-9ln]\/[^\/]*\.[1-9ln]|cat[1-9ln]\/[^\/]*\.[0-9])/ {
 	sub("^man/", PKGMANDIR "/")
+}
+
+###
+### Fixup catman entries to use section suffixes if required.
+###
+(CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/)&& /^[^@]/ && \
+/^man\/([^\/]*\/)?(cat[1-9ln]\/[^\/]*\.[0-9])/ {
+	n = split($0, components, "/")
+	sub("^cat", "", components[n-1])
+	sub("0$", components[n-1], $0)
 }
