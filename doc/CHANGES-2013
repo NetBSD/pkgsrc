@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3406 2013/09/12 10:33:45 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3407 2013/09/12 10:39:40 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4840,3 +4840,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/xenkernel41 to 4.1.6.1 [drochner 2013-09-11]
 	Updated emulators/simulavr to 1.0.0 [mef 2013-09-12]
 	Updated textproc/mdocml to 1.12.0nb3 [jperkin 2013-09-12]
+	Updated textproc/groff to 1.20.1nb11 [jperkin 2013-09-12]
