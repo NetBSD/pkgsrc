@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.8 2013/08/24 16:44:15 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.9 2013/09/12 16:12:13 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -44,9 +44,7 @@ ${PYSITELIB}/pcardext.la
 lib/systemd/system/hplip-printer@.service
 libexec/cups/backend/hp
 libexec/cups/filter/foomatic-rip-hplip
-libexec/cups/filter/hpcac
 libexec/cups/filter/hpcups
-libexec/cups/filter/hplipjs
 libexec/cups/filter/hpps
 libexec/cups/filter/pstotiff
 share/cups/drv/hp/hpcups.drv
@@ -511,6 +509,7 @@ share/hplip/ppd/HP/hp-designjet_t790ps_24in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t790ps_44in-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t920-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z5200_postscript-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_z5400-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_42in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_z6200_42in_photo-ps.ppd.gz
@@ -613,6 +612,8 @@ share/hplip/ppd/HP/hp-deskjet_400-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_400.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_400l-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_400l.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4510_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4510_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_460-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_460.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4610_series-hpijs.ppd.gz
@@ -1335,6 +1336,7 @@ share/hplip/ppd/HP/hp-laserjet_p4515x-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515x.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m435-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1132_mfp-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1132_mfp.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1136_mfp-hpijs.ppd.gz
@@ -1445,6 +1447,8 @@ share/hplip/ppd/HP/hp-officejet_4610_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4610_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4620_series.ppd.gz
+share/hplip/ppd/HP/hp-officejet_4630_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_4630_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_5100_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_5100_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_5105-hpijs.ppd.gz
