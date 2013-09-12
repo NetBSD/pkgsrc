@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.337 2013/07/19 14:29:16 ryoon Exp $
+# $NetBSD: bsd.prefs.mk,v 1.338 2013/09/12 11:01:47 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -605,6 +605,8 @@ X11_ENCODINGSDIR?=	${X11BASE}/share/fonts/X11/encodings
 .else
 X11_ENCODINGSDIR?=	${X11BASE}/lib/X11/fonts/encodings
 .endif
+
+CATMAN_SECTION_SUFFIX?=	no
 
 IMAKE_MAN_SOURCE_PATH=	man/man
 IMAKE_MAN_SUFFIX=	1
