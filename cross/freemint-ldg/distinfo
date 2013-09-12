@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/09/12 14:06:21 ryoon Exp $
+
+SHA1 (ldg-SVN-20121005.tar.bz2) = 071d1b5fe8c1ba8db70b17e0ab36a2ba56962034
+RMD160 (ldg-SVN-20121005.tar.bz2) = a82aaccdb8616c40a80fac39b559688277e6f441
+Size (ldg-SVN-20121005.tar.bz2) = 142657 bytes
+SHA1 (patch-src_devel_gcc.mak) = f37437fc0518f5dd3288aa1e939df7aaf4575c13
