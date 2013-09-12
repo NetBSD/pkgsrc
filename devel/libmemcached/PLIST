@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/07 11:34:00 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/12 14:20:56 fhajny Exp $
 bin/memcapable
 bin/memcat
 bin/memcp
@@ -22,6 +22,7 @@ include/libhashkit-1.0/hashkit.h
 include/libhashkit-1.0/hashkit.hpp
 include/libhashkit-1.0/str_algorithm.h
 include/libhashkit-1.0/strerror.h
+include/libhashkit-1.0/string.h
 include/libhashkit-1.0/types.h
 include/libhashkit-1.0/visibility.h
 include/libhashkit/hashkit.h
@@ -38,6 +39,7 @@ include/libmemcached-1.0/defaults.h
 include/libmemcached-1.0/delete.h
 include/libmemcached-1.0/deprecated_types.h
 include/libmemcached-1.0/dump.h
+include/libmemcached-1.0/encoding_key.h
 include/libmemcached-1.0/error.h
 include/libmemcached-1.0/exception.hpp
 include/libmemcached-1.0/exist.h
@@ -85,10 +87,6 @@ include/libmemcached-1.0/visibility.h
 include/libmemcached/memcached.h
 include/libmemcached/memcached.hpp
 include/libmemcached/util.h
-include/libmemcachedprotocol-0.0/binary.h
-include/libmemcachedprotocol-0.0/callback.h
-include/libmemcachedprotocol-0.0/handler.h
-include/libmemcachedprotocol-0.0/vbucket.h
 include/libmemcachedutil-1.0/flush.h
 include/libmemcachedutil-1.0/ostream.hpp
 include/libmemcachedutil-1.0/pid.h
@@ -98,7 +96,6 @@ include/libmemcachedutil-1.0/util.h
 include/libmemcachedutil-1.0/version.h
 lib/libhashkit.la
 lib/libmemcached.la
-lib/libmemcachedprotocol.la
 lib/libmemcachedutil.la
 lib/pkgconfig/libmemcached.pc
 man/man1/memaslap.1
@@ -107,10 +104,14 @@ man/man1/memcat.1
 man/man1/memcp.1
 man/man1/memdump.1
 man/man1/memerror.1
+man/man1/memexist.1
 man/man1/memflush.1
+man/man1/memparse.1
+man/man1/memping.1
 man/man1/memrm.1
 man/man1/memslap.1
 man/man1/memstat.1
+man/man1/memtouch.1
 man/man3/hashkit_clone.3
 man/man3/hashkit_crc32.3
 man/man3/hashkit_create.3
@@ -214,3 +215,4 @@ man/man3/memcached_touch.3
 man/man3/memcached_touch_by_key.3
 man/man3/memcached_verbosity.3
 man/man3/memcached_version.3
+share/aclocal/ax_libmemcached.m4

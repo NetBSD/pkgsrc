@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.4 2013/06/04 21:17:17 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2013/09/12 14:20:56 fhajny Exp $
 
-SHA1 (libmemcached-1.0.4.tar.gz) = a74644a368b14954c80623879bd722ebf552f857
-RMD160 (libmemcached-1.0.4.tar.gz) = 2a9c71cd7894ed1c55d2557fd71fc75b5bc54ceb
-Size (libmemcached-1.0.4.tar.gz) = 951310 bytes
-SHA1 (patch-configure) = 9bda748d780dc2b3d0f114e302c04a5f5d3b0eee
-SHA1 (patch-tests_libmemcached-1.0_ketama.cc) = 80a4d84457659dfc22c9004469426ba1c35a6f73
-SHA1 (patch-tests_libmemcached-1.0_pool.cc) = b222a16d3ef03a9d60379aeacb10a205961732e0
+SHA1 (libmemcached-1.0.17.tar.gz) = 1023bc8c738b1f5b8ea2cd16d709ec6b47c3efa8
+RMD160 (libmemcached-1.0.17.tar.gz) = f0e617e0dc5f2eb27f9da7ea5a9f5a7b043b80a8
+Size (libmemcached-1.0.17.tar.gz) = 1023177 bytes
+SHA1 (patch-libmemcached-1.0_deprecated__types.h) = 9dcb5a508df69f0959e2b7a34f20ff8311cd41de
+SHA1 (patch-libmemcached_byteorder.cc) = 18d5b6447e7457bf35dbac6c693735932871f095
+SHA1 (patch-libtest_lite.h) = 6460bd76650111613311c35d3d836674dab0c801
+SHA1 (patch-libtest_main.cc) = e9c2d88085f2a66b3296f7acd40484e485fd3c16
+SHA1 (patch-libtest_test.hpp) = 684d1dcfe5c6a4b510353bd578c8919da216542b
+SHA1 (patch-tests_libmemcached-1.0_ketama.cc) = 8dacea6366738254e1a71eef8cd4e04329f4e53c
+SHA1 (patch-tests_libmemcached-1.0_pool.cc) = d5656a54277f7155b1b78a0f90fd0f939ef39be6
