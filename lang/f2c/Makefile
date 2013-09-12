@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2013/04/06 11:39:25 rodent Exp $
+# $NetBSD: Makefile,v 1.64 2013/09/12 11:26:30 jperkin Exp $
 
 DISTNAME=	f2c-20100903	# see notes below
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -14,8 +15,8 @@ WRKSRC=		${WRKDIR}/f2c
 
 BUILD_DIRS=	src
 USE_BSD_MAKEFILE=	yes
-MAKE_ENV+=		MKCATPAGES=no
-INSTALLATION_DIRS=	bin share/doc/f2c ${PKGMANDIR}/man1
+USE_TOOLS=		nroff
+INSTALLATION_DIRS=	bin share/doc/f2c ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,6 +45,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/f2c ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/f2c-f77 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/f2c.1t ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/f2c.1
+.if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_DATA} ${WRKSRC}/f2c.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/f2c.1
+.else
+	${INSTALL_DATA} ${WRKSRC}/f2c.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/f2c.0
+.endif
 .for f in changes f2c.ps f2c.pdf
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/f2c/${f}
 .endfor
