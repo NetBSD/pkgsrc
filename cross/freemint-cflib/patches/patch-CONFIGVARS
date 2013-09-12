@@ -1,0 +1,42 @@
+$NetBSD: patch-CONFIGVARS,v 1.1 2013/09/12 14:05:26 ryoon Exp $
+
+--- CONFIGVARS.orig	2013-04-15 21:40:47.000000000 +0000
++++ CONFIGVARS
+@@ -1,8 +1,8 @@
+ # 
+ # 
+ # cross compiling
+-#CROSS = yes
+-CROSS = no
++CROSS = yes
++#CROSS = no
+ 
+ #
+ # build alternate libraries for processor variants
+@@ -21,7 +21,7 @@ NATIVECC = gcc
+ NATIVECFLAGS = -O
+ CRLF = echo crlf -s
+ 
+-PREFIX=/usr/m68k-atari-mint
++PREFIX=${FREEMINT_PREFIX}
+ 
+ else
+ 
+@@ -35,12 +35,12 @@ PREFIX=/usr
+ 
+ endif
+ 
+-CC = $(CROSSPREFIX)gcc
++CC = ${FREEMINT_PREFIX}/bin/$(CROSSPREFIX)gcc
+ AS = $(CC)
+-AR = $(CROSSPREFIX)ar
+-RANLIB = $(CROSSPREFIX)ranlib
+-STRIP = $(CROSSPREFIX)strip
+-FLAGS = $(CROSSPREFIX)flags
++AR = ${FREEMINT_PREFIX}/bin/$(CROSSPREFIX)ar
++RANLIB = ${FREEMINT_PREFIX}/bin/$(CROSSPREFIX)ranlib
++STRIP = ${FREEMINT_PREFIX}/bin/$(CROSSPREFIX)strip
++FLAGS = ${FREEMINT_PREFIX}/bin/$(CROSSPREFIX)flags
+ 
+ # 
+ # some tools

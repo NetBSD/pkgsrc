@@ -1,0 +1,36 @@
+$NetBSD: patch-cflib_Makefile,v 1.1 2013/09/12 14:05:26 ryoon Exp $
+
+--- cflib/Makefile.orig	2013-04-15 21:40:47.000000000 +0000
++++ cflib/Makefile
+@@ -69,18 +69,23 @@ docu: cflib.stg
+ 	$(HCP) -ocflib.hyp cflib.stg
+ 
+ install:
+-	install -m 644 cflib.h        ${PREFIX}/include
+-	install -m 644 libcflib.a     ${PREFIX}/lib
+-	install -m 644 libcflib16.a   ${PREFIX}/lib/mshort/libcflib.a
+-	ln -sf mshort/libcflib.a	      ${PREFIX}/lib/libcflib16.a
++	mkdir -p ${DESTDIR}${PREFIX}/include
++	mkdir -p ${DESTDIR}${PREFIX}/lib/m68020-60
++	mkdir -p ${DESTDIR}${PREFIX}/lib/m5475
++	mkdir -p ${DESTDIR}${PREFIX}/stguide
++
++	install -m 644 cflib.h        ${DESTDIR}${PREFIX}/include
++	install -m 644 libcflib.a     ${DESTDIR}${PREFIX}/lib
++#	install -m 644 libcflib16.a   ${DESTDIR}${PREFIX}/lib/mshort/libcflib.a
++#	ln -sf mshort/libcflib.a	      ${DESTDIR}${PREFIX}/lib/libcflib16.a
+ ifeq ($(WITH_020_LIB),yes)
+-	install -m 644 libcflib020.a  ${PREFIX}/lib/m68020-60/libcflib.a
++	install -m 644 libcflib020.a  ${DESTDIR}${PREFIX}/lib/m68020-60/libcflib.a
+ endif
+ ifeq ($(WITH_V4E_LIB),yes)
+-	install -m 644 libcflibv4e.a  ${PREFIX}/lib/m5475/libcflib.a
++	install -m 644 libcflibv4e.a  ${DESTDIR}${PREFIX}/lib/m5475/libcflib.a
+ endif
+-	install -m 644 cflib.hyp      ${PREFIX}/stguide
+-	install -m 644 cflib.ref      ${PREFIX}/stguide
++	install -m 644 cflib.hyp      ${DESTDIR}${PREFIX}/stguide
++	install -m 644 cflib.ref      ${DESTDIR}${PREFIX}/stguide
+ 
+ uninstall:
+ 	rm -f ${PREFIX}/include/cflib.h
