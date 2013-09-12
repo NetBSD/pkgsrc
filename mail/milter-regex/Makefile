@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/07/12 10:44:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2013/09/12 11:20:21 jperkin Exp $
 
 DISTNAME=	milter-regex-1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.benzedrine.cx/
 
@@ -9,8 +9,8 @@ MAINTAINER=	jdarrow@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/milter-regex.html
 COMMENT=	Milter enabling regular expression filtering
 
-USE_TOOLS+=		yacc
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+USE_TOOLS+=		nroff yacc
+INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 
 PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
@@ -30,6 +30,15 @@ SUBST_SED.var=		-e 's|/var/spool|${VARBASE}|g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${DESTDIR}${PREFIX}/sbin
+.if !empty(MANINSTALL:Mcatinstall)
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_DATA} ${WRKSRC}/milter-regex.cat8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/milter-regex.8
+.  else
+	${INSTALL_DATA} ${WRKSRC}/milter-regex.cat8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/milter-regex.0
+.  endif
+.endif
 	${INSTALL_DATA} ${WRKSRC}/milter-regex.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
