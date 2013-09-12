@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.14 2012/02/21 11:20:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/09/12 14:31:58 ryoon Exp $
 bin/atari-hd-image
+bin/gst2ascii
 bin/hatari
+bin/hatari_profile.py
 bin/hatariui
 bin/hmsa
 bin/zip2st
 man/man1/atari-hd-image.1
+man/man1/gst2ascii.1.gz
 man/man1/hatari.1
+man/man1/hatari_profile.1.gz
 man/man1/hatariui.1
 man/man1/hconsole.1
 man/man1/hmsa.1
@@ -14,11 +18,14 @@ share/applications/hatariui.desktop
 share/doc/hatari/authors.txt
 share/doc/hatari/compatibility.html
 share/doc/hatari/emutos.txt
+share/doc/hatari/images/callgraph.png
+share/doc/hatari/images/callgraph.svg
 share/doc/hatari/images/devices.png
 share/doc/hatari/images/fileselector.png
 share/doc/hatari/images/floppydisks.png
 share/doc/hatari/images/harddisks.png
 share/doc/hatari/images/joystick.png
+share/doc/hatari/images/kcachegrind.png
 share/doc/hatari/images/keyboard.png
 share/doc/hatari/images/main.png
 share/doc/hatari/images/memory.png
