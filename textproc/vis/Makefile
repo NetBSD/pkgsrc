@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:57:06 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/09/12 11:15:12 jperkin Exp $
 #
 
 DISTNAME=	vis-0.1
@@ -9,6 +9,7 @@ MAINTAINER=	christos@NetBSD.org
 COMMENT=	Convert strings from/to a visual format
 
 USE_FEATURES+=		cdefs
+USE_TOOLS=		nroff
 USE_BSD_MAKEFILE=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 

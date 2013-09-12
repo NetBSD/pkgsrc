@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/23 17:19:21 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/09/12 11:15:12 jperkin Exp $
 
 DISTNAME=	yale-tftpd-3.0
 PKGREVISION=	6
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enhanced tftpd(8) from Yale University and cisco Systems
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS=		nroff
 
 WRKSRC=				${WRKDIR}
 

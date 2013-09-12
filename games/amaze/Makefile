@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/12 11:15:12 jperkin Exp $
 #
 
 DISTNAME=	amaze
@@ -14,6 +14,7 @@ LICENSE=	public-domain
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat6 ${PKGMANDIR}/man6
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS=		nroff
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

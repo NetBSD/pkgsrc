@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/08 09:57:38 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/09/12 11:15:12 jperkin Exp $
 
 DISTNAME=	team-3.1
 PKGREVISION=	1
@@ -11,6 +11,7 @@ COMMENT=	Portable multi-buffered tape streaming utility
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS=		nroff
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
