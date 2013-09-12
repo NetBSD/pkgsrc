@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/09/11 15:50:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2013/09/12 10:50:28 tron Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -37,6 +37,7 @@ REPLACE_BASH=		configure \
 
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
+CONFIGURE_ARGS+=	--disable-unit-tests
 .  if ${MACHINE_ARCH} == "i386"
 .    if !empty(OS_VERSION:M12.*)
 CONFIGURE_ARGS+=	--target=x86-darwin12-gcc
