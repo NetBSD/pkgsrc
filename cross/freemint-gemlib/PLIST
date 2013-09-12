@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 14:04:41 ryoon Exp $
+cross-freemint/include/gem.h
+cross-freemint/include/gemx.h
+cross-freemint/include/mt_gem.h
+cross-freemint/include/mt_gemx.h
+cross-freemint/lib/libgem.a
+cross-freemint/lib/libgem16.a
+cross-freemint/lib/m5475/libgem.a
+cross-freemint/lib/m5475/mshort/libgem.a
+cross-freemint/lib/m68020-60/libgem.a
+cross-freemint/lib/m68020-60/mshort/libgem.a
+cross-freemint/lib/mshort/libgem.a

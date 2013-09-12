@@ -1,0 +1,51 @@
+$NetBSD: patch-gemlib_Makefile,v 1.1 2013/09/12 14:04:41 ryoon Exp $
+
+--- gemlib/Makefile.orig	2013-04-15 21:35:03.000000000 +0000
++++ gemlib/Makefile
+@@ -142,28 +142,28 @@ mt_gem.h: mt_gem.h.in VERSION
+ #	$(MOVEIFCHANGE) $(srcdir)/mt_gem.tmp $(srcdir)/mt_gem.h
+ 
+ install:
+-	install -m 755 -d $(PREFIX)/lib
+-	install -m 644 libgem.a $(PREFIX)/lib/libgem.a
+-	install -m 755 -d $(PREFIX)/lib/mshort
+-	install -m 644 libgem16.a $(PREFIX)/lib/mshort/libgem.a
+-	ln -sf mshort/libgem.a $(PREFIX)/lib/libgem16.a
++	install -m 755 -d ${DESTDIR}$(PREFIX)/lib
++	install -m 644 libgem.a ${DESTDIR}$(PREFIX)/lib/libgem.a
++	install -m 755 -d ${DESTDIR}$(PREFIX)/lib/mshort
++	install -m 644 libgem16.a ${DESTDIR}$(PREFIX)/lib/mshort/libgem.a
++	ln -sf mshort/libgem.a ${DESTDIR}$(PREFIX)/lib/libgem16.a
+ ifeq ($(WITH_020_LIB),yes)
+-	install -m 755 -d $(PREFIX)/lib/m68020-60
+-	install -m 644 libgem020.a $(PREFIX)/lib/m68020-60/libgem.a
+-	install -m 755 -d $(PREFIX)/lib/m68020-60/mshort
+-	install -m 644 libgem02016.a $(PREFIX)/lib/m68020-60/mshort/libgem.a
++	install -m 755 -d ${DESTDIR}$(PREFIX)/lib/m68020-60
++	install -m 644 libgem020.a ${DESTDIR}$(PREFIX)/lib/m68020-60/libgem.a
++	install -m 755 -d ${DESTDIR}$(PREFIX)/lib/m68020-60/mshort
++	install -m 644 libgem02016.a ${DESTDIR}$(PREFIX)/lib/m68020-60/mshort/libgem.a
+ endif
+ ifeq ($(WITH_V4E_LIB),yes)
+-	install -m 755 -d $(PREFIX)/lib/m5475
+-	install -m 644 libgemv4e.a $(PREFIX)/lib/m5475/libgem.a
+-	install -m 755 -d $(PREFIX)/lib/m5475/mshort
+-	install -m 644 libgemv4e16.a $(PREFIX)/lib/m5475/mshort/libgem.a
++	install -m 755 -d ${DESTDIR}$(PREFIX)/lib/m5475
++	install -m 644 libgemv4e.a ${DESTDIR}$(PREFIX)/lib/m5475/libgem.a
++	install -m 755 -d ${DESTDIR}$(PREFIX)/lib/m5475/mshort
++	install -m 644 libgemv4e16.a ${DESTDIR}$(PREFIX)/lib/m5475/mshort/libgem.a
+ endif
+-	install -m 755 -d $(PREFIX)/include
+-	install -m 644 gem.h $(PREFIX)/include
+-	install -m 644 gemx.h $(PREFIX)/include
+-	install -m 644 mt_gem.h $(PREFIX)/include
+-	install -m 644 mt_gemx.h $(PREFIX)/include
++	install -m 755 -d ${DESTDIR}$(PREFIX)/include
++	install -m 644 gem.h ${DESTDIR}$(PREFIX)/include
++	install -m 644 gemx.h ${DESTDIR}$(PREFIX)/include
++	install -m 644 mt_gem.h ${DESTDIR}$(PREFIX)/include
++	install -m 644 mt_gemx.h ${DESTDIR}$(PREFIX)/include
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/lib/libgem.a
