@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/23 17:18:18 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/09/12 11:15:12 jperkin Exp $
 #
 
 DISTNAME=	dtcp-20060109
@@ -20,6 +20,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX} DESTDIR=${DESTDIR}
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS=		nroff
 
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
