@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2013/09/12 11:18:40 jperkin Exp $
 
 DISTNAME=		tnftp-20070806
 SVR4_PKGNAME=		tnftp
@@ -23,6 +23,7 @@ CHECK_PERMS=		no
 OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	CPPFLAGS=""
 
+MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
 .include "options.mk"
