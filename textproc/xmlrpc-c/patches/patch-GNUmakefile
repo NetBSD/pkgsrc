@@ -1,6 +1,7 @@
-$NetBSD: patch-GNUmakefile,v 1.1 2011/11/22 19:17:19 yyamano Exp $
+$NetBSD: patch-GNUmakefile,v 1.2 2013/09/12 18:52:54 adam Exp $
 
 Make this build with symlinked pkgsrc directory.
+Don't build examples: they are not installed, and give error with libc++.
 
 --- GNUmakefile.orig	2011-03-25 16:27:18.000000000 +0000
 +++ GNUmakefile
@@ -12,3 +13,12 @@ Make this build with symlinked pkgsrc directory.
  SUBDIR =
  
  export SRCDIR
+@@ -8,7 +8,7 @@ export BLDDIR
+ 
+ include $(BLDDIR)/config.mk
+ 
+-SUBDIRS = include lib src tools examples
++SUBDIRS = include lib src tools
+ 
+ # The reason we don't build tools and examples by default is that they
+ # contain executables, which require significantly more from the

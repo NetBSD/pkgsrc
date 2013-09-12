@@ -1,17 +1,12 @@
-$NetBSD: distinfo,v 1.28 2013/01/05 10:37:56 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2013/09/12 18:52:54 adam Exp $
 
-SHA1 (xmlrpc-c-1.16.44.tgz) = 181c54ac860698ed7cf4e3814c6f3c6dd46b2ce1
-RMD160 (xmlrpc-c-1.16.44.tgz) = c9293bb74bf6298d6dd6529669f86d4cddd1fcf8
-Size (xmlrpc-c-1.16.44.tgz) = 758939 bytes
-SHA1 (patch-GNUmakefile) = 3edcf5ef38c9e94466d0303cb0eb7ce2d5ca39bb
+SHA1 (xmlrpc-c-1.25.25.tgz) = 10112e9c5328de5ce334c3e7ab7c02cd4ad3f8b2
+RMD160 (xmlrpc-c-1.25.25.tgz) = 9b48b6aa70f04d4f8663515b64feb3186e31dd41
+Size (xmlrpc-c-1.25.25.tgz) = 779371 bytes
+SHA1 (patch-GNUmakefile) = e4c6b18adaec74257ae174f64ac680aaf63d31a5
 SHA1 (patch-aa) = 96ca1b0f8550b04e7292d07b4204b5bed841a417
-SHA1 (patch-ac) = e230eb36f812c85521721ead4d080250e61f670f
 SHA1 (patch-ae) = 52f826d292869be44886881c48aa7707a4af2df3
-SHA1 (patch-ai) = e7b981f07d4691bbd63bfa80b34b3e1c050c3ad2
-SHA1 (patch-aj) = e3ca062349eb7c50cf3d3dc1370744987a0f3bde
-SHA1 (patch-ak) = 2d0528260b203965e5237f5ca7f9464215283f5c
-SHA1 (patch-config.mk.in) = 9b85954b7ef5962ff3750ccd78392e5c7bdbd592
-SHA1 (patch-examples_cpp_Makefile) = 3c2ca9b50a587c6a6395aec292ca643605158171
-SHA1 (patch-lib_curl__transport_curlmulti.c) = 1cea4c43b1ed3dcf73827afc14d7bb9267371121
-SHA1 (patch-lib_curl__transport_curltransaction.c) = 1dcf46c0dd1dd8e7fdfbb6c81e00b326f6d0b1f9
-SHA1 (patch-lib_curl__transport_xmlrpc__curl__transport.c) = ea132ebb46ff0ce9893d64e9c9205d5a155220ef
+SHA1 (patch-ai) = 8d7ddc541779129de1e03a3cee81505ffbfb4171
+SHA1 (patch-aj) = e65acd3d49be3486f70cda935a8b2aae3f8af3e8
+SHA1 (patch-ak) = 4525977b51a25f115c1266dccf0e2cc754dc80d3
+SHA1 (patch-config.mk.in) = ddb63b60b40fb739700e3808336199f848c25904
