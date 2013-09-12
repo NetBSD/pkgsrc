@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/05 07:14:32 wen Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/12 01:19:33 wen Exp $
 
 DISTNAME=	Test-File-ShareDir-0.3.3
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Perl5 module to create a fake ShareDir for module testing
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_MODULE_TYPE=	Module::Build
+
+BUILD_DEPENDS+=	p5-Module-Build>=0.40040:../../devel/p5-Module-Build
 
 DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-File-ShareDir>=1.00:../../devel/p5-File-ShareDir
