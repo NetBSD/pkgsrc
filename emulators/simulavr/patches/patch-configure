@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2013/09/12 06:20:35 mef Exp $
+
+=> Checking for portability problems in extracted files
+ERROR: [check-portability.awk] => Found test ... == ...:
+
+--- configure.orig	2013-07-06 17:58:39.000000000 +0900
++++ configure	2013-07-06 18:00:22.000000000 +0900
+@@ -15283,7 +15283,7 @@ $as_echo_n "checking for Python library 
+ 		py_version=`$PYTHON -c "from distutils.sysconfig import *; \
+ 			from string import join; \
+ 			print(join(get_config_vars('VERSION')))"`
+-		if test "$py_version" == "None"; then
++		if test "$py_version" = "None"; then
+ 			if test -n "$PYTHON_VERSION"; then
+ 				py_version=$PYTHON_VERSION
+ 			else
+@@ -16684,7 +16684,7 @@ else
+   USE_FAB_FALSE=
+ fi
+ 
+-if test X"${USE_FAB_FALSE}" == X"" ; then
++if test X"${USE_FAB_FALSE}" x= X"" ; then
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: NOT available" >&5
+ $as_echo "NOT available" >&6; }
+ else
