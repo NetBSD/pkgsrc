@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2013/05/31 12:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/09/13 10:13:20 sno Exp $
 
-DISTNAME=	libstatgrab-0.17
-PKGREVISION=	2
+DISTNAME=	libstatgrab-0.90
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
 		ftp://ftp.i-scream.org/pub/i-scream/libstatgrab/ \
@@ -12,11 +11,12 @@ MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.i-scream.org/libstatgrab/
 COMMENT=	Provides a useful interface to system statistics
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .include "options.mk"
 
 USE_TOOLS+=		pkg-config perl:run
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -27,6 +27,12 @@ REPLACE_PERL+=		src/statgrab/statgrab-make-mrtg-index.in
 
 CONFIGURE_ARGS+=	--disable-examples
 
-CPPFLAGS.NetBSD+=	-D_KMEMUSER
+# Default test target for Perl modules
+TEST_TARGET?=		test
 
+CHECK_BUILTIN.pthread:= yes
+.include "../../mk/pthread.builtin.mk"
+CHECK_BUILTIN.pthread:= no
+
+.include "../../devel/log4cplus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

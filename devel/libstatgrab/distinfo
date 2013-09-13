@@ -1,17 +1,5 @@
-$NetBSD: distinfo,v 1.10 2010/08/24 06:33:10 sno Exp $
+$NetBSD: distinfo,v 1.11 2013/09/13 10:13:20 sno Exp $
 
-SHA1 (libstatgrab-0.17.tar.gz) = c3f146ac5baa69ca0f8521c5a6daa6e6c8603ee5
-RMD160 (libstatgrab-0.17.tar.gz) = 586592626abb2ab4ff8947059d5e29d3a79512f3
-Size (libstatgrab-0.17.tar.gz) = 463224 bytes
-SHA1 (patch-aa) = 0c903a64ca119b3a317e850631d41aae3e9726ca
-SHA1 (patch-ab) = 97c9c8ffc034af1c61e36f1a7d0417b376019496
-SHA1 (patch-ac) = ef9124f8066a31012708e7db8bc880ee9714fc95
-SHA1 (patch-ad) = 150543e9a0573cc52e4862c11b5836d47551b0cc
-SHA1 (patch-ae) = dda8152c3bc2e5d75c1ce4ab56cef9ecdd44695c
-SHA1 (patch-af) = 1b1bdf5f6772b8d981b2b42d2806ae1cd1fc617c
-SHA1 (patch-ag) = 2810b88869e2bd6b770e7b8aa4e7f09e1d98eff4
-SHA1 (patch-ah) = 3095e161c78a92a4c029dd2751bf168bdcfae780
-SHA1 (patch-ai) = bbdd9e6a9fd646d09140cb2fe1eb280c16ca10a3
-SHA1 (patch-aj) = 70852991608ecb5818922fb0b7e7ab61bc043527
-SHA1 (patch-ak) = e2b94da5dbb997ef3276fd7b5e384f2a8c73b11a
-SHA1 (patch-al) = cdab623bd895ae1dd0b81afe82d1a937ee8e5799
+SHA1 (libstatgrab-0.90.tar.gz) = ecc53aafe259c778cafa7df0ef95cf8443d988f1
+RMD160 (libstatgrab-0.90.tar.gz) = e05463287493ef4e4d1dd8c571856ff41b3576bf
+Size (libstatgrab-0.90.tar.gz) = 755785 bytes
