@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.3 2013/09/13 10:15:40 sno Exp $
+
+* sg_init(continue)
+* libstatgrab 0.90 expects OUT arg for amount of stats returned
+
+--- swapd.c.orig	2005-02-19 04:32:30.000000000 +0000
++++ swapd.c
+@@ -87,7 +87,7 @@ int daemonize(void) {
+ int swapd_init_stats(void) {
+ #ifdef HAVE_LIBSTATGRAB
+ 	/* Initialize the libstatgrab interface. */
+-	if (sg_init() != 0) {
++	if (sg_init(0) != 0) {
+ 		/* Failure. */
+ 		PRINTERR("Unable to initialize statistics interface (libstatgrab).");
+ 		return(0);
+@@ -104,13 +104,14 @@ int64_t swapd_get_free_mem(void) {
+ #ifdef HAVE_LIBSTATGRAB
+ 	sg_mem_stats *meminfo = NULL;
+ 	sg_swap_stats *swapinfo = NULL;
++	size_t entries = 0;
+ 
+-	meminfo = sg_get_mem_stats();
++	meminfo = sg_get_mem_stats(&entries);
+ 	if (meminfo == NULL) {
+ 		return(-1);
+ 	}
+ 
+-	swapinfo = sg_get_swap_stats();
++	swapinfo = sg_get_swap_stats(&entries);
+ 	if (swapinfo == NULL) {
+ 		free(meminfo);
+ 		return(-1);
