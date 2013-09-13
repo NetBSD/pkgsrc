@@ -1,0 +1,11 @@
+This Apache LDAP authentication/authorization module tries to solve
+the following problems that other such modules may not solve in all cases:
+
+  * Map the short form of the distinguished name of a certificate and its
+    issuer obtained from the environment of mod_ssl to a user distinguished
+    name in an LDAP directory.
+  * Check the age of a password in an LDAP directory, denying authorization
+    in case the password is to old.
+  * Authorize a user based on roles or an arbitrary LDAP filter expression.
+  * Authorize a user based on whether he owns a file or belongs to the group
+    owning a file.

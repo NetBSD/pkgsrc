@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/13 11:56:19 fhajny Exp $
+bin/cert2ldap
+bin/certfind
+lib/httpd/mod_authz_ldap.so
+man/man1/cert2ldap.1
+man/man1/certfind.1
