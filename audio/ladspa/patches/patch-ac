@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2006/08/08 15:16:40 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2013/09/13 09:11:13 jperkin Exp $
 
---- plugins/sine.cpp.orig	2002-07-06 17:23:17.000000000 +0000
+Avoid "error: call of overloaded 'pow(int, unsigned int)' is ambiguous"
+
+--- plugins/sine.cpp.orig	2007-11-06 10:13:34.000000000 +0000
 +++ plugins/sine.cpp
-@@ -59,6 +59,15 @@ initialise_sine_table() {
+@@ -62,12 +62,21 @@ initialise_sine_table() {
+ 	g_pfSineTable[lIndex] = LADSPA_Data(sin(dShift * lIndex));
+   }
+   if (g_fPhaseStepBase == 0) {
+-    g_fPhaseStepBase = (LADSPA_Data)pow(2, sizeof(unsigned long) * 8);
++    g_fPhaseStepBase = (LADSPA_Data)pow((float)2, (float)sizeof(unsigned long) * 8);
+   }
+ }
  
  /*****************************************************************************/
  
