@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3430 2013/09/13 08:29:35 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3431 2013/09/13 08:29:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4872,3 +4872,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/lldpd to 0.7.6 [mef 2013-09-13]
 	Added devel/php-memcached version 2.1.0 [fhajny 2013-09-13]
 	Added devel/py-libmc version 1.2.3 [fhajny 2013-09-13]
+	Added security/php-oauth version 1.2.3 [fhajny 2013-09-13]
