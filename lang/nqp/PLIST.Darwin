@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2013/09/13 11:16:18 sno Exp $
+lib/parrot/${PARROT_VERSION}/dynext/nqp_bigint_ops.bundle
+lib/parrot/${PARROT_VERSION}/dynext/nqp_dyncall_ops.bundle
+lib/parrot/${PARROT_VERSION}/dynext/nqp_group.bundle
+lib/parrot/${PARROT_VERSION}/dynext/nqp_ops.bundle
