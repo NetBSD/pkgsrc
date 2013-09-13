@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 10:45:56 fhajny Exp $
+$NetBSD: patch-aa,v 1.2 2013/09/13 14:32:19 fhajny Exp $
 
 Pass installation dirs properly, fix search paths, add Solaris support
 
---- Makefile.orig	2009-10-15 12:59:54.000000000 +0000
+--- Makefile.orig	2012-09-02 14:40:59.000000000 +0000
 +++ Makefile
-@@ -1,11 +1,11 @@
+@@ -1,16 +1,16 @@
  # Inform the location to intall the modules
 -LUAPATH=/usr/local/share/lua/5.1
 -LUACPATH=/usr/local/lib/lua/5.1
@@ -20,6 +20,12 @@ Pass installation dirs properly, fix search paths, add Solaris support
  
  # For Mac OS X: set the system version
  MACOSX_VERSION=10.4
+ 
+-DEFS=-DBUFFER_DEBUG
++DEFS=-DBUFFER_DEBUG -DLUA_COMPAT_MODULE
+ 
+ #----------------------
+ # Do not edit this part
 @@ -24,6 +24,7 @@ none:
  	@echo "  * linux"
  	@echo "  * bsd"

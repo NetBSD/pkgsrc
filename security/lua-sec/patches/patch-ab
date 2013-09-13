@@ -1,9 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/09/21 10:45:56 fhajny Exp $
+$NetBSD: patch-ab,v 1.2 2013/09/13 14:32:19 fhajny Exp $
 
-Add Solaris support
-
---- src/Makefile.orig	2009-10-15 12:59:54.000000000 +0000
+Pass proper libs for SunOS.
+--- src/Makefile.orig	2012-09-02 14:40:59.000000000 +0000
 +++ src/Makefile
+@@ -9,7 +9,7 @@ OBJS= \
+  context.o \
+  ssl.o
+ 
+-LIBS=-lssl -lcrypto
++LIBS=-lssl -lcrypto $(MYLIBS)
+ 
+ WARN=-Wall -pedantic
+ 
 @@ -23,8 +23,11 @@ MAC_ENV=env MACOSX_DEPLOYMENT_TARGET='$(
  MAC_CFLAGS=-O2 -fno-common $(WARN) $(INCDIR) $(DEFS)
  MAC_LDFLAGS=-bundle -undefined dynamic_lookup $(LIBDIR)
@@ -34,7 +42,7 @@ Add Solaris support
  	@$(MAKE) $(CMOD) MYCFLAGS="$(MAC_CFLAGS)" MYLDFLAGS="$(MAC_LDFLAGS)" MYENV="$(MAC_ENV)"
  
 +solaris:
-+	@$(MAKE) $(CMOD) MYCFLAGS="$(SOL_CFLAGS)" MYLDFLAGS="$(SOL_LDFLAGS)"
++	@$(MAKE) $(CMOD) MYCFLAGS="$(SOL_CFLAGS)" MYLDFLAGS="$(SOL_LDFLAGS)" MYLIBS="-lsocket -lresolv -lnsl"
  
  $(CMOD): $(OBJS)
  	$(LD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
