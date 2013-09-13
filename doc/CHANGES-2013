@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3435 2013/09/13 08:51:22 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3436 2013/09/13 10:13:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added databases/innotop version 1.9.1 [fhajny 2013-09-13]
 	Added ham/trustedQSL version 2.0rc3 [mef 2013-09-13]
 	Added sysutils/manifold version 0.2.0 [fhajny 2013-09-13]
+	Updated devel/libstatgrab to 0.90 [sno 2013-09-13]
