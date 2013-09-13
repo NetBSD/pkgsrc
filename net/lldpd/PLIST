@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/09 01:39:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/13 07:29:10 mef Exp $
 include/lldp-const.h
 include/lldpctl.h
 lib/liblldpctl.la
@@ -9,6 +9,7 @@ man/man8/lldpd.8
 sbin/lldpcli
 sbin/lldpctl
 sbin/lldpd
+share/doc/lldpd/CONTRIBUTE.md
 share/doc/lldpd/ChangeLog
 share/doc/lldpd/NEWS
 share/doc/lldpd/README.md
