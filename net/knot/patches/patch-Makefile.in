@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/10/02 22:40:07 pettai Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/09/13 18:14:11 pettai Exp $
 
 Ignore .texi docs, as NetBSDs makeinfo isn't UTF-8 compatible
 
---- Makefile.in.orig	2012-10-02 21:11:22.000000000 +0000
+--- Makefile.in.orig	2013-08-27 11:35:02.000000000 +0000
 +++ Makefile.in
-@@ -227,7 +227,7 @@ top_build_prefix = @top_build_prefix@
+@@ -337,7 +337,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  ACLOCAL_AMFLAGS = -I m4
--SUBDIRS = src samples doc
-+SUBDIRS = src samples
+-SUBDIRS = src samples doc man
++SUBDIRS = src samples man
+ EXTRA_DIST = resource.sh
  all: all-recursive
  
- .SUFFIXES:

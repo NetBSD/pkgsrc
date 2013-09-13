@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2012/11/05 23:08:06 pettai Exp $
-libexec/knot-zcompile
-libexec/unittests
-libexec/unittests-libknot
-libexec/unittests-libknot-realdata
-libexec/unittests-xfr
-libexec/unittests-zcompile
+@comment $NetBSD: PLIST,v 1.3 2013/09/13 18:14:11 pettai Exp $
+bin/kdig
+bin/khost
+bin/knsupdate
+man/man1/kdig.1
+man/man1/khost.1
+man/man1/knsupdate.1
 man/man5/knot.conf.5
 man/man8/knotc.8
 man/man8/knotd.8
