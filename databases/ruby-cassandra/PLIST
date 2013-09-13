@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/17 12:29:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/13 12:41:25 taca Exp $
 bin/cassandra_helper
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -33,6 +33,11 @@ ${GEM_LIBDIR}/conf/1.1/cassandra.yaml
 ${GEM_LIBDIR}/conf/1.1/log4j-server.properties
 ${GEM_LIBDIR}/conf/1.1/schema.json
 ${GEM_LIBDIR}/conf/1.1/schema.txt
+${GEM_LIBDIR}/conf/1.2/cassandra.in.sh
+${GEM_LIBDIR}/conf/1.2/cassandra.yaml
+${GEM_LIBDIR}/conf/1.2/log4j-server.properties
+${GEM_LIBDIR}/conf/1.2/schema.json
+${GEM_LIBDIR}/conf/1.2/schema.txt
 ${GEM_LIBDIR}/ext/cassandra_native.c
 ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/lib/cassandra.rb
@@ -56,6 +61,10 @@ ${GEM_LIBDIR}/lib/cassandra/1.1.rb
 ${GEM_LIBDIR}/lib/cassandra/1.1/cassandra.rb
 ${GEM_LIBDIR}/lib/cassandra/1.1/columns.rb
 ${GEM_LIBDIR}/lib/cassandra/1.1/protocol.rb
+${GEM_LIBDIR}/lib/cassandra/1.2.rb
+${GEM_LIBDIR}/lib/cassandra/1.2/cassandra.rb
+${GEM_LIBDIR}/lib/cassandra/1.2/columns.rb
+${GEM_LIBDIR}/lib/cassandra/1.2/protocol.rb
 ${GEM_LIBDIR}/lib/cassandra/array.rb
 ${GEM_LIBDIR}/lib/cassandra/batch.rb
 ${GEM_LIBDIR}/lib/cassandra/cassandra.rb
@@ -97,4 +106,7 @@ ${GEM_LIBDIR}/vendor/1.0/gen-rb/cassandra_types.rb
 ${GEM_LIBDIR}/vendor/1.1/gen-rb/cassandra.rb
 ${GEM_LIBDIR}/vendor/1.1/gen-rb/cassandra_constants.rb
 ${GEM_LIBDIR}/vendor/1.1/gen-rb/cassandra_types.rb
+${GEM_LIBDIR}/vendor/1.2/gen-rb/cassandra.rb
+${GEM_LIBDIR}/vendor/1.2/gen-rb/cassandra_constants.rb
+${GEM_LIBDIR}/vendor/1.2/gen-rb/cassandra_types.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

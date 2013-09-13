@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/12/17 12:29:00 taca Exp $
+$NetBSD: distinfo,v 1.8 2013/09/13 12:41:25 taca Exp $
 
-SHA1 (cassandra-0.17.0.gem) = a62a139a8c5f4c179a6ac638fa072291b741c257
-RMD160 (cassandra-0.17.0.gem) = 3c25e00caebd97a4435cc25acd95cfed9bdb7633
-Size (cassandra-0.17.0.gem) = 133120 bytes
+SHA1 (cassandra-0.22.0.gem) = a7ec2b0ab46ddedff4f3d80e8d3e83112e6f7d0e
+RMD160 (cassandra-0.22.0.gem) = 7d526ae54bce5fc0de1614d379a2c8b22fd75d85
+Size (cassandra-0.22.0.gem) = 160256 bytes

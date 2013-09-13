@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/12/17 12:29:00 taca Exp $
+# $NetBSD: Makefile,v 1.10 2013/09/13 12:41:25 taca Exp $
 
-DISTNAME=	cassandra-0.17.0
+DISTNAME=	cassandra-0.22.0
 CATEGORIES=	databases ruby
 
 MAINTAINER=	tonnerre@NetBSD.org
