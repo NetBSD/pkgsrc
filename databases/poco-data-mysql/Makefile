@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/04/06 15:46:35 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/13 11:33:49 obache Exp $
 #
 
 PKGNAME=	poco-data-mysql-${POCO_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ MySQL RDBMS Accessor libraries
@@ -36,6 +36,6 @@ SUBST_FILES.paths=	Data/MySQL/Makefile
 SUBST_SED.paths=    -e 's,@MYSQLLIBDIR@,${BUILDLINK_DIR}/${BUILDLINK_LIBDIRS.mysql-client},g'
 SUBST_SED.paths+=    -e 's,@MYSQLINCDIR@,${BUILDLINK_DIR}/${BUILDLINK_INCDIRS.mysql-client},g'
 
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../databases/poco-data/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
