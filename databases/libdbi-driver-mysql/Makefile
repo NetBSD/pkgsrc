@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/02/06 23:21:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/13 12:19:50 obache Exp $
 #
 
 .include "../../databases/libdbi-driver-sqlite3/Makefile_drivers"
 
-PKGREVISION=		3
+PKGREVISION=		4
 LICENSE=		gnu-lgpl-v2
 
 DRIVER=			mysql
@@ -17,5 +17,5 @@ CONFIGURE_ARGS+=	--with-mysql-incdir=${BUILDLINK_PREFIX.mysql-client}/include
 CONFIGURE_ARGS+=	--with-mysql-libdir=${BUILDLINK_PREFIX.mysql-client}/lib
 
 .include "../../databases/libdbi/buildlink3.mk"
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
