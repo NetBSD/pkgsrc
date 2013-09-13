@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3450 2013/09/13 11:56:27 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3451 2013/09/13 12:10:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4892,3 +4892,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ap2-xsendfile version 0.12 [fhajny 2013-09-13]
 	Added www/typo3_61 version 6.1.5 [taca 2013-09-13]
 	Added www/ap22-authz-ldap version 0.30 [fhajny 2013-09-13]
+	Added lang/raduko-star version 2013.08 [sno 2013-09-13]
