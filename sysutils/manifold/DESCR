@@ -1,0 +1,3 @@
+Manifold helps you quickly and easily create Solaris SMF manifest
+XML files for your services by answering a few questions about how
+it needs to be configured.
