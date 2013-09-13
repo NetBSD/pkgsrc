@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/07/04 21:27:56 adam Exp $
+# $NetBSD: Makefile,v 1.9 2013/09/13 14:37:49 fhajny Exp $
 #
 
-DISTNAME=		prosody-0.8.2
-PKGREVISION=		3
+DISTNAME=		prosody-0.9.1
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
@@ -36,10 +35,10 @@ OWN_DIRS_PERMS+=	${PROSODY_LOG} ${PROSODY_USER} ${PROSODY_GROUP} 0770
 OWN_DIRS_PERMS+=	${PROSODY_RUN} ${PROSODY_USER} ${PROSODY_GROUP} 0770
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/certs
 
-PKG_USERS_VARS+=	PROSODY_USER
-PKG_GROUPS_VARS+=	PROSODY_GROUP
-PKG_GROUPS?=		${PROSODY_GROUP}
-PKG_USERS?=		${PROSODY_USER}:${PROSODY_GROUP}
+PKG_USERS_VARS=		PROSODY_USER
+PKG_GROUPS_VARS=	PROSODY_GROUP
+PKG_GROUPS=		${PROSODY_GROUP}
+PKG_USERS=		${PROSODY_USER}:${PROSODY_GROUP}
 PKG_GECOS.${PROSODY_USER}=	Prosody daemon user
 PKG_HOME.${PROSODY_USER}=	${PROSODY_DATA}
 PKG_SHELL.${PROSODY_USER}=	${NOLOGIN}
@@ -47,8 +46,10 @@ PKG_SHELL.${PROSODY_USER}=	${NOLOGIN}
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/prosody.cfg.lua ${PKG_SYSCONFDIR}/prosody.cfg.lua
-CONF_FILES+=		${EGDIR}/certs/localhost.cert ${PKG_SYSCONFDIR}/certs/localhost.cert
+CONF_FILES+=		${EGDIR}/certs/localhost.crt ${PKG_SYSCONFDIR}/certs/localhost.crt
 CONF_FILES+=		${EGDIR}/certs/localhost.key ${PKG_SYSCONFDIR}/certs/localhost.key
+
+CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
 
 REPLACE_INTERPRETER+=	lua
 REPLACE.lua.old=	/usr/bin/env lua
@@ -59,6 +60,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PROSODY_DATA}
 CONFIGURE_ARGS+=	--ldflags="${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared"
+CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
 
 SUBST_CLASSES+=		eg
 SUBST_MESSAGE.eg=	Fixing examples/configuration directories
