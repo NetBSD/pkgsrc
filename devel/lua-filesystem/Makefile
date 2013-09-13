@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/08/15 06:32:05 obache Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/13 12:09:37 fhajny Exp $
 #
 
 DISTNAME=		luafilesystem-1.6.2
@@ -14,6 +14,8 @@ LICENSE=		mit
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		lib
+
+MAKE_ENV+=		LUA_CDIR=${LUA_CDIR}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
