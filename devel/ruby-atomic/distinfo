@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/13 12:59:41 taca Exp $
+
+SHA1 (atomic-1.1.14.gem) = 255bad8a4310719d62684c6ee8cf470c2322b7e2
+RMD160 (atomic-1.1.14.gem) = 59cfaa3281a9ac35e9f61e45a8a4c3102efe96e5
+Size (atomic-1.1.14.gem) = 16896 bytes
