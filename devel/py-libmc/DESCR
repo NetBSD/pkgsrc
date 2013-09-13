@@ -1,0 +1,2 @@
+pylibmc is a client in Python for memcached. It is a wrapper
+around TangentOrg's libmemcached library.
