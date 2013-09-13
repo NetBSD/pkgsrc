@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2013/06/16 15:30:18 taca Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/13 14:12:44 taca Exp $
 
-DISTNAME=	daemon_controller-1.1.4
+DISTNAME=	daemon_controller-1.1.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 
