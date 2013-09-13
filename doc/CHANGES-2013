@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3458 2013/09/13 12:55:02 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3459 2013/09/13 12:57:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4900,3 +4900,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-hiera to 1.2.0 [taca 2013-09-13]
 	Updated databases/ruby-mysql2 to 0.3.13 [taca 2013-09-13]
 	Updated devel/ZenTest to 4.9.3 [taca 2013-09-13]
+	Updated devel/hoe to 3.7.1 [taca 2013-09-13]
