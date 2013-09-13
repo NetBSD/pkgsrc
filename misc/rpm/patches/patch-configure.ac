@@ -1,31 +1,22 @@
-$NetBSD: patch-ac,v 1.11 2013/09/13 12:41:32 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.1 2013/09/13 12:41:32 ryoon Exp $
 
---- configure.orig	2013-06-27 09:29:11.000000000 +0000
-+++ configure
-@@ -17093,7 +17093,7 @@ fi
- if test "$cross_compiling" = "yes"; then
-     MYPATH=":"
- else
--    MYPATH=$PATH
-+    MYPATH=$MYPATH
- fi
- 
- # Extract the first word of "7zip", so it can be a program name with args.
-@@ -24310,7 +24310,7 @@ host_os_noversion=`echo "${host_os}" | s
+--- configure.ac.orig	2013-06-27 09:29:00.000000000 +0000
++++ configure.ac
+@@ -777,7 +777,7 @@ changequote([, ])
  
  for provscript in ${host_cpu}-${host_os_exact}.prov ${host_os_exact}.prov ${host_os_major}.prov ${host_os_noversion}.prov none ; do {
      if test -f ${srcdir}/autodeps/${provscript} ; then
--       if [ ${provscript} == none ] ; then
-+       if [ ${provscript} = none ] ; then
+-       if [[ ${provscript} == none ]] ; then
++       if [[ ${provscript} = none ]] ; then
             echo "*** no default provides information is available for ${host_os_noversion}"
         else
             echo "using ${srcdir}/autodeps/${provscript} for automatic provides generation"
-@@ -24323,7 +24323,7 @@ for provscript in ${host_cpu}-${host_os_
+@@ -790,7 +790,7 @@ for provscript in ${host_cpu}-${host_os_
  
  for reqscript in ${host_cpu}-${host_os_exact}.req ${host_os_exact}.req ${host_os_major}.req ${host_os_noversion}.req none ; do {
      if test -f ${srcdir}/autodeps/${reqscript} ; then
--       if [ ${reqscript} == none ] ; then
-+       if [ ${reqscript} = none ] ; then
+-       if [[ ${reqscript} == none ]] ; then
++       if [[ ${reqscript} = none ]] ; then
             echo "*** no default requires information is available for ${host_os_noversion}"
         else
  	  echo "using ${srcdir}/autodeps/${reqscript} for automatic requires generation"
