@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2013/06/14 16:46:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/09/13 12:37:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
