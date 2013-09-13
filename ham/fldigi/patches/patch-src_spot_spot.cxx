@@ -1,4 +1,8 @@
-$NetBSD: patch-src_spot_spot.cxx,v 1.1 2013/05/06 14:49:32 joerg Exp $
+$NetBSD: patch-src_spot_spot.cxx,v 1.2 2013/09/13 06:35:55 mef Exp $
+
+Avoid implicit conversions to bool for streams.
+Require C++11 for Clang and prefer std version over tr1 when in C++11
+mode.
 
 --- src/spot/spot.cxx.orig	2013-05-03 14:37:33.000000000 +0000
 +++ src/spot/spot.cxx

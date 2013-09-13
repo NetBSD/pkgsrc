@@ -1,4 +1,8 @@
-$NetBSD: patch-src_xmlrpcpp_XmlRpcServer.cpp,v 1.1 2013/05/06 14:49:32 joerg Exp $
+$NetBSD: patch-src_xmlrpcpp_XmlRpcServer.cpp,v 1.2 2013/09/13 06:35:55 mef Exp $
+
+Avoid implicit conversions to bool for streams.
+Require C++11 for Clang and prefer std version over tr1 when in C++11
+mode.
 
 --- src/xmlrpcpp/XmlRpcServer.cpp.orig	2013-05-03 14:42:36.000000000 +0000
 +++ src/xmlrpcpp/XmlRpcServer.cpp
