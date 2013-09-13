@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3462 2013/09/13 14:13:16 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3463 2013/09/13 14:22:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4904,3 +4904,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/ruby-atomic version 1.1.14 [taca 2013-09-13]
 	Updated devel/ruby-backports to 3.3.3 [taca 2013-09-13]
 	Updated devel/ruby-daemon_controller to 1.1.5 [taca 2013-09-13]
+	Updated www/php-owncloud to 5.0.11 [ryoon 2013-09-13]
