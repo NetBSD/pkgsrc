@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/13 11:12:06 fhajny Exp $
+
+SHA1 (rabbitmq-c-0.4.1.tar.gz) = 46bdf023fac9f273ffa6c7467de8334ab3d3c028
+RMD160 (rabbitmq-c-0.4.1.tar.gz) = eb41666ed70462d4d1b357c547445d15eb5e3e57
+Size (rabbitmq-c-0.4.1.tar.gz) = 471413 bytes
