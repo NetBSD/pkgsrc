@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3425 2013/09/13 05:57:05 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3426 2013/09/13 06:36:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4867,3 +4867,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/xenkernel42 to 4.2.3 [prlw1 2013-09-12]
 	Updated sysutils/xentools42 to 4.2.3 [prlw1 2013-09-12]
 	Updated net/ruby-addressable to 2.3.5 [taca 2013-09-13]
+	Updated ham/fldigi to 3.21.76 [mef 2013-09-13]
