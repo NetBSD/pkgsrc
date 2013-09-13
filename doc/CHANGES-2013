@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3447 2013/09/13 11:36:28 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3448 2013/09/13 11:45:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4889,3 +4889,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/crush-tools version 2013.04 [fhajny 2013-09-13]
 	Updated www/typo3_47 to 4.7.15 [taca 2013-09-13]
 	Updated www/typo3_60 to 6.0.10 [taca 2013-09-13]
+	Added www/ap2-xsendfile version 0.12 [fhajny 2013-09-13]
