@@ -1,21 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2011/09/30 08:33:54 fhajny Exp $
+$NetBSD: patch-ab,v 1.4 2013/09/13 14:37:49 fhajny Exp $
 
 enable POSIX functionality by default
 set the logging paths
 set up the pid files
 
---- prosody.cfg.lua.dist.orig	2011-06-03 15:31:34.000000000 +0000
+--- prosody.cfg.lua.dist.orig	2013-09-09 10:32:23.000000000 +0000
 +++ prosody.cfg.lua.dist
-@@ -59,7 +59,7 @@ modules_enabled = {
- 		--"admin_telnet"; -- Opens telnet console interface on localhost port 5582
+@@ -63,7 +63,7 @@ modules_enabled = {
+ 		--"http_files"; -- Serve static files from a directory over HTTP
  
  	-- Other specific functionality
 -		--"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
 +		"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
- 		--"bosh"; -- Enable BOSH clients, aka "Jabber over HTTP"
- 		--"httpserver"; -- Serve static files from a directory over HTTP
  		--"groups"; -- Shared roster support
-@@ -123,12 +123,15 @@ authentication = "internal_plain"
+ 		--"announce"; -- Send announcement to all online users
+ 		--"welcome"; -- Welcome users who register accounts
+@@ -139,12 +139,15 @@ authentication = "internal_plain"
  -- Logging configuration
  -- For advanced logging see http://prosody.im/doc/logging
  log = {
