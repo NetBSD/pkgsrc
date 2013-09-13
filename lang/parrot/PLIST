@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2013/09/13 10:40:59 sno Exp $
+@comment $NetBSD: PLIST,v 1.35 2013/09/13 10:52:37 sno Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -194,19 +194,6 @@ include/parrot/${PARROT_VERSION}/pmc/pmc_unmanagedstruct.h
 lib/libparrot.a
 lib/parrot/${PARROT_VERSION}/VERSION
 lib/parrot/${PARROT_VERSION}/bin/prove.pir
-lib/parrot/${PARROT_VERSION}/dynext/bit_ops.bundle
-lib/parrot/${PARROT_VERSION}/dynext/debug_ops.bundle
-lib/parrot/${PARROT_VERSION}/dynext/dynlexpad.bundle
-lib/parrot/${PARROT_VERSION}/dynext/file.bundle
-lib/parrot/${PARROT_VERSION}/dynext/io_ops.bundle
-lib/parrot/${PARROT_VERSION}/dynext/math_ops.bundle
-lib/parrot/${PARROT_VERSION}/dynext/obscure_ops.bundle
-lib/parrot/${PARROT_VERSION}/dynext/os.bundle
-lib/parrot/${PARROT_VERSION}/dynext/rational.bundle
-lib/parrot/${PARROT_VERSION}/dynext/select.bundle
-lib/parrot/${PARROT_VERSION}/dynext/subproxy.bundle
-lib/parrot/${PARROT_VERSION}/dynext/sys_ops.bundle
-lib/parrot/${PARROT_VERSION}/dynext/trans_ops.bundle
 lib/parrot/${PARROT_VERSION}/include/call_bits.pasm
 lib/parrot/${PARROT_VERSION}/include/cclass.pasm
 lib/parrot/${PARROT_VERSION}/include/cloneflags.pasm

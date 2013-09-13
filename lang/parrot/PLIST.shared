@@ -1,3 +1,16 @@
-@comment $NetBSD: PLIST.shared,v 1.2 2013/09/13 10:40:59 sno Exp $
+@comment $NetBSD: PLIST.shared,v 1.3 2013/09/13 10:52:37 sno Exp $
 lib/libparrot.so
-lib/libparrot.${PARROT_VERSION}.so
+lib/libparrot.so.${PARROT_VERSION}
+lib/parrot/${PARROT_VERSION}/dynext/bit_ops.so
+lib/parrot/${PARROT_VERSION}/dynext/debug_ops.so
+lib/parrot/${PARROT_VERSION}/dynext/dynlexpad.so
+lib/parrot/${PARROT_VERSION}/dynext/file.so
+lib/parrot/${PARROT_VERSION}/dynext/io_ops.so
+lib/parrot/${PARROT_VERSION}/dynext/math_ops.so
+lib/parrot/${PARROT_VERSION}/dynext/obscure_ops.so
+lib/parrot/${PARROT_VERSION}/dynext/os.so
+lib/parrot/${PARROT_VERSION}/dynext/rational.so
+lib/parrot/${PARROT_VERSION}/dynext/select.so
+lib/parrot/${PARROT_VERSION}/dynext/subproxy.so
+lib/parrot/${PARROT_VERSION}/dynext/sys_ops.so
+lib/parrot/${PARROT_VERSION}/dynext/trans_ops.so
