@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.987 2013/09/13 11:54:01 taca Exp $
+# $NetBSD: Makefile,v 1.988 2013/09/13 11:57:01 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -69,6 +69,7 @@ SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap2-xslt2
 SUBDIR+=	ap22-authn-sasl
 SUBDIR+=	ap22-authnz-external
+SUBDIR+=	ap22-authz-ldap
 SUBDIR+=	ap22-dnssd
 SUBDIR+=	ap22-limitipconn
 SUBDIR+=	ap22-vhost-ldap
