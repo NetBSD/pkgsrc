@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2013/08/22 17:08:10 taca Exp $
+# $NetBSD: Makefile,v 1.59 2013/09/13 11:13:49 taca Exp $
 
-DISTNAME=	roundcubemail-0.9.3-dep
+DISTNAME=	roundcubemail-0.9.4-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -10,9 +10,12 @@ HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=4.3.1:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=${PHP_BASE_VERS}:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.2:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_IDNA2>=0.1.1:../../net/pear-Net_IDNA2
@@ -79,10 +82,11 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	roundcube.conf
 SUBST_FILES.files+=	config/main.inc.php.dist
-SUBST_FILES.files+=	installer/index.php
+SUBST_FILES.files+=	installer/index.php installer/rcube_install.php
 SUBST_FILES.files+=	program/include/iniset.php
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_SED.files+=	-e "s|@PKG_EXAMPLES@|${PREFIX}/share/examples/roundcube|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2013/06/15 16:08:09 taca Exp $
+$NetBSD: patch-ac,v 1.8 2013/09/13 11:13:49 taca Exp $
 
 Honor PKG_SYSCONFDIR.
 
@@ -9,7 +9,7 @@ Honor PKG_SYSCONFDIR.
  define('INSTALL_PATH', realpath(dirname(__FILE__) . '/../').'/');
  define('RCUBE_INSTALL_PATH', INSTALL_PATH);
 -define('RCUBE_CONFIG_DIR', INSTALL_PATH . 'config/');
-+define('RCMAIL_CONFIG_DIR', '@PKG_SYSCONFDIR@');
++define('RCUBE_CONFIG_DIR', '@PKG_SYSCONFDIR@');
  
  $include_path  = INSTALL_PATH . 'program/lib' . PATH_SEPARATOR;
  $include_path .= INSTALL_PATH . 'program/include' . PATH_SEPARATOR;
