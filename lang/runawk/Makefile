@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/11/10 11:22:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2013/09/13 07:45:01 cheusov Exp $
 #
 
-DISTNAME=	runawk-1.4.4
+DISTNAME=	runawk-1.5.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
@@ -10,7 +10,7 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/runawk
 COMMENT=	AWK wrapper that provides support for modules
 
-BUILD_DEPENDS+=		mk-configure>=0.23.0:../../devel/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.24.0:../../devel/mk-configure
 
 LICENSE=		mit
 
