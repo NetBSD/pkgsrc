@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2013/06/06 12:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2013/09/13 12:29:19 obache Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.8-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mysqlcc/}
 
@@ -29,7 +29,7 @@ SUBST_FILES.paths=	src/CApplication.cpp
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-MYSQL_VERSIONS_ACCEPTED=	50
+BROKEN=		"MySQL 5.1 and later API is not supported"
 
 INSTALLATION_DIRS=	bin share/mysqlcc/translations
 SUPPORT_FILES=		error.wav information.wav syntax.txt warning.wav
