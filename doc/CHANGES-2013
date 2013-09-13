@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3428 2013/09/13 07:30:18 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3429 2013/09/13 08:29:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4870,3 +4870,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated ham/fldigi to 3.21.76 [mef 2013-09-13]
 	Updated shells/posh to 0.12.2 [mef 2013-09-13]
 	Updated net/lldpd to 0.7.6 [mef 2013-09-13]
+	Added devel/php-memcached version 2.1.0 [fhajny 2013-09-13]
