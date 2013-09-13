@@ -1,8 +1,22 @@
-$NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
+$NetBSD: patch-da,v 1.5 2013/09/13 20:47:55 jperkin Exp $
 
---- libgc/include/private/gcconfig.h.orig	2012-12-05 17:44:36.000000000 +0000
+Support 64-bit SunOS.
+
+--- libgc/include/private/gcconfig.h.orig	2013-04-25 09:01:57.000000000 +0000
 +++ libgc/include/private/gcconfig.h
-@@ -366,6 +366,9 @@
+@@ -169,6 +169,11 @@
+ #    define SUNOS5
+ #    define mach_type_known
+ # endif
++# if defined(sun) && defined(__amd64)
++#    define X86_64
++#    define SUNOS5
++#    define mach_type_known
++# endif
+ # if (defined(__OS2__) || defined(__EMX__)) && defined(__32BIT__)
+ #    define I386
+ #    define OS2
+@@ -372,6 +377,9 @@
  #   define OPENBSD
  #   define mach_type_known
  # endif
@@ -12,7 +26,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  # if defined(FREEBSD) && (defined(i386) || defined(__i386__))
  #   define I386
  #   define mach_type_known
-@@ -705,6 +708,10 @@
+@@ -711,6 +719,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -23,7 +37,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #	define HEURISTIC2
  #	ifdef __ELF__
  #	  define DATASTART GC_data_start
-@@ -896,6 +903,10 @@
+@@ -902,6 +914,10 @@
  #   ifdef NETBSD
  #     define ALIGNMENT 4
  #     define OS_TYPE "NETBSD"
@@ -34,7 +48,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #     define HEURISTIC2
        extern char etext[];
  #     define DATASTART GC_data_start
-@@ -1067,6 +1078,10 @@
+@@ -1097,6 +1113,10 @@
  #   endif
  #   ifdef NETBSD
  #     define OS_TYPE "NETBSD"
@@ -45,7 +59,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #     define HEURISTIC2
  #     ifdef __ELF__
  #	define DATASTART GC_data_start
-@@ -1380,6 +1395,10 @@
+@@ -1383,6 +1403,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -56,7 +70,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #	ifdef __ELF__
  #	    define DYNAMIC_LOADING
  #	endif
-@@ -1541,6 +1560,10 @@
+@@ -1544,6 +1568,10 @@
  #   if defined(NETBSD)
  #     define ALIGNMENT 4
  #     define OS_TYPE "NETBSD"
@@ -67,7 +81,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #     define HEURISTIC2
  #     define USE_GENERIC_PUSH_REGS
  #     ifdef __ELF__
-@@ -1667,6 +1690,10 @@
+@@ -1670,6 +1698,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -78,7 +92,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #	define HEURISTIC2
  #	define DATASTART GC_data_start
  #	define ELFCLASS32 32
-@@ -1930,6 +1957,10 @@
+@@ -1937,6 +1969,10 @@
  #   define ALIGNMENT 4
  #   ifdef NETBSD
  #       define OS_TYPE "NETBSD"
@@ -89,7 +103,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #       define HEURISTIC2
  #	ifdef __ELF__
  #          define DATASTART GC_data_start
-@@ -2027,6 +2058,10 @@
+@@ -2034,6 +2070,10 @@
  #   endif
  #   ifdef NETBSD
  #      define OS_TYPE "NETBSD"
@@ -100,7 +114,7 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #      define HEURISTIC2
  #      define DATASTART GC_data_start
  #       define USE_GENERIC_PUSH_REGS
-@@ -2138,6 +2173,10 @@
+@@ -2145,6 +2185,10 @@
  #   endif
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
@@ -111,3 +125,33 @@ $NetBSD: patch-da,v 1.4 2013/05/29 11:11:12 wiz Exp $
  #	ifdef __ELF__
  #	    define DYNAMIC_LOADING
  #	endif
+@@ -2152,6 +2196,29 @@
+ 	extern char etext[];
+ #	define SEARCH_FOR_DATA_START
+ #   endif
++#   ifdef SUNOS5
++#	define OS_TYPE "SUNOS5"
++#	define ELF_CLASS ELFCLASS64
++	extern int _etext[], _end[];
++	extern ptr_t GC_SysVGetDataStart();
++#	define DATASTART GC_SysVGetDataStart(0x1000, _etext)
++#	define DATAEND (_end)
++#	include <sys/vmparam.h>
++#	ifdef USERLIMIT
++#	    define STACKBOTTOM USRSTACK
++#	else
++#	    define HEURISTIC2
++#	endif
++#	define DYNAMIC_LOADING
++#	if !defined(USE_MMAP) && defined(REDIRECT_MALLOC)
++#	    define USE_MMAP
++#	endif
++#	ifdef USE_MMAP
++#	    define HEAP_START (ptr_t)0x40000000
++#	else
++#	    define HEAP_START DATAEND
++#	endif
++#   endif
+ #   ifdef OPENBSD
+ #       define OS_TYPE "OPENBSD"
+ #       define ELF_CLASS ELFCLASS64

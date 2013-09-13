@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.31 2013/08/18 09:42:31 jmcneill Exp $
+$NetBSD: patch-ab,v 1.32 2013/09/13 20:47:55 jperkin Exp $
 
 --- configure.orig	2013-04-25 09:08:54.000000000 +0000
 +++ configure
@@ -56,7 +56,19 @@ $NetBSD: patch-ab,v 1.31 2013/08/18 09:42:31 jmcneill Exp $
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -24765,13 +24770,17 @@ fi
+@@ -24635,6 +24640,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+ 			sizeof_register=8
+ 		fi
+ 		case $host_os in
++		  solaris*)
++			LIBC="libc.so"
++			INTL="libintl.so"
++			have_visibility_hidden=no
++			;;
+ 		  linux*)
+ 			sgen_supported=true
+ 			AOT_SUPPORTED="yes"
+@@ -24765,13 +24775,17 @@ fi
  	    NESTED_LIBGC_FLAGS="$NESTED_LIBGC_FLAGS -DHAVE_ARMV6"
  		sgen_supported=true
  		;;
@@ -77,7 +89,7 @@ $NetBSD: patch-ab,v 1.31 2013/08/18 09:42:31 jmcneill Exp $
  		if test "x$cross_compiling" != "xno"; then
  		   # Provide sane defaults when cross-compiling
  		   CPPFLAGS="$CPPFLAGS -DARM_FPU_VFP=1 -D__ARM_EABI__ -DHAVE_ARMV6=1"
-@@ -25132,10 +25141,12 @@ case "$host" in
+@@ -25132,10 +25146,12 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
@@ -93,7 +105,7 @@ $NetBSD: patch-ab,v 1.31 2013/08/18 09:42:31 jmcneill Exp $
      	LIBC="libc.so"
  	INTL="libintl.so"
  	SQLITE="libsqlite.so"
-@@ -26162,7 +26173,6 @@ else
+@@ -26162,7 +26178,6 @@ else
  fi
  
  
