@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/09/01 04:45:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/13 14:24:28 fhajny Exp $
 #
 
 DISTNAME=		luasocket-3.0-rc1
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//:S/-rc/rc/}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		-https://github.com/diegonehab/luasocket/archive/v3.0-rc1.tar.gz
 
