@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/07/28 22:44:36 pettai Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/13 21:17:35 pettai Exp $
 bin/samlsign
 include/saml/Assertion.h
 include/saml/RootObject.h
@@ -32,6 +32,7 @@ include/saml/saml2/metadata/AbstractMetadataProvider.h
 include/saml/saml2/metadata/DiscoverableMetadataProvider.h
 include/saml/saml2/metadata/DynamicMetadataProvider.h
 include/saml/saml2/metadata/EndpointManager.h
+include/saml/saml2/metadata/EntityMatcher.h
 include/saml/saml2/metadata/Metadata.h
 include/saml/saml2/metadata/MetadataCredentialContext.h
 include/saml/saml2/metadata/MetadataCredentialCriteria.h
@@ -49,17 +50,19 @@ include/saml/util/SAMLConstants.h
 include/saml/version.h
 lib/libsaml.a
 lib/libsaml.so
-lib/libsaml.so.7
-lib/libsaml.so.7.0.3
+lib/libsaml.so.8
+lib/libsaml.so.8.0.3
 lib/pkgconfig/opensaml.pc
-share/doc/opensaml-${PKGVERSION}/LICENSE.txt
-share/doc/opensaml-${PKGVERSION}/LOG4CPP.LICENSE
-share/doc/opensaml-${PKGVERSION}/NOTICE.txt
-share/doc/opensaml-${PKGVERSION}/README.txt
+share/doc/${PKGNAME}/LICENSE.txt
+share/doc/${PKGNAME}/LOG4CPP.LICENSE
+share/doc/${PKGNAME}/NOTICE.txt
+share/doc/${PKGNAME}/README.txt
 share/xml/opensaml/cs-sstc-schema-assertion-01.xsd
 share/xml/opensaml/cs-sstc-schema-assertion-1.1.xsd
 share/xml/opensaml/cs-sstc-schema-protocol-01.xsd
 share/xml/opensaml/cs-sstc-schema-protocol-1.1.xsd
+share/xml/opensaml/saml-async-slo-v1.0.xsd
+share/xml/opensaml/saml-metadata-rpi-v1.0.xsd
 share/xml/opensaml/saml-schema-assertion-2.0.xsd
 share/xml/opensaml/saml-schema-authn-context-2.0.xsd
 share/xml/opensaml/saml-schema-authn-context-auth-telephony-2.0.xsd
@@ -106,4 +109,4 @@ share/xml/opensaml/sstc-saml-metadata-ext-query.xsd
 share/xml/opensaml/sstc-saml-metadata-ui-v1.0.xsd
 share/xml/opensaml/sstc-saml-protocol-ext-thirdparty.xsd
 share/xml/opensaml/sstc-saml1x-metadata.xsd
-@pkgdir share/doc/opensaml-${PKGVERSION}/api
+@pkgdir share/doc/${PKGNAME}/api
