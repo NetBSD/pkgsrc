@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.shared,v 1.1 2013/09/13 12:09:39 sno Exp $
-lib/parrot/${PARROT_VERSION}/dynext/perl6_ops.so
