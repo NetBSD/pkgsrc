@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.584 2013/08/28 11:43:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.585 2013/09/13 08:51:48 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -274,6 +274,7 @@ SUBDIR+=	logrot
 SUBDIR+=	logrotate
 SUBDIR+=	lsof
 SUBDIR+=	magicrescue
+SUBDIR+=	manifold
 SUBDIR+=	mbmon
 SUBDIR+=	mc
 SUBDIR+=	mc46
