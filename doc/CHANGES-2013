@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3451 2013/09/13 12:10:36 sno Exp $
+$NetBSD: CHANGES-2013,v 1.3452 2013/09/13 12:17:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/typo3_61 version 6.1.5 [taca 2013-09-13]
 	Added www/ap22-authz-ldap version 0.30 [fhajny 2013-09-13]
 	Added lang/raduko-star version 2013.08 [sno 2013-09-13]
+	Updated security/lua-sec to 0.4.1 [fhajny 2013-09-13]
