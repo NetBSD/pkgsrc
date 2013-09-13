@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2013/08/18 09:42:31 jmcneill Exp $
+# $NetBSD: Makefile,v 1.142 2013/09/13 20:47:55 jperkin Exp $
 
 DISTNAME=	mono-3.0.10
 PKGREVISION=	2
@@ -137,8 +137,14 @@ PLIST_VARS=	monodoc
 CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ENV+=		ac_cv_func_getdomainname=no
 CONFIGURE_ENV+=		ac_cv_func_setdomainname=no
+.  if ${ABI} == "32"
 ULIMIT_CMD_datasize=	ulimit -d 262144
 ULIMIT_CMD_stacksize=	ulimit -s 10240
+.  else
+CONFIGURE_ARGS+=	--with-sigaltstack=no
+ULIMIT_CMD_datasize=	ulimit -d 524288
+ULIMIT_CMD_stacksize=	ulimit -s 10240
+.  endif
 .elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:M*arm*}
 CONFIGURE_ARGS+=	--with-mcs-docs=no
 CONFIGURE_ARGS+=	--disable-parallel-mark
