@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/13 08:51:09 fhajny Exp $
+bin/manifold
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/${PKGBASE}/__init__.py
+${PYSITELIB}/${PKGBASE}/__init__.pyc
+${PYSITELIB}/${PKGBASE}/__init__.pyo
+${PYSITELIB}/${PKGBASE}/manifold.py
+${PYSITELIB}/${PKGBASE}/manifold.pyc
+${PYSITELIB}/${PKGBASE}/manifold.pyo
+${PYSITELIB}/${PKGBASE}/release.py
+${PYSITELIB}/${PKGBASE}/release.pyc
+${PYSITELIB}/${PKGBASE}/release.pyo
