@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/13 10:31:29 sno Exp $
+
+SHA1 (Unix-Statgrab-0.101.tar.gz) = 80b85a14457517a1b70a1d66bff1022b63582765
+RMD160 (Unix-Statgrab-0.101.tar.gz) = 103493fb32017cb0c8b6ddecd60841ebdb57d1cb
+Size (Unix-Statgrab-0.101.tar.gz) = 71437 bytes
