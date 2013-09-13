@@ -1,4 +1,8 @@
-$NetBSD: patch-src_spot_pskrep.cxx,v 1.1 2013/05/06 14:49:32 joerg Exp $
+$NetBSD: patch-src_spot_pskrep.cxx,v 1.2 2013/09/13 06:35:55 mef Exp $
+
+Avoid implicit conversions to bool for streams.
+Require C++11 for Clang and prefer std version over tr1 when in C++11
+mode.
 
 --- src/spot/pskrep.cxx.orig	2013-05-03 14:36:37.000000000 +0000
 +++ src/spot/pskrep.cxx
