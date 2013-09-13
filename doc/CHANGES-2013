@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3443 2013/09/13 11:19:42 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3444 2013/09/13 11:25:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4885,3 +4885,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/rabbitmq-c version 0.4.1 [fhajny 2013-09-13]
 	Added lang/nqp version 2013.08 [sno 2013-09-13]
 	Updated mail/roundcube to 0.9.4 [taca 2013-09-13]
+	Updated www/typo3_45 to 4.5.30 [taca 2013-09-13]
