@@ -1,19 +1,12 @@
-$NetBSD: distinfo,v 1.9 2007/02/18 11:17:03 tonio Exp $
+$NetBSD: distinfo,v 1.10 2013/09/13 12:41:32 ryoon Exp $
 
-SHA1 (rpm-2.5.4.tar.gz) = a7fcd67883aec8d5f17483d5efebe7e5f5453462
-RMD160 (rpm-2.5.4.tar.gz) = 6c9a46d370fe97c7fcf7f814db049ea2bba300da
-Size (rpm-2.5.4.tar.gz) = 727849 bytes
-SHA1 (patch-aa) = 3ee3193cc8e9043017b1f507b606c72acab77ddb
-SHA1 (patch-ab) = 63635f4f7fd96b4e7a40bfbaffd5673b40db3a13
-SHA1 (patch-ac) = ed4545088fc0cc56fd577fbc122a073f12d751aa
-SHA1 (patch-ba) = c6a062e733e09eb56144177444188dcaf0cfcb06
-SHA1 (patch-bb) = dc0ea2dd366b793003218858ca3d67bc285a2089
-SHA1 (patch-bd) = 1c9cd4587314ee45bccdf08c6ecaabbe641aaa5d
-SHA1 (patch-be) = ed237b47e9f8033e8fdfc4258a1bdd5ebaff469e
-SHA1 (patch-ca) = 7f4b008eee3b9f1bd3abc49686f70a327376af55
-SHA1 (patch-cb) = 30f98037c6a5ba753bc19b20564e177ad1e8c1a9
-SHA1 (patch-cc) = d5955ec8b51950aadf930a62743601c2d4a0a127
-SHA1 (patch-cd) = 30e28a8f9453d4a4553ed08eeb43ba049fb35567
-SHA1 (patch-ce) = 9cbf130f8f10b5c8368028cfab295d9c61db2e7c
-SHA1 (patch-cf) = 636b77cd05f9eb5083d11aa362a5b75d424014ad
-SHA1 (patch-cg) = bc094d702cb13b5c89d696770bbcaffaca3b853c
+SHA1 (rpm-4.11.1.tar.bz2) = 31ddc4185137ce3f718c99e91dcb040614fe820c
+RMD160 (rpm-4.11.1.tar.bz2) = 3acb73dffef60c5e98ad23d2551ebca0837c218c
+Size (rpm-4.11.1.tar.bz2) = 3778922 bytes
+SHA1 (patch-ac) = a9d4fb93a47f705b9220d886853b805f3b741ca2
+SHA1 (patch-build_rpmfc.c) = dab644d99d7ed43850443433b242d6ec16630b9c
+SHA1 (patch-cb) = c52dfaec6cf89d069f26900265d34f7ad91092f0
+SHA1 (patch-configure.ac) = c9df0915b2c9c08fd059a3c9a2c89fe25d3e194d
+SHA1 (patch-misc_fts.c) = 26443c47db5e2211a926cf0f8b26b1f70475edda
+SHA1 (patch-misc_fts.h) = ec4ee0ea18f5d210eb32d9f22c90e43d2ede0c53
+SHA1 (patch-system.h) = 21336b9d2a7afbc0573ba0ce09c0849e5bef2548
