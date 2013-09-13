@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/13 11:16:18 sno Exp $
+bin/nqp
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_nqplexinfo.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_nqplexpad.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_ownedhash.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_ownedresizablepmcarray.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_qrpa.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_serializationcontext.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_sixmodelobject.h
+include/parrot/${PARROT_VERSION}/dynpmc/pmc_stable.h
+lib/parrot/${PARROT_VERSION}/include/nqp_const.pir
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/NQPCORE.setting.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/NQPHLL.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/NQPP5QRegex.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/NQPP6QRegex.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/QAST.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/QASTNode.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/QRegex.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/nqp.pbc
+lib/parrot/${PARROT_VERSION}/languages/nqp/lib/nqpmo.pbc
+lib/parrot/${PARROT_VERSION}/library/ModuleLoader.pbc
