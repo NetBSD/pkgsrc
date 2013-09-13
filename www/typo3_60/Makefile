@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/09/06 14:16:46 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/13 11:35:58 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-VER=		6.0.9
+VER=		6.0.10
 NO_BUILD=	yes
 USE_TOOLS+=	bash:run pax
 
@@ -37,6 +37,7 @@ TYPO3DATADIRS=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
 BUILD_DEFS+=	APACHE_GROUP
 
 FILES_SUBST+=	TYPO3DIR=${TYPO3DIR} SITEDIR=${SITEDIR}
+MESSAGE_SUBST+=	TYPO3DIR=${TYPO3DIR} SITEDIR=${SITEDIR}
 PLIST_SUBST+=	EGDIR=${EGDIR} SITEDIR=${SITEDIR} \
 		TYPO3DIR=${TYPO3DIR} TYPO3NAME=${TYPO3NAME:Q}
 
@@ -60,7 +61,6 @@ REPLACE.sh.new=		${TOOLS_PATH.bash}
 REPLACE_FILES.sh=	typo3/contrib/flowplayer/plugins/flowplayer.captions/example/flvtool2-cuepoints.sh
 
 SUBST_CLASSES+=		conf
-SUBST_FILES.conf+=	${WRKDIR}/README
 SUBST_FILES.conf+=	${WRKSRC}/t3lib/stddb/DefaultConfiguration.php
 SUBST_SED.conf+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.conf+=	-e 's|@TYPO3DIR@|${TYPO3DIR}|g'
@@ -81,17 +81,12 @@ PRINT_PLIST_AWK+=	/^${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
 SITEDIR?=	www
 TYPO3DIR?=	share/typo3
 
-post-extract:
-	${CP} ${FILESDIR}/README ${WRKDIR}
-
-pre-install:
-	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
-
 do-install:
-	cd ${WRKSRC} && \
-	    pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
+	cd ${WRKSRC} && ${FIND} . ! -type d -a \! -name '*.orig' -print | \
+		pax -rw ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC} && \
-		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
+		${FIND} . ! -type d -a \! -name '*.orig' -print | \
+		pax -rw ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
 	${RM} -f ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}/typo3conf/LocalConfiguration.php
 	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/LocalConfiguration.php \
 		${DESTDIR}${PREFIX}/${EGDIR}
