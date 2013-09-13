@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3453 2013/09/13 12:37:55 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3454 2013/09/13 12:42:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4895,3 +4895,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/raduko-star version 2013.08 [sno 2013-09-13]
 	Updated security/lua-sec to 0.4.1 [fhajny 2013-09-13]
 	Updated converters/ruby-unf to 0.1.2 [taca 2013-09-13]
+	Updated databases/ruby-cassandra to 0.22.0 [taca 2013-09-13]
