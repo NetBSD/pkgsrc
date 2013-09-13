@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/06 14:16:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/13 11:35:58 taca Exp $
 ${EGDIR}/LocalConfiguration.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -3096,7 +3096,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceFactoryTe
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/ResourceStorageTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Service/FrontendContentAdapterServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Service/IndexerServiceTest.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/StorageRepositoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Resource/Utility/FileExtensionFilterTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Tree/TableConfiguration/TreeDataProviderFactoryTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/TypoScript/Fixtures/ext_typoscript_setup.txt
