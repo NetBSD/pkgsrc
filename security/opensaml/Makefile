@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/09/10 11:44:15 obache Exp $
+# $NetBSD: Makefile,v 1.13 2013/09/13 21:17:35 pettai Exp $
 
-DISTNAME=	opensaml-2.4.3
-PKGREVISION=	3
+DISTNAME=	opensaml-2.5.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.shibboleth.net/downloads/c++-opensaml/${PKGVERSION_NOREV}/
 
@@ -15,6 +14,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen-doc
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/log4shib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
