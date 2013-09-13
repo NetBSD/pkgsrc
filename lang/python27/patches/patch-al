@@ -1,7 +1,8 @@
-$NetBSD: patch-al,v 1.10 2013/04/12 09:03:41 adam Exp $
+$NetBSD: patch-al,v 1.11 2013/09/13 13:18:20 adam Exp $
 
 - recognize MirBSD, Interix
 - remove special-case library version hack for FreeBSD
+- don't set Mac OS X target version: stick to the current one
 - honor pkgsrc LDFLAGS
 - other stuff not previously commented (XXX)
 
@@ -33,6 +34,15 @@ $NetBSD: patch-al,v 1.10 2013/04/12 09:03:41 adam Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
+@@ -6037,7 +6032,7 @@ $as_echo "$CC" >&6; }
+ 	    # Calculate the right deployment target for this build.
+ 	    #
+ 	    cur_target=`sw_vers -productVersion | sed 's/\(10\.[0-9]*\).*/\1/'`
+-	    if test ${cur_target} '>' 10.2; then
++	    if false; then
+ 		    cur_target=10.3
+ 		    if test ${enable_universalsdk}; then
+ 			    if test "${UNIVERSAL_ARCHS}" = "all"; then
 @@ -8214,9 +8209,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
