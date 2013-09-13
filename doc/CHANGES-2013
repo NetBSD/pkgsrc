@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3456 2013/09/13 12:49:44 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3457 2013/09/13 12:53:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4898,3 +4898,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-cassandra to 0.22.0 [taca 2013-09-13]
 	Updated misc/rpm to 4.11.1 [ryoon 2013-09-13]
 	Updated databases/ruby-hiera to 1.2.0 [taca 2013-09-13]
+	Updated databases/ruby-mysql2 to 0.3.13 [taca 2013-09-13]
