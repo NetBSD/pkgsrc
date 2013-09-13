@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/13 12:09:39 sno Exp $
+@comment $NetBSD: PLIST,v 1.1 2013/09/13 22:04:07 schmonz Exp $
 bin/p6doc
 bin/panda
 bin/perl6

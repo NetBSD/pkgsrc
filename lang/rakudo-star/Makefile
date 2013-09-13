@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 12:09:39 sno Exp $
+# $NetBSD: Makefile,v 1.1 2013/09/13 22:04:07 schmonz Exp $
 
 DISTNAME=	rakudo-star-2013.08
 CATEGORIES=	lang perl6
