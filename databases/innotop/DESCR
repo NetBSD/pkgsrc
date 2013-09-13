@@ -1,0 +1,5 @@
+MySQL and InnoDB transaction/status monitor. Like 'top' for MySQL. Displays
+queries, InnoDB transactions, lock waits, deadlocks, foreign key errors, open
+tables, replication status, buffer information, row operations, logs, I/O
+operations, load graph, and more. You can monitor many servers at once with
+innotop.
