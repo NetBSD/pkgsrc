@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/07/20 16:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/09/13 08:49:48 mef Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -31,6 +31,7 @@ SUBDIR+=	nec2c
 SUBDIR+=	tfkiss
 SUBDIR+=	tlf
 SUBDIR+=	tnt
+SUBDIR+=	trustedQSL
 SUBDIR+=	usrp
 SUBDIR+=	usrp-docs
 SUBDIR+=	wwl
