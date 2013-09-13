@@ -1,4 +1,8 @@
-$NetBSD: patch-src_xmlrpcpp_base64.h,v 1.1 2013/05/06 14:49:32 joerg Exp $
+$NetBSD: patch-src_xmlrpcpp_base64.h,v 1.2 2013/09/13 06:35:55 mef Exp $
+
+Avoid implicit conversions to bool for streams.
+Require C++11 for Clang and prefer std version over tr1 when in C++11
+mode.
 
 --- src/xmlrpcpp/base64.h.orig	2013-05-03 14:39:47.000000000 +0000
 +++ src/xmlrpcpp/base64.h
