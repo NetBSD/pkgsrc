@@ -1,0 +1,14 @@
+$NetBSD: patch-makefile,v 1.1 2013/09/13 14:24:28 fhajny Exp $
+
+Pass our LDFLAGS.
+--- makefile.orig	2013-06-14 11:27:32.000000000 +0000
++++ makefile
+@@ -15,7 +15,7 @@ PLATS= macosx linux win32 mingw
+ all: $(PLAT)
+ 
+ $(PLATS) none install install-unix local clean:
+-	$(MAKE) -C src $@
++	$(MAKE) -C src $@ MYLDFLAGS="$(LDFLAGS)"
+ 
+ print:
+ 	$(MAKE) -C src $@
