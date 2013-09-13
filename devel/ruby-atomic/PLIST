@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/13 12:59:41 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/atomic.gemspec
+${GEM_LIBDIR}/examples/atomic_example.rb
+${GEM_LIBDIR}/examples/bench_atomic.rb
+${GEM_LIBDIR}/examples/bench_atomic_1.rb
+${GEM_LIBDIR}/examples/graph_atomic_bench.rb
+${GEM_LIBDIR}/ext/AtomicReferenceService.java
+${GEM_LIBDIR}/ext/atomic_reference.c
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/org/jruby/ext/atomic/AtomicReferenceLibrary.java
+${GEM_LIBDIR}/lib/atomic.rb
+${GEM_LIBDIR}/lib/atomic/concurrent_update_error.rb
+${GEM_LIBDIR}/lib/atomic/delegated_update.rb
+${GEM_LIBDIR}/lib/atomic/direct_update.rb
+${GEM_LIBDIR}/lib/atomic/fallback.rb
+${GEM_LIBDIR}/lib/atomic/jruby.rb
+${GEM_LIBDIR}/lib/atomic/numeric_cas_wrapper.rb
+${GEM_LIBDIR}/lib/atomic/rbx.rb
+${GEM_LIBDIR}/lib/atomic/ruby.rb
+${GEM_LIBDIR}/lib/atomic_reference.${RUBY_DLEXT}
+${GEM_LIBDIR}/test/test_atomic.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
