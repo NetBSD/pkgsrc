@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3441 2013/09/13 11:12:37 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3442 2013/09/13 11:17:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/p5-Unix-Statgrab version 0.101 [sno 2013-09-13]
 	Updated lang/parrot to 5.7.0 [sno 2013-09-13]
 	Added net/rabbitmq-c version 0.4.1 [fhajny 2013-09-13]
+	Added lang/nqp version 2013.08 [sno 2013-09-13]
