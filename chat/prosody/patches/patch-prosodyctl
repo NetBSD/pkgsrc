@@ -1,0 +1,14 @@
+$NetBSD: patch-prosodyctl,v 1.1 2013/09/13 14:37:49 fhajny Exp $
+
+Fix Lua code.
+--- prosodyctl.orig	2013-09-09 10:32:23.000000000 +0000
++++ prosodyctl
+@@ -243,7 +243,7 @@ end
+ local modulemanager = require "core.modulemanager"
+ 
+ local prosodyctl = require "util.prosodyctl"
+-require "socket"
++local socket = require "socket"
+ -----------------------
+ 
+  -- FIXME: Duplicate code waiting for util.startup
