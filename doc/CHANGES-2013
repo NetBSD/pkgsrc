@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3448 2013/09/13 11:45:35 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3449 2013/09/13 11:54:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_47 to 4.7.15 [taca 2013-09-13]
 	Updated www/typo3_60 to 6.0.10 [taca 2013-09-13]
 	Added www/ap2-xsendfile version 0.12 [fhajny 2013-09-13]
+	Added www/typo3_61 version 6.1.5 [taca 2013-09-13]
