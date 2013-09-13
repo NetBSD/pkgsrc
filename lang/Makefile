@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.356 2013/09/13 12:15:40 sno Exp $
+# $NetBSD: Makefile,v 1.357 2013/09/13 22:04:07 schmonz Exp $
 #
 
 COMMENT=	Programming languages
@@ -156,7 +156,7 @@ SUBDIR+=	python32
 SUBDIR+=	python33
 SUBDIR+=	racket
 SUBDIR+=	racket-textual
-SUBDIR+=	raduko-star
+SUBDIR+=	rakudo-star
 SUBDIR+=	rcfunge
 SUBDIR+=	rexx-imc
 SUBDIR+=	rexx-regina
