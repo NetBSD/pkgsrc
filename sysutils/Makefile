@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.585 2013/09/13 08:51:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.586 2013/09/13 10:32:16 sno Exp $
 #
 
 COMMENT=	System utilities
@@ -346,6 +346,7 @@ SUBDIR+=	p5-Sys-Syslog
 SUBDIR+=	p5-Sys-Utmp
 SUBDIR+=	p5-UPS-Nut
 SUBDIR+=	p5-Unix-ConfigFile
+SUBDIR+=	p5-Unix-Statgrab
 SUBDIR+=	p5-Unix-Syslog
 SUBDIR+=	pciutils
 SUBDIR+=	pcmanfm
