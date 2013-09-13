@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2009/10/22 12:59:58 he Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2013/09/13 10:40:59 sno Exp $
 lib/libparrot.dylib
-lib/libparrot.dylib.${VERSION}
+lib/libparrot.${PARROT_VERSION}.dylib

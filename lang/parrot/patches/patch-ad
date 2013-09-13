@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.6 2011/04/06 11:22:57 he Exp $
+$NetBSD: patch-ad,v 1.7 2013/09/13 10:40:59 sno Exp $
 
 Allow parrot to detect perldoc when run as root.  Perldoc changes
 uid to 'nobody', 'nouser' or uid -2 when run as root, so it won't
 be able to write files created by root with mode 0600 (or create new
 files in directories owned by root mode 0755).
 
---- config/auto/perldoc.pm.orig	2011-03-15 08:01:43.000000000 +0000
+--- config/auto/perldoc.pm.orig	2013-04-30 19:11:28.000000000 +0000
 +++ config/auto/perldoc.pm
 @@ -38,7 +38,9 @@ sub runstep {
-     my $slash = $conf->data->get('slash');
-     my $cmd = $conf->data->get('scriptdirexp_provisional') . $slash . q{perldoc};
+ 
+     my $cmd = File::Spec->catfile($conf->data->get('scriptdirexp_provisional'), q{perldoc});
      my ( $fh, $filename ) = tempfile( UNLINK => 1 );
 -    my $content = capture_output("$cmd -ud $filename perldoc") || undef;
 +    my($stdout, $stderr, $retval) =

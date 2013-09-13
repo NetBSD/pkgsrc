@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2013/09/13 10:40:59 sno Exp $
 #
 
-VERSION=		4.8.0
-RTYPE=			devel
-DISTNAME=		parrot-${VERSION}
-PKGREVISION=		4
+DISTNAME=		parrot-${PARROT_VERSION}
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${RTYPE}/${VERSION}/
+MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${PARROT_RTYPE}/${PARROT_VERSION}/
 
 MAINTAINER=		he@NetBSD.org
 HOMEPAGE=		http://www.parrotcode.org/
@@ -14,7 +11,7 @@ COMMENT=		Virtual machine made to run Perl 6 and other languages
 LICENSE=		artistic-2.0
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl gmake
 PTHREAD_OPTS+=		require
 BUILD_TARGET=		world
 TEST_TARGET=		test
@@ -27,7 +24,11 @@ CONFIG_SHELL=		perl
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			--icu-config=${PREFIX}/bin/icu-config \
+			--without-opengl --without-pcre \
+			--without-zlib \
+			--without-libffi \
 			--optimize
+# --without-llvm
 
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	post-configure
@@ -39,7 +40,8 @@ SUBST_SED.pthread+=	-e '/^CFLAGS /s|$$|${PTHREAD_CFLAGS:Q}|'
 SUBST_SED.pthread+=	-e '/^LINKFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 SUBST_SED.pthread+=	-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 
-PLIST_SUBST+=		VERSION=${VERSION:Q}
+PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
+PRINT_PLIST_AWK+=        { gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 # Default this to ELF shared libs with .so,
 # Darwin has PLIST.Darwin which gets included automatically.
@@ -80,9 +82,10 @@ CHECK_WRKREF_SKIP+=	bin/parrot_nci_thunk_gen
 CHECK_WRKREF_SKIP+=	bin/pbc_merge
 CHECK_WRKREF_SKIP+=	bin/pbc_to_exe
 CHECK_WRKREF_SKIP+=	bin/winxed
-CHECK_WRKREF_SKIP+=	lib/parrot/${VERSION}/include/config.fpmc
-CHECK_WRKREF_SKIP+=	lib/parrot/${VERSION}/parrot_config.o
-CHECK_WRKREF_SKIP+=	lib/parrot/${VERSION}/tools/lib/Parrot/Config/Generated.pm
+CHECK_WRKREF_SKIP+=	lib/parrot/${PARROT_VERSION}/include/config.fpmc
+CHECK_WRKREF_SKIP+=	lib/parrot/${PARROT_VERSION}/parrot_config.o
+CHECK_WRKREF_SKIP+=	lib/parrot/${PARROT_VERSION}/tools/lib/Parrot/Config/Generated.pm
+CHECK_WRKREF_SKIP+=	src/parrot/${PARROT_VERSION}/config_lib.pir
 
 # Does relink internally, so allow local rpath entries
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}
@@ -90,6 +93,7 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}
 pre-install:
 	${CHMOD} -R g-w ${WRKSRC}
 
+.include "../../lang/parrot/version.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
