@@ -1,10 +1,14 @@
-$NetBSD: patch-src_spot_notify.cxx,v 1.1 2013/05/06 14:49:32 joerg Exp $
+$NetBSD: patch-src_spot_notify.cxx,v 1.2 2013/09/13 06:35:55 mef Exp $
 
---- src/spot/notify.cxx.orig	2013-05-03 14:35:28.000000000 +0000
-+++ src/spot/notify.cxx
-@@ -33,7 +33,10 @@
- #include <cctype>
- #include <cstdlib>
+Avoid implicit conversions to bool for streams.
+Require C++11 for Clang and prefer std version over tr1 when in C++11
+mode.
+
+--- src/spot/notify.cxx.orig	2013-07-06 20:54:45.000000000 +0900
++++ src/spot/notify.cxx	2013-07-07 15:25:39.000000000 +0900
+@@ -35,7 +35,10 @@
+ 
+ #include "timeops.h"
  
 -#if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 1)
 +#if __cplusplus >= 201103L
