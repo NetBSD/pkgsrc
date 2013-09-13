@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1773 2013/09/09 14:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.1774 2013/09/13 08:10:43 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1341,6 +1341,7 @@ SUBDIR+=	php-gettext
 SUBDIR+=	php-gmp
 SUBDIR+=	php-libawl
 SUBDIR+=	php-memcache
+SUBDIR+=	php-memcached
 SUBDIR+=	php-mode
 SUBDIR+=	php-opcache
 SUBDIR+=	php-pcntl
@@ -1411,6 +1412,7 @@ SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-libevent-rpcgen
+SUBDIR+=	py-libmc
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
