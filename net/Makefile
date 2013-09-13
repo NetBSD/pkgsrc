@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.976 2013/09/06 11:02:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.977 2013/09/13 11:13:47 fhajny Exp $
 #
 
 COMMENT=	Networking tools
@@ -557,6 +557,7 @@ SUBDIR+=	quvi
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	rabbiter
 SUBDIR+=	rabbitmq
+SUBDIR+=	rabbitmq-c
 SUBDIR+=	radiusclient-ng
 SUBDIR+=	radiusd-cistron
 SUBDIR+=	rancid
