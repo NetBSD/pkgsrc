@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/09/12 10:50:28 tron Exp $
+# $NetBSD: Makefile,v 1.23 2013/09/13 15:00:43 joerg Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -63,6 +63,11 @@ CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86_64-darwin8-gcc
 .    endif
 .  endif
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
 .endif
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH}
