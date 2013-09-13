@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3434 2013/09/13 08:49:48 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3435 2013/09/13 08:51:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/php-http version 1.7.6 [fhajny 2013-09-13]
 	Added databases/innotop version 1.9.1 [fhajny 2013-09-13]
 	Added ham/trustedQSL version 2.0rc3 [mef 2013-09-13]
+	Added sysutils/manifold version 0.2.0 [fhajny 2013-09-13]
