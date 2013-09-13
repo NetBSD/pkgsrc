@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3437 2013/09/13 10:15:50 sno Exp $
+$NetBSD: CHANGES-2013,v 1.3438 2013/09/13 10:27:23 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/manifold version 0.2.0 [fhajny 2013-09-13]
 	Updated devel/libstatgrab to 0.90 [sno 2013-09-13]
 	Updated sysutils/swapd to 1.0.3nb2 [sno 2013-09-13]
+	Updated devel/p5-Config-AutoConf to 0.22 [sno 2013-09-13]
