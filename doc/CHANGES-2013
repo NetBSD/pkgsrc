@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3469 2013/09/13 22:05:17 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.3470 2013/09/14 03:40:23 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4910,3 +4910,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/xmltooling to 1.5.3 [pettai 2013-09-13]
 	Updated security/opensaml to 2.5.3 [pettai 2013-09-13]
 	Updated security/opendnssec to 1.4.2 [pettai 2013-09-13]
+	Updated security/dropbear to 2013.58 [mspo 2013-09-14]
