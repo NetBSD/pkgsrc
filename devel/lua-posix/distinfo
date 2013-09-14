@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+
+SHA1 (luaposix-release-v31.tar.gz) = 8cce36b34f7b1742b14e989f26f021e14053a6dd
+RMD160 (luaposix-release-v31.tar.gz) = 4a3f893f34a96570627a3840ac99a8088e230b82
+Size (luaposix-release-v31.tar.gz) = 528979 bytes
+SHA1 (patch-config.h.in) = 37315685228cddfd6972c2d65684fdcfcf7407eb
+SHA1 (patch-configure) = 82e396c05fc2973181eb49b68ebdc0caf2c36d74
+SHA1 (patch-ext_curses_curses.c) = fd06c59d4d4f8f69eed4233a995841496e786d32
+SHA1 (patch-ext_posix_posix.c) = f2ec88b0be842af327c13c0898de1bfe0d165477
