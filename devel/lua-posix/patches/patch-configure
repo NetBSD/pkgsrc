@@ -1,0 +1,95 @@
+$NetBSD: patch-configure,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+
+--- configure.orig	2013-09-09 07:15:14.000000000 +0000
++++ configure
+@@ -1899,6 +1899,52 @@ $as_echo "$ac_res" >&6; }
+   eval $as_lineno_stack; ${as_lineno_stack:+:} unset as_lineno
+ 
+ } # ac_fn_c_check_func
++
++# ac_fn_c_check_decl LINENO SYMBOL VAR INCLUDES
++# ---------------------------------------------
++# Tests whether SYMBOL is declared in INCLUDES, setting cache variable VAR
++# accordingly.
++ac_fn_c_check_decl ()
++{
++  as_lineno=${as_lineno-"$1"} as_lineno_stack=as_lineno_stack=$as_lineno_stack
++  as_decl_name=`echo $2|sed 's/ *(.*//'`
++  as_decl_use=`echo $2|sed -e 's/(/((/' -e 's/)/) 0&/' -e 's/,/) 0& (/g'`
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $as_decl_name is declared" >&5
++$as_echo_n "checking whether $as_decl_name is declared... " >&6; }
++if eval \${$3+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++$4
++int
++main ()
++{
++#ifndef $as_decl_name
++#ifdef __cplusplus
++  (void) $as_decl_use;
++#else
++  (void) $as_decl_name;
++#endif
++#endif
++
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++  eval "$3=yes"
++else
++  eval "$3=no"
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++eval ac_res=\$$3
++	       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
++$as_echo "$ac_res" >&6; }
++  eval $as_lineno_stack; ${as_lineno_stack:+:} unset as_lineno
++
++} # ac_fn_c_check_decl
+ cat >config.log <<_ACEOF
+ This file contains any messages produced by compilers while
+ running configure, to aid debugging if configure makes a mistake.
+@@ -12865,7 +12911,7 @@ $as_echo "#define HAVE_CRYPT /**/" >>con
+ fi
+ 
+ 
+-for ac_func in strlcpy statvfs
++for ac_func in strlcpy statvfs, mkdtemp
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
+@@ -12878,6 +12924,28 @@ fi
+ done
+ 
+ 
++ac_fn_c_check_decl "$LINENO" "AI_V4MAPPED" "ac_cv_have_decl_AI_V4MAPPED" "$ac_includes_default"
++if test "x$ac_cv_have_decl_AI_V4MAPPED" = xyes; then :
++  ac_have_decl=1
++else
++  ac_have_decl=0
++fi
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_DECL_AI_V4MAPPED $ac_have_decl
++_ACEOF
++ac_fn_c_check_decl "$LINENO" "AI_ALL" "ac_cv_have_decl_AI_ALL" "$ac_includes_default"
++if test "x$ac_cv_have_decl_AI_ALL" = xyes; then :
++  ac_have_decl=1
++else
++  ac_have_decl=0
++fi
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_DECL_AI_ALL $ac_have_decl
++_ACEOF
++
++
+ if test Darwin != `uname`; then
+   # FIXME: Make -lrt conditional on _XOPEN_REALTIME
+   POSIX_EXTRA_CFLAGS=-D_XOPEN_SOURCE=700
