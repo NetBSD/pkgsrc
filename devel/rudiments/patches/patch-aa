@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2011/10/28 11:23:22 fhajny Exp $
+$NetBSD: patch-aa,v 1.6 2013/09/14 09:14:08 fhajny Exp $
 
+Link when linking.
 --- configure.orig	2011-08-03 10:33:54.000000000 +0000
 +++ configure
 @@ -22414,7 +22414,7 @@ mlockall(0);
