@@ -1,0 +1,14 @@
+$NetBSD: patch-config.h.in,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+
+--- config.h.in.orig	2013-09-09 07:15:14.000000000 +0000
++++ config.h.in
+@@ -66,6 +66,9 @@
+ /* Define to 1 if you have the `statvfs' function. */
+ #undef HAVE_STATVFS
+ 
++/* Define to 1 if you have the `mkdtemp' function. */
++#undef HAVE_MKDTEMP
++
+ /* Define to 1 if you have the <stdint.h> header file. */
+ #undef HAVE_STDINT_H
+ 
