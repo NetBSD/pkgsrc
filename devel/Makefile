@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1775 2013/09/13 13:00:25 taca Exp $
+# $NetBSD: Makefile,v 1.1776 2013/09/14 09:08:11 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -222,6 +222,7 @@ SUBDIR+=	gdb
 SUBDIR+=	gdb6
 SUBDIR+=	gdbus-codegen
 SUBDIR+=	gdl
+SUBDIR+=	gdl3
 SUBDIR+=	geany
 SUBDIR+=	generate
 SUBDIR+=	gentle
@@ -455,6 +456,7 @@ SUBDIR+=	lua-lrexlib-pcre
 SUBDIR+=	lua-lrexlib-posix
 SUBDIR+=	lua-mode
 SUBDIR+=	lua-penlight
+SUBDIR+=	lua-posix
 SUBDIR+=	lua-stdlib
 SUBDIR+=	lua-stdlib-doc
 SUBDIR+=	lutok
