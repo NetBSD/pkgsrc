@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/04 16:28:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/14 13:55:58 wiz Exp $
 bin/freeDiameterd
 bin/freeDiameterd-${PKGVERSION}
 ${PLIST.ext}bin/freediameter-sip-ppr
@@ -15,8 +15,14 @@ ${PLIST.ext}lib/freeDiameter/app_radgw.fdx
 ${PLIST.ext}lib/freeDiameter/app_redirect.fdx
 ${PLIST.ext}lib/freeDiameter/app_sip.fdx
 ${PLIST.ext}lib/freeDiameter/auth.rgwx
+lib/freeDiameter/dbg_monitor.fdx
+lib/freeDiameter/dbg_msg_dumps.fdx
+lib/freeDiameter/dbg_msg_timings.fdx
+lib/freeDiameter/dbg_rt.fdx
 ${PLIST.ext}lib/freeDiameter/debug.rgwx
 lib/freeDiameter/dict_dcca.fdx
+lib/freeDiameter/dict_dcca_3gpp.fdx
+lib/freeDiameter/dict_dcca_starent.fdx
 lib/freeDiameter/dict_eap.fdx
 ${PLIST.ext}lib/freeDiameter/dict_legacy_xml.fdx
 lib/freeDiameter/dict_mip6a.fdx
@@ -27,15 +33,18 @@ lib/freeDiameter/dict_rfc5777.fdx
 lib/freeDiameter/dict_sip.fdx
 ${PLIST.ext}lib/freeDiameter/eap_identity.emp
 ${PLIST.ext}lib/freeDiameter/echodrop.rgwx
+lib/freeDiameter/rt_busypeers.fdx
 lib/freeDiameter/rt_default.fdx
 ${PLIST.ext}lib/freeDiameter/rt_ereg.fdx
+lib/freeDiameter/rt_ignore_dh.fdx
+lib/freeDiameter/rt_load_balance.fdx
 lib/freeDiameter/rt_redirect.fdx
 lib/libfdcore.so
 lib/libfdcore.so.${PKGVERSION}
-lib/libfdcore.so.5
+lib/libfdcore.so.6
 lib/libfdproto.so
 lib/libfdproto.so.${PKGVERSION}
-lib/libfdproto.so.5
+lib/libfdproto.so.6
 share/examples/freeDiameter/acl_wl.conf.sample
 share/examples/freeDiameter/app_acct.conf.sample
 share/examples/freeDiameter/app_diameap.conf.sample
@@ -49,6 +58,7 @@ share/examples/freeDiameter/dict_legacy_xml.conf.sample
 share/examples/freeDiameter/eap_tls_plugin.diameap.conf.sample
 share/examples/freeDiameter/echodrop.rgwx.conf.sample
 share/examples/freeDiameter/freediameter.conf.sample
+share/examples/freeDiameter/rt_busypeers.conf.sample
 share/examples/freeDiameter/rt_default.conf.sample
 share/examples/freeDiameter/rt_ereg.conf.sample
 share/examples/freeDiameter/single_host/freeDiameter-1.conf
