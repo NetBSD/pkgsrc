@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3473 2013/09/14 07:02:54 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.3474 2013/09/14 07:06:55 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4914,3 +4914,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/log2timeline to 0.65 [pettai 2013-09-14]
 	Updated devel/userspace-rcu to 0.7.8 [pettai 2013-09-14]
 	Updated security/ykclient to 2.11 [pettai 2013-09-14]
+	Updated security/ykpers to 1.14.0 [pettai 2013-09-14]
