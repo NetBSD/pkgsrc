@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+
+* NetBSD does not support AI_V4MAPPED and AI_ALL.
+* Do not include this patch to distinfo, make are confused (should be fixed).
+
+--- configure.ac.orig	2013-09-09 07:15:14.000000000 +0000
++++ configure.ac
+@@ -87,7 +87,10 @@ AC_SEARCH_LIBS([crypt], [crypt],
+   [AC_DEFINE([HAVE_CRYPT], [], [Define this if your system has a crypt() function])])
+ 
+ dnl Check for functions
+-AC_CHECK_FUNCS([strlcpy statvfs])
++AC_CHECK_FUNCS([strlcpy statvfs, mkdtemp])
++
++dnl Check for definitions
++AC_CHECK_DECLS([AI_V4MAPPED, AI_ALL])
+ 
+ dnl Compiler flags for POSIX
+ dnl Get this from autotools/gnulib
