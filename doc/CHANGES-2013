@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3477 2013/09/14 09:14:15 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3478 2013/09/14 09:17:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4918,3 +4918,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/oath-toolkit to 2.4.0 [pettai 2013-09-14]
 	Added devel/lua-posix version 31 [ryoon 2013-09-14]
 	Updated devel/rudiments to 0.42 [fhajny 2013-09-14]
+	Updated graphics/gifsicle to 1.71 [adam 2013-09-14]
