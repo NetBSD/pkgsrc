@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.9 2013/05/20 06:21:22 adam Exp $
+# $NetBSD: options.mk,v 1.10 2013/09/14 14:11:25 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nmap
 
-PKG_SUPPORTED_OPTIONS=	inet6 ndiff zenmap
+PKG_SUPPORTED_OPTIONS=	inet6 ndiff zenmap lua
 PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	ndiff zenmap
+PLIST_VARS+=	ndiff zenmap lua
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
@@ -45,4 +45,12 @@ REPLACE_PYTHON+=	zenmap/zenmapGUI/higwidgets/*.py
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .else
 CONFIGURE_ARGS+=	--without-zenmap
+.endif
+
+.if !empty(PKG_OPTIONS:Mlua)
+.include "../../lang/lua/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-liblua=${LOCALBASE}
+PLIST.lua=		yes
+.else
+CONFIGURE_ARGS+=	--without-liblua
 .endif
