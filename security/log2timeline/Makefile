@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/05/31 12:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/14 06:35:15 pettai Exp $
 #
 
 DISTNAME=	log2timeline_${L2T_VERSION}
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://log2timeline.net/files/
+MASTER_SITES=	http://log2timeline.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pettai@NetBSD.org
@@ -13,7 +12,18 @@ HOMEPAGE=	http://log2timeline.net/
 COMMENT=	Framework for automatic creation of a super timeline
 LICENSE=	gnu-gpl-v3
 
-L2T_VERSION=	0.64
+L2T_VERSION=	0.65
+
+REPLACE_PERL=	lib/Log2t/BinRead.pm
+REPLACE_PERL=	lib/Log2t/Common.pm
+REPLACE_PERL=	lib/Log2t/Network.pm
+REPLACE_PERL=	lib/Log2t/Numbers.pm
+REPLACE_PERL=	lib/Log2t/Time.pm
+REPLACE_PERL=	lib/Log2t/Win.pm
+REPLACE_PERL=	lib/Log2t/WinReg.pm
+REPLACE_PERL=	lib/Log2t/input/ff_cache.pm
+REPLACE_PERL=	lib/Log2t/input/safari.pm
+REPLACE_PERL=	l2t_process_old.pl
 
 DEPENDS+=	p5-Archive-Zip>=1.18:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Carp-Assert>=0:../../devel/p5-Carp-Assert
@@ -39,7 +49,6 @@ DEPENDS+=	p5-Parse-Win32Registry>=0:../../misc/p5-Parse-Win32Registry
 DEPENDS+=	p5-XML-LibXML>=0:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-version>=0:../../devel/p5-version
 
-WRKSRC=		${WRKDIR}/log2timeline
 PERL5_PACKLIST=	auto/Log2t/.packlist
 USE_LANGUAGES=	# none
 
