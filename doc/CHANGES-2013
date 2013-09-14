@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3480 2013/09/14 14:13:04 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.3481 2013/09/14 16:45:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4921,3 +4921,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gifsicle to 1.71 [adam 2013-09-14]
 	Updated net/freeDiameter to 1.2.0 [wiz 2013-09-14]
 	Updated net/nmap to 6.40 [drochner 2013-09-14]
+	Updated graphics/png to 1.6.5 [wiz 2013-09-14]
