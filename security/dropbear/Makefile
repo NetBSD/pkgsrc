@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2012/10/23 18:16:26 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/09/14 03:40:01 mspo Exp $
 
-DISTNAME=	dropbear-2012.55
+DISTNAME=	dropbear-2013.58
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 
@@ -10,6 +10,7 @@ COMMENT=	Small SSH2 server and client, aimed at embedded market
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+EXTRACT_SUFX=	.tar.bz2
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
@@ -45,6 +46,10 @@ CPPFLAGS+=		-D_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
 CPPFLAGS+=-DXAUTH_COMMAND="\"${X11BASE}/bin/xauth\""
 .else
 CPPFLAGS+=-DXAUTH_COMMAND="\"${X11PREFIX}/bin/xauth\""
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=	-DHAVE_NETINET_IN_SYSTM_H
 .endif
 
 INSTALLATION_DIRS=	share/doc/dropbear ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
