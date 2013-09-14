@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3475 2013/09/14 07:47:12 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.3476 2013/09/14 09:07:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4916,3 +4916,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ykclient to 2.11 [pettai 2013-09-14]
 	Updated security/ykpers to 1.14.0 [pettai 2013-09-14]
 	Updated security/oath-toolkit to 2.4.0 [pettai 2013-09-14]
+	Added devel/lua-posix version 31 [ryoon 2013-09-14]
