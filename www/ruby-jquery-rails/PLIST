@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2013/02/11 14:43:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/09/15 17:22:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSIONS.md
 ${GEM_LIBDIR}/jquery-rails.gemspec
 ${GEM_LIBDIR}/lib/generators/jquery/install/install_generator.rb
 ${GEM_LIBDIR}/lib/jquery-rails.rb
@@ -14,8 +16,6 @@ ${GEM_LIBDIR}/lib/jquery/rails.rb
 ${GEM_LIBDIR}/lib/jquery/rails/engine.rb
 ${GEM_LIBDIR}/lib/jquery/rails/railtie.rb
 ${GEM_LIBDIR}/lib/jquery/rails/version.rb
-${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.js
-${GEM_LIBDIR}/vendor/assets/javascripts/jquery-ui.min.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.min.js
 ${GEM_LIBDIR}/vendor/assets/javascripts/jquery.min.map
