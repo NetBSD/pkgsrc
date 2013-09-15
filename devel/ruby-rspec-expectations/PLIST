@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/03/11 07:47:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/09/15 10:14:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/features/diffing.feature
 ${GEM_LIBDIR}/features/implicit_docstrings.feature
 ${GEM_LIBDIR}/features/step_definitions/additional_cli_steps.rb
 ${GEM_LIBDIR}/features/support/env.rb
+${GEM_LIBDIR}/features/support/rubinius.rb
 ${GEM_LIBDIR}/features/syntax_configuration.feature
 ${GEM_LIBDIR}/features/test_frameworks/test_unit.feature
 ${GEM_LIBDIR}/lib/rspec-expectations.rb
@@ -86,6 +87,7 @@ ${GEM_LIBDIR}/lib/rspec/matchers/matcher.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/method_missing.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/operator_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/pretty.rb
+${GEM_LIBDIR}/lib/rspec/matchers/test_unit_integration.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/differ_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/expectation_target_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/extensions/kernel_spec.rb
