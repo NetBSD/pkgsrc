@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3494 2013/09/15 10:27:05 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3495 2013/09/15 13:07:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-stomp to 1.2.16 [taca 2013-09-15]
 	Updated devel/ruby-thor to 0.18.1 [taca 2013-09-15]
 	Updated devel/ruby2ruby to 2.0.6 [taca 2013-09-15]
+	Updated devel/p5-Module-Build-Tiny to 0.027 [wiz 2013-09-15]
