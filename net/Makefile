@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.977 2013/09/13 11:13:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.978 2013/09/15 18:47:46 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -579,6 +579,7 @@ SUBDIR+=	ruby-amq-protocol
 SUBDIR+=	ruby-amqp
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-domain_name
+SUBDIR+=	ruby-em-socksify
 SUBDIR+=	ruby-icmp
 SUBDIR+=	ruby-net-ldap
 SUBDIR+=	ruby-net-ping
