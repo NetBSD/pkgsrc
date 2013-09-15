@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3481 2013/09/14 16:45:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3482 2013/09/15 09:56:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/freeDiameter to 1.2.0 [wiz 2013-09-14]
 	Updated net/nmap to 6.40 [drochner 2013-09-14]
 	Updated graphics/png to 1.6.5 [wiz 2013-09-14]
+	Updated devel/ruby-fast_gettext to 0.8.0 [taca 2013-09-15]
