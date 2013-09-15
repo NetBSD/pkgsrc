@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/09/12 10:33:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2013/09/15 13:03:27 wiz Exp $
 
 DISTNAME=	mdocml-1.12.0
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
 MAINTAINER=	kristaps@kth.se
 HOMEPAGE=	http://mdocml.bsd.lv/
-COMMENT=	Man page tool (mdoc macro compiler)
+COMMENT=	Convert man pages from mdoc, man, and tbl to txt, html, ps, or pdf
 LICENSE=	2-clause-bsd # not exactly, but near enough
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} DBLIB=${BDB_LIBS:Q}
