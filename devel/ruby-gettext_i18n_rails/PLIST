@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/02/11 02:53:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/09/15 10:01:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -7,14 +7,6 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Readme.md
-${GEM_LIBDIR}/gemfiles/rails.2.3.gemfile
-${GEM_LIBDIR}/gemfiles/rails.2.3.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails.3.0.gemfile
-${GEM_LIBDIR}/gemfiles/rails.3.0.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails.3.1.gemfile
-${GEM_LIBDIR}/gemfiles/rails.3.1.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails.3.2.gemfile
-${GEM_LIBDIR}/gemfiles/rails.3.2.gemfile.lock
 ${GEM_LIBDIR}/gemfiles/rails23.gemfile
 ${GEM_LIBDIR}/gemfiles/rails23.gemfile.lock
 ${GEM_LIBDIR}/gemfiles/rails30.gemfile
