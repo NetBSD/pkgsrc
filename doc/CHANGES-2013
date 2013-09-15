@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3524 2013/09/15 17:04:21 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3525 2013/09/15 17:15:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4976,3 +4976,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-cookiejar version 0.3.0 [taca 2013-09-15]
 	Updated www/ruby-css-parser to 1.3.5 [taca 2013-09-15]
 	Added www/ruby-http-cookie version 1.0.2 [taca 2013-09-15]
+	Added misc/ruby-colorator version 0.1 [taca 2013-09-15]
