@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3535 2013/09/15 17:35:12 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3536 2013/09/15 17:37:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-setuptools to 1.1.5 [wiz 2013-09-15]
 	Updated devel/libntlm to 1.4 [wiz 2013-09-15]
 	Updated www/ruby-net-http-digest_auth to 1.4 [taca 2013-09-15]
+	Updated www/ruby-net-http-persistent to 2.9 [taca 2013-09-15]
