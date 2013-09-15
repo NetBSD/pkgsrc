@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/03/11 09:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/09/15 13:47:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/Rakefile
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/test/files/not_an_image.php
 ${GEM_LIBDIR}/test/files/png.png
 ${GEM_LIBDIR}/test/files/simple-minus.gif
 ${GEM_LIBDIR}/test/files/simple.gif
+${GEM_LIBDIR}/test/files/special! "chars'.gif
 ${GEM_LIBDIR}/test/files/trogdor.jpg
 ${GEM_LIBDIR}/test/files/trogdor_capitalized.JPG
 ${GEM_LIBDIR}/test/image_test.rb
