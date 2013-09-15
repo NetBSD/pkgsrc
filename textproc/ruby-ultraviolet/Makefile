@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/09/16 11:32:01 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/15 16:37:47 taca Exp $
 
-DISTNAME=	ultraviolet-1.0.0
+DISTNAME=	ultraviolet-1.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
