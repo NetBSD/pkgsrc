@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/06/16 10:04:09 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/09/15 18:25:49 taca Exp $
 
-SHA1 (padrino-mailer-0.11.2.gem) = 42db7e2874e868031eaa0d57f182dbfdad84fafc
-RMD160 (padrino-mailer-0.11.2.gem) = b3ca008fea60bbd7cd0e2c1f8eeac5dc0ba4fde4
-Size (padrino-mailer-0.11.2.gem) = 16384 bytes
+SHA1 (padrino-mailer-0.11.3.gem) = 23f2516b9af3ea1b55a3c864cccb2dfcdd0c8941
+RMD160 (padrino-mailer-0.11.3.gem) = dbbc56709656c2b7519735831c8928345382ee65
+Size (padrino-mailer-0.11.3.gem) = 16384 bytes
