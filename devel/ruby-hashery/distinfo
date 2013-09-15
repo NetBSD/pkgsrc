@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/12/16 16:25:00 taca Exp $
+$NetBSD: distinfo,v 1.3 2013/09/15 10:02:36 taca Exp $
 
-SHA1 (hashery-2.1.0.gem) = 3d9b15a3548513d745dfb553bf2aba0c74f72799
-RMD160 (hashery-2.1.0.gem) = 8129f308a406a8015d7780127b7e980819d51547
-Size (hashery-2.1.0.gem) = 37888 bytes
+SHA1 (hashery-2.1.1.gem) = b6e8c48979334013c508fa2af7af8ec40c335aed
+RMD160 (hashery-2.1.1.gem) = 9bc4b24215c36e618eb0f102db97ece8078ec48c
+Size (hashery-2.1.1.gem) = 43008 bytes
