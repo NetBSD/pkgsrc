@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/09 15:53:32 mef Exp $
+$NetBSD: distinfo,v 1.2 2013/09/15 14:07:29 taca Exp $
 
-SHA1 (args_parser-0.1.4.gem) = b091a93e58363ac97e944f8e91866ce9666ca81d
-RMD160 (args_parser-0.1.4.gem) = 37b891237990263497cb2095ce79e147ce7acbe7
-Size (args_parser-0.1.4.gem) = 9728 bytes
+SHA1 (args_parser-0.2.0.gem) = 66e63042acc599993179262052130d7e7321b58f
+RMD160 (args_parser-0.2.0.gem) = 501adf72e5d4aef6ab1c2a08c641648dcc138f33
+Size (args_parser-0.2.0.gem) = 10752 bytes
