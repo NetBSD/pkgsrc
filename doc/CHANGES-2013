@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3483 2013/09/15 09:59:56 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3484 2013/09/15 10:01:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4924,3 +4924,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/png to 1.6.5 [wiz 2013-09-14]
 	Updated devel/ruby-fast_gettext to 0.8.0 [taca 2013-09-15]
 	Updated devel/ruby-gettext to 3.0.0 [taca 2013-09-15]
+	Updated devel/ruby-gettext_i18n_rails to 0.10.1 [taca 2013-09-15]
