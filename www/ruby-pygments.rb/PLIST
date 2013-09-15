@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/15 23:47:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/15 17:18:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/CHANGES
 ${GEM_LIBDIR}/vendor/pygments-main/LICENSE
 ${GEM_LIBDIR}/vendor/pygments-main/MANIFEST.in
 ${GEM_LIBDIR}/vendor/pygments-main/Makefile
+${GEM_LIBDIR}/vendor/pygments-main/REVISION
 ${GEM_LIBDIR}/vendor/pygments-main/TODO
 ${GEM_LIBDIR}/vendor/pygments-main/docs/generate.py
 ${GEM_LIBDIR}/vendor/pygments-main/docs/pygmentize.1
@@ -39,6 +40,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/docs/src/formatters.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/index.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/installation.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/integrate.txt
+${GEM_LIBDIR}/vendor/pygments-main/docs/src/java.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/lexerdevelopment.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/lexers.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/moinmoin.txt
@@ -48,6 +50,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/docs/src/rstdirective.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/styles.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/tokens.txt
 ${GEM_LIBDIR}/vendor/pygments-main/docs/src/unicode.txt
+${GEM_LIBDIR}/vendor/pygments-main/external/autopygmentize
 ${GEM_LIBDIR}/vendor/pygments-main/external/lasso-builtins-generator-9.lasso
 ${GEM_LIBDIR}/vendor/pygments-main/external/markdown-processor.py
 ${GEM_LIBDIR}/vendor/pygments-main/external/moin-parser.py
@@ -93,6 +96,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/asm.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/compiled.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/dalvik.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/dotnet.py
+${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/foxpro.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/functional.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/github.py
 ${GEM_LIBDIR}/vendor/pygments-main/pygments/lexers/hdl.py
@@ -154,6 +158,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/dtds/HTMLsym.ent
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/ANTLRv3.g
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/AcidStateAdvanced.hs
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/AlternatingGroup.mu
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/BOM.js
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/CPDictionary.j
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/Config.in.cache
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/Constants.mo
@@ -174,9 +179,13 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/as3_test.as
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/as3_test2.as
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/as3_test3.as
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/aspx-cs_example
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/autoit_submit.au3
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/badcase.java
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/batchfile.bat
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/bigtest.nsi
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/boot-9.scm
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/ca65_example
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/cbmbas_example
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/cells.ps
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/ceval.c
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/cheetah_example.html
@@ -197,6 +206,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.bug
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.c
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.ceylon
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.cls
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.cob
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.cpp
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.gs
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.gst
@@ -211,16 +221,19 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.nim
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.ns2
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.p
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.pas
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.prg
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.rb
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.reg
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.rhtml
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.rkt
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.rpf
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.sh-session
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.shell-session
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.sml
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.snobol
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.stan
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.tea
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.ts
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.u
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.weechatlog
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/example.xhtml
@@ -265,6 +278,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/json.lasso9
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/lighttpd_config.conf
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/linecontinuation.py
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/livescript-demo.ls
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/logos_example.xm
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/ltmain.sh
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/main.cmake
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/markdown.lsp
@@ -272,9 +286,12 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/matlab_noreturn
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/matlab_sample
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/matlabsession_sample.txt
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/metagrammar.treetop
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/mg_sample.pro
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/minehunt.qml
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/minimal.ns2
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/moin_SyntaxReference.txt
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/multiline_regexes.rb
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/nanomsg.intr
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/nasm_aoutso.asm
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/nasm_objexe.asm
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/nemerle_sample.n
@@ -286,6 +303,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/perl_misc
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/perl_perl5db
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/perl_regex-delims
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/perlfunc.1
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/phpMyAdmin.spec
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/phpcomplete.vim
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/pleac.in.rb
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/postgresql_test.txt
@@ -306,6 +324,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/robotframework.txt
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/ruby_func_def.rb
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/rust_example.rs
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/scilab.sci
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/session.dylan-console
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/sibling.prolog
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/simple.md
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/smarty_example.html
@@ -349,6 +368,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.mod
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.moo
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.myt
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.nim
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.opa
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.pas
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.php
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.plot
@@ -364,11 +384,13 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.vb
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.vhdl
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.xqy
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test.xsl
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/test2.pypylog
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/truncated.pytb
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/type.lisp
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/underscore.coffee
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/unicode.applescript
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/unicodedoc.py
+${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/unix-io.lid
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/webkit-transition.css
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/while.pov
 ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/wiki.factor
@@ -377,6 +399,7 @@ ${GEM_LIBDIR}/vendor/pygments-main/tests/examplefiles/zmlrpc.f90
 ${GEM_LIBDIR}/vendor/pygments-main/tests/old_run.py
 ${GEM_LIBDIR}/vendor/pygments-main/tests/run.py
 ${GEM_LIBDIR}/vendor/pygments-main/tests/support.py
+${GEM_LIBDIR}/vendor/pygments-main/tests/support/tags
 ${GEM_LIBDIR}/vendor/pygments-main/tests/test_basic_api.py
 ${GEM_LIBDIR}/vendor/pygments-main/tests/test_clexer.py
 ${GEM_LIBDIR}/vendor/pygments-main/tests/test_cmdline.py
