@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/11 06:56:15 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/15 10:23:23 taca Exp $
 bin/catstomp
 bin/stompcat
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -49,6 +49,7 @@ ${GEM_LIBDIR}/lib/stomp/ext/hash.rb
 ${GEM_LIBDIR}/lib/stomp/message.rb
 ${GEM_LIBDIR}/lib/stomp/sslparams.rb
 ${GEM_LIBDIR}/lib/stomp/version.rb
+${GEM_LIBDIR}/notes/heartbeat_readme.txt
 ${GEM_LIBDIR}/spec/client_shared_examples.rb
 ${GEM_LIBDIR}/spec/client_spec.rb
 ${GEM_LIBDIR}/spec/connection_spec.rb
@@ -62,5 +63,6 @@ ${GEM_LIBDIR}/test/test_connection1p.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/test_message.rb
 ${GEM_LIBDIR}/test/test_ssl.rb
+${GEM_LIBDIR}/test/test_urlogin.rb
 ${GEM_LIBDIR}/test/tlogger.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
