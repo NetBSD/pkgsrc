@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3542 2013/09/15 18:09:59 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3543 2013/09/15 18:27:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4993,3 +4993,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-sass to 3.2.10 [taca 2013-09-15]
 	Updated www/ruby-raindrops to 0.12.0 [taca 2013-09-15]
 	Updated www/ruby-rack-rewrite to 1.4.01 [taca 2013-09-15]
+	Updated www/ruby-padrino-core to 0.11.3 [taca 2013-09-15]
+	Updated www/ruby-padrino-cache to 0.11.3 [taca 2013-09-15]
+	Updated www/ruby-padrino-gen to 0.11.3 [taca 2013-09-15]
+	Updated www/ruby-padrino-admin to 0.11.3 [taca 2013-09-15]
+	Updated www/ruby-padrino-mailer to 0.11.3 [taca 2013-09-15]
+	Updated www/ruby-padrino to 0.11.3 [taca 2013-09-15]
+	Updated www/ruby-padrino-helpers to 0.11.3 [taca 2013-09-15]
