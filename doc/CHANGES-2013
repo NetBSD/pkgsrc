@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3497 2013/09/15 13:20:42 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3498 2013/09/15 13:23:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4942,3 +4942,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Module-Build-Tiny to 0.027 [wiz 2013-09-15]
 	Updated devel/p5-Test-Warnings to 0.009 [wiz 2013-09-15]
 	Updated www/p5-Mojolicious to 4.37 [wiz 2013-09-15]
+	Updated ham/trustedQSL to 2.0rc5 [mef 2013-09-15]
