@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/01/12 07:15:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/15 09:56:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -22,10 +22,12 @@ ${GEM_LIBDIR}/benchmark/original.rb
 ${GEM_LIBDIR}/examples/db/migration.rb
 ${GEM_LIBDIR}/examples/missing_translation_logger.rb
 ${GEM_LIBDIR}/fast_gettext.gemspec
-${GEM_LIBDIR}/gemfiles/rails.2.gemfile
-${GEM_LIBDIR}/gemfiles/rails.2.gemfile.lock
-${GEM_LIBDIR}/gemfiles/rails.3.gemfile
-${GEM_LIBDIR}/gemfiles/rails.3.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails23.gemfile
+${GEM_LIBDIR}/gemfiles/rails23.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails32.gemfile
+${GEM_LIBDIR}/gemfiles/rails32.gemfile.lock
+${GEM_LIBDIR}/gemfiles/rails40.gemfile
+${GEM_LIBDIR}/gemfiles/rails40.gemfile.lock
 ${GEM_LIBDIR}/lib/fast_gettext.rb
 ${GEM_LIBDIR}/lib/fast_gettext/mo_file.rb
 ${GEM_LIBDIR}/lib/fast_gettext/po_file.rb
@@ -71,7 +73,9 @@ ${GEM_LIBDIR}/spec/fast_gettext/vendor/string_spec.rb
 ${GEM_LIBDIR}/spec/fast_gettext_spec.rb
 ${GEM_LIBDIR}/spec/fuzzy_locale/de/test.po
 ${GEM_LIBDIR}/spec/locale/de/LC_MESSAGES/test.mo
+${GEM_LIBDIR}/spec/locale/de/LC_MESSAGES/test2.mo
 ${GEM_LIBDIR}/spec/locale/de/test.po
+${GEM_LIBDIR}/spec/locale/de/test2.po
 ${GEM_LIBDIR}/spec/locale/en/LC_MESSAGES/plural_test.mo
 ${GEM_LIBDIR}/spec/locale/en/LC_MESSAGES/test.mo
 ${GEM_LIBDIR}/spec/locale/en/plural_test.po
@@ -79,6 +83,7 @@ ${GEM_LIBDIR}/spec/locale/en/test.po
 ${GEM_LIBDIR}/spec/locale/gsw_CH/LC_MESSAGES/test.mo
 ${GEM_LIBDIR}/spec/locale/gsw_CH/test.po
 ${GEM_LIBDIR}/spec/locale/yaml/de.yml
+${GEM_LIBDIR}/spec/locale/yaml/de2.yml
 ${GEM_LIBDIR}/spec/locale/yaml/en.yml
 ${GEM_LIBDIR}/spec/locale/yaml/notfound.yml
 ${GEM_LIBDIR}/spec/obsolete_locale/de/test.po
