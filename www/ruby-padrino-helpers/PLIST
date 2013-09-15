@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/16 10:04:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/15 18:25:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -45,6 +45,9 @@ ${GEM_LIBDIR}/lib/padrino-helpers/tag_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/translation_helpers.rb
 ${GEM_LIBDIR}/padrino-helpers.gemspec
 ${GEM_LIBDIR}/test/fixtures/markup_app/app.rb
+${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.erb
+${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.haml
+${GEM_LIBDIR}/test/fixtures/markup_app/views/button_to.slim
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/capture_concat.erb
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/capture_concat.haml
 ${GEM_LIBDIR}/test/fixtures/markup_app/views/capture_concat.slim
@@ -97,6 +100,7 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/template/haml_template.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/template/some_template.haml
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_asset_tag_helpers.rb
+${GEM_LIBDIR}/test/test_breadcrumb_helpers.rb
 ${GEM_LIBDIR}/test/test_form_builder.rb
 ${GEM_LIBDIR}/test/test_form_helpers.rb
 ${GEM_LIBDIR}/test/test_format_helpers.rb
