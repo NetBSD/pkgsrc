@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/02/11 02:06:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/09/15 14:58:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/LICENSE.txt
@@ -17,8 +17,8 @@ ${GEM_LIBDIR}/lib/net/ssh/authentication/key_manager.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/abstract.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/hostbased.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/keyboard_interactive.rb
-${GEM_LIBDIR}/lib/net/ssh/authentication/methods/password.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/none.rb
+${GEM_LIBDIR}/lib/net/ssh/authentication/methods/password.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/methods/publickey.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/pageant.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/session.rb
@@ -109,11 +109,14 @@ ${GEM_LIBDIR}/test/configs/host_plus
 ${GEM_LIBDIR}/test/configs/multihost
 ${GEM_LIBDIR}/test/configs/nohost
 ${GEM_LIBDIR}/test/configs/numeric_host
+${GEM_LIBDIR}/test/configs/send_env
+${GEM_LIBDIR}/test/configs/substitutes
 ${GEM_LIBDIR}/test/configs/wild_cards
 ${GEM_LIBDIR}/test/connection/test_channel.rb
 ${GEM_LIBDIR}/test/connection/test_session.rb
 ${GEM_LIBDIR}/test/known_hosts/github
 ${GEM_LIBDIR}/test/manual/test_forward.rb
+${GEM_LIBDIR}/test/start/test_options.rb
 ${GEM_LIBDIR}/test/start/test_transport.rb
 ${GEM_LIBDIR}/test/test_all.rb
 ${GEM_LIBDIR}/test/test_buffer.rb
