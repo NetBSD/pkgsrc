@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3489 2013/09/15 10:11:53 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3490 2013/09/15 10:18:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4930,3 +4930,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-i18n to 0.6.5 [taca 2013-09-15]
 	Updated devel/ruby-minitest to 5.0.7 [taca 2013-09-15]
 	Updated devel/ruby-parser to 3.2.2 [taca 2013-09-15]
+	Updated devel/ruby-rspec-core to 2.14.5 [taca 2013-09-15]
+	Updated devel/ruby-rspec-expectations to 2.14.2 [taca 2013-09-15]
+	Updated devel/ruby-rspec-mocks to 2.14.3 [taca 2013-09-15]
+	Updated devel/ruby-rspec to 2.14.1 [taca 2013-09-15]
+	Updated devel/ruby-rspec-rails to 2.14.0 [taca 2013-09-15]
