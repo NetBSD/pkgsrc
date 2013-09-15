@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.743 2013/09/15 16:27:40 taca Exp $
+# $NetBSD: Makefile,v 1.744 2013/09/15 16:31:47 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -690,6 +690,7 @@ SUBDIR+=	ruby-redcarpet
 SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-rison
 SUBDIR+=	ruby-rttool
+SUBDIR+=	ruby-safe_yaml
 SUBDIR+=	ruby-sary
 SUBDIR+=	ruby-simple-rss
 SUBDIR+=	ruby-stringex
