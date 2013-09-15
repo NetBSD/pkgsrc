@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3541 2013/09/15 18:08:33 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3542 2013/09/15 18:09:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4992,3 +4992,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-unicorn to 4.6.3 [taca 2013-09-15]
 	Updated www/ruby-sass to 3.2.10 [taca 2013-09-15]
 	Updated www/ruby-raindrops to 0.12.0 [taca 2013-09-15]
+	Updated www/ruby-rack-rewrite to 1.4.01 [taca 2013-09-15]
