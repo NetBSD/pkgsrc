@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/09/16 13:38:46 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/09/15 18:08:04 taca Exp $
 
-SHA1 (raindrops-0.10.0.gem) = 59a4e4f65509b7c3e6d2acbb027ec54557fb8ea3
-RMD160 (raindrops-0.10.0.gem) = 24acd26fc3d6092c8db86ed7f8d95c8c4a03afe1
-Size (raindrops-0.10.0.gem) = 74240 bytes
+SHA1 (raindrops-0.12.0.gem) = 0e37a1f560f0f88675a62d9bc611b8bc75604d56
+RMD160 (raindrops-0.12.0.gem) = a4a37884cd4d262a805c315cdb3940f819f3f08a
+Size (raindrops-0.12.0.gem) = 76800 bytes
