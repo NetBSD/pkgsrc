@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/02/11 04:17:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/09/15 15:56:12 taca Exp $
 bin/cap
 bin/capify
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -67,6 +67,7 @@ ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/remote.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/remote_cache.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/strategy/unshared_remote_cache.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/standard.rb
+${GEM_LIBDIR}/lib/capistrano/recipes/templates/maintenance.rhtml
 ${GEM_LIBDIR}/lib/capistrano/role.rb
 ${GEM_LIBDIR}/lib/capistrano/server_definition.rb
 ${GEM_LIBDIR}/lib/capistrano/shell.rb
