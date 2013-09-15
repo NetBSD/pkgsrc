@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3521 2013/09/15 16:44:26 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3522 2013/09/15 16:49:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4973,3 +4973,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/ruby-ultraviolet to 1.0.1 [taca 2013-09-15]
 	Updated www/camping to 2.1.532 [taca 2013-09-15]
 	Updated www/heel to 3.1.0 [taca 2013-09-15]
+	Added www/ruby-cookiejar version 0.3.0 [taca 2013-09-15]
