@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2013/02/13 15:37:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/09/15 14:10:09 taca Exp $
 bin/launchy
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/HISTORY.rdoc
+${GEM_LIBDIR}/HISTORY.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/launchy
 ${GEM_LIBDIR}/lib/launchy.rb
