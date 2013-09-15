@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/15 16:47:40 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/cookiejar.rb
+${GEM_LIBDIR}/lib/cookiejar/cookie.rb
+${GEM_LIBDIR}/lib/cookiejar/cookie_validation.rb
+${GEM_LIBDIR}/lib/cookiejar/jar.rb
+${GEM_LIBDIR}/test/cookie_test.rb
+${GEM_LIBDIR}/test/cookie_validation_test.rb
+${GEM_LIBDIR}/test/jar_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
