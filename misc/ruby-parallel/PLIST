@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/09 15:53:32 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/15 14:17:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/MIT-LICENSE.txt
@@ -24,6 +25,8 @@ ${GEM_LIBDIR}/spec/cases/map_with_processes_and_exceptions.rb
 ${GEM_LIBDIR}/spec/cases/map_with_threads_and_break.rb
 ${GEM_LIBDIR}/spec/cases/map_with_threads_and_exceptions.rb
 ${GEM_LIBDIR}/spec/cases/no_dump_with_each.rb
+${GEM_LIBDIR}/spec/cases/no_gc_with_each.rb
+${GEM_LIBDIR}/spec/cases/parallel_fast_exit.rb
 ${GEM_LIBDIR}/spec/cases/parallel_high_fork_rate.rb
 ${GEM_LIBDIR}/spec/cases/parallel_influence_outside_data.rb
 ${GEM_LIBDIR}/spec/cases/parallel_map.rb
