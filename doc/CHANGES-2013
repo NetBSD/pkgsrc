@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3512 2013/09/15 16:00:36 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3513 2013/09/15 16:04:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ruby-net-ssh to 2.7.0 [taca 2013-09-15]
 	Updated sysutils/capistrano to 2.15.5 [taca 2013-09-15]
 	Updated sysutils/ruby-directory-watcher to 1.5.1 [taca 2013-09-15]
+	Updated sysutils/ruby-facter to 1.7.3 [taca 2013-09-15]
