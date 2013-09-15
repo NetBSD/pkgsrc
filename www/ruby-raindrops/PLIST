@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/06 12:39:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/15 18:08:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -9,7 +9,6 @@ ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GIT-VERSION-FILE
 ${GEM_LIBDIR}/GIT-VERSION-GEN
 ${GEM_LIBDIR}/GNUmakefile
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LATEST
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NEWS
