@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/05/09 15:53:32 mef Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/15 14:07:29 taca Exp $
 #
 
-DISTNAME=	args_parser-0.1.4
+DISTNAME=	args_parser-0.2.0
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org

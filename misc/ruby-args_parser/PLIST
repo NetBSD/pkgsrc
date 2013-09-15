@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/09 15:53:32 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/15 14:07:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
@@ -11,18 +11,20 @@ ${GEM_LIBDIR}/lib/args_parser.rb
 ${GEM_LIBDIR}/lib/args_parser/config.rb
 ${GEM_LIBDIR}/lib/args_parser/error.rb
 ${GEM_LIBDIR}/lib/args_parser/filter.rb
+${GEM_LIBDIR}/lib/args_parser/main.rb
 ${GEM_LIBDIR}/lib/args_parser/parser.rb
 ${GEM_LIBDIR}/lib/args_parser/styles/default.rb
 ${GEM_LIBDIR}/lib/args_parser/styles/equal.rb
 ${GEM_LIBDIR}/lib/args_parser/validator.rb
 ${GEM_LIBDIR}/lib/args_parser/version.rb
 ${GEM_LIBDIR}/samples/download_webpage.rb
-${GEM_LIBDIR}/samples/twitter_timeline.rb
+${GEM_LIBDIR}/samples/equal_style.rb
 ${GEM_LIBDIR}/test/test_args_parser.rb
 ${GEM_LIBDIR}/test/test_args_parser_style_equal.rb
 ${GEM_LIBDIR}/test/test_default.rb
 ${GEM_LIBDIR}/test/test_filter.rb
 ${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/test/test_on.rb
 ${GEM_LIBDIR}/test/test_validator.rb
 ${GEM_LIBDIR}/test/test_version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
