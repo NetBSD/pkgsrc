@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2013/09/09 20:35:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2013/09/15 01:17:14 schmonz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -9,7 +9,7 @@ bin/dijkstra
 bin/dot
 bin/dot_builtins
 bin/dot2gxl
-bin/dotty
+${PLIST.x11}bin/dotty
 bin/fdp
 bin/gc
 bin/gml2gv
@@ -25,7 +25,7 @@ bin/gvpr
 bin/gxl2dot
 bin/gxl2gv
 ${PLIST.x11}bin/lefty
-bin/lneato
+${PLIST.x11}bin/lneato
 bin/mm2gv
 bin/neato
 bin/nop
@@ -120,7 +120,7 @@ man/man1/cluster.1
 man/man1/diffimg.1
 man/man1/dijkstra.1
 man/man1/dot.1
-man/man1/dotty.1
+${PLIST.x11}man/man1/dotty.1
 man/man1/fdp.1
 man/man1/gc.1
 man/man1/gml2gv.1
@@ -135,7 +135,7 @@ man/man1/gvpack.1
 man/man1/gvpr.1
 man/man1/gxl2gv.1
 ${PLIST.x11}man/man1/lefty.1
-man/man1/lneato.1
+${PLIST.x11}man/man1/lneato.1
 man/man1/mm2gv.1
 man/man1/neato.1
 man/man1/nop.1
@@ -391,7 +391,7 @@ share/graphviz/doc/pdf/diffimg.1.pdf
 share/graphviz/doc/pdf/dijkstra.1.pdf
 share/graphviz/doc/pdf/dot.1.pdf
 share/graphviz/doc/pdf/dotguide.pdf
-share/graphviz/doc/pdf/dotty.1.pdf
+${PLIST.x11}share/graphviz/doc/pdf/dotty.1.pdf
 share/graphviz/doc/pdf/dottyguide.pdf
 share/graphviz/doc/pdf/expr.3.pdf
 share/graphviz/doc/pdf/fdp.1.pdf
@@ -417,7 +417,7 @@ share/graphviz/doc/pdf/gxl2gv.1.pdf
 ${PLIST.x11}share/graphviz/doc/pdf/lefty.1.pdf
 share/graphviz/doc/pdf/leftyguide.pdf
 share/graphviz/doc/pdf/libguide.pdf
-share/graphviz/doc/pdf/lneato.1.pdf
+${PLIST.x11}share/graphviz/doc/pdf/lneato.1.pdf
 share/graphviz/doc/pdf/mm2gv.1.pdf
 share/graphviz/doc/pdf/neato.1.pdf
 share/graphviz/doc/pdf/neatoguide.pdf
@@ -529,11 +529,11 @@ share/graphviz/gvpr/topon
 share/graphviz/gvpr/treetoclust
 share/graphviz/lefty/box.lefty
 share/graphviz/lefty/def.lefty
-share/graphviz/lefty/dotty.lefty
-share/graphviz/lefty/dotty_draw.lefty
-share/graphviz/lefty/dotty_edit.lefty
-share/graphviz/lefty/dotty_layout.lefty
-share/graphviz/lefty/dotty_ui.lefty
+${PLIST.x11}share/graphviz/lefty/dotty.lefty
+${PLIST.x11}share/graphviz/lefty/dotty_draw.lefty
+${PLIST.x11}share/graphviz/lefty/dotty_edit.lefty
+${PLIST.x11}share/graphviz/lefty/dotty_layout.lefty
+${PLIST.x11}share/graphviz/lefty/dotty_ui.lefty
 share/graphviz/lefty/fractal.lefty
 share/graphviz/lefty/fractal2.lefty
 share/graphviz/lefty/lefty.psp
