@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2013/09/09 12:29:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2013/09/15 18:30:48 taca Exp $
 
-DISTNAME=	amqp-0.9.10
+DISTNAME=	amqp-1.0.2
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,8 @@ LICENSE=	ruby-license
 
 # ruby-amq-client depends on ruby-eventmachine and ruby-amq-protocol
 #DEPENDS+=	${RUBY_PKGPREFIX}-eventmachine>=0:../../devel/ruby-eventmachine
-DEPENDS+=	${RUBY_PKGPREFIX}-amq-protocol>=1.2.0<1.3:../../net/ruby-amq-client
-#DEPENDS+=	${RUBY_PKGPREFIX}-amq-client>=0.9.12<0.10:../../net/ruby-amq-protocol
+DEPENDS+=	${RUBY_PKGPREFIX}-amq-protocol>=1.3.0:../../net/ruby-amq-protocol
+DEPENDS+=	${RUBY_PKGPREFIX}-amq-client>=1.0.2:../../net/ruby-amq-client
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
