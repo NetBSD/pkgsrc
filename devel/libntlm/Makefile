@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2012/10/31 11:17:18 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/09/15 17:32:44 wiz Exp $
 
-DISTNAME=	libntlm-1.2
+DISTNAME=	libntlm-1.4
 CATEGORIES=	security
-MASTER_SITES=	http://josefsson.org/libntlm/releases/
+MASTER_SITES=	http://www.nongnu.org/libntlm/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://josefsson.org/libntlm/
+HOMEPAGE=	http://www.nongnu.org/libntlm/
 COMMENT=	Library that implement Microsoft's NTLM authentication
 LICENSE=	gnu-lgpl-v2.1
 
