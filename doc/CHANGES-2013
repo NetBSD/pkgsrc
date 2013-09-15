@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3533 2013/09/15 17:32:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3534 2013/09/15 17:33:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4978,13 +4978,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-http-cookie version 1.0.2 [taca 2013-09-15]
 	Added misc/ruby-colorator version 0.1 [taca 2013-09-15]
 	Updated www/ruby-pygments.rb to 0.5.2 [taca 2013-09-15]
-<<<<<<< CHANGES-2013
-	Updated devel/meld to 1.8.0 [wiz 2013-09-15]
-=======
 	Updated www/ruby-jekyll to 1.2.0 [taca 2013-09-15]
 	Updated www/ruby-jquery-rails to 3.0.4 [taca 2013-09-15]
 	Updated www/ruby-liquid to 2.5.2 [taca 2013-09-15]
->>>>>>> 1.3529
 	Updated devel/meld to 1.8.0 [wiz 2013-09-15]
 	Updated textproc/py-lxml to 3.2.3 [wiz 2013-09-15]
 	Updated devel/py-setuptools to 1.1.5 [wiz 2013-09-15]
