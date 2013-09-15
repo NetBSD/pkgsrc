@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3510 2013/09/15 14:41:41 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3511 2013/09/15 15:00:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4957,3 +4957,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-domain_name to 0.5.13 [taca 2013-09-15]
 	Updated net/ruby-rubytter to 1.5.1 [taca 2013-09-15]
 	Updated print/ruby-pdf-reader to 1.3.3 [taca 2013-09-15]
+	Updated security/ruby-bcrypt to 3.1.2 [taca 2013-09-15]
+	Updated security/ruby-net-scp to 1.1.2 [taca 2013-09-15]
+	Updated security/ruby-net-ssh to 2.7.0 [taca 2013-09-15]
