@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3532 2013/09/15 17:31:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3533 2013/09/15 17:32:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4988,3 +4988,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/meld to 1.8.0 [wiz 2013-09-15]
 	Updated textproc/py-lxml to 3.2.3 [wiz 2013-09-15]
 	Updated devel/py-setuptools to 1.1.5 [wiz 2013-09-15]
+	Updated devel/libntlm to 1.4 [wiz 2013-09-15]
