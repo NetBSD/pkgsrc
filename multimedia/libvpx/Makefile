@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/09/13 15:00:43 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2013/09/15 17:28:45 dbj Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -79,6 +79,8 @@ BUILD_TARGET=	# none
 post-extract:
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
+.if empty(CONFIGURE_ARGS:M--disable-unit-tests)
 .include "../../devel/googletest/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
