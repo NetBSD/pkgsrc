@@ -1,14 +1,30 @@
-@comment $NetBSD: PLIST,v 1.5 2011/09/12 13:36:18 taca Exp $
-bin/dw
+@comment $NetBSD: PLIST,v 1.6 2013/09/15 15:59:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/dw
 ${GEM_LIBDIR}/lib/directory_watcher.rb
+${GEM_LIBDIR}/lib/directory_watcher/collector.rb
+${GEM_LIBDIR}/lib/directory_watcher/configuration.rb
 ${GEM_LIBDIR}/lib/directory_watcher/coolio_scanner.rb
 ${GEM_LIBDIR}/lib/directory_watcher/em_scanner.rb
+${GEM_LIBDIR}/lib/directory_watcher/event.rb
+${GEM_LIBDIR}/lib/directory_watcher/eventable_scanner.rb
+${GEM_LIBDIR}/lib/directory_watcher/file_stat.rb
+${GEM_LIBDIR}/lib/directory_watcher/logable.rb
+${GEM_LIBDIR}/lib/directory_watcher/notifier.rb
+${GEM_LIBDIR}/lib/directory_watcher/paths.rb
 ${GEM_LIBDIR}/lib/directory_watcher/rev_scanner.rb
+${GEM_LIBDIR}/lib/directory_watcher/scan.rb
+${GEM_LIBDIR}/lib/directory_watcher/scan_and_queue.rb
 ${GEM_LIBDIR}/lib/directory_watcher/scanner.rb
+${GEM_LIBDIR}/lib/directory_watcher/threaded.rb
+${GEM_LIBDIR}/lib/directory_watcher/version.rb
+${GEM_LIBDIR}/spec/directory_watcher_spec.rb
+${GEM_LIBDIR}/spec/paths_spec.rb
+${GEM_LIBDIR}/spec/scanner_scenarios.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/utility_classes.rb
 ${GEM_LIBDIR}/version.txt
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
