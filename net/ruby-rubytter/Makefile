@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2011/11/23 05:33:35 taca Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/15 14:37:54 taca Exp $
 
-DISTNAME=	rubytter-1.4.2
-PKGREVISION=	1
+DISTNAME=	rubytter-1.5.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
