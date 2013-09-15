@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/15 17:03:01 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/http-cookie.gemspec
+${GEM_LIBDIR}/lib/http-cookie.rb
+${GEM_LIBDIR}/lib/http/cookie.rb
+${GEM_LIBDIR}/lib/http/cookie/ruby_compat.rb
+${GEM_LIBDIR}/lib/http/cookie/scanner.rb
+${GEM_LIBDIR}/lib/http/cookie/version.rb
+${GEM_LIBDIR}/lib/http/cookie_jar.rb
+${GEM_LIBDIR}/lib/http/cookie_jar/abstract_saver.rb
+${GEM_LIBDIR}/lib/http/cookie_jar/abstract_store.rb
+${GEM_LIBDIR}/lib/http/cookie_jar/cookiestxt_saver.rb
+${GEM_LIBDIR}/lib/http/cookie_jar/hash_store.rb
+${GEM_LIBDIR}/lib/http/cookie_jar/mozilla_store.rb
+${GEM_LIBDIR}/lib/http/cookie_jar/yaml_saver.rb
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/mechanize.yml
+${GEM_LIBDIR}/test/simplecov_start.rb
+${GEM_LIBDIR}/test/test_http_cookie.rb
+${GEM_LIBDIR}/test/test_http_cookie_jar.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
