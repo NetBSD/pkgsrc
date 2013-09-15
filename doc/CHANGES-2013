@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3548 2013/09/15 20:08:00 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.3549 2013/09/15 21:55:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5007,3 +5007,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-em-http-request version 1.0.3 [taca 2013-09-15]
 	Updated www/ruby-mechanize to 2.7.2 [taca 2013-09-15]
 	Updated games/onscripter to 20130812 [tsutsui 2013-09-15]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q3 branch [wiz 2013-09-15]
