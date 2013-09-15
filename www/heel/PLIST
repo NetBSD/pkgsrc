@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/03/17 15:57:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/15 16:43:28 taca Exp $
 bin/heel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -12,7 +12,7 @@ ${GEM_LIBDIR}/data/css/coderay-alpha.css
 ${GEM_LIBDIR}/data/css/coderay-cycnus.css
 ${GEM_LIBDIR}/data/css/coderay-murphy.css
 ${GEM_LIBDIR}/data/css/error.css
-${GEM_LIBDIR}/data/css/listing.css
+${GEM_LIBDIR}/data/css/index.css
 ${GEM_LIBDIR}/data/error.rhtml
 ${GEM_LIBDIR}/data/famfamfam/icons/application.png
 ${GEM_LIBDIR}/data/famfamfam/icons/compress.png
@@ -38,11 +38,13 @@ ${GEM_LIBDIR}/lib/heel/mime_map.rb
 ${GEM_LIBDIR}/lib/heel/rackapp.rb
 ${GEM_LIBDIR}/lib/heel/request.rb
 ${GEM_LIBDIR}/lib/heel/server.rb
+${GEM_LIBDIR}/lib/heel/template_vars.rb
 ${GEM_LIBDIR}/spec/configuration_spec.rb
 ${GEM_LIBDIR}/spec/directory_indexer_spec.rb
 ${GEM_LIBDIR}/spec/rackapp_spec.rb
 ${GEM_LIBDIR}/spec/server_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/template_vars_spec.rb
 ${GEM_LIBDIR}/tasks/default.rake
 ${GEM_LIBDIR}/tasks/this.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
