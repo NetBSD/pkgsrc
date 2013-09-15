@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3500 2013/09/15 13:35:03 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3501 2013/09/15 13:47:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4945,3 +4945,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated ham/trustedQSL to 2.0rc5 [mef 2013-09-15]
 	Updated graphics/ruby-chunky_png to 1.2.8 [taca 2013-09-15]
 	Updated graphics/ruby-color to 1.4.2 [taca 2013-09-15]
+	Updated graphics/ruby-mini-magick to 3.6.0 [taca 2013-09-15]
