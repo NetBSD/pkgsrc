@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3526 2013/09/15 17:19:15 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3527 2013/09/15 17:20:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4978,3 +4978,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/ruby-http-cookie version 1.0.2 [taca 2013-09-15]
 	Added misc/ruby-colorator version 0.1 [taca 2013-09-15]
 	Updated www/ruby-pygments.rb to 0.5.2 [taca 2013-09-15]
+	Updated www/ruby-jekyll to 1.2.0 [taca 2013-09-15]
