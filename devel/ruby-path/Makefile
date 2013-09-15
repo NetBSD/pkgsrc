@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/02/11 08:51:00 taca Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/15 18:38:34 taca Exp $
 
-DISTNAME=	path-1.3.1
+DISTNAME=	path-1.3.3
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
