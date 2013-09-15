@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3498 2013/09/15 13:23:43 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3499 2013/09/15 13:33:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Warnings to 0.009 [wiz 2013-09-15]
 	Updated www/p5-Mojolicious to 4.37 [wiz 2013-09-15]
 	Updated ham/trustedQSL to 2.0rc5 [mef 2013-09-15]
+	Updated graphics/ruby-chunky_png to 1.2.8 [taca 2013-09-15]
