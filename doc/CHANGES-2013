@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3486 2013/09/15 10:04:34 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3487 2013/09/15 10:08:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4927,3 +4927,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-gettext_i18n_rails to 0.10.1 [taca 2013-09-15]
 	Updated devel/ruby-hashery to 2.1.1 [taca 2013-09-15]
 	Updated devel/ruby-kgio to 2.8.1 [taca 2013-09-15]
+	Updated devel/ruby-i18n to 0.6.5 [taca 2013-09-15]
