@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2013/09/02 19:51:32 adam Exp $
+# $NetBSD: Makefile,v 1.94 2013/09/15 17:35:38 dbj Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 PKGREVISION=	1
@@ -29,7 +29,9 @@ CONFIGURE_ARGS+=	-openssl-linked
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+.if empty(MACHINE_PLATFORM:MDarwin-*-*)
 CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
+.endif
 .endif
 
 INSTALLATION_DIRS=	lib/pkgconfig
