@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/06/16 16:59:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/09/15 13:57:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.hoerc
@@ -40,4 +40,6 @@ ${GEM_LIBDIR}/lib/mime/types/video.nonstandard
 ${GEM_LIBDIR}/lib/mime/types/video.obsolete
 ${GEM_LIBDIR}/test/test_mime_type.rb
 ${GEM_LIBDIR}/test/test_mime_types.rb
+${GEM_LIBDIR}/test/test_mime_types_cache.rb
+${GEM_LIBDIR}/test/test_mime_types_lazy.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
