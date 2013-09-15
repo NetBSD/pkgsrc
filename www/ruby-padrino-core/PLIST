@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/16 10:04:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/15 18:25:49 taca Exp $
 bin/padrino
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -88,6 +88,7 @@ ${GEM_LIBDIR}/test/test_mounter.rb
 ${GEM_LIBDIR}/test/test_reloader_complex.rb
 ${GEM_LIBDIR}/test/test_reloader_simple.rb
 ${GEM_LIBDIR}/test/test_rendering.rb
+${GEM_LIBDIR}/test/test_rendering_extensions.rb
 ${GEM_LIBDIR}/test/test_restful_routing.rb
 ${GEM_LIBDIR}/test/test_router.rb
 ${GEM_LIBDIR}/test/test_routing.rb
