@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3519 2013/09/15 16:35:06 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3520 2013/09/15 16:39:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/ruby-redcarpet version 3.0.0 [taca 2013-09-15]
 	Added textproc/ruby-safe_yaml version 0.9.5 [taca 2013-09-15]
 	Updated textproc/ruby-treetop to 1.4.15 [taca 2013-09-15]
+	Updated textproc/ruby-ultraviolet to 1.0.1 [taca 2013-09-15]
