@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2012/06/02 01:18:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/09/15 19:00:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/EXAMPLES.rdoc
 ${GEM_LIBDIR}/GUIDE.rdoc
@@ -15,7 +16,6 @@ ${GEM_LIBDIR}/examples/proxy_req.rb
 ${GEM_LIBDIR}/examples/rubyforge.rb
 ${GEM_LIBDIR}/examples/spider.rb
 ${GEM_LIBDIR}/examples/wikipedia_links_to_philosophy.rb
-${GEM_LIBDIR}/lib/mechanize.rb
 ${GEM_LIBDIR}/lib/mechanize/chunked_termination_error.rb
 ${GEM_LIBDIR}/lib/mechanize/content_type_error.rb
 ${GEM_LIBDIR}/lib/mechanize/cookie.rb
@@ -64,6 +64,7 @@ ${GEM_LIBDIR}/lib/mechanize/page/link.rb
 ${GEM_LIBDIR}/lib/mechanize/page/meta_refresh.rb
 ${GEM_LIBDIR}/lib/mechanize/parser.rb
 ${GEM_LIBDIR}/lib/mechanize/pluggable_parsers.rb
+${GEM_LIBDIR}/lib/mechanize/prependable.rb
 ${GEM_LIBDIR}/lib/mechanize/redirect_limit_reached_error.rb
 ${GEM_LIBDIR}/lib/mechanize/redirect_not_get_or_head_error.rb
 ${GEM_LIBDIR}/lib/mechanize/response_code_error.rb
@@ -101,6 +102,8 @@ ${GEM_LIBDIR}/lib/mechanize/test_case/verb_servlet.rb
 ${GEM_LIBDIR}/lib/mechanize/unauthorized_error.rb
 ${GEM_LIBDIR}/lib/mechanize/unsupported_scheme_error.rb
 ${GEM_LIBDIR}/lib/mechanize/util.rb
+${GEM_LIBDIR}/lib/mechanize/xml_file.rb
+${GEM_LIBDIR}/lib/mechanize.rb
 ${GEM_LIBDIR}/test/data/htpasswd
 ${GEM_LIBDIR}/test/data/server.crt
 ${GEM_LIBDIR}/test/data/server.csr
@@ -143,6 +146,8 @@ ${GEM_LIBDIR}/test/htdocs/tc_checkboxes.html
 ${GEM_LIBDIR}/test/htdocs/tc_encoded_links.html
 ${GEM_LIBDIR}/test/htdocs/tc_field_precedence.html
 ${GEM_LIBDIR}/test/htdocs/tc_follow_meta.html
+${GEM_LIBDIR}/test/htdocs/tc_follow_meta_loop_1.html
+${GEM_LIBDIR}/test/htdocs/tc_follow_meta_loop_2.html
 ${GEM_LIBDIR}/test/htdocs/tc_form_action.html
 ${GEM_LIBDIR}/test/htdocs/tc_links.html
 ${GEM_LIBDIR}/test/htdocs/tc_meta_in_body.html
@@ -197,5 +202,6 @@ ${GEM_LIBDIR}/test/test_mechanize_redirect_not_get_or_head_error.rb
 ${GEM_LIBDIR}/test/test_mechanize_response_read_error.rb
 ${GEM_LIBDIR}/test/test_mechanize_subclass.rb
 ${GEM_LIBDIR}/test/test_mechanize_util.rb
+${GEM_LIBDIR}/test/test_mechanize_xml_file.rb
 ${GEM_LIBDIR}/test/test_multi_select.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
