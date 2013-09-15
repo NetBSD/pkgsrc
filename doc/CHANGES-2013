@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3507 2013/09/15 14:23:00 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3508 2013/09/15 14:34:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4954,3 +4954,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/ruby-commander to 4.1.5 [taca 2013-09-15]
 	Updated misc/ruby-parallel to 0.8.2 [taca 2013-09-15]
 	Updated net/ruby-dnsruby to 1.54 [taca 2013-09-15]
+	Updated net/ruby-domain_name to 0.5.13 [taca 2013-09-15]
