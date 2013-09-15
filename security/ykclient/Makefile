@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/09/14 07:02:32 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2013/09/15 12:32:41 joerg Exp $
 
 DISTNAME=	ykclient-2.11
 CATEGORIES=	security
@@ -9,6 +9,8 @@ HOMEPAGE=	http://yubico.github.io/yubico-c-client/
 COMMENT=	Libraries for online validation of Yubikey OTPs
 
 LICENSE=	modified-bsd
+
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 MAKE_JOBS_SAFE=	no
 
