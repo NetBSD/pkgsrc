@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/09/16 09:26:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/09/15 16:14:17 taca Exp $
 bin/coderay
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README_INDEX.rdoc
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/lib/coderay/encoders/_map.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/comment_filter.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/count.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/debug.rb
+${GEM_LIBDIR}/lib/coderay/encoders/debug_lint.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/div.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/filter.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/html.rb
@@ -19,6 +20,7 @@ ${GEM_LIBDIR}/lib/coderay/encoders/html/numbering.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/html/output.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/json.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/lines_of_code.rb
+${GEM_LIBDIR}/lib/coderay/encoders/lint.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/null.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/page.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/span.rb
@@ -30,7 +32,6 @@ ${GEM_LIBDIR}/lib/coderay/encoders/xml.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/yaml.rb
 ${GEM_LIBDIR}/lib/coderay/for_redcloth.rb
 ${GEM_LIBDIR}/lib/coderay/helpers/file_type.rb
-${GEM_LIBDIR}/lib/coderay/helpers/gzip.rb
 ${GEM_LIBDIR}/lib/coderay/helpers/plugin.rb
 ${GEM_LIBDIR}/lib/coderay/helpers/word_list.rb
 ${GEM_LIBDIR}/lib/coderay/scanner.rb
@@ -43,6 +44,7 @@ ${GEM_LIBDIR}/lib/coderay/scanners/debug.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/delphi.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/diff.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/erb.rb
+${GEM_LIBDIR}/lib/coderay/scanners/go.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/groovy.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/haml.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/html.rb
@@ -50,21 +52,24 @@ ${GEM_LIBDIR}/lib/coderay/scanners/java.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/java/builtin_types.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/java_script.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/json.rb
+${GEM_LIBDIR}/lib/coderay/scanners/lua.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/php.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/python.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/raydebug.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/ruby.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/ruby/patterns.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/ruby/string_state.rb
+${GEM_LIBDIR}/lib/coderay/scanners/sass.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/sql.rb
+${GEM_LIBDIR}/lib/coderay/scanners/taskpaper.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/text.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/xml.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/yaml.rb
 ${GEM_LIBDIR}/lib/coderay/style.rb
 ${GEM_LIBDIR}/lib/coderay/styles/_map.rb
 ${GEM_LIBDIR}/lib/coderay/styles/alpha.rb
-${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/lib/coderay/token_kinds.rb
+${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/lib/coderay/tokens_proxy.rb
 ${GEM_LIBDIR}/lib/coderay/version.rb
 ${GEM_LIBDIR}/test/functional/basic.rb
