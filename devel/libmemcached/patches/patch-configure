@@ -1,0 +1,454 @@
+$NetBSD: patch-configure,v 1.3 2013/09/15 12:28:22 joerg Exp $
+
+--- configure.orig	2013-04-03 04:22:41.000000000 +0000
++++ configure
+@@ -26555,15 +26555,15 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++int *p;
+ int
+ main ()
+ {
+-
+-  ;
++  return *p;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -26628,7 +26628,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -26685,15 +26685,17 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++int f;
++
+ int
+ main ()
+ {
+-
++  ++f;
+   ;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -26750,15 +26752,17 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++#include <stdlib.h>
++
+ int
+ main ()
+ {
+-
+-  ;
++  int *p = malloc(sizeof(int));
++  return *p;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -26823,7 +26827,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -26888,7 +26892,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -26953,7 +26957,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27018,7 +27022,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27083,7 +27087,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27148,7 +27152,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27213,7 +27217,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27278,7 +27282,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27343,7 +27347,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27408,7 +27412,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27473,7 +27477,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27529,16 +27533,19 @@ else
+   CFLAGS="$CFLAGS -Werror $flag"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <unistd.h>
+ 
+ int
+ main ()
+ {
+-
+-  ;
++  int i = 0;
++  while (sleep(1))
++    ++i;
++  return i;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27603,7 +27610,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27668,7 +27675,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27733,7 +27740,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -27798,7 +27805,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -31956,16 +31963,16 @@ else
+   CXXFLAGS="$CXXFLAGS -Werror $flag"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++int *p;
+ 
+ int
+ main ()
+ {
+-
+-  ;
++  return *p;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32030,7 +32037,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32087,15 +32094,17 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++int f;
++
+ int
+ main ()
+ {
+ 
+-  ;
++  ++f;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32155,12 +32164,12 @@ else
+ int
+ main ()
+ {
+-
+-  ;
++  int *p = new int;
++  return *p;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32225,7 +32234,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32290,7 +32299,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32355,7 +32364,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32420,7 +32429,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32485,7 +32494,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32550,7 +32559,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32615,7 +32624,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32680,7 +32689,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32745,7 +32754,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32810,7 +32819,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32875,7 +32884,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -32931,16 +32940,19 @@ else
+   CXXFLAGS="$CXXFLAGS -Werror $flag"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <unistd.h>
+ 
+ int
+ main ()
+ {
+-
+-  ;
++  int i = 0;
++  while (sleep(1))
++    ++i;
++  return i;
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -33005,7 +33017,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -33070,7 +33082,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -33135,7 +33147,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
+@@ -33200,7 +33212,7 @@ main ()
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+   eval "$as_CACHEVAR=yes"
+ else
+   eval "$as_CACHEVAR=no"
