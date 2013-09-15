@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/25 15:31:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/15 14:56:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
@@ -19,10 +20,13 @@ ${GEM_LIBDIR}/ext/mri/extconf.rb
 ${GEM_LIBDIR}/ext/mri/ow-crypt.h
 ${GEM_LIBDIR}/ext/mri/wrapper.c
 ${GEM_LIBDIR}/lib/bcrypt.rb
-${GEM_LIBDIR}/lib/bcrypt_engine.rb
+${GEM_LIBDIR}/lib/bcrypt/engine.rb
+${GEM_LIBDIR}/lib/bcrypt/error.rb
+${GEM_LIBDIR}/lib/bcrypt/password.rb
 ${GEM_LIBDIR}/lib/bcrypt_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/spec/TestBCrypt.java
 ${GEM_LIBDIR}/spec/bcrypt/engine_spec.rb
+${GEM_LIBDIR}/spec/bcrypt/error_spec.rb
 ${GEM_LIBDIR}/spec/bcrypt/password_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
