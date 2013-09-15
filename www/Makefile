@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.988 2013/09/13 11:57:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.989 2013/09/15 17:03:55 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -630,6 +630,7 @@ SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-coffee-rails32
 SUBDIR+=	ruby-compass
 SUBDIR+=	ruby-compass-susy-plugin
+SUBDIR+=	ruby-cookiejar
 SUBDIR+=	ruby-css-parser
 SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-csspool
@@ -640,6 +641,7 @@ SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-gnome2-webkit-gtk
 SUBDIR+=	ruby-gnome2-webkit-gtk2
 SUBDIR+=	ruby-htmlsplit
+SUBDIR+=	ruby-http-cookie
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-http_router
 SUBDIR+=	ruby-httpclient
