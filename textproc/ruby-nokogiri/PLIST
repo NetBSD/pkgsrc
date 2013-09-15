@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/02/11 02:44:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/09/15 16:20:51 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
@@ -193,6 +193,10 @@ ${GEM_LIBDIR}/test/html/test_element_description.rb
 ${GEM_LIBDIR}/test/html/test_named_characters.rb
 ${GEM_LIBDIR}/test/html/test_node.rb
 ${GEM_LIBDIR}/test/html/test_node_encoding.rb
+${GEM_LIBDIR}/test/namespaces/test_additional_namespaces_in_builder_doc.rb
+${GEM_LIBDIR}/test/namespaces/test_namespaces_in_builder_doc.rb
+${GEM_LIBDIR}/test/namespaces/test_namespaces_in_created_doc.rb
+${GEM_LIBDIR}/test/namespaces/test_namespaces_in_parsed_doc.rb
 ${GEM_LIBDIR}/test/test_convert_xpath.rb
 ${GEM_LIBDIR}/test/test_css_cache.rb
 ${GEM_LIBDIR}/test/test_encoding_handler.rb
