@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/03/14 16:23:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/09/15 18:05:37 taca Exp $
 bin/sass
 bin/sass-convert
 bin/scss
@@ -121,6 +121,7 @@ ${GEM_LIBDIR}/lib/sass/tree/while_node.rb
 ${GEM_LIBDIR}/lib/sass/util.rb
 ${GEM_LIBDIR}/lib/sass/util/multibyte_string_scanner.rb
 ${GEM_LIBDIR}/lib/sass/util/subset_map.rb
+${GEM_LIBDIR}/lib/sass/util/test.rb
 ${GEM_LIBDIR}/lib/sass/version.rb
 ${GEM_LIBDIR}/rails/init.rb
 ${GEM_LIBDIR}/test/Gemfile
@@ -131,6 +132,7 @@ ${GEM_LIBDIR}/test/sass/conversion_test.rb
 ${GEM_LIBDIR}/test/sass/css2sass_test.rb
 ${GEM_LIBDIR}/test/sass/data/hsl-rgb.txt
 ${GEM_LIBDIR}/test/sass/engine_test.rb
+${GEM_LIBDIR}/test/sass/exec_test.rb
 ${GEM_LIBDIR}/test/sass/extend_test.rb
 ${GEM_LIBDIR}/test/sass/fixtures/test_staleness_check_across_importers.css
 ${GEM_LIBDIR}/test/sass/fixtures/test_staleness_check_across_importers.scss
@@ -193,6 +195,7 @@ ${GEM_LIBDIR}/test/sass/templates/bork1.sass
 ${GEM_LIBDIR}/test/sass/templates/bork2.sass
 ${GEM_LIBDIR}/test/sass/templates/bork3.sass
 ${GEM_LIBDIR}/test/sass/templates/bork4.sass
+${GEM_LIBDIR}/test/sass/templates/bork5.sass
 ${GEM_LIBDIR}/test/sass/templates/cached_import_option.scss
 ${GEM_LIBDIR}/test/sass/templates/compact.sass
 ${GEM_LIBDIR}/test/sass/templates/complex.sass
