@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3530 2013/09/15 17:27:44 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3531 2013/09/15 17:28:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-liquid to 2.5.2 [taca 2013-09-15]
 >>>>>>> 1.3529
 	Updated devel/meld to 1.8.0 [wiz 2013-09-15]
+	Updated textproc/py-lxml to 3.2.3 [wiz 2013-09-15]
