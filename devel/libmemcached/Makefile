@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/09/13 07:59:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2013/09/15 12:28:22 joerg Exp $
 #
 
 DISTNAME=	libmemcached-1.0.17
@@ -26,6 +26,17 @@ CONFIGURE_ARGS+=--enable-jobserver=no
 CPPFLAGS+=	-D__STDC_FORMAT_MACROS
 
 LIBS.SunOS+=	-lsocket
+
+# Disable, the configure check is completely broken.
+# Some checks are fixed in the local patches, but not enough to get
+# an actual build running
+.for sanitizer in address integer thread memory alignment bool bounds enum \
+     float-cast-overflow float-divide-by-zero integer-divide-by-zero null \
+     object-size return shift signed-integer-overflow unreachable \
+     unsigned-integer-overflow vla-bound vptr
+CONFIGURE_ARGS+=	ax_cv_check_cxxflags__Werror__fsanitize_${sanitizer:S/-/_/g}=no
+CONFIGURE_ARGS+=	ax_cv_check_cflags__Werror__fsanitize_${sanitizer:S/-/_/g}=no
+.endfor
 
 post-configure:
 	${ECHO} '#define HAVE_MEMCACHED_BINARY 1' >> ${WRKSRC}/mem_config.h
