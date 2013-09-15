@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3539 2013/09/15 18:02:23 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3540 2013/09/15 18:06:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4990,3 +4990,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-puma to 2.6.0 [taca 2013-09-15]
 	Updated www/thin to 1.5.1 [taca 2013-09-15]
 	Updated www/ruby-unicorn to 4.6.3 [taca 2013-09-15]
+	Updated www/ruby-sass to 3.2.10 [taca 2013-09-15]
