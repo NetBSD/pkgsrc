@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/06/16 10:04:08 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/09/15 18:25:49 taca Exp $
 
-SHA1 (padrino-admin-0.11.2.gem) = 693fe78ce6ac83649d2ce4e5bf6f84ab4747d143
-RMD160 (padrino-admin-0.11.2.gem) = 0fc095a74c89f85b228059df663a6b8184ca11b4
-Size (padrino-admin-0.11.2.gem) = 358400 bytes
+SHA1 (padrino-admin-0.11.3.gem) = 2ef94ed854aaa293236df376a1f29323ecc2e204
+RMD160 (padrino-admin-0.11.3.gem) = 14222a4b3788dccb04d512d3bcfeeed35cca8f90
+Size (padrino-admin-0.11.3.gem) = 432640 bytes
