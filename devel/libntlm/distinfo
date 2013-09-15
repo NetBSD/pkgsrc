@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2011/01/28 07:44:25 adam Exp $
+$NetBSD: distinfo,v 1.9 2013/09/15 17:32:44 wiz Exp $
 
-SHA1 (libntlm-1.2.tar.gz) = 27538a3375690a37574fa991fbd327d150d8b505
-RMD160 (libntlm-1.2.tar.gz) = b7344213f2510c93e30583fc567961a4e6aedd13
-Size (libntlm-1.2.tar.gz) = 439103 bytes
+SHA1 (libntlm-1.4.tar.gz) = b15c9ccbd3829154647b3f9d6594b1ffe4491b6f
+RMD160 (libntlm-1.4.tar.gz) = 46d3c2228f0c6ad551feab9f812e32ec215a03a5
+Size (libntlm-1.4.tar.gz) = 568414 bytes
