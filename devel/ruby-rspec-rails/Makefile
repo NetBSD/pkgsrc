@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2013/06/16 16:31:05 taca Exp $
+# $NetBSD: Makefile,v 1.14 2013/09/15 10:17:31 taca Exp $
 
-DISTNAME=	rspec-rails-2.13.2
+DISTNAME=	rspec-rails-2.14.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +11,9 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec-core>=2.13.0<2.14:../../devel/ruby-rspec-core
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec-expectations>=2.13.0<2.14:../../devel/ruby-rspec-expectations
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec-mocks>=2.13.0<2.14:../../devel/ruby-rspec-mocks
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-core>=2.14.0<2.15:../../devel/ruby-rspec-core
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-expectations>=2.14.0<2.15:../../devel/ruby-rspec-expectations
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec-mocks>=2.14.0<2.15:../../devel/ruby-rspec-mocks
 
 RUBY_RAILS_SUPPORTED=
 
