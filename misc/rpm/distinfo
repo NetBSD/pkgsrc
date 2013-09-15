@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2013/09/13 12:41:32 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2013/09/15 12:32:22 joerg Exp $
 
 SHA1 (rpm-4.11.1.tar.bz2) = 31ddc4185137ce3f718c99e91dcb040614fe820c
 RMD160 (rpm-4.11.1.tar.bz2) = 3acb73dffef60c5e98ad23d2551ebca0837c218c
@@ -7,6 +7,10 @@ SHA1 (patch-ac) = a9d4fb93a47f705b9220d886853b805f3b741ca2
 SHA1 (patch-build_rpmfc.c) = dab644d99d7ed43850443433b242d6ec16630b9c
 SHA1 (patch-cb) = c52dfaec6cf89d069f26900265d34f7ad91092f0
 SHA1 (patch-configure.ac) = c9df0915b2c9c08fd059a3c9a2c89fe25d3e194d
+SHA1 (patch-lib_backend_db3.c) = f488c10c75a000a14f3026a2de6f871892ba9222
+SHA1 (patch-lib_rpmdb__internal.h) = 39947c14f9d65c5dc91e5f5979e76800904377d4
+SHA1 (patch-lib_rpmrc.c) = cf9e1349d84dea4f60b7db574e31e14799d4e75c
+SHA1 (patch-misc_fnmatch.c) = ba5db96bb0f473d08a8fda5f32d7df455ce92208
 SHA1 (patch-misc_fts.c) = 26443c47db5e2211a926cf0f8b26b1f70475edda
 SHA1 (patch-misc_fts.h) = ec4ee0ea18f5d210eb32d9f22c90e43d2ede0c53
 SHA1 (patch-system.h) = 21336b9d2a7afbc0573ba0ce09c0849e5bef2548
