@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:27 joerg Exp $
-${GEM_HOME}/cache/color-${PKGVERSION}.gem
-${GEM_LIBDIR}/History.txt
-${GEM_LIBDIR}/Install.txt
-${GEM_LIBDIR}/Licence.txt
+@comment $NetBSD: PLIST,v 1.3 2013/09/15 13:34:36 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.hoerc
+${GEM_LIBDIR}/Contributing.rdoc
+${GEM_LIBDIR}/History.rdoc
+${GEM_LIBDIR}/Licence.rdoc
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/color.rb
 ${GEM_LIBDIR}/lib/color/cmyk.rb
@@ -19,9 +21,7 @@ ${GEM_LIBDIR}/lib/color/rgb-colors.rb
 ${GEM_LIBDIR}/lib/color/rgb.rb
 ${GEM_LIBDIR}/lib/color/rgb/metallic.rb
 ${GEM_LIBDIR}/lib/color/yiq.rb
-${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/test_adobecolor.rb
-${GEM_LIBDIR}/test/test_all.rb
 ${GEM_LIBDIR}/test/test_cmyk.rb
 ${GEM_LIBDIR}/test/test_color.rb
 ${GEM_LIBDIR}/test/test_css.rb
@@ -31,4 +31,4 @@ ${GEM_LIBDIR}/test/test_hsl.rb
 ${GEM_LIBDIR}/test/test_monocontrast.rb
 ${GEM_LIBDIR}/test/test_rgb.rb
 ${GEM_LIBDIR}/test/test_yiq.rb
-${GEM_HOME}/specifications/color-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
