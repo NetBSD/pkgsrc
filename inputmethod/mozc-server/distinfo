@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2013/09/07 18:42:14 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2013/09/15 12:30:23 joerg Exp $
 
 SHA1 (mozc-1.11.1522.102.tar.bz2) = 0859efcbc6ddb93d9cf5a6e0d27ab8da0a72a1ee
 RMD160 (mozc-1.11.1522.102.tar.bz2) = fa08b2433cf42bbb346a19414b268ccb695ed541
@@ -7,7 +7,7 @@ SHA1 (patch-base_base.gyp) = 329bd8614282aca28fcba30b2e593f488801118d
 SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191
 SHA1 (patch-base_crash__report__handler.cc) = c901dbb2c8f18d18b479486b2d25ff09b3de356b
 SHA1 (patch-base_iconv.cc) = 1bf65dfc6152bf152cbe2714835a61436df2a48b
-SHA1 (patch-base_logging.cc) = 62259820d980bb7e6ddf81b6d168348a46371b40
+SHA1 (patch-base_logging.cc) = 96ee9d1426ef1cf946a00fb15c9754603ab15bb8
 SHA1 (patch-base_mutex.cc) = aed8588d4ff7b057fed072097ef09ddbc2696d31
 SHA1 (patch-base_mutex.h) = 6c3c8f0845f0fdad815c4877026894000d5eac2c
 SHA1 (patch-base_password__manager.cc) = cb11b9b707ab0c361c969eefd4d7c805c0b4b06a
@@ -25,7 +25,7 @@ SHA1 (patch-gui_base_locale__util.cc) = 7d1e9cf3c2c36590298496471a97b8c32010a30b
 SHA1 (patch-gui_config__dialog_config__dialog.cc) = 1e53b37c085bd7bdb3d2d2088e4a93b877aadc64
 SHA1 (patch-gui_config__dialog_keybinding__editor.cc) = 00a6e4bb2c07e3340e188f108f0285a3aa2aceb9
 SHA1 (patch-gui_config__dialog_keymap__editor.cc) = a78a4fb5c484e672b0cfecf38c6713cf74007cb5
-SHA1 (patch-gui_dictionary__tool_dictionary__tool.cc) = 015d69de20a02eff2a1c2f5de5c3924a1474f83b
+SHA1 (patch-gui_dictionary__tool_dictionary__tool.cc) = 3fa79c240b20884b73eed7677a57a389aff467d8
 SHA1 (patch-gui_gui.gyp) = 70b6d78ca5a482b9e8fa697dbb191cccbdde1c6a
 SHA1 (patch-gui_qt__libraries.gypi) = 2b00307c22380d0d1c60b5d98ce08970b0e74f09
 SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 34a7cd2a99a0082f490c3f623c7c6a856c984f8b
@@ -33,7 +33,7 @@ SHA1 (patch-gui_zinnia.gyp) = 0eaad35b829d2c25e751ce6e99207781306934d5
 SHA1 (patch-gyp_common.gypi) = af22172e630cc742c789ea2d89720bb9897c7f0a
 SHA1 (patch-handwriting_handwriting.gyp) = 608e45f7bc4edcd434929d9e3a5cb05cee723abc
 SHA1 (patch-handwriting_zinnia__handwriting.cc) = dd9363f470bf4a27fed40602f02127cb130042b2
-SHA1 (patch-ipc_ipc__path__manager.cc) = a424e9eabdfa9cb66492fc85ecf9c2659c8e35f9
+SHA1 (patch-ipc_ipc__path__manager.cc) = 53d9268ddf048d339ebad26c97dab22aadced84b
 SHA1 (patch-ipc_ipc__path__manager__test.cc) = 90ea81daef93dc1ad5cee792ced26a9a2939fbdf
 SHA1 (patch-ipc_named__event.cc) = 92283261e7580569587e43156f13567b593c9a32
 SHA1 (patch-ipc_unix__ipc.cc) = d821deb2f38bf77bf6b364eb31d419c0a86c1a7f

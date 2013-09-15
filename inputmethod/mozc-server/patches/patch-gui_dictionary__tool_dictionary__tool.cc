@@ -1,7 +1,21 @@
-$NetBSD: patch-gui_dictionary__tool_dictionary__tool.cc,v 1.2 2013/09/07 18:42:14 ryoon Exp $
+$NetBSD: patch-gui_dictionary__tool_dictionary__tool.cc,v 1.3 2013/09/15 12:30:23 joerg Exp $
 
 --- gui/dictionary_tool/dictionary_tool.cc.orig	2013-08-28 05:26:30.000000000 +0000
 +++ gui/dictionary_tool/dictionary_tool.cc
+@@ -219,11 +219,11 @@ class MultiByteTextLineIterator
+   }
+ 
+   bool IsAvailable() const {
+-    return *(ifs_.get());
++    return (ifs_.get())->good() || (ifs_.get())->eof();
+   }
+ 
+   bool Next(string *line)  {
+-    if (!*(ifs_.get())) {
++    if (!IsAvailable()) {
+       return false;
+     }
+ 
 @@ -358,7 +358,7 @@ DictionaryTool::DictionaryTool(QWidget *
    }
  
