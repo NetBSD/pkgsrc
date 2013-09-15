@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3496 2013/09/15 13:12:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3497 2013/09/15 13:20:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -4941,3 +4941,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby2ruby to 2.0.6 [taca 2013-09-15]
 	Updated devel/p5-Module-Build-Tiny to 0.027 [wiz 2013-09-15]
 	Updated devel/p5-Test-Warnings to 0.009 [wiz 2013-09-15]
+	Updated www/p5-Mojolicious to 4.37 [wiz 2013-09-15]
