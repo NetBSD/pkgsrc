@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/07/16 14:37:20 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/16 15:46:07 joerg Exp $
 
 DISTNAME=	cppcms-1.0.4
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcms/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +27,9 @@ TEST_TARGET=	test
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}:${WRKSRC}/booster
 
 REPLACE_PYTHON=	bin/cppcms_tmpl_cc
+
+pre-install:
+	rm -f ${WRKSRC}/cppcms/string_key.h.orig
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
