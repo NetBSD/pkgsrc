@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2013/08/15 09:42:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2013/09/16 18:40:24 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -450,7 +450,7 @@ lib/dovecot/libdovecot-login.la
 lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
-lib/dovecot/libssl_iostream_openssl.la
+${PLIST.ssl}lib/dovecot/libssl_iostream_openssl.la
 libexec/dovecot/aggregator
 libexec/dovecot/anvil
 libexec/dovecot/auth
