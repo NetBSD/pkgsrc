@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 14:00:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/16 04:47:42 ryoon Exp $
 
 DISTNAME=	mintbin-CVS-20110527
 PKGNAME=	cross-freemint-${DISTNAME:S/CVS-//}
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	http://vincent.riviere.free.fr/soft/m68k-atari-mint/archives/
 
