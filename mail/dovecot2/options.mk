@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/06/14 09:37:18 tron Exp $
+# $NetBSD: options.mk,v 1.5 2013/09/16 18:40:24 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gssapi kqueue ldap mysql pam pgsql sqlite
@@ -9,6 +9,7 @@ PKG_SUGGESTED_OPTIONS=	pam ssl
 .if defined(PKG_HAVE_KQUEUE)
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
+PLIST_VARS+=		ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -21,6 +22,7 @@ CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
 CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
 BUILDLINK_API_DEPENDS.openssl+=openssl>=0.9.8a
 .  include "../../security/openssl/buildlink3.mk"
+PLIST.ssl=		yes
 .elif !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--with-ssl=gnutls
 .  include "../../security/gnutls/buildlink3.mk"
