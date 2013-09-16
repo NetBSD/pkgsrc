@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3549 2013/09/15 21:55:35 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3550 2013/09/16 04:48:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-mechanize to 2.7.2 [taca 2013-09-15]
 	Updated games/onscripter to 20130812 [tsutsui 2013-09-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q3 branch [wiz 2013-09-15]
+	Updated cross/freemint-mintbin to 20110527nb1 [ryoon 2013-09-16]
