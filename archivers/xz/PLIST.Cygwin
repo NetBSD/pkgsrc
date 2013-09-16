@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Cygwin,v 1.1 2013/09/16 03:45:30 ryoon Exp $
+share/doc/xz/liblzma.def
