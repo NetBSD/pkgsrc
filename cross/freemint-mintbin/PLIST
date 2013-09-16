@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/12 14:00:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/16 04:47:42 ryoon Exp $
 bin/m68k-atari-mint-arconv
 bin/m68k-atari-mint-cnm
 bin/m68k-atari-mint-csize
@@ -21,3 +21,4 @@ cross-freemint/m68k-atari-mint/include/mint/a.out.h
 cross-freemint/m68k-atari-mint/include/mint/prg-out.h
 cross-freemint/m68k-atari-mint/include/stab.def
 cross-freemint/m68k-atari-mint/include/stab.h
+cross-freemint/share/locale/de/LC_MESSAGES/mintbin.mo
