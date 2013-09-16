@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/09/16 04:47:43 ryoon Exp $
+
+* Do not create hardlinks for m68k-atari-mint-*.
+
+--- src/Makefile.in.orig	2011-05-27 17:41:39.000000000 +0000
++++ src/Makefile.in
+@@ -420,7 +420,6 @@ install-exec-local:
+ 	  $(mkinstalldirs) $(DESTDIR)$(nativebindir) || exit 1; \
+ 	  for prog in $(bin_PROGRAMS); do \
+ 	    iprog=`echo $$prog | sed '$(transform)'`; \
+-            ln $(DESTDIR)$(bindir)/$$iprog $(DESTDIR)$(nativebindir)/$$iprog >/dev/null 2>/dev/null \
+ 	      || $(INSTALL_PROGRAM) $$prog $(DESTDIR)$(nativebindir)/$$iprog ; \
+ 	  done; \
+         fi
