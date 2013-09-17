@@ -1,4 +1,7 @@
-$NetBSD: patch-SConstruct,v 1.1 2013/09/11 09:46:27 joerg Exp $
+$NetBSD: patch-SConstruct,v 1.2 2013/09/17 14:01:01 adam Exp $
+
+Hack: Use OPENSSL variable as final shared library path; fixes lib id on Darwin.
+Don't append -O2 compiler flag.
 
 --- SConstruct.orig	2013-09-11 09:42:09.000000000 +0000
 +++ SConstruct
@@ -11,3 +14,20 @@ $NetBSD: patch-SConstruct,v 1.1 2013/09/11 09:46:27 joerg Exp $
                    tools=('default', 'textfile',),
                    CPPPATH=['.', ],
                    )
+@@ -238,7 +238,6 @@ if sys.platform != 'win32':
+     env.Append(CCFLAGS='-g')
+     env.Append(CPPDEFINES=['DEBUG', '_DEBUG'])
+   else:
+-    env.Append(CCFLAGS='-O2')
+     env.Append(CPPDEFINES='NDEBUG')
+ 
+   ### works for Mac OS. probably needs to change
+@@ -401,7 +400,7 @@ if sys.platform == 'darwin':
+   # to a path in the sandbox. The shared library install name (id) should be the
+   # final targat path.
+   install_shared_path = install_shared[0].abspath
+-  target_install_shared_path = os.path.join(libdir, lib_shared[0].name)
++  target_install_shared_path = os.path.join('$OPENSSL', lib_shared[0].name)
+   env.AddPostAction(install_shared, ('install_name_tool -id %s %s'
+                                      % (target_install_shared_path,
+                                         install_shared_path)))
