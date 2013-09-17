@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2013/08/17 11:52:36 richard Exp $
+# $NetBSD: Makefile.common,v 1.32 2013/09/17 16:42:00 ryoon Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -93,4 +93,6 @@ SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
 
 pre-configure:
-	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/aclocal.m4 ${WRKSRC}/config.h.in
+	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/ac*.m4 \
+		${WRKSRC}/config.h.in ${WRKSRC}/Makefile.* \
+		${WRKSRC}/m4macros/* ${WRKSRC}/glib/libcharset/*.m4
