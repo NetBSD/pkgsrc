@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/06/02 23:34:56 dholland Exp $
+$NetBSD: distinfo,v 1.3 2013/09/17 21:14:37 joerg Exp $
 
 SHA1 (repackaged-nasd-1.3.tar.gz) = 8ea5d523cab58bcc6c90ff2b5c1c04c4ff8f3949
 RMD160 (repackaged-nasd-1.3.tar.gz) = a9aaee4722af1e7f1eefe9402c840308a4f95774
@@ -49,6 +49,7 @@ SHA1 (patch-bq) = aa8c03f2899feae06d6e7c79d10ceb7371029b28
 SHA1 (patch-br) = 6dd71a647bb99f2facd3ed139bc55dd23d22836e
 SHA1 (patch-bs) = 2244ca43d405cbbd2b2224260d4377b4c6c6a318
 SHA1 (patch-common_i386_Imakefile) = 71521f0a393e5f4efaae961f9b3d5dc790fa3b10
+SHA1 (patch-common_nasd__srpc__server.c) = df4c3e77e96fdd0027ac14f3f076ee38b1de3da1
 SHA1 (patch-include_nasd_nasd__timer_h) = 887156514a266e75b4bf871907cc6b66785c7aaf
 SHA1 (patch-kernel__generate_dux_other_Makefile) = bda4171f73d69a1136398e1fc80d6beb0e5e8a65
 SHA1 (patch-kernel__generate_dux_other_nasd_Makefile) = c5d8c5c33634ce1f6287b037e360861fefc434b8
