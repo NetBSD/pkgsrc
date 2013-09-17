@@ -1,8 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/12/21 07:58:31 martti Exp $
-
---- configure.in.orig	2003-12-13 23:10:43.000000000 +0000
-+++ configure.in	2003-12-20 18:24:25.000000000 +0000
-@@ -5,2 +5,3 @@
- AC_LIB_Z
-+AC_LIB_OPENSSL
- AC_LIB_MYSQL
