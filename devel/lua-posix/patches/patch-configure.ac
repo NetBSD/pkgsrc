@@ -1,7 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/09/17 16:23:54 ryoon Exp $
 
 * NetBSD does not support AI_V4MAPPED and AI_ALL.
-* Do not include this patch to distinfo, make are confused (should be fixed).
 
 --- configure.ac.orig	2013-09-09 07:15:14.000000000 +0000
 +++ configure.ac
