@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/14 09:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/17 16:23:54 ryoon Exp $
 #
 
 DISTNAME=	luaposix-release-v31
@@ -20,6 +20,9 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/${LUA_CDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
+
+post-patch:
+	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/${LUA_CDIR} && \
