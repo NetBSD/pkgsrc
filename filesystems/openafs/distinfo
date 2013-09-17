@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/03/04 19:39:41 jakllsch Exp $
+$NetBSD: distinfo,v 1.5 2013/09/17 01:04:12 jakllsch Exp $
 
-SHA1 (openafs-1.6.2-src.tar.bz2) = 3a5513c93bc9b1f58500cae2825d2a413952383f
-RMD160 (openafs-1.6.2-src.tar.bz2) = 03a524e7b602775981c6dedfd7883ed1205a7464
-Size (openafs-1.6.2-src.tar.bz2) = 14378378 bytes
+SHA1 (openafs-1.6.5-src.tar.bz2) = f0261d7fcd05610d2bb7dcf43c6bb21115476472
+RMD160 (openafs-1.6.5-src.tar.bz2) = 4f0eac7661c311e08b85f4195c712ee592a9b52c
+Size (openafs-1.6.5-src.tar.bz2) = 14400420 bytes
 SHA1 (patch-Makefile.in) = 159d314975188f768e0046bf153711d1b5c6b89c
 SHA1 (patch-src_aklog_aklog.c) = 7a21b2bd338a3a1d00dc0cb99f1af206ab0c607c
 SHA1 (patch-src_comerr_Makefile.in) = dd5e996481d7ef908710868aa9dc1b65feb98717
