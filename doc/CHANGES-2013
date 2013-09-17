@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3553 2013/09/17 19:55:30 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3554 2013/09/17 21:17:56 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5012,3 +5012,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated filesystems/openafs to 1.6.5 [jakllsch 2013-09-17]
 	Updated databases/mysqlcc to 1.0.2 [obache 2013-09-17]
 	Updated www/py-django to 1.5.4 [adam 2013-09-17]
+	Updated converters/libmwaw to 0.1.11 [joerg 2013-09-17]
