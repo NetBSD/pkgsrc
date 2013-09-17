@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/26 22:03:00 agc Exp $
-lib/lua/5.1/cURL.la
+@comment $NetBSD: PLIST,v 1.2 2013/09/17 12:03:42 joerg Exp $
+${LUA_CDIR}/cURL.la
