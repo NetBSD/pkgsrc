@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3552 2013/09/17 11:36:14 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3553 2013/09/17 19:55:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated cross/freemint-mintbin to 20110527nb1 [ryoon 2013-09-16]
 	Updated filesystems/openafs to 1.6.5 [jakllsch 2013-09-17]
 	Updated databases/mysqlcc to 1.0.2 [obache 2013-09-17]
+	Updated www/py-django to 1.5.4 [adam 2013-09-17]
