@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/09/17 11:58:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2013/09/17 21:09:50 joerg Exp $
 #
 
 DISTNAME=		rudiments-0.42
@@ -16,6 +16,11 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-error=unused-private-field
+.endif
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/09/17 11:58:57 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2013/09/17 21:09:50 joerg Exp $
 
 SHA1 (rudiments-0.42.tar.gz) = 136faa5186d052dccb6616dbe40e5e10a52c0ffb
 RMD160 (rudiments-0.42.tar.gz) = 46aa5d06d63faa8fb7319fd73d28c71f2dea3dc0
@@ -6,3 +6,4 @@ Size (rudiments-0.42.tar.gz) = 1488133 bytes
 SHA1 (patch-aa) = b3a49dd56808843d0e995a5c45df236abeb4c7d3
 SHA1 (patch-include_rudiments_private_clientsocket.h) = bfc239e4eb5ca79c01e3a17837443ea329dd9d80
 SHA1 (patch-src_charstring.cpp) = b385472b2340abd8090d75df9b272e6f1564061a
+SHA1 (patch-src_xmldomnode.cpp) = 51fdc1a6a2fd5a23ee0a673d06d2bd4384b22780
