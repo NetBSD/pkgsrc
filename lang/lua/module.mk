@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.3 2009/06/14 22:58:02 joerg Exp $
+# $NetBSD: module.mk,v 1.4 2013/09/17 12:03:09 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua packages.
@@ -19,6 +19,11 @@ DEPENDS+=	lua-${_LUA_VERSION}.*:../../lang/lua
 .else
 LUA_CDIR=	lib/lua/${_LUA_VERSION}
 PLIST_SUBST+=	LUA_CDIR=${LUA_CDIR}
+
+PRINT_PLIST_AWK+=	/^${LUA_LDIR:S|/|\\/|g}/ \
+			{ gsub(/${LUA_LDIR:S|/|\\/|g}/, "$${LUA_LDIR}") }
+PRINT_PLIST_AWK+=	/^${LUA_CDIR:S|/|\\/|g}/ \
+			{ gsub(/${LUA_CDIR:S|/|\\/|g}/, "$${LUA_CDIR}") }
 
 BUILDLINK_API_DEPENDS.lua+=	lua-${_LUA_VERSION}.*
 
