@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/24 16:17:12 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/17 21:15:06 joerg Exp $
 
 DISTNAME=	libodfgen-0.0.2
 CATEGORIES=	textproc
@@ -12,12 +12,18 @@ COMMENT=	Library to generate ODF documents through libwpd and libwps
 LICENSE=	mpl-2.0 OR gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-sharedptr=tr1
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libodfgen.pc.in
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ARGS+=	--with-sharedptr=c++11
+.else
+CONFIGURE_ARGS+=	--with-sharedptr=tr1
+.endif
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
