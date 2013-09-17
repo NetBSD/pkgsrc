@@ -1,3 +1,5 @@
+$NetBSD: patch-main.c,v 1.4 2013/09/17 20:27:10 wiz Exp $
+
 Upstream patch to work around a clang build issue.
 
 diff -r c440247cbd69 -r 1a7de2c68290 main.c
