@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2013/03/03 01:07:54 joerg Exp $
+$NetBSD: distinfo,v 1.20 2013/09/17 21:13:45 joerg Exp $
 
 SHA1 (ns-src-2.35.tar.gz) = 785d4045711d92c0042a6f8f5620d5eb74732980
 RMD160 (ns-src-2.35.tar.gz) = 197e6874b97c56819ce9a722ffab9fe80a5cfe21
@@ -26,3 +26,6 @@ SHA1 (patch-common_tclAppInit.cc) = a96791d7a4cdf9834fa2e3bf994903944f41b011
 SHA1 (patch-common_tkAppInit.cc) = c4f5bfa97a1585773443044640dac343219a4155
 SHA1 (patch-linkstate_ls.h) = 5f0fb99db398cf39e9853e7d8e8cd6536d29e44b
 SHA1 (patch-mac_mac-802_11Exr.cc) = 93e4112025b6e610e76694c6067723f77cd75b84
+SHA1 (patch-mdart_mdart__adp.cc) = 5cee0a60a5102197363f53f2ebb90ca972bc139c
+SHA1 (patch-mdart_mdart__queue.h) = 1bf4cfec755c80cb5332a234c82c72584e62863c
+SHA1 (patch-nix_nixnode.cc) = d0a1826836f5ce9d40869946e9df29d6b53d4b7f
