@@ -1,11 +1,11 @@
-$NetBSD: patch-libraries_vendor_config.php,v 1.2 2012/08/28 15:54:54 tron Exp $
+$NetBSD: patch-libraries_vendor_config.php,v 1.3 2013/09/18 22:20:04 tron Exp $
 
 Configure location of the configuration file in the vendor specific section
 as suggested by the phpMyAdmin documentation.
 
---- libraries/vendor_config.php.orig	2012-08-12 14:45:56.000000000 +0100
-+++ libraries/vendor_config.php	2012-08-28 16:44:12.000000000 +0100
-@@ -25,7 +25,7 @@
+--- libraries/vendor_config.php.orig	2013-09-05 17:34:46.000000000 +0100
++++ libraries/vendor_config.php	2013-09-18 21:07:38.000000000 +0100
+@@ -28,7 +28,7 @@
  /**
   * Path to config file generated using setup script.
   */
