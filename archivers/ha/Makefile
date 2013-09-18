@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/09/11 19:46:55 asau Exp $
+# $NetBSD: Makefile,v 1.31 2013/09/18 20:58:35 asau Exp $
 
 DISTNAME=	ha0999
 PKGNAME=	ha-0.999b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	# ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=	.tgz
@@ -16,7 +16,6 @@ WRKSRC=		${WRKDIR}
 
 MAKE_FILE=	makefile.nix
 BUILD_TARGET=	ha
-USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin
 
