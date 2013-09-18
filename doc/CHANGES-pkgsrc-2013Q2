@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.34 2013/09/13 13:07:44 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q2,v 1.1.2.35 2013/09/18 09:56:52 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q2 branch:
@@ -129,3 +129,5 @@ Pullup ticket #4233 - requested by wen
 www/mediawiki: security update
 Pullup ticket #4234 - requested by morr
 www/wordpress: security update
+Pullup ticket #4232 - requested by tron
+net/wireshark: security update
