@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2013/07/29 20:01:02 tron Exp $
+# $NetBSD: Makefile,v 1.118 2013/09/18 22:20:04 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -29,9 +29,8 @@ MESSAGE_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP} PMCONFFILE=${PMCONFFILE:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	3.5.8.2
-DOC_FILES=	ChangeLog Documentation.txt LICENSE README \
-		RELEASE-DATE-${DIST_VERSION}
+DIST_VERSION=	4.0.6
+DOC_FILES=	ChangeLog LICENSE README RELEASE-DATE-${DIST_VERSION}
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
@@ -56,7 +55,8 @@ INSTALLATION_DIRS+=	${PREFIX}/share/doc/phpmyadmin \
 			${PREFIX}/share/examples/phpmyadmin \
 			${PMDIR} ${PMDIR}/scripts
 
-INSTALL_DIRS=	js
+INSTALL_DIRS=	doc/html
+INSTALL_DIRS+=	js
 INSTALL_DIRS+=	js/canvg
 INSTALL_DIRS+=	js/codemirror
 INSTALL_DIRS+=	js/codemirror/lib
@@ -110,9 +110,26 @@ INSTALL_DIRS+=	libraries/config
 INSTALL_DIRS+=	libraries/dbi
 INSTALL_DIRS+=	libraries/engines
 INSTALL_DIRS+=	libraries/export
+INSTALL_DIRS+=	libraries/gis
 INSTALL_DIRS+=	libraries/import
 INSTALL_DIRS+=	libraries/import/upload
+INSTALL_DIRS+=	libraries/navigation
+INSTALL_DIRS+=	libraries/navigation/Nodes
 INSTALL_DIRS+=	libraries/php-gettext
+INSTALL_DIRS+=	libraries/phpseclib/Crypt
+INSTALL_DIRS+=	libraries/plugins
+INSTALL_DIRS+=	libraries/plugins/auth
+INSTALL_DIRS+=	libraries/plugins/auth/swekey
+INSTALL_DIRS+=	libraries/plugins/export
+INSTALL_DIRS+=	libraries/plugins/import
+INSTALL_DIRS+=	libraries/plugins/import/upload
+INSTALL_DIRS+=	libraries/plugins/transformations
+INSTALL_DIRS+=	libraries/plugins/transformations/abstract
+INSTALL_DIRS+=	libraries/properties
+INSTALL_DIRS+=	libraries/properties/options
+INSTALL_DIRS+=	libraries/properties/options/groups
+INSTALL_DIRS+=	libraries/properties/options/items
+INSTALL_DIRS+=	libraries/properties/plugins
 INSTALL_DIRS+=	libraries/rte
 INSTALL_DIRS+=	libraries/schema
 INSTALL_DIRS+=	libraries/tcpdf
@@ -248,8 +265,6 @@ do-install:
 	${MV} ${DESTDIR}${PREFIX}/share/phpmyadmin/config.sample.inc.php \
 	  ${DESTDIR}${EXDIR}/config.inc.php
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${EXDIR}
-
-	${INSTALL_DATA} ${WRKSRC}/Documentation.html ${DESTDIR}${PMDIR}
 
 	for dir in ${INSTALL_DIRS}; do					\
 		for file in ${WRKSRC}/$$dir/*; do			\
