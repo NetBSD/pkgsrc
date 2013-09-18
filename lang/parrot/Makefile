@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2013/09/13 10:52:37 sno Exp $
+# $NetBSD: Makefile,v 1.75 2013/09/18 12:07:05 sno Exp $
 #
 
 DISTNAME=		parrot-${PARROT_VERSION}
@@ -17,6 +17,7 @@ PTHREAD_OPTS+=		require
 BUILD_TARGET=		world
 TEST_TARGET=		test
 HAS_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
