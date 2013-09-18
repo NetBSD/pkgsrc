@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3555 2013/09/18 08:39:06 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3556 2013/09/18 22:20:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5014,3 +5014,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-django to 1.5.4 [adam 2013-09-17]
 	Updated converters/libmwaw to 0.1.11 [joerg 2013-09-17]
 	Updated math/ruby-spreadsheet to 0.9.0 [obache 2013-09-18]
+	Updated databases/phpmyadmin to 4.0.6 [tron 2013-09-18]
