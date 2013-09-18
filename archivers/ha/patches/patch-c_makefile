@@ -1,0 +1,15 @@
+$NetBSD: patch-c_makefile,v 1.1 2013/09/18 20:58:36 asau Exp $
+
+--- c/makefile.orig	1995-01-12 06:43:42.000000000 +0000
++++ c/makefile
+@@ -35,7 +35,7 @@ clean: 
+ #
+ # include a dependency file if one exists
+ #
+-ifeq (.depend,$(wildcard .depend))
+-include .depend
+-endif
++#ifeq (.depend,$(wildcard .depend))
++#include .depend
++#endif
+ 
