@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.10 2013/08/04 11:38:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/09/18 08:38:47 obache Exp $
 bin/xlsopcodes${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/GUIDE.txt
+${GEM_LIBDIR}/GUIDE.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
-${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/xlsopcodes
 ${GEM_LIBDIR}/lib/parseexcel.rb
@@ -60,9 +60,11 @@ ${GEM_LIBDIR}/test/data/test_datetime.xls
 ${GEM_LIBDIR}/test/data/test_empty.xls
 ${GEM_LIBDIR}/test/data/test_formula.xls
 ${GEM_LIBDIR}/test/data/test_long_sst_record.xls
+${GEM_LIBDIR}/test/data/test_margin.xls
 ${GEM_LIBDIR}/test/data/test_merged_and_protected.xls
 ${GEM_LIBDIR}/test/data/test_merged_cells.xls
 ${GEM_LIBDIR}/test/data/test_missing_row.xls
+${GEM_LIBDIR}/test/data/test_pagesetup.xls
 ${GEM_LIBDIR}/test/data/test_version_excel5.xls
 ${GEM_LIBDIR}/test/data/test_version_excel95.xls
 ${GEM_LIBDIR}/test/data/test_version_excel97.xls
