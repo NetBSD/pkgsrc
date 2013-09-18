@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/09/15 17:28:45 dbj Exp $
+# $NetBSD: Makefile,v 1.25 2013/09/18 18:41:29 jperkin Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -63,6 +63,8 @@ CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86_64-darwin8-gcc
 .    endif
 .  endif
+.elif ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-unit-tests
 .endif
 
 .include "../../mk/compiler.mk"
