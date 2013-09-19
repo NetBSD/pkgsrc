@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3558 2013/09/19 11:07:16 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3559 2013/09/19 12:39:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5017,3 +5017,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/phpmyadmin to 4.0.6 [tron 2013-09-18]
 	Removed net/p5-SOAP-Transport-TCP [obache 2013-09-19]
 	Updated devel/scons to 2.3.0nb1 [jperkin 2013-09-19]
+	Updated www/firefox to 24.0 [ryoon 2013-09-19]
