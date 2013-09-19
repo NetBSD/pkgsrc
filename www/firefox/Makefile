@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.137 2013/09/02 19:51:28 adam Exp $
+# $NetBSD: Makefile,v 1.138 2013/09/19 12:37:49 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	23.0
-MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH=	24.0
+MOZ_BRANCH_MINOR=	esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/}
-PKGREVISION=	1
+PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/} \
-		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
+#MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
+MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
-WRKSRC=		${WRKDIR}/mozilla-release
+WRKSRC=		${WRKDIR}/mozilla-esr24
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
@@ -46,6 +45,8 @@ LDFLAGS.Linux=		-lnspr4
 .include "../../www/firefox/mozilla-common.mk"
 .include "options.mk"
 
+CHECK_PORTABILITY_SKIP+=	js/src/tests/update-test262.sh
+
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
@@ -58,6 +59,12 @@ MOZILLA_NAME=	Firefox
 .else
 MOZILLA_NAME=	Browser
 .endif
+
+SUBST_CLASSES+=		sys-dic
+SUBST_STAGE.sys-dic=	pre-configure
+SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
+SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/src/mozHunspell.cpp
+SUBST_VARS.sys-dic=	PREFIX
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
