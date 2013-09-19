@@ -1,33 +1,18 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.1 2013/05/23 13:12:13 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.2 2013/09/19 12:37:50 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2013-05-11 19:19:45.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2013-09-10 03:43:47.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc
-@@ -12,12 +12,23 @@
- #include <unistd.h>
- #include <sys/stat.h>
- #include <fcntl.h>
--#include <linux/videodev2.h>
- #include <errno.h>
- #include <stdio.h>
- #include <sys/mman.h>
- #include <string.h>
- 
-+//v4l includes
-+#if defined(__DragonFly__) || defined(__NetBSD__) || defined(__OpenBSD__)
-+#include <sys/videoio.h>
-+#elif defined(__sun)
-+#include <sys/videodev2.h>
-+#else
-+#include <linux/videodev2.h>
-+#endif
+@@ -25,6 +25,9 @@
+ #else
+ #include <linux/videodev2.h>
+ #endif
 +#ifdef HAVE_LIBV4L2
 +#include <libv4l2.h>
 +#endif
-+
+ 
  #include <new>
  
- #include "ref_count.h"
-@@ -26,6 +37,15 @@
+@@ -34,6 +37,15 @@
  #include "critical_section_wrapper.h"
  #include "video_capture_linux.h"
  
