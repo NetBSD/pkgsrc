@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
+$NetBSD: patch-src_gifcodec.c,v 1.2 2013/09/19 11:53:56 obache Exp $
 
 * fixes build with giflib>=5
 
@@ -18,7 +18,31 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  
  /* Data structure used for callback */
  typedef struct
-@@ -245,7 +249,9 @@ DGifSlurpMono(GifFileType * GifFile, Sav
+@@ -129,7 +133,11 @@ AddExtensionBlockMono(SavedImage *New, i
+ 
+ 	if (ExtData) {
+ 		memcpy(ep->Bytes, ExtData, Len);
++#if GIFLIB_MAJOR >= 5
++		ep->Function = New->ExtensionBlocks[New->ExtensionBlockCount++].Function;
++#else
+ 		ep->Function = New->Function;
++#endif
+ 	}
+ 
+ 	return (GIF_OK);
+@@ -232,7 +240,11 @@ DGifSlurpMono(GifFileType * GifFile, Sav
+ 			}
+ 
+ 			case EXTENSION_RECORD_TYPE: {
++#if GIFLIB_MAJOR >= 5
++				if (DGifGetExtension(GifFile, &temp_save.ExtensionBlocks[temp_save.ExtensionBlockCount].Function, &ExtData) == GIF_ERROR) {
++#else
+ 				if (DGifGetExtension(GifFile, &temp_save.Function, &ExtData) == GIF_ERROR) {
++#endif
+ 					return (GIF_ERROR);
+ 				}
+ 
+@@ -245,7 +257,9 @@ DGifSlurpMono(GifFileType * GifFile, Sav
  					if (DGifGetExtensionNext(GifFile, &ExtData) == GIF_ERROR) {
  						return (GIF_ERROR);
  					}
@@ -28,7 +52,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  				}
  				break;
  			}
-@@ -304,9 +310,17 @@ gdip_load_gif_image (void *stream, GpIma
+@@ -304,9 +318,17 @@ gdip_load_gif_image (void *stream, GpIma
  	loop_counter = FALSE;
  
  	if (from_file) {
@@ -46,7 +70,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  	}
  	
  	if (gif == NULL) {
-@@ -662,9 +676,17 @@ gdip_save_gif_image (void *stream, GpIma
+@@ -662,9 +684,17 @@ gdip_save_gif_image (void *stream, GpIma
  	}
  
  	if (from_file) {
@@ -64,7 +88,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  	}
  		
  	if (!fp) {
-@@ -703,7 +725,11 @@ gdip_save_gif_image (void *stream, GpIma
+@@ -703,7 +733,11 @@ gdip_save_gif_image (void *stream, GpIma
  					goto error; 
  				}
  
@@ -76,7 +100,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  
  				pixbuf = GdipAlloc(pixbuf_size);
  				if (pixbuf == NULL) {
-@@ -794,7 +820,11 @@ gdip_save_gif_image (void *stream, GpIma
+@@ -794,7 +828,11 @@ gdip_save_gif_image (void *stream, GpIma
  				pixbuf = pixbuf_org;
  			} else {
  				cmap_size = 256;
@@ -88,7 +112,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  
  				red = GdipAlloc(pixbuf_size);
  				green = GdipAlloc(pixbuf_size);
-@@ -825,13 +855,21 @@ gdip_save_gif_image (void *stream, GpIma
+@@ -825,13 +863,21 @@ gdip_save_gif_image (void *stream, GpIma
  						v += 4;
  					}
  				}
@@ -110,7 +134,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  			cmap->ColorCount = 1 << cmap->BitsPerPixel;
  
  			if ((frame == 0) && (k == 0)) {
-@@ -849,8 +887,15 @@ gdip_save_gif_image (void *stream, GpIma
+@@ -849,8 +895,15 @@ gdip_save_gif_image (void *stream, GpIma
  						Buffer[0] = 1;
  						Buffer[1] = ptr[0];
  						Buffer[2] = ptr[1];
@@ -126,7 +150,7 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  					}
  				}
  
-@@ -902,7 +947,11 @@ gdip_save_gif_image (void *stream, GpIma
+@@ -902,7 +955,11 @@ gdip_save_gif_image (void *stream, GpIma
  				pixbuf += bitmap_data->width;
  			}
  
@@ -138,3 +162,15 @@ $NetBSD: patch-src_gifcodec.c,v 1.1 2013/07/13 10:50:05 obache Exp $
  			if (red != NULL) {
  				GdipFree (red);
  			}
+@@ -930,7 +987,11 @@ gdip_save_gif_image (void *stream, GpIma
+ 
+ error:
+ 	if (cmap != NULL) {
++#if GIFLIB_MAJOR >= 5
++		GifFreeMapObject (cmap);
++#else
+ 		FreeMapObject (cmap);
++#endif
+ 	}
+ 
+ 	if (red != NULL) {
