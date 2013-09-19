@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/04/27 14:24:14 matthias Exp $
+# $NetBSD: options.mk,v 1.4 2013/09/19 05:03:13 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
 PKG_SUPPORTED_OPTIONS=	fastcgi pgsql mysql x11
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-postgis
 # MySQL/MyGIS support
 #
 .if !empty(PKG_OPTIONS:Mmysql)
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mygis
 .endif
 
