@@ -1,13 +1,13 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.1 2013/07/17 11:00:13 jperkin Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.2 2013/09/19 12:37:49 ryoon Exp $
 
---- ipc/chromium/src/base/process_util.h.orig	2013-05-11 19:19:32.000000000 +0000
+--- ipc/chromium/src/base/process_util.h.orig	2013-09-10 03:43:34.000000000 +0000
 +++ ipc/chromium/src/base/process_util.h
 @@ -13,7 +13,7 @@
  #if defined(OS_WIN)
  #include <windows.h>
  #include <tlhelp32.h>
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_SOLARIS)
+-#elif defined(OS_LINUX) || defined(__GLIBC__)
++#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
  #include <dirent.h>
  #include <limits.h>
  #include <sys/types.h>
@@ -21,12 +21,12 @@ $NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.1 2013/07/17 11:00:13 j
  // TODO(port): we should not rely on a Win32 structure.
  struct ProcessEntry {
    int pid;
-@@ -317,7 +320,7 @@ class NamedProcessIterator {
+@@ -316,7 +319,7 @@ class NamedProcessIterator {
  #if defined(OS_WIN)
    HANDLE snapshot_;
    bool started_iteration_;
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_SOLARIS)
+-#elif defined(OS_LINUX) || defined(__GLIBC__)
++#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
    DIR *procfs_dir_;
  #elif defined(OS_BSD)
    std::vector<ProcessEntry> content;
