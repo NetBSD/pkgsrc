@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2013/09/18 18:41:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2013/09/19 11:21:56 ryoon Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://webm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-postproc
 CONFIGURE_ARGS+=	--enable-pic
 CONFIGURE_ARGS+=	--enable-runtime-cpu-detect
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-unit-tests
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,7 +39,6 @@ REPLACE_BASH=		configure \
 
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
-CONFIGURE_ARGS+=	--disable-unit-tests
 .  if ${MACHINE_ARCH} == "i386"
 .    if !empty(OS_VERSION:M12.*)
 CONFIGURE_ARGS+=	--target=x86-darwin12-gcc
@@ -63,8 +64,6 @@ CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86_64-darwin8-gcc
 .    endif
 .  endif
-.elif ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-unit-tests
 .endif
 
 .include "../../mk/compiler.mk"
@@ -81,8 +80,5 @@ BUILD_TARGET=	# none
 post-extract:
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
-.if empty(CONFIGURE_ARGS:M--disable-unit-tests)
-.include "../../devel/googletest/buildlink3.mk"
-.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
