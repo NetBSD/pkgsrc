@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/08/16 10:28:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2013/09/19 20:38:50 markd Exp $
 
 DISTNAME=	strigi-0.7.8
 PKGREVISION=	6
@@ -24,6 +24,8 @@ RT_LIB_SCHED=	-lrt
 .else
 RT_LIB_SCHED=	# empty
 .endif
+
+LDFLAGS.DragonFly+=	-lclucene-shared
 
 CFLAGS.SunOS+=	-DCMAKE_HAVE_PTHREAD_CREATE
 LDFLAGS.SunOS+=	-mimpure-text -lrt -lsocket -lclucene-shared
