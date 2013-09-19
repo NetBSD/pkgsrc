@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/19 09:41:25 obache Exp $
 #
 
 DISTNAME=	SOAP-Transport-TCP-0.715
@@ -13,6 +13,7 @@ COMMENT=	TCP transport layer for SOAP::Lite
 LICENSE=	artistic
 
 CONFLICTS+=	p5-SOAP-Lite<0.714
+CONFLICTS+=	p5-SOAP-Lite>=1.0
 DEPENDS+=	p5-SOAP-Lite>=0.714:../../net/p5-SOAP-Lite
 
 PERL5_MODULE_TYPE=	Module::Build
