@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3556 2013/09/18 22:20:24 tron Exp $
+$NetBSD: CHANGES-2013,v 1.3557 2013/09/19 11:01:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5015,3 +5015,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/libmwaw to 0.1.11 [joerg 2013-09-17]
 	Updated math/ruby-spreadsheet to 0.9.0 [obache 2013-09-18]
 	Updated databases/phpmyadmin to 4.0.6 [tron 2013-09-18]
+	Removed net/p5-SOAP-Transport-TCP [obache 2013-09-19]
