@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/08/22 07:14:24 wen Exp $
+# $NetBSD: Makefile,v 1.38 2013/09/19 11:03:53 obache Exp $
 
 DISTNAME=	SOAP-Lite-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -26,6 +26,8 @@ DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 DEPENDS+=	{perl>=5.10.1,p5-constant>=1.14}:../../devel/p5-constant
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=	{perl>=5.10.0,p5-version>=0}:../../devel/p5-version
+
+SUPERSEDES+=	p5-SOAP-Transport-TCP-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[a-z]$||}
 
