@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/06/16 05:36:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/09/19 08:23:12 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,8 +21,8 @@ ${PYSITELIB}/sqlalchemy/connectors/pyodbc.pyo
 ${PYSITELIB}/sqlalchemy/connectors/zxJDBC.py
 ${PYSITELIB}/sqlalchemy/connectors/zxJDBC.pyc
 ${PYSITELIB}/sqlalchemy/connectors/zxJDBC.pyo
-${PYSITELIB}/sqlalchemy/cprocessors.so
-${PYSITELIB}/sqlalchemy/cresultproxy.so
+${PLIST.py2x}${PYSITELIB}/sqlalchemy/cprocessors.so
+${PLIST.py2x}${PYSITELIB}/sqlalchemy/cresultproxy.so
 ${PYSITELIB}/sqlalchemy/databases/__init__.py
 ${PYSITELIB}/sqlalchemy/databases/__init__.pyc
 ${PYSITELIB}/sqlalchemy/databases/__init__.pyo
