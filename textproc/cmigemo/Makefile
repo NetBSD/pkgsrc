@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/09/01 05:28:26 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/19 09:18:06 obache Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -28,7 +28,7 @@ WRKSRC=		${WRKDIR}/cmigemo-default-src
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ENV+=		PROGRAM_INSTALL=${INSTALL:Q}
-CONFIGURE_ENV+=		PROTRAM_ENCODEFILTER="nkf -x"
+CONFIGURE_ENV+=		PROGRAM_ENCODEFILTER="nkf -x"
 CONFIGURE_ENV+=		PROGRAM_HTTP=${TRUE:Q}
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
