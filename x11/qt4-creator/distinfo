@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2012/11/19 23:13:48 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/09/19 10:25:44 joerg Exp $
 
 SHA1 (qt-creator-2.0.1-src.tgz) = 605bfe7876c4fa322544bc2314b059767eae407f
 RMD160 (qt-creator-2.0.1-src.tgz) = f33a58c926bd710b4688bb5292fa66c417e78070
@@ -18,6 +18,7 @@ SHA1 (patch-al) = b8e116a70ec00c4b5bb50f5c2181d438e81de54f
 SHA1 (patch-am) = 075cfbe1b642f1913976c0cbdf40041e912b308b
 SHA1 (patch-an) = 9b2183299919cea25216143ffdd283e10654fdb7
 SHA1 (patch-ao) = 4359debaebeb4686b8b6b4efefb1f7b480c0287c
-SHA1 (patch-ap) = a96b4a03ce289870fe2a3102e1945e42a57a9459
-SHA1 (patch-src_libs_3rdparty_botan_build_botan_secmem.h) = aa781861ca11bc77486dfa8f95c1dd2dd90874db
+SHA1 (patch-src_libs_3rdparty_3rdparty.pro) = 975eeeeadd70dddeb99236a62e708e32bb8b4c8f
+SHA1 (patch-src_libs_3rdparty_net7ssh_net7ssh__dependencies.pri) = 911f894b0ed60bc13819d23cbd36e3f05675621f
+SHA1 (patch-src_libs_3rdparty_net7ssh_src_src.pro) = da8589813c12d0b75ac20d3c74d3b1142662ed44
 SHA1 (patch-src_plugins_coreplugin_mimedatabase.h) = 33f0d746566247b1866e8262b321bd741c234e0d
