@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2013/09/18 09:58:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.73 2013/09/19 10:11:47 fhajny Exp $
 #
 
 DISTNAME=	groff-1.20.1
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	share/groff/site-tmac
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
-USE_TOOLS+=		perl:run sed:run awk:run gmake
+USE_TOOLS+=		perl:run sed:run awk:run
 USE_FEATURES=		getopt_long
 
 INFO_FILES=		YES
