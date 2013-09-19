@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:32 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/09/19 08:49:20 obache Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -15,6 +15,7 @@ COMMENT=	Scriptable system to build Windows installers
 
 DEPENDS+=	scons>=0.96.91:../../devel/scons
 
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 
 NSIS_SRC=	${DISTNAME:=-src}
@@ -40,7 +41,7 @@ post-extract:
 	chmod -R go-w ${WRKDIR}/*
 
 do-build:
-	cd ${WRKSRC:Q} &&						\
+	cd ${WRKSRC:Q} && ${PKGSRC_SETENV} ${MAKE_ENV}			\
 	    ${SCONS_BIN:Q} SKIPSTUBS=all SKIPPLUGINS=all		\
 	        SKIPUTILS=all SKIPMISC=all VERSION=${NSIS_VER:Q}
 
