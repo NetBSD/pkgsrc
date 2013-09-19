@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/08/08 12:55:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/09/19 13:09:59 ryoon Exp $
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af.manifest
@@ -276,7 +276,6 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/places/places.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/services/errors.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/services/sync.properties
@@ -558,7 +557,6 @@ lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/places/places.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/services/errors.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/services/sync.properties
@@ -840,7 +838,6 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/places/places.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/services/errors.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/services/sync.properties
@@ -1122,7 +1119,6 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/places/places.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/services/errors.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/services/sync.properties
@@ -1404,7 +1400,6 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/local
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/places/places.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/services/errors.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/services/sync.properties
@@ -1687,7 +1682,6 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/places/places.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/services/errors.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/services/sync.properties
@@ -1970,7 +1964,6 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/places/places.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/services/errors.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/services/sync.properties
@@ -2250,7 +2243,6 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/l
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/places/places.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/services/errors.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/services/sync.properties
@@ -2534,7 +2526,6 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/l
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/places/places.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/services/errors.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/services/sync.properties
@@ -2816,7 +2807,6 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/places/places.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/services/errors.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/services/sync.properties
@@ -3099,7 +3089,6 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/places/places.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/services/errors.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/services/sync.properties
@@ -3381,7 +3370,6 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/places/places.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/services/errors.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/services/sync.properties
@@ -3663,7 +3651,6 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/places/places.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/services/errors.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/services/sync.properties
@@ -3946,7 +3933,6 @@ lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/local
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/places/places.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/services/errors.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/services/sync.properties
@@ -4230,7 +4216,6 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/places/places.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/services/errors.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/services/sync.properties
@@ -4511,7 +4496,6 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/places/places.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/services/errors.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/services/sync.properties
@@ -4794,7 +4778,6 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/places/places.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/services/errors.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/services/sync.properties
@@ -5076,7 +5059,6 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/places/places.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/services/errors.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/services/sync.properties
@@ -5360,7 +5342,6 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/l
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/places/places.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/services/errors.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/services/sync.properties
@@ -5643,7 +5624,6 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/l
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/places/places.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/services/errors.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/services/sync.properties
@@ -5924,7 +5904,6 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/l
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/places/places.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/services/errors.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/services/sync.properties
@@ -6208,7 +6187,6 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/places/places.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/services/errors.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/services/sync.properties
@@ -6491,7 +6469,6 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/l
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/places/places.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/services/errors.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/services/sync.properties
@@ -6773,7 +6750,6 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/l
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/places/places.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/services/errors.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/services/sync.properties
@@ -7056,7 +7032,6 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/l
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/places/places.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/services/errors.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/services/sync.properties
@@ -7337,7 +7312,6 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/l
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/places/places.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/services/errors.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/services/sync.properties
@@ -7619,7 +7593,6 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/places/places.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/services/errors.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/services/sync.properties
@@ -7903,7 +7876,6 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/places/places.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/services/errors.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/services/sync.properties
@@ -8185,7 +8157,6 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/places/places.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/services/errors.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/services/sync.properties
@@ -8467,7 +8438,6 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/places/places.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/services/errors.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/services/sync.properties
@@ -8750,7 +8720,6 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/places/places.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/services/errors.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/services/sync.properties
@@ -9032,7 +9001,6 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/l
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/places/places.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/services/errors.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/services/sync.properties
@@ -9317,7 +9285,6 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/l
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/places/places.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/services/errors.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/services/sync.properties
@@ -9599,7 +9566,6 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/places/places.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/services/errors.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/services/sync.properties
@@ -9881,7 +9847,6 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/places/places.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/services/errors.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/services/sync.properties
@@ -10163,7 +10128,6 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/l
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/places/places.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/services/errors.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/services/sync.properties
@@ -10443,7 +10407,6 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/places/places.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/services/errors.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/services/sync.properties
@@ -10724,7 +10687,6 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/l
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/places/places.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/services/errors.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/services/sync.properties
@@ -11008,7 +10970,6 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/places/places.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/services/errors.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/services/sync.properties
@@ -11289,7 +11250,6 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/places/places.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/services/errors.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/services/sync.properties
@@ -11571,7 +11531,6 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/l
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/places/places.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/services/errors.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/services/sync.properties
@@ -11850,7 +11809,6 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/places/places.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/services/errors.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/services/sync.properties
@@ -12133,7 +12091,6 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/places/places.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/services/errors.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/services/sync.properties
@@ -12416,7 +12373,6 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/places/places.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/services/errors.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/services/sync.properties
@@ -12700,7 +12656,6 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/places/places.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/services/errors.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/services/sync.properties
@@ -12981,7 +12936,6 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/places/places.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/services/errors.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/services/sync.properties
@@ -13263,7 +13217,6 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/places/places.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/services/errors.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/services/sync.properties
@@ -13544,7 +13497,6 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/places/places.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/services/errors.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/services/sync.properties
@@ -13827,7 +13779,6 @@ lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/places/places.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/services/errors.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/services/sync.properties
@@ -14110,7 +14061,6 @@ lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/places/places.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/services/errors.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/services/sync.properties
@@ -14392,7 +14342,6 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/places/places.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/services/errors.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/services/sync.properties
@@ -14674,7 +14623,6 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/places/places.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/services/errors.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/services/sync.properties
@@ -14956,7 +14904,6 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/local
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/places/places.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/services/errors.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/services/sync.properties
@@ -15240,7 +15187,6 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/places/places.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/services/errors.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/services/sync.properties
@@ -15523,7 +15469,6 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/places/places.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/services/errors.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/services/sync.properties
@@ -15806,7 +15751,6 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/places/places.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/services/errors.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/services/sync.properties
@@ -16090,7 +16034,6 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/l
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/places/places.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/services/errors.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/services/sync.properties
@@ -16371,7 +16314,6 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/places/places.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/services/errors.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/services/sync.properties
@@ -16654,7 +16596,6 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/l
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/places/places.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/services/errors.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/services/sync.properties
@@ -16935,7 +16876,6 @@ lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/local
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/places/places.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/services/errors.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/services/sync.properties
@@ -17217,7 +17157,6 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/places/places.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/services/errors.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/services/sync.properties
@@ -17498,7 +17437,6 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/l
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/places/places.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/services/errors.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/services/sync.properties
@@ -17781,7 +17719,6 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/places/places.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/services/errors.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/services/sync.properties
@@ -18063,7 +18000,6 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/l
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/places/places.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/services/errors.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/services/sync.properties
@@ -18344,7 +18280,6 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/l
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/places/places.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/services/errors.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/services/sync.properties
@@ -18626,7 +18561,6 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/places/places.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/services/errors.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/services/sync.properties
@@ -18908,7 +18842,6 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/places/places.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/services/errors.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/services/sync.properties
@@ -19191,7 +19124,6 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/places/places.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/services/errors.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/services/sync.properties
@@ -19474,7 +19406,6 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/places/places.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/services/errors.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/services/sync.properties
@@ -19758,7 +19689,6 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/places/places.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/services/errors.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/services/sync.properties
@@ -20040,7 +19970,6 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/places/places.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/services/errors.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/services/sync.properties
@@ -20323,7 +20252,6 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/local
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/places/places.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/services/errors.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/services/sync.properties
@@ -20605,7 +20533,6 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/places/places.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/services/errors.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/services/sync.properties
@@ -20888,7 +20815,6 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/places/places.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/services/errors.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/services/sync.properties
@@ -21171,7 +21097,6 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/l
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/places/places.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/services/errors.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/services/sync.properties
@@ -21450,7 +21375,6 @@ lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/l
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/places/places.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/services/errors.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/services/sync.properties
@@ -21731,7 +21655,6 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/places/places.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/services/errors.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/services/sync.properties
@@ -22014,7 +21937,6 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/places/places.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/services/errors.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/services/sync.properties
@@ -22298,7 +22220,6 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/places/places.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/services/errors.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/services/sync.properties
@@ -22579,7 +22500,6 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/places/places.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/services/errors.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/services/sync.properties
@@ -22860,7 +22780,6 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/places/places.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/services/errors.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/services/sync.properties
@@ -23143,7 +23062,6 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/places/places.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/services/errors.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/services/sync.properties
@@ -23428,7 +23346,6 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/l
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/places/places.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/services/errors.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/services/sync.properties
@@ -23711,7 +23628,6 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/l
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/places/places.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/services/errors.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/services/sync.properties
@@ -23993,7 +23909,6 @@ lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/pippki/deviceManager.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/pippki/pippki.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/pippki/pippki.properties
-lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/pippki/validation.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/places/places.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/services/errors.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/services/sync.properties
