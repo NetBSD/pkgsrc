@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2013/09/02 19:50:51 adam Exp $
+# $NetBSD: Makefile,v 1.135 2013/09/19 04:58:50 obache Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -49,8 +49,7 @@ SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-se
 .include "../../databases/mysql51-server/buildlink3.mk"
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
 .else
-.include "../../databases/mysql5-server/buildlink3.mk"
-SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
+PKG_FAIL_REASON+=	"Unknown mysql version: ${_MYSQL_VERSION}"
 .endif
 
 .include "../../audio/liblastfm/buildlink3.mk"
