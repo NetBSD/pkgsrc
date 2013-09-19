@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/09/19 11:08:05 joerg Exp $
+$NetBSD: distinfo,v 1.8 2013/09/19 20:29:34 joerg Exp $
 
 SHA1 (xmltooling-1.5.3.tar.gz) = b8498a8dafe18bf612a6651ab7af662add5c2a68
 RMD160 (xmltooling-1.5.3.tar.gz) = 2b8530f41576511b222f515a86e39981f34c2102
 Size (xmltooling-1.5.3.tar.gz) = 675350 bytes
 SHA1 (patch-xmltooling_Makefile.in) = 9c6764c89d0c81c46486283063e02791c22c37e2
-SHA1 (patch-xmltooling_util_Threads.h) = 7c59c74986693a52164e20bb382465cc951fed15
 SHA1 (patch-xmltooling_util_XMLHelper.cpp) = 2dc0915af93e4b2aeb0a946ea14f2de89050867f
 SHA1 (patch-xmltooling_util_XMLHelper.h) = 98c6c0552c81a8599c5337642bcdcaa9cdb76d80
