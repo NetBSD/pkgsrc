@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2013/09/17 16:42:00 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.33 2013/09/19 11:45:22 ryoon Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -38,6 +38,8 @@ CONFIGURE_ARGS+=	--with-pcre=system
 CONFIGURE_ARGS+=	--disable-dtrace
 CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
 CONFIGURE_ARGS+=	--disable-modular-tests
+# Avoid unnecessary autotools invocation.
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
 
@@ -91,8 +93,3 @@ SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/glib20.pot
 SUBST_FILES.dbusdb+=	po/*.po
 SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
-
-pre-configure:
-	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/ac*.m4 \
-		${WRKSRC}/config.h.in ${WRKSRC}/Makefile.* \
-		${WRKSRC}/m4macros/* ${WRKSRC}/glib/libcharset/*.m4
