@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/09/10 14:22:30 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2013/09/20 21:49:52 ryoon Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -156,6 +156,7 @@ REPLACE_INTERPRETER+=	py27
 REPLACE.py27.old=	.*python[^ ]*
 REPLACE.py27.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.py27=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
+REPLACE_FILES.py27+=	Lib/*/*/*/*.py
 
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
