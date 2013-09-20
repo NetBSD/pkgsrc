@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Cygwin,v 1.1 2013/09/20 09:09:58 joerg Exp $
+bin/libidn-11.def
