@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2013/07/28 12:54:52 obache Exp $
+$NetBSD: distinfo,v 1.17 2013/09/20 23:06:07 joerg Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -6,8 +6,10 @@ Size (g95_source.tgz) = 1355198 bytes
 SHA1 (gcc-core-4.1.2.tar.bz2) = d6875295f6df1bec4a6f4ab8f0da54bfb8d97306
 RMD160 (gcc-core-4.1.2.tar.bz2) = 612cbd5b795f7095fb3f565e6a8eaaee82c472c5
 Size (gcc-core-4.1.2.tar.bz2) = 17485561 bytes
-SHA1 (patch-ab) = 74187ee99e3e383333219cbc53676c07ca03ff19
+SHA1 (patch-ab) = 7429a4da26aa573dcdd94bf417da1e009f95d273
 SHA1 (patch-ac) = b20a90cc2f9078cf0048980b75fa6836da0f28a8
+SHA1 (patch-g95spec.c) = d6f434e715835cd39511c45ed18632c8401b78a2
+SHA1 (patch-gcc_Makefile.in) = cc5cc142a85612ebf2d38513e4b05db0ae795268
 SHA1 (patch-gcc_config.gcc) = 9da8f32372c64b1590d97e3f26aec0d5652cc959
 SHA1 (patch-gcc_config_dragonfly-spec.h) = bf0c97caa314714542cf8cc63fdf0c73bda80511
 SHA1 (patch-gcc_config_dragonfly.h) = 6d46b7b4637a20b36e19a15e1eaffdfff6638de9
@@ -19,6 +21,7 @@ SHA1 (patch-gcc_ginclude_stddef.h) = 60f51a470e03173803b5e20b1fa4d6882e8d1fe9
 SHA1 (patch-gcc_toplev.h) = 4894b45bf0fd30de0610a36827ef1089e0ec6bd5
 SHA1 (patch-libf95.a-0.92_configure) = e23998692b410acaabaf24f591b659d2b229bcca
 SHA1 (patch-libf95.a-0.92_io_atof.c) = 0c3a209815be3a97d984cb9a15ee888f93110d1d
+SHA1 (patch-libf95.a-0.93_Makefile.am) = a5e6a8fa0cd05e6e4a581c027d97cdf68dd2a6f8
 SHA1 (patch-libf95.a-0.93_intrinsics_dot__product10.c) = a2fe19bab2a6f719f541692fd4ef7e67766a18e5
 SHA1 (patch-libf95.a-0.93_intrinsics_matmul10.c) = 30609c3183a98610e4005fd4c0d12cccec0855a1
 SHA1 (patch-libf95.a-0.93_intrinsics_random.c) = 5445f78b267f742a2bf711aa0f5e06683dda1a68
@@ -26,4 +29,4 @@ SHA1 (patch-libf95.a-0.93_io_read.c) = 594bcfb15e59dcaaec5a6a21a58af17e8f41eae9
 SHA1 (patch-libf95.a-0.93_math_ff.c) = 353121bc08a86765d18b0e6f051ba91f7e65e9c2
 SHA1 (patch-libf95.a-0.93_math_x87.S) = d1eb02bd2358b6abb9b8dc3e32629cba540adcc4
 SHA1 (patch-libf95.a-0.93_quad_power16.c) = fc7375aa90ecf75bb8ba26d41739614040b16e09
-SHA1 (patch-libf95.a-0.93_runtime_main.c) = 8b870b363c3f0d108979fe44248632b77258eb0d
+SHA1 (patch-libf95.a-0.93_runtime_main.c) = a993a28e0c766c1ae0c73c5bda91b1446d6d944d
