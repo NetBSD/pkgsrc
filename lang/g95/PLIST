@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/05/20 05:47:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/20 23:06:07 joerg Exp $
 bin/f95
 bin/g95
 bin/${MACHINE_GNU_PLATFORM}-g95
@@ -8,6 +8,6 @@ lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_eh.a
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_s.so
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc_s.so.1
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libgcc.a
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libf95.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/libf95.la
 share/doc/g95/G95Manual.pdf
 share/doc/g95/INSTALL

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/07/28 12:54:52 obache Exp $
+# $NetBSD: Makefile,v 1.19 2013/09/20 23:06:07 joerg Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.g95.org/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +14,8 @@ HOMEPAGE=	http://www.g95.org/
 COMMENT=	Fortran 95 compiler from g95.org
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake gtar
+USE_TOOLS+=		gmake gtar automake autoconf
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gcc-dir=${GCC_DIR}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
@@ -44,13 +45,16 @@ post-extract:
 	cd ${WRKSRC} && ${GTAR} -xzf libf95.a-${PKGVERSION_NOREV}.tar.gz
 
 pre-configure:
+	cd ${WRKSRC}/libf95.a-${PKGVERSION_NOREV} && autoreconf -i
 	rm -f ${GCC_DIR}/config.sub ${GCC_DIR}/config.guess
 	ln -fs ${PKGSRCDIR}/mk/gnu-config/config.sub ${GCC_DIR}/config.sub
 	ln -fs ${PKGSRCDIR}/mk/gnu-config/config.guess ${GCC_DIR}/config.guess
-	cd ${GCC_G95_DIR} && ${GCC_CONFIGURE_SCRIPT} ${GCC_CONFIGURE_ARGS} && ${GMAKE}
+	cd ${GCC_G95_DIR} && ${SETENV} ${CONFIGURE_ENV} ${GCC_CONFIGURE_SCRIPT} ${GCC_CONFIGURE_ARGS}
+	cd ${GCC_G95_DIR} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q}
 
 post-build:
-	cd ${WRKSRC}/libf95.a-${PKGVERSION_NOREV} && ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} && ${GMAKE}
+	cd ${WRKSRC}/libf95.a-${PKGVERSION_NOREV} && ${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+	cd ${WRKSRC}/libf95.a-${PKGVERSION_NOREV} && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q}
 
 post-install:
 	cd ${WRKSRC}/libf95.a-${PKGVERSION_NOREV} && ${GMAKE} install DESTDIR=${DESTDIR:Q}
