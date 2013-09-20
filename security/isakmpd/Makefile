@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2013/02/06 23:23:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2013/09/20 23:07:44 joerg Exp $
 #
 
 DISTNAME=		isakmpd-20030903
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenBSD IKE daemon
 
 NOT_FOR_PLATFORM=	DragonFly-*-*
+
+MAKE_JOBS_SAFE=		no
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
