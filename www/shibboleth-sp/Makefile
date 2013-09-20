@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/09/10 11:44:15 obache Exp $
+# $NetBSD: Makefile,v 1.10 2013/09/20 23:11:01 joerg Exp $
 #
 
 DISTNAME=	shibboleth-sp-2.4.3
@@ -99,6 +99,7 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/shib-metagen
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/log4shib/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../security/xml-security-c/buildlink3.mk"
