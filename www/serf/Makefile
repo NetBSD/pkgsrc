@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/09/17 14:01:01 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/09/20 06:30:02 jperkin Exp $
 
 DISTNAME=	serf-1.3.1
 CATEGORIES=	www
@@ -17,6 +17,8 @@ SCONS_ARGS+=		APU=${PREFIX}/bin/apu-1-config
 SCONS_ARGS+=		CC=${CC:Q}
 SCONS_ARGS+=		CFLAGS=${CFLAGS:Q}
 SCONS_ARGS+=		OPENSSL=${PREFIX}/lib
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons PREFIX=${PREFIX} ${SCONS_ARGS}
