@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3563 2013/09/20 22:02:07 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3564 2013/09/20 23:06:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5022,3 +5022,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated parallel/py-billiard to 2.7.3.32 [rodent 2013-09-20]
 	Updated lang/python27 to 2.7.5nb3 [ryoon 2013-09-20]
 	Updated www/py-nevow to 0.10.0nb2 [wiz 2013-09-20]
+	Updated lang/g95 to 0.93nb4 [joerg 2013-09-20]
