@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/09/20 23:10:12 joerg Exp $
+
+--- Makefile.am.orig	2013-09-20 22:00:03.000000000 +0000
++++ Makefile.am
+@@ -55,15 +55,15 @@ strip:	all
+ 	-echo OK > /dev/null && test -x xhydra && strip xhydra || echo OK > /dev/null
+ 
+ install:	strip
+-	-mkdir -p $(PREFIX)$(DIR) 
+-	cp -f $(BINS) $(PREFIX)$(DIR) && cd $(PREFIX)$(DIR) && chmod 755 $(BINS)
+-	-echo OK > /dev/null && test -x xhydra && cp xhydra $(PREFIX)$(DIR) && cd $(PREFIX)$(DIR) && chmod 755 xhydra || echo OK > /dev/null
++	-mkdir -p ${DESTDIR}$(PREFIX)$(DIR) 
++	cp -f $(BINS) ${DESTDIR}$(PREFIX)$(DIR) && cd ${DESTDIR}$(PREFIX)$(DIR) && chmod 755 $(BINS)
++	-echo OK > /dev/null && test -x xhydra && cp xhydra ${DESTDIR}$(PREFIX)$(DIR) && cd ${DESTDIR}$(PREFIX)$(DIR) && chmod 755 xhydra || echo OK > /dev/null
+ #	-cp -f dpl4hydra.sh ($PREFIX)/dpl4hydra.sh
+-	-sed -e "s|^INSTALLDIR=.*|INSTALLDIR="$(PREFIX)"|" dpl4hydra.sh > $(PREFIX)/bin/dpl4hydra.sh
+-	-chmod 755 $(PREFIX)/bin/dpl4hydra.sh
+-	-cp -f *.csv $(PREFIX)/etc/
+-	-mkdir -p $(PREFIX)/man/man1
+-	-cp -f hydra.1 xhydra.1 pw-inspector.1 $(PREFIX)/man/man1
++	-sed -e "s|^INSTALLDIR=.*|INSTALLDIR="$(PREFIX)"|" dpl4hydra.sh > ${DESTDIR}$(PREFIX)/bin/dpl4hydra.sh
++	-chmod 755 ${DESTDIR}$(PREFIX)/bin/dpl4hydra.sh
++	-cp -f *.csv ${DESTDIR}$(PREFIX)/etc/
++	-mkdir -p ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
++	-cp -f hydra.1 xhydra.1 pw-inspector.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
+ 
+ clean:
+ 	rm -rf xhydra pw-inspector hydra *.o core *.core *.stackdump *~ Makefile.in Makefile dev_rfc hydra.restore arm/*.ipk arm/ipkg/usr/bin/* hydra-gtk/src/*.o hydra-gtk/src/xhydra hydra-gtk/stamp-h hydra-gtk/config.status hydra-gtk/errors hydra-gtk/config.log hydra-gtk/src/.deps hydra-gtk/src/Makefile hydra-gtk/Makefile
