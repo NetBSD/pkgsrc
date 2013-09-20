@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2013/07/28 12:43:50 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2013/09/20 20:08:17 joerg Exp $
 
 DISTNAME=	bison-3.0
 CATEGORIES=	devel
@@ -21,6 +21,12 @@ CONFIGURE_ENV+=		ac_cv_prog_M4=${TOOLS_PATH.gm4}
 
 INFO_FILES=		yes
 TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Cygwin"
+CONFIGURE_ARGS+=	ac_cv_func___fpending=yes
+.endif
 
 # Avoid rebuilding manpage
 pre-build:
