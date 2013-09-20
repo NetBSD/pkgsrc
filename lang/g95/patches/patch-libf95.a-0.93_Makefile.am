@@ -1,0 +1,73 @@
+$NetBSD: patch-libf95.a-0.93_Makefile.am,v 1.1 2013/09/20 23:06:07 joerg Exp $
+
+Produce shared libf95.
+
+--- libf95.a-0.93/Makefile.am.orig	2008-10-09 01:29:42.000000000 +0000
++++ libf95.a-0.93/Makefile.am
+@@ -1,11 +1,13 @@
+-
+-extra_LIBRARIES=libf95.a
+-
+ extradir = @DEST_LIBDIR@
++LIBTOOL=	libtool
++AM_LIBTOOLFLAGS=	--tag=CC
+ 
++install-exec-local:
++	${LIBTOOL} --mode=install ${INSTALL} libf95.la ${DESTDIR}${extradir}
+ 
+-
+-libf95_a_SOURCES=intrinsics/adjust.c intrinsics/all.c intrinsics/any.c	\
++noinst_LTLIBRARIES = libf95.la
++libf95_la_LDFLAGS=	-version 1:0:0 -rpath ${extradir}
++libf95_la_SOURCES=intrinsics/adjust.c intrinsics/all.c intrinsics/any.c	\
+ intrinsics/command.c intrinsics/count.c intrinsics/cshift.c		\
+ intrinsics/dot_product.c intrinsics/dot_product10.c			\
+ intrinsics/eoshift.c intrinsics/gerror.c intrinsics/get_environ.c	\
+@@ -34,31 +36,31 @@ unix/exit.c unix/ftell.c unix/getarg.c u
+ unix/rename.c unix/signal.c unix/system.c unix/time.c unix/unlink.c
+ 
+ if HAVE_REAL_10_AM
+-libf95_a_SOURCES += math/x87.S
++libf95_la_SOURCES += math/x87.S
+ endif
+ 
+ if HAVE_RESUME_AM
+-libf95_a_SOURCES += runtime/resume.c
++libf95_la_SOURCES += runtime/resume.c
+ endif
+ 
+ if HAVE_UNIX_AM
+-libf95_a_SOURCES += unix/fpu_trap.c unix/getlog.c unix/getpid.c 
+-libf95_a_SOURCES += unix/system_clock.c unix/dtime.c unix/etime.c
+-libf95_a_SOURCES += unix/cpu_time.c unix/date_and_time.c unix/fdate.c 
+-libf95_a_SOURCES += unix/hostnm.c unix/getuid.c unix/idate.c unix/itime.c
+-libf95_a_SOURCES += unix/sleep.c unix/stat.c unix/unix_io.c unix/secnds.c
+-libf95_a_SOURCES += unix/second.c
++libf95_la_SOURCES += unix/fpu_trap.c unix/getlog.c unix/getpid.c 
++libf95_la_SOURCES += unix/system_clock.c unix/dtime.c unix/etime.c
++libf95_la_SOURCES += unix/cpu_time.c unix/date_and_time.c unix/fdate.c 
++libf95_la_SOURCES += unix/hostnm.c unix/getuid.c unix/idate.c unix/itime.c
++libf95_la_SOURCES += unix/sleep.c unix/stat.c unix/unix_io.c unix/secnds.c
++libf95_la_SOURCES += unix/second.c
+ endif
+ 
+ if HAVE_WINDOWS_AM
+-libf95_a_SOURCES += windows/fpu_trap_win.c windows/dtime_win.c
+-libf95_a_SOURCES += windows/etime_win.c windows/system_clock_win.c
+-libf95_a_SOURCES += windows/cpu_time_win.c windows/date_and_time_win.c
+-libf95_a_SOURCES += windows/hostnm_win.c windows/itime_win.c
+-libf95_a_SOURCES += windows/getlog_win.c windows/getpid_win.c
+-libf95_a_SOURCES += windows/fdate_win.c windows/sleep_win.c
+-libf95_a_SOURCES += windows/windows_io.c windows/secnds_win.c
+-libf95_a_SOURCES += windows/second_win.c windows/stat_win.c windows/idate_win.c
++libf95_la_SOURCES += windows/fpu_trap_win.c windows/dtime_win.c
++libf95_la_SOURCES += windows/etime_win.c windows/system_clock_win.c
++libf95_la_SOURCES += windows/cpu_time_win.c windows/date_and_time_win.c
++libf95_la_SOURCES += windows/hostnm_win.c windows/itime_win.c
++libf95_la_SOURCES += windows/getlog_win.c windows/getpid_win.c
++libf95_la_SOURCES += windows/fdate_win.c windows/sleep_win.c
++libf95_la_SOURCES += windows/windows_io.c windows/secnds_win.c
++libf95_la_SOURCES += windows/second_win.c windows/stat_win.c windows/idate_win.c
+ endif
+ 
+ EXTRA_DIST=io/power5.h io/p5.py io/p10.py
