@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/04/06 19:42:42 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.15 2013/09/20 22:01:56 wiz Exp $
 
 VERSION=		0.10.0
 DISTNAME=		Nevow-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-nevow-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www python
 # Nevow does not appear to make tarballs easily available; there's a link
 # in trac with ?format=raw at the end.  Many others have the same sorts
@@ -20,5 +19,8 @@ COMMENT=		Next-generation web application templating system
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
 
+REPLACE_PYTHON=		nevow/test/segfault.py
+
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
