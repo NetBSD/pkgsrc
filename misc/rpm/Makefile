@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2013/09/15 12:32:22 joerg Exp $
+# $NetBSD: Makefile,v 1.79 2013/09/20 17:26:14 ryoon Exp $
 
 DISTNAME=	rpm-4.11.1
 CATEGORIES=	misc
@@ -18,7 +18,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		bash:run gmake msgfmt perl:run
+USE_TOOLS+=		automake bash:run gmake msgfmt perl:run
 GNU_CONFIGURE=		yes
 
 GMAKE_REQD+=		3.82nb1
@@ -57,6 +57,19 @@ FILES_SUBST+=		RPMDIR=${RPMDIR:Q}
 #
 BROKEN_GETTEXT_DETECTION=	yes
 
+.if ${OPSYS} == "SunOS"
+# for libmagic.
+.include "../../sysutils/file/buildlink3.mk"
+CFLAGS+=	-fno-stack-protector
+BUILDLINK_TRANSFORM+=	rm:-fstack-protector
+.endif
+
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
+
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
