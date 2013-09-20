@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3561 2013/09/20 12:22:05 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.3562 2013/09/20 21:50:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 24.0 [ryoon 2013-09-19]
 	Updated www/firefox-l10n to 24.0 [ryoon 2013-09-19]
 	Updated parallel/py-billiard to 2.7.3.32 [rodent 2013-09-20]
+	Updated lang/python27 to 2.7.5nb3 [ryoon 2013-09-20]
