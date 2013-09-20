@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.9 2008/10/30 14:52:14 bad Exp $
+$NetBSD: distinfo,v 1.10 2013/09/20 23:10:12 joerg Exp $
 
-SHA1 (hydra-5.4-src.tar.gz) = 2134092c7b64132c080b6b1ba155124b885767db
-RMD160 (hydra-5.4-src.tar.gz) = e3b4b98250394945dc5a8bfe234302de793db014
-Size (hydra-5.4-src.tar.gz) = 208272 bytes
-SHA1 (patch-aa) = 7e28e9143cd78d49d4f28b77e4bdf554f001caa5
-SHA1 (patch-ab) = ed44b46422063b4cb31bbccfb66ed54559495727
-SHA1 (patch-ac) = ade8ea964018dc7034154a35338f50361b5185f8
-SHA1 (patch-ad) = 3734123af4511161eee93f624b1b9dd575be0ae7
-SHA1 (patch-ae) = eb6f4ecea7fab5119fcd90d08b2681d0e6921a97
-SHA1 (patch-af) = 90c24ad7df23f2be23d08b646d68c93846c7618b
-SHA1 (patch-ag) = 1837595ef533b657c88449aa5a241ddf4570b149
+SHA1 (hydra-7.5.tar.gz) = 475980f8e6c0c97b7702201e89fbcf441a6fd2c0
+RMD160 (hydra-7.5.tar.gz) = f5edc8473889ab90ef971226f4276683b193a466
+Size (hydra-7.5.tar.gz) = 681784 bytes
+SHA1 (patch-Makefile.am) = 9ce2a3c8acfa672786729c161010e56c1055055e
+SHA1 (patch-configure) = 4954b157e6fa201f0542279e961f0e39c66ca23c
+SHA1 (patch-hydra-gtk_src_Makefile.in) = 961b07aeb9e78cb4d5fa3e43213fd6164bcd08c3
+SHA1 (patch-hydra-snmp.c) = 1c17271eae1cdb56b6c89cdb55ea34f31dc7b67f
