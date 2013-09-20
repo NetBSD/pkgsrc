@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/09/02 19:51:11 adam Exp $
+# $NetBSD: Makefile,v 1.28 2013/09/20 11:51:43 obache Exp $
 #
 
 DISTNAME=	ibus-chewing-1.4.3-Source
@@ -29,6 +29,12 @@ STRIP_CMD.no=	${CAT}
 GCONF_SCHEMAS=	ibus-chewing.schemas
 CMAKE_ARGS+=	-DLIBEXEC_DIR=${PREFIX}/libexec
 CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
+
+SUBST_CLASSES+=		localedir
+SUBST_STAGE.localedir=	pre-configure
+SUBST_VARS.localedir=	PKGLOCALEDIR
+SUBST_FILES.localedir+=	Modules/ManageTranslation.cmake
+SUBST_FILES.localedir+=	src/main.c
 
 # missing in archive
 post-extract:
