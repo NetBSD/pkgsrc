@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/09/04 21:51:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/20 04:05:13 joerg Exp $
 #
 # Replacement Makefile for bzip2.
 #
@@ -14,7 +14,7 @@ all: libbz2.la bzip2 bzip2recover
 
 libbz2.la: ${LOBJS}
 	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
-	    ${LOBJS} -version-info 0:0 -rpath ${PREFIX}/lib
+	    ${LOBJS} -version-info 0:0 -rpath ${PREFIX}/lib -no-undefined
 
 libbz2.a: ${OBJS}
 	${AR} cq ${.TARGET} ${OBJS}
