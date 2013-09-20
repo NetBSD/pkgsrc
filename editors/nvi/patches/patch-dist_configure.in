@@ -1,6 +1,8 @@
-$NetBSD: patch-dist_configure.in,v 1.1 2013/01/23 17:33:28 wiz Exp $
+$NetBSD: patch-dist_configure.in,v 1.2 2013/09/20 14:50:49 ryoon Exp $
 
 First chunk: automake-1.13 compat.
+Second: Fix build on SunOS with native cures, detect isblank in configure
+	script.
 Rest: ?
 
 --- dist/configure.in.orig	2007-11-18 16:41:42.000000000 +0000
@@ -14,7 +16,15 @@ Rest: ?
  
  dnl Configure setup.
  AC_PROG_INSTALL()
-@@ -787,6 +787,8 @@ if test "$vi_cv_gettimeofday" = broken; 
+@@ -601,6 +601,7 @@ AC_CHECK_FUNCS(select)
+ AC_CHECK_FUNCS(setenv, [need_env=no], [need_env=yes])
+ AC_CHECK_FUNCS(strsep, [need_strsep=no], [need_strsep=yes])
+ AC_CHECK_FUNCS(unsetenv,, [need_env=yes])
++AC_CHECK_FUNCS(isblank)
+ 
+ AC_FUNC_MMAP
+ AC_FUNC_VFORK
+@@ -787,6 +788,8 @@ if test "$vi_cv_gettimeofday" = broken;
  fi
  AC_MSG_RESULT($vi_cv_gettimeofday)
  
