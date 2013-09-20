@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/20 23:10:12 joerg Exp $
+bin/dpl4hydra.sh
 bin/hydra
 bin/pw-inspector
+${PLIST.gtk}bin/xhydra
+man/man1/hydra.1
+man/man1/pw-inspector.1
+man/man1/xhydra.1
