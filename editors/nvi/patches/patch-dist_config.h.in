@@ -1,0 +1,16 @@
+$NetBSD: patch-dist_config.h.in,v 1.1 2013/09/20 14:50:49 ryoon Exp $
+
+* Fix build on SunOS with native curses, detect isblank in configure script.
+
+--- dist/config.h.in.orig	2013-09-20 14:12:15.000000000 +0000
++++ dist/config.h.in
+@@ -145,6 +145,9 @@
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
+ 
++/* Define to 1 if you have the `isblank' function. */
++#undef HAVE_ISBLANK
++
+ /* Define to 1 if you have the `iswblank' function. */
+ #undef HAVE_ISWBLANK
+ 
