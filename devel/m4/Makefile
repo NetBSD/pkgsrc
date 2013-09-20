@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/12/06 11:40:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.71 2013/09/20 11:41:16 joerg Exp $
 
 DISTNAME=	m4-1.4.16
 PKGREVISION=	3
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--program-prefix=g
 
 .if ${LOWER_OPSYS} == "aix"
 CFLAGS+=	-D_LINUX_SOURCE_COMPAT
+.elif ${OPSYS} == "Cygwin"
+CONFIGURE_ARGS+=	ac_cv_func___fpending=yes
 .endif
 
 AUTO_MKDIRS=		yes
