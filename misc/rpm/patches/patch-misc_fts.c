@@ -1,10 +1,20 @@
-$NetBSD: patch-misc_fts.c,v 1.1 2013/09/13 12:41:32 ryoon Exp $
+$NetBSD: patch-misc_fts.c,v 1.2 2013/09/20 17:26:14 ryoon Exp $
 
-* Definitions for NetBSD.
+* Detect dirfd(3) and setprogname(3) in configure script.
 
 --- misc/fts.c.orig	2012-11-18 08:21:06.000000000 +0000
 +++ misc/fts.c
-@@ -61,6 +61,11 @@ static char sccsid[] = "@(#)fts.c	8.6 (B
+@@ -52,7 +52,9 @@ static char sccsid[] = "@(#)fts.c	8.6 (B
+ #endif
+ #if defined(sun)
+ #   define __errno_location()	(&errno)
++# if defined(HAVE_DIRFD)
+ #   define dirfd(dirp)		-1
++# endif
+ #   define _STAT_VER		0
+ #   define __fxstat64(_stat_ver, _fd, _sbp)	fstat((_fd), (_sbp))
+ #endif
+@@ -61,6 +63,11 @@ static char sccsid[] = "@(#)fts.c	8.6 (B
  #   define _STAT_VER		0
  #   define __fxstat64(_stat_ver, _fd, _sbp) fstat64((_fd), (_sbp))
  #endif
