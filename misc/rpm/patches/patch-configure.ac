@@ -1,8 +1,27 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/09/13 12:41:32 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/09/20 17:26:14 ryoon Exp $
 
 --- configure.ac.orig	2013-06-27 09:29:00.000000000 +0000
 +++ configure.ac
-@@ -777,7 +777,7 @@ changequote([, ])
+@@ -84,7 +84,7 @@ dnl
+ if test "$cross_compiling" = "yes"; then
+     MYPATH=":"
+ else
+-    MYPATH=$PATH
++    MYPATH=$MYPATH
+ fi
+ 
+ dnl
+@@ -518,6 +518,9 @@ dnl Checks for library functions.
+ AC_CHECK_FUNCS(putenv)
+ AC_CHECK_FUNCS(mempcpy)
+ AC_CHECK_FUNCS(fdatasync)
++AC_CHECK_FUNCS(dirfd)
++AC_CHECK_FUNCS(setprogname)
++AC_CHECK_FUNCS(htonll)
+ 
+ AC_REPLACE_FUNCS(stpcpy stpncpy)
+ 
+@@ -777,7 +780,7 @@ changequote([, ])
  
  for provscript in ${host_cpu}-${host_os_exact}.prov ${host_os_exact}.prov ${host_os_major}.prov ${host_os_noversion}.prov none ; do {
      if test -f ${srcdir}/autodeps/${provscript} ; then
@@ -11,7 +30,7 @@ $NetBSD: patch-configure.ac,v 1.1 2013/09/13 12:41:32 ryoon Exp $
             echo "*** no default provides information is available for ${host_os_noversion}"
         else
             echo "using ${srcdir}/autodeps/${provscript} for automatic provides generation"
-@@ -790,7 +790,7 @@ for provscript in ${host_cpu}-${host_os_
+@@ -790,7 +793,7 @@ for provscript in ${host_cpu}-${host_os_
  
  for reqscript in ${host_cpu}-${host_os_exact}.req ${host_os_exact}.req ${host_os_major}.req ${host_os_noversion}.req none ; do {
      if test -f ${srcdir}/autodeps/${reqscript} ; then
