@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/20 23:06:49 joerg Exp $
 
 DISTNAME=	openwbem-3.2.2
 PKGREVISION=	2
@@ -82,6 +82,12 @@ SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/CIM_NamespaceInManager/
 SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/OpenWBEM_ConfigSettingData/Makefile.in
 SUBST_SED.mkdir=        -e "s|\$$(INSTALL_PROGRAM) -d|\$${mkdir_p}|g"
 SUBST_MESSAGE.mkdir=    Fixing ${INSTALL_PROGRAM} -d lines (the -s does not interoperate with -d)
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	ac_cv_func_gethostbyname_r=no
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
