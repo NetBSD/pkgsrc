@@ -1,23 +1,15 @@
-# $NetBSD: options.mk,v 1.7 2010/10/15 04:40:34 obache Exp $
+# $NetBSD: options.mk,v 1.8 2013/09/20 23:10:12 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hydra
-PKG_SUPPORTED_OPTIONS=	gtkfe svn pgsql
+PKG_SUPPORTED_OPTIONS=	gtk svn pgsql
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mgtkfe)
+PLIST_VARS+=	gtk
+
+.if !empty(PKG_OPTIONS:Mgtk)
 .include "../../x11/gtk2/buildlink3.mk"
-
-post-configure:
-	cd ${WRKSRC}/hydra-gtk && \
-		${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-
-post-build:
-	cd ${WRKSRC}/hydra-gtk && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-
-post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hydra-gtk/src/xhydra ${DESTDIR}${PREFIX}/bin
-PLIST_SRC+=	${PKGDIR}/PLIST.xhydra
+PLIST.gtk=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msvn)
