@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 11:16:18 sno Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/20 13:46:23 sno Exp $
 
 DISTNAME=	nqp-2013.08
 CATEGORIES=	lang perl6
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rakudo.org/
 COMMENT=	Not Quite Perl -- lightweight Perl 6-like environment for VM
 LICENSE=	artistic-2.0
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
