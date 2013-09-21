@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/06 02:56:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/21 15:59:00 taca Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -144,11 +144,13 @@ include/isc/resource.h
 include/isc/result.h
 include/isc/resultclass.h
 include/isc/rwlock.h
+include/isc/safe.h
 include/isc/serial.h
 include/isc/sha1.h
 include/isc/sha2.h
 include/isc/sockaddr.h
 include/isc/socket.h
+include/isc/stat.h
 include/isc/stdio.h
 include/isc/stdlib.h
 include/isc/stdtime.h
