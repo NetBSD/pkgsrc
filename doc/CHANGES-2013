@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3569 2013/09/21 22:17:26 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.3570 2013/09/21 22:25:35 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php55 to 5.5.4 [taca 2013-09-21]
 	Updated graphics/tiff to 4.0.3nb6 [dholland 2013-09-21]
 	Updated www/shibboleth-sp to 2.5.2 [pettai 2013-09-21]
+	Updated security/dnssec-tools to 2.0 [pettai 2013-09-21]
