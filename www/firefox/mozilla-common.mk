@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.16 2013/09/19 12:37:49 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.17 2013/09/21 20:35:46 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -13,7 +13,6 @@ USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/endian.mk"
 # gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
 # but gcc 4.5.4 of NetBSD 7 generates working binary.
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
@@ -104,6 +103,7 @@ SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
 PLIST_VARS+=	sps vorbis tremor glskia throwwrapper
 
+.include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
 PLIST.glskia=	yes
 .endif
