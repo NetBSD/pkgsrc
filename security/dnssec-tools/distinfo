@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/06/15 19:57:20 pettai Exp $
+$NetBSD: distinfo,v 1.11 2013/09/21 22:25:07 pettai Exp $
 
-SHA1 (dnssec-tools-1.14.tar.gz) = 8e72cabf345614136ea99af24dd2d90d4b16a71d
-RMD160 (dnssec-tools-1.14.tar.gz) = bc1a988f37608ac84d33fb18aa8e873e4c085071
-Size (dnssec-tools-1.14.tar.gz) = 3337126 bytes
+SHA1 (dnssec-tools-2.0.tar.gz) = 4cae015ba8fe6aba66131cd9f0ae0c8dd4524f01
+RMD160 (dnssec-tools-2.0.tar.gz) = 24200f1436319f65e5c1798097d3cbc5aefdfb36
+Size (dnssec-tools-2.0.tar.gz) = 4271431 bytes
 SHA1 (patch-aa) = 873486ab64c3aaf68996d1eef9b3def28cb8fdbc
 SHA1 (patch-ab) = 2351dc0d1011071e4ada5e3cf276e9a3338f1167
 SHA1 (patch-tools_donuts_Makefile.PL) = 283447b2e1ac4a83f462743ef2a397c3a29b87a1
