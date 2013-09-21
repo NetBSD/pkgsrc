@@ -1,8 +1,23 @@
-$NetBSD: patch-js_src_jit_AsmJSSignalHandlers.cpp,v 1.1 2013/09/19 12:37:50 ryoon Exp $
+$NetBSD: patch-js_src_jit_AsmJSSignalHandlers.cpp,v 1.2 2013/09/21 09:58:49 ryoon Exp $
 
---- js/src/jit/AsmJSSignalHandlers.cpp.orig	2013-09-10 03:43:36.000000000 +0000
+* REG_EIP is not defined on Solaris/SunOS, use REG_PC instead.
+
+--- js/src/jit/AsmJSSignalHandlers.cpp.orig	2013-09-11 03:22:33.000000000 +0000
 +++ js/src/jit/AsmJSSignalHandlers.cpp
-@@ -269,7 +269,7 @@ LookupHeapAccess(const AsmJSModule &modu
+@@ -59,10 +59,11 @@ using namespace mozilla;
+ #elif defined(__linux__) || defined(SOLARIS)
+ # if defined(__linux__)
+ #  define XMM_sig(p,i) ((p)->uc_mcontext.fpregs->_xmm[i])
++#  define EIP_sig(p) ((p)->uc_mcontext.gregs[REG_EIP])
+ # else
+ #  define XMM_sig(p,i) ((p)->uc_mcontext.fpregs.fp_reg_set.fpchip_state.xmm[i])
++#  define EIP_sig(p) ((p)->uc_mcontext.gregs[REG_PC])
+ # endif
+-# define EIP_sig(p) ((p)->uc_mcontext.gregs[REG_EIP])
+ # define RIP_sig(p) ((p)->uc_mcontext.gregs[REG_RIP])
+ # define PC_sig(p) ((p)->uc_mcontext.arm_pc)
+ # define RAX_sig(p) ((p)->uc_mcontext.gregs[REG_RAX])
+@@ -269,7 +270,7 @@ LookupHeapAccess(const AsmJSModule &modu
  # if defined(JS_CPU_X64)
  #  if defined(__DragonFly__)
  #   include <machine/npx.h> // for union savefpu
