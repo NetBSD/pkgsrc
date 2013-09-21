@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.88 2013/08/29 13:00:41 joerg Exp $
+$NetBSD: distinfo,v 1.89 2013/09/21 09:40:36 joerg Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 745f9ebf091696c0d5403ce691dc28c039d77b9e
 RMD160 (qt-everywhere-opensource-src-4.8.5.tar.gz) = 1e7bb099d5d1cda0b663cebe207c846c8d04750d
@@ -41,6 +41,7 @@ SHA1 (patch-src_3rdparty_clucene_src_CLucene_config_repl__tchar.h) = 3f19ae44da3
 SHA1 (patch-src_3rdparty_clucene_src_CLucene_index_SegmentMerger.cpp) = 8f43ece880786f7dc9352322d922c7fff652a36f
 SHA1 (patch-src_3rdparty_clucene_src_CLucene_search_FieldCacheImpl.cpp) = 4f03369a9e5681f5babe8f6d5f8aaf560f45a855
 SHA1 (patch-src_3rdparty_clucene_src_CLucene_util_Arrays.h) = 41c2cf95b81157f3809acb7bd82fe7e098e2abb8
+SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Collector.cpp) = 93d5de2e9aff4dcc2e8317296801fac7e16ec613
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Structure.cpp) = 156e99fa8594470be4e89e212408258824044e41
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_runtime_Structure.h) = b822a84aae7e125cb56b01bffdcfec07060d88f6
 SHA1 (patch-src_3rdparty_javascriptcore_JavaScriptCore_wtf_HashTable.h) = 66b510e7f8a3a33f9934ad77bbe00a6c24b60d74
