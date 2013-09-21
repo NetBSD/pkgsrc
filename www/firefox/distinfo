@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2013/09/21 10:25:18 ryoon Exp $
+$NetBSD: distinfo,v 1.116 2013/09/21 10:33:34 ryoon Exp $
 
 SHA1 (firefox-24.0esr.source.tar.bz2) = b5859d4baf270e6f7e48baf7807fd8d23a80ca1a
 RMD160 (firefox-24.0esr.source.tar.bz2) = 0984b17713f57509826437bbcaf3bda0c5f5248c
@@ -99,7 +99,7 @@ SHA1 (patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spre
 SHA1 (patch-media_webrtc_trunk_webrtc_system__wrappers_source_thread__posix.cc) = 07497983c7c131f3fc148801c6350ab9ccfb19e5
 SHA1 (patch-memory_mozalloc_mozalloc__abort.cpp) = 9d9036ddd28c7b8ce37860e0120df2997a3a0c59
 SHA1 (patch-mfbt_Atomics.h) = 1a1df4189cf8da1182baa5c2e9909f9add6d2451
-SHA1 (patch-mfbt_Poison.cpp) = 6dfe1528743e54b54120ac8ce87871b08c82da49
+SHA1 (patch-mfbt_Poison.cpp) = b582943c02f57835451c9eecd004c9912d42ce84
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
 SHA1 (patch-modules_libpref_src_init_all.js) = 16764075621da048b6c8a359c32b4fc8be6f7d67
 SHA1 (patch-netwerk_sctp_src_netinet6_sctp6__usrreq.c) = 31d49db31b1e130f1b455f883e5b7c606d438771
