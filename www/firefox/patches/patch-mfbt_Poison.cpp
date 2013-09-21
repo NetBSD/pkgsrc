@@ -1,4 +1,4 @@
-$NetBSD: patch-mfbt_Poison.cpp,v 1.1 2013/09/21 09:58:49 ryoon Exp $
+$NetBSD: patch-mfbt_Poison.cpp,v 1.2 2013/09/21 10:33:34 ryoon Exp $
 
 * Use posix_madvise(3) instead of madvise(3) for Solaris/SunOS.
   Solaris/SunOS's madvise(3) is not enabled in this context,
@@ -10,7 +10,7 @@ $NetBSD: patch-mfbt_Poison.cpp,v 1.1 2013/09/21 09:58:49 ryoon Exp $
  static bool
  ProbeRegion(uintptr_t region, uintptr_t size)
  {
-+#if !defined(OS_SOLARIS)
++#if !defined(__sun__)
    if (madvise(reinterpret_cast<void*>(region), size, MADV_NORMAL)) {
 +#else
 +  if (posix_madvise(reinterpret_cast<void*>(region), size, MADV_NORMAL)) {
