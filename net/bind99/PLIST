@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/06 02:55:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/21 16:00:34 taca Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -145,11 +145,13 @@ include/isc/resource.h
 include/isc/result.h
 include/isc/resultclass.h
 include/isc/rwlock.h
+include/isc/safe.h
 include/isc/serial.h
 include/isc/sha1.h
 include/isc/sha2.h
 include/isc/sockaddr.h
 include/isc/socket.h
+include/isc/stat.h
 include/isc/stdio.h
 include/isc/stdlib.h
 include/isc/stdtime.h
@@ -352,6 +354,8 @@ share/doc/bind9/arm/Bv9ARM.html
 share/doc/bind9/arm/man.arpaname.html
 share/doc/bind9/arm/man.ddns-confgen.html
 share/doc/bind9/arm/man.dig.html
+share/doc/bind9/arm/man.dnssec-checkds.html
+share/doc/bind9/arm/man.dnssec-coverage.html
 share/doc/bind9/arm/man.dnssec-dsfromkey.html
 share/doc/bind9/arm/man.dnssec-keyfromlabel.html
 share/doc/bind9/arm/man.dnssec-keygen.html
