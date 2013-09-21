@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2013/07/17 11:00:13 jperkin Exp $
+# $NetBSD: options.mk,v 1.17 2013/09/21 11:40:57 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -52,13 +52,14 @@ CONFIGURE_ARGS+=	--enable-pulseaudio
 .endif
 # XXX end
 
-PLIST_VARS+=		nobranding
+PLIST_VARS+=		branding nobranding
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
 LICENSE=		mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+PLIST.branding=		yes
 .else
 PLIST.nobranding=	yes
 .endif
