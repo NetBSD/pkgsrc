@@ -1,35 +1,38 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/03/15 13:15:37 pettai Exp $
+$NetBSD: patch-configs_Makefile.in,v 1.1 2013/09/21 22:16:41 pettai Exp $
 
-Remove uneccesary config, handle it from pkgsrc instead
+Install config and example pkgsrc-ish
 
---- configs/Makefile.in.orig	2011-02-18 04:44:04.000000000 +0000
+--- configs/Makefile.in.orig	2013-06-16 22:06:20.000000000 +0000
 +++ configs/Makefile.in
-@@ -260,16 +260,12 @@ pkgxmldir = $(datadir)/xml/@PACKAGE@
- pkgrundir = $(localstatedir)/run/@PACKAGE@
- pkgsysconfdir = $(sysconfdir)/@PACKAGE@
+@@ -296,18 +296,13 @@ pkgrundir = $(localstatedir)/run/@PACKAG
+ pkgcachedir = $(localstatedir)/cache/@PACKAGE_NAME@
+ pkgsysconfdir = $(sysconfdir)/@PACKAGE_NAME@
  pkgsysconf_DATA = \
 -	shibd-redhat \
 -	shibd-suse \
 -	shibd-debian \
- 	shibd-osx.plist \
+-	shibd-osx.plist \
  	apache.config \
  	apache2.config \
  	apache22.config \
+ 	apache24.config \
 -	keygen.sh \
 -	metagen.sh \
  	upgrade.xsl
+ 
 +EGDIR = @EGDIR@
  
- 
  # The config files are installed "special".  Unlike the entries in
-@@ -373,15 +369,15 @@ clean-libtool:
- 	-rm -rf .libs _libs
- install-pkgsysconfDATA: $(pkgsysconf_DATA)
+ # pkgsysconf_DATA, these files are installed as "foo.dist" and only
+@@ -417,16 +412,16 @@ install-pkgsysconfDATA: $(pkgsysconf_DAT
  	@$(NORMAL_INSTALL)
--	test -z "$(pkgsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(pkgsysconfdir)"
--	@list='$(pkgsysconf_DATA)'; test -n "$(pkgsysconfdir)" || list=; \
-+	test -z "$(EGDIR)" || $(MKDIR_P) "$(DESTDIR)$(EGDIR)"
-+	@list='$(pkgsysconf_DATA)'; test -n "$(EGDIR)" || list=; \
+ 	@list='$(pkgsysconf_DATA)'; test -n "$(pkgsysconfdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgsysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pkgsysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(EGDIR)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(EGDIR)" || exit 1; \
+ 	fi; \
  	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  echo "$$d$$p"; \
@@ -42,7 +45,7 @@ Remove uneccesary config, handle it from pkgsrc instead
  	done
  
  uninstall-pkgsysconfDATA:
-@@ -432,7 +428,7 @@ check-am: all-am
+@@ -477,7 +472,7 @@ check-am: all-am
  check: check-am
  all-am: Makefile $(DATA)
  installdirs:
@@ -51,7 +54,7 @@ Remove uneccesary config, handle it from pkgsrc instead
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
-@@ -483,7 +479,6 @@ info-am:
+@@ -533,7 +528,6 @@ info-am:
  
  install-data-am: install-data-local install-pkgsysconfDATA
  	@$(NORMAL_INSTALL)
@@ -59,9 +62,9 @@ Remove uneccesary config, handle it from pkgsrc instead
  install-dvi: install-dvi-am
  
  install-dvi-am:
-@@ -596,18 +591,18 @@ install-data-local:	all-data-local
- 	$(mkinstalldirs) $(DESTDIR)$(shirelogdir)
+@@ -649,18 +643,18 @@ install-data-local:	all-data-local
  	$(mkinstalldirs) $(DESTDIR)$(pkgrundir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgcachedir)
  	$(mkinstalldirs) $(DESTDIR)$(pkgxmldir)
 -	$(mkinstalldirs) $(DESTDIR)$(pkgsysconfdir)
 +	$(mkinstalldirs) $(DESTDIR)$(EGDIR)
