@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2013/09/19 12:37:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.72 2013/09/21 08:10:56 martin Exp $
 bin/firefox
 include/firefox/AbstractMediaDecoder.h
 include/firefox/AccEvent.h
@@ -3378,7 +3378,7 @@ lib/firefox/browser/chrome.manifest
 ${PLIST.nobranding}lib/firefox/browser/chrome/browser/content/branding/about-background.png
 lib/firefox/browser/chrome/browser/content/branding/about-logo.png
 lib/firefox/browser/chrome/browser/content/branding/about-logo@2x.png
-lib/firefox/browser/chrome/browser/content/branding/about-wordmark.svg
+lib/firefox/browser/chrome/browser/content/branding/about-wordmark.png
 lib/firefox/browser/chrome/browser/content/branding/about.png
 lib/firefox/browser/chrome/browser/content/branding/aboutDialog.css
 lib/firefox/browser/chrome/browser/content/branding/icon16.png
