@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3566 2013/09/21 16:01:42 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3567 2013/09/21 16:10:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5027,3 +5027,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind96 to 9.6.3.1.ESV.10 [taca 2013-09-21]
 	Updated net/bind98 to 9.8.6 [taca 2013-09-21]
 	Updated net/bind99 to 9.9.4 [taca 2013-09-21]
+	Updated lang/php54 to 5.4.20 [taca 2013-09-21]
+	Updated lang/php55 to 5.5.4 [taca 2013-09-21]
