@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/07/28 23:16:24 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/21 22:16:41 pettai Exp $
 bin/mdquery
 bin/resolvertest
 bin/shib-metagen
@@ -15,6 +15,7 @@ include/shibsp/SessionCacheEx.h
 include/shibsp/TransactionLog.h
 include/shibsp/attribute/Attribute.h
 include/shibsp/attribute/AttributeDecoder.h
+include/shibsp/attribute/BinaryAttribute.h
 include/shibsp/attribute/ExtensibleAttribute.h
 include/shibsp/attribute/NameIDAttribute.h
 include/shibsp/attribute/ScopedAttribute.h
@@ -40,6 +41,7 @@ include/shibsp/handler/Handler.h
 include/shibsp/handler/LogoutHandler.h
 include/shibsp/handler/LogoutInitiator.h
 include/shibsp/handler/RemotedHandler.h
+include/shibsp/handler/SecuredHandler.h
 include/shibsp/handler/SessionInitiator.h
 include/shibsp/lite/CommonDomainCookie.h
 include/shibsp/lite/SAMLConstants.h
@@ -53,21 +55,29 @@ include/shibsp/security/SecurityPolicy.h
 include/shibsp/security/SecurityPolicyProvider.h
 include/shibsp/util/CGIParser.h
 include/shibsp/util/DOMPropertySet.h
+include/shibsp/util/IPRange.h
 include/shibsp/util/PropertySet.h
 include/shibsp/util/SPConstants.h
 include/shibsp/util/TemplateParameters.h
 include/shibsp/version.h
 lib/libshibsp-lite.a
 lib/libshibsp-lite.so
-lib/libshibsp-lite.so.5
-lib/libshibsp-lite.so.5.0.3
+lib/libshibsp-lite.so.6
+lib/libshibsp-lite.so.6.0.2
 lib/libshibsp.a
 lib/libshibsp.so
-lib/libshibsp.so.5
-lib/libshibsp.so.5.0.3
-lib/shibboleth/adfs-lite.la
-lib/shibboleth/adfs.la
-lib/shibboleth/mod_shib_22.la
+lib/libshibsp.so.6
+lib/libshibsp.so.6.0.2
+lib/shibboleth/adfs-lite.a
+lib/shibboleth/adfs-lite.so
+lib/shibboleth/adfs.a
+lib/shibboleth/adfs.so
+lib/shibboleth/mod_shib_22.a
+lib/shibboleth/mod_shib_22.so
+lib/shibboleth/plugins-lite.a
+lib/shibboleth/plugins-lite.so
+lib/shibboleth/plugins.a
+lib/shibboleth/plugins.so
 sbin/shib-keygen
 sbin/shibd
 share/doc/shibboleth-${PKGVERSION}/CREDITS.txt
@@ -78,14 +88,15 @@ share/doc/shibboleth-${PKGVERSION}/NOTICE.txt
 share/doc/shibboleth-${PKGVERSION}/OPENSSL.LICENSE
 share/doc/shibboleth-${PKGVERSION}/README.txt
 share/doc/shibboleth-${PKGVERSION}/RELEASE.txt
-share/doc/shibboleth-${PKGVERSION}/logo.jpg
-share/doc/shibboleth-${PKGVERSION}/main.css
 share/examples/rc.d/shibd
 share/examples/shibboleth/accessError.html
 share/examples/shibboleth/accessError.html.dist
 share/examples/shibboleth/apache.config
 share/examples/shibboleth/apache2.config
 share/examples/shibboleth/apache22.config
+share/examples/shibboleth/apache24.config
+share/examples/shibboleth/attrChecker.html
+share/examples/shibboleth/attrChecker.html.dist
 share/examples/shibboleth/attribute-map.xml
 share/examples/shibboleth/attribute-map.xml.dist
 share/examples/shibboleth/attribute-policy.xml
@@ -120,7 +131,6 @@ share/examples/shibboleth/sessionError.html
 share/examples/shibboleth/sessionError.html.dist
 share/examples/shibboleth/shibboleth2.xml
 share/examples/shibboleth/shibboleth2.xml.dist
-share/examples/shibboleth/shibd-osx.plist
 share/examples/shibboleth/shibd.logger
 share/examples/shibboleth/shibd.logger.dist
 share/examples/shibboleth/sslError.html
@@ -128,6 +138,7 @@ share/examples/shibboleth/sslError.html.dist
 share/examples/shibboleth/syslog.logger
 share/examples/shibboleth/syslog.logger.dist
 share/examples/shibboleth/upgrade.xsl
+share/shibboleth/main.css
 share/xml/shibboleth/WS-Trust.xsd
 share/xml/shibboleth/catalog.xml
 share/xml/shibboleth/shibboleth-2.0-afp-mf-basic.xsd
