@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2013/09/21 08:10:56 martin Exp $
+@comment $NetBSD: PLIST,v 1.73 2013/09/21 10:09:39 ryoon Exp $
 bin/firefox
 include/firefox/AbstractMediaDecoder.h
 include/firefox/AccEvent.h
@@ -3313,7 +3313,7 @@ include/firefox/theora/codec.h
 include/firefox/theora/theora.h
 include/firefox/theora/theoradec.h
 include/firefox/theora/theoraenc.h
-include/firefox/tremor/ivorbiscodec.h
+${PLIST.tremor}include/firefox/tremor/ivorbiscodec.h
 include/firefox/txIEXSLTRegExFunctions.h
 include/firefox/txIFunctionEvaluationContext.h
 include/firefox/txINodeSet.h
@@ -3321,6 +3321,7 @@ include/firefox/txIXPathObject.h
 include/firefox/uconvutil.h
 include/firefox/updatedefines.h
 include/firefox/updatelogging.h
+${PLIST.vorbis}include/firefox/vorbis/codec.h
 include/firefox/webvtt/cue.h
 include/firefox/webvtt/error.h
 include/firefox/webvtt/node.h
