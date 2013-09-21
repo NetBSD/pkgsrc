@@ -1,14 +1,13 @@
-$NetBSD: patch-sapi_cgi_Makefile.frag,v 1.2 2013/08/16 15:28:23 taca Exp $
+$NetBSD: patch-sapi_cgi_Makefile.frag,v 1.3 2013/09/21 16:06:07 taca Exp $
 
 Install cgi binary as php instead of php-cgi.
 
---- sapi/cgi/Makefile.frag.orig	2013-08-14 05:47:24.000000000 +0000
+--- sapi/cgi/Makefile.frag.orig	2013-09-18 05:48:57.000000000 +0000
 +++ sapi/cgi/Makefile.frag
-@@ -4,8 +4,8 @@ $(SAPI_CGI_PATH): $(PHP_GLOBAL_OBJS) $(P
- 	$(BUILD_CGI)
- 
+@@ -6,7 +6,8 @@ $(SAPI_CGI_PATH): $(PHP_GLOBAL_OBJS) $(P
  install-cgi: $(SAPI_CGI_PATH)
--	@echo "Installing PHP CGI binary:        $(INSTALL_ROOT)$(bindir)/"
+ 	@echo "Installing PHP CGI binary:        $(INSTALL_ROOT)$(bindir)/"
+ 	@$(mkinstalldirs) $(INSTALL_ROOT)$(bindir)
 -	@$(INSTALL) -m 0755 $(SAPI_CGI_PATH) $(INSTALL_ROOT)$(bindir)/$(program_prefix)php-cgi$(program_suffix)$(EXEEXT)
 +	@echo "Installing PHP CGI binary:        $(INSTALL_ROOT)@CGIDIR@/"
 +	@$(INSTALL) -m 0755 $(SAPI_CGI_PATH) $(INSTALL_ROOT)@CGIDIR@/$(program_prefix)php$(program_suffix)$(EXEEXT)
