@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2013/09/23 17:56:32 asau Exp $
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtbegin.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtbeginS.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtend.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.1.2/crtendS.o
