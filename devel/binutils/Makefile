@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2013/05/31 12:39:57 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/09/23 10:03:14 joerg Exp $
 
 DISTNAME=	binutils-2.23.2
 PKGREVISION=	1
@@ -14,6 +14,8 @@ EXTRACT_SUFX=	.tar.bz2
 CONFLICTS=	avr-binutils<2.13.2.1nb1
 
 NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-*
+
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
@@ -53,7 +55,7 @@ EXTRA_FILES+=	ld
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-Wno-unused-value -Wno-format-security \
 		-Wno-uninitialized -Wno-format -Wno-string-plus-int \
-		-Wno-empty-body -Wno-self-assign
+		-Wno-empty-body -Wno-self-assign -Wno-unused-function
 .endif
 
 # Prevent the need to run texi2pod.pl and pod2man which would
