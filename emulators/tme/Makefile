@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/09/02 19:51:03 adam Exp $
+# $NetBSD: Makefile,v 1.44 2013/09/23 10:03:40 joerg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -25,7 +25,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-compare \
-			-Wno-error=sometimes-uninitialized
+			-Wno-error=sometimes-uninitialized \
+			-Wno-error=unused-function
 .endif
 
 
