@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3575 2013/09/23 05:17:35 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.3576 2013/09/23 20:37:29 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5037,3 +5037,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-Authen-TacacsPlus to 0.24 [pettai 2013-09-22]
 	Updated net/p5-Net-Amazon to 0.62 [obache 2013-09-22]
 	Updated net/ruby-tw to 0.5.1 [tsutsui 2013-09-23]
+	Updated www/py-wtforms to 1.0.4nb2 [kleink 2013-09-23]
