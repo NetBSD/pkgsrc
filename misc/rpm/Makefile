@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2013/09/20 17:26:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.80 2013/09/24 13:17:18 ryoon Exp $
 
 DISTNAME=	rpm-4.11.1
 CATEGORIES=	misc
@@ -18,7 +18,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		automake bash:run gmake msgfmt perl:run
+USE_TOOLS+=		automake bash:run gmake msgfmt perl:run pkg-config
 GNU_CONFIGURE=		yes
 
 GMAKE_REQD+=		3.82nb1
