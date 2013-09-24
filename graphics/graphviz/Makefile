@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2013/09/10 06:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2013/09/24 22:12:17 wiz Exp $
 
 DISTNAME=	graphviz-2.34.0
 CATEGORIES=	graphics
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ARGS+=	--disable-r
+CONFIGURE_ARGS+=	--with-poppler=no
 CONFIGURE_ARGS+=	--with-gts=no
 CONFIGURE_ARGS+=	--with-qt=no
 # build fails when PHP and/or Ruby are also installed
