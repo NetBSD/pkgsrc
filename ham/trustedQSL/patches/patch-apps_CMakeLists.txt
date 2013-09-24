@@ -1,10 +1,10 @@
-$NetBSD: patch-apps_CMakeLists.txt,v 1.1 2013/09/13 08:45:52 mef Exp $
+$NetBSD: patch-apps_CMakeLists.txt,v 1.2 2013/09/24 11:16:04 mef Exp $
 
 (1) Avoid ${WRKSRC} included in RPATH.
 (2) WARN: PLIST:105: Man pages should be installed into man/, not share/man/.
 
---- apps/CMakeLists.txt.orig	2013-09-03 04:17:12.000000000 +0900
-+++ apps/CMakeLists.txt	2013-09-09 11:05:07.000000000 +0900
+--- apps/CMakeLists.txt.orig	2013-09-22 00:44:59.000000000 +0900
++++ apps/CMakeLists.txt	2013-09-22 15:44:50.000000000 +0900
 @@ -93,8 +93,8 @@ set(TQSL_RCFILE ${OSX_ICONFILE})
  endif()
  
@@ -16,10 +16,11 @@ $NetBSD: patch-apps_CMakeLists.txt,v 1.1 2013/09/13 08:45:52 mef Exp $
  SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
  SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
  endif()
-@@ -121,5 +121,5 @@ if(NOT APPLE AND NOT WIN32)
+@@ -121,6 +121,6 @@ if(NOT APPLE AND NOT WIN32)
  add_definitions("-DCONFDIR=\"${CMAKE_INSTALL_PREFIX}/share/TrustedQSL/\"")
  install(TARGETS tqsl DESTINATION bin)
  install(DIRECTORY help DESTINATION share/TrustedQSL)
 -install(FILES tqsl.5 DESTINATION share/man/man5)
 +install(FILES tqsl.5 DESTINATION man/man5)
+ install(FILES icons/key48.png DESTINATION share/pixmaps RENAME TrustedQSL.png)
  endif()
