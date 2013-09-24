@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.17 2013/09/24 21:29:21 drochner Exp $
+
+--- ncat/ncat_posix.c.orig	2013-07-29 00:03:01.000000000 +0000
++++ ncat/ncat_posix.c
+@@ -123,5 +123,7 @@
+ 
+ #include "ncat.h"
++#ifdef HAVE_LUA
+ #include "ncat_lua.h"
++#endif
+ 
+ char **cmdline_split(const char *cmdexec);
