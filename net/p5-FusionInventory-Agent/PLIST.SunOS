@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2013/09/24 09:57:04 jperkin Exp $
+bin/memconf
