@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2013/07/04 13:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2013/09/25 23:07:31 asau Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -44,6 +44,11 @@ CONFIGURE_ARGS+=	--disable-cms
 .endif
 
 .include "../../mk/bsd.prefs.mk"
+
+# Passing "-ansi" turns "long long" support off on FreeBSD/amd64:
+.if ${OPSYS} == "FreeBSD" && ${MACHINE_ARCH} == "x86_64"
+CFLAGS+=	-D__LONG_LONG_SUPPORTED=
+.endif
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/poppler/
