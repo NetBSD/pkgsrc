@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3578 2013/09/26 09:42:44 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3579 2013/09/26 20:49:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-wtforms to 1.0.4nb2 [kleink 2013-09-23]
 	Updated ham/trustedQSL to 2.0rc6 [mef 2013-09-24]
 	Updated mail/quickml to 0.7nb4 [obache 2013-09-26]
+	Updated fonts/cantarell-fonts to 0.0.15 [ryoon 2013-09-26]
