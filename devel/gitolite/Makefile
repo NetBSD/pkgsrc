@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2013/09/09 14:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/09/26 21:05:29 ryoon Exp $
 
-GLVER=		3.5.1
+GLVER=		3.5.2
 DISTNAME=	gitolite-${GLVER}
-PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v${GLVER}.tar.gz
 
