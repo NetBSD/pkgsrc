@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.2 2012/08/11 13:51:20 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/09/26 09:42:23 obache Exp $
 
 SHA1 (quickml-0.7.tar.gz) = 7122a100840d16762e101e62993752401e95e5bb
 RMD160 (quickml-0.7.tar.gz) = bc34b93676eb342a450bc1a2d3b92d7a06603872
 Size (quickml-0.7.tar.gz) = 94147 bytes
 SHA1 (patch-Makefile.in) = d1c73befff63dac3f76dad27d70460527f2a1e2a
 SHA1 (patch-lib_quickml_config.rb) = f47e92e2cd2c89c2d400cca8813c5a82466cec18
-SHA1 (patch-lib_quickml_core.rb) = 21cb461fb98ca369934e05941be009ca82bcd73b
-SHA1 (patch-lib_quickml_gettext.rb) = 47f693fb71830781e28dac0e318da03c0caf684b
-SHA1 (patch-lib_quickml_mail.rb) = b80ea8007b73a7e2b736a08392f5e2153356c6b3
+SHA1 (patch-lib_quickml_core.rb) = 87226db72c7196bcfa1a7ec5480e52d2e793e45f
+SHA1 (patch-lib_quickml_gettext.rb) = 7bcb17866ce70a722d0e8107a0825e0e576dbf8d
+SHA1 (patch-lib_quickml_mail.rb) = 75a71941d3480f5c6a95889eccf006296851f877
+SHA1 (patch-lib_quickml_server.rb) = b1f540071cd1d89488c03151704abb418201eea4
 SHA1 (patch-lib_quickml_utils.rb) = 1cb00ffacb3045504b1af59113a5a93327b0bad7
 SHA1 (patch-messages.ja) = bf82d499b0498844fcdd1371e240870d5c1a17f0
 SHA1 (patch-quickml-analog.in) = 834d549051bad5495cac7677eb56f4c0c0f38f2e
