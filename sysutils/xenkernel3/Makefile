@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/06/19 14:03:41 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2013/09/27 11:35:07 joerg Exp $
 #
 
 VERSION=	3.1.4
@@ -63,7 +63,7 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -Wno-error=format \
 		-Wno-error=tautological-compare \
 		-Wno-error=parentheses-equality \
 		-Wno-error=sometimes-uninitialized -no-integrated-as \
-		-ffreestanding
+		-ffreestanding -Wno-error=unused-function
 .endif
 
 do-build:
