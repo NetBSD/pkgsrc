@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/09/11 18:00:33 drochner Exp $
+# $NetBSD: Makefile,v 1.37 2013/09/27 11:35:07 joerg Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -182,7 +182,7 @@ EXTRA_HOSTCFLAGS+=	-Wno-error=ignored-attributes
 EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
 		-Wno-error=tautological-compare -Wno-error=null-dereference \
 		-Wno-error=empty-body -Wno-error=self-assign \
-		-Wno-error=sometimes-uninitialized
+		-Wno-error=sometimes-uninitialized -Wno-error=unused-function
 .endif
 
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}

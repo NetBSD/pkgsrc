@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/06/19 14:03:41 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2013/09/27 11:35:07 joerg Exp $
 #
 
 VERSION=	3.3.2
@@ -50,7 +50,7 @@ MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 .if !empty(PKGSRC_COMPILER:Mclang)
 EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=parentheses-equality -Wno-error=enum-conversion \
-		-Wno-error=tautological-compare
+		-Wno-error=tautological-compare -Wno-error=unused-function
 .endif
 
 do-build:
