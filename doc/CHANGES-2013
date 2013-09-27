@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3580 2013/09/26 21:05:59 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3581 2013/09/27 13:27:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5042,3 +5042,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/quickml to 0.7nb4 [obache 2013-09-26]
 	Updated fonts/cantarell-fonts to 0.0.15 [ryoon 2013-09-26]
 	Updated devel/gitolite to 3.5.2 [ryoon 2013-09-26]
+	Updated lang/openjdk7 to 1.7.25nb1 [ryoon 2013-09-27]
