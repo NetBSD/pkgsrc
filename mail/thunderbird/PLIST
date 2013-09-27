@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2013/05/23 13:13:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.49 2013/09/27 13:44:49 ryoon Exp $
 bin/thunderbird
 include/thunderbird/.mkdir.done
 include/thunderbird/AccEvent.h
@@ -1160,8 +1160,6 @@ include/thunderbird/nsIDOMComment.h
 include/thunderbird/nsIDOMCompositionEvent.h
 include/thunderbird/nsIDOMConnection.h
 include/thunderbird/nsIDOMConstructor.h
-include/thunderbird/nsIDOMContactManager.h
-include/thunderbird/nsIDOMContactProperties.h
 include/thunderbird/nsIDOMCounter.h
 include/thunderbird/nsIDOMCrypto.h
 include/thunderbird/nsIDOMCryptoDialogs.h
@@ -1306,7 +1304,6 @@ include/thunderbird/nsIDOMMozApplicationEvent.h
 include/thunderbird/nsIDOMMozBrowserFrame.h
 include/thunderbird/nsIDOMMozCSSKeyframeRule.h
 include/thunderbird/nsIDOMMozCSSKeyframesRule.h
-include/thunderbird/nsIDOMMozContactChangeEvent.h
 include/thunderbird/nsIDOMMozSettingsEvent.h
 include/thunderbird/nsIDOMMozTouchEvent.h
 include/thunderbird/nsIDOMMutationEvent.h
@@ -2377,6 +2374,7 @@ include/thunderbird/nsJARURI.h
 include/thunderbird/nsJSON.h
 include/thunderbird/nsJSPrincipals.h
 include/thunderbird/nsJSProtocolHandler.h
+include/thunderbird/nsJSUtils.h
 include/thunderbird/nsLWBrkCIID.h
 include/thunderbird/nsLayoutCID.h
 include/thunderbird/nsLayoutStatics.h
@@ -4602,7 +4600,6 @@ lib/thunderbird/chrome/toolkit/skin/classic/mozapps/viewsource/viewsource.css
 lib/thunderbird/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallConfirm.css
 lib/thunderbird/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallItemGeneric.png
 lib/thunderbird/components/ConsoleAPI.js
-lib/thunderbird/components/ContactManager.js
 lib/thunderbird/components/FeedProcessor.js
 lib/thunderbird/components/GPSDGeolocationProvider.js
 lib/thunderbird/components/NetworkGeolocationProvider.js
@@ -4790,8 +4787,6 @@ lib/thunderbird/modules/ColorAnalyzer_worker.js
 lib/thunderbird/modules/ColorConversion.js
 lib/thunderbird/modules/CommonDialog.jsm
 lib/thunderbird/modules/ConsoleAPIStorage.jsm
-lib/thunderbird/modules/ContactDB.jsm
-lib/thunderbird/modules/ContactService.jsm
 lib/thunderbird/modules/DOMIdentity.jsm
 lib/thunderbird/modules/DOMRequestHelper.jsm
 lib/thunderbird/modules/Dict.jsm
@@ -5369,8 +5364,6 @@ share/idl/thunderbird/nsIDOMComment.idl
 share/idl/thunderbird/nsIDOMCompositionEvent.idl
 share/idl/thunderbird/nsIDOMConnection.idl
 share/idl/thunderbird/nsIDOMConstructor.idl
-share/idl/thunderbird/nsIDOMContactManager.idl
-share/idl/thunderbird/nsIDOMContactProperties.idl
 share/idl/thunderbird/nsIDOMCounter.idl
 share/idl/thunderbird/nsIDOMCrypto.idl
 share/idl/thunderbird/nsIDOMCryptoDialogs.idl
@@ -5515,7 +5508,6 @@ share/idl/thunderbird/nsIDOMMozApplicationEvent.idl
 share/idl/thunderbird/nsIDOMMozBrowserFrame.idl
 share/idl/thunderbird/nsIDOMMozCSSKeyframeRule.idl
 share/idl/thunderbird/nsIDOMMozCSSKeyframesRule.idl
-share/idl/thunderbird/nsIDOMMozContactChangeEvent.idl
 share/idl/thunderbird/nsIDOMMozSettingsEvent.idl
 share/idl/thunderbird/nsIDOMMozTouchEvent.idl
 share/idl/thunderbird/nsIDOMMutationEvent.idl
