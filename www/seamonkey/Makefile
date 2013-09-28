@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.103 2013/09/02 19:51:29 adam Exp $
+# $NetBSD: Makefile,v 1.104 2013/09/28 14:37:05 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-SM_VER=		2.20
+SM_VER=		2.21
 #LIGHTNINGVER=	1.9
-PKGREVISION=	1
 CATEGORIES=	www
 #${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
@@ -39,10 +38,18 @@ ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
 #BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 #.endif
 
+CHECK_PORTABILITY_SKIP=mozilla/js/src/tests/update-test262.sh
+
 CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=lib/seamonkey-sdk/sdk/bin/xpt.py
+
+SUBST_CLASSES+=		sys-dic
+SUBST_STAGE.sys-dic=	pre-configure
+SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
+SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
+SUBST_VARS.sys-dic=	PREFIX
 
 #post-extract:
 #	cd ${WRKSRC} && ${RM} -r calendar
