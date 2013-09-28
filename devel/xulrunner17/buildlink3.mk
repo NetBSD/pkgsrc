@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.11 2013/09/02 19:50:42 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2013/09/28 00:56:58 ryoon Exp $
 
 BUILDLINK_TREE+=	xulrunner17
 
 .if !defined(XULRUNNER17_BUILDLINK3_MK)
 XULRUNNER17_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.xulrunner17+=	xulrunner17>=17.0.2
-BUILDLINK_ABI_DEPENDS.xulrunner17+=	xulrunner17>=17.0.8nb2
+BUILDLINK_API_DEPENDS.xulrunner17+=	xulrunner17>=17.0.9
+BUILDLINK_ABI_DEPENDS.xulrunner17+=	xulrunner17>=17.0.9
 BUILDLINK_PKGSRCDIR.xulrunner17?=		../../devel/xulrunner17
 
 BUILDLINK_INCDIRS.xulrunner17+=		lib/xulrunner17/include
