@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.2 2013/09/28 14:37:05 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2013-05-03 03:08:07.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2013-09-16 18:26:51.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi
 @@ -7,6 +7,9 @@
  # be found in the AUTHORS file in the root of the source tree.
@@ -12,12 +12,10 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__c
    'targets': [
      {
        'target_name': 'video_capture_module',
-@@ -48,7 +51,17 @@
-           ],
+@@ -49,6 +52,16 @@
          }, {  # include_internal_video_capture == 1
            'conditions': [
--            ['OS=="linux"', {
-+            ['include_v4l2_video_capture==1', {
+             ['include_v4l2_video_capture==1', {
 +              'conditions': [
 +                ['use_libv4l2==1', {
 +                  'defines': [
@@ -31,32 +29,3 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__c
                'include_dirs': [
                  'linux',
                ],
-@@ -157,7 +170,7 @@
-             'test/video_capture_main_mac.mm',
-           ],
-           'conditions': [
--            ['OS=="mac" or OS=="linux"', {
-+            ['OS!="win" and OS!="android"', {
-               'cflags': [
-                 '-Wno-write-strings',
-               ],
-@@ -165,13 +178,17 @@
-                 '-lpthread -lm',
-               ],
-             }],
--            ['OS=="linux"', {
-+            ['include_v4l2_video_capture==1', {
-               'libraries': [
--                '-lrt',
-                 '-lXext',
-                 '-lX11',
-               ],
-             }],
-+            ['OS=="linux"', {
-+              'libraries': [
-+                '-lrt',
-+              ],
-+            }],
-             ['OS=="mac"', {
-               'dependencies': [
-                 # Link with a special main for mac so we can use the webcam.
