@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.11 2013/08/11 03:18:46 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.12 2013/09/28 14:37:05 ryoon Exp $
 include/seamonkey/calBaseCID.h
 include/seamonkey/calIAlarm.h
 include/seamonkey/calIAlarmService.h
@@ -377,8 +377,10 @@ lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/light
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/components/wcap.xpt
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/defaults/preferences/lightning.js
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/install.rdf
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/OAuth2.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calAlarmUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calAuthUtils.jsm
+lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calExtract.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calHashedArray.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calItemUtils.jsm
 lib/seamonkey/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calIteratorUtils.jsm
