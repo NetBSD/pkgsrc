@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/08/02 12:17:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/28 00:56:58 ryoon Exp $
 bin/xulrunner17
 include/xulrunner17/.mkdir.done
 include/xulrunner17/AccEvent.h
@@ -1086,8 +1086,6 @@ include/xulrunner17/nsIDOMComment.h
 include/xulrunner17/nsIDOMCompositionEvent.h
 include/xulrunner17/nsIDOMConnection.h
 include/xulrunner17/nsIDOMConstructor.h
-include/xulrunner17/nsIDOMContactManager.h
-include/xulrunner17/nsIDOMContactProperties.h
 include/xulrunner17/nsIDOMCounter.h
 include/xulrunner17/nsIDOMCrypto.h
 include/xulrunner17/nsIDOMCryptoDialogs.h
@@ -1232,7 +1230,6 @@ include/xulrunner17/nsIDOMMozApplicationEvent.h
 include/xulrunner17/nsIDOMMozBrowserFrame.h
 include/xulrunner17/nsIDOMMozCSSKeyframeRule.h
 include/xulrunner17/nsIDOMMozCSSKeyframesRule.h
-include/xulrunner17/nsIDOMMozContactChangeEvent.h
 include/xulrunner17/nsIDOMMozSettingsEvent.h
 include/xulrunner17/nsIDOMMozTouchEvent.h
 include/xulrunner17/nsIDOMMutationEvent.h
@@ -2126,6 +2123,7 @@ include/xulrunner17/nsJARURI.h
 include/xulrunner17/nsJSON.h
 include/xulrunner17/nsJSPrincipals.h
 include/xulrunner17/nsJSProtocolHandler.h
+include/xulrunner17/nsJSUtils.h
 include/xulrunner17/nsLWBrkCIID.h
 include/xulrunner17/nsLayoutCID.h
 include/xulrunner17/nsLayoutStatics.h
@@ -3260,8 +3258,6 @@ lib/xulrunner17/components/BrowserElementParent.manifest
 lib/xulrunner17/components/ColorAnalyzer.js
 lib/xulrunner17/components/ConsoleAPI.js
 lib/xulrunner17/components/ConsoleAPI.manifest
-lib/xulrunner17/components/ContactManager.js
-lib/xulrunner17/components/ContactManager.manifest
 lib/xulrunner17/components/FeedProcessor.js
 lib/xulrunner17/components/FeedProcessor.manifest
 lib/xulrunner17/components/GPSDGeolocationProvider.js
@@ -3445,8 +3441,6 @@ lib/xulrunner17/modules/ColorAnalyzer_worker.js
 lib/xulrunner17/modules/ColorConversion.js
 lib/xulrunner17/modules/CommonDialog.jsm
 lib/xulrunner17/modules/ConsoleAPIStorage.jsm
-lib/xulrunner17/modules/ContactDB.jsm
-lib/xulrunner17/modules/ContactService.jsm
 lib/xulrunner17/modules/DOMIdentity.jsm
 lib/xulrunner17/modules/DOMRequestHelper.jsm
 lib/xulrunner17/modules/Dict.jsm
@@ -3886,8 +3880,6 @@ share/idl/xulrunner17/nsIDOMComment.idl
 share/idl/xulrunner17/nsIDOMCompositionEvent.idl
 share/idl/xulrunner17/nsIDOMConnection.idl
 share/idl/xulrunner17/nsIDOMConstructor.idl
-share/idl/xulrunner17/nsIDOMContactManager.idl
-share/idl/xulrunner17/nsIDOMContactProperties.idl
 share/idl/xulrunner17/nsIDOMCounter.idl
 share/idl/xulrunner17/nsIDOMCrypto.idl
 share/idl/xulrunner17/nsIDOMCryptoDialogs.idl
@@ -4032,7 +4024,6 @@ share/idl/xulrunner17/nsIDOMMozApplicationEvent.idl
 share/idl/xulrunner17/nsIDOMMozBrowserFrame.idl
 share/idl/xulrunner17/nsIDOMMozCSSKeyframeRule.idl
 share/idl/xulrunner17/nsIDOMMozCSSKeyframesRule.idl
-share/idl/xulrunner17/nsIDOMMozContactChangeEvent.idl
 share/idl/xulrunner17/nsIDOMMozSettingsEvent.idl
 share/idl/xulrunner17/nsIDOMMozTouchEvent.idl
 share/idl/xulrunner17/nsIDOMMutationEvent.idl
