@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3586 2013/09/28 07:53:09 tron Exp $
+$NetBSD: CHANGES-2013,v 1.3587 2013/09/28 09:21:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5049,3 +5049,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox17 to 17.0.9 [ryoon 2013-09-28]
 	Updated www/firefox17-l10n to 17.0.9 [ryoon 2013-09-28]
 	Updated databases/phpmyadmin to 4.0.7 [tron 2013-09-28]
+	Updated net/mikutter to 0.2.2.1373 [obache 2013-09-28]
