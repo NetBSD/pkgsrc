@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/01/29 05:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/09/28 06:32:08 obache Exp $
 
 DISTNAME=	pkg-config-0.28
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-internal-glib
 CONFIGURE_ARGS+=	--disable-host-tool
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 # old name of the package
 CONFLICTS=		pkgconfig-[0-9]*
