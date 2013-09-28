@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.9 2013/08/11 03:18:46 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.10 2013/09/28 14:37:05 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util.h.orig	2013-08-04 03:05:29.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util.h.orig	2013-09-16 18:26:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util.h
 @@ -13,7 +13,7 @@
  #if defined(OS_WIN)
  #include <windows.h>
  #include <tlhelp32.h>
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_SOLARIS)
+-#elif defined(OS_LINUX) || defined(__GLIBC__)
++#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
  #include <dirent.h>
  #include <limits.h>
  #include <sys/types.h>
@@ -25,8 +25,8 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.9 2013/08/11 03
  #if defined(OS_WIN)
    HANDLE snapshot_;
    bool started_iteration_;
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_SOLARIS)
+-#elif defined(OS_LINUX) || defined(__GLIBC__)
++#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
    DIR *procfs_dir_;
  #elif defined(OS_BSD)
    std::vector<ProcessEntry> content;

@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_js_src_jsmath.cpp,v 1.1 2013/08/11 03:18:46 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jsmath.cpp,v 1.2 2013/09/28 14:37:05 ryoon Exp $
 
---- mozilla/js/src/jsmath.cpp.orig	2013-08-04 03:05:33.000000000 +0000
+--- mozilla/js/src/jsmath.cpp.orig	2013-09-16 18:26:41.000000000 +0000
 +++ mozilla/js/src/jsmath.cpp
-@@ -219,7 +219,7 @@ js::ecmaAtan2(double x, double y)
+@@ -244,7 +244,7 @@ js::ecmaAtan2(double y, double x)
      }
  #endif
  
 -#if defined(SOLARIS) && defined(__GNUC__)
 +#if defined(notSOLARIS) && defined(__GNUC__)
-     if (x == 0) {
-         if (MOZ_DOUBLE_IS_NEGZERO(y))
-             return js_copysign(M_PI, x);
+     if (y == 0) {
+         if (IsNegativeZero(x))
+             return js_copysign(M_PI, y);
