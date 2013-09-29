@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2013/09/16 04:47:42 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2013/09/29 08:34:02 ryoon Exp $
 
 SHA1 (mintbin-CVS-20110527.tar.gz) = ab929bd1c090032911df13786c007bfe0c9ff476
 RMD160 (mintbin-CVS-20110527.tar.gz) = ea6f66337ff3a3ae6c26044fadc3665616eb6b5f
 Size (mintbin-CVS-20110527.tar.gz) = 327834 bytes
 SHA1 (patch-po_Makefile.in.in) = 504f50746708d1da4f446d135e634959f69fc931
-SHA1 (patch-src_Makefile.in) = fb61b0edfdc42e5e0b6e3d8f79f87dcc3ed1a8c4
+SHA1 (patch-src_Makefile.in) = 59be759e4194f9b4a0147c1d3cee8f18de834fa9
