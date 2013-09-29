@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2009/05/09 16:33:04 adrianp Exp $
+$NetBSD: distinfo,v 1.10 2013/09/29 10:19:01 joerg Exp $
 
 SHA1 (dsniff-2.3.tar.gz) = 671a1df823ab0657fc95e79112924a57281e9c3b
 RMD160 (dsniff-2.3.tar.gz) = 89dad0259e90acef30a7aa5f3471de3aaeb06147
@@ -20,3 +20,5 @@ SHA1 (patch-bi) = 47c6b0e3682af9ee3b212b0d0800d9a74037df30
 SHA1 (patch-bj) = b6d45af26058a221cb68d72c45e7358c1ef894c0
 SHA1 (patch-bk) = 3a36f7a11a5590daea9b1cf7c8d7772a88ff2a18
 SHA1 (patch-bl) = add5db6023f9e76e269e953eb95ff5b808f650ab
+SHA1 (patch-sshmitm.c) = b1b219739c05290eb2635ae17175966eb2150b68
+SHA1 (patch-webmitm.c) = 426f4eb0e6b704b487e032f3a772766a0f1de061
