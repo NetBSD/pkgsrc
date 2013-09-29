@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/08/30 15:46:25 taca Exp $
+$NetBSD: distinfo,v 1.5 2013/09/29 03:40:32 taca Exp $
 
 SHA1 (contao/3.1.2.tar.gz) = ed7d155aa780643480ebedc1617a44faa5671694
 RMD160 (contao/3.1.2.tar.gz) = 2ea78a3e5212b898d799b770b7638809b4af2b0b
 Size (contao/3.1.2.tar.gz) = 9214376 bytes
+SHA1 (patch-system_modules_core_library_Contao_Database_Updater.php) = be4f8eeda2237f6c8f47a405b2bd76428f41144e

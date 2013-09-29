@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/08/27 16:08:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/29 03:40:32 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.0.01/ace.js
@@ -3725,7 +3725,3 @@ ${CT_EGDIR}/system/config/timezones.php
 ${CT_EGDIR}/system/config/tinyFlash.php
 ${CT_EGDIR}/system/config/tinyMCE.php
 ${CT_EGDIR}/system/config/tinyNews.php
-@pkgdir share/contao31/system/cache
-@pkgdir share/contao31/system/config
-@pkgdir share/contao31/system/logs
-@pkgdir share/contao31/system/tmp
