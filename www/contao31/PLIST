@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/29 03:40:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/30 10:04:34 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.0.01/ace.js
@@ -993,6 +993,7 @@ ${CT_WEBDIR}/system/cron/cron.php
 ${CT_WEBDIR}/system/docs/CHANGELOG.md
 ${CT_WEBDIR}/system/docs/GPL.txt
 ${CT_WEBDIR}/system/docs/LGPL.txt
+${CT_WEBDIR}/system/helper/exception.php
 ${CT_WEBDIR}/system/helper/functions.php
 ${CT_WEBDIR}/system/helper/ide_compat.php
 ${CT_WEBDIR}/system/helper/interface.php
