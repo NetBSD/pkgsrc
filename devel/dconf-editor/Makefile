@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/09/02 19:50:58 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/09/30 11:42:13 obache Exp $
 
 .include "../../devel/dconf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dconf/dconf-editor/}
-PKGREVISION=	4
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/dconf/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/dconf/patches
@@ -26,9 +25,9 @@ pre-build:
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala018/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dconf+=	dconf>=${PKGVERSION_NOREV}
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

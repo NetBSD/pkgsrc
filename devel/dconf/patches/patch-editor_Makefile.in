@@ -1,22 +1,22 @@
-$NetBSD: patch-editor_Makefile.in,v 1.3 2012/11/06 18:51:46 drochner Exp $
+$NetBSD: patch-editor_Makefile.in,v 1.4 2013/09/30 11:42:13 obache Exp $
 
---- editor/Makefile.in.orig	2012-11-01 15:09:26.000000000 +0000
+--- editor/Makefile.in.orig	2013-09-23 21:29:28.000000000 +0000
 +++ editor/Makefile.in
-@@ -72,7 +72,7 @@ am_dconf_editor_OBJECTS = dconf_editor-d
- 	dconf_editor-dconf-view.$(OBJEXT)
- dconf_editor_OBJECTS = $(am_dconf_editor_OBJECTS)
+@@ -103,7 +103,7 @@ nodist_dconf_editor_OBJECTS = dconf_edit
+ dconf_editor_OBJECTS = $(am_dconf_editor_OBJECTS) \
+ 	$(nodist_dconf_editor_OBJECTS)
  am__DEPENDENCIES_1 =
 -dconf_editor_DEPENDENCIES = ../client/libdconf.so.1 \
 +dconf_editor_DEPENDENCIES = \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_1)
  dconf_editor_LINK = $(CCLD) $(dconf_editor_CFLAGS) $(CFLAGS) \
-@@ -297,7 +297,7 @@ TEST_PROGS = 
- INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/client
+@@ -355,7 +355,7 @@ TEST_PROGS = 
+ AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/client
  dconf_editor_VALAFLAGS = --vapidir ../client --pkg gtk+-3.0 --pkg gmodule-2.0 --pkg libxml-2.0 --pkg dconf
  dconf_editor_LDADD = \
 -	../client/libdconf.so.1		\
-+	$(prefix)/lib/libdconf.so.0	\
++	$(prefix)/lib/libdconf.so.1	\
  	$(gtk_LIBS)			\
  	$(gee_LIBS)			\
  	$(gmodule_LIBS)			\
