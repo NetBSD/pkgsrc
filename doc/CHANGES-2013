@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3591 2013/09/29 03:41:04 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3592 2013/09/30 03:16:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5054,3 +5054,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey-l10n to 2.21 [ryoon 2013-09-28]
 	Updated devel/jenkins to 1.509.3 [ryoon 2013-09-28]
 	Updated www/contao31 to 3.1.2nb1 [taca 2013-09-29]
+	Updated misc/rubygems to 2.0.10 [taca 2013-09-30]
+	Updated lang/ruby193-base to 1.9.3p448nb5 [taca 2013-09-30]
+	Updated lang/ruby200-base to 2.0.0p247nb2 [taca 2013-09-30]
