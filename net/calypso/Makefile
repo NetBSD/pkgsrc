@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/09/09 14:07:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/30 09:35:55 wiz Exp $
 
-DISTNAME=	calypso-1.0
-PKGREVISION=	2
+DISTNAME=	calypso-1.2
 CATEGORIES=	net time
 MASTER_SITES=	http://keithp.com/calypso/
 
@@ -13,10 +12,8 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.1c:../../textproc/py-vobject
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-#WRKSRC=		${WRKDIR}/calypso
-
-PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCLUDE_3X=	yes
+EGG_NAME=	${DISTNAME:S/c/C/}
+WRKSRC=		${WRKDIR}
 
 INSTALLATION_DIRS=	share/examples/calypso
 
@@ -26,5 +23,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/share/examples/calypso/
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
