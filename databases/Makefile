@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.438 2013/09/13 08:40:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.439 2013/09/30 17:24:33 wiz Exp $
 
 COMMENT=	Databases
 
@@ -336,6 +336,7 @@ SUBDIR+=	py-sqlalchemy-migrate
 SUBDIR+=	py-sqlite
 SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlite3
+SUBDIR+=	py-sqlparse
 SUBDIR+=	py-sybase
 SUBDIR+=	py-table
 SUBDIR+=	py-tokyocabinet
