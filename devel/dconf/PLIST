@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/05/27 18:17:11 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/09/30 11:42:13 obache Exp $
 bin/dconf
 include/dconf-dbus-1/dconf-dbus-1.h
 include/dconf/client/dconf-client.h
@@ -61,6 +61,7 @@ share/locale/eu/LC_MESSAGES/dconf.mo
 share/locale/fa/LC_MESSAGES/dconf.mo
 share/locale/fi/LC_MESSAGES/dconf.mo
 share/locale/fr/LC_MESSAGES/dconf.mo
+share/locale/fur/LC_MESSAGES/dconf.mo
 share/locale/gl/LC_MESSAGES/dconf.mo
 share/locale/he/LC_MESSAGES/dconf.mo
 share/locale/hi/LC_MESSAGES/dconf.mo
@@ -74,6 +75,7 @@ share/locale/lv/LC_MESSAGES/dconf.mo
 share/locale/ml/LC_MESSAGES/dconf.mo
 share/locale/mr/LC_MESSAGES/dconf.mo
 share/locale/nb/LC_MESSAGES/dconf.mo
+share/locale/nl/LC_MESSAGES/dconf.mo
 share/locale/pa/LC_MESSAGES/dconf.mo
 share/locale/pl/LC_MESSAGES/dconf.mo
 share/locale/pt/LC_MESSAGES/dconf.mo
