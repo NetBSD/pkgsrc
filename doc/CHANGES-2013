@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3622 2013/09/30 20:08:08 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3623 2013/09/30 21:10:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5088,3 +5088,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/mame to 0.150 [wiz 2013-09-30]
 	Updated emulators/mess to 0.150 [wiz 2013-09-30]
 	Updated x11/xf86-video-fbdev to 0.4.4 [wiz 2013-09-30]
+	Added net/cclive version 0.7.16 [wiz 2013-09-30]
