@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3598 2013/09/30 09:36:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3599 2013/09/30 09:36:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5063,3 +5063,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-flakes to 0.7.3 [wiz 2013-09-30]
 	Updated net/Radicale to 0.8 [wiz 2013-09-30]
 	Updated net/calypso to 1.2 [wiz 2013-09-30]
+	Updated textproc/mdoclint to 1.24 [wiz 2013-09-30]
