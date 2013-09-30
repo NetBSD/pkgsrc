@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12568 2013/09/30 10:06:09 taca Exp $
+$NetBSD: TODO,v 1.12569 2013/09/30 15:22:23 taca Exp $
 
 Suggested new packages
 ======================
@@ -907,7 +907,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
-	o postfix-2.10.2
 	o powermanga-0.91
 	o powwow-1.2.16
 	o prboom-2.5.0.8
