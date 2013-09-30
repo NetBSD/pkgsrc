@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.29 2013/09/06 14:08:18 taca Exp $
+$NetBSD: patch-ai,v 1.30 2013/09/30 15:21:15 taca Exp $
 
 Make this pkgsrc friendly.
 Add support for NetBSD 5.x, NetBSD 6.x and DragonFly BSD.
 
---- makedefs.orig	2012-11-29 23:53:34.000000000 +0000
+--- makedefs.orig	2013-02-04 01:33:13.000000000 +0000
 +++ makedefs
 @@ -155,6 +155,8 @@ case "$SYSTEM.$RELEASE" in
  		;;
@@ -25,7 +25,7 @@ Add support for NetBSD 5.x, NetBSD 6.x and DragonFly BSD.
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
     BSD/OS.3*)	SYSTYPE=BSDI3
-@@ -225,13 +231,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -226,13 +232,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -39,41 +39,89 @@ Add support for NetBSD 5.x, NetBSD 6.x and DragonFly BSD.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -269,25 +268,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -270,31 +269,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
--		SYSLIBS="-ldb"
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *) SYSLIBS="-ldb";;
+-		esac
  		;;
      Linux.2*)	SYSTYPE=LINUX2
--		# Postfix no longer needs DB 1.85 compatibility
--		if [ -f /usr/include/db.h ]
--		then
--		    : we are all set
--		elif [ -f /usr/include/db/db.h ]
--		then
--		    CCARGS="$CCARGS -I/usr/include/db"
--		else
--		    # No, we're not going to try db1 db2 db3 etc.
--		    # On a properly installed system, Postfix builds
--		    # by including <db.h> and by linking with -ldb
--		    echo "No <db.h> include file found." 1>&2
--		    echo "Install the appropriate db*-devel package first." 1>&2
--		    echo "See the RELEASE_NOTES file for more information." 1>&2
--		    exit 1
--		fi
- 		# GDBM locks the DBM .pag file after open. This breaks postmap.
- 		# if [ -f /usr/include/gdbm-ndbm.h ]
- 		# then
-@@ -298,7 +280,6 @@ case "$SYSTEM.$RELEASE" in
- 		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
- 		#     GDBM_LIBS=gdbm
- 		# fi
--		SYSLIBS="-ldb"
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *) if [ -f /usr/include/db.h ]
+-		    then
+-			: we are all set
+-		    elif [ -f /usr/include/db/db.h ]
+-		    then
+-			CCARGS="$CCARGS -I/usr/include/db"
+-		    else
+-			# No, we're not going to try db1 db2 db3 etc.
+-			# On a properly installed system, Postfix builds
+-			# by including <db.h> and by linking with -ldb
+-			echo "No <db.h> include file found." 1>&2
+-			echo "Install the appropriate db*-devel package first." 1>&2
+-			exit 1
+-		    fi
+-		    SYSLIBS="-ldb"
+-		    ;;
+-		esac
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -427,25 +408,13 @@ EOF
+@@ -348,24 +324,6 @@ EOF
+ 		esac
+ 		;;
+     Linux.3*)	SYSTYPE=LINUX3
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *) if [ -f /usr/include/db.h ]
+-		    then
+-			: we are all set
+-		    elif [ -f /usr/include/db/db.h ]
+-		    then
+-			CCARGS="$CCARGS -I/usr/include/db"
+-		    else
+-			# On a properly installed system, Postfix builds
+-			# by including <db.h> and by linking with -ldb
+-			echo "No <db.h> include file found." 1>&2
+-			echo "Install the appropriate db*-devel package first." 1>&2
+-			exit 1
+-		    fi
+-		    SYSLIBS="-ldb"
+-		    ;;
+-		esac
+ 		for name in nsl resolv
+ 		do
+ 		    for lib in /usr/lib64 /lib64 /usr/lib /usr/lib/* /lib /lib/*
+@@ -379,24 +337,6 @@ EOF
+ 		;;
+      GNU.0*|GNU/kFreeBSD.[567]*)
+      		SYSTYPE=GNU0
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *) if [ -f /usr/include/db.h ]
+-		    then
+-			: we are all set
+-		    elif [ -f /usr/include/db/db.h ]
+-		    then
+-			CCARGS="$CCARGS -I/usr/include/db"
+-		    else
+-			# On a properly installed system, Postfix builds
+-			# by including <db.h> and by linking with -ldb
+-			echo "No <db.h> include file found." 1>&2
+-			echo "Install the appropriate db*-devel package first." 1>&2
+-			exit 1
+-		    fi
+-		    SYSLIBS="-ldb"
+-		    ;;
+-		esac
+ 		for name in nsl resolv
+ 		do
+ 		    for lib in /usr/lib64 /lib64 /usr/lib /lib
+@@ -427,25 +367,13 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
