@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/30 17:25:51 wiz Exp $
+
+SHA1 (xattr/v0.7.2.tar.gz) = 9345898f5bc992f0c82e2552368908ee84decb52
+RMD160 (xattr/v0.7.2.tar.gz) = 950630c21d86c534fcffea093d9578a6963be18c
+Size (xattr/v0.7.2.tar.gz) = 9515 bytes
