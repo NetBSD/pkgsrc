@@ -1,4 +1,7 @@
-$NetBSD: patch-include_sasl.h,v 1.1 2012/12/20 22:52:37 joerg Exp $
+$NetBSD: patch-include_sasl.h,v 1.2 2013/09/30 06:24:09 obache Exp $
+
+* #include <stddef.h> for size_t on NetBSD
+  http://git.cyrusimap.org/cyrus-sasl/commit/?id=67a188693796a14e3a76ac603104807fbbfddfc4
 
 --- include/sasl.h.orig	2012-12-20 22:26:09.000000000 +0000
 +++ include/sasl.h
