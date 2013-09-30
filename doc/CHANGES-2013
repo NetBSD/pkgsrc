@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3602 2013/09/30 12:54:31 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3603 2013/09/30 15:22:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5068,3 +5068,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/dconf to 0.18.0 [obache 2013-09-30]
 	Updated devel/dconf-editor to 0.18.0 [obache 2013-09-30]
 	Updated net/zeromq to 3.2.4 [obache 2013-09-30]
+	Updated mail/postfix to 2.10.2 [taca 2013-09-30]
