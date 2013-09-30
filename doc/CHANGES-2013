@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3609 2013/09/30 17:01:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3610 2013/09/30 17:18:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5075,3 +5075,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed x11/xf86-video-nsc [wiz 2013-09-30]
 	Removed x11/xf86-video-vga successor x11/xf86-video-vesa [wiz 2013-09-30]
 	Removed x11/xf86-video-radeonhd successor x11/xf86-video-ati [wiz 2013-09-30]
+	Added security/py-Kerberos version 1.1 [wiz 2013-09-30]
