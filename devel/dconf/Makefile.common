@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2013/05/27 18:17:11 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/09/30 11:42:13 obache Exp $
 #
 # used by devel/dconf-editor/Makefile
 
-DISTNAME=	dconf-0.16.0
+DISTNAME=	dconf-0.18.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
