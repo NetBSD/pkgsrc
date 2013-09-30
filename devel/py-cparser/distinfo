@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/30 17:21:21 wiz Exp $
+
+SHA1 (pycparser-2.10.tar.gz) = 378a7a987d40e2c1c42cad0b351a6fc0a51ed004
+RMD160 (pycparser-2.10.tar.gz) = 2fbb253348d90d55492a063b96b71511dadefa04
+Size (pycparser-2.10.tar.gz) = 206166 bytes
