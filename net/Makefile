@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.979 2013/09/19 11:00:19 obache Exp $
+# $NetBSD: Makefile,v 1.980 2013/09/30 21:10:03 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -58,6 +58,7 @@ SUBDIR+=	bug-buddy
 SUBDIR+=	bwping
 SUBDIR+=	cacti
 SUBDIR+=	calypso
+SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	cdpd
 SUBDIR+=	cftp
