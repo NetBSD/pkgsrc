@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12571 2013/09/30 18:22:01 wiz Exp $
+$NetBSD: TODO,v 1.12572 2013/09/30 18:23:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -784,7 +784,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mc-4.8.9
 	o mcsim-5.5.0
 	o mdocml-1.12.1
-	o meld-1.8.1
 	o mergeant-0.67
 	o mess-0.150
 	o mesure-0.7.2
