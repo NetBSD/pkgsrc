@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/09/30 03:15:45 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/30 08:31:00 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -80,6 +80,13 @@ CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
 CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
 CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VERSION}
 CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
+.endif
+
+#
+# Ruby 2.0 don't like Apple's builtin OpenSSL.
+#
+.if ${OPSYS} == "Darwin"
+USE_BUILTIN.openssl=	no
 .endif
 
 #
