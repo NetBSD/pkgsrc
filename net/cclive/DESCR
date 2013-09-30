@@ -1,0 +1,4 @@
+cclive is a command line video extraction utility similar to clive
+but with lower requirements.  Its features are few and essential.
+Supports Youtube, Googlevideo, Break, Liveleak, Sevenload, Evisortv
+and Dailymotion.
