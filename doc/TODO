@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12567 2013/09/30 09:36:12 wiz Exp $
+$NetBSD: TODO,v 1.12568 2013/09/30 10:06:09 taca Exp $
 
 Suggested new packages
 ======================
@@ -467,6 +467,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhid-5.3
 	o digikam-3.4.0
 	o doclifter-2.12
+	o dovecot-2.2.6
+	o dovecot2-pigeonhole-0.4.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o easymenu-0.7.2p1
@@ -968,6 +970,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-2.0.0p0
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
+	o samba-3.6.19
 	o samba-4.0.7 [wip]
 	o samba-4.0.8
 	o sarg-2.2.5
