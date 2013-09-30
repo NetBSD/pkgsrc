@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/07/28 09:23:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/09/30 18:23:21 wiz Exp $
 bin/meld
 lib/meld/meld/__init__.py
 lib/meld/meld/__init__.pyc
@@ -165,6 +165,7 @@ lib/meld/meld/vc/svn_17.pyo
 lib/meld/meld/vcview.py
 lib/meld/meld/vcview.pyc
 lib/meld/meld/vcview.pyo
+share/appdata/meld.appdata.xml
 share/applications/meld.desktop
 share/gnome/help/meld/C/meld.xml
 share/gnome/help/meld/es/meld.xml
