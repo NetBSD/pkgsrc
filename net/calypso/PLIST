@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 15:11:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/30 09:35:55 wiz Exp $
 bin/calypso
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/calypso/__init__.py
 ${PYSITELIB}/calypso/__init__.pyc
 ${PYSITELIB}/calypso/__init__.pyo
@@ -12,9 +17,15 @@ ${PYSITELIB}/calypso/acl/fake.pyo
 ${PYSITELIB}/calypso/acl/htpasswd.py
 ${PYSITELIB}/calypso/acl/htpasswd.pyc
 ${PYSITELIB}/calypso/acl/htpasswd.pyo
+${PYSITELIB}/calypso/acl/pam.py
+${PYSITELIB}/calypso/acl/pam.pyc
+${PYSITELIB}/calypso/acl/pam.pyo
 ${PYSITELIB}/calypso/config.py
 ${PYSITELIB}/calypso/config.pyc
 ${PYSITELIB}/calypso/config.pyo
+${PYSITELIB}/calypso/paths.py
+${PYSITELIB}/calypso/paths.pyc
+${PYSITELIB}/calypso/paths.pyo
 ${PYSITELIB}/calypso/webdav.py
 ${PYSITELIB}/calypso/webdav.pyc
 ${PYSITELIB}/calypso/webdav.pyo
