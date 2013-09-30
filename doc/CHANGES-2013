@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3617 2013/09/30 18:22:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3618 2013/09/30 18:23:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5083,3 +5083,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/py-xattr version 0.7.2 [wiz 2013-09-30]
 	Updated graphics/png to 1.6.6 [wiz 2013-09-30]
 	Updated devel/py-setuptools to 1.1.6 [wiz 2013-09-30]
+	Updated devel/meld to 1.8.1 [wiz 2013-09-30]
