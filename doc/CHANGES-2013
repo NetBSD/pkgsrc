@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3597 2013/09/30 09:34:26 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3598 2013/09/30 09:36:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5062,3 +5062,4 @@ Changes to the packages collection and infrastructure in 2013:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q3 branch [wiz 2013-09-30]
 	Updated devel/py-flakes to 0.7.3 [wiz 2013-09-30]
 	Updated net/Radicale to 0.8 [wiz 2013-09-30]
+	Updated net/calypso to 1.2 [wiz 2013-09-30]
