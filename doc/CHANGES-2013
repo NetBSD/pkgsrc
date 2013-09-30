@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3608 2013/09/30 17:00:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3609 2013/09/30 17:01:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5073,4 +5073,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed x11/xf86-video-cyrix [wiz 2013-09-30]
 	Removed x11/xf86-video-imstt [wiz 2013-09-30]
 	Removed x11/xf86-video-nsc [wiz 2013-09-30]
-	Removed x11/xf86-video-vga [wiz 2013-09-30]
+	Removed x11/xf86-video-vga successor x11/xf86-video-vesa [wiz 2013-09-30]
+	Removed x11/xf86-video-radeonhd successor x11/xf86-video-ati [wiz 2013-09-30]
