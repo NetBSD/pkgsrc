@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3595 2013/09/30 08:49:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3596 2013/09/30 09:33:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5060,3 +5060,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/openjdk7 to 1.7.25nb2 [ryoon 2013-09-30]
 	Updated security/cyrus-saslauthd to 2.1.26nb2 [obache 2013-09-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q3 branch [wiz 2013-09-30]
+	Updated devel/py-flakes to 0.7.3 [wiz 2013-09-30]
