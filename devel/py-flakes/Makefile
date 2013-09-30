@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/01/03 14:15:32 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2013/09/30 09:33:49 wiz Exp $
 
-DISTNAME=	pyflakes-0.5.0
+DISTNAME=	pyflakes-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyflakes/
 
@@ -17,8 +15,8 @@ USE_LANGUAGES=	# none
 PYDISTUTILSPKG= yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-post-extract:
-	${MV} ${WRKSRC}/bin/pyflakes ${WRKSRC}/bin/pyflakes${PYVERSSUFFIX}
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/pyflakes ${DESTDIR}${PREFIX}/bin/pyflakes${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
