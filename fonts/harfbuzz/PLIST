@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/08/31 22:20:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/09/30 18:25:27 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 include/harfbuzz/hb-blob.h
@@ -23,6 +23,7 @@ lib/libharfbuzz.la
 ${PLIST.icu}lib/libharfbuzz-icu.la
 lib/pkgconfig/harfbuzz.pc
 ${PLIST.icu}lib/pkgconfig/harfbuzz-icu.pc
+share/gtk-doc/html/harfbuzz/annotation-glossary.html
 share/gtk-doc/html/harfbuzz/api-index-full.html
 share/gtk-doc/html/harfbuzz/ch01.html
 share/gtk-doc/html/harfbuzz/deprecated-api-index.html
