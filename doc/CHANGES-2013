@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3606 2013/09/30 16:53:42 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3607 2013/09/30 16:59:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5072,3 +5072,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/autoconf to 2.69nb3 [wiz 2013-09-30]
 	Removed x11/xf86-video-cyrix [wiz 2013-09-30]
 	Removed x11/xf86-video-imstt [wiz 2013-09-30]
+	Removed x11/xf86-video-nsc [wiz 2013-09-30]

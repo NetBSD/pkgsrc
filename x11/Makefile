@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.711 2013/09/30 16:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.712 2013/09/30 16:59:10 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -521,7 +521,6 @@ SUBDIR+=	xf86-video-mach64
 SUBDIR+=	xf86-video-mga
 SUBDIR+=	xf86-video-neomagic
 SUBDIR+=	xf86-video-newport
-SUBDIR+=	xf86-video-nsc
 SUBDIR+=	xf86-video-nv
 SUBDIR+=	xf86-video-nvxbox
 SUBDIR+=	xf86-video-openchrome
