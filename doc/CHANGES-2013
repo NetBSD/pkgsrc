@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3611 2013/09/30 17:20:27 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3612 2013/09/30 17:21:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5077,3 +5077,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed x11/xf86-video-radeonhd successor x11/xf86-video-ati [wiz 2013-09-30]
 	Added security/py-Kerberos version 1.1 [wiz 2013-09-30]
 	Added devel/py-cffi version 0.7.2 [wiz 2013-09-30]
+	Added devel/py-cparser version 2.10 [wiz 2013-09-30]
