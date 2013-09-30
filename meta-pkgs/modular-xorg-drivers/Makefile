@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/09/10 08:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2013/09/30 17:02:37 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
@@ -34,27 +34,19 @@ DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 # chips deprecated in Xorg 7.7
 #DEPENDS+=	xf86-video-chips-[0-9]*:../../x11/xf86-video-chips
 DEPENDS+=	xf86-video-cirrus-[0-9]*:../../x11/xf86-video-cirrus
-# cyrix deprecated in Xorg 7.4
-#DEPENDS+=	xf86-video-cyrix-[0-9]*:../../x11/xf86-video-cyrix
 DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-dummy
 DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
 DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
-# imstt deprecated in Xorg 7.4
-#DEPENDS+=	xf86-video-imstt-[0-9]*:../../x11/xf86-video-imstt
 DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
 DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 DEPENDS+=	xf86-video-newport-[0-9]*:../../x11/xf86-video-newport
-# nsc deprecated in Xorg 7.4
-#DEPENDS+=	xf86-video-nsc-[0-9]*:../../x11/xf86-video-nsc
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
 DEPENDS+=       xf86-video-openchrome-[0-9]*:../../x11/xf86-video-openchrome
 DEPENDS+=	xf86-video-r128-[0-9]*:../../x11/xf86-video-r128
-# radeonhd is superceded by ati
-#DEPENDS+=	xf86-video-radeonhd-[0-9]*:../../x11/xf86-video-radeonhd
 DEPENDS+=	xf86-video-rendition-[0-9]*:../../x11/xf86-video-rendition
 DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
 DEPENDS+=	xf86-video-s3virge-[0-9]*:../../x11/xf86-video-s3virge
@@ -69,8 +61,6 @@ DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
 DEPENDS+=	xf86-video-trident-[0-9]*:../../x11/xf86-video-trident
 DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
 DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
-# vga deprecated in Xorg 7.4; use vesa instead
-#DEPENDS+=	xf86-video-vga-[0-9]*:../../x11/xf86-video-vga
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
 .endif
