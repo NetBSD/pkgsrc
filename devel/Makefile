@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1778 2013/09/19 05:19:08 obache Exp $
+# $NetBSD: Makefile,v 1.1779 2013/09/30 17:20:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1382,6 +1382,7 @@ SUBDIR+=	py-babel
 SUBDIR+=	py-blinker
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-slave
+SUBDIR+=	py-cffi
 SUBDIR+=	py-checker
 SUBDIR+=	py-cheetah
 SUBDIR+=	py-compizconfig
