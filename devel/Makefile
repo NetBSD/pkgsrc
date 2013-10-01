@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1782 2013/10/01 10:31:10 obache Exp $
+# $NetBSD: Makefile,v 1.1783 2013/10/01 10:41:16 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1599,6 +1599,7 @@ SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-termcolor
 SUBDIR+=	ruby-test-spec
 SUBDIR+=	ruby-test-unit
+SUBDIR+=	ruby-test-unit-notify
 SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-thrift
 SUBDIR+=	ruby-thrift_client
