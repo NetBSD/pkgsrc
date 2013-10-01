@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/31 09:51:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/10/01 10:26:39 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -501,6 +501,7 @@ share/mysql/test/include/have_utf16.inc
 share/mysql/test/include/have_utf32.inc
 share/mysql/test/include/have_utf8.inc
 share/mysql/test/include/have_utf8mb4.inc
+share/mysql/test/include/have_valgrind.inc
 share/mysql/test/include/have_validate_password_plugin.inc
 share/mysql/test/include/ib_logfile_size_check.inc
 share/mysql/test/include/icp_tests.inc
