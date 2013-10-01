@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3634 2013/10/01 14:48:45 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.3635 2013/10/01 15:24:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5103,3 +5103,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql56-client to 5.6.14 [adam 2013-10-01]
 	Updated databases/mysql56-server to 5.6.14 [adam 2013-10-01]
 	Updated misc/stellarium to 0.12.4 [drochner 2013-10-01]
+	Updated sysutils/ruby-rb-appscript to 0.6.1nb1 [taca 2013-10-01]
