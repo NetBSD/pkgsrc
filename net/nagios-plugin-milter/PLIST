@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/01 03:37:15 manu Exp $
+libexec/nagios/check_milter
