@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2009/05/30 01:25:19 obache Exp $
+# $NetBSD: options.mk,v 1.2 2013/10/01 16:03:30 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmpc
-PKG_SUPPORTED_OPTIONS=	mac
+PKG_SUPPORTED_OPTIONS=	mac xspf
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,10 +17,10 @@ CONFIGURE_ARGS+=	--disable-macige
 
 ###
 ### libspiff support
-### XXX: code not support libspiff>=1.0.
-#.if !empty(PKG_OPTIONS:Mlibspiff)
-#.include "../../audio/libspiff/buildlink3.mk"
-#CONFIGURE_ARGS+=	--enable-libspiff
-#.else
-#CONFIGURE_ARGS+=	--disable-libspiff
-#.endif
+###
+.if !empty(PKG_OPTIONS:Mxspf)
+.include "../../audio/libxspf/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-libxspf
+.else
+CONFIGURE_ARGS+=	--disable-libxspf
+.endif

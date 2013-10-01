@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2013/09/02 19:50:47 adam Exp $
+# $NetBSD: Makefile,v 1.65 2013/10/01 16:03:30 drochner Exp $
 #
 
-DISTNAME=		gmpc-0.20.0
-PKGREVISION=		25
+DISTNAME=		gmpc-11.8.16
 CATEGORIES=		audio
-MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/0.20.0/ \
+MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/11.8/ \
 			${MASTER_SITE_SOURCEFORGE:=musicpd/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,19 +19,16 @@ REPLACE_SH=		remote/gmpc-remote-stream
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--enable-system-libsexy
-CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
+CONFIGURE_ARGS+=	--disable-libspiff
 
 BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.20.0
 .include "../../audio/libmpd/buildlink3.mk"
 .include "../../devel/gob2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
