@@ -1,0 +1,5 @@
+$NetBSD: DESCR,v 1.1 2013/10/01 03:37:15 manu Exp $
+
+This Nagios plugin monitors milter status by sending negociation probes
+to the milter's socket. It is currently limited to checking one UNIX
+socket at once.

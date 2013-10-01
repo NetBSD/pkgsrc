@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/10/01 03:37:15 manu Exp $
+
+SHA1 (check_milter-0.1.tgz) = f38b3add748f67740a0479b68ec78961d0afef85
+RMD160 (check_milter-0.1.tgz) = 41ded84d1cf89d478d6dfd3337dbd079251cb116
+Size (check_milter-0.1.tgz) = 1900 bytes
