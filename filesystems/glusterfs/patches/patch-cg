@@ -1,0 +1,24 @@
+$NetBSD: patch-cg,v 1.1 2013/10/01 00:30:26 manu Exp $
+
+--- xlators/cluster/afr/src/afr.c.orig	2013-09-30 16:51:57.000000000 +0200
++++ xlators/cluster/afr/src/afr.c	2013-09-30 17:23:03.000000000 +0200
+@@ -673,9 +675,19 @@
+           .description = "Enabling this option logs entry lock/unlocks"
+         },
+         { .key = {"eager-lock"},
+           .type = GF_OPTION_TYPE_BOOL,
++#ifdef __NetBSD__
++	/*
++	 * eager-locks are broken on NetBSD, and cause spurious
++	 * split brain with all NULL pending matrix, as described
++	 * in https://bugzilla.redhat.com/show_bug.cgi?id=1005526
++	 * We therefore disable them for now
++	 */
++          .default_value = "off",
++#else
+           .default_value = "on",
++#endif
+           .description = "Lock phase of a transaction has two sub-phases. "
+                          "First is an attempt to acquire locks in parallel by "
+                          "broadcasting non-blocking lock requests. If lock "
+                          "aquistion fails on any server, then the held locks "
