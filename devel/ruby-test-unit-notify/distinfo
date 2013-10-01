@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/10/01 10:40:27 obache Exp $
+
+SHA1 (test-unit-notify-1.0.1.gem) = 44bf2aba258724a481ec10e76087e8a1f3e90c6c
+RMD160 (test-unit-notify-1.0.1.gem) = a7b1b276dddc259944e2dadf4202bfb2af508483
+Size (test-unit-notify-1.0.1.gem) = 105472 bytes
