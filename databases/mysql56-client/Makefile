@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/08/31 02:09:25 taca Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/01 10:26:39 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	mysqc
 COMMENT=	MySQL 5, a free SQL database (client)
 
