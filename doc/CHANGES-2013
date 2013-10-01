@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3630 2013/10/01 11:02:32 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3631 2013/10/01 11:11:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5096,3 +5096,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/ruby-msgpack version 0.5.6 [obache 2013-10-01]
 	Added devel/ruby-test-unit-notify version 1.0.1 [obache 2013-10-01]
 	Updated www/p5-Mojolicious to 4.42 [wen 2013-10-01]
+	Updated www/p5-Dancer2 to 0.10 [wen 2013-10-01]
