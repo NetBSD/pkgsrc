@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.georeplication,v 1.5 2012/10/19 04:15:21 manu Exp $
+@comment $NetBSD: PLIST.georeplication,v 1.6 2013/10/01 00:30:26 manu Exp $
 libexec/glusterfs/python/syncdaemon/README.md
 libexec/glusterfs/python/syncdaemon/__init__.py
 libexec/glusterfs/python/syncdaemon/__init__.pyc
