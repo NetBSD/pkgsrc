@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/03/04 20:10:47 jakllsch Exp $
+$NetBSD: distinfo,v 1.4 2013/10/01 15:29:11 drochner Exp $
 
-SHA1 (libmpdclient-2.6.tar.bz2) = 00d88152c0e8599f56d01625da41b55d3a43c264
-RMD160 (libmpdclient-2.6.tar.bz2) = 83dc3a7f57cee7b463e2a1e96fe66b313d35e41f
-Size (libmpdclient-2.6.tar.bz2) = 288343 bytes
+SHA1 (libmpdclient-2.8.tar.bz2) = 7e23c760296fe47e9e4108a0eba6fef08cfe4db8
+RMD160 (libmpdclient-2.8.tar.bz2) = d16f343c53fb395c99b5482e4f3f9cd240556d5a
+Size (libmpdclient-2.8.tar.bz2) = 300714 bytes
 SHA1 (patch-src_resolver.c) = e6622391b2c844969cff2a0c927e3185a27bc81b
