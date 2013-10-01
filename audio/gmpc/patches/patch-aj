@@ -1,18 +1,17 @@
-$NetBSD: patch-aj,v 1.1 2010/09/24 06:28:46 obache Exp $
+$NetBSD: patch-aj,v 1.2 2013/10/01 16:03:30 drochner Exp $
 
 Vala is not required to build from released tarball.
 
---- configure.ac.orig	2010-03-22 03:18:47.000000000 +0000
+--- configure.ac.orig	2011-08-17 03:09:58.000000000 +0000
 +++ configure.ac
-@@ -366,11 +366,6 @@ fi
+@@ -357,10 +357,6 @@ fi
  
- AM_PROG_VALAC([0.7.10])
+ AM_PROG_VALAC([0.11.0])
  
 -if test x${VALAC} = x""; then
--    exit 0;
+-    exit 1;
 -fi
 -
--
- AC_ARG_ENABLE([shave],
-             [  --disable-shave			Use shave output cleaner when building.],
-               [ case "${enableval}" in
+ APPINDICATOR_REQUIRED=0.3
+ 
+ AC_ARG_ENABLE(appindicator,
