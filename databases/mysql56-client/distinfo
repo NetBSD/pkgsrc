@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/07/31 09:51:38 adam Exp $
+$NetBSD: distinfo,v 1.10 2013/10/01 10:26:39 adam Exp $
 
-SHA1 (mysql-5.6.13.tar.gz) = 06e1d856cfb1f98844ef92af47d4f4f7036ef294
-RMD160 (mysql-5.6.13.tar.gz) = 22411eda9da0d931a44ab0710ded76c065cd05e6
-Size (mysql-5.6.13.tar.gz) = 35951160 bytes
+SHA1 (mysql-5.6.14.tar.gz) = 7cf44fb2a7733b52559f66c00446122bc79321d2
+RMD160 (mysql-5.6.14.tar.gz) = e1827858c60d674ac1ddeb4f71e689d49855eec9
+Size (mysql-5.6.14.tar.gz) = 36005278 bytes
 SHA1 (patch-CMakeLists.txt) = 1889afcd79a271d3f9ac0e234c449ef6aa8ca818
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
@@ -93,7 +93,7 @@ SHA1 (patch-sql_sql__update.cc) = 9a56187727fd1538b059e2d87ca0ec15ebf3e0ff
 SHA1 (patch-sql_sql_string.h) = 1ce4d4db59310ea45e384f34e33c0d61935059bf
 SHA1 (patch-sql_sys__vars.cc) = f122050ef87e673763db4fa64202139834400d2c
 SHA1 (patch-sql_table.cc) = ec9bb0891319918c306b0349fe43647e979bec4c
-SHA1 (patch-sql_transaction.cc) = 76316a7f0e7a81f47d194a0a1693b07873922969
+SHA1 (patch-sql_transaction.cc) = 34823a32f42472cf46df10e04294cd907170b41e
 SHA1 (patch-sql_tztime.cc) = b17a31afe95cc220b57906d263c5783793c169f4
 SHA1 (patch-sql_unireg.cc) = 0d94b247c36838abe5cb683782dd16c05b322f32
 SHA1 (patch-storage_federated_ha__federated.cc) = 17e575d4382a6d4c9005be77e7b4254380226e7c
