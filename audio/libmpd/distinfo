@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2012/03/04 20:10:47 jakllsch Exp $
+$NetBSD: distinfo,v 1.9 2013/10/01 16:07:02 drochner Exp $
 
-SHA1 (libmpd-0.20.0.tar.gz) = cb7c9b5dff0e7f560a75d1904a97f316347e7d7b
-RMD160 (libmpd-0.20.0.tar.gz) = d4462aa0fdc01f985f35f7eeaec4b2173b933a91
-Size (libmpd-0.20.0.tar.gz) = 363996 bytes
+SHA1 (libmpd-11.8.17.tar.gz) = df129f15061662a6fec1b2ce19f9dbc8b7a7d1ba
+RMD160 (libmpd-11.8.17.tar.gz) = 41abd2b931ce8dc73da7cdee794014c5b9cae6b6
+Size (libmpd-11.8.17.tar.gz) = 365015 bytes
 SHA1 (patch-src_libmpdclient.c) = 89071667f47ddd6003c6fbc35611b2f9f588b236
