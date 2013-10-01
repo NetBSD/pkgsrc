@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3628 2013/10/01 10:30:19 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3629 2013/10/01 10:40:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5094,3 +5094,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated filesystems/glusterfs to 3.4.1 [manu 2013-10-01]
 	Added net/nagios-plugin-milter version 0.1 [manu 2013-10-01]
 	Added devel/ruby-msgpack version 0.5.6 [obache 2013-10-01]
+	Added devel/ruby-test-unit-notify version 1.0.1 [obache 2013-10-01]
