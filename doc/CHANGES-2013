@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3626 2013/10/01 03:39:00 manu Exp $
+$NetBSD: CHANGES-2013,v 1.3627 2013/10/01 09:04:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5092,4 +5092,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql55-client to 5.5.34 [adam 2013-09-30]
 	Updated databases/mysql55-server to 5.5.34 [adam 2013-09-30]
 	Updated filesystems/glusterfs to 3.4.1 [manu 2013-10-01]
-	Added net/nagios-plugin-milter 0.1 [manu 2013-10-01]
+	Added net/nagios-plugin-milter version 0.1 [manu 2013-10-01]
