@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3624 2013/09/30 21:33:36 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3625 2013/10/01 00:32:27 manu Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5091,3 +5091,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/cclive version 0.7.16 [wiz 2013-09-30]
 	Updated databases/mysql55-client to 5.5.34 [adam 2013-09-30]
 	Updated databases/mysql55-server to 5.5.34 [adam 2013-09-30]
+	Updated filesystems/glusterfs to 3.4.1 [manu 2013-10-01]
