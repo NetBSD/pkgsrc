@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1781 2013/09/30 17:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.1782 2013/10/01 10:31:10 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1552,6 +1552,7 @@ SUBDIR+=	ruby-minitest
 SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mocha
 SUBDIR+=	ruby-mode
+SUBDIR+=	ruby-msgpack
 SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-needle
 SUBDIR+=	ruby-ole
