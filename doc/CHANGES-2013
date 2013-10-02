@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3658 2013/10/02 11:23:46 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3659 2013/10/02 11:29:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5132,3 +5132,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/gmpc-magnatune to 11.8.16 [wiz 2013-10-02]
 	Removed audio/gmpc-lastfm [wiz 2013-10-02]
 	Removed audio/gmpc-mdcover [wiz 2013-10-02]
+	Added audio/gmpc-jamendo version 11.8.16 [wiz 2013-10-02]
