@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/27 19:46:01 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/10/02 11:13:59 wiz Exp $
 
-SHA1 (gmpc-lyrics-0.20.0.tar.gz) = 292a4c608f6e83a88f27622b7ff523e6add1e5b3
-RMD160 (gmpc-lyrics-0.20.0.tar.gz) = 35106a15e4f2631932e1b81b88d0dd731be23e92
-Size (gmpc-lyrics-0.20.0.tar.gz) = 306141 bytes
+SHA1 (gmpc-lyrics-11.8.16.tar.gz) = d121251e820a173d29793461ba04d1725581c395
+RMD160 (gmpc-lyrics-11.8.16.tar.gz) = c56f39306d0c2cdb20271172ae2c51299e36a3fe
+Size (gmpc-lyrics-11.8.16.tar.gz) = 306510 bytes
