@@ -1,0 +1,10 @@
+The GNOME Music Player Client is a GTK+ client for remote access,
+control and playlist management of the Music Player Daemon featuring
+ID3 Support and a tray icon for your notification area.
+
+The Libnotify plugin is a misc plugin for gmpc. The plugin uses
+libnotify to send messages to the notification-daemon on song
+change. It will show the song title, artist, album (date) and genre.
+It will also display the album cover if available.
+
+It can act as a replacement for the built-in notification.
