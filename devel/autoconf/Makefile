@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2013/09/30 15:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2013/10/02 07:25:56 wiz Exp $
+#
+# When updating this package, please update mk/gnu-config/config.guess,
+# mk/gnu-config/config.sub, and mk/gnu-config/missing as well.
 
 DISTNAME=		autoconf-2.69
 PKGREVISION=		3
