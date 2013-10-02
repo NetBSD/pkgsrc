@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/09/02 19:50:53 adam Exp $
-#
+# $NetBSD: Makefile,v 1.19 2013/10/02 11:13:59 wiz Exp $
 
-DISTNAME=	gmpc-lyrics-0.20.0
-PKGREVISION=	14
+DISTNAME=	gmpc-lyrics-11.8.16
 CATEGORIES=	audio
-MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/0.20.0/
+MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/11.8/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmpc.wikia.com/wiki/Lyrics
