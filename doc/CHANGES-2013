@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3644 2013/10/02 07:33:37 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3645 2013/10/02 07:37:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5117,3 +5117,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/scala to 2.10.3 [yyamano 2013-10-02]
 	Updated devel/p5-Mouse to 1.12 [wen 2013-10-02]
 	Updated devel/p5-Role-Tiny to 1.003002 [wen 2013-10-02]
+	Updated devel/p5-Moo to 1.003001 [wen 2013-10-02]
