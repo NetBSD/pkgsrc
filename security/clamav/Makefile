@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/04/23 18:27:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2013/10/02 18:30:13 adam Exp $
 
-DISTNAME=	clamav-0.97.8
+DISTNAME=	clamav-0.98
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -17,8 +17,8 @@ SET_LIBDIR=		yes
 CONFIGURE_ARGS+=	--disable-clamav
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-dbdir=${CLAMAV_DBDIR}
-CONFIGURE_ARGS+=	--with-user=${CLAMAV_USER}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
+CONFIGURE_ARGS+=	--with-user=${CLAMAV_USER}
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 # bomb the build
 CONFIGURE_ARGS+=	--disable-zlib-vcheck
 
-CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/*
+CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,13 +55,18 @@ FILES_SUBST+=	CLAMAV_DBDIR=${CLAMAV_DBDIR}
 OWN_DIRS_PERMS=		${CLAMAV_DBDIR} ${CLAMAV_USER} ${CLAMAV_GROUP} 0775
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
-.for i in clamd.conf freshclam.conf
+.for i in clamav-milter.conf clamd.conf freshclam.conf
 CONF_FILES+=		${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CFGINST=${EGDIR} DBINST=${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "options.mk"
+
+post-install:
+.for i in clamav-milter.conf clamd.conf freshclam.conf
+	${INSTALL_DATA} ${WRKSRC}/etc/${i}.sample ${DESTDIR}${EGDIR}/${i}
+.endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
