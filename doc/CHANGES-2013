@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3640 2013/10/02 02:37:40 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3641 2013/10/02 02:45:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5113,3 +5113,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-Time-Progress to 1.8 [wen 2013-10-02]
 	Updated time/p5-Time-Piece to 1.23 [wen 2013-10-02]
 	Updated time/p5-Time-Local to 1.2300 [wen 2013-10-02]
+	Updated time/p5-Time-HiRes to 1.9726 [wen 2013-10-02]
