@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3654 2013/10/02 11:11:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3655 2013/10/02 11:14:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/p5-Sereal-Encoder to 0.37 [wiz 2013-10-02]
 	Updated converters/p5-Unicode-Collate to 0.99 [wiz 2013-10-02]
 	Updated audio/gmpc-albumview to 11.8.16 [wiz 2013-10-02]
+	Updated audio/gmpc-lyrics to 11.8.16 [wiz 2013-10-02]
