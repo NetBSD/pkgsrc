@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/15 21:24:53 joerg Exp $
+$NetBSD: distinfo,v 1.2 2013/10/02 11:19:08 wiz Exp $
 
-SHA1 (gmpc-magnatune-0.20.0.tar.gz) = f0363aab8f8c18a741da4e009ed880125be86a1c
-RMD160 (gmpc-magnatune-0.20.0.tar.gz) = 5d10ff3423eb16caccb6b561a273dc7a2dc94675
-Size (gmpc-magnatune-0.20.0.tar.gz) = 318606 bytes
+SHA1 (gmpc-magnatune-11.8.16.tar.gz) = 77df7b82fb8aa939a61b7b4d5a40d8a6c24d9e8f
+RMD160 (gmpc-magnatune-11.8.16.tar.gz) = 685bd8ef6168483aa11dda6fa84ab55afc585012
+Size (gmpc-magnatune-11.8.16.tar.gz) = 316305 bytes
