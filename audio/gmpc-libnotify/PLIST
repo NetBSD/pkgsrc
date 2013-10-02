@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/02 11:33:34 wiz Exp $
+lib/gmpc/plugins/libnotifyplugin.la
