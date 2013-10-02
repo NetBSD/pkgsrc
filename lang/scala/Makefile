@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/07/05 14:40:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2013/10/02 06:59:08 yyamano Exp $
 
-DISTNAME=	scala-2.10.2
+DISTNAME=	scala-2.10.3
 CATEGORIES=	lang
-MASTER_SITES=	http://www.scala-lang.org/downloads/distrib/files/
+MASTER_SITES=	http://www.scala-lang.org/files/archive/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	yyamano@NetBSD.org
