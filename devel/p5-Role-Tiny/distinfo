@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/07/27 02:01:06 wen Exp $
+$NetBSD: distinfo,v 1.5 2013/10/02 07:32:27 wen Exp $
 
-SHA1 (Role-Tiny-1.003001.tar.gz) = 65103b26d4f14e7e480933c43f764be715be8679
-RMD160 (Role-Tiny-1.003001.tar.gz) = ce3dfb495eae857800c65444ab47fefb684ad593
-Size (Role-Tiny-1.003001.tar.gz) = 24815 bytes
+SHA1 (Role-Tiny-1.003002.tar.gz) = c42d768379da1455591508247cae7367b9178b49
+RMD160 (Role-Tiny-1.003002.tar.gz) = e97c7d638bab63374fed1d6c5dfde97b68d41222
+Size (Role-Tiny-1.003002.tar.gz) = 25518 bytes
