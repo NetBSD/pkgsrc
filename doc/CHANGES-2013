@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3651 2013/10/02 10:57:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3652 2013/10/02 10:58:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5124,3 +5124,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/p5-Convert-BinHex to 1.123 [wiz 2013-10-02]
 	Updated converters/p5-Convert-TNEF to 0.18 [wiz 2013-10-02]
 	Updated converters/p5-Sereal-Decoder to 0.37 [wiz 2013-10-02]
+	Updated converters/p5-Sereal-Encoder to 0.37 [wiz 2013-10-02]
