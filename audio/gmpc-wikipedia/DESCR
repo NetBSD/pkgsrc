@@ -1,0 +1,8 @@
+The GNOME Music Player Client is a GTK+ client for remote access,
+control and playlist management of the Music Player Daemon featuring
+ID3 Support and a tray icon for your notification area.
+
+This package contains plugin that shows the Wikipedia page of the
+currently playing artist.
+
+The information is shown in a new tab of the player.
