@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2013/05/31 12:41:43 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2013/10/02 18:06:19 adam Exp $
 
-DISTNAME=	rsync-3.0.9
-PKGREVISION=	2
+DISTNAME=	rsync-3.1.0
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		http://rsync.samba.org/ftp/rsync/old-versions/  \
@@ -17,10 +16,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/doc/rsync
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl
-CONFIGURE_ARGS+=	--with-included-popt \
-			--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-included-popt
+CONFIGURE_ARGS+=	--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
 TEST_TARGET=		test
 
 PKG_SYSCONFSUBDIR=	rsync
@@ -37,7 +36,7 @@ SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/tech_report.tex \
-	  ${DESTDIR}${PREFIX}/share/doc/rsync
+		${DESTDIR}${PREFIX}/share/doc/rsync
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
