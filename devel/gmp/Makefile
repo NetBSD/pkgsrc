@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.70 2013/05/25 13:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2013/10/02 15:10:55 adam Exp $
 
-DISTNAME=	gmp-5.1.2
+DISTNAME=	gmp-5.1.3
 CATEGORIES=	devel math
 MASTER_SITES=	ftp://ftp.gmplib.org/pub/${DISTNAME}/
 # Use .tar.bz2 distfile so that no extra dependency on archivers/xz
 # is needed when building lang/gcc* with option gcc-inplace-math.
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmplib.org/
