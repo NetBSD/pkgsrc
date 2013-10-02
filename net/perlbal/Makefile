@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/02 00:13:10 mspo Exp $
 #
 
-DISTNAME=	Perlbal-1.79
+DISTNAME=	Perlbal-1.80
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DO/DORMANDO/
+USE_TOOLS+= perl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://danga.com/perlbal/
 COMMENT=	Very configurable load balancer in perl
 LICENSE=	${PERL5_LICENSE}
+REPLACE_PERL+= lib/Perlbal.pm
+REPLACE_PERL+= lib/Perlbal/*.pm
+REPLACE_PERL+= lib/Perlbal/Plugin/*.pm
+REPLACE_PERL+= lib/Perlbal/Test/*.pm
 
 DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-IO-AIO>=0:../../devel/p5-IO-AIO
