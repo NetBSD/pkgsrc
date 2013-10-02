@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2013/10/02 11:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.493 2013/10/02 11:43:42 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -128,6 +128,7 @@ SUBDIR+=	gkrellm-volume
 SUBDIR+=	glurp
 SUBDIR+=	gmp3info
 SUBDIR+=	gmpc
+SUBDIR+=	gmpc-alarm
 SUBDIR+=	gmpc-albumview
 SUBDIR+=	gmpc-jamendo
 SUBDIR+=	gmpc-libnotify
