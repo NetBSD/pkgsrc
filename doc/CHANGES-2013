@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3665 2013/10/02 14:39:10 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3666 2013/10/02 18:07:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5140,3 +5140,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/sox to 14.4.1 [drochner 2013-10-02]
 	Updated devel/p5-MooseX-Declare to 0.37 [wen 2013-10-02]
 	Updated devel/p5-MooseX-Getopt to 0.58 [wen 2013-10-02]
+	Updated devel/gmp to 5.1.3 [adam 2013-10-02]
+	Updated net/rsync to 3.1.0 [adam 2013-10-02]
