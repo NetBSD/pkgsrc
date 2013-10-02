@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/09/05 14:46:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/10/02 09:58:21 fhajny Exp $
 bin/node
 bin/npm
 lib/dtrace/node.d
@@ -506,7 +506,9 @@ lib/node_modules/npm/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/inherits/LICENSE
 lib/node_modules/npm/node_modules/inherits/README.md
 lib/node_modules/npm/node_modules/inherits/inherits.js
+lib/node_modules/npm/node_modules/inherits/inherits_browser.js
 lib/node_modules/npm/node_modules/inherits/package.json
+lib/node_modules/npm/node_modules/inherits/test.js
 lib/node_modules/npm/node_modules/ini/LICENSE
 lib/node_modules/npm/node_modules/ini/README.md
 lib/node_modules/npm/node_modules/ini/ini.js
@@ -534,9 +536,9 @@ lib/node_modules/npm/node_modules/lru-cache/.npmignore
 lib/node_modules/npm/node_modules/lru-cache/AUTHORS
 lib/node_modules/npm/node_modules/lru-cache/LICENSE
 lib/node_modules/npm/node_modules/lru-cache/README.md
+lib/node_modules/npm/node_modules/lru-cache/bench.js
 lib/node_modules/npm/node_modules/lru-cache/lib/lru-cache.js
 lib/node_modules/npm/node_modules/lru-cache/package.json
-lib/node_modules/npm/node_modules/lru-cache/s.js
 lib/node_modules/npm/node_modules/minimatch/LICENSE
 lib/node_modules/npm/node_modules/minimatch/README.md
 lib/node_modules/npm/node_modules/minimatch/minimatch.js
@@ -714,13 +716,6 @@ lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-packa
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/typos.json
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/.npmignore
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/History.md
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/Makefile
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/Readme.md
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/index.js
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/package.json
-lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/node_modules/github-url-from-git/test.js
 lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/package.json
 lib/node_modules/npm/node_modules/read-package-json/package.json
 lib/node_modules/npm/node_modules/read-package-json/read-json.js
@@ -739,6 +734,9 @@ lib/node_modules/npm/node_modules/request/.npmignore
 lib/node_modules/npm/node_modules/request/LICENSE
 lib/node_modules/npm/node_modules/request/README.md
 lib/node_modules/npm/node_modules/request/index.js
+lib/node_modules/npm/node_modules/request/lib/copy.js
+lib/node_modules/npm/node_modules/request/lib/debug.js
+lib/node_modules/npm/node_modules/request/lib/getSafe.js
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign/README.md
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign/index.js
@@ -915,6 +913,7 @@ lib/node_modules/npm/node_modules/request/node_modules/node-uuid/benchmark/bench
 lib/node_modules/npm/node_modules/request/node_modules/node-uuid/benchmark/bench.sh
 lib/node_modules/npm/node_modules/request/node_modules/node-uuid/benchmark/benchmark-native.c
 lib/node_modules/npm/node_modules/request/node_modules/node-uuid/benchmark/benchmark.js
+lib/node_modules/npm/node_modules/request/node_modules/node-uuid/component.json
 lib/node_modules/npm/node_modules/request/node_modules/node-uuid/package.json
 lib/node_modules/npm/node_modules/request/node_modules/node-uuid/uuid.js
 lib/node_modules/npm/node_modules/request/node_modules/oauth-sign/LICENSE
@@ -932,6 +931,7 @@ lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/README.md
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js
 lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/package.json
 lib/node_modules/npm/node_modules/request/package.json
+lib/node_modules/npm/node_modules/request/request.js
 lib/node_modules/npm/node_modules/request/tests/googledoodle.jpg
 lib/node_modules/npm/node_modules/request/tests/run.js
 lib/node_modules/npm/node_modules/request/tests/server.js
@@ -966,6 +966,7 @@ lib/node_modules/npm/node_modules/request/tests/test-http-signature.js
 lib/node_modules/npm/node_modules/request/tests/test-httpModule.js
 lib/node_modules/npm/node_modules/request/tests/test-https-strict.js
 lib/node_modules/npm/node_modules/request/tests/test-https.js
+lib/node_modules/npm/node_modules/request/tests/test-isUrl.js
 lib/node_modules/npm/node_modules/request/tests/test-localAddress.js
 lib/node_modules/npm/node_modules/request/tests/test-oauth.js
 lib/node_modules/npm/node_modules/request/tests/test-onelineproxy.js
@@ -1021,6 +1022,7 @@ lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/duplex.js
 lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/examples/CAPSLOCKTYPER.JS
 lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/examples/typer-fsr.js
 lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/examples/typer.js
+lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/float.patch
 lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/fs.js
 lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_duplex.js
 lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib/_stream_passthrough.js
