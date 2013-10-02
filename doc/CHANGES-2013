@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3648 2013/10/02 10:53:36 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3649 2013/10/02 10:54:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-CheckDeps to 0.008 [wen 2013-10-02]
 	Updated lang/nodejs to 0.10.20 [fhajny 2013-10-02]
 	Updated archivers/p5-Compress-Bzip2 to 2.17 [wiz 2013-10-02]
+	Updated converters/p5-Convert-BinHex to 1.123 [wiz 2013-10-02]
