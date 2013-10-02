@@ -1,0 +1,6 @@
+The GNOME Music Player Client is a GTK+ client for remote access,
+control and playlist management of the Music Player Daemon featuring
+ID3 Support and a tray icon for your notification area.
+
+The Alarm Timer plugin turns your music player into an alarm, set
+the time in at which it must go off and the rest is done by gmpc.
