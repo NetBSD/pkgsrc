@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/31 02:45:46 mspo Exp $
+$NetBSD: distinfo,v 1.2 2013/10/02 00:13:10 mspo Exp $
 
-SHA1 (Perlbal-1.79.tar.gz) = 2fb7c62b856bf0e529569d3b535d15f0dc1647a0
-RMD160 (Perlbal-1.79.tar.gz) = 9d5b47ef19ac29aa1068f57b6344d790cd968bd4
-Size (Perlbal-1.79.tar.gz) = 194771 bytes
+SHA1 (Perlbal-1.80.tar.gz) = fa494ec29fd3507a481842e023c6c75085a5faa7
+RMD160 (Perlbal-1.80.tar.gz) = 3450b13b369432c87c419352498ffdcbecca692b
+Size (Perlbal-1.80.tar.gz) = 212701 bytes
