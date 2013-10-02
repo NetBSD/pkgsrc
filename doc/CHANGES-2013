@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3645 2013/10/02 07:37:07 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3646 2013/10/02 08:07:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5118,3 +5118,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Mouse to 1.12 [wen 2013-10-02]
 	Updated devel/p5-Role-Tiny to 1.003002 [wen 2013-10-02]
 	Updated devel/p5-Moo to 1.003001 [wen 2013-10-02]
+	Updated devel/p5-Test-CheckDeps to 0.008 [wen 2013-10-02]
