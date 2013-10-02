@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3662 2013/10/02 11:43:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3663 2013/10/02 14:22:16 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5136,3 +5136,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added audio/gmpc-libnotify version 11.8.16 [wiz 2013-10-02]
 	Added audio/gmpc-wikipedia version 11.8.16 [wiz 2013-10-02]
 	Added audio/gmpc-alarm version 11.8.16 [wiz 2013-10-02]
+	Updated audio/mpc to 0.23 [drochner 2013-10-02]
+	Updated audio/sox to 14.4.1 [drochner 2013-10-02]
