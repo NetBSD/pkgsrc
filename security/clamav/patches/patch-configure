@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2013/10/02 18:30:13 adam Exp $
+
+Don't harcode -rpath for zlib, or configure fails on systems without rpaths.
+
+--- configure.orig	2013-10-02 09:25:40.000000000 +0000
++++ configure
+@@ -15952,7 +15952,7 @@ $as_echo "$as_me: WARNING: ****** stabil
+     if test "$ZLIB_HOME" != "/usr"; then
+ 	CPPFLAGS="$CPPFLAGS -I$ZLIB_HOME/include"
+ 	save_LDFLAGS="$LDFLAGS"
+-	LDFLAGS="$LDFLAGS -Wl,-rpath=$ZLIB_HOME/lib"
++	LDFLAGS="$LDFLAGS"
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for inflateEnd in -lz" >&5
+ $as_echo_n "checking for inflateEnd in -lz... " >&6; }
+ if ${ac_cv_lib_z_inflateEnd+:} false; then :
+@@ -15990,7 +15990,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_z_inflateEnd" >&5
+ $as_echo "$ac_cv_lib_z_inflateEnd" >&6; }
+ if test "x$ac_cv_lib_z_inflateEnd" = xyes; then :
+-  LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -Wl,-rpath=$ZLIB_HOME/lib -lz"; FRESHCLAM_LIBS="$FRESHCLAM_LIBS -Wl,-rpath=$ZLIB_HOME/lib -lz"
++  LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lz"; FRESHCLAM_LIBS="$FRESHCLAM_LIBS -lz"
+ else
+   as_fn_error $? "Please install zlib and zlib-devel packages" "$LINENO" 5
+ fi
