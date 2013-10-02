@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2013/02/16 11:20:21 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2013/10/02 14:21:27 drochner Exp $
 
-DISTNAME=	sox-14.4.0
-PKGREVISION=	1
+DISTNAME=	sox-14.4.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/}
 
@@ -27,9 +26,6 @@ SUBST_CLASSES+=		gsm
 SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
 SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
 SUBST_STAGE.gsm=	pre-configure
-
-post-install:
-	${RMDIR} ${DESTDIR}${PREFIX}/lib/sox
 
 .include "options.mk"
 
