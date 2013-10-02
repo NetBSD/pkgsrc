@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2013/10/02 11:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.492 2013/10/02 11:38:23 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -135,6 +135,7 @@ SUBDIR+=	gmpc-lyrics
 SUBDIR+=	gmpc-lyricwiki
 SUBDIR+=	gmpc-magnatune
 SUBDIR+=	gmpc-tagedit
+SUBDIR+=	gmpc-wikipedia
 SUBDIR+=	gnome-audio
 SUBDIR+=	gnome-speech
 SUBDIR+=	gnome-speech-espeak
