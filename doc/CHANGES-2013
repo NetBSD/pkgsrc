@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3660 2013/10/02 11:33:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3661 2013/10/02 11:38:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5134,3 +5134,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed audio/gmpc-mdcover [wiz 2013-10-02]
 	Added audio/gmpc-jamendo version 11.8.16 [wiz 2013-10-02]
 	Added audio/gmpc-libnotify version 11.8.16 [wiz 2013-10-02]
+	Added audio/gmpc-wikipedia version 11.8.16 [wiz 2013-10-02]
