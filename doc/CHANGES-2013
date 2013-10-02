@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3649 2013/10/02 10:54:31 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3650 2013/10/02 10:55:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/nodejs to 0.10.20 [fhajny 2013-10-02]
 	Updated archivers/p5-Compress-Bzip2 to 2.17 [wiz 2013-10-02]
 	Updated converters/p5-Convert-BinHex to 1.123 [wiz 2013-10-02]
+	Updated converters/p5-Convert-TNEF to 0.18 [wiz 2013-10-02]
