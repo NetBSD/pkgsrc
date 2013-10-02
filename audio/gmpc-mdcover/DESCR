@@ -1,8 +1,0 @@
-Mdcover plugin is a for gmpc. It looks in the location where the
-music file is located to collect metadata. It looks for:
-
-    * Cover art
-    * Artist Art
-    * Biography
-    * Album information
-    * Lyrics
