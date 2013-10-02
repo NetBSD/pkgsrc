@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/27 16:12:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/10/02 11:22:41 wiz Exp $
 
-SHA1 (gmpc-tagedit-0.20.0.tar.gz) = e074c9efde0996e5864867277ea32224a580121e
-RMD160 (gmpc-tagedit-0.20.0.tar.gz) = c081cd04649b5a043a47b9e8f3461fcd7265ccb8
-Size (gmpc-tagedit-0.20.0.tar.gz) = 309837 bytes
+SHA1 (gmpc-tagedit-11.8.16.tar.gz) = a704e2ce6ab5b0faee6efdc892dc946ba077fa61
+RMD160 (gmpc-tagedit-11.8.16.tar.gz) = 1a40d20bb3c8710e1f0202f5df118490a890a3d1
+Size (gmpc-tagedit-11.8.16.tar.gz) = 311089 bytes
