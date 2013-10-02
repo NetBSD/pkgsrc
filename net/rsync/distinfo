@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2011/10/03 09:49:56 tron Exp $
+$NetBSD: distinfo,v 1.38 2013/10/02 18:06:19 adam Exp $
 
-SHA1 (rsync-3.0.9.tar.gz) = c64c8341984aea647506eb504496999fd968ddfc
-RMD160 (rsync-3.0.9.tar.gz) = e5ee8d786defb0d8f937c8d027466f418c63c97e
-Size (rsync-3.0.9.tar.gz) = 792725 bytes
-SHA1 (patch-ab) = f7895312568d1ff5ca7031cf9b1ddd2b6e0b02d8
+SHA1 (rsync-3.1.0.tar.gz) = eb58ab04bcb6293da76b83f58327c038b23fcba3
+RMD160 (rsync-3.1.0.tar.gz) = d072ab02c31468aa72270a4cf90b5865c5139e1b
+Size (rsync-3.1.0.tar.gz) = 883901 bytes
+SHA1 (patch-ab) = 98aa07a50314e3309b48f803d6febb1138eae1f2
