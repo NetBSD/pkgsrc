@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/30 17:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/02 11:44:42 wiz Exp $
 
 DISTNAME=	v0.7.2
 PROPERNAME=	${DISTNAME:S/v/xattr-/}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/xattr/xattr/
 COMMENT=	Python wrapper for extended filesystem attributes
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../nih/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../nih/py-cparser
+DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 
 DIST_SUBDIR=	xattr
 
