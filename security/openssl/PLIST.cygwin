@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.cygwin,v 1.1 2013/10/02 20:00:27 joerg Exp $
+bin/cygcrypto-1.0.0.dll
+bin/cygssl-1.0.0.dll
