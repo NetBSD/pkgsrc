@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.25 2013/02/06 21:40:34 jperkin Exp $
+$NetBSD: patch-af,v 1.26 2013/10/02 19:59:31 joerg Exp $
 
---- Makefile.org.orig	2012-04-22 13:25:19.000000000 +0000
+--- Makefile.org.orig	2013-02-11 15:26:04.000000000 +0000
 +++ Makefile.org
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
@@ -36,7 +36,13 @@ $NetBSD: patch-af,v 1.25 2013/02/06 21:40:34 jperkin Exp $
  
  install_sw:
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
-@@ -648,35 +650,53 @@ install_docs:
+@@ -642,41 +644,56 @@ install_docs:
+ 	@pod2man="`cd ./util; ./pod2mantest $(PERL)`"; \
+ 	here="`pwd`"; \
+ 	filecase=; \
+-	if [ "$(PLATFORM)" = "DJGPP" -o "$(PLATFORM)" = "Cygwin" -o "$(PLATFORM)" = "mingw" ]; then \
+-		filecase=-i; \
+-	fi; \
  	set -e; for i in doc/apps/*.pod; do \
  		fn=`basename $$i .pod`; \
  		sec=`$(PERL) util/extract-section.pl 1 < $$i`; \
