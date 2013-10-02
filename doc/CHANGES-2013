@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3636 2013/10/01 17:56:58 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.3637 2013/10/02 00:13:26 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/gmpc to 11.8.16 [drochner 2013-10-01]
 	Updated audio/libmpd to 11.8.17 [drochner 2013-10-01]
 	Updated audio/ncmpc to 0.21 [drochner 2013-10-01]
+	Updated net/perlbal to 1.80nb1 [mspo 2013-10-02]
