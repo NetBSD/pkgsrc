@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2013/10/02 10:55:18 wiz Exp $
 
-SHA1 (Convert-TNEF-0.17.tar.gz) = c88cbda33e2bb5b12b36d7e8a1824dbad4080d30
-RMD160 (Convert-TNEF-0.17.tar.gz) = 4f0f0b15f2784c46fda28b49f2a7c6d2fffe427b
-Size (Convert-TNEF-0.17.tar.gz) = 12173 bytes
+SHA1 (Convert-TNEF-0.18.tar.gz) = 4878ed8c62aaeb5ff8307875eea8475feb011928
+RMD160 (Convert-TNEF-0.18.tar.gz) = 12ab6e83a9f06b5313086e08893f6f02320d7712
+Size (Convert-TNEF-0.18.tar.gz) = 12533 bytes
