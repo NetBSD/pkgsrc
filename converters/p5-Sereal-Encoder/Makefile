@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/07/03 06:44:22 sno Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/02 10:58:19 wiz Exp $
 
-DISTNAME=	Sereal-Encoder-0.36
+DISTNAME=	Sereal-Encoder-0.37
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5 converters
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/Y/YV/YVES/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/S/SM/SMUELLER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Sereal-Encoder/
