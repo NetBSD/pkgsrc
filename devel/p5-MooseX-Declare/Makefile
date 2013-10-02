@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/02 14:26:03 wen Exp $
 #
 
-DISTNAME=	MooseX-Declare-0.35
+DISTNAME=	MooseX-Declare-0.37
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -21,12 +20,12 @@ DEPENDS+=	p5-MooseX-Types>=0.20:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean>=0.11:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-Test-CheckDeps>=0.007:../../devel/p5-Test-CheckDeps
 
 USE_LANGUAGES=	# empty
-PERL5_MODULE_TYPE=	Module::Install::Bundled
-PERL5_PACKLIST=	auto/MooseX/Declare/.packlist
+PERL5_MODULE_TYPE=	Module::Build::Tiny
+PERL5_PACKLIST=		auto/MooseX/Declare/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
