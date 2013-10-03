@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3671 2013/10/03 11:13:07 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3672 2013/10/03 13:18:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5147,3 +5147,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/libsodium to 0.4.3 [obache 2013-10-03]
 	Updated x11/xf86-video-r128 to 6.9.2 [wiz 2013-10-03]
 	Updated mail/fdm to 1.7 [obache 2013-10-03]
+	Updated devel/mercurial to 2.7.2 [wiz 2013-10-03]
