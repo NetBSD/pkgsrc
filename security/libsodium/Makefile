@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/07/11 08:22:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/03 08:24:59 obache Exp $
 #
 
-DISTNAME=	libsodium-0.4.2
+DISTNAME=	libsodium-0.4.3
 CATEGORIES=	security
 MASTER_SITES=	http://download.dnscrypt.org/libsodium/releases/
 
