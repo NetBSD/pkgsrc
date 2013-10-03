@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2013/10/03 11:15:39 drochner Exp $
+
+--- examples/read/read.cpp.orig	2009-03-11 15:29:44 +0200
++++ examples/read/read.cpp	2009-03-11 15:35:35 +0200
+@@ -56,6 +56,9 @@
+ #  define PORT_GETCWD _getcwd
+ # endif
+ #else
++extern "C" {
++#include <unistd.h>
++}
+ # define PORT_PATH_MAX PATH_MAX
+ # define DIR_SEPERATOR '/'
+ # define uriFilenameToUriString uriUnixFilenameToUriStringA
