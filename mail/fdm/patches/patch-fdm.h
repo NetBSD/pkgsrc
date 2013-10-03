@@ -1,8 +1,11 @@
-$NetBSD: patch-fdm.h,v 1.1 2012/08/23 18:04:12 marino Exp $
+$NetBSD: patch-fdm.h,v 1.2 2013/10/03 11:12:43 obache Exp $
 
---- fdm.h.orig	2012-08-23 17:13:57.000000000 +0000
+MAXNAMLEN is not POSIX. For systems that does not define it use NAME_MAX
+macro instead.
+
+--- fdm.h.orig	2011-10-10 13:36:29.000000000 +0000
 +++ fdm.h
-@@ -71,6 +71,10 @@
+@@ -76,6 +76,10 @@
  
  extern char	*__progname;
  
