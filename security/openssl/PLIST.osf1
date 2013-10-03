@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.osf1,v 1.1 2007/08/04 14:29:43 tnn Exp $
-lib/libcrypto.so
-lib/libssl.so
