@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/17 17:45:40 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/03 11:12:43 obache Exp $
 bin/fdm
 man/man1/fdm.1
 man/man5/fdm.conf.5
 share/doc/fdm/MANUAL
 share/examples/fdm/f-terbeck.conf
 share/examples/fdm/g-lando.conf
-share/examples/fdm/n-marriott-old.conf
 share/examples/fdm/n-marriott.conf
 share/examples/fdm/t-ulmer.conf
 share/examples/fdm/w-maier.conf
