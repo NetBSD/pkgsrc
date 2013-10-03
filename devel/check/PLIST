@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2012/12/09 15:09:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/10/03 14:48:07 taca Exp $
 include/check.h
+include/check_stdint.h
 info/check.info
 lib/libcheck.la
 lib/pkgconfig/check.pc
