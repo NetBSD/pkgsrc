@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/03 11:15:39 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.2 2013/10/03 12:19:57 wiz Exp $
 
 DISTNAME=	libxspf-1.2.0
 CATEGORIES=	audio
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libspiff.sourceforge.net/
 COMMENT=	XML Shareable Playlist Format (XSPF) library
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
