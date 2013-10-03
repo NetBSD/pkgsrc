@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2013/07/26 11:27:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.180 2013/10/03 11:15:48 joerg Exp $
 
 DISTNAME=	openssl-1.0.1e
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=	irix64-mips4-cc
 .    endif
 .  endif
 .elif ${OPSYS} == "OSF1"
-PLIST_OPSYS=		PLIST.osf1
+USE_PLIST_SHLIB=	no
 CONFIGURE_SCRIPT=	./Configure
 .  if !empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	tru64-alpha-gcc
@@ -112,7 +112,8 @@ CONFIGURE_ARGS+=	hpux-parisc-${CC}
 CONFIGURE_ARGS+=	hpux-ia64-${CC}
 .    endif
 .  endif
-
+.elif ${OPSYS} == "Cygwin"
+USE_PLIST_SHLIB=	no
 .endif
 
 .include "../../security/openssl/options.mk"
@@ -120,14 +121,10 @@ CONFIGURE_ARGS+=	hpux-ia64-${CC}
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
-PLIST_OPSYS?=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
-.if exists(${PLIST_OPSYS})
-PLIST_SHLIB=		${PLIST_OPSYS}
-.else
-PLIST_SHLIB=		${PKGDIR}/PLIST.shlib
+USE_PLIST_SHLIB?=	yes
+.if ${USE_PLIST_SHLIB} == "yes"
+PLIST_SRC+=		${PKGDIR}/PLIST.shlib
 .endif
-PLIST_SRC=		${PLIST_SHLIB}
-PLIST_SRC+=		${PKGDIR}/PLIST.common
 PLIST_SUBST+=		SHLIB_VERSION=${OPENSSL_VERS:C/[^0-9]*$//}
 PLIST_SUBST+=		SHLIB_MAJOR=${OPENSSL_VERS:C/\..*$//}
 
