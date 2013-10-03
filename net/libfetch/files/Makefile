@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/07/22 16:14:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2013/10/03 01:25:51 joerg Exp $
 
 LIB=		fetch
 SRCS=		fetch.c common.c ftp.c http.c file.c
@@ -32,11 +32,11 @@ CPPFLAGS+=	-DFTP_COMBINE_CWDS
 WARNS?=		4
 
 ftperr.h: ${.CURDIR}/ftp.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
-	${.CURDIR}/errlist.sh ftp_errlist FTP \
+	sh ${.CURDIR}/errlist.sh ftp_errlist FTP \
 	    ${.CURDIR}/ftp.errors > ${.TARGET}
 
 httperr.h: ${.CURDIR}/http.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
-	${.CURDIR}/errlist.sh http_errlist HTTP \
+	sh ${.CURDIR}/errlist.sh http_errlist HTTP \
 	    ${.CURDIR}/http.errors > ${.TARGET}
 
 .include <bsd.lib.mk>
