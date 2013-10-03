@@ -1,9 +1,9 @@
-$NetBSD: patch-ba,v 1.11 2013/04/20 08:59:29 obache Exp $
+$NetBSD: patch-ba,v 1.12 2013/10/03 14:41:00 prlw1 Exp $
 
 * http://bugzilla.gnome.org/show_bug.cgi?id=583330
 * http://bugzilla.gnome.org/show_bug.cgi?id=697365
 
---- gio/gunixmounts.c.orig	2013-04-15 21:22:13.000000000 +0000
+--- gio/gunixmounts.c.orig	2013-08-07 14:34:32.000000000 +0000
 +++ gio/gunixmounts.c
 @@ -155,6 +155,9 @@ struct _GUnixMountMonitor {
    GFileMonitor *fstab_monitor;
@@ -63,55 +63,63 @@ $NetBSD: patch-ba,v 1.11 2013/04/20 08:59:29 obache Exp $
      "/var",
      "/var/crash",
      "/var/local",
-@@ -602,7 +616,7 @@ get_mtab_monitor_file (void)
+@@ -602,9 +616,9 @@ get_mtab_monitor_file (void)
  static GList *
  _g_get_unix_mounts (void)
  {
 -#if defined(HAVE_GETVFSSTAT)
-+#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
++#if defined(USE_STATVFS)
    struct statvfs *mntent = NULL;
- #elif defined(HAVE_GETFSSTAT)
+-#elif defined(HAVE_GETFSSTAT)
++#elif defined(USE_STATFS)
    struct statfs *mntent = NULL;
-@@ -615,7 +629,7 @@ _g_get_unix_mounts (void)
+ #else
+   #error statfs juggling failed
+@@ -615,9 +629,9 @@ _g_get_unix_mounts (void)
    GList *return_list;
    
    /* Pass NOWAIT to avoid blocking trying to update NFS mounts. */
 -#if defined(HAVE_GETVFSSTAT)
-+#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
++#if defined(USE_STATVFS) && defined(HAVE_GETVFSSTAT)
    num_mounts = getvfsstat (NULL, 0, ST_NOWAIT);
- #elif defined(HAVE_GETFSSTAT)
+-#elif defined(HAVE_GETFSSTAT)
++#elif defined(USE_STATFS) && defined(HAVE_GETFSSTAT)
    num_mounts = getfsstat (NULL, 0, MNT_NOWAIT);
-@@ -625,7 +639,7 @@ _g_get_unix_mounts (void)
+ #endif
+   if (num_mounts == -1)
+@@ -625,9 +639,9 @@ _g_get_unix_mounts (void)
  
    bufsize = num_mounts * sizeof (*mntent);
    mntent = g_malloc (bufsize);
 -#if defined(HAVE_GETVFSSTAT)
-+#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
++#if defined(USE_STATVFS) && defined(HAVE_GETVFSSTAT)
    num_mounts = getvfsstat (mntent, bufsize, ST_NOWAIT);
- #elif defined(HAVE_GETFSSTAT)
+-#elif defined(HAVE_GETFSSTAT)
++#elif defined(USE_STATFS) && defined(HAVE_GETFSSTAT)
    num_mounts = getfsstat (mntent, bufsize, MNT_NOWAIT);
-@@ -641,9 +655,15 @@ _g_get_unix_mounts (void)
-       
+ #endif
+   if (num_mounts == -1)
+@@ -642,10 +656,13 @@ _g_get_unix_mounts (void)
        mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
        mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
-+#if defined(__digital__)
-+      mount_entry->filesystem_type = g_strdup ("unknown");
-+#else
        mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
 -#if defined(HAVE_GETVFSSTAT)
-+#endif
-+#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
++
++#if defined(USE_STATVFS)
        if (mntent[i].f_flag & ST_RDONLY)
-+#elif defined(__digital__)
-+      if (mntent[i].f_flags & M_RDONLY)
- #elif defined(HAVE_GETFSSTAT)
+-#elif defined(HAVE_GETFSSTAT)
++#elif defined(USE_STATFS)
        if (mntent[i].f_flags & MNT_RDONLY)
++#else
++      #error statfs juggling failed
  #endif
-@@ -774,9 +794,11 @@ _g_get_unix_mount_points (void)
+         mount_entry->is_read_only = TRUE;
+ 
+@@ -774,9 +791,11 @@ _g_get_unix_mount_points (void)
            (strcmp (mntent->mnt_dir, "none") == 0))
  	continue;
  
-+#if defined (HAVE_HASMNTOPT)
++#ifdef HAVE_HASMNTOPT
        /* We ignore bind fstab entries, as we ignore bind mounts anyway */
        if (hasmntopt (mntent, "bind"))
          continue;
@@ -119,7 +127,7 @@ $NetBSD: patch-ba,v 1.11 2013/04/20 08:59:29 obache Exp $
  
        mount_entry = g_new0 (GUnixMountPoint, 1);
        mount_entry->mount_path = g_strdup (mntent->mnt_dir);
-@@ -1126,6 +1148,10 @@ get_mounts_timestamp (void)
+@@ -1126,6 +1145,10 @@ get_mounts_timestamp (void)
        if (stat (monitor_file, &buf) == 0)
  	return (guint64)buf.st_mtime;
      }
@@ -130,7 +138,7 @@ $NetBSD: patch-ba,v 1.11 2013/04/20 08:59:29 obache Exp $
    return 0;
  }
  
-@@ -1271,6 +1297,13 @@ g_unix_mount_monitor_finalize (GObject *
+@@ -1271,6 +1294,13 @@ g_unix_mount_monitor_finalize (GObject *
        g_object_unref (monitor->mtab_monitor);
      }
  
@@ -144,7 +152,7 @@ $NetBSD: patch-ba,v 1.11 2013/04/20 08:59:29 obache Exp $
    the_mount_monitor = NULL;
  
    G_OBJECT_CLASS (g_unix_mount_monitor_parent_class)->finalize (object);
-@@ -1362,6 +1395,51 @@ proc_mounts_changed (GIOChannel   *chann
+@@ -1362,6 +1392,51 @@ proc_mounts_changed (GIOChannel   *chann
    return TRUE;
  }
  
@@ -196,7 +204,7 @@ $NetBSD: patch-ba,v 1.11 2013/04/20 08:59:29 obache Exp $
  static void
  g_unix_mount_monitor_init (GUnixMountMonitor *monitor)
  {
-@@ -1416,6 +1494,12 @@ g_unix_mount_monitor_init (GUnixMountMon
+@@ -1416,6 +1491,12 @@ g_unix_mount_monitor_init (GUnixMountMon
            g_signal_connect (monitor->mtab_monitor, "changed", (GCallback)mtab_file_changed, monitor);
          }
      }
