@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3674 2013/10/03 14:48:41 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3675 2013/10/03 19:24:21 gson Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5150,3 +5150,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mercurial to 2.7.2 [wiz 2013-10-03]
 	Updated graphics/librsvg to 2.36.4nb6 [tez 2013-10-03]
 	Updated devel/check to 0.9.10 [taca 2013-10-03]
+	Updated misc/py-anita to 1.31 [gson 2013-10-03]
