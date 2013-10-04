@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2011/03/21 13:45:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/10/04 21:51:57 wiz Exp $
 bin/7z
 bin/7za
+${PLIST.dll}lib/7z.so
 ${PLIST.dll}lib/7z/7z
 ${PLIST.dll}lib/7z/Codecs/Rar29.so
 man/man1/7z.1
