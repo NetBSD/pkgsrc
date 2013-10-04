@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2013/05/16 06:26:08 richard Exp $
-#
+# $NetBSD: Makefile,v 1.14 2013/10/04 20:54:17 wiz Exp $
 
-DISTNAME=	xf86-video-savage-2.3.6
+DISTNAME=	xf86-video-savage-2.3.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
