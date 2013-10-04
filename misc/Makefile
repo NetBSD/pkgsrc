@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.403 2013/09/15 17:14:46 taca Exp $
+# $NetBSD: Makefile,v 1.404 2013/10/04 14:46:41 ryoon Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -165,6 +165,7 @@ SUBDIR+=	libkvkontakte
 SUBDIR+=	libquantum
 SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice3-bin
+SUBDIR+=	libreoffice4
 SUBDIR+=	libreoffice4-bin
 SUBDIR+=	libutf
 SUBDIR+=	lile
