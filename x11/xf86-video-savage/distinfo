@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/05/16 06:26:08 richard Exp $
+$NetBSD: distinfo,v 1.7 2013/10/04 20:54:17 wiz Exp $
 
-SHA1 (xf86-video-savage-2.3.6.tar.bz2) = 459c5b7d1deb4dbcfb9ad6ecd5f360cf7d77a078
-RMD160 (xf86-video-savage-2.3.6.tar.bz2) = 99afa8bba8c52c9d5f5ee51461164ece28b1f780
-Size (xf86-video-savage-2.3.6.tar.bz2) = 403495 bytes
+SHA1 (xf86-video-savage-2.3.7.tar.bz2) = 9ce8474c7f1035d914ac2a77cd6d54b62d19260d
+RMD160 (xf86-video-savage-2.3.7.tar.bz2) = 79ef65340cd758168ac5f949dfaf9bbb37673634
+Size (xf86-video-savage-2.3.7.tar.bz2) = 395249 bytes
