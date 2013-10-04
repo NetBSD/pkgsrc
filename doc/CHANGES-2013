@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3683 2013/10/04 20:54:26 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3684 2013/10/04 20:58:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added misc/libreoffice4 version 4.1.1.2nb1 [ryoon 2013-10-04]
 	Updated lang/chicken to 4.8.0.5 [asau 2013-10-04]
 	Updated x11/xf86-video-savage to 2.3.7 [wiz 2013-10-04]
+	Updated multimedia/libmatroska to 1.4.1 [wiz 2013-10-04]
