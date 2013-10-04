@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/04 14:38:49 ryoon Exp $
+lib/java/hsqldb18/hsqldb.jar

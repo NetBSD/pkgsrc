@@ -1,0 +1,7 @@
+HSQLDB (HyperSQL DataBase) is the leading SQL relational database
+engine written in Java. It offers a small, fast multithreaded and
+transactional database engine with in-memory and disk-based tables
+and supports embedded and server modes.
+
+This package contains library file (hsqldb.jar) only, and it is
+old and should be used only for LibreOffice package.
