@@ -1,0 +1,13 @@
+$NetBSD: patch-tools_toolutil_Makefile.in,v 1.1 2013/10/04 18:26:29 joerg Exp $
+
+--- tools/toolutil/Makefile.in.orig	2013-10-03 16:26:46.529442600 +0000
++++ tools/toolutil/Makefile.in
+@@ -92,7 +92,7 @@ ifneq ($(ENABLE_STATIC),)
+ 	$(INSTALL-L) $(TARGET) $(DESTDIR)$(libdir)
+ endif
+ ifneq ($(ENABLE_SHARED),)
+-	$(INSTALL-L) $(FINAL_SO_TARGET) $(DESTDIR)$(libdir)
++	$(INSTALL-L) $(FINAL_SO_TARGET) $(DSO_LIBDIR)
+ ifneq ($(FINAL_SO_TARGET),$(SO_TARGET))
+ 	cd $(DESTDIR)$(libdir) && $(RM) $(notdir $(SO_TARGET)) && ln -s $(notdir $(FINAL_SO_TARGET)) $(notdir $(SO_TARGET))
+ ifneq ($(FINAL_SO_TARGET),$(MIDDLE_SO_TARGET))
