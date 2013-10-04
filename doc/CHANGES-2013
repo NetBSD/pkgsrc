@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3685 2013/10/04 21:02:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3686 2013/10/04 21:15:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5161,3 +5161,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-savage to 2.3.7 [wiz 2013-10-04]
 	Updated multimedia/libmatroska to 1.4.1 [wiz 2013-10-04]
 	Updated devel/m4 to 1.4.17 [wiz 2013-10-04]
+	Updated print/poppler to 0.24.2 [wiz 2013-10-04]
