@@ -1,0 +1,11 @@
+$NetBSD: patch-libguile_guile-snarf-docs.in,v 1.1 2013/10/04 18:35:22 joerg Exp $
+
+--- libguile/guile-snarf-docs.in.orig	2013-09-29 06:57:32.000000000 +0000
++++ libguile/guile-snarf-docs.in
+@@ -23,4 +23,5 @@ bindir=`dirname $0`
+ ## Let the user override the preprocessor autoconf found.
+ test -n "${CPP+set}" || CPP="@CPP@"
+ 
+-${CPP} -DSCM_MAGIC_SNARF_DOCS "$@"
++${CPP} -DSCM_MAGIC_SNARF_DOCS "$@" | grep -v '^#' | sed 's,\^ *\^ {,\
++&,g'
