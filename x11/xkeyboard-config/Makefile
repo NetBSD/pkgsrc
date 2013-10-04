@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2013/05/29 22:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/10/04 08:19:37 wiz Exp $
 
-DISTNAME=		xkeyboard-config-2.9
+DISTNAME=		xkeyboard-config-2.10.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.bz2
