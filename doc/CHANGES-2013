@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3675 2013/10/03 19:24:21 gson Exp $
+$NetBSD: CHANGES-2013,v 1.3676 2013/10/04 07:04:47 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5151,3 +5151,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/librsvg to 2.36.4nb6 [tez 2013-10-03]
 	Updated devel/check to 0.9.10 [taca 2013-10-03]
 	Updated misc/py-anita to 1.31 [gson 2013-10-03]
+	Added devel/gearmand version 1.0.6 [fhajny 2013-10-04]
