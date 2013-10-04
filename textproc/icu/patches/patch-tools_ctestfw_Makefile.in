@@ -1,0 +1,13 @@
+$NetBSD: patch-tools_ctestfw_Makefile.in,v 1.1 2013/10/04 18:26:29 joerg Exp $
+
+--- tools/ctestfw/Makefile.in.orig	2013-10-03 16:26:50.324900200 +0000
++++ tools/ctestfw/Makefile.in
+@@ -81,7 +81,7 @@ ifneq ($(ENABLE_STATIC),)
+ 	$(INSTALL-L) $(TARGET) $(DESTDIR)$(libdir)
+ endif
+ ifneq ($(ENABLE_SHARED),)
+-	$(INSTALL-L) $(FINAL_SO_TARGET) $(DESTDIR)$(libdir)
++	$(INSTALL-L) $(FINAL_SO_TARGET) $(DSO_LIBDIR)
+ ifneq ($(FINAL_SO_TARGET),$(SO_TARGET))
+ 	cd $(DESTDIR)$(libdir) && $(RM) $(notdir $(SO_TARGET)) && ln -s $(notdir $(FINAL_SO_TARGET)) $(notdir $(SO_TARGET))
+ ifneq ($(FINAL_SO_TARGET),$(MIDDLE_SO_TARGET))
