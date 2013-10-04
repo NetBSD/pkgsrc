@@ -1,0 +1,13 @@
+$NetBSD: patch-common_Makefile.in,v 1.1 2013/10/04 18:26:29 joerg Exp $
+
+--- common/Makefile.in.orig	2013-10-03 18:02:27.484530600 +0000
++++ common/Makefile.in
+@@ -146,7 +146,7 @@ ifneq ($(ENABLE_STATIC),)
+ 	$(INSTALL-L) $(TARGET) $(DESTDIR)$(libdir)
+ endif
+ ifneq ($(ENABLE_SHARED),)
+-	$(INSTALL-L) $(FINAL_SO_TARGET) $(DESTDIR)$(libdir)
++	$(INSTALL-L) $(FINAL_SO_TARGET) $(DSO_LIBDIR)
+ ifneq ($(FINAL_SO_TARGET),$(SO_TARGET))
+ 	cd $(DESTDIR)$(libdir) && $(RM) $(notdir $(SO_TARGET)) && ln -s $(notdir $(FINAL_SO_TARGET)) $(notdir $(SO_TARGET))
+ ifneq ($(FINAL_SO_TARGET),$(MIDDLE_SO_TARGET))

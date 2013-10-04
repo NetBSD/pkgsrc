@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.Cygwin,v 1.1 2013/10/04 18:26:29 joerg Exp $
+bin/cygicudata.dll
+bin/cygicui18n.dll
+bin/cygicuio.dll
+bin/cygicule.dll
+bin/cygiculx.dll
+bin/cygicutest.dll
+bin/cygicutu.dll
+bin/cygicuuc.dll
+lib/libicudata.dll.a
+lib/libicudatadll.a
+lib/libicui18n.dll.a
+lib/libicuio.dll.a
+lib/libicule.dll.a
+lib/libiculx.dll.a
+lib/libicutest.dll.a
+lib/libicutu.dll.a
+lib/libicuuc.dll.a
