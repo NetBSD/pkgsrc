@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3678 2013/10/04 10:46:37 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3679 2013/10/04 14:36:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/gearmand version 1.0.6 [fhajny 2013-10-04]
 	Updated x11/xkeyboard-config to 2.10.1 [wiz 2013-10-04]
 	Updated devel/ncurses to 5.9nb2 [jperkin 2013-10-04]
+	Updated fonts/harfbuzz to 0.9.21nb1 [ryoon 2013-10-04]
