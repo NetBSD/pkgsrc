@@ -1,7 +1,8 @@
-$NetBSD: patch-giscanner_scannerlexer.l,v 1.2 2013/05/05 09:20:44 drochner Exp $
+$NetBSD: patch-giscanner_scannerlexer.l,v 1.3 2013/10/04 15:36:30 jperkin Exp $
 
-Ignore __asm volatile as per PR pkg/46017
-https://bugzilla.gnome.org/show_bug.cgi?id=678794
+* Ignore __asm volatile as per PR pkg/46017
+  https://bugzilla.gnome.org/show_bug.cgi?id=678794
+* Support __inline__ for older OSX.
 
 --- giscanner/scannerlexer.l.orig	2012-12-18 16:27:16.000000000 +0000
 +++ giscanner/scannerlexer.l
@@ -14,7 +15,12 @@ https://bugzilla.gnome.org/show_bug.cgi?id=678794
  "__asm" 	        	        { if (!parse_ignored_macro()) REJECT; }
  "__asm__" 	        	        { if (!parse_ignored_macro()) REJECT; }
  "__attribute__" 		        { if (!parse_ignored_macro()) REJECT; }
-@@ -145,6 +147,8 @@ stringtext				([^\\\"])|(\\.)
+@@ -141,10 +143,13 @@ stringtext				([^\\\"])|(\\.)
+ "__const"                               { return CONST; }
+ "__extension__"                         { return EXTENSION; }
+ "__inline"				{ return INLINE; }
++"__inline__"				{ return INLINE; }
+ "__nonnull" 			        { if (!parse_ignored_macro()) REJECT; }
  "__signed__"				{ return SIGNED; }
  "__restrict"				{ return RESTRICT; }
  "__typeof"				{ if (!parse_ignored_macro()) REJECT; }
