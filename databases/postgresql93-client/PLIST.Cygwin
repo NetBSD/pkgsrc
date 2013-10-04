@@ -1,0 +1,5 @@
+@comment
+bin/cygecpg_compat-3.dll
+bin/cygecpg-6.dll
+bin/cygpgtypes-3.dll
+bin/cygpq-5.dll
