@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2013/08/31 22:20:24 adam Exp $
+# $NetBSD: options.mk,v 1.3 2013/10/04 14:34:53 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.harfbuzz
 PKG_SUPPORTED_OPTIONS+= icu
+PKG_SUGGESTED_OPTIONS=	icu
 
 .include "../../mk/bsd.options.mk"
 
