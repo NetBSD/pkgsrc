@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3676 2013/10/04 07:04:47 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3677 2013/10/04 08:19:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5152,3 +5152,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/check to 0.9.10 [taca 2013-10-03]
 	Updated misc/py-anita to 1.31 [gson 2013-10-03]
 	Added devel/gearmand version 1.0.6 [fhajny 2013-10-04]
+	Updated x11/xkeyboard-config to 2.10.1 [wiz 2013-10-04]
