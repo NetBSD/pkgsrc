@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2013/05/10 00:36:30 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.20 2013/10/04 10:46:25 jperkin Exp $
 #
 # used by devel/ncursesw/Makefile
 
@@ -33,6 +33,10 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-mixed-case
+.endif
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
