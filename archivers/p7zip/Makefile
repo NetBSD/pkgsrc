@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2012/09/11 19:46:59 asau Exp $
+# $NetBSD: Makefile,v 1.52 2013/10/04 21:51:57 wiz Exp $
 
 DISTNAME=	p7zip_9.20.1_src_all
 PKGNAME=	p7zip-9.20.1
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,10 +23,11 @@ PTHREAD_OPTS+=		require
 PLIST_VARS=		dll
 
 # compiles, but does not recognize any archives as supported
-DYNAMIC_7Z=		NO
+DYNAMIC_7Z=		YES
 .if !empty(DYNAMIC_7Z:MYES)
 BUILD_TARGET=		all2
 PLIST.dll=		yes
+CFLAGS+=		-fPIC
 .endif
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}
@@ -42,6 +44,11 @@ INSTALLATION_DIRS+=	share/doc/p7zip
 INSTALLATION_DIRS+=	share/doc/p7zip/commands
 INSTALLATION_DIRS+=	share/doc/p7zip/switches
 
+SUBST_CLASSES+=		lib
+SUBST_FILES.lib+=	CPP/7zip/UI/Common/LoadCodecs.cpp
+SUBST_SED.lib+=		-e "s,getenv(.P7ZIP_HOME_DIR.),\"${PREFIX}/lib\","
+SUBST_STAGE.lib=	post-patch
+
 .include "../../mk/endian.mk"
 
 .if !empty(MACHINE_ENDIAN:Mbig)
@@ -53,6 +60,7 @@ CFLAGS+=		-DLITTLE_ENDIAN
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7za ${DESTDIR}${PREFIX}/bin
 .if !empty(DYNAMIC_7Z:MYES)
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z.so ${DESTDIR}${PREFIX}/lib/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${DESTDIR}${PREFIX}/lib/7z
 	ln -f -s ${PREFIX}/lib/7z/7z ${DESTDIR}${PREFIX}/bin
 	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* \
