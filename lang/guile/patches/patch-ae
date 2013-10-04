@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.17 2013/10/04 18:35:22 joerg Exp $
+
 --- libguile/gc_os_dep.c.orig	2009-06-26 20:21:44.000000000 +0000
 +++ libguile/gc_os_dep.c
 @@ -132,7 +132,7 @@ typedef int GC_bool;
