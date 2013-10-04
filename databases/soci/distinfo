@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/09/11 12:22:33 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/10/04 18:32:07 joerg Exp $
 
 SHA1 (soci-3.2.2.tar.gz) = 0a63cdbe719793c37b328a95778451a550f22c0a
 RMD160 (soci-3.2.2.tar.gz) = d366c1773d23c551404a8e05791afc3a4b6acfdd
 Size (soci-3.2.2.tar.gz) = 354047 bytes
 SHA1 (patch-CMakeLists.txt) = 589fed2101a09637cb3f052bf7915dd2bccf0385
+SHA1 (patch-backends_postgresql_statement.cpp) = d8c9fc32b9866eb3756e7f6f684255840462ac56
+SHA1 (patch-cmake_SociConfig.cmake) = d9b7585b4fe82058f70928e4a57058fa03273385
