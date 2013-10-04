@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.13 2013/04/12 13:36:56 drochner Exp $
+$NetBSD: patch-ac,v 1.14 2013/10/04 20:58:44 wiz Exp $
 
---- make/linux/Makefile.orig	2013-03-21 12:11:24.000000000 +0000
+--- make/linux/Makefile.orig	2013-10-04 20:56:20.000000000 +0000
 +++ make/linux/Makefile
 @@ -16,16 +16,16 @@ prefix=/boot/home/config
  else
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.13 2013/04/12 13:36:56 drochner Exp $
  INSTALL_OPTS = -m 644
  INSTALL_OPTS_LIB = -m 644
  INSTALL_DIR_OPTS = -m 755
-@@ -53,7 +53,7 @@ MUX_LIBS=-lmatroska -lebml $(LIBICONV)
+@@ -63,7 +63,7 @@ MUX_LIBS=-lmatroska -lebml $(LIBICONV)
  
  # Names
  LIBRARY=libmatroska.a
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.13 2013/04/12 13:36:56 drochner Exp $
  LIBRARY_SO_VER=libmatroska.so.6
  
  # source-files
-@@ -92,16 +92,14 @@ lib:
+@@ -97,16 +97,14 @@ lib:
  	$(CXX) -c $(COMPILEFLAGS) -o $@ $<
  
  %.lo: %$(EXTENSION)
@@ -53,35 +53,13 @@ $NetBSD: patch-ac,v 1.13 2013/04/12 13:36:56 drochner Exp $
  
  clean:	cleantest
  	rm -f $(objects) $(objects_so)
-@@ -153,23 +151,22 @@ install: install_staticlib install_share
- endif
- 
- install_headers:
--	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(includedir)
-+	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(includedir)
- 	for i in $(INCLUDE_DIR)/*.h; do \
--		$(INSTALL) $(INSTALL_OPTS) $$i $(includedir) ; \
-+		$(INSTALL) $(INSTALL_OPTS) $$i $(DESTDIR)$(includedir) ; \
- 	done
--	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(includedir)/c
-+	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(includedir)/c
- 	for i in $(INCLUDE_DIR)/c/*.h; do \
--		$(INSTALL) $(INSTALL_OPTS) $$i $(includedir)/c ; \
-+		$(INSTALL) $(INSTALL_OPTS) $$i $(DESTDIR)$(includedir)/c ; \
- 	done
- 
- install_staticlib: $(LIBRARY)
--	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(libdir)
--	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY) $(libdir)
-+	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
-+	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY) $(DESTDIR)$(libdir)
+@@ -169,8 +167,7 @@ install_staticlib: $(LIBRARY)
  
  install_sharedlib: $(LIBRARY_SO)
--	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(libdir)
--	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(libdir)
--	ln -fs $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
-+	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
+ 	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
+-	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)
+-	ln -fs $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)/$(LIBRARY_SO)
++	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
  
  ifneq ($(wildcard .depend),)
  include .depend
