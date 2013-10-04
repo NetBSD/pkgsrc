@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12585 2013/10/04 21:02:22 wiz Exp $
+$NetBSD: TODO,v 1.12586 2013/10/04 21:11:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,6 +425,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.10.0
+	o cherokee-1.2.103 [pkg/48268]
 	o chktex-1.7.2
 	o chromium-0.9.15
 	o chromium-bsu-0.9.15.1
@@ -964,7 +965,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpm-5.3.6 [rpm5.org]
-	o rsync-3.1.0
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-2.0.0p0
@@ -986,7 +986,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sdcc-2.9.0
 	o seahorse-3.10.0
 	o seahorse-nautilus-3.10.0
-	o seamonkey-2.21
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
