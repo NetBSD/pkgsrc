@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2013/05/18 21:46:13 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.39 2013/10/04 21:17:27 wiz Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -83,12 +83,17 @@ share/gtk-doc/html/atk/atk.html
 share/gtk-doc/html/atk/home.png
 share/gtk-doc/html/atk/index.html
 share/gtk-doc/html/atk/index.sgml
+share/gtk-doc/html/atk/left-insensitive.png
 share/gtk-doc/html/atk/left.png
+share/gtk-doc/html/atk/right-insensitive.png
 share/gtk-doc/html/atk/right.png
 share/gtk-doc/html/atk/style.css
+share/gtk-doc/html/atk/up-insensitive.png
 share/gtk-doc/html/atk/up.png
+share/gtk-doc/html/atk/utilities.html
 share/locale/af/LC_MESSAGES/atk10.mo
 share/locale/am/LC_MESSAGES/atk10.mo
+share/locale/an/LC_MESSAGES/atk10.mo
 share/locale/ar/LC_MESSAGES/atk10.mo
 share/locale/as/LC_MESSAGES/atk10.mo
 share/locale/ast/LC_MESSAGES/atk10.mo
