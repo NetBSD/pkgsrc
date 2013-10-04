@@ -1,0 +1,42 @@
+$NetBSD: patch-configure,v 1.1 2013/10/04 07:03:37 fhajny Exp $
+
+Fix test operator.
+
+--- configure.orig	2013-05-09 10:16:19.000000000 +0000
++++ configure
+@@ -16062,7 +16062,7 @@ if test "x$ac_cv_prog_cc_c99" != xno; th
+ fi
+ 
+ 
+-if test "x${ac_cv_prog_cc_c99}" == "xno"; then :
++if test "x${ac_cv_prog_cc_c99}" = "xno"; then :
+   as_fn_error $? "No c99 compatible compiler found" "$LINENO" 5
+ fi
+ 
+@@ -17962,7 +17962,7 @@ fi
+ done
+ test -n "$CURL_CONFIG" || CURL_CONFIG="no"
+ 
+-    if test "$CURL_CONFIG" == "no"; then :
++    if test "$CURL_CONFIG" = "no"; then :
+ 
+       :
+ 
+@@ -17972,7 +17972,7 @@ $as_echo "#define HAVE_LIBCURL 0" >>conf
+ 
+ else
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
+ 
+@@ -17982,7 +17982,7 @@ else
+ 
+ fi
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
+ 
