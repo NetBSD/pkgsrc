@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2013/09/30 17:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.440 2013/10/04 14:40:42 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -36,6 +36,7 @@ SUBDIR+=	gramps3
 SUBDIR+=	gtkdbfeditor
 SUBDIR+=	gtksql
 SUBDIR+=	guile-pg
+SUBDIR+=	hsqldb18
 SUBDIR+=	idzebra
 SUBDIR+=	innotop
 SUBDIR+=	iodbc
