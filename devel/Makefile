@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1783 2013/10/01 10:41:16 obache Exp $
+# $NetBSD: Makefile,v 1.1784 2013/10/04 07:04:28 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -223,6 +223,7 @@ SUBDIR+=	gdb6
 SUBDIR+=	gdbus-codegen
 SUBDIR+=	gdl
 SUBDIR+=	geany
+SUBDIR+=	gearmand
 SUBDIR+=	generate
 SUBDIR+=	gentle
 SUBDIR+=	gettext
