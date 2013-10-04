@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.2 2013/09/16 15:46:07 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/10/04 18:27:48 joerg Exp $
 
 SHA1 (cppcms-1.0.4.tar.bz2) = 470a3eedbd568b457fe6516b78a9c1f464cdc276
 RMD160 (cppcms-1.0.4.tar.bz2) = 6efa445f8da113ba870010c3a770592587e4198f
 Size (cppcms-1.0.4.tar.bz2) = 2331505 bytes
 SHA1 (patch-bin_cppcms__run) = 2b9033c82fab2c9aa11acbb200e9a44f9c6364cb
+SHA1 (patch-booster_CMakeLists.txt) = 25bfe48385f06f88a2edb10879da4ed53fdd2297
 SHA1 (patch-booster_lib_locale_test_test__std__formatting.cpp) = 62564e7e8bfcb90cd19195f5ce2296b8b03c02d6
+SHA1 (patch-booster_lib_system_src_posix__error.cpp) = 8f1e050ffb1b37b664893864d29508984e82e42c
 SHA1 (patch-cppcms__boost_cppcms__boost_detail_container__fwd.hpp) = 1de84e42f0b0dfbb9b8c9013c1c515727a917998
 SHA1 (patch-cppcms__boost_cppcms__boost_interprocess_containers_container_container__fwd.hpp) = 77de309397fc180556ac80031fffe70a0aa24e86
 SHA1 (patch-cppcms__boost_cppcms__boost_interprocess_detail_managed__memory__impl.hpp) = 434d6c50cb3a8f5a1ae00d83e63341f6c24dbfcd

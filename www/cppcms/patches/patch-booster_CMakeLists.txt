@@ -1,0 +1,40 @@
+$NetBSD: patch-booster_CMakeLists.txt,v 1.1 2013/10/04 18:27:48 joerg Exp $
+
+--- booster/CMakeLists.txt.orig	2013-10-02 10:28:22.012853400 +0000
++++ booster/CMakeLists.txt
+@@ -251,6 +251,7 @@ endif()
+ 
+ if(IS_WINDOWS)
+ 	find_library(WS2_32 ws2_32)
++	find_library(WSOCK32 wsock32)
+ else()
+ 	check_function_exists(socket HAVE_SOCKET)
+ 	if(NOT HAVE_SOCKET)
+@@ -326,7 +327,7 @@ check_cxx_source_compiles(
+ 	BOOSTER_HAVE_INTTYPES_H)
+ 
+ if(IS_WINDOWS)
+-	set(CMAKE_REQUIRED_LIBRARIES ${WS2_32})
++	set(CMAKE_REQUIRED_LIBRARIES ${WS2_32} ${WSOCK32})
+ 	check_cxx_source_compiles(
+ 	"#include <winsock2.h>
+ 	#include <windows.h>
+@@ -531,9 +532,6 @@ foreach(ALIB ${LINK_LIBS})
+ 	if(LIB_PTHREAD)
+ 		target_link_libraries(${ALIB} ${LIB_PTHREAD})
+ 	endif(LIB_PTHREAD)
+-	if(WS2_32)
+-		target_link_libraries(${ALIB} ${WS2_32})
+-	endif()
+ 	target_link_libraries(${ALIB} ${PCRE_LIB})
+ 
+ 	if(NOT DISABLE_ICU_LOCALE)
+@@ -556,6 +554,8 @@ foreach(ALIB ${LINK_LIBS})
+ 
+   	if(IS_WINDOWS)
+ 		target_link_libraries(${ALIB} psapi)
++		target_link_libraries(${ALIB} ws2_32)
++		target_link_libraries(${ALIB} wsock32)
+ 	endif()
+ 	
+ 	if(USE_STLPORT AND STLPORT_LIB)

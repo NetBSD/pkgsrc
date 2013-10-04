@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/09/16 15:46:07 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/04 18:27:48 joerg Exp $
 
 DISTNAME=	cppcms-1.0.4
 PKGREVISION=	1
@@ -20,6 +20,8 @@ CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN} -DDISABLE_GCRYPT=yes
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11
 .endif
+
+CXXFLAGS.Cygwin+=	-std=gnu++11
 
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
