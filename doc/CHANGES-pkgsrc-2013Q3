@@ -1,7 +1,12 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.1 2013/09/30 08:42:51 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.2 2013/10/05 16:12:33 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
 
 Created pkgsrc-2013Q3 branch [wiz 2013-09-30 10:40 UTC]
+
+Pullup ticket #4238 - requested by wiz
+security/gnupg: security update
+Pullup ticket #4239 - requested by wiz
+security/gnupg2: security update
 
