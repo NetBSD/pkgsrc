@@ -1,4 +1,4 @@
-$NetBSD: patch-data_Makefile.in,v 1.1 2013/10/04 18:26:29 joerg Exp $
+$NetBSD: patch-data_Makefile.in,v 1.2 2013/10/05 11:43:32 tron Exp $
 
 --- data/Makefile.in.orig	2013-05-23 20:06:20.000000000 +0000
 +++ data/Makefile.in
@@ -6,7 +6,7 @@ $NetBSD: patch-data_Makefile.in,v 1.1 2013/10/04 18:26:29 joerg Exp $
  ifeq ($(PKGDATA_OPTS),)
  PKGDATA_OPTS = -O $(top_builddir)/data/icupkg.inc
  endif
-+ifeq ($(DSO_LIBDIR),)
++ifneq ($(OPSYS),Cygwin)
  ifeq ($(PKGDATA_VERSIONING),)
  PKGDATA_VERSIONING = -r $(SO_TARGET_VERSION)
  endif
