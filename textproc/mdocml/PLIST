@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/09/12 10:33:29 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/10/05 14:48:15 wiz Exp $
 bin/demandoc
 bin/mandoc
 bin/mandoc-preconv
@@ -10,6 +10,7 @@ man/man1/demandoc.1
 man/man1/mandoc.1
 man/man1/mandoc-preconv.1
 man/man3/mandoc.3
+man/man3/tbl.3
 man/man7/eqn.7
 man/man7/man.7
 man/man7/mandoc_char.7
