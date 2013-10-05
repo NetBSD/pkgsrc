@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2013/10/05 06:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2013/10/05 07:40:59 adam Exp $
 
 DISTNAME=	p7zip_9.20.1_src_all
 PKGNAME=	p7zip-9.20.1
@@ -60,7 +60,7 @@ CFLAGS+=		-DLITTLE_ENDIAN
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7za ${DESTDIR}${PREFIX}/bin
 .if !empty(DYNAMIC_7Z:MYES)
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z.so ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_LIB} ${WRKSRC}/bin/7z.so ${DESTDIR}${PREFIX}/lib/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${DESTDIR}${PREFIX}/lib/7z
 	ln -f -s ${PREFIX}/lib/7z/7z ${DESTDIR}${PREFIX}/bin
 	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* \
