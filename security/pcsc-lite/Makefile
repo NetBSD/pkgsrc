@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/03/18 10:14:57 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2013/10/05 14:09:00 pettai Exp $
 #
 
-DISTNAME=	pcsc-lite-1.8.7
+DISTNAME=	pcsc-lite-1.8.8
 CATEGORIES=	security
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/3842/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/file/3862/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
