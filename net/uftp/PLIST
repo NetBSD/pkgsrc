@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/05 17:40:38 mspo Exp $
+bin/uftp
+bin/uftp_keymgt
+man/man1/uftp.1
+man/man1/uftp_keymgt.1
+man/man1/uftpd.1
+man/man1/uftpproxyd.1
+sbin/uftpd
+sbin/uftpproxyd

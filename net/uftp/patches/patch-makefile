@@ -1,0 +1,38 @@
+$NetBSD: patch-makefile,v 1.1 2013/10/05 17:40:38 mspo Exp $
+fixup install and add netbsd
+
+--- makefile-orig	2013-10-05 17:11:26.000000000 +0000
++++ makefile
+@@ -53,6 +53,11 @@ ifeq ("FreeBSD", "$(UNAME_S)")
+ OPTIONS=-g -Wall -DHAS_GETIFADDRS -DNO_DUAL -DNO_MCAST_JOIN $(ENC_OPTS)
+ endif
+ 
++# NetBSD
++ifeq ("NetBSD", "$(UNAME_S)")
++OPTIONS=-g -Wall -DHAS_GETIFADDRS -DNO_DUAL -DNO_MCAST_JOIN -DNOSIOCGIFINDEX $(ENC_OPTS)
++endif
++
+ # OSX, aka Darwin
+ ifeq ("Darwin", "$(UNAME_S)")
+ OPTIONS=-g -Wall -DHAS_GETIFADDRS $(ENC_OPTS)
+@@ -197,12 +202,12 @@ uftp_keymgt: $(UFTP_KEYMGT_OBJS)
+ 	$(CC) $(OPTIONS) $(INCLUDE) $(CFLAGS) $(MTFLAGS) -c $<
+ 
+ install: all
+-	install -m 755 -d $(DESTDIR)/bin
+-	install -m 755 -d $(DESTDIR)/usr/sbin
+-	install -m 755 -d $(DESTDIR)/usr/share/man/man1
+-	/bin/cp -p uftp $(DESTDIR)/bin
+-	/bin/cp -p uftpd $(DESTDIR)/usr/sbin
+-	/bin/cp -p uftpproxyd $(DESTDIR)/usr/sbin
+-	/bin/cp -p uftp_keymgt $(DESTDIR)/bin
+-	/bin/cp -p uftp.1 uftpd.1 uftpproxyd.1 uftp_keymgt.1 $(DESTDIR)/usr/share/man/man1
++	install -m 755 -d $(DESTDIR)$(PREFIX)/bin
++	install -m 755 -d $(DESTDIR)$(PREFIX)/sbin
++	install -m 755 -d $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
++	/bin/cp -p uftp $(DESTDIR)$(PREFIX)/bin
++	/bin/cp -p uftpd $(DESTDIR)$(PREFIX)/sbin
++	/bin/cp -p uftpproxyd $(DESTDIR)$(PREFIX)/sbin
++	/bin/cp -p uftp_keymgt $(DESTDIR)$(PREFIX)/bin
++	/bin/cp -p uftp.1 uftpd.1 uftpproxyd.1 uftp_keymgt.1 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
+ 
