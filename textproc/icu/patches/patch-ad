@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.11 2012/11/07 20:59:51 adam Exp $
+$NetBSD: patch-ad,v 1.12 2013/10/05 11:08:24 tron Exp $
 
---- icudefs.mk.in.orig	2010-12-07 12:14:06.000000000 +0000
-+++ icudefs.mk.in
-@@ -207,13 +207,13 @@ LIBICU = $(LIBPREFIX)$(ICUPREFIX)
+--- icudefs.mk.in.orig	2013-05-23 21:06:32.000000000 +0100
++++ icudefs.mk.in	2013-10-05 12:01:05.000000000 +0100
+@@ -207,13 +207,13 @@
  
  ## If we can't use the shared libraries, use the static libraries
  ifneq ($(ENABLE_SHARED),YES)
@@ -18,3 +18,13 @@ $NetBSD: patch-ad,v 1.11 2012/11/07 20:59:51 adam Exp $
  LIBSICU = $(LIBPREFIX)$(STATIC_PREFIX)$(ICUPREFIX)
  A = a
  SOBJ = $(SO)
+@@ -306,5 +306,9 @@
+ cross_buildroot = $(top_builddir)
+ endif
+ 
++ifeq ($(DSO_LIBDIR),)
++DSO_LIBDIR=	$(DESTDIR)$(libdir)
++endif
++
+ # optional include at top
+ -include $(top_builddir)/icudefs.local
