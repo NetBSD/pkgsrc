@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/10/05 17:40:38 mspo Exp $
+
+SHA1 (uftp-4.1.2.tar) = 11191127cc3716599a2554cfcc18329487757067
+RMD160 (uftp-4.1.2.tar) = eb8fdae3648de86976177fbf805099a43cff37ec
+Size (uftp-4.1.2.tar) = 1198080 bytes
+SHA1 (patch-makefile) = 275f24c09128155215c134f2d80b7ba0ffbb2390
+SHA1 (patch-uftp_common.c) = 87d3a6e4b1216d3cd81a55441412811152f0de3d
