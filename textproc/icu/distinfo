@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2013/10/04 18:26:29 joerg Exp $
+$NetBSD: distinfo,v 1.37 2013/10/05 11:08:24 tron Exp $
 
 SHA1 (icu4c-51_2-src.tgz) = 074a28dfc96d37ce72c831f3e3e2d686f1f76a14
 RMD160 (icu4c-51_2-src.tgz) = ef1256bb87b3dcec1cf40b32b11c5c3f1bd48af6
@@ -6,7 +6,7 @@ Size (icu4c-51_2-src.tgz) = 21841928 bytes
 SHA1 (patch-aa) = fcbebb03f4a48294faeebd600fee989cab351230
 SHA1 (patch-ab) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
-SHA1 (patch-ad) = 75e57734ad508140e87513b37ade4b295821696e
+SHA1 (patch-ad) = 024dcc26c96a4c9de88890f2e2a093b2d08014a0
 SHA1 (patch-af) = b6314fb4f807b64e1b37f67d2aefe86e30707842
 SHA1 (patch-common_Makefile.in) = 20fa472bd0e5e5fac15153774a58a8ce034d1996
 SHA1 (patch-common_putilimp.h) = ff97ae0b8fd96ec8296e5164c135610a1a358810
