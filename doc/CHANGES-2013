@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3697 2013/10/05 14:48:27 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3698 2013/10/05 17:42:01 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/ccid to 1.4.12 [pettai 2013-10-05]
 	Updated security/p5-pcsc to 1.4.13 [pettai 2013-10-05]
 	Updated textproc/mdocml to 1.12.2 [wiz 2013-10-05]
+	Updated net/uftp to 4.1.2 [mspo 2013-10-05]
