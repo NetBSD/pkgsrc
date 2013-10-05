@@ -1,0 +1,11 @@
+to use larger network buffer sizes:
+
+Solaris: ndd -set /dev/udp udp_max_buf {value}
+
+Linux: sysctl -w net.core.rmem_max={value}
+       sysctl -w net.core.wmem_max={value}
+
+MacOSX / FreeBSD: sysctl -w kern.ipc.maxsockbuf={value}
+(The actual maximum you can use is 8/9 of this value)
+
+NetBSD: sysctl -w kern.sbmax={value}
