@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.2 2013/10/05 16:12:33 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.3 2013/10/05 21:05:44 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -9,4 +9,6 @@ Pullup ticket #4238 - requested by wiz
 security/gnupg: security update
 Pullup ticket #4239 - requested by wiz
 security/gnupg2: security update
+Pullup ticket #4237 - requested by obache
+www/ap2-subversion: functionality fix
 
