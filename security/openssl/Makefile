@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2013/10/03 11:15:48 joerg Exp $
+# $NetBSD: Makefile,v 1.181 2013/10/05 07:01:06 jperkin Exp $
 
 DISTNAME=	openssl-1.0.1e
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -121,6 +121,7 @@ USE_PLIST_SHLIB=	no
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
+PLIST_SRC+=		${PKGDIR}/PLIST.common
 USE_PLIST_SHLIB?=	yes
 .if ${USE_PLIST_SHLIB} == "yes"
 PLIST_SRC+=		${PKGDIR}/PLIST.shlib
