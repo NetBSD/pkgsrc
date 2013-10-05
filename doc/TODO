@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12590 2013/10/05 14:48:27 wiz Exp $
+$NetBSD: TODO,v 1.12591 2013/10/05 22:28:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -724,7 +724,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.3
-	o libdvbpsi-1.1.1
 	o libextractor-1.0.0
 	o libflash-0.4.13
 	o libfolks-0.8.0
@@ -1017,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
+	o sptk-3.6 [pkg/48279]
 	o sqwebmail-5.6.1
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
