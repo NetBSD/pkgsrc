@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2013/03/16 21:32:01 dholland Exp $
+$NetBSD: patch-af,v 1.2 2013/10/05 05:13:07 ryoon Exp $
 
 (From the log for revision 1.4 of print/ghostscript/patches/patch-af)
 date: 2008/11/13 17:36:54;  author: chuck;  state: Exp;  lines: +22 -4
@@ -14,9 +14,9 @@ XXX: this still leaves the issue of libgs.so (et al.) being hardwired
 in PLIST, instead of using libgs.dylib (et al.).   i'm not sure of
 the best way to fix that.   at least it compiles now....
 
---- base/unix-dll.mak.orig	2012-08-08 17:01:36.000000000 +0900
-+++ base/unix-dll.mak	2012-10-10 10:03:50.000000000 +0900
-@@ -59,13 +59,12 @@
+--- base/unix-dll.mak.orig	2012-02-08 08:48:48.000000000 +0000
++++ base/unix-dll.mak
+@@ -58,13 +58,12 @@ LDFLAGS_SO=-shared -Wl,$(LD_SET_DT_SONAM
  
  
  # MacOS X
@@ -35,17 +35,17 @@ the best way to fix that.   at least it compiles now....
  
  GS_SO=$(BINDIR)/$(GS_SONAME)
  GS_SO_MAJOR=$(BINDIR)/$(GS_SONAME_MAJOR) 
-@@ -86,11 +85,11 @@
+@@ -85,11 +84,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
  # Build the small Ghostscript loaders, with Gtk+ and without
  $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
 -	-L$(BINDIR) -l$(GS)
-+	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
++	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) ${LDFLAGS}
  
  $(GSSOX_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
 -	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
-+	-L$(BINDIR) -l$(GS) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
++	-L$(BINDIR) -l$(GS) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS) ${LDFLAGS}
  
  # ------------------------- Recursive make targets ------------------------- #
  
