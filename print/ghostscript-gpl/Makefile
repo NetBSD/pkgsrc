@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/04 22:16:58 tron Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/05 05:13:07 ryoon Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -81,6 +81,9 @@ BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 .endif
 
 CONFIGURE_ENV+=	LPLIBDIR=${PREFIX}/lib
+
+# On OpenBSD 5.3, libxcb is required libXt.
+LDFLAGS.OpenBSD+=	-lxcb
 
 .include "options.mk"
 
