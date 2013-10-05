@@ -1,11 +1,11 @@
-$NetBSD: patch-examples_dvbinfo_udp.c,v 1.1 2013/04/23 13:22:22 wiz Exp $
+$NetBSD: patch-examples_dvbinfo_udp.c,v 1.2 2013/10/05 08:29:38 wiz Exp $
 
 Portability fix from upstream (Jean-Paul Saman <jpsaman@videolan.org>).
 
---- examples/dvbinfo/udp.c.orig	2013-02-20 11:25:27.000000000 +0000
+--- examples/dvbinfo/udp.c.orig	2013-10-02 10:19:18.000000000 +0000
 +++ examples/dvbinfo/udp.c
-@@ -47,6 +47,16 @@
- #   include <arpa/inet.h>
+@@ -61,6 +61,16 @@
+ #   include <fcntl.h>
  #endif
  
 +#ifndef SOL_IP
