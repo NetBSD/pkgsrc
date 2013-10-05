@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/10/05 14:12:57 pettai Exp $
 #
 
-DISTNAME=	ccid-1.4.8
-PKGREVISION=	1
+DISTNAME=	ccid-1.4.12
 CATEGORIES=	security
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/3768/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/file/3937/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
