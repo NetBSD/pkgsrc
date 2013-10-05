@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3695 2013/10/05 14:13:39 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.3696 2013/10/05 14:19:34 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5171,3 +5171,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/gnupg2 to 2.0.22 [wiz 2013-10-05]
 	Updated security/pcsc-lite to 1.8.8 [pettai 2013-10-05]
 	Updated security/ccid to 1.4.12 [pettai 2013-10-05]
+	Updated security/p5-pcsc to 1.4.13 [pettai 2013-10-05]
