@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2013/10/04 21:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2013/10/05 06:16:39 wiz Exp $
 
 DISTNAME=	p7zip_9.20.1_src_all
 PKGNAME=	p7zip-9.20.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -46,7 +46,7 @@ INSTALLATION_DIRS+=	share/doc/p7zip/switches
 
 SUBST_CLASSES+=		lib
 SUBST_FILES.lib+=	CPP/7zip/UI/Common/LoadCodecs.cpp
-SUBST_SED.lib+=		-e "s,getenv(.P7ZIP_HOME_DIR.),\"${PREFIX}/lib\","
+SUBST_SED.lib+=		-e "s,getenv(.P7ZIP_HOME_DIR.),\"${PREFIX}/lib/\","
 SUBST_STAGE.lib=	post-patch
 
 .include "../../mk/endian.mk"
