@@ -1,7 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2013/02/06 23:24:02 jperkin Exp $
-#
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.61 2013/10/06 16:49:51 wiz Exp $
 
 COMMENT=	Lynx-like text WWW browser
 
