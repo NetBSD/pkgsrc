@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2013/10/04 14:40:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.441 2013/10/06 20:04:42 joerg Exp $
 
 COMMENT=	Databases
 
@@ -61,7 +61,6 @@ SUBDIR+=	libdbi-driver-sqlite3
 SUBDIR+=	libgda
 SUBDIR+=	libgda-mysql
 SUBDIR+=	libgda-postgres
-SUBDIR+=	libgnomedb
 SUBDIR+=	libpqxx
 SUBDIR+=	libpqxx-doc
 SUBDIR+=	lua-sqlite
