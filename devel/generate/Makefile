@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/10/06 12:47:13 darcy Exp $
 #
 
-DISTNAME=	generate-2.7
-PKGREVISION=	1
+DISTNAME=	generate-2.8
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.Vex.Net/pub/distrib/
+MASTER_SITES=	http://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
 
 OWNER=		darcy@NetBSD.org
