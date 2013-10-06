@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3711 2013/10/06 16:25:18 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3712 2013/10/06 16:27:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/eigen3 to 3.1.4 [wiz 2013-10-06]
 	Updated misc/goffice0.10 to 0.10.7 [wiz 2013-10-06]
 	Updated math/gnumeric112 to 1.12.7 [wiz 2013-10-06]
+	Updated misc/dialog to 1.2.20130928 [wiz 2013-10-06]
