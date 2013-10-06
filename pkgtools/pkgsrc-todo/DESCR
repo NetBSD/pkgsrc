@@ -1,7 +1,10 @@
-This package contains two tools for maintaining pkgsrc/doc/TODO.
+This package contains tools for maintaining pkgsrc/doc/TODO.
 
 add_todo adds lines for newly available updates for packages to
 the TODO file.
+
+list_todo compares the installed packages against the TODO file and
+lists entries matching them.
 
 obsolete_todo checks the contents of pkgsrc/doc/TODO against updates
 noted in the CHANGES-* files and removes entries for packages which
