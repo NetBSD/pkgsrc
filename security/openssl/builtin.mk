@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.34 2013/08/27 05:42:34 richard Exp $
+# $NetBSD: builtin.mk,v 1.35 2013/10/06 12:54:10 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -278,11 +278,16 @@ openssl-fake-pc:
 	if ${TEST} -f $${src}; then \
 		${LN} -sf $${src} $${dst}; \
 	else \
-		{ ${ECHO} "Name: OpenSSL-libcrypto"; \
-		${ECHO} "Description: OpenSSL cryptography library"; \
-		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
-		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX} -lcrypto"; \
-		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
+		{ ${ECHO} 'prefix=${BUILDLINK_PREFIX.openssl}'; \
+		${ECHO} 'exec_prefix=$${prefix}'; \
+		${ECHO} 'libdir=$${exec_prefix}/lib${LIBABISUFFIX}'; \
+		${ECHO} 'includedir=$${prefix}/include'; \
+		${ECHO}; \
+		${ECHO} 'Name: OpenSSL-libcrypto'; \
+		${ECHO} 'Description: OpenSSL cryptography library'; \
+		${ECHO} 'Version: ${BUILTIN_VERSION.openssl}'; \
+		${ECHO} 'Libs: -L$${libdir} -lcrypto'; \
+		${ECHO} 'Cflags: -I$${includedir}'; \
 		} >$${dst}; \
 	fi
 	${RUN} \
@@ -292,11 +297,16 @@ openssl-fake-pc:
 	if ${TEST} -f $${src}; then \
 		${LN} -sf $${src} $${dst}; \
 	else \
-		{ ${ECHO} "Name: OpenSSL"; \
-		${ECHO} "Description: Secure Sockets Layer and cryptography libraries"; \
-		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
-		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX} -lssl -lcrypto"; \
-		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
+		{ ${ECHO} 'prefix=${BUILDLINK_PREFIX.openssl}'; \
+		${ECHO} 'exec_prefix=$${prefix}'; \
+		${ECHO} 'libdir=$${exec_prefix}/lib${LIBABISUFFIX}'; \
+		${ECHO} 'includedir=$${prefix}/include'; \
+		${ECHO}; \
+		${ECHO} 'Name: OpenSSL'; \
+		${ECHO} 'Description: Secure Sockets Layer and cryptography libraries'; \
+		${ECHO} 'Version: ${BUILTIN_VERSION.openssl}'; \
+		${ECHO} 'Libs: -L$${libdir} -lssl -lcrypto'; \
+		${ECHO} 'Cflags: -I$${includedir}'; \
 		} >$${dst}; \
 	fi
 	${RUN} \
@@ -306,11 +316,16 @@ openssl-fake-pc:
 	if ${TEST} -f $${src}; then \
 		${LN} -sf $${src} $${dst}; \
 	else \
-		{ ${ECHO} "Name: OpenSSL"; \
-		${ECHO} "Description: Secure Sockets Layer and cryptography libraries and tools"; \
-		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
-		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib${LIBABISUFFIX} -lssl -lcrypto"; \
-		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
+		{ ${ECHO} 'prefix=${BUILDLINK_PREFIX.openssl}'; \
+		${ECHO} 'exec_prefix=$${prefix}'; \
+		${ECHO} 'libdir=$${exec_prefix}/lib${LIBABISUFFIX}'; \
+		${ECHO} 'includedir=$${prefix}/include'; \
+		${ECHO}; \
+		${ECHO} 'Name: OpenSSL'; \
+		${ECHO} 'Description: Secure Sockets Layer and cryptography libraries and tools'; \
+		${ECHO} 'Version: ${BUILTIN_VERSION.openssl}'; \
+		${ECHO} 'Libs: -L$${libdir} -lssl -lcrypto'; \
+		${ECHO} 'Cflags: -I$${includedir}'; \
 		} >$${dst}; \
 	fi
 .    endif
