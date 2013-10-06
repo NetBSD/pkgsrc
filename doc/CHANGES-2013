@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3700 2013/10/06 08:26:06 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3701 2013/10/06 08:28:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5175,3 +5175,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/mdocml to 1.12.2 [wiz 2013-10-05]
 	Added net/uftp version 4.1.2 [mspo 2013-10-05]
 	Updated net/libnids to 1.24 [obache 2013-10-06]
+	Updated pkgtools/pkgin to 0.6.4nb2 [wiz 2013-10-06]
