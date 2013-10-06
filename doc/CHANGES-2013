@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3702 2013/10/06 12:54:48 darcy Exp $
+$NetBSD: CHANGES-2013,v 1.3703 2013/10/06 14:13:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5178,3 +5178,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/pkgin to 0.6.4nb2 [wiz 2013-10-06]
 	Updated devel/generate to 2.8 [darcy 2013-10-06]
 	Updated devel/py-generate to 2.8 [darcy 2013-10-06]
+	Updated multimedia/libmatroska to 1.4.1nb1 [wiz 2013-10-06]
