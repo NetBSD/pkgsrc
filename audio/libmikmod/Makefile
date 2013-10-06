@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2012/09/12 00:24:42 asau Exp $
+# $NetBSD: Makefile,v 1.53 2013/10/06 16:09:00 wiz Exp $
 
-DISTNAME=	libmikmod-3.2.0
+DISTNAME=	libmikmod-3.3.2
 CATEGORIES=	audio
 MASTER_SITES=	http://mikmod.shlomifish.org/files/
 
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-threads
 
 INFO_FILES=		yes
+PKGCONFIG_OVERRIDE=	libmikmod.pc.in
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
