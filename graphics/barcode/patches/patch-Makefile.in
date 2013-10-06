@@ -1,0 +1,33 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/10/06 17:15:35 adam Exp $
+
+Don't build nor use libgnu.
+
+--- Makefile.in.orig	2013-03-29 23:01:35.000000000 +0000
++++ Makefile.in
+@@ -142,7 +142,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
+ PROGRAMS = $(bin_PROGRAMS)
+ am_barcode_OBJECTS = main.$(OBJEXT) cmdline.$(OBJEXT)
+ barcode_OBJECTS = $(am_barcode_OBJECTS)
+-barcode_DEPENDENCIES = libbarcode.la lib/libgnu.la
++barcode_DEPENDENCIES = libbarcode.la
+ am_sample_OBJECTS = sample.$(OBJEXT)
+ sample_OBJECTS = $(am_sample_OBJECTS)
+ sample_DEPENDENCIES = libbarcode.la
+@@ -1253,7 +1253,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = po doc lib
++SUBDIRS = po doc
+ AM_CFLAGS = -Ilib @CFLAGS@ @DEFS@ @NO_LIBPAPER@ @NO_STRERROR@
+ AM_LDFLAGS = -L. @LIBPAPER@
+ EXTRA_DIST = barcode.h cmdline.h
+@@ -1264,7 +1264,7 @@ libbarcode_la_SOURCES = library.c ean.c 
+ 		ps.c svg.c pcl.c code11.c
+ 
+ barcode_SOURCES = main.c cmdline.c
+-barcode_LDADD = libbarcode.la lib/libgnu.la
++barcode_LDADD = libbarcode.la
+ sample_SOURCES = sample.c
+ sample_LDADD = libbarcode.la
+ all: config.h
