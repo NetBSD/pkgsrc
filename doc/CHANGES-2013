@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3699 2013/10/05 22:27:23 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.3700 2013/10/06 08:26:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5174,3 +5174,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/p5-pcsc to 1.4.13 [pettai 2013-10-05]
 	Updated textproc/mdocml to 1.12.2 [wiz 2013-10-05]
 	Added net/uftp version 4.1.2 [mspo 2013-10-05]
+	Updated net/libnids to 1.24 [obache 2013-10-06]
