@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.14 2013/10/04 20:58:44 wiz Exp $
+$NetBSD: patch-ac,v 1.15 2013/10/06 14:13:10 wiz Exp $
 
---- make/linux/Makefile.orig	2013-10-04 20:56:20.000000000 +0000
+--- make/linux/Makefile.orig	2013-10-06 13:52:12.000000000 +0000
 +++ make/linux/Makefile
 @@ -16,16 +16,16 @@ prefix=/boot/home/config
  else
@@ -59,7 +59,7 @@ $NetBSD: patch-ac,v 1.14 2013/10/04 20:58:44 wiz Exp $
  	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
 -	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)
 -	ln -fs $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)/$(LIBRARY_SO)
-+	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
++	libtool --mode=install $(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
  
  ifneq ($(wildcard .depend),)
  include .depend
