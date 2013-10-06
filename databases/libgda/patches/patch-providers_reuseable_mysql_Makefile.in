@@ -1,0 +1,22 @@
+$NetBSD: patch-providers_reuseable_mysql_Makefile.in,v 1.1 2013/10/06 19:55:38 joerg Exp $
+
+--- providers/reuseable/mysql/Makefile.in.orig	2013-10-02 11:39:08.000000000 +0000
++++ providers/reuseable/mysql/Makefile.in
+@@ -68,7 +68,7 @@ CONFIG_CLEAN_FILES =
+ CONFIG_CLEAN_VPATH_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+-libgda_mysql_la_DEPENDENCIES = $(top_builddir)/libgda/libgda-5.0.la \
++libgda_mysql_la_DEPENDENCIES = \
+ 	$(am__DEPENDENCIES_1)
+ am_libgda_mysql_la_OBJECTS = gda-mysql-reuseable.lo \
+ 	gda-mysql-parser.lo gda-mysql-meta.lo parser.lo
+@@ -414,7 +414,7 @@ libgda_mysql_la_SOURCES = \
+         mysql_token_types.h
+ 
+ libgda_mysql_la_LIBADD = \
+-	$(top_builddir)/libgda/libgda-5.0.la \
++	-lgda-5.0 \
+ 	$(COREDEPS_LIBS)
+ 
+ EXTRA_DIST = $(xml_in_files) parser.y gen_def.c $(keyword_files)

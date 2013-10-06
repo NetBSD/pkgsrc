@@ -1,0 +1,13 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2013/10/06 19:55:38 joerg Exp $
+
+--- data/Makefile.in.orig	2013-10-02 12:02:15.000000000 +0000
++++ data/Makefile.in
+@@ -392,7 +392,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ 
+ # Default global configuration file
+-configdir = $(sysconfdir)/libgda-5.0
++configdir = $(datarootdir)/examples/libgda
+ config_DATA = config sales_test.db
+ EXTRA_DIST = \
+ 	$(config_DATA) 

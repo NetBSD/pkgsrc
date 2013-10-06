@@ -1,0 +1,22 @@
+$NetBSD: patch-providers_reuseable_postgres_Makefile.in,v 1.1 2013/10/06 19:55:38 joerg Exp $
+
+--- providers/reuseable/postgres/Makefile.in.orig	2013-10-02 11:59:18.000000000 +0000
++++ providers/reuseable/postgres/Makefile.in
+@@ -69,7 +69,7 @@ CONFIG_CLEAN_VPATH_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ libgda_postgres_la_DEPENDENCIES =  \
+-	$(top_builddir)/libgda/libgda-5.0.la $(am__DEPENDENCIES_1)
++	$(am__DEPENDENCIES_1)
+ am_libgda_postgres_la_OBJECTS = gda-postgres-reuseable.lo \
+ 	gda-postgres-parser.lo gda-postgres-meta.lo parser.lo
+ libgda_postgres_la_OBJECTS = $(am_libgda_postgres_la_OBJECTS)
+@@ -414,7 +414,7 @@ libgda_postgres_la_SOURCES = \
+         postgres_token_types.h
+ 
+ libgda_postgres_la_LIBADD = \
+-	$(top_builddir)/libgda/libgda-5.0.la \
++	-lgda-5.0 \
+ 	$(COREDEPS_LIBS)
+ 
+ EXTRA_DIST = parser.y gen_def.c $(keyword_files)
