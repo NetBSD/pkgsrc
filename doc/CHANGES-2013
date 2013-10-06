@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3707 2013/10/06 16:13:22 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3708 2013/10/06 16:14:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5183,3 +5183,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/libmikmod to 3.3.2 [wiz 2013-10-06]
 	Updated devel/gtexinfo to 5.2 [wiz 2013-10-06]
 	Updated fonts/harfbuzz to 0.9.22 [wiz 2013-10-06]
+	Updated fonts/t1utils to 1.38 [wiz 2013-10-06]
