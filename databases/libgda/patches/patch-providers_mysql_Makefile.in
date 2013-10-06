@@ -1,0 +1,22 @@
+$NetBSD: patch-providers_mysql_Makefile.in,v 1.1 2013/10/06 19:55:38 joerg Exp $
+
+--- providers/mysql/Makefile.in.orig	2013-10-02 11:34:25.000000000 +0000
++++ providers/mysql/Makefile.in
+@@ -99,7 +99,7 @@ am__installdirs = "$(DESTDIR)$(providerd
+ 	"$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(xmldir)"
+ LTLIBRARIES = $(provider_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+-libgda_mysql_la_DEPENDENCIES = $(top_builddir)/libgda/libgda-5.0.la \
++libgda_mysql_la_DEPENDENCIES = \
+ 	$(top_builddir)/providers/reuseable/mysql/libgda-mysql.la \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am__objects_1 = gda-mysql-handler-bin.lo
+@@ -467,7 +467,7 @@ libgda_mysql_la_SOURCES = \
+ 
+ libgda_mysql_la_LDFLAGS = -export-dynamic -module -avoid-version $(NO_UNDEFINED) $(LIBTOOL_PROV_EXPORT_OPTIONS)
+ libgda_mysql_la_LIBADD = \
+-	$(top_builddir)/libgda/libgda-5.0.la \
++	-lgda-5.0 \
+ 	$(top_builddir)/providers/reuseable/mysql/libgda-mysql.la \
+ 	$(COREDEPS_LIBS) $(MYSQL_LIBS)
+ 
