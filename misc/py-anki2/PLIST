@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/07/28 20:40:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/10/06 16:30:00 wiz Exp $
 bin/anki
 man/man1/anki.1
 share/anki/LICENSE
@@ -304,12 +304,14 @@ share/anki/locale/eu/LC_MESSAGES/anki.mo
 share/anki/locale/fa/LC_MESSAGES/anki.mo
 share/anki/locale/fi/LC_MESSAGES/anki.mo
 share/anki/locale/fr/LC_MESSAGES/anki.mo
+share/anki/locale/gl/LC_MESSAGES/anki.mo
 share/anki/locale/gu/LC_MESSAGES/anki.mo
 share/anki/locale/he/LC_MESSAGES/anki.mo
 share/anki/locale/hr/LC_MESSAGES/anki.mo
 share/anki/locale/hu/LC_MESSAGES/anki.mo
 share/anki/locale/it/LC_MESSAGES/anki.mo
 share/anki/locale/ja/LC_MESSAGES/anki.mo
+share/anki/locale/km/LC_MESSAGES/anki.mo
 share/anki/locale/ko/LC_MESSAGES/anki.mo
 share/anki/locale/lt/LC_MESSAGES/anki.mo
 share/anki/locale/lv/LC_MESSAGES/anki.mo
@@ -405,6 +407,8 @@ share/anki/tests/support/suspended12.anki
 share/anki/tests/support/text-2fields.txt
 share/anki/tests/support/text-tags.txt
 share/anki/tests/support/text-update.txt
+share/anki/tests/support/update1.apkg
+share/anki/tests/support/update2.apkg
 share/anki/tests/test_cards.py
 share/anki/tests/test_collection.py
 share/anki/tests/test_decks.py
