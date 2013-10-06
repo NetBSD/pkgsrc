@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12604 2013/10/06 16:50:03 wiz Exp $
+$NetBSD: TODO,v 1.12605 2013/10/06 16:54:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,8 +369,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache-ant-1.9.2
-	o apache2-2.0.65
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
@@ -391,7 +389,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o baci-20040415
-	o balsa-2.4.9
 	o barcode-0.99
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -752,7 +749,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libreoffice4-bin-4.1
 	o librep-0.92.2.1
 	o libsecret-0.16
-	o libspf2-1.2.9.1
 	o libssh2-1.4.2
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
@@ -893,7 +889,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.15
 	o php-tiki6-6.10
 	o php-tt-rss-1.10
-	o phpmyadmin-4.0.7
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -919,7 +914,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pstoedit-3.61
 	o puf-1.0.0
 	o pulseaudio-4.0
-	o puzzle-9173
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
