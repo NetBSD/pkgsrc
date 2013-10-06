@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2013/03/14 19:00:45 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2013/10/06 15:58:15 wiz Exp $
 
---- plugins/fn-numtheory/numtheory.c.orig	2009-09-07 02:03:35.000000000 +0000
+--- plugins/fn-numtheory/numtheory.c.orig	2013-04-17 23:57:13.000000000 +0000
 +++ plugins/fn-numtheory/numtheory.c
 @@ -38,7 +38,10 @@ GNM_PLUGIN_MODULE_HEADER;
   * represented in a gnm_float _and_ in a guint64.  (For regular "double",
