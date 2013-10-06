@@ -1,8 +1,8 @@
-$NetBSD: patch-actions.c,v 1.1 2013/09/02 10:38:04 jperkin Exp $
+$NetBSD: patch-actions.c,v 1.2 2013/10/06 08:28:47 wiz Exp $
 
 No need to work-around 'pkg_add -f' bug any more.
 
---- actions.c.orig	2013-09-02 10:32:50.000000000 +0000
+--- actions.c.orig	2013-06-16 14:00:45.000000000 +0000
 +++ actions.c
 @@ -139,9 +139,6 @@ analyse_pkglog(long int filepos)
  		/* Warning: [...] was built for a platform */
