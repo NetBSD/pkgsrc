@@ -1,0 +1,21 @@
+$NetBSD: patch-providers_postgres_Makefile.in,v 1.1 2013/10/06 19:55:38 joerg Exp $
+
+--- providers/postgres/Makefile.in.orig	2013-10-02 11:58:55.000000000 +0000
++++ providers/postgres/Makefile.in
+@@ -100,7 +100,6 @@ am__installdirs = "$(DESTDIR)$(providerd
+ LTLIBRARIES = $(provider_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ libgda_postgres_la_DEPENDENCIES =  \
+-	$(top_builddir)/libgda/libgda-5.0.la \
+ 	$(top_builddir)/providers/reuseable/postgres/libgda-postgres.la \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am_libgda_postgres_la_OBJECTS = gda-postgres-blob-op.lo \
+@@ -462,7 +461,7 @@ libgda_postgres_la_SOURCES = \
+ 
+ libgda_postgres_la_LDFLAGS = -export-dynamic -module -avoid-version $(NO_UNDEFINED) $(LIBTOOL_PROV_EXPORT_OPTIONS)
+ libgda_postgres_la_LIBADD = \
+-	$(top_builddir)/libgda/libgda-5.0.la \
++	-lgda-5.0 \
+ 	$(top_builddir)/providers/reuseable/postgres/libgda-postgres.la \
+ 	$(COREDEPS_LIBS) $(POSTGRES_LIBS)
+ 

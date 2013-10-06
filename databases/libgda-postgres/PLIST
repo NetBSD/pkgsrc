@@ -1,13 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:18 joerg Exp $
-lib/libgda-3.0/providers/libgda-postgres.la
-lib/pkgconfig/libgda-postgres-3.0.pc
-share/libgda-3.0/postgres_specs_add_column.xml
-share/libgda-3.0/postgres_specs_create_db.xml
-share/libgda-3.0/postgres_specs_create_index.xml
-share/libgda-3.0/postgres_specs_create_table.xml
-share/libgda-3.0/postgres_specs_drop_column.xml
-share/libgda-3.0/postgres_specs_drop_db.xml
-share/libgda-3.0/postgres_specs_drop_index.xml
-share/libgda-3.0/postgres_specs_drop_table.xml
-share/libgda-3.0/postgres_specs_dsn.xml
-share/libgda-3.0/postgres_specs_rename_table.xml
+@comment $NetBSD: PLIST,v 1.9 2013/10/06 19:55:38 joerg Exp $
+lib/libgda-5.0/providers/libgda-postgres.la
+lib/pkgconfig/libgda-postgres-5.0.pc
+share/libgda-5.0/postgres_specs_add_column.xml
+share/libgda-5.0/postgres_specs_create_db.xml
+share/libgda-5.0/postgres_specs_create_index.xml
+share/libgda-5.0/postgres_specs_create_role.xml
+share/libgda-5.0/postgres_specs_create_table.xml
+share/libgda-5.0/postgres_specs_create_user.xml
+share/libgda-5.0/postgres_specs_create_view.xml
+share/libgda-5.0/postgres_specs_drop_column.xml
+share/libgda-5.0/postgres_specs_drop_db.xml
+share/libgda-5.0/postgres_specs_drop_index.xml
+share/libgda-5.0/postgres_specs_drop_role.xml
+share/libgda-5.0/postgres_specs_drop_table.xml
+share/libgda-5.0/postgres_specs_drop_user.xml
+share/libgda-5.0/postgres_specs_drop_view.xml
+share/libgda-5.0/postgres_specs_dsn.xml
+share/libgda-5.0/postgres_specs_rename_table.xml
