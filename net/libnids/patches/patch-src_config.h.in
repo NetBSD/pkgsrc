@@ -1,0 +1,16 @@
+$NetBSD: patch-src_config.h.in,v 1.1 2013/10/06 08:25:37 obache Exp $
+
+* check existence of alloca.h
+
+--- src/config.h.in.orig	2006-05-01 17:14:51.000000000 +0000
++++ src/config.h.in
+@@ -45,6 +45,9 @@
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the <alloca.h> header file. */
++#undef HAVE_ALLOCA_H
++
+ /* if unaligned access fails */
+ #undef LBL_ALIGN
+ 

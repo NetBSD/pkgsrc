@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.11 2012/04/17 17:45:35 joerg Exp $
+$NetBSD: distinfo,v 1.12 2013/10/06 08:25:37 obache Exp $
 
-SHA1 (libnids-1.23.tar.gz) = 105bff0d0d35ab95ec90cce98cfb409f64ed44b4
-RMD160 (libnids-1.23.tar.gz) = 38994ad04f688291315bfcde38d8795e7a4c4226
-Size (libnids-1.23.tar.gz) = 140975 bytes
-SHA1 (patch-src_killtcp.c) = 77977d660cb55405b3501375185200bc37b702b1
-SHA1 (patch-src_util.c) = 1308beb64054caadb69ac7ba4e82b4bd15d07a4b
-SHA1 (patch-src_util.h) = 808a0b9e926ac3aab753123b621933c85797e643
+SHA1 (libnids-1.24.tar.gz) = 9a421df05cefdc4f5f7db95efc001b3c2b5249ce
+RMD160 (libnids-1.24.tar.gz) = 66a1a332a70b316fd83905887dc731b5bf28d715
+Size (libnids-1.24.tar.gz) = 151021 bytes
+SHA1 (patch-configure) = 7ed332940901e91ddb2f48ebe6adc8fad2cdaf7c
+SHA1 (patch-configure.in) = e3a86bc1cf2fe4905f952a635b2b08a234e99c50
+SHA1 (patch-src_config.h.in) = 6662fa8279e5d4b5e2be3dc17dc28e489e05538d
+SHA1 (patch-src_libnids.c) = 121f1d119707e113e2e1ec80d798dd09bc335025
