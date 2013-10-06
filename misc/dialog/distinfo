@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2013/09/09 20:40:12 wiz Exp $
+$NetBSD: distinfo,v 1.36 2013/10/06 16:27:28 wiz Exp $
 
-SHA1 (dialog-1.2-20130902.tgz) = 5b575ec719c928196b63db020e932dcc100dd3d5
-RMD160 (dialog-1.2-20130902.tgz) = 7a8546366b704c280dd3ae9ae766949dcc428b77
-Size (dialog-1.2-20130902.tgz) = 449855 bytes
+SHA1 (dialog-1.2-20130928.tgz) = 204d852856754817f5590f60ffaa1c07a8ed35ca
+RMD160 (dialog-1.2-20130928.tgz) = 8811778b9da92c4940b73cc255082bd54bc11935
+Size (dialog-1.2-20130928.tgz) = 451567 bytes
