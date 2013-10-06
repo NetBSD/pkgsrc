@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/05/19 21:23:45 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/10/06 19:59:42 joerg Exp $
 
-SHA1 (gdl-2.26.2.tar.bz2) = 29402c29c42fef5dc37748d4ff52e1f96e94f2b4
-RMD160 (gdl-2.26.2.tar.bz2) = c4a2dee8355f6b005490eda2cd0ef2399e2e5179
-Size (gdl-2.26.2.tar.bz2) = 552658 bytes
+SHA1 (gdl-3.10.0.tar.xz) = 7342f127c64e298cd33d90e661d34ecab842e92f
+RMD160 (gdl-3.10.0.tar.xz) = 3e08cbe532d54de26d5d2b9091db51e5878cc92d
+Size (gdl-3.10.0.tar.xz) = 526704 bytes
+SHA1 (patch-gdl_gdl-dock-bar.c) = e6fbdb23731529ad6871a2230325da9c5cd273b9
