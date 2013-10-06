@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:46 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/10/06 16:52:29 wiz Exp $
 
 DISTNAME=	pkgsrc-todo-1.2
 PKGREVISION=	1
