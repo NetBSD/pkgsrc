@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12601 2013/10/06 16:33:34 wiz Exp $
+$NetBSD: TODO,v 1.12602 2013/10/06 16:39:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -934,7 +934,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-kombu-2.5.14
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
-	o py-pytz-2013.7
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
 	o py-qt5-5.1.1
