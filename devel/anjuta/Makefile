@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.106 2013/09/02 19:50:58 adam Exp $
+# $NetBSD: Makefile,v 1.107 2013/10/06 20:01:27 joerg Exp $
 
-DISTNAME=	anjuta-2.24.2
-PKGREVISION=	38
+DISTNAME=	anjuta-3.10.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.24/}
-#MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/3.10/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.anjuta.org/
@@ -18,19 +16,20 @@ DEPENDS+=	gnome-terminal>=2.4.2:../../x11/gnome-terminal
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
-BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake:run intltool pkg-config:run msgfmt:run perl:run sh:run
-USE_TOOLS+=		bash:run
+USE_TOOLS+=		bash:run bison
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-plugin-valgrind
 CONFIGURE_ARGS+=	--enable-plugin-scintilla
 # pkgsrc devhelp is currently API incompatible
 CONFIGURE_ARGS+=	--disable-plugin-devhelp
+CONFIGURE_ARGS+=	YACC="bison -y"
 
 SUBST_CLASSES+=		unused
 SUBST_STAGE.unused=	pre-configure
@@ -61,20 +60,25 @@ GCONF_SCHEMAS+=	anjuta.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 
+.include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
+
+.include "../../databases/libgda/buildlink3.mk"
 #.include "../../devel/devhelp/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
 .include "../../devel/glade3/buildlink3.mk"
-.include "../../devel/gnome-build/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/gtksourceview2/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

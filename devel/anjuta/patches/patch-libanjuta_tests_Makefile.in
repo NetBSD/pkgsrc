@@ -1,0 +1,13 @@
+$NetBSD: patch-libanjuta_tests_Makefile.in,v 1.1 2013/10/06 20:01:27 joerg Exp $
+
+--- libanjuta/tests/Makefile.in.orig	2013-09-23 22:00:28.000000000 +0000
++++ libanjuta/tests/Makefile.in
+@@ -477,7 +477,7 @@ anjuta_completion_test_SOURCES = anjuta-
+ anjuta_tabber_test_CFLAGS = $(LIBANJUTA_CFLAGS)
+ anjuta_tabber_test_LDADD = $(LIBANJUTA_LIBS) $(ANJUTA_LIBS)
+ anjuta_tabber_test_SOURCES = anjuta-tabber-test.c
+-anjuta_token_test_CFLAGS = -g -O0 -fprofile-arcs -ftest-coverage
++anjuta_token_test_CFLAGS = -g -O0
+ anjuta_token_test_LDADD = $(ANJUTA_LIBS)
+ anjuta_token_test_SOURCES = anjuta-token-test.c \
+ 			../anjuta-token.c
