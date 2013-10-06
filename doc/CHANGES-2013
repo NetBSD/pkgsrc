@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3705 2013/10/06 16:09:09 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3706 2013/10/06 16:12:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5181,3 +5181,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/libmatroska to 1.4.1nb1 [wiz 2013-10-06]
 	Updated databases/shared-mime-info to 1.2 [wiz 2013-10-06]
 	Updated audio/libmikmod to 3.3.2 [wiz 2013-10-06]
+	Updated devel/gtexinfo to 5.2 [wiz 2013-10-06]
