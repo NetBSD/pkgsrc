@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3714 2013/10/06 16:33:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3715 2013/10/06 16:33:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/dialog to 1.2.20130928 [wiz 2013-10-06]
 	Updated misc/py-anki2 to 2.0.13 [wiz 2013-10-06]
 	Updated multimedia/ffmpeg to 20131006.1.2.4 [wiz 2013-10-06]
+	Updated multimedia/ffplay to 1.2.4 [wiz 2013-10-06]
