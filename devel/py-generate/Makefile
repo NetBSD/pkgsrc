@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2012/10/31 11:19:30 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/10/06 12:47:13 darcy Exp $
 #
 
-DISTNAME=	generate-2.6
-PKGREVISION=	2
+DISTNAME=	generate-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	ftp://ftp.druid.net/pub/distrib/
+MASTER_SITES=	http://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
 
 OWNER=		darcy@NetBSD.org
