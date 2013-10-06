@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2012/09/15 10:06:04 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2013/10/06 08:25:37 obache Exp $
 
 BUILDLINK_TREE+=	libnids
 
@@ -6,8 +6,7 @@ BUILDLINK_TREE+=	libnids
 LIBNIDS_BUILDLINK3_MK:=
 
 
-BUILDLINK_API_DEPENDS.libnids+=	libnids>=1.18
-BUILDLINK_ABI_DEPENDS.libnids+=	libnids>=1.23nb5
+BUILDLINK_API_DEPENDS.libnids+=	libnids>=1.24
 BUILDLINK_PKGSRCDIR.libnids?=	../../net/libnids
 BUILDLINK_DEPMETHOD.libnids?=	build
 

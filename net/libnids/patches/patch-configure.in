@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2013/10/06 08:25:37 obache Exp $
+
+* check existence of alloca.h
+
+--- configure.in.orig	2006-05-01 17:14:51.000000000 +0000
++++ configure.in
+@@ -27,7 +27,7 @@ AC_PROG_INSTALL
+ 
+ dnl Checks for header files.
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(sys/time.h syslog.h unistd.h)
++AC_CHECK_HEADERS(sys/time.h syslog.h unistd.h alloca.h)
+ 
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST

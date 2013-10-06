@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/10/06 08:25:37 obache Exp $
+
+* check existence of alloca.h
+
+--- configure.orig	2006-05-01 17:14:51.000000000 +0000
++++ configure
+@@ -2960,7 +2960,7 @@ fi
+ 
+ 
+ for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
+-		  inttypes.h stdint.h unistd.h
++		  inttypes.h stdint.h unistd.h alloca.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ echo "$as_me:$LINENO: checking for $ac_header" >&5
