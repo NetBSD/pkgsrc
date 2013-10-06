@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2013/07/04 16:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2013/10/06 16:12:00 wiz Exp $
 
-DISTNAME=		texinfo-5.1
+DISTNAME=		texinfo-5.2
 PKGNAME=		g${DISTNAME}
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
