@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1784 2013/10/04 07:04:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.1785 2013/10/06 20:03:54 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -250,7 +250,6 @@ SUBDIR+=	gmock
 SUBDIR+=	gmp
 SUBDIR+=	gmtk
 SUBDIR+=	gnatpython
-SUBDIR+=	gnome-build
 SUBDIR+=	gnome-common
 SUBDIR+=	gnustep-base
 SUBDIR+=	gnustep-examples
