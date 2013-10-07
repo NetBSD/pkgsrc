@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3724 2013/10/07 10:12:39 joerg Exp $
+$NetBSD: CHANGES-2013,v 1.3725 2013/10/07 12:54:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated ham/trustedQSL to 2.0rc6a [mef 2013-10-07]
 	Updated www/p5-Mojolicious to 4.45 [wen 2013-10-07]
 	Removed databases/mergeant [joerg 2013-10-07]
+	Added net/freerdp version 1.0.2 [obache 2013-10-07]
