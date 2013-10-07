@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.982 2013/10/05 17:41:42 mspo Exp $
+# $NetBSD: Makefile,v 1.983 2013/10/07 12:55:08 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -137,6 +137,7 @@ SUBDIR+=	freeDiameter
 SUBDIR+=	freenet-tools
 SUBDIR+=	freeradius
 SUBDIR+=	freeradius2
+SUBDIR+=	freerdp
 SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	gated
