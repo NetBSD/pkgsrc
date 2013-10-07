@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2012/05/10 07:42:22 dholland Exp $
-
-SHA1 (mergeant-0.66.tar.bz2) = 96c9405935012a5cd14437e925127ed49c7c089e
-RMD160 (mergeant-0.66.tar.bz2) = f74253fb9f939da0409c8a63ddc696dd75c0c65c
-Size (mergeant-0.66.tar.bz2) = 998987 bytes
-SHA1 (patch-src_workspace-window_c) = 4ed286e251000b7f57f052e6437dd1cd7dd10737
