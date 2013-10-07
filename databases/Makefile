@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2013/10/06 20:04:42 joerg Exp $
+# $NetBSD: Makefile,v 1.442 2013/10/07 10:13:04 joerg Exp $
 
 COMMENT=	Databases
 
@@ -68,7 +68,6 @@ SUBDIR+=	lua-sqlite3
 SUBDIR+=	lua-tokyocabinet
 SUBDIR+=	luma
 SUBDIR+=	maatkit
-SUBDIR+=	mergeant
 SUBDIR+=	metakit-lib
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-workbench
