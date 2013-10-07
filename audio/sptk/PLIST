@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/19 05:10:11 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/10/07 13:06:04 obache Exp $
 SPTK/bin/acep
 SPTK/bin/acorr
 SPTK/bin/agcep
@@ -48,12 +48,15 @@ SPTK/bin/gnorm
 SPTK/bin/grlogsp
 SPTK/bin/grlogsp.sh
 SPTK/bin/grpdelay
+SPTK/bin/gseries
+SPTK/bin/gseries.sh
 SPTK/bin/gwave
 SPTK/bin/gwave.sh
 SPTK/bin/histogram
 SPTK/bin/idct
 SPTK/bin/ifft
 SPTK/bin/ifft2
+SPTK/bin/ifftr
 SPTK/bin/ignorm
 SPTK/bin/impulse
 SPTK/bin/imsvq
@@ -85,6 +88,7 @@ SPTK/bin/mgclsp2mgc.sh
 SPTK/bin/mglsadf
 SPTK/bin/minmax
 SPTK/bin/mlpg
+SPTK/bin/mlsacheck
 SPTK/bin/mlsadf
 SPTK/bin/msvq
 SPTK/bin/nan
@@ -111,7 +115,9 @@ SPTK/bin/sopr
 SPTK/bin/spec
 SPTK/bin/step
 SPTK/bin/swab
+SPTK/bin/symmetrize
 SPTK/bin/train
+SPTK/bin/transpose
 SPTK/bin/uels
 SPTK/bin/ulaw
 SPTK/bin/us
@@ -132,6 +138,17 @@ SPTK/bin/zcross
 SPTK/bin/zerodf
 SPTK/include/SPTK.h
 SPTK/lib/libSPTK.a
+SPTK/share/SPTK/lpfcoef.2to1
+SPTK/share/SPTK/lpfcoef.2to3f
+SPTK/share/SPTK/lpfcoef.2to3s
+SPTK/share/SPTK/lpfcoef.3to2
+SPTK/share/SPTK/lpfcoef.3to4
+SPTK/share/SPTK/lpfcoef.4to3
+SPTK/share/SPTK/lpfcoef.4to5
+SPTK/share/SPTK/lpfcoef.5to2dn
+SPTK/share/SPTK/lpfcoef.5to2up
+SPTK/share/SPTK/lpfcoef.5to7
+SPTK/share/SPTK/lpfcoef.5to8
 share/doc/sptk/README
 share/doc/sptk/SPTKexamples-${PKGVERSION}.pdf
 share/doc/sptk/SPTKref-${PKGVERSION}.pdf
