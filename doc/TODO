@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12607 2013/10/06 20:02:30 joerg Exp $
+$NetBSD: TODO,v 1.12608 2013/10/07 13:06:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
-	o sptk-3.6 [pkg/48279]
 	o sqwebmail-5.6.1
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
