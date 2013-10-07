@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3725 2013/10/07 12:54:03 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3726 2013/10/07 13:06:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5206,3 +5206,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.45 [wen 2013-10-07]
 	Removed databases/mergeant [joerg 2013-10-07]
 	Added net/freerdp version 1.0.2 [obache 2013-10-07]
+	Updated audio/sptk to 3.6 [obache 2013-10-07]
