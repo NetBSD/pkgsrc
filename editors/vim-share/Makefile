@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/10/03 11:43:46 asau Exp $
+# $NetBSD: Makefile,v 1.31 2013/10/07 19:26:28 morr Exp $
 
 PKGNAME=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}
 
@@ -16,7 +16,7 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} TOOLS_AWK=${TOOLS_AWK} TOOLS_SETENV=${TOOLS_S
 
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR}
 
-CHECK_INTERPRETER_SKIP+=	share/vim/vim73/doc/*.pl
-CHECK_INTERPRETER_SKIP+=	share/vim/vim73/tools/*.pl
+CHECK_INTERPRETER_SKIP+=	share/vim/vim74/doc/*.pl
+CHECK_INTERPRETER_SKIP+=	share/vim/vim74/tools/*.pl
 
 .include "../../mk/bsd.pkg.mk"
