@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3726 2013/10/07 13:06:20 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3727 2013/10/07 19:37:51 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5207,3 +5207,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed databases/mergeant [joerg 2013-10-07]
 	Added net/freerdp version 1.0.2 [obache 2013-10-07]
 	Updated audio/sptk to 3.6 [obache 2013-10-07]
+	Updated editors/vim-share to 7.4.052 [morr 2013-10-07]
+	Updated editors/vim-lang to 7.4.052 [morr 2013-10-07]
