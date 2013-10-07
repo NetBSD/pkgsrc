@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3723 2013/10/07 03:01:32 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3724 2013/10/07 10:12:39 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5200,5 +5200,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/libgda-mysql to 5.1.2 [joerg 2013-10-06]
 	Updated databases/libgda-postgres to 5.1.2 [joerg 2013-10-06]
 	Updated devel/anjuta to 3.10.0 [joerg 2013-10-06]
+	Removed devel/gnome-build [joerg 2013-10-06]
+	Removed databases/libgnomedb [joerg 2013-10-06]
 	Updated ham/trustedQSL to 2.0rc6a [mef 2013-10-07]
 	Updated www/p5-Mojolicious to 4.45 [wen 2013-10-07]
+	Removed databases/mergeant [joerg 2013-10-07]
