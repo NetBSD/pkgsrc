@@ -1,6 +1,8 @@
-$NetBSD: patch-common_unicode_platform.h,v 1.3 2012/11/07 20:59:51 adam Exp $
+$NetBSD: patch-common_unicode_platform.h,v 1.4 2013/10/07 15:58:48 ryoon Exp $
 
---- common/unicode/platform.h.orig	2012-11-05 17:14:34.000000000 +0000
+* For OpenBSD, include machine/endian.h.
+
+--- common/unicode/platform.h.orig	2013-05-23 20:01:56.000000000 +0000
 +++ common/unicode/platform.h
 @@ -144,7 +144,7 @@
  #   include <android/api-level.h>
@@ -11,12 +13,16 @@ $NetBSD: patch-common_unicode_platform.h,v 1.3 2012/11/07 20:59:51 adam Exp $
  #   define U_PLATFORM U_PF_BSD
  #elif defined(sun) || defined(__sun)
      /* Check defined(__SVR4) || defined(__svr4__) to distinguish Solaris from SunOS? */
-@@ -381,6 +381,13 @@
+@@ -381,6 +381,17 @@
  #   define U_IS_BIG_ENDIAN 1
  #elif defined(__LITTLE_ENDIAN__) || defined(_LITTLE_ENDIAN)
  #   define U_IS_BIG_ENDIAN 0
 +#elif U_PLATFORM == U_PF_BSD
++#if defined(__OpenBSD__)
++#include <machine/endian.h>
++#else
 +#include <sys/endian.h>
++#endif
 +#if _BYTE_ORDER == _LITTLE_ENDIAN
 +#   define U_IS_BIG_ENDIAN 0
 +#else
