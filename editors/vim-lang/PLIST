@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/06/13 21:41:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/10/07 19:26:28 morr Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -47,6 +47,14 @@ man/it/man1/view.1
 man/it/man1/vim.1
 man/it/man1/vimdiff.1
 man/it/man1/vimtutor.1
+man/ja/man1/evim.1
+man/ja/man1/ex.1
+man/ja/man1/rview.1
+man/ja/man1/rvim.1
+man/ja/man1/view.1
+man/ja/man1/vim.1
+man/ja/man1/vimdiff.1
+man/ja/man1/vimtutor.1
 man/pl.ISO8859-2/man1/evim.1
 man/pl.ISO8859-2/man1/ex.1
 man/pl.ISO8859-2/man1/rview.1
