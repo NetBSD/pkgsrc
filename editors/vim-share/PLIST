@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/06/12 14:53:56 morr Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/10/07 19:26:28 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -103,11 +103,13 @@ share/vim/${VIM_SUBDIR}/compiler/modelsim_vcom.vim
 share/vim/${VIM_SUBDIR}/compiler/msbuild.vim
 share/vim/${VIM_SUBDIR}/compiler/msvc.vim
 share/vim/${VIM_SUBDIR}/compiler/neato.vim
+share/vim/${VIM_SUBDIR}/compiler/ocaml.vim
 share/vim/${VIM_SUBDIR}/compiler/onsgmls.vim
 share/vim/${VIM_SUBDIR}/compiler/pbx.vim
 share/vim/${VIM_SUBDIR}/compiler/perl.vim
 share/vim/${VIM_SUBDIR}/compiler/php.vim
 share/vim/${VIM_SUBDIR}/compiler/pyunit.vim
+share/vim/${VIM_SUBDIR}/compiler/rake.vim
 share/vim/${VIM_SUBDIR}/compiler/rspec.vim
 share/vim/${VIM_SUBDIR}/compiler/rst.vim
 share/vim/${VIM_SUBDIR}/compiler/ruby.vim
@@ -334,6 +336,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/htmldjango.vim
 share/vim/${VIM_SUBDIR}/ftplugin/indent.vim
 share/vim/${VIM_SUBDIR}/ftplugin/initex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ishd.vim
+share/vim/${VIM_SUBDIR}/ftplugin/j.vim
 share/vim/${VIM_SUBDIR}/ftplugin/java.vim
 share/vim/${VIM_SUBDIR}/ftplugin/javascript.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jsp.vim
@@ -422,6 +425,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/tcsh.vim
 share/vim/${VIM_SUBDIR}/ftplugin/terminfo.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/treetop.vim
+share/vim/${VIM_SUBDIR}/ftplugin/tt2html.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevperm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevrules.vim
@@ -489,6 +493,7 @@ share/vim/${VIM_SUBDIR}/indent/html.vim
 share/vim/${VIM_SUBDIR}/indent/htmldjango.vim
 share/vim/${VIM_SUBDIR}/indent/idlang.vim
 share/vim/${VIM_SUBDIR}/indent/ishd.vim
+share/vim/${VIM_SUBDIR}/indent/j.vim
 share/vim/${VIM_SUBDIR}/indent/java.vim
 share/vim/${VIM_SUBDIR}/indent/javascript.vim
 share/vim/${VIM_SUBDIR}/indent/jsp.vim
@@ -866,6 +871,7 @@ share/vim/${VIM_SUBDIR}/syntax/ipfilter.vim
 share/vim/${VIM_SUBDIR}/syntax/ishd.vim
 share/vim/${VIM_SUBDIR}/syntax/iss.vim
 share/vim/${VIM_SUBDIR}/syntax/ist.vim
+share/vim/${VIM_SUBDIR}/syntax/j.vim
 share/vim/${VIM_SUBDIR}/syntax/jal.vim
 share/vim/${VIM_SUBDIR}/syntax/jam.vim
 share/vim/${VIM_SUBDIR}/syntax/jargon.vim
@@ -992,6 +998,7 @@ share/vim/${VIM_SUBDIR}/syntax/pilrc.vim
 share/vim/${VIM_SUBDIR}/syntax/pine.vim
 share/vim/${VIM_SUBDIR}/syntax/pinfo.vim
 share/vim/${VIM_SUBDIR}/syntax/plaintex.vim
+share/vim/${VIM_SUBDIR}/syntax/pli.vim
 share/vim/${VIM_SUBDIR}/syntax/plm.vim
 share/vim/${VIM_SUBDIR}/syntax/plp.vim
 share/vim/${VIM_SUBDIR}/syntax/plsql.vim
@@ -1008,6 +1015,7 @@ share/vim/${VIM_SUBDIR}/syntax/procmail.vim
 share/vim/${VIM_SUBDIR}/syntax/progress.vim
 share/vim/${VIM_SUBDIR}/syntax/prolog.vim
 share/vim/${VIM_SUBDIR}/syntax/promela.vim
+share/vim/${VIM_SUBDIR}/syntax/proto.vim
 share/vim/${VIM_SUBDIR}/syntax/protocols.vim
 share/vim/${VIM_SUBDIR}/syntax/psf.vim
 share/vim/${VIM_SUBDIR}/syntax/ptcap.vim
@@ -1153,6 +1161,11 @@ share/vim/${VIM_SUBDIR}/syntax/udevrules.vim
 share/vim/${VIM_SUBDIR}/syntax/uil.vim
 share/vim/${VIM_SUBDIR}/syntax/updatedb.vim
 share/vim/${VIM_SUBDIR}/syntax/upstart.vim
+share/vim/${VIM_SUBDIR}/syntax/upstreamdat.vim
+share/vim/${VIM_SUBDIR}/syntax/upstreaminstalllog.vim
+share/vim/${VIM_SUBDIR}/syntax/upstreamlog.vim
+share/vim/${VIM_SUBDIR}/syntax/usserverlog.vim
+share/vim/${VIM_SUBDIR}/syntax/usw2kagtlog.vim
 share/vim/${VIM_SUBDIR}/syntax/valgrind.vim
 share/vim/${VIM_SUBDIR}/syntax/vb.vim
 share/vim/${VIM_SUBDIR}/syntax/vera.vim
