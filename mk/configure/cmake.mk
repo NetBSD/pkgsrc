@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.9 2013/02/22 22:45:12 markd Exp $
+# $NetBSD: cmake.mk,v 1.10 2013/10/08 12:03:53 obache Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -28,6 +28,13 @@ CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=FALSE
 CMAKE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${PREFIX}/lib
 CMAKE_ARGS+=	-DOPENAL_INCLUDE_DIR:PATH=/System/Library/Frameworks/OpenAL.framework/Headers
 CMAKE_ARGS+=	-DOPENGL_INCLUDE_DIR:PATH=/System/Library/Frameworks/OpenGL.framework/Headers
+.endif
+CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}
+.if defined(INFO_FILES)
+CMAKE_ARGS+=	-DCMAKE_INSTALL_INFODIR:PATH=${PKGINFODIR}
+.endif
+.if defined(USE_PKGLOCALEDIR) && empty(USE_PKGLOCALEDIR:M[nN][oO])
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR:PATH=${PKGLOCALEDIR}/locale
 .endif
 
 CMAKE_MODULE_PATH_OVERRIDE+=	CMakeLists.txt
