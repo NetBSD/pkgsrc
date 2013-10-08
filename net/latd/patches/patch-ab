@@ -1,32 +1,41 @@
-$NetBSD: patch-ab,v 1.3 2011/11/25 22:14:17 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2013/10/08 19:46:15 shattered Exp $
 
 --- interfaces-bpf.cc.orig	2003-03-17 09:32:30.000000000 +0000
 +++ interfaces-bpf.cc
-@@ -15,6 +15,7 @@
+@@ -15,17 +15,19 @@
      GNU General Public License for more details.
  ******************************************************************************/
  
+-#include <unistd.h>
+-#include <stdio.h>
+-#include <fcntl.h>
 +#include <assert.h>
- #include <unistd.h>
- #include <stdio.h>
- #include <fcntl.h>
-@@ -25,6 +26,8 @@
- #include <sys/time.h>
- #include <sys/socket.h>
- #include <sys/uio.h>
+ #include <errno.h>
++#include <fcntl.h>
++#include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
+ #include <syslog.h>
++#include <unistd.h>
+ #include <sys/ioctl.h>
+-#include <sys/types.h>
+-#include <sys/time.h>
+ #include <sys/socket.h>
++#include <sys/time.h>
++#include <sys/types.h>
+ #include <sys/uio.h>
+-#include <assert.h>
  
  #include <net/if.h>
  #include <net/bpf.h>
-@@ -383,7 +386,11 @@ int BPFInterfaces::send_packet(int ifn, 
+@@ -384,7 +386,11 @@ int BPFInterfaces::send_packet(int ifn, 
    /* write this packet: */
    iov[0].iov_base = (char* )&ether_packet;
    iov[0].iov_len = sizeof(ether_packet);
 +#if defined(__DragonFly__)
-+  iov[1].iov_base = (char *)data;
+   iov[1].iov_base = (char *)data;
 +#else
-   iov[1].iov_base = data;
++  iov[1].iov_base = data;
 +#endif
    iov[1].iov_len = len;
    if (writev(_latd_bpf_fd, iov, 2) < 0) {
