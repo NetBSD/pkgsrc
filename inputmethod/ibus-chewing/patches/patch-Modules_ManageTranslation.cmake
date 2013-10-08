@@ -1,4 +1,4 @@
-$NetBSD: patch-Modules_ManageTranslation.cmake,v 1.1 2013/09/20 11:51:44 obache Exp $
+$NetBSD: patch-Modules_ManageTranslation.cmake,v 1.2 2013/10/08 12:06:23 obache Exp $
 
 * PKGLOCALEDIR support
 
@@ -9,7 +9,7 @@ $NetBSD: patch-Modules_ManageTranslation.cmake,v 1.1 2013/09/20 11:51:44 obache 
  
  		#MESSAGE("_absPoFile=${_absPoFile} _absPotDir=${_absPotDir} _lang=${_lang} curr_bin=${CMAKE_CURRENT_BINARY_DIR}")
 -		INSTALL(FILES ${_absGmoFile} DESTINATION share/locale/${_locale}/LC_MESSAGES RENAME ${_potBasename}.mo)
-+		INSTALL(FILES ${_absGmoFile} DESTINATION @PKGLOCALEDIR@/locale/${_locale}/LC_MESSAGES RENAME ${_potBasename}.mo)
++		INSTALL(FILES ${_absGmoFile} DESTINATION ${CMAKE_INSTALL_LOCALEDIR}/${_locale}/LC_MESSAGES RENAME ${_potBasename}.mo)
  		LIST(APPEND _absGmoFileList ${_absGmoFile})
  		LIST(APPEND _absPoFileList ${_absPoFile})
  	    ENDFOREACH(_locale ${_localeList})

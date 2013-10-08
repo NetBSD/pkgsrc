@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/09/20 12:19:02 obache Exp $
+# $NetBSD: Makefile,v 1.30 2013/10/08 12:06:23 obache Exp $
 #
 
 DISTNAME=	ibus-chewing-1.4.3-Source
@@ -23,12 +23,6 @@ TOOLS_NOOP+=		msgmerge xgettext
 GCONF_SCHEMAS=	ibus-chewing.schemas
 CMAKE_ARGS+=	-DLIBEXEC_DIR=${PREFIX}/libexec
 CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
-
-SUBST_CLASSES+=		localedir
-SUBST_STAGE.localedir=	pre-configure
-SUBST_VARS.localedir=	PREFIX PKGLOCALEDIR
-SUBST_FILES.localedir+=	Modules/ManageTranslation.cmake
-SUBST_FILES.localedir+=	src/main.c
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
