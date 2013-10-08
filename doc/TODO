@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12609 2013/10/07 19:37:51 morr Exp $
+$NetBSD: TODO,v 1.12610 2013/10/08 13:25:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o amaya-11.4.4 [wip]
 	o amsn-0.98.4
 	o angband-3.2
-	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o anope-1.8.7
 	o ansible-1.3.2 [pkg/48248]
 	o antiright-8.6
@@ -505,7 +504,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.2.2 [etm successor]
+	o etm2-2.2.3 [etm successor]
 	o ettercap-0.7.6
 	o evince-3.8.3
 	o evolution-3.0.0
@@ -529,7 +528,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o flpsed-0.4.4
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.5
-	o fotoxx-13.09.1
+	o fotoxx-13.10
 	o fox-1.6.41
 	o freeciv-2.4.0
 	o freefont-20120503
@@ -556,8 +555,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdal-1.9.2
 	o gdb-7.6 [wip]
 	o gdeskcal-1.01
-	o gdl-2.30.1 [GNOME 2.32]
-	o gdl-3.10.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
 	o gdsreader-0.3.2
@@ -624,6 +621,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groff-1.22.2
 	o gss-1.0.2
 	o gstreamer-1.2
+	o gtar-1.27
 	o gthumb-3.2.3
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -884,6 +882,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.15
 	o php-tiki6-6.10
 	o php-tt-rss-1.10
+	o phpmyadmin-4.0.8
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1019,6 +1018,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o sudo-1.8.6p8
+	o swapd-1.0.5
 	o swatch-3.2.3
 	o swfdec-gnome-2.30.1
 	o synergy-1.4.12 [pkg/48141]
@@ -1101,8 +1101,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o webkit-gtk-2.2.0
-	o webmin-1.650
+	o webmin-1.660
 	o websvn-2.3.2
+	o weechat-0.4.2
 	o windowlab-1.40
 	o wine-1.6.0 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.7.3 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
