@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3732 2013/10/08 15:24:35 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.3733 2013/10/08 19:51:40 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5215,3 +5215,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.6 [adam 2013-10-08]
 	Updated mail/dovecot2-pigeonhole to 0.4.2 [adam 2013-10-08]
 	Added security/py-hsm version 1.0.4g [pettai 2013-10-08]
+	Updated mail/proxsmtp to 1.10 [shattered 2013-10-08]
+	Updated net/latd to 1.21 [shattered 2013-10-08]
