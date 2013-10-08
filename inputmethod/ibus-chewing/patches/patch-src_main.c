@@ -1,4 +1,4 @@
-$NetBSD: patch-src_main.c,v 1.2 2013/09/20 12:19:02 obache Exp $
+$NetBSD: patch-src_main.c,v 1.3 2013/10/08 12:06:23 obache Exp $
 
 * PKGLOCALEDIR support
 
@@ -9,7 +9,7 @@ $NetBSD: patch-src_main.c,v 1.2 2013/09/20 12:19:02 obache Exp $
      /* Init i18n messages */
      setlocale (LC_ALL, "zh_TW.utf8");
 -    bindtextdomain(quote_me(PROJECT_NAME), quote_me(DATA_DIR) "/locale");
-+    bindtextdomain(quote_me(PROJECT_NAME), "@PREFIX@/@PKGLOCALEDIR@/locale");
++    bindtextdomain(quote_me(PROJECT_NAME), quote_me(LOCALE_DIR));
      textdomain(quote_me(PROJECT_NAME));
  
      context = g_option_context_new ("- ibus chewing engine component");
