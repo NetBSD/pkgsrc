@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3729 2013/10/08 10:45:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3730 2013/10/08 12:55:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5211,3 +5211,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/vim-lang to 7.4.052 [morr 2013-10-07]
 	Updated databases/shared-mime-info to 1.2nb1 [wiz 2013-10-08]
 	Updated x11/xbacklight to 1.2.1 [wiz 2013-10-08]
+	Updated net/cclive to 0.7.16nb1 [wiz 2013-10-08]
