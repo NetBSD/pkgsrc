@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/09/30 21:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/08 12:55:22 wiz Exp $
 
 DISTNAME=		cclive-0.7.16
+PKGREVISION=		1
 CATEGORIES=		net multimedia www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 EXTRACT_SUFX=		.tar.xz
@@ -9,6 +10,8 @@ MAINTAINER=		zecrazytux@zecrazytux.net
 HOMEPAGE=		http://cclive.sourceforge.net/
 COMMENT=		Command line video extraction tool for user-uploaded video hosts
 LICENSE=		gnu-gpl-v3
+
+DEPENDS+=		libquvi-scripts>=0.4.0:../../net/libquvi-scripts
 
 USE_LANGUAGES=		c++ c
 USE_TOOLS+=		pkg-config
