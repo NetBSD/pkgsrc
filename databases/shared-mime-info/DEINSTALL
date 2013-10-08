@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.4 2011/10/29 13:20:54 marino Exp $
+# $NetBSD: DEINSTALL,v 1.5 2013/10/08 10:40:21 wiz Exp $
 
 MIMEDB_PATH="@MIMEDB_PATH@"
 
@@ -6,15 +6,7 @@ case ${STAGE} in
 POST-DEINSTALL)
 	(cd ${MIMEDB_PATH} && \
 	 ${LS} . | ${GREP} -v '^packages$' | ${XARGS} ${RM} -rf)
-	if [ -d ${MIMEDB_PATH}/packages ]; then
-	  if [ -n `${LS} -A ${MIMEDB_PATH}/packages` ]; then
-	    ${RMDIR} ${MIMEDB_PATH}/packages
-	  fi
-	fi
-	if [ -d ${MIMEDB_PATH} ]; then
-	  if [ -n `${LS} -A ${MIMEDB_PATH}` ]; then
-	    ${RMDIR} ${MIMEDB_PATH}
-	  fi
-	fi
+	${RMDIR} ${MIMEDB_PATH}/packages 2>/dev/null || ${TRUE}
+	${RMDIR} ${MIMEDB_PATH} 2>/dev/null || ${TRUE}
 	;;
 esac
