@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.7 2011/11/25 22:14:17 joerg Exp $
+$NetBSD: distinfo,v 1.8 2013/10/08 19:46:15 shattered Exp $
 
-SHA1 (latd-1.18.tar.gz) = a7cecdb97507f485e726ea4c2fef0a59ad3adbae
-RMD160 (latd-1.18.tar.gz) = a0be3bd71b76c6a07c47fc2ad863526303d365bf
-Size (latd-1.18.tar.gz) = 233882 bytes
+SHA1 (latd-1.21.tar.gz) = 172e3f844cd7d1301426111f0f71dd70a3d149f7
+RMD160 (latd-1.21.tar.gz) = 9d19461578d206dfbd6aaa3d26a25de20ed76438
+Size (latd-1.21.tar.gz) = 241045 bytes
 SHA1 (patch-aa) = 418d4ba46aab3259af771673ccfde08274bee8af
-SHA1 (patch-ab) = 2576c94b699f15690ffeb2596a1d7d9292c67f9d
+SHA1 (patch-ab) = 861d49314a31688b9683dcfbf036207c7633bdaf
 SHA1 (patch-ac) = c078151ba47ef878937e9cf818a3d0ad6dd3be7b
 SHA1 (patch-ad) = d453bf076aa8368313530718095b77cafe1b554e
 SHA1 (patch-ae) = 931842733d2166c0fd29b5f0d0772c44f1d79fd3
 SHA1 (patch-af) = 3b2f723ec163d925dee42b7d6597f8219ebe22df
-SHA1 (patch-ag) = 46a4d98c15bfef8a1fa6dab04b23be3fa1f4b42c
+SHA1 (patch-ag) = 9db4cbd98d852c7adde7ebfda20871f76e0bd82a
 SHA1 (patch-circuit.cc) = 4f20d6247bcc450d6462554c01e09a2ffa989719
 SHA1 (patch-connection.h) = 2762cebe59c9e3af1fa1bd9d96cf923ad563c22d
 SHA1 (patch-llogin.cc) = 37e81f5df945c956169c70ce4f35b77734bce8a0

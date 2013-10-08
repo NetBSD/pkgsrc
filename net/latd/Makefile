@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:32 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/08 19:46:15 shattered Exp $
 #
 
-DISTNAME=	latd-1.18
+DISTNAME=	latd-1.21
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-decnet/}
 
@@ -18,6 +18,6 @@ USE_LANGUAGES=	c c++
 CPPFLAGS+=	-DPREFIX="\"${PREFIX}\""
 
 EGDIR=		${PREFIX}/share/examples/latd
-CONF_FILES=	${EGDIR}/latd.conf ${PKG_SYSCONFDIR}/latd.conf
+CONF_FILES=	${EGDIR}/latd.conf.sample ${PKG_SYSCONFDIR}/latd.conf
 
 .include "../../mk/bsd.pkg.mk"
