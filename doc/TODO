@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12610 2013/10/08 13:25:48 wiz Exp $
+$NetBSD: TODO,v 1.12611 2013/10/08 13:57:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -466,8 +466,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dhid-5.3
 	o digikam-3.4.0
 	o doclifter-2.13
-	o dovecot-2.2.6
-	o dovecot2-pigeonhole-0.4.2
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o easymenu-0.7.2p1
