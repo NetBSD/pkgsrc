@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/10/29 05:06:57 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/10/08 10:45:06 wiz Exp $
 
-DISTNAME=	xbacklight-1.2.0
+DISTNAME=	xbacklight-1.2.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Adjust backlight brightness using RandR extension
+LICENSE=	x11
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
