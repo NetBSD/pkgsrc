@@ -1,0 +1,6 @@
+This is the Python package to talk to a YubiHSM.
+
+The YubiHSM is Yubico's take on the Hardware Security Module (HSM),
+designed for protecting secrets on authentication servers, including
+cryptographic keys and passwords, at unmatched simplicity and low
+cost.
