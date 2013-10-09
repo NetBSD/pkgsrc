@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3734 2013/10/09 08:53:38 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3735 2013/10/09 09:21:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/proxsmtp to 1.10 [shattered 2013-10-08]
 	Updated net/latd to 1.21 [shattered 2013-10-08]
 	Added print/py-PDF2 version 1.18 [wiz 2013-10-09]
+	Added print/py-poppler version 0.12.1 [wiz 2013-10-09]
