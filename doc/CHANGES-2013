@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3745 2013/10/09 15:44:34 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3746 2013/10/09 15:57:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.19 [taca 2013-10-09]
 	Updated devel/p5-Throwable to 0.200008nb1 [wen 2013-10-09]
 	Updated editors/OmegaT to 3.0.5 [ryoon 2013-10-09]
+	Updated fonts/umefont-ttf to 0.456 [ryoon 2013-10-09]
