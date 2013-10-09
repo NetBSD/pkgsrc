@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3742 2013/10/09 14:44:59 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3743 2013/10/09 14:48:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5226,3 +5226,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/mdds to 0.9.0nb1 [ryoon 2013-10-09]
 	Updated www/fengoffice to 2.3.2.1 [taca 2013-10-09]
 	Updated misc/libreoffice4 to 4.1.2.3 [ryoon 2013-10-09]
+	Updated net/samba to 3.6.19 [taca 2013-10-09]
