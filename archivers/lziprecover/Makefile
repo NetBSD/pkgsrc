@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/09 20:35:10 wiz Exp $
 
-DISTNAME=	lziprecover-1.13
+DISTNAME=	lziprecover-1.15
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/
 
