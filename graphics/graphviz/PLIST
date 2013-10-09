@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2013/09/15 01:17:14 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.45 2013/10/09 18:30:22 sno Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -68,7 +68,7 @@ include/graphviz/xdot.h
 ${PLIST.guile}lib/graphviz/guile/libgv_guile.la
 lib/graphviz/libgvplugin_core.la
 lib/graphviz/libgvplugin_dot_layout.la
-lib/graphviz/libgvplugin_gd.la
+${PLIST.gd}lib/graphviz/libgvplugin_gd.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
 ${PLIST.ghostscript}lib/graphviz/libgvplugin_gs.la
