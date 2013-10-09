@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2013/09/02 19:50:59 adam Exp $
+# $NetBSD: Makefile,v 1.43 2013/10/09 17:39:07 wiz Exp $
 
 DISTNAME=	guile-gnome-platform-2.16.1
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.gnu.org/gnu/guile-gnome/guile-gnome-platform/
 

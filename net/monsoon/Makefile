@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/09/02 19:51:21 adam Exp $
+# $NetBSD: Makefile,v 1.40 2013/10/09 17:39:15 wiz Exp $
 
 DISTNAME=	monsoon-0.20
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	net
 MASTER_SITES=	http://www.monsoon-project.org/jaws/data/files/
 
