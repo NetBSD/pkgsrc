@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/10/09 17:38:26 wiz Exp $
 include/libmng.h
 include/libmng_conf.h
 include/libmng_types.h
 lib/libmng.la
+lib/pkgconfig/libmng.pc
 man/man3/libmng.3
 man/man5/jng.5
 man/man5/mng.5
