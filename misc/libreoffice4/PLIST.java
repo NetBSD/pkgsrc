@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.2 2013/10/09 14:39:56 ryoon Exp $
 ${PKGNAME}/program/classes/ScriptFramework.jar
 ${PKGNAME}/program/classes/ScriptProviderForBeanShell.jar
 ${PKGNAME}/program/classes/ScriptProviderForJava.jar
@@ -2467,15 +2467,15 @@ ${PKGNAME}/share/registry/reportbuilder.xcd
 ${PKGNAME}/share/template/common/wizard/report/default.otr
 ${PKGNAME}/ure/bin/javaldx
 ${PKGNAME}/ure/lib/JREProperties.class
-${PKGNAME}/ure/lib/javaloader.uno.so
-${PKGNAME}/ure/lib/javavm.uno.so
+${PKGNAME}/ure/lib/libjavaloaderlo.so
+${PKGNAME}/ure/lib/libjavavmlo.so
 ${PKGNAME}/ure/lib/libjava_uno.so
 ${PKGNAME}/ure/lib/libjpipe.so
 ${PKGNAME}/ure/lib/libjuh.so
 ${PKGNAME}/ure/lib/libjuhx.so
-${PKGNAME}/ure/lib/libjvmaccess.so
-${PKGNAME}/ure/lib/libjvmfwk.so
-${PKGNAME}/ure/lib/libsunjavaplugin.so
+${PKGNAME}/ure/lib/libjvmaccesslo.so
+${PKGNAME}/ure/lib/libjvmfwklo.so
+${PKGNAME}/ure/lib/libsunjavapluginlo.so
 ${PKGNAME}/ure/share/java/java_uno.jar
 ${PKGNAME}/ure/share/java/juh.jar
 ${PKGNAME}/ure/share/java/jurt.jar
