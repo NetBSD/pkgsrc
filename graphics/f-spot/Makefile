@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2013/09/02 19:51:07 adam Exp $
+# $NetBSD: Makefile,v 1.59 2013/10/09 17:39:10 wiz Exp $
 #
 
 DISTNAME=	f-spot-0.8.2
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/f-spot/0.8/}
 EXTRACT_SUFX=	.tar.bz2

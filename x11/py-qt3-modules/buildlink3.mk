@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2013/06/06 12:53:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2013/10/09 17:39:03 wiz Exp $
 
 BUILDLINK_TREE+=	pyqt3-mod
 
@@ -8,7 +8,7 @@ PYQT3_MOD_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pyqt3-mod+=	${PYPKGPREFIX}-qt3-modules>=3.11
-BUILDLINK_ABI_DEPENDS.pyqt3-mod+=	${PYPKGPREFIX}-qt3-modules>=3.18.1nb14
+BUILDLINK_ABI_DEPENDS.pyqt3-mod+=	${PYPKGPREFIX}-qt3-modules>=3.18.1nb15
 BUILDLINK_PKGSRCDIR.pyqt3-mod?=	../../x11/py-qt3-modules
 
 BUILDLINK_LIBDIRS.pyqt3-mod+=	${PYSITELIB}

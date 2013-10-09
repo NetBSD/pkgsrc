@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/06/06 12:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/10/09 17:39:15 wiz Exp $
 
 DISTNAME=	kiax-0.8.51-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	comms net audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kiax/}
 
