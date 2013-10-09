@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3735 2013/10/09 09:21:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3736 2013/10/09 09:36:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/latd to 1.21 [shattered 2013-10-08]
 	Added print/py-PDF2 version 1.18 [wiz 2013-10-09]
 	Added print/py-poppler version 0.12.1 [wiz 2013-10-09]
+	Updated net/arping to 2.13 [adam 2013-10-09]
