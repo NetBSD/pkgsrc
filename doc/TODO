@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12617 2013/10/09 17:38:42 wiz Exp $
+$NetBSD: TODO,v 1.12618 2013/10/09 20:34:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -760,7 +760,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lsh-2.1
 	o lwm-1.2.3
 	o lyx-2.0.6
-	o lzip-1.15
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o maildrop-2.6.0
