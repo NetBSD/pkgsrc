@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/09/02 19:50:55 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/10/09 11:39:28 obache Exp $
 #
 
 DISTNAME=	openbabel-2.3.0
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR:Q}
 
 .include "options.mk"
 
