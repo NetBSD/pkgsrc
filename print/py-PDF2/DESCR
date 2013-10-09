@@ -1,0 +1,3 @@
+PyPDF2 is a library for handling PDF files for python.  It is an
+enhanced version of pyPdf, supporting more PDF files encountered
+in the wild with better error handling.

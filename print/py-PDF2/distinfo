@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/10/09 08:53:07 wiz Exp $
+
+SHA1 (PyPDF2-1.18.tar.gz) = 49df3e3361730dd9f572de0797f4bbe1e1bd26e4
+RMD160 (PyPDF2-1.18.tar.gz) = fab85590426faddcd15c1854b44cfd1d054cbc1b
+Size (PyPDF2-1.18.tar.gz) = 49008 bytes
