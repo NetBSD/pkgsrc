@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2013/09/02 19:51:29 adam Exp $
+# $NetBSD: Makefile,v 1.35 2013/10/09 17:39:19 wiz Exp $
 #
 
 DISTNAME=	netsurf-1.2-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	www
 MASTER_SITES=	http://www.netsurf-browser.org/downloads/releases/
 

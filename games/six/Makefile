@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2013/06/06 12:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/10/09 17:39:09 wiz Exp $
 #
 
 DISTNAME=	six-0.5.3
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	games
 MASTER_SITES=	http://six.retes.hu/download/
 
