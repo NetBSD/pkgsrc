@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3748 2013/10/09 20:34:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3749 2013/10/09 20:35:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5232,3 +5232,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/umefont-ttf to 0.456 [ryoon 2013-10-09]
 	Updated graphics/mng to 2.0.2 [wiz 2013-10-09]
 	Updated archivers/lzip to 1.15 [wiz 2013-10-09]
+	Updated archivers/lziprecover to 1.15 [wiz 2013-10-09]
