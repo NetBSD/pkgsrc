@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2013/09/03 05:24:50 richard Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/09 14:29:47 ryoon Exp $
 #
 
 DISTNAME=	mdds_0.9.0
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://multidimalgorithm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +24,9 @@ do-build:
 do-install:
 	for i in ${WRKSRC}/include/mdds/*.*; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
+	done
+	for i in ${WRKSRC}/include/mdds/compat/*.*; do \
+		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds/compat; \
 	done
 	rm -f ${DESTDIR}${PREFIX}/include/mdds/*orig
 	for i in ${WRKSRC}/include/mdds/hash_container/*.*; do \
