@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2013/06/06 12:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2013/10/09 17:39:09 wiz Exp $
 #
 
 .include "../../games/nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-qt-${NETHACK_VERSION}
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES+=		x11
 
 MAKE_JOBS_SAFE=		no
