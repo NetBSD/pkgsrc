@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/09 14:39:56 ryoon Exp $
 
-VER=		4.1.1.2
+VER=		4.1.2.3
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.1/
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -13,7 +12,7 @@ HOMEPAGE=	http://www.libreoffice.org/
 COMMENT=	Office productivity suite, 4.x branch
 LICENSE=	gnu-lgpl-v3
 
-# With -O2, when settings window is opened, soffice.bin crashes.
+# With -O2, when preference window is opened, soffice.bin crashes with SIGFPE.
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
 BUILDLINK_TRANSFORM+=	rename:-O2:-O
