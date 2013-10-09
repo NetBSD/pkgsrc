@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2012/12/28 03:03:08 dholland Exp $
+$NetBSD: patch-aa,v 1.9 2013/10/09 10:22:55 roy Exp $
 
 - configure paths and programs for pkgsrc
 - don't install the executable sticky as that's often no longer allowed
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.8 2012/12/28 03:03:08 dholland Exp $
  # file. To use it, link against the curses library.
  #
 -#TERMLIB	= curses
-+TERMLIB	= curses
++TERMLIB	?= curses
  #
  # You may also get terminfo access by using the ncurses library.
  #
