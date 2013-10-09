@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 11:43:31 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/10/09 08:55:44 roy Exp $
 #
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -18,5 +18,5 @@ INSTALL_TARGET=		install man-install
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
