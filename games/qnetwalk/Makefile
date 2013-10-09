@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/06/06 12:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/10/09 17:39:09 wiz Exp $
 #
 
 DISTNAME=	qnetwalk-1.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	x11 games
 MASTER_SITES=	http://qt.osdn.org.ua/
 
