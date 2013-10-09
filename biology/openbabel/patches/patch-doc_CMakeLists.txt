@@ -1,4 +1,4 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.2 2013/04/01 08:39:13 sbd Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.3 2013/10/09 11:39:28 obache Exp $
 
 Fix man path.
 
@@ -7,7 +7,7 @@ Fix man path.
 @@ -1,5 +1,5 @@
  file(GLOB man_1 *.1)
 -install(FILES ${man_1} DESTINATION share/man/man1)
-+install(FILES ${man_1} DESTINATION ${PKGMANDIR}/man1)
++install(FILES ${man_1} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
  
  OPTION(BUILD_DOCS "Build Open Babel documentation" OFF)
  IF(BUILD_DOCS)
