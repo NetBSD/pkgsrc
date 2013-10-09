@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/10/04 14:44:46 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/10/09 14:39:56 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -15,9 +15,6 @@ Size (libreoffice/08c85a6d6d793daee14e10e22eefdc4b-mdds_0.8.1.tar.bz2) = 138431 
 SHA1 (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = 935bf5d6748b465d2d540884af67fb5dfd59fc4a
 RMD160 (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = d4dd5ad660ba5747de8e65892583427014aebaa2
 Size (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = 1326668 bytes
-SHA1 (libreoffice/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip) = 7168b0f40aa5c72267899601c116d2348d2f56ec
-RMD160 (libreoffice/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip) = 8b25da02fbc2702a43cc88b0af8eaeb41c0f75a0
-Size (libreoffice/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip) = 3519470 bytes
 SHA1 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 28d4ec24dfda4eb41b6ceaa0cfcfca41b578f3b3
 RMD160 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = e99bb5017c29657c3303d8810e21bf02d737c345
 Size (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 315122 bytes
@@ -144,18 +141,18 @@ Size (libreoffice/libmspub-0.0.6.tar.bz2) = 433629 bytes
 SHA1 (libreoffice/libmwaw-0.1.10.tar.bz2) = afe0a0fc4fda5d04565b2a9d55701b373c00ed80
 RMD160 (libreoffice/libmwaw-0.1.10.tar.bz2) = 761f78887870a19a83bf35a824650272b844c73d
 Size (libreoffice/libmwaw-0.1.10.tar.bz2) = 901314 bytes
-SHA1 (libreoffice/libreoffice-4.1.1.2.tar.xz) = 421dfefcf2530dffdba2684c6c03b91551fd4e05
-RMD160 (libreoffice/libreoffice-4.1.1.2.tar.xz) = 894654e5a4c1d025ff07eab701ced2ab50235ba3
-Size (libreoffice/libreoffice-4.1.1.2.tar.xz) = 121747824 bytes
-SHA1 (libreoffice/libreoffice-dictionaries-4.1.1.2.tar.xz) = 544dc7a1cf9e3343d5fed11fd284763604145472
-RMD160 (libreoffice/libreoffice-dictionaries-4.1.1.2.tar.xz) = 4954622c28fecb261efb6525dc089bc20782af89
-Size (libreoffice/libreoffice-dictionaries-4.1.1.2.tar.xz) = 36342380 bytes
-SHA1 (libreoffice/libreoffice-help-4.1.1.2.tar.xz) = 6d264d6c311dd9be670920dcc5b34f7bfafa904d
-RMD160 (libreoffice/libreoffice-help-4.1.1.2.tar.xz) = d35781bcdf5262831ddc679d86a62014cf1af279
-Size (libreoffice/libreoffice-help-4.1.1.2.tar.xz) = 1847556 bytes
-SHA1 (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = 8e19fe4d612464a6c2f9452e6d1ff83e609c7174
-RMD160 (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = f0fc6f910b89be7081edc72a7a854ab7ee60fffe
-Size (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = 130017392 bytes
+SHA1 (libreoffice/libreoffice-4.1.2.3.tar.xz) = ffaf13404599a9b66ce964fab1f7c98284e8c972
+RMD160 (libreoffice/libreoffice-4.1.2.3.tar.xz) = 4131954185d341dee6c3c3bf9acbbe020567e6ec
+Size (libreoffice/libreoffice-4.1.2.3.tar.xz) = 121781100 bytes
+SHA1 (libreoffice/libreoffice-dictionaries-4.1.2.3.tar.xz) = e48b6bb3d3208748d4d8399a77cd9f1033030dd5
+RMD160 (libreoffice/libreoffice-dictionaries-4.1.2.3.tar.xz) = 75d2acd5fab1c732e6a80630a10ecace990cb524
+Size (libreoffice/libreoffice-dictionaries-4.1.2.3.tar.xz) = 36337720 bytes
+SHA1 (libreoffice/libreoffice-help-4.1.2.3.tar.xz) = 60f394d98cab6dd85795175d840d5cdb3cf769b9
+RMD160 (libreoffice/libreoffice-help-4.1.2.3.tar.xz) = 5ab9ab5d495488575a1326130bdd6b0d4fcfe146
+Size (libreoffice/libreoffice-help-4.1.2.3.tar.xz) = 1847696 bytes
+SHA1 (libreoffice/libreoffice-translations-4.1.2.3.tar.xz) = 671082673cbab07ec4a6c4fd3f1346757858deb4
+RMD160 (libreoffice/libreoffice-translations-4.1.2.3.tar.xz) = a439e24384dfdf213b0f52be06934e8d7e724002
+Size (libreoffice/libreoffice-translations-4.1.2.3.tar.xz) = 130174164 bytes
 SHA1 (patch-configure) = 884cbd21af8479f487ca9b781f86b870d9a346fb
 SHA1 (patch-configure.ac) = 521e402256b6a874f0a3f470c7042a0a2e1874eb
 SHA1 (patch-odk_CustomTarget__classes.mk) = be85f00d88e60139bcf0440947349d4078c7d54f
