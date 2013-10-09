@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2012/10/08 12:19:03 asau Exp $
+# $NetBSD: Makefile,v 1.44 2013/10/09 14:37:50 taca Exp $
 
 DISTNAME=		clamsmtp-1.10
 #PKGREVISION=		1
 CATEGORIES=		mail
-MASTER_SITES=		http://memberwebs.com/stef/software/clamsmtp/
+MASTER_SITES=		http://thewalter.net/stef/software/clamsmtp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://memberwebs.com/stef/software/clamsmtp/
+HOMEPAGE=		http://thewalter.net/stef/software/clamsmtp/
 COMMENT=		SMTP filter that allows you to check for viruses
 LICENSE=		modified-bsd
 
