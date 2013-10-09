@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/06/07 15:52:27 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/10/09 15:42:40 ryoon Exp $
 
-SHA1 (OmegaT_3.0.3_Beta_Source.zip) = 712aa2fe58b0d6729253b9c17a26ebf01e6d85ce
-RMD160 (OmegaT_3.0.3_Beta_Source.zip) = d0dee9beb1e66bf0469f794eba441612d5c4499f
-Size (OmegaT_3.0.3_Beta_Source.zip) = 91908033 bytes
+SHA1 (OmegaT_3.0.5_Beta_Source.zip) = f5b7a82a3c4b71e1cf5030e6fd6f7d96c92eeb85
+RMD160 (OmegaT_3.0.5_Beta_Source.zip) = 7d26fcad51d5b9d8a42e15ded08795040c2e1935
+Size (OmegaT_3.0.5_Beta_Source.zip) = 102559533 bytes
 SHA1 (patch-build.xml) = 0ec9108c02217b541885fbb2a50df87870d9b76b
