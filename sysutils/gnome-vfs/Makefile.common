@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.27 2011/07/08 11:03:35 drochner Exp $
+# $NetBSD: Makefile.common,v 1.28 2013/10/09 12:47:06 wiz Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-smb/Makefile
+# used by sysutils/gnome-vfs/Makefile
 
 GNOME_VFS_VERSION=	2.24.4
 
