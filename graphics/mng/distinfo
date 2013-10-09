@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2012/04/29 17:17:59 dholland Exp $
+$NetBSD: distinfo,v 1.13 2013/10/09 17:38:26 wiz Exp $
 
-SHA1 (libmng-1.0.10.tar.gz) = 78ad516a1de79d00de720bf2a7c9afea2c896b09
-RMD160 (libmng-1.0.10.tar.gz) = ed09e537ebb129f5e13cba56d9d2c2a106955393
-Size (libmng-1.0.10.tar.gz) = 1093337 bytes
-SHA1 (patch-makefiles-configure_in) = 803aac04dd21f557ba98bda0a5b2482be7e6e83f
+SHA1 (libmng-2.0.2.tar.gz) = ed63ebddb3d556a730024e2d6a6e00b8c0f5bc41
+RMD160 (libmng-2.0.2.tar.gz) = 5ba74707ba1941e345914bf2aa7025d23f3359bc
+Size (libmng-2.0.2.tar.gz) = 1559967 bytes
