@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/12/28 03:03:08 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/09 10:22:55 roy Exp $
 #
 
 DISTNAME=	ex-040103
@@ -20,5 +20,7 @@ SUBST_SED.getline=	-e "s,getline,get_line,g"
 
 MAKE_DIRS_PERMS+=	${VARBASE}/tmp/vi.recover ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+MAKE_ENV+= TERMLIB=${BUILDLINK_LIBNAME.termcap}
