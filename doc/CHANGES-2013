@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3733 2013/10/08 19:51:40 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.3734 2013/10/09 08:53:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5217,3 +5217,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/py-hsm version 1.0.4g [pettai 2013-10-08]
 	Updated mail/proxsmtp to 1.10 [shattered 2013-10-08]
 	Updated net/latd to 1.21 [shattered 2013-10-08]
+	Added print/py-PDF2 version 1.18 [wiz 2013-10-09]
