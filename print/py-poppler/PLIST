@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/09 09:21:15 wiz Exp $
+${PYSITELIB}/poppler.la
