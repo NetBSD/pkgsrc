@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/01/08 13:11:13 obache Exp $
+$NetBSD: distinfo,v 1.5 2013/10/10 00:07:23 joerg Exp $
 
 SHA1 (digger-20020314.tar.gz) = 4fef6bb91b3c3a4d18a66b94864455299cd19016
 RMD160 (digger-20020314.tar.gz) = 85f0adeb867f1aceef154412e0752c51dd7f6809
@@ -7,3 +7,12 @@ SHA1 (patch-aa) = 07ad1bb5100d389fca04584f511de9feee45edc7
 SHA1 (patch-ab) = 524341c6e188731d22675e75fd3a6cafbaa00537
 SHA1 (patch-ac) = 0491f8edaa2d1b13fc69c09dd74fe59f3f3618ef
 SHA1 (patch-ad) = ab3ddf3f65d9fcbed15732fef0d62a549334af23
+SHA1 (patch-bags.c) = 6edaca6b71e58bd91d93e4a3d57b8a58ab8c8043
+SHA1 (patch-digger.c) = a9de4241a50bae75c269c708d7477420cd0135da
+SHA1 (patch-main.c) = 2e08ef00007455de956a39969aed51ca5b25ad34
+SHA1 (patch-monster.c) = 1ee82bdc882806019b1badeeb7811f3a4e5e1481
+SHA1 (patch-newsnd.c) = 6a9f2a49bb7af7995b39435c998b06e9fc8ef667
+SHA1 (patch-record.c) = ef33cf255dbca44983e0647312932b3c0c3553a8
+SHA1 (patch-scores.c) = ad879ec595e65448f91dce27a45949969b79355b
+SHA1 (patch-sound.c) = 062f8e58283fd1e06631abca0e065cd165403f79
+SHA1 (patch-sprite.c) = 6ae1352afd28e97a5755de2b20b10aa92f98b990
