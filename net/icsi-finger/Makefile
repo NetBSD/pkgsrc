@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/07/01 10:43:50 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2013/10/10 00:08:40 joerg Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.29
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	bin libexec sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/examples/icsi-finger/targets
 
-TOOLS_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 .include "../../mk/compiler.mk"
 
