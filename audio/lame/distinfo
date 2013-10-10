@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.23 2012/03/07 14:43:47 wiz Exp $
+$NetBSD: distinfo,v 1.24 2013/10/10 10:49:30 roy Exp $
 
 SHA1 (lame-3.99.5.tar.gz) = 03a0bfa85713adcc6b3383c12e2cc68a9cfbf4c4
 RMD160 (lame-3.99.5.tar.gz) = 8a0990af918b635cc79eb27a3beafc6c0ee13a9f
 Size (lame-3.99.5.tar.gz) = 1445348 bytes
 SHA1 (patch-ab) = e356b7614cfd4a2012f66926fe58a717dcc130f3
-SHA1 (patch-ad) = 240943b1c3366181c96b587579d653de3bbc7873
+SHA1 (patch-ad) = fa14817f765a61f046a96a1b556e2c8203fc27ad
+SHA1 (patch-configure) = bc2243e364a2a6397cc0d09129969274b88f6b98
+SHA1 (patch-configure.in) = 6ca01d610b94a402f2c2b351aa901a5072f3a0cb
