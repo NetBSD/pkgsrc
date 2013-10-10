@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.in,v 1.1 2013/10/10 10:49:30 roy Exp $
+
+initscr is a curses function, not termcap.
+
+--- configure.in.orig	2013-10-10 10:45:45.000000000 +0000
++++ configure.in
+@@ -372,9 +372,9 @@ dnl Checks for libraries.
+ 
+ AC_CHECK_HEADERS(termcap.h)
+ AC_CHECK_HEADERS(ncurses/termcap.h)
+-AC_CHECK_LIB(termcap, initscr, HAVE_TERMCAP="termcap")
+-AC_CHECK_LIB(curses, initscr, HAVE_TERMCAP="curses")
+-AC_CHECK_LIB(ncurses, initscr, HAVE_TERMCAP="ncurses")
++AC_CHECK_LIB(termcap, tgetent, HAVE_TERMCAP="termcap")
++AC_CHECK_LIB(curses, tgetent, HAVE_TERMCAP="curses")
++AC_CHECK_LIB(ncurses, tgetent, HAVE_TERMCAP="ncurses")
+ 
+ AM_ICONV
+  
