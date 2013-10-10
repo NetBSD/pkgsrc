@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 14:02:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/10 00:02:53 joerg Exp $
 
 DISTNAME=		mintlib-CVS-20130415
 PKGNAME=		cross-freemint-${DISTNAME:S/CVS-//}
@@ -22,11 +22,13 @@ PATCHFILES=	gcc-4.6.4-mint-20130415.patch.bz2
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 TOOLS_PLATFORM.makeinfo=
 
+TOOL_DEPENDS+=	cross-freemint-binutils-[0-9]*:../../cross/freemint-binutils
+
 FREEMINT_PREFIX=	${PREFIX}/cross-freemint
 CONFIGURE_DIRS=		${GCCNAME}bin
 CONFIGURE_SCRIPT=	../${GCCNAME}/configure
 
-USE_TOOLS+=		bash:run gmake makeinfo
+USE_TOOLS+=		bash:run gmake makeinfo bison
 GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_PREFIX=	${FREEMINT_PREFIX}
