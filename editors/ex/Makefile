@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2013/10/09 10:22:55 roy Exp $
+# $NetBSD: Makefile,v 1.13 2013/10/10 11:09:35 roy Exp $
 #
 
 DISTNAME=	ex-040103
 PKGNAME=	ex-20040103
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ex-vi/files/ex-vi/040103/}
 
