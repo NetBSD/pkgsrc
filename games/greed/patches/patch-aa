@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/06/18 04:55:38 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2013/10/10 17:16:54 roy Exp $
 
 - configure paths for pkgsrc
 - honor pkgsrc LDFLAGS
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2012/06/18 04:55:38 dholland Exp $
 
 --- Makefile.orig	2002-07-30 22:04:21.000000000 +0000
 +++ Makefile
-@@ -13,12 +13,13 @@ SYSDEF=NOTBSD
+@@ -13,13 +13,14 @@ SYSDEF=NOTBSD
  
  # Prepend "c:" (or whatever drive you use) to the following paths for MSDOS
  # Location of high score file
@@ -19,11 +19,13 @@ $NetBSD: patch-aa,v 1.4 2012/06/18 04:55:38 dholland Exp $
  
  # Flags for use with the Linux ncurses package (recommended)
 -CFLAGS = -O -s -DNOTBSD
+-TERMLIB = -lncurses
 +#CFLAGS = -O -s -DNOTBSD
 +CFLAGS+=	-DNOTBSD
- TERMLIB = -lncurses
++TERMLIB ?= -lncurses
  CC = gcc
  
+ # Flags for use with stock curses
 @@ -32,14 +33,14 @@ CC = gcc
  #TERMLIB = scurses.lib
  
