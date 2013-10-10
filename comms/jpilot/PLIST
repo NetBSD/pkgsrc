@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2013/05/25 16:28:05 shattered Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/10/10 10:58:38 bad Exp $
 bin/jpilot
 bin/jpilot-dump
+bin/jpilot-merge
 bin/jpilot-sync
 include/jpilot/libplugin.h
 include/jpilot/prefs.h
