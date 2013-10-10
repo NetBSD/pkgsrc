@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2013/09/02 19:51:02 adam Exp $
+# $NetBSD: Makefile,v 1.24 2013/10/10 14:42:08 ryoon Exp $
 #
 
 DISTNAME=	Nestopia140src
 PKGNAME=	nestopia-1.40h
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nestopia/}
 EXTRACT_SUFX=	.zip

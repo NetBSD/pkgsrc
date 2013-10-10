@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2013/10/09 17:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2013/10/10 14:42:12 ryoon Exp $
 #
 
 DISTNAME=		blinkentools-2.2
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		graphics
 MASTER_SITES=		http://sven.gimp.org/blinkenlights/old/
 
