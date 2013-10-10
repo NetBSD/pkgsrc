@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2013/09/02 19:50:41 adam Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/10 14:41:56 ryoon Exp $
 #
 
 DISTNAME=	libpeas-1.6.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/1.6/}
 EXTRACT_SUFX=	.tar.xz
