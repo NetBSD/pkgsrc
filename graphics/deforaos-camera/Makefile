@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/09/02 19:51:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/10 14:42:12 ryoon Exp $
 #
 
 DISTNAME=	Camera-0.0.1
 PKGNAME=	deforaos-camera-0.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.defora.org/os/download/download/4284/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/10/02 11:33:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/10 14:41:59 ryoon Exp $
 
 DISTNAME=	gmpc-libnotify-11.8.16
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/11.8/ \
 		${MASTER_SITE_SOURCEFORGE:=musicpd/}

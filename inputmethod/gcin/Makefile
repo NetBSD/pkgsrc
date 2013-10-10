@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2013/09/02 19:51:11 adam Exp $
+# $NetBSD: Makefile,v 1.28 2013/10/10 14:42:17 ryoon Exp $
 #
 
 DISTNAME=		gcin-1.1.7
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		inputmethod
 #MASTER_SITES=		http://www.csie.nctu.edu.tw/~cp76/gcin/download/
 MASTER_SITES=		http://cle.linux.org.tw/gcin/download/gcin-old/gcin-1.1.x/

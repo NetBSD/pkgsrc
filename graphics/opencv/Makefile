@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2013/09/02 19:51:09 adam Exp $
+# $NetBSD: Makefile,v 1.44 2013/10/10 14:42:15 ryoon Exp $
 
 DISTNAME=	opencv-2.4.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 

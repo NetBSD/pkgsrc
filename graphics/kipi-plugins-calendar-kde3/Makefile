@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2013/10/09 17:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/10/10 14:42:15 ryoon Exp $
 
 DISTNAME=	kipi-plugins-0.1.7
 PKGNAME=	kipi-plugins-calendar-0.1.7
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2

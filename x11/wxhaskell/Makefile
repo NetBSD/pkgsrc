@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2013/09/02 19:51:32 adam Exp $
+# $NetBSD: Makefile,v 1.48 2013/10/10 14:42:39 ryoon Exp $
 
 DISTNAME=	wxhaskell-src-0.9.4
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxhaskell/}
 EXTRACT_SUFX=	.zip

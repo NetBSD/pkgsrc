@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/09/02 19:51:06 adam Exp $
+# $NetBSD: Makefile,v 1.23 2013/10/10 14:42:11 ryoon Exp $
 #
 
 DISTNAME=	geoclue-0.12.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	geography
 MASTER_SITES=	http://folks.o-hand.com/jku/geoclue-releases/
 

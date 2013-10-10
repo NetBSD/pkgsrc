@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2013/09/02 19:50:50 adam Exp $
+# $NetBSD: Makefile,v 1.45 2013/10/10 14:41:54 ryoon Exp $
 
 PKGNAME=	gnuradio-wxgui-${VERSION}
-PKGREVISION=	24
+PKGREVISION=	25
 COMMENT=	GUI framework for GNU Radio based on wxPython
 
 PYTHON_PATCH_SCRIPTS+=	gr-wxgui/src/python/form.py
