@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/12/12 10:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/10 17:27:56 roy Exp $
 
 DISTNAME=		Level9_4.0_Source
 PKGNAME=		level9-4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
 EXTRACT_SUFX=		.zip
@@ -18,6 +18,10 @@ INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6[A-L]*-*
 
 INSTALLATION_DIRS=	bin
 
+LDADD+=			${BUILDLINK_LDADD.termcap}
+LDADD+=			${BUILDLINK_LDADD.curses}
+MAKE_ENV+=		LDADD=${LDADD:Q}
+
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
@@ -27,5 +31,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/level9.txt \
 		${DESTDIR}${PREFIX}/share/doc/level9
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
