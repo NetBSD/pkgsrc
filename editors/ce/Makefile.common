@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2013/10/10 11:06:59 roy Exp $
+# $NetBSD: Makefile.common,v 1.14 2013/10/10 11:08:16 roy Exp $
 
 DISTNAME=		ce-${VERSION}
 VERSION=		4.6
-PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.cwru.edu/pub/chet/ \
 			http://tiswww.case.edu/php/chet/dist/
