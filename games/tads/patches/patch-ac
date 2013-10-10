@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2010/05/29 14:31:23 dillo Exp $
+$NetBSD: patch-ac,v 1.5 2013/10/10 18:27:37 roy Exp $
 
 --- tads3/Makefile.orig	2005-03-05 10:44:48.000000000 +0000
 +++ tads3/Makefile
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.4 2010/05/29 14:31:23 dillo Exp $
 +OPTIMIZE     = -O2
 +CXX_OPTIMIZE = -fno-exceptions
 +OS_FLAGS     = -DOS_ANSI -DHAVE_STRCASECMP -Dmemicmp=strncasecmp -I./BSD
-+DISPLAY_LIB  = ${LDFLAGS} -lncurses
++DISPLAY_LIB  = -ltermcap
 +.endif
 +
 +###########################################################################

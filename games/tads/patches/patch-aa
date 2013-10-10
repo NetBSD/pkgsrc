@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2010/05/29 14:31:23 dillo Exp $
+$NetBSD: patch-aa,v 1.6 2013/10/10 18:27:37 roy Exp $
 
 --- tads2/Makefile.orig	2004-11-05 13:34:49.000000000 +0000
 +++ tads2/Makefile
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/29 14:31:23 dillo Exp $
 +AFLAGS=
 +OVLFLG=
 +MACHDEP=
-+LIBS=$(LDFLAGS) -lncurses
++LIBS=-ltermcap
 +MAKEXEC=touch
 +.endif
  
