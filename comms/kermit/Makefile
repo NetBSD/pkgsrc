@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.82 2013/02/06 23:21:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2013/10/10 16:58:03 roy Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
-MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
+MASTER_SITES=	ftp://ftp.kermitproject.org/kermit/archives/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.columbia.edu/kermit/
+HOMEPAGE=	http://www.kermitproject.org
 COMMENT=	Network and serial communication, file transfer, and scripting utility
 LICENSE=	kermit-license
 
@@ -18,6 +18,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 BUILD_DEFS+=	KFLAGS LIBS MANINSTALL
 MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
 MAKE_FILE=	makefile
+
+LIBS+=		${BUILDLINK_LDADD.termcap}
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 KFLAGS+=	${BUILDLINK_CPPFLAGS}
@@ -33,13 +35,9 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/ckuker.nr \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1; \
 
-.for p in NetBSD-1.3*
-.  if ${MACHINE_PLATFORM:M${p}} != ""
-LIBS+=		-ltermcap
-.  endif
-.endfor
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
 .if ${OPSYS} == "Darwin"
 .  if !empty(OS_VERSION:M??.*)
