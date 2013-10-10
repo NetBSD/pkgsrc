@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2013/06/27 15:49:07 joerg Exp $
+# $NetBSD: Makefile.common,v 1.12 2013/10/10 00:06:19 joerg Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -40,7 +40,9 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-error=cast-align \
 			-Wno-error=unused-private-field \
 			-Wno-error=tautological-constant-out-of-range-compare \
 			-Wno-error=tautological-compare \
-			-Wno-error=self-assign-field
+			-Wno-error=self-assign-field \
+			-Wno-error=unused-const-variable \
+			-Wno-error=unused-function
 MAKE_ENV+=		OPTIMIZE=2
 .endif
 

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2013/09/30 20:03:33 wiz Exp $
+$NetBSD: distinfo,v 1.15 2013/10/10 00:06:19 joerg Exp $
 
 SHA1 (mame0150s.zip) = 14e20123817384f6caf5b7c155be60a745aa4438
 RMD160 (mame0150s.zip) = 102147aa275cba2f8466717adfbaff9758fe5d60
 Size (mame0150s.zip) = 35999158 bytes
+SHA1 (patch-src_emu_webengine.c) = cf8e061a3f7d031ad6b064caa01a44d11de65f55
