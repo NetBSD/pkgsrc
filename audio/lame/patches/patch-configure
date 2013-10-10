@@ -1,0 +1,142 @@
+$NetBSD: patch-configure,v 1.1 2013/10/10 10:49:30 roy Exp $
+
+initscr is a curses function, not termcap.
+
+--- configure.orig	2013-10-10 10:45:38.000000000 +0000
++++ configure
+@@ -13602,9 +13602,9 @@ fi
+ 
+ done
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for initscr in -ltermcap" >&5
+-$as_echo_n "checking for initscr in -ltermcap... " >&6; }
+-if ${ac_cv_lib_termcap_initscr+:} false; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for tgetent in -ltermcap" >&5
++$as_echo_n "checking for tgetent in -ltermcap... " >&6; }
++if ${ac_cv_lib_termcap_tgetent+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -13618,33 +13618,33 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char initscr ();
++char tgetent ();
+ int
+ main ()
+ {
+-return initscr ();
++return tgetent ();
+   ;
+   return 0;
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_lib_termcap_initscr=yes
++  ac_cv_lib_termcap_tgetent=yes
+ else
+-  ac_cv_lib_termcap_initscr=no
++  ac_cv_lib_termcap_tgetent=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_termcap_initscr" >&5
+-$as_echo "$ac_cv_lib_termcap_initscr" >&6; }
+-if test "x$ac_cv_lib_termcap_initscr" = xyes; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_termcap_tgetent" >&5
++$as_echo "$ac_cv_lib_termcap_tgetent" >&6; }
++if test "x$ac_cv_lib_termcap_tgetent" = xyes; then :
+   HAVE_TERMCAP="termcap"
+ fi
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for initscr in -lcurses" >&5
+-$as_echo_n "checking for initscr in -lcurses... " >&6; }
+-if ${ac_cv_lib_curses_initscr+:} false; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for tgetent in -lcurses" >&5
++$as_echo_n "checking for tgetent in -lcurses... " >&6; }
++if ${ac_cv_lib_curses_tgetent+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -13658,33 +13658,33 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char initscr ();
++char tgetent ();
+ int
+ main ()
+ {
+-return initscr ();
++return tgetent ();
+   ;
+   return 0;
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_lib_curses_initscr=yes
++  ac_cv_lib_curses_tgetent=yes
+ else
+-  ac_cv_lib_curses_initscr=no
++  ac_cv_lib_curses_tgetent=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_curses_initscr" >&5
+-$as_echo "$ac_cv_lib_curses_initscr" >&6; }
+-if test "x$ac_cv_lib_curses_initscr" = xyes; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_curses_tgetent" >&5
++$as_echo "$ac_cv_lib_curses_tgetent" >&6; }
++if test "x$ac_cv_lib_curses_tgetent" = xyes; then :
+   HAVE_TERMCAP="curses"
+ fi
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for initscr in -lncurses" >&5
+-$as_echo_n "checking for initscr in -lncurses... " >&6; }
+-if ${ac_cv_lib_ncurses_initscr+:} false; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for tgetent in -lncurses" >&5
++$as_echo_n "checking for tgetent in -lncurses... " >&6; }
++if ${ac_cv_lib_ncurses_tgetent+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -13698,27 +13698,27 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char initscr ();
++char tgetent ();
+ int
+ main ()
+ {
+-return initscr ();
++return tgetent ();
+   ;
+   return 0;
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_lib_ncurses_initscr=yes
++  ac_cv_lib_ncurses_tgetent=yes
+ else
+-  ac_cv_lib_ncurses_initscr=no
++  ac_cv_lib_ncurses_tgetent=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ncurses_initscr" >&5
+-$as_echo "$ac_cv_lib_ncurses_initscr" >&6; }
+-if test "x$ac_cv_lib_ncurses_initscr" = xyes; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ncurses_tgetent" >&5
++$as_echo "$ac_cv_lib_ncurses_tgetent" >&6; }
++if test "x$ac_cv_lib_ncurses_tgetent" = xyes; then :
+   HAVE_TERMCAP="ncurses"
+ fi
+ 

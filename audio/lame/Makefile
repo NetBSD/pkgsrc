@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2012/09/12 00:24:41 asau Exp $
+# $NetBSD: Makefile,v 1.73 2013/10/10 10:49:30 roy Exp $
 
 DISTNAME=	lame-3.99.5
 CATEGORIES=	audio
@@ -39,5 +39,5 @@ CONFIGURE_ARGS+=	--enable-nasm
 CONFIGURE_ENV+=		ac_cv_header_xmmintrin_h=no
 .endif
 
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
