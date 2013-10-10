@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/10/09 08:55:44 roy Exp $
+# $NetBSD: Makefile,v 1.22 2013/10/10 11:07:34 roy Exp $
 #
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -6,7 +6,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../editors/ce/Makefile.common"
 
 PKGNAME=		ce-x11-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT+=		, X11 version
 
 BUILD_TARGET=		xce
