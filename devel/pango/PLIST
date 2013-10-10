@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2012/10/08 21:35:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2013/10/10 12:02:06 ryoon Exp $
 bin/pango-querymodules
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -87,6 +87,7 @@ share/gtk-doc/html/pango/home.png
 share/gtk-doc/html/pango/index.html
 share/gtk-doc/html/pango/index.sgml
 share/gtk-doc/html/pango/layout.gif
+share/gtk-doc/html/pango/left-insensitive.png
 share/gtk-doc/html/pango/left.png
 share/gtk-doc/html/pango/lowlevel.html
 share/gtk-doc/html/pango/pango-Bidirectional-Text.html
@@ -115,8 +116,10 @@ share/gtk-doc/html/pango/pango-querymodules.html
 share/gtk-doc/html/pango/pango.devhelp2
 share/gtk-doc/html/pango/pango.html
 share/gtk-doc/html/pango/rendering.html
+share/gtk-doc/html/pango/right-insensitive.png
 share/gtk-doc/html/pango/right.png
 share/gtk-doc/html/pango/rotated-text.png
 share/gtk-doc/html/pango/style.css
 share/gtk-doc/html/pango/tools.html
+share/gtk-doc/html/pango/up-insensitive.png
 share/gtk-doc/html/pango/up.png
