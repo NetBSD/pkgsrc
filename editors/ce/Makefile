@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2013/10/09 08:55:44 roy Exp $
+# $NetBSD: Makefile,v 1.21 2013/10/10 11:08:16 roy Exp $
 #
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "Makefile.common"
 
+PKGREVISION=		1
 COMMENT+=		, tty version
 
 
