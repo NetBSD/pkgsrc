@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2013/09/02 19:50:49 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2013/10/10 14:41:54 ryoon Exp $
 
 BUILDLINK_TREE+=	libgnomeprintui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomeprintui
 LIBGNOMEPRINTUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.18.6nb18
+BUILDLINK_ABI_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.18.6nb19
 BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 
 .include "../../devel/GConf/buildlink3.mk"
