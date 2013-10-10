@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/09/02 19:51:11 adam Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/10 14:42:17 ryoon Exp $
 
 DISTNAME=	xnec2c-2.3-beta
 PKGNAME=	${DISTNAME:S/-beta/beta/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/5b4az/pkg/nec2/xnec2c/
 EXTRACT_SUFX=	.tar.bz2
