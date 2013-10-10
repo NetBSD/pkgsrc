@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2013/04/06 15:46:36 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2013/10/10 18:27:37 roy Exp $
 #
 
 DISTNAME=	tads23-unix
 PKGNAME=	tads-3.0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.tads.org/t3dl/
 
@@ -23,5 +23,6 @@ USE_LANGUAGES=	c c++
 post-extract:
 	${RM} ${WRKSRC}/tads3/BSD/wchar.h
 
-.include "../../devel/ncurses/buildlink3.mk"
+#.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
