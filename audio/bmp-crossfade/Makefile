@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/09/02 19:50:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/10 14:41:57 ryoon Exp $
 #
 
 PKGNAME=		bmp-crossfade-0.3.11
 DISTNAME=		xmms-crossfade-0.3.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://www.eisenlohr.org/xmms-crossfade/
 

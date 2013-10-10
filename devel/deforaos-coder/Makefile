@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/09/02 19:50:58 adam Exp $
+# $NetBSD: Makefile,v 1.7 2013/10/10 14:42:04 ryoon Exp $
 
 DISTNAME=	Coder-0.0.0
 PKGNAME=	deforaos-coder-0.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.defora.org/os/download/download/4288/
 

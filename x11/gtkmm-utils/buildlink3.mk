@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2013/09/02 19:50:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2013/10/10 14:41:47 ryoon Exp $
 
 BUILDLINK_TREE+=	gtkmm-utils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkmm-utils
 GTKMM_UTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkmm-utils+=	gtkmm-utils>=0.4.1
-BUILDLINK_ABI_DEPENDS.gtkmm-utils+=	gtkmm-utils>=0.4.1nb18
+BUILDLINK_ABI_DEPENDS.gtkmm-utils+=	gtkmm-utils>=0.4.1nb19
 BUILDLINK_PKGSRCDIR.gtkmm-utils?=	../../x11/gtkmm-utils
 
 .include "../../devel/glib2/buildlink3.mk"

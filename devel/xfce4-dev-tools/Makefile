@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2013/09/02 19:51:00 adam Exp $
+# $NetBSD: Makefile,v 1.27 2013/10/10 14:42:05 ryoon Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	4.6.0
 DISTNAME=	xfce4-dev-tools-${XFCE4_VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel
 COMMENT=	Xfce development tools
 LICENSE=	gnu-gpl-v2
