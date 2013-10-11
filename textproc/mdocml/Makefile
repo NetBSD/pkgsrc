@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/10/05 14:48:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2013/10/11 14:45:18 wiz Exp $
 
 DISTNAME=	mdocml-1.12.2
 CATEGORIES=	textproc devel
@@ -18,6 +18,13 @@ SUBST_STAGE.roff=	pre-build
 SUBST_FILES.roff=	mandoc.1 mandoc.3
 SUBST_FILES.roff+=	eqn.7 man.7 mdoc.7 tbl.7
 SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+# Solaris 10 and newer do not support static binaries
+.if ${OPSYS} == "SunOS"
+MAKE_FLAGS+=	STATIC=
+.endif
 
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

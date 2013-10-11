@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.5 2013/10/05 14:48:15 wiz Exp $
+$NetBSD: patch-Makefile,v 1.6 2013/10/11 14:45:18 wiz Exp $
 
 Install preconv and roff with 'mandoc-' prefix to avoid conflict with groff.
 
---- Makefile.orig	2013-09-29 23:34:34.000000000 +0000
+--- Makefile.orig	2013-10-05 14:09:07.000000000 +0000
 +++ Makefile
-@@ -321,12 +321,15 @@ install: all
+@@ -322,12 +322,15 @@ install: all
  	mkdir -p $(DESTDIR)$(MANDIR)/man1
  	mkdir -p $(DESTDIR)$(MANDIR)/man3
  	mkdir -p $(DESTDIR)$(MANDIR)/man7

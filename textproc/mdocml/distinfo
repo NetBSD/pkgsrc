@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.29 2013/10/06 15:48:42 wiz Exp $
+$NetBSD: distinfo,v 1.30 2013/10/11 14:45:18 wiz Exp $
 
 SHA1 (mdocml-1.12.2.tar.gz) = 6a86cc4f373bcc51aa8bf1a7499db368e977a166
 RMD160 (mdocml-1.12.2.tar.gz) = 8fcd1b9dd20b3a2eee9412d210e1b994c9ae7c17
 Size (mdocml-1.12.2.tar.gz) = 286400 bytes
-SHA1 (patch-Makefile) = 30ae6393f1af5995735fb98c9bbfa53f22cdc0a8
-SHA1 (patch-apropos__db.c) = fa26351e17a465dd1b89854903f3c04408440d47
-SHA1 (patch-config.h.post) = 23b57b1c20e02733a12acbe7a62c5113cc245ecd
-SHA1 (patch-mandocdb.c) = 6c376bff856ab48f16721e589e71ce7b981a802b
+SHA1 (patch-Makefile) = 569fdf24dff306c6c7222a3807e99d9ae1bb0ce6
+SHA1 (patch-apropos__db.c) = 74ec4c549c2a093f9d5090209f89c16bebc3a749
+SHA1 (patch-catman.c) = c7738a6c1089963b83556cafc6bdca2735d28c48
+SHA1 (patch-cgi.c) = 2eccde5060bbf0479c80f0b4368ebf1950c90c47
+SHA1 (patch-config.h.post) = ff9805110e590e19a65bf9a6130e1b086893cfb0
+SHA1 (patch-mandocdb.c) = 88ab5ceb2db1f108c9a4d8f6c3a23718b2ad05ce
 SHA1 (patch-preconv.1) = 92787c58f451e1d247a25bbe136f188bf42e4c73
 SHA1 (patch-roff.7) = a8daeae7e8e6c0117d499fb0c4a848d724b29b3e

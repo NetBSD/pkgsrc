@@ -1,4 +1,6 @@
-$NetBSD: patch-mandocdb.c,v 1.4 2013/10/06 15:48:42 wiz Exp $
+$NetBSD: patch-mandocdb.c,v 1.5 2013/10/11 14:45:18 wiz Exp $
+
+SunOS fix.
 
 --- mandocdb.c.orig	2013-10-05 14:09:07.000000000 +0000
 +++ mandocdb.c
@@ -25,7 +27,7 @@ $NetBSD: patch-mandocdb.c,v 1.4 2013/10/06 15:48:42 wiz Exp $
  
 -#if defined(__sun)
 -#include <sys/stat.h>
-+#if defined(__linux__)
++#if defined(__linux__) || defined(__sun) 
 +# include <db_185.h>
 +#else
 +# include <db.h>
