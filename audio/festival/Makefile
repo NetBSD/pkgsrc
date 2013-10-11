@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2013/05/31 12:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2013/10/11 11:16:12 roy Exp $
 
 DISTNAME=	festival-2.1-release
 PKGNAME=	festival-2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/festival/2.1/
 DISTFILES=	${DISTNAME}.tar.gz \
@@ -111,5 +111,5 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
 .include "../../audio/nas/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
