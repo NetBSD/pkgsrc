@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3759 2013/10/11 11:35:39 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3760 2013/10/11 11:38:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5243,3 +5243,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-File-ConfigDir to 0.007 [wiz 2013-10-11]
 	Added devel/p5-MooX-File-ConfigDir version 0.002 [wiz 2013-10-11]
 	Added devel/p5-MooX-ConfigFromFile version 0.002 [wiz 2013-10-11]
+	Added devel/p5-MooX-Options version 3.86 [wiz 2013-10-11]
