@@ -1,0 +1,11 @@
+Sometimes we need data split into records and a simple split on
+the input record separator ($/) or some other value fails because
+the values we're splitting on may allowed in other parts of the
+data. Perhaps they're quoted. Perhaps they're embedded in other
+data which should not be split up.
+
+This module allows you to specify what you wish to split the data
+on, but also speficy an "unless" regular expression. If the text
+in question matches the "unless" regex, it will not be split there.
+This allows us to do things like split on newlines unless newlines
+are embedded in quotes.
