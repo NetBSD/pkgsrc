@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/10/09 17:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/10/11 14:53:00 joerg Exp $
 #
 
 DISTNAME=		kphotoalbum-3.1.1
@@ -20,10 +20,11 @@ SET_LIBDIR=		yes
 USE_TOOLS+=		msgfmt pkg-config
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libkipi-kde3/buildlink3.mk"
 .include "../../graphics/libkdcraw-kde3/buildlink3.mk"
-.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
