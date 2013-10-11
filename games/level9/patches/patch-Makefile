@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2013/10/11 16:41:18 roy Exp $
+
+Don't assume ncurses.
+
+--- Makefile.orig	2013-10-10 17:19:47.000000000 +0000
++++ Makefile
+@@ -1,7 +1,9 @@
++LDADD?=	-lcurses
++
+ all: level9
+ 
+ level9: level9.o unix-curses.o
+-	${CC} ${LDFLAGS} -o level9 level9.o unix-curses.o -lncurses
++	${CC} ${LDFLAGS} -o level9 level9.o unix-curses.o ${LDADD}
+ 
+ unix-curses.o: unix-curses.c ../level9.h
+ 	${CC} -I.. ${CFLAGS} -c unix-curses.c
