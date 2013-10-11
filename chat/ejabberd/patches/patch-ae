@@ -1,35 +1,45 @@
-$NetBSD: patch-ae,v 1.6 2010/09/03 10:31:43 fhajny Exp $
+$NetBSD: patch-ae,v 1.7 2013/10/11 13:32:25 fhajny Exp $
 
---- src/ejabberdctl.template.orig	2010-08-02 16:33:20.000000000 +0000
-+++ src/ejabberdctl.template
-@@ -43,10 +43,10 @@ if [ "$EJABBERDCTL_CONFIG_PATH" = "" ] ;
+Default locations.
+--- ejabberdctl.template.orig	2013-09-27 09:19:22.000000000 +0000
++++ ejabberdctl.template
+@@ -23,7 +23,7 @@ if [ "$INSTALLUSER" != "" ] ; then
+     EXEC_CMD="false"
+     for GID in `id -G`; do
+         if [ $GID -eq 0 ] ; then
+-            EXEC_CMD="su $INSTALLUSER -p -c"
++            EXEC_CMD="su $INSTALLUSER -m -c"
+         fi
+     done
+     if [ `id -g` -eq `id -g $INSTALLUSER` ] ; then
+@@ -68,10 +68,10 @@ if [ "$EJABBERD_CONFIG_PATH" = "" ] ; th
+     EJABBERD_CONFIG_PATH=$ETCDIR/ejabberd.yml
  fi
- [ -f "$EJABBERDCTL_CONFIG_PATH" ] && . "$EJABBERDCTL_CONFIG_PATH"
  if [ "$LOGS_DIR" = "" ] ; then
--    LOGS_DIR=@LOCALSTATEDIR@/log/ejabberd
+-    LOGS_DIR={{localstatedir}}/log/ejabberd
 +    LOGS_DIR=@EJABBERD_LOGDIR@
  fi
  if [ "$SPOOLDIR" = "" ] ; then
--    SPOOLDIR=@LOCALSTATEDIR@/lib/ejabberd
+-    SPOOLDIR={{localstatedir}}/lib/ejabberd
 +    SPOOLDIR=@EJABBERD_DB@
  fi
  if [ "$EJABBERD_DOC_PATH" = "" ] ; then
-     EJABBERD_DOC_PATH=@DOCDIR@
-@@ -86,7 +86,7 @@ ERLANG_OPTS="+K $POLL -smp $SMP +P $ERL_
- 
- # define additional environment variables
- if [ "$EJABBERDDIR" = "" ]; then
--    EJABBERDDIR=@LIBDIR@/ejabberd
-+    EJABBERDDIR=@LIBDIR@/erlang/lib/@DISTNAME@
+     EJABBERD_DOC_PATH={{docdir}}
+@@ -82,7 +82,7 @@ if [ "$ERLANG_NODE_ARG" != "" ] ; then
  fi
- if [ "$EJABBERD_EBIN_PATH" = "" ]; then
-     EJABBERD_EBIN_PATH=$EJABBERDDIR/ebin
-@@ -237,7 +237,7 @@ ctl ()
+ if [ "{{release}}" != "true" ] ; then
+     if [ "$EJABBERDDIR" = "" ] ; then
+-        EJABBERDDIR={{libdir}}/ejabberd
++        EJABBERDDIR={{libdir}}/erlang/lib/@DISTNAME@
+     fi
+     if [ "$EJABBERD_EBIN_PATH" = "" ] ; then
+         EJABBERD_EBIN_PATH=$EJABBERDDIR/ebin
+@@ -261,7 +261,7 @@ ctl()
      # using flock if available. Expects a linux-style
      # flock that can lock a file descriptor.
      MAXCONNID=100
--    CONNLOCKDIR=@LOCALSTATEDIR@/lock/ejabberdctl
+-    CONNLOCKDIR={{localstatedir}}/lock/ejabberdctl
 +    CONNLOCKDIR=@EJABBERD_PIDDIR@
      FLOCK='/usr/bin/flock'
      if [ ! -x "$FLOCK" ] || [ ! -d "$CONNLOCKDIR" ] ; then
- 	JOT='/usr/bin/jot'
+         JOT='/usr/bin/jot'
