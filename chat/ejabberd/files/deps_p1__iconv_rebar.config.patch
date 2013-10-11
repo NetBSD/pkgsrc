@@ -1,0 +1,11 @@
+--- rebar.config.orig	2013-10-11 06:52:27.975407457 +0000
++++ rebar.config	2013-10-11 06:59:26.293793956 +0000
+@@ -1,6 +1,7 @@
+ {erl_opts, [debug_info]}.
+ 
+-{port_env, [{"CFLAGS", "-g -O2 -Wall"}]}.
++{port_env, [{"CFLAGS", "$CFLAGS -g -O2 -Wall"},
++            {"LDFLAGS", "$LDFLAGS -liconv"}]}.
+ 
+ {port_specs, [{"priv/lib/iconv.so", ["c_src/iconv.c"]}]}.
+ 

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ejabberd.sh,v 1.2 2011/10/07 22:37:03 shattered Exp $
+# $NetBSD: ejabberd.sh,v 1.3 2013/10/11 13:32:25 fhajny Exp $
 # $FreeBSD: ejabberd.sh.in,v 1.1 2005/08/28 15:51:48 vsevolod Exp $
 #
 # PROVIDE: ejabberd
@@ -17,7 +17,7 @@ name="ejabberd"
 rcvar=${name}
 
 command=ejabberdctl
-ejabberd_user="@JABBERD_USER@"
+ejabberd_user="@EJABBERD_USER@"
 reload_cmd="ejabberd_reload"
 restart_cmd="ejabberd_reload"
 start_cmd="ejabberd_start"

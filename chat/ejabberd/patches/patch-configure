@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2013/10/11 13:32:25 fhajny Exp $
+
+Portability.
+--- configure.orig	2013-10-10 10:59:33.747311941 +0000
++++ configure
+@@ -2548,7 +2548,7 @@ EOF
+ 	   { $as_echo "$as_me:${as_lineno-$LINENO}: result: failed" >&5
+ $as_echo "failed" >&6; }
+ 	   X="`cat conftest.out`"
+-	   if test "" == "warn"; then
++	   if test "" = "warn"; then
+ 	      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $X" >&5
+ $as_echo "$as_me: WARNING: $X" >&2;}
+ 	   else
+@@ -2630,7 +2630,7 @@ EOF
+ 	   { $as_echo "$as_me:${as_lineno-$LINENO}: result: failed" >&5
+ $as_echo "failed" >&6; }
+ 	   X="`cat conftest.out`"
+-	   if test "warn" == "warn"; then
++	   if test "warn" = "warn"; then
+ 	      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $X" >&5
+ $as_echo "$as_me: WARNING: $X" >&2;}
+ 	   else

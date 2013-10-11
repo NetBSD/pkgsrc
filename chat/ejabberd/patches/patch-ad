@@ -1,53 +1,14 @@
-$NetBSD: patch-ad,v 1.6 2011/06/06 13:45:38 fhajny Exp $
+$NetBSD: patch-ad,v 1.7 2013/10/11 13:32:25 fhajny Exp $
 
---- src/ejabberd.cfg.example.orig	2011-06-01 09:03:36.000000000 +0000
-+++ src/ejabberd.cfg.example
-@@ -109,7 +109,6 @@
-  [
+Proper path to captcha script.
+--- ejabberd.yml.example.orig	2013-09-27 09:19:22.000000000 +0000
++++ ejabberd.yml.example
+@@ -490,7 +490,7 @@ language: "en"
+ ##
+ ## Full path to a script that generates the image.
+ ##
+-## captcha_cmd: "/lib/ejabberd/priv/bin/captcha.sh"
++## captcha_cmd: "@PREFIX@/lib/erlang/lib/@DISTNAME@/priv/bin/captcha.sh"
  
-   {5222, ejabberd_c2s, [
--
- 			%%
- 			%% If TLS is compiled in and you installed a SSL
- 			%% certificate, specify the full path to the
-@@ -125,12 +124,12 @@
-   %%
-   %% To enable the old SSL connection method on port 5223:
-   %%
--  %%{5223, ejabberd_c2s, [
--  %%			{access, c2s},
--  %%			{shaper, c2s_shaper},
--  %%			{certfile, "/path/to/ssl.pem"}, tls,
--  %%			{max_stanza_size, 65536}
--  %%		       ]},
-+  {5223, ejabberd_c2s, [
-+			{access, c2s},
-+			{shaper, c2s_shaper},
-+			{certfile, "/path/to/ssl.pem"}, tls,
-+			{max_stanza_size, 65536}
-+		       ]},
- 
-   {5269, ejabberd_s2s_in, [
- 			   {shaper, s2s_shaper},
-@@ -140,10 +139,10 @@
-   %%
-   %% ejabberd_service: Interact with external components (transports, ...)
-   %%
--  %%{8888, ejabberd_service, [
-+  %%{{8888, "127.0.0.1"},
-+  %% ejabberd_service, [
-   %%			    {access, all},
-   %%			    {shaper_rule, fast},
--  %%			    {ip, {127, 0, 0, 1}},
-   %%			    {hosts, ["icq.example.org", "sms.example.org"],
-   %%			     [{password, "secret"}]
-   %%			    }
-@@ -472,7 +471,7 @@
- %%
- %% Full path to a script that generates the image.
- %%
--%%{captcha_cmd, "/lib/ejabberd/priv/bin/captcha.sh"}.
-+%%{captcha_cmd, "@PREFIX@/lib/erlang/lib/@DISTNAME@/priv/bin/captcha.sh"}.
- 
- %%
- %% Host for the URL and port where ejabberd listens for CAPTCHA requests.
+ ##
+ ## Host for the URL and port where ejabberd listens for CAPTCHA requests.
