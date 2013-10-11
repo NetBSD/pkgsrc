@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2013/08/24 16:45:08 richard Exp $
+# $NetBSD: Makefile,v 1.104 2013/10/11 16:21:40 roy Exp $
 
 DISTNAME=	heimdal-1.5.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -103,7 +103,7 @@ pre-build:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
