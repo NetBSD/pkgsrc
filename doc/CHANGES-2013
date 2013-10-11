@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3765 2013/10/11 17:16:52 schmonz Exp $
+$NetBSD: CHANGES-2013,v 1.3766 2013/10/11 18:20:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5249,3 +5249,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/ejabberd to 13.10 [fhajny 2013-10-11]
 	Updated www/py-genshi to 0.7 [obache 2013-10-11]
 	Updated mail/rss2email to 3.7 [schmonz 2013-10-11]
+	Updated x11/libdrm to 2.4.47 [wiz 2013-10-11]
