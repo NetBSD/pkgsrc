@@ -1,0 +1,20 @@
+$NetBSD: patch-lib_libedit_configure.ac,v 1.1 2013/10/11 16:21:40 roy Exp $
+
+Include termcap in the termcap test
+
+--- lib/libedit/configure.ac.orig	2013-10-11 15:50:21.000000000 +0000
++++ lib/libedit/configure.ac
+@@ -33,9 +33,10 @@ AC_PROG_AWK
+ EL_MANTYPE
+ 
+ 
+-AC_CHECK_LIB(curses, tgetent,,
+-   [AC_CHECK_LIB(ncurses, tgetent,,
+-      [AC_MSG_ERROR([libcurses or libncurses are required!])] )] )
++AC_CHECK_LIB(termcap, tgetent,,
++   [AC_CHECK_LIB(curses, tgetent,,
++      [AC_CHECK_LIB(ncurses, tgetent,,
++         [AC_MSG_ERROR([libtermcap, libcurses or libncurses are required!])] )] )] )
+ 
+ 
+ ### use option --enable-widec to turn on use of wide-character support
