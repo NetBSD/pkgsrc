@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/13 11:29:53 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2013/10/11 20:25:34 wiz Exp $
 
---- config.orig	2007-01-14 11:57:19.000000000 -0700
+--- config.orig	2007-01-14 18:57:19.000000000 +0000
 +++ config
 @@ -20,20 +20,8 @@ LIB_DIR= /usr/local/lib
  # OS dependent
