@@ -1,0 +1,16 @@
+$NetBSD: patch-speech__tools_configure.in,v 1.1 2013/10/11 11:16:12 roy Exp $
+
+Test for termcap before ncurses
+
+--- speech_tools/configure.in.orig	2013-10-11 10:22:22.000000000 +0000
++++ speech_tools/configure.in
+@@ -42,7 +42,8 @@ AC_CHECK_TOOL(AR, ar)
+ 
+ AC_C_BIGENDIAN
+ 
+-AC_CHECK_LIB(ncurses, tputs, [TERMCAPLIB=-lncurses], [TERMCAPLIB=-lcurses])
++AC_CHECK_LIB(termcap, tputs, [TERMCAPLIB=-ltermcap],
++[AC_CHECK_LIB(ncurses, tputs, [TERMCAPLIB=-lncurses], [TERMCAPLIB=-lcurses])])
+ dnl if test "$TERMCAPLIB" != "-ltermcap"; then
+ dnl    AC_CHECK_LIB(termcap, tputs, [TERMCAPLIB=-ltermcap], [TERMCAPLIB=-lncurses])
+ dnl 
