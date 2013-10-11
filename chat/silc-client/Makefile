@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2013/05/31 12:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2013/10/11 09:58:53 roy Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -35,19 +35,10 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/${PKGBASE}/modules
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-terminfo
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--with-terminfo
+CONFIGURE_ARGS+=	--without-ncurses
 CONFIGURE_ARGS+=	--without-libtoolfix
-
-# Use native curses library.
-.if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
-CONFIGURE_ARGS+=	--with-vcurses
-.elif (${OPSYS} == "Linux") || (${OPSYS} == "Darwin")
-CONFIGURE_ARGS+=	--with-ncurses
-.else
-# XXX: Need testing on other operating systems, use safe defaults for now.
-CONFIGURE_ARGS+=	--with-ncurses
-.endif
 
 # Assembler optimizations.
 #
@@ -74,6 +65,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
