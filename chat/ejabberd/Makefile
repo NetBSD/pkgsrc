@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2013/07/19 09:45:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.34 2013/10/11 13:32:25 fhajny Exp $
 
-DISTNAME=	ejabberd-2.1.13
+DISTNAME=	ejabberd-13.10
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,43 +10,33 @@ HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	jabberd-[0-9]*
+BUILD_DEPENDS+=		git-base>=1.5:../../devel/git-base
+CONFLICTS+=		jabberd-[0-9]*
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake patch
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-# much prefer to be explicit about the configure settings rather than
-# depending on the defaults to continue to be sane or same between versions
-CONFIGURE_ARGS+=	--enable-odbc
-CONFIGURE_ARGS+=	--enable-mod_irc
-CONFIGURE_ARGS+=	--enable-mod_muc
-CONFIGURE_ARGS+=	--enable-eldap
-CONFIGURE_ARGS+=	--enable-web
-CONFIGURE_ARGS+=	--enable-tls
-CONFIGURE_ARGS+=	--enable-ejabberd_zlib
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-erlang=${BUILDLINK_PREFIX.erlang}
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--enable-iconv
+CONFIGURE_ARGS+=	--enable-json
+CONFIGURE_ARGS+=	--enable-lager
+CONFIGURE_ARGS+=	--enable-nif
+CONFIGURE_ARGS+=	--enable-stun
+CONFIGURE_ARGS+=	--enable-user=${EJABBERD_USER}
+CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
-CONFIGURE_DIRS+=	src
-BUILD_DIRS+=		src
-
-MAKE_ENV=		PKGVERSION=${PKGVERSION}
-PLIST_SUBST+=		DISTNAME=${DISTNAME} PKGBASE=${PKGBASE}
-
-FILES_SUBST+=		DISTNAME=${DISTNAME} PKGBASE=${PKGBASE}
-FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-FILES_SUBST+=		EGDIR=${EGDIR}
+.include "../../lang/erlang/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.erlang:Miodbc) || \
+    !empty(PKG_BUILD_OPTIONS.erlang:Munixodbc)
+CONFIGURE_ARGS+=	--enable-odbc
+.endif
 
 RCD_SCRIPTS=		ejabberd
 
 BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
 BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_DB EJABBERD_TRANSDIR
-BUILD_DEFS+=		EJABBERD_EXDIR
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	ejabberd
 
@@ -57,35 +47,37 @@ EJABBERD_GROUP?=	ejabberd
 EJABBERD_PIDDIR?=	${VARBASE}/run/ejabberd
 EJABBERD_LOGDIR?=	${VARBASE}/log/ejabberd
 EJABBERD_DB?=		${VARBASE}/spool/ejabberd
-EJABBERD_EXDIR=		share/examples/ejabberd
 
-OWN_DIRS+=		${EJABBERD_PIDDIR}
-OWN_DIRS+=		${EJABBERD_LOGDIR}
-OWN_DIRS+=		${EJABBERD_DB}
 OWN_DIRS_PERMS+=	${EJABBERD_PIDDIR} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
 OWN_DIRS_PERMS+=	${EJABBERD_LOGDIR} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
 OWN_DIRS_PERMS+=	${EJABBERD_DB} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
 
-FILES_SUBST+=		JABBERD_USER=${EJABBERD_USER}
-FILES_SUBST+=		JABBERD_LOGDIR=${EJABBERD_LOGDIR}
+FILES_SUBST+=		DISTNAME=${DISTNAME}
+FILES_SUBST+=		EJABBERD_USER=${EJABBERD_USER}
 
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 PLIST_SUBST+=		EJABBERD_EXDIR=${EJABBERD_EXDIR}
 
 PKG_GROUPS+=		${EJABBERD_GROUP}
 PKG_USERS+=		${EJABBERD_USER}:${EJABBERD_GROUP}
 PKG_GECOS.${EJABBERD_USER}=	ejabberd user
 PKG_HOME.${EJABBERD_USER}=	${EJABBERD_DB}
+PKG_SHELL.${EJABBERD_USER}=	${SH}
 
-EGDIR=			${PREFIX}/${EJABBERD_EXDIR}
+EGDIR=			share/examples/ejabberd
 
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR}
 
-CONF_FILES=		${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
-CONF_FILES+=		${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg
-CONF_FILES+=		${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc
+CONF_FILES_PERMS=	${EGDIR}/ejabberd.yml ${PKG_SYSCONFDIR}/ejabberd.yml \
+			${ROOT_USER} ${EJABBERD_GROUP} 0640
+CONF_FILES_PERMS+=	${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg \
+			${ROOT_USER} ${EJABBERD_GROUP} 0640
+CONF_FILES_PERMS+=	${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc \
+			${ROOT_USER} ${EJABBERD_GROUP} 0640
+SPECIAL_PERMS+=		sbin/ejabberdctl ${ROOT_USER} ${EJABBERD_GROUP} 0750
 
-REPLACE_SH=		src/ejabberdctl.template tools/captcha.sh
+REPLACE_SH=		ejabberdctl.template tools/captcha.sh
 
 post-patch:
 	${RM} -f ${WRKSRC}/doc/guide.tex.orig
@@ -98,23 +90,25 @@ post-install:
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	src/Makefile.in
-SUBST_FILES.paths+=	src/ejabberd.cfg.example
-SUBST_FILES.paths+=	src/ejabberdctl.template
+SUBST_FILES.paths=	Makefile.in
+SUBST_FILES.paths+=	ejabberd.yml.example
+SUBST_FILES.paths+=	ejabberdctl.template
 SUBST_FILES.paths+=	doc/guide.tex
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
-SUBST_SED.paths+=	-e 's,@EJABBERD_DBDIR@,${EJABBERD_DB},g'
+SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_PIDDIR@,${EJABBERD_PIDDIR},g'
-SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@DISTNAME@,${DISTNAME},g'
-SUBST_SED.paths+=	-e 's,@EJABBERD_VARDIR@,${VARBASE},g'
+
+post-configure:
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} deps
+	${PATCH} -p0 ${WRKSRC}/deps/p1_iconv/rebar.config \
+	  < ${FILESDIR}/deps_p1__iconv_rebar.config.patch
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../lang/erlang/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/libyaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

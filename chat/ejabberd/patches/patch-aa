@@ -1,17 +1,9 @@
-$NetBSD: patch-aa,v 1.9 2011/06/06 13:45:38 fhajny Exp $
+$NetBSD: patch-aa,v 1.10 2013/10/11 13:32:25 fhajny Exp $
 
---- src/Makefile.in.orig	2011-06-06 13:25:51.841507950 +0000
-+++ src/Makefile.in
-@@ -71,7 +71,7 @@ endif
- 
- INSTALL_EPAM=
- ifeq (@pam@, pam)
--  INSTALL_EPAM=install -m 750 $(O_USER) epam $(PBINDIR)
-+  INSTALL_EPAM=$(BSD_INSTALL_DATA) -m 750 $(O_USER) epam $(PBINDIR)
- endif
- 
- prefix = @prefix@
-@@ -89,13 +89,13 @@ BEAMS = $(SOURCES:.erl=.beam)
+Fix locations; don't mess with ownership.
+--- Makefile.in.orig	2013-09-27 09:19:22.000000000 +0000
++++ Makefile.in
+@@ -9,13 +9,13 @@ exec_prefix = @exec_prefix@
  DESTDIR =
  
  # /etc/ejabberd/
@@ -27,7 +19,7 @@ $NetBSD: patch-aa,v 1.9 2011/06/06 13:45:38 fhajny Exp $
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -121,16 +121,16 @@ SODIR = $(PRIVDIR)/lib
+@@ -41,16 +41,16 @@ SODIR = $(PRIVDIR)/lib
  MSGSDIR = $(PRIVDIR)/msgs
  
  # /var/lib/ejabberd/
@@ -43,135 +35,22 @@ $NetBSD: patch-aa,v 1.9 2011/06/06 13:45:38 fhajny Exp $
  
  # /var/log/ejabberd/
 -LOGDIR = $(DESTDIR)@localstatedir@/log/ejabberd
-+LOGDIR = $(DESTDIR)@JABBERD_LOGDIR@
++LOGDIR = $(DESTDIR)@EJABBERD_LOGDIR@
  
- # Assume Linux-style dynamic library flags
- DYNAMIC_LIB_CFLAGS = -fpic -shared
-@@ -183,10 +183,10 @@ translations:
- install: all
- 	#
- 	# Configuration files
--	install -d -m 750 $(G_USER) $(ETCDIR)
-+	$(BSD_INSTALL_DATA_DIR) -m 750 $(G_USER) $(ETCDIR)
- 	[ -f $(ETCDIR)/ejabberd.cfg ] \
--		&& install -b -m 640 $(G_USER) ejabberd.cfg.example $(ETCDIR)/ejabberd.cfg-new \
--		|| install -b -m 640 $(G_USER) ejabberd.cfg.example $(ETCDIR)/ejabberd.cfg
-+		&& $(BSD_INSTALL_DATA) -m 640 $(G_USER) ejabberd.cfg.example $(ETCDIR)/ejabberd.cfg-new \
-+		|| $(BSD_INSTALL_DATA) -m 640 $(G_USER) ejabberd.cfg.example $(ETCDIR)/ejabberd.cfg
- 	sed -e "s*@rootdir@*@prefix@*" \
- 		-e "s*@installuser@*@INSTALLUSER@*" \
- 		-e "s*@LIBDIR@*@libdir@*" \
-@@ -196,13 +196,13 @@ install: all
- 		-e "s*@erl@*@ERL@*" ejabberdctl.template \
- 		> ejabberdctl.example
- 	[ -f $(ETCDIR)/ejabberdctl.cfg ] \
--		&& install -b -m 640 $(G_USER) ejabberdctl.cfg.example $(ETCDIR)/ejabberdctl.cfg-new \
--		|| install -b -m 640 $(G_USER) ejabberdctl.cfg.example $(ETCDIR)/ejabberdctl.cfg
--	install -b -m 644 $(G_USER) inetrc $(ETCDIR)/inetrc
-+		&& $(BSD_INSTALL_DATA) -m 640 $(G_USER) ejabberdctl.cfg.example $(ETCDIR)/ejabberdctl.cfg-new \
-+		|| $(BSD_INSTALL_DATA) -m 640 $(G_USER) ejabberdctl.cfg.example $(ETCDIR)/ejabberdctl.cfg
-+	$(BSD_INSTALL_DATA) -m 644 $(G_USER) inetrc $(ETCDIR)/inetrc
- 	#
- 	# Administration script
--	[ -d $(SBINDIR) ] || install -d -m 755 $(SBINDIR)
--	install -m 550 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
-+	[ -d $(SBINDIR) ] || $(BSD_INSTALL_DATA_DIR) -m 755 $(SBINDIR)
-+	$(BSD_INSTALL_SCRIPT) -m 555 $(G_USER) ejabberdctl.example $(SBINDIR)/ejabberdctl
- 	#
- 	# Init script
- 	sed -e "s*@ctlscriptpath@*$(SBINDIR)*" \
-@@ -211,64 +211,58 @@ install: all
- 	chmod 755 ejabberd.init
- 	#
- 	# Binary Erlang files
--	install -d $(BEAMDIR)
--	install -m 644 *.app $(BEAMDIR)
--	install -m 644 *.beam $(BEAMDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(BEAMDIR)
-+	$(BSD_INSTALL_DATA) -m 644 *.app $(BEAMDIR)
-+	$(BSD_INSTALL_DATA) -m 644 *.beam $(BEAMDIR)
- 	rm -f $(BEAMDIR)/configure.beam
- 	#
- 	# ejabberd header files
--	install -d $(INCLUDEDIR)
--	install -m 644 *.hrl $(INCLUDEDIR)
--	install -d $(INCLUDEDIR)/eldap/
--	install -m 644 eldap/*.hrl $(INCLUDEDIR)/eldap/
--	install -d $(INCLUDEDIR)/mod_muc/
--	install -m 644 mod_muc/*.hrl $(INCLUDEDIR)/mod_muc/
--	install -d $(INCLUDEDIR)/mod_proxy65/
--	install -m 644 mod_proxy65/*.hrl $(INCLUDEDIR)/mod_proxy65/
--	install -d $(INCLUDEDIR)/mod_pubsub/
--	install -m 644 mod_pubsub/*.hrl $(INCLUDEDIR)/mod_pubsub/
--	install -d $(INCLUDEDIR)/web/
--	install -m 644 web/*.hrl $(INCLUDEDIR)/web/
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)
-+	$(BSD_INSTALL_DATA) -m 644 *.hrl $(INCLUDEDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/eldap/
-+	$(BSD_INSTALL_DATA) -m 644 eldap/*.hrl $(INCLUDEDIR)/eldap/
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/mod_muc/
-+	$(BSD_INSTALL_DATA) -m 644 mod_muc/*.hrl $(INCLUDEDIR)/mod_muc/
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/mod_proxy65/
-+	$(BSD_INSTALL_DATA) -m 644 mod_proxy65/*.hrl $(INCLUDEDIR)/mod_proxy65/
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/mod_pubsub/
-+	$(BSD_INSTALL_DATA) -m 644 mod_pubsub/*.hrl $(INCLUDEDIR)/mod_pubsub/
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/web/
-+	$(BSD_INSTALL_DATA) -m 644 web/*.hrl $(INCLUDEDIR)/web/
- 	#
- 	# Binary C programs
--	install -d $(PBINDIR)
--	install -m 750 $(O_USER) ../tools/captcha.sh $(PBINDIR)
-+	$(BSD_INSTALL_SCRIPT_DIR) $(PBINDIR)
-+	$(BSD_INSTALL_SCRIPT) -m 750 $(O_USER) ../tools/captcha.sh $(PBINDIR)
- 	$(INSTALL_EPAM)
- 	#
- 	# Binary system libraries
--	install -d $(SODIR)
--	install -m 644 *.so $(SODIR)
-+	$(BSD_INSTALL_LIB_DIR) $(SODIR)
-+	$(BSD_INSTALL_LIB) -m 644 *.so $(SODIR)
- 	#
- 	# Translated strings
--	install -d $(MSGSDIR)
--	install -m 644 msgs/*.msg $(MSGSDIR)
--	#
--	# Spool directory
--	install -d -m 750 $(O_USER) $(SPOOLDIR)
--	$(CHOWN_COMMAND) -R @INSTALLUSER@ $(SPOOLDIR) >$(CHOWN_OUTPUT)
--	chmod -R 750 $(SPOOLDIR)
--	[ ! -f $(COOKIEFILE) ] || { $(CHOWN_COMMAND) @INSTALLUSER@ $(COOKIEFILE) >$(CHOWN_OUTPUT) ; chmod 400 $(COOKIEFILE) ; }
-+	$(BSD_INSTALL_DATA_DIR) $(MSGSDIR)
-+	$(BSD_INSTALL_DATA) -m 644 msgs/*.msg $(MSGSDIR)
- 	#
- 	# ejabberdctl lock directory
--	install -d -m 750 $(O_USER) $(CTLLOCKDIR)
-+	$(BSD_INSTALL_DATA_DIR) -m 750 $(O_USER) $(CTLLOCKDIR)
- 	$(CHOWN_COMMAND) -R @INSTALLUSER@ $(CTLLOCKDIR) >$(CHOWN_OUTPUT)
- 	chmod -R 750 $(CTLLOCKDIR)
- 	#
- 	# Log directory
--	install -d -m 750 $(O_USER) $(LOGDIR)
-+	$(BSD_INSTALL_DATA_DIR) -m 750 $(O_USER) $(LOGDIR)
- 	$(CHOWN_COMMAND) -R @INSTALLUSER@ $(LOGDIR) >$(CHOWN_OUTPUT)
- 	chmod -R 750 $(LOGDIR)
- 	#
- 	# Documentation
--	install -d $(DOCDIR)
--	install -m 644 ../doc/dev.html $(DOCDIR)
--	install -m 644 ../doc/guide.html $(DOCDIR)
--	install -m 644 ../doc/*.png $(DOCDIR)
--	install -m 644 ../doc/*.txt $(DOCDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
-+	$(BSD_INSTALL_DATA) -m 644 ../doc/dev.html $(DOCDIR)
-+	$(BSD_INSTALL_DATA) -m 644 ../doc/guide.html $(DOCDIR)
-+	$(BSD_INSTALL_DATA) -m 644 ../doc/*.png $(DOCDIR)
-+	$(BSD_INSTALL_DATA) -m 644 ../doc/*.txt $(DOCDIR)
- 	[ -f ../doc/guide.pdf ] \
--		&& install -m 644 ../doc/guide.pdf $(DOCDIR) \
-+		&& $(BSD_INSTALL_DATA) -m 644 ../doc/guide.pdf $(DOCDIR) \
- 		|| echo "No ../doc/guide.pdf was built"
--	install -m 644 ../COPYING $(DOCDIR)
-+	$(BSD_INSTALL_DATA) -m 644 ../COPYING $(DOCDIR)
- 
- uninstall: uninstall-binary
+ INSTALLUSER=@INSTALLUSER@
+ # if no user was enabled, don't set privileges or ownership
+@@ -61,10 +61,10 @@ ifeq ($(INSTALLUSER),)
+   CHOWN_OUTPUT=/dev/null
+   INIT_USER=root
+ else
+-  O_USER=-o $(INSTALLUSER)
+-  G_USER=-g $(INSTALLUSER)
+-  CHOWN_COMMAND=chown
+-  CHOWN_OUTPUT=&1
++  O_USER=
++  G_USER=
++  CHOWN_COMMAND=echo
++  CHOWN_OUTPUT=/dev/null
+   INIT_USER=$(INSTALLUSER)
+ endif
  
