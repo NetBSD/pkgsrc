@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3756 2013/10/11 11:10:58 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3757 2013/10/11 11:30:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5240,3 +5240,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-genshi to 0.6.1 [obache 2013-10-11]
 	Added devel/p5-Data-Record version 0.02 [wiz 2013-10-11]
 	Added devel/p5-MooX-Cmd version 0.003 [wiz 2013-10-11]
+	Updated devel/p5-File-ConfigDir to 0.007 [wiz 2013-10-11]
