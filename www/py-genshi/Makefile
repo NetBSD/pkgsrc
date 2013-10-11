@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/10/28 06:31:01 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/11 10:54:15 obache Exp $
 #
 
-DISTNAME=	Genshi-0.6
+DISTNAME=	Genshi-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://ftp.edgewall.com/pub/genshi/
