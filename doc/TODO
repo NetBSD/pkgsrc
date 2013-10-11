@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12620 2013/10/10 17:53:30 tron Exp $
+$NetBSD: TODO,v 1.12621 2013/10/11 15:02:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.2
+	o calibre-1.6
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -467,6 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o doclifter-2.13
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
+	o dropbear-2013.59
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o echinus-0.4.9
