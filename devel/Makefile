@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1788 2013/10/11 11:31:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1789 2013/10/11 11:35:30 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -963,6 +963,7 @@ SUBDIR+=	p5-Module-Versions-Report
 SUBDIR+=	p5-Moo
 SUBDIR+=	p5-MooX-Cmd
 SUBDIR+=	p5-MooX-ConfigFromFile
+SUBDIR+=	p5-MooX-File-ConfigDir
 SUBDIR+=	p5-MooX-Types-MooseLike
 SUBDIR+=	p5-MooX-Types-MooseLike-Numeric
 SUBDIR+=	p5-Moose
