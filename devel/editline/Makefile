@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/07/15 15:14:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/11 14:24:29 wiz Exp $
 #
 
 DISTNAME=		libedit-20130712-3.1
@@ -18,7 +18,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		automake autoreconf
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
