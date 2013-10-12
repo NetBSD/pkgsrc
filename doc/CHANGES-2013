@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3769 2013/10/12 01:07:12 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3770 2013/10/12 03:36:55 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5250,6 +5250,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-genshi to 0.7 [obache 2013-10-11]
 	Updated mail/rss2email to 3.7 [schmonz 2013-10-11]
 	Updated x11/libdrm to 2.4.47 [wiz 2013-10-11]
-	Updated nih/OSBF-lua to 2.0.4nb3 [wiz 2013-10-11]
+	Updated mail/OSBF-lua to 2.0.4nb3 [wiz 2013-10-11]
 	Updated x11/xauth to 1.0.8 [wiz 2013-10-11]
 	Updated misc/libreoffice4 to 4.1.2.3nb2 [ryoon 2013-10-12]
