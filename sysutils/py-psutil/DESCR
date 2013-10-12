@@ -1,0 +1,6 @@
+util is a module providing an interface for retrieving information,
+on all running processes and system utilization (CPU, memory, disks,
+network, users) in a portable way by using Python, implementing
+many functionalities offered by command line tools such as ps, top,
+df, netstat, who, kill, uptime, free, lsof, ifconfig, nice, ionice,
+iostat, iotop, pidof, tty, taskset, or pmap.
