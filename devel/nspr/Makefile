@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2013/07/31 11:48:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2013/10/12 13:46:51 ryoon Exp $
 #
 
 DISTNAME=	nspr-${NSPR_RELEASE}
-NSPR_RELEASE=	4.10
-PKGREVISION=	1
+NSPR_RELEASE=	4.10.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
 
@@ -85,7 +84,7 @@ post-build:
 	set -e; ( \
 	  ${ECHO} "Name: NSPR"; \
 	  ${ECHO} "Description: The Netscape Portable Runtime";	\
-	  ${ECHO} "Version: ${NSPR_RELEASE}.0";			\
+	  ${ECHO} "Version: ${NSPR_RELEASE}";			\
 	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr";		\
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr"			\
 	    "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr"		\
