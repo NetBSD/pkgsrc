@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/12 13:38:38 obache Exp $
 #
 
-DISTNAME=	funcparserlib-0.3.5
+DISTNAME=	funcparserlib-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/f/funcparserlib/
@@ -13,5 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+PYTHON_VERSIONS_INCLUDE_3X=	yes
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
