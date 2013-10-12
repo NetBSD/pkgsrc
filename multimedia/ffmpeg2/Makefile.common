@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/10/12 10:31:12 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/10/12 17:23:01 tron Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -35,7 +35,7 @@ LDFLAGS+=		-Wl,-R${PREFIX}/lib/ffmpeg2
 
 PLIST_VARS+=		opencl
 
-.if ${OPSYS} == "Darwin"
+.if !empty(MACHINE_PLATFORM:MDarwin-1[23456789].*-*)
 CONFIGURE_ARGS+=	--enable-opencl
 PLIST.opencl=		yes
 .endif
