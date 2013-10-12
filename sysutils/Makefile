@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2013/09/30 17:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.588 2013/10/12 13:32:58 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -369,6 +369,7 @@ SUBDIR+=	py-dbus
 SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify-python
+SUBDIR+=	py-psutil
 SUBDIR+=	py-xattr
 SUBDIR+=	qlogtools
 SUBDIR+=	radeontool
