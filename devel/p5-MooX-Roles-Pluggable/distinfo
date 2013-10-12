@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/10/11 11:44:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/10/12 13:48:12 wiz Exp $
 
-SHA1 (MooX-Roles-Pluggable-0.001.tar.gz) = 34ca630e93488bfcb0039b5851c415d7b5baa2ac
-RMD160 (MooX-Roles-Pluggable-0.001.tar.gz) = 7403c9506b936b41209d66f727bc726e5bddf3c3
-Size (MooX-Roles-Pluggable-0.001.tar.gz) = 4741 bytes
+SHA1 (MooX-Roles-Pluggable-0.002.tar.gz) = 39a91bb0644d3c34e62220541a5833a070a806f9
+RMD160 (MooX-Roles-Pluggable-0.002.tar.gz) = d56826c140f5b5bc3dbd2a6d6328a69d795b20f9
+Size (MooX-Roles-Pluggable-0.002.tar.gz) = 5035 bytes
