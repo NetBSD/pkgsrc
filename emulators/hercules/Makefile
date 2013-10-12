@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/05/31 12:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/10/12 15:02:05 ryoon Exp $
 
 DISTNAME=		hercules-3.07
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.hercules-390.org/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.hercules-390.org/
+HOMEPAGE=		http://www.hercules-390.eu/
 COMMENT=		S370 emulator
 LICENSE=		qpl-v1.0
 
