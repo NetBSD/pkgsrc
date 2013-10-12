@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.76 2013/07/30 19:50:04 wiz Exp $
+$NetBSD: TODO,v 1.77 2013/10/12 15:01:45 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -36,17 +36,6 @@ include the name of an example package where a warning should occur.
   cd ${WRKSRC} && autoconf, then an incorrect warning is issued.
 * LOCALBASE should not be used in normal Makefiles
 * complain if LICENSE definition is missing
-
-%
-
-mail/mail-notification failed for Thomas, apparently because of an
-unexpressed dependency on hicolor-icon-theme.  I don't know if it's
-possible to add a way to notice that the PLIST contains hicolor files
-but that there's no dependency, or perhaps a list of mappings of sets of
-PLIST regexes to sets of required packages, or something.
-
-%
-
 * don't complain about "procedure calls", like for pkg-build-options in
   the various buildlink3.mk files.
 
