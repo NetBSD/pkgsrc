@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.434 2013/09/12 11:18:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.435 2013/10/12 18:09:59 rillig Exp $
 
 # Note: if you update the version number, please have a look at the
 # changes between the CVS tag "pkglint_current" and HEAD.
@@ -11,6 +11,7 @@ DISTFILES=	# none
 OWNER=		wiz@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Verifier for NetBSD packages
+LICENSE=	2-clause-bsd
 
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-enum>=1.016:../../devel/p5-enum
@@ -47,13 +48,6 @@ SUBST_CLASSES+=		mappaths
 SUBST_STAGE.mappaths=	pre-install
 SUBST_FILES.mappaths+=	pkglint.pl
 SUBST_SED.mappaths+=	-e s\|${FILESDIR}\|${PREFIX}/share/pkglint\|g
-
-# Note: This target is only intended for use by the pkglint author.
-.PHONY: quick-install
-quick-install:
-	${RM} -rf ${WRKSRC}
-	${MKDIR} ${WRKSRC}
-	${MAKE} do-extract subst-pkglint do-build do-install selftest clean
 
 do-extract:
 	cd ${FILESDIR} && ${CP} build.pl pkglint.0 pkglint.1 pkglint.pl pkglint.t plist-clash.pl ${WRKSRC}
