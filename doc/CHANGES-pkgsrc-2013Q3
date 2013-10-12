@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.5 2013/10/09 18:44:53 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.6 2013/10/12 14:16:45 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -15,3 +15,9 @@ Pullup ticket #4240 - requested by wiz
 x11/modular-xorg-server: security fix
 Pullup ticket #4241 - requested by tez
 graphics/librsvg: security patch
+Pullup ticket #4242 - requested by taca
+sysutils/ruby-rb-appscript: build fix
+Pullup ticket #4243 - requested by he
+graphics/png: build fix
+Pullup ticket #4244 - requested by obache
+www/py-genshi: security update
