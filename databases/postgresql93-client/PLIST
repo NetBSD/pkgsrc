@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/10 15:32:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/12 07:03:32 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -716,6 +716,7 @@ share/locale/zh_CN/LC_MESSAGES/ecpg-9.3.mo
 share/locale/zh_CN/LC_MESSAGES/ecpglib6-9.3.mo
 share/locale/zh_CN/LC_MESSAGES/initdb-9.3.mo
 share/locale/zh_CN/LC_MESSAGES/libpq5-9.3.mo
+share/locale/zh_CN/LC_MESSAGES/pg_basebackup-9.3.mo
 share/locale/zh_CN/LC_MESSAGES/pg_config-9.3.mo
 share/locale/zh_CN/LC_MESSAGES/pg_controldata-9.3.mo
 share/locale/zh_CN/LC_MESSAGES/pg_ctl-9.3.mo
