@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/10/11 11:44:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/12 13:48:12 wiz Exp $
 
-DISTNAME=	MooX-Roles-Pluggable-0.001
+DISTNAME=	MooX-Roles-Pluggable-0.002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
