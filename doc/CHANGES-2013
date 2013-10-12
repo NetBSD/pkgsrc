@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3778 2013/10/12 13:48:14 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3779 2013/10/12 13:48:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added sysutils/py-psutil version 1.0.1 [wiz 2013-10-12]
 	Updated devel/py-funcparserlib to 0.3.6 [obache 2013-10-12]
 	Updated devel/nspr to 4.10.1 [ryoon 2013-10-12]
+	Updated devel/p5-MooX-Roles-Pluggable to 0.002 [wiz 2013-10-12]
