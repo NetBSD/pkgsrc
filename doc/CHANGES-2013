@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3773 2013/10/12 10:35:48 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3774 2013/10/12 12:46:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/postgresql92-pltcl to 9.2.5 [adam 2013-10-12]
 	Updated databases/postgresql92-replicationtools to 9.2.5 [adam 2013-10-12]
 	Updated databases/postgresql92-upgrade to 9.2.5 [adam 2013-10-12]
+	Updated www/php-owncloud to 5.0.12 [ryoon 2013-10-12]
