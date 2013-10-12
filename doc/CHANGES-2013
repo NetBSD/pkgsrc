@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3776 2013/10/12 13:33:42 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3777 2013/10/12 13:39:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5290,3 +5290,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-owncloud to 5.0.12 [ryoon 2013-10-12]
 	Updated www/php-tt-rss to 1.10 [ryoon 2013-10-12]
 	Added sysutils/py-psutil version 1.0.1 [wiz 2013-10-12]
+	Updated devel/py-funcparserlib to 0.3.6 [obache 2013-10-12]
