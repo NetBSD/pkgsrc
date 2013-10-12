@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3770 2013/10/12 03:36:55 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.3771 2013/10/12 08:57:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/OSBF-lua to 2.0.4nb3 [wiz 2013-10-11]
 	Updated x11/xauth to 1.0.8 [wiz 2013-10-11]
 	Updated misc/libreoffice4 to 4.1.2.3nb2 [ryoon 2013-10-12]
+	Added devel/cgen version 20131001 [ryoon 2013-10-12]
