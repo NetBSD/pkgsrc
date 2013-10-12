@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/10/10 14:42:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/12 01:04:42 ryoon Exp $
 
 VER=		4.1.2.3
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.2/
 EXTRACT_SUFX=	.tar.xz
@@ -223,7 +223,7 @@ REPLACE_PERL+=	sd/res/webview/webview.pl
 LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
 # Base depends on java, we don't install the icon
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
-					printeradmin.desktop startcenter.desktop writer.desktop
+			startcenter.desktop writer.desktop
 
 CONFIGURE_SCRIPT=	./autogen.sh
 
