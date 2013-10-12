@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1791 2013/10/11 11:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.1792 2013/10/12 08:56:18 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -101,6 +101,7 @@ SUBDIR+=	cfitsio
 SUBDIR+=	cflow
 SUBDIR+=	cflow-mode
 SUBDIR+=	cgdb
+SUBDIR+=	cgen
 SUBDIR+=	check
 SUBDIR+=	chmlib
 SUBDIR+=	chrpath
