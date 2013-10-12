@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/03 12:54:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/12 22:13:44 ryoon Exp $
 bin/iconvert
 bin/idiff
 bin/igrep
@@ -17,6 +17,7 @@ include/OpenImageIO/fmath.h
 include/OpenImageIO/hash.h
 include/OpenImageIO/imagebuf.h
 include/OpenImageIO/imagebufalgo.h
+include/OpenImageIO/imagebufalgo_util.h
 include/OpenImageIO/imagecache.h
 include/OpenImageIO/imageio.h
 include/OpenImageIO/optparser.h
@@ -28,28 +29,6 @@ include/OpenImageIO/pugixml.hpp
 include/OpenImageIO/refcnt.h
 include/OpenImageIO/strutil.h
 include/OpenImageIO/sysutil.h
-include/OpenImageIO/tbb/_tbb_windef.h
-include/OpenImageIO/tbb/aligned_space.h
-include/OpenImageIO/tbb/atomic.h
-include/OpenImageIO/tbb/machine/ibm_aix51.h
-include/OpenImageIO/tbb/machine/linux_common.h
-include/OpenImageIO/tbb/machine/linux_ia32.h
-include/OpenImageIO/tbb/machine/linux_ia64.h
-include/OpenImageIO/tbb/machine/linux_intel64.h
-include/OpenImageIO/tbb/machine/mac_ppc.h
-include/OpenImageIO/tbb/machine/windows_ia32.h
-include/OpenImageIO/tbb/machine/windows_intel64.h
-include/OpenImageIO/tbb/spin_mutex.h
-include/OpenImageIO/tbb/spin_rw_mutex.h
-include/OpenImageIO/tbb/tbb_allocator.h
-include/OpenImageIO/tbb/tbb_assert_impl.h
-include/OpenImageIO/tbb/tbb_config.h
-include/OpenImageIO/tbb/tbb_exception.h
-include/OpenImageIO/tbb/tbb_machine.h
-include/OpenImageIO/tbb/tbb_misc.h
-include/OpenImageIO/tbb/tbb_profiling.h
-include/OpenImageIO/tbb/tbb_stddef.h
-include/OpenImageIO/tbb/tbb_version.h
 include/OpenImageIO/texture.h
 include/OpenImageIO/thread.h
 include/OpenImageIO/timer.h
@@ -59,7 +38,7 @@ include/OpenImageIO/ustring.h
 include/OpenImageIO/varyingref.h
 include/OpenImageIO/version.h
 lib/libOpenImageIO.so
-lib/libOpenImageIO.so.1.1
+lib/libOpenImageIO.so.1.2
 lib/libOpenImageIO.so.${PKGVERSION}
 share/doc/openimageio/CHANGES
 share/doc/openimageio/LICENSE
