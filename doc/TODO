@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12623 2013/10/12 13:48:14 ryoon Exp $
+$NetBSD: TODO,v 1.12624 2013/10/12 13:52:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pstoedit-3.61
 	o puf-1.0.0
 	o pulseaudio-4.0
-	o puzzles-10051
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
