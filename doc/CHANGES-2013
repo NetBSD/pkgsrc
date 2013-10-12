@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3780 2013/10/12 13:52:27 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3781 2013/10/12 14:28:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5294,3 +5294,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/nspr to 4.10.1 [ryoon 2013-10-12]
 	Updated devel/p5-MooX-Roles-Pluggable to 0.002 [wiz 2013-10-12]
 	Updated games/puzzles to 10051 [wiz 2013-10-12]
+	Updated net/youtube-dl to 20131009 [tron 2013-10-12]
