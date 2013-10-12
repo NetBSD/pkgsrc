@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/09/10 15:32:32 adam Exp $
+# $NetBSD: options.mk,v 1.2 2013/10/12 04:51:05 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql93
 PKG_SUPPORTED_OPTIONS=	bonjour gssapi kerberos ldap pam xml dtrace
@@ -29,6 +29,16 @@ CONFIGURE_ARGS+=	--with-gssapi
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-krb5
+
+CHECK_BUILTIN.${KRB5_TYPE}:=	yes
+.include	"../../security/${KRB5_TYPE}/builtin.mk"
+CHECK_BUILTIN.${KRB5_TYPE}:=	no
+
+.	if !empty(USE_BUILTIN.${KRB5_TYPE}:M[yY][eE][sS]) && \
+		exists(${SH_KRB5_CONFIG})
+CFLAGS_KRB5!=	${SH_KRB5_CONFIG} --cflags
+CPPFLAGS+=	${CFLAGS_KRB5}
+.	endif
 .endif
 
 ###
