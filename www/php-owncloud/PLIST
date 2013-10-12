@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/09/13 14:21:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2013/10/12 12:45:05 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -835,7 +835,6 @@ share/owncloud/3rdparty/timepicker/js/jquery.ui.timepicker.js
 share/owncloud/3rdparty/timepicker/releases.txt
 share/owncloud/AUTHORS
 share/owncloud/COPYING-AGPL
-share/owncloud/COPYING-README
 share/owncloud/README
 share/owncloud/apps/admin_dependencies_chk/appinfo/app.php
 share/owncloud/apps/admin_dependencies_chk/appinfo/info.xml
@@ -1372,6 +1371,7 @@ share/owncloud/apps/contacts/lib/sabre/addressbookroot.php
 share/owncloud/apps/contacts/lib/sabre/backend.php
 share/owncloud/apps/contacts/lib/sabre/card.php
 share/owncloud/apps/contacts/lib/sabre/useraddressbooks.php
+share/owncloud/apps/contacts/lib/sabre/validatorplugin.php
 share/owncloud/apps/contacts/lib/search.php
 share/owncloud/apps/contacts/lib/share/addressbook.php
 share/owncloud/apps/contacts/lib/share/contact.php
@@ -2819,6 +2819,7 @@ share/owncloud/apps/gallery/index.php
 share/owncloud/apps/gallery/js/gallery.js
 share/owncloud/apps/gallery/js/jquery.mousewheel-3.1.1.js
 share/owncloud/apps/gallery/js/slideshow.js
+share/owncloud/apps/gallery/js/thumbnail.js
 share/owncloud/apps/gallery/l10n/ar.php
 share/owncloud/apps/gallery/l10n/bg_BG.php
 share/owncloud/apps/gallery/l10n/bn_BD.php
@@ -3948,6 +3949,7 @@ share/owncloud/core/doc/user/_sources/pim/sync_ios.txt
 share/owncloud/core/doc/user/_sources/pim/sync_kde.txt
 share/owncloud/core/doc/user/_sources/pim/sync_osx.txt
 share/owncloud/core/doc/user/_sources/pim/sync_thunderbird.txt
+share/owncloud/core/doc/user/_sources/pim/troubleshooting.txt
 share/owncloud/core/doc/user/_sources/webinterface.txt
 share/owncloud/core/doc/user/_static/basic.css
 share/owncloud/core/doc/user/_static/bootstrap-responsive.css
@@ -3990,6 +3992,7 @@ share/owncloud/core/doc/user/pim/sync_ios.html
 share/owncloud/core/doc/user/pim/sync_kde.html
 share/owncloud/core/doc/user/pim/sync_osx.html
 share/owncloud/core/doc/user/pim/sync_thunderbird.html
+share/owncloud/core/doc/user/pim/troubleshooting.html
 share/owncloud/core/doc/user/search.html
 share/owncloud/core/doc/user/searchindex.js
 share/owncloud/core/doc/user/webinterface.html
