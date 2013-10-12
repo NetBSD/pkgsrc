@@ -1,4 +1,7 @@
-$NetBSD: patch-ae,v 1.10 2010/10/22 20:11:17 drochner Exp $
+$NetBSD: patch-ae,v 1.11 2013/10/12 04:39:01 richard Exp $
+
+builtin krb5-config in platforms such as solaris do not support
+the gssapi option, and need an explicit -lgss
 
 --- configure.orig	2010-09-28 09:35:20.000000000 +0000
 +++ configure
@@ -23,7 +26,25 @@ $NetBSD: patch-ae,v 1.10 2010/10/22 20:11:17 drochner Exp $
    return 0;
  }
  _ACEOF
-@@ -17533,7 +17535,7 @@ $as_echo "#define HAVE_SAMBA /**/" >>con
+@@ -15717,9 +15719,14 @@ fi
+
+
+ if test "x$KRB5_CONFIG" != "xnone"; then
+-   GSSAPI_LIBS="`${KRB5_CONFIG} --libs gssapi`"
+-   GSSAPI_CFLAGS="`${KRB5_CONFIG} --cflags gssapi`"
+-
++	# make sure krb5-config supports gssapi option
++	if $KRB5_CONFIG --libs gssapi 2>&1 | grep "Unknown option" > /dev/null ; then
++		GSSAPI_LIBS="`${KRB5_CONFIG} --libs` -lgss"
++   	GSSAPI_CFLAGS="`${KRB5_CONFIG} --cflags`"
++	else
++		GSSAPI_LIBS="`${KRB5_CONFIG} --libs gssapi`"
++   	GSSAPI_CFLAGS="`${KRB5_CONFIG} --cflags gssapi`"
++	fi
+    saved_CPPFLAGS="$CPPFLAGS"
+    saved_LIBS="$LIBS"
+    LIBS="$LIBS $GSSAPI_LIBS"
+@@ -17533,7 +17540,7 @@ $as_echo "#define HAVE_SAMBA /**/" >>con
  
  		msg_samba="yes"
                  if test x$with_samba_libs != x/usr/lib; then
@@ -32,7 +53,7 @@ $NetBSD: patch-ae,v 1.10 2010/10/22 20:11:17 drochner Exp $
                  else
                  	SAMBA_LIBS="-lsmbclient"
                  fi
-@@ -19370,12 +19372,12 @@ if test -n "$LIBGNOMEVFS_CFLAGS"; then
+@@ -19370,12 +19377,12 @@ if test -n "$LIBGNOMEVFS_CFLAGS"; then
      pkg_cv_LIBGNOMEVFS_CFLAGS="$LIBGNOMEVFS_CFLAGS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
@@ -48,7 +69,7 @@ $NetBSD: patch-ae,v 1.10 2010/10/22 20:11:17 drochner Exp $
  else
    pkg_failed=yes
  fi
-@@ -19386,12 +19388,12 @@ if test -n "$LIBGNOMEVFS_LIBS"; then
+@@ -19386,12 +19393,12 @@ if test -n "$LIBGNOMEVFS_LIBS"; then
      pkg_cv_LIBGNOMEVFS_LIBS="$LIBGNOMEVFS_LIBS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
@@ -64,7 +85,7 @@ $NetBSD: patch-ae,v 1.10 2010/10/22 20:11:17 drochner Exp $
  else
    pkg_failed=yes
  fi
-@@ -19411,14 +19413,14 @@ else
+@@ -19411,14 +19418,14 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
