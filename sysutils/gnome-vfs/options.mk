@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:03 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2013/10/12 04:39:01 richard Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
@@ -23,7 +23,9 @@ CONFIGURE_ARGS+=	--disable-fam
 
 .if !empty(PKG_OPTIONS:Mgssapi)
 .include "../../mk/krb5.buildlink3.mk"
+.	if !empty(USE_BUILTIN.${KRB5_TYPE}:M[yY][eE][sS])
 CONFIGURE_ENV+=		KRB5_CONFIG=${SH_KRB5_CONFIG}
+.	endif
 .else
 CONFIGURE_ENV+=		ac_cv_path_KRB5_CONFIG=none
 .endif
