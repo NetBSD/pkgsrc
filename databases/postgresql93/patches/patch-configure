@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/09/10 15:32:32 adam Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/12 04:51:05 richard Exp $
+
+Finally, native solaris uses -lgss for gssapi on mit-krb5.
 
 --- configure.orig	2013-09-02 20:53:17.000000000 +0000
 +++ configure
@@ -21,3 +23,12 @@ $NetBSD: patch-configure,v 1.1 2013/09/10 15:32:32 adam Exp $
  fi
  if test -z "$perl_embed_ldflags" ; then
  	{ $as_echo "$as_me:$LINENO: result: no" >&5
+@@ -8898,7 +8897,7 @@ return gss_init_sec_context ();
+   return 0;
+ }
+ _ACEOF
+-for ac_lib in '' gssapi_krb5 gss 'gssapi -lkrb5 -lcrypto'; do
++for ac_lib in '' gssapi_krb5 gss 'gssapi -lkrb5 -lcrypto' 'gss -lkrb5 lcrypto'; do
+   if test -z "$ac_lib"; then
+     ac_res="none required"
+   else
