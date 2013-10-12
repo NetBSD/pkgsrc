@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.859 2013/09/01 05:30:15 obache Exp $
+# $NetBSD: pkglint.pl,v 1.860 2013/10/12 18:09:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -367,9 +367,11 @@ my $is_internal;		# Is the current item from the infrastructure?
 #
 
 my $ipc_distinfo;		# Maps "$alg:$fname" => "checksum".
+my %ipc_used_licenses;		# { license name => true }
+my $ipc_checking_root_recursively; # For checking unused licenses
 
 # Context of the package that is currently checked.
-my $pkgpath;			# The relative path to the package within PKGSRC.
+my $pkgpath;			# The relative path to the package within PKGSRC
 my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
@@ -2111,9 +2113,8 @@ sub parse_mk_cond($$) {
 sub parse_licenses($) {
 	my ($licenses) = @_;
 
-	# XXX: this is clearly cheating
 	$licenses =~ s,\${PERL5_LICENSE},gnu-gpl-v2 OR artistic,g;
-	$licenses =~ s,[()]|AND|OR,,g;
+	$licenses =~ s,[()]|AND|OR,,g; # XXX: treats OR like AND
 	my @licenses = split(/\s+/, $licenses);
 	return \@licenses;
 }
@@ -2434,6 +2435,18 @@ sub checkword_absolute_pathname($$) {
 "the programs see later when they are executed. Usually it is empty, so",
 "if anything after that variable starts with a slash, it is considered",
 "an absolute pathname.");
+	}
+}
+
+sub check_unused_licenses() {
+
+	for my $licensefile (<${cwd_pkgsrcdir}/licenses/*>) {
+		if (-f $licensefile) {
+			my $licensename = basename($licensefile);
+			if (!exists($ipc_used_licenses{$licensename})) {
+				log_warning($licensefile, NO_LINES, "This license seems to be unused.");
+			}
+		}
 	}
 }
 
@@ -4125,7 +4138,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 					my $license_file_line = $pkgctx_vardef->{"LICENSE_FILE"};
 
 					$license_file = "${current_dir}/" . resolve_relative_path($license_file_line->get("value"), false);
+				} else {
+					$ipc_used_licenses{$license} = true;
 				}
+
 				if (!-f $license_file) {
 					$line->log_warning("License file ".normalize_pathname($license_file)." does not exist.");
 				}
@@ -7076,10 +7092,10 @@ sub checkfile($) {
 	} elsif ($basename =~ m"^MESSAGE") {
 		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
 
-	} elsif ($basename =~ m"^patch-[-A-Za-z0-9_\.~]*$") {
+	} elsif ($basename =~ m"^patch-[-A-Za-z0-9_.~+]*[A-Za-z0-9_]$") {
 		$opt_check_patches and checkfile_patch($fname);
 
-	} elsif ($fname =~ m"(?:^|/)patches/manual-[^/]*$") {
+	} elsif ($fname =~ m"(?:^|/)patches/manual[^/]*$") {
 		$opt_debug_unchecked and log_debug($fname, NO_LINE_NUMBER, "Unchecked file \"${fname}\".");
 
 	} elsif ($fname =~ m"(?:^|/)patches/[^/]*$") {
@@ -7197,6 +7213,7 @@ sub checkdir_root() {
 	checklines_mk($lines);
 
 	if ($opt_recursive) {
+		$ipc_checking_root_recursively = true;
 		push(@todo_items, @subdirs);
 	}
 }
@@ -7555,6 +7572,10 @@ sub main() {
 	@todo_items = (@ARGV != 0) ? @ARGV : (".");
 	while (@todo_items != 0) {
 		checkitem(shift(@todo_items));
+	}
+
+	if ($ipc_checking_root_recursively) {
+		check_unused_licenses();
 	}
 
 	PkgLint::Logging::print_summary_and_exit($opt_quiet);
