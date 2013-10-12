@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/10/12 08:39:02 ryoon Exp $
+
+SHA1 (cgen-20131001.tar.bz2) = f456bd2c2a9a28871c99c6261c5d0fed02b15de3
+RMD160 (cgen-20131001.tar.bz2) = 5fca888ddc4ec8768de553e8a907c69aeb9256f2
+Size (cgen-20131001.tar.bz2) = 1631519 bytes
+SHA1 (patch-cgen_gen-all) = b1729f27fd9a8d7a8a6afca0acd6608297efe19b
+SHA1 (patch-cgen_testsuite_run-tests.sh) = 69d513dd93a3369506ea47a98c1c30455f0f3343

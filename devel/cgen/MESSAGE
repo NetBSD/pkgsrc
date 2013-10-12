@@ -1,0 +1,25 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/10/12 08:39:02 ryoon Exp $
+
+To generating opcode file and description files for M32R, for example.
+Please run the following commands.
+In detail, see info files and ${PREFIX}/share/cgen/cgen/Makefile.in .
+
+$ guile -l ${PREFIX}/share/cgen/cgen/guile.scm \
+  -s ${PREFIX}/share/cgen/cgen/cgen-opc.scm \
+  -s ${PREFIX}/share/cgen/cgen \
+  -v \
+  -a ${PREFIX}/share/cgen/cpu/m32r.cpu \
+  -i "all" \
+  -m "all" \
+  -H m32r-desc.h \
+  -C m32r-desc.c
+
+$ guile -l ${PREFIX}/share/cgen/cgen/guile.scm \
+  -s ${PREFIX}/share/cgen/cgen/cgen-doc.scm \
+  -s ${PREFIX}/share/cgen/cgen \
+  -v \
+  -a ${PREFIX}/share/cgen/cpu/m32r.cpu \
+  -H m32r.html \
+  -I m32r-insn.html  
+===========================================================================

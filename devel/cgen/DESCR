@@ -1,0 +1,7 @@
+CGEN (pronounced seejen) is a framework for developing generators
+of CPU-related tools such as assemblers, disassemblers and simulators.
+It specifies a description language for describing the architecture
+and organization of a CPU without reference to any particular
+application. Additional applications can be written within the
+framework. CGEN is written in Scheme and can be run under the GNU
+Guile interpreter. It is placed under a free software license.
