@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3768 2013/10/11 20:36:31 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3769 2013/10/12 01:07:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5252,3 +5252,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libdrm to 2.4.47 [wiz 2013-10-11]
 	Updated nih/OSBF-lua to 2.0.4nb3 [wiz 2013-10-11]
 	Updated x11/xauth to 1.0.8 [wiz 2013-10-11]
+	Updated misc/libreoffice4 to 4.1.2.3nb2 [ryoon 2013-10-12]
