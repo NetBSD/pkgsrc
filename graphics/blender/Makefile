@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2013/09/01 12:14:07 obache Exp $
+# $NetBSD: Makefile,v 1.97 2013/10/12 22:11:00 ryoon Exp $
 
-DISTNAME=	blender-2.66a
-PKGREVISION=	5
+DISTNAME=	blender-2.68a
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 

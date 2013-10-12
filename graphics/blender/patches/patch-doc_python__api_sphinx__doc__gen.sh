@@ -1,8 +1,8 @@
-$NetBSD: patch-doc_python__api_sphinx__doc__gen.sh,v 1.2 2013/02/27 15:25:28 ryoon Exp $
+$NetBSD: patch-doc_python__api_sphinx__doc__gen.sh,v 1.3 2013/10/12 22:11:00 ryoon Exp $
 
 * Improve portability
 
---- doc/python_api/sphinx_doc_gen.sh.orig	2013-02-20 14:22:36.000000000 +0000
+--- doc/python_api/sphinx_doc_gen.sh.orig	2013-04-19 13:00:21.000000000 +0000
 +++ doc/python_api/sphinx_doc_gen.sh
 @@ -32,7 +32,7 @@ blender_version_char=$(grep BLENDER_VERS
  blender_version_cycle=$(grep BLENDER_VERSION_CYCLE $blender_srcdir/source/blender/blenkernel/BKE_blender.h | awk '{print $3}')

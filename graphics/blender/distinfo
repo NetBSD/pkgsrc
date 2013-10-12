@@ -1,20 +1,16 @@
-$NetBSD: distinfo,v 1.37 2013/03/13 20:28:48 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2013/10/12 22:11:00 ryoon Exp $
 
-SHA1 (blender-2.66a.tar.gz) = f48555f3840f6ebde78603919d686672163c36ea
-RMD160 (blender-2.66a.tar.gz) = b0251067f6a6273ba1889cefafa7f8dd283e622e
-Size (blender-2.66a.tar.gz) = 36911037 bytes
-SHA1 (patch-SConstruct) = 4e3e81d3f4d8bf53a26102cb489ad507d14dd086
-SHA1 (patch-ab) = 5669f269c922f9bd521d15fdb1b21ba1e58ac7f6
-SHA1 (patch-am) = d023b35fe2355e2e53e11a3c91730ebe21da6de8
+SHA1 (blender-2.68a.tar.gz) = b01e73b560c791f5a6086deaed6072ef5f8dd3b3
+RMD160 (blender-2.68a.tar.gz) = ee451f735f0814e067f178097d95eb5d89592fee
+Size (blender-2.68a.tar.gz) = 40042207 bytes
+SHA1 (patch-ab) = 2541584b0a4317f32558f581649a8c5c9ac427b7
 SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 520fa968b4f1f9f10adb1055803e05dafc96f0fe
 SHA1 (patch-build__files_scons_tools_btools.py) = 09fe67666091daafcf586aa70dc19fa6964b2098
-SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = 273c88e258ca49f29367a1f3246c25df800b920a
-SHA1 (patch-extern_libmv_libmv_numeric_numeric.h) = fe674deb97e1ff8604b7fe505c715621b9fee5ee
-SHA1 (patch-extern_libmv_libmv_tracking_brute__region__tracker.cc) = 3d09eb0821a628c15e898b6fa432fe1d787f0eb8
+SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = 52c9ee0e0c73b9b9628a3d82292a9588ff0060da
+SHA1 (patch-extern_libmv_libmv_numeric_numeric.h) = 37649c996eda56c2a6e0776b9933df28fac645e3
+SHA1 (patch-extern_libmv_libmv_tracking_brute__region__tracker.cc) = be5fe12d44221bde94326cccb30316bcf29f9aba
 SHA1 (patch-extern_libmv_third__party_glog_src_config.h) = d889d56d47167222ab54fad1c8f87c7ddb02852a
 SHA1 (patch-extern_libmv_third__party_glog_src_config__netbsd.h) = 423dda12bb5871f810938666c0267ac73b3f856e
 SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef0529fe56b3e857685fbc5d1f
 SHA1 (patch-intern_ghost_SConscript) = 84dad76663e6dfc3bd6636fe8924921fe04caa2f
-SHA1 (patch-intern_guardedalloc_MEM__sys__types.h) = 7b3ee6dc5d1b66a785a838c07507b8d93f7f1d1d
-SHA1 (patch-intern_opennl_superlu_superlu__sys__types.h) = 99fa9ffa655914067173481d5fe6c498ad069717
 SHA1 (patch-user-config.py) = a3cf1a22185496f13b068a31d4b9638c8821f941
