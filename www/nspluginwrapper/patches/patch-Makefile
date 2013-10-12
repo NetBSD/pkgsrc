@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2013/10/12 12:39:15 wiz Exp $
+
+Link against libraries whose functions are used, don't depend on
+them being pulled in by the linker.
+
+--- Makefile.orig	2009-01-02 08:54:10.000000000 +0000
++++ Makefile
+@@ -148,7 +148,7 @@ npplayer_SOURCES  = npw-player.c debug.c
+ npplayer_OBJECTS  = $(npplayer_SOURCES:%.c=npplayer-%.o)
+ npplayer_CFLAGS   = $(GTK_CFLAGS) $(MOZILLA_CFLAGS) $(CURL_CFLAGS) $(X_CFLAGS)
+ npplayer_LDFLAGS  = $(GTK_LDFLAGS) $(CURL_LDFLAGS) $(X_LDFLAGS)
+-npplayer_LDFLAGS += -lgthread-2.0 $(libpthread_LDFLAGS) $(libsocket_LDFLAGS)
++npplayer_LDFLAGS += -lgthread-2.0 -lgmodule-2.0 $(libpthread_LDFLAGS) $(libsocket_LDFLAGS)
+ 
+ libxpcom_LIBRARY = libxpcom.so
+ libxpcom_RAWSRCS = libxpcom.c debug.c
