@@ -1,9 +1,9 @@
-$NetBSD: patch-include_pugixml.hpp,v 1.1 2013/05/09 13:58:54 joerg Exp $
+$NetBSD: patch-include_pugixml.hpp,v 1.2 2013/10/12 22:13:44 ryoon Exp $
 
---- include/pugixml.hpp.orig	2013-02-21 17:10:46.000000000 +0000
+--- include/pugixml.hpp.orig	2013-09-30 17:25:21.000000000 +0000
 +++ include/pugixml.hpp
-@@ -18,6 +18,11 @@
- #include "version.h"
+@@ -23,6 +23,11 @@
+ 
  
  #ifndef PUGIXML_NO_STL
 +#include <iterator>
@@ -14,7 +14,7 @@ $NetBSD: patch-include_pugixml.hpp,v 1.1 2013/05/09 13:58:54 joerg Exp $
  namespace std
  {
  	struct bidirectional_iterator_tag;
-@@ -45,6 +50,7 @@ namespace std
+@@ -50,6 +55,7 @@ namespace std
  #endif
  }
  #endif
