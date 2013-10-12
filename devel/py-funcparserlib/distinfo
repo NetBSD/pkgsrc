@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/15 13:34:02 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/10/12 13:38:38 obache Exp $
 
-SHA1 (funcparserlib-0.3.5.tar.gz) = 030a0689f5e7111ede49491f51e90fa641711fae
-RMD160 (funcparserlib-0.3.5.tar.gz) = 598f16e4a4a3b57c311898912b6e26058182c91e
-Size (funcparserlib-0.3.5.tar.gz) = 33117 bytes
+SHA1 (funcparserlib-0.3.6.tar.gz) = 6db0e9e78dcddd993cdd488945b040934a361f03
+RMD160 (funcparserlib-0.3.6.tar.gz) = 90ae4ce8eb4009fd1e4ba1a829ea0b37acc87cf1
+Size (funcparserlib-0.3.6.tar.gz) = 30401 bytes
