@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2013/02/03 17:48:45 kefren Exp $
+$NetBSD: distinfo,v 1.13 2013/10/13 21:52:44 sbd Exp $
 
 SHA1 (flow-tools-0.68.tar.gz) = 6259263ac4fbf8a9394224e4053393fa756473c7
 RMD160 (flow-tools-0.68.tar.gz) = 71bfd1a40cb34fae55b2769d93208d13b3b0a927
@@ -11,7 +11,7 @@ SHA1 (patch-ae) = 1e5f151f3eba795f1ade4c016767bd4cd271565a
 SHA1 (patch-af) = 7f5d045954b998a30616dedac0069c817b665031
 SHA1 (patch-ag) = 60d7c6d07cc8f102d6281a55c8188d13eca80bdf
 SHA1 (patch-ah) = 0553764799fd696ea5799bfbfb974219bc62d3fd
-SHA1 (patch-ai) = 5e0a5f3148e80c156198d74036ff2f1bf35ed779
+SHA1 (patch-ai) = da320acc75a51bd7d1d430dce32b28e944d78e1e
 SHA1 (patch-aj) = d183dc3b360110a1a90165b0094e349d3a964a2e
 SHA1 (patch-ak) = f5d13e165b7fac689bcea7e9d7ad07b17a79b7de
 SHA1 (patch-al) = 941cc23ea527624d21d40d3a73aa94f947f02552
@@ -20,6 +20,8 @@ SHA1 (patch-an) = db119ec8b12eb2b2a064fe8d1af77157311132ce
 SHA1 (patch-ao) = 8fe5cec93201334e18560df9ec7b5348f9a478f4
 SHA1 (patch-ap) = 65b770be063e7047813ad465a471ec6a85e214f6
 SHA1 (patch-ar) = 36db7e4c656bf083ff773d3bebffcf9118b81050
-SHA1 (patch-as) = 1c73317a2347f47fffb66f68a891cc78c93c644f
+SHA1 (patch-as) = 009a65a80db52ca873b88240ee87dc5d3737f9c9
 SHA1 (patch-at) = 488e6d5f90a76e2f97f93cee20097adead550f7b
 SHA1 (patch-lib_ftfil.c) = 8d8f901a63af1d19f38ac74c63b32c92844c2809
+SHA1 (patch-lib_ftstat.c) = 80944177b1d90784dda7815eae627a317bfd66db
+SHA1 (patch-src_flow-print.c) = 142ab6afaf8ebb2bc7fe18fcdc3c7243c4ea2ad1
