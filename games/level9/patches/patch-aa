@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/10/01 20:21:40 dillo Exp $
+$NetBSD: patch-aa,v 1.3 2013/10/13 10:19:22 wiz Exp $
 
---- unix-curses.c.orig	Sun Apr 21 21:37:00 2002
+--- unix-curses.c.orig	2011-05-29 07:39:50.000000000 +0000
 +++ unix-curses.c
-@@ -10,11 +10,6 @@
+@@ -9,11 +9,6 @@
   *
   * A few notes on this port:
   *
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.2 2003/10/01 20:21:40 dillo Exp $
   * If you don't specify a path, level9 Linux will look first in the directory
   *  $LEVEL9DIR, if defined, and then in the current directory.
   *
-@@ -39,11 +34,6 @@
+@@ -38,11 +33,6 @@
  #define FILE_DELIM   '/'
  
  /*
@@ -26,7 +26,16 @@ $NetBSD: patch-aa,v 1.2 2003/10/01 20:21:40 dillo Exp $
   * Define this as 1 to get the Emacs-type key bindings
   *  Ctrl-A (go to beginning of line)
   *  Ctrl-B (back one character)
-@@ -741,25 +731,11 @@ int main (int argc, char *argv [])
+@@ -88,7 +78,7 @@ extern FILE* scriptfile;
+ /*
+  * You might have to change this if not using ncurses
+  */
+-#include <ncurses/curses.h>
++#include <curses.h>
+ 
+ 
+ #define CTRL_A '\x01'
+@@ -773,25 +763,11 @@ int main (int argc, char *argv [])
    char gamename [256];
    char *envbuf;
    L9BOOL gotgame;
@@ -53,7 +62,7 @@ $NetBSD: patch-aa,v 1.2 2003/10/01 20:21:40 dillo Exp $
  
    if (argc != 2)
    {
-@@ -786,8 +762,9 @@ int main (int argc, char *argv [])
+@@ -820,8 +796,9 @@ int main (int argc, char *argv [])
    /*
     * Get the terminal characteristics for line width and More prompt
     */
@@ -64,7 +73,7 @@ $NetBSD: patch-aa,v 1.2 2003/10/01 20:21:40 dillo Exp $
    {
      fprintf (stderr, "Couldn't get terminal width---falling back on good old"
  	             " 80 columns\n\n");
-@@ -795,7 +772,7 @@ int main (int argc, char *argv [])
+@@ -829,7 +806,7 @@ int main (int argc, char *argv [])
    }
  
    More_lines = tgetnum ("li");
