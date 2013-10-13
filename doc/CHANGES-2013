@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3786 2013/10/13 04:20:34 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3787 2013/10/13 04:29:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5338,3 +5338,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/openimageio to 1.2.2 [ryoon 2013-10-12]
 	Updated www/p5-HTML-Lint to 2.20 [wen 2013-10-13]
 	Updated textproc/p5-XML-LibXML to 2.0106 [wen 2013-10-13]
+	Updated textproc/p5-XML-Writer to 0.623 [wen 2013-10-13]
