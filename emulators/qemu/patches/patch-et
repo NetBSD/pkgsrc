@@ -1,6 +1,6 @@
-$NetBSD: patch-et,v 1.9 2013/08/16 21:20:11 adam Exp $
+$NetBSD: patch-et,v 1.10 2013/10/13 12:37:58 ryoon Exp $
 
---- Makefile.orig	2013-08-15 19:56:23.000000000 +0000
+--- Makefile.orig	2013-10-09 19:20:32.000000000 +0000
 +++ Makefile
 @@ -329,8 +329,9 @@ endif
  install-confdir:
