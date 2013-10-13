@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1792 2013/10/12 08:56:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.1793 2013/10/13 12:59:11 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1683,7 +1683,6 @@ SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tla
 SUBDIR+=	tmake
-SUBDIR+=	tolua++
 SUBDIR+=	topgit
 SUBDIR+=	tpasm
 SUBDIR+=	tradcpp
