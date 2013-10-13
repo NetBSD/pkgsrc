@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3791 2013/10/13 12:11:46 imil Exp $
+$NetBSD: CHANGES-2013,v 1.3792 2013/10/13 12:40:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5343,3 +5343,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/level9 to 5.1 [wiz 2013-10-13]
 	Updated databases/pgadmin3 to 1.18.1 [richard 2013-10-13]
 	Updated sysutils/conky to 1.9.0nb14 [imil 2013-10-13]
+	Updated emulators/qemu to 1.6.1 [ryoon 2013-10-13]
