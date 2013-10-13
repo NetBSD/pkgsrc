@@ -1,8 +1,16 @@
-$NetBSD: patch-ai,v 1.2 2003/05/23 07:19:44 seb Exp $
+$NetBSD: patch-ai,v 1.3 2013/10/13 21:52:44 sbd Exp $
 
 --- src/flow-dscan.c.orig	2003-04-02 18:03:01.000000000 +0000
 +++ src/flow-dscan.c
-@@ -233,8 +233,9 @@ int main(int argc, char **argv)
+@@ -112,6 +112,7 @@ int main(int argc, char **argv)
+   u_int32 trigger_time, trigger_packets, trigger_octets;
+   pid_t pid;
+   struct tm *tm;
++  time_t time_tmp;
+ 
+   total_flows = total_flows32 = 0;
+   bzero(&ds, sizeof ds);
+@@ -233,8 +234,9 @@ int main(int argc, char **argv)
      } else if (pid)
        exit (0); /* parent */
  
@@ -14,3 +22,50 @@ $NetBSD: patch-ai,v 1.2 2003/05/23 07:19:44 seb Exp $
      for (i = 1; i < 16; ++i) /* XXX dynamically get NOFILE */
        close (i);
  
+@@ -453,7 +455,8 @@ sup:
+ 
+               ftt = ftltime(rec->sysUpTime, rec->unix_secs, rec->unix_nsecs,
+                 rec->First);
+-              tm = localtime((time_t*)&ftt.secs);
++              time_tmp = ftt.secs;
++              tm = localtime(&time_tmp);
+ 
+               fmt_uint32(fmt_buf3, ftt.secs, FMT_JUST_LEFT);
+ 
+@@ -479,7 +482,8 @@ sup:
+ 
+         ftt = ftltime(rec->sysUpTime, rec->unix_secs, rec->unix_nsecs,
+           rec->First);
+-        tm = localtime((time_t*)&ftt.secs);
++	time_tmp = ftt.secs;
++	tm = localtime(&time_tmp);
+ 
+         fmt_uint32(fmt_buf3, ftt.secs, FMT_JUST_LEFT);
+ 
+@@ -1001,6 +1005,7 @@ void flow_dump(struct fts3rec_gen *rec)
+   char fmt_buf1[64], fmt_buf2[64];
+   struct tm *tm;
+   static int header;
++  time_t time_tmp;
+ 
+   if (!header) {
+     fterr_info( "Start             End                Sif SrcIPaddress      SrcP  DIf DstIPaddress      DstP   P Fl       Pkts     Octets");
+@@ -1008,14 +1013,16 @@ void flow_dump(struct fts3rec_gen *rec)
+   }
+ 
+   ftt = ftltime(rec->sysUpTime, rec->unix_secs, rec->unix_nsecs, rec->First);
+-  tm = localtime((time_t*)&ftt.secs);
++  time_tmp = ftt.secs;
++  tm = localtime(&time_tmp);
+ 
+   fterr_info( "%-2.2d%-2.2d.%-2.2d:%-2.2d:%-2.2d.%-3lu ",
+     (int)tm->tm_mon+1, (int)tm->tm_mday, (int)tm->tm_hour,
+     (int)tm->tm_min, (int)tm->tm_sec, (u_long)ftt.msecs);
+ 
+   ftt = ftltime(rec->sysUpTime, rec->unix_secs, rec->unix_nsecs, rec->Last);
+-  tm = localtime((time_t*)&ftt.secs);
++  time_tmp = ftt.secs;
++  tm = localtime(&time_tmp);
+ 
+   fterr_info( "%-2.2d%-2.2d.%-2.2d:%-2.2d:%-2.2d.%-3lu ",
+     (int)tm->tm_mon+1, (int)tm->tm_mday, (int)tm->tm_hour,
