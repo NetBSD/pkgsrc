@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/09/11 13:39:35 richard Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/10/13 12:06:30 richard Exp $
 bin/pgadmin3
 share/pgadmin3/branding/branding.ini
 share/pgadmin3/docs/cs_CZ/hints/autovacuum.html
@@ -359,32 +359,22 @@ share/pgadmin3/docs/zh_TW/hints/saving-passwords.html
 share/pgadmin3/docs/zh_TW/hints/vacuum.html
 share/pgadmin3/docs/zh_TW/hints/view-without-pk.html
 share/pgadmin3/docs/zh_TW/pgadmin3.css
-share/pgadmin3/i18n/af_ZA/pgadmin3.mo
-share/pgadmin3/i18n/af_ZA/wxstd.mo
 share/pgadmin3/i18n/ca_ES/pgadmin3.mo
 share/pgadmin3/i18n/ca_ES/wxstd.mo
 share/pgadmin3/i18n/cs_CZ/pgadmin3.mo
 share/pgadmin3/i18n/cs_CZ/wxstd.mo
 share/pgadmin3/i18n/de_DE/pgadmin3.mo
 share/pgadmin3/i18n/de_DE/wxstd.mo
-share/pgadmin3/i18n/es_ES/pgadmin3.mo
-share/pgadmin3/i18n/es_ES/wxstd.mo
 share/pgadmin3/i18n/fr_FR/pgadmin3.mo
 share/pgadmin3/i18n/fr_FR/wxstd.mo
-share/pgadmin3/i18n/it_IT/pgadmin3.mo
-share/pgadmin3/i18n/it_IT/wxstd.mo
 share/pgadmin3/i18n/ja_JP/pgadmin3.mo
 share/pgadmin3/i18n/ja_JP/wxstd.mo
-share/pgadmin3/i18n/ko_KR/pgadmin3.mo
-share/pgadmin3/i18n/ko_KR/wxstd.mo
 share/pgadmin3/i18n/lv_LV/pgadmin3.mo
 share/pgadmin3/i18n/lv_LV/wxstd.mo
 share/pgadmin3/i18n/pg_settings.csv
 share/pgadmin3/i18n/pgadmin3.lng
 share/pgadmin3/i18n/pl_PL/pgadmin3.mo
 share/pgadmin3/i18n/pl_PL/wxstd.mo
-share/pgadmin3/i18n/pt_PT/pgadmin3.mo
-share/pgadmin3/i18n/pt_PT/wxstd.mo
 share/pgadmin3/i18n/ru_RU/pgadmin3.mo
 share/pgadmin3/i18n/ru_RU/wxstd.mo
 share/pgadmin3/i18n/sr_RS/pgadmin3.mo
@@ -392,7 +382,5 @@ share/pgadmin3/i18n/sr_RS/wxstd.mo
 share/pgadmin3/i18n/wxstd.mo
 share/pgadmin3/i18n/zh_CN/pgadmin3.mo
 share/pgadmin3/i18n/zh_CN/wxstd.mo
-share/pgadmin3/i18n/zh_TW/pgadmin3.mo
-share/pgadmin3/i18n/zh_TW/wxstd.mo
 share/pgadmin3/plugins.d/plugins.ini
 share/pgadmin3/settings.ini
