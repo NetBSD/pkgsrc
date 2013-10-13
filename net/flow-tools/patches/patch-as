@@ -1,8 +1,42 @@
-$NetBSD: patch-as,v 1.1 2006/07/18 11:06:48 seb Exp $
+$NetBSD: patch-as,v 1.2 2013/10/13 21:52:44 sbd Exp $
 
 --- lib/ftio.c.orig	2003-02-24 00:51:47.000000000 +0000
 +++ lib/ftio.c
-@@ -2267,7 +2267,7 @@ int readn(register int fd, register void
+@@ -1605,6 +1605,7 @@ void ftio_header_print(struct ftio *ftio
+   u_int32 flags, fields;
+   u_long period;
+   int n, streaming2;
++  time_t time_tmp;
+ 
+   fth = &ftio->fth;
+ 
+@@ -1639,17 +1640,21 @@ void ftio_header_print(struct ftio *ftio
+   }
+ 
+   if (!streaming2)
+-    if (fields & FT_FIELD_CAP_START)
++    if (fields & FT_FIELD_CAP_START) {
++      time_tmp = fth->cap_start;
+       fprintf(std, "%c capture start:        %s", cc,
+-        ctime((time_t*)&fth->cap_start));
++        ctime(&time_tmp));
++    }
+ 
+   if (!streaming2) {
+ 
+     if ((flags & FT_HEADER_FLAG_DONE) || (flags & FT_HEADER_FLAG_PRELOADED)) {
+ 
+-      if (fields & FT_FIELD_CAP_END)
++      if (fields & FT_FIELD_CAP_END) {
++	time_tmp = fth->cap_end;
+         fprintf(std, "%c capture end:          %s", cc,
+-          ctime((time_t*)&fth->cap_end));
++	  ctime(&time_tmp));
++      }
+ 
+       period = fth->cap_end - fth->cap_start;
+       if ((fields & FT_FIELD_CAP_END) && (fields & FT_FIELD_CAP_START))
+@@ -2267,7 +2272,7 @@ int readn(register int fd, register void
          break;
  
        nleft -= nread;
@@ -11,7 +45,7 @@ $NetBSD: patch-as,v 1.1 2006/07/18 11:06:48 seb Exp $
    }
    return (nbytes - nleft);
  } /* readn */
-@@ -2292,7 +2292,7 @@ int writen(register int fd, register voi
+@@ -2292,7 +2297,7 @@ int writen(register int fd, register voi
        return(nwritten); /* error */
  
      nleft -= nwritten;
