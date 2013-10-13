@@ -1,27 +1,22 @@
-# $NetBSD: config-override.mk,v 1.6 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: config-override.mk,v 1.7 2013/10/13 10:10:05 wiz Exp $
 
 ######################################################################
-### config-{guess,sub,rpath}-override (PRIVATE)
+### config-{guess,sub}-override (PRIVATE)
 ######################################################################
-### config-{guess,sub,rpath}-override replace any existing config.guess,
-### config.sub, and config-rpath under ${WRKSRC} with the specially-kept
-### versions under pkgsrc/mk/gnu-config.
+### config-{guess,sub}-override replace any existing config.guess and
+### config.sub under ${WRKSRC} with the specially-kept versions
+### under pkgsrc/mk/gnu-config.
 ###
 do-configure-pre-hook: config-guess-override
 do-configure-pre-hook: config-sub-override
-.if defined(CONFIG_RPATH_OVERRIDE)
-do-configure-pre-hook: config-rpath-override
-.endif
 
 _OVERRIDE_VAR.guess=	CONFIG_GUESS_OVERRIDE
 _OVERRIDE_VAR.sub=	CONFIG_SUB_OVERRIDE
-_OVERRIDE_VAR.rpath=	CONFIG_RPATH_OVERRIDE
 
 OVERRIDE_DIRDEPTH.config-guess?=	${OVERRIDE_DIRDEPTH}
 OVERRIDE_DIRDEPTH.config-sub?=		${OVERRIDE_DIRDEPTH}
-OVERRIDE_DIRDEPTH.config-rpath?=	${OVERRIDE_DIRDEPTH}
 
-.for _sub_ in guess sub rpath
+.for _sub_ in guess sub
 _SCRIPT.config-${_sub_}-override=					\
 	${RM} -f $$file;						\
 	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.${_sub_} $$file
