@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3793 2013/10/13 12:59:11 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3794 2013/10/13 21:52:55 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5345,3 +5345,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/conky to 1.9.0nb14 [imil 2013-10-13]
 	Updated emulators/qemu to 1.6.1 [ryoon 2013-10-13]
 	Removed devel/tolua++ [wiz 2013-10-13]
+	Updated net/flow-tools to 0.68nb6 [sbd 2013-10-13]
