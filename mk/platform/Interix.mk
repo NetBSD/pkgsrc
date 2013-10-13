@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.70 2013/07/12 10:41:58 jperkin Exp $
+# $NetBSD: Interix.mk,v 1.71 2013/10/13 10:10:05 wiz Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -88,7 +88,6 @@ _PKG_USER_HOME?=	# empty by default
 _USER_DEPENDS=		user-interix>=20130712:../../sysutils/user_interix
 
 CPP_PRECOMP_FLAGS?=	# unset
-CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
