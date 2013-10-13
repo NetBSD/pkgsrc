@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/10/11 18:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2013/10/13 08:27:08 wiz Exp $
 
 DISTNAME=		libdrm-2.4.47
 CATEGORIES=		x11 graphics
@@ -11,6 +11,8 @@ COMMENT=		Userspace interface to kernel DRM services
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 			Linux-*-* SunOS-*-*
+
+DIST_SUBDIR=		libdrm-2.4.47-rerelease
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
