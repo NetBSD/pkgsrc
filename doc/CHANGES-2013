@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3785 2013/10/13 01:37:54 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3786 2013/10/13 04:20:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/blender to 2.68a [ryoon 2013-10-12]
 	Updated graphics/openimageio to 1.2.2 [ryoon 2013-10-12]
 	Updated www/p5-HTML-Lint to 2.20 [wen 2013-10-13]
+	Updated textproc/p5-XML-LibXML to 2.0106 [wen 2013-10-13]
