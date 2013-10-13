@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3789 2013/10/13 10:19:31 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3790 2013/10/13 12:08:54 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5341,3 +5341,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-XML-Writer to 0.623 [wen 2013-10-13]
 	Updated textproc/p5-XML-Twig to 3.44 [wen 2013-10-13]
 	Updated games/level9 to 5.1 [wiz 2013-10-13]
+	Updated databases/pgadmin3 to 1.18.1 [richard 2013-10-13]
