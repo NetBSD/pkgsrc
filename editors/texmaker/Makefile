@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2013/06/06 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2013/10/14 04:45:28 mef Exp $
 
-DISTNAME=	texmaker-1.8
-PKGREVISION=	21
+DISTNAME=	texmaker-4.0.4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,16 +8,20 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xm1math.net/texmaker/
 COMMENT=	LaTeX editor and front end
+LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++ c
 USE_LIBTOOL=	yes
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake -unix PREFIX=${PREFIX} texmaker.pro
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} texmaker.pro DESKTOPDIR=${PREFIX}/share/applications ICONDIR=${PREFIX}/share/pixmaps
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../print/poppler-qt4/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
