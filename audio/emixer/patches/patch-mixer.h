@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/13 02:48:41 hubertf Exp $
+$NetBSD: patch-mixer.h,v 1.1 2013/10/14 13:33:31 roy Exp $
 
---- mixer.h.orig	Mon Dec 13 02:18:43 1999
-+++ mixer.h	Mon Dec 13 02:19:01 1999
+--- mixer.h.orig	1999-12-28 00:45:52.000000000 +0000
++++ mixer.h
 @@ -17,7 +17,11 @@
  #include <sys/stat.h>
  #include <unistd.h>
