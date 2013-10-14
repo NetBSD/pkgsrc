@@ -1,4 +1,4 @@
-$NetBSD: patch-tapecopy.c,v 1.1 2011/05/01 23:28:59 ryoon Exp $
+$NetBSD: patch-tapecopy.c,v 1.2 2013/10/14 13:41:18 ryoon Exp $
 
 --- tapecopy.c.orig	2010-01-08 22:56:27.000000000 +0000
 +++ tapecopy.c
@@ -14,7 +14,7 @@ $NetBSD: patch-tapecopy.c,v 1.1 2011/05/01 23:28:59 ryoon Exp $
 +#if (defined(BSD) && BSD >= 199306)
 +	gstat = (mtget->mt_dsreg << 16) | mtget->mt_erreg;
 +#else
-+	gtat = mtget->mt_gstat;
++	gstat = mtget->mt_gstat;
 +#endif
          if (1
              && EIO == errno
