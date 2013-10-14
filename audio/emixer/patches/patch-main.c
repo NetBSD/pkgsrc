@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
+$NetBSD: patch-main.c,v 1.1 2013/10/14 13:33:31 roy Exp $
 
 --- main.c.orig	2000-01-26 00:11:56.000000000 +0000
-+++ main.c	2004-01-28 10:53:42.000000000 +0000
-@@ -115,8 +115,6 @@
++++ main.c
+@@ -115,8 +115,6 @@ void make_menus(int num_menus, char **me
  
      menus_active = FALSE;
      /*initialize screen routines*/
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
      ncurses_init();
      set_ncurses_color_schemes();
      create_windows();
-@@ -125,19 +123,9 @@
+@@ -125,19 +123,9 @@ void make_menus(int num_menus, char **me
      change_channel(&ch1,mp3Path1);
      change_channel(&ch2,mp3Path2);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
  
      while(TRUE)
      {
-@@ -149,9 +137,9 @@
+@@ -149,9 +137,9 @@ void make_menus(int num_menus, char **me
         if((ch1.end==1)||(ch2.end==1)) display_track_status();
         if(rcount==5)
         {
@@ -46,7 +46,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
         }
  
         if(playmode==1) /*loop play*/
-@@ -173,7 +161,7 @@
+@@ -173,7 +161,7 @@ void make_menus(int num_menus, char **me
             }
             
         }
@@ -55,7 +55,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
         {
             if((ch1.on==0)&&(ch1.end==1))
             {
-@@ -215,7 +203,7 @@
+@@ -215,7 +203,7 @@ void make_menus(int num_menus, char **me
             }
             
         }
@@ -64,7 +64,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
         {
             if((ch1.on==0)&&(ch1.end==1))
             {
-@@ -259,9 +247,9 @@
+@@ -259,9 +247,9 @@ void make_menus(int num_menus, char **me
          {
              {
                  display_info(inactive_info);
@@ -76,7 +76,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                      vpos=0;
                      hpos=(hpos>0) ? --hpos: num_menus-1;
                      display_bar(num_menus, menu_name);
-@@ -270,7 +258,7 @@
+@@ -270,7 +258,7 @@ void make_menus(int num_menus, char **me
                      display_menu(menu_item,num_items);
                      break;
  
@@ -85,7 +85,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                      vpos=0;
                      hpos=(hpos<num_menus-1) ? ++hpos: 0;
                      display_bar(num_menus, menu_name);
-@@ -279,28 +267,27 @@
+@@ -279,28 +267,27 @@ void make_menus(int num_menus, char **me
                      display_menu(menu_item,num_items);
                      break;
  
@@ -120,7 +120,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                      vpos=0;
                      menus_active=FALSE;
                      display_ch_window(active_channel);
-@@ -318,42 +305,41 @@
+@@ -318,42 +305,41 @@ void make_menus(int num_menus, char **me
      	else
          {
              display_info(inactive_info);
@@ -171,7 +171,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  }
                 display_listdata();
                 display_track_path(active_channel,sim_play,ch1_last,ch2_last);
-@@ -472,7 +458,7 @@
+@@ -472,7 +458,7 @@ void make_menus(int num_menus, char **me
                  //printf("------- %i ----------\n",playmode);
                  break;
  
@@ -180,7 +180,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  if (active_bar==VOLBAR)
                  {
                      ch1_volume_pos--;
-@@ -507,7 +493,7 @@
+@@ -507,7 +493,7 @@ void make_menus(int num_menus, char **me
        
                  break;
  
@@ -189,7 +189,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
  
                  if (active_bar==VOLBAR)
                  {
-@@ -542,7 +528,7 @@
+@@ -542,7 +528,7 @@ void make_menus(int num_menus, char **me
                  }
              break;
  
@@ -198,7 +198,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  if (active_bar==VOLBAR)
                  {
                      ch2_volume_pos--;
-@@ -574,7 +560,7 @@
+@@ -574,7 +560,7 @@ void make_menus(int num_menus, char **me
                  }
                  break;
  
@@ -207,7 +207,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  if (active_bar==VOLBAR)
                  {
                      ch2_volume_pos++;
-@@ -605,7 +591,7 @@
+@@ -605,7 +591,7 @@ void make_menus(int num_menus, char **me
                  }
                  break;
  
@@ -216,7 +216,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  fader_pos-- ;
                  if(fader_pos<=-(fader_bars/2))fader_pos=-(fader_bars/2);
                  if(fader_pos == 0)
-@@ -620,7 +606,7 @@
+@@ -620,7 +606,7 @@ void make_menus(int num_menus, char **me
                  display_fader(fader_pos);
                  break;
  
@@ -225,7 +225,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  fader_pos++;
                  if(fader_pos>=(fader_bars/2))fader_pos=(fader_bars/2) ;
                  if(fader_pos == 0)
-@@ -660,10 +646,10 @@
+@@ -660,10 +646,10 @@ void make_menus(int num_menus, char **me
                  display_fader(fader_pos);
                  break;
  
@@ -240,7 +240,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
                  adjust_display(extcode);
                  display_ch_window(active_channel);
                  display_listdata();
-@@ -671,9 +657,10 @@
+@@ -671,9 +657,10 @@ void make_menus(int num_menus, char **me
  
              case'r':  /*redraws screen*/
              case'R':
@@ -253,7 +253,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
  
              default:
                  for(j=0; j<num_menus; j++)
-@@ -792,7 +779,7 @@
+@@ -792,7 +779,7 @@ void adjust_display(int key)
           a circular linked list*/
      switch(key)
      {
@@ -262,7 +262,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
              if((counter >= height-1)&&(current->fLink!=NULL))
                 {
                     top=top->fLink; current=current->fLink;
-@@ -800,7 +787,7 @@
+@@ -800,7 +787,7 @@ void adjust_display(int key)
              else  if(current->fLink!=NULL) current=current->fLink;
              break;
  
@@ -271,7 +271,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
              if((top->bLink!=NULL)&&(top==current))
              {
                  top=top->bLink; current=current->bLink;
-@@ -809,14 +796,14 @@
+@@ -809,14 +796,14 @@ void adjust_display(int key)
                  if(current->bLink!=NULL) current=current->bLink ;
              break;
  
@@ -288,7 +288,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
              while((index < height-1)&(top->bLink!=NULL))
                 {
                     top=top->bLink; current=current->bLink; index++;
-@@ -884,11 +871,9 @@
+@@ -884,11 +871,9 @@ void display_listdata(void)
          height1,width1;
      node *top, *current, *temp;
  
@@ -300,7 +300,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
      }
      else if(active_channel==CHANNEL_2)
      {
-@@ -904,46 +889,53 @@
+@@ -904,46 +889,53 @@ void display_listdata(void)
      while(temp!=bHead){tracktotal++;temp=temp->fLink;}
      
      /* display  current track number and total tracks */
@@ -365,7 +365,7 @@ $NetBSD: patch-ad,v 1.4 2004/01/28 10:56:21 agc Exp $
  } /*display_listdata */
  
  void menu_action(char *item_name)
-@@ -967,21 +959,10 @@
+@@ -967,21 +959,10 @@ void enter_action(void)
  void exit_prog(void)
  {
      reset_audio();
