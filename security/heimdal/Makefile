@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2013/10/11 16:21:40 roy Exp $
+# $NetBSD: Makefile,v 1.105 2013/10/14 09:55:52 ryoon Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	2
@@ -66,6 +66,12 @@ CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editlinereadline}
 
 PLIST_VARS+=		glob vis
 .if ${OPSYS} == "SunOS"
+PLIST.vis=	yes
+PLIST.glob=	yes
+.endif
+
+# Linux does not have include/vis.h and expected include/glob.h.
+.if ${OPSYS} == "Linux"
 PLIST.vis=	yes
 PLIST.glob=	yes
 .endif
