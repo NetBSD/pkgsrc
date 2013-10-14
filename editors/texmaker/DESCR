@@ -1,26 +1,24 @@
 Texmaker is a free LaTeX editor, that integrates many tools needed to develop
 documents with LaTeX, in just one application.  Texmaker runs on UNIX, MacOS X
 and Windows systems and is released under the GPL license.
-
-Features:
-* an unicode editor to write your LaTeX source files (syntax highlighting,
+  -- Features --
+* An unicode editor to write your LaTeX source files (syntax highlighting,
   undo-redo, search-replace, spell checker...)
-* the principal LaTex tags can be inserted directly with the "LaTeX" and "Math"
-  menus
+* The LaTeX tags can be inserted directly with the "LaTeX" and "Math"  menus
 * 370 mathematical symbols can be inserted in just one click
-* wizards to generate code ('Quick document', 'Quick letter', tabular, tabbing
+* Wizards to generate code ('Quick document', 'Quick letter', tabular, tabbing
   and array environments)
 * LaTeX-related programs can be launched via the "Tools" menu
-* the standard Bibtex entry types can be inserted in the ".bib" file with the
+* The standard Bibtex entry types can be inserted in the ".bib" file with the
   "Bibliography" menu
-* a "structure view" of the document for easier navigation of a document (by
+* A "structure view" of the document for easier navigation of a document (by
   clicking on an item in the "Structure" frame, you can jump directly to the
   corresponding part of your document
-* extensive LaTeX documentation
-* in the "Messages / Log File" frame, you can see information about processes
+* Extensive LaTeX documentation
+* In the "Messages / Log File" frame, you can see information about processes
   and the logfile after a LaTeX compilation
-* the "Next Latex Error" and "Previous Latex Error" commands let you reach the
+* The "Next Latex Error" and "Previous Latex Error" commands let you reach the
   LaTeX errors detected in the log file
-* by clicking on the number of a line in the log file, the cursor jumps to the
+* By clicking on the number of a line in the log file, the cursor jumps to the
   corresponding line in the editor
-* an integrated LaTeX to html conversion tool
+* An integrated LaTeX to html conversion tool
