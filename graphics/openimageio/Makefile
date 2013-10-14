@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/10/12 22:13:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2013/10/14 14:37:30 joerg Exp $
 
 OIIOVER=	1.2.2
 DISTNAME=	oiio-Release-${OIIOVER}
@@ -28,6 +28,11 @@ pre-install:
 	${RM} -f ${WRKSRC}/include/tbb/tbb_machine.h.orig
 	${RM} -f ${WRKSRC}/include/tbb/tbb_misc.h.orig
 	${RM} -f ${WRKSRC}/include/tbb/tbb_exception.h.orig
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-deprecated-register
+.endif
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
