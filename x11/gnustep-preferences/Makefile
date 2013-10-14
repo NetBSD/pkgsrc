@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/05/09 07:40:36 adam Exp $
+# $NetBSD: Makefile,v 1.40 2013/10/14 14:41:23 joerg Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
@@ -25,6 +25,12 @@ SUBST_FILES.gnustep_installation_dir+=	GNUmakefile.preamble
 SUBST_FILES.gnustep_installation_dir+=	PrefsModule/GNUmakefile.preamble
 SUBST_FILES.gnustep_installation_dir+=	Modules/Keyboard/GNUmakefile
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_SYSTEM_ROOT)/Library/Preferences|$${DESTDIR}${GNUSTEP_LIB_DIR}/Preferences|'
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-unused-const-variable
+.endif
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
