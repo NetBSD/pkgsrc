@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.2 2011/09/22 15:16:26 ryoon Exp $
+$NetBSD: patch-ah,v 1.3 2013/10/14 06:51:02 adam Exp $
 
---- src/mkmodules.c.orig	2008-05-07 15:57:34.000000000 +0000
+--- src/mkmodules.c.orig	2005-05-24 20:59:01.000000000 +0000
 +++ src/mkmodules.c
-@@ -324,6 +324,9 @@ static const char *const config_contents
-     "# repositories.  Set it to `never' (the previous CVS behavior) to prevent\n",
-     "# verifymsg scripts from changing the log message.\n",
-     "#RereadLogAfterVerify=always\n",
+@@ -596,6 +596,9 @@ static const char *const config_contents
+     "# For example:\n",
+     "#\n",
+     "#   UseArchiveCommentLeader=no\n",
 +    "\n",
 +    "# Set this to the name of a local tag to use in addition to Id\n",
 +    "#tag=OurTag\n",
