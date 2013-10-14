@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/10/12 22:13:44 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/10/14 14:37:30 joerg Exp $
 
 SHA1 (oiio-Release-1.2.2.tar.gz) = bb9505dbdddcac2ea4545bf0258d7637e3056d5c
 RMD160 (oiio-Release-1.2.2.tar.gz) = dd5c841ca90b6ccc9d7fc25ec2b56424827a6040
@@ -12,6 +12,7 @@ SHA1 (patch-include_pugixml.hpp) = 41bc40c1c11ddbecf9b03ca570718e1cbb08262a
 SHA1 (patch-include_tbb_tbb__exception.h) = b2e98d44666d8a113dd6f21f2300ffdd8af3e20c
 SHA1 (patch-include_tbb_tbb__machine.h) = 7d9a196397315e0d39dd2f16139e011ab84c5630
 SHA1 (patch-include_tbb_tbb__misc.h) = 27995a9cdb72b182e352b2a649756af2d60fec86
+SHA1 (patch-libOpenImageIO_formatspec.cpp) = 98ad74b8778deb243308a0c8bf17a2cd35015cbb
 SHA1 (patch-libutil_sysutil.cpp) = b14b13efd313cbca0068fb58758b5d2095e4cd4d
 SHA1 (patch-make_detectplatform.mk) = a399f09b9280109519a829dbacc1b924a074f4cc
 SHA1 (patch-psd.imageio_psdinput.cpp) = 9387715224c93aff28bac55bfc54a435d1de7c1f
