@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
+$NetBSD: patch-aa,v 1.6 2013/10/14 18:27:54 tonnerre Exp $
 
---- src/protocol_auth.c.orig	2010-04-03 08:46:07.000000000 +0000
+--- src/protocol_auth.c.orig	2013-05-15 21:15:26.000000000 +0000
 +++ src/protocol_auth.c
-@@ -191,22 +191,28 @@ bool send_metakey(connection_t *c) {
+@@ -280,22 +280,28 @@ bool send_metakey(connection_t *c) {
  }
  
  bool metakey_h(connection_t *c) {
@@ -35,15 +35,23 @@ $NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
  		return false;
  	}
  
-@@ -226,6 +232,7 @@ bool metakey_h(connection_t *c) {
- 	if(RSA_private_decrypt(len, (unsigned char *)buffer, (unsigned char *)c->inkey, myself->connection->rsa_key, RSA_NO_PADDING) != len) {	/* See challenge() */
- 		logger(LOG_ERR, "Error during decryption of meta key for %s (%s)",
- 			   c->name, c->hostname);
+@@ -310,6 +316,7 @@ bool metakey_h(connection_t *c) {
+ 
+ 	if(!hex2bin(buffer, buffer, len)) {
+ 		logger(LOG_ERR, "Got bad %s from %s(%s): %s", "METAKEY", c->name, c->hostname, "invalid key");
 +		free(buffer);
  		return false;
  	}
  
-@@ -244,6 +251,7 @@ bool metakey_h(connection_t *c) {
+@@ -318,6 +325,7 @@ bool metakey_h(connection_t *c) {
+ 	if(RSA_private_decrypt(len, (unsigned char *)buffer, (unsigned char *)c->inkey, myself->connection->rsa_key, RSA_NO_PADDING) != len) {	/* See challenge() */
+ 		logger(LOG_ERR, "Error during decryption of meta key for %s (%s): %s",
+ 			   c->name, c->hostname, ERR_error_string(ERR_get_error(), NULL));
++		free(buffer);
+ 		return false;
+ 	}
+ 
+@@ -336,6 +344,7 @@ bool metakey_h(connection_t *c) {
  		
  		if(!c->incipher) {
  			logger(LOG_ERR, "%s (%s) uses unknown cipher!", c->name, c->hostname);
@@ -51,7 +59,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
  			return false;
  		}
  
-@@ -253,6 +261,7 @@ bool metakey_h(connection_t *c) {
+@@ -345,6 +354,7 @@ bool metakey_h(connection_t *c) {
  					c->incipher->iv_len)) {
  			logger(LOG_ERR, "Error during initialisation of cipher from %s (%s): %s",
  					c->name, c->hostname, ERR_error_string(ERR_get_error(), NULL));
@@ -59,7 +67,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
  			return false;
  		}
  
-@@ -268,11 +277,13 @@ bool metakey_h(connection_t *c) {
+@@ -360,11 +370,13 @@ bool metakey_h(connection_t *c) {
  
  		if(!c->indigest) {
  			logger(LOG_ERR, "Node %s (%s) uses unknown digest!", c->name, c->hostname);
@@ -73,7 +81,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
  			return false;
  		}
  	} else {
-@@ -283,6 +294,7 @@ bool metakey_h(connection_t *c) {
+@@ -375,6 +387,7 @@ bool metakey_h(connection_t *c) {
  
  	c->allow_request = CHALLENGE;
  
@@ -81,7 +89,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
  	return send_challenge(c);
  }
  
-@@ -315,22 +327,27 @@ bool send_challenge(connection_t *c) {
+@@ -404,22 +417,27 @@ bool send_challenge(connection_t *c) {
  }
  
  bool challenge_h(connection_t *c) {
@@ -113,7 +121,7 @@ $NetBSD: patch-aa,v 1.5 2010/05/01 16:56:41 tonnerre Exp $
  		return false;
  	}
  
-@@ -346,6 +363,7 @@ bool challenge_h(connection_t *c) {
+@@ -438,6 +456,7 @@ bool challenge_h(connection_t *c) {
  
  	/* Rest is done by send_chal_reply() */
  
