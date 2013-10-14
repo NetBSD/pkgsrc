@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.200 2013/10/14 05:53:17 richard Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -9,7 +9,7 @@ PKGNAME=	cups-${DIST_VERS:S/-/./g}
 BASE_VERS=	1.5.4
 DIST_VERS=	${BASE_VERS}
 
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -70,7 +70,8 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 .include "options.mk"
 
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		LIBS_SSP=-lssp_nonshared
+LIBS_SSP =		-lssp_nonshared -lssp
+CONFIGURE_ENV+=		LIBS_SSP=${LIBS_SSP:M*:Q}
 LIBS.SunOS+=		-liconv
 .endif
 
