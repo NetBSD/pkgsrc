@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12629 2013/10/14 06:52:32 adam Exp $
+$NetBSD: TODO,v 1.12630 2013/10/14 18:28:44 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -1052,7 +1052,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thunderbird-24
 	o tightvnc-2.0.95
 	o tile-0.7.4
-	o tinc-1.0.22
 	o tk-8.6
 	o tkgate-1.8.7
 	o tkhylafax-3.2
