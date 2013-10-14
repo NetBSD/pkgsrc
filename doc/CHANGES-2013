@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3796 2013/10/14 06:52:32 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3797 2013/10/14 17:59:19 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5348,3 +5348,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/flow-tools to 0.68nb6 [sbd 2013-10-13]
 	Updated editors/texmaker to 4.0.4 [mef 2013-10-14]
 	Updated devel/scmcvs to 1.12.13 [adam 2013-10-14]
+	Updated databases/py-sqlalchemy to 0.8.2 [tonnerre 2013-10-14]
