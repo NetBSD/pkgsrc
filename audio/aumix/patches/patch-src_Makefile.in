@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/10/14 13:02:39 roy Exp $
+
+Allow local curses.h and system curses.h to work
+
+--- src/Makefile.in.orig	2013-10-14 12:54:32.000000000 +0000
++++ src/Makefile.in
+@@ -59,7 +59,7 @@ aumix_LDADD = $(LDADD)
+ aumix_DEPENDENCIES =
+ binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
+ SCRIPTS = $(bin_SCRIPTS)
+-DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
++DEFAULT_INCLUDES =
+ depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
+ am__depfiles_maybe = depfiles
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
