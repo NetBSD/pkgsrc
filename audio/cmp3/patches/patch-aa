@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2011/08/29 13:11:39 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2013/10/14 13:20:06 roy Exp $
 
 --- Makefile.orig	2001-07-29 05:43:49.000000000 +0000
 +++ Makefile
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.4 2011/08/29 13:11:39 joerg Exp $
 -LIBS= -lform -lncurses
 -CFLAGS= -g -O -Inevlib
 -CC= gcc
-+LIBS= $(LDFLAGS) -lform -lncurses
++LIBS= $(LDFLAGS) -lform -lcurses
 +CFLAGS+= -Inevlib
 +CC?= clang
  OBJS= cmp3common.o cmp3fileio.o cmp3manager.o cmp3curses.o \
