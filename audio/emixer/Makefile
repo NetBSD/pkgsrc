@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2013/04/06 03:45:06 rodent Exp $
+# $NetBSD: Makefile,v 1.32 2013/10/14 13:33:31 roy Exp $
 #
 
 DISTNAME=	emixer-0.05.5
 PKGNAME=	emixer-0.5.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	# http://emixer.linuxbox.com/
 
@@ -20,6 +20,6 @@ INSTALLATION_DIRS=	bin share/doc
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
