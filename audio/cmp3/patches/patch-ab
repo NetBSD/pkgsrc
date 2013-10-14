@@ -1,23 +1,23 @@
-$NetBSD: patch-ab,v 1.5 2012/01/11 14:57:25 hans Exp $
-
---- cmp3.h.orig	2001-07-01 12:38:08.000000000 +0800
-+++ cmp3.h
-@@ -1,7 +1,7 @@
+--- cmp3.h.orig	2001-07-01 05:38:08.000000000 +0100
++++ cmp3.h	2013-10-14 14:11:00.000000000 +0100
+@@ -1,17 +1,10 @@
  #ifndef _CMP3_H
  #define _CMP3_H
  
 -#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__sun)
- #include <ncurses.h>
- #include <termios.h>
- #else
-@@ -9,9 +9,6 @@
- #endif
- 
- 
+-#include <ncurses.h>
+-#include <termios.h>
+-#else
++/* pkgsrc will link ncurses.h to curses.h correctly
++ * as configure doesn't work this out */
+ #include <curses.h>
+-#endif
+-
+-
 -#ifndef NCURSES_VERSION
 -  #error "This program requires ncurses to function"
 -#endif
++#include <termios.h>
  
  #include <signal.h>
  #include <dirent.h>
