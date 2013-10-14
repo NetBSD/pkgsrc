@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/10/14 06:51:02 adam Exp $
 bin/cvs
 bin/cvsbug
 bin/rcs2log
@@ -8,20 +8,22 @@ man/man1/cvs.1
 man/man5/cvs.5
 man/man8/cvsbug.8
 share/cvs/contrib/README
-share/cvs/contrib/check_cvs
 share/cvs/contrib/clmerge
 share/cvs/contrib/cln_hist
 share/cvs/contrib/commit_prep
 share/cvs/contrib/cvs2vendor
 share/cvs/contrib/cvs_acls
-share/cvs/contrib/cvscheck
 share/cvs/contrib/debug_check_log
 share/cvs/contrib/intro.doc
 share/cvs/contrib/log
 share/cvs/contrib/log_accum
 share/cvs/contrib/mfpipe
+share/cvs/contrib/newcvsroot
 share/cvs/contrib/pvcs2rcs
+share/cvs/contrib/rcs-5.7-commitid.patch
 share/cvs/contrib/rcs-to-cvs
 share/cvs/contrib/rcs2log
 share/cvs/contrib/rcslock
+share/cvs/contrib/sandbox_status
 share/cvs/contrib/sccs2rcs
+share/cvs/contrib/validate_repo

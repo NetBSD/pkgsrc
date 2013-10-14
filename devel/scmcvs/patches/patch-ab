@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2013/08/22 14:45:13 richard Exp $
+$NetBSD: patch-ab,v 1.6 2013/10/14 06:51:02 adam Exp $
 
 http://savannah.nongnu.org/bugs/?39166
 Texinfo-5.1 fails if @sp macro is not followed by a number. The
 numeric argument is mandatory according to Texinfo documentation.
 
---- doc/cvs.texinfo.orig	2008-05-07 01:15:46.000000000 +0000
+--- doc/cvs.texinfo.orig	2005-09-23 02:02:53.000000000 +0000
 +++ doc/cvs.texinfo
 @@ -111,9 +111,9 @@ approved by the Free Software Foundation
  @sp 4
@@ -18,10 +18,10 @@ numeric argument is mandatory according to Texinfo documentation.
  @center @titlefont{CVS}
  @sp 2
  @center for @sc{cvs} @value{VERSION}
-@@ -12803,6 +12803,11 @@ additional information and can store the
+@@ -13377,6 +13377,11 @@ additional information and can store the
  a file, or mail it to appropriate persons, or maybe
  post it to a local newsgroup, or@dots{}  Your
- imagination is the limit!
+ imagination is the limit!  @xref{loginfo}.
 +
 +@cindex tag, in CVSROOT/config
 +@item tag=@var{value}
