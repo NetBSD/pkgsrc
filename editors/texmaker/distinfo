@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/12/03 08:26:15 ghen Exp $
+$NetBSD: distinfo,v 1.8 2013/10/14 04:45:28 mef Exp $
 
-SHA1 (texmaker-1.8.tar.bz2) = d5f188c0d207c637a445cec984d79ee017de6e1a
-RMD160 (texmaker-1.8.tar.bz2) = b3bdfa7838f486f0969da472ff08c2d30825421e
-Size (texmaker-1.8.tar.bz2) = 1767680 bytes
+SHA1 (texmaker-4.0.4.tar.bz2) = 4f95078133cfda58f64d6a211512a59edf998783
+RMD160 (texmaker-4.0.4.tar.bz2) = 2621e0d3f1f7f37e25ffed60cad783317d5fde1d
+Size (texmaker-4.0.4.tar.bz2) = 9688431 bytes
