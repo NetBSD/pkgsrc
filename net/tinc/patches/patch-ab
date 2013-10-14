@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2011/02/13 00:20:24 rumko Exp $
+$NetBSD: patch-ab,v 1.5 2013/10/14 18:27:54 tonnerre Exp $
 
 DragonFly BSD support (see https://github.com/gsliepen/tinc/pull/1)
 
@@ -13,12 +13,3 @@ DragonFly BSD support (see https://github.com/gsliepen/tinc/pull/1)
  
  $as_echo "#define HAVE_FREEBSD 1" >>confdefs.h
  
-@@ -5019,7 +5019,7 @@
- 
- done
- 
--for ac_header in net/if.h net/if_types.h linux/if_tun.h net/if_tun.h net/if_tap.h net/ethernet.h net/if_arp.h netinet/in_systm.h netinet/in.h netinet/in6.h
-+for ac_header in net/if.h net/if_types.h linux/if_tun.h net/if_tun.h net/tun/if_tun.h net/if_tap.h net/tap/if_tap.h net/ethernet.h net/if_arp.h netinet/in_systm.h netinet/in.h netinet/in6.h
- do :
-   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
- ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "#include \"have.h\"
