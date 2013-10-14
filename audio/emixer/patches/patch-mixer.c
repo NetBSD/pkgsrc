@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2000/04/16 03:59:54 mycroft Exp $
+$NetBSD: patch-mixer.c,v 1.1 2013/10/14 13:33:31 roy Exp $
 
---- mixer.c.bak	Fri Jan 28 11:29:40 2000
-+++ mixer.c	Sat Apr 15 23:32:21 2000
-@@ -57,9 +57,9 @@
+--- mixer.c.orig	2000-01-28 16:29:40.000000000 +0000
++++ mixer.c
+@@ -57,9 +57,9 @@ void open_sound_device(void)
      int format;
      int stereo = 1;
      int rate = 44100;

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
+$NetBSD: patch-nctgui.c,v 1.1 2013/10/14 13:33:31 roy Exp $
 
---- nctgui.c.orig	Fri Jan 28 17:30:52 2000
+--- nctgui.c.orig	2000-01-28 16:30:52.000000000 +0000
 +++ nctgui.c
-@@ -31,6 +31,10 @@
+@@ -31,6 +31,10 @@ void ncurses_init(void)
  {
      (void) initscr();
      curs_set(0);
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
  }/* ncurses_init */
  
  void ncurses_exit(void)
-@@ -66,24 +70,23 @@
+@@ -66,24 +70,23 @@ void display_bar(int num_menus,char **me
      int j;
      int maxY,maxX;
  
@@ -45,7 +45,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
  } /* display_bar */
  
  /*Display additional info at bottom of screen*/
-@@ -106,14 +109,14 @@
+@@ -106,14 +109,14 @@ void display_menu(char *menu_item[][MAX_
      
      for(j=0;j<num_items[hpos];j++)
      {
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
      box(subWn,0,0);
      wrefresh(subWn);
  } /* display_menu */
-@@ -127,7 +130,8 @@
+@@ -127,7 +130,8 @@ void display_ch_window(int active_channe
      switch(active_channel)
      {
      case CHANNEL_1:
@@ -73,7 +73,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
          box(chWin,0,0);
          wmove(chWin,0,2);
          wattrset(chWin,COLOR_PAIR(5)|A_BOLD|A_BLINK);
-@@ -137,7 +141,8 @@
+@@ -137,7 +141,8 @@ void display_ch_window(int active_channe
          break;
       
      case CHANNEL_2:
@@ -83,7 +83,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
          box(chWin,0,0);
          wmove(chWin,0,width-13);
          wattrset(chWin,COLOR_PAIR(6)|A_BOLD|A_BLINK);
-@@ -155,6 +160,7 @@
+@@ -155,6 +160,7 @@ void display_fader(int fader_pos)
      int centre, j;
  
      centre=(FADER_BARS/2)+2;
@@ -91,7 +91,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
      wbkgd(faderWin,COLOR_PAIR(1)|A_BOLD);
      box(faderWin,0,0);
      wattrset(faderWin,COLOR_PAIR(9)|A_BOLD);
-@@ -201,6 +207,7 @@
+@@ -201,6 +207,7 @@ void display_volume(int ch1_volume_pos,i
  
      getmaxyx(volumeWin,maxY,maxX);
      centre=(VOLUME_BARS/2)+2;
@@ -99,7 +99,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
      wbkgd(volumeWin,COLOR_PAIR(1)|A_BOLD);
      box(volumeWin,0,0);
      if(bar==VOLBAR)mvwaddstr(volumeWin,maxY-1,maxX-9,"[Active]");
-@@ -263,6 +270,7 @@
+@@ -263,6 +270,7 @@ void display_speed(int ch1_speed_pos, in
  
      getmaxyx(speedWin,maxY,maxX);
      centre=(SPEED_BARS/2)+2;
@@ -107,7 +107,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
      wbkgd(speedWin,COLOR_PAIR(1)|A_BOLD);
      box(speedWin,0,0);
      if(bar==SPDBAR)mvwaddstr(speedWin,maxY-1,maxX-9,"[Active]");
-@@ -323,6 +331,7 @@
+@@ -323,6 +331,7 @@ void display_speed(int ch1_speed_pos, in
  void display_player_status(int sim_play, int playmode)
  {
  
@@ -115,7 +115,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
      wbkgd(pStatusWin,COLOR_PAIR(1)|A_BOLD);
      box(pStatusWin,0,0);
      wattrset(pStatusWin,COLOR_PAIR(9)|A_BOLD);
-@@ -343,54 +352,6 @@
+@@ -343,54 +352,6 @@ void gui_exit(void)
   exit(0);
  } /*gui_exit/*/
  
@@ -170,7 +170,7 @@ $NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
  void create_windows()
  {
      int maxY, maxX, height, width, origY=1, origX=0;
-@@ -398,10 +359,7 @@
+@@ -398,10 +359,7 @@ void create_windows()
      getmaxyx(stdscr,maxY,maxX);
      height = maxY-4; width  = (maxX/10)*7;
      chWin  = newwin(height,width,origY,origX);

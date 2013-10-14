@@ -1,8 +1,8 @@
-#	$NetBSD: Makefile,v 1.7 2009/07/08 15:52:33 joerg Exp $
+#	$NetBSD: Makefile,v 1.8 2013/10/14 13:33:31 roy Exp $
 
 all: emixer
 emixer: main.o
-	${CC} ${LDFLAGS} -o ${.TARGET}  ${.ALLSRC} -lncurses ${LIBOSSAUDIO}
+	${CC} ${LDFLAGS} -o ${.TARGET}  ${.ALLSRC} -lcurses ${LIBOSSAUDIO}
 
 install:
 	${BSD_INSTALL_PROGRAM}	emixer	${DESTDIR}${PREFIX}/bin/emixer
