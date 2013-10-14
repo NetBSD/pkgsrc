@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2012/09/11 23:59:25 asau Exp $
+# $NetBSD: Makefile.common,v 1.10 2013/10/14 13:02:39 roy Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
 DISTNAME=	aumix-2.9.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/} \
 		http://jpj.net/~trevor/aumix/ \
@@ -31,4 +32,4 @@ LIBS.SunOS+=		-lintl
 REPLACE_SH+=		src/mute src/xaumix
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"

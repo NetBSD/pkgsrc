@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/07/17 21:26:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.27 2013/10/14 13:02:39 roy Exp $
 
 .include "Makefile.common"
 
-COMMENT+=	(ncurses interface only)
+COMMENT+=	(curses interface only)
 
 CONFLICTS=	aumix-gtk-[0-9]*
 
