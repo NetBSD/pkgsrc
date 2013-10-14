@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2011/09/22 15:16:26 ryoon Exp $
+$NetBSD: patch-ag,v 1.3 2013/10/14 06:51:02 adam Exp $
 
---- lib/xtime.h.orig	2005-04-04 20:46:06.000000000 +0000
+--- lib/xtime.h.orig	2005-03-04 04:00:44.000000000 +0000
 +++ lib/xtime.h
 @@ -14,6 +14,9 @@
  #ifndef XTIME_HEADER_INCLUDED
@@ -12,7 +12,7 @@ $NetBSD: patch-ag,v 1.2 2011/09/22 15:16:26 ryoon Exp $
  #ifdef vms
  # include <time.h>
  #else /* vms */
-@@ -58,4 +61,6 @@ extern long timezone;
+@@ -39,4 +42,6 @@ extern long timezone;
  
  #endif /* !vms */
  

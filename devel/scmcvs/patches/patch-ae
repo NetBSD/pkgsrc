@@ -1,37 +1,19 @@
-$NetBSD: patch-ae,v 1.3 2011/09/22 15:16:26 ryoon Exp $
+$NetBSD: patch-ae,v 1.4 2013/10/14 06:51:02 adam Exp $
 
---- src/rcs.c.orig	2008-05-07 15:57:34.000000000 +0000
+--- src/rcs.c.orig	2005-09-28 15:25:59.000000000 +0000
 +++ src/rcs.c
-@@ -3511,7 +3511,7 @@ struct rcs_keyword
-     size_t len;
- };
- #define KEYWORD_INIT(s) (s), sizeof (s) - 1
--static const struct rcs_keyword keywords[] =
-+static struct rcs_keyword keywords[] =
- {
-     { KEYWORD_INIT ("Author") },
-     { KEYWORD_INIT ("Date") },
-@@ -3524,6 +3524,7 @@ static const struct rcs_keyword keywords
-     { KEYWORD_INIT ("Revision") },
-     { KEYWORD_INIT ("Source") },
-     { KEYWORD_INIT ("State") },
-+    { NULL, 0 },
-     { NULL, 0 }
- };
- enum keyword
-@@ -3538,7 +3539,8 @@ enum keyword
-     KEYWORD_RCSFILE,
-     KEYWORD_REVISION,
-     KEYWORD_SOURCE,
--    KEYWORD_STATE
-+    KEYWORD_STATE,
-+    KEYWORD_LOCALID
- };
+@@ -3641,7 +3641,7 @@ expand_keywords (RCSNode *rcs, RCSVers *
+     char *locker;
+     char *srch, *srch_next;
+     size_t srch_len;
+-    const struct rcs_keyword *keywords;
++    struct rcs_keyword *keywords;
  
- /* Convert an RCS date string into a readable string.  This is like
-@@ -3675,6 +3677,11 @@ expand_keywords (rcs, ver, name, log, lo
- 	return;
-     }
+     if (!config /* For `cvs init', config may not be set.  */
+ 	||expand == KFLAG_O || expand == KFLAG_B)
+@@ -3654,6 +3654,11 @@ expand_keywords (RCSNode *rcs, RCSVers *
+     if (!config->keywords) config->keywords = new_keywords ();
+     keywords = config->keywords;
  
 +    if (RCS_citag != NULL) {
 +	keywords[KEYWORD_LOCALID].string = RCS_citag;
@@ -41,15 +23,7 @@ $NetBSD: patch-ae,v 1.3 2011/09/22 15:16:26 ryoon Exp $
      /* If we are using -kkvl, dig out the locker information if any.  */
      locker = NULL;
      if (expand == KFLAG_KVL)
-@@ -3766,6 +3773,7 @@ expand_keywords (rcs, ver, name, log, lo
- 
- 	    case KEYWORD_HEADER:
- 	    case KEYWORD_ID:
-+	    case KEYWORD_LOCALID:
- 		{
- 		    const char *path;
- 		    int free_path;
-@@ -4445,7 +4453,7 @@ RCS_checkout (rcs, workfile, rev, nameta
+@@ -4434,7 +4439,7 @@ RCS_checkout (RCSNode *rcs, const char *
  	if (info != NULL)
  	{
  	    /* If the size of `devtype' changes, fix the sscanf call also */
