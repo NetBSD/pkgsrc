@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2013/02/06 23:21:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2013/10/15 16:45:41 roy Exp $
 #
 
 DISTNAME=		gtmess-0.91
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtmess/}
 
@@ -21,7 +21,7 @@ CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 INCOMPAT_CURSES=	NetBSD-1.*-*
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
