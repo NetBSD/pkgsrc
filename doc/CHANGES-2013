@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3805 2013/10/15 09:25:38 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.3806 2013/10/15 14:12:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Warnings to 0.012 [wen 2013-10-15]
 	Updated inputmethod/ja-freewnn-lib to 1.11alpha22nb1 [mef 2013-10-15]
 	Updated print/tex-pgf to 2.10nb1 [minskim 2013-10-15]
+	Updated net/p5-Geo-IPfree to 1.132870 [wen 2013-10-15]
