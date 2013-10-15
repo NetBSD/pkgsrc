@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1793 2013/10/13 12:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.1794 2013/10/15 02:02:42 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -932,6 +932,7 @@ SUBDIR+=	p5-Method-Signatures-Simple
 SUBDIR+=	p5-Mixin-ExtraFields
 SUBDIR+=	p5-Mixin-ExtraFields-Param
 SUBDIR+=	p5-Mixin-Linewise
+SUBDIR+=	p5-Mo
 SUBDIR+=	p5-Modern-Perl
 SUBDIR+=	p5-Module-Build
 SUBDIR+=	p5-Module-Build-Tiny
