@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/10/14 04:45:28 mef Exp $
+# $NetBSD: Makefile,v 1.40 2013/10/15 08:08:08 mef Exp $
 
 DISTNAME=	texmaker-4.0.4
 CATEGORIES=	editors
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.xm1math.net/texmaker/
 COMMENT=	LaTeX editor and front end
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++ c
 USE_LIBTOOL=	yes
 
