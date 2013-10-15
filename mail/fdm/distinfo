@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/10/03 11:12:43 obache Exp $
+$NetBSD: distinfo,v 1.4 2013/10/15 14:44:18 joerg Exp $
 
 SHA1 (fdm-1.7.tar.gz) = 5534d1ec1831794e092e0821db70f36b7e1ee961
 RMD160 (fdm-1.7.tar.gz) = 942f0989501645aa7e04bd428510daa309e8fca6
 Size (fdm-1.7.tar.gz) = 199808 bytes
-SHA1 (patch-aa) = 1bd7ccac945d0cb2cd23f992a58c740b9372455f
+SHA1 (patch-aa) = 8d3b3c6b7f42f8a88420a17c34a545a23fa2e9a4
 SHA1 (patch-fdm.h) = aa13bc8507c9918fb56ff65e64a83b3b5d29ce14
