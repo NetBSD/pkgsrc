@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3798 2013/10/14 18:28:44 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.3799 2013/10/15 02:05:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5350,3 +5350,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/scmcvs to 1.12.13 [adam 2013-10-14]
 	Updated databases/py-sqlalchemy to 0.8.2 [tonnerre 2013-10-14]
 	Updated net/tinc to 1.0.22 [tonnerre 2013-10-14]
+	Added devel/p5-Mo version 0.35 [wen 2013-10-15]
