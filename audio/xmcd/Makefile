@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2012/10/02 23:48:14 asau Exp $
+# $NetBSD: Makefile,v 1.78 2013/10/15 13:38:19 roy Exp $
 
 DISTNAME=	xmcd-3.0.2
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 
@@ -64,9 +64,6 @@ post-install:
 		strip ${DESTDIR}${ARCHBIN}/$$file;		\
 	done;
 
-.if ${OPSYS} != "SunOS"
-.include "../../devel/ncurses/buildlink3.mk"
-.endif
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 
@@ -78,4 +75,5 @@ post-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
