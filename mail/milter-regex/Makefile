@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/09/13 11:49:36 obache Exp $
+# $NetBSD: Makefile,v 1.22 2013/10/15 14:44:42 joerg Exp $
 
 DISTNAME=	milter-regex-1.7
 PKGREVISION=	2
@@ -29,6 +29,11 @@ SUBST_FILES.var=	milter-regex.8 milter-regex.c
 SUBST_SED.var=		-e 's|/var/spool|${VARBASE}|g'
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-unused-const-variable
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${DESTDIR}${PREFIX}/sbin
