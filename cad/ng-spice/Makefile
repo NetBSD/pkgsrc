@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2013/07/15 02:02:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2013/10/15 14:31:39 roy Exp $
 #
 
 DISTNAME=	ngspice-23
+PKGREVISION=	1
 PKGNAME=	ng-spice-23
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
@@ -22,7 +23,6 @@ INFO_FILES=	yes
 TEXINFO_REQD=	4.6
 
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 # uses rl_* interface
 .include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
