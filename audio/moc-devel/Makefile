@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/07/05 15:10:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2013/10/15 09:37:59 roy Exp $
 
 DISTNAME=		moc-2.5.0-beta1
+PKGREVISION=1
 PKGNAME=		${DISTNAME:S/-beta/b/:moc%=moc-devel%}
 CATEGORIES=		audio
 MASTER_SITES=		http://ftp.daper.net/pub/soft/moc/unstable/
@@ -48,7 +49,7 @@ CHECK_WRKREF_SKIP=	bin/mocp
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
