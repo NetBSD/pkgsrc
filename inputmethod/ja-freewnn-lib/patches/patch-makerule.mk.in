@@ -1,169 +1,26 @@
-$NetBSD: patch-makerule.mk.in,v 1.1 2011/09/13 07:23:21 mef Exp $
+$NetBSD: patch-makerule.mk.in,v 1.2 2013/10/15 06:25:38 mef Exp $
 
-(Almost) Automatic generation to sourceforge cvs Repository 2011/05/31
+ lib/wnn -> share/wnn fix for datadir
 
---- makerule.mk.in.orig	2003-05-11 18:22:57.000000000 +0000
-+++ makerule.mk.in
-@@ -10,9 +10,9 @@
- #                 1987, 1988, 1989, 1990, 1991, 1992
- # Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
- # Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
--# Copyright FreeWnn Project 1999, 2000, 2001, 2003
-+# Copyright FreeWnn Project 1999, 2000, 2001, 2003, 2006, 2007, 2010, 2011
- # 
--# Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
-+# Maintainer:  FreeWnn Project
- # 
- # This program is free software; you can redistribute it and/or modify
- # it under the terms of the GNU General Public License as published by
-@@ -31,7 +31,10 @@
+--- makerule.mk.in.orig	2011-06-01 22:33:11.000000000 +0900
++++ makerule.mk.in	2011-06-01 22:33:57.000000000 +0900
+@@ -45,8 +45,8 @@
+ # for libtool (AM_PROG_LIBTOOL)
+ #     top_builddir = @abs_top_srcdir@
  
- all::
+-           MANDIR = @mandir@/man$(MANSUFFIX)
+-        LIBMANDIR = @mandir@/man$(LIBMANSUFFIX)
++           MANDIR = @mandir@/ja_JP.EUC/man$(MANSUFFIX)
++        LIBMANDIR = @mandir@/ja_JP.EUC/man$(LIBMANSUFFIX)
  
--            SHELL = /bin/sh
-+            SHELL = @SHELL@
-+# To developers: Please use common syntax / function of Bourne Shell
-+#        (i.e. don't use extention of specific SHELL (bash, ksh, ...))
-+#        on Makefile.in .
- 
-               TOP = $(top_builddir)
-       CURRENT_DIR = `pwd`
-@@ -58,13 +61,20 @@ CPP = @CPP@
- CC = @CC@
- CCLINK = $(CC)
- 
-+# Split fuzoku-go preprocessor (for text processing) from CPP.
-+FZK_PP = @FZK_PP@
-+
-      INSTALLFLAGS =
-                LD = ld
-              LINT = lint
-       LINTLIBFLAG = -C
-          LINTOPTS = -axz
-                LN = @LN_S@
--             MAKE = make
-+# コンパイル時に違うmake (ex. システムのmakeとGNU make)を使えるよう、
-+# ($MAKEが定義されるmakeならば) $MAKEは定義しない。
-+# If you like to use specific make, uncomment and modify following line ...
-+#            MAKE = make
-+              @SET_MAKE@
-                MV = mv -f
-                CP = cp
- 
-@@ -72,6 +82,15 @@ CCLINK = $(CC)
-   RANLIBINSTFLAGS =
- 
-           LIBTOOL = @LIBTOOL@
-+# Notice: If you have trouble on building, please use following lines
-+#        (explicitly use preferred shell by configure / Libtool).
-+#           SHELL = /bin/sh
-+#         LIBTOOL = @LIBTOOL_MOD@
-+
-+# LT_* : shortcut for Makefile.in
-+            LT_CC = $(LIBTOOL) --mode=compile $(CC)
-+            LT_LD = $(LIBTOOL) --mode=link $(CCLINK)
-+       LT_INSTALL = $(LIBTOOL) --mode=install $(INSTALL)
- 
-                RM = rm -f
-               TBL = tbl
-@@ -88,6 +107,9 @@ CCLINK = $(CC)
-      INSTINCFLAGS = -m 0444
-      INSTMANFLAGS = -m 0444
-      INSTDATFLAGS = -m 0444
-+     INSTUUMFLAGS = @INSTUUMFLAGS@
-+
-+        transform = @program_transform_name@
- 
- CCOPTIONS = @CCOPTIONS@
- ALLDEFINES = $(INCLUDES) $(DEFINES)
-@@ -102,17 +124,31 @@ LDOPTIONS = @CDEBUGFLAGS@ $(CCOPTIONS)
- #
- 
-        WNNOWNER = wnn
-+       UUMOWNER = @UUMOWNER@
-+       UUMGROUP = @UUMGROUP@
- 
-           IMTOP = $(TOP)
- 
-          prefix = @prefix@
+         MANSUFFIX = 1
+      LIBMANSUFFIX = 3
+@@ -133,7 +133,7 @@
      exec_prefix = @exec_prefix@
--         PREFIX = @prefix@
--      WNNWNNDIR = ${PREFIX}/lib/wnn
--      WNNBINDIR = ${PREFIX}/bin
-+         bindir = @bindir@
-+        sbindir = @sbindir@
-+      WNNWNNDIR = $(exec_prefix)/lib/wnn
-+      WNNBINDIR = $(bindir)
-+     WNNSBINDIR = @WNNSBINDIR@
+          bindir = @bindir@
+         sbindir = @sbindir@
+-      WNNWNNDIR = $(exec_prefix)/lib/wnn
++      WNNWNNDIR = $(exec_prefix)/share/wnn
+       WNNBINDIR = $(bindir)
+      WNNSBINDIR = @WNNSBINDIR@
        WNNINCDIR = @includedir@
-       WNNLIBDIR = @libdir@
--    WNNTERM_LIB = -ltermcap
-+
-+# sub directory for binaries:
-+# if --enable-sub-bindir specified:
-+@if_enable_sub_bindir@ JWNNSUBBINDIR = /Wnn4
-+@if_enable_sub_bindir@ CWNNSUBBINDIR = /cWnn4
-+@if_enable_sub_bindir@ KWNNSUBBINDIR = /kWnn4
-+# else:
-+@if_disable_sub_bindir@ JWNNSUBBINDIR =
-+@if_disable_sub_bindir@ CWNNSUBBINDIR =
-+@if_disable_sub_bindir@ KWNNSUBBINDIR =
-+# end if
- 
-   PUBDICPLUSSRC = $(IMTOP)/PubdicPlus
-   WNNCONSDICSRC = $(IMTOP)/Wnn-consortium/dic
-@@ -120,7 +156,8 @@ LDOPTIONS = @CDEBUGFLAGS@ $(CCOPTIONS)
-          WNNTOP = $(IMTOP)/Wnn
-        JWNNLANG = ja_JP
-      JWNNWNNDIR = $(WNNWNNDIR)/$(JWNNLANG)
--     JWNNBINDIR = $(WNNBINDIR)/Wnn4
-+     JWNNBINDIR = $(WNNBINDIR)$(JWNNSUBBINDIR)
-+    JWNNSBINDIR = $(WNNSBINDIR)$(JWNNSUBBINDIR)
-      JWNNINCDIR = $(WNNINCDIR)/wnn
-      JWNNDICDIR = $(JWNNWNNDIR)/dic
-   JWNNPUBDICDIR = $(JWNNDICDIR)/pubdic
-@@ -140,7 +177,7 @@ WNNWNNCONSSRC = $(WNNTOP)/wnncons
- WNNWNNCONSDICSRC = $(WNNWNNCONSSRC)/dic
-    WNNROMKANSRC = $(WNNTOP)/romkan
-       WNNUUMSRC = $(WNNTOP)/uum
--   WNNCNVFILEDIR = $(WNNJDSRC)/./bsd
-+  WNNCNVFILEDIR = $(WNNJDSRC)/@CNVFILE_SUBDIR@
-     WNNINCLUDES = -I$(WNNINCLUDESRC) -I$(WNNROMKANMSRC)
-      WNNDEFINES = -DLIBDIR=\"$(WNNWNNDIR)\"
-         WNNJLIB = @WNNJLIB@
-@@ -151,7 +188,8 @@ WNNWNNCONSDICSRC = $(WNNWNNCONSSRC)/dic
-        CWNNLANG = zh_CN
-      CWNNWNNDIR = $(WNNWNNDIR)/$(CWNNLANG)
-      CWNNINCDIR = $(WNNINCDIR)/cwnn
--     CWNNBINDIR = $(WNNBINDIR)/cWnn4
-+     CWNNBINDIR = $(WNNBINDIR)$(CWNNSUBBINDIR)
-+    CWNNSBINDIR = $(WNNSBINDIR)$(CWNNSUBBINDIR)
-      CWNNDICDIR = $(CWNNWNNDIR)/dic
-   CWNNSYSDICDIR = $(CWNNDICDIR)/sys
-       CWNNCDSRC = $(CWNNTOP)/cd
-@@ -164,7 +202,6 @@ WNNWNNCONSDICSRC = $(WNNWNNCONSSRC)/dic
-    CWNNJUTILSRC = $(CWNNTOP)/jutil
-   CWNNROMKANSRC = $(CWNNTOP)/romkan
-      CWNNUUMSRC = $(CWNNTOP)/uum
-- CWNNCNVFILEDIR = $(CWNNCDSRC)/./bsd
-    CWNNINCLUDES = -I$(CWNNINCLUDESRC) -I$(CWNNROMKANMSRC)
-     CWNNDEFINES = -DLIBDIR=\"$(WNNWNNDIR)\"
-        CWNNJLIB = @CWNNJLIB@
-@@ -175,7 +212,8 @@ CWNNJLIBVERSION = 0:0
-        KWNNLANG = ko_KR
-      KWNNWNNDIR = $(WNNWNNDIR)/$(KWNNLANG)
-      KWNNINCDIR = $(WNNINCDIR)/kwnn
--     KWNNBINDIR = $(WNNBINDIR)/kWnn4
-+     KWNNBINDIR = $(WNNBINDIR)$(KWNNSUBBINDIR)
-+    KWNNSBINDIR = $(WNNSBINDIR)$(KWNNSUBBINDIR)
-      KWNNDICDIR = $(KWNNWNNDIR)/dic
-   KWNNSYSDICDIR = $(KWNNDICDIR)/sys
-       KWNNKDSRC = $(KWNNTOP)/kd
-@@ -188,7 +226,6 @@ CWNNJLIBVERSION = 0:0
-    KWNNJUTILSRC = $(KWNNTOP)/jutil
-   KWNNROMKANSRC = $(KWNNTOP)/romkan
-      KWNNUUMSRC = $(KWNNTOP)/uum
-- KWNNCNVFILEDIR = $(KWNNCDSRC)/./bsd
-    KWNNINCLUDES = -I$(KWNNINCLUDESRC) -I$(KWNNROMKANMSRC)
-     KWNNDEFINES = -DLIBDIR=\"$(WNNWNNDIR)\"
-        KWNNJLIB = @KWNNJLIB@
