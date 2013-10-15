@@ -1,8 +1,8 @@
-$NetBSD: patch-tapecopy.c,v 1.2 2013/10/14 13:41:18 ryoon Exp $
+$NetBSD: patch-tapecopy.c,v 1.3 2013/10/15 14:14:53 ryoon Exp $
 
---- tapecopy.c.orig	2010-01-08 22:56:27.000000000 +0000
+--- tapecopy.c.orig	2013-06-14 21:32:42.000000000 +0000
 +++ tapecopy.c
-@@ -242,15 +242,21 @@ static void print_usage (void)
+@@ -245,15 +245,21 @@ static void print_usage (void)
  static int obtain_status (char *devname, int devfd, struct mtget* mtget)
  {
  int rc;                                 /* Return code               */
@@ -26,7 +26,7 @@ $NetBSD: patch-tapecopy.c,v 1.2 2013/10/14 13:41:18 ryoon Exp $
              )
          )
              return +1;
-@@ -260,8 +266,8 @@ int rc;                                 
+@@ -263,8 +269,8 @@ int rc;                                 
          return -1;
      }
  
@@ -37,15 +37,22 @@ $NetBSD: patch-tapecopy.c,v 1.2 2013/10/14 13:41:18 ryoon Exp $
          return +1;
  
      return 0;
-@@ -499,6 +505,7 @@ struct mtget    mtget;                  
+@@ -499,9 +505,14 @@ int64_t         file_bytes;             
+ char            pathname[MAX_PATH];     /* file name in host format  */
+ struct mtget    mtget;                  /* Area for MTIOCGET ioctl   */
+ #if defined(EXTERNALGUI)
++#if defined(BSD) && BSD >= 199306
++struct mtget    mtpos;                  /* Area for MTIOCPOS ioctl   */
++#else
  struct mtpos    mtpos;                  /* Area for MTIOCPOS ioctl   */
++#endif
  int             is3590 = 0;             /* 1 == 3590, 0 == 3480/3490 */
  #endif /*defined(EXTERNALGUI)*/
 +long		gstat;
  
      INITIALIZE_UTILITY("tapecopy");
  
-@@ -636,8 +643,13 @@ int             is3590 = 0;             
+@@ -639,8 +650,13 @@ int             is3590 = 0;             
          printf (_("HHCTC004I %s tape density code: 0x%lX\n"),
              (devnamein ? devnamein : devnameout), density);
  
