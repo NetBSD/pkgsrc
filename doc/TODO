@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12630 2013/10/14 18:28:44 tonnerre Exp $
+$NetBSD: TODO,v 1.12631 2013/10/15 14:39:17 wen Exp $
 
 Suggested new packages
 ======================
@@ -857,7 +857,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ortp-0.16.5
 	o oto-0.5
 	o p0f-3.00b
-	o p5-Config-General-2.52
 	o p5-GTop-0.18
 	o p5-GraphViz-2.14
 	o p5-GraphViz2-2.06
