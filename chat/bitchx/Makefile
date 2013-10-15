@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2013/02/06 23:21:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2013/10/15 14:41:53 roy Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bitchx/}
 
@@ -35,7 +35,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
