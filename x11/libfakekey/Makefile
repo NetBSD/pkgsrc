@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2012/10/29 05:06:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/15 12:11:28 obache Exp $
 #
 
 DISTNAME=	libfakekey-0.1
 CATEGORIES=	x11
-MASTER_SITES=	http://matchbox-project.org/sources/libfakekey/0.1/
+MASTER_SITES=	http://downloads.yoctoproject.org/releases/matchbox/libfakekey/0.1/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://matchbox-project.org/
+HOMEPAGE=	https://www.yoctoproject.org/tools-resources/projects/matchbox
 COMMENT=	X Virtual Keyboard Library
 LICENSE=	gnu-gpl-v2
 
