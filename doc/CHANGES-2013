@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3800 2013/10/15 02:17:01 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3801 2013/10/15 02:34:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5352,3 +5352,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/tinc to 1.0.22 [tonnerre 2013-10-14]
 	Added devel/p5-Mo version 0.35 [wen 2013-10-15]
 	Updated devel/p5-MooX-Options to 3.90 [wen 2013-10-15]
+	Updated devel/p5-Test-Harness to 3.29 [wen 2013-10-15]
