@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/05/09 07:39:19 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/10/15 21:19:39 pettai Exp $
 #
 
-DISTNAME=	softhsm-1.3.4
-PKGREVISION=	2
+DISTNAME=	softhsm-1.3.5
 CATEGORIES=	security
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
