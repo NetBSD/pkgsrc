@@ -1,0 +1,14 @@
+$NetBSD: patch-SConstruct,v 1.1 2013/10/15 14:41:36 joerg Exp $
+
+--- SConstruct.orig	2013-10-14 21:45:13.000000000 +0000
++++ SConstruct
+@@ -56,7 +56,8 @@ misc = [
+ 	'VPatch'
+ ]
+ 
+-defenv = Environment()
++import os
++defenv = Environment(ENV = os.environ)
+ Export('defenv')
+ 
+ ######################################################################
