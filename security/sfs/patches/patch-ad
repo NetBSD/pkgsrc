@@ -1,7 +1,25 @@
-$NetBSD: patch-ad,v 1.1 2006/10/21 11:53:13 agc Exp $
+$NetBSD: patch-ad,v 1.2 2013/10/15 14:48:38 joerg Exp $
 
---- ./async/qhash.h.orig	2002-05-28 11:50:37.000000000 +0100
-+++ ./async/qhash.h
+--- async/qhash.h.orig	2002-05-28 10:50:37.000000000 +0000
++++ async/qhash.h
+@@ -69,7 +69,7 @@ class qhash
+ 
+   slot *getslot (const K &k) const {
+     slot *s;
+-    for (s = lookup_val (hash (k)); s && !eq (s->key, k); s = next_val (s))
++    for (s = this->lookup_val (hash (k)); s && !eq (s->key, k); s = this->next_val (s))
+       ;
+     return s;
+   }
+@@ -152,7 +152,7 @@ class bhash // <K, void, H, E, kludge>
+ 
+   slot *getslot (const K &k) const {
+     slot *s;
+-    for (s = lookup_val (hash (k)); s && !eq (s->key, k); s = next_val (s))
++    for (s = this->lookup_val (hash (k)); s && !eq (s->key, k); s = this->next_val (s))
+       ;
+     return s;
+   }
 @@ -166,7 +166,7 @@ class bhash // <K, void, H, E, kludge>
  
  public:
