@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/09/30 10:04:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/10/15 14:33:28 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.0.01/ace.js
@@ -542,21 +542,6 @@ ${CT_WEBDIR}/assets/tinymce/plugins/searchreplace/langs/uk_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/searchreplace/langs/vi_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/searchreplace/langs/zh_dlg.js
 ${CT_WEBDIR}/assets/tinymce/plugins/searchreplace/searchreplace.htm
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/changelog.txt
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/EnchantSpell.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/GoogleSpell.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/PSpell.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/PSpellShell.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/SpellChecker.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/utils/JSON.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/classes/utils/Logger.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/config.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/css/content.css
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/editor_plugin.js
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/editor_plugin_src.js
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/img/wline.gif
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/includes/general.php
-${CT_WEBDIR}/assets/tinymce/plugins/spellchecker/rpc.php
 ${CT_WEBDIR}/assets/tinymce/plugins/style/css/props.css
 ${CT_WEBDIR}/assets/tinymce/plugins/style/editor_plugin.js
 ${CT_WEBDIR}/assets/tinymce/plugins/style/editor_plugin_src.js
