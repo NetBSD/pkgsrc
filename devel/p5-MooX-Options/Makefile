@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/10/11 11:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/15 02:15:44 wen Exp $
 
-DISTNAME=	MooX-Options-3.86
+DISTNAME=	MooX-Options-3.90
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CE/CELOGEEK/}
@@ -23,6 +23,8 @@ BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
 BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+BUILD_DEPENDS+=	p5-Mo-[0-9]*:../../devel/p5-Mo
+BUILD_DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 
 PERL5_PACKLIST=		auto/MooX/Options/.packlist
 PERL5_MODULE_TYPE=	Module::Build
