@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2013/08/16 05:53:02 obache Exp $
+$NetBSD: distinfo,v 1.13 2013/10/15 14:46:07 joerg Exp $
 
 SHA1 (ekiga-3.2.6.tar.bz2) = 1c9d2004aa57643a951c1d454e9cfb207143c021
 RMD160 (ekiga-3.2.6.tar.bz2) = f53fe740856e4a4c5b6141086ba25288aabe51ac
@@ -8,9 +8,31 @@ SHA1 (patch-configure.ac) = a27f2712f9b3f2fa9020d85de87cae78d30ad9bb
 SHA1 (patch-lib_engine_account_bank-impl.h) = 2cc4906ce966e5a8840ec5284433c3a9396c5911
 SHA1 (patch-lib_engine_addressbook_book-impl.h) = 2259de4d6b4450180a0a2a60866eaf3f3e04f3eb
 SHA1 (patch-lib_engine_addressbook_source-impl.h) = ca0d25740c4b37768e15179e4980d4559cf392a8
-SHA1 (patch-lib_engine_components_libnotify_libnotify-main.cpp) = c7836b031dcb160003f9956fd968a0dd64ca1924
+SHA1 (patch-lib_engine_components_call-history_history-book.cpp) = cac2aba4e32c94d0d91e211cb187064c04ff2f1c
+SHA1 (patch-lib_engine_components_call-history_history-book.h) = 8d64389c70a2f10280ef9da2a1cb8943b0223971
+SHA1 (patch-lib_engine_components_call-history_history-contact.cpp) = e4bc8e533669374d8d585f836441afe9dcd5d080
+SHA1 (patch-lib_engine_components_call-history_history-contact.h) = 532441a88e29eabe1e1bb73e77b0aece3f4d05a3
+SHA1 (patch-lib_engine_components_ldap_ldap-book.cpp) = dfe103a8c5360877931485d15301e27df54de98c
+SHA1 (patch-lib_engine_components_ldap_ldap-book.h) = 15ce91d6ac9eca82b70c63870cbd0483c3bfe61d
+SHA1 (patch-lib_engine_components_ldap_ldap-source.cpp) = d29dd5c8a88b466d94f3252bd09eac1c27afbdba
+SHA1 (patch-lib_engine_components_ldap_ldap-source.h) = 8bd5661002e8701f73c1e326ceaa659d4ca1388a
+SHA1 (patch-lib_engine_components_libnotify_libnotify-main.cpp) = 365e7a565f1ae12c3daa22d299de27ce6ab4dda3
+SHA1 (patch-lib_engine_components_local-roster_local-heap.cpp) = 0ec04c16500f74f7dfa85d86920dd80adf69f095
+SHA1 (patch-lib_engine_components_local-roster_local-heap.h) = 002ee5503a34d369b7a52663025eab5050ba6c4e
+SHA1 (patch-lib_engine_components_local-roster_local-presentity.cpp) = 775f60c45ed486b589c3860ca779ef76296ab14d
+SHA1 (patch-lib_engine_components_local-roster_local-presentity.h) = 69ad42ee97a936ca41c4638f92ce2074b7f048a8
+SHA1 (patch-lib_engine_components_resource-list_rl-cluster.cpp) = 210af3e627477fd28262f1b2617d397f105f47f9
+SHA1 (patch-lib_engine_components_resource-list_rl-cluster.h) = 02b8bb35a8f1fe71a479db48ec363f21c69563a2
+SHA1 (patch-lib_engine_components_resource-list_rl-entry.h) = e99080c1ad4447536b033de425cad4c14ad283d3
+SHA1 (patch-lib_engine_components_resource-list_rl-heap.cpp) = 66b92a708d2e2a10b7dc1a79962ee8b37c257f29
+SHA1 (patch-lib_engine_components_resource-list_rl-heap.h) = b8a22b117d6fd77a1492308a59636d7cefb14f59
+SHA1 (patch-lib_engine_components_resource-list_rl-list.cpp) = 1957a688bca7cde9345b1e3172eaeaf62aa79892
+SHA1 (patch-lib_engine_components_resource-list_rl-presentity.cpp) = 4950c8413898da47e2290b4d4f1f84292c12a281
+SHA1 (patch-lib_engine_components_resource-list_rl-presentity.h) = 61567eba2198ad3f81b7d367f16bb06e4429c2de
 SHA1 (patch-lib_engine_presence_cluster-impl.h) = bbdb345cbcb5eae14737021960434343b87bf5fe
 SHA1 (patch-lib_engine_presence_heap-impl.h) = 7a28aa97722d3d81653a2eb98b9d92acc80a6f79
+SHA1 (patch-lib_gui_xwindow.cpp) = d6f5b3b07357e3390afe9f9c7ab632ac9a9ba006
+SHA1 (patch-lib_gui_xwindow.h) = 121b40b104d8ac4ad30cf81ddb8237ad5a5a247c
 SHA1 (patch-src_Makefile.am) = 54a6fd59b640c118b928af19fe3aa9943550a3dc
 SHA1 (patch-src_Makefile.in) = dab0e316da9ba7eb2286d104018d59dc85c1ed5b
 SHA1 (patch-src_gui_main.cpp) = fa15b3f8f2bf5e6bc1bdb73cb5376ae3a9858571
