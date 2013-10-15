@@ -1,7 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2013/10/03 11:12:43 obache Exp $
-
-* disable DEBUG knob, it will be controlled with option.
-* fixes manpath and installation command for unprivileged build.
+$NetBSD: patch-aa,v 1.4 2013/10/15 14:44:18 joerg Exp $
 
 --- Makefile.orig	2009-06-26 15:58:00.000000000 +0000
 +++ Makefile
@@ -14,7 +11,24 @@ $NetBSD: patch-aa,v 1.3 2013/10/03 11:12:43 obache Exp $
  
  CC?= cc
  YACC= yacc -d
-@@ -76,12 +76,12 @@ regress:	fdm
+@@ -13,15 +13,7 @@ CFLAGS+= -DBUILD="\"$(VERSION)\""
+ LDFLAGS+= -L/usr/local/lib
+ LIBS+= -lssl -lcrypto -ltdb -lz
+ 
++CPPFLAGS+=-I.
+-# This sort of sucks but gets rid of the stupid warning and should work on
+-# most platforms...
+-CCV!= (LC_ALL=C ${CC} -v 2>&1|awk '/gcc version 4/') || true
+-.if empty(CCV)
+-CPPFLAGS:= -I. -I- -I/usr/local/include ${CPPFLAGS}
+-.else
+-CPPFLAGS:= -iquote. -I/usr/local/include ${CPPFLAGS}
+-.endif
+-
+ .ifdef FDEBUG
+ LDFLAGS+= -Wl,-E
+ CFLAGS+= -g -ggdb -DDEBUG
+@@ -76,12 +67,12 @@ regress:	fdm
  		cd regress && ${MAKE}
  
  install:	all
