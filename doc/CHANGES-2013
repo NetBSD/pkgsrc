@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3807 2013/10/15 14:18:47 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3808 2013/10/15 14:26:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5359,3 +5359,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-pgf to 2.10nb1 [minskim 2013-10-15]
 	Updated net/p5-Geo-IPfree to 1.132870 [wen 2013-10-15]
 	Updated www/p5-Mojolicious to 4.47 [wen 2013-10-15]
+	Updated devel/p5-Config-Any to 0.24 [wen 2013-10-15]
