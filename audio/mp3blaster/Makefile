@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/10/02 23:47:58 asau Exp $
+# $NetBSD: Makefile,v 1.34 2013/10/15 09:44:06 roy Exp $
 
 DISTNAME=	mp3blaster-3.2.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3blaster/}
 
@@ -29,5 +29,5 @@ CONFIGURE_ARGS+=	--enable-newthreads
 .include "options.mk"
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
