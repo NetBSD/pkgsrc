@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3802 2013/10/15 02:38:08 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3803 2013/10/15 02:42:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5354,3 +5354,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooX-Options to 3.90 [wen 2013-10-15]
 	Updated devel/p5-Test-Harness to 3.29 [wen 2013-10-15]
 	Updated devel/p5-Module-Build-Tiny to 0.030 [wen 2013-10-15]
+	Updated devel/p5-Test-Warnings to 0.012 [wen 2013-10-15]
