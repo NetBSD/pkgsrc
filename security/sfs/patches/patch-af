@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2006/10/21 11:53:13 agc Exp $
+$NetBSD: patch-af,v 1.2 2013/10/15 14:48:38 joerg Exp $
 
---- ./async/vec.h.orig	2002-05-28 11:29:16.000000000 +0100
-+++ ./async/vec.h
+--- async/vec.h.orig	2002-05-28 10:29:16.000000000 +0000
++++ async/vec.h
 @@ -72,7 +72,14 @@ public:
  };
  
@@ -17,12 +17,23 @@ $NetBSD: patch-af,v 1.1 2006/10/21 11:53:13 agc Exp $
    void move (elm_t *dst) {
      if (dst == firstp)
        return;
-@@ -92,7 +99,7 @@ template<class T, size_t N = 0> class ve
+@@ -92,8 +99,8 @@ template<class T, size_t N = 0> class ve
      { return *new (implicit_cast<void *> (&e)) elm_t (v); }
    static void destroy (elm_t &e) { e.~elm_t (); }
  
 -  void init () { lastp = firstp = basep = def_basep (); limp = def_limp (); }
+-  void del () { while (firstp < lastp) firstp++->~elm_t (); bfree (basep); }
 +  void init () { lastp = firstp = basep = this->def_basep (); limp = this->def_limp (); }
-   void del () { while (firstp < lastp) firstp++->~elm_t (); bfree (basep); }
++  void del () { while (firstp < lastp) firstp++->~elm_t (); this->bfree (basep); }
  
  #define append(v)						\
+ do {								\
+@@ -134,7 +141,7 @@ public:
+       elm_t *obasep = basep;
+       move (static_cast<elm_t *> (txmalloc (nalloc * sizeof (elm_t))));
+       limp = basep + nalloc;
+-      bfree (obasep);
++      this->bfree (obasep);
+     }
+     else
+       move (basep);

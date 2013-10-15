@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/10/21 11:53:13 agc Exp $
+$NetBSD: patch-ac,v 1.2 2013/10/15 14:48:38 joerg Exp $
 
---- ./async/ihash.h.orig	2002-05-28 11:29:16.000000000 +0100
-+++ ./async/ihash.h
-@@ -213,7 +213,7 @@ class ihash
+--- async/ihash.h.orig	2002-05-28 10:29:16.000000000 +0000
++++ async/ihash.h
+@@ -213,10 +213,10 @@ class ihash
    const H hash;
  
  public:
@@ -10,4 +10,28 @@ $NetBSD: patch-ac,v 1.1 2006/10/21 11:53:13 agc Exp $
 +  ihash () : eq (E ()), hash (H ()) {}
    ihash (const E &e, const H &h) : eq (e), hash (h) {}
  
-   void insert (V *elm) { insert_val (elm, hash (elm->*key)); }
+-  void insert (V *elm) { insert_val (elm, hash (elm->*key)); }
++  void insert (V *elm) { this->insert_val (elm, hash (elm->*key)); }
+ 
+ #if 0
+   template<class T> V *operator[] (const T &k) const {
+@@ -224,16 +224,16 @@ public:
+   V *operator[] (const K &k) const {
+ #endif
+     V *v;
+-    for (v = lookup_val (hash (k));
++    for (v = this->lookup_val (hash (k));
+ 	 v && !eq (k, v->*key);
+-	 v = next_val (v))
++	 v = this->next_val (v))
+       ;
+     return v;
+   }
+ 
+   V *nextkeq (V *v) {
+     const K &k = v->*key;
+-    while ((v = next_val (v)) && !eq (k, v->*key))
++    while ((v = this->next_val (v)) && !eq (k, v->*key))
+       ;
+     return v;
+   };
