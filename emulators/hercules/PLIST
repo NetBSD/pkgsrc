@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2011/05/01 23:28:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/10/15 14:14:53 ryoon Exp $
+bin/bldlvlck
 bin/cckd2ckd
 bin/cckdcdsk
 bin/cckdcomp
@@ -6,7 +7,6 @@ bin/cckddiag
 bin/cckdswap
 bin/cfba2fba
 bin/ckd2cckd
-bin/cvslvlck
 bin/dasdcat
 bin/dasdconv
 bin/dasdcopy
@@ -52,6 +52,7 @@ lib/libherct.la
 lib/libhercu.la
 man/man1/cckddiag.1
 man/man1/dasdseq.1
+man/man1/hercules.1
 man/man4/cckd.4
 share/examples/hercules/hercules.cnf
 share/hercules/TMOUNT.txt
