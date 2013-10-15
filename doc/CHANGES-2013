@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3804 2013/10/15 06:26:20 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3805 2013/10/15 09:25:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5356,3 +5356,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Module-Build-Tiny to 0.030 [wen 2013-10-15]
 	Updated devel/p5-Test-Warnings to 0.012 [wen 2013-10-15]
 	Updated inputmethod/ja-freewnn-lib to 1.11alpha22nb1 [mef 2013-10-15]
+	Updated print/tex-pgf to 2.10nb1 [minskim 2013-10-15]
