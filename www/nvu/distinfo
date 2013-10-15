@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/03/24 16:45:55 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/10/15 14:49:35 joerg Exp $
 
 SHA1 (nvu-1.0-sources.tar.bz2) = 438b1633cb820bbede503ef2da90f46d4e96bee8
 RMD160 (nvu-1.0-sources.tar.bz2) = 6d6fdb747d79e8602a4757e8eff8bbb21db6df8c
@@ -11,6 +11,10 @@ SHA1 (patch-al) = 5fe0093d2fa0691e9db035ce224265b438eedd3a
 SHA1 (patch-an) = 090e62c11b8d1f4d6779f5b1e1221efb43f9460e
 SHA1 (patch-ao) = eb220c4c30838216e709179cf953b9cbb9696421
 SHA1 (patch-ap) = 35a193158e43d57a1c31270214140afbb3cebb56
+SHA1 (patch-composer_base_dialogs_EdImageProps.js) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-composer_base_dialogs_EdLinkProps.js) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-editor_libeditor_html_nsHTMLEditRules.cpp) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-layout_xul_base_src_nsStackFrame.h) = 56eda32dd08e90661b5244f64bd078ba55bee61c
 SHA1 (patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp) = 5b14d68932a3dd2be9e57f130e825150de8cc8dd
 SHA1 (patch-nsprpub_config_Makefile.in) = daf6423b53385c32e658fa5d93e33a0c5f31ca91
 SHA1 (patch-nsprpub_lib_ds_Makefile.in) = 3620eee6be375bfa3afc2008fbe714bbbb670a27
@@ -22,6 +26,7 @@ SHA1 (patch-security_nss_lib_nss_config.mk) = 870321ea256dbb3d5bf187460f7b6b4329
 SHA1 (patch-security_nss_lib_smime_config.mk) = e7b89c537574af70e3e14f334d46a77e1dbc4bc0
 SHA1 (patch-security_nss_lib_softoken_config.mk) = c1110bad9779d241582d14c62a14b564664ecaa3
 SHA1 (patch-security_nss_lib_ssl_config.mk) = 9c428af47fcdd3d879dab41297d2714e40587bb7
+SHA1 (patch-xpcom_base_nsTraceRefcntImpl.cpp) = 5478e0791796dc7639f5cb33f543e565859e3245
 SHA1 (patch-xpcom_ds_nsBaseHashtable.h) = 72af3045b04104fcf9cb8b5e0c278ccbec9680ca
 SHA1 (patch-xpcom_ds_nsClassHashtable.h) = 6ebed99e3ee8709cee2cfd9ed61a2a6197fe8595
 SHA1 (patch-xpcom_ds_nsInterfaceHashtable.h) = a1922d87d364e2b8f592ac49098b23ab744e8930
