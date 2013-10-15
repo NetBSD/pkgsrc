@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3810 2013/10/15 14:34:37 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3811 2013/10/15 14:36:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5362,3 +5362,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Config-Any to 0.24 [wen 2013-10-15]
 	Updated emulators/hercules to 3.09 [ryoon 2013-10-15]
 	Updated www/contao31 to 3.1.4 [taca 2013-10-15]
+	Updated devel/p5-Config-General to 2.52 [wen 2013-10-15]
