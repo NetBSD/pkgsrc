@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12631 2013/10/15 14:39:17 wen Exp $
+$NetBSD: TODO,v 1.12632 2013/10/15 14:56:30 wen Exp $
 
 Suggested new packages
 ======================
@@ -861,7 +861,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz-2.14
 	o p5-GraphViz2-2.06
 	o p5-Gtk2-1.223
-	o p5-Perl-Tidy-20121207
 	o p5-clutter-1.110
 	o p5-glib2-1.301
 	o p5-gtk2-1.300
