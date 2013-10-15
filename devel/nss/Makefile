@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2013/07/20 09:28:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2013/10/15 16:10:33 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE}
-NSS_RELEASE=		3.15.1
+NSS_RELEASE=		3.15.2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_RELEASE:S/./_/g}_RTM/src/}
 
