@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 00:02:40 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/10/15 17:08:02 roy Exp $
 #
 
 DISTNAME=	licq-1.3.5
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C/-/-gui-console-/}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=licq/}
@@ -35,7 +36,7 @@ USE_BUILTIN.cdk=	no
 CONFIGURE_ENV+=		ac_cv_lib_cdk_initCDKScreen="yes"
 .endif
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/cdk/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
