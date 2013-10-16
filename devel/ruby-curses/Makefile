@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:40 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/16 17:13:30 roy Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
+PKGREVISION=		1
 PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_FULL}
 RUBY_EXTNAME=		curses
 CATEGORIES=		devel ruby
@@ -26,6 +27,6 @@ post-install:
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
