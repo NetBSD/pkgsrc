@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/09/09 14:26:03 gdt Exp $
+$NetBSD: distinfo,v 1.3 2013/10/16 22:15:53 gdt Exp $
 
-SHA1 (gama-1.13.tar.gz) = 2fd1b8aa84ac223bb7b30dcb46bf75949de7a495
-RMD160 (gama-1.13.tar.gz) = eb46ac12d0deae85104a973fdc53b5e7782e2d66
-Size (gama-1.13.tar.gz) = 819384 bytes
+SHA1 (gama-1.14.tar.gz) = 23aca189cc229ef864d2e24d79d142baff41857b
+RMD160 (gama-1.14.tar.gz) = 5afaf6e3032609d30ef2a12998c70ea412ae9821
+Size (gama-1.14.tar.gz) = 1040500 bytes
