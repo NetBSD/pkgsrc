@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2013/02/01 22:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/10/16 22:37:14 roy Exp $
 #
 
 DISTNAME=	mined-2000.15
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://towo.net/mined/
 
@@ -22,5 +23,5 @@ CFLAGS+=	-Wno-invalid-source-encoding
 
 MAKE_FLAGS+=	OPT=${CFLAGS:Q}
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
