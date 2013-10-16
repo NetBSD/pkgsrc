@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 00:02:45 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/10/16 07:37:10 roy Exp $
 #
 
 DISTNAME=	tirc-1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.mayn.de/pub/really_old_stuff/unix/network/irc/tirc/
 
@@ -36,5 +36,5 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dot.tircrc ${DESTDIR}${PREFIX}/share/tirc/tircrc
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
