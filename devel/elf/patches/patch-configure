@@ -1,0 +1,118 @@
+$NetBSD: patch-configure,v 1.1 2013/10/16 12:32:18 roy Exp $
+
+--- configure.orig	2013-10-16 12:26:43.000000000 +0000
++++ configure
+@@ -1749,56 +1749,6 @@ echo "${ECHO_T}no" >&6
+   SET_MAKE="MAKE=${MAKE-make}"
+ fi
+ 
+-echo "$as_me:1752: checking for main in -lcurses" >&5
+-echo $ECHO_N "checking for main in -lcurses... $ECHO_C" >&6
+-if test "${ac_cv_lib_curses_main+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcurses  $LIBS"
+-cat >conftest.$ac_ext <<_ACEOF
+-#line 1760 "configure"
+-#include "confdefs.h"
+-
+-int
+-main ()
+-{
+-main ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:1772: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:1775: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:1778: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:1781: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_lib_curses_main=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-cat conftest.$ac_ext >&5
+-ac_cv_lib_curses_main=no
+-fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
+-fi
+-echo "$as_me:1792: result: $ac_cv_lib_curses_main" >&5
+-echo "${ECHO_T}$ac_cv_lib_curses_main" >&6
+-if test $ac_cv_lib_curses_main = yes; then
+-  cat >>confdefs.h <<EOF
+-#define HAVE_LIBCURSES 1
+-EOF
+-
+-  LIBS="-lcurses $LIBS"
+-
+-fi
+ 
+ echo "$as_me:1803: checking for main in -ledit" >&5
+ echo $ECHO_N "checking for main in -ledit... $ECHO_C" >&6
+@@ -1851,56 +1801,6 @@ EOF
+ 
+ fi
+ 
+-echo "$as_me:1854: checking for main in -lncurses" >&5
+-echo $ECHO_N "checking for main in -lncurses... $ECHO_C" >&6
+-if test "${ac_cv_lib_ncurses_main+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lncurses  $LIBS"
+-cat >conftest.$ac_ext <<_ACEOF
+-#line 1862 "configure"
+-#include "confdefs.h"
+-
+-int
+-main ()
+-{
+-main ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:1874: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:1877: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:1880: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:1883: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_lib_ncurses_main=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-cat conftest.$ac_ext >&5
+-ac_cv_lib_ncurses_main=no
+-fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
+-fi
+-echo "$as_me:1894: result: $ac_cv_lib_ncurses_main" >&5
+-echo "${ECHO_T}$ac_cv_lib_ncurses_main" >&6
+-if test $ac_cv_lib_ncurses_main = yes; then
+-  cat >>confdefs.h <<EOF
+-#define HAVE_LIBNCURSES 1
+-EOF
+-
+-  LIBS="-lncurses $LIBS"
+-
+-fi
+ 
+ echo "$as_me:1905: checking for main in -lreadline" >&5
+ echo $ECHO_N "checking for main in -lreadline... $ECHO_C" >&6
