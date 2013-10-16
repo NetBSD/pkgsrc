@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2010/02/23 20:26:24 sno Exp $
+$NetBSD: distinfo,v 1.13 2013/10/16 16:27:26 roy Exp $
 
 SHA1 (Curses-1.28.tgz) = 1f778ad08f5e2668e2457a61fca9b5d2a1e30d7e
 RMD160 (Curses-1.28.tgz) = 7d3c621fa27424fcc2b270bb511c04b00e0f4329
 Size (Curses-1.28.tgz) = 127412 bytes
-SHA1 (patch-ab) = 578e6b65a930fd561254d8b6f3da7014debd271c
