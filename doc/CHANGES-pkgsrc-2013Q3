@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.6 2013/10/12 14:16:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.7 2013/10/16 16:03:06 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -21,3 +21,7 @@ Pullup ticket #4243 - requested by he
 graphics/png: build fix
 Pullup ticket #4244 - requested by obache
 www/py-genshi: security update
+Pullup ticket #4245 - requested by joerg
+devel/bmake: build fix
+Pullup ticket #4246 - requested by joerg
+lang/python27: build fix
