@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile,v 1.1 2013/01/08 10:16:43 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2013/10/16 23:28:49 roy Exp $
 
-DESTDIR support.
+DESTDIR and curses support.
 
 --- Makefile.orig	2006-05-18 08:27:43.000000000 +0000
 +++ Makefile
@@ -16,4 +16,13 @@ DESTDIR support.
 +MANDIR=$(DESTDIR)$(PREFIX)/man/man1
  
  TWEAK := main.o keytab.o actions.o search.o rcfile.o buffer.o btree.o
+ 
+@@ -34,7 +35,7 @@ ifeq ($(SLANG),yes)
+ LIBS += -lslang
+ TWEAK += slang.o
+ else
+-LIBS += -lncurses
++LIBS += -lcurses
+ TWEAK += curses.o
+ endif
  

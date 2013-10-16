@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/01/08 10:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/16 23:28:49 roy Exp $
 #
 
 DISTNAME=	tweak-3.01
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/tweak/
 
@@ -14,5 +15,5 @@ USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} DESTDIR=${DESTDIR}
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
