@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2013/07/15 02:02:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2013/10/16 09:02:03 roy Exp $
 #
 
 DISTNAME=	abook-0.6.0pre2
 PKGNAME=	abook-0.6.0rc2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://abook.sourceforge.net/devel/
 
@@ -19,6 +19,6 @@ GNU_CONFIGURE=		yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
