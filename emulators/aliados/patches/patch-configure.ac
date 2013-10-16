@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/10/16 23:59:36 roy Exp $
+
+--- configure.ac.orig	2005-05-07 20:06:59.000000000 +0000
++++ configure.ac
+@@ -61,8 +61,10 @@ fi
+ 
+ 
+ if test "$enable_curses" != "no" ; then
+-	AC_CHECK_HEADERS([ncurses.h], , AC_MSG_ERROR([ncurses headers not found]) )
+-	AC_CHECK_LIB([ncurses], [tputs], , AC_MSG_ERROR([ncurses libs not found]) )
++	AC_CHECK_HEADERS([term.h], , AC_MSG_ERROR([terminfo header not found]) )
++	AC_CHECK_LIB([tinfo], [tputs], 
++	[AC_CHECK_LIB([ncurses], [tputs], 
++	, AC_MSG_ERROR([terminfo libs not found]) ) ] )
+ fi
+ 
+ 
