@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3820 2013/10/16 19:37:13 markd Exp $
+$NetBSD: CHANGES-2013,v 1.3821 2013/10/16 22:16:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5372,3 +5372,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/libgksu to 2.0.12 [wiz 2013-10-16]
 	Updated multimedia/gnome-mplayer to 1.0.8nb8 [obache 2013-10-16]
 	Updated math/py-scipy to 0.12.1 [markd 2013-10-16]
+	Updated geography/gama to 1.14 [gdt 2013-10-16]
