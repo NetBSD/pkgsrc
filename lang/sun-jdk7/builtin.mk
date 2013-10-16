@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2012/12/11 14:51:33 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.2 2013/10/16 16:48:55 richard Exp $
 
 BUILTIN_PKG:=	sun-jdk7
 
@@ -30,8 +30,9 @@ MAKEVARS+=	IS_BUILTIN.sun-jdk7
     !empty(IS_BUILTIN.sun-jdk7:M[yY][eE][sS]) && \
     empty(JDK7:M__nonexistent__)
 
-BUILTIN_VERSION.sun-jdk7!= ${JDK7} -version 2>&1 | ${HEAD} -1 | \
-	${AWK} '{print $$2}'
+BUILTIN_VERSION.sun-jdk7!= ${JDK7} -version 2>&1 | \
+	${AWK} '{print $$2; exit}' | \
+	${AWK} '{sub(/^1\./,"");sub(/_/,".");print $$1}'
 
 BUILTIN_PKG.sun-jdk7=	sun-jdk7-${BUILTIN_VERSION.sun-jdk7}
 .endif
