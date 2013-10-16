@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/05/16 04:18:13 obache Exp $
+# $NetBSD: options.mk,v 1.4 2013/10/16 13:09:00 roy Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libstatgrab
 PKG_SUPPORTED_OPTIONS=	saidar statgrab
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--disable-statgrab
 
 .if !empty(PKG_OPTIONS:Msaidar)
 PLIST.saidar=		yes
-.  include "../../devel/ncurses/buildlink3.mk"
+.  include "../../mk/curses.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-saidar
 .endif
