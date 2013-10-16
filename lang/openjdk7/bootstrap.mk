@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.9 2013/06/26 12:52:34 ryoon Exp $
+# $NetBSD: bootstrap.mk,v 1.10 2013/10/16 16:51:00 richard Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[56].*-i386 NetBSD-[56].*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-[23].*-* SunOS-*-*
@@ -86,8 +86,10 @@ EXTRACT_ONLY+=		${BOOT.common-20110811}
 .endif
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		sun-jdk7-[0-9]*:../../lang/sun-jdk7
-JDK_BOOTDIR=		${PREFIX}/java/sun-7
+BUILDLINK_DEPMETHOD.sun-jdk7?=	build
+.include "../../lang/sun-jdk7/buildlink3.mk"
+#NB: sun-jdk7 includes sun-jre7/buildlink3.mk
+JDK_BOOTDIR=	${BUILDLINK_JAVA_PREFIX.sun-jre7:tA}
 MAKE_ENV+=		ALT_JDK_IMPORT_PATH=${JDK_BOOTDIR}
 .endif
 
