@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/07/15 02:02:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2013/10/16 12:32:17 roy Exp $
 #
 
 DISTNAME=	elf-0.5.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_BACKUP} \
 		http://www.kerneled.com/projects/elf/
@@ -22,7 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/elf ${DESTDIR:Q}${PREFIX:Q}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/elf.1 ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
