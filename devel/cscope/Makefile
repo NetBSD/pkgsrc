@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2012/10/31 11:16:48 asau Exp $
+# $NetBSD: Makefile,v 1.55 2013/10/16 12:03:29 roy Exp $
 
 DISTNAME=	cscope-15.8a
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cscope/}
 
@@ -12,7 +13,6 @@ LICENSE=	original-bsd
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		byacc lex
 
-CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 CONFIGURE_ARGS+=	--with-flex --with-yacc
 INSTALLATION_DIRS+=	share/emacs/site-lisp
 
@@ -28,5 +28,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/xcscope/xcscope.el \
 		${DESTDIR}${PREFIX}/share/emacs/site-lisp
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if ${CURSES_TYPE} == "ncurses"
+CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
+.endif
