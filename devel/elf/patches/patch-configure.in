@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.in,v 1.1 2013/10/16 12:32:18 roy Exp $
+
+--- configure.in.orig	2013-10-16 12:26:35.000000000 +0000
++++ configure.in
+@@ -6,9 +6,7 @@ AC_PROG_CC
+ AC_PROG_INSTALL
+ AC_PROG_MAKE_SET
+ 
+-AC_CHECK_LIB([curses], [main])
+ AC_CHECK_LIB([edit], [main])
+-AC_CHECK_LIB([ncurses], [main])
+ AC_CHECK_LIB([readline], [main])
+ 
+ AC_HEADER_STDC
