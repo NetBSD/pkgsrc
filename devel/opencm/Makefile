@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2013/07/15 02:02:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2013/10/16 13:27:40 roy Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.opencm.org/releases/
 EXTRACT_SUFX=	.tgz
@@ -34,10 +34,10 @@ post-install:
 	gzip -d ${DESTDIR}${PREFIX}/${PKGINFODIR}/opencm.info.gz
 
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
