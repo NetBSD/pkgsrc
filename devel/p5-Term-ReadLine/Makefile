@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2013/10/16 16:34:37 roy Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.20
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5trl
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
@@ -23,6 +23,5 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/a$//}
 REPLACE_PERL+=	Gnu/XS.pm Gnu/euc_jp.pm
 
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
