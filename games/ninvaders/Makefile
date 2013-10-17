@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 11:54:48 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/17 10:08:40 roy Exp $
 
 DISTNAME=	ninvaders-0.1.1
+PKGREVSION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ninvaders/}
 
@@ -10,5 +11,5 @@ COMMENT=	Space invaders, curses style
 
 INSTALLATION_DIRS+=	bin
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
