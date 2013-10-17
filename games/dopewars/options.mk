@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/02/14 21:40:44 adam Exp $
+# $NetBSD: options.mk,v 1.2 2013/10/17 09:44:57 roy Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dopewars
 PKG_SUPPORTED_OPTIONS=	curses gtk
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	curses gtk
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcurses)
-.  include "../../devel/ncurses/buildlink3.mk"
+.  include "../../mk/curses.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-curses-client
 .endif
