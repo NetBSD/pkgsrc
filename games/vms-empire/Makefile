@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 11:54:58 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/10/17 16:28:02 roy Exp $
 #
 
 DISTNAME=	vms-empire-1.7
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 
@@ -15,5 +16,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vms-empire ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/vms-empire.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/vms-empire.6
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
