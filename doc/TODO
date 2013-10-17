@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12641 2013/10/17 08:01:12 wiz Exp $
+$NetBSD: TODO,v 1.12642 2013/10/17 16:49:47 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1035,7 +1035,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpreplay-3.4.4
 	o tcpslice-1.2a3
 	o tct-1.16
-	o tdir-1.67
 	o tds-1.6.2
 	o tea-37.0.0
 	o ted-en-us-2.17
@@ -1166,7 +1165,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
-	o xvkbd-3.5
 	o xwpe-1.5.30a
 	o xye-0.12.2
 	o xzip-182
