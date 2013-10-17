@@ -1,13 +1,14 @@
-# $NetBSD: options.mk,v 1.2 2006/11/06 11:26:31 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2013/10/17 15:32:22 roy Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aalib
-PKG_SUPPORTED_OPTIONS=	ncurses slang x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	curses slang x11
+PKG_SUGGESTED_OPTIONS=	curses x11
+PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mncurses)
-.  include "../../devel/ncurses/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mcurses)
+.  include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-curses-driver=yes
 .else
 CONFIGURE_ARGS+=	--with-curses-driver=no
