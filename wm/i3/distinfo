@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/02/12 23:25:35 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2013/10/17 22:41:12 tonnerre Exp $
 
-SHA1 (i3-4.4.tar.bz2) = bc66bdf492e9596dbd48991c7bfcfd025281001c
-RMD160 (i3-4.4.tar.bz2) = 6a5f2f84da32337a991cb85fd1dc4992bf9a72e2
-Size (i3-4.4.tar.bz2) = 884182 bytes
+SHA1 (i3-4.6.tar.bz2) = b393eb6e57f5d6e11eb98691d8b392a639c3b516
+RMD160 (i3-4.6.tar.bz2) = 7f25c3b700e5255ad916b4348b22f3569d1f8c8d
+Size (i3-4.6.tar.bz2) = 891862 bytes
 SHA1 (patch-Makefile) = 919f0e87efa951bde531b9172b74589d3e1c474a
-SHA1 (patch-common.mk) = ccb5c045ea45f693dcffec972ada0dd28375f485
-SHA1 (patch-libi3_ipc_send_message.c) = 93fa47c2f2bb299819b2e470e5175bffadefaf1a
-SHA1 (patch-src_log.c) = ff40c08e36416748d4a5a3d19c15fd99c732bb72
+SHA1 (patch-src_log.c) = d555354ee2200ffcaa61c52f498de7e689084d90
 SHA1 (patch-src_main.c) = c03fcb12d404fcdfd14c1892b771ee0c7a86b39d
