@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2013/03/24 17:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.204 2013/10/17 15:42:48 ryoon Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -77,6 +77,7 @@ SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
 SUBDIR+=	kegs
 SUBDIR+=	kenigma
+SUBDIR+=	klh10
 SUBDIR+=	libspectrum
 SUBDIR+=	lrmi
 SUBDIR+=	m1
