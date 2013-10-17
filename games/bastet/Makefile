@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/06 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/17 09:19:01 roy Exp $
 #
 
 DISTNAME=		bastet-0.41
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://fph.altervista.org/prog/
 EXTRACT_SUFX=		.tgz
@@ -24,5 +24,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bastet ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/bastet.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
