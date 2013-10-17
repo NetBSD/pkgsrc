@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3823 2013/10/17 04:29:29 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3824 2013/10/17 07:10:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5375,3 +5375,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated geography/gama to 1.14 [gdt 2013-10-16]
 	Updated print/tex-context to 2010nb2 [minskim 2013-10-17]
 	Updated databases/shared-mime-info to 1.2nb2 [wiz 2013-10-17]
+	Updated multimedia/x264-devel to 20131015 [adam 2013-10-17]
