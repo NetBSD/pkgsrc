@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/09/12 00:24:43 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/17 07:56:40 wiz Exp $
 #
 
 DISTNAME=	libmtag-0.3.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://libmtag.googlecode.com/files/
 
