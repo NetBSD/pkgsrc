@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/11/06 08:43:31 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/17 04:18:30 minskim Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	21345
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,6 +16,14 @@ DEPENDS+=	tex-mptopdf>=2010:../../graphics/tex-mptopdf
 DEPENDS+=	tex-pdftex>=1.40.11:../../print/tex-pdftex
 DEPENDS+=	web2c>=2010nb4:../../print/web2c
 DEPENDS+=	xetex>=0.9995.3nb1:../../print/xetex
+
+CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/context/ruby/*.rb
+REPLACE_TEXLUA=	texmf-dist/scripts/context/lua/mtxrun.lua \
+		texmf-dist/scripts/context/lua/luatools.lua \
+		texmf-dist/scripts/context/stubs/mswin/mtxrun.lua \
+		texmf-dist/scripts/context/stubs/mswin/luatools.lua \
+		texmf-dist/scripts/context/stubs/unix/mtxrun \
+		texmf-dist/scripts/context/stubs/unix/luatools
 
 INSTALLATION_DIRS+=	bin
 
