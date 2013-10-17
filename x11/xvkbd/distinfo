@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/04/28 07:13:44 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2013/10/17 16:44:40 shattered Exp $
 
-SHA1 (xvkbd-3.4a.tar.gz) = 22806d2eb3f564a57037fd4363552817798b6d98
-RMD160 (xvkbd-3.4a.tar.gz) = a2a26aa1c6dbbe87b36cd597974fe5e050ea6dbc
-Size (xvkbd-3.4a.tar.gz) = 79694 bytes
+SHA1 (xvkbd-3.5.tar.gz) = 11b38c7eb89281e692bdf339550b2c751efd8335
+RMD160 (xvkbd-3.5.tar.gz) = c5b5619e919e510f890f025cf48118a6eaa3026c
+Size (xvkbd-3.5.tar.gz) = 108351 bytes
