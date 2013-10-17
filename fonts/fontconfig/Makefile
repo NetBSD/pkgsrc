@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2013/09/09 19:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2013/10/17 07:27:33 wiz Exp $
 
-DISTNAME=	fontconfig-2.10.95
+DISTNAME=	fontconfig-2.11.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
