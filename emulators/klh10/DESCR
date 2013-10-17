@@ -1,0 +1,2 @@
+PDP-10 KL10B model emulator. KL10B model supports extended addressing.
+Tap networking support is from http://www.falu.nl/~rhialto/klh-diffs2 .
