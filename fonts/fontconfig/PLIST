@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/04/10 11:41:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2013/10/17 07:27:33 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -186,6 +186,7 @@ man/man3/FcStrDowncase.3
 man/man3/FcStrFree.3
 man/man3/FcStrListCreate.3
 man/man3/FcStrListDone.3
+man/man3/FcStrListFirst.3
 man/man3/FcStrListNext.3
 man/man3/FcStrPlus.3
 man/man3/FcStrSetAdd.3
@@ -376,6 +377,7 @@ share/doc/fontconfig/fontconfig-devel/fcstrdowncase.html
 share/doc/fontconfig/fontconfig-devel/fcstrfree.html
 share/doc/fontconfig/fontconfig-devel/fcstrlistcreate.html
 share/doc/fontconfig/fontconfig-devel/fcstrlistdone.html
+share/doc/fontconfig/fontconfig-devel/fcstrlistfirst.html
 share/doc/fontconfig/fontconfig-devel/fcstrlistnext.html
 share/doc/fontconfig/fontconfig-devel/fcstrplus.html
 share/doc/fontconfig/fontconfig-devel/fcstrsetadd.html
