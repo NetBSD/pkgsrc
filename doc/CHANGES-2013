@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3830 2013/10/17 09:41:27 mef Exp $
+$NetBSD: CHANGES-2013,v 1.3831 2013/10/17 15:42:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5382,3 +5382,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/curl to 7.33.0 [adam 2013-10-17]
 	Updated net/gupnp to 0.20.7 [wiz 2013-10-17]
 	Updated ham/trustedQSL to 2.0rc8 [mef 2013-10-17]
+	Added emulators/klh10 version 2.0h [ryoon 2013-10-17]
