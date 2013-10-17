@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.23 2013/10/12 04:31:48 richard Exp $
+$NetBSD: patch-aa,v 1.24 2013/10/17 07:56:36 adam Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2013-08-05 11:28:53.000000000 +0000
+--- configure.orig	2013-10-12 20:24:48.000000000 +0000
 +++ configure
-@@ -3646,6 +3646,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3642,6 +3642,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -13,7 +13,7 @@ the gssapi option, and need an explicit -lgss
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16644,7 +16645,7 @@ squeeze() {
+@@ -16614,7 +16615,7 @@ squeeze() {
  
  
        #
@@ -22,8 +22,8 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -21360,7 +21361,12 @@ $as_echo "yes" >&6; }
-
+@@ -21072,7 +21073,12 @@ $as_echo "yes" >&6; }
+ 
    if test -z "$GSSAPI_INCS"; then
       if test -f "$GSSAPI_ROOT/bin/krb5-config"; then
 -        GSSAPI_INCS=`$GSSAPI_ROOT/bin/krb5-config --cflags gssapi`
@@ -36,7 +36,7 @@ the gssapi option, and need an explicit -lgss
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -21502,19 +21508,24 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21214,19 +21220,24 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          ;;
       *)
          if test -f "$GSSAPI_ROOT/bin/krb5-config"; then
@@ -65,7 +65,7 @@ the gssapi option, and need an explicit -lgss
    fi
  else
    CPPFLAGS="$save_CPPFLAGS"
-@@ -25080,19 +25091,19 @@ $as_echo "$as_me: WARNING: You need an l
+@@ -24793,19 +24804,19 @@ $as_echo "$as_me: WARNING: You need an l
  $as_echo "yes" >&6; }
          if test "x$OPENSSL_ENABLED" = "x1"; then
            versioned_symbols_flavour="OPENSSL_"
