@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 19:51:26 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/10/17 16:47:41 shattered Exp $
 #
 
-DISTNAME=	tdir-1.58
-PKGREVISION=	5
+DISTNAME=	tdir-1.69
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.tundraware.com/Software/tdir/
 
