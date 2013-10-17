@@ -1,10 +1,19 @@
-$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.1 2013/06/03 08:45:27 jperkin Exp $
+$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.2 2013/10/17 14:42:46 adam Exp $
 
 Use correct cmake define.
 
---- Source/kwsys/SystemInformation.cxx.orig	2013-05-15 17:38:13.000000000 +0000
+--- Source/kwsys/SystemInformation.cxx.orig	2013-10-07 15:31:00.000000000 +0000
 +++ Source/kwsys/SystemInformation.cxx
-@@ -4300,7 +4300,7 @@ bool SystemInformationImplementation::Qu
+@@ -130,7 +130,7 @@ typedef int siginfo_t;
+ # endif
+ #endif
+ 
+-#ifdef __linux
++#if defined(__linux) || defined(__NetBSD__)
+ # include <fenv.h>
+ # include <sys/socket.h>
+ # include <netdb.h>
+@@ -4616,7 +4616,7 @@ bool SystemInformationImplementation::Qu
    // a 32 bit process on a 64 bit host the returned memory will be
    // limited to 4GiB. So if this is a 32 bit process or if the sysconf
    // method fails use the kstat interface.
