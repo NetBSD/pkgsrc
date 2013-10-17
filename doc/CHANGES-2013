@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3832 2013/10/17 16:05:19 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3833 2013/10/17 16:49:47 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5384,3 +5384,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated ham/trustedQSL to 2.0rc8 [mef 2013-10-17]
 	Added emulators/klh10 version 2.0h [ryoon 2013-10-17]
 	Updated devel/cmake to 2.8.12 [adam 2013-10-17]
+	Updated x11/xvkbd to 3.5 [shattered 2013-10-17]
+	Updated sysutils/tdir to 1.69 [shattered 2013-10-17]
