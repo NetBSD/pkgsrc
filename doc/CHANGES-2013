@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3829 2013/10/17 08:01:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3830 2013/10/17 09:41:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5381,3 +5381,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/taglib to 1.9.1 [wiz 2013-10-17]
 	Updated www/curl to 7.33.0 [adam 2013-10-17]
 	Updated net/gupnp to 0.20.7 [wiz 2013-10-17]
+	Updated ham/trustedQSL to 2.0rc8 [mef 2013-10-17]
