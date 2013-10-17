@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2012/10/06 11:54:48 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/10/17 16:19:41 roy Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.alcyone.com/binaries/omega/
 
@@ -40,5 +40,5 @@ do-install:
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/omega; \
 	done
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
