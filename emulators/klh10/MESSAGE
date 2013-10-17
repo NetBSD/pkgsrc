@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/10/17 15:41:09 ryoon Exp $
+
+To boot TOPS-20 with TCP/IP support, you will need to perform the
+following steps.
+
+In detail see ${PREFIX}/share/klh10/klt20.txt for TOPS-20 installation, and
+http://bitsavers.trailing-edge.com/pdf/dec/pdp10/TOPS20/V7/INSTALL.MEM.txt
+for TCP/IP installation.
+
+In short, you should download the following magtape images from
+http://pdp-10.trailing-edge.com/tapes/ .
+bb-h137f-bm.tap.bz2 for TOPS-20, and bb-ev83b-bm_longer.tap.bz2 for TCP/IP.
+
+To run kn10-kl command, you should copy all binary in
+${PREFIX}/share/klh10/bin to your TOPS-10 directory. And run
+./kn10-kl configfile.ini .
+
+To enable tap networking support, kn10-kl command may be run with root
+privilege.
+===========================================================================
