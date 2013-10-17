@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3821 2013/10/16 22:16:45 gdt Exp $
+$NetBSD: CHANGES-2013,v 1.3822 2013/10/17 04:20:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5373,3 +5373,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/gnome-mplayer to 1.0.8nb8 [obache 2013-10-16]
 	Updated math/py-scipy to 0.12.1 [markd 2013-10-16]
 	Updated geography/gama to 1.14 [gdt 2013-10-16]
+	Updated print/tex-context to 2010nb2 [minskim 2013-10-17]
