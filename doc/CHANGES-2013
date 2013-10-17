@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3827 2013/10/17 07:30:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3828 2013/10/17 07:58:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5379,3 +5379,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/dbus to 1.6.16 [wiz 2013-10-17]
 	Updated fonts/fontconfig to 2.11.0 [wiz 2013-10-17]
 	Updated audio/taglib to 1.9.1 [wiz 2013-10-17]
+	Updated www/curl to 7.33.0 [adam 2013-10-17]
