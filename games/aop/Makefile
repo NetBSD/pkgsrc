@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/17 09:12:42 roy Exp $
 
 DISTNAME=	aop-0.6
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://raffi.at/code/aop/
 
@@ -15,5 +16,5 @@ SUBST_SED.destination=	-e 's:/usr/local:${PREFIX}:g'
 
 BUILD_TARGET=	aop
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
