@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1999/12/28 02:28:23 proff Exp $
+$NetBSD: patch-aa,v 1.3 2013/10/17 16:19:42 roy Exp $
 
---- Makefile.orig	Fri Jan  1 20:00:06 1999
-+++ Makefile	Mon Jul  5 19:51:50 1999
+--- Makefile.orig	1999-01-02 04:00:06.000000000 +0000
++++ Makefile
 @@ -1,14 +1,14 @@
  # These two definitions are used if you 'make install'
  # the value of LIBDIR should be the same as OMEGALIB in defs.h
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 1999/12/28 02:28:23 proff Exp $
  #CFLAGS = -DSYSV -O
  # I also had to define -cckr (K&R style C) for system V
  #CFLAGS = -DMSDOS -O
-@@ -17,14 +17,14 @@
+@@ -17,21 +17,21 @@ CFLAGS = -DBSD -ggdb
  # CPP should contain the command to run the C preprocessor.
  #CPP = cc -E
  #CPP = /lib/cpp
@@ -37,7 +37,15 @@ $NetBSD: patch-aa,v 1.2 1999/12/28 02:28:23 proff Exp $
  
  # comment out one of the following two, after establishing whether your
  # machine uses termcap (most BSD machines) or terminfo (System-V)
-@@ -48,7 +48,10 @@
+ #LIBS = -lcurses -ltermcap
+ #LIBS = -lcurses -ltermlib
+ # Linux links in term?? automatically.
+-LIBS = -lncurses
++LIBS = -lcurses
+ 
+ #################### that's it for changing the Makefile ####################
+ 
+@@ -48,7 +48,10 @@ OBJ = omega.o abyss.o aux1.o aux2.o aux3
  omega: $(OBJ)
  	$(CC) $(LDFLAGS) $(OBJ) $(LIBS) -o omega
  
