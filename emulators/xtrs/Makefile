@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/07/15 02:02:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2013/10/17 08:24:06 roy Exp $
 #
 
 DISTNAME=	xtrs-4.9d
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.tim-mann.org/trs80/
 
@@ -13,6 +13,7 @@ COMMENT=	TRS-80 Model I/III/4 Emulator for Unix
 BUILD_TARGET=	default
 
 .include "../../mk/oss.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch
@@ -32,13 +33,21 @@ SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSSOUND}|g'
 SUBST_SED.oss+=		-e 's|if __linux|if 1|'
 .endif
 
+SUBST_CLASSES+=		termcap
+SUBST_STAGE.termcap=	post-patch
+SUBST_FILES.termcap=	Makefile.local
+.if ${TERMCAP_TYPE} == none
+SUBST_SED.termcap+=	-e 's|-lncurses||'
+.else
+SUBST_SED.termcap+=	-e 's|-lncurses|${BUILDLINK_LDADD.termcap}|'
+.endif
 
 INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS=	bin lib/xtrs ${PKGMANDIR}/man1 share/doc/xtrs share/xtrs
 
 pre-patch:
-	mv ${WRKSRC}/cassette.sh ${WRKSRC}/cassette
+	${MV} -f ${WRKSRC}/cassette.sh ${WRKSRC}/cassette
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.hex ${DESTDIR}${PREFIX}/lib/xtrs/romimage.m4p
@@ -47,7 +56,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/cpmutil.dsk ${DESTDIR}${PREFIX}/share/xtrs
 	${INSTALL_SCRIPT} ${WRKSRC}/cassette ${DESTDIR}${PREFIX}/bin
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
