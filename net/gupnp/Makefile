@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2013/09/02 17:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/10/17 08:01:02 wiz Exp $
 
-DISTNAME=	gupnp-0.20.4
+DISTNAME=	gupnp-0.20.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp/0.20/}
 EXTRACT_SUFX=	.tar.xz
