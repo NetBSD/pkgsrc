@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2013/10/10 14:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/17 09:40:12 mef Exp $
 
 DISTNAME=		tqsl-2.0
-PKGNAME=		${DISTNAME}rc7
-PKGREVISION=		1
+PKGNAME=		${DISTNAME}rc8
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
-MASTER_SITES=		http://downloads.sourceforge.net/project/trustedqsl/TrustedQSL/v2.0-rc7/
+MASTER_SITES=		http://downloads.sourceforge.net/project/trustedqsl/TrustedQSL/v2.0-rc8/
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
