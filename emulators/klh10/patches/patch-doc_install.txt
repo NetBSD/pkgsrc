@@ -1,0 +1,60 @@
+$NetBSD: patch-doc_install.txt,v 1.1 2013/10/17 15:41:10 ryoon Exp $
+
+http://www.falu.nl/~rhialto/klh-diffs2
+
+--- doc/install.txt.orig	2001-11-19 12:12:06.000000000 +0000
++++ doc/install.txt
+@@ -175,6 +175,16 @@ config file if they don't already exist 
+ 	pseudo-device	bpf	 1	# Need at least one for NI20 or IMP
+ 	pseudo-device	tun	 1	# Need at least one for IMP
+ 
++NetBSD
++------
++	See The NetBSD Guide, chapter 17.9 "Kernel Tuning" for information on
++how to recompile a kernel. You need at least these options (as of 3.0):
++
++	options         SYSVSHM         # System V-like memory sharing
++	options         SHMMAXPGS=10240 # 2048 pages is the default, >8192 for KLH10
++
++	pseudo-device	tap		# cloning device for NI20
++	pseudo-device	bridge		# cloning device for NI20
+ 
+ Linux
+ -----
+@@ -1116,6 +1126,36 @@ mistakenly "fixed" to disallow it (FreeB
+ other host before telnetting back into the KN10.  A better solution
+ would be to fix those OSes that are open-source, and push to have
+ these fixes incorporated in the standard releases.
++	For NetBSD (it may work on FreeBSD too) there exists a better
++solution. A special configuration is created with a virtual ethernet
++segment that has its host-side in the form of the interface tap0 (as in
++the example below). The tap0 interface is bridged to the real network
++interface. The NI20 is at the "other end" of the virtual ethernet.
++(This differs from the other connectivity methods where the named
++interface is the one that is basically used as the NI20). The NI20 is
++therefore a dedicated interface:
++
++	devdef ni0 564 ni20 ipaddr=10.0.0.51 ifc=tap0 dedic=true
++
++If the named tap interface already exists, no further changes to its
++configuration are made. You can use this for alternative connectivity,
++such as routed on the 10.0.1.0/24 subnet (instead of bridged):
++
++	# To the shell, suppose your real network is 10.0.0.0/24,
++	# create a 10.0.1.0/24 network for KLH:
++	ifconfig tap0 create inet 10.0.1.1 netmask 255.255.255.0 up
++	; in .ini file:
++	devdef ni0 564 ni20 ipaddr=10.0.1.51 ifc=tap0 dedic=true
++	! in SYSTEM:INTERNET.ADDRESS on TOPS-20 v7.0
++	IPNI#0,10 0 1 51,PACKET-SIZE:1500,DEFAULT,PREFERRED
++	! in SYSTEM:INTERNET.ADDRESS on TOPS-20 v7.1
++	IPNI#0,10.0.1.51,PACKET-SIZE:1500,LOGICAL-HOST-MASK:255.255.255.0,DEFAULT,PREFERRED
++	! in SYSTEM:INTERNET.GATEWAYS on TOPS-20 v7.x
++	PRIME 10.0.1.1
++
++(If TOPS-20 v7.0 can't do subnetting it might be better to use a
++192.168.2.0/24 network)
++
+ 
+ LHDH (IMP): (KS-ITS only)
+ 

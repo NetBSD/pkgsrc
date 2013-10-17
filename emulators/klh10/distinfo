@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2013/10/17 15:41:09 ryoon Exp $
+
+SHA1 (klh10-2.0h/panda-dist.tar.gz) = b32b8d64145a6376326dc6ac1bf68ada4f2d7313
+RMD160 (klh10-2.0h/panda-dist.tar.gz) = ca779c295c5cd3a3be3dd0141aed86f1c2c08aa5
+Size (klh10-2.0h/panda-dist.tar.gz) = 221145391 bytes
+SHA1 (patch-doc_install.txt) = 84f89d148a7c3d4af11ddc708d592899807ee1b6
+SHA1 (patch-run_klt20_klt20.ini) = c48dc5d9360ff0cd1a7afc7ab85ad6de15585c29
+SHA1 (patch-src_Makefile.mk) = 3733e70306cb5f1dcec53cbe959332fd2200d3cb
+SHA1 (patch-src_Mk-nbx86.mk) = aba5e293f8d6674cff8fd1494f678cb11de2b888
+SHA1 (patch-src_dpimp.c) = a0f2059624f47f65d020a9a941fa5964825fe443
+SHA1 (patch-src_dpni20.c) = 375051de6fe813f07b2f7a7b4560c0b56bd23ca9
+SHA1 (patch-src_klh10.c) = 674b50f83913b37c9bc8bbccfa67b546019622fe
+SHA1 (patch-src_kn10def.h) = fbc77ff07342c00f635ff404669613b8433e60bf
+SHA1 (patch-src_kn10ops.c) = 6683baacd2f96dd64eceddc487151e264964e5e9
+SHA1 (patch-src_osdnet.c) = e7400876eb3b6e462c1db36a98ab209623a769de
+SHA1 (patch-src_osdnet.h) = d6f49bf4a0b58a6278e3e3195ad3976287ef4106
