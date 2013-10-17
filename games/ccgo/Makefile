@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2013/10/10 14:42:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2013/10/17 14:58:18 roy Exp $
 
 DISTNAME=	ccgo-0.3.6.3
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	games
 MASTER_SITES=	http://ccdw.org/~cjj/prog/ccgo/src/
 
@@ -28,6 +28,5 @@ PREFIX.gnugo_DEFAULT=	${LOCALBASE}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gconfmm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
