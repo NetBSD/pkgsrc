@@ -1,8 +1,8 @@
-$NetBSD: patch-glkterm_gtfref_c,v 1.1 2012/05/23 05:38:41 dholland Exp $
+$NetBSD: patch-glkterm_gtfref_c,v 1.2 2013/10/17 16:36:07 roy Exp $
 
 Patch out insecure temporary file code that appears to be unreachable.
 
---- glkterm/gtfref.c~	2008-03-16 01:07:17.000000000 +0000
+--- glkterm/gtfref.c.orig	2008-03-16 01:07:17.000000000 +0000
 +++ glkterm/gtfref.c
 @@ -99,7 +99,8 @@ frefid_t glk_fileref_create_temp(glui32 
  {
