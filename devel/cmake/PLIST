@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2013/07/20 12:49:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.32 2013/10/17 14:42:46 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -79,6 +79,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeFortranCompilerABI.F
 share/cmake-${CMAKE_API}/Modules/CMakeFortranCompilerId.F.in
 share/cmake-${CMAKE_API}/Modules/CMakeFortranInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeGenericSystem.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeGraphVizOptions.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeImportBuildSettings.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeJOMFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeJavaCompiler.cmake.in
@@ -91,6 +92,7 @@ share/cmake-${CMAKE_API}/Modules/CMakePackageConfigHelpers.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseArguments.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseImplicitLinkInfo.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePlatformId.h.in
+share/cmake-${CMAKE_API}/Modules/CMakePrintHelpers.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePrintSystemInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePushCheckState.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeRCCompiler.cmake.in
@@ -195,6 +197,10 @@ share/cmake-${CMAKE_API}/Modules/Compiler/HP-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/HP-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/HP-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/HP-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IAR-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IAR-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IAR-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/IAR.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-CXX.cmake
@@ -470,6 +476,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Darwin-Intel-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-NAG-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-VisualAge-CXX.cmake
