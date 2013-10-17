@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12642 2013/10/17 16:49:47 shattered Exp $
+$NetBSD: TODO,v 1.12643 2013/10/17 22:42:01 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -658,7 +658,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o httptunnel-3.3
 	o hugin-2012.0.0
 	o hylafax-6.0.5
-	o i3-4.6
 	o ibus-1.5.0
 	o icc11-13.0
 	o icdprog-0.5
