@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2006/09/14 21:58:59 rillig Exp $
+$NetBSD: patch-ac,v 1.3 2013/10/17 09:19:01 roy Exp $
 
 For one-time building, the dependencies are not needed.
 
@@ -11,7 +11,7 @@ For one-time building, the dependencies are not needed.
 -CFLAGS=-Wall -DHIGHSCORE_FILE=\"$(DATA_PREFIX)$(HISCORE)\"
 -LDFLAGS=-lncurses
 +CFLAGS+=-Wall -DHIGHSCORE_FILE=\"$(DATA_PREFIX)$(HISCORE)\"
-+LDFLAGS+=-lncurses
++LDFLAGS+=-lcurses
  SOURCES=main.c game.c highscore.c bast.c
  EXNAME=bastet
  
