@@ -1,10 +1,21 @@
-$NetBSD: patch-aa,v 1.5 2013/03/15 21:50:15 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2013/10/17 04:28:33 wiz Exp $
 
-Adapt for pkgsrc.
+fdatasync needs a writable file descriptor.
 
---- update-mime-database.c.orig	2007-06-27 21:46:53.000000000 +0200
+Adapt paths for pkgsrc.
+
+--- update-mime-database.c.orig	2013-07-09 22:10:53.000000000 +0000
 +++ update-mime-database.c
-@@ -1510,7 +1510,7 @@ static void check_in_path_xdg_data(const
+@@ -951,7 +951,7 @@ static gboolean atomic_update(const gcha
+ 	new_name = g_strndup(pathname, len - 4);
+ 
+ #ifdef HAVE_FDATASYNC
+-	fd = open(pathname, O_RDONLY);
++	fd = open(pathname, O_RDWR);
+ 	if (fd == -1)
+ 	{
+ 		set_error_from_errno(error);
+@@ -2135,7 +2135,7 @@ static void check_in_path_xdg_data(const
  
  	env = getenv("XDG_DATA_DIRS");
  	if (!env)
