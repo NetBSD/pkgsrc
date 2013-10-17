@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3833 2013/10/17 16:49:47 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.3834 2013/10/17 22:42:01 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/cmake to 2.8.12 [adam 2013-10-17]
 	Updated x11/xvkbd to 3.5 [shattered 2013-10-17]
 	Updated sysutils/tdir to 1.69 [shattered 2013-10-17]
+	Updated wm/i3 to 4.6 [tonnerre 2013-10-17]
