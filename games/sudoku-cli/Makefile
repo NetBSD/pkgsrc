@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/03/02 10:44:35 tron Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/17 16:24:11 roy Exp $
 #
 
 DISTNAME=		sudoku-1.0.1
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/sudoku/sudoku-cli/}
 CATEGORIES=		games
 MASTER_SITES=		http://www.laurasia.com.au/downloads/
@@ -38,5 +39,5 @@ SUBST_MESSAGE.sudoku-cli=Correcting path names in man page
 SUBST_FILES.sudoku-cli+=sudoku.6
 SUBST_SED.sudoku-cli+=	-e s,/usr/lib/sudoku,${SHARE_DIR:Q},
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
