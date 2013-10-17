@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.18 2012/10/14 21:30:33 minskim Exp $
+# $NetBSD: package.mk,v 1.19 2013/10/17 07:07:26 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -53,15 +53,6 @@ REPLACE.texlua.new=	${LOCALBASE}/bin/texlua
 REPLACE_FILES.texlua=	${REPLACE_TEXLUA}
 .endif
 
-.if empty(TEX_TEXMF_DIRS)
-_dirs=		bibtex doc dvips fonts makeindex metafont metapost \
-		omega scripts source tex vtex
-_topdir=	${DESTDIR}${PREFIX}/share/texmf-dist
-.else
-_dirs=		texmf texmf-dist
-_topdir=	${DESTDIR}${PREFIX}/share
-.endif
-
 .PHONY: _texlive-set-permission _texlive-info _texlive-man _texlive-install
 _texlive-set-permission:
 .for _pat in ${TEXLIVE_IGNORE_PATTERNS}
@@ -91,14 +82,22 @@ _texlive-man:
 	fi
 
 _texlive-install:
-.for _dir in ${_dirs}
-	if [ -d ${WRKSRC}/${_dir} ]; then \
-		cd ${WRKSRC} && \
-		${MKDIR} ${_topdir} && \
-		${PAX} -rwpm -s ',.*\.orig$$,,' \
-			${_dir} ${_topdir}; \
-	fi
-.endfor
+	if [ -d ${WRKSRC}/texmf -o -d ${WRKSRC}/texmf-dist ]; then \
+		_dirs="texmf texmf-dist"; \
+		_topdir="${DESTDIR}${PREFIX}/share"; \
+	else \
+		_dirs="bibtex doc dvips fonts makeindex metafont metapost omega scripts source tex vtex"; \
+		_topdir="${DESTDIR}${PREFIX}/share/texmf-dist"; \
+	fi; \
+	for _dir in $$_dirs; do \
+		if [ -d ${WRKSRC}/$$_dir ]; then \
+			echo $$_dir; \
+			cd ${WRKSRC} && \
+			${INSTALL_DATA_DIR} $$_topdir && \
+			${PAX} -rwpm -s ',.*\.orig$$,,' \
+				$$_dir $$_topdir; \
+		fi \
+	done
 	if [ -d ${WRKSRC}/bin ]; then \
 		${FIND} ${WRKSRC}/bin -name \*.orig -exec ${RM} {} \; ; \
 		${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin; \
