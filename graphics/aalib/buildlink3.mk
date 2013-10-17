@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/10/17 15:32:22 roy Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2013/10/17 15:36:34 roy Exp $
 
 BUILDLINK_TREE+=	aalib
 
@@ -13,7 +13,7 @@ pkgbase := aalib
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.aalib:Mcurses)
-.  include "../../mk/curses/buildlink3.mk"
+.  include "../../mk/curses.buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.aalib:Mslang)
