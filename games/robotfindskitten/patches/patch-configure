@@ -1,0 +1,60 @@
+$NetBSD: patch-configure,v 1.1 2013/10/17 17:03:11 roy Exp $
+
+--- configure.orig	2013-10-17 16:59:41.000000000 +0000
++++ configure
+@@ -19185,13 +19185,13 @@ test -z "$INSTALL_DATA" && INSTALL_DATA=
+ 
+ 
+ 
+-{ echo "$as_me:$LINENO: checking for initscr in -lncurses" >&5
+-echo $ECHO_N "checking for initscr in -lncurses... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_ncurses_initscr+set}" = set; then
++{ echo "$as_me:$LINENO: checking for initscr in -lcurses" >&5
++echo $ECHO_N "checking for initscr in -lcurses... $ECHO_C" >&6; }
++if test "${ac_cv_lib_curses_initscr+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lncurses  $LIBS"
++LIBS="-lcurses  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -19232,29 +19232,29 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_ncurses_initscr=yes
++  ac_cv_lib_curses_initscr=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_ncurses_initscr=no
++	ac_cv_lib_curses_initscr=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_initscr" >&5
+-echo "${ECHO_T}$ac_cv_lib_ncurses_initscr" >&6; }
+-if test $ac_cv_lib_ncurses_initscr = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_curses_initscr" >&5
++echo "${ECHO_T}$ac_cv_lib_curses_initscr" >&6; }
++if test $ac_cv_lib_curses_initscr = yes; then
+   cat >>confdefs.h <<_ACEOF
+-#define HAVE_LIBNCURSES 1
++#define HAVE_LIBCURSES 1
+ _ACEOF
+ 
+-  LIBS="-lncurses $LIBS"
++  LIBS="-lcurses $LIBS"
+ 
+ else
+-  curses
++  ncurses
+ fi
+ 
+ 
