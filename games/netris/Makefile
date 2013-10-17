@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:48 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/17 16:11:15 roy Exp $
 #
 
 DISTNAME=		netris-0.52
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.netris.org/pub/netris/
 
@@ -32,5 +32,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/netris
 	${INSTALL_DATA} ${WRKSRC}/robot_desc ${DESTDIR}${PREFIX}/share/doc/netris
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
