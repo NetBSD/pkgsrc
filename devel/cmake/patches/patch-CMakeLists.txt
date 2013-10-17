@@ -1,24 +1,24 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/10/02 20:04:04 joerg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2013/10/17 14:42:46 adam Exp $
 
 Provide consistent installation according to the pkgsrc layout for Cygwin.
 
---- CMakeLists.txt.orig	2013-10-01 23:01:08.455787200 +0000
+--- CMakeLists.txt.orig	2013-10-07 15:31:00.000000000 +0000
 +++ CMakeLists.txt
-@@ -467,17 +467,6 @@ set(CMAKE_DOC_DIR "/doc/cmake-${CMake_VE
- set(CMAKE_MAN_DIR "/man" CACHE STRING
+@@ -467,17 +467,6 @@ set(CMAKE_DOC_DIR "doc/cmake-${CMake_VER
+ set(CMAKE_MAN_DIR "man" CACHE STRING
    "Install location for man pages (relative to prefix).")
  mark_as_advanced(CMAKE_DATA_DIR CMAKE_DOC_DIR CMAKE_MAN_DIR)
 -if(CYGWIN AND EXISTS "${CMAKE_ROOT}/Modules/CPack.cmake")
 -  # Force doc, data and man dirs to conform to cygwin layout.
--  set(CMAKE_DOC_DIR  "/share/doc/cmake-${CMake_VERSION}")
--  set(CMAKE_DATA_DIR "/share/cmake-${CMake_VERSION}")
--  set(CMAKE_MAN_DIR  "/share/man")
+-  set(CMAKE_DOC_DIR  "share/doc/cmake-${CMake_VERSION}")
+-  set(CMAKE_DATA_DIR "share/cmake-${CMake_VERSION}")
+-  set(CMAKE_MAN_DIR  "share/man")
 -  # let the user know we just forced these values
 -  message(STATUS "Setup for Cygwin packaging")
 -  message(STATUS "Override cache CMAKE_DOC_DIR = ${CMAKE_DOC_DIR}")
 -  message(STATUS "Override cache CMAKE_DATA_DIR = ${CMAKE_DATA_DIR}")
 -  message(STATUS "Override cache CMAKE_MAN_DIR = ${CMAKE_MAN_DIR}")
 -endif()
- string(REGEX REPLACE "^/" "" CMake_DATA_DEST "${CMAKE_DATA_DIR}")
- string(REGEX REPLACE "^/" "" CMake_DOC_DEST "${CMAKE_DOC_DIR}")
- 
+ string(REGEX REPLACE "^/" "" CMAKE_DATA_DIR "${CMAKE_DATA_DIR}")
+ string(REGEX REPLACE "^/" "" CMAKE_DOC_DIR "${CMAKE_DOC_DIR}")
+ string(REGEX REPLACE "^/" "" CMAKE_MAN_DIR "${CMAKE_MAN_DIR}")
