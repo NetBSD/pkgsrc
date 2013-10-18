@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:18 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=	ies4linux-2.99.0.1
@@ -29,7 +29,7 @@ SUBST_SED.sharedir=	-e "s|.dirname ..0..|${PREFIX}/${SHAREDIR}|g"
 REPLACE_BASH=		${WRKSRC}/ies4linux \
 			${WRKSRC}/lib/install.sh ${WRKSRC}/lib/uninstall.sh
 
-INSTALLATION_DIRS	= bin ${SHAREDIR}
+INSTALLATION_DIRS= 	bin ${SHAREDIR}
 
 do-install:
 	cd ${WRKSRC} && rm -f lib/functions.sh.orig

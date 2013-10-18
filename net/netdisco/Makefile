@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/07/12 10:45:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=		netdisco-1.1_with_mibs
@@ -142,7 +142,7 @@ do-build:
 do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
 	cd ${WRKSRC:Q} && pax -rw -pp . ${DESTDIR}${PREFIX:Q}/netdisco
-	mkdir ${DESTDIR}${EGDIR}
+	${MKDIR} ${DESTDIR}${EGDIR}
 
 	set -e; \
 	for i in netdisco.conf netdisco-topology.txt netdisco.crontab \
