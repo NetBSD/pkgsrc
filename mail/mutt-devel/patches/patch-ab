@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2010/11/07 14:52:47 tonio Exp $
+$NetBSD: patch-ab,v 1.16 2013/10/18 10:23:55 tron Exp $
 
---- Makefile.in.orig	2010-08-25 16:31:48.000000000 +0000
-+++ Makefile.in
-@@ -65,7 +65,7 @@ CONFIG_CLEAN_FILES = intl/Makefile hcach
+--- Makefile.in.orig	2013-10-18 06:49:17.000000000 +0100
++++ Makefile.in	2013-10-18 10:50:46.000000000 +0100
+@@ -109,7 +109,7 @@
  CONFIG_CLEAN_VPATH_FILES =
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)"
  PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.15 2010/11/07 14:52:47 tonio Exp $
  	base64.$(OBJEXT) browser.$(OBJEXT) buffy.$(OBJEXT) \
  	color.$(OBJEXT) crypt.$(OBJEXT) cryptglue.$(OBJEXT) \
  	commands.$(OBJEXT) complete.$(OBJEXT) compose.$(OBJEXT) \
-@@ -215,7 +215,7 @@ DATADIRNAME = @DATADIRNAME@
+@@ -325,7 +325,7 @@
  DBX = @DBX@
  DEBUGGER = @DEBUGGER@
  DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" \
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.15 2010/11/07 14:52:47 tonio Exp $
  	-DHAVE_CONFIG_H=1
  
  DEPDIR = @DEPDIR@
-@@ -322,7 +322,7 @@ infodir = @infodir@
+@@ -431,7 +431,7 @@
  install_sh = @install_sh@
  libdir = @libdir@
  libexecdir = @libexecdir@
@@ -29,16 +29,7 @@ $NetBSD: patch-ab,v 1.15 2010/11/07 14:52:47 tonio Exp $
  localstatedir = @localstatedir@
  mandir = @mandir@
  mkdir_p = @mkdir_p@
-@@ -346,7 +346,7 @@ SUBDIRS = m4 po intl doc contrib $(IMAP_
- bin_SCRIPTS = muttbug flea @SMIMEAUX_TARGET@
- @BUILD_HCACHE_TRUE@HCVERSION = hcversion.h
- BUILT_SOURCES = keymap_defs.h patchlist.c reldate.h $(HCVERSION)
--mutt_SOURCES = \
-+mutt_SOURCES = mvchgat.c \
- 	addrbook.c alias.c attach.c base64.c browser.c buffy.c color.c \
- 	crypt.c cryptglue.c \
- 	commands.c complete.c compose.c copy.c curs_lib.c curs_main.c date.c \
-@@ -666,6 +666,7 @@ distclean-compile:
+@@ -786,6 +786,7 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rfc2231.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rfc3676.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rfc822.Po@am__quote@
@@ -46,14 +37,14 @@ $NetBSD: patch-ab,v 1.15 2010/11/07 14:52:47 tonio Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/safe_asprintf.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/score.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/send.Po@am__quote@
-@@ -1194,11 +1195,6 @@ install-exec-hook:
+@@ -1313,11 +1314,6 @@
  		rm -f $(DESTDIR)$(bindir)/mutt.dotlock ;		\
  		ln -sf $(DESTDIR)$(bindir)/mutt_dotlock $(DESTDIR)$(bindir)/mutt.dotlock ; \
  	fi
 -	if test -f $(DESTDIR)$(bindir)/mutt_dotlock && test x@DOTLOCK_GROUP@ != x ; then \
 -		chgrp @DOTLOCK_GROUP@ $(DESTDIR)$(bindir)/mutt_dotlock && \
 -		chmod @DOTLOCK_PERMISSION@ $(DESTDIR)$(bindir)/mutt_dotlock || \
--		{ echo "Can't fix mutt_dotlock's permissions!" >&2 ; exit 1 ; } \
+-		{ echo "Can't fix mutt_dotlock's permissions!  This is required to lock mailboxes in the mail spool directory." >&2 ; exit 1 ; } \
 -	fi
  
  install-data-local:
