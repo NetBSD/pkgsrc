@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/05/20 00:58:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2013/10/18 16:05:06 roy Exp $
 
 BUILDLINK_TREE+=	guile16
 
@@ -16,7 +16,6 @@ BUILDLINK_FNAME_TRANSFORM.guile16+=	-e s,/guile/1.6/bin/,/bin/,
 GUILE16_SUBDIR=                 guile/1.6
 
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # GUILE16_BUILDLINK3_MK
