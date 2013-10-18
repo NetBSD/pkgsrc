@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3841 2013/10/18 19:50:13 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3842 2013/10/18 21:02:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5403,3 +5403,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/git-base to 1.8.4.1 [adam 2013-10-18]
 	Updated devel/git-docs to 1.8.4.1 [adam 2013-10-18]
 	Updated www/gitweb to 1.8.4.1 [adam 2013-10-18]
+	Updated devel/kyua-cli to 0.7 [jmmv 2013-10-18]
