@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3835 2013/10/17 23:53:38 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.3836 2013/10/18 10:25:17 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/tdir to 1.69 [shattered 2013-10-17]
 	Updated wm/i3 to 4.6 [tonnerre 2013-10-17]
 	Updated www/py-rss2gen to 1.1 [tonnerre 2013-10-17]
+	Updated mail/mutt-devel to 1.5.22 [tron 2013-10-18]
