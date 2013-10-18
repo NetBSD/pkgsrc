@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2013/06/08 06:48:24 asau Exp $
+# $NetBSD: Makefile,v 1.58 2013/10/18 15:47:49 roy Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
+PKGREVISION=		1
 PKGNAME=		erlang-${ERLANG_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
@@ -81,6 +82,6 @@ post-install:
 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
