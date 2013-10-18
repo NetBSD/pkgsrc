@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/30 17:25:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/18 11:57:35 wiz Exp $
 bin/xattr
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,7 +10,7 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/xattr/__init__.py
 ${PYSITELIB}/xattr/__init__.pyc
 ${PYSITELIB}/xattr/__init__.pyo
-${PYSITELIB}/xattr/_cffi__x2654de55x6ee6f75.so
+${PYSITELIB}/xattr/${SONAME}.so
 ${PYSITELIB}/xattr/lib.py
 ${PYSITELIB}/xattr/lib.pyc
 ${PYSITELIB}/xattr/lib.pyo
