@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 12:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -35,7 +35,7 @@ APACHE_USER?=		www
 APACHE_GROUP?=		www
 APACHE_DIRS_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0755
 
-INSTALLATION_DIRS+=	share/examples/phraseanet
+INSTALLATION_DIRS+=	share/examples/phraseanet ${PHRASEANETDIR}
 CONF_FILES=	${DESTDIR}${PREFIX}/share/examples/phraseanet/phrasea.conf \
 		${PKG_SYSCONFDIR}/phrasea.conf
 
