@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.18 2011/08/06 10:43:25 wiz Exp $
+$NetBSD: distinfo,v 1.19 2013/10/18 07:01:46 apb Exp $
 
 SHA1 (surfraw-2.2.8.tar.gz) = 3114cd6e8d64f87b84ed0eff4369bfb0b10f2eb6
 RMD160 (surfraw-2.2.8.tar.gz) = 77f8f625946fb76665c9e4834506ce4e45f1cd4f
 Size (surfraw-2.2.8.tar.gz) = 183019 bytes
 SHA1 (patch-Makefile.in) = d29e62b200c4f97d9ce2b4dc9b288599edd6e001
+SHA1 (patch-elvi_netbsd) = 48e79dd6c8fccd5a4868dddb9305af87510018df
