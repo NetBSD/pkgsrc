@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3837 2013/10/18 12:28:28 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3838 2013/10/18 15:39:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5390,3 +5390,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-rss2gen to 1.1 [tonnerre 2013-10-17]
 	Updated mail/mutt-devel to 1.5.22 [tron 2013-10-18]
 	Updated lang/php54 to 5.4.21 [taca 2013-10-18]
+	Updated devel/ruby-activesupport32 to 3.2.15 [taca 2013-10-18]
+	Updated devel/ruby-activemodel32 to 3.2.15 [taca 2013-10-18]
+	Updated www/ruby-actionpack32 to 3.2.15 [taca 2013-10-18]
+	Updated databases/ruby-activerecord32 to 3.2.15 [taca 2013-10-18]
+	Updated mail/ruby-actionmailer32 to 3.2.15 [taca 2013-10-18]
+	Updated devel/ruby-railties32 to 3.2.15 [taca 2013-10-18]
+	Updated www/ruby-rails32 to 3.2.15 [taca 2013-10-18]
