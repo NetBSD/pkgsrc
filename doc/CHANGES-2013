@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3840 2013/10/18 16:56:34 joerg Exp $
+$NetBSD: CHANGES-2013,v 1.3841 2013/10/18 19:50:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5399,3 +5399,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-rails32 to 3.2.15 [taca 2013-10-18]
 	Updated lang/php55 to 5.5.5 [taca 2013-10-18]
 	Removed textproc/jade [joerg 2013-10-18]
+	Updated devel/git to 1.8.4.1 [adam 2013-10-18]
+	Updated devel/git-base to 1.8.4.1 [adam 2013-10-18]
+	Updated devel/git-docs to 1.8.4.1 [adam 2013-10-18]
+	Updated www/gitweb to 1.8.4.1 [adam 2013-10-18]
