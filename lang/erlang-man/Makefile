@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 20:11:39 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/18 11:41:18 bsiegert Exp $
 
 DISTNAME=		otp_doc_man_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-man-${ERLANG_VERSION}
@@ -18,6 +18,8 @@ USE_TOOLS+=		pax
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+
+INSTALLATION_DIRS=	lib/erlang
 
 do-install:
 	cd ${WRKDIR} && pax -rw man ${DESTDIR}${PREFIX}/lib/erlang/
