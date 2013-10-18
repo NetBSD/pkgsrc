@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/10/10 14:42:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}esr.source
@@ -59,6 +59,7 @@ post-build:
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
 
+INSTALLATION_DIRS+=	lib/${MOZILLA}/extensions
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2013/10/10 14:42:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.107 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=	# empty
@@ -81,6 +81,7 @@ post-install:
 	  cd "${WRKDIR}/extensions/$$subdir" &&				\
 	  ${UNZIP_CMD} -aqo $$e;					\
 	done
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/seamonkey/extensions
 	cd ${WRKDIR}/extensions && pax -rw .				\
 	   ${DESTDIR}${PREFIX}/lib/seamonkey/extensions/.
 	rm -rf ${WRKDIR}/extensions

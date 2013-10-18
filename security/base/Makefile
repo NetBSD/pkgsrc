@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=	base-1.4.3.1
@@ -82,6 +82,7 @@ do-install:
 .	endfor
 
 .	for i in ${PAX_DIRS}
+		${INSTALL_DATA_DIR} ${DESTDIR}${BASE_DIR}/${i:Q}
 		cd ${WRKSRC}/${i:Q} && pax -rw . ${DESTDIR}${BASE_DIR}/${i:Q}
 .	endfor
 
