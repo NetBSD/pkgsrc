@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12643 2013/10/17 22:42:01 tonnerre Exp $
+$NetBSD: TODO,v 1.12644 2013/10/18 23:24:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,11 +378,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asc-2.5.0
 	o aspell-nb-2.0.10
 	o asymptote-2.24
+	o at-spi2-core-2.10.1
 	o aterm-1.0.1
 	o audacious-plugins-2.4.4
 	o audacity-2.0.2 [wip (audacity-devel)]
 	o autoconvert-0.3.16
-	o autogen-5.18.1
+	o autogen-5.18.2
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o baci-20040415
@@ -462,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o defendguin-0.0.11
 	o delegate-9.9.7
 	o denemo-1.0.8
+	o dev86-0.16.19 [pkg/48321]
 	o dhid-5.3
 	o digikam-3.5.0
 	o doclifter-2.13
@@ -547,6 +549,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gated-3.6
 	o gaupol-0.24.3
 	o gbrainy-2.22
+	o gcc48-4.8.2
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gdal-1.9.2
@@ -573,7 +576,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gmake-4.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.10
+	o gnome-3.10.1
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.8.4
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
@@ -583,7 +586,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.6.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.10.0
+	o gnome-keyring-3.10.1
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
@@ -727,7 +730,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgee-0.12.0
 	o libgee0.8-0.8.8
 	o libgiigic-1.1.2
-	o libgnome-keyring-3.10.0
+	o libgnome-keyring-3.10.1
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -917,7 +920,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-dateutil-2.0
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
-	o py-gobject-3.10.1
+	o py-gobject3-3.10.1
 	o py-httplib2-0.8
 	o py-kombu-2.5.14
 	o py-moin-1.9.7
@@ -929,6 +932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sip-4.15.2
 	o py-sybase-0.37
 	o qnetwalk-1.4
+	o qpdf-5.0.1
 	o qt4-qscintilla-2.7.2
 	o qt5-libs-5.1
 	o quilt-0.60
@@ -971,8 +975,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sdcc-2.9.0
-	o seahorse-3.10.0
-	o seahorse-nautilus-3.10.0
+	o seahorse-3.10.1
+	o seahorse-nautilus-3.10.1
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1003,6 +1007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sqwebmail-5.6.1
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
+	o sslh-1.15 [pkg/48320]
 	o ssmtp-2.64 [security]
 	o stalin-0.11
 	o star-1.5.2
@@ -1094,7 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.2.0
+	o webkit-gtk-2.2.1
 	o webmin-1.660
 	o websvn-2.3.2
 	o weechat-0.4.2
