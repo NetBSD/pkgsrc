@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/07/05 14:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/18 11:41:18 bsiegert Exp $
 
 DISTNAME=	notion-3-2013030200-src
 PKGNAME=	${DISTNAME:S/3-/3./:S/-src//}
@@ -46,6 +46,7 @@ EGFILES+=	lookcommon_clean.lua
 EGFILES+=	lookcommon_emboss.lua
 
 PKG_SYSCONFSUBDIR=	notion
+INSTALLATION_DIRS=	${EGDIR}
 
 .for f in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}

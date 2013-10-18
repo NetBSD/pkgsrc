@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/08/10 12:45:15 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=		anthems-1.3
@@ -14,7 +14,7 @@ COMMENT=		National anthems (text) for xrmap
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
 
 NO_BUILD=		yes
-INSTALLATION_DIRS=	share/rmap
+INSTALLATION_DIRS=	share/rmap/anthems
 USE_TOOLS+=		pax
 
 do-install:

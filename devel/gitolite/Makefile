@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/09/26 21:05:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2013/10/18 11:41:18 bsiegert Exp $
 
 GLVER=		3.5.2
 DISTNAME=	gitolite-${GLVER}
@@ -35,7 +35,8 @@ SUBST_SED.perl=		-e 's,/usr/bin/perl,${PERL5},g'
 
 INSTALLATION_DIRS+=	bin lib \
 			share/doc/gitolite \
-			libexec/gitolite
+			libexec/gitolite \
+			${PERL5_INSTALLVENDORARCH}
 
 pre-install:
 	${FIND} ${WRKSRC} -type f \

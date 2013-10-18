@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/04/02 16:00:10 taca Exp $
+# $NetBSD: Makefile,v 1.37 2013/10/18 11:41:17 bsiegert Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
@@ -48,6 +48,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/index.php \
 		${DESTDIR}${PREFIX}/share/phpldapadmin
 .for i in ${PAX_DIRS}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/phpldapadmin/${i:Q}
 	cd ${WRKSRC}/${i:Q} && ${FIND} . -type f \! -name '*.orig' -print | \
 		 pax -rwppm  ${DESTDIR}${PREFIX}/share/phpldapadmin/${i:Q}
 .endfor

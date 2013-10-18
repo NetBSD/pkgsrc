@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/02 20:11:45 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/18 11:41:18 bsiegert Exp $
 #
 
 DISTNAME=		mit-scheme-7.7.1-ix86-gnu-linux
@@ -14,7 +14,7 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
 
 WRKSRC=			${WRKDIR}
-INSTALLATION_DIRS=	bin libexec
+INSTALLATION_DIRS=	bin lib libexec
 
 USE_TOOLS+=	pax
 
