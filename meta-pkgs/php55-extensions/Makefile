@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/29 16:46:49 taca Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/18 15:51:47 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_BASE_VERS}
 CATEGORIES=	meta-pkgs www
@@ -27,7 +27,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/p
 DEPENDS+=	${PHP_PKG_PREFIX}-gmp>=${PHP_BASE_VERS}<${NEXT_VERS}:../../devel/php-gmp
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}<${NEXT_VERS}:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../mail/php-imap
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.3.8:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}<${NEXT_VERS}:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}<${NEXT_VERS}:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}<${NEXT_VERS}:../../converters/php-mbstring
