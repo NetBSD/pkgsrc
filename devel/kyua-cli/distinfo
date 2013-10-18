@@ -1,29 +1,5 @@
-$NetBSD: distinfo,v 1.15 2013/06/15 00:31:34 jmmv Exp $
+$NetBSD: distinfo,v 1.16 2013/10/18 21:02:02 jmmv Exp $
 
-SHA1 (kyua-cli-0.6.tar.gz) = 85453765a497d381570d6f658d90038af894a90f
-RMD160 (kyua-cli-0.6.tar.gz) = a60e317639e60fd688a76297791670b680e7d505
-Size (kyua-cli-0.6.tar.gz) = 487249 bytes
-SHA1 (patch-engine_action.hpp) = b90db41a66614e4aceda84687370b8f0092e8686
-SHA1 (patch-engine_context.hpp) = b4c35db43745e334ab1d7e5c654744b3b30c95e9
-SHA1 (patch-engine_metadata.hpp) = 134fd2ebcbef63d018f3032dbba5ed5b888be068
-SHA1 (patch-engine_test__case.hpp) = a98337a39252a0a5685f25bf707009dd95190883
-SHA1 (patch-engine_test__program.hpp) = af343296fe3df794b66472c2784e1c8b3297ba1d
-SHA1 (patch-store_backend.hpp) = 5633b5780833bb2c3a09963932eca9d08710a807
-SHA1 (patch-store_transaction.cpp) = 98179f580b2d2f053f3d51c6ddd923af03de5941
-SHA1 (patch-store_transaction.hpp) = 5c4066c41d4b56d304aff5a12bf9f765e8abed09
-SHA1 (patch-utils_cmdline_exceptions.cpp) = f1e524db998802d3979595abd496ae609b32a1ea
-SHA1 (patch-utils_cmdline_exceptions.hpp) = 7f893a224b263aaefde1232ab594c403849581f1
-SHA1 (patch-utils_config_lua_module.cpp) = d3d178a77773c4bcc4d85df18f48981ec957c31f
-SHA1 (patch-utils_config_tree.hpp) = b5cef0e44597c2a1c9936c51050c5e77d22add0f
-SHA1 (patch-utils_datetime.cpp) = cb5fd42fb737f8fe862a3bddcd1ecba27d71be8f
-SHA1 (patch-utils_datetime.hpp) = 458d6c061f6bb4363c0e107660fd169abf04cb7c
-SHA1 (patch-utils_format_exceptions.cpp) = 065c4f51d5bca6ecfc8b27fb65c2dc65a4986c08
-SHA1 (patch-utils_format_exceptions.hpp) = 31041332e10f4936f02bbd07a32f59b50e45fe2f
-SHA1 (patch-utils_fs_auto__cleaners.hpp) = 9ad6c230654ee270aa99a591060b975aae39b86f
-SHA1 (patch-utils_fs_exceptions.cpp) = a74fc2f7f13339a69edb0c157da1928610890646
-SHA1 (patch-utils_fs_exceptions.hpp) = 06c0b7cef761b218a1b570bcd889ab82e9eb8720
-SHA1 (patch-utils_sqlite_database.hpp) = 899bfe56fdaf4328f27653313572aeda54a8b764
-SHA1 (patch-utils_sqlite_statement.hpp) = bd4fdadba994d7125c2d5d4ba3c98ca4b2a8f69f
-SHA1 (patch-utils_sqlite_transaction.hpp) = 4020ff30555b20d669a57ceab55c27954913165f
-SHA1 (patch-utils_units.cpp) = cc1870352204fcd39fb4dc6d66134635cf6a46bb
-SHA1 (patch-utils_units.hpp) = 3cbbcc8889f2cfedd070202a1a9942c35f2f63eb
+SHA1 (kyua-cli-0.7.tar.gz) = 9dc2ebc2fc160ad6c896736e169f7412c1506f8d
+RMD160 (kyua-cli-0.7.tar.gz) = 8ce6423a0bdfdce52469a4ed883d776ea9a7cd01
+Size (kyua-cli-0.7.tar.gz) = 495506 bytes
