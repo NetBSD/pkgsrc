@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3838 2013/10/18 15:39:29 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3839 2013/10/18 15:52:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5397,3 +5397,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-actionmailer32 to 3.2.15 [taca 2013-10-18]
 	Updated devel/ruby-railties32 to 3.2.15 [taca 2013-10-18]
 	Updated www/ruby-rails32 to 3.2.15 [taca 2013-10-18]
+	Updated lang/php55 to 5.5.5 [taca 2013-10-18]
