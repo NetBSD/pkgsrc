@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.78 2013/10/10 14:41:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2013/10/19 09:06:55 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	10
+PKGREVISION=	11
 
 COMMENT=	GTK2 port of the WebKit browser engine
 

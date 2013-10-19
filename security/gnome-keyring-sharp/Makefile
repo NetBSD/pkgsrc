@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/06/17 12:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/19 09:07:11 adam Exp $
 #
 
 DISTNAME=	gnome-keyring-sharp-1.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/
 EXTRACT_SUFX=	.tar.bz2
