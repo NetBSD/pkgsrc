@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:40 markd Exp $
+share/texmf-dist/doc/latex/yfonts/frktest.tex
+share/texmf-dist/doc/latex/yfonts/liesmich
+share/texmf-dist/doc/latex/yfonts/readme

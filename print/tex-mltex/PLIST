@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
+bin/mltex
+bin/mllatex
+share/texmf-dist/tex/latex/mltex/lo1enc.def
+share/texmf-dist/tex/latex/mltex/mlltxchg.def
+share/texmf-dist/tex/latex/mltex/mltex.sty
+share/texmf-dist/tex/mltex/config/mltex.ini

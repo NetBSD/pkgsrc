@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
+share/texmf-dist/doc/latex/mh/README
+share/texmf-dist/doc/latex/mh/breqn-technotes.pdf
+share/texmf-dist/doc/latex/mh/breqn.pdf
+share/texmf-dist/doc/latex/mh/empheq.pdf
+share/texmf-dist/doc/latex/mh/flexisym.pdf
+share/texmf-dist/doc/latex/mh/mathstyle.pdf
+share/texmf-dist/doc/latex/mh/mathtools.pdf
+share/texmf-dist/doc/latex/mh/mhsetup.pdf

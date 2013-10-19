@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:38 markd Exp $
+share/texmf-dist/doc/latex/SIunits/README
+share/texmf-dist/doc/latex/SIunits/SIunits.pdf

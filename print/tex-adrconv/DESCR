@@ -1,0 +1,6 @@
+Adrconv is a collection of BibTeX style files to turn an
+address database stored in the .bib format into files suitable
+for printing as address books or included into letter classes
+like akletter or scrletter2. Adrconv will sort the data either
+by name or birthday and create output files in various formats
+for address books or time planers.

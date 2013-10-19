@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:38 markd Exp $
+share/texmf-dist/bibtex/bst/adrconv/adrbirthday.bst
+share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
+share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
+share/texmf-dist/tex/latex/adrconv/adrdir.cfg
+share/texmf-dist/tex/latex/adrconv/adrplaner.cfg
+share/texmf-dist/tex/latex/adrconv/adrsmall.cfg

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
+share/texmf-dist/doc/latex/aeguill/README
+share/texmf-dist/doc/latex/aeguill/guil-test1.pdf
+share/texmf-dist/doc/latex/aeguill/guil-test1.tex
+share/texmf-dist/doc/latex/aeguill/guil-test2.pdf
+share/texmf-dist/doc/latex/aeguill/guil-test2.tex
+share/texmf-dist/doc/latex/aeguill/license.txt
