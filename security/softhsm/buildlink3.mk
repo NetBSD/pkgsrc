@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2013/01/26 21:36:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2013/10/19 09:06:56 adam Exp $
 
 BUILDLINK_TREE+=	softhsm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	softhsm
 SOFTHSM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.softhsm+=	softhsm>=1.1.3
-BUILDLINK_ABI_DEPENDS.softhsm+=	softhsm>=1.3.4nb1
+BUILDLINK_ABI_DEPENDS.softhsm+=	softhsm>=1.3.5nb1
 BUILDLINK_PKGSRCDIR.softhsm?=	../../security/softhsm
 
 .include "../../databases/sqlite3/buildlink3.mk"
