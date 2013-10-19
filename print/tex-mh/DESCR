@@ -1,0 +1,19 @@
+The mh bundle is a series of packages designed to enhance the
+appearance of documents containing a lot of math. The main
+backbone is amsmath, so those unfamiliar with this required
+part of the LaTeX system will probably not find the packages
+very useful. Component parts of the bundle are: breqn, empheq,
+flexisym, mathstyle and mathtools, mhsetup, The empheq package
+is a visual markup extension of amsmath. Empheq allows
+sophisticated boxing and other marking of multi-line maths
+displays, and fixes problems with the way that the ntheorem
+package places end-of-theorem markers. The mathtools package
+provides many useful tools for mathematical typesetting. It
+fixes various deficiencies of amsmath and standard LaTeX. The
+mhsetup package defines various programming tools needed by
+both empheq and mathtools. The breqn package makes more easy
+the business of preparing displayed equations in LaTeX,
+including permitting automatic line-breaking within displayed
+equations. (Breqn uses the mathstyle package to keep track of
+the current maths typesetting style, something that raw TeX
+hides from the programmer.)
