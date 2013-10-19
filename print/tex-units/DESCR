@@ -1,0 +1,3 @@
+The package is provided as a bundle with the nicefrac package
+for typing fractions. Units uses nicefrac in typesetting
+physical units in a standard-looking sort of way.

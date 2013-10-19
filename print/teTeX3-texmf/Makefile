@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2013/08/25 10:50:42 tron Exp $
+# $NetBSD: Makefile,v 1.64 2013/10/19 20:43:40 markd Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	41
+PKGREVISION=	43
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -13,17 +13,25 @@ COMMENT=	Machine-independent part of teTeX
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 CONFLICTS+=	teTeX-share-[0-9]*
+DEPENDS+=	tex-SIunits-[0-9]*:../../print/tex-SIunits
 DEPENDS+=	tex-a4wide-[0-9]*:../../print/tex-a4wide
 DEPENDS+=	tex-a5comb-[0-9]*:../../print/tex-a5comb
+DEPENDS+=	tex-abstract-[0-9]*:../../print/tex-abstract
 DEPENDS+=	tex-acromake-[0-9]*:../../print/tex-acromake
+DEPENDS+=	tex-acronym-[0-9]*:../../print/tex-acronym
+DEPENDS+=	tex-adrconv-[0-9]*:../../print/tex-adrconv
 DEPENDS+=	tex-advdate-[0-9]*:../../print/tex-advdate
+DEPENDS+=	tex-aeguill-[0-9]*:../../print/tex-aeguill
 DEPENDS+=	tex-anonchap-[0-9]*:../../print/tex-anonchap
+DEPENDS+=	tex-anysize-[0-9]*:../../print/tex-anysize
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
+DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 DEPENDS+=	tex-bbold-[0-9]*:../../fonts/tex-bbold
 DEPENDS+=	tex-beamer-[0-9]*:../../print/tex-beamer
 DEPENDS+=	tex-bezos-[0-9]*:../../print/tex-bezos
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=	tex-bibtopic-[0-9]*:../../print/tex-bibtopic
+DEPENDS+=	tex-bibunits-[0-9]*:../../print/tex-bibunits
 DEPENDS+=	tex-block-[0-9]*:../../print/tex-block
 DEPENDS+=	tex-bold-extra-[0-9]*:../../print/tex-bold-extra
 DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
@@ -121,8 +129,11 @@ DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
 DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
+DEPENDS+=	tex-mh-[0-9]*:../../print/tex-mh
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
 DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
+DEPENDS+=	tex-misc209-[0-9]*:../../print/tex-misc209
+DEPENDS+=	tex-mltex-[0-9]*:../../print/tex-mltex
 DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
 DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
@@ -187,6 +198,8 @@ DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 DEPENDS+=	tex-twoinone-[0-9]*:../../print/tex-twoinone
 DEPENDS+=	tex-type1cm-[0-9]*:../../print/tex-type1cm
 DEPENDS+=	tex-umlaute-[0-9]*:../../print/tex-umlaute
+DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
+DEPENDS+=	tex-upquote-[0-9]*:../../print/tex-upquote
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-verbdef-[0-9]*:../../print/tex-verbdef
 DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
@@ -197,6 +210,7 @@ DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 DEPENDS+=	tex-xypic-[0-9]*:../../graphics/tex-xypic
+DEPENDS+=	tex-yfonts-[0-9]*:../../print/tex-yfonts
 
 EXTRACT_ELEMENTS+=	aliases
 EXTRACT_ELEMENTS+=	bibtex
@@ -219,7 +233,7 @@ REPLACE_PERL+=	doc/generic/ruhyphen/reduce-patt doc/generic/ruhyphen/sorthyph
 # No dependency on Perl.
 CHECK_INTERPRETER_SKIP+=share/texmf-dist/doc/generic/ruhyphen/reduce-patt \
 			share/texmf-dist/doc/generic/ruhyphen/sorthyph
-REPLACE_SH+=	doc/latex/bibunits/bibtexall doc/latex/multibib/bibtexall
+REPLACE_SH+=	doc/latex/multibib/bibtexall
 USE_TOOLS+=	sh:run pax
 
 INSTALLATION_DIRS+=	share/texmf-dist
@@ -259,8 +273,7 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 post-extract:
 	rm -f ${WRKSRC}/ls-R
 	rm -rf ${WRKSRC}/bibtex/bib
-	rm -rf ${WRKSRC}/bibtex/bst/ams
-	rm -rf ${WRKSRC}/bibtex/bst/[b-c]*
+	rm -rf ${WRKSRC}/bibtex/bst/[a-c]*
 	rm -rf ${WRKSRC}/bibtex/bst/[h-m]*
 	rm -rf ${WRKSRC}/bibtex/bst/natbib
 	rm -rf ${WRKSRC}/bibtex/bst/plbib
@@ -286,11 +299,13 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/generic/tex-ps
 	rm -rf ${WRKSRC}/doc/generic/u*
 	rm -rf ${WRKSRC}/doc/generic/x*
-	rm -rf ${WRKSRC}/doc/latex/a[f-m]*
+	rm -rf ${WRKSRC}/doc/latex/SIunits
+	rm -rf ${WRKSRC}/doc/latex/a*
+	rm -rf ${WRKSRC}/doc/latex/appendix
 	rm -rf ${WRKSRC}/doc/latex/base
 	rm -rf ${WRKSRC}/doc/latex/bbold
 	rm -rf ${WRKSRC}/doc/latex/be*
-	rm -rf ${WRKSRC}/doc/latex/bibtopic
+	rm -rf ${WRKSRC}/doc/latex/bib*
 	rm -rf ${WRKSRC}/doc/latex/booktabs
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/changebar
@@ -311,9 +326,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/k*
 	rm -rf ${WRKSRC}/doc/latex/lastpage
 	rm -rf ${WRKSRC}/doc/latex/lis*
-	rm -rf ${WRKSRC}/doc/latex/m[b-g]*
-	rm -rf ${WRKSRC}/doc/latex/mi*
-	rm -rf ${WRKSRC}/doc/latex/moreverb
+	rm -rf ${WRKSRC}/doc/latex/m[b-o]*
 	rm -rf ${WRKSRC}/doc/latex/ms
 	rm -rf ${WRKSRC}/doc/latex/n[a-s]*
 	rm -rf ${WRKSRC}/doc/latex/ntgclass
@@ -333,9 +346,11 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/toc*
 	rm -rf ${WRKSRC}/doc/latex/tools
 	rm -rf ${WRKSRC}/doc/latex/ty*
+	rm -rf ${WRKSRC}/doc/latex/u*
 	rm -rf ${WRKSRC}/doc/latex/wasysym
 	rm -rf ${WRKSRC}/doc/latex/wrapfig
 	rm -rf ${WRKSRC}/doc/latex/x*
+	rm -rf ${WRKSRC}/doc/latex/y*
 	rm -rf ${WRKSRC}/doc/programs
 	rm -rf ${WRKSRC}/doc/m[a-j]*
 	rm -rf ${WRKSRC}/doc/pdftex
@@ -464,13 +479,15 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/generic/ukrhyph
 	rm -rf ${WRKSRC}/tex/generic/x*
 	rm -rf ${WRKSRC}/tex/lambda
+	rm -rf ${WRKSRC}/tex/latex/SIunits
 	rm -rf ${WRKSRC}/tex/latex/a4wide
-	rm -rf ${WRKSRC}/tex/latex/ae
-	rm -rf ${WRKSRC}/tex/latex/a[f-m]*
+	rm -rf ${WRKSRC}/tex/latex/a[b-m]*
+	rm -rf ${WRKSRC}/tex/latex/anysize
+	rm -rf ${WRKSRC}/tex/latex/appendix
 	rm -rf ${WRKSRC}/tex/latex/base
 	rm -rf ${WRKSRC}/tex/latex/bbold
 	rm -rf ${WRKSRC}/tex/latex/be*
-	rm -rf ${WRKSRC}/tex/latex/bibtopic
+	rm -rf ${WRKSRC}/tex/latex/bib*
 	rm -rf ${WRKSRC}/tex/latex/bo*
 	rm -rf ${WRKSRC}/tex/latex/ca[m-z]*
 	rm -rf ${WRKSRC}/tex/latex/carlisle
@@ -486,8 +503,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/e[st]*
 	rm -rf ${WRKSRC}/tex/latex/euler
 	rm -rf ${WRKSRC}/tex/latex/eurosym
-	rm -rf ${WRKSRC}/tex/latex/exam
-	rm -rf ${WRKSRC}/tex/latex/extsizes
+	rm -rf ${WRKSRC}/tex/latex/ex*
 	rm -rf ${WRKSRC}/tex/latex/fa*
 	rm -rf ${WRKSRC}/tex/latex/float
 	rm -rf ${WRKSRC}/tex/latex/fnpara
@@ -498,8 +514,7 @@ post-extract:
 	rm -f ${WRKSRC}/tex/latex/graphics/[a-l]*
 	rm -f ${WRKSRC}/tex/latex/graphics/p*
 	rm -f ${WRKSRC}/tex/latex/graphics/t[cr]*
-	rm -rf ${WRKSRC}/tex/latex/here
-	rm -rf ${WRKSRC}/tex/latex/hyp*
+	rm -rf ${WRKSRC}/tex/latex/h*
 	rm -rf ${WRKSRC}/tex/latex/index
 	rm -rf ${WRKSRC}/tex/latex/jurabib
 	rm -rf ${WRKSRC}/tex/latex/k*
@@ -507,10 +522,9 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/lis*
 	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym
-	rm -rf ${WRKSRC}/tex/latex/m[b-g]*
-	rm -rf ${WRKSRC}/tex/latex/mi*
-	rm -rf ${WRKSRC}/tex/latex/moreverb
+	rm -rf ${WRKSRC}/tex/latex/m[b-o]*
 	rm -rf ${WRKSRC}/tex/latex/ms
+	rm -rf ${WRKSRC}/tex/latex/multind
 	rm -rf ${WRKSRC}/tex/latex/multirow
 	rm -rf ${WRKSRC}/tex/latex/n[a-s]*
 	rm -rf ${WRKSRC}/tex/latex/ntgclass
@@ -521,8 +535,9 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/p[c-g]*
 	rm -rf ${WRKSRC}/tex/latex/picinpar
 	rm -rf ${WRKSRC}/tex/latex/placeins
+	rm -rf ${WRKSRC}/tex/latex/portland
 	rm -rf ${WRKSRC}/tex/latex/pre*
-	rm -rf ${WRKSRC}/tex/latex/ps[c-z]*
+	rm -rf ${WRKSRC}/tex/latex/ps[b-z]*
 	rm -rf ${WRKSRC}/tex/latex/pxfonts
 	rm -rf ${WRKSRC}/tex/latex/relsize
 	rm -rf ${WRKSRC}/tex/latex/rotating
@@ -542,13 +557,14 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/toc*
 	rm -rf ${WRKSRC}/tex/latex/tools
 	rm -rf ${WRKSRC}/tex/latex/t[s-z]*
-	rm -rf ${WRKSRC}/tex/latex/u[l-m]*
+	rm -rf ${WRKSRC}/tex/latex/u[l-p]*
 	rm -rf ${WRKSRC}/tex/latex/url
 	rm -rf ${WRKSRC}/tex/latex/version
 	rm -rf ${WRKSRC}/tex/latex/wasysym
 	rm -rf ${WRKSRC}/tex/latex/wrapfig
 	rm -rf ${WRKSRC}/tex/latex/xcolor
 	rm -rf ${WRKSRC}/tex/latex/x*
+	rm -rf ${WRKSRC}/tex/latex/y*
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
 	rm -f ${WRKSRC}/tex/plain/base/[c-gmp-z]*
 	rm -f ${WRKSRC}/tex/plain/base/letter*

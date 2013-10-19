@@ -1,0 +1,4 @@
+MLTeX is a modification of TeX version >=3.0 that allows the
+hyphenation of words with accented letters using ordinary
+Computer Modern (CM) fonts. The system is distributed as a TeX
+change file.

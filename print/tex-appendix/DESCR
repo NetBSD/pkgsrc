@@ -1,0 +1,10 @@
+The appendix package provides various ways of formatting the
+titles of appendices. Also (sub)appendices environments are
+provided that can be used, for example, for per chapter/section
+appendices. The word `Appendix' or similar can be prepended to
+the appendix number for article class documents. The word
+`Appendices' or similar can be added to the table of contents
+before the appendices are listed. The word `Appendices' or
+similar can be typeset as a \part-like heading (page) in the
+body. An appendices environment is provided which can be used
+instead of the \appendix command.

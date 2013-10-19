@@ -1,0 +1,5 @@
+Typeset physical units following the rules of the International
+System of Units (SI). The package requires amstext, for proper
+representation of some values. Note that the package is now
+superseded by siunitx; siunits has maintenance-only support,
+now.

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
+share/texmf-dist/doc/latex/mltex/README
+share/texmf-dist/doc/latex/mltex/mltex.txt
+share/texmf-dist/doc/latex/mltex/testmlft.dvi
+share/texmf-dist/doc/latex/mltex/testmlft.tex
+share/texmf-dist/doc/latex/mltex/testmlsw.dvi
+share/texmf-dist/doc/latex/mltex/testmlsw.tex

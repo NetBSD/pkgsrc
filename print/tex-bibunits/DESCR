@@ -1,0 +1,9 @@
+The package provide a mechanism to generate separate
+bibliographies for different units (chapters, sections or
+bibunit-environments) of a text. The package separates the
+citations of each unit of text into a separate file to be
+processed by BibTeX. The global bibliography section produced
+by LaTeX may also appear in the document and citations can be
+placed in both the local unit and the global bibliographies at
+the same time. The package is compatible with koma-script and
+with the babel French option frenchb.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
+share/texmf-dist/doc/latex/bibunits/README
+share/texmf-dist/doc/latex/bibunits/bibtexall
+share/texmf-dist/doc/latex/bibunits/bibunits.pdf
