@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3850 2013/10/19 13:32:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3851 2013/10/19 13:43:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5415,3 +5415,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-parent to 0.228 [wen 2013-10-19]
 	Updated sysutils/cdrtools to 3.01alpha18 [wiz 2013-10-19]
 	Updated audio/libmikmod to 3.3.3 [wiz 2013-10-19]
+	Updated filesystems/p5-Path-Tiny to 0.044 [wen 2013-10-19]
