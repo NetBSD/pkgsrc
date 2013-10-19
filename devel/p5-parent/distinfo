@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/02/11 03:22:10 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2013/10/19 11:17:31 wen Exp $
 
-SHA1 (parent-0.225.tar.gz) = b855f33fceb4828d72e0da12437c1627be2938fc
-RMD160 (parent-0.225.tar.gz) = 6b13e06a0ff650374661390099319be628f41fd2
-Size (parent-0.225.tar.gz) = 5533 bytes
+SHA1 (parent-0.228.tar.gz) = 3078243821f783acef0c8cbe2dd5f5103accfb80
+RMD160 (parent-0.228.tar.gz) = c22e8ddf96ea30e12516df9a9b36e8799d13f87e
+Size (parent-0.228.tar.gz) = 6130 bytes
