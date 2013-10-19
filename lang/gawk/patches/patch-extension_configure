@@ -1,0 +1,12 @@
+$NetBSD: patch-extension_configure,v 1.1 2013/10/19 19:47:39 bsiegert Exp $
+
+--- extension/configure.orig	Fri Aug 30 14:41:50 2013
++++ extension/configure
+@@ -16532,7 +16532,6 @@ case `uname` in
+ MirBSD | MirOS | "OS/390")
+ 	cat << \EOF > Makefile
+ all dist check clean distclean install uninstall distcheck:
+-	@exit 0
+ EOF
+ 	;;
+ *)

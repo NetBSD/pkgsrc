@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2013/07/15 02:02:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2013/10/19 19:47:39 bsiegert Exp $
 
 DISTNAME=	gawk-4.1.0
 CATEGORIES=	lang
@@ -33,6 +33,11 @@ CPPFLAGS.OSF1+=		-D_OSF_SOURCE
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
 CFLAGS+=	-Dvm_region=vm_region_64
 .endif
+
+PLIST_VARS+=		extension
+.if "${OPSYS}" != "MirBSD"
+PLIST.extension=	yes
+.endif 
 
 INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
