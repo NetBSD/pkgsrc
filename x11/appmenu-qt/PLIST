@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 21:03:37 markd Exp $
+qt4/plugins/menubar/libappmenu-qt.so
