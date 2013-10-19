@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/10 15:32:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/19 08:09:18 adam Exp $
 lib/postgresql/_int.so
 lib/postgresql/citext.so
 lib/postgresql/hstore.so
@@ -11,7 +11,8 @@ share/postgresql/extension/citext--1.0.sql
 share/postgresql/extension/citext--unpackaged--1.0.sql
 share/postgresql/extension/citext.control
 share/postgresql/extension/hstore--1.0--1.1.sql
-share/postgresql/extension/hstore--1.1.sql
+share/postgresql/extension/hstore--1.1--1.2.sql
+share/postgresql/extension/hstore--1.2.sql
 share/postgresql/extension/hstore--unpackaged--1.0.sql
 share/postgresql/extension/hstore.control
 share/postgresql/extension/intarray--1.0.sql
