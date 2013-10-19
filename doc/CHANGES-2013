@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3844 2013/10/19 06:46:16 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.3845 2013/10/19 08:02:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/kyua-cli to 0.7 [jmmv 2013-10-18]
 	Updated devel/meld to 1.8.2 [wiz 2013-10-18]
 	Updated games/onscripter to 20130929 [tsutsui 2013-10-19]
+	Renamed swig-2.0.10 to swig2 [ryoon 2013-10-19]
