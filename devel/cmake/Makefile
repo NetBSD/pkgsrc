@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2013/10/17 14:42:46 adam Exp $
+# $NetBSD: Makefile,v 1.80 2013/10/19 08:04:34 adam Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.12
 CATEGORIES=	devel
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--system-libs
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
