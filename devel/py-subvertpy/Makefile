@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/10/06 16:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2013/10/19 09:07:04 adam Exp $
 
 DISTNAME=	subvertpy-0.8.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel scm
 MASTER_SITES=	http://launchpad.net/subvertpy/trunk/${PKGVERSION_NOREV}/+download/
 MASTER_SITES+=	http://samba.org/~jelmer/subvertpy/

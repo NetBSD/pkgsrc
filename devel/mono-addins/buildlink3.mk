@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/06/17 12:44:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2013/10/19 09:06:58 adam Exp $
 
 BUILDLINK_TREE+=	mono-addins
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mono-addins
 MONO_ADDINS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mono-addins+=	mono-addins>=0.3
-BUILDLINK_ABI_DEPENDS.mono-addins+=	mono-addins>=1.0nb3
+BUILDLINK_ABI_DEPENDS.mono-addins+=	mono-addins>=1.0nb4
 BUILDLINK_PKGSRCDIR.mono-addins?=	../../devel/mono-addins
 BUILDLINK_CONTENTS_FILTER.mono-addins+=	${EGREP} '^lib/'
 
