@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2013/10/08 13:52:47 adam Exp $
+# $NetBSD: Makefile,v 1.52 2013/10/19 09:07:07 adam Exp $
 
 DISTNAME=	dovecot-2.2.6
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 

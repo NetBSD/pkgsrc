@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2013/10/17 07:56:41 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2013/10/19 09:07:08 adam Exp $
 #
 
 DISTNAME=	fuppes-0.660
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuppes/}
 
