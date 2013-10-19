@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1 2013/03/15 16:20:14 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2013/10/19 09:29:37 wiz Exp $
 
 --- configure.orig	2013-01-10 08:59:05.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ba,v 1.1 2013/03/15 16:20:14 drochner Exp $
          ax_pthread_flags="-pthread $ax_pthread_flags"
          ;;
 +	netbsd*)
-+	# use libc stubs, don's link against libpthread, to allow
++	# use libc stubs, don't link against libpthread, to allow
 +	# dynamic loading
 +	ax_pthread_flags=""
 +	;;
