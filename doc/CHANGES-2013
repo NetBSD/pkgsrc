@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3848 2013/10/19 11:18:20 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3849 2013/10/19 13:29:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5413,3 +5413,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3-tcl to 3.8.1 [adam 2013-10-19]
 	Updated www/p5-Mojolicious to 4.49 [wen 2013-10-19]
 	Updated devel/p5-parent to 0.228 [wen 2013-10-19]
+	Updated sysutils/cdrtools to 3.01alpha18 [wiz 2013-10-19]
