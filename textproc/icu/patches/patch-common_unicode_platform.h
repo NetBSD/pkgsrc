@@ -1,19 +1,17 @@
-$NetBSD: patch-common_unicode_platform.h,v 1.4 2013/10/07 15:58:48 ryoon Exp $
+$NetBSD: patch-common_unicode_platform.h,v 1.5 2013/10/19 08:47:36 adam Exp $
 
-* For OpenBSD, include machine/endian.h.
-
---- common/unicode/platform.h.orig	2013-05-23 20:01:56.000000000 +0000
+--- common/unicode/platform.h.orig	2013-10-04 20:49:10.000000000 +0000
 +++ common/unicode/platform.h
-@@ -144,7 +144,7 @@
- #   include <android/api-level.h>
- #elif defined(linux) || defined(__linux__) || defined(__linux)
- #   define U_PLATFORM U_PF_LINUX
+@@ -151,7 +151,7 @@
+ #   else
+ #       define U_PLATFORM U_PF_DARWIN
+ #   endif
 -#elif defined(BSD) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__MirBSD__)
 +#elif defined(BSD) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__MirBSD__) || defined(__DragonFly__)
  #   define U_PLATFORM U_PF_BSD
  #elif defined(sun) || defined(__sun)
      /* Check defined(__SVR4) || defined(__svr4__) to distinguish Solaris from SunOS? */
-@@ -381,6 +381,17 @@
+@@ -379,6 +379,17 @@
  #   define U_IS_BIG_ENDIAN 1
  #elif defined(__LITTLE_ENDIAN__) || defined(_LITTLE_ENDIAN)
  #   define U_IS_BIG_ENDIAN 0
