@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2013/09/02 17:01:33 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2013/10/19 09:06:57 adam Exp $
 
 DISTNAME=	gssdp-0.14.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/0.14/}
 EXTRACT_SUFX=	.tar.xz
