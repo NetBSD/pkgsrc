@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:38 markd Exp $
+share/texmf-dist/doc/latex/adrconv/2latex.vim
+share/texmf-dist/doc/latex/adrconv/adrconv.tex
+share/texmf-dist/doc/latex/adrconv/adrconv_pages08.pages/Contents/PkgInfo
+share/texmf-dist/doc/latex/adrconv/adrconv_pages08.pages/QuickLook/Thumbnail.jpg
+share/texmf-dist/doc/latex/adrconv/adrconv_pages08.pages/index.xml.gz
+share/texmf-dist/doc/latex/adrconv/adrdir.tex
+share/texmf-dist/doc/latex/adrconv/adrfax.tex
+share/texmf-dist/doc/latex/adrconv/adrguide.pdf
+share/texmf-dist/doc/latex/adrconv/adrguide.tex
+share/texmf-dist/doc/latex/adrconv/adrmontage1.tex
+share/texmf-dist/doc/latex/adrconv/adrmontage2.tex
+share/texmf-dist/doc/latex/adrconv/birthday.tex
+share/texmf-dist/doc/latex/adrconv/example.bib

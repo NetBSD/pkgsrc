@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:39 markd Exp $
+share/texmf-dist/tex/latex/mh/breqn.sty
+share/texmf-dist/tex/latex/mh/cmbase.sym
+share/texmf-dist/tex/latex/mh/empheq.sty
+share/texmf-dist/tex/latex/mh/flexisym.sty
+share/texmf-dist/tex/latex/mh/mathpazo.sym
+share/texmf-dist/tex/latex/mh/mathptmx.sym
+share/texmf-dist/tex/latex/mh/mathstyle.sty
+share/texmf-dist/tex/latex/mh/mathtools.sty
+share/texmf-dist/tex/latex/mh/mhsetup.sty
+share/texmf-dist/tex/latex/mh/msabm.sym
