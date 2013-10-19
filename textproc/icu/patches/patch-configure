@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2013/10/19 08:47:36 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2013-10-19 08:15:50.000000000 +0000
++++ configure
+@@ -7442,13 +7442,13 @@ fi
+ # Now that we're done using CPPFLAGS etc. for tests, we can change it
+ # for build.
+ 
+-if test "${CC}" == "clang"; then
++if test "${CC}" = "clang"; then
+    CLANGCFLAGS="-Qunused-arguments -Wno-parentheses-equality"
+ else
+    CLANGCFLAGS=""
+ fi
+ 
+-if test "${CXX}" == "clang++"; then
++if test "${CXX}" = "clang++"; then
+    CLANGCXXFLAGS="-Qunused-arguments -Wno-parentheses-equality"
+ else
+    CLANGCXXFLAGS=""
