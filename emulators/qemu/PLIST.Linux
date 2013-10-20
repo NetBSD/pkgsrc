@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2012/06/25 10:16:53 sbd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2013/10/20 17:43:06 joerg Exp $
 libexec/qemu-bridge-helper
+bin/qemu-mipsn32
+bin/qemu-mipsn32el
+bin/qemu-mips64
+bin/qemu-mips64el
