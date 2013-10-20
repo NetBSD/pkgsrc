@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/06/08 06:48:24 asau Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/10/20 18:37:49 asau Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -60,8 +60,6 @@ lib/erlang/doc/getting_started/record_macros.html
 lib/erlang/doc/getting_started/robustness.html
 lib/erlang/doc/getting_started/seq_prog.html
 lib/erlang/doc/getting_started/users_guide.html
-lib/erlang/doc/highlights.html
-lib/erlang/doc/incompatible.html
 lib/erlang/doc/index.html
 lib/erlang/doc/installation_guide/INSTALL-CROSS.html
 lib/erlang/doc/installation_guide/INSTALL-WIN32.html
@@ -442,13 +440,13 @@ lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/debugger.eix
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/debugger.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/debugger_chapter.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/i.html
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/attach.gif
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/cond_break_dialog.gif
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/function_break_dialog.gif
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/interpret.gif
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/line_break_dialog.gif
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/monitor.gif
-lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/view.gif
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/attach.jpg
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/cond_break_dialog.jpg
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/function_break_dialog.jpg
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/interpret.jpg
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/line_break_dialog.jpg
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/monitor.jpg
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/view.jpg
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/index.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/int.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/notes.html
@@ -1192,6 +1190,8 @@ lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_error_io.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_error_logger.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_error_report.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_local_db.html
+lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_mib_data.html
+lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_mib_storage.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_mpd.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_network_interface.html
 lib/erlang/lib/snmp-${VERSION.snmp}/doc/html/snmpa_network_interface_filter.html
@@ -1456,6 +1456,7 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxChoice.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxChoicebook.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxClientDC.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxClipboard.html
+lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxClipboardTextEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxCloseEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxColourData.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxColourDialog.html
