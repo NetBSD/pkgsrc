@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/10/20 17:59:30 joerg Exp $
+
+--- configure.orig	2013-10-16 12:54:34.000000000 +0000
++++ configure
+@@ -4088,10 +4088,6 @@ EOF
+ 	CC="$CC -qcpluscmt -qmaxmem=16384"
+     esac
+     ;;
+- netbsd*)
+-	ap_config_LDADD="-lncurses"
+-	CC="$CC -R/usr/pkg/lib -L/usr/pkg/lib -I/usr/pkg/include"
+-	;;
+  *qnx)
+ 	LIBS="$LIBS -lsocket"
+ 	INSTALL="config/install-sh"
