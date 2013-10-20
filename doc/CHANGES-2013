@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3864 2013/10/20 21:53:30 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3865 2013/10/20 21:56:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5455,3 +5455,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/erlang to 16.1.2 [asau 2013-10-20]
 	Updated sysutils/ftwin to 0.8.8 [wiz 2013-10-20]
 	Updated multimedia/libass to 0.10.2 [wiz 2013-10-20]
+	Updated misc/py-anki2 to 2.0.14 [wiz 2013-10-20]
