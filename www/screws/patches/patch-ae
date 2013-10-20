@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2008/08/17 20:09:12 dholland Exp $
+$NetBSD: patch-ae,v 1.5 2013/10/20 17:48:26 joerg Exp $
 
 --- src/Hsml/Makefile.orig	2004-11-08 17:41:48.000000000 -0500
 +++ src/Hsml/Makefile	2008-08-17 15:34:05.000000000 -0400
@@ -27,7 +27,7 @@ $NetBSD: patch-ae,v 1.4 2008/08/17 20:09:12 dholland Exp $
  opts:
  	echo > .opts
 -	if [ "${INCORE_LUA}" = "1" ]; then echo "-llualib -L /usr/pkg/lib -R /usr/pkg/lib -llua -lm " > .opts ; \
-+	if [ "${INCORE_LUA}" = "1" ]; then echo "-L /usr/pkg/lib -R /usr/pkg/lib -llua -lm " > .opts ; \
++	if [ "${INCORE_LUA}" = "1" ]; then echo "-L /usr/pkg/lib ${COMPILER_RPATH_FLAG}/usr/pkg/lib -llua -lm " > .opts ; \
  	else echo "" > .opts ; fi
  	if [ "`uname`" = "Linux" ]; then echo " -ldl " >> .opts ; fi
  
