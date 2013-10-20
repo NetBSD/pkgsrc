@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 20:36:18 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/20 17:58:05 joerg Exp $
 
 DISTNAME=	tbb30_20110325oss_src
 PKGNAME=	threadingbuildingblocks-3.0.6 # for "3.0 update 6"
@@ -18,7 +18,7 @@ MAKE_FLAGS=	tbb_build_prefix=build # use fixed path
 BUILD_TARGET=	default
 TEST_TARGET=	test
 
-post-extract:
+pre-configure:
 	cd $(WRKSRC)/build/ && cp FreeBSD.gcc.inc NetBSD.gcc.inc && cp FreeBSD.inc NetBSD.inc
 
 INSTALLATION_DIRS=	include lib share/doc/$(PKGBASE)
