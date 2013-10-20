@@ -1,0 +1,28 @@
+$NetBSD: patch-configure.in,v 1.1 2013/10/20 17:56:02 joerg Exp $
+
+--- configure.in.orig	2013-10-20 15:45:39.000000000 +0000
++++ configure.in
+@@ -861,9 +861,9 @@ case "$with_sqlite" in
+     notfound) AC_WARN([SQLite Library not found]); true;;
+     *)
+      if test -d ${with_sqlite}/lib; then
+-         LIB_SQLITE="-L${with_sqlite}/lib -R${with_sqlite}/lib"
++         LIB_SQLITE="-L${with_sqlite}/lib ${COMPILER_RPATH_FLAG}${with_sqlite}/lib"
+      else
+-         LIB_SQLITE="-L${with_sqlite} -R${with_sqlite}"
++         LIB_SQLITE="-L${with_sqlite} ${COMPILER_RPATH_FLAG}${with_sqlite}"
+      fi
+ 
+      LIB_SQLITE_DIR=$LIB_SQLITE
+@@ -913,9 +913,9 @@ case "$with_sqlite3" in
+     notfound) AC_WARN([SQLite3 Library not found]); true;;
+     *)
+      if test -d ${with_sqlite3}/lib; then
+-         LIB_SQLITE3="-L${with_sqlite3}/lib -R${with_sqlite3}/lib"
++         LIB_SQLITE3="-L${with_sqlite3}/lib ${COMPILER_RPATH_FLAG}${with_sqlite3}/lib"
+      else
+-         LIB_SQLITE3="-L${with_sqlite3} -R${with_sqlite3}"
++         LIB_SQLITE3="-L${with_sqlite3} ${COMPILER_RPATH_FLAG}${with_sqlite3}"
+      fi
+ 
+      LIB_SQLITE3_DIR=$LIB_SQLITE3
