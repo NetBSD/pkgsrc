@@ -1,8 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2012/08/07 19:20:41 marino Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/20 18:00:57 joerg Exp $
 
 --- configure.orig	2012-01-20 17:04:39.000000000 +0000
 +++ configure
-@@ -4377,6 +4377,10 @@ $as_echo "$bird_cv_sys_linux_version" >&
+@@ -4366,17 +4366,17 @@ $as_echo "$bird_cv_sys_linux_version" >&
+ 					esac
+ 				;;
+ 		ipv6:netbsd*)	sysdesc=bsd-v6
+-				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+ 				;;
+ 		ipv4:netbsd*)	sysdesc=bsd
+-				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+ 				;;
+ 		ipv6:freebsd*)	sysdesc=bsd-v6
  				;;
  		ipv4:freebsd*)	sysdesc=bsd
  				;;

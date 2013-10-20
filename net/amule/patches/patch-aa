@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
+$NetBSD: patch-aa,v 1.11 2013/10/20 18:00:57 joerg Exp $
 
 * pthread flags portabilities
 * avoid check for gettext>=0.11.5
@@ -6,7 +6,16 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
 
 --- configure.orig	2011-11-11 20:59:26.000000000 +0000
 +++ configure
-@@ -3364,7 +3364,8 @@ case $host_os in *\ *) host_os=`echo "$h
+@@ -3345,8 +3345,6 @@ case $host_os in *\ *) host_os=`echo "$h
+ 		# Now this is against autoconf recommendation that configure should not modify CPPFLAGS and LDFLAGS
+ 		# However, these values in NetBSD are required even to run the tests, and this is the easiest way to do it.
+ 		# Still, we prepend them, instead of adding, so the user may override them.
+-		CPPFLAGS="-I/usr/pkg/include $CPPFLAGS"
+-		LDFLAGS="-R/usr/pkg/lib -L/usr/pkg/lib $LDFLAGS"
+ 		;;
+ 	*irix*)
+ 		SYS=irix
+@@ -3364,7 +3362,8 @@ case $host_os in *\ *) host_os=`echo "$h
  $as_echo_n "checking if this is a FreeBSD 4 or earlier system... " >&6; }
  		if test x"`uname -s`" = xFreeBSD && test 0`uname -r | cut -c 1` -lt 5; then :
  
@@ -16,7 +25,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
  			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -13760,7 +13761,7 @@ $as_echo "#define HAVE_DCGETTEXT 1" >>co
+@@ -13760,7 +13759,7 @@ $as_echo "#define HAVE_DCGETTEXT 1" >>co
    INCINTL=-I\${top_builddir}/intl
  fi
  
@@ -25,7 +34,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
  
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for autopoint" >&5
  $as_echo_n "checking for autopoint... " >&6; }
-@@ -13800,7 +13801,7 @@ $as_echo_n "checking for requested langu
+@@ -13800,7 +13799,7 @@ $as_echo_n "checking for requested langu
  
  	if test ${enable_amule_daemon:-no} = yes; then :
  
@@ -34,7 +43,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    AMULE_DAEMON_MANPAGES=`ls -1 ${srcdir}/docs/man/amuled.* | sed -e 's:.*/::g'`
  else
  
-@@ -13818,7 +13819,7 @@ fi
+@@ -13818,7 +13817,7 @@ fi
  
  	if test ${enable_amulecmd:-no} = yes; then :
  
@@ -43,7 +52,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    AMULECMD_MANPAGES=`ls -1 ${srcdir}/docs/man/amulecmd.* | sed -e 's:.*/::g'`
  else
  
-@@ -13836,7 +13837,7 @@ fi
+@@ -13836,7 +13835,7 @@ fi
  
  	if test ${enable_webserver:-no} = yes; then :
  
@@ -52,7 +61,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    WEBSERVER_MANPAGES=`ls -1 ${srcdir}/docs/man/amuleweb.* | sed -e 's:.*/::g'`
  else
  
-@@ -13854,7 +13855,7 @@ fi
+@@ -13854,7 +13853,7 @@ fi
  
  	if test ${enable_amule_gui:-no} = yes; then :
  
@@ -61,7 +70,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    AMULE_GUI_MANPAGES=`ls -1 ${srcdir}/docs/man/amulegui.* | sed -e 's:.*/::g'`
  else
  
-@@ -13872,7 +13873,7 @@ fi
+@@ -13872,7 +13871,7 @@ fi
  
  	if test ${enable_cas:-no} = yes; then :
  
@@ -70,7 +79,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    CAS_MANPAGES=`ls -1 ${srcdir}/src/utils/cas/docs/cas.* | sed -e 's:.*/::g'`
  else
  
-@@ -13890,7 +13891,7 @@ fi
+@@ -13890,7 +13889,7 @@ fi
  
  	if test ${enable_wxcas:-no} = yes; then :
  
@@ -79,7 +88,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    WXCAS_MANPAGES=`ls -1 ${srcdir}/src/utils/wxCas/docs/wxcas.* | sed -e 's:.*/::g'`
  else
  
-@@ -13908,7 +13909,7 @@ fi
+@@ -13908,7 +13907,7 @@ fi
  
  	if test ${enable_ed2k:-yes} = yes; then :
  
@@ -88,7 +97,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    ED2K_MANPAGES=`ls -1 ${srcdir}/docs/man/ed2k.* | sed -e 's:.*/::g'`
  else
  
-@@ -13926,7 +13927,7 @@ fi
+@@ -13926,7 +13925,7 @@ fi
  
  	if test ${enable_alc:-no} = yes; then :
  
@@ -97,7 +106,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    ALC_MANPAGES=`ls -1 ${srcdir}/src/utils/aLinkCreator/docs/alc.* | sed -e 's:.*/::g'`
  else
  
-@@ -13944,7 +13945,7 @@ fi
+@@ -13944,7 +13943,7 @@ fi
  
  	if test ${enable_alcc:-no} = yes; then :
  
@@ -106,7 +115,7 @@ $NetBSD: patch-aa,v 1.10 2013/06/15 02:34:19 ryoon Exp $
    ALCC_MANPAGES=`ls -1 ${srcdir}/src/utils/aLinkCreator/docs/alcc.* | sed -e 's:.*/::g'`
  else
  
-@@ -13962,7 +13963,7 @@ fi
+@@ -13962,7 +13961,7 @@ fi
  
  	if test ${enable_monolithic:-yes} = yes; then :
  
