@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2012/12/12 13:21:42 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/20 17:53:26 joerg Exp $
 
 Expand variable where it's defined
 
@@ -13,3 +13,12 @@ Expand variable where it's defined
  infodir='${datarootdir}/info'
  htmldir='${docdir}'
  dvidir='${docdir}'
+@@ -1848,7 +1848,7 @@ echo $ECHO_N "checking for $i/lib librar
+ 	if test -d $i/lib; then
+ 		{ echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+-		LDFLAGS="$LDFLAGS -L$i/lib/ -R$i/lib/"
++		LDFLAGS="$LDFLAGS -L$i/lib/ ${COMPILER_RPATH_FLAG}$i/lib/"
+ 	else
+ 		{ echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
