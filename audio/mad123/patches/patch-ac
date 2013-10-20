@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2005/11/11 18:58:18 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2013/10/20 18:20:00 joerg Exp $
 
 --- Makefile.orig	2004-10-21 13:03:25.000000000 +0000
 +++ Makefile
@@ -38,3 +38,14 @@ $NetBSD: patch-ac,v 1.1 2005/11/11 18:58:18 joerg Exp $
  .if ${USE_ARTS} != "no"
  ARTSLIB= -lartsc
  SRCS+=	audio_dev_arts.c
+@@ -57,8 +70,8 @@ SRCS+=	audio_dev_arts.c
+ CPPFLAGS+= -DNOARTS
+ .endif
+ 
+-CPPFLAGS+= -I/usr/pkg/include
+-LDFLAGS+= -L/usr/pkg/lib -R/usr/pkg/lib
++CPPFLAGS+= -I${PREFIX}/include
++LDFLAGS+= -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+ LDADD+= -lmad ${CURLLIB} ${TAGLIB} ${ID3LIB} ${ARTSLIB} ${EXTRALIBS}
+ 
+ USETOOLS=no
