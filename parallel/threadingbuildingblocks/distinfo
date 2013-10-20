@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/27 19:48:13 asau Exp $
+$NetBSD: distinfo,v 1.2 2013/10/20 17:58:05 joerg Exp $
 
 SHA1 (tbb30_20110325oss_src.tgz) = b58650cdaa8e8497de2a797af1d03dcfc1c63351
 RMD160 (tbb30_20110325oss_src.tgz) = c95aa788d518d806b516b9e9e179d93bce19aa9c
 Size (tbb30_20110325oss_src.tgz) = 1880565 bytes
+SHA1 (patch-build_FreeBSD.gcc.inc) = f3f0e418b1eda91646e9e9cc9c34d40865eb7514
