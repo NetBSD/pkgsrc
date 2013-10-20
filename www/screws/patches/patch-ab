@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2006/01/10 18:28:06 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2013/10/20 17:48:26 joerg Exp $
 
 --- src/Server/Makefile.orig	Mon Nov 22 01:04:00 2004
 +++ src/Server/Makefile	Mon Nov 22 01:04:44 2004
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.3 2006/01/10 18:28:06 joerg Exp $
 -	"NetBSD"|"FreeBSD"|"OpenBSD") \
 -	 echo -L/usr/pkg/lib -lssl -lcrypto >> .opts ;; \
 +	"NetBSD"|"FreeBSD"|"OpenBSD"|"DragonFly") \
-+	 echo -L${PREFIX}/lib -R${PREFIX}/lib -lssl -lcrypto >> .opts ;; \
++	 echo -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lssl -lcrypto >> .opts ;; \
  	*) \
  	 echo -lssl >> .opts ; esac ; fi
  	@if [ "`uname`" = "Linux" ]; then echo " * USE_DLOPEN" ; \
