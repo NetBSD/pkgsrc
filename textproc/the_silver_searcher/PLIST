@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/13 11:32:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/20 22:14:21 wiz Exp $
 bin/ag
 man/man1/ag.1
+share/the_silver_searcher/completions/ag.bashcomp.sh
