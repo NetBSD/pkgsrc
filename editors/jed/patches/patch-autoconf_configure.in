@@ -1,0 +1,12 @@
+$NetBSD: patch-autoconf_configure.in,v 1.1 2013/10/20 18:15:02 joerg Exp $
+
+--- autoconf/configure.in.orig	2002-10-20 06:55:30.000000000 +0000
++++ autoconf/configure.in
+@@ -25,6 +25,7 @@ malloc.h \
+ termios.h \
+ fcntl.h \
+ sys/fcntl.h \
++sys/stropts.h \
+ pty.h \
+ )
+ 
