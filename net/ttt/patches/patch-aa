@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/09/07 13:53:44 obache Exp $
+$NetBSD: patch-aa,v 1.6 2013/10/20 18:00:57 joerg Exp $
 
 --- configure.orig	2004-08-14 12:26:59.000000000 +0000
 +++ configure
@@ -14,3 +14,38 @@ $NetBSD: patch-aa,v 1.5 2007/09/07 13:53:44 obache Exp $
  tttFlags=""
  
  ttt_ckcmd_tcl_home=""
+@@ -5710,11 +5710,11 @@ tttLibraries="${tttLibraries} ${LIBS}"
+ 
+ case $target in
+   *-solaris2*)
+-    LDFLAGS="-R ${tttRunPath}"
++    LDFLAGS="${COMPILER_RPATH_FLAG}${tttRunPath}"
+     tttLibraries="${tttLibraries} -ldl"
+     pcapLibrary="${pcapLibrary} -ldl"
+     if test "x${pcapRunPath}" != "x" ; then
+-       PCAP_LDFLAGS="-R ${pcapRunPath}"
++       PCAP_LDFLAGS="${COMPILER_RPATH_FLAG}${pcapRunPath}"
+     fi
+     ;;
+ 
+@@ -5722,9 +5722,9 @@ case $target in
+     ;;
+ 
+   *-netbsd*|*-openbsd*)
+-    LDFLAGS="-R ${tttRunPath}"
++    LDFLAGS="${COMPILER_RPATH_FLAG}${tttRunPath}"
+     if test "x${pcapRunPath}" != "x" ; then
+-       PCAP_LDFLAGS="-R ${pcapRunPath}"
++       PCAP_LDFLAGS="${COMPILER_RPATH_FLAG}${pcapRunPath}"
+     fi
+     ;;
+ 
+@@ -5738,7 +5738,7 @@ case $target in
+     tttLibraries="${tttLibraries} -ldl"
+     pcapLibrary="${pcapLibrary} -ldl"
+     if test "x${pcapRunPath}" != "x" ; then
+-       PCAP_LDFLAGS="-R ${pcapRunPath}"
++       PCAP_LDFLAGS="${COMPILER_RPATH_FLAG}${pcapRunPath}"
+     fi
+     ;;
+ 
