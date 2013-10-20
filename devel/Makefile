@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1794 2013/10/15 02:02:42 wen Exp $
+# $NetBSD: Makefile,v 1.1795 2013/10/20 15:07:48 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -471,6 +471,7 @@ SUBDIR+=	maketool
 SUBDIR+=	man-pages
 SUBDIR+=	mantis
 SUBDIR+=	matio
+SUBDIR+=	mcpp
 SUBDIR+=	mdds
 SUBDIR+=	meld
 SUBDIR+=	mell
