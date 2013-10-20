@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2013/06/08 06:48:24 asau Exp $
+$NetBSD: distinfo,v 1.13 2013/10/20 18:37:49 asau Exp $
 
-SHA1 (erlang/otp_doc_html_R16B.tar.gz) = 14729a486f331678d2c7ae1ca1608b7e9f3fd8f2
-RMD160 (erlang/otp_doc_html_R16B.tar.gz) = 262cdc35c717d4da4813f2b35fb30ce2fe4085a6
-Size (erlang/otp_doc_html_R16B.tar.gz) = 32832774 bytes
+SHA1 (erlang/otp_doc_html_R16B02.tar.gz) = 142e0b4becc04d3b5bf46a7fa2d48aae43cc84d0
+RMD160 (erlang/otp_doc_html_R16B02.tar.gz) = 20315bfa218469d045f0f69a52305a89e138f6e6
+Size (erlang/otp_doc_html_R16B02.tar.gz) = 33241266 bytes
