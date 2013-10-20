@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2009/12/22 15:42:20 drochner Exp $
+$NetBSD: patch-ag,v 1.5 2013/10/20 18:08:07 joerg Exp $
 
 --- plug-ins/icc_examin/icc_examin/configure.orig	2007-05-10 15:48:30.000000000 +0000
 +++ plug-ins/icc_examin/icc_examin/configure
@@ -14,3 +14,16 @@ $NetBSD: patch-ag,v 1.4 2009/12/22 15:42:20 drochner Exp $
          echo "#define BSD 1" >> $CONF_H
          echo "BSD $UNAME_             detected"
          OSUNAME=BSD
+@@ -542,10 +542,10 @@ else
+       test -n "$ECHO" && $ECHO "INSTALL = install $DEBUG_SWITCH" >> $CONF
+     fi
+     if [ $OSUNAME = "SunOS" ]; then
+-      LDFLAGS="$LDFLAGS -mimpure-text \$(dl) -lrt \$(iconv)"
++      LDFLAGS="$LDFLAGS \$(dl) -lrt \$(iconv)"
+       INSTALL="install"
+     else
+-      LDFLAGS="$LDFLAGS -mimpure-text \$(dl) \$(iconv)"
++      LDFLAGS="$LDFLAGS \$(dl) \$(iconv)"
+       INSTALL="install"
+       echo "LINK_FLAGS = -shared \$(dl) \$(iconv)" >> $CONF
+       echo "INSTALL = install" >> $CONF
