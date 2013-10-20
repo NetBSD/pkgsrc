@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2013/09/08 07:23:56 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2013/10/20 17:46:16 joerg Exp $
 
 * Second part: fix build under OS X 10.8.4 with clang.
   http://bugs.motifzone.net/show_bug.cgi?id=1625
@@ -27,3 +27,13 @@ $NetBSD: patch-configure.ac,v 1.2 2013/09/08 07:23:56 ryoon Exp $
  
  dnl Checks for library functions.
  AC_FUNC_ALLOCA
+@@ -164,9 +164,6 @@ fi
+ if test x$GCC = xyes
+ then
+     CFLAGS="$CFLAGS -Wall -g -fno-strict-aliasing -Wno-unused -Wno-comment"
+-    if test ` $CC -dumpversion | sed -e 's/\(^.\).*/\1/'` = "4" ; then
+-        CFLAGS="$CFLAGS -fno-tree-ter"
+-    fi
+ fi
+ AC_DEFINE(NO_OL_COMPAT, 1, "No OL Compatability")
+ 
