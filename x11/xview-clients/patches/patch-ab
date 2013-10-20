@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2009/12/10 20:37:36 abs Exp $
+$NetBSD: patch-ab,v 1.6 2013/10/20 17:46:52 joerg Exp $
 
 --- cmdtool/Imakefile.orig	1993-06-29 05:12:08.000000000 +0000
 +++ cmdtool/Imakefile
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.5 2009/12/10 20:37:36 abs Exp $
  OBJS = cmdtool.o
  ALLFILES = ${HEADERS} ${INFOFILES} ${MANPAGES} ${ICONS} ${SRCS}
  
-+EXTRA_LDOPTIONS = ${LINKER_RPATH_FLAG}${PREFIX}/lib
++EXTRA_LDOPTIONS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 +
  ComplexProgramTarget(cmdtool)
  
