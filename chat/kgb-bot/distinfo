@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/10/20 14:16:16 tonnerre Exp $
+
+SHA1 (App-KGB-1.31.tar.gz) = 9cfffc64a6698faa2330f807de67e4e318310811
+RMD160 (App-KGB-1.31.tar.gz) = 981c5109c941a8da120df005ce41009af6b0df8b
+Size (App-KGB-1.31.tar.gz) = 97753 bytes
+SHA1 (patch-Build.PL) = 5e49e8c654448da10c4116da8a799e4c12d56380
