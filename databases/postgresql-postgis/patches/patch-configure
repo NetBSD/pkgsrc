@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2011/12/31 17:14:16 gdt Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/20 18:18:52 joerg Exp $
 
 See configure.ac patch.
 
@@ -10,7 +10,7 @@ See configure.ac patch.
  
 -PGSQL_FE_LDFLAGS=-L`$PGCONFIG --libdir`" -lpq"
 +
-+PGSQL_FE_LDFLAGS="-L`$PGCONFIG --libdir` -R`$PGCONFIG --libdir` -lpq"
++PGSQL_FE_LDFLAGS="-L`$PGCONFIG --libdir` ${COMPILER_RPATH_FLAG}`$PGCONFIG --libdir` -lpq"
  PGSQL_FE_CPPFLAGS=-I`$PGCONFIG --includedir`
  
  
