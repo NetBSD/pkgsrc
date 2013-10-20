@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/07/09 14:52:53 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/20 17:56:54 joerg Exp $
 
 DISTNAME=	xetex
 PKGNAME=	tex-${DISTNAME}-2011
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	24091
 
 MAINTAINER=	minskim@NetBSD.org
@@ -20,6 +20,10 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=		"xetex xetex language.def -etex xetex.ini\\nxelatex xetex language.dat -etex xelatex.ini\\n"
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
+
+REPLACE_PERL+=	texmf-dist/scripts/xetex/perl/xdv2pdf_mergemarks
+
+USE_TOOLS+=	perl:run
 
 .include "../../print/texlive/package.mk"
 
