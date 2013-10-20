@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2013/10/20 17:52:58 joerg Exp $
+
+--- configure.orig	2013-10-18 22:56:10.000000000 +0000
++++ configure
+@@ -3327,8 +3327,8 @@ linux*)
+   LIBS="-L$x_libraries $LIBS"
+   ELF_LINK_FLAGS="" ;;
+ *)
+-  LIBS="-L$x_libraries -R$x_libraries $LIBS"
+-  ELF_LINK_FLAGS="-Wl,-R$x_libraries" ;;
++  LIBS="-L$x_libraries ${COMPILER_RPATH_FLAG}$x_libraries $LIBS"
++  ELF_LINK_FLAGS="${COMPILER_RPATH_FLAG}$x_libraries" ;;
+ esac
+ 
+ 
+@@ -5254,7 +5254,7 @@ solaris2*)
+ 
+ 	EXTRA_CXXFLAGS="-Wall -O4"
+ 
+-	EXTRALIBS="-R$x_libraries -lsocket -lnsl -lkstat $XPMLIB"
++	EXTRALIBS="${COMPILER_RPATH_FLAG}$x_libraries -lsocket -lnsl -lkstat $XPMLIB"
+ 	host_dir=sunos5
+ 	host_os=sunos5 ;;
+ *)       { { echo "$as_me:$LINENO: error: xosview has not been ported to $host_os :(.  Sorry." >&5
