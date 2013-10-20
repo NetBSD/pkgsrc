@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2012/07/01 03:25:51 sbd Exp $
+$NetBSD: distinfo,v 1.11 2013/10/20 18:20:00 joerg Exp $
 
 SHA1 (mad123-0.8.5.tar.gz) = 97c5d6185a54e2262d52a687ff3a3714ff260af8
 RMD160 (mad123-0.8.5.tar.gz) = bd2bf0b79a3c9d3513583daccdfc182a2d17cc41
 Size (mad123-0.8.5.tar.gz) = 24836 bytes
 SHA1 (patch-aa) = c2b6eb6eb4b23151c31ae7031150baae403aefad
 SHA1 (patch-ab) = 55d046e95e740520b9a74cdc764eb37a59cbf049
-SHA1 (patch-ac) = 7c150b2f15cbc00876c8619b80ee29c73b0b71df
+SHA1 (patch-ac) = 23bdaecce33684a32e7e0ada01df2ac23bc58722
 SHA1 (patch-audio__dev.h) = 699760f797aa4b90a5672b42b24e08443fe0ae69
 SHA1 (patch-mp3__stream.c) = bfd36ec13ab8f78e65007692195ed12275ffc0d8
