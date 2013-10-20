@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2012/12/29 20:15:54 dholland Exp $
+# $NetBSD: Makefile,v 1.169 2013/10/20 14:17:03 tonnerre Exp $
 #
 
 COMMENT=	Communication programs
@@ -56,6 +56,7 @@ SUBDIR+=	irssi-xmpp
 SUBDIR+=	jabberd
 SUBDIR+=	jabberd2
 SUBDIR+=	kadu
+SUBDIR+=	kgb-bot
 SUBDIR+=	kmess
 SUBDIR+=	konversation
 SUBDIR+=	konversation-kde3
