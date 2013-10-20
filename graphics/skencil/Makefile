@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/06/13 14:26:35 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2013/10/20 18:08:19 joerg Exp $
 
 DISTNAME=	skencil-0.6.17
 PKGREVISION=	11
@@ -15,8 +15,8 @@ USE_TOOLS+=	pax
 
 PYTHON_PATCH_SCRIPTS= sk2ppm.py sk2ps.py skconvert.py skencil.py skshow.py
 SK_CONF_ARGS=	--imaging-include=${BUILDLINK_PREFIX.pyimaging}/${PYINC}/PIL
-SK_TKFLAGS=	-L${BUILDLINK_PREFIX.tk}/lib -R${BUILDLINK_PREFIX.tk}/lib -ltk -ltcl
-SK_TKFLAGS+=	-R${X11BASE}/lib
+SK_TKFLAGS=	-L${BUILDLINK_PREFIX.tk}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tk}/lib -ltk -ltcl
+SK_TKFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SK_CONF_ARGS+=	--tk-flags=${SK_TKFLAGS:Q}
 
 do-configure:
