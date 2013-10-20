@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2013/09/13 14:32:19 fhajny Exp $
+$NetBSD: patch-aa,v 1.3 2013/10/20 17:56:02 joerg Exp $
 
 Pass installation dirs properly, fix search paths, add Solaris support
 
@@ -16,7 +16,7 @@ Pass installation dirs properly, fix search paths, add Solaris support
 -#INCDIR=-I/usr/local/lua-5.1/include -I/usr/local/openssl-0.9.8/include
 -#LIBDIR=-L/usr/local/openssl-0.9.8/lib -R/usr/local/openssl-0.9.8/lib
 +INCDIR=-I${PREFIX}/include
-+LIBDIR=-L${PREFIX}/lib -R${PREFIX}/lib
++LIBDIR=-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
  
  # For Mac OS X: set the system version
  MACOSX_VERSION=10.4
