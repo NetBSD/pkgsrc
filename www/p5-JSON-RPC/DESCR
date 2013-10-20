@@ -1,0 +1,2 @@
+JSON::RPC is a stateless RPC protocol which uses JSON over HTTP. All request
+and response data is transferred as JSON.
