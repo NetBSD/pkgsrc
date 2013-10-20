@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2013/10/09 17:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2013/10/20 18:02:26 joerg Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	50
@@ -61,6 +61,7 @@ post-install:
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
