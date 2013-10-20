@@ -1,4 +1,4 @@
-$NetBSD: patch-de,v 1.3 2009/12/10 20:37:38 abs Exp $
+$NetBSD: patch-de,v 1.4 2013/10/20 17:46:52 joerg Exp $
 
 --- olwm/Imakefile.orig	1993-06-29 05:11:41.000000000 +0000
 +++ olwm/Imakefile
@@ -6,7 +6,7 @@ $NetBSD: patch-de,v 1.3 2009/12/10 20:37:38 abs Exp $
  SYS_LIBRARIES = $(SYSV_CLIENT_LIB)
  DEPLIBS = 
  LOCAL_LIBRARIES = $(OLGXLIB) $(XLIB) $(XVCLIENTMISCLIB)
-+EXTRA_LDOPTIONS = ${LINKER_RPATH_FLAG}${PREFIX}/lib
++EXTRA_LDOPTIONS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib
  
  CFILES.misc.3          =
  CFILES.misc.4          = fontset.c
