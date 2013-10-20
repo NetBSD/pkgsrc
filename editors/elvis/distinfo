@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2009/10/03 10:13:36 ahoka Exp $
+$NetBSD: distinfo,v 1.10 2013/10/20 18:15:32 joerg Exp $
 
 SHA1 (elvis-2.2_0.tar.gz) = 8c16574b6d36529735b8ced70972ddaf6275a477
 RMD160 (elvis-2.2_0.tar.gz) = 9867a3941a84a3db0bcfe4e36dd14132fbcf5805
 Size (elvis-2.2_0.tar.gz) = 1439293 bytes
-SHA1 (patch-ab) = 285a3a5728a8f26af4741361b3d0bf159043c402
+SHA1 (patch-ab) = 9bc99e5f13926e5c2d8570c88526249e5a449203
 SHA1 (patch-ac) = a866461c14dd7518f2ee5790a366a5eb7ffbee3c
 SHA1 (patch-ad) = 702b08ec1182c3673721de62690a3a7c32983b8a
 SHA1 (patch-ae) = 2a8eb92b44fa932fcc51e7af999f1363dd53ff74
