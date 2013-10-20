@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.990 2013/09/15 18:51:59 taca Exp $
+# $NetBSD: Makefile,v 1.991 2013/10/20 02:53:42 tonnerre Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -474,6 +474,7 @@ SUBDIR+=	p5-Rose-HTMLx-Form-Field-PopUpMenuNumeric
 SUBDIR+=	p5-Rose-HTMLx-Form-Field-Serial
 SUBDIR+=	p5-Rose-HTMLx-Form-Related
 SUBDIR+=	p5-Rose-URI
+SUBDIR+=	p5-Router-Simple
 SUBDIR+=	p5-SCGI
 SUBDIR+=	p5-SVN-Web
 SUBDIR+=	p5-Session-Storage-Secure
