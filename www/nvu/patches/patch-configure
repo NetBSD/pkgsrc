@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1 2013/10/20 17:47:49 joerg Exp $
+
+--- configure.orig	2013-10-18 12:43:25.000000000 +0000
++++ configure
+@@ -4825,7 +4825,7 @@ if test "$GNU_CC"; then
+     _MOZ_RTTI_FLAGS_ON=${_COMPILER_PREFIX}-frtti
+     _MOZ_RTTI_FLAGS_OFF=${_COMPILER_PREFIX}-fno-rtti
+     _MOZ_EXCEPTIONS_FLAGS_ON='-fhandle-exceptions'
+-    _MOZ_EXCEPTIONS_FLAGS_OFF='-fno-handle-exceptions'
++    _MOZ_EXCEPTIONS_FLAGS_OFF='-fno-exceptions'
+ 
+     # Turn on GNU specific features
+     # -Wall - turn on all warnings
+@@ -9813,17 +9813,7 @@ echo "configure:9812: checking for C++ e
+     if eval "test \"`echo '$''{'ac_cv_cxx_exceptions_flags'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+-  echo "int main() { return 0; }" | cat > conftest.C
+-
+-  ${CXX-g++} ${CXXFLAGS} -c -fno-handle-exceptions conftest.C > conftest.out 2>&1
+-
+-  if egrep "warning.*renamed" conftest.out >/dev/null; then
+-    ac_cv_cxx_exceptions_flags=${_COMPILER_PREFIX}-fno-exceptions
+-  else
+-    ac_cv_cxx_exceptions_flags=${_COMPILER_PREFIX}-fno-handle-exceptions
+-  fi
+-
+-  rm -f conftest*
++  ac_cv_cxx_exceptions_flags=${_COMPILER_PREFIX}-fno-exceptions
+ fi
+ 
+ 
