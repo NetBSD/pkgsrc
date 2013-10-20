@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3867 2013/10/20 21:59:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3868 2013/10/20 22:04:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5458,3 +5458,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-anki2 to 2.0.14 [wiz 2013-10-20]
 	Updated print/diffpdf to 2.1.3 [wiz 2013-10-20]
 	Updated databases/py-sqlparse to 0.1.9 [wiz 2013-10-20]
+	Updated devel/py-cython to 0.19.2 [wiz 2013-10-20]
