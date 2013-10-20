@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2013/10/10 00:10:13 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/20 21:49:28 wiz Exp $
 
---- configure.orig	2013-10-09 23:38:37.000000000 +0000
+--- configure.orig	2013-10-17 23:13:25.000000000 +0000
 +++ configure
-@@ -6679,13 +6679,6 @@ CFLAGS=""
+@@ -5715,13 +5715,6 @@ CFLAGS=""
  PWD=`pwd`
  ABS_TOP_SRCDIR=$PWD$top_srcdir
  
@@ -13,6 +13,6 @@ $NetBSD: patch-configure,v 1.1 2013/10/10 00:10:13 joerg Exp $
 -*)          CFLAGS= ;;
 -esac
 -
- { $as_echo "$as_me:$LINENO: result:
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result:
  ** Configuration summary for $PACKAGE $VERSION:
  
