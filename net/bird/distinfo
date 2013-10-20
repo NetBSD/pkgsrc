@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2012/08/07 19:20:39 marino Exp $
+$NetBSD: distinfo,v 1.4 2013/10/20 18:00:57 joerg Exp $
 
 SHA1 (bird-1.3.6.tar.gz) = 8fdc7afb99b5896e3dec85b8b3ba194c8287bf32
 RMD160 (bird-1.3.6.tar.gz) = d4670d79509fc3975ff86d0b67d60bb507bbbcc6
 Size (bird-1.3.6.tar.gz) = 864775 bytes
-SHA1 (patch-configure) = 3c2aec3e4ec5824753a518cc517b2788d050ba26
+SHA1 (patch-configure) = fb6999b955383425a7635d0c94a1a46125db9989
 SHA1 (patch-lib_lists.h) = 7068c6b73841e19a540a08e822658b0455c53a77
 SHA1 (patch-sysdep_bsd_sysio.h) = ff510970668766c95a926948c7a96286da7eca22
 SHA1 (patch-tools_Makefile.in) = b6faf3bc1c866bfc311d74235a92cf3b1f34636f
