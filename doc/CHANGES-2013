@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3859 2013/10/20 14:20:36 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3860 2013/10/20 15:08:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5450,3 +5450,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-JSON-RPC version 1.03 [tonnerre 2013-10-20]
 	Added chat/kgb-bot version 1.31 [tonnerre 2013-10-20]
 	Updated www/p5-WWW-Shorten to 3.04 [wen 2013-10-20]
+	Added devel/mcpp version 2.7.2 [ryoon 2013-10-20]
