@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3857 2013/10/20 14:09:22 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.3858 2013/10/20 14:17:24 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5448,3 +5448,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-Router-Simple version 0.15 [tonnerre 2013-10-20]
 	Added security/py-ecdsa version 0.9 [gls 2013-10-20]
 	Added www/p5-JSON-RPC version 1.03 [tonnerre 2013-10-20]
+	Added chat/kgb-bot version 1.31 [tonnerre 2013-10-20]
