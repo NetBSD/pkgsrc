@@ -1,4 +1,4 @@
-$NetBSD: patch-dg,v 1.3 2009/12/10 20:37:38 abs Exp $
+$NetBSD: patch-dg,v 1.4 2013/10/20 17:46:52 joerg Exp $
 
 --- olwmslave/Imakefile.orig	1993-06-29 05:12:14.000000000 +0000
 +++ olwmslave/Imakefile
@@ -6,7 +6,7 @@ $NetBSD: patch-dg,v 1.3 2009/12/10 20:37:38 abs Exp $
  DEPLIBS = 
  LOCAL_LIBRARIES = XViewClientLibs
  
-+EXTRA_LDOPTIONS = ${LINKER_RPATH_FLAG}${PREFIX}/lib
++EXTRA_LDOPTIONS = ${COMPILER_RPATH_FLAG}${PREFIX}/lib
  
  HFILES.olwmslave.3 = 
  HFILES.olwmslave.4 =  i18n.h
