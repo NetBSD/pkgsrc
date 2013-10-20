@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/08/06 18:11:28 gls Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/10/20 17:02:02 gls Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -40,6 +40,9 @@ ${PYSITELIB}/paramiko/config.pyo
 ${PYSITELIB}/paramiko/dsskey.py
 ${PYSITELIB}/paramiko/dsskey.pyc
 ${PYSITELIB}/paramiko/dsskey.pyo
+${PYSITELIB}/paramiko/ecdsakey.py
+${PYSITELIB}/paramiko/ecdsakey.pyc
+${PYSITELIB}/paramiko/ecdsakey.pyo
 ${PYSITELIB}/paramiko/file.py
 ${PYSITELIB}/paramiko/file.pyc
 ${PYSITELIB}/paramiko/file.pyo
