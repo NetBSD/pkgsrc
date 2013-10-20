@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2013/10/09 17:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2013/10/20 17:56:26 joerg Exp $
 
 DISTNAME=		scribus-1.3.3.14
 PKGREVISION=		18
@@ -40,6 +40,7 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
