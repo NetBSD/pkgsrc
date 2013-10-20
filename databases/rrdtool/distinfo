@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2012/02/03 15:43:44 drochner Exp $
+$NetBSD: distinfo,v 1.44 2013/10/20 18:18:52 joerg Exp $
 
 SHA1 (rrdtool-1.4.7.tar.gz) = faab7df7696b69f85d6f89dd9708d7cf0c9a273b
 RMD160 (rrdtool-1.4.7.tar.gz) = 3a8c1c0f3fe0d76fb7da8b712cdd19d59d5171ba
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 81131a74c8e9b81edfaa4b6746d4ab8508e82ac2
 SHA1 (patch-al) = abc25497a10d59b1ad2e3a263f818eef89985538
 SHA1 (patch-am) = 6c0a0890b1e8e2c1a186e2015c0cf5acd719b686
 SHA1 (patch-az) = 41e7f6aad5a54a0fa27744709af404b887b88602
+SHA1 (patch-bindings_perl-shared_Makefile.PL) = d767dca08217a909132646216679a5d1fad4b77c
