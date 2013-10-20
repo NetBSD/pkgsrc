@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2013/08/22 09:21:57 prlw1 Exp $
-#
+# $NetBSD: Makefile,v 1.40 2013/10/20 21:57:48 wiz Exp $
 
-DISTNAME=	diffpdf-2.1.2
-PKGREVISION=	9
+DISTNAME=	diffpdf-2.1.3
 CATEGORIES=	print
 MASTER_SITES=	http://www.qtrac.eu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qtrac.eu/diffpdf.html
-COMMENT=	PDF comparision tool
+COMMENT=	PDF comparison tool
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++
