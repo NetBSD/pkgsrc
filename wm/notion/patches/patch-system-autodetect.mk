@@ -1,4 +1,4 @@
-$NetBSD: patch-system-autodetect.mk,v 1.1 2013/07/05 14:27:56 wiz Exp $
+$NetBSD: patch-system-autodetect.mk,v 1.2 2013/10/20 17:48:54 joerg Exp $
 
 Adapt for pkgsrc.
 
@@ -44,7 +44,7 @@ Adapt for pkgsrc.
 -LUA_DIR=/usr/local
 -LUA_LIBS=-L$(LUA_DIR)/lib -llua
 +LUA_DIR=$(PREFIX)
-+LUA_LIBS=${LINKER_RPATH_FLAG}$(LUA_DIR)/lib -L$(LUA_DIR)/lib -llua
++LUA_LIBS=${COMPILER_RPATH_FLAG}$(LUA_DIR)/lib -L$(LUA_DIR)/lib -llua
  LUA_INCLUDES = -I$(LUA_DIR)/include
  
  ifneq ($(shell which lua),)
