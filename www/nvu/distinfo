@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/10/15 14:49:35 joerg Exp $
+$NetBSD: distinfo,v 1.8 2013/10/20 17:47:49 joerg Exp $
 
 SHA1 (nvu-1.0-sources.tar.bz2) = 438b1633cb820bbede503ef2da90f46d4e96bee8
 RMD160 (nvu-1.0-sources.tar.bz2) = 6d6fdb747d79e8602a4757e8eff8bbb21db6df8c
@@ -13,6 +13,8 @@ SHA1 (patch-ao) = eb220c4c30838216e709179cf953b9cbb9696421
 SHA1 (patch-ap) = 35a193158e43d57a1c31270214140afbb3cebb56
 SHA1 (patch-composer_base_dialogs_EdImageProps.js) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-composer_base_dialogs_EdLinkProps.js) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-configure) = e3192e486d2b85827485a4211953ca3229db7d11
+SHA1 (patch-configure.in) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-editor_libeditor_html_nsHTMLEditRules.cpp) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-layout_xul_base_src_nsStackFrame.h) = 56eda32dd08e90661b5244f64bd078ba55bee61c
 SHA1 (patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp) = 5b14d68932a3dd2be9e57f130e825150de8cc8dd
