@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/05/31 12:39:37 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/10/20 18:20:23 joerg Exp $
 
 DISTNAME=	normalize-0.7.7
 PKGREVISION=	4
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-audiofiletest
 CONFIGURE_ARGS+=	--with-mad
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libaudiofile}/include
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libaudiofile}/lib
-LDFLAGS+=		${LINKER_RPATH_FLAG}${BUILDLINK_PREFIX.libaudiofile}/lib -laudiofile
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libaudiofile}/lib -laudiofile
 
 # is a generated file which doesn't exist when REPLACE_PERL happens
 #REPLACE_PERL=		src/normalize-mp3
