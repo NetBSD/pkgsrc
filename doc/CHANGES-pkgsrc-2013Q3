@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.7 2013/10/16 16:03:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.8 2013/10/20 11:11:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -25,3 +25,5 @@ Pullup ticket #4245 - requested by joerg
 devel/bmake: build fix
 Pullup ticket #4246 - requested by joerg
 lang/python27: build fix
+Pullup ticket #4247 - requested by bsiegert
+lang/gawk: build fix
