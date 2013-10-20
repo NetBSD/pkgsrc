@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile,v 1.1 2013/10/20 17:50:48 joerg Exp $
+
+--- Makefile.orig	2013-10-16 11:42:25.000000000 +0000
++++ Makefile
+@@ -13,7 +13,7 @@ INSTALL=cp
+ # you must use -fno-implicit-templates
+ # and -O (or any optimization level >= 1).
+ # c++ is a front-end for gcc which takes care of linking with -lstdc++
+-CXX=c++ -fno-implicit-templates -O2
++#CXX=c++ -fno-implicit-templates -O2
+ WARN=#-Wall -Wno-reorder -Wwrite-strings -Wpointer-arith -Wnested-externs -Woverloaded-virtual -Wbad-function-cast
+ # Executables will be *very* large if you use -g.
+ DEBUG=
+@@ -35,7 +35,7 @@ DEBUG=
+ # Add -DJADE_MIF to include the Jade MIF backend
+ XDEFINES=-DSP_HAVE_SOCKET
+ DEFINES=-DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE $(XDEFINES)
+-CXXFLAGS=-ansi $(DEBUG) $(WARN)
++#CXXFLAGS=-ansi $(DEBUG) $(WARN)
+ # Flag to pass to CXX to make it output list of dependencies as a Makefile.
+ CXXDEPGENFLAGS=-MM
+ LDFLAGS=
