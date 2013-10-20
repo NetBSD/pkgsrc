@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/10/20 12:47:11 gls Exp $
+
+SHA1 (python-ecdsa-0.9.tar.gz) = 60ee437c586e64ec506be4fd2ec5fe57731bc57d
+RMD160 (python-ecdsa-0.9.tar.gz) = dcdce4e442559552755f4f1586f4c7de689d6224
+Size (python-ecdsa-0.9.tar.gz) = 45540 bytes
