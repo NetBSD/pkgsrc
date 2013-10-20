@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2013/10/20 18:09:05 joerg Exp $
+
+--- configure.orig	2013-10-20 15:29:48.000000000 +0000
++++ configure
+@@ -19268,9 +19268,8 @@ _ACEOF
+ fi
+ 
+ 
+-LDFLAGS="-L/usr/local/lib -R/usr/local/lib $LDFLAGS"
+-LDFLAGS="-L/usr/pkg/lib -R/usr/pkg/lib $LDFLAGS"
+-CPPFLAGS="-I/usr/local/include -I/usr/pkg/include $CPPFLAGS"
++LDFLAGS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib $LDFLAGS"
++CPPFLAGS="-I${PREFIX}/include $CPPFLAGS"
+ 
+ 
+ { echo "$as_me:$LINENO: checking for TIFFOpen in -ltiff" >&5
