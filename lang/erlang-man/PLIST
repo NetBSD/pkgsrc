@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/06/08 06:48:24 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/10/20 18:37:49 asau Exp $
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameter_compile.1
 lib/erlang/man/man1/epmd.1
@@ -325,6 +325,8 @@ lib/erlang/man/man3/snmpa_error_io.3
 lib/erlang/man/man3/snmpa_error_logger.3
 lib/erlang/man/man3/snmpa_error_report.3
 lib/erlang/man/man3/snmpa_local_db.3
+lib/erlang/man/man3/snmpa_mib_data.3
+lib/erlang/man/man3/snmpa_mib_storage.3
 lib/erlang/man/man3/snmpa_mpd.3
 lib/erlang/man/man3/snmpa_network_interface.3
 lib/erlang/man/man3/snmpa_network_interface_filter.3
@@ -397,6 +399,7 @@ lib/erlang/man/man3/wxChoice.3
 lib/erlang/man/man3/wxChoicebook.3
 lib/erlang/man/man3/wxClientDC.3
 lib/erlang/man/man3/wxClipboard.3
+lib/erlang/man/man3/wxClipboardTextEvent.3
 lib/erlang/man/man3/wxCloseEvent.3
 lib/erlang/man/man3/wxColourData.3
 lib/erlang/man/man3/wxColourDialog.3

@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1 2013/10/20 18:37:49 asau Exp $
+
+--- configure.in.orig	2013-09-16 18:12:18.000000000 +0000
++++ configure.in
+@@ -394,7 +394,7 @@ AC_SUBST(NATIVE_LIBS_ENABLED)
+ rm -f $ERL_TOP/lib/SKIP-APPLICATIONS
+ for app in `cd lib && ls -d *`; do
+     var=`eval echo \\$with_$app`
+-    if test X${var} == Xno; then
++    if test X${var} = Xno; then
+        echo "$app" >> $ERL_TOP/lib/SKIP-APPLICATIONS
+      fi
+ done
