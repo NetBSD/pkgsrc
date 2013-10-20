@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2011/11/29 06:17:57 sbd Exp $
+$NetBSD: patch-aa,v 1.4 2013/10/20 18:10:41 joerg Exp $
 
 Honor CFLAGS and LDFLAGS from pkgsrc.
 
 --- Makefile.rules.orig	2005-01-12 13:34:18.000000000 +0000
 +++ Makefile.rules
-@@ -2,9 +2,9 @@
+@@ -1,10 +1,10 @@
+ 
  SDL_CONFIG=sdl-config
- LIBS=`$(SDL_CONFIG) --libs` -mno-windows -mcygwin -lz -l$(OPENGL)
+-LIBS=`$(SDL_CONFIG) --libs` -mno-windows -mcygwin -lz -l$(OPENGL)
++LIBS=`$(SDL_CONFIG) --libs` -lz -l$(OPENGL)
  
 -CFLAGS=-g -Wall -I/usr/include -I/usr/local/include
 -PROFLAGS=-g -Wall -pg -fprofile-arcs -ftest-coverage
