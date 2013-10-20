@@ -1,0 +1,4 @@
+KGB is a system that provides notifications on IRC for commits made to Git,
+Subversion and CVS repositories. It uses two components: a server, which
+runs the IRC bot, and a client, which is hooked into the repositories and
+sends the notifications to the server.
