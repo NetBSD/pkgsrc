@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.8 2012/04/15 04:07:21 markd Exp $
+$NetBSD: patch-am,v 1.9 2013/10/20 17:57:32 joerg Exp $
 
 Pkgsrc stuff
 GridEngine dev mailing list patch for "nbsd-1" issue
@@ -11,7 +11,7 @@ ArchLinux static crypto also needs libz.a
     set CFLAGS        = "-I$BERKELEYDB_HOME/include/${BDB_INCLUDE_SUBDIR} $CFLAGS"
     set LFLAGS        = "-L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} $LFLAGS"
 -   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR}"
-+   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} -R$BERKELEYDB_HOME/lib"
++   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} ${COMPILER_RPATH_FLAG}$BERKELEYDB_HOME/lib"
  endif
  set CFLAGS = "$CFLAGS -DSPOOLING_$SPOOLING_METHOD $SECFLAGS"
  
@@ -23,7 +23,7 @@ ArchLinux static crypto also needs libz.a
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-DNeedFunctionPrototypes -DNeedVarargsPrototypes -Wno-error $XMTDEF $XINCD"
 -   set XLIBD    = "-L$MOTIFHOME/lib -L/usr/X11R6/lib"
-+   set XLIBD    = "-L$MOTIFHOME/lib -R${MOTIFHOME}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
++   set XLIBD    = "-L$MOTIFHOME/lib -R${MOTIFHOME}/lib -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib"
     set XLIBS    = "-lXm -lXpm -lXt -lXext -lX11 -lSM -lICE"
     if ("$ADOC" == 1) then
        set CFLAGS = "$CFLAGS -Wno-error"
@@ -44,7 +44,7 @@ ArchLinux static crypto also needs libz.a
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
 -   set XLIBD    = "-L/usr/X11R6/lib"
-+   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib"
++   set XLIBD    = "-L${X11BASE}/lib ${COMPILER_RPATH_FLAGS}${X11BASE}/lib"
     set XLFLAGS  = "$XLIBD"
     set XLIBS    = " -Xlinker -lXm -Xlinker -Bdynamic -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
     set RM	= "rm -f"
@@ -56,7 +56,7 @@ ArchLinux static crypto also needs libz.a
 +   set CFLAGS   = "$OFLAG -Wall -DNETBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I${X11BASE}/include"
     set NOERR_CFLAG = "-Wno-error"
 -   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
-+   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
++   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic -L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib"
     set LIBS     = "$LIBS -lkvm"
     set SHAREDLD = $CC
     set SHARED_CFLAGS = "-fPIC"
@@ -68,7 +68,7 @@ ArchLinux static crypto also needs libz.a
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
 -   set XLIBD    = "-L/usr/X11R6/lib -R/usr/X11R6/lib -L/usr/pkg/lib -R /usr/pkg/lib"
-+   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
++   set XLIBD    = "-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib"
     set XLFLAGS  = "$XLIBD"
     set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
     set RM       = "rm -f"
