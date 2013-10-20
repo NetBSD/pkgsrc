@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/10/17 15:41:09 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/10/20 18:11:20 joerg Exp $
 
 SHA1 (klh10-2.0h/panda-dist.tar.gz) = b32b8d64145a6376326dc6ac1bf68ada4f2d7313
 RMD160 (klh10-2.0h/panda-dist.tar.gz) = ca779c295c5cd3a3be3dd0141aed86f1c2c08aa5
@@ -14,3 +14,5 @@ SHA1 (patch-src_kn10def.h) = fbc77ff07342c00f635ff404669613b8433e60bf
 SHA1 (patch-src_kn10ops.c) = 6683baacd2f96dd64eceddc487151e264964e5e9
 SHA1 (patch-src_osdnet.c) = e7400876eb3b6e462c1db36a98ab209623a769de
 SHA1 (patch-src_osdnet.h) = d6f49bf4a0b58a6278e3e3195ad3976287ef4106
+SHA1 (patch-src_tapedd.c) = 56a85565b80276068308e7b43f6fb9a098e99996
+SHA1 (patch-src_vdkfmt.c) = c0cb247c00991564a0416f534fd6ead16b77bee5
