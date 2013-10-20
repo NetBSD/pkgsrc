@@ -1,10 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2013/01/09 10:34:03 martin Exp $
+$NetBSD: patch-aa,v 1.5 2013/10/20 18:17:04 joerg Exp $
 
 Do not allow access to _res on NetBSD.
 
---- configure.in.orig	2012-03-06 15:45:23.000000000 +0100
-+++ configure.in	2013-01-08 16:00:11.000000000 +0100
-@@ -1858,7 +1858,7 @@
+--- configure.in.orig	2012-03-06 14:45:23.000000000 +0000
++++ configure.in
+@@ -1398,8 +1398,8 @@ if test "$GNU_CC"; then
+     ASFLAGS="$ASFLAGS -fPIC"
+     _MOZ_RTTI_FLAGS_ON=${_COMPILER_PREFIX}-frtti
+     _MOZ_RTTI_FLAGS_OFF=${_COMPILER_PREFIX}-fno-rtti
+-    _MOZ_EXCEPTIONS_FLAGS_ON='-fhandle-exceptions'
+-    _MOZ_EXCEPTIONS_FLAGS_OFF='-fno-handle-exceptions'
++    _MOZ_EXCEPTIONS_FLAGS_ON='-fexceptions'
++    _MOZ_EXCEPTIONS_FLAGS_OFF='-fno-exceptions'
+ 
+     # Turn on GNU specific features
+     # -Wall - turn on all warnings
+@@ -1858,7 +1858,7 @@ case "$target" in
      fi
      ;;
  
@@ -13,7 +24,7 @@ Do not allow access to _res on NetBSD.
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1872,6 +1872,9 @@
+@@ -1872,6 +1872,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -23,7 +34,7 @@ Do not allow access to _res on NetBSD.
      ;; 
  
  *-hpux*)
-@@ -2939,6 +2942,9 @@
+@@ -2939,6 +2942,9 @@ if test "$GNU_CC"; then
    AC_CACHE_CHECK(for visibility(hidden) attribute,
                   ac_cv_visibility_hidden,
                   [cat > conftest.c <<EOF
@@ -33,7 +44,7 @@ Do not allow access to _res on NetBSD.
                    int foo __attribute__ ((visibility ("hidden"))) = 1;
  EOF
                    ac_cv_visibility_hidden=no
-@@ -3110,6 +3116,9 @@
+@@ -3110,6 +3116,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -43,7 +54,7 @@ Do not allow access to _res on NetBSD.
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3556,7 +3565,11 @@
+@@ -3556,7 +3565,11 @@ AC_CACHE_CHECK(
          #endif
          #include <resolv.h>
          ],
@@ -56,7 +67,22 @@ Do not allow access to _res on NetBSD.
          [ac_cv_func_res_ninit=yes],
          [ac_cv_func_res_ninit=no])
      ])
-@@ -4326,6 +4339,14 @@
+@@ -3792,13 +3805,7 @@ if test "$GNU_CXX"; then
+   AC_CACHE_VAL(ac_cv_cxx_exceptions_flags,
+   [echo "int main() { return 0; }" | cat > conftest.C
+ 
+-  ${CXX-g++} ${CXXFLAGS} -c -fno-handle-exceptions conftest.C > conftest.out 2>&1
+-
+-  if egrep "warning.*renamed" conftest.out >/dev/null; then
+-    ac_cv_cxx_exceptions_flags=${_COMPILER_PREFIX}-fno-exceptions
+-  else
+-    ac_cv_cxx_exceptions_flags=${_COMPILER_PREFIX}-fno-handle-exceptions
+-  fi
++  ac_cv_cxx_exceptions_flags=${_COMPILER_PREFIX}-fno-exceptions
+ 
+   rm -f conftest*])
+ 
+@@ -4326,6 +4333,14 @@ else
     fi
  fi
  
@@ -71,7 +97,7 @@ Do not allow access to _res on NetBSD.
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -8630,7 +8651,8 @@
+@@ -8630,7 +8645,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -81,7 +107,7 @@ Do not allow access to _res on NetBSD.
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -8721,6 +8743,8 @@
+@@ -8721,6 +8737,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
