@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/20 15:06:58 ryoon Exp $
+bin/mcpp
+include/mcpp_lib.h
+include/mcpp_out.h
+lib/libmcpp.la
+man/man1/mcpp.1
+share/doc/mcpp/LICENSE
+share/doc/mcpp/NEWS
+share/doc/mcpp/README
+share/doc/mcpp/mcpp-manual-jp.html
+share/doc/mcpp/mcpp-manual.html
