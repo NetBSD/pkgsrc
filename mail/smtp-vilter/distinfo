@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/06/26 21:19:08 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/10/20 18:05:10 joerg Exp $
 
 SHA1 (smtp-vilter-1.3.8.tgz) = 406b180cf4e66be5fc993733b0b7b4ffeec19eee
 RMD160 (smtp-vilter-1.3.8.tgz) = 837c723e3824b274e3c5191c3df3589e4b4442db
 Size (smtp-vilter-1.3.8.tgz) = 72565 bytes
-SHA1 (patch-bin_smtp-vilter_Makefile) = b11c85c61a65cd19ad57ae9c6744aaf842d17a78
+SHA1 (patch-bin_smtp-vilter_Makefile) = e7acedd1e733164e3806ca963e2748abbcf64065
