@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.991 2013/10/20 02:53:42 tonnerre Exp $
+# $NetBSD: Makefile,v 1.992 2013/10/20 14:08:59 tonnerre Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -407,6 +407,7 @@ SUBDIR+=	p5-Handel
 SUBDIR+=	p5-I18N-AcceptLanguage
 SUBDIR+=	p5-JavaScript-Value-Escape
 SUBDIR+=	p5-Jemplate
+SUBDIR+=	p5-JSON-RPC
 SUBDIR+=	p5-Kwiki
 SUBDIR+=	p5-Kwiki-Archive-Cvs
 SUBDIR+=	p5-Kwiki-Archive-Rcs
