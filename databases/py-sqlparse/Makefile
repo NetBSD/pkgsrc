@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/30 17:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/20 21:59:45 wiz Exp $
 
-DISTNAME=	sqlparse-0.1.8
+DISTNAME=	sqlparse-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	https://pypi.python.org/packages/source/s/sqlparse/
