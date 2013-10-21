@@ -1,0 +1,16 @@
+$NetBSD: patch-doc_Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+Actually define all the targets used by the package's upper-level
+makefiles.
+
+--- doc/Makefile.in.orig	2012-03-12 13:19:06.000000000 +0000
++++ doc/Makefile.in
+@@ -16,6 +16,8 @@ MANUAL = sdccman
+ #all: $(MANUAL).pdf $(MANUAL).html/index.html $(MANUAL).txt
+ all: $(MANUAL).pdf
+ 
++dep: ;
++
+ install:
+ 	$(INSTALL) -d $(DESTDIR)$(docdir)
+ 	cp -rf $(srcdir)/*.txt $(DESTDIR)$(docdir)

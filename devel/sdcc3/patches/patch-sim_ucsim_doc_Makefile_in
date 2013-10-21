@@ -1,0 +1,16 @@
+$NetBSD: patch-sim_ucsim_doc_Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+Actually define all the targets used by the package's upper-level
+makefiles.
+
+--- sim/ucsim/doc/Makefile.in.orig	2007-01-03 21:19:58.000000000 +0000
++++ sim/ucsim/doc/Makefile.in
+@@ -35,6 +35,8 @@ all: doc
+ 
+ doc: checkconf
+ 
++dep: ;
++
+ # Compiling and installing everything and runing test
+ # ---------------------------------------------------
+ install: all installdirs

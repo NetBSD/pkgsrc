@@ -1,0 +1,13 @@
+$NetBSD: patch-support_cpp_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+--- support/cpp/Makefile.in.orig	2010-05-03 21:13:26.000000000 +0000
++++ support/cpp/Makefile.in
+@@ -30,6 +30,8 @@ VPATH  = @srcdir@
+ # This is the default target.
+ all: $(TARGET)
+ 
++dep: all
++
+ # Directory where sources are, from where we are.
+ srcdir = @srcdir@
+ 

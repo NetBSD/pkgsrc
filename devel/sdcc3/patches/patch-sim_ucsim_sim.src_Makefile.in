@@ -1,0 +1,13 @@
+$NetBSD: patch-sim_ucsim_sim.src_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+--- sim/ucsim/sim.src/Makefile.in.orig	2010-03-23 20:59:47.000000000 +0000
++++ sim/ucsim/sim.src/Makefile.in
+@@ -80,7 +80,7 @@ installdirs:
+ 
+ # Creating dependencies
+ # ---------------------
+-dep: main.dep
++dep: ;
+ 
+ Makefile.dep: $(srcdir)/*.cc $(srcdir)/*.h
+ 	$(MAKEDEP) $(CPPFLAGS) $(filter %.cc,$^) >Makefile.dep
