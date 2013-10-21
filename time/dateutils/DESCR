@@ -1,0 +1,8 @@
+Dateutils are a bunch of tools that revolve around fiddling with
+dates and times in the command line with a strong focus on use
+cases that arise when dealing with large amounts of financial data.
+
+Dateutils commands are prefixed with a `d` but otherwise resemble
+known unix commands for reasons of intuition.  The only exception
+being `strptime` which is analogous to the libc function of the
+same name.
