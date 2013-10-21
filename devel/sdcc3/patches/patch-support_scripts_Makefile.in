@@ -1,0 +1,13 @@
+$NetBSD: patch-support_scripts_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+--- support/scripts/Makefile.in.orig	2010-03-02 20:37:40.000000000 +0000
++++ support/scripts/Makefile.in
+@@ -6,6 +6,8 @@ include $(top_builddir)/Makefile.common
+ 
+ TARGET = $(top_builddir)/bin/as2gbmap
+ 
++dep: ;
++
+ all:
+ 	cp $(srcdir)/as2gbmap.py $(TARGET) && chmod +x $(TARGET)
+ 
