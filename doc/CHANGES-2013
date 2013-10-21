@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3881 2013/10/21 18:03:53 sno Exp $
+$NetBSD: CHANGES-2013,v 1.3882 2013/10/21 18:10:28 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5472,3 +5472,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Hash-MoreUtils to 0.04 [sno 2013-10-21]
 	Updated devel/p5-Module-CoreList to 3.00 [sno 2013-10-21]
 	Updated devel/p5-Scalar-List-Utils to 1.35 [sno 2013-10-21]
+	Updated sysutils/fabric to 1.8.0 [gls 2013-10-21]
