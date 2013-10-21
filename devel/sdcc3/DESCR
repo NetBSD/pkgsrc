@@ -1,11 +1,9 @@
-SDCC is a Free ware , retargettable, optimizing ANSI-C compiler. The current
-version targets Intel 8051 based MCUs, it can be retargetted for other 8 bit
+SDCC is a Freeware, retargettable, optimizing ANSI-C compiler. The current
+version targets Intel 8051 based MCUs. It can be retargetted for other 8 bit
 MCUs or PICs. The entire source code for the compiler is distributed under
 GPL. SDCC used ASXXXX & ASLINK a Free ware, retargettable assembler & linker.
 
-HTML docs are in work/*/doc.
+The package includes a patch from sailer@ife.ee.ethz.ch "asxxxx.diff"
+for making firmware for the Anchor EZUSB chips.
 
-Note I added a patch from sailer@ife.ee.ethz.ch "asxxxx.diff" for making
-firmware for the Anchor EZUSB chips.
-
-This package tracks sdcc 3.x branch.
+This package tracks sdcc's 3.x branch.
