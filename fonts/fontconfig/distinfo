@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2013/10/19 10:36:08 richard Exp $
+$NetBSD: distinfo,v 1.47 2013/10/21 08:21:04 wiz Exp $
 
 SHA1 (fontconfig-2.11.0.tar.bz2) = 969818b0326ac08241b11cbeaa4f203699f9b550
 RMD160 (fontconfig-2.11.0.tar.bz2) = a77063d43caecc6090e6b942ae4fca08a2f1f62c
@@ -9,4 +9,4 @@ SHA1 (patch-ac) = 4a0b7b55aa4b5c106fd256c4ef81df2240224803
 SHA1 (patch-af) = d351265c894738284215f0bb38d47cc1c8f28ec7
 SHA1 (patch-ba) = 025148291320df10e4976ab1380b525f1ab0ee60
 SHA1 (patch-src_fcstat.c) = 9cb2d9b656bcb79d33be84a053e928ecf957dfd7
-SHA1 (patch-test_Makefile.in) = 2414d523cea20d6d904b0a82c3747631a2357b0b
+SHA1 (patch-test_test-migration.c) = 3e174b43b45a131b7bbdce7e417a768b7ff210c5
