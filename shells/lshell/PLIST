@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2010/04/11 14:37:25 imil Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/10/21 19:38:15 gls Exp $
 bin/lshell
-${PYSITELIB}/lshell.py
-${PYSITELIB}/lshell.pyc
-${PYSITELIB}/lshell.pyo
+${PYSITELIB}/lshell/__init__.py
+${PYSITELIB}/lshell/__init__.pyc
+${PYSITELIB}/lshell/__init__.pyo
+${PYSITELIB}/lshell/checkconfig.py
+${PYSITELIB}/lshell/checkconfig.pyc
+${PYSITELIB}/lshell/checkconfig.pyo
+${PYSITELIB}/lshell/shellcmd.py
+${PYSITELIB}/lshell/shellcmd.pyc
+${PYSITELIB}/lshell/shellcmd.pyo
+${PYSITELIB}/lshell/utils.py
+${PYSITELIB}/lshell/utils.pyc
+${PYSITELIB}/lshell/utils.pyo
 man/man1/lshell.1
 share/doc/lshell/CHANGES
 share/doc/lshell/COPYING

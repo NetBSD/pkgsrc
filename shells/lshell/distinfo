@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/04/12 19:44:21 gls Exp $
+$NetBSD: distinfo,v 1.7 2013/10/21 19:38:15 gls Exp $
 
-SHA1 (lshell-0.9.15.1.tar.gz) = d35f44a7fb8ec89681e11d4eea0fc0f418b7d021
-RMD160 (lshell-0.9.15.1.tar.gz) = 6d8ed6c58b7fe4be5fd1d2eae86d1f527b290641
-Size (lshell-0.9.15.1.tar.gz) = 40387 bytes
+SHA1 (lshell-0.9.16.tar.gz) = 2ac5f8e71f8f57eafb9db91d73c5e77b82a673d5
+RMD160 (lshell-0.9.16.tar.gz) = 146439a1468ada9ce09413e00c6a8dee1443050c
+Size (lshell-0.9.16.tar.gz) = 41766 bytes
