@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/06 11:54:29 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/21 09:50:36 fhajny Exp $
 
 DISTNAME=	0verkill-0.16
 PKGREVISION=	1
@@ -26,6 +26,8 @@ SUBST_STAGE.prefix=	post-patch
 SUBST_MESSAGE.prefix=	Fix game configuration path prefix
 SUBST_FILES.prefix=	cfg.h
 SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} 0verkill ${DESTDIR}${PREFIX}/bin
