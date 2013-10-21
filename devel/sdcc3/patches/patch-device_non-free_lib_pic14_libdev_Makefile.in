@@ -1,0 +1,10 @@
+$NetBSD: patch-device_non-free_lib_pic14_libdev_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+--- device/non-free/lib/pic14/libdev/Makefile.in.orig	2013-03-16 12:14:25.000000000 +0000
++++ device/non-free/lib/pic14/libdev/Makefile.in
+@@ -211,5 +211,4 @@ distclean: clean
+ 	@-$(RM) Makefile
+ 
+ clean-intermediate :
+-	@-$(RM) *.lst *.d *.adb
+ 

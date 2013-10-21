@@ -1,0 +1,18 @@
+$NetBSD: patch-sim_ucsim_cmd.src_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+Search $(srcdir) before directorys in CXXFLAGS so that the "FlexLexer.h"
+in $(srcdir) is found before the one under PREFIX (from CXXFLAGS).
+
+--- sim/ucsim/cmd.src/Makefile.in.orig	2011-03-06 21:07:40.000000000 +0000
++++ sim/ucsim/cmd.src/Makefile.in
+@@ -23,8 +23,8 @@ top_srcdir	= @top_srcdir@
+ DEFS            = $(subs -DHAVE_CONFIG_H,,@DEFS@)
+ CPPFLAGS        = @CPPFLAGS@ -I$(srcdir) -I$(top_srcdir) -I$(top_builddir) \
+ 		  -I$(top_srcdir)/sim.src -I$(top_srcdir)/gui.src
+-CFLAGS          = @CFLAGS@ @WALL_FLAG@
+-CXXFLAGS        = @CXXFLAGS@ @WALL_FLAG@
++CFLAGS          = -I$(srcdir) @CFLAGS@ -Wall
++CXXFLAGS        = -I$(srcdir) @CXXFLAGS@ -Wall
+ WINSOCK_AVAIL   = @WINSOCK_AVAIL@
+ 
+ prefix          = @prefix@
