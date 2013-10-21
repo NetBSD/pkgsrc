@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.7 2013/03/17 15:27:18 obache Exp $
+# $NetBSD: finddepends,v 1.8 2013/10/21 10:43:28 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 #
@@ -107,6 +107,8 @@ print "\n";
 
 @makefiles = <$PKGSRCDIR/*/*/Makefile*>;
 @optionfiles = <$PKGSRCDIR/*/*/options.mk>;
+push(@makefiles, @optionfiles);
+@optionfiles = <$PKGSRCDIR/*/*/mozilla-common.mk>;
 push(@makefiles, @optionfiles);
 
 for $makefile (@makefiles) {
