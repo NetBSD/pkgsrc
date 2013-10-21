@@ -1,2 +1,2 @@
-Similar to List::MoreUtils, Hash::MoreUtils contains trivial but
+Similar to "List::MoreUtils", "Hash::MoreUtils" contains trivial but
 commonly-used functionality for hashes.
