@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1795 2013/10/20 15:07:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.1796 2013/10/21 15:13:07 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1626,6 +1626,7 @@ SUBDIR+=	scintilla
 SUBDIR+=	scmcvs
 SUBDIR+=	scons
 SUBDIR+=	sdcc
+SUBDIR+=	sdcc3
 SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfio
