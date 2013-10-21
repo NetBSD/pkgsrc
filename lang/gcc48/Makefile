@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/06/02 18:12:22 adam Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/21 20:26:19 adam Exp $
 
-GCC_PKGNAME=		gcc48
-.include		"version.mk"
+GCC_PKGNAME=	gcc48
+.include	"version.mk"
 
 DISTNAME=	gcc-${GCC48_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC48_DIST_VERSION}
@@ -59,6 +59,8 @@ LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
 # Needed on Darwin when LDFLAGS point to a SDK
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
+# GCC does not understand this option; remove it, or stage build will fail
+BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
@@ -78,7 +80,6 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
-
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
