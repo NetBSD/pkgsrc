@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12654 2013/10/20 22:04:41 wiz Exp $
+$NetBSD: TODO,v 1.12655 2013/10/21 09:51:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
-	o aria2-1.18.0
+	o aria2-1.18.1
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -506,7 +506,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.3.0 [etm successor]
+	o etm2-2.3.1 [etm successor]
 	o ettercap-0.7.6
 	o evince-3.8.3
 	o evolution-3.0.0
@@ -725,7 +725,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.3
 	o libconfig-1.4.9 [pkg/48316]
-	o libextractor-1.0.0
+	o libextractor-1.2
 	o libexttextcat-3.4.3
 	o libflash-0.4.13
 	o libfolks-0.8.0
@@ -800,7 +800,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o miredo-1.2.4
 	o mknmz-wwwoffle-0.7.2
 	o mksh-47
-	o mkvtoolnix-6.4.1
+	o mkvtoolnix-6.5.0
 	o mnemosyne-2.2.1
 	o modular-xorg-server-1.14.3
 	o molden-4.8 [after which PR 40252 can be closed]
@@ -903,6 +903,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
+	o postgresql-postgis-2.1.0
 	o powermanga-0.91
 	o powwow-1.2.16
 	o prboom-2.5.0.8
@@ -1058,6 +1059,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thunderbird-24
 	o tightvnc-2.0.95
 	o tile-0.7.4
+	o tinc-1.0.23
 	o tk-8.6
 	o tkgate-1.8.7
 	o tkhylafax-3.2
