@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/02/06 19:30:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2013/10/21 09:05:09 fhajny Exp $
 #
 
 DISTNAME=		hping2.0.0-rc3
@@ -20,6 +20,8 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 CONFIGURE_ENV+=		PCAPINCDIR=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ENV+=		PCAPLIBDIR=${BUILDLINK_PREFIX.libpcap}/lib
+
+CFLAGS.SunOS+= -Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/16 08:09:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2013/10/21 09:01:20 fhajny Exp $
 #
 
 DISTNAME=	balance-3.54
@@ -12,6 +12,11 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEFS+=	VARBASE
 MAKE_ENV+=	VARBASE=${VARBASE}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	LIBRARIES="-lsocket -lnsl"
+.endif
 
 OWN_DIRS_PERMS=	${VARBASE}/run/balance \
 		${ROOT_USER} ${ROOT_GROUP} 0750
