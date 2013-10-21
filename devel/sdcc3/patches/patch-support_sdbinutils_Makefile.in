@@ -1,0 +1,16 @@
+$NetBSD: patch-support_sdbinutils_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+--- support/sdbinutils/Makefile.in.orig	2012-11-05 13:26:25.000000000 +0000
++++ support/sdbinutils/Makefile.in
+@@ -2260,7 +2260,10 @@ mail-report-with-warnings.log: warning.l
+ 
+ # Installation targets.
+ 
+-.PHONY: install uninstall
++.PHONY: install uninstall dep
++
++dep: ;
++
+ install:
+ 	@: $(MAKE); $(unstage)
+ 	@r=`${PWD_COMMAND}`; export r; \
