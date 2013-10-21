@@ -1,0 +1,34 @@
+$NetBSD: patch-device_non-free_lib_Makefile.in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+--- device/non-free/lib/Makefile.in.orig	2012-01-06 12:38:30.000000000 +0000
++++ device/non-free/lib/Makefile.in
+@@ -349,17 +349,6 @@ clean_intermediate-pic14:
+ # ---------------------------------------------------
+ install: all installdirs
+ 	[ ! -d "$(BUILDDIR)" ] || $(CP_U) -r $(BUILDDIR)/* $(sdcc_libdir)
+-	$(CP_U) -r $(srcdir)/pic14 $(srcdir)/pic16 $(sdcc_libdir)/src
+-
+-	for src in pic14 pic16; do \
+-	  find $(sdcc_libdir)/src/$$src -depth \
+-	    \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
+-	    -name '*.lst' -o -name '*.asm' -o -name '.svn' -o -name 'autom4te.cache' -o \
+-	    -name 'build' -o -name 'bin' -o -name 'Makefile*' -o -name 'config*' -o \
+-	    -name 'depcomp' -o -name 'missing' -o -name 'install-sh' -o \
+-	    -name 'bootstrap.sh' \) \
+-	    -exec rm -rf {} + ; \
+-	done
+ 
+ # Deleting all the installed files
+ # --------------------------------
+@@ -379,10 +368,7 @@ installcheck:
+ # Creating installation directories
+ # ---------------------------------
+ installdirs:
+-	for libdir in pic16 pic14; do \
+-	  mkdir -p $(sdcc_libdir)/$$libdir; \
+-	done
+-	mkdir -p $(sdcc_libdir)/src
++	mkdir -p $(sdcc_libdir)
+ 
+ # Creating dependencies
+ # ---------------------
