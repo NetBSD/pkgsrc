@@ -1,0 +1,99 @@
+$NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+
+* Make the makefile stop on error.
+* Build sdcpp in earlier stage.
+
+--- Makefile.in.orig	2012-11-12 21:58:19.000000000 +0000
++++ Makefile.in
+@@ -106,19 +106,19 @@ all: checkconf sdcc
+ tini: checkconf sdcc-tini
+ 
+ sdcc-libs:
+-	for lib in $(SDCC_LIBS); do $(MAKE) -C $$lib; done
++	for lib in $(SDCC_LIBS); do $(MAKE) -C $$lib || exit 1; done
+ 
+ sdcc-cc: sdcc-libs
+ 	$(MAKE) -C src
+ 
+ sdcc-as:
+-	for as in $(SDCC_AS); do $(MAKE) -C $$as ; done
++	for as in $(SDCC_AS); do $(MAKE) -C $$as || exit 1; done
+ 
+ sdcc-ld:
+ 	$(MAKE) -C sdas/linksrc $(SDCC_LD)
+ 
+ sdcc-misc:
+-	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc ; done
++	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc || exit 1; done
+ 
+ sdcc-scripts:
+ 	$(MAKE) -C $(SDCC_SCRIPTS)
+@@ -172,7 +172,7 @@ sdcc-base: sdcc-cc sdcc-as sdcc-ld
+ install: checkconf sdcc
+ 	$(MAKE) -f main.mk install
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg install ;\
++	  $(MAKE) -C $$pkg install || exit 1;\
+ 	done
+ 
+ # Deleting all the installed files
+@@ -180,7 +180,7 @@ install: checkconf sdcc
+ uninstall:
+ 	$(MAKE) -f main.mk uninstall
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg uninstall ;\
++	  $(MAKE) -C $$pkg uninstall || exit 1;\
+ 	done
+ 
+ # Deleting all files created by building the program
+@@ -190,7 +190,7 @@ clean:
+ 	$(MAKE) -f $(srcdir)/clean.mk clean
+ 	@echo "+ Cleaning packages in their directories..."
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) clean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) clean || exit 1;\
+ 	done
+ 
+ # Deleting all files created by configuring or building the program
+@@ -198,10 +198,10 @@ clean:
+ distclean:
+ 	@echo "+ DistCleaning packages using clean.mk..."
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) distclean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) distclean || exit 1;\
+ 	done
+ 	for pkg in $(SDCC_EXTRA); do \
+-	  $(MAKE) -C $$pkg distclean; \
++	  $(MAKE) -C $$pkg distclean || exit 1; \
+ 	done
+ 	@echo "+ DistCleaning root of the project..."
+ 	$(MAKE) -f $(srcdir)/clean.mk distclean
+@@ -211,7 +211,7 @@ distclean:
+ mostlyclean: clean
+ 	$(MAKE) -f $(srcdir)/clean.mk mostlyclean
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) mostlyclean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) mostlyclean || exit 1;\
+ 	done
+ 
+ # Deleting everything that can reconstructed by this Makefile. It deletes
+@@ -220,7 +220,7 @@ mostlyclean: clean
+ realclean: distclean
+ 	$(MAKE) -f $(srcdir)/clean.mk realclean
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) realclean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) realclean || exit 1;\
+ 	done
+ 
+ # Creating distribution
+@@ -244,8 +244,9 @@ installcheck:
+ # ---------------------
+ dep: $(SDCC_LIBS)
+ 	$(MAKE) -f main.mk dep
++	${MAKE} -C support/cpp dep
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg dep ;\
++	  $(MAKE) -C $$pkg dep || exit 1;\
+ 	done
+ 
+ # My rules
