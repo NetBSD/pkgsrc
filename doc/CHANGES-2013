@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3873 2013/10/21 10:44:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3874 2013/10/21 11:29:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5464,3 +5464,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/socat to 1.7.2.2 [fhajny 2013-10-21]
 	Updated net/miniupnpd to 1.8.20130730 [fhajny 2013-10-21]
 	Updated pkgtools/revbump to 2.5 [wiz 2013-10-21]
+	Added archivers/lrzip version 0.616 [fhajny 2013-10-21]
