@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/02/16 11:21:03 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/10/21 09:48:10 fhajny Exp $
 
 DISTNAME=	dosbox-0.74
 PKGREVISION=	4
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CPPFLAGS.SunOS+=	-DDISABLE_JOYSTICK
+LDFLAGS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	share/doc/dosbox
 
 SUBST_CLASSES+=		fixme
