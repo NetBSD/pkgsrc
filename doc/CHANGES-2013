@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3879 2013/10/21 17:52:51 sno Exp $
+$NetBSD: CHANGES-2013,v 1.3880 2013/10/21 17:56:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-CPAN to 2.0000 [sno 2013-10-21]
 	Updated devel/p5-File-ConfigDir to 0.008 [sno 2013-10-21]
 	Updated devel/p5-Hash-MoreUtils to 0.04 [sno 2013-10-21]
+	Updated devel/p5-Module-CoreList to 3.00 [sno 2013-10-21]
