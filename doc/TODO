@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12655 2013/10/21 09:51:11 wiz Exp $
+$NetBSD: TODO,v 1.12656 2013/10/21 09:54:17 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1002,7 +1002,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o snd-10.6
 	o snes9x-1.53
 	o snort-2.9.5.5
-	o socat-1.7.2.2
 	o solfege-3.22.0
 	o sope-4.6
 	o sound-juicer-2.32.0
