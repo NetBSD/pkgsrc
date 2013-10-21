@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3870 2013/10/21 09:48:21 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.3871 2013/10/21 09:54:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5461,3 +5461,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-cython to 0.19.2 [wiz 2013-10-20]
 	Updated textproc/the_silver_searcher to 0.17 [wiz 2013-10-20]
 	Updated net/ipv6calc to 0.94.1 [fhajny 2013-10-21]
+	Updated net/socat to 1.7.2.2 [fhajny 2013-10-21]
