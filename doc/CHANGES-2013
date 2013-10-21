@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3875 2013/10/21 15:05:50 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3876 2013/10/21 15:14:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5466,3 +5466,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/revbump to 2.5 [wiz 2013-10-21]
 	Added archivers/lrzip version 0.616 [fhajny 2013-10-21]
 	Added time/dateutils version 0.2.5 [wiz 2013-10-21]
+	Added devel/sdcc3 version 3.3.0 [ryoon 2013-10-21]
