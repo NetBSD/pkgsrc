@@ -1,8 +1,7 @@
-# $NetBSD: mozilla-common.mk,v 1.17 2013/09/21 20:35:46 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.18 2013/10/21 10:46:18 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
-# used by devel/xulrunner/Makefile
 # used by mail/thunderbird/Makefile
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
