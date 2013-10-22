@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/12/09 15:19:30 wiz Exp $
+$NetBSD: distinfo,v 1.5 2013/10/22 11:32:23 wiz Exp $
 
-SHA1 (libexttextcat-3.4.0.tar.xz) = 2365a3c73d08250eae54e76f7306a7b806d141e3
-RMD160 (libexttextcat-3.4.0.tar.xz) = 069e209c7934ca72d7aceedc7e45fc19edf5a2f5
-Size (libexttextcat-3.4.0.tar.xz) = 987560 bytes
+SHA1 (libexttextcat-3.4.3.tar.xz) = 7a1ad9e6896fa5dcd2ab64c0789bfbc4ab3c75d1
+RMD160 (libexttextcat-3.4.3.tar.xz) = 9c033eb69be0c2ad31929f744568f6bfbde474ed
+Size (libexttextcat-3.4.3.tar.xz) = 988180 bytes
