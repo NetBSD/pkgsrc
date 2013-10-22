@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3890 2013/10/22 13:15:13 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3891 2013/10/22 19:32:06 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5482,3 +5482,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/neon to 0.30.0 [wiz 2013-10-22]
 	Updated multimedia/ffmpeg2theora to 0.29nb1 [tron 2013-10-22]
 	Updated www/libmicrohttpd to 0.9.31 [adam 2013-10-22]
+	Updated audio/icecast to 2.3.3 [drochner 2013-10-22]
+	Updated audio/libshout to 2.3.1 [drochner 2013-10-22]
