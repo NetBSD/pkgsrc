@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12659 2013/10/21 20:28:51 adam Exp $
+$NetBSD: TODO,v 1.12660 2013/10/22 11:32:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -725,7 +725,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libchamplain08-0.12.3
 	o libconfig-1.4.9 [pkg/48316]
 	o libextractor-1.2
-	o libexttextcat-3.4.3
 	o libflash-0.4.13
 	o libfolks-0.8.0
 	o libgdata-0.14.0

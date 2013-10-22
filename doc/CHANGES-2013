@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3885 2013/10/22 03:22:25 taca Exp $
+$NetBSD: CHANGES-2013,v 1.3886 2013/10/22 11:32:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5477,3 +5477,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/gcc48 to 4.8.2 [adam 2013-10-21]
 	Updated lang/gcc48-libs to 4.8.2nb1 [adam 2013-10-21]
 	Updated mail/roundcube to 0.9.5 [taca 2013-10-22]
+	Updated textproc/libexttextcat to 3.4.3 [wiz 2013-10-22]
