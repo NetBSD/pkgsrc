@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/11 07:39:17 tron Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/22 12:45:29 tron Exp $
 
 DISTNAME=	ffmpeg2theora-0.29
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://v2v.cc/~j/ffmpeg2theora/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,7 +30,7 @@ do-install:
 	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 
