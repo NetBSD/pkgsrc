@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/10/04 21:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/10/22 12:21:03 obache Exp $
 
 DISTNAME=		rcs-5.9.1
 CATEGORIES=		devel scm
@@ -26,6 +26,11 @@ CONFIGURE_ENV+=		PATH=${LOCALBASE}/bin:"$$PATH"
 REPLACE_SH=		build-aux/extract-help
 
 INFO_FILES=	yes
+
+# configure will be modified by pkgsrc framework with timestamp update.
+# sync timestamp with man/REL to avoid regeneration of man. 
+post-configure:
+	${TOUCH} -r ${WRKSRC}/man/REL ${WRKSRC}/configure
 
 post-install:
 	${LN} -s ${DESTDIR}${PREFIX}/bin/rlog ${DESTDIR}${PREFIX}/bin/rcslog
