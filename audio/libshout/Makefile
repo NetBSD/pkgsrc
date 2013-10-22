@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/09/12 00:24:44 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/22 19:31:26 drochner Exp $
 #
 
-DISTNAME=	libshout-2.2.2
+DISTNAME=	libshout-2.3.1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/libshout/
 
