@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2012/09/25 08:07:31 apb Exp $
+# $NetBSD: hacks.mk,v 1.2 2013/10/22 14:27:24 jperkin Exp $
 
 ### [Sat Sep 22 11:21:06 UTC 2012 : apb]
 ### g++-4.5.3 and 4.5.4 on NetBSD/i386 fails with an internal compiler error
@@ -14,4 +14,9 @@ SUBST_MESSAGE.pr46978=	Working around optimizer bug (NetBSD PR 46978)
 SUBST_FILES.pr46978=	src/gui/Makefile
 SUBST_SED.pr46978=	-e '/^CXXFLAGS/s/-O2/-O1/'
 .  endif
+.endif
+
+# QTBUG-5986
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-O[23]
 .endif
