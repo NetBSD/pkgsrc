@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/08/04 10:29:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/10/22 10:51:59 tron Exp $
 
 BUILDLINK_TREE+=	ffmpeg2
 
@@ -33,6 +33,10 @@ pkgbase := ffmpeg2
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg2:Mlibvpx)
 .  include "../../multimedia/libvpx/buildlink3.mk"
 .endif
+
+BUILDLINK_INCDIRS.ffmpeg2+=		include/ffmpeg2
+BUILDLINK_LIBDIRS.ffmpeg2+=		lib/ffmpeg2
+BUILDLINK_FNAME_TRANSFORM.ffmpeg2+=	-e 's|lib/ffmpeg2/pkgconfig/|lib/pkgconfig/|'
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
