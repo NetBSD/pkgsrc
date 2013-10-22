@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3887 2013/10/22 11:38:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3888 2013/10/22 11:44:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5479,3 +5479,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/roundcube to 0.9.5 [taca 2013-10-22]
 	Updated textproc/libexttextcat to 3.4.3 [wiz 2013-10-22]
 	Updated converters/libvisio to 0.0.31 [wiz 2013-10-22]
+	Updated www/neon to 0.30.0 [wiz 2013-10-22]
