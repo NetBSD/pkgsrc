@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/06/16 05:42:20 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2013/10/22 10:18:57 khorben Exp $
 
-This meta package dosen't contain packages which isn't distributed with
+This meta package doesn't contain packages which isn't distributed with
 PHP 5.3.x any more.
 
 ===========================================================================
