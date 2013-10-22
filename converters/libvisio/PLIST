@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/08 23:49:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/10/22 11:38:48 wiz Exp $
 bin/vsd2raw
 bin/vsd2text
 bin/vsd2xhtml
@@ -82,6 +82,9 @@ share/doc/libvisio/html/VSDXMLTokenMap_8h_source.html
 share/doc/libvisio/html/VSDXParser_8cpp.html
 share/doc/libvisio/html/VSDXParser_8h.html
 share/doc/libvisio/html/VSDXParser_8h_source.html
+share/doc/libvisio/html/VSDXTheme_8cpp.html
+share/doc/libvisio/html/VSDXTheme_8h.html
+share/doc/libvisio/html/VSDXTheme_8h_source.html
 share/doc/libvisio/html/VSDZipStream_8cpp.html
 share/doc/libvisio/html/VSDZipStream_8h.html
 share/doc/libvisio/html/VSDZipStream_8h_source.html
@@ -291,6 +294,8 @@ share/doc/libvisio/html/classlibvisio_1_1VSDXRelationship-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXRelationship.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXRelationships-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDXRelationships.html
+share/doc/libvisio/html/classlibvisio_1_1VSDXTheme-members.html
+share/doc/libvisio/html/classlibvisio_1_1VSDXTheme.html
 share/doc/libvisio/html/classlibvisio_1_1VSDZipStream-members.html
 share/doc/libvisio/html/classlibvisio_1_1VSDZipStream.html
 share/doc/libvisio/html/classlibvisio_1_1VSDZipStream.png
@@ -300,6 +305,8 @@ share/doc/libvisio/html/classlibvisio_1_1XmlParserException.html
 share/doc/libvisio/html/closed.png
 share/doc/libvisio/html/dir_000000.html
 share/doc/libvisio/html/dir_000001.html
+share/doc/libvisio/html/dir_000002.html
+share/doc/libvisio/html/dir_000003.html
 share/doc/libvisio/html/doxygen.css
 share/doc/libvisio/html/doxygen.png
 share/doc/libvisio/html/files.html
@@ -406,7 +413,6 @@ share/doc/libvisio/html/globals_defs_0x6d.html
 share/doc/libvisio/html/globals_defs_0x73.html
 share/doc/libvisio/html/globals_defs_0x74.html
 share/doc/libvisio/html/globals_defs_0x76.html
-share/doc/libvisio/html/globals_func.html
 share/doc/libvisio/html/globals_vars.html
 share/doc/libvisio/html/globals_vars_0x78.html
 share/doc/libvisio/html/hierarchy.html
@@ -447,6 +453,8 @@ share/doc/libvisio/html/structlibvisio_1_1VSDFont-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDFont.html
 share/doc/libvisio/html/structlibvisio_1_1VSDLineStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDLineStyle.html
+share/doc/libvisio/html/structlibvisio_1_1VSDMisc-members.html
+share/doc/libvisio/html/structlibvisio_1_1VSDMisc.html
 share/doc/libvisio/html/structlibvisio_1_1VSDOptionalCharStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDOptionalCharStyle.html
 share/doc/libvisio/html/structlibvisio_1_1VSDOptionalFillStyle-members.html
@@ -459,8 +467,14 @@ share/doc/libvisio/html/structlibvisio_1_1VSDOptionalTextBlockStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDOptionalTextBlockStyle.html
 share/doc/libvisio/html/structlibvisio_1_1VSDParaStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDParaStyle.html
+share/doc/libvisio/html/structlibvisio_1_1VSDSVGGeneratorPrivate-members.html
+share/doc/libvisio/html/structlibvisio_1_1VSDSVGGeneratorPrivate.html
 share/doc/libvisio/html/structlibvisio_1_1VSDTextBlockStyle-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDTextBlockStyle.html
+share/doc/libvisio/html/structlibvisio_1_1VSDXClrScheme-members.html
+share/doc/libvisio/html/structlibvisio_1_1VSDXClrScheme.html
+share/doc/libvisio/html/structlibvisio_1_1VSDXVariationClrScheme-members.html
+share/doc/libvisio/html/structlibvisio_1_1VSDXVariationClrScheme.html
 share/doc/libvisio/html/structlibvisio_1_1VSDZipStreamImpl-members.html
 share/doc/libvisio/html/structlibvisio_1_1VSDZipStreamImpl.html
 share/doc/libvisio/html/structlibvisio_1_1XForm-members.html
