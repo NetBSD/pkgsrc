@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3888 2013/10/22 11:44:48 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3889 2013/10/22 12:45:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5480,3 +5480,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/libexttextcat to 3.4.3 [wiz 2013-10-22]
 	Updated converters/libvisio to 0.0.31 [wiz 2013-10-22]
 	Updated www/neon to 0.30.0 [wiz 2013-10-22]
+	Updated multimedia/ffmpeg2theora to 0.29nb1 [tron 2013-10-22]
