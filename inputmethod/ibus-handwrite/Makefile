@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/10/10 14:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2013/10/23 12:15:20 obache Exp $
 #
 
 DISTNAME=	ibus-handwrite-2.1.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus-handwrite.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +23,11 @@ USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-zinnia
 CONFIGURE_ARGS+=	--with-zinnia-tomoe=${ZINNIA_TOMOE_DIR}/lib/zinnia/model/tomoe
+
+SUBST_CLASSES+=		locale_dir
+SUBST_STAGE.locale_dir=	pre-configure
+SUBST_FILES.locale_dir=	src/main.c
+SUBST_VARS.locale_dir=	_PKGLOCALEDIR
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
