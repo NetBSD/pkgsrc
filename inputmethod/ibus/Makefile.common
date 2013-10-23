@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1 2013/10/23 11:50:04 obache Exp $
+#
+# used by inputmethod/ibus/Makefile
+# used by inputmethod/ibus-python/Makefile
+
+DISTNAME=	ibus-1.5.4
+CATEGORIES=	inputmethod
+MASTER_SITES=	http://ibus.googlecode.com/files/
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/ibus/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/ibus/patches
+
+MAINTAINER=	obache@NetBSD.org
+HOMEPAGE=	http://code.google.com/p/ibus/
+LICENSE=	gnu-lgpl-v2.1
