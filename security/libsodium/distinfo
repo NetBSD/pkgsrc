@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/10/03 08:24:59 obache Exp $
+$NetBSD: distinfo,v 1.5 2013/10/23 17:08:03 wiz Exp $
 
-SHA1 (libsodium-0.4.3.tar.gz) = 5652e406f6b75996378c580d1106f75186a64dc9
-RMD160 (libsodium-0.4.3.tar.gz) = 6a1d936011adf71f69f728965db0a45634dea9c2
-Size (libsodium-0.4.3.tar.gz) = 523169 bytes
+SHA1 (libsodium-0.4.5.tar.gz) = 1ccb98a90ad499656eccef9b69e1c899e35d7139
+RMD160 (libsodium-0.4.5.tar.gz) = 8ff7b3171740e6c2f054c9fe7c68e4257b131ad5
+Size (libsodium-0.4.5.tar.gz) = 540467 bytes
