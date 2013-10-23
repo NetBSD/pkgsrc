@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2012/06/12 15:46:01 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2013/10/23 15:46:22 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
 PKG_SUPPORTED_OPTIONS=	pam inet6 wrap tls quota ldap proftpd-readme ban
@@ -66,6 +66,7 @@ PLIST.sql=	yes
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 MODULES:=	${MODULES}:mod_sql:mod_sql_postgres
+PLIST.sql=	yes
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
