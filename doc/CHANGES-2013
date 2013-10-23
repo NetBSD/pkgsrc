@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3919 2013/10/23 17:08:15 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3920 2013/10/23 17:42:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5512,3 +5512,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-t9 to 2.1.0.20100601nb20 [obache 2013-10-23]
 	Updated inputmethod/ibus-qt to 1.3.2nb6 [obache 2013-10-23]
 	Updated security/libsodium to 0.4.5 [wiz 2013-10-23]
+	Added devel/gengetopt version 2.22.6 [wiz 2013-10-23]
