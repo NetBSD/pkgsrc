@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 14:25:11 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/10/23 12:11:14 obache Exp $
 #
 
 DISTNAME=	ibus-array-0.0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus-array.googlecode.com/files/
 
@@ -10,6 +10,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus-array/
 COMMENT=	Array 30 Input Method for iBus
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-ibus-python-[0-9]*:../../inputmethod/ibus-python
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
