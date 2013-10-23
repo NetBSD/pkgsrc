@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2013/10/19 09:07:06 adam Exp $
+# $NetBSD: Makefile,v 1.22 2013/10/23 12:39:55 obache Exp $
 #
 
-DISTNAME=	ibus-pinyin-1.4.0
-PKGREVISION=	6
+DISTNAME=	ibus-pinyin-1.5.0
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
-DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
@@ -18,33 +16,17 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
-# taken from ${WRKSRC}/data/db/open-phrase/Makefile.in
-DBVER=		1.2.99
-DBTAR=		pinyin-database-${DBVER}.tar.bz2
-
-post-extract:
-	${RUN} cd ${WRKSRC}/data/db/open-phrase;	\
-	mkdir -p db;					\
-	mv ${WRKDIR}/db/main.db db/open-phrase.db;	\
-	touch ${DBTAR} stamp-db
-
 SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	setup/ibus-setup-pinyin.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
-CONFIGURE_ARGS+=	--disable-db-android
-CONFIGURE_ARGS+=	--enable-db-open-phrase
 
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
-
-.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
-.  include "../../devel/libuuid/buildlink3.mk"
-.endif
 
 .if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)) || !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--disable-boost
@@ -60,6 +42,7 @@ SUBST_SED.shared_ptr=	-e 's,std::shared_ptr,boost::shared_ptr,g'
 
 .include "../../inputmethod/ibus/bad-env-usage.mk"
 
+.include "../../converters/pyzy/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"
