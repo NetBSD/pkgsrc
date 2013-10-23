@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3918 2013/10/23 12:57:24 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3919 2013/10/23 17:08:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-skk to 1.4.1nb11 [obache 2013-10-23]
 	Updated inputmethod/ibus-t9 to 2.1.0.20100601nb20 [obache 2013-10-23]
 	Updated inputmethod/ibus-qt to 1.3.2nb6 [obache 2013-10-23]
+	Updated security/libsodium to 0.4.5 [wiz 2013-10-23]
