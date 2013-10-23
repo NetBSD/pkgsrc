@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.22 2013/05/12 05:47:24 richard Exp $
+$NetBSD: distinfo,v 1.23 2013/10/23 08:54:59 wiz Exp $
 
-SHA1 (make-3.82.tar.bz2) = b8a8a99e4cb636a213aad3816dda827a92b9bbed
-RMD160 (make-3.82.tar.bz2) = e3d1f7019549553b9fc7a88884c9b85d25a60d21
-Size (make-3.82.tar.bz2) = 1242186 bytes
-SHA1 (patch-aa) = 688c7469e8a71a06b89f5f953a6a052563d840c6
-SHA1 (patch-ac) = de18956fde66fa3fc61a991bb3e6724d9c5b1eac
-SHA1 (patch-af) = aafc56a38b07ad6dc1bebb602beeb8c31cbb8c49
-SHA1 (patch-ah) = 0805ae7b6001283d1cc04297b762322684c113a2
+SHA1 (make-4.0.tar.bz2) = c819622dc84e2290c351646b8a0ec4df0df12bb6
+RMD160 (make-4.0.tar.bz2) = 9a6198954e3c122adbe72f7358d897def498e565
+Size (make-4.0.tar.bz2) = 1341927 bytes
+SHA1 (patch-af) = b29956015c04d2a4b2b6855efbba884b93923c8b
 SHA1 (patch-pa) = 2c0168db7afec3da98b30392290e5b9464ea7b5e
-SHA1 (patch-remake.c) = b116a6bb4bbcd8488bb241f75c08301f23c071ef
-SHA1 (patch-tests_scripts_features_parallelism) = ac6008d214144637bf73fcb68ba53f7ac732a4cc
