@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/10/23 17:41:57 wiz Exp $
+
+SHA1 (gengetopt-2.22.6.tar.gz) = c93bdec17f247aa32b3cd6530a6f68aa430d67f5
+RMD160 (gengetopt-2.22.6.tar.gz) = e4e147cb4e75b4a0d0e959ae737b3082f534c3da
+Size (gengetopt-2.22.6.tar.gz) = 1056293 bytes
