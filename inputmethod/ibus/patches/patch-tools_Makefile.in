@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_Makefile.in,v 1.1 2013/10/23 11:52:50 obache Exp $
+
+* honor $(mandir)
+
+--- tools/Makefile.in.orig	2013-09-20 03:17:27.000000000 +0000
++++ tools/Makefile.in
+@@ -526,7 +526,7 @@ bash_completiondir = @datadir@/bash-comp
+ man_one_in_files = ibus.1.in
+ man_one_files = $(man_one_in_files:.1.in=.1)
+ man_one_DATA = $(man_one_files:.1=.1.gz) 
+-man_onedir = $(datadir)/man/man1
++man_onedir = $(mandir)/man1
+ EXTRA_DIST = \
+ 	$(man_one_in_files) \
+ 	ibus.bash \
