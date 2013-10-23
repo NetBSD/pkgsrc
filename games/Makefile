@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2013/10/23 11:34:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.364 2013/10/23 11:36:15 ryoon Exp $
 #
 
 COMMENT=	Games
@@ -254,6 +254,7 @@ SUBDIR+=	pushover
 SUBDIR+=	puzzles
 SUBDIR+=	py-pygame
 SUBDIR+=	py-ranking
+SUBDIR+=	py-renpy
 SUBDIR+=	py-trueskill
 SUBDIR+=	pysolfc
 SUBDIR+=	pytraffic
