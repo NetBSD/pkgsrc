@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/10/10 14:42:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2013/10/23 12:31:14 obache Exp $
 #
 
 .include "../../inputmethod/input-pad/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	11
 
 MAINTAINER=	obache@NetBSD.org
 COMMENT=	Python wrapper for Input Pad
@@ -19,7 +18,8 @@ USE_TOOLS+=		gmake pkg-config intltool msgfmt xgettext msgmerge
 
 PKGCONFIG_OVERRIDE+=	input-pad.pc.in
 
-CONFIGURE_ARGS+=	--enable-python=yes
+CONFIGURE_ARGS+=	--enable-pygobject2=yes
+CONFIGURE_ARGS+=	--with-gtk=3.0
 
 BUILD_DIRS=		pyinput-pad
 
