@@ -1,0 +1,27 @@
+$NetBSD: patch-config__unix.py,v 1.1 2013/10/23 11:33:48 ryoon Exp $
+
+* Detect /usr/X11R7
+* Disable portmidi and porttime, porttime is a part of portmidi
+
+--- config_unix.py.orig	2009-05-26 21:15:24.000000000 +0000
++++ config_unix.py
+@@ -17,7 +17,7 @@ localbase = os.environ.get('LOCALBASE', 
+ #these get prefixes with '/usr' and '/usr/local' or the $LOCALBASE
+ origincdirs = ['/include', '/include/SDL', '/include/SDL',
+                '/include/smpeg' ]
+-origlibdirs = ['/lib','/lib64','/X11R6/lib']
++origlibdirs = ['/lib','/lib64','/X11R6/lib','/X11R7/lib']
+ 
+ def confirm(message):
+     "ask a yes/no question, return result"
+@@ -145,8 +145,8 @@ def main():
+         Dependency('PNG', 'png.h', 'libpng', ['png']),
+         Dependency('JPEG', 'jpeglib.h', 'libjpeg', ['jpeg']),
+         Dependency('SCRAP', '', 'libX11', ['X11']),
+-        Dependency('PORTMIDI', 'portmidi.h', 'libportmidi.so', ['portmidi']),
+-        Dependency('PORTTIME', 'porttime.h', 'libporttime.so', ['porttime']),
++        #Dependency('PORTMIDI', 'portmidi.h', 'libportmidi.so', ['portmidi']),
++        #Dependency('PORTTIME', 'porttime.h', 'libporttime.so', ['porttime']),
+         #Dependency('GFX', 'SDL_gfxPrimitives.h', 'libSDL_gfx.so', ['SDL_gfx']),
+     ]
+     if not DEPS[0].found:
