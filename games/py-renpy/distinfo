@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/10/23 11:35:46 ryoon Exp $
+
+SHA1 (renpy-6.15.7-source.tar.bz2) = f4fbd02f21f2f8518415d5f716cf86515df482f1
+RMD160 (renpy-6.15.7-source.tar.bz2) = 7e83282aef5ede167b779572698947705e28389d
+Size (renpy-6.15.7-source.tar.bz2) = 10421736 bytes
+SHA1 (patch-module_setup.py) = 2274903b654b539d7edbd88e465a9a7add60fcb4
