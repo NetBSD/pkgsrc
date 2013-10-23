@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/01/20 20:10:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/23 17:11:09 jperkin Exp $
 #
 
 DISTNAME=	opus-tools-0.1.6
@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd AND gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf pkg-config
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
