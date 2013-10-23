@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3921 2013/10/23 18:23:43 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3922 2013/10/23 19:32:55 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5514,3 +5514,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/libsodium to 0.4.5 [wiz 2013-10-23]
 	Added devel/gengetopt version 2.22.6 [wiz 2013-10-23]
 	Updated archivers/unshield to 0.6 [adam 2013-10-23]
+	Updated audio/py-beets to 1.2.2 [drochner 2013-10-23]
