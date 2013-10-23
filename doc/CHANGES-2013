@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3906 2013/10/23 12:31:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3907 2013/10/23 12:32:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5499,3 +5499,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-hangul to 1.4.2nb1 [obache 2013-10-23]
 	Updated x11/eekboard to 1.0.8 [obache 2013-10-23]
 	Updated inputmethod/input-pad to 1.0.2 [obache 2013-10-23]
+	Updated inputmethod/py-input-pad to 1.0.2 [obache 2013-10-23]
