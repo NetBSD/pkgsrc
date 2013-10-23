@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3891 2013/10/22 19:32:06 drochner Exp $
+$NetBSD: CHANGES-2013,v 1.3892 2013/10/23 08:35:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/libmicrohttpd to 0.9.31 [adam 2013-10-22]
 	Updated audio/icecast to 2.3.3 [drochner 2013-10-22]
 	Updated audio/libshout to 2.3.1 [drochner 2013-10-22]
+	Updated databases/py-bsddb3 to 6.0.0 [wiz 2013-10-23]
