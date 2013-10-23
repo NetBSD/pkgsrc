@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/01/11 14:29:36 hans Exp $
+$NetBSD: distinfo,v 1.5 2013/10/23 18:22:44 adam Exp $
 
-SHA1 (unshield-0.5.1.tar.gz) = 13211a32100947969a8ece6393345332d6ff667b
-RMD160 (unshield-0.5.1.tar.gz) = 5ef4db939437dc5e620cac4d46b03c1d59beb771
-Size (unshield-0.5.1.tar.gz) = 362466 bytes
+SHA1 (unshield-0.6.tar.gz) = 3e1197116145405f786709608a5a636a19f4f3e1
+RMD160 (unshield-0.6.tar.gz) = 1370621e38736f14dab1ec540b9233906b5eaa31
+Size (unshield-0.6.tar.gz) = 320192 bytes
 SHA1 (patch-aa) = 0e100b18c85f72bd7b7bf2fd7ef0eed6d0d20ad9
-SHA1 (patch-ab) = 19db0c305dcd627075c152a48e99d69ab28d39ee
+SHA1 (patch-ab) = df1f927737fa4ab6fd66548bca87585c27a682e7
 SHA1 (patch-lib_file.c) = bdb1ce61bea29683f8def036ac829b5c3252933f
