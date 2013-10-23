@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.locale,v 1.4 2010/08/07 06:31:16 wiz Exp $
+@comment $NetBSD: PLIST.locale,v 1.5 2013/10/23 08:54:59 wiz Exp $
 share/locale/be/LC_MESSAGES/make.mo
+share/locale/cs/LC_MESSAGES/make.mo
 share/locale/da/LC_MESSAGES/make.mo
 share/locale/de/LC_MESSAGES/make.mo
 share/locale/es/LC_MESSAGES/make.mo
