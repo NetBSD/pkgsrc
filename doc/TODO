@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12663 2013/10/22 13:15:13 adam Exp $
+$NetBSD: TODO,v 1.12664 2013/10/23 06:46:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -321,8 +321,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o MAMEDiff-2.30
-	o Mesa-9.2
-	o MesaLib-9.2
+	o Mesa-9.2.2
+	o MesaLib-9.2.2
 	o PAM-0.99.7.1
 	o R-3.0.2
 	o REminiscence-0.1.9
@@ -405,7 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.6
+	o calibre-1.7
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -573,7 +573,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glibmm-2.38.0
 	o glom-1.14.2 [GNOME 2.26]
-	o glu-9.2.0
+	o glu-9.2.2
 	o gmake-4.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -870,7 +870,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
-	o parallel-20130922
+	o parallel-20131022
 	o pari-2.5.3
 	o patch-2.7.1
 	o pbzip2-1.1.6
@@ -895,6 +895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o po4a-0.41
 	o pokerth-0.9.3
 	o polsms-2.1.0
+	o popa3d-1.0.3
 	o poppass-4.0.14
 	o postal-0.72
 	o postgresql-postgis-2.1.0
