@@ -1,10 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/17 11:58:44 obache Exp $
-${PYSITELIB}/_anthy.la
-${PYSITELIB}/anthy.py
+@comment $NetBSD: PLIST,v 1.3 2013/10/23 12:09:28 obache Exp $
+include/ibus-anthy-1.0/anthygcontext.h
+lib/girepository-1.0/Anthy-9000.typelib
+lib/libanthygobject-1.0.la
 libexec/ibus-engine-anthy
 libexec/ibus-setup-anthy
+share/applications/ibus-setup-anthy.desktop
+share/gir-1.0/Anthy-9000.gir
+share/ibus-anthy/dicts/era.t
 share/ibus-anthy/dicts/oldchar.t
 share/ibus-anthy/dicts/symbol.t
+share/ibus-anthy/dicts/zipcode.t
+share/ibus-anthy/engine/_config.py
+share/ibus-anthy/engine/_config.pyc
+share/ibus-anthy/engine/_config.pyo
+share/ibus-anthy/engine/default.xml
 share/ibus-anthy/engine/engine.py
 share/ibus-anthy/engine/engine.pyc
 share/ibus-anthy/engine/engine.pyo
@@ -32,7 +41,9 @@ share/ibus-anthy/engine/tables.pyo
 share/ibus-anthy/engine/thumb.py
 share/ibus-anthy/engine/thumb.pyc
 share/ibus-anthy/engine/thumb.pyo
-share/ibus-anthy/icons/ibus-anthy.png
+share/ibus-anthy/setup/_config.py
+share/ibus-anthy/setup/_config.pyc
+share/ibus-anthy/setup/_config.pyo
 share/ibus-anthy/setup/anthyprefs.py
 share/ibus-anthy/setup/anthyprefs.pyc
 share/ibus-anthy/setup/anthyprefs.pyo
@@ -42,8 +53,10 @@ share/ibus-anthy/setup/main.pyo
 share/ibus-anthy/setup/prefs.py
 share/ibus-anthy/setup/prefs.pyc
 share/ibus-anthy/setup/prefs.pyo
-share/ibus-anthy/setup/setup.glade
+share/ibus-anthy/setup/setup.ui
 share/ibus/component/anthy.xml
+share/icons/hicolor/scalable/apps/ibus-anthy.svg
+share/locale/el/LC_MESSAGES/ibus-anthy.mo
 share/locale/fr/LC_MESSAGES/ibus-anthy.mo
 share/locale/ja/LC_MESSAGES/ibus-anthy.mo
 share/locale/zh_CN/LC_MESSAGES/ibus-anthy.mo
