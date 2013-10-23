@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3892 2013/10/23 08:35:38 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3893 2013/10/23 08:55:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5485,3 +5485,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/icecast to 2.3.3 [drochner 2013-10-22]
 	Updated audio/libshout to 2.3.1 [drochner 2013-10-22]
 	Updated databases/py-bsddb3 to 6.0.0 [wiz 2013-10-23]
+	Updated devel/gmake to 4.0 [wiz 2013-10-23]
