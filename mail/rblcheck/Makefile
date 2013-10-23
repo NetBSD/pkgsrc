@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/21 17:37:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.19 2013/10/23 15:35:50 jperkin Exp $
 
 DISTNAME=	rblcheck-1.5
 PKGREVISION=	1
@@ -18,6 +18,8 @@ GNU_CONFIGURE=	yes
 DOCS=		README NEWS docs/rblcheck.ps
 
 AUTO_MKDIRS=	yes
+
+LDFLAGS.SunOS+=	-lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rblcheck ${DESTDIR}${PREFIX}/bin
