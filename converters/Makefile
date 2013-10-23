@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2013/08/24 16:13:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.126 2013/10/23 11:42:47 obache Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -85,6 +85,7 @@ SUBDIR+=	py-simplejson
 SUBDIR+=	py-zbase32
 SUBDIR+=	py-zfec
 SUBDIR+=	py-zhCodecs
+SUBDIR+=	pyzy
 SUBDIR+=	qkc
 SUBDIR+=	qrencode
 SUBDIR+=	recode
