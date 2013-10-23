@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:40:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/23 18:15:19 wiz Exp $
 
 DISTNAME=	namespace-autoclean-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/namespace-autoclean/
 COMMENT=	Keep imports out of your namespace
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Moose>2:../../devel/p5-Moose
+DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
 DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-namespace-clean>=0.11:../../devel/p5-namespace-clean
 
