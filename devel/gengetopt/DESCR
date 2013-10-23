@@ -1,0 +1,14 @@
+This program generates a C function that uses getopt_long function
+to parse the command line options, to validate them and fills a
+struct .
+
+Thus your program can now handle options such as:
+
+myprog --input foo.c -o foo.o --no-tabs -i 100 *.class
+
+And both long options (those that start with --) and short options
+(start with - and consist of only one character) can be handled.
+
+Gengetopt can also generate a function to save the command line
+options into a file, and a function to read the command line options
+from a file. Of course, these two kinds of files are compliant.
