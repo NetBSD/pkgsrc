@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3910 2013/10/23 12:44:10 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3911 2013/10/23 12:45:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5503,3 +5503,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-input-pad to 1.4.0nb12 [obache 2013-10-23]
 	Updated inputmethod/ibus-pinyin to 1.5.0 [obache 2013-10-23]
 	Updated inputmethod/ibus-table to 1.5.0 [obache 2013-10-23]
+	Updated inputmethod/ibus-tegaki to 0.3.1nb2 [obache 2013-10-23]
