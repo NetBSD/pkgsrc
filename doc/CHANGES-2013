@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3898 2013/10/23 11:54:47 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3899 2013/10/23 11:56:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5491,3 +5491,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added games/py-renpy version 6.15.7 [ryoon 2013-10-23]
 	Added converters/pyzy version 0.1.0 [obache 2013-10-23]
 	Updated inputmethod/ibus to 1.5.4 [obache 2013-10-23]
+	Added inputmethod/ibus-python version 1.5.4 [obache 2013-10-23]
