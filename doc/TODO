@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12669 2013/10/23 11:54:47 obache Exp $
+$NetBSD: TODO,v 1.12670 2013/10/23 12:28:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ed-1.9
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eekboard-1.0.8
 	o efax-gtk-3.2.12
 	o egtk-0.3.6.2
 	o eigen3-3.2
