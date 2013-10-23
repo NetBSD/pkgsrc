@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1796 2013/10/21 15:13:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.1797 2013/10/23 17:42:35 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -226,6 +226,7 @@ SUBDIR+=	gdl
 SUBDIR+=	geany
 SUBDIR+=	gearmand
 SUBDIR+=	generate
+SUBDIR+=	gengetopt
 SUBDIR+=	gentle
 SUBDIR+=	gettext
 SUBDIR+=	gettext-asprintf
