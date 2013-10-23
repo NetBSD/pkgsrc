@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 02:13:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/23 12:43:49 obache Exp $
 bin/ibus-table-createdb
 lib/pkgconfig/ibus-table.pc
 libexec/ibus-engine-table
@@ -41,6 +41,7 @@ share/ibus-table/icons/tc-mode.svg
 share/ibus-table/icons/tcb-mode.svg
 share/ibus-table/tables/template.txt
 share/ibus/component/table.xml
+share/locale/de/LC_MESSAGES/ibus-table.mo
 share/locale/zh_CN/LC_MESSAGES/ibus-table.mo
 share/locale/zh_HK/LC_MESSAGES/ibus-table.mo
 share/locale/zh_TW/LC_MESSAGES/ibus-table.mo
