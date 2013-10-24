@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3926 2013/10/24 11:31:22 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3927 2013/10/24 12:03:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5487,7 +5487,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/py-bsddb3 to 6.0.0 [wiz 2013-10-23]
 	Updated devel/gmake to 4.0 [wiz 2013-10-23]
 	Updated print/qpdf to 5.0.1 [wiz 2013-10-23]
-	Added games/py-pygame version 1.9.1 [ryoon 2013-10-23]
 	Added games/py-renpy version 6.15.7 [ryoon 2013-10-23]
 	Added converters/pyzy version 0.1.0 [obache 2013-10-23]
 	Updated inputmethod/ibus to 1.5.4 [obache 2013-10-23]
