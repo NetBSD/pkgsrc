@@ -1,9 +1,10 @@
-$NetBSD: patch-aa,v 1.11 2011/01/12 08:53:52 adam Exp $
+$NetBSD: patch-aa,v 1.12 2013/10/24 21:19:12 jperkin Exp $
 
 Find libpthread.so when not on the default rpath.
 Allow custom CC and CFLAGS.
+Disable -Werror on OSX.
 
---- mDNSPosix/Makefile.orig	2009-02-02 19:44:06.000000000 +0000
+--- mDNSPosix/Makefile.orig	2009-08-11 01:13:47.000000000 +0000
 +++ mDNSPosix/Makefile
 @@ -54,7 +54,6 @@ COREDIR = ../mDNSCore
  SHAREDDIR ?= ../mDNSShared
@@ -13,7 +14,7 @@ Allow custom CC and CFLAGS.
  BISON = @bison
  FLEX = @flex
  LD = ld -shared
-@@ -64,7 +64,7 @@ LN = ln -s -f
+@@ -64,7 +63,7 @@ LN = ln -s -f
  CFLAGS_COMMON = -I$(COREDIR) -I$(SHAREDDIR) -I$(OBJDIR) -fwrapv -W -Wall -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
  CFLAGS_PTHREAD =
  LINKOPTS =
@@ -22,7 +23,7 @@ Allow custom CC and CFLAGS.
  LDSUFFIX = so
  JAVACFLAGS_OS = -fPIC -shared -ldns_sd
  
-@@ -100,7 +100,7 @@ endif
+@@ -100,7 +99,7 @@ endif
  else
  
  ifeq ($(os),linux)
@@ -31,7 +32,7 @@ Allow custom CC and CFLAGS.
  FLEXFLAGS_OS = -l
  JAVACFLAGS_OS += -I$(JDK)/include/linux
  OPTIONALTARG = nss_mdns
-@@ -126,7 +126,7 @@ CFLAGS_OS =
+@@ -126,7 +125,7 @@ CFLAGS_OS =
  #     -pthread
  #       Link a user-threaded process against libc_r instead of libc.
  CFLAGS_PTHREAD   = -pthread -D_THREAD_SAFE
@@ -40,15 +41,18 @@ Allow custom CC and CFLAGS.
  JAVACFLAGS_OS += -I$(JDK)/include/freebsd
  LDCONFIG = ldconfig
  else
-@@ -141,7 +140,6 @@ ifeq ($(os),x)
+@@ -139,9 +138,8 @@ else
+ ifeq ($(os),x)
+ # We have to define __MAC_OS_X_VERSION_MIN_REQUIRED=__MAC_OS_X_VERSION_10_4 or on Leopard
  # we get build failures: ‘daemon’ is deprecated (declared at /usr/include/stdlib.h:283)
- CFLAGS_OS = -DHAVE_IPV6 -no-cpp-precomp -Werror -Wdeclaration-after-statement \
+-CFLAGS_OS = -DHAVE_IPV6 -no-cpp-precomp -Werror -Wdeclaration-after-statement \
++CFLAGS_OS = -DHAVE_IPV6 -no-cpp-precomp -Wdeclaration-after-statement \
  	-D__MAC_OS_X_VERSION_MIN_REQUIRED=__MAC_OS_X_VERSION_10_4 #-Wunreachable-code
 -CC = @gcc-4.0
  LD = $(CC) -dynamiclib
  LINKOPTS = -lSystem
  LDSUFFIX = dylib
-@@ -205,7 +204,7 @@ endif
+@@ -205,7 +203,7 @@ endif
  endif
  endif
  
