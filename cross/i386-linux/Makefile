@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/08/14 17:07:56 asau Exp $
+# $NetBSD: Makefile,v 1.31 2013/10/24 10:31:02 wiz Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -15,6 +15,7 @@ NOT_FOR_PLATFORM=	*-*-x86_64
 BUILD_DEPENDS+=		rpm-[0-9]*:../../misc/rpm
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 CHECK_SHLIBS_SUPPORTED=	no
 
