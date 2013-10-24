@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/09/01 12:14:06 obache Exp $
+# $NetBSD: Makefile,v 1.37 2013/10/24 10:31:02 wiz Exp $
 
 DISTNAME=	octave-forge-2006.03.17
 PKGREVISION=	9
@@ -11,6 +11,7 @@ COMMENT=	Extensions to Octave
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

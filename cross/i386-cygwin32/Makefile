@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/08/14 17:07:55 asau Exp $
-#
+# $NetBSD: Makefile,v 1.21 2013/10/24 10:31:02 wiz Exp $
 
 DISTVERSION=		1.0.0.0
 DISTFILES=		# none
@@ -12,6 +11,7 @@ COMMENT=		Cross-compile environment for Cygwin32/i386
 NOT_FOR_PLATFORM=	*-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 WRKSRC=			${WRKDIR}/${EGCS_DISTNAME}
 USE_CROSS_BINUTILS=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/08/14 17:07:56 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/10/24 10:31:02 wiz Exp $
 
 DISTNAME=	ezm3-1.2
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.cvsup.org/ezm3/
 COMMENT=	Easier, more portable Modula-3 distribution for building CVSup
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 DIST_SUBDIR=		ezm3
 USE_TOOLS+=		gmake

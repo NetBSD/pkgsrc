@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/11/23 14:31:44 gson Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/24 10:31:02 wiz Exp $
 
 .include "${.CURDIR}/../../devel/cvsup/Makefile.common"
 
@@ -8,5 +8,7 @@ PKGREVISION=	3
 M3FLAGS+=	-DNOGUI
 
 CONFLICTS=	cvsup-{bin,gui}-[0-9]*
+
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 .include "../../mk/bsd.pkg.mk"
