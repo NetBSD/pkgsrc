@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/10/19 08:04:34 adam Exp $
+# $NetBSD: Makefile,v 1.81 2013/10/24 04:54:15 obache Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.12
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_NCURSES=		yes
+USE_NCURSES=		wsyncup
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
@@ -59,8 +59,8 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8.4
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
