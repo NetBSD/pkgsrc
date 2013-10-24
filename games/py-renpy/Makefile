@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/10/23 11:35:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/24 12:43:52 ryoon Exp $
 
 DISTNAME=	renpy-6.15.7-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.renpy.org/dl/6.15.7/
 EXTRACT_SUFX=	.tar.bz2
@@ -36,10 +37,10 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -fs ../${RENPY_DIR}/renpy.py .
 
 .include "../../converters/fribidi/buildlink3.mk"
+.include "../../devel/py-game/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../games/py-pygame/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../multimedia/ffmpeg010/buildlink3.mk"
