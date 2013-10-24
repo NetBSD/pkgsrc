@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3924 2013/10/24 10:39:41 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.3925 2013/10/24 11:01:03 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5517,3 +5517,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/py-beets to 1.2.2 [drochner 2013-10-23]
 	Updated pkgtools/pkglint to 4.133 [dholland 2013-10-24]
 	Updated security/sslproxy to 1.1.2 [jperkin 2013-10-24]
+	Updated net/puf to 1.0.0 [jperkin 2013-10-24]
