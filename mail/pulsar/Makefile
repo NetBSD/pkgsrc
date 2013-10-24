@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/02/06 23:22:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2013/10/24 09:30:40 jperkin Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
@@ -17,6 +17,9 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake
 
 MANCOMPRESSED=	yes
+
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-configure:
 	cd ${WRKSRC}; autoconf
