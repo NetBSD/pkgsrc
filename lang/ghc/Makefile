@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/07/15 02:02:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2013/10/24 10:31:02 wiz Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	4
@@ -19,6 +19,7 @@ SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
 ONLY_FOR_PLATFORM= Darwin-*-i386 FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 SunOS-*-i386
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 CHECK_PORTABILITY_SKIP=	distrib/prep-bin-dist-mingw
 

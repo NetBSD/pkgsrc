@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/08/14 17:07:58 asau Exp $
+# $NetBSD: Makefile,v 1.39 2013/10/24 10:31:02 wiz Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -20,6 +20,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 WRKSRC=			${WRKDIR}
 BUILD_TARGET=		cleandir depend all

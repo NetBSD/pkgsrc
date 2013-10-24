@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/08/14 17:07:56 asau Exp $
+# $NetBSD: Makefile,v 1.32 2013/10/24 10:31:02 wiz Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -24,6 +24,7 @@ SITES.wmemu2b.zip=	http://ftp.delorie.com/pub/djgpp/beta/ \
 			http://gd.tuwien.ac.at/pc/dos/djgpp/beta/
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 WRKSRC=			${WRKDIR}/djgpp
 USE_CROSS_BINUTILS=	yes
