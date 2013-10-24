@@ -1,0 +1,17 @@
+$NetBSD: patch-Setup.in,v 1.1 2013/10/24 12:08:22 ryoon Exp $
+
+* Disable video4linux
+
+--- Setup.in.orig	2009-07-02 04:41:56.000000000 +0000
++++ Setup.in
+@@ -34,8 +34,8 @@ _numericsurfarray src/_numericsurfarray.
+ _numericsndarray src/_numericsndarray.c $(SDL) $(MIXER) $(DEBUG)
+ movie src/movie.c $(SDL) $(SMPEG) $(DEBUG)
+ scrap src/scrap.c $(SDL) $(SCRAP) $(DEBUG)
+-_camera src/_camera.c src/camera_v4l2.c src/camera_v4l.c $(SDL) $(DEBUG)
+-pypm src/pypm.c $(SDL) $(PORTMIDI) $(PORTTIME) $(DEBUG)
++#_camera src/_camera.c src/camera_v4l2.c src/camera_v4l.c $(SDL) $(DEBUG)
++#pypm src/pypm.c $(SDL) $(PORTMIDI) $(PORTTIME) $(DEBUG)
+ 
+ GFX = src/SDL_gfx/SDL_gfxPrimitives.c 
+ #GFX = src/SDL_gfx/SDL_gfxBlitFunc.c src/SDL_gfx/SDL_gfxPrimitives.c 
