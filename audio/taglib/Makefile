@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/10/17 07:30:39 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2013/10/24 06:08:44 obache Exp $
 
 DISTNAME=	taglib-1.9.1
 CATEGORIES=	audio
@@ -28,7 +28,7 @@ SUBST_MESSAGE.pc=	Fixing rpath in taglib-config.
 #
 # depends on builtin functions which enabled with i486 and later with GCC.
 #
-.if ${OPSYS} == "NetBSD" && !empty(CC_VERSION:M[4-9]*) && !empty(MACHINE_ARCH:Mi386)
+.if ${OPSYS} == "NetBSD" && !empty(CC_VERSION:Mgcc-[4-9]*) && !empty(MACHINE_ARCH:Mi386)
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
