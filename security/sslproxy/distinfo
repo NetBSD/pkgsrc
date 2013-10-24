@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/05 12:52:39 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2013/10/24 10:39:24 jperkin Exp $
 
-SHA1 (sslproxy-1.0.5.tgz) = 539d9f8cffa4c65692523dd28688c5350c92b259
-RMD160 (sslproxy-1.0.5.tgz) = 300f7449bc1d8fbb20b0eb9b4aa22233a3f4179b
-Size (sslproxy-1.0.5.tgz) = 23756 bytes
+SHA1 (sslproxy-1.1.2.tar.gz) = 82cc27b28db4aeee04015d51aecc32bf635f6f18
+RMD160 (sslproxy-1.1.2.tar.gz) = 066f92751764f7f56ad57c4c05dab4ff940f07fa
+Size (sslproxy-1.1.2.tar.gz) = 25203 bytes
+SHA1 (patch-Makefile.global) = d1ab92900f52f6b10ae674862774d281d2dc82d7
