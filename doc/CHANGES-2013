@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3923 2013/10/24 06:24:27 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.3924 2013/10/24 10:39:41 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/unshield to 0.6 [adam 2013-10-23]
 	Updated audio/py-beets to 1.2.2 [drochner 2013-10-23]
 	Updated pkgtools/pkglint to 4.133 [dholland 2013-10-24]
+	Updated security/sslproxy to 1.1.2 [jperkin 2013-10-24]
