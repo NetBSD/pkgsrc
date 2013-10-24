@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.30 2013/08/16 10:10:26 jperkin Exp $
+$NetBSD: distinfo,v 1.31 2013/10/24 21:19:12 jperkin Exp $
 
 SHA1 (mDNSResponder-258.14.tar.gz) = 2a34794ff9a5184ce1e57ccea4001b5af6635f7b
 RMD160 (mDNSResponder-258.14.tar.gz) = fbd9dcfa84dbeb9de379066958a0b509af074dbc
 Size (mDNSResponder-258.14.tar.gz) = 1833244 bytes
 SHA1 (patch-Clients_dns-sd.c) = 5adac63ba76497056c1abfd426460560b8a3f012
-SHA1 (patch-aa) = 3f31f10ab6bf0d3ec72b56791cc4db5f24bfeb0b
+SHA1 (patch-aa) = ca1e37346b7400649957da8470efb62a343aff68
 SHA1 (patch-ab) = 8567d3a9849377fdfd1fd98f1b0dd164561bb6c9
 SHA1 (patch-ac) = 3fb065c49ed434f031ea29214ec4140b24f8da64
 SHA1 (patch-ad) = 612390897ad2f395ceb7394b644f977c4858d6cc
