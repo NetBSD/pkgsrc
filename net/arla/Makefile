@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2012/08/14 17:07:57 asau Exp $
+# $NetBSD: Makefile,v 1.68 2013/10/24 10:31:02 wiz Exp $
 
 DISTNAME=		arla-0.43
 PKGREVISION=		2
@@ -19,6 +19,7 @@ CONFLICTS+=		kth-krb4-[0-9]*
 NOT_FOR_PLATFORM+=	NetBSD-[5-9]*
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 OSVERSION_SPECIFIC=	yes
 INFO_FILES=		yes

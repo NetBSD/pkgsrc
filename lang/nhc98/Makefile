@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/08/14 17:07:57 asau Exp $
+# $NetBSD: Makefile,v 1.43 2013/10/24 10:31:02 wiz Exp $
 
 DISTNAME=		nhc98src-1.18.tar.gz
 PKGNAME=		nhc98-1.18
@@ -16,6 +16,7 @@ COMMENT=		Portable Haskell 98 compiler
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 PKG_DESTDIR_SUPPORT=	none
+BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
