@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2013/10/10 14:42:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2013/10/24 17:48:53 jperkin Exp $
 #
 
 DISTNAME=	pulseaudio-2.1
@@ -46,6 +46,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 PLIST.evdev=		yes
 .endif
 
+# Find the appropriate SDK
+.if !empty(MACHINE_PLATFORM:MDarwin-10.*)
+CONFIGURE_ARGS+=	--with-mac-sysroot=/Developer/SDKs/MacOSX10.6.sdk
+.endif
+
 .include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
@@ -80,7 +85,7 @@ PLIST.sun=		yes
 PLIST.hal=		yes
 PLIST.oss=		yes
 .  endif
-.else
+.elif ${OPSYS} != "Darwin"
 PLIST.hal=		yes
 PLIST.oss=		yes
 .endif
