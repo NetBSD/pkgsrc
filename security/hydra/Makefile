@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2013/10/19 09:07:11 adam Exp $
+# $NetBSD: Makefile,v 1.58 2013/10/24 09:40:39 jperkin Exp $
 #
 
 DISTNAME=	hydra-7.5
@@ -21,6 +21,8 @@ CONFIGURE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 INSTALLATION_DIRS=	bin
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 
