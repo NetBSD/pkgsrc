@@ -1,43 +1,26 @@
-# $NetBSD: Makefile,v 1.30 2013/06/04 22:15:55 tron Exp $
-#
+# $NetBSD: Makefile,v 1.31 2013/10/24 12:08:22 ryoon Exp $
 
-DISTNAME=		pygame-1.8.1release
-PKGNAME=		${PYPKGPREFIX}-game-1.8.1
-PKGREVISION=		14
-CATEGORIES=		devel
-MASTER_SITES=		http://pygame.org/ftp/
+DISTNAME=	pygame-1.9.1release
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/release//}
+CATEGORIES=	games
+MASTER_SITES=	http://www.pygame.org/ftp/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pygame.org/
-COMMENT=		Set of Python modules designed for writing games
-LICENSE=		gnu-lgpl-v2.1
-
-DEPENDS+=		${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-
-# XXX
-post-extract:
-	${CHMOD} go+r ${WRKSRC}/lib/*
-
-post-install:
-	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYINC}/pygame/*.h
-	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.bmp
-	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.ico
-	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.icns
-	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.ttf
-	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.tiff
-
-.include "../../mk/compiler.mk"
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://www.pygame.org/
+COMMENT=	Set of Python modules designed for writing games
+LICENSE=	gnu-lgpl-v2.1
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-no-integrated-as
 .endif
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
-
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
