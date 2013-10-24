@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/24 09:49:22 jperkin Exp $
 
 DISTNAME=	dhcpd-pools-2.16
 PKGREVISION=	3
@@ -24,5 +24,7 @@ SUBST_STAGE.fix-name=	pre-configure
 SUBST_MESSAGE.fix-name=	Removing program_invocation_short_name.
 SUBST_FILES.fix-name=	src/dhcpd-pools.c src/other.c src/sort.c
 SUBST_SED.fix-name=	-e 's,program_invocation_short_name,"dhcpd-pools",g'
+
+LDFLAGS.SunOS+=	-lnsl
 
 .include "../../mk/bsd.pkg.mk"
