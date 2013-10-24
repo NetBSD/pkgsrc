@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.10 2013/10/24 18:31:12 martin Exp $
+$NetBSD: distinfo,v 1.11 2013/10/24 19:25:43 martin Exp $
 
 SHA1 (gcc-4.8.2.tar.bz2) = 810fb70bd721e1d9f446b6503afe0a9088b62986
 RMD160 (gcc-4.8.2.tar.bz2) = a417e682baa20877c290f6dc7d3d03a0c3710371
 Size (gcc-4.8.2.tar.bz2) = 85999682 bytes
 SHA1 (patch-gcc-config-vax-constraints.md) = e6cea7a5334b5b124ca3e8b62eba45423e788e55
 SHA1 (patch-gcc-config-vax-vax.c) = 02e389ec418a0fee1431ecd61d65b7f8d7629785
-SHA1 (patch-gcc-config-vax-vax.md) = c0e9cc1d64f67192b376e5e0d19ca7b35677ad57
+SHA1 (patch-gcc-config-vax-vax.md) = e06696be85641cbe9131ecc10bb28c45a465916d
 SHA1 (patch-gcc_Makefile.in) = b2bceb34537de1cf704f18a59aa4e4d4a4551c62
 SHA1 (patch-gcc_config.gcc) = ac175c5eecf3dd53508479b30bf5c59cc0a5fca9
 SHA1 (patch-gcc_config.host) = 1b1e11cd199eb93f49443d51c0063b09b7327858
