@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3927 2013/10/24 12:03:59 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3928 2013/10/24 12:09:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5518,3 +5518,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/sslproxy to 1.1.2 [jperkin 2013-10-24]
 	Updated net/puf to 1.0.0 [jperkin 2013-10-24]
 	Updated mail/ssmtp to 2.64 [jperkin 2013-10-24]
+	Updated devel/py-game to 1.9.1 [ryoon 2013-10-24]
