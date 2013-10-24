@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/12/12 12:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/10/24 09:32:08 jperkin Exp $
 
 DISTNAME=	ng-1.4.4
 CATEGORIES=	editors japanese
@@ -28,6 +28,8 @@ MAKEFLAGS+=	USE_CANNA=NO
 BUILD_TARGET=	ng
 
 INSTALLATION_DIRS=	bin share/doc/ng share/examples/ng
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 post-patch:
