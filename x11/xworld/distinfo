@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2012/07/30 04:23:23 dholland Exp $
+$NetBSD: distinfo,v 1.11 2013/10/24 10:10:21 jperkin Exp $
 
 SHA1 (xworld-2.0.tar.gz) = 99217a8f0b63ef8685c5508fbbff4f5d7bb9b9a8
 RMD160 (xworld-2.0.tar.gz) = b139357f529a8df535f82fecd74319b0f82605b3
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 88d5420cc7a463e6e4acb714d080cac6a21e1ade
 SHA1 (patch-ah) = 197774f90d9bcf3f8c8a642287ea7385d27e6413
 SHA1 (patch-ai) = baa09051d09230d7b0371aae7f89451789d32e85
 SHA1 (patch-aj) = 75a7ffa80e2516de08af741b7e8aa5828747f7cc
+SHA1 (patch-defaults_Solaris_set.csh) = 179763e7e3ba4463ae117468246abc9ce76940c6
