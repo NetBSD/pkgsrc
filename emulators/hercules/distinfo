@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2013/10/24 12:01:46 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2013/10/24 12:20:46 ryoon Exp $
 
-SHA1 (hercules-3.07.tar.gz) = d0b2e543dd66ee43576e5a5faff8f4cc061cffb4
-RMD160 (hercules-3.07.tar.gz) = 241344a3242a1dacc5276dd61b7fa4c92a270f71
-Size (hercules-3.07.tar.gz) = 2701835 bytes
+SHA1 (hercules-3.09.tar.gz) = 5cbe89ec214de00b90e3077c27db636a7d2607f5
+RMD160 (hercules-3.09.tar.gz) = 88f546f374787a1084467e91c616ec46e8ca7e5d
+Size (hercules-3.09.tar.gz) = 2567052 bytes
 SHA1 (patch-Makefile.in) = 42eed4f193fc07732ca145b019af2604c8a2e8e0
 SHA1 (patch-autoconf_libtool.m4) = 713bc12bfd176e908fc01b401ee0163660f20da8
 SHA1 (patch-configure.ac) = 655e738191adcc79d509592c06089305ae743024
@@ -14,4 +14,3 @@ SHA1 (patch-hstructs.h) = 040561caac5fa52db26c9dad064ef6a41a23e0d2
 SHA1 (patch-htypes.h) = a3d53bd1d1c7633993b39e34b7c091d036a01816
 SHA1 (patch-scsitape.c) = 13bd1172b5d688ee56c473a1236894d7c5961c71
 SHA1 (patch-tapecopy.c) = c2ef850430f37ae7151985cd7881e6861b5dc538
-SHA1 (patch-tapedev.h) = f58aada65a902fa90def655bc78151c8045d3f9d
