@@ -1,17 +1,19 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/06/19 20:39:10 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2013/10/24 11:31:10 jperkin Exp $
 
---- ssmtp.8.orig	Fri Sep 27 05:48:59 2002
-+++ ssmtp.8	Thu Jun 19 13:12:40 2003
-@@ -1,11 +1,8 @@
- .TH SSMTP 8 "Last change: 5 February 2000"
+--- ssmtp.8.orig	2008-02-29 02:50:15.000000000 +0000
++++ ssmtp.8
+@@ -1,13 +1,10 @@
+ .TH SSMTP 8 "Last change: 4 February 2005"
  .SH NAME
 -ssmtp, sendmail \- send a message using smtp
 +ssmtp \- send a message using smtp
  .SH SYNOPSIS
  .B ssmtp
--.RI "[ " flags " ] [ " address " "  ... " ]"
--.br
--.B /usr/lib/sendmail
  .RI "[ " flags " ] [ " address " "  ... " ]"
  .br
+-.B /usr/lib/sendmail
+-.RI "[ " flags " ] [ " address " "  ... " ]"
+-.br
  .SH DESCRIPTION
+ .I ssmtp
+ is a send-only sendmail emulator for machines which normally pick their mail
