@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.3 2013/10/19 08:04:34 adam Exp $
+$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.4 2013/10/24 04:50:57 obache Exp $
 
 Use correct cmake define.
 
@@ -9,7 +9,7 @@ Use correct cmake define.
  #endif
  
 -#ifdef __linux
-+#if defined(__linux) || defined(__NetBSD__) || defined (__sun)
++#if defined(__linux) || defined (__sun)
  # include <fenv.h>
  # include <sys/socket.h>
  # include <netdb.h>
