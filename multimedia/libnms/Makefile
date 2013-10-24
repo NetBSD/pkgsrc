@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 09:21:07 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/24 09:45:34 jperkin Exp $
 #
 
 DISTNAME=	libnms-0.6.0
@@ -15,5 +15,7 @@ USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libnms.pc.in
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
