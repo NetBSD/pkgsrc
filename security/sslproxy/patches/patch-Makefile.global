@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.global,v 1.1 2013/10/24 10:39:24 jperkin Exp $
+
+--- Makefile.global.orig	2009-02-27 14:03:08.000000000 +0000
++++ Makefile.global
+@@ -10,7 +10,6 @@ CC = gcc
+ LD = gcc
+ CINCLUDE =
+ CFLAGS = -Wall -g3 -DVERSION=\"$(VERSION)\"
+-LDFLAGS =
+ COPTS = $(CFLAGS) $(CINCLUDE) $(CCPRAGMA)
+-LDLIBS = -lssl -lcrypto
++LDLIBS += -lssl -lcrypto
+ LDOPTS = $(LDFLAGS) $(LDLIBS)
