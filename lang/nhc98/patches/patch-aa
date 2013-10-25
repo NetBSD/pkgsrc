@@ -1,43 +1,50 @@
-$NetBSD: patch-aa,v 1.7 2005/05/12 17:53:29 kristerw Exp $
+$NetBSD: patch-aa,v 1.8 2013/10/25 04:09:14 dholland Exp $
 
---- configure.orig	Fri Mar 11 10:32:56 2005
-+++ configure	Wed May 11 20:49:48 2005
-@@ -42,7 +42,7 @@
- USER=${USER-`whoami 2>/dev/null`}
+- don't trip on newer macos versions
+- honor pkgsrc LDFLAGS
+
+--- configure.orig	2010-07-09 12:41:23.000000000 +0000
++++ configure
+@@ -65,7 +65,7 @@ chmod +x script/harch || exit 1
  MACHINE=`script/harch`
+ 
  case $MACHINE in
--  powerpc-Darwin[56]) CCC=${CC-cc};;
-+  powerpc-Darwin*)    CCC=gcc;;
-   *)                  CCC=${CC-gcc};;
+-  powerpc-Darwin[56]) CCC=${CC-cc} ;;
++  powerpc-Darwin*)    CCC=${CC-cc} ;;
+   *)                  CCC=${CC-gcc} ;  ;;
  esac
- PWD=`pwd`
-@@ -382,13 +382,13 @@
-       if $CCC -o curses curses.c >/dev/null 2>/dev/null
+ 
+@@ -482,16 +482,16 @@ main() {
+ void test (void) { mvaddstr(1,2,"hello world"); }
+ int main (void) { test(); }
+ !!!
+-      if $CCC $COPTS -m32 -o curses curses.c >/dev/null 2>/dev/null
++      if $CCC $COPTS $LDFLAGS -m32 -o curses curses.c >/dev/null 2>/dev/null
        then CURSES=""
        else
--        if $CCC -o curses curses.c -lncurses >/dev/null 2>/dev/null
-+        if $CCC $LDFLAGS -o curses curses.c -lncurses >/dev/null 2>/dev/null
+-        if $CCC $COPTS -m32 -o curses curses.c -lncurses >/dev/null 2>/dev/null
++        if $CCC $COPTS $LDFLAGS -m32 -o curses curses.c -lncurses >/dev/null 2>/dev/null
          then CURSES="-lncurses"
          else
--          if $CCC -o curses curses.c -lcurses >/dev/null 2>/dev/null
-+          if $CCC $LDFLAGS -o curses curses.c -lcurses >/dev/null 2>/dev/null
+-          if $CCC $COPTS -m32 -o curses curses.c -lcurses >/dev/null 2>/dev/null
++          if $CCC $COPTS $LDFLAGS -m32 -o curses curses.c -lcurses >/dev/null 2>/dev/null
            then CURSES="-lcurses"
            else
--            if $CCC -o curses curses.c -lcurses -ltermcap >/dev/null 2>/dev/null
-+            if $CCC $LDFLAGS -o curses curses.c -lcurses -ltermcap >/dev/null 2>/dev/null
+-            if $CCC $COPTS -m32 -o curses curses.c -lcurses -ltermcap >/dev/null 2>/dev/null
++            if $CCC $COPTS $LDFLAGS -m32 -o curses curses.c -lcurses -ltermcap >/dev/null 2>/dev/null
              then CURSES="-lcurses -ltermcap"
              else CURSES="-ltermcap -lcurses"	# don't know a good default?
              fi
-@@ -405,10 +405,10 @@
+@@ -508,10 +508,10 @@ int main (void) { test(); }
  
      echo -n "Testing for the readline library: "
      echo 'main(){readline();}' >rd.c
--    if ${CCC} -o rd.out rd.c -lreadline >/dev/null 2>&1
-+    if ${CCC} ${LDFLAGS} -o rd.out rd.c -lreadline >/dev/null 2>&1
+-    if ${CCC} $COPTS -m32 -o rd.out rd.c -lreadline >/dev/null 2>&1
++    if ${CCC} $COPTS $LDFLAGS -m32 -o rd.out rd.c -lreadline >/dev/null 2>&1
      then echo '          -lreadline (detected)'
           READLINE="-DUSE_READLINE=1 -lreadline"
--    else if ${CCC} -o rd.out rd.c -lreadline $CURSES >/dev/null 2>&1
-+    else if ${CCC} ${LDFLAGS} -o rd.out rd.c -lreadline $CURSES >/dev/null 2>&1
+-    else if ${CCC} $COPTS -m32 -o rd.out rd.c -lreadline $CURSES >/dev/null 2>&1
++    else if ${CCC} $COPTS $LDFLAGS -m32 -o rd.out rd.c -lreadline $CURSES >/dev/null 2>&1
        then echo "          -lreadline $CURSES (detected)"
           READLINE="-DUSE_READLINE=1 -lreadline $CURSES"
        else echo '          no  (detected)'
