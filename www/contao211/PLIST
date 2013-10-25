@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2013/08/22 17:10:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/10/25 11:14:10 taca Exp $
+${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/LGPL.txt
@@ -2090,7 +2091,6 @@ ${CT_WEBDIR}/typolight/install.php
 ${CT_WEBDIR}/typolight/main.php
 ${CT_DOCDIR}/README
 ${CT_EGDIR}/contao.conf
-${CT_EGDIR}/htaccess.default
 ${CT_EGDIR}/robots.txt
 ${CT_EGDIR}/system/config/agents.php
 ${CT_EGDIR}/system/config/codeMirror.php
