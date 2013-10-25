@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/03/01 14:49:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/10/25 12:59:07 adam Exp $
 include/lensfun.h
 lib/liblensfun.so
 lib/liblensfun.so.0
@@ -21,14 +21,18 @@ share/lensfun/compact-olympus.xml
 share/lensfun/compact-panasonic.xml
 share/lensfun/compact-pentax.xml
 share/lensfun/compact-ricoh.xml
+share/lensfun/compact-samsung.xml
 share/lensfun/compact-sigma.xml
 share/lensfun/compact-sony.xml
 share/lensfun/generic.xml
 share/lensfun/mil-canon.xml
+share/lensfun/mil-fujifilm.xml
 share/lensfun/mil-nikon.xml
 share/lensfun/mil-olympus.xml
 share/lensfun/mil-panasonic.xml
 share/lensfun/mil-samsung.xml
+share/lensfun/mil-samyang.xml
+share/lensfun/mil-sigma.xml
 share/lensfun/mil-sony.xml
 share/lensfun/rf-leica.xml
 share/lensfun/slr-canon.xml
@@ -41,8 +45,10 @@ share/lensfun/slr-olympus.xml
 share/lensfun/slr-panasonic.xml
 share/lensfun/slr-pentax.xml
 share/lensfun/slr-samsung.xml
+share/lensfun/slr-samyang.xml
 share/lensfun/slr-schneider.xml
 share/lensfun/slr-sigma.xml
+share/lensfun/slr-soligor.xml
 share/lensfun/slr-sony.xml
 share/lensfun/slr-tamron.xml
 share/lensfun/slr-tokina.xml
