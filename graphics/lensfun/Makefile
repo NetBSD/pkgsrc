@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2013/08/04 19:12:00 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/10/25 12:59:07 adam Exp $
 
-DISTNAME=	lensfun-0.2.7
+DISTNAME=	lensfun-0.2.8
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/lensfun/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,19 +34,13 @@ PKGCONFIG_OVERRIDE=	libs/lensfun/lensfun.pc.in
 # understanding the build, and upstream is moving to cmake anyway.
 post-install:
 .if ${OPSYS} == "Darwin"
-	${MV} ${DESTDIR}${PREFIX}/lib/liblensfun.dylib \
+	${MV} ${DESTDIR}${PREFIX}/lib/liblensfun.dylib.${PKGVERSION_NOREV} \
 		${DESTDIR}${PREFIX}/lib/liblensfun.${PKGVERSION_NOREV}.dylib
+	${RM} ${DESTDIR}${PREFIX}/lib/liblensfun.dylib*
 	${LN} -s liblensfun.${PKGVERSION_NOREV}.dylib \
 		${DESTDIR}${PREFIX}/lib/liblensfun.0.dylib
 	${LN} -s liblensfun.${PKGVERSION_NOREV}.dylib \
 		${DESTDIR}${PREFIX}/lib/liblensfun.dylib
-.else
-	${MV} ${DESTDIR}${PREFIX}/lib/liblensfun.so \
-		${DESTDIR}${PREFIX}/lib/liblensfun.so.${PKGVERSION_NOREV}
-	${LN} -s liblensfun.so.${PKGVERSION_NOREV} \
-		${DESTDIR}${PREFIX}/lib/liblensfun.so.0
-	${LN} -s liblensfun.so.${PKGVERSION_NOREV} \
-		${DESTDIR}${PREFIX}/lib/liblensfun.so
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
@@ -55,4 +49,3 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
-# DO NOT DELETE
