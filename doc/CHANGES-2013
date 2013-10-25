@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3931 2013/10/25 07:24:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3932 2013/10/25 08:14:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5522,3 +5522,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/py-renpy to 6.15.7nb1 [ryoon 2013-10-24]
 	Updated lang/nhc98 to 1.22 [dholland 2013-10-25]
 	Removed www/p5-Catalyst-Plugin-Authentication-Store-DBIC [wiz 2013-10-25]
+	Updated graphics/enblend-enfuse to 4.1.2 [adam 2013-10-25]
