@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.5 2012/06/16 11:58:07 obache Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.6 2013/10/25 14:11:13 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -31,9 +31,9 @@
 
 #
 # Read a list of potential ELF binaries from stdin.
-# For each, extract the DT_RPATH and DT_NEEDED fields.
-# Check that DT_RPATH is not relative to WRKDIR.
-# Check that DT_NEEDED can be resolved either via DT_RPATH
+# For each, extract the DT_RPATH, DT_RUNPATH and DT_NEEDED fields.
+# Check that DT_RPATH and DT_RUNPATH is not relative to WRKDIR.
+# Check that DT_NEEDED can be resolved either via DT_RPATH, DT_RUNPATH
 # or a system specific default path.
 # Check that the resolved DSO belongs to full dependency.
 #
@@ -99,8 +99,8 @@ function check_pkg(DSO, pkg, found) {
 function checkshlib(DSO, needed, rpath, found, dso_rath, got_rpath) {
 	cmd = readelf " -Wd " shquote(DSO) " 2> /dev/null"
 	while ((cmd | getline) > 0) {
-		if ($2 == "(RPATH)") {
-			sub("^[[:space:]]*0[xX][[:xdigit:]]+[[:space:]]+\\(RPATH\\)[[:space:]]+Library rpath: \\[", "")
+		if ($2 == "(RPATH)" || $2 == "(RUNPATH)") {
+			sub("^[[:space:]]*0[xX][[:xdigit:]]+[[:space:]]+\\(RU?N?PATH\\)[[:space:]]+Library ru?n?path: \\[", "")
 			dso_rpath = substr($0, 1, length($0) - 1)
 			if (length(system_rpath) > 0)
 				split(dso_rpath ":" system_rpath, rpath, ":")
