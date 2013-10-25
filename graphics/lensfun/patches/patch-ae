@@ -1,8 +1,20 @@
-$NetBSD: patch-ae,v 1.1 2011/01/17 16:38:21 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2013/10/25 06:41:47 wiz Exp $
 
---- configure.orig	2010-03-24 00:22:24.000000000 +0000
+GNU Make check is broken -- does not recognize 4.0 as newer than 3.81.
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=19153&group_id=9034
+Remove doxygen detection to avoid pulling it in unintendedly.
+
+--- configure.orig	2013-01-27 16:51:06.000000000 +0000
 +++ configure
-@@ -52,11 +52,7 @@ if tibs.check_program ("makedep", "maked
+@@ -45,18 +45,14 @@ if tibs.TARGET [0] == "windows":
+     }
+ 
+ # Check for tools
+-tibs.check_program ("GNU Make", "make --version", ".*?([0-9\.]+).*", "3.81", True)
++#tibs.check_program ("GNU Make", "make --version", ".*?([0-9\.]+).*", "3.81", True)
+ if tibs.check_program ("makedep", "makedep -V", ".*Version.*?([0-9\.]+).*", "0.1.0"):
+     tibs.add_config_mak ("MAKEDEP", "makedep")
+     makedep = "yes"
  else:
      makedep = "no"
  
