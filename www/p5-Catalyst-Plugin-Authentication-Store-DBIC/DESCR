@@ -1,2 +1,0 @@
-This plugin uses a DBIx::Class (or Class::DBI) object to authenticate
-a user for Catalyst.
