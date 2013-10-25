@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2012/10/02 21:25:55 asau Exp $
+# $NetBSD: Makefile,v 1.42 2013/10/25 20:27:18 jperkin Exp $
 #
 
-DISTNAME=	tokyocabinet-1.4.46
+DISTNAME=	tokyocabinet-1.4.48
 CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE}
 
