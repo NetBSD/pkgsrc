@@ -17,3 +17,7 @@ to operating system services and other libraries.
 Hat is a source-level tracer for Haskell which gives the user access
 to otherwise invisible information about a computation and helps the
 programmer to understand how a program works or why it does not.
+
+nhc98 is a 32-bit compiler; if you are on a 64-bit system your
+compiler must accept -m32 or it won't build. You must also be able to
+execute 32-bit binaries.
