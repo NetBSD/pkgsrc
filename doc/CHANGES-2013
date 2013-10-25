@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3934 2013/10/25 13:00:06 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3935 2013/10/25 13:59:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211 to 2.11.12nb1 [taca 2013-10-25]
 	Updated www/contao31 to 3.1.4nb1 [taca 2013-10-25]
 	Updated graphics/lensfun to 0.2.8 [adam 2013-10-25]
+	Updated pkgtools/bootstrap-mk-files to 20131025 [jperkin 2013-10-25]
