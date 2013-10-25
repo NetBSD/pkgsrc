@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.96 2013/08/01 20:00:59 adam Exp $
+$NetBSD: distinfo,v 1.97 2013/10/25 09:03:12 jperkin Exp $
 
 SHA1 (gnutls-3.2.3.tar.xz) = 18f5fffd1a0384944cb76cbedc0720c4726470f4
 RMD160 (gnutls-3.2.3.tar.xz) = bde21d617cbef1051b019a99915ebf51246819d2
@@ -7,3 +7,5 @@ SHA1 (patch-ae) = 71fbbeb43ac1689fca6fec7f8348d8534c1dc38a
 SHA1 (patch-gl_stdio.in.h) = b5802da2cccddd6fab73bd39c49f7d62bef58464
 SHA1 (patch-lib_Makefile.in) = 949df8644a1f6085d8ad63984188cee0518a837a
 SHA1 (patch-lib_nettle_egd.c) = b7e9769e8c620519c43ca7b7481a558e9d389c68
+SHA1 (patch-src_libopts_autoopts_options.h) = 60be5b43f23ba5978759c1e245781da7f9125071
+SHA1 (patch-src_libopts_compat_compat.h) = 2e0a1be460917b2d7a8f6bdac698dad405143013
