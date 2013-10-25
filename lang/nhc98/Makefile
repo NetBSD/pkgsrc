@@ -1,39 +1,40 @@
-# $NetBSD: Makefile,v 1.43 2013/10/24 10:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2013/10/25 04:09:14 dholland Exp $
 
-DISTNAME=		nhc98src-1.18.tar.gz
-PKGNAME=		nhc98-1.18
-PKGREVISION=		2
+DISTNAME=		nhc98src-1.22
+PKGNAME=		nhc98-1.22
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/
-DISTFILES=		nhc98src-1.18.tar.gz \
-			nhc98-1.18-library-interfaces.tar.gz
+MASTER_SITES=		http://www.haskell.org/nhc98/
 
 MAINTAINER=		kristerw@NetBSD.org
-HOMEPAGE=		http://www.cs.york.ac.uk/fp/nhc98/
+HOMEPAGE=		http://www.haskell.org/nhc98/
 COMMENT=		Portable Haskell 98 compiler
 
-# Not yet ported to 64-bit machines
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}
-
-PKG_DESTDIR_SUPPORT=	none
-BROKEN=			Does not support DESTDIR; will be removed after 2013Q4
-
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+BROKEN=			incomplete update, blame dholland
+
+MAKE_JOBS_SAFE=		no
+HAS_CONFIGURE=		yes
+USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
+			+docs --docdir=${PREFIX}/share/doc/nhc98
+BUILD_TARGET=		all
+
+.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "amd64") || \
+    (${MACHINE_ARCH} == "sparc64") || (${MACHINE_ARCH} == "x86_64") || \
+    (${MACHINE_ARCH} == "powerpc64") || (defined(ABI) && ${ABI} == "64")
+# 64-bit platform
+BUILD_MAKE_FLAGS+=	PKGSRC_M32=-m32
+.else
+# not a 64-bit platform
+BUILD_MAKE_FLAGS+=	PKGSRC_M32=
+.endif
+
+#PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
 
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX:Q} \
-			+docs --docdir=${PREFIX}/share/doc/nhc98
-
-USE_TOOLS+=		gmake
-BUILD_TARGET=		default
-
-PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
-
-post-extract:
-	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* -print | ${XARGS} ${RM} -rf
-
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
