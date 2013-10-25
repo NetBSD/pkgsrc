@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2008/07/21 09:41:10 rhaen Exp $
-
-Upstream has declared that this Perl module is deprecated and
-recommends using DBIx::Class or Class::DBI model.
-
-This package will stay inside pkgsrc at least until pkgsrc-2008Q4
-===========================================================================
