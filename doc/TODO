@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12674 2013/10/25 06:30:28 dholland Exp $
+$NetBSD: TODO,v 1.12675 2013/10/25 10:53:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -562,6 +562,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gentoo-0.20.3
 	o gfract-0.33
 	o ghc-7.6
+	o gitolite-3.5.3.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
