@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3929 2013/10/24 12:44:28 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.3930 2013/10/25 06:30:27 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5520,3 +5520,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ssmtp to 2.64 [jperkin 2013-10-24]
 	Updated devel/py-game to 1.9.1 [ryoon 2013-10-24]
 	Updated games/py-renpy to 6.15.7nb1 [ryoon 2013-10-24]
+	Updated lang/nhc98 to 1.22 [dholland 2013-10-25]
