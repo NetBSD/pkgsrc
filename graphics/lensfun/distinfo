@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2013/08/04 19:12:00 adam Exp $
+$NetBSD: distinfo,v 1.12 2013/10/25 06:41:47 wiz Exp $
 
 SHA1 (lensfun-0.2.7.tar.bz2) = f26121093dfee85d6371c2c79dae22e6d1b8d0d6
 RMD160 (lensfun-0.2.7.tar.bz2) = 87cee31658f1083734356c678b934a712bccefad
@@ -6,6 +6,6 @@ Size (lensfun-0.2.7.tar.bz2) = 552960 bytes
 SHA1 (patch-aa) = d31dd742f232aa8a75f50f14f782918ba11a8119
 SHA1 (patch-ab) = 5455bda9546dce6cc5b4a73429092afdee04bd23
 SHA1 (patch-ad) = f9d54534d3be809e8517ec262e776c9d1785acd8
-SHA1 (patch-ae) = c7f47ac5081d52244f38d0fc40795c7cb00f40e4
+SHA1 (patch-ae) = 9fe7181571f24d90058b340e9f95e7a5557cdd48
 SHA1 (patch-build_tibs_compiler_pkgconfig.mak) = 692dd4c04c3b1f348a8c7ef5a1c708cf254a0b14
 SHA1 (patch-libs_auxfun_image.cpp) = 613b2f80ede85285195c20eb096cd70fe6783b1a
