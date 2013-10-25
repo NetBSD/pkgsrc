@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.6 2009/11/09 12:56:00 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2013/10/25 21:48:16 joerg Exp $
 
 Never add -lcompat for ftime.  If someone cares about the example,
 it should use gettimeofday.
 
---- configure.orig	2009-11-09 13:52:17.000000000 +0100
+--- configure.orig	2009-10-01 18:04:08.000000000 +0000
 +++ configure
+@@ -11863,7 +11863,7 @@ else
+         case $host in
+         *)
+                 DEBUG="-g -Wall -Wno-parentheses -DDEBUG -D__NO_MATH_INLINES"
+-                CFLAGS="-Wall -Wno-parentheses -O3 -fforce-addr -fomit-frame-pointer -finline-functions -funroll-loops"
++                CFLAGS="-Wall -Wno-parentheses -O3 -fomit-frame-pointer -finline-functions -funroll-loops"
+                 PROFILE="-Wall -Wno-parentheses -pg -g -O3 -fno-inline-functions -DDEBUG";;
+         esac
+ fi
 @@ -13734,99 +13734,6 @@ else
  fi
  
