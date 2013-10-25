@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2012/10/08 09:21:07 asau Exp $
+# $NetBSD: Makefile.common,v 1.6 2013/10/25 21:48:16 joerg Exp $
 #
 # used by multimedia/libtheora-docs/Makefile
 
@@ -21,3 +21,4 @@ CONFIGURE_ENV+=		ac_cv_path_SDL_CONFIG=no
 PLIST_SUBST+=		SUBDIR=${DISTNAME}
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/libtheora/distinfo
+PATCHDIR=	${.CURDIR}/../../multimedia/libtheora/patches
