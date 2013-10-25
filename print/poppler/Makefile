@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/09/25 23:07:31 asau Exp $
+# $NetBSD: Makefile,v 1.65 2013/10/25 06:53:34 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -31,8 +31,6 @@ CONFIGURE_ARGS+=	--disable-poppler-cpp
 PKG_OPTIONS_VAR=	PKG_OPTIONS.poppler
 PKG_SUPPORTED_OPTIONS=	lcms
 PKG_SUGGESTED_OPTIONS=	lcms
-# remove after pkgsrc-2013Q3 is tagged
-PKG_OPTIONS_LEGACY_OPTS=	poppler-cms:lcms
 
 .include "../../mk/bsd.options.mk"
 
