@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/10/25 04:09:14 dholland Exp $
+# $NetBSD: Makefile,v 1.45 2013/10/25 06:25:18 dholland Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -10,8 +10,6 @@ HOMEPAGE=		http://www.haskell.org/nhc98/
 COMMENT=		Portable Haskell 98 compiler
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
-BROKEN=			incomplete update, blame dholland
 
 MAKE_JOBS_SAFE=		no
 HAS_CONFIGURE=		yes
@@ -30,7 +28,7 @@ BUILD_MAKE_FLAGS+=	PKGSRC_M32=-m32
 BUILD_MAKE_FLAGS+=	PKGSRC_M32=
 .endif
 
-#PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
+PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
