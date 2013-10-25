@@ -1,4 +1,4 @@
-#	$NetBSD: Darwin.bsd.lib.mk,v 1.3 2009/05/12 23:21:10 minskim Exp $
+#	$NetBSD: Darwin.bsd.lib.mk,v 1.4 2013/10/25 13:53:03 jperkin Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -375,14 +375,14 @@ lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
 	@echo building shared ${LIB} library \(version ${SHLIB_FULLVERSION}\)
 	@rm -f lib${LIB}.so.${SHLIB_FULLVERSION}
 .if defined(DESTDIR)
-	$(LD) -nostdlib -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
+	$(CC) -nostdlib -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
 	    --whole-archive ${SOLIB} \
 	    --no-whole-archive ${LDADD} \
 	    -L${DESTDIR}${LIBDIR} -R${LIBDIR} \
 	    ${SHLIB_LDENDFILE}
 .else
-	$(LD) -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
+	$(CC) -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
 	    --whole-archive ${SOLIB} --no-whole-archive ${LDADD} \
 	    ${SHLIB_LDENDFILE}
