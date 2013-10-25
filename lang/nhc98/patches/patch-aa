@@ -1,19 +1,21 @@
-$NetBSD: patch-aa,v 1.8 2013/10/25 04:09:14 dholland Exp $
+$NetBSD: patch-aa,v 1.9 2013/10/25 06:25:18 dholland Exp $
 
-- don't trip on newer macos versions
+- always set the compiler to "gcc" for pkgsrc
 - honor pkgsrc LDFLAGS
 
 --- configure.orig	2010-07-09 12:41:23.000000000 +0000
 +++ configure
-@@ -65,7 +65,7 @@ chmod +x script/harch || exit 1
+@@ -65,8 +65,8 @@ chmod +x script/harch || exit 1
  MACHINE=`script/harch`
  
  case $MACHINE in
 -  powerpc-Darwin[56]) CCC=${CC-cc} ;;
-+  powerpc-Darwin*)    CCC=${CC-cc} ;;
-   *)                  CCC=${CC-gcc} ;  ;;
+-  *)                  CCC=${CC-gcc} ;  ;;
++  powerpc-Darwin*)    CCC=gcc;;
++  *)                  CCC=gcc;;
  esac
  
+ STRIP=${STRIP}
 @@ -482,16 +482,16 @@ main() {
  void test (void) { mvaddstr(1,2,"hello world"); }
  int main (void) { test(); }
