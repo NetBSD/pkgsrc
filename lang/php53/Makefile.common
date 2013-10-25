@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2013/07/29 03:59:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.30 2013/10/25 21:47:51 joerg Exp $
 # used by lang/php53/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php53-extensions/Makefile
@@ -21,5 +21,11 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 
 # needed due to (broken?) configure checks in php-xmlrpc and php5-dom
 CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# configure test gets confused by wrappers dropping -R /usr/lib
+CONFIGURE_ENV+=	php_cv_cc_dashr=no
+.endif
 
 .include "../../mk/bsd.prefs.mk"
