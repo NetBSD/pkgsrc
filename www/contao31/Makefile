@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/09/30 10:04:34 taca Exp $
+# $NetBSD: Makefile,v 1.9 2013/10/25 11:14:44 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${CT_MASTER_SITE}
 
@@ -31,7 +32,6 @@ WWW_EG_FILES=	robots.txt
 RESTRICT_DIRS=	system/cache system/logs system/tmp templates files
 
 CONF_FILES+=	${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
-CONF_FILES+=	${CT_EGDIR}/htaccess.default ${CT_WEBDIR}/.htaccess
 
 .for f in ${EG_CONFIG}
 CONF_FILES+=	${CT_EGDIR}/system/config/${f} ${CT_WEBDIR}/system/config/${f}
@@ -64,7 +64,8 @@ SUBST_FILES.php+=	${WRKSRC}/system/bin/transifex
 SUBST_SED.php+=		-e "s|\#!/.*php|\#!${PREFIX}/bin/php|"
 SUBST_STAGE.php=	post-configure
 
-WWW_FILES=	.gitignore README.md assets contao index.php share templates
+WWW_FILES=	.gitignore .htaccess.default README.md assets contao \
+		index.php share templates
 WWW_SYSFILES=	.htaccess bin config/default.php cron docs helper \
 		initialize.php modules themes
 
@@ -88,8 +89,6 @@ do-install:
 		pax -rw ${WWW_SYSFILES} \
 			${DESTDIR}${PREFIX}/${CT_WEBDIR}/system
 	cd ${WRKSRC}; pax -rw ${EG_DATA} ${DESTDIR}${PREFIX}/${CT_EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/.htaccess.default \
-		${DESTDIR}${PREFIX}/${CT_EGDIR}/htaccess.default
 	${INSTALL_DATA} ${WRKDIR}/contao.conf ${DESTDIR}${PREFIX}/${CT_EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/README \
 		${DESTDIR}${PREFIX}/${CT_DOCDIR}

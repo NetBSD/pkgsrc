@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2013/10/15 14:33:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/10/25 11:14:44 taca Exp $
 ${CT_WEBDIR}/.gitignore
+${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.0.01/ace.js
 ${CT_WEBDIR}/assets/ace/1.0.01/ext-searchbox.js
@@ -3698,7 +3699,6 @@ ${CT_DOCDIR}/README
 ${CT_EGDIR}/contao.conf
 ${CT_EGDIR}/files/tiny_templates/index.html
 ${CT_EGDIR}/files/tinymce.css
-${CT_EGDIR}/htaccess.default
 ${CT_EGDIR}/robots.txt
 ${CT_EGDIR}/system/config/ace.php
 ${CT_EGDIR}/system/config/agents.php
