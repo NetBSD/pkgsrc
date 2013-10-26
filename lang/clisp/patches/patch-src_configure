@@ -1,0 +1,79 @@
+$NetBSD: patch-src_configure,v 1.1 2013/10/26 22:03:50 joerg Exp $
+
+--- src/configure.orig	2010-07-07 17:22:03.000000000 +0000
++++ src/configure
+@@ -17045,7 +17045,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBSIGSEGV="${LTLIBSIGSEGV}${LTLIBSIGSEGV:+ }-R$found_dir"
++      LTLIBSIGSEGV="${LTLIBSIGSEGV}${LTLIBSIGSEGV:+ }${COMPILER_RPATH_FLAG}$found_dir"
+     done
+   fi
+ 
+@@ -20036,7 +20036,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBICONV="${LTLIBICONV}${LTLIBICONV:+ }-R$found_dir"
++      LTLIBICONV="${LTLIBICONV}${LTLIBICONV:+ }${COMPILER_RPATH_FLAG}$found_dir"
+     done
+   fi
+ 
+@@ -21458,7 +21458,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBINTL="${LTLIBINTL}${LTLIBINTL:+ }-R$found_dir"
++      LTLIBINTL="${LTLIBINTL}${LTLIBINTL:+ }${COMPILER_RPATH_FLAG}$found_dir"
+     done
+   fi
+ 
+@@ -22136,7 +22136,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBAVCALL="${LTLIBAVCALL}${LTLIBAVCALL:+ }-R$found_dir"
++      LTLIBAVCALL="${LTLIBAVCALL}${LTLIBAVCALL:+ }${COMPILER_RPATH_FLAG}$found_dir"
+     done
+   fi
+ 
+@@ -22650,7 +22650,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBCALLBACK="${LTLIBCALLBACK}${LTLIBCALLBACK:+ }-R$found_dir"
++      LTLIBCALLBACK="${LTLIBCALLBACK}${LTLIBCALLBACK:+ }${COMPILER_RPATH_FLAG}$found_dir"
+     done
+   fi
+ 
+@@ -23566,9 +23566,9 @@ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+-       X_LIBS="$X_LIBS -R$x_libraries"
++       X_LIBS="$X_LIBS ${COMPILER_RPATH_FLAG}$x_libraries"
+ else
+-  LIBS="$ac_xsave_LIBS -R $x_libraries"
++  LIBS="$ac_xsave_LIBS ${COMPILER_RPATH_FLAG}$x_libraries"
+        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -23583,7 +23583,7 @@ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+-	  X_LIBS="$X_LIBS -R $x_libraries"
++	  X_LIBS="$X_LIBS ${COMPILER_RPATH_FLAG}$x_libraries"
+ else
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: neither works" >&5
+ $as_echo "neither works" >&6; }
+@@ -29120,7 +29120,7 @@ fi
+   fi
+   if test "X$ltrpathdirs" != "X"; then
+             for found_dir in $ltrpathdirs; do
+-      LTLIBREADLINE="${LTLIBREADLINE}${LTLIBREADLINE:+ }-R$found_dir"
++      LTLIBREADLINE="${LTLIBREADLINE}${LTLIBREADLINE:+ }${COMPILER_RPATH_FLAG}$found_dir"
+     done
+   fi
+ 
