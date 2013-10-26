@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/26 21:30:05 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/26 12:15:59 obache Exp $
 #
 
 DISTNAME=	ipython-0.13.1
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lang
 MASTER_SITES=	http://archive.ipython.org/release/0.13.1/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ipython.org/
 COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
