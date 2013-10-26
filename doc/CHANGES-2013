@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3939 2013/10/26 13:44:26 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3940 2013/10/26 14:44:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/ruby-spreadsheet to 0.9.1 [obache 2013-10-26]
 	Updated textproc/groonga to 3.0.8 [obache 2013-10-26]
 	Updated www/ruby-sinatra to 1.4.4 [obache 2013-10-26]
+	Added lang/asn1c version 0.9.24 [sno 2013-10-26]
