@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.49 2013/08/18 11:45:33 tron Exp $
+# $NetBSD: tools.Darwin.mk,v 1.50 2013/10/26 15:31:26 joerg Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -53,7 +53,9 @@ TOOLS_PLATFORM.grep?=		/usr/bin/grep
 .if exists(/usr/bin/groff)
 TOOLS_PLATFORM.groff?=/usr/bin/groff
 .endif
+.if exists(/usr/bin/gnutar)
 TOOLS_PLATFORM.gtar?=		/usr/bin/gnutar
+.endif
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
