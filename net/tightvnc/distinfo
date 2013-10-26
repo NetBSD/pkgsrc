@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.19 2013/07/02 12:15:36 joerg Exp $
+$NetBSD: distinfo,v 1.20 2013/10/26 00:28:02 asau Exp $
 
 SHA1 (tightvnc-1.3.10_unixsrc.tar.bz2) = ab4ed3d8e9d5188edf0ff27fce3027495f1a8851
 RMD160 (tightvnc-1.3.10_unixsrc.tar.bz2) = 0c24207ec13c1d41f445ccbdea16ce2b5d0729a7
 Size (tightvnc-1.3.10_unixsrc.tar.bz2) = 1780510 bytes
 SHA1 (patch-Xvnc_lib_Xdmcp_WC16.c) = 8f4d2facef5ef2d3a7d437536d7041361fd87fe1
+SHA1 (patch-Xvnc_lib_Xdmcp_WC32.c) = d427d239bd1dc8db2cfabfd3268eb7e8c7d3a0ce
 SHA1 (patch-Xvnc_lib_Xdmcp_WC8.c) = 076552089770f7968ce4059a12a8352db6808868
 SHA1 (patch-aa) = 3445af5bc4b85f7a45049378f5806a5c993503f4
 SHA1 (patch-ab) = a136934fb7683674bd16f7e74f88a9749af756b8
