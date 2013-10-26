@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.18 2013/07/28 20:52:16 wiz Exp $
+$NetBSD: distinfo,v 1.19 2013/10/26 22:04:57 joerg Exp $
 
 SHA1 (akonadi-1.10.2.tar.bz2) = 97660e2a4fc8797ae86ac2981490d3868c6085ff
 RMD160 (akonadi-1.10.2.tar.bz2) = c9137ad702a13a2588a60ca91a73abad409adf8c
 Size (akonadi-1.10.2.tar.bz2) = 227993 bytes
+SHA1 (patch-CMakeLists.txt) = 37ddde42e89e90c8626e8803ac2d2ed1e4805d24
 SHA1 (patch-cmake_modules_FindSqlite.cmake) = 863e5324c07dff18306c1a3e358122d700debd9e
 SHA1 (patch-server_src_nepomuk_queryserviceclient.cpp) = ac47da466a84b67fe001e6b80b5c6d93ad20b107
 SHA1 (patch-server_src_nepomuk_queryserviceclient.h) = 78b869b315a0365ccd0b309821296b48e126d363
