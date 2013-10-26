@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3937 2013/10/26 12:58:03 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3938 2013/10/26 13:39:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5529,3 +5529,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/bootstrap-mk-files to 20131025 [jperkin 2013-10-25]
 	Updated databases/tokyocabinet to 1.4.48 [jperkin 2013-10-25]
 	Updated math/ruby-spreadsheet to 0.9.1 [obache 2013-10-26]
+	Updated textproc/groonga to 3.0.8 [obache 2013-10-26]
