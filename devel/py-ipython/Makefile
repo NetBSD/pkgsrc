@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:19:31 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/26 12:15:59 obache Exp $
 #
 
 DISTNAME=	ipython-0.10.2
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://archive.ipython.org/release/0.10.2/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ipython.org/
 COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
