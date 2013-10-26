@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/06/16 09:12:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/10/26 13:44:11 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS
@@ -25,7 +25,7 @@ ${GEM_LIBDIR}/lib/sinatra/base.rb
 ${GEM_LIBDIR}/lib/sinatra/images/404.png
 ${GEM_LIBDIR}/lib/sinatra/images/500.png
 ${GEM_LIBDIR}/lib/sinatra/main.rb
-${GEM_LIBDIR}/lib/sinatra/showexceptions.rb
+${GEM_LIBDIR}/lib/sinatra/show_exceptions.rb
 ${GEM_LIBDIR}/lib/sinatra/version.rb
 ${GEM_LIBDIR}/sinatra.gemspec
 ${GEM_LIBDIR}/test/base_test.rb
