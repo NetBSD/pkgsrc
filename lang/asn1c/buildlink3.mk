@@ -1,0 +1,14 @@
+# $NetBSD: buildlink3.mk,v 1.1 2013/10/26 14:44:12 sno Exp $
+
+BUILDLINK_TREE+=	asn1c
+
+.if !defined(ASN1C_BUILDLINK3_MK)
+ASN1C_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.asn1c+=		asn1c>=0.9.24
+BUILDLINK_ABI_DEPENDS.asn1c+=		asn1c>=${ASN1C_VERSION}
+BUILDLINK_PKGSRCDIR.asn1c?=		../../lang/asn1c
+
+.endif # ASN1C_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-asn1c

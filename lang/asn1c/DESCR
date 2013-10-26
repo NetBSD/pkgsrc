@@ -1,0 +1,11 @@
+The asn1c is a free, open source compiler of ASN.1 specifications into C
+source code. It supports a range of ASN.1 syntaxes, including ISO/IEC/ITU
+ASN.1 1988, '94, '97, 2002 and later amendments. The supported sets of
+encoding rules are
+
+  * BER: ITU-T Rec. X.690 | ISO/IEC 8825-1 (2002) (BER/DER/CER).
+  * PER: X.691|8825-2 (2002) (PER).
+  * XER: X.693|8825-3 (2001) (BASIC-XER/CXER).
+
+The compiler was written specifically to address security concerns while
+providing streaming decoding capabilities.
