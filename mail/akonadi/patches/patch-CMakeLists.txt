@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/10/26 22:04:57 joerg Exp $
+
+--- CMakeLists.txt.orig	2013-10-16 19:49:37.000000000 +0000
++++ CMakeLists.txt
+@@ -257,7 +257,7 @@ option(CMAKE_COMPILE_GCOV "Build with co
+ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_C_COMPILER MATCHES "icc" OR (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
+   set(_ENABLE_EXCEPTIONS -fexceptions)
+   set(CMAKE_C_FLAGS    "${CMAKE_C_FLAGS} -Wno-long-long -std=iso9899:1990 -Wundef -Wcast-align -Werror-implicit-function-declaration -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -Wformat-security -Wmissing-format-attribute -fno-common" CACHE STRING "Flags used by the compiler during all build types" FORCE)
+-  set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Wno-long-long -ansi -Wundef -Wcast-align -Wchar-subscripts -Wall -W -Wpointer-arith -Wformat-security -fno-check-new -fno-common" CACHE STRING "Flags used by the compiler during all build types" FORCE)
++  set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Wno-long-long -ansi -Wundef -Wcast-align -Wchar-subscripts -Wall -W -Wpointer-arith -Wformat-security -fno-common" CACHE STRING "Flags used by the compiler during all build types" FORCE)
+   if(CMAKE_COMPILE_GCOV)
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+     if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
