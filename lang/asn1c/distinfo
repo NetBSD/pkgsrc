@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/10/26 14:44:12 sno Exp $
+
+SHA1 (asn1c-0.9.24.tar.gz) = b12a78d5e0723c01fb9bf3d916be88824b68e6ee
+RMD160 (asn1c-0.9.24.tar.gz) = 4fa6df21d44f8aef3bfeae71b2ff48ef5a0c7282
+Size (asn1c-0.9.24.tar.gz) = 1514907 bytes
