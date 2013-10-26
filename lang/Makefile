@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2013/09/13 22:04:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.358 2013/10/26 14:46:51 sno Exp $
 #
 
 COMMENT=	Programming languages
@@ -11,6 +11,7 @@ SUBDIR+=	SmartEiffel
 SUBDIR+=	a60
 SUBDIR+=	abcl
 SUBDIR+=	algol68g
+SUBDIR+=	asn1c
 SUBDIR+=	awka
 SUBDIR+=	baci
 SUBDIR+=	basic256
