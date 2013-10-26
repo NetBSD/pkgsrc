@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2011/04/08 17:30:35 tez Exp $
+# $NetBSD: builtin.mk,v 1.8 2013/10/26 05:28:43 richard Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -39,7 +39,7 @@ MAKEVARS+=	IS_BUILTIN.mit-krb5
     !empty(IS_BUILTIN.mit-krb5:M[yY][eE][sS])
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILTIN_VERSION.mit-krb5!=	${SH_KRB5_CONFIG} --version | \
-				${SED} -e 's/.*release //' -e 's/-.*//'
+		${SED} -e 's/.*release //' -e 's/-.*//' -e 's/).*//'
 .  endif
 BUILTIN_VERSION.mit-krb5?=	1.4.0
 BUILTIN_PKG.mit-krb5=		mit-krb5-${BUILTIN_VERSION.mit-krb5}
@@ -72,3 +72,22 @@ USE_BUILTIN.mit-krb5!=							\
 .  endif
 .endif
 MAKEVARS+=	USE_BUILTIN.mit-krb5
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.mit-krb5?=	no
+.if !empty(CHECK_BUILTIN.mit-krb5:M[nN][oO])
+.  if !empty(USE_BUILTIN.mit-krb5:M[yY][eE][sS])
+KRB5_CONFIG?=	${SH_KRB5_CONFIG}
+ALL_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
+
+BUILDLINK_CPPFLAGS.mit-krb5!=	${SH_KRB5_CONFIG} --cflags
+BUILDLINK_LDFLAGS.mit-krb5!=	${SH_KRB5_CONFIG} --libs
+.    if ${OPSYS} == "SunOS"
+BUILDLINK_LDFLAGS.mit-krb5+=	-lgss
+.    endif
+.  endif
+
+.endif	# CHECK_BUILTIN.mit-krb5
