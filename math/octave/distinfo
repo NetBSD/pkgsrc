@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.37 2013/09/15 12:30:55 joerg Exp $
+$NetBSD: distinfo,v 1.38 2013/10/27 20:35:16 joerg Exp $
 
 SHA1 (octave-3.6.4.tar.bz2) = 3cc9366b6dbbd336eaf90fe70ad16e63705d82c4
 RMD160 (octave-3.6.4.tar.bz2) = b0356f0c5d9366b8129d72ac58bbde837fee1a95
 Size (octave-3.6.4.tar.bz2) = 15627315 bytes
+SHA1 (patch-configure) = 627b8868d2cdd3c3a44e1485c8e7c47f481ca63e
 SHA1 (patch-fflush-fpos_t.c) = 24ed7f95f8431b59bc5ee0dfb0e6624b8029f512
 SHA1 (patch-fseeko-fpos_t.c) = ca846a014f9adfd47f7bbcf6557bf26a53f4a8e9
 SHA1 (patch-libgnu_string.in.h) = 4af39b76faa3ac90454a9d664919b7a6cd45fa9d
