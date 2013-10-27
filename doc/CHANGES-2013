@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3943 2013/10/27 11:18:49 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3944 2013/10/27 11:39:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5535,3 +5535,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk18 to 1.8.24.0 [jnemeth 2013-10-26]
 	Updated devel/p5-Mo to 0.37 [wen 2013-10-27]
 	Updated www/p5-Dancer to 1.3119 [wen 2013-10-27]
+	Updated www/p5-Mojolicious to 4.50 [wen 2013-10-27]
