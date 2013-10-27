@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2007/07/28 13:10:59 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2013/10/27 20:33:39 joerg Exp $
 
 --- /dev/null	Thu May  2 17:26:15 2002
 +++ System/Platforms/netbsd/CONFIG	Thu May  2 17:34:27 2002
 @@ -0,0 +1 @@
-+CC_OPTIONS:	"-I@X11BASE@/include -I@GC_PREFIX@/include/gc -L@GC_PREFIX@/lib @LINKER_RPATH_FLAG@ @GC_PREFIX@/lib -I@TCL_PREFIX@/include -I@TK_PREFIX@/include @LINKER_RPATH_FLAG@ @X11BASE@/lib -L@X11BASE@/lib @LINKER_RPATH_FLAG@ @TCL_PREFIX@/lib -L@TCL_PREFIX@/lib @LINKER_RPATH_FLAG@ @TK_PREFIX@/lib -L@TK_PREFIX@/lib";
++CC_OPTIONS:	"-I@X11BASE@/include -I@GC_PREFIX@/include/gc -L@GC_PREFIX@/lib @COMPILER_RPATH_FLAG@ @GC_PREFIX@/lib -I@TCL_PREFIX@/include -I@TK_PREFIX@/include @COMPILER_RPATH_FLAG@ @X11BASE@/lib -L@X11BASE@/lib @COMPILER_RPATH_FLAG@ @TCL_PREFIX@/lib -L@TCL_PREFIX@/lib @COMPILER_RPATH_FLAG@ @TK_PREFIX@/lib -L@TK_PREFIX@/lib";
