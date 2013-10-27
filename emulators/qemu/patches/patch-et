@@ -1,4 +1,4 @@
-$NetBSD: patch-et,v 1.11 2013/10/26 23:23:41 joerg Exp $
+$NetBSD: patch-et,v 1.12 2013/10/27 16:33:25 hubertf Exp $
 
 --- Makefile.orig	2013-10-09 19:20:32.000000000 +0000
 +++ Makefile
@@ -6,7 +6,7 @@ $NetBSD: patch-et,v 1.11 2013/10/26 23:23:41 joerg Exp $
  DTC_MAKE_ARGS=-I$(SRC_PATH)/dtc VPATH=$(SRC_PATH)/dtc -C dtc V="$(V)" LIBFDT_srcdir=$(SRC_PATH)/dtc/libfdt
  DTC_CFLAGS=$(CFLAGS) $(QEMU_CFLAGS)
  DTC_CPPFLAGS=-I$(BUILD_DIR)/dtc -I$(SRC_PATH)/dtc -I$(SRC_PATH)/dtc/libfdt
-+ARFLAGS=	-rc
++ARFLAGS=	-rcs
  
  subdir-dtc:dtc/libfdt dtc/tests
  	$(call quiet-command,$(MAKE) $(DTC_MAKE_ARGS) CPPFLAGS="$(DTC_CPPFLAGS)" CFLAGS="$(DTC_CFLAGS)" LDFLAGS="$(LDFLAGS)" ARFLAGS="$(ARFLAGS)" CC="$(CC)" AR="$(AR)" LD="$(LD)" $(SUBDIR_MAKEFLAGS) libfdt/libfdt.a,)
