@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:42:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/27 13:31:04 wen Exp $
 #
 
-DISTNAME=		HTML-FormFu-0.09005
+DISTNAME=		HTML-FormFu-0.09010
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
@@ -22,7 +21,7 @@ DEPENDS+=	p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 DEPENDS+=	p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 DEPENDS+=	p5-Data-Visitor>=0.26:../../devel/p5-Data-Visitor
 DEPENDS+=	p5-Date-Calc-[0-9]*:../../devel/p5-Date-Calc
-DEPENDS+=	p5-DateTime>=0.38:../../time/p5-DateTime
+DEPENDS+=	p5-DateTime>=0.54:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Builder>=0.7901:../../time/p5-DateTime-Format-Builder
 DEPENDS+=	p5-DateTime-Format-Natural-[0-9]*:../../time/p5-DateTime-Format-Natural
 DEPENDS+=	p5-DateTime-Format-Strptime>=1.2000:../../time/p5-DateTime-Format-Strptime
@@ -36,8 +35,8 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	{perl>=5.10.0,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	{perl>=5.7.3,p5-Locale-Maketext-[0-9]*}:../../misc/p5-Locale-Maketext
 DEPENDS+=	{perl>=5.10.0,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
-DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-ChainedAccessors>=0.02:../../devel/p5-MooseX-ChainedAccessors
+DEPENDS+=	p5-Moose>=1.00:../../devel/p5-Moose
+DEPENDS+=	p5-MooseX-Attribute-Chained>=1.0.1:../../devel/p5-MooseX-Attribute-Chained
 DEPENDS+=	p5-MooseX-Aliases-[0-9]*:../../devel/p5-MooseX-Aliases
 DEPENDS+=	p5-MooseX-SetOnce-[0-9]*:../../devel/p5-MooseX-SetOnce
 DEPENDS+=	p5-Number-Format-[0-9]*:../../textproc/p5-Number-Format
