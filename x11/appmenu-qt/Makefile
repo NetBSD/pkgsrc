@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/19 21:03:37 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/27 20:38:50 joerg Exp $
 #
 
 DISTNAME=	appmenu-qt-0.2.6
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 FETCH_USING=	curl
 
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=  c c++
 USE_CMAKE=      yes
 
@@ -20,5 +21,5 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../devel/libdbusmenu-qt/buildlink3.mk"
-
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
