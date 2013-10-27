@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3956 2013/10/27 21:22:59 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.3957 2013/10/27 22:00:15 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5555,3 +5555,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/openldap-smbk5pwd to 2.4.37 [adam 2013-10-27]
 	Updated www/py-flask-babelex to 0.9.1 [kleink 2013-10-27]
 	Updated misc/celestia to 1.6.1 [dholland 2013-10-27]
+	Updated www/py-wtforms to 1.0.5 [kleink 2013-10-27]
+	Updated www/py-flask-wtf to 0.9.3 [kleink 2013-10-27]
+	Updated www/py-flask-admin to 1.0.7 [kleink 2013-10-27]
