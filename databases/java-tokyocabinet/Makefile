@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:19 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/10/27 12:51:14 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-java-1.23
+DISTNAME=	tokyocabinet-java-1.24
 PKGNAME=	java-${DISTNAME:S/-java//}
 CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE:S/javadoc/javapkg/}
