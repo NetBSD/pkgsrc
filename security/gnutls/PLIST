@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2013/08/01 20:00:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2013/10/27 23:13:09 wiz Exp $
 bin/certtool
 bin/danetool
 bin/gnutls-cli
@@ -72,6 +72,7 @@ man/man3/gnutls_certificate_free_cas.3
 man/man3/gnutls_certificate_free_credentials.3
 man/man3/gnutls_certificate_free_crls.3
 man/man3/gnutls_certificate_free_keys.3
+man/man3/gnutls_certificate_get_crt_raw.3
 man/man3/gnutls_certificate_get_issuer.3
 man/man3/gnutls_certificate_get_ours.3
 man/man3/gnutls_certificate_get_peers.3
