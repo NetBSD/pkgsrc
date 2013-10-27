@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2013/07/19 12:51:56 joerg Exp $
+$NetBSD: distinfo,v 1.18 2013/10/27 20:33:18 joerg Exp $
 
 SHA1 (yap-6.3.3.tar.gz) = d191e419e5cf74b11e003aae5fe148f3f2f26ac5
 RMD160 (yap-6.3.3.tar.gz) = 6c92880670d58b1e885cbb52709b61773db65808
@@ -9,8 +9,8 @@ SHA1 (patch-ae) = 1bc060490ff5e2ba698a4f680a6d030f69683e01
 SHA1 (patch-af) = a042950ee63fac0f5863c3caa3f7c07227c46b4b
 SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
 SHA1 (patch-aj) = 9d8c1cde65c52f963f72b4f5364e611db96e59c7
-SHA1 (patch-configure) = a88448bb21ba103fab3579dfec7e9dbc812491f3
-SHA1 (patch-configure.in) = cbe3f2f503ba56c953fa4454881ea4917f275460
+SHA1 (patch-configure) = ceecff9a53b8fbeed0912dc9df397670bcc2d10f
+SHA1 (patch-configure.in) = fea4c56c929b3ad51a43294321c3e013254f5634
 SHA1 (patch-packages_CLPBN_horus_HorusCli.cpp) = 82879fa9e998c993a10850bce729e658f73bec11
 SHA1 (patch-packages_pldoc_Makefile.in) = 821a281c2066f6ebb7e03e197e3e5eb32ac299e8
 SHA1 (patch-packages_swi-minisat2_C_SolverTypes.h) = 88ee9ab4dd7fc43e3433d02633513c204981ece2
