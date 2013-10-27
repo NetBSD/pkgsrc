@@ -1,12 +1,19 @@
-# $NetBSD: options.mk,v 1.4 2009/07/22 09:01:36 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2013/10/27 17:17:57 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.celestia
-PKG_SUPPORTED_OPTIONS=		# empty
+PKG_SUPPORTED_OPTIONS=		lua
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		glut gnome gtk kde
-PKG_SUGGESTED_OPTIONS=		gtk
+PKG_SUGGESTED_OPTIONS=		gtk lua
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mlua)
+CONFIGURE_ARGS+=	--with-lua
+.  include "../../lang/lua/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-lua
+.endif
 
 .if !empty(PKG_OPTIONS:Mglut)
 CONFIGURE_ARGS+=	--with-glut

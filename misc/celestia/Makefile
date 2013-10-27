@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2013/10/10 14:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2013/10/27 17:17:57 dholland Exp $
 
 DISTNAME=	celestia-1.4.1
 PKGREVISION=	38
@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-lua
 
 GCC_REQD+=		3.0
 CXXFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
@@ -50,7 +49,6 @@ post-install:
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
