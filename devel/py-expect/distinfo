@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.9 2010/07/21 14:11:16 joerg Exp $
+$NetBSD: distinfo,v 1.10 2013/10/27 20:17:40 markd Exp $
 
 SHA1 (ExpectPy-1.9b1.tar.gz) = f43fcd53901f327dc8acf0650dbfe45b274a8d7d
 RMD160 (ExpectPy-1.9b1.tar.gz) = d0e586a987db1c6eb22008519483081f7278be20
 Size (ExpectPy-1.9b1.tar.gz) = 149580 bytes
-SHA1 (patch-aa) = eff544e7290736bebb81b8391848369d630f7b03
-SHA1 (patch-ab) = d95ef8bc2f6c0178de0b05e649d6e2d6aed37335
+SHA1 (patch-ab) = 67a2cf831973fa39b83aea61142c0682de60cd27
 SHA1 (patch-ac) = 0ff7162129a84fbc913a8b1240209387b922c2a8
 SHA1 (patch-ad) = d2809ac63abb65ad59586cc35ffcda1b70088bcb
 SHA1 (patch-ae) = 0f5190724d3b17e7b7f06f6408e1c9e7a3e66868
-SHA1 (patch-af) = 130de0f91370a49db5c9236445d2cb258303b190
+SHA1 (patch-af) = 9ed0f60061d91a04788f8ad6974edc7e4d2e411b
 SHA1 (patch-ag) = 7e43133aeebee5c63716aefba8fd4e0d4b1ff6ce
