@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12678 2013/10/27 23:13:18 wiz Exp $
+$NetBSD: TODO,v 1.12679 2013/10/27 23:17:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-7.6.0
+	o abcm2ps-7.6.3
 	o abcmidi-20130430
 	o abiword-3.0
 	o accerciser-1.12.2 [GNOME 2.32]
@@ -405,7 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.7
+	o calibre-1.8
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -619,6 +619,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramofile-1.6P
 	o gramps-4.0.1
 	o gramps3-3.4.4
+	o grep-2.15
 	o grilo-0.2.7
 	o groff-1.22.2
 	o gsharutils-4.14
@@ -694,7 +695,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdenlive-0.9.6
 	o kdevelop-4.5
 	o kdrill-6.5
-	o kid3-2.3
+	o kid3-3.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
 	o kmp-0.5
@@ -892,6 +893,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o popa3d-1.0.3
 	o poppass-4.0.14
+	o poppler-0.24.3
 	o postal-0.72
 	o postgresql-postgis-2.1.0
 	o powermanga-0.91
@@ -908,14 +910,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-anki2-2.0.15
 	o py-beets-1.3.1
 	o py-dateutil-2.0
+	o py-django-1.5.5
 	o py-gnosis-1.2.2
 	o py-gobject3-3.10.1
 	o py-httplib2-0.8
 	o py-kombu-2.5.14
 	o py-moin-1.9.7
-	o py-psutil-1.1.1
+	o py-psutil-1.1.2
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
@@ -923,6 +927,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simplejson-3.3.0
 	o py-sip-4.15.3
 	o py-sybase-0.37
+	o py-xattr-1.3.3
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.7.2
 	o qt5-libs-5.1
@@ -1102,12 +1107,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
+	o wordpress-3.7
 	o worker-3.1.0
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20131019
+	o x264-devel-20131026
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
