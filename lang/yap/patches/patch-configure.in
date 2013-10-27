@@ -1,7 +1,16 @@
-$NetBSD: patch-configure.in,v 1.1 2013/06/13 21:44:06 joerg Exp $
+$NetBSD: patch-configure.in,v 1.2 2013/10/27 20:33:18 joerg Exp $
 
---- configure.in.orig	2013-06-13 17:40:11.000000000 +0000
+--- configure.in.orig	2013-01-19 11:44:05.000000000 +0000
 +++ configure.in
+@@ -595,7 +595,7 @@ then
+        C_PARSER_FLAGS="-O3 -Wall -Wstrict-prototypes -Wmissing-prototypes $CFLAGS"
+        CFLAGS="-O3 -fomit-frame-pointer -Wall -Wstrict-prototypes -Wmissing-prototypes $CFLAGS"
+        case "`$CC --version < /dev/null`" in	
+-	  *3.4*) CFLAGS="-fno-gcse -fno-crossjumping $CFLAGS" ;;
++	  *gcc*3.4*) CFLAGS="-fno-gcse -fno-crossjumping $CFLAGS" ;;
+        esac
+        case "$target_cpu" in
+         i*86*)
 @@ -1193,8 +1193,8 @@ case "$target_os" in
            if test "$have_dl" = "yes"
  	  then
