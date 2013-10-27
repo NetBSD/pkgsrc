@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/04/08 11:17:12 rodent Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/10/27 20:47:53 joerg Exp $
 #
 # used by editors/emacs22/Makefile
 # used by editors/emacs22-nox11/Makefile
@@ -65,6 +65,15 @@ CPPFLAGS+=		-DDFLY_CRT_USRLIB
 .if !empty(CC_VERSION:Mgcc-[4-9].*)
 CPP+=		-P
 CONFIGURE_ENV+=	CPP=${CPP:Q}
+.endif
+
+.if (${OPSYS} == "NetBSD") && \
+    !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)
+# NetBSD with native Clang doesn't provide libgcc, everything is in libc.
+pre-configure: fake-libgcc
+
+fake-libgcc:
+	${AR} q ${BUILDLINK_DIR}/lib/libgcc.a
 .endif
 
 post-extract:
