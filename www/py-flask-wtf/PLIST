@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/07 21:51:10 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/27 21:55:23 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_wtf/__init__.py
 ${PYSITELIB}/flask_wtf/__init__.pyc
 ${PYSITELIB}/flask_wtf/__init__.pyo
+${PYSITELIB}/flask_wtf/_compat.py
+${PYSITELIB}/flask_wtf/_compat.pyc
+${PYSITELIB}/flask_wtf/_compat.pyo
+${PYSITELIB}/flask_wtf/csrf.py
+${PYSITELIB}/flask_wtf/csrf.pyc
+${PYSITELIB}/flask_wtf/csrf.pyo
 ${PYSITELIB}/flask_wtf/file.py
 ${PYSITELIB}/flask_wtf/file.pyc
 ${PYSITELIB}/flask_wtf/file.pyo
@@ -17,6 +23,9 @@ ${PYSITELIB}/flask_wtf/form.pyo
 ${PYSITELIB}/flask_wtf/html5.py
 ${PYSITELIB}/flask_wtf/html5.pyc
 ${PYSITELIB}/flask_wtf/html5.pyo
+${PYSITELIB}/flask_wtf/i18n.py
+${PYSITELIB}/flask_wtf/i18n.pyc
+${PYSITELIB}/flask_wtf/i18n.pyo
 ${PYSITELIB}/flask_wtf/recaptcha/__init__.py
 ${PYSITELIB}/flask_wtf/recaptcha/__init__.pyc
 ${PYSITELIB}/flask_wtf/recaptcha/__init__.pyo
