@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/06/12 20:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2013/10/27 20:05:14 adam Exp $
 
 DISTNAME=	flac-1.3.0
 CATEGORIES=	audio archivers
@@ -52,6 +52,11 @@ BUILDLINK_TRANSFORM+=	rm:-O3
 # SunPro does not support __inline
 .if !empty(PKGSRC_COMPILER:Msunpro)
 CFLAGS+=	-D__inline=inline
+.endif
+
+# With -fgnu89-inline option duplicate symbols arise.
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-fgnu89-inline
 .endif
 
 .include "../../multimedia/libogg/buildlink3.mk"
