@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3958 2013/10/27 23:13:18 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3959 2013/10/27 23:19:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5559,3 +5559,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-wtf to 0.9.3 [kleink 2013-10-27]
 	Updated www/py-flask-admin to 1.0.7 [kleink 2013-10-27]
 	Updated security/gnutls to 3.2.5 [wiz 2013-10-27]
+	Updated misc/py-anki2 to 2.0.15 [wiz 2013-10-27]
