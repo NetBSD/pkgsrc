@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.18 2013/07/24 11:15:55 drochner Exp $
+$NetBSD: distinfo,v 1.19 2013/10/27 20:35:48 joerg Exp $
 
 SHA1 (genius-1.0.17.tar.gz) = 884a12db62de68aa90b078ba9baa124f73c44f51
 RMD160 (genius-1.0.17.tar.gz) = 17b6fa3fddf65f4bab8e0d7721f85ea8a666d838
 Size (genius-1.0.17.tar.gz) = 3960909 bytes
+SHA1 (patch-configure) = a1431b1e521c35eea3df1acc16415806b54f58e7
+SHA1 (patch-configure.in) = 73fcc7ba580b7f575bd16fdcf12fe81518904379
 SHA1 (patch-gtkextra_gtkplot.c) = 3ea37b0a15454b5d81d62b93dd4a70828259d97f
 SHA1 (patch-gtkextra_gtkplotsurface.c) = 5f1e98dc7268ebef3a5edf04496a92b4f620114c
