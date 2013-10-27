@@ -1,85 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2006/12/13 16:45:42 obache Exp $
+$NetBSD: patch-ad,v 1.5 2013/10/27 21:21:26 dholland Exp $
 
---- src/celestia/celestiacore.cpp.orig	2006-02-08 09:03:15.000000000 +0000
+Honor PKG_SYSCONFDIR.
+
+--- src/celestia/celestiacore.cpp.orig	2011-06-05 16:11:13.000000000 +0000
 +++ src/celestia/celestiacore.cpp
-@@ -2577,16 +2577,16 @@ static void displayAngle(Overlay& overla
- 
-     if (degrees > 0)
-     {
--        overlay.printf("%d%s %02d' %.1f\"",
-+        overlay.myprintf("%d%s %02d' %.1f\"",
-                         degrees, UTF8_DEGREE_SIGN, minutes, seconds);
-     }
-     else if (minutes > 0)
-     {
--        overlay.printf("%02d' %.1f\"", minutes, seconds);
-+        overlay.myprintf("%02d' %.1f\"", minutes, seconds);
-     }
-     else
-     {
--        overlay.printf("%.1f\"", seconds);
-+        overlay.myprintf("%.1f\"", seconds);
-     }
- }
- 
-@@ -2625,7 +2625,7 @@ static void displayApparentMagnitude(Ove
-         overlay << _("Absolute magnitude: ");
-     }
- 
--    overlay.printf("%.1f\n", appMag);
-+    overlay.myprintf("%.1f\n", appMag);
- }
- 
- static void displayAcronym(Overlay& overlay, char* s)
-@@ -2665,7 +2665,7 @@ static void displayStarInfo(Overlay& ove
-         return;
-     }
- 
--    overlay.printf(_("Abs (app) mag: %.2f (%.2f)\n"),
-+    overlay.myprintf(_("Abs (app) mag: %.2f (%.2f)\n"),
-                    star.getAbsoluteMagnitude(),
-                    astro::absToAppMag(star.getAbsoluteMagnitude(),
-                                       (float) distance));
-@@ -2687,7 +2687,7 @@ static void displayStarInfo(Overlay& ove
-     if (detail > 1)
-     {
-         overlay << _("Surface temp: ") << SigDigitNum(star.getTemperature(), 3) << " K\n";
--        overlay.printf(_("Radius: %.2f Rsun\n"), star.getRadius() / 696000.0f);
-+        overlay.myprintf(_("Radius: %.2f Rsun\n"), star.getRadius() / 696000.0f);
- 
-         overlay << _("Rotation period: ");
-         float period = star.getRotationElements().period;
-@@ -2782,7 +2782,7 @@ static void displayPlanetInfo(Overlay& o
-             float appMag = body.getApparentMagnitude(*sun,
-                                                      bodyPos - Point3d(0, 0, 0),
-                                                      viewVec);
--            overlay.printf(_("Apparent mag: %.2f\n"), appMag);
-+            overlay.myprintf(_("Apparent mag: %.2f\n"), appMag);
- #endif
-         }
-     }
-@@ -3140,9 +3140,9 @@ void CelestiaCore::renderOverlay()
- 
-         // Field of view
-         float fov = radToDeg(sim->getActiveObserver()->getFOV());
--        overlay->printf(_("FOV: "));
-+        overlay->myprintf(_("FOV: "));
-         displayAngle(*overlay, fov);
--        overlay->printf(" (%.2f%s)\n", views[activeView]->zoom,
-+        overlay->myprintf(" (%.2f%s)\n", views[activeView]->zoom,
-                         UTF8_MULTIPLICATION_SIGN);
-         overlay->endText();
-         glPopMatrix();
-@@ -3341,7 +3341,7 @@ void CelestiaCore::renderOverlay()
-             movieCapture->getFrameRate();
-         int min = (int) (sec / 60);
-         sec -= min * 60.0f;
--        overlay->printf("%3d:%05.2f", min, sec);
-+        overlay->myprintf("%3d:%05.2f", min, sec);
-         glPopMatrix();
- 
-         glPushMatrix();
-@@ -3547,7 +3547,7 @@ bool CelestiaCore::initSimulation(const 
+@@ -4103,7 +4103,7 @@ bool CelestiaCore::initSimulation(const 
      }
      else
      {
