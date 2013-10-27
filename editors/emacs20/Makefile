@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2013/05/31 12:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2013/10/27 20:41:49 joerg Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -75,6 +75,14 @@ MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL:Q}
 .if !empty(CC_VERSION:Mgcc-3.*)
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
+MAKEFILECPP=	${PREFIX}/bin/tradcpp
+.else
+MAKEFILECPP=	${CPP} -traditional-cpp
+.endif
+ALL_ENV+=	MAKEFILECPP=${MAKEFILECPP:Q}
 
 INFO_FILES=	yes
 
