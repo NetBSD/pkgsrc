@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/14 00:01:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/10/27 20:32:36 joerg Exp $
 
 SHA1 (resynthesizer-0.16.tar.gz) = 9a7a6318b18d9546d712441594041c4ca47952d7
 RMD160 (resynthesizer-0.16.tar.gz) = 4d232918d08ae52f2e1ebed5897b40788be6c350
 Size (resynthesizer-0.16.tar.gz) = 18241 bytes
+SHA1 (patch-Makefile) = 5ddf6be3884aad811ec8f6687eb6f3fcfb408775
