@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2011/04/15 16:23:00 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2013/10/27 20:29:44 joerg Exp $
 
---- configure.orig	Fri May 21 22:08:40 2004
+--- configure.orig	2002-07-13 01:31:52.000000000 +0000
 +++ configure
 @@ -12063,8 +12063,6 @@ if test "X$GCC" = Xyes; then
    MFX_CC="GCC"
@@ -11,3 +11,21 @@ $NetBSD: patch-ab,v 1.3 2011/04/15 16:23:00 drochner Exp $
    fi
    CFLAGS="$CFLAGS -Wall -Wcast-align -Wcast-qual -Wwrite-strings"
    case $MFX_CPU in
+@@ -12072,17 +12070,10 @@ if test "X$GCC" = Xyes; then
+       MFX_ARCH="i386"
+       mfx_unaligned_ok_2="yes"
+       mfx_unaligned_ok_4="yes"
+-      CFLAGS="$CFLAGS -fno-strength-reduce"
+       ;;
+     *)
+-      if test "X$mfx_cv_prog_gcc_bug_strength_reduce" = Xyes; then
+-        CFLAGS="$CFLAGS -fno-strength-reduce"
+-      fi
+       ;;
+   esac
+-  if test "X$mfx_cv_prog_gcc_bug_schedule_insns" = Xyes; then
+-    CFLAGS="$CFLAGS -fno-schedule-insns -fno-schedule-insns2"
+-  fi
+ fi
+ 
+ 
