@@ -1,32 +1,60 @@
-$NetBSD: patch-am,v 1.2 2012/07/03 17:40:36 joerg Exp $
+$NetBSD: patch-am,v 1.3 2013/10/27 21:21:26 dholland Exp $
 
---- src/celutil/unixdirectory.cpp.orig	2005-03-05 13:56:14.000000000 +0000
+- dragonfly doesn't have wordexp.h
+- use glob.h instead of wordexp.h when not using wordexp.h
+
+--- src/celutil/unixdirectory.cpp.orig	2011-06-05 16:11:15.000000000 +0000
 +++ src/celutil/unixdirectory.cpp
-@@ -7,11 +7,19 @@
- // as published by the Free Software Foundation; either version 2
- // of the License, or (at your option) any later version.
+@@ -11,20 +11,30 @@
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <dirent.h>
+-#include <wordexp.h>
+-#include "directory.h"
+-
+-using namespace std;
  
 +#if defined(__DragonFly__)
 +#define NO_WORDEXP
 +#endif
+ 
+ #ifdef TARGET_OS_MAC
+ #ifdef QT_CORE_LIB
+ // Crash on Mac OS X / Qt4 version when calling wordfree.
+ // This seems to happen only with Leopard.
+-#define WORDEXP_PROBLEM
++#define NO_WORDEXP
++#endif
+ #endif
 +
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <unistd.h>
- #include <dirent.h>
 +#ifdef NO_WORDEXP
 +#include <glob.h>
 +#else
- #include <wordexp.h>
-+#endif
- #include "directory.h"
++#include <wordexp.h>
+ #endif
  
- using namespace std;
-@@ -98,6 +106,19 @@ bool IsDirectory(const std::string& file
- }
++#include "directory.h"
++
++using namespace std;
++
++
+ class UnixDirectory : public Directory
+ {
+ public:
+@@ -107,7 +117,7 @@ bool IsDirectory(const std::string& file
  
- std::string WordExp(const std::string& filename) {
-+#ifdef NO_WORDEXP
+ std::string WordExp(const std::string& filename) 
+ {
+-#ifndef WORDEXP_PROBLEM   
++#ifndef NO_WORDEXP
+     wordexp_t result;
+     std::string expanded;
+ 
+@@ -130,7 +140,17 @@ std::string WordExp(const std::string& f
+     expanded = result.we_wordv[0];
+     wordfree(&result);
+ #else
+-    std::string expanded = filename;
 +    glob_t g;
 +    std::string expanded;
 +    glob(filename.c_str(), GLOB_NOSORT | GLOB_TILDE, NULL, &g);
@@ -38,13 +66,6 @@ $NetBSD: patch-am,v 1.2 2012/07/03 17:40:36 joerg Exp $
 +	globfree(&g);
 +	return expanded;
 +    }
-+#else
-     wordexp_t result;
-     std::string expanded;
- 
-@@ -121,4 +142,5 @@ std::string WordExp(const std::string& f
-     wordfree(&result);
- 
+ #endif
      return expanded;
-+#endif
  }

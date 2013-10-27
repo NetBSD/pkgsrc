@@ -1,21 +1,24 @@
-$NetBSD: patch-ae,v 1.4 2006/02/17 23:46:40 adam Exp $
+$NetBSD: patch-ae,v 1.5 2013/10/27 21:21:26 dholland Exp $
 
---- Makefile.in.orig	2006-02-15 22:53:42.000000000 +0100
+- handle celestia.cfg using the pkgsrc method for config files
+- don't use mv -b, which isn't standard
+
+--- Makefile.in.orig	2011-06-05 18:34:26.000000000 +0000
 +++ Makefile.in
-@@ -307,7 +307,6 @@ noinst_DATA = \
- 
+@@ -444,7 +444,6 @@ noinst_DATA = \
+ 	$(dosstuff)
  
  pkgdata_DATA = \
 -	celestia.cfg \
  	controls.txt \
  	COPYING \
  	$(wildcard *.cel)
-@@ -848,7 +847,7 @@ dist-hook:
+@@ -1064,7 +1063,7 @@ dist-hook:
  
  install-data-hook:
- 	if [ "$(kde_datadir)" -a -d $(kde_datadir)/@PACKAGE@ -a ! -h $(kde_datadir)/@PACKAGE@ ] ; then \
--		mv -f -b $(kde_datadir)/@PACKAGE@/* $(datadir)/@PACKAGE@/ ; \
-+		mv -f $(kde_datadir)/@PACKAGE@/* $(datadir)/@PACKAGE@/ ; \
- 		rmdir $(kde_datadir)/@PACKAGE@ ; \
+ 	if [ "$(kde_datadir)" -a -d $(DESTDIR)/$(kde_datadir)/@PACKAGE@ -a ! -h $(DESTDIR)/$(kde_datadir)/@PACKAGE@ ] ; then \
+-		mv -f -b $(DESTDIR)/$(kde_datadir)/@PACKAGE@/* $(DESTDIR)/$(datadir)/@PACKAGE@/ ; \
++		mv -f $(DESTDIR)/$(kde_datadir)/@PACKAGE@/* $(DESTDIR)/$(datadir)/@PACKAGE@/ ; \
+ 		rmdir $(DESTDIR)/$(kde_datadir)/@PACKAGE@ ; \
  	fi
- 	if [ "$(kde_datadir)" -a ! -h $(kde_datadir)/@PACKAGE@ ] ; then \
+ 	if [ "$(kde_datadir)" -a ! -h $(DESTDIR)/$(kde_datadir)/@PACKAGE@ ] ; then \

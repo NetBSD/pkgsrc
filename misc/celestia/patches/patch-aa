@@ -1,19 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2007/01/26 04:25:46 markd Exp $
+$NetBSD: patch-aa,v 1.7 2013/10/27 21:21:26 dholland Exp $
 
---- configure.orig	2006-02-15 21:53:09.000000000 +0000
+--- configure.orig	2011-06-05 18:33:27.000000000 +0000
 +++ configure
-@@ -21716,8 +21716,8 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
- 
- 
- CELESTIA_CPPFLAGS=""
--CELESTIA_CFLAGS="-O2 -Wall -ffast-math -fexpensive-optimizations"
--CELESTIA_CXXFLAGS="-O2 -Wall -ffast-math -fexpensive-optimizations"
-+CELESTIA_CFLAGS="-Wall -ffast-math -fexpensive-optimizations"
-+CELESTIA_CXXFLAGS="-Wall -ffast-math -fexpensive-optimizations"
- 
- echo "$as_me:$LINENO: checking whether to include debugging code" >&5
- echo $ECHO_N "checking whether to include debugging code... $ECHO_C" >&6
-@@ -37346,19 +37346,19 @@ else
+@@ -26740,19 +26740,19 @@ if test "$kde_have_all_paths" = "no" && 
  if test "$ac_use_path_checking" = "default"; then
  
    if test -z "$kde_htmldir"; then
@@ -37,7 +26,7 @@ $NetBSD: patch-aa,v 1.6 2007/01/26 04:25:46 markd Exp $
    fi
    if test -z "$kde_locale"; then
      kde_locale='\${datadir}/locale'
-@@ -37367,31 +37367,31 @@ if test "$ac_use_path_checking" = "defau
+@@ -26761,31 +26761,31 @@ if test "$ac_use_path_checking" = "defau
      kde_cgidir='\${exec_prefix}/cgi-bin'
    fi
    if test -z "$kde_confdir"; then
@@ -77,12 +66,3 @@ $NetBSD: patch-aa,v 1.6 2007/01/26 04:25:46 markd Exp $
    fi
    if test -z "$kde_moduledir"; then
      if test "$kde_qtver" = "2"; then
-@@ -39509,7 +39509,7 @@ echo "$as_me:$LINENO: checking whether t
- echo $ECHO_N "checking whether to enable Celestia Extension Language... $ECHO_C" >&6
- if (test "$enable_lua" != "no"); then
- 	CXXFLAGS="$CXXFLAGS -DCELX"
--	LDFLAGS="$LDFLAGS -llualib -llua"
-+	LDFLAGS="$LDFLAGS -llua"
- 
- 	if (test "$lua_includes" != "no"); then
- 		CXXFLAGS="$CXXFLAGS -I$lua_includes"
