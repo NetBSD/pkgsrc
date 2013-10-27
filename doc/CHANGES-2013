@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3961 2013/10/27 23:26:01 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3962 2013/10/27 23:35:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5562,3 +5562,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-anki2 to 2.0.15 [wiz 2013-10-27]
 	Updated textproc/grep to 2.15 [wiz 2013-10-27]
 	Updated misc/goffice0.10 to 0.10.8 [wiz 2013-10-27]
+	Updated math/gnumeric112 to 1.12.8 [wiz 2013-10-27]
