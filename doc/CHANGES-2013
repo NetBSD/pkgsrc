@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3951 2013/10/27 13:32:14 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3952 2013/10/27 14:54:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5543,3 +5543,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/lua-tokyocabinet to 1.10 [obache 2013-10-27]
 	Added devel/p5-MooseX-Attribute-Chained version 1.0.1 [wen 2013-10-27]
 	Updated www/p5-HTML-FormFu to 0.09010 [wen 2013-10-27]
+	Updated www/p5-HTML-Quoted to 0.04 [wen 2013-10-27]
