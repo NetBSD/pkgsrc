@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3947 2013/10/27 12:49:27 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3948 2013/10/27 12:51:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5539,3 +5539,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-autobox to 2.82 [wen 2013-10-27]
 	Updated databases/p5-tokyocabinet to 1.34 [obache 2013-10-27]
 	Updated databases/ruby-tokyocabinet to 1.31 [obache 2013-10-27]
+	Updated databases/java-tokyocabinet to 1.24 [obache 2013-10-27]
