@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2013/10/27 17:17:57 dholland Exp $
+# $NetBSD: Makefile,v 1.56 2013/10/27 21:21:26 dholland Exp $
 
-DISTNAME=	celestia-1.4.1
-PKGREVISION=	38
+DISTNAME=	celestia-1.6.1
 CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=celestia/}
 
@@ -38,6 +37,14 @@ CONFIGURE_ARGS+=	--disable-threading
 .endif
 
 INSTALLATION_DIRS=	${EGDIR}
+
+
+# The distfile comes with binary static libs for cspice, liblua,
+# liblualib, and libpng. Delete them on the assumption that we don't
+# want to use binary blobs. If the build turns out to require them for
+# some reason, this can be reviewed...
+post-extract:
+	${RM} -f ${WRKSRC}/macosx/lib/*.a
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/celestia.cfg ${DESTDIR}${EGDIR}/celestia.cfg.default
