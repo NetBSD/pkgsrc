@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2006/08/14 22:43:08 wiz Exp $
+$NetBSD: patch-ai,v 1.4 2013/10/27 21:21:26 dholland Exp $
 
---- src/celestia/celx.cpp.orig	2006-01-07 00:01:51.000000000 +0000
+--- src/celestia/celx.cpp.orig	2011-06-05 16:11:13.000000000 +0000
 +++ src/celestia/celx.cpp
-@@ -368,6 +368,18 @@ static CelestiaCore* getAppCore(lua_Stat
+@@ -492,6 +492,18 @@ static CelestiaCore* getAppCore(lua_Stat
      return appCore;
  }
  
@@ -21,44 +21,12 @@ $NetBSD: patch-ai,v 1.3 2006/08/14 22:43:08 wiz Exp $
  
  LuaState::LuaState() :
      timeout(MaxTimeslice),
-@@ -378,7 +390,7 @@ LuaState::LuaState() :
-     scriptAwakenTime(0.1),
-     ioMode(NoIO)
+@@ -503,7 +515,7 @@ LuaState::LuaState() :
+     ioMode(NoIO),
+     eventHandlerEnabled(false)
  {
 -    state = lua_open();
 +    state = lua_newstate(l_alloc, NULL);
      timer = CreateTimer();
      screenshotCount = 0;
  }
-@@ -472,6 +484,7 @@ void LuaState::cleanup()
- }
- 
- 
-+
- bool LuaState::createThread()
- {
-     // Initialize the coroutine which wraps the script
-@@ -598,7 +611,7 @@ bool LuaState::charEntered(const char* c
-         int stackTop = lua_gettop(costate);
-         if (strcmp(c_p, "y") == 0)
-         {
--            lua_iolibopen(costate);
-+            luaopen_io(costate);
-             ioMode = IOAllowed;
-         }
-         else
-@@ -4577,10 +4590,10 @@ bool LuaState::init(CelestiaCore* appCor
-     initMaps();
- 
-     // Import the base and math libraries
--    lua_baselibopen(state);
--    lua_mathlibopen(state);
--    lua_tablibopen(state);
--    lua_strlibopen(state);
-+    luaopen_base(state);
-+    luaopen_math(state);
-+    luaopen_table(state);
-+    luaopen_string(state);
- 
-     // Add an easy to use wait function, so that script writers can
-     // live in ignorance of coroutines.  There will probably be a significant
