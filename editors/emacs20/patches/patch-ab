@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.10 2013/07/07 06:29:48 dholland Exp $
+$NetBSD: patch-ab,v 1.11 2013/10/27 20:41:49 joerg Exp $
 
 Caution: the changes for using a different cpp for munging the
 makefiles (search for MAKEFILECPP) are *not* reflected in the pkgsrc
@@ -60,7 +60,7 @@ with autoconf without thinking.
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
-@@ -1981,6 +1995,24 @@ else
+@@ -1981,6 +1995,14 @@ else
  fi
  echo "$ac_t""$CPP" 1>&6
  
@@ -70,22 +70,12 @@ with autoconf without thinking.
 +# (note the now-dead version 1.4 of patch-ab for some things to check)
 +# but for pkgsrc purposes the following is currently sufficient.
 +
-+
-+
-+
-+
-+
-+
-+
-+MAKEFILECPP="$CPP -traditional-cpp"
-+
-+
 +echo "$ac_t""$MAKEFILECPP" 1>&6
 +
  # Find a good install program.  We prefer a C program (faster),
  # so one script is as good as another.  But avoid the broken or
  # incompatible versions:
-@@ -3823,6 +3855,53 @@ else
+@@ -3823,6 +3845,53 @@ else
    echo "$ac_t""no" 1>&6
  fi
  
@@ -139,7 +129,7 @@ with autoconf without thinking.
    LIBS="$OLDLIBS"
  fi
  
-@@ -4906,6 +4985,64 @@ EOF
+@@ -4906,6 +4975,64 @@ EOF
  
  fi
  
@@ -204,7 +194,7 @@ with autoconf without thinking.
  # Set up the CFLAGS for real compilation, so we can substitute it.
  CFLAGS="$REAL_CFLAGS"
  
-@@ -5211,6 +5350,7 @@ s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
+@@ -5211,6 +5338,7 @@ s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
  s%@INSTALL_DATA@%$INSTALL_DATA%g
  s%@YACC@%$YACC%g
  s%@SET_MAKE@%$SET_MAKE%g
@@ -212,7 +202,7 @@ with autoconf without thinking.
  s%@ALLOCA@%$ALLOCA%g
  s%@version@%$version%g
  s%@configuration@%$configuration%g
-@@ -5445,6 +5585,7 @@ fi; done
+@@ -5445,6 +5573,7 @@ fi; done
  EOF
  cat >> $CONFIG_STATUS <<EOF
  CPP="$CPP" CPPFLAGS="$CPPFLAGS"
@@ -220,7 +210,7 @@ with autoconf without thinking.
  EOF
  cat >> $CONFIG_STATUS <<\EOF
  
-@@ -5480,7 +5621,7 @@ echo creating lib-src/Makefile
+@@ -5480,7 +5609,7 @@ echo creating lib-src/Makefile
    sed -e '1,/start of cpp stuff/d'\
        -e 's@/\*\*/#\(.*\)$@/* \1 */@' \
        < Makefile.c > junk.c
@@ -229,7 +219,7 @@ with autoconf without thinking.
        sed -e 's/^ /	/' -e '/^#/d' -e '/^[ 	]*$/d' > junk2.c
    cat junk1.c junk2.c > Makefile.new
    rm -f junk.c junk1.c junk2.c
-@@ -5496,7 +5637,7 @@ echo creating src/Makefile
+@@ -5496,7 +5625,7 @@ echo creating src/Makefile
    sed -e '1,/start of cpp stuff/d'\
        -e 's@/\*\*/#\(.*\)$@/* \1 */@' \
        < Makefile.c > junk.c
