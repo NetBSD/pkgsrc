@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2013/10/26 13:39:37 asau Exp $
+# $NetBSD: Makefile,v 1.119 2013/10/27 16:33:25 hubertf Exp $
 
 DISTNAME=	qemu-1.6.1
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,6 +35,7 @@ CONFIGURE_ARGS+=	--python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
+#HF#CONFIGURE_ARGS+=	--disable-fdt			# HF: build on OS X
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
