@@ -1,0 +1,12 @@
+$NetBSD: patch-configure,v 1.1 2013/10/27 20:30:44 joerg Exp $
+
+--- configure.orig	2013-10-16 20:50:46.000000000 +0000
++++ configure
+@@ -22200,7 +22200,6 @@ esac
+ fi
+ 
+  tmp_CFLAGS="SILC_CRYPTO_CFLAGS"
+-  SILC_CRYPTO_CFLAGS="${SILC_CRYPTO_CFLAGS} -fno-regmove"
+   { $as_echo "$as_me:$LINENO: checking whether $CC accepts -fno-regmove flag" >&5
+ $as_echo_n "checking whether $CC accepts -fno-regmove flag... " >&6; }
+   cat >conftest.$ac_ext <<_ACEOF

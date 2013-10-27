@@ -1,0 +1,12 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/10/27 20:30:44 joerg Exp $
+
+--- configure.ac.orig	2013-10-17 11:14:15.000000000 +0000
++++ configure.ac
+@@ -1292,7 +1292,6 @@ case "$host_cpu" in
+ esac
+ fi
+ 
+-SILC_ADD_CC_FLAGS(SILC_CRYPTO, -fno-regmove)
+ if test x$summary_debug = xno -a x$want_cc_optimizations = xtrue; then
+   SILC_ADD_CC_FLAGS(SILC_CRYPTO, -fomit-frame-pointer -O3)
+ fi
