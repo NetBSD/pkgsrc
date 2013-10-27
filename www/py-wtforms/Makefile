@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/09/23 20:36:27 kleink Exp $
+# $NetBSD: Makefile,v 1.7 2013/10/27 21:51:02 kleink Exp $
 
-DISTNAME=	WTForms-1.0.4
+DISTNAME=	WTForms-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/W/WTForms/
 EXTRACT_SUFX=	.zip
