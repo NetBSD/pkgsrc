@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3945 2013/10/27 11:50:43 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3946 2013/10/27 12:46:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5537,3 +5537,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Dancer to 1.3119 [wen 2013-10-27]
 	Updated www/p5-Mojolicious to 4.50 [wen 2013-10-27]
 	Updated devel/p5-autobox to 2.82 [wen 2013-10-27]
+	Updated databases/p5-tokyocabinet to 1.34 [obache 2013-10-27]
