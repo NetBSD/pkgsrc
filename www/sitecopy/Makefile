@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/02/06 23:24:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2013/10/27 21:52:17 joerg Exp $
 
 DISTNAME=		sitecopy-0.16.6
 PKGREVISION=		3
@@ -30,6 +30,7 @@ pre-build:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
