@@ -1,19 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2011/11/25 22:08:30 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2013/10/27 21:21:26 dholland Exp $
 
 --- src/celutil/formatnum.cpp.orig	2006-02-13 14:33:02.000000000 +0000
 +++ src/celutil/formatnum.cpp
-@@ -7,8 +7,10 @@
- // as published by the Free Software Foundation; either version 2
- // of the License, or (at your option) any later version.
- 
-+#include <climits>
- #include <cmath>
- #include <cstdio>
-+#include <cstring>
- #include <string>
- #include "formatnum.h"
- 
-@@ -60,9 +62,9 @@ std::ostream& operator<<(std::ostream& o
+@@ -61,9 +61,9 @@ std::ostream& operator<<(std::ostream& o
      char buf[32];
      char obuf[64];
      double value = num.getRoundedValue();
