@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.7 2012/02/28 17:26:29 hans Exp $
+$NetBSD: distinfo,v 1.8 2013/10/27 20:30:44 joerg Exp $
 
 SHA1 (silc-toolkit-1.1.10.tar.bz2) = 0bd4b1b410424733687fd2ad33c1b09cbbf8673f
 RMD160 (silc-toolkit-1.1.10.tar.bz2) = 9a505420569e8595eaee684c2e4bde7e4570654d
 Size (silc-toolkit-1.1.10.tar.bz2) = 1830280 bytes
+SHA1 (patch-configure) = 8ddeaa2a9b24a568860b8950b007ed52d13d5411
+SHA1 (patch-configure.ac) = 8de54702db6a0f8d5e788239466d3ee3e550a660
 SHA1 (patch-lib_Makefile.am) = 87f9a0d450f3dc3a51a6bc7856b395df1281b475
 SHA1 (patch-lib_Makefile.in) = 79c11f6b3057cafbe68fab47fb7e4b4fb50fb1f9
