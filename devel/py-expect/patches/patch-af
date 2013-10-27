@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2002/06/15 06:54:01 sjg Exp $
+$NetBSD: patch-af,v 1.2 2013/10/27 20:17:40 markd Exp $
 --- expvers.py.~1~	Fri Jun 14 13:09:31 2002
 +++ expvers.py	Fri Jun 14 13:36:32 2002
 @@ -2,7 +2,7 @@
@@ -51,6 +51,15 @@ $NetBSD: patch-af,v 1.1 2002/06/15 06:54:01 sjg Exp $
      return (version[:p], version)
    else:
      return (version, version)
+@@ -105,7 +105,7 @@
+       raise SystemExit, "Cannot find expect interpreter"
+     del d
+     basevers, fullvers = get_version(expect_prog)
+-    libdir = pathjoin(basedir, pathjoin('lib', 'expect' + basevers))
++    libdir = pathjoin(basedir, pathjoin('lib', pathjoin('tcl', 'expect' + basevers)))
+   del f
+ 
+ else:
 @@ -115,7 +115,7 @@ else:
    elif posix.environ.has_key('EXPECT'):
      expect_prog = posix.environ['EXPECT']
