@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2013/04/06 20:27:20 rodent Exp $
+# $NetBSD: Makefile.common,v 1.14 2013/10/27 20:41:49 joerg Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -81,6 +81,14 @@ LDFLAGS+=	-Z
 .if !empty(CC_VERSION:Mgcc-3.*)
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
+TRADCPP=	${PREFIX}/bin/tradcpp
+.else
+TRADCPP=	${CPP} -traditional-cpp
+.endif
+ALL_ENV+=	TRADCPP=${TRADCPP:Q}
 
 INFO_FILES=	yes
 REPLACE_PERL=	lib-src/grep-changelog
