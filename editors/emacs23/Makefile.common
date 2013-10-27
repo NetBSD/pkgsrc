@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2013/02/23 23:46:37 dholland Exp $
+# $NetBSD: Makefile.common,v 1.3 2013/10/27 20:47:53 joerg Exp $
 #
 # used by editors/emacs23/Makefile
 # used by editors/emacs23-nox11/Makefile
@@ -58,6 +58,15 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 # upstream bug #8395.  Details in:
 # http://lists.gnu.org/archive/html/emacs-bug-tracker/2011-07/msg00445.html
 CFLAGS+=		-fno-pie
+.endif
+
+.if (${OPSYS} == "NetBSD") && \
+    !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)
+# NetBSD with native Clang doesn't provide libgcc, everything is in libc.
+pre-configure: fake-libgcc
+
+fake-libgcc:
+	${AR} q ${BUILDLINK_DIR}/lib/libgcc.a
 .endif
 
 .if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2013/10/27 20:41:49 joerg Exp $
+# $NetBSD: Makefile.common,v 1.15 2013/10/27 20:47:53 joerg Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -89,6 +89,15 @@ TRADCPP=	${PREFIX}/bin/tradcpp
 TRADCPP=	${CPP} -traditional-cpp
 .endif
 ALL_ENV+=	TRADCPP=${TRADCPP:Q}
+
+.if (${OPSYS} == "NetBSD") && \
+    !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)
+# NetBSD with native Clang doesn't provide libgcc, everything is in libc.
+pre-configure: fake-libgcc
+
+fake-libgcc:
+	${AR} q ${BUILDLINK_DIR}/lib/libgcc.a
+.endif
 
 INFO_FILES=	yes
 REPLACE_PERL=	lib-src/grep-changelog

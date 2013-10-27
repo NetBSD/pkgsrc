@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/10/27 20:41:49 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2013/10/27 20:47:53 joerg Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -56,6 +56,15 @@ CHECK_WRKREF_SKIP+=	bin/emacs-20.7
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.
 LDFLAGS+=	-Wl,-z,nocombreloc
+.endif
+
+.if (${OPSYS} == "NetBSD") && \
+    !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)
+# NetBSD with native Clang doesn't provide libgcc, everything is in libc.
+pre-configure: fake-libgcc
+
+fake-libgcc:
+	${AR} q ${BUILDLINK_DIR}/lib/libgcc.a
 .endif
 
 # NetBSD < 5.99.24 uses termcap; afterwards terminfo. Emacs needs to be told.
