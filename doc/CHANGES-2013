@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3941 2013/10/26 22:29:40 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.3942 2013/10/27 09:01:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ruby-sinatra to 1.4.4 [obache 2013-10-26]
 	Added lang/asn1c version 0.9.24 [sno 2013-10-26]
 	Updated comms/asterisk18 to 1.8.24.0 [jnemeth 2013-10-26]
+	Updated devel/p5-Mo to 0.37 [wen 2013-10-26]
