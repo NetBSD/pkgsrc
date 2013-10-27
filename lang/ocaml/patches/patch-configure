@@ -1,9 +1,72 @@
-$NetBSD: patch-configure,v 1.4 2013/01/25 14:49:38 jperkin Exp $
+$NetBSD: patch-configure,v 1.5 2013/10/27 20:34:00 joerg Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
 
 --- configure.orig	2012-06-26 15:33:50.000000000 +0000
 +++ configure
+@@ -267,14 +267,14 @@ iflexdir=""
+ case "$bytecc,$host" in
+   cc,*-*-nextstep*)
+     # GNU C extensions disabled, but __GNUC__ still defined!
+-    bytecccompopts="-fno-defer-pop $gcc_warnings -U__GNUC__ -posix"
++    bytecccompopts="$gcc_warnings -U__GNUC__ -posix"
+     bytecclinkopts="-posix";;
+   *,*-*-rhapsody*)
+     # Almost the same as NeXTStep
+-    bytecccompopts="-fno-defer-pop $gcc_warnings -DSHRINKED_GNUC"
++    bytecccompopts="$gcc_warnings -DSHRINKED_GNUC"
+     mathlib="";;
+   *,*-*-darwin*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings"
++    bytecccompopts="$gcc_warnings"
+     mathlib=""
+     # Tell gcc that we can use 32-bit code addresses for threaded code
+     # unless we are compiled for a shared library (-fPIC option)
+@@ -282,11 +282,11 @@ case "$bytecc,$host" in
+     echo "#  define ARCH_CODE32" >> m.h
+     echo "#endif" >> m.h;;
+   *,*-*-beos*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings"
++    bytecccompopts="$gcc_warnings"
+     # No -lm library
+     mathlib="";;
+   gcc,alpha*-*-osf*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings"
++    bytecccompopts="$gcc_warnings"
+     if cc="$bytecc" sh ./hasgot -mieee; then
+       bytecccompopts="-mieee $bytecccompopts";
+     fi
+@@ -314,11 +314,11 @@ case "$bytecc,$host" in
+     bytecccompopts="-DUMK";;
+   gcc*,powerpc-*-aix*)
+     # Avoid name-space pollution by requiring Unix98-conformant includes
+-    bytecccompopts="-fno-defer-pop $gcc_warnings -D_XOPEN_SOURCE=500";;
++    bytecccompopts="$gcc_warnings -D_XOPEN_SOURCE=500";;
+   *,powerpc-*-aix*)
+     bytecccompopts="-D_XOPEN_SOURCE=500";;
+   gcc*,*-*-cygwin*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings -U_WIN32"
++    bytecccompopts="$gcc_warnings -U_WIN32"
+     dllccompopts="-U_WIN32 -DCAML_DLL"
+     if test $withsharedlibs = yes; then
+       flexlink="flexlink -chain cygwin -merge-manifest -stack 16777216"
+@@ -335,14 +335,14 @@ case "$bytecc,$host" in
+     exe=".exe"
+     ostype="Cygwin";;
+   gcc*,x86_64-*-linux*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings"
++    bytecccompopts="$gcc_warnings"
+     # Tell gcc that we can use 32-bit code addresses for threaded code
+     # unless we are compiled for a shared library (-fPIC option)
+     echo "#ifndef __PIC__" >> m.h
+     echo "#  define ARCH_CODE32" >> m.h
+     echo "#endif" >> m.h;;
+   gcc*)
+-    bytecccompopts="-fno-defer-pop $gcc_warnings";;
++    bytecccompopts="$gcc_warnings";;
+ esac
+ 
+ # Configure compiler to use in further tests
 @@ -537,7 +537,7 @@ if test $withsharedlibs = "yes"; then
        mksharedlib="$flexlink"
        mkmaindll="$flexlink -maindll"
