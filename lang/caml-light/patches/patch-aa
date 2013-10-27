@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2011/11/02 15:04:17 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2013/10/27 20:32:56 joerg Exp $
 
 Config fixes.
 Destdir support.
@@ -10,7 +10,7 @@ Destdir support.
  # If you are using gcc, add -fno-defer-pop.
  # This option circumvents a gcc bug on some platforms (680x0, 80386).
 -OPTS=-fno-defer-pop
-+OPTS= -Dunix -fno-defer-pop
++OPTS= -Dunix
  
  # Extra libraries that have to be linked with the runtime system.
  # The math library "-lm" is linked by default.
