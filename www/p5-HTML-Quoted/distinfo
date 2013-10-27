@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/04/21 12:25:24 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/10/27 14:53:12 wen Exp $
 
-SHA1 (HTML-Quoted-0.03.tar.gz) = 717e92a43fd0488e2dfb237b2512707ac9e6bfaf
-RMD160 (HTML-Quoted-0.03.tar.gz) = 8230838c279510867fd93ec67809b09ed0e127df
-Size (HTML-Quoted-0.03.tar.gz) = 20836 bytes
+SHA1 (HTML-Quoted-0.04.tar.gz) = 71600691be7cf6c03c6bc8e1cc63434cd381e1f4
+RMD160 (HTML-Quoted-0.04.tar.gz) = 3df17f62deee7cd6443e0626d44eb838a6401179
+Size (HTML-Quoted-0.04.tar.gz) = 23106 bytes
