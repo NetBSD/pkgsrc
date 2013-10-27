@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1797 2013/10/23 17:42:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1798 2013/10/27 13:15:46 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -977,6 +977,7 @@ SUBDIR+=	p5-Moose-Autobox
 SUBDIR+=	p5-Moose-Policy
 SUBDIR+=	p5-MooseX-Aliases
 SUBDIR+=	p5-MooseX-App-Cmd
+SUBDIR+=	p5-MooseX-Attribute-Chained
 SUBDIR+=	p5-MooseX-AttributeHelpers
 SUBDIR+=	p5-MooseX-Attributes-Curried
 SUBDIR+=	p5-MooseX-ChainedAccessors
