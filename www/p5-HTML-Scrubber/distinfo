@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/01/26 14:00:54 rhaen Exp $
+$NetBSD: distinfo,v 1.4 2013/10/27 15:02:18 wen Exp $
 
-SHA1 (HTML-Scrubber-0.09.tar.gz) = 90592c569b4ff611ff2d6a1815be058160530487
-RMD160 (HTML-Scrubber-0.09.tar.gz) = d82bcfb3acc690d66c6752fc7c1cfe55e4382e4e
-Size (HTML-Scrubber-0.09.tar.gz) = 26840 bytes
+SHA1 (HTML-Scrubber-0.11.tar.gz) = 037ef551fb266a007368e6a058c84b3e009b1ae4
+RMD160 (HTML-Scrubber-0.11.tar.gz) = e5554d17fd15149e956c93ef5bd36ae92c3da8e5
+Size (HTML-Scrubber-0.11.tar.gz) = 29340 bytes
