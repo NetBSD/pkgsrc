@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3963 2013/10/28 04:17:02 asau Exp $
+$NetBSD: CHANGES-2013,v 1.3964 2013/10/28 09:51:56 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5564,3 +5564,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/goffice0.10 to 0.10.8 [wiz 2013-10-27]
 	Updated math/gnumeric112 to 1.12.8 [wiz 2013-10-27]
 	Added math/minisat version 2.2.0 [asau 2013-10-28]
+	Updated www/py-webassets to 0.9 [kleink 2013-10-28]
