@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2013/10/28 23:45:28 joerg Exp $
+
+--- configure.orig	2013-10-17 17:46:02.000000000 +0000
++++ configure
+@@ -3227,17 +3227,6 @@ case `uname -m` in
+ i?86) CFLAGS="$CFLAGS -DALLOW_UNALIGNED_IO" ;;
+ esac
+ 
+-#case `$CC --version` in
+-#2.9*|3.*)
+-CFLAGS="$CFLAGS -fstrength-reduce -fthread-jumps \
+- -fcse-follow-jumps -fcse-skip-blocks -frerun-cse-after-loop \
+- -fexpensive-optimizations -fforce-mem -fforce-addr"
+-#;;
+-#*)
+-#AC_MSG_WARN(your compiler is too old for fancy optimizations)
+-#;;
+-#esac
+-
+ if test "$enable_debug" != yes -a "$enable_profile" != yes ; then
+ CFLAGS="$CFLAGS -fomit-frame-pointer"
+ LDFLAGS="$LDFLAGS -s"
