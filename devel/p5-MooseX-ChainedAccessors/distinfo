@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/13 09:34:36 hiramatsu Exp $
-
-SHA1 (MooseX-ChainedAccessors-0.02.tar.gz) = 6da42925ed38dc82c4f9be0f5d8154d937ab6d7e
-RMD160 (MooseX-ChainedAccessors-0.02.tar.gz) = a8845954fd20855bce40be6ad91c6939d34ffad1
-Size (MooseX-ChainedAccessors-0.02.tar.gz) = 13162 bytes
