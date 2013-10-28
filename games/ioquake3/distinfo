@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2009/06/06 22:04:50 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/10/28 23:45:59 joerg Exp $
 
 SHA1 (ioquake3-1.36.tar.bz2) = 0f92891e2b174253d02f666fd22e147c886089b4
 RMD160 (ioquake3-1.36.tar.bz2) = af9f65bbde2fe5531fa371ec6d2023126a523293
 Size (ioquake3-1.36.tar.bz2) = 3503058 bytes
 SHA1 (patch-aa) = 3f89e248cb2e64657f37ccb4f77b837fc7e7a012
 SHA1 (patch-ab) = 7808f9c26160ae1931c96fe1bc5e898b69afbde2
-SHA1 (patch-ac) = 38834fd3e1b3b1c9dba648ffbc97814c0aaa581a
+SHA1 (patch-ac) = 4631bdda582aa105b661f45e09e0d5eb68713978
 SHA1 (patch-ad) = 577ca1c8fab64289d6f91e9e02542094cf7f2800
