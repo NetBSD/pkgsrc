@@ -1,7 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2013/10/28 06:37:17 richard Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/28 14:21:27 richard Exp $
 
-* fix non-portable 'echo -n' utilisation by replacing statement
-* with simple 'awk' invocation.
+* fix non-portable 'echo -n' utilisation by using GNU configure's 
+* `as_echo_n' command.
 
 --- configure.orig	2009-10-19 16:02:17.000000000 +0000
 +++ configure
@@ -10,7 +10,7 @@ $NetBSD: patch-configure,v 1.1 2013/10/28 06:37:17 richard Exp $
  
  
 -LANGDIRS="`$GREP -v "^\#" po/LINGUAS | while read line; do echo -n "$line/ "; done `"
-+LANGDIRS="`$AWK 'BEGIN{ORS="/ "} /^\#/ {next} {print}' po/LINGUAS`"
++LANGDIRS="`$GREP -v "^\#" po/LINGUAS | while read line; do $as_echo_n "$line/ "; done `"
  
  
  
