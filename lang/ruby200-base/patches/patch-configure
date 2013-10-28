@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2013/08/15 16:27:35 joerg Exp $
+$NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.2 2013/08/15 16:27:35 joerg Exp $
  
  	SOLIBS='$(LIBS)'
 -	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)'
-+	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)\$(TEENY)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)$(TEENY)'
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
@@ -107,7 +107,32 @@ $NetBSD: patch-configure,v 1.2 2013/08/15 16:27:35 joerg Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -20884,17 +20893,7 @@ which seems to be undefined.  Please mak
+@@ -19210,9 +19219,13 @@ unexpand_shvar() {
+     test "$#" -eq 0 && return
+     for n do
+         eval v='"$'$n'"'
+-	v="`echo \"$v\" | sed -e 's/${[^${}\"]*}/\"&\"/g' -e 's/[][$|.\\?*]/\\\\&/g'`"
++	v="`echo \"$v\" | sed -e 's/\${[^${}\"]*}/\"&\"/g' -e 's/[][$|.\\?*]/\\\\&/g'`"
+ 	if test -n "$v"; then
+-	    expr="${expr};s|"'\("[^$"]*\)'"$v|\\1\${$n}\"|g"
++	    if test -n "$expr"; then
++	        expr="${expr};s|"'\("[^$"]*\)'"$v|\\1\${$n}\"|g"
++	    else
++	        expr="s|"'\("[^$"]*\)'"$v|\\1\${$n}\"|g"
++	    fi
+ 	    case "$v" in #(
+   *'${'*'}'*) :
+     expr="$expr;s|$v|\"\${$n}\"|g" ;; #(
+@@ -19221,7 +19234,7 @@ unexpand_shvar() {
+ esac
+ 	fi
+     done
+-    expr='s/${[^${}"]*}/"&"/g;'"${expr};"'s/"\(\${[^${}"]*}\)"/\1/g'
++    expr='s/\${[^${}"]*}/"&"/g;'"${expr};"'s/"\(\${[^${}"]*}\)"/\1/g'
+     eval $var='"`echo \"\\\"${'$var'}\\\"\" | sed \"$expr;s/\\\"//g\"`"'
+ }
+ 
+@@ -20884,17 +20897,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {

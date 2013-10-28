@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.101 2013/07/21 02:27:45 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.102 2013/10/28 14:26:59 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -338,7 +338,11 @@ RUBY_SHLIBVER=		${RUBY_VER}
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
 .endif
 .elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
+.if ${_RUBY_VER_MINOR} == 0
+RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_API_MINOR}
+.else
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
+.endif
 .elif ${OPSYS} == "Darwin"
 RUBY_SHLIB=		${RUBY_VER}.${RUBY_SHLIBVER}.${RUBY_SLEXT}
 .if ${RUBY_VER} == "18"
