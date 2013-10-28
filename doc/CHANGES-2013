@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3962 2013/10/27 23:35:11 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3963 2013/10/28 04:17:02 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5563,3 +5563,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/grep to 2.15 [wiz 2013-10-27]
 	Updated misc/goffice0.10 to 0.10.8 [wiz 2013-10-27]
 	Updated math/gnumeric112 to 1.12.8 [wiz 2013-10-27]
+	Added math/minisat version 2.2.0 [asau 2013-10-28]
