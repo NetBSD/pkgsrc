@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2013/10/28 23:43:35 joerg Exp $
+
+--- configure.orig	2013-10-18 12:36:49.000000000 +0000
++++ configure
+@@ -11212,7 +11212,7 @@ fi
+ if test "x$optimize" = xyes; then
+ 	if test "x$GCC" = xyes; then
+ 		BUILD_TYPE="$BUILD_TYPE Optimized"
+-		CFLAGS="$CFLAGS -O2 -std=gnu99 -frename-registers -finline-limit=32000 -Winline -ffast-math -funroll-loops -fexpensive-optimizations -finline-functions"
++		CFLAGS="$CFLAGS -O2 -std=gnu99 -Winline -ffast-math -funroll-loops"
+     else
+ 		CFLAGS="$CFLAGS -O2"
+ 	fi
