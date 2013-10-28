@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/16 21:22:14 agc Exp $
+$NetBSD: distinfo,v 1.2 2013/10/28 23:46:55 joerg Exp $
 
 SHA1 (itpp-4.0.7.tar.gz) = 224bc34cf30fc65f4c7a75a71971a074a9f4c57c
 RMD160 (itpp-4.0.7.tar.gz) = 628bad6d3533ea3e486890fe315790f292c4b561
 Size (itpp-4.0.7.tar.gz) = 1222834 bytes
+SHA1 (patch-configure) = 48140e4526312c75ef4bdb31ef8d02f89c79046c
