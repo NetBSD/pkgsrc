@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2013/10/28 06:37:17 richard Exp $
+
+* fix non-portable 'echo -n' utilisation by replacing statement
+* with simple 'awk' invocation.
+
+--- configure.orig	2009-10-19 16:02:17.000000000 +0000
++++ configure
+@@ -13740,7 +13740,7 @@ LIBBONOBO_IDL_DIR="`$PKG_CONFIG --variab
+ 
+ 
+ 
+-LANGDIRS="`$GREP -v "^\#" po/LINGUAS | while read line; do echo -n "$line/ "; done `"
++LANGDIRS="`$AWK 'BEGIN{ORS="/ "} /^\#/ {next} {print}' po/LINGUAS`"
+ 
+ 
+ 
