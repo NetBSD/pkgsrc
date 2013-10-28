@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/28 17:51:30 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/28 09:50:30 kleink Exp $
 bin/webassets
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/webassets/filter/clevercss.pyo
 ${PYSITELIB}/webassets/filter/closure.py
 ${PYSITELIB}/webassets/filter/closure.pyc
 ${PYSITELIB}/webassets/filter/closure.pyo
+${PYSITELIB}/webassets/filter/closure_templates.py
+${PYSITELIB}/webassets/filter/closure_templates.pyc
+${PYSITELIB}/webassets/filter/closure_templates.pyo
 ${PYSITELIB}/webassets/filter/coffeescript.py
 ${PYSITELIB}/webassets/filter/coffeescript.pyc
 ${PYSITELIB}/webassets/filter/coffeescript.pyo
@@ -68,12 +71,12 @@ ${PYSITELIB}/webassets/filter/datauri.pyo
 ${PYSITELIB}/webassets/filter/dust.py
 ${PYSITELIB}/webassets/filter/dust.pyc
 ${PYSITELIB}/webassets/filter/dust.pyo
-${PYSITELIB}/webassets/filter/gzip.py
-${PYSITELIB}/webassets/filter/gzip.pyc
-${PYSITELIB}/webassets/filter/gzip.pyo
 ${PYSITELIB}/webassets/filter/handlebars.py
 ${PYSITELIB}/webassets/filter/handlebars.pyc
 ${PYSITELIB}/webassets/filter/handlebars.pyo
+${PYSITELIB}/webassets/filter/jade.py
+${PYSITELIB}/webassets/filter/jade.pyc
+${PYSITELIB}/webassets/filter/jade.pyo
 ${PYSITELIB}/webassets/filter/jinja2.py
 ${PYSITELIB}/webassets/filter/jinja2.pyc
 ${PYSITELIB}/webassets/filter/jinja2.pyo
@@ -137,6 +140,9 @@ ${PYSITELIB}/webassets/merge.pyo
 ${PYSITELIB}/webassets/script.py
 ${PYSITELIB}/webassets/script.pyc
 ${PYSITELIB}/webassets/script.pyo
+${PYSITELIB}/webassets/six.py
+${PYSITELIB}/webassets/six.pyc
+${PYSITELIB}/webassets/six.pyo
 ${PYSITELIB}/webassets/test.py
 ${PYSITELIB}/webassets/test.pyc
 ${PYSITELIB}/webassets/test.pyo
