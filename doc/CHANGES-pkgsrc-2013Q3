@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.8 2013/10/20 11:11:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.9 2013/10/28 23:38:21 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -27,3 +27,14 @@ Pullup ticket #4246 - requested by joerg
 lang/python27: build fix
 Pullup ticket #4247 - requested by bsiegert
 lang/gawk: build fix
+Pullup ticket #4248 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
+Pullup ticket #4249 - requested by taca
+mail/roundcube: security update
