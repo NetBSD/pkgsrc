@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3964 2013/10/28 09:51:56 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.3965 2013/10/28 13:26:54 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5565,3 +5565,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/gnumeric112 to 1.12.8 [wiz 2013-10-27]
 	Added math/minisat version 2.2.0 [asau 2013-10-28]
 	Updated www/py-webassets to 0.9 [kleink 2013-10-28]
+	Updated x11/mlterm to 3.3.0 [tsutsui 2013-10-28]
