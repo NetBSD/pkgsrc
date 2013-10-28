@@ -1,8 +1,8 @@
-$NetBSD: patch-etc_font-fb,v 1.4 2013/08/11 13:23:34 tsutsui Exp $
+$NetBSD: patch-etc_font-fb,v 1.5 2013/10/28 13:26:07 tsutsui Exp $
 
 add more examples for typical NetBSD and pkgsrc installation
 
---- etc/font-fb.orig	2013-08-05 12:48:53.000000000 +0000
+--- etc/font-fb.orig	2013-10-26 16:47:13.000000000 +0000
 +++ etc/font-fb
 @@ -1,10 +1,17 @@
  #DEFAULT = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
@@ -21,4 +21,4 @@ add more examples for typical NetBSD and pkgsrc installation
  
  #ISO10646_UCS4_1 = /usr/share/fonts/X11/misc/unifont.pcf.gz:100
 +#ISO10646_UCS4_1 = /usr/pkg/lib/X11/fonts/efont/b16.pcf.gz
- ISO10646_UCS4_1_BIWIDTH = &ISO10646_UCS4_1
+ ISO10646_UCS4_1_FULLWIDTH = &ISO10646_UCS4_1
