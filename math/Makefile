@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2013/08/15 14:23:36 richard Exp $
+# $NetBSD: Makefile,v 1.257 2013/10/28 04:17:27 asau Exp $
 
 COMMENT=	Mathematics
 
@@ -135,6 +135,7 @@ SUBDIR+=	maxima
 SUBDIR+=	mcsim
 SUBDIR+=	meschach
 SUBDIR+=	metis
+SUBDIR+=	minisat
 SUBDIR+=	minpack
 SUBDIR+=	mpcomplex
 SUBDIR+=	mpfr
