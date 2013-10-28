@@ -1,0 +1,13 @@
+$NetBSD: patch-lib-src_soundtouch_source_SoundTouch_Makefile.in,v 1.1 2013/10/28 23:43:03 joerg Exp $
+
+--- lib-src/soundtouch/source/SoundTouch/Makefile.in.orig	2013-10-17 12:43:29.000000000 +0000
++++ lib-src/soundtouch/source/SoundTouch/Makefile.in
+@@ -189,7 +189,7 @@ libSoundTouch_la_SOURCES = AAFilter.cpp 
+ 
+ # ??? test for -fcheck-new in configure.ac
+ # other compiler flags to add
+-AM_CXXFLAGS = -O3 -fcheck-new -I../../include
++AM_CXXFLAGS = -O3 -I../../include
+ all: all-am
+ 
+ .SUFFIXES:
