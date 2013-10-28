@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2012/12/21 04:06:45 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2013/10/28 23:47:18 joerg Exp $
 
 - improve recognition of various host platforms
 - honor PTHREAD_LDFLAGS and PTHREAD_LIBS
@@ -33,6 +33,15 @@ $NetBSD: patch-aa,v 1.5 2012/12/21 04:06:45 dholland Exp $
  powerpc-*-darwin*) host_os=darwin ;;
  *) { { echo "$as_me:$LINENO: error: $host not supported" >&5
  echo "$as_me: error: $host not supported" >&2;}
+@@ -2828,7 +2820,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define INLINING 1
+ _ACEOF
+ 
+-            interp_cflags=-fno-reorder-blocks
++            interp_cflags=
+ 
+             if test "$enable_runtime_reloc_checks" != no; then
+ 
 @@ -20707,13 +20715,13 @@ done
  
  
