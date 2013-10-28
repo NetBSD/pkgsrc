@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2013/06/27 15:48:11 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/10/28 23:44:08 joerg Exp $
 
 SHA1 (lmms-0.4.15.tar.bz2) = 7dc0a616291fa6e5f917e0e6f926e4c427b3c16c
 RMD160 (lmms-0.4.15.tar.bz2) = d660769cda53e0d6ca15f2e578478e8f27dbb851
 Size (lmms-0.4.15.tar.bz2) = 14211150 bytes
 SHA1 (patch-CMakeLists.txt) = e48c68a6d96df7dbdb760c5d8414d262262ffd8a
+SHA1 (patch-plugins_ladspa__effect_calf_CMakeLists.txt) = eba4dd6e1ec39baab736b2fa8ce280edd3e39c44
 SHA1 (patch-plugins_ladspa__effect_calf_src_calf_buffer.h) = b9d6f50680775cecbe0f485cf8f9c8d6172568a3
 SHA1 (patch-plugins_ladspa__effect_calf_src_calf_fixed__point.h) = a77ecd2ab667aa3dbd436878b568ed499da7114b
 SHA1 (patch-plugins_zynaddsubfx_fltk_FL_Fl__Widget.H) = 000762568741d957bf342b23c4eeb6353fc574db
