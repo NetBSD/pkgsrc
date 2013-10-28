@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3965 2013/10/28 13:26:54 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.3966 2013/10/28 15:22:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5566,3 +5566,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/minisat version 2.2.0 [asau 2013-10-28]
 	Updated www/py-webassets to 0.9 [kleink 2013-10-28]
 	Updated x11/mlterm to 3.3.0 [tsutsui 2013-10-28]
+	Removed devel/p5-MooseX-ChainedAccessors [wen 2013-10-28]
