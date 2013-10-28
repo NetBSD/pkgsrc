@@ -1,0 +1,13 @@
+$NetBSD: patch-engine_Makefile.in,v 1.1 2013/10/28 23:48:30 joerg Exp $
+
+--- engine/Makefile.in.orig	2013-10-18 15:51:52.000000000 +0000
++++ engine/Makefile.in
+@@ -89,7 +89,7 @@ XCFLAGS	= @CFLAGS@
+ XDEFINES = @DEFS@
+ SWITCHES = $(XCFLAGS) $(XDEFINES) $(OPTDEFINES)
+ #use -fno-inline to avoid register problems with asinh, atanh on gcc-3.3 on 386
+-ENGINE_FLAGS = @ENGINE_FLAGS@ -fno-defer-pop -fcaller-saves -fno-inline
++ENGINE_FLAGS = @ENGINE_FLAGS@
+ DEBUGFLAG = @DEBUGFLAG@
+ CFLAGS	= $(DEBUGFLAG) -I$(srcdir)/../arch/$(machine) -I. -Wall $(SWITCHES) -DDEFAULTPATH='"$(FORTHPATH)"' $(LTDLINCL)
+ CFLAGS2	= $(DEBUGFLAG) -I$(srcdir)/../arch/$(machine) -I. -Wall $(SWITCHES) -DDEFAULTPATH='"$(FORTHPATH)"' $(LTDLINCL)
