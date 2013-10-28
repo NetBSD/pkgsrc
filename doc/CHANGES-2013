@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3967 2013/10/28 15:31:52 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3968 2013/10/28 15:41:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5568,3 +5568,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/mlterm to 3.3.0 [tsutsui 2013-10-28]
 	Removed devel/p5-MooseX-ChainedAccessors [wen 2013-10-28]
 	Updated devel/p5-Moose-Autobox to 0.15 [wen 2013-10-28]
+	Updated devel/p5-App-Cmd to 0.322 [wen 2013-10-28]
