@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2013/09/30 11:42:13 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2013/10/29 10:37:39 jperkin Exp $
 #
 # used by devel/dconf-editor/Makefile
 
@@ -13,5 +13,6 @@ COMMENT=	Backend for gsettings
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool msgfmt
