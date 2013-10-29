@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.38 2013/10/04 21:02:11 wiz Exp $
+$NetBSD: distinfo,v 1.39 2013/10/29 17:34:04 jklos Exp $
 
 SHA1 (m4-1.4.17.tar.gz) = 4f80aed6d8ae3dacf97a0cb6e989845269e342f0
 RMD160 (m4-1.4.17.tar.gz) = d81675f1d358ce5eee27184a9d946acfc97a912b
 Size (m4-1.4.17.tar.gz) = 1820658 bytes
 SHA1 (patch-ab) = 9e9527cdd4b7ba3501d603f0e5ca60c2150e4359
+SHA1 (patch-isnan.c) = a960f35e5168bed47c5924e36bfb254dc1a44621
 SHA1 (patch-lib_stdio.in.h) = cc5a8572e274b576a154c7a6b14f0a14de5abacd
