@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3975 2013/10/29 15:14:00 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.3976 2013/10/29 19:06:01 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5575,3 +5575,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/py-crypto to 2.6.1 [gls 2013-10-29]
 	Updated textproc/groonga to 3.0.9 [obache 2013-10-29]
 	Updated net/nsd to 4.0.0 [pettai 2013-10-29]
+	Updated devel/py-ipython013 to 0.13.2 [drochner 2013-10-29]
+	Updated print/poppler to 0.24.3 [drochner 2013-10-29]
