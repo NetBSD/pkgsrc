@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2013/10/25 06:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2013/10/29 19:05:23 drochner Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -28,19 +28,6 @@ CONFIGURE_ARGS+=	--disable-poppler-glib
 CONFIGURE_ARGS+=	--disable-utils
 CONFIGURE_ARGS+=	--disable-poppler-cpp
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.poppler
-PKG_SUPPORTED_OPTIONS=	lcms
-PKG_SUGGESTED_OPTIONS=	lcms
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mlcms)
-CONFIGURE_ARGS+=	--enable-cms
-.include "../../graphics/lcms2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-cms
-.endif
-
 .include "../../mk/bsd.prefs.mk"
 
 # Passing "-ansi" turns "long long" support off on FreeBSD/amd64:
@@ -54,6 +41,7 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
