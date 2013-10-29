@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/05/25 08:28:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/10/29 08:42:14 gls Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyo
@@ -294,6 +294,9 @@ ${PYSITELIB}/Crypto/SelfTest/Random/OSRNG/test_winrandom.pyo
 ${PYSITELIB}/Crypto/SelfTest/Random/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Random/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Random/__init__.pyo
+${PYSITELIB}/Crypto/SelfTest/Random/test__UserFriendlyRNG.py
+${PYSITELIB}/Crypto/SelfTest/Random/test__UserFriendlyRNG.pyc
+${PYSITELIB}/Crypto/SelfTest/Random/test__UserFriendlyRNG.pyo
 ${PYSITELIB}/Crypto/SelfTest/Random/test_random.py
 ${PYSITELIB}/Crypto/SelfTest/Random/test_random.pyc
 ${PYSITELIB}/Crypto/SelfTest/Random/test_random.pyo
