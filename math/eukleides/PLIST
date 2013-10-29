@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/06/10 12:24:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/10/29 02:37:56 minskim Exp $
 bin/eukleides
 bin/euktoeps
 bin/euktopdf
@@ -13,5 +13,5 @@ man/man1/euktotex.1
 share/eukleides/examples/greenwich.euk
 share/eukleides/examples/sundial.euk
 share/eukleides/examples/vonkoch.euk
-share/texmf/tex/latex/eukleides/eukleides.sty
-share/texmf/tex/latex/eukleides/eukleides.tex
+share/texmf-dist/tex/latex/eukleides/eukleides.sty
+share/texmf-dist/tex/latex/eukleides/eukleides.tex
