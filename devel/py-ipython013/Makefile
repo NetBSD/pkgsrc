@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/10/26 12:18:47 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/29 18:18:46 drochner Exp $
 #
 
-DISTNAME=	ipython-0.13.1
+DISTNAME=	ipython-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lang
-MASTER_SITES=	http://archive.ipython.org/release/0.13.1/
+MASTER_SITES=	http://archive.ipython.org/release/0.13.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ipython.org/
