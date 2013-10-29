@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3973 2013/10/29 08:42:44 gls Exp $
+$NetBSD: CHANGES-2013,v 1.3974 2013/10/29 11:50:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5573,3 +5573,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/eukleides to 1.5.4nb2 [minskim 2013-10-29]
 	Updated security/py-ecdsa to 0.10 [gls 2013-10-29]
 	Updated security/py-crypto to 2.6.1 [gls 2013-10-29]
+	Updated textproc/groonga to 3.0.9 [obache 2013-10-29]
