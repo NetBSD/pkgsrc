@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2013/07/15 02:02:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2013/10/29 02:37:56 minskim Exp $
 
 DISTNAME=	eukleides-1.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.eukleides.org/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,7 +34,8 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			BIN_DIR=${DESTDIR}${PREFIX}/bin			\
 			INFO_DIR=${DESTDIR}${PREFIX}/${PKGINFODIR}	\
 			DOC_DIR=${DESTDIR}${PREFIX}/share/eukleides	\
-			MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+			MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1	\
+			TEX_DIR=${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/eukleides
 
 pre-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -exec ${RM} -f {} \;
