@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2013/10/20 12:47:11 gls Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/29 08:12:09 gls Exp $
 
-DISTNAME=	python-ecdsa-0.9
-PKGNAME=	${PYPKGPREFIX}-ecdsa-0.9
+DISTNAME=	python-ecdsa-0.10
+PKGNAME=	${PYPKGPREFIX}-ecdsa-0.10
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/warner/python-ecdsa/archive/
 FETCH_USING=	curl
 
 MAINTAINER=	gls@NetBSD.org
-HOMEPAGE=	https://github.com/warner/python-ecdsa/archive/
+HOMEPAGE=	https://github.com/warner/python-ecdsa/
 COMMENT=	Easy-to-use implementation of ECDSA cryptography
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/python-ecdsa-python-ecdsa-0.9
+WRKSRC=		${WRKDIR}/python-ecdsa-${DISTNAME}
 USE_LANGUAGES=	# none
 
 REPLACE_INTERPRETER+=	python
