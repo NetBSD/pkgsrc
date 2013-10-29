@@ -1,19 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:09:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/10/29 15:13:34 pettai Exp $
 man/man5/nsd.conf.5
 man/man8/nsd-checkconf.8
-man/man8/nsd-notify.8
-man/man8/nsd-patch.8
-man/man8/nsd-xfer.8
+man/man8/nsd-control.8
 man/man8/nsd.8
-man/man8/nsdc.8
-man/man8/zonec.8
 sbin/nsd
 sbin/nsd-checkconf
-sbin/nsd-notify
-sbin/nsd-patch
-sbin/nsd-xfer
-sbin/nsdc
-sbin/zonec
-share/examples/rc.d/nsd
+sbin/nsd-control
+sbin/nsd-control-setup
 share/examples/nsd/nsd.conf
-share/examples/nsd/nsd.zones2nsd.conf
+share/examples/rc.d/nsd
+@pkgdir etc/nsd

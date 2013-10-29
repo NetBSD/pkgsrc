@@ -1,12 +1,27 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2012/04/18 10:39:43 pettai Exp $
+$NetBSD: MESSAGE,v 1.4 2013/10/29 15:13:34 pettai Exp $
 
-nsd.db version number increased because NSD 3.2.7 and earlier zonec is
-not compatible due to the TXT strings change. Please run nsdc rebuild
-before running NSD 3.2.9 and later versions.
+The old NSD3 config file can be used without changes for NSD4.  There are
+new config statements and some old statements are gone.
 
-The configuration format of nsd has changed between 2.x and 3.x.
-A sample Python script to help migrating the old nsd.zones format
-into the new nsd.conf can be found in share/examples/nsd.
+The nsd.db file has a new format that allows read and write.  Thus the
+nsd.db file needs to be re-created in NSD4 format.  This happens when
+you start NSD4.  NSD4 needs write permission on the nsd.db directory
+for that.  If you need to rollback to NSD3, run its zonec to recreate
+the NSD3 nsd.db file (use nsdc rebuild).
+
+The cron job for nsdc patch is no longer needed.  It can be removed.
+
+If you admire cron jobs, you can have a cron job that does "nsd-control
+write".  This would periodically write the contents of changed zones to
+their zonefile.
+
+nsdc is removed, reload with kill -HUP $pid and use nsd-control.
+The SIGHUP makes NSD4 check zone file timestamps and reload changed zones.
+nsd-control reload is the same.  SIGTERM stops NSD.
+
+You probably want to install and enable some of the new NSD 4 features,
+such as set up nsd-control and statistics.  And you may want to use the
+new pattern config options.
 
 ===========================================================================
