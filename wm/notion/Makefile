@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/10/18 11:41:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2013/10/29 11:13:32 jperkin Exp $
 
 DISTNAME=	notion-3-2013030200-src
 PKGNAME=	${DISTNAME:S/3-/3./:S/-src//}
@@ -15,6 +15,7 @@ LICENSE=	ion-license AND gnu-lgpl-v2.1
 CONFLICTS=	ion3-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake msgfmt pax pkg-config
 MAKE_FLAGS+=	X11_PREFIX=${BUILDLINK_PREFIX.libX11}
 
@@ -51,6 +52,15 @@ INSTALLATION_DIRS=	${EGDIR}
 .for f in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+# Abuse buildlink to add required libraries.
+BUILDLINK_TRANSFORM+=	opt:-Wl,--as-needed:-lsocket
+BUILDLINK_TRANSFORM+=	rm:-Wl,-whole-archive
+BUILDLINK_TRANSFORM+=	rm:-Wl,-no-whole-archive
+.endif
 
 post-install:
 	cd ${WRKSRC} && pax -rw contrib ${DESTDIR}${EGDIR}
