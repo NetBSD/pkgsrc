@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.102 2013/10/28 14:26:59 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.103 2013/10/29 23:25:33 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -318,7 +318,7 @@ RUBY_BUILD_RI?=		Yes
 RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RDOC?=			${PREFIX}/bin/rdoc${RUBY_VER}
 
-RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+RUBY_ARCH?= ${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 
 #
 # Ruby shared and static library version handling.
