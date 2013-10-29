@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.31 2012/10/03 22:03:41 wiz Exp $
+# $NetBSD: extension.mk,v 1.32 2013/10/29 14:18:33 tron Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -24,7 +24,9 @@ _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINST
 .if ${_USE_DESTDIR} != "no"
 _PYSETUPINSTALLARGS+=	--root=${DESTDIR:Q}
 .endif
-PY_PATCHPLIST?=		yes
+PYSETUPINSTALLARGS?=	#empty
+PYSETUPTESTTARGET?=	test
+PYSETUPTESTARGS?=	#empty
 PYSETUPSUBDIR?=		#empty
 
 do-build:
@@ -34,6 +36,10 @@ do-build:
 do-install:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" ${_PYSETUPINSTALLARGS})
+do-test:
+	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
+	 ${PYSETUP} ${PYSETUPARGS} ${PYSETUPTESTTARGET} ${PYSETUPTESTARGS})
+
 .endif
 
 # PY_NO_EGG suppress the installation of the egg info file (and
