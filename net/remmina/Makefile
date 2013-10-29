@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/10/10 14:42:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2013/10/29 10:51:01 jperkin Exp $
 
 DISTNAME=	remmina-0.9.3
 PKGREVISION=	16
@@ -12,7 +12,10 @@ COMMENT=	Remmina is a remote desktop client based on GTK+
 DEPENDS+=	rdesktop>=1.6.0:../../net/rdesktop
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c99
 USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
