@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/10/19 09:07:05 adam Exp $
+# $NetBSD: Makefile,v 1.36 2013/10/29 16:04:45 joerg Exp $
 
 DISTNAME=		digikam-0.9.6
 PKGREVISION=		31
@@ -27,13 +27,13 @@ PLIST_SUBST=	HTMLDIR=${DISTNAME}
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libkdcraw-kde3/buildlink3.mk"
-
 .include "../../graphics/libkexiv2-kde3/buildlink3.mk"
 .include "../../graphics/libkipi-kde3/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 
