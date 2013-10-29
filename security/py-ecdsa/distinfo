@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/10/20 12:47:11 gls Exp $
+$NetBSD: distinfo,v 1.2 2013/10/29 08:12:09 gls Exp $
 
-SHA1 (python-ecdsa-0.9.tar.gz) = 60ee437c586e64ec506be4fd2ec5fe57731bc57d
-RMD160 (python-ecdsa-0.9.tar.gz) = dcdce4e442559552755f4f1586f4c7de689d6224
-Size (python-ecdsa-0.9.tar.gz) = 45540 bytes
+SHA1 (python-ecdsa-0.10.tar.gz) = 0b8581e319968da231ea5a61d0e0c2986a846bec
+RMD160 (python-ecdsa-0.10.tar.gz) = 4cf6cdacfc534362680bbaffbe06d812bada2d0e
+Size (python-ecdsa-0.10.tar.gz) = 45575 bytes
