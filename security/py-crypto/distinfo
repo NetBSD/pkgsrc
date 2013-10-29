@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2012/05/25 08:28:13 wiz Exp $
+$NetBSD: distinfo,v 1.10 2013/10/29 08:42:14 gls Exp $
 
-SHA1 (pycrypto-2.6.tar.gz) = c17e41a80b3fbf2ee4e8f2d8bb9e28c5d08bbb84
-RMD160 (pycrypto-2.6.tar.gz) = 5782b529d59f2a62951607fdafaa434aea13ee0a
-Size (pycrypto-2.6.tar.gz) = 443445 bytes
+SHA1 (pycrypto-2.6.1.tar.gz) = aeda3ed41caf1766409d4efc689b9ca30ad6aeb2
+RMD160 (pycrypto-2.6.1.tar.gz) = ac0db079e5e4be9daf739e094c10e96291dbc009
+Size (pycrypto-2.6.1.tar.gz) = 446240 bytes
 SHA1 (patch-ab) = 2c72b0e70fdebd2e62aff28284afd919e935de08
