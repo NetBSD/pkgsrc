@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2013/06/11 08:28:30 adam Exp $
+# $NetBSD: Makefile,v 1.29 2013/10/29 13:32:07 obache Exp $
 
 DISTNAME=	gzip-1.6
 SVR4_PKGNAME=	gzip
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GNU:=gzip/}
-EXTRACT_SUFX=	.tar.xz
+#MASTER_SITES=	${MASTER_SITE_GNU:=gzip/}
+#EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
