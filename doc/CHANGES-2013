@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3974 2013/10/29 11:50:47 obache Exp $
+$NetBSD: CHANGES-2013,v 1.3975 2013/10/29 15:14:00 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5574,3 +5574,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/py-ecdsa to 0.10 [gls 2013-10-29]
 	Updated security/py-crypto to 2.6.1 [gls 2013-10-29]
 	Updated textproc/groonga to 3.0.9 [obache 2013-10-29]
+	Updated net/nsd to 4.0.0 [pettai 2013-10-29]
