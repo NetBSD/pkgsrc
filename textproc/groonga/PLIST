@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/10/26 13:38:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/10/29 11:50:24 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -102,6 +102,7 @@ share/doc/groonga/en/html/_sources/reference/commands/normalize.txt
 share/doc/groonga/en/html/_sources/reference/commands/quit.txt
 share/doc/groonga/en/html/_sources/reference/commands/register.txt
 share/doc/groonga/en/html/_sources/reference/commands/ruby_eval.txt
+share/doc/groonga/en/html/_sources/reference/commands/ruby_load.txt
 share/doc/groonga/en/html/_sources/reference/commands/select.txt
 share/doc/groonga/en/html/_sources/reference/commands/shutdown.txt
 share/doc/groonga/en/html/_sources/reference/commands/status.txt
@@ -120,6 +121,8 @@ share/doc/groonga/en/html/_sources/reference/executables/grntest.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga-httpd.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga-server-http.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga-suggest-create-dataset.txt
+share/doc/groonga/en/html/_sources/reference/executables/groonga-suggest-httpd.txt
+share/doc/groonga/en/html/_sources/reference/executables/groonga-suggest-learner.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga.txt
 share/doc/groonga/en/html/_sources/reference/function.txt
 share/doc/groonga/en/html/_sources/reference/functions/edit_distance.txt
@@ -144,6 +147,7 @@ share/doc/groonga/en/html/_sources/reference/query_expanders.txt
 share/doc/groonga/en/html/_sources/reference/query_expanders/tsv.txt
 share/doc/groonga/en/html/_sources/reference/tables.txt
 share/doc/groonga/en/html/_sources/reference/tokenizers.txt
+share/doc/groonga/en/html/_sources/reference/tuning.txt
 share/doc/groonga/en/html/_sources/reference/types.txt
 share/doc/groonga/en/html/_sources/server.txt
 share/doc/groonga/en/html/_sources/server/gqtp.txt
@@ -163,6 +167,7 @@ share/doc/groonga/en/html/_sources/suggest/suggestion.txt
 share/doc/groonga/en/html/_sources/suggest/tutorial.txt
 share/doc/groonga/en/html/_sources/troubleshooting.txt
 share/doc/groonga/en/html/_sources/troubleshooting/different_results_with_the_same_keyword.txt
+share/doc/groonga/en/html/_sources/troubleshooting/mmap_cannot_allocate_memory.txt
 share/doc/groonga/en/html/_sources/tutorial.txt
 share/doc/groonga/en/html/_sources/tutorial/data.txt
 share/doc/groonga/en/html/_sources/tutorial/drilldown.txt
@@ -283,6 +288,7 @@ share/doc/groonga/en/html/reference/commands/normalize.html
 share/doc/groonga/en/html/reference/commands/quit.html
 share/doc/groonga/en/html/reference/commands/register.html
 share/doc/groonga/en/html/reference/commands/ruby_eval.html
+share/doc/groonga/en/html/reference/commands/ruby_load.html
 share/doc/groonga/en/html/reference/commands/select.html
 share/doc/groonga/en/html/reference/commands/shutdown.html
 share/doc/groonga/en/html/reference/commands/status.html
@@ -301,6 +307,8 @@ share/doc/groonga/en/html/reference/executables/grntest.html
 share/doc/groonga/en/html/reference/executables/groonga-httpd.html
 share/doc/groonga/en/html/reference/executables/groonga-server-http.html
 share/doc/groonga/en/html/reference/executables/groonga-suggest-create-dataset.html
+share/doc/groonga/en/html/reference/executables/groonga-suggest-httpd.html
+share/doc/groonga/en/html/reference/executables/groonga-suggest-learner.html
 share/doc/groonga/en/html/reference/executables/groonga.html
 share/doc/groonga/en/html/reference/function.html
 share/doc/groonga/en/html/reference/functions/edit_distance.html
@@ -325,6 +333,7 @@ share/doc/groonga/en/html/reference/query_expanders.html
 share/doc/groonga/en/html/reference/query_expanders/tsv.html
 share/doc/groonga/en/html/reference/tables.html
 share/doc/groonga/en/html/reference/tokenizers.html
+share/doc/groonga/en/html/reference/tuning.html
 share/doc/groonga/en/html/reference/types.html
 share/doc/groonga/en/html/search.html
 share/doc/groonga/en/html/searchindex.js
@@ -346,6 +355,7 @@ share/doc/groonga/en/html/suggest/suggestion.html
 share/doc/groonga/en/html/suggest/tutorial.html
 share/doc/groonga/en/html/troubleshooting.html
 share/doc/groonga/en/html/troubleshooting/different_results_with_the_same_keyword.html
+share/doc/groonga/en/html/troubleshooting/mmap_cannot_allocate_memory.html
 share/doc/groonga/en/html/tutorial.html
 share/doc/groonga/en/html/tutorial/data.html
 share/doc/groonga/en/html/tutorial/drilldown.html
@@ -441,6 +451,7 @@ share/doc/groonga/ja/html/_sources/reference/commands/normalize.txt
 share/doc/groonga/ja/html/_sources/reference/commands/quit.txt
 share/doc/groonga/ja/html/_sources/reference/commands/register.txt
 share/doc/groonga/ja/html/_sources/reference/commands/ruby_eval.txt
+share/doc/groonga/ja/html/_sources/reference/commands/ruby_load.txt
 share/doc/groonga/ja/html/_sources/reference/commands/select.txt
 share/doc/groonga/ja/html/_sources/reference/commands/shutdown.txt
 share/doc/groonga/ja/html/_sources/reference/commands/status.txt
@@ -459,6 +470,8 @@ share/doc/groonga/ja/html/_sources/reference/executables/grntest.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga-httpd.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga-server-http.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga-suggest-create-dataset.txt
+share/doc/groonga/ja/html/_sources/reference/executables/groonga-suggest-httpd.txt
+share/doc/groonga/ja/html/_sources/reference/executables/groonga-suggest-learner.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga.txt
 share/doc/groonga/ja/html/_sources/reference/function.txt
 share/doc/groonga/ja/html/_sources/reference/functions/edit_distance.txt
@@ -483,6 +496,7 @@ share/doc/groonga/ja/html/_sources/reference/query_expanders.txt
 share/doc/groonga/ja/html/_sources/reference/query_expanders/tsv.txt
 share/doc/groonga/ja/html/_sources/reference/tables.txt
 share/doc/groonga/ja/html/_sources/reference/tokenizers.txt
+share/doc/groonga/ja/html/_sources/reference/tuning.txt
 share/doc/groonga/ja/html/_sources/reference/types.txt
 share/doc/groonga/ja/html/_sources/server.txt
 share/doc/groonga/ja/html/_sources/server/gqtp.txt
@@ -502,6 +516,7 @@ share/doc/groonga/ja/html/_sources/suggest/suggestion.txt
 share/doc/groonga/ja/html/_sources/suggest/tutorial.txt
 share/doc/groonga/ja/html/_sources/troubleshooting.txt
 share/doc/groonga/ja/html/_sources/troubleshooting/different_results_with_the_same_keyword.txt
+share/doc/groonga/ja/html/_sources/troubleshooting/mmap_cannot_allocate_memory.txt
 share/doc/groonga/ja/html/_sources/tutorial.txt
 share/doc/groonga/ja/html/_sources/tutorial/data.txt
 share/doc/groonga/ja/html/_sources/tutorial/drilldown.txt
@@ -622,6 +637,7 @@ share/doc/groonga/ja/html/reference/commands/normalize.html
 share/doc/groonga/ja/html/reference/commands/quit.html
 share/doc/groonga/ja/html/reference/commands/register.html
 share/doc/groonga/ja/html/reference/commands/ruby_eval.html
+share/doc/groonga/ja/html/reference/commands/ruby_load.html
 share/doc/groonga/ja/html/reference/commands/select.html
 share/doc/groonga/ja/html/reference/commands/shutdown.html
 share/doc/groonga/ja/html/reference/commands/status.html
@@ -640,6 +656,8 @@ share/doc/groonga/ja/html/reference/executables/grntest.html
 share/doc/groonga/ja/html/reference/executables/groonga-httpd.html
 share/doc/groonga/ja/html/reference/executables/groonga-server-http.html
 share/doc/groonga/ja/html/reference/executables/groonga-suggest-create-dataset.html
+share/doc/groonga/ja/html/reference/executables/groonga-suggest-httpd.html
+share/doc/groonga/ja/html/reference/executables/groonga-suggest-learner.html
 share/doc/groonga/ja/html/reference/executables/groonga.html
 share/doc/groonga/ja/html/reference/function.html
 share/doc/groonga/ja/html/reference/functions/edit_distance.html
@@ -664,6 +682,7 @@ share/doc/groonga/ja/html/reference/query_expanders.html
 share/doc/groonga/ja/html/reference/query_expanders/tsv.html
 share/doc/groonga/ja/html/reference/tables.html
 share/doc/groonga/ja/html/reference/tokenizers.html
+share/doc/groonga/ja/html/reference/tuning.html
 share/doc/groonga/ja/html/reference/types.html
 share/doc/groonga/ja/html/search.html
 share/doc/groonga/ja/html/searchindex.js
@@ -685,6 +704,7 @@ share/doc/groonga/ja/html/suggest/suggestion.html
 share/doc/groonga/ja/html/suggest/tutorial.html
 share/doc/groonga/ja/html/troubleshooting.html
 share/doc/groonga/ja/html/troubleshooting/different_results_with_the_same_keyword.html
+share/doc/groonga/ja/html/troubleshooting/mmap_cannot_allocate_memory.html
 share/doc/groonga/ja/html/tutorial.html
 share/doc/groonga/ja/html/tutorial/data.html
 share/doc/groonga/ja/html/tutorial/drilldown.html
