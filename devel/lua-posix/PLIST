@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/14 09:06:48 ryoon Exp $
-lib/lua/5.2/curses.lua
-lib/lua/5.2/curses_c.la
-lib/lua/5.2/posix.lua
-lib/lua/5.2/posix_c.la
+@comment $NetBSD: PLIST,v 1.2 2013/10/30 06:04:16 dholland Exp $
+${LUA_CDIR}/curses.lua
+${LUA_CDIR}/curses_c.la
+${LUA_CDIR}/posix.lua
+${LUA_CDIR}/posix_c.la
 share/doc/${PKGNAME}/curses.html
 share/doc/${PKGNAME}/curses_c.html
 share/doc/${PKGNAME}/index.html
