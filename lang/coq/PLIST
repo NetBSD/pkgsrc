@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/11/16 14:44:22 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/10/30 00:21:49 minskim Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -1906,5 +1906,5 @@ share/emacs/site-lisp/coq-font-lock.el
 share/emacs/site-lisp/coq-inferior.el
 share/emacs/site-lisp/coq-syntax.el
 share/emacs/site-lisp/coq.el
-share/texmf/tex/latex/coq/coqdoc.sty
+share/texmf-dist/tex/latex/coq/coqdoc.sty
 @pkgdir lib/coq/user-contrib
