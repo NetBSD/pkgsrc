@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/10/30 06:20:45 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2013/10/30 13:27:22 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
@@ -17,9 +17,6 @@ USE_TOOLS+=	pkg-config pax
 
 TEST_TARGET=	check
 TEST_ENV+=	LUA_CDIR=${WRKSRC}
-
-FIND_PREFIX:=	LUADIR=lua
-.include "../../mk/find-prefix.mk"
 
 REPLACE_LUA=		*.lua
 
