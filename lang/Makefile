@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2013/10/26 14:46:51 sno Exp $
+# $NetBSD: Makefile,v 1.359 2013/10/30 07:03:36 alnsn Exp $
 #
 
 COMMENT=	Programming languages
@@ -100,7 +100,8 @@ SUBDIR+=	ksi
 SUBDIR+=	librep
 SUBDIR+=	libtcl-nothread
 SUBDIR+=	likepython
-SUBDIR+=	lua
+SUBDIR+=	lua51
+SUBDIR+=	lua52
 SUBDIR+=	lush
 SUBDIR+=	maude
 SUBDIR+=	mawk
