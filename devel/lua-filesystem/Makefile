@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/09/13 12:09:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/30 06:03:37 dholland Exp $
 #
 
 DISTNAME=		luafilesystem-1.6.2
-PKGNAME=		${DISTNAME:S/lua/lua-/}
+PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://github.com/downloads/keplerproject/luafilesystem/
