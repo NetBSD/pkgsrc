@@ -1,4 +1,4 @@
-# $NetBSD: lua.pc.in,v 1.1 2013/07/04 18:04:42 adam Exp $
+# $NetBSD: lua.pc.in,v 1.1 2013/10/30 06:18:10 dholland Exp $
 # lua.pc is not any longer distributed, but is still required by other packages.
 
 prefix= @PREFIX@

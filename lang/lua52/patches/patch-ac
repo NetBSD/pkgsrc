@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2013/07/04 18:04:42 adam Exp $
+$NetBSD: patch-ac,v 1.1 2013/10/30 06:18:10 dholland Exp $
 
 --- src/luaconf.h.orig	2013-03-16 21:10:18.000000000 +0000
 +++ src/luaconf.h
