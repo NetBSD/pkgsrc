@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2013/10/19 09:07:06 adam Exp $
+# $NetBSD: Makefile,v 1.69 2013/10/30 00:21:49 minskim Exp $
 #
 
 DISTNAME=	coq-8.4pl2
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PKGVERSION_NOREV}/files/
 
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-configdir ${PKG_SYSCONFDIR}/xdg/coq
 CONFIGURE_ARGS+=	-docdir ${PREFIX}/share/doc/coq
-CONFIGURE_ARGS+=	-coqdocdir ${PREFIX}/share/texmf/tex/latex/coq
+CONFIGURE_ARGS+=	-coqdocdir ${PREFIX}/share/texmf-dist/tex/latex/coq
 BUILD_TARGET=		world
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10
