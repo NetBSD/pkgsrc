@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/13 12:17:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/30 06:03:38 dholland Exp $
 #
 
 DISTNAME=		luasec-0.4.1
@@ -14,7 +14,7 @@ LICENSE=		mit
 
 .include "../../mk/bsd.prefs.mk"
 
-DEPENDS+=		lua-socket>=2.0:../../net/lua-socket
+DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 
 USE_TOOLS+=		gmake
 
