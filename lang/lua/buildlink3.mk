@@ -1,15 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.16 2013/07/15 02:02:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2013/10/30 06:18:09 dholland Exp $
+#
+# This is a fake buildlink3.mk file. It figures out the Lua version
+# and then includes the real buildlink3.mk file for that Lua version.
+#
+# It is intended to be included by packages that embed the Lua
+# interpreter and therefore link against Lua.
 
-BUILDLINK_TREE+=	lua
+.include "../../lang/lua/luaversion.mk"
+.include "${LUA_PKGSRCDIR}/buildlink3.mk"
 
-.if !defined(LUA_BUILDLINK3_MK)
-LUA_BUILDLINK3_MK:=
-
-BUILDLINK_API_DEPENDS.lua+=	lua>=5.2.0
-BUILDLINK_ABI_DEPENDS.lua+=	lua>=5.2.0
-BUILDLINK_PKGSRCDIR.lua?=	../../lang/lua
-
-.include "../../mk/readline.buildlink3.mk"
-.endif # LUA_BUILDLINK3_MK
-
-BUILDLINK_TREE+=	-lua
+BUILDLINK_PREFIX.lua=	${BUILDLINK_PREFIX.${LUA_PACKAGE}}

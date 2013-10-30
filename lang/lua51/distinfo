@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/10/30 06:18:09 dholland Exp $
+
+SHA1 (lua-5.1.5.tar.gz) = b3882111ad02ecc6b972f8c1241647905cb2e3fc
+RMD160 (lua-5.1.5.tar.gz) = b0c2234675335a8bf158a125b6778cf800c754a0
+Size (lua-5.1.5.tar.gz) = 221213 bytes
+SHA1 (patch-aa) = 25bcd22d3fc319c51356b7f976d0215eb04900db
+SHA1 (patch-ab) = 6f0964957112afbbc77648c86ae2a6ddd20c3389
+SHA1 (patch-ac) = bd2348dcb273de09ddc09da906c93de6cc209c5c
