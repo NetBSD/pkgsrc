@@ -1,7 +1,27 @@
-$NetBSD: patch-ba,v 1.2 2013/10/19 09:29:37 wiz Exp $
+$NetBSD: patch-ba,v 1.3 2013/10/30 23:53:10 wiz Exp $
+
+First chunk: part of the Solaris fix for test-migration.c, from
+Akira TAGOH (upstream)
+
+Second chunk: On NetBSD, it is not supported to load a library linked against
+libpthread into a program that wasn't (since the C library provides
+stubs for some pthread-functions, which might have already been called
+before libpthread is loaded, leading to problems).
+
+Since xdm (not linked against libpthread) might load fontconfig,
+fontconfig shouldn't be linked against libpthread.
 
 --- configure.orig	2013-01-10 08:59:05.000000000 +0000
 +++ configure
+@@ -13908,7 +13908,7 @@ $as_echo "#define HAVE_MMAP 1" >>confdef
+ fi
+ rm -f conftest.mmap conftest.txt
+ 
+-for ac_func in link mkstemp mkostemp _mktemp_s getopt getopt_long getprogname getexecname rand random lrand48 random_r rand_r regcomp regerror regexec regfree fstatvfs fstatfs lstat
++for ac_func in link mkstemp mkostemp _mktemp_s mkdtemp getopt getopt_long getprogname getexecname rand random lrand48 random_r rand_r regcomp regerror regexec regfree fstatvfs fstatfs lstat
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
 @@ -15017,6 +15017,11 @@ case ${host_os} in
          darwin*)
          ax_pthread_flags="-pthread $ax_pthread_flags"
@@ -14,3 +34,4 @@ $NetBSD: patch-ba,v 1.2 2013/10/19 09:29:37 wiz Exp $
  esac
  
  if test x"$ax_pthread_ok" = xno; then
+
