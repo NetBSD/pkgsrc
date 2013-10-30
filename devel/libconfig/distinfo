@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/04/17 21:19:22 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/10/30 21:15:49 gls Exp $
 
-SHA1 (libconfig-1.3.tar.gz) = 419786264a03b228cd99cec9d4f6230c82118c83
-RMD160 (libconfig-1.3.tar.gz) = 5673b150107cea5b0fcbd6e3e225ec48eec6b83a
-Size (libconfig-1.3.tar.gz) = 519403 bytes
-SHA1 (patch-aa) = 7403a57305db9e5fc5d2fa518572b5a73d721487
+SHA1 (libconfig-1.4.9.tar.gz) = b7a3c307dfb388e57d9a35c7f13f6232116930ec
+RMD160 (libconfig-1.4.9.tar.gz) = ec0f28737fa603379f3b91c2de1857d7b1ae676f
+Size (libconfig-1.4.9.tar.gz) = 688158 bytes
