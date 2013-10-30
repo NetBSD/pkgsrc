@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2013/10/23 12:39:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/10/30 11:30:36 obache Exp $
 libexec/ibus-engine-pinyin
 libexec/ibus-setup-pinyin
 share/applications/ibus-setup-bopomofo.desktop
 share/applications/ibus-setup-pinyin.desktop
+${PLIST.lua}share/ibus-pinyin/base.lua
 share/ibus-pinyin/db/english.db
 share/ibus-pinyin/icons/chinese.svg
 share/ibus-pinyin/icons/english.svg
