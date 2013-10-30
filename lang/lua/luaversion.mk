@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.1 2013/10/30 06:18:09 dholland Exp $
+# $NetBSD: luaversion.mk,v 1.2 2013/10/30 08:53:40 obache Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -99,7 +99,7 @@ _LUA_VERSION?=		none
 #
 # Handle self-conflicts
 #
-.if !empty(LUA_SELF_CONFLICT:M[Yy][Ee][Ss])
+.if defined(LUA_SELF_CONFLICT) && !empty(LUA_SELF_CONFLICT:M[Yy][Ee][Ss])
 .for v in ${_LUA_VERSIONS_ACCEPTED:N${_LUA_VERSION}}
 CONFLICTS+=	${PKGNAME:S/lua${_LUA_VERSION}/lua${v}/:C/-[0-9].*$/-[0-9]*/}
 .endfor
