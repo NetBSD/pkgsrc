@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/07/14 20:28:19 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/30 06:03:37 dholland Exp $
 #
 
 DISTNAME=	${PL_VERSION}
-PKGNAME=	lua-penlight-${PL_VERSION}
+PKGNAME=	${LUA_PKGPREFIX}-penlight-${PL_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/stevedonovan/Penlight/archive/
 
