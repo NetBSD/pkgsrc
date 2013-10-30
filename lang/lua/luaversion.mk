@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.2 2013/10/30 08:53:40 obache Exp $
+# $NetBSD: luaversion.mk,v 1.3 2013/10/30 10:52:53 obache Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -56,7 +56,7 @@ LUA_LUAVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		LUA_VERSION_DEFAULT
-BUILD_DEFS_EFFECTS+=	LUAPACKAGE
+BUILD_DEFS_EFFECTS+=	LUA_PACKAGE
 
 LUA_VERSION_DEFAULT?=	52
 LUA_VERSIONS_ACCEPTED?=	52 51
