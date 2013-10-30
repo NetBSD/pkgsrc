@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/10/23 12:39:55 obache Exp $
+$NetBSD: distinfo,v 1.5 2013/10/30 11:30:36 obache Exp $
 
 SHA1 (ibus-pinyin-1.5.0.tar.gz) = 40abf915bb2599189d8fd76f456ce399edfa4184
 RMD160 (ibus-pinyin-1.5.0.tar.gz) = 9137f3e40971bd819fbaaf1715779a538d20a90c
 Size (ibus-pinyin-1.5.0.tar.gz) = 692516 bytes
+SHA1 (patch-lua_lmyoslib.c) = 7934c67df6134085f5a429ad678e1bfa89c65be8
+SHA1 (patch-lua_lua-plugin.h) = 51fbb077a8f0c528101dbdaafcbac9702dde334f
 SHA1 (patch-src_PYUtil.h) = 93e289e83abaec2fef6cd5a7cf924cd3bb6a20ad
