@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2012/10/31 11:17:32 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/10/30 02:58:19 minskim Exp $
 
 DISTNAME=		noweb-2.11b
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://www.eecs.harvard.edu/pub/nr/
 EXTRACT_SUFX=		.tgz
