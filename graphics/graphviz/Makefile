@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2013/10/10 14:42:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.131 2013/10/30 06:22:04 dholland Exp $
 
 DISTNAME=	graphviz-2.34.0
 PKGREVISION=	1
@@ -43,10 +43,11 @@ PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
 PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
 XAW_TYPE=		standard
 
-REPLACE_INTERPRETER+=	lua
-REPLACE.lua.old=	.*lua
-REPLACE.lua.new=	${PREFIX}/bin/lua
-REPLACE_FILES.lua=	tclpkg/gv/demo/modgraph.lua
+# With lua51 there's a PLIST divergence and it isn't obvious whether
+# it's serious or not, or what causes it.
+LUA_VERSIONS_INCOMPATIBLE=	51
+
+REPLACE_LUA+=		tclpkg/gv/demo/modgraph.lua
 
 REPLACE_INTERPRETER+=	tclsh
 REPLACE.tclsh.old=	.*tclsh
@@ -75,6 +76,8 @@ post-install:
 	  ${DESTDIR}${PREFIX}/lib/lua/5.1/gv.so
 
 .include "options.mk"
+
+.include "../../lang/lua/application.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
