@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2013/07/25 13:25:08 degroote Exp $
+# $NetBSD: Makefile,v 1.38 2013/10/30 06:49:54 dholland Exp $
 
 DISTNAME=		imapfilter-${VERSION}
 VERSION=		2.5.5
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=  -https://codeload.github.com/lefcha/imapfiler/tar.gz/${VERSION}
 
