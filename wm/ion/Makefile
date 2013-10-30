@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2013/07/04 21:27:58 adam Exp $
+# $NetBSD: Makefile,v 1.42 2013/10/30 06:49:55 dholland Exp $
 #
 
 DISTNAME=	ion-2-20040729
 PKGNAME=	${DISTNAME:S/-2-/-/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/archives/
 
