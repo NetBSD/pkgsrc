@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.1 2013/10/30 06:18:09 dholland Exp $
+# $NetBSD: application.mk,v 1.2 2013/10/30 06:53:19 dholland Exp $
 #
 # This makefile fragment is intended to be included by packages that
 # install Lua scripts.
@@ -6,7 +6,7 @@
 # Package-settable variables:
 #
 # REPLACE_LUA
-#	A list of Lua scripts ot be installed, relative to ${WRKSRC}.
+#	A list of Lua scripts to be installed, relative to ${WRKSRC}.
 #
 # Keywords: Lua
 #
