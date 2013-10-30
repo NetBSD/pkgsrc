@@ -1,0 +1,16 @@
+$NetBSD: patch-include_config.h.in,v 1.1 2013/10/30 18:59:06 adam Exp $
+
+Don't inline when using Clang.
+
+--- include/config.h.in.orig	2013-10-30 18:56:26.000000000 +0000
++++ include/config.h.in
+@@ -114,7 +114,9 @@
+ 
+ /* Define as `__inline' if that's what the C compiler calls it, or to nothing
+    if it is not supported. */
++#ifndef __clang__
+ #undef inline
++#endif
+ 
+ /* Define as `__restrict' if that's what the C compiler calls it, or to
+    nothing if it is not supported. */
