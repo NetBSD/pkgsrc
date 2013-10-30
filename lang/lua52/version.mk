@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.3 2013/07/04 18:04:42 adam Exp $
+# $NetBSD: version.mk,v 1.1 2013/10/30 06:18:10 dholland Exp $
 
 LUA_VERSION=	5.2.2
 

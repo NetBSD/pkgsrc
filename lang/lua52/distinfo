@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2013/07/04 18:04:42 adam Exp $
+$NetBSD: distinfo,v 1.1 2013/10/30 06:18:10 dholland Exp $
 
 SHA1 (lua-5.2.2.tar.gz) = 0857e41e5579726a4cb96732e80d7aa47165eaf5
 RMD160 (lua-5.2.2.tar.gz) = d17967150017e9b25a26c1ad527647cd0b9e598f
