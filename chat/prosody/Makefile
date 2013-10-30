@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/09/13 14:37:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/30 06:19:17 dholland Exp $
 #
 
 DISTNAME=		prosody-0.9.1
@@ -10,10 +10,10 @@ HOMEPAGE=		http://prosody.im/
 COMMENT=		Flexible communications server for Jabber/XMPP written in Lua
 LICENSE=		mit
 
-DEPENDS+=		lua-filesystem>=1.0:../../devel/lua-filesystem
-DEPENDS+=		lua-expat>=1.2:../../textproc/lua-expat
-DEPENDS+=		lua-sec>=0.3.3:../../security/lua-sec
-DEPENDS+=		lua-socket>=2.0:../../net/lua-socket
+DEPENDS+=	${LUA_PKGPREFIX}-filesystem>=1.0:../../devel/lua-filesystem
+DEPENDS+=	${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
+DEPENDS+=	${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
+DEPENDS+=	${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -51,10 +51,7 @@ CONF_FILES+=		${EGDIR}/certs/localhost.key ${PKG_SYSCONFDIR}/certs/localhost.key
 
 CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
 
-REPLACE_INTERPRETER+=	lua
-REPLACE.lua.old=	/usr/bin/env lua
-REPLACE.lua.new=	${PREFIX}/bin/lua
-REPLACE_FILES.lua=	prosody prosodyctl
+REPLACE_LUA+=		prosody prosodyctl
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -76,6 +73,8 @@ SUBST_FILES.config=	prosody.cfg.lua.dist
 SUBST_SED.config=	-e 's,@PROSODY_DATA@,${PROSODY_DATA},'
 SUBST_SED.config+=	-e 's,@PROSODY_LOG@,${PROSODY_LOG},'
 SUBST_SED.config+=	-e 's,@PROSODY_RUN@,${PROSODY_RUN},'
+
+.include "../../lang/lua/application.mk"
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
