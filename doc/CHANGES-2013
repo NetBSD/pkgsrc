@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3979 2013/10/30 02:59:03 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.3980 2013/10/30 06:52:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5580,3 +5580,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/lighttpd to 1.4.33 [adam 2013-10-29]
 	Updated lang/coq to 8.4pl2nb10 [minskim 2013-10-30]
 	Updated devel/noweb to 2.11bnb1 [minskim 2013-10-30]
+	Added lang/lua51 version 5.1.5 [dholland 2013-10-30]
+	Added lang/lua52 version 5.2.2 [dholland 2013-10-30]
+	Removed lang/lua successor lang/lua52 [dholland 2013-10-30]
