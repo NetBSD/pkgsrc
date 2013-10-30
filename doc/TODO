@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12685 2013/10/30 13:33:47 mef Exp $
+$NetBSD: TODO,v 1.12686 2013/10/30 17:56:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ROMBuild-2.14
 	o SOGo-2.0.7
 	o SOPE-2.0.7
-	o Sigil-0.7.3 [needs qt5]
+	o Sigil-0.7.4 [needs qt5]
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.20
 	o TiffIO-130e
@@ -445,7 +445,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
 	o csound5-5.13
-	o cups-1.6.4
+	o cups-1.7.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
@@ -466,6 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-1.0.8
 	o dev86-0.16.19 [pkg/48321]
 	o dhid-5.3
+	o diffstat-1.58
 	o digikam-3.5.0
 	o doclifter-2.13
 	o dri-7.8.2 [wip]
@@ -504,7 +505,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.3.1 [etm successor]
+	o etm2-2.3.3 [etm successor]
 	o ettercap-0.7.6
 	o evince-3.8.3
 	o evolution-3.0.0
@@ -522,7 +523,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o fish-2.0
+	o firefox-25.0
+	o fish-2.1
 	o flashplayer-0.4.13
 	o flightgear-2.12
 	o flpsed-0.4.4
@@ -608,7 +610,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-6.0.3
-	o gnumeric112-1.12.8
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -666,8 +667,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icewm-1.3.7
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
-	o imp-6.1.4
-	o ingo-3.1.2
+	o imapfilter-2.56
+	o imp-6.1.5
+	o ingo-3.1.3
 	o inspircd-1.2.1
 	o instiki-0.13
 	o ircservices-5.1.21
@@ -694,7 +696,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdenlive-0.9.6
 	o kdevelop-4.5
 	o kdrill-6.5
-	o kid3-3.0
+	o kid3-3.0.1
 	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
 	o kmp-0.5
@@ -702,7 +704,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o knights-2.5.0
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-4.1.3
+	o kronolith-4.1.4
 	o krusader-2.0
 	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
@@ -765,6 +767,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
 	o lsh-2.1
+	o ltris-1.0.19
 	o lwm-1.2.3
 	o lyx-2.0.6
 	o maelstrom-sdl-3.0.6
@@ -1057,7 +1060,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o transmission-2.80
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o turba-4.1.2
+	o turba-4.1.3
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o uae-0.8.29
@@ -1095,7 +1098,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o weechat-0.4.2
 	o windowlab-1.40
 	o wine-1.6.0 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.7.4 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.7.5 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
