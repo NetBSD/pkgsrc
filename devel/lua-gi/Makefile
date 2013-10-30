@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/07/25 13:05:18 degroote Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/30 06:03:37 dholland Exp $
 #
 
 DISTNAME=	lgi-${VERSION}
-PKGNAME=	lua-gi-${VERSION}
+PKGNAME=	${LUA_PKGPREFIX}-gi-${VERSION}
 VERSION=	0.7.1
 CATEGORIES=	devel
 MASTER_SITES=	-https://codeload.github.com/pavouk/lgi/tar.gz/${VERSION}
