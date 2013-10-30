@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3978 2013/10/30 00:22:51 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.3979 2013/10/30 02:59:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5579,3 +5579,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/poppler to 0.24.3 [drochner 2013-10-29]
 	Updated www/lighttpd to 1.4.33 [adam 2013-10-29]
 	Updated lang/coq to 8.4pl2nb10 [minskim 2013-10-30]
+	Updated devel/noweb to 2.11bnb1 [minskim 2013-10-30]
