@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2012/06/23 04:50:07 schnoebe Exp $
+$NetBSD: patch-aa,v 1.3 2013/10/30 23:37:31 schnoebe Exp $
 
 # lots of portability changes to configure.in, removing hard-coded paths
 # and pulling in the dynamic library loading modules..
 
 # pushed upstream as https://bugs.launchpad.net/hplip/+bug/726207
 
---- configure.in.orig	2012-06-05 09:32:41.000000000 +0000
+--- configure.in.orig	2013-10-11 09:40:26.000000000 +0000
 +++ configure.in
 @@ -34,14 +34,15 @@ AC_DISABLE_STATIC
  # Checks for programs.
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.2 2012/06/23 04:50:07 schnoebe Exp $
  fi
  AC_ARG_WITH(mimedir, AC_HELP_STRING([--with-mimedir=DIR], [set cups mime.types location [default=abs_mimedir]]),
     mimedir=$withval, mimedir="$abs_mimedir")
-@@ -469,12 +470,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
+@@ -471,12 +472,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
  
  # Determine where the PolicyKit policy file goes
  if test "$policykit" = "yes"; then
@@ -79,19 +79,11 @@ $NetBSD: patch-aa,v 1.2 2012/06/23 04:50:07 schnoebe Exp $
     fi
  else
     policykit_dir=
-@@ -579,6 +580,7 @@ AC_DEFINE_DIR([abs_datadir], [datadir])
- AC_DEFINE_DIR([abs_sbindir], [sbindir])
+@@ -582,6 +583,7 @@ AC_DEFINE_DIR([abs_sbindir], [sbindir])
  AC_DEFINE_DIR([abs_hpppddir], [hpppddir])
  AC_DEFINE_DIR([abs_docdir], [hpdocdir])
+ AC_DEFINE_DIR([abs_htmldir], [hphtmldir])
 +AC_DEFINE_DIR([abs_icondir], [icondir])
  abs_ppddir=${abs_hpppddir%/*}
  AC_DEFINE_DIR([abs_drvdir], [drvdir])
  
-@@ -586,6 +588,7 @@ AC_SUBST(abs_datadir) 
- AC_SUBST(abs_sbindir) 
- AC_SUBST(abs_hpppddir) 
- AC_SUBST(abs_docdir) 
-+AC_SUBST(abs_icondir) 
- AC_SUBST(abs_ppddir) 
- AC_SUBST(abs_drvdir) 
- AC_SUBST(abs_mimedir) 
