@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3985 2013/10/30 21:16:29 gls Exp $
+$NetBSD: CHANGES-2013,v 1.3986 2013/10/30 23:38:42 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5589,3 +5589,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated biology/chemtool to 1.6.14 [asau 2013-10-30]
 	Updated sysutils/logrotate to 3.8.7 [gls 2013-10-30]
 	Updated devel/libconfig to 1.4.9 [gls 2013-10-30]
+	Updated print/hplip to 3.13.10 [schnoebe 2013-10-30]
