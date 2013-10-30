@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2013/09/01 04:48:21 ryoon Exp $
-lib/lua/5.2/lxp.so
-share/lua/5.2/lxp/lom.lua
+@comment $NetBSD: PLIST,v 1.4 2013/10/30 06:04:16 dholland Exp $
+${LUA_CDIR}/lxp.so
+${LUA_LDIR}/lxp/lom.lua
