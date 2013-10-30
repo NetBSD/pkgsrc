@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.9 2013/09/12 16:12:13 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.10 2013/10/30 23:37:31 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -17,7 +17,6 @@ bin/hp-linefeedcal
 bin/hp-logcapture
 bin/hp-makecopies
 bin/hp-makeuri
-bin/hp-mkuri
 bin/hp-pkservice
 bin/hp-plugin
 bin/hp-pqdiag
@@ -41,7 +40,6 @@ lib/libhpmud.la
 ${PYSITELIB}/cupsext.la
 ${PYSITELIB}/hpmudext.la
 ${PYSITELIB}/pcardext.la
-lib/systemd/system/hplip-printer@.service
 libexec/cups/backend/hp
 libexec/cups/filter/foomatic-rip-hplip
 libexec/cups/filter/hpcups
@@ -85,6 +83,7 @@ share/doc/${PKGNAME}/troubleshooting.html
 share/doc/${PKGNAME}/uninstalling.html
 share/doc/${PKGNAME}/upgrading.html
 share/examples/hplip/hp/hplip.conf
+share/examples/hplip/systemd/system/hplip-printer@.service
 share/examples/hplip/udev/rules.d/56-hpmud.rules
 share/hal/fdi/preprobe/10osvendor/20-hplip-devices.fdi
 share/hplip/__init__.py
@@ -501,6 +500,7 @@ share/hplip/ppd/HP/hp-designjet_t1200_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1300_postscript-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t1500-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t2300_postscript-ps.ppd.gz
+share/hplip/ppd/HP/hp-designjet_t2500-postscript.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t7100ps-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t7100ps_monochrome-ps.ppd.gz
 share/hplip/ppd/HP/hp-designjet_t770_postscript-ps.ppd.gz
@@ -552,6 +552,8 @@ share/hplip/ppd/HP/hp-deskjet_2520_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2520_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2540_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_2540_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_2640_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_2640_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3000_j310_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3000_j310_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3050_j610_series-hpijs.ppd.gz
@@ -1193,6 +1195,7 @@ share/hplip/ppd/HP/hp-laserjet_cp_1025.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp_1025nw-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp_1025nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_flow_mfp_m525-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_flow_mfp_m830-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m1005-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m1005.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m1120_mfp-hpijs.ppd.gz
@@ -1237,6 +1240,7 @@ share/hplip/ppd/HP/hp-laserjet_m5035_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m5035_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m5039_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m5039_mfp-pcl3.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_m806-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9040_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9040_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9040_mfp-ps.ppd.gz
@@ -1969,4 +1973,3 @@ share/hplip/upgrade.py
 share/hplip/upgrade.pyc
 share/hplip/wificonfig.py
 share/hplip/wificonfig.pyc
-@pkgdir share/examples/hplip/log/hp/tmp

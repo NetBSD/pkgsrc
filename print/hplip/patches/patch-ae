@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2013/07/21 15:56:37 schnoebe Exp $
+$NetBSD: patch-ae,v 1.8 2013/10/30 23:37:31 schnoebe Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
@@ -8,14 +8,14 @@ $NetBSD: patch-ae,v 1.7 2013/07/21 15:56:37 schnoebe Exp $
 # still needs to handle the buildlink path for libusb-1.0 :(
 # schnoebe -- Fri May 24 14:55:57 CDT 2013
 
---- Makefile.am.orig	2013-06-21 06:57:55.000000000 +0000
+--- Makefile.am.orig	2013-10-11 09:40:14.000000000 +0000
 +++ Makefile.am
-@@ -110,22 +110,22 @@ hp_mkuri_LDADD = -ldl libhpmud.la
- hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
+@@ -105,22 +105,22 @@ libhpip_la_SOURCES = ip/xconvolve.c ip/x
+ 
  
  #hpmud rules data dir
 -rulessystemdir=/usr/lib/systemd/system
-+rulessystemdir=$(libdir)/systemd/system
++rulessystemdir=$(sysconfdir)/systemd/system
  dist_rulessystem_DATA =data/rules/hplip-printer@.service
  
  # hpmud.rules
@@ -37,7 +37,7 @@ $NetBSD: patch-ae,v 1.7 2013/07/21 15:56:37 schnoebe Exp $
  hplip_conf_DATA = hplip.conf
  
  #pstotiff filter
-@@ -133,12 +133,12 @@ pstotiffdir = $(cupsfilterdir)
+@@ -128,7 +128,7 @@ pstotiffdir = $(cupsfilterdir)
  pstotiff_SCRIPTS = fax/filters/pstotiff
  
  # hplip.state
@@ -45,15 +45,8 @@ $NetBSD: patch-ae,v 1.7 2013/07/21 15:56:37 schnoebe Exp $
 +hplip_statedir = $(localstatedir)/lib/hp
  dist_hplip_state_DATA =
  
- # Log Files
--hplip_Logdir=/var/log/hp
--hplip_tmpdir=/var/log/hp/tmp
-+hplip_Logdir= $(localstatedir)/log/hp
-+hplip_tmpdir= $(localstatedir)/log/hp/tmp
- 
  if FULL_BUILD
- 
-@@ -355,9 +355,9 @@ endif
+@@ -344,9 +344,9 @@ endif
  
  # PolicyKit
  if POLICYKIT_INSTALL
@@ -65,48 +58,23 @@ $NetBSD: patch-ae,v 1.7 2013/07/21 15:56:37 schnoebe Exp $
  dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
  policykit_policydir = $(policykit_dir)
  dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
-@@ -546,38 +546,30 @@ endif
- install-dist_hplip_LogDATA:
- if FULL_BUILD
- 	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
--	chgrp "lp" -R $(DESTDIR)$(hplip_Logdir)
--	chmod 775 $(DESTDIR)$(hplip_Logdir)
- endif	#FULL_BUILD
- if HPLIP_BUILD
- 	test -z "$(DESTDIR)$(hplip_Logdir)" || mkdir -p $(DESTDIR)$(hplip_Logdir)
--	chgrp "lp" -R $(DESTDIR)$(hplip_Logdir)
--	chmod 775 $(DESTDIR)$(hplip_Logdir)
- endif	#FULL_BUILD
- 
- install-dist_hplip_tmpDATA:
- if FULL_BUILD
- 	test -z "$(DESTDIR)$(hplip_tmpdir)" || mkdir -p $(DESTDIR)$(hplip_tmpdir)
--	chgrp "lp" -R $(DESTDIR)$(hplip_tmpdir)
--	chmod 0775 $(DESTDIR)$(hplip_tmpdir)
- endif	#FULL_BUILD
- if HPLIP_BUILD
- 	test -z "$(DESTDIR)$(hplip_tmpdir)" || mkdir -p $(DESTDIR)$(hplip_tmpdir)
--	chgrp "lp" -R $(DESTDIR)$(hplip_tmpdir)
--	chmod 0775 $(DESTDIR)$(hplip_tmpdir)
- endif	#FULL_BUILD
- 
- install-data-hook:
+@@ -525,13 +525,13 @@ install-data-hook:
  if HPLIP_BUILD
  #	   If scanner build, add hpaio entry to sane dll.conf.
  	if [ "$(scan_build)" = "yes" ]; then \
 -	   $(mkinstalldirs) $(DESTDIR)/etc/sane.d; \
 -	   if [ ! -f $(DESTDIR)/etc/sane.d/dll.conf ]; then \
 -		  touch $(DESTDIR)/etc/sane.d/dll.conf; \
-+	   $(mkinstalldirs) $(DESTDIR)$(sysconfidir)/sane.d; \
-+	   if [ ! -f $(DESTDIR)$(sysconfidir)/sane.d/dll.conf ]; then \
-+		  touch $(DESTDIR)$(sysconfidir)/sane.d/dll.conf; \
++	   $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/sane.d; \
++	   if [ ! -f $(DESTDIR)$(sysconfdir)/sane.d/dll.conf ]; then \
++		  touch $(DESTDIR)$(sysconfdir)/sane.d/dll.conf; \
  	   fi; \
 -	   if ! grep ^hpaio $(DESTDIR)/etc/sane.d/dll.conf >/dev/null 2>/dev/null ; then \
 -		  echo "Adding hpaio entry to /etc/sane.d/dll.conf." ; \
 -		  echo hpaio >>$(DESTDIR)/etc/sane.d/dll.conf ; \
-+	   if ! grep ^hpaio $(DESTDIR)$(sysconfidir)/sane.d/dll.conf >/dev/null 2>/dev/null ; then \
-+		  echo "Adding hpaio entry to $(sysconfidir)/sane.d/dll.conf." ; \
-+		  echo hpaio >>$(DESTDIR)$(sysconfidir)/sane.d/dll.conf ; \
++	   if ! grep ^hpaio $(DESTDIR)$(sysconfdir)/sane.d/dll.conf >/dev/null 2>/dev/null ; then \
++		  echo "Adding hpaio entry to $(sysconfdir)/sane.d/dll.conf." ; \
++		  echo hpaio >>$(DESTDIR)$(sysconfdir)/sane.d/dll.conf ; \
  	   fi \
  	fi
  if FULL_BUILD
