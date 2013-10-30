@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1 2013/10/30 06:18:10 dholland Exp $
+
+- allow LUA_ROOT to be set by the pkgsrc makefile
+- solaris fix for PR 43350
+
+--- src/luaconf.h.orig	2008-02-11 16:25:08.000000000 +0000
++++ src/luaconf.h
+@@ -94,7 +94,9 @@
+ 	".\\?.dll;"  LUA_CDIR"?.dll;" LUA_CDIR"loadall.dll"
+ 
+ #else
++#ifndef LUA_ROOT
+ #define LUA_ROOT	"/usr/local/"
++#endif
+ #define LUA_LDIR	LUA_ROOT "share/lua/5.1/"
+ #define LUA_CDIR	LUA_ROOT "lib/lua/5.1/"
+ #define LUA_PATH_DEFAULT  \
+@@ -183,7 +185,7 @@
+ #define LUAI_DATA	/* empty */
+ 
+ #elif defined(__GNUC__) && ((__GNUC__*100 + __GNUC_MINOR__) >= 302) && \
+-      defined(__ELF__)
++      defined(__ELF__) && !defined(__sun)
+ #define LUAI_FUNC	__attribute__((visibility("hidden"))) extern
+ #define LUAI_DATA	LUAI_FUNC
+ 
