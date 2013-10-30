@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3981 2013/10/30 07:09:22 adam Exp $
+$NetBSD: CHANGES-2013,v 1.3982 2013/10/30 07:31:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5584,3 +5584,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/lua52 version 5.2.2 [dholland 2013-10-30]
 	Removed lang/lua successor lang/lua52 [dholland 2013-10-30]
 	Updated multimedia/ffmpeg2 to 2.1 [adam 2013-10-30]
+	Updated mail/exim to 4.82 [adam 2013-10-30]
+	Updated mail/exim-html to 4.82 [adam 2013-10-30]
