@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2013/05/16 12:04:57 obache Exp $
+# $NetBSD: options.mk,v 1.8 2013/10/30 11:43:03 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -196,10 +196,10 @@ CONFIGURE_ARGS+=	--enable-external-acl-helpers=${SQUID_EXTERNAL_ACL_HELPERS:Q}
 .  for i in ${SQUID_EXTERNAL_ACL_HELPERS}
 PLIST.eacl_${i}=	yes
 .  endfor
-.PHONY: squid-enable-helper-external_auth
-pre-configure: squid-enable-helper-external_auth
-squid-enable-helper-external_auth:
-.  for i in ${SQUID_EXTERNAL_AUTH_HELPERS}
-	${ECHO} "exit 0" > ${WRKSRC}/helpers/external_auth/${i}/config.test
+.PHONY: squid-enable-helper-external_acl
+pre-configure: squid-enable-helper-external_acl
+squid-enable-helper-external_acl:
+.  for i in ${SQUID_EXTERNAL_ACL_HELPERS}
+	${ECHO} "exit 0" > ${WRKSRC}/helpers/external_acl/${i}/config.test
 .  endfor
 .endif
