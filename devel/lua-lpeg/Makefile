@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/08/15 06:32:05 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/30 06:03:37 dholland Exp $
 #
 
 DISTNAME=	lpeg-0.12
-PKGNAME=	${DISTNAME:S/lpeg/lua-lpeg/}
+PKGNAME=	${DISTNAME:S/lpeg/${LUA_PKGPREFIX}-lpeg/}
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.inf.puc-rio.br/~roberto/lpeg/
@@ -30,7 +30,7 @@ SUBST_MESSAGE.interp=	Fixing Lua include path.
 SUBST_FILES.interp=	test.lua
 SUBST_SED.interp=	-e 's|^\#!.*|\#!${PREFIX}/bin/lua|'
 
-LPEG_HTML_DIR=		share/doc/${PKGBASE}
+LPEG_HTML_DIR=		share/doc/lua-lpeg
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR} ${LPEG_HTML_DIR}
 
 do-install:
