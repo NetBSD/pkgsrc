@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12687 2013/10/30 20:17:42 gls Exp $
+$NetBSD: TODO,v 1.12688 2013/10/30 21:16:29 gls Exp $
 
 Suggested new packages
 ======================
@@ -721,7 +721,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.3
-	o libconfig-1.4.9 [pkg/48316]
 	o libextractor-1.2
 	o libflash-0.4.13
 	o libfolks-0.8.0
