@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3984 2013/10/30 20:17:42 gls Exp $
+$NetBSD: CHANGES-2013,v 1.3985 2013/10/30 21:16:29 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5588,3 +5588,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/exim-html to 4.82 [adam 2013-10-30]
 	Updated biology/chemtool to 1.6.14 [asau 2013-10-30]
 	Updated sysutils/logrotate to 3.8.7 [gls 2013-10-30]
+	Updated devel/libconfig to 1.4.9 [gls 2013-10-30]
