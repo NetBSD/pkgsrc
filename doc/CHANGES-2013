@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3980 2013/10/30 06:52:25 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.3981 2013/10/30 07:09:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/lua51 version 5.1.5 [dholland 2013-10-30]
 	Added lang/lua52 version 5.2.2 [dholland 2013-10-30]
 	Removed lang/lua successor lang/lua52 [dholland 2013-10-30]
+	Updated multimedia/ffmpeg2 to 2.1 [adam 2013-10-30]
