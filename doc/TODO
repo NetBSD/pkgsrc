@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12688 2013/10/30 21:16:29 gls Exp $
+$NetBSD: TODO,v 1.12689 2013/10/31 02:27:03 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1026,7 +1026,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.4.4
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tds-1.6.2
