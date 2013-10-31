@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2013/10/27 23:13:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2013/10/31 14:41:48 wiz Exp $
 bin/certtool
 bin/danetool
 bin/gnutls-cli
@@ -403,6 +403,7 @@ man/man3/gnutls_pkcs11_set_token_function.3
 man/man3/gnutls_pkcs11_token_get_flags.3
 man/man3/gnutls_pkcs11_token_get_info.3
 man/man3/gnutls_pkcs11_token_get_mechanism.3
+man/man3/gnutls_pkcs11_token_get_random.3
 man/man3/gnutls_pkcs11_token_get_url.3
 man/man3/gnutls_pkcs11_token_init.3
 man/man3/gnutls_pkcs11_token_set_pin.3
