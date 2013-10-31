@@ -1,4 +1,11 @@
-$NetBSD: patch-src_radeon__exa__render.c,v 1.1 2013/10/31 00:07:24 wiz Exp $
+$NetBSD: patch-src_radeon__exa__render.c,v 1.2 2013/10/31 00:42:51 wiz Exp $
+
+macallan; Tue Oct 29 01:06:03 UTC 2013:
+Don't endian-twiddle solid source colours in composite operations on R1xx
+Now gtk2-rendered text looks right again with EXA and xrender acceleration
+enabled.
+Probably needs similar fixes for R2xx, also needs testing on little-endian
+hardware.
 
 --- src/radeon_exa_render.c.orig	2012-06-25 08:19:41.000000000 +0000
 +++ src/radeon_exa_render.c
