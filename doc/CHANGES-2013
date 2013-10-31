@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3986 2013/10/30 23:38:42 schnoebe Exp $
+$NetBSD: CHANGES-2013,v 1.3987 2013/10/31 00:10:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5590,3 +5590,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/logrotate to 3.8.7 [gls 2013-10-30]
 	Updated devel/libconfig to 1.4.9 [gls 2013-10-30]
 	Updated print/hplip to 3.13.10 [schnoebe 2013-10-30]
+	Updated x11/xf86-video-ati6 to 6.14.6nb1 [wiz 2013-10-31]
