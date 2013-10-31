@@ -1,0 +1,22 @@
+$NetBSD: patch-src_common_Makefile.in,v 1.1 2013/10/31 02:25:17 minskim Exp $
+
+--- src/common/Makefile.in.orig	2010-04-05 00:58:25.000000000 +0000
++++ src/common/Makefile.in
+@@ -52,7 +52,7 @@ CONFIG_CLEAN_VPATH_FILES =
+ LIBRARIES = $(noinst_LIBRARIES)
+ ARFLAGS = cru
+ libcommon_a_AR = $(AR) $(ARFLAGS)
+-libcommon_a_DEPENDENCIES = ../../lib/libstrl.a
++@SYSTEM_STRLCPY_FALSE@libcommon_a_DEPENDENCIES = ../../lib/libstrl.a
+ am__libcommon_a_SOURCES_DIST = cidr.c err.c list.c cache.c services.c \
+ 	get.c fakepcap.c fakepcapnav.c fakepoll.c xX.c utils.c timer.c \
+ 	svn_version.c abort.c sendpacket.c dlt_names.c mac.c \
+@@ -238,7 +238,7 @@ libcommon_a_SOURCES = cidr.c err.c list.
+ 	svn_version.c abort.c sendpacket.c dlt_names.c mac.c \
+ 	interface.c rdtsc.c $(am__append_1)
+ AM_CFLAGS = -I.. -I../.. $(LNAV_CFLAGS) @LDNETINC@
+-libcommon_a_LIBADD = ../../lib/libstrl.a
++@SYSTEM_STRLCPY_FALSE@libcommon_a_LIBADD = ../../lib/libstrl.a
+ noinst_HEADERS = cidr.h err.h list.h cache.h services.h get.h \
+ 		 fakepcap.h fakepcapnav.h fakepoll.h xX.h utils.h \
+ 		 tcpdump.h timer.h abort.h pcap_dlt.h sendpacket.h \
