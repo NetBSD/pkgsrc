@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3998 2013/10/31 08:33:04 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.3999 2013/10/31 08:38:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5602,3 +5602,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/p5-DBI to 1.630 [wen 2013-10-31]
 	Updated databases/p5-DBIx-Class-Helpers to 2.019000 [wen 2013-10-31]
 	Updated time/dateutils to 0.2.6 [wiz 2013-10-31]
+	Updated devel/p5-MooseX-Types to 0.38 [wen 2013-10-31]
