@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/07/12 10:44:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2013/10/31 16:05:52 jperkin Exp $
 #
 
 DISTNAME=	fml-4.0-stable-20040215
@@ -27,7 +27,8 @@ FML_DATADIR?=	${VARBASE}/fml
 FML_USER?=	fml
 FML_GROUP?=	fml
 PKG_GROUPS=	${FML_GROUP}
-PKG_USERS=	${FML_USER}:${FML_GROUP}:::/bin/csh
+PKG_USERS=	${FML_USER}:${FML_GROUP}
+PKG_SHELL.${FML_USER}=	/bin/csh
 
 REPLACE_PERL=	databases/examples/ldap-toymodel/dump.pl \
 		www/sbin/JapaneseToEnglish.pl sbin/showsystem.pl

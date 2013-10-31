@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.95 2013/10/31 16:22:23 jperkin Exp $
 #
 
 DISTNAME=		tor-0.2.3.25
@@ -30,7 +30,8 @@ TEST_TARGET=		check
 
 TOR_USER?=		tor
 TOR_GROUP?=		tor
-PKG_HOME?=		${VARBASE}/chroot/tor
+PKG_GECOS.${TOR_USER}?=	Torifier
+PKG_HOME.${TOR_USER}?=	${VARBASE}/chroot/tor
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	tor
 
@@ -40,10 +41,10 @@ PKG_USERS_VARS=		TOR_USER
 RCD_SCRIPTS=		tor
 RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
 PKG_GROUPS=		${TOR_GROUP}
-PKG_USERS=		${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
+PKG_USERS=		${TOR_USER}:${TOR_GROUP}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
-OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
+OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
@@ -52,7 +53,7 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/torrc
 
-FILES_SUBST+=		PKG_HOME=${PKG_HOME}
+FILES_SUBST+=		PKG_HOME=${PKG_HOME.${TOR_USER}}
 FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 SUBST_CLASSES+=			fix-paths

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/07/18 00:09:32 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2013/10/31 16:04:05 jperkin Exp $
 #
 
 VERSION=	1.10.0
@@ -67,7 +67,8 @@ REPLACE_PYTHON+= src/allmydata/reliability.py
 REPLACE_PYTHON+= src/allmydata/storage/shares.py
 
 PKG_GROUPS=	tahoes
-PKG_USERS=	tahoes:tahoes::tahoe\ server
+PKG_USERS=	tahoes:tahoes
+PKG_GECOS.tahoes=	tahoe server
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
