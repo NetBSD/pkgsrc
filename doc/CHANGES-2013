@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3989 2013/10/31 00:58:30 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3990 2013/10/31 01:06:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-ati6 to 6.14.6nb1 [wiz 2013-10-31]
 	Updated www/p5-Mojolicious to 4.53 [wen 2013-10-31]
 	Updated devel/p5-Mouse to 1.13 [wen 2013-10-31]
+	Updated devel/p5-Object-InsideOut to 3.98 [wen 2013-10-31]
