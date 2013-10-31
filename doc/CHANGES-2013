@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3997 2013/10/31 08:25:24 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3998 2013/10/31 08:33:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5601,3 +5601,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated time/p5-DateTime-TimeZone to 1.63 [wen 2013-10-31]
 	Updated databases/p5-DBI to 1.630 [wen 2013-10-31]
 	Updated databases/p5-DBIx-Class-Helpers to 2.019000 [wen 2013-10-31]
+	Updated time/dateutils to 0.2.6 [wiz 2013-10-31]
