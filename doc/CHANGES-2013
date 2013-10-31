@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3992 2013/10/31 03:08:09 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3993 2013/10/31 03:17:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5596,3 +5596,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Object-InsideOut to 3.98 [wen 2013-10-31]
 	Updated net/tcpreplay to 3.4.4 [minskim 2013-10-31]
 	Updated devel/p5-Perl-Critic to 1.120 [wen 2013-10-31]
+	Updated devel/p5-PPIx-Regexp to 0.034 [wen 2013-10-31]
