@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.3990 2013/10/31 01:06:20 wen Exp $
+$NetBSD: CHANGES-2013,v 1.3991 2013/10/31 02:27:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5594,3 +5594,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.53 [wen 2013-10-31]
 	Updated devel/p5-Mouse to 1.13 [wen 2013-10-31]
 	Updated devel/p5-Object-InsideOut to 3.98 [wen 2013-10-31]
+	Updated net/tcpreplay to 3.4.4 [minskim 2013-10-31]
