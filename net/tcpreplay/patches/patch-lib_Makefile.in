@@ -1,0 +1,14 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2013/10/31 02:25:17 minskim Exp $
+
+--- lib/Makefile.in.orig	2010-04-05 00:58:24.000000000 +0000
++++ lib/Makefile.in
+@@ -217,7 +217,8 @@ tcpdump_path = @tcpdump_path@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-noinst_LIBRARIES = libstrl.a
++@SYSTEM_STRLCPY_FALSE@noinst_LIBRARIES = libstrl.a
++@SYSTEM_STRLCPY_TRUE@noinst_LIBRARIES =
+ libstrl_a_SOURCES = strlcat.c strlcpy.c
+ noinst_HEADERS = strlcpy.h tree.h queue.h sll.h
+ MOSTLYCLEANFILES = *~ *.o *.a

@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.9 2009/05/02 17:35:43 minskim Exp $
+$NetBSD: distinfo,v 1.10 2013/10/31 02:25:16 minskim Exp $
 
-SHA1 (tcpreplay-3.4.1.tar.gz) = f5984c6bea651bf52fe1d5ba1224e74727e9e859
-RMD160 (tcpreplay-3.4.1.tar.gz) = 454bb5bce242311161964f487b5b9b5dfd1298bb
-Size (tcpreplay-3.4.1.tar.gz) = 872412 bytes
-SHA1 (patch-aa) = d3549d5e77c1d639deb55f00cebafc355879b4bd
-SHA1 (patch-ab) = f01ac80d1c659bff4f1cfdb582f424f86dc5d28c
+SHA1 (tcpreplay-3.4.4.tar.gz) = 9e4cca81cfbfb919f8759e1a27ce1b3b963ff3b8
+RMD160 (tcpreplay-3.4.4.tar.gz) = 672812755ff39b284044b08cba32c574ab2b7e70
+Size (tcpreplay-3.4.4.tar.gz) = 947179 bytes
+SHA1 (patch-aa) = 377cd7e829b00df9aff0aeed4c4136317602334a
+SHA1 (patch-ab) = 78063660f925229cf10df88462128664f080c6c0
+SHA1 (patch-lib_Makefile.in) = 9a59f2652c08efb87944e132998a3c0778a5b5a7
+SHA1 (patch-src_common_Makefile.in) = 7cd6878eecd94d735e314768a0302298ac415ffc
+SHA1 (patch-src_common_cidr.c) = 77694f71876916e9e77a0257ce91bf7bb2f140a2
+SHA1 (patch-src_common_tcpdump.c) = f46d713dc57db02845173dc92c4f2ec94c158298
+SHA1 (patch-src_defines.h.in) = 58fa82a29f997662d5e793461f4d3cfccd593eb0
+SHA1 (patch-src_tcpprep.c) = 2c5ce09986c4e215230472791a99c4c183223c85
