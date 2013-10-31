@@ -1,0 +1,16 @@
+$NetBSD: patch-Doc_zsh.texi,v 1.1 2013/10/31 13:08:37 jperkin Exp $
+
+Fix build with texinfo 5.x
+
+--- Doc/zsh.texi.orig	2012-12-21 19:33:06.000000000 +0000
++++ Doc/zsh.texi
+@@ -22643,8 +22643,7 @@ Finally, the @t{_path_files} function  u
+ described above.
+ 
+ @findex _pick_variant
+-@item @t{_pick_variant} [ @t{-b} @var{builtin-label} ] [ @t{-c}
+-@var{command} ] [ @t{-r} @var{name} ]
++@item @t{_pick_variant} [ @t{-b} @var{builtin-label} ] [ @t{-c} @var{command} ] [ @t{-r} @var{name} ]
+ @itemx    @var{label}@t{=}@var{pattern} ... @var{label} [ @var{args} ... ]
+ This function is used to resolve situations where a single command name
+ requires more than one type of handling, either because it
