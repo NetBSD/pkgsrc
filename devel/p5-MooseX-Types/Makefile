@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/07/03 15:35:41 sno Exp $
+# $NetBSD: Makefile,v 1.25 2013/10/31 08:33:48 wen Exp $
 #
 
-DISTNAME=	MooseX-Types-0.36
+DISTNAME=	MooseX-Types-0.38
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=	p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Types/.packlist
-PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
