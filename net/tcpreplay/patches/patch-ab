@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2009/05/02 17:35:43 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2013/10/31 02:25:17 minskim Exp $
 
---- configure.orig	2009-02-04 13:07:26.000000000 -0800
+--- configure.orig	2010-04-05 00:58:26.000000000 +0000
 +++ configure
-@@ -9824,7 +9824,11 @@ darwin* | rhapsody*)
+@@ -9872,7 +9872,11 @@ darwin* | rhapsody*)
    soname_spec='${libname}${release}${major}$shared_ext'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
@@ -15,16 +15,28 @@ $NetBSD: patch-ab,v 1.1 2009/05/02 17:35:43 minskim Exp $
  
    sys_lib_search_path_spec="$sys_lib_search_path_spec /usr/local/lib"
    sys_lib_dlsearch_path_spec='/usr/local/lib /lib /usr/lib'
-@@ -22072,7 +22076,7 @@ libdnet_version=
+@@ -17353,9 +17357,9 @@ for testdir in $trypcapdir /usr/local /o
+         LPCAPINC="${testdir}/include/pcap.h"
+         LPCAPINCDIR="${testdir}/include"
+         if test $dynamic_link = yes; then
+-            if test -f "${testdir}/lib64/libpcap${shrext_cmds}" ; then
++            if test -e "${testdir}/lib64/libpcap${shrext_cmds}" ; then
+                 LPCAPLIB="-L${testdir}/lib64 -lpcap"
+-            elif test -f "${testdir}/lib/libpcap${shrext_cmds}" ; then
++            elif test -e "${testdir}/lib/libpcap${shrext_cmds}" ; then
+                 LPCAPLIB="-L${testdir}/lib -lpcap"
+             else
+                 as_fn_error "Unable to find libpcap in ${testdir}" "$LINENO" 5
+@@ -18172,7 +18176,7 @@ libdnet_version=
  enable_fragroute=no
  trydnetdir=/usr/local
  
 -if test $have_cygwin == no ; then
 +if test $have_cygwin = no ; then
- 	{ $as_echo "$as_me:$LINENO: checking for libdnet" >&5
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libdnet" >&5
  $as_echo_n "checking for libdnet... " >&6; }
  
-@@ -22806,7 +22810,7 @@ esac
+@@ -18751,7 +18755,7 @@ esac
  fi
  
  
