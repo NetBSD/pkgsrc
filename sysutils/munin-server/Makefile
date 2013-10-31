@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/07/12 10:45:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2013/10/31 16:25:51 jperkin Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S:-server-:_:}
@@ -40,8 +40,9 @@ MUNIN_GROUP?=	munin
 MUNIN_USER?=	munin
 
 PKG_GROUPS=	${MUNIN_GROUP}
-PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}:::${VARBASE}/munin
+PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}
 PKG_GECOS.${MUNIN_USER}=	Munin user
+PKG_HOME.${MUNIN_USER}=		${VARBASE}/munin
 USERGROUP_PHASE=	pre-install
 
 PKG_SYSCONFSUBDIR?=	munin

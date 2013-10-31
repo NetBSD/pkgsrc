@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2013/10/31 16:24:31 jperkin Exp $
 
 PKGNAME=	gridscheduler-2011.11
 DISTNAME=	GE2011.11
@@ -29,7 +29,8 @@ MAKE_ENV+=		PERL5=${PERL5:Q}
 SGE_USER?=		sgeadmin
 SGE_GROUP?=		sgeadmin
 PKG_GROUPS=		${SGE_GROUP}
-PKG_USERS=		${SGE_USER}:${SGE_GROUP}::Sun\ Grid\ Engine\ Administrator
+PKG_USERS=		${SGE_USER}:${SGE_GROUP}
+PKG_GECOS.${SGE_USER}=	Sun Grid Engine Administrator
 PKG_GROUPS_VARS+=	SGE_GROUP
 PKG_USERS_VARS+=	SGE_USER
 
