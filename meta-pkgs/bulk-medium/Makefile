@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2013/09/09 14:07:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/31 23:38:30 dholland Exp $
 
-DISTNAME=	bulk-medium-20130909
+DISTNAME=	bulk-medium-20131031
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -218,8 +218,8 @@ BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 #
 # 6. Other very small packages
 #
-BUILD_DEPENDS+=	lua-stdlib-[0-9]*:../../devel/lua-stdlib
-BUILD_DEPENDS+=	lua-stdlib-doc-[0-9]*:../../devel/lua-stdlib-doc
+BUILD_DEPENDS+=	${LUA_PKGPREFIX}-stdlib-[0-9]*:../../devel/lua-stdlib
+BUILD_DEPENDS+=	${LUA_PKGPREFIX}-stdlib-doc-[0-9]*:../../devel/lua-stdlib-doc
 
 #
 # Note that (unlike in bulk-small) we make no effort to list or track
@@ -232,5 +232,6 @@ BUILD_DEPENDS+=	lua-stdlib-doc-[0-9]*:../../devel/lua-stdlib-doc
 BUILD_DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/lua/luaversion.mk" # for LUA_PKGPREFIX
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../mk/bsd.pkg.mk"
