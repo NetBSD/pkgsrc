@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/02/06 23:23:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/01 11:30:23 jaapb Exp $
 #
 
 DISTNAME=	eliom-3.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://ocsigen.org/download/
 
