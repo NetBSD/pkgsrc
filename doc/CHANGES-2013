@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4013 2013/11/01 18:17:53 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.4014 2013/11/01 20:37:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5618,3 +5618,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/spread to 3.17.3nb5 [jperkin 2013-11-01]
 	Updated lang/perl5 to 5.18.1nb2 [jperkin 2013-11-01]
 	Updated devel/lua-stdlib-doc to 28nb2 [jperkin 2013-11-01]
+	Added x11/presentproto version 1.0 [wiz 2013-11-01]
