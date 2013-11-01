@@ -1,0 +1,13 @@
+The DRI3 extension provides mechanisms to translate between direct
+rendered buffers and X pixmaps. When combined with the Present
+extension, a complete direct rendering solution for OpenGL is
+provided.
+
+The direct rendered buffers are passed across the protocol via
+standard POSIX file descriptor passing mechanisms. On Linux, these
+buffers are DMA-BUF objects.
+
+DRI3 also includes a mechanism to translate between Linux Futexes
+and X Sync extension Fences. This provides a synchronization
+mechanism which can be used to serialize access to shared render
+buffers.

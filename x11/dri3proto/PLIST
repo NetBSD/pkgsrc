@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/01 20:42:32 wiz Exp $
+include/X11/extensions/dri3proto.h
+lib/pkgconfig/dri3proto.pc
+share/doc/dri3proto/dri3proto.txt
