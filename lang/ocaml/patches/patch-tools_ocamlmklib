@@ -1,5 +1,6 @@
-$NetBSD: patch-tools_ocamlmklib,v 1.1 2013/03/14 14:29:49 is Exp $
+$NetBSD: patch-tools_ocamlmklib,v 1.2 2013/11/01 10:47:50 jaapb Exp $
 
+Add elfmode parameter to ocamlmklib
 --- tools/ocamlmklib.mlp.orig	2012-07-17 18:25:54.000000000 +0000
 +++ tools/ocamlmklib.mlp
 @@ -26,6 +26,7 @@ and c_objs = ref []         (* .o, .a, .
