@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/09/10 08:43:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/01 20:43:36 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-protos-1.4
+PKGNAME=	modular-xorg-protos-1.5
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,11 +22,13 @@ DEPENDS+=	bigreqsproto-[0-9]*:../../x11/bigreqsproto
 DEPENDS+=	compositeproto-[0-9]*:../../x11/compositeproto
 DEPENDS+=	damageproto-[0-9]*:../../x11/damageproto
 DEPENDS+=	dri2proto-[0-9]*:../../x11/dri2proto
+DEPENDS+=	dri3proto-[0-9]*:../../x11/dri3proto
 DEPENDS+=	fixesproto-[0-9]*:../../x11/fixesproto
 DEPENDS+=	fontsproto-[0-9]*:../../x11/fontsproto
 DEPENDS+=	glproto-[0-9]*:../../x11/glproto
 DEPENDS+=	inputproto-[0-9]*:../../x11/inputproto
 DEPENDS+=	kbproto-[0-9]*:../../x11/kbproto
+DEPENDS+=	presentproto-[0-9]*:../../x11/presentproto
 DEPENDS+=	randrproto-[0-9]*:../../x11/randrproto
 DEPENDS+=	recordproto-[0-9]*:../../x11/recordproto
 DEPENDS+=	renderproto-[0-9]*:../../x11/renderproto
