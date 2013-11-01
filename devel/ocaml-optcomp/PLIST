@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/01 11:40:00 jaapb Exp $
+bin/optcomp-o
+bin/optcomp-r
+lib/ocaml/site-lib/optcomp/META
+${PLIST.opt}lib/ocaml/site-lib/optcomp/optcomp.a
+lib/ocaml/site-lib/optcomp/optcomp.cma
+${PLIST.opt}lib/ocaml/site-lib/optcomp/optcomp.cmxa
+${PLIST.opt}lib/ocaml/site-lib/optcomp/optcomp.cmxs
+lib/ocaml/site-lib/optcomp/pa_optcomp.cmi
+${PLIST.opt}lib/ocaml/site-lib/optcomp/pa_optcomp.cmx
+lib/ocaml/site-lib/optcomp/pa_optcomp.mli
