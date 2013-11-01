@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/07/12 14:32:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/01 12:59:39 ryoon Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.libreoffice.org/
@@ -21,8 +20,9 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
 
 OO_VER=			4
-OO_BASEVER=		4.0
-OO_RELEASE=		4.0.4
+OO_BASEVER=		4.1
+OO_RELEASE=		4.1.3
+OO_RELEASEV=		4.1.3.2
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -53,18 +53,12 @@ USE_TOOLS+=	patch
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		LibreOffice_${OO_RELEASE}_Linux_x86_rpm
-WRKSRC=			${WRKDIR}/LibreOffice_${OO_RELEASE}.2_Linux_x86_rpm
+WRKSRC=			${WRKDIR}/LibreOffice_${OO_RELEASEV}_Linux_x86_rpm
 MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86/
 .elif ${EMUL_PLATFORM} == "linux-x86_64"
 DISTNAME=		LibreOffice_${OO_RELEASE}_Linux_x86-64_rpm
-WRKSRC=			${WRKDIR}/LibreOffice_${OO_RELEASE}.2_Linux_x86-64_rpm
+WRKSRC=			${WRKDIR}/LibreOffice_${OO_RELEASEV}_Linux_x86-64_rpm
 MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RELEASE}/rpm/x86_64/
-.elif ${EMUL_PLATFORM} == "solaris-i386"
-DISTNAME=		OOo_${OO_RELEASE}_Solaris_x86_install_en-US
-WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
-.elif ${EMUL_PLATFORM} == "solaris-sparc"
-DISTNAME=		OOo_${OO_RELEASE}_Solaris_Sparc_install_en-US
-WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
 .endif
 
 .include "options.mk"
