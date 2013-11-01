@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4003 2013/11/01 10:33:11 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.4004 2013/11/01 10:49:40 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5607,3 +5607,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/bulk-medium to 20131031 [dholland 2013-10-31]
 	Updated x11/xf86-input-keyboard to 1.8.0 [wiz 2013-11-01]
 	Updated devel/ocaml-batteries to 2.1 [jaapb 2013-11-01]
+	Updated lang/ocaml to 4.01.0 [jaapb 2013-11-01]
