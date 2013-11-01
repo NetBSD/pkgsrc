@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4007 2013/11/01 11:19:14 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4008 2013/11/01 11:40:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5612,3 +5612,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ocamlnet to 3.7.3 [jaapb 2013-11-01]
 	Updated www/py-django-south to 0.8.2 [adam 2013-11-01]
 	Updated www/py-django-cms to 2.4.3 [adam 2013-11-01]
+	Added devel/ocaml-optcomp version 1.4 [jaapb 2013-11-01]
