@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/12/15 10:25:52 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/11/01 11:30:21 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-dbm
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-dbm
 OCAML_DBM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-dbm+=	ocaml-dbm>=1.0
+BUILDLINK_ABI_DEPENDS.ocaml-dbm?=	ocaml-dbm>=1.0nb3
 BUILDLINK_PKGSRCDIR.ocaml-dbm?=	../../databases/ocaml-dbm
 
 .include "../../databases/gdbm/buildlink3.mk"
