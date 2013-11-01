@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2013/10/19 09:07:00 adam Exp $
+# $NetBSD: Makefile,v 1.86 2013/11/01 21:34:15 wiz Exp $
 
 DISTNAME=	jabberd-2.2.17
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/jabberd2/jabberd2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://jabberd2.xiaoka.com/
+HOMEPAGE=	http://jabberd2.org/
 COMMENT=	XMPP (Jabber) instant messaging server
 LICENSE=	gnu-gpl-v2
 
