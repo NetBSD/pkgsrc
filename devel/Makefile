@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1799 2013/10/28 15:21:03 wen Exp $
+# $NetBSD: Makefile,v 1.1800 2013/11/01 11:40:57 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -517,6 +517,7 @@ SUBDIR+=	ocaml-batteries
 SUBDIR+=	ocaml-deriving-ocsigen
 SUBDIR+=	ocaml-findlib
 SUBDIR+=	ocaml-lwt
+SUBDIR+=	ocaml-optcomp
 SUBDIR+=	ocaml-react
 SUBDIR+=	ode
 SUBDIR+=	ogre
