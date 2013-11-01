@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/08/26 15:00:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2013/11/01 13:26:53 jperkin Exp $
 #
 
 DISTNAME=	spread-src-3.17.3
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://www.cnds.jhu.edu/download/noformdown/
 
@@ -30,6 +30,12 @@ SPREAD_DIR?=	${VARBASE}/run/spread
 FILES_SUBST+=	SPREAD_USER=${SPREAD_USER:Q}
 FILES_SUBST+=	SPREAD_GROUP=${SPREAD_GROUP:Q}
 FILES_SUBST+=	RUNTIME_DIR=${RUNTIME_DIR:Q}
+
+SUBST_CLASSES+=		spread
+SUBST_STAGE.spread=	pre-configure
+SUBST_MESSAGE.spread=	Fix default config
+SUBST_FILES.spread=	sample.spread.conf spread_params.h
+SUBST_VARS.spread=	SPREAD_USER SPREAD_GROUP RUNTIME_DIR
 
 DOCSDIR=	${PREFIX}/share/doc/spread
 EXAMPLEDIR=	${PREFIX}/share/examples/spread
