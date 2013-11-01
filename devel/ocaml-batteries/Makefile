@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/07/03 10:40:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/01 10:32:53 jaapb Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
-DISTNAME=	batteries-2.0
+DISTNAME=	batteries-2.1
 CATEGORIES=	devel
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1096/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1218/
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://batteries.forge.ocamlcore.org/
@@ -11,6 +11,9 @@ COMMENT=	Alternative standard library for OCaml
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
+INSTALLATION_DIRS=	lib/ocaml/site-lib
+
+MAKE_ENV=	DESTDIR="${DESTDIR}" PREFIX="${PREFIX}"
 
 PLIST_VARS=     opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
