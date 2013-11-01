@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.25 2013/04/28 13:43:55 obache Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.26 2013/11/01 11:58:48 jperkin Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -27,15 +27,12 @@ MAKEVARS+=	IS_BUILTIN.dl
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
 #
-# We ignore the value of PREFER_PKGSRC and PREFER_NATIVE because for
-# every platform except for Darwin-[56].*, we can only use the built-in
-# dynamic linker functions, so USE_BUILTIN.dl must match IS_BUILTIN.dl.
+# We ignore the value of PREFER_PKGSRC and PREFER_NATIVE because for every
+# platform (unless overridden in the platform file), we can only use the
+# built-in dynamic linker functions.
 #
 .if !defined(USE_BUILTIN.dl)
-USE_BUILTIN.dl=		${IS_BUILTIN.dl}
-.  if !empty(MACHINE_PLATFORM:MDarwin-[56].*)
-USE_BUILTIN.dl=		no	# Darwin-[56].* uses devel/dlcompat
-.  endif
+USE_BUILTIN.dl=	${IS_BUILTIN.dl}
 .endif
 MAKEVARS+=	USE_BUILTIN.dl
 
