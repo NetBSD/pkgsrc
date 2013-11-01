@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2013/10/01 10:26:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2013/11/01 13:35:10 jperkin Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -116,14 +116,9 @@ SOEXT="dylib"
 SOEXT="so"
 .endif
 
-.include "../../mk/readline.buildlink3.mk"
-
 CMAKE_ARGS+=	-DWITH_EDITLINE=system
-.if !empty(READLINE_TYPE:Meditline)
-CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editlinereadline}/lib/libedit.${SOEXT}
-.elif !empty(READLINE_TYPE:Mreadline)
-CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editlinereadline}/lib/libreadline.${SOEXT}
-.endif
-CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
+CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editline}/lib/libedit.${SOEXT}
+CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readline
 
+.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
