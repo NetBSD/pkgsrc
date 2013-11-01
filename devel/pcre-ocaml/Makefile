@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/10/31 11:19:23 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/11/01 11:30:22 jaapb Exp $
 
 DISTNAME=		pcre-ocaml-6.2.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.ocaml.info/ocaml_sources/
 
