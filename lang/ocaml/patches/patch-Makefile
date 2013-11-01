@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile,v 1.2 2012/12/04 13:55:23 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.3 2013/11/01 10:47:50 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
---- Makefile.orig	2012-09-17 16:23:06.000000000 +0000
+--- Makefile.orig	2013-06-17 13:15:18.000000000 +0000
 +++ Makefile
-@@ -172,8 +172,10 @@ LIBFILES=stdlib.cma std_exit.cmo *.cmi c
+@@ -174,8 +174,10 @@ LIBFILES=stdlib.cma std_exit.cmo *.cmi c
  # Start up the system from the distribution compiler
  coldstart:
  	cd byterun; $(MAKE) all
@@ -14,7 +14,7 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
  	cp yacc/ocamlyacc$(EXE) boot/ocamlyacc$(EXE)
  	cd stdlib; $(MAKE) COMPILER=../boot/ocamlc all
  	cd stdlib; cp $(LIBFILES) ../boot
-@@ -263,26 +265,26 @@ base.opt: checkstack runtime core ocaml 
+@@ -265,29 +267,29 @@ base.opt: checkstack runtime core ocaml 
  COMPLIBDIR=$(LIBDIR)/compiler-libs
  
  install:
@@ -42,20 +42,23 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
  	cd stdlib; $(MAKE) install
 -	cp lex/ocamllex $(BINDIR)/ocamllex$(EXE)
 -	cp yacc/ocamlyacc$(EXE) $(BINDIR)/ocamlyacc$(EXE)
--	cp utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi toplevel/*.cmi $(COMPLIBDIR)
--	cp compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma compilerlibs/ocamltoplevel.cma $(BYTESTART) $(TOPLEVELSTART) $(COMPLIBDIR)
--	cp expunge $(LIBDIR)/expunge$(EXE)
--	cp toplevel/topdirs.cmi $(LIBDIR)
+-	cp utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi \
 +	$(BSD_INSTALL_SCRIPT) lex/ocamllex $(BINDIR)/ocamllex$(EXE)
 +	$(BSD_INSTALL_PROGRAM) yacc/ocamlyacc$(EXE) $(BINDIR)/ocamlyacc$(EXE)
-+	$(BSD_INSTALL_DATA) utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi toplevel/*.cmi $(COMPLIBDIR)
-+	$(BSD_INSTALL_DATA) compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma compilerlibs/ocamltoplevel.cma $(BYTESTART) $(TOPLEVELSTART) $(COMPLIBDIR)
++	$(BSD_INSTALL_DATA) utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi \
+ 	   toplevel/*.cmi $(COMPLIBDIR)
+-	cp compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
++	$(BSD_INSTALL_DATA) compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
+ 	   compilerlibs/ocamltoplevel.cma $(BYTESTART) $(TOPLEVELSTART) \
+ 	   $(COMPLIBDIR)
+-	cp expunge $(LIBDIR)/expunge$(EXE)
+-	cp toplevel/topdirs.cmi $(LIBDIR)
 +	$(BSD_INSTALL_SCRIPT) expunge $(LIBDIR)/expunge$(EXE)
 +	$(BSD_INSTALL_DATA) toplevel/topdirs.cmi $(LIBDIR)
  	cd tools; $(MAKE) install
  	-cd man; $(MAKE) install
  	for i in $(OTHERLIBRARIES); do \
-@@ -292,17 +294,17 @@ install:
+@@ -297,17 +299,17 @@ install:
  	if test -f ocamlopt; then $(MAKE) installopt; else :; fi
  	if test -f debugger/ocamldebug; then (cd debugger; $(MAKE) install); \
  	   else :; fi
@@ -77,7 +80,7 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
  	cd ocamldoc; $(MAKE) installopt
  	for i in $(OTHERLIBRARIES); \
  	  do (cd otherlibs/$$i; $(MAKE) installopt) || exit $$?; done
-@@ -310,10 +312,10 @@ installopt:
+@@ -315,10 +317,10 @@ installopt:
  	cd tools; $(MAKE) installopt
  
  installoptopt:
@@ -89,6 +92,6 @@ Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
 +	$(BSD_INSTALL_PROGRAM) ocamlopt.opt $(BINDIR)/ocamlopt.opt$(EXE)
 +	$(BSD_INSTALL_PROGRAM) lex/ocamllex.opt $(BINDIR)/ocamllex.opt$(EXE)
 +	$(BSD_INSTALL_DATA) compilerlibs/ocamlcommon.cmxa compilerlibs/ocamlcommon.a \
-            compilerlibs/ocamlbytecomp.cmxa compilerlibs/ocamlbytecomp.a \
-            compilerlibs/ocamloptcomp.cmxa compilerlibs/ocamloptcomp.a \
-            $(BYTESTART:.cmo=.cmx) $(BYTESTART:.cmo=.o) \
+ 	   compilerlibs/ocamlbytecomp.cmxa compilerlibs/ocamlbytecomp.a \
+ 	   compilerlibs/ocamloptcomp.cmxa compilerlibs/ocamloptcomp.a \
+ 	   $(BYTESTART:.cmo=.cmx) $(BYTESTART:.cmo=.o) \

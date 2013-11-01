@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.19 2012/10/08 15:05:32 jaapb Exp $
+@comment $NetBSD: PLIST.opt,v 1.20 2013/11/01 10:47:50 jaapb Exp $
 bin/camlp4o.opt
 bin/camlp4of.opt
 bin/camlp4oof.opt
@@ -126,6 +126,8 @@ lib/ocaml/ocamlbuild/ocamlbuild.cmx
 lib/ocaml/ocamlbuild/ocamlbuild.o
 lib/ocaml/ocamlbuild/ocamlbuild_executor.cmx
 lib/ocaml/ocamlbuild/ocamlbuild_executor.o
+lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmx
+lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmx
 lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmx
 lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.o
 lib/ocaml/ocamlbuild/ocamlbuildlib.a

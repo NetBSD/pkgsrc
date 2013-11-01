@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/10/08 15:05:32 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/11/01 10:47:50 jaapb Exp $
 bin/camlp4
 bin/camlp4boot
 bin/camlp4o
@@ -162,6 +162,8 @@ lib/ocaml/compiler-libs/asmgen.cmi
 lib/ocaml/compiler-libs/asmlibrarian.cmi
 lib/ocaml/compiler-libs/asmlink.cmi
 lib/ocaml/compiler-libs/asmpackager.cmi
+lib/ocaml/compiler-libs/ast_mapper.cmi
+lib/ocaml/compiler-libs/ast_mapper.cmi
 lib/ocaml/compiler-libs/asttypes.cmi
 lib/ocaml/compiler-libs/btype.cmi
 lib/ocaml/compiler-libs/bytegen.cmi
@@ -180,9 +182,13 @@ lib/ocaml/compiler-libs/cmo_format.cmi
 lib/ocaml/compiler-libs/cmt_format.cmi
 lib/ocaml/compiler-libs/cmx_format.cmi
 lib/ocaml/compiler-libs/coloring.cmi
+lib/ocaml/compiler-libs/compenv.cmi
 lib/ocaml/compiler-libs/comballoc.cmi
+lib/ocaml/compiler-libs/compenv.cmi
+lib/ocaml/compiler-libs/compmisc.cmi
 lib/ocaml/compiler-libs/compile.cmi
 lib/ocaml/compiler-libs/compilenv.cmi
+lib/ocaml/compiler-libs/compmisc.cmi
 lib/ocaml/compiler-libs/config.cmi
 lib/ocaml/compiler-libs/consistbl.cmi
 lib/ocaml/compiler-libs/ctype.cmi
@@ -190,9 +196,11 @@ lib/ocaml/compiler-libs/datarepr.cmi
 lib/ocaml/compiler-libs/debuginfo.cmi
 lib/ocaml/compiler-libs/dll.cmi
 lib/ocaml/compiler-libs/emit.cmi
+lib/ocaml/compiler-libs/envaux.cmi
 lib/ocaml/compiler-libs/emitaux.cmi
 lib/ocaml/compiler-libs/emitcode.cmi
 lib/ocaml/compiler-libs/env.cmi
+lib/ocaml/compiler-libs/envaux.cmi
 lib/ocaml/compiler-libs/errors.cmi
 lib/ocaml/compiler-libs/expunge.cmi
 lib/ocaml/compiler-libs/genprintval.cmi
@@ -239,10 +247,12 @@ lib/ocaml/compiler-libs/optmain.o
 lib/ocaml/compiler-libs/outcometree.cmi
 lib/ocaml/compiler-libs/parmatch.cmi
 lib/ocaml/compiler-libs/parse.cmi
+lib/ocaml/compiler-libs/pprintast.cmi
 lib/ocaml/compiler-libs/parser.cmi
 lib/ocaml/compiler-libs/parsetree.cmi
 lib/ocaml/compiler-libs/path.cmi
 lib/ocaml/compiler-libs/pparse.cmi
+lib/ocaml/compiler-libs/pprintast.cmi
 lib/ocaml/compiler-libs/predef.cmi
 lib/ocaml/compiler-libs/primitive.cmi
 lib/ocaml/compiler-libs/printast.cmi
@@ -282,11 +292,15 @@ lib/ocaml/compiler-libs/trace.cmi
 lib/ocaml/compiler-libs/translclass.cmi
 lib/ocaml/compiler-libs/translcore.cmi
 lib/ocaml/compiler-libs/translmod.cmi
+lib/ocaml/compiler-libs/typedtreeIter.cmi
+lib/ocaml/compiler-libs/typedtreeMap.cmi
 lib/ocaml/compiler-libs/translobj.cmi
 lib/ocaml/compiler-libs/typeclass.cmi
 lib/ocaml/compiler-libs/typecore.cmi
 lib/ocaml/compiler-libs/typedecl.cmi
 lib/ocaml/compiler-libs/typedtree.cmi
+lib/ocaml/compiler-libs/typedtreeIter.cmi
+lib/ocaml/compiler-libs/typedtreeMap.cmi
 lib/ocaml/compiler-libs/typemod.cmi
 lib/ocaml/compiler-libs/typeopt.cmi
 lib/ocaml/compiler-libs/types.cmi
@@ -366,6 +380,7 @@ lib/ocaml/num.mli
 lib/ocaml/nums.cma
 lib/ocaml/obj.cmi
 lib/ocaml/obj.ml
+lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmo
 lib/ocaml/obj.mli
 lib/ocaml/objinfo_helper
 lib/ocaml/ocamlbuild/ocamlbuild.cmo
@@ -373,6 +388,7 @@ lib/ocaml/ocamlbuild/ocamlbuild_executor.cmi
 lib/ocaml/ocamlbuild/ocamlbuild_executor.cmo
 lib/ocaml/ocamlbuild/ocamlbuild_pack.cmi
 lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmi
+lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmo
 lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmi
 lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmo
 lib/ocaml/ocamlbuild/ocamlbuildlib.cma
