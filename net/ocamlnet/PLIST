@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/06/24 15:11:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/11/01 11:11:18 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/equeue
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netcgi2-plex
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/netplex
@@ -504,7 +504,9 @@ ${PLIST.opt}lib/ocaml/site-lib/netsys/netsys.cmxa
 lib/ocaml/site-lib/netsys/netsys.mli
 ${PLIST.opt}lib/ocaml/site-lib/netsys/netsys.p.a
 ${PLIST.opt}lib/ocaml/site-lib/netsys/netsys.p.cmxa
+lib/ocaml/site-lib/netsys/netsys_c_event.h
 ${PLIST.opt}lib/ocaml/site-lib/netsys/netsys_c_gprof.o
+${PLIST.opt}lib/ocaml/site-lib/netsys/netsys_c_outofheap.o
 lib/ocaml/site-lib/netsys/netsys_conf.cmi
 ${PLIST.opt}lib/ocaml/site-lib/netsys/netsys_gprof_init.cmi
 ${PLIST.opt}lib/ocaml/site-lib/netsys/netsys_gprof_init.mli
@@ -636,6 +638,7 @@ ${PLIST.opt}lib/ocaml/site-lib/rpc-generator/rpc_generator.p.a
 ${PLIST.opt}lib/ocaml/site-lib/rpc-generator/rpc_generator.p.cmxa
 lib/ocaml/site-lib/rpc-generator/rpcgen-packlist
 lib/ocaml/site-lib/rpc-generator/syntax.cmi
+lib/ocaml/site-lib/rpc-generator/test_aux.mli
 ${PLIST.ssl}lib/ocaml/site-lib/rpc-ssl/META
 ${PLIST.ssl}${PLIST.opt}lib/ocaml/site-lib/rpc-ssl/rpc_ssl.a
 ${PLIST.ssl}lib/ocaml/site-lib/rpc-ssl/rpc_ssl.cma
