@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2013/07/27 10:20:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2013/11/01 11:11:18 jaapb Exp $
 #
 
-DISTNAME=		ocamlnet-3.6.6
+DISTNAME=		ocamlnet-3.7.3
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 
-MAINTAINER=		jaapb@kerguelen.org
+MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://projects.camlcity.org/projects/ocamlnet.html
 COMMENT=		Library focusing on application-level network protocols (OCaml)
 LICENSE=		zlib AND gnu-gpl-v2
