@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.55 2013/09/04 15:14:45 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.56 2013/11/01 11:58:48 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -94,6 +94,13 @@ _USE_RPATH=		no	# don't add rpath to LDFLAGS
 
 # Comes with a native mit-krb5 implementation
 KRB5_DEFAULT?=		mit-krb5
+
+#
+# Builtin overrides.
+#
+.if !empty(OS_VERSION:M[56].*)
+USE_BUILTIN.dl=		no	# Darwin-[56].* uses devel/dlcompat
+.endif
 
 # Builtin defaults which make sense for this platform.
 _OPSYS_PREFER.linux-pam?=	native
