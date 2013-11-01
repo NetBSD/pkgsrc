@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/08/26 15:00:33 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2013/11/01 13:26:53 jperkin Exp $
 
 SHA1 (spread-src-3.17.3.tar.gz) = a3085dd225264a4223eff3346b6b5de64ac2dfc6
 RMD160 (spread-src-3.17.3.tar.gz) = 92def613d602d743d4f7c433f70f0b234bf47feb
@@ -7,3 +7,5 @@ SHA1 (patch-ba) = 795938504e97da34e83e9e66b8b81ff894cbb5b4
 SHA1 (patch-bb) = 6b2e9ef29802c6f60776d7be4046087f96b8ffcb
 SHA1 (patch-bd) = d39aed08e98e81bca572a429c511ffb400b020c3
 SHA1 (patch-configure) = fb86443e2afe2c17206e73bcdbd2b872397e9d4a
+SHA1 (patch-sample.spread.conf) = 3aa9bc8733d9c32337819027cdea5d83f9af19fc
+SHA1 (patch-spread__params.h) = 7878d94ae55b72ab87eeb0ea43f737ec8ff5fd40
