@@ -1,13 +1,15 @@
-$NetBSD: patch-Makefile,v 1.1 2013/07/03 10:40:33 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.2 2013/11/01 10:32:53 jaapb Exp $
 
 Install into DESTDIR
---- Makefile.orig	2013-01-03 19:39:03.000000000 +0000
+--- Makefile.orig	2013-07-18 05:02:22.000000000 +0000
 +++ Makefile
-@@ -88,7 +88,8 @@ man: all batteries.odocl
+@@ -88,8 +88,9 @@ man: all batteries.odocl
+ 	-mkdir man
  	ocamlfind ocamldoc -package threads.posix -sort -man -hide-warnings -d man -I _build/libs -I _build/src libs/uniclib.mli src/*.mli
  
- install: all uninstall_packages
+-install: all uninstall_packages
 -	ocamlfind install $(NAME) $(INSTALL_FILES) \
++install: all
 +	ocamlfind install $(NAME) -destdir "${DESTDIR}${PREFIX}/lib/ocaml/site-lib" \
 +	  $(INSTALL_FILES) \
  		-optional $(OPT_INSTALL_FILES)
