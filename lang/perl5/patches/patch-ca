@@ -1,10 +1,10 @@
-$NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
+$NetBSD: patch-ca,v 1.17 2013/11/01 14:02:37 jperkin Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 
 * Move $loclibpth to the end of $dlist, instead of the beginning.
 
-* Add -lssp when using -fstack-protector on SunOS
+* Disable -fstack-protector on SunOS
 
 * Several other changes.
 
@@ -72,7 +72,19 @@ $NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -6486,7 +6487,9 @@ rp='Pathname for the site-specific libra
+@@ -5119,8 +5120,10 @@ default|recommended)
+ 	# as that way the compiler can do the right implementation dependant
+ 	# thing. (NWC)
+ 	case "$gccversion" in
+-	?*)	set stack-protector -fstack-protector
++	?*)	if test "X$osname" != "Xsolaris"; then
++		set stack-protector -fstack-protector
+ 		eval $checkccflag
++		fi
+ 		;;
+ 	esac
+ 	;;
+@@ -6486,7 +6489,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -83,7 +95,7 @@ $NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -6999,7 +7002,9 @@ case "$vendorprefix" in
+@@ -6999,7 +7004,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -94,7 +106,7 @@ $NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -7476,6 +7481,15 @@ case "$nm_so_opt" in
+@@ -7476,6 +7483,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -110,19 +122,7 @@ $NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -8094,7 +8108,10 @@ EOM
- 	*-fstack-protector*)
- 	    case "$dflt" in
- 			*-fstack-protector*) ;; # Don't add it again
--			*) dflt="$dflt -fstack-protector" ;; 
-+			*) case "$osname" in
-+				solaris) dflt="$dflt -fstack-protector -lssp" ;;
-+				*) dflt="$dflt -fstack-protector" ;;
-+			esac ;;
- 		esac
- 		;;
- 	esac
-@@ -8347,7 +8364,7 @@ if "$useshrplib"; then
+@@ -8347,7 +8363,7 @@ if "$useshrplib"; then
  		# next doesn't like the default...
  		;;
  	haiku)
@@ -131,7 +131,7 @@ $NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
  		;;
  	hpux*)
  		# hpux doesn't like the default, either.
-@@ -9431,6 +9448,13 @@ esac
+@@ -9431,6 +9447,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -145,7 +145,7 @@ $NetBSD: patch-ca,v 1.16 2013/09/11 14:31:31 jperkin Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -19243,7 +19267,15 @@ RCAT(Rei,ser)
+@@ -19243,7 +19266,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
