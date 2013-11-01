@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/08/09 07:28:24 adam Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/01 11:11:23 adam Exp $
 
-DISTNAME=	south-0.8.1
+DISTNAME=	south-0.8.2
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://www.aeracode.org/releases/south/
