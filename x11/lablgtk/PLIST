@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/09/09 18:45:44 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/11/01 21:41:45 jaapb Exp $
 bin/gdk_pixbuf_mlsource
 bin/lablgtk2
 lib/ocaml/site-lib/lablgtk2/META
@@ -349,3 +349,5 @@ lib/ocaml/site-lib/lablgtk2/xml_lexer.mli
 ${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablgtk2.so
 @comment in ocaml: lib/ocaml/stublibs
 @comment in ocaml: lib/ocaml
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/lablgtk2
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/lablgtk2
