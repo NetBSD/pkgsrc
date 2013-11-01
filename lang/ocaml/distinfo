@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.71 2013/10/27 20:33:59 joerg Exp $
+$NetBSD: distinfo,v 1.72 2013/11/01 10:47:50 jaapb Exp $
 
-SHA1 (ocaml-4.00.1.tar.bz2) = 10b8a4d0b88d20b003e3dd719f2ac9434e6a1042
-RMD160 (ocaml-4.00.1.tar.bz2) = db28f57b463af90650b877af0baf44eb226b0a79
-Size (ocaml-4.00.1.tar.bz2) = 2762205 bytes
-SHA1 (patch-Makefile) = 1d042908c5cece3d3d1e7e92fa4c418c2ed3d2ff
+SHA1 (ocaml-4.01.0.tar.bz2) = a814feca204e50f082515a3845cdd18c6d0e24b6
+RMD160 (ocaml-4.01.0.tar.bz2) = eedf28f446489c6b2c1f82782f5ee852293fc0b7
+Size (ocaml-4.01.0.tar.bz2) = 3691090 bytes
+SHA1 (patch-Makefile) = 5b22191b98138f7a50d77c60dc6bec359e47f0a9
 SHA1 (patch-asmcomp_power_emit.mlp) = 726e09e4902b96f4790c7a8093eb245dd7028bf4
-SHA1 (patch-asmrun_Makefile) = 5d49c710937c21df9974ad07f255992ef0f0dac8
+SHA1 (patch-asmrun_Makefile) = 6768fb2ecf42239fe08bf59132dd9dc2a49ab171
 SHA1 (patch-asmrun_power-bsd.S) = bd52898dde14adc1dbf9cd85a7f8af4d77218e6f
 SHA1 (patch-asmrun_signals_osdep.h) = cc7131ef020563ae28c1fddbe8fe634174f73826
 SHA1 (patch-byterun_Makefile) = 9681ce78c78879d29d9c58f35278a14e6cb18e96
 SHA1 (patch-camlp4_man_Makefile) = c3a5dc09a2cc15d969c4e074be7da98a979f7db4
-SHA1 (patch-configure) = 6237c9ab3786182f79ca13553049c30bf6cdf549
+SHA1 (patch-configure) = 9bd9e64a34dcdfc8565ab58d1ee0879b6c17c88e
 SHA1 (patch-debugger_Makefile.shared) = 583fa88caf965164aa3b638dda4c2a6e8878bdf9
 SHA1 (patch-man_Makefile) = 3f52dd1fcbde53399852a6490d5f27fc7c1c98e5
 SHA1 (patch-ocamldoc_Makefile) = d09c5f779dc1da9317d1c6e5eb4b251a9af45562
 SHA1 (patch-otherlibs_Makefile.shared) = 2264e22c3e0079b31ff498ddb387358fc3a503cc
 SHA1 (patch-otherlibs_dynlink_Makefile) = b045aa0d16dcc7327a37482189168dcab6976a08
 SHA1 (patch-otherlibs_labltk_browser_Makefile.shared) = 5558d385f962195563ca7dd68a238a97b5ffb8a6
-SHA1 (patch-otherlibs_labltk_camltk_Makefile) = eebfab73d526e24f52b6cc4fc09bc9e0a7cb7193
+SHA1 (patch-otherlibs_labltk_camltk_Makefile) = ea2883bea5258304d565868ce09cf47bdb3c7025
 SHA1 (patch-otherlibs_labltk_compiler_Makefile) = 387e8f41f4efdb733385b9b0c4dd576d3cc03cb8
 SHA1 (patch-otherlibs_labltk_frx_Makefile) = 94142aaade7b3c2f44509f1907f1ee4bbf793d79
 SHA1 (patch-otherlibs_labltk_jpf_Makefile) = 2f768f78ed4c723c567f1a4c0ac3eff00a716261
@@ -25,8 +25,8 @@ SHA1 (patch-otherlibs_labltk_labltk_Makefile) = 31c496143255c31f1e3474fbc775f4bd
 SHA1 (patch-otherlibs_labltk_lib_Makefile) = 20bb9f5fffc3271d45025bfd5b033173e8cf5319
 SHA1 (patch-otherlibs_labltk_support_Makefile) = 9bf06605324e167fb09f4f943ebc147c54868b67
 SHA1 (patch-otherlibs_systhreads_Makefile) = 89db3ff91128c4773edf28d2c91f3c4923472e86
-SHA1 (patch-otherlibs_threads_Makefile) = 803952c7ee2b3f9eeddf473d29515fa102ee8a82
+SHA1 (patch-otherlibs_threads_Makefile) = 9848e587914f1c65f11fe9cb60529ab5f15b26c8
 SHA1 (patch-stdlib_Makefile) = 85c89d6b9caf08056407da3564e7d2f5353b93a0
 SHA1 (patch-stdlib_Makefile.shared) = 42dafb10f88b501982fb0d65c380f1fa61740f54
 SHA1 (patch-tools_Makefile.shared) = 8c23fc72c627e2315451e6223946e9257c3e341d
-SHA1 (patch-tools_ocamlmklib) = 4c288c1d7e281aaee9f7ef6d7158b848b49ed2a6
+SHA1 (patch-tools_ocamlmklib) = 1e7992994ced49230dba091ddf4210ce1277c566
