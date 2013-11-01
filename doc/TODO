@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12692 2013/11/01 13:00:24 ryoon Exp $
+$NetBSD: TODO,v 1.12693 2013/11/01 17:40:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -405,7 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.8
+	o calibre-1.9
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -656,7 +656,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hiawatha-9.2
 	o highlight-3.16
 	o honeyd-1.5c
-	o horde-5.1.4
+	o horde-5.1.5
 	o html2wml-0.4.11
 	o htop-1.0.2
 	o httptunnel-3.3
@@ -951,7 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-2.0.0p0
-	o rudiments-0.43
+	o rudiments-0.44
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o samba-4.0.7 [wip]
@@ -1035,6 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tesseract-3.02.02
 	o tetrinetx-1.40c
 	o texlive-2012
+	o texmaker-4.1
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
 	o thunderbird-24
@@ -1072,7 +1073,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.21
-	o vifm-0.7.5
+	o vifm-0.7.6
 	o vinagre-3.10.1
 	o vino-3.10.1
 	o visual-regexp-3.1
