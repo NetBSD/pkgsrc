@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/04/03 12:31:49 jaapb Exp $
+$NetBSD: distinfo,v 1.7 2013/11/01 10:50:03 jaapb Exp $
 
 SHA1 (lwt-2.4.3.tar.gz) = 12503d6eb52ce0d5360096baf8bb846b140cf6bc
 RMD160 (lwt-2.4.3.tar.gz) = f159152df1cdbbfaf3b54600e43dccbed944550e
 Size (lwt-2.4.3.tar.gz) = 504000 bytes
+SHA1 (patch-src_unix_lwt_unix.ml) = 2ee202fa191a3d1101a573240025cea070d8c3b7
+SHA1 (patch-src_unix_lwt_unix.mli) = 8866ac18f024b79dd6aeddecf790fdb71bb2e8a8
