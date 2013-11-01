@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.29 2010/02/06 11:06:19 obache Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.30 2013/11/01 12:19:29 jperkin Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  The following
@@ -82,12 +82,18 @@ _PKG_PTHREAD_COMPAT_PATTERNS=	*-*-*
 .include "../../mk/bsd.fast.prefs.mk"
 
 PTHREAD_OPTS?=	# empty
+
+CHECK_BUILTIN.pthread:=  yes
+.include "../../mk/pthread.builtin.mk"
+CHECK_BUILTIN.pthread:=  no
+
 #
-# We check for a native pthreads implementation by checking for the presence
-# of /usr/include/pthread.h (we might want to make this check stricter).
+# Set the value of PTHREAD_TYPE depending on the platform and what's
+# available in the base system.
 #
 .undef PTHREAD_TYPE
-.if (exists(/usr/include/pthread.h) || ${OPSYS} == "Haiku") && \
+.if defined(USE_BUILTIN.pthread) && \
+    !empty(USE_BUILTIN.pthread:M[yY][eE][sS]) && \
     !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
 PTHREAD_TYPE=	native
 .else
