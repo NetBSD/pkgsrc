@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/10/31 23:35:10 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/01 18:17:43 jperkin Exp $
 
 .include "../../devel/lua-stdlib/Makefile.common"
 
-PKGNAME=		${DISTNAME:S/stdlib/lua-stdlib-doc/}
-PKGREVISION=		1
+PKGNAME=		${DISTNAME:S/stdlib/${LUA_PKGPREFIX}-stdlib-doc/}
+PKGREVISION=		2
 MAINTAINER=		cheusov@NetBSD.org
 
 COMMENT=		Documentation for modules from lua-stdlib
