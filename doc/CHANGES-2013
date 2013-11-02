@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4023 2013/11/02 18:28:34 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.4024 2013/11/02 20:24:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5638,3 +5638,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/wireshark to 1.10.3 [tron 2013-11-02]
 	Updated devel/mercurial to 2.8 [wiz 2013-11-02]
 	Updated sysutils/xfe to 1.04nb13 [dholland 2013-11-02]
+	Updated devel/SDL2 to 2.0.1 [adam 2013-11-02]
+	Updated lang/tcl to 8.5.15 [adam 2013-11-02]
+	Updated x11/tk to 8.5.15 [adam 2013-11-02]
