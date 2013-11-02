@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4025 2013/11/02 21:07:19 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.4026 2013/11/02 21:09:10 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5636,9 +5636,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ap2-subversion to 1.8.4 [adam 2013-11-02]
 	Updated sysutils/py-psutil to 1.1.2 [wiz 2013-11-02]
 	Updated net/wireshark to 1.10.3 [tron 2013-11-02]
+	Updated games/solarus to 1.1.0 [rodent 2013-11-02]
 	Updated devel/mercurial to 2.8 [wiz 2013-11-02]
 	Updated sysutils/xfe to 1.04nb13 [dholland 2013-11-02]
 	Updated devel/SDL2 to 2.0.1 [adam 2013-11-02]
 	Updated lang/tcl to 8.5.15 [adam 2013-11-02]
 	Updated x11/tk to 8.5.15 [adam 2013-11-02]
-	Updated games/solarus to 1.1.0 [rodent 2013-11-02]
