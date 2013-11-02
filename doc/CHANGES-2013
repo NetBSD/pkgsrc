@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4017 2013/11/01 21:43:26 jaapb Exp $
+$NetBSD: CHANGES-2013,v 1.4018 2013/11/02 07:33:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5622,3 +5622,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/dri3proto version 1.0 [wiz 2013-11-01]
 	Updated meta-pkgs/modular-xorg-protos to 1.5 [wiz 2013-11-01]
 	Updated x11/lablgtk to 2.18.0 [jaapb 2013-11-01]
+	Updated x11/x11vnc to 0.9.13nb19 [obache 2013-11-02]
