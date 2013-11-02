@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4018 2013/11/02 07:33:52 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4019 2013/11/02 09:21:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5623,3 +5623,14 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-protos to 1.5 [wiz 2013-11-01]
 	Updated x11/lablgtk to 2.18.0 [jaapb 2013-11-01]
 	Updated x11/x11vnc to 0.9.13nb19 [obache 2013-11-02]
+	Updated devel/git to 1.8.4.2 [adam 2013-11-02]
+	Updated devel/git-base to 1.8.4.2 [adam 2013-11-02]
+	Updated devel/git-docs to 1.8.4.2 [adam 2013-11-02]
+	Updated www/gitweb to 1.8.4.2 [adam 2013-11-02]
+	Updated devel/subversion to 1.8.4 [adam 2013-11-02]
+	Updated devel/subversion-base to 1.8.4 [adam 2013-11-02]
+	Updated devel/java-subversion to 1.8.4 [adam 2013-11-02]
+	Updated devel/p5-subversion to 1.8.4 [adam 2013-11-02]
+	Updated devel/py-subversion to 1.8.4 [adam 2013-11-02]
+	Updated devel/ruby-subversion to 1.8.4 [adam 2013-11-02]
+	Updated www/ap2-subversion to 1.8.4 [adam 2013-11-02]
