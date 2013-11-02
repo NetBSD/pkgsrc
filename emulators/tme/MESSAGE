@@ -1,9 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/08/29 18:13:19 shattered Exp $
+$NetBSD: MESSAGE,v 1.2 2013/11/02 21:53:36 martin Exp $
 
-TME loads a number of shared libraries at runtime and requires that
-LTDL_LIBRARY_PATH environment variable is set correctly, for example:
+TME loads a number of shared libraries at runtime. By default it
+looks for them in ${PREFIX}/lib.
 
-export LTDL_LIBRARY_PATH=@PREFIX@/lib
+Set the LTDL_LIBRARY_PATH environment variable to override this
+(multiple directories may be colon separated).
 
 ===========================================================================
