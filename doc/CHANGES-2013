@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4019 2013/11/02 09:21:59 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4020 2013/11/02 09:38:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5634,3 +5634,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-subversion to 1.8.4 [adam 2013-11-02]
 	Updated devel/ruby-subversion to 1.8.4 [adam 2013-11-02]
 	Updated www/ap2-subversion to 1.8.4 [adam 2013-11-02]
+	Updated sysutils/py-psutil to 1.1.2 [wiz 2013-11-02]
