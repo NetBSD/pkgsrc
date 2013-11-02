@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/10/30 10:47:32 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/02 17:09:26 rodent Exp $
 
-VERSION=	1.0.4
+VERSION=	1.1.0
 DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.solarus-games.org/downloads/solarus/
 
@@ -17,6 +16,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../devel/physfs/buildlink3.mk"
+LUA_VERSION_REQD=		51
 BUILDLINK_API_DEPENDS.lua51+=	lua51>=5.1.5
 .include "../../lang/lua/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
