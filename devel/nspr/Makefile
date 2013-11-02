@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2013/10/12 13:46:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2013/11/02 12:34:14 ryoon Exp $
 #
 
 DISTNAME=	nspr-${NSPR_RELEASE}
@@ -34,6 +34,10 @@ SUBST_STAGE.nspr-config=	pre-configure
 SUBST_MESSAGE.nspr-config=	Fixing nspr-config run path
 SUBST_FILES.nspr-config=	nspr/config/nspr-config.in
 SUBST_SED.nspr-config=		-e 's|-L$$libdir|"${COMPILER_RPATH_FLAG}$$libdir -L$$libdir"|g'
+
+.if ${OPSYS} == "OpenBSD"
+CHECK_SHLIBS_SUPPORTED= no
+.endif
 
 .if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=			exec_path
