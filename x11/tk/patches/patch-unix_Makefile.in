@@ -1,6 +1,6 @@
-$NetBSD: patch-unix_Makefile.in,v 1.3 2013/05/31 20:15:32 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.4 2013/11/02 20:22:02 adam Exp $
 
---- unix/Makefile.in.orig	2013-04-01 18:36:49.000000000 +0000
+--- unix/Makefile.in.orig	2013-09-16 16:45:24.000000000 +0000
 +++ unix/Makefile.in
 @@ -13,6 +13,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
  MINOR_VERSION		= @TK_MINOR_VERSION@
@@ -85,7 +85,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.3 2013/05/31 20:15:32 adam Exp $
  	@for i in "$(LIB_INSTALL_DIR)" "$(BIN_INSTALL_DIR)" \
  	    "$(PKG_INSTALL_DIR)" "$(CONFIG_INSTALL_DIR)" ; \
  	    do \
-@@ -715,13 +729,20 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
+@@ -715,7 +729,13 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
  	    fi
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -100,6 +100,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.3 2013/05/31 20:15:32 adam Exp $
  	@if test -f "tk${MAJOR_VERSION}${MINOR_VERSION}.dll"; then \
  	    $(INSTALL_LIBRARY) "tk${MAJOR_VERSION}${MINOR_VERSION}.dll" "$(DLL_INSTALL_DIR)";\
  	    chmod 555 "$(DLL_INSTALL_DIR)/tk${MAJOR_VERSION}${MINOR_VERSION}.dll";\
+@@ -724,6 +744,7 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
  	fi
  	@echo "Installing ${WISH_EXE} as $(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
  	@$(INSTALL_PROGRAM) ${WISH_EXE} "$(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
@@ -107,7 +108,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.3 2013/05/31 20:15:32 adam Exp $
  	@echo "Installing tkConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tkConfig.sh "$(CONFIG_INSTALL_DIR)/tkConfig.sh"
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -826,7 +847,7 @@ install-doc:
+@@ -828,7 +849,7 @@ install-doc:
  install-headers:
  	@if test "$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)" != ""; then \
  	    XLIB_INCLUDE_INSTALL_DIR="$(INCLUDE_INSTALL_DIR)"/X11; fi; \
@@ -116,7 +117,7 @@ $NetBSD: patch-unix_Makefile.in,v 1.3 2013/05/31 20:15:32 adam Exp $
  	    do \
  	    if [ -n "$$i" -a ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -835,9 +856,12 @@ install-headers:
+@@ -837,9 +858,12 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
