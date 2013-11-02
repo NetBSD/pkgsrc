@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/11/02 07:32:28 obache Exp $
+
+* check openpty(3)
+
+--- configure.ac.orig	2011-08-10 22:34:57.000000000 +0000
++++ configure.ac
+@@ -730,7 +730,7 @@ AC_CHECK_HEADERS([arpa/inet.h fcntl.h ne
+ 
+ # x11vnc only:
+ if test "$build_x11vnc" = "yes"; then
+-	AC_CHECK_HEADERS([pwd.h sys/wait.h utmpx.h termios.h sys/ioctl.h sys/stropts.h])
++	AC_CHECK_HEADERS([pwd.h sys/wait.h utmpx.h termios.h sys/ioctl.h sys/stropts.h pty.h libutil.h util.h])
+ fi
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+@@ -777,7 +777,9 @@ fi
+ AC_CHECK_FUNCS([ftime gethostbyname gethostname gettimeofday inet_ntoa memmove memset mmap mkfifo select socket strchr strcspn strdup strerror strstr])
+ # x11vnc only:
+ if test "$build_x11vnc" = "yes"; then
++	AH_TEMPLATE(HAVE_OPENPTY, [Define to `1' if you have the `openpty' function.])
+ 	AC_CHECK_FUNCS([setsid setpgrp getpwuid getpwnam getspnam getuid geteuid setuid setgid seteuid setegid initgroups waitpid setutxent grantpt shmat])
++	AC_SEARCH_LIBS(openpty, util bsd, [AC_DEFINE(HAVE_OPENPTY)])
+ fi
+ 
+ # check, if shmget is in cygipc.a

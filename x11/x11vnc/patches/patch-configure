@@ -1,0 +1,163 @@
+$NetBSD: patch-configure,v 1.1 2013/11/02 07:32:28 obache Exp $
+
+* check openpty(3)
+
+--- configure.orig	2011-08-10 22:35:10.000000000 +0000
++++ configure
+@@ -9866,7 +9866,10 @@ if test "$build_x11vnc" = "yes"; then
+ 
+ 
+ 
+-for ac_header in pwd.h sys/wait.h utmpx.h termios.h sys/ioctl.h sys/stropts.h
++
++
++
++for ac_header in pwd.h sys/wait.h utmpx.h termios.h sys/ioctl.h sys/stropts.h pty.h libutil.h util.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -13523,6 +13526,8 @@ if test "$build_x11vnc" = "yes"; then
+ 
+ 
+ 
++
++
+ for ac_func in setsid setpgrp getpwuid getpwnam getspnam getuid geteuid setuid setgid seteuid setegid initgroups waitpid setutxent grantpt shmat
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+@@ -13624,6 +13629,135 @@ _ACEOF
+ fi
+ done
+ 
++	echo "$as_me:$LINENO: checking for library containing openpty" >&5
++echo $ECHO_N "checking for library containing openpty... $ECHO_C" >&6
++if test "${ac_cv_search_openpty+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_func_search_save_LIBS=$LIBS
++ac_cv_search_openpty=no
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char openpty ();
++int
++main ()
++{
++openpty ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_search_openpty="none required"
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++if test "$ac_cv_search_openpty" = no; then
++  for ac_lib in util bsd; do
++    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++    cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char openpty ();
++int
++main ()
++{
++openpty ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_search_openpty="-l$ac_lib"
++break
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++  done
++fi
++LIBS=$ac_func_search_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_search_openpty" >&5
++echo "${ECHO_T}$ac_cv_search_openpty" >&6
++if test "$ac_cv_search_openpty" != no; then
++  test "$ac_cv_search_openpty" = "none required" || LIBS="$ac_cv_search_openpty $LIBS"
++  cat >>confdefs.h <<\_ACEOF
++#define HAVE_OPENPTY 1
++_ACEOF
++
++fi
++
+ fi
+ 
+ # check, if shmget is in cygipc.a
