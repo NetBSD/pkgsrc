@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2013/10/19 09:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.74 2013/11/02 09:19:17 adam Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
-PKGREVISION=	4
 COMMENT=	Perl bindings for Subversion
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
