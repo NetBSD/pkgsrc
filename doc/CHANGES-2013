@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4026 2013/11/02 21:09:10 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.4027 2013/11/02 22:58:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5642,3 +5642,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/SDL2 to 2.0.1 [adam 2013-11-02]
 	Updated lang/tcl to 8.5.15 [adam 2013-11-02]
 	Updated x11/tk to 8.5.15 [adam 2013-11-02]
+	Updated www/firefox to 25.0 [ryoon 2013-11-02]
