@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/10/12 13:32:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/02 09:38:34 wiz Exp $
 
-DISTNAME=	psutil-1.0.1
+DISTNAME=	psutil-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://psutil.googlecode.com/files/
+MASTER_SITES=	https://pypi.python.org/packages/source/p/psutil/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/psutil/
