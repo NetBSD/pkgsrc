@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.141 2013/10/21 10:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2013/11/02 22:57:55 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	24.0
-MOZ_BRANCH_MINOR=	esr
+MOZ_BRANCH=	25.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	3
 CATEGORIES=	www
-#MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
-MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
+#MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
-WRKSRC=		${WRKDIR}/mozilla-esr24
+WRKSRC=		${WRKDIR}/mozilla-release
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
@@ -43,7 +42,7 @@ LDFLAGS.DragonFly=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD=	-lplc4 -lnspr4
 LDFLAGS.Linux=		-lnspr4
 
-.include "../../www/firefox/mozilla-common.mk"
+.include "mozilla-common.mk"
 .include "options.mk"
 
 CHECK_PORTABILITY_SKIP+=	js/src/tests/update-test262.sh

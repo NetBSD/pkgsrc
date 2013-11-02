@@ -1,17 +1,8 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_thread__posix.cc,v 1.3 2013/09/19 12:37:50 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_system__wrappers_source_thread__posix.cc,v 1.4 2013/11/02 22:57:55 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/system_wrappers/source/thread_posix.cc.orig	2013-09-10 03:43:47.000000000 +0000
+--- media/webrtc/trunk/webrtc/system_wrappers/source/thread_posix.cc.orig	2013-10-25 22:27:35.000000000 +0000
 +++ media/webrtc/trunk/webrtc/system_wrappers/source/thread_posix.cc
-@@ -272,7 +272,7 @@ bool ThreadPosix::Start(unsigned int& th
- 
- // CPU_ZERO and CPU_SET are not available in NDK r7, so disable
- // SetAffinity on Android for now.
--#if defined(__FreeBSD__) || (defined(WEBRTC_LINUX) && (!defined(WEBRTC_ANDROID)) && (!defined(WEBRTC_GONK)))
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || (defined(WEBRTC_LINUX) && (!defined(WEBRTC_ANDROID)) && (!defined(WEBRTC_GONK)))
- bool ThreadPosix::SetAffinity(const int* processor_numbers,
-                               const unsigned int amount_of_processors) {
-   if (!processor_numbers || (amount_of_processors == 0)) {
-@@ -280,20 +280,34 @@ bool ThreadPosix::SetAffinity(const int*
+@@ -278,20 +278,34 @@ bool ThreadPosix::SetAffinity(const int*
    }
  #if defined(__FreeBSD__)
    cpuset_t mask;
