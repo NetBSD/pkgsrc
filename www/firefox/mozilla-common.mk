@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.18 2013/10/21 10:46:18 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.19 2013/11/02 22:57:55 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -11,6 +11,7 @@ USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
+.include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
 # gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
 # but gcc 4.5.4 of NetBSD 7 generates working binary.
@@ -33,6 +34,7 @@ CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
+CONFIGURE_ARGS+=	--enable-gstreamer
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-mathml
 CONFIGURE_ARGS+=	--enable-pango
@@ -154,11 +156,8 @@ CONFIGURE_ENV+=	ac_cv_thread_keyword=no
 PREFER.bzip2?=	pkgsrc
 .endif
 
-.if ${OPSYS} == "Linux"
-.include "../../audio/alsa-lib/buildlink3.mk"
-.endif
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.17
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
@@ -179,5 +178,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../textproc/hunspell/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-

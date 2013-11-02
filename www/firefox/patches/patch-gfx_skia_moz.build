@@ -1,16 +1,22 @@
-$NetBSD: patch-gfx_skia_moz.build,v 1.1 2013/09/19 12:37:49 ryoon Exp $
+$NetBSD: patch-gfx_skia_moz.build,v 1.2 2013/11/02 22:57:55 ryoon Exp $
 
---- gfx/skia/moz.build.orig	2013-09-10 03:43:30.000000000 +0000
+--- gfx/skia/moz.build.orig	2013-10-25 22:27:18.000000000 +0000
 +++ gfx/skia/moz.build
-@@ -188,10 +188,9 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'qt
-         'SkMMapStream.cpp',
+@@ -183,7 +183,7 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gt
+         'SkTime_Unix.cpp',
+         'SkOSFile.cpp',
+     ]
+-    if CONFIG['OS_TARGET'] in ('Linux', 'FreeBSD', 'NetBSD'):
++    if CONFIG['OS_TARGET'] in ('Linux', 'FreeBSD', 'NetBSD', 'DragonFly'):
+         CPP_SOURCES += [
+             'SkThreadUtils_pthread_linux.cpp',
+         ]
+@@ -197,7 +197,7 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'qt
+         'SkFontHost_FreeType_common.cpp',
          'SkOSFile.cpp',
      ]
 -    if CONFIG['OS_TARGET'] == 'Linux':
 +    if CONFIG['MOZ_X11'] == 1 or CONFIG['OS_TARGET'] == 'Linux':
-         CPP_SOURCES += [
-             'SkFontHost_linux.cpp',
--            'SkFontHost_tables.cpp',
-             'SkThread_pthread.cpp',
-             'SkTime_Unix.cpp',
+         EXPORTS.skia += [
+             'include/ports/SkTypeface_cairo.h',
          ]

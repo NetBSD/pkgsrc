@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_test_audio__device__test__api.cc,v 1.1 2013/09/19 12:37:50 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_test_audio__device__test__api.cc,v 1.2 2013/11/02 22:57:55 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/audio_device/test/audio_device_test_api.cc.orig	2013-09-10 03:43:47.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/audio_device/test/audio_device_test_api.cc.orig	2013-10-25 22:27:35.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/audio_device/test/audio_device_test_api.cc
 @@ -196,7 +196,7 @@ class AudioDeviceAPITest: public testing
      // Create default implementation instance
@@ -28,4 +28,4 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__device_test_audio__devic
 +#endif  // !WIN32 && !WEBRTC_LINUX && !defined(WEBRTC_BSD)
  
  TEST_F(AudioDeviceAPITest, RecordingSampleRate) {
-   WebRtc_UWord32 sampleRate(0);
+   uint32_t sampleRate(0);
