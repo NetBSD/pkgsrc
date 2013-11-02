@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4020 2013/11/02 09:38:43 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4021 2013/11/02 10:30:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5635,3 +5635,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-subversion to 1.8.4 [adam 2013-11-02]
 	Updated www/ap2-subversion to 1.8.4 [adam 2013-11-02]
 	Updated sysutils/py-psutil to 1.1.2 [wiz 2013-11-02]
+	Updated net/wireshark to 1.10.3 [tron 2013-11-02]
