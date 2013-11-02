@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4024 2013/11/02 20:24:06 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4025 2013/11/02 21:07:19 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5641,3 +5641,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/SDL2 to 2.0.1 [adam 2013-11-02]
 	Updated lang/tcl to 8.5.15 [adam 2013-11-02]
 	Updated x11/tk to 8.5.15 [adam 2013-11-02]
+	Updated games/solarus to 1.1.0 [rodent 2013-11-02]
