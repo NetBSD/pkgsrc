@@ -1,0 +1,22 @@
+$NetBSD: patch-machine_sun2_SUN2-MULTIBUS,v 1.1 2013/11/02 22:43:29 christos Exp $
+
+Make it use auto-allocated ptys
+
+--- machine/sun2/SUN2-MULTIBUS	2005-04-30 11:12:12.000000000 -0400
++++ machine/sun2/SUN2-MULTIBUS	2013-11-02 18:30:00.000000000 -0400
+@@ -73,11 +73,11 @@
+ ##
+ # uncomment the following line if you aren't using the GTK-based
+ # display console above.  this will connect ttya to the master side of
+-# a pseudo-tty (in this case, /dev/ttyr0), which you can connect to
+-# using tip or some other serial communications program on the slave
+-# side (in this case, /dev/ptyr0):
++# a pseudo-tty, which you can connect to using tip or some other serial
++# communications program on the slave (in this case, a pty allocated
++# automatically):
+ #
+-#console0 at zs0 channel A: tme/host/posix/serial device /dev/ttyr0 break-carats
++#console0 at zs0 channel A: tme/host/posix/serial device pty
+ 
+ ## a SCSI disk:
+ ##
