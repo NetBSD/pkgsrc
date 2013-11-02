@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.40 2013/05/31 20:15:32 adam Exp $
+$NetBSD: distinfo,v 1.41 2013/11/02 20:22:02 adam Exp $
 
-SHA1 (tk8.5.14-src.tar.gz) = 4d0f8775746f0c780172e1e4f1fb7d78363a4b28
-RMD160 (tk8.5.14-src.tar.gz) = 8c10ae4ff0f01c1ee955b0d9664917fc06f2e192
-Size (tk8.5.14-src.tar.gz) = 4093990 bytes
-SHA1 (patch-macosx_tkMacOSXClipboard.c) = ac5a5de7c0e4259a347fcb7449d304e6edb91343
-SHA1 (patch-macosx_tkMacOSXDraw.c) = b241b7d70436340a5b55b7568da994465f45d2f8
-SHA1 (patch-unix_Makefile.in) = 6acc76bce0ecf813abf0905da19ae0d669a2e7db
-SHA1 (patch-unix_configure) = 4e7fe48d2aba0a645bb5947e920d9615c4339b9c
+SHA1 (tk8.5.15-src.tar.gz) = 11c9e4d94719184a62b6beb19d37e3391b376619
+RMD160 (tk8.5.15-src.tar.gz) = 6f642a13389d02a0a0179a8e156376e31304466d
+Size (tk8.5.15-src.tar.gz) = 4086650 bytes
+SHA1 (patch-unix_Makefile.in) = b428cd131efd9ece3bf6a4a17c829f383f79b835
+SHA1 (patch-unix_configure) = 0bfbb99b11fb8634c5cccb739854775a088dc600

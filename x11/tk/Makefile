@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2013/10/25 10:21:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2013/11/02 20:22:02 adam Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
-PKGREVISION=	4
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -45,6 +44,7 @@ PLIST_SUBST+=		BASEVER=${TK_BASEVER}
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_SRC=		PLIST
 .if ${OPSYS} == "Darwin" && ${X11_TYPE} == "native"
 CONFIGURE_ARGS+=	--enable-aqua
 PLIST_SRC+=		PLIST.aqua
