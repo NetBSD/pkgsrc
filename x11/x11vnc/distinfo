@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.19 2012/11/08 12:56:21 sborrill Exp $
+$NetBSD: distinfo,v 1.20 2013/11/02 07:32:28 obache Exp $
 
 SHA1 (x11vnc-0.9.13.tar.gz) = f011d81488ac94dc8dce2d88739c23bd85a976fa
 RMD160 (x11vnc-0.9.13.tar.gz) = 5819a4ae85b25b41fb747ccafd27e228c3ee888e
 Size (x11vnc-0.9.13.tar.gz) = 2853769 bytes
-SHA1 (patch-enc.h) = 5de28d00f5025357a41d3909a554f7dd67d70e0b
+SHA1 (patch-configure) = 784f76c158745da985a210f2035957e7135dd4e6
+SHA1 (patch-configure.ac) = 7d31042b1e1d44b98394614ba80cdc3ac0eaf198
+SHA1 (patch-enc.h) = 82b004715cb2e7aa1e81e0aaebc2161cab20973b
+SHA1 (patch-rfbconfig.h.in) = 77e025890e868ce7c62c6609b5386ebbe54491c8
+SHA1 (patch-x11vnc_unixpw.c) = 108529f9d53f887e48e2ede07d85e6b2ff326341
