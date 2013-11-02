@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/09/19 13:09:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/11/02 23:25:59 ryoon Exp $
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af.manifest
@@ -99,6 +99,7 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/syncKey.dtd
@@ -217,6 +218,7 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/search/search.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/security/csp.properties
@@ -380,6 +382,7 @@ lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/syncKey.dtd
@@ -498,6 +501,7 @@ lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/security/csp.properties
@@ -661,6 +665,7 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/syncKey.dtd
@@ -779,6 +784,7 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/security/csp.properties
@@ -942,6 +948,7 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/syncKey.dtd
@@ -1060,6 +1067,7 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/search/search.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/security/csp.properties
@@ -1223,6 +1231,7 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/a
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/syncKey.dtd
@@ -1341,6 +1350,7 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/local
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/security/csp.properties
@@ -1504,6 +1514,7 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/syncKey.dtd
@@ -1623,6 +1634,7 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/search/search.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/security/csp.properties
@@ -1786,6 +1798,7 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/syncKey.dtd
@@ -1905,6 +1918,7 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/search/search.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/security/csp.properties
@@ -2068,6 +2082,7 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/syncKey.dtd
@@ -2184,6 +2199,7 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/l
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/search/search.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/security/csp.properties
@@ -2347,6 +2363,7 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/syncKey.dtd
@@ -2467,6 +2484,7 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/l
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/search/search.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/security/csp.properties
@@ -2630,6 +2648,7 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/syncKey.dtd
@@ -2748,6 +2767,7 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/search/search.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/security/csp.properties
@@ -2911,6 +2931,7 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/syncKey.dtd
@@ -3030,6 +3051,7 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/search/search.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/security/csp.properties
@@ -3193,6 +3215,7 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/syncKey.dtd
@@ -3311,6 +3334,7 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/security/csp.properties
@@ -3474,6 +3498,7 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/syncKey.dtd
@@ -3592,6 +3617,7 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/search/search.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/security/csp.properties
@@ -3755,6 +3781,7 @@ lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/c
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/syncKey.dtd
@@ -3874,6 +3901,7 @@ lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/local
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/search/search.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/security/csp.properties
@@ -4037,6 +4065,7 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/syncKey.dtd
@@ -4157,6 +4186,7 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/search/search.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/security/csp.properties
@@ -4320,6 +4350,7 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/syncKey.dtd
@@ -4437,6 +4468,7 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/search/search.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/security/csp.properties
@@ -4600,6 +4632,7 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/syncKey.dtd
@@ -4719,6 +4752,7 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/search/search.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/security/csp.properties
@@ -4882,6 +4916,7 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/syncKey.dtd
@@ -5000,6 +5035,7 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/search/search.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/security/csp.properties
@@ -5163,6 +5199,7 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/syncKey.dtd
@@ -5283,6 +5320,7 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/l
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/search/search.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/security/csp.properties
@@ -5446,6 +5484,7 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/syncKey.dtd
@@ -5565,6 +5604,7 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/l
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/search/search.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/security/csp.properties
@@ -5728,6 +5768,7 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/syncKey.dtd
@@ -5845,6 +5886,7 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/l
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/search/search.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/security/csp.properties
@@ -6008,6 +6050,7 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/syncKey.dtd
@@ -6128,6 +6171,7 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/search/search.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/security/csp.properties
@@ -6291,6 +6335,7 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/syncKey.dtd
@@ -6410,6 +6455,7 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/l
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/search/search.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/security/csp.properties
@@ -6573,6 +6619,7 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/syncKey.dtd
@@ -6691,6 +6738,7 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/l
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/search/search.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/security/csp.properties
@@ -6854,6 +6902,7 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/syncKey.dtd
@@ -6973,6 +7022,7 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/l
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/search/search.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/security/csp.properties
@@ -7136,6 +7186,7 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/syncKey.dtd
@@ -7253,6 +7304,7 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/l
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/search/search.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/security/csp.properties
@@ -7416,6 +7468,7 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/syncKey.dtd
@@ -7534,6 +7587,7 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/search/search.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/security/csp.properties
@@ -7697,6 +7751,7 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/syncKey.dtd
@@ -7817,6 +7872,7 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/search/search.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/security/csp.properties
@@ -7980,6 +8036,7 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/syncKey.dtd
@@ -8098,6 +8155,7 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/search/search.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/security/csp.properties
@@ -8261,6 +8319,7 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/syncKey.dtd
@@ -8379,6 +8438,7 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/search/search.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/security/csp.properties
@@ -8542,6 +8602,7 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/syncKey.dtd
@@ -8661,6 +8722,7 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/search/search.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/security/csp.properties
@@ -8824,6 +8886,7 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/syncKey.dtd
@@ -8942,6 +9005,7 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/l
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/search/search.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/security/csp.properties
@@ -9105,6 +9169,7 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/syncKey.dtd
@@ -9226,6 +9291,7 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/l
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/security/csp.properties
@@ -9389,6 +9455,7 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/syncKey.dtd
@@ -9507,6 +9574,7 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/search/search.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/security/csp.properties
@@ -9670,6 +9738,7 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/syncKey.dtd
@@ -9788,6 +9857,7 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/search/search.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/security/csp.properties
@@ -9951,6 +10021,7 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/syncKey.dtd
@@ -10069,6 +10140,7 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/l
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/search/search.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/security/csp.properties
@@ -10232,6 +10304,7 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/syncKey.dtd
@@ -10348,6 +10421,7 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/search/search.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/security/csp.properties
@@ -10511,6 +10585,7 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/syncKey.dtd
@@ -10628,6 +10703,7 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/l
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/search/search.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/security/csp.properties
@@ -10791,6 +10867,7 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/syncKey.dtd
@@ -10911,6 +10988,7 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/search/search.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/security/csp.properties
@@ -11074,6 +11152,7 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/syncKey.dtd
@@ -11191,6 +11270,7 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/search/search.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/security/csp.properties
@@ -11354,6 +11434,7 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/syncKey.dtd
@@ -11472,6 +11553,7 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/l
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/search/search.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/security/csp.properties
@@ -11635,6 +11717,7 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/syncKey.dtd
@@ -11750,6 +11833,7 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/search/search.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/security/csp.properties
@@ -11913,6 +11997,7 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/syncKey.dtd
@@ -12032,6 +12117,7 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/search/search.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/security/csp.properties
@@ -12195,6 +12281,7 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/syncKey.dtd
@@ -12314,6 +12401,7 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/search/search.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/security/csp.properties
@@ -12477,6 +12565,7 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/syncKey.dtd
@@ -12597,6 +12686,7 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/security/csp.properties
@@ -12760,6 +12850,7 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/syncKey.dtd
@@ -12877,6 +12968,7 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/search/search.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/security/csp.properties
@@ -13040,6 +13132,7 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/syncKey.dtd
@@ -13158,6 +13251,7 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/search/search.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/security/csp.properties
@@ -13321,6 +13415,7 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/syncKey.dtd
@@ -13438,6 +13533,7 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/security/csp.properties
@@ -13601,6 +13697,7 @@ lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/syncKey.dtd
@@ -13720,6 +13817,7 @@ lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/security/csp.properties
@@ -13883,6 +13981,7 @@ lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/syncKey.dtd
@@ -14002,6 +14101,7 @@ lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/search/search.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/security/csp.properties
@@ -14165,6 +14265,7 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/syncKey.dtd
@@ -14283,6 +14384,7 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/search/search.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/security/csp.properties
@@ -14446,6 +14548,7 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/syncKey.dtd
@@ -14564,6 +14667,7 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/search/search.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/security/csp.properties
@@ -14727,6 +14831,7 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/m
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/syncKey.dtd
@@ -14845,6 +14950,7 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/local
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/search/search.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/security/csp.properties
@@ -15008,6 +15114,7 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/syncKey.dtd
@@ -15128,6 +15235,7 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/search/search.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/security/csp.properties
@@ -15291,6 +15399,7 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/syncKey.dtd
@@ -15410,6 +15519,7 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/security/csp.properties
@@ -15573,6 +15683,7 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/syncKey.dtd
@@ -15692,6 +15803,7 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/search/search.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/security/csp.properties
@@ -15855,6 +15967,7 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/syncKey.dtd
@@ -15880,8 +15993,8 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/search
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/bok-NO.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/google.xml
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/gulesider-NO.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/qxl-NO.xml
-lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/telefonkatalogen-NO.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/wikipedia-NO.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/searchplugins/yahoo-NO.xml
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome.manifest
@@ -15975,6 +16088,7 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/l
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/search/search.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/security/csp.properties
@@ -16138,6 +16252,7 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/syncKey.dtd
@@ -16255,6 +16370,7 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/search/search.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/security/csp.properties
@@ -16418,6 +16534,7 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/syncKey.dtd
@@ -16443,8 +16560,8 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/search
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/bok-NO.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/google.xml
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/gulesider-NO.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/qxl-NO.xml
-lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/telefonkatalogen-NO.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/searchplugins/wikipedia-NN.xml
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome.manifest
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/.mkdir.done
@@ -16537,6 +16654,7 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/l
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/search/search.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/security/csp.properties
@@ -16700,6 +16818,7 @@ lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/n
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/syncKey.dtd
@@ -16817,6 +16936,7 @@ lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/local
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/search/search.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/security/csp.properties
@@ -16980,6 +17100,7 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/syncKey.dtd
@@ -17098,6 +17219,7 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/search/search.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/security/csp.properties
@@ -17261,6 +17383,7 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/syncKey.dtd
@@ -17378,6 +17501,7 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/l
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/search/search.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/security/csp.properties
@@ -17541,6 +17665,7 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/syncKey.dtd
@@ -17660,6 +17785,7 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/search/search.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/security/csp.properties
@@ -17823,6 +17949,7 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/syncKey.dtd
@@ -17941,6 +18068,7 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/l
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/search/search.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/security/csp.properties
@@ -18104,6 +18232,7 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/syncKey.dtd
@@ -18221,6 +18350,7 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/l
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/search/search.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/security/csp.properties
@@ -18384,6 +18514,7 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/syncKey.dtd
@@ -18502,6 +18633,7 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/search/search.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/security/csp.properties
@@ -18665,6 +18797,7 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/syncKey.dtd
@@ -18783,6 +18916,7 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/security/csp.properties
@@ -18946,6 +19080,7 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/syncKey.dtd
@@ -19065,6 +19200,7 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/security/csp.properties
@@ -19228,6 +19364,7 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/syncKey.dtd
@@ -19347,6 +19484,7 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/search/search.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/security/csp.properties
@@ -19510,6 +19648,7 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/syncKey.dtd
@@ -19630,6 +19769,7 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/search/search.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/security/csp.properties
@@ -19793,6 +19933,7 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/syncKey.dtd
@@ -19911,6 +20052,7 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/search/search.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/security/csp.properties
@@ -20074,6 +20216,7 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/s
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/syncKey.dtd
@@ -20193,6 +20336,7 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/local
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/search/search.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/security/csp.properties
@@ -20356,6 +20500,7 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/syncKey.dtd
@@ -20474,6 +20619,7 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/search/search.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/security/csp.properties
@@ -20637,6 +20783,7 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/syncKey.dtd
@@ -20756,6 +20903,7 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/search/search.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/security/csp.properties
@@ -20919,6 +21067,7 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/syncKey.dtd
@@ -21038,6 +21187,7 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/l
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/search/search.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/security/csp.properties
@@ -21201,6 +21351,7 @@ lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/syncKey.dtd
@@ -21316,6 +21467,7 @@ lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/l
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/security/csp.properties
@@ -21479,6 +21631,7 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/syncKey.dtd
@@ -21596,6 +21749,7 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/search/search.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/security/csp.properties
@@ -21759,6 +21913,7 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/syncKey.dtd
@@ -21878,6 +22033,7 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/search/search.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/security/csp.properties
@@ -22041,6 +22197,7 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/syncKey.dtd
@@ -22161,6 +22318,7 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/search/search.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/security/csp.properties
@@ -22324,6 +22482,7 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/syncKey.dtd
@@ -22441,6 +22600,7 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/search/search.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/security/csp.properties
@@ -22604,6 +22764,7 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/syncKey.dtd
@@ -22721,6 +22882,7 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/search/search.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/security/csp.properties
@@ -22884,6 +23046,7 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/syncKey.dtd
@@ -23003,6 +23166,7 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/search/search.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/security/csp.properties
@@ -23166,6 +23330,7 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/syncKey.dtd
@@ -23287,6 +23452,7 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/l
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/search/search.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/security/csp.properties
@@ -23450,6 +23616,7 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/syncKey.dtd
@@ -23569,6 +23736,7 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/l
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/search/search.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/security/csp.properties
@@ -23732,6 +23900,7 @@ lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/searchbar.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/setDesktopBackground.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/shellservice.properties
+lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/sitePermissions.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/syncBrand.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/syncGenericChange.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/syncKey.dtd
@@ -23850,6 +24019,7 @@ lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/printjoboptions.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/regionNames.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/resetProfile.dtd
+lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/resetProfile.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/search/search.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/security/caps.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/security/csp.properties
