@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/08/15 10:26:16 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2013/11/02 20:20:07 adam Exp $
 
 Allow in-tree build.
 Handle .dylib extension on Darwin.
@@ -12,7 +12,7 @@ Handle .dylib extension on Darwin.
  
  cmake_minimum_required(VERSION 2.6)
  project(SDL2 C)
-@@ -1185,10 +1182,15 @@ list(APPEND INCLUDE_FILES ${BIN_INCLUDE_
+@@ -1213,10 +1213,15 @@ list(APPEND INCLUDE_FILES ${BIN_INCLUDE_
  install(FILES ${INCLUDE_FILES} DESTINATION include/SDL2)
  
  if(SDL_SHARED)
