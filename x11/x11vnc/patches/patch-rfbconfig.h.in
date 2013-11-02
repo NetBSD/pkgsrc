@@ -1,0 +1,39 @@
+$NetBSD: patch-rfbconfig.h.in,v 1.1 2013/11/02 07:32:28 obache Exp $
+
+* check openpty(3)
+
+--- rfbconfig.h.in.orig	2011-08-10 22:35:32.000000000 +0000
++++ rfbconfig.h.in
+@@ -99,6 +99,9 @@
+ /* openssl libssl library present */
+ #undef HAVE_LIBSSL
+ 
++/* Define to 1 if you have the <libutil.h> header file. */
++#undef HAVE_LIBUTIL_H
++
+ /* XDAMAGE extension build environment present */
+ #undef HAVE_LIBXDAMAGE
+ 
+@@ -156,6 +159,12 @@
+ /* Define to 1 if you have the <netinet/in.h> header file. */
+ #undef HAVE_NETINET_IN_H
+ 
++/* Define to `1' if you have the `openpty' function. */
++#undef HAVE_OPENPTY
++
++/* Define to 1 if you have the <pty.h> header file. */
++#undef HAVE_PTY_H
++
+ /* Define to 1 if you have the <pwd.h> header file. */
+ #undef HAVE_PWD_H
+ 
+@@ -271,6 +280,9 @@
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the <util.h> header file. */
++#undef HAVE_UTIL_H
++
+ /* Define to 1 if you have the <utmpx.h> header file. */
+ #undef HAVE_UTMPX_H
+ 
