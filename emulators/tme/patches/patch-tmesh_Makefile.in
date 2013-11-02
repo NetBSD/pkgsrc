@@ -1,0 +1,15 @@
+$NetBSD: patch-tmesh_Makefile.in,v 1.1 2013/11/02 21:53:36 martin Exp $
+
+Provide a default path for modules
+
+--- tmesh/Makefile.in.orig	2010-06-05 21:57:47.000000000 +0200
++++ tmesh/Makefile.in	2013-11-02 21:37:20.000000000 +0100
+@@ -111,7 +111,7 @@
+ CXXDEPMODE = @CXXDEPMODE@
+ CXXFLAGS = @CXXFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+-DEFS = @DEFS@
++DEFS = @DEFS@ -DLTDL_LIBRARY_PATH_DEFAULT='"@prefix@/lib"'
+ DEPDIR = @DEPDIR@
+ ECHO = @ECHO@
+ ECHO_C = @ECHO_C@
