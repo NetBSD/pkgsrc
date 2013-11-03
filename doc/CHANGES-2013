@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4033 2013/11/03 10:20:51 mef Exp $
+$NetBSD: CHANGES-2013,v 1.4034 2013/11/03 12:47:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5650,3 +5650,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/autoconf-archive to 2013.11.01 [wiz 2013-11-03]
 	Added cross/nios2-binutils version 2.20 [mef 2013-11-03]
 	Added cross/nios2-gcc version 3.4.6 [mef 2013-11-03]
+	Updated devel/fossil to 1.27 [ryoon 2013-11-03]
