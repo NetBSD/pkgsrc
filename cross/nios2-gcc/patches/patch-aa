@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 2013/11/03 10:16:03 mef Exp $
+#
+# craft FPBIT_FUNCS and DPBIT_FUNCS lists to avoid routine collision
+# against NetBSD softfloat implementation. Following twelve are to
+# be eliminated;
+#	_addsub_df.o _addsub_sf.o _df_to_sf.o _df_to_si.o
+#	_div_df.o _div_sf.o _mul_df.o _mul_sf.o _sf_to_df.o _sf_to_si.o
+#	_si_to_df.o _si_to_sf.o
+
+--- gcc/Makefile.in.orig	2010-08-31 07:47:29.000000000 +0900
++++ gcc/Makefile.in	2010-11-24 10:42:04.000000000 +0900
+@@ -912,15 +912,15 @@
+ # Defined in libgcov.c, included only in gcov library
+ LIBGCOV = _gcov _gcov_merge_add _gcov_merge_single _gcov_merge_delta
+ 
+-FPBIT_FUNCS = _pack_sf _unpack_sf _addsub_sf _mul_sf _div_sf \
++FPBIT_FUNCS = _pack_sf _unpack_sf \
+     _fpcmp_parts_sf _compare_sf _eq_sf _ne_sf _gt_sf _ge_sf \
+-    _lt_sf _le_sf _unord_sf _si_to_sf _sf_to_si _negate_sf _make_sf \
+-    _sf_to_df _sf_to_tf _thenan_sf _sf_to_usi _usi_to_sf
++    _lt_sf _le_sf _unord_sf 	                _negate_sf _make_sf \
++    _sf_to_tf           _thenan_sf _sf_to_usi _usi_to_sf
+ 
+-DPBIT_FUNCS = _pack_df _unpack_df _addsub_df _mul_df _div_df \
++DPBIT_FUNCS = _pack_df _unpack_df \
+     _fpcmp_parts_df _compare_df _eq_df _ne_df _gt_df _ge_df \
+-    _lt_df _le_df _unord_df _si_to_df _df_to_si _negate_df _make_df \
+-    _df_to_sf _df_to_tf _thenan_df _df_to_usi _usi_to_df
++    _lt_df _le_df _unord_df 	                 negate_df _make_df \
++    _df_to_tf           _thenan_df _df_to_usi _usi_to_df
+ 
+ TPBIT_FUNCS = _pack_tf _unpack_tf _addsub_tf _mul_tf _div_tf \
+     _fpcmp_parts_tf _compare_tf _eq_tf _ne_tf _gt_tf _ge_tf \

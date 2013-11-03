@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.common,v 1.1 2013/11/03 10:16:03 mef Exp $
+#
+# used by cross/nios2-binutils/Makefile
+# used by cross/nios2-gcc/Makefile
+
+# sentinel to avoid duplicate
+.if !defined(NIOS2_MAKEFILECOMMON)
+NIOS2_MAKEFILECOMMON=  # yes
+
+MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
+DISTNAME=		nios2_gnu_gcc3_10.0
+#			nios2_gnu_gcc3_10.1.tgz are the exactly same, see MD5
+
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+
+NIOS2_TARGET?=		nios2-elf
+PLIST_SUBST+=		NIOS2_TARGET=${NIOS2_TARGET:Q}
+
+USE_CROSSBASE=		yes
+BUILD_DEFS+=		CROSSBASE
+PATH:=			${CROSSBASE}/bin:${PATH}
+
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+
+.if defined(GNU_CONFIGURE)
+CONFIGURE_ARGS=		# reset
+CONFIGURE_ARGS+=	--target=${NIOS2_TARGET:Q}
+# following line to avoid getting
+#    make: exec(nios2--netbsdelf-ar) failed (No such file or directory)
+USE_GNU_CONFIGURE_HOST= NO
+.endif
+
+.endif
