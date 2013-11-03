@@ -1,0 +1,24 @@
+$NetBSD: patch-netwerk_wifi_moz.build,v 1.1 2013/11/03 04:52:00 ryoon Exp $
+
+--- netwerk/wifi/moz.build.orig	2013-09-10 03:43:50.000000000 +0000
++++ netwerk/wifi/moz.build
+@@ -31,6 +31,10 @@ if CONFIG['OS_ARCH'] == 'Darwin':
+     CPP_SOURCES += [
+         'nsWifiScannerMac.cpp',
+     ]
++elif CONFIG['OS_ARCH'] == 'FreeBSD':
++    CPP_SOURCES += [
++        'nsWifiScannerFreeBSD.cpp',
++    ]
+ elif CONFIG['OS_ARCH'] == 'WINNT':
+     CPP_SOURCES += [
+         'nsWifiScannerWin.cpp',
+@@ -40,7 +44,7 @@ elif CONFIG['OS_ARCH'] == 'SunOS':
+         'nsWifiScannerSolaris.cpp',
+     ]
+ 
+-if CONFIG['MOZ_ENABLE_DBUS']:
++if CONFIG['NECKO_WIFI_DBUS']:
+     CPP_SOURCES += [
+         'nsWifiScannerDBus.cpp',
+     ]
