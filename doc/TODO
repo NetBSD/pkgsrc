@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12698 2013/11/03 16:02:35 wiz Exp $
+$NetBSD: TODO,v 1.12699 2013/11/03 16:10:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.3
-	o kde-4.11.1
 	o kde4-4.11.2
 	o kdenlive-0.9.6
 	o kdevelop-4.5
@@ -706,7 +705,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o krusader-2.0
 	o ktorrent-4.3.1
 	o ktorrent3-3.3.4
-	o lablgtk-2.18.0
 	o lapack-3.4.1
 	o lbdb-0.38
 	o lcc-4.2
@@ -1103,7 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20131026
+	o x264-devel-20131102
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
