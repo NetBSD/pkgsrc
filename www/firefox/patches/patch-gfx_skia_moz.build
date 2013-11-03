@@ -1,16 +1,7 @@
-$NetBSD: patch-gfx_skia_moz.build,v 1.2 2013/11/02 22:57:55 ryoon Exp $
+$NetBSD: patch-gfx_skia_moz.build,v 1.3 2013/11/03 11:29:34 ryoon Exp $
 
 --- gfx/skia/moz.build.orig	2013-10-25 22:27:18.000000000 +0000
 +++ gfx/skia/moz.build
-@@ -183,7 +183,7 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gt
-         'SkTime_Unix.cpp',
-         'SkOSFile.cpp',
-     ]
--    if CONFIG['OS_TARGET'] in ('Linux', 'FreeBSD', 'NetBSD'):
-+    if CONFIG['OS_TARGET'] in ('Linux', 'FreeBSD', 'NetBSD', 'DragonFly'):
-         CPP_SOURCES += [
-             'SkThreadUtils_pthread_linux.cpp',
-         ]
 @@ -197,7 +197,7 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'qt
          'SkFontHost_FreeType_common.cpp',
          'SkOSFile.cpp',
