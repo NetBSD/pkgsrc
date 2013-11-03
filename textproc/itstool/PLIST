@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/10 17:55:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/03 16:10:09 wiz Exp $
 bin/itstool
 man/man1/itstool.1
 share/itstool/its/docbook.its
+share/itstool/its/docbook5.its
 share/itstool/its/its.its
 share/itstool/its/mallard.its
 share/itstool/its/ttml.its
