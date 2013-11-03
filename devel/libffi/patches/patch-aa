@@ -1,12 +1,17 @@
-$NetBSD: patch-aa,v 1.17 2013/04/06 12:41:23 obache Exp $
-
-Extend which ports we accept to deal with.
-
-Disable multilib directories.
+$NetBSD: patch-aa,v 1.18 2013/11/03 23:51:51 jklos Exp $
 
 --- configure.orig	2013-03-17 22:36:19.000000000 +0000
 +++ configure
-@@ -13331,7 +13331,7 @@ case "$host" in
+@@ -651,6 +651,8 @@ XTENSA_FALSE
+ XTENSA_TRUE
+ TILE_FALSE
+ TILE_TRUE
++VAX_FALSE
++VAX_TRUE
+ PA64_HPUX_FALSE
+ PA64_HPUX_TRUE
+ PA_HPUX_FALSE
+@@ -13331,7 +13333,7 @@ case "$host" in
  	TARGET=FRV; TARGETDIR=frv
  	;;
  
@@ -15,7 +20,7 @@ Disable multilib directories.
  	TARGET=PA_LINUX; TARGETDIR=pa
  	;;
    hppa*64-*-hpux*)
-@@ -13428,7 +13428,7 @@ case "$host" in
+@@ -13428,7 +13430,7 @@ case "$host" in
    mips-sgi-irix5.* | mips-sgi-irix6.* | mips*-*-rtems*)
  	TARGET=MIPS; TARGETDIR=mips
  	;;
@@ -24,7 +29,7 @@ Disable multilib directories.
  	# Support 128-bit long double for NewABI.
  	HAVE_LONG_DOUBLE='defined(__mips64)'
  	TARGET=MIPS; TARGETDIR=mips
-@@ -13449,7 +13449,7 @@ case "$host" in
+@@ -13449,7 +13451,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
@@ -33,7 +38,7 @@ Disable multilib directories.
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
  	;;
    powerpc64-*-freebsd*)
-@@ -13463,7 +13463,7 @@ case "$host" in
+@@ -13463,7 +13465,7 @@ case "$host" in
  	TARGET=S390; TARGETDIR=s390
  	;;
  
@@ -42,7 +47,33 @@ Disable multilib directories.
  	TARGET=SH; TARGETDIR=sh
  	;;
    sh64-*-* | sh5*-*-*)
-@@ -14661,7 +14661,7 @@ case "$target" in
+@@ -13478,6 +13480,10 @@ case "$host" in
+         TARGET=TILE; TARGETDIR=tile
+         ;;
+ 
++  vax-*-*)
++	TARGET=VAX; TARGETDIR=vax
++	;;
++
+   xtensa*-*)
+ 	TARGET=XTENSA; TARGETDIR=xtensa
+ 	;;
+@@ -13747,6 +13753,14 @@ else
+   TILE_FALSE=
+ fi
+ 
++ if test x$TARGET = xVAX; then
++  VAX_TRUE=
++  VAX_FALSE='#'
++else
++  VAX_TRUE='#'
++  VAX_FALSE=
++fi
++
+  if test x$TARGET = xXTENSA; then
+   XTENSA_TRUE=
+   XTENSA_FALSE='#'
+@@ -14661,7 +14675,7 @@ case "$target" in
  $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
@@ -51,7 +82,7 @@ Disable multilib directories.
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
-@@ -14840,11 +14840,6 @@ if test "x$GCC" = "xyes"; then
+@@ -14840,11 +14854,6 @@ if test "x$GCC" = "xyes"; then
      toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
      toolexeclibdir='$(libdir)'
    fi
@@ -63,7 +94,18 @@ Disable multilib directories.
  
  else
    toolexeclibdir='$(libdir)'
-@@ -16734,13 +16729,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+@@ -15135,6 +15144,10 @@ if test -z "${TILE_TRUE}" && test -z "${
+   as_fn_error $? "conditional \"TILE\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+ fi
++if test -z "${VAX_TRUE}" && test -z "${VAX_FALSE}"; then
++  as_fn_error $? "conditional \"VAX\" was never defined.
++Usually this means the macro was only invoked conditionally." "$LINENO" 5
++fi
+ if test -z "${XTENSA_TRUE}" && test -z "${XTENSA_FALSE}"; then
+   as_fn_error $? "conditional \"XTENSA\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+@@ -16734,13 +16751,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
  /-all-all/d
  a\\
  	@ HOST="\$(HOST)\" \\\\\\
