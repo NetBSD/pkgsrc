@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4036 2013/11/03 15:58:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4037 2013/11/03 15:59:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5653,3 +5653,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/fossil to 1.27 [ryoon 2013-11-03]
 	Added www/firefox24-l10n version 24.1.0 [ryoon 2013-11-03]
 	Updated databases/py-sqlparse to 0.1.10 [wiz 2013-11-03]
+	Updated devel/py-setuptools to 1.2 [wiz 2013-11-03]
