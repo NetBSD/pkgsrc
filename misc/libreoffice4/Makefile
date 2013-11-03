@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/10/19 09:07:08 adam Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/03 03:40:49 ryoon Exp $
 
-VER=		4.1.2.3
+VER=		4.1.3.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
-PKGREVISION=	3
 CATEGORIES=	misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.2/
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.3/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -81,12 +80,12 @@ MORE_DISTFILES= \
 	libcdr-0.0.14.tar.bz2 \
 	libmspub-0.0.6.tar.bz2 \
 	8473296c671b6e3dd8197f4145e0854b-libodfgen-0.0.2.tar.bz2 \
-	libmwaw-0.1.10.tar.bz2 \
 	b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2 \
 	05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2 \
 	08c85a6d6d793daee14e10e22eefdc4b-mdds_0.8.1.tar.bz2 \
 	ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz \
 	185d60944ea767075d27247c3162b3bc-unowinreg.dll
+#	libmwaw-0.1.10.tar.bz2
 #	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip
 #	ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz
 #	ea2acaf140ae40a87a952caa75184f4d-liborcus-0.5.1.tar.bz2
@@ -192,6 +191,7 @@ CONFIGURE_ARGS+=	--with-system-mesa-headers
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-openldap
 CONFIGURE_ARGS+=	--with-system-openssl
+CONFIGURE_ARGS+=	--with-system-libmwaw
 CONFIGURE_ARGS+=	--with-system-orcus
 CONFIGURE_ARGS+=	--with-system-poppler
 CONFIGURE_ARGS+=	--with-system-postgresql
@@ -258,6 +258,7 @@ post-install:
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
+.include "../../converters/libmwaw/buildlink3.mk"
 .include "../../converters/orcus/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
