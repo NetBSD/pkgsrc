@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4028 2013/11/03 01:02:13 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4029 2013/11/03 03:42:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5644,3 +5644,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/tk to 8.5.15 [adam 2013-11-02]
 	Updated www/firefox to 25.0 [ryoon 2013-11-02]
 	Updated devel/p5-MooX-Cmd to 0.004 [wiz 2013-11-03]
+	Updated misc/libreoffice4 to 4.1.3.2 [ryoon 2013-11-03]
