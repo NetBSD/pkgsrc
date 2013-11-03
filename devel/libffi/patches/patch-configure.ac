@@ -1,0 +1,42 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/11/03 23:51:51 jklos Exp $
+
+--- configure.ac.orig	2013-03-17 22:36:15.000000000 +0000
++++ configure.ac
+@@ -191,6 +191,10 @@ case "$host" in
+ 	TARGET=M68K; TARGETDIR=m68k
+ 	;;
+ 
++  m88k-*-*)
++	TARGET=M88K; TARGETDIR=m88k
++	;;
++
+   microblaze*-*-*)
+ 	TARGET=MICROBLAZE; TARGETDIR=microblaze
+ 	;;
+@@ -256,6 +260,10 @@ case "$host" in
+         TARGET=TILE; TARGETDIR=tile
+         ;;
+ 
++  vax-*-*)
++	TARGET=VAX; TARGETDIR=vax
++	;;
++
+   xtensa*-*)
+ 	TARGET=XTENSA; TARGETDIR=xtensa
+ 	;;
+@@ -281,6 +289,7 @@ AM_CONDITIONAL(ALPHA, test x$TARGET = xA
+ AM_CONDITIONAL(IA64, test x$TARGET = xIA64)
+ AM_CONDITIONAL(M32R, test x$TARGET = xM32R)
+ AM_CONDITIONAL(M68K, test x$TARGET = xM68K)
++AM_CONDITIONAL(M88K, test x$TARGET = xM88K)
+ AM_CONDITIONAL(MICROBLAZE, test x$TARGET = xMICROBLAZE)
+ AM_CONDITIONAL(METAG, test x$TARGET = xMETAG)
+ AM_CONDITIONAL(MOXIE, test x$TARGET = xMOXIE)
+@@ -301,6 +310,7 @@ AM_CONDITIONAL(PA_LINUX, test x$TARGET =
+ AM_CONDITIONAL(PA_HPUX, test x$TARGET = xPA_HPUX)
+ AM_CONDITIONAL(PA64_HPUX, test x$TARGET = xPA64_HPUX)
+ AM_CONDITIONAL(TILE, test x$TARGET = xTILE)
++AM_CONDITIONAL(VAX, test x$TARGET = xVAX)
+ AM_CONDITIONAL(XTENSA, test x$TARGET = xXTENSA)
+ 
+ AC_HEADER_STDC
