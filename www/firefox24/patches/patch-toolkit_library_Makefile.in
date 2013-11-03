@@ -1,0 +1,12 @@
+$NetBSD: patch-toolkit_library_Makefile.in,v 1.1 2013/11/03 04:52:00 ryoon Exp $
+
+--- toolkit/library/Makefile.in.orig	2013-05-11 19:19:54.000000000 +0000
++++ toolkit/library/Makefile.in
+@@ -405,6 +405,7 @@ endif
+ EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib)
+ 
+ ifdef MOZ_WEBRTC
++EXTRA_DSO_LDOPTS += $(MOZ_LIBV4L2_LIBS)
+ ifdef MOZ_PEERCONNECTION
+ COMPONENT_LIBS += peerconnection
+ endif

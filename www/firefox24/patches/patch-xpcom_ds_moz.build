@@ -1,0 +1,24 @@
+$NetBSD: patch-xpcom_ds_moz.build,v 1.1 2013/11/03 04:52:00 ryoon Exp $
+
+* Honor sFirstTimeStamp and sProcessCreation, fix segfault.
+
+--- xpcom/ds/moz.build.orig	2013-09-10 03:43:57.000000000 +0000
++++ xpcom/ds/moz.build
+@@ -95,7 +95,6 @@ CPP_SOURCES += [
+     'nsSupportsPrimitives.cpp',
+     'nsUnicharBuffer.cpp',
+     'nsVariant.cpp',
+-    'TimeStamp.cpp',
+ ]
+ 
+ if CONFIG['HAVE_CLOCK_MONOTONIC']:
+@@ -113,5 +112,9 @@ elif CONFIG['OS_ARCH'] == 'WINNT':
+ else:
+     error('No TimeStamp implementation on this platform.  Build will not succeed')
+ 
++CPP_SOURCES += [
++    'TimeStamp.cpp',
++]
++
+ LIBRARY_NAME = 'xpcomds_s'
+ 

@@ -1,0 +1,16 @@
+$NetBSD: patch-gfx_skia_moz.build,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+
+--- gfx/skia/moz.build.orig	2013-09-10 03:43:30.000000000 +0000
++++ gfx/skia/moz.build
+@@ -188,10 +188,9 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'qt
+         'SkMMapStream.cpp',
+         'SkOSFile.cpp',
+     ]
+-    if CONFIG['OS_TARGET'] == 'Linux':
++    if CONFIG['MOZ_X11'] == 1 or CONFIG['OS_TARGET'] == 'Linux':
+         CPP_SOURCES += [
+             'SkFontHost_linux.cpp',
+-            'SkFontHost_tables.cpp',
+             'SkThread_pthread.cpp',
+             'SkTime_Unix.cpp',
+         ]

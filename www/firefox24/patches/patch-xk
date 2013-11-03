@@ -1,0 +1,72 @@
+$NetBSD: patch-xk,v 1.1 2013/11/03 04:52:00 ryoon Exp $
+
+NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
+
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s.orig	2013-01-04 23:44:47.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s
+@@ -25,23 +25,23 @@
+ 	.type  SharedStub,@function
+ 
+ SharedStub:
+-        stwu	sp,-112(sp)			# room for 
+-						# linkage (8),
+-						# gprData (32),
+-						# fprData (64), 
+-						# stack alignment(8)
++        stwu	sp,-112(sp)			// room for 
++						// linkage (8),
++						// gprData (32),
++						// fprData (64), 
++						// stack alignment(8)
+         mflr	r0
+-	stw	r0,116(sp)			# save LR backchain
++	stw	r0,116(sp)			// save LR backchain
+ 
+-	stw	r4,12(sp)			# save GP registers
+-	stw	r5,16(sp)			# (n.b. that we don't save r3
+-	stw	r6,20(sp)			# because PrepareAndDispatch() is savvy)
++	stw	r4,12(sp)			// save GP registers
++	stw	r5,16(sp)			// (n.b. that we don't save r3
++	stw	r6,20(sp)			// because PrepareAndDispatch() is savvy)
+ 	stw	r7,24(sp)
+ 	stw	r8,28(sp)
+ 	stw	r9,32(sp)
+ 	stw	r10,36(sp)
+ 
+-	stfd	f1,40(sp)			# save FP registers
++	stfd	f1,40(sp)			// save FP registers
+ 	stfd	f2,48(sp)
+ 	stfd	f3,56(sp)
+ 	stfd	f4,64(sp)
+@@ -50,21 +50,21 @@ SharedStub:
+ 	stfd	f7,88(sp)
+ 	stfd	f8,96(sp)
+ 
+-						# r3 has the 'self' pointer already
++						// r3 has the 'self' pointer already
+ 	
+-	mr      r4,r11				# r4 <= methodIndex selector, passed
+-						# via r11 in the nsXPTCStubBase::StubXX() call
++	mr      r4,r11				// r4 <= methodIndex selector, passed
++						// via r11 in the nsXPTCStubBase::StubXX() call
+ 	
+-	addi	r5,sp,120			# r5 <= pointer to callers args area,
+-						# beyond r3-r10/f1-f8 mapped range
++	addi	r5,sp,120			// r5 <= pointer to callers args area,
++						// beyond r3-r10/f1-f8 mapped range
+ 	
+-	addi	r6,sp,8				# r6 <= gprData
+-	addi	r7,sp,40			# r7 <= fprData
++	addi	r6,sp,8				// r6 <= gprData
++	addi	r7,sp,40			// r7 <= fprData
+       
+-	bl	PrepareAndDispatch@local	# Go!
++	bl	PrepareAndDispatch@local	// Go!
+     
+-	lwz	r0,116(sp)			# restore LR
++	lwz	r0,116(sp)			// restore LR
+ 	mtlr	r0
+-	la	sp,112(sp)			# clean up the stack
++	la	sp,112(sp)			// clean up the stack
+ 	blr
+ 
