@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/09/30 18:21:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/11/03 15:59:41 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -145,12 +145,18 @@ ${PYSITELIB}/setuptools/site-patch.pyo
 ${PYSITELIB}/setuptools/ssl_support.py
 ${PYSITELIB}/setuptools/ssl_support.pyc
 ${PYSITELIB}/setuptools/ssl_support.pyo
+${PYSITELIB}/setuptools/svn_utils.py
+${PYSITELIB}/setuptools/svn_utils.pyc
+${PYSITELIB}/setuptools/svn_utils.pyo
 ${PYSITELIB}/setuptools/tests/__init__.py
 ${PYSITELIB}/setuptools/tests/__init__.pyc
 ${PYSITELIB}/setuptools/tests/__init__.pyo
 ${PYSITELIB}/setuptools/tests/doctest.py
 ${PYSITELIB}/setuptools/tests/doctest.pyc
 ${PYSITELIB}/setuptools/tests/doctest.pyo
+${PYSITELIB}/setuptools/tests/environment.py
+${PYSITELIB}/setuptools/tests/environment.pyc
+${PYSITELIB}/setuptools/tests/environment.pyo
 ${PYSITELIB}/setuptools/tests/py26compat.py
 ${PYSITELIB}/setuptools/tests/py26compat.pyc
 ${PYSITELIB}/setuptools/tests/py26compat.pyo
@@ -193,6 +199,9 @@ ${PYSITELIB}/setuptools/tests/test_sandbox.pyo
 ${PYSITELIB}/setuptools/tests/test_sdist.py
 ${PYSITELIB}/setuptools/tests/test_sdist.pyc
 ${PYSITELIB}/setuptools/tests/test_sdist.pyo
+${PYSITELIB}/setuptools/tests/test_svn.py
+${PYSITELIB}/setuptools/tests/test_svn.pyc
+${PYSITELIB}/setuptools/tests/test_svn.pyo
 ${PYSITELIB}/setuptools/tests/test_test.py
 ${PYSITELIB}/setuptools/tests/test_test.pyc
 ${PYSITELIB}/setuptools/tests/test_test.pyo
