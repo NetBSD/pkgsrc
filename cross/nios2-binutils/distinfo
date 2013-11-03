@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/11/03 10:16:03 mef Exp $
+
+SHA1 (nios2_gnu_gcc4_11.0.tgz) = b5380dd21ee36b5fea262a7846312894a97a2c75
+RMD160 (nios2_gnu_gcc4_11.0.tgz) = b66e3414b60b4d85e2931a07a55771789b0432af
+Size (nios2_gnu_gcc4_11.0.tgz) = 110337817 bytes
