@@ -1,0 +1,14 @@
+$NetBSD: patch-js_src_shell_Makefile.in,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+
+--- js/src/shell/Makefile.in.orig	2013-09-10 03:43:36.000000000 +0000
++++ js/src/shell/Makefile.in
+@@ -27,6 +27,9 @@ LIBS      = $(NSPR_LIBS) $(EDITLINE_LIBS
+ ifdef MOZ_NATIVE_FFI
+ EXTRA_LIBS += $(MOZ_FFI_LIBS)
+ endif
++ifdef MOZ_NATIVE_ICU
++EXTRA_LIBS += $(MOZ_ICU_LIBS)
++endif
+ 
+ LOCAL_INCLUDES += -I$(topsrcdir) -I..
+ 

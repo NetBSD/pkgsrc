@@ -1,0 +1,27 @@
+$NetBSD: patch-mb,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2013-09-10 03:43:57.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
+@@ -183,7 +183,7 @@ endif
+ #
+ # NetBSD/PPC
+ #
+-ifneq (,$(filter NetBSDmacppc NetBSDbebox NetBSDofppc NetBSDprep NetBSDamigappc,$(OS_ARCH)$(OS_TEST)))                           
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDpowerpc)
+ ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
+ endif
+ 
+@@ -235,6 +235,13 @@ ifneq (,$(filter OpenBSDsparc64 FreeBSDs
+ ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
+ endif
+ #
++# NetBSD/SPARC64
++#
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
++CPPSRCS                := xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_openbsd.cpp
++ASFILES                := xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_netbsd.s
++endif
++#
+ # Solaris/SPARC
+ #
+ ifeq ($(OS_ARCH),SunOS)

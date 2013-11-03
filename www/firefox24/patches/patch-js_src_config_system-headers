@@ -1,0 +1,19 @@
+$NetBSD: patch-js_src_config_system-headers,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+
+--- js/src/config/system-headers.orig	2013-09-10 03:43:34.000000000 +0000
++++ js/src/config/system-headers
+@@ -1132,3 +1132,14 @@ kvm.h
+ spawn.h
+ err.h
+ xlocale.h
++#if MOZ_NATIVE_ICU==1
++unicode/locid.h
++unicode/numsys.h
++unicode/ucal.h
++unicode/ucol.h
++unicode/udat.h
++unicode/udatpg.h
++unicode/uenum.h
++unicode/unum.h
++unicode/ustring.h
++#endif

@@ -1,0 +1,23 @@
+$NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.1 2013/11/03 04:52:00 ryoon Exp $
+
+* Support NetBSD/amd64 and DragonFly/amd64.
+
+--- xpcom/reflect/xptcall/src/md/unix/moz.build.orig	2013-09-11 03:22:57.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/moz.build
+@@ -19,14 +19,14 @@ if CONFIG['OS_ARCH'] == 'Darwin':
+                 'xptcstubs_gcc_x86_unix.cpp',
+             ]
+ 
+-if CONFIG['OS_ARCH'] in ('NetBSD', 'OpenBSD', 'GNU'):
++if CONFIG['OS_ARCH'] in ('OpenBSD', 'GNU'):
+     if CONFIG['CPU_ARCH'] == 'x86':
+         CPP_SOURCES += [
+             'xptcinvoke_gcc_x86_unix.cpp',
+             'xptcstubs_gcc_x86_unix.cpp'
+         ]
+ 
+-if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD') or \
++if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'DragonFly') or \
+    CONFIG['OS_ARCH'].startswith('GNU_'):
+     if CONFIG['OS_TEST'] == 'x86_64':
+         CPP_SOURCES += [
