@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4038 2013/11/03 16:00:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4039 2013/11/03 16:02:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5655,3 +5655,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/py-sqlparse to 0.1.10 [wiz 2013-11-03]
 	Updated devel/py-setuptools to 1.2 [wiz 2013-11-03]
 	Updated fonts/harfbuzz to 0.9.23 [wiz 2013-11-03]
+	Updated graphics/dcraw to 9.19 [wiz 2013-11-03]
