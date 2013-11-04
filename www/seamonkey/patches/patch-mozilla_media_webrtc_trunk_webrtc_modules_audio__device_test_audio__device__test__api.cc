@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_audio__device_test_audio__device__test__api.cc,v 1.1 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_audio__device_test_audio__device__test__api.cc,v 1.2 2013/11/04 06:01:46 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/audio_device/test/audio_device_test_api.cc.orig	2013-09-16 18:26:51.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/audio_device/test/audio_device_test_api.cc.orig	2013-10-29 01:21:05.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/audio_device/test/audio_device_test_api.cc
 @@ -196,7 +196,7 @@ class AudioDeviceAPITest: public testing
      // Create default implementation instance
@@ -28,4 +28,4 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_audio__device_test_audi
 +#endif  // !WIN32 && !WEBRTC_LINUX && !defined(WEBRTC_BSD)
  
  TEST_F(AudioDeviceAPITest, RecordingSampleRate) {
-   WebRtc_UWord32 sampleRate(0);
+   uint32_t sampleRate(0);

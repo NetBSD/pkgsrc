@@ -1,8 +1,16 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.7 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.8 2013/11/04 06:01:46 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2013-09-16 18:26:27.000000000 +0000
+--- mozilla/config/system-headers.orig	2013-10-29 01:20:42.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -1132,3 +1132,14 @@ kvm.h
+@@ -469,6 +469,7 @@ IOKit/IOMessage.h
+ IOKit/pwr_mgt/IOPMLib.h
+ iomanip
+ ios
++iosfwd
+ iostream
+ iostream.h
+ iterator
+@@ -1132,3 +1133,14 @@ kvm.h
  spawn.h
  err.h
  xlocale.h
