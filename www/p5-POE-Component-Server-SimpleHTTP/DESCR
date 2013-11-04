@@ -1,0 +1,2 @@
+The Perl 5 module POE::Component::Server::SimpleHTTP is a simple HTTP Server
+implementation for POE.
