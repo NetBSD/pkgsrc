@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1800 2013/11/01 11:40:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.1801 2013/11/04 21:23:53 tonnerre Exp $
 #
 
 COMMENT=	Development utilities
@@ -1002,6 +1002,7 @@ SUBDIR+=	p5-MooseX-Object-Pluggable
 SUBDIR+=	p5-MooseX-OneArgNew
 SUBDIR+=	p5-MooseX-Param
 SUBDIR+=	p5-MooseX-Params-Validate
+SUBDIR+=	p5-MooseX-POE
 SUBDIR+=	p5-MooseX-Role-Parameterized
 SUBDIR+=	p5-MooseX-Role-WithOverloading
 SUBDIR+=	p5-MooseX-SemiAffordanceAccessor
