@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/11 19:46:52 asau Exp $
+# $NetBSD: Makefile,v 1.27 2013/11/04 16:41:43 joerg Exp $
 
 DISTNAME=	arj-3.10.22
 CATEGORIES=	archivers
@@ -24,9 +24,8 @@ ARJ_DOCSDIR=		${PREFIX}/share/doc/arj
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-4.*)
-CFLAGS+=	-fno-unit-at-a-time
-.endif
+_WRAP_EXTRA_ARGS.CC+=	-g -O0
+BUILDLINK_TRANSFORM+=	rm:-s
 
 pre-configure:
 	${CP} -f ${WRKSRC}/environ.c ${WRKSRC}/environ.c.1
