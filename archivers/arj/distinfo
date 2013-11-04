@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2009/05/13 14:26:24 hasso Exp $
+$NetBSD: distinfo,v 1.15 2013/11/04 16:41:43 joerg Exp $
 
 SHA1 (arj-3.10.22.tar.gz) = e8470f480e9eee14906e5485a8898e5c24738c8b
 RMD160 (arj-3.10.22.tar.gz) = 80f8a1a8cd203f73def8e957d96563a4dba80153
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 186b05ec694daa25504123690f9b7bba9f22a7f4
 SHA1 (patch-ae) = 46181177d4a42b510a02ce8e138275dca453f1de
 SHA1 (patch-af) = c4e5a0dc8a2b42af471fd065ab28f162d94bd0b7
 SHA1 (patch-ag) = ce4d0fefed6ccf7ab7fad864a7cb7faa36e4e4ac
+SHA1 (patch-integr.c) = 8c3f9fd4db4d4b1323cceccd6cfa31dc09ab39af
