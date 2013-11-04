@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.996 2013/11/03 13:35:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.997 2013/11/04 21:39:26 tonnerre Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -447,6 +447,7 @@ SUBDIR+=	p5-Mojolicious
 SUBDIR+=	p5-Net-FastCGI
 SUBDIR+=	p5-Net-HTTP
 SUBDIR+=	p5-POE-Component-Server-PSGI
+SUBDIR+=	p5-POE-Component-Server-SimpleHTTP
 SUBDIR+=	p5-POE-Filter-HTTP-Parser
 SUBDIR+=	p5-PSGI
 SUBDIR+=	p5-ParallelUserAgent
