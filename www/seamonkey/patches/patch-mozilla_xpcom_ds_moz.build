@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.1 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.2 2013/11/04 06:01:46 ryoon Exp $
 
---- mozilla/xpcom/ds/moz.build.orig	2013-09-16 18:27:02.000000000 +0000
+--- mozilla/xpcom/ds/moz.build.orig	2013-10-29 01:21:14.000000000 +0000
 +++ mozilla/xpcom/ds/moz.build
 @@ -95,7 +95,6 @@ CPP_SOURCES += [
      'nsSupportsPrimitives.cpp',
@@ -9,8 +9,8 @@ $NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.1 2013/09/28 14:37:05 ryoon Exp $
 -    'TimeStamp.cpp',
  ]
  
- if CONFIG['HAVE_CLOCK_MONOTONIC']:
-@@ -113,5 +112,9 @@ elif CONFIG['OS_ARCH'] == 'WINNT':
+ if CONFIG['OS_ARCH'] == 'WINNT':
+@@ -113,6 +112,10 @@ elif CONFIG['OS_ARCH'] == 'Darwin':
  else:
      error('No TimeStamp implementation on this platform.  Build will not succeed')
  
@@ -18,5 +18,6 @@ $NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.1 2013/09/28 14:37:05 ryoon Exp $
 +    'TimeStamp.cpp',
 +]
 +
- LIBRARY_NAME = 'xpcomds_s'
- 
+ EXTRA_COMPONENTS += [
+     'nsINIProcessor.js',
+     'nsINIProcessor.manifest',
