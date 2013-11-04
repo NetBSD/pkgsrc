@@ -1,4 +1,7 @@
-$NetBSD: patch-ae,v 1.12 2011/08/22 17:16:24 adam Exp $
+$NetBSD: patch-ae,v 1.13 2013/11/04 09:38:26 jperkin Exp $
+
+Support DragonFlyBSD
+Support arpa/nameser_compat.h for OSX
 
 --- configure.orig	2008-08-20 16:06:05.000000000 +0000
 +++ configure
@@ -109,6 +112,15 @@ $NetBSD: patch-ae,v 1.12 2011/08/22 17:16:24 adam Exp $
  
             cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
+@@ -50834,7 +50835,7 @@ fi
+ 
+ 
+ 
+-for ac_header in arpa/nameser8_compat.h sys/param.h
++for ac_header in arpa/nameser_compat.h arpa/nameser8_compat.h sys/param.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
 @@ -51215,7 +51216,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
        gssapi_flavor=HEIMDAL
      fi
