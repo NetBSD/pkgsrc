@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/30 21:49:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/04 16:39:53 joerg Exp $
 #
 
 DISTNAME=	vdpau-driver-${PKGNAME:C/^.*-//}
@@ -21,4 +21,9 @@ pre-configure:
 
 .include "../../multimedia/libvdpau/buildlink3.mk"
 .include "../../multimedia/libva/buildlink3.mk"
+
+.if ${VAAPI_AVAILABLE} != "yes"
+PKG_FAIL_REASON=	"No VAAPI support on this platform"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
