@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2013/11/04 16:40:37 joerg Exp $
+
+--- configure.orig	2006-07-05 01:39:25.000000000 +0000
++++ configure
+@@ -3721,7 +3721,12 @@ fi
+ 
+           done
+           ;;
+-        -[lLR]*)
++        -R*)
++          ac_arg="-Wl,$ac_arg"
++          shift
++          set X $ac_arg "$@"
++          ;;
++        -[lLR]*|-Wl*)
+             ac_exists=false
+   for ac_i in $ac_cv_f77_libs; do
+     if test x"$ac_arg" = x"$ac_i"; then

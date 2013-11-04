@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/10/15 18:57:29 asau Exp $
+$NetBSD: distinfo,v 1.2 2013/11/04 16:40:37 joerg Exp $
 
 SHA1 (harminv-1.3.1.tar.gz) = ef75161233df92393110b783d2945b5915c8291a
 RMD160 (harminv-1.3.1.tar.gz) = 340de65da54b197f70adec43ecd2907a757d6d35
 Size (harminv-1.3.1.tar.gz) = 327832 bytes
+SHA1 (patch-configure) = cca3896b61c4ec41efbbdc49daa67a659887a8e6
