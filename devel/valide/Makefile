@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/10/10 14:42:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2013/11/04 16:42:21 joerg Exp $
 #
 
 DISTNAME=	valide-0.4.0
@@ -17,7 +17,7 @@ REPLACE_PYTHON+=	wscript waf \
 			*/wscript_build \
 			*/*/wscript_build
 
-WAF_ENV=	CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX:Q} \
+WAF_ENV=	PATH=${PATH} CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX:Q} \
 		CFLAGS=${CFLAGS:Q} CXXFLAGS=${CXXFLAGS:Q} \
 		LINKFLAGS=${LDFLAGS:Q} DESTDIR=${DESTDIR:Q}
 
