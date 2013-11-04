@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2006/02/26 17:01:25 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/11/04 16:41:16 joerg Exp $
 
 SHA1 (libdnsres-0.1a.tar.gz) = 570b5d8071dacf16ba7588d6c3fc6f4c3ed55976
 RMD160 (libdnsres-0.1a.tar.gz) = 05a92882d1fc0394792e9f28be4584650b46e323
 Size (libdnsres-0.1a.tar.gz) = 360583 bytes
 SHA1 (patch-aa) = e18e80c307c26e0d7c1626171f7c881092174b29
 SHA1 (patch-ab) = 29d8a2092c444899e4fdc703b35af33efa95192b
+SHA1 (patch-resolv.h) = 22b59a63b26ffcc5816809f7384c4fc9125d4cbd
