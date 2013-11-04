@@ -1,8 +1,16 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.2 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.3 2013/11/04 06:01:46 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2013-09-16 18:26:51.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2013-10-29 01:21:06.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc
-@@ -25,6 +25,9 @@
+@@ -18,13 +18,16 @@
+ #include <string.h>
+ 
+ //v4l includes
+-#if defined(__DragonFly__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__NetBSD__) || defined(__OpenBSD__)
+ #include <sys/videoio.h>
+ #elif defined(__sun)
+ #include <sys/videodev2.h>
  #else
  #include <linux/videodev2.h>
  #endif

@@ -1,8 +1,0 @@
-$NetBSD: patch-mozilla_ostream,v 1.3 2013/09/28 14:37:05 ryoon Exp $
-
---- mozilla/ostream.orig	2013-09-28 01:07:15.000000000 +0000
-+++ mozilla/ostream
-@@ -0,0 +1,3 @@
-+#pragma GCC visibility push(default)
-+#include_next <ostream>
-+#pragma GCC visibility pop

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.108 2013/10/21 10:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2013/11/04 06:01:46 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-SM_VER=		2.21
+SM_VER=		2.22
 #LIGHTNINGVER=	1.9
-PKGREVISION=	3
 CATEGORIES=	www
 #${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
@@ -69,8 +68,8 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
 post-install:
-	${TOUCH} ${TOUCH_FLAGS} \
-		${DESTDIR}${PREFIX}/include/seamonkey/mozilla/throw_gcc.h
+#	${TOUCH} ${TOUCH_FLAGS} \
+#		${DESTDIR}${PREFIX}/include/seamonkey/mozilla/throw_gcc.h
 	@${STEP_MSG} "Installing bundled seamonkey extensions."
 	rm -rf ${WRKDIR}/extensions
 	${MKDIR} ${WRKDIR}/extensions
