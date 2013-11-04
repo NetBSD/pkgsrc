@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/10/27 20:47:53 joerg Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/11/04 11:09:40 jperkin Exp $
 #
 # used by editors/emacs23/Makefile
 # used by editors/emacs23-nox11/Makefile
@@ -58,6 +58,10 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 # upstream bug #8395.  Details in:
 # http://lists.gnu.org/archive/html/emacs-bug-tracker/2011-07/msg00445.html
 CFLAGS+=		-fno-pie
+# Avoid 'malformed object' errors with older Xcode.
+.  if ${OS_VERSION:R} < 11
+INSTALL_UNSTRIPPED=	yes
+.  endif
 .endif
 
 .if (${OPSYS} == "NetBSD") && \
