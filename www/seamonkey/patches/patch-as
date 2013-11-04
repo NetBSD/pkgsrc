@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
+$NetBSD: patch-as,v 1.14 2013/11/04 06:01:46 ryoon Exp $
 
 * Fix _res is not supported for multi-threaded programs. error.
 * Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2013-09-16 18:26:39.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2013-10-29 01:20:53.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2424,6 +2424,7 @@ EOF
+@@ -2347,6 +2347,7 @@ EOF
  #pragma GCC visibility push(hidden)
  #pragma GCC visibility push(default)
  #include <string.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
  #pragma GCC visibility pop
  
  __attribute__ ((visibility ("default"))) void Func() {
-@@ -2432,7 +2433,7 @@ __attribute__ ((visibility ("default")))
+@@ -2355,7 +2356,7 @@ __attribute__ ((visibility ("default")))
  }
  EOF
                         ac_cv_have_visibility_builtin_bug=no
@@ -22,7 +22,7 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
                           ac_cv_have_visibility_builtin_bug=yes
                         else
                           if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -2657,7 +2658,7 @@ then
+@@ -2572,7 +2573,7 @@ then
      fi
  
  	case "$target" in
@@ -31,7 +31,7 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -2736,14 +2737,19 @@ fi
+@@ -2657,14 +2658,22 @@ fi
  AC_CACHE_CHECK(
      [for res_ninit()],
      ac_cv_func_res_ninit,
@@ -40,9 +40,12 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
-+        #ifdef __NetBSD__
-+        #error use of global _res variable in threaded programs is not portable
-+        #endif
++	#ifdef __NetBSD__
++	#error use of global _res variable in threaded programs is not portable
++	#endif
++        #include <sys/types.h>
++        #include <netinet/in.h>
++        #include <arpa/nameser.h>
          #include <resolv.h>
 -        ],
 -        [int foo = res_ninit(&_res);],
@@ -54,7 +57,7 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
          [ac_cv_func_res_ninit=no])
      ])
  
-@@ -3517,7 +3523,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3361,7 +3370,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -63,7 +66,7 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -4417,6 +4423,16 @@ fi
+@@ -4246,6 +4255,16 @@ fi
  dnl ========================================================
  dnl ECMAScript Internationalization API Support (uses ICU)
  dnl ========================================================
@@ -78,15 +81,15 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
- if test -n "$JS_STANDALONE"; then
-     ENABLE_INTL_API=1
-@@ -4429,37 +4445,36 @@ MOZ_ARG_ENABLE_BOOL(intl-api,
+ ENABLE_INTL_API=1
+ MOZ_ARG_DISABLE_BOOL(intl-api,
+@@ -4255,37 +4274,36 @@ MOZ_ARG_DISABLE_BOOL(intl-api,
  dnl Settings for the implementation of the ECMAScript Internationalization API
  if test -n "$ENABLE_INTL_API"; then
      AC_DEFINE(ENABLE_INTL_API)
 -    # We build ICU as a static library.
 -    AC_DEFINE(U_STATIC_IMPLEMENTATION)
- 
+-
 -    case "$OS_TARGET" in
 -        WINNT)
 -            ICU_LIB_NAMES="icuin icuuc icudt"
@@ -97,7 +100,7 @@ $NetBSD: patch-as,v 1.13 2013/09/28 14:37:05 ryoon Exp $
 -        *)
 -            AC_MSG_ERROR([ECMAScript Internationalization API is not yet supported on this platform])
 -    esac
--
+ 
 -    ICU_LIBS='$(call EXPAND_LIBNAME_PATH,$(ICU_LIB_NAMES),$(DEPTH)/intl/icu/lib)'
 -else
 -    ICU_LIB_NAMES=
