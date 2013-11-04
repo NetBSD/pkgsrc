@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2013/11/04 09:38:26 jperkin Exp $
+
+Support arpa/nameser_compat.h for OSX.
+
+--- config.h.in.orig	2008-08-20 16:05:20.000000000 +0000
++++ config.h.in
+@@ -35,6 +35,9 @@
+ /* Define to 1 if you have the <alsa/asoundlib.h> header file. */
+ #undef HAVE_ALSA_ASOUNDLIB_H
+ 
++/* Define to 1 if you have the <arpa/nameser_compat.h> header file. */
++#undef HAVE_ARPA_NAMESER_COMPAT_H
++
+ /* Define to 1 if you have the <arpa/nameser8_compat.h> header file. */
+ #undef HAVE_ARPA_NAMESER8_COMPAT_H
+ 
