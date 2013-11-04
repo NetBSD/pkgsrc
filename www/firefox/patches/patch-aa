@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2013/11/02 22:57:55 ryoon Exp $
+$NetBSD: patch-aa,v 1.17 2013/11/04 05:43:57 ryoon Exp $
 
 --- configure.in.orig	2013-10-25 22:27:10.000000000 +0000
 +++ configure.in
@@ -157,11 +157,21 @@ $NetBSD: patch-aa,v 1.16 2013/11/02 22:57:55 ryoon Exp $
  if test -n "$MOZ_WEBRTC"; then
     AC_MSG_RESULT("generating WebRTC Makefiles...")
  
-@@ -9426,7 +9465,6 @@ if test "A" = "A"; then
+@@ -9419,15 +9458,14 @@ dist=$MOZ_BUILD_ROOT/dist
+ ac_configure_args="$_SUBDIR_CONFIG_ARGS"
+ ac_configure_args="$ac_configure_args --enable-threadsafe"
+ # Switch to "$MOZ_BUILD_APP" != "browser" when enabling for desktop builds.
+-if test "A" = "A"; then
++#if test "A" = "A"; then
+     # The Internationalization API isn't on by default except in standalone JS
+     # engine builds.  Bugs to enable it in the browser:
+     #
      #   Desktop:  bug 853301
      #   Android:  bug 864843
      #   B2G:      bug 866301
 -    ac_configure_args="$ac_configure_args --disable-intl-api"
- fi
+-fi
++#fi
  if test "$BUILD_CTYPES"; then
      # Build js-ctypes on the platforms we can.
+     ac_configure_args="$ac_configure_args --enable-ctypes"
