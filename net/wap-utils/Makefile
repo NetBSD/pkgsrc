@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/10/20 17:59:30 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2013/11/04 16:40:09 joerg Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
@@ -19,5 +19,5 @@ INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
