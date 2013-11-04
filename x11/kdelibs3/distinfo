@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2012/08/02 11:43:08 jperkin Exp $
+$NetBSD: distinfo,v 1.105 2013/11/04 09:38:26 jperkin Exp $
 
 SHA1 (kdelibs-3.5.10.tar.bz2) = c930a25f4419134def55b8466c3a6f737227fb82
 RMD160 (kdelibs-3.5.10.tar.bz2) = 4c960664283c83ebc8e68932ca9044336fcff223
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = be278f29b743c573b71c7804eff26324e78ed779
 SHA1 (patch-ab) = 3a79b3e7fadef1a93a5490b716dace60f3de30a1
 SHA1 (patch-ac) = 205f99e8749c32bf445e23f6076dd642c10c8186
 SHA1 (patch-ad) = d8ddcea1a281474b7694979b14744c5e06b56b65
-SHA1 (patch-ae) = 5cf8eb6bb6a376ee3f9293504ab1cec58646446d
+SHA1 (patch-ae) = fc6bc5953d9872b8cd1b3e0f29134e92a366de8b
 SHA1 (patch-af) = c77e57b564719c45c24ce737a4c0d4154df8563b
 SHA1 (patch-aj) = 2ec8d33ce6684da7c60759cf395b78fa4ac2eaec
 SHA1 (patch-an) = d34a3cc0ac0b92921bcaeb9b05c5b7a99ee3566c
@@ -27,9 +27,11 @@ SHA1 (patch-bv) = ad0cd6ff687785bb9395608d07d0001309c9c6a6
 SHA1 (patch-cc) = 136bedb27637ab1679871a4940999e8d32c54a09
 SHA1 (patch-ce) = e9f7a348b0e4be1475ba8f56a8b474f139eb7781
 SHA1 (patch-cf) = 0409b64ee00f355bfc2056e596b519a241fcf522
+SHA1 (patch-config.h.in) = c76bf7392d686acb8694c4aa15bcaa8dc14ff059
 SHA1 (patch-da) = ac1888a52f22ac81c0fb51dda48c8e168516a229
 SHA1 (patch-db) = bba958ba9f3059074fd97174dacab2bf47801fa8
 SHA1 (patch-dc) = 3d6971b13599ac7acce9d63b76a8813e9c87bc96
 SHA1 (patch-dd) = 16c5972250c867cf87e959287fdbedd94e9bfd8c
 SHA1 (patch-kate_part_katebuffer.cpp) = bc5bf102cb5d843622878816d432019aa4811d05
 SHA1 (patch-kdeui-kaboutdialog.cpp) = 589fcc61547d98efa06231340bbf3eb3f7ed59cf
+SHA1 (patch-kio_misc_kpac_discovery.cpp) = c0ef3b4805628af48774f98bdfc613c4d0f12c5f
