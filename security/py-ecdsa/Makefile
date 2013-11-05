@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/10/29 08:12:09 gls Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/05 17:37:48 joerg Exp $
 
 DISTNAME=	python-ecdsa-0.10
 PKGNAME=	${PYPKGPREFIX}-ecdsa-0.10
+EGG_NAME=	ecdsa-0.0.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/warner/python-ecdsa/archive/
 FETCH_USING=	curl
@@ -19,5 +21,5 @@ REPLACE.python.old=	/usr/bin/env python
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	ecdsa/ecdsa.py ecdsa/ellipticcurve.py ecdsa/numbertheory.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
