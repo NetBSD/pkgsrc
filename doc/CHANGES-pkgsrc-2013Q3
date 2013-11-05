@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.10 2013/11/02 17:28:41 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.11 2013/11/05 07:07:11 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -40,3 +40,5 @@ Pullup ticket #4249 - requested by taca
 mail/roundcube: security update
 Pullup ticket #4251 - requested by tron
 net/wireshark: security update
+Pullup ticket #4250 - requested by joerg
+security/openssl: build fix for Linux/POWERPC64
