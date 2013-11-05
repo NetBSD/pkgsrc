@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2013/11/05 17:27:10 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2013-11-05 17:24:55.000000000 +0000
++++ configure
+@@ -34656,7 +34656,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-if test "$MPEGDecodeDelegate" == "$MPEGDecodeDelegateDefault" ; then
++if test "$MPEGDecodeDelegate" = "$MPEGDecodeDelegateDefault" ; then
+   MPEGDecodeDelegateDefault='ffmpeg'
+   # Extract the first word of ""$MPEGDecodeDelegateDefault"", so it can be a program name with args.
+ set dummy "$MPEGDecodeDelegateDefault"; ac_word=$2
+@@ -34741,7 +34741,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-if test "$MPEGEncodeDelegate" == "$MPEGEncodeDelegateDefault" ; then
++if test "$MPEGEncodeDelegate" = "$MPEGEncodeDelegateDefault" ; then
+   MPEGEncodeDelegateDefault='ffmpeg'
+   # Extract the first word of ""$MPEGEncodeDelegateDefault"", so it can be a program name with args.
+ set dummy "$MPEGEncodeDelegateDefault"; ac_word=$2
