@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2013/07/25 13:25:08 degroote Exp $
+$NetBSD: distinfo,v 1.22 2013/11/05 18:57:32 adam Exp $
 
-SHA1 (imapfilter-2.5.5.tar.gz) = 1f1c3d9568c69b7dcfc5616d42405b647383358b
-RMD160 (imapfilter-2.5.5.tar.gz) = ea7db693c8c4d470afd1a968f85b63b8a2580ae4
-Size (imapfilter-2.5.5.tar.gz) = 53104 bytes
-SHA1 (patch-aa) = 78f7bfc3bc15669db7ef437710a65cdd4c49daa9
+SHA1 (imapfilter-2.5.6.tar.gz) = 49ac7b7fb937b40eb42a162314de4f8866e33c11
+RMD160 (imapfilter-2.5.6.tar.gz) = 29571b98820e27d803ebcda95444e128e62c31bf
+Size (imapfilter-2.5.6.tar.gz) = 53579 bytes
+SHA1 (patch-aa) = b5f1a74de39389f1507c2d02fdb4f81b814cb85c

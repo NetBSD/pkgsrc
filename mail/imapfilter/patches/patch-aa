@@ -1,14 +1,25 @@
-$NetBSD: patch-aa,v 1.12 2013/07/19 13:58:56 degroote Exp $
+$NetBSD: patch-aa,v 1.13 2013/11/05 18:57:32 adam Exp $
 
---- src/Makefile.orig	2013-06-08 09:25:04.000000000 +0000
-+++ src/Makefile	2013-07-19 15:45:59.000000000 +0000
+--- src/Makefile.orig	2013-10-27 22:46:05.000000000 +0000
++++ src/Makefile
 @@ -1,5 +1,3 @@
 -DESTDIR =
 -PREFIX = /usr/local
  BINDIR = $(PREFIX)/bin
  SHAREDIR = $(PREFIX)/share/imapfilter
  MANDIR = $(PREFIX)/man
-@@ -34,7 +32,7 @@
+@@ -16,8 +14,8 @@ LIBPCRE = -lpcre
+ LIBSSL = -lssl
+ LIBCRYPTO = -lcrypto
+ 
+-CFLAGS = -Wall -Wextra -O -DCONFIG_SHAREDIR='"$(SHAREDIR)"' $(INCDIRS) $(MYCFLAGS)
+-LDFLAGS = $(LIBDIRS) $(MYLDFLAGS)
++CFLAGS += -Wall -Wextra -DCONFIG_SHAREDIR='"$(SHAREDIR)"' $(INCDIRS) $(MYCFLAGS)
++LDFLAGS += $(LIBDIRS) $(MYLDFLAGS)
+ LIBS = -lm $(LIBLUA) $(LIBPCRE) $(LIBSSL) $(LIBCRYPTO) $(MYLIBS)
+ 
+ MAN1 = imapfilter.1
+@@ -34,7 +32,7 @@ OBJ = auth.o buffer.o cert.o core.o file
  all: $(BIN)
  
  $(BIN): $(OBJ)
@@ -17,7 +28,7 @@ $NetBSD: patch-aa,v 1.12 2013/07/19 13:58:56 degroote Exp $
  
  $(OBJ): imapfilter.h
  buffer.o: buffer.h 
-@@ -52,18 +50,14 @@
+@@ -52,18 +50,14 @@ session.o: list.h session.h
  socket.o: session.h
  
  install: $(BIN)
