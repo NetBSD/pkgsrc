@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/01 11:40:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/05 17:39:15 joerg Exp $
 
 DISTNAME=	optcomp-1.4
 CATEGORIES=	devel
@@ -36,5 +36,6 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ocaml setup.ml -install
 
+.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
