@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/20 12:47:11 gls Exp $
-${PYSITELIB}/ecdsa-0.0.0-py2.7.egg-info
+@comment $NetBSD: PLIST,v 1.2 2013/11/05 17:37:48 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ecdsa/__init__.py
 ${PYSITELIB}/ecdsa/__init__.pyc
 ${PYSITELIB}/ecdsa/__init__.pyo
