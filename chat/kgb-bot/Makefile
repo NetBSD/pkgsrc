@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/11/05 02:13:42 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/05 11:15:43 tonnerre Exp $
 #
 
 DISTNAME=	App-KGB-1.31
 PKGNAME=	${DISTNAME:S/App-KGB/kgb-bot/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	chat perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -16,18 +16,19 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=	perl:run
 
 DEPENDS+=		p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
-DEPENDS+=		p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
-DEPENDS+=		p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
-DEPENDS+=		p5-subversion-[0-9]*:../../devel/p5-subversion
-DEPENDS+=		p5-YAML-[0-9]*:../../textproc/p5-YAML
 DEPENDS+=		p5-File-Touch-[0-9]*:../../devel/p5-File-Touch
-DEPENDS+=		p5-WWW-Shorten-[0-9]*:../../www/p5-WWW-Shorten
+DEPENDS+=		p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=		p5-JSON-RPC-[0-9]*:../../www/p5-JSON-RPC
+DEPENDS+=		p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=		p5-POE-[0-9]*:../../devel/p5-POE
 DEPENDS+=		p5-POE-Component-IRC-[0-9]*:../../chat/p5-POE-Component-IRC
 DEPENDS+=		p5-POE-Component-Server-SOAP-[0-9]*:../../www/p5-POE-Component-Server-SOAP
 DEPENDS+=		p5-Proc-PID-File-[0-9]*:../../devel/p5-Proc-PID-File
 DEPENDS+=		p5-Schedule-RateLimiter-[0-9]*:../../devel/p5-Schedule-RateLimiter
+DEPENDS+=		p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
+DEPENDS+=		p5-subversion-[0-9]*:../../devel/p5-subversion
+DEPENDS+=		p5-WWW-Shorten-[0-9]*:../../www/p5-WWW-Shorten
+DEPENDS+=		p5-YAML-[0-9]*:../../textproc/p5-YAML
 
 RCD_SCRIPTS=		kgb_bot
 RCD_SCRIPT_SRC.kgb_bot=	files/kgb_bot.sh
