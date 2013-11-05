@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/10/20 14:16:16 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/05 02:13:42 tonnerre Exp $
 #
 
-PKGNAME=	kgb-bot-1.31
-DISTNAME=	${PKGNAME:S/kgb-bot/App-KGB/}
+DISTNAME=	App-KGB-1.31
+PKGNAME=	${DISTNAME:S/App-KGB/kgb-bot/}
+PKGREVISION=	1
 
 CATEGORIES=	chat perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -22,6 +23,14 @@ DEPENDS+=		p5-YAML-[0-9]*:../../textproc/p5-YAML
 DEPENDS+=		p5-File-Touch-[0-9]*:../../devel/p5-File-Touch
 DEPENDS+=		p5-WWW-Shorten-[0-9]*:../../www/p5-WWW-Shorten
 DEPENDS+=		p5-JSON-RPC-[0-9]*:../../www/p5-JSON-RPC
+DEPENDS+=		p5-POE-[0-9]*:../../devel/p5-POE
+DEPENDS+=		p5-POE-Component-IRC-[0-9]*:../../chat/p5-POE-Component-IRC
+DEPENDS+=		p5-POE-Component-Server-SOAP-[0-9]*:../../www/p5-POE-Component-Server-SOAP
+DEPENDS+=		p5-Proc-PID-File-[0-9]*:../../devel/p5-Proc-PID-File
+DEPENDS+=		p5-Schedule-RateLimiter-[0-9]*:../../devel/p5-Schedule-RateLimiter
+
+RCD_SCRIPTS=		kgb_bot
+RCD_SCRIPT_SRC.kgb_bot=	files/kgb_bot.sh
 
 REPLACE_INTERPRETER+=	perl
 REPLACE.perl.old=	/usr/bin/perl
@@ -29,6 +38,12 @@ REPLACE.perl.new=	${TOOLS_PATH.perl}
 REPLACE_FILES.perl=	script/kgb-add-project script/kgb-bot
 REPLACE_FILES.perl+=	script/kgb-split-config script/kgb-client
 REPLACE_FILES.perl+=	eg/simple-soap-client eg/simple-soap-server
+
+SUBST_CLASSES+=		configs
+SUBST_STAGE.configs=	pre-configure
+SUBST_FILES.configs=	script/kgb-add-project script/kgb-bot
+SUBST_FILES.configs+=	script/kgb-split-config
+SUBST_SED.configs=	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"
 
 MAKE_ENV+=		PERL=${TOOLS_PATH.perl}
 
