@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4056 2013/11/05 14:45:41 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4057 2013/11/05 17:54:42 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5675,3 +5675,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox to 25.0nb1 [ryoon 2013-11-05]
 	Updated graphics/ImageMagick to 6.8.7.4 [adam 2013-11-05]
 	Updated graphics/p5-PerlMagick to 6.8.7.4 [adam 2013-11-05]
+	Updated devel/valgrind to 3.9.0 [alnsn 2013-11-05]
