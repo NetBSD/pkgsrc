@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4053 2013/11/05 02:48:53 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4054 2013/11/05 11:15:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5671,3 +5671,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-File-ShareDir-Install to 0.05 [wen 2013-11-05]
 	Updated devel/p5-File-Save-Home to 0.09 [wen 2013-11-05]
 	Updated devel/p5-File-Path-Tiny to 0.7 [wen 2013-11-05]
+	Updated net/mikutter to 0.2.2.1410 [obache 2013-11-05]
