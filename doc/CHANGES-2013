@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4050 2013/11/05 01:50:46 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4051 2013/11/05 02:29:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/p5-POE-Component-Server-SOAP version 1.14 [tonnerre 2013-11-04]
 	Updated devel/p5-File-Util to 4.132140 [wen 2013-11-05]
 	Updated devel/p5-File-Temp to 0.2304 [wen 2013-11-05]
+	Updated devel/p5-File-ShareDir-Install to 0.05 [wen 2013-11-05]
