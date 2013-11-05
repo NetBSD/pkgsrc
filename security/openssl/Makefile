@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2013/07/26 11:27:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.179.2.1 2013/11/05 07:05:41 spz Exp $
 
 DISTNAME=	openssl-1.0.1e
 MASTER_SITES=	http://ftp.openssl.org/source/
@@ -113,6 +113,11 @@ CONFIGURE_ARGS+=	hpux-ia64-${CC}
 .    endif
 .  endif
 
+.elif ${OPSYS} == "Linux"
+.  if ${MACHINE_ARCH} == "powerpc64"
+CONFIGURE_SCRIPT=	./Configure
+CONFIGURE_ARGS+=	linux-ppc64
+.  endif
 .endif
 
 .include "../../security/openssl/options.mk"
