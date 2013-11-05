@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.3 2013/10/30 10:52:53 obache Exp $
+# $NetBSD: luaversion.mk,v 1.4 2013/11/05 11:26:44 obache Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -109,7 +109,7 @@ CONFLICTS+=	${PKGNAME:S/lua${_LUA_VERSION}/lua${v}/:C/-[0-9].*$/-[0-9]*/}
 LUA_PACKAGE=		lua52
 LUA_PKGSRCDIR=		../../lang/lua52
 LUA_PKGPREFIX=		lua52
-LUA_BASEDEPENDS=	lua52>=5.2<5.3${LUA_PKGSRCDIR}
+LUA_BASEDEPENDS=	lua52>=5.2<5.3:${LUA_PKGSRCDIR}
 
 .elif ${_LUA_VERSION} == "51"
 LUA_PACKAGE=		lua51
