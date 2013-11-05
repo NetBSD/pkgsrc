@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/11/04 05:09:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/11/05 17:49:52 alnsn Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -13,7 +13,7 @@ include/valgrind/config.h
 include/valgrind/drd.h
 include/valgrind/helgrind.h
 include/valgrind/libvex_basictypes.h
-include/valgrind/libvex_emwarn.h
+include/valgrind/libvex_emnote.h
 include/valgrind/libvex_guest_amd64.h
 include/valgrind/libvex_guest_arm.h
 include/valgrind/libvex_guest_mips32.h
@@ -33,13 +33,11 @@ include/valgrind/pub_tool_basics_asm.h
 include/valgrind/pub_tool_basics.h
 include/valgrind/pub_tool_clientstate.h
 include/valgrind/pub_tool_clreq.h
-include/valgrind/pub_tool_cpuid.h
 include/valgrind/pub_tool_debuginfo.h
 include/valgrind/pub_tool_errormgr.h
 include/valgrind/pub_tool_execontext.h
 include/valgrind/pub_tool_gdbserver.h
 include/valgrind/pub_tool_hashtable.h
-include/valgrind/pub_tool_inner.h
 include/valgrind/pub_tool_libcassert.h
 include/valgrind/pub_tool_libcbase.h
 include/valgrind/pub_tool_libcfile.h
