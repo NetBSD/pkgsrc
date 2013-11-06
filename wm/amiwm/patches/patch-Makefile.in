@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/11/06 21:33:44 dholland Exp $
+
+Fix MAKE_JOBS build.
+
+--- Makefile.in~	1998-03-15 21:28:46.000000000 +0000
++++ Makefile.in
+@@ -55,7 +55,7 @@ lib :
+ menu.o : menu.c
+ 	$(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) -DAMIWM_HOME=\"$(AMIWM_HOME)\" $<
+ 
+-rc.o : rc.c
++rc.o : rc.c gram.h
+ 	$(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) -DAMIWM_HOME=\"$(AMIWM_HOME)\" $<
+ 
+ diskobject.o : diskobject.c
+@@ -72,6 +72,8 @@ gram.h gram.c: gram.y
+ lex.c : lex.l
+ 	$(LEX) -t lex.l > lex.c
+ 
++lex.o: gram.h
++
+ kbdmodule.h kbdmodule.c: kbdmodule.y
+ 	$(YACC) $(YFLAGS) kbdmodule.y
+ 	mv y.tab.c kbdmodule.c
