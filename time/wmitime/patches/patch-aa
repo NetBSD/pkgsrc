@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2013/11/06 00:35:20 khorben Exp $
+
+Implements PKG_DESTDIR_SUPPORT
+
+--- Makefile.orig	1999-03-29 03:51:39.000000000 +0000
++++ Makefile
+@@ -1,7 +1,7 @@
+-#LANG = fr
+-LIBDIR = -L/usr/X11R6/lib
++LANG = en 
++LIBDIR = ${LDFLAGS} 
+ LIBS   = -lXpm -lXext -lX11 -lm
+-FLAGS = -O2
++FLAGS = -O2 ${BUILDLINK_CPPFLAGS} 
+ OBJS =	wmitime.o \
+ 		../wmgeneral/wmgeneral.o \
+ 		../wmgeneral/misc.o \
+@@ -24,9 +24,8 @@ clean::
+ 	rm -f *~
+ 
+ install:: wmitime
+-	cp -f wmitime /usr/local/bin/
+-	chmod 755 /usr/local/bin/wmitime
+-	chown root:root /usr/local/bin/wmitime
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
++	install -m 755 wmitime $(DESTDIR)$(PREFIX)/bin/wmitime
+ #	cp wminetrc $(HOME)/.wminetrc
+ #	chmod 600 $(HOME)/.wminetrc
+ #	cp wminetrc /etc/wminetrc
