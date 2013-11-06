@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2013/09/09 20:35:07 wiz Exp $
+$NetBSD: patch-configure,v 1.4 2013/11/06 00:50:47 gdt Exp $
 
 1. chunk: fix
 ./configure.lineno: 1: Syntax error: Bad substitution
@@ -8,6 +8,7 @@ other chunks: use lua/php/... from pkgsrc
 last chunk: fix
 ./configure.lineno: 27203: Syntax error: ")" unexpected (expecting "fi")
 http://www.graphviz.org/mantisbt/view.php?id=2362
+last last chunk: fix sed expression not to use + which is not in BRE (guile)
 
 --- configure.orig	2013-09-07 01:11:08.000000000 +0000
 +++ configure
@@ -44,6 +45,15 @@ http://www.graphviz.org/mantisbt/view.php?id=2362
            ;;
        esac
        ;;
+@@ -21094,7 +21099,7 @@ done
+       if test "x$GUILE" = "x"; then
+         use_guile="No (guile not available)"
+       else
+-        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* \+\([0-9\.]\+\)$/\1/ p'`
++        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* *\([0-9\.]*\)$/\1/ p'`
+         GUILE_VERSION_MAJOR=`echo $GUILE_VERSION | cut -d '.' -f 1`
+         GUILE_VERSION_MINOR=`echo $GUILE_VERSION | cut -d '.' -f 2`
+         if test 0$GUILE_VERSION_MAJOR -lt 2; then
 @@ -21726,7 +21731,7 @@ $as_echo_n "checking for Lua headers and
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
