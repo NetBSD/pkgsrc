@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/12/17 00:59:54 khorben Exp $
+$NetBSD: distinfo,v 1.2 2013/11/06 23:40:40 khorben Exp $
 
-SHA1 (Mailer-0.1.5.tar.gz) = 341a3915d8b2d5a8a20472d27bf997468366a9b7
-RMD160 (Mailer-0.1.5.tar.gz) = 557a29902df4549e564c4b7aaef422170d16a317
-Size (Mailer-0.1.5.tar.gz) = 105898 bytes
-SHA1 (patch-doc_Makefile) = d47469aec0c1cb52099356ec30b5bf3bcbc0d9df
+SHA1 (Mailer-0.1.6.tar.gz) = eab85c0c5d4d23e52a81d4a026ee82384271eea0
+RMD160 (Mailer-0.1.6.tar.gz) = 0699c2ba44bd731ed1e4f7ba72d52b90e1e2a3eb
+Size (Mailer-0.1.6.tar.gz) = 112910 bytes
+SHA1 (patch-Makefile) = 7584cf06a22de91d428710153169777547f35b0a
