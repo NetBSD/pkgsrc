@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/08/16 09:20:40 obache Exp $
+# $NetBSD: options.mk,v 1.5 2013/11/06 13:31:21 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ekiga
 PKG_SUPPORTED_OPTIONS+= avahi dbus evolution-data-server gconf gnome notify
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--disable-eds
 PLIST.gconf=		yes
 GCONF_SCHEMAS=		ekiga.schemas
 CONFIGURE_ARGS+=	--enable-gconf
+CONFIGURE_ARGS+=	--with-gconf-schema-file-dir=${PREFIX}/share/gconf/schemas
 .include "../../devel/GConf/schemas.mk"
 .else
 PLIST.not-gconf=	yes
