@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2013/11/06 13:17:51 obache Exp $
+# $NetBSD: Makefile,v 1.23 2013/11/06 13:28:57 obache Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
-#PKGREVISION=	1
+PKGREVISION=	1
 COMMENT=	Tools for providing messages in different languages
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
