@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2013/07/15 02:02:28 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.63 2013/11/06 16:00:05 joerg Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -73,9 +73,7 @@ PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bacula
-
-pre-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
+INSTALLATION_DIRS+=	${EXAMPLESDIR}
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
