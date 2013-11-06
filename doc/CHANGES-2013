@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4058 2013/11/05 18:58:11 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4059 2013/11/06 00:37:50 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5677,3 +5677,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/p5-PerlMagick to 6.8.7.4 [adam 2013-11-05]
 	Updated devel/valgrind to 3.9.0 [alnsn 2013-11-05]
 	Updated mail/imapfilter to 2.5.6 [adam 2013-11-05]
+	Added time/wmitime version 0.3 [khorben 2013-11-06]
