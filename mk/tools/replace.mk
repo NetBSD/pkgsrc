@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.262 2013/09/12 10:48:51 jperkin Exp $
+# $NetBSD: replace.mk,v 1.263 2013/11/06 13:12:50 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -867,16 +867,19 @@ TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.xzcat) && !empty(_USE_TOOLS:Mxzcat)
-.  if !empty(PKGPATH:Marchivers/xz)
-MAKEFLAGS+=			TOOLS_IGNORE.xzcat=
-.  elif !empty(_TOOLS_USE_PKGSRC.xzcat:M[yY][eE][sS])
-TOOLS_DEPENDS.xzcat?=		xz>=4.999.9betanb1:../../archivers/xz
-TOOLS_CREATE+=			xzcat
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xzcat=xzcat
-TOOLS_PATH.xzcat=		${TOOLS_PREFIX.xzcat}/bin/xzcat
+_TOOLS.xz=	xz xzcat
+.for _t_ in ${_TOOLS.xz}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Marchivers/xz)
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=		xz>=4.999.9betanb1:../../archivers/xz
+TOOLS_CREATE+=			${_t_}
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=xz
+TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.    endif
 .  endif
-.endif
+.endfor
 
 .if !defined(TOOLS_IGNORE.yacc) && !empty(_USE_TOOLS:Myacc)
 .  if !empty(PKGPATH:Mdevel/bison)

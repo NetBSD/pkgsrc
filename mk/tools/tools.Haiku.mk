@@ -1,4 +1,4 @@
-# $NetBSD: tools.Haiku.mk,v 1.9 2013/08/24 11:30:44 obache Exp $
+# $NetBSD: tools.Haiku.mk,v 1.10 2013/11/06 13:12:50 obache Exp $
 #
 # System-supplied tools for the Haiku operating system.
 
@@ -119,6 +119,9 @@ TOOLS_PLATFORM.tsort?=		/bin/tsort
 TOOLS_PLATFORM.wc?=		/bin/wc
 TOOLS_PLATFORM.xargs?=		/bin/xargs -r
 #TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
+.if exists(/boot/common/bin/xz)
+TOOLS_PLATFORM.xz?=		/boot/common/bin/xz
+.endif
 .if exists(/boot/common/bin/xzcat)
 TOOLS_PLATFORM.xzcat?=		/boot/common/bin/xzcat
 .endif
