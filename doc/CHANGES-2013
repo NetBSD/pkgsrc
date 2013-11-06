@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4063 2013/11/06 14:21:52 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4064 2013/11/06 20:33:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5681,3 +5681,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/python26 to 2.6.9 [adam 2013-11-06]
 	Updated devel/gettext-tools to 0.18.3.1nb1 [obache 2013-11-06]
 	Updated mail/dovecot2 to 2.2.7 [adam 2013-11-06]
+	Updated graphics/gimp to 2.8.8 [adam 2013-11-06]
