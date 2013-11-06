@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2013/10/10 14:42:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2013/11/06 23:40:40 khorben Exp $
 #
 
-DISTNAME=	Mailer-0.1.5
-PKGNAME=	deforaos-mailer-0.1.5
-PKGREVISION=	8
+DISTNAME=	Mailer-0.1.6
+PKGNAME=	deforaos-mailer-0.1.6
 CATEGORIES=	mail
-MASTER_SITES=	http://www.defora.org/os/download/download/3704/
+MASTER_SITES=	http://www.defora.org/os/download/download/4029/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -26,11 +25,15 @@ AUTO_MKDIRS=	yes
 
 CONFLICTS=	john-[0-9]*
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/compose.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/compose.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/mailer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mailer.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "options.mk"
 
