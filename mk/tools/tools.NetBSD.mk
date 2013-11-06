@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.48 2013/08/18 11:45:33 tron Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.49 2013/11/06 13:12:50 obache Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -120,6 +120,9 @@ TOOLS_PLATFORM.unzip?=		/usr/bin/unzip
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 .if exists(/usr/bin/xgettext)
 TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
+.endif
+.if exists(/usr/bin/xz)
+TOOLS_PLATFORM.xz?=		/usr/bin/xz
 .endif
 .if exists(/usr/bin/xzcat)
 TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat

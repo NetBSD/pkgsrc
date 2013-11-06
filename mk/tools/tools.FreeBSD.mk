@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.37 2013/08/24 11:30:44 obache Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.38 2013/11/06 13:12:50 obache Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -86,6 +86,9 @@ TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+.if exists(/usr/bin/xz)
+TOOLS_PLATFORM.xz?=		/usr/bin/xz
+.endif
 .if exists(/usr/bin/xzcat)
 TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
 .endif

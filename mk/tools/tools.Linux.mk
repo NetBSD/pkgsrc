@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.51 2013/08/24 10:12:52 tron Exp $
+# $NetBSD: tools.Linux.mk,v 1.52 2013/11/06 13:12:50 obache Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -245,6 +245,9 @@ TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
 .endif
 .if exists(/usr/bin/yacc)
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
+.endif
+.if exists(/usr/bin/xz)
+TOOLS_PLATFORM.xz?=		/usr/bin/xz
 .endif
 .if exists(/usr/bin/xzcat)
 TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
