@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/11/06 00:35:19 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/06 00:40:15 khorben Exp $
 #
 
 DISTNAME=	wmitime-0.3
 PKGREVISION=	3
-CATEGORIES=	x11 sysutils
+CATEGORIES=	x11 time
 MASTER_SITES=	http://www.neotokyo.org/illusion/downloads/
 
 MAINTAINER=	poff@sixbit.org
