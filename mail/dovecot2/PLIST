@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2013/10/08 13:52:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2013/11/06 14:20:58 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -135,6 +135,7 @@ include/dovecot/imap-fetch.h
 include/dovecot/imap-id.h
 include/dovecot/imap-list.h
 include/dovecot/imap-match.h
+include/dovecot/imap-metadata.h
 include/dovecot/imap-msgpart-url.h
 include/dovecot/imap-msgpart.h
 include/dovecot/imap-notify.h
