@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2013/10/19 09:07:11 adam Exp $
+# $NetBSD: Makefile,v 1.54 2013/11/06 15:59:23 joerg Exp $
 
 PKGREVISION=		10
 
@@ -39,7 +39,7 @@ REPLACE_PERL+=		src/cats/make_catalog_backup.pl.in
 .include "Makefile.common"
 
 .if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
-INSTALL_MAKE_FLAGS+=	dir_user= dir_group=
+INSTALL_MAKE_FLAGS+=	dir_user= dir_group= sd_group=
 .endif
 
 post-install:
