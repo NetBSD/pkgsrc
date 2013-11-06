@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2012/10/06 17:54:53 christos Exp $
+$NetBSD: distinfo,v 1.48 2013/11/06 16:00:05 joerg Exp $
 
 SHA1 (bacula-5.2.12.tar.gz) = c53cdd185f5f4075ddcca0971953319a94276c84
 RMD160 (bacula-5.2.12.tar.gz) = dd5b9f457a524acd9cdbbe0c4842670c4ee5bd5a
@@ -15,7 +15,9 @@ SHA1 (patch-src_dird_Makefile.in) = fdce18aca972f26f16af90283756cd5bf5ad5831
 SHA1 (patch-src_filed_Makefile.in) = c88ee648ef33c3f7c3a02b77b1d3fc3da8da088d
 SHA1 (patch-src_findlib_attribs.c) = a0917e500d7e937164cf59917cabd992512acd1d
 SHA1 (patch-src_lib_attr.c) = 287851ff2ce2a0868d597cf1d7471a6766f6f7c1
+SHA1 (patch-src_lib_md5.c) = a359bb9988538f02d5a14bf3ddac23f7ea64bea6
 SHA1 (patch-src_plugins_fd_Makefile.in) = f1316cdbb66d9bc55d8adbd4b0bbde01443ccd2e
+SHA1 (patch-src_plugins_fd_fd__common.h) = 7c8419d4fa7f1fe8a07e2bc2720a4903ff324135
 SHA1 (patch-src_qt-console_bat.pro.in) = 8df9381c0b35b5a3dcd237f8c017ae21d88c79ad
 SHA1 (patch-src_stored_Makefile.in) = 5bee8ea8a7c288a1e4baf372ef79da34c9e35284
 SHA1 (patch-src_tools_Makefile.in) = 9fbc8d0f71f34217ea29f6ae04cbd927d5ac275b
