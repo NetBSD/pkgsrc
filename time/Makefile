@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2013/10/21 15:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2013/11/06 00:35:53 khorben Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -137,6 +137,7 @@ SUBDIR+=	vixie-cron
 SUBDIR+=	wmCalClock
 SUBDIR+=	wmclockmon
 SUBDIR+=	wmfishtime
+SUBDIR+=	wmitime
 SUBDIR+=	wmmoonclock
 SUBDIR+=	wmtime
 SUBDIR+=	wmzcalock
