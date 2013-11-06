@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.21 2013/07/30 13:28:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2013/11/06 13:17:51 obache Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
+#PKGREVISION=	1
 COMMENT=	Tools for providing messages in different languages
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/gettext/patches
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		xz
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--with-included-libcroco
 CONFIGURE_ARGS+=	--without-git
+CONFIGURE_ARGS+=	--with-xz
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
@@ -39,7 +42,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/gettextize.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
