@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/11/06 13:31:38 joerg Exp $
+
+--- Makefile.in.orig	2013-11-06 12:17:32.000000000 +0000
++++ Makefile.in
+@@ -14,7 +14,7 @@
+ #   Pavel@Xerox.Com
+ 
+ CC = @CC@
+-LIBRARIES = @LIBS@
++LIBRARIES = @LIBS@ -lm
+ YACC = @YACC@
+ 
+ CFLAGS = -O
