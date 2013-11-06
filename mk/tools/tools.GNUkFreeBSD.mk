@@ -1,4 +1,4 @@
-# $NetBSD: tools.GNUkFreeBSD.mk,v 1.1 2013/07/26 09:38:15 ryoon Exp $
+# $NetBSD: tools.GNUkFreeBSD.mk,v 1.2 2013/11/06 13:12:50 obache Exp $
 #
 # System-supplied tools for the Debian GNU/kFreeBSD operating system.
 
@@ -83,4 +83,5 @@ TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
+TOOLS_PLATFORM.xz?=		/usr/bin/xz
 TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
