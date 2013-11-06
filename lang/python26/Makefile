@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2013/09/10 14:22:29 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2013/11/06 07:25:49 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python26-${PY_DISTVERSION}
-PKGREVISION=	5
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -58,7 +57,7 @@ USE_TOOLS+=	gmake
 PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
 PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
-CONFIGURE_ENV+=        ac_cv_header_netpacket_packet_h=no
+CONFIGURE_ENV+=		ac_cv_header_netpacket_packet_h=no
 .elif ${OPSYS} == "HPUX"
 PY_PLATNAME=	hp-ux11
 .else
