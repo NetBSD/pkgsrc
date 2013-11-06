@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2013/08/27 18:00:32 tez Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2013/11/06 07:25:49 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -3308,6 +3308,9 @@ lib/python${PY_VER_SUFFIX}/test/test_new.pyo
 lib/python${PY_VER_SUFFIX}/test/test_nis.py
 lib/python${PY_VER_SUFFIX}/test/test_nis.pyc
 lib/python${PY_VER_SUFFIX}/test/test_nis.pyo
+lib/python${PY_VER_SUFFIX}/test/test_nntplib.py
+lib/python${PY_VER_SUFFIX}/test/test_nntplib.pyc
+lib/python${PY_VER_SUFFIX}/test/test_nntplib.pyo
 lib/python${PY_VER_SUFFIX}/test/test_normalization.py
 lib/python${PY_VER_SUFFIX}/test/test_normalization.pyc
 lib/python${PY_VER_SUFFIX}/test/test_normalization.pyo
