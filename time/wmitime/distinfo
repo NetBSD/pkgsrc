@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/06 00:35:19 khorben Exp $
+
+SHA1 (wmitime-0.3.tar.gz) = 64bb07c5eccce5592088cfccc87836f66695e07c
+RMD160 (wmitime-0.3.tar.gz) = b2301a15ef159d2d55418ae5fbf914bedc388478
+Size (wmitime-0.3.tar.gz) = 21442 bytes
+SHA1 (patch-aa) = 9e2dc61ca81e403b142238aaaacd73297cc55e37
