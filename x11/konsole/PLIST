@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 13:35:56 markd Exp $
 bin/konsole
 bin/konsoleprofile
 lib/kde4/libkonsolepart.so
@@ -6,12 +6,14 @@ lib/libkdeinit4_konsole.so
 lib/libkonsoleprivate.so
 share/applications/kde4/konsole.desktop
 share/doc/kde/HTML/en/konsole/common
+share/doc/kde/HTML/en/konsole/draganddrop-contextmenu.png
 share/doc/kde/HTML/en/konsole/index.cache.bz2
 share/doc/kde/HTML/en/konsole/index.docbook
 share/kde/apps/kconf_update/konsole-2.10.0-remove-menuindex-from-profiles.sh
 share/kde/apps/kconf_update/konsole-2.9.0-colorscheme-bold-key.sh
 share/kde/apps/kconf_update/konsole-2.9.0-global-options.sh
 share/kde/apps/kconf_update/konsole.upd
+share/kde/apps/kconf_update/konsole_remove_background_mode.upd
 share/kde/apps/konsole/BlackOnLightYellow.colorscheme
 share/kde/apps/konsole/BlackOnRandomLight.colorscheme
 share/kde/apps/konsole/BlackOnWhite.colorscheme
