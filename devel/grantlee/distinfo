@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/11/07 08:13:51 markd Exp $
+
+SHA1 (grantlee-0.3.0.tar.gz) = dbfd4370d48f10731b638a73abc848bb25602a35
+RMD160 (grantlee-0.3.0.tar.gz) = ac66592b4ecae569e60fc2aee1cda754eb624e3d
+Size (grantlee-0.3.0.tar.gz) = 1132163 bytes
