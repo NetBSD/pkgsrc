@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2013/10/04 14:46:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.405 2013/11/07 12:52:08 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -150,8 +150,10 @@ SUBDIR+=	koffice-l10n-pl
 SUBDIR+=	kp
 SUBDIR+=	kremotecontrol
 SUBDIR+=	kstars
+SUBDIR+=	kteatime
 SUBDIR+=	ktouch
 SUBDIR+=	kturtle
+SUBDIR+=	ktux
 SUBDIR+=	kwordquiz
 SUBDIR+=	kz_h8write
 SUBDIR+=	labelnation
