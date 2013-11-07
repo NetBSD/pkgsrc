@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4067 2013/11/07 08:17:39 markd Exp $
+$NetBSD: CHANGES-2013,v 1.4068 2013/11/07 08:30:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5687,3 +5687,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind98 to 9.8.6pl1 [taca 2013-11-07]
 	Updated net/bind99 to 9.9.4pl1 [taca 2013-11-07]
 	Added devel/grantlee version 0.3.0 [markd 2013-11-07]
+	Updated databases/phpmyadmin to 4.0.9 [tron 2013-11-07]
