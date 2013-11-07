@@ -1,11 +1,11 @@
-$NetBSD: patch-kdecore_tests_CMakeLists.txt,v 1.1 2013/05/17 21:20:40 jperkin Exp $
+$NetBSD: patch-kdecore_tests_CMakeLists.txt,v 1.2 2013/11/07 13:35:56 markd Exp $
 
 Disable klockfiletest, it causes linker failures on SunOS.
 
 --- kdecore/tests/CMakeLists.txt.orig	2013-03-01 06:26:14.975769068 +0000
 +++ kdecore/tests/CMakeLists.txt
-@@ -45,7 +45,7 @@ KDECORE_UNIT_TESTS(
-  kentrymaptest
+@@ -44,7 +44,7 @@ KDECORE_UNIT_TESTS(
+  ktimezonestest
   kconfigtest
   kurlmimetest
 - klockfiletest
@@ -13,7 +13,7 @@ Disable klockfiletest, it causes linker failures on SunOS.
   ktempdirtest
   ksharedptrtest
   kshareddatacachetest
-@@ -98,7 +98,7 @@ KDECORE_EXECUTABLE_TESTS(
+@@ -97,7 +97,7 @@ KDECORE_EXECUTABLE_TESTS(
   dbuscalltest
   kmdcodectest
   startserviceby
@@ -21,4 +21,4 @@ Disable klockfiletest, it causes linker failures on SunOS.
 + #klockfile_testlock # helper for klockfiletest
  )
  
- ########### klocaletest ###############
+ ########### kentrymaptest ###############

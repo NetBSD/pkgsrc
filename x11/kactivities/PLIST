@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/28 01:54:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/11/07 13:35:56 markd Exp $
 bin/kactivitymanagerd
 include/KDE/KActivities/Consumer
 include/KDE/KActivities/Controller
@@ -6,6 +6,7 @@ include/KDE/KActivities/Info
 include/KDE/KActivities/Models/ActivityModel
 include/KDE/KActivities/Models/ResourceModel
 include/KDE/KActivities/ResourceInstance
+include/KDE/KActivities/Version
 include/kactivities-models/activitymodel.h
 include/kactivities-models/kactivities_models_export.h
 include/kactivities-models/resourcemodel.h
@@ -14,6 +15,7 @@ include/kactivities/controller.h
 include/kactivities/info.h
 include/kactivities/kactivities_export.h
 include/kactivities/resourceinstance.h
+include/kactivities/version.h
 lib/cmake/KActivities-Models/KActivities-ModelsConfig.cmake
 lib/cmake/KActivities-Models/KActivities-ModelsConfigVersion.cmake
 lib/cmake/KActivities-Models/KActivitiesModelsLibraryTargets-${TARGET}.cmake
@@ -24,11 +26,10 @@ lib/cmake/KActivities/KActivitiesLibraryTargets-${TARGET}.cmake
 lib/cmake/KActivities/KActivitiesLibraryTargets.cmake
 lib/kde4/activitymanager_plugin_activityranking.so
 lib/kde4/activitymanager_plugin_globalshortcuts.so
+lib/kde4/activitymanager_plugin_nepomuk.so
 lib/kde4/activitymanager_plugin_slc.so
 lib/kde4/activitymanager_plugin_sqlite.so
 lib/kde4/activitymanager_plugin_virtualdesktopswitch.so
-lib/kde4/activitymanager_uihandler_declarative.so
-lib/kde4/activitymanager_uihandler_kdialog.so
 lib/kde4/imports/org/kde/activities/models/libkactivities-models-component-plugin.so
 lib/kde4/imports/org/kde/activities/models/qmldir
 lib/kde4/kactivitymanagerd_fileitem_linking_plugin.so
@@ -39,20 +40,15 @@ lib/libkactivities-models.so.1
 lib/libkactivities-models.so.1.0.0
 lib/libkactivities.so
 lib/libkactivities.so.6
-lib/libkactivities.so.6.1.0
+lib/libkactivities.so.6.2.0
 lib/pkgconfig/libkactivities-models.pc
 lib/pkgconfig/libkactivities.pc
 share/kde/apps/activitymanager/workspace/settings/BlacklistApplicationView.qml
-share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/ChoiceDialog.qml
-share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/MessageDialog.qml
-share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/NewPasswordDialog.qml
-share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/PasswordDialog.qml
-share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/contents/ui/uihandler.qml
-share/kde/apps/plasma/packages/org.kde.ActivityManager.UiHandler/metadata.desktop
 share/kde/config/activitymanagerrc
 share/kde4/services/activities.protocol
 share/kde4/services/activitymanager-plugin-activityranking.desktop
 share/kde4/services/activitymanager-plugin-globalshortcuts.desktop
+share/kde4/services/activitymanager-plugin-nepomuk.desktop
 share/kde4/services/activitymanager-plugin-slc.desktop
 share/kde4/services/activitymanager-plugin-sqlite.desktop
 share/kde4/services/activitymanager-plugin-virtualdesktopswitch.desktop
