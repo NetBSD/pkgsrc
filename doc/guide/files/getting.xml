@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.31 2013/05/03 16:55:29 asau Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.32 2013/11/07 08:52:43 jnemeth Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -58,18 +58,18 @@ and dashes.</para>
 
 	<para>You can fetch the same files using FTP.</para>
 
-	<para>The tar file for the stable branch 2009Q1 is in the
-	directory <filename>pkgsrc-2009Q1</filename> and is also called <ulink
-	url="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q1/pkgsrc-2009Q1.tar.gz"><filename>pkgsrc-2009Q1.tar.gz</filename></ulink>.</para>
+	<para>The tar file for the stable branch 2013Q1 is in the
+	directory <filename>pkgsrc-2013Q1</filename> and is also called <ulink
+	url="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2013Q1/pkgsrc.tar.gz"><filename>pkgsrc.tar.gz</filename></ulink>.</para>
 
 	<para>To download a pkgsrc stable tarball, run:</para>
 
 <screen>
-&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<replaceable>pkgsrc-20xxQy</replaceable>/<replaceable>pkgsrc-20xxQy</replaceable>.tar.gz</userinput></screen>
+&uprompt; <userinput>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<replaceable>pkgsrc-20xxQy</replaceable>/pkgsrc.tar.gz</userinput></screen>
 
 	<para>Where <replaceable>pkgsrc-20xxQy</replaceable> is the
 	stable branch to be downloaded, for example, 
-	<quote>pkgsrc-2009Q1</quote>.</para>
+	<quote>pkgsrc-2013Q1</quote>.</para>
 
 	<para>You can use fetch it also using "wget", "curl",
 	or your web browser.</para>
