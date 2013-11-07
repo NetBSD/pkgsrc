@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+lib/kde4/pothumbnail.so
+share/kde/config.kcfg/pocreatorsettings.kcfg
+share/kde4/services/pothumbnail.desktop

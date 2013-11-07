@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+bin/dprof2calltree
+bin/hotshot2calltree
+bin/kcachegrind
+bin/memprof2calltree
+bin/op2calltree
+bin/pprof2calltree
+share/applications/kde4/kcachegrind.desktop
+share/doc/kde/HTML/en/kcachegrind/common
+share/doc/kde/HTML/en/kcachegrind/index.cache.bz2
+share/doc/kde/HTML/en/kcachegrind/index.docbook
+share/icons/hicolor/32x32/apps/kcachegrind.png
+share/icons/hicolor/48x48/apps/kcachegrind.png
+share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/move.png
+share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/percent.png
+share/kde/apps/kcachegrind/icons/hicolor/22x22/actions/hidetemplates.png
+share/kde/apps/kcachegrind/icons/hicolor/22x22/actions/move.png
+share/kde/apps/kcachegrind/icons/hicolor/22x22/actions/percent.png
+share/kde/apps/kcachegrind/icons/hicolor/32x32/actions/percent.png
+share/kde/apps/kcachegrind/kcachegrindui.rc
+share/kde/apps/kcachegrind/tips

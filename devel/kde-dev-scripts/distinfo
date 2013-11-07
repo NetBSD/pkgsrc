@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/07 10:42:26 markd Exp $
+
+SHA1 (kde-dev-scripts-4.11.3.tar.xz) = dc372da52cc14272974164aae8daa26a05e2e8c3
+RMD160 (kde-dev-scripts-4.11.3.tar.xz) = 06bf72c504a7f850d22940c549481b3647be3c30
+Size (kde-dev-scripts-4.11.3.tar.xz) = 263396 bytes
+SHA1 (patch-cvsaddcurrentdir) = d86b706c848e845bb54364af7d619a6637265d97

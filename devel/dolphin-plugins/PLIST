@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+lib/kde4/fileviewbazaarplugin.so
+lib/kde4/fileviewgitplugin.so
+lib/kde4/fileviewhgplugin.so
+lib/kde4/fileviewsvnplugin.so
+share/kde/config.kcfg/fileviewgitpluginsettings.kcfg
+share/kde/config.kcfg/fileviewhgpluginsettings.kcfg
+share/kde/config.kcfg/fileviewsvnpluginsettings.kcfg
+share/kde4/services/fileviewbazaarplugin.desktop
+share/kde4/services/fileviewgitplugin.desktop
+share/kde4/services/fileviewhgplugin.desktop
+share/kde4/services/fileviewsvnplugin.desktop

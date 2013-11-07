@@ -1,0 +1,13 @@
+$NetBSD: patch-cvsaddcurrentdir,v 1.1 2013/11/07 10:42:26 markd Exp $
+
+--- cvsaddcurrentdir.orig	2006-10-18 21:16:48.000000000 +1300
++++ cvsaddcurrentdir
+@@ -17,7 +17,7 @@ ask_for_adding() {
+ echo
+ read answer"?Add file $file to cvs ? (y/n) " rest
+ #if [ "$answer" != "y" ]; then echo $file; fi
+-if [ "$answer" == "y" ]; then cvs add $file; fi
++if [ "$answer" = "y" ]; then cvs add $file; fi
+ }
+ 
+ 

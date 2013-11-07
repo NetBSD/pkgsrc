@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 10:42:26 markd Exp $
+bin/kpartloader
+bin/kuiviewer
+include/kprofilemethod.h
+lib/kde4/kuiviewerpart.so
+lib/kde4/quithumbnail.so
+share/applications/kde4/kuiviewer.desktop
+share/icons/hicolor/16x16/apps/kuiviewer.png
+share/icons/hicolor/32x32/apps/kuiviewer.png
+share/icons/hicolor/48x48/apps/kuiviewer.png
+share/kde/apps/kpartloader/kpartloaderui.rc
+share/kde/apps/kuiviewer/kuiviewerui.rc
+share/kde/apps/kuiviewerpart/kuiviewer_part.rc
+share/kde4/services/designerthumbnail.desktop
+share/kde4/services/kuiviewer_part.desktop
