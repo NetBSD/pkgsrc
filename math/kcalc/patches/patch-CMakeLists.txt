@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/03 10:52:24 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2013/11/07 11:59:59 markd Exp $
 
 use mpfr (alternate code doesnt build on BSD)
 
@@ -12,5 +12,5 @@ use mpfr (alternate code doesnt build on BSD)
 +add_definitions (-DKNUMBER_USE_MPFR)
 +
  include(CheckTypeSize)
- include(CheckFunctionExists)
  include(CheckIncludeFiles)
+ 
