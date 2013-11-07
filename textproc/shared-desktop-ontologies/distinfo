@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/04/03 07:27:28 markd Exp $
+$NetBSD: distinfo,v 1.5 2013/11/07 09:31:37 markd Exp $
 
-SHA1 (shared-desktop-ontologies-0.10.0.tar.bz2) = cfa3dee770ca979aea0362064c0ba5c5df3f8c9b
-RMD160 (shared-desktop-ontologies-0.10.0.tar.bz2) = cae48ece8938f2ee3005d5583a78392f5c9fced7
-Size (shared-desktop-ontologies-0.10.0.tar.bz2) = 3966792 bytes
+SHA1 (shared-desktop-ontologies-0.11.0.tar.bz2) = 16d971eb6227055e042b67a0fd79f8bc585b1900
+RMD160 (shared-desktop-ontologies-0.11.0.tar.bz2) = 80e40bf5d29347070283bd89a063bce177e494e9
+Size (shared-desktop-ontologies-0.11.0.tar.bz2) = 3967786 bytes
