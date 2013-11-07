@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.7 2013/09/04 08:26:28 joerg Exp $
+# $NetBSD: endian.mk,v 1.8 2013/11/07 05:12:24 obache Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -43,7 +43,7 @@ MACHINE_ENDIAN!=							\
 	  ${ECHO} "\#define BYTE_ORDER 1234";				\
 	  ${ECHO} "\#endif";						\
 	  ${ECHO} "\#endif";						\
-	  ${ECHO} "BYTE_ORDER"; } | ${CCPATH} -E - |			\
+	  ${ECHO} "BYTE_ORDER"; } | ${CCPATH:U${CC}} -E - |		\
 	{ while read line; do						\
 		case $$line in						\
 		1234)	${ECHO} "little"; exit 0 ;;			\
