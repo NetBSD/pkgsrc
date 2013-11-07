@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2013/06/23 19:09:14 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2013/11/07 12:35:42 markd Exp $
 
-SHA1 (kstars-4.10.3.tar.xz) = 32490b846b468dc9a8393c0a70cb0d0e805163a8
-RMD160 (kstars-4.10.3.tar.xz) = bc37f90cb0590b87126b7b8a55ec922de00ee59e
-Size (kstars-4.10.3.tar.xz) = 12490412 bytes
+SHA1 (kstars-4.11.3.tar.xz) = 92a54609a43a65e81ff80b15d6fd1be20e123a60
+RMD160 (kstars-4.11.3.tar.xz) = 8064cc71296a546151117900297a5bf24bde9881
+Size (kstars-4.11.3.tar.xz) = 12451192 bytes
 SHA1 (patch-kstars_fitsviewer_fitsimage.cpp) = f18ceecfa2267d0957f7f5d3b6e609a2d861b375
-SHA1 (patch-kstars_skyobjects_ksmoon.cpp) = 23d31289ca18075afb38324b72ca41a1287aa9b3
 SHA1 (patch-kstars_skyobjects_satellite.cpp) = a30cd6139fff8e5968d704b901dd2a059548d527
+SHA1 (patch-kstars_skyobjects_starobject.cpp) = 5d09d63fdc220d387b75bd75221eb48a0f9bd90a
 SHA1 (patch-kstars_tools_altvstime.cpp) = 24b8d4c31216fd08353e29825c6213349cfa6287
 SHA1 (patch-kstars_widgets_moonphasecalendarwidget.h) = c3c507447ea4586b2d1224e49cb4c44ba0a13918

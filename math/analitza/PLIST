@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 11:59:58 markd Exp $
 bin/calgebra
 include/analitza/abstractlexer.h
 include/analitza/analitzaexport.h
@@ -39,12 +39,12 @@ lib/cmake/analitza/AnalitzaConfig.cmake
 lib/cmake/analitza/AnalitzaTargets-${TARGET}.cmake
 lib/cmake/analitza/AnalitzaTargets.cmake
 lib/libanalitza.so
-lib/libanalitza.so.4
-lib/libanalitza.so.${PKGVERSION}
+lib/libanalitza.so.5
+lib/libanalitza.so.5.0.0
 lib/libanalitzagui.so
-lib/libanalitzagui.so.4
-lib/libanalitzagui.so.${PKGVERSION}
+lib/libanalitzagui.so.5
+lib/libanalitzagui.so.5.0.0
 lib/libanalitzaplot.so
-lib/libanalitzaplot.so.4
-lib/libanalitzaplot.so.${PKGVERSION}
+lib/libanalitzaplot.so.5
+lib/libanalitzaplot.so.5.0.0
 share/kde/apps/libanalitza/plots/basic_curves.plots

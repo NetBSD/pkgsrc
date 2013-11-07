@@ -1,16 +1,7 @@
-$NetBSD: distinfo,v 1.5 2013/05/23 15:06:48 joerg Exp $
+$NetBSD: distinfo,v 1.6 2013/11/07 12:49:19 markd Exp $
 
-SHA1 (kmix-4.10.3.tar.xz) = 09289c9bb6bd5e592d214f3f665078010e9a7dd2
-RMD160 (kmix-4.10.3.tar.xz) = d77b9dad15c7a9efbaab611c5c6e380c3fa1db07
-Size (kmix-4.10.3.tar.xz) = 385988 bytes
+SHA1 (kmix-4.11.3.tar.xz) = 3d3813f66b034bbe603c0958d41b7b26cfa80e40
+RMD160 (kmix-4.11.3.tar.xz) = 53c8a87fff28dd9dc765d9b5a7e01b7a2706f95d
+Size (kmix-4.11.3.tar.xz) = 387392 bytes
 SHA1 (patch-CMakeLists.txt) = be774815cf3c8ae99f6bae31d5de010f37a6ef29
-SHA1 (patch-apps_kmixd.cpp) = 6a8876778b5b6d3844fcb0c874845eb0b955840b
-SHA1 (patch-backends_mixer__backend.cpp) = 6dea8709aeb26abc8914e35fa5ce05f4296c4b80
-SHA1 (patch-backends_mixer__mpris2.cpp) = ec687666b5e62f5bb41a9308d17a0a62f87dae4a
-SHA1 (patch-core_ControlPool.h) = fba837f300478e015941fa5aa7355372b294bb38
-SHA1 (patch-core_MasterControl.h) = ab348a5ffc440650c9f1fd529335f87e5c81ed12
-SHA1 (patch-core_mixdevice.h) = 75dd0c84517ec0e8fe647a2b8e84370b1e8afea9
-SHA1 (patch-core_mixertoolbox.cpp) = fc3d99aa5b9236c7c4abd7fefa0fcdf0a344829a
-SHA1 (patch-gui_kmixdockwidget.cpp) = 6dfdb8eba6c6682c7678fe936cbb067335908769
-SHA1 (patch-gui_viewdockareapopup.cpp) = 9db09bb68d5aeb2e38e2792264278da0acf4ebff
 SHA1 (patch-tests_CMakeLists.txt) = 4c39d6268e6c690099d06a8ba6946cb90242791e

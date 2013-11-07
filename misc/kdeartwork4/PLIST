@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/03 10:51:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/11/07 12:35:41 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -2261,7 +2261,6 @@ share/icons/nuvola/128x128/apps/kivio.png
 share/icons/nuvola/128x128/apps/kjobviewer.png
 share/icons/nuvola/128x128/apps/kjots.png
 share/icons/nuvola/128x128/apps/klettres.png
-share/icons/nuvola/128x128/apps/klipper.png
 share/icons/nuvola/128x128/apps/klpq.png
 share/icons/nuvola/128x128/apps/kmag.png
 share/icons/nuvola/128x128/apps/kmahjong.png
@@ -3970,6 +3969,7 @@ share/icons/nuvola/22x22/status/mail-attachment.png
 share/icons/nuvola/22x22/status/media-playlist-repeat.png
 share/icons/nuvola/22x22/status/media-playlist-shuffle.png
 share/icons/nuvola/22x22/status/user-trash-full.png
+share/icons/nuvola/256x256/apps/klipper.png
 share/icons/nuvola/256x256/mimetypes/inode-directory.png
 share/icons/nuvola/256x256/mimetypes/text-html.png
 share/icons/nuvola/32x32/actions/about_kde.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/04/28 01:57:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/11/07 12:35:42 markd Exp $
 bin/lancelot
 include/KDE/Lancelot/ActionListModel
 include/KDE/Lancelot/ActionListView
@@ -112,6 +112,7 @@ lib/kde4/krunner_konsolesessions.so
 lib/kde4/krunner_kopete.so
 lib/kde4/krunner_mediawiki.so
 lib/kde4/krunner_spellcheckrunner.so
+lib/kde4/krunner_translator.so
 lib/kde4/krunner_youtube.so
 lib/kde4/plasma-applet_systemloadviewer.so
 lib/kde4/plasma_applet_bball.so
@@ -175,6 +176,7 @@ lib/kde4/plasma_packagestructure_comic.so
 lib/kde4/plasma_potd_apodprovider.so
 lib/kde4/plasma_potd_epodprovider.so
 lib/kde4/plasma_potd_flickrprovider.so
+lib/kde4/plasma_potd_natgeoprovider.so
 lib/kde4/plasma_potd_oseiprovider.so
 lib/kde4/plasma_potd_wcpotdprovider.so
 lib/kde4/plasma_runner_datetime.so
@@ -215,7 +217,7 @@ share/icons/hicolor/128x128/apps/lifegame.png
 share/icons/hicolor/128x128/apps/luna.png
 share/icons/hicolor/128x128/apps/plasmaapplet-shelf.png
 share/icons/hicolor/128x128/apps/previewer.png
-share/icons/hicolor/16x16/actions/youtube.png
+share/icons/hicolor/16x16/actions/krunner_youtube.png
 share/icons/hicolor/16x16/apps/bball.png
 share/icons/hicolor/16x16/apps/eyes.png
 share/icons/hicolor/16x16/apps/lancelot-start.png
@@ -224,7 +226,7 @@ share/icons/hicolor/16x16/apps/lifegame.png
 share/icons/hicolor/16x16/apps/luna.png
 share/icons/hicolor/16x16/apps/plasmaapplet-shelf.png
 share/icons/hicolor/16x16/apps/previewer.png
-share/icons/hicolor/22x22/actions/youtube.png
+share/icons/hicolor/22x22/actions/krunner_youtube.png
 share/icons/hicolor/22x22/apps/eyes.png
 share/icons/hicolor/22x22/apps/lancelot-start.png
 share/icons/hicolor/22x22/apps/lancelot.png
@@ -234,16 +236,15 @@ share/icons/hicolor/22x22/apps/plasmaapplet-shelf.png
 share/icons/hicolor/22x22/apps/previewer.png
 share/icons/hicolor/256x256/apps/eyes.png
 share/icons/hicolor/256x256/apps/lifegame.png
-share/icons/hicolor/32x32/actions/youtube.png
+share/icons/hicolor/32x32/actions/krunner_youtube.png
 share/icons/hicolor/32x32/apps/bball.png
-share/icons/hicolor/32x32/apps/eyes.png
 share/icons/hicolor/32x32/apps/lancelot-start.png
 share/icons/hicolor/32x32/apps/lancelot.png
 share/icons/hicolor/32x32/apps/lifegame.png
 share/icons/hicolor/32x32/apps/luna.png
 share/icons/hicolor/32x32/apps/plasmaapplet-shelf.png
 share/icons/hicolor/32x32/apps/previewer.png
-share/icons/hicolor/48x48/actions/youtube.png
+share/icons/hicolor/48x48/actions/krunner_youtube.png
 share/icons/hicolor/48x48/apps/bball.png
 share/icons/hicolor/48x48/apps/lancelot-start.png
 share/icons/hicolor/48x48/apps/lancelot.png
@@ -251,15 +252,16 @@ share/icons/hicolor/48x48/apps/lifegame.png
 share/icons/hicolor/48x48/apps/luna.png
 share/icons/hicolor/48x48/apps/plasmaapplet-shelf.png
 share/icons/hicolor/48x48/apps/previewer.png
-share/icons/hicolor/64x64/actions/youtube.png
+share/icons/hicolor/64x64/actions/krunner_youtube.png
 share/icons/hicolor/64x64/apps/bball.png
+share/icons/hicolor/64x64/apps/eyes.png
 share/icons/hicolor/64x64/apps/lancelot-start.png
 share/icons/hicolor/64x64/apps/lancelot.png
 share/icons/hicolor/64x64/apps/lifegame.png
 share/icons/hicolor/64x64/apps/luna.png
 share/icons/hicolor/64x64/apps/plasmaapplet-shelf.png
 share/icons/hicolor/64x64/apps/previewer.png
-share/icons/hicolor/scalable/actions/youtube.svgz
+share/icons/hicolor/scalable/actions/krunner_youtube.svgz
 share/icons/hicolor/scalable/apps/accessories-dictionary.svgz
 share/icons/hicolor/scalable/apps/bball.svgz
 share/icons/hicolor/scalable/apps/eyes.svgz
@@ -417,7 +419,7 @@ share/kde/apps/plasma/plasmoids/konsoleprofiles/contents/ui/konsoleprofiles.qml
 share/kde/apps/plasma/plasmoids/konsoleprofiles/metadata.desktop
 share/kde/apps/plasma/plasmoids/nowplaying/contents/code/service.js
 share/kde/apps/plasma/plasmoids/nowplaying/contents/config/main.xml
-share/kde/apps/plasma/plasmoids/nowplaying/contents/images/nocover.svgz
+share/kde/apps/plasma/plasmoids/nowplaying/contents/theme/nowplaying/nocover.svgz
 share/kde/apps/plasma/plasmoids/nowplaying/contents/ui/AlbumArt.qml
 share/kde/apps/plasma/plasmoids/nowplaying/contents/ui/CompactLayout.qml
 share/kde/apps/plasma/plasmoids/nowplaying/contents/ui/Controls.qml
@@ -508,6 +510,7 @@ share/kde4/services/katesessions.desktop
 share/kde4/services/konquerorsessions.desktop
 share/kde4/services/konsolesessions.desktop
 share/kde4/services/lancelot.desktop
+share/kde4/services/natgeoprovider.desktop
 share/kde4/services/oseiprovider.desktop
 share/kde4/services/plasma-applet-bball.desktop
 share/kde4/services/plasma-applet-binaryclock.desktop
@@ -583,6 +586,7 @@ share/kde4/services/plasma-runner-kopete.desktop
 share/kde4/services/plasma-runner-spellchecker.desktop
 share/kde4/services/plasma-runner-spellchecker_config.desktop
 share/kde4/services/plasma-runner-techbase.desktop
+share/kde4/services/plasma-runner-translator.desktop
 share/kde4/services/plasma-runner-wikipedia.desktop
 share/kde4/services/plasma-runner-wikitravel.desktop
 share/kde4/services/plasma-runner-youtube.desktop

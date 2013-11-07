@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 12:35:41 markd Exp $
 bin/kalzium
 include/libkdeedu/chemicaldataobject.h
 include/libkdeedu/element.h
@@ -35,7 +35,6 @@ share/doc/kde/HTML/en/kalzium/infodialog_misc.png
 share/doc/kde/HTML/en/kalzium/infodialog_spectrum.png
 share/doc/kde/HTML/en/kalzium/man-kalzium.1.docbook
 share/doc/kde/HTML/en/kalzium/quick-1.png
-share/doc/kde/HTML/en/kalzium/quick-2.png
 share/doc/kde/HTML/en/kalzium/quick-3.png
 share/doc/kde/HTML/en/kalzium/quick-4.png
 share/doc/kde/HTML/en/kalzium/screenshot-calc-conc.png
@@ -58,7 +57,6 @@ share/doc/kde/HTML/en/kalzium/settings2.png
 share/doc/kde/HTML/en/kalzium/settings3.png
 share/doc/kde/HTML/en/kalzium/settings4.png
 share/doc/kde/HTML/en/kalzium/sidebar1.png
-share/doc/kde/HTML/en/kalzium/sidebar2.png
 share/icons/hicolor/128x128/apps/kalzium.png
 share/icons/hicolor/16x16/apps/kalzium.png
 share/icons/hicolor/22x22/apps/kalzium.png
@@ -353,7 +351,6 @@ share/kde/apps/kalzium/icons/hicolor/32x32/actions/timeline.png
 share/kde/apps/kalzium/icons/hicolor/32x32/actions/tooltip.png
 share/kde/apps/kalzium/icons/hicolor/48x48/actions/calculate.png
 share/kde/apps/kalzium/icons/hicolor/48x48/actions/chemical.png
-share/kde/apps/kalzium/icons/hicolor/48x48/actions/elempic.png
 share/kde/apps/kalzium/icons/hicolor/48x48/actions/energies.png
 share/kde/apps/kalzium/icons/hicolor/48x48/actions/eqchem.png
 share/kde/apps/kalzium/icons/hicolor/48x48/actions/glossary.png

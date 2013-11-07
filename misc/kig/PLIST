@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:38:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:35:42 markd Exp $
 bin/kig
 bin/pykig.py
 lib/kde4/kigpart.so
@@ -106,6 +106,7 @@ share/kde/apps/kig/icons/hicolor/22x22/actions/pointOnLine.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/pointxy.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/polygonsides.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/polygonvertices.png
+share/kde/apps/kig/icons/hicolor/22x22/actions/projection.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/python.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/radicalline.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/ray.png
@@ -197,6 +198,7 @@ share/kde/apps/kig/icons/hicolor/32x32/actions/pointOnLine.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/pointxy.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/polygonsides.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/polygonvertices.png
+share/kde/apps/kig/icons/hicolor/32x32/actions/projection.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/python.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/radicalline.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/ray.png
@@ -287,6 +289,7 @@ share/kde/apps/kig/icons/hicolor/scalable/actions/pointOnLine.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/pointxy.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/polygonsides.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/polygonvertices.svgz
+share/kde/apps/kig/icons/hicolor/scalable/actions/projection.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/python.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/radicalline.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/ray.svgz

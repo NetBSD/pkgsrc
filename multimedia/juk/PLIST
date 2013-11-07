@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 11:13:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:49:19 markd Exp $
 bin/juk
 share/applications/kde4/juk.desktop
 share/dbus-1/interfaces/org.kde.juk.collection.xml
@@ -11,6 +11,7 @@ share/doc/kde/HTML/en/juk/index.docbook
 share/doc/kde/HTML/en/juk/juk-adv-search.png
 share/doc/kde/HTML/en/juk/juk-file-renamer.png
 share/doc/kde/HTML/en/juk/juk-main.png
+share/doc/kde/HTML/en/juk/juk-manage-folders.png
 share/doc/kde/HTML/en/juk/juk-tag-guesser.png
 share/doc/kde/HTML/en/juk/normal-playlist.png
 share/doc/kde/HTML/en/juk/search-playlist.png

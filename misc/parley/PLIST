@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:31:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:35:42 markd Exp $
 bin/parley
 lib/kde4/plasma_applet_parley.so
 lib/kde4/plasma_engine_parley.so
@@ -26,7 +26,6 @@ share/doc/kde/HTML/en/parley/Parley_create_new_exercise_collective_names7.png
 share/doc/kde/HTML/en/parley/Parley_create_new_exercise_collective_names8.png
 share/doc/kde/HTML/en/parley/Parley_document_properties.png
 share/doc/kde/HTML/en/parley/Parley_edit_comparison_form_1.png
-share/doc/kde/HTML/en/parley/Parley_edit_comparison_form_2.png
 share/doc/kde/HTML/en/parley/Parley_edit_comparison_form_3.png
 share/doc/kde/HTML/en/parley/Parley_edit_conjugation_1.png
 share/doc/kde/HTML/en/parley/Parley_edit_conjugation_2.png
@@ -185,7 +184,10 @@ share/kde/apps/parley/plugins/mwclient/simplejson/__init__.py
 share/kde/apps/parley/plugins/mwclient/simplejson/decoder.py
 share/kde/apps/parley/plugins/mwclient/simplejson/encoder.py
 share/kde/apps/parley/plugins/mwclient/simplejson/jsonfilter.py
+share/kde/apps/parley/plugins/mwclient/simplejson/ordered_dict.py
 share/kde/apps/parley/plugins/mwclient/simplejson/scanner.py
+share/kde/apps/parley/plugins/mwclient/simplejson/tool.py
+share/kde/apps/parley/plugins/mwclient/upload.py
 share/kde/apps/parley/plugins/wiktionary_sound.desktop
 share/kde/apps/parley/plugins/wiktionary_sound.py
 share/kde/apps/parley/practicesummaryui.rc

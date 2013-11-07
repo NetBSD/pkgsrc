@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:36:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:35:42 markd Exp $
 bin/klettres
 share/applications/kde4/klettres.desktop
 share/doc/kde/HTML/en/klettres/common
 share/doc/kde/HTML/en/klettres/index.cache.bz2
 share/doc/kde/HTML/en/klettres/index.docbook
 share/doc/kde/HTML/en/klettres/klettres-newstuff.png
-share/doc/kde/HTML/en/klettres/klettres-newstuff1.png
 share/doc/kde/HTML/en/klettres/klettres-newstuff2.png
 share/doc/kde/HTML/en/klettres/klettres1.png
 share/doc/kde/HTML/en/klettres/klettres2.png

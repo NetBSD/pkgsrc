@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/04/03 10:52:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/11/07 11:53:59 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 lib/kde4/gvpart.so
@@ -8,10 +8,13 @@ lib/libgwenviewlib.so.${PKGVERSION}
 share/applications/kde4/gwenview.desktop
 share/doc/kde/HTML/en/gwenview/browse_mode.png
 share/doc/kde/HTML/en/gwenview/common
-share/doc/kde/HTML/en/gwenview/fullscreen_mode.png
+share/doc/kde/HTML/en/gwenview/fullscreen-browse.png
+share/doc/kde/HTML/en/gwenview/fullscreen-view.png
+share/doc/kde/HTML/en/gwenview/importer-picking-root-folder.png
 share/doc/kde/HTML/en/gwenview/importer.png
 share/doc/kde/HTML/en/gwenview/index.cache.bz2
 share/doc/kde/HTML/en/gwenview/index.docbook
+share/doc/kde/HTML/en/gwenview/start-page.png
 share/doc/kde/HTML/en/gwenview/view_mode.png
 share/icons/hicolor/128x128/actions/document-share.png
 share/icons/hicolor/128x128/apps/gwenview.png
