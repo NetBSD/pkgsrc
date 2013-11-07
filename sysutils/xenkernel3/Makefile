@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/09/27 11:35:07 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2013/11/07 00:47:39 joerg Exp $
 #
 
 VERSION=	3.1.4
@@ -64,6 +64,7 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -Wno-error=format \
 		-Wno-error=parentheses-equality \
 		-Wno-error=sometimes-uninitialized -no-integrated-as \
 		-ffreestanding -Wno-error=unused-function
+BUILDLINK_TRANSFORM+=	rm:-fno-reorder-blocks
 .endif
 
 do-build:
