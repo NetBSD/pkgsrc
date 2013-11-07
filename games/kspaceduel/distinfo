@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
 
-SHA1 (kspaceduel-4.10.3.tar.xz) = 20fe3641363fc8a7a6d21bf8c2da810b4687bc76
-RMD160 (kspaceduel-4.10.3.tar.xz) = 4eb987aa97d81257b74a0067ce44655bdb772c25
-Size (kspaceduel-4.10.3.tar.xz) = 264988 bytes
+SHA1 (kspaceduel-4.11.3.tar.xz) = 5c1507de0b2d20eda890895b03cbcffe6c3f57c5
+RMD160 (kspaceduel-4.11.3.tar.xz) = cdffb0f8128393d4032b7dfdbb8bcb10c4193273
+Size (kspaceduel-4.11.3.tar.xz) = 256476 bytes
