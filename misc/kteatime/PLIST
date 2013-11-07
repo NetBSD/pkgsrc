@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 12:35:43 markd Exp $
+bin/kteatime
+share/applications/kde4/kteatime.desktop
+share/doc/kde/HTML/en/kteatime/common
+share/doc/kde/HTML/en/kteatime/config.png
+share/doc/kde/HTML/en/kteatime/index.cache.bz2
+share/doc/kde/HTML/en/kteatime/index.docbook
+share/icons/hicolor/128x128/apps/kteatime.png
+share/icons/hicolor/16x16/apps/kteatime.png
+share/icons/hicolor/22x22/apps/kteatime.png
+share/icons/hicolor/32x32/apps/kteatime.png
+share/icons/hicolor/48x48/apps/kteatime.png
+share/icons/hicolor/64x64/apps/kteatime.png
+share/icons/hicolor/scalable/apps/kteatime.svgz
+share/kde/apps/kteatime/kteatime.notifyrc

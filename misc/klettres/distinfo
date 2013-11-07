@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/21 12:49:34 markd Exp $
+$NetBSD: distinfo,v 1.6 2013/11/07 12:35:42 markd Exp $
 
-SHA1 (klettres-4.10.3.tar.xz) = f40332da60528898909858b9271ab04a73ceba78
-RMD160 (klettres-4.10.3.tar.xz) = 4ffd802fd2a51ade0bceb9aea0f9d985a04a47aa
-Size (klettres-4.10.3.tar.xz) = 2656760 bytes
+SHA1 (klettres-4.11.3.tar.xz) = 14500ed25d6837c9f822fd6b29f21152eebb82eb
+RMD160 (klettres-4.11.3.tar.xz) = 1240a9af737c8443dc1d44182b8a620175dd2e54
+Size (klettres-4.11.3.tar.xz) = 2676208 bytes

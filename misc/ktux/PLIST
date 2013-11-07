@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 12:35:43 markd Exp $
+bin/ktux
+share/icons/hicolor/16x16/apps/ktux.png
+share/icons/hicolor/32x32/apps/ktux.png
+share/kde/apps/ktux/sprites/anim0001.png
+share/kde/apps/ktux/sprites/anim0002.png
+share/kde/apps/ktux/sprites/anim0003.png
+share/kde/apps/ktux/sprites/anim0004.png
+share/kde/apps/ktux/sprites/anim0005.png
+share/kde/apps/ktux/sprites/anim0006.png
+share/kde/apps/ktux/sprites/anim0007.png
+share/kde/apps/ktux/sprites/anim0008.png
+share/kde/apps/ktux/sprites/anim0009.png
+share/kde/apps/ktux/sprites/anim0010.png
+share/kde/apps/ktux/sprites/bg.png
+share/kde/apps/ktux/sprites/flare0001.png
+share/kde/apps/ktux/sprites/flare0002.png
+share/kde/apps/ktux/sprites/spriterc
+share/kde/apps/ktux/sprites/star0001.png
+share/kde/apps/ktux/sprites/star0002.png
+share/kde4/services/ScreenSavers/ktux.desktop

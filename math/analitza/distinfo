@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/21 12:49:33 markd Exp $
+$NetBSD: distinfo,v 1.6 2013/11/07 11:59:58 markd Exp $
 
-SHA1 (analitza-4.10.3.tar.xz) = d2b986516a5f9ecaa1ed4151afe9f0958b68c868
-RMD160 (analitza-4.10.3.tar.xz) = 0e26b22c1297cb0d6c25c632c40b3ce00c2c3675
-Size (analitza-4.10.3.tar.xz) = 178036 bytes
+SHA1 (analitza-4.11.3.tar.xz) = 525844959de2c21888496eb5aaf5b7996ccf823e
+RMD160 (analitza-4.11.3.tar.xz) = aec91198364ec9f40ffd899c6b4d9601e74f191c
+Size (analitza-4.11.3.tar.xz) = 186672 bytes

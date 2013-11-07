@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:52:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 12:35:42 markd Exp $
 bin/ktouch
 lib/kde4/imports/org/kde/ktouch/graph/BarGraph.qml
 lib/kde4/imports/org/kde/ktouch/graph/Label.qml
@@ -75,6 +75,7 @@ share/kde/apps/ktouch/courses/es1.xml
 share/kde/apps/ktouch/courses/es2.xml
 share/kde/apps/ktouch/courses/es3.xml
 share/kde/apps/ktouch/courses/fi.xml
+share/kde/apps/ktouch/courses/fr.bepo.xml
 share/kde/apps/ktouch/courses/fr.dvarok.xml
 share/kde/apps/ktouch/courses/fr.xml
 share/kde/apps/ktouch/courses/gb.xml
@@ -120,6 +121,7 @@ share/kde/apps/ktouch/keyboardlayouts/ee.xml
 share/kde/apps/ktouch/keyboardlayouts/es.dvorak.xml
 share/kde/apps/ktouch/keyboardlayouts/es.xml
 share/kde/apps/ktouch/keyboardlayouts/fi.xml
+share/kde/apps/ktouch/keyboardlayouts/fr.bepo.xml
 share/kde/apps/ktouch/keyboardlayouts/fr.dvorak.xml
 share/kde/apps/ktouch/keyboardlayouts/fr.xml
 share/kde/apps/ktouch/keyboardlayouts/gb.dvorak.xml
@@ -176,7 +178,6 @@ share/kde/apps/ktouch/qml/SelectionGrip.qml
 share/kde/apps/ktouch/qml/SelectionRectangle.qml
 share/kde/apps/ktouch/qml/SheetDialog.qml
 share/kde/apps/ktouch/qml/StatBox.qml
-share/kde/apps/ktouch/qml/TrainingLine.qml
 share/kde/apps/ktouch/qml/TrainingScreen.qml
 share/kde/apps/ktouch/qml/TrainingScreenMenuOverlay.qml
 share/kde/apps/ktouch/qml/TrainingScreenToolbar.qml

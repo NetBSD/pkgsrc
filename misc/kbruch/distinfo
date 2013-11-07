@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/05/21 12:49:33 markd Exp $
+$NetBSD: distinfo,v 1.7 2013/11/07 12:35:41 markd Exp $
 
-SHA1 (kbruch-4.10.3.tar.xz) = c4effef0b1f6e54c5ca1dc4d3642398ccc180551
-RMD160 (kbruch-4.10.3.tar.xz) = 104f4f82d65e21036ff925d7b6b0ffd36e80c01a
-Size (kbruch-4.10.3.tar.xz) = 908696 bytes
-SHA1 (patch-src_FractionPainter.cpp) = 6fe40215175a13363993cc5fca708031e76b72a0
-SHA1 (patch-src_fractionbasewidget.cpp) = 292fb8c4f793d3c33866916a1852d351c7ab1e54
-SHA1 (patch-src_ratiowidget.cpp) = e3a53034a66623a307a2b957f26e5b47e9b540e9
-SHA1 (patch-src_taskwidget.cpp) = 7e8ea06cc705e07efbaac5c154852f9502d99941
+SHA1 (kbruch-4.11.3.tar.xz) = b9f693a95071e169e4593d090979e9263828a26a
+RMD160 (kbruch-4.11.3.tar.xz) = 51a1c3ae67d971082a8770fcaa5ad425135db790
+Size (kbruch-4.11.3.tar.xz) = 900824 bytes

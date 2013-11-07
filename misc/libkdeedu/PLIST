@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 12:35:41 markd Exp $
 include/libkdeedu/keduvocarticle.h
 include/libkdeedu/keduvocconjugation.h
 include/libkdeedu/keduvoccontainer.h
@@ -29,6 +29,7 @@ lib/libkeduvocdocument.so.${PKGVERSION}
 lib/libqtmmlwidget.a
 share/icons/hicolor/16x16/actions/editplots.png
 share/icons/hicolor/16x16/actions/functionhelp.png
+share/icons/hicolor/16x16/actions/integral_func.png
 share/icons/hicolor/16x16/actions/maximum.png
 share/icons/hicolor/16x16/actions/minimum.png
 share/icons/hicolor/16x16/actions/newdifferential.png
@@ -66,7 +67,6 @@ share/icons/hicolor/32x32/actions/newpolar.png
 share/icons/hicolor/32x32/actions/resetview.png
 share/icons/hicolor/48x48/actions/editplots.png
 share/icons/hicolor/48x48/actions/functionhelp.png
-share/icons/hicolor/48x48/actions/integral_func.png
 share/icons/hicolor/48x48/actions/maximum.png
 share/icons/hicolor/48x48/actions/minimum.png
 share/icons/hicolor/48x48/actions/newdifferential.png

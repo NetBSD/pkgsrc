@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/03 10:51:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 11:59:58 markd Exp $
 bin/kalgebra
 bin/kalgebramobile
 lib/kde4/imports/org/kde/analitza/Graph2D.qml
@@ -16,6 +16,7 @@ share/doc/kde/HTML/en/kalgebra/kalgebra-3dgraph-window.png
 share/doc/kde/HTML/en/kalgebra/kalgebra-console-window.png
 share/doc/kde/HTML/en/kalgebra/kalgebra-dictionary-window.png
 share/doc/kde/HTML/en/kalgebra/kalgebra-main-window.png
+share/doc/kde/HTML/en/kalgebra/view-fullscreen.png
 share/icons/hicolor/128x128/apps/kalgebra.png
 share/icons/hicolor/16x16/apps/kalgebra.png
 share/icons/hicolor/32x32/apps/kalgebra.png

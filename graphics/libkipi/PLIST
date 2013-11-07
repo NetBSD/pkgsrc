@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/04/03 10:52:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/11/07 11:53:59 markd Exp $
 bin/kxmlkipicmd
 include/libkipi/configwidget.h
 include/libkipi/imagecollection.h
@@ -14,8 +14,8 @@ include/libkipi/uploadwidget.h
 include/libkipi/version.h
 lib/kde4/kipiplugin_kxmlhelloworld.so
 lib/libkipi.so
-lib/libkipi.so.10
-lib/libkipi.so.10.0.0
+lib/libkipi.so.11
+lib/libkipi.so.11.0.0
 lib/pkgconfig/libkipi.pc
 share/icons/hicolor/128x128/apps/kipi.png
 share/icons/hicolor/16x16/apps/kipi.png

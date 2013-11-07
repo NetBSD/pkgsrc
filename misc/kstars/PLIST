@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/03 10:52:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/11/07 12:35:42 markd Exp $
 bin/kstars
 lib/libhtmesh.a
 share/applications/kde4/kstars.desktop
@@ -11,7 +11,6 @@ share/doc/kde/HTML/en/kstars/Another_way_to_add_part3.png
 share/doc/kde/HTML/en/kstars/Delete_all_images.png
 share/doc/kde/HTML/en/kstars/KStars_Neptune.png
 share/doc/kde/HTML/en/kstars/Savin_session.png
-share/doc/kde/HTML/en/kstars/WUT.png
 share/doc/kde/HTML/en/kstars/aavso.png
 share/doc/kde/HTML/en/kstars/ai-contents.docbook
 share/doc/kde/HTML/en/kstars/alpha.png
@@ -135,6 +134,8 @@ share/icons/hicolor/48x48/apps/kstars.png
 share/icons/hicolor/64x64/apps/kstars.png
 share/icons/hicolor/scalable/apps/kstars.svgz
 share/kde/apps/kstars/Cities.dat
+share/kde/apps/kstars/Interesting.dat
+share/kde/apps/kstars/PlanetFacts.dat
 share/kde/apps/kstars/TZrules.dat
 share/kde/apps/kstars/advinterface.dat
 share/kde/apps/kstars/asteroids.dat
@@ -405,6 +406,13 @@ share/kde/apps/kstars/textures/sun.png
 share/kde/apps/kstars/textures/uranus.png
 share/kde/apps/kstars/textures/venus.png
 share/kde/apps/kstars/tips
+share/kde/apps/kstars/tools/whatsinteresting/qml/ScrollBar.qml
+share/kde/apps/kstars/tools/whatsinteresting/qml/leftArrow.png
+share/kde/apps/kstars/tools/whatsinteresting/qml/next.png
+share/kde/apps/kstars/tools/whatsinteresting/qml/previous.png
+share/kde/apps/kstars/tools/whatsinteresting/qml/reloadIcon.png
+share/kde/apps/kstars/tools/whatsinteresting/qml/settingsIcon.png
+share/kde/apps/kstars/tools/whatsinteresting/qml/wiview.qml
 share/kde/apps/kstars/unnamedstars.dat
 share/kde/apps/kstars/uranus.B0.vsop
 share/kde/apps/kstars/uranus.B1.vsop

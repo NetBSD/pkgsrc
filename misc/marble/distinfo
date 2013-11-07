@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/06/24 06:52:52 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2013/11/07 12:35:41 markd Exp $
 
-SHA1 (marble-4.10.3.tar.xz) = 814fffa64d91bec647c3f7e5cb130a2027dd6815
-RMD160 (marble-4.10.3.tar.xz) = f8fe39d776d6d67b1f2b42bb17a8cf6868f08354
-Size (marble-4.10.3.tar.xz) = 19449908 bytes
+SHA1 (marble-4.11.3.tar.xz) = b0b0cf06b4c60262861e748c6815d62513df13a7
+RMD160 (marble-4.11.3.tar.xz) = 35bed4c5ef017a5728da14e538ffbd1ab10edf6f
+Size (marble-4.11.3.tar.xz) = 19060368 bytes
 SHA1 (patch-src_plugins_render_satellites_mex_astrolib.h) = acc3477ca16f20f02c3fcdbb8285d9e9a3ec1706
 SHA1 (patch-src_plugins_render_stars_StarsPlugin.cpp) = 0c12eb09d4bd7601236bde2e586000afd2fef18d
