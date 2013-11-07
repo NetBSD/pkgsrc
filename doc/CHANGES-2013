@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4071 2013/11/07 14:02:05 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4072 2013/11/07 15:48:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5689,3 +5689,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/grantlee version 0.3.0 [markd 2013-11-07]
 	Updated databases/phpmyadmin to 4.0.9 [tron 2013-11-07]
 	Updated devel/dev86 to 0.16.19 [obache 2013-11-07]
+	Updated www/firefox to 25.0nb2 [ryoon 2013-11-07]
