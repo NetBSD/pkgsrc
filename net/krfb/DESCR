@@ -1,0 +1,4 @@
+krfb is a server application that allows you to share your current
+session with a user on another machine, who can use a VNC client to
+view or even control the desktop.
+

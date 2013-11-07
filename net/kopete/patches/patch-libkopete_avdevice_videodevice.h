@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 2012/03/19 20:12:49 markd Exp $
+$NetBSD: patch-libkopete_avdevice_videodevice.h,v 1.1 2013/11/07 13:03:07 markd Exp $
 
---- kopete/libkopete/avdevice/videodevice.h.orig	2011-04-01 10:59:27.000000000 +0000
-+++ kopete/libkopete/avdevice/videodevice.h
+--- libkopete/avdevice/videodevice.h.orig	2011-04-01 10:59:27.000000000 +0000
++++ libkopete/avdevice/videodevice.h
 @@ -75,6 +75,13 @@
  #endif // HAVE_V4L2
  

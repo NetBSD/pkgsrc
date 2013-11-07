@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:08 markd Exp $
+lib/strigi/strigita_torrent_analyzer.so

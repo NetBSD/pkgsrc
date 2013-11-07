@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:08 markd Exp $
+lib/kde4/kded_dnssdwatcher.so
+lib/kde4/kio_zeroconf.so
+share/dbus-1/interfaces/org.kde.kdnssd.xml
+share/kde/apps/remoteview/zeroconf.desktop
+share/kde4/services/kded/dnssdwatcher.desktop
+share/kde4/services/zeroconf.protocol
