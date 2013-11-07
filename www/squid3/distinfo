@@ -1,15 +1,18 @@
-$NetBSD: distinfo,v 1.14 2013/11/04 09:04:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2013/11/07 00:47:04 joerg Exp $
 
 SHA1 (squid-3.3.10.tar.xz) = 84e27544726b7cd0c37a27b3e5df957aad234185
 RMD160 (squid-3.3.10.tar.xz) = 0f4647bd925e5c1cf0f9ac5b52cfa2d9869778fa
 Size (squid-3.3.10.tar.xz) = 2186068 bytes
+SHA1 (patch-compat_os_hpux.h) = 78e575f8383a1f48dfdf1fcf7ae726e72fa64aae
 SHA1 (patch-compat_unsafe.h) = 89e6741432357a0523a43ef410d81bffcb263f81
 SHA1 (patch-configure) = 86400fd701a84eb174395755eec7b13cbfce55ec
 SHA1 (patch-errors_Makefile.in) = afbac822ac84d5e1734d55fc625e949ae0b85289
 SHA1 (patch-helpers_basic_auth_MSNT_Makefile.in) = 74a0379d3ec0c2601dbb62b16df889bf4edcaedf
 SHA1 (patch-helpers_log_daemon_DB_config.test) = 2716abf507d8d9f8f31dc6a873afc0f224d1c00b
 SHA1 (patch-include_Array.h) = 5631c937affa41f94263034474951a0cfb409fe6
+SHA1 (patch-include_SquidNew.h) = 0c46a95a3da117ec263f29c0233e35047c0db570
 SHA1 (patch-src_Makefile.in) = 130e223568a07c474b30a8fa3678c60f8b487c3e
+SHA1 (patch-src_SquidNew.cc) = eef6e72e168cf7f40518fab13dc2f55ed0268db9
 SHA1 (patch-src_base_TidyPointer.h) = 93428d26bb2479fc845764a324658eaacd26588e
 SHA1 (patch-src_ip_Intercept.cc) = 8a8640d5f7eef217b2536646513eb872c67a7ffc
 SHA1 (patch-src_store.cc) = 055d98a59103b02a51876a5c8ffed9514954beb4
