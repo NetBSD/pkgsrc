@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/05/21 12:49:41 markd Exp $
+$NetBSD: distinfo,v 1.4 2013/11/07 13:41:57 markd Exp $
 
-SHA1 (kde-l10n-vi-4.10.3.tar.xz) = 94e97a6d90b800d4b4eae5978b4fee765b0c4f87
-RMD160 (kde-l10n-vi-4.10.3.tar.xz) = a818eb0608e34dcb13ed93dfa705b0890be4c264
-Size (kde-l10n-vi-4.10.3.tar.xz) = 940868 bytes
+SHA1 (kde-l10n-vi-4.11.3.tar.xz) = 6ab6c36422b57b9e08cde990e95999f02806de60
+RMD160 (kde-l10n-vi-4.11.3.tar.xz) = 551a243a348205439bc3d931bdecb7ea4fc78dd2
+Size (kde-l10n-vi-4.11.3.tar.xz) = 950944 bytes
