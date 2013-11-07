@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2013/10/19 09:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.42 2013/11/07 13:48:59 markd Exp $
 #
 
-DISTNAME=	kdevplatform-1.4.1
-PKGREVISION=	14
+DISTNAME=	kdevplatform-1.5.2
 CATEGORIES=	devel kde
-MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.4.1/src/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.5.2/src/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	frank@fthieme.net
 HOMEPAGE=	http://www.kdevelop.org/
@@ -28,6 +27,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/grantlee/buildlink3.mk"
 .include "../../devel/qjson/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 
