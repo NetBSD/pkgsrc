@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/15 05:54:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/11/07 12:35:41 markd Exp $
 bin/kgeography
 share/applications/kde4/kgeography.desktop
 share/doc/kde/HTML/en/kgeography/common
@@ -955,6 +955,8 @@ share/kde/apps/kgeography/switzerland.kgm
 share/kde/apps/kgeography/switzerland.png
 share/kde/apps/kgeography/tajikistan.kgm
 share/kde/apps/kgeography/tajikistan.png
+share/kde/apps/kgeography/tamilnadu.kgm
+share/kde/apps/kgeography/tamilnadu.png
 share/kde/apps/kgeography/thailand.kgm
 share/kde/apps/kgeography/thailand.png
 share/kde/apps/kgeography/tripura.kgm

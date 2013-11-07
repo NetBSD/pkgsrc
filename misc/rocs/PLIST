@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/11/07 12:35:43 markd Exp $
 bin/rocs
+include/rocs/ConsoleModule.h
 include/rocs/CoreTypes.h
 include/rocs/Data.h
 include/rocs/DataItem.h
 include/rocs/DataStructure.h
+include/rocs/DataStructureBackendInterface.h
 include/rocs/DataStructureBackendManager.h
-include/rocs/DataStructurePluginInterface.h
 include/rocs/Document.h
 include/rocs/GraphFileBackendManager.h
 include/rocs/GraphFilePluginInterface.h
@@ -31,6 +32,12 @@ lib/librocsvisualeditor.so
 lib/librocsvisualeditor.so.4
 lib/librocsvisualeditor.so.${PKGVERSION}
 share/applications/kde4/rocs.desktop
+share/doc/kde/HTML/en/rocs/apiConsole.docbook
+share/doc/kde/HTML/en/rocs/apiDatastructure.docbook
+share/doc/kde/HTML/en/rocs/apiGraphstructure.docbook
+share/doc/kde/HTML/en/rocs/apiLinkedListstructure.docbook
+share/doc/kde/HTML/en/rocs/apiRootedTreestructure.docbook
+share/doc/kde/HTML/en/rocs/chapterImportExport.docbook
 share/doc/kde/HTML/en/rocs/common
 share/doc/kde/HTML/en/rocs/document-selector.png
 share/doc/kde/HTML/en/rocs/hi22-action-rocsadddata.png
@@ -62,6 +69,17 @@ share/doc/kde/HTML/en/rocs/rocs-toolbar-main.png
 share/icons/hicolor/16x16/apps/rocs.png
 share/icons/hicolor/32x32/apps/rocs.png
 share/icons/hicolor/48x48/apps/rocs.png
+share/icons/hicolor/64x64/apps/rocs.png
+share/icons/hicolor/scalable/apps/rocs.svgz
+share/kde/apps/rocs/engineapi/Console.xml
+share/kde/apps/rocs/engineapi/Data.xml
+share/kde/apps/rocs/engineapi/DataStructure.xml
+share/kde/apps/rocs/engineapi/GraphEdge.xml
+share/kde/apps/rocs/engineapi/GraphNode.xml
+share/kde/apps/rocs/engineapi/GraphStructure.xml
+share/kde/apps/rocs/engineapi/ListNode.xml
+share/kde/apps/rocs/engineapi/ListStructure.xml
+share/kde/apps/rocs/engineapi/Pointer.xml
 share/kde/apps/rocs/examples/AdjustProjection.js
 share/kde/apps/rocs/examples/NameAndNodes.js
 share/kde/apps/rocs/examples/NamesValues.js
@@ -124,6 +142,7 @@ share/kde/apps/rocs/icons/hicolor/64x64/actions/rocsalignvmiddle.png
 share/kde/apps/rocs/icons/hicolor/64x64/actions/rocsselect.png
 share/kde/apps/rocs/icons/hicolor/64x64/actions/rocsselectmove.png
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsadddata.svgz
+share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsadvancedsetup.svgz
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsdelete.svgz
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsdeletedata.svgz
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsdeletegrey.svgz
@@ -131,7 +150,12 @@ share/kde/apps/rocs/icons/hicolor/scalable/actions/rocseyeblack.svgz
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsnew.svgz
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocstexticon.svgz
 share/kde/apps/rocs/icons/hicolor/scalable/actions/rocsvalueicon.svgz
+share/kde/apps/rocs/plugin/apidoc/bootstrap-apiview.css
+share/kde/apps/rocs/plugin/apidoc/bootstrap.css
+share/kde/apps/rocs/plugin/apidoc/objectApi.html
+share/kde/apps/rocs/plugin/apidoc/overview.html
 share/kde/apps/rocs/rocsui.rc
+share/kde/apps/rocs/schemes/engineApi.xsd
 share/kde/apps/rocs_rootedtree/RootedTreeui.rc
 share/kde/config.kcfg/rocs.kcfg
 share/kde/config/rocs.knsrc

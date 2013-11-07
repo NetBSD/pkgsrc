@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:36 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 12:49:20 markd Exp $
 
-SHA1 (dragon-4.10.3.tar.xz) = 9ebb61b985a6054f690ff8f89e638ad8da6a483a
-RMD160 (dragon-4.10.3.tar.xz) = f5776cadb2ac880b24cc45465ac2a18a7c4453c9
-Size (dragon-4.10.3.tar.xz) = 395184 bytes
+SHA1 (dragon-4.11.3.tar.xz) = d6682f0dd7a62b7576bc9778ff711abdcc9ba45b
+RMD160 (dragon-4.11.3.tar.xz) = 091ada65f49d512a4a3fcbb2f70a8e7d65872353
+Size (dragon-4.11.3.tar.xz) = 394072 bytes
