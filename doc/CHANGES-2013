@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4069 2013/11/07 10:19:59 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4070 2013/11/07 10:48:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5688,4 +5688,3 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind99 to 9.9.4pl1 [taca 2013-11-07]
 	Added devel/grantlee version 0.3.0 [markd 2013-11-07]
 	Updated databases/phpmyadmin to 4.0.9 [tron 2013-11-07]
-	Updated x11/xtrans to 1.3.1 [wiz 2013-11-07]
