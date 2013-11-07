@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/03/03 04:56:01 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/11/07 13:51:37 markd Exp $
 
-SHA1 (kdevelop-4.4.1.tar.bz2) = 31bd10ffdbf2a6f2b3a75ecc8c1877d1bcc5b685
-RMD160 (kdevelop-4.4.1.tar.bz2) = e37a5f25711bb283b68e7a8d2a2f194c3176abcb
-Size (kdevelop-4.4.1.tar.bz2) = 6228685 bytes
-SHA1 (patch-CMakeLists.txt) = 669ac53be2325337eead24f1d6279f33e3249c10
+SHA1 (kdevelop-4.5.2.tar.xz) = 3bd354ca9ff8562c8099a41836ccd72456561409
+RMD160 (kdevelop-4.5.2.tar.xz) = 3028644fa9f1aca4f26e462472ba99266d018277
+Size (kdevelop-4.5.2.tar.xz) = 4901660 bytes
