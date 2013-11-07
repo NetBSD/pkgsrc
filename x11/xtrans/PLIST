@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2013/11/07 10:19:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/11/07 10:48:15 wiz Exp $
 include/X11/Xtrans/Xtrans.c
 include/X11/Xtrans/Xtrans.h
 include/X11/Xtrans/Xtransint.h
 include/X11/Xtrans/Xtranslcl.c
 include/X11/Xtrans/Xtranssock.c
+include/X11/Xtrans/Xtranstli.c
 include/X11/Xtrans/Xtransutil.c
 include/X11/Xtrans/transport.c
 share/aclocal/xtrans.m4
