@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4065 2013/11/06 23:41:49 khorben Exp $
+$NetBSD: CHANGES-2013,v 1.4066 2013/11/07 04:24:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5683,3 +5683,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.7 [adam 2013-11-06]
 	Updated graphics/gimp to 2.8.8 [adam 2013-11-06]
 	Updated mail/deforaos-mailer to 0.1.6 [khorben 2013-11-07]
+	Updated net/bind96 to 9.6.3.1.ESV.10pl1 [taca 2013-11-07]
+	Updated net/bind98 to 9.8.6pl1 [taca 2013-11-07]
+	Updated net/bind99 to 9.9.4pl1 [taca 2013-11-07]
