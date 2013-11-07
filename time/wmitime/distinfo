@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/11/06 00:35:19 khorben Exp $
+$NetBSD: distinfo,v 1.2 2013/11/07 00:49:46 joerg Exp $
 
 SHA1 (wmitime-0.3.tar.gz) = 64bb07c5eccce5592088cfccc87836f66695e07c
 RMD160 (wmitime-0.3.tar.gz) = b2301a15ef159d2d55418ae5fbf914bedc388478
 Size (wmitime-0.3.tar.gz) = 21442 bytes
+SHA1 (patch-.._wmgeneral_list.h) = 3833c707c4eaf8ef8297eb5b5658db14d70e24ee
 SHA1 (patch-aa) = 9e2dc61ca81e403b142238aaaacd73297cc55e37
