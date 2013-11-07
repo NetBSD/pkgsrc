@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/19 20:01:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/11/07 13:20:40 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -93,13 +93,13 @@ share/icons/hicolor/48x48/apps/kimagemapeditor.png
 share/icons/hicolor/48x48/apps/klinkstatus.png
 share/icons/hicolor/64x64/apps/klinkstatus.png
 share/kde/apps/kfilereplace/kfilereplaceui.rc
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/backup_option.png
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/casesensitive_option.png
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/command_option.png
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/filesimulate.png
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/invert.png
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/recursive_option.png
-share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/regularexpression_option.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/backup_option.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/casesensitive_option.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/command_option.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/filesimulate.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/invert.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/recursive_option.png
+share/kde/apps/kfilereplacepart/icons/hicolor/22x22/actions/regularexpression_option.png
 share/kde/apps/kfilereplacepart/kfilereplacepartui.rc
 share/kde/apps/kimagemapeditor/addpointcursor.png
 share/kde/apps/kimagemapeditor/freehandcursor.png
