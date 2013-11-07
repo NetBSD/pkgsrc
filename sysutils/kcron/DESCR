@@ -1,0 +1,4 @@
+This is a module for scheduling programs to run in the
+background. It is a graphical user interface to cron,
+the UNIX system scheduler.
+
