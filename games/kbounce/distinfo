@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:29 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:49 markd Exp $
 
-SHA1 (kbounce-4.10.3.tar.xz) = 6c83f932c62d29432aef0403733998a4ae0ca7ad
-RMD160 (kbounce-4.10.3.tar.xz) = a568074f1304767b7711292fc98d023e97cee4a5
-Size (kbounce-4.10.3.tar.xz) = 1593656 bytes
+SHA1 (kbounce-4.11.3.tar.xz) = afc1fca732886e67d99cdb33276621cf67d85592
+RMD160 (kbounce-4.11.3.tar.xz) = b7c05a55f97564c52f74893534d5e17688581678
+Size (kbounce-4.11.3.tar.xz) = 1580728 bytes
