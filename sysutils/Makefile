@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.588 2013/10/12 13:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.589 2013/11/07 13:17:06 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -250,10 +250,13 @@ SUBDIR+=	iwn-firmware
 SUBDIR+=	k3b
 SUBDIR+=	k3b-kde3
 SUBDIR+=	k4dirstat
+SUBDIR+=	kcron
 SUBDIR+=	kdf
 SUBDIR+=	kdirstat
 SUBDIR+=	kfloppy
+SUBDIR+=	ksystemlog
 SUBDIR+=	krusader
+SUBDIR+=	kuser
 SUBDIR+=	lambd
 SUBDIR+=	lavaps
 SUBDIR+=	libdevkit-gobject
