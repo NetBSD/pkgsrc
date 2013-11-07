@@ -1,10 +1,10 @@
-$NetBSD: patch-kblog_CMakeLists.txt,v 1.1 2011/10/02 04:32:22 markd Exp $
+$NetBSD: patch-kblog_CMakeLists.txt,v 1.2 2013/11/07 12:35:41 markd Exp $
 
 --- kblog/CMakeLists.txt.orig	2011-09-27 09:07:09.000000000 +0000
 +++ kblog/CMakeLists.txt
 @@ -4,6 +4,8 @@ include_directories(${Boost_INCLUDE_DIR}
  
- add_subdirectory( tests )
+ #add_subdirectory( tests )
  
 +add_definitions(${KDE4_ENABLE_EXCEPTIONS})
 +

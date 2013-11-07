@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:36 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 12:49:20 markd Exp $
 
-SHA1 (libkcompactdisc-4.10.3.tar.xz) = cc6ad902a6c94c68a1b8d27aabdbcac1df547cd8
-RMD160 (libkcompactdisc-4.10.3.tar.xz) = 9090408d1a5211d73296128b12ace1d90ac9e0cc
-Size (libkcompactdisc-4.10.3.tar.xz) = 77236 bytes
+SHA1 (libkcompactdisc-4.11.3.tar.xz) = e8c3e8efe5454538a7e7538355d099ebdbf6ac2b
+RMD160 (libkcompactdisc-4.11.3.tar.xz) = 5266a505a263b74dc0b0dc3cd52f1d8150aaa1f9
+Size (libkcompactdisc-4.11.3.tar.xz) = 77920 bytes
