@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4066 2013/11/07 04:24:54 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4067 2013/11/07 08:17:39 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5686,3 +5686,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/bind96 to 9.6.3.1.ESV.10pl1 [taca 2013-11-07]
 	Updated net/bind98 to 9.8.6pl1 [taca 2013-11-07]
 	Updated net/bind99 to 9.9.4pl1 [taca 2013-11-07]
+	Added devel/grantlee version 0.3.0 [markd 2013-11-07]
