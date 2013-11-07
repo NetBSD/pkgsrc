@@ -1,20 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:51 markd Exp $
 bin/ktuberling
 share/applications/kde4/ktuberling.desktop
 share/doc/kde/HTML/en/ktuberling/button-new.png
 share/doc/kde/HTML/en/ktuberling/button-open.png
 share/doc/kde/HTML/en/ktuberling/button-print.png
-share/doc/kde/HTML/en/ktuberling/button-redo.png
 share/doc/kde/HTML/en/ktuberling/button-save.png
-share/doc/kde/HTML/en/ktuberling/button-undo.png
 share/doc/kde/HTML/en/ktuberling/common
+share/doc/kde/HTML/en/ktuberling/edit-redo.png
+share/doc/kde/HTML/en/ktuberling/edit-undo.png
 share/doc/kde/HTML/en/ktuberling/gameboard.png
 share/doc/kde/HTML/en/ktuberling/index.cache.bz2
 share/doc/kde/HTML/en/ktuberling/index.docbook
 share/doc/kde/HTML/en/ktuberling/ktuberling.png
 share/doc/kde/HTML/en/ktuberling/menu-edit.png
 share/doc/kde/HTML/en/ktuberling/menu-game.png
-share/doc/kde/HTML/en/ktuberling/menu-help.png
 share/doc/kde/HTML/en/ktuberling/menu-settings.png
 share/doc/kde/HTML/en/ktuberling/technical-reference.docbook
 share/doc/kde/HTML/en/ktuberling/toolbar.png
