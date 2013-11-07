@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:32 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:53:59 markd Exp $
 
-SHA1 (kde-base-artwork-4.10.3.tar.xz) = fdd0f62f0534360b692916e840d23e9710659a1b
-RMD160 (kde-base-artwork-4.10.3.tar.xz) = 928487478ab812727b4a9e62306c0198f7ef793d
-Size (kde-base-artwork-4.10.3.tar.xz) = 7422808 bytes
+SHA1 (kde-base-artwork-4.11.3.tar.xz) = 69da6dcd2e55e7627eae57c1bcf3d839813580f1
+RMD160 (kde-base-artwork-4.11.3.tar.xz) = 74adb2f7791fa0307baf6d15c24eb11ee7f2b0b3
+Size (kde-base-artwork-4.11.3.tar.xz) = 7422848 bytes

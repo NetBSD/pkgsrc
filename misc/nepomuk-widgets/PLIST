@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 10:51:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 12:35:41 markd Exp $
+include/nepomuk2/filemetadataconfigwidget.h
 include/nepomuk2/filemetadatawidget.h
 include/nepomuk2/nepomukwidgets_export.h
+include/nepomuk2/resourcemodel.h
 include/nepomuk2/tagwidget.h
 lib/cmake/NepomukWidgets/NepomukWidgetsConfig.cmake
 lib/cmake/NepomukWidgets/NepomukWidgetsConfigVersion.cmake

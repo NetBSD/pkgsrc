@@ -1,4 +1,4 @@
-$NetBSD: patch-knumber_knumber_float.cpp,v 1.1 2013/04/03 10:52:24 markd Exp $
+$NetBSD: patch-knumber_knumber_float.cpp,v 1.2 2013/11/07 11:59:59 markd Exp $
 
 use namespace std for isinf() and isnan()
 
@@ -6,10 +6,10 @@ use namespace std for isinf() and isnan()
 +++ knumber/knumber_float.cpp
 @@ -25,6 +25,8 @@ along with this program.  If not, see <h
  #include <QDebug>
- #include <cmath>
+ #include <math.h>
  
 +using namespace std;
 +
  // NOTE: these assume IEEE floats..
- #ifndef HAVE_FUNC_ISINF
+ #ifndef isinf
  #define isinf(x) ((x) != 0.0 && (x) + (x) == (x))
