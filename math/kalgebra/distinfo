@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/21 12:49:33 markd Exp $
+$NetBSD: distinfo,v 1.6 2013/11/07 11:59:58 markd Exp $
 
-SHA1 (kalgebra-4.10.3.tar.xz) = c3c237cdf891259b2bef399d2b5c75a420e21d55
-RMD160 (kalgebra-4.10.3.tar.xz) = dc50734738a8158faf8fe7ca1407f04426b71ad9
-Size (kalgebra-4.10.3.tar.xz) = 445880 bytes
+SHA1 (kalgebra-4.11.3.tar.xz) = 3852c19219164403c21ab4cab0ffa4e1599ddfa3
+RMD160 (kalgebra-4.11.3.tar.xz) = be42836a9bf26e550c6400eb9981110dfa1963cf
+Size (kalgebra-4.11.3.tar.xz) = 279520 bytes
