@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:08 markd Exp $
+bin/krfb
+lib/kde4/krfb_framebuffer_qt.so
+lib/kde4/krfb_framebuffer_x11.so
+lib/libkrfbprivate.so.${PKGVERSION}
+share/applications/kde4/krfb.desktop
+share/doc/kde/HTML/en/krfb/common
+share/doc/kde/HTML/en/krfb/configuration_network.png
+share/doc/kde/HTML/en/krfb/configuration_security.png
+share/doc/kde/HTML/en/krfb/connection.png
+share/doc/kde/HTML/en/krfb/email_invitation.png
+share/doc/kde/HTML/en/krfb/index.cache.bz2
+share/doc/kde/HTML/en/krfb/index.docbook
+share/doc/kde/HTML/en/krfb/personal_invitation.png
+share/doc/kde/HTML/en/krfb/screenshot.png
+share/kde/apps/krfb/krfb.notifyrc
+share/kde4/services/krfb_framebuffer_qt.desktop
+share/kde4/services/krfb_framebuffer_x11.desktop
+share/kde4/servicetypes/krfb-framebuffer.desktop
