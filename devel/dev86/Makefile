@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.6 2012/10/31 11:16:52 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/07 14:01:47 obache Exp $
 #
 
-DISTNAME=	dev86-0.16.17
-PKGREVISION=	2
+DISTNAME=	Dev86src-0.16.19
+PKGNAME=	${DISTNAME:tl:S/src-/-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://homepage.ntlworld.com/robert.debath/dev86/
-DISTFILES=	Dev86src-0.16.17.tar.gz
+MASTER_SITES=	http://www.debath.co.uk/dev86/
 
 MAINTAINER=	pierrick@bs-network.net
-HOMEPAGE=	http://www.swissgeeks.com/
+HOMEPAGE=	http://www.debath.co.uk/
 COMMENT=	Linux 8086 development environment
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS=	bcc-[0-9]*
 CONFLICTS+=	bin86-[0-9]*
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=	DIST=${DESTDIR}
+
+DESTDIR_VARNAME=	DIST
 
 .include "../../mk/bsd.pkg.mk"
