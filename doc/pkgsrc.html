@@ -82,12 +82,13 @@
 <dt><span class="sect2"><a href="#cygwin">3.3.1. Cygwin</a></span></dt>
 <dt><span class="sect2"><a href="#darwin">3.3.2. Darwin (Mac OS X)</a></span></dt>
 <dt><span class="sect2"><a href="#freebsd">3.3.3. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.3.4. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.3.5. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.3.6. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#mirbsd">3.3.7. MirBSD</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.3.8. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.3.9. Solaris</a></span></dt>
+<dt><span class="sect2"><a href="#gnukfreebsd">3.3.4. GNU/kFreeBSD</a></span></dt>
+<dt><span class="sect2"><a href="#interix">3.3.5. Interix</a></span></dt>
+<dt><span class="sect2"><a href="#irix">3.3.6. IRIX</a></span></dt>
+<dt><span class="sect2"><a href="#linux">3.3.7. Linux</a></span></dt>
+<dt><span class="sect2"><a href="#mirbsd">3.3.8. MirBSD</a></span></dt>
+<dt><span class="sect2"><a href="#openbsd">3.3.9. OpenBSD</a></span></dt>
+<dt><span class="sect2"><a href="#solaris">3.3.10. Solaris</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#using">4. Using pkgsrc</a></span></dt>
@@ -679,6 +680,10 @@ minutes!</p>
 <td><a class="ulink" href="http://cygwin.com/" target="_top">Cygwin</a></td>
 <td align="center">Mar 2013</td>
 </tr>
+<tr>
+<td><a class="ulink" href="http://www.debian.org/ports/kfreebsd-gnu/" target="_top">GNU/kFreeBSD</a></td>
+<td align="center">Jul 2013</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -818,12 +823,13 @@ minutes!</p>
 <dt><span class="sect2"><a href="#cygwin">3.3.1. Cygwin</a></span></dt>
 <dt><span class="sect2"><a href="#darwin">3.3.2. Darwin (Mac OS X)</a></span></dt>
 <dt><span class="sect2"><a href="#freebsd">3.3.3. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.3.4. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.3.5. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.3.6. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#mirbsd">3.3.7. MirBSD</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.3.8. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.3.9. Solaris</a></span></dt>
+<dt><span class="sect2"><a href="#gnukfreebsd">3.3.4. GNU/kFreeBSD</a></span></dt>
+<dt><span class="sect2"><a href="#interix">3.3.5. Interix</a></span></dt>
+<dt><span class="sect2"><a href="#irix">3.3.6. IRIX</a></span></dt>
+<dt><span class="sect2"><a href="#linux">3.3.7. Linux</a></span></dt>
+<dt><span class="sect2"><a href="#mirbsd">3.3.8. MirBSD</a></span></dt>
+<dt><span class="sect2"><a href="#openbsd">3.3.9. OpenBSD</a></span></dt>
+<dt><span class="sect2"><a href="#solaris">3.3.10. Solaris</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#using">4. Using pkgsrc</a></span></dt>
@@ -980,14 +986,14 @@ and dashes.</p>
 	respectively.
 	</p>
 <p>You can fetch the same files using FTP.</p>
-<p>The tar file for the stable branch 2009Q1 is in the
-	directory <code class="filename">pkgsrc-2009Q1</code> and is also called <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2009Q1/pkgsrc-2009Q1.tar.gz" target="_top"><code class="filename">pkgsrc-2009Q1.tar.gz</code></a>.</p>
+<p>The tar file for the stable branch 2013Q1 is in the
+	directory <code class="filename">pkgsrc-2013Q1</code> and is also called <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2013Q1/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
 <p>To download a pkgsrc stable tarball, run:</p>
 <pre class="screen">
-<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<em class="replaceable"><code>pkgsrc-20xxQy</code></em>/<em class="replaceable"><code>pkgsrc-20xxQy</code></em>.tar.gz</code></strong></pre>
+<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/<em class="replaceable"><code>pkgsrc-20xxQy</code></em>/pkgsrc.tar.gz</code></strong></pre>
 <p>Where <em class="replaceable"><code>pkgsrc-20xxQy</code></em> is the
 	stable branch to be downloaded, for example, 
-	<span class="quote">&#8220;<span class="quote">pkgsrc-2009Q1</span>&#8221;</span>.</p>
+	<span class="quote">&#8220;<span class="quote">pkgsrc-2013Q1</span>&#8221;</span>.</p>
 <p>You can use fetch it also using "wget", "curl",
 	or your web browser.</p>
 <p>Then, extract it with:</p>
@@ -1118,12 +1124,13 @@ release -d
 <dt><span class="sect2"><a href="#cygwin">3.3.1. Cygwin</a></span></dt>
 <dt><span class="sect2"><a href="#darwin">3.3.2. Darwin (Mac OS X)</a></span></dt>
 <dt><span class="sect2"><a href="#freebsd">3.3.3. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.3.4. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.3.5. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.3.6. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#mirbsd">3.3.7. MirBSD</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.3.8. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.3.9. Solaris</a></span></dt>
+<dt><span class="sect2"><a href="#gnukfreebsd">3.3.4. GNU/kFreeBSD</a></span></dt>
+<dt><span class="sect2"><a href="#interix">3.3.5. Interix</a></span></dt>
+<dt><span class="sect2"><a href="#irix">3.3.6. IRIX</a></span></dt>
+<dt><span class="sect2"><a href="#linux">3.3.7. Linux</a></span></dt>
+<dt><span class="sect2"><a href="#mirbsd">3.3.8. MirBSD</a></span></dt>
+<dt><span class="sect2"><a href="#openbsd">3.3.9. OpenBSD</a></span></dt>
+<dt><span class="sect2"><a href="#solaris">3.3.10. Solaris</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -1247,7 +1254,15 @@ release -d
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="interix"></a>3.3.4. Interix</h3></div></div></div>
+<a name="gnukfreebsd"></a>3.3.4. GNU/kFreeBSD</h3></div></div></div>
+<p>Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now.
+      Debian GNU/kFreeBSD 7.0 or later is tested and supported.</p>
+<p> You should install ncurses (libncurses and libncurses-dev)
+      packages.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="interix"></a>3.3.5. Interix</h3></div></div></div>
 <p>Interix is a POSIX-compatible subsystem for the Windows NT kernel,
       providing a Unix-like environment with a tighter kernel integration than
       available with Cygwin.  It is part of the Windows Services for Unix
@@ -1265,7 +1280,7 @@ release -d
       with pkgsrc.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-sfu-install"></a>3.3.4.1. When installing Interix/SFU</h4></div></div></div>
+<a name="platform.interix-sfu-install"></a>3.3.5.1. When installing Interix/SFU</h4></div></div></div>
 <p>At an absolute minimum, the following packages must be installed from
 	the Windows Services for Unix 3.5 distribution in order to use pkgsrc:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -1306,7 +1321,7 @@ release -d
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-sfu-postinstall"></a>3.3.4.2. What to do if Interix/SFU is already installed</h4></div></div></div>
+<a name="platform.interix-sfu-postinstall"></a>3.3.5.2. What to do if Interix/SFU is already installed</h4></div></div></div>
 <p>If SFU is already installed and you wish to alter these settings to work
 	with pkgsrc, note the following things.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -1329,7 +1344,7 @@ release -d
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-notes"></a>3.3.4.3. Important notes for using pkgsrc</h4></div></div></div>
+<a name="platform.interix-notes"></a>3.3.5.3. Important notes for using pkgsrc</h4></div></div></div>
 <p>The package manager (either the pkgsrc "su" user, or the user
 	running "pkg_add") must be a member of the local Administrators
 	group.  Such a user must also be used to run the bootstrap.  This is
@@ -1352,7 +1367,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-limits"></a>3.3.4.4. Limitations of the Interix platform</h4></div></div></div>
+<a name="platform.interix-limits"></a>3.3.5.4. Limitations of the Interix platform</h4></div></div></div>
 <p>Though Interix suffices as a familiar and flexible substitute
 	for a full Unix-like platform, it has some drawbacks that should
 	be noted for those desiring to make the most of Interix.</p>
@@ -1409,7 +1424,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-knownissues"></a>3.3.4.5. Known issues for pkgsrc on Interix</h4></div></div></div>
+<a name="platform.interix-knownissues"></a>3.3.5.5. Known issues for pkgsrc on Interix</h4></div></div></div>
 <p>It is not necessary, in general, to have a "root" user on the
 	Windows system; any member of the local Administrators group will
 	suffice.  However, some packages currently assume that the user
@@ -1428,7 +1443,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="irix"></a>3.3.5. IRIX</h3></div></div></div>
+<a name="irix"></a>3.3.6. IRIX</h3></div></div></div>
 <p>You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
       compiler (cc/c89).  Please set the <code class="varname">CC</code> environment variable
       according to your preference.  If you do not have a license for the MIPSpro
@@ -1473,7 +1488,7 @@ PKGSRC_COMPILER=        mipspro
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="linux"></a>3.3.6. Linux</h3></div></div></div>
+<a name="linux"></a>3.3.7. Linux</h3></div></div></div>
 <p>Some versions of Linux (for example Debian GNU/Linux) need
       either libtermcap or libcurses (libncurses).  Installing the
       distributions libncurses-dev package (or equivalent) should fix
@@ -1516,7 +1531,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="mirbsd"></a>3.3.7. MirBSD</h3></div></div></div>
+<a name="mirbsd"></a>3.3.8. MirBSD</h3></div></div></div>
 <p>pkgsrc has been tested on MirBSD #10-current (2011 and newer).
       Older versions might also work. Releases before #10 are not
       supported.</p>
@@ -1539,7 +1554,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="openbsd"></a>3.3.8. OpenBSD</h3></div></div></div>
+<a name="openbsd"></a>3.3.9. OpenBSD</h3></div></div></div>
 <p>OpenBSD 5.1 has been tested and supported,
       other versions may work.</p>
 <p>Care should be taken so that the tools that this kit installs do not conflict
@@ -1580,7 +1595,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="solaris"></a>3.3.9. Solaris</h3></div></div></div>
+<a name="solaris"></a>3.3.10. Solaris</h3></div></div></div>
 <p>Solaris 2.6 through 10 are supported on both x86 and sparc.
       You will need a working C compiler. Both gcc 4.5.3 and
       Sun WorkShop 5 have been tested.</p>
@@ -1601,7 +1616,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
       and e.g. <code class="filename">/usr/pkg/{bin,sbin}</code>.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-gcc-note"></a>3.3.9.1. If you are using gcc</h4></div></div></div>
+<a name="solaris-gcc-note"></a>3.3.10.1. If you are using gcc</h4></div></div></div>
 <p>It makes life much simpler if you only use the same gcc consistently
 	for building all packages.</p>
 <p>It is recommended that an external gcc be used only for bootstrapping,
@@ -1612,7 +1627,7 @@ ICCBASE=                /opt/intel/cc/10.1.008
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-sun-workshop-note"></a>3.3.9.2. If you are using Sun WorkShop</h4></div></div></div>
+<a name="solaris-sun-workshop-note"></a>3.3.10.2. If you are using Sun WorkShop</h4></div></div></div>
 <p>You will need at least the following packages installed (from WorkShop
 	5.0)</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -1642,7 +1657,7 @@ CXXCPP= CC -E
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-sunpro-64"></a>3.3.9.3. Building 64-bit binaries with SunPro</h4></div></div></div>
+<a name="solaris-sunpro-64"></a>3.3.10.3. Building 64-bit binaries with SunPro</h4></div></div></div>
 <p>To build 64-bit packages, you just need to have the
 	following lines in your <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file:</p>
 <pre class="programlisting">
@@ -1658,7 +1673,7 @@ ABI=                    64
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="plat.sunos.problems"></a>3.3.9.4. Common problems</h4></div></div></div>
+<a name="plat.sunos.problems"></a>3.3.10.4. Common problems</h4></div></div></div>
 <p>Sometimes, when using <span class="command"><strong>libtool</strong></span>,
       <code class="filename">/bin/ksh</code> crashes with a segmentation fault.
       The workaround is to use another shell for the configure
@@ -4251,7 +4266,7 @@ So I changed the <code class="literal">x11/gtk2</code> to
 and tried again.</p>
 <pre class="programlisting">
 [...]
-cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
+cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"  [...]
 In file included from xpidl.c:42:
 xpidl.h:53:24: libIDL/IDL.h: No such file or directory
 In file included from xpidl.c:42:
@@ -7692,7 +7707,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idp140462849966688"></a><dl>
+<a name="idp67771104"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7711,7 +7726,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idp140462849967280"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idp67771488"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7721,7 +7736,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idp140462849968576"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idp67772512"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7732,7 +7747,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idp140462849969920"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idp67773664"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9807,7 +9822,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idp140462850566928"></a><dl>
+<a name="idp68336352"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9852,7 +9867,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idp140462850567552"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idp68336736"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9868,7 +9883,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idp140462850572016"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idp68340832"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9886,7 +9901,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idp140462850577040"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idp68345184"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9904,7 +9919,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idp140462850581904"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idp68349408"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9917,7 +9932,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idp140462850584528"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idp68351584"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9933,7 +9948,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idp140462850588448"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idp68354656"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9957,7 +9972,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idp140462850598032"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idp68362720"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9982,7 +9997,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idp140462850602992"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idp68374752"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -10030,7 +10045,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idp140462850611872"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idp68381280"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>

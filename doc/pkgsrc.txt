@@ -64,12 +64,13 @@ I. The pkgsrc user's guide
             3.3.1. Cygwin
             3.3.2. Darwin (Mac OS X)
             3.3.3. FreeBSD
-            3.3.4. Interix
-            3.3.5. IRIX
-            3.3.6. Linux
-            3.3.7. MirBSD
-            3.3.8. OpenBSD
-            3.3.9. Solaris
+            3.3.4. GNU/kFreeBSD
+            3.3.5. Interix
+            3.3.6. IRIX
+            3.3.7. Linux
+            3.3.8. MirBSD
+            3.3.9. OpenBSD
+            3.3.10. Solaris
 
     4. Using pkgsrc
 
@@ -596,6 +597,8 @@ Table 1.1. Platforms supported by pkgsrc
 |Minix3                                       |     Nov 2011     |
 |---------------------------------------------+------------------|
 |Cygwin                                       |     Mar 2013     |
+|---------------------------------------------+------------------|
+|GNU/kFreeBSD                                 |     Jul 2013     |
 +----------------------------------------------------------------+
 
 
@@ -717,12 +720,13 @@ Table of Contents
         3.3.1. Cygwin
         3.3.2. Darwin (Mac OS X)
         3.3.3. FreeBSD
-        3.3.4. Interix
-        3.3.5. IRIX
-        3.3.6. Linux
-        3.3.7. MirBSD
-        3.3.8. OpenBSD
-        3.3.9. Solaris
+        3.3.4. GNU/kFreeBSD
+        3.3.5. Interix
+        3.3.6. IRIX
+        3.3.7. Linux
+        3.3.8. MirBSD
+        3.3.9. OpenBSD
+        3.3.10. Solaris
 
 4. Using pkgsrc
 
@@ -867,15 +871,15 @@ published at pkgsrc.tar.bz2 and pkgsrc.tar.xz respectively.
 
 You can fetch the same files using FTP.
 
-The tar file for the stable branch 2009Q1 is in the directory pkgsrc-2009Q1 and
-is also called pkgsrc-2009Q1.tar.gz.
+The tar file for the stable branch 2013Q1 is in the directory pkgsrc-2013Q1 and
+is also called pkgsrc.tar.gz.
 
 To download a pkgsrc stable tarball, run:
 
-$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-20xxQy/pkgsrc-20xxQy.tar.gz
+$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-20xxQy/pkgsrc.tar.gz
 
 Where pkgsrc-20xxQy is the stable branch to be downloaded, for example, "
-pkgsrc-2009Q1".
+pkgsrc-2013Q1".
 
 You can use fetch it also using "wget", "curl", or your web browser.
 
@@ -1000,12 +1004,13 @@ Table of Contents
     3.3.1. Cygwin
     3.3.2. Darwin (Mac OS X)
     3.3.3. FreeBSD
-    3.3.4. Interix
-    3.3.5. IRIX
-    3.3.6. Linux
-    3.3.7. MirBSD
-    3.3.8. OpenBSD
-    3.3.9. Solaris
+    3.3.4. GNU/kFreeBSD
+    3.3.5. Interix
+    3.3.6. IRIX
+    3.3.7. Linux
+    3.3.8. MirBSD
+    3.3.9. OpenBSD
+    3.3.10. Solaris
 
 3.1. Binary distribution
 
@@ -1106,7 +1111,14 @@ with the FreeBSD userland tools. There are several steps:
  3. An example mk.conf file will be placed in /etc/mk.conf.example file when
     you use the bootstrap script.
 
-3.3.4. Interix
+3.3.4. GNU/kFreeBSD
+
+Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now. Debian GNU/
+kFreeBSD 7.0 or later is tested and supported.
+
+You should install ncurses (libncurses and libncurses-dev) packages.
+
+3.3.5. Interix
 
 Interix is a POSIX-compatible subsystem for the Windows NT kernel, providing a
 Unix-like environment with a tighter kernel integration than available with
@@ -1124,7 +1136,7 @@ and Windows Server 2008 R2 (6.1). As of this writing, the SUA's Interix 6.0
 (32bit) and 6.1 (64bit) subsystems have been tested. Other versions may work as
 well. The Interix 5.x subsystem has not yet been tested with pkgsrc.
 
-3.3.4.1. When installing Interix/SFU
+3.3.5.1. When installing Interix/SFU
 
 At an absolute minimum, the following packages must be installed from the
 Windows Services for Unix 3.5 distribution in order to use pkgsrc:
@@ -1168,7 +1180,7 @@ hotfixes note above, the following option can be added to the appropriate
 will disable DEP completely, which may be a security risk if applications are
 often run as a user in the Administrators group!)
 
-3.3.4.2. What to do if Interix/SFU is already installed
+3.3.5.2. What to do if Interix/SFU is already installed
 
 If SFU is already installed and you wish to alter these settings to work with
 pkgsrc, note the following things.
@@ -1191,7 +1203,7 @@ pkgsrc, note the following things.
 
     Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.
 
-3.3.4.3. Important notes for using pkgsrc
+3.3.5.3. Important notes for using pkgsrc
 
 The package manager (either the pkgsrc "su" user, or the user running
 "pkg_add") must be a member of the local Administrators group. Such a user must
@@ -1216,7 +1228,7 @@ adequate emulation in most cases:
 interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 
 
-3.3.4.4. Limitations of the Interix platform
+3.3.5.4. Limitations of the Interix platform
 
 Though Interix suffices as a familiar and flexible substitute for a full
 Unix-like platform, it has some drawbacks that should be noted for those
@@ -1260,7 +1272,7 @@ desiring to make the most of Interix.
     make tape drive access possible by using Cygwin as a bridge (similarly to
     audio bridged via Cygwin's esound server).
 
-3.3.4.5. Known issues for pkgsrc on Interix
+3.3.5.5. Known issues for pkgsrc on Interix
 
 It is not necessary, in general, to have a "root" user on the Windows system;
 any member of the local Administrators group will suffice. However, some
@@ -1276,7 +1288,7 @@ around the issue:
 # chmod -R g+w $PKG_DBDIR
 
 
-3.3.5. IRIX
+3.3.6. IRIX
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89). Please set the CC environment variable according to your
@@ -1320,7 +1332,7 @@ to make sure that MIPSPro is used, please set your PATH to not include the
 location of gcc (often /usr/freeware/bin), and (important) pass the
 '--preserve-path' flag.
 
-3.3.6. Linux
+3.3.7. Linux
 
 Some versions of Linux (for example Debian GNU/Linux) need either libtermcap or
 libcurses (libncurses). Installing the distributions libncurses-dev package (or
@@ -1362,7 +1374,7 @@ linking a C++ shared library and records it, throwing away the -Bstatic and
 libtool-linked C++ shared libraries will have a runtime dependency on the icc
 libraries until this is fixed in libtool.
 
-3.3.7. MirBSD
+3.3.8. MirBSD
 
 pkgsrc has been tested on MirBSD #10-current (2011 and newer). Older versions
 might also work. Releases before #10 are not supported.
@@ -1381,7 +1393,7 @@ Binary packages for MirBSD/i386 can be found on the pkgsrc ftp server. The
 bootstrap kit there already contains the pkgin package manager. See the pkgsrc
 on MirOS page for more details.
 
-3.3.8. OpenBSD
+3.3.9. OpenBSD
 
 OpenBSD 5.1 has been tested and supported, other versions may work.
 
@@ -1414,7 +1426,7 @@ with the OpenBSD userland tools. There are several steps:
     .endif
 
 
-3.3.9. Solaris
+3.3.10. Solaris
 
 Solaris 2.6 through 10 are supported on both x86 and sparc. You will need a
 working C compiler. Both gcc 4.5.3 and Sun WorkShop 5 have been tested.
@@ -1439,7 +1451,7 @@ Whichever compiler you use, please ensure the compiler tools and your $prefix
 are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
 {bin,sbin}.
 
-3.3.9.1. If you are using gcc
+3.3.10.1. If you are using gcc
 
 It makes life much simpler if you only use the same gcc consistently for
 building all packages.
@@ -1450,7 +1462,7 @@ gcc used during bootstrapping.
 
 Binary packages of gcc can be found through http://www.sunfreeware.com/.
 
-3.3.9.2. If you are using Sun WorkShop
+3.3.10.2. If you are using Sun WorkShop
 
 You will need at least the following packages installed (from WorkShop 5.0)
 
@@ -1474,7 +1486,7 @@ Note
 The CPP setting might break some packages that use the C preprocessor for
 processing things other than C source code.
 
-3.3.9.3. Building 64-bit binaries with SunPro
+3.3.10.3. Building 64-bit binaries with SunPro
 
 To build 64-bit packages, you just need to have the following lines in your
 mk.conf file:
@@ -1487,7 +1499,7 @@ Note
 This setting has been tested for the SPARC architecture. Intel and AMD machines
 need some more work.
 
-3.3.9.4. Common problems
+3.3.10.4. Common problems
 
 Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
 workaround is to use another shell for the configure scripts, for example by
@@ -3728,7 +3740,7 @@ it would have looked for pkg-config instead of gtk-config. So I changed the x11
 /gtk2 to x11/gtk in the package Makefile, and tried again.
 
 [...]
-cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
+cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"  [...]
 In file included from xpidl.c:42:
 xpidl.h:53:24: libIDL/IDL.h: No such file or directory
 In file included from xpidl.c:42:
