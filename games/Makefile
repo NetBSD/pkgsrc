@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.365 2013/10/24 12:03:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.366 2013/11/07 11:36:48 markd Exp $
 #
 
 COMMENT=	Games
@@ -13,6 +13,7 @@ SUBDIR+=	abuse
 SUBDIR+=	adom
 SUBDIR+=	alephone
 SUBDIR+=	amaze
+SUBDIR+=	amor
 SUBDIR+=	an
 SUBDIR+=	angband-tty
 SUBDIR+=	angband-x11
@@ -158,7 +159,6 @@ SUBDIR+=	kbounce
 SUBDIR+=	kbreakout
 SUBDIR+=	kdegames3
 SUBDIR+=	kdetoys3
-SUBDIR+=	kdetoys4
 SUBDIR+=	kdiamond
 SUBDIR+=	ketm
 SUBDIR+=	kfourinline
