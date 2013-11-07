@@ -1,0 +1,6 @@
+ksystemlog is a system log viewer tool for KDE. This program is developed
+for beginner users who don't know how to find information about their
+system or where the log files are located.
+
+It is also designed for advanced users who want to quickly see problems
+occuring on their server.

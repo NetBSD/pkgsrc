@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/21 12:49:37 markd Exp $
+$NetBSD: distinfo,v 1.6 2013/11/07 13:15:22 markd Exp $
 
-SHA1 (kfloppy-4.10.3.tar.xz) = 25ff13f6551542eb58384c7606837c05a452fb54
-RMD160 (kfloppy-4.10.3.tar.xz) = e622139b8057f785400858181e04036b1733a9bc
-Size (kfloppy-4.10.3.tar.xz) = 61256 bytes
+SHA1 (kfloppy-4.11.3.tar.xz) = 2e1588840cb5fd396c21d69ae3011efdcb6cf043
+RMD160 (kfloppy-4.11.3.tar.xz) = 9fd0604ddbb5279a1ab5ed3ac8dca8b238a5aa9f
+Size (kfloppy-4.11.3.tar.xz) = 53732 bytes
