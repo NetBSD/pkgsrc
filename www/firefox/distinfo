@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.122 2013/11/05 14:40:49 ryoon Exp $
+$NetBSD: distinfo,v 1.123 2013/11/07 15:47:23 ryoon Exp $
 
 SHA1 (firefox-25.0.source.tar.bz2) = 854722e283659d2b6b2eacd38f757b3c5b63a448
 RMD160 (firefox-25.0.source.tar.bz2) = f320994b6b2f2030b5a68bc28cdd6904d9ef8ce3
@@ -113,6 +113,8 @@ SHA1 (patch-pc) = 8b2baa88f0983a2fef4f801cf6b1ae425f6c813a
 SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-security_manager_ssl_src_JARSignatureVerification.cpp) = e9749dfeb0d3fcb4637935322ffd1e0cad4f8ec3
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = c4c96b7d3cb0c5dbcfe3820fd52421eec2592452
+SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 8d741f5a00c679a0e3859870a19a16bd58f9ba5d
+SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = b05a21e1ecad8de6cd8057d2a3ee76167293cde2
 SHA1 (patch-toolkit_library_Makefile.in) = 0c91d647f0f3a4653d39f11c9d8fd63611235932
 SHA1 (patch-toolkit_mozapps_update_updater_updater.cpp) = 6936e5408fc7f0110768f3fc8f27506c0e7879fa
 SHA1 (patch-toolkit_toolkit.mozbuild) = 07e87d977cee59c0f5a5d14a8d41dc2a4230c01e
