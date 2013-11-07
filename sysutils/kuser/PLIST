@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:15:22 markd Exp $
+bin/kuser
+share/applications/kde4/kuser.desktop
+share/doc/kde/HTML/en/kuser/common
+share/doc/kde/HTML/en/kuser/index.cache.bz2
+share/doc/kde/HTML/en/kuser/index.docbook
+share/doc/kde/HTML/en/kuser/kuser.png
+share/icons/hicolor/128x128/apps/kuser.png
+share/icons/hicolor/16x16/apps/kuser.png
+share/icons/hicolor/22x22/apps/kuser.png
+share/icons/hicolor/32x32/apps/kuser.png
+share/icons/hicolor/48x48/apps/kuser.png
+share/icons/hicolor/64x64/apps/kuser.png
+share/kde/apps/kuser/icons/hicolor/22x22/actions/user-group-delete.png
+share/kde/apps/kuser/icons/hicolor/22x22/actions/user-group-properties.png
+share/kde/apps/kuser/kuserui.rc
+share/kde/apps/kuser/pics/group.png
+share/kde/apps/kuser/pics/user.png
+share/kde/config.kcfg/kuser.kcfg

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:15:22 markd Exp $
+bin/ksystemlog
+share/applications/kde4/ksystemlog.desktop
+share/doc/kde/HTML/en/ksystemlog/common
+share/doc/kde/HTML/en/ksystemlog/filter-process.png
+share/doc/kde/HTML/en/ksystemlog/first-opening.png
+share/doc/kde/HTML/en/ksystemlog/index.cache.bz2
+share/doc/kde/HTML/en/ksystemlog/index.docbook
+share/doc/kde/HTML/en/ksystemlog/main-screen.png
+share/kde/apps/ksystemlog/ksystemlogui.rc
