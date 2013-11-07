@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:50 markd Exp $
 bin/kmahjongg
 share/applications/kde4/kmahjongg.desktop
 share/doc/kde/HTML/en/kmahjongg/common
@@ -11,7 +11,6 @@ share/doc/kde/HTML/en/kmahjongg/highscore.png
 share/doc/kde/HTML/en/kmahjongg/index.cache.bz2
 share/doc/kde/HTML/en/kmahjongg/index.docbook
 share/doc/kde/HTML/en/kmahjongg/numbered.png
-share/doc/kde/HTML/en/kmahjongg/shortcuts.png
 share/icons/hicolor/128x128/apps/kmahjongg.png
 share/icons/hicolor/16x16/apps/kmahjongg.png
 share/icons/hicolor/22x22/apps/kmahjongg.png

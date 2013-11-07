@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:49 markd Exp $
 bin/klickety
 share/applications/kde4/klickety.desktop
 share/applications/kde4/ksame.desktop
@@ -13,7 +13,6 @@ share/doc/kde/HTML/en/klickety/index.cache.bz2
 share/doc/kde/HTML/en/klickety/index.docbook
 share/doc/kde/HTML/en/klickety/ksamemode.png
 share/doc/kde/HTML/en/klickety/numbered.png
-share/doc/kde/HTML/en/klickety/shortcuts.png
 share/icons/hicolor/128x128/apps/klickety.png
 share/icons/hicolor/128x128/apps/ksame.png
 share/icons/hicolor/16x16/apps/klickety.png

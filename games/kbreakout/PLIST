@@ -1,6 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:49 markd Exp $
 bin/kbreakout
 share/applications/kde4/kbreakout.desktop
+share/doc/kde/HTML/en/kbreakout/BreakableBrick.png
+share/doc/kde/HTML/en/kbreakout/ExplodingBrick.png
+share/doc/kde/HTML/en/kbreakout/Gift1000Points.png
+share/doc/kde/HTML/en/kbreakout/GiftAddBall.png
+share/doc/kde/HTML/en/kbreakout/GiftAddLife.png
+share/doc/kde/HTML/en/kbreakout/GiftBurningBall.png
+share/doc/kde/HTML/en/kbreakout/GiftDecreaseSpeed.png
+share/doc/kde/HTML/en/kbreakout/GiftEnlargeBar.png
+share/doc/kde/HTML/en/kbreakout/GiftIncreaseSpeed.png
+share/doc/kde/HTML/en/kbreakout/GiftLoseLife.png
+share/doc/kde/HTML/en/kbreakout/GiftMagicEye.png
+share/doc/kde/HTML/en/kbreakout/GiftMagicWand.png
+share/doc/kde/HTML/en/kbreakout/GiftMoreExplosion.png
+share/doc/kde/HTML/en/kbreakout/GiftNextLevel.png
+share/doc/kde/HTML/en/kbreakout/GiftShrinkBar.png
+share/doc/kde/HTML/en/kbreakout/GiftSplitBall.png
+share/doc/kde/HTML/en/kbreakout/GiftStickyBar.png
+share/doc/kde/HTML/en/kbreakout/GiftUnstoppableBall.png
+share/doc/kde/HTML/en/kbreakout/HiddenBrick.png
+share/doc/kde/HTML/en/kbreakout/MultipleBrick3.png
+share/doc/kde/HTML/en/kbreakout/PlainBrick1.png
+share/doc/kde/HTML/en/kbreakout/UnbreakableBrick.png
 share/doc/kde/HTML/en/kbreakout/common
 share/doc/kde/HTML/en/kbreakout/index.cache.bz2
 share/doc/kde/HTML/en/kbreakout/index.docbook
@@ -12,6 +34,16 @@ share/icons/hicolor/48x48/apps/kbreakout.png
 share/icons/hicolor/64x64/apps/kbreakout.png
 share/kde/apps/kbreakout/kbreakoutui.rc
 share/kde/apps/kbreakout/levelsets/default.levelset
+share/kde/apps/kbreakout/qml/Ball.qml
+share/kde/apps/kbreakout/qml/Bar.qml
+share/kde/apps/kbreakout/qml/Brick.qml
+share/kde/apps/kbreakout/qml/CanvasItem.qml
+share/kde/apps/kbreakout/qml/Gift.qml
+share/kde/apps/kbreakout/qml/Singleshot.qml
+share/kde/apps/kbreakout/qml/TextItem.qml
+share/kde/apps/kbreakout/qml/globals.js
+share/kde/apps/kbreakout/qml/logic.js
+share/kde/apps/kbreakout/qml/main.qml
 share/kde/apps/kbreakout/themes/IceWorld.desktop
 share/kde/apps/kbreakout/themes/IceWorld.svgz
 share/kde/apps/kbreakout/themes/IceWorld_preview.png

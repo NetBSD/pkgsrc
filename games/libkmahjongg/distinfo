@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
 
-SHA1 (libkmahjongg-4.10.3.tar.xz) = d33446dcd5cbc455fdd2bf09406b5a4ce15d683b
-RMD160 (libkmahjongg-4.10.3.tar.xz) = 65e205674879c7b435aa8aa4e9f7579768c73fc6
-Size (libkmahjongg-4.10.3.tar.xz) = 1674012 bytes
+SHA1 (libkmahjongg-4.11.3.tar.xz) = d0018922e1b7b05847b544fd4f365da196f0f812
+RMD160 (libkmahjongg-4.11.3.tar.xz) = b561b66b0c6a07a453c3974119d9e49d2c7bd5c1
+Size (libkmahjongg-4.11.3.tar.xz) = 1675204 bytes

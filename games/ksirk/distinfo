@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
 
-SHA1 (ksirk-4.10.3.tar.xz) = 69181f4ac4338e76295cd25926b23a38bbba36dd
-RMD160 (ksirk-4.10.3.tar.xz) = 1c309d5fccf5b56b1433000d556a1854c4fd1d8a
-Size (ksirk-4.10.3.tar.xz) = 5954788 bytes
+SHA1 (ksirk-4.11.3.tar.xz) = bfb8f1cab0a6cc94618b612f6b24979a3cc52ed7
+RMD160 (ksirk-4.11.3.tar.xz) = 9b04dbcd63c8bfe2856d67854518ed36b121e8fe
+Size (ksirk-4.11.3.tar.xz) = 5057964 bytes

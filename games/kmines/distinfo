@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:30 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
 
-SHA1 (kmines-4.10.3.tar.xz) = 9f0130c4ce1276bbc0b8d89880d5db73efdc3aef
-RMD160 (kmines-4.10.3.tar.xz) = 32218daecf5c01295f3dc535c3481b47993b3663
-Size (kmines-4.10.3.tar.xz) = 659300 bytes
+SHA1 (kmines-4.11.3.tar.xz) = e22e62f54a4e259385bd8927b1d582d011acb807
+RMD160 (kmines-4.11.3.tar.xz) = 8e2d100f0fa8c5f0d0a90b202b2488f6ccf0b1c0
+Size (kmines-4.11.3.tar.xz) = 629308 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:29 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:49 markd Exp $
 
-SHA1 (kapman-4.10.3.tar.xz) = 83fda18300857338a698fff899cb2569ec4539fb
-RMD160 (kapman-4.10.3.tar.xz) = 400c2e528eb0d4b0b78b443d0fc7b8470854f069
-Size (kapman-4.10.3.tar.xz) = 1577744 bytes
+SHA1 (kapman-4.11.3.tar.xz) = 3f064c087d477a896e86bf4d6b67d9c644cad60f
+RMD160 (kapman-4.11.3.tar.xz) = 4da33859318e66884dd5c11e25e6ffe605ec33de
+Size (kapman-4.11.3.tar.xz) = 1821668 bytes

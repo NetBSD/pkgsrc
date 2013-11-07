@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:49 markd Exp $
 bin/kblackbox
 share/applications/kde4/kblackbox.desktop
 share/doc/kde/HTML/en/kblackbox/common
+share/doc/kde/HTML/en/kblackbox/gameboard.png
 share/doc/kde/HTML/en/kblackbox/index.cache.bz2
 share/doc/kde/HTML/en/kblackbox/index.docbook
 share/icons/hicolor/128x128/apps/kblackbox.png

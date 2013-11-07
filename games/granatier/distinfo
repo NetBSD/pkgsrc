@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:29 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:48 markd Exp $
 
-SHA1 (granatier-4.10.3.tar.xz) = 4a135280da57cac2cadc2874c27b50fc7740bebf
-RMD160 (granatier-4.10.3.tar.xz) = e121606a2c9fc666a691929bfa6f828d04750b9d
-Size (granatier-4.10.3.tar.xz) = 1393636 bytes
+SHA1 (granatier-4.11.3.tar.xz) = 56069dbfa62e1da274c21d6e3fb41a30e3cc1460
+RMD160 (granatier-4.11.3.tar.xz) = 58f04d020aea4362ce328e5aaa13ea9246b322bf
+Size (granatier-4.11.3.tar.xz) = 1389548 bytes
