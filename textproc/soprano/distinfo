@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2013/05/04 12:59:48 joerg Exp $
+$NetBSD: distinfo,v 1.15 2013/11/07 08:27:00 markd Exp $
 
-SHA1 (soprano-2.9.0.tar.bz2) = 2bc0e0874f115c97a34d0bf267a1c31957ec7497
-RMD160 (soprano-2.9.0.tar.bz2) = dfb7b08f1d809ace7642dd405d8c1f21459ae45c
-Size (soprano-2.9.0.tar.bz2) = 1956448 bytes
+SHA1 (soprano-2.9.4.tar.bz2) = 97bd76df4a9f9336358dd9d7175c72b84d4ec6a0
+RMD160 (soprano-2.9.4.tar.bz2) = b5e8db32a77ab9fed5dac74783cb137259d91bb2
+Size (soprano-2.9.4.tar.bz2) = 1958856 bytes
 SHA1 (patch-client_socket.cpp) = 3c31c84db02e5d6b7ce6907209412750bf57f291
