@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:49 markd Exp $
 bin/kjumpingcube
 share/applications/kde4/kjumpingcube.desktop
 share/doc/kde/HTML/en/kjumpingcube/common
 share/doc/kde/HTML/en/kjumpingcube/index.cache.bz2
 share/doc/kde/HTML/en/kjumpingcube/index.docbook
+share/doc/kde/HTML/en/kjumpingcube/settings.png
 share/icons/hicolor/128x128/apps/kjumpingcube.png
 share/icons/hicolor/16x16/apps/kjumpingcube.png
 share/icons/hicolor/22x22/apps/kjumpingcube.png

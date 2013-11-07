@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:50 markd Exp $
 
-SHA1 (ksquares-4.10.3.tar.xz) = 1def07ebcfed0d2edc8771cb2c3c25de9ea9e0c5
-RMD160 (ksquares-4.10.3.tar.xz) = df3d141207fd88a7fee2cddf85958e972e39950f
-Size (ksquares-4.10.3.tar.xz) = 85604 bytes
+SHA1 (ksquares-4.11.3.tar.xz) = a1ea089ce5a0373f78801b605b7828b720f0aada
+RMD160 (ksquares-4.11.3.tar.xz) = 75ad1510221fe4629bc95e6e4739472a655cd99e
+Size (ksquares-4.11.3.tar.xz) = 78748 bytes

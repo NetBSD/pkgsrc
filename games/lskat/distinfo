@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:49:31 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/07 11:35:51 markd Exp $
 
-SHA1 (lskat-4.10.3.tar.xz) = 3223e7680c81d09e926d6c04b59f7b403e1b41b0
-RMD160 (lskat-4.10.3.tar.xz) = 0bd6cf6b58166997016baac6dfa7c19156b052fa
-Size (lskat-4.10.3.tar.xz) = 958972 bytes
+SHA1 (lskat-4.11.3.tar.xz) = 86046bcb33bbe85415fe0275964366236228ac3f
+RMD160 (lskat-4.11.3.tar.xz) = a3d9aad5759a7218955223fac361736fbc9aa182
+Size (lskat-4.11.3.tar.xz) = 931744 bytes

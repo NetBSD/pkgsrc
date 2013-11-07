@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:49 markd Exp $
 bin/kbounce
 share/applications/kde4/kbounce.desktop
 share/doc/kde/HTML/en/kbounce/button-new.png
@@ -9,7 +9,6 @@ share/doc/kde/HTML/en/kbounce/index.docbook
 share/doc/kde/HTML/en/kbounce/kbounce_corridor1.png
 share/doc/kde/HTML/en/kbounce/kbounce_corridor2.png
 share/doc/kde/HTML/en/kbounce/menu-game.png
-share/doc/kde/HTML/en/kbounce/menu-help.png
 share/doc/kde/HTML/en/kbounce/menu-settings.png
 share/doc/kde/HTML/en/kbounce/toolbar.png
 share/icons/hicolor/128x128/apps/kbounce.png
