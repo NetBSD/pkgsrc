@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/11/07 13:03:07 markd Exp $
+
+--- CMakeLists.txt.orig	2011-09-26 11:25:46.000000000 +0000
++++ CMakeLists.txt
+@@ -26,6 +26,8 @@ if(NOT INSIDE_KDENETWORK)
+     include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES})
+ endif(NOT INSIDE_KDENETWORK)
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+ 
+ macro_optional_find_package(NepomukCore)
