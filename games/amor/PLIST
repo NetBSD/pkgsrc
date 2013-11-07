@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2010/10/25 20:55:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/07 11:35:51 markd Exp $
 bin/amor
-bin/kteatime
-bin/ktux
 man/man6/amor.6
 share/applications/kde4/amor.desktop
-share/applications/kde4/kteatime.desktop
 share/dbus-1/interfaces/org.kde.amor.xml
 share/doc/kde/HTML/en/amor/billy.png
 share/doc/kde/HTML/en/amor/bonhomme.png
@@ -21,23 +18,10 @@ share/doc/kde/HTML/en/amor/spot.png
 share/doc/kde/HTML/en/amor/tao.png
 share/doc/kde/HTML/en/amor/tux.png
 share/doc/kde/HTML/en/amor/worm.png
-share/doc/kde/HTML/en/kteatime/common
-share/doc/kde/HTML/en/kteatime/config.png
-share/doc/kde/HTML/en/kteatime/index.cache.bz2
-share/doc/kde/HTML/en/kteatime/index.docbook
-share/icons/hicolor/128x128/apps/kteatime.png
 share/icons/hicolor/16x16/apps/amor.png
-share/icons/hicolor/16x16/apps/kteatime.png
-share/icons/hicolor/16x16/apps/ktux.png
 share/icons/hicolor/22x22/apps/amor.png
-share/icons/hicolor/22x22/apps/kteatime.png
 share/icons/hicolor/32x32/apps/amor.png
-share/icons/hicolor/32x32/apps/kteatime.png
-share/icons/hicolor/32x32/apps/ktux.png
 share/icons/hicolor/48x48/apps/amor.png
-share/icons/hicolor/48x48/apps/kteatime.png
-share/icons/hicolor/64x64/apps/kteatime.png
-share/icons/hicolor/scalable/apps/kteatime.svgz
 share/kde/apps/amor/billyrc
 share/kde/apps/amor/blobrc
 share/kde/apps/amor/bonhommerc
@@ -462,21 +446,3 @@ share/kde/apps/amor/taorc
 share/kde/apps/amor/tips-en
 share/kde/apps/amor/tuxrc
 share/kde/apps/amor/wormrc
-share/kde/apps/kteatime/kteatime.notifyrc
-share/kde/apps/ktux/sprites/anim0001.png
-share/kde/apps/ktux/sprites/anim0002.png
-share/kde/apps/ktux/sprites/anim0003.png
-share/kde/apps/ktux/sprites/anim0004.png
-share/kde/apps/ktux/sprites/anim0005.png
-share/kde/apps/ktux/sprites/anim0006.png
-share/kde/apps/ktux/sprites/anim0007.png
-share/kde/apps/ktux/sprites/anim0008.png
-share/kde/apps/ktux/sprites/anim0009.png
-share/kde/apps/ktux/sprites/anim0010.png
-share/kde/apps/ktux/sprites/bg.png
-share/kde/apps/ktux/sprites/flare0001.png
-share/kde/apps/ktux/sprites/flare0002.png
-share/kde/apps/ktux/sprites/spriterc
-share/kde/apps/ktux/sprites/star0001.png
-share/kde/apps/ktux/sprites/star0002.png
-share/kde4/services/ScreenSavers/ktux.desktop
