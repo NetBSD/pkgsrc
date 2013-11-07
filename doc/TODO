@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12701 2013/11/05 18:58:11 adam Exp $
+$NetBSD: TODO,v 1.12702 2013/11/07 13:54:20 gdt Exp $
 
 Suggested new packages
 ======================
@@ -285,6 +285,10 @@ Suggested new packages
 	http://sourceforge.net/apps/trac/lightspark
 	Implementation of ActionScript3 (modern Flash), needed for
 	(but not quite working for) Potlatch2 of OpenStreetMap.
+
+	shellcheck
+	http://www.shellcheck.net/about.html
+	Static analysis program for POSIX sh, written in haskell
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
