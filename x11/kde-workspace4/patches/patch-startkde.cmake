@@ -1,9 +1,9 @@
-$NetBSD: patch-startkde.cmake,v 1.2 2013/04/03 10:51:50 markd Exp $
+$NetBSD: patch-startkde.cmake,v 1.3 2013/11/07 13:35:56 markd Exp $
 
 --- startkde.cmake.orig	2013-03-01 06:32:24.000000000 +0000
 +++ startkde.cmake
-@@ -32,6 +32,12 @@ if [ -n "$bindir" ]; then
-   esac
+@@ -29,6 +29,12 @@ else
+   qdbus=qdbus
  fi
  
 +qtbindir=@QTDIR@/bin
@@ -15,7 +15,7 @@ $NetBSD: patch-startkde.cmake,v 1.2 2013/04/03 10:51:50 markd Exp $
  # Check if a KDE session already is running and whether it's possible to connect to X
  kcheckrunning
  kcheckrunning_result=$?
-@@ -192,11 +198,11 @@ usr_fdir=$HOME/.fonts
+@@ -189,11 +195,11 @@ usr_fdir=$HOME/.fonts
  
  if test -n "$KDEDIRS"; then
    kdedirs_first=`echo "$KDEDIRS"|sed -e 's/:.*//'`

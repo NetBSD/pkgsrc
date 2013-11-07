@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/11/07 13:41:54 markd Exp $
 share/kde/apps/klettres/ar/alpha/a-01.ogg
 share/kde/apps/klettres/ar/alpha/a-02.ogg
 share/kde/apps/klettres/ar/alpha/a-03.ogg
@@ -135,7 +135,6 @@ share/locale/ar/LC_MESSAGES/kcm_nepomuk.mo
 share/locale/ar/LC_MESSAGES/kcm_pci.mo
 share/locale/ar/LC_MESSAGES/kcm_phonon.mo
 share/locale/ar/LC_MESSAGES/kcm_platform.mo
-share/locale/ar/LC_MESSAGES/kcm_solid.mo
 share/locale/ar/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/ar/LC_MESSAGES/kcm_standard_actions.mo
 share/locale/ar/LC_MESSAGES/kcmaccess.mo
@@ -212,7 +211,6 @@ share/locale/ar/LC_MESSAGES/kfile_kig.mo
 share/locale/ar/LC_MESSAGES/kfile_pnm.mo
 share/locale/ar/LC_MESSAGES/kfile_raw.mo
 share/locale/ar/LC_MESSAGES/kfile_rgb.mo
-share/locale/ar/LC_MESSAGES/kfile_rpm.mo
 share/locale/ar/LC_MESSAGES/kfile_tiff.mo
 share/locale/ar/LC_MESSAGES/kfile_xps.mo
 share/locale/ar/LC_MESSAGES/kfileaudiopreview4.mo
@@ -436,9 +434,7 @@ share/locale/ar/LC_MESSAGES/minitoolsplugin.mo
 share/locale/ar/LC_MESSAGES/mplayerthumbs.mo
 share/locale/ar/LC_MESSAGES/mplayerthumbsconfig.mo
 share/locale/ar/LC_MESSAGES/nepomukbackup.mo
-share/locale/ar/LC_MESSAGES/nepomukcontroller.mo
 share/locale/ar/LC_MESSAGES/nepomukfileindexer.mo
-share/locale/ar/LC_MESSAGES/nepomukqueryservice.mo
 share/locale/ar/LC_MESSAGES/nepomukserver.mo
 share/locale/ar/LC_MESSAGES/nepomukservicestub.mo
 share/locale/ar/LC_MESSAGES/nepomukstorage.mo
@@ -537,7 +533,6 @@ share/locale/ar/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/ar/LC_MESSAGES/plasma_containmentactions_switchactivity.mo
 share/locale/ar/LC_MESSAGES/plasma_containmentactions_switchdesktop.mo
 share/locale/ar/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
-share/locale/ar/LC_MESSAGES/plasma_engine_calendar.mo
 share/locale/ar/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/ar/LC_MESSAGES/plasma_engine_kuiserver.mo
 share/locale/ar/LC_MESSAGES/plasma_engine_metadata.mo
@@ -597,9 +592,7 @@ share/locale/ar/LC_MESSAGES/randrmonitor.mo
 share/locale/ar/LC_MESSAGES/rellinks.mo
 share/locale/ar/LC_MESSAGES/searchbarplugin.mo
 share/locale/ar/LC_MESSAGES/solid-hardware.mo
-share/locale/ar/LC_MESSAGES/solid-network.mo
 share/locale/ar/LC_MESSAGES/solid_qt.mo
-share/locale/ar/LC_MESSAGES/solidcontrol.mo
 share/locale/ar/LC_MESSAGES/soliduiserver.mo
 share/locale/ar/LC_MESSAGES/strigila_diff.mo
 share/locale/ar/LC_MESSAGES/superkaramba.mo
