@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/21 12:49:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/11/07 13:41:57 markd Exp $
 share/kde/apps/khangman/tg.txt
 share/kde/apps/kvtml/tg/animals.kvtml
 share/kde/apps/kvtml/tg/easy.kvtml
@@ -72,7 +72,6 @@ share/locale/tg/LC_MESSAGES/kcm_memory.mo
 share/locale/tg/LC_MESSAGES/kcm_nepomuk.mo
 share/locale/tg/LC_MESSAGES/kcm_pci.mo
 share/locale/tg/LC_MESSAGES/kcm_phonon.mo
-share/locale/tg/LC_MESSAGES/kcm_solid.mo
 share/locale/tg/LC_MESSAGES/kcm_standard_actions.mo
 share/locale/tg/LC_MESSAGES/kcmaccess.mo
 share/locale/tg/LC_MESSAGES/kcmaudiocd.mo
@@ -143,7 +142,6 @@ share/locale/tg/LC_MESSAGES/kfile_exr.mo
 share/locale/tg/LC_MESSAGES/kfile_kig.mo
 share/locale/tg/LC_MESSAGES/kfile_pnm.mo
 share/locale/tg/LC_MESSAGES/kfile_rgb.mo
-share/locale/tg/LC_MESSAGES/kfile_rpm.mo
 share/locale/tg/LC_MESSAGES/kfile_tiff.mo
 share/locale/tg/LC_MESSAGES/kfileaudiopreview4.mo
 share/locale/tg/LC_MESSAGES/kfilereplace.mo
@@ -315,7 +313,6 @@ share/locale/tg/LC_MESSAGES/messageviewer_text_vcard_plugin.mo
 share/locale/tg/LC_MESSAGES/mf_konqplugin.mo
 share/locale/tg/LC_MESSAGES/minitoolsplugin.mo
 share/locale/tg/LC_MESSAGES/nepomukfileindexer.mo
-share/locale/tg/LC_MESSAGES/nepomukqueryservice.mo
 share/locale/tg/LC_MESSAGES/nepomukserver.mo
 share/locale/tg/LC_MESSAGES/nepomukservicestub.mo
 share/locale/tg/LC_MESSAGES/nepomukstorage.mo
@@ -364,8 +361,6 @@ share/locale/tg/LC_MESSAGES/processui.mo
 share/locale/tg/LC_MESSAGES/rellinks.mo
 share/locale/tg/LC_MESSAGES/searchbarplugin.mo
 share/locale/tg/LC_MESSAGES/solid-hardware.mo
-share/locale/tg/LC_MESSAGES/solid-network.mo
-share/locale/tg/LC_MESSAGES/solidcontrol.mo
 share/locale/tg/LC_MESSAGES/soliduiserver.mo
 share/locale/tg/LC_MESSAGES/strigila_diff.mo
 share/locale/tg/LC_MESSAGES/sweeper.mo

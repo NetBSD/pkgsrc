@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/05/21 12:49:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/11/07 13:35:56 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1216,6 +1216,7 @@ include/kdatetime.h
 include/kdatetimeedit.h
 include/kdatetimewidget.h
 include/kdatewidget.h
+include/kdbusconnectionpool.h
 include/kdbusservicestarter.h
 include/kde3support_export.h
 include/kde_file.h
@@ -1636,6 +1637,7 @@ include/ktexteditor/highlightinterface.h
 include/ktexteditor/ktexteditor_export.h
 include/ktexteditor/loadsavefiltercheckplugin.h
 include/ktexteditor/markinterface.h
+include/ktexteditor/messageinterface.h
 include/ktexteditor/modeinterface.h
 include/ktexteditor/modificationinterface.h
 include/ktexteditor/movingcursor.h
@@ -2011,13 +2013,13 @@ lib/libkde3support.so.4
 lib/libkde3support.so.${PKGVERSION}
 lib/libkdeclarative.so
 lib/libkdeclarative.so.5
-lib/libkdeclarative.so.5.10.3
+lib/libkdeclarative.so.5.11.3
 lib/libkdecore.so
 lib/libkdecore.so.5
-lib/libkdecore.so.5.10.3
+lib/libkdecore.so.5.11.3
 lib/libkdefakes.so
 lib/libkdefakes.so.5
-lib/libkdefakes.so.5.10.3
+lib/libkdefakes.so.5.11.3
 lib/libkdeinit4_kbuildsycoca4.so
 lib/libkdeinit4_kconf_update.so
 lib/libkdeinit4_kded4.so
@@ -2025,13 +2027,13 @@ lib/libkdeinit4_kio_http_cache_cleaner.so
 lib/libkdeinit4_klauncher.so
 lib/libkdesu.so
 lib/libkdesu.so.5
-lib/libkdesu.so.5.10.3
+lib/libkdesu.so.5.11.3
 lib/libkdeui.so
 lib/libkdeui.so.5
-lib/libkdeui.so.5.10.3
+lib/libkdeui.so.5.11.3
 lib/libkdewebkit.so
 lib/libkdewebkit.so.5
-lib/libkdewebkit.so.5.10.3
+lib/libkdewebkit.so.5.11.3
 lib/libkdnssd.so
 lib/libkdnssd.so.4
 lib/libkdnssd.so.${PKGVERSION}
@@ -2043,7 +2045,7 @@ lib/libkfile.so.4
 lib/libkfile.so.${PKGVERSION}
 lib/libkhtml.so
 lib/libkhtml.so.5
-lib/libkhtml.so.5.10.3
+lib/libkhtml.so.5.11.3
 lib/libkidletime.so
 lib/libkidletime.so.4
 lib/libkidletime.so.${PKGVERSION}
@@ -2052,7 +2054,7 @@ lib/libkimproxy.so.4
 lib/libkimproxy.so.${PKGVERSION}
 lib/libkio.so
 lib/libkio.so.5
-lib/libkio.so.5.10.3
+lib/libkio.so.5.11.3
 lib/libkjs.so
 lib/libkjs.so.4
 lib/libkjs.so.${PKGVERSION}
