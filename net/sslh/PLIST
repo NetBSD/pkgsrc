@@ -1,3 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2010/07/31 17:04:47 apb Exp $
-sbin/sslh
+@comment $NetBSD: PLIST,v 1.2 2013/11/08 13:33:55 obache Exp $
 man/man8/sslh.8
+sbin/sslh
+sbin/sslh-select
+share/doc/sslh/ChangeLog
+share/doc/sslh/README
+share/doc/sslh/README.MacOSX
+share/examples/rc.d/sslh
+share/examples/sslh/basic.cfg
+share/examples/sslh/example.cfg
+share/examples/sslh/scripts/etc.default.sslh
+share/examples/sslh/scripts/etc.init.d.sslh
+share/examples/sslh/scripts/etc.rc.d.init.d.sslh.centos
+share/examples/sslh/scripts/systemd.sslh.service
