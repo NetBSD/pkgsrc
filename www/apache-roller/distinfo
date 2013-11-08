@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/12/20 14:31:46 spz Exp $
+$NetBSD: distinfo,v 1.4 2013/11/08 20:45:28 spz Exp $
 
-SHA1 (roller-weblogger-5.0.1-for-tomcat.tar.gz) = 5db36e4c77cb626dac7e0e0edb0c1c26d3bf49f2
-RMD160 (roller-weblogger-5.0.1-for-tomcat.tar.gz) = b94150deab739a4a8623ffea9e6571e66e7a514a
-Size (roller-weblogger-5.0.1-for-tomcat.tar.gz) = 31638162 bytes
+SHA1 (roller-weblogger-5.0.2-for-tomcat.tar.gz) = d96cf137d7c0765391e4040782b11fa79b72a369
+RMD160 (roller-weblogger-5.0.2-for-tomcat.tar.gz) = 54375de7b2cdb81ab47602807f0b0c90f827253d
+Size (roller-weblogger-5.0.2-for-tomcat.tar.gz) = 31620009 bytes
