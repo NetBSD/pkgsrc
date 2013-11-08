@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: distinfo,v 1.105 2013/11/08 12:55:51 ryoon Exp $
 
 SHA1 (enigmail-1.6.tar.gz) = 51a7eb7d86ce24d8199f741a0079f0d56ecd6368
 RMD160 (enigmail-1.6.tar.gz) = a854bb37a6a7f298f6cc268110dcb21d00909fa4
@@ -40,7 +40,7 @@ SHA1 (patch-mozilla_extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 5f4c28
 SHA1 (patch-mozilla_gfx_graphite2_src_Bidi.cpp) = fb97becdfeeea742e8c0bc51e10efc124a2a11f3
 SHA1 (patch-mozilla_gfx_skia_include_core_SkPreConfig.h) = 5a45df0ec2be71f9406333488632bb7c42cafa68
 SHA1 (patch-mozilla_gfx_skia_moz.build) = d74b274c0a1cfa02804c154669e200c764a900e5
-SHA1 (patch-mozilla_gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp) = 7345c4535876933c16e2257cf5da0115e43aa39e
+SHA1 (patch-mozilla_gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp) = a25edef88cb3a7d905acdf0267a75eb666eac6d6
 SHA1 (patch-mozilla_image_decoders_nsJPEGDecoder.cpp) = 316bfe765e20f188c847efa30cfa0ccc9f4fc7e5
 SHA1 (patch-mozilla_intl_hyphenation_src_hnjalloc.h) = 8b670bca826d17e373c1c09893e335c1bb3d4546
 SHA1 (patch-mozilla_ipc_chromium_Makefile.in) = 076293610dc66961d8179863b056eb666f10391e
@@ -118,6 +118,8 @@ SHA1 (patch-mozilla_netwerk_wifi_moz.build) = f2232f82ee267fdbbcf1c4090390a6bea9
 SHA1 (patch-mozilla_netwerk_wifi_nsWifiScannerFreeBSD.cpp) = 780dabd37ea0eab07932489181de4cdfe0a5b4a3
 SHA1 (patch-mozilla_security_manager_ssl_src_JARSignatureVerification.cpp) = 9f265784d23be668dbb1fcb4e09185670a298293
 SHA1 (patch-mozilla_security_manager_ssl_src_nsNSSComponent.cpp) = 56531146315f3eac703a02ed23ef90f7ac4917b9
+SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = ffe3a1c0915cab3d0f14b47a57925e79c13bd3d5
+SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 84c7aeeab671115c99f9b9afa7b0958830167e49
 SHA1 (patch-mozilla_toolkit_library_Makefile.in) = e7915dacee2a0bd3983cafd421ffe55ed54a5874
 SHA1 (patch-mozilla_toolkit_mozapps_update_updater_updater.cpp) = 2d4769262671a41950d872f46806374efbbccb37
 SHA1 (patch-mozilla_toolkit_toolkit.mozbuild) = d0510df2e3fb3a7c5dd713b36351e72961788345
