@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12705 2013/11/08 13:34:13 obache Exp $
+$NetBSD: TODO,v 1.12706 2013/11/08 15:09:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SOPE-2.0.7
 	o Sigil-0.7.4 [needs qt5]
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.20
+	o TeXmacs-1.0.7.21
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -392,11 +392,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o baci-20040415
+	o balance-3.56
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
 	o benchfft-3.1
 	o bioperl-1.5.0
+	o blender-2.69
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -409,8 +411,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.9
+	o calibre-1.10
 	o calligra-2.4.3 [in wip; koffice successor]
+	o calypso-1.3
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -491,7 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elftoolchain-0.6.1 [pkg/48227]
-	o elm-me-2.5plalpha33
+	o elm-me-2.5plalpha34
 	o emacs-muse-3.20
 	o emerillon-0.1.90
 	o enca-1.15
@@ -554,6 +557,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gbrainy-2.22
 	o gcin-1.5.5
 	o gcombust-0.1.55
+	o gcompris-13.11
 	o gdal-1.9.2
 	o gdb-7.6 [wip]
 	o gdeskcal-1.01
@@ -561,7 +565,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o gentoo-0.20.3
+	o gentoo-0.20.4
 	o gfract-0.33
 	o ghc-7.6
 	o gitolite-3.5.3.1
@@ -654,7 +658,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hdf-4.2.7
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-9.2
+	o hiawatha-9.3
 	o highlight-3.16
 	o honeyd-1.5c
 	o horde-5.1.5
@@ -770,12 +774,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.151
 	o manedit-1.2.1
 	o matchbox-panel-0.9.3
 	o mawk-1.3.4.20130803
 	o mc-4.8.9
 	o mcsim-5.5.0
 	o mergeant-0.67
+	o mess-0.151
 	o mesure-0.7.2
 	o metis-5.1.0
 	o mgetty+sendfax-1.1.35
@@ -788,7 +794,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mksh-47
 	o mkvtoolnix-6.5.0
 	o mnemosyne-2.2.1
-	o modular-xorg-server-1.14.3
+	o modular-xorg-server-1.14.4
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
 	o monit-5.1.1
@@ -929,7 +935,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
 	o rep-gtk-0.90.8.1
-	o reposurgeon-2.40
+	o reposurgeon-2.41
 	o resize_image-0.7
 	o rhythmbox-3.0.1
 	o rio500-0.8.1
@@ -945,7 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-2.0.0p0
-	o rudiments-0.44
+	o rudiments-0.44.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o samba-4.0.7 [wip]
@@ -1031,7 +1037,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-4.1
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
-	o thunderbird-24
+	o thunderbird-24.1.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.23
