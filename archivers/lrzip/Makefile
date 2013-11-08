@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/21 11:29:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/08 21:14:01 joerg Exp $
 
 DISTNAME=	lrzip-0.616
 CATEGORIES=	archivers
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bash:run pkg-config
+USE_TOOLS+=	bash:run pkg-config pod2man
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	lrzip.pc.in
