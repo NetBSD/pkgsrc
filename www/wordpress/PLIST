@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/09/12 17:19:59 morr Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/11/08 21:33:02 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -54,6 +54,9 @@ share/wordpress/wp-admin/edit-tags.php
 share/wordpress/wp-admin/edit.php
 share/wordpress/wp-admin/export.php
 share/wordpress/wp-admin/freedoms.php
+share/wordpress/wp-admin/images/about-globe-2x.png
+share/wordpress/wp-admin/images/about-search-2x.png
+share/wordpress/wp-admin/images/about-updates-2x.png
 share/wordpress/wp-admin/images/align-center-2x.png
 share/wordpress/wp-admin/images/align-center.png
 share/wordpress/wp-admin/images/align-left-2x.png
@@ -167,6 +170,7 @@ share/wordpress/wp-admin/includes/class-wp-posts-list-table.php
 share/wordpress/wp-admin/includes/class-wp-terms-list-table.php
 share/wordpress/wp-admin/includes/class-wp-theme-install-list-table.php
 share/wordpress/wp-admin/includes/class-wp-themes-list-table.php
+share/wordpress/wp-admin/includes/class-wp-upgrader-skins.php
 share/wordpress/wp-admin/includes/class-wp-upgrader.php
 share/wordpress/wp-admin/includes/class-wp-users-list-table.php
 share/wordpress/wp-admin/includes/comment.php
@@ -204,10 +208,10 @@ share/wordpress/wp-admin/includes/widgets.php
 share/wordpress/wp-admin/index.php
 share/wordpress/wp-admin/install-helper.php
 share/wordpress/wp-admin/install.php
+share/wordpress/wp-admin/js/about.js
+share/wordpress/wp-admin/js/about.min.js
 share/wordpress/wp-admin/js/accordion.js
 share/wordpress/wp-admin/js/accordion.min.js
-share/wordpress/wp-admin/js/cat.js
-share/wordpress/wp-admin/js/cat.min.js
 share/wordpress/wp-admin/js/color-picker.js
 share/wordpress/wp-admin/js/color-picker.min.js
 share/wordpress/wp-admin/js/comment.js
@@ -548,6 +552,7 @@ share/wordpress/wp-includes/canonical.php
 share/wordpress/wp-includes/capabilities.php
 share/wordpress/wp-includes/category-template.php
 share/wordpress/wp-includes/category.php
+share/wordpress/wp-includes/certificates/ca-bundle.crt
 share/wordpress/wp-includes/class-IXR.php
 share/wordpress/wp-includes/class-feed.php
 share/wordpress/wp-includes/class-http.php
@@ -601,6 +606,7 @@ share/wordpress/wp-includes/css/wp-auth-check.css
 share/wordpress/wp-includes/css/wp-auth-check.min.css
 share/wordpress/wp-includes/css/wp-pointer.css
 share/wordpress/wp-includes/css/wp-pointer.min.css
+share/wordpress/wp-includes/date.php
 share/wordpress/wp-includes/default-constants.php
 share/wordpress/wp-includes/default-filters.php
 share/wordpress/wp-includes/default-widgets.php
@@ -887,7 +893,6 @@ share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img/delete.png
 share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img/image-2x.png
 share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img/image.png
 share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/js/editimage.js
-share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/js/editimage.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpfullscreen/css/wp-fullscreen.css
 share/wordpress/wp-includes/js/tinymce/plugins/wpfullscreen/editor_plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpfullscreen/editor_plugin_src.js
@@ -989,6 +994,9 @@ share/wordpress/wp-includes/js/wp-util.js
 share/wordpress/wp-includes/js/wp-util.min.js
 share/wordpress/wp-includes/js/wplink.js
 share/wordpress/wp-includes/js/wplink.min.js
+share/wordpress/wp-includes/js/zxcvbn-async.js
+share/wordpress/wp-includes/js/zxcvbn-async.min.js
+share/wordpress/wp-includes/js/zxcvbn.min.js
 share/wordpress/wp-includes/kses.php
 share/wordpress/wp-includes/l10n.php
 share/wordpress/wp-includes/link-template.php
