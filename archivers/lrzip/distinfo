@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/10/21 11:29:05 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2013/11/08 21:14:01 joerg Exp $
 
 SHA1 (lrzip-0.616.tar.bz2) = 374a021ff087ee93b2d5894fd16aa3aef26dfa8f
 RMD160 (lrzip-0.616.tar.bz2) = 6cc2a3f6fd13bfbaba93ae61bf0597383e0d98cd
 Size (lrzip-0.616.tar.bz2) = 493886 bytes
 SHA1 (patch-liblrzip.c) = 64092c1b186ced54ba57aba21eb4c9180c82e3ed
 SHA1 (patch-lrzip.h) = 42c3f7eccbd93e1bad5bb91941c1e69a2ff261cd
+SHA1 (patch-lrzip__private.h) = b56cc367a9c2038ccc3448ec2d8c7e07c7e3b44c
