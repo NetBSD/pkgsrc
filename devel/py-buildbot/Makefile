@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:28 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/08 15:32:10 riz Exp $
 #
 
-DISTNAME=		buildbot-0.8.5
+DISTNAME=		buildbot-0.8.8
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=		${DISTNAME}
 CATEGORIES=		devel net python
