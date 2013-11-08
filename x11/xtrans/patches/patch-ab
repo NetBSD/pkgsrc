@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2013/11/07 22:50:50 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2013/11/08 13:10:16 wiz Exp $
 
 --- Xtrans.c.orig	2013-11-03 02:10:11.000000000 +0000
 +++ Xtrans.c
@@ -13,19 +13,3 @@ $NetBSD: patch-ab,v 1.2 2013/11/07 22:50:50 wiz Exp $
  
      /* Look at all of the configured protocols */
  
-@@ -879,6 +879,7 @@ TRANS(Writev) (XtransConnInfo ciptr, str
-     return ciptr->transptr->Writev (ciptr, buf, size);
- }
- 
-+#if XTRANS_SEND_FDS
- int
- TRANS(SendFd) (XtransConnInfo ciptr, int fd, int do_close)
- {
-@@ -890,6 +891,7 @@ TRANS(RecvFd) (XtransConnInfo ciptr)
- {
-     return ciptr->transptr->RecvFd(ciptr);
- }
-+#endif
- 
- int
- TRANS(Disconnect) (XtransConnInfo ciptr)
