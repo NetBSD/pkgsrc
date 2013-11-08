@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2012/06/03 17:27:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/11/08 13:09:09 wiz Exp $
 lib/pkgconfig/xcb-proto.pc
 share/xcb/bigreq.xml
 share/xcb/composite.xml
 share/xcb/damage.xml
 share/xcb/dpms.xml
 share/xcb/dri2.xml
+share/xcb/dri3.xml
 share/xcb/ge.xml
 share/xcb/glx.xml
+share/xcb/present.xml
 share/xcb/randr.xml
 share/xcb/record.xml
 share/xcb/render.xml
