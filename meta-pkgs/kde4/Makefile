@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/11/07 09:45:42 markd Exp $
+# $NetBSD: Makefile,v 1.23 2013/11/08 21:15:22 joerg Exp $
 
 DISTNAME=	kde4-4.11.3
 CATEGORIES=	meta-pkgs x11 kde
@@ -107,14 +107,14 @@ DEPENDS+=	kmix-4.11.3{,nb[0-9]*}:../../multimedia/kmix
 DEPENDS+=	kscd-4.11.3{,nb[0-9]*}:../../multimedia/kscd
 DEPENDS+=	mplayerthumbs-4.11.3{,nb[0-9]*}:../../multimedia/mplayerthumbs
 #DEPENDS+=	kdenetwork4-4.11.3{,nb[0-9]*}:../../net/kdenetwork4
-DEPENDS+=	kget-4.11.3{,nb[0-9]*}:../../net/kget
-DEPENDS+=	kopete-4.11.3{,nb[0-9]*}:../../net/kopete
-DEPENDS+=	kppp-4.11.3{,nb[0-9]*}:../../net/kppp
-DEPENDS+=	krdp-4.11.3{,nb[0-9]*}:../../net/krdp
-DEPENDS+=	krfb-4.11.3{,nb[0-9]*}:../../net/krfb
-DEPENDS+=	kdnssd-4.11.3{,nb[0-9]*}:../../net/kdnssd
-DEPENDS+=	kdenetwork-filesharing-4.11.3{,nb[0-9]*}:../../net/kdenetwork-filesharing
-DEPENDS+=	kdenetwork-strigi-analyzers-4.11.3{,nb[0-9]*}:../../net/kdenetwork-strigi-analyzers
+#DEPENDS+=	kget-4.11.3{,nb[0-9]*}:../../net/kget
+#DEPENDS+=	kopete-4.11.3{,nb[0-9]*}:../../net/kopete
+#DEPENDS+=	kppp-4.11.3{,nb[0-9]*}:../../net/kppp
+#DEPENDS+=	krdp-4.11.3{,nb[0-9]*}:../../net/krdp
+#DEPENDS+=	krfb-4.11.3{,nb[0-9]*}:../../net/krfb
+#DEPENDS+=	kdnssd-4.11.3{,nb[0-9]*}:../../net/kdnssd
+#DEPENDS+=	kdenetwork-filesharing-4.11.3{,nb[0-9]*}:../../net/kdenetwork-filesharing
+#DEPENDS+=	kdenetwork-strigi-analyzers-4.11.3{,nb[0-9]*}:../../net/kdenetwork-strigi-analyzers
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../misc/kdepim4
 DEPENDS+=	kdepim-runtime4-4.4.11.1{,nb[0-9]*}:../../misc/kdepim-runtime4
 DEPENDS+=	kdeplasma-addons4-4.11.3{,nb[0-9]*}:../../misc/kdeplasma-addons4
