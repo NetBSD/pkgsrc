@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4082 2013/11/08 15:35:35 riz Exp $
+$NetBSD: CHANGES-2013,v 1.4083 2013/11/08 21:34:15 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5914,3 +5914,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao31 to 3.1.5 [taca 2013-11-08]
 	Updated devel/py-buildbot to 0.8.8 [riz 2013-11-08]
 	Updated devel/py-buildbot-slave to 0.8.8 [riz 2013-11-08]
+	Updated www/wordpress to 3.7.1 [morr 2013-11-08]
