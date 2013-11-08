@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2013/05/30 16:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2013/11/08 13:11:44 wiz Exp $
 
-DISTNAME=	libxcb-1.9.1
+DISTNAME=	libxcb-1.9.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,14 +11,14 @@ COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
 TOOL_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.7:../../x11/py-xcbgen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.9:../../x11/py-xcbgen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
-CONFIGURE_ARGS+=	--disable-doxygen
+CONFIGURE_ARGS+=	--without-doxygen
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,8 +34,10 @@ TOOL_DEPENDS+=		xcb-proto-[0-9]*:../../x11/xcb-proto
 # Adds -Wl,-R to pkgconfig files automatically
 PKGCONFIG_OVERRIDE+=	xcb-composite.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-damage.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-dri3.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-dpms.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-glx.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-present.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-randr.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-record.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-render.pc.in
@@ -83,7 +85,7 @@ post-extract:
 #.include "../../devel/gperf/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.8
+BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.9
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
