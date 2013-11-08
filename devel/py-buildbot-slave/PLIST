@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/13 23:07:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/08 15:33:32 riz Exp $
 bin/buildslave
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -78,6 +78,9 @@ ${PYSITELIB}/buildslave/monkeypatches/bug4881.pyo
 ${PYSITELIB}/buildslave/monkeypatches/bug5079.py
 ${PYSITELIB}/buildslave/monkeypatches/bug5079.pyc
 ${PYSITELIB}/buildslave/monkeypatches/bug5079.pyo
+${PYSITELIB}/buildslave/monkeypatches/testcase_assert.py
+${PYSITELIB}/buildslave/monkeypatches/testcase_assert.pyc
+${PYSITELIB}/buildslave/monkeypatches/testcase_assert.pyo
 ${PYSITELIB}/buildslave/pbutil.py
 ${PYSITELIB}/buildslave/pbutil.pyc
 ${PYSITELIB}/buildslave/pbutil.pyo
@@ -87,6 +90,9 @@ ${PYSITELIB}/buildslave/runprocess.pyo
 ${PYSITELIB}/buildslave/scripts/__init__.py
 ${PYSITELIB}/buildslave/scripts/__init__.pyc
 ${PYSITELIB}/buildslave/scripts/__init__.pyo
+${PYSITELIB}/buildslave/scripts/base.py
+${PYSITELIB}/buildslave/scripts/base.pyc
+${PYSITELIB}/buildslave/scripts/base.pyo
 ${PYSITELIB}/buildslave/scripts/logwatcher.py
 ${PYSITELIB}/buildslave/scripts/logwatcher.pyc
 ${PYSITELIB}/buildslave/scripts/logwatcher.pyo
@@ -174,6 +180,12 @@ ${PYSITELIB}/buildslave/test/unit/test_commands_utils.pyo
 ${PYSITELIB}/buildslave/test/unit/test_runprocess.py
 ${PYSITELIB}/buildslave/test/unit/test_runprocess.pyc
 ${PYSITELIB}/buildslave/test/unit/test_runprocess.pyo
+${PYSITELIB}/buildslave/test/unit/test_scripts_base.py
+${PYSITELIB}/buildslave/test/unit/test_scripts_base.pyc
+${PYSITELIB}/buildslave/test/unit/test_scripts_base.pyo
+${PYSITELIB}/buildslave/test/unit/test_scripts_runner.py
+${PYSITELIB}/buildslave/test/unit/test_scripts_runner.pyc
+${PYSITELIB}/buildslave/test/unit/test_scripts_runner.pyo
 ${PYSITELIB}/buildslave/test/unit/test_util.py
 ${PYSITELIB}/buildslave/test/unit/test_util.pyc
 ${PYSITELIB}/buildslave/test/unit/test_util.pyo
