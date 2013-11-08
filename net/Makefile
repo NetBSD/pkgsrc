@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.984 2013/10/10 03:33:43 jnemeth Exp $
+# $NetBSD: Makefile,v 1.985 2013/11/08 21:16:02 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -222,7 +222,6 @@ SUBDIR+=	jigdo
 SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork3
-SUBDIR+=	kdenetwork4
 SUBDIR+=	kftpgrabber
 SUBDIR+=	kiax
 SUBDIR+=	kismet
