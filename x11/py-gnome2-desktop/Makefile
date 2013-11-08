@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2013/10/19 09:07:13 adam Exp $
+# $NetBSD: Makefile,v 1.84 2013/11/08 12:53:03 richard Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.32.0
@@ -20,6 +20,8 @@ USE_TOOLS+=	pkg-config gmake
 #DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
+
+.include "../../lang/python/pyversion.mk"
 
 # The "real" value here is: 27 26
 # but because of single-version deps of gnome bits this will only
