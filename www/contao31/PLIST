@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/10/25 11:14:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/11/08 15:22:38 taca Exp $
 ${CT_WEBDIR}/.gitignore
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
@@ -2548,6 +2548,7 @@ ${CT_WEBDIR}/system/modules/core/vendor/tcpdf/include/tcpdf_fonts.php
 ${CT_WEBDIR}/system/modules/core/vendor/tcpdf/include/tcpdf_images.php
 ${CT_WEBDIR}/system/modules/core/vendor/tcpdf/include/tcpdf_static.php
 ${CT_WEBDIR}/system/modules/core/vendor/tcpdf/tcpdf.php
+${CT_WEBDIR}/system/modules/core/vendor/tcpdf/tcpdf_autoconfig.php
 ${CT_WEBDIR}/system/modules/core/widgets/CheckBox.php
 ${CT_WEBDIR}/system/modules/core/widgets/CheckBoxWizard.php
 ${CT_WEBDIR}/system/modules/core/widgets/ChmodTable.php
