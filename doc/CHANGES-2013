@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4081 2013/11/08 15:23:23 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4082 2013/11/08 15:35:35 riz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5912,3 +5912,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libxcb to 1.9.3 [wiz 2013-11-08]
 	Updated net/sslh to 1.15 [obache 2013-11-08]
 	Updated www/contao31 to 3.1.5 [taca 2013-11-08]
+	Updated devel/py-buildbot to 0.8.8 [riz 2013-11-08]
+	Updated devel/py-buildbot-slave to 0.8.8 [riz 2013-11-08]
