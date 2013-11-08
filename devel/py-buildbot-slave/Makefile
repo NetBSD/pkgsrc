@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:28 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/08 15:33:32 riz Exp $
 #
 
-DISTNAME=		buildbot-slave-0.8.5
+DISTNAME=		buildbot-slave-0.8.8
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=		buildbot_slave-0.8.5
+EGG_NAME=		buildbot_slave-0.8.8
 CATEGORIES=		devel net python
 MASTER_SITES=		http://buildbot.googlecode.com/files/
 
