@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2013/07/31 14:11:57 wiz Exp $
+$NetBSD: distinfo,v 1.21 2013/11/08 21:17:56 joerg Exp $
 
 SHA1 (lilypond-2.16.2.tar.gz) = 1eb3b0e5c117a8669dba19ab28f933351e51e39a
 RMD160 (lilypond-2.16.2.tar.gz) = bbb68ef05e81d8d9f5cf7ac26cffb5ab3935c61a
@@ -130,3 +130,4 @@ SHA1 (patch-lily_tuplet-bracket.cc) = 10e72655b79ebd82d18a3d1a4712f3265aed06e0
 SHA1 (patch-lily_tuplet-number.cc) = 0658c115e193d47dffeb33cdef0390ccf6f2104c
 SHA1 (patch-lily_volta-repeat-iterator.cc) = f4a5f34736e11611070c54b9ed7d3935d1f3d2c2
 SHA1 (patch-scripts_auxiliar_cg-section.sh) = c6838a358ae1ea2f8ddd0791e72eb3c25ac2019b
+SHA1 (patch-stepmake_stepmake_po-targets.make) = d3ee9c192a2f6b02a3b35c5d937803c8bc33bed3
