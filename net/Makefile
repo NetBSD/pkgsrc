@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.985 2013/11/08 21:16:02 joerg Exp $
+# $NetBSD: Makefile,v 1.986 2013/11/08 22:02:48 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -221,15 +221,23 @@ SUBDIR+=	jftpgw
 SUBDIR+=	jigdo
 SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
+SUBDIR+=	kdenetwork-filesharing
+SUBDIR+=	kdenetwork-strigi-analyzers
 SUBDIR+=	kdenetwork3
+SUBDIR+=	kdnssd
 SUBDIR+=	kftpgrabber
+SUBDIR+=	kget
 SUBDIR+=	kiax
 SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
 SUBDIR+=	kmldonkey-kde3
 SUBDIR+=	knock
 SUBDIR+=	knot
+SUBDIR+=	kopete
 SUBDIR+=	kphone
+SUBDIR+=	kppp
+SUBDIR+=	krdc
+SUBDIR+=	krfb
 SUBDIR+=	ktorrent
 SUBDIR+=	ktorrent-kde3
 SUBDIR+=	lambdamoo
