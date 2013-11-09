@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/05/21 12:13:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/11/09 22:45:05 markd Exp $
 include/KDE/Phonon/AbstractAudioOutput
 include/KDE/Phonon/AbstractMediaStream
 include/KDE/Phonon/AbstractVideoOutput
@@ -175,12 +175,9 @@ share/phonon/buildsystem/COPYING-CMAKE-SCRIPTS
 share/phonon/buildsystem/FindAutomoc4.cmake
 share/phonon/buildsystem/FindPackageHandleStandardArgs.cmake
 share/phonon/buildsystem/FindPhononInternal.cmake
-share/phonon/buildsystem/FindQt4.cmake
 share/phonon/buildsystem/MacroEnsureVersion.cmake
 share/phonon/buildsystem/MacroLogFeature.cmake
 share/phonon/buildsystem/MacroOptionalFindPackage.cmake
 share/phonon/buildsystem/MacroPushRequiredVars.cmake
 share/phonon/buildsystem/PhononMacros.cmake
-share/phonon/buildsystem/Qt4ConfigDependentSettings.cmake
-share/phonon/buildsystem/Qt4Macros.cmake
 share/phonon/buildsystem/cmake_uninstall.cmake.in
