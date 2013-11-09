@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/09/13 18:14:11 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2013/11/09 22:17:45 pettai Exp $
 #
 
-DISTNAME=	knot-1.3.1
+DISTNAME=	knot-1.3.3
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 FETCH_USING=	curl
