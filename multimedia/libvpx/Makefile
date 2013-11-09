@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/11/07 14:26:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2013/11/09 05:28:35 ryoon Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -36,6 +36,8 @@ REPLACE_BASH=		configure \
 			examples/gen_example_text.sh \
 			examples/gen_example_code.sh
 
+REPLACE_PERL=		build/make/ads2gas.pl
+
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 .  if ${MACHINE_ARCH} == "i386"
@@ -70,6 +72,10 @@ CXXFLAGS+=	-std=c++11
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipsel"
 CONFIGURE_ARGS+=	--target=mips32-linux-gcc
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .endif
 
 BUILD_TARGET=	# none

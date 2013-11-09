@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2013/09/11 15:50:32 ryoon Exp $
+$NetBSD: patch-aa,v 1.7 2013/11/09 05:28:35 ryoon Exp $
 
 --- build/make/Makefile.orig	2013-09-04 18:49:22.000000000 +0000
 +++ build/make/Makefile
@@ -30,7 +30,17 @@ $NetBSD: patch-aa,v 1.6 2013/09/11 15:50:32 ryoon Exp $
  
  $(BUILD_PFX)%.s.d: %.s
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -211,13 +212,15 @@ define linker_template
+@@ -139,7 +140,8 @@ $(BUILD_PFX)%.s.d: %.s
+ 
+ $(BUILD_PFX)%.s.o: %.s
+ 	$(if $(quiet),@echo "    [AS] $@")
+-	$(qexec)$(AS) $(ASFLAGS) -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile --tag=CC sh strip_fPIC.sh \
++		$(AS) $(ASFLAGS) -o $@ $<
+ 
+ .PRECIOUS: %.c.S
+ %.c.S: CFLAGS += -DINLINE_ASM
+@@ -211,13 +213,15 @@ define linker_template
  $(1): $(filter-out -%,$(2))
  $(1):
  	$(if $(quiet),@echo    "    [LD] $$@")
@@ -48,7 +58,7 @@ $NetBSD: patch-aa,v 1.6 2013/09/11 15:50:32 ryoon Exp $
  endef
  # make-3.80 has a bug with expanding large input strings to the eval function,
  # which was triggered in some cases by the following component of
-@@ -230,8 +233,12 @@ endef
+@@ -230,8 +234,12 @@ endef
  define install_map_template
  $(DIST_DIR)/$(1): $(2)
  	$(if $(quiet),@echo "    [INSTALL] $$@")
@@ -63,7 +73,7 @@ $NetBSD: patch-aa,v 1.6 2013/09/11 15:50:32 ryoon Exp $
  endef
  
  define archive_template
-@@ -240,7 +247,9 @@ define archive_template
+@@ -240,7 +248,9 @@ define archive_template
  # for creating them.
  $(1):
  	$(if $(quiet),@echo "    [AR] $$@")
@@ -74,7 +84,7 @@ $NetBSD: patch-aa,v 1.6 2013/09/11 15:50:32 ryoon Exp $
  endef
  
  define so_template
-@@ -317,20 +326,20 @@ clean::
+@@ -317,20 +327,20 @@ clean::
  	rm -f .bins .install-bins $(BINS)
  
  LIBS=$(call enabled,LIBS)
@@ -99,7 +109,7 @@ $NetBSD: patch-aa,v 1.6 2013/09/11 15:50:32 ryoon Exp $
  
  ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
  PROJECTS=$(call enabled,PROJECTS)
-@@ -380,7 +389,7 @@ ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
+@@ -380,7 +390,7 @@ ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
      BUILD_TARGETS += .projects
      INSTALL_TARGETS += .install-projects
  endif
