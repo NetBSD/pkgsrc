@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/21 12:16:41 markd Exp $
+$NetBSD: distinfo,v 1.3 2013/11/09 22:50:56 markd Exp $
 
-SHA1 (phonon-backend-gstreamer-4.6.3.tar.xz) = a79829df44622ec69f4a57464a16ab4ce5cc6f78
-RMD160 (phonon-backend-gstreamer-4.6.3.tar.xz) = 0129bf8c82a1e8ca7f46ec15491e3c8c90bc82a0
-Size (phonon-backend-gstreamer-4.6.3.tar.xz) = 72364 bytes
+SHA1 (phonon-backend-gstreamer-4.7.0.tar.xz) = 0760209b8e2aba18ab92e2b8f9241b2ae9cb4732
+RMD160 (phonon-backend-gstreamer-4.7.0.tar.xz) = 4596dff3e49503e4c2a4fc8ced0678c2bad7c1e7
+Size (phonon-backend-gstreamer-4.7.0.tar.xz) = 75416 bytes
