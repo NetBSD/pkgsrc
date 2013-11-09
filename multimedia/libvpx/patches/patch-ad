@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.9 2013/09/11 15:50:32 ryoon Exp $
+$NetBSD: patch-ad,v 1.10 2013/11/09 05:28:35 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
@@ -14,6 +14,15 @@ Add another SDK path on Mac OS X.
                  tgt_os=linux
                  ;;
              *solaris2.10)
+@@ -775,7 +775,7 @@ process_common_toolchain() {
+ 
+         case ${tgt_cc} in
+         gcc)
+-            CROSS=${CROSS:-arm-none-linux-gnueabi-}
++#            CROSS=${CROSS:-arm-none-linux-gnueabi-}
+             link_with_cc=gcc
+             setup_gnu_toolchain
+             arch_int=${tgt_isa##armv}
 @@ -960,8 +960,6 @@ process_common_toolchain() {
              check_add_cflags -mips32r2 -mdspr2
              disable fast_unaligned
