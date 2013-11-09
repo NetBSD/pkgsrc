@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2013/08/05 18:41:11 jmcneill Exp $
+# $NetBSD: hacks.mk,v 1.5 2013/11/09 05:32:46 ryoon Exp $
 
 .if !defined(BISON_HACKS_MK)
 BISON_HACKS_MK=	defined
@@ -17,7 +17,7 @@ BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 
 ### gcc-4.5.3 in NetBSD/arm 5.99.59 also breaks bison in net/libIDL.
 ### -O seems enough for workaround in this case.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm) && !empty(CC_VERSION:Mgcc-4.5.*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && !empty(CC_VERSION:Mgcc-4.5.*)
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O
 .endif
