@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/08/15 20:26:51 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2013/11/09 06:10:48 dholland Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -16,6 +16,9 @@ RESTRICTED=	Distribution limited to non-commercial purposes, unmodified binaries
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+# Extensive use of 32-bit values to hold pointers
+NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
 
 USE_TOOLS+=	ksh:run yacc lex
 REPLACE_KSH=	Xsession.in Xsession2.in
