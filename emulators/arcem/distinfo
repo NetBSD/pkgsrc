@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.5 2011/03/03 12:55:48 obache Exp $
+$NetBSD: distinfo,v 1.6 2013/11/10 12:50:19 ryoon Exp $
 
-SHA1 (arcem-1.00-src.tgz) = d2a487531ce6c66dfbeb59d1f1093c7d8fc3282a
-RMD160 (arcem-1.00-src.tgz) = 95044eed6e5cd871d5bd926c3d02d17706e0f93b
-Size (arcem-1.00-src.tgz) = 206416 bytes
-SHA1 (linux.rom.gz) = 5a3ed7b8bf7e560d14ede14232e50a40a96f9147
-RMD160 (linux.rom.gz) = 5bf035a3e6f054a61de62fcf880c52c996f503c6
-Size (linux.rom.gz) = 341085 bytes
 SHA1 (HardImage1.gz) = ab3c2ddd5a913a4051d4c21707e7701b27a103f3
 RMD160 (HardImage1.gz) = 09176071c9c325b50a3a2074938789f4e6136d44
 Size (HardImage1.gz) = 3545800 bytes
-SHA1 (patch-aa) = 3e3b3619552cd71326e9042d6f5878ead287ab62
-SHA1 (patch-ab) = f55cf50560e5a3d87ec1540fddd88990981d56ec
-SHA1 (patch-ac) = a9f3edbd7e7a974b7098936d62790821c5d3d4a1
-SHA1 (patch-ad) = 61823a1e47f783d1852c1f50762cdecbe3aeb3fb
-SHA1 (patch-ae) = c2580ed6b4940022dc427456519a066413a3c91f
+SHA1 (arcem-1.50-src.zip) = b1f39b15e2d9ec5d7c82f618cb2beb0bc011c0b1
+RMD160 (arcem-1.50-src.zip) = 74253d5d6fcf5fc64abc10f95f6fbcd121f7eddf
+Size (arcem-1.50-src.zip) = 1420685 bytes
+SHA1 (linux.rom.gz) = 5a3ed7b8bf7e560d14ede14232e50a40a96f9147
+RMD160 (linux.rom.gz) = 5bf035a3e6f054a61de62fcf880c52c996f503c6
+Size (linux.rom.gz) = 341085 bytes
+SHA1 (patch-aa) = 558eefa0f3061b295a24d8adfef86d902e7894aa
+SHA1 (patch-hostfs.c) = 56b3649fdd95ff4b6c98fc2666fd6b0d04c811f8
