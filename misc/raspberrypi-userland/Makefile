@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/08/06 10:05:39 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/10 04:56:04 jun Exp $
 #
 
 DISTNAME=	raspberrypi-userland-20130803
@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/jaredmcneill/userland
 COMMENT=	Various libraries for the Raspberry Pi
 LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*arm
+ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
 
 USE_LANGUAGES=	c c++
 
