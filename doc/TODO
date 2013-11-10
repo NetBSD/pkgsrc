@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12709 2013/11/09 16:29:15 mef Exp $
+$NetBSD: TODO,v 1.12710 2013/11/10 03:23:49 markd Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-1.0.8
 	o dhid-5.3
 	o diffstat-1.58
-	o digikam-3.5.0
 	o doclifter-2.13
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
@@ -734,11 +733,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgnomekbd-3.4.0.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
-	o libkface-3.5.0
-	o libkgeomap-3.5.0
-	o libkvkontakte-3.5.0
 	o libmcs-0.7.2
-	o libmediawiki-3.5.0
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libquantum-1.1.0 [pkg/43728, development release]
