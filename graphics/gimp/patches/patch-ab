@@ -1,8 +1,24 @@
-$NetBSD: patch-ab,v 1.37 2013/11/06 20:32:45 adam Exp $
+$NetBSD: patch-ab,v 1.38 2013/11/10 19:21:36 dholland Exp $
+
+- add -lexecinfo if libexecinfo exists (hack for NetBSD-current)
+- ...?
 
 --- configure.orig	2013-11-03 17:00:19.000000000 +0000
 +++ configure
-@@ -19153,13 +19153,13 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
+@@ -14135,7 +14135,11 @@ if eval test \"x\$"$as_ac_Header"\" = x"
+   cat >>confdefs.h <<_ACEOF
+ #define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
+ _ACEOF
+-
++if [ $ac_header = execinfo.h ]; then
++    if [ -e /usr/lib/libexecinfo.a -o -e /usr/lib/libexecinfo.so ]; then
++	LIBS="$LIBS -lexecinfo"
++    fi
++fi
+ fi
+ 
+ done
+@@ -19153,13 +19157,13 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
    gimp_ok=yes
  fi
  rm -f conftest*
@@ -17,7 +33,7 @@ $NetBSD: patch-ab,v 1.37 2013/11/06 20:32:45 adam Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $gimp_ok" >&5
  $as_echo "$gimp_ok" >&6; }
    if test "x$gimp_ok" = xno; then
-@@ -23499,7 +23499,7 @@ fi
+@@ -23499,7 +23503,7 @@ fi
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
