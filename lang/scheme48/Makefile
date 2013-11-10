@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/08/06 19:57:42 asau Exp $
+# $NetBSD: Makefile,v 1.38 2013/11/10 20:28:50 joerg Exp $
 
 DISTNAME=		scheme48-1.9
 PKGREVISION=		1
@@ -38,6 +38,11 @@ SUBST_STAGE.pthr=	post-patch
 SUBST_FILES.pthr=	configure
 SUBST_MESSAGE.pthr=	Hardcoding -pthread in CFLAGS and LDFLAGS
 SUBST_SED.pthr= 	-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CFLAGS -pthread\"; LDFLAGS=\"$$LDFLAGS -pthread\",'
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+= -O0
 .endif
 
 .include "../../devel/sysexits/buildlink3.mk"
