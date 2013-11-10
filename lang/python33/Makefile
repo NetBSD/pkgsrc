@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2013/09/10 14:22:30 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2013/11/10 12:12:32 obache Exp $
 
 .include "dist.mk"
 
-PKGREVISION=	2
 
 PKGNAME=	python33-${PY_DISTVERSION}
+PKGREVISION=	3
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-pymalloc
+
+PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
 USE_LANGUAGES=		c c++
 
