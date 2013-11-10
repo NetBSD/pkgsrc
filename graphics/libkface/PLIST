@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/21 20:53:44 markd Exp $
-include/libkface/database.h
-include/libkface/face.h
+@comment $NetBSD: PLIST,v 1.2 2013/11/10 03:19:27 markd Exp $
+include/libkface/dataproviders.h
 include/libkface/facedetector.h
-include/libkface/image.h
+include/libkface/identity.h
 include/libkface/libkface_export.h
 include/libkface/recognitiondatabase.h
 include/libkface/version.h
 lib/libkface.so
-lib/libkface.so.1
-lib/libkface.so.1.0.0
+lib/libkface.so.2
+lib/libkface.so.2.0.0
 lib/pkgconfig/libkface.pc
 share/kde/apps/cmake/modules/FindKface.cmake
+share/kde/apps/libkface/alignment-congealing/face-funnel.data
+share/kde/apps/libkface/database/dbconfig.xml
 share/kde/apps/libkface/haarcascades/haarcascade_frontalface_alt.xml
 share/kde/apps/libkface/haarcascades/haarcascade_frontalface_alt2.xml
 share/kde/apps/libkface/haarcascades/haarcascade_frontalface_alt_tree.xml
