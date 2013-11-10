@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2013/10/15 20:46:41 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2013/11/10 12:12:32 obache Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	OPT=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--with-dbmliborder=ndbm:bdb
 CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
+
+PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
 LDFLAGS+=		-L${WRKSRC}
 
