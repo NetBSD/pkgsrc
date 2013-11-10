@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2013/04/03 12:52:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.28 2013/11/10 03:19:26 markd Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -287,13 +287,6 @@ share/icons/hicolor/scalable/apps/showfoto.svgz
 share/kde/apps/digikam/about/digikam.css
 share/kde/apps/digikam/about/main.html
 share/kde/apps/digikam/about/top-left-digikam.png
-share/kde/apps/digikam/data/assistant-collection.png
-share/kde/apps/digikam/data/assistant-metadata.png
-share/kde/apps/digikam/data/assistant-openfile.png
-share/kde/apps/digikam/data/assistant-preview.png
-share/kde/apps/digikam/data/assistant-rawimport.png
-share/kde/apps/digikam/data/assistant-scancollection.png
-share/kde/apps/digikam/data/assistant-tooltips.png
 share/kde/apps/digikam/data/banner-digikam.png
 share/kde/apps/digikam/data/bluejean-texture.png
 share/kde/apps/digikam/data/bothhorz.png
