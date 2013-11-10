@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/07 10:42:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/10 23:04:32 markd Exp $
 
 DISTNAME=	kde-dev-scripts-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -9,6 +9,7 @@ COMMENT=	Scripts useful during development of KDE software
 REPLACE_BASH+= \
 	create_makefile \
 	create_svnignore \
+	draw_lib_dependencies \
 	makeobj \
 	package_crystalsvg \
 	svnversions
@@ -23,7 +24,6 @@ REPLACE_PERL+= \
 	cxxmetric \
 	extend_dmalloc \
 	extractattr \
-	extractqml \
 	extractrc \
 	fixheaders \
 	fixkdeincludes \
@@ -32,7 +32,6 @@ REPLACE_PERL+= \
 	includemocs \
 	kde-spellcheck.pl \
 	kdemangen.pl \
-	kdesrc-build \
 	krazy-licensecheck \
 	noncvslist \
 	png2mng.pl \
