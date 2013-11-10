@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/11/08 22:06:28 markd Exp $
+# $NetBSD: Makefile,v 1.25 2013/11/10 01:43:30 markd Exp $
 
 DISTNAME=	kde4-4.11.3
 CATEGORIES=	meta-pkgs x11 kde
@@ -108,7 +108,7 @@ DEPENDS+=	mplayerthumbs-4.11.3{,nb[0-9]*}:../../multimedia/mplayerthumbs
 DEPENDS+=	kget-4.11.3{,nb[0-9]*}:../../net/kget
 DEPENDS+=	kopete-4.11.3{,nb[0-9]*}:../../net/kopete
 DEPENDS+=	kppp-4.11.3{,nb[0-9]*}:../../net/kppp
-DEPENDS+=	krdp-4.11.3{,nb[0-9]*}:../../net/krdp
+DEPENDS+=	krdc-4.11.3{,nb[0-9]*}:../../net/krdc
 DEPENDS+=	krfb-4.11.3{,nb[0-9]*}:../../net/krfb
 DEPENDS+=	kdnssd-4.11.3{,nb[0-9]*}:../../net/kdnssd
 DEPENDS+=	kdenetwork-filesharing-4.11.3{,nb[0-9]*}:../../net/kdenetwork-filesharing
