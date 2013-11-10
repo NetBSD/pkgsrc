@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.999 2013/11/07 04:28:15 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1000 2013/11/10 11:14:18 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -541,6 +541,7 @@ SUBDIR+=	php-curl
 SUBDIR+=	php-eaccelerator
 SUBDIR+=	php-fpm
 SUBDIR+=	php-http
+SUBDIR+=	php-ja-wordpress
 SUBDIR+=	php-owncloud
 SUBDIR+=	php-phrasea2
 SUBDIR+=	php-piwigo
