@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.43 2013/09/10 11:22:30 wiz Exp $
+$NetBSD: distinfo,v 1.44 2013/11/10 03:19:26 markd Exp $
 
-SHA1 (digikam-3.2.0.tar.bz2) = 666f1d937dc033ddb880aed8a32e7943113d973f
-RMD160 (digikam-3.2.0.tar.bz2) = 9bec9eff889a9bf90e898ad52dfb1cfd50d1d548
-Size (digikam-3.2.0.tar.bz2) = 58449068 bytes
+SHA1 (digikam-3.5.0.tar.bz2) = 9e44fcf219312cbcbbaee0cc9a7f460a01769224
+RMD160 (digikam-3.5.0.tar.bz2) = 99afee6f47818653a5011f5a3416a04fb3a6a70f
+Size (digikam-3.5.0.tar.bz2) = 65698806 bytes
 SHA1 (patch-CMakeLists.txt) = 83bdf0398c3a4120ce6dc83d205ca32c50229ff2
 SHA1 (patch-bootstrap.local) = e1f0bbdd9508d0c32b7a6fd3e3a0b40ca16092ce
 SHA1 (patch-core_digikam_album_albumwatch.cpp) = cf80a12fef5c998efcad1fd5dcb5df3a0e4e5ae0
