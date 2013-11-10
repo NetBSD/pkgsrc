@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4088 2013/11/10 12:13:47 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4089 2013/11/10 12:50:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5929,3 +5929,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/python27 to 2.7.5nb4 [obache 2013-11-10]
 	Updated lang/python32 to 3.2.3nb5 [obache 2013-11-10]
 	Updated lang/python33 to 3.3.2nb3 [obache 2013-11-10]
+	Updated emulators/arcem to 1.50 [ryoon 2013-11-10]
