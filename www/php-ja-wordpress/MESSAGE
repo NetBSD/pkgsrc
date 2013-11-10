@@ -1,0 +1,51 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/11/10 11:13:08 ryoon Exp $
+
+To use Japanese localized WordPress with Apach httpd 2.4, you will need
+to perform the following steps.
+
+1. Install databases/mysql55-server, and enable it, and set root password.
+
+2. Create the database for WordPress.
+
+	$ mysql -u root -p
+	Enter password:
+	mysql> create database wordpressdb;
+
+3. Create MySQL user account for WordPress, and grant permission for them.
+
+	$ mysql -u root -p
+	Enter password:
+	mysql> grant all on wordpressdb.* to 'wpadmin'@'localhost' \
+	identified by 'wppassword';
+
+4. Edit ${PREFIX}/share/ja-wordpress/wp-config.php, and it should have
+   the following lines.
+
+	define('DB_NAME', 'wordpressdb');
+	define('DB_USER', 'wpadmin');
+	define('DB_PASSWORD', 'wppassword');
+	define('DB_HOST', 'localhost');
+
+5. Edit ${PREFIX}/etc/httpd/httpd.conf, and Add the following line at
+   the its bottom.
+
+	Include etc/ja-wordpress.conf
+
+6. Add the following line to ${PREFIX}/etc/php.ini.
+
+	extension=mysql.so
+
+7. Adjust ${PREFIX}/etc/ja-wordpress.conf for your environment.
+
+8. Start Apache httpd 2.4, and access http://localhost/wordpress/ ,
+   and enter website name etc.
+
+For further post-installation customisation you may need to make
+changes to file permissions etc. based on the functionality that
+you require.  A good starting place for these issues can be found
+in this article:
+
+	http://codex.wordpress.org/Hardening_WordPress
+
+===========================================================================
