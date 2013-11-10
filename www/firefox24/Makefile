@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/08 12:51:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/10 15:08:31 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	24.1.0
@@ -48,8 +48,6 @@ LDFLAGS.Linux=		-lnspr4
 
 .include "mozilla-common.mk"
 .include "options.mk"
-
-CHECK_PORTABILITY_SKIP+=	js/src/tests/update-test262.sh
 
 CHECK_INTERPRETER_SKIP+=lib/firefox24-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=lib/firefox24-sdk/sdk/bin/typelib.py
