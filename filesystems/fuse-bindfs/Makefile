@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 16:08:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/10 06:36:28 apb Exp $
 #
 
 DISTNAME=	bindfs-1.8.4
 PKGNAME=	fuse-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bindfs.googlecode.com/files/
 
