@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/08/07 03:18:03 mef Exp $
+# $NetBSD: Makefile,v 1.29 2013/11/10 20:28:14 joerg Exp $
 
 DISTNAME=		avr-libc-1.8.0
 CATEGORIES=		cross
@@ -36,6 +36,13 @@ SUBST_STAGE.demo=	pre-configure
 SUBST_MESSAGE.demo=	Add cross/bin on PATH for OBJCOPY (avr-objcopy) etc
 SUBST_FILES.demo=	doc/Makefile.in
 SUBST_SED.demo=		-e 's|@@@PATH@@@|${PREFIX}/bin:${PATH:Q}|g'
+
+post-extract:
+	${MKDIR} ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/largedemo/largedemo-setup.jpg ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/largedemo/largedemo-wiring.jpg ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/largedemo/largedemo-wiring2.jpg ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/stdiodemo/stdiodemo-setup.jpg ${WRKSRC}/doc/api/latex_src
 
 post-install:
 	${INSTALL_DATA} \
