@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4085 2013/11/09 23:01:06 markd Exp $
+$NetBSD: CHANGES-2013,v 1.4086 2013/11/10 03:23:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5919,3 +5919,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/phonon to 4.7.0 [markd 2013-11-09]
 	Updated multimedia/phonon-backend-gstreamer to 4.7.0 [markd 2013-11-09]
 	Updated multimedia/phonon-backend-vlc to 0.7.0 [markd 2013-11-09]
+	Updated graphics/digikam to 3.5.0 [markd 2013-11-10]
+	Updated graphics/kipi-plugins to 3.5.0 [markd 2013-11-10]
+	Updated graphics/libkface to 3.5.0 [markd 2013-11-10]
+	Updated misc/libkgeomap to 3.5.0 [markd 2013-11-10]
+	Updated misc/libkvkontakte to 3.5.0 [markd 2013-11-10]
+	Updated www/libmediawiki to 3.5.0 [markd 2013-11-10]
