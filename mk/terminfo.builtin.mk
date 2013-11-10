@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.builtin.mk,v 1.2 2010/02/08 22:11:43 roy Exp $
+# $NetBSD: terminfo.builtin.mk,v 1.3 2013/11/10 02:54:47 obache Exp $
 
 BUILTIN_PKG:=	terminfo
 
@@ -77,8 +77,12 @@ BUILDLINK_LIBNAME.terminfo=	${BUILTIN_LIBNAME.terminfo}
 # of those library options.
 #
 .  if empty(BUILDLINK_TREE:Mcurses) && empty(BUILDLINK_TREE:Mncurses)
+.    if empty(BUILDLINK_LIBNAME.terminfo:Mcurses)
 BUILDLINK_TRANSFORM+=		rm:-lcurses
+.    endif
+.    if empty(BUILDLINK_LIBNAME.terminfo:Mncurses)
 BUILDLINK_TRANSFORM+=		rm:-lncurses
+.    endif
 .  endif
 
 .endif	# CHECK_BUILTIN.terminfo
