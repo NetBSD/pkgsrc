@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.11 2013/11/05 07:07:11 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.12 2013/11/10 10:32:05 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -42,3 +42,6 @@ Pullup ticket #4251 - requested by tron
 net/wireshark: security update
 Pullup ticket #4250 - requested by joerg
 security/openssl: build fix for Linux/POWERPC64
+Pullup ticket #4252 - requested by bsiegert
+lang/ruby200-base: build fix
+lang/ruby: build fix for lang/ruby200-base
