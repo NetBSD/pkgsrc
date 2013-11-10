@@ -1,7 +1,11 @@
-$NetBSD: patch-ab,v 1.38 2013/11/10 19:21:36 dholland Exp $
+$NetBSD: patch-ab,v 1.39 2013/11/10 20:12:32 dholland Exp $
 
 - add -lexecinfo if libexecinfo exists (hack for NetBSD-current)
 - ...?
+
+A more proper fix for the first hunk has been reported upstream here:
+https://bugzilla.gnome.org/show_bug.cgi?id=711795
+so once that gets rolled in the first hunk can be removed.
 
 --- configure.orig	2013-11-03 17:00:19.000000000 +0000
 +++ configure
