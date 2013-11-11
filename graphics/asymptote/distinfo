@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2012/07/03 18:07:03 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/11/11 16:43:21 joerg Exp $
 
 SHA1 (asymptote-2.15.src.tgz) = e0fb336c195fb21a39e3d0f3acd4881ce5e170a7
 RMD160 (asymptote-2.15.src.tgz) = 1916f4160034d4d76280bfed8ebe0bb898fc80ce
 Size (asymptote-2.15.src.tgz) = 1763773 bytes
 SHA1 (patch-configure) = ddefab8f9aed037a32cc854d0aedc4b861153b0f
+SHA1 (patch-genv.cc) = a02d289383ff2f84617d9cb8bf2df1e51962ee11
+SHA1 (patch-prc_writePRC.h) = 4b26db72fd611f0dd8ded8484f0025a3f058a141
 SHA1 (patch-runtime.cc) = e61bdfc8c911f81f727c0b341522e66372905b1a
