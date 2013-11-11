@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/11/11 06:48:02 dholland Exp $
+
+Fix MAKE_JOBS build; without this building DATA, which actually means
+shared libs, causes libtool to overwrite object files used by
+PROGRAMS.
+
+--- Makefile.in~	2013-11-11 06:33:13.000000000 +0000
++++ Makefile.in
+@@ -526,7 +526,7 @@ install: install-am
+ uninstall-am: uninstall-binPROGRAMS uninstall-man uninstall-overloadDATA \
+ 		uninstall-trickleoverloadDATA
+ uninstall: uninstall-am
+-all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) config.h
++all-am: Makefile $(PROGRAMS) .WAIT $(MANS) $(DATA) config.h
+ all-redirect: all-am
+ install-strip:
+ 	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
