@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/11/11 13:07:23 obache Exp $
+
+* remove gmake-izm
+
+--- Makefile.in.orig	2013-02-05 06:46:07.000000000 +0000
++++ Makefile.in
+@@ -19,8 +19,8 @@ TARFILES	= README README.hacking README.
+ 
+ TAR		= tar
+ 
+-MAKE_SUBDIR  = for dir in $(SUBDIRS); do $(MAKE) -C $$dir $@ || exit 5; done
+-MAKE_SUBDIR2 = for dir in $(SUBDIRS2); do $(MAKE) -C $$dir $@ || exit 5; done
++MAKE_SUBDIR  = for dir in $(SUBDIRS); do (cd $$dir && $(MAKE) $@) || exit 5; done
++MAKE_SUBDIR2 = for dir in $(SUBDIRS2); do (cd $$dir && $(MAKE) $@) || exit 5; done
+ 
+ default::
+ 	@$(MAKE_SUBDIR)
