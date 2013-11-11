@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.12 2013/11/10 10:32:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.13 2013/11/11 23:28:44 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -45,3 +45,7 @@ security/openssl: build fix for Linux/POWERPC64
 Pullup ticket #4252 - requested by bsiegert
 lang/ruby200-base: build fix
 lang/ruby: build fix for lang/ruby200-base
+Pullup ticket #4253 - requested by taca
+lang/ruby18-base: build fix
+lang/ruby193-base: build fix
+lang/ruby200-base: build fix
