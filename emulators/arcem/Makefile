@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/11/10 12:50:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2013/11/11 16:44:45 joerg Exp $
 #
 
 DISTNAME=	arcem-1.50-src
@@ -29,9 +29,8 @@ MAKE_ENV+=	SYSTEM=X
 
 INSTALLATION_DIRS+=	bin share/arcem
 
-#BUILDLINK_TRANSFORM+=	rm:-Werror
-
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/arcem ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/linux.rom \
 		${DESTDIR}${PREFIX}/share/arcem/ROM
 	${INSTALL_DATA} ${WRKDIR}/HardImage1 \
