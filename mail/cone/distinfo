@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2013/05/23 15:05:54 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/11/11 16:42:21 joerg Exp $
 
 SHA1 (cone-0.90.tar.bz2) = 51614269ed0b8c091de4573bacefe5f394a08311
 RMD160 (cone-0.90.tar.bz2) = 2b2a924d8726535654c74c9d98d7e444aff9fd5e
 Size (cone-0.90.tar.bz2) = 3906323 bytes
 SHA1 (patch-af) = f2018ee08526ee9e0c9c93e6ff5f83b948fd7067
+SHA1 (patch-cone_cursesmessage.C) = df0d016ffaf546614fb3292368cdcf4b1d895416
 SHA1 (patch-curses-cursesscreen.C) = 55aae19747367036d859c0e1835f2af96ea58a77
 SHA1 (patch-curses_cursescontainer.C) = 3168e56fd5f26b59c22fa4823cd55ef98e8fd7c8
 SHA1 (patch-curses_cursescontainer.H) = 7a81ff321c72d002da8381412da474fbaecb07cb
