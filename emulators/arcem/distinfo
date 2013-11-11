@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/11/10 12:50:19 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2013/11/11 16:44:45 joerg Exp $
 
 SHA1 (HardImage1.gz) = ab3c2ddd5a913a4051d4c21707e7701b27a103f3
 RMD160 (HardImage1.gz) = 09176071c9c325b50a3a2074938789f4e6136d44
@@ -9,5 +9,5 @@ Size (arcem-1.50-src.zip) = 1420685 bytes
 SHA1 (linux.rom.gz) = 5a3ed7b8bf7e560d14ede14232e50a40a96f9147
 RMD160 (linux.rom.gz) = 5bf035a3e6f054a61de62fcf880c52c996f503c6
 Size (linux.rom.gz) = 341085 bytes
-SHA1 (patch-aa) = 558eefa0f3061b295a24d8adfef86d902e7894aa
+SHA1 (patch-aa) = 2835320a70d04bd435b7d6a159db8019a8bda472
 SHA1 (patch-hostfs.c) = 56b3649fdd95ff4b6c98fc2666fd6b0d04c811f8
