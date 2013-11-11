@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/04/01 12:25:16 joerg Exp $
+$NetBSD: distinfo,v 1.8 2013/11/11 16:42:38 joerg Exp $
 
 SHA1 (open-vm-tools-2008.08.08-109361.tar.gz) = 1c44c3524cd9cbc5870f1c6065b03a6b31859a25
 RMD160 (open-vm-tools-2008.08.08-109361.tar.gz) = 4ea0a6aa2edda2bc404c865dc5b58f3a177ae411
@@ -52,7 +52,7 @@ SHA1 (patch-bv) = 180df7c4a5fb7544b6d9014f567a4f31e6c2a38d
 SHA1 (patch-bw) = c242890caa3cc720d18eec612aca6e46c69c5b04
 SHA1 (patch-bx) = deeea5eefae750b046d7a9c81679125e26fb82fa
 SHA1 (patch-by) = c6018a330fdabefd3fc60d3e6e6c95bdf4f7f2bc
-SHA1 (patch-checkvm_checkvm.c) = 142e34b40937add51db4f2255f47da23402a3720
+SHA1 (patch-checkvm_checkvm.c) = 1da596cf11ccb9af1ba39013775a3a6b3a85345f
 SHA1 (patch-configure.ac) = d39767cc2006088203341782fca7895c2710fd55
 SHA1 (patch-guestd_Makefile.am) = 4855efa62b6633e23c11e3ea184f60f4c6952244
 SHA1 (patch-hgfsclient_Makefile.am) = 3b6adf9e4d88bcce2c191260b669615537927e28
