@@ -1,8 +1,11 @@
-$NetBSD: patch-src_gd__bmp.c,v 1.1 2013/11/11 20:38:15 dholland Exp $
+$NetBSD: patch-src_gd__bmp.c,v 1.2 2013/11/11 21:34:40 dholland Exp $
 
 Don't use ceill(); it isn't remotely needed here (it is probably a
 typo) and causes build failure on platforms where it isn't available.
 See PR 48334.
+
+upstream report:
+https://bitbucket.org/libgd/gd-libgd/issue/98/gd_bmpc-use-of-both-ceil-and-ceill
 
 --- src/gd_bmp.c~	2013-06-25 09:58:23.000000000 +0000
 +++ src/gd_bmp.c
