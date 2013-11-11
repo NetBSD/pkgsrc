@@ -1,0 +1,16 @@
+$NetBSD: patch-dfasyn_Makefile,v 1.1 2013/11/11 06:53:59 dholland Exp $
+
+Fix MAKE_JOBS build; without this hack it runs two concurrent copies
+of bison that produce garbage output.
+
+--- dfasyn/Makefile~	2007-06-22 20:18:00.000000000 +0000
++++ dfasyn/Makefile
+@@ -32,7 +32,7 @@ OBJ = dfasyn.o parse.o scan.o \
+ 	n2d.o expr.o evaluator.o \
+ 	tabcompr.o compdfa.o
+ 
+-all : dfasyn
++all : parse.h .WAIT dfasyn
+ 
+ install : all
+ 	[ -d $(bindir) ] || mkdir -p $(bindir)
