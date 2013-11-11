@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2013/10/10 14:42:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2013/11/11 20:16:38 dholland Exp $
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Demo viewer and configuration tool for xscreensaver
 
 CONFLICTS+=	xscreensaver<4.14 xscreensaver-gnome-[0-9]*
@@ -26,9 +26,11 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/driver/xscreensaver-demo.man \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xscreensaver-demo.1
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../x11/xscreensaver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
