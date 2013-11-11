@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2013/11/10 12:50:19 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2013/11/11 16:44:45 joerg Exp $
 
 --- Makefile.orig	2012-12-12 23:41:33.000000000 +0000
 +++ Makefile
@@ -13,7 +13,14 @@ $NetBSD: patch-aa,v 1.4 2013/11/10 12:50:19 ryoon Exp $
  
  WARN = -Wall -Wno-return-type -Wno-unknown-pragmas -Wshadow \
     -Wpointer-arith -Wcast-align -Wstrict-prototypes \
-@@ -69,7 +71,7 @@ endif
+@@ -63,13 +65,13 @@ ifeq ($(DEBUG),yes)
+ CFLAGS += -O0 -g
+ else
+ CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -ffast-math \
+-    -fomit-frame-pointer -frerun-cse-after-loop
++    -fomit-frame-pointer
+ endif
+ endif
  
  CFLAGS += \
      $(CFL) $(WARN) \
