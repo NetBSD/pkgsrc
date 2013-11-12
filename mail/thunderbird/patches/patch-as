@@ -1,10 +1,27 @@
-$NetBSD: patch-as,v 1.14 2012/11/23 07:17:54 ryoon Exp $
+$NetBSD: patch-as,v 1.15 2013/11/12 20:50:51 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2012-11-19 22:42:22.000000000 +0000
+--- mozilla/js/src/configure.in.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -2701,7 +2701,7 @@ then
+@@ -2424,6 +2424,7 @@ EOF
+ #pragma GCC visibility push(hidden)
+ #pragma GCC visibility push(default)
+ #include <string.h>
++#include <iterator>
+ #pragma GCC visibility pop
+ 
+ __attribute__ ((visibility ("default"))) void Func() {
+@@ -2432,7 +2433,7 @@ __attribute__ ((visibility ("default")))
+ }
+ EOF
+                        ac_cv_have_visibility_builtin_bug=no
+-                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
++                       if ! ${CXX-c++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
+                          ac_cv_have_visibility_builtin_bug=yes
+                        else
+                          if test `grep -c "@PLT" conftest.S` = 0; then
+@@ -2657,7 +2658,7 @@ then
      fi
  
  	case "$target" in
@@ -13,7 +30,30 @@ Treat DragonFly like FreeBSD.
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -3545,7 +3545,7 @@ if test "$MOZ_MEMORY"; then
+@@ -2736,14 +2737,19 @@ fi
+ AC_CACHE_CHECK(
+     [for res_ninit()],
+     ac_cv_func_res_ninit,
+-    [AC_TRY_LINK([
++    [AC_TRY_RUN([
+         #ifdef linux
+         #define _BSD_SOURCE 1
+         #endif
++        #ifdef __NetBSD__
++        #error use of global _res variable in threaded programs is not portable
++        #endif
+         #include <resolv.h>
+-        ],
+-        [int foo = res_ninit(&_res);],
++        int main(int argc, char **argv){
++            int foo = res_ninit(&_res);
++        }],
+         [ac_cv_func_res_ninit=yes],
++        [ac_cv_func_res_ninit=no],
+         [ac_cv_func_res_ninit=no])
+     ])
+ 
+@@ -3517,7 +3523,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -22,3 +62,80 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
+@@ -4417,6 +4423,16 @@ fi
+ dnl ========================================================
+ dnl ECMAScript Internationalization API Support (uses ICU)
+ dnl ========================================================
++ICU_LIB_NAMES=
++MOZ_NATIVE_ICU=
++MOZ_ARG_WITH_BOOL(system-icu,
++[  --with-system-icu
++                          Use system icu (located with pkgconfig)],
++    MOZ_NATIVE_ICU=1)
++
++if test -n "$MOZ_NATIVE_ICU"; then
++    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
++fi
+ 
+ if test -n "$JS_STANDALONE"; then
+     ENABLE_INTL_API=1
+@@ -4429,37 +4445,36 @@ MOZ_ARG_ENABLE_BOOL(intl-api,
+ dnl Settings for the implementation of the ECMAScript Internationalization API
+ if test -n "$ENABLE_INTL_API"; then
+     AC_DEFINE(ENABLE_INTL_API)
+-    # We build ICU as a static library.
+-    AC_DEFINE(U_STATIC_IMPLEMENTATION)
+ 
+-    case "$OS_TARGET" in
+-        WINNT)
+-            ICU_LIB_NAMES="icuin icuuc icudt"
+-            ;;
+-        Darwin|Linux)
+-            ICU_LIB_NAMES="icui18n icuuc icudata"
+-            ;;
+-        *)
+-            AC_MSG_ERROR([ECMAScript Internationalization API is not yet supported on this platform])
+-    esac
+-
+-    ICU_LIBS='$(call EXPAND_LIBNAME_PATH,$(ICU_LIB_NAMES),$(DEPTH)/intl/icu/lib)'
+-else
+-    ICU_LIB_NAMES=
+-    ICU_LIBS=
++    if test -z "$MOZ_NATIVE_ICU"; then
++        case "$OS_TARGET" in
++            WINNT)
++                ICU_LIB_NAMES="icuin icuuc icudt"
++                ;;
++            Darwin|Linux)
++                ICU_LIB_NAMES="icui18n icuuc icudata"
++                ;;
++            *)
++                AC_MSG_ERROR([ECMAScript Internationalization API is not yet supported on this platform])
++        esac
++        MOZ_ICU_LIBS='$(call EXPAND_LIBNAME_PATH,$(ICU_LIB_NAMES),$(DEPTH)/intl/icu/lib)'
++    fi
+ fi
+ 
+ AC_SUBST(ENABLE_INTL_API)
+ AC_SUBST(ICU_LIB_NAMES)
+-AC_SUBST(ICU_LIBS)
++AC_SUBST(MOZ_ICU_LIBS)
++AC_SUBST(MOZ_NATIVE_ICU)
+ 
+-dnl Source files that use ICU should have control over which parts of the ICU
+-dnl namespace they want to use.
+-AC_DEFINE(U_USING_ICU_NAMESPACE,0)
++dnl Settings for ICU
++if test -n "$ENABLE_INTL_API" -a -z "$MOZ_NATIVE_ICU"; then
++    dnl We build ICU as a static library.
++    AC_DEFINE(U_STATIC_IMPLEMENTATION)
+ 
++    dnl Source files that use ICU should have control over which parts of the ICU
++    dnl namespace they want to use.
++    AC_DEFINE(U_USING_ICU_NAMESPACE,0)
+ 
+-dnl Settings for ICU
+-if test -n "$ENABLE_INTL_API" ; then
+     # Set ICU compile options
+     ICU_CPPFLAGS=""
+     # don't use icu namespace automatically in client code
