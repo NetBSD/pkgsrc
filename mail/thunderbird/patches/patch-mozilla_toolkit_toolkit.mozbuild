@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_toolkit_toolkit.mozbuild,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/toolkit/toolkit.mozbuild.orig	2013-10-23 22:09:20.000000000 +0000
++++ mozilla/toolkit/toolkit.mozbuild
+@@ -46,7 +46,7 @@ if CONFIG['MOZ_UPDATER']:
+     if not CONFIG['MOZ_NATIVE_BZ2']:
+         add_tier_dir('platform', 'modules/libbz2')
+ 
+-    add_tier_dir('platform', 'other-licenses/bsdiff')
++#    add_tier_dir('platform', 'other-licenses/bsdiff')
+ 
+ # Gecko/Core components.
+ 

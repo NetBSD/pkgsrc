@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_browser_installer_package-manifest.in,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/browser/installer/package-manifest.in.orig	2013-10-23 22:08:49.000000000 +0000
++++ mozilla/browser/installer/package-manifest.in
+@@ -690,7 +690,7 @@
+ @BINPATH@/components/pippki.xpt
+ 
+ ; for Solaris SPARC
+-#ifdef SOLARIS
++#if defined(SOLARIS) && defined(SPARC)
+ bin/libfreebl_32fpu_3.so
+ bin/libfreebl_32int_3.so
+ bin/libfreebl_32int64_3.so

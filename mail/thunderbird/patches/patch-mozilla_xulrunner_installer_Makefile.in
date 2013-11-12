@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_xulrunner_installer_Makefile.in,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/xulrunner/installer/Makefile.in.orig	2013-10-23 22:09:22.000000000 +0000
++++ mozilla/xulrunner/installer/Makefile.in
+@@ -96,7 +96,7 @@ endif
+ 
+ install:: $(pkg_config_files)
+ 	@echo pkg_config_file: $(pkg_config_files)
+-	$(SYSINSTALL) $(IFLAGS1) $^ $(DESTDIR)$(libdir)/pkgconfig
++	$(SYSINSTALL) $(IFLAGS1) $^ $(DESTDIR)${PREFIX}/lib/${MOZILLA_PKG_NAME}/pkgconfig
+ 
+ GARBAGE += $(pkg_config_files)
+ 

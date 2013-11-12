@@ -1,0 +1,17 @@
+diff --git a/ipc/src/Makefile.enig b/ipc/src/Makefile.enig
+index 6bae7d6..b6815f8 100644
+--- a/ipc/src/Makefile.enig
++++ b/ipc/src/Makefile.enig
+@@ -18,11 +18,9 @@ LDFLAGS	+= -dynamiclib -install_name @executable_path/$(SHARED_LIBRARY) -compati
+ endif
+ 
+ ifeq ($(OS_ARCH),NetBSD)
+-ifeq ($(DLL_SUFFIX),.so.1.0)
+-LDFLAGS += -Wl,-Bsymbolic
++LDFLAGS += -shared -Wl,-Bsymbolic
+ CFLAGS += -fPIC
+ endif
+-endif
+ 
+ ifeq ($(OS_ARCH),FreeBSD)
+ LDFLAGS += -shared -Wl,-Bsymbolic

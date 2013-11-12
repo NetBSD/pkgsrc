@@ -1,13 +1,15 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_time__posix.cc,v 1.1 2012/09/02 06:43:42 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_time__posix.cc,v 1.2 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/time_posix.cc.orig	2012-08-25 00:31:11.000000000 +0000
+--- mozilla/ipc/chromium/src/base/time_posix.cc.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/time_posix.cc
-@@ -167,7 +167,7 @@ TimeTicks TimeTicks::Now() {
-   // With numer and denom = 1 (the expected case), the 64-bit absolute time
-   // reported in nanoseconds is enough to last nearly 585 years.
+@@ -65,8 +65,10 @@ Time Time::FromExploded(bool is_local, c
+   timestruct.tm_wday   = exploded.day_of_week;  // mktime/timegm ignore this
+   timestruct.tm_yday   = 0;     // mktime/timegm ignore this
+   timestruct.tm_isdst  = -1;    // attempt to figure it out
++#ifndef OS_SOLARIS
+   timestruct.tm_gmtoff = 0;     // not a POSIX field, so mktime/timegm ignore
+   timestruct.tm_zone   = NULL;  // not a POSIX field, so mktime/timegm ignore
++#endif
  
--#elif defined(__OpenBSD__) || defined(OS_POSIX) && \
-+#elif defined(OS_OPENBSD) || defined(OS_POSIX) && \
-       defined(_POSIX_MONOTONIC_CLOCK) && _POSIX_MONOTONIC_CLOCK >= 0
- 
-   struct timespec ts;
+   time_t seconds;
+ #ifdef ANDROID

@@ -1,22 +1,58 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.6 2013/07/13 19:33:19 joerg Exp $
+$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.7 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2013-06-20 16:39:04.000000000 +0000
+--- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/file_util_posix.cc
-@@ -33,7 +33,7 @@
- #include "base/time.h"
- 
- // FreeBSD/OpenBSD lacks stat64, but its stat handles files >2GB just fine
--#if defined(OS_FREEBSD) || defined(OS_OPENBSD)
-+#ifndef HAVE_STAT64
- #define stat64 stat
+@@ -8,7 +8,7 @@
+ #include <errno.h>
+ #include <fcntl.h>
+ #include <fnmatch.h>
+-#ifndef ANDROID
++#if !defined(ANDROID) && !defined(OS_SOLARIS)
+ #include <fts.h>
  #endif
+ #include <libgen.h>
+@@ -121,7 +121,7 @@ bool Delete(const FilePath& path, bool r
+   if (!recursive)
+     return (rmdir(path_str) == 0);
  
-@@ -392,7 +392,7 @@ bool CreateTemporaryFileName(FilePath* p
- FILE* CreateAndOpenTemporaryShmemFile(FilePath* path) {
-   FilePath directory;
-   if (!GetShmemTempDir(&directory))
--    return false;
-+    return NULL;
+-#ifdef ANDROID
++#if defined(ANDROID) || defined(OS_SOLARIS)
+   // XXX Need ftsless impl for bionic
+   return false;
+ #else
+@@ -194,7 +194,7 @@ bool CopyDirectory(const FilePath& from_
+     return false;
+   }
  
-   return CreateAndOpenTemporaryFileInDir(directory, path);
+-#ifdef ANDROID
++#if defined(ANDROID) || defined(OS_SOLARIS)
+   // XXX Need ftsless impl for bionic
+   return false;
+ #else
+@@ -613,7 +613,7 @@ FileEnumerator::FileEnumerator(const Fil
  }
+ 
+ FileEnumerator::~FileEnumerator() {
+-#ifndef ANDROID
++#if !defined(ANDROID) && !defined(OS_SOLARIS)
+   if (fts_)
+     fts_close(fts_);
+ #endif
+@@ -625,7 +625,7 @@ void FileEnumerator::GetFindInfo(FindInf
+   if (!is_in_find_op_)
+     return;
+ 
+-#ifndef ANDROID
++#if !defined(ANDROID) && !defined(OS_SOLARIS)
+   memcpy(&(info->stat), fts_ent_->fts_statp, sizeof(info->stat));
+   info->filename.assign(fts_ent_->fts_name);
+ #endif
+@@ -636,7 +636,7 @@ void FileEnumerator::GetFindInfo(FindInf
+ // large directories with many files this can be quite deep.
+ // TODO(erikkay) - get rid of this recursive pattern
+ FilePath FileEnumerator::Next() {
+-#ifdef ANDROID
++#if defined(ANDROID) || defined(OS_SOLARIS)
+   return FilePath();
+ #else
+   if (!is_in_find_op_) {

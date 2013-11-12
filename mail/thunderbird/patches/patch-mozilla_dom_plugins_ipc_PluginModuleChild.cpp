@@ -1,39 +1,31 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.4 2012/11/23 07:17:54 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.5 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-11-19 22:42:16.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2013-10-23 22:08:54.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.cpp
-@@ -5,6 +5,7 @@
-  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
- 
- #ifdef MOZ_WIDGET_QT
-+#include <unistd.h> // for _exit()
- #include <QtCore/QTimer>
- #include "nsQAppInstance.h"
- #include "NestedLoopTimer.h"
-@@ -196,7 +197,7 @@ PluginModuleChild::Init(const std::strin
+@@ -203,7 +203,7 @@ PluginModuleChild::Init(const std::strin
  
      // TODO: use PluginPRLibrary here
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_BSD)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_SOLARIS)
      mShutdownFunc =
          (NP_PLUGINSHUTDOWN) PR_FindFunctionSymbol(mLibrary, "NP_Shutdown");
  
-@@ -1827,7 +1828,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
+@@ -1834,7 +1834,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
      PLUGIN_LOG_DEBUG_METHOD;
      AssertPluginThread();
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_BSD)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_SOLARIS)
      return true;
  #elif defined(OS_WIN) || defined(OS_MACOSX)
      *_retval = mGetEntryPointsFunc(&mFunctions);
-@@ -1856,7 +1857,7 @@ PluginModuleChild::AnswerNP_Initialize(c
+@@ -1863,7 +1863,7 @@ PluginModuleChild::AnswerNP_Initialize(c
      SendBackUpXResources(FileDescriptor(xSocketFd));
  #endif
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_BSD)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_SOLARIS)
      *_retval = mInitializeFunc(&sBrowserFuncs, &mFunctions);
      return true;
  #elif defined(OS_WIN) || defined(OS_MACOSX)

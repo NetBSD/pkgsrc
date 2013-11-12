@@ -1,25 +1,22 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__posix.cc,v 1.3 2012/09/02 06:43:42 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__posix.cc,v 1.4 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util_posix.cc.orig	2012-08-25 00:31:11.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util_posix.cc.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util_posix.cc
-@@ -116,6 +116,11 @@ void CloseSuperfluousFds(const base::Inj
+@@ -110,7 +110,7 @@ void CloseSuperfluousFds(const base::Inj
+ #if defined(ANDROID)
+   static const rlim_t kSystemDefaultMaxFds = 1024;
+   static const char kFDDir[] = "/proc/self/fd";
+-#elif defined(OS_LINUX)
++#elif defined(OS_LINUX) || defined(OS_SOLARIS)
+   static const rlim_t kSystemDefaultMaxFds = 8192;
+   static const char kFDDir[] = "/proc/self/fd";
  #elif defined(OS_MACOSX)
-   static const rlim_t kSystemDefaultMaxFds = 256;
-   static const char kFDDir[] = "/dev/fd";
-+#elif defined(OS_BSD)
-+  // the getrlimit below should never fail, so whatever ..
-+  static const rlim_t kSystemDefaultMaxFds = 1024;
-+  // at least /dev/fd will exist
-+  static const char kFDDir[] = "/dev/fd";
- #endif
- 
-   // Get the maximum number of FDs possible.
-@@ -199,7 +204,7 @@ void CloseSuperfluousFds(const base::Inj
+@@ -202,7 +202,7 @@ void CloseSuperfluousFds(const base::Inj
+ // TODO(agl): Remove this function. It's fundamentally broken for multithreaded
+ // apps.
  void SetAllFDsToCloseOnExec() {
- #if defined(OS_LINUX)
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_SOLARIS)
    const char fd_dir[] = "/proc/self/fd";
--#elif defined(OS_MACOSX)
-+#elif defined(OS_MACOSX) || defined(OS_BSD)
+ #elif defined(OS_MACOSX) || defined(OS_BSD)
    const char fd_dir[] = "/dev/fd";
- #endif
-   ScopedDIR dir_closer(opendir(fd_dir));
