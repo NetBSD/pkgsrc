@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2013/10/28 20:12:40 adam Exp $
+# $NetBSD: Makefile,v 1.46 2013/11/12 19:12:12 adam Exp $
 
-DISTNAME=	Django-1.5.5
+DISTNAME=	Django-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	http://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	http://www.djangoproject.com/m/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
@@ -11,6 +11,9 @@ COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
 PREV_PKGPATH=	www/py-django-devel
+
+# depends are not ready for Python 3.x
+#PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
