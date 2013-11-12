@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2013/10/19 09:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.144 2013/11/12 04:00:47 dholland Exp $
 
 DISTNAME=	mono-3.0.10
 PKGREVISION=	3
@@ -151,6 +151,10 @@ CONFIGURE_ARGS+=	--disable-parallel-mark
 .else
 PLIST.monodoc=		yes
 .endif
+
+post-extract:
+	${CP} ${WRKSRC}/mcs/build/platforms/linux.make \
+		${WRKSRC}/mcs/build/platforms/netbsd.make
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
