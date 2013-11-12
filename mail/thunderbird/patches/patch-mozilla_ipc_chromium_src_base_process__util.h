@@ -1,37 +1,32 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.4 2012/09/02 06:43:42 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.5 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util.h.orig	2012-08-25 00:31:11.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util.h.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util.h
-@@ -280,6 +280,7 @@ class NamedProcessIterator {
-   const ProcessEntry* NextProcessEntry();
- 
-  private:
-+#if !defined(OS_BSD)
-   // Determines whether there's another process (regardless of executable)
-   // left in the list of all processes.  Returns true and sets entry_ to
-   // that process's info if there is one, false otherwise.
-@@ -292,18 +293,24 @@ class NamedProcessIterator {
-   void InitProcessEntry(ProcessEntry* entry);
- 
-   std::wstring executable_name_;
+@@ -13,7 +13,7 @@
+ #if defined(OS_WIN)
+ #include <windows.h>
+ #include <tlhelp32.h>
+-#elif defined(OS_LINUX) || defined(__GLIBC__)
++#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
+ #include <dirent.h>
+ #include <limits.h>
+ #include <sys/types.h>
+@@ -32,6 +32,9 @@
+ typedef PROCESSENTRY32 ProcessEntry;
+ typedef IO_COUNTERS IoCounters;
+ #elif defined(OS_POSIX)
++#ifndef NAME_MAX
++#define NAME_MAX _POSIX_NAME_MAX
 +#endif
- 
+ // TODO(port): we should not rely on a Win32 structure.
+ struct ProcessEntry {
+   int pid;
+@@ -316,7 +319,7 @@ class NamedProcessIterator {
  #if defined(OS_WIN)
    HANDLE snapshot_;
    bool started_iteration_;
- #elif defined(OS_LINUX)
+-#elif defined(OS_LINUX) || defined(__GLIBC__)
++#elif defined(OS_LINUX) || defined(__GLIBC__) || defined(OS_SOLARIS)
    DIR *procfs_dir_;
-+#elif defined(OS_BSD)
-+  std::vector<ProcessEntry> content;
-+  size_t nextEntry;
- #elif defined(OS_MACOSX)
-   std::vector<kinfo_proc> kinfo_procs_;
-   size_t index_of_kinfo_proc_;
- #endif
-+#if !defined(OS_BSD)
-   ProcessEntry entry_;
-   const ProcessFilter* filter_;
-+#endif
- 
-   DISALLOW_EVIL_CONSTRUCTORS(NamedProcessIterator);
- };
+ #elif defined(OS_BSD)
+   std::vector<ProcessEntry> content;

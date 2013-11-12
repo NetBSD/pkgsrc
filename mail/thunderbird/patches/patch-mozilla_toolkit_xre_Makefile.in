@@ -1,0 +1,10 @@
+$NetBSD: patch-mozilla_toolkit_xre_Makefile.in,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/toolkit/xre/Makefile.in.orig	2013-10-23 22:09:20.000000000 +0000
++++ mozilla/toolkit/xre/Makefile.in
+@@ -216,5 +216,3 @@ GARBAGE += platform.ini
+ libs:: platform.ini
+ 	$(INSTALL) $^ $(DIST)/bin
+ 
+-install::
+-	$(INSTALL) $(IFLAGS1) $^ $(DESTDIR)$(mozappdir)

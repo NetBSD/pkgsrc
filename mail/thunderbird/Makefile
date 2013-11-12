@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.125 2013/10/21 10:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2013/11/12 20:50:51 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		17.0.9
+TB_VER=		24.1.0
 #LIGHTNINGVER=	1.9
-PKGREVISION=	3
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ESR:=thunderbird/releases/${TB_VER}esr/source/} \
-		${MASTER_SITE_MOZILLA_ALL:=thunderbird/releases/${TB_VER}esr/source/}
-DISTFILES=	thunderbird-${TB_VER}esr.source.tar.bz2
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
+DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
 #DISTFILES+=	lightning-${LIGHTNINGVER}.source.tar.bz2
 #SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
 #EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2=	${WRKSRC}/lightning
@@ -18,7 +16,7 @@ HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/comm-esr17
+WRKSRC=		${WRKDIR}/comm-esr24
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
@@ -26,6 +24,8 @@ CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=mail
+# Disable WebRTC support for Thunderbird unconditionally.
+CONFIGURE_ARGS+=	--disable-webrtc
 
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 
@@ -39,6 +39,17 @@ ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 #SUBST_FILES.ext-compat+=	calendar/*/*/install.rdf
 #SUBST_SED.ext-compat=		-e 's,\(<em:maxVersion>\).*<,\19.0<,g'
 
+SUBST_CLASSES+=		sys-dic
+SUBST_STAGE.sys-dic=	pre-configure
+SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
+SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
+SUBST_VARS.sys-dic=	PREFIX
+
+CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/header.py
+CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/typelib.py
+CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/xpidl.py
+CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/xpt.py
+
 #post-extract:
 #	cd ${WRKSRC} && ${RM} -r calendar
 #	${CP} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
@@ -50,6 +61,9 @@ pre-configure:
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/ldap/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+# XXX Makefile is broken? When libxul is provided from devel/xulrunner,
+# XXX please remove this.
+	mkdir ${WRKSRC}/mozilla/js/src/.deps
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
@@ -72,7 +86,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mozilla/dist/thunderbird/chrome/icons/default/default48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 	@${STEP_MSG} "Installing bundled thunderbird extensions."
-	${TOUCH} ${TOUCH_FLAGS} ${DESTDIR}${PREFIX}/include/thunderbird/mozilla/throw_gcc.h
 	rm -rf ${WRKDIR}/extensions
 	${MKDIR} ${WRKDIR}/extensions
 	${RUN} for e in ${XPI_FILES}; do				\
@@ -85,7 +98,7 @@ post-install:
 	   ${DESTDIR}${PREFIX}/lib/${MOZILLA}/extensions/.
 	rm -rf ${WRKDIR}/extensions
 
-.include "../../devel/xulrunner17/mozilla-common.mk"
+.include "../../www/firefox24/mozilla-common.mk"
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

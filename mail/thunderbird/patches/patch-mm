@@ -1,21 +1,12 @@
-$NetBSD: patch-mm,v 1.13 2012/11/23 07:17:54 ryoon Exp $
+$NetBSD: patch-mm,v 1.14 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2012-11-22 19:26:22.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2013-10-23 22:09:20.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -371,14 +371,11 @@ endif
+@@ -395,6 +395,7 @@ endif
+ EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib)
  
- EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib) 
- 
--ifdef MOZ_SYDNEYAUDIO
--ifeq ($(OS_ARCH),Linux)
-+ifneq (,$(MOZ_CUBEB)$(MOZ_SYDNEYAUDIO))
-+ifdef MOZ_ALSA
- EXTRA_DSO_LDOPTS += $(MOZ_ALSA_LIBS)
- endif
--endif
--
- ifdef MOZ_PULSEAUDIO
--ifdef MOZ_CUBEB
- EXTRA_DSO_LDOPTS += $(MOZ_PULSEAUDIO_LIBS)
- endif
+ ifdef MOZ_WEBRTC
++EXTRA_DSO_LDOPTS += $(MOZ_LIBV4L2_LIBS)
+ ifdef MOZ_PEERCONNECTION
+ COMPONENT_LIBS += peerconnection
  endif

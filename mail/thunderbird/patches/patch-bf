@@ -1,26 +1,8 @@
-$NetBSD: patch-bf,v 1.6 2012/09/02 06:43:40 ryoon Exp $
+$NetBSD: patch-bf,v 1.7 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/js/src/jsnativestack.cpp.orig	2012-08-25 00:31:13.000000000 +0000
+--- mozilla/js/src/jsnativestack.cpp.orig	2013-10-23 22:09:02.000000000 +0000
 +++ mozilla/js/src/jsnativestack.cpp
-@@ -19,10 +19,16 @@
- #elif defined(XP_MACOSX) || defined(DARWIN) || defined(XP_UNIX)
- # include <pthread.h>
- 
--# if defined(__FreeBSD__) || defined(__OpenBSD__)
-+# if defined(__OpenBSD__) || defined(__DragonFly__)
- #  include <pthread_np.h>
- # endif
- 
-+# if defined(__FreeBSD__) 
-+_Pragma("GCC visibility push(default)")
-+#  include <pthread_np.h>
-+_Pragma("GCC visibility pop")
-+# endif
-+
- #else
- # error "Unsupported platform"
- 
-@@ -114,7 +120,7 @@ GetNativeStackBaseImpl()
+@@ -114,7 +114,7 @@ js::GetNativeStackBaseImpl()
      pthread_attr_init(&sattr);
  #  if defined(__OpenBSD__)
      stack_t ss;

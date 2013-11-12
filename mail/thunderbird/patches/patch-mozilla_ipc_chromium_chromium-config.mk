@@ -1,100 +1,25 @@
-$NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.3 2012/09/02 06:43:41 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.4 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/ipc/chromium/chromium-config.mk.orig	2012-08-25 00:31:11.000000000 +0000
+--- mozilla/ipc/chromium/chromium-config.mk.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/ipc/chromium/chromium-config.mk
-@@ -24,17 +24,6 @@ LOCAL_INCLUDES += \
-   -I$(DEPTH)/ipc/ipdl/_ipdlheaders \
+@@ -103,6 +103,14 @@ DEFINES += \
    $(NULL)
- 
--ifeq ($(OS_ARCH),Darwin) # {
--
--OS_MACOSX = 1
--OS_POSIX = 1
--
--DEFINES += \
--  -DOS_MACOSX=1 \
--  -DOS_POSIX=1 \
--  $(NULL)
--
--else # } {
- ifeq ($(OS_ARCH),WINNT) # {
- OS_LIBS += $(call EXPAND_LIBNAME,psapi shell32 dbghelp)
- 
-@@ -61,13 +50,65 @@ DEFINES += -DCOMPILER_MSVC
- endif
  
  else # } {
--
--OS_LINUX = 1
- OS_POSIX = 1
-+DEFINES += -DOS_POSIX=1
++ifeq ($(OS_ARCH),SunOS) # {
 +
-+ifeq ($(OS_ARCH),Darwin) # {
-+
-+OS_MACOSX = 1
++OS_SOLARIS = 1
 +DEFINES += \
-+  -DOS_MACOSX=1 \
++  -DOS_SOLARIS=1 \
 +  $(NULL)
 +
 +else # } {
-+ifeq ($(OS_ARCH),DragonFly) # {
-+
-+OS_DRAGONFLY = 1
-+OS_BSD = 1
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
-+DEFINES += \
-+  -DOS_DRAGONFLY=1 \
-+  -DOS_BSD=1 \
-+  $(NULL)
-+
-+else # } {
-+ifeq ($(OS_ARCH),FreeBSD) # {
-+
-+OS_FREEBSD = 1
-+OS_BSD = 1
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
-+DEFINES += \
-+  -DOS_FREEBSD=1 \
-+  -DOS_BSD=1 \
-+  $(NULL)
  
-+else # } {
-+ifeq ($(OS_ARCH),NetBSD) # {
-+
-+OS_NETBSD = 1
-+OS_BSD = 1
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
-+DEFINES += \
-+  -DOS_NETBSD=1 \
-+  -DOS_BSD=1 \
-+  $(NULL)
-+
-+else # } {
-+ifeq ($(OS_ARCH),OpenBSD) # {
-+
-+OS_OPENBSD = 1
-+OS_BSD = 1
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
-+DEFINES += \
-+  -DOS_OPENBSD=1 \
-+  -DOS_BSD=1 \
-+  $(NULL)
-+
-+else # } {
-+
-+OS_LINUX = 1
+ OS_LINUX = 1
  DEFINES += \
-   -DOS_LINUX=1 \
--  -DOS_POSIX=1 \
-   $(NULL)
- 
- # NB: to stop gcc warnings about exporting template instantiation
-@@ -75,4 +116,8 @@ OS_CXXFLAGS := $(filter-out -pedantic,$(
- 
+@@ -115,4 +123,5 @@ endif # }
  endif # }
  endif # }
-+endif # }
-+endif # }
-+endif # }
+ endif # }
 +endif # }
  

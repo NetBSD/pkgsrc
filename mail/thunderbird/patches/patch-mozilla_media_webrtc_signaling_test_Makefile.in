@@ -1,0 +1,21 @@
+$NetBSD: patch-mozilla_media_webrtc_signaling_test_Makefile.in,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/media/webrtc/signaling/test/Makefile.in.orig	2013-10-23 22:09:12.000000000 +0000
++++ mozilla/media/webrtc/signaling/test/Makefile.in
+@@ -14,6 +14,7 @@ LIBS = \
+   $(NSPR_LIBS) \
+   $(NSS_LIBS) \
+   $(REALTIME_LIBS) \
++  $(MOZ_LIBV4L2_LIBS) \
+   $(DEPTH)/xpcom/glue/$(LIB_PREFIX)xpcomglue_s.$(LIB_SUFFIX) \
+   $(DEPTH)/media/mtransport/standalone/$(LIB_PREFIX)mtransport_s.$(LIB_SUFFIX) \
+   $(DEPTH)/media/webrtc/signalingtest/signaling_ecc/$(LIB_PREFIX)ecc.$(LIB_SUFFIX) \
+@@ -83,7 +84,7 @@ LIBS += \
+   $(NULL)
+ endif
+ 
+-ifeq ($(OS_TARGET),Linux)
++ifneq (,$(filter Linux DragonFly FreeBSD NetBSD OpenBSD,$(OS_TARGET)))
+ LIBS += \
+   $(MOZ_CAIRO_OSLIBS) \
+   $(NULL)
