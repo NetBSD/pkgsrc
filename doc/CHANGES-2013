@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4091 2013/11/12 10:37:55 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.4092 2013/11/12 11:31:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5933,3 +5933,8 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-script to 0.6.3 [kleink 2013-11-11]
 	Updated x11/xscreensaver-demo to 5.22nb3 [dholland 2013-11-11]
 	Updated print/tex-dvipdfmx-doc to 2010.21369nb1 [dholland 2013-11-12]
+	Updated devel/git to 1.8.4.3 [adam 2013-11-12]
+	Updated devel/git-base to 1.8.4.3 [adam 2013-11-12]
+	Updated devel/git-docs to 1.8.4.3 [adam 2013-11-12]
+	Updated www/gitweb to 1.8.4.3 [adam 2013-11-12]
+	Updated net/samba to 3.6.20 [adam 2013-11-12]
