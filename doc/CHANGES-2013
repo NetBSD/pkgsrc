@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4097 2013/11/12 13:32:30 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4098 2013/11/12 15:10:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5943,3 +5943,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.57 [wen 2013-11-12]
 	Updated textproc/p5-Text-CSV_XS to 1.02 [wen 2013-11-12]
 	Updated net/p5-SOAP-Lite to 1.08 [wen 2013-11-12]
+	Updated www/contao211-translations to 201311070 [taca 2013-11-12]
