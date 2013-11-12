@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.15 2013/05/08 09:14:30 sbd Exp $
+$NetBSD: patch-aa,v 1.16 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/configure.in.orig	2013-03-28 18:08:16.000000000 +0000
+--- mozilla/configure.in.orig	2013-10-23 22:08:50.000000000 +0000
 +++ mozilla/configure.in
-@@ -2080,6 +2080,9 @@ ia64*-hpux*)
+@@ -1370,6 +1370,17 @@ if test "$GNU_CC"; then
+     CFLAGS=$_SAVE_CFLAGS
+     AC_SUBST(HAVE_TOOLCHAIN_SUPPORT_MSSE4_1)
+ 
++    # Check for -msse4.1 on $CC
++    AC_MSG_CHECKING([if toolchain supports -msse4.1 option])
++    HAVE_TOOLCHAIN_SUPPORT_MSSE4_1=
++    _SAVE_CFLAGS=$CFLAGS
++    CFLAGS="$CFLAGS -msse4.1"
++    AC_TRY_COMPILE([asm ("pmulld %xmm6,%xmm0");],,AC_MSG_RESULT([yes])
++                     [HAVE_TOOLCHAIN_SUPPORT_MSSE4_1=1],
++                     AC_MSG_RESULT([no]))
++    CFLAGS=$_SAVE_CFLAGS
++    AC_SUBST(HAVE_TOOLCHAIN_SUPPORT_MSSE4_1)
++
+     # Turn on GNU-specific warnings:
+     # -Wall - turn on a lot of warnings
+     # -Wpointer-arith - good to have
+@@ -2047,6 +2058,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
          MC=mc.exe
      fi
@@ -12,7 +30,24 @@ $NetBSD: patch-aa,v 1.15 2013/05/08 09:14:30 sbd Exp $
      ;;
  *-mingw*)
      DSO_CFLAGS=
-@@ -2979,6 +2982,9 @@ dnl ====================================
+@@ -2843,6 +2857,7 @@ EOF
+ #pragma GCC visibility push(hidden)
+ #pragma GCC visibility push(default)
+ #include <string.h>
++#include <iterator>
+ #pragma GCC visibility pop
+ 
+ __attribute__ ((visibility ("default"))) void Func() {
+@@ -2851,7 +2866,7 @@ __attribute__ ((visibility ("default")))
+ }
+ EOF
+                        ac_cv_have_visibility_builtin_bug=no
+-                       if ! ${CC-cc} ${CFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
++                       if ! ${CXX-c++} ${CXXFLAGS} ${DSO_PIC_CFLAGS} ${DSO_LDOPTS} -O2 -S -o conftest.S conftest.c > /dev/null 2>&1 ; then
+                          ac_cv_have_visibility_builtin_bug=yes
+                        else
+                          if test `grep -c "@PLT" conftest.S` = 0; then
+@@ -3017,6 +3032,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -22,26 +57,17 @@ $NetBSD: patch-aa,v 1.15 2013/05/08 09:14:30 sbd Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -3279,6 +3285,9 @@ AC_CACHE_CHECK(
+@@ -3319,6 +3337,9 @@ AC_CACHE_CHECK(
          #ifdef linux
          #define _BSD_SOURCE 1
          #endif
-+	#ifdef __NetBSD__
-+	#error use of global _res variable in threaded programs is not portable
-+	#endif
++        #ifdef __NetBSD__
++        #error use of global _res variable in threaded programs is not portable
++        #endif
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
-@@ -3937,7 +3946,7 @@ AC_CHECK_PROGS(YASM, yasm, "")
- if test -n "$YASM"; then
-   dnl Pull out yasm's version string
-   changequote(,)
--  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
-+  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
-   changequote([,])
- 
-   YASM_VERSION=`yasm --version | sed -ne "$_YASM_VER_FILTER"`
-@@ -3947,6 +3956,14 @@ if test -n "$YASM"; then
+@@ -3973,6 +3994,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -56,41 +82,163 @@ $NetBSD: patch-aa,v 1.15 2013/05/08 09:14:30 sbd Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -5158,8 +5175,8 @@ fi
+@@ -4000,11 +4029,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+                      #include <jpeglib.h> ],
+                    [ #if JPEG_LIB_VERSION < $MOZJPEG
+                      #error "Insufficient JPEG library version ($MOZJPEG required)."
+-                     #endif
+-                     #ifndef JCS_EXTENSIONS
+-                     #error "libjpeg-turbo JCS_EXTENSIONS required"
+-                     #endif
+-                     ],
++                     #endif ],
+                    MOZ_NATIVE_JPEG=1,
+                    AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
+ fi
+@@ -4139,6 +4164,22 @@ if test -n "$MOZ_NATIVE_FFI"; then
+ fi
  
- AC_SUBST(MOZ_WEBRTC)
+ dnl ========================================================
++dnl system icu support
++dnl ========================================================
++MOZ_NATIVE_ICU=
++MOZ_ARG_WITH_BOOL(system-icu,
++[  --with-system-icu
++                          Use system icu (located with pkgconfig)],
++    MOZ_NATIVE_ICU=1)
++
++if test -n "$MOZ_NATIVE_ICU"; then
++    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
++    MOZ_JS_STATIC_LIBS="$MOZ_JS_STATIC_LIBS $MOZ_ICU_LIBS"
++fi
++
++AC_SUBST(MOZ_NATIVE_ICU)
++
++dnl ========================================================
+ dnl Java SDK support
+ dnl ========================================================
  
--case "$target_cpu" in
--arm*)
+@@ -5297,7 +5338,7 @@ dnl --enable-webrtc to override.  Can di
+ dnl the master list above.
+ if test -n "$MOZ_WEBRTC"; then
+     case "$target" in
+-    *-linux*|*-mingw*|*-darwin*|*-android*|*-linuxandroid*)
++    *-linux*|*-mingw*|*-darwin*|*-android*|*-linuxandroid*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+         dnl Leave enabled
+         ;;
+     *)
+@@ -5353,6 +5394,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_VP8_ENCODER=1
+     MOZ_VP8_ERROR_CONCEALMENT=1
+ 
++    dnl with libv4l2 we can support more cameras
++    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
++
+ dnl enable once Signaling lands
+     MOZ_WEBRTC_SIGNALING=1
+     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
+@@ -5379,15 +5423,18 @@ AC_SUBST(MOZ_SRTP)
+ 
+ dnl Use integers over floats for audio on B2G and Android, because audio
+ dnl backends for those platforms don't support floats.
+-if test "$OS_TARGET" = "Android"; then
 +case "$target" in
-+arm-*-linux*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
-     MOZ_SAMPLE_TYPE_S16LE=1
-     AC_DEFINE(MOZ_SAMPLE_TYPE_S16LE)
-     AC_SUBST(MOZ_SAMPLE_TYPE_S16LE)
-@@ -5356,11 +5373,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
++*-android*|*-linuxandroid*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+     MOZ_SAMPLE_TYPE_S16=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
+-else
++;;
++*)
+     MOZ_SAMPLE_TYPE_FLOAT32=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_FLOAT32)
+     AC_SUBST(MOZ_SAMPLE_TYPE_FLOAT32)
+-fi
++;;
++esac
  
-     dnl See if we have assembly on this platform.
-     case "$OS_ARCH:$CPU_ARCH" in
--    Linux:x86)
-+    Linux:x86|DragonFly:x86|*BSD:i386)
-       VPX_ASFLAGS="-f elf32 -rnasm -pnasm"
-       VPX_X86_ASM=1
-     ;;
--    Linux:x86_64)
-+    Linux:x86_64|DragonFly:x86_64|*BSD:x86_64)
-       VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
-       VPX_X86_ASM=1
-     ;;
-@@ -5516,10 +5533,11 @@ dnl ====================================
+ dnl ========================================================
+ dnl = Disable Speech API code
+@@ -5737,7 +5784,7 @@ MOZ_ALSA=)
  
- dnl If using sydneyaudio with Linux, ensure that the alsa library is available
- if test -n "$MOZ_SYDNEYAUDIO" -a "$OS_TARGET" = "Linux"; then
+ if test -n "$MOZ_ALSA"; then
+     AC_DEFINE(MOZ_CUBEB)
 -    PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
 +    PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
           [echo "$MOZ_ALSA_PKG_ERRORS"
            AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
  fi
-+AC_SUBST(MOZ_ALSA)
+@@ -8385,7 +8432,7 @@ if test "$MOZ_ENABLE_SKIA"; then
+     AC_DEFINE(GR_DLL)
+   fi
  
- dnl ========================================================
- dnl = Enable PulseAudio
+-  if test "${CPU_ARCH}" != "ppc" -a "${CPU_ARCH}" != "ppc64"; then
++  if test "${CPU_ARCH}" != "ppc" -a "${CPU_ARCH}" != "ppc64" -a "${CPU_ARCH}" != "sparc"; then
+     MOZ_ENABLE_SKIA_GPU=1
+     AC_DEFINE(USE_SKIA_GPU)
+     AC_SUBST(MOZ_ENABLE_SKIA_GPU)
+@@ -8466,16 +8513,26 @@ MOZ_ARG_DISABLE_BOOL(necko-wifi,
+     NECKO_WIFI=,
+     NECKO_WIFI=1)
+ 
+-if test "$OS_ARCH" = "OS2"; then
+-  dnl OS/2 implementation of Necko-WiFi support will be added in bug 506566
+-  NECKO_WIFI=
+-fi
+-if test "$NECKO_WIFI" -a \
+-        "$OS_ARCH" != "Linux" -a \
+-        "$OS_ARCH" != "Darwin" -a \
+-        "$OS_ARCH" != "SunOS" -a \
+-        "$OS_ARCH" != "WINNT"; then
+-  AC_MSG_ERROR([Necko WiFi scanning not supported on your platform, use --disable-necko-wifi])
++if test "$NECKO_WIFI"; then
++  case "$OS_TARGET" in
++    Android)
++      ;;
++    Darwin)
++      ;;
++    SunOS)
++      ;;
++    WINNT)
++      ;;
++    OS2)
++      dnl OS/2 implementation of Necko-WiFi support will be added in bug 506566
++      NECKO_WIFI=
++      ;;
++    *)
++      if test -z "$MOZ_ENABLE_DBUS"; then
++        AC_MSG_ERROR([Necko WiFi scanning needs DBus on your platform, remove --disable-dbus or use --disable-necko-wifi])
++      fi
++      ;;
++  esac
+ fi
+ 
+ if test "$NECKO_WIFI"; then
+@@ -9186,6 +9243,27 @@ if test -z "$HAVE_TOOLCHAIN_SUPPORT_SSSE
+   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D yuv_disable_asm=1"
+ fi
+ 
++# Keep libcubeb and audio_device backends in sync
++if test -n "$MOZ_ALSA"; then
++   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D include_alsa_audio=1"
++else
++   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D include_alsa_audio=0"
++fi
++if test -n "$MOZ_PULSEAUDIO"; then
++   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D include_pulse_audio=1"
++else
++   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D include_pulse_audio=0"
++fi
++
++# Don't try to compile sse4.1 code if toolchain doesn't support
++if test -z "$HAVE_TOOLCHAIN_SUPPORT_MSSE4_1"; then
++  EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D yuv_disable_asm=1"
++fi
++
++if test -n "$MOZ_LIBV4L2_LIBS"; then
++   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
++fi
++
+ if test -n "$MOZ_WEBRTC"; then
+    AC_MSG_RESULT("generating WebRTC Makefiles...")
+ 

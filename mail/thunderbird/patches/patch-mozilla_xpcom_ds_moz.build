@@ -1,0 +1,22 @@
+$NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/xpcom/ds/moz.build.orig	2013-10-23 22:09:21.000000000 +0000
++++ mozilla/xpcom/ds/moz.build
+@@ -95,7 +95,6 @@ CPP_SOURCES += [
+     'nsSupportsPrimitives.cpp',
+     'nsUnicharBuffer.cpp',
+     'nsVariant.cpp',
+-    'TimeStamp.cpp',
+ ]
+ 
+ if CONFIG['HAVE_CLOCK_MONOTONIC']:
+@@ -113,5 +112,9 @@ elif CONFIG['OS_ARCH'] == 'WINNT':
+ else:
+     error('No TimeStamp implementation on this platform.  Build will not succeed')
+ 
++CPP_SOURCES += [
++    'TimeStamp.cpp',
++]
++
+ LIBRARY_NAME = 'xpcomds_s'
+ 
