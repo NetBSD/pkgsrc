@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/26 23:41:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/12 21:07:03 minskim Exp $
 bin/gsftopk
 man/man1/gsftopk.1
-share/texmf/dvips/gsftopk/render.ps
+share/texmf-dist/dvips/gsftopk/render.ps
