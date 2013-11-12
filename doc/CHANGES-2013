@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4095 2013/11/12 13:18:45 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4096 2013/11/12 13:26:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5941,3 +5941,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated math/ruby-spreadsheet to 0.9.2 [obache 2013-11-12]
 	Updated net/dnsmasq to 2.67 [roy 2013-11-12]
 	Updated www/p5-Mojolicious to 4.57 [wen 2013-11-12]
+	Updated textproc/p5-Text-CSV_XS to 1.02 [wen 2013-11-12]
