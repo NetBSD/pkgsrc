@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.10 2013/05/27 16:24:00 adam Exp $
+$NetBSD: patch-am,v 1.11 2013/11/12 18:57:25 adam Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -21,7 +21,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 
 cygwin 2.7.3-no-libm.patch
 
---- setup.py.orig	2013-04-06 14:02:41.000000000 +0000
+--- setup.py.orig	2013-11-10 07:36:41.000000000 +0000
 +++ setup.py
 @@ -33,7 +33,7 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
@@ -32,13 +32,14 @@ cygwin 2.7.3-no-libm.patch
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -436,9 +436,15 @@ class PyBuildExt(build_ext):
+@@ -436,10 +436,15 @@ class PyBuildExt(build_ext):
              os.unlink(tmpfile)
  
      def detect_modules(self):
 -        # Ensure that /usr/local is always used
--        add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
--        add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
+-        if not cross_compiling:
+-            add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
+-            add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
 +        # Add the buildlink directories for pkgsrc
 +        if os.environ.has_key('BUILDLINK_DIR'):
 +            dir = os.environ['BUILDLINK_DIR']
@@ -48,10 +49,10 @@ cygwin 2.7.3-no-libm.patch
 +                self.compiler.library_dirs.insert(0, libdir)
 +            if incdir not in self.compiler.include_dirs:
 +                self.compiler.include_dirs.insert(0, incdir)
-         self.add_gcc_paths()
+         if cross_compiling:
+             self.add_gcc_paths()
          self.add_multiarch_paths()
- 
-@@ -548,7 +554,7 @@ class PyBuildExt(build_ext):
+@@ -551,7 +556,7 @@ class PyBuildExt(build_ext):
  
          # Check for MacOS X, which doesn't need libm.a at all
          math_libs = ['m']
@@ -60,7 +61,7 @@ cygwin 2.7.3-no-libm.patch
              math_libs = []
  
          # XXX Omitted modules: gl, pure, dl, SGI-specific modules
-@@ -794,9 +800,7 @@ class PyBuildExt(build_ext):
+@@ -797,9 +802,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -71,7 +72,7 @@ cygwin 2.7.3-no-libm.patch
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -915,175 +919,6 @@ class PyBuildExt(build_ext):
+@@ -918,175 +921,6 @@ class PyBuildExt(build_ext):
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -247,7 +248,7 @@ cygwin 2.7.3-no-libm.patch
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1201,35 +1036,39 @@ class PyBuildExt(build_ext):
+@@ -1204,35 +1038,39 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -311,7 +312,7 @@ cygwin 2.7.3-no-libm.patch
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1241,7 +1080,7 @@ class PyBuildExt(build_ext):
+@@ -1244,7 +1082,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -320,7 +321,7 @@ cygwin 2.7.3-no-libm.patch
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1285,18 +1124,14 @@ class PyBuildExt(build_ext):
+@@ -1288,18 +1126,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
                  elif cand == "bdb":
@@ -347,7 +348,7 @@ cygwin 2.7.3-no-libm.patch
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2176,9 +2011,9 @@ def main():
+@@ -2222,9 +2056,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
