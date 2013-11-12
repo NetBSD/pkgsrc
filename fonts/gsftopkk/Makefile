@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/04/24 10:06:48 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/12 21:07:03 minskim Exp $
 
-DISTNAME=	texlive-20110705-source
+DISTNAME=	texlive-20130530-source
 PKGNAME=	gsftopkk-1.19.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-system-kpathsea \
 		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
 CPPFLAGS+=	-DGS_PATH='"${TOOLS_PATH.gs}"'
 
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
