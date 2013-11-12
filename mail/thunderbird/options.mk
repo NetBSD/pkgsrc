@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2012/04/28 16:56:58 ryoon Exp $
+# $NetBSD: options.mk,v 1.12 2013/11/12 20:50:51 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
@@ -40,7 +40,6 @@ CONFIGURE_ARGS+=	--enable-install-strip
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
 CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/calendar-timezones.xpi
 XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/gdata-provider.xpi
 XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/lightning.xpi
 .else
