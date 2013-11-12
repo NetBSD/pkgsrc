@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.version,v 1.3 2013/11/02 07:54:04 adam Exp $
+# $NetBSD: Makefile.version,v 1.4 2013/11/12 11:22:10 adam Exp $
 #
 # used by devel/git/Makefile.common
 # used by www/gitweb/Makefile
 
-GIT_VERSION=	1.8.4.2
+GIT_VERSION=	1.8.4.3
