@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.8 2013/10/23 11:50:04 obache Exp $
+$NetBSD: distinfo,v 1.9 2013/11/12 02:57:43 dholland Exp $
 
 SHA1 (ibus-1.5.4.tar.gz) = 2ce4b4d728a4685fd77360d0097b0e568f920c7b
 RMD160 (ibus-1.5.4.tar.gz) = cba23cf9b3a76d4303b36f624627c971f0e2ee2d
 Size (ibus-1.5.4.tar.gz) = 2026656 bytes
 SHA1 (patch-bus_Makefile.in) = ff3e7bd794db625021474f00b6776a1ac13c30f7
+SHA1 (patch-client_gtk2_ibusimcontext.c) = 31e72d06884858476097f04591004ce46b6074c1
+SHA1 (patch-client_gtk3_ibusimcontext.c) = 543192191d14d61ae3e193de6ffda7b099969a1a
 SHA1 (patch-setup_Makefile.in) = ba7267525b5410d5081c33cff0e1c8f28b5ad4b2
 SHA1 (patch-tools_Makefile.in) = 0a9275a58e6819b569706dfb58ad5a5f4a976d62
