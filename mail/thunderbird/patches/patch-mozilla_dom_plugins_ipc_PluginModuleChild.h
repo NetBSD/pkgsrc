@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.h,v 1.3 2012/09/02 06:43:41 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.h,v 1.4 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.h.orig	2012-08-25 00:31:04.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.h.orig	2013-10-23 22:08:54.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.h
-@@ -330,7 +330,7 @@ private:
+@@ -328,7 +328,7 @@ private:
  
      // we get this from the plugin
      NP_PLUGINSHUTDOWN mShutdownFunc;
--#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_BSD)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_SOLARIS)
      NP_PLUGINUNIXINIT mInitializeFunc;
  #elif defined(OS_WIN) || defined(OS_MACOSX)
      NP_PLUGININIT mInitializeFunc;

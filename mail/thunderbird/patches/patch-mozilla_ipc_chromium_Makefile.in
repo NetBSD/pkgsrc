@@ -1,16 +1,27 @@
-$NetBSD: patch-mozilla_ipc_chromium_Makefile.in,v 1.4 2012/11/23 07:17:54 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_Makefile.in,v 1.5 2013/11/12 20:50:51 ryoon Exp $
 
---- mozilla/ipc/chromium/Makefile.in.orig	2012-11-19 22:42:22.000000000 +0000
+--- mozilla/ipc/chromium/Makefile.in.orig	2013-10-23 22:09:00.000000000 +0000
 +++ mozilla/ipc/chromium/Makefile.in
-@@ -240,6 +240,33 @@ endif
+@@ -23,9 +23,7 @@ vpath %.c \
+   $(srcdir)/src/third_party/libevent \
+   $(NULL)
+ else # } else {
+-# message_pump_libevent.cc includes third_party/libevent/event.h,
+-# which we put in $(DIST), see export rule below
+-LOCAL_INCLUDES += -I$(DIST)
++LOCAL_INCLUDES += $(filter %/compat, $(MOZ_LIBEVENT_CFLAGS))
+ endif # }
  
- endif # } OS_LINUX
+ vpath %.cc \
+@@ -68,6 +66,33 @@ CMMSRCS += \
  
-+ifdef OS_BSD # {
+ endif # } OS_MACOSX
+ 
++ifdef OS_SOLARIS # {
 +
 +CPPSRCS += \
 +  atomicops_internals_x86_gcc.cc \
-+  process_util_bsd.cc \
++  process_util_linux.cc \
 +  time_posix.cc \
 +  $(NULL)
 +
@@ -31,7 +42,7 @@ $NetBSD: patch-mozilla_ipc_chromium_Makefile.in,v 1.4 2012/11/23 07:17:54 ryoon 
 +  $(NULL)
 +endif
 +
-+endif # } OS_BSD
++endif # } OS_SOLARIS
 +
  # libevent
  

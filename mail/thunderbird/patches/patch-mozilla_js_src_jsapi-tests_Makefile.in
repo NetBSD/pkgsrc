@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_js_src_jsapi-tests_Makefile.in,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/js/src/jsapi-tests/Makefile.in.orig	2013-10-23 22:09:02.000000000 +0000
++++ mozilla/js/src/jsapi-tests/Makefile.in
+@@ -20,6 +20,10 @@ LIBS      = $(DEPTH)/$(LIB_PREFIX)js_sta
+ 
+ LOCAL_INCLUDES += -I$(topsrcdir) -I..
+ 
++ifdef MOZ_NATIVE_ICU
++EXTRA_LIBS += $(MOZ_ICU_LIBS)
++endif
++
+ EXTRA_LIBS += $(MOZ_FFI_LIBS)
+ 
+ ifdef QEMU_EXE

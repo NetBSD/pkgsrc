@@ -1,0 +1,21 @@
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/moz.build.orig	2013-10-23 22:09:22.000000000 +0000
++++ mozilla/xpcom/reflect/xptcall/src/md/unix/moz.build
+@@ -19,14 +19,14 @@ if CONFIG['OS_ARCH'] == 'Darwin':
+                 'xptcstubs_gcc_x86_unix.cpp',
+             ]
+ 
+-if CONFIG['OS_ARCH'] in ('NetBSD', 'OpenBSD', 'GNU'):
++if CONFIG['OS_ARCH'] in ('OpenBSD', 'GNU'):
+     if CONFIG['CPU_ARCH'] == 'x86':
+         CPP_SOURCES += [
+             'xptcinvoke_gcc_x86_unix.cpp',
+             'xptcstubs_gcc_x86_unix.cpp'
+         ]
+ 
+-if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD') or \
++if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'DragonFly') or \
+    CONFIG['OS_ARCH'].startswith('GNU_'):
+     if CONFIG['OS_TEST'] == 'x86_64':
+         CPP_SOURCES += [
