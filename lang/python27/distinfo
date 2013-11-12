@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.27 2013/09/13 13:18:20 adam Exp $
+$NetBSD: distinfo,v 1.28 2013/11/12 18:57:25 adam Exp $
 
-SHA1 (Python-2.7.5.tar.xz) = b7389791f789625c2ba9d897aa324008ff482daf
-RMD160 (Python-2.7.5.tar.xz) = baa7ad7d82cb4dc0a70b6a7aded43b7b78b0067e
-Size (Python-2.7.5.tar.xz) = 10252148 bytes
+SHA1 (Python-2.7.6.tar.xz) = 8321636af2acbeaa68fc635d7dda7369ed446a80
+RMD160 (Python-2.7.6.tar.xz) = 8efc73a01a466d8fa16c5c1734c89be79c2c538a
+Size (Python-2.7.6.tar.xz) = 10431288 bytes
 SHA1 (patch-Include_node.h) = 673d148b625711ac47e4bfeb0f5b0d5b31f94d7e
 SHA1 (patch-Include_pyerrors.h) = 3eba043c83b1d1df4918524f7b53047a6ed372ae
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 39b967dc2ae648143d5841f22602a21063b4d5ea
 SHA1 (patch-Lib_test_nullbytecert.pem) = 22f866c0e00016a0931985f672513c0d533d9db5
-SHA1 (patch-Lib_test_test__ssl.py) = 30622803b45db6c081f8a507139ad0ad56b1ba43
-SHA1 (patch-Misc_NEWS) = a7871e744f509aca0e3eac7bc3c71d742621ca20
-SHA1 (patch-Modules___ssl.c) = d66e56a1a88d885564cbbce7afef55467f80d19a
+SHA1 (patch-Modules___ssl.c) = aaddaea5bcd6c84d3d896c7c37f710933b8228bc
 SHA1 (patch-Modules_getpath.c) = f68b38eb90f974b67ceab3922ce7f92eb77f25c3
 SHA1 (patch-aa) = 990e4025bb6a37715e1f5df1831499f0ab08acfa
 SHA1 (patch-ab) = 0d0ae9802dfe3b85659adb16793affd8c4ffce43
@@ -17,7 +15,7 @@ SHA1 (patch-ad) = de730b9f5a5efb56afa8bed05824b5f6579242ec
 SHA1 (patch-ae) = ff6d8c6164fe3c6dc4fb33d88eb8a49d5c5442f6
 SHA1 (patch-ah) = ae3ce0656d890ca34292920bf0185f94ba847139
 SHA1 (patch-al) = dd8bed847f797b97df1a9ad7ffe17645b0f08925
-SHA1 (patch-am) = c07ae10d62d3b071c180ea138b225d9d1586abb3
+SHA1 (patch-am) = 80718042f67a22489b1ae0806e71f28c1515c28e
 SHA1 (patch-an) = 6098fbf0fc31422196cc40d3a227934523db11ca
 SHA1 (patch-ao) = 3a1cd2b255340fd23fc1fce8680e692581ffcec1
 SHA1 (patch-au) = 2a2a988ac92553d17eb898870d1adb3c30a59b66
