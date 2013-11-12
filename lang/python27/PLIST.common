@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2013/08/18 13:42:14 spz Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2013/11/12 18:57:25 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2172,6 +2172,7 @@ lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/README
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/bom.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/crlf.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/different_encoding.py
+lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/false_encoding.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/fixers/bad_order.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/fixers/myfixes/__init__.py
 lib/python${PY_VER_SUFFIX}/lib2to3/tests/data/fixers/myfixes/fix_explicit.py
@@ -2573,6 +2574,22 @@ lib/python${PY_VER_SUFFIX}/test/Sine-1000Hz-300ms.aif
 lib/python${PY_VER_SUFFIX}/test/__init__.py
 lib/python${PY_VER_SUFFIX}/test/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.aiff
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.au
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.wav
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm24.aiff
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm24.wav
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm32.aiff
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm32.au
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm32.wav
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm8.aiff
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm8.au
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm8.wav
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-ulaw.aifc
+lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-ulaw.au
+lib/python${PY_VER_SUFFIX}/test/audiotests.py
+lib/python${PY_VER_SUFFIX}/test/audiotests.pyc
+lib/python${PY_VER_SUFFIX}/test/audiotests.pyo
 lib/python${PY_VER_SUFFIX}/test/audiotest.au
 lib/python${PY_VER_SUFFIX}/test/autotest.py
 lib/python${PY_VER_SUFFIX}/test/autotest.pyc
@@ -3403,6 +3420,9 @@ lib/python${PY_VER_SUFFIX}/test/test_httplib.pyo
 lib/python${PY_VER_SUFFIX}/test/test_httpservers.py
 lib/python${PY_VER_SUFFIX}/test/test_httpservers.pyc
 lib/python${PY_VER_SUFFIX}/test/test_httpservers.pyo
+lib/python${PY_VER_SUFFIX}/test/test_idle.py
+lib/python${PY_VER_SUFFIX}/test/test_idle.pyc
+lib/python${PY_VER_SUFFIX}/test/test_idle.pyo
 lib/python${PY_VER_SUFFIX}/test/test_imageop.py
 lib/python${PY_VER_SUFFIX}/test/test_imageop.pyc
 lib/python${PY_VER_SUFFIX}/test/test_imageop.pyo
@@ -3499,6 +3519,9 @@ lib/python${PY_VER_SUFFIX}/test/test_macostools.pyo
 lib/python${PY_VER_SUFFIX}/test/test_macpath.py
 lib/python${PY_VER_SUFFIX}/test/test_macpath.pyc
 lib/python${PY_VER_SUFFIX}/test/test_macpath.pyo
+lib/python${PY_VER_SUFFIX}/test/test_macurl2path.py
+lib/python${PY_VER_SUFFIX}/test/test_macurl2path.pyc
+lib/python${PY_VER_SUFFIX}/test/test_macurl2path.pyo
 lib/python${PY_VER_SUFFIX}/test/test_mailbox.py
 lib/python${PY_VER_SUFFIX}/test/test_mailbox.pyc
 lib/python${PY_VER_SUFFIX}/test/test_mailbox.pyo
@@ -3568,6 +3591,9 @@ lib/python${PY_VER_SUFFIX}/test/test_new.pyo
 lib/python${PY_VER_SUFFIX}/test/test_nis.py
 lib/python${PY_VER_SUFFIX}/test/test_nis.pyc
 lib/python${PY_VER_SUFFIX}/test/test_nis.pyo
+lib/python${PY_VER_SUFFIX}/test/test_nntplib.py
+lib/python${PY_VER_SUFFIX}/test/test_nntplib.pyc
+lib/python${PY_VER_SUFFIX}/test/test_nntplib.pyo
 lib/python${PY_VER_SUFFIX}/test/test_normalization.py
 lib/python${PY_VER_SUFFIX}/test/test_normalization.pyc
 lib/python${PY_VER_SUFFIX}/test/test_normalization.pyo
@@ -3805,6 +3831,9 @@ lib/python${PY_VER_SUFFIX}/test/test_sqlite.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ssl.py
 lib/python${PY_VER_SUFFIX}/test/test_ssl.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ssl.pyo
+lib/python${PY_VER_SUFFIX}/test/test_stat.py
+lib/python${PY_VER_SUFFIX}/test/test_stat.pyc
+lib/python${PY_VER_SUFFIX}/test/test_stat.pyo
 lib/python${PY_VER_SUFFIX}/test/test_startfile.py
 lib/python${PY_VER_SUFFIX}/test/test_startfile.pyc
 lib/python${PY_VER_SUFFIX}/test/test_startfile.pyo
@@ -3841,6 +3870,9 @@ lib/python${PY_VER_SUFFIX}/test/test_structseq.pyo
 lib/python${PY_VER_SUFFIX}/test/test_subprocess.py
 lib/python${PY_VER_SUFFIX}/test/test_subprocess.pyc
 lib/python${PY_VER_SUFFIX}/test/test_subprocess.pyo
+lib/python${PY_VER_SUFFIX}/test/test_sunau.py
+lib/python${PY_VER_SUFFIX}/test/test_sunau.pyc
+lib/python${PY_VER_SUFFIX}/test/test_sunau.pyo
 lib/python${PY_VER_SUFFIX}/test/test_sunaudiodev.py
 lib/python${PY_VER_SUFFIX}/test/test_sunaudiodev.pyc
 lib/python${PY_VER_SUFFIX}/test/test_sunaudiodev.pyo
