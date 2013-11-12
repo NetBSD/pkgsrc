@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.13 2011/09/07 23:43:40 joerg Exp $
+# $NetBSD: bjam.mk,v 1.14 2013/11/12 16:49:07 adam Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 
@@ -17,8 +17,15 @@ BJAM_ARGS+=		--disable-long-double
 BJAM_ARGS+=		${BJAM_BUILD}
 # GCC 4.4 and above needs this
 .include "../../mk/compiler.mk"
-.if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)) || !empty(PKGSRC_COMPILER:Mclang)
+.if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)
 BJAM_ARGS+=		cxxflags=-std=c++0x
+.endif
+#
+.if !empty(PKGSRC_COMPILER:Mclang)
+BJAM_ARGS+=		cxxflags=-std=c++11
+.  if !empty(OPSYS:MDarwin)
+BJAM_ARGS+=		cxxflags=-stdlib=libc++ linkflags=-stdlib=libc++
+.  endif
 .endif
 
 BJAM_BUILD+=		release

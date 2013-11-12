@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.59 2013/10/27 20:31:58 joerg Exp $
+$NetBSD: distinfo,v 1.60 2013/11/12 16:49:07 adam Exp $
 
-SHA1 (boost_1_53_0.tar.bz2) = e6dd1b62ceed0a51add3dda6f3fc3ce0f636a7f3
-RMD160 (boost_1_53_0.tar.bz2) = 441435fca62365ddb822ab582594ae92c30cbc92
-Size (boost_1_53_0.tar.bz2) = 55765258 bytes
+SHA1 (boost_1_55_0.tar.bz2) = cef9a0cc7084b1d639e06cd3bc34e4251524c840
+RMD160 (boost_1_55_0.tar.bz2) = de8ef647933a005119425326b59723aad4a6fd4f
+Size (boost_1_55_0.tar.bz2) = 58146647 bytes
 SHA1 (patch-aa) = 408a63a807aaa491130db018cd89bca6a427090d
 SHA1 (patch-ab) = f1c95ae229465a4d2da76ce6ff88d76ace52fdd8
 SHA1 (patch-ac) = 32d14b50682dae1950ed927ecb9318ad6b07687a
@@ -13,17 +13,7 @@ SHA1 (patch-ai) = 231db48819aa563b2082d95bb91d662b5d6cf779
 SHA1 (patch-aq) = e5c7b72ffa2942ce401f3d9bf05498fd761df17a
 SHA1 (patch-ar) = 2fec2c51272cc4ee376e6538d8f1fd8561a7f0a3
 SHA1 (patch-boost_archive_iterators_transform__width.hpp) = 5c08bac63fcc259997a8cf6fac1684f45ef7cd1a
-SHA1 (patch-boost_context_detail_fcontext__sparc.hpp) = 1f9cd1292669c13a8560817dec9632f21e6760e3
-SHA1 (patch-boost_context_fcontext.hpp) = e7b79c6ad0397c3ba3be93a295e704b8e07bac9d
-SHA1 (patch-boost_detail_endian.hpp) = ebd8d512ded732bfbf1f6ddd328612e95839f381
 SHA1 (patch-boost_foreach.hpp) = 7cd26c4983873bcac284ad400950e341c559f9a8
 SHA1 (patch-boost_foreach_fwd.hpp) = 5accd68d559213a9677f7d1204e72dd082a42a41
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
-SHA1 (patch-libs_context_build_Jamfile.v2) = f695fe322e2cc4ea8174822e8582c5713e5c59fa
-SHA1 (patch-libs_context_build_architecture.jam) = 878332ce8a71c1f13715c8e40a8a493abbdddfa2
-SHA1 (patch-libs_context_config_Jamfile.jam) = f928575d5b93e86bbcd00bb25cf3e844de3361d1
-SHA1 (patch-libs_context_config_sparc.cpp) = ec59ad331d3e5a71a1c1a9ec894e52e837ed3d51
-SHA1 (patch-libs_context_src_asm_jump__sparc__sysv__elf__gas.S) = 4a417315198442dd4a013bb236b5666d7c547d49
-SHA1 (patch-libs_context_src_asm_make__sparc__sysv__elf__gas.S) = 50dcd855f7b7d0ffc6ede794e04f5233bf664f54
 SHA1 (patch-libs_filesystem_src_unique_path.cpp) = 4693ea11cf464d82168cecaa143b48affa94563b
-SHA1 (patch-tools_build_v2_engine_hash.c) = 1137006f34eb8df3d7b1f5c29236300f8c6c1ef4
