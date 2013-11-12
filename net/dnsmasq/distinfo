@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.20 2013/07/21 07:59:26 roy Exp $
+$NetBSD: distinfo,v 1.21 2013/11/12 12:12:45 roy Exp $
 
-SHA1 (dnsmasq-2.66.tar.gz) = fb6b1690de53014a8e6c8bfa6f1653062b965741
-RMD160 (dnsmasq-2.66.tar.gz) = fd5492852a933b54bb38f9e0c531c6c6e4325862
-Size (dnsmasq-2.66.tar.gz) = 574715 bytes
-SHA1 (patch-src_rfc2131.c) = c136273e0026452ff9f1a929474663a4b56631de
+SHA1 (dnsmasq-2.67.tar.gz) = 550c7ea2bef2a74a089c664d95fc52420a8cb726
+RMD160 (dnsmasq-2.67.tar.gz) = c2f3f9d7978bc9eddbcb77add54acdf3c8103fa8
+Size (dnsmasq-2.67.tar.gz) = 600838 bytes
