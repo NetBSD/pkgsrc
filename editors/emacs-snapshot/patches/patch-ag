@@ -1,20 +1,18 @@
-$NetBSD: patch-ag,v 1.4 2013/02/12 04:47:32 minskim Exp $
+$NetBSD: patch-ag,v 1.5 2013/11/12 20:38:37 minskim Exp $
 
 When running terminfo but compiled for termcap, we cannot assume
 that we actually have anything useable in termcap_term_buffer so just
 use the terminfo fixed size defined ealier.
 
---- src/term.c.orig	2013-01-31 02:44:41.000000000 +0900
-+++ src/term.c	2013-02-07 23:03:54.000000000 +0900
-@@ -3072,11 +3072,6 @@ use the Bourne shell command `TERM=... e
+--- src/term.c.orig	2013-09-26 00:46:29.000000000 +0000
++++ src/term.c
+@@ -3042,7 +3042,9 @@ use the Bourne shell command `TERM=... e
                     terminal_type);
      }
  
--#ifndef TERMINFO
--  if (strlen (tty->termcap_term_buffer) >= buffer_size)
--    emacs_abort ();
--  buffer_size = strlen (tty->termcap_term_buffer);
--#endif
-   tty->termcap_strings_buffer = area = xmalloc (buffer_size);
++#ifndef TERMINFO
+   area = tty->termcap_strings_buffer;
++#endif
    tty->TS_ins_line = tgetstr ("al", address);
    tty->TS_ins_multi_lines = tgetstr ("AL", address);
+   tty->TS_bell = tgetstr ("bl", address);
