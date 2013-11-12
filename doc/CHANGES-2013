@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4093 2013/11/12 11:43:45 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4094 2013/11/12 12:12:57 roy Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5939,3 +5939,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/gitweb to 1.8.4.3 [adam 2013-11-12]
 	Updated net/samba to 3.6.20 [adam 2013-11-12]
 	Updated math/ruby-spreadsheet to 0.9.2 [obache 2013-11-12]
+	Updated net/dnsmasq to 2.67 [roy 2013-11-12]
