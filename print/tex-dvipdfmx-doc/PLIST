@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/09 18:53:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/12 09:48:01 dholland Exp $
 man/man1/extractbb.1
+share/texmf/doc/dvipdfmx/dvipdfmx-special.pdf
+share/texmf/doc/dvipdfmx/dvipdfmx-special.tex
