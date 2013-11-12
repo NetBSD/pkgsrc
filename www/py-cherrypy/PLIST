@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/10/03 10:14:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/12 19:24:16 adam Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,6 +14,9 @@ ${PYSITELIB}/cherrypy/_cpchecker.pyo
 ${PYSITELIB}/cherrypy/_cpcompat.py
 ${PYSITELIB}/cherrypy/_cpcompat.pyc
 ${PYSITELIB}/cherrypy/_cpcompat.pyo
+${PYSITELIB}/cherrypy/_cpcompat_subprocess.py
+${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyc
+${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyo
 ${PYSITELIB}/cherrypy/_cpconfig.py
 ${PYSITELIB}/cherrypy/_cpconfig.pyc
 ${PYSITELIB}/cherrypy/_cpconfig.pyo
@@ -188,6 +191,9 @@ ${PYSITELIB}/cherrypy/test/test_bus.pyo
 ${PYSITELIB}/cherrypy/test/test_caching.py
 ${PYSITELIB}/cherrypy/test/test_caching.pyc
 ${PYSITELIB}/cherrypy/test/test_caching.pyo
+${PYSITELIB}/cherrypy/test/test_compat.py
+${PYSITELIB}/cherrypy/test/test_compat.pyc
+${PYSITELIB}/cherrypy/test/test_compat.pyo
 ${PYSITELIB}/cherrypy/test/test_config.py
 ${PYSITELIB}/cherrypy/test/test_config.pyc
 ${PYSITELIB}/cherrypy/test/test_config.pyo
