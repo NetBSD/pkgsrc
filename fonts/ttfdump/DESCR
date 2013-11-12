@@ -1,0 +1,4 @@
+Ttfdump is a TrueType font dumper. The main purpose of ttfdump is to
+dump the various table in a TrueType font file in ASCII form. Ttfdump
+is the first step in the ILX (Internationalized and Localized X-window)
+project.
