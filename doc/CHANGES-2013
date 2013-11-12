@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4103 2013/11/12 21:07:54 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4104 2013/11/12 21:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5957,3 +5957,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/emacs-snapshot to 24.3.50.20131101 [minskim 2013-11-12]
 	Updated mail/thunderbird to 24.1.0 [ryoon 2013-11-12]
 	Updated fonts/gsftopkk to 1.19.2nb4 [minskim 2013-11-12]
+	Updated x11/xcb-util-cursor to 0.1.1 [wiz 2013-11-12]
