@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4099 2013/11/12 19:13:46 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4100 2013/11/12 19:25:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5953,3 +5953,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/boost to 1.55.0 [adam 2013-11-12]
 	Updated lang/python27 to 2.7.6 [adam 2013-11-12]
 	Updated www/py-django to 1.6 [adam 2013-11-12]
+	Updated www/py-cherrypy to 3.2.4 [adam 2013-11-12]
