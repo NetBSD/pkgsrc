@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4090 2013/11/11 15:44:08 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.4091 2013/11/12 10:37:55 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5931,3 +5931,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/python33 to 3.3.2nb3 [obache 2013-11-10]
 	Updated emulators/arcem to 1.50 [ryoon 2013-11-10]
 	Updated www/py-flask-script to 0.6.3 [kleink 2013-11-11]
+	Updated x11/xscreensaver-demo to 5.22nb3 [dholland 2013-11-11]
+	Updated print/tex-dvipdfmx-doc to 2010.21369nb1 [dholland 2013-11-12]
