@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4098 2013/11/12 15:10:57 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4099 2013/11/12 19:13:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5944,3 +5944,12 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Text-CSV_XS to 1.02 [wen 2013-11-12]
 	Updated net/p5-SOAP-Lite to 1.08 [wen 2013-11-12]
 	Updated www/contao211-translations to 201311070 [taca 2013-11-12]
+	Updated devel/boost-jam to 1.55.0 [adam 2013-11-12]
+	Updated devel/boost-headers to 1.55.0 [adam 2013-11-12]
+	Updated devel/boost-libs to 1.55.0 [adam 2013-11-12]
+	Updated devel/boost-docs to 1.55.0 [adam 2013-11-12]
+	Updated devel/boost-build to 1.55.0 [adam 2013-11-12]
+	Updated devel/boost-python to 1.55.0 [adam 2013-11-12]
+	Updated meta-pkgs/boost to 1.55.0 [adam 2013-11-12]
+	Updated lang/python27 to 2.7.6 [adam 2013-11-12]
+	Updated www/py-django to 1.6 [adam 2013-11-12]
