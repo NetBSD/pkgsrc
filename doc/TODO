@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12712 2013/11/11 23:03:19 wiz Exp $
+$NetBSD: TODO,v 1.12713 2013/11/12 20:51:23 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1040,7 +1040,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texmaker-4.1
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
-	o thunderbird-24.1.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.23
