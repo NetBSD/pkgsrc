@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4124 2013/11/13 19:41:53 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4125 2013/11/13 19:44:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5981,3 +5981,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-bagpipetex to 3.01nb6 [minskim 2013-11-13]
 	Updated print/tex-kotex-utils to 0.3nb3 [minskim 2013-11-13]
 	Updated x11/pixman to 0.32.2 [wiz 2013-11-13]
+	Updated textproc/enca to 1.15 [wiz 2013-11-13]
