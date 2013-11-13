@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/08/13 17:47:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/11/13 07:06:58 adam Exp $
 bin/cftp
 bin/ckeygen
 bin/conch
@@ -534,6 +534,7 @@ ${PYSITELIB}/twisted/internet/test/_win32ifaces.pyo
 ${PYSITELIB}/twisted/internet/test/connectionmixins.py
 ${PYSITELIB}/twisted/internet/test/connectionmixins.pyc
 ${PYSITELIB}/twisted/internet/test/connectionmixins.pyo
+${PYSITELIB}/twisted/internet/test/fake_CAs/chain.pem
 ${PYSITELIB}/twisted/internet/test/fake_CAs/not-a-certificate
 ${PYSITELIB}/twisted/internet/test/fake_CAs/thing1.pem
 ${PYSITELIB}/twisted/internet/test/fake_CAs/thing2-duplicate.pem
@@ -769,6 +770,9 @@ ${PYSITELIB}/twisted/lore/test/test_scripts.pyo
 ${PYSITELIB}/twisted/lore/test/test_slides.py
 ${PYSITELIB}/twisted/lore/test/test_slides.pyc
 ${PYSITELIB}/twisted/lore/test/test_slides.pyo
+${PYSITELIB}/twisted/lore/test/test_texi.py
+${PYSITELIB}/twisted/lore/test/test_texi.pyc
+${PYSITELIB}/twisted/lore/test/test_texi.pyo
 ${PYSITELIB}/twisted/lore/texi.py
 ${PYSITELIB}/twisted/lore/texi.pyc
 ${PYSITELIB}/twisted/lore/texi.pyo
@@ -979,6 +983,9 @@ ${PYSITELIB}/twisted/names/test/test_hosts.pyo
 ${PYSITELIB}/twisted/names/test/test_names.py
 ${PYSITELIB}/twisted/names/test/test_names.pyc
 ${PYSITELIB}/twisted/names/test/test_names.pyo
+${PYSITELIB}/twisted/names/test/test_resolve.py
+${PYSITELIB}/twisted/names/test/test_resolve.pyc
+${PYSITELIB}/twisted/names/test/test_resolve.pyo
 ${PYSITELIB}/twisted/names/test/test_rootresolve.py
 ${PYSITELIB}/twisted/names/test/test_rootresolve.pyc
 ${PYSITELIB}/twisted/names/test/test_rootresolve.pyo
@@ -1541,6 +1548,9 @@ ${PYSITELIB}/twisted/scripts/test/__init__.pyo
 ${PYSITELIB}/twisted/scripts/test/test_scripts.py
 ${PYSITELIB}/twisted/scripts/test/test_scripts.pyc
 ${PYSITELIB}/twisted/scripts/test/test_scripts.pyo
+${PYSITELIB}/twisted/scripts/test/test_tap2deb.py
+${PYSITELIB}/twisted/scripts/test/test_tap2deb.pyc
+${PYSITELIB}/twisted/scripts/test/test_tap2deb.pyo
 ${PYSITELIB}/twisted/scripts/test/test_tap2rpm.py
 ${PYSITELIB}/twisted/scripts/test/test_tap2rpm.pyc
 ${PYSITELIB}/twisted/scripts/test/test_tap2rpm.pyo
@@ -2057,6 +2067,9 @@ ${PYSITELIB}/twisted/trial/test/moduletest.pyo
 ${PYSITELIB}/twisted/trial/test/novars.py
 ${PYSITELIB}/twisted/trial/test/novars.pyc
 ${PYSITELIB}/twisted/trial/test/novars.pyo
+${PYSITELIB}/twisted/trial/test/ordertests.py
+${PYSITELIB}/twisted/trial/test/ordertests.pyc
+${PYSITELIB}/twisted/trial/test/ordertests.pyo
 ${PYSITELIB}/twisted/trial/test/packages.py
 ${PYSITELIB}/twisted/trial/test/packages.pyc
 ${PYSITELIB}/twisted/trial/test/packages.pyo
