@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_xz_lib__lzma.rb,v 1.1 2012/03/20 07:26:05 taca Exp $
+$NetBSD: patch-lib_xz_lib__lzma.rb,v 1.2 2013/11/13 18:10:20 minskim Exp $
 
 Use an absolute path for a library to load.
 
@@ -9,7 +9,7 @@ Use an absolute path for a library to load.
      :lzma_prog_error
      
 -    ffi_lib ['lzma.so.2', 'lzma.so', 'lzma']
-+    ffi_lib ['lzma.@SHLIB_EXT@.2', 'lzma.@SHLIB_EXT@', 'lzma'].map! { |f|  File.join('@LOCALBASE@/lib', f) }
++    ffi_lib ['liblzma.@SHLIB_EXT@.2', 'liblzma.@SHLIB_EXT@', 'liblzma'].map! { |f|  File.join('@LOCALBASE@/lib', f) }
      
      attach_function :lzma_easy_encoder, [:pointer, :uint32, :int], :int
      attach_function :lzma_code, [:pointer, :int], :int
