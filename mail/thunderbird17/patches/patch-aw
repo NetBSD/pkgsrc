@@ -1,0 +1,34 @@
+$NetBSD: patch-aw,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+--- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2012-11-19 22:42:45.000000000 +0000
++++ mozilla/xulrunner/stub/nsXULStub.cpp
+@@ -11,6 +11,29 @@
+ #include "nsIFile.h"
+ 
+ #include <stdarg.h>
++#if defined(__NetBSD__)
++#include <sys/resource.h>
++/*
++ * On netbsd-4, ulimit -n is 64 by default; too few for us.
++ */
++static void netbsd_fixrlimit(void) {
++       struct rlimit rlp;
++       if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
++	       fprintf(stderr, "warning: getrlimit failed\n");
++	       return;
++       }
++       if (rlp.rlim_cur >= 512)
++	       return;
++       if (rlp.rlim_max < 512) {
++	       fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
++	       rlp.rlim_cur = rlp.rlim_max;
++       }
++       else
++	       rlp.rlim_cur = 512;
++       if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
++	       fprintf(stderr, "warning: setrlimit failed\n");
++}
++#endif
+ 
+ #ifdef XP_WIN
+ #include <windows.h>

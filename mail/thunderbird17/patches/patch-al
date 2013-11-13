@@ -1,0 +1,16 @@
+$NetBSD: patch-al,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+--- mozilla/storage/src/mozStorageConnection.cpp.orig	2012-08-25 00:31:30.000000000 +0000
++++ mozilla/storage/src/mozStorageConnection.cpp
+@@ -680,6 +680,11 @@ Connection::initialize(nsIFile *aDatabas
+       break;
+   }
+ 
++  // XXX tnn: the configure script demands that sqlite3 is compiled with
++  // SECURE_DELETE on by default. sqlite3 in pkgsrc does not have that,
++  // so instead we enable secure_delete manually here.
++  (void)ExecuteSimpleSQL(NS_LITERAL_CSTRING("PRAGMA secure_delete = 1;"));
++
+   return NS_OK;
+ }
+ 
