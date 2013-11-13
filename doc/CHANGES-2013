@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4117 2013/11/13 18:15:23 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4118 2013/11/13 18:19:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5972,3 +5972,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey to 2.22nb1 [ryoon 2013-11-13]
 	Updated mail/thunderbird to 24.1.0nb1 [ryoon 2013-11-13]
 	Updated archivers/ruby-xz to 0.1.1nb1 [minskim 2013-11-13]
+	Updated print/tex-texlive-common-doc to 2013 [minskim 2013-11-13]
