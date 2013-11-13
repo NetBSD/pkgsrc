@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4107 2013/11/13 02:27:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4108 2013/11/13 07:09:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5961,3 +5961,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added fonts/ttfdump version 0.5.5 [minskim 2013-11-12]
 	Updated math/ruby-spreadsheet to 0.9.4 [obache 2013-11-13]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.327 [obache 2013-11-13]
+	Updated net/py-twisted to 13.2.0 [adam 2013-11-13]
+	Updated net/py-twisted-docs to 13.2.0 [adam 2013-11-13]
