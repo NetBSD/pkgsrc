@@ -1,0 +1,24 @@
+$NetBSD: patch-as,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+Treat DragonFly like FreeBSD.
+
+--- mozilla/js/src/configure.in.orig	2012-11-19 22:42:22.000000000 +0000
++++ mozilla/js/src/configure.in
+@@ -2701,7 +2701,7 @@ then
+     fi
+ 
+ 	case "$target" in
+-	    *-*-freebsd*)
++	    *-*-freebsd*|*-dragonfly*)
+ 			AC_DEFINE(_REENTRANT)
+ 			AC_DEFINE(_THREAD_SAFE)
+ 			dnl -pthread links in -lpthread, so don't specify it explicitly.
+@@ -3545,7 +3545,7 @@ if test "$MOZ_MEMORY"; then
+   *-darwin*)
+     AC_DEFINE(MOZ_MEMORY_DARWIN)
+     ;;
+-  *-*freebsd*)
++  *-*freebsd*|*-*dragonfly*)
+     AC_DEFINE(MOZ_MEMORY_BSD)
+     ;;
+   *-android*|*-linuxandroid*)

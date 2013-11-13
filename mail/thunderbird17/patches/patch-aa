@@ -1,0 +1,96 @@
+$NetBSD: patch-aa,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+--- mozilla/configure.in.orig	2013-03-28 18:08:16.000000000 +0000
++++ mozilla/configure.in
+@@ -2080,6 +2080,9 @@ ia64*-hpux*)
+     if test -z "$MC"; then
+         MC=mc.exe
+     fi
++    if test "$LIBRUNPATH"; then
++	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;;
+ *-mingw*)
+     DSO_CFLAGS=
+@@ -2979,6 +2982,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
+@@ -3279,6 +3285,9 @@ AC_CACHE_CHECK(
+         #ifdef linux
+         #define _BSD_SOURCE 1
+         #endif
++	#ifdef __NetBSD__
++	#error use of global _res variable in threaded programs is not portable
++	#endif
+         #include <resolv.h>
+         ],
+         [int foo = res_ninit(&_res);],
+@@ -3937,7 +3946,7 @@ AC_CHECK_PROGS(YASM, yasm, "")
+ if test -n "$YASM"; then
+   dnl Pull out yasm's version string
+   changequote(,)
+-  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
++  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
+   changequote([,])
+ 
+   YASM_VERSION=`yasm --version | sed -ne "$_YASM_VER_FILTER"`
+@@ -3947,6 +3956,14 @@ if test -n "$YASM"; then
+   _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
+ fi
+ 
++if test -n "${LIBXUL_SDK_DIR}"; then
++    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
++    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
++    NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
++    NSS_CFLAGS="`pkg-config --cflags mozilla-nss`"
++    NSS_LIBS="`pkg-config --libs mozilla-nss`"
++fi
++
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
+ dnl system JPEG support
+ dnl ========================================================
+@@ -5158,8 +5175,8 @@ fi
+ 
+ AC_SUBST(MOZ_WEBRTC)
+ 
+-case "$target_cpu" in
+-arm*)
++case "$target" in
++arm-*-linux*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+     MOZ_SAMPLE_TYPE_S16LE=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16LE)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16LE)
+@@ -5356,11 +5373,11 @@ if test -n "$MOZ_VP8" -a -z "$MOZ_NATIVE
+ 
+     dnl See if we have assembly on this platform.
+     case "$OS_ARCH:$CPU_ARCH" in
+-    Linux:x86)
++    Linux:x86|DragonFly:x86|*BSD:i386)
+       VPX_ASFLAGS="-f elf32 -rnasm -pnasm"
+       VPX_X86_ASM=1
+     ;;
+-    Linux:x86_64)
++    Linux:x86_64|DragonFly:x86_64|*BSD:x86_64)
+       VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
+       VPX_X86_ASM=1
+     ;;
+@@ -5516,10 +5533,11 @@ dnl ====================================
+ 
+ dnl If using sydneyaudio with Linux, ensure that the alsa library is available
+ if test -n "$MOZ_SYDNEYAUDIO" -a "$OS_TARGET" = "Linux"; then
+-    PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
++    PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi
++AC_SUBST(MOZ_ALSA)
+ 
+ dnl ========================================================
+ dnl = Enable PulseAudio

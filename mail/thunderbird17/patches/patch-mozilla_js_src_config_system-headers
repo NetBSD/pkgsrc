@@ -1,0 +1,14 @@
+$NetBSD: patch-mozilla_js_src_config_system-headers,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+--- mozilla/js/src/config/system-headers.orig	2012-11-19 22:42:22.000000000 +0000
++++ mozilla/js/src/config/system-headers
+@@ -1065,5 +1065,9 @@ gst/gst.h
+ gst/app/gstappsink.h
+ gst/app/gstappsrc.h
+ gst/video/video.h
++sys/thr.h
++sys/user.h
++kvm.h
++spawn.h
+ sys/msg.h
+ sys/ipc.h
