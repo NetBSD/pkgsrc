@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/19 09:53:34 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/13 15:59:22 is Exp $
 bin/yaws
 lib/yaws/ebin/haxe.beam
 lib/yaws/ebin/json.beam
@@ -12,13 +12,12 @@ lib/yaws/ebin/yaws.beam
 lib/yaws/ebin/yaws_api.beam
 lib/yaws/ebin/yaws_app.beam
 lib/yaws/ebin/yaws_appmod_cgi.beam
+lib/yaws/ebin/yaws_appmod_dav.beam
 lib/yaws/ebin/yaws_appmod_fcgi.beam
 lib/yaws/ebin/yaws_cgi.beam
 lib/yaws/ebin/yaws_compile.beam
 lib/yaws/ebin/yaws_config.beam
 lib/yaws/ebin/yaws_ctl.beam
-lib/yaws/ebin/yaws_dav.beam
-lib/yaws/ebin/yaws_davlock.beam
 lib/yaws/ebin/yaws_debug.beam
 lib/yaws/ebin/yaws_dime.beam
 lib/yaws/ebin/yaws_exhtml.beam
@@ -35,6 +34,7 @@ lib/yaws/ebin/yaws_pam.beam
 lib/yaws/ebin/yaws_revproxy.beam
 lib/yaws/ebin/yaws_rpc.beam
 lib/yaws/ebin/yaws_rss.beam
+lib/yaws/ebin/yaws_runmod_lock.beam
 lib/yaws/ebin/yaws_sendfile.beam
 lib/yaws/ebin/yaws_server.beam
 lib/yaws/ebin/yaws_session_server.beam
@@ -58,6 +58,7 @@ lib/yaws/include/wsdl11soap12.hrl
 lib/yaws/include/yaws.hrl
 lib/yaws/include/yaws_api.hrl
 lib/yaws/include/yaws_dav.hrl
+lib/yaws/include/yaws_lock.hrl
 lib/yaws/include/yaws_soap.hrl
 lib/yaws/priv/charset.def
 lib/yaws/priv/charset.def.in
