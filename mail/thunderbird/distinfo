@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.129 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: distinfo,v 1.130 2013/11/13 14:36:58 ryoon Exp $
 
 SHA1 (enigmail-1.6.tar.gz) = 51a7eb7d86ce24d8199f741a0079f0d56ecd6368
 RMD160 (enigmail-1.6.tar.gz) = a854bb37a6a7f298f6cc268110dcb21d00909fa4
@@ -127,7 +127,7 @@ SHA1 (patch-mozilla_netwerk_wifi_nsWifiScannerFreeBSD.cpp) = 108fc8af8021919dc30
 SHA1 (patch-mozilla_security_manager_ssl_src_JARSignatureVerification.cpp) = d28dc63c1c5bcf3994c7ee91562d04c7dd8daa40
 SHA1 (patch-mozilla_security_manager_ssl_src_nsNSSComponent.cpp) = a881012bf1b40685fbc5f48bf5eaed50cef89f72
 SHA1 (patch-mozilla_toolkit_components_osfile_osfile__unix__allthreads.jsm) = ab1c8931147d80ba26f9a763a93b3ae2784af3f0
-SHA1 (patch-mozilla_toolkit_components_osfile_osfile__unix__back.jsm) = f24de6e36aa4b650d7e8dd997eb014d6dddc9a64
+SHA1 (patch-mozilla_toolkit_components_osfile_osfile__unix__back.jsm) = 9cba10eb870334dcc2d070f827fb96adcd4506d3
 SHA1 (patch-mozilla_toolkit_components_osfile_osfile__unix__front.jsm) = 3c49715e3f142210af928423fc9edae17cd03ec6
 SHA1 (patch-mozilla_toolkit_mozapps_update_updater_updater.cpp) = 8af52f3746c697ab82f6d7d71bdbeb6a14183172
 SHA1 (patch-mozilla_toolkit_toolkit.mozbuild) = e59924f8a7f1728ed80b71eb67276680fb31b611
