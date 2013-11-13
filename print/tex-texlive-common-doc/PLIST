@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/14 17:00:43 minskim Exp $
-share/texmf/doc/texlive/index.html
-share/texmf/doc/texlive/texlive-common/examples/ex5.tex
-share/texmf/doc/texlive/texlive-common/examples/ex6.tex
-share/texmf/doc/texlive/texlive-common/examples/ex6a.tex
-share/texmf/doc/texlive/texlive-common/examples/ex6b.tex
-share/texmf/doc/texlive/texlive-common/examples/ex6c.tex
-share/texmf/doc/texlive/texlive-common/install-lnx-main.png
-share/texmf/doc/texlive/texlive-common/psview.png
-share/texmf/doc/texlive/texlive-common/stdcoll.png
-share/texmf/doc/texlive/texlive-common/tlmgr-general-options.png
-share/texmf/doc/texlive/texlive-common/tlmgr-gui.png
-share/texmf/doc/texlive/texlive-common/tlmgr-paper-options.png
-share/texmf/doc/texlive/texlive-common/tray-menu.png
-share/texmf/doc/texlive/texlive-common/wizard-w32.png
+@comment $NetBSD: PLIST,v 1.4 2013/11/13 18:19:15 minskim Exp $
+share/texmf-dist/doc/texlive/index.html
+share/texmf-dist/doc/texlive/texlive-common/examples/ex5.tex
+share/texmf-dist/doc/texlive/texlive-common/examples/ex6.tex
+share/texmf-dist/doc/texlive/texlive-common/examples/ex6a.tex
+share/texmf-dist/doc/texlive/texlive-common/examples/ex6b.tex
+share/texmf-dist/doc/texlive/texlive-common/examples/ex6c.tex
+share/texmf-dist/doc/texlive/texlive-common/install-lnx-main.png
+share/texmf-dist/doc/texlive/texlive-common/psview.png
+share/texmf-dist/doc/texlive/texlive-common/stdcoll.png
+share/texmf-dist/doc/texlive/texlive-common/tlmgr-general-options.png
+share/texmf-dist/doc/texlive/texlive-common/tlmgr-gui.png
+share/texmf-dist/doc/texlive/texlive-common/tlmgr-paper-options.png
+share/texmf-dist/doc/texlive/texlive-common/tray-menu.png
+share/texmf-dist/doc/texlive/texlive-common/wizard-w32.png
