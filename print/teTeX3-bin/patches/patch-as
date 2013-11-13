@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.11 2012/02/09 21:44:15 minskim Exp $
+$NetBSD: patch-as,v 1.12 2013/11/13 19:02:25 minskim Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
@@ -35,7 +35,7 @@ $NetBSD: patch-as,v 1.11 2012/02/09 21:44:15 minskim Exp $
  default: all
  
  install: install-data install-exec
-@@ -39,30 +33,6 @@ install-data:: $(INFOFILES)
+@@ -39,49 +33,11 @@ install-data:: $(INFOFILES)
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
  	done
@@ -66,10 +66,11 @@ $NetBSD: patch-as,v 1.11 2012/02/09 21:44:15 minskim Exp $
  	test -r ./latex.info || cd $(srcdir) && for i in latex.info*; do \
  	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
  	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
-@@ -71,17 +41,6 @@ install-data:: $(INFOFILES)
- 	for p in $(POOLFILES); do \
- 	  $(INSTALL_DATA) $(srcdir)/$$p $(texpooldir)/$$p; \
- 	done
+ 	  install-info --info-dir=$(infodir) $(infodir)/latex.info; \
+ 	else true; fi
+-	for p in $(POOLFILES); do \
+-	  $(INSTALL_DATA) $(srcdir)/$$p $(texpooldir)/$$p; \
+-	done
 -	for p in TETEXDOC.pdf TETEXDOC.ps TETEXDOC.dvi teTeX-FAQ; do \
 -	  $(INSTALL_DATA) $(srcdir)/doc/$$p $(texmf)/doc/tetex; \
 -	done
@@ -84,7 +85,7 @@ $NetBSD: patch-as,v 1.11 2012/02/09 21:44:15 minskim Exp $
  
  install-exec:
  	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
-@@ -96,16 +55,10 @@ install-exec:
+@@ -96,16 +52,10 @@ install-exec:
  	else \
  	  true; \
  	fi

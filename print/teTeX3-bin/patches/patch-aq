@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.2 2006/04/05 16:04:01 jlam Exp $
+$NetBSD: patch-aq,v 1.3 2013/11/13 19:02:25 minskim Exp $
 
---- Makefile.in.orig	2005-01-29 18:12:25.000000000 -0500
+--- Makefile.in.orig	2005-01-29 23:12:25.000000000 +0000
 +++ Makefile.in
-@@ -51,7 +51,7 @@ default: all
+@@ -51,42 +51,39 @@ default: all
  install: all 
  	for dir in $(INSTDIRS); do \
  	   echo making $@ in $$dir; \
@@ -10,8 +10,12 @@ $NetBSD: patch-aq,v 1.2 2006/04/05 16:04:01 jlam Exp $
 +	     (cd $$dir && PATH="$(scriptdir):$(bindir):$(PATH)" \
                  $(MAKE) $@) || exit 1; \
  	done
- 	if test -d $(texmf) && test -f $(srcdir)/release-tetex-src.txt; then \
-@@ -63,30 +63,30 @@ install: all 
+-	if test -d $(texmf) && test -f $(srcdir)/release-tetex-src.txt; then \
+-	  $(INSTALL_DATA) $(srcdir)/release-tetex-src.txt $(texmf); \
+-	fi
+ @FMU@
+ @FMU@install-extra:
+ # temporary fix for missing links
  	test -f texk/web2c/omegafonts/omfonts && \
  	  cd texk/web2c/omegafonts; $(MAKE) install-links
  	$(srcdir)/selfautofix "$(bindir)" "$(texmf)/web2c"
@@ -52,7 +56,7 @@ $NetBSD: patch-aq,v 1.2 2006/04/05 16:04:01 jlam Exp $
                $(MAKE) $@) || exit 1; \
  	done
  @FMU@
-@@ -94,8 +94,8 @@ install-exec:
+@@ -94,8 +91,8 @@ install-exec:
  # temporary fix for missing links
  	test -f texk/web2c/omegafonts/omfonts && \
  	  cd texk/web2c/omegafonts; $(MAKE) install-links
