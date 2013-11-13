@@ -1,0 +1,15 @@
+$NetBSD: patch-mozilla_xpcom_Makefile.in,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+--- mozilla/xpcom/Makefile.in.orig	2012-08-25 00:31:35.000000000 +0000
++++ mozilla/xpcom/Makefile.in
+@@ -35,6 +35,10 @@ DIRS		+= windbgdlg
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/thunderbird-sdk/sdk/lib
++endif
++
+ ifdef ENABLE_TESTS
+ TOOL_DIRS += \
+ 	tests \
