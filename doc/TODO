@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12714 2013/11/13 07:09:20 adam Exp $
+$NetBSD: TODO,v 1.12715 2013/11/13 12:08:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -614,7 +614,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnuchess-6.0.3
+	o gnuchess-6.1.0
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -882,7 +882,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.1
-	o pixman-0.32.0
+	o pixman-0.32.2
 	o pks-0.9.6
 	o planner-0.14.6
 	o ploticus-examples-230
@@ -957,7 +957,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.44.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
+	o samba-3.6.20
 	o samba-4.1.0 [wip]
+	o samba-4.1.1
 	o sane-1.0.24
 	o sarg-2.2.5
 	o sawfish-1.10
@@ -1104,6 +1106,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.1.0
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
+	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
 	o x264-devel-20131110
