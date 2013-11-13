@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/13 19:27:55 minskim Exp $
 
 DISTNAME=	kotex-dist-20110504
 PKGNAME=	tex-kotex-utils-0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/ko.TeX/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -22,7 +22,9 @@ WRKSRC=		${WRKDIR}
 
 REPLACE_PERL=	*.pl scripts/kotex-util/perl/*.pl
 
-INSTALLATION_DIRS+=	bin share/texmf/xindy/modules/lang/korean
+INSTALLATION_DIRS+=	bin share/texmf-dist/xindy/modules/lang/korean
+
+.include "../../print/kpathsea/texmf.mk"
 
 do-build:
 .for f in hbibtex hmakeindex
@@ -43,6 +45,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/kotexindy.pl \
 		${DESTDIR}${PREFIX}/bin/kotexindy
 	${INSTALL_DATA} ${WRKSRC}/utf8.xdy \
-		${DESTDIR}${PREFIX}/share/texmf/xindy/modules/lang/korean/
+		${DESTDIR}${PREFIX}/share/texmf-dist/xindy/modules/lang/korean/
 
 .include "../../mk/bsd.pkg.mk"
