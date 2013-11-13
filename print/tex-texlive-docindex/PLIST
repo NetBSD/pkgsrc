@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/14 17:50:53 minskim Exp $
-share/texmf/scripts/texlive/var/texcatalogue.keywords
+@comment $NetBSD: PLIST,v 1.2 2013/11/13 18:36:14 minskim Exp $
+share/texmf-dist/scripts/texlive/var/texcatalogue.keywords
