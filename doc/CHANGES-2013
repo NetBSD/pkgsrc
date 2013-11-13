@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4126 2013/11/13 19:45:07 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4127 2013/11/13 19:46:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5983,3 +5983,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/pixman to 0.32.2 [wiz 2013-11-13]
 	Updated textproc/enca to 1.15 [wiz 2013-11-13]
 	Updated multimedia/libdvbpsi to 1.1.2 [wiz 2013-11-13]
+	Updated time/py-pytz to 2013.8 [wiz 2013-11-13]
