@@ -1,0 +1,15 @@
+RealBoy is a Free, Fast, Yet Accurate, Game Boy/Game Boy Color
+Emulator for Linux/Unix.  It has both technical as well as educational
+goals.
+
+Technically, it aims for the following:
+
+1) Accuracy. Perhaps the most important technical goal, as seen in
+the best closed-sourced emulators, such as KiGB and BGB, and some
+free emulators, such as Gambatte and MESS.
+
+2) Performance. Show that it is possible to implement a very fast
+emulator without sacrificing accuracy.
+
+3) Feature-rich. Implement advanced features such as a flexible
+internal debugger.
