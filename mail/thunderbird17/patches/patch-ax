@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 2013/11/13 13:27:45 ryoon Exp $
+
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-08-25 00:31:35.000000000 +0000
++++ mozilla/xpcom/base/nsStackWalk.cpp
+@@ -23,7 +23,7 @@ struct CriticalAddress {
+ };
+ static CriticalAddress gCriticalAddress;
+ 
+-#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
++#if defined(HAVE_DLOPEN) || defined(XP_MACOSX) || defined(__NetBSD__)
+ #include <dlfcn.h>
+ #endif
+ 
