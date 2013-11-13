@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.13 2013/11/11 23:28:44 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.14 2013/11/13 22:23:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -49,3 +49,5 @@ Pullup ticket #4253 - requested by taca
 lang/ruby18-base: build fix
 lang/ruby193-base: build fix
 lang/ruby200-base: build fix
+Pullup ticket #4254 - requested by obache
+multimedia/adobe-flash-plugin11: security update
