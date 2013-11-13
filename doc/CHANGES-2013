@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4114 2013/11/13 14:17:50 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4115 2013/11/13 14:23:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5969,3 +5969,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added mail/thunderbird17-l10n version 17.0.10 [ryoon 2013-11-13]
 	Updated www/firefox to 25.0nb3 [ryoon 2013-11-13]
 	Updated www/firefox24 to 24.1.0nb2 [ryoon 2013-11-13]
+	Updated www/seamonkey to 2.22nb1 [ryoon 2013-11-13]
