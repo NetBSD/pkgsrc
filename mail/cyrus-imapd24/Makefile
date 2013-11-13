@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/10/19 09:07:07 adam Exp $
+# $NetBSD: Makefile,v 1.33 2013/11/13 13:34:32 joerg Exp $
 
 DISTNAME=	cyrus-imapd-2.4.17
 PKGREVISION=	6
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--enable-idled
 CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--enable-replication
+
+CONFIGURE_ARGS+=	andrew_cv_runpath_switch=${COMPILER_RPATH_FLAG}
 
 .include "options.mk"
 
