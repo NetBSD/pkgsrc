@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_components_osfile_modules_osfile__unix__back.jsm,v 1.1 2013/11/07 15:47:23 ryoon Exp $
+$NetBSD: patch-toolkit_components_osfile_modules_osfile__unix__back.jsm,v 1.2 2013/11/13 14:12:31 ryoon Exp $
 
 Based on martin@'s patch for firefox 27.0
 
@@ -46,26 +46,27 @@ Based on martin@'s patch for firefox 27.0
         } else {
           UnixFile.readdir =
             declareFFI("readdir", ctypes.default_abi,
-@@ -553,6 +565,26 @@
+@@ -553,6 +565,27 @@
           UnixFile.fstat = function stat(fd, buf) {
             return fxstat(ver, fd, buf);
           };
 +       } else if (OS.Constants.Sys.Name == "NetBSD") {
-+         // NetBSD 5.0 and newer
++         // NetBSD 5.0 uses *30, and netbsd-6 uses *50
++         let v = OS.Constants.libc.OSFILE_SIZEOF_TIME_T < 8 ? "30" : "50";
 +         UnixFile.stat =
-+           declareFFI("__stat50", ctypes.default_abi,
++           declareFFI("__stat"+v, ctypes.default_abi,
 +                      /*return*/ Types.negativeone_or_nothing,
 +                      /*path*/   Types.path,
 +                      /*buf*/    Types.stat.out_ptr
 +                     );
 +         UnixFile.lstat =
-+           declareFFI("__lstat50", ctypes.default_abi,
++           declareFFI("__lstat"+v, ctypes.default_abi,
 +                      /*return*/ Types.negativeone_or_nothing,
 +                      /*path*/   Types.path,
 +                      /*buf*/    Types.stat.out_ptr
 +                     );
 +         UnixFile.fstat =
-+           declareFFI("__fstat50", ctypes.default_abi,
++           declareFFI("__fstat"+v, ctypes.default_abi,
 +                      /*return*/ Types.negativeone_or_nothing,
 +                      /*fd*/     Types.fd,
 +                      /*buf*/    Types.stat.out_ptr
