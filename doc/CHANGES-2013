@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4120 2013/11/13 18:37:27 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4121 2013/11/13 19:02:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5977,3 +5977,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-texlive-en-doc to 2013 [minskim 2013-11-13]
 	Updated print/tex-texlive-docindex to 2013 [minskim 2013-11-13]
 	Updated print/tex-texlive-docindex-doc to 2013 [minskim 2013-11-13]
+	Updated print/teTeX3-bin to 3.0nb54 [minskim 2013-11-13]
