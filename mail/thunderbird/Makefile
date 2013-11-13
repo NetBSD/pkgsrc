@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.126 2013/11/12 20:50:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.127 2013/11/13 14:36:58 ryoon Exp $
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
+PKGREVISION=	1
 TB_VER=		24.1.0
 #LIGHTNINGVER=	1.9
 CATEGORIES=	mail
