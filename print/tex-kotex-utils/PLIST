@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/29 21:05:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/13 19:27:55 minskim Exp $
 bin/euc-bookmark
 bin/hbibtex
 bin/hmakeindex
@@ -8,4 +8,4 @@ bin/jamo2hypua
 bin/komkindex
 bin/kotexindy
 bin/ttf2kotexfont
-share/texmf/xindy/modules/lang/korean/utf8.xdy
+share/texmf-dist/xindy/modules/lang/korean/utf8.xdy
