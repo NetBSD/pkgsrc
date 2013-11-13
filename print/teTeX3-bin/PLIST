@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/02/09 21:44:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.26 2013/11/13 19:02:25 minskim Exp $
 bin/fdf2tan
 bin/fdf2tex
 bin/lamed
@@ -13,5 +13,3 @@ bin/uniqleaf
 info/latex.info
 man/man1/fdf2tex.1
 man/man1/texshow.1
-share/texmf/release-tetex-src.txt
-share/texmf/web2c/pdfetex-pl.pool
