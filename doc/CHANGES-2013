@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4106 2013/11/13 01:31:11 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4107 2013/11/13 02:27:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5960,3 +5960,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xcb-util-cursor to 0.1.1 [wiz 2013-11-12]
 	Added fonts/ttfdump version 0.5.5 [minskim 2013-11-12]
 	Updated math/ruby-spreadsheet to 0.9.4 [obache 2013-11-13]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.327 [obache 2013-11-13]
