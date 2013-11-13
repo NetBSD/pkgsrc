@@ -1,4 +1,4 @@
-$NetBSD: patch-libguile_guile-snarf.in,v 1.1 2013/10/04 18:35:22 joerg Exp $
+$NetBSD: patch-libguile_guile-snarf.in,v 1.2 2013/11/13 22:49:31 joerg Exp $
 
 --- libguile/guile-snarf.in.orig	2010-12-13 17:24:40.000000000 +0000
 +++ libguile/guile-snarf.in
@@ -7,8 +7,8 @@ $NetBSD: patch-libguile_guile-snarf.in,v 1.1 2013/10/04 18:35:22 joerg Exp $
      echo "/* cpp arguments: $@ */" ;
      ${cpp} -DSCM_MAGIC_SNARF_INITS -DSCM_MAGIC_SNARFER "$@" > ${temp} && cpp_ok_p=true
 -    grep "^ *\^ *\^" ${temp} | sed -e "s/^ *\^ *\^//" -e "s/\^\ *:\ *\^.*/;/"
-+    sed 's,\^ *\^,\
-+&,g' ${temp} | grep "^ *\^ *\^" | sed -e "s/^ *\^ *\^//" -e "s/\^\ *:\ *\^.*/;/"
++    grep -v '^#' ${temp} | tr '\n' ' ' | sed 's,\^ *\^,\
++&,g' | grep "^ *\^ *\^" | sed -e "s/^ *\^ *\^//" -e "s/\^\ *:\ *\^.*/;/"
  }
  
  ## main

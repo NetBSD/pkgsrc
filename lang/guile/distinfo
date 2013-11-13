@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2013/10/04 18:35:22 joerg Exp $
+$NetBSD: distinfo,v 1.47 2013/11/13 22:49:31 joerg Exp $
 
 SHA1 (guile-1.8.8.tar.gz) = 548d6927aeda332b117f8fc5e4e82c39a05704f9
 RMD160 (guile-1.8.8.tar.gz) = 8ac185a72ad8394b14d5377549e5bbf02889faaa
@@ -13,4 +13,4 @@ SHA1 (patch-am) = 7a549811ef98f40a6a87f31840109ee2a091489b
 SHA1 (patch-an) = 89ee76c4e74a7af3a5e2a8e65d889292de1768f1
 SHA1 (patch-ao) = b648826c5e951cd98ca6e2cdf48435cbdba096ff
 SHA1 (patch-libguile_guile-snarf-docs.in) = 392b0774a8d21bc06f2cf741683773b918bc8ffb
-SHA1 (patch-libguile_guile-snarf.in) = f2cbf83d7f1bb161599b7c86dc327f8416bbe612
+SHA1 (patch-libguile_guile-snarf.in) = d534adce77040d441b0771efc536bc7e8560365d
