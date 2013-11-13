@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/05/10 14:33:01 riastradh Exp $
+$NetBSD: distinfo,v 1.6 2013/11/13 19:44:03 wiz Exp $
 
-SHA1 (enca-1.14.tar.bz2) = 9aacb595da981f40a5fa0dadb886f3efeca933f4
-RMD160 (enca-1.14.tar.bz2) = 2e4442b905ad6935241b8f47434429ebfd55fbbc
-Size (enca-1.14.tar.bz2) = 560982 bytes
-SHA1 (patch-configure) = 944b3da85306353fec793aa1de014e4949dbdfeb
-SHA1 (patch-configure.ac) = e19dd68be397805bf7874da621e0c61c73a80d11
-SHA1 (patch-tools_Makefile.am) = 1716a9b1675f1bed89e3f79c7ab8dcecea0f2455
-SHA1 (patch-tools_Makefile.in) = 885fe42ecc4f5daad9204fbe415eb77b99f2399d
+SHA1 (enca-1.15.tar.bz2) = cec4509b662ded6651c3c5e10d1c6f0067909b24
+RMD160 (enca-1.15.tar.bz2) = 6f25cb333e35eb339403a983f05c4fc90e82874d
+Size (enca-1.15.tar.bz2) = 536627 bytes

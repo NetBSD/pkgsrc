@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2013/05/10 05:27:38 riastradh Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/11/13 19:44:03 wiz Exp $
 
-DISTNAME=		enca-1.14
+DISTNAME=		enca-1.15
 CATEGORIES=		converters
 MASTER_SITES=		http://dl.cihar.com/enca/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,15 +15,5 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/enca.pc.in
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		ac_cv_file__dev_random=yes
-CONFIGURE_ENV+=		ac_cv_file__dev_urandom=yes
-CONFIGURE_ENV+=		ac_cv_file__dev_srandom=no
-CONFIGURE_ENV+=		ac_cv_file__dev_arandom=no
-CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
-.endif
 
 .include "../../mk/bsd.pkg.mk"
