@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4133 2013/11/14 08:18:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4134 2013/11/14 13:17:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5991,3 +5991,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/xmlrpc-c to 1.25.26 [adam 2013-11-14]
 	Updated emulators/mame to 0.151 [wiz 2013-11-14]
 	Updated emulators/mess to 0.151 [wiz 2013-11-14]
+	Updated devel/xulrunner17 to 17.0.10 [ryoon 2013-11-14]
+	Updated www/firefox17 to 17.0.10 [ryoon 2013-11-14]
