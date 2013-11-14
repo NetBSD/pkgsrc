@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/09/30 20:03:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/11/14 08:18:21 wiz Exp $
 bin/castool
 bin/floptool
 bin/imgtool
@@ -115,7 +115,9 @@ share/mess/hash/hx20_flop.xml
 share/mess/hash/ibm5140.xml
 share/mess/hash/ibm5150.xml
 share/mess/hash/ibm5150_cass.xml
+share/mess/hash/ibm5160_flop.xml
 share/mess/hash/ibm5170.xml
+share/mess/hash/ibm5170_cdrom.xml
 share/mess/hash/ibmpcjr_cart.xml
 share/mess/hash/ibmpcjr_flop.xml
 share/mess/hash/interact.xml
