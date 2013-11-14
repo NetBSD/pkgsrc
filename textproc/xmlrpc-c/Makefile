@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2013/09/12 18:52:54 adam Exp $
+# $NetBSD: Makefile,v 1.34 2013/11/14 08:01:11 adam Exp $
 
-DISTNAME=	xmlrpc-c-1.25.25
+DISTNAME=	xmlrpc-c-1.25.26
 # the "super stable" branch
 PKGNAME=	${DISTNAME:S/-c-/-c-ss-/}
 CATEGORIES=	textproc devel
