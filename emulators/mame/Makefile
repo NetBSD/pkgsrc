@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2013/10/10 14:42:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2013/11/14 08:18:21 wiz Exp $
 
-DISTNAME=	mame0150s
+DISTNAME=	mame0151s
 PKGNAME=	${DISTNAME:S/0/-0./:S/s$//}
-PKGREVISION=	1
 MASTER_SITES=	http://mamedev.org/downloader.php?file=releases/
 
 COMMENT=	Multiple Arcade Machine Emulator
@@ -36,6 +35,6 @@ do-install:
 	do \
 		${INSTALL_DATA} ${WRKSRC}/src/osd/sdl/man/"$$man" ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/src/osd/sdl/man/mame.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6; \
+	${INSTALL_DATA} ${WRKSRC}/src/osd/sdl/man/mame.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
 
 .include "Makefile.common"
