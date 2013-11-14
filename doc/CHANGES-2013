@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4136 2013/11/14 15:06:07 asau Exp $
+$NetBSD: CHANGES-2013,v 1.4137 2013/11/14 17:04:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5995,3 +5995,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox17 to 17.0.10 [ryoon 2013-11-14]
 	Updated www/firefox17-l10n to 17.0.10 [ryoon 2013-11-14]
 	Added math/ipopt version 3.11.5 [asau 2013-11-14]
+	Updated www/ap2-perl to 2.0.8nb1 [adam 2013-11-14]
