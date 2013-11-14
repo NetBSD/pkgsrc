@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/14 21:26:23 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2013/11/14 06:13:07 minskim Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	texlive-tetex-2011
@@ -21,13 +21,5 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/tetex
 
-FILES_SUBST+=	UPDMAP_SYS=${PREFIX}/bin/updmap-sys
-
-INSTALLATION_DIRS+=	share/texmf/web2c
-
-TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
-
 .include "../../print/kpathsea/buildlink3.mk"
-.include "../../print/kpathsea/texmf.mk"
 .include "../../mk/bsd.pkg.mk"
