@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4128 2013/11/13 19:48:43 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4129 2013/11/14 06:32:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5985,3 +5985,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/libdvbpsi to 1.1.2 [wiz 2013-11-13]
 	Updated time/py-pytz to 2013.8 [wiz 2013-11-13]
 	Updated misc/py-anki2 to 2.0.17 [wiz 2013-11-13]
+	Updated print/tex-dvipdfmx-def to 3.3 [minskim 2013-11-14]
