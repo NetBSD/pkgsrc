@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4130 2013/11/14 07:40:51 is Exp $
+$NetBSD: CHANGES-2013,v 1.4131 2013/11/14 08:02:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5987,3 +5987,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-anki2 to 2.0.17 [wiz 2013-11-13]
 	Updated www/yaws to 1.97 [is 2013-11-13]
 	Updated print/tex-dvipdfmx-def to 3.3 [minskim 2013-11-14]
+	Updated devel/cmake to 2.8.12.1 [adam 2013-11-14]
+	Updated textproc/xmlrpc-c to 1.25.26 [adam 2013-11-14]
