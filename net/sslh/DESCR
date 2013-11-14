@@ -1,19 +1,15 @@
-sslh lets one accept both HTTPS and SSH connections on
-the same port. It makes it possible to connect to an SSH
-server on port 443 (e.g. from inside a corporate firewall,
-which almost never block port 443) while still serving HTTPS
-on that port.
+Sslh accepts connections on specified ports, and forwards
+them further based on tests performed on the first data
+packet sent by the remote client.
 
-The idea is to have sslh listen to the external 443 port,
-accept the incoming connections, work out what type of
-connection it is, and then fordward to the appropriate
-server.
+Probes for HTTP, SSL, SSH, OpenVPN, tinc, XMPP are
+implemented, and any other protocol that can be tested using
+a regular expression, can be recognised. A typical use case
+is to allow serving several services on port 443 (e.g. to
+connect to ssh from inside a corporate firewall, which
+almost never block port 443) while still serving HTTPS on
+that port.
 
-The protocol detection is made based on a small difference
-between SSL and SSH: an SSL client connecting to a server
-speaks first, whereas an SSH client expects the SSH server
-to speak first (announcing itself with a banner). sslh
-waits for some time for the incoming connection to send data.
-If it does before the timeout occurs, it is supposed to be
-an SSL connection. Otherwise, it is supposed to be an SSH
-connection.
+Hence sslh acts as a protocol demultiplexer, or a
+switchboard. Its name comes from its original function to
+serve SSH and HTTPS on the same port.
