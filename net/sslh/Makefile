@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2013/11/08 13:33:55 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/14 08:01:01 apb Exp $
 #
 
 DISTNAME=	sslh-1.15
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.rutschle.net/tech/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rutschle.net/tech/sslh.shtml
-COMMENT=	Multiplex ssl and ssh connections on the same port
+COMMENT=	Multiplex ssl, ssh, and other connections on the same port
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake gzip pod2man
