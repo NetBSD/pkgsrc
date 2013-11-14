@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2013/11/14 15:04:12 asau Exp $
+
+SHA1 (Ipopt-3.11.5.tgz) = 66e3ae03179ba7541a478d185b256f336159fc6d
+RMD160 (Ipopt-3.11.5.tgz) = 9fc02e86f9d69a85e77c492ade30df23dba8afc7
+Size (Ipopt-3.11.5.tgz) = 4743371 bytes
