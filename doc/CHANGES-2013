@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4138 2013/11/14 21:27:18 joerg Exp $
+$NetBSD: CHANGES-2013,v 1.4139 2013/11/14 23:09:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5997,3 +5997,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added math/ipopt version 3.11.5 [asau 2013-11-14]
 	Updated www/ap2-perl to 2.0.8nb1 [adam 2013-11-14]
 	Added www/py-django14 version 1.4.10 [joerg 2013-11-14]
+	Updated graphics/png to 1.6.7 [wiz 2013-11-14]
