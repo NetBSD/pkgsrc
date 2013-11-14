@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4132 2013/11/14 08:18:39 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4133 2013/11/14 08:18:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5990,3 +5990,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/cmake to 2.8.12.1 [adam 2013-11-14]
 	Updated textproc/xmlrpc-c to 1.25.26 [adam 2013-11-14]
 	Updated emulators/mame to 0.151 [wiz 2013-11-14]
+	Updated emulators/mess to 0.151 [wiz 2013-11-14]
