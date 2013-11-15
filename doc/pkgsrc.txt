@@ -1026,7 +1026,7 @@ permissions like setuid are ignored).
 
 Installing the bootstrap kit from source should be as simple as:
 
-# env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc
+# env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc
 # cd pkgsrc/bootstrap
 # ./bootstrap
 
