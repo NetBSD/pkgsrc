@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4139 2013/11/14 23:09:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4140 2013/11/15 05:14:08 agc Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5998,3 +5998,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ap2-perl to 2.0.8nb1 [adam 2013-11-14]
 	Added www/py-django14 version 1.4.10 [joerg 2013-11-14]
 	Updated graphics/png to 1.6.7 [wiz 2013-11-14]
+	Added security/smaSHeM version 0.4 [agc 2013-11-14]
