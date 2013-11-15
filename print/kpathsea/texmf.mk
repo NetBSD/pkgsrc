@@ -1,4 +1,4 @@
-# $NetBSD: texmf.mk,v 1.6 2012/10/14 18:12:37 minskim Exp $
+# $NetBSD: texmf.mk,v 1.7 2013/11/15 06:08:51 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It rebuilds the ls-R databases at
@@ -45,7 +45,7 @@ DEINSTALL_TEMPLATES+=	../../print/kpathsea/files/config-deinstall.tmpl
 .  include "../../print/tex-tetex/format.mk"
 .endif
 .if !empty(TEX_HYPHEN_DAT) || !empty(TEX_HYPHEN_DEF)
-.  include "../../print/texlive-tetex/hyphen.mk"
+.  include "../../print/tex-tetex/hyphen.mk"
 .endif
 .if !empty(TEX_KANJIMAP_FILES) || !empty(TEX_MAP_FILES) \
 	|| !empty(TEX_MIXEDMAP_FILES)
