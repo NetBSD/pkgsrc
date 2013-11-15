@@ -1,7 +1,27 @@
-$NetBSD: patch-dg,v 1.6 2013/05/29 11:11:12 wiz Exp $
---- mono/metadata/threads.c.orig	2012-12-05 17:44:34.000000000 +0000
+$NetBSD: patch-dg,v 1.7 2013/11/15 14:01:45 joerg Exp $
+
+--- mono/metadata/threads.c.orig	2013-04-25 09:07:19.000000000 +0000
 +++ mono/metadata/threads.c
-@@ -826,8 +826,16 @@ mono_thread_get_stack_bounds (guint8 **s
+@@ -86,6 +86,8 @@ size_t pthread_get_stacksize_np(pthread_
+ #   endif
+ #endif
+ 
++static int tls_key_initialised;
++
+ struct StartInfo 
+ {
+ 	guint32 (*func)(void *);
+@@ -634,7 +636,8 @@ static guint32 WINAPI start_wrapper_inte
+ 	 * Boehm GC - the io-layer keeps a GC-visible hash of pointers
+ 	 * to TLS data.)
+ 	 */
+-	SET_CURRENT_OBJECT (NULL);
++	if (tls_key_initialised)
++		SET_CURRENT_OBJECT (NULL);
+ 
+ 	return(0);
+ }
+@@ -881,8 +884,16 @@ mono_thread_get_stack_bounds (guint8 **s
  #    if !defined(__OpenBSD__)
  	pthread_attr_getstack (&attr, (void**)staddr, stsize);
  #    endif
@@ -18,3 +38,19 @@ $NetBSD: patch-dg,v 1.6 2013/05/29 11:11:12 wiz Exp $
  #  endif
  
  	pthread_attr_destroy (&attr);
+@@ -2573,6 +2584,7 @@ void mono_thread_init (MonoThreadStartCB
+ 
+ 	MONO_FAST_TLS_INIT (tls_current_object);
+ 	mono_native_tls_alloc (&current_object_key, NULL);
++	tls_key_initialised = 1;
+ 	THREAD_DEBUG (g_message ("%s: Allocated current_object_key %d", __func__, current_object_key));
+ 
+ 	mono_thread_start_cb = start_cb;
+@@ -2616,6 +2628,7 @@ void mono_thread_cleanup (void)
+ #endif
+ 
+ 	mono_native_tls_free (current_object_key);
++	tls_key_initialised = 0;
+ }
+ 
+ void
