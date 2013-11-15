@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.485 2013/10/29 23:41:15 pettai Exp $
+# $NetBSD: Makefile,v 1.486 2013/11/15 05:12:59 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -391,6 +391,7 @@ SUBDIR+=	sign
 SUBDIR+=	skey
 SUBDIR+=	sks
 SUBDIR+=	sleuthkit
+SUBDIR+=	smaSHeM
 SUBDIR+=	smtpd
 SUBDIR+=	sniff
 SUBDIR+=	snortsnarf
