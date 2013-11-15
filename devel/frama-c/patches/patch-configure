@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/11/15 14:10:29 wiz Exp $
+
+Fix GNU make version comparison logic.
+
+--- configure.orig	2013-11-15 14:08:17.000000000 +0000
++++ configure
+@@ -2617,7 +2617,7 @@ MAKE_DISTRIB=`$MAKE -v | sed -n -e 's/\(
+ MAKE_MAJOR=`$MAKE -v | sed -n  -f bin/sed_get_make_major `
+ MAKE_MINOR=`$MAKE -v | sed -n -f bin/sed_get_make_minor `
+ echo $ECHO_N "make version is $MAKE_DISTRIB Make $MAKE_MAJOR.$MAKE_MINOR: $ECHO_C"
+-if test "$MAKE_DISTRIB" != GNU -o "$MAKE_MAJOR" -lt 3 -o "$MAKE_MINOR" -lt 81;
++if test "$MAKE_DISTRIB" != GNU -o "$MAKE_MAJOR" -lt 3 -o "$MAKE_MAJOR" -eq 3 -a "$MAKE_MINOR" -lt 81;
+ then
+    echo "${ECHO_T}"
+    as_fn_error $? "unsupported version; GNU Make version 3.81
