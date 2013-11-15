@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/29 16:41:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/15 16:33:14 taca Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -101,6 +101,7 @@ include/php/ext/pcre/pcrelib/pcre_internal.h
 include/php/ext/pcre/pcrelib/pcreposix.h
 include/php/ext/pcre/pcrelib/ucp.h
 include/php/ext/pcre/php_pcre.h
+include/php/ext/phar/php_phar.h
 include/php/ext/session/mod_files.h
 include/php/ext/session/mod_user.h
 include/php/ext/session/php_session.h
