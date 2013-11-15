@@ -1,9 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2012/11/21 22:24:27 abs Exp $
+$NetBSD: patch-configure,v 1.2 2013/11/15 14:03:11 joerg Exp $
 
 * Like most other Operating Systems, NetBSD needs -fPIC with -DPIC
+* Don't add GCC specific optimization hacks to non-GCC compilers.
 
 --- configure.orig	2012-11-15 03:05:11.000000000 +0000
 +++ configure
+@@ -74,7 +74,7 @@ build_config()
+ 		[ "$amd64" = "true" ] && echo "ARCH_X86_64=1" && echo "CFLAGS+=-DARCH_X86_64"
+ 		[ "$arch" != "" ] && echo "TARGETARCH=-march=$arch"
+ 		[ "$cpu" != "" ] && echo "TARGETCPU=-mcpu=$cpu"
+-		if [ "$optimisations" = "true" ]
++		if [ "$optimisations" = "true" ] && $CC --version 2> /dev/null | fgrep -q gcc
+ 		then
+ 			echo "OPTIMISATIONS=-O2 -pipe"
+ 			# Since gcc 4.6, this optimization enabled with -O1 causes filter_line_sse2 to crash.
 @@ -111,7 +111,7 @@ build_config()
  		NetBSD)
  		[ "$optimisations" = "true" ] &&
