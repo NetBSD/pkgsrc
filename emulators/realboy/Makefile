@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/13 10:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/15 14:58:07 wiz Exp $
 
-DISTNAME=	realboy-0.1.3
+DISTNAME=	realboy-0.1.4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=realboy/}
 EXTRACT_SUFX=	.tar.bz2
