@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/07/08 22:32:15 xtraeme Exp $
+$NetBSD: distinfo,v 1.5 2013/11/15 19:29:10 shattered Exp $
 
-SHA1 (mailgraph-1.13.tar.gz) = 12a7aaca0c7819b2d617485a13832e4dcd706570
-RMD160 (mailgraph-1.13.tar.gz) = 8c4e393e548b99a49da4f35c8b8a104d5bf14339
-Size (mailgraph-1.13.tar.gz) = 21322 bytes
+SHA1 (mailgraph-1.14.tar.gz) = 6a2ead01ffd8fe49e520057daf97072e106b6c69
+RMD160 (mailgraph-1.14.tar.gz) = 928969a4bdc3b9ff39a7fe16b98789f07b02e5f8
+Size (mailgraph-1.14.tar.gz) = 22014 bytes
