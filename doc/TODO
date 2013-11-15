@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12723 2013/11/15 08:55:25 wiz Exp $
+$NetBSD: TODO,v 1.12724 2013/11/15 19:34:15 shattered Exp $
 
 Suggested new packages
 ======================
@@ -767,7 +767,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o maildrop-2.6.0
-	o mailgraph-1.14
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
@@ -1077,7 +1076,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
-	o vttest-20130818
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
