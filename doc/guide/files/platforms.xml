@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.83 2013/08/22 13:54:51 ryoon Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.84 2013/11/15 10:11:47 asau Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -23,7 +23,7 @@
     <para>Installing the bootstrap kit from source should be as simple as:</para>
 
     <screen>
-&rprompt; <userinput>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</userinput>
+&rprompt; <userinput>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
 &rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
 &rprompt; <userinput>./bootstrap</userinput>
     </screen>
