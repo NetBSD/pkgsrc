@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4143 2013/11/15 16:34:10 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4144 2013/11/15 19:34:15 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6002,3 +6002,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/pngcrush to 1.7.69 [adam 2013-11-15]
 	Updated emulators/realboy to 0.1.4 [wiz 2013-11-15]
 	Updated lang/php55 to 5.5.6 [taca 2013-11-15]
+	Updated mail/mailgraph to 1.14 [shattered 2013-11-15]
+	Updated misc/vttest to 20130818 [shattered 2013-11-15]
