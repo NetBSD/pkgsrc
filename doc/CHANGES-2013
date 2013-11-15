@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4142 2013/11/15 14:58:18 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4143 2013/11/15 16:34:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6001,3 +6001,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/smaSHeM version 0.4 [agc 2013-11-14]
 	Updated graphics/pngcrush to 1.7.69 [adam 2013-11-15]
 	Updated emulators/realboy to 0.1.4 [wiz 2013-11-15]
+	Updated lang/php55 to 5.5.6 [taca 2013-11-15]
