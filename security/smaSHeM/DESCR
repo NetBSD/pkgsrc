@@ -1,0 +1,17 @@
+System V shared memory segments created with shmget() are assigned an
+owner, a group and a set of permissions intended to limit access to
+the segment to designated processes only.  The owner of a shared
+memory segment can change the ownership and permissions on a segment
+after its creation using shmctl().  Any subsequent processes that wish
+to attach to the segment can only do so if they have the appropriate
+permissions.  Once attached, the process can read or write to the
+segment, as per the permissions that were set when the segment was
+created.
+
+smaSHeM takes advantage of applications that set weak permissions on
+such segments, allowing an attacker to dump or patch their contents.
+As discussed in the presentation at 44CON 2013 entitled 'I Miss LSD',
+in the case of many X11 applications it is possible to extract pixmaps
+of previously rendered GUI artifacts.  When compiled with QtCore
+linking enabled, smaSHeM aids in that process by brute forcing
+potentially valid dimensions for the raw pixmap dump.
