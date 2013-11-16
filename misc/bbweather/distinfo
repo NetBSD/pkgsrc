@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 11:02:50 agc Exp $
+$NetBSD: distinfo,v 1.8 2013/11/16 07:08:14 shattered Exp $
 
-SHA1 (bbweather-0.6.2.tar.bz2) = bdb3359876434a6d698a70a975312ca29b2116c4
-RMD160 (bbweather-0.6.2.tar.bz2) = 3a93b7597af12f4001c3b61495e93ed079867cd4
-Size (bbweather-0.6.2.tar.bz2) = 80487 bytes
+SHA1 (bbweather-0.6.3.tar.bz2) = 625c756548bd9ce1dd5cfa64838fda74545d926f
+RMD160 (bbweather-0.6.3.tar.bz2) = b216f048c91600c3eeeecf9fe68c7c1ff72e8292
+Size (bbweather-0.6.3.tar.bz2) = 80631 bytes
