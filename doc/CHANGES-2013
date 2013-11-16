@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4150 2013/11/16 13:12:56 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4151 2013/11/16 13:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6018,3 +6018,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/mediawiki to 1.21.3 [wen 2013-11-16]
 	Updated www/moodle to 2.5.3 [wen 2013-11-16]
 	Updated devel/p5-Mouse to 2.0.0 [wen 2013-11-16]
+	Updated x11/libdrm to 2.4.48 [wiz 2013-11-16]
