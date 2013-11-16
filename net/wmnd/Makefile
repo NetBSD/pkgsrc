@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 17:19:19 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/16 07:17:24 shattered Exp $
 
-DISTNAME=	wmnd-0.4.12
-PKGREVISION=	1
+DISTNAME=	wmnd-0.4.17
 CATEGORIES=	net x11
-MASTER_SITES=	# ftp://ftp.yuv.info/pub/wmnd/releases/
+MASTER_SITES=	http://www.thregr.org/~wavexx/software/wmnd/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.yuv.info/wmnd/
+HOMEPAGE=	http://www.thregr.org/~wavexx/software/wmnd/
 COMMENT=	Dockable network monitor
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
