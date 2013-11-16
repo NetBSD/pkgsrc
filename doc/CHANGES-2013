@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4154 2013/11/16 20:35:13 asau Exp $
+$NetBSD: CHANGES-2013,v 1.4155 2013/11/16 21:05:46 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6023,3 +6023,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/atf-libs to 0.18 [jmmv 2013-11-16]
 	Updated devel/atf to 0.18 [jmmv 2013-11-16]
 	Updated lang/squeak to 4.4 [asau 2013-11-16]
+	Added devel/tcl-tclOO version 1.0.1 [asau 2013-11-16]
