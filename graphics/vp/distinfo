@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2013/11/16 06:44:42 shattered Exp $
 
-SHA1 (vp-1.5.tar.gz) = 881b8c2b371ea21830180016cdfd421017c0bcaa
-RMD160 (vp-1.5.tar.gz) = e07ada07c7703e027326c09f5b1656cb32cd0017
-Size (vp-1.5.tar.gz) = 161899 bytes
+SHA1 (vp-1.8.tar.gz) = 41afc627c94e6199b9ab745aa71486a1384bf51a
+RMD160 (vp-1.8.tar.gz) = b6dd75739fbeb75ea4882c46c9dc128ae0138dff
+Size (vp-1.8.tar.gz) = 140516 bytes
