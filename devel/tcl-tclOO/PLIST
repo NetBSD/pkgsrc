@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2013/11/16 21:01:26 asau Exp $
+include/tclOO.h
+include/tclOODecls.h
+include/tclOOInt.h
+include/tclOOIntDecls.h
+lib/TclOO${PKGVERSION}/libTclOO${PKGVERSION}.so
+lib/TclOO${PKGVERSION}/libTclOOstub${PKGVERSION}.a
+lib/TclOO${PKGVERSION}/pkgIndex.tcl
+lib/TclOO${PKGVERSION}/tclooConfig.sh
+man/man3/Class.3
+man/man3/Method.3
+man/man3/OOInitStubs.3
+man/mann/copy.n
+man/mann/define.n
+man/mann/my.n
+man/mann/next.n
+man/mann/object.n
+man/mann/ooInfo.n
+man/mann/self.n
+man/mann/tclOO-class.n
