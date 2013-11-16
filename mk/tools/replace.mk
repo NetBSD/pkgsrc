@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.264 2013/11/16 07:45:26 shattered Exp $
+# $NetBSD: replace.mk,v 1.265 2013/11/16 07:58:00 shattered Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -588,7 +588,7 @@ TOOLS_PATH.lha=			${TOOLS_PREFIX.lha}/bin/lha
 .  if !empty(PKGPATH:Marchivers/lzip)
 MAKEFLAGS+=			TOOLS_IGNORE.lzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzip:M[yY][eE][sS])
-TOOLS_DEPENDS.lzcat?=		lzip>=1.14:../../archivers/lzip
+TOOLS_DEPENDS.lzip?=		lzip>=1.14:../../archivers/lzip
 TOOLS_CREATE+=			lzip
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lzip=lzip
 TOOLS_PATH.lzip=		${TOOLS_PREFIX.lzip}/bin/lzip
