@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12724 2013/11/15 19:34:15 shattered Exp $
+$NetBSD: TODO,v 1.12725 2013/11/16 08:07:36 shattered Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dcc-1.3.147 [ask OWNER first]
 	o dd_rescue-1.40
 	o ddclient-3.7.3
-	o ddrescue-1.17
 	o defendguin-0.0.11
 	o delegate-9.9.7
 	o denemo-1.0.8
@@ -1075,7 +1074,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vlc2-2.1.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vp-1.6
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
@@ -1092,7 +1090,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
-	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
 	o worker-3.1.0
@@ -1106,7 +1103,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xboard-4.7.0
-	o xchm-1.23
 	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
 	o xentools43-4.3.0
@@ -1138,7 +1134,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmon-1.5.6
-	o xmp-4.2.0
 	o xnap-2.5r3
 	o xorp-1.8.5
 	o xosview-1.15

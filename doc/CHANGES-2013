@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4145 2013/11/16 07:45:00 mef Exp $
+$NetBSD: CHANGES-2013,v 1.4146 2013/11/16 08:07:36 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6004,6 +6004,13 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php55 to 5.5.6 [taca 2013-11-15]
 	Updated mail/mailgraph to 1.14 [shattered 2013-11-15]
 	Updated misc/vttest to 20130818 [shattered 2013-11-15]
+	Updated misc/xchm to 1.23 [shattered 2013-11-16]
+	Updated graphics/vp to 1.8 [shattered 2013-11-16]
+	Updated net/wmnd to 0.4.17 [shattered 2013-11-16]
+	Updated devel/reposurgeon to 2.41 [shattered 2013-11-16]
+	Added audio/libxmp version 4.2.0 [shattered 2013-11-16]
+	Updated audio/xmp to 4.0.6 [shattered 2013-11-16]
+	Updated sysutils/ddrescue to 1.17 [shattered 2013-11-16]
 	Renamed cross/nios2-binutils to cross/nios2-binutils220 [mef 2013-11-16]
 	Renamed cross/nios2-gcc to cross/nios2-gcc3 [mef 2013-11-16]
 	Added cross/nios2-gcc41 version 4.1.2 [mef 2013-11-16]
