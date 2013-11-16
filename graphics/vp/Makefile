@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2012/10/06 14:11:24 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/11/16 06:44:42 shattered Exp $
 #
 
-DISTNAME=		vp-1.5
-PKGREVISION=		12
+DISTNAME=		vp-1.8
 CATEGORIES=		graphics
-MASTER_SITES=		http://math.smsu.edu/~erik/files/
+MASTER_SITES=		http://elfga.com/~erik/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://math.smsu.edu/~erik/software.php?id=63
+HOMEPAGE=		http://elfga.com/~erik/
 COMMENT=		Image viewer
 
 USE_LIBTOOL=		yes
