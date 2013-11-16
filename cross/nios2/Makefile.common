@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.1 2013/11/03 10:16:03 mef Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/11/16 07:41:00 mef Exp $
 #
-# used by cross/nios2-binutils/Makefile
-# used by cross/nios2-gcc/Makefile
+# used by cross/nios2-binutils220/Makefile
+# used by cross/nios2-gcc41/Makefile
 
 # sentinel to avoid duplicate
 .if !defined(NIOS2_MAKEFILECOMMON)
 NIOS2_MAKEFILECOMMON=  # yes
 
 MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
-DISTNAME=		nios2_gnu_gcc3_10.0
-#			nios2_gnu_gcc3_10.1.tgz are the exactly same, see MD5
+DISTNAME=		nios2_gnu_gcc4_13.0
+EXTRACT_SUFX=		.gz
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
