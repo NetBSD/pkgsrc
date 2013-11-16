@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.15 2013/02/28 18:26:22 jperkin Exp $
+# $NetBSD: extract,v 1.16 2013/11/16 07:45:26 shattered Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -108,6 +108,7 @@ set -u		# treat undefined variables as errors
 : ${GEM:="gem unpack"}
 : ${GZCAT:="gzip -cd"}
 : ${LHA:=lha}
+: ${LZCAT:="lzip -cd"}
 : ${MKDIR:=mkdir}
 : ${PAX:=pax}
 : ${RM:=rm}
@@ -184,6 +185,7 @@ case "$distfile" in
 *.gz|*.tgz|*.z)			_cformat=gzip ;;
 *.7z)				_cformat=7z ;;
 *.bz2|*.tbz|*.tbz2|*.bz)	_cformat=bzip ;;
+*.lz)				_cformat=lzip ;;
 *.lzma)				_cformat=lzma ;;
 *.xz)				_cformat=xz ;;
 *.Z)				_cformat=compress ;;
@@ -198,6 +200,7 @@ case "$cformat" in
 gzip|compress)	decompress_cat="${GZCAT}" ;;
 7z)		decompress_cat="${P7ZA_SO}" ;;
 bzip)		decompress_cat="${BZCAT}" ;;
+lzip)		decompress_cat="${LZCAT}" ;;
 lzma)		decompress_cat="${XZCAT}" ;;
 xz)		decompress_cat="${XZCAT}" ;;
 none)		decompress_cat="${CAT}" ;;
@@ -206,7 +209,7 @@ esac
 
 # Derive the format of the archive based on the file extension.
 case "$distfile" in
-*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z)
+*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.lz|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z)
 		_format=tar ;;
 *.cpio|*.cpio.gz|*.cpio.bz2)
 		_format=cpio ;;
