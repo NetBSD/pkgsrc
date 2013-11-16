@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2013/06/09 07:26:32 ryoon Exp $
+$NetBSD: distinfo,v 1.28 2013/11/16 06:37:52 shattered Exp $
 
-SHA1 (xchm-1.22.tar.gz) = 794a898161309babb24da3b669ec04f18160c8ef
-RMD160 (xchm-1.22.tar.gz) = 28727c08049fb0a338433ce9ae1989a61e7a1884
-Size (xchm-1.22.tar.gz) = 416992 bytes
+SHA1 (xchm-1.23.tar.gz) = d0de589775164ee8123b25082c54587f0cc72e1d
+RMD160 (xchm-1.23.tar.gz) = 769f9cf72d9bb4bd246809edd473d161ed78dba8
+Size (xchm-1.23.tar.gz) = 474274 bytes
