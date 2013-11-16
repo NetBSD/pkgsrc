@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/09/07 14:49:42 wen Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/11/16 12:00:27 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/.jshintignore
 share/mediawiki/.jshintrc
@@ -177,6 +177,8 @@ share/mediawiki/extensions/Renameuser/cleanupArchiveUserText.php
 share/mediawiki/extensions/Renameuser/hooks.txt
 share/mediawiki/extensions/Renameuser/renameUserCleanup.php
 share/mediawiki/extensions/Renameuser/specials/SpecialRenameuser.php
+share/mediawiki/extensions/SimpleAntiSpam/SimpleAntiSpam.i18n.php
+share/mediawiki/extensions/SimpleAntiSpam/SimpleAntiSpam.php
 share/mediawiki/extensions/SpamBlacklist/BaseBlacklist.php
 share/mediawiki/extensions/SpamBlacklist/EmailBlacklist.php
 share/mediawiki/extensions/SpamBlacklist/README
