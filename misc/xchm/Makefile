@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2013/10/10 14:42:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2013/11/16 06:37:52 shattered Exp $
 
-DISTNAME=	xchm-1.22
-PKGREVISION=	2
+DISTNAME=	xchm-1.23
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xchm/}
 
