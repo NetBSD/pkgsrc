@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.263 2013/11/06 13:12:50 obache Exp $
+# $NetBSD: replace.mk,v 1.264 2013/11/16 07:45:26 shattered Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -581,6 +581,17 @@ TOOLS_DEPENDS.lha?=		lha>=114.9:../../archivers/lha
 TOOLS_CREATE+=			lha
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lha=lha
 TOOLS_PATH.lha=			${TOOLS_PREFIX.lha}/bin/lha
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.lzip) && !empty(_USE_TOOLS:Mlzip)
+.  if !empty(PKGPATH:Marchivers/lzip)
+MAKEFLAGS+=			TOOLS_IGNORE.lzip=
+.  elif !empty(_TOOLS_USE_PKGSRC.lzip:M[yY][eE][sS])
+TOOLS_DEPENDS.lzcat?=		lzip>=1.14:../../archivers/lzip
+TOOLS_CREATE+=			lzip
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lzip=lzip
+TOOLS_PATH.lzip=		${TOOLS_PREFIX.lzip}/bin/lzip
 .  endif
 .endif
 
