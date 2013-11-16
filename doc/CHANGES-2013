@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4144 2013/11/15 19:34:15 shattered Exp $
+$NetBSD: CHANGES-2013,v 1.4145 2013/11/16 07:45:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6004,3 +6004,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php55 to 5.5.6 [taca 2013-11-15]
 	Updated mail/mailgraph to 1.14 [shattered 2013-11-15]
 	Updated misc/vttest to 20130818 [shattered 2013-11-15]
+	Renamed cross/nios2-binutils to cross/nios2-binutils220 [mef 2013-11-16]
+	Renamed cross/nios2-gcc to cross/nios2-gcc3 [mef 2013-11-16]
+	Added cross/nios2-gcc41 version 4.1.2 [mef 2013-11-16]
