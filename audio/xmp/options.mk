@@ -1,6 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2011/04/05 05:22:52 rxg Exp $
+# $NetBSD: options.mk,v 1.3 2013/11/16 07:41:02 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmp
+# XXX configure.ac is broken, you cannot disable oss and alsa at the moment.
 PKG_SUPPORTED_OPTIONS=	alsa arts esound nas oss pulseaudio
 
 .include "../../mk/bsd.prefs.mk"
@@ -42,10 +43,12 @@ CONFIGURE_ARGS+=--enable-nas
 
 # Oss support
 .if !empty(PKG_OPTIONS:Moss)
-# empty
+.  include "../../mk/oss.buildlink3.mk"
+LIBS+=		${LIBOSSAUDIO}
+CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
+CPPFLAGS+=	-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 .else
 CONFIGURE_ARGS+=--disable-oss
-CONFIGURE_ARGS+=--disable-oss-sequencer
 .endif
 
 # Pulseaudio support

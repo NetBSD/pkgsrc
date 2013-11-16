@@ -1,19 +1,28 @@
-$NetBSD: patch-etc_Makefile,v 1.1 2011/04/05 05:22:52 rxg Exp $
+$NetBSD: patch-etc_Makefile,v 1.2 2013/11/16 07:41:02 shattered Exp $
 
---- etc/Makefile.orig	2010-01-09 22:34:20.000000000 +0000
-+++ etc/Makefile
-@@ -4,10 +4,10 @@ ETC_PATH	= etc
+--- src/Makefile.in.orig	2013-05-19 14:44:09.000000000 +0000
++++ src/Makefile.in
+@@ -509,18 +509,18 @@ uninstall-man1:
+ 	dir='$(DESTDIR)$(man1dir)'; $(am__uninstall_files_from_dir)
+ install-pkgsysconfDATA: $(pkgsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(pkgsysconf_DATA)'; test -n "$(pkgsysconfdir)" || list=; \
++	@list='$(pkgsysconf_DATA)'; test -n "$(datarootdir)/examples/xmp" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgsysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pkgsysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(datarootdir)/examples/xmp/'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(datarootdir)/examples/xmp/" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgsysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgsysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datarootdir)/examples/xmp/'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datarootdir)/examples/xmp/" || exit $$?; \
+ 	done
  
- install-etc:
- 	@[ -d $(DESTDIR)$(SYSCONFDIR) ] || mkdir -p $(DESTDIR)$(SYSCONFDIR)
--	@echo "Installing xmp.conf in $(SYSCONFDIR)"
--	@$(INSTALL_DATA) $(ETC_PATH)/xmp.conf $(DESTDIR)$(SYSCONFDIR)/
--	@echo "Installing modules.conf in $(SYSCONFDIR)"
--	@$(INSTALL_DATA) $(ETC_PATH)/modules.conf $(DESTDIR)$(SYSCONFDIR)/
-+	@echo "Installing xmp.conf in ${DESTDIR}$(datarootdir)/examples/xmp"
-+	@$(INSTALL_DATA) $(ETC_PATH)/xmp.conf $(DESTDIR)$(datarootdir)/examples/xmp/
-+	@echo "Installing modules.conf in ${DESTDIR}$(datarootdir)/examples/xmp"
-+	@$(INSTALL_DATA) $(ETC_PATH)/modules.conf $(DESTDIR)$(datarootdir)/examples/xmp/
- 
- dist-etc:
- 	mkdir -p $(DIST)/$(ETC_PATH)
+ uninstall-pkgsysconfDATA:
