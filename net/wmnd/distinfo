@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/04/29 10:55:55 rpaulo Exp $
+$NetBSD: distinfo,v 1.4 2013/11/16 07:17:24 shattered Exp $
 
-SHA1 (wmnd-0.4.12/wmnd-0.4.12.tar.gz) = 61824a4159a352a6251145f86ad347381ded2035
-RMD160 (wmnd-0.4.12/wmnd-0.4.12.tar.gz) = 82b68cdb0011bc51f7c3ecc8bce64761f2a23ce7
-Size (wmnd-0.4.12/wmnd-0.4.12.tar.gz) = 167646 bytes
+SHA1 (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = 6e1ff0b83ab24bbe0158fa41073c49731eab5381
+RMD160 (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = fd99fb25d586a597fafa90fe95b9ae211020a877
+Size (wmnd-0.4.17/wmnd-0.4.17.tar.gz) = 191089 bytes
