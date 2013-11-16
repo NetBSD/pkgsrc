@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/21 13:02:24 rpaulo Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/16 07:17:24 shattered Exp $
 bin/wmnd
 man/man1/wmnd.1
-share/wmndrc
+share/doc/wmnd/examples/wmndrc
