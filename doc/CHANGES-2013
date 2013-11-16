@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4147 2013/11/16 09:45:58 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4148 2013/11/16 12:01:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Renamed cross/nios2-gcc to cross/nios2-gcc3 [mef 2013-11-16]
 	Added cross/nios2-gcc41 version 4.1.2 [mef 2013-11-16]
 	Updated lang/php54 to 5.4.22 [taca 2013-11-16]
+	Updated www/mediawiki to 1.21.3 [wen 2013-11-16]
