@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.19 2013/06/14 15:09:47 tron Exp $
+# $NetBSD: checksum.mk,v 1.20 2013/11/16 15:29:39 jakllsch Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -122,5 +122,5 @@ depends-checksum:
 	while read dir; do                                              \
 		${ECHO} "===> Checksumming for $${dir}" &&              \
 		cd ${.CURDIR}/../../$$dir &&                            \
-		${RECURSIVE_MAKE} ${MAKEFLAGS} checksum;   		\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} checksum || exit 1;	\
 	done
