@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/06/09 07:26:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/11/16 06:37:52 shattered Exp $
 bin/xchm
 share/locale/be/LC_MESSAGES/xchm.mo
 share/locale/bg/LC_MESSAGES/xchm.mo
@@ -20,11 +20,19 @@ share/locale/sv/LC_MESSAGES/xchm.mo
 share/locale/uk/LC_MESSAGES/xchm.mo
 share/locale/zh_CN/LC_MESSAGES/xchm.mo
 share/locale/zh_TW/LC_MESSAGES/xchm.mo
+share/pixmaps/xchm-128.png
 share/pixmaps/xchm-128.xpm
+share/pixmaps/xchm-16.png
 share/pixmaps/xchm-16.xpm
+share/pixmaps/xchm-32.png
 share/pixmaps/xchm-32.xpm
+share/pixmaps/xchm-48.png
 share/pixmaps/xchm-48.xpm
+share/pixmaps/xchmdoc-128.png
 share/pixmaps/xchmdoc-128.xpm
+share/pixmaps/xchmdoc-16.png
 share/pixmaps/xchmdoc-16.xpm
+share/pixmaps/xchmdoc-32.png
 share/pixmaps/xchmdoc-32.xpm
+share/pixmaps/xchmdoc-48.png
 share/pixmaps/xchmdoc-48.xpm
