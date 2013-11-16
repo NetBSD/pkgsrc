@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/16 07:34:24 shattered Exp $
+include/xmp.h
+lib/libxmp.so
+lib/libxmp.so.4
+lib/libxmp.so.${PKGVERSION}
+lib/pkgconfig/libxmp.pc
