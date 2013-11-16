@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.46 2013/04/06 14:32:38 rodent Exp $
+# $NetBSD: Makefile,v 1.47 2013/11/16 20:34:56 asau Exp $
 #
 
-SQUEAK_VERSION=	4.3
-SQUEAK_SOURCES=	SqueakV40.sources
+SQUEAK_VERSION=	4.4
+SQUEAK_SOURCES=	SqueakV41.sources
 
-DISTNAME=	Squeak$(SQUEAK_VERSION)
+DISTNAME=	Squeak$(SQUEAK_VERSION)-12327
 PKGNAME=	squeak-$(SQUEAK_VERSION)
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.squeak.org/$(SQUEAK_VERSION)/
-EXTRACT_SUFX=	.zip
+EXTRACT_SUFX=	.tgz
 DISTFILES=	${DEFAULT_DISTFILES} $(SQUEAK_SOURCES).gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,8 +28,8 @@ post-extract:
 	$(GZIP_CMD) -dc $(DISTDIR)/$(DIST_SUBDIR)/$(SQUEAK_SOURCES).gz > $(WRKDIR)/$(SQUEAK_SOURCES)
 
 do-install:
-	$(INSTALL_DATA) $(WRKSRC)/$(DISTNAME:=.image) $(DESTDIR)$(PREFIX)/share/squeak/$(SQUEAK_VERSION)/
-	$(INSTALL_DATA) $(WRKSRC)/$(DISTNAME:=.changes) $(DESTDIR)$(PREFIX)/share/squeak/$(SQUEAK_VERSION)/
+	$(INSTALL_DATA) $(WRKDIR)/$(DISTNAME:=.image) $(DESTDIR)$(PREFIX)/share/squeak/$(SQUEAK_VERSION)/
+	$(INSTALL_DATA) $(WRKDIR)/$(DISTNAME:=.changes) $(DESTDIR)$(PREFIX)/share/squeak/$(SQUEAK_VERSION)/
 	$(INSTALL_DATA) $(WRKDIR)/$(SQUEAK_SOURCES) $(DESTDIR)$(PREFIX)/share/squeak/$(SQUEAK_VERSION)/$(SQUEAK_SOURCES)
 
 .include "../../mk/bsd.pkg.mk"
