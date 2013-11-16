@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2013/11/03 10:16:03 mef Exp $
+$NetBSD: patch-ab,v 1.1 2013/11/16 07:41:00 mef Exp $
 
 Based on the suggenstion from TNT (www.trans-nt.com)
 Thanks locore64 (at) alkyltechnology.com for the info.

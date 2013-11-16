@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/11/03 10:16:03 mef Exp $
+$NetBSD: distinfo,v 1.1 2013/11/16 07:41:00 mef Exp $
 
 SHA1 (nios2_gnu_gcc3_10.0.tar.gz) = db28844deb79c416d2ded7fafa9b497ff4fa355c
 RMD160 (nios2_gnu_gcc3_10.0.tar.gz) = 67f8d48eb49366154efb3fb9c177a978a7768ce5

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/03 10:16:03 mef Exp $
+@comment $NetBSD: PLIST,v 1.1 2013/11/16 07:41:00 mef Exp $
 ${NIOS2_TARGET}/bin/ar
 ${NIOS2_TARGET}/bin/as
 ${NIOS2_TARGET}/bin/ld
