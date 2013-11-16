@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/11/03 04:51:59 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2013/11/16 02:01:46 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox24
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -21,6 +21,8 @@ PKG_SUGGESTED_OPTIONS+=	webrtc
 .if !empty(PKG_OPTIONS:Malsa)
 CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
