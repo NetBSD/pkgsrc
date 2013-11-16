@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/03/03 11:19:56 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/16 07:59:27 shattered Exp $
 
-DISTNAME=	ddrescue-1.16
+DISTNAME=	ddrescue-1.17
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=ddrescue/}
+EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	ef@math.uni-bonn.de
 HOMEPAGE=	http://www.gnu.org/software/ddrescue/ddrescue.html
