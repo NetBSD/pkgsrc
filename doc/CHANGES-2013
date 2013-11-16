@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4152 2013/11/16 19:31:49 mspo Exp $
+$NetBSD: CHANGES-2013,v 1.4153 2013/11/16 20:27:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6020,3 +6020,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Mouse to 2.0.0 [wen 2013-11-16]
 	Updated x11/libdrm to 2.4.48 [wiz 2013-11-16]
 	Updated devel/snappy to 1.1.1 [mspo 2013-11-16]
+	Updated devel/atf-libs to 0.18 [jmmv 2013-11-16]
+	Updated devel/atf to 0.18 [jmmv 2013-11-16]
