@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/11/16 07:20:23 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2013/11/16 07:22:58 shattered Exp $
 
-DISTNAME=	reposurgeon-2.40
+DISTNAME=	reposurgeon-2.41
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.catb.org/~esr/reposurgeon/
 
