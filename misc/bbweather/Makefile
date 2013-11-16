@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2013/05/31 12:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2013/11/16 07:08:14 shattered Exp $
 #
 
-DISTNAME=	bbweather-0.6.2
-PKGREVISION=	3
+DISTNAME=	bbweather-0.6.3
 CATEGORIES=	misc
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.tar.bz2
