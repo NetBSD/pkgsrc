@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2010/01/16 03:52:41 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2013/11/17 17:29:18 minskim Exp $
 
---- data/dvipdfmx.cfg.orig	2009-05-18 17:42:35.000000000 -0700
+--- data/dvipdfmx.cfg.orig	2013-04-30 13:21:50.000000000 +0000
 +++ data/dvipdfmx.cfg
-@@ -134,7 +134,7 @@ P  0x003C
- %% than A0, and their llx=lly=0, you can use "-dEPSCrop" instead of
- %% "-sPAPERSIZE=a0"
+@@ -147,7 +147,7 @@ P  0x003C
+ %% kpsewhich -progname=dvipdfmx -format='other text files' dvipdfmx.cfg
+ %% and control which one is found by setting DVIPDFMXINPUTS.
  %%
--D  "ps2pdf -dCompatibilityLevel=%v -sPAPERSIZE=a0 -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode %i %o"
-+D  "@PS2PDF@ -dCompatibilityLevel=%v -sPAPERSIZE=a0 -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode %i %o"
+-D  "rungs -q -dNOPAUSE -dBATCH -dEPSCrop -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile='%o' '%i' -c quit"
++D  "@RUNGS@ -q -dNOPAUSE -dBATCH -dEPSCrop -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile='%o' '%i' -c quit"
  
- %% Frank Siegert's PStill:
- %D  "/usr/local/bin/pstill -c -o %o %i"
+ % pre-2013 invocation using -sPAPERSIZE instead of -dEPSCrop, no other changes:
+ %D  "rungs -q -dNOPAUSE -dBATCH -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile='%o' '%i' -c quit"
