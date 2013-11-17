@@ -1,8 +1,8 @@
-$NetBSD: patch-texmf_web2c_fmtutil.cnf,v 1.1 2012/10/14 21:21:34 minskim Exp $
+$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.1 2013/11/17 17:12:19 minskim Exp $
 
---- texmf/web2c/fmtutil.cnf.orig	2012-05-14 02:46:14.000000000 +0000
-+++ texmf/web2c/fmtutil.cnf
-@@ -33,94 +33,3 @@
+--- texmf-dist/web2c/fmtutil.cnf.orig	2013-06-26 01:19:15.000000000 +0000
++++ texmf-dist/web2c/fmtutil.cnf
+@@ -33,96 +33,3 @@
  # 
  # 4) usual comments start with "# ", whereas disabled configurations
  #    start with "#! " in this file.
@@ -16,21 +16,23 @@ $NetBSD: patch-texmf_web2c_fmtutil.cnf,v 1.1 2012/10/14 21:21:34 minskim Exp $
 -amstex pdftex - -translate-file=cp227.tcx *amstex.ini
 -#
 -# from context:
--cont-en pdftex cont-usr.tex -8bit *cont-en.ini
--cont-en xetex cont-usr.tex -8bit *cont-en.ini
--#! cont-de pdftex cont-usr.tex -8bit *cont-de.ini
--#! cont-fr pdftex cont-usr.tex -8bit *cont-fr.ini
--#! cont-it pdftex cont-usr.tex -8bit *cont-it.ini
--#! cont-nl pdftex cont-usr.tex -8bit *cont-nl.ini
--#! cont-ro pdftex cont-usr.tex -8bit *cont-ro.ini
+-cont-en pdftex cont-usr.tex -8bit *cont-en.mkii
+-cont-en xetex cont-usr.tex -8bit *cont-en.mkii
+-#! cont-de pdftex cont-usr.tex -8bit *cont-de.mkii
+-#! cont-fr pdftex cont-usr.tex -8bit *cont-fr.mkii
+-#! cont-it pdftex cont-usr.tex -8bit *cont-it.mkii
+-#! cont-nl pdftex cont-usr.tex -8bit *cont-nl.mkii
+-#! cont-ro pdftex cont-usr.tex -8bit *cont-ro.mkii
 -#
 -# from cslatex:
--cslatex pdftex - -etex -translate-file=cp227.tcx cslatex.ini
--pdfcslatex pdftex - -etex -translate-file=cp227.tcx cslatex.ini
+-cslatex pdftex - -etex cslatex.ini
+-pdfcslatex pdftex - -etex cslatex.ini
 -#
 -# from csplain:
--csplain pdftex - -etex -translate-file=cp227.tcx csplain.ini
--pdfcsplain pdftex - -etex -translate-file=cp227.tcx csplain.ini
+-csplain pdftex - -etex -enc csplain-utf8.ini
+-pdfcsplain pdftex - -etex -enc csplain-utf8.ini
+-pdfcsplain xetex - -etex csplain.ini
+-pdfcsplain luatex - -etex csplain.ini
 -#
 -# from eplain:
 -eplain pdftex language.dat -translate-file=cp227.tcx *eplain.ini
@@ -58,7 +60,7 @@ $NetBSD: patch-texmf_web2c_fmtutil.cnf,v 1.1 2012/10/14 21:21:34 minskim Exp $
 -utf8mex pdftex mexconf.tex -enc *utf8mex.ini
 -#
 -# from mltex:
--mllatex pdftex language.dat -translate-file=cp227.tcx -mltex mllatex.ini
+-mllatex pdftex language.dat -translate-file=cp227.tcx -mltex *mllatex.ini
 -mltex pdftex - -translate-file=cp227.tcx -mltex mltex.ini
 -#
 -# from mptopdf:
