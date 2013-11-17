@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/08 20:46:34 minskim Exp $
-share/texmf-dist/doc/fonts/amsfonts/00README
+@comment $NetBSD: PLIST,v 1.3 2013/11/17 18:49:37 minskim Exp $
+share/texmf-dist/doc/fonts/amsfonts/README
 share/texmf-dist/doc/fonts/amsfonts/OFL-FAQ.txt
 share/texmf-dist/doc/fonts/amsfonts/OFL.txt
 share/texmf-dist/doc/fonts/amsfonts/amsfndoc.pdf
