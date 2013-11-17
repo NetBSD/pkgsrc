@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/16 03:54:15 minskim Exp $
-share/texmf/xdvi/XDvi
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 16:55:27 minskim Exp $
+share/texmf-dist/xdvi/XDvi
