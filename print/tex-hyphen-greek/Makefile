@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/11/10 17:55:31 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/17 17:20:53 minskim Exp $
 
 DISTNAME=	hyphen-greek
 PKGNAME=	tex-${DISTNAME}-5
-PKGREVISION=	1
-TEXLIVE_REV=	20144
+PKGREVISION=	2
+TEXLIVE_REV=	29725
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation for Greek text
@@ -33,7 +33,6 @@ TEX_HYPHEN_LUA+=	['greek']={ \
 			  patterns='hyph-el-polyton.pat.txt', \
 			  hyphenation='', \
 			},
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
