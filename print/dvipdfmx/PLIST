@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.14 2010/01/16 03:52:40 minskim Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/11/17 17:29:18 minskim Exp $
 bin/dvipdfm
 bin/dvipdfmx
 bin/dvipdft
 bin/ebb
 bin/extractbb
-share/texmf-dist/fonts/map/glyphlist/glyphlist.txt
-share/texmf-dist/fonts/map/glyphlist/pdfglyphlist.txt
-share/texmf/dvipdfmx/dvipdfmx.cfg
-share/texmf/fonts/cmap/dvipdfmx/EUC-UCS2
-share/texmf/fonts/map/dvipdfm/dvipdfmx/cid-x.map
+man/man1/dvipdfm.1
+man/man1/dvipdft.1
+man/man1/ebb.1
+man/man1/extractbb.1
+share/texmf-dist/dvipdfmx/dvipdfmx.cfg
