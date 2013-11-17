@@ -1,19 +1,10 @@
-$NetBSD: patch-bin_updmap-sys,v 1.1 2011/11/06 08:43:28 minskim Exp $
+$NetBSD: patch-bin_updmap-sys,v 1.2 2013/11/17 17:15:43 minskim Exp $
 
---- bin/updmap-sys.orig	2011-05-20 09:20:02.000000000 +0000
+--- bin/updmap-sys.orig	2013-07-31 01:51:21.000000000 +0000
 +++ bin/updmap-sys
-@@ -20,11 +20,11 @@ export PATH
- # hack around a bug in zsh:
- test -n "${ZSH_VERSION+set}" && alias -g '${1+"$@"}'='"$@"'
+@@ -27,4 +27,4 @@ test -n "${ZSH_VERSION+set}" && alias -g
+ # TEXMFCONFIG="$c"
+ # export TEXMFVAR TEXMFCONFIG
  
--v=`kpsewhich -var-value TEXMFSYSVAR`
--c=`kpsewhich -var-value TEXMFSYSCONFIG`
-+v=`@KPSEWHICH@ -var-value TEXMFSYSVAR`
-+c=`@KPSEWHICH@ -var-value TEXMFSYSCONFIG`
- 
- TEXMFVAR="$v"
- TEXMFCONFIG="$c"
- export TEXMFVAR TEXMFCONFIG
- 
--exec updmap ${1+"$@"}
-+exec @UPDMAP@ ${1+"$@"}
+-exec updmap --sys ${1+"$@"}
++exec @UPDMAP@ --sys ${1+"$@"}

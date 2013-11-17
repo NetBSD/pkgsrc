@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/11/17 17:15:43 minskim Exp $
 
 DISTNAME=	tetex
-PKGNAME=	tex-${DISTNAME}-3.0.27774
-PKGREVISION=	2
-TEXLIVE_REV=	27774
+PKGNAME=	tex-${DISTNAME}-3.0.32132
+TEXLIVE_REV=	32132
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for updmap
@@ -12,7 +11,7 @@ CONFLICTS=	texlive-tetex<=2011nb1
 DEPENDS+=	dialog>=1.0:../../misc/dialog
 DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
 DEPENDS+=	tex-kpathsea>=2012nb1:../../print/tex-kpathsea
-DEPENDS+=	tex-texconfig-[0-9]*:../../print/tex-texconfig
+DEPENDS+=	tex-texconfig>=2013:../../print/tex-texconfig
 DEPENDS+=	tex-texlive.infra-[0-9]*:../../print/tex-texlive.infra
 
 USE_TOOLS+=	perl:run sh:run
@@ -47,8 +46,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
 CONF_FILES+=	${PREFIX}/share/texmf-dist/web2c/updmap.cfg \
 		${PKG_SYSCONFDIR}/web2c/updmap.cfg
 
-TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} \
-			${PREFIX}/share/texmf ${PREFIX}/share/texmf-dist
+TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} ${PREFIX}/share/texmf-dist
 
 .include "../../print/texlive/package.mk"
 
@@ -56,15 +54,15 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 .for script in fmtutil-sys.sh fmtutil.sh texconfig-dialog.sh \
 		texconfig-sys.sh texlinks.sh
-	${MV} ${WRKSRC}/texmf/scripts/tetex/${script} \
+	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.sh//}
 .endfor
 .for script in allcm.sh allneeded.sh dvi2fax.sh dvired.sh kpsetool.sh \
 		kpsewhere.sh updmap-sys.sh updmap.pl
-	${MV} ${WRKSRC}/texmf-dist/scripts/tetex/${script} \
+	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
 		${WRKSRC}/bin/${script:S/.pl//:S/.sh//}
 .endfor
-	${RMDIR} -p ${WRKSRC}/texmf/scripts/tetex 2>/dev/null || ${TRUE}
+	${RMDIR} -p ${WRKSRC}/texmf-dist/scripts/texlive 2>/dev/null || ${TRUE}
 
 post-install:
 	${LN} -sf allcm ${DESTDIR}${PREFIX}/bin/allec
