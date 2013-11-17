@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/04/08 01:42:41 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/17 18:49:37 minskim Exp $
 
 DISTNAME=	amsfonts.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.03
-TEXLIVE_REV=	26315
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.04
+TEXLIVE_REV=	29208
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-amsfonts
