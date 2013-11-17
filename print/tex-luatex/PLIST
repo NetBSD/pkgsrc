@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2010/11/07 17:29:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/11/17 17:18:26 minskim Exp $
 bin/dviluatex
-share/texmf/tex/generic/config/luatex-unicode-letters.tex
-share/texmf/tex/generic/config/luatexiniconfig.tex
-share/texmf/web2c/texmfcnf.lua
+share/texmf-dist/tex/generic/config/luatex-unicode-letters.tex
+share/texmf-dist/tex/generic/config/luatexiniconfig.tex
+share/texmf-dist/web2c/texmfcnf.lua
