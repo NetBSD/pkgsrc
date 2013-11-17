@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2013/04/24 10:06:51 sbd Exp $
+# $NetBSD: Makefile,v 1.42 2013/11/17 17:29:18 minskim Exp $
 
-DISTNAME=	texlive-20100720-source
-PKGNAME=	dvipdfmx-20100328
-PKGREVISION=	3
+DISTNAME=	texlive-20130530-source
+PKGNAME=	dvipdfmx-20130405
 CATEGORIES=	print converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,12 +14,12 @@ CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 DEPENDS+=	tex-dvipdfmx-[0-9]*:../../print/tex-dvipdfmx
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dvipdfmx
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gs:run ps2pdf:run
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvipdfmx
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
@@ -37,7 +36,7 @@ CONFIGURE_ARGS+=	--with-paper=${BUILDLINK_PREFIX.libpaper}
 PKG_SYSCONFSUBDIR=	texmf
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dvipdfmx
-CONF_FILES=	${PREFIX}/share/texmf/dvipdfmx/dvipdfmx.cfg \
+CONF_FILES=	${PREFIX}/share/texmf-dist/dvipdfmx/dvipdfmx.cfg \
 		${PKG_SYSCONFDIR}/dvipdfmx/dvipdfmx.cfg
 
 SUBST_CLASSES+=		paths
@@ -45,11 +44,9 @@ SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	data/dvipdfmx.cfg src/dvipdft
 SUBST_SED.paths=	-e 's,@DVIPDFM@,${PREFIX}/bin/dvipdfm,g'
-SUBST_SED.paths+=	-e 's,@GS@,${TOOLS_PATH.gs},g'
-SUBST_SED.paths+=	-e 's,@PS2PDF@,${LOCALBASE}/bin/ps2pdf,g'
+SUBST_SED.paths+=	-e 's,@RUNGS@,${LOCALBASE}/bin/rungs,g'
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../graphics/png/buildlink3.mk"
