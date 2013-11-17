@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.9 2012/10/14 21:49:29 minskim Exp $
+$NetBSD: patch-ab,v 1.10 2013/11/17 17:06:23 minskim Exp $
 
---- texmf/tex/generic/config/language.def.orig	2012-06-06 02:37:02.000000000 +0000
-+++ texmf/tex/generic/config/language.def
-@@ -28,148 +28,6 @@
+--- tex/generic/config/language.def.orig	2013-07-08 01:19:23.000000000 +0000
++++ tex/generic/config/language.def
+@@ -28,156 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
 -% from dehyph-exptl:
--\addlanguage{german-x-2012-05-30}{dehypht-x-2012-05-30.tex}{}{2}{2}
--\addlanguage{german-x-latest}{dehypht-x-2012-05-30.tex}{}{2}{2}
--\addlanguage{ngerman-x-2012-05-30}{dehyphn-x-2012-05-30.tex}{}{2}{2}
--\addlanguage{ngerman-x-latest}{dehyphn-x-2012-05-30.tex}{}{2}{2}
+-\addlanguage{german-x-2013-05-26}{dehypht-x-2013-05-26.tex}{}{2}{2}
+-\addlanguage{german-x-latest}{dehypht-x-2013-05-26.tex}{}{2}{2}
+-\addlanguage{ngerman-x-2013-05-26}{dehyphn-x-2013-05-26.tex}{}{2}{2}
+-\addlanguage{ngerman-x-latest}{dehyphn-x-2013-05-26.tex}{}{2}{2}
 -% from hyphen-afrikaans:
 -\addlanguage{afrikaans}{loadhyph-af.tex}{}{1}{2}
 -% from hyphen-ancientgreek:
@@ -64,6 +64,8 @@ $NetBSD: patch-ab,v 1.9 2012/10/14 21:49:29 minskim Exp $
 -\addlanguage{friulan}{loadhyph-fur.tex}{}{2}{2}
 -% from hyphen-galician:
 -\addlanguage{galician}{loadhyph-gl.tex}{}{2}{2}
+-% from hyphen-georgian:
+-\addlanguage{georgian}{loadhyph-ka.tex}{}{2}{3}
 -% from hyphen-german:
 -\addlanguage{german}{loadhyph-de-1901.tex}{}{2}{2}
 -\addlanguage{ngerman}{loadhyph-de-1996.tex}{}{2}{2}
@@ -112,11 +114,15 @@ $NetBSD: patch-ab,v 1.9 2012/10/14 21:49:29 minskim Exp $
 -\addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
 -\addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
 -\addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
+-% from hyphen-piedmontese:
+-\addlanguage{piedmontese}{loadhyph-pms.tex}{}{2}{2}
 -% from hyphen-polish:
 -\addlanguage{polish}{loadhyph-pl.tex}{}{2}{2}
 -% from hyphen-portuguese:
 -\addlanguage{portuguese}{loadhyph-pt.tex}{}{2}{3}
 -\addlanguage{portuges}{loadhyph-pt.tex}{}{2}{3}
+-\addlanguage{brazil}{loadhyph-pt.tex}{}{2}{3}
+-\addlanguage{brazilian}{loadhyph-pt.tex}{}{2}{3}
 -% from hyphen-romanian:
 -\addlanguage{romanian}{loadhyph-ro.tex}{}{2}{2}
 -% from hyphen-romansh:
@@ -124,7 +130,7 @@ $NetBSD: patch-ab,v 1.9 2012/10/14 21:49:29 minskim Exp $
 -% from hyphen-russian:
 -\addlanguage{russian}{loadhyph-ru.tex}{}{2}{2}
 -% from hyphen-sanskrit:
--\addlanguage{sanskrit}{loadhyph-sa.tex}{}{1}{5}
+-\addlanguage{sanskrit}{loadhyph-sa.tex}{}{1}{3}
 -% from hyphen-serbian:
 -\addlanguage{serbian}{loadhyph-sr-latn.tex}{}{2}{2}
 -\addlanguage{serbianc}{loadhyph-sr-cyrl.tex}{}{2}{2}
@@ -138,6 +144,8 @@ $NetBSD: patch-ab,v 1.9 2012/10/14 21:49:29 minskim Exp $
 -\addlanguage{espanol}{loadhyph-es.tex}{}{2}{2}
 -% from hyphen-swedish:
 -\addlanguage{swedish}{loadhyph-sv.tex}{}{2}{2}
+-% from hyphen-thai:
+-\addlanguage{thai}{loadhyph-th.tex}{}{2}{3}
 -% from hyphen-turkish:
 -\addlanguage{turkish}{loadhyph-tr.tex}{}{2}{2}
 -% from hyphen-turkmen:
