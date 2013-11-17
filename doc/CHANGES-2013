@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4157 2013/11/17 17:36:22 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4158 2013/11/17 18:28:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6066,3 +6066,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/dvipdfmx to 20130405 [minskim 2013-11-17]
 	Removed print/tex-dvipdfm [minskim 2013-11-17]
 	Removed print/tex-dvipdfm-doc [minskim 2013-11-17]
+	Updated print/tex-latexconfig to 2013 [minskim 2013-11-17]
