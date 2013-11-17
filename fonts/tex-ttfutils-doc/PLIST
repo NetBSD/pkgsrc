@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 20:11:55 minskim Exp $
-share/texmf/doc/ttf2pk/ttf2pk.doc
-share/texmf/doc/ttf2pk/ttf2pk.txt
-share/texmf/doc/ttf2pk/ttf2tfm.txt
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 17:07:05 minskim Exp $
+share/texmf-dist/doc/ttf2pk/ttf2pk.doc
+share/texmf-dist/doc/ttf2pk/ttf2pk.txt
+share/texmf-dist/doc/ttf2pk/ttf2tfm.txt
