@@ -1,7 +1,7 @@
-$NetBSD: patch-texmf_texconfig_tcfmgr,v 1.1 2012/10/13 22:29:21 minskim Exp $
+$NetBSD: patch-texmf-dist_texconfig_tcfmgr,v 1.1 2013/11/17 16:51:49 minskim Exp $
 
---- texmf/texconfig/tcfmgr.orig	2010-05-20 18:50:17.000000000 +0000
-+++ texmf/texconfig/tcfmgr
+--- texmf-dist/texconfig/tcfmgr.orig	2010-05-20 18:50:17.000000000 +0000
++++ texmf-dist/texconfig/tcfmgr
 @@ -47,7 +47,7 @@ setupMap()
    esac
    
