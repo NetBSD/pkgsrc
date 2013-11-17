@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 07:37:06 minskim Exp $
-share/texmf/tex/generic/hyphen/dehyphn.tex
-share/texmf/tex/generic/hyphen/dehypht.tex
-share/texmf/tex/generic/hyphen/dehyphtex.tex
-share/texmf/tex/generic/hyphen/ghyphen.README
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 17:22:05 minskim Exp $
+share/texmf-dist/tex/generic/hyphen/dehyphn.tex
+share/texmf-dist/tex/generic/hyphen/dehypht.tex
+share/texmf-dist/tex/generic/hyphen/dehyphtex.tex
+share/texmf-dist/tex/generic/hyphen/ghyphen.README
