@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4155 2013/11/16 21:05:46 asau Exp $
+$NetBSD: CHANGES-2013,v 1.4156 2013/11/17 02:56:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6024,3 +6024,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/atf to 0.18 [jmmv 2013-11-16]
 	Updated lang/squeak to 4.4 [asau 2013-11-16]
 	Added devel/tcl-tclOO version 1.0.1 [asau 2013-11-16]
+	Updated fonts/tex-glyphlist to 2.95 [minskim 2013-11-17]
