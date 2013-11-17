@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/12 09:48:01 dholland Exp $
-man/man1/extractbb.1
-share/texmf/doc/dvipdfmx/dvipdfmx-special.pdf
-share/texmf/doc/dvipdfmx/dvipdfmx-special.tex
+@comment $NetBSD: PLIST,v 1.3 2013/11/17 17:27:35 minskim Exp $
+share/texmf-dist/doc/dvipdfm/Makefile
+share/texmf-dist/doc/dvipdfm/dvipdfm.pdf
+share/texmf-dist/doc/dvipdfm/dvipdfm.tex
+share/texmf-dist/doc/dvipdfm/mwicks.bb
+share/texmf-dist/doc/dvipdfm/mwicks.jpeg
+share/texmf-dist/doc/dvipdfm/sample.tex
+share/texmf-dist/doc/dvipdfm/something.bb
+share/texmf-dist/doc/dvipdfm/something.eps
+share/texmf-dist/doc/dvipdfm/something.fig
+share/texmf-dist/doc/dvipdfm/something.pdf
+share/texmf-dist/doc/dvipdfm/transistor.bb
+share/texmf-dist/doc/dvipdfm/transistor.eps
+share/texmf-dist/doc/dvipdfm/transistor.fig
+share/texmf-dist/doc/dvipdfm/transistor.pdf
+share/texmf-dist/doc/dvipdfmx/dvipdfmx-special.pdf
+share/texmf-dist/doc/dvipdfmx/dvipdfmx-special.tex
