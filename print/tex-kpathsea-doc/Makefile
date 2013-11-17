@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/13 22:50:06 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2013/11/17 17:12:19 minskim Exp $
 
 DISTNAME=	kpathsea.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2012
-TEXLIVE_REV=	27341
+PKGNAME=	tex-${DISTNAME:S/./-/}-2013
+TEXLIVE_REV=	30947
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-kpathsea
@@ -12,13 +12,11 @@ CONFLICTS+=	texlive-tetex<=2011nb1
 
 INFO_FILES=	yes
 
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
-
-TEXLIVE_IGNORE_PATTERNS=	texmf/doc/info/[kw]* \
-				texmf/doc/man/man1/k* \
-				texmf/doc/man/man1/mko* \
-				texmf/doc/man/man1/mktex[l-z]* \
-				texmf/doc/man/man1/t*
+TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/info/[kw]* \
+				texmf-dist/doc/man/man1/k* \
+				texmf-dist/doc/man/man1/mko* \
+				texmf-dist/doc/man/man1/mktex[l-z]* \
+				texmf-dist/doc/man/man1/t*
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
