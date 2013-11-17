@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/14 15:37:16 minskim Exp $
-share/texmf/tex/generic/config/language.dat
-share/texmf/tex/generic/config/language.dat.lua
-share/texmf/tex/generic/config/language.def
-share/texmf/tex/generic/config/language.us
-share/texmf/tex/generic/config/language.us.def
-share/texmf/tex/generic/config/language.us.lua
-share/texmf/tex/generic/hyphen/dumyhyph.tex
-share/texmf/tex/generic/hyphen/hyphen.tex
-share/texmf/tex/generic/hyphen/hypht1.tex
-share/texmf/tex/generic/hyphen/zerohyph.tex
+@comment $NetBSD: PLIST,v 1.3 2013/11/17 17:06:23 minskim Exp $
+share/texmf-dist/tex/generic/config/language.dat
+share/texmf-dist/tex/generic/config/language.dat.lua
+share/texmf-dist/tex/generic/config/language.def
+share/texmf-dist/tex/generic/config/language.us
+share/texmf-dist/tex/generic/config/language.us.def
+share/texmf-dist/tex/generic/config/language.us.lua
+share/texmf-dist/tex/generic/hyphen/dumyhyph.tex
+share/texmf-dist/tex/generic/hyphen/hyphen.tex
+share/texmf-dist/tex/generic/hyphen/hypht1.tex
+share/texmf-dist/tex/generic/hyphen/zerohyph.tex

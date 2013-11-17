@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
+$NetBSD: patch-ac,v 1.8 2013/11/17 17:06:23 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.lua.orig	2012-06-06 02:37:05.000000000 +0000
-+++ texmf/tex/generic/config/language.dat.lua
-@@ -33,638 +33,4 @@ return {
+--- tex/generic/config/language.dat.lua.orig	2013-07-08 01:19:27.000000000 +0000
++++ tex/generic/config/language.dat.lua
+@@ -33,665 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
 --- from dehyph-exptl:
--	['german-x-2012-05-30'] = {
--		loader = 'dehypht-x-2012-05-30.tex',
+-	['german-x-2013-05-26'] = {
+-		loader = 'dehypht-x-2013-05-26.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'german-x-latest' },
 -		patterns = 'hyph-de-1901.pat.txt',
 -		hyphenation = 'hyph-de-1901.hyp.txt',
 -	},
--	['ngerman-x-2012-05-30'] = {
--		loader = 'dehyphn-x-2012-05-30.tex',
+-	['ngerman-x-2013-05-26'] = {
+-		loader = 'dehyphn-x-2013-05-26.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'ngerman-x-latest' },
@@ -232,6 +232,15 @@ $NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-gl.pat.txt',
+-		hyphenation = '',
+-	},
+--- from hyphen-georgian:
+-	['georgian'] = {
+-		loader = 'loadhyph-ka.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 3,
+-		synonyms = {  },
+-		patterns = 'hyph-ka.pat.txt',
 -		hyphenation = '',
 -	},
 --- from hyphen-german:
@@ -488,6 +497,15 @@ $NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
 -		patterns = 'hyph-nn.pat.txt',
 -		hyphenation = 'hyph-nn.hyp.txt',
 -	},
+--- from hyphen-piedmontese:
+-	['piedmontese'] = {
+-		loader = 'loadhyph-pms.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-pms.pat.txt',
+-		hyphenation = '',
+-	},
 --- from hyphen-polish:
 -	['polish'] = {
 -		loader = 'loadhyph-pl.tex',
@@ -502,7 +520,7 @@ $NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
 -		loader = 'loadhyph-pt.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 3,
--		synonyms = { 'portuges' },
+-		synonyms = { 'portuges', 'brazil', 'brazilian' },
 -		patterns = 'hyph-pt.pat.txt',
 -		hyphenation = 'hyph-pt.hyp.txt',
 -	},
@@ -537,7 +555,7 @@ $NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
 -	['sanskrit'] = {
 -		loader = 'loadhyph-sa.tex',
 -		lefthyphenmin = 1,
--		righthyphenmin = 5,
+-		righthyphenmin = 3,
 -		synonyms = {  },
 -		patterns = 'hyph-sa.pat.txt',
 -		hyphenation = '',
@@ -593,6 +611,15 @@ $NetBSD: patch-ac,v 1.7 2012/10/14 21:49:29 minskim Exp $
 -		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-sv.pat.txt',
+-		hyphenation = '',
+-	},
+--- from hyphen-thai:
+-	['thai'] = {
+-		loader = 'loadhyph-th.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 3,
+-		synonyms = {  },
+-		patterns = 'hyph-th.pat.txt',
 -		hyphenation = '',
 -	},
 --- from hyphen-turkish:
