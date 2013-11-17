@@ -1,9 +1,8 @@
-# $NetBSD: INSTALL,v 1.2 2009/06/09 21:29:17 minskim Exp $
+# $NetBSD: INSTALL,v 1.3 2013/11/17 16:45:32 minskim Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
 	@PREFIX@/bin/mktexlsr \
-		@PREFIX@/share/texmf \
 		@PREFIX@/share/texmf-dist \
 		@TEXMFLOCAL@ \
 		@VARBASE@/lib/texmf \
