@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/19 22:51:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/17 17:09:48 minskim Exp $
 
 DISTNAME=	cjkutils.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.8.2
-TEXLIVE_REV=	23089
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.8.3
+TEXLIVE_REV=	29764
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 COMMENT=	Documentation for tex-cjkutils
 
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
-
-TEXLIVE_IGNORE_PATTERNS+=	texmf/doc/man
+TEXLIVE_IGNORE_PATTERNS+=	texmf-dist/doc/man
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
