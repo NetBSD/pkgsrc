@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/10/16 19:49:43 minskim Exp $
+$NetBSD: distinfo,v 1.9 2013/11/17 18:27:25 minskim Exp $
 
-SHA1 (tex-latexconfig-26375/latexconfig.tar.xz) = 0d493a6e9d7620f0ad5b95cbdc9e2aba50ebbdd2
-RMD160 (tex-latexconfig-26375/latexconfig.tar.xz) = 4f50fa287d2895ed3c69038d43756d95259b178b
-Size (tex-latexconfig-26375/latexconfig.tar.xz) = 7120 bytes
+SHA1 (tex-latexconfig-28991/latexconfig.tar.xz) = 884772c041252e7370ecdc05548a90a30e5b93c5
+RMD160 (tex-latexconfig-28991/latexconfig.tar.xz) = ddc8411a337ac68435f584edd2461f246090559e
+Size (tex-latexconfig-28991/latexconfig.tar.xz) = 7208 bytes
