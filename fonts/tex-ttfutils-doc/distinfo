@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/19 20:11:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2013/11/17 17:07:05 minskim Exp $
 
-SHA1 (tex-ttfutils-23089/ttfutils.doc.tar.xz) = 2d3b2e65fc7da95607dff275662b33becb4aa750
-RMD160 (tex-ttfutils-23089/ttfutils.doc.tar.xz) = 183e7aec530996d7c77d356e22ab6593f33356c3
-Size (tex-ttfutils-23089/ttfutils.doc.tar.xz) = 66452 bytes
+SHA1 (tex-ttfutils-31355/ttfutils.doc.tar.xz) = 5645638c92b07005d149f5e635e2130bac76d2b4
+RMD160 (tex-ttfutils-31355/ttfutils.doc.tar.xz) = 2da19e7abbeb1631573328d620dd7a6d99b8f6dc
+Size (tex-ttfutils-31355/ttfutils.doc.tar.xz) = 67168 bytes
