@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.11 2013/03/24 17:00:29 spz Exp $
+$NetBSD: distinfo,v 1.12 2013/11/17 17:02:09 minskim Exp $
 
-SHA1 (luatex-beta-0.70.1.tar.bz2) = 063bd698daab38ac6b04b45c820a15a0423aaab5
-RMD160 (luatex-beta-0.70.1.tar.bz2) = dfa3710bb48ba5d73ae5e41746d7c1a3a965f619
-Size (luatex-beta-0.70.1.tar.bz2) = 8181155 bytes
-SHA1 (patch-aa) = 738c8bd631db36671d2c4eb48a360b7a16186c64
-SHA1 (patch-ab) = ee8ad45e980e655702925a164ee0ce6dd1689366
-SHA1 (patch-ac) = 52211165bd6d05e4f8ce4d6280f5091280623d75
-SHA1 (patch-ad) = 8342a32d0196e0b9287aee269a4bbe00d04edb8a
-SHA1 (patch-texk_web2c_luatexdir_luatex.c) = 2b5e37e3c0fa1d42fc5782eec562bbc0040d1404
+SHA1 (luatex-beta-0.76.0-source.tar.bz2) = f139e728a16ae332ce323e28e19940169540e549
+RMD160 (luatex-beta-0.76.0-source.tar.bz2) = 7eec8c90ea21b4db70a0b6b6e874e96732822fd1
+Size (luatex-beta-0.76.0-source.tar.bz2) = 11748576 bytes
+SHA1 (patch-ab) = e3ba0d662c1e7a4b716f63661328c5ba5d4701ca
+SHA1 (patch-ac) = 00415c239481faf0477a2e92a0f5180a38a5d9b7
