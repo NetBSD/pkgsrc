@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/08/07 02:41:30 mef Exp $
+$NetBSD: distinfo,v 1.7 2013/11/17 07:36:11 mef Exp $
 
 SHA1 (binutils-2.23.2.tar.bz2) = 042c51073205ebaf88c272d6168f9deb71984b56
 RMD160 (binutils-2.23.2.tar.bz2) = 9788e2a8c4a7c74360919347c3bc72040e87b898
@@ -11,3 +11,4 @@ SHA1 (patch-ag) = e778ddd88f34e264e6b2d6d31a56a02be565e916
 SHA1 (patch-ah) = b6e91279475c41bc78b3df227938a91948fc377c
 SHA1 (patch-ai) = 3cd298ac0364f913c1261fc87f7f474281bae9cf
 SHA1 (patch-aj) = fd2a66979f68350a53960defdaf5e9e5018ec59a
+SHA1 (patch-ld_ld.texinfo) = 98f3b37b288caea62f4cfcd56c778c34cbec1e14
