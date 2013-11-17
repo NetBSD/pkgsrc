@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/13 22:50:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/17 17:12:19 minskim Exp $
 info/tds.info
 man/man1/mktexfmt.1
-share/texmf/doc/kpathsea/kpathsea.html
-share/texmf/doc/kpathsea/kpathsea.pdf
-share/texmf/doc/web2c/web2c.html
-share/texmf/doc/web2c/web2c.pdf
+share/texmf-dist/doc/kpathsea/kpathsea.html
+share/texmf-dist/doc/kpathsea/kpathsea.pdf
+share/texmf-dist/doc/web2c/web2c.html
+share/texmf-dist/doc/web2c/web2c.pdf
