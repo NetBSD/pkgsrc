@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.568 2013/10/19 20:43:38 markd Exp $
+# $NetBSD: Makefile,v 1.569 2013/11/17 17:32:53 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -300,8 +300,6 @@ SUBDIR+=	tex-dehyph-exptl
 SUBDIR+=	tex-dehyph-exptl-doc
 SUBDIR+=	tex-draftwatermark
 SUBDIR+=	tex-draftwatermark-doc
-SUBDIR+=	tex-dvipdfm
-SUBDIR+=	tex-dvipdfm-doc
 SUBDIR+=	tex-dvipdfmx
 SUBDIR+=	tex-dvipdfmx-def
 SUBDIR+=	tex-dvipdfmx-doc

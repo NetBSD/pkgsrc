@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/12/25 05:44:34 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/17 17:32:53 minskim Exp $
 
 DISTNAME=	collection-basic-doc
 PKGNAME=	tex-${DISTNAME}-2010
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	# empty
 TEXLIVE_REV=	20730
@@ -14,7 +15,6 @@ DEPENDS+=	tex-collection-documentation-base-doc>=2009:../../print/tex-collection
 DEPENDS+=	tex-amsfonts-doc-[0-9]*:../../fonts/tex-amsfonts-doc
 DEPENDS+=	tex-bibtex-doc-[0-9]*:../../print/tex-bibtex-doc
 DEPENDS+=	tex-cm-doc-[0-9]*:../../fonts/tex-cm-doc
-DEPENDS+=	tex-dvipdfm-doc-[0-9]*:../../print/tex-dvipdfm-doc
 DEPENDS+=	tex-dvipdfmx-doc-[0-9]*:../../print/tex-dvipdfmx-doc
 # tex-dvipdfmx-def doesn't have a documentation package.
 DEPENDS+=	tex-dvips-doc-[0-9]*:../../print/tex-dvips-doc
