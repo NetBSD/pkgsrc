@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/19 20:11:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/17 17:07:05 minskim Exp $
 
 DISTNAME=	ttfutils
-PKGNAME=	tex-${DISTNAME}-2011
-TEXLIVE_REV=	23089
+PKGNAME=	tex-${DISTNAME}-2013
+TEXLIVE_REV=	31355
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Data files for TeX Live TTF utilities
 
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
+DEPENDS+=	ttf2pk>=1.5nb5:../../fonts/ttf2pk
+DEPENDS+=	ttfdump>=0.5.5:../../fonts/ttfdump
+DEPENDS+=	web2c>=2013:../../print/web2c
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
