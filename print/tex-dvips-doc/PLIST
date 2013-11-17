@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/16 05:50:43 minskim Exp $
-share/texmf/doc/dvips/dvips.html
-share/texmf/doc/dvips/dvips.pdf
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 16:53:18 minskim Exp $
+share/texmf-dist/doc/dvips/dvips.html
+share/texmf-dist/doc/dvips/dvips.pdf
