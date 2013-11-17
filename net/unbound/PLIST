@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/25 08:54:26 pettai Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/11/17 22:57:38 pettai Exp $
 include/unbound.h
 lib/libunbound.la
 man/man1/unbound-host.1
@@ -36,6 +36,7 @@ man/man3/ub_wait.3
 man/man5/unbound.conf.5
 man/man8/unbound-anchor.8
 man/man8/unbound-checkconf.8
+man/man8/unbound-control-setup.8
 man/man8/unbound-control.8
 man/man8/unbound.8
 sbin/unbound
