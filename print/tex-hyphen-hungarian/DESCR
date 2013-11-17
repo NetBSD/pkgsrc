@@ -1,1 +1,2 @@
-These patterns are a modern substitute for those in the huhyph package.
+Hyphenation patterns for Hungarian in T1/EC and UTF-8
+encodings. From https://github.com/nagybence/huhyphn/.
