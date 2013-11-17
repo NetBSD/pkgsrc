@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2013/02/05 07:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2013/11/17 16:45:32 minskim Exp $
 
-DISTNAME=	texlive-20120701-source
-PKGNAME=	kpathsea-6.1.0
-PKGREVISION=	1
+DISTNAME=	texlive-20130530-source
+PKGNAME=	kpathsea-6.1.1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -59,7 +58,7 @@ BUILD_DEFS+=		VARBASE
 TEXMFLOCAL=		${PREFIX}/share/texmf-local
 FILES_SUBST+=		TEXMFLOCAL=${TEXMFLOCAL}
 
-CONF_FILES=	${PREFIX}/share/texmf/web2c/texmf.cnf \
+CONF_FILES=	${PREFIX}/share/texmf-dist/web2c/texmf.cnf \
 		${PKG_SYSCONFDIR}/texmf.cnf
 
 OWN_DIRS+=		${TEXMFLOCAL} ${VARBASE}/lib/texmf

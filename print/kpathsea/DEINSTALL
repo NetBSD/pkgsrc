@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.2 2009/06/09 21:29:17 minskim Exp $
+# $NetBSD: DEINSTALL,v 1.3 2013/11/17 16:45:32 minskim Exp $
 
 case "${STAGE}" in
 DEINSTALL)
@@ -7,6 +7,5 @@ DEINSTALL)
 		@VARBASE@/lib/texmf/ls-R \
 		@TEXMFLOCAL@/ls-R \
 		@PREFIX@/share/texmf-dist/ls-R \
-		@PREFIX@/share/texmf/ls-R
 	;;
 esac
