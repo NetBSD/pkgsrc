@@ -1,0 +1,28 @@
+$NetBSD: patch-config_common__make__rules,v 1.1 2013/11/17 16:25:09 dholland Exp $
+
+Work around what appears to be a bug in gmake 4.0 that causes the
+build to loop infinitely making depend if building to tmpfs.
+
+The first echo makes it print something so you can tell what's looping
+(otherwise it just sits there silently); the "false" is the
+workaround. For some reason this recipe needs to fail to prevent the
+loop.
+
+--- config/common_make_rules.orig	2004-12-19 22:20:43.000000000 +0000
++++ config/common_make_rules
+@@ -190,12 +190,15 @@ endif
+ 
+ $(DEPEND): $(SRCS) $(OBJDIR)
+ 	@ rm -f $(DEPEND)
++	@ echo Doing implicit make depend.
+ 	@ for i in $(SRCS) ; \
+ 	  do \
+             echo "# $$i" ; \
+ 	    $(MAKE_DEPEND) $$i | sed -e 's,^\([^:][^:]*\):,$(OBJDIR)/\1:,'; \
+ 	    echo ; \
+           done > $(DEPEND)
++	@ echo The following is intentional.
++	false
+ 
+ file-list:
+ 	@ echo making file-list in $(DIRNAME) ...
