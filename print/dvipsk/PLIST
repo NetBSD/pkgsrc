@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/16 03:47:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/17 16:54:41 minskim Exp $
 bin/afm2tfm
 bin/dvips
 info/dvips.info
 man/man1/afm2tfm.1
 man/man1/dvips.1
-share/texmf-dist/dvips/config/config.ps
-share/texmf/dvips/base/color.pro
-share/texmf/dvips/base/crop.pro
-share/texmf/dvips/base/finclude.pro
-share/texmf/dvips/base/hps.pro
-share/texmf/dvips/base/special.pro
-share/texmf/dvips/base/tex.pro
-share/texmf/dvips/base/texc.pro
-share/texmf/dvips/base/texps.pro
+share/examples/dvipsk/config.ps
+share/texmf-dist/dvips/base/color.pro
+share/texmf-dist/dvips/base/crop.pro
+share/texmf-dist/dvips/base/finclude.pro
+share/texmf-dist/dvips/base/hps.pro
+share/texmf-dist/dvips/base/special.pro
+share/texmf-dist/dvips/base/tex.pro
+share/texmf-dist/dvips/base/texc.pro
+share/texmf-dist/dvips/base/texps.pro
