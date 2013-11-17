@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/06 08:37:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 16:58:33 minskim Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/Splashscreen.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLConfFile.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLConfig.pm
@@ -12,5 +12,5 @@ ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLUtils.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLWinGoo.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TeXCatalogue.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/waitVariableX.pm
-share/texmf/web2c/fmtutil-hdr.cnf
-share/texmf/web2c/updmap-hdr.cfg
+share/texmf-dist/web2c/fmtutil-hdr.cnf
+share/texmf-dist/web2c/updmap-hdr.cfg
