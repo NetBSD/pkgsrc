@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/05 19:32:10 minskim Exp $
-share/texmf/dvipdfm/config/config
-share/texmf/dvipdfm/config/config-win32
-share/texmf/tex/latex/dvipdfm/dvipdfm.def
