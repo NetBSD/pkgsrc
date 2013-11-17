@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/17 16:58:33 minskim Exp $
 
 DISTNAME=	texlive.infra
-PKGNAME=	tex-${DISTNAME}-2012.27610
-PKGREVISION=	1
-TEXLIVE_REV=	27610
+PKGNAME=	tex-${DISTNAME}-2013
+TEXLIVE_REV=	31673
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Basic TeX Live infrastructure
 
 USE_TOOLS+=	perl:run
 
-TEXLIVE_IGNORE_PATTERNS=	texmf/scripts
+TEXLIVE_IGNORE_PATTERNS=	texmf-dist/scripts
 
 INSTALLATION_DIRS+=	${PERL5_SUB_INSTALLVENDORLIB}/TeXLive
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
