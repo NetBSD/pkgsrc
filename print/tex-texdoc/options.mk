@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/04/25 15:47:49 minskim Exp $
+# $NetBSD: options.mk,v 1.2 2013/11/17 17:13:29 minskim Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tex-texdoc
 PKG_SUPPORTED_OPTIONS+=	x11
@@ -15,9 +15,10 @@ REPLACE_PERL=	bin/texdoctk
 
 extract-texdoctk:
 	${MKDIR} ${WRKSRC}/bin
-	${MV} ${WRKSRC}/texmf/scripts/tetex/texdoctk.pl ${WRKSRC}/bin/texdoctk
-	${RMDIR} ${WRKSRC}/texmf/scripts/tetex
+	${MV} ${WRKSRC}/texmf-dist/scripts/texdoctk/texdoctk.pl \
+		${WRKSRC}/bin/texdoctk
+	${RMDIR} ${WRKSRC}/texmf-dist/scripts/texdoctk
 .else
 extract-texdoctk:
-	${RM} -rf ${WRKSRC}/texmf/scripts/tetex
+	${RM} -rf ${WRKSRC}/texmf-dist/scripts/texdoctk
 .endif
