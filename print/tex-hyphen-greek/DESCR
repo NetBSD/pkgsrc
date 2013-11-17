@@ -1,3 +1,4 @@
-Hyphenation patterns, for use with TeX, Omega (or other unicode-based
-systems) for ancient Greek, and for modern Greek (either monotonic or
-polytonic).
+Hyphenation patterns for Modern Greek in monotonic and
+polytonic spelling in LGR and UTF-8 encodings.  Patterns in
+UTF-8 use two code positions for each of the vowels with acute
+accent (a.k.a tonos, oxia), e.g., U+03AC, U+1F71 for alpha.
