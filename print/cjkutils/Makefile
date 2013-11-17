@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:36 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/17 17:10:59 minskim Exp $
 
-DISTNAME=	texlive-20110705-source
-PKGNAME=	cjkutils-4.8.2
+DISTNAME=	texlive-20130530-source
+PKGNAME=	cjkutils-4.8.3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,7 +10,7 @@ MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	http://cjk.ffii.org/
 COMMENT=	Utilities for CJK LaTeX
 
-DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
+DEPENDS+=	tex-cjkutils>=4.8.3:../../print/tex-cjkutils
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/cjkutils
