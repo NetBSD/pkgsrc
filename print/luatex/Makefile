@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2013/08/22 09:21:58 prlw1 Exp $
+# $NetBSD: Makefile,v 1.26 2013/11/17 17:02:09 minskim Exp $
 
-DISTNAME=	luatex-beta-0.70.1
+DISTNAME=	luatex-beta-0.76.0-source
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
-PKGREVISION=	11
 CATEGORIES=	print
-MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/392/1730/
+MASTER_SITES=	https://foundry.supelec.fr/frs/download.php/file/15745/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
@@ -23,7 +22,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}/source
 
-CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
+CONFIGURE_ARGS+=--enable-build-in-source-tree \
+		--enable-cxx-runtime-hack \
 		--disable-afm2pl    \
 		--disable-aleph  \
 		--disable-bibtex   \
@@ -86,21 +86,17 @@ CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
 		--disable-native-texlive-build \
 		--disable-shared    \
 		--disable-largefile
+CONFIGURE_ARGS+=--with-system-cairo
 CONFIGURE_ARGS+=--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
 		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
-CONFIGURE_ARGS+=--with-system-libpng \
-		--with-libpng-include=${BUILDLINK_PREFIX.png}/include \
-		--with-libpng-libdir=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=--with-system-libpng
+CONFIGURE_ARGS+=--with-system-pixman
+CONFIGURE_ARGS+=--with-system-poppler
 CONFIGURE_ARGS+=--with-system-zlib \
 		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=--with-system-zziplib \
-		--with-zziplib-include=${BUILDLINK_PREFIX.zziplib}/include \
-		--with-zziplib-libdir=${BUILDLINK_PREFIX.zziplib}/lib
-CONFIGURE_ARGS+=--with-system-poppler \
-		--with-poppler-include=${BUILDLINK_PREFIX.poppler}/include \
-		--with-poppler-libdir=${BUILDLINK_PREFIX.poppler}/lib
+CONFIGURE_ARGS+=--with-system-zziplib
 CONFIGURE_DIRS+=. texk/web2c
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
 
@@ -113,15 +109,17 @@ INSTALLATION_DIRS+=	bin
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/pixman/buildlink3.mk"
 
 post-extract:
+	${RM} -rf ${WRKSRC}/libs/zziplib
 	${RM} -rf ${WRKSRC}/texk/kpathsea
-	${ECHO} '#define luatex_svn_revision 4279' \
+	${ECHO} '#define luatex_svn_revision 4630' \
 		> ${WRKSRC}/texk/web2c/luatexdir/luatex_svnversion.h
 
 do-install:
