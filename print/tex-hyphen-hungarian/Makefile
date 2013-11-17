@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/11/10 17:55:31 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/17 17:19:47 minskim Exp $
 
 DISTNAME=	hyphen-hungarian
-PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
-TEXLIVE_REV=	20144
+PKGNAME=	tex-${DISTNAME}-2013
+TEXLIVE_REV=	29725
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	New Hungarian hyphenation patterns
