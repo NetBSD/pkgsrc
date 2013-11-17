@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/10/16 19:49:43 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/17 18:27:25 minskim Exp $
 
 DISTNAME=	latexconfig
-PKGNAME=	tex-${DISTNAME}-2012
-TEXLIVE_REV=	26375
+PKGNAME=	tex-${DISTNAME}-2013
+TEXLIVE_REV=	28991
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Files used to generate LaTeX formats
