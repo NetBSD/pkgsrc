@@ -1,29 +1,14 @@
-$NetBSD: patch-ab,v 1.5 2010/01/16 03:52:41 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2013/11/17 17:29:18 minskim Exp $
 
---- data/Makefile.in.orig	2009-06-15 08:14:49.000000000 -0700
+--- data/Makefile.in.orig	2013-02-08 12:05:33.000000000 +0000
 +++ data/Makefile.in
-@@ -208,20 +208,20 @@ target_alias = @target_alias@
- top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
--configdatadir = ${prefix}/texmf/dvipdfmx
-+configdatadir = ${prefix}/share/texmf/dvipdfmx
- dist_configdata_DATA = \
-   $(srcdir)/dvipdfmx.cfg
+@@ -480,8 +480,7 @@ info: info-am
  
--glyphlistdatadir = ${prefix}/texmf-dist/fonts/map/glyphlist
-+glyphlistdatadir = ${prefix}/share/texmf-dist/fonts/map/glyphlist
- dist_glyphlistdata_DATA = \
-   $(srcdir)/glyphlist.txt \
-   $(srcdir)/pdfglyphlist.txt
+ info-am:
  
--mapdatadir = ${prefix}/texmf/fonts/map/dvipdfm/dvipdfmx
-+mapdatadir = ${prefix}/share/texmf/fonts/map/dvipdfm/dvipdfmx
- dist_mapdata_DATA = \
-   $(srcdir)/cid-x.map
+-install-data-am: install-dist_cmapdataDATA install-dist_configdataDATA \
+-	install-dist_glyphlistdataDATA install-dist_mapdataDATA
++install-data-am: install-dist_configdataDATA
  
--cmapdatadir = ${prefix}/texmf/fonts/cmap/dvipdfmx
-+cmapdatadir = ${prefix}/share/texmf/fonts/cmap/dvipdfmx
- dist_cmapdata_DATA = \
-   $(srcdir)/EUC-UCS2
+ install-dvi: install-dvi-am
  
