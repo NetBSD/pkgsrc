@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/16 20:03:24 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/11/17 17:17:20 minskim Exp $
 bin/etex
 bin/pdfetex
 bin/simpdftex
-share/texmf/fonts/map/pdftex/updmap/pdftex.map
-share/texmf/fonts/map/pdftex/updmap/pdftex_dl14.map
-share/texmf/fonts/map/pdftex/updmap/pdftex_ndl14.map
-share/texmf/tex/generic/config/pdftex-dvi.tex
-share/texmf/tex/generic/config/pdftexconfig.tex
-share/texmf/tex/generic/pdftex/glyphtounicode.tex
+share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
+share/texmf-dist/fonts/map/pdftex/updmap/pdftex_dl14.map
+share/texmf-dist/fonts/map/pdftex/updmap/pdftex_ndl14.map
+share/texmf-dist/tex/generic/config/pdftex-dvi.tex
+share/texmf-dist/tex/generic/config/pdftexconfig.tex
+share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
