@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2012/07/10 22:32:13 minskim Exp $
+$NetBSD: patch-aa,v 1.11 2013/11/17 16:45:32 minskim Exp $
 
 Set paths to texmf trees for pkgsrc.
 
---- texmf.cnf.orig	2012-05-12 23:34:52.000000000 +0000
+--- texmf.cnf.orig	2013-04-15 16:58:08.000000000 +0000
 +++ texmf.cnf
 @@ -51,7 +51,7 @@
  % Redistributors will probably want $SELFAUTODIR/share, i.e., /usr/share.
@@ -11,10 +11,10 @@ Set paths to texmf trees for pkgsrc.
 -TEXMFROOT = $SELFAUTOPARENT
 +TEXMFROOT = $SELFAUTODIR/share
  
- % The tree containing runtime files related to the specific
- % distribution and version.
-@@ -61,13 +61,13 @@ TEXMFMAIN = $TEXMFROOT/texmf
+ % The main tree of distributed packages and programs:
  TEXMFDIST = $TEXMFROOT/texmf-dist
+@@ -61,13 +61,13 @@ TEXMFDIST = $TEXMFROOT/texmf-dist
+ TEXMFMAIN = $TEXMFDIST
  
  % Local additions to the distribution trees.
 -TEXMFLOCAL = $TEXMFROOT/../texmf-local
@@ -30,7 +30,7 @@ Set paths to texmf trees for pkgsrc.
  
  % Per-user texmf tree(s) -- organized per the TDS, as usual.  To define
  % more than one per-user tree, set this to a list of directories in
-@@ -113,7 +113,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
+@@ -116,7 +116,7 @@ TEXMFCACHE = $TEXMFSYSVAR;$TEXMFVAR
  % Where generated fonts may be written.  This tree is used when the sources
  % were found in a system tree and either that tree wasn't writable, or the
  % varfonts feature was enabled in MT_FEATURES in mktex.cnf.
@@ -39,21 +39,36 @@ Set paths to texmf trees for pkgsrc.
  
  % On some systems, there will be a system tree which contains all the font
  % files that may be created as well as the formats.  For example
-@@ -481,18 +481,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
- % explicitly list every directory.  Arguably more understandable this
- % way anyway.
+@@ -485,33 +485,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+ % since we don't want to scatter ../'s throughout the value.  Hence we
+ % explicitly list every directory.  Arguably more understandable anyway.
  %
 -TEXMFCNF = {\
 -$SELFAUTOLOC,\
--$SELFAUTOLOC/share/texmf-local/web2c,$SELFAUTOLOC/share/texmf/web2c,\
--$SELFAUTOLOC/texmf-local/web2c,$SELFAUTOLOC/texmf/web2c,\
+-$SELFAUTOLOC/share/texmf-local/web2c,\
+-$SELFAUTOLOC/share/texmf-dist/web2c,\
+-$SELFAUTOLOC/share/texmf/web2c,\
+-$SELFAUTOLOC/texmf-local/web2c,\
+-$SELFAUTOLOC/texmf-dist/web2c,\
+-$SELFAUTOLOC/texmf/web2c,\
+-\
 -$SELFAUTODIR,\
--$SELFAUTODIR/share/texmf-local/web2c,$SELFAUTODIR/share/texmf/web2c,\
--$SELFAUTODIR/texmf-local/web2c,$SELFAUTODIR/texmf/web2c,\
+-$SELFAUTODIR/share/texmf-local/web2c,\
+-$SELFAUTODIR/share/texmf-dist/web2c,\
+-$SELFAUTODIR/share/texmf/web2c,\
+-$SELFAUTODIR/texmf-local/web2c,\
+-$SELFAUTODIR/texmf-dist/web2c,\
+-$SELFAUTODIR/texmf/web2c,\
+-\
 -$SELFAUTOPARENT/../texmf-local/web2c,\
 -$SELFAUTOPARENT,\
--$SELFAUTOPARENT/share/texmf-local/web2c,$SELFAUTOPARENT/share/texmf/web2c,\
--$SELFAUTOPARENT/texmf-local/web2c,$SELFAUTOPARENT/texmf/web2c\
+-\
+-$SELFAUTOPARENT/share/texmf-local/web2c,\
+-$SELFAUTOPARENT/share/texmf-dist/web2c,\
+-$SELFAUTOPARENT/share/texmf/web2c,\
+-$SELFAUTOPARENT/texmf-local/web2c,\
+-$SELFAUTOPARENT/texmf-dist/web2c,\
+-$SELFAUTOPARENT/texmf/web2c\
 -}
 +TEXMFCNF = @PKG_SYSCONFDIR@
  %
