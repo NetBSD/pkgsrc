@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/10/13 22:29:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2013/11/17 16:51:49 minskim Exp $
 
-SHA1 (tex-texconfig-27343/texconfig.tar.xz) = 2c63e1523637ac07401c046413ee0647914b39f6
-RMD160 (tex-texconfig-27343/texconfig.tar.xz) = 468a236c5c961e09c9c48d8b3c25f8ec299c6c9f
-Size (tex-texconfig-27343/texconfig.tar.xz) = 12308 bytes
+SHA1 (tex-texconfig-29764/texconfig.tar.xz) = 09212062c5f970d0ca01e07938e6b2fb98909db7
+RMD160 (tex-texconfig-29764/texconfig.tar.xz) = d41fbaee408ee94f1c0b059c316f4fc510473577
+Size (tex-texconfig-29764/texconfig.tar.xz) = 12324 bytes
 SHA1 (patch-bin_texconfig) = e69bd12e42371dd41e9bbd58b20752368df81d67
-SHA1 (patch-texmf_texconfig_tcfmgr) = 6833157d80ab0d5dafc4eb45b274a4256cdaf022
+SHA1 (patch-texmf-dist_texconfig_tcfmgr) = f530f1f57a7bec42fcc4ee06dbf6c655f631d635

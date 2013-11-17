@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/13 22:29:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 16:51:49 minskim Exp $
 bin/texconfig
-share/texmf/texconfig/README
-share/texmf/texconfig/g/generic
-share/texmf/texconfig/tcfmgr
-share/texmf/texconfig/tcfmgr.map
-share/texmf/texconfig/v/vt100
-share/texmf/texconfig/x/xterm
+share/texmf-dist/texconfig/README
+share/texmf-dist/texconfig/g/generic
+share/texmf-dist/texconfig/tcfmgr
+share/texmf-dist/texconfig/tcfmgr.map
+share/texmf-dist/texconfig/v/vt100
+share/texmf-dist/texconfig/x/xterm
