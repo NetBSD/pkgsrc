@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 22:51:48 minskim Exp $
-share/texmf/hbf2gf/README
-share/texmf/hbf2gf/b5ka12.cfg
-share/texmf/hbf2gf/b5kr12.cfg
-share/texmf/hbf2gf/b5so12.cfg
-share/texmf/hbf2gf/c1so12.cfg
-share/texmf/hbf2gf/c2so12.cfg
-share/texmf/hbf2gf/c3so12.cfg
-share/texmf/hbf2gf/c4so12.cfg
-share/texmf/hbf2gf/c5so12.cfg
-share/texmf/hbf2gf/c6so12.cfg
-share/texmf/hbf2gf/c7so12.cfg
-share/texmf/hbf2gf/csso12.cfg
-share/texmf/hbf2gf/gsfs14.cfg
-share/texmf/hbf2gf/j2so12.cfg
-share/texmf/hbf2gf/jsso12.cfg
-share/texmf/hbf2gf/ksso17.cfg
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 17:09:47 minskim Exp $
+share/texmf-dist/hbf2gf/README
+share/texmf-dist/hbf2gf/b5ka12.cfg
+share/texmf-dist/hbf2gf/b5kr12.cfg
+share/texmf-dist/hbf2gf/b5so12.cfg
+share/texmf-dist/hbf2gf/c1so12.cfg
+share/texmf-dist/hbf2gf/c2so12.cfg
+share/texmf-dist/hbf2gf/c3so12.cfg
+share/texmf-dist/hbf2gf/c4so12.cfg
+share/texmf-dist/hbf2gf/c5so12.cfg
+share/texmf-dist/hbf2gf/c6so12.cfg
+share/texmf-dist/hbf2gf/c7so12.cfg
+share/texmf-dist/hbf2gf/csso12.cfg
+share/texmf-dist/hbf2gf/gsfs14.cfg
+share/texmf-dist/hbf2gf/j2so12.cfg
+share/texmf-dist/hbf2gf/jsso12.cfg
+share/texmf-dist/hbf2gf/ksso17.cfg
