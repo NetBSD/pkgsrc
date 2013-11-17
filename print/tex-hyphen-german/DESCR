@@ -1,2 +1,10 @@
-Hyphenation patterns for the new German orthography ("neue
-deutsche Rechtschreibung").
+Hyphenation patterns for German in T1/EC and UTF-8 encodings,
+for traditional and reformed spelling, including Swiss German.
+The package includes the latest patterns from dehyph-exptl
+(known to TeX under names 'german', 'ngerman' and
+'swissgerman'), however 8-bit engines still load old versions
+of patterns for 'german' and 'ngerman' for backward-
+compatibility reasons. Swiss German patterns are suitable for
+Swiss Standard German (Hochdeutsch) not the Alemannic dialects
+spoken in Switzerland (Schwyzerduetsch). There are no known
+patterns for written Schwyzerduetsch.
