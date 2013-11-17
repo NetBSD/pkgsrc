@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 22:51:58 minskim Exp $
-share/texmf/doc/bg5conv/bg5conv.pdf
-share/texmf/doc/cef5conv/cef5conv.pdf
-share/texmf/doc/cefconv/cefconv.pdf
-share/texmf/doc/cefsconv/cefsconv.pdf
-share/texmf/doc/extconv/extconv.pdf
-share/texmf/doc/hbf2gf/hbf2gf.pdf
-share/texmf/doc/sjisconv/sjisconv.pdf
+@comment $NetBSD: PLIST,v 1.2 2013/11/17 17:09:48 minskim Exp $
+share/texmf-dist/doc/bg5conv/bg5conv.pdf
+share/texmf-dist/doc/cef5conv/cef5conv.pdf
+share/texmf-dist/doc/cefconv/cefconv.pdf
+share/texmf-dist/doc/cefsconv/cefsconv.pdf
+share/texmf-dist/doc/extconv/extconv.pdf
+share/texmf-dist/doc/hbf2gf/hbf2gf.pdf
+share/texmf-dist/doc/sjisconv/sjisconv.pdf
