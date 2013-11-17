@@ -1,0 +1,13 @@
+$NetBSD: patch-bin_rungs,v 1.1 2013/11/17 17:05:10 minskim Exp $
+
+--- bin/rungs.orig	2013-04-25 17:29:00.000000000 +0000
++++ bin/rungs
+@@ -23,7 +23,7 @@ end
+ if os.type == 'windows' then
+    command={'gswin32c'}
+ else
+-   command={'gs'}
++   command={'@GS@'}
+ end
+ 
+ for i=1, #arg do
