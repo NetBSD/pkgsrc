@@ -1,0 +1,15 @@
+$NetBSD: patch-bootstrap,v 1.1 2013/11/18 22:50:01 pettai Exp $
+
+Add support for newer automake
+
+--- bootstrap.orig	2013-11-18 09:00:56.000000000 +0000
++++ bootstrap
+@@ -36,7 +36,7 @@ aclocalflags="`sed -ne 's/^[ \t]*ACLOCAL
+ 
+ # Check for automake
+ amvers="no"
+-for v in 13 12 11 10 9 8 7 6 5; do
++for v in 14 13 12 11 10 9 8 7 6 5; do
+   if automake-1.${v} --version >/dev/null 2>&1; then
+     amvers="-1.${v}"
+     break
