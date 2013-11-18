@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4171 2013/11/18 19:05:35 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4172 2013/11/18 19:11:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6090,3 +6090,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-IEEEtran-doc to 1.8 [minskim 2013-11-18]
 	Added fonts/tex-fontinst version 1.933 [minskim 2013-11-18]
 	Added fonts/tex-fontinst-doc version 1.933 [minskim 2013-11-18]
+	Added print/tex-IEEEconf version 1.4 [minskim 2013-11-18]
+	Added print/tex-IEEEconf-doc version 1.4 [minskim 2013-11-18]
