@@ -1,0 +1,13 @@
+TeX macros for converting Adobe Font Metric files to TeX metric
+and virtual font format. Fontinst helps mainly with the number
+crunching and shovelling parts of font installation. This means
+in practice that it creates a number of files which give the
+TeX metrics (and related information) for a font family that
+(La)TeX needs to do any typesetting in these fonts. Fontinst
+furthermore makes it easy to create fonts containing glyphs
+from more than one base font, taking advantage of (e.g.)
+"expert" font sets. Fontinst cannot examine files to see if
+they contain any useful information, nor automatically search
+for files or work with binary file formats; those tasks must
+normally be done manually or with the help of some other tool,
+such as the pltotf and vptovf programs.
