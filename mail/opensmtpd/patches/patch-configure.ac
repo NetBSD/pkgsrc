@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/11/18 22:50:01 pettai Exp $
+
+Add sys/statvfs for NetBSD
+
+--- configure.ac.orig	2013-05-16 15:19:59.000000000 +0000
++++ configure.ac
+@@ -261,6 +261,7 @@ AC_CHECK_HEADERS([ \
+ 	sys/ndir.h \
+ 	sys/pstat.h \
+ 	sys/statfs.h \
++	sys/statvfs.h \
+ 	sys/un.h \
+ 	ucred.h \
+ 	util.h \

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/11/18 22:50:01 pettai Exp $
+
+SHA1 (opensmtpd-5.3.3p1.tar.gz) = a7fc3a15b5dc622410fcedf51bbe62e6b6d64df3
+RMD160 (opensmtpd-5.3.3p1.tar.gz) = 97f63e37fa6ce1f5f58d816088c5b356f99167c3
+Size (opensmtpd-5.3.3p1.tar.gz) = 343733 bytes
+SHA1 (patch-bootstrap) = c53e2d32429fcdfbef126652ac8e38a2b76344cb
+SHA1 (patch-configure.ac) = ed819952951700c057c11200095a72972aafc1f9
+SHA1 (patch-smtpd_Makefile.am) = 4267002ecadceaf68868b9d782d5e6f8571ebc36
+SHA1 (patch-smtpd_queue_fsqueue.c) = 80dae37705378c022c1a76d31ea54a3f907b6c1a
