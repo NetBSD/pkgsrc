@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/18 19:09:54 minskim Exp $
+share/texmf-dist/tex/latex/IEEEconf/IEEEconf.cls
