@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/13 07:31:50 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/18 18:21:14 minskim Exp $
+share/texmf-dist/fonts/source/public/etex/xbmc10.mf
+share/texmf-dist/fonts/tfm/public/etex/xbmc10.tfm
 share/texmf-dist/tex/plain/etex/etex.src
 share/texmf-dist/tex/plain/etex/etexdefs.lib
