@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4163 2013/11/18 10:56:32 markd Exp $
+$NetBSD: CHANGES-2013,v 1.4164 2013/11/18 18:06:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6075,3 +6075,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added cross/nios2-binutils version 2.23 [mef 2013-11-17]
 	Removed cross/nios2-binutils220 [mef 2013-11-17]
 	Updated audio/amarok to 2.8.0 [markd 2013-11-18]
+	Updated fonts/tex-cm to 2013 [minskim 2013-11-18]
+	Updated fonts/tex-cm-doc to 2013 [minskim 2013-11-18]
