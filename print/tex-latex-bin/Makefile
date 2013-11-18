@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/16 20:50:06 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/18 18:36:53 minskim Exp $
 
 DISTNAME=	latex-bin
-PKGNAME=	tex-${DISTNAME}-2012
-TEXLIVE_REV=	26689
+PKGNAME=	tex-${DISTNAME}-2013
+TEXLIVE_REV=	29764
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX executables
