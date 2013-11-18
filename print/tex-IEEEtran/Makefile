@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2011/03/18 23:29:38 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2013/11/18 18:57:17 minskim Exp $
 
 DISTNAME=	IEEEtran
-PKGNAME=	tex-${DISTNAME}-1.7a
-PKGREVISION=	4
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.8
+TEXLIVE_REV=	28697
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.michaelshell.org/tex/ieeetran/
