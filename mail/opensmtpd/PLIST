@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/18 22:50:01 pettai Exp $
+bin/mailq
+bin/newaliases
+bin/smtpscript
+libexec/mail.local
+libexec/opensmtpd/makemap
+man/man5/aliases.5
+man/man5/forward.5
+man/man5/smtpd.conf.5
+man/man8/makemap.8
+man/man8/newaliases.8
+man/man8/smtpctl.8
+man/man8/smtpd.8
+sbin/makemap
+sbin/smtpctl
+sbin/smtpd
+share/examples/opensmtpd/mailer.conf
+share/examples/opensmtpd/smtpd.conf
+share/examples/rc.d/opensmtpd
