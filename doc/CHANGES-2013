@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4165 2013/11/18 18:21:47 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4166 2013/11/18 18:34:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6079,3 +6079,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/tex-cm-doc to 2013 [minskim 2013-11-18]
 	Updated print/tex-etex to 2.1.31600 [minskim 2013-11-18]
 	Updated print/tex-etex-doc to 2.1.31600 [minskim 2013-11-18]
+	Updated print/tex-hyph-utf8 to 2013 [minskim 2013-11-18]
+	Updated print/tex-hyph-utf8-doc to 2013 [minskim 2013-11-18]
