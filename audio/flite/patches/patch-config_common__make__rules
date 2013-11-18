@@ -1,28 +1,27 @@
-$NetBSD: patch-config_common__make__rules,v 1.1 2013/11/17 16:25:09 dholland Exp $
+$NetBSD: patch-config_common__make__rules,v 1.2 2013/11/18 02:22:30 dholland Exp $
 
-Work around what appears to be a bug in gmake 4.0 that causes the
-build to loop infinitely making depend if building to tmpfs.
+Work around PR 48385, a tmpfs bug that combined with this package's
+build system causes gmake 4.0 to loop forever making depend.
 
-The first echo makes it print something so you can tell what's looping
-(otherwise it just sits there silently); the "false" is the
-workaround. For some reason this recipe needs to fail to prevent the
-loop.
+The problem in tmpfs, which assigns file and directory timestamps
+lazily and therefore frequently out of order, gets tickled because the
+depend file depends on the directory containing it.
+
+It is, in any event, almost never a good idea to depend on directories
+in makefiles. The workaround is to not do that and explicitly run a
+sub-make to create the object directory.
 
 --- config/common_make_rules.orig	2004-12-19 22:20:43.000000000 +0000
 +++ config/common_make_rules
-@@ -190,12 +190,15 @@ endif
+@@ -188,7 +188,10 @@ ifdef ALL_DIRS
+ 	done
+ endif
  
- $(DEPEND): $(SRCS) $(OBJDIR)
- 	@ rm -f $(DEPEND)
+-$(DEPEND): $(SRCS) $(OBJDIR)
++$(DEPEND): $(SRCS)
 +	@ echo Doing implicit make depend.
++	@ touch $(DEPEND)
++	@ $(MAKE) $(OBJDIR)
+ 	@ rm -f $(DEPEND)
  	@ for i in $(SRCS) ; \
  	  do \
-             echo "# $$i" ; \
- 	    $(MAKE_DEPEND) $$i | sed -e 's,^\([^:][^:]*\):,$(OBJDIR)/\1:,'; \
- 	    echo ; \
-           done > $(DEPEND)
-+	@ echo The following is intentional.
-+	false
- 
- file-list:
- 	@ echo making file-list in $(DIRNAME) ...
