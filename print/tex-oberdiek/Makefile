@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/05/31 12:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/11/18 18:48:44 minskim Exp $
 
 DISTNAME=	oberdiek
-PKGNAME=	tex-${DISTNAME}-2012
-PKGREVISION=	1
-TEXLIVE_REV=	26725
+PKGNAME=	tex-${DISTNAME}-2013
+TEXLIVE_REV=	30469
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Bundle of packages submitted by Heiko Oberdiek
