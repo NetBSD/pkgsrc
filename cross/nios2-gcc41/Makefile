@@ -1,24 +1,35 @@
-# $NetBSD: Makefile,v 1.1 2013/11/16 07:41:00 mef Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/18 06:41:27 mef Exp $
+DISTNAME=		nios2_gnu_gcc4_13.0
 PKG_VERSION=		4.1.2
 PKGNAME=		nios2-gcc41-${PKG_VERSION}
 CATEGORIES=		cross
-MAINTAINER=		pkgsrc-users@NetBSD.org
-LICENSE=		gnu-gpl-v2
-
-EXTRACT_ELEMENTS=	gcc-4.1
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
-PATH:=                  ${CROSSBASE}/bin:${PATH}
-COMMENT=		GNU gcc for Altera FPGA Nios2 processor
-
-USE_TOOLS+=		gmake makeinfo perl bison tar
-USE_GNU_CONFIGURE_HOST=	no
-#BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
+MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
 EXTRACT_SUFX=		.gz
 
-DEPENDS+=		nios2-binutils220-[0-9]*:../../cross/nios2-binutils220
+MAINTAINER=		pkgsrc-users@NetBSD.org
+COMMENT=		GNU gcc 4.1 for Altera FPGA Nios2 processor
+LICENSE=		gnu-gpl-v2
 
-.include		"../../cross/nios2/Makefile.common"
+DEPENDS+=		nios2-binutils-[0-9]*:../../cross/nios2-binutils
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
+BUILD_DEFS+=		CROSSBASE
+GNU_CONFIGURE=		yes
+INFO_FILES=		no
+EXTRACT_ELEMENTS=	gcc-4.1
+USE_PKGLOCALEDIR=	yes
+WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
+PATH:=                  ${CROSSBASE}/bin:${PATH}
+USE_CROSSBASE=		yes
+USE_TOOLS+=		gmake makeinfo perl bison tar
+# following line to avoid getting
+#    make: exec(nios2--netbsdelf-ar) failed (No such file or directory)
+USE_GNU_CONFIGURE_HOST= NO
+
+NIOS2_TARGET?=		nios2-elf
+
+CONFIGURE_ARGS=		# reset
+CONFIGURE_ARGS+=	--target=${NIOS2_TARGET:Q}
 CONFIGURE_ARGS+=	--enable-languages=c
 CONFIGURE_ARGS+=	--disable-multilib
 CONFIGURE_ARGS+=	--disable-threads
@@ -29,8 +40,7 @@ CONFIGURE_ARGS+=	--host=${MACHINE_ARCH}--${LOWER_OPSYS}
 CONFIGURE_ARGS+=	--build=${MACHINE_ARCH}--${LOWER_OPSYS}
 CFLAGS+=		-g
 
-INFO_FILES=		no
-
+PLIST_SUBST+=		NIOS2_TARGET=${NIOS2_TARGET:Q}
 PLIST_VARS+=		doc
 .include "options.mk"
 
@@ -50,5 +60,4 @@ post-install:
 	${RM}  ${DESTDIR}${CROSSBASE}/info/gccinstall.info
 	${RM}  ${DESTDIR}${CROSSBASE}/info/gccint.info
 
-.include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

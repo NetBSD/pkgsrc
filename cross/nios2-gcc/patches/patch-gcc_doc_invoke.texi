@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_doc_invoke.texi,v 1.1 2013/11/18 06:41:27 mef Exp $
+
+wip/nios2-gcc/work/gcc-4.1/gcc/doc/invoke.texi:1078: I can't find file `'.
+
+--- gcc-nios2/gcc/doc/invoke.texi.orig	2013-06-26 05:56:33.000000000 +0900
++++ gcc/doc/invoke.texi	2013-11-11 13:58:30.000000000 +0900
+@@ -1457,7 +1457,7 @@
+ useful way to start writing a Go interface to code written in some
+ other language.
+ 
+-@include @value{srcdir}/../libiberty/at-file.texi
++@c @include @value{srcdir}/../libiberty/at-file.texi
+ @end table
+ 
+ @node Invoking G++

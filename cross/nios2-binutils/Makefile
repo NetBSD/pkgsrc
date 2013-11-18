@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.1 2013/11/16 07:41:00 mef Exp $
-
-PKG_VERSION=		2.20
-PKGNAME=		nios2-binutils220-${PKG_VERSION}
-CATEGORIES=		cross
-MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
+# $NetBSD: Makefile,v 1.3 2013/11/18 06:41:27 mef Exp $
+.include		"../../cross/nios2/Makefile.common"
+PKGNAME=		nios2-binutils-${PKG_VERSION}
+PKG_VERSION=		2.23
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
+#HOMEPAGE=
 COMMENT=		GNU binutils for Altera FPGA Nios2 processor
-LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v3
 
-EXTRACT_ELEMENTS=	binutils-${PKGVERSION}
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
-
-USE_TOOLS+=		gmake makeinfo perl tar
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-BUILD_DEFS+=		${NIOS_INFO_DIR}
-INFO_FILES=		yes
+WRKSRC=			${WRKDIR}/binutils-2013.05
 
-.include		"../../cross/nios2/Makefile.common"
+USE_TOOLS+=		ksh gettext gmake makeinfo perl tar automake autoconf gawk
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++
+BUILD_DEFS+=		${NIOS_INFO_DIR}
 
 CONFIGURE_ARGS+=	--disable-nls
 # install libiberty by architecture
@@ -35,10 +32,19 @@ INFO_DIR?=		${NIOS_INFO_DIR}
 GNU_CONFIGURE_INFODIR=	${NIOS_INFO_DIR}
 
 do-extract:
-	(cd ${WRKDIR}; tar zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${EXTRACT_ELEMENTS} )
+	(cd ${WRKDIR}; tar zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
+	        sourceryg++-2013.05-43-nios2-linux-gnu/binutils-2013.05-43.tar.bz2;\
+	tar zxf sourceryg++-2013.05-43-nios2-linux-gnu/binutils-2013.05-43.tar.bz2;\
+	)
 
 # following file installed is reference only, not used at all for the moment
 post-install:
 	${INSTALL_DATA} files/nios2elf-netbsd.x ${DESTDIR}${PREFIX}/${NIOS2_TARGET}/lib/ldscripts
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+CONFIGURE_ENV+=		PATH=${CROSSBASE}/bin:${PATH}
+
+# ./configure.lineno: 3238: Syntax error: "else" unexpected
+#  gmake[1]: *** [configure-gas] Error 1
+PKGSRC_MAKE_ENV+=	SH=/bin/ksh
