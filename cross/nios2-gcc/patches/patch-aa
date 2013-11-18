@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.3 2013/11/18 06:41:27 mef Exp $
+#
+# (1) craft FPBIT_FUNCS and DPBIT_FUNCS lists to avoid routine collision
+# against NetBSD softfloat implementation. Following twelve are to
+# be eliminated;
+#	_addsub_df.o _addsub_sf.o _df_to_sf.o _df_to_si.o
+#	_div_df.o _div_sf.o _mul_df.o _mul_sf.o _sf_to_df.o _sf_to_si.o
+#	_si_to_df.o _si_to_sf.o
+# (2) To swith with and without documents, put @@VAR@@ type words. 
+
+--- gcc/Makefile.in.orig	2013-06-26 06:01:21.000000000 +0900
++++ gcc/Makefile.in	2013-11-16 17:45:15.000000000 +0900
+@@ -1752,7 +1752,7 @@ quickstrap: all
+ all.internal: start.encap rest.encap doc
+ # This is what to compile if making a cross-compiler.
+ all.cross: native gcc-cross$(exeext) cpp$(exeext) specs \
+-	libgcc-support lang.all.cross doc @GENINSRC@ srcextra
++	libgcc-support lang.all.cross @@DOC@@ @GENINSRC@ srcextra
+ # This is what must be made before installing GCC and converting libraries.
+ start.encap: native xgcc$(exeext) cpp$(exeext) specs \
+ 	libgcc-support lang.start.encap @GENINSRC@ srcextra

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/11/16 07:41:00 mef Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/18 06:41:27 mef Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
 PKGNAME=		nios2-gcc3-${PKG_VERSION}
 CATEGORIES=		cross
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		GNU gcc for Altera FPGA Nios2 processor
+COMMENT=		GNU gcc3 for Altera FPGA Nios2 processor
 LICENSE=		gnu-gpl-v2
 
 MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake makeinfo perl
 USE_GNU_CONFIGURE_HOST=	no
 #BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
 
-DEPENDS+=		nios2-binutils220-[0-9]*:../../cross/nios2-binutils220
+DEPENDS+=		nios2-binutils-[0-9]*:../../cross/nios2-binutils
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
