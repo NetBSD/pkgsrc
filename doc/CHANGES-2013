@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4161 2013/11/17 22:58:10 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.4162 2013/11/18 06:46:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6071,3 +6071,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/tex-amsfonts to 3.04 [minskim 2013-11-17]
 	Updated fonts/tex-amsfonts-doc to 3.04 [minskim 2013-11-17]
 	Updated net/unbound to 1.4.21 [pettai 2013-11-17]
+	Added cross/nios2-gcc version 4.7.3 [mef 2013-11-17]
+	Added cross/nios2-binutils version 2.23 [mef 2013-11-17]
+	Removed cross/nios2-binutils220 [mef 2013-11-17]
