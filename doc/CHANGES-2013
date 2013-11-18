@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4175 2013/11/18 19:47:27 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4176 2013/11/18 19:54:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6095,3 +6095,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/pixman to 0.32.4 [wiz 2013-11-18]
 	Updated misc/py-anki2 to 2.0.18 [wiz 2013-11-18]
 	Updated fonts/harfbuzz to 0.9.24 [wiz 2013-11-18]
+	Updated devel/boehm-gc to 7.2e [wiz 2013-11-18]
