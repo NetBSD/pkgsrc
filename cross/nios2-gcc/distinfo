@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.3 2013/11/18 06:41:27 mef Exp $
+
+SHA1 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 94a0dadc4c1370dadfacf4bc6cac591e3e47959b
+RMD160 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = de056d240a73236d6d8be4851813d8b15d16808f
+Size (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 251136787 bytes
+SHA1 (patch-aa) = a5c69ac3c3768c90d70665a308a155c584b68e60
+SHA1 (patch-gcc_doc_invoke.texi) = 649bc208f3c516263888d5431dc9cba890f53498
