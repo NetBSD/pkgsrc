@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4169 2013/11/18 18:49:21 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4170 2013/11/18 19:04:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6086,3 +6086,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/makeindexk to 2.15nb5 [minskim 2013-11-18]
 	Updated print/tex-oberdiek to 2013 [minskim 2013-11-18]
 	Updated print/tex-oberdiek-doc to 2013 [minskim 2013-11-18]
+	Updated print/tex-IEEEtran to 1.8 [minskim 2013-11-18]
+	Updated print/tex-IEEEtran-doc to 1.8 [minskim 2013-11-18]
