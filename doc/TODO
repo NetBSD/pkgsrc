@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12727 2013/11/18 10:56:32 markd Exp $
+$NetBSD: TODO,v 1.12728 2013/11/18 19:43:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gst-plugins1-base-1.2.0
 	o gstreamer-1.2
 	o gstreamer1-1.2.0
-	o gtar-1.27
+	o gtar-1.27.1
+	o gtar-base-1.27.1
 	o gthumb-3.2.4
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
