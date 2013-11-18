@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4167 2013/11/18 18:37:38 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4168 2013/11/18 18:41:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6083,3 +6083,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-hyph-utf8-doc to 2013 [minskim 2013-11-18]
 	Updated print/tex-latex-bin to 2013 [minskim 2013-11-18]
 	Updated print/tex-latex-bin-doc to 2013 [minskim 2013-11-18]
+	Updated textproc/makeindexk to 2.15nb5 [minskim 2013-11-18]
