@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/19 09:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/18 18:14:38 dholland Exp $
 
 DISTNAME=	mono-2.10.9
 PKGREVISION=	4
@@ -157,6 +157,10 @@ CONFIGURE_ARGS+=	--with-sigaltstack=no
 ULIMIT_CMD_datasize=	ulimit -d 524288
 ULIMIT_CMD_stacksize=	ulimit -s 10240
 .endif
+
+post-extract:
+	${CP} ${WRKSRC}/mcs/build/platforms/linux.make \
+		${WRKSRC}/mcs/build/platforms/netbsd.make
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
