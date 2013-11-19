@@ -1,10 +1,10 @@
-$NetBSD: patch-system_initialize.php,v 1.1 2012/03/28 15:14:43 taca Exp $
+$NetBSD: patch-system_initialize.php,v 1.2 2013/11/19 14:19:58 taca Exp $
 
 * Unofficial fix for CVE-2012-1297 by checking Referer as days of Contao 2.9.
 
---- system/initialize.php.orig	2012-03-14 15:13:14.000000000 +0000
+--- system/initialize.php.orig	2013-11-19 10:53:04.000000000 +0000
 +++ system/initialize.php
-@@ -168,10 +168,28 @@ if (file_exists(TL_ROOT . '/system/confi
+@@ -185,10 +185,28 @@ if (file_exists(TL_ROOT . '/system/confi
  /**
   * Check the request token upon POST requests
   */
