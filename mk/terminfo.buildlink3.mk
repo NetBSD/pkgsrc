@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.buildlink3.mk,v 1.3 2013/10/11 14:32:07 roy Exp $
+# $NetBSD: terminfo.buildlink3.mk,v 1.4 2013/11/19 11:43:19 obache Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any terminfo implementation instead of one particular one.  The available
@@ -12,8 +12,8 @@
 # === User-settable variables ===
 #
 # TERMINFO_DEFAULT
-#	This value represents the type of curses we wish to use on the
-#	system.  Setting this to "curses" means that the system curses
+#	This value represents the type of terminfo we wish to use on the
+#	system.  Setting this to "terminfo" means that the system terminfo
 #	implementation is fine.
 #
 #	Possible: terminfo, ncurses, pdcurses
@@ -22,15 +22,15 @@
 # === Variables set by this file ===
 #
 # TERMINFO_TYPE
-#	The name of the selected curses implementation.
+#	The name of the selected terminfo implementation.
 
 TERMINFO_BUILDLINK3_MK:=	${TERMINFO_BUILDLINK3_MK}+
 .include "bsd.fast.prefs.mk"
 
 .if !empty(TERMINFO_BUILDLINK3_MK:M+)
 
-# _TERMINFO_PKGS is an exhaustive list of all of the curses implementations
-# that may be used with curses.buildlink3.mk.
+# _TERMINFO_PKGS is an exhaustive list of all of the terminfo implementations
+# that may be used with terminfo.buildlink3.mk.
 #
 _TERMINFO_PKGS?=		terminfo ncurses pdcurses
 _TERMINFO_TYPES?=		terminfo tinfo
@@ -50,7 +50,7 @@ TERMINFO_DEFAULT?=	ncurses
 
 _TERMINFO_ACCEPTED=	# empty
 .if defined(USE_BUILTIN.terminfo) && !empty(USE_BUILTIN.terminfo:M[yY][eE][sS])
-_TERMINFO_ACCEPTED+=	terminfo	# system curses exists
+_TERMINFO_ACCEPTED+=	terminfo	# system terminfo exists
 .endif
 _TERMINFO_ACCEPTED+=	ncurses		# pkgsrc ncurses
 _TERMINFO_ACCEPTED+=	pdcurses	# pkgsrc pdcurses
