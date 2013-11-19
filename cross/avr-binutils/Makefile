@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/08/07 02:41:30 mef Exp $
+# $NetBSD: Makefile,v 1.21 2013/11/19 23:06:24 dsainty Exp $
 
 DISTNAME=		binutils-2.23.2
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -10,7 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU binutils for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v3
 
-USE_TOOLS+=		gmake makeinfo
+# No need to use makeinfo - this package doesn't install the documentation.
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
