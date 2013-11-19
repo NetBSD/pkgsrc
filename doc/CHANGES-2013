@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4180 2013/11/19 12:52:02 tron Exp $
+$NetBSD: CHANGES-2013,v 1.4181 2013/11/19 14:22:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -5912,6 +5912,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libxcb to 1.9.3 [wiz 2013-11-08]
 	Updated net/sslh to 1.15 [obache 2013-11-08]
 	Updated www/contao31 to 3.1.5 [taca 2013-11-08]
+	Updated www/contao31-example to 3.1.5 [taca 2013-11-08]
 	Updated devel/py-buildbot to 0.8.8 [riz 2013-11-08]
 	Updated devel/py-buildbot-slave to 0.8.8 [riz 2013-11-08]
 	Updated www/wordpress to 3.7.1 [morr 2013-11-08]
@@ -6100,3 +6101,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/ttf2pk to 1.5nb6 [minskim 2013-11-19]
 	Updated pkgtools/port2pkg to 1.14 [tron 2013-11-19]
 	Added security/sslscan version 1.8.2 [tron 2013-11-19]
+	Updated www/contao211 to 2.11.13 [taca 2013-11-19]
+	Updated www/contao211-example to 2.11.13 [taca 2013-11-19]
