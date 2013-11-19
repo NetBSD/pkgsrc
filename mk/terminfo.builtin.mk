@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.builtin.mk,v 1.3 2013/11/10 02:54:47 obache Exp $
+# $NetBSD: terminfo.builtin.mk,v 1.4 2013/11/19 11:40:39 obache Exp $
 
 BUILTIN_PKG:=	terminfo
 
@@ -38,8 +38,8 @@ USE_BUILTIN.terminfo=	${IS_BUILTIN.terminfo}
 .endif
 MAKEVARS+=	USE_BUILTIN.terminfo
 
-# Define BUILTIN_LIBNAME.termcap to be the base name of the built-in
-# termcap library.
+# Define BUILTIN_LIBNAME.terminfo to be the base name of the built-in
+# terminfo library.
 #
 # The way this is determined is:
 #
