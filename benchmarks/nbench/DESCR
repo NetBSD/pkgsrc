@@ -2,5 +2,4 @@ This benchmark utility is used to determine how the processor,
 its caches and coprocessors influence overall system performance.
 Its measurements can indicate problems with the processor subsystem
 and (since the processor is a major influence on overall system
-system performance) give us an idea of how well a given system will
-perform.
+performance) give us an idea of how well a given system will perform.
