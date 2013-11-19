@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4177 2013/11/18 22:51:48 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.4178 2013/11/19 03:15:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6097,3 +6097,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated fonts/harfbuzz to 0.9.24 [wiz 2013-11-18]
 	Updated devel/boehm-gc to 7.2e [wiz 2013-11-18]
 	Added mail/opensmtpd version 5.3.3p1 [pettai 2013-11-18]
+	Updated fonts/ttf2pk to 1.5nb6 [minskim 2013-11-19]
