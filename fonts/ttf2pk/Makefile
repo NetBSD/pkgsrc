@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2012/10/03 18:28:31 asau Exp $
+# $NetBSD: Makefile,v 1.28 2013/11/19 03:11:20 minskim Exp $
 
-DISTNAME=	texlive-20110705-source
+DISTNAME=	texlive-20130530-source
 PKGNAME=	ttf2pk-1.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	fonts print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,5 +27,4 @@ CONFIGURE_ARGS+=	--with-system-freetype \
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
-.include "../../print/kpathsea/texmf.mk"
 .include "../../mk/bsd.pkg.mk"
