@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2013/11/17 17:29:18 minskim Exp $
+# $NetBSD: Makefile,v 1.43 2013/11/19 00:02:49 minskim Exp $
 
 DISTNAME=	texlive-20130530-source
 PKGNAME=	dvipdfmx-20130405
@@ -20,6 +20,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dvipdfmx
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvipdfmx
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
@@ -28,9 +29,7 @@ CONFIGURE_ARGS+=	--with-system-kpathsea \
 CONFIGURE_ARGS+=	--with-system-zlib \
 		--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-system-libpng \
-		--with-libpng-includes=${BUILDLINK_PREFIX.png}/include \
-		--with-libpng-libdir=${BUILDLINK_PREFIX.png}/lib
+CONFIGURE_ARGS+=	--with-system-libpng
 CONFIGURE_ARGS+=	--with-paper=${BUILDLINK_PREFIX.libpaper}
 
 PKG_SYSCONFSUBDIR=	texmf
