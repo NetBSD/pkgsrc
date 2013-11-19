@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2013/11/19 12:46:07 tron Exp $
+$NetBSD: patch-Makefile,v 1.2 2013/11/19 13:00:10 tron Exp $
 
 Use appropriate commands for build and installation.
 
@@ -13,13 +13,13 @@ Use appropriate commands for build and installation.
  
  all:
 -	gcc -g -Wall -lssl -o sslscan $(SRCS) $(LDFLAGS) $(CFLAGS)
-+	$(CC) -g -Wall -lssl -o sslscan $(SRCS) $(LDFLAGS) $(CFLAGS)
++	$(CC) -Wall -lssl -o sslscan $(SRCS) $(LDFLAGS) $(CFLAGS)
  
  install:
 -	cp sslscan $(BINPATH)
 -	cp sslscan.1 $(MANPATH)man1
-+	$(BSD_INSTALL_PROGRAM) -s -m 755 sslscan $(DESTDIR)$(BINPATH)
-+	$(BSD_INSTALL_MAN) -m 644 sslscan.1 $(DESTDIR)$(MANPATH)/man1
++	$(BSD_INSTALL_PROGRAM) sslscan $(DESTDIR)$(BINPATH)
++	$(BSD_INSTALL_MAN) sslscan.1 $(DESTDIR)$(MANPATH)/man1
  
  uninstall:
  	rm -f $(BINPATH)sslscan

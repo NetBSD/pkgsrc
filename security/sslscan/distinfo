@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/11/19 12:46:07 tron Exp $
+$NetBSD: distinfo,v 1.2 2013/11/19 13:00:10 tron Exp $
 
 SHA1 (sslscan-1.8.2.tgz) = 4982ff622ca1f05829a3910be5e3903e91cfdd68
 RMD160 (sslscan-1.8.2.tgz) = a048d3a29d56b34a0fb2ea8e5a5dc2ba3e773d76
 Size (sslscan-1.8.2.tgz) = 22176 bytes
-SHA1 (patch-Makefile) = dd96b543bca3ff376eba05a2ee3444d5e2517cb2
+SHA1 (patch-Makefile) = e5d8432701891c3c4f7b2f5065a19a6aad0860a6
 SHA1 (patch-sslscan.c) = 8415623420c1052a305e3ce485776ae9fcc3df42
