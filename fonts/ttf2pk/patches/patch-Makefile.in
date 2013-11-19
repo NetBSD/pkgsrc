@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/11/19 03:12:36 minskim Exp $
+
+--- Makefile.in.orig	2013-02-08 12:05:33.000000000 +0000
++++ Makefile.in
+@@ -1320,8 +1320,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-dist_cfgdataDATA install-dist_encdataDATA \
+-	install-dist_mapdataDATA install-dist_sfddataDATA install-man
++install-data-am: install-man
+ 
+ install-dvi: install-dvi-am
+ 
