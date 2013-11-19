@@ -1,9 +1,10 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.20 2012/01/02 12:15:48 joerg Exp $
+# $NetBSD: port2pkg.pl,v 1.21 2013/11/19 10:46:06 tron Exp $
 #
 
-require 'getopts.pl';
+use Getopt::Std;
+
 $^W=1;
 use strict;
 use vars qw($opt_m);
@@ -14,7 +15,7 @@ my($namespace, $portname, $portversion, $distname,
    $pkgname, $pkgnameprefix, $pkgnamesuffix);
 my(@man, @cat);
 
-&usage_and_exit() if (! &Getopts('m:'));
+&usage_and_exit() if (! &getopts('m:'));
 $|=1;
 
 $portsdir = shift;
