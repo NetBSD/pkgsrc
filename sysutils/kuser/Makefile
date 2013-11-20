@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/11/07 13:15:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/20 13:23:46 obache Exp $
 
 DISTNAME=	kuser-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	KDE user manager
 
