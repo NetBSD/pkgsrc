@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/11/17 17:02:09 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2013/11/20 13:31:25 ryoon Exp $
 
 DISTNAME=	luatex-beta-0.76.0-source
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://foundry.supelec.fr/frs/download.php/file/15745/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +11,8 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
 COMMENT=	Extended version of pdfTeX using Lua
 LICENSE=	gnu-gpl-v2
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAKE_JOBS_SAFE=no
 
