@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2012/01/09 14:40:36 adam Exp $
-lib/libboost_locale.a
-lib/libboost_locale.so
-lib/libboost_locale.so.${BOOST_VERSION}

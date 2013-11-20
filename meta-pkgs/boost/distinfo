@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2013/11/12 16:49:07 adam Exp $
+$NetBSD: distinfo,v 1.61 2013/11/20 19:17:55 adam Exp $
 
 SHA1 (boost_1_55_0.tar.bz2) = cef9a0cc7084b1d639e06cd3bc34e4251524c840
 RMD160 (boost_1_55_0.tar.bz2) = de8ef647933a005119425326b59723aad4a6fd4f
@@ -9,11 +9,11 @@ SHA1 (patch-ac) = 32d14b50682dae1950ed927ecb9318ad6b07687a
 SHA1 (patch-ad) = 0e5dc31c3425de94444f97a9b7dec97ed5967733
 SHA1 (patch-ae) = 2fb49c90bbb3fd797ccdfaaf44c93494a5988f52
 SHA1 (patch-ag) = c406e9beb9260db7861b13a6eb4c386f23346eb1
-SHA1 (patch-ai) = 231db48819aa563b2082d95bb91d662b5d6cf779
 SHA1 (patch-aq) = e5c7b72ffa2942ce401f3d9bf05498fd761df17a
 SHA1 (patch-ar) = 2fec2c51272cc4ee376e6538d8f1fd8561a7f0a3
 SHA1 (patch-boost_archive_iterators_transform__width.hpp) = 5c08bac63fcc259997a8cf6fac1684f45ef7cd1a
-SHA1 (patch-boost_foreach.hpp) = 7cd26c4983873bcac284ad400950e341c559f9a8
-SHA1 (patch-boost_foreach_fwd.hpp) = 5accd68d559213a9677f7d1204e72dd082a42a41
+SHA1 (patch-boost_asio_detail_config.hpp) = b95ca6b0bb6c805624cb81c91c3f1b691a7425ca
+SHA1 (patch-boost_math_tools_config.hpp) = 81402bc38dc858d0818ed91e204966c8382be4ff
+SHA1 (patch-boost_noncopyable.hpp) = 6567b5932c6bb48e8b2fcae48ff47e0f230fc1b9
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
 SHA1 (patch-libs_filesystem_src_unique_path.cpp) = 4693ea11cf464d82168cecaa143b48affa94563b
