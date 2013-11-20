@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2013/11/06 00:50:47 gdt Exp $
+$NetBSD: patch-configure,v 1.5 2013/11/20 07:17:22 richard Exp $
 
 1. chunk: fix
 ./configure.lineno: 1: Syntax error: Bad substitution
@@ -50,7 +50,7 @@ last last chunk: fix sed expression not to use + which is not in BRE (guile)
          use_guile="No (guile not available)"
        else
 -        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* \+\([0-9\.]\+\)$/\1/ p'`
-+        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* *\([0-9\.]*\)$/\1/ p'`
++        GUILE_VERSION=`$GUILE --version | sed -n '1 s/^.* \([0-9\.]*\)$/\1/ p'`
          GUILE_VERSION_MAJOR=`echo $GUILE_VERSION | cut -d '.' -f 1`
          GUILE_VERSION_MINOR=`echo $GUILE_VERSION | cut -d '.' -f 2`
          if test 0$GUILE_VERSION_MAJOR -lt 2; then
