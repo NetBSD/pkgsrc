@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/11/03 03:40:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/20 13:23:45 obache Exp $
 
 VER=		4.1.3.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.3/
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/02/15 11:54:06 obache Exp $
+# $NetBSD: Makefile,v 1.12 2013/11/20 13:23:44 obache Exp $
 
 PKGNAME=	gnuradio-video-sdl-${VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 COMMENT=	SDL bindings for GNU Radio
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"

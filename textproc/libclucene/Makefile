@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/08/11 16:06:25 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/20 13:23:46 obache Exp $
 
 DISTNAME=		clucene-core-2.3.3.4
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clucene/}
 

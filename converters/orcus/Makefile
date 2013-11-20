@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/08/24 16:12:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/20 13:23:42 obache Exp $
 
 PKGNAME=	orcus-${PKGVERSION}
 DISTNAME=	liborcus-${PKGVERSION}
 PKGVERSION=	0.5.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://kohei.us/files/orcus/src/
 EXTRACT_SUFX=	.tar.bz2
