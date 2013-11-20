@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2013/11/20 13:23:41 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2013/11/20 20:04:35 adam Exp $
 
 BUILDLINK_TREE+=	usrp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	usrp
 USRP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.usrp+=	usrp>=3.0.4
-BUILDLINK_ABI_DEPENDS.usrp+=	usrp>=3.3.0nb9
+BUILDLINK_ABI_DEPENDS.usrp+=	usrp>=3.3.0nb10
 BUILDLINK_PKGSRCDIR.usrp?=	../../ham/usrp
 
 .include "../../ham/gnuradio-core/buildlink3.mk"
