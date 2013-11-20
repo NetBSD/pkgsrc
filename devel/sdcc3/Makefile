@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/20 13:23:43 obache Exp $
 
 DISTNAME=	sdcc-src-3.3.0
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
