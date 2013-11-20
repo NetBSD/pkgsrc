@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2011/09/14 18:13:37 hans Exp $
-lib/libboost_math_c99l.a
-lib/libboost_math_c99l.so
-lib/libboost_math_c99l.so.${BOOST_VERSION}
-lib/libboost_math_tr1l.a
-lib/libboost_math_tr1l.so
-lib/libboost_math_tr1l.so.${BOOST_VERSION}
