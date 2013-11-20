@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/08/29 00:33:56 dsainty Exp $
+# $NetBSD: options.mk,v 1.8 2013/11/20 04:50:47 dsainty Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex
@@ -28,6 +28,7 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 #
 # Styles used by Doxygen output.
 #
+DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
