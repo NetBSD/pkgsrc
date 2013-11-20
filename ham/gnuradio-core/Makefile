@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2013/11/20 13:23:41 obache Exp $
+# $NetBSD: Makefile,v 1.37 2013/11/20 20:04:35 adam Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 COMMENT=	Runtime system and DSP blocks for GNU Radio
 
 LDFLAGS.DragonFly+=	-lboost_system
