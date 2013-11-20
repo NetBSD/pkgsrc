@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/07/15 02:02:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2013/11/20 06:11:34 dsainty Exp $
 
 DISTNAME=		avrdude-5.11
 PKGREVISION=		1
@@ -24,8 +24,6 @@ USE_TOOLS+=		autoconf automake autoreconf makeinfo texi2html yacc lex
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
-CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
