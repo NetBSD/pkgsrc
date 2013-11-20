@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4181 2013/11/19 14:22:16 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4182 2013/11/20 13:31:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6103,3 +6103,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added security/sslscan version 1.8.2 [tron 2013-11-19]
 	Updated www/contao211 to 2.11.13 [taca 2013-11-19]
 	Updated www/contao211-example to 2.11.13 [taca 2013-11-19]
+	Updated print/luatex to 0.76.0nb1 [ryoon 2013-11-20]
