@@ -1,0 +1,12 @@
+$NetBSD: patch-system_bin_sqldump,v 1.1 2013/11/21 16:52:43 taca Exp $
+
+No bash specific function is needed here.
+
+--- system/bin/sqldump.orig	2013-10-24 09:11:21.000000000 +0000
++++ system/bin/sqldump
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Clean the database
+ mysql <<EOF
