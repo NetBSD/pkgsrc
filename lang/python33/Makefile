@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/11/10 12:12:32 obache Exp $
+# $NetBSD: Makefile,v 1.13 2013/11/21 14:06:43 adam Exp $
 
 .include "dist.mk"
 
-
 PKGNAME=	python33-${PY_DISTVERSION}
-PKGREVISION=	3
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,12 +13,12 @@ LICENSE=	python-software-foundation
 CONFLICTS+=	python-[0-9]*
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir:Q}
 CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-pymalloc
+CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir:Q}
 
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
