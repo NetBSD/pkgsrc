@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4183 2013/11/21 07:54:31 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4184 2013/11/21 07:57:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6105,3 +6105,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao211-example to 2.11.13 [taca 2013-11-19]
 	Updated print/luatex to 0.76.0nb1 [ryoon 2013-11-20]
 	Updated devel/ruby-msgpack to 0.5.7 [obache 2013-11-21]
+	Updated math/ruby-spreadsheet to 0.9.5 [obache 2013-11-21]
