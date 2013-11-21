@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/11/13 14:17:11 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2013/11/21 15:25:17 ryoon Exp $
 
-SHA1 (firefox-24.1.0esr.source.tar.bz2) = faeed7eb315e9e0a380ab5081b96800590eb6154
-RMD160 (firefox-24.1.0esr.source.tar.bz2) = 5cb36d654ecbd89f9b77e1a96c2eff7d54c45b93
-Size (firefox-24.1.0esr.source.tar.bz2) = 119816789 bytes
+SHA1 (firefox-24.1.1esr.source.tar.bz2) = 742b1f134db47793a1426ce4ee09a5f9dc6b51fc
+RMD160 (firefox-24.1.1esr.source.tar.bz2) = 47c6040f82867b874a3044afe86550c1b4c50d1f
+Size (firefox-24.1.1esr.source.tar.bz2) = 119861572 bytes
 SHA1 (patch-aa) = e8a10637cefb668f1db518464ba75b5469090f8f
 SHA1 (patch-ak) = 971ddb1f12b14bcee604c9d7e72da5e7bf47d9be
 SHA1 (patch-al) = 553c6042a98e4b381a46eec50c02cff349d88bd2
