@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4185 2013/11/21 08:08:13 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4186 2013/11/21 11:21:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6107,3 +6107,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-msgpack to 0.5.7 [obache 2013-11-21]
 	Updated math/ruby-spreadsheet to 0.9.5 [obache 2013-11-21]
 	Updated net/libupnp to 1.6.19 [obache 2013-11-21]
+	Updated devel/re2c to 0.13.6 [obache 2013-11-21]
