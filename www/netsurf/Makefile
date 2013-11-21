@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/10/10 14:42:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2013/11/21 11:41:33 obache Exp $
 #
 
 DISTNAME=	netsurf-1.2-src
@@ -41,6 +41,7 @@ do-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
