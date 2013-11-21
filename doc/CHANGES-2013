@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4194 2013/11/21 15:28:26 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4195 2013/11/21 16:54:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6117,3 +6117,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox24 to 24.1.1 [ryoon 2013-11-21]
 	Updated www/firefox-l10n to 25.0.1 [ryoon 2013-11-21]
 	Updated www/firefox24-l10n to 24.1.1 [ryoon 2013-11-21]
+	Added www/contao32 version 3.2.0 [taca 2013-11-21]
+	Added www/contao32-example version 3.2.0 [taca 2013-11-21]
