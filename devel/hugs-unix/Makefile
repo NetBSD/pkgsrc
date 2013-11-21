@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:06 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/21 23:50:04 jmmv Exp $
 #
 
 DISTNAME=	unix-2.0.20060921
 CATEGORIES=	devel
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Haskell abstraction for POSIX functionality
 HOMEPAGE=	http://www.haskell.org/ghc/docs/6.0/html/unix/index.html
 
