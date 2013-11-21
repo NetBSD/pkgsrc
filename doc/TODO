@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12731 2013/11/18 19:54:07 wiz Exp $
+$NetBSD: TODO,v 1.12732 2013/11/21 14:34:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
 	o dansguardian-2.10.0.3
-	o dante-1.3.2
+	o dante-1.4.0
 	o dap-3.8
 	o dar-2.4.11
 	o darcs-2.4
@@ -645,7 +645,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtranslator-1.9.6
 	o guile-2.0.9
 	o guile-gtk-2.0
-	o gupnp-av-0.12.3
+	o gupnp-av-0.12.4
 	o gupnp-tools-0.8.8
 	o gwaei-3.6.2
 	o gworkspace-0.9.2
@@ -672,7 +672,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icewm-1.3.7
 	o idutils-4.6
 	o ike-2.0.1 [pkg/37032]
-	o imp-6.1.5
+	o imp-6.1.6
 	o ingo-3.1.3
 	o inspircd-1.2.1
 	o instiki-0.13
@@ -682,6 +682,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
+	o jabberd2-2.3.0
 	o jamvm-1.5.4 [pkg/45604]
 	o java-db3-3.87
 	o jcabc2ps-20070110
@@ -927,11 +928,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o raine-0.61.1
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdesktop-1.8.0
+	o rdesktop-1.8.1
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
 	o rep-gtk-0.90.8.1
-	o reposurgeon-2.41
+	o reposurgeon-2.42
 	o resize_image-0.7
 	o rhythmbox-3.0.1
 	o rio500-0.8.1
@@ -951,6 +952,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o samba-3.6.20
+	o samba-4.0.12
 	o samba-4.1.0 [wip]
 	o samba-4.1.1
 	o sane-1.0.24
@@ -1062,9 +1064,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o unicap-0.9.8
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.22.0
+	o vala-0.22.1
 	o vbetool-1.1
 	o vera-1.17
+	o veusz-1.19
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewvc-1.1.21
@@ -1086,14 +1089,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o websvn-2.3.2
 	o weechat-0.4.2
 	o windowlab-1.40
-	o wine-1.6.0 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-1.6.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wine-devel-1.7.6 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-3.1.0
+	o worker-3.2.0
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
 	o wxGTK-3.0
