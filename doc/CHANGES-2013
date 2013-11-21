@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4192 2013/11/21 15:26:23 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4193 2013/11/21 15:27:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6115,3 +6115,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/nss to 3.15.3 [ryoon 2013-11-21]
 	Updated www/firefox to 25.0.1 [ryoon 2013-11-21]
 	Updated www/firefox24 to 24.1.1 [ryoon 2013-11-21]
+	Updated www/firefox-l10n to 25.0.1 [ryoon 2013-11-21]
