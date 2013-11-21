@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2013/11/19 14:19:58 taca Exp $
+# $NetBSD: Makefile.common,v 1.48 2013/11/21 16:50:50 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
@@ -12,6 +12,7 @@ CT_MASTER_SITE=	https://github.com/contao/core/archive/
 # current release
 CT211_VERSION=	2.11.13
 CT31_VERSION=	3.1.5
+CT32_VERSION=	3.2.0
 
 CT_VERS?=	211
 
@@ -19,6 +20,8 @@ CT_VERS?=	211
 CT_VERSION=	${CT211_VERSION}
 .elif ${CT_VERS} == "31"
 CT_VERSION=	${CT31_VERSION}
+.elif ${CT_VERS} == "32"
+CT_VERSION=	${CT32_VERSION}
 .else
 .error "Illegal version specified: ${CT_VERS}"
 .endif
