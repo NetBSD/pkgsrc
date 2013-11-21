@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2013/08/30 15:47:26 taca Exp $
+# $NetBSD: Makefile,v 1.22 2013/11/21 15:14:11 taca Exp $
 
-DISTNAME=	drupal-7.23
+DISTNAME=	drupal-7.24
 CATEGORIES=	www
-MASTER_SITES=	https://drupal.org/files/projects/
+MASTER_SITES=	http://ftp.drupal.org/files/projects/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
-FETCH_USING=	curl
 NO_BUILD=	YES
 DRUPAL=		share/drupal
 PAX_DIRS=	includes misc modules profiles scripts themes
