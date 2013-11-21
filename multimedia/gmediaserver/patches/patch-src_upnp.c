@@ -1,4 +1,4 @@
-$NetBSD: patch-src_upnp.c,v 1.1 2012/04/13 23:52:11 obache Exp $
+$NetBSD: patch-src_upnp.c,v 1.2 2013/11/21 09:05:08 obache Exp $
 
 * API change for libupnp>=1.6.7
 
@@ -12,7 +12,7 @@ $NetBSD: patch-src_upnp.c,v 1.1 2012/04/13 23:52:11 obache Exp $
  #include <inttypes.h>		/* POSIX */
  #include "gettext.h"            /* Gnulib/gettext */
  #define _(s) gettext(s)
-@@ -61,6 +62,16 @@ static Service services[] = {
+@@ -61,6 +62,32 @@ static Service services[] = {
    { 0, }
  };
  
@@ -21,7 +21,23 @@ $NetBSD: patch-src_upnp.c,v 1.1 2012/04/13 23:52:11 obache Exp $
 +{
 +  char hbuf[NI_MAXHOST];
 +  int err;
-+  err = getnameinfo((struct sockaddr*)addr, addr->ss_len, hbuf, NI_MAXHOST,
++  int slen;
++#ifdef __sun
++  switch (addr->ss_family) {
++  case AF_INET:
++    slen = sizeof (struct sockaddr_in);
++    break;
++  case AF_INET6:
++    slen = sizeof (struct sockaddr_in6);
++    break;
++  default:
++    slen = sizeof(*addr);
++    break;
++  }
++#else
++  slen = addr->ss_len;
++#endif
++  err = getnameinfo((struct sockaddr*)addr, slen, hbuf, NI_MAXHOST,
 +		    NULL, 0, NI_NUMERICHOST);
 +  say(level, header, err == 0 ? hbuf : "(unknown)");
 +}
@@ -29,7 +45,7 @@ $NetBSD: patch-src_upnp.c,v 1.1 2012/04/13 23:52:11 obache Exp $
  static const char *
  upnp_errmsg(int res)
  {
-@@ -265,7 +276,7 @@ handle_get_var_request(struct Upnp_State
+@@ -265,7 +292,7 @@ handle_get_var_request(struct Upnp_State
      say(3, _("Event device UDN: %s\n"), quotearg(request->DevUDN));
      say(3, _("Event service ID: %s\n"), quotearg(request->ServiceID));
      say(3, _("Event variable name: %s\n"), quotearg(request->StateVarName));
@@ -38,7 +54,7 @@ $NetBSD: patch-src_upnp.c,v 1.1 2012/04/13 23:52:11 obache Exp $
  
      if (strcmp(request->DevUDN, device_udn) != 0) {
          say(1, _("Discarding event - event device UDN (%s) not recognized\n"), quotearg(request->DevUDN));
-@@ -306,7 +317,7 @@ handle_action_request(struct Upnp_Action
+@@ -306,7 +333,7 @@ handle_action_request(struct Upnp_Action
      say(3, _("Event device UDN: %s\n"), quotearg(request->DevUDN));
      say(3, _("Event service ID: %s\n"), quotearg(request->ServiceID));
      say(3, _("Event action name: %s\n"), quotearg(request->ActionName));
