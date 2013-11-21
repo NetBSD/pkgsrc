@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1001 2013/11/14 21:27:01 joerg Exp $
+# $NetBSD: Makefile,v 1.1002 2013/11/21 16:54:06 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -113,6 +113,8 @@ SUBDIR+=	contao211-example
 SUBDIR+=	contao211-translations
 SUBDIR+=	contao31
 SUBDIR+=	contao31-example
+SUBDIR+=	contao32
+SUBDIR+=	contao32-example
 SUBDIR+=	cppcms
 SUBDIR+=	crawl
 SUBDIR+=	cronolog
