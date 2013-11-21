@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/21 23:50:04 jmmv Exp $
 
 DISTNAME=	glossaries
 PKGNAME=	tex-${DISTNAME}-3.01
 PKGREVISION=	3
 TEXLIVE_REV=	22100
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Create glossaries and lists of acronyms
 
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath

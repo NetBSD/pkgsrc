@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/08/26 17:40:59 adam Exp $
+# $NetBSD: Makefile,v 1.14 2013/11/21 23:50:04 jmmv Exp $
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
@@ -13,7 +13,7 @@ CATEGORIES+=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.boost.org/
 COMMENT=	Free, peer-reviewed portable C++ source libraries
 
