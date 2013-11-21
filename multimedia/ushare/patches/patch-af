@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
+$NetBSD: patch-af,v 1.4 2013/11/21 09:18:17 obache Exp $
 
 * Treat NetBSD same as FreeBSD.
 * Move sys/param.h and config.h header files before using conditions.
@@ -44,7 +44,7 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
  #include "ushare.h"
  #include "services.h"
  #include "http.h"
-@@ -177,7 +182,11 @@ handle_action_request (struct Upnp_Actio
+@@ -177,7 +182,12 @@ handle_action_request (struct Upnp_Actio
    struct service_t *service;
    struct service_action_t *action;
    char val[256];
@@ -52,11 +52,12 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
    uint32_t ip;
 +#else
 +  int error;
++  int slen;
 +#endif
  
    if (!request || !ut)
      return;
-@@ -188,10 +197,16 @@ handle_action_request (struct Upnp_Actio
+@@ -188,10 +198,30 @@ handle_action_request (struct Upnp_Actio
    if (strcmp (request->DevUDN + 5, ut->udn))
      return;
  
@@ -66,14 +67,28 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
    sprintf (val, "%d.%d.%d.%d",
             (ip >> 24) & 0xFF, (ip >> 16) & 0xFF, (ip >> 8) & 0xFF, ip & 0xFF);
 +#else
-+  error = getnameinfo((struct sockaddr *)&(request->CtrlPtIPAddr),
-+                      request->CtrlPtIPAddr.ss_len,
++#ifdef __sun
++  switch (request->CtrlPtIPAddr.ss_family) {
++  case AF_INET:
++    slen = sizeof (struct sockaddr_in);
++    break;
++  case AF_INET6:
++    slen = sizeof (struct sockaddr_in6);
++    break;
++  default:
++    slen = sizeof (request->CtrlPtIPAddr);
++    break;
++  }
++#else
++  slen = request->CtrlPtIPAddr.ss_len;
++#endif
++  error = getnameinfo((struct sockaddr *)&(request->CtrlPtIPAddr), slen,
 +                      val, sizeof(val), NULL, 0, NI_NUMERICHOST);
 +#endif
  
    if (ut->verbose)
    {
-@@ -505,7 +520,7 @@ create_udn (char *interface)
+@@ -505,7 +535,7 @@ create_udn (char *interface)
    char *buf;
    unsigned char *ptr;
  
@@ -82,7 +97,7 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
    int mib[6];
    size_t len;
    struct if_msghdr *ifm;
-@@ -517,7 +532,7 @@ create_udn (char *interface)
+@@ -517,7 +547,7 @@ create_udn (char *interface)
    if (!interface)
      return NULL;
  
@@ -91,7 +106,7 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
    mib[0] = CTL_NET;
    mib[1] = AF_ROUTE;
    mib[2] = 0;
-@@ -568,7 +583,7 @@ create_udn (char *interface)
+@@ -568,7 +598,7 @@ create_udn (char *interface)
    buf = (char *) malloc (64 * sizeof (char));
    memset (buf, 0, 64);
    ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
@@ -100,7 +115,7 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
  
    snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
              (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
-@@ -718,7 +733,7 @@ reload_config (int s __attribute__ ((unu
+@@ -718,7 +748,7 @@ reload_config (int s __attribute__ ((unu
    }
  }
  
@@ -109,7 +124,7 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
  display_headers (void)
  {
    printf (_("%s (version %s), a lightweight UPnP A/V and DLNA Media Server.\n"),
-@@ -734,11 +749,8 @@ setup_i18n(void)
+@@ -734,11 +764,8 @@ setup_i18n(void)
  #ifdef HAVE_SETLOCALE
    setlocale (LC_ALL, "");
  #endif
@@ -121,7 +136,7 @@ $NetBSD: patch-af,v 1.3 2012/12/25 21:05:49 joerg Exp $
  }
  
  #define SHUTDOWN_MSG _("Server is shutting down: other clients will be notified soon, Bye bye ...\n")
-@@ -845,6 +857,9 @@ main (int argc, char **argv)
+@@ -845,6 +872,9 @@ main (int argc, char **argv)
  
    signal (SIGINT, UPnPBreak);
    signal (SIGHUP, reload_config);
