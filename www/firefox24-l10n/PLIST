@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/03 13:34:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/21 15:27:54 ryoon Exp $
 lib/firefox24/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox24/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox24/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af.manifest
@@ -5751,10 +5751,9 @@ lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/defa
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/bing.xml
-lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/google.xml
+lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/twitter.xml
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/wikipedia.xml
-lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/searchplugins/yahoo.xml
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome.manifest
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox24/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA.manifest
@@ -11096,7 +11095,6 @@ lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/default
 lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/profile/chrome/userContent-example.css
 lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
-lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/creativecommons.xml
 lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/eBay-hu.xml
 lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox24/browser/extensions/langpack-hu@firefox.mozilla.org/browser/searchplugins/sztaki-en-hu.xml
@@ -13349,7 +13347,6 @@ lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchp
 lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/naver-kr.xml
 lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/wikipedia-kr.xml
-lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/browser/searchplugins/yahoo-kr.xml
 lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/chrome.manifest
 lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox24/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko.manifest
@@ -16726,10 +16723,9 @@ lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/defaul
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/amazondotcom.xml
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/bing.xml
-lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/eBay.xml
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/google.xml
+lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/twitter.xml
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/wikipedia.xml
-lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/browser/searchplugins/yahoo.xml
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/chrome.manifest
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/.mkdir.done
 lib/firefox24/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso.manifest
