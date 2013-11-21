@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/04/13 23:38:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/11/21 08:07:55 obache Exp $
 include/upnp/FreeList.h
 include/upnp/LinkedList.h
 include/upnp/ThreadPool.h
@@ -22,6 +22,14 @@ lib/libupnp.la
 lib/pkgconfig/libupnp.pc
 share/doc/${PKGNAME}/IXML_Programming_Guide.pdf
 share/doc/${PKGNAME}/UPnP_Programming_Guide.pdf
+share/doc/${PKGNAME}/examples/sample_util.c
+share/doc/${PKGNAME}/examples/sample_util.h
+share/doc/${PKGNAME}/examples/tv_ctrlpt.c
+share/doc/${PKGNAME}/examples/tv_ctrlpt.h
+share/doc/${PKGNAME}/examples/tv_ctrlpt_main.c
+share/doc/${PKGNAME}/examples/tv_device.c
+share/doc/${PKGNAME}/examples/tv_device.h
+share/doc/${PKGNAME}/examples/tv_device_main.c
 share/doc/${PKGNAME}/html/ixml/DOMInterfaces.html
 share/doc/${PKGNAME}/html/ixml/General.html
 share/doc/${PKGNAME}/html/ixml/IXMLAPI.html
@@ -272,4 +280,3 @@ share/doc/${PKGNAME}/html/upnp/icon1.gif
 share/doc/${PKGNAME}/html/upnp/icon2.gif
 share/doc/${PKGNAME}/html/upnp/index.html
 share/doc/${PKGNAME}/html/upnp/toc.html
-@pkgdir share/doc/${PKGNAME}/examples
