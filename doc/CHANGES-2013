@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4187 2013/11/21 14:07:25 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4188 2013/11/21 15:15:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6109,3 +6109,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/libupnp to 1.6.19 [obache 2013-11-21]
 	Updated devel/re2c to 0.13.6 [obache 2013-11-21]
 	Updated lang/python33 to 3.3.3 [adam 2013-11-21]
+	Updated www/drupal6 to 6.29 [taca 2013-11-21]
+	Updated www/drupal7 to 7.24 [taca 2013-11-21]
