@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2013/01/17 03:38:46 taca Exp $
+$NetBSD: distinfo,v 1.28 2013/11/21 15:13:09 taca Exp $
 
-SHA1 (drupal-6.28.tar.gz) = 305860ef83b616338a143080fc196f4f5dc350b1
-RMD160 (drupal-6.28.tar.gz) = 332e144786d297e827c8d46667bdfd61308ab5d4
-Size (drupal-6.28.tar.gz) = 1105942 bytes
+SHA1 (drupal-6.29.tar.gz) = cafe11ee8a7e631b3aedf6f3f90d71ac1a9adac3
+RMD160 (drupal-6.29.tar.gz) = 051abbfe73247c50535151d5321d581da10baad7
+Size (drupal-6.29.tar.gz) = 1101032 bytes
 SHA1 (patch-includes_path.inc) = 84825d47cc6cbe3466cb34adb7e512231293e9a4
