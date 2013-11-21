@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/23 15:05:09 joerg Exp $
+$NetBSD: distinfo,v 1.2 2013/11/21 11:39:37 obache Exp $
 
 SHA1 (netsurf-1.2-src.tar.gz) = 705c721e24847501ede7d32766be28135e8f2cf9
 RMD160 (netsurf-1.2-src.tar.gz) = 0e30e117517ee4833c378ec9e1e4b38e8bc69e5d
 Size (netsurf-1.2-src.tar.gz) = 1025947 bytes
-SHA1 (patch-Makefile) = 0abcf2ca7346a30edbe03ba876febb28ef7e2c64
 SHA1 (patch-netsurf) = 07dd275051923e64bddcb6936dda46b57eecdf7a
