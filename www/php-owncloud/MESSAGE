@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.12 2013/09/28 13:29:51 ryoon Exp $
+$NetBSD: MESSAGE,v 1.13 2013/11/22 14:34:33 ryoon Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
@@ -26,10 +26,10 @@ To use ownCloud, you will need to perform the following steps.
 	extension=iconv.so
 	extension=json.so
 	extension=mbstring.so
-	extension=pdo.so
 	extension=zip.so
 	extension=zlib.so
 
+	extension=pdo.so ;if you select sqlite backend.
 	extension=pdo_sqlite.so ;if you select sqlite backend.
 	extension=mysql.so ;if you select MySQL backend.
 	extension=pgsql.so ;if you select PostgreSQL backend.
