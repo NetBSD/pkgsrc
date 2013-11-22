@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1808 2013/11/22 10:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1809 2013/11/22 11:51:24 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -296,6 +296,7 @@ SUBDIR+=	hugs-unix
 SUBDIR+=	idiff
 SUBDIR+=	idutils
 SUBDIR+=	imake
+SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
 SUBDIR+=	isect
 SUBDIR+=	its4
