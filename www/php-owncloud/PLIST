@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2013/10/12 12:45:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/11/22 14:34:33 ryoon Exp $
 share/owncloud/.htaccess
 share/owncloud/3rdparty/Archive/Tar.php
 share/owncloud/3rdparty/Console/Getopt.php
@@ -2121,6 +2121,7 @@ share/owncloud/apps/files_pdfviewer/templates/pdf.php
 share/owncloud/apps/files_pdfviewer/viewer.php
 share/owncloud/apps/files_sharing/appinfo/app.php
 share/owncloud/apps/files_sharing/appinfo/info.xml
+share/owncloud/apps/files_sharing/appinfo/routes.php
 share/owncloud/apps/files_sharing/appinfo/update.php
 share/owncloud/apps/files_sharing/appinfo/version
 share/owncloud/apps/files_sharing/css/public.css
@@ -2182,6 +2183,7 @@ share/owncloud/apps/files_sharing/l10n/vi.php
 share/owncloud/apps/files_sharing/l10n/zh_CN.GB2312.php
 share/owncloud/apps/files_sharing/l10n/zh_CN.php
 share/owncloud/apps/files_sharing/l10n/zh_TW.php
+share/owncloud/apps/files_sharing/lib/api.php
 share/owncloud/apps/files_sharing/lib/cache.php
 share/owncloud/apps/files_sharing/lib/permissions.php
 share/owncloud/apps/files_sharing/lib/share/file.php
@@ -2192,6 +2194,7 @@ share/owncloud/apps/files_sharing/lib/watcher.php
 share/owncloud/apps/files_sharing/public.php
 share/owncloud/apps/files_sharing/templates/authenticate.php
 share/owncloud/apps/files_sharing/templates/public.php
+share/owncloud/apps/files_sharing/tests/api.php
 share/owncloud/apps/files_texteditor/ajax/loadfile.php
 share/owncloud/apps/files_texteditor/ajax/savefile.php
 share/owncloud/apps/files_texteditor/appinfo/app.php
@@ -3836,12 +3839,18 @@ share/owncloud/core/doc/admin/_sources/maintenance/backup.txt
 share/owncloud/core/doc/admin/_sources/maintenance/index.txt
 share/owncloud/core/doc/admin/_sources/maintenance/migrating.txt
 share/owncloud/core/doc/admin/_sources/maintenance/update.txt
+share/owncloud/core/doc/admin/_static/ajax-loader.gif
 share/owncloud/core/doc/admin/_static/basic.css
 share/owncloud/core/doc/admin/_static/bootstrap-responsive.css
 share/owncloud/core/doc/admin/_static/bootstrap-sphinx.css
 share/owncloud/core/doc/admin/_static/bootstrap.css
 share/owncloud/core/doc/admin/_static/bootstrap.js
+share/owncloud/core/doc/admin/_static/comment-bright.png
+share/owncloud/core/doc/admin/_static/comment-close.png
+share/owncloud/core/doc/admin/_static/comment.png
 share/owncloud/core/doc/admin/_static/doctools.js
+share/owncloud/core/doc/admin/_static/down-pressed.png
+share/owncloud/core/doc/admin/_static/down.png
 share/owncloud/core/doc/admin/_static/file.png
 share/owncloud/core/doc/admin/_static/img/glyphicons-halflings-white.png
 share/owncloud/core/doc/admin/_static/img/glyphicons-halflings.png
@@ -3856,6 +3865,9 @@ share/owncloud/core/doc/admin/_static/pygments.css
 share/owncloud/core/doc/admin/_static/searchtools.js
 share/owncloud/core/doc/admin/_static/style.css
 share/owncloud/core/doc/admin/_static/underscore.js
+share/owncloud/core/doc/admin/_static/up-pressed.png
+share/owncloud/core/doc/admin/_static/up.png
+share/owncloud/core/doc/admin/_static/websupport.js
 share/owncloud/core/doc/admin/configuration/auth_ldap.html
 share/owncloud/core/doc/admin/configuration/background_jobs.html
 share/owncloud/core/doc/admin/configuration/configuration_3rdparty.html
@@ -3951,12 +3963,18 @@ share/owncloud/core/doc/user/_sources/pim/sync_osx.txt
 share/owncloud/core/doc/user/_sources/pim/sync_thunderbird.txt
 share/owncloud/core/doc/user/_sources/pim/troubleshooting.txt
 share/owncloud/core/doc/user/_sources/webinterface.txt
+share/owncloud/core/doc/user/_static/ajax-loader.gif
 share/owncloud/core/doc/user/_static/basic.css
 share/owncloud/core/doc/user/_static/bootstrap-responsive.css
 share/owncloud/core/doc/user/_static/bootstrap-sphinx.css
 share/owncloud/core/doc/user/_static/bootstrap.css
 share/owncloud/core/doc/user/_static/bootstrap.js
+share/owncloud/core/doc/user/_static/comment-bright.png
+share/owncloud/core/doc/user/_static/comment-close.png
+share/owncloud/core/doc/user/_static/comment.png
 share/owncloud/core/doc/user/_static/doctools.js
+share/owncloud/core/doc/user/_static/down-pressed.png
+share/owncloud/core/doc/user/_static/down.png
 share/owncloud/core/doc/user/_static/file.png
 share/owncloud/core/doc/user/_static/img/glyphicons-halflings-white.png
 share/owncloud/core/doc/user/_static/img/glyphicons-halflings.png
@@ -3971,6 +3989,9 @@ share/owncloud/core/doc/user/_static/pygments.css
 share/owncloud/core/doc/user/_static/searchtools.js
 share/owncloud/core/doc/user/_static/style.css
 share/owncloud/core/doc/user/_static/underscore.js
+share/owncloud/core/doc/user/_static/up-pressed.png
+share/owncloud/core/doc/user/_static/up.png
+share/owncloud/core/doc/user/_static/websupport.js
 share/owncloud/core/doc/user/bookmarks.html
 share/owncloud/core/doc/user/contents.html
 share/owncloud/core/doc/user/files/configuring_big_file_upload.html
@@ -5214,6 +5235,7 @@ share/owncloud/lib/files/mapper.php
 share/owncloud/lib/files/mount.php
 share/owncloud/lib/files/storage/common.php
 share/owncloud/lib/files/storage/commontest.php
+share/owncloud/lib/files/storage/home.php
 share/owncloud/lib/files/storage/local.php
 share/owncloud/lib/files/storage/mappedlocal.php
 share/owncloud/lib/files/storage/storage.php
