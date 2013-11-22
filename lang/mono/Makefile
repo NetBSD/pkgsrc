@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2013/11/12 04:00:47 dholland Exp $
+# $NetBSD: Makefile,v 1.145 2013/11/22 14:40:35 dholland Exp $
 
 DISTNAME=	mono-3.0.10
 PKGREVISION=	3
@@ -14,7 +14,7 @@ LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 MAKE_JOBS_SAFE=	no
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
-ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q}
+ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
 
 USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config
 USE_LIBTOOL=	yes
@@ -151,10 +151,6 @@ CONFIGURE_ARGS+=	--disable-parallel-mark
 .else
 PLIST.monodoc=		yes
 .endif
-
-post-extract:
-	${CP} ${WRKSRC}/mcs/build/platforms/linux.make \
-		${WRKSRC}/mcs/build/platforms/netbsd.make
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
