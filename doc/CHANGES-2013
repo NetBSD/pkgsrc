@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4196 2013/11/22 10:35:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4197 2013/11/22 10:42:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6120,3 +6120,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added www/contao32 version 3.2.0 [taca 2013-11-21]
 	Added www/contao32-example version 3.2.0 [taca 2013-11-21]
 	Added devel/p5-Module-Metadata version 1.000019 [wiz 2013-11-22]
+	Added devel/p5-Term-Size-Perl version 0.029 [wiz 2013-11-22]
