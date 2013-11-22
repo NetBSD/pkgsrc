@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/22 12:11:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/22 12:50:52 ryoon Exp $
 
 DISTNAME=	mirall-1.4.2
 CATEGORIES=	net
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://owncloud.org/sync-clients/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Graphicsl file synchronization program for OwnCloud
 LICENSE=	gnu-gpl-v2
 
 CFLAGS+=	-g
