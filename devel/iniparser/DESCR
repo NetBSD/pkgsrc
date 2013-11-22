@@ -1,0 +1,3 @@
+iniparser is a free stand-alone ini file parsing library.
+It is written in portable ANSI C and should compile anywhere.
+iniparser is distributed under an MIT license.

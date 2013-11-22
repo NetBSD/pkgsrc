@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/22 11:49:42 ryoon Exp $
+include/dictionary.h
+include/iniparser.h
+lib/libiniparser.la
+share/iniparser/bc_s.png
+share/iniparser/closed.png
+share/iniparser/doxygen.css
+share/iniparser/doxygen.png
+share/iniparser/globals_func.html
+share/iniparser/index.html
+share/iniparser/iniparser_8h.html
+share/iniparser/iniparser_8main.html
+share/iniparser/nav_f.png
+share/iniparser/nav_h.png
+share/iniparser/open.png
+share/iniparser/tab_a.png
+share/iniparser/tab_b.gif
+share/iniparser/tab_b.png
+share/iniparser/tab_h.png
+share/iniparser/tab_l.gif
+share/iniparser/tab_r.gif
+share/iniparser/tab_s.png
+share/iniparser/tabs.css
