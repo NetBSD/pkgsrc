@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/11/22 12:11:49 ryoon Exp $
+
+To see the status of mirall's owncloud command. You should have status bar
+of XFCE or other desktop environment.
+===========================================================================
