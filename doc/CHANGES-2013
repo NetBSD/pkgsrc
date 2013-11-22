@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4202 2013/11/22 12:04:52 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4203 2013/11/22 12:12:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6126,3 +6126,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/iniparser version 3.1 [ryoon 2013-11-22]
 	Updated devel/p5-MooX-Cmd to 0.008 [wiz 2013-11-22]
 	Added net/ocsync version 0.90.4 [ryoon 2013-11-22]
+	Added net/mirall version 1.4.2 [ryoon 2013-11-22]
