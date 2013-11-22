@@ -1,0 +1,18 @@
+$NetBSD: patch-config_CMakeLists.txt,v 1.1 2013/11/22 12:01:13 ryoon Exp $
+
+* Install config file with pkgsrc way
+
+--- config/CMakeLists.txt.orig	2013-10-18 13:11:09.000000000 +0000
++++ config/CMakeLists.txt
+@@ -3,8 +3,8 @@ macro_copy_file(${CMAKE_CURRENT_SOURCE_D
+ 
+ install(
+   FILES
+-    ocsync.conf
+-    ocsync_exclude.conf
++    ocsync.conf.default
++    ocsync_exclude.conf.default
+   DESTINATION
+-    ${SYSCONF_INSTALL_DIR}/ocsync
++    ${SHARE_INSTALL_PREFIX}/examples/ocsync
+ )
