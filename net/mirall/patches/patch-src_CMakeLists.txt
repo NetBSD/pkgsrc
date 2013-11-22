@@ -1,0 +1,12 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2013/11/22 12:11:49 ryoon Exp $
+
+--- src/CMakeLists.txt.orig	2013-10-21 12:05:25.000000000 +0000
++++ src/CMakeLists.txt
+@@ -140,7 +140,6 @@ qt4_wrap_cpp(syncMoc ${libsync_HEADERS})
+ list(APPEND libsync_LINK_TARGETS
+     ${QT_LIBRARIES}
+     ${CSYNC_LIBRARY}
+-    dl
+ )
+ 
+ if(QTKEYCHAIN_FOUND)
