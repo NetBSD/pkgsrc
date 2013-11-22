@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/11/22 12:11:49 ryoon Exp $
+
+--- CMakeLists.txt.orig	2013-10-21 12:05:25.000000000 +0000
++++ CMakeLists.txt
+@@ -103,8 +103,4 @@ if(UNIT_TESTING)
+     add_subdirectory(test)
+ endif(UNIT_TESTING)
+ 
+-if(BUILD_OWNCLOUD_OSX_BUNDLE)
+-    configure_file(sync-exclude.lst ${OWNCLOUD_OSX_BUNDLE}/Contents/Resources/sync-exclude.lst COPYONLY)
+-else()
+-    install( FILES sync-exclude.lst DESTINATION ${SYSCONFDIR}/${APPLICATION_SHORTNAME} )
+-endif()
++    install( FILES sync-exclude.lst DESTINATION ${SHARE_INSTALL_PREFIX}/examples/mirall)
