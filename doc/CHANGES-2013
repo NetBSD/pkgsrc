@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4199 2013/11/22 10:51:57 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4200 2013/11/22 11:50:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6123,3 +6123,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Term-Size-Perl version 0.029 [wiz 2013-11-22]
 	Added devel/p5-Term-Size-Any version 0.002 [wiz 2013-11-22]
 	Updated devel/p5-MooX-Options to 3.99 [wiz 2013-11-22]
+	Added devel/iniparser version 3.1 [ryoon 2013-11-22]
