@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.987 2013/11/22 12:05:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.988 2013/11/22 12:12:54 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -293,6 +293,7 @@ SUBDIR+=	microdc2
 SUBDIR+=	mikutter
 SUBDIR+=	mimms
 SUBDIR+=	miniupnpd
+SUBDIR+=	mirall
 SUBDIR+=	miredo
 SUBDIR+=	mirror
 SUBDIR+=	mitmproxy
