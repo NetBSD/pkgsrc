@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4215 2013/11/23 18:38:01 gls Exp $
+$NetBSD: CHANGES-2013,v 1.4216 2013/11/23 19:12:38 gls Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6145,3 +6145,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added cad/ghdl version 0.29 [ryoon 2013-11-23]
 	Updated textproc/source-highlight to 3.1.7 [gls 2013-11-23]
 	Updated textproc/asciidoc to 8.6.9 [gls 2013-11-23]
+	Updated x11/x3270 to 3.3.13ga7 [gls 2013-11-23]
