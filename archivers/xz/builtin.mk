@@ -1,12 +1,10 @@
-# $NetBSD: builtin.mk,v 1.2 2011/02/09 09:12:16 adam Exp $
+# $NetBSD: builtin.mk,v 1.3 2013/11/23 10:51:09 obache Exp $
 
 BUILTIN_PKG:=	xz
 
-BUILTIN_FIND_FILES_VAR:=	H_LZMA H_LZMA_VERSION
-BUILTIN_FIND_FILES.H_LZMA=	/usr/include/lzma.h \
-				/boot/common/include/lzma.h
-BUILTIN_FIND_FILES.H_LZMA_VERSION=/usr/include/lzma/version.h \
-				/boot/common/include/lzma/version.h
+BUILTIN_FIND_HEADERS_VAR:=	H_LZMA H_LZMA_VERSION
+BUILTIN_FIND_HEADERS.H_LZMA=	lzma.h
+BUILTIN_FIND_HEADERS.H_LZMA_VERSION=lzma/version.h
 BUILTIN_FIND_GREP.H_LZMA=	LZMA_
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
