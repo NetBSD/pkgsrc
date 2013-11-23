@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: builtin.mk,v 1.5 2013/11/23 12:10:13 obache Exp $
 
 BUILTIN_PKG:=	skey
 
-BUILTIN_FIND_FILES_VAR:=	H_SKEY
-BUILTIN_FIND_FILES.H_SKEY=	/usr/include/skey.h
+BUILTIN_FIND_HEADERS_VAR:=	H_SKEY
+BUILTIN_FIND_HEADERS.H_SKEY=	skey.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
