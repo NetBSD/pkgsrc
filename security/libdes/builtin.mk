@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.6 2006/04/06 06:22:42 reed Exp $
+# $NetBSD: builtin.mk,v 1.7 2013/11/23 12:10:13 obache Exp $
 
 BUILTIN_PKG:=	libdes
 
-BUILTIN_FIND_FILES_VAR:=	H_LIBDES
-BUILTIN_FIND_FILES.H_LIBDES=	/usr/include/libdes.h /usr/include/des.h
+BUILTIN_FIND_HEADERS_VAR:=	H_LIBDES
+BUILTIN_FIND_HEADERS.H_LIBDES=	libdes.h des.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
