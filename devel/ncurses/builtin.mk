@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.33 2013/08/21 14:27:30 richard Exp $
+# $NetBSD: builtin.mk,v 1.34 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -6,14 +6,13 @@ BUILTIN_PKG:=	ncurses
 #
 
 BUILTIN_FIND_LIBS:=		ncurses curses terminfo
-BUILTIN_FIND_FILES_VAR:=	H_NCURSES H_CURSES H_CURSES1
-BUILTIN_FIND_FILES.H_NCURSES=	/usr/include/ncurses.h /usr/include/curses.h
-#BUILTIN_FIND_FILES.H_NCURSES+=	/usr/include/ncurses/curses.h
-BUILTIN_FIND_FILES.H_NCURSES+=	/boot/develop/headers/3rdparty/curses.h
+BUILTIN_FIND_HEADERS_VAR:=	H_NCURSES H_CURSES H_CURSES1
+BUILTIN_FIND_HEADERS.H_NCURSES=	ncurses.h curses.h
+#BUILTIN_FIND_HEADERS.H_NCURSES+=	ncurses/curses.h
 BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
-BUILTIN_FIND_FILES.H_CURSES=	/usr/include/ncurses.h /usr/include/curses.h
+BUILTIN_FIND_HEADERS.H_CURSES=	ncurses.h curses.h
 BUILTIN_FIND_GREP.H_CURSES=	mvwchgat
-BUILTIN_FIND_FILES.H_CURSES1=	/usr/include/ncurses.h /usr/include/curses.h
+BUILTIN_FIND_HEADERS.H_CURSES1=	ncurses.h curses.h
 BUILTIN_FIND_GREP.H_CURSES1=	wsyncup
 
 .include "../../mk/buildlink3/bsd.builtin.mk"

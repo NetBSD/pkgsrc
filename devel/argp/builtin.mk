@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/22 01:40:21 joerg Exp $
+# $NetBSD: builtin.mk,v 1.2 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	argp
 
-BUILTIN_FIND_FILES_VAR:=	H_ARGP
-BUILTIN_FIND_FILES.H_ARGP=	/usr/include/argp.h
+BUILTIN_FIND_HEADERS_VAR:=	H_ARGP
+BUILTIN_FIND_HEADERS.H_ARGP=	argp.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
