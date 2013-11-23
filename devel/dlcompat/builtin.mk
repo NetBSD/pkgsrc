@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.9 2006/04/06 06:21:48 reed Exp $
+# $NetBSD: builtin.mk,v 1.10 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	dlcompat
 
 BUILTIN_FIND_LIBS:=		dl
-BUILTIN_FIND_FILES_VAR:=	H_DLFCN
-BUILTIN_FIND_FILES.H_DLFCN=	/usr/include/dlfcn.h
+BUILTIN_FIND_HEADERS_VAR:=	H_DLFCN
+BUILTIN_FIND_HEADERS.H_DLFCN=	dlfcn.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

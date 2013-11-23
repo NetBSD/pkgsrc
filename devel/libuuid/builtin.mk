@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.4 2012/01/11 13:28:45 hans Exp $
+# $NetBSD: builtin.mk,v 1.5 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	libuuid
 
-BUILTIN_FIND_FILES_VAR=		UUID_PC H_UUID
+BUILTIN_FIND_FILES_VAR=		UUID_PC
 BUILTIN_FIND_FILES.UUID_PC=	/usr/lib/pkgconfig/uuid.pc
-BUILTIN_FIND_FILES.H_UUID=	/usr/include/uuid/uuid.h
+BUILTIN_FIND_HEADERS_VAR=	H_UUID
+BUILTIN_FIND_HEADERS.H_UUID=	uuid/uuid.h
 BUILTIN_FIND_GREP.H_UUID=	uuid_generate
 BUILTIN_FIND_LIBS:=		uuid
 

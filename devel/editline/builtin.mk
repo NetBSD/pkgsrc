@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.3 2013/08/11 07:41:04 obache Exp $
+# $NetBSD: builtin.mk,v 1.4 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	editline
 
 BUILTIN_FIND_LIBS:=		edit
-BUILTIN_FIND_FILES_VAR:=	H_EDITLINE
-BUILTIN_FIND_FILES.H_EDITLINE=	/usr/include/editline/readline.h \
-				/usr/include/readline/readline.h
+BUILTIN_FIND_HEADERS_VAR:=	H_EDITLINE
+BUILTIN_FIND_HEADERS.H_EDITLINE=editline/readline.h \
+				readline/readline.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

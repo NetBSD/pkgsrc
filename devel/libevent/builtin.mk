@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.11 2011/10/03 11:48:11 adam Exp $
+# $NetBSD: builtin.mk,v 1.12 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	libevent
 
-BUILTIN_FIND_FILES_VAR:=	H_LIBEVENT H_LIBEVENTCONFIG
-BUILTIN_FIND_FILES.H_LIBEVENT=	/usr/include/event.h
-BUILTIN_FIND_FILES.H_LIBEVENTCONFIG= /usr/include/event-config.h
+BUILTIN_FIND_HEADERS_VAR:=		H_LIBEVENT H_LIBEVENTCONFIG
+BUILTIN_FIND_HEADERS.H_LIBEVENT=	event.h
+BUILTIN_FIND_HEADERS.H_LIBEVENTCONFIG=	event-config.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

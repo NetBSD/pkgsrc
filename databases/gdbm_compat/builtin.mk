@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.3 2013/04/08 11:17:10 rodent Exp $
+# $NetBSD: builtin.mk,v 1.4 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=			gdbm_compat
-BUILTIN_FIND_FILES_VAR=		NDBM_H
-BUILTIN_FIND_FILES.NDBM_H=	/usr/include/ndbm.h
+BUILTIN_FIND_HEADERS_VAR=	NDBM_H
+BUILTIN_FIND_HEADERS.NDBM_H=	ndbm.h
 BUILTIN_FIND_GREP.NDBM_H=	This file is part of GDBM
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
