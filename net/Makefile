@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.988 2013/11/22 12:12:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.989 2013/11/23 17:12:29 jaapb Exp $
 #
 
 COMMENT=	Networking tools
@@ -252,6 +252,7 @@ SUBDIR+=	libares
 SUBDIR+=	libasyncns
 SUBDIR+=	libbind
 SUBDIR+=	libcares
+SUBDIR+=	libcmis
 SUBDIR+=	libdlna
 SUBDIR+=	libdmapsharing
 SUBDIR+=	libdmapsharing3
