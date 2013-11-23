@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.lightning,v 1.14 2013/11/23 02:39:25 ryoon Exp $
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome.manifest
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.dtd
 lib/seamonkey/extensions/{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}/chrome/gdata-provider-en-US/locale/en-US/gdata.properties
