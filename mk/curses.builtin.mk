@@ -1,11 +1,10 @@
-# $NetBSD: curses.builtin.mk,v 1.6 2013/04/21 07:53:14 obache Exp $
+# $NetBSD: curses.builtin.mk,v 1.7 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	curses
 
 BUILTIN_FIND_LIBS:=		curses
-BUILTIN_FIND_FILES_VAR:=	H_CURSES
-BUILTIN_FIND_FILES.H_CURSES=	/usr/include/curses.h
-BUILTIN_FIND_FILES.H_CURSES+=	/boot/develop/headers/3rdparty/curses.h
+BUILTIN_FIND_HEADERS_VAR:=	H_CURSES
+BUILTIN_FIND_HEADERS.H_CURSES=	curses.h
 
 .include "buildlink3/bsd.builtin.mk"
 

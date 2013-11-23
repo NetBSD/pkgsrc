@@ -1,10 +1,10 @@
-# $NetBSD: terminfo.builtin.mk,v 1.4 2013/11/19 11:40:39 obache Exp $
+# $NetBSD: terminfo.builtin.mk,v 1.5 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	terminfo
 
 BUILTIN_FIND_LIBS:=		terminfo curses tinfo
-BUILTIN_FIND_FILES_VAR:=	H_TERM
-BUILTIN_FIND_FILES.H_TERM:=	/usr/include/term.h
+BUILTIN_FIND_HEADERS_VAR:=	H_TERM
+BUILTIN_FIND_HEADERS.H_TERM:=	term.h
 BUILTIN_FIND_GREP.H_TERM:=	tigetstr
 
 .include "buildlink3/bsd.builtin.mk"
