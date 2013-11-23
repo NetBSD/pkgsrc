@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.142 2013/07/09 10:13:43 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.143 2013/11/23 08:55:28 obache Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -846,6 +846,11 @@ _GCC_NEEDS_A_FORTRAN=	yes
 .endif
 .if !empty(_GCC_NEEDS_A_FORTRAN:M[yY][eE][sS])
 .  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
+.endif
+
+.if ${OPSYS} == "Interix" && !empty(_GCCBINDIR:M/opt/gcc.*)
+COMPILER_INCLUDE_DIRS=	${_GCCBINDIR:H}/include ${_OPSYS_INCLUDE_DIRS}
+COMPILER_LIB_DIRS=	${_GCCBINDIR:H}/lib ${_OPSYS_LIB_DIRS}
 .endif
 
 .endif	# COMPILER_GCC_MK
