@@ -1,10 +1,10 @@
-# $NetBSD: db1.builtin.mk,v 1.22 2012/02/05 12:16:56 obache Exp $
+# $NetBSD: db1.builtin.mk,v 1.23 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	db1
 
 BUILTIN_FIND_LIBS:=		db1 db
-BUILTIN_FIND_FILES_VAR:=	H_DB
-BUILTIN_FIND_FILES.H_DB=	/usr/include/db1/db.h /usr/include/db.h
+BUILTIN_FIND_HEADERS_VAR:=	H_DB
+BUILTIN_FIND_HEADERS.H_DB=	db1/db.h db.h
 #
 # The builtin Berkeley database library must support hash version 2 or
 # else it doesn't support db-1.85 databases.

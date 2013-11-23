@@ -1,11 +1,10 @@
-# $NetBSD: pthread.builtin.mk,v 1.14 2013/10/12 06:24:49 richard Exp $
+# $NetBSD: pthread.builtin.mk,v 1.15 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	pthread
 
 BUILTIN_FIND_LIBS:=		pthread c_r rt
-BUILTIN_FIND_FILES_VAR=		H_PTHREAD
-BUILTIN_FIND_FILES.H_PTHREAD=	/usr/include/pthread.h	\
-				/boot/develop/headers/posix/pthread.h
+BUILTIN_FIND_HEADERS_VAR=	H_PTHREAD
+BUILTIN_FIND_HEADERS.H_PTHREAD=	pthread.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

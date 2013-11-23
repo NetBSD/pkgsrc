@@ -1,14 +1,14 @@
-# $NetBSD: termcap.builtin.mk,v 1.9 2013/06/17 05:44:27 obache Exp $
+# $NetBSD: termcap.builtin.mk,v 1.10 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	termcap
 
 BUILTIN_FIND_LIBS:=		terminfo curses termcap termlib tinfo
-BUILTIN_FIND_FILES_VAR:=	H_TERM H_TERMCAP H_TERMLIB
-BUILTIN_FIND_FILES.H_TERM:=	/usr/include/term.h
+BUILTIN_FIND_HEADERS_VAR:=	H_TERM H_TERMCAP H_TERMLIB
+BUILTIN_FIND_HEADERS.H_TERM:=	term.h
 BUILTIN_FIND_GREP.H_TERM:=	tgetent
-BUILTIN_FIND_FILES.H_TERMCAP:=	/usr/include/termcap.h
+BUILTIN_FIND_HEADERS.H_TERMCAP:=	termcap.h
 BUILTIN_FIND_GREP.H_TERMCAP:=	tgetent
-BUILTIN_FIND_FILES.H_TERMLIB:=	/usr/include/termlib.h
+BUILTIN_FIND_HEADERS.H_TERMLIB:=	termlib.h
 BUILTIN_FIND_GREP.H_TERMLIB:=	tgetent
 
 .include "buildlink3/bsd.builtin.mk"

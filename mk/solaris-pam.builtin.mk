@@ -1,9 +1,9 @@
-# $NetBSD: solaris-pam.builtin.mk,v 1.4 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: solaris-pam.builtin.mk,v 1.5 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	solaris-pam
 
-BUILTIN_FIND_FILES_VAR:=		H_SOLARIS_PAM
-BUILTIN_FIND_FILES.H_SOLARIS_PAM=	/usr/include/security/pam_appl.h
+BUILTIN_FIND_HEADERS_VAR:=		H_SOLARIS_PAM
+BUILTIN_FIND_HEADERS.H_SOLARIS_PAM=	security/pam_appl.h
 BUILTIN_FIND_GREP.H_SOLARIS_PAM=	Copyright.*Sun Microsystems
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
