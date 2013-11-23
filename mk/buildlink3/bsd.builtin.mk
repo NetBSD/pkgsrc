@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.12 2013/09/04 15:14:45 jperkin Exp $
+# $NetBSD: bsd.builtin.mk,v 1.13 2013/11/23 09:06:09 obache Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -171,4 +171,5 @@ _BUILTIN_PKGS+=	${_pkg_}
 .endfor
 
 .include "../../mk/buildlink3/find-libs.mk"
+.include "../../mk/buildlink3/find-headers.mk"
 .include "../../mk/buildlink3/find-files.mk"
