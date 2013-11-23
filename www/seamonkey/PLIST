@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2013/11/04 06:01:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.41 2013/11/23 02:39:25 ryoon Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -2242,6 +2242,7 @@ lib/seamonkey/components/glautocomp.js
 lib/seamonkey/components/interfaces.xpt
 lib/seamonkey/components/jsconsole-clhandler.js
 lib/seamonkey/components/jsmimeemitter.js
+${PLIST.gnome}lib/seamonkey/components/libdbusservice.so
 lib/seamonkey/components/libmozgnome.so
 lib/seamonkey/components/libsuite.so
 lib/seamonkey/components/mdn-service.js
