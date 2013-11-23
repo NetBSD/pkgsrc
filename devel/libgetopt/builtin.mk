@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.6 2006/04/06 06:21:51 reed Exp $
+# $NetBSD: builtin.mk,v 1.7 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	getopt
 
-BUILTIN_FIND_FILES_VAR:=	H_GETOPT
-BUILTIN_FIND_FILES.H_GETOPT=	/usr/include/getopt.h
+BUILTIN_FIND_HEADERS_VAR:=	H_GETOPT
+BUILTIN_FIND_HEADERS.H_GETOPT=	getopt.h
 BUILTIN_FIND_GREP.H_GETOPT=	int.*getopt_long
 
 .include "../../mk/buildlink3/bsd.builtin.mk"

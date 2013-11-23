@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.19 2013/07/19 14:35:37 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.20 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	readline
 
 BUILTIN_FIND_LIBS:=		readline history
-BUILTIN_FIND_FILES_VAR:=	H_READLINE _BLTN_H_READLINE
-BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
-				/usr/include/readline.h
+BUILTIN_FIND_HEADERS_VAR:=	H_READLINE _BLTN_H_READLINE
+BUILTIN_FIND_HEADERS.H_READLINE=readline/readline.h	\
+				readline.h
 BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
