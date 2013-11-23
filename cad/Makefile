@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2012/09/05 13:10:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.77 2013/11/23 15:11:35 ryoon Exp $
 #
 
 COMMENT=	CAD tools
@@ -23,6 +23,7 @@ SUBDIR+=	freehdl
 SUBDIR+=	gdsreader
 SUBDIR+=	geda
 SUBDIR+=	gerbv
+SUBDIR+=	ghdl
 SUBDIR+=	gnetman
 SUBDIR+=	gnucap
 SUBDIR+=	gplcver
