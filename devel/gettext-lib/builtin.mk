@@ -1,17 +1,17 @@
-# $NetBSD: builtin.mk,v 1.43 2013/05/03 01:57:11 obache Exp $
+# $NetBSD: builtin.mk,v 1.44 2013/11/23 11:29:35 obache Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILTIN_PKG:=	gettext
 
 BUILTIN_FIND_LIBS:=			intl
-BUILTIN_FIND_FILES_VAR:=		H_GETTEXT H_GENTOO_GETTEXT	\
+BUILTIN_FIND_HEADERS_VAR:=		H_GETTEXT H_GENTOO_GETTEXT	\
 					H_NGETTEXT_GETTEXT
-BUILTIN_FIND_FILES.H_GETTEXT=		/usr/include/libintl.h
+BUILTIN_FIND_HEADERS.H_GETTEXT=		libintl.h
 BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
-BUILTIN_FIND_FILES.H_GENTOO_GETTEXT=	/usr/include/libintl.h
+BUILTIN_FIND_HEADERS.H_GENTOO_GETTEXT=	libintl.h
 BUILTIN_FIND_GREP.H_GENTOO_GETTEXT=	gentoo-multilib/.*/libintl.h
-BUILTIN_FIND_FILES.H_NGETTEXT_GETTEXT=	/usr/include/libintl.h
+BUILTIN_FIND_HEADERS.H_NGETTEXT_GETTEXT=libintl.h
 BUILTIN_FIND_GREP.H_NGETTEXT_GETTEXT=	char.*ngettext
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
