@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4208 2013/11/23 02:41:09 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4209 2013/11/23 02:57:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6138,3 +6138,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/openldap-smbk5pwd to 2.4.38 [adam 2013-11-22]
 	Updated print/tex-bibtex to 0.99dnb1 [minskim 2013-11-23]
 	Updated www/seamonkey to 2.22.1 [ryoon 2013-11-23]
+	Updated www/seamonkey-l10n to 2.22.1 [ryoon 2013-11-23]
