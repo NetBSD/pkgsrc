@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/22 12:50:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/23 02:59:20 ryoon Exp $
 
 DISTNAME=	mirall-1.4.2
 CATEGORIES=	net
@@ -31,6 +31,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 LDFLAGS.NetBSD+=	-linotify
 
 ETCDIR=			etc/OwnCloud
+MAKE_DIRS+=		${ETCDIR}
 INSTALLATION_DIRS=	${ETCDIR}
 EGDIR=		${PREFIX}/share/examples/mirall
 CONF_FILES+=	${EGDIR}/sync-exclude.lst \
@@ -38,9 +39,6 @@ CONF_FILES+=	${EGDIR}/sync-exclude.lst \
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
-
-post-install:
-	touch ${DESTDIR}${PREFIX}/${ETCDIR}/.empty
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
