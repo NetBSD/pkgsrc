@@ -1,5 +1,4 @@
-
-@comment $NetBSD: PLIST.enigmail,v 1.8 2013/11/04 06:01:46 ryoon Exp $
+@comment $NetBSD: PLIST.enigmail,v 1.9 2013/11/23 02:39:25 ryoon Exp $
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigMsgCompFields.js
