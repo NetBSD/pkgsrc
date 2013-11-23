@@ -1,11 +1,9 @@
-# $NetBSD: builtin.mk,v 1.16 2012/03/19 12:34:20 joerg Exp $
+# $NetBSD: builtin.mk,v 1.17 2013/11/23 12:36:34 obache Exp $
 
 BUILTIN_PKG:=	expat
 
-BUILTIN_FIND_FILES_VAR:=	H_EXPAT
-BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h \
-				/usr/include/expat.h \
-				/boot/common/include/expat.h
+BUILTIN_FIND_HEADERS_VAR:=	H_EXPAT
+BUILTIN_FIND_HEADERS.H_EXPAT=	expat.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
