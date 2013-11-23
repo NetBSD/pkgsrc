@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.8 2008/01/29 00:52:58 obache Exp $
+# $NetBSD: builtin.mk,v 1.9 2013/11/23 12:10:13 obache Exp $
 
 BUILTIN_PKG:=	openpam
 
-BUILTIN_FIND_FILES_VAR:=	H_OPENPAM
-BUILTIN_FIND_FILES.H_OPENPAM=	/usr/include/security/openpam_version.h
+BUILTIN_FIND_HEADERS_VAR:=	H_OPENPAM
+BUILTIN_FIND_HEADERS.H_OPENPAM=	security/openpam_version.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
