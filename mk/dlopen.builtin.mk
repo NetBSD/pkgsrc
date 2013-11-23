@@ -1,12 +1,10 @@
-# $NetBSD: dlopen.builtin.mk,v 1.26 2013/11/01 11:58:48 jperkin Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.27 2013/11/23 09:10:14 obache Exp $
 
 BUILTIN_PKG:=	dl
 
 BUILTIN_FIND_LIBS:=		dl
-BUILTIN_FIND_FILES_VAR:=	H_DL
-BUILTIN_FIND_FILES.H_DL=	/usr/include/dlfcn.h			\
-				/opt/gcc.3.3/include/dlfcn.h		\
-				/boot/develop/headers/posix/dlfcn.h
+BUILTIN_FIND_HEADERS_VAR:=	H_DL
+BUILTIN_FIND_HEADERS.H_DL=	dlfcn.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

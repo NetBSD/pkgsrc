@@ -1,14 +1,14 @@
-# $NetBSD: readline.builtin.mk,v 1.3 2013/07/19 14:35:37 ryoon Exp $
+# $NetBSD: readline.builtin.mk,v 1.4 2013/11/23 09:10:14 obache Exp $
 #
 
 BUILTIN_PKG:=	editlinereadline
 
 BUILTIN_FIND_LIBS:=		edit readline history
-BUILTIN_FIND_FILES_VAR:=	H_EDITLINE H_READLINE
-BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
-				/usr/include/readline.h
-BUILTIN_FIND_FILES.H_EDITLINE=	/usr/include/editline/readline.h	\
-				/usr/include/readline/readline.h
+BUILTIN_FIND_HEADERS_VAR:=	H_EDITLINE H_READLINE
+BUILTIN_FIND_HEADERS.H_READLINE=	readline/readline.h	\
+					readline.h
+BUILTIN_FIND_HEADERS.H_EDITLINE=	editline/readline.h	\
+					readline/readline.h
 BUILTIN_FIND_GREP.H_EDITLINE=	NetBSD
 BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 
