@@ -1,4 +1,4 @@
-# $NetBSD: find-headers.mk,v 1.1 2013/11/23 09:06:09 obache Exp $
+# $NetBSD: find-headers.mk,v 1.2 2013/11/23 12:35:39 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,7 +46,7 @@
 #	"found".
 #
 #    BUILTIN_FIND_HEADERS.<var> is the list of header files to find, in
-#	order, on the ${COMPILER_INCLUDE_DIRS}.  The variable <var> is set
+#	order, on the ${BUILTIN_INCLUDE_DIRS}.  The variable <var> is set
 #	to the first path "found" on the filesystem.
 #
 # Optionally, the following variables may also be defined:
@@ -60,7 +60,7 @@
 #
 #    <var> is the first of the header file listed in
 #	${BUILTIN_FIND_HEADERS.<var>} that is "found" in
-#	${COMPILER_INCLUDE_DIRS}, or else it is "__nonexistent__".
+#	${BUILTIN_INCLUDE_DIRS}, or else it is "__nonexistent__".
 #
 # An example use is:
 #
@@ -80,11 +80,13 @@ USE_TOOLS+=	echo
 USE_TOOLS+=	grep
 .endif
 
+BUILTIN_INCLUDE_DIRS?=	${COMPILER_INCLUDE_DIRS} ${"${X11_TYPE:Mnative}":?${X11BASE}/include:}
+
 .for _var_ in ${BUILTIN_FIND_HEADERS_VAR}
 .  if !defined(${_var_})
 ${_var_}=	__nonexistent__
 .    for _file_ in ${BUILTIN_FIND_HEADERS.${_var_}}
-.      for _dir_ in ${COMPILER_INCLUDE_DIRS}
+.      for _dir_ in ${BUILTIN_INCLUDE_DIRS}
 .        if !empty(${_var_}:M__nonexistent__) && exists(${_dir_}/${_file_})
 .          if !defined(BUILTIN_FIND_GREP.${_var_})
 ${_var_}=	${_dir_}/${_file_}
