@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/23 14:53:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/23 15:01:15 jaapb Exp $
 
 DISTNAME=	hyphen-2.8.6
 CATEGORIES=	textproc
@@ -15,5 +15,4 @@ USE_TOOLS+=	perl
 
 REPLACE_PERL=	substrings.pl
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
