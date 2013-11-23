@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.26 2013/08/31 22:10:31 rillig Exp $
+# $NetBSD: options.mk,v 1.27 2013/11/23 02:39:25 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail
-PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc
+PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla
 
 PLIST_VARS+=	debug gnome jemalloc
 
@@ -16,6 +16,11 @@ PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mmozilla-chatzilla)
+PLIST_SRC+=		PLIST.chatzilla
+CONFIGURE_ARGS+=	--enable-extensions=default,irc
+.endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
 .include "../../devel/libgnomeui/buildlink3.mk"
