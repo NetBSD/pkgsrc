@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_vhdl_Make-lang.in,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+
+* Fix rpath of ghdl1
+
+--- gcc/vhdl/Make-lang.in.orig	2010-01-09 14:32:26.000000000 +0000
++++ gcc/vhdl/Make-lang.in
+@@ -132,7 +132,7 @@ ghdl1$(exeext): $(AGCC_OBJS) $(AGCC_DEPS
+ 	 -cargs $(CFLAGS) $(GHDL_ADAFLAGS)
+ 	$(GNATMAKE) -o $@ -aI$(srcdir)/vhdl -aOvhdl ortho_gcc-main \
+ 	 -bargs -E -cargs $(CFLAGS) $(GHDL_ADAFLAGS) \
+-	 -largs $(AGCC_OBJS) $(LIBS) $(GMPLIBS)
++	 -largs $(AGCC_OBJS) $(LIBS) $(GMPLIBS) ${LDFLAGS}
+ 
+ # The driver for ghdl.
+ ghdl$(exeext): force

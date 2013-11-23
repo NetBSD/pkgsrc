@@ -1,0 +1,5 @@
+GHDL is an open-source simulator for the VHDL language. GHDL allows
+you to compile and execute your VHDL code directly in your PC.
+Combined with a GUI-based wave viewer and a good VHDL text editor,
+GHDL is a very powerful tool for writing, testing and simulating
+your VHDL code.
