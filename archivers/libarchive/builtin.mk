@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.4 2011/10/27 04:23:50 joerg Exp $
+# $NetBSD: builtin.mk,v 1.5 2013/11/23 10:51:09 obache Exp $
 
 BUILTIN_PKG:=	libarchive
 
-BUILTIN_FIND_FILES_VAR:=	H_ARCHIVE
-BUILTIN_FIND_FILES.H_ARCHIVE=	/usr/include/archive.h
+BUILTIN_FIND_HEADERS_VAR:=	H_ARCHIVE
+BUILTIN_FIND_HEADERS.H_ARCHIVE=	archive.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

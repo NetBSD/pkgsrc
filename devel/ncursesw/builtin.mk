@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2011/02/28 11:02:46 adam Exp $
+# $NetBSD: builtin.mk,v 1.11 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -8,11 +8,11 @@ BUILTIN_PKG:=	ncursesw
 # XXX Need to deal with Solaris <curses.h>
 #
 BUILTIN_FIND_LIBS:=			ncursesw curses
-BUILTIN_FIND_FILES_VAR:=		H_NB_CURSESW H_NCURSESW
-BUILTIN_FIND_FILES.H_NB_CURSESW=	/usr/include/curses.h
+BUILTIN_FIND_HEADERS_VAR:=		H_NB_CURSESW H_NCURSESW
+BUILTIN_FIND_HEADERS.H_NB_CURSESW=	curses.h
 BUILTIN_FIND_GREP.H_NB_CURSESW=		\#ifdef[ 	]*HAVE_WCHAR
-BUILTIN_FIND_FILES.H_NCURSESW=		/usr/include/ncursesw/curses.h	\
-					/usr/include/curses.h
+BUILTIN_FIND_HEADERS.H_NCURSESW=	ncursesw/curses.h	\
+					curses.h
 BUILTIN_FIND_GREP.H_NCURSESW=		\Id: curses.wide,v
 
 .include "../../mk/buildlink3/bsd.builtin.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.1 2011/12/03 08:44:21 sbd Exp $
+# $NetBSD: builtin.mk,v 1.2 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=			gdbm
-BUILTIN_FIND_FILES_VAR=		GDBM_H
-BUILTIN_FIND_FILES.GDBM_H=	/usr/include/gdbm.h
+BUILTIN_FIND_HEADERS_VAR=	GDBM_H
+BUILTIN_FIND_HEADERS.GDBM_H=	gdbm.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

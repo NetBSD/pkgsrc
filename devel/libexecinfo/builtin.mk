@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2013/07/03 14:47:04 ryoon Exp $
+# $NetBSD: builtin.mk,v 1.2 2013/11/23 11:29:35 obache Exp $
 
 BUILTIN_PKG:=	libexecinfo
 
-BUILTIN_FIND_FILES_VAR:=	H_EXECINFO
-BUILTIN_FIND_FILES.H_EXECINFO=	/usr/include/execinfo.h
+BUILTIN_FIND_HEADERS_VAR:=		H_EXECINFO
+BUILTIN_FIND_HEADERS.H_EXECINFO=	execinfo.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

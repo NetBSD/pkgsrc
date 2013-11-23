@@ -1,10 +1,9 @@
-# $NetBSD: builtin.mk,v 1.8 2010/12/14 19:51:45 abs Exp $
+# $NetBSD: builtin.mk,v 1.9 2013/11/23 11:29:36 obache Exp $
 
 BUILTIN_PKG:=	zlib
 
-BUILTIN_FIND_FILES_VAR:=	H_ZLIB
-BUILTIN_FIND_FILES.H_ZLIB=	/usr/include/zlib.h \
-				/boot/develop/headers/3rdparty/zlib.h
+BUILTIN_FIND_HEADERS_VAR:=	H_ZLIB
+BUILTIN_FIND_HEADERS.H_ZLIB=	zlib.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

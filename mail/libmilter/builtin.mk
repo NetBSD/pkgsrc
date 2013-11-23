@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.5 2006/04/06 06:22:18 reed Exp $
+# $NetBSD: builtin.mk,v 1.6 2013/11/23 11:34:45 obache Exp $
 
 BUILTIN_PKG:=	libmilter
 
 BUILTIN_FIND_LIBS:=		milter
-BUILTIN_FIND_FILES_VAR:=	H_LIBMILTER
-BUILTIN_FIND_FILES.H_LIBMILTER=	/usr/include/libmilter/mfapi.h
+BUILTIN_FIND_HEADERS_VAR:=	H_LIBMILTER
+BUILTIN_FIND_HEADERS.H_LIBMILTER=	libmilter/mfapi.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
