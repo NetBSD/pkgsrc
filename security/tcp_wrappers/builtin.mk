@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.8 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: builtin.mk,v 1.9 2013/11/23 12:10:13 obache Exp $
 
 BUILTIN_PKG:=	tcp_wrappers
 
 BUILTIN_FIND_LIBS:=			wrap
-BUILTIN_FIND_FILES_VAR:=		H_TCP_WRAPPERS
-BUILTIN_FIND_FILES.H_TCP_WRAPPERS=	/usr/include/tcpd.h
+BUILTIN_FIND_HEADERS_VAR:=		H_TCP_WRAPPERS
+BUILTIN_FIND_HEADERS.H_TCP_WRAPPERS=	tcpd.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 

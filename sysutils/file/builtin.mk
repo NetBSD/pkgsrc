@@ -1,11 +1,12 @@
-# $NetBSD: builtin.mk,v 1.6 2009/03/09 17:47:36 cube Exp $
+# $NetBSD: builtin.mk,v 1.7 2013/11/23 12:10:13 obache Exp $
 
 BUILTIN_PKG:=	file
 
-BUILTIN_FIND_FILES_VAR:=	H_FILE BIN_FILE
-BUILTIN_FIND_FILES.H_FILE=	/usr/include/magic.h
+BUILTIN_FIND_HEADERS_VAR:=	H_FILE
+BUILTIN_FIND_HEADERS.H_FILE=	magic.h
 BUILTIN_FIND_GREP.H_FILE=	magic_file
-BUILTIN_FIND_FILES.BIN_FILE=	/bin/file /usr/bin/file
+BUILTIN_FIND_FILES_VAR:=	BIN_FILE
+BUILTIN_FIND_FILES.BIN_FILE=	${TOOLS_PLATFORM.file} /bin/file /usr/bin/file
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
