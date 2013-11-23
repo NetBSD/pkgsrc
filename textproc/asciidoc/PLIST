@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/08/06 20:05:27 gls Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/11/23 18:37:40 gls Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -67,6 +67,7 @@ share/asciidoc/javascripts/LaTeXMathML.js
 share/asciidoc/javascripts/asciidoc.js
 share/asciidoc/javascripts/slidy.js
 share/asciidoc/javascripts/toc.js
+share/asciidoc/lang-cs.conf
 share/asciidoc/lang-de.conf
 share/asciidoc/lang-el.conf
 share/asciidoc/lang-en.conf
@@ -76,6 +77,7 @@ share/asciidoc/lang-hu.conf
 share/asciidoc/lang-it.conf
 share/asciidoc/lang-nl.conf
 share/asciidoc/lang-pt-BR.conf
+share/asciidoc/lang-ro.conf
 share/asciidoc/lang-ru.conf
 share/asciidoc/lang-uk.conf
 share/asciidoc/latex.conf
@@ -87,7 +89,6 @@ share/asciidoc/stylesheets/slidy.css
 share/asciidoc/stylesheets/toc2.css
 share/asciidoc/stylesheets/xhtml11-quirks.css
 share/asciidoc/text.conf
-share/asciidoc/wordpress.conf
 share/asciidoc/xhtml11-quirks.conf
 share/asciidoc/xhtml11.conf
 share/doc/asciidoc/a2x.1.txt
