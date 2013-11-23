@@ -1,0 +1,21 @@
+$NetBSD: patch-gcc_vhdl_Makefile.in,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+
+* Add NetBSD support
+
+--- gcc/vhdl/Makefile.in.orig	2010-01-09 14:32:26.000000000 +0000
++++ gcc/vhdl/Makefile.in
+@@ -471,6 +471,14 @@ ifeq ($(filter-out x86_64 linux,$(arch) 
+   GRT_TARGET_OBJS=amd64.o linux.o times.o
+   GRT_EXTRA_LIB=-ldl -lm $(GRT_ELF_OPTS)
+ endif
++ifeq ($(filter-out i%86 netbsd,$(arch) $(osys)),)
++  GRT_TARGET_OBJS=i386.o linux.o times.o
++  GRT_EXTRA_LIB=-lm $(GRT_ELF_OPTS)
++endif
++ifeq ($(filter-out x86_64 netbsd,$(arch) $(osys)),)
++  GRT_TARGET_OBJS=amd64.o linux.o times.o
++  GRT_EXTRA_LIB=-lm $(GRT_ELF_OPTS)
++endif
+ ifeq ($(filter-out i%86 freebsd%,$(arch) $(osys)),)
+   GRT_TARGET_OBJS=i386.o linux.o times.o
+   GRT_EXTRA_LIB=-lm $(GRT_ELF_OPTS)
