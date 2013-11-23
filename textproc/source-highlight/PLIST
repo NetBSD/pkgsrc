@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2010/12/02 18:00:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/11/23 18:29:14 gls Exp $
 bin/check-regexp
 bin/cpp2html
 bin/java2html
 bin/source-highlight
+bin/source-highlight-esc.sh
 bin/source-highlight-settings
 bin/src-hilite-lesspipe.sh
 include/srchilite/bufferedoutput.h
@@ -99,8 +100,6 @@ lib/pkgconfig/source-highlight.pc
 man/man1/check-regexp.1
 man/man1/source-highlight-settings.1
 man/man1/source-highlight.1
-share/aclocal/ax_boost_base.m4
-share/aclocal/ax_boost_regex.m4
 share/doc/source-highlight/COPYING
 share/doc/source-highlight/CREDITS
 share/doc/source-highlight/ChangeLog
@@ -248,6 +247,8 @@ share/source-highlight/erlang.lang
 share/source-highlight/errors.lang
 share/source-highlight/esc.outlang
 share/source-highlight/esc.style
+share/source-highlight/esc256.outlang
+share/source-highlight/esc256.style
 share/source-highlight/extreme_comment.lang
 share/source-highlight/extreme_comment2.lang
 share/source-highlight/extreme_comment3.lang
@@ -268,8 +269,11 @@ share/source-highlight/html_simple.lang
 share/source-highlight/htmlcss.outlang
 share/source-highlight/htmltable.outlang
 share/source-highlight/htmltablelinenum.outlang
+share/source-highlight/islisp.lang
 share/source-highlight/java.lang
 share/source-highlight/javadoc.outlang
+share/source-highlight/javalog.lang
+share/source-highlight/javalog.style
 share/source-highlight/javascript.lang
 share/source-highlight/key_string.lang
 share/source-highlight/lang.map
@@ -278,6 +282,8 @@ share/source-highlight/latex.lang
 share/source-highlight/latex.outlang
 share/source-highlight/latexcolor.outlang
 share/source-highlight/ldap.lang
+share/source-highlight/lilypond.lang
+share/source-highlight/lilypond.style
 share/source-highlight/lisp.lang
 share/source-highlight/log.lang
 share/source-highlight/logtalk.lang
@@ -286,10 +292,13 @@ share/source-highlight/lua.lang
 share/source-highlight/m4.lang
 share/source-highlight/makefile.lang
 share/source-highlight/manifest.lang
+share/source-highlight/mediawiki.outlang
 share/source-highlight/mono-alt.css
 share/source-highlight/mono.css
 share/source-highlight/nohilite.lang
 share/source-highlight/number.lang
+share/source-highlight/odf.outlang
+share/source-highlight/opa.lang
 share/source-highlight/outlang.lang
 share/source-highlight/outlang.map
 share/source-highlight/oz.lang
@@ -297,6 +306,7 @@ share/source-highlight/pascal.lang
 share/source-highlight/pc.lang
 share/source-highlight/perl.lang
 share/source-highlight/php.lang
+share/source-highlight/po.lang
 share/source-highlight/postscript.lang
 share/source-highlight/prolog.lang
 share/source-highlight/properties.lang
@@ -304,6 +314,7 @@ share/source-highlight/proto.lang
 share/source-highlight/python.lang
 share/source-highlight/ruby.lang
 share/source-highlight/scala.lang
+share/source-highlight/scheme.lang
 share/source-highlight/script_comment.lang
 share/source-highlight/sh.lang
 share/source-highlight/sh_acid.css
@@ -358,7 +369,20 @@ share/source-highlight/tcl.lang
 share/source-highlight/texinfo.lang
 share/source-highlight/texinfo.outlang
 share/source-highlight/texinfo.style
+share/source-highlight/tml.lang
+share/source-highlight/tml_formatting.lang
+share/source-highlight/tml_formatting_all.lang
+share/source-highlight/tml_glue.lang
+share/source-highlight/tml_macrolinks.lang
+share/source-highlight/tml_macros.lang
+share/source-highlight/tml_macros1.lang
+share/source-highlight/tml_macros2.lang
+share/source-highlight/tml_macrosdelayed1.lang
+share/source-highlight/tml_macrosdelayed2.lang
+share/source-highlight/tml_macrosdelayed3.lang
+share/source-highlight/tml_macrotokens.lang
 share/source-highlight/todo.lang
+share/source-highlight/upc.lang
 share/source-highlight/url.lang
 share/source-highlight/vala.lang
 share/source-highlight/vbscript.lang
