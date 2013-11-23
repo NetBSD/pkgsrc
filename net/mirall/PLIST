@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/22 12:11:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/23 02:59:20 ryoon Exp $
 bin/owncloud
-etc/OwnCloud/.empty
 lib/libowncloudsync.so
 lib/libowncloudsync.so.0
 lib/libowncloudsync.so.${PKGVERSION}
