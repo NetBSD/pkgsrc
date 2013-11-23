@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2012/10/25 06:55:39 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/11/23 18:37:40 gls Exp $
 #
 
-DISTNAME=		asciidoc-8.6.8
+DISTNAME=		asciidoc-8.6.9
 CATEGORIES=		textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asciidoc/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
 MAINTAINER=		gls@NetBSD.org
-HOMEPAGE=		http://www.methods.co.nz/asciidoc/
+HOMEPAGE=		http://www.asciidoc.org/
 COMMENT=		ASCII to formatted document converter
 LICENSE=		gnu-gpl-v2
 
@@ -40,7 +40,7 @@ INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/images/icons/callouts \
 			${PKGMANDIR}/man1 ${DOCDIR}
 
-DOCDIR=		${PREFIX}/share/doc/asciidoc
+DOCDIR=			${PREFIX}/share/doc/asciidoc
 
 .include "options.mk"
 
@@ -49,10 +49,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/a2x.py ${DESTDIR}${PREFIX}/bin/a2x
 	${INSTALL_MAN} ${WRKSRC}/doc/asciidoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/doc/a2x.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-#	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DESTDIR}${DOCDIR}
 
 	cd ${WRKSRC} && pax -wr -pma *.conf filters \
-		filters docbook-xsl/*.xsl stylesheets/*.css	\
+		docbook-xsl/*.xsl stylesheets/*.css	\
 		javascripts/*.js images/* dblatex/* \
 		${DESTDIR}${PREFIX}/share/asciidoc/.
 
