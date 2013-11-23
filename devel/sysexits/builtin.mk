@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.3 2006/04/06 06:21:56 reed Exp $
+# $NetBSD: builtin.mk,v 1.4 2013/11/23 11:29:36 obache Exp $
 
 BUILTIN_PKG:=	sysexits
 
-BUILTIN_FIND_FILES_VAR:=	H_SYSEXITS
-BUILTIN_FIND_FILES.H_SYSEXITS=	/usr/include/sysexits.h
+BUILTIN_FIND_HEADERS_VAR:=	H_SYSEXITS
+BUILTIN_FIND_HEADERS.H_SYSEXITS=sysexits.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
