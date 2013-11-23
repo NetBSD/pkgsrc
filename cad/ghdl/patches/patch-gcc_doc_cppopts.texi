@@ -1,0 +1,17 @@
+$NetBSD: patch-gcc_doc_cppopts.texi,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+
+* Fix makeinfo
+
+--- gcc/doc/cppopts.texi.orig	2007-07-30 18:29:20.000000000 +0000
++++ gcc/doc/cppopts.texi
+@@ -754,8 +754,8 @@ Replacement:      [    ]    @{    @}    
+ Enable special code to work around file systems which only permit very
+ short file names, such as MS-DOS@.
+ 
+-@itemx --help
+-@itemx --target-help
++@item --help
++@item --target-help
+ @opindex help
+ @opindex target-help
+ Print text describing all the command line options instead of

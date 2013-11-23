@@ -1,0 +1,24 @@
+$NetBSD: patch-gcc_doc_invoke.texi,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+
+* Fix makeinfo
+
+--- gcc/doc/invoke.texi.orig	2009-01-27 18:45:49.000000000 +0000
++++ gcc/doc/invoke.texi
+@@ -958,7 +958,7 @@ instantiation), or a library unit renami
+ generic, or subprogram renaming declaration).  Such files are also
+ called @dfn{specs}.
+ 
+-@itemx @var{file}.adb
++@item @var{file}.adb
+ Ada source code file containing a library unit body (a subprogram or
+ package body).  Such files are also called @dfn{bodies}.
+ 
+@@ -8571,7 +8571,7 @@ assembly code.  Permissible names are: @
+ @samp{cortex-a8}, @samp{cortex-r4}, @samp{cortex-m3},
+ @samp{xscale}, @samp{iwmmxt}, @samp{ep9312}.
+ 
+-@itemx -mtune=@var{name}
++@item -mtune=@var{name}
+ @opindex mtune
+ This option is very similar to the @option{-mcpu=} option, except that
+ instead of specifying the actual target processor type, and hence

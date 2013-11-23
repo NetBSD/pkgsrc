@@ -1,0 +1,24 @@
+$NetBSD: patch-gcc_doc_extend.texi,v 1.1 2013/11/23 15:10:26 ryoon Exp $
+
+* Fix makeinfo
+
+--- gcc/doc/extend.texi.orig	2009-03-17 13:11:58.000000000 +0000
++++ gcc/doc/extend.texi
+@@ -4230,6 +4230,7 @@ particular, if a class is thrown as an e
+ and caught in another, the class must have default visibility.
+ Otherwise the two shared objects will be unable to use the same
+ typeinfo node and exception handling will break.
++@end table
+ 
+ @subsection ARM Type Attributes
+ 
+@@ -4260,7 +4261,8 @@ most Symbian OS code uses @code{__declsp
+ Two attributes are currently defined for i386 configurations:
+ @code{ms_struct} and @code{gcc_struct}
+ 
+-@item ms_struct
++@table @code
++@itemx ms_struct
+ @itemx gcc_struct
+ @cindex @code{ms_struct}
+ @cindex @code{gcc_struct}
