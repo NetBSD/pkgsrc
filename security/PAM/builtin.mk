@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:22:37 reed Exp $
+# $NetBSD: builtin.mk,v 1.15 2013/11/23 12:10:13 obache Exp $
 
 BUILTIN_PKG:=	linux-pam
 
-BUILTIN_FIND_FILES_VAR:=	H_LINUX_PAM
-BUILTIN_FIND_FILES.H_LINUX_PAM=	/usr/include/security/pam_appl.h	\
-				/usr/include/pam/pam_appl.h
+BUILTIN_FIND_HEADERS_VAR:=	H_LINUX_PAM
+BUILTIN_FIND_HEADERS.H_LINUX_PAM=	security/pam_appl.h	\
+				pam/pam_appl.h
 BUILTIN_FIND_GREP.H_LINUX_PAM=	The Linux-PAM Framework layer API
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
