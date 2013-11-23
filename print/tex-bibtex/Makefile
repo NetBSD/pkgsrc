@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2011/03/03 23:13:18 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/23 00:04:04 minskim Exp $
 
 DISTNAME=	bibtex
 PKGNAME=	tex-${DISTNAME}-0.99d
-TEXLIVE_REV=	21345
+PKGREVISION=	1
+TEXLIVE_REV=	29764
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Reference management software for LaTeX
 
 CONFLICTS+=	teTeX-texmf<=3.0nb15
-
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
+DEPENDS+=	web2c>=2013:../../print/web2c
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
