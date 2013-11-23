@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2013/11/23 13:58:13 drochner Exp $
+
+Fixes MANPATH.
+
+--- ./gdist/man.py.orig	2009-12-27 16:43:58.000000000 +0000
++++ ./gdist/man.py	2009-12-27 16:46:12.000000000 +0000
+@@ -36,7 +36,7 @@
+                 raise SystemExit("%r has no section" % man_page)
+ 
+     def run(self):
+-        basepath = os.path.join(self.prefix, 'share', 'man')
++        basepath = os.path.join(self.prefix,'man')
+         if self.root != None:
+           basepath = change_root(self.root, basepath)
+         self.mkpath(basepath)

@@ -1,0 +1,11 @@
+Quod Libet is a GTK+-based audio player written in Python. It's designed
+around the idea that you know better than we do how to organize your
+music. It lets you make playlists based on regular expressions (don't
+worry, regular searches work too). It lets you display and edit any tags
+you want in the file. And it lets you do this for all the file formats
+it supports -- Ogg Vorbis, FLAC, MP3, Musepack, and MOD.
+
+Ex Falso is a program that uses the same tag editing backend as Quod Libet,
+but isn't connected to an audio player. If you're perfectly happy with
+your favorite player and just want something that can handle tagging,
+Ex Falso is for you.
