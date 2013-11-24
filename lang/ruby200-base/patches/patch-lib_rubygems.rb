@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_rubygems.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
+$NetBSD: patch-lib_rubygems.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems.rb.orig	2013-06-21 16:16:31.000000000 +0000
+--- lib/rubygems.rb.orig	2013-11-13 02:59:08.000000000 +0000
 +++ lib/rubygems.rb
-@@ -286,7 +286,10 @@ module Gem
+@@ -291,7 +291,10 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
@@ -16,7 +16,7 @@ $NetBSD: patch-lib_rubygems.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
      # TODO: move to Gem::Dirs
      return File.join install_dir, 'bin' unless
        install_dir.to_s == Gem.default_dir.to_s
-@@ -546,12 +549,12 @@ module Gem
+@@ -551,12 +554,12 @@ module Gem
    ##
    # The index to insert activated gem paths into the $LOAD_PATH.
    #
@@ -31,7 +31,7 @@ $NetBSD: patch-lib_rubygems.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
  
      index
    end
-@@ -724,6 +727,7 @@ module Gem
+@@ -729,6 +732,7 @@ module Gem
      prefix = File.dirname RUBYGEMS_DIR
  
      if prefix != File.expand_path(ConfigMap[:sitelibdir]) and

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/21 02:32:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/24 14:22:03 taca Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -663,11 +663,10 @@ ${RUBY_LIB}/rubygems/source_local.rb
 ${RUBY_LIB}/rubygems/source_specific_file.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
-${RUBY_LIB}/rubygems/ssl_certs/AddTrustExternalCARoot.pem
-${RUBY_LIB}/rubygems/ssl_certs/Entrust_net-Secure-Server-Certification-Authority.pem
-${RUBY_LIB}/rubygems/ssl_certs/GeoTrust_Global_CA.pem
-${RUBY_LIB}/rubygems/ssl_certs/VerisignClass3PublicPrimaryCertificationAuthority-G2.pem
-${RUBY_LIB}/rubygems/ssl_certs/ca-bundle.pem
+${RUBY_LIB}/rubygems/ssl_certs/Class3PublicPrimaryCertificationAuthority.pem
+${RUBY_LIB}/rubygems/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
+${RUBY_LIB}/rubygems/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
+${RUBY_LIB}/rubygems/ssl_certs/GeoTrustGlobalCA.pem
 ${RUBY_LIB}/rubygems/syck_hack.rb
 ${RUBY_LIB}/rubygems/test_case.rb
 ${RUBY_LIB}/rubygems/test_utilities.rb
