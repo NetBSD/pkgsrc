@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4239 2013/11/24 10:05:42 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4240 2013/11/24 10:06:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6171,3 +6171,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/hanterm to 3.1.6nb6 [dholland 2013-11-24]
 	Updated devel/p5-Storable to 2.45 [wiz 2013-11-24]
 	Updated devel/p5-Term-ANSIColor to 4.02 [wiz 2013-11-24]
+	Updated mail/dovecot2 to 2.2.8 [adam 2013-11-24]
