@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/09 15:42:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2013/11/24 04:47:39 ryoon Exp $
 #
 
 DISTNAME=	OmegaT_3.0.5_Beta_Source
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
-USE_JAVA=	run
+USE_JAVA=	yes
 USE_JAVA2=	yes
 
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
