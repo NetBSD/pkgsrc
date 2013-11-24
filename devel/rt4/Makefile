@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/08/24 00:27:50 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/11/24 09:57:03 wiz Exp $
 
 DISTNAME=	rt-4.0.17
 PKGNAME=	${DISTNAME:S/rt/rt4/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -58,7 +58,7 @@ DEPENDS+=	p5-HTML-Mason>=1.43:../../www/p5-HTML-Mason
 # Errno is a part of perl base.
 DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
 DEPENDS+=	p5-CGI>=1.20:../../www/p5-CGI
-DEPENDS+=	p5-Storable>=2.08:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable>=2.08:../../devel/p5-Storable
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
 DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
