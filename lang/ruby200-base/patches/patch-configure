@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
+$NetBSD: patch-configure,v 1.4 2013/11/24 14:22:03 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.orig	2013-06-27 11:16:17.000000000 +0000
+--- configure.orig	2013-11-22 04:23:39.000000000 +0000
 +++ configure
-@@ -8259,6 +8259,10 @@ esac
+@@ -8260,6 +8260,10 @@ esac
    superux*) :
      	ac_cv_func_setitimer=no
  		 ;; #(
@@ -16,7 +16,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
    nacl) :
  
    LIBS="-lm $LIBS"
-@@ -14793,7 +14797,7 @@ _ACEOF
+@@ -14794,7 +14798,7 @@ _ACEOF
  fi
  
  case "$target_os" in #(
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for heap align log on openbsd" >&5
  $as_echo_n "checking for heap align log on openbsd... " >&6; }
-@@ -15067,6 +15071,8 @@ else
+@@ -15068,6 +15072,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -34,7 +34,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -17061,7 +17067,7 @@ done
+@@ -17074,7 +17080,7 @@ done
      MAINLIBS="-pthread $MAINLIBS" ;; #(
    *) :
      case "$target_os" in #(
@@ -43,7 +43,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
      LIBS="-pthread $LIBS" ;; #(
    *) :
      LIBS="-l$pthread_lib $LIBS" ;;
-@@ -17434,7 +17440,9 @@ esac ;; #(
+@@ -17447,7 +17453,9 @@ esac ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -53,7 +53,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -18254,7 +18262,7 @@ esac
+@@ -18270,7 +18278,7 @@ esac
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -62,7 +62,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -18271,7 +18279,7 @@ esac
+@@ -18287,7 +18295,7 @@ esac
  	   LIBRUBY_ALIASES=""
  	fi
  	 ;; #(
@@ -71,7 +71,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
-@@ -18332,7 +18340,12 @@ esac
+@@ -18348,7 +18356,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -85,7 +85,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -18490,7 +18503,7 @@ esac
+@@ -18506,7 +18519,7 @@ esac
  esac
  if test "$enable_rpath" = yes; then
      test -z "$LIBRUBY_RPATHFLAGS" || LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS "
@@ -94,7 +94,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
      LIBRUBYARG_STATIC="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_STATIC"
  fi
-@@ -18655,11 +18668,7 @@ if test "$install_doc" != no; then
+@@ -18677,11 +18690,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
@@ -107,7 +107,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -19210,9 +19219,13 @@ unexpand_shvar() {
+@@ -19232,9 +19241,13 @@ unexpand_shvar() {
      test "$#" -eq 0 && return
      for n do
          eval v='"$'$n'"'
@@ -123,7 +123,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
  	    case "$v" in #(
    *'${'*'}'*) :
      expr="$expr;s|$v|\"\${$n}\"|g" ;; #(
-@@ -19221,7 +19234,7 @@ unexpand_shvar() {
+@@ -19243,7 +19256,7 @@ unexpand_shvar() {
  esac
  	fi
      done
@@ -132,7 +132,7 @@ $NetBSD: patch-configure,v 1.3 2013/10/28 14:26:59 taca Exp $
      eval $var='"`echo \"\\\"${'$var'}\\\"\" | sed \"$expr;s/\\\"//g\"`"'
  }
  
-@@ -20884,17 +20897,7 @@ which seems to be undefined.  Please mak
+@@ -20906,17 +20919,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
