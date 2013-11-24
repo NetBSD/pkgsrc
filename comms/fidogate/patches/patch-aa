@@ -1,6 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2012/02/28 11:21:50 hans Exp $
+$NetBSD: patch-aa,v 1.9 2013/11/24 04:01:07 dholland Exp $
 
---- config.make.orig	2003-04-15 14:45:20.000000000 -0400
+- honor PREFIX, PKG_SYSCONFDIR, PKGINFODIR
+- XXX: should but does not honor VARBASE
+- use /var/spool/fido rather than /var/spool/fidogate (why?)
+- use /var/news rather than /var/lib/news and/or /var/spool/news
+- use pkgsrc perl
+- set SENDMAIL_CF_DIR (XXX: it is no longer correct)
+- use pkgsrc compiler and yacc
+- don't build with -g by default
+- use pkgsrc install tools
+- handle setuid perms with SPECIAL_PERMS rather than requiring root to build
+
+--- config.make.orig	2003-04-15 18:45:20.000000000 +0000
 +++ config.make
 @@ -56,13 +56,13 @@
  #
@@ -106,7 +117,7 @@ $NetBSD: patch-aa,v 1.8 2012/02/28 11:21:50 hans Exp $
 -INSTALL_DIR	= $(INSTALL) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR) -d
 +INSTALL_PROG	= $(BSD_INSTALL_SCRIPT)
 +INSTALL_DATA	= $(BSD_INSTALL_DATA)
-+INSTALL_SETUID	= $(BSD_INSTALL_PROGRAM) -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
++INSTALL_SETUID	= $(BSD_INSTALL_PROGRAM)
 +INSTALL_DIR	= $(BSD_INSTALL_DATA_DIR) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR) -d
  # extra prefix for installation
  PREFIX		=

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2013/07/12 10:44:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.68 2013/11/24 04:01:07 dholland Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fidogate/}
 
@@ -22,7 +22,6 @@ RCD_SCRIPTS=	fidogate
 RCD_SCRIPT_SRC.fidogate=	${WRKSRC}/scripts/maintenance/rc.fidogate
 INFO_FILES=	yes # PLIST
 
-USERGROUP_PHASE=	pre-install
 PKG_GROUPS=	news
 PKG_USERS=	news:news
 PKG_GECOS.news=	Network News
@@ -41,14 +40,17 @@ SUBST_STAGE.paths=	pre-build
 # Too many schar/uchar issues.
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-PKG_DESTDIR_SUPPORT=	destdir
-
 OWN_DIRS=		${PKG_SYSCONFDIR}/fidogate
 INSTALLATION_DIRS+=	${EGDIR}		lib/fidogate		\
 			lib/fidogate/bin	share/doc/fidogate	\
 			share/fidogate		share/fidogate/sendmail	\
 			${PKGINFODIR} \
 			share/fidogate/sendmail/mailer share/examples/rc.d
+
+FIDOGATE_SUID_PERMS=	news news 4111
+SPECIAL_PERMS+=		${PREFIX}/lib/fidogate/ffx ${FIDOGATE_SUID_PERMS} \
+			${PREFIX}/lib/fidogate/ftnmail ${FIDOGATE_SUID_PERMS} \
+			${PREFIX}/lib/fidogate/ftnafmail ${FIDOGATE_SUID_PERMS}
 
 post-extract:
 	${CP} ${WRKSRC}/examples/orodruin/fidogate.conf \
