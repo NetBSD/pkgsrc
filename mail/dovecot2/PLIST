@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2013/11/06 14:20:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2013/11/24 10:05:54 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -200,6 +200,7 @@ include/dovecot/istream-chain.h
 include/dovecot/istream-concat.h
 include/dovecot/istream-crlf.h
 include/dovecot/istream-dot.h
+include/dovecot/istream-fs-file.h
 include/dovecot/istream-hash.h
 include/dovecot/istream-header-filter.h
 include/dovecot/istream-jsonstr.h
@@ -492,7 +493,9 @@ libexec/dovecot/xml2text
 man/man1/deliver.1
 man/man1/doveadm-altmove.1
 man/man1/doveadm-auth.1
+man/man1/doveadm-batch.1
 man/man1/doveadm-config.1
+man/man1/doveadm-copy.1
 man/man1/doveadm-deduplicate.1
 man/man1/doveadm-director.1
 man/man1/doveadm-dump.1
