@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/23 03:51:50 abs Exp $
+$NetBSD: distinfo,v 1.2 2013/11/24 01:52:49 wen Exp $
 
-SHA1 (Tree-Simple-VisitorFactory-0.10.tar.gz) = f0b9f4cb3231dc9c0a75112a9d4e1fec5e569b81
-RMD160 (Tree-Simple-VisitorFactory-0.10.tar.gz) = 51862755ea5f53c5b2e48ce63777974ecf51287d
-Size (Tree-Simple-VisitorFactory-0.10.tar.gz) = 27970 bytes
+SHA1 (Tree-Simple-VisitorFactory-0.12.tgz) = 43444a6347374d5ac1bead3152b0de4c95151dbb
+RMD160 (Tree-Simple-VisitorFactory-0.12.tgz) = 2b6e07ee91780c7646f4e47b5f95c31e37b3ebfa
+Size (Tree-Simple-VisitorFactory-0.12.tgz) = 44779 bytes
