@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/11/19 12:46:07 tron Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/24 09:32:26 tron Exp $
 
 DISTNAME=	sslscan-1.8.2
 CATEGORIES=	security
@@ -12,6 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+pre-install:
+	${RM} -f ${WRKSRC}/INSTALL
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
