@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4226 2013/11/24 02:03:51 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4227 2013/11/24 02:19:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6156,3 +6156,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Tree-Simple-VisitorFactory to 0.12 [wen 2013-11-24]
 	Updated devel/p5-UNIVERSAL-require to 0.15 [wen 2013-11-24]
 	Updated devel/p5-Variable-Magic to 0.53 [wen 2013-11-24]
+	Updated devel/p5-aliased to 0.31 [wen 2013-11-24]
