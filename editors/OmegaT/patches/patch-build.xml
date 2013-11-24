@@ -1,0 +1,15 @@
+$NetBSD: patch-build.xml,v 1.1 2013/11/24 04:50:30 ryoon Exp $
+
+--- build.xml.orig	2013-05-28 00:07:44.000000000 +0000
++++ build.xml
+@@ -82,10 +82,6 @@
+         <copy todir="dist/native">
+             <fileset dir="native"/>
+         </copy>
+-        <!-- copy scripts to the distribution directory -->
+-        <copy todir="dist/scripts">
+-            <fileset dir="scripts"/>
+-        </copy>
+     </target>
+     
+     <!-- Creates a zip with two localization packs -->
