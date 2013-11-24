@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4244 2013/11/24 15:26:56 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4245 2013/11/24 20:07:03 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-tk to 1.8.7.374nb1 [taca 2013-11-24]
 	Updated x11/ruby-tk to 1.9.3p484nb1 [taca 2013-11-24]
 	Updated x11/ruby-tk to 2.0.0p353nb1 [taca 2013-11-24]
+	Updated print/hplip to 3.13.11 [schnoebe 2013-11-24]
