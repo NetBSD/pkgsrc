@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12733 2013/11/23 18:29:30 gls Exp $
+$NetBSD: TODO,v 1.12734 2013/11/24 14:25:44 taca Exp $
 
 Suggested new packages
 ======================
@@ -947,7 +947,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rpm-5.3.6 [rpm5.org]
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
-	o ruby-2.0.0p0
 	o rudiments-0.44.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
