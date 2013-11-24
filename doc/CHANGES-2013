@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4242 2013/11/24 13:27:41 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4243 2013/11/24 14:24:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6174,3 +6174,14 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.8 [adam 2013-11-24]
 	Added devel/intellij-idea-ce version 12.1.2 [ryoon 2013-11-24]
 	Updated net/mikutter to 0.2.2.1430 [obache 2013-11-24]
+	Updated lang/ruby193-base to 1.9.3p484 [taca 2013-11-24]
+	Updated databases/ruby-gdbm to 1.9.3p484 [taca 2013-11-24]
+	Updated devel/ruby-curses to 1.9.3p484nb1 [taca 2013-11-24]
+	Updated devel/ruby-fiddle to 1.9.3p484 [taca 2013-11-24]
+	Updated devel/ruby-readline to 1.9.3p484 [taca 2013-11-24]
+	Updated x11/ruby-tk to 1.9.3p484 [taca 2013-11-24]
+	Updated lang/ruby193 to 1.9.3p484 [taca 2013-11-24]
+	Updated lang/ruby to 1.9.3p484 [taca 2013-11-24]
+	Updated lang/ruby200-base to 2.0.0p353 [taca 2013-11-24]
+	Updated lang/ruby200 to 2.0.0p353 [taca 2013-11-24]
+	Updated devel/ruby-mode to 2.0.0p353 [taca 2013-11-24]
