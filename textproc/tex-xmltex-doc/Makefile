@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/01/17 22:31:53 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/24 04:59:28 dholland Exp $
 
 DISTNAME=	xmltex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.8
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	18835
 
 MAINTAINER=	minskim@NetBSD.org
