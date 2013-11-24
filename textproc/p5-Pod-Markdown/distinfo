@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/08/26 00:54:50 wen Exp $
+$NetBSD: distinfo,v 1.2 2013/11/24 04:23:01 wen Exp $
 
-SHA1 (Pod-Markdown-1.322.tar.gz) = 83d93f5ce300e8e67210bd72ded52fbea9d4865b
-RMD160 (Pod-Markdown-1.322.tar.gz) = 07b63633140bbf51e170d5cb5a71a725b810033c
-Size (Pod-Markdown-1.322.tar.gz) = 27763 bytes
+SHA1 (Pod-Markdown-1.500.tar.gz) = bc676969ecf1482217c9bdb6b5bb5bc9d92c8fc6
+RMD160 (Pod-Markdown-1.500.tar.gz) = ef3e485a17a590e336294390c000ad19c70d5ce2
+Size (Pod-Markdown-1.500.tar.gz) = 35721 bytes
