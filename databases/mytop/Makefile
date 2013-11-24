@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/05/31 12:39:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2013/11/24 10:02:40 wiz Exp $
 
 DISTNAME=	mytop-1.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	http://jeremy.zawodny.com/mysql/mytop/
 
@@ -12,7 +11,7 @@ COMMENT=	Console-based tool for monitoring the threads and performance of MySQL
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-Term-ANSIColor-[0-9]*:../../devel/p5-Term-ANSIColor
+#DEPENDS+=	p5-Term-ANSIColor-[0-9]*:../../devel/p5-Term-ANSIColor
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 
