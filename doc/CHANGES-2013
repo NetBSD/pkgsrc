@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4240 2013/11/24 10:06:46 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4241 2013/11/24 10:45:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6172,3 +6172,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Storable to 2.45 [wiz 2013-11-24]
 	Updated devel/p5-Term-ANSIColor to 4.02 [wiz 2013-11-24]
 	Updated mail/dovecot2 to 2.2.8 [adam 2013-11-24]
+	Added devel/intellij-idea-ce version 12.1.2 [ryoon 2013-11-24]
