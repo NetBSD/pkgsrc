@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2013/11/16 02:01:46 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2013/11/24 12:37:40 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox24
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	alsa debug mozilla-jemalloc gnome pulseaudio webrtc
+PKG_SUPPORTED_OPTIONS+=	dtrace
 PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
@@ -79,4 +80,12 @@ PLIST_VARS+=		webrtc
 CONFIGURE_ARGS+=	--enable-webrtc
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
+.endif
+
+PLIST_VARS+=		dtrace
+.if !empty(PKG_OPTIONS:Mdtrace)
+CONFIGURE_ARGS+=    --enable-dtrace
+PLIST.dtrace=		yes
+.else
+CONFIGURE_ARGS+=    --disable-dtrace
 .endif
