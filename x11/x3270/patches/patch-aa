@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.10 2013/11/24 05:52:10 gls Exp $
+
+Fix $HOSTSFILE installation path
+
+--- Imakefile.in.orig	2010-09-13 20:55:27.000000000 +0000
++++ Imakefile.in
+@@ -190,8 +190,8 @@ $(DESTDIR)$(FONTINSTDIR)/fonts.dir::
+ /* Extra install rule for the sample ibm_hosts file (runs only if there is
+    no ibm_hosts file installed yet). */
+ install:: $(HOSTSFILE)
+-	@[ -r $(DESTDIR)$(LIBX3270DIR)/$(HOSTSFILE) ] || \
+-		$(INSTALL) -c $(INSTDATFLAGS) $(HOSTSFILE) $(DESTDIR)$(LIBX3270DIR)/$(HOSTSFILE)
++	@[ -r $(DESTDIR)$(PREFIX)/share/examples/x3270/$(HOSTSFILE) ] || \
++		$(INSTALL) -c $(INSTDATFLAGS) $(HOSTSFILE) $(DESTDIR)$(PREFIX)/share/examples/x3270/$(HOSTSFILE)
+
+ /*
+  * Install rules for x3270if, x3270-script and ibm_hosts man pages.
