@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/05/31 12:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/24 10:02:40 wiz Exp $
 
 DISTNAME=		App-Sqitch-0.961
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -35,7 +35,7 @@ DEPENDS+=		p5-Role-Identifiable-[0-9]*:../../devel/p5-Role-Identifiable
 DEPENDS+=		p5-String-Formatter-[0-9]*:../../textproc/p5-String-Formatter
 DEPENDS+=		p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=		p5-Template-Tiny>=0.11:../../textproc/p5-Template-Tiny
-DEPENDS+=		p5-Term-ANSIColor>=2.02:../../devel/p5-Term-ANSIColor
+#DEPENDS+=		p5-Term-ANSIColor>=2.02:../../devel/p5-Term-ANSIColor
 DEPENDS+=		p5-Throwable-[0-9]*:../../devel/p5-Throwable
 DEPENDS+=		p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
