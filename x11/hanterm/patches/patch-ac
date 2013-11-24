@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2001/05/03 18:37:48 fredb Exp $
+$NetBSD: patch-ac,v 1.2 2013/11/24 05:53:52 dholland Exp $
+
+- use (semi-)standard headers
+- fix os conditionals (apparently with respect to VMS)
 
 --- data.c.orig	Wed Feb 24 05:04:50 1999
 +++ data.c
