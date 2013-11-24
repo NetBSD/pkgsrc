@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
+$NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
 
 * Make sure to setup under DESTDIR.
 
---- lib/rubygems/commands/setup_command.rb.orig	2013-03-17 15:13:08.000000000 +0000
+--- lib/rubygems/commands/setup_command.rb.orig	2013-07-22 16:33:18.000000000 +0000
 +++ lib/rubygems/commands/setup_command.rb
 @@ -145,7 +145,7 @@ By default, this RubyGems will install g
  
@@ -13,7 +13,7 @@ $NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.1 2013/07/21 02:32:58
  
      say
      if @verbose then
-@@ -306,11 +306,15 @@ TEXT
+@@ -284,11 +284,15 @@ TEXT
      end
    end
  
@@ -30,7 +30,7 @@ $NetBSD: patch-lib_rubygems_commands_setup__command.rb,v 1.1 2013/07/21 02:32:58
      begin
        Gem.ensure_gem_subdirectories Gem.dir
      rescue SystemCallError
-@@ -321,7 +325,7 @@ TEXT
+@@ -299,7 +303,7 @@ TEXT
         (not File.exist? rubygems_doc_dir or
          File.writable? rubygems_doc_dir) then
        say "Removing old RubyGems RDoc and ri" if @verbose
