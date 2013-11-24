@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4219 2013/11/24 00:49:29 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4220 2013/11/24 01:01:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6148,4 +6148,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/x3270 to 3.3.13ga7 [gls 2013-11-23]
 	Updated www/p5-Plack to 1.0030 [wen 2013-11-24]
 	Updated www/p5-HTTP-Tiny to 0.038 [wen 2013-11-24]
-	Updated devel/p5-Getopt-Long to 2.42 [wen 2013-11-224]
+	Updated devel/p5-Getopt-Long to 2.42 [wen 2013-11-24]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.096 [wen 2013-11-24]
