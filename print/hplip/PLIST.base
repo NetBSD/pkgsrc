@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.10 2013/10/30 23:37:31 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.11 2013/11/24 20:05:41 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -484,6 +484,13 @@ share/hplip/ppd/HP/hp-color_laserjet_cp5520_series-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp6015-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp6015-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp6015-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_flow_mfp_m880-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_m750-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_m855-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m176n-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m176n.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m177fw-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m177fw.ppd.gz
 share/hplip/ppd/HP/hp-cp1160-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-cp1160.ppd.gz
 share/hplip/ppd/HP/hp-designjet_4000ps.ppd.gz
@@ -1340,6 +1347,10 @@ share/hplip/ppd/HP/hp-laserjet_p4515x-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515x.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fn-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fn.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fw-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_mfp_m127fw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m435-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1132_mfp-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1132_mfp.ppd.gz
@@ -1423,6 +1434,8 @@ share/hplip/ppd/HP/hp-officejet_100_mobile_l411-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_100_mobile_l411.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511.ppd.gz
+share/hplip/ppd/HP/hp-officejet_2620_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_2620_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4000_k210-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4000_k210.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4100_series-hpijs.ppd.gz
