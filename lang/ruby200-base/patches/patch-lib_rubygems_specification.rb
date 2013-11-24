@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_rubygems_specification.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
+$NetBSD: patch-lib_rubygems_specification.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
 
 * Changes for pkgsrc environment:
 
@@ -8,9 +8,9 @@ $NetBSD: patch-lib_rubygems_specification.rb,v 1.1 2013/07/21 02:32:58 taca Exp 
 And allow multiple conditions for requirement from Ruby 2.0.0 and
 Rubygem 1.8.25.
 
---- lib/rubygems/specification.rb.orig	2013-03-17 14:18:23.000000000 +0000
+--- lib/rubygems/specification.rb.orig	2013-11-13 02:59:08.000000000 +0000
 +++ lib/rubygems/specification.rb
-@@ -164,6 +164,12 @@ class Gem::Specification
+@@ -162,6 +162,12 @@ class Gem::Specification
      @@default_value[k].nil?
    }
  
@@ -23,7 +23,7 @@ Rubygem 1.8.25.
    ######################################################################
    # :section: Required gemspec attributes
  
-@@ -2317,7 +2323,24 @@ class Gem::Specification
+@@ -2334,7 +2340,24 @@ class Gem::Specification
      normalize
  
      nil_attributes = self.class.non_nil_attributes.find_all do |name|
@@ -49,7 +49,7 @@ Rubygem 1.8.25.
      end
  
      unless nil_attributes.empty? then
-@@ -2455,10 +2478,15 @@ class Gem::Specification
+@@ -2472,10 +2495,15 @@ class Gem::Specification
        raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
      end
  

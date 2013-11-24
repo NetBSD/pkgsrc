@@ -1,10 +1,10 @@
-$NetBSD: patch-tool_rbinstall.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
+$NetBSD: patch-tool_rbinstall.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
 
 * Don't install which has already ${RUBY_VER} suffix.
 
---- tool/rbinstall.rb.orig	2013-02-07 08:02:31.000000000 +0000
+--- tool/rbinstall.rb.orig	2013-11-12 14:35:13.000000000 +0000
 +++ tool/rbinstall.rb
-@@ -213,7 +213,7 @@ def install_recursive(srcdir, dest, opti
+@@ -220,7 +220,7 @@ def install_recursive(srcdir, dest, opti
        end
      end
    end

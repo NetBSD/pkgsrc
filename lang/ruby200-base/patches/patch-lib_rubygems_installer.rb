@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
+$NetBSD: patch-lib_rubygems_installer.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 * Tweak build_info directory with destdir to store build_args.
 
---- lib/rubygems/installer.rb.orig	2013-03-17 14:51:53.000000000 +0000
+--- lib/rubygems/installer.rb.orig	2013-08-16 15:35:06.000000000 +0000
 +++ lib/rubygems/installer.rb
-@@ -89,6 +89,9 @@ class Gem::Installer
+@@ -98,6 +98,9 @@ class Gem::Installer
    #                      foo_exec18.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
    # :install_dir:: The directory to install the gem into.
@@ -15,7 +15,7 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
    # :security_policy:: Use the specified security policy.  See Gem::Security
    # :user_install:: Indicate that the gem should be unpacked into the users
    #                 personal gem directory.
-@@ -548,12 +551,20 @@ class Gem::Installer
+@@ -558,12 +561,20 @@ class Gem::Installer
      @format_executable   = options[:format_executable]
      @security_policy     = options[:security_policy]
      @wrappers            = options[:wrappers]
@@ -37,16 +37,13 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
      @development         = options[:development]
  
      @build_args          = options[:build_args] || Gem::Command.build_args
-@@ -773,7 +784,11 @@ EOF
-   def write_build_info_file
+@@ -786,6 +797,9 @@ EOF
      return if @build_args.empty?
  
--    open spec.build_info_file, 'w' do |io|
-+    build_info_file = spec.build_info_file
+     build_info_dir = File.join gem_home, 'build_info'
 +    unless @install_root.nil?
-+      build_info_file = File.join @gem_home, "build_info", "#{spec.full_name}.info"
++      build_info_dir = File.join @gem_home, "build_info"
 +    end
-+    open build_info_file, 'w' do |io|
-       @build_args.each do |arg|
-         io.puts arg
-       end
+ 
+     FileUtils.mkdir_p build_info_dir
+ 
