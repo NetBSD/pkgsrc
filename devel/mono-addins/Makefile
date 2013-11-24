@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/10/19 09:06:58 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/11/24 02:39:54 dholland Exp $
 
 DISTNAME=	mono-addins-1.0
 PKGREVISION=	4
@@ -13,6 +13,7 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 MAKE_JOBS_SAFE=	no
+ALL_ENV+=	PLATFORM=
 
 .include "../../lang/mono2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
