@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.6 2013/02/26 10:20:17 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2013/11/24 05:53:52 dholland Exp $
+
+- use standard headers
+- build on Dragonfly
+- always use mkstemp()
+- declare void functions void
+- avoid sys_errlist
 
 --- misc.c.orig	2002-01-09 00:41:11.000000000 +0000
 +++ misc.c
-@@ -35,7 +35,7 @@
+@@ -29,13 +29,14 @@
+ 
+ #include <X11/Xos.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <setjmp.h>
+ #include <signal.h>
+ #include <ctype.h>
  #include <pwd.h>
  #include <errno.h>
  
@@ -11,7 +24,16 @@ $NetBSD: patch-aa,v 1.6 2013/02/26 10:20:17 joerg Exp $
  #include <sys/param.h>
  #endif
  
-@@ -584,8 +584,7 @@ register TScreen *screen;
+@@ -498,7 +499,7 @@ register TScreen *screen;
+ 			free(screen->logfile);
+ 		if(log_default == NULL)
+ 			log_default = log_def_name;
+-#ifdef __linux__
++#if 1
+ 			mkstemp(log_default);
+ #else
+ 			mktemp(log_default);
+@@ -584,8 +585,7 @@ register TScreen *screen;
  	update_logging();
  }
  
@@ -21,11 +43,31 @@ $NetBSD: patch-aa,v 1.6 2013/02/26 10:20:17 joerg Exp $
  {
  	if(!screen->logging || (screen->inhibit & I_LOG))
  		return;
-@@ -913,7 +912,6 @@ char *SysErrorMsg (n)
-     extern char *sys_errlist[];
- #endif
- #endif
--    extern int sys_nerr;
- 
-     return ((n >= 0 && n < sys_nerr) ? sys_errlist[n] : "unknown error");
+@@ -897,25 +897,9 @@ int a;
+ #endif	/* DEBUG */
  }
+ 
+-#if defined(linux) && defined(__GLIBC__)
+-const char *const SysErrorMsg(n)
+-#else
+-char *SysErrorMsg (n)
+-#endif
+-    int n;
++const char *const SysErrorMsg(int n)
+ {
+-#if defined(linux) && defined(__GLIBC__)
+-    extern const char *const sys_errlist[];
+-#else
+-#if (defined(BSD) && (BSD >= 199306))
+-    /* in *BSD, should be null because it is already declared */
+-#else
+-    extern char *sys_errlist[];
+-#endif
+-#endif
+-    extern int sys_nerr;
+-
+-    return ((n >= 0 && n < sys_nerr) ? sys_errlist[n] : "unknown error");
++	return strerror(n);
+ }
+ 
+ 

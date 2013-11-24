@@ -1,4 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2005/12/04 01:10:33 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2013/11/24 05:53:52 dholland Exp $
+
+- use (semi-)standard headers
+- fix os conditionals (apparently with respect to VMS)
+- don't declare own errno
 
 --- data.h.orig	1999-02-24 11:04:50.000000000 +0000
 +++ data.h
