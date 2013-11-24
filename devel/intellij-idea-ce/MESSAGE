@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/11/24 10:44:34 ryoon Exp $
+
+To start IntelliJ IDEA Community Edition, run as following
+
+$ IDEA_JDK=${PREFIX}/java/openjdk7 ${PREFIX}/intellij-idea-ce-12.1.2/bin/idea.sh
+===========================================================================
