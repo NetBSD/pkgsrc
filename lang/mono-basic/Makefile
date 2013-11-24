@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/10/19 09:07:06 adam Exp $
+# $NetBSD: Makefile,v 1.22 2013/11/24 02:38:58 dholland Exp $
 
 DISTNAME=	mono-basic-2.10
 PKGREVISION=	6
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2 AND mit
 USE_TOOLS+=		gmake
 USE_LANGUAGES+=		# empty
 EXTRACT_USING=		gtar
+ALL_ENV+=		PLATFORM=
 
 GNU_CONFIGURE=		yes
 
