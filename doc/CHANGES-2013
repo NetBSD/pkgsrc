@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4243 2013/11/24 14:24:40 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4244 2013/11/24 15:26:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6185,3 +6185,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/ruby200-base to 2.0.0p353 [taca 2013-11-24]
 	Updated lang/ruby200 to 2.0.0p353 [taca 2013-11-24]
 	Updated devel/ruby-mode to 2.0.0p353 [taca 2013-11-24]
+	Updated x11/ruby-tk to 1.8.7.374nb1 [taca 2013-11-24]
+	Updated x11/ruby-tk to 1.9.3p484nb1 [taca 2013-11-24]
+	Updated x11/ruby-tk to 2.0.0p353nb1 [taca 2013-11-24]
