@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4234 2013/11/24 04:28:47 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4235 2013/11/24 04:45:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6164,3 +6164,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Pod-Eventual to 0.094001 [wen 2013-11-24]
 	Updated textproc/p5-Pod-Markdown to 1.500 [wen 2013-11-24]
 	Updated textproc/p5-Pod-Parser to 1.61 [wen 201-11-24]
+	Updated www/apache-tomcat7 to 7.0.47 [ryoon 2013-11-24]
