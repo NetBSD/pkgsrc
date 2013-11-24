@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4222 2013/11/24 01:42:23 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4223 2013/11/24 01:46:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6152,3 +6152,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.096 [wen 2013-11-24]
 	Updated devel/p5-Tree-DAG_Node to 1.18 [wen 2013-11-24]
 	Added devel/p5-Test-Version version 1.002004 [wen 2013-11-24]
+	Updated devel/p5-Tree-Simple to 1.23 [wen 2013-11-24]
