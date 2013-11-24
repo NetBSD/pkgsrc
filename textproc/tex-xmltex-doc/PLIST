@@ -1,1 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/04 23:51:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/24 04:59:28 dholland Exp $
+share/texmf-dist/doc/otherformats/xmltex/base/englishutf16.xml
+share/texmf-dist/doc/otherformats/xmltex/base/englishutf8.xml
+share/texmf-dist/doc/otherformats/xmltex/base/langtest.xml
+share/texmf-dist/doc/otherformats/xmltex/base/manual.html
+share/texmf-dist/doc/otherformats/xmltex/base/manual.tex
+share/texmf-dist/doc/otherformats/xmltex/base/manual.xml
+share/texmf-dist/doc/otherformats/xmltex/base/manual.xsl
+share/texmf-dist/doc/otherformats/xmltex/base/portugeselatin1.xml
+share/texmf-dist/doc/otherformats/xmltex/base/readme.txt
+share/texmf-dist/doc/otherformats/xmltex/base/russiankoi8.xml
+share/texmf-dist/doc/otherformats/xmltex/base/russianutf8.xml
+share/texmf-dist/doc/otherformats/xmltex/base/testascii.cfg
+share/texmf-dist/doc/otherformats/xmltex/base/testascii.tex
+share/texmf-dist/doc/otherformats/xmltex/base/testascii.xml
+share/texmf-dist/doc/otherformats/xmltex/base/testsec.tex
+share/texmf-dist/doc/otherformats/xmltex/base/testsec.xml
