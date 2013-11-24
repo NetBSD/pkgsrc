@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
+$NetBSD: patch-configure.in,v 1.10 2013/11/24 14:17:19 taca Exp $
 
 * Adding Interix and MirBSD support.
 * Ignore doxygen.
 
---- configure.in.orig	2013-05-29 12:05:44.000000000 +0000
+--- configure.in.orig	2013-10-31 14:32:59.000000000 +0000
 +++ configure.in
 @@ -1138,6 +1138,8 @@ main()
  		],
@@ -38,7 +38,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  @%:@endif])
  
  AC_CHECK_TYPES([struct timezone], [], [], [@%:@ifdef HAVE_TIME_H
-@@ -1803,7 +1813,7 @@ if test x"$enable_pthread" = xyes; then
+@@ -1804,7 +1814,7 @@ if test x"$enable_pthread" = xyes; then
  	[root], [],
  	[c_r],  [MAINLIBS="-pthread $MAINLIBS"],
  	        [AS_CASE(["$target_os"],
@@ -47,7 +47,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  		    [LIBS="-l$pthread_lib $LIBS"])])
      else
  	AC_MSG_WARN("Don't know how to find pthread library on your system -- thread support disabled")
-@@ -2034,7 +2044,9 @@ if test "$with_dln_a_out" != yes; then
+@@ -2035,7 +2045,9 @@ if test "$with_dln_a_out" != yes; then
  			rb_cv_dlopen=yes],
  	[interix*], [	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -57,7 +57,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  			rb_cv_dlopen=yes],
  	[freebsd*|dragonfly*], [
  			: ${LDSHARED='$(CC) -shared'}
-@@ -2045,7 +2057,7 @@ if test "$with_dln_a_out" != yes; then
+@@ -2046,7 +2058,7 @@ if test "$with_dln_a_out" != yes; then
  			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
  			fi
  			rb_cv_dlopen=yes],
@@ -66,7 +66,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-E"
  			fi
-@@ -2346,7 +2358,7 @@ AS_CASE("$enable_shared", [yes], [
+@@ -2347,7 +2359,7 @@ AS_CASE("$enable_shared", [yes], [
  	],
      [freebsd*|dragonfly*], [
  	SOLIBS='$(LIBS)'
@@ -75,7 +75,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -2362,7 +2374,7 @@ AS_CASE("$enable_shared", [yes], [
+@@ -2363,7 +2375,7 @@ AS_CASE("$enable_shared", [yes], [
  	   LIBRUBY_ALIASES=""
  	fi
  	],
@@ -84,7 +84,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
  	],
-@@ -2412,7 +2424,12 @@ AS_CASE("$enable_shared", [yes], [
+@@ -2413,7 +2425,12 @@ AS_CASE("$enable_shared", [yes], [
  	LIBRUBY_ALIASES='lib$(RUBY_BASE_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
  	],
      [interix*], [
@@ -98,7 +98,7 @@ $NetBSD: patch-configure.in,v 1.9 2013/06/27 16:35:44 taca Exp $
  	])
  ], [
    LIBRUBYARG_SHARED=
-@@ -2457,11 +2474,7 @@ if test "$install_doc" != no; then
+@@ -2458,11 +2475,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
