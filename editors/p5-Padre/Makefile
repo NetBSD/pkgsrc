@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2013/10/10 14:42:07 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.34 2013/11/24 09:57:03 wiz Exp $
 
 DISTNAME=	Padre-0.96
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
@@ -83,7 +82,7 @@ DEPENDS+=	{perl>=5.10.1,p5-Pod-Simple>=3.07}:../../textproc/p5-Pod-Simple
 DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
 DEPENDS+=	p5-Readonly-XS>=1.05:../../devel/p5-Readonly-XS
 DEPENDS+=	p5-Sort-Versions>=1.5:../../devel/p5-Sort-Versions
-DEPENDS+=	{perl>=5.10.0,p5-Storable>=2.16}:../../devel/p5-Storable
+#DEPENDS+=	{perl>=5.10.0,p5-Storable>=2.16}:../../devel/p5-Storable
 DEPENDS+=	p5-Template-Tiny>=0.11:../../textproc/p5-Template-Tiny
 DEPENDS+=	{perl>=5.12.0,p5-Text-Balanced>=2.01}:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Text-Diff>=1.41:../../textproc/p5-Text-Diff
