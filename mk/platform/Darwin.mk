@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.59 2013/11/24 09:36:41 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.60 2013/11/24 10:13:41 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -76,7 +76,7 @@ _OPSYS_EMULDIR.darwin=	# empty
 # into /usr/include, so we need to query their location.
 #
 .if exists(/usr/bin/xcrun)
-OSX_SDK_PATH!=	/usr/bin/xcrun --show-sdk-path 2>/dev/null || ${ECHO} ""
+OSX_SDK_PATH!=	/usr/bin/xcrun --show-sdk-path 2>/dev/null || echo /nonexistent
 .endif
 
 _OPSYS_SYSTEM_RPATH?=		/usr/lib
