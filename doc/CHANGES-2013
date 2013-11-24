@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4229 2013/11/24 04:02:50 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4230 2013/11/24 04:06:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6159,3 +6159,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-aliased to 0.31 [wen 2013-11-24]
 	Updated devel/p5-strictures to 1.005001 [wen 2013-11-24]
 	Updated textproc/p5-Pod-Elemental to 0.102363 [wen 2013-11-24]
+	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.093333 [wen 2013-11-24]
