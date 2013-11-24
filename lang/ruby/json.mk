@@ -1,4 +1,4 @@
-# $NetBSD: json.mk,v 1.2 2011/12/14 13:13:18 taca Exp $
+# $NetBSD: json.mk,v 1.3 2013/11/24 14:05:08 taca Exp $
 
 # This file handles appropriate dependency to ruby-json pacakge.
 #
@@ -28,11 +28,15 @@ WARNINGS+= "[lang/ruby/json.mk] No needs to include ../../lang/ruby/json.mk"
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.  if ${RUBY_VER} != "193"
+.  if ${RUBY_VER} == "18"
 _RUBY_JSON_REQD=	true
 .  else
 
-RUBY_JSON_VERSION=	1.5.4
+.    if ${RUBY_VER} == "193"
+RUBY_JSON_VERSION=	1.5.5
+.    elif ${RUBY_VER} == "200"
+RUBY_JSON_VERSION=	1.7.7
+.    endif
 
 _RUBY_JSON_MAJOR=	${RUBY_JSON_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 _RUBY_JSON_MINOR=	${RUBY_JSON_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
@@ -63,7 +67,7 @@ _RUBY_JSON_REQD=	true
 .        endif
 .      endif
 .    endif
-.  endif # ${RUBY_VER} == "193"
+.  endif # ${RUBY_VER} != "18"
 
 .  if !empty(_RUBY_JSON_REQD)
 .    if ${RUBY_JSON_TYPE} == "json" || ${RUBY_JSON_TYPE} == "both"
