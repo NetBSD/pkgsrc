@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 14:07:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/24 04:41:41 ryoon Exp $
 
 DISTNAME=		gcc-4.6.4
 PKGNAME=		cross-freemint-${DISTNAME}
@@ -15,7 +15,7 @@ PATCHFILES=	gcc-4.6.4-mint-20130415.patch.bz2
 
 WRKSRC=		${WRKDIR}
 
-# for http://gcc.gnu.org/bugzilla/attachment.cgi?id=15133 ,
+# for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 TOOLS_PLATFORM.makeinfo=
