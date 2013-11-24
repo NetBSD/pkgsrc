@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/09/16 05:18:14 taca Exp $
+# $NetBSD: Makefile,v 1.10 2013/11/24 14:07:50 taca Exp $
 
 DISTNAME=	dm-types-1.2.2
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
