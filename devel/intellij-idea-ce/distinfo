@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2013/11/24 10:44:34 ryoon Exp $
+
+SHA1 (ideaIC-12.1.2-src.tar.bz2) = c5465bc20adc06dd0373446d6ebeb19721a76d31
+RMD160 (ideaIC-12.1.2-src.tar.bz2) = 7ae728df312fa2f2555b0727c61aef801bc015c2
+Size (ideaIC-12.1.2-src.tar.bz2) = 178169770 bytes
+SHA1 (patch-native_fsNotifier_linux_config.h) = b160ee0800af3db3248899ad4a64f6e597486e40
+SHA1 (patch-native_fsNotifier_linux_fam-mntent.h) = 19448d45d957e764720456de718a21ca542f57d5
+SHA1 (patch-native_fsNotifier_linux_inotify.c) = a9db0edf25ae67aca67a8b0c0abc73f275782b3a
+SHA1 (patch-native_fsNotifier_linux_main.c) = 1bd512b8c3b6b0178731ebb122cdea5df7c289be
+SHA1 (patch-native_fsNotifier_linux_mntent__compat.c) = 74a61e06e690311dd657c7d44634aa6053a03580
