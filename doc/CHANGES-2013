@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4238 2013/11/24 09:58:31 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4239 2013/11/24 10:05:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6170,3 +6170,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/tex-xmltex-doc to 0.8nb2 [dholland 2013-11-24]
 	Updated x11/hanterm to 3.1.6nb6 [dholland 2013-11-24]
 	Updated devel/p5-Storable to 2.45 [wiz 2013-11-24]
+	Updated devel/p5-Term-ANSIColor to 4.02 [wiz 2013-11-24]
