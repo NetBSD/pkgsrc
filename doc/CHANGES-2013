@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4231 2013/11/24 04:13:58 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4232 2013/11/24 04:18:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6161,3 +6161,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/p5-Pod-Elemental to 0.102363 [wen 2013-11-24]
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.093333 [wen 2013-11-24]
 	Updated devel/p5-Mixin-Linewise to 0.102 [wen 2013-11-24]
+	Updated textproc/p5-Pod-Eventual to 0.094001 [wen 2013-11-24]
