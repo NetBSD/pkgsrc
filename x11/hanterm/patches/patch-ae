@@ -1,8 +1,37 @@
-$NetBSD: patch-ae,v 1.3 2013/02/26 10:20:17 joerg Exp $
+$NetBSD: patch-ae,v 1.4 2013/11/24 05:53:52 dholland Exp $
+
+- avoid union wait
+- force termios on all modern systems
+- declare void functions void
+- avoid implicit int
+- don't declare own errno
+- fix os conditionals (apparently with respect to VMS)
+- call execl() and execlp() correctly
+- don't synthesize vsprintf with fake arguments
+- use ctype.h functions correctly
 
 --- main.c.orig	2002-01-09 00:41:11.000000000 +0000
 +++ main.c
-@@ -583,6 +583,8 @@ static int tslot;
+@@ -239,8 +239,18 @@ static Bool IsPts = False;
+ #ifdef SVR4
+ #define USE_POSIX_WAIT
+ #endif
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
++    defined(__DragonFly__) || defined(__linux__)
++#ifndef USE_POSIX_WAIT
++#define USE_POSIX_WAIT
++#endif
++#ifndef USE_TERMIOS
++#define USE_TERMIOS
++#endif
++#endif
+ 
+ #include <stdio.h>
++#include <stdarg.h>
+ #include <errno.h>
+ #include <setjmp.h>
+ 
+@@ -583,6 +593,8 @@ static int tslot;
  #endif	/* USE_SYSV_UTMP */
  static jmp_buf env;
  
@@ -11,16 +40,53 @@ $NetBSD: patch-ae,v 1.3 2013/02/26 10:20:17 joerg Exp $
  char *ProgramName;
  Boolean sunFunctionKeys;
  
-@@ -806,7 +808,7 @@ static char *message[] = {
+@@ -805,9 +817,9 @@ static char *message[] = {
+ "will be started.  Options that start with a plus sign (+) restore the default.",
  NULL};
  
- #ifndef USE_TERMIOS
+-#ifndef USE_TERMIOS
 -static remove_termcap_entry ();
+-#endif
++/*#ifndef USE_TERMIOS*/
 +static void remove_termcap_entry (char *, const char *);
- #endif
++/*#endif*/
  
  static int abbrev (tst, cmp)
-@@ -1527,7 +1529,8 @@ char **argv;
+   char *tst, *cmp;
+@@ -816,7 +828,7 @@ static int abbrev (tst, cmp)
+     return ((len >= 2) && (!strncmp(tst, cmp, len)));
+ }
+ 
+-static Syntax (badOption)
++static void Syntax (badOption)
+     char *badOption;
+ {
+     struct _options *opt;
+@@ -842,13 +854,13 @@ static Syntax (badOption)
+     exit (1);
+ }
+ 
+-static Version ()
++static void Version ()
+ {
+     printf("%s %s %s %s\n", HANTERM_PRODUCT, HANTERM_VERSION,
+ 	    HANTERM_RELEASE, HANTERM_RELEASEDATE);
+     exit (0);
+ }
+-static Help ()
++static void Help ()
+ {
+     struct _options *opt;
+     char **cpp;
+@@ -960,6 +972,7 @@ XtActionsRec actionProcs[] = {
+ 
+ Atom wm_delete_window;
+ 
++int
+ main (argc, argv)
+ int argc;
+ char **argv;
+@@ -1527,7 +1540,8 @@ char **argv;
  	if (ioctl (pty, FIONBIO, (char *)&mode) == -1) SysError (ERROR_FIONBIO);
  #endif	/* USE_SYSV_TERMIO */
  	
@@ -30,7 +96,23 @@ $NetBSD: patch-ae,v 1.3 2013/02/26 10:20:17 joerg Exp $
  	pty_mask = pty;
  	X_mask = Xsocket;
  	FD_ZERO(&Select_mask);
-@@ -1854,7 +1857,7 @@ void first_map_occurred ()
+@@ -1566,6 +1580,7 @@ char *name;
+  * has problems, we can re-enter this function and get another one.
+  */
+ 
++int
+ get_pty (pty)
+     int *pty;
+ {
+@@ -1730,6 +1745,7 @@ int pty_search(pty)
+     return 1;
+ }
+ 
++void
+ get_terminal ()
+ /* 
+  * sets up X and initializes the terminal structure except for term.buf.fildes.
+@@ -1854,7 +1870,7 @@ void first_map_occurred ()
  #endif /* USE_HANDSHAKE else !USE_HANDSHAKE */
  
  
@@ -39,22 +121,81 @@ $NetBSD: patch-ae,v 1.3 2013/02/26 10:20:17 joerg Exp $
  /* 
   *  Inits pty and tty and forks a login process.
   *  Does not close fd Xsocket.
-@@ -3332,7 +3335,6 @@ static SIGNAL_T reapchild (n)
- consolepr(fmt,x0,x1,x2,x3,x4,x5,x6,x7,x8,x9)
- char *fmt;
+@@ -2983,10 +2999,10 @@ spawn ()
+ 
+ #ifdef USE_LOGIN_DASH_P
+ 		if (term->misc.login_shell && pw && added_utmp_entry)
+-		  execl (bin_login, "login", "-p", "-f", pw->pw_name, 0);
++		  execl (bin_login, "login", "-p", "-f", pw->pw_name, (void *)NULL);
+ #endif
+ 		execlp (ptr, (term->misc.login_shell ? shname_minus : shname),
+-			0);
++			(void *)NULL);
+ 
+ 		/* Exec failed. */
+ 		fprintf (stderr, "%s: Could not exec %s!\n", xterm_name, ptr);
+@@ -3235,6 +3251,7 @@ Exit(n)
+ }
+ 
+ /* ARGSUSED */
++void
+ resize(screen, TermName, oldtc, newtc)
+ TScreen *screen;
+ char *TermName;
+@@ -3329,18 +3346,20 @@ static SIGNAL_T reapchild (n)
+ }
+ 
+ /* VARARGS1 */
+-consolepr(fmt,x0,x1,x2,x3,x4,x5,x6,x7,x8,x9)
+-char *fmt;
++void
++consolepr(const char *fmt, ...)
  {
 -	extern int errno;
  	extern char *SysErrorMsg();
  	int oerrno;
  	int f;
-@@ -3357,9 +3359,7 @@ char *fmt;
+  	char buf[ BUFSIZ ];
++	va_list ap;
+ 
+ 	oerrno = errno;
+  	strcpy(buf, "hanterm: ");
+- 	sprintf(buf+strlen(buf), fmt, x0,x1,x2,x3,x4,x5,x6,x7,x8,x9);
++	va_start(ap, fmt);
++ 	vsnprintf(buf+strlen(buf), sizeof(buf)-strlen(buf), fmt, ap);
++	va_end(ap);
+  	strcat(buf, ": ");
+  	strcat(buf, SysErrorMsg (oerrno));
+  	strcat(buf, "\n");	
+@@ -3356,10 +3375,8 @@ char *fmt;
+ }
  
  
- #ifndef USE_TERMIOS
+-#ifndef USE_TERMIOS
 -static remove_termcap_entry (buf, str)
 -    char *buf;
 -    char *str;
++/*#ifndef USE_TERMIOS*/
 +static void remove_termcap_entry (char *buf, const char *str)
  {
      register char *strinbuf;
  
+@@ -3377,7 +3394,7 @@ static remove_termcap_entry (buf, str)
+     }
+     return;
+ }
+-#endif
++/*#endif*/
+ 
+ /*
+  * parse_tty_modes accepts lines of the following form:
+@@ -3396,7 +3413,8 @@ static int parse_tty_modes (s, modelist)
+     int count = 0;
+ 
+     while (1) {
+-	while (*s && isascii(*s) && isspace(*s)) s++;
++	while (*s && isascii((unsigned char)*s) && isspace((unsigned char)*s))
++	    s++;
+ 	if (!*s) return count;
+ 
+ 	for (mp = modelist; mp->name; mp++) {

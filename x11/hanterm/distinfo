@@ -1,12 +1,17 @@
-$NetBSD: distinfo,v 1.10 2013/02/26 10:20:17 joerg Exp $
+$NetBSD: distinfo,v 1.11 2013/11/24 05:53:52 dholland Exp $
 
 SHA1 (hanterm-3.1.6.tar.gz) = df2ff9ca8ddcee41baeaa8544a9983a1534e8b30
 RMD160 (hanterm-3.1.6.tar.gz) = 9d9c6c1d2eca9ad338140f1d8c418ed5e0e9548b
 Size (hanterm-3.1.6.tar.gz) = 323736 bytes
-SHA1 (patch-aa) = 3f7f1797c5d8425ff146692e9127b2bfe2c21a5f
-SHA1 (patch-ab) = 8b861979eeffc3e9763f4a2162c0e007c61f1a6c
-SHA1 (patch-ac) = 4c6b6efc12f2e1fba6eb577c65c94d701574353b
-SHA1 (patch-ad) = 50d6c38ab197e02a15b73bc7cfea476d22eaf961
-SHA1 (patch-ae) = 14596ad1ae796679a6fcc9184df95df57f0beba6
+SHA1 (patch-aa) = 985f6bf88010e8addcaa7f18d70652dcd65255f4
+SHA1 (patch-ab) = 776a5618e0be40d3bac6d83d707c5dd970f208cf
+SHA1 (patch-ac) = 4c5a60d1785099abe809acfcd1b6363be81e17f4
+SHA1 (patch-ad) = 76ab4f52449d9e378884bc9d8e41b249e494fd04
+SHA1 (patch-ae) = 00c0992dd92832b3819574d4f3856bcf8a0a6e75
 SHA1 (patch-af) = 7306a141331bbbe1e4ee4e46549834be2ae2cfa1
 SHA1 (patch-ag) = 50a7a71b7075ac57735189f43fd7e770ec9de81d
+SHA1 (patch-button.c) = 7a8204422045cf37a468723d85b79bc79d9a7735
+SHA1 (patch-chat.c) = 4c5162afae53a3c0bff08991648fe1b0cf07b38f
+SHA1 (patch-screen.c) = 262b4c1dbec28ae5e6fdf6893c41be3b6d3d95b5
+SHA1 (patch-scrollbar.c) = c7e34150fa6f9efe95777cbf675f2a8ebb8d14f6
+SHA1 (patch-util.c) = eba8de0714d749809a20334fa3035dfd52648402
