@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1810 2013/11/24 01:40:45 wen Exp $
+# $NetBSD: Makefile,v 1.1811 2013/11/24 10:45:45 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -298,6 +298,7 @@ SUBDIR+=	idutils
 SUBDIR+=	imake
 SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
+SUBDIR+=	intellij-idea-ce
 SUBDIR+=	isect
 SUBDIR+=	its4
 SUBDIR+=	jam
