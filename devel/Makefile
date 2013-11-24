@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1809 2013/11/22 11:51:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.1810 2013/11/24 01:40:45 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1276,6 +1276,7 @@ SUBDIR+=	p5-Test-TinyMocker
 SUBDIR+=	p5-Test-Trap
 SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Test-UseAllModules
+SUBDIR+=	p5-Test-Version
 SUBDIR+=	p5-Test-WWW-Selenium
 SUBDIR+=	p5-Test-Warn
 SUBDIR+=	p5-Test-Warnings
