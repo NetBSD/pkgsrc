@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:40:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2013/11/24 09:57:03 wiz Exp $
 
 DISTNAME=	PPI-1.215
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PPI/}
 
@@ -21,7 +20,7 @@ DEPENDS+=	p5-List-MoreUtils>=0.16:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	{perl>=5.10.1,p5-Scalar-List-Utils>=1.20}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
-DEPENDS+=	{perl>=5.8,p5-Storable>=2.17}:../../devel/p5-Storable
+#DEPENDS+=	{perl>=5.8,p5-Storable>=2.17}:../../devel/p5-Storable
 
 BUILD_DEPENDS+=	p5-Class-Inspector>=1.22:../../devel/p5-Class-Inspector
 BUILD_DEPENDS+=	p5-File-Remove>=1.42:../../sysutils/p5-File-Remove

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2013/05/31 12:42:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.45 2013/11/24 09:57:04 wiz Exp $
 
 DISTNAME=	bins-1.1.29
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www graphics
 MASTER_SITES=	http://zubro.chez.tiscali.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,7 @@ DEPENDS+=	p5-Image-Info>=1.10:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size>=2.980:../../graphics/p5-Image-Size
 DEPENDS+=	p5-IO-String>=1.01:../../devel/p5-IO-String
 DEPENDS+=	p5-PerlMagick>=5.3.9nb1:../../graphics/p5-PerlMagick
-DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 DEPENDS+=	p5-Text-Iconv>=1.1:../../converters/p5-Text-Iconv
 DEPENDS+=	p5-Text-Unaccent>=1.0:../../textproc/p5-Text-Unaccent
 DEPENDS+=	p5-TimeDate>=1.0:../../time/p5-TimeDate

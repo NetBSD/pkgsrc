@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2013/05/31 12:39:57 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.38 2013/11/24 09:57:03 wiz Exp $
 
 DISTNAME=	bugzilla-2.22.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -16,7 +15,7 @@ DEPENDS+=	p5-DBI>=1.38:../../databases/p5-DBI
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
-DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-MailTools>=1.74:../../mail/p5-MailTools
 DEPENDS+=	p5-MIME-Base64>=3.01:../../converters/p5-MIME-Base64

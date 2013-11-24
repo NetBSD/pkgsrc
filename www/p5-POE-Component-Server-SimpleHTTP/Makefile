@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/11/04 21:06:33 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/24 09:57:04 wiz Exp $
 
 DISTNAME=	POE-Component-Server-SimpleHTTP-2.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
@@ -17,7 +18,7 @@ BUILD_DEPENDS+=	p5-POE-Filter-HTTP-Parser>=1.06:../../www/p5-POE-Filter-HTTP-Par
 BUILD_DEPENDS+=	p5-Test-POE-Client-TCP>=0.10:../../devel/p5-Test-POE-Client-TCP
 DEPENDS+=	p5-POE>=1.0:../../devel/p5-POE
 DEPENDS+=	p5-HTTP-Date-[0-9]*:../../www/p5-HTTP-Date
-DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-POE>=0.205:../../devel/p5-MooseX-POE

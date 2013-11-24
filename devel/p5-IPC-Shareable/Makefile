@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2013/05/31 12:40:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.20 2013/11/24 09:57:03 wiz Exp $
 
 DISTNAME=	IPC-Shareable-0.60
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/IPC-Shareable/
 COMMENT=	Tie a variable to shared memory
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	p5-Storable>=1.0.14:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable>=1.0.14:../../devel/p5-Storable
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
