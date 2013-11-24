@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_rubygems_config__file.rb,v 1.1 2013/07/21 02:32:58 taca Exp $
+$NetBSD: patch-lib_rubygems_config__file.rb,v 1.2 2013/11/24 14:22:03 taca Exp $
 
 * Don't hard code config file's path for gem.
 
---- lib/rubygems/config_file.rb.orig	2013-05-14 11:23:11.000000000 +0000
+--- lib/rubygems/config_file.rb.orig	2013-10-24 14:31:17.000000000 +0000
 +++ lib/rubygems/config_file.rb
-@@ -56,32 +56,7 @@ class Gem::ConfigFile
+@@ -57,32 +57,7 @@ class Gem::ConfigFile
  
    # :stopdoc:
  
