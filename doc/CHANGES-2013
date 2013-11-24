@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4217 2013/11/24 00:32:44 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4218 2013/11/24 00:36:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6147,3 +6147,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/asciidoc to 8.6.9 [gls 2013-11-23]
 	Updated x11/x3270 to 3.3.13ga7 [gls 2013-11-23]
 	Updated www/p5-Plack to 1.0030 [wen 2013-11-24]
+	Updated www/p5-HTTP-Tiny to 0.038 [wen 2013-11-24]
