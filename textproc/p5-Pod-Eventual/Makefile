@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/24 04:17:35 wen Exp $
 
-DISTNAME=	Pod-Eventual-0.093330
-PKGNAME=	p5-${DISTNAME:S/093330/093.330/}
-PKGREVISION=	2
+DISTNAME=	Pod-Eventual-0.094001
+PKGNAME=	p5-${DISTNAME:S/094001/094.001/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Pod-Eventual/
 COMMENT=	Read a POD document as a series of trivial events
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Mixin-Linewise>=0.001:../../devel/p5-Mixin-Linewise
+DEPENDS+=	p5-Mixin-Linewise>=0.102:../../devel/p5-Mixin-Linewise
 
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
