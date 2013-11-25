@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4246 2013/11/25 10:15:07 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4247 2013/11/25 11:04:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6190,3 +6190,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/ruby-tk to 2.0.0p353nb1 [taca 2013-11-24]
 	Updated print/hplip to 3.13.11 [schnoebe 2013-11-24]
 	Updated audio/pulseaudio to 2.1nb12 [wiz 2013-11-25]
+	Updated converters/nkf to 2.13 [obache 2013-11-25]
+	Updated converters/p5-nkf to 2.13 [obache 2013-11-25]
