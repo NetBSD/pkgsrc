@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/11 15:40:40 ryoon Exp $
-include/json/arraylist.h
-include/json/bits.h
-include/json/debug.h
-include/json/json.h
-include/json/json_config.h
-include/json/json_inttypes.h
-include/json/json_object.h
-include/json/json_object_iterator.h
-include/json/json_object_private.h
-include/json/json_tokener.h
-include/json/json_util.h
-include/json/linkhash.h
-include/json/printbuf.h
+@comment $NetBSD: PLIST,v 1.2 2013/11/25 11:59:08 wiz Exp $
+include/json
+include/json-c/arraylist.h
+include/json-c/bits.h
+include/json-c/debug.h
+include/json-c/json.h
+include/json-c/json_c_version.h
+include/json-c/json_config.h
+include/json-c/json_inttypes.h
+include/json-c/json_object.h
+include/json-c/json_object_iterator.h
+include/json-c/json_object_private.h
+include/json-c/json_tokener.h
+include/json-c/json_util.h
+include/json-c/linkhash.h
+include/json-c/printbuf.h
+lib/libjson-c.la
 lib/libjson.la
+lib/pkgconfig/json-c.pc
 lib/pkgconfig/json.pc
