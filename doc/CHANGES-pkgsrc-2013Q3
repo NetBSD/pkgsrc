@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.14 2013/11/13 22:23:31 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.15 2013/11/25 10:30:58 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -51,3 +51,5 @@ lang/ruby193-base: build fix
 lang/ruby200-base: build fix
 Pullup ticket #4254 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4256 - requested by spz
+lang/python26: security update
