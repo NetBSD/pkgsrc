@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.37 2013/10/24 17:48:53 jperkin Exp $
+$NetBSD: distinfo,v 1.38 2013/11/25 10:14:37 wiz Exp $
 
 SHA1 (pulseaudio-2.1.tar.xz) = 56b4ad9207ea3aec0ad1b8be4b55793b426a4f01
 RMD160 (pulseaudio-2.1.tar.xz) = 87f6051bbbe59c26e505a9765f388d3ee4d3a485
 Size (pulseaudio-2.1.tar.xz) = 1355004 bytes
-SHA1 (patch-aa) = 59dbd4e6670bc401d2254226b6ba1f4549f35ff7
+SHA1 (patch-aa) = 2fb8b36669e34f3ca0108176171be567a9eeda44
 SHA1 (patch-configure) = 79f938c79a2c3a714d9c81b22030084a421da360
-SHA1 (patch-dc) = 48baff12528f09940d63c6bdaf4369cab7e56de3
+SHA1 (patch-dc) = 1e8d79a37617aae18f55564757b5065fef2b9025
 SHA1 (patch-src_Makefile.in) = 21daf6069ae067dd235de6d43a013e4e70bbca78
 SHA1 (patch-src_pulsecore_semaphore-osx.c) = f9b1962a700932434e05471b2d4df4a5ff5c1b00
 SHA1 (patch-src_pulsecore_svolume__mmx.c) = a3af18563fd11e3813d7a474ff8807ee9bf62390
