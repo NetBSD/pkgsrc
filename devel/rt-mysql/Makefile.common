@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2011/03/21 11:39:27 obache Exp $
+# $NetBSD: Makefile.common,v 1.19 2013/11/25 23:37:59 wiz Exp $
 # used by devel/rt-mysql/Makefile
 # used by devel/rt-pgsql/Makefile
 
@@ -76,7 +76,7 @@ RT_DB_DBA_PASSWORD?=
 .endif
 
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
-DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-DBI>=1.18:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-DataSource>=0.02:../../databases/p5-DBIx-Datasource
 DEPENDS+=	p5-DBIx-SearchBuilder>=0.48:../../databases/p5-DBIx-SearchBuilder
