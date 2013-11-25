@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/10/11 15:40:40 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/11/25 11:59:08 wiz Exp $
 
-SHA1 (json-c-0.10.tar.gz) = f90f643c8455da21d57b3e8866868a944a93c596
-RMD160 (json-c-0.10.tar.gz) = 2ad4ce9a41d87f30a0dcc15a89246353e8edd360
-Size (json-c-0.10.tar.gz) = 385812 bytes
-SHA1 (patch-Makefile.in) = 6dfebc80c89f1122f3299102c13fdce5618ae4c8
+SHA1 (json-c-0.11.tar.gz) = 5d0377d2cc4a1af324d5aeb5b63032d1d026aacd
+RMD160 (json-c-0.11.tar.gz) = 04a5e2619a9543dfef5f3d6f19e2606c4241c6e9
+Size (json-c-0.11.tar.gz) = 557263 bytes
