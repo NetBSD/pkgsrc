@@ -1,6 +1,6 @@
-$NetBSD: patch-dc,v 1.3 2012/11/03 01:54:55 ryoon Exp $
+$NetBSD: patch-dc,v 1.4 2013/11/25 10:13:56 wiz Exp $
 
-If oss.originating_device hal properly isn't availble, try                                                                                                                                                        
+If oss.originating_device hal properly isn't available, try
 sound.originating_device.
 
 --- src/modules/module-hal-detect.c.orig	2012-07-19 11:29:39.000000000 +0000
