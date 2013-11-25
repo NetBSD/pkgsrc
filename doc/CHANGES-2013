@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4247 2013/11/25 11:04:53 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4248 2013/11/25 11:59:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6192,3 +6192,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/pulseaudio to 2.1nb12 [wiz 2013-11-25]
 	Updated converters/nkf to 2.13 [obache 2013-11-25]
 	Updated converters/p5-nkf to 2.13 [obache 2013-11-25]
+	Updated textproc/json-c to 0.11 [wiz 2013-11-25]
