@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2012/11/03 01:54:55 ryoon Exp $
+$NetBSD: patch-aa,v 1.14 2013/11/25 10:14:37 wiz Exp $
 
 ioctl() takes u_long argument on NetBSD.
 On NetBSD<6 and 6.99.0-6.99.7, use third parameter in ioctl instead of varargs.
@@ -54,12 +54,16 @@ SOUND_PCM_* is not available on SunOS.
  
  #define LOAD_OPEN_FUNC() \
  do { \
-@@ -199,11 +216,16 @@ do { \
+@@ -199,11 +216,20 @@ do { \
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
  
 +#ifdef __NetBSD__
++#if (__NetBSD_Version__ < 600000000)
 +#define STAT_FUNC "__stat30"
++#else
++#define STAT_FUNC "__stat50"
++#endif
 +#else
 +#define STAT_FUNC "stat"
 +#endif
@@ -72,7 +76,7 @@ SOUND_PCM_* is not available on SunOS.
      pthread_mutex_unlock(&func_mutex); \
  } while(0)
  
-@@ -2264,6 +2286,7 @@ static int dsp_ioctl(fd_info *i, unsigne
+@@ -2264,6 +2290,7 @@ static int dsp_ioctl(fd_info *i, unsigne
              break;
          }
  
@@ -80,7 +84,7 @@ SOUND_PCM_* is not available on SunOS.
          case SOUND_PCM_READ_RATE:
              debug(DEBUG_LEVEL_NORMAL, __FILE__": SOUND_PCM_READ_RATE\n");
  
-@@ -2288,6 +2311,7 @@ static int dsp_ioctl(fd_info *i, unsigne
+@@ -2288,6 +2315,7 @@ static int dsp_ioctl(fd_info *i, unsigne
              pa_threaded_mainloop_unlock(i->mainloop);
              break;
  
@@ -88,7 +92,7 @@ SOUND_PCM_* is not available on SunOS.
          case SNDCTL_DSP_GETOPTR: {
              count_info *info;
  
-@@ -2357,21 +2381,35 @@ fail:
+@@ -2357,21 +2385,35 @@ fail:
      return ret;
  }
  
