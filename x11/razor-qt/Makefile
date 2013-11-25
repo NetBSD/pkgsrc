@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/06/06 12:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/25 12:00:49 wiz Exp $
 #
 
 DISTNAME=	razorqt-0.5.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/downloads/Razor-qt/razor-qt/
 EXTRACT_SUFX=	.tar.bz2
