@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4248 2013/11/25 11:59:19 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4249 2013/11/25 12:06:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6193,3 +6193,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/nkf to 2.13 [obache 2013-11-25]
 	Updated converters/p5-nkf to 2.13 [obache 2013-11-25]
 	Updated textproc/json-c to 0.11 [wiz 2013-11-25]
+	Updated sysutils/cdrtools to 3.01alpha19 [wiz 2013-11-25]
