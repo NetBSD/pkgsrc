@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/26 12:17:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/11/26 13:46:30 wiz Exp $
 bin/pc_query
 bin/pycard-import
 bin/pycardsyncer
@@ -28,5 +28,8 @@ ${PYSITELIB}/pycarddav/ui.pyo
 ${PYSITELIB}/pycarddav/version.py
 ${PYSITELIB}/pycarddav/version.pyc
 ${PYSITELIB}/pycarddav/version.pyo
+man/man1/pc_query.1
+man/man1/pycard-import.1
+man/man1/pycardsyncer.1
 share/doc/py-carddav/README.rst
 share/examples/py-carddav/pycard.conf.sample
