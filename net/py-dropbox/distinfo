@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/11/26 20:32:24 drochner Exp $
+
+SHA1 (dropbox-python-sdk-1.6.zip) = 5ff17e9a6d52c8d80bbc7efd1f2fbe8c10fa68dd
+RMD160 (dropbox-python-sdk-1.6.zip) = 04998dfa2224bbad26f4e2745a7e5430bcbff687
+Size (dropbox-python-sdk-1.6.zip) = 812016 bytes
