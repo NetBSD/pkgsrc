@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12740 2013/11/26 14:16:28 wiz Exp $
+$NetBSD: TODO,v 1.12741 2013/11/26 14:20:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.8.4
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-common-3.10.0
 	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
