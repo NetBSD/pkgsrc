@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4251 2013/11/26 09:24:44 martin Exp $
+$NetBSD: CHANGES-2013,v 1.4252 2013/11/26 11:22:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/cdrtools to 3.01alpha19 [wiz 2013-11-25]
 	Updated textproc/libxml2 to 2.9.1nb1 [wiz 2013-11-25]
 	Updated security/nettle to 2.7.1nb1 [martin 2013-11-26]
+	Updated inputmethod/ibus-anthy to 1.5.4nb1 [obache 2013-11-26]
