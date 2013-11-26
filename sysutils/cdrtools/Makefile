@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2013/11/26 14:57:33 tron Exp $
+# $NetBSD: Makefile,v 1.102 2013/11/26 15:26:06 tron Exp $
 
 DISTNAME=	cdrtools-3.01a19
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
@@ -37,6 +37,7 @@ LDFLAGS.NetBSD+=	-lutil
                utimensat
 CONFIGURE_ENV+=	ac_cv_func_${FUNC}=no
 .  endfor
+.  undef FUNC
 .endif
 
 # avoid picking up a bad ${ARCH} during the build
