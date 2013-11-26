@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4259 2013/11/26 20:25:52 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4260 2013/11/26 20:36:57 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6204,3 +6204,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/p5-GraphViz to 2.14 [wiz 2013-11-26]
 	Updated devel/gnome-common to 3.10.0 [wiz 2013-11-26]
 	Updated sysutils/py-xattr to 0.7.2nb1 [wiz 2013-11-26]
+	Updated sysutils/duplicity to 0.6.22 [drochner 2013-11-26]
