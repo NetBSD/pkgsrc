@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4254 2013/11/26 13:46:38 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4255 2013/11/26 13:53:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6199,3 +6199,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-anthy to 1.5.4nb1 [obache 2013-11-26]
 	Updated misc/py-carddav to 0.6.0 [wiz 2013-11-26]
 	Updated misc/py-carddav to 0.6.1 [wiz 2013-11-26]
+	Updated textproc/itstool to 2.0.1 [wiz 2013-11-26]
