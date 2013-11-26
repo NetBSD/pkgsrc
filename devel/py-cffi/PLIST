@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/30 17:19:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/26 14:04:49 wiz Exp $
 ${PYSITELIB}/_cffi_backend.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,9 @@ ${PYSITELIB}/cffi/ffiplatform.pyo
 ${PYSITELIB}/cffi/gc_weakref.py
 ${PYSITELIB}/cffi/gc_weakref.pyc
 ${PYSITELIB}/cffi/gc_weakref.pyo
+${PYSITELIB}/cffi/lock.py
+${PYSITELIB}/cffi/lock.pyc
+${PYSITELIB}/cffi/lock.pyo
 ${PYSITELIB}/cffi/model.py
 ${PYSITELIB}/cffi/model.pyc
 ${PYSITELIB}/cffi/model.pyo
