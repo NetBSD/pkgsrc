@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4255 2013/11/26 13:53:21 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4256 2013/11/26 14:04:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6200,3 +6200,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated misc/py-carddav to 0.6.0 [wiz 2013-11-26]
 	Updated misc/py-carddav to 0.6.1 [wiz 2013-11-26]
 	Updated textproc/itstool to 2.0.1 [wiz 2013-11-26]
+	Updated devel/py-cffi to 0.8.1 [wiz 2013-11-26]
