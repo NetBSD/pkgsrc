@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.20 2012/03/02 16:19:17 hans Exp $
+# $NetBSD: features-vars.mk,v 1.21 2013/11/26 07:04:55 obache Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -87,8 +87,13 @@ MISSING_FEATURES+=	${f}
 .  endif
 .endfor
 
-.if !exists(/usr/include/sys/cdefs.h) && !empty(USE_FEATURES:Mcdefs)
+.if !empty(USE_FEATURES:Mcdefs)
+BUILTIN_FIND_HEADERS_VAR:=			_FEATURES_SYS_CDEFS_H
+BUILTIN_FIND_HEADERS._FEATURES_SYS_CDEFS_H=	sys/cdefs.h
+.include "../../mk/buildlink3/find-headers.mk"
+.  if !empty(_FEATURES_SYS_CDEFS_H:M__nonexistent__)
 MISSING_FEATURES+=	cdefs
+.  endif
 .endif
 
 .for _feature_ in err warn
@@ -101,7 +106,12 @@ MISSING_FEATURES+=	${_feature_}
 
 .for _feature_ in fts_close fts_open fts_read fts_set
 .  if !empty(USE_FEATURES:M${_feature_})
-.    if !exists(/usr/include/fts.h)
+.    ifndef (_FEATURES_FTS_H)
+BUILTIN_FIND_HEADERS_VAR:=		_FEATURES_FTS_H
+BUILTIN_FIND_HEADERS._FEATURES_FTS_H=	fts.h
+.include "../../mk/buildlink3/find-headers.mk"
+.    endif
+.    if !empty(_FEATURES_FTS_H:M__nonexistent__)
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
@@ -109,7 +119,13 @@ MISSING_FEATURES+=	${_feature_}
 
 .for _feature_ in getopt_long
 .  if !empty(USE_FEATURES:M${_feature_})
-.    if !exists(/usr/include/getopt.h) || ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
+.    ifndef (_FEATURES_GETOPT_LONG)
+BUILTIN_FIND_HEADERS_VAR:=			_FEATURES_GETOPT_LONG
+BUILTIN_FIND_HEADERS._FEATURES_GETOPT_LONG=	getopt.h
+BUILTIN_FIND_GREP._FEATURES_GETOPT_LONG=	getopt_long
+.include "../../mk/buildlink3/find-headers.mk"
+.    endif
+.    if !empty(_FEATURES_GETOPT_LONG:M_nonexistent__)
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
@@ -125,7 +141,12 @@ MISSING_FEATURES+=	${_feature_}
 
 .for _feature_ in glob
 .  if !empty(USE_FEATURES:M${_feature_})
-.    if !exists(/usr/include/glob.h)
+.    ifndef (_FEATURES_GLOB_H)
+BUILTIN_FIND_HEADERS_VAR:=		_FEATURES_GLOB_H
+BUILTIN_FIND_HEADERS._FEATURES_GLOB_H=	glob.h
+.include "../../mk/buildlink3/find-headers.mk"
+.    endif
+.    if !empty(_FEATURES_GLOB_H:M__nonexistent__)
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
@@ -133,7 +154,12 @@ MISSING_FEATURES+=	${_feature_}
 
 .for _feature_ in regcomp
 .  if !empty(USE_FEATURES:M${_feature_})
-.    if !exists(/usr/include/regex.h)
+.    ifndef (_FEATURES_REGEX_H)
+BUILTIN_FIND_HEADERS_VAR:=		_FEATURES_REGEX_H
+BUILTIN_FIND_HEADERS._FEATURES_REGEX_H=	regex.h
+.include "../../mk/buildlink3/find-headers.mk"
+.    endif
+.    if !empty(_FEATURES_REGEX_H:M__nonexistent__)
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
