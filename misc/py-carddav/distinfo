@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/09/02 16:46:14 wiz Exp $
+$NetBSD: distinfo,v 1.7 2013/11/26 12:17:12 wiz Exp $
 
-SHA1 (pyCardDAV-0.5.1.tar.gz) = df11e7c25f305ce5141130bb8c49e8851edd63b1
-RMD160 (pyCardDAV-0.5.1.tar.gz) = 8b6be2dc54c9df6bc2a491a76bebbb45815199e5
-Size (pyCardDAV-0.5.1.tar.gz) = 31263 bytes
+SHA1 (pyCardDAV-0.6.0.tar.gz) = 62f7827db8e5eae67e41346d651e7e856090538f
+RMD160 (pyCardDAV-0.6.0.tar.gz) = 62893d2326ab69603ee1f8c11968136ae2ff4fd2
+Size (pyCardDAV-0.6.0.tar.gz) = 32239 bytes
