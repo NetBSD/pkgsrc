@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/11/26 14:16:17 wiz Exp $
 share/examples/p5-GraphViz/README
 share/examples/p5-GraphViz/Yapp.output
 share/examples/p5-GraphViz/clusters.pl
@@ -16,7 +16,6 @@ share/examples/p5-GraphViz/rank.pl
 share/examples/p5-GraphViz/recdescent.pl
 share/examples/p5-GraphViz/redcarpet.pl
 share/examples/p5-GraphViz/regex.pl
-share/examples/p5-GraphViz/remote.pl
 share/examples/p5-GraphViz/simple.pl
 share/examples/p5-GraphViz/text.pl
 share/examples/p5-GraphViz/tmon.out
