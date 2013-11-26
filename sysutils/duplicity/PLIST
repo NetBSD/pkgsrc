@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/04/11 16:27:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/11/26 20:36:22 drochner Exp $
 bin/duplicity
 bin/rdiffdir
 ${PYSITELIB}/${EGG_FILE}
@@ -33,6 +33,9 @@ ${PYSITELIB}/duplicity/backends/botobackend.pyo
 ${PYSITELIB}/duplicity/backends/cloudfilesbackend.py
 ${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyc
 ${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyo
+${PYSITELIB}/duplicity/backends/dpbxbackend.py
+${PYSITELIB}/duplicity/backends/dpbxbackend.pyc
+${PYSITELIB}/duplicity/backends/dpbxbackend.pyo
 ${PYSITELIB}/duplicity/backends/ftpbackend.py
 ${PYSITELIB}/duplicity/backends/ftpbackend.pyc
 ${PYSITELIB}/duplicity/backends/ftpbackend.pyo
@@ -54,12 +57,18 @@ ${PYSITELIB}/duplicity/backends/imapbackend.pyo
 ${PYSITELIB}/duplicity/backends/localbackend.py
 ${PYSITELIB}/duplicity/backends/localbackend.pyc
 ${PYSITELIB}/duplicity/backends/localbackend.pyo
+${PYSITELIB}/duplicity/backends/megabackend.py
+${PYSITELIB}/duplicity/backends/megabackend.pyc
+${PYSITELIB}/duplicity/backends/megabackend.pyo
 ${PYSITELIB}/duplicity/backends/rsyncbackend.py
 ${PYSITELIB}/duplicity/backends/rsyncbackend.pyc
 ${PYSITELIB}/duplicity/backends/rsyncbackend.pyo
 ${PYSITELIB}/duplicity/backends/sshbackend.py
 ${PYSITELIB}/duplicity/backends/sshbackend.pyc
 ${PYSITELIB}/duplicity/backends/sshbackend.pyo
+${PYSITELIB}/duplicity/backends/swiftbackend.py
+${PYSITELIB}/duplicity/backends/swiftbackend.pyc
+${PYSITELIB}/duplicity/backends/swiftbackend.pyo
 ${PYSITELIB}/duplicity/backends/tahoebackend.py
 ${PYSITELIB}/duplicity/backends/tahoebackend.pyc
 ${PYSITELIB}/duplicity/backends/tahoebackend.pyo
@@ -135,6 +144,9 @@ ${PYSITELIB}/duplicity/path.pyo
 ${PYSITELIB}/duplicity/pexpect.py
 ${PYSITELIB}/duplicity/pexpect.pyc
 ${PYSITELIB}/duplicity/pexpect.pyo
+${PYSITELIB}/duplicity/progress.py
+${PYSITELIB}/duplicity/progress.pyc
+${PYSITELIB}/duplicity/progress.pyo
 ${PYSITELIB}/duplicity/robust.py
 ${PYSITELIB}/duplicity/robust.pyc
 ${PYSITELIB}/duplicity/robust.pyo
