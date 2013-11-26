@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2013/04/29 16:42:25 adam Exp $
+$NetBSD: patch-aa,v 1.3 2013/11/26 09:22:19 martin Exp $
 
---- configure.orig	2013-04-24 13:26:53.000000000 +0000
-+++ configure
-@@ -7183,7 +7183,7 @@ fi
+--- configure.orig	2013-05-28 16:21:53.000000000 +0200
++++ configure	2013-11-26 10:12:32.000000000 +0100
+@@ -4903,6 +4903,7 @@
+ 	solaris*)	CCPIC="-fPIC" ;;
+ 	cygwin*)	CCPIC="" ;;
+ 	mingw32*)	CCPIC="" ;;
++	*netbsd*)	CCPIC="-fPIC" ;;
+ 	*)		CCPIC="-fpic" ;;
+       esac
+     else
+@@ -7187,7 +7188,7 @@
      enable_documentation=yes
  
    else
