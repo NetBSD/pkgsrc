@@ -1,0 +1,5 @@
+Dropbox Core SDK for Python
+
+A Python library that for Dropbox's HTTP-based Core API.
+
+   https://www.dropbox.com/developers/core/docs
