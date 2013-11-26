@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/26 20:32:24 drochner Exp $
-${PYSITELIB}/dropbox-${PKGVERSION}-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/dropbox-${PKGVERSION}-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/dropbox-${PKGVERSION}-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/dropbox-${PKGVERSION}-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2013/11/26 23:25:36 agc Exp $
+${PYSITELIB}/dropbox-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/dropbox-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/dropbox-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/dropbox-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/dropbox/__init__.py
 ${PYSITELIB}/dropbox/__init__.pyc
 ${PYSITELIB}/dropbox/__init__.pyo
