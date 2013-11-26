@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/04/11 16:27:45 drochner Exp $
+$NetBSD: MESSAGE,v 1.2 2013/11/26 20:36:22 drochner Exp $
 Depending on the storage backend used, additional packages micht be needed:
 -Amazon S3 needs pkgsrc/net/py-boto.
+-Dropbox needs pkgsrc/net/py-dropbox
 -For ssh/scp, pkgsrc/security/py-paramiko is recommended.
 -For more options, see the manpage.
 ===========================================================================
