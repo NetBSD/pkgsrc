@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/25 11:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/27 11:29:33 ryoon Exp $
 
 DISTNAME=	json-c-0.11
 CATEGORIES=	textproc
@@ -8,6 +8,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/json-c/json-c/wiki
 COMMENT=	JSON library in C
 LICENSE=	mit
+
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
