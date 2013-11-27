@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2013/10/10 14:42:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.90 2013/11/27 17:09:57 khorben Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	19
+PKGREVISION=	20
 OWNER=		tron@NetBSD.org
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
@@ -37,13 +37,15 @@ CONFIGURE_ARGS+=	--disable-xlib
 .endif
 .endif
 
-INSTALLATION_DIRS+=	share/doc/xchat lib/xchat/plugins
+INSTALLATION_DIRS+=	share/doc/xchat lib/xchat/plugins include/xchat
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xchat/
 	${INSTALL_DATA} ${WRKSRC}/faq.html ${DESTDIR}${PREFIX}/share/doc/xchat/
 	${INSTALL_DATA} ${WRKSRC}/plugins/plugin20.html \
 		${DESTDIR}${PREFIX}/share/doc/xchat/
+	${INSTALL_DATA} ${WRKSRC}/plugins/xchat-plugin.h \
+		${DESTDIR}${PREFIX}/include/xchat/
 
 .if !empty(PKG_OPTIONS:Mgnome)
 
