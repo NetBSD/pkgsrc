@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2013/04/14 22:14:42 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.54 2013/11/28 10:12:25 martin Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -87,7 +87,7 @@ lib/libvlc.la
 lib/libvlccore.la
 lib/pkgconfig/libvlc.pc
 lib/pkgconfig/vlc-plugin.pc
-lib/vlc/plugins/3dnow/libmemcpy3dn_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/3dnow/libmemcpy3dn_plugin.la
 lib/vlc/plugins/access/libaccess_attachment_plugin.la
 lib/vlc/plugins/access/libaccess_avio_plugin.la
 lib/vlc/plugins/access/libaccess_bd_plugin.la
@@ -238,11 +238,11 @@ ${PLIST.x11}lib/vlc/plugins/misc/libxdg_screensaver_plugin.la
 lib/vlc/plugins/misc/libxml_plugin.la
 ${PLIST.x11}lib/vlc/plugins/misc/libxscreensaver_plugin.la
 lib/vlc/plugins/misc/libxtag_plugin.la
-lib/vlc/plugins/mmx/libi420_rgb_mmx_plugin.la
-lib/vlc/plugins/mmx/libi420_yuy2_mmx_plugin.la
-lib/vlc/plugins/mmx/libi422_yuy2_mmx_plugin.la
-lib/vlc/plugins/mmx/libmemcpymmx_plugin.la
-lib/vlc/plugins/mmxext/libmemcpymmxext_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/mmx/libi420_rgb_mmx_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/mmx/libi420_yuy2_mmx_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/mmx/libi422_yuy2_mmx_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/mmx/libmemcpymmx_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/mmxext/libmemcpymmxext_plugin.la
 lib/vlc/plugins/mux/libmux_asf_plugin.la
 lib/vlc/plugins/mux/libmux_avi_plugin.la
 lib/vlc/plugins/mux/libmux_dummy_plugin.la
@@ -265,9 +265,9 @@ lib/vlc/plugins/services_discovery/libmediadirs_plugin.la
 lib/vlc/plugins/services_discovery/libpodcast_plugin.la
 lib/vlc/plugins/services_discovery/libsap_plugin.la
 ${PLIST.x11}lib/vlc/plugins/services_discovery/libxcb_apps_plugin.la
-lib/vlc/plugins/sse2/libi420_rgb_sse2_plugin.la
-lib/vlc/plugins/sse2/libi420_yuy2_sse2_plugin.la
-lib/vlc/plugins/sse2/libi422_yuy2_sse2_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/sse2/libi420_rgb_sse2_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/sse2/libi420_yuy2_sse2_plugin.la
+${PLIST.x86simd}lib/vlc/plugins/sse2/libi422_yuy2_sse2_plugin.la
 lib/vlc/plugins/stream_filter/libdecomp_plugin.la
 lib/vlc/plugins/stream_filter/libstream_filter_rar_plugin.la
 lib/vlc/plugins/stream_filter/libstream_filter_record_plugin.la
