@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/28 06:33:49 dholland Exp $
 #
 
 DISTNAME=	smbchartool-2.3a
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters japanese
 MASTER_SITES=	ftp://ftp.samba.gr.jp/pub/samba-jp/tool/
+DIST_SUBDIR=	smbchartool-2.3anb5
 
 PATCH_SITES=	http://www.miraclelinux.com/technet/samba30/download/
 PATCHFILES=	smbchartool-2.3a_3.0a.diff.gz
