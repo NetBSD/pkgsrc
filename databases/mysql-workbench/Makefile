@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/10/30 06:49:53 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2013/11/28 06:36:07 dholland Exp $
 
 DISTNAME=	mysql-workbench-gpl-5.2.33b-src
 PKGNAME=	${DISTNAME:S/-gpl//:S/b-src$//}
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-system-ctemplate
+LUA_VERSIONS_INCOMPATIBLE=	52
 
 CHECK_PORTABILITY_SKIP=	build/make_dmg.sh
 CHECK_PORTABILITY_SKIP+=ext/ctemplate/ctemplate-src/configure.ac
