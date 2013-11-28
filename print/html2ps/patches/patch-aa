@@ -1,6 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2011/11/18 21:59:01 ryoon Exp $
+$NetBSD: patch-aa,v 1.9 2013/11/28 06:04:08 dholland Exp $
 
---- install.orig	2005-03-03 12:25:29.000000000 +0000
+- ...? (XXX)
+- the hunk with "texmf-dist" in it fixes the search for the tex
+hyphenation files for the most recent texlive.
+
+--- install.orig	2010-05-07 11:22:12.000000000 +0000
 +++ install
 @@ -17,7 +17,9 @@ if(-e '/dev/null') {
      $pathsep = ':';
@@ -94,7 +98,7 @@ $NetBSD: patch-aa,v 1.8 2011/11/18 21:59:01 ryoon Exp $
      $hfile = "";
      ($texdir = $dir{'TeX'}) =~ s|/bin$||;
 -    SW:for("texmf/tex/generic/hyphen","macros","inputs","lib/macros",
-+    SW:for("share/texmf/tex/generic/hyphen","macros","inputs","lib/macros",
++    SW:for("share/texmf/tex/generic/hyphen","share/texmf-dist/tex/generic/hyphen","macros","inputs","lib/macros",
          "lib/inputs","lib/tex/macros","lib/tex/inputs") {
          if(-f "$texdir/$_/ushyph1.tex") {
              $hyph = "$texdir/$_";
