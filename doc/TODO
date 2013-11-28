@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12741 2013/11/26 14:20:00 wiz Exp $
+$NetBSD: TODO,v 1.12742 2013/11/28 07:56:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gstreamer1-1.2.0
 	o gtar-1.27.1
 	o gtar-base-1.27.1
-	o gthumb-3.2.4
+	o gthumb-3.2.5
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtk3-3.10
@@ -1053,7 +1053,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o top-3.8beta1
 	o totem-3.4.1
 	o trac-1.0.1
-	o transmission-2.80
+	o transmission-2.82
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o turba-4.1.3
