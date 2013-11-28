@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/10/11 13:32:25 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.22 2013/11/28 05:21:39 dholland Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -249,7 +249,6 @@ lib/erlang/lib/${PKGNAME}/priv/lib/jiffy.so
 lib/erlang/lib/${PKGNAME}/priv/lib/p1_sha.so
 lib/erlang/lib/${PKGNAME}/priv/lib/p1_tls_drv.so
 lib/erlang/lib/${PKGNAME}/priv/lib/p1_yaml.so
-lib/erlang/lib/${PKGNAME}/priv/lib/stringprep_drv.so
 lib/erlang/lib/${PKGNAME}/priv/lib/xml.so
 lib/erlang/lib/${PKGNAME}/priv/msgs/ca.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/cs.msg
@@ -277,6 +276,15 @@ lib/erlang/lib/${PKGNAME}/priv/msgs/uk.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/vi.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/wa.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/zh.msg
+lib/erlang/lib/ejabberd-13.10/ebin/gr_app.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_counter.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_counter_sup.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_manager.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_manager_sup.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_param.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_param_sup.beam
+lib/erlang/lib/ejabberd-13.10/ebin/gr_sup.beam
+lib/erlang/lib/ejabberd-13.10/priv/lib/stringprep.so
 sbin/ejabberdctl
 share/doc/ejabberd/COPYING
 share/doc/ejabberd/dev.html
