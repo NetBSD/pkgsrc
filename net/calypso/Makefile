@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/09/30 09:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/29 16:58:33 wiz Exp $
 
-DISTNAME=	calypso-1.2
+DISTNAME=	calypso-1.3
 CATEGORIES=	net time
 MASTER_SITES=	http://keithp.com/calypso/
 
@@ -11,9 +11,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.1c:../../textproc/py-vobject
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-
-EGG_NAME=	${DISTNAME:S/c/C/}
-WRKSRC=		${WRKDIR}
 
 INSTALLATION_DIRS=	share/examples/calypso
 
