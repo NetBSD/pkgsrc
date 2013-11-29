@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2013/09/11 18:00:33 drochner Exp $
+$NetBSD: distinfo,v 1.34 2013/11/29 19:31:47 drochner Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -22,6 +22,7 @@ SHA1 (patch-ai) = 8da6bba38bd7677ea829ca35058f7d2d1d7acad4
 SHA1 (patch-aj) = d0999d8dcbc1eef4de7037db0e54dcd8d2f706eb
 SHA1 (patch-ak) = 722a6b0541b036d84c703037134e25bc47f3eb65
 SHA1 (patch-al) = d9a310c16db708dd86170a13946f87e4cd21eb7a
+SHA1 (patch-am) = b89785a97208454eb3f2e1e43ba4674ad0828aa6
 SHA1 (patch-ba) = 2c65e4b4b85e91e92dfb3aa402ebc44694bdff06
 SHA1 (patch-bb) = 64a61fb156bcb6a99ff0963063a0716b808e3b61
 SHA1 (patch-bc) = 25c99a428fda6dee709888ddbcfdcfef5f654564
@@ -40,9 +41,7 @@ SHA1 (patch-dc) = d860fe3725978227278d58f09e7d5157001e463e
 SHA1 (patch-dd) = e66d9cc0028ba922b050fc142862b4095cd018f3
 SHA1 (patch-de) = fae94b61a430a1a7dd98c9a6a04e4513824c6d8d
 SHA1 (patch-df) = d20bf9d3fd05f5334f77c9154bf0fb9944c1292c
-SHA1 (patch-examples_Makefile) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-firmware_hvmloader_Makefile) = b2914e4988ba004d45403d67f1580b1f9725d006
-SHA1 (patch-hotplug_common_Makefile) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-ioemu-qemu-xen_hw_pass-through.c) = 76185c239078f29cb42b953d6c2cd1f59e240989
 SHA1 (patch-ioemu-qemu-xen_hw_pass-through.h) = 98c26798d1ad99d3eee8b33deb08f747c958c886
 SHA1 (patch-ioemu-qemu-xen_hw_piix4acpi.c) = ca19457e9bde2d844a86a866960ac6de1f3d084c
