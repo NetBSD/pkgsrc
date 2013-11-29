@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/08 05:51:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/29 23:22:34 minskim Exp $
 share/texmf-dist/tex/generic/enctex/1250-csf.tex
 share/texmf-dist/tex/generic/enctex/1250-il2.tex
 share/texmf-dist/tex/generic/enctex/1250-latex.tex
@@ -19,6 +19,7 @@ share/texmf-dist/tex/generic/enctex/kam-csf.tex
 share/texmf-dist/tex/generic/enctex/kam-il2.tex
 share/texmf-dist/tex/generic/enctex/kam-latex.tex
 share/texmf-dist/tex/generic/enctex/kam-t1.tex
+share/texmf-dist/tex/generic/enctex/mixcodes.tex
 share/texmf-dist/tex/generic/enctex/noprefnt.tex
 share/texmf-dist/tex/generic/enctex/plain-1250-cs.tex
 share/texmf-dist/tex/generic/enctex/plain-852-cs.tex
@@ -31,7 +32,10 @@ share/texmf-dist/tex/generic/enctex/t1macro.tex
 share/texmf-dist/tex/generic/enctex/utf8-csf.tex
 share/texmf-dist/tex/generic/enctex/utf8-t1.tex
 share/texmf-dist/tex/generic/enctex/utf8cseq.tex
+share/texmf-dist/tex/generic/enctex/utf8lat1.tex
+share/texmf-dist/tex/generic/enctex/utf8lata.tex
 share/texmf-dist/tex/generic/enctex/utf8math.tex
+share/texmf-dist/tex/generic/enctex/utf8off.tex
 share/texmf-dist/tex/generic/enctex/utf8raw.tex
 share/texmf-dist/tex/generic/enctex/utf8unkn.tex
 share/texmf-dist/tex/generic/enctex/utf8warn.tex
