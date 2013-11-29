@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/11/29 17:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/29 17:57:07 wiz Exp $
 
 DISTNAME=	json-c-0.11
 PKGREVISION=	1
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	json.pc.in
 PKGCONFIG_OVERRIDE+=	json-c.pc.in
 
 CONFIGURE_ARGS+=	--disable-oldname-compat
