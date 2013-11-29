@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/09/12 06:20:35 mef Exp $
+# $NetBSD: Makefile,v 1.20 2013/11/29 12:57:28 joerg Exp $
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
 # Following line does not work yet (examples/python directory)
 #CONFIGURE_ENV+=	az_python_use=true
 #MAKE_ENV+=		az_python_use=true
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		makeinfo gmake
 USE_LIBTOOL=		yes
