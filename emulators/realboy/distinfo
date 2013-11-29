@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/11/15 14:58:07 wiz Exp $
+$NetBSD: distinfo,v 1.3 2013/11/29 12:55:37 joerg Exp $
 
 SHA1 (realboy-0.1.4.tar.bz2) = 344be8f28498e457a370757c7f2e4dd6d31c107f
 RMD160 (realboy-0.1.4.tar.bz2) = 69bc1f5523ac15b7d9bde1634f545ab2b9e459ed
 Size (realboy-0.1.4.tar.bz2) = 150800 bytes
+SHA1 (patch-src_gboy__x86__64.S) = ca69f3d065dc9225173f8a10b72a76ccce132a94
