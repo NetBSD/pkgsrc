@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2013/11/07 00:47:39 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2013/11/29 19:31:47 drochner Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
