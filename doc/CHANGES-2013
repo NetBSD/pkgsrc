@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4262 2013/11/29 14:36:15 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4263 2013/11/29 16:44:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6213,3 +6213,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-subversion to 1.8.5 [adam 2013-11-29]
 	Updated devel/ruby-subversion to 1.8.5 [adam 2013-11-29]
 	Updated www/ap2-subversion to 1.8.5 [adam 2013-11-29]
+	Updated www/contao32 to 3.2.1 [taca 2013-11-29]
+	Updated www/contao32-example to 3.2.1 [taca 2013-11-29]
