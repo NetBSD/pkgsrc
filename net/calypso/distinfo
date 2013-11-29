@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/09/30 09:35:55 wiz Exp $
+$NetBSD: distinfo,v 1.3 2013/11/29 16:58:33 wiz Exp $
 
-SHA1 (calypso-1.2.tar.gz) = ffde9a55f7f08a3ef8fd5907734f82882899a86c
-RMD160 (calypso-1.2.tar.gz) = a7417b8c41c8ada91af7168f9c54b9dabb3a6893
-Size (calypso-1.2.tar.gz) = 31875 bytes
-SHA1 (patch-calypso_____init____.py) = 9d5ea62eb3481c52457ab69a4af9c4e72dc9c1f1
+SHA1 (calypso-1.3.tar.gz) = 5e25a9972d2f63963a1048b7ddfb9ddecb84f44f
+RMD160 (calypso-1.3.tar.gz) = a86c17160031940a5f7cb897c96521ad216c2f8c
+Size (calypso-1.3.tar.gz) = 32332 bytes
