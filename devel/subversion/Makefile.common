@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2013/08/01 09:27:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2013/11/29 13:49:27 adam Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -7,20 +7,19 @@
 # used by devel/subversion/Makefile
 # used by www/ap2-subversion/Makefile
 
-DISTNAME=		subversion-${SVNVER}
-CATEGORIES=		devel scm
-MASTER_SITES=		${MASTER_SITE_APACHE:=subversion/}
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://subversion.apache.org/
-LICENSE=		apache-1.1
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	subversion-${SVNVER}
+CATEGORIES=	devel scm
+MASTER_SITES=	${MASTER_SITE_APACHE:=subversion/}
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://subversion.apache.org/
+LICENSE=	apache-1.1
+EXTRACT_SUFX=	.tar.bz2
 
 # People who might update Makefile.version may not be set up to test
-# ruby/python/perl and java bindings, and testing ap2-subversion is
-# awkward.  If you object to updates without these tests, please
-# volunteer to test patches and your email address can be recorded
-# here.  (Absent volunteers, breakage of language bindings will not be
-# considered a terrible occurrence.)
+# ruby/python/perl and java bindings, and testing ap2-subversion is awkward.
+# If you object to updates without these tests, please volunteer to test
+# patches and your email address can be recorded here. (Absent volunteers,
+# breakage of language bindings will not be considered a terrible occurrence.)
 MAINTAINER_TEST_VOLUNTEERS=
 
 .include "../../devel/subversion/Makefile.version"
