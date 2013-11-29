@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2013/10/04 21:26:31 wiz Exp $
+$NetBSD: distinfo,v 1.14 2013/11/29 18:23:45 wiz Exp $
 
-SHA1 (rcs-5.9.1.tar.xz) = 2e1017c24cd79ed434fa80e384ba844738c2cbfe
-RMD160 (rcs-5.9.1.tar.xz) = 94c226b96d6a4e686590b088d6c51750c260b062
-Size (rcs-5.9.1.tar.xz) = 793340 bytes
+SHA1 (rcs-5.9.2.tar.xz) = cb053f6ba87ab6ea03306d6241e1cde67182100b
+RMD160 (rcs-5.9.2.tar.xz) = 7f78faebd941581a8b5f2d8daef1cb3d6b20d999
+Size (rcs-5.9.2.tar.xz) = 795096 bytes
