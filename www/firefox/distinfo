@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.125 2013/11/21 15:24:38 ryoon Exp $
+$NetBSD: distinfo,v 1.126 2013/11/29 13:00:32 joerg Exp $
 
 SHA1 (firefox-25.0.1.source.tar.bz2) = 592ebd242c4839ef0e18707a7e959d8bed2a98f3
 RMD160 (firefox-25.0.1.source.tar.bz2) = a1868d0299f6670b7fd8d7b92af7006ecefbc891
@@ -95,6 +95,9 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture__fac
 SHA1 (patch-media_webrtc_trunk_webrtc_system__wrappers_source_condition__variable.cc) = f4e7dd4356499589eaad642c875ad0c9e4b4cab5
 SHA1 (patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp) = 853b178ca1b95c6907ca2fc2de9865807661a8f5
 SHA1 (patch-media_webrtc_trunk_webrtc_system__wrappers_source_thread__posix.cc) = cde91cf030a827aca9de8ad31c2e724a183678d1
+SHA1 (patch-memory_mozalloc_fallible.h) = 8a60151465a07570db9636313f504004d73941d5
+SHA1 (patch-memory_mozalloc_mozalloc.cpp) = 802af1da05f60fcf8c206568c2adc396e3bb0e06
+SHA1 (patch-memory_mozalloc_mozalloc.h) = f2d9fd333ec28c075dfde8a6ee414b67b7f2cd26
 SHA1 (patch-memory_mozalloc_mozalloc__abort.cpp) = 9d9036ddd28c7b8ce37860e0120df2997a3a0c59
 SHA1 (patch-mfbt_Atomics.h) = 1a1df4189cf8da1182baa5c2e9909f9add6d2451
 SHA1 (patch-mfbt_Poison.cpp) = b582943c02f57835451c9eecd004c9912d42ce84
