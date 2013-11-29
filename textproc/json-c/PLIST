@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/25 11:59:08 wiz Exp $
-include/json
+@comment $NetBSD: PLIST,v 1.3 2013/11/29 17:45:18 wiz Exp $
 include/json-c/arraylist.h
 include/json-c/bits.h
 include/json-c/debug.h
@@ -15,6 +14,4 @@ include/json-c/json_util.h
 include/json-c/linkhash.h
 include/json-c/printbuf.h
 lib/libjson-c.la
-lib/libjson.la
 lib/pkgconfig/json-c.pc
-lib/pkgconfig/json.pc
