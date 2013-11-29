@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2013/06/13 14:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2013/11/29 15:27:19 bsiegert Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 PKGREVISION=	2
@@ -68,6 +68,10 @@ pre-install:
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=	-no-integrated-as -fvisibility=hidden
+.endif
+
+.if ${OPSYS} == "MirBSD"
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 .endif
 
 .include "../../mk/bsd.pkg.mk"

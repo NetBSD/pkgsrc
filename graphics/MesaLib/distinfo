@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2013/09/23 02:07:00 asau Exp $
+$NetBSD: distinfo,v 1.82 2013/11/29 15:27:19 bsiegert Exp $
 
 SHA1 (Mesa-7.11.2/MesaGLUT-7.11.2.tar.bz2) = 2e6e730204800a0748b301a5f58b86332699788b
 RMD160 (Mesa-7.11.2/MesaGLUT-7.11.2.tar.bz2) = bb2b140375aa13df79fcdb60a7ad0a63622dc531
@@ -7,7 +7,7 @@ SHA1 (Mesa-7.11.2/MesaLib-7.11.2.tar.bz2) = 5981ac2de8438e5f4a1f3561f2044d700c5f
 RMD160 (Mesa-7.11.2/MesaLib-7.11.2.tar.bz2) = 656ded1db6c1f6fdd15a3f2cdee1b895d393bcea
 Size (Mesa-7.11.2/MesaLib-7.11.2.tar.bz2) = 6257280 bytes
 SHA1 (patch-af) = da0bd412b81d4b826b6d9b4bb8d98ca1fe0006ba
-SHA1 (patch-bin_mklib) = 09c216007fdaf5a0feab3834a2361d5b1912e47f
+SHA1 (patch-bin_mklib) = 8c54bf5382541cab9d971b0e0e627035db1af468
 SHA1 (patch-configure.ac) = 0e3f9a1f21ba3a50161312683e9a0ad36f9f3e61
 SHA1 (patch-include_GL_gl.h) = a97ab309556c78d818d0b8bd867b5f2412c141b0
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = 934e2505fe299e1a25da6def2f971fa1302840c0
