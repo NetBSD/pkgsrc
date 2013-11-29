@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:16:48 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/11/29 16:52:12 wiz Exp $
 
-DISTNAME=	cppunit-1.13.1
+DISTNAME=	cppunit-1.13.2
 CATEGORIES=	devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 
