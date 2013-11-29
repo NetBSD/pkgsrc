@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/11/02 17:09:26 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/29 23:54:35 dholland Exp $
 
 VERSION=	1.1.0
 DISTNAME=	solarus-${VERSION}-src
@@ -16,7 +16,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../devel/physfs/buildlink3.mk"
-LUA_VERSION_REQD=		51
+LUA_VERSIONS_ACCEPTED=		51
 BUILDLINK_API_DEPENDS.lua51+=	lua51>=5.1.5
 .include "../../lang/lua/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
