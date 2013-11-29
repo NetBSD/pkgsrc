@@ -1,0 +1,18 @@
+$NetBSD: patch-ThirdParty_HSLold_configure,v 1.1 2013/11/29 12:59:31 joerg Exp $
+
+--- ThirdParty/HSLold/configure.orig	2013-11-28 03:27:10.000000000 +0000
++++ ThirdParty/HSLold/configure
+@@ -4475,7 +4475,12 @@ fi
+ 
+           done
+           ;;
+-        -[lLR]*)
++        -R*)
++          ac_arg="-Wl,$ac_arg"
++          shift
++          set X $ac_arg "$@"
++          ;;
++        -[lLR]*|-Wl*)
+             ac_exists=false
+   for ac_i in $ac_cv_f77_libs; do
+     if test x"$ac_arg" = x"$ac_i"; then
