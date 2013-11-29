@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/07/29 06:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/29 23:30:47 wiz Exp $
 
-DISTNAME=	spectrwm-2.3.0
+DISTNAME=	spectrwm-2.4.0
 CATEGORIES=	wm
 MASTER_SITES=	https://opensource.conformal.com/snapshots/spectrwm/
 EXTRACT_SUFX=	.tgz
