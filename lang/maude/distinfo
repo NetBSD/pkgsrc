@@ -1,7 +1,20 @@
-$NetBSD: distinfo,v 1.9 2011/04/19 19:18:40 asau Exp $
+$NetBSD: distinfo,v 1.10 2013/11/29 18:30:09 joerg Exp $
 
 SHA1 (Maude-2.6.tar.gz) = 3f1ec2f39a22942bb096102d1d8d6eed4510483e
 RMD160 (Maude-2.6.tar.gz) = a9387701016e04ba4a256c3db8c9f10195147183
 Size (Maude-2.6.tar.gz) = 1600026 bytes
 SHA1 (patch-ab) = ff1caa60e4b57dd6a847e28d25efa9be8474f15a
 SHA1 (patch-ac) = d77e8e817cb33c2594eacfa0cb44b20b63e71b8f
+SHA1 (patch-src_BuiltIn_stringOpSymbol.cc) = bb79d812dbb5d217ba50c71568e4b9da071917bc
+SHA1 (patch-src_Mixfix_bottom.yy) = 778f004b2590612a693867f44e0803e557076b69
+SHA1 (patch-src_Mixfix_commands.yy) = 8764520a8e2417408e1d9cd5820dac96cb7b5de1
+SHA1 (patch-src_Mixfix_interact.cc) = 0d15aad293cf28bde3b2a659c52dab8fe5a05357
+SHA1 (patch-src_Mixfix_lexerAux.cc) = c8bd0d1e68aec2aa2b21b69520172f2de851d661
+SHA1 (patch-src_Mixfix_lexerAux.hh) = 1e52d2346dfde0477b7db1882c5d67c1dce4502a
+SHA1 (patch-src_Mixfix_modules.yy) = cfa794edd400f1934a8bbba3bdb5051d53a09090
+SHA1 (patch-src_Mixfix_token.cc) = f8317efc2f5636749f597e8f252398d6be5c2dec
+SHA1 (patch-src_Mixfix_top.yy) = 884758d2b2e3f5d55dca51e35bf5d0c4e8ad79a0
+SHA1 (patch-src_ObjectSystem_configSymbol.hh) = c5ea2818a62a363e0fd598b98051abdeb095b503
+SHA1 (patch-src_ObjectSystem_objectMap.cc) = bb6f20ba7fd73133a5e5799e6bac0ebbb744bb55
+SHA1 (patch-src_ObjectSystem_objectSystemRewritingContext.hh) = f3000c8528b550096fb7355669033061db1ad68b
+SHA1 (patch-src_Utility_ropeStuff.hh) = 421c3d104aef7e4e908383220c502d3d21b3e51b
