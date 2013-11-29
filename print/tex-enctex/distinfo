@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:18:14 minskim Exp $
+$NetBSD: distinfo,v 1.4 2013/11/29 23:22:34 minskim Exp $
 
-SHA1 (tex-enctex-16881/enctex.tar.xz) = 7a85841618d4dc1ee781f025f44f7db1aa3e9ae6
-RMD160 (tex-enctex-16881/enctex.tar.xz) = 3b75534050b386ea97bcb066c874c97c7c0619d2
-Size (tex-enctex-16881/enctex.tar.xz) = 19032 bytes
+SHA1 (tex-enctex-28602/enctex.tar.xz) = ebb5db3161c39cee8728b420e135d0a43ca6c4ba
+RMD160 (tex-enctex-28602/enctex.tar.xz) = 3e0161348099654cdbffbd01e443c171d4eb7f60
+Size (tex-enctex-28602/enctex.tar.xz) = 23620 bytes
