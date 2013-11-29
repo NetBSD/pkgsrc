@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4270 2013/11/29 23:10:33 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4271 2013/11/29 23:23:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6221,3 +6221,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/json-c to 0.11nb1 [wiz 2013-11-29]
 	Updated devel/rcs to 5.9.2 [wiz 2013-11-29]
 	Updated security/gnutls to 3.2.7 [wiz 2013-11-29]
+	Updated print/tex-enctex to 2013 [minskim 2013-11-29]
+	Updated print/tex-enctex-doc to 2013 [minskim 2013-11-29]
