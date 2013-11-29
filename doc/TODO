@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12744 2013/11/29 14:36:15 adam Exp $
+$NetBSD: TODO,v 1.12745 2013/11/29 16:52:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o courier-mta-0.72
 	o covered-0.7.9
 	o covered-current-20090802
-	o cppunit-1.13.2
 	o cross-h8300-elf-binutils-2.23.2 [wip]
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-gtk2-1.60.0
