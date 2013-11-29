@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.8 2013/09/10 14:39:54 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/11/29 23:13:56 dholland Exp $
 
 SHA1 (pkg_select-20090308.tar.gz) = f4a4f40927631d16ee563671ce98e69843382c93
 RMD160 (pkg_select-20090308.tar.gz) = d265f8e18ee4500e2ac34ba2d105acff28cc7e91
 Size (pkg_select-20090308.tar.gz) = 54637 bytes
-SHA1 (patch-curses__helpers.c) = fb2198e1c5d362a22cbd6cced9b28ac330daddfe
+SHA1 (patch-curses__helpers.c) = 3100f625773543e4e93f8fb25d706d95aac3016b
+SHA1 (patch-extern.h) = 541e1234e88c926d1bdf94334862f0f0bc81bb59
+SHA1 (patch-install__many.c) = 44d9dc440500f9b30b777e109a360bcaafc5f1db
+SHA1 (patch-listmgt.c) = b1b2f5898709d52c72c465899f0e8dbf1e27a5c2
+SHA1 (patch-pkgsrc.c) = 655931c4a61657d951cab795b8e878b41a056f7c
