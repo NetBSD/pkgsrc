@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2013/11/29 19:31:47 drochner Exp $
+
+--- libxc/xc_dom.h.orig	2013-11-29 18:20:47.000000000 +0000
++++ libxc/xc_dom.h	2013-11-29 18:22:14.000000000 +0000
+@@ -303,7 +303,7 @@ static inline void *xc_dom_vaddr_to_ptr(
+     if ( ptr == NULL )
+         return ptr;
+     *safe_region_out = (safe_region_count << XC_DOM_PAGE_SHIFT(dom)) - offset;
+-    return ptr;
++    return ptr + offset;
+ }
+ 
+ static inline int xc_dom_feature_translated(struct xc_dom_image *dom)
