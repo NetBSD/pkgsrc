@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4261 2013/11/29 09:16:32 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4262 2013/11/29 14:36:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6206,3 +6206,10 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/py-xattr to 0.7.2nb1 [wiz 2013-11-26]
 	Updated sysutils/duplicity to 0.6.22 [drochner 2013-11-26]
 	Updated games/puzzles to 10098 [wiz 2013-11-29]
+	Updated devel/subversion to 1.8.5 [adam 2013-11-29]
+	Updated devel/subversion-base to 1.8.5 [adam 2013-11-29]
+	Updated devel/java-subversion to 1.8.5 [adam 2013-11-29]
+	Updated devel/p5-subversion to 1.8.5 [adam 2013-11-29]
+	Updated devel/py-subversion to 1.8.5 [adam 2013-11-29]
+	Updated devel/ruby-subversion to 1.8.5 [adam 2013-11-29]
+	Updated www/ap2-subversion to 1.8.5 [adam 2013-11-29]
