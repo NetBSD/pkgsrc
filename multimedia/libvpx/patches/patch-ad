@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.10 2013/11/09 05:28:35 ryoon Exp $
+$NetBSD: patch-ad,v 1.11 2013/11/29 18:33:54 bsiegert Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
 
---- build/make/configure.sh.orig	2013-09-04 18:49:22.000000000 +0000
+--- build/make/configure.sh.orig	Wed Sep  4 18:48:57 2013
 +++ build/make/configure.sh
 @@ -645,7 +645,7 @@ process_common_toolchain() {
                  [ -z "$tgt_isa" ] && tgt_isa=x86
@@ -32,7 +32,16 @@ Add another SDK path on Mac OS X.
          check_add_asflags -KPIC
      ;;
      ppc*)
-@@ -1160,10 +1158,29 @@ EOF
+@@ -1152,7 +1155,7 @@ EOF
+     check_cc <<EOF
+     unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
+ EOF
+-    [ -f "${TMP_O}" ] && od -A n -t x1 "${TMP_O}" | tr -d '\n' |
++    [ -f "${TMP_O}" ] && od -t x1 "${TMP_O}" | cut -c 8- | tr -d '\n' |
+         grep '4f *32 *42 *45' >/dev/null 2>&1 && enable big_endian
+ 
+     # Almost every platform uses pthreads.
+@@ -1160,9 +1163,28 @@ EOF
          case ${toolchain} in
              *-win*-vs*);;
              *-android-gcc);;
@@ -40,7 +49,7 @@ Add another SDK path on Mac OS X.
 +            *) check_header pthread.h && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
          esac
      fi
- 
++
 +    case ${tgt_os} in
 +    darwin*)
 +       add_extralibs -lm
@@ -59,7 +68,6 @@ Add another SDK path on Mac OS X.
 +       esac
 +       ;;
 +    esac
-+
+ 
      # only for MIPS platforms
      case ${toolchain} in
-         mips*)
