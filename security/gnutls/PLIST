@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2013/10/31 14:41:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2013/11/29 22:55:29 wiz Exp $
 bin/certtool
 bin/danetool
 bin/gnutls-cli
@@ -66,6 +66,7 @@ man/man3/gnutls_bye.3
 man/man3/gnutls_certificate_activation_time_peers.3
 man/man3/gnutls_certificate_allocate_credentials.3
 man/man3/gnutls_certificate_client_get_request_status.3
+man/man3/gnutls_certificate_client_set_retrieve_function.3
 man/man3/gnutls_certificate_expiration_time_peers.3
 man/man3/gnutls_certificate_free_ca_names.3
 man/man3/gnutls_certificate_free_cas.3
@@ -79,6 +80,7 @@ man/man3/gnutls_certificate_get_peers.3
 man/man3/gnutls_certificate_get_peers_subkey_id.3
 man/man3/gnutls_certificate_send_x509_rdn_sequence.3
 man/man3/gnutls_certificate_server_set_request.3
+man/man3/gnutls_certificate_server_set_retrieve_function.3
 man/man3/gnutls_certificate_set_dh_params.3
 man/man3/gnutls_certificate_set_key.3
 man/man3/gnutls_certificate_set_ocsp_status_request_file.3
@@ -339,6 +341,7 @@ man/man3/gnutls_openpgp_privkey_get_preferred_key_id.3
 man/man3/gnutls_openpgp_privkey_get_revoked_status.3
 man/man3/gnutls_openpgp_privkey_get_subkey_count.3
 man/man3/gnutls_openpgp_privkey_get_subkey_creation_time.3
+man/man3/gnutls_openpgp_privkey_get_subkey_expiration_time.3
 man/man3/gnutls_openpgp_privkey_get_subkey_fingerprint.3
 man/man3/gnutls_openpgp_privkey_get_subkey_id.3
 man/man3/gnutls_openpgp_privkey_get_subkey_idx.3
@@ -375,10 +378,12 @@ man/man3/gnutls_pkcs11_copy_x509_privkey.3
 man/man3/gnutls_pkcs11_deinit.3
 man/man3/gnutls_pkcs11_delete_url.3
 man/man3/gnutls_pkcs11_get_pin_function.3
+man/man3/gnutls_pkcs11_get_raw_issuer.3
 man/man3/gnutls_pkcs11_init.3
 man/man3/gnutls_pkcs11_obj_deinit.3
 man/man3/gnutls_pkcs11_obj_export.3
 man/man3/gnutls_pkcs11_obj_export2.3
+man/man3/gnutls_pkcs11_obj_export3.3
 man/man3/gnutls_pkcs11_obj_export_url.3
 man/man3/gnutls_pkcs11_obj_get_info.3
 man/man3/gnutls_pkcs11_obj_get_type.3
@@ -898,6 +903,18 @@ man/man3/gnutls_x509_trust_list_remove_trust_file.3
 man/man3/gnutls_x509_trust_list_remove_trust_mem.3
 man/man3/gnutls_x509_trust_list_verify_crt.3
 man/man3/gnutls_x509_trust_list_verify_named_crt.3
+man/man3/xssl_client_init.3
+man/man3/xssl_cred_deinit.3
+man/man3/xssl_cred_init.3
+man/man3/xssl_deinit.3
+man/man3/xssl_flush.3
+man/man3/xssl_get_session.3
+man/man3/xssl_getdelim.3
+man/man3/xssl_printf.3
+man/man3/xssl_read.3
+man/man3/xssl_server_init.3
+man/man3/xssl_sinit.3
+man/man3/xssl_write.3
 share/examples/gnutls/ex-alert.c
 share/examples/gnutls/ex-cert-select-pkcs11.c
 share/examples/gnutls/ex-cert-select.c

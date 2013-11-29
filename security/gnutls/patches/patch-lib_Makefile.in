@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_Makefile.in,v 1.3 2013/08/01 20:00:59 adam Exp $
+$NetBSD: patch-lib_Makefile.in,v 1.4 2013/11/29 22:55:29 wiz Exp $
 
---- lib/Makefile.in.orig	2013-07-29 14:23:14.000000000 +0000
+--- lib/Makefile.in.orig	2013-11-23 10:09:55.000000000 +0000
 +++ lib/Makefile.in
-@@ -369,7 +369,7 @@ am_libgnutls_la_OBJECTS = $(am__objects_
+@@ -362,7 +362,7 @@ am_libgnutls_la_OBJECTS = $(am__objects_
  libgnutls_la_OBJECTS = $(am_libgnutls_la_OBJECTS)
  libgnutls_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -11,3 +11,12 @@ $NetBSD: patch-lib_Makefile.in,v 1.3 2013/08/01 20:00:59 adam Exp $
  @ENABLE_CXX_TRUE@libgnutlsxx_la_DEPENDENCIES = libgnutls.la
  am__libgnutlsxx_la_SOURCES_DIST = gnutlsxx.cpp
  @ENABLE_CXX_TRUE@am_libgnutlsxx_la_OBJECTS =  \
+@@ -1445,7 +1445,7 @@ infodir = @infodir@
+ install_sh = @install_sh@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+-localedir = $(datadir)/locale
++localedir = /usr/pkg/share/locale
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
