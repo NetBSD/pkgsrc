@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/07/15 02:02:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2013/11/29 12:53:45 joerg Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -11,6 +11,11 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
 COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 LICENSE=	gnu-gpl-v2
+
+# In driver:
+# mkdir: dep: Not a directory
+# Makefile:76: recipe for target 'dep' failed
+MAKE_JOBS_SAFE=	no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
