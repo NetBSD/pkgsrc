@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/28 00:29:21 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/29 13:00:08 joerg Exp $
 
 DISTNAME=	bcollect-0.6.0
 CATEGORIES=	sysutils
@@ -11,6 +11,9 @@ COMMENT=	Incremental remote backup tool
 PKG_DESTDIR_SUPPORT=	destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	lex yacc
+
+# Incomplete dependencies on confparser.h
+MAKE_JOBS_SAFE=	no
 
 CONF_FILES+=	${PREFIX}/share/examples/bcollect/bcollect.conf	\
 		${PKG_SYSCONFDIR}/bcollect.conf
