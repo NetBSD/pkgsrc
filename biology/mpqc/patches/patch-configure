@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
+$NetBSD: patch-configure,v 1.2 2013/11/29 12:53:26 joerg Exp $
 
 --- configure.orig	2006-03-22 19:13:52.000000000 +0000
 +++ configure
@@ -11,7 +11,21 @@ $NetBSD: patch-configure,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
      # Extract the first word of "cca-chem-config", so it can be a program name with args.
  set dummy cca-chem-config; ac_word=$2
  echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -5207,7 +5207,7 @@ case $target_cpu in
+@@ -4349,7 +4349,12 @@ fi
+ 
+           done
+           ;;
+-        -[lLR]*)
++        -R*)
++          ac_arg="-Wl,$ac_arg"
++          shift
++          set X $ac_arg "$@"
++          ;;
++        -[lLR]*|-Wl*)
+             ac_exists=false
+   for ac_i in $ac_cv_f77_libs; do
+     if test x"$ac_arg" = x"$ac_i"; then
+@@ -5207,7 +5212,7 @@ case $target_cpu in
       ;;
  esac
  
@@ -20,7 +34,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
    echo "$as_me:$LINENO: checking for C++ cpu tuning flag" >&5
  echo $ECHO_N "checking for C++ cpu tuning flag... $ECHO_C" >&6
  
-@@ -5265,7 +5265,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+@@ -5265,7 +5270,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  echo "${ECHO_T}$cxx_tuneflag" >&6
  fi
  
@@ -29,7 +43,25 @@ $NetBSD: patch-configure,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
    echo "$as_me:$LINENO: checking for C cpu tuning flag" >&5
  echo $ECHO_N "checking for C cpu tuning flag... $ECHO_C" >&6
    CFLAGS_SAV=$CFLAGS
-@@ -28629,10 +28629,10 @@ ENABLESHARED=$enable_shared
+@@ -6563,7 +6568,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-pthread_join(0,0);
++pthread_create(0,0,0,0);
+   ;
+   return 0;
+ }
+@@ -6697,7 +6702,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-pthread_join(0,0);
++pthread_create(0,0,0,0);
+   ;
+   return 0;
+ }
+@@ -28629,10 +28634,10 @@ ENABLESHARED=$enable_shared
  
  
  
@@ -43,7 +75,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
      { { echo "$as_me:$LINENO: error: libmpi++ needed for mpi cca components" >&5
  echo "$as_me: error: libmpi++ needed for mpi cca components" >&2;}
     { (exit 1); exit 1; }; }
-@@ -28808,10 +28808,10 @@ echo "$as_me: WARNING: Ccaffeine not con
+@@ -28808,10 +28813,10 @@ echo "$as_me: WARNING: Ccaffeine not con
  
  
  
@@ -56,7 +88,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2013/03/16 12:43:26 asau Exp $
        { { echo "$as_me:$LINENO: error: Babel not properly configured for python" >&5
  echo "$as_me: error: Babel not properly configured for python" >&2;}
     { (exit 1); exit 1; }; }
-@@ -28846,7 +28846,7 @@ echo "$as_me: error: Ccaffeine not prope
+@@ -28846,7 +28851,7 @@ echo "$as_me: error: Ccaffeine not prope
    echo -e "ccafe bin:\n  $CCAFE_BIN"
    echo -e "ccafe python enabled:\n  $CCAFE_PYTHON_ENABLE"
    echo -e "ccafe mpi enabled\n  $CCAFE_MPI_ENABLE"
