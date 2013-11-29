@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2013/11/29 22:55:29 wiz Exp $
+
+--- configure.orig	2013-11-29 17:00:05.000000000 +0000
++++ configure
+@@ -48402,7 +48402,7 @@ $as_echo "#define NO_OPTIONAL_OPT_ARGS 1
+ 
+           fi    # end of AC_DEFUN of LIBOPTS_CHECK
+ 
+-if test "$NEED_LIBOPTS_DIR" == "true";then
++if test "$NEED_LIBOPTS_DIR" = "true";then
+ 		for i in ${srcdir}/src/*-args.c.bak ${srcdir}/src/*-args.h.bak; do
+ 		nam=`echo $i|sed 's/.bak//g'`
+ 		if test -f $i;then
