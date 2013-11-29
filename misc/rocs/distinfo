@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/11/07 12:35:43 markd Exp $
+$NetBSD: distinfo,v 1.8 2013/11/29 12:52:21 joerg Exp $
 
 SHA1 (rocs-4.11.3.tar.xz) = b1693d7bf589666334e08fa2258d7e4c90d44283
 RMD160 (rocs-4.11.3.tar.xz) = c5322ed2c860074ca2c5716b629ce590faa956c5
 Size (rocs-4.11.3.tar.xz) = 1161016 bytes
 SHA1 (patch-RocsCore_LoadSave_Plugins_CMakeLists.txt) = ae4d15f9aa8fc2f19715db544a15ddbc2f0d98fb
+SHA1 (patch-RocsCore_Modifiers_ValueModifier.cpp) = 15ddb95b3a6149980f85c6665116a23d9a8db484
