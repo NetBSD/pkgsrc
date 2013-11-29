@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/02/06 23:21:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/29 12:54:55 joerg Exp $
 #
 
 PKGNAME=	poco-${POCO_VERSION}
@@ -6,6 +6,9 @@ PKGREVISION=	3
 CATEGORIES=	devel
 
 COMMENT=	POCO C++ Foundation libraries
+
+# error: unable to open output file '.../poco-1.4.2p1-all/Foundation/obj/NetBSD/amd64/debug_shared/Ascii.o'
+MAKE_JOBS_SAFE=	no
 
 .include "../../devel/poco/Makefile.common"
 
