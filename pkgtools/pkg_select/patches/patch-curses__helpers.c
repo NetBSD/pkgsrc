@@ -1,4 +1,6 @@
-$NetBSD: patch-curses__helpers.c,v 1.1 2013/09/10 14:39:54 joerg Exp $
+$NetBSD: patch-curses__helpers.c,v 1.2 2013/11/29 23:13:56 dholland Exp $
+
+Fix printf format strings.
 
 --- curses_helpers.c.orig	2013-09-10 11:42:25.000000000 +0000
 +++ curses_helpers.c
