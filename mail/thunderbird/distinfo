@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.130 2013/11/13 14:36:58 ryoon Exp $
+$NetBSD: distinfo,v 1.131 2013/11/29 17:41:08 wiz Exp $
 
 SHA1 (enigmail-1.6.tar.gz) = 51a7eb7d86ce24d8199f741a0079f0d56ecd6368
 RMD160 (enigmail-1.6.tar.gz) = a854bb37a6a7f298f6cc268110dcb21d00909fa4
@@ -110,6 +110,9 @@ SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__capt
 SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_condition__variable.cc) = 3c44db3c63d29bacafd84d50972604c7f39866dc
 SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spreadsort.hpp) = 14f62a7864ac3164c8532580f55ba731c6163c3c
 SHA1 (patch-mozilla_media_webrtc_trunk_webrtc_system__wrappers_source_thread__posix.cc) = a6eb42961b0e9e7c26b19af44c08306c7ff5d997
+SHA1 (patch-mozilla_memory_mozalloc_fallible.h) = db33e1a805e7f76c7fc7c2a414660a1ed2ca1727
+SHA1 (patch-mozilla_memory_mozalloc_mozalloc.cpp) = 38ff96261f55acffe67bd3e9099544c71e028e85
+SHA1 (patch-mozilla_memory_mozalloc_mozalloc.h) = 6f034541e01d75882d4f06c67c6b2ce355c6c315
 SHA1 (patch-mozilla_memory_mozalloc_mozalloc__abort.cpp) = 74d938d0f984d16c28f22f77919d5212cfc47f09
 SHA1 (patch-mozilla_mfbt_Atomics.h) = 8184a728871a10fe9bff9940146a504117fe60af
 SHA1 (patch-mozilla_mfbt_Poison.cpp) = 2c4ec88d6d47c93120d1d10457853e67ef52d239
