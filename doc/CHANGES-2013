@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4263 2013/11/29 16:44:21 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4264 2013/11/29 16:52:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6215,3 +6215,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/ap2-subversion to 1.8.5 [adam 2013-11-29]
 	Updated www/contao32 to 3.2.1 [taca 2013-11-29]
 	Updated www/contao32-example to 3.2.1 [taca 2013-11-29]
+	Updated devel/cppunit to 1.13.2 [wiz 2013-11-29]
