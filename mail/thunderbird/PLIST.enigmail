@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.enigmail,v 1.9 2013/11/29 17:17:25 wiz Exp $
 include/thunderbird/AbstractMediaDecoder.h
 include/thunderbird/AccEvent.h
 include/thunderbird/AnimationCommon.h
