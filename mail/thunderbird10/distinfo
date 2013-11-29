@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2013/08/29 12:57:35 joerg Exp $
+$NetBSD: distinfo,v 1.16 2013/11/29 12:58:52 joerg Exp $
 
 SHA1 (thunderbird-10.0.12esr.source.tar.bz2) = 260a3baca5eaa80bcc075b08c9f12016d61877de
 RMD160 (thunderbird-10.0.12esr.source.tar.bz2) = 63586fc3460f4522900b84f58805c3a3a9cfe7a6
@@ -82,6 +82,8 @@ SHA1 (patch-mozilla_js_src_methodjit_MethodJIT.cpp) = c27d2e4105ea47a0fe2bec42ed
 SHA1 (patch-mozilla_js_src_yarr_pcre_pcre.h) = 7d450964eba9c64cad932075c714087047fc8642
 SHA1 (patch-mozilla_media_libvpx_vpx__config.h) = cb7bb829ea120f6d295de7807b13e4c720b3f88f
 SHA1 (patch-mozilla_media_libvpx_vpx__config__c.c) = 0e04badaf5ff4b04a313cf9bb40727d87202051f
+SHA1 (patch-mozilla_memory_mozalloc_mozalloc.cpp) = 7564823ec016b0ac3ff0f2e1ab0d6bb8f674c4f7
+SHA1 (patch-mozilla_memory_mozalloc_mozalloc.h) = 06d970c93d561ac787fe3cf11eba717a2416d8c9
 SHA1 (patch-mozilla_nsprpub_pr_include_md___dragonfly.cfg) = 1496442dfa274cab6622db350c138635e6cf7376
 SHA1 (patch-mozilla_nsprpub_pr_include_md___pth.h) = b8aab2979a289512b93e04bc3bbc38845029719d
 SHA1 (patch-mozilla_nsprpub_pr_include_md_prosdep.h) = 576fc831d79e9594c1f90907d53e4fbc17f4644a
