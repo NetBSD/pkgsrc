@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4277 2013/11/30 10:08:52 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4278 2013/11/30 10:12:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6229,3 +6229,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated filesystems/p5-Path-Tiny to 0.047 [wen 2013-11-30]
 	Updated finance/p5-Data-Currency to 0.06000 [wen 2013-11-30]
 	Updated textproc/p5-XML-LibXML to 2.0107 [wen 2013-11-30]
+	Updated textproc/p5-XML-LibXSLT to 1.82 [wen 2013-11-30]
