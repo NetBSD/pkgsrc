@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/08/24 16:12:10 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2013/11/30 16:11:15 richard Exp $
 
 SHA1 (liborcus-0.5.1.tar.bz2) = 9303d513e4b63a1d6e4bce7cfeb13635e568b466
 RMD160 (liborcus-0.5.1.tar.bz2) = 53c0cc12a3264b970f81ebb5b5c43208cee70688
 Size (liborcus-0.5.1.tar.bz2) = 1445106 bytes
 SHA1 (patch-bin_pack-release.sh) = 6eefed463a1bc44ce2cbceb128d347b3096768f0
-SHA1 (patch-configure) = b6d5ed475a5a5c761494d565d01cd595773650a0
-SHA1 (patch-src_parser_Makefile.am) = fb4e5b9bb037bec6b2dc55c47f3d4e74c61839c1
+SHA1 (patch-configure) = ac0fd8f94d5ae154266776b80acd41c3fe96e916
+SHA1 (patch-src_Makefile.in) = 734abfe6287972d704869a2ccf6534ea094d33ad

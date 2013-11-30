@@ -1,5 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/08/24 16:12:10 jaapb Exp $
+$NetBSD: patch-configure,v 1.2 2013/11/30 16:11:15 richard Exp $
 
+non GNU-sed don't seem to like '|' in regular expressions
 Remove tac linuxism and use tail -r instead
 --- configure.orig	2013-04-13 01:56:48.000000000 +0000
 +++ configure
@@ -8,7 +9,7 @@ Remove tac linuxism and use tail -r instead
  			LDFLAGS_SAVE=$LDFLAGS
              if test "x$ax_boost_user_system_lib" = "x"; then
 -                for libextension in `ls $BOOSTLIBDIR/libboost_system*.a* $BOOSTLIBDIR/libboost_system*.so* 2>/dev/null | sed 's,.*/,,' | sed -e 's;^lib\(boost_system.*\)\.\(so\|a\).*$;\1;' | tac` ; do
-+                for libextension in `ls $BOOSTLIBDIR/libboost_system*.a* $BOOSTLIBDIR/libboost_system*.so* 2>/dev/null | sed 's,.*/,,' | sed -e 's;^lib\(boost_system.*\)\.\(so\|a\).*$;\1;' | tail -r` ; do
++                for libextension in `ls $BOOSTLIBDIR/libboost_system*.a* $BOOSTLIBDIR/libboost_system*.so* 2>/dev/null | sed 's,.*/,,' | sed -e 's;^lib\(boost_system\)\..*$;\1;' | tail -r` ; do
                       ax_lib=${libextension}
  				    as_ac_Lib=`$as_echo "ac_cv_lib_$ax_lib''_exit" | $as_tr_sh`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for exit in -l$ax_lib" >&5
@@ -17,7 +18,7 @@ Remove tac linuxism and use tail -r instead
  				done
                  if test "x$link_system" != "xyes"; then
 -                for libextension in `ls $BOOSTLIBDIR/boost_system*.{dll,a}* 2>/dev/null | sed 's,.*/,,' | sed -e 's;^\(boost_system.*\)\.\(dll\|a\).*$;\1;' | tac` ; do
-+                for libextension in `ls $BOOSTLIBDIR/boost_system*.{dll,a}* 2>/dev/null | sed 's,.*/,,' | sed -e 's;^\(boost_system.*\)\.\(dll\|a\).*$;\1;' | tail -r` ; do
++                for libextension in `ls $BOOSTLIBDIR/boost_system*.{dll,a}* 2>/dev/null | sed 's,.*/,,' | sed -e 's;^\(boost_system\)\..*$;\1;' | tail -r` ; do
                       ax_lib=${libextension}
  				    as_ac_Lib=`$as_echo "ac_cv_lib_$ax_lib''_exit" | $as_tr_sh`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for exit in -l$ax_lib" >&5
