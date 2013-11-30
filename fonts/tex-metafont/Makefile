@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/14 21:56:11 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/30 23:15:17 minskim Exp $
 
 DISTNAME=	metafont
-PKGNAME=	tex-${DISTNAME}-2012
+PKGNAME=	tex-${DISTNAME}-2013
 CATEGORIES=	fonts
-TEXLIVE_REV=	26689
+TEXLIVE_REV=	29764
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	METAFONT system for specifying fonts
@@ -15,7 +15,6 @@ DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
 TEX_FORMATS=	"mf mf-nowin -translate-file=cp227.tcx mf.ini\\n"
-TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
