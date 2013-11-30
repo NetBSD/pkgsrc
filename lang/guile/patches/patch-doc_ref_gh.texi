@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_ref_gh.texi,v 1.1 2013/11/30 07:06:25 dsainty Exp $
+
+Compatibility with gtexinfo 5.2
+
+--- doc/ref/gh.texi	2010-12-14 06:24:39.000000000 +1300
++++ doc/ref/gh.texi	2013-11-30 19:41:16.252567567 +1300
+@@ -995,8 +995,6 @@
+ 
+ @deftypefun SCM gh_car (SCM @var{obj})
+ @deftypefunx SCM gh_cdr (SCM @var{obj})
+-@dots{}
+-
+ @deftypefunx SCM gh_c[ad][ad][ad][ad]r (SCM @var{obj})
+ These correspond to the Scheme @code{(caadar ls)} procedures etc @dots{}
+ @end deftypefun
