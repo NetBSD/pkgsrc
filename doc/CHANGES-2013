@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4283 2013/11/30 11:46:39 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4284 2013/11/30 19:24:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6235,3 +6235,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/p5-XML-Catalog version 1.0.1 [wen 2013-11-30]
 	Updated textproc/p5-XML-TreeBuilder to 5.1 [wen 2013-11-30]
 	Updated textproc/p5-XML-TreePP to 0.42 [wen 2013-11-30]
+	Updated mail/dovecot2 to 2.2.9 [adam 2013-11-30]
