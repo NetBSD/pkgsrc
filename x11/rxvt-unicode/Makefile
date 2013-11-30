@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2013/07/22 17:55:21 morr Exp $
+# $NetBSD: Makefile,v 1.49 2013/11/30 23:24:10 morr Exp $
 
-DISTNAME=	rxvt-unicode-9.18
+DISTNAME=	rxvt-unicode-9.19
 CATEGORIES=	x11
 MASTER_SITES=	http://dist.schmorp.de/rxvt-unicode/ \
 		http://dist.schmorp.de/rxvt-unicode/Attic/
@@ -21,9 +21,6 @@ CONFIGURE_ENV+=		ac_cv_path_TIC=no
 CONFIGURE_ARGS+=	--enable-256-color
 
 INSTALLATION_DIRS+=	share/doc/rxvt-unicode share/examples/rxvt-unicode
-
-post-patch:
-	${RM} ${WRKSRC}/src/perl/tabbed.orig
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.FAQ \
