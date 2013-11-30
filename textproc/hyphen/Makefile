@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/23 15:01:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/30 07:33:40 richard Exp $
 
 DISTNAME=	hyphen-2.8.6
 CATEGORIES=	textproc
@@ -11,7 +11,7 @@ LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	perl
+USE_TOOLS+=	gawk patch perl
 
 REPLACE_PERL=	substrings.pl
 
