@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4290 2013/11/30 23:43:20 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4291 2013/11/30 23:54:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/rxvt-unicode to 9.19 [morr 2013-11-30]
 	Updated print/tex-collection-basic to 2013 [minskim 2013-11-30]
 	Updated print/tex-collection-basic-doc to 2013 [minskim 2013-11-30]
+	Updated print/tex-genmisc to 2013 [minskim 2013-11-30]
