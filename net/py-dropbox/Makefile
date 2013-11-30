@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/26 23:25:36 agc Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/30 00:01:34 wiz Exp $
 
 DISTNAME=	dropbox-python-sdk-1.6
 PKGNAME=	${PYPKGPREFIX}-dropbox-1.6
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.dropbox.com/developers/core/sdks/python
 COMMENT=	Dropbox Python API
 LICENSE=	2-clause-bsd
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+EGG_NAME=	${DISTNAME:S/python-sdk-//}
 
 USE_LANGUAGES=	# none
 
