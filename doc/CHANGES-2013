@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4288 2013/11/30 22:55:07 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4289 2013/11/30 23:25:04 morr Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6241,3 +6241,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Alien-Packages version 0.003 [wiz 2013-11-30]
 	Updated fonts/tex-fontname to 2013 [minskim 2013-11-30]
 	Updated fonts/tex-fontname-doc to 2013 [minskim 2013-11-30]
+	Updated x11/rxvt-unicode to 9.19 [morr 2013-11-30]
