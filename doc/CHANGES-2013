@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4286 2013/11/30 22:29:24 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.4287 2013/11/30 22:39:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6238,3 +6238,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/dovecot2 to 2.2.9 [adam 2013-11-30]
 	Added benchmarks/dnsperf version 2.0.0.0 [tron 2013-11-30]
 	Updated x11/mlterm to 3.3.1 [tsutsui 2013-11-30]
+	Added devel/p5-Alien-Packages version 0.003 [wiz 2013-11-30]
