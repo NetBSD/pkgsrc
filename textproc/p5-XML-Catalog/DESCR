@@ -1,0 +1,5 @@
+This module implements draft 0.4 of John Cowan's XML Catalog (formerly
+known as XCatalog) proposal (<http://www.ccil.org/~cowan/XML/XCatalog.html>).
+Catalogs may be written in either SOCAT or XML syntax (see the proposal
+for syntax details); XML::Catalog will assume SOCAT syntax if the catalog
+is not in well-formed XML syntax.
