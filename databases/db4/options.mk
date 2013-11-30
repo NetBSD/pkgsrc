@@ -1,11 +1,17 @@
-# $NetBSD: options.mk,v 1.5 2013/03/01 16:10:23 jperkin Exp $
+# $NetBSD: options.mk,v 1.6 2013/11/30 16:25:12 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.db4
 
 PKG_SUPPORTED_OPTIONS=	doc
 PKG_SUGGESTED_OPTIONS=	doc
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "MirBSD"
+PLIST_SRC+=		PLIST.${OPSYS}
+.else
 PLIST_SRC+=		PLIST
+.endif
 
 .include "../../mk/bsd.options.mk"
 
