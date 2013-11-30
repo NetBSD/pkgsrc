@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/23 01:51:57 abs Exp $
+$NetBSD: distinfo,v 1.2 2013/11/30 09:59:32 wen Exp $
 
-SHA1 (Data-Currency-0.04002.tar.gz) = e41ad3a8f2a9242c8ed2960ae6d7931c8f8e8409
-RMD160 (Data-Currency-0.04002.tar.gz) = 770c0462108338124c27e16e3cc35eca7f3501e3
-Size (Data-Currency-0.04002.tar.gz) = 23723 bytes
+SHA1 (Data-Currency-0.06000.tar.gz) = d500ce8d6e68225f59ca73bd13b7eea1ad4b1107
+RMD160 (Data-Currency-0.06000.tar.gz) = 62f2146f8239af93269315b6c3bc1b6c1c45ca3b
+Size (Data-Currency-0.06000.tar.gz) = 17233 bytes
