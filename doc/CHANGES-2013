@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4274 2013/11/30 09:42:31 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4275 2013/11/30 09:47:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6226,3 +6226,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated wm/spectrwm to 2.4.0 [wiz 2013-11-29]
 	Updated net/py-dropbox to 1.6nb1 [wiz 2013-11-30]
 	Updated devel/p5-MooX-Options to 4.002 [wen 2013-11-30]
+	Updated filesystems/p5-Path-Tiny to 0.047 [wen 2013-11-30]
