@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/30 20:31:18 tron Exp $
+
+SHA1 (dnsperf-src-2.0.0.0-1.tar.gz) = a0cf8f95de821a9ca1b7f8001e5ef7334e968540
+RMD160 (dnsperf-src-2.0.0.0-1.tar.gz) = 1d2f856651e82755e0c7071100574dba682e1e8f
+Size (dnsperf-src-2.0.0.0-1.tar.gz) = 565871 bytes
+SHA1 (patch-Makefile.in) = 9f5377a75d9674a3aeb12f933f0a552564534d91
