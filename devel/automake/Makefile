@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2013/07/02 06:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2013/11/30 09:01:26 wiz Exp $
+#
+# for major version updates, don't forget adding new links in
+# mk/tools/automake.mk
 
 DISTNAME=	automake-1.14
 CATEGORIES=	devel
