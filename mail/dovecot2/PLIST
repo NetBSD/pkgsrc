@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2013/11/24 10:05:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2013/11/30 19:22:45 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -432,6 +432,7 @@ lib/dovecot/lib02_imap_acl_plugin.la
 lib/dovecot/lib02_lazy_expunge_plugin.la
 lib/dovecot/lib05_pop3_migration_plugin.la
 lib/dovecot/lib05_snarf_plugin.la
+lib/dovecot/lib10_mail_filter_plugin.la
 lib/dovecot/lib10_quota_plugin.la
 lib/dovecot/lib11_imap_quota_plugin.la
 lib/dovecot/lib11_trash_plugin.la
@@ -706,6 +707,7 @@ share/doc/dovecot/wiki/Plugins.FTS.Squat.txt
 share/doc/dovecot/wiki/Plugins.FTS.txt
 share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.Listescape.txt
+share/doc/dovecot/wiki/Plugins.MailFilter.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.MailboxAlias.txt
 share/doc/dovecot/wiki/Plugins.Notify.txt
