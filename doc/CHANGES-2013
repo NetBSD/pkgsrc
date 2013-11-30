@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4272 2013/11/29 23:30:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4273 2013/11/30 09:40:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6224,3 +6224,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-enctex to 2013 [minskim 2013-11-29]
 	Updated print/tex-enctex-doc to 2013 [minskim 2013-11-29]
 	Updated wm/spectrwm to 2.4.0 [wiz 2013-11-29]
+	Updated net/py-dropbox to 1.6nb1 [wiz 2013-11-30]
