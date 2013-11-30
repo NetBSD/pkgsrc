@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12748 2013/11/29 22:55:39 wiz Exp $
+$NetBSD: TODO,v 1.12749 2013/11/30 09:41:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.9.7
-	o denemo-1.0.8
+	o denemo-1.1
 	o dhid-5.3
 	o diffstat-1.58
 	o doclifter-2.13
@@ -508,7 +508,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.3.10 [etm successor]
+	o etm2-2.3.11 [etm successor]
 	o ettercap-0.7.6
 	o evince-3.8.3
 	o evolution-3.0.0
@@ -698,7 +698,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdbg-2.5.4
 	o kdenlive-0.9.6
 	o kdrill-6.5
-	o kid3-3.0.1
+	o kid3-3.0.2
 	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
 	o kmp-0.5
@@ -955,7 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o sakura-3.1.1
-	o samba-3.6.20
+	o samba-3.6.21
 	o samba-4.0.12
 	o samba-4.1.0 [wip]
 	o samba-4.1.1
