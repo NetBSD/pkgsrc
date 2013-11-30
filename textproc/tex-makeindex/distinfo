@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/03/03 23:13:21 minskim Exp $
+$NetBSD: distinfo,v 1.6 2013/11/30 23:11:22 minskim Exp $
 
-SHA1 (tex-makeindex-21345/makeindex.tar.xz) = abaf004e3c0a69c0666930a59db21b8117149b29
-RMD160 (tex-makeindex-21345/makeindex.tar.xz) = 356ceeee6e14301397c5ed6b800d6485780c7069
-Size (tex-makeindex-21345/makeindex.tar.xz) = 2336 bytes
+SHA1 (tex-makeindex-29764/makeindex.tar.xz) = 2cc71655b579a16ac91a90cf53c34a8c9c81f111
+RMD160 (tex-makeindex-29764/makeindex.tar.xz) = 36a9c4d86b066c911a2c512769cb1ee7b6443370
+Size (tex-makeindex-29764/makeindex.tar.xz) = 2336 bytes
