@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 19:42:41 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2013/11/30 16:25:12 bsiegert Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -43,6 +43,12 @@ CHECK_PORTABILITY_SKIP=	test/xa/*/*.sh
 # threads.
 PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "MirBSD"
+PLIST_SRC=		PLIST.${OPSYS}
+.endif
 
 INSTALLATION_DIRS=	include/db5 lib share/doc/db5
 

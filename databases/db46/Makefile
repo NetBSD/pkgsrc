@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/13 00:33:19 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/30 16:25:12 bsiegert Exp $
 
 DISTNAME=	db-4.6.21
 PKGNAME=	${DISTNAME:S/db/db46/}
@@ -48,6 +48,12 @@ CONFIGURE_ENV+=		ac_cv_lib_pthread_main=no
 .else
 PTHREAD_OPTS+=		native
 .  include "../../mk/pthread.buildlink3.mk"
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "MirBSD"
+PLIST_SRC=		PLIST.${OPSYS}
 .endif
 
 INSTALLATION_DIRS=	include/db46 lib share/doc/db46
