@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4282 2013/11/30 11:39:12 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4283 2013/11/30 11:46:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6234,3 +6234,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/mythes to 1.2.3 [richard 2013-11-30]
 	Added textproc/p5-XML-Catalog version 1.0.1 [wen 2013-11-30]
 	Updated textproc/p5-XML-TreeBuilder to 5.1 [wen 2013-11-30]
+	Updated textproc/p5-XML-TreePP to 0.42 [wen 2013-11-30]
