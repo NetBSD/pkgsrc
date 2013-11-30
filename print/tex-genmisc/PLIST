@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/15 18:36:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/30 23:53:48 minskim Exp $
 share/texmf-dist/tex/generic/genmisc/anti.tex
 share/texmf-dist/tex/generic/genmisc/apldef.tex
 share/texmf-dist/tex/generic/genmisc/arabic.tex
@@ -17,7 +17,6 @@ share/texmf-dist/tex/generic/genmisc/emtrees.tex
 share/texmf-dist/tex/generic/genmisc/endnote.tex
 share/texmf-dist/tex/generic/genmisc/fakebold.tex
 share/texmf-dist/tex/generic/genmisc/hep.tex
-share/texmf-dist/tex/generic/genmisc/hexdump.sty
 share/texmf-dist/tex/generic/genmisc/inscrutable.tex
 share/texmf-dist/tex/generic/genmisc/laps.tex
 share/texmf-dist/tex/generic/genmisc/letterspacing.tex
