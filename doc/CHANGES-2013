@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4287 2013/11/30 22:39:45 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4288 2013/11/30 22:55:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6239,3 +6239,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added benchmarks/dnsperf version 2.0.0.0 [tron 2013-11-30]
 	Updated x11/mlterm to 3.3.1 [tsutsui 2013-11-30]
 	Added devel/p5-Alien-Packages version 0.003 [wiz 2013-11-30]
+	Updated fonts/tex-fontname to 2013 [minskim 2013-11-30]
+	Updated fonts/tex-fontname-doc to 2013 [minskim 2013-11-30]
