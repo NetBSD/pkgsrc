@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2013/11/17 17:32:53 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/30 23:42:15 minskim Exp $
 
 DISTNAME=	collection-basic-doc
-PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGNAME=	tex-${DISTNAME}-2013
 CATEGORIES=	print
 MASTER_SITES=	# empty
-TEXLIVE_REV=	20730
+TEXLIVE_REV=	30372
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Documentation for tex-collection-basic
 
-DEPENDS+=	tex-collection-documentation-base-doc>=2009:../../print/tex-collection-documentation-base-doc
 DEPENDS+=	tex-amsfonts-doc-[0-9]*:../../fonts/tex-amsfonts-doc
 DEPENDS+=	tex-bibtex-doc-[0-9]*:../../print/tex-bibtex-doc
 DEPENDS+=	tex-cm-doc-[0-9]*:../../fonts/tex-cm-doc
@@ -37,10 +35,12 @@ DEPENDS+=	tex-mflogo-doc-[0-9]*:../../fonts/tex-mflogo-doc
 # tex-misc doesn't have a documentation package.
 DEPENDS+=	tex-pdftex-doc-[0-9]*:../../print/tex-pdftex-doc
 # tex-plain doesn't have a documentation package.
-# tcdialog is not needed in pkgsrc.
 DEPENDS+=	tex-tetex-doc-[0-9]*:../../print/tex-tetex-doc
 # tex-tex's documentation is installed by web2c.
-# texconfig's documentation is installed by texlive-tetex.
+DEPENDS+=	tex-texconfig-doc-[0-9]*:../../print/tex-texconfig-doc
+DEPENDS+=	tex-texlive-common-doc-[0-9]*:../../print/tex-texlive-common-doc
+DEPENDS+=	tex-texlive-docindex-doc-[0-9]*:../../print/tex-texlive-docindex-doc
+DEPENDS+=	tex-texlive-en-doc-[0-9]*:../../print/tex-texlive-en-doc
 # texlive-msg-translation is not needed in pkgsrc.
 # texlive-scripts's documentation is not needed in pkgsrc.
 # texlive.infra is not needed in pkgsrc.
