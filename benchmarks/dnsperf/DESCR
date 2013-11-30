@@ -1,0 +1,17 @@
+DNSPerf, ResPerf, and DHCPerf are free tools developed by Nominum that
+make it simple to gather accurate latency and throughput metrics for
+Domain Name Service (DNS) and Dynamic Host Configuration Protocol
+(DHCP). These tools are easy-to-use and simulate typical Internet so
+network operators can benchmark their naming and addressing
+infrastructure and plan for upgrades. The latest version of the DNS
+test tools (DNSPerf and ResPerf) can be used with new test files that
+include IPv6 queries.
+
+DNSPerf "self-paces" the DNS query load to simulate network
+conditions. New features in DNSPerf improve the precision of latency
+measurements and allow for per packet per-query latency reporting is
+possible. DNSPerf is now multithreaded, multiple DNSPerf clients can
+be supported in multicore systems (each client requires two
+cores). The output of DNSPerf has also been improved so it is more
+concise and useful. Latency data can be used to make detailed graphs
+so it is simple for network operators to take advantage of the data.
