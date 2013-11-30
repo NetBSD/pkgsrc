@@ -1,0 +1,24 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2013/11/30 16:11:15 richard Exp $
+
+--- src/Makefile.in.orig	2013-04-13 01:56:47.000000000 +0000
++++ src/Makefile.in
+@@ -437,7 +437,8 @@ orcus_zip_dump_SOURCES = \
+ 	orcus_zip_dump.cpp
+ 
+ orcus_zip_dump_LDADD = \
+-	parser/liborcus-parser-@ORCUS_API_VERSION@.la
++	parser/liborcus-parser-@ORCUS_API_VERSION@.la \
++	$(BOOST_SYSTEM_LIB)
+ 
+ orcus_zip_dump_CPPFLAGS = 
+ 
+@@ -449,7 +450,8 @@ orcus_xml_dump_SOURCES = \
+ 
+ orcus_xml_dump_LDADD = \
+ 	parser/liborcus-parser-@ORCUS_API_VERSION@.la \
+-	liborcus/liborcus-@ORCUS_API_VERSION@.la
++	liborcus/liborcus-@ORCUS_API_VERSION@.la \
++	$(BOOST_SYSTEM_LIB)
+ 
+ orcus_xml_dump_CPPFLAGS = -I$(top_builddir)/lib/liborcus/liborcus.la $(COMMON_CPPFLAGS)
+ 
