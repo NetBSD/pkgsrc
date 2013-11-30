@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/11/30 20:31:18 tron Exp $
+
+Don't attempt to strip shell scripts which breaks the installation.
+
+--- Makefile.in.orig	2012-03-02 02:25:22.000000000 +0000
++++ Makefile.in	2013-11-30 19:48:44.000000000 +0000
+@@ -41,7 +41,7 @@
+ install: all installdirs
+ 	${INSTALL_PROGRAM} dnsperf ${DESTDIR}${bindir}
+ 	${INSTALL_PROGRAM} resperf ${DESTDIR}${bindir}
+-	${INSTALL_PROGRAM} resperf-report ${DESTDIR}${bindir}
++	${BSD_INSTALL_SCRIPT} resperf-report ${DESTDIR}${bindir}
+ 	${INSTALL_DATA} dnsperf.1 ${DESTDIR}${mandir}/man1
+ 	${INSTALL_DATA} resperf.1 ${DESTDIR}${mandir}/man1
+ 
