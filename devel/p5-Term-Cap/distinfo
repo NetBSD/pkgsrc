@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/24 22:00:11 he Exp $
+$NetBSD: distinfo,v 1.2 2013/12/01 08:45:47 wiz Exp $
 
-SHA1 (Term-Cap-1.12.tar.gz) = 6d3ee7f775fa893ab1c4e1dff44d089f0e6c3979
-RMD160 (Term-Cap-1.12.tar.gz) = 0f97a4db4a946a448169cfb7a60133e05b87dda5
-Size (Term-Cap-1.12.tar.gz) = 10995 bytes
+SHA1 (Term-Cap-1.15.tar.gz) = 75d605b4344a34a9fc277afe769678354f999e06
+RMD160 (Term-Cap-1.15.tar.gz) = 4989111e94c91a632d89f042488d5efc74cb7ded
+Size (Term-Cap-1.15.tar.gz) = 11815 bytes
