@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2013/11/24 12:37:40 richard Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2013/12/01 10:54:40 richard Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,7 +6,7 @@
 # used by www/firefox24/Makefile
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config perl gmake autoconf213 readelf unzip zip
+USE_TOOLS+=		pkg-config perl gmake autoconf213 gm4 readelf unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
