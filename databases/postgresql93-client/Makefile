@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/04 18:23:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/01 23:51:02 bsiegert Exp $
 
 PKGNAME=	${DISTNAME:C/-/93-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -10,15 +10,17 @@ CONFIGURE_ARGS+=	--with-openssl
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-zlib
 
+.include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "Cygwin"
 INSTALLATION_DIRS+=	bin
 .endif
 
 # 1. The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
-# NetBSD earler than 4.0 or DragonFly.
+# NetBSD earlier than 4.0 or DragonFly.
 # 2. configure with --enable-thread-safety fails on OpenBSD.
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-3].*)) || \
-    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
 PGSQL_THREAD_SAFETY?=	no
 .endif
 PGSQL_THREAD_SAFETY?=	yes
@@ -29,6 +31,12 @@ BUILD_DEFS+=		PGSQL_THREAD_SAFETY
 .  if (${PTHREAD_TYPE} == "native")
 CONFIGURE_ARGS+=	--enable-thread-safety
 .  endif
+.else
+CONFIGURE_ARGS+=	--disable-thread-safety
+.endif
+
+.if ${OPSYS} == "MirBSD"
+CONFIGURE_ARGS+=	--with-template=openbsd
 .endif
 
 INSTALL_DIRS=	src/include
