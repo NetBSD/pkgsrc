@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2013/10/19 09:07:02 adam Exp $
+# $NetBSD: Makefile,v 1.34 2013/12/01 09:47:19 ryoon Exp $
 
-DISTNAME=	apr-util-1.5.2
-PKGREVISION=	1
+DISTNAME=	apr-util-1.5.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +31,7 @@ MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR}
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.apr+=	apr>=1.3.0
+BUILDLINK_API_DEPENDS.apr+=	apr>=1.5.0
 .include "../../devel/apr/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
