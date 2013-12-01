@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/09/16 05:17:52 taca Exp $
+# $NetBSD: Makefile,v 1.6.10.1 2013/12/01 11:07:13 tron Exp $
 
 DISTNAME=	dm-serializer-1.2.2
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
