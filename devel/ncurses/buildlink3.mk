@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2011/12/19 11:42:47 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2013/12/01 02:18:14 obache Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -17,7 +17,9 @@ BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
 # some properly written autoconf macros which also try to pick up
 # ncurses/ncurses.h.
 #
-BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
+BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h
+BUILDLINK_TARGETS+=		buildlink-ncurses-ncurses-h
+BUILDLINK_TARGETS+=		buildlink-ncurses-term-h
 BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
 BUILDLINK_INCDIRS.ncurses+=	include/ncurses
 
@@ -31,6 +33,7 @@ BUILDLINK_TRANSFORM+=		l:ncursesw:__nonexistent__
 .  endif
 
 .PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
+.PHONY: buildlink-ncurses-term-h
 buildlink-ncurses-curses-h:
 	${RUN}									\
 	src=${BUILDLINK_PREFIX.ncurses}"/include/ncurses/curses.h";		\
@@ -47,6 +50,16 @@ buildlink-ncurses-ncurses-h:
 	dest=${BUILDLINK_DIR}"/include/ncurses.h";				\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
 		${ECHO_BUILDLINK_MSG} "Linking ncurses/ncurses.h -> ncurses.h.";\
+		${MKDIR} `${DIRNAME} "$$dest"`;					\
+		${LN} -s "$$src" "$$dest";					\
+	fi
+
+buildlink-ncurses-term-h:
+	${RUN}									\
+	src=${BUILDLINK_PREFIX.ncurses}"/include/ncurses/term.h";		\
+	dest=${BUILDLINK_DIR}"/include/term.h";				\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
+		${ECHO_BUILDLINK_MSG} "Linking ncurses/term.h -> term.h.";\
 		${MKDIR} `${DIRNAME} "$$dest"`;					\
 		${LN} -s "$$src" "$$dest";					\
 	fi
