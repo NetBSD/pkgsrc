@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.16 2013/11/26 18:56:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.17 2013/12/01 11:48:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -57,3 +57,11 @@ Pullup ticket #4257 - requested by taca
 www/drupal6: security update
 Pullup ticket #4258 - requested by taca
 www/drupal7: security update
+Pullup ticket #4259 - requested by taca
+databases/ruby-dm-serializer: dependency fix
+databases/ruby-dm-types/Makefile: dependency fix
+net/ruby-tw/Makefile: dependency fix
+Pullup ticket #4260 - requested by taca
+lang/ruby193-base: security update
+Pullup ticket #4261 - requested by taca
+lang/ruby200-base: security update
