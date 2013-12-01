@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/12/01 09:45:49 ryoon Exp $
 bin/apr-1-config
 include/apr-1/apr.h
 include/apr-1/apr_allocator.h
@@ -6,6 +6,7 @@ include/apr-1/apr_atomic.h
 include/apr-1/apr_dso.h
 include/apr-1/apr_env.h
 include/apr-1/apr_errno.h
+include/apr-1/apr_escape.h
 include/apr-1/apr_file_info.h
 include/apr-1/apr_file_io.h
 include/apr-1/apr_fnmatch.h
@@ -25,6 +26,7 @@ include/apr-1/apr_random.h
 include/apr-1/apr_ring.h
 include/apr-1/apr_shm.h
 include/apr-1/apr_signal.h
+include/apr-1/apr_skiplist.h
 include/apr-1/apr_strings.h
 include/apr-1/apr_support.h
 include/apr-1/apr_tables.h
