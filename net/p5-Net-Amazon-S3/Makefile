@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/12/01 09:01:48 wiz Exp $
 
 DISTNAME=	Net-Amazon-S3-0.54
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	p5-DateTime-Format-ISO8601>=0:../../time/p5-DateTime-Format-ISO8601
 DEPENDS+=	p5-Digest-HMAC>=0:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-Digest-MD5-File>=0:../../security/p5-Digest-MD5-File
 DEPENDS+=	p5-libwww>=2:../../www/p5-libwww
-DEPENDS+=	{perl>=5.10.0,p5-IO>=0.14}:../../devel/p5-IO
 DEPENDS+=	p5-LWP-UserAgent-Determined>=0:../../www/p5-LWP-UserAgent-Determined
 DEPENDS+=	p5-MIME-Base64>=0:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Moose>=0:../../devel/p5-Moose
