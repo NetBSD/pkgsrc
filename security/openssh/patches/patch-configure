@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-configure,v 1.2 2013/12/01 06:11:41 taca Exp $
 
 Various fixes regarding portability
 
---- configure.orig	2013-03-21 23:38:28.000000000 +0000
+--- configure.orig	2013-11-08 01:41:15.000000000 +0000
 +++ configure
-@@ -5993,6 +5993,9 @@ if test "${with_rpath+set}" = set; then 
+@@ -6159,6 +6159,9 @@ if test "${with_rpath+set}" = set; then 
  fi
  
  
@@ -14,7 +14,7 @@ Various fixes regarding portability
  # Allow user to specify flags
  
  # Check whether --with-cflags was given.
-@@ -6076,6 +6079,7 @@ for ac_header in  \
+@@ -6243,6 +6246,7 @@ for ac_header in  \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -22,7 +22,7 @@ Various fixes regarding portability
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -6786,6 +6790,36 @@ $as_echo "#define HAVE_SECUREWARE 1" >>c
+@@ -6978,6 +6982,36 @@ $as_echo "#define HAVE_SECUREWARE 1" >>c
  		;;
  	esac
  	;;
@@ -59,7 +59,7 @@ Various fixes regarding portability
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
  
-@@ -6987,7 +7021,7 @@ fi
+@@ -7179,7 +7213,7 @@ fi
  $as_echo "#define SSH_TUN_PREPEND_AF 1" >>confdefs.h
  
  	;;
@@ -68,7 +68,7 @@ Various fixes regarding portability
  	check_for_libcrypt_later=1
  
  $as_echo "#define LOCKED_PASSWD_PREFIX \"*LOCKED*\"" >>confdefs.h
-@@ -17033,12 +17067,18 @@ fi
+@@ -17406,12 +17440,18 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -92,7 +92,7 @@ Various fixes regarding portability
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
  
-@@ -18441,7 +18481,7 @@ echo "OpenSSH has been configured with t
+@@ -18816,7 +18856,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

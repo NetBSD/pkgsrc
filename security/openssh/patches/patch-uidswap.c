@@ -1,8 +1,8 @@
-$NetBSD: patch-uidswap.c,v 1.1 2013/05/01 19:58:27 imil Exp $
+$NetBSD: patch-uidswap.c,v 1.2 2013/12/01 06:11:41 taca Exp $
 
 Interix support
 
---- uidswap.c.orig	2012-11-05 06:04:37.000000000 +0000
+--- uidswap.c.orig	2013-06-01 22:07:32.000000000 +0000
 +++ uidswap.c
 @@ -66,13 +66,13 @@ temporarily_use_uid(struct passwd *pw)
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
@@ -20,7 +20,7 @@ Interix support
  		privileged = 0;
  		return;
  	}
-@@ -96,9 +96,11 @@ temporarily_use_uid(struct passwd *pw)
+@@ -95,9 +95,11 @@ temporarily_use_uid(struct passwd *pw)
  
  	/* set and save the user's groups */
  	if (user_groupslen == -1) {
@@ -32,8 +32,8 @@ Interix support
  
  		user_groupslen = getgroups(0, NULL);
  		if (user_groupslen < 0)
-@@ -113,9 +115,11 @@ temporarily_use_uid(struct passwd *pw)
- 				xfree(user_groups);
+@@ -111,9 +113,11 @@ temporarily_use_uid(struct passwd *pw)
+ 			free(user_groups);
  		}
  	}
 +#ifndef HAVE_INTERIX
@@ -44,7 +44,7 @@ Interix support
  #ifndef SAVED_IDS_WORK_WITH_SETEUID
  	/* Propagate the privileged gid to all of our gids. */
  	if (setgid(getegid()) < 0)
-@@ -186,8 +190,10 @@ restore_uid(void)
+@@ -184,8 +188,10 @@ restore_uid(void)
  	setgid(getgid());
  #endif /* SAVED_IDS_WORK_WITH_SETEUID */
  
@@ -55,7 +55,7 @@ Interix support
  	temporarily_use_uid_effective = 0;
  }
  
-@@ -208,6 +214,10 @@ permanently_set_uid(struct passwd *pw)
+@@ -206,6 +212,10 @@ permanently_set_uid(struct passwd *pw)
  	debug("permanently_set_uid: %u/%u", (u_int)pw->pw_uid,
  	    (u_int)pw->pw_gid);
  
@@ -66,7 +66,7 @@ Interix support
  	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
  		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
  
-@@ -244,6 +254,7 @@ permanently_set_uid(struct passwd *pw)
+@@ -242,6 +252,7 @@ permanently_set_uid(struct passwd *pw)
  	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
  		fatal("%s: was able to restore old [e]uid", __func__);
  #endif
