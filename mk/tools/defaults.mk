@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.59 2013/11/06 13:12:50 obache Exp $
+# $NetBSD: defaults.mk,v 1.60 2013/12/01 02:57:36 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,7 +146,7 @@ _TOOLS_VARNAME.wc=		WC
 _TOOLS_VARNAME.wish=		WISH
 _TOOLS_VARNAME.xargs=		XARGS
 _TOOLS_VARNAME.xmkmf=		XMKMF_CMD
-_TOOLS_VARNAME.xzcat=		XZ
+_TOOLS_VARNAME.xz=		XZ
 _TOOLS_VARNAME.xzcat=		XZCAT
 _TOOLS_VARNAME.yacc=		YACC
 
