@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12749 2013/11/30 09:41:07 wiz Exp $
+$NetBSD: TODO,v 1.12750 2013/12/01 06:14:11 taca Exp $
 
 Suggested new packages
 ======================
@@ -372,7 +372,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
+	o apache22-2.2.26
+	o apache24-2.4.7 [require apr/apr-util 1.5.x]
 	o apr0-2.4.1
+	o apr-1.5.0
+	o apr-util-1.5.3
 	o apsfilter-7.2.8
 	o argtable-2.9
 	o aria2-1.18.1
@@ -847,7 +851,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openoffice3-3.3
 	o openscad-2013.06
 	o openslp-2.0.0
-	o openssh-6.2p1
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
@@ -1044,7 +1047,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.23
-	o tk-8.6
+	o tk-8.6 [it is incompatible with ruby-tk]
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
