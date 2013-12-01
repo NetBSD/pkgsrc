@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2011/12/08 22:44:24 hiramatsu Exp $
+$NetBSD: patch-ab,v 1.6 2013/12/01 09:05:03 wiz Exp $
 
 Changes:
  o More general adaptation for BSDs
  o Install scripts in DESTINSTALLSITESCRIPT instead of DESTINSTALLSCRIPT
  o Ignore installed packlist when creating new packlist.
 
---- lib/ExtUtils/MM_Unix.pm.orig	2011-08-05 11:13:10.000000000 +0000
+--- lib/ExtUtils/MM_Unix.pm.orig	2013-11-30 15:23:42.000000000 +0000
 +++ lib/ExtUtils/MM_Unix.pm
-@@ -932,7 +932,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+@@ -933,7 +933,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
  
      my $libs = '$(LDLOADLIBS)';
  
@@ -16,8 +16,8 @@ Changes:
  	# Use nothing on static perl platforms, and to the flags needed
  	# to link against the shared libperl library on shared perl
  	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2060,7 +2060,7 @@ pure_perl_install :: all
- 		$(INST_LIB) $(DESTINSTALLPRIVLIB) \
+@@ -2080,7 +2080,7 @@ q{		read }.$self->catfile('$(PERL_ARCHLI
+ q{		$(INST_LIB) $(DESTINSTALLPRIVLIB) \
  		$(INST_ARCHLIB) $(DESTINSTALLARCHLIB) \
  		$(INST_BIN) $(DESTINSTALLBIN) \
 -		$(INST_SCRIPT) $(DESTINSTALLSCRIPT) \
@@ -25,12 +25,12 @@ Changes:
  		$(INST_MAN1DIR) $(DESTINSTALLMAN1DIR) \
  		$(INST_MAN3DIR) $(DESTINSTALLMAN3DIR)
  	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
-@@ -2082,7 +2082,7 @@ pure_site_install :: all
- 
- pure_vendor_install :: all
+@@ -2109,7 +2109,7 @@ pure_vendor_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
--		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
-+		read "" \
+ };
+     push @m,
+-q{		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
++q{		read "" \
  		write }.$self->catfile('$(DESTINSTALLVENDORARCH)','auto','$(FULLEXT)','.packlist').q{ \
- 		$(INST_LIB) $(DESTINSTALLVENDORLIB) \
- 		$(INST_ARCHLIB) $(DESTINSTALLVENDORARCH) \
+ } unless $self->{NO_PACKLIST};
+ 
