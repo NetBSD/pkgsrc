@@ -1,8 +1,8 @@
-$NetBSD: patch-session.c,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-session.c,v 1.2 2013/12/01 06:11:41 taca Exp $
 
 Interix support
 
---- session.c.orig	2013-03-15 00:22:37.000000000 +0000
+--- session.c.orig	2013-07-20 03:21:53.000000000 +0000
 +++ session.c
 @@ -1081,7 +1081,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)
@@ -55,7 +55,7 @@ Interix support
  		endgrent();
  #endif
  
-@@ -2313,7 +2327,7 @@ session_pty_cleanup2(Session *s)
+@@ -2325,7 +2339,7 @@ session_pty_cleanup2(Session *s)
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
