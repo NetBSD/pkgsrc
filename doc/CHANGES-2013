@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4299 2013/12/01 11:01:59 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4300 2013/12/01 12:00:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6254,3 +6254,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apr-util to 1.5.3 [ryoon 2013-12-01]
 	Updated www/apache24 to 2.4.7 [ryoon 2013-12-01]
 	Updated www/p5-Mojolicious to 4.58 [wiz 2013-12-01]
+	Added x11/gtk-mac-integration version 2.0.5 [adam 2013-12-01]
+	Updated graphics/gimp to 2.8.10 [adam 2013-12-01]
