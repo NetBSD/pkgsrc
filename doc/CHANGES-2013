@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4291 2013/11/30 23:54:17 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4292 2013/12/01 06:12:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6245,3 +6245,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-collection-basic to 2013 [minskim 2013-11-30]
 	Updated print/tex-collection-basic-doc to 2013 [minskim 2013-11-30]
 	Updated print/tex-genmisc to 2013 [minskim 2013-11-30]
+	Updated security/openssh to 6.4.1 [taca 2013-12-01]
