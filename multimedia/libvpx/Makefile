@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/11/29 18:33:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2013/12/01 23:26:25 bsiegert Exp $
 
 DISTNAME=	libvpx-v1.2.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -80,7 +80,10 @@ CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 
 .if ${OPSYS} == "MirBSD"
 BUILDLINK_TRANSFORM+=	rm:-lrt
-CONFIGURE_ENV+=		sse2=no sse3=no ssse3=no sse4_1=no runtime_cpu_detect=no
+# Compiler is too old for these newfangled features
+CONFIGURE_ENV+=		sse2=no sse3=no ssse3=no sse4_1=no
+# runtime_cpu_detect=no
+CONFIGURE_ENV+=		RTCD_OPTIONS='--disable-sse2 --disable-sse3 --disable-ssse3 --disable-sse4_1'
 CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .endif
 
