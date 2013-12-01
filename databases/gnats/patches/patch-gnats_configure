@@ -1,6 +1,7 @@
-$NetBSD: patch-gnats_configure,v 1.1 2013/03/24 17:04:02 joerg Exp $
+$NetBSD: patch-gnats_configure,v 1.2 2013/12/01 23:27:11 bsiegert Exp $
 
---- gnats/configure.orig	2013-03-23 15:01:13.000000000 +0000
+Fix detection of unsetenv on MirBSD.
+--- gnats/configure.orig	Sun Mar  6 20:38:26 2005
 +++ gnats/configure
 @@ -4005,12 +4005,12 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
@@ -17,3 +18,12 @@ $NetBSD: patch-gnats_configure,v 1.1 2013/03/24 17:04:02 joerg Exp $
    ;
    return 0;
  }
+@@ -4979,7 +4979,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "\<unsetenv\>" >/dev/null 2>&1; then
++  $EGREP "unsetenv" >/dev/null 2>&1; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_DECL_UNSETENV 1
