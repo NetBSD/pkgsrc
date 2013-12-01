@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4300 2013/12/01 12:00:48 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4301 2013/12/01 20:18:56 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6256,3 +6256,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/p5-Mojolicious to 4.58 [wiz 2013-12-01]
 	Added x11/gtk-mac-integration version 2.0.5 [adam 2013-12-01]
 	Updated graphics/gimp to 2.8.10 [adam 2013-12-01]
+	Updated net/tinc to 1.0.23 [tonnerre 2013-12-01]
