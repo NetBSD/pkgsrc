@@ -1,10 +1,10 @@
-$NetBSD: patch-auth.c,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-auth.c,v 1.2 2013/12/01 06:11:41 taca Exp $
 
 Replace uid 0 with ROOTUID macro
 
---- auth.c.orig	2013-03-12 00:31:05.000000000 +0000
+--- auth.c.orig	2013-06-01 21:41:51.000000000 +0000
 +++ auth.c
-@@ -385,7 +385,7 @@ check_key_in_hostfiles(struct passwd *pw
+@@ -407,7 +407,7 @@ check_key_in_hostfiles(struct passwd *pw
  		user_hostfile = tilde_expand_filename(userfile, pw->pw_uid);
  		if (options.strict_modes &&
  		    (stat(user_hostfile, &st) == 0) &&

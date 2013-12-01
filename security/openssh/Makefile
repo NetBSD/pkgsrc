@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.213 2013/07/12 10:45:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.214 2013/12/01 06:11:41 taca Exp $
 
-DISTNAME=		openssh-6.2p1
-PKGNAME=		openssh-6.2.1
-PKGREVISION=		2
+DISTNAME=		openssh-6.4p1
+PKGNAME=		openssh-6.4.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \

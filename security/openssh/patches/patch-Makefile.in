@@ -1,24 +1,27 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/12/01 06:11:41 taca Exp $
 
 Removed install-sysconf as we handle that phase through post-install
 
---- Makefile.in.orig	2013-03-07 15:37:13.000000000 +0000
+--- Makefile.in.orig	2013-06-11 01:26:10.000000000 +0000
 +++ Makefile.in
-@@ -22,7 +22,7 @@ top_srcdir=@top_srcdir@
- DESTDIR=
+@@ -2,5 +2,5 @@
+ 
+ # uncomment if you run a non bourne compatable shell. Ie. csh
+-#SHELL = @SH@
++SHELL = @SH@
+ 
+ AUTORECONF=autoreconf
+@@ -23,5 +23,5 @@ DESTDIR=
  VPATH=@srcdir@
  SSH_PROGRAM=@bindir@/ssh
 -ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
 +#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
- SSH_PKCS11_HELPER=$(libexecdir)/ssh-pkcs11-helper
-@@ -242,7 +242,7 @@ distprep: catman-do
- 	-rm -rf autom4te.cache
+@@ -246,5 +246,5 @@ distprep: catman-do
  
  install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
 -install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf
 +install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  install-nosysconf: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  
- check-config:

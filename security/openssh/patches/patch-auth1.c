@@ -1,10 +1,10 @@
-$NetBSD: patch-auth1.c,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-auth1.c,v 1.2 2013/12/01 06:11:41 taca Exp $
 
 Replace uid 0 with ROOTUID macro
 
---- auth1.c.orig	2012-12-02 22:53:20.000000000 +0000
+--- auth1.c.orig	2013-06-01 22:01:24.000000000 +0000
 +++ auth1.c
-@@ -321,7 +321,7 @@ do_authloop(Authctxt *authctxt)
+@@ -319,7 +319,7 @@ do_authloop(Authctxt *authctxt)
  
  #ifndef HAVE_CYGWIN
  		/* Special handling for root */
@@ -13,7 +13,7 @@ Replace uid 0 with ROOTUID macro
  		    !auth_root_allowed(meth->name)) {
   			authenticated = 0;
  # ifdef SSH_AUDIT_EVENTS
-@@ -425,8 +425,8 @@ do_authentication(Authctxt *authctxt)
+@@ -420,8 +420,8 @@ do_authentication(Authctxt *authctxt)
  	 * If we are not running as root, the user must have the same uid as
  	 * the server.
  	 */
