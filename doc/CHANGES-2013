@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4294 2013/12/01 08:45:56 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4295 2013/12/01 09:02:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6248,3 +6248,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/openssh to 6.4.1 [taca 2013-12-01]
 	Updated devel/p5-Tie-RefHash to 1.39 [wiz 2013-12-01]
 	Updated devel/p5-Term-Cap to 1.15 [wiz 2013-12-01]
+	Removed devel/p5-IO [wiz 2013-12-01]
