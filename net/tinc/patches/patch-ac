@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2011/02/13 00:20:24 rumko Exp $
+$NetBSD: patch-ac,v 1.2 2013/12/01 20:18:29 tonnerre Exp $
 
 DragonFly BSD support (see https://github.com/gsliepen/tinc/pull/1)
 
 --- config.h.in.orig	2010-04-11 19:49:08 +0200
 +++ config.h.in
-@@ -167,9 +167,15 @@
+@@ -163,9 +163,15 @@
  /* Define to 1 if you have the <net/if_tap.h> header file. */
  #undef HAVE_NET_IF_TAP_H
  
