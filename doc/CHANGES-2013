@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4296 2013/12/01 09:06:03 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4297 2013/12/01 09:51:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6250,3 +6250,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Term-Cap to 1.15 [wiz 2013-12-01]
 	Removed devel/p5-IO [wiz 2013-12-01]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.84 [wiz 2013-12-01]
+	Updated devel/apr to 1.5.0 [ryoon 2013-12-01]
+	Updated devel/apr-util to 1.5.3 [ryoon 2013-12-01]
