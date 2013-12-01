@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/23 03:55:33 abs Exp $
+$NetBSD: distinfo,v 1.2 2013/12/01 08:41:43 wiz Exp $
 
-SHA1 (Tie-RefHash-1.38.tar.gz) = 66433ba7ff0529908d6f1053ef611a5c952e777f
-RMD160 (Tie-RefHash-1.38.tar.gz) = 8f4b2534b353ea9524f09d14c4df7827c5084ea8
-Size (Tie-RefHash-1.38.tar.gz) = 7736 bytes
+SHA1 (Tie-RefHash-1.39.tar.gz) = 691c86cd04254dc3b77cfe614d7f38336adccac8
+RMD160 (Tie-RefHash-1.39.tar.gz) = ee3c957e9ff72e6d1cbfb03e182e2f9bcdaa7d80
+Size (Tie-RefHash-1.39.tar.gz) = 7950 bytes
