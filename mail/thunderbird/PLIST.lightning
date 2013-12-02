@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.17 2013/11/29 17:17:25 wiz Exp $
+@comment $NetBSD: PLIST.lightning,v 1.18 2013/12/02 15:01:04 richard Exp $
 include/thunderbird/AbstractMediaDecoder.h
 include/thunderbird/AccEvent.h
 include/thunderbird/AnimationCommon.h
@@ -538,6 +538,7 @@ include/thunderbird/mozilla/a11y/DocManager.h
 include/thunderbird/mozilla/a11y/FocusManager.h
 include/thunderbird/mozilla/a11y/HyperTextAccessible.h
 include/thunderbird/mozilla/a11y/HyperTextAccessibleWrap.h
+${PLIST.debug}include/thunderbird/mozilla/a11y/Logging.h
 include/thunderbird/mozilla/a11y/Platform.h
 include/thunderbird/mozilla/a11y/Role.h
 include/thunderbird/mozilla/a11y/SelectionManager.h
@@ -3511,6 +3512,7 @@ include/thunderbird/prplIPref.h
 include/thunderbird/prplIProtocol.h
 include/thunderbird/prplIRequest.h
 include/thunderbird/prplITooltipInfo.h
+${PLIST.debug}include/thunderbird/pure.h
 include/thunderbird/qcms.h
 include/thunderbird/qcmstypes.h
 include/thunderbird/qsObjectHelper.h
@@ -3675,7 +3677,6 @@ include/thunderbird/theora/codec.h
 include/thunderbird/theora/theora.h
 include/thunderbird/theora/theoradec.h
 include/thunderbird/theora/theoraenc.h
-include/thunderbird/tremor/ivorbiscodec.h
 include/thunderbird/txIEXSLTRegExFunctions.h
 include/thunderbird/txIFunctionEvaluationContext.h
 include/thunderbird/txINodeSet.h
@@ -3683,6 +3684,7 @@ include/thunderbird/txIXPathObject.h
 include/thunderbird/uconvutil.h
 include/thunderbird/updatedefines.h
 include/thunderbird/updatelogging.h
+include/thunderbird/vorbis/codec.h
 include/thunderbird/webvtt/cue.h
 include/thunderbird/webvtt/error.h
 include/thunderbird/webvtt/node.h

@@ -15,3 +15,15 @@ index 6bae7d6..b6815f8 100644
  
  ifeq ($(OS_ARCH),FreeBSD)
  LDFLAGS += -shared -Wl,-Bsymbolic
+@@ -33,6 +31,11 @@ ifeq ($(OS_ARCH),OpenBSD)
+ LDFLAGS += -shared -Wl,-Bsymbolic
+ CFLAGS += -fPIC
+ endif
++
++ifeq ($(OS_ARCH),SunOS)
++LDFLAGS += -shared -Wl,-Bsymbolic
++CFLAGS += -fPIC
++endif
+ 
+ ifeq ($(OS_ARCH),HP-UX)
+ ifeq ($(GNU_CC)$(GNU_CXX),)
