@@ -1,3 +1,0 @@
-ExtUtils::Embed provides utility functions for embedding a Perl interpreter and
-extensions in your C/C++ applications. Typically, an application Makefile will
-invoke ExtUtils::Embed functions while building your application.
