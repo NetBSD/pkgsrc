@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4320 2013/12/02 19:02:43 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4321 2013/12/02 19:17:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6276,3 +6276,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/thunderbird to 24.1.1 [richard 2013-12-02]
 	Updated devel/mercurial to 2.8.1 [wiz 2013-12-02]
 	Updated editors/emacs-snapshot to 24.3.50.20131126 [minskim 2013-12-02]
+	Removed print/tex-collection-documentation-base-doc [minskim 2013-12-02]
