@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2013/04/13 17:51:57 riz Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/02 22:54:46 hubertf Exp $
 #
 
-DISTNAME=	ansible-1.1
+DISTNAME=	ansible-1.4.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://ansible.cc/releases/
+MASTER_SITES=	http://ansibleworks.com/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ansible.cc/
+HOMEPAGE=	http://ansibleworks.com/
 COMMENT=	SSH-based configuration management, deployment, and task execution
 LICENSE=	gnu-gpl-v3
 
@@ -17,8 +17,6 @@ USE_TOOLS+=	gmake
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	docs/man/man1/ansible-playbook.1
-SUBST_FILES.prefix+=	docs/man/man1/ansible.1
 SUBST_FILES.prefix+=	examples/ansible.cfg
 SUBST_FILES.prefix+=	lib/ansible/constants.py
 SUBST_SED.prefix=	-e "s,@PREFIX@,${PREFIX},"
@@ -28,13 +26,8 @@ SUBST_CLASSES+=		localbase
 SUBST_STAGE.localbase=	pre-configure
 SUBST_FILES.localbase=	\
 			lib/ansible/callbacks.py \
-			library/mysql_db \
-			library/ping \
-			library/pkgin \
-			library/raw \
-			library/setup \
-			library/slurp \
-			library/virt
+			library/packaging/pkgin \
+			library/system/setup
 SUBST_SED.localbase=	-e "s,@LOCALBASE@,${LOCALBASE},"
 
 SUBST_CLASSES+=		pythonbin
@@ -66,16 +59,6 @@ post-install:
 .for f in ansible.cfg hosts
 	${INSTALL_DATA} ${WRKSRC}/examples/${f} \
 	    ${DESTDIR}/${EGDIR}
-.endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}/playbooks
-	for f in ${WRKSRC}/examples/playbooks/*.yml; do \
-		${INSTALL_DATA} $$f ${DESTDIR}/${EGDIR}/playbooks; \
-	done
-.for f in filter_plugins handlers tasks templates vars
-	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}/playbooks/${f}
-	for g in ${WRKSRC}/examples/playbooks/${f}/*; do \
-	    ${INSTALL_DATA} $$g ${DESTDIR}/${EGDIR}/playbooks/${f}; \
-	done
 .endfor
 
 .include "../../lang/python/application.mk"

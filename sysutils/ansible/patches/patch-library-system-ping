@@ -1,0 +1,13 @@
+$NetBSD: patch-library-system-ping,v 1.1 2013/12/02 22:54:46 hubertf Exp $
+
+--- library/system/ping.orig	2013-11-19 19:12:32.000000000 +0000
++++ library/system/ping
+@@ -27,7 +27,7 @@ short_description: Try to connect to hos
+ description:
+    - A trivial test module, this module always returns C(pong) on successful
+      contact. It does not make sense in playbooks, but it is useful from
+-     C(/usr/bin/ansible)
++     C(@PREFIX@/ansible)
+ options: {}
+ author: Michael DeHaan
+ '''

@@ -1,8 +1,8 @@
-$NetBSD: patch-library_pkgin,v 1.2 2013/04/13 17:51:57 riz Exp $
+$NetBSD: patch-library_packaging_pkgin,v 1.1 2013/12/02 22:54:46 hubertf Exp $
 
---- library/pkgin.orig	2013-03-30 16:29:28.000000000 -0700
-+++ library/pkgin	2013-04-13 09:36:29.000000000 -0700
-@@ -118,7 +118,7 @@
+--- library//packaging/pkgin.orig	2013-08-22 02:50:24.000000000 +0000
++++ library//packaging/pkgin
+@@ -150,7 +150,7 @@ def main():
                  state        = dict(default="present", choices=["present","absent"]),
                  name         = dict(aliases=["pkg"], required=True)))
  
