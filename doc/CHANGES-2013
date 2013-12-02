@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4325 2013/12/02 19:48:40 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4326 2013/12/02 20:08:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6284,3 +6284,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-collection-genericrecommended to 2013 [minskim 2013-12-02]
 	Updated print/tex-collection-genericrecommended-doc to 2013 [minskim 2013-12-02]
 	Updated finance/tex-euro-doc to 1.1pl22191 [minskim 2013-12-02]
+	Updated archivers/lhasa to 0.2.0 [adam 2013-12-02]
