@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/07/11 20:47:57 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/02 19:29:04 minskim Exp $
 
 DISTNAME=	ulem.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010.21840
-TEXLIVE_REV=	21840
+PKGNAME=	tex-${DISTNAME:S/./-/}-2013
+TEXLIVE_REV=	26785
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-ulem
