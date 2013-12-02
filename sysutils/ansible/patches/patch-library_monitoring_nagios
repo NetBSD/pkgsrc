@@ -1,0 +1,31 @@
+$NetBSD: patch-library_monitoring_nagios,v 1.1 2013/12/02 22:54:46 hubertf Exp $
+
+--- library/monitoring/nagios.orig	2013-08-22 02:50:24.000000000 +0000
++++ library/monitoring/nagios
+@@ -125,6 +125,8 @@ import os.path
+ 
+ def which_cmdfile():
+     locations = [
++        # pkgsrc - any OS
++        '@PKG_SYSCONFDIR@/nagios/nagios.cfg',
+         # rhel
+         '/etc/nagios/nagios.cfg',
+         # debian
+@@ -132,7 +134,7 @@ def which_cmdfile():
+         # older debian
+         '/etc/nagios2/nagios.cfg',
+         # bsd, solaris
+-        '/usr/local/etc/nagios/nagios.cfg',
++        '/etc/nagios/nagios.cfg',
+         # groundwork it monitoring
+         '/usr/local/groundwork/nagios/etc/nagios.cfg',
+         # open monitoring distribution
+@@ -142,6 +144,8 @@ def which_cmdfile():
+         '/usr/local/nagios/nagios.cfg',
+         '/opt/nagios/etc/nagios.cfg',
+         '/opt/nagios/nagios.cfg',
++        # pkgsrc - any OS
++        '@PKG_SYSCONFDIR@/icinga/icinga.cfg',
+         # icinga on debian/ubuntu
+         '/etc/icinga/icinga.cfg',
+         # icinga installed from source (default location)
