@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2013/10/12 20:39:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2013/12/02 23:08:55 bsiegert Exp $
 #
 # used by databases/postgresql91-adminpack/Makefile
 # used by databases/postgresql91-client/Makefile
@@ -52,6 +52,7 @@ PKG_SYSCONFSUBDIR=	postgresql
 
 PG_TEMPLATE.SunOS=	solaris
 PG_TEMPLATE.IRIX=	irix5
+PG_TEMPLATE.MirBSD=	openbsd
 .if !defined(PG_TEMPLATE.${OPSYS})
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
@@ -79,6 +80,11 @@ CONFIGURE_ARGS+=	--without-zlib
 # procfs and largefile.
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		ac_cv_header_sys_ucred_h=no
+.endif
+
+# configure fails on OpenBSD and MirBSD if thread safety is enabled.
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
+CONFIGURE_ARGS+=	--disable-thread-safety
 .endif
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
