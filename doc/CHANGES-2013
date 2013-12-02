@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4307 2013/12/02 12:33:05 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4308 2013/12/02 12:43:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6263,3 +6263,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-constant to 1.27 [wiz 2013-12-02]
 	Updated misc/p5-Locale-Codes to 3.27 [wiz 2013-12-02]
 	Removed misc/p5-I18N-LangTags [wiz 2013-12-02]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.12 [wiz 2013-12-02]
