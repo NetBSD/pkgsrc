@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/03 10:08:25 adam Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/02 08:08:01 adam Exp $
 
-DISTNAME=	squidanalyzer-5.2
+DISTNAME=	squidanalyzer-5.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squid-report/}
 
@@ -15,6 +15,7 @@ USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		squid-analyzer
 
+BUILD_DEFS+=		VARBASE
 PERL5_PACKLIST=		auto/SquidAnalyzer/.packlist
 MAKE_PARAMS+=		BINDIR=${PREFIX}/bin
 MAKE_PARAMS+=		CONFDIR=${EGDIR}
