@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.131 2013/11/29 17:41:08 wiz Exp $
+$NetBSD: distinfo,v 1.132 2013/12/02 15:01:04 richard Exp $
 
 SHA1 (enigmail-1.6.tar.gz) = 51a7eb7d86ce24d8199f741a0079f0d56ecd6368
 RMD160 (enigmail-1.6.tar.gz) = a854bb37a6a7f298f6cc268110dcb21d00909fa4
 Size (enigmail-1.6.tar.gz) = 1231111 bytes
-SHA1 (thunderbird-24.1.0.source.tar.bz2) = 7e7f8837daff087dab8aea58495952bf80b2cb39
-RMD160 (thunderbird-24.1.0.source.tar.bz2) = 35fae89f8a86359bc63f168a6d314e843c43d209
-Size (thunderbird-24.1.0.source.tar.bz2) = 140336934 bytes
+SHA1 (thunderbird-24.1.1.source.tar.bz2) = db75336cbeef823b334b3bfc5176bbfa5acb70d6
+RMD160 (thunderbird-24.1.1.source.tar.bz2) = 6ad0f6342d4ae074766efd6a973898726e56be8a
+Size (thunderbird-24.1.1.source.tar.bz2) = 140346889 bytes
 SHA1 (patch-aa) = 0ed482fc1d015afcb4813d74ac602acbe875aa6e
 SHA1 (patch-ak) = b47277baa1137a7610445b7c4dd147b331d5c5e6
 SHA1 (patch-al) = 9970e89e92ff8b120119b560cb661eabd3a387de
@@ -27,6 +27,7 @@ SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = cb54ccc3bd5ff050e89a8e5
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 7e5f6e195884d7fc629c10aefe13dba768001daf
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = d484fabb24e9ebf14c64675d7cf3c3e6972b5790
 SHA1 (patch-ldap_sdks_c-sdk_build.mk) = 171d81697d136abb6e02cb81445cd88fd8580de2
+SHA1 (patch-mail_installer_package-manifest.in) = 9f79382d6e17a839d3ba90dab4f657a80340141a
 SHA1 (patch-mail_installer_removed-files.in) = 26d69b9b8747f25130af75ea057cf2abc615bfff
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 7ec5d09a1e329a3a7c13e6bbf654b591a4d65422
 SHA1 (patch-mb) = 9ee926289c0ad6d125dd5337f0a4dc515f91dc23
