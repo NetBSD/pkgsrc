@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/04 19:11:11 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/02 19:47:56 minskim Exp $
 
 DISTNAME=	euro
 PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	22191
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Provide Euro values for national currency amounts
