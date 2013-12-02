@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2013/11/18 19:11:40 minskim Exp $
+# $NetBSD: Makefile,v 1.571 2013/12/02 19:15:51 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -273,7 +273,6 @@ SUBDIR+=	tex-clrscode
 SUBDIR+=	tex-clrscode-doc
 SUBDIR+=	tex-collection-basic
 SUBDIR+=	tex-collection-basic-doc
-SUBDIR+=	tex-collection-documentation-base-doc
 SUBDIR+=	tex-collection-genericrecommended
 SUBDIR+=	tex-collection-genericrecommended-doc
 SUBDIR+=	tex-collection-latex
