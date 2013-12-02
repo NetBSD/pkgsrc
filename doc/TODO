@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12752 2013/12/01 20:18:56 tonnerre Exp $
+$NetBSD: TODO,v 1.12753 2013/12/02 00:17:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -614,6 +614,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnuchess-6.1.1
+	o gnumeric112-1.12.9
 	o gob-2.0.19
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -891,6 +892,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o popa3d-1.0.3
 	o poppass-4.0.14
+	o poppler-0.24.4
 	o postal-0.72
 	o postgresql-postgis-2.1.0
 	o powermanga-0.91
@@ -930,6 +932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o radiance-3.7.2
 	o rails-4.0.1
 	o raine-0.61.1
+	o raptor2-2.0.11
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdesktop-1.8.1
@@ -1109,7 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20131116
+	o x264-devel-20131130
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
