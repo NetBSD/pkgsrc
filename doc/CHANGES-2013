@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4303 2013/12/02 10:11:48 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4304 2013/12/02 12:05:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6259,3 +6259,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/tinc to 1.0.23 [tonnerre 2013-12-01]
 	Updated www/squidanalyzer to 5.3 [adam 2013-12-02]
 	Updated emulators/realboy to 0.2 [wiz 2013-12-02]
+	Updated devel/p5-IPC-Cmd to 0.90 [wiz 2013-12-02]
