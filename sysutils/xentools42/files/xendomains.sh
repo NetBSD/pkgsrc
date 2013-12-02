@@ -1,7 +1,7 @@
 #!@RCD_SCRIPTS_SHELL@
 #
 # PROVIDE: xendomains
-# REQUIRE: xend
+# REQUIRE: xencommons
 # KEYWORD: shutdown
 #
 # xendomains		This required variable is a whitespace-separated
