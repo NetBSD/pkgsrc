@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 16:15:07 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/02 19:22:46 minskim Exp $
 
 DISTNAME=	path.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.03b
-TEXLIVE_REV=	19866
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.05
+TEXLIVE_REV=	22045
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-path
