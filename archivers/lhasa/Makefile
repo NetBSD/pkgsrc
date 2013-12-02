@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2013/05/08 17:40:30 shattered Exp $
-#
+# $NetBSD: Makefile,v 1.6 2013/12/02 20:08:06 adam Exp $
 
-DISTNAME=	lhasa-0.1.0
+DISTNAME=	lhasa-0.2.0
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.soulsphere.org/projects/lhasa/
+MASTER_SITES=	https://soulsphere.org/projects/lhasa/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fragglet.github.com/lhasa/
 COMMENT=	Freely licensed lha archiving tool (for .lzh and .lha files)
 LICENSE=	isc
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-TEST_TARGET=	check
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	liblhasa.pc.in
+TEST_TARGET=		check
 
-CONFLICTS=	lha-[0-9]*
-
-PKGCONFIG_OVERRIDE=  liblhasa.pc.in
+CONFLICTS=		lha-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
