@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/02 19:14:02 minskim Exp $
 
 DISTNAME=	bulk-large-20130223
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -124,7 +124,6 @@ BUILD_DEPENDS+=	teTeX-bin>=3:../../print/teTeX3-bin
 BUILD_DEPENDS+=	teTeX-texmf>=3:../../print/teTeX3-texmf
 BUILD_DEPENDS+=	tex-collection-basic-[0-9]*:../../print/tex-collection-basic
 BUILD_DEPENDS+=	tex-collection-basic-doc-[0-9]*:../../print/tex-collection-basic-doc
-BUILD_DEPENDS+=	tex-collection-documentation-base-doc-[0-9]*:../../print/tex-collection-documentation-base-doc
 BUILD_DEPENDS+=	tex-collection-genericrecommended-[0-9]*:../../print/tex-collection-genericrecommended
 BUILD_DEPENDS+=	tex-collection-genericrecommended-doc-[0-9]*:../../print/tex-collection-genericrecommended-doc
 BUILD_DEPENDS+=	tex-collection-latex-[0-9]*:../../print/tex-collection-latex
