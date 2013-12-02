@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/16 18:14:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/02 19:36:06 minskim Exp $
 
 DISTNAME=	collection-genericrecommended-doc
-PKGNAME=	tex-${DISTNAME}-2010
+PKGNAME=	tex-${DISTNAME}-2013
 CATEGORIES=	print
 MASTER_SITES=	# empty
-TEXLIVE_REV=	19849
+TEXLIVE_REV=	30396
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
