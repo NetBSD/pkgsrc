@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/01 23:51:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/02 22:36:44 bsiegert Exp $
 
 PKGNAME=	${DISTNAME:C/-/93-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -33,10 +33,6 @@ CONFIGURE_ARGS+=	--enable-thread-safety
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-thread-safety
-.endif
-
-.if ${OPSYS} == "MirBSD"
-CONFIGURE_ARGS+=	--with-template=openbsd
 .endif
 
 INSTALL_DIRS=	src/include
