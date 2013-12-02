@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/04 19:13:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/02 19:47:56 minskim Exp $
+share/texmf-dist/doc/latex/euro/Makefile
 share/texmf-dist/doc/latex/euro/euro.pdf
 share/texmf-dist/doc/latex/euro/euro.txt
