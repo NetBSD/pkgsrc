@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4322 2013/12/02 19:24:12 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4323 2013/12/02 19:31:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6279,3 +6279,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed print/tex-collection-documentation-base-doc [minskim 2013-12-02]
 	Updated print/tex-path to 3.05 [minskim 2013-12-02]
 	Updated print/tex-path-doc to 3.05 [minskim 2013-12-02]
+	Updated print/tex-ulem to 2013 [minskim 2013-12-02]
+	Updated print/tex-ulem-doc to 2013 [minskim 2013-12-02]
