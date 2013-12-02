@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4301 2013/12/01 20:18:56 tonnerre Exp $
+$NetBSD: CHANGES-2013,v 1.4302 2013/12/02 08:08:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6257,3 +6257,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added x11/gtk-mac-integration version 2.0.5 [adam 2013-12-01]
 	Updated graphics/gimp to 2.8.10 [adam 2013-12-01]
 	Updated net/tinc to 1.0.23 [tonnerre 2013-12-01]
+	Updated www/squidanalyzer to 5.3 [adam 2013-12-02]
