@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4317 2013/12/02 13:34:54 mef Exp $
+$NetBSD: CHANGES-2013,v 1.4318 2013/12/02 15:02:11 richard Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6273,3 +6273,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Module-Load to 0.24 [wiz 2013-12-02]
 	Removed devel/p5-Tie-File [wiz 2013-12-02]
 	Updated editors/texmaker to 4.1 [mef 2013-12-02]
+	Updated mail/thunderbird to 24.1.1 [richard 2013-12-02]
