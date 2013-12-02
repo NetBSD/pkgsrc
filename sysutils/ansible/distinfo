@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.4 2013/04/13 17:51:57 riz Exp $
+$NetBSD: distinfo,v 1.5 2013/12/02 22:54:46 hubertf Exp $
 
-SHA1 (ansible-1.1.tar.gz) = fa1009e80b624945675bbaba690b895a1ff050fd
-RMD160 (ansible-1.1.tar.gz) = 220dd91db3ab0d6df5dec456448e22d436077f3d
-Size (ansible-1.1.tar.gz) = 302115 bytes
-SHA1 (patch-docs_man_man1_ansible-playbook.1) = 33ce57bccb6cb29e978871a868bf26ca17d87660
-SHA1 (patch-docs_man_man1_ansible.1) = 266a520f8f227686cc84b8a3e9b6fac8e20e1247
-SHA1 (patch-examples_ansible.cfg) = 631236fadaadfd28d71b7bc7cce33e62691ee407
-SHA1 (patch-lib_ansible_callbacks.py) = 607809cf64a676ef91a70b915e97ac87b8ddd31b
-SHA1 (patch-lib_ansible_constants.py) = 51171c84680b18a2d1ff2401cc1fd08e009aa83c
-SHA1 (patch-library_mysql_db) = 45e782d41c3e2bc9e462441205f894e7089d798a
-SHA1 (patch-library_ping) = 6bb9b946df3a44ac938eee7e752bf2149936b8e6
-SHA1 (patch-library_pkgin) = 4b57890efa9145c0b2b68c2c75c990618488d824
-SHA1 (patch-library_raw) = 897aa5b8e5abadd23adc6de178cbec417c43e540
-SHA1 (patch-library_setup) = 7489a5c905916cc1559db15b730a1a93cb782971
-SHA1 (patch-library_slurp) = 54a021519554c3eb95daf9396c32d6ec559ddab8
-SHA1 (patch-library_virt) = b01c7b2d7cd49ad7720d3a1430d7bba41673d2a6
+SHA1 (ansible-1.4.1.tar.gz) = 670fda6b9c4869820d80c6e873604ec759dfa03c
+RMD160 (ansible-1.4.1.tar.gz) = c1d2248244d6799e8ea79e5bfb3e96579c066594
+Size (ansible-1.4.1.tar.gz) = 571296 bytes
+SHA1 (patch-examples_ansible.cfg) = 2a2e3841735df3bddeb6e569e2fdc659ae305053
+SHA1 (patch-lib_ansible_callbacks.py) = bbede537853ab35f31727b72cda41835c7700074
+SHA1 (patch-lib_ansible_constants.py) = eb9379937555b28f8b0f7932d54042432197c59d
+SHA1 (patch-library-system-ping) = 74f4df32948d9a52998420a01f38828dd00c31b6
+SHA1 (patch-library_database_riak) = 7efb167fd9a0e2bd9c7ac5fad3b426c1aa6d5272
+SHA1 (patch-library_monitoring_nagios) = a677946b5c83bab4c3fa3c8d078b28d8abdd7030
+SHA1 (patch-library_packaging_pkgin) = 247f583e3be5cd28462cd274d640ac44652fac50
+SHA1 (patch-library_system_setup) = d87259d0585f750b8f7baf43cc4254138bbbcf72
