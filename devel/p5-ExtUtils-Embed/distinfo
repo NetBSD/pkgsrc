@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 10:45:15 dmcmahill Exp $
-
-SHA1 (ExtUtils-Embed-1.14.tar.gz) = ae69124eecd5aaeb36748c535637f227b2c74ecd
-RMD160 (ExtUtils-Embed-1.14.tar.gz) = 9ed9337fb5d35ca1aa30a738ed7ec582318ce081
-Size (ExtUtils-Embed-1.14.tar.gz) = 20117 bytes
