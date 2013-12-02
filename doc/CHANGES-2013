@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4311 2013/12/02 12:59:09 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4312 2013/12/02 13:01:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-AutoLoader to 5.74 [wiz 2013-12-02]
 	Updated devel/p5-File-Path to 2.09 [wiz 2013-12-02]
 	Removed devel/p5-Attribute-Handlers [wiz 2013-12-02]
+	Removed devel/p5-ExtUtils-Embed [wiz 2013-12-02]
