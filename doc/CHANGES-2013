@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4302 2013/12/02 08:08:54 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4303 2013/12/02 10:11:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6258,3 +6258,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/gimp to 2.8.10 [adam 2013-12-01]
 	Updated net/tinc to 1.0.23 [tonnerre 2013-12-01]
 	Updated www/squidanalyzer to 5.3 [adam 2013-12-02]
+	Updated emulators/realboy to 0.2 [wiz 2013-12-02]
