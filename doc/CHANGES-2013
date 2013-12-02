@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4326 2013/12/02 20:08:53 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4327 2013/12/02 22:55:17 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6285,3 +6285,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-collection-genericrecommended-doc to 2013 [minskim 2013-12-02]
 	Updated finance/tex-euro-doc to 1.1pl22191 [minskim 2013-12-02]
 	Updated archivers/lhasa to 0.2.0 [adam 2013-12-02]
+	Updated sysutils/ansible to 1.4.1 [hubertf 2013-12-02]

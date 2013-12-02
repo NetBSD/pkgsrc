@@ -1,0 +1,22 @@
+$NetBSD: patch-library_system_setup,v 1.1 2013/12/02 22:54:46 hubertf Exp $
+
+--- library/system/setup.orig	2013-11-19 19:12:32.000000000 +0000
++++ library/system/setup
+@@ -58,7 +58,7 @@ options:
+ description:
+      - This module is automatically called by playbooks to gather useful
+        variables about remote hosts that can be used in playbooks. It can also be
+-       executed directly by C(/usr/bin/ansible) to check what variables are
++       executed directly by C(@LOCALBASE@/bin/ansible) to check what variables are
+        available to a host. Ansible provides many I(facts) about the system,
+        automatically.
+ notes:
+@@ -129,7 +129,7 @@ class Facts(object):
+                  { 'path' : '/usr/sbin/urpmi',      'name' : 'urpmi' },
+                  { 'path' : '/usr/bin/pacman',      'name' : 'pacman' },
+                  { 'path' : '/bin/opkg',            'name' : 'opkg' },
+-                 { 'path' : '/opt/local/bin/pkgin', 'name' : 'pkgin' },
++                 { 'path' : '@LOCALBASE@/bin/pkgin', 'name' : 'pkgin' },
+                  { 'path' : '/opt/local/bin/port',  'name' : 'macports' },
+                  { 'path' : '/sbin/apk',            'name' : 'apk' },
+                  { 'path' : '/usr/sbin/pkg',        'name' : 'pkgng' },
