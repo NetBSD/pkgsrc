@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/12/02 22:26:22 asau Exp $
+
+smartd warning emails
+---------------------
+
+Since smartmontools release 6.1, smartd runs ${PKG_SYSCONFDIR}/smartd_warning.sh
+to generate warning emails.  If requested, it will also run executable
+plugin scripts from ${PKG_SYSCONFDIR}/smartd_warning.d.
+
+===========================================================================
