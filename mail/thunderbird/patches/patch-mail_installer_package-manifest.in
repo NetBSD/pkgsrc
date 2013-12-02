@@ -1,0 +1,13 @@
+$NetBSD: patch-mail_installer_package-manifest.in,v 1.1 2013/12/02 15:01:04 richard Exp $
+
+--- mail/installer/package-manifest.in.orig	2013-11-18 16:43:05.000000000 +0000
++++ mail/installer/package-manifest.in
+@@ -673,7 +673,7 @@
+ @BINPATH@/components/pippki.xpt
+ 
+ ; for Solaris SPARC
+-#ifdef SOLARIS
++#if defined(SOLARIS) && defined(SPARC)
+ @BINPATH@/@DLL_PREFIX@freebl_32fpu_3@DLL_SUFFIX@
+ @BINPATH@/@DLL_PREFIX@freebl_32int_3@DLL_SUFFIX@
+ @BINPATH@/@DLL_PREFIX@freebl_32int64_3@DLL_SUFFIX@
