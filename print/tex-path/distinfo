@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 16:14:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2013/12/02 19:22:46 minskim Exp $
 
-SHA1 (tex-path-19866/path.tar.xz) = 803ba8b455915d687960d22463cbf2542e1a9889
-RMD160 (tex-path-19866/path.tar.xz) = c3fd293924b9abd017a02e3e252553644e406d8d
-Size (tex-path-19866/path.tar.xz) = 5100 bytes
+SHA1 (tex-path-22045/path.tar.xz) = 53b1a7d8ccd995ed3dff53c7eb5bdfdbcfe4a6d9
+RMD160 (tex-path-22045/path.tar.xz) = 2fc4b7e69f2b5a6808bd9a05cd775e521300f117
+Size (tex-path-22045/path.tar.xz) = 5400 bytes
