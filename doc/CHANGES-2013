@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4318 2013/12/02 15:02:11 richard Exp $
+$NetBSD: CHANGES-2013,v 1.4319 2013/12/02 16:38:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6274,3 +6274,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed devel/p5-Tie-File [wiz 2013-12-02]
 	Updated editors/texmaker to 4.1 [mef 2013-12-02]
 	Updated mail/thunderbird to 24.1.1 [richard 2013-12-02]
+	Updated devel/mercurial to 2.8.1 [wiz 2013-12-02]
