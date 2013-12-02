@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12754 2013/12/02 13:34:54 mef Exp $
+$NetBSD: TODO,v 1.12755 2013/12/02 15:02:11 richard Exp $
 
 Suggested new packages
 ======================
@@ -1043,7 +1043,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texlive-2012
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
-	o thunderbird-24.1.1
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tk-8.6 [it is incompatible with ruby-tk]
