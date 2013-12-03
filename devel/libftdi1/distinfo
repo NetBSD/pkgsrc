@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/12/03 01:40:14 mef Exp $
+
+SHA1 (libftdi1-1.0.tar.bz2) = 5be76cfd7cd36c5291054638f7caf4137303386f
+RMD160 (libftdi1-1.0.tar.bz2) = 288ca78807455be6c2625a98cc5b313638d7a903
+Size (libftdi1-1.0.tar.bz2) = 97072 bytes
+SHA1 (patch-CMakeLists.txt) = 1497a7e688071cd3c2e6e9a0747780e1d205b3c0
