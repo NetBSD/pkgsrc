@@ -1,0 +1,3 @@
+Latin Modern Math is a maths companion for the Latin Modern
+family of fonts, in OpenType format. For use with LuaLaTeX or
+XeLaTeX, support is available from the unicode-math package.
