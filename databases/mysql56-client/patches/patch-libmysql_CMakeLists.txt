@@ -1,11 +1,11 @@
-$NetBSD: patch-libmysql_CMakeLists.txt,v 1.2 2013/07/31 09:51:38 adam Exp $
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.3 2013/12/03 20:02:42 adam Exp $
 
 * Generate libmysqlclient.so.18.0.0 file and libmysqlclient_r.so.18.0.0 symlink
   on FreeBSD to supress PLIST divergence.
 
 --- libmysql/CMakeLists.txt.orig	2013-07-10 16:17:29.000000000 +0000
 +++ libmysql/CMakeLists.txt
-@@ -215,7 +215,7 @@ IF(NOT DISABLE_SHARED)
+@@ -224,7 +224,7 @@ IF(NOT DISABLE_SHARED)
      COMPONENT SharedLibraries)
    IF(UNIX)
      # libtool compatability
