@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.11 2012/07/29 22:24:32 dholland Exp $
+$NetBSD: patch-aa,v 1.12 2013/12/03 21:47:36 bsiegert Exp $
 
 Make sure the rpath gets set.
+MirBSD support.
 
---- configure.orig	2011-05-05 01:10:35.000000000 +0400
-+++ configure	2011-05-09 00:00:51.000000000 +0400
-@@ -11598,7 +11598,7 @@
+--- configure.orig	Fri Jul 19 15:14:26 2013
++++ configure
+@@ -11742,7 +11742,7 @@ fi
  
  
  GSL_CFLAGS="-I$includedir"
@@ -13,3 +14,21 @@ Make sure the rpath gets set.
  LIBM=
  case $host in
  *-*-beos* | *-*-cegcc* | *-*-cygwin* | *-*-haiku* | *-*-pw32* | *-*-darwin*)
+@@ -12344,7 +12344,7 @@ _ACEOF
+ 
+ 
+ case "$host" in
+-    *-*-*openbsd*)
++    *-*-*openbsd*|*-*-*mirbsd*)
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: avoiding OpenBSD system log1p - using gsl version" >&5
+ $as_echo "avoiding OpenBSD system log1p - using gsl version" >&6; }
+        ;;
+@@ -12494,7 +12494,7 @@ else
+     *-*-*netbsd*)
+         ac_cv_c_ieee_interface=netbsd
+         ;;
+-    *-*-*openbsd*)
++    *-*-*openbsd*|*-*-*mirbsd*)
+         ac_cv_c_ieee_interface=openbsd
+         ;;
+     *-*-*bsd*)
