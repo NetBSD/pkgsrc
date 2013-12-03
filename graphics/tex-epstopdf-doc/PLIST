@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/26 20:33:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/03 19:55:56 minskim Exp $
 man/man1/epstopdf.1
 man/man1/repstopdf.1
-share/texmf-dist/doc/latex/epstopdf/README
+share/texmf-dist/doc/support/epstopdf/README

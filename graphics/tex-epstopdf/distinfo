@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/26 20:33:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2013/12/03 19:55:56 minskim Exp $
 
-SHA1 (tex-epstopdf-19287/epstopdf.tar.xz) = 938ed63852efdf4d768a9d09314358bfee1463e1
-RMD160 (tex-epstopdf-19287/epstopdf.tar.xz) = d5933dba9c8422c9b682e65c508490258f4eac2f
-Size (tex-epstopdf-19287/epstopdf.tar.xz) = 8288 bytes
-SHA1 (patch-bin_epstopdf) = f4ca49bfd6c8b1f73ce1812c81a1a36ab0fb6d71
+SHA1 (tex-epstopdf-31789/epstopdf.tar.xz) = fef79631142b67daa87a07dfb6aa705fb0a70c59
+RMD160 (tex-epstopdf-31789/epstopdf.tar.xz) = 7e32cf118c83be517c5fb8c9114570ce4e56bcb2
+Size (tex-epstopdf-31789/epstopdf.tar.xz) = 11884 bytes
+SHA1 (patch-bin_epstopdf) = 04898c48d8dafacd0256c855c05a251983989848
