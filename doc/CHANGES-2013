@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4328 2013/12/03 01:44:44 mef Exp $
+$NetBSD: CHANGES-2013,v 1.4329 2013/12/03 02:20:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6289,3 +6289,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/libftdi1 version 1.0 [mef 2013-12-03]
 	Added devel/libconfuse version 2.7 [mef 2013-12-03]
 	Added devel/libhid version 0.2.16 [mef 2013-12-03]
+	Updated graphics/tex-dvipng-doc to 1.14 [minskim 2013-12-03]
