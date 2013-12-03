@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4329 2013/12/03 02:20:43 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4330 2013/12/03 14:09:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6290,3 +6290,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/libconfuse version 2.7 [mef 2013-12-03]
 	Added devel/libhid version 0.2.16 [mef 2013-12-03]
 	Updated graphics/tex-dvipng-doc to 1.14 [minskim 2013-12-03]
+	Updated security/mit-krb5 to 1.10.7 [adam 2013-12-03]
