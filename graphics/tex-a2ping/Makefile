@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/03 20:15:47 minskim Exp $
 
 DISTNAME=	a2ping
 PKGNAME=	tex-${DISTNAME}-2.77p
 PKGREVISION=	2
-TEXLIVE_REV=	18835
+TEXLIVE_REV=	29725
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Advanced PS, PDF, EPS converter
@@ -26,8 +26,8 @@ TEX_TEXMF_DIRS=	none
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
-	${MV} ${WRKSRC}/texmf/scripts/a2ping/a2ping.pl ${WRKSRC}/bin/a2ping
-	${RM} -r ${WRKSRC}/texmf
+	${MV} ${WRKSRC}/texmf-dist/scripts/a2ping/a2ping.pl ${WRKSRC}/bin/a2ping
+	${RM} -r ${WRKSRC}/texmf-dist
 
 pre-install:
 	${RM} ${WRKSRC}/bin/*.orig
