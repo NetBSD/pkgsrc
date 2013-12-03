@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.46 2013/10/20 17:56:02 joerg Exp $
+$NetBSD: distinfo,v 1.47 2013/12/03 14:08:53 adam Exp $
 
-SHA1 (krb5-1.10.6-signed.tar) = e998a54d9ddf64b13e839873c7e3c7a1077c4bac
-RMD160 (krb5-1.10.6-signed.tar) = ac1fb2e4096f4e8c0010678c06fd551924dbae56
-Size (krb5-1.10.6-signed.tar) = 11632640 bytes
+SHA1 (krb5-1.10.7-signed.tar) = 982087d617d0b038676bbe8030047421683d508b
+RMD160 (krb5-1.10.7-signed.tar) = 16e3a2cdeb410d84d055431679eb81851ae685e9
+Size (krb5-1.10.7-signed.tar) = 11632640 bytes
 SHA1 (patch-aa) = 941848a1773dfbe51dff3134d4b8504a850a958d
 SHA1 (patch-ad) = b56a7218007560470179dd811c84b8c690c966ac
 SHA1 (patch-ae) = c7395b9de5baf6612b8787fad55dbc051a680bfd
