@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:24:40 minskim Exp $
+$NetBSD: distinfo,v 1.4 2013/12/03 20:15:47 minskim Exp $
 
-SHA1 (tex-a2ping-18835/a2ping.doc.tar.xz) = 4b5c73967d1e77bbff30b5f6657d5df1dbd98ff7
-RMD160 (tex-a2ping-18835/a2ping.doc.tar.xz) = 4015c67c04e0e43d02f7639805169c300db7c13d
-Size (tex-a2ping-18835/a2ping.doc.tar.xz) = 17516 bytes
+SHA1 (tex-a2ping-29725/a2ping.doc.tar.xz) = 5234c3246cc575080f6baa4773538947c6e34eb8
+RMD160 (tex-a2ping-29725/a2ping.doc.tar.xz) = ddd5c87b029e4b1a18df88c38e952a03498f8e9c
+Size (tex-a2ping-29725/a2ping.doc.tar.xz) = 17524 bytes
 SHA1 (patch-aa) = 7e9fc461392d76d78c930fa19f5de272a88e4cfe
