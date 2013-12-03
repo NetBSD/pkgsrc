@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1816 2013/12/02 13:12:32 wiz Exp $
+# $NetBSD: Makefile,v 1.1817 2013/12/03 01:44:44 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -351,6 +351,7 @@ SUBDIR+=	libbonoboui
 SUBDIR+=	libcfg+
 SUBDIR+=	libcompizconfig
 SUBDIR+=	libconfig
+SUBDIR+=	libconfuse
 SUBDIR+=	libctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
@@ -368,6 +369,7 @@ SUBDIR+=	libf2c
 SUBDIR+=	libffi
 SUBDIR+=	libfirm
 SUBDIR+=	libftdi
+SUBDIR+=	libftdi1
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgcroots
 SUBDIR+=	libgee
@@ -383,6 +385,7 @@ SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
 SUBDIR+=	libgweather
 SUBDIR+=	libhfs
+SUBDIR+=	libhid
 SUBDIR+=	libiberty
 SUBDIR+=	libidn
 SUBDIR+=	libinotify

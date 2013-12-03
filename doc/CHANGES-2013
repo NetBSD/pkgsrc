@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4327 2013/12/02 22:55:17 hubertf Exp $
+$NetBSD: CHANGES-2013,v 1.4328 2013/12/03 01:44:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6286,3 +6286,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated finance/tex-euro-doc to 1.1pl22191 [minskim 2013-12-02]
 	Updated archivers/lhasa to 0.2.0 [adam 2013-12-02]
 	Updated sysutils/ansible to 1.4.1 [hubertf 2013-12-02]
+	Added devel/libftdi1 version 1.0 [mef 2013-12-03]
+	Added devel/libconfuse version 2.7 [mef 2013-12-03]
+	Added devel/libhid version 0.2.16 [mef 2013-12-03]
