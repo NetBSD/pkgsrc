@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/10/01 10:26:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/03 20:02:42 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -14,7 +14,6 @@ bin/perror
 bin/replace
 bin/resolve_stack_dump
 bin/resolveip
-info/mysql.info
 ${PLIST.embedded}lib/libmysqld.a
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
@@ -193,6 +192,7 @@ share/mysql/test/collections/default.release
 share/mysql/test/collections/default.release.done
 share/mysql/test/collections/default.weekly
 share/mysql/test/collections/default.weekly-valgrind
+share/mysql/test/collections/default.weekly.basic
 share/mysql/test/collections/disabled-daily.list
 share/mysql/test/collections/disabled-gtid-on.list
 share/mysql/test/collections/disabled-per-push.list
@@ -409,6 +409,7 @@ share/mysql/test/include/gtid_utils_end.inc
 share/mysql/test/include/handler.inc
 share/mysql/test/include/have_32bit.inc
 share/mysql/test/include/have_64bit.inc
+share/mysql/test/include/have_QC_Disabled.inc
 share/mysql/test/include/have_archive.inc
 share/mysql/test/include/have_archive_plugin.inc
 share/mysql/test/include/have_big5.inc
@@ -724,6 +725,7 @@ share/mysql/test/include/wait_for_slave_sql_to_stop.inc
 share/mysql/test/include/wait_for_slave_to_start.inc
 share/mysql/test/include/wait_for_slave_to_stop.inc
 share/mysql/test/include/wait_for_status_var.inc
+share/mysql/test/include/wait_innodb_all_purged.inc
 share/mysql/test/include/wait_show_condition.inc
 share/mysql/test/include/wait_time_until_connected_again.inc
 share/mysql/test/include/wait_until_connected_again.inc
@@ -3754,6 +3756,7 @@ share/mysql/test/suite/innodb_fts/r/innodb-fts-basic.result
 share/mysql/test/suite/innodb_fts/r/innodb-fts-ddl.result
 share/mysql/test/suite/innodb_fts/r/innodb-fts-fic.result
 share/mysql/test/suite/innodb_fts/r/innodb-fts-stopword.result
+share/mysql/test/suite/innodb_fts/r/innodb_fts_index_table.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_large_records.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_misc.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_misc_1.result
@@ -3763,6 +3766,7 @@ share/mysql/test/suite/innodb_fts/r/innodb_fts_opt.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_plugin.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_proximity.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_result_cache_limit.result
+share/mysql/test/suite/innodb_fts/r/innodb_fts_savepoint.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_stopword_charset.result
 share/mysql/test/suite/innodb_fts/r/innodb_fts_transaction.result
 share/mysql/test/suite/innodb_fts/t/disabled.def
@@ -3783,6 +3787,7 @@ share/mysql/test/suite/innodb_fts/t/innodb-fts-basic.test
 share/mysql/test/suite/innodb_fts/t/innodb-fts-ddl.test
 share/mysql/test/suite/innodb_fts/t/innodb-fts-fic.test
 share/mysql/test/suite/innodb_fts/t/innodb-fts-stopword.test
+share/mysql/test/suite/innodb_fts/t/innodb_fts_index_table.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_large_records.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_misc.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_misc_1.test
@@ -3792,6 +3797,7 @@ share/mysql/test/suite/innodb_fts/t/innodb_fts_opt.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_plugin.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_proximity.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_result_cache_limit.test
+share/mysql/test/suite/innodb_fts/t/innodb_fts_savepoint.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_stopword_charset.test
 share/mysql/test/suite/innodb_fts/t/innodb_fts_transaction.test
 share/mysql/test/suite/jp/include/trim_sjis.inc
@@ -5062,23 +5068,41 @@ share/mysql/test/suite/parts/t/partition_innodb_status_file-master.opt
 share/mysql/test/suite/parts/t/partition_innodb_status_file.test
 share/mysql/test/suite/parts/t/partition_int_innodb.test
 share/mysql/test/suite/parts/t/partition_int_myisam.test
+share/mysql/test/suite/parts/t/partition_max_parts_hash_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_hash_innodb.test
+share/mysql/test/suite/parts/t/partition_max_parts_hash_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_hash_myisam.test
+share/mysql/test/suite/parts/t/partition_max_parts_inv_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_inv_innodb.test
+share/mysql/test/suite/parts/t/partition_max_parts_inv_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_inv_myisam.test
+share/mysql/test/suite/parts/t/partition_max_parts_key_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_key_innodb.test
+share/mysql/test/suite/parts/t/partition_max_parts_key_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_key_myisam.test
+share/mysql/test/suite/parts/t/partition_max_parts_list_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_list_innodb.test
+share/mysql/test/suite/parts/t/partition_max_parts_list_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_list_myisam.test
+share/mysql/test/suite/parts/t/partition_max_parts_range_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_range_innodb.test
+share/mysql/test/suite/parts/t/partition_max_parts_range_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_parts_range_myisam.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_key_list_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_key_list_innodb.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_key_list_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_key_list_myisam.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_key_range_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_key_range_innodb.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_key_range_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_key_range_myisam.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_list_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_list_innodb.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_list_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_list_myisam.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_range_innodb-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_range_innodb.test
+share/mysql/test/suite/parts/t/partition_max_sub_parts_range_myisam-master.opt
 share/mysql/test/suite/parts/t/partition_max_sub_parts_range_myisam.test
 share/mysql/test/suite/parts/t/partition_mgm_lc0_archive.test
 share/mysql/test/suite/parts/t/partition_mgm_lc0_innodb.test
@@ -6068,6 +6092,7 @@ share/mysql/test/suite/rpl/r/rpl_loaddatalocal.result
 share/mysql/test/suite/rpl/r/rpl_loadfile.result
 share/mysql/test/suite/rpl/r/rpl_locale.result
 share/mysql/test/suite/rpl/r/rpl_log_pos.result
+share/mysql/test/suite/rpl/r/rpl_lost_events_on_rotate.result
 share/mysql/test/suite/rpl/r/rpl_manual_change_index_file.result
 share/mysql/test/suite/rpl/r/rpl_many_optimize.result
 share/mysql/test/suite/rpl/r/rpl_master_connection.result
@@ -6553,6 +6578,7 @@ share/mysql/test/suite/rpl/t/rpl_loaddatalocal.test
 share/mysql/test/suite/rpl/t/rpl_loadfile.test
 share/mysql/test/suite/rpl/t/rpl_locale.test
 share/mysql/test/suite/rpl/t/rpl_log_pos.test
+share/mysql/test/suite/rpl/t/rpl_lost_events_on_rotate.test
 share/mysql/test/suite/rpl/t/rpl_manual_change_index_file.test
 share/mysql/test/suite/rpl/t/rpl_many_optimize.test
 share/mysql/test/suite/rpl/t/rpl_master_connection-master.opt
