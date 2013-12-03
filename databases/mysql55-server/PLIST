@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/09/30 18:26:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/12/03 15:40:19 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -14,7 +14,6 @@ bin/perror
 bin/replace
 bin/resolve_stack_dump
 bin/resolveip
-info/mysql.info
 ${PLIST.embedded}lib/libmysqld.a
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
@@ -547,6 +546,7 @@ share/mysql/test/include/rpl_udf.inc
 share/mysql/test/include/running_event_scheduler.inc
 share/mysql/test/include/safe_set_to_maybe_ro_var.inc
 share/mysql/test/include/save_master_pos.inc
+share/mysql/test/include/search_pattern_in_file.inc
 share/mysql/test/include/select_ndb_apply_status.inc
 share/mysql/test/include/set_binlog_format_mixed.sql
 share/mysql/test/include/set_binlog_format_row.sql
@@ -3950,6 +3950,7 @@ share/mysql/test/suite/rpl/r/rpl_loaddatalocal.result
 share/mysql/test/suite/rpl/r/rpl_loadfile.result
 share/mysql/test/suite/rpl/r/rpl_locale.result
 share/mysql/test/suite/rpl/r/rpl_log_pos.result
+share/mysql/test/suite/rpl/r/rpl_lost_events_on_rotate.result
 share/mysql/test/suite/rpl/r/rpl_manual_change_index_file.result
 share/mysql/test/suite/rpl/r/rpl_many_optimize.result
 share/mysql/test/suite/rpl/r/rpl_master_pos_wait.result
@@ -4306,6 +4307,7 @@ share/mysql/test/suite/rpl/t/rpl_loaddatalocal.test
 share/mysql/test/suite/rpl/t/rpl_loadfile.test
 share/mysql/test/suite/rpl/t/rpl_locale.test
 share/mysql/test/suite/rpl/t/rpl_log_pos.test
+share/mysql/test/suite/rpl/t/rpl_lost_events_on_rotate.test
 share/mysql/test/suite/rpl/t/rpl_manual_change_index_file.test
 share/mysql/test/suite/rpl/t/rpl_many_optimize.test
 share/mysql/test/suite/rpl/t/rpl_master_pos_wait.test
