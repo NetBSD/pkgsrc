@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/11/07 13:35:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/12/03 18:56:38 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -2127,7 +2127,6 @@ lib/libthreadweaver.so.${PKGVERSION}
 man/man1/checkXML.1
 man/man1/kconfig_compiler.1
 man/man1/kde4-config.1
-man/man1/kdecmake.1
 man/man1/kjs.1
 man/man1/kjscmd.1
 man/man1/kross.1
