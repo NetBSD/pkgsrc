@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:24:38 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/03 22:33:45 minskim Exp $
 
 DISTNAME=	lm.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.004
-TEXLIVE_REV=	18651
+TEXLIVE_REV=	28119
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-lm

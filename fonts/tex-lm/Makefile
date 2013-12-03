@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2011/11/06 08:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/03 22:33:45 minskim Exp $
 
 DISTNAME=	lm
 PKGNAME=	tex-${DISTNAME}-2.004
 PKGREVISION=	2
-TEXLIVE_REV=	18651
+TEXLIVE_REV=	28119
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Latin modern fonts in outline formats
