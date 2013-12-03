@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4332 2013/12/03 19:44:25 asau Exp $
+$NetBSD: CHANGES-2013,v 1.4333 2013/12/03 19:57:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6295,3 +6295,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/mysql55-client to 5.5.35 [adam 2013-12-03]
 	Updated databases/mysql55-server to 5.5.35 [adam 2013-12-03]
 	Updated lang/sbcl to 1.1.14 [asau 2013-12-03]
+	Updated graphics/tex-epstopdf to 2.20 [minskim 2013-12-03]
+	Updated graphics/tex-epstopdf-doc to 2.20 [minskim 2013-12-03]
