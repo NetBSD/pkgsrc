@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/03 01:40:14 mef Exp $
+bin/ftdi_eeprom
+bin/libftdi1-config
+include/libftdi1/ftdi.h
+include/libftdi1/ftdi.hpp
+lib/cmake/libftdi1/LibFTDI1Config.cmake
+lib/cmake/libftdi1/UseLibFTDI1.cmake
+lib/libftdi1.a
+lib/libftdi1.so
+lib/libftdi1.so.2
+lib/libftdi1.so.2.0.0
+lib/libftdipp1.a
+lib/libftdipp1.so
+lib/libftdipp1.so.2
+lib/libftdipp1.so.2.0.0
+lib/pkgconfig/libftdi1.pc
+lib/pkgconfig/libftdipp1.pc
+${PYSITELIB}/_ftdi1.so
+${PYSITELIB}/ftdi1.py
