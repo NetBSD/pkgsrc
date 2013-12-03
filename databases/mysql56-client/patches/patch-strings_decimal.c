@@ -1,4 +1,4 @@
-$NetBSD: patch-strings_decimal.c,v 1.2 2013/04/29 21:16:57 joerg Exp $
+$NetBSD: patch-strings_decimal.c,v 1.3 2013/12/03 20:02:42 adam Exp $
 
 * Portability: include <bstring.h> if exists.
 
@@ -14,21 +14,3 @@ $NetBSD: patch-strings_decimal.c,v 1.2 2013/04/29 21:16:57 joerg Exp $
  
  /*
    Internally decimal numbers are stored base 10^9 (see DIG_BASE below)
-@@ -353,7 +356,7 @@ int decimal2string(const decimal_t *from
-   if (!(intg_len= fixed_precision ? fixed_intg : intg))
-     intg_len= 1;
-   frac_len= fixed_precision ? fixed_decimals : frac;
--  len= from->sign + intg_len + test(frac) + frac_len;
-+  len= from->sign + intg_len + my_test(frac) + frac_len;
-   if (fixed_precision)
-   {
-     if (frac > fixed_decimals)
-@@ -387,7 +390,7 @@ int decimal2string(const decimal_t *from
-     else
-       frac-=j;
-     frac_len= frac;
--    len= from->sign + intg_len + test(frac) + frac_len;
-+    len= from->sign + intg_len + my_test(frac) + frac_len;
-   }
-   *to_len= len;
-   s[len]= 0;
