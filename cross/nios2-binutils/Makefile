@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/18 06:41:27 mef Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/03 02:34:52 mef Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-binutils-${PKG_VERSION}
 PKG_VERSION=		2.23
@@ -30,6 +30,8 @@ INFO_DIR?=		${NIOS_INFO_DIR}
 #  doesn't make it, will be overridden by following variables
 #  see mk/configure/gnu-configure.mk
 GNU_CONFIGURE_INFODIR=	${NIOS_INFO_DIR}
+
+.include "options.mk"
 
 do-extract:
 	(cd ${WRKDIR}; tar zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
