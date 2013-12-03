@@ -1,10 +1,15 @@
-# $NetBSD: options.mk,v 1.1 2013/11/16 07:41:00 mef Exp $
+# $NetBSD: options.mk,v 1.2 2013/12/03 02:34:52 mef Exp $
 ### Set options
 PKG_OPTIONS_VAR=        PKG_OPTIONS.nios2-gcc
-PKG_SUPPORTED_OPTIONS=  doc
-PKG_SUGGESTED_OPTIONS=
+PKG_SUPPORTED_OPTIONS=  doc sysroot
+PKG_SUGGESTED_OPTIONS=      sysroot
 
 .include "../../mk/bsd.options.mk"
+
+# See http://mail-index.netbsd.org/tech-toolchain/2011/03/21/msg001511.html
+.if !empty(PKG_OPTIONS:Msysroot)
+CFLAGS+=		-DTARGET_SYSTEM_ROOT=0 -DTARGET_SYSTEM_ROOT_RELOCATABLE
+.endif
 
 # conditional SUBST_CLASSES
 .if empty(PKG_OPTIONS:Mdoc)
