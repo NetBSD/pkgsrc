@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2013/08/22 09:21:58 prlw1 Exp $
+# $NetBSD: Makefile,v 1.27 2013/12/03 22:25:34 minskim Exp $
 
-DISTNAME=	texlive-20120701-source
-PKGNAME=	xetex-0.9998
-PKGREVISION=	12
+DISTNAME=	texlive-20130530-source
+PKGNAME=	xetex-0.9999.3
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -15,8 +14,9 @@ CONFLICTS+=	web2c<=7.5.7
 DEPENDS+=	xdvipdfmx-[0-9]*:../../print/xdvipdfmx
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
-			${DISTNAME}/libs/graphite ${DISTNAME}/libs/icu \
-			${DISTNAME}/libs/xpdf ${DISTNAME}/libs/obsdcompat \
+			${DISTNAME}/libs/graphite2 \
+			${DISTNAME}/libs/harfbuzz \
+			${DISTNAME}/libs/xpdf \
 			${DISTNAME}/texk/web2c
 
 GNU_CONFIGURE=	yes
@@ -39,18 +39,16 @@ CONFIGURE_ARGS+=	--with-system-kpathsea \
 CONFIGURE_ARGS+=	--with-system-zlib \
 	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-system-libpng \
-	--with-libpng-includes=${BUILDLINK_PREFIX.libpng}/include \
-	--with-libpng-libdir=${BUILDLINK_PREFIX.libpng}/lib
+CONFIGURE_ARGS+=	--with-system-libpng
 CONFIGURE_ARGS+=	--with-system-freetype2
 CONFIGURE_ARGS+=	--with-system-teckit \
 	--with-teckit-includes=${BUILDLINK_PREFIX.TECkit}/include/teckit \
 	--with-teckit-libdir=${BUILDLINK_PREFIX.TECkit}/lib
+CONFIGURE_ARGS+=	--with-system-icu
 
-CONFIGURE_DIRS=		libs/graphite
-CONFIGURE_DIRS+=	libs/icu
+CONFIGURE_DIRS=		libs/graphite2
+CONFIGURE_DIRS+=	libs/harfbuzz
 CONFIGURE_DIRS+=	libs/xpdf
-CONFIGURE_DIRS+=	libs/obsdcompat
 CONFIGURE_DIRS+=	texk/web2c
 
 EVAL_PREFIX+=	XDVIPDFMX_PREFIX=xdvipdfmx
@@ -63,13 +61,6 @@ SUBST_SED.paths=	-e 's,@XDVIPDFMX@,${XDVIPDFMX_PREFIX}/bin/xdvipdfmx,g'
 
 INSTALLATION_DIRS+=	bin
 
-.include "../../mk/bsd.prefs.mk"
-
-# ATSUI is deprecated in Mac OS X Snow Leopard
-.if !empty(MACHINE_PLATFORM:MDarwin-1[0-9]*)
-CONFIGURE_ENV+=	kpse_cv_have_Carbon=no
-.endif
-
 CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
 
 .include "../../converters/TECkit/buildlink3.mk"
@@ -80,6 +71,7 @@ CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/xetex ${DESTDIR}${PREFIX}/bin
