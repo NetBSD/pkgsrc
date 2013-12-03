@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/07/31 18:51:41 adam Exp $
+# $NetBSD: Makefile,v 1.16 2013/12/03 15:40:19 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
@@ -8,7 +8,6 @@ CONFLICTS=	{mysql-server-[0-9]*,mysql3-server-[0-9]*}
 
 .include "../../databases/mysql55-client/Makefile.common"
 
-INFO_FILES=		yes
 CMAKE_ARGS+=		-DWITH_LIBWRAP=ON
 CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
 
