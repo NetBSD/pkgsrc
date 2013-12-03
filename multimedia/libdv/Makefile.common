@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2012/11/07 23:15:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.15 2013/12/03 21:46:46 bsiegert Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -24,7 +24,7 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "Darwin") || empty(MACHINE_PLATFORM:M*-*-i386) || \
-    (${OPSYS} == "Interix") || (${OPSYS} == "SunOS")
+    (${OPSYS} == "Interix") || (${OPSYS} == "SunOS") || (${OPSYS} == "MirBSD")
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
