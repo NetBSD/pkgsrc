@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/16 07:09:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/03 02:18:49 minskim Exp $
 info/dvipng.info
+man/man1/dvigif.1
 man/man1/dvipng.1
+share/texmf-dist/doc/dvipng/dvipng.html
+share/texmf-dist/doc/dvipng/dvipng.pdf
