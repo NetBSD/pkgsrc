@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.18 2013/12/02 15:01:04 richard Exp $
+@comment $NetBSD: PLIST.lightning,v 1.19 2013/12/03 12:39:27 wiz Exp $
 include/thunderbird/AbstractMediaDecoder.h
 include/thunderbird/AccEvent.h
 include/thunderbird/AnimationCommon.h
@@ -3677,6 +3677,7 @@ include/thunderbird/theora/codec.h
 include/thunderbird/theora/theora.h
 include/thunderbird/theora/theoradec.h
 include/thunderbird/theora/theoraenc.h
+${PLIST.tremor}include/thunderbird/tremor/ivorbiscodec.h
 include/thunderbird/txIEXSLTRegExFunctions.h
 include/thunderbird/txIFunctionEvaluationContext.h
 include/thunderbird/txINodeSet.h
@@ -3684,7 +3685,7 @@ include/thunderbird/txIXPathObject.h
 include/thunderbird/uconvutil.h
 include/thunderbird/updatedefines.h
 include/thunderbird/updatelogging.h
-include/thunderbird/vorbis/codec.h
+${PLIST.vorbis}include/thunderbird/vorbis/codec.h
 include/thunderbird/webvtt/cue.h
 include/thunderbird/webvtt/error.h
 include/thunderbird/webvtt/node.h
