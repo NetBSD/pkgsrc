@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4333 2013/12/03 19:57:28 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4334 2013/12/03 20:03:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6297,3 +6297,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sbcl to 1.1.14 [asau 2013-12-03]
 	Updated graphics/tex-epstopdf to 2.20 [minskim 2013-12-03]
 	Updated graphics/tex-epstopdf-doc to 2.20 [minskim 2013-12-03]
+	Updated databases/mysql56-client to 5.6.15 [adam 2013-12-03]
+	Updated databases/mysql56-server to 5.6.15 [adam 2013-12-03]
