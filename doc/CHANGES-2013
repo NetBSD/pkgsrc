@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4334 2013/12/03 20:03:45 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4335 2013/12/03 20:05:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6299,3 +6299,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/tex-epstopdf-doc to 2.20 [minskim 2013-12-03]
 	Updated databases/mysql56-client to 5.6.15 [adam 2013-12-03]
 	Updated databases/mysql56-server to 5.6.15 [adam 2013-12-03]
+	Updated graphics/tex-mptopdf to 2013 [minskim 2013-12-03]
+	Updated graphics/tex-mptopdf-doc to 2013 [minskim 2013-12-03]
