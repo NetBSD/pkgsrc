@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2010/03/03 08:44:38 obache Exp $
+$NetBSD: distinfo,v 1.10 2013/12/03 21:46:46 bsiegert Exp $
 
 SHA1 (libdv-1.0.0.tar.gz) = 2e5ba0e95f665d60e72cbebcf1c4989e0d6c92c8
 RMD160 (libdv-1.0.0.tar.gz) = a8d3ae083340cec411d5294db7197ea72c8b3c4f
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = bd8c5caebd6a1d3c3276a3a41d47920fcefae7f0
 SHA1 (patch-ab) = b0798b112c586b041d29d498221dc772387f1c22
 SHA1 (patch-ac) = 8b60cb4ccf3f8cf5d56fd7336830e14c9c704b6d
 SHA1 (patch-ad) = f496833eea654934b80ecad5cd3be1f9c8ddd848
+SHA1 (patch-libdv_YUY2.c) = 8c97f9a64e5803201e3cb58609670f76a65b3d9c
