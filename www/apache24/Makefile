@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/12/01 10:02:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2013/12/03 21:18:36 bsiegert Exp $
 
 DISTNAME=	httpd-2.4.7
 PKGNAME=	${DISTNAME:S/httpd/apache/}
@@ -176,9 +176,9 @@ post-install:
 	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/${file}
 .endfor
 
-	${CHOWN} -h -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/httpd
-	${CHOWN} -h -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/include/httpd
-	${CHOWN} -h -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/include/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/httpd
 	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/test-cgi
 	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/printenv
 
