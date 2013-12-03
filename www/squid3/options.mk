@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2013/10/30 11:43:03 obache Exp $
+# $NetBSD: options.mk,v 1.9 2013/12/03 15:23:51 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
 		squid-backend-rock squid-backend-ufs squid-carp squid-unlinkd \
 		squid-kerberos-helper squid-ldap-helper squid-pam-helper
-PKG_OPTIONS_LEGACY_OPTS=	diskd:squid-backend-diskd \
+PKG_OPTIONS_LEGACY_OPTS+=	diskd:squid-backend-diskd \
 	null:squid-backend-null ufs:squid-backend-ufs \
 	linux-netfilter:squid-netfilter ipf-transparent:squid-ipf \
 	pf-transparent:squid-pf unlinkd:squid-unlinkd \

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2013/11/04 09:04:59 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/12/03 15:23:51 adam Exp $
 
-DISTNAME=	squid-3.3.10
+DISTNAME=	squid-3.3.11
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/ \
 		${SQUID_MASTER_SITES}
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-icap-client
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
 
+BUILD_DEFS+=		VARBASE
 REPLACE_PERL+=		tools/helper-mux.pl
 
 EGFILES+=	errors/errorpage.css
