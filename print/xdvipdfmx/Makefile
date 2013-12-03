@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/06/04 22:17:00 tron Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/03 20:28:40 minskim Exp $
 
-DISTNAME=	texlive-20120701-source
-PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
-PKGREVISION=	3
+DISTNAME=	texlive-20130530-source
+PKGNAME=	xdvipdfmx-0.7.9
 CATEGORIES=	print converters
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2013/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	mishka@NetBSD.org
@@ -28,19 +27,11 @@ CONFIGURE_ARGS+=	--with-system-kpathsea \
 CONFIGURE_ARGS+=	--with-system-zlib \
 		--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
 		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-system-libpng \
-		--with-libpng-includes=${BUILDLINK_PREFIX.png}/include \
-		--with-libpng-libdir=${BUILDLINK_PREFIX.png}/lib
-CONFIGURE_ARGS+=	--with-system-freetype2 \
-		--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
-		--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
+CONFIGURE_ARGS+=	--with-system-libpng
+CONFIGURE_ARGS+=	--with-system-freetype2
 CONFIGURE_ARGS+=	--with-paper=${BUILDLINK_PREFIX.libpaper}
 
-# At the moment avoid Max OS X specific and use pkgsrc as fonts source
-CONFIGURE_ENV+=	kpse_cv_have_ApplicationServices=no
-
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
