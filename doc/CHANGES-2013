@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4331 2013/12/03 15:43:06 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4332 2013/12/03 19:44:25 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6294,3 +6294,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.3.11 [adam 2013-12-03]
 	Updated databases/mysql55-client to 5.5.35 [adam 2013-12-03]
 	Updated databases/mysql55-server to 5.5.35 [adam 2013-12-03]
+	Updated lang/sbcl to 1.1.14 [asau 2013-12-03]
