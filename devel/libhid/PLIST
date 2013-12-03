@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/03 01:30:06 mef Exp $
+bin/libhid-detach-device
+include/hid.h
+include/hidparser.h
+include/hidtypes.h
+lib/libhid.la
+lib/pkgconfig/libhid.pc
+${PYSITELIB}/libhid/__init__.py
+${PYSITELIB}/libhid/__init__.pyc
+${PYSITELIB}/libhid/__init__.pyo
+${PYSITELIB}/libhid/_hid.la
+${PYSITELIB}/libhid/hid.py
+${PYSITELIB}/libhid/hid.pyc
+${PYSITELIB}/libhid/hid.pyo
+${PYSITELIB}/libhid/hidwrap.py
+${PYSITELIB}/libhid/hidwrap.pyc
+${PYSITELIB}/libhid/hidwrap.pyo
+man/man1/libhid-detach-device.1
