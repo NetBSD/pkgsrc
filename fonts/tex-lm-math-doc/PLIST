@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/03 23:51:59 minskim Exp $
+share/texmf-dist/doc/fonts/lm-math/GUST-FONT-LICENSE.txt
+share/texmf-dist/doc/fonts/lm-math/INSTALL.txt
+share/texmf-dist/doc/fonts/lm-math/MANIFEST-Latin-Modern-Math.txt
+share/texmf-dist/doc/fonts/lm-math/README-Latin-Modern-Math.txt
+share/texmf-dist/doc/fonts/lm-math/math-test-context.tex
+share/texmf-dist/doc/fonts/lm-math/math-test.tex
+share/texmf-dist/doc/fonts/lm-math/test-context-latinmodern_math.pdf
+share/texmf-dist/doc/fonts/lm-math/test-context-latinmodern_math.tex
+share/texmf-dist/doc/fonts/lm-math/test-lualatex-latinmodern_math.pdf
+share/texmf-dist/doc/fonts/lm-math/test-lualatex-latinmodern_math.tex
+share/texmf-dist/doc/fonts/lm-math/test-word-latinmodern_math.docx
+share/texmf-dist/doc/fonts/lm-math/test-word-latinmodern_math.pdf
+share/texmf-dist/doc/fonts/lm-math/test-xelatex-latinmodern_math.pdf
+share/texmf-dist/doc/fonts/lm-math/test-xelatex-latinmodern_math.tex
