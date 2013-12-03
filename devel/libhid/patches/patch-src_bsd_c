@@ -1,0 +1,23 @@
+$NetBSD: patch-src_bsd_c,v 1.1 2013/12/03 01:30:06 mef Exp $
+
+ clang 3.3 warns on following line:
+ assigning a variable of type 'unsigned short' to itself
+      [-Werror,-Wself-assign]
+  retries = retries;
+  ~~~~~~~ ^ ~~~~~~~
+
+--- src/bsd.c.orig	2006-02-01 21:35:49.000000000 +0900
++++ src/bsd.c	2013-10-08 01:17:34.000000000 +0900
+@@ -10,9 +10,11 @@
+ #include <assert.h>
+ 
+ hid_return hid_os_force_claim(HIDInterface* const hidif, int const interface,
+-    HIDInterfaceMatcher const* const matcher, unsigned short retries)
++    HIDInterfaceMatcher const* const matcher, unsigned short retries __attribute__((unused)))
+ {
++#if 0
+   retries = retries;
++#endif
+ 	
+   if (!hidif) {
+     ERROR("cannot open NULL HIDInterface.");

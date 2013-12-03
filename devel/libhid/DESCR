@@ -1,0 +1,11 @@
+libhid is a rewrite of libHID[0] and aims to provide the same functionality
+from a more organised framework. It aims to provide a layer of abstraction for
+accessing HID-class devices over USB or serial lines (similar to what libusb
+provides for the base USB protocol).
+  http://www.ghz.cc/~clepple/libHID/doc/html/
+libhid has been designed because it is needed in two other projects
+(libphdigets and nut). As such, it does not have a complete featureset yet but
+is rather a work in progress (alpha state). We invite everyone to contribute
+or get in touch with us for additional features.
+Please find more information on the project website:
+  http://libhid.alioth.debian.org

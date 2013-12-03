@@ -1,0 +1,26 @@
+$NetBSD: patch-test_lshid_c,v 1.1 2013/12/03 01:30:06 mef Exp $
+
+lshid.c:32:87: error: parameter 'len' set but not used [-Werror=unused-but-set-parameter]
+
+--- test/lshid.c.orig	2007-03-31 23:27:51.000000000 +0900
++++ test/lshid.c	2013-10-10 07:40:18.961805000 +0900
+@@ -29,7 +29,7 @@ char *hid_id[32]; /* FIXME: 32 devices M
+ 
+ struct usb_dev_handle;
+ 
+-bool device_iterator (struct usb_dev_handle const* usbdev, void* custom, unsigned int len)
++bool device_iterator (struct usb_dev_handle const* usbdev, void* custom __attribute((unused)), unsigned int len __attribute((unused)))
+ {
+   bool ret = false;
+   int i;
+@@ -37,8 +37,10 @@ bool device_iterator (struct usb_dev_han
+   const struct usb_device *device = usb_device((struct usb_dev_handle *)usbdev);
+   
+   /* only here to prevent the unused warning */
++#if 0
+   /* TODO remove */
+   len = *((unsigned long*)custom);
++#endif
+  
+   /* Obtain the device's full path */
+   //sprintf(current_dev_path, "%s/%s", usbdev->bus->dirname, usbdev->device->filename);

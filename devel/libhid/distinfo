@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/03 01:30:06 mef Exp $
+
+SHA1 (libhid-0.2.16.tar.gz) = 9a25fef674e8f20f97fea6700eb91c21ebbbcc02
+RMD160 (libhid-0.2.16.tar.gz) = f61f016ae54bc5532202fd676d38d1f684e7ab8d
+Size (libhid-0.2.16.tar.gz) = 435245 bytes
+SHA1 (patch-configure) = 25b58acacaaa8dd783cc84e3908bc8489b0c9ee8
+SHA1 (patch-src_bsd_c) = 5087ed4eb594f5e6ce66b6ca3d01fbceebf0848f
+SHA1 (patch-test_lshid_c) = 2f655da7bc316354987efd22a5d2b1f60342be91
