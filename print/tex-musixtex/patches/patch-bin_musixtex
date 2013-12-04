@@ -1,10 +1,10 @@
-$NetBSD: patch-bin_musixtex,v 1.1 2011/05/26 23:50:43 minskim Exp $
+$NetBSD: patch-bin_musixtex,v 1.2 2013/12/04 02:42:07 minskim Exp $
 
 Fix paths to commands.
 
---- bin/musixtex.orig	2011-05-22 22:09:37.000000000 +0000
+--- bin/musixtex.orig	2013-01-24 23:23:04.000000000 +0000
 +++ bin/musixtex
-@@ -63,10 +63,10 @@ if #arg == 0 then
+@@ -71,10 +71,10 @@ if #arg == 0 then
  end
  
  -- defaults:
@@ -16,10 +16,10 @@ Fix paths to commands.
 +musixflx = "@LOCALBASE@/bin/musixflx"
 +dvi = "@LOCALBASE@/bin/dvips"
 +ps2pdf = "@LOCALBASE@/bin/ps2pdf"
+ intermediate = 1
+ passes = 2
  
- exit_code = 0
- narg = 1
-@@ -79,23 +79,23 @@ repeat
+@@ -89,19 +89,19 @@ repeat
      os.exit(0)
    elseif this_arg == "-l" then
      if tex == "pdfetex" then
@@ -43,9 +43,13 @@ Fix paths to commands.
 +    dvi = "@LOCALBASE@/bin/dvipdfm"; ps2pdf = ""
    elseif this_arg == "-s" then
      dvi = ""; ps2pdf = ""
+   elseif this_arg == "-i" then
+@@ -109,7 +109,7 @@ repeat
+   elseif this_arg == "-1" then
+     passes = 1
    elseif this_arg == "-f" then
--    tex = "etex"; dvi = "dvips"; ps2pdf = "ps2pdf"
-+    tex = "@LOCALBASE@/etex"; dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = "@LOCALBASE@/bin/ps2pdf"
+-    tex = "etex"; dvi = "dvips"; ps2pdf = "ps2pdf"; intermediate = 1; passes = 2
++    tex = "@LOCALBASE@/bin/etex"; dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = "@LOCALBASE@/bin/ps2pdf"; intermediate = 1; passes = 2
    else
      filename = this_arg 
      if filename ~= "" and string.sub(filename, -4, -1) == ".tex" then
