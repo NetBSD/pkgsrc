@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2013/10/19 08:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.87 2013/12/04 21:02:23 richard Exp $
 
 DISTNAME=	icu4c-52_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -42,7 +42,6 @@ PLIST_SUBST+=		MH_NAME=mh-solaris
 BUILDLINK_TRANSFORM+=	rm:-D__STDC__=0
 .  endif
 BUILDLINK_TRANSFORM+=	rm:-ansi
-CFLAGS.SunOS+=		-std=c99
 .elif ${OPSYS} == "IRIX"
 PLIST_SUBST+=		MH_NAME=mh-irix
 .elif ${OPSYS} == "Darwin"
