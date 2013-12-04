@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/04 17:54:02 minskim Exp $
+share/texmf-dist/doc/fonts/mathdesign/MD-Adobe-Adobe-Garamond-Pro-example.tex
+share/texmf-dist/doc/fonts/mathdesign/MD-Adobe-Utopia-Std-example.tex
+share/texmf-dist/doc/fonts/mathdesign/MD-Adobe-Utopia-example.pdf
+share/texmf-dist/doc/fonts/mathdesign/MD-Adobe-Utopia-example.tex
+share/texmf-dist/doc/fonts/mathdesign/MD-Bitstream-Bitstream-Charter-example.pdf
+share/texmf-dist/doc/fonts/mathdesign/MD-Bitstream-Bitstream-Charter-example.tex
+share/texmf-dist/doc/fonts/mathdesign/MD-itc-Charter-ITC-Std-example.tex
+share/texmf-dist/doc/fonts/mathdesign/MD-urw-GaramondNo8-example.tex
+share/texmf-dist/doc/fonts/mathdesign/README
+share/texmf-dist/doc/fonts/mathdesign/mathdesign-doc.pdf
+share/texmf-dist/doc/fonts/mathdesign/mathdesign-doc.tex
