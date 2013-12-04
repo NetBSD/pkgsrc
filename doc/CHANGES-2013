@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4352 2013/12/04 15:14:36 jperkin Exp $
+$NetBSD: CHANGES-2013,v 1.4353 2013/12/04 15:48:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6330,3 +6330,11 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Test-Fatal to 0.013 [adam 2013-12-04]
 	Updated time/p5-Time-Piece to 1.24 [wen 2013-12-04]
 	Updated mail/spamassassin to 3.3.2nb6 [jperkin 2013-12-04]
+	Updated devel/ruby-activesupport32 to 3.2.16 [taca 2013-12-04]
+	Updated devel/ruby-activemodel32 to 3.2.16 [taca 2013-12-04]
+	Updated databases/ruby-activerecord32 to 3.2.16 [taca 2013-12-04]
+	Updated www/ruby-activeresource32 to 3.2.16 [taca 2013-12-04]
+	Updated www/ruby-actionpack32 to 3.2.16 [taca 2013-12-04]
+	Updated mail/ruby-actionmailer32 to 3.2.16 [taca 2013-12-04]
+	Updated devel/ruby-railties32 to 3.2.16 [taca 2013-12-04]
+	Updated www/ruby-rails32 to 3.2.16 [taca 2013-12-04]
