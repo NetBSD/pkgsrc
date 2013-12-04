@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4349 2013/12/04 14:01:36 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4350 2013/12/04 14:04:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6327,3 +6327,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/gitweb to 1.8.5.1 [adam 2013-12-04]
 	Updated math/ruby-spreadsheet to 0.9.6 [obache 2013-12-04]
 	Updated textproc/groonga to 3.1.0 [obache 2013-12-04]
+	Updated devel/p5-Test-Fatal to 0.013 [adam 2013-12-04]
