@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1817 2013/12/03 01:44:44 mef Exp $
+# $NetBSD: Makefile,v 1.1818 2013/12/04 16:35:31 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -1473,6 +1473,7 @@ SUBDIR+=	py-quixote
 SUBDIR+=	py-readline
 SUBDIR+=	py-requests
 SUBDIR+=	py-rope
+SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-speaklater
