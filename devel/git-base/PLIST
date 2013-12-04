@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/09 13:54:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/04 12:51:06 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -210,6 +210,7 @@ libexec/git-core/mergetools/araxis
 libexec/git-core/mergetools/bc3
 libexec/git-core/mergetools/codecompare
 libexec/git-core/mergetools/deltawalker
+libexec/git-core/mergetools/diffmerge
 libexec/git-core/mergetools/diffuse
 libexec/git-core/mergetools/ecmerge
 libexec/git-core/mergetools/emerge
