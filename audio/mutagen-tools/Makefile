@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/04/02 10:50:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/04 16:48:21 drochner Exp $
 #
 
-DISTNAME=	mutagen-1.21
-PKGNAME=	mutagen-tools-1.21
+DISTNAME=	mutagen-1.22
+PKGNAME=	mutagen-tools-1.22
 CATEGORIES=	audio
 MASTER_SITES=	http://mutagen.googlecode.com/files/
 
