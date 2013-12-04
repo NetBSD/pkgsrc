@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/10/23 19:32:12 drochner Exp $
+$NetBSD: distinfo,v 1.6 2013/12/04 16:58:17 drochner Exp $
 
-SHA1 (py-beets/v1.2.2.tar.gz) = c79ed1bf6c129282a1cdc8bb8bb582a2e48d155c
-RMD160 (py-beets/v1.2.2.tar.gz) = c5eb8f69d88efd7b03336f0eca14e99f89d83f08
-Size (py-beets/v1.2.2.tar.gz) = 620647 bytes
+SHA1 (py-beets/v1.3.1.tar.gz) = b1a3e8172e839277740b5211c5f9bee0b4210913
+RMD160 (py-beets/v1.3.1.tar.gz) = c469c8b795ded6ee76e3e9834fe9febd45c649c8
+Size (py-beets/v1.3.1.tar.gz) = 640414 bytes
