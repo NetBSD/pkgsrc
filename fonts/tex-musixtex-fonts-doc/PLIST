@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/04 02:19:19 minskim Exp $
+share/texmf-dist/doc/fonts/musixtex-fonts/CHANGES.psfonts
+share/texmf-dist/doc/fonts/musixtex-fonts/README
+share/texmf-dist/doc/fonts/musixtex-fonts/README.psfonts
+share/texmf-dist/doc/fonts/musixtex-fonts/musixtex-fonts-install.pdf
+share/texmf-dist/doc/fonts/musixtex-fonts/musixtex-fonts-install.tex
