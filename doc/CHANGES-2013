@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4344 2013/12/04 02:20:36 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4345 2013/12/04 03:36:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6311,3 +6311,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/libdrm to 2.4.50 [wiz 2013-12-04]
 	Added fonts/tex-musixtex-fonts version 2013 [minskim 2013-12-04]
 	Added fonts/tex-musixtex-fonts-doc version 2013 [minskim 2013-12-04]
+	Updated fonts/ps2pkm to 1.5nb4 [minskim 2013-12-04]
