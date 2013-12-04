@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/12 20:29:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/12/04 16:58:17 drochner Exp $
 bin/beet
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -102,6 +102,12 @@ ${PYSITELIB}/beetsplug/embedart.pyo
 ${PYSITELIB}/beetsplug/fetchart.py
 ${PYSITELIB}/beetsplug/fetchart.pyc
 ${PYSITELIB}/beetsplug/fetchart.pyo
+${PYSITELIB}/beetsplug/fromfilename.py
+${PYSITELIB}/beetsplug/fromfilename.pyc
+${PYSITELIB}/beetsplug/fromfilename.pyo
+${PYSITELIB}/beetsplug/ftintitle.py
+${PYSITELIB}/beetsplug/ftintitle.pyc
+${PYSITELIB}/beetsplug/ftintitle.pyo
 ${PYSITELIB}/beetsplug/fuzzy.py
 ${PYSITELIB}/beetsplug/fuzzy.pyc
 ${PYSITELIB}/beetsplug/fuzzy.pyo
