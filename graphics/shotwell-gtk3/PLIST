@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/08 16:51:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/12/04 12:57:47 drochner Exp $
 bin/shotwell
-bin/shotwell-video-thumbnailer
 lib/shotwell/plugins/builtin/f-spot-24.png
 lib/shotwell/plugins/builtin/facebook.png
 lib/shotwell/plugins/builtin/facebook_publishing_options_pane.glade
@@ -8,8 +7,6 @@ lib/shotwell/plugins/builtin/flickr.png
 lib/shotwell/plugins/builtin/flickr_pin_entry_pane.glade
 lib/shotwell/plugins/builtin/flickr_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/picasa.png
-lib/shotwell/plugins/builtin/picasa_auth_code_entry_pane.glade
-lib/shotwell/plugins/builtin/picasa_not_set_up_pane.glade
 lib/shotwell/plugins/builtin/picasa_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/piwigo.png
 lib/shotwell/plugins/builtin/piwigo_authentication_pane.glade
@@ -20,10 +17,14 @@ lib/shotwell/plugins/builtin/shotwell-publishing.so
 lib/shotwell/plugins/builtin/shotwell-transitions.so
 lib/shotwell/plugins/builtin/slideshow-plugin.png
 lib/shotwell/plugins/builtin/tumblr.png
+lib/shotwell/plugins/builtin/tumblr_authentication_pane.glade
+lib/shotwell/plugins/builtin/tumblr_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/yandex_publish_model.glade
 lib/shotwell/plugins/builtin/youtube.png
 lib/shotwell/plugins/builtin/youtube_publishing_options_pane.glade
 libexec/shotwell/shotwell-settings-migrator
+libexec/shotwell/shotwell-video-thumbnailer
+share/appdata/shotwell.appdata.xml
 share/applications/shotwell-viewer.desktop
 share/applications/shotwell.desktop
 share/glib-2.0/schemas/org.yorba.shotwell-extras.gschema.xml
@@ -75,6 +76,7 @@ share/icons/hicolor/16x16/apps/shotwell.svg
 share/icons/hicolor/24x24/apps/shotwell.svg
 share/icons/hicolor/scalable/apps/shotwell.svg
 share/locale/af/LC_MESSAGES/shotwell.mo
+share/locale/af_ZA/LC_MESSAGES/shotwell.mo
 share/locale/ar/LC_MESSAGES/shotwell-extras.mo
 share/locale/ar/LC_MESSAGES/shotwell.mo
 share/locale/as/LC_MESSAGES/shotwell-extras.mo
@@ -85,6 +87,8 @@ share/locale/bg/LC_MESSAGES/shotwell-extras.mo
 share/locale/bg/LC_MESSAGES/shotwell.mo
 share/locale/bn/LC_MESSAGES/shotwell-extras.mo
 share/locale/bn/LC_MESSAGES/shotwell.mo
+share/locale/bn_IN/LC_MESSAGES/shotwell-extras.mo
+share/locale/bn_IN/LC_MESSAGES/shotwell.mo
 share/locale/ca/LC_MESSAGES/shotwell-extras.mo
 share/locale/ca/LC_MESSAGES/shotwell.mo
 share/locale/cs/LC_MESSAGES/shotwell-extras.mo
@@ -110,6 +114,7 @@ share/locale/fr/LC_MESSAGES/shotwell-extras.mo
 share/locale/fr/LC_MESSAGES/shotwell.mo
 share/locale/gl/LC_MESSAGES/shotwell-extras.mo
 share/locale/gl/LC_MESSAGES/shotwell.mo
+share/locale/gu/LC_MESSAGES/shotwell-extras.mo
 share/locale/gu/LC_MESSAGES/shotwell.mo
 share/locale/he/LC_MESSAGES/shotwell-extras.mo
 share/locale/he/LC_MESSAGES/shotwell.mo
@@ -122,6 +127,8 @@ share/locale/hu/LC_MESSAGES/shotwell.mo
 share/locale/ia/LC_MESSAGES/shotwell.mo
 share/locale/id/LC_MESSAGES/shotwell-extras.mo
 share/locale/id/LC_MESSAGES/shotwell.mo
+share/locale/id_ID/LC_MESSAGES/shotwell-extras.mo
+share/locale/id_ID/LC_MESSAGES/shotwell.mo
 share/locale/it/LC_MESSAGES/shotwell-extras.mo
 share/locale/it/LC_MESSAGES/shotwell.mo
 share/locale/ja/LC_MESSAGES/shotwell-extras.mo
@@ -133,6 +140,7 @@ share/locale/kn/LC_MESSAGES/shotwell-extras.mo
 share/locale/kn/LC_MESSAGES/shotwell.mo
 share/locale/ko/LC_MESSAGES/shotwell-extras.mo
 share/locale/ko/LC_MESSAGES/shotwell.mo
+share/locale/ky/LC_MESSAGES/shotwell.mo
 share/locale/lt/LC_MESSAGES/shotwell-extras.mo
 share/locale/lt/LC_MESSAGES/shotwell.mo
 share/locale/lv/LC_MESSAGES/shotwell-extras.mo
@@ -147,6 +155,8 @@ share/locale/nb/LC_MESSAGES/shotwell-extras.mo
 share/locale/nb/LC_MESSAGES/shotwell.mo
 share/locale/nl/LC_MESSAGES/shotwell-extras.mo
 share/locale/nl/LC_MESSAGES/shotwell.mo
+share/locale/nn_NO/LC_MESSAGES/shotwell-extras.mo
+share/locale/nn_NO/LC_MESSAGES/shotwell.mo
 share/locale/or/LC_MESSAGES/shotwell-extras.mo
 share/locale/or/LC_MESSAGES/shotwell.mo
 share/locale/pa/LC_MESSAGES/shotwell-extras.mo
@@ -171,14 +181,19 @@ share/locale/sv/LC_MESSAGES/shotwell-extras.mo
 share/locale/sv/LC_MESSAGES/shotwell.mo
 share/locale/ta/LC_MESSAGES/shotwell-extras.mo
 share/locale/ta/LC_MESSAGES/shotwell.mo
+share/locale/ta_IN/LC_MESSAGES/shotwell.mo
 share/locale/te/LC_MESSAGES/shotwell-extras.mo
 share/locale/te/LC_MESSAGES/shotwell.mo
+share/locale/te_IN/LC_MESSAGES/shotwell.mo
 share/locale/th/LC_MESSAGES/shotwell-extras.mo
 share/locale/th/LC_MESSAGES/shotwell.mo
 share/locale/tr/LC_MESSAGES/shotwell-extras.mo
 share/locale/tr/LC_MESSAGES/shotwell.mo
+share/locale/tr_TR/LC_MESSAGES/shotwell-extras.mo
+share/locale/tr_TR/LC_MESSAGES/shotwell.mo
 share/locale/uk/LC_MESSAGES/shotwell-extras.mo
 share/locale/uk/LC_MESSAGES/shotwell.mo
+share/locale/vi/LC_MESSAGES/shotwell-extras.mo
 share/locale/vi/LC_MESSAGES/shotwell.mo
 share/locale/zh_CN/LC_MESSAGES/shotwell-extras.mo
 share/locale/zh_CN/LC_MESSAGES/shotwell.mo
@@ -207,6 +222,7 @@ share/shotwell/icons/make-primary.svg
 share/shotwell/icons/merge.svg
 share/shotwell/icons/multiple-events.png
 share/shotwell/icons/multiple-tags.png
+share/shotwell/icons/no-event.png
 share/shotwell/icons/noninterpretable-video.png
 share/shotwell/icons/one-event.png
 share/shotwell/icons/one-star-filter-plus.svg
