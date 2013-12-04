@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2012/02/17 18:32:58 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2013/12/04 16:41:01 drochner Exp $
 
 avoid sender block
 
---- tests/PyroTests/test_socket.py.orig	2011-11-05 16:22:00.000000000 +0000
+--- tests/PyroTests/test_socket.py.orig	2013-08-26 18:54:16.000000000 +0000
 +++ tests/PyroTests/test_socket.py
-@@ -140,8 +140,10 @@ class TestSocketutil(unittest.TestCase):
+@@ -268,8 +268,10 @@ class TestSocketutil(unittest.TestCase):
          
      def testMsgWaitallProblems(self):
-         ss=SU.createSocket(bind=("localhost",0), timeout=0.5)
-+	ss.setsockopt(SU.socket.SOL_SOCKET, SU.socket.SO_SNDBUF, 100000)
+         ss=SU.createSocket(bind=("localhost",0), timeout=2)
++        ss.setsockopt(SU.socket.SOL_SOCKET, SU.socket.SO_SNDBUF, 100000)
          port=ss.getsockname()[1]
-         cs=SU.createSocket(connect=("localhost",port), timeout=0.5)
-+	cs.setsockopt(SU.socket.SOL_SOCKET, SU.socket.SO_SNDBUF, 100000)
+         cs=SU.createSocket(connect=("localhost",port), timeout=2)
++        cs.setsockopt(SU.socket.SOL_SOCKET, SU.socket.SO_SNDBUF, 100000)
          a=ss.accept()
          # test some sizes that might be problematic with MSG_WAITALL
          for size in [1000,10000,32000,32768,32780,41950,41952,42000,65000,65535,65600,80000]:
