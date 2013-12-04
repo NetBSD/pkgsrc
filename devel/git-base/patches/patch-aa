@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2013/09/09 13:54:44 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2013/12/04 12:51:06 adam Exp $
 
---- Makefile.orig	2012-10-21 21:32:15.000000000 +0000
+--- Makefile.orig	2013-12-03 19:35:24.000000000 +0000
 +++ Makefile
-@@ -343,8 +343,6 @@ endif
+@@ -351,8 +351,6 @@ GIT-VERSION-FILE: FORCE
  
  CFLAGS = -g -O2 -Wall
  LDFLAGS =
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2013/09/09 13:54:44 wiz Exp $
  STRIP ?= strip
  
  # Among the variables below, these:
-@@ -379,13 +377,9 @@ pathsep = :
+@@ -393,13 +391,9 @@ htmldir_relative = $(patsubst $(prefix)/
  
  export prefix bindir sharedir sysconfdir gitwebdir localedir
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.1 2013/09/09 13:54:44 wiz Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -2038,8 +2031,8 @@ ifdef DEFAULT_HELP_FORMAT
+@@ -1630,8 +1624,8 @@ ifdef DEFAULT_HELP_FORMAT
  BASIC_CFLAGS += -DDEFAULT_HELP_FORMAT='"$(DEFAULT_HELP_FORMAT)"'
  endif
  
@@ -36,11 +36,11 @@ $NetBSD: patch-aa,v 1.1 2013/09/09 13:54:44 wiz Exp $
  
  export DIFF TAR INSTALL DESTDIR SHELL_PATH
  
-@@ -2732,7 +2725,6 @@ ifndef NO_GETTEXT
+@@ -2338,7 +2332,6 @@ ifndef NO_GETTEXT
  endif
  ifndef NO_PERL
  	$(MAKE) -C perl prefix='$(prefix_SQ)' DESTDIR='$(DESTDIR_SQ)' install
 -	$(MAKE) -C gitweb install
  endif
- ifndef NO_PYTHON
- 	$(MAKE) -C git_remote_helpers prefix='$(prefix_SQ)' DESTDIR='$(DESTDIR_SQ)' install
+ ifndef NO_TCLTK
+ 	$(MAKE) -C gitk-git install
