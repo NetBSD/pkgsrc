@@ -1,0 +1,18 @@
+$NetBSD: patch-config_mh-solaris-gcc,v 1.1 2013/12/04 21:02:23 richard Exp $
+
+sys/feature_tests.h needs hints found in CFLAGS/CXXFLAGS while
+generating depency files.
+
+--- config/mh-solaris-gcc.orig	2013-10-04 20:50:00.000000000 +0000
++++ config/mh-solaris-gcc
+@@ -9,8 +9,8 @@ SHAREDLIBCXXFLAGS = -fPIC
+ SHAREDLIBCPPFLAGS = -DPIC
+ 
+ ## Commands to generate dependency files
+-GEN_DEPS.c= 	$(CC) -E -MM $(DEFS) $(CPPFLAGS)
+-GEN_DEPS.cc=	$(CXX) -E -MM $(DEFS) $(CPPFLAGS)
++GEN_DEPS.c= 	$(CC) -E -MM $(DEFS) $(CPPFLAGS) $(CFLAGS)
++GEN_DEPS.cc=	$(CXX) -E -MM $(DEFS) $(CPPFLAGS) $(CXXFLAGS)
+ 
+ ## These are the library specific LDFLAGS
+ LDFLAGSICUDT=-nodefaultlibs -nostdlib
