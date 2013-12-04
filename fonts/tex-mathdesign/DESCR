@@ -1,10 +1,13 @@
-The Math Design project offers free mathematical fonts, and
-"faked" Caps-and-Small-Caps fonts, that fit with existing text
-fonts. So far, four font families are available: - the mdput
-family, which corresponds to Adobe Utopia text fonts; - the
-mdugm family, which corresponds to URW Garamond text fonts; -
-the mdfga family, which corresponds to the (commercial)
-Fontsite Garamond text fonts; - the mdbch family, which
-corresponds to Bitstream Charter text fonts. Each maths font
-has a range of extra symbols, and blackboard bold and 'mathcal'
-alphabets.
+The Math Design project offers free mathematical fonts, and "faked"
+Caps-and-Small-Caps fonts, that fit with existing text fonts. So
+far, four font families are available:
+
+- the mdput family, which corresponds to Adobe Utopia text fonts
+- the mdugm family, which corresponds to URW Garamond text fonts
+- the mdfga family, which corresponds to the (commercial)
+  Fontsite Garamond text fonts
+- the mdbch family, which corresponds to Bitstream Charter text
+  fonts
+
+Each maths font has a range of extra symbols, and blackboard bold
+and 'mathcal' alphabets.
