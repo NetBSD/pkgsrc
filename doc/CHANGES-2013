@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4355 2013/12/04 17:55:14 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4356 2013/12/04 18:37:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6344,3 +6344,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated audio/py-beets to 1.3.1 [drochner 2013-12-04]
 	Updated fonts/tex-mathdesign to 2.31 [minskim 2013-12-04]
 	Updated fonts/tex-mathdesign-doc to 2.31 [minskim 2013-12-04]
+	Added graphics/tex-pstools to 1.68 [minskim 2013-12-04]
+	Added graphics/tex-pstools-doc version 1.68 [minskim 2013-12-04]
