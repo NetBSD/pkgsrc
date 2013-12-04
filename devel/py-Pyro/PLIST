@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2012/02/17 18:32:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/04 16:41:01 drochner Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/Pyro4/__init__.py
 ${PYSITELIB}/Pyro4/__init__.pyc
@@ -18,6 +19,12 @@ ${PYSITELIB}/Pyro4/core.pyo
 ${PYSITELIB}/Pyro4/errors.py
 ${PYSITELIB}/Pyro4/errors.pyc
 ${PYSITELIB}/Pyro4/errors.pyo
+${PYSITELIB}/Pyro4/futures.py
+${PYSITELIB}/Pyro4/futures.pyc
+${PYSITELIB}/Pyro4/futures.pyo
+${PYSITELIB}/Pyro4/message.py
+${PYSITELIB}/Pyro4/message.pyc
+${PYSITELIB}/Pyro4/message.pyo
 ${PYSITELIB}/Pyro4/naming.py
 ${PYSITELIB}/Pyro4/naming.pyc
 ${PYSITELIB}/Pyro4/naming.pyo
@@ -42,12 +49,12 @@ ${PYSITELIB}/Pyro4/test/__init__.pyo
 ${PYSITELIB}/Pyro4/test/echoserver.py
 ${PYSITELIB}/Pyro4/test/echoserver.pyc
 ${PYSITELIB}/Pyro4/test/echoserver.pyo
-${PYSITELIB}/Pyro4/threadpool.py
-${PYSITELIB}/Pyro4/threadpool.pyc
-${PYSITELIB}/Pyro4/threadpool.pyo
 ${PYSITELIB}/Pyro4/threadutil.py
 ${PYSITELIB}/Pyro4/threadutil.pyc
 ${PYSITELIB}/Pyro4/threadutil.pyo
+${PYSITELIB}/Pyro4/tpjobqueue.py
+${PYSITELIB}/Pyro4/tpjobqueue.pyc
+${PYSITELIB}/Pyro4/tpjobqueue.pyo
 ${PYSITELIB}/Pyro4/util.py
 ${PYSITELIB}/Pyro4/util.pyc
 ${PYSITELIB}/Pyro4/util.pyo
