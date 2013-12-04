@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4339 2013/12/03 23:53:49 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4340 2013/12/04 00:37:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6307,3 +6307,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/tex-metapost-doc to 1.803 [minskim 2013-12-03]
 	Added fonts/tex-lm-math version 1.958 [minskim 2013-12-03]
 	Added fonts/tex-lm-math-doc version 1.958 [minskim 2013-12-03]
+	Updated devel/xorg-util-macros to 1.18.0 [wiz 2013-12-04]
