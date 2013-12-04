@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2013/11/23 11:29:36 obache Exp $
+# $NetBSD: builtin.mk,v 1.10 2013/12/04 14:19:01 obache Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -37,12 +37,6 @@ BUILTIN_VERSION.zlib!=							\
 			print vers;					\
 		}							\
 	' ${H_ZLIB:Q}
-#
-# If the built-in zlib is 1.1.4, assume that it has the fix for
-# CAN-2003-0107.
-.  if ${BUILTIN_VERSION.zlib} == "1.1.4"
-BUILTIN_VERSION.zlib=	1.1.4nb1
-.  endif
 BUILTIN_PKG.zlib=	zlib-${BUILTIN_VERSION.zlib}
 .endif
 MAKEVARS+=	BUILTIN_PKG.zlib
