@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/26 23:51:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/04 02:42:07 minskim Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-115.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-T114.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc-115.txt
+share/texmf-dist/doc/generic/musixtex/README
+share/texmf-dist/doc/generic/musixtex/addons/README.underbracket
 share/texmf-dist/doc/generic/musixtex/addons/curly.tex
 share/texmf-dist/doc/generic/musixtex/addons/tuplet.tex
 share/texmf-dist/doc/generic/musixtex/addons/underbracket.sty
@@ -96,6 +98,8 @@ share/texmf-dist/doc/generic/musixtex/musixlyr/examples/nonmoriar.tex
 share/texmf-dist/doc/generic/musixtex/musixlyr/mxlyrdoc.dvi
 share/texmf-dist/doc/generic/musixtex/musixlyr/mxlyrdoc.pdf
 share/texmf-dist/doc/generic/musixtex/musixlyr/mxlyrdoc.tex
+share/texmf-dist/doc/generic/musixtex/musixtex-install.pdf
+share/texmf-dist/doc/generic/musixtex/musixtex-install.tex
 share/texmf-dist/doc/generic/musixtex/notationMistakes/coulhack.tex
 share/texmf-dist/doc/generic/musixtex/notationMistakes/sottieng.pdf
 share/texmf-dist/doc/generic/musixtex/notationMistakes/sottieng.tex
@@ -103,10 +107,10 @@ share/texmf-dist/doc/generic/musixtex/notationMistakes/sottiger.pdf
 share/texmf-dist/doc/generic/musixtex/notationMistakes/sottiger.tex
 share/texmf-dist/doc/generic/musixtex/notationMistakes/sottigra.pdf
 share/texmf-dist/doc/generic/musixtex/notationMistakes/sottigra.tex
-share/texmf-dist/doc/generic/musixtex/psfonts/CHANGES.psfonts
-share/texmf-dist/doc/generic/musixtex/psfonts/README.psfonts
 share/texmf-dist/doc/generic/musixtex/psslurs/README.psslurs
 share/texmf-dist/doc/generic/musixtex/psslurs/slurs.pdf
 share/texmf-dist/doc/generic/musixtex/psslurs/slurs.tex
 share/texmf-dist/doc/generic/musixtex/reference/musixre1.pdf
 share/texmf-dist/doc/generic/musixtex/reference/musixre1.tex
+share/texmf-dist/doc/generic/musixtex/scripts/musixflx.html
+share/texmf-dist/doc/generic/musixtex/scripts/musixtex.html
