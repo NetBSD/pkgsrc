@@ -1,0 +1,13 @@
+Produce Encapsulated PostScript Files (EPS/EPSF) from a one-
+page PostScript document, or any PostScript document. A correct
+Bounding Box is calculated for the EPS files and some
+PostScript command sequences that can produce errorneous
+results on printers are filtered. The input is cropped to
+include just the image contained in the PostScript file. The
+EPS files can then be included into TeX documents. Other
+programs like ps2epsi (a script distributed with ghostscript)
+don't always calculate the correct bounding box (because the
+values are put on the PostScript stack which may get corrupted
+by bad PostScript code) or they round it off, resulting in
+clipping the image. Therefore ps2eps uses a resolution of 144
+dpi to get the correct bounding box.

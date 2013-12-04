@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/04 18:34:47 minskim Exp $
+bin/ps2frag
+bin/pslatex
