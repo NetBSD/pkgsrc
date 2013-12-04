@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2013/07/22 14:32:47 drochner Exp $
+# $NetBSD: Makefile.common,v 1.6 2013/12/04 11:35:56 drochner Exp $
 #
 # used by audio/gst-plugins1-a52/Makefile
 # used by audio/gst-plugins1-lame/Makefile
@@ -10,7 +10,7 @@
 # used by multimedia/gst-plugins1-x264/Makefile
 
 GST_PLUGINS1_TYPE=	ugly
-GST_PLUGINS1_VER=	1.0.8
+GST_PLUGINS1_VER=	1.0.10
 
 # Disable all drivers and features by default.
 .for driver in	a52dec \
