@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4351 2013/12/04 15:12:56 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4352 2013/12/04 15:14:36 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6329,3 +6329,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/groonga to 3.1.0 [obache 2013-12-04]
 	Updated devel/p5-Test-Fatal to 0.013 [adam 2013-12-04]
 	Updated time/p5-Time-Piece to 1.24 [wen 2013-12-04]
+	Updated mail/spamassassin to 3.3.2nb6 [jperkin 2013-12-04]
