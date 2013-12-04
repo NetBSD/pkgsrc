@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4342 2013/12/04 00:39:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4343 2013/12/04 00:45:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6308,5 +6308,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added fonts/tex-lm-math version 1.958 [minskim 2013-12-03]
 	Added fonts/tex-lm-math-doc version 1.958 [minskim 2013-12-03]
 	Updated devel/xorg-util-macros to 1.18.0 [wiz 2013-12-04]
-	Updated wip/xf86-video-modesetting to 0.8.1 [wiz 2013-12-04]
 	Updated x11/libdrm to 2.4.50 [wiz 2013-12-04]
