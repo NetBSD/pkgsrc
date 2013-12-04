@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4353 2013/12/04 15:48:34 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4354 2013/12/04 16:59:59 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6338,3 +6338,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/ruby-actionmailer32 to 3.2.16 [taca 2013-12-04]
 	Updated devel/ruby-railties32 to 3.2.16 [taca 2013-12-04]
 	Updated www/ruby-rails32 to 3.2.16 [taca 2013-12-04]
+	Updated devel/py-Pyro to 4.22 [drochner 2013-12-04]
+	Updated devel/libgee0.8 to 0.8.8 [drochner 2013-12-04]
+	Updated audio/py-mutagen to 1.22 [drochner 2013-12-04]
+	Updated audio/py-beets to 1.3.1 [drochner 2013-12-04]
