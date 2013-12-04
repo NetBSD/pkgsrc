@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2010/03/05 13:57:51 obache Exp $
+$NetBSD: patch-aa,v 1.4 2013/12/04 16:47:32 drochner Exp $
 
---- setup.py.orig	2010-02-20 17:39:18.000000000 +0000
+--- setup.py.orig	2013-09-06 09:11:46.000000000 +0000
 +++ setup.py
-@@ -211,8 +211,8 @@ if __name__ == "__main__":
-           author_email="quod-libet-development@groups.google.com",
-           license="GNU GPL v2",
+@@ -203,8 +203,8 @@ if __name__ == "__main__":
+             'Topic :: Multimedia :: Sound/Audio',
+           ],
            packages=["mutagen"],
 -          data_files=data_files,
 -          scripts=glob.glob("tools/m*[!~]"),

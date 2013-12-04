@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/03/15 17:47:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/12/04 16:47:32 drochner Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
@@ -6,6 +6,15 @@ ${PYSITELIB}/mutagen/__init__.pyo
 ${PYSITELIB}/mutagen/_constants.py
 ${PYSITELIB}/mutagen/_constants.pyc
 ${PYSITELIB}/mutagen/_constants.pyo
+${PYSITELIB}/mutagen/_id3frames.py
+${PYSITELIB}/mutagen/_id3frames.pyc
+${PYSITELIB}/mutagen/_id3frames.pyo
+${PYSITELIB}/mutagen/_id3specs.py
+${PYSITELIB}/mutagen/_id3specs.pyc
+${PYSITELIB}/mutagen/_id3specs.pyo
+${PYSITELIB}/mutagen/_id3util.py
+${PYSITELIB}/mutagen/_id3util.pyc
+${PYSITELIB}/mutagen/_id3util.pyo
 ${PYSITELIB}/mutagen/_util.py
 ${PYSITELIB}/mutagen/_util.pyc
 ${PYSITELIB}/mutagen/_util.pyo
