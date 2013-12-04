@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/10/29 11:50:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/12/04 14:01:15 obache Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
@@ -117,7 +117,7 @@ share/doc/groonga/en/html/_sources/reference/commands_not_implemented/get.txt
 share/doc/groonga/en/html/_sources/reference/commands_not_implemented/set.txt
 share/doc/groonga/en/html/_sources/reference/executables.txt
 share/doc/groonga/en/html/_sources/reference/executables/grnslap.txt
-share/doc/groonga/en/html/_sources/reference/executables/grntest.txt
+share/doc/groonga/en/html/_sources/reference/executables/groonga-benchmark.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga-httpd.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga-server-http.txt
 share/doc/groonga/en/html/_sources/reference/executables/groonga-suggest-create-dataset.txt
@@ -303,7 +303,7 @@ share/doc/groonga/en/html/reference/commands_not_implemented/get.html
 share/doc/groonga/en/html/reference/commands_not_implemented/set.html
 share/doc/groonga/en/html/reference/executables.html
 share/doc/groonga/en/html/reference/executables/grnslap.html
-share/doc/groonga/en/html/reference/executables/grntest.html
+share/doc/groonga/en/html/reference/executables/groonga-benchmark.html
 share/doc/groonga/en/html/reference/executables/groonga-httpd.html
 share/doc/groonga/en/html/reference/executables/groonga-server-http.html
 share/doc/groonga/en/html/reference/executables/groonga-suggest-create-dataset.html
@@ -466,7 +466,7 @@ share/doc/groonga/ja/html/_sources/reference/commands_not_implemented/get.txt
 share/doc/groonga/ja/html/_sources/reference/commands_not_implemented/set.txt
 share/doc/groonga/ja/html/_sources/reference/executables.txt
 share/doc/groonga/ja/html/_sources/reference/executables/grnslap.txt
-share/doc/groonga/ja/html/_sources/reference/executables/grntest.txt
+share/doc/groonga/ja/html/_sources/reference/executables/groonga-benchmark.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga-httpd.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga-server-http.txt
 share/doc/groonga/ja/html/_sources/reference/executables/groonga-suggest-create-dataset.txt
@@ -652,7 +652,7 @@ share/doc/groonga/ja/html/reference/commands_not_implemented/get.html
 share/doc/groonga/ja/html/reference/commands_not_implemented/set.html
 share/doc/groonga/ja/html/reference/executables.html
 share/doc/groonga/ja/html/reference/executables/grnslap.html
-share/doc/groonga/ja/html/reference/executables/grntest.html
+share/doc/groonga/ja/html/reference/executables/groonga-benchmark.html
 share/doc/groonga/ja/html/reference/executables/groonga-httpd.html
 share/doc/groonga/ja/html/reference/executables/groonga-server-http.html
 share/doc/groonga/ja/html/reference/executables/groonga-suggest-create-dataset.html
