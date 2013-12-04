@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4357 2013/12/04 18:38:04 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4358 2013/12/04 18:58:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6346,3 +6346,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added fonts/tex-mathdesign-doc version 2.31 [minskim 2013-12-04]
 	Added graphics/tex-pstools version 1.68 [minskim 2013-12-04]
 	Added graphics/tex-pstools-doc version 1.68 [minskim 2013-12-04]
+	Added print/tex-cyrillic-bin version 2013 [minskim 2013-12-04]
+	Added print/tex-cyrillic-bin-doc version 2013 [minskim 2013-12-04]
