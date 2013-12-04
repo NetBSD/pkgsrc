@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/04 16:34:31 drochner Exp $
+
+SHA1 (serpent-1.4.tar.gz) = eff24b6662660b6dabdf040f2f91247b2ff6f5d9
+RMD160 (serpent-1.4.tar.gz) = 54fd725cacbbe4d470c49fbd975b92f061c00bcc
+Size (serpent-1.4.tar.gz) = 7988 bytes

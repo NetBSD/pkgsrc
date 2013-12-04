@@ -1,0 +1,2 @@
+Serpent is a simple serialization library
+based on ast.literal_eval.
