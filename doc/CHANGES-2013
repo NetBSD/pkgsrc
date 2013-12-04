@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4345 2013/12/04 03:36:02 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4346 2013/12/04 13:02:52 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6312,3 +6312,12 @@ Changes to the packages collection and infrastructure in 2013:
 	Added fonts/tex-musixtex-fonts version 2013 [minskim 2013-12-04]
 	Added fonts/tex-musixtex-fonts-doc version 2013 [minskim 2013-12-04]
 	Updated fonts/ps2pkm to 1.5nb4 [minskim 2013-12-04]
+	Updated multimedia/vlc2 to 2.0.9 [drochner 2013-12-04]
+	Updated multimedia/gstreamer1 to 1.0.10 [drochner 2013-12-04]
+	Updated multimedia/xine-lib to 1.2.4 [drochner 2013-12-04]
+	Updated net/gssdp to 0.14.6 [drochner 2013-12-04]
+	Updated net/gupnp to 0.20.8 [drochner 2013-12-04]
+	Updated net/gupnp-tools to 0.8.8 [drochner 2013-12-04]
+	Updated graphics/veusz to 1.19.1 [drochner 2013-12-04]
+	Updated graphics/shotwell-gtk3 to 0.15.1 [drochner 2013-12-04]
+	Updated graphics/darktable to 1.2.3 [drochner 2013-12-04]
