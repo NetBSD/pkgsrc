@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2013/08/01 10:29:00 bouyer Exp $
+$NetBSD: distinfo,v 1.61 2013/12/04 15:14:19 jperkin Exp $
 
 SHA1 (Mail-SpamAssassin-3.3.2.tar.gz) = de954f69e190496eff4a796a9bab61747f03072b
 RMD160 (Mail-SpamAssassin-3.3.2.tar.gz) = 78e22ba6ba62a48fb7d24c40170124881b975fd9
@@ -18,4 +18,10 @@ SHA1 (patch-ae) = d46b1d8f56c8c61936c307f74b39a49da1b1f353
 SHA1 (patch-aq) = 3a273c7742275647c2334382fed29c0ea33dfbd8
 SHA1 (patch-ay) = ca8ea0b1e6d8fddd29d6ae960e1bf6e534d2f424
 SHA1 (patch-ba) = 1842e3fc17b3d23309336e542635eeacb67461e8
+SHA1 (patch-lib_Mail_SpamAssassin_AsyncLoop.pm) = a305fc866785905bcb6b65b013525cb130ddf4a3
+SHA1 (patch-lib_Mail_SpamAssassin_Conf_Parser.pm) = bbb41a5667f88d485b027860973d205f6ccec0d1
+SHA1 (patch-lib_Mail_SpamAssassin_DnsResolver.pm) = ec66585e49d1cfa5acfb6989508958a75a824bc5
+SHA1 (patch-lib_Mail_SpamAssassin_Message.pm) = 402b9769df65ae87c3beebcc9441e29619eed367
+SHA1 (patch-lib_Mail_SpamAssassin_PerMsgStatus.pm) = 9eb3a5135ab7f2ca3aa18686bad9bbe818bdf761
+SHA1 (patch-lib_Mail_SpamAssassin_Util.pm) = 930b99127847057aeadf6c2c6c9558afec2ff2c8
 SHA1 (patch-sa-update) = 893d8c2ebe68524b620a438f30e2b9ba764aaa6e
