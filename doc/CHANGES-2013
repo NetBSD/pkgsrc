@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4343 2013/12/04 00:45:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4344 2013/12/04 02:20:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6309,3 +6309,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added fonts/tex-lm-math-doc version 1.958 [minskim 2013-12-03]
 	Updated devel/xorg-util-macros to 1.18.0 [wiz 2013-12-04]
 	Updated x11/libdrm to 2.4.50 [wiz 2013-12-04]
+	Added fonts/tex-musixtex-fonts version 2013 [minskim 2013-12-04]
+	Added fonts/tex-musixtex-fonts-doc version 2013 [minskim 2013-12-04]
