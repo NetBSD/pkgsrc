@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2013/10/19 09:06:56 adam Exp $
+# $NetBSD: Makefile,v 1.107 2013/12/04 10:01:30 bsiegert Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	3
@@ -87,6 +87,13 @@ PLIST.afskauth=		yes
     (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes) &&	\
 		!empty(BUILTIN_LIB_FOUND.crypto:M[Nn][Oo]))
 PLIST.hcrypto=		yes
+.endif
+
+.if ${OPSYS} == "MirBSD"
+PLIST.hcrypto=		yes
+PLIST.vis=		yes
+# all of the tools need to link against pthread, force it.
+PTHREAD_AUTO_VARS=	yes
 .endif
 
 OWN_DIRS_PERMS=		${HEIMDAL_HDB_DIR} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
