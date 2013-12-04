@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2013/10/29 11:50:24 obache Exp $
+# $NetBSD: Makefile,v 1.29 2013/12/04 14:01:15 obache Exp $
 #
 
-DISTNAME=	groonga-3.0.9
+DISTNAME=	groonga-3.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
