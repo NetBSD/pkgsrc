@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.3 2013/12/04 13:02:08 drochner Exp $
+
+--- src/common/utility.c.orig	2013-09-10 12:25:47.000000000 +0000
++++ src/common/utility.c
+@@ -17,13 +17,11 @@
+ */
+ 
+ /* getpwnam_r availibility check */
+-#if defined __APPLE__ || defined _POSIX_C_SOURCE >= 1 || defined _XOPEN_SOURCE || defined _BSD_SOURCE || defined _SVID_SOURCE || defined _POSIX_SOURCE
+ #include <pwd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include "darktable.h"
+-#endif
+ 
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>

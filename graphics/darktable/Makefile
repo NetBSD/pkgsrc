@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2013/10/19 09:07:05 adam Exp $
+# $NetBSD: Makefile,v 1.40 2013/12/04 13:02:08 drochner Exp $
 
-DISTNAME=	darktable-1.2
-PKGREVISION=	8
+DISTNAME=	darktable-1.2.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 EXTRACT_SUFX=	.tar.xz
@@ -42,7 +41,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
 .if ${MACHINE_ARCH} == "i386"
 # SSE alignment issues
 GCC_REQD=	4.2
-CFLAGS+=	-mstackrealign -msse2
+CFLAGS+=	-mstackrealign -msse2 -march=i686
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -75,7 +74,7 @@ BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.7.14.1nb1
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/flickcurl/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
+#.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
