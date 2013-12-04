@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2013/10/11 16:21:40 roy Exp $
+$NetBSD: distinfo,v 1.40 2013/12/04 10:01:30 bsiegert Exp $
 
 SHA1 (heimdal-1.5.3.tar.gz) = 23f39a099ae862dce1f5f4e5c3720861849a4bd0
 RMD160 (heimdal-1.5.3.tar.gz) = 834660b4c0fe81a3aac4ffd9d8d37d74add1fa70
@@ -9,9 +9,6 @@ SHA1 (patch-cf_install-catman.sh) = 8eb8ea0c0c8b281c080c85eefc3abbc7dcbe6746
 SHA1 (patch-cf_libtool.m4) = cd229e0e934649cb04c3f39928d1fa12c2474f62
 SHA1 (patch-cf_pthreads.m4) = eff8f355887d2f9795446073efd67ccf739db2c9
 SHA1 (patch-kdc_version-script.map) = 42b0417a16b19a680f30ae34cfffd082f609d4a6
-SHA1 (patch-lib_hcrypto_libtommath_tommath.h) = 60f223bb23145854f2a144da9e0a9484728b618a
-SHA1 (patch-lib_hcrypto_libtommath_tommath_class.h) = 8c7b1e8d30cda79fd59a8ef83094a611b47a43df
-SHA1 (patch-lib_hcrypto_libtommath_tommath_superclass.h) = 141e75b5b310446694769b16a977fa5b25160fbd
 SHA1 (patch-lib_libedit_aclocal.m4) = c50025a3b9bcae9913adab251169462dbc0f3221
 SHA1 (patch-lib_libedit_configure) = c029c471d68d389e67e1cc636a352a004fd6124e
 SHA1 (patch-lib_libedit_configure.ac) = 588b184615a80ab85d7c3624c6c05860c8e6feb0
