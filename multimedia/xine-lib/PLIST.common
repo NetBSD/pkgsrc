@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.35 2012/03/24 13:21:43 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.36 2013/12/04 12:38:35 drochner Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -78,6 +78,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_ff.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_ff.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_gsm610.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_gsm610.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_libjpeg.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_libjpeg.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_lpcm.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_lpcm.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_mad.a
@@ -168,6 +170,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_rtsp.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_rtsp.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_stdin_fifo.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_stdin_fifo.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_test.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_test.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcd.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcd.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_nsf.a

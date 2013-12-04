@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.89 2012/10/23 19:57:33 apb Exp $
+$NetBSD: distinfo,v 1.90 2013/12/04 12:38:35 drochner Exp $
 
-SHA1 (xine-lib-1.2.2.tar.xz) = a349cbb0b72256bb262377796a022dcf63829b4c
-RMD160 (xine-lib-1.2.2.tar.xz) = 3f11df3fa8a8946bdcc9cdecd6952dc76b834d14
-Size (xine-lib-1.2.2.tar.xz) = 4857248 bytes
+SHA1 (xine-lib-1.2.4.tar.xz) = 32267c5fcaa1439a5fbf7606d27dc4fafba9e504
+RMD160 (xine-lib-1.2.4.tar.xz) = 9c4b151730a4ede46013fb127545fbb59d56f8b6
+Size (xine-lib-1.2.4.tar.xz) = 4954992 bytes
 SHA1 (patch-Makefile.am) = ab2bdb97834ea3ebf161e2c716f0dcb6eb147c1e
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ag) = 00009002714ed26fa646eed326e2b0a5e2265572
@@ -11,7 +11,6 @@ SHA1 (patch-ak) = 987700e6526b5112ac66bd6a8f9ee41f338c3508
 SHA1 (patch-ap) = d48fa83879895d4b1f56bfbcbe31087dd57d8a82
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
 SHA1 (patch-at) = 15a810379ccb345aeeb374b0148096684f5f179b
-SHA1 (patch-av) = 12b8957279b977db3bba2c1adae40217a1661072
 SHA1 (patch-cb) = db4ff27418e05e97bf30b554beecc24d6e578d15
 SHA1 (patch-cd) = 192530e79568ea165b1fc675c7e794133a06c734
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
@@ -23,8 +22,6 @@ SHA1 (patch-src-post-audio-upmix.c) = ab01e157b42b8dd99622a17b5a8ecdb464ee694e
 SHA1 (patch-src-post-audio-upmix_mono.c) = 182a73985d6158c5ab2409bc372b302d3385320e
 SHA1 (patch-src-post-audio-volnorm.c) = 49d9bd437d240ddf2a14275d518469313cb29a0c
 SHA1 (patch-src-post-deinterlace-plugins-greedy2frame.c) = 85acf40662602c41e1f475b010534aefbb466a4b
-SHA1 (patch-src-post-deinterlace-plugins-greedy2frame_template.c) = 8cb62659326648cb54fa0219cd12fd02c53d047d
-SHA1 (patch-src-post-deinterlace-plugins-greedy2frame_template_sse2.c) = af9a57b0c5e496836c145d6888ea3149bf501c2f
 SHA1 (patch-src-post-deinterlace-xine_plugin.c) = 132554aa9bdc43fbe9e7dc42fee5916cb60be806
 SHA1 (patch-src-post-goom-mmx.h) = 09b82b9e1fae57afb385daa1cd3bb265fd680a1d
 SHA1 (patch-src-post-mosaico-mosaico.c) = f26e6ccc60c78a499d2bd0fd8f3d4c2f4efffde8
