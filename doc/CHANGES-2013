@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4359 2013/12/04 19:10:16 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4360 2013/12/05 08:50:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6349,3 +6349,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added print/tex-cyrillic-bin version 2013 [minskim 2013-12-04]
 	Added print/tex-cyrillic-bin-doc version 2013 [minskim 2013-12-04]
 	Removed print/texlive-tetex [minskim 2013-12-04]
+	Added databases/dbfsak version 4.5 [adam 2013-12-05]
