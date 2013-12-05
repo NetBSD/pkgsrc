@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/13 11:53:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/05 16:45:04 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
@@ -4154,6 +4154,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/ThenViewHelpe
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Uri/EmailViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Uri/ExternalViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/ViewHelperBaseTestcase.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Widget/Controller/PaginateControllerTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_localconf.php
