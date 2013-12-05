@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/13 11:35:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/05 16:44:04 taca Exp $
 ${EGDIR}/LocalConfiguration.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2974,6 +2974,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/TypoScript/ExtendedTemplateSe
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/TypoScript/Parser/TypoScriptParser.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/TypoScript/TemplateService.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/ArrayUtility.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/ClassNamingUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/ClientUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/CommandUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Utility/DebugUtility.php
@@ -3102,6 +3103,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/TypoScript/Fixtures/ext_ty
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/TypoScript/TemplateServiceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/TypoScript/TypoScriptParserTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ArrayUtilityTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ClassNamingUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ClientUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/ExtensionMangementUtilityTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Unit/Utility/Fixtures/MathUtilityTestClassWithStringRepresentationFixture.php
@@ -4133,6 +4135,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/ThenViewHelpe
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Uri/EmailViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Uri/ExternalViewHelperTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/ViewHelperBaseTestcase.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/Tests/Unit/ViewHelpers/Widget/Controller/PaginateControllerTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_localconf.php
