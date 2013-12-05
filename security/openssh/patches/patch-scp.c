@@ -1,8 +1,8 @@
-$NetBSD: patch-scp.c,v 1.1 2013/05/01 19:58:26 imil Exp $
+$NetBSD: patch-scp.c,v 1.1.4.1 2013/12/05 09:52:53 tron Exp $
 
 Interix support
 
---- scp.c.orig	2013-03-20 01:55:15.000000000 +0000
+--- scp.c.orig	2013-07-18 06:11:25.000000000 +0000
 +++ scp.c
 @@ -477,7 +477,11 @@ main(int argc, char **argv)
  	argc -= optind;
@@ -27,7 +27,7 @@ Interix support
  		if (!strcmp(dp->d_name, ".") || !strcmp(dp->d_name, ".."))
  			continue;
  		if (strlen(name) + 1 + strlen(dp->d_name) >= sizeof(path) - 1) {
-@@ -1279,7 +1285,9 @@ okname(char *cp0)
+@@ -1292,7 +1298,9 @@ okname(char *cp0)
  			case '\'':
  			case '"':
  			case '`':
