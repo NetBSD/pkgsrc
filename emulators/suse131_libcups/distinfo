@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/cups-libs-1.5.4-12.1.3.i586.rpm) = 5c2dc61206c4c6f079ffc4b8f8205c9eb1f19a0f
+RMD160 (suse131/cups-libs-1.5.4-12.1.3.i586.rpm) = 17d15ab21b05a043e12ce303b40a3183a1a6f423
+Size (suse131/cups-libs-1.5.4-12.1.3.i586.rpm) = 624754 bytes
+SHA1 (suse131/cups-libs-1.5.4-12.1.3.x86_64.rpm) = e0a5ce470463144b5ff83abfabc6f726b6d87949
+RMD160 (suse131/cups-libs-1.5.4-12.1.3.x86_64.rpm) = 4bd1644e993bb1c51dfb677cf99c6dc7ddb00b5c
+Size (suse131/cups-libs-1.5.4-12.1.3.x86_64.rpm) = 627047 bytes
