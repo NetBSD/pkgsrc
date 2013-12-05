@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4364 2013/12/05 13:31:05 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.4365 2013/12/05 15:04:42 imil Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6420,3 +6420,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/opendnssec to 1.4.3 [pettai 2013-12-05]
 	Updated security/ykpers to 1.14.1 [pettai 2013-12-05]
 	Updated devel/userspace-rcu to 0.7.9 [pettai 2013-12-05]
+	Updated www/nginx-devel to 1.5.7 [imil 2013-12-05]
