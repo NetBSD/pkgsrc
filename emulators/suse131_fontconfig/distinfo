@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/fontconfig-2.11.0-1.1.i586.rpm) = 83e5e25938dc54cff86b174221f505e6221a9767
+RMD160 (suse131/fontconfig-2.11.0-1.1.i586.rpm) = 0c98c323d0e8b338f2daab3d5e49b0627321c961
+Size (suse131/fontconfig-2.11.0-1.1.i586.rpm) = 355260 bytes
+SHA1 (suse131/fontconfig-2.11.0-1.1.x86_64.rpm) = b11e01a1a6d70cce629f5fccb99ed010d8d1cbab
+RMD160 (suse131/fontconfig-2.11.0-1.1.x86_64.rpm) = b7e5ab55af704794ba6c3b29d69f4c8102f677fa
+Size (suse131/fontconfig-2.11.0-1.1.x86_64.rpm) = 355310 bytes

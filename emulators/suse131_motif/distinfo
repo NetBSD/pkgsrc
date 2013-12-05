@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+
+SHA1 (suse131/libMrm4-2.3.4-2.1.3.i586.rpm) = ea59d03432daa672929fa973363dc41f11461f55
+RMD160 (suse131/libMrm4-2.3.4-2.1.3.i586.rpm) = 114efa5df4d4c40373769a6d165a0ab9be395c35
+Size (suse131/libMrm4-2.3.4-2.1.3.i586.rpm) = 57630 bytes
+SHA1 (suse131/libMrm4-2.3.4-2.1.3.x86_64.rpm) = 26ad824649fca380841248710a269b415d06e9e0
+RMD160 (suse131/libMrm4-2.3.4-2.1.3.x86_64.rpm) = a32bca799b4604629bcffc79a19a1dd976714be2
+Size (suse131/libMrm4-2.3.4-2.1.3.x86_64.rpm) = 58396 bytes
+SHA1 (suse131/libUil4-2.3.4-2.1.3.i586.rpm) = 5578c9459495ab4610fc6e171b9ad41831ab0fe3
+RMD160 (suse131/libUil4-2.3.4-2.1.3.i586.rpm) = a130d9101a12886899698744313deb95c23dfbde
+Size (suse131/libUil4-2.3.4-2.1.3.i586.rpm) = 113147 bytes
+SHA1 (suse131/libUil4-2.3.4-2.1.3.x86_64.rpm) = ab13a7704c91b300f3070fcc2075878ca9782904
+RMD160 (suse131/libUil4-2.3.4-2.1.3.x86_64.rpm) = c63bde3b37168b9312f5859409df81a58cdfa24d
+Size (suse131/libUil4-2.3.4-2.1.3.x86_64.rpm) = 125256 bytes
+SHA1 (suse131/libXm4-2.3.4-2.1.3.i586.rpm) = 448940b7edbda5b4e7b3363760d89c451779c2c6
+RMD160 (suse131/libXm4-2.3.4-2.1.3.i586.rpm) = e839ffb2053ec0e3e1cdca89469444efc6d42326
+Size (suse131/libXm4-2.3.4-2.1.3.i586.rpm) = 961495 bytes
+SHA1 (suse131/libXm4-2.3.4-2.1.3.x86_64.rpm) = 40af1fc7f47e20a64b824a6c86f0a1aaee384f52
+RMD160 (suse131/libXm4-2.3.4-2.1.3.x86_64.rpm) = 8d9a847803c6932be0c8fae41bf8883faa603030
+Size (suse131/libXm4-2.3.4-2.1.3.x86_64.rpm) = 967948 bytes
+SHA1 (suse131/motif-2.3.4-2.1.3.i586.rpm) = 80e414399846e59b7f2c068141b40cc7703aa096
+RMD160 (suse131/motif-2.3.4-2.1.3.i586.rpm) = c1f30bcb18afefeefdaf1d760758c3997feaf051
+Size (suse131/motif-2.3.4-2.1.3.i586.rpm) = 164428 bytes
+SHA1 (suse131/motif-2.3.4-2.1.3.x86_64.rpm) = 6095ce015183798df2c8e93f0dc8dea181acf845
+RMD160 (suse131/motif-2.3.4-2.1.3.x86_64.rpm) = 125674370a8d02b1d92efe9195d1b5670759cb4c
+Size (suse131/motif-2.3.4-2.1.3.x86_64.rpm) = 170310 bytes
