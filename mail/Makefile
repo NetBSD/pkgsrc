@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2013/11/18 22:51:00 pettai Exp $
+# $NetBSD: Makefile,v 1.441 2013/12/05 16:01:43 pettai Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -171,6 +171,7 @@ SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
 SUBDIR+=	opendkim
+SUBDIR+=	opendmarc
 SUBDIR+=	opensmtpd
 SUBDIR+=	p5-App-Siesh
 SUBDIR+=	p5-Catalyst-View-Email
