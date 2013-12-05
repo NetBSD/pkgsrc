@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.18 2013/12/05 09:53:31 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.19 2013/12/05 17:50:00 schnoebe Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -67,3 +67,7 @@ Pullup ticket #4261 - requested by taca
 lang/ruby200-base: security update
 Pullup ticket #4262 - requested by taca
 security/openssh: security update
+Pullup ticket #4263 - requested by imil
+www/nginx: security update
+Pullup ticket #4263 - requested by imil
+www/nginx-devel: security update
