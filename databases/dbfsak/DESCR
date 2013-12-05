@@ -1,0 +1,4 @@
+DBFSAK is a command line program designed to extract data from DBF (dBase,
+FoxPro, Clipper, xBase) files. It can also be used to create DBF files and
+populate them from your data. It is written for the Linux/Unix environment,
+but relies only on standard C libraries and functions.
