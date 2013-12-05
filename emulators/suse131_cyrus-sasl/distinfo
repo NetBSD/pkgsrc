@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/cyrus-sasl-2.1.25-28.1.2.i586.rpm) = f591bca39eba9b378406117d87a1ee8ca7e07fe1
+RMD160 (suse131/cyrus-sasl-2.1.25-28.1.2.i586.rpm) = 0418c50b6af6966869fb805ac7c0e1e9b68df848
+Size (suse131/cyrus-sasl-2.1.25-28.1.2.i586.rpm) = 88886 bytes
+SHA1 (suse131/cyrus-sasl-2.1.25-28.1.2.x86_64.rpm) = 38bd2974b63f38681b1d91614d901db7f1ac7809
+RMD160 (suse131/cyrus-sasl-2.1.25-28.1.2.x86_64.rpm) = a0de988b788625926c9102d748091d640d13598d
+Size (suse131/cyrus-sasl-2.1.25-28.1.2.x86_64.rpm) = 90968 bytes

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/libidn11-1.25-7.1.2.i586.rpm) = c3f1698a170d98a5a0f8d5fee4169dd90b123311
+RMD160 (suse131/libidn11-1.25-7.1.2.i586.rpm) = f474da03af46682e07fa61d507fc3fe78d124b98
+Size (suse131/libidn11-1.25-7.1.2.i586.rpm) = 45060 bytes
+SHA1 (suse131/libidn11-1.25-7.1.2.x86_64.rpm) = 1460e683aeab1d454e80efb246fc716b2220e246
+RMD160 (suse131/libidn11-1.25-7.1.2.x86_64.rpm) = fcd675b1408caf87240e944de3d7b160c51659b2
+Size (suse131/libidn11-1.25-7.1.2.x86_64.rpm) = 45058 bytes

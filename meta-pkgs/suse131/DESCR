@@ -1,0 +1,8 @@
+The openSUSE 13.1 meta-package provides a number of components for a
+openSUSE-based Linux binary emulation environment.
+
+This package does not contain anything by itself -- it is a "meta-package"
+that depends on other packages.  Its sole purpose is to require
+dependencies so users can install this package only and have all the
+other packages pulled in automatically by the pkgsrc dependency
+mechanism.

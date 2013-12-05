@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/dbus-1-1.7.4-4.4.1.i586.rpm) = 26dbbceb63d2dc6d256d1b54ee61c16f19a41820
+RMD160 (suse131/dbus-1-1.7.4-4.4.1.i586.rpm) = 04ca1e8df9f7f2ae75deecbbc05f2547b933bf2b
+Size (suse131/dbus-1-1.7.4-4.4.1.i586.rpm) = 294209 bytes
+SHA1 (suse131/dbus-1-1.7.4-4.4.1.x86_64.rpm) = 04d1587895d9abc7851f309dbd3207565e120fa0
+RMD160 (suse131/dbus-1-1.7.4-4.4.1.x86_64.rpm) = d0a797a7a9b0feef1fd11dd7e55044e6dc0ff94c
+Size (suse131/dbus-1-1.7.4-4.4.1.x86_64.rpm) = 293527 bytes
+SHA1 (suse131/libdbus-1-3-1.7.4-4.4.1.i586.rpm) = 7c9f712cebaf274057c8232cf978c54de9441a64
+RMD160 (suse131/libdbus-1-3-1.7.4-4.4.1.i586.rpm) = 9898b63feae4fc452198e1de934caf60cba76978
+Size (suse131/libdbus-1-3-1.7.4-4.4.1.i586.rpm) = 141775 bytes
+SHA1 (suse131/libdbus-1-3-1.7.4-4.4.1.x86_64.rpm) = 0c551cc96cbac55197fe5cc09c2cb7ebc6b3f727
+RMD160 (suse131/libdbus-1-3-1.7.4-4.4.1.x86_64.rpm) = d4fafd188f2ba20acda8a849d48b5e603d7354ac
+Size (suse131/libdbus-1-3-1.7.4-4.4.1.x86_64.rpm) = 142282 bytes

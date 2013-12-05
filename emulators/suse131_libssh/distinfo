@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+
+SHA1 (suse131/libssh2-1-1.4.3-7.1.2.i586.rpm) = eb5f62803f3da27f52c8ada30b2b6ee32268e336
+RMD160 (suse131/libssh2-1-1.4.3-7.1.2.i586.rpm) = c65b98f4ce74611081cf90b7baf8a2bd9cf55811
+Size (suse131/libssh2-1-1.4.3-7.1.2.i586.rpm) = 69791 bytes
+SHA1 (suse131/libssh2-1-1.4.3-7.1.2.x86_64.rpm) = df6057030a58080af3434b5cc3b550f3d1eee76e
+RMD160 (suse131/libssh2-1-1.4.3-7.1.2.x86_64.rpm) = f5d2ad3b62ecd9154f5dd917073d2af3664fb337
+Size (suse131/libssh2-1-1.4.3-7.1.2.x86_64.rpm) = 71260 bytes

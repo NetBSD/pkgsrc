@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/05 11:42:15 obache Exp $
+${EMULSUBDIRSLASH}etc/fonts/local.conf

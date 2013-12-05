@@ -1,0 +1,6 @@
+Linux compatibility package based on the openSUSE Linux distribution.
+Please visit http://www.opensuse.org/ for more information about openSUSE
+Linux.
+
+This package supports running ELF binaries linked with glibc2 that
+require OpenLDAP shared libraries.

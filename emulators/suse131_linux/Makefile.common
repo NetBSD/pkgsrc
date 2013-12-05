@@ -1,0 +1,92 @@
+# $NetBSD: Makefile.common,v 1.1 2013/12/05 11:42:16 obache Exp $
+# used by emulators/suse131_base/Makefile
+
+SUSE_PKG=		yes
+SUSE_VERSION=		13.1
+EMUL_REQD=		suse>=${SUSE_VERSION}
+
+# The SuSE 13.x Linux packages are only usable on the following platforms.
+# The SUSE_COMPAT32 packages are available only on x86_64 and they emulate i386.
+# The non-SUSE_COMPAT32 packages are available on both i386 and x86_64
+# and they emulate the corresponding linux platform.
+.if !defined(SUSE_COMPAT32)
+EMUL_PLATFORMS+=	linux-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-5.99*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[6-9]*-i386
+.endif
+EMUL_PLATFORMS+=	linux-i386
+ONLY_FOR_PLATFORM+=	NetBSD-5.99*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[6-9]*-x86_64
+
+.include "../../mk/bsd.prefs.mk"
+
+# _SUSE_ARCH.* is a table of ${EMUL_ARCH} to SuSE architectures.
+_SUSE_ARCH.${EMUL_ARCH}=	${EMUL_ARCH}
+_SUSE_ARCH.i386=		i586
+_SUSE_ARCH=			${_SUSE_ARCH.${EMUL_ARCH}}
+SUSE_ARCH=			${_SUSE_ARCH}
+
+_SUSE_FTP_SUBDIR=	distribution/${SUSE_VERSION}/repo/oss/suse/
+_SUSE_FTP_SUBDIR_UPD=	update/${SUSE_VERSION}/
+
+MASTER_SITE_SUSE_${SUSE_VERSION}= \
+	http://download.opensuse.org/${_SUSE_FTP_SUBDIR}
+
+MASTER_SITE_SUSE_${SUSE_VERSION}_UPD= \
+	http://download.opensuse.org/${_SUSE_FTP_SUBDIR_UPD}
+
+MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}/${SUSE_ARCH}/
+DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}
+
+HOMEPAGE?=		http://www.opensuse.org/
+
+WRKSRC?=		${WRKDIR}
+BUILD_DIRS?=		# empty
+MANCOMPRESSED?=		yes
+
+EMUL_PKG_FMT?=		rpm
+RPM2PKG_PREFIX?=	${DESTDIR}${PREFIX}
+RPM2PKG_SUBPREFIX?=	${EMULSUBDIR}
+RPM2PKG_STAGE?=		do-install
+
+SUSE_PKGSRCDIR=		${.CURDIR}/../${.CURDIR:T:S/_32_/_/}
+FILESDIR=		${SUSE_PKGSRCDIR}/files
+PATCHDIR=		${SUSE_PKGSRCDIR}/patches
+PKGDIR=			${SUSE_PKGSRCDIR}
+
+.if defined(SUSE_COMPAT32)
+PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
+COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
+.if defined(CONFLICTS)
+CONFLICTS:=		${CONFLICTS:S/^suse_/suse32_/}
+.endif
+LINUX_BASE=		linux32
+.else
+LINUX_BASE=		linux
+.endif
+PLIST_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
+FILES_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
+
+LINUX_LIBSUBDIR?=	lib
+PLIST_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
+FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
+
+# Include an "override" SuSE-specific and architecture-specific
+# Makefile fragment if it exists.
+#
+.sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
+
+.if defined(RPMPKGS) && !empty(RPMPKGS)
+.  for distfile in ${RPMPKGS}
+DISTFILES+=	${distfile}.rpm
+SITES.${distfile:T:S/=/--/}.rpm?=	\
+	${MASTER_SITE_SUSE_${SUSE_VERSION}}${distfile:E}/
+.  endfor
+.endif
+.if defined(RPMUPDPKGS) && !empty(RPMUPDPKGS)
+.  for distfile in ${RPMUPDPKGS}
+DISTFILES+=	${distfile}.rpm
+SITES.${distfile:T:S/=/--/}.rpm?=	\
+	${MASTER_SITE_SUSE_${SUSE_VERSION}_UPD}${distfile:E}/
+.  endfor
+.endif

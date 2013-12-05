@@ -1,0 +1,19 @@
+# $NetBSD: DEINSTALL,v 1.1 2013/12/05 11:42:15 obache Exp $
+#
+# Remove gtk/pango module configuration.
+#
+case ${STAGE} in
+DEINSTALL)
+	GNOME_BINDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/bin"
+	GNOME_LIBDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/lib@ABISUFFIX@"
+	GNOME_ETCDIR="${PKG_PREFIX}/@EMULSUBDIR@/etc"
+
+	${ECHO} "${PKGNAME}: removing GTK/Pango module configuration"
+	${RM} -f ${GNOME_LIBDIR}/gtk-2.0/2.10.0/gtk@ABISUFFIX@.immodules
+	${RM} -f ${GNOME_LIBDIR}/gdk-pixbuf-2.0/2.10.0/loaders.cache
+	${RM} -f ${GNOME_ETCDIR}/pango/pango@ABISUFFIX@.modules
+	${RM} -f ${GNOME_LIBDIR}/gio/modules/giomodule.cache
+	${RM} -f ${PKG_PREFIX}/@EMULSUBDIR@/usr/share/glib-2.0/schemas/gschemas.compiled
+	${RM} -f ${PKG_PREFIX}/@EMULSUBDIR@/var/cache/gio-2.0/defaults.list
+	;;
+esac

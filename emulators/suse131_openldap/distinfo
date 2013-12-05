@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+
+SHA1 (suse131/libldap-2_4-2-2.4.33-8.1.2.i586.rpm) = 6c004dabed8c7c4beefa79f90a7e76f2d6d91382
+RMD160 (suse131/libldap-2_4-2-2.4.33-8.1.2.i586.rpm) = 9bfa190aedbe00df1d8834ec6e44ffbf1660b5d4
+Size (suse131/libldap-2_4-2-2.4.33-8.1.2.i586.rpm) = 203746 bytes
+SHA1 (suse131/libldap-2_4-2-2.4.33-8.1.2.x86_64.rpm) = d88f0b683b4fd6d230701bfb15a18e725b48f52c
+RMD160 (suse131/libldap-2_4-2-2.4.33-8.1.2.x86_64.rpm) = 59d1b7b396b81b497b1486356a366863b35219b3
+Size (suse131/libldap-2_4-2-2.4.33-8.1.2.x86_64.rpm) = 208044 bytes

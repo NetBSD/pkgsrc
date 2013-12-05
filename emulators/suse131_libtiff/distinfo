@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+
+SHA1 (suse131/libjbig2-2.0-10.1.2.i586.rpm) = 58577db95dc8498b3fc1c7c6b4443e7d3987e2d7
+RMD160 (suse131/libjbig2-2.0-10.1.2.i586.rpm) = d54f8c846d56bc12e1c9a6fd1aa4dcffa37f2f49
+Size (suse131/libjbig2-2.0-10.1.2.i586.rpm) = 27624 bytes
+SHA1 (suse131/libjbig2-2.0-10.1.2.x86_64.rpm) = f287f400a67c54e5041009a15e2bec45edcae356
+RMD160 (suse131/libjbig2-2.0-10.1.2.x86_64.rpm) = 40ae42f890d3229aff52d45d692392141e4e44cc
+Size (suse131/libjbig2-2.0-10.1.2.x86_64.rpm) = 28750 bytes
+SHA1 (suse131/libtiff5-4.0.3-8.1.2.i586.rpm) = f181c9bb4595a4a169c5ad9b0e8e0ea2aa707663
+RMD160 (suse131/libtiff5-4.0.3-8.1.2.i586.rpm) = ab51bbaf8398a1c84f273c26ce8a1085437825c2
+Size (suse131/libtiff5-4.0.3-8.1.2.i586.rpm) = 150068 bytes
+SHA1 (suse131/libtiff5-4.0.3-8.1.2.x86_64.rpm) = d3cf96f8383e545848dc0d92d3791bf1477ee0e8
+RMD160 (suse131/libtiff5-4.0.3-8.1.2.x86_64.rpm) = 43700400c5f6be0ffb0ae821b40c7ab99ea125ed
+Size (suse131/libtiff5-4.0.3-8.1.2.x86_64.rpm) = 150155 bytes
