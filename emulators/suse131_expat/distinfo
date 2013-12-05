@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/libexpat1-2.1.0-12.1.2.i586.rpm) = fe1d357b4ed06b5e63216ba0136682fa7fdcca3c
+RMD160 (suse131/libexpat1-2.1.0-12.1.2.i586.rpm) = 12bcc584c3e97cf78430eaa81c361624c1a4ff32
+Size (suse131/libexpat1-2.1.0-12.1.2.i586.rpm) = 58083 bytes
+SHA1 (suse131/libexpat1-2.1.0-12.1.2.x86_64.rpm) = ddce060edc223b88fb83796a1449f21459112725
+RMD160 (suse131/libexpat1-2.1.0-12.1.2.x86_64.rpm) = b0d9bff52b1ec2392515c45b11fd58eeda7b07e6
+Size (suse131/libexpat1-2.1.0-12.1.2.x86_64.rpm) = 58923 bytes
