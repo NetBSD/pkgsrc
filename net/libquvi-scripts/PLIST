@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/08/19 13:36:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/05 23:31:35 wiz Exp $
 lib/pkgconfig/libquvi-scripts.pc
 man/man7/libquvi-scripts.7
 share/libquvi-scripts/lua/README
@@ -17,16 +17,16 @@ share/libquvi-scripts/lua/website/bikeradar.lua
 share/libquvi-scripts/lua/website/canalplus.lua
 share/libquvi-scripts/lua/website/cbsnews.lua
 share/libquvi-scripts/lua/website/clipfish.lua
+share/libquvi-scripts/lua/website/collegehumor.lua
 share/libquvi-scripts/lua/website/dailymotion.lua
 share/libquvi-scripts/lua/website/deviantclip.lua
+share/libquvi-scripts/lua/website/dorkly.lua
 share/libquvi-scripts/lua/website/empflix.lua
 share/libquvi-scripts/lua/website/foxnews.lua
 share/libquvi-scripts/lua/website/funnyordie.lua
 share/libquvi-scripts/lua/website/gaskrank.lua
 share/libquvi-scripts/lua/website/guardian.lua
-share/libquvi-scripts/lua/website/imdb.lua
 share/libquvi-scripts/lua/website/jizzhut.lua
-share/libquvi-scripts/lua/website/justintv.lua
 share/libquvi-scripts/lua/website/keezmovies.lua
 share/libquvi-scripts/lua/website/lego.lua
 share/libquvi-scripts/lua/website/liveleak.lua
@@ -58,7 +58,6 @@ share/libquvi-scripts/lua/website/tvrain.lua
 share/libquvi-scripts/lua/website/videa.lua
 share/libquvi-scripts/lua/website/videobash.lua
 share/libquvi-scripts/lua/website/vimeo.lua
-share/libquvi-scripts/lua/website/wdrmaus.lua
 share/libquvi-scripts/lua/website/wimp.lua
 share/libquvi-scripts/lua/website/xhamster.lua
 share/libquvi-scripts/lua/website/xnxx.lua
