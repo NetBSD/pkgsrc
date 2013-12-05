@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.573 2013/12/04 19:09:30 minskim Exp $
+# $NetBSD: Makefile,v 1.574 2013/12/05 04:12:30 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -290,9 +290,9 @@ SUBDIR+=	tex-csquotes-doc
 SUBDIR+=	tex-cweb
 SUBDIR+=	tex-cweb-doc
 SUBDIR+=	tex-cyrillic
-SUBDIR+=	tex-cyrillic-doc
 SUBDIR+=	tex-cyrillic-bin
 SUBDIR+=	tex-cyrillic-bin-doc
+SUBDIR+=	tex-cyrillic-doc
 SUBDIR+=	tex-datatool
 SUBDIR+=	tex-datatool-doc
 SUBDIR+=	tex-datetime
