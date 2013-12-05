@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/libfreetype6-2.5.0.1-2.1.2.i586.rpm) = 51a0a82c6f552a8cfd4729029d005f8c6bbe253e
+RMD160 (suse131/libfreetype6-2.5.0.1-2.1.2.i586.rpm) = c0281f2349bcc35ac5c19672cbfb2e98c76aee97
+Size (suse131/libfreetype6-2.5.0.1-2.1.2.i586.rpm) = 370481 bytes
+SHA1 (suse131/libfreetype6-2.5.0.1-2.1.2.x86_64.rpm) = 9a52668d5e3b05fea40669e2e90e20ace1db77e2
+RMD160 (suse131/libfreetype6-2.5.0.1-2.1.2.x86_64.rpm) = c94183c26843f30d60729a49506fa48e2e4ab177
+Size (suse131/libfreetype6-2.5.0.1-2.1.2.x86_64.rpm) = 374947 bytes

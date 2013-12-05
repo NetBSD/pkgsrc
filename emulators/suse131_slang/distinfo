@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:17 obache Exp $
+
+SHA1 (suse131/libslang2-2.2.4-6.1.2.i586.rpm) = 0ea72651a556b513ebf3d99e24b6276b787f5306
+RMD160 (suse131/libslang2-2.2.4-6.1.2.i586.rpm) = df80c46ec2698db35977ece42294e4c34f876dcc
+Size (suse131/libslang2-2.2.4-6.1.2.i586.rpm) = 284627 bytes
+SHA1 (suse131/libslang2-2.2.4-6.1.2.x86_64.rpm) = 54c64d75a51a8b37885037e060200f1ad9f9933f
+RMD160 (suse131/libslang2-2.2.4-6.1.2.x86_64.rpm) = 459ee535b463ce970b688330384b72be52bbdc52
+Size (suse131/libslang2-2.2.4-6.1.2.x86_64.rpm) = 286047 bytes

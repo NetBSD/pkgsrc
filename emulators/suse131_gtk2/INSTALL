@@ -1,0 +1,19 @@
+# $NetBSD: INSTALL,v 1.1 2013/12/05 11:42:15 obache Exp $
+#
+# Initialize gtk/pango module configuration.
+#
+case ${STAGE} in
+POST-INSTALL)
+	GNOME_BINDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/bin"
+	GNOME_LIBDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/lib@ABISUFFIX@"
+	GNOME_ETCDIR="${PKG_PREFIX}/@EMULSUBDIR@/etc"
+	SUSECONFIG="${PKG_PREFIX}/@EMULSUBDIR@/sbin/SuSEconfig"
+
+	${ECHO} "${PKGNAME}: initializing GTK/Pango module configuration"
+	${GNOME_BINDIR}/gtk-query-immodules-2.0@BINSUFFIX@ --update-cache
+	${GNOME_BINDIR}/gdk-pixbuf-query-loaders@BINSUFFIX@ --update-cache
+	${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ --update-cache
+	${GNOME_BINDIR}/gio-querymodules@BINSUFFIX@ ${GNOME_LIBDIR}/gio/modules
+	${MKDIR} -p ${PKG_PREFIX}/@EMULSUBDIR@/var/lock
+	;;
+esac
