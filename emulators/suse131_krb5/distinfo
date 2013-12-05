@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/krb5-1.11.3-3.1.3.i586.rpm) = 381ceff286821e3f2a1f43ba1bda5a4252da4de9
+RMD160 (suse131/krb5-1.11.3-3.1.3.i586.rpm) = 75112fee3babf7ee4a25abc60030a55b0978be81
+Size (suse131/krb5-1.11.3-3.1.3.i586.rpm) = 571359 bytes
+SHA1 (suse131/krb5-1.11.3-3.1.3.x86_64.rpm) = 0d5ca78ef9b3f2c816cd52f3d38ca51e50139935
+RMD160 (suse131/krb5-1.11.3-3.1.3.x86_64.rpm) = 1e9e00ea05e8dd4eb50336eded9845ffc479eecb
+Size (suse131/krb5-1.11.3-3.1.3.x86_64.rpm) = 585868 bytes
+SHA1 (suse131/libcom_err2-1.42.8-2.1.2.i586.rpm) = 6203697b4c1e91503ce7d3b0a4aaf1e9c97fca7f
+RMD160 (suse131/libcom_err2-1.42.8-2.1.2.i586.rpm) = a0739c35f19ef754ceffa1eb19c0b637febd942b
+Size (suse131/libcom_err2-1.42.8-2.1.2.i586.rpm) = 29874 bytes
+SHA1 (suse131/libcom_err2-1.42.8-2.1.2.x86_64.rpm) = 30ba9782f12590f5306cf02e98115c99742ebf9f
+RMD160 (suse131/libcom_err2-1.42.8-2.1.2.x86_64.rpm) = d6b64a812aa8da0e57d75d18cda306d1a0458425
+Size (suse131/libcom_err2-1.42.8-2.1.2.x86_64.rpm) = 30346 bytes
+SHA1 (suse131/libkeyutils1-1.5.5-6.1.3.i586.rpm) = 1365ffdfe5c387c64b82b2089c816f9e1aaf4104
+RMD160 (suse131/libkeyutils1-1.5.5-6.1.3.i586.rpm) = 7ef13a1eea21587a6e8e23d679131565b39a078a
+Size (suse131/libkeyutils1-1.5.5-6.1.3.i586.rpm) = 19075 bytes
+SHA1 (suse131/libkeyutils1-1.5.5-6.1.3.x86_64.rpm) = 7da3d8934b5f9ef55cc6a1582312877e106f16cf
+RMD160 (suse131/libkeyutils1-1.5.5-6.1.3.x86_64.rpm) = a53dcf494456d1ae3a236ba203dce6c906a0d4aa
+Size (suse131/libkeyutils1-1.5.5-6.1.3.x86_64.rpm) = 19209 bytes

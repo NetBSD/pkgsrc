@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:15 obache Exp $
+
+SHA1 (suse131/compat-2010.1.31-17.1.2.i586.rpm) = c1d8600aa7bf0fce55aac8d4437beaa6ad85cc69
+RMD160 (suse131/compat-2010.1.31-17.1.2.i586.rpm) = db49270dfa13034f2c553afcf35a1040163b4e5b
+Size (suse131/compat-2010.1.31-17.1.2.i586.rpm) = 320149 bytes
+SHA1 (suse131/libstdc++33-3.3.3-41.1.3.i586.rpm) = f30d19622da2884bbdb0fc65a4a2c39413413173
+RMD160 (suse131/libstdc++33-3.3.3-41.1.3.i586.rpm) = 86b6474761e27f7a8428d5465026600a3b8f65f5
+Size (suse131/libstdc++33-3.3.3-41.1.3.i586.rpm) = 205906 bytes
+SHA1 (suse131/libstdc++33-3.3.3-41.1.3.x86_64.rpm) = 1089129c28dbbad0a65821fd4d54bc95564ae473
+RMD160 (suse131/libstdc++33-3.3.3-41.1.3.x86_64.rpm) = 51b46aa70d2d2d6d52eb18c88b5ed9b8e2f527d9
+Size (suse131/libstdc++33-3.3.3-41.1.3.x86_64.rpm) = 193017 bytes
