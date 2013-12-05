@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/24 12:37:40 richard Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/05 13:23:09 richard Exp $
 bin/firefox24
 include/firefox24/AbstractMediaDecoder.h
 include/firefox24/AccEvent.h
@@ -260,7 +260,7 @@ include/firefox24/inISearchObserver.h
 include/firefox24/inISearchProcess.h
 include/firefox24/ipc/IPCMessageUtils.h
 include/firefox24/jArray.h
-${PLIST.dtrace}include/firefox24/javascript-trace.h
+include/firefox24/javascript-trace.h
 include/firefox24/js-config.h
 include/firefox24/js.msg
 include/firefox24/js/Anchor.h
@@ -343,7 +343,7 @@ include/firefox24/mozStorageCID.h
 include/firefox24/mozStorageHelper.h
 include/firefox24/mozcontainer.h
 include/firefox24/mozilla-config.h
-${PLIST.dtrace}include/firefox24/mozilla-trace.h
+include/firefox24/mozilla-trace.h
 include/firefox24/mozilla/AppData.h
 include/firefox24/mozilla/AppProcessChecker.h
 include/firefox24/mozilla/Assertions.h
