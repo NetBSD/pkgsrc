@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2013/12/03 20:02:42 adam Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/05 14:20:02 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
 COMMENT=	MySQL 5, a free SQL database (server)
 
-CONFLICTS=	{mysql-server-[0-9]*,mysql3-server-[0-9]*}
+CONFLICTS=	mysql3-server-[0-9]*
 
 .include "../../databases/mysql56-client/Makefile.common"
 
