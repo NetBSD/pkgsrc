@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2013/09/17 12:34:45 pettai Exp $
+$NetBSD: MESSAGE,v 1.6 2013/12/05 12:56:14 pettai Exp $
 
 For latest information about configuring OpenDNSSEC, see:
 https://wiki.opendnssec.org/display/DOCS/OpenDNSSEC+Documentation+Home
 
-If you are upgrading OpenDNSSEC inbetween major releases (eg. 1.3 -> 1.4), 
+If you are upgrading OpenDNSSEC inbetween major releases (eg. 1.3 -> 1.4),
 have a look at the included share/doc/opendnssec/MIGRATION file
 
 ===========================================================================
