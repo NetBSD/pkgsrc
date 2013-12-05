@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4361 2013/12/05 11:42:12 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4362 2013/12/05 12:59:12 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6417,3 +6417,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added emulators/suse131_qt4 version 13.1 [obache 2013-12-05]
 	Added emulators/suse131_slang version 13.1 [obache 2013-12-05]
 	Added emulators/suse131_x11 version 13.1 [obache 2013-12-05]
+	Updated security/opendnssec to 1.4.3 [pettai 2013-12-05]
