@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+
+SHA1 (suse131/libpulse0-4.0.git.270.g9490a-4.1.i586.rpm) = 3aad947ea4ff0a7582b85db674ac1e794c717458
+RMD160 (suse131/libpulse0-4.0.git.270.g9490a-4.1.i586.rpm) = cf9ca66957e7366ed41d0131df0a4ee121906935
+Size (suse131/libpulse0-4.0.git.270.g9490a-4.1.i586.rpm) = 241732 bytes
+SHA1 (suse131/libpulse0-4.0.git.270.g9490a-4.1.x86_64.rpm) = fa311ddf684c011224f0e292e9f31a8584692660
+RMD160 (suse131/libpulse0-4.0.git.270.g9490a-4.1.x86_64.rpm) = 1b49e415a5cdda6be82bfcc39f84556ac30452df
+Size (suse131/libpulse0-4.0.git.270.g9490a-4.1.x86_64.rpm) = 255106 bytes

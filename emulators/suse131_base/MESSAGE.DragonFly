@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE.DragonFly,v 1.1 2013/12/05 11:42:14 obache Exp $
+
+Do not forget to include COMPAT_LINUX in your kernel configuration file.
+You will also need to load the "linux.ko" kernel module (using kldload(8)
+or by setting linux_enable=yes in /etc/rc.conf.
+Most Linux binaries also require linprocfs to be mounted.
+===========================================================================

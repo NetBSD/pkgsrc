@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL,v 1.1 2013/12/05 11:42:15 obache Exp $
+#
+case ${STAGE} in
+POST-INSTALL)
+	${LN} -s /../var/db/dbus/machine-id ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
+	;;
+esac

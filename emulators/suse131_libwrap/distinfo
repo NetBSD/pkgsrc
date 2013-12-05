@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 11:42:16 obache Exp $
+
+SHA1 (suse131/libwrap0-7.6-881.1.2.i586.rpm) = 51377199a85781a1952ed8f9269792b1fde76b55
+RMD160 (suse131/libwrap0-7.6-881.1.2.i586.rpm) = fecba5a1f11fca568ac21ebee835ddebb0db41e0
+Size (suse131/libwrap0-7.6-881.1.2.i586.rpm) = 19420 bytes
+SHA1 (suse131/libwrap0-7.6-881.1.2.x86_64.rpm) = ce6ea7736ffb1f70ec5c3eca71a04a6db43dca8f
+RMD160 (suse131/libwrap0-7.6-881.1.2.x86_64.rpm) = 71aaf23c847f4ef4220d465e28cf4aeb0d22cb77
+Size (suse131/libwrap0-7.6-881.1.2.x86_64.rpm) = 19698 bytes

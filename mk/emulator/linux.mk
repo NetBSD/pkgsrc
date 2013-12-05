@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.19 2012/08/18 16:30:00 chs Exp $
+# $NetBSD: linux.mk,v 1.20 2013/12/05 11:42:12 obache Exp $
 #
 # Linux binary emulation framework
 #
@@ -63,6 +63,7 @@ _EMUL_MODULES+=		base
 _EMUL_MODULES+=		compat
 _EMUL_MODULES+=		cups
 _EMUL_MODULES+=		curl
+_EMUL_MODULES+=		cyrus-sasl
 _EMUL_MODULES+=		drm
 _EMUL_MODULES+=		expat
 _EMUL_MODULES+=		fontconfig
@@ -71,10 +72,16 @@ _EMUL_MODULES+=		glx
 _EMUL_MODULES+=		gtk2
 _EMUL_MODULES+=		jpeg
 _EMUL_MODULES+=		krb5
+_EMUL_MODULES+=		libjson
 _EMUL_MODULES+=		libsigc++2
+_EMUL_MODULES+=		libsndfile
+_EMUL_MODULES+=		libssh
+_EMUL_MODULES+=		libwrap
 _EMUL_MODULES+=		locale
 _EMUL_MODULES+=		motif
+_EMUL_MODULES+=		openldap
 _EMUL_MODULES+=		openssl
+_EMUL_MODULES+=		pulseaudio
 _EMUL_MODULES+=		png
 _EMUL_MODULES+=		qt4
 _EMUL_MODULES+=		resmgr

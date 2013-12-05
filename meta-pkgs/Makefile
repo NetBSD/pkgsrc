@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2013/07/29 16:47:26 taca Exp $
+# $NetBSD: Makefile,v 1.73 2013/12/05 11:42:12 obache Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -46,6 +46,7 @@ SUBDIR+=	py-gnome-bindings
 SUBDIR+=	ruby-gnome2
 SUBDIR+=	suse100
 SUBDIR+=	suse121
+SUBDIR+=	suse131
 SUBDIR+=	web-server
 SUBDIR+=	windowmaker-desktop
 SUBDIR+=	xfce4
