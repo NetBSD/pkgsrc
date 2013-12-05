@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4368 2013/12/05 16:18:30 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4369 2013/12/05 16:45:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6426,3 +6426,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php53 to 5.3.27nb3 [taca 2013-12-05]
 	Updated lang/php54 to 5.4.22nb1 [taca 2013-12-05]
 	Updated lang/php55 to 5.5.6nb1 [taca 2013-12-05]
+	Updated www/typo3_45 to 4.5.31 [taca 2013-12-05]
+	Updated www/typo3_47 to 4.7.16 [taca 2013-12-05]
+	Updated www/typo3_60 to 6.0.11 [taca 2013-12-05]
+	Updated www/typo3_61 to 6.1.6 [taca 2013-12-05]
