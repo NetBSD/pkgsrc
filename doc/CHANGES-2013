@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4369 2013/12/05 16:45:59 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4370 2013/12/05 23:31:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6430,3 +6430,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_47 to 4.7.16 [taca 2013-12-05]
 	Updated www/typo3_60 to 6.0.11 [taca 2013-12-05]
 	Updated www/typo3_61 to 6.1.6 [taca 2013-12-05]
+	Updated net/libquvi-scripts to 0.4.21 [wiz 2013-12-05]
