@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2013/06/04 22:17:00 tron Exp $
+# $NetBSD: Makefile,v 1.48 2013/12/06 11:56:36 obache Exp $
 
 DISTNAME=	reportlab-2.5
 DISTFILES=	${DEFAULT_DISTFILES} pfbfer.zip
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print python
 MASTER_SITES=	http://www.reportlab.com/ftp/
 SITES.pfbfer.zip=	http://www.reportlab.com/ftp/fonts/
@@ -14,7 +14,7 @@ COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-imaging-[0-9]*:../../graphics/py-imaging
+DEPENDS+=	{${PYPKGPREFIX}-imaging-[0-9]*,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
 
 EXTRACT_DIR.pfbfer.zip=	${WRKSRC}/src/reportlab/fonts
 
