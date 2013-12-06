@@ -1,12 +1,12 @@
-$NetBSD: patch-doc_man_man1_Makefile.in,v 1.1.1.1 2012/03/20 14:52:15 asau Exp $
+$NetBSD: patch-doc_man_man1_Makefile.in,v 1.2 2013/12/06 06:05:30 asau Exp $
 
---- doc/man/man1/Makefile.in.orig	2012-03-16 22:14:30.000000000 +0000
+--- doc/man/man1/Makefile.in.orig	2013-11-04 21:19:15.000000000 +0000
 +++ doc/man/man1/Makefile.in
-@@ -284,7 +284,7 @@ host_alias = @host_alias@
+@@ -343,7 +343,7 @@ host_alias = @host_alias@
  host_cpu = @host_cpu@
  host_os = @host_os@
  host_vendor = @host_vendor@
--htmldir = ${prefix}/share/doc/@PACKAGE@-@VERSION@/html
+-htmldir = ${datadir}/doc/@PACKAGE@-@VERSION@/html
 +htmldir = @htmldir@
  includedir = @includedir@
  infodir = @infodir@
