@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/06 06:05:30 asau Exp $
 
-DISTNAME=	slurm-2.4.1
-PKGREVISION=	4
+DISTNAME=	slurm-2.6.4
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
@@ -18,6 +17,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS=	perl pkg-config
 USE_LIBTOOL=	yes
 
+CONFIGURE_ARGS+=	--with-hdf5=no
 # Fix installation:
 CONFIGURE_ARGS+=	--htmldir=$(PREFIX)/share/doc/$(PKGNAME_NOREV)/html
 

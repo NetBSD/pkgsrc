@@ -1,9 +1,9 @@
-$NetBSD: patch-doc_man_man1_Makefile.am,v 1.1.1.1 2012/03/20 14:52:15 asau Exp $
+$NetBSD: patch-doc_man_man1_Makefile.am,v 1.2 2013/12/06 06:05:30 asau Exp $
 
---- doc/man/man1/Makefile.am.orig	2012-03-16 22:14:30.000000000 +0000
+--- doc/man/man1/Makefile.am.orig	2013-11-04 21:19:15.000000000 +0000
 +++ doc/man/man1/Makefile.am
 @@ -1,5 +1,3 @@
--htmldir = ${prefix}/share/doc/@PACKAGE@-@VERSION@/html
+-htmldir = ${datadir}/doc/@PACKAGE@-@VERSION@/html
 -
  man1_MANS = \
  	sacct.1 \
