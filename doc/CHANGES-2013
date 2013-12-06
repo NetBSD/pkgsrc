@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4383 2013/12/06 11:57:39 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4384 2013/12/06 12:02:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6444,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/py-actdiag to 0.5.1 [obache 2013-12-06]
 	Updated graphics/py-nwdiag to 1.0.0 [obache 2013-12-06]
 	Updated print/py-reportlab to 2.5nb5 [obache 2013-12-06]
+	Updated devel/bison to 3.0.2 [wiz 2013-12-06]
