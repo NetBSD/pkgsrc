@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2012/02/07 00:21:49 mef Exp $
+$NetBSD: patch-ag,v 1.6 2013/12/06 07:27:15 mef Exp $
 
 Work around AVRISP mkII initial sync stalls on NetBSD.
 
@@ -16,7 +16,7 @@ Work around AVRISP mkII initial sync stalls on NetBSD.
 +   */
 +  usb_control_msg(udev, USB_TYPE_STANDARD | USB_RECIP_ENDPOINT,
 +		  USB_REQ_CLEAR_FEATURE, USB_FEAT_ENDPOINT_HALT,
-+		  fd->usb.ep & 0xf, NULL, 0, 100);
++		  fd->usb.rep & 0xf, NULL, 0, 100);
 +#endif
 +
    (void)usb_release_interface(udev, usb_interface);
