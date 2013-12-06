@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4394 2013/12/06 18:35:26 tron Exp $
+$NetBSD: CHANGES-2013,v 1.4395 2013/12/06 19:33:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6455,3 +6455,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/p5-Data-Printer version 0.35 [wiz 2013-12-06]
 	Updated www/py-flask-script to 0.6.5 [kleink 2013-12-06]
 	Updated databases/phpmyadmin to 4.0.10 [tron 2013-12-06]
+	Updated databases/sqlite3 to 3.8.2 [adam 2013-12-06]
+	Updated databases/sqlite3-docs to 3.8.2 [adam 2013-12-06]
+	Updated databases/sqlite3-tcl to 3.8.2 [adam 2013-12-06]
