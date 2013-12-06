@@ -1,0 +1,9 @@
+Data::Printer is a Perl module to pretty-print Perl data structures
+and objects in full color. It is meant to display variables on
+screen, properly formatted to be inspected by a human.
+
+Data::Printer is highly customizable, from indentation size to
+depth level. You can even rename the exported p() function!
+
+Data::Printer also lets you create filters to help debugging
+your objects easily.
