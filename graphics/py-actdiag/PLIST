@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/11 05:45:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/06 11:33:13 obache Exp $
 bin/actdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -33,6 +33,7 @@ ${PYSITELIB}/actdiag/plugins/__init__.pyo
 ${PYSITELIB}/actdiag/plugins/autolane.py
 ${PYSITELIB}/actdiag/plugins/autolane.pyc
 ${PYSITELIB}/actdiag/plugins/autolane.pyo
+${PYSITELIB}/actdiag/tests/diagrams/simple.diag
 ${PYSITELIB}/actdiag/tests/test_pep8.py
 ${PYSITELIB}/actdiag/tests/test_pep8.pyc
 ${PYSITELIB}/actdiag/tests/test_pep8.pyo
