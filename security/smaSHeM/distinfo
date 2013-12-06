@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/11/15 05:11:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2013/12/06 21:26:05 joerg Exp $
 
 SHA1 (smaSHeM-0.4.tar.gz) = 2eb22f2db02bd362a350d2d624ac431b1cfadc90
 RMD160 (smaSHeM-0.4.tar.gz) = e968da7aaba5dfdd4050804f88ae08bf840345ab
 Size (smaSHeM-0.4.tar.gz) = 215081 bytes
+SHA1 (patch-src_smaSHeM.cpp) = cb5ace9c3f92819ba10fd1fcbdfad7996862eb37
