@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4386 2013/12/06 13:11:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4387 2013/12/06 13:26:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6447,3 +6447,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/bison to 3.0.2 [wiz 2013-12-06]
 	Updated graphics/py-aafigure to 0.5nb2 [obache 2013-12-06]
 	Updated print/poppler to 0.24.4 [wiz 2013-12-06]
+	Updated textproc/raptor2 to 2.0.11 [wiz 2013-12-06]
