@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/09/11 05:42:38 obache Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/06 11:30:53 obache Exp $
 #
 
-DISTNAME=	seqdiag-0.8.2
+DISTNAME=	seqdiag-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/s/seqdiag/
@@ -11,7 +11,10 @@ HOMEPAGE=	http://blockdiag.com/seqdiag/build/html/
 COMMENT=	Simple sequence-diagram image generator
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.2.4:../../graphics/py-blockdiag
+DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.3.0:../../graphics/py-blockdiag
+
+PYTHON_SELF_CONFLICT=		yes
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# none
 
