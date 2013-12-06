@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
+$NetBSD: patch-ac,v 1.6 2013/12/06 07:27:15 mef Exp $
 
 the builtin [ on at least solaris doesn't understand -e
 
---- doc/Makefile.am.orig	2009-03-06 20:09:08.000000000 +0000
-+++ doc/Makefile.am
-@@ -33,7 +33,7 @@ html: avrdude-html/avrdude.html
+--- doc/Makefile.am.orig	2013-09-18 14:59:05.000000000 +0900
++++ doc/Makefile.am	2013-10-06 16:20:30.000000000 +0900
+@@ -41,7 +41,7 @@ html: avrdude-html/avrdude.html
  
- avrdude-html/avrdude.html: $(srcdir)/$(info_TEXINFOS)
+ avrdude-html/avrdude.html: $(srcdir)/$(info_TEXINFOS) $(GENERATED_TEXINFOS)
  	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
 -	if [ -e ./avrdude.html -o -e ./avrdude_1.html ]; then \
 +	if [ -f ./avrdude.html -o -f ./avrdude_1.html ]; then \

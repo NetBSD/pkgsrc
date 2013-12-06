@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.5 2010/01/26 02:01:47 jakllsch Exp $
+$NetBSD: patch-ad,v 1.6 2013/12/06 07:27:15 mef Exp $
 
 regen
 
---- doc/Makefile.in.orig	2009-07-10 22:52:12.000000000 +0000
-+++ doc/Makefile.in
-@@ -617,7 +617,7 @@ html: avrdude-html/avrdude.html
+--- doc/Makefile.in.orig	2013-09-18 15:19:52.000000000 +0900
++++ doc/Makefile.in	2013-10-06 16:22:00.000000000 +0900
+@@ -789,7 +789,7 @@ html: avrdude-html/avrdude.html
  
- avrdude-html/avrdude.html: $(srcdir)/$(info_TEXINFOS)
+ avrdude-html/avrdude.html: $(srcdir)/$(info_TEXINFOS) $(GENERATED_TEXINFOS)
  	texi2html -split_node $(srcdir)/$(info_TEXINFOS)
 -	if [ -e ./avrdude.html -o -e ./avrdude_1.html ]; then \
 +	if [ -f ./avrdude.html -o -f ./avrdude_1.html ]; then \

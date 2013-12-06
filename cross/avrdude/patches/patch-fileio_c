@@ -1,0 +1,24 @@
+$NetBSD: patch-fileio_c,v 1.1 2013/12/06 07:27:15 mef Exp $
+
+To fix the warning:
+  fileio.c:957:3: warning: implicit declaration of function 'elf_getshdrstrndx'
+
+in libelf-0.8.13, elf_getshdrstrndx is declared in libelf/libelf.h, so
+that header file is to come first in if..elfif..endif clause.
+
+--- fileio.c~	2013-10-06 18:37:49.000000000 +0900
++++ fileio.c	2013-10-06 18:38:23.000000000 +0900
+@@ -29,10 +29,10 @@
+ #include <stdint.h>
+ 
+ #ifdef HAVE_LIBELF
+-#ifdef HAVE_LIBELF_H
+-#include <libelf.h>
+-#elif defined(HAVE_LIBELF_LIBELF_H)
++#ifdef HAVE_LIBELF_LIBELF_H
+ #include <libelf/libelf.h>
++#elif defined(HAVE_LIBELF_H)
++#include <libelf.h>
+ #endif
+ #define EM_AVR32 0x18ad         /* inofficial */
+ #endif
