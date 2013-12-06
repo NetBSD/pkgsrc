@@ -1,8 +1,8 @@
-$NetBSD: patch-src_etc_Makefile.in,v 1.1.1.1 2012/02/19 03:51:17 asau Exp $
+$NetBSD: patch-src_etc_Makefile.in,v 1.2 2013/12/06 00:24:10 asau Exp $
 
---- src/etc/Makefile.in.orig	2011-01-20 01:41:36.000000000 +0000
+--- src/etc/Makefile.in.orig	2013-08-27 18:35:31.000000000 +0000
 +++ src/etc/Makefile.in
-@@ -217,6 +217,7 @@ sbindir = @sbindir@
+@@ -242,6 +242,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
@@ -10,45 +10,33 @@ $NetBSD: patch-src_etc_Makefile.in,v 1.1.1.1 2012/02/19 03:51:17 asau Exp $
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -432,23 +433,23 @@ distclean-local::
+@@ -465,14 +466,14 @@ distclean-local::
  
  install-data-local:
- 	expr "`id`" : 'uid=0(' >/dev/null && OWNER="-o daemon" || OWNER=""; \
--	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)/init.d"; \
--	new=""; test ! -f "$(DESTDIR)$(sysconfdir)/init.d/munge" \
-+	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)/init.d"; \
-+	new=""; test ! -f "$(DESTDIR)$(sysconfexampledir)/init.d/munge" \
- 	  || cmp "$(builddir)/munge.init" \
--	    "$(DESTDIR)$(sysconfdir)/init.d/munge" \
-+	    "$(DESTDIR)$(sysconfexampledir)/init.d/munge" \
- 	  1>/dev/null 2>&1 || new=".new"; \
- 	$(INSTALL) -m 0755 "$(builddir)/munge.init" \
--	  "$(DESTDIR)$(sysconfdir)/init.d/munge$${new}"; \
-+	  "$(DESTDIR)$(sysconfexampledir)/init.d/munge$${new}"; \
- 	test -d "/etc/sysconfig" && d="sysconfig" || d="default"; \
--	new=""; test ! -f "$(DESTDIR)$(sysconfdir)/$${d}/munge" \
-+	new=""; test ! -f "$(DESTDIR)$(sysconfexampledir)/$${d}/munge" \
- 	  || cmp "$(srcdir)/munge.sysconfig" \
--	    "$(DESTDIR)$(sysconfdir)/$${d}/munge" \
-+	    "$(DESTDIR)$(sysconfexampledir)/$${d}/munge" \
- 	  1>/dev/null 2>&1 || new=".new"; \
--	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)/$${d}"; \
-+	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)/$${d}"; \
- 	$(INSTALL) -m 0644 "$(srcdir)/munge.sysconfig" \
--	  "$(DESTDIR)$(sysconfdir)/$${d}/munge$${new}"; \
-+	  "$(DESTDIR)$(sysconfexampledir)/$${d}/munge$${new}"; \
- 	$(INSTALL) $${OWNER} -m 0700 -d \
--	  "$(DESTDIR)$(sysconfdir)/munge"; \
-+	  "$(DESTDIR)$(sysconfexampledir)/munge"; \
- 	$(INSTALL) -m 0711 -d "$(DESTDIR)$(localstatedir)/lib"; \
- 	$(INSTALL) $${OWNER} -m 0711 -d \
- 	  "$(DESTDIR)$(localstatedir)/lib/munge"; \
-@@ -458,7 +459,7 @@ install-data-local:
- 	$(INSTALL) -m 0711 -d "$(DESTDIR)$(localstatedir)/run"; \
- 	$(INSTALL) $${OWNER} -m 0755 -d \
- 	  "$(DESTDIR)$(localstatedir)/run/munge"
--	chmod 755 "$(DESTDIR)$(sysconfdir)"
-+	chmod 755 "$(DESTDIR)$(sysconfexampledir)"
- 	chmod 755 "$(DESTDIR)$(localstatedir)"
- 	chmod 755 "$(DESTDIR)$(localstatedir)/lib"
- 	chmod 755 "$(DESTDIR)$(localstatedir)/log"
+ 	test -d "/etc/rc.d/init.d" \
+-	    && INITDIR="$(sysconfdir)/rc.d/init.d" \
+-	    || INITDIR="$(sysconfdir)/init.d"; \
++	    && INITDIR="$(sysconfexampledir)/rc.d/init.d" \
++	    || INITDIR="$(sysconfexampledir)/init.d"; \
+ 	  $(INSTALL) -m 0755 -d "$(DESTDIR)$${INITDIR}"; \
+ 	  $(INSTALL) -m 0755 \
+ 	    "$(builddir)/munge.init" "$(DESTDIR)$${INITDIR}/munge"
+ 	test -d "/etc/sysconfig" \
+-	    && CONFDIR="$(sysconfdir)/sysconfig" \
+-	    || CONFDIR="$(sysconfdir)/default"; \
++	    && CONFDIR="$(sysconfexampledir)/sysconfig" \
++	    || CONFDIR="$(sysconfexampledir)/default"; \
+ 	  $(INSTALL) -m 0755 -d "$(DESTDIR)$${CONFDIR}"; \
+ 	  $(INSTALL) -m 0644 \
+ 	    "$(srcdir)/munge.sysconfig" "$(DESTDIR)$${CONFDIR}/munge"
+@@ -500,8 +501,8 @@ install-data-local:
+ 	    "$(srcdir)/munge-tmpfiles.conf" \
+ 	    "$(DESTDIR)$(prefix)/lib/tmpfiles.d/munge.conf"; \
+ 	fi
+-	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)"
+-	$(INSTALL) -m 0700 -d "$(DESTDIR)$(sysconfdir)/munge"
++	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)"
++	$(INSTALL) -m 0700 -d "$(DESTDIR)$(sysconfexampledir)/munge"
+ 	$(INSTALL) -m 0755 -d "$(DESTDIR)$(localstatedir)"
+ 	$(INSTALL) -m 0755 -d "$(DESTDIR)$(localstatedir)/lib"
+ 	$(INSTALL) -m 0711 -d "$(DESTDIR)$(localstatedir)/lib/munge"

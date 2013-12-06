@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2013/08/30 20:16:53 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/06 00:24:10 asau Exp $
 bin/munge
 bin/remunge
 bin/unmunge
 include/munge.h
 lib/libmunge.la
+lib/pkgconfig/munge.pc
 man/man1/munge.1
 man/man1/remunge.1
 man/man1/unmunge.1
