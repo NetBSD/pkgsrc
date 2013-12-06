@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/11/11 15:43:14 kleink Exp $
+$NetBSD: distinfo,v 1.5 2013/12/06 16:26:54 kleink Exp $
 
-SHA1 (Flask-Script-0.6.3.tar.gz) = 3acb116ee8e8d3099c8908c1df5e9b2f6d077867
-RMD160 (Flask-Script-0.6.3.tar.gz) = 359079140c18a27854a192b85ed58163c98e7441
-Size (Flask-Script-0.6.3.tar.gz) = 40210 bytes
+SHA1 (Flask-Script-0.6.5.tar.gz) = 093084f284f5ccb340f8dd47b9223f52a1974e7a
+RMD160 (Flask-Script-0.6.5.tar.gz) = dfc0eaaa36821d175836fb1520f13c4d3a28cf6e
+Size (Flask-Script-0.6.5.tar.gz) = 40337 bytes
