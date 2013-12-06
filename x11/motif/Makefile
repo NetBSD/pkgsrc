@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/06/07 15:57:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/06 11:16:56 asau Exp $
 
 PKGVER=		2.3.4
-PKGREVISION=	6
+PKGREVISION=	7
 DISTNAME=	motif-${PKGVER}-src
 PKGNAME=	motif-${PKGVER}
 CATEGORIES=	x11
@@ -104,6 +104,7 @@ post-build:
 		${MV} -f $${manpage}.tblized $${manpage};		\
 	done
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
