@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/12/06 05:52:42 mef Exp $
+If you see following with "Sign log and upload it automatically to LoTW",
+  "Peer certificate cannot be authenticated with given CA certificates"
+  (SSL certificate problem: self signed certificate in certificate chain)
+please see the info shown by following command and follow what to do:
+   pkg_info -D  mozilla-rootcerts
+
+To start the application, just type tqsl in shell. You will see
+the icons for operations (with Window facility).
+
+For help, man tqsl or see the following HTML file.
+  ${PREFIX}/share/TrustedQSL/help/tqslapp/main.htm
+
+Starting with 2.0, tqslcert function is included in tqsl,
+the command tqslcert by itself is no longer provided.
+
+Starting with 1.14, command line processing is available.
+  tqsl -h or tqsl --help   will show the help message.
+
+The license is arrl-license (and almost modified-bsd), its copy is also
+installed at:
+  ${PREFIX}/share/TrustedQSL/LICENSE.txt
+===========================================================================
