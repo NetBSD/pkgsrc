@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4389 2013/12/06 13:34:04 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4390 2013/12/06 13:36:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6450,3 +6450,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/poppler to 0.24.4 [wiz 2013-12-06]
 	Updated textproc/raptor2 to 2.0.11 [wiz 2013-12-06]
 	Removed graphics/Pillow [obache 2013-12-06]
+	Updated x11/xterm to 300 [wiz 2013-12-06]
