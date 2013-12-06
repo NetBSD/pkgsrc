@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4371 2013/12/06 00:30:08 asau Exp $
+$NetBSD: CHANGES-2013,v 1.4372 2013/12/06 02:34:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_61 to 6.1.6 [taca 2013-12-05]
 	Updated net/libquvi-scripts to 0.4.21 [wiz 2013-12-05]
 	Updated security/munge to 0.5.11 [asau 2013-12-06]
+	Updated print/dviljk to 2.6.5nb4 [minskim 2013-12-06]
