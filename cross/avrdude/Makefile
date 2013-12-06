@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2013/11/20 06:11:34 dsainty Exp $
+# $NetBSD: Makefile,v 1.38 2013/12/06 07:23:55 mef Exp $
 
-DISTNAME=		avrdude-5.11
-PKGREVISION=		1
+DISTNAME=		avrdude-6.0.1
 CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
@@ -10,10 +9,11 @@ HOMEPAGE=		http://www.nongnu.org/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 
+# make: make: don't know how to make ./libavrdude.a. Stop
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -23,7 +23,8 @@ TEXINFO_REQD=		4.9
 USE_TOOLS+=		autoconf automake autoreconf makeinfo texi2html yacc lex
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
-CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
+CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -41,6 +42,11 @@ BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .endif
 
 .include "../../devel/libftdi/buildlink3.mk"
+.include "../../devel/libhid/buildlink3.mk"
+.include "../../devel/libftdi1/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+# elf_getshdrstrndx
+.include "../../devel/libelf/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
