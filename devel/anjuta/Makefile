@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.110 2013/10/19 09:07:02 adam Exp $
+# $NetBSD: Makefile,v 1.111 2013/12/06 21:51:32 joerg Exp $
 
 DISTNAME=	anjuta-3.10.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/3.10/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,7 @@ DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	gnome-terminal>=2.4.2:../../x11/gnome-terminal
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
-DEPENDS+=	yelp>=2.4.2:../../misc/yelp
+DEPENDS+=	yelp>=3.8:../../misc/yelp3
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
