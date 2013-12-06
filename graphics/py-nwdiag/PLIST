@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/09/11 05:54:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/12/06 11:35:03 obache Exp $
 bin/nwdiag
 bin/packetdiag
 bin/rackdiag
@@ -29,12 +29,12 @@ ${PYSITELIB}/nwdiag/metrics.pyo
 ${PYSITELIB}/nwdiag/parser.py
 ${PYSITELIB}/nwdiag/parser.pyc
 ${PYSITELIB}/nwdiag/parser.pyo
+${PYSITELIB}/nwdiag/tests/__init__.py
+${PYSITELIB}/nwdiag/tests/__init__.pyc
+${PYSITELIB}/nwdiag/tests/__init__.pyo
 ${PYSITELIB}/nwdiag/tests/test_builder.py
 ${PYSITELIB}/nwdiag/tests/test_builder.pyc
 ${PYSITELIB}/nwdiag/tests/test_builder.pyo
-${PYSITELIB}/nwdiag/tests/test_builder_errors.py
-${PYSITELIB}/nwdiag/tests/test_builder_errors.pyc
-${PYSITELIB}/nwdiag/tests/test_builder_errors.pyo
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.pyo
@@ -44,6 +44,9 @@ ${PYSITELIB}/nwdiag/tests/test_pep8.pyo
 ${PYSITELIB}/nwdiag/tests/test_rst_directives.py
 ${PYSITELIB}/nwdiag/tests/test_rst_directives.pyc
 ${PYSITELIB}/nwdiag/tests/test_rst_directives.pyo
+${PYSITELIB}/nwdiag/tests/utils.py
+${PYSITELIB}/nwdiag/tests/utils.pyc
+${PYSITELIB}/nwdiag/tests/utils.pyo
 ${PYSITELIB}/nwdiag/utils/__init__.py
 ${PYSITELIB}/nwdiag/utils/__init__.pyc
 ${PYSITELIB}/nwdiag/utils/__init__.pyo
