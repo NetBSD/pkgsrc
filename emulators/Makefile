@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2013/12/05 11:42:12 obache Exp $
+# $NetBSD: Makefile,v 1.207 2013/12/06 10:21:26 obache Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -269,7 +269,7 @@ SUBDIR+=	suse131_libssh
 SUBDIR+=	suse131_libtiff
 SUBDIR+=	suse131_libwrap
 SUBDIR+=	suse131_libxml2
-SUBDIR+=	suse131_linux
+#SUBDIR+=	suse131_linux		# only contains Makefile fragments
 SUBDIR+=	suse131_locale
 SUBDIR+=	suse131_motif
 SUBDIR+=	suse131_openldap
