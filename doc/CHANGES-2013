@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4375 2013/12/06 07:28:07 mef Exp $
+$NetBSD: CHANGES-2013,v 1.4376 2013/12/06 10:35:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6436,3 +6436,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/mendexk to 2.6fnb2 [minskim 2013-12-06]
 	Updated ham/trustedQSL to 2.0 [mef 2013-12-06]
 	Updated cross/avrdude to 6.0.1 [mef 2013-12-06]
+	Updated emulators/suse131_pulseaudio to 13.1nb1 [obache 2013-12-06]
