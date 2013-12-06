@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4391 2013/12/06 13:39:46 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4392 2013/12/06 14:00:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6452,3 +6452,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed graphics/Pillow [obache 2013-12-06]
 	Updated x11/xterm to 300 [wiz 2013-12-06]
 	Updated audio/mpc to 0.25 [wiz 2013-12-06]
+	Added devel/p5-Data-Printer version 0.35 [wiz 2013-12-06]
