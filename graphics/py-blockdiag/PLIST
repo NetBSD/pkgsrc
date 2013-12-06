@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/09/11 02:56:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/12/06 11:26:55 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -275,6 +275,7 @@ ${PYSITELIB}/blockdiag/tests/diagrams/twin_circular_ref_to_root.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/twin_forked.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/twin_multiple_parent_node.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/two_edges.diag
+${PYSITELIB}/blockdiag/tests/diagrams/white.gif
 ${PYSITELIB}/blockdiag/tests/test_boot_params.py
 ${PYSITELIB}/blockdiag/tests/test_boot_params.pyc
 ${PYSITELIB}/blockdiag/tests/test_boot_params.pyo
@@ -302,6 +303,9 @@ ${PYSITELIB}/blockdiag/tests/test_generate_diagram.pyo
 ${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.py
 ${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyc
 ${PYSITELIB}/blockdiag/tests/test_imagedraw_textfolder.pyo
+${PYSITELIB}/blockdiag/tests/test_imagedraw_utils.py
+${PYSITELIB}/blockdiag/tests/test_imagedraw_utils.pyc
+${PYSITELIB}/blockdiag/tests/test_imagedraw_utils.pyo
 ${PYSITELIB}/blockdiag/tests/test_parser.py
 ${PYSITELIB}/blockdiag/tests/test_parser.pyc
 ${PYSITELIB}/blockdiag/tests/test_parser.pyo
@@ -323,18 +327,15 @@ ${PYSITELIB}/blockdiag/utils/__init__.pyo
 ${PYSITELIB}/blockdiag/utils/bootstrap.py
 ${PYSITELIB}/blockdiag/utils/bootstrap.pyc
 ${PYSITELIB}/blockdiag/utils/bootstrap.pyo
-${PYSITELIB}/blockdiag/utils/collections.py
-${PYSITELIB}/blockdiag/utils/collections.pyc
-${PYSITELIB}/blockdiag/utils/collections.pyo
+${PYSITELIB}/blockdiag/utils/compat.py
+${PYSITELIB}/blockdiag/utils/compat.pyc
+${PYSITELIB}/blockdiag/utils/compat.pyo
 ${PYSITELIB}/blockdiag/utils/config.py
 ${PYSITELIB}/blockdiag/utils/config.pyc
 ${PYSITELIB}/blockdiag/utils/config.pyo
 ${PYSITELIB}/blockdiag/utils/fontmap.py
 ${PYSITELIB}/blockdiag/utils/fontmap.pyc
 ${PYSITELIB}/blockdiag/utils/fontmap.pyo
-${PYSITELIB}/blockdiag/utils/functools.py
-${PYSITELIB}/blockdiag/utils/functools.pyc
-${PYSITELIB}/blockdiag/utils/functools.pyo
 ${PYSITELIB}/blockdiag/utils/images.py
 ${PYSITELIB}/blockdiag/utils/images.pyc
 ${PYSITELIB}/blockdiag/utils/images.pyo
@@ -344,9 +345,6 @@ ${PYSITELIB}/blockdiag/utils/jpeg.pyo
 ${PYSITELIB}/blockdiag/utils/myitertools.py
 ${PYSITELIB}/blockdiag/utils/myitertools.pyc
 ${PYSITELIB}/blockdiag/utils/myitertools.pyo
-${PYSITELIB}/blockdiag/utils/namedtuple.py
-${PYSITELIB}/blockdiag/utils/namedtuple.pyc
-${PYSITELIB}/blockdiag/utils/namedtuple.pyo
 ${PYSITELIB}/blockdiag/utils/rst/__init__.py
 ${PYSITELIB}/blockdiag/utils/rst/__init__.pyc
 ${PYSITELIB}/blockdiag/utils/rst/__init__.pyo
