@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/19 03:51:17 asau Exp $
+$NetBSD: distinfo,v 1.2 2013/12/06 00:24:10 asau Exp $
 
-SHA1 (munge-0.5.10.tar.bz2) = 2abd4103dc99549e2d8d002d845e301304f3fbbf
-RMD160 (munge-0.5.10.tar.bz2) = d461bd002dde7114608993dacb6a5535a9047f2b
-Size (munge-0.5.10.tar.bz2) = 424285 bytes
-SHA1 (patch-config_x__ac__arch.m4) = c55f74140c7e4234fcbbbee8ba46069745c03994
-SHA1 (patch-configure) = 52b13fea580e2a80ba352475d6486b87d199283d
-SHA1 (patch-src_etc_Makefile.in) = bd0963657918d70bcb03c12cff80831f96d8f4a7
+SHA1 (munge-0.5.11.tar.bz2) = 6939ddabc4bc2b3bacdb8bb2bf24766b666d1c0d
+RMD160 (munge-0.5.11.tar.bz2) = f7908ba980570519dab99f81023201fb0bd3c195
+Size (munge-0.5.11.tar.bz2) = 423232 bytes
+SHA1 (patch-src_etc_Makefile.in) = f2045da279266e4f89ad9302a72cb2c1875d3840
