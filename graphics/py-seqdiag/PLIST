@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/11 05:39:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/06 11:30:53 obache Exp $
 bin/seqdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,9 +27,6 @@ ${PYSITELIB}/seqdiag/metrics.pyo
 ${PYSITELIB}/seqdiag/parser.py
 ${PYSITELIB}/seqdiag/parser.pyc
 ${PYSITELIB}/seqdiag/parser.pyo
-${PYSITELIB}/seqdiag/tests/test_builder.py
-${PYSITELIB}/seqdiag/tests/test_builder.pyc
-${PYSITELIB}/seqdiag/tests/test_builder.pyo
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyo
@@ -39,9 +36,6 @@ ${PYSITELIB}/seqdiag/tests/test_pep8.pyo
 ${PYSITELIB}/seqdiag/tests/test_rst_directives.py
 ${PYSITELIB}/seqdiag/tests/test_rst_directives.pyc
 ${PYSITELIB}/seqdiag/tests/test_rst_directives.pyo
-${PYSITELIB}/seqdiag/tests/utils.py
-${PYSITELIB}/seqdiag/tests/utils.pyc
-${PYSITELIB}/seqdiag/tests/utils.pyo
 ${PYSITELIB}/seqdiag/utils/__init__.py
 ${PYSITELIB}/seqdiag/utils/__init__.pyc
 ${PYSITELIB}/seqdiag/utils/__init__.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/09/11 05:39:48 obache Exp $
+$NetBSD: distinfo,v 1.7 2013/12/06 11:30:53 obache Exp $
 
-SHA1 (seqdiag-0.8.2.tar.gz) = f47ea4e897fa58945efe0890819c261728b25d32
-RMD160 (seqdiag-0.8.2.tar.gz) = 4665c1d9eb143f141613aaeae885d7895e29a373
-Size (seqdiag-0.8.2.tar.gz) = 31251 bytes
+SHA1 (seqdiag-0.9.0.tar.gz) = 102502e3988aff4e2b52122c75e560a1497871b9
+RMD160 (seqdiag-0.9.0.tar.gz) = e997cdecde5a674bb3cb4529b800b8d7b8e9b8fc
+Size (seqdiag-0.9.0.tar.gz) = 28887 bytes
