@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4381 2013/12/06 11:33:28 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4382 2013/12/06 11:35:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6442,3 +6442,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/py-blockdiag to 1.3.2 [obache 2013-12-06]
 	Updated graphics/py-seqdiag to 0.9.0 [obache 2013-12-06]
 	Updated graphics/py-actdiag to 0.5.1 [obache 2013-12-06]
+	Updated graphics/py-nwdiag to 1.0.0 [obache 2013-12-06]
