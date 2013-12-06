@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4373 2013/12/06 02:37:30 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4374 2013/12/06 05:53:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6434,3 +6434,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/munge to 0.5.11 [asau 2013-12-06]
 	Updated print/dviljk to 2.6.5nb4 [minskim 2013-12-06]
 	Updated textproc/mendexk to 2.6fnb2 [minskim 2013-12-06]
+	Updated ham/trustedQSL to 2.0 [mef 2013-12-06]
