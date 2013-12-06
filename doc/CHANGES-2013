@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4376 2013/12/06 10:35:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4377 2013/12/06 11:01:55 asau Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6437,3 +6437,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated ham/trustedQSL to 2.0 [mef 2013-12-06]
 	Updated cross/avrdude to 6.0.1 [mef 2013-12-06]
 	Updated emulators/suse131_pulseaudio to 13.1nb1 [obache 2013-12-06]
+	Updated parallel/slurm to 2.6.4 [asau 2013-12-06]
