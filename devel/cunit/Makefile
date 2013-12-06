@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:16:49 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/06 21:50:12 joerg Exp $
 
 DISTNAME=		CUnit-2.1-0-src
 PKGNAME=		CUnit-2.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cunit/}
 
@@ -11,7 +12,7 @@ COMMENT=		C Unit checking test software
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-DEPENDS+=		autoconf-*:../../devel/autoconf
+DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 
 WRKSRC=			${WRKDIR}/CUnit-2.1-0
 
