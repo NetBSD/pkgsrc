@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/10/26 13:44:11 obache Exp $
+# $NetBSD: Makefile,v 1.15 2013/12/07 08:43:34 obache Exp $
 
 DISTNAME=	sinatra-1.4.4
 CATEGORIES=	www
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sinatrarb.com/
 COMMENT=	Classy web-development dressed in a DSL
 LICENSE=	mit
