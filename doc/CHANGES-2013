@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4405 2013/12/07 09:09:30 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4406 2013/12/07 11:34:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6469,3 +6469,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed textproc/ruby-xmlscan [obache 2013-12-07]
 	Removed net/ruby-tweetstream [obache 2013-12-07]
 	Removed www/ruby-httpclient [obache 2013-12-07]
+	Updated inputmethod/input-pad to 1.0.3 [obache 2013-12-07]
+	Updated inputmethod/py-input-pad to 1.0.3 [obache 2013-12-07]
