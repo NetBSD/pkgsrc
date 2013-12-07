@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2013/10/23 12:33:37 obache Exp $
+# $NetBSD: Makefile,v 1.26 2013/12/07 11:41:09 obache Exp $
 #
 
-DISTNAME=	ibus-input-pad-1.4.0
-PKGREVISION=	12
+DISTNAME=	ibus-input-pad-1.4.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://input-pad.googlecode.com/files/
 
@@ -16,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config intltool msgfmt xgettext msgmerge
 
-CONFIGURE_ARGS+=	--with-gtk=3.0
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
