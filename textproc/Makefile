@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.747 2013/11/30 12:04:44 wen Exp $
+# $NetBSD: Makefile,v 1.748 2013/12/07 08:56:24 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -704,7 +704,6 @@ SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-will-paginate
 SUBDIR+=	ruby-xmlparser
-SUBDIR+=	ruby-xmlscan
 SUBDIR+=	ruby-xslt
 SUBDIR+=	ruby-yajl
 SUBDIR+=	ruby-yamcha
