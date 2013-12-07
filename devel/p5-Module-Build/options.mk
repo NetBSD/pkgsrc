@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2013/12/01 09:01:47 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2013/12/07 00:58:01 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Module-Build
 
-PKG_SUPPORTED_OPTIONS=	dist_authoring license_creation bundling
+PKG_SUPPORTED_OPTIONS=	dist_authoring license_creation
 PKG_SUGGESTED_OPTIONS=	# empty - only for CPAN Authors
 
 .include "../../mk/bsd.options.mk"
@@ -14,8 +14,4 @@ DEPENDS+=	p5-Module-Signature>=0.21:../../security/p5-Module-Signature
 .endif
 .if !empty(PKG_OPTIONS:Mlicense_creation)
 DEPENDS+=	p5-Software-License-[0-9]*:../../devel/p5-Software-License
-.endif
-.if !empty(PKG_OPTIONS:Mbundling)
-# contains required ExtUtils::Installed>=1.999_001
-DEPENDS+=	{perl>=5.10.1,p5-ExtUtils-Install>=1.54}:../../devel/p5-ExtUtils-Install
 .endif
