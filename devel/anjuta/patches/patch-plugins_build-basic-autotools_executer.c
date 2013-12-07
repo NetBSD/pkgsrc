@@ -1,17 +1,27 @@
-$NetBSD: patch-plugins_build-basic-autotools_executer.c,v 1.1 2013/10/06 20:01:27 joerg Exp $
+$NetBSD: patch-plugins_build-basic-autotools_executer.c,v 1.2 2013/12/07 23:47:02 dholland Exp $
 
 --- plugins/build-basic-autotools/executer.c.orig	2013-08-09 00:30:17.000000000 +0000
 +++ plugins/build-basic-autotools/executer.c
-@@ -375,9 +375,11 @@ execute_program (BasicAutotoolsPlugin* p
+@@ -205,6 +205,9 @@ get_program_parameters (BasicAutotoolsPl
+ 	return success;
+ }
+ 
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wformat-nonliteral"
++
+ void
+ execute_program (BasicAutotoolsPlugin* plugin, const gchar *pre_select_uri)
+ {
+@@ -375,7 +378,6 @@ execute_program (BasicAutotoolsPlugin* p
  			if (plugin->commands[IANJUTA_BUILDABLE_COMMAND_EXECUTE])
  			{
  				gchar *oldcmd = cmd;
 -
-+#pragma GCC diagnostic push
-+#pragma GCC diagnostic ignored "-Wformat-nonliteral"
  				cmd = g_strdup_printf (plugin->commands[IANJUTA_BUILDABLE_COMMAND_EXECUTE],
  					oldcmd);
-+#pragma GCC diagnostic pop
  
- 				g_free (oldcmd);
- 			} else {
+@@ -416,3 +418,4 @@ execute_program (BasicAutotoolsPlugin* p
+ 	g_free (target);
+ 	g_free (args);
+ }
++#pragma GCC diagnostic pop
