@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4401 2013/12/07 01:00:12 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4402 2013/12/07 08:36:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6464,3 +6464,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-ExtUtils-MakeMaker to 6.84nb1 [wiz 2013-12-07]
 	Removed devel/p5-ExtUtils-Install [wiz 2013-12-07]
 	Updated devel/p5-ExtUtils-InstallPaths to 0.010 [wiz 2013-12-07]
+	Removed security/ruby-soauth [obache 2013-12-07]
+	Removed security/ruby-roauth [obache 2013-12-07]

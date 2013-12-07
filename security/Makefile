@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.487 2013/11/19 12:51:38 tron Exp $
+# $NetBSD: Makefile,v 1.488 2013/12/07 08:36:31 obache Exp $
 #
 
 COMMENT=	Security tools
@@ -373,10 +373,8 @@ SUBDIR+=	ruby-net-ssh-gateway
 SUBDIR+=	ruby-oauth
 SUBDIR+=	ruby-password
 SUBDIR+=	ruby-rc4
-SUBDIR+=	ruby-roauth
 SUBDIR+=	ruby-shadow
 SUBDIR+=	ruby-simple_oauth
-SUBDIR+=	ruby-soauth
 SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	ruby-twitter_oauth
 SUBDIR+=	sbd
