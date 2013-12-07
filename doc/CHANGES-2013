@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4409 2013/12/07 13:35:59 gls Exp $
+$NetBSD: CHANGES-2013,v 1.4410 2013/12/07 17:30:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6474,3 +6474,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-input-pad to 1.4.1 [obache 2013-12-07]
 	Updated graphics/py-Pillow to 2.2.1 [obache 2013-12-07]
 	Updated www/libmicrohttpd to 0.9.32 [gls 2013-12-07]
+	Removed games/pokerth [dholland 2013-12-07]
