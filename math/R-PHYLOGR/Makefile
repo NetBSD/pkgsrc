@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/15 14:48:26 brook Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/07 19:32:48 dholland Exp $
 #
 
 CATEGORIES=		databases math
@@ -11,6 +11,9 @@ LICENSE=		gnu-gpl-v2
 
 R_PKGNAME=		PHYLOGR
 R_PKGVER=		1.0.7
+
+post-extract:
+	echo 'exportPattern("^[^\\.]")' > ${WRKSRC}/NAMESPACE
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
