@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/10/23 12:31:14 obache Exp $
+# $NetBSD: Makefile,v 1.30 2013/12/07 11:32:31 obache Exp $
 #
 
 .include "../../inputmethod/input-pad/Makefile.common"
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake pkg-config intltool msgfmt xgettext msgmerge
 PKGCONFIG_OVERRIDE+=	input-pad.pc.in
 
 CONFIGURE_ARGS+=	--enable-pygobject2=yes
-CONFIGURE_ARGS+=	--with-gtk=3.0
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 BUILD_DIRS=		pyinput-pad
 

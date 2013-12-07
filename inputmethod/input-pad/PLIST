@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/23 12:31:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/12/07 11:32:31 obache Exp $
 bin/input-pad
 include/input-pad-1.0/input-pad-group.h
 include/input-pad-1.0/input-pad-kbdui-gtk.h
@@ -9,6 +9,8 @@ ${PLIST.eek}lib/input-pad-1.0/modules/kbdui/libinput-pad-eek-gtk.la
 ${PLIST.xtest}lib/input-pad-1.0/modules/xkeysend/libinput-pad-xtest-gdk.la
 lib/libinput-pad.la
 lib/pkgconfig/input-pad.pc
+man/man1/input-pad.1
+${PLIST.introspection}share/gir-1.0/InputPad-1.0.gir
 share/input-pad/pad/group01-base.xml
 share/input-pad/pad/group02-alphabet.xml
 share/input-pad/pad/group02-ja.xml
@@ -17,9 +19,12 @@ share/input-pad/pad/group50-str.xml
 share/input-pad/pad/group60-w3c.xml
 share/input-pad/pad/group70-cmd.xml
 share/input-pad/ui/gtk/input-pad.ui
-${PLIST.introspection}share/gir-1.0/InputPad-1.0.gir
+share/locale/ca/LC_MESSAGES/input-pad.mo
+share/locale/eu/LC_MESSAGES/input-pad.mo
 share/locale/fr/LC_MESSAGES/input-pad.mo
+share/locale/hu/LC_MESSAGES/input-pad.mo
 share/locale/ja/LC_MESSAGES/input-pad.mo
 share/locale/uk/LC_MESSAGES/input-pad.mo
+share/locale/zh_CN/LC_MESSAGES/input-pad.mo
 share/locale/zh_TW/LC_MESSAGES/input-pad.mo
 share/pixmaps/input-pad.png
