@@ -1,4 +1,0 @@
-Based on SOAuth: security/ruby-soauth
-
-A *simple* Ruby OAuth library that supports OAuth header signing, and header
-verifying.
