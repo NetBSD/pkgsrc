@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/12/07 18:24:59 dholland Exp $
+
+Disable directory containing only a NOINST program, since it doesn't build.
+
+--- Makefile.in~	2002-12-15 17:03:53.000000000 +0000
++++ Makefile.in
+@@ -96,7 +96,7 @@ am__quote = @am__quote@
+ fsviewerdir = @fsviewerdir@
+ install_sh = @install_sh@
+ 
+-SUBDIRS = m4 src po defs tiff xpm
++SUBDIRS = m4 src po tiff xpm
+ EXTRA_DIST = config.rpath docs/* FSViewer.app-0.2.5.spec
+ 
+ ACLOCAL_AMFLAGS = -I m4
