@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.990 2013/11/26 20:33:20 drochner Exp $
+# $NetBSD: Makefile,v 1.991 2013/12/07 09:05:11 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -602,7 +602,6 @@ SUBDIR+=	ruby-snmp
 SUBDIR+=	ruby-soap4r
 SUBDIR+=	ruby-stompserver
 SUBDIR+=	ruby-tw
-SUBDIR+=	ruby-tweetstream
 SUBDIR+=	ruby-twitter
 SUBDIR+=	ruby-twitter-stream
 SUBDIR+=	ruby-userstream
