@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/15 16:15:31 brook Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/07 19:32:48 dholland Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -13,6 +13,9 @@ R_PKGVER=	2.3-10
 
 DEPENDS+=	R-akima>=0.5.7:../../math/R-akima
 DEPENDS+=	R-ncdf>=1.6.6:../../math/R-ncdf
+
+post-extract:
+	echo 'exportPattern("^[^\\.]")' > ${WRKSRC}/NAMESPACE
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
