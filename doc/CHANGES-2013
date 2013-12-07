@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4396 2013/12/07 00:42:23 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4397 2013/12/07 00:44:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6459,3 +6459,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/sqlite3-docs to 3.8.2 [adam 2013-12-06]
 	Updated databases/sqlite3-tcl to 3.8.2 [adam 2013-12-06]
 	Updated devel/p5-Parse-CPAN-Meta to 1.4409 [wiz 2013-12-07]
+	Updated converters/p5-JSON-PP to 2.27203 [wiz 2013-12-07]
