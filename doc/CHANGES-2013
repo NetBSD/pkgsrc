@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4400 2013/12/07 00:59:02 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4401 2013/12/07 01:00:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6463,3 +6463,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-CPAN-Meta to 2.133380 [wiz 2013-12-07]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.84nb1 [wiz 2013-12-07]
 	Removed devel/p5-ExtUtils-Install [wiz 2013-12-07]
+	Updated devel/p5-ExtUtils-InstallPaths to 0.010 [wiz 2013-12-07]
