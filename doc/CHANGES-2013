@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4406 2013/12/07 11:34:06 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4407 2013/12/07 11:43:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6471,3 +6471,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed www/ruby-httpclient [obache 2013-12-07]
 	Updated inputmethod/input-pad to 1.0.3 [obache 2013-12-07]
 	Updated inputmethod/py-input-pad to 1.0.3 [obache 2013-12-07]
+	Updated inputmethod/ibus-input-pad to 1.4.1 [obache 2013-12-07]
