@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2013/12/06 13:32:53 obache Exp $
+# $NetBSD: Makefile,v 1.665 2013/12/07 12:58:18 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -373,6 +373,7 @@ SUBDIR+=	prag
 SUBDIR+=	ps2eps
 SUBDIR+=	pstoedit
 SUBDIR+=	py-OpenGL
+SUBDIR+=	py-Pillow
 SUBDIR+=	py-aafigure
 SUBDIR+=	py-actdiag
 SUBDIR+=	py-biggles
