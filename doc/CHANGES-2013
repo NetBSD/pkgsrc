@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4403 2013/12/07 08:56:24 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4404 2013/12/07 09:05:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6467,3 +6467,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed security/ruby-soauth [obache 2013-12-07]
 	Removed security/ruby-roauth [obache 2013-12-07]
 	Removed textproc/ruby-xmlscan [obache 2013-12-07]
+	Removed net/ruby-tweetstream [obache 2013-12-07]
