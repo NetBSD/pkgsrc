@@ -1,26 +1,32 @@
-$NetBSD: patch-plugins_run-program_execute.c,v 1.1 2013/10/06 20:01:27 joerg Exp $
+$NetBSD: patch-plugins_run-program_execute.c,v 1.2 2013/12/07 23:47:02 dholland Exp $
 
---- plugins/run-program/execute.c.orig	2013-09-29 15:13:14.000000000 +0000
+--- plugins/run-program/execute.c.orig	2013-08-09 00:30:18.000000000 +0000
 +++ plugins/run-program/execute.c
-@@ -87,7 +87,10 @@ get_local_executable (GtkWindow *parent,
+@@ -58,6 +58,8 @@ struct _RunProgramChild
+ /* Helper functions
+  *---------------------------------------------------------------------------*/
  
- 	if (err_msg)
- 	{
 +#pragma GCC diagnostic push
 +#pragma GCC diagnostic ignored "-Wformat-nonliteral"
- 		anjuta_util_dialog_error (parent, err_msg, local == NULL ? uri : local);
-+#pragma GCC diagnostic pop
- 		g_free (local);
- 		local = NULL;
- 	}
-@@ -113,7 +116,10 @@ get_local_directory (GtkWindow *parent, 
- 
- 	if (err_msg)
- 	{
-+#pragma GCC diagnostic push
-+#pragma GCC diagnostic ignored "-Wformat-nonliteral"
- 		anjuta_util_dialog_error (parent, err_msg, uri);
-+#pragma GCC diagnostic pop
- 	}
+ static gchar *
+ get_local_executable (GtkWindow *parent, const gchar *uri)
+ {
+@@ -94,7 +96,10 @@ get_local_executable (GtkWindow *parent,
  
  	return local;
+ }
++#pragma GCC diagnostic pop
+ 
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wformat-nonliteral"
+ static gchar *
+ get_local_directory (GtkWindow *parent, const gchar *uri)
+ {
+@@ -118,6 +123,7 @@ get_local_directory (GtkWindow *parent, 
+ 
+ 	return local;
+ }
++#pragma GCC diagnostic pop
+ 
+ /* Private functions
+  *---------------------------------------------------------------------------*/

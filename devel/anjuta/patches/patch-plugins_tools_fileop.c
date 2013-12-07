@@ -1,15 +1,21 @@
-$NetBSD: patch-plugins_tools_fileop.c,v 1.1 2013/10/06 20:01:27 joerg Exp $
+$NetBSD: patch-plugins_tools_fileop.c,v 1.2 2013/12/07 23:47:02 dholland Exp $
 
---- plugins/tools/fileop.c.orig	2013-09-29 15:21:52.000000000 +0000
+--- plugins/tools/fileop.c.orig	2013-08-09 00:30:18.000000000 +0000
 +++ plugins/tools/fileop.c
-@@ -168,7 +168,10 @@ parser_warning (GMarkupParseContext* ctx
- 	g_markup_parse_context_get_position (ctx, &line, NULL);
- 	msg = g_strdup_printf ("line %d: %s", line, format);
- 	va_start (args, format);
+@@ -158,6 +158,8 @@ parse_integer_string (const gchar* value
+ 	return atoi(value);
+ }
+ 
 +#pragma GCC diagnostic push
 +#pragma GCC diagnostic ignored "-Wformat-nonliteral"
- 	g_logv (G_LOG_DOMAIN, G_LOG_LEVEL_WARNING, msg, args);
-+#pragma GCC diagnostic pop
+ static void
+ parser_warning (GMarkupParseContext* ctx, const gchar* format,...)
+ {
+@@ -172,6 +174,7 @@ parser_warning (GMarkupParseContext* ctx
  	va_end (args);
  	g_free (msg);
  }
++#pragma GCC diagnostic pop
+ 
+ /* Load anjuta-tools
+  *---------------------------------------------------------------------------*/
