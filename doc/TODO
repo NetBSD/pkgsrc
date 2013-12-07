@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12765 2013/12/06 13:39:46 wiz Exp $
+$NetBSD: TODO,v 1.12766 2013/12/07 01:05:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -412,7 +412,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.13
+	o calibre-1.14.0
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -738,6 +738,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
+	o libmpdclient-2.9
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
@@ -811,6 +812,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o muse-0.9.2
+	o musicpd-0.18.5
 	o mypaint-1.1.0
 	o nano-2.3.2
 	o nap-1.5.3
@@ -847,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openoffice3-3.3
 	o openscad-2013.06
 	o openslp-2.0.0
+	o opus-1.1
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o oto-0.5
