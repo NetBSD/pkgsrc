@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4402 2013/12/07 08:36:31 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4403 2013/12/07 08:56:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6466,3 +6466,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-ExtUtils-InstallPaths to 0.010 [wiz 2013-12-07]
 	Removed security/ruby-soauth [obache 2013-12-07]
 	Removed security/ruby-roauth [obache 2013-12-07]
+	Removed textproc/ruby-xmlscan [obache 2013-12-07]
