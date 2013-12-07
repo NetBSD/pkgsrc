@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/12/06 11:26:55 obache Exp $
+# $NetBSD: Makefile,v 1.14 2013/12/07 12:57:54 obache Exp $
 #
 
 DISTNAME=	blockdiag-1.3.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://blockdiag.com/
 COMMENT=	Generate block-diagram image file from spec-text file
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.2.1:../../graphics/Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.2.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.6:../../devel/py-funcparserlib
 DEPENDS+=	${PYPKGPREFIX}-webcolors-[0-9]*:../../www/py-webcolors
 
