@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2009/10/19 01:53:20 ahoka Exp $
-
-SHA1 (PokerTH-0.7.1-src.tar.bz2) = 9c0c546355d7d248aeeee371d0354bfe90150a7b
-RMD160 (PokerTH-0.7.1-src.tar.bz2) = 7aca895bb07bc83f977e9147217ad50eb7adfb8a
-Size (PokerTH-0.7.1-src.tar.bz2) = 6535050 bytes
-SHA1 (patch-aa) = 04340266a1c038092794a3b4a54aadf1ae057015
-SHA1 (patch-ad) = 83689c8271e3899632d552f73044b51aa3060706
-SHA1 (patch-ae) = 4afbde2793d1a8e58ba49a004fac7117ecd7a3c3
