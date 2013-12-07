@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2013/10/23 12:31:14 obache Exp $
+# $NetBSD: options.mk,v 1.5 2013/12/07 11:32:31 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.input-pad
 PKG_SUPPORTED_OPTIONS=	eekboard introspection xtest
-PKG_SUGGESTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	introspection xtest
 
 .include "../../mk/bsd.options.mk"
 
