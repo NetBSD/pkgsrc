@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/04/10 12:37:36 obache Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/07 09:00:51 obache Exp $
 
 DISTNAME=	tilt-1.3.7
 CATEGORIES=	textproc
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/rtomayko/tilt/
 COMMENT=	Generic interface to multiple Ruby template engines
 LICENSE=	mit
