@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/09/13 12:52:30 taca Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/08 16:48:02 taca Exp $
 #
 
-DISTNAME=	mysql2-0.3.13
+DISTNAME=	mysql2-0.3.14
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
