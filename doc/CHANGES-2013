@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4418 2013/12/08 10:09:53 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4419 2013/12/08 11:12:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6484,3 +6484,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated wm/openbox to 3.5.2 [obache 2013-12-08]
 	Added wm/obconf version 2.0.4 [obache 2013-12-08]
 	Updated devel/p5-Algorithm-CheckDigits to 1.3.0 [wen 2013-12-08]
+	Updated devel/p5-App-FatPacker to 0.010000 [wen 2013-12-08]
