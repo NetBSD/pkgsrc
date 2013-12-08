@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4422 2013/12/08 13:23:41 bad Exp $
+$NetBSD: CHANGES-2013,v 1.4423 2013/12/08 13:28:51 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6488,3 +6488,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-App-cpanminus to 1.7001 [wen 2013-12-08]
 	Updated devel/glib2 to 2.38.2 [prlw1 2013-12-08]
 	Removed misc/openoffice3-bin [bad 2013-12-08]
+	Updated devel/gobject-introspection to 1.38.0 [prlw1 2013-12-08]
