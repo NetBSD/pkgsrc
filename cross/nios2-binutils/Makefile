@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/03 02:34:52 mef Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/08 22:29:05 joerg Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-binutils-${PKG_VERSION}
 PKG_VERSION=		2.23
@@ -20,6 +20,11 @@ BUILD_DEFS+=		${NIOS_INFO_DIR}
 CONFIGURE_ARGS+=	--disable-nls
 # install libiberty by architecture
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/${NIOS2_TARGET}/lib
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-string-plus-int -Wno-self-assign
+.endif
 
 # To avoid conflict with other cross/native info files,
 NIOS_INFO_DIR=		${PREFIX}/info/${NIOS2_TARGET}
