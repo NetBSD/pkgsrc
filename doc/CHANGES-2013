@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4413 2013/12/08 01:23:38 jmmv Exp $
+$NetBSD: CHANGES-2013,v 1.4414 2013/12/08 07:34:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6480,3 +6480,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/lutok to 0.4 [jmmv 2013-12-08]
 	Updated devel/kyua-testers to 0.2 [jmmv 2013-12-08]
 	Updated devel/kyua-cli to 0.8 [jmmv 2013-12-08]
+	Updated inputmethod/ibus to 1.5.4nb1 [obache 2013-12-08]
