@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4432 2013/12/08 16:38:37 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4433 2013/12/08 16:48:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6498,3 +6498,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-08]
 	Updated sysutils/libnotify to 0.7.6 [prlw1 2013-12-08]
 	Updated converters/ruby-unf to 0.1.3 [taca 2013-12-08]
+	Updated databases/ruby-mysql2 to 0.3.14 [taca 2013-12-08]
