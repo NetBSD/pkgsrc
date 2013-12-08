@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/10/13 12:11:13 imil Exp $
+# $NetBSD: Makefile,v 1.19 2013/12/08 03:30:31 dholland Exp $
 #
 
 DISTNAME=	conky-1.9.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conky/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,8 +19,8 @@ USE_TOOLS+=	pkg-config aclocal autoconf autoheader automake
 CONFIGURE_ARGS+=	--enable-imlib2
 CONFIGURE_ARGS+=	--enable-curl --enable-rss
 CONFIGURE_ARGS+=	--enable-weather-metar --enable-weather-xoap
-# devel/tolua++ is deeply broken due to lua 5.1 to 5.2 update, disable lua
-# support for now
+# devel/tolua++ was deeply broken by the lua 5.1 to 5.2 update and got
+# removed; disable lua support for now
 CONFIGURE_ARGS+=	--disable-lua
 # CONFIGURE_ARGS+=	--enable-lua-cairo --enable-lua-imlib2
 
