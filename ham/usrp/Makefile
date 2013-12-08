@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/11/20 20:04:35 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/12/08 22:32:15 joerg Exp $
 
 PKGNAME=	usrp-${VERSION}
 PKGREVISION=	10
@@ -9,7 +9,7 @@ COMMENT=	Non GNU Radio specific part of the USRP code base
 CONFIGURE_ARGS+=	--enable-usrp
 CONFIGURE_ARGS+=--with-gnuradio-core --with-omnithread --with-gruel
 
-BUILD_DEPENDS+=	sdcc>=2.4.0:../../devel/sdcc
+BUILD_DEPENDS+=	sdcc>=2.4.0<3:../../devel/sdcc
 
 PYTHON_PATCH_SCRIPTS+=	usrp/firmware/include/generate_regs.py
 PYTHON_PATCH_SCRIPTS+=	usrp/firmware/src/common/edit-gpif
