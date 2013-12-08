@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2004/07/10 21:00:00 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2013/12/08 03:55:43 dholland Exp $
 
 --- src/configs/netbsd.orig	2004-07-10 22:21:01.000000000 +0200
 +++ src/configs/netbsd
@@ -18,4 +18,4 @@ $NetBSD: patch-aa,v 1.4 2004/07/10 21:00:00 wiz Exp $
  path_unix	/netbsd
  
 -protocols	bgp egp hello icmp rip ospf iso slsp isis rdisc
-+protocols	bgp egp icmp rip ospf iso slsp isis rdisc
++protocols	bgp egp icmp rip ospf slsp rdisc
