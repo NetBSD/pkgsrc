@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1820 2013/12/07 00:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.1821 2013/12/08 15:22:23 cheusov Exp $
 #
 
 COMMENT=	Development utilities
@@ -72,6 +72,7 @@ SUBDIR+=	bison
 SUBDIR+=	blame
 SUBDIR+=	blib
 SUBDIR+=	bmake
+SUBDIR+=	bmkdep
 SUBDIR+=	boa-constructor
 SUBDIR+=	boehm-gc
 SUBDIR+=	boost-build
