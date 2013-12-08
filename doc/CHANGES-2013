@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4424 2013/12/08 13:40:43 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.4425 2013/12/08 13:47:05 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6490,3 +6490,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed misc/openoffice3-bin [bad 2013-12-08]
 	Updated devel/gobject-introspection to 1.38.0 [prlw1 2013-12-08]
 	Updated devel/at-spi2-core to 2.10.2 [prlw1 2013-12-08]
+	Updated devel/at-spi2-atk to 2.10.2 [prlw1 2013-12-08]
