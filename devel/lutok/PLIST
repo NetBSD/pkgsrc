@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/06/15 00:30:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/12/08 01:20:21 jmmv Exp $
 include/lutok/c_gate.hpp
 include/lutok/debug.hpp
 include/lutok/exceptions.hpp
@@ -214,8 +214,6 @@ share/doc/lutok/html/search/variables_6f.html
 share/doc/lutok/html/search/variables_6f.js
 share/doc/lutok/html/search/variables_73.html
 share/doc/lutok/html/search/variables_73.js
-share/doc/lutok/html/sync_off.png
-share/doc/lutok/html/sync_on.png
 share/doc/lutok/html/tab_a.png
 share/doc/lutok/html/tab_b.png
 share/doc/lutok/html/tab_h.png
@@ -226,7 +224,6 @@ share/examples/lutok/bindings.cpp
 share/examples/lutok/hello.cpp
 share/examples/lutok/interpreter.cpp
 share/examples/lutok/raii.cpp
-${TESTS}tests/lutok/Atffile
 ${TESTS}tests/lutok/Kyuafile
 ${TESTS}tests/lutok/c_gate_test
 ${TESTS}tests/lutok/debug_test
