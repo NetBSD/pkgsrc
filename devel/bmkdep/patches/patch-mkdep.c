@@ -1,21 +1,8 @@
-$NetBSD: patch-mkdep.c,v 1.1 2013/12/08 15:22:23 cheusov Exp $
+$NetBSD: patch-mkdep.c,v 1.2 2013/12/08 16:33:35 cheusov Exp $
 
 For better portability
 --- mkdep.c.orig	2013-10-09 17:38:38.000000000 +0300
 +++ mkdep.c	2013-12-08 17:31:52.000000000 +0300
-@@ -34,12 +34,6 @@
- #endif
- 
- #include <sys/cdefs.h>
--#if !defined(lint)
--__COPYRIGHT("@(#) Copyright (c) 1999 The NetBSD Foundation, Inc.\
-- All rights reserved.");
--__RCSID("$NetBSD: patch-mkdep.c,v 1.1 2013/12/08 15:22:23 cheusov Exp $");
--#endif /* not lint */
--
- #include <sys/mman.h>
- #include <sys/param.h>
- #include <sys/wait.h>
 @@ -89,13 +83,13 @@
  	return (const char *)p - (const char *)0 + (char *)0;
  }

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/08 15:22:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/08 16:33:35 cheusov Exp $
 
 DISTNAME=	bmkdep-20131009
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/bmkdep/
 COMMENT=	NetBSD version of mkdep(1)
 LICENSE=	2-clause-bsd
+
+CPPFLAGS=	-Dlint=
 
 MAKE_ENV=	BINOWN=${BINOWN} BINGRP=${BINGRP} \
 		MANOWN=${MANOWN} MANGRP=${MANGRP} \
