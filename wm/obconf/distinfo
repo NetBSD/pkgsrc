@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.11 2013/12/08 07:59:47 obache Exp $
+
+SHA1 (obconf-2.0.4.tar.gz) = 90638645b53275fda175281a1826c8c4c01746df
+RMD160 (obconf-2.0.4.tar.gz) = bbcab8ffd09f9a11b5f774c346ae60fcbd3453c3
+Size (obconf-2.0.4.tar.gz) = 456523 bytes
+SHA1 (patch-aa) = 0de087b762e8f545fa361f480a0e2e30e0ac40ee
+SHA1 (patch-ab) = cf618bda78bbf1a926a734250092f5bfa75cd178
