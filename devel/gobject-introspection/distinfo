@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.16 2013/10/04 15:36:30 jperkin Exp $
+$NetBSD: distinfo,v 1.17 2013/12/08 13:28:27 prlw1 Exp $
 
-SHA1 (gobject-introspection-1.36.0.tar.xz) = 8f0945bda62f2bc2a5ce36e8a1ea7d4753ab0517
-RMD160 (gobject-introspection-1.36.0.tar.xz) = bcc541a021ca409395a82fc4dd52a1353679908a
-Size (gobject-introspection-1.36.0.tar.xz) = 1201108 bytes
+SHA1 (gobject-introspection-1.38.0.tar.xz) = 51f3053f6b806efea41a38ea13d2e6ce494cf7af
+RMD160 (gobject-introspection-1.38.0.tar.xz) = f01089754ce1586c8517ab0fafeb1f96843a8d5c
+Size (gobject-introspection-1.38.0.tar.xz) = 1226324 bytes
 SHA1 (patch-aa) = d7ebe6a0c81694fb537dc9cb67286fb9a0d60a9b
 SHA1 (patch-ac) = 52174e01aa90a5cf75cfe2f255826c1e46f8e183
-SHA1 (patch-ad) = 0c67a1bb64e4e39eb9a4829e53744199a0f64fb6
-SHA1 (patch-giscanner_dumper.py) = 76f0173e9d8bafbc69ebe41d01b1d79fe8fbbd5b
-SHA1 (patch-giscanner_scannerlexer.l) = 77d0c624ee28684d496af9f4a58ac771f3c693ae
+SHA1 (patch-giscanner_dumper.py) = f2acdc734b7b93429e3179ffaf53c94c0e16e819
+SHA1 (patch-giscanner_scannerlexer.l) = 371bf94fd9e4d76ab78c2d14d7dc41da83c1aa35
