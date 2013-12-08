@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
+$NetBSD: patch-aa,v 1.56 2013/12/08 13:08:59 prlw1 Exp $
 
---- configure.orig	2013-06-09 22:53:42.000000000 +0000
+--- configure.orig	2013-10-15 19:14:48.000000000 +0000
 +++ configure
-@@ -724,6 +724,7 @@ GIO
+@@ -730,6 +730,7 @@ GIO
  GSPAWN
  GLIB_DEBUG_FLAGS
  G_MODULE_NEED_USCORE
@@ -10,7 +10,16 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  G_MODULE_BROKEN_RTLD_GLOBAL
  G_MODULE_HAVE_DLERROR
  G_MODULE_LDFLAGS
-@@ -21108,6 +21109,8 @@ else
+@@ -5929,7 +5930,7 @@ else
+   ENABLE_ALWAYS_BUILD_TESTS_FALSE=
+ fi
+ 
+-  if test "$ENABLE_INSTALLED_TESTS" == "1"; then
++  if test "$ENABLE_INSTALLED_TESTS" = "1"; then
+     installed_test_metadir=${datadir}/installed-tests/glib
+ 
+     installed_testdir=${libexecdir}/installed-tests/glib
+@@ -21145,6 +21146,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -19,7 +28,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -22153,8 +22156,8 @@ else
+@@ -22150,8 +22153,8 @@ else
  fi
  
  
@@ -30,7 +39,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
-@@ -23807,16 +23810,48 @@ fi
+@@ -24049,16 +24052,48 @@ fi
  
  case $host in
    *-*-solaris* )
@@ -80,7 +89,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  esac
  
  if test "$ac_cv_func_statfs" = yes; then :
-@@ -24829,10 +24864,11 @@ if test x"$glib_native_win32" = xyes; th
+@@ -25050,10 +25085,11 @@ if test x"$glib_native_win32" = xyes; th
      G_MODULE_LDFLAGS=
  else
    export SED
@@ -93,7 +102,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -25050,13 +25086,13 @@ if  test "$G_MODULE_IMPL" = "G_MODULE_IM
+@@ -25271,13 +25307,13 @@ if  test "$G_MODULE_IMPL" = "G_MODULE_IM
  	LIBS="$G_MODULE_LIBS $LIBS"
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -110,7 +119,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for RTLD_GLOBAL brokenness" >&5
  $as_echo_n "checking for RTLD_GLOBAL brokenness... " >&6; }
  if ${glib_cv_rtldglobal_broken+:} false; then :
-@@ -25166,6 +25202,56 @@ fi
+@@ -25387,6 +25423,56 @@ fi
  	LIBS="$LIBS_orig"
  
  fi
@@ -167,7 +176,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -25176,7 +25262,7 @@ fi
+@@ -25397,7 +25483,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the suffix of module shared libraries" >&5
  $as_echo_n "checking for the suffix of module shared libraries... " >&6; }
  export SED
@@ -176,7 +185,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -25200,6 +25286,7 @@ fi
+@@ -25421,6 +25507,7 @@ fi
  
  
  
@@ -184,7 +193,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -26177,62 +26264,8 @@ if  test x"$have_threads" = xposix; then
+@@ -26398,62 +26485,8 @@ if  test x"$have_threads" = xposix; then
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
@@ -249,7 +258,7 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
         ;;
    esac
  
-@@ -26746,6 +26779,7 @@ case $host in
+@@ -27053,6 +27086,7 @@ case $host in
      ;;
    *-*-openbsd*)
      LDFLAGS="$LDFLAGS -pthread"
@@ -257,30 +266,3 @@ $NetBSD: patch-aa,v 1.55 2013/06/23 04:26:49 tsutsui Exp $
      ;;
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
-@@ -26844,7 +26878,7 @@ volatile int atomic = 2;\
-   return 0;
- }
- _ACEOF
--if ac_fn_c_try_compile "$LINENO"; then :
-+if ac_fn_c_try_link "$LINENO"; then :
-   glib_cv_g_atomic_lock_free=yes
- else
-   glib_cv_g_atomic_lock_free=no
-@@ -26865,7 +26899,7 @@ volatile int atomic = 2;\
-   return 0;
- }
- _ACEOF
--if ac_fn_c_try_compile "$LINENO"; then :
-+if ac_fn_c_try_link "$LINENO"; then :
-   as_fn_error $? "GLib must be build with -march=i486 or later." "$LINENO" 5
- fi
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-@@ -26896,7 +26930,7 @@ __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4;
-   return 0;
- }
- _ACEOF
--if ac_fn_c_try_compile "$LINENO"; then :
-+if ac_fn_c_try_link "$LINENO"; then :
- 
- else
- 

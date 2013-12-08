@@ -1,18 +1,18 @@
-$NetBSD: patch-ai,v 1.21 2012/11/13 21:23:07 adam Exp $
+$NetBSD: patch-ai,v 1.22 2013/12/08 13:08:59 prlw1 Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=583321
 
---- glib/gmain.c.orig	2011-10-14 04:03:10.000000000 +0000
+--- glib/gmain.c.orig	2013-10-15 19:07:46.000000000 +0000
 +++ glib/gmain.c
-@@ -4538,7 +4538,11 @@ ensure_unix_signal_handler_installed_unl
- 
-   action.sa_handler = g_unix_signal_handler;
-   sigemptyset (&action.sa_mask);
+@@ -4963,7 +4963,11 @@ ref_unix_signal_handler_unlocked (int si
+       struct sigaction action;
+       action.sa_handler = g_unix_signal_handler;
+       sigemptyset (&action.sa_mask);
 +#ifdef SA_RESTART
-   action.sa_flags = SA_RESTART | SA_NOCLDSTOP;
-+#else /* QNX */
-+  action.sa_flags = SA_NOCLDSTOP;
+       action.sa_flags = SA_RESTART | SA_NOCLDSTOP;
++#else
++      action.sa_flags = SA_NOCLDSTOP;
 +#endif
-   sigaction (signum, &action, NULL);
+       sigaction (signum, &action, NULL);
+     }
  }
- 

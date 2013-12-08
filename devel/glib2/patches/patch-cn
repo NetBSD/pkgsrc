@@ -1,10 +1,10 @@
-$NetBSD: patch-cn,v 1.4 2013/04/19 22:21:41 prlw1 Exp $
+$NetBSD: patch-cn,v 1.5 2013/12/08 13:08:59 prlw1 Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
 https://bugzilla.gnome.org/show_bug.cgi?id=641350
-
+(patch-cj)
 --- glib/tests/Makefile.am.orig	2013-03-25 17:02:43.000000000 +0000
 +++ glib/tests/Makefile.am
 @@ -46,7 +46,6 @@ TEST_PROGS += 				\
