@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.20 2013/12/08 11:32:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.21 2013/12/08 11:55:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -73,3 +73,5 @@ Pullup ticket #4263 - requested by imil
 www/nginx-devel: security update
 Pullup ticket #4264 - requested by taca
 net/samba: security update
+Pullup ticket #4265 - requested by taca
+mail/dovecot2: security update
