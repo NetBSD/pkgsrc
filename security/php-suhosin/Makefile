@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/04/08 11:17:21 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/08 22:34:33 joerg Exp $
 #
 
 MODNAME=		suhosin
@@ -18,4 +18,10 @@ PHP_VERSIONS_ACCEPTED=	53
 CONFIGURE_ARGS=		--enable-${MODNAME}
 
 .include "../../lang/php/ext.mk"
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang) && ${_PHP_VERSION} == "53"
+CFLAGS+=	-Wno-error=return-type
+.endif
+
 .include "../../mk/bsd.pkg.mk"
