@@ -1,25 +1,25 @@
-$NetBSD: patch-an,v 1.10 2013/04/19 22:21:41 prlw1 Exp $
+$NetBSD: patch-an,v 1.11 2013/12/08 13:08:59 prlw1 Exp $
 
 Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 Don't install completion data.
 
---- gio/Makefile.in.orig	2013-03-25 21:07:16.000000000 +0000
+--- gio/Makefile.in.orig	2013-10-15 19:14:51.000000000 +0000
 +++ gio/Makefile.in
-@@ -810,7 +810,7 @@ EXTRA_DIST = gdbusdaemon.c gdbusdaemon.h
- 	gnetworking.h.win32 $(NULL) $(completion_DATA)
- TEST_PROGS = 
- NULL = 
--SUBDIRS = gdbus-2.0/codegen $(am__append_1) $(am__append_4) \
-+SUBDIRS = $(am__append_1) $(am__append_4) \
- 	$(am__append_7) $(am__append_11) $(am__append_14) . \
- 	$(am__append_17) $(am__append_24)
- @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@noinst_DATA = gio-2.0.lib
-@@ -3460,7 +3460,7 @@ info: info-recursive
+@@ -1173,7 +1173,7 @@ all_test_ltlibs = $(test_ltlibraries) $(
+ @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
+ 
+ @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
+-SUBDIRS = gdbus-2.0/codegen $(am__append_15) $(am__append_19) \
++SUBDIRS = $(am__append_15) $(am__append_19) \
+ 	$(am__append_22) $(am__append_26) $(am__append_29) . tests \
+ 	$(am__append_32)
+ @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@install_ms_lib_cmd = $(INSTALL) gio-2.0.lib $(DESTDIR)$(libdir)
+@@ -4200,7 +4200,7 @@ info: info-recursive
  
  info-am:
  
 -install-data-am: install-completionDATA install-data-local \
 +install-data-am: install-data-local \
  	install-dist_schemaDATA install-gioincludeHEADERS \
- 	install-giounixincludeHEADERS install-giowin32includeHEADERS
- 	@$(NORMAL_INSTALL)
+ 	install-giounixincludeHEADERS install-giowin32includeHEADERS \
+ 	install-installed_testLTLIBRARIES \
