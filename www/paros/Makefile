@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:56 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/12/08 06:49:43 obache Exp $
 #
 
 DISTNAME=	paros-3.2.13-unix
@@ -20,6 +20,9 @@ USE_TOOLS+=	pax
 INSTALLATION_DIRS=	bin lib
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
+
+# contains Linux/Windows binaries
+CHECK_SHLIBS_SUPPORTED=	no
 
 SUBST_CLASSES+=		java
 SUBST_MESSAGE.java=	Fixing hardcoded path to Java.
