@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4421 2013/12/08 13:14:47 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.4422 2013/12/08 13:23:41 bad Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6487,3 +6487,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-App-FatPacker to 0.010000 [wen 2013-12-08]
 	Updated devel/p5-App-cpanminus to 1.7001 [wen 2013-12-08]
 	Updated devel/glib2 to 2.38.2 [prlw1 2013-12-08]
+	Removed misc/openoffice3-bin [bad 2013-12-08]
