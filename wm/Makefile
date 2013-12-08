@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2013/07/26 17:57:49 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2013/12/08 08:00:26 obache Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -58,6 +58,7 @@ SUBDIR+=	mlvwm
 SUBDIR+=	musca
 SUBDIR+=	notion
 SUBDIR+=	novawm
+SUBDIR+=	obconf
 SUBDIR+=	obpager
 SUBDIR+=	olvwm
 SUBDIR+=	openbox
