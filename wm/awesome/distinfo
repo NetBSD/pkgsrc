@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2013/07/22 19:47:18 degroote Exp $
+$NetBSD: distinfo,v 1.13 2013/12/08 00:18:21 dholland Exp $
 
 SHA1 (awesome-3.5.1.tar.xz) = 8bca01550298905b975ccaadcc8de5a5c333b271
 RMD160 (awesome-3.5.1.tar.xz) = 480f6d56a192d5ea6e72d6576d47f5805182c725
 Size (awesome-3.5.1.tar.xz) = 714320 bytes
 SHA1 (patch-awesomeConfig.cmake) = fed6a47e127b6a2d688deadaabb7805730e08ed8
+SHA1 (patch-build-utils_lgi-check.sh) = a3562f570e58d9596feb632ed5313a23d709ef8c
