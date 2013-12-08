@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4412 2013/12/08 00:35:37 jakllsch Exp $
+$NetBSD: CHANGES-2013,v 1.4413 2013/12/08 01:23:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6477,3 +6477,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed games/pokerth [dholland 2013-12-07]
 	Updated sysutils/py-psutil to 1.2.1 [richard 2013-12-07]
 	Updated sysutils/memtestplus to 5.01 [jakllsch 2013-12-08]
+	Updated devel/lutok to 0.4 [jmmv 2013-12-08]
+	Updated devel/kyua-testers to 0.2 [jmmv 2013-12-08]
+	Updated devel/kyua-cli to 0.8 [jmmv 2013-12-08]
