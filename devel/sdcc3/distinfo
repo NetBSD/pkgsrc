@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/10/26 23:24:40 joerg Exp $
+$NetBSD: distinfo,v 1.3 2013/12/08 22:31:53 joerg Exp $
 
 SHA1 (sdcc-src-3.3.0.tar.bz2) = beed1b8c73f13344e018f48b1563ff2a948b70cf
 RMD160 (sdcc-src-3.3.0.tar.bz2) = 464b5aae6242e0da0181e9050b52949ae176de00
@@ -16,3 +16,4 @@ SHA1 (patch-support_makebin_Makefile_in) = 6045bc4a0870b57f74c597b4a6215bf3accd1
 SHA1 (patch-support_scripts_Makefile.in) = f292001be4a7dc0a629529087838138e1bb52161
 SHA1 (patch-support_sdbinutils_Makefile.in) = 5d8fce39c55d44340a6431426aa01690e39b7c67
 SHA1 (patch-support_sdbinutils_bfd_asxxxx.c) = 3163003fec4ea548dc89ce35ef0e9b7ed53c67f9
+SHA1 (patch-support_sdbinutils_libiberty_Makefile.in) = b651a34581964f8a1053ce4cd3da353f6a227d3c
