@@ -1,0 +1,3 @@
+ObConf is a graphical configuration tool for the Openbox window manager.
+It allows one to change Openbox's configuration in real-time.
+One can change options such as the theme, desktop names, and focus settings.
