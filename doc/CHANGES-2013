@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4427 2013/12/08 14:05:03 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.4428 2013/12/08 14:22:26 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6493,3 +6493,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/at-spi2-atk to 2.10.2 [prlw1 2013-12-08]
 	Updated graphics/gdk-pixbuf2 to 2.30.1 [prlw1 2013-12-08]
 	Updated x11/gtk2 to 2.24.22 [prlw1 2013-12-08]
+	Updated x11/gtk3 to 3.10.6 [prlw1 2013-12-08]
