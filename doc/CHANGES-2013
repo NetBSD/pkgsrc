@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4411 2013/12/07 21:26:39 richard Exp $
+$NetBSD: CHANGES-2013,v 1.4412 2013/12/08 00:35:37 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6476,3 +6476,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/libmicrohttpd to 0.9.32 [gls 2013-12-07]
 	Removed games/pokerth [dholland 2013-12-07]
 	Updated sysutils/py-psutil to 1.2.1 [richard 2013-12-07]
+	Updated sysutils/memtestplus to 5.01 [jakllsch 2013-12-08]
