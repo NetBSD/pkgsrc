@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/05/18 21:51:59 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/08 13:40:20 prlw1 Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
@@ -9,6 +9,7 @@ include/at-spi-2.0/atspi/atspi-device-listener-private.h
 include/at-spi-2.0/atspi/atspi-device-listener.h
 include/at-spi-2.0/atspi/atspi-document.h
 include/at-spi-2.0/atspi/atspi-editabletext.h
+include/at-spi-2.0/atspi/atspi-enum-types.h
 include/at-spi-2.0/atspi/atspi-event-listener-private.h
 include/at-spi-2.0/atspi/atspi-event-listener.h
 include/at-spi-2.0/atspi/atspi-gmain.c
@@ -98,6 +99,8 @@ share/locale/eu/LC_MESSAGES/at-spi2-core.mo
 share/locale/fa/LC_MESSAGES/at-spi2-core.mo
 share/locale/fi/LC_MESSAGES/at-spi2-core.mo
 share/locale/fr/LC_MESSAGES/at-spi2-core.mo
+share/locale/fur/LC_MESSAGES/at-spi2-core.mo
+share/locale/ga/LC_MESSAGES/at-spi2-core.mo
 share/locale/gl/LC_MESSAGES/at-spi2-core.mo
 share/locale/gu/LC_MESSAGES/at-spi2-core.mo
 share/locale/he/LC_MESSAGES/at-spi2-core.mo
