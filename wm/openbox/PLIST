@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/08/06 17:09:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/12/08 07:56:31 obache Exp $
 bin/gdm-control
 bin/gnome-panel-control
 bin/obxprop
@@ -59,8 +59,12 @@ share/examples/openbox/autostart
 share/examples/openbox/environment
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
+share/gnome-session/sessions/openbox-gnome-fallback.session
+share/gnome-session/sessions/openbox-gnome.session
 share/gnome/wm-properties/openbox.desktop
+share/locale/af/LC_MESSAGES/openbox.mo
 share/locale/ar/LC_MESSAGES/openbox.mo
+share/locale/be/LC_MESSAGES/openbox.mo
 share/locale/bn_IN/LC_MESSAGES/openbox.mo
 share/locale/ca/LC_MESSAGES/openbox.mo
 share/locale/cs/LC_MESSAGES/openbox.mo
@@ -73,8 +77,10 @@ share/locale/et/LC_MESSAGES/openbox.mo
 share/locale/eu/LC_MESSAGES/openbox.mo
 share/locale/fi/LC_MESSAGES/openbox.mo
 share/locale/fr/LC_MESSAGES/openbox.mo
+share/locale/he/LC_MESSAGES/openbox.mo
 share/locale/hr/LC_MESSAGES/openbox.mo
 share/locale/hu/LC_MESSAGES/openbox.mo
+share/locale/ia/LC_MESSAGES/openbox.mo
 share/locale/it/LC_MESSAGES/openbox.mo
 share/locale/ja/LC_MESSAGES/openbox.mo
 share/locale/lt/LC_MESSAGES/openbox.mo
@@ -84,6 +90,7 @@ share/locale/no/LC_MESSAGES/openbox.mo
 share/locale/pl/LC_MESSAGES/openbox.mo
 share/locale/pt/LC_MESSAGES/openbox.mo
 share/locale/pt_BR/LC_MESSAGES/openbox.mo
+share/locale/ro/LC_MESSAGES/openbox.mo
 share/locale/ru/LC_MESSAGES/openbox.mo
 share/locale/sk/LC_MESSAGES/openbox.mo
 share/locale/sr/LC_MESSAGES/openbox.mo

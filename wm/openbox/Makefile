@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2013/10/10 14:42:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2013/12/08 07:56:31 obache Exp $
 
-DISTNAME=	openbox-3.5.0
-PKGREVISION=	16
+DISTNAME=	openbox-3.5.2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://openbox.org/dist/openbox/
 
@@ -21,26 +20,21 @@ USE_FEATURES+=		setenv
 PKGCONFIG_OVERRIDE=	obrender/obrender-3.5.pc.in
 PKGCONFIG_OVERRIDE+=	obt/obt-3.5.pc.in
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 LDFLAGS+=		${BUILDLINK_LDADD.libsetenv}
-PKG_SYSCONFSUBDIR=	xdg
-OWN_DIRS=		${PKG_SYSCONFDIR}
-OWN_DIRS+=		${PKG_SYSCONFDIR}/openbox
+PKG_SYSCONFSUBDIR=	xdg/openbox
 
 EGDIR=			${PREFIX}/share/examples/openbox
-CONF_FILES=		${EGDIR}/autostart ${PKG_SYSCONFDIR}/openbox/autostart
-CONF_FILES+=		${EGDIR}/environment ${PKG_SYSCONFDIR}/openbox/environment
-CONF_FILES+=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/openbox/menu.xml
-CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
+CONF_FILES=		${EGDIR}/autostart ${PKG_SYSCONFDIR}/autostart
+CONF_FILES+=		${EGDIR}/environment ${PKG_SYSCONFDIR}/environment
+CONF_FILES+=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/menu.xml
+CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/rc.xml
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-build
-SUBST_FILES.python+=	data/autostart/openbox-xdg-autostart
-# Best we can do without pulling in a python dependency.
-# Update when PYTHON_VERSION_DEFAULT changes!
-SUBST_SED.python+=      -e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.7,'
-SUBST_MESSAGE.python=	Fixing path to python.
-CHECK_INTERPRETER_SKIP=	libexec/openbox-xdg-autostart
+INSTALL_MAKE_FLAGS+=	rcdir=${EGDIR}
+
+REPLACE_PYTHON+=	data/autostart/openbox-xdg-autostart
+
+.include "options.mk"
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
@@ -57,5 +51,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
