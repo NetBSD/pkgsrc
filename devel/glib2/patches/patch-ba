@@ -1,7 +1,6 @@
-$NetBSD: patch-ba,v 1.12 2013/10/03 14:41:00 prlw1 Exp $
+$NetBSD: patch-ba,v 1.13 2013/12/08 13:08:59 prlw1 Exp $
 
-* http://bugzilla.gnome.org/show_bug.cgi?id=583330
-* http://bugzilla.gnome.org/show_bug.cgi?id=697365
+http://bugzilla.gnome.org/show_bug.cgi?id=583330
 
 --- gio/gunixmounts.c.orig	2013-08-07 14:34:32.000000000 +0000
 +++ gio/gunixmounts.c
@@ -115,18 +114,6 @@ $NetBSD: patch-ba,v 1.12 2013/10/03 14:41:00 prlw1 Exp $
  #endif
          mount_entry->is_read_only = TRUE;
  
-@@ -774,9 +791,11 @@ _g_get_unix_mount_points (void)
-           (strcmp (mntent->mnt_dir, "none") == 0))
- 	continue;
- 
-+#ifdef HAVE_HASMNTOPT
-       /* We ignore bind fstab entries, as we ignore bind mounts anyway */
-       if (hasmntopt (mntent, "bind"))
-         continue;
-+#endif
- 
-       mount_entry = g_new0 (GUnixMountPoint, 1);
-       mount_entry->mount_path = g_strdup (mntent->mnt_dir);
 @@ -1126,6 +1145,10 @@ get_mounts_timestamp (void)
        if (stat (monitor_file, &buf) == 0)
  	return (guint64)buf.st_mtime;

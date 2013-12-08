@@ -1,20 +1,20 @@
-$NetBSD: patch-al,v 1.6 2010/11/02 14:52:24 drochner Exp $
+$NetBSD: patch-al,v 1.7 2013/12/08 13:08:59 prlw1 Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=583329
 
---- glib/tests/convert.c.orig	2008-09-02 15:09:28.000000000 +0000
+--- glib/tests/convert.c.orig	2013-09-05 10:43:41.000000000 +0000
 +++ glib/tests/convert.c
-@@ -76,6 +76,7 @@ test_one_half (void)
-   g_assert (strcmp (out, "\xbd") == 0);
-   g_free (out);
+@@ -65,6 +65,7 @@ test_one_half (void)
+   gsize bytes_written = 0;
+   GError *error = NULL;  
  
-+#if 0 /* these 2 tests depend on GNU iconv specific behaviour */
++#if 0 /* these tests depend on GNU iconv specific behaviour */
    out = g_convert (in, -1, 
- 		   "ISO-8859-15", "UTF-8",
+ 		   "ISO-8859-1", "UTF-8",
  		   &bytes_read, &bytes_written,
 @@ -99,6 +100,7 @@ test_one_half (void)
-   g_assert (bytes_written == 1);
-   g_assert (strcmp (out, "a") == 0);
+   g_assert_cmpint (bytes_written, ==, 1);
+   g_assert_cmpstr (out, ==, "a");
    g_free (out);
 +#endif
  }

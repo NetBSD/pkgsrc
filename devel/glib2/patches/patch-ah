@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.11 2013/04/25 12:10:48 joerg Exp $
+$NetBSD: patch-ah,v 1.12 2013/12/08 13:08:59 prlw1 Exp $
 
 --- glib/gutils.c.orig	2013-04-15 21:27:24.000000000 +0000
 +++ glib/gutils.c
@@ -20,20 +20,3 @@ $NetBSD: patch-ah,v 1.11 2013/04/25 12:10:48 joerg Exp $
  
        conf_dir_vector = g_strsplit (conf_dirs, G_SEARCHPATH_SEPARATOR_S, 0);
  #endif
-@@ -2167,6 +2167,8 @@ g_format_size (guint64 size)
-  *
-  * Since: 2.30
-  */
-+#pragma GCC diagnostic push
-+#pragma GCC diagnostic ignored "-Wformat-nonliteral"
- gchar *
- g_format_size_full (guint64          size,
-                     GFormatSizeFlags flags)
-@@ -2284,6 +2286,7 @@ g_format_size_full (guint64          siz
- 
-   return g_string_free (string, FALSE);
- }
-+#pragma GCC diagnostic pop
- 
- /**
-  * g_format_size_for_display:
