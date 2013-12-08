@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/11/07 00:46:39 joerg Exp $
+$NetBSD: distinfo,v 1.9 2013/12/08 19:17:56 riz Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -41,6 +41,7 @@ SHA1 (patch-include_xen-sys_NetBSD_gntdev.h) = 25c99a428fda6dee709888ddbcfdcfef5
 SHA1 (patch-libfsimage_common_Makefile) = c3cc5335a1d6b066307c5f03fe72f513a9eb2bdb
 SHA1 (patch-libfsimage_ufs_ufs.h) = dc59f33cf3abd08a8cdee5977ca4168613327513
 SHA1 (patch-libxc_xc__netbsd.c) = c94a2f7b38bfc1479401acf1bb124251bb4e3fcf
+SHA1 (patch-libxc_xc_dom_h) = b89785a97208454eb3f2e1e43ba4674ad0828aa6
 SHA1 (patch-libxl_libxl__create.c) = a212b3760f1bb796c6f126e5c795154f4e8030e2
 SHA1 (patch-libxl_libxl__internal.h) = f8ff92400f7ba7858cc1963b11c1e8ee23d4e51f
 SHA1 (patch-ocaml_common.make) = c59d32301198d65691ab23529dd791de5ac40199
