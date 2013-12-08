@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/11/20 11:00:43 dsainty Exp $
+# $NetBSD: Makefile,v 1.33 2013/12/08 22:27:57 joerg Exp $
 
 DISTNAME=		gcc-4.5.3
 PKGNAME=		avr-gcc-4.5.3
@@ -44,6 +44,7 @@ SUBST_STAGE.sed=	post-patch
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/obj
+	${LN} -s ${WRKDIR}/obj/gcc/include/unwind.h ${WRKSRC}/gcc/unwind.h
 
 CONFIGURE_DIRS=		${WRKDIR}/obj
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
