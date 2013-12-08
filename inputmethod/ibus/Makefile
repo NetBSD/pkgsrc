@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.32 2013/10/23 11:50:04 obache Exp $
+# $NetBSD: Makefile,v 1.33 2013/12/08 07:34:21 obache Exp $
 #
 
 .include "Makefile.common"
 
+PKGREVISION=	1
+
 COMMENT=	Intelligent Input Bus
+
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -62,4 +66,5 @@ GTK2_IMMODULES=	yes
 .include "../../x11/gtk2/modules.mk"
 .include "../../x11/gtk3/modules.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
