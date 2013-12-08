@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:12 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/12/08 00:35:28 jakllsch Exp $
 #
 
 # Note -- version number also in the do-install rule
-MAJVER=4
-MINVER=20
+MAJVER=5
+MINVER=01
 
 DISTNAME=		memtest86+-${MAJVER}.${MINVER}
 PKGNAME=		memtestplus-${MAJVER}.${MINVER}
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 NetBSD-*-x86_64 Linux-*-x86_64
 
 USE_TOOLS+=		gmake
 SUBST_CLASSES+=		delcr
-SUBST_STAGE.delcr=	post-build
+SUBST_STAGE.delcr=	pre-patch
 SUBST_MESSAGE.delcr=	Deleting CRs
 SUBST_FILES.delcr=	README
 SUBST_SED.delcr=	-e 's/.$$//g'
