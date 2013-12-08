@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/05/18 22:01:29 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/12/08 13:58:24 prlw1 Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
@@ -42,6 +42,7 @@ share/gtk-doc/html/gdk-pixbuf/api-index-2-14.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-2.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-26.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-28.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-30.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-4.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-6.html
 share/gtk-doc/html/gdk-pixbuf/api-index-2-8.html
