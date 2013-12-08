@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2009/11/24 17:20:40 jakllsch Exp $
+$NetBSD: patch-ad,v 1.3 2013/12/08 00:35:28 jakllsch Exp $
 
---- README.orig	2009-09-22 00:35:46.000000000 +0000
+--- README.orig	2013-12-08 00:26:53.000000000 +0000
 +++ README
-@@ -174,7 +174,7 @@ individual errors.  In BadRAM Patterns m
- use with the Linux BadRAM feature.  This slick feature allows Linux to
- avoid bad memory pages.  Details about the BadRAM feature can be found at:
+@@ -241,7 +241,7 @@ work-around makes it possible for Linux 
+ RAM.  For more information on BadRAM suppor
+ for Linux, sail t
  
--	http://home.zonnet.nl/vanrein/badram
-+	http://rick.vanrein.org/linux/badram/
+-       http://home.zonnet.nl/vanrein/badra
++       http://rick.vanrein.org/linux/badram/
  
- For individual errors the following information is displayed when a memory
- error is detected.  An error message is only displayed for errors with a
+ Sometimes memory errors show up due to component incompatibility.  A memor
+ module may work fine in one system and not in another.  This is no
