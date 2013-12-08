@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4429 2013/12/08 15:23:38 cheusov Exp $
+$NetBSD: CHANGES-2013,v 1.4430 2013/12/08 15:38:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6495,3 +6495,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/gtk2 to 2.24.22 [prlw1 2013-12-08]
 	Updated x11/gtk3 to 3.10.6 [prlw1 2013-12-08]
 	Added devel/bmkdep version 20131009 [cheusov 2013-12-08]
+	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-08]
