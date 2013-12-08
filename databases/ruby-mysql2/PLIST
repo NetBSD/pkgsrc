@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/13 12:52:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/08 16:48:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/mysql2/result.rb
 ${GEM_LIBDIR}/lib/mysql2/version.rb
 ${GEM_LIBDIR}/spec/configuration.yml.example
 ${GEM_LIBDIR}/spec/em/em_spec.rb
+${GEM_LIBDIR}/spec/my.cnf.example
 ${GEM_LIBDIR}/spec/mysql2/client_spec.rb
 ${GEM_LIBDIR}/spec/mysql2/error_spec.rb
 ${GEM_LIBDIR}/spec/mysql2/result_spec.rb
