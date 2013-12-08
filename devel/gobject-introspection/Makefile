@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2013/09/02 19:50:59 adam Exp $
+# $NetBSD: Makefile,v 1.35 2013/12/08 13:28:27 prlw1 Exp $
 #
 
-DISTNAME=	gobject-introspection-1.36.0
-PKGREVISION=	3
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/1.36/}
+DISTNAME=	gobject-introspection-1.38.0
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config flex bison gmake
 GMAKE_REQD=	3.81
 
+PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
 
 SUBST_CLASSES+=	timet
