@@ -1,14 +1,14 @@
-$NetBSD: patch-cd,v 1.7 2012/05/01 18:45:53 adam Exp $
+$NetBSD: patch-cd,v 1.8 2013/12/08 13:08:59 prlw1 Exp $
 
 sysutils/gio-fam builds the gio/fam backend as a separate module.  Force it
 to link against the installed version of glib2, as it is not rebuilt by the
 package.
 
---- gio/fam/Makefile.in.orig	2012-03-11 23:56:05.000000000 +0000
+--- gio/fam/Makefile.in.orig	2013-10-15 19:14:51.000000000 +0000
 +++ gio/fam/Makefile.in
-@@ -87,10 +87,7 @@ am__uninstall_files_from_dir = { \
- am__installdirs = "$(DESTDIR)$(giomoduledir)"
- LTLIBRARIES = $(giomodule_LTLIBRARIES)
+@@ -175,10 +175,7 @@ am__installdirs = "$(DESTDIR)$(giomodule
+ LTLIBRARIES = $(giomodule_LTLIBRARIES) $(installed_test_LTLIBRARIES) \
+ 	$(noinst_LTLIBRARIES)
  am__DEPENDENCIES_1 =
 -libgiofam_la_DEPENDENCIES = $(top_builddir)/gio/libgio-2.0.la \
 -	$(top_builddir)/gobject/libgobject-2.0.la \
@@ -18,7 +18,7 @@ package.
  am__objects_1 =
  am_libgiofam_la_OBJECTS = libgiofam_la-fam-helper.lo \
  	libgiofam_la-fam-module.lo \
-@@ -403,9 +400,7 @@ libgiofam_la_CFLAGS = \
+@@ -792,9 +789,7 @@ libgiofam_la_CFLAGS = \
  
  libgiofam_la_LDFLAGS = $(module_flags)
  libgiofam_la_LIBADD = \
@@ -29,8 +29,8 @@ package.
  		$(GLIB_LIBS) \
  		$(FAM_LIBS) \
  		$(NULL)
-@@ -843,9 +838,6 @@ lcov-clean:
- check-local: test-nonrecursive
+@@ -1639,9 +1634,6 @@ check-local: test-nonrecursive
+ @ENABLE_INSTALLED_TESTS_TRUE@	mv $@.tmp $@)
  
  install-data-hook:
 -	if $(RUN_QUERY_MODULES) && test -z "$(DESTDIR)" ; then					\

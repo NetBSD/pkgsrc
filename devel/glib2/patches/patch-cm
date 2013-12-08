@@ -1,9 +1,9 @@
-$NetBSD: patch-cm,v 1.2 2012/03/21 12:18:33 drochner Exp $
+$NetBSD: patch-cm,v 1.3 2013/12/08 13:08:59 prlw1 Exp $
 
 sysutils/gio-fam builds the gio/fam backend as a separate module.  Force it
 to link against the installed version of glib2, as it is not rebuilt by the
 package.
-
+(patch-cd)
 --- gio/fam/Makefile.am.orig	2012-03-11 23:55:40.000000000 +0000
 +++ gio/fam/Makefile.am
 @@ -25,11 +25,9 @@ libgiofam_la_CFLAGS = \
