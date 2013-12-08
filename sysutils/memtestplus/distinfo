@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.9 2011/05/30 19:58:07 jakllsch Exp $
+$NetBSD: distinfo,v 1.10 2013/12/08 00:35:28 jakllsch Exp $
 
-SHA1 (memtest86+-4.20.tar.gz) = df49a3d0b003c575d5a26dedc3d66dbe905db1b6
-RMD160 (memtest86+-4.20.tar.gz) = abf74cfd34c220b104c3f364d782a4fcd2b7ec8a
-Size (memtest86+-4.20.tar.gz) = 206044 bytes
-SHA1 (patch-aa) = d6d193813985ec996495c010a5733ade83d0811c
-SHA1 (patch-ab) = 8e5ce60b904763c030931a532f3b438968fca434
-SHA1 (patch-ac) = fbfbcc23549e610af5d42ebe3710025f682ca9ec
-SHA1 (patch-ad) = aecaa5cee6a27d4e5beb9e3fc0c7efacf21eddf4
-SHA1 (patch-ae) = 64931515368b099a23c76468c837fae569cb3cc1
+SHA1 (memtest86+-5.01.tar.gz) = eb4b6d70114db3c9ed320785da44c0ba8349c10c
+RMD160 (memtest86+-5.01.tar.gz) = 756b57d8f8a3b7408aba0b2fc0cadcdc1df966df
+Size (memtest86+-5.01.tar.gz) = 214877 bytes
+SHA1 (patch-aa) = 2f49c00b162a3f5f7c9f94808d1246d283b8e9f6
+SHA1 (patch-ab) = 04ca819d23656c5a73625b457ad730c0cf33e751
+SHA1 (patch-ac) = 9186952e34139b4d4aab6c266a224921a4d39659
+SHA1 (patch-ad) = ab31fec30052fdd3c473ee885ba00d7e3676384f
+SHA1 (patch-makeiso.sh) = 939056a96a1384e4d27772bf5612a755deca8145
+SHA1 (patch-nbstart.S) = d97a6e9c25a57d0f5510c3acf4dccf0f0c0c31b0
