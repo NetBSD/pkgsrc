@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4434 2013/12/08 16:50:48 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4435 2013/12/08 16:52:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6500,3 +6500,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/ruby-unf to 0.1.3 [taca 2013-12-08]
 	Updated databases/ruby-mysql2 to 0.3.14 [taca 2013-12-08]
 	Updated databases/ruby-pg to 0.17.0 [taca 2013-12-08]
+	Updated databases/ruby-sequel to 4.5.0 [taca 2013-12-08]
