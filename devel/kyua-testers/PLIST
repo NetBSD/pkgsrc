@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2013/02/19 05:29:15 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/08 01:21:12 jmmv Exp $
 lib/pkgconfig/kyua-testers.pc
 libexec/kyua-atf-tester
 libexec/kyua-plain-tester
+libexec/kyua-tap-tester
 man/man1/kyua-atf-tester.1
 man/man1/kyua-plain-tester.1
+man/man1/kyua-tap-tester.1
 man/man1/kyua-tester.1
 man/man5/kyua-tester-list.5
 man/man5/kyua-tester-result.5
 man/man7/kyua-atf-interface.7
 man/man7/kyua-plain-interface.7
+man/man7/kyua-tap-interface.7
 share/doc/kyua-testers/AUTHORS
 share/doc/kyua-testers/COPYING
 share/doc/kyua-testers/NEWS
@@ -28,4 +31,7 @@ ${TESTS}tests/kyua-testers/result_test
 ${TESTS}tests/kyua-testers/run_test
 ${TESTS}tests/kyua-testers/stacktrace_helper
 ${TESTS}tests/kyua-testers/stacktrace_test
+${TESTS}tests/kyua-testers/tap_helpers
+${TESTS}tests/kyua-testers/tap_inttest
+${TESTS}tests/kyua-testers/tap_parser_test
 ${TESTS}tests/kyua-testers/text_test

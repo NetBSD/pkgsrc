@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/02/19 05:29:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/08 01:21:12 jmmv Exp $
 #
 
-DISTNAME=	kyua-testers-0.1
+DISTNAME=	kyua-testers-0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://kyua.googlecode.com/files/
 
