@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.proglinks,v 1.1.1.1 2009/01/31 22:05:53 bad Exp $
-bin/scalc
-bin/sdraw
-bin/simpress
-bin/smath
-bin/soffice
-bin/spadmin
-bin/swriter

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.dirs,v 1.1 2010/03/02 22:57:03 bad Exp $
-@pkgdir opt/openoffice.org/basis${BASEVER}
-@pkgdir opt/openoffice.org
-@pkgdir opt/openoffice.org${VER}
-@pkgdir opt
