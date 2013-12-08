@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/10/30 06:49:53 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2013/12/08 22:30:17 joerg Exp $
 #
 
 DISTNAME=	fillets-ng-0.7.3
@@ -22,6 +22,8 @@ SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	fillets.6
 SUBST_MESSAGE.man=	Fixing documentation path in the manual page.
 SUBST_SED.man=		"s,/usr/share/doc/fillets-ng/html/manual.html,${PREFIX}/share/doc/html/fillets-ng/manual.html,"
+
+LUA_VERSIONS_ACCEPTED=	51
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
