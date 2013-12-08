@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2013/10/30 06:49:55 dholland Exp $
+# $NetBSD: Makefile,v 1.46 2013/12/08 00:18:21 dholland Exp $
 #
 
 DISTNAME=	awesome-3.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -53,6 +53,7 @@ LDFLAGS.SunOS+=		-liconv
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
