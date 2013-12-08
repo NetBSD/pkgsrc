@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.76 2013/12/08 15:37:53 prlw1 Exp $
+# $NetBSD: Makefile,v 1.77 2013/12/08 18:21:00 prlw1 Exp $
 
-DISTNAME=	librsvg-2.40.1
+DISTNAME=	librsvg-2.36.4
+PKGREVISION=	7
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.36/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/LibRsvg
-COMMENT=	SVG library for GNOME
+HOMEPAGE=	http://live.gnome.org/LibRsvg
+COMMENT=	SVG library for GNOME2
 LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	librsvg2-gtk-[0-9]* librsvg2-[0-9]*
@@ -17,7 +18,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-tools
+CONFIGURE_ARGS+=	--disable-gtk-theme --disable-tools
 CONFIGURE_ARGS+=	--disable-introspection
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
