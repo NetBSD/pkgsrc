@@ -1,62 +1,49 @@
-$NetBSD: patch-ab,v 1.4 2009/11/24 17:20:40 jakllsch Exp $
+$NetBSD: patch-ab,v 1.5 2013/12/08 00:35:28 jakllsch Exp $
 
---- test.c.orig	2009-09-22 00:35:46.000000000 +0000
+--- test.c.orig	2013-08-10 02:29:44.000000000 +0000
 +++ test.c
-@@ -11,10 +11,32 @@
- 
- #include "test.h"
- #include "config.h"
+@@ -14,7 +14,6 @@
+ #include "stdint.h"
+ #include "cpuid.h"
+ #include "smp.h"
 -#include <sys/io.h>
- #include "dmi.h"
- #include <inttypes.h>
  
-+static __inline void
-+pkg_outb (unsigned char value, unsigned short int port)
+ extern struct cpu_ident cpu_id;
+ extern volatile int    mstr_cpu;
+@@ -29,6 +28,36 @@ void rand_seed( unsigned int seed1, unsi
+ ulong rand(int me);
+ void poll_errors();
+ 
++static inline void outb(unsigned char value, unsigned short int port)
 +{
-+  __asm__ __volatile__ ("outb %b0,%w1": :"a" (value), "Nd" (port));
++	asm __volatile__ (
++		"outb %b0,%w1\n\t"
++		: :"a" (value), "Nd" (port)
++	);
 +}
 +
-+static __inline void
-+pkg_outb_p (unsigned char value, unsigned short int port)
++static __inline void outb_p(unsigned char value, unsigned short int port)
 +{
-+  __asm__ __volatile__ ("outb %b0,%w1\noutb %%al,$0x80": :"a" (value),
-+                        "Nd" (port));
++	asm __volatile__ (
++		"outb %b0,%w1\n\t"
++		"outb %%al,$0x80\n\t"
++		: : "a" (value), "Nd" (port)
++	);
 +}
 +
-+static __inline unsigned char
-+pkg_inb_p (unsigned short int port)
++static __inline unsigned char inb_p(unsigned short int port)
 +{
-+  unsigned char _v;
++	unsigned char v;
 +
-+  __asm__ __volatile__ ("inb %w1,%0\noutb %%al,$0x80":"=a" (_v):"Nd" (port));
-+  return _v;
++  	asm __volatile__ (
++		"inb %w1,%0\n\t"
++		"outb %%al,$0x80\n\t"
++		: "=a" (v)
++		: "Nd" (port)
++	);
++	return v;
 +}
 +
-+
- extern int segs, bail;
- extern volatile ulong *p;
- extern ulong p1, p2;
-@@ -1414,18 +1436,18 @@ void beep(unsigned int frequency)
- 	unsigned int count = 1193180 / frequency;
- 
- 	// Switch on the speaker
--	outb_p(inb_p(0x61)|3, 0x61);
-+	pkg_outb_p(pkg_inb_p(0x61)|3, 0x61);
- 
- 	// Set command for counter 2, 2 byte write
--	outb_p(0xB6, 0x43);
-+	pkg_outb_p(0xB6, 0x43);
- 
- 	// Select desired Hz
--	outb_p(count & 0xff, 0x42);
--	outb((count >> 8) & 0xff, 0x42);
-+	pkg_outb_p(count & 0xff, 0x42);
-+	pkg_outb((count >> 8) & 0xff, 0x42);
- 
- 	// Block for 100 microseconds
- 	sleep(100, 1);
- 
- 	// Switch off the speaker
--	outb(inb_p(0x61)&0xFC, 0x61);
-+	pkg_outb(pkg_inb_p(0x61)&0xFC, 0x61);
- }
+ static inline ulong roundup(ulong value, ulong mask)
+ {
+ 	return (value + mask) & ~mask;
