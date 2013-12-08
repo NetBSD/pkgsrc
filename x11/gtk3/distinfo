@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.19 2013/09/07 21:31:56 prlw1 Exp $
+$NetBSD: distinfo,v 1.20 2013/12/08 14:21:37 prlw1 Exp $
 
-SHA1 (gtk+-3.8.4.tar.xz) = d4448633071a1c3866ff3c8be331c7bd6c3b3dd7
-RMD160 (gtk+-3.8.4.tar.xz) = 284d74b1f3c279158fc9ab8e7d2099f75a657653
-Size (gtk+-3.8.4.tar.xz) = 13716408 bytes
-SHA1 (patch-aj) = 88d5a5c25bcc005bce8597d1262e68a9e67b5f93
+SHA1 (gtk+-3.10.6.tar.xz) = 7d7605f72ff5886d8506eb8e564f99a14677d872
+RMD160 (gtk+-3.10.6.tar.xz) = 1d591207a119124d8c46d025908d6bd0af97b1ed
+Size (gtk+-3.10.6.tar.xz) = 14387620 bytes
+SHA1 (patch-aj) = 4a03d88ba597fd93cfd2807e779a431e98bb8d5e
 SHA1 (patch-config.h.in) = 479ebf5a5cf5ca6855fcda94063638a919bbf548
 SHA1 (patch-configure) = 0bf253073a8799082f83fbd37b5424e9adf9b9d3
 SHA1 (patch-configure.ac) = 4a2144abddc3468500515511cd934fd35f573952
 SHA1 (patch-gdk_x11_gdkwindow-x11.h) = c80f7c9d5a570817e54fd74fa903a53400dc6f64
-SHA1 (patch-gtk_a11y_gtkaccessibility.c) = 73b653b855f21c23c13f2332f71aa865a465a621
+SHA1 (patch-gtk_a11y_gtkaccessibility.c) = 9993c6909c5107fcbb5ac59c79e05045c3fe73d2
