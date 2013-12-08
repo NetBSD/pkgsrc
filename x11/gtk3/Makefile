@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2013/12/08 14:21:37 prlw1 Exp $
+# $NetBSD: Makefile,v 1.46 2013/12/08 23:12:15 prlw1 Exp $
 
 DISTNAME=	gtk+-3.10.6
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake msgfmt perl pkg-config bash
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
+BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=		yes
 # XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh
