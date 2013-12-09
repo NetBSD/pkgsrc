@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/09 14:17:53 obache Exp $
 #
 
 DISTNAME=	Text-PDF-0.29a
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
@@ -14,7 +14,7 @@ COMMENT=	Perl 5 module for manipulating PDF files
 WRKSRC=		${WRKDIR}/Text-PDF-0.29
 USE_LANGUAGES=	# empty
 
-DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
+DEPENDS+=	{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib>=0
 
 PERL5_PACKLIST=	auto/Text/PDF/.packlist
 

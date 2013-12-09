@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2013/05/31 12:41:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2013/12/09 14:17:51 obache Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-1.06
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		p5pgp
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
@@ -24,7 +24,7 @@ DEPENDS+=		p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
 DEPENDS+=		p5-Crypt-Twofish>=2.00:../../security/p5-Crypt-Twofish
 DEPENDS+=		p5-Data-Buffer>=0.04:../../devel/p5-Data-Buffer
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=		p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
+DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
 DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI

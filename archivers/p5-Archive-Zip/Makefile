@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2013/05/31 12:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2013/12/09 14:17:41 obache Exp $
 
 DISTNAME=	Archive-Zip-1.30
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5zip
 CATEGORIES=	archivers perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Archive-Zip/
 COMMENT=	Perl5 module interface to manipulate zip files
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
+DEPENDS+=	{perl>=5.10.1,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Raw::Zlib>=2.017
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

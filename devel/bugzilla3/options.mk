@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/01/04 00:38:11 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2013/12/09 14:17:42 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
@@ -55,7 +55,7 @@ DEPENDS+=	p5-HTML-Parser>=3.40:../../www/p5-HTML-Parser
 ### mod_perl
 ###
 .if !empty(PKG_OPTIONS:Mbugzilla-modperl)
-DEPENDS+=	p5-CGI>=3.11:../../www/p5-CGI
+DEPENDS+=	{perl>=5.9.3,p5-CGI>=3.11}:../../www/p5-CGI
 DEPENDS+=	p5-Apache-DBI>=0.96:../../databases/p5-Apache-DBI
 . if defined(PKG_APACHE)
 .  if !empty(PKG_APACHE:Mapache2)

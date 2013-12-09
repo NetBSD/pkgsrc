@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/15 02:37:10 wen Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/09 14:17:45 obache Exp $
 
 DISTNAME=	Module-Build-Tiny-0.030
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-ExtUtils-Config>=0.003:../../devel/p5-ExtUtils-Config
 DEPENDS+=	p5-ExtUtils-Helpers>=0.020:../../devel/p5-ExtUtils-Helpers
 DEPENDS+=	p5-ExtUtils-InstallPaths>=0.002:../../devel/p5-ExtUtils-InstallPaths
 
-BUILD_DEPENDS+=	p5-Test-Harness>=0:../../devel/p5-Test-Harness
+BUILD_DEPENDS+=	{perl>=5,p5-Test-Harness>=0}:../../devel/p5-Test-Harness
 
 USE_LANGUAGES=	c	# For the tests
 #BUILDING_MODULE_BUILD=	yes

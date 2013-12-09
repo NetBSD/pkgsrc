@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/09 14:17:51 obache Exp $
 #
 
 VER=		0.9.9
 DISTNAME=	biblatex-biber
 PKGNAME=	p5-biblatex-biber-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/${VER}/
 # TODO: can I express this with MASTER_SITES_SOURCEFORGE ?
@@ -34,7 +34,7 @@ DEPENDS+=		p5-File-Slurp-Unicode-[0-9]*:../../devel/p5-File-Slurp-Unicode
 DEPENDS+=		p5-List-AllUtils-[0-9]*:../../devel/p5-List-AllUtils
 DEPENDS+=		p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
 DEPENDS+=		p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
-DEPENDS+=		p5-Unicode-Collate>=0.89:../../converters/p5-Unicode-Collate
+DEPENDS+=		{perl>=5.15.9,p5-Unicode-Collate>=0.89}:../../converters/p5-Unicode-Collate
 DEPENDS+=		p5-XML-LibXML-Simple-[0-9]*:../../textproc/p5-XML-LibXML-Simple
 DEPENDS+=		p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
 DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer

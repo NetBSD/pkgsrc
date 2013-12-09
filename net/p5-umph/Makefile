@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/08/19 12:48:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/09 14:17:50 obache Exp $
 #
 
 DISTNAME=	umph-0.2.5
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://umph.googlecode.com/files/
 
@@ -13,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
 DEPENDS+=	p5-XML-DOM>=1.44:../../textproc/p5-XML-DOM
-DEPENDS+=	p5-version>=0.77:../../devel/p5-version
+DEPENDS+=	{perl>=5.10.1,p5-version>=0.77}:../../devel/p5-version
 DEPENDS+=	p5-Umph-Prompt>=0.1.0:../../net/p5-Umph-Prompt
 
 PERL5_PACKLIST=	auto/umph/.packlist

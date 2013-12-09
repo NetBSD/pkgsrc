@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/05/31 12:41:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2013/12/09 14:17:52 obache Exp $
 
 DISTNAME=	XML-XSH-1.8.2
 PKGNAME=	${DISTNAME:S/XML-XSH/xsh/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xsh/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://xsh.sourceforge.net/
 COMMENT=	XML Editing Shell
 
 DEPENDS+=	p5-Parse-RecDescent>=1.94:../../devel/p5-Parse-RecDescent
-DEPENDS+=	p5-Term-ReadLine>=1.12:../../devel/p5-Term-ReadLine
+DEPENDS+=	{perl>=5.17.10,p5-Term-ReadLine>=1.12}:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-LibXML-Iterator-[0-9]*:../../textproc/p5-XML-LibXML-Iterator
 DEPENDS+=	p5-XML-NodeFilter-[0-9]*:../../textproc/p5-XML-NodeFilter

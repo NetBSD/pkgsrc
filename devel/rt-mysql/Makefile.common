@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2013/11/25 23:37:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2013/12/09 14:17:47 obache Exp $
 # used by devel/rt-mysql/Makefile
 # used by devel/rt-pgsql/Makefile
 
@@ -75,7 +75,7 @@ RT_DB_DBA_PASSWORD?=
 #
 .endif
 
-DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 #DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-DBI>=1.18:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-DataSource>=0.02:../../databases/p5-DBIx-Datasource
@@ -84,7 +84,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-MLDBM-[0-9]*:../../databases/p5-MLDBM
 DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
 DEPENDS+=	p5-HTML-Mason>=1.02:../../www/p5-HTML-Mason
-DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+DEPENDS+=	{perl>=5.004,p5-CGI-[0-9]*}:../../www/p5-CGI
 DEPENDS+=	p5-libapreq2-[0-9]*:../../www/p5-libapreq2
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:40:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/09 14:17:46 obache Exp $
 
 DISTNAME=	Test-Distribution-2.00
 PKGNAME=	p5-${DISTNAME}
@@ -13,9 +13,9 @@ COMMENT=	Perl5 module testing all modules of a distribution
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-# In perl, but since when?
-#DEPENDS+=	p5-ExtUtils-Manifest>=1.43
-#DEPENDS+=	p5-Test-More>=0.45
+# In perl
+#DEPENDS+=	{perl>=5.8.8,p5-ExtUtils-Manifest>=1.43}:../../devel/p5-ExtUtils-Manifest
+#DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>=0.45}:../../devel/p5-Test-Simple
 
 DEPENDS+=	p5-File-Find-Rule>=0.03:../../devel/p5-File-Find-Rule
 DEPENDS+=	{perl>=5.16.0,p5-Module-CoreList>=1.93}:../../devel/p5-Module-CoreList

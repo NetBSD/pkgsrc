@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/09 14:17:46 obache Exp $
 
 DISTNAME=	SVN-Class-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SVN/}
 
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
-DEPENDS+=	p5-IPC-Cmd>=0.40:../../devel/p5-IPC-Cmd
+DEPENDS+=	{perl>=5.10.0,p5-IPC-Cmd>=0.40}:../../devel/p5-IPC-Cmd
 DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Path-Class-File-Stat-[0-9]*:../../devel/p5-Path-Class-File-Stat

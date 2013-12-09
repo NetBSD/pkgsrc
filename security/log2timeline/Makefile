@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/09/14 06:35:15 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/09 14:17:51 obache Exp $
 #
 
 DISTNAME=	log2timeline_${L2T_VERSION}
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://log2timeline.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
@@ -35,10 +36,10 @@ DEPENDS+=	p5-DateTime>=0.41:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Strptime>=0:../../time/p5-DateTime-Format-Strptime
 DEPENDS+=	p5-DateTime-TimeZone>=0:../../time/p5-DateTime-TimeZone
 DEPENDS+=	p5-Digest-CRC>=0.14:../../security/p5-Digest-CRC
-DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
-DEPENDS+=	p5-Encode>=0:../../textproc/p5-Encode
+DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.7.3,p5-Encode>=0}:../../textproc/p5-Encode
 DEPENDS+=	p5-File-Mork>=0.3:../../www/p5-File-Mork
-DEPENDS+=	p5-Getopt-Long>=0:../../devel/p5-Getopt-Long
+DEPENDS+=	{perl>=5,p5-Getopt-Long>=0}:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Scrubber>=0:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-Image-ExifTool>=0:../../graphics/p5-Image-ExifTool

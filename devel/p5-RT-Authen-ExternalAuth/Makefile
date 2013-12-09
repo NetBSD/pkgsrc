@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/07/28 00:10:27 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/09 14:17:46 obache Exp $
 
 DISTNAME=	RT-Authen-ExternalAuth-0.17
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RT/}
 
@@ -11,7 +12,7 @@ COMMENT=	RT extension for external authentication methods
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-perl-ldap>=0:../../databases/p5-perl-ldap
-DEPENDS+=	p5-CGI>=0:../../www/p5-CGI
+DEPENDS+=	{perl5>=5.004,p5-CGI>=0}:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 

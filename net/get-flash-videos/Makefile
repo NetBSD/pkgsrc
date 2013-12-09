@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/05/31 12:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/09 14:17:50 obache Exp $
 #
 
 DISTNAME=	${GHACCOUNT}-${GHNAME}-${GHDESCRIBE}-g${GHCOMMIT}
 PKGNAME=	${GHNAME}-0.0.${GHDATE}
+PKGREVISION=	1
 GHNAME=		get-flash-videos
 
 GHACCOUNT=	monsieurvideo
@@ -25,7 +26,7 @@ FETCH_USING=	curl # For https:
 DEPENDS+=	p5-Data-AMF-[0-9]*:../../comms/p5-Data-AMF
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
-DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize

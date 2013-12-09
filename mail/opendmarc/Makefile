@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 16:00:19 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/09 14:17:48 obache Exp $
 
 DISTNAME=	opendmarc-1.1.3
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendmarc/}
 
@@ -11,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
+DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-Switch-[0-9]*:../../lang/p5-Switch
 
 RCD_SCRIPTS=	opendmarc
