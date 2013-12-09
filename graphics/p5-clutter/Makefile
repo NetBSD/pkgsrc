@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/10/10 14:42:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2013/12/09 14:17:48 obache Exp $
 #
 
 DISTNAME=	Clutter-1.002
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
 BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 # for META_MERGE
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.46:../../devel/p5-ExtUtils-MakeMaker
+BUILD_DEPENDS+=	{perl>=5.10.1,p5-ExtUtils-MakeMaker>=6.46}:../../devel/p5-ExtUtils-MakeMaker
 
 MAKE_JOBS_SAFE=	no
 

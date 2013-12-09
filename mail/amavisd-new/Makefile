@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/07/12 10:44:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/09 14:17:48 obache Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
@@ -18,19 +18,19 @@ LICENSE=	gnu-gpl-v2
 VERSION=	2.7.0
 PATCHLEVEL=	# empty
 
-DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
+DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar-[0-9]*}:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
-DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
+DEPENDS+=	{perl>=5.10.1,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Raw::Zlib>=2.017
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib>=1.05:../../converters/p5-Convert-UUlib
-DEPENDS+=	p5-Digest-MD5>=2.22:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.8.1,p5-Digest-MD5>=2.22}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Mail-DKIM>=0.31:../../mail/p5-Mail-DKIM
 DEPENDS+=	p5-MIME-tools>=5.417:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.58:../../mail/p5-MailTools
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Net-Server>=0.88:../../net/p5-Net-Server
-DEPENDS+=	p5-Time-HiRes>=1.49:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.8.1,p5-Time-HiRes>=1.49}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
 WRKSRC=		${WRKDIR}/amavisd-new-${VERSION}

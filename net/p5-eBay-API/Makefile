@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/09 14:17:50 obache Exp $
 
 DISTNAME=		eBay-API-0.25
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net perl5 www
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TK/TKEEFER/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/perldoc?eBay::API
+HOMEPAGE=		http://search.cpan.org/dist/eBay-API/
 COMMENT=		Non SOAP based XML schema library for eBay API
 
-DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
+DEPENDS+=	{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib>=1.41
 DEPENDS+=	p5-Crypt-SSLeay>=0.51:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-Devel-StackTrace>=1.03:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Error>=0.15:../../devel/p5-Error
