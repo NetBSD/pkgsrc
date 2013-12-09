@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:19 joerg Exp $
-bin/dnetc
-man/man1/dnetc.1
-share/doc/dnetc/CHANGES.txt
-share/doc/dnetc/dnetc.txt
-share/doc/dnetc/readme.1st
-share/doc/dnetc/readme._ix
-share/examples/rc.d/dnetc
