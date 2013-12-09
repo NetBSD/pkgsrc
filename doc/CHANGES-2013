@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4443 2013/12/09 18:54:33 jakllsch Exp $
+$NetBSD: CHANGES-2013,v 1.4444 2013/12/09 22:30:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6509,3 +6509,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao32-example to 3.2.2 [taca 2013-12-09]
 	Updated sysutils/nvramtool to 0pre20131209 [jakllsch 2013-12-09]
 	Updated sysutils/flashrom to 0.9.7 [jakllsch 2013-12-09]
+	Updated multimedia/ffmpeg2 to 2.1.1 [adam 2013-12-09]
+	Updated multimedia/ffplay2 to 2.1.1 [adam 2013-12-09]
