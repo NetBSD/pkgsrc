@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.21 2013/12/08 11:55:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.22 2013/12/09 17:25:51 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -75,3 +75,12 @@ Pullup ticket #4264 - requested by taca
 net/samba: security update
 Pullup ticket #4265 - requested by taca
 mail/dovecot2: security update
+Pullup ticket #4266 - requested by taca
+databases/ruby-activerecord32: security update
+devel/ruby-activemodel32: security update
+devel/ruby-activesupport32: security update
+devel/ruby-railties32: security update
+mail/ruby-actionmailer32: security update
+www/ruby-actionpack32: security update
+www/ruby-activeresource32: security update
+www/ruby-rails32: security update
