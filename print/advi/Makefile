@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2013/10/19 09:07:11 adam Exp $
+# $NetBSD: Makefile,v 1.70 2013/12/09 05:22:09 dholland Exp $
 
 DISTNAME=		advi-1.10.1
-PKGREVISION=		29
+PKGREVISION=		30
 CATEGORIES=		print
 MASTER_SITES=		http://gallium.inria.fr/advi/
 
@@ -13,7 +13,13 @@ LICENSE=		gnu-lgpl-v2
 BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 BUILD_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
 DEPENDS+=		camlimages>=4.0.0:../../graphics/camlimages
-DEPENDS+=		texlive-tetex>=2010:../../print/texlive-tetex
+
+# "Scripts installed by texlive-tetex have been moved to tex-fontinst,
+# tex-pstools, and tex-cyrillic-bin in TeX Live 2013."
+#DEPENDS+=		texlive-tetex>=2010:../../print/texlive-tetex
+DEPENDS+=		tex-fontinst>=1.933:../../fonts/tex-fontinst
+DEPENDS+=		tex-pstools>=1.68:../../graphics/tex-pstools
+DEPENDS+=		tex-cyrillic-bin>=2013:../../print/tex-cyrillic-bin
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
