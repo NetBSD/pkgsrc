@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4436 2013/12/08 18:22:58 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.4437 2013/12/09 00:08:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6500,3 +6500,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-mysql2 to 0.3.14 [taca 2013-12-08]
 	Updated databases/ruby-pg to 0.17.0 [taca 2013-12-08]
 	Updated databases/ruby-sequel to 4.5.0 [taca 2013-12-08]
+	Removed misc/dnetc [wiz 2013-12-09]
