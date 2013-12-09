@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4438 2013/12/09 10:34:40 sborrill Exp $
+$NetBSD: CHANGES-2013,v 1.4439 2013/12/09 10:45:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6502,3 +6502,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/ruby-sequel to 4.5.0 [taca 2013-12-08]
 	Removed misc/dnetc [wiz 2013-12-09]
 	Added www/squidview version 0.80 [sborrill 2013-12-09]
+	Updated net/samba to 3.6.22 [taca 2013-12-09]
