@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2013/05/31 12:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2013/12/09 14:17:56 obache Exp $
 
 DISTNAME=	libwww-perl-6.05
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/G/GA/GAAS/}
@@ -29,7 +29,7 @@ DEPENDS+=	p5-HTTP-Message>=6:../../www/p5-HTTP-Message
 #		IO::Select in perl 5.14
 #		IO::Socket in perl 5.14
 DEPENDS+=	p5-LWP-MediaTypes>=6:../../www/p5-LWP-MediaTypes
-DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
+DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=2.1}:../../converters/p5-MIME-Base64
 DEPENDS+=	{perl>=5.10,p5-Net>=1.09}:../../net/p5-Net # for Net::FTP>=2.58
 DEPENDS+=	p5-Net-HTTP>=6:../../www/p5-Net-HTTP
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
@@ -38,7 +38,7 @@ DEPENDS+=	p5-WWW-RobotRules>=6.01:../../www/p5-WWW-RobotRules
 
 # Optionals
 DEPENDS+=	p5-LWP-Protocol-https>=6.02:../../www/p5-LWP-Protocol-https
-DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
+DEPENDS+=	{perl>=5.9.4,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset

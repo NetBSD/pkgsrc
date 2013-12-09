@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2013/10/18 19:48:48 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/12/09 14:17:54 obache Exp $
 
 .include "../../devel/git/Makefile.version"
 
 DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -13,7 +14,7 @@ COMMENT=	Web interface for GIT repositories
 
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
 DEPENDS+=	git-base>=${GIT_VERSION}:../../devel/git-base
-DEPENDS+=	p5-Time-HiRes>=1.9725:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.15.8,p5-Time-HiRes>=1.9725}:../../time/p5-Time-HiRes
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/git-base/distinfo
 
