@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4441 2013/12/09 16:27:04 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4442 2013/12/09 18:40:17 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6507,3 +6507,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/openexr to 2.1.0 [adam 2013-12-09]
 	Updated www/contao32 to 3.2.2 [taca 2013-12-09]
 	Updated www/contao32-example to 3.2.2 [taca 2013-12-09]
+	Updated sysutils/nvramtool to 0pre20131209 [jakllsch 2013-12-09]
