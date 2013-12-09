@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/10/30 07:08:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/09 22:28:45 adam Exp $
 bin/ffmpeg2
 bin/ffprobe2
 bin/ffserver2
@@ -85,7 +85,7 @@ include/ffmpeg2/libswscale/version.h
 lib/ffmpeg2/libavcodec.a
 lib/ffmpeg2/libavcodec.so
 lib/ffmpeg2/libavcodec.so.55
-lib/ffmpeg2/libavcodec.so.55.39.100
+lib/ffmpeg2/libavcodec.so.55.39.101
 lib/ffmpeg2/libavdevice.a
 lib/ffmpeg2/libavdevice.so
 lib/ffmpeg2/libavdevice.so.55
@@ -101,7 +101,7 @@ lib/ffmpeg2/libavformat.so.55.19.104
 lib/ffmpeg2/libavutil.a
 lib/ffmpeg2/libavutil.so
 lib/ffmpeg2/libavutil.so.52
-lib/ffmpeg2/libavutil.so.52.48.100
+lib/ffmpeg2/libavutil.so.52.48.101
 lib/ffmpeg2/libpostproc.a
 lib/ffmpeg2/libpostproc.so
 lib/ffmpeg2/libpostproc.so.52
