@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/05/31 12:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/09 14:17:47 obache Exp $
 #
 
 DISTNAME=	GraphViz2-1.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GraphViz2/}
 EXTRACT_SUFX=	.tgz
@@ -19,17 +19,17 @@ DEPENDS+=	p5-Algorithm-Dependency>=1.110:../../devel/p5-Algorithm-Dependency
 DEPENDS+=	p5-Capture-Tiny>=0.10:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Data-Section-Simple>=0.02:../../devel/p5-Data-Section-Simple
 DEPENDS+=	p5-DBI>=1.616:../../databases/p5-DBI
-DEPENDS+=	p5-File-Temp>=0.22:../../devel/p5-File-Temp
+DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
 DEPENDS+=	p5-File-Which>=1.09:../../devel/p5-File-Which
 DEPENDS+=	p5-HTML-Entities-Interpolate>=1.04:../../www/p5-HTML-Entities-Interpolate
 DEPENDS+=	p5-HTML-Tree>=4.2:../../www/p5-HTML-Tree
-DEPENDS+=	p5-HTTP-Tiny>=0.012:../../www/p5-HTTP-Tiny
+DEPENDS+=	{perl>=5.14.0,p5-HTTP-Tiny>=0.012}:../../www/p5-HTTP-Tiny
 DEPENDS+=	p5-Hash-FieldHash>=0.10:../../devel/p5-Hash-FieldHash
 DEPENDS+=	p5-Log-Handler>=0.71:../../devel/p5-Log-Handler
 DEPENDS+=	p5-Parse-RecDescent>=1.965.1:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-PathTools>=3.33:../../devel/p5-PathTools
 DEPENDS+=	p5-Perl6-Slurp>=0.03:../../devel/p5-Perl6-Slurp
-DEPENDS+=	p5-Pod-Simple>=3.16:../../textproc/p5-Pod-Simple
+DEPENDS+=	{perl>=5.13.1,p5-Pod-Simple>=3.16}:../../textproc/p5-Pod-Simple
 DEPENDS+=	p5-Scalar-List-Utils>=1.23:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Set-Array>=0.23:../../devel/p5-Set-Array
 DEPENDS+=	p5-Text-Xslate>=1.2:../../textproc/p5-Text-Xslate

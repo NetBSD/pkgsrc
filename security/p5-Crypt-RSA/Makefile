@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2013/05/31 12:41:55 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2013/12/09 14:17:51 obache Exp $
 #
 
 DISTNAME=		Crypt-RSA-1.99
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		p5rsa
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
@@ -21,7 +21,7 @@ DEPENDS+=		p5-Crypt-Primes>=0.38:../../security/p5-Crypt-Primes
 DEPENDS+=		p5-Crypt-Random>=0.34:../../security/p5-Crypt-Random
 DEPENDS+=		p5-Data-Buffer-[0-9]*:../../devel/p5-Data-Buffer
 DEPENDS+=		p5-Digest-MD2-[0-9]*:../../security/p5-Digest-MD2
-DEPENDS+=		p5-Digest-MD5>=2.16:../../security/p5-Digest-MD5
+DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=2.16}:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Math-Pari>=2.001804:../../math/p5-Math-Pari
 DEPENDS+=		p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions
