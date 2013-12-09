@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4442 2013/12/09 18:40:17 jakllsch Exp $
+$NetBSD: CHANGES-2013,v 1.4443 2013/12/09 18:54:33 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6508,3 +6508,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao32 to 3.2.2 [taca 2013-12-09]
 	Updated www/contao32-example to 3.2.2 [taca 2013-12-09]
 	Updated sysutils/nvramtool to 0pre20131209 [jakllsch 2013-12-09]
+	Updated sysutils/flashrom to 0.9.7 [jakllsch 2013-12-09]
