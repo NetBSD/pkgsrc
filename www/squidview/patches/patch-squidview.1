@@ -1,0 +1,17 @@
+$NetBSD: patch-squidview.1,v 1.1 2013/12/09 10:32:18 sborrill Exp $
+
+Note that this is a pkgsrc package.
+
+--- squidview.1.orig	2013-12-09 10:24:25.000000000 +0000
++++ squidview.1	2013-12-09 10:25:11.000000000 +0000
+@@ -36,8 +36,8 @@
+ .PP
+ .B Squidview 
+ is configured by the contents of the directory ~/.squidview/. 
+-On first execution it creates the necessary files. The Debian-version has been 
+-modified to match the default log-path of Debian's 
++On first execution it creates the necessary files. The pkgsrc version has been 
++modified to match the default log-path of pkgsrc's 
+ .B squid 
+ package 
+ /var/log/squid/access.log). If you have the permission to read this file 
