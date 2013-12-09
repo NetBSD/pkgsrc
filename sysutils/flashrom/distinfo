@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/11/23 12:08:04 joerg Exp $
+$NetBSD: distinfo,v 1.7 2013/12/09 18:54:24 jakllsch Exp $
 
-SHA1 (flashrom-0.9.5.2.tar.bz2) = 483c16a4a8bb7ceec8ea439b13e2b97d669deb25
-RMD160 (flashrom-0.9.5.2.tar.bz2) = dba65b6f12370eb686321e937e00479aff4a3739
-Size (flashrom-0.9.5.2.tar.bz2) = 347242 bytes
-SHA1 (patch-bitbang__spi.c) = 63fa8611cf7ebe9fa5c8e669d860c7e21d1a1095
-SHA1 (patch-ichspi.c) = 6ef54e13e6075b665fb125dd99b53887a606fa8f
+SHA1 (flashrom-0.9.7.tar.bz2) = d08b4073ea3ebf63f03c3e502f4291f50ef348ee
+RMD160 (flashrom-0.9.7.tar.bz2) = e160e0ac1e0e138702f3f467707175df96b7e6b1
+Size (flashrom-0.9.7.tar.bz2) = 408883 bytes
