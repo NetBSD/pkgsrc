@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/10/01 11:10:09 wen Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/09 14:17:55 obache Exp $
 
 DISTNAME=	Dancer2-0.10
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SU/SUKRIA/}
 
@@ -20,14 +21,14 @@ BUILD_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
 DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Crypt-URandom>=0:../../security/p5-Crypt-URandom
 DEPENDS+=	p5-Config-Any>=0:../../devel/p5-Config-Any
-DEPENDS+=	p5-Digest-SHA>=0:../../security/p5-Digest-SHA
+DEPENDS+=	{perl>=5.9.3,p5-Digest-SHA>=0}:../../security/p5-Digest-SHA
 DEPENDS+=	p5-Hash-Merge-Simple>=0:../../devel/p5-Hash-Merge-Simple
 DEPENDS+=	p5-HTTP-Body>=0:../../www/p5-HTTP-Body
 DEPENDS+=	p5-HTTP-Date>=0:../../www/p5-HTTP-Date
 DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 DEPENDS+=	p5-HTTP-Server-Simple-PSGI>=0:../../www/p5-HTTP-Server-Simple-PSGI
 DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
-DEPENDS+=	p5-MIME-Base64>=0:../../converters/p5-MIME-Base64
+DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Moo>=0.009014:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0.16:../../devel/p5-MooX-Types-MooseLike
 DEPENDS+=	p5-MooX-Types-MooseLike-Numeric>=0:../../devel/p5-MooX-Types-MooseLike-Numeric

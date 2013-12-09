@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/09 14:17:48 obache Exp $
 
 DISTNAME=	App-Siesh-0.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MD/MDOM/}
@@ -19,8 +19,8 @@ DEPENDS+=	p5-IO-Prompt-[0-9]*:../../devel/p5-IO-Prompt
 DEPENDS+=	p5-IPC-System-Simple-[0-9]*:../../devel/p5-IPC-System-Simple
 DEPENDS+=	p5-Net-ManageSieve-[0-9]*:../../mail/p5-Net-ManageSieve
 DEPENDS+=	p5-Term-ShellUI>=0.86:../../devel/p5-Term-ShellUI
-DEPENDS+=	p5-autodie-[0-9]*:../../devel/p5-autodie
-DEPENDS+=	p5-parent-[0-9]*:../../devel/p5-parent
+DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
+DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 BUILD_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
