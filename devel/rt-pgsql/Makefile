@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/11/24 09:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/09 14:17:47 obache Exp $
 
-PKGREVISION=	8
+PKGREVISION=	9
 RT_DB_TYPE=	Pg
 
 .include "../../devel/rt-mysql/Makefile.common"

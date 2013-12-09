@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/09 14:17:51 obache Exp $
 #
 
 DISTNAME=		antonym-1.9
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security mail
 MASTER_SITES=		http://subwiki.honeypot.net/pub/Computing/AntoNym/
 
@@ -11,7 +11,7 @@ HOMEPAGE=		http://subwiki.honeypot.net/cgi-bin/view/Computing/AntoNym
 COMMENT=		Anonymous nymserver account maintenance tool
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=		pgp-2.*:../../security/pgp2
 
 WRKSRC=			${WRKDIR}/antonym

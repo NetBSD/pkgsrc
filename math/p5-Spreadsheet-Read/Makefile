@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/05/31 12:41:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/12/09 14:17:49 obache Exp $
 #
 
 DISTNAME=	Spreadsheet-Read-0.45
@@ -29,7 +29,7 @@ DEPENDS+=	p5-Text-CSV_XS>=0.73:../../textproc/p5-Text-CSV_XS
 DEPENDS+=	p5-Text-CSV>=1.17:../../textproc/p5-Text-CSV
 
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=	p5-Test-Simple>=0.94:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	{perl>=5.11.1,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

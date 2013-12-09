@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/11/24 09:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/09 14:17:47 obache Exp $
 
 DISTNAME=	rt-4.0.17
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -25,7 +25,7 @@ DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 DEPENDS+=	p5-Log-Dispatch>=2.23:../../devel/p5-Log-Dispatch
-DEPENDS+=	p5-Sys-Syslog>=0.16:../../sysutils/p5-Sys-Syslog
+DEPENDS+=	{perl>=5.8.9,p5-Sys-Syslog>=0.16}:../../sysutils/p5-Sys-Syslog
 DEPENDS+=	p5-MIME-tools>=5.425:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.57:../../mail/p5-MailTools
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
@@ -33,8 +33,8 @@ DEPENDS+=	p5-Locale-Maketext-Fuzzy-[0-9]*:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-Email-Address-[0-9]*:../../mail/p5-Email-Address
 DEPENDS+=	p5-Text-Wrapper-[0-9]*:../../textproc/p5-Text-Wrapper
 DEPENDS+=	p5-Time-modules-[0-9]*:../../time/p5-Time-modules
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
-DEPENDS+=	p5-File-Temp>=0.19:../../devel/p5-File-Temp
+DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
 DEPENDS+=	p5-Text-Quoted>=2.02:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
@@ -42,7 +42,7 @@ DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Module-Versions-Report>=1.05:../../devel/p5-Module-Versions-Report
 DEPENDS+=	p5-Cache-Simple-TimedExpiry-[0-9]*:../../devel/p5-Cache-Simple-TimedExpiry
-DEPENDS+=	p5-Encode>=2.39:../../textproc/p5-Encode
+DEPENDS+=	{perl>=5.11.3,p5-Encode>=2.39}:../../textproc/p5-Encode
 DEPENDS+=	p5-CSS-Squish>=0.06:../../www/p5-CSS-Squish
 # File::Glob is a part of perl base.
 DEPENDS+=	p5-Devel-StackTrace>=1.19:../../devel/p5-Devel-StackTrace
@@ -56,8 +56,8 @@ DEPENDS+=	p5-Regexp-IPv6-[0-9]*:../../net/p5-Regexp-IPv6
 # Mason dependencies
 DEPENDS+=	p5-HTML-Mason>=1.43:../../www/p5-HTML-Mason
 # Errno is a part of perl base.
-DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
-DEPENDS+=	p5-CGI>=1.20:../../www/p5-CGI
+DEPENDS+=	{perl>=5.8.1,p5-Digest-MD5>=2.27}:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.004,p5-CGI>=1.20}:../../www/p5-CGI
 #DEPENDS+=	p5-Storable>=2.08:../../devel/p5-Storable
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
 DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
@@ -74,9 +74,9 @@ DEPENDS+=	p5-CGI-Emulate-PSGI-[0-9]*:../../www/p5-CGI-Emulate-PSGI
 DEPENDS+=	p5-CGI-Emulate-PSGI-[0-9]*:../../www/p5-CGI-Emulate-PSGI
 
 # Mailgate dependencies
-DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
+DEPENDS+=	{perl>=5,p5-Getopt-Long-[0-9]*}:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	p5-Pod-Usage-[0-9]*:../../devel/p5-Pod-Usage
+DEPENDS+=	{perl>=5.6.0,p5-Pod-Usage-[0-9]*}:../../devel/p5-Pod-Usage
 
 # SSL-Mailgate dependencies
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
@@ -105,7 +105,7 @@ DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 #DEPENDS+=	p5-String-ShellQuote-[0-9]*:../../textproc/p5-String-ShellQuote
 #DEPENDS+=	p5-Log-Dispatch-Perl-[0-9]*:../../devel/p5-Log-Dispatch-Perl
 #DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-#DEPENDS+=	p5-Test-Simple>=0.90:../../devel/p5-Test-Simple
+#DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.90}:../../devel/p5-Test-Simple
 #DEPENDS+=	p5-Test-MockTime-[0-9]*:../../time/p5-Test-MockTime
 #DEPENDS+=	p5-Test-WWW-Mechanize-PSGI-[0-9]*:../../www/p5-Test-WWW-Mechanize-PSGI
 #DEPENDS+=	p5-Plack-Middleware-Test-StashWarnings-[0-9]*:../../www/p5-Plack-Middleware-Test-StashWarnings
@@ -140,7 +140,7 @@ DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
 DEPENDS+=	p5-Convert-Color-[0-9]*:../../converters/p5-Convert-Color
 
 # HTML-DOC dependency
-DEPENDS+=	p5-Pod-Simple-[0-9]*:../../textproc/p5-Pod-Simple
+DEPENDS+=	{perl>=5.9.3,p5-Pod-Simple-[0-9]*}:../../textproc/p5-Pod-Simple
 
 .include "options.mk"
 

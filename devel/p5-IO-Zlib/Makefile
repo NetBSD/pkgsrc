@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2013/05/31 12:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2013/12/09 14:17:44 obache Exp $
 
 DISTNAME=		IO-Zlib-1.10
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		p5izl
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
@@ -14,7 +14,7 @@ LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS+=		p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
+DEPENDS+=		{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib>=2
 
 USE_LANGUAGES=		# empty
 

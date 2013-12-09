@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/09 14:17:45 obache Exp $
 #
 
 DISTNAME=	Log-Handler-0.76
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
@@ -18,8 +18,8 @@ DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-Email-Date>=0:../../mail/p5-Email-Date
 DEPENDS+=	p5-PathTools>=0:../../devel/p5-PathTools
 DEPENDS+=	p5-Params-Validate>=0:../../devel/p5-Params-Validate
-DEPENDS+=	p5-Test-Simple>=0:../../devel/p5-Test-Simple
-DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>=0}:../../devel/p5-Test-Simple
+DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=0}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
 
 PERL5_MODULE_TYPE=	Module::Build

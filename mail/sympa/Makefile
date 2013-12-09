@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2013/07/12 10:44:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2013/12/09 14:17:49 obache Exp $
 #
 
 DISTNAME=	sympa-6.1.11
-#PKGREVISION=	4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old/
@@ -32,7 +31,7 @@ DEPENDS+=	p5-HTML-Tree>=4.2:../../www/p5-HTML-Tree
 DEPENDS+=	p5-IO-Socket-SSL>=0.90:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-IO-stringy>=1.0:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Locale-libintl>=1.16:../../misc/p5-Locale-libintl
-DEPENDS+=	p5-MIME-Base64>=1.0:../../converters/p5-MIME-Base64
+DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=1.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MIME-EncWords>=1.010.101:../../mail/p5-MIME-EncWords
 DEPENDS+=	p5-MIME-Lite-HTML>=1.23:../../mail/p5-MIME-Lite-HTML
 DEPENDS+=	p5-MIME-tools>=5.209:../../mail/p5-MIME-tools
@@ -44,7 +43,7 @@ DEPENDS+=	p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
 DEPENDS+=	p5-Template-Toolkit>=2.20:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Term-ProgressBar>=2.09:../../devel/p5-Term-ProgressBar
-DEPENDS+=	p5-Time-HiRes>=1.9724:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.15.1,p5-Time-HiRes>=1.9724}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unicode-LineBreak>=2012.02:../../textproc/p5-Unicode-LineBreak
 DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-libwww>=1.09:../../www/p5-libwww

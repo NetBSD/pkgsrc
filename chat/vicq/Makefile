@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2013/06/12 12:11:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2013/12/09 14:17:41 obache Exp $
 
 DISTNAME=	vicq-0.4.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	chat
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq.old/
 COMMENT=	Simple icq client written in perl
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	p5-Term-ReadLine>=1.11:../../devel/p5-Term-ReadLine
+DEPENDS+=	{perl>=5.17.7,p5-Term-ReadLine>=1.11}:../../devel/p5-Term-ReadLine
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

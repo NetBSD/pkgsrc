@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/10/02 00:13:10 mspo Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/09 14:17:51 obache Exp $
 #
 
 DISTNAME=	Perlbal-1.80
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DO/DORMANDO/
 USE_TOOLS+= perl
@@ -28,7 +28,7 @@ DEPENDS+=	p5-BSD-Resource>=0:../../devel/p5-BSD-Resource
 DEPENDS+=	p5-Danga-Socket>=1.44:../../net/p5-Danga-Socket
 DEPENDS+=	p5-HTTP-Date>=0:../../www/p5-HTTP-Date
 DEPENDS+=	p5-Sys-Syscall>=0:../../devel/p5-Sys-Syscall
-DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=0}:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=	auto/Perlbal/.packlist
 USE_LANGUAGES=	# none

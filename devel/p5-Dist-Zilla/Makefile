@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/07/03 16:49:57 sno Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/09 14:17:44 obache Exp $
 
 DISTNAME=	Dist-Zilla-4.300035
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
 
@@ -11,8 +12,8 @@ COMMENT=	Perl 5 module distribution builder; installer not included
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-App-Cmd>=0.309:../../devel/p5-App-Cmd
-DEPENDS+=	p5-CPAN-Meta>=2.120630:../../devel/p5-CPAN-Meta
-DEPENDS+=	p5-CPAN-Meta-Requirements>=2.121:../../devel/p5-CPAN-Meta-Requirements
+DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta>=2.120630}:../../devel/p5-CPAN-Meta
+DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta-Requirements>=2.121}:../../devel/p5-CPAN-Meta-Requirements
 DEPENDS+=	p5-CPAN-Uploader>=0.101550:../../devel/p5-CPAN-Uploader
 DEPENDS+=	p5-Class-Load>=0.17:../../devel/p5-Class-Load
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI

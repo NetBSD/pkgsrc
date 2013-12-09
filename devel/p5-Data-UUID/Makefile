@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2013/07/31 07:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2013/12/09 14:17:43 obache Exp $
 
 DISTNAME=	Data-UUID-1.219
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -12,7 +13,7 @@ LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS+=		p5-Digest-MD5>=0:../../security/p5-Digest-MD5
+DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Data/UUID/.packlist

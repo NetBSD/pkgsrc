@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/09 14:17:48 obache Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}
@@ -24,9 +24,9 @@ DEPENDS+=	lha-[0-9]*:../../archivers/lha
 DEPENDS+=	zoo-[0-9]*:../../archivers/zoo
 DEPENDS+=	freeze-[0-9]*:../../archivers/freeze
 DEPENDS+=	arc-[0-9]*:../../archivers/arc
-DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
+DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar-[0-9]*}:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
+DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress #Compress::Zlib>=1.14
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools

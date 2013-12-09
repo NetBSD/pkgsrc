@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:40:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/12/09 14:17:47 obache Exp $
 #
 
 DISTNAME=	Test-Most-0.31
@@ -24,7 +24,7 @@ DEPENDS+=	p5-Test-Warn>=0.23:../../devel/p5-Test-Warn
 DEPENDS+=	p5-Data-Dumper-Names>=0.03:../../devel/p5-Data-Dumper-Names
 
 # XXX fix proving some kind of version setting via lang/perl5/module.mk
-BUILD_DEPENDS+=	p5-Module-Build>=0.40000:../../devel/p5-Module-Build
+BUILD_DEPENDS+=	{perl>=5.17.1,p5-Module-Build>=0.40000}:../../devel/p5-Module-Build
 PERL5_MODULE_TYPE=	Module::Build
 
 USE_LANGUAGES=	# empty

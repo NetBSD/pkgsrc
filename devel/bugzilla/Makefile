@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2013/11/24 09:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2013/12/09 14:17:42 obache Exp $
 
 DISTNAME=	bugzilla-2.22.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -10,15 +10,15 @@ HOMEPAGE=	http://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
 
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
-DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
+DEPENDS+=	{perl>=5.8.1,p5-CGI>=2.93}:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=1.38:../../databases/p5-DBI
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
+DEPENDS+=	{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-Template-Toolkit>=2.10:../../www/p5-Template-Toolkit
-DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
+DEPENDS+=	{perl>=5.17.3,p5-Text-Tabs+Wrap>=2001.0131}:../../textproc/p5-Text-Tabs+Wrap
 #DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-MailTools>=1.74:../../mail/p5-MailTools
-DEPENDS+=	p5-MIME-Base64>=3.01:../../converters/p5-MIME-Base64
+DEPENDS+=	{perl>=5.8.4,p5-MIME-Base64>=3.01}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MIME-tools>=5.406:../../mail/p5-MIME-tools
 
 PKG_DESTDIR_SUPPORT=	destdir
