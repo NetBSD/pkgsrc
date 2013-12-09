@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/08 17:48:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/12/09 11:39:20 adam Exp $
 include/OpenEXR/Iex.h
 include/OpenEXR/IexBaseExc.h
 include/OpenEXR/IexErrnoExc.h
@@ -29,6 +29,7 @@ include/OpenEXR/ImathExport.h
 include/OpenEXR/ImathForward.h
 include/OpenEXR/ImathFrame.h
 include/OpenEXR/ImathFrustum.h
+include/OpenEXR/ImathFrustumTest.h
 include/OpenEXR/ImathFun.h
 include/OpenEXR/ImathGL.h
 include/OpenEXR/ImathGLU.h
