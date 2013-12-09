@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4444 2013/12/09 22:30:16 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4445 2013/12/09 23:13:05 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6511,3 +6511,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/flashrom to 0.9.7 [jakllsch 2013-12-09]
 	Updated multimedia/ffmpeg2 to 2.1.1 [adam 2013-12-09]
 	Updated multimedia/ffplay2 to 2.1.1 [adam 2013-12-09]
+	Updated devel/py-gobject3 to 3.10.2 [prlw1 2013-12-09]
