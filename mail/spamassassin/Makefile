@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.110 2013/12/04 15:14:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.111 2013/12/09 14:17:49 obache Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.3.2
 PKGNAME=	spamassassin-3.3.2
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -29,16 +29,16 @@ PLIST_SUBST+=   RULESARCHIVE=${RULESARCHIVE:Q}
 PLIST_SUBST+=   RULESARCHIVEASC=${RULESARCHIVEASC:Q}
 PLIST_SUBST+=   RULESARCHIVESHA=${RULESARCHIVESHA:Q}
 
-DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
-DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
+DEPENDS+=	{perl>=5.9.3,p5-Archive-Tar>=1.23}:../../archivers/p5-Archive-Tar
+DEPENDS+=	{perl>=5,p5-DB_File-[0-9]*}:../../databases/p5-DB_File
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-HTML-Parser>=3.43:../../www/p5-HTML-Parser
-DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
-DEPENDS+=	p5-IO-Zlib>=1.04:../../devel/p5-IO-Zlib
+DEPENDS+=	{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress # Compress::Zlib>=0
+DEPENDS+=	{perl>=5.9.3,p5-IO-Zlib>=1.04}:../../devel/p5-IO-Zlib
 DEPENDS+=	p5-NetAddr-IP>=4.007:../../net/p5-NetAddr-IP
 DEPENDS+=	p5-Net-DNS>=0.58:../../net/p5-Net-DNS
 DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 USE_TOOLS+=	perl

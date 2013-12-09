@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2013/05/31 12:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2013/12/09 14:17:53 obache Exp $
 
 DISTNAME=	Pod-Tree-1.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-HTML-Stream>=1.49:../../www/p5-HTML-Stream
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
-DEPENDS+=	p5-Pod-Escapes>=1.02:../../textproc/p5-Pod-Escapes
+DEPENDS+=	{perl>=5.9.3,p5-Pod-Escapes>=1.02}:../../textproc/p5-Pod-Escapes
 DEPENDS+=	p5-Text-Template>=1.0:../../textproc/p5-Text-Template
 
 PERL5_PACKLIST=	auto/Pod/Tree/.packlist
