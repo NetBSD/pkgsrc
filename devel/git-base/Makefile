@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/10/25 21:46:27 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/09 14:17:42 obache Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=		scmgit-base-[0-9]*
@@ -10,7 +11,7 @@ SUPERSEDES+=		scmgit-base-[0-9]*
 
 DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
 # for git-send-email
-DEPENDS+=		p5-MIME-Base64>=3.13:../../converters/p5-MIME-Base64
+DEPENDS+=		{perl>=5.13.8,p5-MIME-Base64>=3.13}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Email-Valid>=0.190:../../mail/p5-Email-Valid
 DEPENDS+=		p5-MailTools>=2.11:../../mail/p5-MailTools
 DEPENDS+=		p5-Net-SMTP-SSL>=1.01:../../mail/p5-Net-SMTP-SSL

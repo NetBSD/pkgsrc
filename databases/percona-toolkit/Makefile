@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/05/31 12:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/09 14:17:42 obache Exp $
 #
 
 DISTNAME=	percona-toolkit-2.1.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/percona-toolkit/${PKGVERSION_NOREV}/
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.percona.com/software/percona-toolkit/
 COMMENT=	Advanced command-line tools for open-source databases (MySQL)
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl bash:run
 
 REPLACE_PERL+=	bin/*
 CHECK_INTERPRETER_SKIP+=	*pt-ioprofile
@@ -21,8 +21,7 @@ CHECK_INTERPRETER_SKIP+=	*pt-sift
 CHECK_INTERPRETER_SKIP+=	*pt-stalk
 
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
-DEPENDS+=	bash-[0-9]*:../../shells/bash
+DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=	auto/percona-toolkit/.packlist
 .include "../../lang/perl5/module.mk"

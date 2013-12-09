@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/09 14:17:54 obache Exp $
 
 DISTNAME=		Net-Google-Calendar-1.01
 PKGNAME=		p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-XML-Atom-[0-9]*:../../textproc/p5-XML-Atom
 DEPENDS+=		p5-Net-Google-AuthSub-[0-9]*:../../net/p5-Net-Google-AuthSub
-BUILD_DEPENDS+=         p5-Module-Build>=0.40000:../../devel/p5-Module-Build
+BUILD_DEPENDS+=         {perl>=5.17.1,p5-Module-Build>=0.40000}:../../devel/p5-Module-Build
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Net/Google/Calendar/.packlist

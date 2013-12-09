@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/11/24 01:13:31 wen Exp $
+# $NetBSD: Makefile,v 1.23 2013/12/09 14:17:47 obache Exp $
 
 DISTNAME=	Tree-DAG_Node-1.18
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Tree-DAG_Node/
 COMMENT=	Class for representing nodes in a tree
 LICENSE=	${PERL5_LICENSE}
 
+#DEPENDS+=	{perl>=5.19.1,p5-File-Temp>=0.23.01}:../../devel/p5-File-Temp
 DEPENDS+=	p5-File-Temp>=0.23.01:../../devel/p5-File-Temp
 DEPENDS+=	p5-File-Slurp>=9999.19:../../devel/p5-File-Slurp
 
