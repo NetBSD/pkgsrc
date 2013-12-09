@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2013/07/31 18:26:07 adam Exp $
+# $NetBSD: Makefile,v 1.30 2013/12/09 11:39:20 adam Exp $
 
-DISTNAME=	openexr-2.0.1
+DISTNAME=	openexr-2.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/openexr/
 

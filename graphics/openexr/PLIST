@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/07/31 18:26:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/12/09 11:39:20 adam Exp $
 bin/exrenvmap
 bin/exrheader
 bin/exrmakepreview
@@ -22,6 +22,8 @@ include/OpenEXR/ImfCompressionAttribute.h
 include/OpenEXR/ImfConvert.h
 include/OpenEXR/ImfDeepCompositing.h
 include/OpenEXR/ImfDeepFrameBuffer.h
+include/OpenEXR/ImfDeepImageState.h
+include/OpenEXR/ImfDeepImageStateAttribute.h
 include/OpenEXR/ImfDeepScanLineInputFile.h
 include/OpenEXR/ImfDeepScanLineInputPart.h
 include/OpenEXR/ImfDeepScanLineOutputFile.h
@@ -97,7 +99,9 @@ share/aclocal/openexr.m4
 share/doc/OpenEXR-${PKGVERSION}/MultiViewOpenEXR.pdf
 share/doc/OpenEXR-${PKGVERSION}/OpenEXRFileLayout.pdf
 share/doc/OpenEXR-${PKGVERSION}/ReadingAndWritingImageFiles.pdf
+share/doc/OpenEXR-${PKGVERSION}/InterpretingDeepPixels.pdf
 share/doc/OpenEXR-${PKGVERSION}/TechnicalIntroduction.pdf
+share/doc/OpenEXR-${PKGVERSION}/TheoryDeepPixels.pdf
 share/doc/OpenEXR-${PKGVERSION}/examples/drawImage.cpp
 share/doc/OpenEXR-${PKGVERSION}/examples/drawImage.h
 share/doc/OpenEXR-${PKGVERSION}/examples/generalInterfaceExamples.cpp
