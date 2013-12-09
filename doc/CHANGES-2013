@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4440 2013/12/09 11:41:05 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4441 2013/12/09 16:27:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6505,3 +6505,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/samba to 3.6.22 [taca 2013-12-09]
 	Updated graphics/ilmbase to 2.1.0 [adam 2013-12-09]
 	Updated graphics/openexr to 2.1.0 [adam 2013-12-09]
+	Updated www/contao32 to 3.2.2 [taca 2013-12-09]
+	Updated www/contao32-example to 3.2.2 [taca 2013-12-09]
