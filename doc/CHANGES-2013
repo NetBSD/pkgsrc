@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4439 2013/12/09 10:45:20 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4440 2013/12/09 11:41:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6503,3 +6503,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed misc/dnetc [wiz 2013-12-09]
 	Added www/squidview version 0.80 [sborrill 2013-12-09]
 	Updated net/samba to 3.6.22 [taca 2013-12-09]
+	Updated graphics/ilmbase to 2.1.0 [adam 2013-12-09]
+	Updated graphics/openexr to 2.1.0 [adam 2013-12-09]
