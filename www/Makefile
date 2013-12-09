@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1004 2013/12/07 09:09:31 obache Exp $
+# $NetBSD: Makefile,v 1.1005 2013/12/09 11:41:47 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -716,6 +716,7 @@ SUBDIR+=	squidGuard
 SUBDIR+=	squidanalyzer
 SUBDIR+=	squidclamav
 SUBDIR+=	squidpurge
+SUBDIR+=	squidview
 SUBDIR+=	squirm
 SUBDIR+=	surfraw
 SUBDIR+=	swiftsurf
