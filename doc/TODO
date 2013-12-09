@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12771 2013/12/08 22:49:28 wiz Exp $
+$NetBSD: TODO,v 1.12772 2013/12/09 10:45:53 taca Exp $
 
 Suggested new packages
 ======================
@@ -960,7 +960,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o sakura-3.1.1
-	o samba-3.6.21
 	o samba-4.0.12
 	o samba-4.1.0 [wip]
 	o samba-4.1.1
