@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/11/30 16:11:15 richard Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/09 15:00:39 wiz Exp $
 
 DISTNAME=	liborcus-0.5.1
 PKGNAME=	${DISTNAME:S/lib//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://kohei.us/files/orcus/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://kohei.us/files/orcus/src/
+HOMEPAGE=	https://gitorious.org/orcus/
 COMMENT=	Import filter library for spreadsheet documents
 LICENSE=	mit
 
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-boost-system=boost_system
 CONFIGURE_ARGS+=	--disable-spreadsheet-model
 CONFIGURE_ARGS+=	--disable-werror
+CONFIGURE_ENV+=		ZLIB_CFLAGS="-I${BUILDLINK_PREFIX.zlib}/include"
+CONFIGURE_ENV+=		ZLIB_LIBS="${LINKER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -L${BUILDLINK_PREFIX.zlib}/lib -lz"
 
 PKGCONFIG_OVERRIDE+=	liborcus.pc.in
 
