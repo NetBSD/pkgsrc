@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/09 10:32:18 sborrill Exp $
+bin/squidview
+man/man1/squidview.1
+share/squidview/BUGS
+share/squidview/HOWTO
+share/squidview/aliases
+share/squidview/example.log
+share/squidview/users
+share/squidview/words
