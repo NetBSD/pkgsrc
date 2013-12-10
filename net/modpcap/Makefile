@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/06 19:30:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/10 14:01:49 jperkin Exp $
 #
 
 DISTNAME=		modcap.c
@@ -16,8 +16,10 @@ AUTO_MKDIRS=		yes
 
 WRKSRC=			${WRKDIR}
 
+LDFLAGS.SunOS+=		-lsocket -lnsl
+
 do-build:
-	cd ${WRKSRC} && ${CC} -I${PREFIX}/include modcap.c -lm -lpcap -o modcap
+	cd ${WRKSRC} && ${CC} -I${PREFIX}/include modcap.c -lm -lpcap ${LDFLAGS} -o modcap
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/modcap ${DESTDIR}${PREFIX}/bin/
