@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4451 2013/12/10 15:23:14 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4452 2013/12/10 17:56:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6522,3 +6522,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/typo3_47 to 4.7.17 [taca 2013-12-10]
 	Updated www/typo3_60 to 6.0.12 [taca 2013-12-10]
 	Updated www/typo3_61 to 6.1.7 [taca 2013-12-10]
+	Updated net/ucarp to 1.5.2nb2 [jperkin 2013-12-10]
