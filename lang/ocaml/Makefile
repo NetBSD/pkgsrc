@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2013/11/01 10:47:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.87 2013/12/10 19:26:22 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -51,7 +51,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.prof
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
-      !empty(MACHINE_PLATFORM:MDarwin-*-*)
+      !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
 PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
 .  endif
 .endif
