@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/28 06:30:18 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/10 12:24:24 jperkin Exp $
 #
 
 DISTNAME=	ijb20
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.junkbuster.com/
 COMMENT=	Internet Junkbuster Proxy to block banner ads and cookies
 
 MAKE_ENV+=	MORE_CFLAGS=${CFLAGS:M*:Q}
+
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/junkbuster
 
