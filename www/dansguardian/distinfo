@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2013/07/11 14:56:36 sborrill Exp $
+$NetBSD: distinfo,v 1.7 2013/12/10 12:35:41 jperkin Exp $
 
 SHA1 (dansguardian-2.8.0.6.source.tar.gz) = 6d82eed13536a64a2f6711fa221756fa0bfe19f0
 RMD160 (dansguardian-2.8.0.6.source.tar.gz) = cf3493b26b4fcd5b366a6fe472e3c6c9e3cfe6d3
 Size (dansguardian-2.8.0.6.source.tar.gz) = 212737 bytes
 SHA1 (patch-DataBuffer.cpp) = 7447cb436dffdda90192c5ac731add5224c26898
 SHA1 (patch-DynamicURLList.cpp) = a4a4472a1e387d850c64d3cfb9f75091bb8c4df6
+SHA1 (patch-FDTunnel.cpp) = 40f958f2559a0fb2977a94763d64b621cd5ac7aa
 SHA1 (patch-FOptionContainer.cpp) = b86ee1542d9aace89192c8c41399dd38b7972d0f
 SHA1 (patch-FatController.cpp) = 1e3eb5d866f5ec5edda9f3e6e8e7a2b107e99d04
 SHA1 (patch-ListContainer.cpp) = e38034615e831c9dd45eb861f97a6c2cf381e631
@@ -18,6 +19,7 @@ SHA1 (patch-aa) = c4af2622ee48dedb15f5a22874c1c1bff5ea51ef
 SHA1 (patch-dansguardian.cpp) = 93b34d9ca5ce371c178e68f0054088f177843407
 SHA1 (patch-fbsd.in) = c030c845e66225212052012e09d81f3b8817d97c
 SHA1 (patch-linux.in) = 2ea47d4f5c5787302cc983939ea2454df29da5ef
+SHA1 (patch-md5.cpp) = fc52f212aaa71436e30dbfb0021ebe2fbe54b326
 SHA1 (patch-nbsd.in) = e1d4fa9d7a839b1458c0bacdea30f70112c67a75
 SHA1 (patch-obsd.in) = 0002cc48b4e7201add7546e40b0a6f4fba70fe4e
 SHA1 (patch-solaris.in) = aaa8b67f398a2b56d7679f5c636d14aee1bfe3e7
