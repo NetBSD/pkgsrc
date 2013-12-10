@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 17:18:07 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/10 14:05:40 jperkin Exp $
 #
 
 DISTNAME=	Geomyidae-0.12
@@ -18,6 +18,8 @@ DOCDIR=		${PREFIX}/share/doc/Geomyidae
 RCD_SCRIPTS=	Geomyidae
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Geomyidae ${DESTDIR}${PREFIX}/sbin
