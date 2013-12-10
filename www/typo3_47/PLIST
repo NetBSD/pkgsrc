@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/08/04 16:24:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/12/10 15:20:03 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2969,6 +2969,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/scheduler.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/oracle/templavoila.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/res/postgresql/postgresql-compatibility.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/ChangeLog
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/Tests/Unit/tools/class.tx_em_toolsTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/class.tx_em_api.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/class.tx_em_extensionmanager.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/classes/conf.php
