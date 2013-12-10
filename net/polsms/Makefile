@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/02/06 23:23:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2013/12/10 12:41:25 jperkin Exp $
 #
 
 DISTNAME=	sms-2.0.3
@@ -13,6 +13,8 @@ COMMENT=	Send SMS to cellular phones in Poland (Plus, Idea, Era)
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/sms/contrib share/sms/doc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/06 23:23:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/10 12:40:23 jperkin Exp $
 #
 
 DISTNAME=	proxytunnel-1.9.0
@@ -22,6 +22,8 @@ SUBST_STAGE.fix-paths=		post-patch
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		proxytunnel.1
 SUBST_SED.fix-paths=		-e 's,/usr,${PREFIX},g'
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL} ${WRKSRC}/proxytunnel ${DESTDIR}${PREFIX}/bin/
