@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2013/12/05 16:44:04 taca Exp $
+$NetBSD: distinfo,v 1.7 2013/12/10 15:21:30 taca Exp $
 
-SHA1 (dummy-6.0.11.tar.gz) = 83ca0da3aeb0317b077db5e913d61d1f15e0eccd
-RMD160 (dummy-6.0.11.tar.gz) = e7fc79f3d7e24e767f69670434e611499bc6fdcf
-Size (dummy-6.0.11.tar.gz) = 10319 bytes
-SHA1 (typo3_src-6.0.11.tar.gz) = a031f3b3911877fa21c2ad64099f9a8c3f8c2e15
-RMD160 (typo3_src-6.0.11.tar.gz) = 8512e16fcbfd8570969e5d13dfeaf48cb0a7591b
-Size (typo3_src-6.0.11.tar.gz) = 22300112 bytes
+SHA1 (dummy-6.0.12.tar.gz) = a4099fd889318a0b6e04c9a1d393a89ff3c581a6
+RMD160 (dummy-6.0.12.tar.gz) = d5427591352a7a7ba06a492aab3f7b3c641311c8
+Size (dummy-6.0.12.tar.gz) = 10323 bytes
+SHA1 (typo3_src-6.0.12.tar.gz) = 1f14b6ed7d971d5f94d8147d27d1055916e228f2
+RMD160 (typo3_src-6.0.12.tar.gz) = c03a5725e68cacb8c508a4837b225a0037524785
+Size (typo3_src-6.0.12.tar.gz) = 22296232 bytes
 SHA1 (patch-t3lib_stddb_DefaultConfiguration.php) = ab5f670ed50d6f7b30564d275f0b95d1c33193d3
