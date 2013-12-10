@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/25 21:26:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/10 12:04:53 jperkin Exp $
 #
 
 DISTNAME=	cvsps-3.10
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 LIBS.SunOS+=		-lnsl -lsocket
-MAKE_ENV+=		LIBS=${LIBS:Q}
+MAKE_ENV+=		LDLIBS=${LIBS:Q}
 MAKE_ENV+=		prefix=${PREFIX}
 
 .include "../../devel/zlib/buildlink3.mk"
