@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/21 17:17:08 drochner Exp $
+$NetBSD: distinfo,v 1.2 2013/12/10 11:41:42 jperkin Exp $
 
 SHA1 (exifprobe-2.0.1.tar.gz) = 0910855c4060b3f706d8a455c388fe6690012c51
 RMD160 (exifprobe-2.0.1.tar.gz) = 8061819118ac34e542561813c8de025f6dcdf901
 Size (exifprobe-2.0.1.tar.gz) = 261568 bytes
+SHA1 (patch-Makefile) = 1f846256b198ce0b2a9418111fe0a6fab773bc67
 SHA1 (patch-aa) = 40e6d887505790de6d4e57c66298534e0e130fa3
