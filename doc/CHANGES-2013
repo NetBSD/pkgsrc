@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4447 2013/12/10 05:48:38 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4448 2013/12/10 10:54:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6515,3 +6515,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
 	Updated devel/apr-util to 1.5.3nb1 [obache 2013-12-10]
+	Updated net/youtube-dl to 20131009 [tron 2013-12-10]
