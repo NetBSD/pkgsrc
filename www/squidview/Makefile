@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/09 10:32:18 sborrill Exp $
-#
+# $NetBSD: Makefile,v 1.2 2013/12/10 14:51:20 adam Exp $
 
 DISTNAME=	squidview-0.80
 CATEGORIES=	www
@@ -10,10 +9,10 @@ HOMEPAGE=	http://www.rillion.net/squidview/
 COMMENT=	Program which monitors and displays squid logs
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
 
-.include "../../www/squid/Makefile.common"
+.include "../../www/squid3/Makefile.common"
 
 SUBST_CLASSES+=	files
 SUBST_STAGE.files=	post-patch
