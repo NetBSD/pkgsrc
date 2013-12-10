@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/10/10 14:42:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2013/12/10 14:18:05 jperkin Exp $
 #
 
 DISTNAME=	gst123-0.3.3
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
 
 USE_NCURSES=	yes
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

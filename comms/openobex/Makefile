@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/03/21 06:53:36 sbd Exp $
+# $NetBSD: Makefile,v 1.24 2013/12/10 14:19:32 jperkin Exp $
 #
 
 DISTNAME=	openobex-1.7-Source
@@ -17,6 +17,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	cmake pkg-config
 
 PKGCONFIG_OVERRIDE=	openobex.pc.in
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
