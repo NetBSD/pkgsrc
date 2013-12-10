@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4448 2013/12/10 10:54:27 tron Exp $
+$NetBSD: CHANGES-2013,v 1.4449 2013/12/10 13:01:54 bad Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6516,3 +6516,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
 	Updated devel/apr-util to 1.5.3nb1 [obache 2013-12-10]
 	Updated net/youtube-dl to 20131009 [tron 2013-12-10]
+	Updated math/py-pandas to 0.12.0 [bad 2013-12-10]
