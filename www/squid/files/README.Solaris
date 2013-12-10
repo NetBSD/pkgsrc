@@ -1,8 +1,0 @@
-
-$NetBSD: README.Solaris,v 1.1 2008/09/12 16:03:05 taca Exp $
-
-The following parameters in /etc/system should work for Solaris:
-
-set shmsys:shminfo_shmmax=2097152
-set shmsys:shminfo_shmmni=32
-set shmsys:shminfo_shmseg=16
