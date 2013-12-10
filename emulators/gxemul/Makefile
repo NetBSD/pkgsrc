@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/06/29 08:24:53 mrg Exp $
+# $NetBSD: Makefile,v 1.50 2013/12/10 11:53:55 jperkin Exp $
 
 DISTNAME=	gxemul-0.6.0
 PKGREVISION=	4
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 BUILD_TARGET=	build
 
-LIBS.SunOS+=	-lsocket -lnsl
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
