@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 09:21:10 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/12/10 14:16:58 jperkin Exp $
 #
 
 DISTNAME=	ogmtools-1.5
@@ -15,6 +15,7 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_DIR:Q}
+CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
