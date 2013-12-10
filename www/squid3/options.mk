@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2013/12/03 15:23:51 adam Exp $
+# $NetBSD: options.mk,v 1.10 2013/12/10 14:48:26 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -59,7 +59,7 @@ PKG_SUPPORTED_OPTIONS+=	squid-arp-acl
 SQUID_BACKENDS?=		ufs
 SQUID_BASIC_AUTH_HELPERS?=	MSNT NCSA NIS getpwnam
 SQUID_DIGEST_AUTH_HELPERS?=	file
-SQUID_NTLM_AUTH_HELPERS?=	SMB
+SQUID_NTLM_AUTH_HELPERS?=	fake
 SQUID_EXTERNAL_ACL_HELPERS?=	file_userip unix_group
 
 # squid's code has preference as:
