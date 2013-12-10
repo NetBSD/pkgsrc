@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.20 2013/12/05 11:42:12 obache Exp $
+# $NetBSD: linux.mk,v 1.21 2013/12/10 10:17:28 prlw1 Exp $
 #
 # Linux binary emulation framework
 #
@@ -65,6 +65,7 @@ _EMUL_MODULES+=		cups
 _EMUL_MODULES+=		curl
 _EMUL_MODULES+=		cyrus-sasl
 _EMUL_MODULES+=		drm
+_EMUL_MODULES+=		dbus
 _EMUL_MODULES+=		expat
 _EMUL_MODULES+=		fontconfig
 _EMUL_MODULES+=		freetype2
@@ -81,8 +82,8 @@ _EMUL_MODULES+=		locale
 _EMUL_MODULES+=		motif
 _EMUL_MODULES+=		openldap
 _EMUL_MODULES+=		openssl
-_EMUL_MODULES+=		pulseaudio
 _EMUL_MODULES+=		png
+_EMUL_MODULES+=		pulseaudio
 _EMUL_MODULES+=		qt4
 _EMUL_MODULES+=		resmgr
 _EMUL_MODULES+=		slang
