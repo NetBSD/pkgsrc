@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2013/12/10 14:48:26 adam Exp $
+#
+# used by www/squid3/Makefile
+# used by www/squidGuard/Makefile
+# used by www/squidview/Makefile
+
+SQUID_DATADIR=	${VARBASE}/squid
+
+PKG_SYSCONFSUBDIR?=		squid
+
+SQUID_USER?=			squid
+SQUID_GROUP?=			squid
+
+PKG_GROUPS_VARS+=		SQUID_GROUP
+PKG_USERS_VARS+=		SQUID_USER
+
+PKG_GROUPS=			${SQUID_GROUP}
+PKG_USERS=			${SQUID_USER}:${SQUID_GROUP}
+PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
