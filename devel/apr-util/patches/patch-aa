@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2013/12/10 05:47:59 obache Exp $
+
+--- configure.orig	2013-11-13 16:41:32.000000000 +0000
++++ configure
+@@ -24308,7 +24308,7 @@ case $host in
+             < $APR_BUILD_DIR/apr_rules.mk > $abs_builddir/build/rules.mk
+         ;;
+     *)
+-        cp $APR_BUILD_DIR/apr_rules.mk $abs_builddir/build/rules.mk
++        sed -e 's:^LIBTOOL=.*:LIBTOOL=$(WRAPPER_DIR)/bin/libtool:' -e "s:^LDFLAGS=.*:LDFLAGS=${LDFLAGS}:" $APR_BUILD_DIR/apr_rules.mk > $abs_builddir/build/rules.mk
+         ;;
+ esac
+ 
