@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/24 09:32:26 tron Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/10 14:15:49 jperkin Exp $
 
 DISTNAME=	sslscan-1.8.2
 CATEGORIES=	security
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-install:
 	${RM} -f ${WRKSRC}/INSTALL
