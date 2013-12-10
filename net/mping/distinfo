@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/07 10:06:26 rillig Exp $
+$NetBSD: distinfo,v 1.2 2013/12/10 13:59:16 jperkin Exp $
 
 SHA1 (mping-2.01.tar.gz) = 2240631825844b8be8492cf53ed832774b062526
 RMD160 (mping-2.01.tar.gz) = 3c0030c0d0a47460bb6ffe5c6af2ce508135cb26
 Size (mping-2.01.tar.gz) = 159203 bytes
+SHA1 (patch-src_mping.c) = 907dd54cbeb5a6ce4b9e33f766b8cfd0fee76998
