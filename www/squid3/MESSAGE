@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/12/10 14:48:26 adam Exp $
+
+You DO need running nameservice to start and run ${PKGNAME}.
+
+Please note that to use the diskd storage method, you'll likely have to
+change SYSV-IPC parameters in the kernel config file (see
+http://wiki.squid-cache.org/Features/DiskDaemon for details)
+
+===========================================================================
