@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/09/20 23:06:07 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2013/12/10 11:44:47 jperkin Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -28,6 +28,9 @@ GCC_CONFIGURE_SCRIPT=	../configure
 GCC_CONFIGURE_ARGS=	${CONFIGURE_ARGS}
 GCC_CONFIGURE_ARGS+=	--enable-languages=c
 GCC_CONFIGURE_ARGS+=	--disable-multilib
+
+# Avoid "ld: illegal text-relocation to half in .libs/x87.o"
+LDFLAGS.Darwin+=	-Wl,-read_only_relocs,suppress
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
