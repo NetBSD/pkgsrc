@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 17:18:38 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/10 13:59:16 jperkin Exp $
 
 DISTNAME=	mping-2.01
 CATEGORIES=	net
@@ -12,6 +12,8 @@ GNU_CONFIGURE=		yes
 USE_FEATURES+=		inet6
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/mping ${DESTDIR}${PREFIX}/sbin/mping
