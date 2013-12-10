@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/06 03:45:07 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/10 14:21:43 jperkin Exp $
 #
 
 DISTNAME=	libvisual-0.2.0
@@ -18,6 +18,8 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 .include "../../mk/compiler.mk"
 
