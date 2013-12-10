@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.14 2013/11/16 07:41:02 shattered Exp $
+$NetBSD: distinfo,v 1.15 2013/12/10 07:14:45 rxg Exp $
 
 SHA1 (xmp-4.0.6.tar.gz) = 61a7d68e4c37e7407bd35c783821bfbc2b639c87
 RMD160 (xmp-4.0.6.tar.gz) = 1eb6834cefd450d88de9b018e14ec4f88b8c015b
 Size (xmp-4.0.6.tar.gz) = 208541 bytes
 SHA1 (patch-etc_Makefile) = 5816b82a6253a627b39ff2ca262bfb5675ca97e3
 SHA1 (patch-src_drivers_netbsd.c) = eb3b77cafc86dc9fba298c5bdfbeb0b889d9ea9c
+SHA1 (patch-src_options.c) = f372d1336e795b77c7ce38230bf69dd363da02c2
 SHA1 (patch-src_sound_oss.c) = 251a09075ade185e33938be67776e7740473a6a5
