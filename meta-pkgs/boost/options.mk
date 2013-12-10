@@ -1,7 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2009/03/03 08:57:58 jmmv Exp $
+# $NetBSD: options.mk,v 1.2 2013/12/10 16:41:00 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.boost
 PKG_SUPPORTED_OPTIONS=	debug expat icu
+
+.if ${OPSYS} == "SunOS"
+PKG_SUGGESTED_OPTIONS=	icu
+.endif
 
 .include "../../mk/bsd.options.mk"
 
