@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/02/06 19:31:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/10 12:36:35 jperkin Exp $
 
 DISTNAME=	tcpick-0.2.1
 PKGREVISION=	1
@@ -10,6 +10,8 @@ HOMEPAGE=	http://tcpick.sourceforge.net/
 COMMENT=	Simple tcp sniffer with tcpdump-style rules
 
 GNU_CONFIGURE=	YES
+
+CFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
