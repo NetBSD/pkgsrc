@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2013/10/28 23:43:03 joerg Exp $
+$NetBSD: distinfo,v 1.23 2013/12/10 14:23:44 jperkin Exp $
 
 SHA1 (audacity-src-1.2.6.tar.gz) = 1bfdd119fdc09d1aa334aee21d4831ef6e939fce
 RMD160 (audacity-src-1.2.6.tar.gz) = f59ca075ae430a518b77ce2ed08441abe2b67a0c
@@ -20,6 +20,7 @@ SHA1 (patch-ba) = c27676c7110bf6ef2fcd448d68402b7bfd21b631
 SHA1 (patch-bb) = 050c6edc0a174e2496ef0b572002eca185bd38de
 SHA1 (patch-bc) = 8a08526c37e025a89a747fa2c7a48668fe797572
 SHA1 (patch-bd) = dc24c670cdf078f08c29318c5c5dc8efed398f59
+SHA1 (patch-lib-src_soundtouch_source_SoundTouch_FIRFilter.cpp) = 4d4aee4af18a5211074bdce7cc30507b42337941
 SHA1 (patch-lib-src_soundtouch_source_SoundTouch_Makefile.in) = 882de67691e6b7b4b611ead0e1fe20ebafa57d40
 SHA1 (patch-lib_src_portmixer_px__unix__oss_px__unix__oss.c) = 4c78a5b39ea0fc1d022c8bfabd68a77989b33a54
 SHA1 (patch-src_AudioIO.cpp) = 79af6045ae0a9ff754ae0ea30d987f47363df18f
