@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4446 2013/12/10 00:57:15 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.4447 2013/12/10 05:48:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6514,3 +6514,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-gobject3 to 3.10.2 [prlw1 2013-12-09]
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
+	Updated devel/apr-util to 1.5.3nb1 [obache 2013-12-10]
