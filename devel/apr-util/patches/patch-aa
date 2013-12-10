@@ -1,4 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2013/12/10 05:47:59 obache Exp $
+$NetBSD: patch-aa,v 1.7 2013/12/10 08:27:06 obache Exp $
+
+* Use libtool in the wrapper directory instead of the one installed by
+  apr.  Otherwise, dependency_libs in libaprutil-1.la is set incorrectly.
+
+  Don't let the build's LDFLAGS be polluted by what provides apr, because apr
+  doesn't know about all dependencies of apr-util.  Otherwise the final binary
+  wouldn't have the proper RPATHs.
 
 --- configure.orig	2013-11-13 16:41:32.000000000 +0000
 +++ configure
