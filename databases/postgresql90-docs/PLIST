@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/10/12 20:39:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/12/10 22:32:56 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createlang.1
@@ -927,6 +927,7 @@ share/doc/postgresql/html/release-8-4-15.html
 share/doc/postgresql/html/release-8-4-16.html
 share/doc/postgresql/html/release-8-4-17.html
 share/doc/postgresql/html/release-8-4-18.html
+share/doc/postgresql/html/release-8-4-19.html
 share/doc/postgresql/html/release-8-4-2.html
 share/doc/postgresql/html/release-8-4-3.html
 share/doc/postgresql/html/release-8-4-4.html
@@ -942,6 +943,7 @@ share/doc/postgresql/html/release-9-0-11.html
 share/doc/postgresql/html/release-9-0-12.html
 share/doc/postgresql/html/release-9-0-13.html
 share/doc/postgresql/html/release-9-0-14.html
+share/doc/postgresql/html/release-9-0-15.html
 share/doc/postgresql/html/release-9-0-2.html
 share/doc/postgresql/html/release-9-0-3.html
 share/doc/postgresql/html/release-9-0-4.html
