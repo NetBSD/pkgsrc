@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4449 2013/12/10 13:01:54 bad Exp $
+$NetBSD: CHANGES-2013,v 1.4450 2013/12/10 14:52:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6517,3 +6517,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/apr-util to 1.5.3nb1 [obache 2013-12-10]
 	Updated net/youtube-dl to 20131009 [tron 2013-12-10]
 	Updated math/py-pandas to 0.12.0 [bad 2013-12-10]
+	Updated www/squid3 to 3.4.1 [adam 2013-12-10]
