@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2013/10/10 14:42:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2013/12/10 14:08:53 jperkin Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.11
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 GCONF_SCHEMAS=		gtetrinet.schemas
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
