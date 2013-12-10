@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2012/04/30 14:17:12 drochner Exp $
+$NetBSD: patch-ab,v 1.10 2013/12/10 00:25:18 prlw1 Exp $
+
+Allow gdk-pixbuf2/loaders.mk to do its thing.
 
 --- gdk-pixbuf-loader/Makefile.in.orig	2012-04-16 17:07:37.000000000 +0000
 +++ gdk-pixbuf-loader/Makefile.in
