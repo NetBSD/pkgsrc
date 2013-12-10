@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 17:18:21 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/12/10 14:03:30 jperkin Exp $
 #
 
 DISTNAME=		ft-0.2.25
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake
 
 MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} CFLAGS=${CFLAGS:M*:Q} LDFLAGS=${LDFLAGS:M*:Q}
 CFLAGS+=		-DFT_BIN=\"${PREFIX}/bin\" -D_DEBUG
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t -Du_int64_t=uint64_t
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin
 
