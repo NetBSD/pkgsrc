@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/06 19:31:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/10 14:07:44 jperkin Exp $
 #
 
 DISTNAME=	NeTraMet44
@@ -20,6 +20,8 @@ MAKE_ENV+=	PCAP_LIB=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libpcap}/lib
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 .include "../../net/libpcap/buildlink3.mk"
+
+CFLAGS.SunOS+=	-Du_int64_t=uint64_t
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name Makefile.in -print`; do	\
