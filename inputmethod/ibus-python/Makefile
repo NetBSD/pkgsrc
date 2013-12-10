@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/23 11:56:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 11:15:26 jperkin Exp $
 #
 
 .include "../../inputmethod/ibus/Makefile.common"
@@ -38,6 +38,9 @@ INSTALL_DIRS=	bindings ibus
 CONFIGURE_ARGS+=		--disable-dconf
 CONFIGURE_ARGS+=		--disable-gconf
 CONFIGURE_ARGS+=		--enable-python-library
+
+PYTHON_VERSIONS_INCOMPATIBLE=	26
+
 .include "../../devel/py-gobject3/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
