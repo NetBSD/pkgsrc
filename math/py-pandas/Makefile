@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/05/16 23:10:16 bad Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/10 13:00:30 bad Exp $
 
-DISTNAME=	pandas-0.11.0
+DISTNAME=	pandas-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pandas/
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz>=1.5:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2:../../math/py-pytables
+BUILDLINK_API_DEPENDS.pynumpy+= ${PYPKGPREFIX}-numpy>=1.6.1
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=   PYPKGPREFIX=${PYPKGPREFIX}
