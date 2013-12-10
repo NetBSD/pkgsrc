@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2010/12/04 08:12:33 adam Exp $
+$NetBSD: distinfo,v 1.22 2013/12/10 13:51:55 jperkin Exp $
 
 SHA1 (libusb-0.1.12.tar.gz) = 599a5168590f66bc6f1f9a299579fd8500614807
 RMD160 (libusb-0.1.12.tar.gz) = 63848df717e00fff67ab30ba86a85466370d4e8e
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = cc92318e0979779f6ef03ee653bc94ee2b96a055
 SHA1 (patch-ad) = f81135a5f92bf0c2e1ca921368bd39482bd3b580
 SHA1 (patch-ae) = 49a01ebe66de4965f3611cf42db09703aa68c415
 SHA1 (patch-af) = e46e576a589fb65488011a41df95f744230c0c6c
+SHA1 (patch-darwin.c) = 1311114a333045058b8624282b1c0a31a1c557a0
