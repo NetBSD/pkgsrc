@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/11/25 12:00:47 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2013/12/10 11:51:28 jperkin Exp $
 #
 
 DISTNAME=	snes9x-1.53-src
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/gtk
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	intltool msgfmt msgmerge perl pkg-config xgettext
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 
