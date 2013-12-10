@@ -1,12 +1,5 @@
-This package provides the following PostgreSQL modules:
-  - citext
-  - hstore
-  - intarray
-  - isn
-  - ltree
-  - lo
-  - uuid-ossp
-  - unaccent
+This package provides the following PostgreSQL modules: citext, hstore,
+intarray, isn, ltree, lo, uuid-ossp, unaccent.
 
 The "citext" module provides a case-insensitive character string type,
 citext. Essentially, it internally calls lower when comparing values.

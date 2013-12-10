@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/10/12 07:04:22 adam Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/10 22:32:57 adam Exp $
 
 PKGNAME=	${DISTNAME:C/-/92-server-/}
 COMMENT=	PostgreSQL database server programs
@@ -46,11 +46,11 @@ DL_LIBS+=	-lltdl
 #		the databases
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
-PGHOME?=		${PREFIX}/${PGUSER}
+PGHOME?=		${VARBASE}/${PGUSER}
 FILES_SUBST+=		PGUSER=${PGUSER}
 FILES_SUBST+=		PGGROUP=${PGGROUP}
 FILES_SUBST+=		PGHOME=${PGHOME}
-BUILD_DEFS+=		PGHOME
+BUILD_DEFS+=		PGHOME VARBASE
 
 ALL_ENV+=		INSTALLED_LIBPQ=yes
 

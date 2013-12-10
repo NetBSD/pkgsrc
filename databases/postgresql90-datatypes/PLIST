@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/02/09 11:19:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/10 22:32:56 adam Exp $
 lib/postgresql/_int.so
 lib/postgresql/citext.so
 lib/postgresql/hstore.so
@@ -6,7 +6,7 @@ lib/postgresql/isn.so
 lib/postgresql/lo.so
 lib/postgresql/ltree.so
 lib/postgresql/unaccent.so
-lib/postgresql/uuid-ossp.so
+${PLIST.uuid}lib/postgresql/uuid-ossp.so
 share/postgresql/contrib/_int.sql
 share/postgresql/contrib/citext.sql
 share/postgresql/contrib/hstore.sql
@@ -21,6 +21,6 @@ share/postgresql/contrib/uninstall_isn.sql
 share/postgresql/contrib/uninstall_lo.sql
 share/postgresql/contrib/uninstall_ltree.sql
 share/postgresql/contrib/uninstall_unaccent.sql
-share/postgresql/contrib/uninstall_uuid-ossp.sql
-share/postgresql/contrib/uuid-ossp.sql
+${PLIST.uuid}share/postgresql/contrib/uninstall_uuid-ossp.sql
+${PLIST.uuid}share/postgresql/contrib/uuid-ossp.sql
 share/postgresql/tsearch_data/unaccent.rules
