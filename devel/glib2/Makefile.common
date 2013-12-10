@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2013/12/08 13:08:59 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.35 2013/12/10 05:18:46 obache Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -9,8 +9,7 @@
 DISTNAME=	glib-2.38.2
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
-MASTER_SITES=	ftp://ftp.gtk.org/pub/glib/${PKGVERSION_NOREV:R}/ \
-		${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
