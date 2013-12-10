@@ -1,9 +1,9 @@
-$NetBSD: patch-include_Array.h,v 1.1 2013/07/15 17:56:45 joerg Exp $
+$NetBSD: patch-src_base_Vector.h,v 1.1 2013/12/10 14:48:26 adam Exp $
 
 Implement enough of the iterator contract to allow building with libc++.
 
---- include/Array.h.orig	2013-07-14 20:39:37.000000000 +0000
-+++ include/Array.h
+--- src/base/Vector.h.orig	2013-07-14 20:39:37.000000000 +0000
++++ src/base/Vector.h
 @@ -42,12 +42,19 @@
  #include "compat/assert.h"
  
