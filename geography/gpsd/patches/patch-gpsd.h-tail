@@ -1,0 +1,15 @@
+$NetBSD: patch-gpsd.h-tail,v 1.1 2013/12/10 12:22:52 jperkin Exp $
+
+Need cfmakeraw on SunOS.
+
+--- gpsd.h-tail.orig	2011-03-21 22:03:35.000000000 +0000
++++ gpsd.h-tail
+@@ -758,7 +758,7 @@ extern struct tm *localtime_r(const time
+ #define NITEMS(x) (int)(sizeof(x)/sizeof(x[0]))
+ 
+ /* Cygwin, in addition to NAN, doesn't have cfmakeraw */
+-#if defined(__CYGWIN__)
++#if defined(__CYGWIN__) || defined(__sun)
+ void cfmakeraw(struct termios *);
+ #endif /* defined(__CYGWIN__) */
+ 
