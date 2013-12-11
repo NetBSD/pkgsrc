@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/11/01 20:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/11 16:29:47 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-protos-1.5
+PKGNAME=	modular-xorg-protos-1.6
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -36,6 +36,7 @@ DEPENDS+=	resourceproto-[0-9]*:../../x11/resourceproto
 DEPENDS+=	scrnsaverproto-[0-9]*:../../x11/scrnsaverproto
 DEPENDS+=	videoproto-[0-9]*:../../x11/videoproto
 DEPENDS+=	windowswmproto-[0-9]*:../../wm/windowswmproto
+DEPENDS+=	xcb-proto-[0-9]*:../../x11/xcb-proto
 DEPENDS+=	xcmiscproto-[0-9]*:../../x11/xcmiscproto
 DEPENDS+=	xextproto-[0-9]*:../../x11/xextproto
 DEPENDS+=	xf86driproto-[0-9]*:../../x11/xf86driproto
