@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/12/06 13:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/12/11 23:26:49 markd Exp $
 
 DISTNAME=	nepomuk-core-${_KDE_VERSION}
 PKGREVISION=	1
@@ -15,6 +15,8 @@ REPLACE_PYTHON+= \
 BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.9.3
 
 .include "../../meta-pkgs/kde4/kde4.mk"
+
+USE_TOOLS+=	gmake
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
