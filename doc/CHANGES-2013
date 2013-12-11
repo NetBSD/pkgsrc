@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4456 2013/12/11 10:41:04 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4457 2013/12/11 13:42:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6513,7 +6513,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated multimedia/ffplay2 to 2.1.1 [adam 2013-12-09]
 	Updated devel/py-gobject3 to 3.10.2 [prlw1 2013-12-09]
 	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
-	Updated graphics/librsvg to 2.40.1 [prlw1 2013-12-10]
 	Updated devel/apr-util to 1.5.3nb1 [obache 2013-12-10]
 	Updated net/youtube-dl to 20131009 [tron 2013-12-10]
 	Updated math/py-pandas to 0.12.0 [bad 2013-12-10]
@@ -6595,3 +6594,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/py-at-spi2 to 2.10.0 [prlw1 2013-12-11]
 	Added net/cacti-spine version 0.8.8b [obache 2013-12-11]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.332 [obache 2013-12-11]
+	Updated devel/glibmm to 2.38.1 [adam 2013-12-11]
