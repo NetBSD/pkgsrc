@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2013/12/10 14:48:26 adam Exp $
+# $NetBSD: Makefile,v 1.22 2013/12/11 14:55:02 tron Exp $
 
 DISTNAME=	squid-3.4.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/ \
 		ftp://ftp.squid-cache.org/pub/squid/ \
@@ -34,7 +35,7 @@ CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
 BUILD_DEFS+=		VARBASE
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 MAKE_ENV+=		PKG_PREFIX=${PREFIX} VARBASE=${VARBASE}
-REPLACE_PERL+=		tools/helper-mux.pl
+REPLACE_PERL+=		helpers/ssl/cert_valid.pl tools/helper-mux.pl
 
 EGFILES=	src/mime.conf.default src/squid.conf.default \
 		helpers/basic_auth/MSNT/msntauth.conf.default \
