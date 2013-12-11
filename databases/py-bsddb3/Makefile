@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.46 2013/10/23 08:35:28 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2013/12/11 19:18:56 wiz Exp $
 
-DISTNAME=	bsddb3-6.0.0
+DISTNAME=	bsddb3-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bsddb3/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/bsddb3/
-COMMENT=	Python extension module for Berkeley DB 4
-LICENSE=	mit
+COMMENT=	Python extension module for Berkeley DB 4 and 5
+LICENSE=	modified-bsd
 
 BDB_ACCEPTED=		db4 db5
 
 PYSETUPBUILDARGS=	--berkeley-db=${BDBBASE}
 PYSETUPINSTALLARGS=	--berkeley-db=${BDBBASE}
+PYSETUPBUILDARGS+=	--berkeley-db-incdir=${BDBBASE}/include/${BDB_TYPE}
+PYSETUPINSTALLARGS+=	--berkeley-db-incdir=${BDBBASE}/include/${BDB_TYPE}
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 REPLACE_PYTHON=		Lib/bsddb/dbshelve.py
 REPLACE_PYTHON+=	Lib3/bsddb/dbshelve.py
+REPLACE_PYTHON+=	Lib/bsddb/test/test_dbtables.py
+REPLACE_PYTHON+=	Lib3/bsddb/test/test_dbtables.py
 
 SUBST_CLASSES+=		bdb
 SUBST_STAGE.bdb=	pre-configure
