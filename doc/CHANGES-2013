@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4461 2013/12/11 19:40:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4462 2013/12/11 19:42:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6599,3 +6599,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated sysutils/diskscrub to 2.5.2 [prlw1 2013-12-11]
 	Updated databases/py-bsddb3 to 6.0.1 [wiz 2013-12-11]
 	Updated textproc/hunspell-de to 20131206 [wiz 2013-12-11]
+	Updated fonts/harfbuzz to 0.9.25 [wiz 2013-12-11]
