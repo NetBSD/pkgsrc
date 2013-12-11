@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4463 2013/12/11 19:45:37 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4464 2013/12/11 19:58:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6601,3 +6601,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/hunspell-de to 20131206 [wiz 2013-12-11]
 	Updated fonts/harfbuzz to 0.9.25 [wiz 2013-12-11]
 	Updated converters/fribidi to 0.19.6 [wiz 2013-12-11]
+	Updated x11/xf86-video-mga to 1.6.3 [wiz 2013-12-11]
