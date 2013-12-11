@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.22 2013/12/09 17:25:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.23 2013/12/11 21:51:57 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -84,3 +84,5 @@ mail/ruby-actionmailer32: security update
 www/ruby-actionpack32: security update
 www/ruby-activeresource32: security update
 www/ruby-rails32: security update
+Pullup ticket #4268 - requested by obache
+multimedia/adobe-flash-plugin11: security update
