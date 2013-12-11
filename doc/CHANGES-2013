@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4455 2013/12/11 03:02:28 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4456 2013/12/11 10:41:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6594,3 +6594,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/postgresql84-server to 8.4.19 [adam 2013-12-10]
 	Updated devel/py-at-spi2 to 2.10.0 [prlw1 2013-12-11]
 	Added net/cacti-spine version 0.8.8b [obache 2013-12-11]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.332 [obache 2013-12-11]
