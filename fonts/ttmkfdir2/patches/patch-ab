@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.3 2007/11/15 06:36:45 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2013/12/11 23:49:52 markd Exp $
 
 --- ttf.cpp.orig	2002-11-07 06:30:04.000000000 +0100
 +++ ttf.cpp	2007-11-15 07:05:27.304109000 +0100
-@@ -137,7 +137,12 @@ Face::Face (const std::string &filename)
+@@ -3,7 +3,8 @@
+ #include <cctype>
+ #include <cstring>
+ 
+-#include "freetype/tttables.h"
++#include <ft2build.h>
++#include FT_TRUETYPE_TABLES_H
+ #include "ttmkfdir.h"
+ #include "ttf.h"
+ #include "ttos2val.h"
+@@ -137,7 +138,12 @@ Face::Face (const std::string &filename)
  	/*
  	 * find all the encodings that are based on this cmap.
  	 */
@@ -15,7 +25,7 @@ $NetBSD: patch-ab,v 1.3 2007/11/15 06:36:45 rillig Exp $
  	std::pair<MI, MI> bounds = Encodings::instance()->equal_range (key);
  
  	/*
-@@ -226,7 +231,7 @@ Face::FontFamilyName (void) const
+@@ -226,7 +232,7 @@ Face::FontFamilyName (void) const
  	for (i = 0; i < n; i++) {
  	    if ((fterror = FT_Get_Sfnt_Name (face, i, &NamePtr)) != FT_Err_Ok) {
                      std::cout << "Warning: Can't SFNT name : " << FileName << "(" << fterror << ")" << std::endl;
@@ -24,7 +34,7 @@ $NetBSD: patch-ab,v 1.3 2007/11/15 06:36:45 rillig Exp $
              };
              platform = NamePtr.platform_id;
              encoding = NamePtr.encoding_id;
-@@ -522,7 +527,7 @@ Face::Weight (void) const
+@@ -522,7 +528,7 @@ Face::Weight (void) const
  {
      const char *result;
      
@@ -33,7 +43,7 @@ $NetBSD: patch-ab,v 1.3 2007/11/15 06:36:45 rillig Exp $
  	return result;
      } else if ((result = OS2Weight ()) != 0) {
  	return result;
-@@ -603,7 +608,7 @@ Face::Width (void) const
+@@ -603,7 +609,7 @@ Face::Width (void) const
  {
      const char *result;
      
