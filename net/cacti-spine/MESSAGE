@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/12/11 03:01:57 obache Exp $
+
+cacti-spine is now installed.
+
+You must perform the following steps to make your Cacti installation
+aware of it :
+
+1/ Login to Cacti as an admin user.
+2/ "Select Settings" on the menu and click the "Paths" tab.
+3/ Enter the *complete* path to your Spine binary in
+the "Spine Poller File" Path field and click "Save".
+4/ Click the "Poller" tab.
+5/ Choose "spine" from the "Poller Type" dropdown box and click "Save".
+
+After completing these steps, Cacti will spawn Spine every 5 minutes
+instead of cmd.php. If you are having problems getting Spine to gather
+data, you can always temporarily change Poller Type back to "cmd.php".
+===========================================================================
