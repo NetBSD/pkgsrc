@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/02/16 11:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2013/12/11 15:46:23 jperkin Exp $
 
 DISTNAME=	fltk-1.1.10-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
 
 PLIST_VARS+=		cs	# case-sensitive
-.if !exists(./descr)
+.if !exists(./descr) && ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--with-links
 PLIST.cs=		yes
 .endif
