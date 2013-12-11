@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/29 05:06:59 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/11 12:23:53 rodent Exp $
 #
 
 DISTNAME=	xcb-util-0.3.6
@@ -11,10 +11,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	XCB Utilities (old 0.3.6 release)
+LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/xcb-util036
-USE_TOOLS+=	pkg-config gmake gm4
+USE_TOOLS+=	gm4 gmake pkg-config
 USE_LIBTOOL=	yes
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/xcb-util036/lib
 #LIBS+=	${COMPILER_RPATH_FLAG}${PREFIX}/xcb-util036/lib
