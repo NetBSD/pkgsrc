@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2013/12/11 23:26:49 markd Exp $
+lib/kde4/libexec/kde_nepomuk_filewatch_raiselimit
+share/dbus-1/system-services/org.kde.nepomuk.filewatch.service
+share/examples/kde4-dbus/org.kde.nepomuk.filewatch.conf
+share/PolicyKit/policy/org.kde.nepomuk.filewatch.policy
