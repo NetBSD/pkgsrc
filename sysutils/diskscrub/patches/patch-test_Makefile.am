@@ -1,0 +1,16 @@
+$NetBSD: patch-test_Makefile.am,v 1.1 2013/12/11 19:07:47 prlw1 Exp $
+
+- Make unimplemented getsize() function match prototype in getsize.h.
+- Use ioctl names (feature tests) rather than OS names.
+  XXX for SIOC_CAPACITY consider using SIOC_STORAGE_CAPACITY.
+- Implement getsize() based on DIOCGDISKINFO ioctl.
+
+--- test/Makefile.am.orig	2013-12-11 17:24:41.000000000 +0000
++++ test/Makefile.am
+@@ -28,4 +28,6 @@ tgetsize_SOURCES = tgetsize.c $(common_s
+ tsig_SOURCES = tsig.c $(common_sources)
+ pat_SOURCES = pat.c $(common_sources)
+ 
++LDADD = $(LIBPROP)
++
+ EXTRA_DIST = $(TESTS) $(EXPS)
