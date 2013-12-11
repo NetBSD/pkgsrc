@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4459 2013/12/11 19:08:12 prlw1 Exp $
+$NetBSD: CHANGES-2013,v 1.4460 2013/12/11 19:19:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6597,3 +6597,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/glibmm to 2.38.1 [adam 2013-12-11]
 	Updated meta-pkgs/modular-xorg-protos to 1.6 [wiz 2013-12-11]
 	Updated sysutils/diskscrub to 2.5.2 [prlw1 2013-12-11]
+	Updated databases/py-bsddb3 to 6.0.1 [wiz 2013-12-11]
