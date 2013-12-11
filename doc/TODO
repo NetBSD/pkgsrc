@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12775 2013/12/11 13:42:32 adam Exp $
+$NetBSD: TODO,v 1.12776 2013/12/11 18:53:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -526,6 +526,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
+	o firefox-26
 	o fish-2.1
 	o flashplayer-0.4.13
 	o flightgear-2.12
@@ -699,6 +700,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdbg-2.5.4
 	o kde4-4.11.4
 	o kdenlive-0.9.6
+	o kdevelop-4.6.0
 	o kdrill-6.5
 	o kid3-3.0.2
 	o kismet-2011.03r2 [pkg/45692]
@@ -864,7 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
-	o par2-0.6.0 [https://github.com/BlackIkeEagle/par2cmdline]
+	o par2-0.6.2 [https://github.com/BlackIkeEagle/par2cmdline]
 	o parallel-20131122
 	o pari-2.5.5
 	o patch-2.7.1
