@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2013/06/10 08:38:52 obache Exp $
+# $NetBSD: Makefile.common,v 1.28 2013/12/11 07:56:26 wiz Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -25,7 +25,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-target=x11 \
 			--with-font-backend=freetype
 CONFIGURE_ARGS+=	--disable-geolocation
-CONFIGURE_ENV+= ZLIB_CFLAGS=-I${BUILDLINK_PREFIX.zlib}/include ZLIB_LIBS=-lz
 
 .include "options.mk"
 
