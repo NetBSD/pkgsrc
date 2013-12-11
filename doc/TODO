@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12780 2013/12/11 19:45:37 wiz Exp $
+$NetBSD: TODO,v 1.12781 2013/12/11 19:58:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1115,7 +1115,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-intel-2.21.15
-	o xf86-video-mga-1.6.3
 	o xf86-video-modesetting-0.8.1 [wip]
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-voodoo-1.2.5 [wip]
