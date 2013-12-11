@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4460 2013/12/11 19:19:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4461 2013/12/11 19:40:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6598,3 +6598,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/modular-xorg-protos to 1.6 [wiz 2013-12-11]
 	Updated sysutils/diskscrub to 2.5.2 [prlw1 2013-12-11]
 	Updated databases/py-bsddb3 to 6.0.1 [wiz 2013-12-11]
+	Updated textproc/hunspell-de to 20131206 [wiz 2013-12-11]
