@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/03/12 19:28:08 martin Exp $
+# $NetBSD: Makefile,v 1.26 2013/12/11 17:01:06 jperkin Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -10,7 +10,7 @@ BOOST_INSTALL_LIBS=	yes
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		context
+PLIST_VARS+=		context log
 
 .if !empty(OPSYS:MNetBSD) && !empty(MACHINE_ARCH:Msparc64)
 BJAM_ARGS+=		pch=off
@@ -20,6 +20,13 @@ BJAM_ARGS+=		--without-context
 
 .if empty(BJAM_ARGS:M--without-context)
 PLIST.context=		yes
+.endif
+
+# Darwin GCC is unable to build Boost.Log
+.if ${OPSYS} == "Darwin" && !empty(PKGSRC_COMPILER:Mgcc)
+BJAM_ARGS+=		--without-log
+.else
+PLIST.log=		yes
 .endif
 
 UNLIMIT_RESOURCES+=	stacksize
