@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/11 03:01:57 obache Exp $
+bin/spine
+share/doc/cacti-spine/AUTHORS
+share/doc/cacti-spine/COPYING
+share/doc/cacti-spine/ChangeLog
+share/doc/cacti-spine/INSTALL
+share/doc/cacti-spine/LICENSE
+share/doc/cacti-spine/LICENSE.LGPL
+share/doc/cacti-spine/NEWS
+share/doc/cacti-spine/README
+share/doc/cacti-spine/README-WINDOWS
+share/doc/cacti-spine/examples/spine.conf.dist
