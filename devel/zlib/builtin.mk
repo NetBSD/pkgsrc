@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2013/12/04 14:19:01 obache Exp $
+# $NetBSD: builtin.mk,v 1.11 2013/12/11 07:11:40 richard Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -76,3 +76,39 @@ MAKEVARS+=	USE_BUILTIN.zlib
 USE_BUILTIN.zlib=	no
 .  endif
 .endif
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.zlib?=    no
+.if !empty(CHECK_BUILTIN.zlib:M[nN][oO])
+.  if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+
+BUILDLINK_TARGETS+= fake-zlib-pc
+
+_FAKE_ZLIB_PC=${BUILDLINK_DIR}/lib/pkgconfig/zlib.pc
+
+fake-zlib-pc:
+	${RUN}	\
+	sedsrc=../../devel/zlib/files/zlib.pc.in;	\
+	src=${BUILDLINK_PREFIX.zlib}/lib${LIBABISUFFIX}/pkgconfig/zlib.pc;\
+	dst=${_FAKE_ZLIB_PC};					\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;\
+	if [ ! -f $${dst} ]; then	\
+		if [ -f $${src} ]; then	\
+			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";	\
+			${LN} -sf $${src} $${dst};			\
+		else	\
+			${ECHO_BUILDLINK_MSG} "Creating $${dst}";	\
+			${SED}	-e s,@prefix@,${BUILDLINK_PREFIX.zlib},\
+					-e s,@exec_prefix@,${BUILDLINK_PREFIX.zlib},\
+					-e s,@libdir@,${BUILDLINK_PREFIX.zlib}/lib${LIBABISUFFIX},\
+					-e s,@VERSION@,${BUILTIN_VERSION.zlib},\
+					-e s,@includedir@,${BUILDLINK_PREFIX.zlib}/include,\
+					-e s,@sharedlibdir@,${BUILDLINK_PREFIX.zlib}/lib,\
+				$${sedsrc} > $${dst};			\
+		fi	\
+	fi
+.  endif
+.endif # CHECK_BUILTIN.zlib
