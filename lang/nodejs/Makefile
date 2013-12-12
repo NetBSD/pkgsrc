@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2013/10/02 09:58:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2013/12/12 11:52:37 jperkin Exp $
 #
 
-DISTNAME=	node-v0.10.20
+DISTNAME=	node-v0.10.23
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
@@ -42,6 +42,7 @@ MAKE_ENV+=		GYP_DEFINES="OS=netbsd"
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
 REPLACE_PYTHON+=	tools/gyp_node
+REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/sun_tool.py
 REPLACE_PYTHON+=	tools/node-waf
 REPLACE_PYTHON+=	tools/waf-light
@@ -57,6 +58,8 @@ BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 pre-install:
 	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
 
+if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.endif
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
