@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/12/11 10:40:42 obache Exp $
+# $NetBSD: Makefile,v 1.22 2013/12/12 02:35:33 obache Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.${FLASH_ARCH}
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
@@ -27,7 +27,7 @@ CRYPTO=			yes
 # XXX At present, it seems www/nspluginwrapper does not support native x86_64
 #     plugin. --2011-10-08 ryoon
 EMUL_PLATFORMS=		linux-i386 #linux-x86_64
-EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl
+EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl nss nspr
 EMUL_REQD=		suse>=11.3
 
 FLASH_VERSION=		11.2.202.332
