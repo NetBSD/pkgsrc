@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4472 2013/12/12 06:43:26 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4473 2013/12/12 06:53:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6614,3 +6614,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-pdftools-doc to 0.83 [minskim 2013-12-12]
 	Updated devel/p5-Config-Tiny to 2.20 [wen 2013-12-12]
 	Updated devel/p5-Const-Fast to 0.014 [wen 2013-12-12]
+	Updated devel/p5-Contextual-Return to 0.004007 [wen 2013-12-12]
