@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/05/31 12:41:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/12 04:44:17 minskim Exp $
 
 DISTNAME=	pdftools
-PKGNAME=	tex-${DISTNAME}-0.82
-PKGREVISION=	2
-TEXLIVE_REV=	23089
+PKGNAME=	tex-${DISTNAME}-0.83
+TEXLIVE_REV=	31660
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	PDF-related utilities, including PostScript-to-PDF conversion
@@ -34,6 +33,7 @@ TEX_TEXMF_DIRS=		# empty
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
-	${MV} ${WRKSRC}/texmf/scripts/tetex/e2pall.pl ${WRKSRC}/bin/e2pall
+	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/e2pall.pl \
+		${WRKSRC}/bin/e2pall
 
 .include "../../mk/bsd.pkg.mk"
