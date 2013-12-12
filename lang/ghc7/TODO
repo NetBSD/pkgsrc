@@ -1,0 +1,30 @@
+.. -*- rst -*-
+
+wip/ghc TODO
+============
+
+* Modify configure.ac and rules/build-package-data.mk to allow
+  ``--with-curses-{includes,libraries}`` to be passed to the top-level
+  ``configure``, and send a patch to the upstream.
+* Add the following ``./configure`` flags to eliminate
+  ``patch-Makefile`` and ``patch-ghc.mk``:
+
+  * ``--with-dist-archiver={bzip2,xz} [default=bzip2]``
+  * ``BZIP2FLAGS``
+  * ``XZFLAGS``
+
+* Let ``./configure`` check for broken binutils and provide a better
+  fix for ``patch-rts_StgCRun.c``.
+* Build more bootstrapping compilers to support more platforms.
+
+
+How to build a bootstrapping compiler
+-------------------------------------
+
+You need a working compiler to build one. If you think there are no
+bindists for your platform, you may need to cross-build a compiler
+yourself: `Cross-compiling GHC
+<http://hackage.haskell.org/trac/ghc/wiki/Building/CrossCompiling>`_
+
+Assuming you have a working ghc in your PATH, just run ``bmake patch
+&& bmake bootstrap`` and see if you are lucky enough.
