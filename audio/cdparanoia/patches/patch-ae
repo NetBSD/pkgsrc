@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2009/08/09 16:00:53 drochner Exp $
+$NetBSD: patch-ae,v 1.8 2013/12/12 16:41:32 jperkin Exp $
 
---- main.c.orig	2008-09-11 23:11:02.000000000 +0200
+--- main.c.orig	2008-09-11 21:11:02.000000000 +0000
 +++ main.c
 @@ -25,7 +25,9 @@
  #include <unistd.h>
@@ -139,7 +139,7 @@ $NetBSD: patch-ae,v 1.7 2009/08/09 16:00:53 drochner Exp $
  
    /* Query the cdrom/disc; we may need to override some settings */
  
-+#if defined(__APPLE__) && defined(__MACH__)
++#if defined(__APPLE__) && defined(__MACH__) || defined(__sun)
 +  d=cdda_find_a_cdrom(verbose,NULL);
 +#else
 +#ifndef __linux__	/* XXX */
