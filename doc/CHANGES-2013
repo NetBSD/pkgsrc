@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4483 2013/12/12 19:37:41 kleink Exp $
+$NetBSD: CHANGES-2013,v 1.4484 2013/12/12 23:02:58 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6625,3 +6625,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added lang/ghc7 version 7.6.3 [obache 2013-12-12]
 	Updated mail/opendkim to 2.9.0 [pettai 2013-12-12]
 	Updated www/py-flask-script to 0.6.6 [kleink 2013-12-12]
+	Updated chat/jabberd2 to 2.3.1 [schnoebe 2013-12-12]
