@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/31 12:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/12 13:27:17 jperkin Exp $
 
 DISTNAME=	bulk-small-20130316
 PKGREVISION=	1
@@ -110,7 +110,12 @@ BUILD_DEPENDS+=	m4-[0-9]*:../../devel/m4
 BUILD_DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
 #BUILD_DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 BUILD_DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "native"
 BUILD_DEPENDS+=	x11-links-[0-9]*:../../pkgtools/x11-links
+.endif
 
 #
 # 4. Core widely-used libraries.
