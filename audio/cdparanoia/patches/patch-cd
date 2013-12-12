@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
+$NetBSD: patch-cd,v 1.6 2013/12/12 16:41:32 jperkin Exp $
 
---- interface/common_interface.c.orig	2008-08-21 18:08:54.000000000 +0200
+--- interface/common_interface.c.orig	2008-08-21 16:08:54.000000000 +0000
 +++ interface/common_interface.c
-@@ -9,26 +9,42 @@
+@@ -9,26 +9,50 @@
   ******************************************************************/
  
  #include <math.h>
@@ -20,6 +20,10 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
 +#ifdef __linux__
  #include <linux/hdreg.h>
 +#endif
++
++#ifdef __sun
++#include <sys/cdio.h>
++#endif
  
  /* Test for presence of a cdrom by pinging with the 'CDROMVOLREAD' ioctl() */
  /* Also test using CDROM_GET_CAPABILITY (if available) as some newer DVDROMs will
@@ -30,6 +34,10 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
    if (ioctl(fd, CDROMVOLREAD, &volctl) &&
        ioctl(fd, CDROM_GET_CAPABILITY, NULL)<0)
      return(1); /* failure */
++#elif defined(__sun)
++  struct cdrom_volctrl volctl;
++  if (ioctl(fd, CDROMVOLCTRL, &volctl))
++    return(1); /* failure */
 +#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +  struct ioc_vol volctl;
 +  if (ioctl(fd, CDIOCGETVOL, &volctl)) 
@@ -45,7 +53,7 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
  /* Use the ioctl thingy above ping the cdrom; this will get model info */
  char *atapi_drive_info(int fd){
    /* Work around the fact that the struct grew without warning in
-@@ -49,6 +65,7 @@ char *atapi_drive_info(int fd){
+@@ -49,6 +73,7 @@ char *atapi_drive_info(int fd){
    free(id);
    return(ret);
  }
@@ -53,7 +61,7 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
  
  int data_bigendianp(cdrom_drive *d){
    float lsb_votes=0;
-@@ -174,9 +191,12 @@ int data_bigendianp(cdrom_drive *d){
+@@ -174,9 +199,12 @@ int data_bigendianp(cdrom_drive *d){
     knows the leadout/leadin size. */
  
  int FixupTOC(cdrom_drive *d,int tracks){
@@ -66,7 +74,7 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
    /* First off, make sure the 'starting sector' is >=0 */
    
    for(j=0;j<tracks;j++){
-@@ -211,14 +231,26 @@ int FixupTOC(cdrom_drive *d,int tracks){
+@@ -211,14 +239,30 @@ int FixupTOC(cdrom_drive *d,int tracks){
    /* For a scsi device, the ioctl must go to the specialized SCSI
       CDROM device, not the generic device. */
  
@@ -81,11 +89,15 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
 +# define ms_addr	(ms_str.addr.lba)
 +#endif
 +
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__sun)
 +    int ms_addr;
 +
 +    ms_addr = 0;	/* last session */
++#ifdef __NetBSD__
 +    if (ioctl(d->ioctl_fd, CDIOREADMSADDR, &ms_addr) == -1)
++#else
++    if (ioctl(d->ioctl_fd, CDROMREADOFFSET, &ms_addr) == -1)
++#endif
 +      return -1;
 +#endif
  
@@ -94,7 +106,7 @@ $NetBSD: patch-cd,v 1.5 2009/08/09 16:00:53 drochner Exp $
  
        /* This is an odd little piece of code --Monty */
  
-@@ -226,15 +258,17 @@ int FixupTOC(cdrom_drive *d,int tracks){
+@@ -226,15 +270,17 @@ int FixupTOC(cdrom_drive *d,int tracks){
        /* adjust end of last audio track to be in the first session */
        for (j = tracks-1; j >= 0; j--) {
  	if (j > 0 && !IS_AUDIO(d,j) && IS_AUDIO(d,j-1)) {

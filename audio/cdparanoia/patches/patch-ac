@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
+$NetBSD: patch-ac,v 1.11 2013/12/12 16:41:32 jperkin Exp $
 
---- configure.orig	2006-08-16 20:02:25.000000000 +0200
+--- configure.orig	2006-08-16 18:02:25.000000000 +0000
 +++ configure
 @@ -1,25 +1,82 @@
  #! /bin/sh
@@ -1127,7 +1127,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  Try \`$0 --help' for more information." >&2
     { (exit 1); exit 1; }; }
      ;;
-@@ -632,17 +1116,16 @@ Try \`$0 --help' for more information." 
+@@ -632,17 +1116,16 @@ Try \`$0 --help' for more information."
      ac_envvar=`expr "x$ac_option" : 'x\([^=]*\)='`
      # Reject names that are not valid shell variable names.
      expr "x$ac_envvar" : ".*[^_$as_cr_alnum]" >/dev/null &&
@@ -3083,7 +3083,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  int test (int i, double x);
  struct s1 {int (*f) (int a);};
  struct s2 {int (*f) (double a);};
-@@ -2098,219 +2782,72 @@ return f (e, argv, 0) != argv[0]  ||  f 
+@@ -2098,219 +2782,72 @@ return f (e, argv, 0) != argv[0]  ||  f
    return 0;
  }
  _ACEOF
@@ -3493,7 +3493,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  else
    if test -n "$INSTALL"; then
    ac_cv_prog_INSTALL="$INSTALL" # Let the user override the test.
-@@ -2435,26 +2986,47 @@ do
+@@ -2435,26 +2986,51 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
@@ -3538,6 +3538,10 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
 +  EXTRA_OBJS=scsi_interface.o
 +  EXTRA_LIBS=
 +  ;;
++*-*-solaris*)
++  EXTRA_OBJS=test_interface.o
++  EXTRA_LIBS=
++  ;;
 +*)
 +  EXTRA_OBJS="cooked_interface.o scsi_interface.o"
 +  EXTRA_LIBS=
@@ -3547,7 +3551,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  if test -z "$GCC"; then
  	DEBUG="-g"
  	OPT="-O"
-@@ -2463,6 +3035,12 @@ else
+@@ -2463,6 +3039,12 @@ else
  	i?86-*-linux*)
  		DEBUG="-g -Wall -fsigned-char"
  		OPT="-O2 -ffast-math -fsigned-char -finline-functions";;
@@ -3560,7 +3564,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  	*)
  		DEBUG="-g -Wall -fsigned-char"
  		OPT="-O2 -fsigned-char";;
-@@ -2475,15 +3053,15 @@ ac_cpp='$CPP $CPPFLAGS'
+@@ -2475,15 +3057,15 @@ ac_cpp='$CPP $CPPFLAGS'
  ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
  ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
  ac_compiler_gnu=$ac_cv_c_compiler_gnu
@@ -3579,7 +3583,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  else
        # Double quotes because CPP needs to be expanded
      for CPP in "$CC -E" "$CC -E -traditional-cpp" "/lib/cpp"
-@@ -2510,35 +3088,35 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -2510,35 +3092,35 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  		     Syntax error
  _ACEOF
@@ -3631,7 +3635,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    # can be detected and how.
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2548,34 +3126,34 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -2548,34 +3130,34 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <ac_nonexistent.h>
  _ACEOF
@@ -3681,7 +3685,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  rm -f conftest.err conftest.$ac_ext
  
  done
-@@ -2593,8 +3171,8 @@ fi
+@@ -2593,8 +3175,8 @@ fi
  else
    ac_cv_prog_CPP=$CPP
  fi
@@ -3692,7 +3696,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  ac_preproc_ok=false
  for ac_c_preproc_warn_flag in '' yes
  do
-@@ -2617,35 +3195,35 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -2617,35 +3199,35 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  		     Syntax error
  _ACEOF
@@ -3744,7 +3748,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    # can be detected and how.
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2655,34 +3233,34 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -2655,34 +3237,34 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <ac_nonexistent.h>
  _ACEOF
@@ -3794,7 +3798,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  rm -f conftest.err conftest.$ac_ext
  
  done
-@@ -2691,11 +3269,13 @@ rm -f conftest.err conftest.$ac_ext
+@@ -2691,11 +3273,13 @@ rm -f conftest.err conftest.$ac_ext
  if $ac_preproc_ok; then
    :
  else
@@ -3811,7 +3815,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  fi
  
  ac_ext=c
-@@ -2705,25 +3285,144 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+@@ -2705,25 +3289,144 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
  ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  
@@ -3970,7 +3974,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  else
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2745,35 +3444,32 @@ main ()
+@@ -2745,35 +3448,32 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4023,7 +4027,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
  if test $ac_cv_header_stdc = yes; then
    # SunOS 4.x string.h does not declare mem*, contrary to ANSI.
-@@ -2829,6 +3525,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -2829,6 +3529,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <ctype.h>
@@ -4031,7 +4035,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #if ((' ' & 0x0FF) == 0x020)
  # define ISLOWER(c) ('a' <= (c) && (c) <= 'z')
  # define TOUPPER(c) (ISLOWER(c) ? 'A' + ((c) - 'a') : (c))
-@@ -2848,36 +3545,50 @@ main ()
+@@ -2848,36 +3549,50 @@ main ()
    for (i = 0; i < 256; i++)
      if (XOR (islower (i), ISLOWER (i))
  	|| toupper (i) != TOUPPER (i))
@@ -4095,7 +4099,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  if test $ac_cv_header_stdc = yes; then
  
  cat >>confdefs.h <<\_ACEOF
-@@ -2900,11 +3611,11 @@ fi
+@@ -2900,11 +3615,11 @@ fi
  for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
  		  inttypes.h stdint.h unistd.h
  do
@@ -4112,7 +4116,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  else
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -2917,41 +3628,42 @@ $ac_includes_default
+@@ -2917,41 +3632,42 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4179,7 +4183,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  _ACEOF
  
  fi
-@@ -2959,73 +3671,15 @@ fi
+@@ -2959,73 +3675,15 @@ fi
  done
  
  
@@ -4260,7 +4264,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    if test "$cross_compiling" = yes; then
    # Depending upon the size, compute the lo and hi bounds.
  cat >conftest.$ac_ext <<_ACEOF
-@@ -3038,7 +3692,7 @@ $ac_includes_default
+@@ -3038,7 +3696,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4269,7 +4273,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3046,27 +3700,23 @@ test_array [0] = 0
+@@ -3046,27 +3704,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4310,7 +4314,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_lo=0 ac_mid=0
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -3079,7 +3729,7 @@ $ac_includes_default
+@@ -3079,7 +3733,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4319,7 +4323,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3087,46 +3737,43 @@ test_array [0] = 0
+@@ -3087,46 +3741,43 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4390,7 +4394,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3136,7 +3783,7 @@ $ac_includes_default
+@@ -3136,7 +3787,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4399,7 +4403,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3144,27 +3791,23 @@ test_array [0] = 0
+@@ -3144,27 +3795,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4440,7 +4444,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_hi=-1 ac_mid=-1
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -3177,7 +3820,7 @@ $ac_includes_default
+@@ -3177,7 +3824,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4449,7 +4453,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3185,50 +3828,49 @@ test_array [0] = 0
+@@ -3185,50 +3832,49 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4528,7 +4532,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  # Binary search between lo and hi bounds.
  while test "x$ac_lo" != "x$ac_hi"; do
    ac_mid=`expr '(' $ac_hi - $ac_lo ')' / 2 + $ac_lo`
-@@ -3242,7 +3884,7 @@ $ac_includes_default
+@@ -3242,7 +3888,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4537,7 +4541,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3250,52 +3892,48 @@ test_array [0] = 0
+@@ -3250,52 +3896,48 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4616,7 +4620,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3303,8 +3941,8 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -3303,8 +3945,8 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -4627,7 +4631,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #include <stdio.h>
  #include <stdlib.h>
  int
-@@ -3313,133 +3951,94 @@ main ()
+@@ -3313,133 +3955,94 @@ main ()
  
    FILE *f = fopen ("conftest.val", "w");
    if (! f)
@@ -4816,7 +4820,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    if test "$cross_compiling" = yes; then
    # Depending upon the size, compute the lo and hi bounds.
  cat >conftest.$ac_ext <<_ACEOF
-@@ -3452,7 +4051,7 @@ $ac_includes_default
+@@ -3452,7 +4055,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4825,7 +4829,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3460,27 +4059,23 @@ test_array [0] = 0
+@@ -3460,27 +4063,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4866,7 +4870,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_lo=0 ac_mid=0
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -3493,7 +4088,7 @@ $ac_includes_default
+@@ -3493,7 +4092,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4875,7 +4879,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3501,46 +4096,43 @@ test_array [0] = 0
+@@ -3501,46 +4100,43 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4946,7 +4950,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3550,7 +4142,7 @@ $ac_includes_default
+@@ -3550,7 +4146,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -4955,7 +4959,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3558,27 +4150,23 @@ test_array [0] = 0
+@@ -3558,27 +4154,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -4996,7 +5000,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_hi=-1 ac_mid=-1
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -3591,7 +4179,7 @@ $ac_includes_default
+@@ -3591,7 +4183,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5005,7 +5009,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3599,50 +4187,49 @@ test_array [0] = 0
+@@ -3599,50 +4191,49 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5084,7 +5088,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  # Binary search between lo and hi bounds.
  while test "x$ac_lo" != "x$ac_hi"; do
    ac_mid=`expr '(' $ac_hi - $ac_lo ')' / 2 + $ac_lo`
-@@ -3656,7 +4243,7 @@ $ac_includes_default
+@@ -3656,7 +4247,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5093,7 +5097,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3664,52 +4251,48 @@ test_array [0] = 0
+@@ -3664,52 +4255,48 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5172,7 +5176,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3717,8 +4300,8 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -3717,8 +4304,8 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -5183,7 +5187,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #include <stdio.h>
  #include <stdlib.h>
  int
-@@ -3727,133 +4310,94 @@ main ()
+@@ -3727,133 +4314,94 @@ main ()
  
    FILE *f = fopen ("conftest.val", "w");
    if (! f)
@@ -5372,7 +5376,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    if test "$cross_compiling" = yes; then
    # Depending upon the size, compute the lo and hi bounds.
  cat >conftest.$ac_ext <<_ACEOF
-@@ -3866,7 +4410,7 @@ $ac_includes_default
+@@ -3866,7 +4414,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5381,7 +5385,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3874,27 +4418,23 @@ test_array [0] = 0
+@@ -3874,27 +4422,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5422,7 +5426,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_lo=0 ac_mid=0
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -3907,7 +4447,7 @@ $ac_includes_default
+@@ -3907,7 +4451,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5431,7 +5435,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3915,46 +4455,43 @@ test_array [0] = 0
+@@ -3915,46 +4459,43 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5502,7 +5506,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3964,7 +4501,7 @@ $ac_includes_default
+@@ -3964,7 +4505,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5511,7 +5515,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -3972,27 +4509,23 @@ test_array [0] = 0
+@@ -3972,27 +4513,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5552,7 +5556,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_hi=-1 ac_mid=-1
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -4005,7 +4538,7 @@ $ac_includes_default
+@@ -4005,7 +4542,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5561,7 +5565,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4013,50 +4546,49 @@ test_array [0] = 0
+@@ -4013,50 +4550,49 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5640,7 +5644,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  # Binary search between lo and hi bounds.
  while test "x$ac_lo" != "x$ac_hi"; do
    ac_mid=`expr '(' $ac_hi - $ac_lo ')' / 2 + $ac_lo`
-@@ -4070,7 +4602,7 @@ $ac_includes_default
+@@ -4070,7 +4606,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5649,7 +5653,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4078,52 +4610,48 @@ test_array [0] = 0
+@@ -4078,52 +4614,48 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5728,7 +5732,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4131,8 +4659,8 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -4131,8 +4663,8 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -5739,7 +5743,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #include <stdio.h>
  #include <stdlib.h>
  int
-@@ -4141,133 +4669,94 @@ main ()
+@@ -4141,133 +4673,94 @@ main ()
  
    FILE *f = fopen ("conftest.val", "w");
    if (! f)
@@ -5928,7 +5932,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    if test "$cross_compiling" = yes; then
    # Depending upon the size, compute the lo and hi bounds.
  cat >conftest.$ac_ext <<_ACEOF
-@@ -4280,7 +4769,7 @@ $ac_includes_default
+@@ -4280,7 +4773,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5937,7 +5941,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4288,27 +4777,23 @@ test_array [0] = 0
+@@ -4288,27 +4781,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -5978,7 +5982,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_lo=0 ac_mid=0
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -4321,7 +4806,7 @@ $ac_includes_default
+@@ -4321,7 +4810,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -5987,7 +5991,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4329,46 +4814,43 @@ test_array [0] = 0
+@@ -4329,46 +4818,43 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -6058,7 +6062,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -4378,7 +4860,7 @@ $ac_includes_default
+@@ -4378,7 +4864,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -6067,7 +6071,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4386,27 +4868,23 @@ test_array [0] = 0
+@@ -4386,27 +4872,23 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -6108,7 +6112,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    ac_hi=-1 ac_mid=-1
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
-@@ -4419,7 +4897,7 @@ $ac_includes_default
+@@ -4419,7 +4901,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -6117,7 +6121,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4427,50 +4905,49 @@ test_array [0] = 0
+@@ -4427,50 +4909,49 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -6196,7 +6200,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  # Binary search between lo and hi bounds.
  while test "x$ac_lo" != "x$ac_hi"; do
    ac_mid=`expr '(' $ac_hi - $ac_lo ')' / 2 + $ac_lo`
-@@ -4484,7 +4961,7 @@ $ac_includes_default
+@@ -4484,7 +4965,7 @@ $ac_includes_default
  int
  main ()
  {
@@ -6205,7 +6209,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  test_array [0] = 0
  
    ;
-@@ -4492,52 +4969,48 @@ test_array [0] = 0
+@@ -4492,52 +4973,48 @@ test_array [0] = 0
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -6284,7 +6288,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4545,8 +5018,8 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -4545,8 +5022,8 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -6295,7 +6299,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #include <stdio.h>
  #include <stdlib.h>
  int
-@@ -4555,61 +5028,80 @@ main ()
+@@ -4555,61 +5032,80 @@ main ()
  
    FILE *f = fopen ("conftest.val", "w");
    if (! f)
@@ -6405,7 +6409,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  cat >>confdefs.h <<_ACEOF
  #define SIZEOF_LONG_LONG $ac_cv_sizeof_long_long
  _ACEOF
-@@ -4627,12 +5119,13 @@ case 4 in
+@@ -4627,12 +5123,13 @@ case 4 in
  	$ac_cv_sizeof_long) SIZE32="long";;
  esac
  
@@ -6423,7 +6427,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -4642,57 +5135,95 @@ $ac_includes_default
+@@ -4642,57 +5139,95 @@ $ac_includes_default
  int
  main ()
  {
@@ -6549,7 +6553,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -4702,79 +5233,118 @@ $ac_includes_default
+@@ -4702,79 +5237,118 @@ $ac_includes_default
  int
  main ()
  {
@@ -6709,7 +6713,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4785,41 +5355,38 @@ $ac_includes_default
+@@ -4785,41 +5359,38 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -6772,7 +6776,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4828,81 +5395,78 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -4828,81 +5399,78 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -6900,7 +6904,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  _ACEOF
   SBPCD_H="-DSBPCD_H='1' "
  fi
-@@ -4912,19 +5476,21 @@ done
+@@ -4912,19 +5480,21 @@ done
  
  for ac_header in linux/ucdrom.h
  do
@@ -6933,7 +6937,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4935,41 +5501,38 @@ $ac_includes_default
+@@ -4935,41 +5505,38 @@ $ac_includes_default
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
@@ -6996,7 +7000,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4978,81 +5541,78 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -4978,81 +5545,78 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
  _ACEOF
@@ -7124,7 +7128,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  _ACEOF
   UCDROM_H="-DUCDROM_H='1' "
  fi
-@@ -5060,39 +5620,359 @@ fi
+@@ -5060,39 +5624,359 @@ fi
  done
  
  
@@ -7505,7 +7509,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  else
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -5108,10 +5988,10 @@ main ()
+@@ -5108,10 +5992,10 @@ main ()
  #ifndef __cplusplus
    /* Ultrix mips cc rejects this.  */
    typedef int charset[2];
@@ -7519,7 +7523,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    /* NEC SVR4.0.2 mips cc rejects this.  */
    struct point {int x, y;};
    static struct point const zero = {0,0};
-@@ -5120,16 +6000,17 @@ main ()
+@@ -5120,16 +6004,17 @@ main ()
       an arm of an if-expression whose if-part is not a constant
       expression */
    const char *g = "string";
@@ -7541,7 +7545,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    }
    { /* Someone thinks the Sun supposedly-ANSI compiler will reject this.  */
      int x[] = {25, 17};
-@@ -5148,7 +6029,9 @@ main ()
+@@ -5148,7 +6033,9 @@ main ()
    }
    { /* ULTRIX-32 V3.1 (Rev 9) vcc rejects this */
      const int foo = 10;
@@ -7551,7 +7555,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #endif
  
    ;
-@@ -5156,42 +6039,39 @@ main ()
+@@ -5156,42 +6043,39 @@ main ()
  }
  _ACEOF
  rm -f conftest.$ac_objext
@@ -7614,7 +7618,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  _ACEOF
  
  fi
-@@ -5204,7 +6084,13 @@ fi
+@@ -5204,7 +6088,13 @@ fi
  
  
  
@@ -7629,7 +7633,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
  # tests run on this system so they can be shared between configure
-@@ -5223,39 +6109,59 @@ _ACEOF
+@@ -5223,39 +6113,59 @@ _ACEOF
  
  # The following way of writing the cache mishandles newlines in values,
  # but we know of no workaround that is simple, portable, and efficient.
@@ -7705,7 +7709,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    fi
  fi
  rm -f confcache
-@@ -5264,63 +6170,54 @@ test "x$prefix" = xNONE && prefix=$ac_de
+@@ -5264,63 +6174,54 @@ test "x$prefix" = xNONE && prefix=$ac_de
  # Let make expand exec_prefix.
  test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
  
@@ -7802,7 +7806,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  done
  LIBOBJS=$ac_libobjs
  
-@@ -5329,11 +6226,12 @@ LTLIBOBJS=$ac_ltlibobjs
+@@ -5329,11 +6230,12 @@ LTLIBOBJS=$ac_ltlibobjs
  
  
  : ${CONFIG_STATUS=./config.status}
@@ -7818,7 +7822,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  #! $SHELL
  # Generated by $as_me.
  # Run this file to recreate the current configuration.
-@@ -5346,22 +6244,78 @@ ac_cs_silent=false
+@@ -5346,22 +6248,78 @@ ac_cs_silent=false
  SHELL=\${CONFIG_SHELL-$SHELL}
  _ACEOF
  
@@ -7903,7 +7907,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
  # Support unset when possible.
  if ( (MAIL=60; unset MAIL) || exit) >/dev/null 2>&1; then
-@@ -5371,33 +6325,60 @@ else
+@@ -5371,33 +6329,60 @@ else
  fi
  
  
@@ -7978,7 +7982,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
    as_basename=basename
  else
    as_basename=false
-@@ -5405,159 +6386,122 @@ fi
+@@ -5405,159 +6390,122 @@ fi
  
  
  # Name of the executable.
@@ -8216,7 +8220,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
  if mkdir -p . 2>/dev/null; then
    as_mkdir_p=:
-@@ -5566,7 +6510,28 @@ else
+@@ -5566,7 +6514,28 @@ else
    as_mkdir_p=false
  fi
  
@@ -8246,7 +8250,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
  # Sed expression to map a string onto a valid CPP name.
  as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
-@@ -5575,31 +6540,14 @@ as_tr_cpp="eval sed 'y%*$as_cr_letters%P
+@@ -5575,31 +6544,14 @@ as_tr_cpp="eval sed 'y%*$as_cr_letters%P
  as_tr_sh="eval sed 'y%*+%pp%;s%[^_$as_cr_alnum]%_%g'"
  
  
@@ -8282,7 +8286,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -5607,124 +6555,106 @@ generated by GNU Autoconf 2.59.  Invocat
+@@ -5607,124 +6559,108 @@ generated by GNU Autoconf 2.59.  Invocat
    CONFIG_COMMANDS = $CONFIG_COMMANDS
    $ $0 $@
  
@@ -8401,6 +8405,8 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
 -_ACEOF
 -cat >>$CONFIG_STATUS <<\_ACEOF
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
      ac_cs_recheck=: ;;
 -  --version | --vers* | -V )
 -    echo "$ac_cs_version"; exit 0 ;;
@@ -8451,7 +8457,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
    esac
    shift
-@@ -5738,32 +6668,48 @@ if $ac_cs_silent; then
+@@ -5738,32 +6674,48 @@ if $ac_cs_silent; then
  fi
  
  _ACEOF
@@ -8513,7 +8519,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  # If the user did not use the arguments to specify the items to instantiate,
  # then the envvar interface is used.  Set only those that are not.
  # We use the long form for the default assignment because of an extremely
-@@ -5773,344 +6719,464 @@ if $ac_need_defaults; then
+@@ -5773,344 +6725,464 @@ if $ac_need_defaults; then
  fi
  
  # Have a temporary directory for convenience.  Make it in the build tree
@@ -9257,7 +9263,7 @@ $NetBSD: patch-ac,v 1.10 2010/12/15 21:08:30 chuck Exp $
  
  # configure is writing to config.log, and then calls config.status.
  # config.status does its own redirection, appending to config.log.
-@@ -6132,4 +7198,8 @@ if test "$no_create" != yes; then
+@@ -6132,4 +7204,8 @@ if test "$no_create" != yes; then
    # would make configure fail if this is the last instruction.
    $ac_cs_success || { (exit 1); exit 1; }
  fi

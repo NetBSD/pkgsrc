@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2010/12/15 21:08:30 chuck Exp $
+$NetBSD: patch-aa,v 1.8 2013/12/12 16:41:32 jperkin Exp $
 
---- configure.in.orig	2006-08-16 20:02:25.000000000 +0200
+--- configure.in.orig	2006-08-16 18:02:25.000000000 +0000
 +++ configure.in
 @@ -12,6 +12,25 @@ AC_PROG_RANLIB
  AC_CHECK_PROG(AR,ar,ar)
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.7 2010/12/15 21:08:30 chuck Exp $
 +  EXTRA_OBJS="cooked_interface.o scsi_interface.o"
 +  EXTRA_LIBS=-lrt
 +  ;;
-+*-*-netbsd*)
++*-*-netbsd*|*-*-solaris*)
 +  EXTRA_OBJS=scsi_interface.o
 +  EXTRA_LIBS=
 +  ;;
