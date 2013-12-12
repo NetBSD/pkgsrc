@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4465 2013/12/11 21:39:20 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.4466 2013/12/12 00:56:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6603,3 +6603,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated converters/fribidi to 0.19.6 [wiz 2013-12-11]
 	Updated x11/xf86-video-mga to 1.6.3 [wiz 2013-12-11]
 	Updated www/varnish to 3.0.5 [root 2013-12-11]
+	Updated textproc/p5-PDF-Create to 1.08 [wen 2013-12-12]
