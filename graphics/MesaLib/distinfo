@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2013/11/29 15:27:19 bsiegert Exp $
+$NetBSD: distinfo,v 1.83 2013/12/12 14:44:10 is Exp $
 
 SHA1 (Mesa-7.11.2/MesaGLUT-7.11.2.tar.bz2) = 2e6e730204800a0748b301a5f58b86332699788b
 RMD160 (Mesa-7.11.2/MesaGLUT-7.11.2.tar.bz2) = bb2b140375aa13df79fcdb60a7ad0a63622dc531
@@ -13,6 +13,7 @@ SHA1 (patch-include_GL_gl.h) = a97ab309556c78d818d0b8bd867b5f2412c141b0
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = 934e2505fe299e1a25da6def2f971fa1302840c0
 SHA1 (patch-src_glsl_ir__constant__expression.cpp) = 281e281f51afed244b1a29b92942d572fc095124
 SHA1 (patch-src_glu_sgi_glu.exports) = 66609d2ea59b02fc46b41311b0042fe4a2da517f
+SHA1 (patch-src_glx_XF86dri.c) = b69b7cf5e0d617eca129f0d7f0b06c7603d00db0
 SHA1 (patch-src_mesa_drivers_dri_common_dri__util.h) = 53e63dcc6243b1872f4e4816b46e92910cf97edc
 SHA1 (patch-src_mesa_drivers_dri_common_mmio.h) = b6da48111fb2792b1c71eb7549d0f03adceec9f1
 SHA1 (patch-src_mesa_drivers_dri_i915_intel__batchbuffer.c) = fec8b1a9f6888e9a4225861ea5bda776ecc5f054
