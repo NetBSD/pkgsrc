@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/10/10 14:41:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2013/12/12 01:28:45 prlw1 Exp $
 #
 
 DISTNAME=	gtksourceview-3.6.0
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
+CONFIGURE_ARGS+=	--disable-deprecations
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 PKGCONFIG_OVERRIDE+=	gtksourceview-3.0.pc.in
 
