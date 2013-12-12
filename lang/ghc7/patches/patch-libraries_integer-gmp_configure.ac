@@ -1,0 +1,42 @@
+$NetBSD: patch-libraries_integer-gmp_configure.ac,v 1.1 2013/12/12 12:47:17 obache Exp $
+
+In Darwin, integer-gmp prefers GMP.framework when it happens to be
+installed somewhere in the system, even though it doesn't come with
+Darwin. Let it stop that. (Already fixed in the upstream.)
+
+
+--- libraries/integer-gmp/configure.ac.orig	2013-01-27 13:36:41.000000000 +0000
++++ libraries/integer-gmp/configure.ac
+@@ -45,18 +45,20 @@ dnl-------------------------------------
+ dnl * Mac OS X only: check for GMP.framework
+ dnl--------------------------------------------------------------------
+ 
+-case $target_os in
+-  darwin*)
+-    AC_MSG_CHECKING([for GMP.framework])
+-    save_libs="$LIBS"
+-    LIBS="-framework GMP"
+-    AC_TRY_LINK_FUNC(__gmpz_fdiv_qr,
+-      [HaveFrameworkGMP=YES; GMP_FRAMEWORK=GMP; GMP_LIBS=],
+-      [HaveFrameworkGMP=NO])
+-    LIBS="$save_libs"
+-    AC_MSG_RESULT([$HaveFrameworkGMP])
+-    ;;
+-esac
++if test "$HaveLibGmp" = "NO"; then
++  case $target_os in
++    darwin*)
++      AC_MSG_CHECKING([for GMP.framework])
++      save_libs="$LIBS"
++      LIBS="-framework GMP"
++      AC_TRY_LINK_FUNC(__gmpz_fdiv_qr,
++        [HaveFrameworkGMP=YES; GMP_FRAMEWORK=GMP],
++        [HaveFrameworkGMP=NO])
++      LIBS="$save_libs"
++      AC_MSG_RESULT([$HaveFrameworkGMP])
++      ;;
++  esac
++fi
+ 
+ AC_CHECK_HEADER([gmp.h], , [HaveFrameworkGMP=NO; HaveLibGmp=NO; GMP_LIBS=])
+ 
