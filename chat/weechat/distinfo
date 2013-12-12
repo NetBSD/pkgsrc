@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2013/08/30 16:56:56 joerg Exp $
+$NetBSD: distinfo,v 1.27 2013/12/12 20:17:56 jperkin Exp $
 
 SHA1 (weechat-0.4.1.tar.bz2) = a5185d6b8a2b330713ea354f06601a205270e3a2
 RMD160 (weechat-0.4.1.tar.bz2) = 07cf6554b0238a2dd41da94483d62573789fe97b
@@ -7,3 +7,8 @@ SHA1 (patch-ab) = d0fac0994602dfa0afde9fe14487f44f8cce25d6
 SHA1 (patch-po_CMakeLists.txt) = 518c8c1347fc2bcdd15dfd83e48af7f08b7527be
 SHA1 (patch-src_gui_curses_CMakeLists_txt) = 06f18d1efd21e9aeab6931e8d2018885e709c745
 SHA1 (patch-src_gui_curses_gui-curses-term_c) = ba9e6a8bbb17356fbd9421aba4f3225bb7d6b9da
+SHA1 (patch-src_plugins_charset_charset.c) = f0b6e5268908caab5efa8048c8a55b0083ec0ca4
+SHA1 (patch-src_plugins_irc_irc-protocol.c) = 263a0cf3e77618d67bc521af1469585d21f2d3cf
+SHA1 (patch-src_plugins_logger_logger.c) = 36d465728191f61d0a7d76b888f437b056817922
+SHA1 (patch-src_plugins_script_script-repo.c) = c9eed9b991fa24c5fc41ae5596cb0b2cf3edbe62
+SHA1 (patch-src_plugins_xfer_xfer-dcc.c) = 242fe1d690bb5a6485e57e61df7969010e91c9f8
