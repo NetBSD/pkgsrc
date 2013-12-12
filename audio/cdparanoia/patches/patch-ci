@@ -1,8 +1,8 @@
-$NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
+$NetBSD: patch-ci,v 1.10 2013/12/12 16:41:32 jperkin Exp $
 
---- interface/interface.c.orig	2008-09-11 06:43:52.000000000 -0400
-+++ interface/interface.c	2010-12-15 23:41:29.000000000 -0500
-@@ -35,6 +35,10 @@
+--- interface/interface.c.orig	2008-09-11 10:43:52.000000000 +0000
++++ interface/interface.c
+@@ -35,6 +35,10 @@ int cdda_close(cdrom_drive *d){
  
      _clean_messages(d);
      if(d->cdda_device_name)free(d->cdda_device_name);
@@ -13,7 +13,7 @@ $NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
      if(d->ioctl_device_name)free(d->ioctl_device_name);
      if(d->drive_model)free(d->drive_model);
      if(d->cdda_fd!=-1)close(d->cdda_fd);
-@@ -43,6 +47,19 @@
+@@ -43,6 +47,19 @@ int cdda_close(cdrom_drive *d){
        if(d->private->sg_hd)free(d->private->sg_hd);
        free(d->private);
      }
@@ -33,7 +33,7 @@ $NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
  
      free(d);
    }
-@@ -55,22 +72,31 @@
+@@ -55,22 +72,32 @@ int cdda_open(cdrom_drive *d){
    if(d->opened)return(0);
  
    switch(d->interface){
@@ -42,6 +42,7 @@ $NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
 +    if((ret=osx_open_device(d)))
 +      return ret;
 +    break;
++#elif defined(__sun)
 +#else
    case SGIO_SCSI_BUGGY1:  
    case SGIO_SCSI:  
@@ -49,7 +50,7 @@ $NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
      if((ret=scsi_init_drive(d)))
        return(ret);
      break;
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__sun)
    case COOKED_IOCTL:  
      if((ret=cooked_init_drive(d)))
        return(ret);
@@ -65,7 +66,7 @@ $NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
    default:
      cderror(d,"100: Interface not supported\n");
      return(-100);
-@@ -113,7 +139,7 @@
+@@ -113,7 +140,7 @@ long cdda_read_timed(cdrom_drive *d, voi
      if(sectors>0){
        sectors=d->read_audio(d,buffer,beginsector,sectors);
  
@@ -74,7 +75,7 @@ $NetBSD: patch-ci,v 1.9 2010/12/16 04:55:46 chuck Exp $
  	/* byteswap? */
  	if(d->bigendianp==-1) /* not determined yet */
  	  d->bigendianp=data_bigendianp(d);
-@@ -127,7 +153,9 @@
+@@ -127,7 +154,9 @@ long cdda_read_timed(cdrom_drive *d, voi
  	}
        }	
      }
