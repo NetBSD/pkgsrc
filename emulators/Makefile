@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2013/12/06 10:21:26 obache Exp $
+# $NetBSD: Makefile,v 1.208 2013/12/12 02:36:46 obache Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -238,6 +238,8 @@ SUBDIR+=	suse131_32_libwrap
 SUBDIR+=	suse131_32_libxml2
 SUBDIR+=	suse131_32_locale
 SUBDIR+=	suse131_32_motif
+SUBDIR+=	suse131_32_mozilla-nspr
+SUBDIR+=	suse131_32_mozilla-nss
 SUBDIR+=	suse131_32_openldap
 SUBDIR+=	suse131_32_openssl
 SUBDIR+=	suse131_32_pulseaudio
@@ -272,6 +274,8 @@ SUBDIR+=	suse131_libxml2
 #SUBDIR+=	suse131_linux		# only contains Makefile fragments
 SUBDIR+=	suse131_locale
 SUBDIR+=	suse131_motif
+SUBDIR+=	suse131_mozilla-nspr
+SUBDIR+=	suse131_mozilla-nss
 SUBDIR+=	suse131_openldap
 SUBDIR+=	suse131_openssl
 SUBDIR+=	suse131_pulseaudio
