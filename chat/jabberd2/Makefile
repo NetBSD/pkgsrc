@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2013/12/12 23:01:02 schnoebe Exp $
+# $NetBSD: Makefile,v 1.88 2013/12/12 23:04:08 schnoebe Exp $
 
 DISTNAME=	jabberd-2.3.1
 CATEGORIES=	chat
 MASTER_SITES=	https://github.com/jabberd2/jabberd2/releases/download/${DISTNAME}/
 EXTRACT_SUFX=	.tar.xz
-FETCH_USING=	curl
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://jabberd2.org/
