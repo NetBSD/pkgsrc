@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4470 2013/12/12 04:45:20 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4471 2013/12/12 06:31:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6612,3 +6612,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/xpdfopen to 0.83 [minskim 2013-12-12]
 	Updated print/tex-pdftools to 0.83 [minskim 2013-12-12]
 	Updated print/tex-pdftools-doc to 0.83 [minskim 2013-12-12]
+	Updated devel/p5-Config-Tiny to 2.20 [wen 2013-12-12]
