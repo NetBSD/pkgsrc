@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4466 2013/12/12 00:56:14 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4467 2013/12/12 01:31:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6604,3 +6604,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xf86-video-mga to 1.6.3 [wiz 2013-12-11]
 	Updated www/varnish to 3.0.5 [root 2013-12-11]
 	Updated textproc/p5-PDF-Create to 1.08 [wen 2013-12-12]
+	Updated databases/p5-Data-Table to 1.68 [wen 2013-12-12]
