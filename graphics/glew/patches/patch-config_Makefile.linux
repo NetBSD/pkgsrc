@@ -1,8 +1,16 @@
-$NetBSD: patch-config_Makefile.linux,v 1.3 2013/08/04 18:00:52 adam Exp $
+$NetBSD: patch-config_Makefile.linux,v 1.4 2013/12/12 10:21:07 markd Exp $
+
+Don't install into $PREFIX/lib64
 
 --- config/Makefile.linux.orig	2013-07-22 14:11:22.000000000 +0000
 +++ config/Makefile.linux
-@@ -16,7 +16,7 @@ else
+@@ -11,12 +11,12 @@ ifeq (ppc64,${M_ARCH})
+ endif
+ ifeq (${ARCH64},true)
+   LDFLAGS.EXTRA = -L/usr/X11R6/lib64 -L/usr/lib64
+-  LIBDIR = $(GLEW_DEST)/lib64
++  LIBDIR = $(GLEW_DEST)/lib
+ else
    LDFLAGS.EXTRA = -L/usr/X11R6/lib -L/usr/lib
    LIBDIR = $(GLEW_DEST)/lib
  endif
