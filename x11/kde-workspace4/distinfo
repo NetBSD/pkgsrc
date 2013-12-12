@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2013/11/07 13:35:56 markd Exp $
+$NetBSD: distinfo,v 1.10 2013/12/12 11:09:28 markd Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -29,7 +29,9 @@ SHA1 (patch-ksysguard_ksysguardd_NetBSD_Memory.h) = e58dc4a0a7be7350251f26de34a8
 SHA1 (patch-ksysguard_ksysguardd_NetBSD_ProcessList.c) = 0921fe9569bd54f5e381ebead738b95e431bb1d5
 SHA1 (patch-ksysguard_ksysguardd_Solaris_LoadAvg.c) = bc3c434d09485cdf03a357ab5621271adcc3627b
 SHA1 (patch-kwin_effects_mousemark_mousemark.cpp) = 4b6625f9bebf6bd2c6057d7045d9ce6af3103578
+SHA1 (patch-kwin_glxbackend.cpp) = a5e954a70e943a2d40d35f8a49b611b03d072af6
 SHA1 (patch-kwin_killer_killer.cpp) = b64133ee8b96e4275ed1cbe68a64630e08f77154
+SHA1 (patch-kwin_scene_opengl.cpp) = 53de757225b74ddf85609b2ec920659964940e59
 SHA1 (patch-libs_ksysguard_ksgrd_SensorManager.cpp) = 5fa92fa4876514198813f900f71f3364794b8248
 SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eacb7db79de0ae5eaf80
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
