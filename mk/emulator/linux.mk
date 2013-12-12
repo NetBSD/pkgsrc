@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.21 2013/12/10 10:17:28 prlw1 Exp $
+# $NetBSD: linux.mk,v 1.22 2013/12/12 02:34:28 obache Exp $
 #
 # Linux binary emulation framework
 #
@@ -80,6 +80,8 @@ _EMUL_MODULES+=		libssh
 _EMUL_MODULES+=		libwrap
 _EMUL_MODULES+=		locale
 _EMUL_MODULES+=		motif
+_EMUL_MODULES+=		nspr
+_EMUL_MODULES+=		nss
 _EMUL_MODULES+=		openldap
 _EMUL_MODULES+=		openssl
 _EMUL_MODULES+=		png

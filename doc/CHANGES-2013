@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4467 2013/12/12 01:31:35 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4468 2013/12/12 02:34:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6605,3 +6605,7 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/varnish to 3.0.5 [root 2013-12-11]
 	Updated textproc/p5-PDF-Create to 1.08 [wen 2013-12-12]
 	Updated databases/p5-Data-Table to 1.68 [wen 2013-12-12]
+	Added emulators/suse131_32_mozilla-nspr version 13.1 [obache 2013-12-12]
+	Added emulators/suse131_32_mozilla-nss version 13.1 [obache 2013-12-12]
+	Added emulators/suse131_mozilla-nspr version 13.1 [obache 2013-12-12]
+	Added emulators/suse131_mozilla-nss version 13.1 [obache 2013-12-12]
