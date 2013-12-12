@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/11/26 13:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/12 12:45:44 jperkin Exp $
 
 DISTNAME=	itstool-2.0.1
 CATEGORIES=	textproc
@@ -17,4 +17,5 @@ REPLACE_PYTHON=	${WRKSRC}/itstool.in
 DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
