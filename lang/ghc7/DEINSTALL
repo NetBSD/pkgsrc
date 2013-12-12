@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+DISTNAME="@DISTNAME@"
+
+case ${STAGE} in
+    DEINSTALL)
+        ${RM} -f ${PKG_PREFIX}/lib/${DISTNAME}/package.conf.d/package.cache
+        ;;
+esac
