@@ -1,6 +1,14 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2012/03/19 19:44:03 markd Exp $
-bin/solid-network
+@comment $NetBSD: PLIST.Linux,v 1.2 2013/12/12 00:14:26 markd Exp $
+bin/kwin_gles
 lib/kde4/kcm_joystick.so
-lib/kde4/solid_modemmanager04.so
+lib/kde4/kwin4_effect_gles_builtins.so
+lib/kde4/libexec/backlighthelper
+lib/libkdeinit4_kwin_gles.so
+lib/libkwinglesutils.so
+lib/libkwinglesutils.so.1
+lib/libkwinglesutils.so.1.0.0
+share/dbus-1/system-services/org.kde.powerdevil.backlighthelper.service
+share/examples/kde4-dbus/org.kde.powerdevil.backlighthelper.conf
 share/kde4/services/joystick.desktop
-share/kde4/services/solidbackends/solid_modemmanager04.desktop
+share/PolicyKit/policy/org.kde.powerdevil.backlighthelper.policy
+
