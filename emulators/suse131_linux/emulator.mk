@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.1 2013/12/05 11:42:16 obache Exp $
+# $NetBSD: emulator.mk,v 1.2 2013/12/12 02:34:28 obache Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -44,6 +44,8 @@ DEPENDS_suse-13.1.libssh?=	suse_libssh${_SUSE_VERSION_REQD}:../../emulators/suse
 DEPENDS_suse-13.1.libwrap?=	suse_libwrap${_SUSE_VERSION_REQD}:../../emulators/suse131_libwrap
 DEPENDS_suse-13.1.locale?=	suse_locale${_SUSE_VERSION_REQD}:../../emulators/suse131_locale
 DEPENDS_suse-13.1.motif?=	suse_motif${_SUSE_VERSION_REQD}:../../emulators/suse131_motif
+DEPENDS_suse-13.1.nss?=		suse_mozilla-nss${_SUSE_VERSION_REQD}:../../emulators/suse131_mozilla-nss
+DEPENDS_suse-13.1.nspr?=	suse_mozilla-nspr${_SUSE_VERSION_REQD}:../../emulators/suse131_mozilla-nspr
 DEPENDS_suse-13.1.openldap?=	suse_openldap${_SUSE_VERSION_REQD}:../../emulators/suse131_openldap
 DEPENDS_suse-13.1.openssl?=	suse_openssl${_SUSE_VERSION_REQD}:../../emulators/suse131_openssl
 DEPENDS_suse-13.1.png?=		suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse131_libpng
