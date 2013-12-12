@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2013/11/12 18:57:25 adam Exp $
+# $NetBSD: Makefile,v 1.33 2013/12/12 11:34:23 jperkin Exp $
 
 .include "dist.mk"
 
@@ -112,6 +112,12 @@ PLIST.extra-so=	yes
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
+.endif
+
+# For Xcode 5 we need to search the SDK path for headers, otherwise certain
+# modules will not be built.
+.if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH}/usr/include)
+CFLAGS+=		-I${OSX_SDK_PATH}/usr/include
 .endif
 
 PLIST_VARS+=	dll nis no-nis
