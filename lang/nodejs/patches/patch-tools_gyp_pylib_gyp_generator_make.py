@@ -1,11 +1,11 @@
-$NetBSD: patch-tools_gyp_pylib_gyp_generator_make.py,v 1.2 2013/06/26 11:53:02 jperkin Exp $
+$NetBSD: patch-tools_gyp_pylib_gyp_generator_make.py,v 1.3 2013/12/12 11:52:37 jperkin Exp $
 
 Add support for NetBSD and DragonFly.
 Ensure we use the system libtool on OSX.
 
---- tools/gyp/pylib/gyp/generator/make.py.orig	2013-06-13 17:35:30.000000000 +0000
+--- tools/gyp/pylib/gyp/generator/make.py.orig	2013-12-12 05:20:06.000000000 +0000
 +++ tools/gyp/pylib/gyp/generator/make.py
-@@ -161,7 +161,7 @@ cmd_solink_module = $(LINK.$(TOOLSET)) -
+@@ -174,7 +174,7 @@ cmd_solink_module = $(LINK.$(TOOLSET)) -
  
  LINK_COMMANDS_MAC = """\
  quiet_cmd_alink = LIBTOOL-STATIC $@
@@ -14,9 +14,9 @@ Ensure we use the system libtool on OSX.
  
  quiet_cmd_link = LINK($(TOOLSET)) $@
  cmd_link = $(LINK.$(TOOLSET)) $(GYP_LDFLAGS) $(LDFLAGS.$(TOOLSET)) -o "$@" $(LD_INPUTS) $(LIBS)
-@@ -1984,7 +1984,7 @@ def GenerateOutput(target_list, target_d
+@@ -2012,7 +2012,7 @@ def GenerateOutput(target_list, target_d
+         'flock': './gyp-flock-tool flock',
          'flock_index': 2,
-         'extra_commands': SHARED_HEADER_SUN_COMMANDS,
      })
 -  elif flavor == 'freebsd':
 +  elif flavor == 'freebsd' or flavor == 'dragonflybsd' or flavor == 'netbsd':
