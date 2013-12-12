@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4469 2013/12/12 04:22:21 minskim Exp $
+$NetBSD: CHANGES-2013,v 1.4470 2013/12/12 04:45:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6610,3 +6610,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added emulators/suse131_mozilla-nspr version 13.1 [obache 2013-12-12]
 	Added emulators/suse131_mozilla-nss version 13.1 [obache 2013-12-12]
 	Updated print/xpdfopen to 0.83 [minskim 2013-12-12]
+	Updated print/tex-pdftools to 0.83 [minskim 2013-12-12]
+	Updated print/tex-pdftools-doc to 0.83 [minskim 2013-12-12]
