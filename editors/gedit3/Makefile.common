@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2012/10/29 14:48:41 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/12/12 01:30:04 prlw1 Exp $
 # used by editors/gedit3/Makefile
 # used by editors/gedit3-spell/Makefile
 
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 PY_PATCHPLIST=		yes
 
 CONFIGURE_ARGS+=	--disable-updater
+CONFIGURE_ARGS+=	--disable-deprecations
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
