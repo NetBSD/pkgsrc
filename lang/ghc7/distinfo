@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2013/12/12 12:47:17 obache Exp $
+
+SHA1 (ghc-7.6.3-boot-i386-unknown-netbsd.tar.xz) = 9fc2f538da69ede96f0754e0cf5d376280c5f2ee
+RMD160 (ghc-7.6.3-boot-i386-unknown-netbsd.tar.xz) = 4f188f1b7ba992cc1a1436aac68d11ef78f7714c
+Size (ghc-7.6.3-boot-i386-unknown-netbsd.tar.xz) = 28258276 bytes
+SHA1 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 0d6da7f192a25d154f46554777909f19002a48a3
+RMD160 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 9995bf052e5737074692a107d5210663759d796c
+Size (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 28766012 bytes
+SHA1 (ghc-7.6.3-src.tar.bz2) = 8938e1ef08b37a4caa071fa169e79a3001d065ff
+RMD160 (ghc-7.6.3-src.tar.bz2) = 82a673ed38b7cf9a59afeb01057625fc761a822b
+Size (ghc-7.6.3-src.tar.bz2) = 110763823 bytes
+SHA1 (patch-Makefile) = a6692a4a90b8003a8719c51d82d15f5af0ba1907
+SHA1 (patch-ghc.mk) = c4210aaa3e2b4a319b0b70da375ac89fddde5cb7
+SHA1 (patch-libraries_integer-gmp_configure.ac) = bc5ce3a6c39d681c413eb08b66e7287e39406fe0
+SHA1 (patch-libraries_integer-simple_GHC_Integer.hs) = f079285bc489c194959b9bee2aa5c977ec77ae1e
+SHA1 (patch-libraries_integer-simple_GHC_Integer_Type.hs) = b3140e169726f78f6d3b4edcd4cc119b6f767bfa
+SHA1 (patch-rts_Linker.c) = 86c080636fd9b983baeb05f26a90282ffa6eec34
+SHA1 (patch-rts_StgCRun.c) = dcbc883cb4826aeccac0be09647b7889c7809271
+SHA1 (patch-rts_ghc.mk) = 4dd33c5ac593736a9fa0fdbdd65df90549fac771
