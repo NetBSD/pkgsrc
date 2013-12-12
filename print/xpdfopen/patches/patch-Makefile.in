@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/10/27 18:42:48 minskim Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/12/12 04:21:28 minskim Exp $
 
 --- Makefile.in.orig	2011-05-19 07:58:35.000000000 +0000
 +++ Makefile.in
 @@ -208,7 +208,7 @@ top_srcdir = @top_srcdir@
  ACLOCAL_AMFLAGS = -I ../../m4
+ AM_CPPFLAGS = $(X_CFLAGS)
  AM_CFLAGS = $(WARNING_CFLAGS)
- INCLUDES = $(X_CFLAGS)
 -LDADD = $(X_LIBS) -lX11 -lXmu $(X_EXTRA_LIBS)
 +LDADD = $(X_LIBS) -lX11 $(X_EXTRA_LIBS)
  common_sources = sendx.c sendx.h utils.c utils.h xpdfopen.h
