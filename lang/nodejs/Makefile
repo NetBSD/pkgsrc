@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/12/12 11:52:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2013/12/12 11:53:38 jperkin Exp $
 #
 
 DISTNAME=	node-v0.10.23
@@ -58,7 +58,7 @@ BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 pre-install:
 	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
 
-if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../lang/python/application.mk"
