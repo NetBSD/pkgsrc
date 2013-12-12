@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4481 2013/12/12 12:47:47 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4482 2013/12/12 14:12:08 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6623,3 +6623,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Data-Peek to 0.39 [wen 2013-12-12]
 	Updated lang/nodejs to 0.10.23 [jperkin 2013-12-12]
 	Added lang/ghc7 version 7.6.3 [obache 2013-12-12]
+	Updated mail/opendkim to 2.9.0 [pettai 2013-12-12]
