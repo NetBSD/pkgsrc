@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/10/19 09:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.34 2013/12/12 12:58:31 jperkin Exp $
 #
 
 PKGVER=		0.8.8
@@ -25,8 +25,12 @@ PKGCONFIG_OVERRIDE=	libcompizconfig.pc.in
 
 INSTALLATION_DIRS=	${EGDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../devel/protobuf/buildlink3.mk"
+.if ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
+.endif
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
