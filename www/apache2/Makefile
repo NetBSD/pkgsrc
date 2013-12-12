@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2013/12/03 21:18:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.146 2013/12/12 12:24:47 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -238,9 +238,9 @@ post-install:
 		${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/sbin/$$file; \
 	done
 
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/httpd
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/include/httpd
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/httpd
+	${CHOWN} -RP ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/httpd
+	${CHOWN} -RP ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/include/httpd
+	${CHOWN} -RP ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/httpd
 	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/test-cgi
 	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/printenv
 
