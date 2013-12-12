@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.86 2013/11/01 21:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2013/12/12 23:01:02 schnoebe Exp $
 
-DISTNAME=	jabberd-2.2.17
-PKGREVISION=	11
+DISTNAME=	jabberd-2.3.1
 CATEGORIES=	chat
-MASTER_SITES=	http://cloud.github.com/downloads/jabberd2/jabberd2/
+MASTER_SITES=	https://github.com/jabberd2/jabberd2/releases/download/${DISTNAME}/
 EXTRACT_SUFX=	.tar.xz
+FETCH_USING=	curl
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://jabberd2.org/
@@ -64,7 +64,7 @@ FILES=			jabberd.cfg c2s.xml router.xml router-users.xml \
 			router-filter.xml s2s.xml sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
 			db-update.mysql	db-setup.sqlite db-update.sqlite
-DOCFILES=		README.protocol README UPGRADE ChangeLog
+DOCFILES=		README.protocol README README.config NEWS
 
 INSTALLATION_DIRS=	bin ${EGDIR} ${DOCDIR}
 
