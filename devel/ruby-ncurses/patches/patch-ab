@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/09/10 06:02:58 taca Exp $
+$NetBSD: patch-ab,v 1.2 2013/12/12 22:54:36 jperkin Exp $
+
+Disable TYPE_IPV4 on SunOS.
 
 --- form_wrap.c.orig	2009-07-31 10:52:36.000000000 +0000
 +++ form_wrap.c
@@ -18,16 +20,24 @@ $NetBSD: patch-ab,v 1.1 2010/09/10 06:02:58 taca Exp $
  		}
  		list[n] = NULL;
  		return INT2NUM(set_field_type(field, ftype, 
-@@ -652,7 +654,7 @@ static VALUE rbncurs_c_set_field_type(in
+@@ -652,13 +654,15 @@ static VALUE rbncurs_c_set_field_type(in
  	 if (argc != 2)
  		rb_raise(rb_eArgError, "TYPE_REGEXP requires one additional argument");
  	 return INT2NUM(set_field_type(field, ftype, 
 -											 STR2CSTR(arg3)));
 +											 StringValue(arg3)));
    }
++#ifndef __sun
    else if (ftype == TYPE_IPV4){	
  	 if (argc != 1)
-@@ -740,7 +742,7 @@ static VALUE rbncurs_m_field_pad(VALUE d
+ 		rb_raise(rb_eArgError, "TYPE_IPV4 has no additional arguments");
+ 	 return INT2NUM(set_field_type(field, ftype));
+   }
++#endif
+   else {	
+ 	 /*  It is a user-defined field type. */
+ 	 /*  Will store the arguments associated with this field */
+@@ -740,7 +744,7 @@ static VALUE rbncurs_m_field_pad(VALUE d
   */
  static VALUE rbncurs_c_set_field_buffer(VALUE rb_field, VALUE buf, VALUE value) {
    FIELD* field = get_field(rb_field);
@@ -36,7 +46,7 @@ $NetBSD: patch-ab,v 1.1 2010/09/10 06:02:58 taca Exp $
  }
  static VALUE rbncurs_m_set_field_buffer(VALUE dummy, VALUE rb_field, VALUE buf, VALUE value)
  { return rbncurs_c_set_field_buffer(rb_field, buf, value); }
-@@ -1044,13 +1046,15 @@ static VALUE rbncurs_m_form_opts(VALUE d
+@@ -1044,13 +1048,15 @@ static VALUE rbncurs_m_form_opts(VALUE d
   * form_requestname
   */
  static VALUE rbncurs_c_form_request_name(VALUE request) {
@@ -54,3 +64,13 @@ $NetBSD: patch-ab,v 1.1 2010/09/10 06:02:58 taca Exp $
  }
  static VALUE rbncurs_m_form_request_by_name(VALUE dummy, VALUE name)
  { return rbncurs_c_form_request_by_name(name); }
+@@ -1442,7 +1448,9 @@ void init_form(void)
+   rb_define_const(mForm, "TYPE_INTEGER", wrap_fieldtype(TYPE_INTEGER));
+   rb_define_const(mForm, "TYPE_NUMERIC", wrap_fieldtype(TYPE_NUMERIC));
+   rb_define_const(mForm, "TYPE_REGEXP", wrap_fieldtype(TYPE_REGEXP));
++#ifndef __sun
+   rb_define_const(mForm, "TYPE_IPV4", wrap_fieldtype(TYPE_IPV4));
++#endif
+ 
+ }
+ 

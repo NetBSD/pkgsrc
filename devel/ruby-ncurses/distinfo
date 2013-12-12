@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/05/20 17:32:34 marino Exp $
+$NetBSD: distinfo,v 1.7 2013/12/12 22:54:36 jperkin Exp $
 
 SHA1 (ncurses-ruby-1.2.4.tar.bz2) = b34ff1cf1147ab551855a5b2c63d2a034119fee2
 RMD160 (ncurses-ruby-1.2.4.tar.bz2) = 8f08b6c919abdcd6c86fc9d08e293ca3e79ec010
 Size (ncurses-ruby-1.2.4.tar.bz2) = 50858 bytes
 SHA1 (patch-aa) = e5e00403d95a8460b08a86285d2c27dd7e610a75
-SHA1 (patch-ab) = 53d40b6a1e2e12826249dba3c9d9c7c3d1d39afb
+SHA1 (patch-ab) = 0892f6c1c5becda387c5f44085638d90133fd573
 SHA1 (patch-ac) = 89d744e62122cd6a8054f69f54e360aaa731e15e
