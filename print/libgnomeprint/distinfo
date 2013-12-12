@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2013/08/16 09:01:48 wiz Exp $
+$NetBSD: distinfo,v 1.34 2013/12/12 01:04:14 markd Exp $
 
 SHA1 (libgnomeprint-2.18.8.tar.bz2) = cfb77148923b24b1651982a21b3cb55e312ff6d5
 RMD160 (libgnomeprint-2.18.8.tar.bz2) = 4f786ad61dc27177c350a5baa27cfc8b1140c32e
@@ -7,4 +7,7 @@ SHA1 (patch-aa) = 73dffa07cb1218b41784563dc822c08b3455fd59
 SHA1 (patch-ab) = 04499f4ce10315b894d85228588c24e9576f4df3
 SHA1 (patch-ac) = 907b2ec2c194ae10d7fe7eea6e2e52a128b5ca14
 SHA1 (patch-ad) = c414b9176635c90b95764ca9291a14718f7cfa00
+SHA1 (patch-libgnomeprint_gnome-font-face.c) = 187b423832684a3812a4a298193d0aac30dff25c
+SHA1 (patch-libgnomeprint_gnome-print-gdi.c) = f76d9e0d507de4681b13594176fe3f645903de07
+SHA1 (patch-libgnomeprint_gnome-rfont.c) = 8df1d055249bf735e0aa81783daf08735f206a96
 SHA1 (patch-libgnomeprint_grammar.y) = 57551905603957304b5b8b09d19ed38587a5ccaa
