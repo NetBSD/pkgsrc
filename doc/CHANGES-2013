@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4476 2013/12/12 07:55:23 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4477 2013/12/12 08:35:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6618,3 +6618,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Data-Alias to 1.18 [wen 2013-12-12]
 	Updated devel/p5-Data-Compare to 1.23 [wen 2013-12-12]
 	Updated devel/p5-Data-Dump to 1.22 [wen 2013-12-12]
+	Updated devel/p5-Data-Dump-Streamer to 2.36 [wen 2013-12-12]
