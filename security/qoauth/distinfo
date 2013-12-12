@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/09/16 20:03:31 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2013/12/12 10:03:42 markd Exp $
 
 SHA1 (qoauth-1.0.1-src.tar.bz2) = bc9bfd0afa68f584734b836f7e8e1687a117e3b2
 RMD160 (qoauth-1.0.1-src.tar.bz2) = f6cb736a4c4ca036f7bb3bc840243cf005febd3b
 Size (qoauth-1.0.1-src.tar.bz2) = 42298 bytes
+SHA1 (patch-src_src.pro) = 9fea8e0a290932af689e1dc67c339b9be5f2e213
