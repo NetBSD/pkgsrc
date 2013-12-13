@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4485 2013/12/13 02:13:49 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4486 2013/12/13 14:38:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6627,3 +6627,28 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/py-flask-script to 0.6.6 [kleink 2013-12-12]
 	Updated chat/jabberd2 to 2.3.1 [schnoebe 2013-12-12]
 	Updated emulators/suse131_libcurl to 13.1nb1 [obache 2013-12-13]
+	Added x11/qt5 version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-dbus version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-mysql version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-odbc version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-psql version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtbase version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtdeclarative version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtdoc version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtgraphicaleffects version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtimageformats version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtlocation version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtmultimedia version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtquick1 version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtquickcontrols version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtscript version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtsensors version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtserialport version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtsvg version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qttools version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qttranslations version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtwebkit version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtx11extras version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-qtxmlpatterns version 5.2.0rc1 [ryoon 2013-12-13]
+	Added x11/qt5-sqlite3 version 5.2.0rc1 [ryoon 2013-12-13]
+	Added inputmethod/qt5-uim version 1.8.6 [ryoon 2013-12-13]
