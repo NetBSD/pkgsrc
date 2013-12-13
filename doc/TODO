@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12783 2013/12/12 23:02:58 schnoebe Exp $
+$NetBSD: TODO,v 1.12784 2013/12/13 11:13:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -791,7 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mksh-47
 	o mkvtoolnix-6.6.0
 	o mnemosyne-2.2.1
-	o modular-xorg-server-1.14.4
+	o modular-xorg-server-1.14.5
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
 	o monit-5.1.1
@@ -872,6 +872,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
 	o php-jpgraph-3.0.6
+	o php-owncloud-6
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.10
