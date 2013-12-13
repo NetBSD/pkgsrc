@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.1 2013/02/28 23:03:58 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.2 2013/12/13 11:10:20 jperkin Exp $
 bin/sun6-appletviewer
 bin/sun6-apt
 bin/sun6-extcheck
@@ -1667,6 +1667,8 @@ java/sun-6/jre
 java/sun-6/lib/ct.sym
 java/sun-6/lib/dt.jar
 java/sun-6/lib/htmlconverter.jar
+java/sun-6/lib/${JAVA_ARCH}/libattach.so
+java/sun-6/lib/${JAVA_ARCH}/libsaproc.so
 java/sun-6/lib/ir.idl
 java/sun-6/lib/jconsole.jar
 java/sun-6/lib/orb.idl
