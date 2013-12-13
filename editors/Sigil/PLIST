@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/05 15:28:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/12/13 14:46:10 ryoon Exp $
 bin/sigil
 share/applications/sigil.desktop
 share/pixmaps/sigil.png
@@ -20,28 +20,37 @@ share/sigil/hunspell_dictionaries/hyph_en_GB.dic
 share/sigil/hunspell_dictionaries/hyph_en_US.dic
 share/sigil/hunspell_dictionaries/hyph_es.dic
 share/sigil/hunspell_dictionaries/hyph_fr.dic
+share/sigil/translations/sigil_ca.qm
 share/sigil/translations/sigil_cs.qm
 share/sigil/translations/sigil_da_DK.qm
 share/sigil/translations/sigil_de.qm
 share/sigil/translations/sigil_el_GR.qm
 share/sigil/translations/sigil_en.qm
-share/sigil/translations/sigil_es_ES.qm
+share/sigil/translations/sigil_es.qm
+share/sigil/translations/sigil_fi.qm
 share/sigil/translations/sigil_fr.qm
 share/sigil/translations/sigil_gl.qm
+share/sigil/translations/sigil_hu_HU.qm
 share/sigil/translations/sigil_id_ID.qm
 share/sigil/translations/sigil_is.qm
 share/sigil/translations/sigil_it.qm
 share/sigil/translations/sigil_ja.qm
+share/sigil/translations/sigil_kk.qm
 share/sigil/translations/sigil_km.qm
 share/sigil/translations/sigil_ko.qm
 share/sigil/translations/sigil_lv_LV.qm
 share/sigil/translations/sigil_nl.qm
 share/sigil/translations/sigil_pl.qm
+share/sigil/translations/sigil_pt.qm
 share/sigil/translations/sigil_pt_BR.qm
 share/sigil/translations/sigil_ro_RO.qm
 share/sigil/translations/sigil_ru.qm
 share/sigil/translations/sigil_sk.qm
 share/sigil/translations/sigil_tr_TR.qm
 share/sigil/translations/sigil_ug.qm
+share/sigil/translations/sigil_uk.qm
+share/sigil/translations/sigil_uk_UA.qm
+share/sigil/translations/sigil_vi.qm
+share/sigil/translations/sigil_vi_VN.qm
 share/sigil/translations/sigil_zh_CN.qm
 share/sigil/translations/sigil_zh_TW.qm
