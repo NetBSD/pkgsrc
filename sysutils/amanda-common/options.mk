@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2012/07/30 07:21:11 sbd Exp $
+# $NetBSD: options.mk,v 1.10 2013/12/13 12:42:12 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
 # Common options.
@@ -37,6 +37,9 @@ CONFIGURE_ENV+=		ac_cv_path_SSH=${SSHPREFIX}/bin/ssh
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
+.  if ${OPSYS} == "SunOS"
+USE_BUILTIN.mit-krb5=	no
+.  endif
 CONFIGURE_ARGS+=	--with-krb5-security=${KRB5BASE:Q}
 .  include "../../mk/krb5.buildlink3.mk"
 .endif
