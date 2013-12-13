@@ -1,0 +1,35 @@
+$NetBSD: patch-qtbase_configure,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+
+* Add NetBSD/sparc{,64} support
+
+--- qtbase/configure.orig	2013-11-27 01:00:28.000000000 +0000
++++ qtbase/configure
+@@ -2663,6 +2663,19 @@ if [ -z "$PLATFORM" ]; then
+      UNIX_SV:*)
+         PLATFORM=unixware-g++
+         ;;
++    NetBSD:*:sparc)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC"
++        fi
++        CFG_HOST_ARCH=sparc
++        ;;
++    NetBSD:*:sparc64)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC64"
++        fi
++        CFG_HOST_ARCH=sparc
++        CFG_HOST_BITSIZE=64
++        ;;
+      QNX:*)
+         PLATFORM=unsupported/qnx-g++
+         ;;
+@@ -6230,7 +6243,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+ [ "$CFG_PNG" != "yes" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_PNG"
+ [ "$CFG_JPEG" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IMAGEFORMAT_JPEG"
+ [ "$CFG_ZLIB" != "yes" ]     && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_ZLIB"
+-[ "$CFG_DBUS" = "no" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_DBUS"
++#[ "$CFG_DBUS" = "no" ]      && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_DBUS"
+ 
+ # X11/Unix/Mac only configs
+ [ "$CFG_CUPS" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_CUPS"

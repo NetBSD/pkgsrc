@@ -1,0 +1,15 @@
+$NetBSD: patch-qt5_immodule_quimplatforminputcontextplugin.pro.in,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+
+* Add DESTDIR support, fix unprivileged build
+
+--- qt5/immodule/quimplatforminputcontextplugin.pro.in.orig	2013-12-13 13:28:40.000000000 +0000
++++ qt5/immodule/quimplatforminputcontextplugin.pro.in
+@@ -11,6 +11,8 @@ LIBS += @X11_LIBS@ -luim-counted-init
+ 
+ QT += gui-private
+ 
++DESTDIR = quimplatforminputcontext_DEST
++
+ # Input
+ HEADERS += @srcdir@/quimplatforminputcontext.h \
+            @srcdir@/../../qt4/immodule/candidatewindowproxy.h \
