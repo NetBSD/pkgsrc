@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2013/07/12 10:45:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2013/12/13 12:42:12 jperkin Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
 PKGREVISION=		4
@@ -8,9 +8,8 @@ COMMENT=		Common libraries and binaries for Amanda
 
 .include "../../sysutils/amanda-common/Makefile.common"
 
-.if ${OPSYS} == "SunOS"
-CPPFLAGS+=		-D_LARGEFILE64_SOURCE
-.endif
+CPPFLAGS.SunOS+=	-D_LARGEFILE64_SOURCE
+LDFLAGS.SunOS+=		-lsocket
 
 CONFIGURE_ARGS+=	--without-server --without-client --without-gnuplot
 
