@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.719 2013/12/01 11:57:36 adam Exp $
+# $NetBSD: Makefile,v 1.720 2013/12/13 14:39:24 ryoon Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -386,6 +386,31 @@ SUBDIR+=	qt4-qscintilla
 SUBDIR+=	qt4-sqlite3
 SUBDIR+=	qt4-tiff
 SUBDIR+=	qt4-tools
+SUBDIR+=	qt5
+SUBDIR+=	qt5-dbus
+SUBDIR+=	qt5-ibus
+SUBDIR+=	qt5-mysql
+SUBDIR+=	qt5-odbc
+SUBDIR+=	qt5-psql
+SUBDIR+=	qt5-qtbase
+SUBDIR+=	qt5-qtdeclarative
+SUBDIR+=	qt5-qtdoc
+SUBDIR+=	qt5-qtgraphicaleffects
+SUBDIR+=	qt5-qtimageformats
+SUBDIR+=	qt5-qtlocation
+SUBDIR+=	qt5-qtmultimedia
+SUBDIR+=	qt5-qtquick1
+SUBDIR+=	qt5-qtquickcontrols
+SUBDIR+=	qt5-qtscript
+SUBDIR+=	qt5-qtsensors
+SUBDIR+=	qt5-qtserialport
+SUBDIR+=	qt5-qtsvg
+SUBDIR+=	qt5-qttools
+SUBDIR+=	qt5-qttranslations
+SUBDIR+=	qt5-qtwebkit
+SUBDIR+=	qt5-qtx11extras
+SUBDIR+=	qt5-qtxmlpatterns
+SUBDIR+=	qt5-sqlite3
 SUBDIR+=	qwt
 SUBDIR+=	qwt-qt4
 SUBDIR+=	qwt6-qt4
