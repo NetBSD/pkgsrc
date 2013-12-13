@@ -1,0 +1,24 @@
+$NetBSD: patch-qtbase_qmake_Makefile.unix,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+
+* Pass environmental variables from pkgsrc
+
+--- qtbase/qmake/Makefile.unix.orig	2013-11-27 01:01:10.000000000 +0000
++++ qtbase/qmake/Makefile.unix
+@@ -89,7 +89,7 @@ DEPEND_SRC = \
+ 	   $(SOURCE_PATH)/src/corelib/json/qjsonvalue.cpp \
+ 	   $(QTSRCS)
+ 
+-CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
++CPPFLAGS += -g $(EXTRA_CPPFLAGS) \
+ 	   -I$(QMKSRC) -I$(QMKLIBSRC) -I$(QMKSRC)/generators -I$(QMKSRC)/generators/unix -I$(QMKSRC)/generators/win32 \
+ 	   -I$(QMKSRC)/generators/mac -I$(QMKSRC)/generators/integrity \
+ 	   -I$(INC_PATH) -I$(INC_PATH)/QtCore \
+@@ -102,7 +102,7 @@ CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
+ 	   -DQT_NO_THREAD -DQT_NO_QOBJECT -DQT_NO_GEOM_VARIANT -DQT_NO_DATASTREAM \
+ 	   -DQT_CRYPTOGRAPHICHASH_ONLY_SHA1 -DQT_JSON_READONLY
+ 
+-CXXFLAGS = $(EXTRA_CXXFLAGS) $(CPPFLAGS)
++CXXFLAGS += $(EXTRA_CXXFLAGS) $(CPPFLAGS)
+ 
+ first all: $(BUILD_PATH)/bin/qmake$(EXEEXT)
+ qmake: $(BUILD_PATH)/bin/qmake$(EXEEXT)
