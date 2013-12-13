@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4491 2013/12/13 16:34:28 jakllsch Exp $
+$NetBSD: CHANGES-2013,v 1.4492 2013/12/13 23:14:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6659,3 +6659,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/php55 to 5.5.7 [taca 2013-12-13]
 	Updated time/ruby-tzinfo to 0.3.38 [taca 2013-12-13]
 	Updated net/isc-dhcpd4 to 4.2.5p1nb2 [jakllsch 2013-12-13]
+	Updated x11/libxkbcommon to 0.3.2nb1 [wiz 2013-12-13]
