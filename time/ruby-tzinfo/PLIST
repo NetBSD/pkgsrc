@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2012/03/12 15:36:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2013/12/13 15:42:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -284,6 +285,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Karachi.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Kashgar.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Kathmandu.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Katmandu.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Khandyga.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Kolkata.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Krasnoyarsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Kuala_Lumpur.rb
@@ -328,6 +330,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ujung_Pandang.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ulaanbaatar.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ulan_Bator.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Urumqi.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ust__m__Nera.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Vientiane.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Vladivostok.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Yakutsk.rb
@@ -436,6 +439,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Bratislava.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Brussels.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Bucharest.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Budapest.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Busingen.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Chisinau.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Copenhagen.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Dublin.rb
