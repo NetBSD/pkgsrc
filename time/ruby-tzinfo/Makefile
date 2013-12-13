@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2012/06/02 01:48:35 taca Exp $
+# $NetBSD: Makefile,v 1.29 2013/12/13 15:42:17 taca Exp $
 
-DISTNAME=	tzinfo-0.3.33
+DISTNAME=	tzinfo-0.3.38
 CATEGORIES=	time
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://tzinfo.rubyforge.org/
+HOMEPAGE=	http://tzinfo.github.io/
 COMMENT=	Daylight-savings-aware timezone library
 LICENSE=	mit
 
