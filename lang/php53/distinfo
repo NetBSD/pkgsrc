@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.69 2013/12/05 16:16:40 taca Exp $
+$NetBSD: distinfo,v 1.70 2013/12/13 15:30:35 taca Exp $
 
-SHA1 (php-5.3.27.tar.bz2) = 4f95682940ebe1bc1a93812d593460625a2aae64
-RMD160 (php-5.3.27.tar.bz2) = c2887004859f32b25229ffe52d86270c8de194b7
-Size (php-5.3.27.tar.bz2) = 11432791 bytes
+SHA1 (php-5.3.28.tar.bz2) = f985ca1f6a5f49ebfb25a08f1837a44c563b31f8
+RMD160 (php-5.3.28.tar.bz2) = e4910c0c365f39a5009807801bd5ee6e25be020d
+Size (php-5.3.28.tar.bz2) = 11051714 bytes
 SHA1 (suhosin-patch-5.3.25-0.9.10.patch.bz2) = ce5883b05daf91e8a44fffbfa4d3989ac3311dd1
 RMD160 (suhosin-patch-5.3.25-0.9.10.patch.bz2) = 6c4d0cfe070802481121be465b66d3cefe44da83
 Size (suhosin-patch-5.3.25-0.9.10.patch.bz2) = 32447 bytes
@@ -19,7 +19,6 @@ SHA1 (patch-aj) = 181658ae523bd60f67750566711fc078b49191b7
 SHA1 (patch-al) = fe534d7d50a529e3c7d0ffed76afdb70bb55a521
 SHA1 (patch-ext_date_lib_parse__iso__intervals.c) = 1243e4cda1d6446ee4f8b6cab61556fa07837139
 SHA1 (patch-ext_date_lib_parse__iso__intervals.re) = 75d4abd666c17d7d5f8a4ee9e489bf2565f83524
-SHA1 (patch-ext_openssl_openssl.c) = f45f4322ac875db7b0bb86efb7cfda1f659ac6cc
 SHA1 (patch-ext_standard_basic__functions.c) = 017fd25e646af4d7eb2a0bd13b3c8da34eaee8c5
 SHA1 (patch-main_streams_cast.c) = d68b69c9418a8780b1610b8755487771f7c46a5a
 SHA1 (patch-php__mssql.c) = 524c4e5d7ede0e503049bf1febec58e0c4a29aa4
