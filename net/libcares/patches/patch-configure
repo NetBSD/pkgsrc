@@ -1,0 +1,37 @@
+$NetBSD: patch-configure,v 1.1 2013/12/13 10:42:57 jperkin Exp $
+
+Disable CFLAGS and CPPFLAGS munging.
+
+--- configure.orig	2013-05-12 13:39:47.000000000 +0000
++++ configure
+@@ -3503,7 +3503,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+      test $xc_bad_var_cflags = yes ||
+      test $xc_bad_var_ldflags = yes ||
+      test $xc_bad_var_cppflags = yes; then
+-     as_fn_error $? "Can not continue. Fix errors mentioned immediately above this line." "$LINENO" 5
++     : as_fn_error $? "Can not continue. Fix errors mentioned immediately above this line." "$LINENO" 5
+   fi
+ 
+ # Find a good install program.  We prefer a C program (faster),
+@@ -15525,8 +15525,8 @@ squeeze() {
+       esac
+     done
+     if test "$tmp_has_include" = "yes"; then
+-      tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/^-I/ -isystem /g'`
+-      tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/ -I/ -isystem /g'`
++      #tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/^-I/ -isystem /g'`
++      #tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/ -I/ -isystem /g'`
+       CFLAGS="$tmp_chg_FLAGS"
+       squeeze CFLAGS
+     fi
+@@ -15540,8 +15540,8 @@ squeeze() {
+       esac
+     done
+     if test "$tmp_has_include" = "yes"; then
+-      tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/^-I/ -isystem /g'`
+-      tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/ -I/ -isystem /g'`
++      #tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/^-I/ -isystem /g'`
++      #tmp_chg_FLAGS=`echo "$tmp_chg_FLAGS" | "$SED" 's/ -I/ -isystem /g'`
+       CPPFLAGS="$tmp_chg_FLAGS"
+       squeeze CPPFLAGS
+     fi
