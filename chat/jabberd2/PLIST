@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/12/12 23:01:02 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/12/13 16:44:44 schnoebe Exp $
 bin/bdbdump.pl
 bin/c2s
 bin/jabberd
@@ -51,7 +51,7 @@ man/man8/jabberd.8
 man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
-share/doc/jabberd/ChangeLog
+share/doc/jabberd/NEWS
 share/doc/jabberd/README
 share/doc/jabberd/README.protocol
 share/doc/jabberd/README.config
