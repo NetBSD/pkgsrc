@@ -1,0 +1,15 @@
+$NetBSD: patch-qtbase_mkspecs_features_qt__module__pris.prf,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+
+* Build libtoolized shared libraries
+
+--- qtbase/mkspecs/features/qt_module_pris.prf.orig	2013-11-27 01:01:16.000000000 +0000
++++ qtbase/mkspecs/features/qt_module_pris.prf
+@@ -59,7 +59,7 @@ MODULE_FWD_PRI = $$mod_work_pfx/qt_lib_$
+     else: \
+         module_rundep =
+     static: \
+-        module_build_type = staticlib
++        module_build_type = 
+     else:mac:contains(QT_CONFIG, qt_framework): \
+         module_build_type = lib_bundle
+     else: \

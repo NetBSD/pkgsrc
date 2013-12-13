@@ -1,0 +1,198 @@
+# $NetBSD: Makefile.common,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+# used by x11/qt5-dbus/Makefile
+# used by x11/qt5-mysql/Makefile
+# used by x11/qt5-odbc/Makefile
+# used by x11/qt5-psql/Makefile
+# used by x11/qt5-qtbase/Makefile
+# used by x11/qt5-qtdeclarative/Makefile
+# used by x11/qt5-qtdoc/Makefile
+# used by x11/qt5-qtgraphicaleffects/Makefile
+# used by x11/qt5-qtimageformats/Makefile
+# used by x11/qt5-qtlocation/Makefile
+# used by x11/qt5-qtmultimedia/Makefile
+# used by x11/qt5-qtquick1/Makefile
+# used by x11/qt5-qtquickcontrols/Makefile
+# used by x11/qt5-qtscript/Makefile
+# used by x11/qt5-qtsensors/Makefile
+# used by x11/qt5-qtserialport/Makefile
+# used by x11/qt5-qtsvg/Makefile
+# used by x11/qt5-qttools/Makefile
+# used by x11/qt5-qttranslations/Makefile
+# used by x11/qt5-qtwebkit/Makefile
+# used by x11/qt5-qtx11extras/Makefile
+# used by x11/qt5-qtxmlpatterns/Makefile
+# used by x11/qt5-sqlite3/Makefile
+
+DISTNAME=	qt-everywhere-opensource-src-${QTDISTVER}
+CATEGORIES=	x11
+MASTER_SITES=	http://download.qt-project.org/development_releases/qt/5.2/5.2.0-rc1/single/
+EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	bsdtar
+
+.include "../../x11/qt5/Makefile.common"
+
+DISTINFO_FILE=	${.CURDIR}/../../x11/qt5-qtbase/distinfo
+FILESDIR=	${.CURDIR}/../../x11/qt5-qtbase/files
+PATCHDIR=	${.CURDIR}/../../x11/qt5-qtbase/patches
+
+.if empty(MAKE_JOBS_SAFE:M[nN][oO])
+CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS:Q}
+.endif
+
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake perl:build
+
+CONFIG_SHELL=		${PERL5}
+
+REPLACE_PERL+=		qtbase/bin/syncqt.pl
+REPLACE_PERL+=		qtwebkit/Source/WebKit2/Scripts/generate-forwarding-headers.pl
+
+# wcstof(3) etc. is used in C++ code.
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+# for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
+BUILDLINK_TRANSFORM+=	rm:-Wundef
+
+CONFIGURE_ARGS+=	-optimized-qmake
+CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
+CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
+CONFIGURE_ARGS+=	-opensource -confirm-license
+CONFIGURE_ARGS+=	-reduce-relocations
+CONFIGURE_ARGS+=	-release
+CONFIGURE_ARGS+=	-accessibility
+CONFIGURE_ARGS+=	-fontconfig
+CONFIGURE_ARGS+=	-iconv
+CONFIGURE_ARGS+=	-icu
+CONFIGURE_ARGS+=	-openssl-linked
+CONFIGURE_ARGS+=	-nomake examples
+CONFIGURE_ARGS+=	-nomake tests
+CONFIGURE_ARGS+=	-no-pch
+CONFIGURE_ARGS+=	-no-strip
+CONFIGURE_ARGS+=	-system-libjpeg
+CONFIGURE_ARGS+=	-system-libpng
+CONFIGURE_ARGS+=	-system-sqlite
+CONFIGURE_ARGS+=	-system-pcre
+CONFIGURE_ARGS+=	-system-zlib
+CONFIGURE_ARGS+=	-no-dbus
+CONFIGURE_ARGS+=	-no-sql-mysql
+CONFIGURE_ARGS+=	-no-sql-psql
+CONFIGURE_ARGS+=	-no-sql-sqlite
+OPSYSVARS+=		CONFIGURE_ARGS
+
+.include "../../mk/bsd.prefs.mk"
+
+MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
+
+QMAKE_CONF=		qmake.conf
+
+# avoid creating a .qt directory in the users home directory
+SCRIPTS_ENV+=		HOME=${WRKDIR}
+
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "SunOS"
+.  if !empty(CC_VERSION:Mgcc*)
+.    if ${ABI:U} == "64"
+CONFIGURE_ARGS+=	-platform solaris-g++-64
+.    else
+CONFIGURE_ARGS+=	-platform solaris-g++
+.    endif
+.  else
+.    if ${ABI:U} == "64"
+CONFIGURE_ARGS+=	-platform solaris-cc-64
+.    else
+CONFIGURE_ARGS+=	-platform solaris-cc
+.    endif
+.  endif
+SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
+BUILDLINK_TRANSFORM+=   rm:-Wl,--gc-sections
+.elif ${OPSYS} == "Interix"
+CONFIGURE_ARGS+=	-platform interix-g++
+CFLAGS+=		-I/usr/local/include/bind
+LDFLAGS+=		-L/usr/local/lib/bind -lbind
+BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
+SYS_LIBS=		-lbind -ldb -ldl
+.elif ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	-platform freebsd-g++
+.elif ${OPSYS} == "Darwin"
+.  if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ARGS+=	-platform macx-llvm
+.  else
+CONFIGURE_ARGS+=	-platform macx-g++
+.  endif
+CONFIGURE_ARGS+=	-no-dwarf2
+CONFIGURE_ARGS+=	-no-framework
+.  if exists(/usr/lib/libresolv.dylib)
+LDFLAGS+=		-lresolv
+.  endif
+.elif ${OPSYS} == "Linux"
+LDFLAGS+=		-ldl
+.endif
+
+remove-3rdparty-libs:
+.for i in freetype libjpeg libpng zlib xcb
+	cd ${WRKSRC}/qtbase/src/3rdparty && \
+		${RM} -fr ${i}
+.endfor
+
+set-qmake-conf:
+	${SED}  -e 's:@LOCALBASE@:${LOCALBASE}:g' \
+		-e 's:@X11BASE@:${X11BASE}:g' \
+		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
+		-e 's:@LIBTOOL@:${LIBTOOL:Q}:g' \
+		-e 's:@CC@:${CC:Q}:g' \
+		-e 's:@CXX@:${CXX:Q}:g' \
+		-e 's:@LDFLAGS@:${LDFLAGS:Q}:g' \
+		-e 's:@CFLAGS@:${CFLAGS:Q}:g' \
+		-e 's:@CXXFLAGS@:${CXXFLAGS:Q}:g' \
+		-e 's:@SYS_LIBS@:${SYS_LIBS:Q}:g' \
+		-e 's:@LEX@:${LEX}:g' \
+		-e 's:@YACC@:${TOOLS_CMDLINE_YACC:Q}:g' \
+		-e 's:@AR@:${AR:Q}:g' \
+		-e 's:@MKDIR@:${MKDIR}:g' \
+		-e 's:@LIBQT@:${LIBQT:Q}:g' \
+		-e 's:@PTHREAD_LDFLAGS@:${PTHREAD_LDFLAGS:Q}:g' \
+		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS:Q}:g' \
+		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
+		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
+		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
+		for dir in ${WRKSRC}/qtbase/mkspecs/*; do \
+			cp ${WRKSRC}/qmake.conf $${dir}; \
+			rm -f $${dir}/*.orig; \
+		done
+
+no-qmake-build:
+	cd ${WRKSRC} && \
+		${PATCH} < ${FILESDIR}/patch-qtbase_configure.no-qmake
+	${LN} -sf ${QTPREFIX}/bin/moc ${WRKSRC}/qtbase/bin/moc
+	${LN} -sf ${QTPREFIX}/bin/qmake ${WRKSRC}/qtbase/bin/qmake
+	${LN} -sf ${QTPREFIX}/bin/rcc ${WRKSRC}/qtbase/bin/rcc
+	${LN} -sf ${QTPREFIX}/bin/uic ${WRKSRC}/qtbase/bin/uic
+
+.if empty(PKGNAME:Mqt5-qtbase*)
+pre-configure: remove-3rdparty-libs set-qmake-conf no-qmake-build
+.else
+pre-configure: remove-3rdparty-libs set-qmake-conf
+.endif
+
+.if empty(PKGNAME:Mqt5-qtbase*) && empty(PKGNAME:Mqt5-sqlite3*) \
+	&& empty(PKGNAME:Mqt5-mysql*) && empty(PKGNAME:Mqt5-psql*) \
+	&& empty(PKGNAME:Mqt5-odbc*)
+post-configure:
+	cd ${WRKSRC}/${BUILD_DIRS} && ${QTPREFIX}/bin/qmake -o Makefile
+.endif
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"

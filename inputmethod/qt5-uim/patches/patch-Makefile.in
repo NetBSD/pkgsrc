@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+
+* Do not build the stuffs that requires other packages
+
+--- Makefile.in.orig	2013-06-30 04:27:10.000000000 +0000
++++ Makefile.in
+@@ -441,8 +441,8 @@ top_srcdir = @top_srcdir@
+ uim_pixmapsdir = @uim_pixmapsdir@
+ AUTOMAKE_OPTIONS = foreign
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = m4 doc replace sigscheme uim scm test test2 gtk2 gtk3 qt3 \
+-	notify qt4 xim fep emacs po pixmaps examples tables \
++SUBDIRS = m4 doc replace sigscheme uim scm test \
++	notify qt4 qt5 xim emacs pixmaps examples tables \
+ 	byeoru-data
+ EXTRA_DIST = RELNOTE ChangeLog.old ChangeLog.old.2 autogen.sh make-dist.sh \
+ 	uim.pc.in uim.desktop \

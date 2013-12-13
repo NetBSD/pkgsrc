@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+
+SHA1 (uim-1.8.6.tar.bz2) = 43b9dbdead6797880e6cfc9c032ecb2d37d42777
+RMD160 (uim-1.8.6.tar.bz2) = 5f94218d82475ac463534ec681769f34547e5707
+Size (uim-1.8.6.tar.bz2) = 6500739 bytes
+SHA1 (uim-1.8.7pre1.tar.gz) = cfe281d7d3e56eca7e6b140e7fb4ed4b712514b9
+RMD160 (uim-1.8.7pre1.tar.gz) = 252b3337009d896eef9027029a806bc60c126da0
+Size (uim-1.8.7pre1.tar.gz) = 5821262 bytes
+SHA1 (patch-Makefile.in) = 15f8a9adbc7f7b7d3307630f2adb9cffdc4c524f
+SHA1 (patch-qt4_common.pro.in) = 4c1f24d0301cd9d2bd05fdbdd92c82096de7c3c1
+SHA1 (patch-qt5_immodule_quimplatforminputcontextplugin.pro.in) = 63bbf7057b61df14a52430e8c12b9bb9b3d69096

@@ -1,0 +1,15 @@
+Qt(TM) is a GUI software toolkit. Qt simplifies the task of writing and
+maintaining GUI (graphical user interface) applications.
+
+Qt is written in C++ and is fully object-oriented. It has everything you need
+to create professional GUI applications. And it enables you to create them
+quickly.
+
+Qt is a multi-platform toolkit. When developing software with Qt, you can run
+it on the X Window System (Unix/X11) or Microsoft Windows NT and Windows 95/98.
+Simply recompile your source code on the platform you want.
+
+Qt cuts down the complexity in implementing large and complex systems. Its
+ingenious signal-slot technology enables true component programming.
+
+This package tracks Qt5 qtbase submodule.

@@ -1,0 +1,15 @@
+$NetBSD: patch-qtbase_configure.no-qmake,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+
+--- qtbase/configure.orig	2013-11-29 09:43:56.000000000 +0000
++++ qtbase/configure
+@@ -3972,8 +3972,8 @@ setBootstrapVariable()
+     getQMakeConf "$1" | echo ${2-$1} = `if [ -n "$3" ]; then sed "$3"; else cat; fi` >> "$mkfile"
+ }
+ 
+-# build qmake
+-if true; then ###[ '!' -f "$outpath/bin/qmake" ];
++# does not build qmake
++if false; then
+     echo "Creating qmake..."
+ 
+     mkdir -p "$outpath/qmake" || exit

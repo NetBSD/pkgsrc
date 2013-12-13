@@ -1,0 +1,18 @@
+$NetBSD: patch-qt4_common.pro.in,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+
+* Fix for libtoolized qt5
+
+--- qt4/common.pro.in.orig	2013-12-13 13:28:40.000000000 +0000
++++ qt4/common.pro.in
+@@ -5,9 +5,9 @@ INCLUDEPATH += @abs_top_builddir@ @abs_t
+                @abs_top_srcdir@/replace
+ QMAKE_LIBDIR += @abs_top_builddir@/uim @abs_top_builddir@/replace \
+                 @abs_top_builddir@/replace/.libs @abs_top_builddir@/uim/.libs
+-LIBS += -lreplace -luim -luim-scm
++LIBS += ../../replace/libreplace.la ../../uim/libuim.la ../../uim/libuim-scm.la
+ !win32:!embedded:!mac {
+-    LIBS += -luim-x-util
++    LIBS += ../../uim/libuim-x-util.la
+ }
+ 
+ greaterThan(QT_MAJOR_VERSION, 4) {

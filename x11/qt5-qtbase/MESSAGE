@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+
+To allow this package to coexist with other versions of Qt
+it has been installed in ${PREFIX}/qt5/{bin,include,lib,doc} etc.
+
+You should be able to select this version of Qt when compiling
+programs which use it by ensuring that
+
+1) QTDIR is set to ${PREFIX}/qt5
+
+2) Use the "configure" argument "--with-qt-dir=${PREFIX}/qt5"
+
+3) you may also have to put ${PREFIX}/qt5/bin in your PATH
+
+===========================================================================

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+lib/pkgconfig/Qt5X11Extras.pc
+qt5/include/QtX11Extras/QX11Info
+qt5/include/QtX11Extras/QtX11Extras
+qt5/include/QtX11Extras/QtX11ExtrasDepends
+qt5/include/QtX11Extras/QtX11ExtrasVersion
+qt5/include/QtX11Extras/qtx11extrasglobal.h
+qt5/include/QtX11Extras/qtx11extrasversion.h
+qt5/include/QtX11Extras/qx11info_x11.h
+qt5/lib/cmake/Qt5X11Extras/Qt5X11ExtrasConfig.cmake
+qt5/lib/cmake/Qt5X11Extras/Qt5X11ExtrasConfigVersion.cmake
+qt5/lib/libQt5X11Extras.la
+qt5/lib/libQt5X11Extras.prl
+qt5/lib/pkgconfig/Qt5X11Extras.pc
+qt5/mkspecs/modules/qt_lib_x11extras.pri
+qt5/mkspecs/modules/qt_lib_x11extras_private.pri
