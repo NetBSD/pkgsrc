@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2013/11/20 20:04:37 adam Exp $
+# $NetBSD: Makefile,v 1.51 2013/12/13 14:46:10 ryoon Exp $
 #
 
-DISTNAME=	Sigil-0.6.2-Code
+DISTNAME=	Sigil-0.7.4-Code
 PKGNAME=	${DISTNAME:S/-Code//}
-PKGREVISION=	9
 CATEGORIES=	editors
 MASTER_SITES=	http://sigil.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -17,9 +16,17 @@ MAKE_JOBS_SAFE=	NO
 
 WRKSRC=		${WRKDIR}
 
+Qt5_DIR=	${BUILDLINK_PREFIX.qt5-qtbase}/qt5
+ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
+
+BUILDLINK_TRANSFORM+=	opt:-O2:-O0
+MAKE_ENV+=	CXX_FLAGS="-g"
+
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
@@ -35,8 +42,10 @@ _WRAP_EXTRA_ARGS.CXX+=	-std=c++0x
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../textproc/hunspell/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+#.include "../../textproc/hunspell/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
