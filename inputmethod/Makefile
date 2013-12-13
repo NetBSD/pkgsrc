@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2013/10/23 20:33:23 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2013/12/13 14:39:43 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -65,6 +65,7 @@ SUBDIR+=	prime-dict
 SUBDIR+=	prime-el
 SUBDIR+=	py-input-pad
 SUBDIR+=	py-zinnia
+SUBDIR+=	qt5-uim
 SUBDIR+=	ruby-zinnia
 SUBDIR+=	scim
 SUBDIR+=	scim-anthy
