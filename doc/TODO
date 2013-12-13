@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12785 2013/12/13 14:49:32 ryoon Exp $
+$NetBSD: TODO,v 1.12786 2013/12/13 18:28:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -410,7 +410,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.14.0
+	o calibre-1.15
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -921,7 +921,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qemu-1.7
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.8
-	o qt5-libs-5.1
+	o qt5-libs-5.2
 	o quilt-0.60
 	o radiance-3.7.2
 	o rails-4.0.1
@@ -1093,6 +1093,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wml-2.0.11
 	o wmweather-2.4.4
 	o wmx-7
+	o wordpress-3.8
 	o worker-3.2.0
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9i
