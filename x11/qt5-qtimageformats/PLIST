@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
+qt5/plugins/imageformats/libqmng.la
+qt5/plugins/imageformats/libqtga.la
+qt5/plugins/imageformats/libqtiff.la
+qt5/plugins/imageformats/libqwbmp.la
