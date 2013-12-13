@@ -41,6 +41,12 @@ aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
 atheme-large-net	Enable support for large networks (i.e. > 2000 users).
 audiofile		Enable audio conversion using libaudiofile.
+auth-db			Use Berkley DB for the jabberd2 authorization database.
+auth-ldap		Use LDAP for jabberd2 authorization.
+auth-mysql		Use MySQL for the jabberd2 authorization database.
+auth-pam		Use PAM for jabberd2 authorization.
+auth-pgsql		Use PostgreSQL for jabberd2 the authorization database.
+auth-sqlite		Use SQLite for jabberd2 the authorization database.
 avahi			Enable DNS service discovery and multicast DNS support.
 avahi-howl		Enable howl compatibility in avahi.
 bacula-static		Enable building of statically linked versions of the Bacula daemons.
@@ -91,7 +97,6 @@ cvsgraph		Enable cvsgraph support.
 dar-int32		Use 32-bit integers for file lengths in Dar.
 dar-int64		Use 64-bit integers for file lengths in Dar.
 darwin			Build and/or run on Darwin and Mac OS X.
-pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 db2			Enable db2 support.
 db4			Enable db4 support.
 dbh			Enable DBH support.
@@ -209,6 +214,7 @@ ghostscript		Enable GhostScript support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
+git-gui			Build the GUI in Tcl/Tk.
 glade			Enable Glade support
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
@@ -426,6 +432,10 @@ mecab			Use MeCab as the Japanese Morphological Analzer.
 mex			Enable matlab mex support (Linux and Solaris only).
 migemo			Enable migemo (Japanese text search tool/library) support.
 mikmod			Enable MikMod sound library.
+mio-epoll		Use epoll to watch for incoming messages/connections.
+mio-kqueue		Use kqueue to watch for incoming messages/connections.
+mio-poll		Use poll to watch for incoming messages/connections.
+mio-select		Use select to watch for incoming messages/connections.
 mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
 mlterm-fb		Enable framebuffer support.
@@ -513,6 +523,7 @@ pcre			Enable Perl-compatible regular expressions.
 pcsc			Enable PC/SC support.
 pdf			Enable PDF support.
 perl			Enable Perl support.
+pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 pgsql			Enable PostgreSQL support.
 pim			Enable pim (personal information management) support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
@@ -562,11 +573,12 @@ samplerate		Enable libsamplerate support.
 sane			Enable support for SANE scanners.
 sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
+sasl-cyrus		Use Cyrus SASL for the SASL layer.
+sasl-gnu		Use GNU SASL for the SASL layer
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
 sbcl			Use Steel-Bank Common Lisp.
 scapy-crypto		Add in crypto support.
 scapy-pyx		Add in py-X support.
-git-gui			Build the GUI in Tcl/Tk.
 sdl			Use SDL as display library.
 seamonkey		Use seamonkey as gecko rendering engine.
 sendmail-milter		Build the milter with support for the Sendmail MTA.
@@ -625,6 +637,10 @@ squid-unlinkd		Enable use of unlinkd.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
 static			Allows you to build static libraries.
+storage-db		Use Berkley DB for the jabberd2 message store.
+storage-mysql		Use MySQL for the jabberd2 message store.
+storage-pgsql		Use PostgreSQL for the jabberd2 message store.
+storage-sqlite		Use SQLite for the jabberd2 message store.
 streamtuner-local	Enable local metadata support.
 streamtuner-xiph	Enable the Xiph plugin.
 suexec			Enable suEXEC support in Apache web server.
