@@ -1,0 +1,10 @@
+Qt(TM) is a GUI software toolkit. Qt simplifies the task of writing and
+maintaining GUI (graphical user interface) applications.
+
+This package does not contain anything by itself -- it is a
+"meta-package" that depends on other QT packages.  Its sole purpose is
+to require dependencies so users can install this package only and
+have all the QT stuff pulled in by the port/package dependency
+mechanism.
+
+This package tracks Qt5 branch.

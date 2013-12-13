@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1 2013/12/13 14:38:34 ryoon Exp $
+
+PKGNAME=	qt5-dbus-${QTVERSION}
+COMMENT=	Qt5 DBus support plugin
+
+.include "../../x11/qt5-qtbase/Makefile.common"
+
+BUILD_DIRS=		qtbase/src/dbus
+
+CFLAGS+=		-I${BUILDLINK_PREFIX.dbus}/include/dbus-1.0
+CFLAGS+=		-I${BUILDLINK_PREFIX.dbus}/lib/dbus-1.0/include/dbus
+CFLAGS+=		-I${BUILDLINK_PREFIX.qt5-qtbase}/qt5/include
+
+INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
+
+INSTALLATION_DIRS=	${QTPREFIX}/bin lib/pkgconfig
+
+PC_FILES=		Qt5DBus.pc
+
+post-install:
+.for i in ${PC_FILES}
+	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/${i} && \
+		cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
+		${LN} -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
+.endfor
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
