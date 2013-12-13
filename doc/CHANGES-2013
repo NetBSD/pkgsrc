@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4484 2013/12/12 23:02:58 schnoebe Exp $
+$NetBSD: CHANGES-2013,v 1.4485 2013/12/13 02:13:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6626,3 +6626,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/opendkim to 2.9.0 [pettai 2013-12-12]
 	Updated www/py-flask-script to 0.6.6 [kleink 2013-12-12]
 	Updated chat/jabberd2 to 2.3.1 [schnoebe 2013-12-12]
+	Updated emulators/suse131_libcurl to 13.1nb1 [obache 2013-12-13]
