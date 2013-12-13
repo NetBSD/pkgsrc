@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12784 2013/12/13 11:13:21 wiz Exp $
+$NetBSD: TODO,v 1.12785 2013/12/13 14:49:32 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ROMBuild-2.14
 	o SOGo-2.0.7
 	o SOPE-2.0.7
-	o Sigil-0.7.4 [needs qt5]
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.21
 	o TiffIO-130e
