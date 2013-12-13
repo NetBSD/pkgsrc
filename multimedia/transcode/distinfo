@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/11/17 21:46:44 markd Exp $
+$NetBSD: distinfo,v 1.23 2013/12/13 20:54:03 markd Exp $
 
 SHA1 (transcode-1.1.7.tar.bz2) = e35df68b960eb56ef0a59a4cdbed1491be56aee6
 RMD160 (transcode-1.1.7.tar.bz2) = faa854acbbfd52faaa216505176f94d756d77841
@@ -10,6 +10,7 @@ SHA1 (patch-ba) = 92f31ca0d49cee2883d278b443b1d616381fee2d
 SHA1 (patch-encode_encode_lavc.c) = b93926d54f149fabfc35051c7bfb800efd3892cf
 SHA1 (patch-export_export_ffmpeg.c) = 1559892fb1c13c3bd6be32ae9b5a1d04348139e9
 SHA1 (patch-export_ffmpeg_cfg.c) = c48acb7c9163f45fc1aa02216e083594fee67331
+SHA1 (patch-filter_subtitler_load_font.c) = 2c496c63f4fe27190761d170cc825633eb63c11f
 SHA1 (patch-import_decode_lavc.c) = 2a3b9b9f0909794a9fba0f13901121dd48fc9f5f
 SHA1 (patch-import_import_ffmpeg.c) = 2b1782d0d87de873f2d5e8397a8f3a1b618e21d4
 SHA1 (patch-import_probe_ffmpeg.c) = c755ed421f7cae0d89555c9faffcdce8610178ea
