@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4488 2013/12/13 14:49:31 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4489 2013/12/13 15:34:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6654,3 +6654,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Added inputmethod/qt5-uim version 1.8.6 [ryoon 2013-12-13]
 	Added x11/libxkbcommon version 0.3.2 [ryoon 2013-12-13]
 	Updated editors/Sigil to 0.7.4 [ryoon 2013-12-13]
+	Updated lang/php53 to 5.3.28 [taca 2013-12-13]
+	Updated lang/php54 to 5.4.23 [taca 2013-12-13]
+	Updated lang/php55 to 5.5.7 [taca 2013-12-13]
