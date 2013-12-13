@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:56 agc Exp $
+$NetBSD: distinfo,v 1.5 2013/12/13 09:58:58 jperkin Exp $
 
 SHA1 (psmisc-20.1.tar.gz) = e969a2f539b181c372b0f82bbbd430c4d57d5d6b
 RMD160 (psmisc-20.1.tar.gz) = 48698ad9f431c881bcb42394f5c912ef91b84d2b
@@ -6,7 +6,7 @@ Size (psmisc-20.1.tar.gz) = 57767 bytes
 SHA1 (patch-aa) = 97b586e06444b9aa2a6ba95c10eaabc93f89c833
 SHA1 (patch-ab) = 4aadacec85e2234c010aad2db5fa9fe469562f4f
 SHA1 (patch-ac) = 9f9a7c7c5155345a1045aee70a2dd65a25ec7219
-SHA1 (patch-ad) = 73ae9467e783957ce7ff638d8637e7398f75c5fe
+SHA1 (patch-ad) = 6e2886ca59160d161d334e276675f187f138db7c
 SHA1 (patch-ae) = 484305118582c575f8c4827783aa3d5f57b25b5d
-SHA1 (patch-af) = 3c5ba3cf27a422943f984b8414ac29da0b8934da
+SHA1 (patch-af) = 28a9417dda852ad5b76ad44774f1aeb3d66e2791
 SHA1 (patch-ag) = a03a4a0c0dbf065e2b2785cee8f23579a11ae13f
