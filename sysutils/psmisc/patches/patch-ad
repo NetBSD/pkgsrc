@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.6 2001/04/24 16:59:35 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2013/12/13 09:58:58 jperkin Exp $
 
---- src/killall.c.orig	Sat Mar 31 05:26:47 2001
+Need limits.h for PATH_MAX
+
+--- src/killall.c.orig	2001-03-31 10:26:47.000000000 +0000
 +++ src/killall.c
-@@ -18,10 +18,10 @@
+@@ -13,15 +13,16 @@
+ #include <dirent.h>
+ #include <signal.h>
+ #include <errno.h>
++#include <limits.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
  #include <getopt.h>
  
  #include "comm.h"
@@ -14,7 +22,7 @@ $NetBSD: patch-ad,v 1.6 2001/04/24 16:59:35 jlam Exp $
  #define MAX_NAMES (sizeof(unsigned long)*8)
  
  
-@@ -138,11 +138,15 @@
+@@ -138,11 +139,15 @@ kill_all (int signal, int names, char **
      }
    for (i = 0; i < pids; i++)
      {
@@ -31,7 +39,7 @@ $NetBSD: patch-ad,v 1.6 2001/04/24 16:59:35 jlam Exp $
        (void) fclose (file);
        if (!okay)
  	continue;
-@@ -151,7 +155,10 @@
+@@ -151,7 +156,10 @@ kill_all (int signal, int names, char **
        length = strlen (comm);
        if (length == COMM_LEN - 1)
  	{
@@ -43,7 +51,7 @@ $NetBSD: patch-ad,v 1.6 2001/04/24 16:59:35 jlam Exp $
  	  if (!(file = fopen (path, "r")))
  	    continue;
            while (1) {
-@@ -180,6 +187,7 @@
+@@ -180,6 +188,7 @@ kill_all (int signal, int names, char **
              }
            }
            (void) fclose(file);
@@ -51,7 +59,7 @@ $NetBSD: patch-ad,v 1.6 2001/04/24 16:59:35 jlam Exp $
  	  if (exact && !okay)
  	    {
  	      if (verbose)
-@@ -206,7 +214,7 @@
+@@ -206,7 +215,7 @@ kill_all (int signal, int names, char **
  	    }
  	  else
  	    {
@@ -60,7 +68,7 @@ $NetBSD: patch-ad,v 1.6 2001/04/24 16:59:35 jlam Exp $
  	      if (stat (path, &st) < 0)
  		continue;
  	      if (sts[j].st_dev != st.st_dev || sts[j].st_ino != st.st_ino)
-@@ -369,7 +377,7 @@
+@@ -369,7 +378,7 @@ main (int argc, char **argv)
    sig_num = SIGTERM;
  
    opterr = 0;

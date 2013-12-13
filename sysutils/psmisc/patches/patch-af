@@ -1,8 +1,18 @@
-$NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
+$NetBSD: patch-af,v 1.5 2013/12/13 09:58:58 jperkin Exp $
 
---- src/pstree.c.orig	Mon Dec 18 00:59:23 2000
+Need limits.h for PATH_MAX
+
+--- src/pstree.c.orig	2000-12-18 05:59:23.000000000 +0000
 +++ src/pstree.c
-@@ -22,12 +22,12 @@
+@@ -15,6 +15,7 @@
+ #include <getopt.h>
+ #include <pwd.h>
+ #include <dirent.h>
++#include <limits.h>
+ #include <termios.h>
+ #include <termcap.h>
+ #include <sys/types.h>
+@@ -22,12 +23,12 @@
  #include <sys/ioctl.h>
  
  #include "comm.h"
@@ -16,7 +26,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
  
  /* UTF-8 defines by Johan Myreen */
  #define UTF_V	"\342\224\202\277"	/* Vertical line drawing char */
-@@ -303,6 +303,7 @@
+@@ -303,6 +304,7 @@ dump_tree (PROC * current, int level, in
    const struct passwd *pw;
    int lvl, i, add, offset, len, swapped, info, count, comm_len, first;
    const char *tmp, *here;
@@ -24,7 +34,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
    char comm_tmp[5];
  
    if (!current)
-@@ -327,7 +328,8 @@
+@@ -327,7 +329,8 @@ dump_tree (PROC * current, int level, in
        add = out_int (rep) + 2;
        out_string ("*[");
      }
@@ -34,7 +44,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
      tputs (tmp, 1, putchar);
    if ((swapped = print_args) && current->argc < 0)
      out_char ('(');
-@@ -366,7 +368,8 @@
+@@ -366,7 +369,8 @@ dump_tree (PROC * current, int level, in
      }
    if (info || swapped)
      out_char (')');
@@ -44,7 +54,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
      tputs (tmp, 1, putchar);
    if (print_args)
      {
-@@ -504,7 +507,7 @@
+@@ -504,7 +508,7 @@ read_proc (void)
    while ((de = readdir (dir)) != NULL)
      if ((pid = atoi (de->d_name)) != 0)
        {
@@ -53,7 +63,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
  	if ((file = fopen (path, "r")) != NULL)
  	  {
  	    empty = 0;
-@@ -513,6 +516,10 @@
+@@ -513,6 +517,10 @@ read_proc (void)
  		perror (path);
  		exit (1);
  	      }
@@ -64,7 +74,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
              fread(readbuf, BUFSIZ, 1, file) ;
              if (ferror(file) == 0) 
              {
-@@ -532,11 +539,12 @@
+@@ -532,11 +540,12 @@ read_proc (void)
  		(file, "%d (%s) %c %d", &dummy, comm, (char *) &dummy,
  		 &ppid) == 4)
  	      */
@@ -78,7 +88,7 @@ $NetBSD: patch-af,v 1.4 2001/04/24 16:59:35 jlam Exp $
  		    if ((fd = open (path, O_RDONLY)) < 0)
  		      {
  			perror (path);
-@@ -641,7 +649,11 @@
+@@ -641,7 +650,11 @@ main (int argc, char **argv)
      switch (c)
        {
        case 'a':
