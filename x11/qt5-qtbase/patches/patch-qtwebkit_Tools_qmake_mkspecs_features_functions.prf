@@ -1,0 +1,17 @@
+$NetBSD: patch-qtwebkit_Tools_qmake_mkspecs_features_functions.prf,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+
+* Use libtool manner for libtool build
+
+--- qtwebkit/Tools/qmake/mkspecs/features/functions.prf.orig	2013-11-27 01:01:20.000000000 +0000
++++ qtwebkit/Tools/qmake/mkspecs/features/functions.prf
+@@ -262,8 +262,8 @@ defineTest(linkAgainstLibrary) {
+ 
+     path = $$replace(source_dir, $$re_escape($${ROOT_WEBKIT_DIR}), $${ROOT_BUILD_DIR})/$$targetSubDir()
+ 
+-    force_static_libs_as_shared {
+-            LIBS += -L$${ROOT_BUILD_DIR}/lib -l$$target
++    !staticlib {
++            LIBS += $${path}$${QMAKE_DIR_SEP}lib$${target}.la
+     } else {
+ 
+         mac {

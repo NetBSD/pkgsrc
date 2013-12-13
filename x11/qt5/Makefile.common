@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1 2013/12/13 14:38:34 ryoon Exp $
+# used by x11/qt5-qtbase/Makefile.common
+# used by inputmethod/qt5-uim/Makefile
+
+QTDISTVER=	5.2.0-rc1
+QTVERSION=	${QTDISTVER:S/-rc/rc/}
+
+.include "../../mk/bsd.prefs.mk"
+
+MAINTAINER?=	ryoon@NetBSD.org
+HOMEPAGE=	http://qt-project.org/
+
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
+
+QTPREFIX=	${LOCALBASE}/qt5
