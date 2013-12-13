@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/05/31 12:39:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/12/13 10:04:32 jperkin Exp $
 #
 
 DISTNAME=		bglibs-1.106
@@ -22,6 +22,8 @@ TEST_TARGET=		selftests
 DJB_CONFIG_CMDS=							\
 	${ECHO} ${DJB_CONFIG_PREFIX:Q}/include/bglibs > conf-include;	\
 	${ECHO} ${DJB_CONFIG_PREFIX:Q}/lib/bglibs > conf-lib;
+
+CFLAGS.SunOS+=		-DSOL_TCP=SOL_SOCKET
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
