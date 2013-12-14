@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4498 2013/12/14 09:16:05 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4499 2013/12/14 09:18:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6671,4 +6671,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed x11/Xcomposite successor x11/libXcomposite [wiz 2013-12-14]
 	Updated x11/wxhaskell to 0.9.4nb32 [dholland 2013-12-14]
 	Updated databases/py-elixir to 0.7.1 [obache 2013-12-14]
-	Removed security/py-amkCrypto [obache 2013-12-14]
+	Removed security/py-amkCrypto successor security/py-crypto [obache 2013-12-14]
