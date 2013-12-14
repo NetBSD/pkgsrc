@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2013/10/29 08:42:14 gls Exp $
+# $NetBSD: Makefile,v 1.31 2013/12/14 08:17:31 obache Exp $
 #
 
 DISTNAME=	pycrypto-2.6.1
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
 CATEGORIES=	security python
 MASTER_SITES=	http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dlitz.net/software/pycrypto/
