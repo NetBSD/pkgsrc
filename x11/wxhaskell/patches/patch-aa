@@ -1,8 +1,61 @@
-$NetBSD: patch-aa,v 1.2 2005/10/23 20:29:42 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2013/12/14 08:26:30 dholland Exp $
 
---- makefile.orig	Tue Jul 27 16:12:15 2004
-+++ makefile	Sat Nov 20 16:35:27 2004
-@@ -632,7 +632,7 @@
+- Add an extra arg to compile-hs so we can control whether -i is passed.
+This is needed for building wxcore but not wx.
+
+- Add the version to the wxcore package name. XXX: it is hardcoded,
+which is bad, but it's likely that the next update to this package
+will remove most of this patch.
+
+- Run fixup.sh to create a dummy package installation to make ghc
+happy importing wxcore interfaces while building wx.
+
+- Add X11BASE to the include path.
+
+--- makefile.orig	2005-04-29 09:31:37.000000000 +0000
++++ makefile	2013-12-14 04:26:08.000000000 +0000
+@@ -424,7 +424,7 @@ $(WXD-EXE): $(WXD-OBJS)
+ 
+ # create an object file from source files.
+ $(WXD-OBJS): $(WXD-OUTDIR)/%.o: $(WXD-SRCDIR)/%.hs
+-	@$(call compile-hs,$@,$<,$(HCFLAGS) $(PKG-PARSEC),$(WXD-OUTDIR),-i$(WXD-SRCDIR))
++	@$(call compile-hs,$@,$<,$(HCFLAGS) $(PKG-PARSEC),$(WXD-OUTDIR),-i$(WXD-SRCDIR),-i$(WXD-OUTDIR))
+ 
+ # automatically include all dependency information.
+ -include $(WXD-DEPS)
+@@ -471,11 +471,12 @@ WXCORE-NONGEN-HS=$(filter-out $(WXCORE-G
+ 
+ WXCORE-BINS	=$(WXCORE-HIS) $(WXCORE-LIBS)
+ WXCORE-DOCS	=$(filter-out $(WXCORE-SRCDIR)/$(WXCORE-HPATH)/IntMap.hs,$(WXCORE-HS))
+-WXCORE-HCFLAGS	=$(HCFLAGS) -fvia-C -package-name $(WXCORE)
++WXCORE-HCFLAGS	=$(HCFLAGS) -fvia-C -package-name $(WXCORE)-0.9.4
+ 
+ 
+ # build main library
+ wxcore: wxc wxd wxcore-dirs $(WXCORE-LIBS)
++	sh fixup.sh
+ 
+ wxcore-dirs:
+ 	@$(call ensure-dirs-of-files,$(WXCORE-OBJS))
+@@ -553,7 +554,7 @@ $(WXCORE-CORE-C-LIB): $(WXCORE-CORE-C-OB
+ 
+ # create an object file from source files.
+ $(WXCORE-CORE-A-OBJS) $(WXCORE-CORE-B-OBJS) $(WXCORE-CORE-C-OBJS) $(WXCORE-OBJS): $(WXCORE-IMPORTSDIR)/%.o: $(WXCORE-SRCDIR)/%.hs
+-	@$(call compile-hs,$@,$<,$(WXCORE-HCFLAGS) -Iwxc/include,$(WXCORE-IMPORTSDIR),$(WXCORE-HSDIRS) )
++	@$(call compile-hs,$@,$<,$(WXCORE-HCFLAGS) -Iwxc/include,$(WXCORE-IMPORTSDIR),$(WXCORE-HSDIRS),-i$(WXCORE-IMPORTSDIR) )
+ 
+ $(WXCORE-STUB-OBJS): $(WXCORE-IMPORTSDIR)/%_stub.o: $(WXCORE-SRCDIR)/%.hs
+ 	$(HC) -c $(basename $@).c
+@@ -626,7 +627,7 @@ $(WX-LIB): $(WX-OBJS)
+ 
+ # create an object file from source files.
+ $(WX-OBJS): $(WX-IMPORTSDIR)/%.o: $(WX-SRCDIR)/%.hs
+-	@$(call compile-hs,$@,$<,$(WX-HCFLAGS) -i$(WXCORE-IMPORTSDIR),$(WX-IMPORTSDIR),$(WX-HSDIRS))
++	@$(call compile-hs,$@,$<,$(WX-HCFLAGS) -package-conf tmp-pkgdb -package wxcore,$(WX-IMPORTSDIR),$(WX-HSDIRS),-i$(patsubst out/%,out2/%,$(WX-IMPORTSDIR)))
+ 
+ # automatically include all dependency information.
+ -include $(WX-DEPS)
+@@ -651,7 +652,7 @@ WXC-LIB		=$(WXC-OUTDIR)/$(LIB)$(WXC-LIBN
  WXC-OBJS	=$(call make-objs, $(WXC-OUTDIR), $(WXC-SOURCES))
  WXC-DEPS	=$(call make-deps, $(WXC-OUTDIR), $(WXC-SOURCES))
  WXC-LIBS	=$(WXWIN-LIBS)
