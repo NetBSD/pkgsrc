@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4500 2013/12/14 14:59:28 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.4501 2013/12/14 15:29:04 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6673,3 +6673,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/py-elixir to 0.7.1 [obache 2013-12-14]
 	Removed security/py-amkCrypto successor security/py-crypto [obache 2013-12-14]
 	Updated net/ruby-tw to 0.5.2 [tsutsui 2013-12-14]
+	Updated games/onscripter to 20131103 [tsutsui 2013-12-14]
