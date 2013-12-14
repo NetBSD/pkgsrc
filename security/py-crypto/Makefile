@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/12/14 08:17:31 obache Exp $
+# $NetBSD: Makefile,v 1.32 2013/12/14 09:17:24 obache Exp $
 #
 
 DISTNAME=	pycrypto-2.6.1
@@ -13,6 +13,7 @@ COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	python-software-foundation
 
 CONFLICTS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
+SUPERSEDES+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
