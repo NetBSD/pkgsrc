@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2013/11/12 18:57:25 adam Exp $
+$NetBSD: distinfo,v 1.29 2013/12/14 18:59:55 bsiegert Exp $
 
 SHA1 (Python-2.7.6.tar.xz) = 8321636af2acbeaa68fc635d7dda7369ed446a80
 RMD160 (Python-2.7.6.tar.xz) = 8efc73a01a466d8fa16c5c1734c89be79c2c538a
@@ -6,7 +6,6 @@ Size (Python-2.7.6.tar.xz) = 10431288 bytes
 SHA1 (patch-Include_node.h) = 673d148b625711ac47e4bfeb0f5b0d5b31f94d7e
 SHA1 (patch-Include_pyerrors.h) = 3eba043c83b1d1df4918524f7b53047a6ed372ae
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 39b967dc2ae648143d5841f22602a21063b4d5ea
-SHA1 (patch-Lib_test_nullbytecert.pem) = 22f866c0e00016a0931985f672513c0d533d9db5
 SHA1 (patch-Modules___ssl.c) = aaddaea5bcd6c84d3d896c7c37f710933b8228bc
 SHA1 (patch-Modules_getpath.c) = f68b38eb90f974b67ceab3922ce7f92eb77f25c3
 SHA1 (patch-aa) = 990e4025bb6a37715e1f5df1831499f0ab08acfa
