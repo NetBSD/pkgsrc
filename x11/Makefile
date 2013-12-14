@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.721 2013/12/13 14:48:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.722 2013/12/14 07:37:21 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -8,7 +8,6 @@ SUBDIR+=	XaoS
 SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xaw3d
 SUBDIR+=	Xbae
-SUBDIR+=	Xcomposite
 SUBDIR+=	Xfixes
 SUBDIR+=	XmHTML
 SUBDIR+=	Xrender
