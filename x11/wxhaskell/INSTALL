@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2013/12/14 08:26:30 dholland Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	ghc-pkg register ${PREFIX}/lib/wxcore.pkg
+	ghc-pkg register ${PREFIX}/lib/wx.pkg
+	;;
+esac
