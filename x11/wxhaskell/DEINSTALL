@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2013/12/14 08:26:30 dholland Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	ghc-pkg unregister wx
+	ghc-pkg unregister wxcore
+	;;
+esac

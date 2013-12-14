@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/10/23 20:29:42 rillig Exp $
+$NetBSD: distinfo,v 1.6 2013/12/14 08:26:30 dholland Exp $
 
 SHA1 (wxhaskell-src-0.9.4.zip) = 6133991fb1e6c76a3b5b2bf175277ce56c2adad3
 RMD160 (wxhaskell-src-0.9.4.zip) = 70c386cb2451509dbd5bca652435bab35b808ed1
 Size (wxhaskell-src-0.9.4.zip) = 569954 bytes
-SHA1 (patch-aa) = 3949a41757a2e37e692746acab1ece5f775a574a
+SHA1 (patch-aa) = d1809cd32ff942c82cf540804b1aba66d1162045
+SHA1 (patch-ab) = 6d2b08d6fd476839f480be73d699423ea97f20b1
