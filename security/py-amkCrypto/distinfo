@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2009/02/27 12:46:54 drochner Exp $
-
-SHA1 (pycrypto-2.0.1.tar.gz) = c77cdefdfb06e4749690013a9a9e1600ab14e26f
-RMD160 (pycrypto-2.0.1.tar.gz) = 5ce938a24f77f414e42680c17ef9b6dc8de94a2e
-Size (pycrypto-2.0.1.tar.gz) = 154292 bytes
-SHA1 (patch-aa) = 04a36213697fa02896ba721c9ab35464c60f01a6
