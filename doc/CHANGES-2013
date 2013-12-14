@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4493 2013/12/14 06:57:24 apb Exp $
+$NetBSD: CHANGES-2013,v 1.4494 2013/12/14 07:37:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6661,3 +6661,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/isc-dhcpd4 to 4.2.5p1nb2 [jakllsch 2013-12-13]
 	Updated x11/libxkbcommon to 0.3.2nb1 [wiz 2013-12-13]
 	Added textproc/grepcidr version 2.9 [apb 2013-12-14]
+	Removed x11/Xcomposite successor x11/libXcomposite [wiz 2013-12-14]
