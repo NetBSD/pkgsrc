@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4495 2013/12/14 08:30:53 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.4496 2013/12/14 09:00:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6671,3 +6671,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added textproc/grepcidr version 2.9 [apb 2013-12-14]
 	Removed x11/Xcomposite successor x11/libXcomposite [wiz 2013-12-14]
 	Updated x11/wxhaskell to 0.9.4nb32 [dholland 2013-12-14]
+	Updated databases/py-elixir to 0.7.1 [obache 2013-12-14]
