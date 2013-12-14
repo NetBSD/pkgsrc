@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/15 14:40:15 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/14 08:47:18 obache Exp $
 
 DISTNAME=	SQLAlchemy-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,7 +14,6 @@ LICENSE=	mit
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=0.11:../../devel/py-nose
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
 
-PYDISTUTILSPKG=		yes
 #PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "options.mk"
