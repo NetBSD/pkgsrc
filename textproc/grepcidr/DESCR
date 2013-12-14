@@ -1,0 +1,4 @@
+grepcidr can be used to filter a list of IP addresses against one or more 
+IPv4 and IPv6 address ranges.  As with grep, there are options to invert 
+matching and load patterns from a file.  grepcidr is designed to scale well,
+and handle large numbers of patterns and large input files efficiently.
