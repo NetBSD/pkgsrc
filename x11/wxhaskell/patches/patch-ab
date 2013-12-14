@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2013/12/14 08:26:30 dholland Exp $
+
+- Add an extra arg to compile-hs so we can control whether -i is passed.
+This is needed for building wxcore but not wx.
+
+--- makefile.lib.orig	2005-04-29 10:32:51.000000000 +0000
++++ makefile.lib	2013-12-14 04:26:31.000000000 +0000
+@@ -137,14 +137,14 @@ else
+ silent-move-stubs =$(call silent-move-file,$(basename $(2))_stub.h,$(dir $(1))) && \
+ 		   $(call silent-move-file,$(basename $(2))_stub.c,$(dir $(1))) 
+ 
+-make-hs-obj     =$(call run-with-echo,$(HC) -c $(2) -o $(1) -i$(4) -odir $(4) -hidir $(4) $(3))
++make-hs-obj     =$(call run-with-echo,$(HC) -c $(2) -o $(1) $(5) -odir $(4) -hidir $(4) $(3))
+ 
+ # make-hs-deps(<output .o>,<input .hs>,<compile flags>,<top output directory>,<hs directories>)
+ make-hs-deps	=$(HC) $(2) $(3) -odir $(4) -hidir $(4) $(5) -M -optdep-f -optdep$(basename $(1)).d.in && \
+ 		 sed -e 's|\.hi|\.o|g' $(basename $(1)).d.in | grep '^$(1)' > $(basename $(1)).d 
+ 
+-# compile-hs(<output .o>,<input .hs>,<compile flags>,<top output directory>,<hs directories>)
+-compile-hs      =$(call make-hs-obj,$(1),$(2),$(3),$(4)) && \
++# compile-hs(<output .o>,<input .hs>,<compile flags>,<top output directory>,<hs directories>,<-i top output directory if any>)
++compile-hs      =$(call make-hs-obj,$(1),$(2),$(3),$(4),$(6)) && \
+ 		 $(call silent-move-stubs,$(1),$(2)) && \
+ 		 $(call make-hs-deps,$(1),$(2),$(3),$(4),$(5))
+ 
