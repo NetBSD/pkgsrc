@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4501 2013/12/14 15:29:04 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.4502 2013/12/14 16:31:18 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6674,3 +6674,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed security/py-amkCrypto successor security/py-crypto [obache 2013-12-14]
 	Updated net/ruby-tw to 0.5.2 [tsutsui 2013-12-14]
 	Updated games/onscripter to 20131103 [tsutsui 2013-12-14]
+	Updated x11/mlterm to 3.3.1nb1 [tsutsui 2013-12-14]
