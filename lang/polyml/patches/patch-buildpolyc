@@ -1,0 +1,16 @@
+$NetBSD: patch-buildpolyc,v 1.1 2013/12/15 18:35:23 asau Exp $
+
+--- buildpolyc.orig	2013-08-03 12:23:37.000000000 +0000
++++ buildpolyc
+@@ -15,9 +15,9 @@ link()
+ {
+     if [ X"$2" = "X" ]
+     then
+-        ${LINK} ${EXTRALDFLAGS} $1 -L${LIBDIR} -lpolymain -lpolyml ${LIBS}
++        ${LINK} ${EXTRALDFLAGS} $1 -L${LIBDIR} @COMPILER_RPATH_FLAG@${LIBDIR} -lpolymain -lpolyml ${LIBS}
+     else
+-        ${LINK} ${EXTRALDFLAGS} $1 -o $2 -L${LIBDIR} -lpolymain -lpolyml ${LIBS}
++        ${LINK} ${EXTRALDFLAGS} $1 -o $2 -L${LIBDIR} @COMPILER_RPATH_FLAG@{LIBDIR} -lpolymain -lpolyml ${LIBS}
+     fi
+ }
+ 

@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/20 21:12:51 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/15 18:35:22 asau Exp $
 bin/poly
+bin/polyc
 bin/polyimport
 lib/libpolymain.la
 lib/libpolyml.la
 man/man1/poly.1
+man/man1/polyc.1
 man/man1/polyimport.1
