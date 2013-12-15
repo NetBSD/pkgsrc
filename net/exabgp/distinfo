@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2013/12/15 22:22:44 pettai Exp $
+
+SHA1 (exabgp-exabgp-3.2.18.tar.gz) = 8d8a442744289e2ad6419978a21eb610b1330362
+RMD160 (exabgp-exabgp-3.2.18.tar.gz) = 7578a008f507d468e965e8e8645c8833e5b8059a
+Size (exabgp-exabgp-3.2.18.tar.gz) = 596423 bytes
+SHA1 (patch-dev_bin_selfcheck) = c70220d037d3b351370856c0171edca4db02ee42
+SHA1 (patch-dev_self_api_first) = b37b6e6b8d7f955c16de256fd0919aa466ca28b9
+SHA1 (patch-dev_self_api_second) = 6fcee097d8ecf0e96e8947629c23843f70b1e0e7
+SHA1 (patch-dev_self_attribute_send) = c62c39ae06d28b7fa1100811c7f633c7abc3756f
+SHA1 (patch-dev_self_big_receive) = a6e9f7589275781e39c12fdf30981829bbe42a26
+SHA1 (patch-dev_self_big_send) = acd6b83d97f0864f3c5603e11fb89d3d62677a72
+SHA1 (patch-dev_self_load_recieve) = 6520ed4635304c27847362c27b66f09f1b2248fe
+SHA1 (patch-dev_self_load_send) = 792ba8fd213f691d443ff41b1cf1fd3f0b13fef2
+SHA1 (patch-dev_self_refresh_first) = b3b1315e9f3a5f053178f9adeb9451dfe1af736b
+SHA1 (patch-dev_self_refresh_second) = 2c3bbe93e93ac908b75842aa46b79876bb10c78f
+SHA1 (patch-dev_self_simple_first) = c5210d4b5a2d65bb9cf2e68752662a13b73b96ab
+SHA1 (patch-dev_self_simple_second) = 1dad8e64ac4cfdcb5f5bcb6457ea6f7b7099e224
+SHA1 (patch-setup.py) = 63f2ded09eb0ba71ee5722f7196b9039dbea865e
