@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12786 2013/12/13 18:28:38 wiz Exp $
+$NetBSD: TODO,v 1.12787 2013/12/15 09:43:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -921,7 +921,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qemu-1.7
 	o qnetwalk-1.4
 	o qt4-qscintilla-2.8
-	o qt5-libs-5.2
 	o quilt-0.60
 	o radiance-3.7.2
 	o rails-4.0.1
