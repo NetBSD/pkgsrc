@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2013/12/09 14:17:45 obache Exp $
+# $NetBSD: Makefile,v 1.25 2013/12/15 13:05:13 wen Exp $
 
-DISTNAME=	POE-1.312
+DISTNAME=	POE-1.358
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
@@ -23,6 +22,7 @@ DEPENDS+=	{perl>=5.8.5,p5-Term-Cap>=1.09}:../../devel/p5-Term-Cap
 DEPENDS+=	{perl>=5.8.4,p5-Time-HiRes>=1.59}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-IO-Pipely>=0.005:../../devel/p5-IO-Pipely
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
