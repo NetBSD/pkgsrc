@@ -1,0 +1,26 @@
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1 2013/12/15 18:45:19 asau Exp $
+
+Use uniform shared library names to avoid packaging list divergence.
+
+--- libmysql/CMakeLists.txt.orig	2013-11-05 07:19:26.000000000 +0000
++++ libmysql/CMakeLists.txt	2013-12-15 17:49:19.435504292 +0000
+@@ -193,13 +193,13 @@
+   MERGE_LIBRARIES(libmysql SHARED ${LIBS} EXPORTS ${CLIENT_API_FUNCTIONS} COMPONENT SharedLibraries)
+   IF(UNIX)
+     # libtool compatability
+-    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR APPLE)
+-      SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
+-    ELSEIF(CMAKE_SYSTEM_NAME MATCHES "HP-UX")
+-      SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}.0")
+-    ELSE()
++#    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR APPLE)
++#      SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
++#    ELSEIF(CMAKE_SYSTEM_NAME MATCHES "HP-UX")
++#      SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}.0")
++#    ELSE()
+       SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}.0.0")
+-    ENDIF()
++#    ENDIF()
+     # Name of shared library is mysqlclient on Unix
+     SET_TARGET_PROPERTIES(libmysql PROPERTIES 
+       OUTPUT_NAME mysqlclient 
