@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/08/01 03:40:58 dholland Exp $
+$NetBSD: distinfo,v 1.6 2013/12/15 19:36:02 joerg Exp $
 
 SHA1 (gimmix-0.5.7.1.tar.bz2) = d32f272e4c6b4107081355c19bf813b69096ee7d
 RMD160 (gimmix-0.5.7.1.tar.bz2) = be664504014a23f3ff7327730508cb18a9e0d356
 Size (gimmix-0.5.7.1.tar.bz2) = 330368 bytes
+SHA1 (patch-src_gimmix-playlist.c) = db9ea0a63db64b8e3d03cf8fe436b8b9513830b6
 SHA1 (patch-src_gimmix_covers_c) = 3c438232c6fa414ceaa5f131e259a1f810e58771
 SHA1 (patch-src_gimmix_lyrics_c) = 944af1a9b66e1eaeb457fd5705ec1c64d48039ea
