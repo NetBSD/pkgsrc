@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/unix/System/Posix/Process.hsc.orig	2008-03-24 17:10:54.000000000 +0100
++++ libraries/unix/System/Posix/Process.hsc	2008-03-24 17:11:30.000000000 +0100
+@@ -177,7 +177,7 @@
+ 
+ type CTms = ()
+ 
+-foreign import ccall unsafe "times"
++foreign import ccall unsafe "__hsunix_times"
+   c_times :: Ptr CTms -> IO CClock
+ 
+ -- -----------------------------------------------------------------------------
