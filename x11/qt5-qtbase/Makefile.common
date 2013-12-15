@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/12/15 09:42:44 ryoon Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -25,7 +25,7 @@
 
 DISTNAME=	qt-everywhere-opensource-src-${QTDISTVER}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.qt-project.org/development_releases/qt/5.2/5.2.0-rc1/single/
+MASTER_SITES=	http://download.qt-project.org/official_releases/qt/5.2/5.2.0/single/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 

@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/12/15 09:42:45 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-qttools
 
 .if !defined(QT5_QTTOOLS_BUILDLINK3_MK)
 QT5_QTTOOLS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt5-qttools+=	qt5-qttools>=5.0.2
+BUILDLINK_API_DEPENDS.qt5-qttools+=	qt5-qttools>=5.2.0
 BUILDLINK_PKGSRCDIR.qt5-qttools?=	../../x11/qt5-qttools
 
 BUILDLINK_INCDIRS.qt5-qttools+=	qt5/include
