@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/01/26 20:19:08 rhaen Exp $
+$NetBSD: distinfo,v 1.8 2013/12/15 14:32:50 wen Exp $
 
-SHA1 (Set-IntSpan-1.16.tar.gz) = 1e5b17b31940b21ede89fcd16ea61b26c808fdf3
-RMD160 (Set-IntSpan-1.16.tar.gz) = bb6b53bd5b733411c4e2022916fa5cee4fbd4f14
-Size (Set-IntSpan-1.16.tar.gz) = 25426 bytes
+SHA1 (Set-IntSpan-1.19.tar.gz) = bfef262e876144c5fe355277b94144b20e7ddfaa
+RMD160 (Set-IntSpan-1.19.tar.gz) = 1b46da5ef90168c600f8874e7633a74aacdc8c3b
+Size (Set-IntSpan-1.19.tar.gz) = 26640 bytes
