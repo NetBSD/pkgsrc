@@ -1,0 +1,15 @@
+$NetBSD: patch-dev_bin_selfcheck,v 1.1 2013/12/15 22:22:44 pettai Exp $
+
+Portability fix
+
+--- dev/bin/selfcheck.orig	2013-11-26 10:33:49.000000000 +0000
++++ dev/bin/selfcheck
+@@ -24,7 +24,7 @@ do
+ 	retcode=$?
+ 	problem=`echo $result | grep 'Problem with the configuration file'`
+ 
+-	if [ $retcode -eq 0 ] && [ "$problem" == "" ]
++	if [ $retcode -eq 0 ] && [ "$problem" = "" ]
+ 	then
+ 		printf "\rok\n"
+ 	else
