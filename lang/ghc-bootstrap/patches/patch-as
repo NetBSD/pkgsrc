@@ -1,0 +1,21 @@
+$NetBSD: patch-as,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/unix/System/Posix/Signals.hs.orig	2008-07-19 19:59:17.000000000 +0200
++++ libraries/unix/System/Posix/Signals.hs	2008-07-19 20:00:49.000000000 +0200
+@@ -502,7 +502,7 @@
+   -- ignore the return value; according to the docs it can only ever be
+   -- (-1) with errno set to EINTR.
+  
+-foreign import ccall unsafe "sigsuspend"
++foreign import ccall unsafe "__hsunix_sigsuspend"
+   c_sigsuspend :: Ptr CSigset -> IO CInt
+ #endif
+ 
+@@ -526,6 +526,6 @@
+   c_sigismember :: Ptr CSigset -> CInt -> IO CInt
+ #endif /* __HUGS__ */
+ 
+-foreign import ccall unsafe "sigpending"
++foreign import ccall unsafe "__hsunix_sigpending"
+   c_sigpending :: Ptr CSigset -> IO CInt
+ 

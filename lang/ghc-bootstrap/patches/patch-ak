@@ -1,0 +1,37 @@
+$NetBSD: patch-ak,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/base/include/HsBase.h.orig	2008-06-16 19:42:53.000000000 +0200
++++ libraries/base/include/HsBase.h	2008-07-19 19:57:32.000000000 +0200
+@@ -21,7 +21,9 @@
+ /* Needed to get the macro version of errno on some OSs (eg. Solaris).
+    We must do this, because these libs are only compiled once, but
+    must work in both single-threaded and multi-threaded programs. */
++#ifndef _REENTRANT
+ #define _REENTRANT 1
++#endif
+ 
+ #include "HsFFI.h"
+ 
+@@ -254,6 +256,11 @@
+ INLINE int
+ __hscore_sigismember( sigset_t * set, int s )
+ { return sigismember(set,s); }
++
++INLINE int
++__hscore_sigprocmask( int how, const sigset_t * set, sigset_t * oset )
++{ return sigprocmask(how,set,oset); }
++
+ #endif
+ 
+ INLINE void *
+@@ -665,6 +672,10 @@
+ #endif
+ }
+ 
++INLINE DIR* __hscore_opendir (const char *filename) {
++	return opendir(filename);
++}
++
+ // These are wrapped because on some OSs (eg. Linux) they are
+ // macros which redirect to the 64-bit-off_t versions when large file
+ // support is enabled.
