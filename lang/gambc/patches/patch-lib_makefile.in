@@ -1,0 +1,27 @@
+$NetBSD: patch-lib_makefile.in,v 1.1 2013/12/15 19:39:34 joerg Exp $
+
+--- lib/makefile.in.orig	2009-08-01 21:29:10.000000000 +0000
++++ lib/makefile.in
+@@ -8,8 +8,8 @@ SUBDIRS = guide
+ 
+ PACKAGE_SHORTNAME = @PACKAGE_SHORTNAME@
+ PACKAGE_NAME = @PACKAGE_NAME@
+-PACKAGE_VERSION = @PACKAGE_VERSION@
+-PACKAGE_STRING = @PACKAGE_STRING@
++PACKAGE_VERSION = 4.6.5
++PACKAGE_STRING = gambc 4.6.5
+ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
+ PACKAGE_TARNAME = @PACKAGE_TARNAME@
+ 
+@@ -136,8 +136,10 @@ all-pre:
+ 
+ all-post: $(LIBRARY) _$(GAMBCLIB).c
+ 
++CFLAGS._io.c= ${CLANG_NO_OPT}
++
+ .c@obj@:
+-	@BUILD_OBJ@ -D___LIBRARY
++	@BUILD_OBJ@ -D___LIBRARY ${CFLAGS.$<}
+ 
+ .scm.c:
+ 	@SETDLPATH@ $(rootfromhere)/gsc-comp -:~~bin=$(srcdirpfx)$(rootfromhere)/bin,~~lib=$(srcdirpfx)$(rootfromhere)/lib,~~include=$(srcdirpfx)$(rootfromhere)/include -f -c -check $(srcdirpfx)$*.scm
