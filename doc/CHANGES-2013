@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4521 2013/12/15 21:51:55 bsiegert Exp $
+$NetBSD: CHANGES-2013,v 1.4522 2013/12/15 22:25:51 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6717,3 +6717,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Set-IntSpan to 1.19 [wen 2013-12-15]
 	Updated lang/polyml to 5.5.1 [asau 2013-12-15]
 	Updated lang/go to 1.2 [bsiegert 2013-12-15]
+	Added net/exabgp version 3.2.18 [pettai 2013-12-15]
