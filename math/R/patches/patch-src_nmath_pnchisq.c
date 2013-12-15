@@ -1,6 +1,6 @@
-$NetBSD: patch-src_nmath_pnchisq.c,v 1.1 2013/08/13 19:53:30 markd Exp $
+$NetBSD: patch-src_nmath_pnchisq.c,v 1.2 2013/12/15 19:58:11 asau Exp $
 
-No expl() in NetBSD 6.x.
+No expl() in NetBSD 6.x and FreeBSD 9.
 
 --- src/nmath/pnchisq.c.orig	2013-03-05 23:02:41.000000000 +0000
 +++ src/nmath/pnchisq.c
@@ -8,7 +8,7 @@ No expl() in NetBSD 6.x.
   */
  
  #ifdef HAVE_LONG_DOUBLE
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__FreeBSD__)
 +# define EXP exp
 +#else
  # define EXP expl
