@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4511 2013/12/15 13:45:07 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4512 2013/12/15 13:50:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6707,3 +6707,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/p5-POE-Component-Client-DNS to 1.053 [wen 2013-12-15]
 	Updated www/p5-POE-Component-Server-PSGI to 0.6 [wen 2013-12-15]
 	Updated chat/p5-POE-Component-IRC to 6.83 [wen 2013-12-15]
+	Updated chat/p5-POE-Filter-IRCD to 2.44 [wen 2013-12-15]
