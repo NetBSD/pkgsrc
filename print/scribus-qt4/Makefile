@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/08/09 11:06:28 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2013/12/15 19:44:02 joerg Exp $
 
 DISTNAME=		scribus-1.4.3
 CATEGORIES=		print
@@ -20,6 +20,11 @@ CMAKE_ARGS+=	-DPNG_LIBRARY_RELEASE=${LOCALBASE}/lib
 #CMAKE_ARGS+=	-DWANT_HUNSPELL:BOOL=ON
 
 INSTALLATION_DIRS+=	share/pixmaps
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CMAKE_ARGS+=	-DCLANG_NO_OPT=-O0
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/icons/scribus.png \
