@@ -1,0 +1,33 @@
+$NetBSD: patch-am,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/unix/include/HsUnix.h.orig	2008-06-16 19:48:44.000000000 +0200
++++ libraries/unix/include/HsUnix.h	2008-07-19 20:06:49.000000000 +0200
+@@ -140,6 +140,28 @@
+     return mknod(pathname,mode,dev);
+ }
+ 
++#ifdef HAVE_UNSETENV
++INLINE int __hsunix_unsetenv(const char *name)
++{
++    return unsetenv(name);
++}
++#endif
++
++INLINE clock_t __hsunix_times(struct tms *tp)
++{
++    return times(tp);
++}
++
++INLINE int __hsunix_sigpending(sigset_t *set)
++{
++    return sigpending(set);
++}
++
++INLINE int __hsunix_sigsuspend(const sigset_t *sigmask)
++{
++    return sigsuspend(sigmask);
++}
++
+ #ifdef HAVE_PTSNAME
+ // I cannot figure out how to make the definitions of the following
+ // functions visible in <stdlib.h> on Linux.  But these definitions
