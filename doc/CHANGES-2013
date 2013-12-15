@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4507 2013/12/15 13:06:12 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4508 2013/12/15 13:18:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6703,3 +6703,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-MooseX-Declare to 0.38 [wen 2013-12-15]
 	Added devel/p5-IO-Pipely version 0.005 [wen 2013-12-15]
 	Updated devel/p5-POE to 1.358 [wen 2013-12-15]
+	Updated devel/p5-POE-Test-Loops to 1.354 [wen 2013-12-15]
