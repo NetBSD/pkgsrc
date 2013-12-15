@@ -1,0 +1,16 @@
+$NetBSD: patch-libqalculate_Makefile.in,v 1.1 2013/12/15 19:41:23 joerg Exp $
+
+--- libqalculate/Makefile.in.orig	2013-12-14 20:47:49.000000000 +0000
++++ libqalculate/Makefile.in
+@@ -376,8 +376,10 @@ distclean-compile:
+ @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCXX_FALSE@	$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+ 
++CXXFLAGS.Calculator.cc= ${CLANG_NO_OPT}
++
+ .cc.lo:
+-@am__fastdepCXX_TRUE@	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
++@am__fastdepCXX_TRUE@	$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $< ${CXXFLAGS.$<}
+ @am__fastdepCXX_TRUE@	mv -f $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+ @AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+ @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
