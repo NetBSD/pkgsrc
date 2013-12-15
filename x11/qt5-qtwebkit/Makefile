@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2013/12/14 07:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/15 00:09:22 wiz Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
 COMMENT=	Qt5 WebView module
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
+BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
+
 USE_LIBTOOL=		yes
 
 BUILD_DIRS+=		qtwebkit
 MAKE_ENV+=		QTDIR=${QTDIR}
 
-USE_TOOLS+=		sed pkg-config
+USE_TOOLS+=		bison sed pkg-config
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
