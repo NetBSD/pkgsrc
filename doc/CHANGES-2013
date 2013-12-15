@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4518 2013/12/15 14:27:46 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4519 2013/12/15 14:33:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6714,3 +6714,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/xulrunner24 version 24.2.0 [ryoon 2013-12-15]
 	Updated devel/nss to 3.15.3.1 [ryoon 2013-12-15]
 	Updated devel/p5-Set-Array to 0.30 [wen 2013-12-15]
+	Updated devel/p5-Set-IntSpan to 1.19 [wen 2013-12-15]
