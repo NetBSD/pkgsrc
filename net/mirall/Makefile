@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/11/23 03:00:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/15 19:42:46 joerg Exp $
 
 DISTNAME=	mirall-1.4.2
 PKGREVISION=	1
@@ -47,4 +47,5 @@ pre-configure:
 .include "../../net/ocsync/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
