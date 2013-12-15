@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4520 2013/12/15 18:35:41 asau Exp $
+$NetBSD: CHANGES-2013,v 1.4521 2013/12/15 21:51:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6716,3 +6716,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/p5-Set-Array to 0.30 [wen 2013-12-15]
 	Updated devel/p5-Set-IntSpan to 1.19 [wen 2013-12-15]
 	Updated lang/polyml to 5.5.1 [asau 2013-12-15]
+	Updated lang/go to 1.2 [bsiegert 2013-12-15]
