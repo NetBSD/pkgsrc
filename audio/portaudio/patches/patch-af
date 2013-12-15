@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2012/01/11 20:14:10 hans Exp $
+$NetBSD: patch-af,v 1.3 2013/12/15 20:14:16 asau Exp $
 
 --- pa_unix_oss/pa_unix_oss.c~	Mon Jun 30 11:05:50 2003
 +++ pa_unix_oss/pa_unix_oss.c	Wed Nov 26 02:40:25 2003
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.2 2012/01/11 20:14:10 hans Exp $
  
  #ifdef __linux__
  #include <linux/soundcard.h>
-+#elif defined(__sun)
++#elif defined(__sun) || defined(__FreeBSD__)
 +#include <sys/soundcard.h>
  #else
  #include <machine/soundcard.h> /* JH20010905 */
