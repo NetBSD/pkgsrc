@@ -1,11 +1,11 @@
-$NetBSD: patch-toolkit_components_osfile_osfile__unix__back.jsm,v 1.2 2013/11/13 14:17:12 ryoon Exp $
+$NetBSD: patch-toolkit_components_osfile_osfile__unix__back.jsm,v 1.3 2013/12/15 14:02:25 ryoon Exp $
 
 Based on martin@'s patch for firefox 27.0
 
 * Use off_t for st_size
 * Use function name for NetBSD
 
---- toolkit/components/osfile/osfile_unix_back.jsm.orig	2013-10-22 06:19:20.000000000 +0000
+--- toolkit/components/osfile/osfile_unix_back.jsm.orig	2013-12-06 02:21:29.000000000 +0000
 +++ toolkit/components/osfile/osfile_unix_back.jsm
 @@ -173,7 +173,7 @@
           }

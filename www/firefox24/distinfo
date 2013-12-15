@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.4 2013/11/21 15:25:17 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2013/12/15 14:02:25 ryoon Exp $
 
-SHA1 (firefox-24.1.1esr.source.tar.bz2) = 742b1f134db47793a1426ce4ee09a5f9dc6b51fc
-RMD160 (firefox-24.1.1esr.source.tar.bz2) = 47c6040f82867b874a3044afe86550c1b4c50d1f
-Size (firefox-24.1.1esr.source.tar.bz2) = 119861572 bytes
-SHA1 (patch-aa) = e8a10637cefb668f1db518464ba75b5469090f8f
+SHA1 (firefox-24.2.0esr.source.tar.bz2) = 20d6fd8be73ff09d14e31543a2ce134dc6d503a4
+RMD160 (firefox-24.2.0esr.source.tar.bz2) = 1395d54881c9ebc3e7ddee27b55b247f94025916
+Size (firefox-24.2.0esr.source.tar.bz2) = 119820009 bytes
+SHA1 (patch-aa) = bc6b89aa36a429ee148685618cca08dba3e01bbc
 SHA1 (patch-ak) = 971ddb1f12b14bcee604c9d7e72da5e7bf47d9be
 SHA1 (patch-al) = 553c6042a98e4b381a46eec50c02cff349d88bd2
 SHA1 (patch-ao) = ebf95a9abf76439cdd890ea34f75f0d8d1114fe0
-SHA1 (patch-as) = 678d50cccaa29e32bb703a8c66ecf31a10fe8078
+SHA1 (patch-as) = f526273a9080e46e4b8da8e10735babd865c9a92
 SHA1 (patch-bf) = 75c971043e9f693203d6bd670b2c20c4952a7756
 SHA1 (patch-bg) = e5af56b3dca81ad67149c09942580ebd9062b38d
 SHA1 (patch-bi) = 3dd927d93431afe000cd4a45b4d9920e63158a85
@@ -117,7 +117,7 @@ SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-security_manager_ssl_src_JARSignatureVerification.cpp) = e9749dfeb0d3fcb4637935322ffd1e0cad4f8ec3
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = c4c96b7d3cb0c5dbcfe3820fd52421eec2592452
 SHA1 (patch-toolkit_components_osfile_osfile__unix__allthreads.jsm) = 0bb66da3445da1cab81b9ddf46e74b03070243af
-SHA1 (patch-toolkit_components_osfile_osfile__unix__back.jsm) = c5069994938d2b2640c527cc63aed186e174d235
+SHA1 (patch-toolkit_components_osfile_osfile__unix__back.jsm) = 796c666fc6941ca62eda711cf94bdde45a3fe3c0
 SHA1 (patch-toolkit_components_osfile_osfile__unix__front.jsm) = 0d8200b8c43dc4c56f5e3d53fd13f48d7ff6dc38
 SHA1 (patch-toolkit_library_Makefile.in) = 0c91d647f0f3a4653d39f11c9d8fd63611235932
 SHA1 (patch-toolkit_mozapps_update_updater_updater.cpp) = 6936e5408fc7f0110768f3fc8f27506c0e7879fa
