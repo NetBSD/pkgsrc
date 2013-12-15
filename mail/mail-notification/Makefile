@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2013/10/10 14:42:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2013/12/15 19:40:03 joerg Exp $
 #
 
 DISTNAME=	mail-notification-5.4
@@ -48,6 +48,11 @@ CONFIGURE_ARGS+=	sasl=no
 .  include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	ssl=no
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-unused-function
 .endif
 
 do-build:
