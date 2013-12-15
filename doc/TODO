@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12787 2013/12/15 09:43:18 ryoon Exp $
+$NetBSD: TODO,v 1.12788 2013/12/15 13:55:39 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -525,7 +525,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
-	o firefox-26
 	o fish-2.1
 	o flashplayer-0.4.13
 	o flightgear-2.12
