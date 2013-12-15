@@ -1,0 +1,13 @@
+Unlike BIRD or Quagga, ExaBGP was not designed to transform a general purpose
+server into a router, but to allow engineers to control their BGP (rfc4271)
+network easily. Think of it as Software Defined Networking for people with
+"commodity" routers.
+
+ExaBGP transform BGP (rfc4271) messages into friendly plain text or JSON
+which can be easily manipulate by scripts.
+
+It allows the creation of tools such as:
+ * advanced looking glass graphically display the routing of prefix
+ * high availability tool which automatically isolate broken services
+ * DDOS mitigation
+ * an anycasted server

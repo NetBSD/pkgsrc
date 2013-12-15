@@ -1,0 +1,20 @@
+$NetBSD: patch-dev_self_refresh_first,v 1.1 2013/12/15 22:22:44 pettai Exp $
+
+Portability fix
+
+--- dev/self/refresh/first.orig	2013-11-26 10:10:01.000000000 +0000
++++ dev/self/refresh/first
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ 
+ ip=`ifconfig | grep -A10 en0 | grep "inet " | head -1 | awk '{ print $2; }'`
+-if [ "$ip" == "" ]
++if [ "$ip" = "" ]
+ then
+ 	ip=`ifconfig | grep -A10 en1 | grep "inet " | head -1 | awk '{ print $2; }'`
+ fi
+-if [ "$ip" == "" ]
++if [ "$ip" = "" ]
+ then
+ 	ip=`ifconfig | grep -A10 vnic0 | grep "inet " | head -1 | awk '{ print $2; }'`
+ fi
