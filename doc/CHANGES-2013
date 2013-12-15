@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4502 2013/12/14 16:31:18 tsutsui Exp $
+$NetBSD: CHANGES-2013,v 1.4503 2013/12/15 02:05:45 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6675,3 +6675,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/ruby-tw to 0.5.2 [tsutsui 2013-12-14]
 	Updated games/onscripter to 20131103 [tsutsui 2013-12-14]
 	Updated x11/mlterm to 3.3.1nb1 [tsutsui 2013-12-14]
+	Added lang/ghc-bootstrap version 6.8.3 [dholland 2013-12-15]
