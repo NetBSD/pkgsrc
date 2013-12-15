@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.992 2013/12/11 03:03:04 obache Exp $
+# $NetBSD: Makefile,v 1.993 2013/12/15 22:24:06 pettai Exp $
 #
 
 COMMENT=	Networking tools
@@ -122,6 +122,7 @@ SUBDIR+=	ether2dns
 SUBDIR+=	etherape
 SUBDIR+=	ettercap
 SUBDIR+=	ettercap-NG
+SUBDIR+=	exabgp
 SUBDIR+=	ez-ipupdate
 SUBDIR+=	fair-identd
 SUBDIR+=	fetch
