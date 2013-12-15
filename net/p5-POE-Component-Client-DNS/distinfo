@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/06 12:03:51 wiz Exp $
+$NetBSD: distinfo,v 1.4 2013/12/15 13:27:45 wen Exp $
 
-SHA1 (POE-Component-Client-DNS-1.051.tar.gz) = f76a2515c45dc18f9be560179ac8a5421509bea8
-RMD160 (POE-Component-Client-DNS-1.051.tar.gz) = 28f489754bd2a07ebeb490e1781d1544eb22c2fa
-Size (POE-Component-Client-DNS-1.051.tar.gz) = 14824 bytes
+SHA1 (POE-Component-Client-DNS-1.053.tar.gz) = d7a1f7189fc3906cc5d8fea335832a8785ea651c
+RMD160 (POE-Component-Client-DNS-1.053.tar.gz) = 7fe6df89eebd173c7f2d9d4dc05e46826df96e6d
+Size (POE-Component-Client-DNS-1.053.tar.gz) = 28291 bytes
