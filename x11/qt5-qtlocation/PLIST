@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
 lib/pkgconfig/Qt5Positioning.pc
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qdeclarativegeoaddress_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qdeclarativegeolocation_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeoaddress_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeocircle_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeocoordinate_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeolocation_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeopositioninfosource_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeorectangle_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qgeoshape_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qlocationutils_p.h
-qt5/include/QtPositioning/5.2.0/QtPositioning/private/qnmeapositioninfosource_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdeclarativegeoaddress_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qdeclarativegeolocation_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeoaddress_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeocircle_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeocoordinate_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeolocation_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeopositioninfosource_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeorectangle_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qgeoshape_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qlocationutils_p.h
+qt5/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qnmeapositioninfosource_p.h
 qt5/include/QtPositioning/QGeoAddress
 qt5/include/QtPositioning/QGeoAreaMonitorInfo
 qt5/include/QtPositioning/QGeoAreaMonitorSource
