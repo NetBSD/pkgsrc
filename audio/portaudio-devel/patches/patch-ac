@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2012/01/11 20:15:37 hans Exp $
+$NetBSD: patch-ac,v 1.5 2013/12/15 20:19:08 asau Exp $
 
 --- src/hostapi/oss/pa_unix_oss.c.orig	2006-05-17 08:02:24.000000000 +0000
 +++ src/hostapi/oss/pa_unix_oss.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.4 2012/01/11 20:15:37 hans Exp $
  #include <sys/ioctl.h>
  #include <unistd.h>
  #include <pthread.h>
-+#if !defined(__NetBSD__) && !defined(__DragonFly__)
++#if !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
  #include <alloca.h>
 -#include <malloc.h>
 +#endif
