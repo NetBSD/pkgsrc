@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/08 14:34:06 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/15 18:35:22 asau Exp $
 
-DISTNAME=	polyml.5.5
-PKGNAME=	polyml-5.5
+DISTNAME=	polyml.5.5.1
+PKGNAME=	polyml-5.5.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=polyml/}
 
@@ -10,13 +10,18 @@ HOMEPAGE=	http://polyml.org/
 COMMENT=	Poly/ML is an implementation of Standard ML
 
 # ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-sparc *-*-powerpc
-# Dumps core on NetBSD/amd64
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-system-libffi
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 TEST_TARGET=	tests
+
+SUBST_CLASSES+=			fix-rpath-flag
+SUBST_STAGE.fix-rpath-flag=	pre-configure
+SUBST_MESSAGE.fix-rpath-flag=	Fixing RPATH flag.
+SUBST_FILES.fix-rpath-flag=	buildpolyc
+SUBST_SED.fix-rpath-flag=	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
 
 .include "options.mk"
 
