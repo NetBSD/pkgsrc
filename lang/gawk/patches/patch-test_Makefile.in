@@ -1,0 +1,19 @@
+$NetBSD: patch-test_Makefile.in,v 1.1 2013/12/15 09:42:14 richard Exp $
+
+Non portable '-f' flag for ls should be -U for unsorted
+pkgsrc replacement links mean -L should be used too.
+
+NB on SunOS, locale/en should be installed in order to have
+all tests successfully execute (namely mbfw1 and mbprintf1)
+
+--- test/Makefile.in.orig	2013-12-15 08:43:50.258867212 +0000
++++ test/Makefile.in
+@@ -2156,7 +2156,7 @@ readdir:
+ 	fi
+ 	@echo $@
+ 	@$(AWK) -f $(srcdir)/readdir.awk $(top_srcdir) > _$@
+-	@ls -afli $(top_srcdir) | sed 1d | $(AWK) -f $(srcdir)/readdir0.awk -v extout=_$@ > $@.ok
++	@ls -aliUL $(top_srcdir) | sed 1d | $(AWK) -f $(srcdir)/readdir0.awk -v extout=_$@ > $@.ok
+ 	@-$(CMP) $@.ok _$@ && rm -f $@.ok _$@
+ 
+ fts:
