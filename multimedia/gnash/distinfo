@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2013/08/31 14:52:14 joerg Exp $
+$NetBSD: distinfo,v 1.23 2013/12/15 19:42:04 joerg Exp $
 
 SHA1 (gnash-0.8.10.tar.bz2) = be3b12a5edcd3b05f2ae73d02f0991aa786e7300
 RMD160 (gnash-0.8.10.tar.bz2) = 0093174ec0a912309772c033b5f1c1ad46ab41dc
@@ -12,7 +12,7 @@ SHA1 (patch-libbase_Makefile.in) = c5b6533f5ac2b2ee26d0547c3054375e72512ccf
 SHA1 (patch-libbase_rc.cpp) = 2df75034a7f195864931504041ad956142495313
 SHA1 (patch-libcore_Makefile.in) = 6b92917f0be3779b7f6e1993ac29960cef50c736
 SHA1 (patch-libcore_movie__root.cpp) = 5ee7321011961427effd7951860cbf5f3c0b0a6f
-SHA1 (patch-libcore_swf_DefineButtonTag.h) = 9306aab8a56e3447037d7aa1f9f67daec3c6c15a
+SHA1 (patch-libcore_swf_DefineButtonTag.h) = 42e01cca7a5017349a3a0a31f1eb6b2aeb1f33fd
 SHA1 (patch-libmedia_FLVParser.cpp) = e990c82edceb3c5d481d7de86e720139b4dc60ea
 SHA1 (patch-libmedia_Makefile.in) = 10fde4560a20dcb28599d8c51a4fc7af93109474
 SHA1 (patch-librender_Makefile.in) = 25e38d82e3ecc156ff1f2b855a05437da015f3ce
