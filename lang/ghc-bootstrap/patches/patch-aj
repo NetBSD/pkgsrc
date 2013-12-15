@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/readline/configure.orig	2008-02-21 09:32:21.000000000 -0300
++++ libraries/readline/configure
+@@ -1300,6 +1300,10 @@ else
+   readline_libraries=NONE
+ fi;
+ 
++# Force readline paths.
++readline_includes="@PREFIX@/include"
++readline_libraries="@PREFIX@/lib"
++
+ 
+ if test "$enable_readline" = no; then
+   BUILD_PACKAGE_BOOL=False

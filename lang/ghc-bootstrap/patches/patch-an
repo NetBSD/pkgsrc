@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/unix/System/Posix/Env.hsc.orig	2008-03-24 17:09:39.000000000 +0100
++++ libraries/unix/System/Posix/Env.hsc	2008-03-24 17:10:41.000000000 +0100
+@@ -81,7 +81,7 @@
+ 
+ unsetEnv name = withCString name c_unsetenv
+ 
+-foreign import ccall unsafe "unsetenv"
++foreign import ccall unsafe "__hsunix_unsetenv"
+    c_unsetenv :: CString -> IO ()
+ #else
+ unsetEnv name = putEnv (name ++ "=")

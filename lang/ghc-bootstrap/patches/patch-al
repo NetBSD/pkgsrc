@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- libraries/base/System/Posix/Internals.hs.orig	2007-12-10 19:16:54.000000000 +0100
++++ libraries/base/System/Posix/Internals.hs	2008-07-07 13:11:44.000000000 +0200
+@@ -354,7 +354,7 @@
+ foreign import ccall unsafe "HsBase.h __hscore_open"
+    c_open :: CString -> CInt -> CMode -> IO CInt
+ 
+-foreign import ccall unsafe "HsBase.h opendir" 
++foreign import ccall unsafe "HsBase.h __hscore_opendir" 
+    c_opendir :: CString  -> IO (Ptr CDir)
+ 
+ foreign import ccall unsafe "HsBase.h __hscore_mkdir"
+@@ -418,7 +418,7 @@
+ foreign import ccall unsafe "HsBase.h __hscore_sigaddset"
+    c_sigaddset :: Ptr CSigset -> CInt -> IO CInt
+ 
+-foreign import ccall unsafe "HsBase.h sigprocmask"
++foreign import ccall unsafe "HsBase.h __hscore_sigprocmask"
+    c_sigprocmask :: CInt -> Ptr CSigset -> Ptr CSigset -> IO CInt
+ 
+ foreign import ccall unsafe "HsBase.h tcgetattr"

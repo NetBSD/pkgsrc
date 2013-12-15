@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- rts/package.conf.in.orig	2007-12-10 16:11:32.000000000 -0200
++++ rts/package.conf.in
+@@ -73,7 +73,7 @@ depends:	 	
+ hugs-options:
+ cc-options:
+ 
+-ld-options:
++ld-options: "-Wl,-R@PREFIX@/lib","-L@PREFIX@/lib",
+ #ifdef LEADING_UNDERSCORE
+            "-u", "_base_GHCziBase_Izh_static_info"
+          , "-u", "_base_GHCziBase_Czh_static_info"
