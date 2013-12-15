@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.361 2013/12/12 12:48:18 obache Exp $
+# $NetBSD: Makefile,v 1.362 2013/12/15 02:52:22 dholland Exp $
 #
 
 COMMENT=	Programming languages
@@ -68,6 +68,7 @@ SUBDIR+=	gcc48
 SUBDIR+=	gcc48-libs
 SUBDIR+=	gforth
 SUBDIR+=	ghc
+SUBDIR+=	ghc-bootstrap
 SUBDIR+=	ghc7
 SUBDIR+=	gnat-aux
 SUBDIR+=	go
