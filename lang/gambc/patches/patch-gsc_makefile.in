@@ -1,0 +1,17 @@
+$NetBSD: patch-gsc_makefile.in,v 1.1 2013/12/15 19:39:34 joerg Exp $
+
+--- gsc/makefile.in.orig	2013-12-15 14:34:50.000000000 +0000
++++ gsc/makefile.in
+@@ -208,8 +208,11 @@ _gsc@obj@: _gsc.c
+ _gsc_@obj@: _gsc_.c
+ 	@BUILD_OBJ@
+ 
++CFLAGS._t-c-2.c= ${CLANG_NO_OPT}
++CFLAGS._x86.c= ${CLANG_NO_OPT}
++
+ .c@obj@:
+-	@BUILD_OBJ@ -D___LIBRARY
++	@BUILD_OBJ@ -D___LIBRARY ${CFLAGS.$<}
+ 
+ .scm.c:
+ 	@SETDLPATH@ $(rootfromhere)/gsc-comp -:~~bin=$(srcdirpfx)$(rootfromhere)/bin,~~lib=$(srcdirpfx)$(rootfromhere)/lib,~~include=$(srcdirpfx)$(rootfromhere)/include -f -c -check $(srcdirpfx)$*.scm
