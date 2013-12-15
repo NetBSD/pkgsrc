@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
 lib/pkgconfig/Qt5Svg.pc
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvgfont_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvgfunctions_wince_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvggraphics_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvghandler_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvgnode_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvgstructure_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvgstyle_p.h
-qt5/include/QtSvg/5.2.0/QtSvg/private/qsvgtinydocument_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfont_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfunctions_wince_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvggraphics_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvghandler_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgnode_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstructure_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstyle_p.h
+qt5/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgtinydocument_p.h
 qt5/include/QtSvg/QGraphicsSvgItem
 qt5/include/QtSvg/QSvgGenerator
 qt5/include/QtSvg/QSvgRenderer
