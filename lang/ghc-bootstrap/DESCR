@@ -1,0 +1,5 @@
+GHC: The Glasgow Haskell Compiler.
+
+This is a package for generating binary bootstrap kits for GHC. The
+main GHC package is lang/ghc; that is all you need unless you are
+working on the GHC package.

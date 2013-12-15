@@ -1,0 +1,22 @@
+$NetBSD: patch-ar,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+--- rts/Linker.c.orig	2008-07-19 19:54:17.000000000 +0200
++++ rts/Linker.c	2008-07-19 19:55:39.000000000 +0200
+@@ -2612,10 +2612,16 @@
+ #define Elf_Sym     Elf64_Sym
+ #define Elf_Rel     Elf64_Rel
+ #define Elf_Rela    Elf64_Rela
+-#if !defined(freebsd_HOST_OS)
++#ifndef ELF_ST_TYPE
+ #define ELF_ST_TYPE ELF64_ST_TYPE
++#endif
++#ifndef ELF_ST_BIND
+ #define ELF_ST_BIND ELF64_ST_BIND
++#endif
++#ifndef ELF_R_TYPE
+ #define ELF_R_TYPE  ELF64_R_TYPE
++#endif
++#ifndef ELF_R_SYM
+ #define ELF_R_SYM   ELF64_R_SYM
+ #endif
+ #else

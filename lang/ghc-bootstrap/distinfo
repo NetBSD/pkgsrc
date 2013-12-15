@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2013/12/15 02:00:07 dholland Exp $
+
+SHA1 (ghc-6.8.3-src.tar.bz2) = f908b0e0293014dde587abd8c7912eb490f9b3d2
+RMD160 (ghc-6.8.3-src.tar.bz2) = 415cd144f0641a0c5887ad7325e2e775e93044f0
+Size (ghc-6.8.3-src.tar.bz2) = 7092076 bytes
+SHA1 (patch-ac) = 65ba6ec7a78d938af965ebc07aa65fc00fb6b5ce
+SHA1 (patch-ad) = 3d1e88785651dedf582b53e54e4aac6dcf278a2e
+SHA1 (patch-aj) = 26019891c21907c9c26a7bc21d655172528cfbaa
+SHA1 (patch-ak) = 62cc2e4541e12c57d20d60d99ecda5646ca8c58a
+SHA1 (patch-al) = 3a66b0bf57772c34234fde5713dc02037c476eb2
+SHA1 (patch-am) = 10758ef014647c864c9eb1156121f0091120fcaf
+SHA1 (patch-an) = 3267a1ff00ae74b337e4dbd8f4e1c85cdb1aeed7
+SHA1 (patch-ao) = ba3c218d3a6fc70986d159bbae9e41e37f4e0d79
+SHA1 (patch-ar) = 0cc6fedc5ee6304b201da79b7cc0104a804501cd
+SHA1 (patch-as) = cebeefbeada25b1d52a528c4d83d66b7a2766e1a
+SHA1 (patch-mk_bootstrap.mk) = fdb9e57bc3aed50d2d3b34360255c0a84dcf3eca
