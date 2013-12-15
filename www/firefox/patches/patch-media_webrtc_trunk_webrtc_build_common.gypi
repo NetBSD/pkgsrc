@@ -1,9 +1,9 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_build_common.gypi,v 1.3 2013/09/19 12:37:50 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_build_common.gypi,v 1.4 2013/12/15 13:54:37 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/build/common.gypi.orig	2013-09-10 03:43:47.000000000 +0000
+--- media/webrtc/trunk/webrtc/build/common.gypi.orig	2013-12-05 16:07:49.000000000 +0000
 +++ media/webrtc/trunk/webrtc/build/common.gypi
-@@ -71,9 +71,9 @@
-     'enable_data_logging%': 0,
+@@ -78,9 +78,9 @@
+     'enable_protobuf%': 1,
  
      # Disable these to not build components which can be externally provided.
 -    'build_libjpeg%': 1,
@@ -14,7 +14,7 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_build_common.gypi,v 1.3 2013/09/19 12:3
  
      # Enable to use the Mozilla internal settings.
      'build_with_mozilla%': 0,
-@@ -238,7 +238,7 @@
+@@ -241,7 +241,7 @@
        }],
        ['OS=="dragonfly" or OS=="netbsd"', {
          'defines': [
