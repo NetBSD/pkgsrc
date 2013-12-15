@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.21 2013/11/21 15:24:38 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.22 2013/12/15 13:54:37 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -71,6 +71,7 @@ CONFIGURE_ARGS+=	--enable-shared-js
 CONFIGURE_ARGS+=	--with-system-ply
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-necko-wifi
+CONFIGURE_ARGS+=	--disable-updater
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -100,6 +101,12 @@ SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
+
+# Build outside ${WRKSRC}
+# Try to conflict with config/makefiles/xpidl/Makefile.in
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	../mozilla-release/configure
 
 PLIST_VARS+=	sps vorbis tremor glskia throwwrapper
 

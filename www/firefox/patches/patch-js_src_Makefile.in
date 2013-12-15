@@ -1,52 +1,8 @@
-$NetBSD: patch-js_src_Makefile.in,v 1.3 2013/11/02 22:57:55 ryoon Exp $
+$NetBSD: patch-js_src_Makefile.in,v 1.4 2013/12/15 13:54:37 ryoon Exp $
 
---- js/src/Makefile.in.orig	2013-10-25 22:27:22.000000000 +0000
+--- js/src/Makefile.in.orig	2013-12-05 16:07:35.000000000 +0000
 +++ js/src/Makefile.in
-@@ -232,10 +232,14 @@ endif
- # ICU headers need to be available whether we build with the complete
- # Internationalization API or not - ICU stubs rely on them.
- 
-+ifdef MOZ_NATIVE_ICU
-+LOCAL_INCLUDES += $(MOZ_ICU_CFLAGS)
-+else
- LOCAL_INCLUDES += \
-   -I$(topsrcdir)/../../intl/icu/source/common \
-   -I$(topsrcdir)/../../intl/icu/source/i18n \
-   $(NULL)
-+endif
- 
- ifdef ENABLE_INTL_API
- 
-@@ -255,6 +259,7 @@ else
- ICU_MAKE = $(MAKE)
- endif
- 
-+ifndef MOZ_NATIVE_ICU
- # - Build ICU as part of the "export" target, so things get built
- #   in the right order.
- # - ICU requires GNU make according to its readme.html. pymake can't be used
-@@ -269,6 +274,7 @@ export::
- 
- distclean clean::
- 	$(call SUBMAKE,$@,intl/icu)
-+endif
- 
- endif
- 
-@@ -394,7 +400,11 @@ ifneq (,$(MOZ_ZLIB_LIBS)$(MOZ_GLUE_LDFLA
- DEFINES += -DUSE_ZLIB
- endif
- 
--SHARED_LIBRARY_LIBS += $(ICU_LIBS)
-+ifdef MOZ_NATIVE_ICU
-+EXTRA_DSO_LDOPTS += $(MOZ_ICU_LIBS)
-+else
-+SHARED_LIBRARY_LIBS += $(MOZ_ICU_LIBS)
-+endif
- 
- # Prevent floating point errors caused by VC++ optimizations
- ifdef _MSC_VER
-@@ -453,6 +463,13 @@ EXTRA_LIBS	+= -lposix4 -ldl -lnsl -lsock
+@@ -467,6 +467,13 @@ EXTRA_LIBS	+= -lposix4 -ldl -lnsl -lsock
  endif
  endif
  

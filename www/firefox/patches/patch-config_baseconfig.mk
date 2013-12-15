@@ -1,10 +1,8 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.2 2013/08/07 12:17:54 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.3 2013/12/15 13:54:37 ryoon Exp $
 
---- config/baseconfig.mk.orig	2013-01-04 23:44:28.000000000 +0000
+--- config/baseconfig.mk.orig	2013-12-05 16:07:23.000000000 +0000
 +++ config/baseconfig.mk
-@@ -1,9 +1,9 @@
- INCLUDED_AUTOCONF_MK = 1
- 
+@@ -1,7 +1,7 @@
 -includedir := $(includedir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -idldir = $(datadir)/idl/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -installdir = $(libdir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)

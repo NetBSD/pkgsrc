@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.5 2013/11/02 22:57:55 ryoon Exp $
+$NetBSD: patch-as,v 1.6 2013/12/15 13:54:37 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2013-10-25 22:27:22.000000000 +0000
+--- js/src/configure.in.orig	2013-12-05 16:07:35.000000000 +0000
 +++ js/src/configure.in
-@@ -2347,6 +2347,7 @@ EOF
+@@ -2290,6 +2290,7 @@ EOF
  #pragma GCC visibility push(hidden)
  #pragma GCC visibility push(default)
  #include <string.h>
@@ -12,7 +12,7 @@ Treat DragonFly like FreeBSD.
  #pragma GCC visibility pop
  
  __attribute__ ((visibility ("default"))) void Func() {
-@@ -2355,7 +2356,7 @@ __attribute__ ((visibility ("default")))
+@@ -2298,7 +2299,7 @@ __attribute__ ((visibility ("default")))
  }
  EOF
                         ac_cv_have_visibility_builtin_bug=no
@@ -21,7 +21,7 @@ Treat DragonFly like FreeBSD.
                           ac_cv_have_visibility_builtin_bug=yes
                         else
                           if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -2572,7 +2573,7 @@ then
+@@ -2515,7 +2516,7 @@ then
      fi
  
  	case "$target" in
@@ -30,7 +30,7 @@ Treat DragonFly like FreeBSD.
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -2657,14 +2658,22 @@ fi
+@@ -2600,14 +2601,22 @@ fi
  AC_CACHE_CHECK(
      [for res_ninit()],
      ac_cv_func_res_ninit,
@@ -56,7 +56,7 @@ Treat DragonFly like FreeBSD.
          [ac_cv_func_res_ninit=no])
      ])
  
-@@ -3361,7 +3370,7 @@ if test "$MOZ_MEMORY"; then
+@@ -3316,7 +3325,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -65,9 +65,9 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -4246,6 +4255,16 @@ fi
+@@ -4339,6 +4348,16 @@ fi
  dnl ========================================================
- dnl ECMAScript Internationalization API Support (uses ICU)
+ dnl JavaScript shell
  dnl ========================================================
 +ICU_LIB_NAMES=
 +MOZ_NATIVE_ICU=
@@ -80,65 +80,5 @@ Treat DragonFly like FreeBSD.
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
- ENABLE_INTL_API=1
- MOZ_ARG_DISABLE_BOOL(intl-api,
-@@ -4255,37 +4274,36 @@ MOZ_ARG_DISABLE_BOOL(intl-api,
- dnl Settings for the implementation of the ECMAScript Internationalization API
- if test -n "$ENABLE_INTL_API"; then
-     AC_DEFINE(ENABLE_INTL_API)
--    # We build ICU as a static library.
--    AC_DEFINE(U_STATIC_IMPLEMENTATION)
--
--    case "$OS_TARGET" in
--        WINNT)
--            ICU_LIB_NAMES="icuin icuuc icudt"
--            ;;
--        Darwin|Linux)
--            ICU_LIB_NAMES="icui18n icuuc icudata"
--            ;;
--        *)
--            AC_MSG_ERROR([ECMAScript Internationalization API is not yet supported on this platform])
--    esac
- 
--    ICU_LIBS='$(call EXPAND_LIBNAME_PATH,$(ICU_LIB_NAMES),$(DEPTH)/intl/icu/lib)'
--else
--    ICU_LIB_NAMES=
--    ICU_LIBS=
-+    if test -z "$MOZ_NATIVE_ICU"; then
-+        case "$OS_TARGET" in
-+            WINNT)
-+                ICU_LIB_NAMES="icuin icuuc icudt"
-+                ;;
-+            Darwin|Linux)
-+                ICU_LIB_NAMES="icui18n icuuc icudata"
-+                ;;
-+            *)
-+                AC_MSG_ERROR([ECMAScript Internationalization API is not yet supported on this platform])
-+        esac
-+        MOZ_ICU_LIBS='$(call EXPAND_LIBNAME_PATH,$(ICU_LIB_NAMES),$(DEPTH)/intl/icu/lib)'
-+    fi
- fi
- 
- AC_SUBST(ENABLE_INTL_API)
- AC_SUBST(ICU_LIB_NAMES)
--AC_SUBST(ICU_LIBS)
-+AC_SUBST(MOZ_ICU_LIBS)
-+AC_SUBST(MOZ_NATIVE_ICU)
- 
--dnl Source files that use ICU should have control over which parts of the ICU
--dnl namespace they want to use.
--AC_DEFINE(U_USING_ICU_NAMESPACE,0)
-+dnl Settings for ICU
-+if test -n "$ENABLE_INTL_API" -a -z "$MOZ_NATIVE_ICU"; then
-+    dnl We build ICU as a static library.
-+    AC_DEFINE(U_STATIC_IMPLEMENTATION)
- 
-+    dnl Source files that use ICU should have control over which parts of the ICU
-+    dnl namespace they want to use.
-+    AC_DEFINE(U_USING_ICU_NAMESPACE,0)
- 
--dnl Settings for ICU
--if test -n "$ENABLE_INTL_API" ; then
-     # Set ICU compile options
-     ICU_CPPFLAGS=""
-     # don't use icu namespace automatically in client code
+ AC_HAVE_FUNCS(setlocale)
+ AC_HAVE_FUNCS(localeconv)
