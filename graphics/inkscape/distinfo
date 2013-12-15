@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2013/08/04 16:06:21 adam Exp $
+$NetBSD: distinfo,v 1.48 2013/12/15 08:29:07 markd Exp $
 
 SHA1 (inkscape-0.48.4.tar.bz2) = 5f26f6ad191d1e7c2a9fb69a438722beb172224c
 RMD160 (inkscape-0.48.4.tar.bz2) = b089ced7694a9803fac8588d93e7e6239c71d3e8
@@ -24,6 +24,7 @@ SHA1 (patch-src_dom_io_domstream.cpp) = 6b525b8e730e4497afdf1da0ae27f0dc69bfad40
 SHA1 (patch-src_dom_io_domstream.h) = 9325fc9d211eb3349628a736283ed0c475399a8b
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 02742a022a8a55852d7f0a39969153bf7f24f17e
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9e9e76049b9fdcc5192e225b4b477a104902894b
+SHA1 (patch-src_libnrtype_FontFactory.h) = 282e6ea4da7bb40c5ba8c861fdbe303259d3e864
 SHA1 (patch-src_libvpsc_csolve__VPSC.h) = 33aa27678fa9e802af6ab95b9ea28b69d822c4cb
 SHA1 (patch-src_ui_dialog_inkscape-preferences.cpp) = f95af6d326ddf7512b67f68efe0b23bc3ebe651e
 SHA1 (patch-src_ui_widget_registered-widget.h) = a5c16bcd28a015959121ed8b92423762f182a71b

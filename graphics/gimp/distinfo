@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2013/12/01 11:58:44 adam Exp $
+$NetBSD: distinfo,v 1.80 2013/12/15 08:25:38 markd Exp $
 
 SHA1 (gimp-2.8.10.tar.bz2) = 6d3c98fcc86f42b0a825a5c62d5d3a5e1c83f48b
 RMD160 (gimp-2.8.10.tar.bz2) = c5364c49af2c695bc3d0bd97e792bf3ad75b1175
@@ -8,6 +8,7 @@ SHA1 (patch-ab) = 37820b9e03702248294f0030ffbd09e7f14f3dcb
 SHA1 (patch-ad) = 7863678d59ccf54e2ce61a4ac4b883fb9eb5fb82
 SHA1 (patch-app_Makefile.in) = 1677fa436f76d0b83bf048447fc025584a255e68
 SHA1 (patch-app_config_Makefile.in) = c5376f98649255b163cf9af448b5931d7675526c
+SHA1 (patch-app_text_gimpfont.c) = 723af05dc0d80a2ca20b2aee60f81e15bc5e71d1
 SHA1 (patch-devel-docs_app_Makefile.in) = 89aec477783899cc6a5ac765d567d73f79474d5e
 SHA1 (patch-plug-ins_common_file-mng.c) = 8ed244997cdef7125e1aa5da4d0fac5068ad5159
 SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = c424b1a8e345ec3d0763ac2cf1f8535da9e10797
