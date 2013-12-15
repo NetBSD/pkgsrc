@@ -1,27 +1,9 @@
-$NetBSD: patch-config_system-headers,v 1.3 2013/11/02 22:57:55 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.4 2013/12/15 13:54:37 ryoon Exp $
 
---- config/system-headers.orig	2013-10-25 22:27:10.000000000 +0000
+--- config/system-headers.orig	2013-12-05 16:07:23.000000000 +0000
 +++ config/system-headers
-@@ -469,6 +469,7 @@ IOKit/IOMessage.h
- IOKit/pwr_mgt/IOPMLib.h
- iomanip
- ios
-+iosfwd
- iostream
- iostream.h
- iterator
-@@ -1132,3 +1133,14 @@ kvm.h
- spawn.h
- err.h
- xlocale.h
-+#if MOZ_NATIVE_ICU==1
-+unicode/locid.h
-+unicode/numsys.h
-+unicode/ucal.h
-+unicode/ucol.h
-+unicode/udat.h
-+unicode/udatpg.h
-+unicode/uenum.h
-+unicode/unum.h
-+unicode/ustring.h
-+#endif
+@@ -1144,3 +1144,4 @@ unicode/unum.h
+ unicode/ustring.h
+ unicode/utypes.h
+ #endif
++libutil.h
