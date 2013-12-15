@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2013/06/06 12:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2013/12/15 19:42:48 asau Exp $
 
 PKGVER=		2.3.3
 DISTNAME=	openmotif-${PKGVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.ics.com/openmotif/2.3/2.3.3/
 MASTER_SITES+=	ftp://ftp.ics.com/openmotif/2.3/2.3.3/
@@ -112,6 +112,7 @@ post-build:
 		${MV} -f $${manpage}.tblized $${manpage};		\
 	done
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
