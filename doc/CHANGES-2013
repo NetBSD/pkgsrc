@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4503 2013/12/15 02:05:45 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.4504 2013/12/15 09:43:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6676,3 +6676,27 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated games/onscripter to 20131103 [tsutsui 2013-12-14]
 	Updated x11/mlterm to 3.3.1nb1 [tsutsui 2013-12-14]
 	Added lang/ghc-bootstrap version 6.8.3 [dholland 2013-12-15]
+	Updated x11/qt5 to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-dbus to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-mysql to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-odbc to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-psql to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtbase to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtdeclarative to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtdoc to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtgraphicaleffects to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtimageformats to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtlocation to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtmultimedia to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtquick1 to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtquickcontrols to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtscript to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtsensors to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtserialport to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtsvg to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qttools to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qttranslations to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtwebkit to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtx11extras to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-qtxmlpatterns to 5.2.0 [ryoon 2013-12-15]
+	Updated x11/qt5-sqlite3 to 5.2.0 [ryoon 2013-12-15]
