@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/11/07 10:42:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/15 08:36:12 markd Exp $
 
 DISTNAME=	kde-dev-utils-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Small utilities for developers using KDE/Qt libs/frameworks
 
@@ -11,6 +12,7 @@ CMAKE_ARGS+=	-DBUILD_kmtrace:BOOL=OFF
 # disable for the moment till sort out -ldl
 CMAKE_ARGS+=	-DBUILD_kstartperf:BOOL=OFF
 
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
