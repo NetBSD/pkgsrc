@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
 lib/pkgconfig/Qt5SerialPort.pc
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qlockfile_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qringbuffer_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qserialport_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qserialport_symbian_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qserialport_unix_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qserialport_win_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qserialportinfo_p.h
-qt5/include/QtSerialPort/5.2.0/QtSerialPort/private/qtudev_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qlockfile_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qringbuffer_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_symbian_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_unix_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_win_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtudev_p.h
 qt5/include/QtSerialPort/QLockFile
 qt5/include/QtSerialPort/QSerialPort
 qt5/include/QtSerialPort/QSerialPortInfo
