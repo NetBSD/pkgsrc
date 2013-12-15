@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2013/10/19 09:07:00 adam Exp $
+# $NetBSD: Makefile,v 1.34 2013/12/15 19:36:37 joerg Exp $
 #
 
 DISTNAME=	telepathy-gabble-0.11.10
@@ -20,7 +20,9 @@ CONFIGURE_ENV+=	UUID_CFLAGS=" " UUID_LIBS=" "
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-Wno-error=deprecated-declarations -Wno-error=tautological-constant-out-of-range-compare
+CFLAGS+=	-Wno-error=deprecated-declarations \
+		-Wno-error=tautological-constant-out-of-range-compare \
+		-Wno-error=unused-function
 .endif
 
 # see pkgsrc/security/mozilla-rootcerts
