@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2013/12/15 19:51:19 joerg Exp $
 
 SHA1 (qt-everywhere-opensource-src-5.2.0.tar.xz) = 7d9d8cad4434bc200d9ed87b3c7cb39654a2f1b4
 RMD160 (qt-everywhere-opensource-src-5.2.0.tar.xz) = b2dd68f622fa7ff271ef621a7c7f17f2ecf7be9d
@@ -25,6 +25,7 @@ SHA1 (patch-qtbase_src_tools_bootstrap_bootstrap.pro) = 24f47fcf6bab2ddca855a771
 SHA1 (patch-qtbase_src_tools_moc_main.cpp) = 31f42b1625ec7a978e21ad3fdde67ce3328df425
 SHA1 (patch-qtbase_src_widgets_graphicsview_qgraphicsitem__p.h) = a30402585f0b7efd9fc0dcd256e410a92dffff2c
 SHA1 (patch-qtbase_tests_auto_corelib_io_qprocess_qprocess.pro) = 6226874e7a32d5172abbd2579a4c263c4e8a2d30
+SHA1 (patch-qtbase_tests_auto_widgets_itemviews_qtreewidgetitemiterator_qtreewidgetitemiterator.pro) = ec68f41ccdc622eb5457ea7a3c37c1f54058b595
 SHA1 (patch-qtdeclarative_examples_quick_customitems_painteditem_painteditem.pro) = 4eb38df598145da3bb8272dfc4c34649d54cf9fe
 SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4alloca__p.h) = 9a1a4bb03776e3e6331120933accd0cf46503533
 SHA1 (patch-qtdeclarative_src_qmldevtools_qmldevtools.pro) = 6f0e65eb6c4a5bfd05a603d9cbfc6fdc22e46d3b
