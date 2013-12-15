@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4505 2013/12/15 11:54:53 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4506 2013/12/15 12:55:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6701,3 +6701,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/qt5-qtxmlpatterns to 5.2.0 [ryoon 2013-12-15]
 	Updated x11/qt5-sqlite3 to 5.2.0 [ryoon 2013-12-15]
 	Updated devel/p5-MooseX-Declare to 0.38 [wen 2013-12-15]
+	Added devel/p5-IO-Pipely version 0.005 [wen 2013-12-15]
