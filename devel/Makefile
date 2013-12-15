@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1821 2013/12/08 15:22:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.1822 2013/12/15 12:53:31 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -884,6 +884,7 @@ SUBDIR+=	p5-IO-Multiplex
 SUBDIR+=	p5-IO-Null
 SUBDIR+=	p5-IO-Pager
 SUBDIR+=	p5-IO-Pipeline
+SUBDIR+=	p5-IO-Pipely
 SUBDIR+=	p5-IO-Prompt
 SUBDIR+=	p5-IO-Prompter
 SUBDIR+=	p5-IO-String
