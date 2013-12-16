@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/16 02:22:45 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/16 06:23:09 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -18,25 +18,29 @@ LICENSE=	modified-bsd
 # bootstrap compilers for each platforms. If you want to build them
 # yourself, follow an instruction in the ./TODO file.
 ONLY_FOR_PLATFORM= \
+	Darwin-*-powerpc \
+	FreeBSD-*-i386 \
+	Linux-*-x86_64 \
 	NetBSD-*-i386 \
 	NetBSD-*-x86_64 \
+	SunOS-5.11.*
 
 
 # -----------------------------------------------------------------------------
 # Distfiles
 #
-DISTFILES=	${DISTNAME}-src.tar.bz2
-.if make(distinfo)
+#DISTFILES=	${DISTNAME}-src.tar.bz2
+#.if make(distinfo)
 #DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd.tar.xz
-DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsd.tar.xz
+#DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsd.tar.xz
 #DISTFILES+=	${DISTNAME}-boot-powerpc-apple-darwin.tar.xz
 #DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-linux.tar.xz
-DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-netbsd.tar.xz
+#DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-netbsd.tar.xz
 #DISTFILES+=	${DISTNAME}-boot-i386-unknown-solaris2.tar.gz
 #DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-solaris2.tar.xz
-.else
-DISTFILES+=	${BOOT_ARCHIVE}
-.endif
+#.else
+#DISTFILES+=	${BOOT_ARCHIVE}
+#.endif
 
 
 # We don't want to extract all of the DISTFILEs.
