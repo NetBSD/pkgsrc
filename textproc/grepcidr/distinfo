@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/12/14 06:56:16 apb Exp $
+$NetBSD: distinfo,v 1.2 2013/12/16 15:28:28 apb Exp $
 
-SHA1 (ChangeLog) = 77a818178bf642f92308eb18f0db85269a51a49e
-RMD160 (ChangeLog) = 015400732f355273c29bee770cc41f30d3f3f8a4
-Size (ChangeLog) = 1062 bytes
-SHA1 (Makefile) = a871695a911d4c964ecd9b9cab6768e7ef881612
-RMD160 (Makefile) = 88e8021e5d1fc99e7e0c5c4dda07c1560f301da5
-Size (Makefile) = 369 bytes
-SHA1 (grepcidr.1) = 7aa708486d0992cf48929f055358e787611a6601
-RMD160 (grepcidr.1) = 4276cc62ac64f68259eca5351f2b1b890713c2b5
-Size (grepcidr.1) = 4466 bytes
-SHA1 (grepcidr.c) = 67f56b9b75ce52112a735b368c065597687fe14f
-RMD160 (grepcidr.c) = b2372bb7f5a7bd80e307d8b60c31ddccb2d0e5e5
-Size (grepcidr.c) = 31237 bytes
+SHA1 (grepcidr-2.95.tgz) = a095bb2d4b90a197cbcfdbd5f39fdee26af43641
+RMD160 (grepcidr-2.95.tgz) = 1be2b1d8ccb051281a4537e9921afb89de6faec1
+Size (grepcidr-2.95.tgz) = 26224 bytes
