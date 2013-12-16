@@ -1,4 +1,8 @@
-$NetBSD: CHANGES-2013,v 1.4528 2013/12/16 09:22:08 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4529 2013/12/16 14:17:16 wiz Exp $
+
+**************************************************************
+************** PKGSRC CURRENTLY FROZEN ***********************
+**************************************************************
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6726,3 +6730,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/lout to 3.40nb1 [dholland 2013-12-16]
 	Added chat/phone version 2.0 [dholland 2013-12-16]
 	Updated devel/ruby-i18n to 0.6.9 [taca 2013-12-16]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q4 branch [wiz 2013-12-16]
