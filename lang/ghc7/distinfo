@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/12/12 12:47:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2013/12/16 06:23:09 obache Exp $
 
-SHA1 (ghc-7.6.3-boot-i386-unknown-netbsd.tar.xz) = 9fc2f538da69ede96f0754e0cf5d376280c5f2ee
-RMD160 (ghc-7.6.3-boot-i386-unknown-netbsd.tar.xz) = 4f188f1b7ba992cc1a1436aac68d11ef78f7714c
-Size (ghc-7.6.3-boot-i386-unknown-netbsd.tar.xz) = 28258276 bytes
-SHA1 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 0d6da7f192a25d154f46554777909f19002a48a3
-RMD160 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 9995bf052e5737074692a107d5210663759d796c
-Size (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 28766012 bytes
 SHA1 (ghc-7.6.3-src.tar.bz2) = 8938e1ef08b37a4caa071fa169e79a3001d065ff
 RMD160 (ghc-7.6.3-src.tar.bz2) = 82a673ed38b7cf9a59afeb01057625fc761a822b
 Size (ghc-7.6.3-src.tar.bz2) = 110763823 bytes
