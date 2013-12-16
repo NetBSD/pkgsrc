@@ -1,4 +1,4 @@
-$NetBSD: README.FreeBSD,v 1.5 2013/12/16 10:40:16 asau Exp $
+$NetBSD: README.FreeBSD,v 1.6 2013/12/16 10:43:09 asau Exp $
 
 Please read the general README file as well.
 
@@ -6,7 +6,7 @@ Care should be taken so that the tools that this kit installs do not conflict
 with the FreeBSD userland tools. There are several steps:
 
 1. FreeBSD stores its ports pkg database in /var/db/pkg. It is therefore
-recommended that you choose a different location (e.g. /usr/pkgdb) by
+recommended that you choose a different location (e.g. /usr/pkg/pkgdb) by
 using the --pkgdbdir option to the bootstrap script.
 
 2. If you do not intend to use the FreeBSD ports tools, it may be a
