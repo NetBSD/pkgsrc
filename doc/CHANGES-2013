@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4522 2013/12/15 22:25:51 pettai Exp $
+$NetBSD: CHANGES-2013,v 1.4523 2013/12/16 01:48:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6718,3 +6718,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/polyml to 5.5.1 [asau 2013-12-15]
 	Updated lang/go to 1.2 [bsiegert 2013-12-15]
 	Added net/exabgp version 3.2.18 [pettai 2013-12-15]
+	Removed www/contao31-example [taca 2013-12-16]
+	Removed www/contao31 [taca 2013-12-16]
