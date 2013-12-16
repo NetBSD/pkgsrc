@@ -1,0 +1,46 @@
+$NetBSD: patch-master_Makefile,v 1.1 2013/12/16 06:42:20 dholland Exp $
+
+Configure for pkgsrc.
+
+--- master/Makefile.orig	2013-01-01 23:59:38.000000000 +0000
++++ master/Makefile
+@@ -23,8 +23,10 @@
+ #OFLAG= -O
+ OFLAG= -g
+ #INETD= -DINETD
+-#FORK=-DFORK
+-CFLAGS  = $(OFLAG) $(INETD) $(FORK) -DSERVICES -DDPATH=\"/u/christos/phone/conv/convd\"
++FORK=-DFORK
++# not -DSERVICES
++CFLAGS  = $(OFLAG) $(INETD) $(FORK) -DDPATH=\"${PREFIX}/libexec/convd\"
++CFLAGS+= -DNO_WHO
+ CFLAGS+= -std=gnu99  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wno-sign-compare  -Wno-traditional  -Wa,--fatal-warnings -Wreturn-type -Wswitch -Wshadow -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -Wno-sign-compare -Wold-style-definition -Wsign-compare -Wformat=2   -Wno-format-zero-length  -Werror
+ 
+ 
+@@ -41,7 +43,7 @@ OBJS	= child.o daemon.o dopage.o forward
+ 			reinvite.o sendit.o strsave.o utmp.o
+ 
+ DEST	= phoned
+-RDEST	= /usr/etc/in.phoned
++RDEST	= ${PREFIX}/sbin/phoned
+ #RDEST	= /etc/phoned
+ 
+ 
+@@ -51,14 +53,14 @@ RDEST	= /usr/etc/in.phoned
+ all:	${DEST}
+ 
+ ${DEST}: ${OBJS}
+-	/bin/rm -f ${DEST}
++	rm -f ${DEST}
+ 	${CC} ${CFLAGS} -o ${DEST} ${OBJS}
+ 
+ ${OBJS}: ${HDRS}
+ 
+ install:	${DEST}
+-	/bin/rm -f ${RDEST}
+-	cp ${DEST} ${RDEST}
++	rm -f ${RDEST}
++	${BSD_INSTALL_PROGRAM} ${DEST} ${DESTDIR}${RDEST}
+ 
+ clean:
+ 	/bin/rm -f ${DEST} core *.o
