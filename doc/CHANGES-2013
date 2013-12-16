@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4523 2013/12/16 01:48:27 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4524 2013/12/16 03:11:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6720,3 +6720,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/exabgp version 3.2.18 [pettai 2013-12-15]
 	Removed www/contao31-example [taca 2013-12-16]
 	Removed www/contao31 [taca 2013-12-16]
+	Updated devel/xulrunner17 to 17.0.11 [ryoon 2013-12-16]
+	Updated www/firefox17 to 17.0.11 [ryoon 2013-12-16]
