@@ -1,4 +1,4 @@
-$NetBSD: README.FreeBSD,v 1.4 2010/12/02 17:12:39 asau Exp $
+$NetBSD: README.FreeBSD,v 1.5 2013/12/16 10:40:16 asau Exp $
 
 Please read the general README file as well.
 
@@ -9,7 +9,7 @@ with the FreeBSD userland tools. There are several steps:
 recommended that you choose a different location (e.g. /usr/pkgdb) by
 using the --pkgdbdir option to the bootstrap script.
 
-2. If you do not intend to use the FreeBSD ports tools, it's probably a
+2. If you do not intend to use the FreeBSD ports tools, it may be a
 good idea to move them out of the way to avoid confusion, e.g.:
 	cd /usr/sbin
 	mv pkg_add pkg_add.orig
@@ -21,4 +21,4 @@ Alternatively, take care to get pkgsrc tools first in PATH.
 
 
 bootstrap-pkgsrc has been tested on FreeBSD 4.x and 5.x (i386).
-pkgsrc works well on FreeBSD 6.2-6.4, 7.1-7.3 (i386).
+pkgsrc works well on FreeBSD 6.2-6.4, 7.1-7.3 (i386), 9.0-9.1 (amd64).
