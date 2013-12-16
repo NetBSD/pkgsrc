@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/11 08:05:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/12/16 09:21:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGELOG.textile
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.textile
 ${GEM_LIBDIR}/ci/Gemfile.no-rails
