@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4526 2013/12/16 06:34:33 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.4527 2013/12/16 06:50:06 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6724,3 +6724,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/firefox17 to 17.0.11 [ryoon 2013-12-16]
 	Updated print/tex-luatex to 0.70.1pl30581nb1 [minskim 2013-12-16]
 	Updated textproc/lout to 3.40nb1 [dholland 2013-12-16]
+	Added chat/phone version 2.0 [dholland 2013-12-16]
