@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/09/24 13:17:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2013/12/16 09:53:44 markd Exp $
 
 DISTNAME=	rpm-4.11.1
 CATEGORIES=	misc
@@ -68,6 +68,12 @@ BUILDLINK_TRANSFORM+=	rm:-fstack-protector
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
+
+SUBST_CLASSES+=		mkd
+SUBST_STAGE.mkd=	post-build
+SUBST_MESSAGE.mkd=	Fixing workdir tools references in macros file
+SUBST_FILES.mkd=	macros
+SUBST_SED.mkd+=		-e 's,${TOOLS_CMD.mkdir},${TOOLS_PATH.mkdir},'
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
