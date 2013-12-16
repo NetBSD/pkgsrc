@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.51 2013/12/09 16:25:27 taca Exp $
+# $NetBSD: Makefile.common,v 1.52 2013/12/16 01:49:06 taca Exp $
 #
 # used by www/contao/Makefile.example"
 # used by www/contao211/Makefile
-# used by www/contao31/Makefile
 # used by www/contao32/Makefile
 #
 
