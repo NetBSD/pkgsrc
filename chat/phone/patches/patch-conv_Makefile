@@ -1,0 +1,28 @@
+$NetBSD: patch-conv_Makefile,v 1.1 2013/12/16 06:42:20 dholland Exp $
+
+Configure for pkgsrc.
+
+--- conv/Makefile~	2013-01-01 19:20:59.000000000 +0000
++++ conv/Makefile
+@@ -10,17 +10,17 @@ CFLAGS+= -std=gnu99  -Wall -Wstrict-prot
+ CFLAGS +=	-g
+ SRCS	=	convd.c
+ DEST	=	convd
+-RDEST	=	/usr/etc/convd
++RDEST	=	${PREFIX}/libexec/convd
+ 
+ all: ${DEST}
+ 
+ ${DEST}:	${SRCS}
+-	/bin/rm -f ${DEST}
++	rm -f ${DEST}
+ 	${CC} ${CFLAGS} -o ${DEST} ${SRCS}
+ 
+ install:	${DEST}
+-	/bin/rm -f ${RDEST}
+-	cp ${DEST} ${RDEST}
++	rm -f ${RDEST}
++	${BSD_INSTALL_PROGRAM} ${DEST} ${DESTDIR}${RDEST}
+ 
+ clean:
+ 	/bin/rm -f ${DEST} core *.o

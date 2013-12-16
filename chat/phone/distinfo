@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/12/16 06:42:20 dholland Exp $
+
+SHA1 (phone-2.0.tar.gz) = 61f3decc0a6b778f61d8b6bdecd37536c5883e8c
+RMD160 (phone-2.0.tar.gz) = 777ed87ab0fa992d680bc57284f856ea960c279d
+Size (phone-2.0.tar.gz) = 45729 bytes
+SHA1 (patch-client_Makefile) = 9023d14175c35dedc4e69341613aa88b37c55d7c
+SHA1 (patch-conv_Makefile) = 8356d737897207ba3492fcace90c5563ab0c97e4
+SHA1 (patch-master_Makefile) = de0a6dcc2b6729e90683768096f21c51acef0162
+SHA1 (patch-master_utmp.c) = 31d34b14e0c951028961d229c67d5718ffe49e30
