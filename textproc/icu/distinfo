@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2013/06/04 06:39:45 adam Exp $
+$NetBSD: distinfo,v 1.35.4.1 2013/12/16 16:12:01 tron Exp $
 
 SHA1 (icu4c-51_2-src.tgz) = 074a28dfc96d37ce72c831f3e3e2d686f1f76a14
 RMD160 (icu4c-51_2-src.tgz) = ef1256bb87b3dcec1cf40b32b11c5c3f1bd48af6
@@ -12,3 +12,4 @@ SHA1 (patch-common_putilimp.h) = ff97ae0b8fd96ec8296e5164c135610a1a358810
 SHA1 (patch-common_unicode_platform.h) = 36cb68164fcf9b2858acabe95f0206e8088bfbaa
 SHA1 (patch-common_uposixdefs.h) = abe1989ea4312702e5d0172b662409957b3e2d91
 SHA1 (patch-config_icu-config-bottom) = 4a167249d58cb6c729bc164e6abae869dd5e6b1a
+SHA1 (patch-i18n_csrucode.cpp) = b97f6ed269ac47add23f7014eea40b08b191b7b2
