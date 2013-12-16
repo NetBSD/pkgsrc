@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2011/12/12 19:08:34 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2013/12/16 06:33:06 dholland Exp $
+
+ - configure for pkgsrc
+ - destdir support
 
 --- makefile.orig	2008-10-13 21:35:17.000000000 +0000
 +++ makefile
@@ -7,7 +10,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/12 19:08:34 joerg Exp $
  # TRACING = -g
  
 -PREFIX	= /home/jeff
-+PREFIX	= ${DESTDIR}@PREFIX@
++PREFIX	:= ${DESTDIR}${PREFIX}
  BINDIR	= $(PREFIX)/bin
 -LOUTLIBDIR	= $(PREFIX)/lout.lib
 -LOUTDOCDIR	= $(PREFIX)/lout.doc
