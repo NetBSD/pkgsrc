@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/12 12:47:17 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/16 02:22:45 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -38,9 +38,6 @@ DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES+=	${BOOT_ARCHIVE}
 .endif
 
-.for i in ${DISTFILES:M*-boot-*}
-SITES.${i}=	${MASTER_SITE_LOCAL}
-.endfor
 
 # We don't want to extract all of the DISTFILEs.
 EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
@@ -86,6 +83,9 @@ post-patch:
 # Define the target "pre-configure" and non-standard "bootstrap".
 .include "../../lang/ghc7/bootstrap.mk"
 
+.for i in ${DISTFILES:M*-boot-*}
+SITES.${i}?=	${MASTER_SITE_LOCAL}
+.endfor
 
 # Our pre-configure phase installs a bindist of bootstrapping compiler
 # directly into TOOLS_DIR so that ./configure can find it.
