@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2013/07/13 08:20:24 shattered Exp $
+$NetBSD: distinfo,v 1.12 2013/12/16 06:33:06 dholland Exp $
 
 SHA1 (lout-3.40.tar.gz) = adb7f632202319a370eaada162fa52cf334f40b3
 RMD160 (lout-3.40.tar.gz) = d1da2583f1727abf4ccb74d2128c26deacca2ef9
 Size (lout-3.40.tar.gz) = 2172651 bytes
-SHA1 (patch-aa) = 07c26cf0c9baa6f29c7fec4af38fda802175bbb1
+SHA1 (patch-aa) = b1b36d829c8be19dde88bdc9d7ddb98064e9c68f
