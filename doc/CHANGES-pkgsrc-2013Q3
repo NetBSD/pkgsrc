@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.23 2013/12/11 21:51:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.24 2013/12/16 17:51:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -86,3 +86,17 @@ www/ruby-activeresource32: security update
 www/ruby-rails32: security update
 Pullup ticket #4268 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4267 - requested by taca
+textproc/icu: security patch
+Pullup ticket #4269 - requested by taca
+lang/php53: security update
+lang/php54: security update
+lang/php55: security update
+Pullup ticket #4270 - requested by taca
+www/typo3_47: security update
+Pullup ticket #4271 - requested by taca
+www/typo3_60: security update
+Pullup ticket #4272 - requested by taca
+www/typo3_61: security update
+Pullup ticket #4273 - requested by taca
+net/samba: security update
