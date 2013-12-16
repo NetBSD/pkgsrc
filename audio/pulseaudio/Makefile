@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2013/11/25 12:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2013/12/16 11:59:56 asau Exp $
 
 DISTNAME=	pulseaudio-2.1
 PKGREVISION=	13
@@ -24,6 +24,11 @@ CONFIGURE_ARGS+=	--disable-default-build-tests
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)
 # broken test for TLS
 CONFIGURE_ENV+=		ac_cv_tls=none
+.endif
+
+# Wrong sys/capability.h assumptions, incompatible implementation:
+.if ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=       --without-caps
 .endif
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
