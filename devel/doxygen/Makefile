@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2013/09/02 16:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2013/12/16 06:35:22 asau Exp $
 
 DISTNAME=	doxygen-1.8.5.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc/doxygen
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
+
+LDFLAGS.FreeBSD=	-liconv
 
 # Case Insensitive fs or Sensitive
 PLIST_VARS+=		ci cs
