@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2013/12/12 12:47:17 obache Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2013/12/16 06:23:09 obache Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler based on a per-platform
 # basis.
@@ -40,7 +40,8 @@ BOOT_ARCHIVE=  ${DISTNAME}-boot-x86_64-unknown-solaris2.tar.xz
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .endif
 
-BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
+BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//:C/\.gz$//}
+
 
 
 # -----------------------------------------------------------------------------
@@ -52,6 +53,9 @@ BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
 USE_TOOLS+=	gmake xzcat xz
 
 pre-configure:
+.if !exists(${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE})
+	@${FAIL_MSG}  "Put your trusted bootstrap archive as ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}"
+.else
 	@${PHASE_MSG} "Extracting bootstrapping compiler for ${PKGNAME}"
 	${RUN} ${MKDIR} ${WRKDIR:Q}/build-extract
 	${RUN} cd ${WRKDIR:Q}/build-extract && \
@@ -62,6 +66,7 @@ pre-configure:
 		${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${MAKE_PROGRAM} install
+.endif
 
 
 # -----------------------------------------------------------------------------
