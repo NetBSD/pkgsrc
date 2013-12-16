@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/12/11 17:01:06 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/12/16 09:11:28 jperkin Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${BOOST_VERSION}
@@ -30,9 +30,9 @@ lib/libboost_locale.so.${BOOST_VERSION}
 ${PLIST.log}lib/libboost_log.a
 ${PLIST.log}lib/libboost_log.so
 ${PLIST.log}lib/libboost_log.so.${BOOST_VERSION}
-lib/libboost_log_setup.a
-lib/libboost_log_setup.so
-lib/libboost_log_setup.so.${BOOST_VERSION}
+${PLIST.log}lib/libboost_log_setup.a
+${PLIST.log}lib/libboost_log_setup.so
+${PLIST.log}lib/libboost_log_setup.so.${BOOST_VERSION}
 lib/libboost_math_c99.a
 lib/libboost_math_c99.so
 lib/libboost_math_c99.so.${BOOST_VERSION}
