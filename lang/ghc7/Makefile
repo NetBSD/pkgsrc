@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/16 06:23:09 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/17 01:08:30 obache Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -29,7 +29,7 @@ ONLY_FOR_PLATFORM= \
 # -----------------------------------------------------------------------------
 # Distfiles
 #
-#DISTFILES=	${DISTNAME}-src.tar.bz2
+DISTFILES=	${DISTNAME}-src.tar.bz2
 #.if make(distinfo)
 #DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd.tar.xz
 #DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsd.tar.xz
