@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2012/09/11 22:37:15 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/12/17 15:05:23 tron Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
 PKGREVISION=	2
 CATEGORIES=	benchmarks net
-MASTER_SITES=	ftp://ftp.ptb.de/pub/benchmarks/
+#MASTER_SITES=	ftp://ftp.ptb.de/pub/benchmarks/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +15,7 @@ LICENSE=	public-domain
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		nroff
 MAKE_ENV+=		NOGCCERROR=yes
 WRKSRC=			${WRKDIR}
 

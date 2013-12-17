@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2005/12/21 11:49:51 tron Exp $
+$NetBSD: patch-ab,v 1.9 2013/12/17 15:05:23 tron Exp $
+
+Fix build.
 
 --- ttcp.c.orig	1997-02-27 21:30:23.000000000 +0000
 +++ ttcp.c	2005-12-21 11:40:39.000000000 +0000
