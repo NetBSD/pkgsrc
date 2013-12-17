@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/27 04:48:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2013/12/17 23:23:38 joerg Exp $
 
 SHA1 (picoc-2.1.tar.bz2) = 24fdc3c8302915d663fcaefaf878ab5ad5a2d69b
 RMD160 (picoc-2.1.tar.bz2) = 9d65bcee54a6d7fa28a66afdd09d3b7554315f68
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 68819805ddc79a193df17ba2d23fbf388f7bfcd1
 SHA1 (patch-ab) = 616fb42d4bc08f4500d607e33ece112e87ecdd0b
 SHA1 (patch-ac) = 879e978d0f2542e5841d5279aa034ec4a7209147
 SHA1 (patch-ad) = e976c920fa6807ab773f6c505e88a5b3ed7e990a
+SHA1 (patch-lex.c) = c98b6fa30ebacc31f922e8a20dd9268e31eaec24
