@@ -1,0 +1,22 @@
+$NetBSD: patch-jb,v 1.1 2013/12/17 19:10:11 markd Exp $
+
+Maintainer mode was being activated in all cases, which is not
+desirable; in particular on builds it enables -Werror which causes
+the build to fail now.  from Debian by way of FreeBSD.
+
+--- jb.orig	2008-04-25 22:57:47.000000000 +0000
++++ jb
+@@ -37,11 +37,11 @@ maintainer_cflags="-g -fstrict-aliasing
+ -Wno-pointer-sign \
+ -Wshadow"
+ 
+-if test -z $jb_cc; then
++if test -z "$jb_cc"; then
+ 	jb_cc=cc
+ fi
+ 
+-if test -n $enable_maintainer_mode; then
++if test -n "$enable_maintainer_mode"; then
+ 	jb_cflags="$jb_cflags $maintainer_cflags"
+ fi
+ 
