@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2013/02/27 18:24:51 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2013/12/17 16:27:18 prlw1 Exp $
 
 SHA1 (LibVNCServer-0.9.9.tar.gz) = 2004c6ae493baeff3da40b61e0a0f73c83182dad
 RMD160 (LibVNCServer-0.9.9.tar.gz) = e62e0903124abb85746bcac6498214fe09c3b4d7
 Size (LibVNCServer-0.9.9.tar.gz) = 1678609 bytes
+SHA1 (patch-libvncserver_sockets.c) = 6af391ad441f561632ba2fea747006fa702776a1
 SHA1 (patch-libvncserver_websockets.c) = 6b9e25e3f54af967d8f6581a2c1e3250b8772693
