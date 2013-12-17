@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2013/11/02 23:25:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2013/12/17 13:23:18 ryoon Exp $
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/.mkdir.done
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af.manifest
@@ -19,6 +19,8 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/browser/chrome/af/locale/browser/devtools/connection-screen.properties
@@ -148,6 +150,7 @@ lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/about.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/global/aboutSupport.properties
@@ -302,6 +305,8 @@ lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/browser/chrome/ak/locale/browser/devtools/connection-screen.properties
@@ -431,6 +436,7 @@ lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/about.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/ak/global/aboutSupport.properties
@@ -585,6 +591,8 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/browser/chrome/ar/locale/browser/devtools/connection-screen.properties
@@ -714,6 +722,7 @@ lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/about.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/ar/global/aboutSupport.properties
@@ -868,6 +877,8 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/browser/chrome/as/locale/browser/devtools/connection-screen.properties
@@ -997,6 +1008,7 @@ lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/about.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/as/global/aboutSupport.properties
@@ -1151,6 +1163,8 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/a
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/browser/chrome/ast/locale/browser/devtools/connection-screen.properties
@@ -1280,6 +1294,7 @@ lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/local
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/about.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/ast/global/aboutSupport.properties
@@ -1434,6 +1449,8 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/browser/chrome/be/locale/browser/devtools/connection-screen.properties
@@ -1564,6 +1581,7 @@ lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/about.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/be/global/aboutSupport.properties
@@ -1718,6 +1736,8 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/browser/chrome/bg/locale/browser/devtools/connection-screen.properties
@@ -1848,6 +1868,7 @@ lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/about.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/bg/global/aboutSupport.properties
@@ -2002,6 +2023,8 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/browser/chrome/bn-BD/locale/browser/devtools/connection-screen.properties
@@ -2129,6 +2152,7 @@ lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/l
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/about.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/bn-BD/global/aboutSupport.properties
@@ -2283,6 +2307,8 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/browser/chrome/bn-IN/locale/browser/devtools/connection-screen.properties
@@ -2414,6 +2440,7 @@ lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/l
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/about.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/bn-IN/global/aboutSupport.properties
@@ -2568,6 +2595,8 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/browser/chrome/br/locale/browser/devtools/connection-screen.properties
@@ -2697,6 +2726,7 @@ lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/about.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/br/global/aboutSupport.properties
@@ -2851,6 +2881,8 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/browser/chrome/bs/locale/browser/devtools/connection-screen.properties
@@ -2981,6 +3013,7 @@ lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/about.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/bs/global/aboutSupport.properties
@@ -3135,6 +3168,8 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/chrome/ca/locale/browser/devtools/connection-screen.properties
@@ -3240,8 +3275,7 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/diec2.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/google.xml
-lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/huubs.xml
-lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/llibres.xml
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/twitter.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/browser/searchplugins/wikipedia-ca.xml
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome.manifest
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/.mkdir.done
@@ -3264,6 +3298,7 @@ lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/about.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/ca/global/aboutSupport.properties
@@ -3418,6 +3453,8 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/browser/chrome/cs/locale/browser/devtools/connection-screen.properties
@@ -3547,6 +3584,7 @@ lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/about.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/cs/global/aboutSupport.properties
@@ -3701,6 +3739,8 @@ lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/c
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/browser/chrome/csb/locale/browser/devtools/connection-screen.properties
@@ -3831,6 +3871,7 @@ lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/local
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/about.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/csb/global/aboutSupport.properties
@@ -3985,6 +4026,8 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/browser/chrome/cy/locale/browser/devtools/connection-screen.properties
@@ -4116,6 +4159,7 @@ lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/about.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/cy/global/aboutSupport.properties
@@ -4270,6 +4314,8 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/browser/chrome/da/locale/browser/devtools/connection-screen.properties
@@ -4398,6 +4444,7 @@ lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/about.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/da/global/aboutSupport.properties
@@ -4552,6 +4599,8 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/browser/chrome/de/locale/browser/devtools/connection-screen.properties
@@ -4682,6 +4731,7 @@ lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/about.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/de/global/aboutSupport.properties
@@ -4836,6 +4886,8 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/browser/chrome/el/locale/browser/devtools/connection-screen.properties
@@ -4965,6 +5017,7 @@ lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/about.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/el/global/aboutSupport.properties
@@ -5119,6 +5172,8 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/browser/chrome/en-GB/locale/browser/devtools/connection-screen.properties
@@ -5250,6 +5305,7 @@ lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/l
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/about.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/en-GB/global/aboutSupport.properties
@@ -5404,6 +5460,8 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/browser/chrome/en-US/locale/browser/devtools/connection-screen.properties
@@ -5534,6 +5592,7 @@ lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/l
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/about.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/en-US/global/aboutSupport.properties
@@ -5688,6 +5747,8 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/browser/chrome/en-ZA/locale/browser/devtools/connection-screen.properties
@@ -5816,6 +5877,7 @@ lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/l
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/about.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/en-ZA/global/aboutSupport.properties
@@ -5970,6 +6032,8 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/browser/chrome/eo/locale/browser/devtools/connection-screen.properties
@@ -6101,6 +6165,7 @@ lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/about.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/eo/global/aboutSupport.properties
@@ -6255,6 +6320,8 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/browser/chrome/es-AR/locale/browser/devtools/connection-screen.properties
@@ -6385,6 +6452,7 @@ lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/l
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/about.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/es-AR/global/aboutSupport.properties
@@ -6539,6 +6607,8 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/browser/chrome/es-CL/locale/browser/devtools/connection-screen.properties
@@ -6668,6 +6738,7 @@ lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/l
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/about.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/es-CL/global/aboutSupport.properties
@@ -6822,6 +6893,8 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/browser/chrome/es-ES/locale/browser/devtools/connection-screen.properties
@@ -6952,6 +7025,7 @@ lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/l
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/about.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/es-ES/global/aboutSupport.properties
@@ -7106,6 +7180,8 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/browser/chrome/es-MX/locale/browser/devtools/connection-screen.properties
@@ -7234,6 +7310,7 @@ lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/l
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/about.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/es-MX/global/aboutSupport.properties
@@ -7388,6 +7465,8 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/browser/chrome/et/locale/browser/devtools/connection-screen.properties
@@ -7517,6 +7596,7 @@ lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/about.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/et/global/aboutSupport.properties
@@ -7671,6 +7751,8 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/browser/chrome/eu/locale/browser/devtools/connection-screen.properties
@@ -7802,6 +7884,7 @@ lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/about.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/eu/global/aboutSupport.properties
@@ -7956,6 +8039,8 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/browser/chrome/fa/locale/browser/devtools/connection-screen.properties
@@ -8085,6 +8170,7 @@ lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/about.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/fa/global/aboutSupport.properties
@@ -8239,6 +8325,8 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/browser/chrome/fi/locale/browser/devtools/connection-screen.properties
@@ -8368,6 +8456,7 @@ lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/about.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/fi/global/aboutSupport.properties
@@ -8522,6 +8611,8 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/browser/chrome/fr/locale/browser/devtools/connection-screen.properties
@@ -8652,6 +8743,7 @@ lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/about.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/fr/global/aboutSupport.properties
@@ -8806,6 +8898,8 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/browser/chrome/fy-NL/locale/browser/devtools/connection-screen.properties
@@ -8935,6 +9029,7 @@ lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/l
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/about.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/fy-NL/global/aboutSupport.properties
@@ -9089,6 +9184,8 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/browser/chrome/ga-IE/locale/browser/devtools/connection-screen.properties
@@ -9221,6 +9318,7 @@ lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/l
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/about.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/ga-IE/global/aboutSupport.properties
@@ -9375,6 +9473,8 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/browser/chrome/gd/locale/browser/devtools/connection-screen.properties
@@ -9504,6 +9604,7 @@ lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/about.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/gd/global/aboutSupport.properties
@@ -9658,6 +9759,8 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/browser/chrome/gl/locale/browser/devtools/connection-screen.properties
@@ -9787,6 +9890,7 @@ lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/about.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/gl/global/aboutSupport.properties
@@ -9941,6 +10045,8 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/browser/chrome/gu-IN/locale/browser/devtools/connection-screen.properties
@@ -10070,6 +10176,7 @@ lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/l
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/about.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/gu-IN/global/aboutSupport.properties
@@ -10224,6 +10331,8 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/browser/chrome/he/locale/browser/devtools/connection-screen.properties
@@ -10351,6 +10460,7 @@ lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/about.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/he/global/aboutSupport.properties
@@ -10505,6 +10615,8 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/browser/chrome/hi-IN/locale/browser/devtools/connection-screen.properties
@@ -10633,6 +10745,7 @@ lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/l
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/about.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/hi-IN/global/aboutSupport.properties
@@ -10787,6 +10900,8 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/browser/chrome/hr/locale/browser/devtools/connection-screen.properties
@@ -10918,6 +11033,7 @@ lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/about.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/hr/global/aboutSupport.properties
@@ -11072,6 +11188,8 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/browser/chrome/hu/locale/browser/devtools/connection-screen.properties
@@ -11200,6 +11318,7 @@ lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/about.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/hu/global/aboutSupport.properties
@@ -11354,6 +11473,8 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/browser/chrome/hy-AM/locale/browser/devtools/connection-screen.properties
@@ -11483,6 +11604,7 @@ lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/l
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/about.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/hy-AM/global/aboutSupport.properties
@@ -11637,6 +11759,8 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/browser/chrome/id/locale/browser/devtools/connection-screen.properties
@@ -11763,6 +11887,7 @@ lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/about.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/id/global/aboutSupport.properties
@@ -11917,6 +12042,8 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/browser/chrome/is/locale/browser/devtools/connection-screen.properties
@@ -12047,6 +12174,7 @@ lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/about.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/is/global/aboutSupport.properties
@@ -12201,6 +12329,8 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/browser/chrome/it/locale/browser/devtools/connection-screen.properties
@@ -12331,6 +12461,7 @@ lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/about.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/it/global/aboutSupport.properties
@@ -12485,6 +12616,8 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/devtools/connection-screen.properties
@@ -12616,6 +12749,7 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/about.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/ja/global/aboutSupport.properties
@@ -12770,6 +12904,8 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/browser/chrome/kk/locale/browser/devtools/connection-screen.properties
@@ -12898,6 +13034,7 @@ lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/about.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/kk/global/aboutSupport.properties
@@ -13052,6 +13189,8 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/browser/chrome/kn/locale/browser/devtools/connection-screen.properties
@@ -13181,6 +13320,7 @@ lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/about.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/kn/global/aboutSupport.properties
@@ -13335,6 +13475,8 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/browser/chrome/ko/locale/browser/devtools/connection-screen.properties
@@ -13463,6 +13605,7 @@ lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/about.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/ko/global/aboutSupport.properties
@@ -13617,6 +13760,8 @@ lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/browser/chrome/ku/locale/browser/devtools/connection-screen.properties
@@ -13747,6 +13892,7 @@ lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/about.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/ku/global/aboutSupport.properties
@@ -13901,6 +14047,8 @@ lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/browser/chrome/lg/locale/browser/devtools/connection-screen.properties
@@ -14031,6 +14179,7 @@ lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/about.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/lg/global/aboutSupport.properties
@@ -14185,6 +14334,8 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/browser/chrome/lt/locale/browser/devtools/connection-screen.properties
@@ -14314,6 +14465,7 @@ lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/about.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/lt/global/aboutSupport.properties
@@ -14468,6 +14620,8 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/browser/chrome/lv/locale/browser/devtools/connection-screen.properties
@@ -14597,6 +14751,7 @@ lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/about.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/lv/global/aboutSupport.properties
@@ -14751,6 +14906,8 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/m
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/browser/chrome/mai/locale/browser/devtools/connection-screen.properties
@@ -14880,6 +15037,7 @@ lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/local
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/about.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/mai/global/aboutSupport.properties
@@ -15034,6 +15192,8 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/browser/chrome/mk/locale/browser/devtools/connection-screen.properties
@@ -15165,6 +15325,7 @@ lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/about.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/mk/global/aboutSupport.properties
@@ -15319,6 +15480,8 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/browser/chrome/ml/locale/browser/devtools/connection-screen.properties
@@ -15449,6 +15612,7 @@ lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/about.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/ml/global/aboutSupport.properties
@@ -15603,6 +15767,8 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/browser/chrome/mr/locale/browser/devtools/connection-screen.properties
@@ -15733,6 +15899,7 @@ lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/about.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/mr/global/aboutSupport.properties
@@ -15887,6 +16054,8 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/browser/chrome/nb-NO/locale/browser/devtools/connection-screen.properties
@@ -16018,6 +16187,7 @@ lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/l
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/about.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/nb-NO/global/aboutSupport.properties
@@ -16172,6 +16342,8 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/browser/chrome/nl/locale/browser/devtools/connection-screen.properties
@@ -16300,6 +16472,7 @@ lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/about.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/nl/global/aboutSupport.properties
@@ -16454,6 +16627,8 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/browser/chrome/nn-NO/locale/browser/devtools/connection-screen.properties
@@ -16584,6 +16759,7 @@ lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/l
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/about.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/nn-NO/global/aboutSupport.properties
@@ -16738,6 +16914,8 @@ lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/n
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/browser/chrome/nso/locale/browser/devtools/connection-screen.properties
@@ -16866,6 +17044,7 @@ lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/local
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/about.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/nso/global/aboutSupport.properties
@@ -17020,6 +17199,8 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/browser/chrome/or/locale/browser/devtools/connection-screen.properties
@@ -17149,6 +17330,7 @@ lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/about.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/or/global/aboutSupport.properties
@@ -17303,6 +17485,8 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/browser/chrome/pa-IN/locale/browser/devtools/connection-screen.properties
@@ -17431,6 +17615,7 @@ lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/l
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/about.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/pa-IN/global/aboutSupport.properties
@@ -17585,6 +17770,8 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/chrome/pl/locale/browser/devtools/connection-screen.properties
@@ -17688,11 +17875,11 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/defaults/
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/defaults/profile/localstore.rdf
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/defaults/profile/mimeTypes.rdf
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/allegro-pl.xml
-lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/fbc-pl.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/merlin-pl.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/pwn-pl.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/wikipedia-pl.xml
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/wolnelektury-pl.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/browser/searchplugins/wp-pl.xml
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome.manifest
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/.mkdir.done
@@ -17715,6 +17902,7 @@ lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/about.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/pl/global/aboutSupport.properties
@@ -17869,6 +18057,8 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/browser/chrome/pt-BR/locale/browser/devtools/connection-screen.properties
@@ -17998,6 +18188,7 @@ lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/l
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/about.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/pt-BR/global/aboutSupport.properties
@@ -18152,6 +18343,8 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/browser/chrome/pt-PT/locale/browser/devtools/connection-screen.properties
@@ -18280,6 +18473,7 @@ lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/l
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/about.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/pt-PT/global/aboutSupport.properties
@@ -18434,6 +18628,8 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/browser/chrome/rm/locale/browser/devtools/connection-screen.properties
@@ -18563,6 +18759,7 @@ lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/about.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/rm/global/aboutSupport.properties
@@ -18717,6 +18914,8 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/browser/chrome/ro/locale/browser/devtools/connection-screen.properties
@@ -18846,6 +19045,7 @@ lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/about.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/ro/global/aboutSupport.properties
@@ -19000,6 +19200,8 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/browser/chrome/ru/locale/browser/devtools/connection-screen.properties
@@ -19130,6 +19332,7 @@ lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/about.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/ru/global/aboutSupport.properties
@@ -19284,6 +19487,8 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/browser/chrome/si/locale/browser/devtools/connection-screen.properties
@@ -19414,6 +19619,7 @@ lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/about.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/si/global/aboutSupport.properties
@@ -19568,6 +19774,8 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/browser/chrome/sk/locale/browser/devtools/connection-screen.properties
@@ -19699,6 +19907,7 @@ lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/about.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/sk/global/aboutSupport.properties
@@ -19853,6 +20062,8 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/browser/chrome/sl/locale/browser/devtools/connection-screen.properties
@@ -19982,6 +20193,7 @@ lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/about.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/sl/global/aboutSupport.properties
@@ -20136,6 +20348,8 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/s
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/browser/chrome/son/locale/browser/devtools/connection-screen.properties
@@ -20266,6 +20480,7 @@ lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/local
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/about.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/son/global/aboutSupport.properties
@@ -20420,6 +20635,8 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/browser/chrome/sq/locale/browser/devtools/connection-screen.properties
@@ -20549,6 +20766,7 @@ lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/about.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/sq/global/aboutSupport.properties
@@ -20703,6 +20921,8 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/browser/chrome/sr/locale/browser/devtools/connection-screen.properties
@@ -20833,6 +21053,7 @@ lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/about.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/sr/global/aboutSupport.properties
@@ -20987,6 +21208,8 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/browser/chrome/sv-SE/locale/browser/devtools/connection-screen.properties
@@ -21117,6 +21340,7 @@ lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/l
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/about.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/sv-SE/global/aboutSupport.properties
@@ -21271,6 +21495,8 @@ lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/browser/chrome/ta-LK/locale/browser/devtools/connection-screen.properties
@@ -21397,6 +21623,7 @@ lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/l
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/about.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/ta-LK/global/aboutSupport.properties
@@ -21551,6 +21778,8 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/browser/chrome/ta/locale/browser/devtools/connection-screen.properties
@@ -21679,6 +21908,7 @@ lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/about.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/ta/global/aboutSupport.properties
@@ -21833,6 +22063,8 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/browser/chrome/te/locale/browser/devtools/connection-screen.properties
@@ -21963,6 +22195,7 @@ lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/about.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/te/global/aboutSupport.properties
@@ -22117,6 +22350,8 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/browser/chrome/th/locale/browser/devtools/connection-screen.properties
@@ -22248,6 +22483,7 @@ lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/about.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/th/global/aboutSupport.properties
@@ -22402,6 +22638,8 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/browser/chrome/tr/locale/browser/devtools/connection-screen.properties
@@ -22530,6 +22768,7 @@ lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/about.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/tr/global/aboutSupport.properties
@@ -22684,6 +22923,8 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/browser/chrome/uk/locale/browser/devtools/connection-screen.properties
@@ -22812,6 +23053,7 @@ lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/about.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/uk/global/aboutSupport.properties
@@ -22966,6 +23208,8 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/browser/chrome/vi/locale/browser/devtools/connection-screen.properties
@@ -23096,6 +23340,7 @@ lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/about.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/vi/global/aboutSupport.properties
@@ -23250,6 +23495,8 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/browser/chrome/zh-CN/locale/browser/devtools/connection-screen.properties
@@ -23382,6 +23629,7 @@ lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/l
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/about.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/zh-CN/global/aboutSupport.properties
@@ -23536,6 +23784,8 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/browser/chrome/zh-TW/locale/browser/devtools/connection-screen.properties
@@ -23666,6 +23916,7 @@ lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/l
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/about.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/zh-TW/global/aboutSupport.properties
@@ -23820,6 +24071,8 @@ lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/browser.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/browser.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/devtools/app-manager.dtd
+lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/devtools/appcacheutils.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/devtools/connection-screen.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/browser/chrome/zu/locale/browser/devtools/connection-screen.properties
@@ -23949,6 +24202,7 @@ lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/AccessFu.properties
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/about.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutAbout.dtd
+lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutNetworking.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutRights.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutSupport.dtd
 lib/firefox/browser/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/zu/global/aboutSupport.properties
