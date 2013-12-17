@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4530 2013/12/16 15:30:40 apb Exp $
+$NetBSD: CHANGES-2013,v 1.4531 2013/12/17 01:46:39 minskim Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6732,3 +6732,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/ruby-i18n to 0.6.9 [taca 2013-12-16]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2013Q4 branch [wiz 2013-12-16]
 	Updated textproc/grepcidr to 2.95 [apb 2013-12-16]
+	Updated print/tex-context to 2013 [minskim 2013-12-17]
+	Updated print/tex-context-doc to 2013 [minskim 2013-12-17]
