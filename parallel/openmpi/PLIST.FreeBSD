@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2013/12/17 06:48:08 asau Exp $
+lib/openmpi/mca_shmem_posix.la
+share/openmpi/help-opal-shmem-posix.txt
