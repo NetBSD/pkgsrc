@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/05/30 09:02:36 prlw1 Exp $
+# $NetBSD: Makefile,v 1.19 2013/12/17 05:32:33 asau Exp $
 
 .include "Makefile.common"
 
@@ -7,7 +7,7 @@ CONFIGURE_ARGS+= --disable-editor
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 BUILDLINK_TRANSFORM+=   rm:-ldl
 .endif
 
