@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2013/05/25 23:43:58 joerg Exp $
+$NetBSD: distinfo,v 1.16 2013/12/17 19:10:11 markd Exp $
 
 SHA1 (mail-notification-5.4.tar.bz2) = c148449c5d2fd0a75571e4e42932da1f1ae013f6
 RMD160 (mail-notification-5.4.tar.bz2) = 64946509ef99fdeba8ff547ffac3830c36131484
@@ -8,5 +8,6 @@ SHA1 (patch-ah) = 572787f23bfca47ff10f6ef1dd796a1dce0d20ff
 SHA1 (patch-ai) = 0178794de2141bed09f51bd5c80405b785d688b0
 SHA1 (patch-aj) = 694c3f99157189c357eaef32913c3d9c7d61162a
 SHA1 (patch-build_src_mn-pop3-mailbox.c) = 26a59e91c227f277962cb613d04facdb95682aea
+SHA1 (patch-jb) = bd3350d7dc13aa131c64dcb0b00afb34db4efe6b
 SHA1 (patch-jbsrc_lib_src_core_jb-main.c) = d34f5b9f43a3b5ab5f4b0cba0469296655930652
 SHA1 (patch-src_mn-client-session.c) = 6c858d4491738484a38593c31ebbd34163a04eee
