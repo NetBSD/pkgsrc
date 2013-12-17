@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2013/12/15 19:51:19 joerg Exp $
+$NetBSD: distinfo,v 1.4 2013/12/17 23:22:35 joerg Exp $
 
 SHA1 (qt-everywhere-opensource-src-5.2.0.tar.xz) = 7d9d8cad4434bc200d9ed87b3c7cb39654a2f1b4
 RMD160 (qt-everywhere-opensource-src-5.2.0.tar.xz) = b2dd68f622fa7ff271ef621a7c7f17f2ecf7be9d
@@ -57,7 +57,7 @@ SHA1 (patch-qtwebkit_Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h
 SHA1 (patch-qtwebkit_Source_WTF_WTF.pro) = 1273b662feaa30ba42cefc1f11fb8854e11405a9
 SHA1 (patch-qtwebkit_Source_WTF_wtf_Assertions.cpp) = b56a5cf3a7f03976f78b7eeac801571aa4fa9142
 SHA1 (patch-qtwebkit_Source_WTF_wtf_InlineASM.h) = f66cfe90357638d868f4c55bd3628305774bdc99
-SHA1 (patch-qtwebkit_Source_WTF_wtf_NumberOfCores.cpp) = 10c91530cb3d0bcf7dfd733224f92f768596da04
+SHA1 (patch-qtwebkit_Source_WTF_wtf_NumberOfCores.cpp) = b17efd2ba90f28f0184ab5f3f9ef69a72be3ac0f
 SHA1 (patch-qtwebkit_Source_WTF_wtf_Platform.h) = a999f608962affebc99f55d93cede5a180b542a9
 SHA1 (patch-qtwebkit_Source_WTF_wtf_RAMSize.cpp) = 4e7412a8eba669bdec436458229a998e782bedd3
 SHA1 (patch-qtwebkit_Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = 5d5a21dd636f0667219af916990740883478b651
