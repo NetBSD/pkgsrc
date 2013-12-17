@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4536 2013/12/17 13:24:23 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4537 2013/12/17 13:25:45 ryoon Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6737,3 +6737,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated comms/asterisk18 to 1.8.24.1 [jnemeth 2013-12-17]
 	Updated comms/asterisk10 to 10.12.4 [jnemeth 2013-12-17]
 	Updated www/firefox-l10n to 26.0 [ryoon 2013-12-17]
+	Updated www/firefox24-l10n to 24.2.0 [ryoon 2013-12-17]
