@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/07/15 02:02:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/17 23:23:38 joerg Exp $
 
 DISTNAME=		picoc-2.1
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://picoc.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
