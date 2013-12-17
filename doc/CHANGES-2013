@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4534 2013/12/17 05:37:53 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.4535 2013/12/17 05:39:55 jnemeth Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6735,5 +6735,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/tex-context to 2013 [minskim 2013-12-17]
 	Updated print/tex-context-doc to 2013 [minskim 2013-12-17]
 	Updated comms/asterisk18 to 1.8.24.1 [jnemeth 2013-12-17]
-	Updated comms/asterisk10 to 10.12.4 [jnemeth 2013-12-17]
 	Updated comms/asterisk10 to 10.12.4 [jnemeth 2013-12-17]
