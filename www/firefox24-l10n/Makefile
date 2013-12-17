@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/11/21 15:27:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/17 13:25:22 ryoon Exp $
 #
 
-FIREFOX_VER=	24.1.1esr
-PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
+FIREFOX_VER=	24.2.0esr
+PKGNAME=	firefox24-l10n-${FIREFOX_VER:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
