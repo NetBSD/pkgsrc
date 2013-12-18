@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2013/07/04 21:33:14 adam Exp $
+$NetBSD: patch-aa,v 1.13 2013/12/18 11:52:25 tron Exp $
+
+Fix build.
 
 --- ui/time_shift.c.orig	2013-07-04 20:20:31.000000000 +0000
 +++ ui/time_shift.c
