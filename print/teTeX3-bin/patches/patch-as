@@ -1,16 +1,17 @@
-$NetBSD: patch-as,v 1.12 2013/11/13 19:02:25 minskim Exp $
+$NetBSD: patch-as,v 1.13 2013/12/18 02:30:32 minskim Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
-@@ -8,26 +8,20 @@ ac_include ../make/programs.mk
+@@ -7,27 +7,20 @@ ac_include ../make/programs.mk
+ 
  man5dir = $(mandir)/man5
  
- SCRIPTS = \
+-SCRIPTS = \
 -  allcm allneeded dvi2fax dvired fmtutil fontinst \
 -  kpsetool kpsewhere ps2frag pslatex rubibtex rumakeindex \
 -  texconfig texconfig-dialog texdoc texdoctk texexec texlinks updmap \
 -  ps4pdf fmtutil-sys texconfig-sys updmap-sys
-+  texexec
++SCRIPTS =
  
 -PDFSCRIPTS = a2ping e2pall epstopdf
 +PDFSCRIPTS = ""
@@ -35,7 +36,7 @@ $NetBSD: patch-as,v 1.12 2013/11/13 19:02:25 minskim Exp $
  default: all
  
  install: install-data install-exec
-@@ -39,49 +33,11 @@ install-data:: $(INFOFILES)
+@@ -39,49 +32,11 @@ install-data:: $(INFOFILES)
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
  	done
@@ -85,7 +86,7 @@ $NetBSD: patch-as,v 1.12 2013/11/13 19:02:25 minskim Exp $
  
  install-exec:
  	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
-@@ -96,16 +52,10 @@ install-exec:
+@@ -96,16 +51,10 @@ install-exec:
  	else \
  	  true; \
  	fi
