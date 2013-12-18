@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2007/07/06 17:59:16 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2013/12/18 11:52:25 tron Exp $
+
+Fix compiler warning caused by improper use of toupper(3).
 
 --- wiretap/dbs-etherwatch.c.orig	2007-07-06 12:52:45.000000000 +0200
 +++ wiretap/dbs-etherwatch.c
