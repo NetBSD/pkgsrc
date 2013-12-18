@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2013/12/18 17:53:44 joerg Exp $
+
+--- configure.orig	2013-12-18 14:37:10.000000000 +0000
++++ configure
+@@ -15097,7 +15097,7 @@ else
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+-    CFLAGS="$CFLAGS -DGTK_DISABLE_SINGLE_INCLUDES -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGSEAL_ENABLE"
++    CFLAGS="$CFLAGS -DGTK_DISABLE_SINGLE_INCLUDES -DGSEAL_ENABLE"
+     audacious_check="audclient >= 3.0"
+ 
+ fi
