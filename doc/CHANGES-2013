@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4542 2013/12/18 11:52:48 tron Exp $
+$NetBSD: CHANGES-2013,v 1.4543 2013/12/18 18:56:34 wiz Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6743,3 +6743,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated mail/thunderbird17-l10n to 17.0.11 [ryoon 2013-12-17]
 	Updated print/teTeX3-bin to 3.0nb55 [minskim 2013-12-18]
 	Updated net/wireshark to 1.10.4 [tron 2013-12-18]
+	Updated security/gnupg to 1.4.16 [wiz 2013-12-18]
