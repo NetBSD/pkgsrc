@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2013/12/11 19:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2013/12/18 13:37:25 joerg Exp $
 
 DISTNAME=	bsddb3-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ REPLACE_PYTHON+=	Lib3/bsddb/test/test_dbtables.py
 
 SUBST_CLASSES+=		bdb
 SUBST_STAGE.bdb=	pre-configure
-SUBST_FILES.bdb=	${WRKSRC}/setup2.py
+SUBST_FILES.bdb=	${WRKSRC}/setup2.py ${WRKSRC}/setup3.py
 SUBST_SED.bdb=		-e "s,dblib = 'db',dblib = '${BDB_TYPE}',g"
 
 do-test:
