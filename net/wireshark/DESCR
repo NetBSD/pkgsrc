@@ -1,6 +1,11 @@
-Wireshark (formerly known as Ethereal) is a free network protocol analyzer for
-Unix and Windows.  It allows you to examine data from a live network or from a
-capture file on disk.  You can interactively browse the capture data, viewing
-summary and detail information for each packet.  Wireshark has several powerful
-features, including a rich display filter language and the ability to view the
-reconstructed stream of a TCP session.
+Wireshark is a network traffic analyzer, or "sniffer", for Unix and
+Unix-like operating systems.  It uses GTK+, a graphical user interface
+library, and libpcap, a packet capture and filtering library.
+
+The Wireshark distribution also comes with TShark, which is a
+line-oriented sniffer (similar to Sun's snoop, or tcpdump) that uses the
+same dissection, capture-file reading and writing, and packet filtering
+code as Wireshark, and with editcap, which is a program to read capture
+files and write the packets from that capture file, possibly in a
+different capture file format, and with some packets possibly removed
+from the capture.
