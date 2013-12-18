@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/07/05 16:18:15 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2013/12/18 17:53:44 joerg Exp $
 
 SHA1 (mp3splt-gtk-0.8.2.tar.gz) = d519b516573235d6b8a945579c6c063fc6373e3b
 RMD160 (mp3splt-gtk-0.8.2.tar.gz) = 7b625ecefac5430e4e73683b8f4ba939264ed38b
 Size (mp3splt-gtk-0.8.2.tar.gz) = 1049687 bytes
+SHA1 (patch-configure) = 0ffbe2c5ffa5df7ddb85231973973369f8e245e3
