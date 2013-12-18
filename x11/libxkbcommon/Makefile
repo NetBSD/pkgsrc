@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/13 23:14:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/18 18:51:03 wiz Exp $
 
 DISTNAME=	libxkbcommon-0.3.2
 PKGREVISION=	1
@@ -18,6 +18,6 @@ USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	xkbcommon.pc.in
 
 CONFIGURE_ARGS+=	--with-xkb-config-root=${X11BASE}/lib/X11/xkb
-CONFIGURE_ARGS+=	--disable-doxygen
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
