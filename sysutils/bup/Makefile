@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/09/09 14:07:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/18 23:48:22 wiz Exp $
 
 DISTNAME=	bup-0.25rc1
 PKGREVISION=	3
@@ -13,7 +13,7 @@ MASTER_SITES=	# manually packaged since master site is git repository
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} lelutin-bup-7e0bc2e.zip
 # ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://github.com/apenwarr/bup
 COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
