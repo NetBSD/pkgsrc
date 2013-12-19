@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2013/10/17 14:42:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2013/12/19 14:29:07 bsiegert Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -541,6 +541,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linux-XL-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-como.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/MP-RAS.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/MirBSD.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/NetBSD.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/OSF1.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/OpenBSD.cmake
