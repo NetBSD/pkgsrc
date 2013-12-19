@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/12/19 09:34:28 sborrill Exp $
+
+Make KEYMAP_PATH match the directory keymaps are installed in.
+
+--- CMakeLists.txt.orig	2013-12-13 12:25:25.000000000 +0000
++++ CMakeLists.txt
+@@ -126,7 +126,7 @@ endif()
+ test_big_endian(BIG_ENDIAN)
+ 
+ # Path to put keymaps
+-set(FREERDP_KEYMAP_PATH "${CMAKE_INSTALL_PREFIX}/freerdp/keymaps")
++set(FREERDP_KEYMAP_PATH "${CMAKE_INSTALL_PREFIX}/share/freerdp/keymaps")
+ 
+ # Path to put plugins
+ set(FREERDP_PLUGIN_PATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/freerdp")
