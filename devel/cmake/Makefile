@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2013/11/14 07:59:44 adam Exp $
+# $NetBSD: Makefile,v 1.83 2013/12/19 14:29:07 bsiegert Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.12.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
@@ -55,7 +56,8 @@ SUBST_FILES.flags=	Modules/Compiler/*.cmake
 SUBST_SED.flags=	-e 's,-O.,,'
 
 pre-configure:
-	${RM} ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
+	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
+	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8.4
 .include "../../archivers/libarchive/buildlink3.mk"
