@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.40 2013/11/06 13:12:50 obache Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.41 2013/12/19 23:50:29 tron Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -28,6 +28,7 @@ TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		/usr/bin/false
+TOOLS_PLATFORM.fetch?=		/usr/bin/fetch
 TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
