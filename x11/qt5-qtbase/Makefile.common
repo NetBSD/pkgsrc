@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.3 2013/12/20 02:36:10 obache Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -35,8 +35,10 @@ DISTINFO_FILE=	${.CURDIR}/../../x11/qt5-qtbase/distinfo
 FILESDIR=	${.CURDIR}/../../x11/qt5-qtbase/files
 PATCHDIR=	${.CURDIR}/../../x11/qt5-qtbase/patches
 
-.if empty(MAKE_JOBS_SAFE:M[nN][oO])
+.if defined(MAKE_JOBS)
+.if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
 CONFIGURE_ENV+=		MAKE_FLAGS=-j${MAKE_JOBS:Q}
+.endif
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
