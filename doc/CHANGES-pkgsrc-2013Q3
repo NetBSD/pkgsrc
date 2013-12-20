@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.26 2013/12/18 10:02:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q3,v 1.1.2.27 2013/12/20 10:03:35 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q3 branch:
@@ -104,3 +104,7 @@ Pullup ticket #4274 - requested by taca
 www/typo3_45: security update
 Pullup ticket #4275 - requested by taca
 devel/ruby-i18n: security update
+Pullup ticket #4276 - requested by tron
+net/wireshark: security update
+Pullup ticket #4277 - requested by is
+graphics/gd: build fix
