@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2012 Alistair Crooks <agc@NetBSD.org>
+ * Copyright (c) 2012,2013 Alistair Crooks <agc@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef NETPGP_VERIFY_H_
-#define NETPGP_VERIFY_H_	20120928
+#define NETPGP_VERIFY_H_	20131219
 
 #include <sys/types.h>
 
