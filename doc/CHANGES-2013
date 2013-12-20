@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4544 2013/12/20 14:36:41 fhajny Exp $
+$NetBSD: CHANGES-2013,v 1.4545 2013/12/20 15:46:57 wen Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6745,3 +6745,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/wireshark to 1.10.4 [tron 2013-12-18]
 	Updated security/gnupg to 1.4.16 [wiz 2013-12-18]
 	Updated lang/nodejs to 0.10.24 [root 2013-12-20]
+	Updated devel/p5-Proc-Daemon to 0.14nb4 [wen 2013-12-20]
