@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4545 2013/12/20 15:46:57 wen Exp $
+$NetBSD: CHANGES-2013,v 1.4546 2013/12/20 15:50:08 taca Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6746,3 +6746,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/gnupg to 1.4.16 [wiz 2013-12-18]
 	Updated lang/nodejs to 0.10.24 [root 2013-12-20]
 	Updated devel/p5-Proc-Daemon to 0.14nb4 [wen 2013-12-20]
+	Updated www/fengoffice to 2.4.0.6 [taca 2013-12-20]
