@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/10 15:22:20 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/20 15:35:50 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -30,10 +30,7 @@ REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	typo3/cli_dispatch.phpsh
 
-REPLACE_INTERPRETER+=	sh
-REPLACE.sh.old=		/bin/bash
-REPLACE.sh.new=		/bin/sh
-REPLACE_FILES.sh=	typo3/contrib/flowplayer/flowplayer.captions/example/flvtool2-cuepoints.sh
+REPLACE_BASH=	typo3/contrib/flowplayer/plugins/flowplayer.captions/example/flvtool2-cuepoints.sh
 
 TYPO3DATADIRS=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
 		typo3conf typo3conf/ext typo3conf/l10n typo3temp uploads \
