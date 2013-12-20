@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/10/09 14:40:09 taca Exp $
-${FO_DIR}/.htaccess
+@comment $NetBSD: PLIST,v 1.16 2013/12/20 15:49:33 taca Exp $
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
 ${FO_DIR}/application/controllers/AccountController.class.php
@@ -429,6 +428,10 @@ ${FO_DIR}/application/models/telephone_types/TelephoneType.class.php
 ${FO_DIR}/application/models/telephone_types/TelephoneTypes.class.php
 ${FO_DIR}/application/models/telephone_types/base/BaseTelephoneType.class.php
 ${FO_DIR}/application/models/telephone_types/base/BaseTelephoneTypes.class.php
+${FO_DIR}/application/models/template_milestone/TemplateMilestone.class.php
+${FO_DIR}/application/models/template_milestone/TemplateMilestones.class.php
+${FO_DIR}/application/models/template_milestone/base/BaseTemplateMilestone.class.php
+${FO_DIR}/application/models/template_milestone/base/BaseTemplateMilestones.class.php
 ${FO_DIR}/application/models/template_object_properties/TemplateObjectProperties.class.php
 ${FO_DIR}/application/models/template_object_properties/TemplateObjectProperty.class.php
 ${FO_DIR}/application/models/template_object_properties/base/BaseTemplateObjectProperties.class.php
@@ -441,6 +444,10 @@ ${FO_DIR}/application/models/template_parameters/TemplateParameter.class.php
 ${FO_DIR}/application/models/template_parameters/TemplateParameters.class.php
 ${FO_DIR}/application/models/template_parameters/base/BaseTemplateParameter.class.php
 ${FO_DIR}/application/models/template_parameters/base/BaseTemplateParameters.class.php
+${FO_DIR}/application/models/template_tasks/TemplateTask.class.php
+${FO_DIR}/application/models/template_tasks/TemplateTasks.class.php
+${FO_DIR}/application/models/template_tasks/base/BaseTemplateTask.class.php
+${FO_DIR}/application/models/template_tasks/base/BaseTemplateTasks.class.php
 ${FO_DIR}/application/models/templates/COTemplate.class.php
 ${FO_DIR}/application/models/templates/COTemplates.class.php
 ${FO_DIR}/application/models/templates/base/BaseCOTemplate.class.php
@@ -677,6 +684,9 @@ ${FO_DIR}/application/views/template/get_context.php
 ${FO_DIR}/application/views/template/index.php
 ${FO_DIR}/application/views/template/instantiate_parameters.php
 ${FO_DIR}/application/views/template/view.php
+${FO_DIR}/application/views/template_milestone/add_template_milestone.php
+${FO_DIR}/application/views/template_task/add_template_task.php
+${FO_DIR}/application/views/template_task/view.php
 ${FO_DIR}/application/views/time/index.php
 ${FO_DIR}/application/views/timeslot/add_timeslot.php
 ${FO_DIR}/application/views/timeslot/object_timeslots.php
@@ -796,7 +806,6 @@ ${FO_DIR}/environment/templates/benchmark_timer_brief.php
 ${FO_DIR}/environment/templates/benchmark_timer_full.php
 ${FO_DIR}/environment/templates/dump_error.php
 ${FO_DIR}/favicon.ico
-${FO_DIR}/hooks/email_error_reporting.php
 ${FO_DIR}/hooks/fengoffice_hooks.php
 ${FO_DIR}/hooks/index.html
 ${FO_DIR}/hooks/opengoo_hooks.php
@@ -2282,7 +2291,6 @@ ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.M
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/info.ini
-${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/HTML/4.1.1,ddc9b993d7fc8d4a185e8dbf5b9a0996,1.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/dummy.php
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/EntityLookup/entities.ser
 ${FO_DIR}/library/htmlpurifier/standalone/HTMLPurifier/Filter/ExtractStyleBlocks.php
@@ -2406,6 +2414,7 @@ ${FO_DIR}/library/swift/lib/classes/Swift/Attachment.php
 ${FO_DIR}/library/swift/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/ByteStream/ArrayByteStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/ByteStream/FileByteStream.php
+${FO_DIR}/library/swift/lib/classes/Swift/ByteStream/TemporaryFileByteStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/CharacterReader.php
 ${FO_DIR}/library/swift/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php
 ${FO_DIR}/library/swift/lib/classes/Swift/CharacterReader/UsAsciiReader.php
@@ -2415,6 +2424,7 @@ ${FO_DIR}/library/swift/lib/classes/Swift/CharacterReaderFactory/SimpleCharacter
 ${FO_DIR}/library/swift/lib/classes/Swift/CharacterStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/CharacterStream/NgCharacterStream.php
+${FO_DIR}/library/swift/lib/classes/Swift/ConfigurableSpool.php
 ${FO_DIR}/library/swift/lib/classes/Swift/DependencyContainer.php
 ${FO_DIR}/library/swift/lib/classes/Swift/DependencyException.php
 ${FO_DIR}/library/swift/lib/classes/Swift/EmbeddedFile.php
@@ -2439,6 +2449,7 @@ ${FO_DIR}/library/swift/lib/classes/Swift/Events/TransportChangeListener.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Events/TransportExceptionEvent.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Events/TransportExceptionListener.php
 ${FO_DIR}/library/swift/lib/classes/Swift/FailoverTransport.php
+${FO_DIR}/library/swift/lib/classes/Swift/FileSpool.php
 ${FO_DIR}/library/swift/lib/classes/Swift/FileStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Filterable.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Image.php
@@ -2455,15 +2466,20 @@ ${FO_DIR}/library/swift/lib/classes/Swift/MailTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mailer.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mailer/ArrayRecipientIterator.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mailer/RecipientIterator.php
+${FO_DIR}/library/swift/lib/classes/Swift/MemorySpool.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Message.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/Attachment.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/CharsetObserver.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php
+${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php
+${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php
+${FO_DIR}/library/swift/lib/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/EmbeddedFile.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/EncodingObserver.php
+${FO_DIR}/library/swift/lib/classes/Swift/Mime/Grammar.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/Header.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/HeaderEncoder.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php
@@ -2486,18 +2502,22 @@ ${FO_DIR}/library/swift/lib/classes/Swift/Mime/SimpleHeaderSet.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/SimpleMessage.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Mime/SimpleMimeEntity.php
 ${FO_DIR}/library/swift/lib/classes/Swift/MimePart.php
+${FO_DIR}/library/swift/lib/classes/Swift/NullTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/OutputByteStream.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/AntiFloodPlugin.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Decorator/Replacements.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/DecoratorPlugin.php
+${FO_DIR}/library/swift/lib/classes/Swift/Plugins/ImpersonatePlugin.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Logger.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/LoggerPlugin.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Loggers/EchoLogger.php
+${FO_DIR}/library/swift/lib/classes/Swift/Plugins/MessageLogger.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Pop/Pop3Connection.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Pop/Pop3Exception.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php
+${FO_DIR}/library/swift/lib/classes/Swift/Plugins/RedirectingPlugin.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Reporter.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/ReporterPlugin.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Plugins/Reporters/HitReporter.php
@@ -2509,7 +2529,16 @@ ${FO_DIR}/library/swift/lib/classes/Swift/Preferences.php
 ${FO_DIR}/library/swift/lib/classes/Swift/ReplacementFilterFactory.php
 ${FO_DIR}/library/swift/lib/classes/Swift/RfcComplianceException.php
 ${FO_DIR}/library/swift/lib/classes/Swift/SendmailTransport.php
+${FO_DIR}/library/swift/lib/classes/Swift/SignedMessage.php
+${FO_DIR}/library/swift/lib/classes/Swift/Signer.php
+${FO_DIR}/library/swift/lib/classes/Swift/Signers/BodySigner.php
+${FO_DIR}/library/swift/lib/classes/Swift/Signers/DKIMSigner.php
+${FO_DIR}/library/swift/lib/classes/Swift/Signers/DomainKeySigner.php
+${FO_DIR}/library/swift/lib/classes/Swift/Signers/HeaderSigner.php
+${FO_DIR}/library/swift/lib/classes/Swift/Signers/SMimeSigner.php
 ${FO_DIR}/library/swift/lib/classes/Swift/SmtpTransport.php
+${FO_DIR}/library/swift/lib/classes/Swift/Spool.php
+${FO_DIR}/library/swift/lib/classes/Swift/SpoolTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/StreamFilter.php
 ${FO_DIR}/library/swift/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php
 ${FO_DIR}/library/swift/lib/classes/Swift/StreamFilters/StringReplacementFilter.php
@@ -2529,12 +2558,16 @@ ${FO_DIR}/library/swift/lib/classes/Swift/Transport/IoBuffer.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/LoadBalancedTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/MailInvoker.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/MailTransport.php
+${FO_DIR}/library/swift/lib/classes/Swift/Transport/NullTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/SendmailTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/SimpleMailInvoker.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/SmtpAgent.php
+${FO_DIR}/library/swift/lib/classes/Swift/Transport/SpoolTransport.php
 ${FO_DIR}/library/swift/lib/classes/Swift/Transport/StreamBuffer.php
 ${FO_DIR}/library/swift/lib/classes/Swift/TransportException.php
+${FO_DIR}/library/swift/lib/classes/Swift/Validate.php
 ${FO_DIR}/library/swift/lib/dependency_maps/cache_deps.php
+${FO_DIR}/library/swift/lib/dependency_maps/message_deps.php
 ${FO_DIR}/library/swift/lib/dependency_maps/mime_deps.php
 ${FO_DIR}/library/swift/lib/dependency_maps/transport_deps.php
 ${FO_DIR}/library/swift/lib/mime_types.php
@@ -3061,6 +3094,7 @@ ${FO_DIR}/plugins/core_dimensions/language/zh_tw/lang.php
 ${FO_DIR}/plugins/core_dimensions/public/assets/javascript/core_dimensions.js
 ${FO_DIR}/plugins/core_dimensions/templates/quickadd_extra_fields.php
 ${FO_DIR}/plugins/core_dimensions/update.php
+${FO_DIR}/plugins/index.html
 ${FO_DIR}/plugins/mail/CHANGELOG.txt
 ${FO_DIR}/plugins/mail/application/controllers/MailController.class.php
 ${FO_DIR}/plugins/mail/application/helpers/MailUtilities.class.php
@@ -5434,6 +5468,7 @@ ${FO_DIR}/public/assets/themes/default/stylesheets/og/reporting.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/og/search.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/og/tag_panel.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/og/tasks.css
+${FO_DIR}/public/assets/themes/default/stylesheets/og/templates.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/og/time.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/og/workspace_panel.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/ogmin.css
@@ -5516,6 +5551,7 @@ ${FO_DIR}/public/upgrade/scripts/FigazzaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/MatambritoUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/MilangaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/MollejaUpgradeScript.class.php
+${FO_DIR}/public/upgrade/scripts/MorcillaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/NutriaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/PamplonaUpgradeScript.class.php
 ${FO_DIR}/public/upgrade/scripts/PastafrolaUpgradeScript.class.php
@@ -5538,6 +5574,7 @@ ${FO_DIR}/public/upgrade/templates/db_migration/2_0_asado.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_1_molleja.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_2_pamplona.php
 ${FO_DIR}/public/upgrade/templates/db_migration/2_3_chorizo.php
+${FO_DIR}/public/upgrade/templates/db_migration/2_4_morcilla.php
 ${FO_DIR}/public/upgrade/templates/installed_version.php
 ${FO_DIR}/public/upgrade/templates/layout.php
 ${FO_DIR}/public/webservices/FilesServices.php
