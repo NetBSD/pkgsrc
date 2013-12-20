@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4543 2013/12/18 18:56:34 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4544 2013/12/20 14:36:41 fhajny Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6744,3 +6744,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated print/teTeX3-bin to 3.0nb55 [minskim 2013-12-18]
 	Updated net/wireshark to 1.10.4 [tron 2013-12-18]
 	Updated security/gnupg to 1.4.16 [wiz 2013-12-18]
+	Updated lang/nodejs to 0.10.24 [root 2013-12-20]
