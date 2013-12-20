@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/07/29 15:21:11 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2013/12/20 15:43:51 wen Exp $
 
 SHA1 (Proc-Daemon-0.14.tar.gz) = 5cc5be86ede2152c93ec104aec2e430783fd5756
 RMD160 (Proc-Daemon-0.14.tar.gz) = 30d869c0c49c2b1b74fdf802bbc47b930e84c685
 Size (Proc-Daemon-0.14.tar.gz) = 14464 bytes
+SHA1 (patch-lib_Proc_Daemon.pm) = b3cbf695e9ab4359e50d56ecd9e9b809131b5d0b
