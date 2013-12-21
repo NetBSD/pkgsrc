@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/12/17 05:32:33 asau Exp $
+# $NetBSD: Makefile,v 1.20 2013/12/21 11:31:33 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -7,8 +7,15 @@ CONFIGURE_ARGS+= --disable-editor
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
-BUILDLINK_TRANSFORM+=   rm:-ldl
+BUILDLINK_TRANSFORM+=	rm:-ldl
+.endif
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-Wl,-soname=libdconf-dbus-1.so.0
+BUILDLINK_TRANSFORM+=	rm:-Wl,-soname=libdconf.so.1
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
