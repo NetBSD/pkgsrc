@@ -1,4 +1,4 @@
-# $NetBSD: xorg.Xcomposite,v 1.6 2012/04/08 05:55:48 obache Exp $
+# $NetBSD: xorg.libXcomposite,v 1.1 2013/12/21 12:40:46 mrg Exp $
 include/X11/extensions/Xcomposite.h
 lib/libXcomposite.1.0.0.dylib
 lib/libXcomposite.1.dylib
