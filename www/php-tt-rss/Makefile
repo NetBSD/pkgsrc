@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/10/12 13:14:28 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/12/21 19:46:24 wiz Exp $
 
 TTRVER=		1.10
 DISTNAME=	Tiny-Tiny-RSS-${TTRVER}
 PKGNAME=	${PHP_PKG_PREFIX}-tt-rss-${TTRVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-http://github.com/gothfox/Tiny-Tiny-RSS/archive/${TTRVER}.tar.gz
 
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
