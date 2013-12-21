@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/07/21 09:42:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2013/12/21 11:05:23 jperkin Exp $
 
 DISTNAME=	libpciaccess-0.13.2
 CATEGORIES=	sysutils x11
@@ -16,7 +16,7 @@ LICENSE=	mit AND x11
 ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 NetBSD-*-x86_64 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386 DragonFly-*-x86_64
-ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-* Darwin-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64 NetBSD-*-hppa
 
 GNU_CONFIGURE=		yes
