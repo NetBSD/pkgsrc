@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/12/14 14:58:23 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/21 17:29:30 tsutsui Exp $
 
 DISTNAME=	tw-0.5.2
 CATEGORIES=	net
@@ -8,8 +8,8 @@ HOMEPAGE=	http://shokai.github.io/tw/
 COMMENT=	CUI Twitter Client
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-args_parser>=0.1.4:../../misc/ruby-args_parser
-DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=0.6.0:../../misc/ruby-parallel
+DEPENDS+=	${RUBY_PKGPREFIX}-args_parser>=0.2.0:../../misc/ruby-args_parser
+DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=0.8.2:../../misc/ruby-parallel
 DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=1.1.4:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=4.4.0:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-userstream>=1.2.0:../../net/ruby-userstream
