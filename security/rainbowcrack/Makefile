@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2013/02/06 23:23:45 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.9 2013/12/21 15:24:15 wiz Exp $
 
 PKGNAME=		rainbowcrack-1.2
 DISTNAME=		rainbowcrack-1.2-src
 PKGREVISION=		3
 CATEGORIES=		security
-MASTER_SITES=		http://www.rainbowcrack.com/downloads/
+MASTER_SITES=		# http://www.rainbowcrack.com/downloads/
 EXTRACT_SUFX=		.zip
 DISTFILES=		rainbowcrack-1.2-src.zip \
                         rainbowcrack-1.2-openbsd-diffs.tar.gz
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://www.antsight.com/zsl/rainbowcrack/
+HOMEPAGE=		http://project-rainbowcrack.com/
 COMMENT=		Hash cracker
 
 BUILD_DIRS=		src
