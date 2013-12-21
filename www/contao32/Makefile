@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/21 16:52:43 taca Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/21 02:46:25 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
@@ -85,8 +85,8 @@ pre-configure:
 pre-install:
 	cd ${WRKSRC}; ${RM} -fr files/music_academy templates/music_academy.sql
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
-	cd ${WRKSRC}/assets/ace && ${FIND} . -type f -exec chmod -x {} \;
-	cd ${WRKSRC}/assets/jquery/ui && ${FIND} . -type f -exec chmod -x {} \;
+	cd ${WRKSRC}/assets && \
+		${FIND} ace html5shiv jquery/ui -type f -exec chmod -x {} \;
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
