@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4549 2013/12/22 09:56:17 tron Exp $
+$NetBSD: CHANGES-2013,v 1.4550 2013/12/22 12:26:35 mrg Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6751,4 +6751,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated security/netpgpverify to 20131219 [agc 2013-12-20]
 	Updated www/contao32 to 3.2.3 [taca 2013-12-21]
 	Updated www/contao32-example to 3.2.3 [taca 2013-12-21]
+	Updated pkgtools/x11-links to 0.80 [mrg 2013-12-21]
 	Updated net/wireshark to 1.10.5 [tron 2013-12-22]
