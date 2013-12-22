@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/12/08 00:35:28 jakllsch Exp $
+# $NetBSD: Makefile,v 1.18 2013/12/22 21:32:36 wiz Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -16,6 +16,13 @@ COMMENT=		Thorough, stand alone memory test for x86 arch
 LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 NetBSD-*-x86_64 Linux-*-x86_64
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+GCC_REQD+=		4.6
+.else
+GCC_REQD+=		4.5
+.endif
 
 USE_TOOLS+=		gmake
 SUBST_CLASSES+=		delcr
