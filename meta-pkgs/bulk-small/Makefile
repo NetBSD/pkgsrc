@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/12/12 13:27:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/22 15:29:20 dholland Exp $
 
-DISTNAME=	bulk-small-20130316
+DISTNAME=	bulk-small-20131222
 PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -166,7 +166,6 @@ BUILD_DEPENDS+=	libgpg-error-[0-9]*:../../security/libgpg-error
 							# required by libgcrypt
 BUILD_DEPENDS+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
 BUILD_DEPENDS+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
-BUILD_DEPENDS+=	xpmroot-[0-9]*:../../x11/xpmroot	# required by fvwm
 
 
 .include "../../mk/bsd.pkg.mk"
