@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4550 2013/12/22 12:26:35 mrg Exp $
+$NetBSD: CHANGES-2013,v 1.4551 2013/12/22 19:47:41 dholland Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6753,3 +6753,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/contao32-example to 3.2.3 [taca 2013-12-21]
 	Updated pkgtools/x11-links to 0.80 [mrg 2013-12-21]
 	Updated net/wireshark to 1.10.5 [tron 2013-12-22]
+	Updated meta-pkgs/bulk-small to 20131222nb1 [dholland 2013-12-22]
