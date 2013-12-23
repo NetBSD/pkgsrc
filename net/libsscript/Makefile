@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:18:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.12 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	sscript-lib2.0
 PKGNAME=	libsscript-2.0
@@ -8,7 +7,7 @@ CATEGORIES=	net devel
 MASTER_SITES=	http://www.linuxave.net/~drow/SocketScript/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linuxave.net/~drow/SocketScript/
 COMMENT=	Simple library for creating network oriented software in C
 

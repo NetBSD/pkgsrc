@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/25 06:55:57 asau Exp $
+# $NetBSD: Makefile,v 1.22 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/
 DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xml.coverpages.org/sgml-xml.html
 COMMENT=	SGML DTDs from the The Electronic Publishing Special Interest Group
 

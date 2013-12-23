@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2013/11/15 08:35:26 adam Exp $
+# $NetBSD: Makefile,v 1.78 2013/12/23 11:57:04 wiz Exp $
 
 DISTNAME=	pngcrush-1.7.69-nolib
 PKGNAME=	${DISTNAME:C/-nolib//}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmt/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pmt.sourceforge.net/pngcrush/index.html
 COMMENT=	Optimizer for PNG (Portable Network Graphics) files
 LICENSE=	zlib

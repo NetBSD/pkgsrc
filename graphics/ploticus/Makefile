@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2013/09/04 12:31:25 obache Exp $
+# $NetBSD: Makefile,v 1.51 2013/12/23 11:57:04 wiz Exp $
 
 DISTNAME=	ploticus242_src
 PKGNAME=	ploticus-2.42
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ploticus/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ploticus.sourceforge.net/
 COMMENT=	Versatile data visualization engine
 LICENSE=	gnu-gpl-v2

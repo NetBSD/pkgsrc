@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2012/10/25 06:55:54 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.mbayer.de/html2text/downloads/	\
 		${MASTER_SITE_SUNSITE:=apps/www/converters/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mbayer.de/html2text/
 COMMENT=	Advanced HTML-to-text converter
 LICENSE=	gnu-gpl-v2

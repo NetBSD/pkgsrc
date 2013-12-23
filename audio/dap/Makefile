@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2013/01/26 21:37:02 adam Exp $
+# $NetBSD: Makefile,v 1.45 2013/12/23 11:57:02 wiz Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	# http://www.cee.hw.ac.uk/~richardk/downloads/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	scw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cee.hw.ac.uk/~richardk/
 COMMENT=	Digital audio recording and processing package
 

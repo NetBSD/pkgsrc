@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:11:03 asau Exp $
-#
+# $NetBSD: Makefile,v 1.17 2013/12/23 11:57:04 wiz Exp $
 
 DISTNAME=	lib3ds-1.2.0
 PKGREVISION=	6
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lib3ds/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lib3ds.sourceforge.net/
 COMMENT=	3D Studio File Format Library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2013/10/10 14:42:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.109 2013/12/23 11:57:04 wiz Exp $
 
 DISTNAME=	xsane-0.998
 PKGNAME=	xsane-0.99.8
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.xsane.org/download/old/ \
 		ftp://sunsite.uio.no/pub/sane/xsane/ \
 		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/xsane/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xsane.org/
 COMMENT=	New improved frontend for SANE
 LICENSE=	gnu-gpl-v2

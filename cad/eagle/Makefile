@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 13:25:11 asau Exp $
-#
+# $NetBSD: Makefile,v 1.24 2013/12/23 11:57:02 wiz Exp $
 
 DISTNAME=		eagle-lin-eng-4.16r2
 PKGNAME=		${DISTNAME:S/-lin-eng//}
@@ -7,7 +6,7 @@ CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.cadsoft.de/eagle/program/${PKGVERSION}/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cadsoft.de/
 COMMENT=		Easy to use printed circuit board editor
 LICENSE=		fee-based-commercial-use

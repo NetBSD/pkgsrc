@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2013/05/31 12:41:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.20 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	sitescooper-2.2.8
 PKGREVISION=	5
 CATEGORIES=	net comms
 MASTER_SITES=	http://sitescooper.cx/released/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sitescooper.cx/
 COMMENT=	Retrieve stories from websites and convert to Palm readable format
 

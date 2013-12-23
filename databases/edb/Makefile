@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 21:25:17 asau Exp $
-#
+# $NetBSD: Makefile,v 1.25 2013/12/23 11:57:02 wiz Exp $
 
 DISTNAME=		edb-1.0.5
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 PKGREVISION=		1
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.enlightenment.org/Libraries/Edb/
 COMMENT=		Database abstraction layer to Berkeley databases
 

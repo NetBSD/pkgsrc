@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2012/10/25 06:55:47 asau Exp $
+# $NetBSD: Makefile,v 1.45 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	docbook-4.5
 CATEGORIES=	textproc
@@ -16,7 +16,7 @@ DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	SGML DTD designed for computer documentation
 

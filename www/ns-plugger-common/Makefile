@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/28 06:30:23 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=		plugger-4.0-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://fredrik.hubbe.net/plugger/
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fredrik.hubbe.net/plugger.html
 COMMENT=		Streaming multimedia plugin for Netscape
 

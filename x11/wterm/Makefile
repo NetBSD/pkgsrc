@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.54 2013/07/05 13:29:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2013/12/23 11:57:07 wiz Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	23
 CATEGORIES=	x11 windowmaker
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wterm/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wterm.sourceforge.net/
 COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 

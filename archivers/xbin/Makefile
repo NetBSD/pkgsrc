@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/09/11 19:47:03 asau Exp $
-#
+# $NetBSD: Makefile,v 1.30 2013/12/23 11:57:02 wiz Exp $
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
@@ -8,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://sunsite.bilkent.edu.tr/pub/tex/ctan/tools/xbin/
 DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert mailable BinHex format into binary
 LICENSE=	xbin-license
 

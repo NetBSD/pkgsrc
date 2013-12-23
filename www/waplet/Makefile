@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/28 06:31:08 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	waplet
 PKGNAME=	waplet-0.01
@@ -7,7 +6,7 @@ CATEGORIES=	www net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=waplet/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://waplet.sourceforge.net/
 COMMENT=	Java applet-based WAP emulator and WML browser
 
