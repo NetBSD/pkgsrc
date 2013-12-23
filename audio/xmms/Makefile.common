@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2012/06/12 15:45:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.32 2013/12/23 11:57:02 wiz Exp $
 #
 # used by audio/xmms/Makefile
 # used by audio/xmms-esound/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://legacy.xmms2.org/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://legacy.xmms2.org/
 COMMENT=	X Multimedia System - an audio player with a Winamp GUI
 

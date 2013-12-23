@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2013/07/24 11:01:59 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.63 2013/12/23 11:57:03 wiz Exp $
 
 DISTNAME=	feh-2.9.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://feh.finalrewind.org/
 COMMENT=	Advanced image viewer
 LICENSE=	mit

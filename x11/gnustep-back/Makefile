@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2013/10/20 17:45:26 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	gnustep-back-0.22.0
 PKGREVISION=	6
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	X11 AppKit backend for GNUstep
 LICENSE=	gnu-gpl-v3
