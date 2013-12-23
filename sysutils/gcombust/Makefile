@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.47 2012/10/23 19:51:03 asau Exp $
-#
+# $NetBSD: Makefile,v 1.48 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=		gcombust-0.1.54
 PKGREVISION=		7
 CATEGORIES=		x11 sysutils
 MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.abo.fi/~jmunsin/gcombust/
 COMMENT=		Graphical frontend for CD mastering (mkisofs, cdrecord, ...)
 

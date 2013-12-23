@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/03/15 19:09:06 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.27 2013/12/23 11:57:04 wiz Exp $
 
 DISTNAME=		mpfr-3.1.2
 #PKGNAME=		${DISTNAME}p2	# append patch level
@@ -12,7 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 #PATCHFILES=		patch01 patch02
 #PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mpfr.org/
 COMMENT=		GMP-based library for multiple-precision floating-point computations
 LICENSE=		gnu-lgpl-v3
