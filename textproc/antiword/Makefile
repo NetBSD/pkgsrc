@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2012/10/25 06:55:38 asau Exp $
-#
+# $NetBSD: Makefile,v 1.24 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	antiword-0.37
 PKGREVISION=	1
 CATEGORIES=	textproc converters print
 MASTER_SITES=	http://www.winfield.demon.nl/linux/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.winfield.demon.nl/index.html
 COMMENT=	Free MS Word to text and PostScript converter
 
