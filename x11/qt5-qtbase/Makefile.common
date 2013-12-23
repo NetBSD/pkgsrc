@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/12/21 08:59:41 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/12/23 02:51:57 obache Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -184,7 +184,7 @@ pre-configure: remove-3rdparty-libs set-qmake-conf
 
 .if empty(PKGPATH:Mx11/qt5-qtbase) && empty(PKGPATH:Mx11/qt5-sqlite3) \
 	&& empty(PKGPATH:Mx11/qt5-mysql) && empty(PKGPATH:Mx11/qt5-psql) \
-	&& empty(PKGPATH:Mx11/Mqt5-odbc)
+	&& empty(PKGPATH:Mx11/qt5-odbc)
 post-configure:
 	cd ${WRKSRC}/${BUILD_DIRS} && ${QTPREFIX}/bin/qmake -o Makefile
 .endif
