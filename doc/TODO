@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12789 2013/12/22 15:23:48 wiz Exp $
+$NetBSD: TODO,v 1.12790 2013/12/23 23:58:34 gdt Exp $
 
 Suggested new packages
 ======================
@@ -289,6 +289,10 @@ Suggested new packages
 	shellcheck
 	http://www.shellcheck.net/about.html
 	Static analysis program for POSIX sh, written in haskell
+
+	cups-filters
+	http://www.linuxfoundation.org/collaborate/workgroups/openprinting/cups-filters	
+	gstoraster and friends, formerly the cups option in ghostscript
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
