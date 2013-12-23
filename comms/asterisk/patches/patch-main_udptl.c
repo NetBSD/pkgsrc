@@ -1,6 +1,6 @@
-$NetBSD: patch-main_udptl.c,v 1.1 2013/08/08 00:45:10 jnemeth Exp $
+$NetBSD: patch-main_udptl.c,v 1.2 2013/12/23 01:34:03 jnemeth Exp $
 
---- main/udptl.c.orig	2012-12-11 21:12:26.000000000 +0000
+--- main/udptl.c.orig	2013-09-18 23:36:12.000000000 +0000
 +++ main/udptl.c
 @@ -952,6 +952,8 @@ unsigned int ast_udptl_get_far_max_ifp(s
  	return udptl->far_max_ifp;
@@ -29,3 +29,18 @@ $NetBSD: patch-main_udptl.c,v 1.1 2013/08/08 00:45:10 jnemeth Exp $
  
  	switch (cmd) {
  	case CLI_INIT:
+@@ -1417,11 +1419,13 @@ static int removed_options_handler(const
+ 	return 0;
+ }
+ 
++RAII_DECL(struct udptl_config *, udptl_cfg, ao2_cleanup);
++
+ static void __ast_udptl_reload(int reload)
+ {
+ 	if (aco_process_config(&cfg_info, reload) == ACO_PROCESS_ERROR) {
+ 		if (!reload) {
+-			RAII_VAR(struct udptl_config *, udptl_cfg, udptl_snapshot_alloc(), ao2_cleanup);
++			RAII_VAR(struct udptl_config *, udptl_cfg, udptl_snapshot_alloc());
+ 
+ 			if (aco_set_defaults(&general_option, "general", udptl_cfg->general)) {
+ 				ast_log(LOG_ERROR, "Failed to load udptl.conf and failed to initialize defaults.\n");
