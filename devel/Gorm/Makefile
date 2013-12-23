@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2013/10/19 09:07:02 adam Exp $
+# $NetBSD: Makefile,v 1.55 2013/12/23 11:57:02 wiz Exp $
 
 DISTNAME=	gorm-1.2.18
 PKGNAME=	Gorm-1.2.18
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Graphical user interface builder for GNUstep
 LICENSE=	gnu-gpl-v3

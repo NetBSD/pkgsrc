@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2012/10/31 11:19:26 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2013/12/23 11:57:03 wiz Exp $
 
 DISTNAME=	pthread-sem-1.0
 PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cit.gu.edu.au/teaching/2105CIT/software/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Semaphore implementation for (PTH) pthreads
 
 CONFLICTS=		man-pages-[0-9]*
