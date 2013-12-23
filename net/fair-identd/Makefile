@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 17:18:20 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	identd
 PKGNAME=	fair-${DISTNAME}-20000201
@@ -7,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://www.clock.org/~fair/opinion/
 EXTRACT_SUFX=	.c
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clock.org/~fair/opinion/identd.html
 COMMENT=	Fast RFC-1413 identd running under inetd that returns no useful info
 

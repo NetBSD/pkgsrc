@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2012/10/25 06:56:04 asau Exp $
-#
+# $NetBSD: Makefile,v 1.43 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=		libxml-1.8.17
 PKGREVISION=		4
 CATEGORIES=		textproc devel lang gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libxml/1.8/}
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmlsoft.org/
 COMMENT=		XML parser (version 1), mainly used by the GNOME project
 LICENSE=		gnu-lgpl-v2

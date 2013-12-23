@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/04/06 13:24:19 rodent Exp $
+# $NetBSD: Makefile,v 1.50 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	Linux-PAM-0.77
 PKGNAME=	${DISTNAME:S/Linux-//}
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.kernel.org/pub/linux/libs/pam/pre/library/ \
 		http://www.de.kernel.org/pub/linux/libs/pam/pre/library/ \
 		ftp://ftp.jp.kernel.org/pub/linux/libs/pam/pre/library/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules (PAM)
 

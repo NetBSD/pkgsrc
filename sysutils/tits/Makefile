@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2012/10/23 19:51:26 asau Exp $
-#
+# $NetBSD: Makefile,v 1.26 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	tits-1.2.2
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mctavish.co.uk/tits/
 
-MAINTAINER=	scw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mctavish.co.uk/tits/
 COMMENT=	Server which provides telnet(1) access to one or more tty ports
 LICENSE=	original-bsd

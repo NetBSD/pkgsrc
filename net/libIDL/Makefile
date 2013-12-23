@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2013/04/06 20:27:26 rodent Exp $
+# $NetBSD: Makefile,v 1.59 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	libIDL-0.8.14
 PKGREVISION=	4
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	CORBA Interface Definition Language parser
 LICENSE=	gnu-lgpl-v2

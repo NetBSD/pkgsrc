@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2012/10/06 11:54:49 asau Exp $
-#
+# $NetBSD: Makefile,v 1.27 2013/12/23 11:57:03 wiz Exp $
 
 DISTNAME=	plib-1.8.5
 PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	http://plib.sourceforge.net/dist/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plib.sourceforge.net/
 COMMENT=	Libraries for writing portable games/realtime interactive apps
 

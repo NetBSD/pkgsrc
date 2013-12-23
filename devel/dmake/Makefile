@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:16:53 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2013/12/23 11:57:03 wiz Exp $
 
 DISTNAME=	dmake-v4.1-src-export.all-unknown-all
 PKGNAME=	dmake-4.1
@@ -8,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://dmake.wticorp.com/SourceDistribution/ \
 		ftp://plg.uwaterloo.ca/pub/dmake/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dmake.wticorp.com/
 COMMENT=	Portable make supported by many platforms
 

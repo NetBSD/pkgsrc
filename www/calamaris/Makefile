@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2013/05/31 12:42:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	calamaris-2.59
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://cord.de/tools/squid/calamaris/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cord.de/tools/squid/calamaris/
 COMMENT=	Squid logfile analyzer
 

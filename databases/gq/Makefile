@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2013/10/10 14:42:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2013/12/23 11:57:02 wiz Exp $
 
 DISTNAME=	gq-1.2.3
 PKGREVISION=	28
 CATEGORIES=	databases net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqclient/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gq-project.org/
 COMMENT=	GTK-based LDAP client
 LICENSE=	gnu-gpl-v2

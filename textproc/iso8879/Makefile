@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/25 06:55:57 asau Exp $
+# $NetBSD: Makefile,v 1.33 2013/12/23 11:57:06 wiz Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/cover/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iso.org/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 

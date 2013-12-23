@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2013/06/30 15:17:18 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.14 2013/12/23 11:57:04 wiz Exp $
 
 DISTNAME=	plnode200
 PKGNAME=	ploticus-examples-2.00
 CATEGORIES=	graphics
 MASTER_SITES=	http://gd.tuwien.ac.at/visual/ploticus/download/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.sgpr.net/
 # domain squatted
 COMMENT=	Examples for the ploticus data plotting suite
