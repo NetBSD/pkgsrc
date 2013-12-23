@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2013/10/19 09:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.57 2013/12/23 11:57:03 wiz Exp $
 
 DISTNAME=	gnustep-base-1.24.0
 PKGREVISION=	3
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep foundation classes
 LICENSE=	gnu-gpl-v3

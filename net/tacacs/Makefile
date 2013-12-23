@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:19:11 asau Exp $
-#
+# $NetBSD: Makefile,v 1.12 2013/12/23 11:57:05 wiz Exp $
 
 DISTNAME=	tac_plus.F4.0.4.alpha
 PKGNAME=	tacacs-4.0.4a
@@ -8,7 +7,7 @@ MASTER_SITES=	ftp://ftpeng.cisco.com/pub/tacacs/
 #		ftp://ftp.shrubbery.net/pub/tac_plus/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.shrubbery.net/tac_plus/
 COMMENT=	Cisco authentication, authorization, and accounting protocol daemon
 LICENSE=	cisco-license
