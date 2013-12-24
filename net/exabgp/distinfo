@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/12/15 22:22:44 pettai Exp $
+$NetBSD: distinfo,v 1.2 2013/12/24 11:21:55 pettai Exp $
 
-SHA1 (exabgp-exabgp-3.2.18.tar.gz) = 8d8a442744289e2ad6419978a21eb610b1330362
-RMD160 (exabgp-exabgp-3.2.18.tar.gz) = 7578a008f507d468e965e8e8645c8833e5b8059a
-Size (exabgp-exabgp-3.2.18.tar.gz) = 596423 bytes
+SHA1 (exabgp-exabgp-3.2.19.tar.gz) = e31f782ecc0e5c532cb8c8bb18ef7491e0568ea2
+RMD160 (exabgp-exabgp-3.2.19.tar.gz) = e17f88e0dbec222849d1c433c68047a36b6e4316
+Size (exabgp-exabgp-3.2.19.tar.gz) = 597193 bytes
 SHA1 (patch-dev_bin_selfcheck) = c70220d037d3b351370856c0171edca4db02ee42
 SHA1 (patch-dev_self_api_first) = b37b6e6b8d7f955c16de256fd0919aa466ca28b9
 SHA1 (patch-dev_self_api_second) = 6fcee097d8ecf0e96e8947629c23843f70b1e0e7
