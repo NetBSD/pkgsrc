@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/05/23 14:54:53 taca Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/24 03:26:19 taca Exp $
 #
 
 DISTNAME=	${VERS}
@@ -13,7 +13,7 @@ COMMENT=	Transifex Command-line Client
 LICENSE=	gnu-gpl-v2
 
 FETCH_USING=    wget
-VERS=		0.9
+VERS=		0.10
 WRKSRC=		${WRKDIR}/transifex-client-${VERS}
 
 .include "../../lang/python/egg.mk"
