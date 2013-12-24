@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4553 2013/12/24 03:26:55 taca Exp $
+$NetBSD: CHANGES-2013,v 1.4554 2013/12/24 11:22:42 pettai Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6756,3 +6756,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated meta-pkgs/bulk-small to 20131222nb1 [dholland 2013-12-22]
 	Updated comms/asterisk to 11.6.1 [jnemeth 2013-12-23]
 	Updated devel/transifex-client to 0.10 [taca 2013-12-24]
+	Updated net/exabgp to 3.2.19 [pettai 2013-12-24]
