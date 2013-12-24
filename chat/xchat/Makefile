@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2013/11/27 17:09:57 khorben Exp $
+# $NetBSD: Makefile,v 1.91 2013/12/24 15:21:24 tron Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	20
+PKGREVISION=	21
 OWNER=		tron@NetBSD.org
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
@@ -30,11 +30,14 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.20.0
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	YES
 
-.if empty(PKG_BUILD_OPTIONS.gtk2:Mquartz)
+.  if empty(PKG_BUILD_OPTIONS.gtk2:Mquartz)
+CONFIGURE_ARGS+=	--enable-xft
 LDFLAGS.Darwin+=	-L${PREFIX}/lib -lX11
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-xlib
-.endif
+.  endif
+.else
+CONFIGURE_ARGS+=	--enable-xft
 .endif
 
 INSTALLATION_DIRS+=	share/doc/xchat lib/xchat/plugins include/xchat
