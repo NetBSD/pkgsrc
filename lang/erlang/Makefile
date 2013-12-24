@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2013/10/18 15:47:49 roy Exp $
+# $NetBSD: Makefile,v 1.59 2013/12/24 15:00:44 is Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGREVISION=		1
@@ -26,6 +26,24 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
 
+.include "../../mk/bsd.prefs.mk"
+
+# have gcc without the necessary atomic ops?
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+
+# a machine without native ethread implementation?
+.if	empty(MACHINE_PLATFORM:M*i386)	&&\
+	empty(MACHINE_PLATFORM:M*sparc)	&&\
+	empty(MACHINE_PLATFORM:M*sparc64) &&\
+	empty(MACHINE_PLATFORM:M*powerpc) &&\
+	empty(MACHINE_PLATFORM:M*x86_64)
+
+CONFIGURE_ARGS+=	--disable-native-ethr-impls\
+			--disable-smp-require-native-atomics
+
+.endif
+.endif
+
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 
 REPLACE_INTERPRETER+=	escript
@@ -51,8 +69,6 @@ TEST_MAKE_FLAGS=	ERL_TOP=${WRKSRC}
 REPLACE_PERL+=		make/make_emakefile
 
 PLIST_SRC=		PLIST
-
-.include "../../mk/bsd.prefs.mk"
 
 .if exists(${.CURDIR}/PLIST.${OPSYS})
 PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
