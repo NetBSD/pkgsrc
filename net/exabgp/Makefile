@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/12/15 22:22:44 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/24 11:21:55 pettai Exp $
 
-DISTNAME=	exabgp-exabgp-3.2.18
-PKGNAME=	exabgp-3.2.18
+DISTNAME=	exabgp-exabgp-3.2.19
+PKGNAME=	exabgp-3.2.19
 CATEGORIES=	net
-MASTER_SITES=	-https://github.com/Exa-Networks/exabgp/tarball/3.2.18
+MASTER_SITES=	-https://github.com/Exa-Networks/exabgp/tarball/3.2.19
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 FETCH_USING=    curl
 
-WRKSRC=		${WRKDIR}/Exa-Networks-exabgp-51d6b56
+WRKSRC=		${WRKDIR}/Exa-Networks-exabgp-d1b60dd
 
 USE_TOOLS+=	perl:run
 
