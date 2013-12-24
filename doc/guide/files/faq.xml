@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.48 2011/07/31 08:48:22 spz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.49 2013/12/24 15:29:44 tron Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -272,7 +272,7 @@ enable this feature by adding the option
 distfile is found, pkgsrc will try to resume it.</para>
 
 <para>You can also
-use a different program than the default &man.ftp.1; by changing the
+use a different program than the platform default program by changing the
 <varname>FETCH_USING</varname> variable.  You can specify the program by
 using of ftp, fetch, wget or curl.  Alternatively, fetching can be disabled
 by using the value manual.  A value of custom disables the system defaults
