@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4552 2013/12/23 03:15:57 jnemeth Exp $
+$NetBSD: CHANGES-2013,v 1.4553 2013/12/24 03:26:55 taca Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6755,3 +6755,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/wireshark to 1.10.5 [tron 2013-12-22]
 	Updated meta-pkgs/bulk-small to 20131222nb1 [dholland 2013-12-22]
 	Updated comms/asterisk to 11.6.1 [jnemeth 2013-12-23]
+	Updated devel/transifex-client to 0.10 [taca 2013-12-24]
