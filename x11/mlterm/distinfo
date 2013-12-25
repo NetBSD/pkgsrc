@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.38 2013/12/14 16:30:17 tsutsui Exp $
+$NetBSD: distinfo,v 1.39 2013/12/25 16:32:31 tsutsui Exp $
 
-SHA1 (mlterm-3.3.1.tar.gz) = 1009e5ff4ad1bfac90dd3f01d0144d76c2f12d1f
-RMD160 (mlterm-3.3.1.tar.gz) = c53d77754e1db1612e49f4cd272f1fcf8f2f7ca5
-Size (mlterm-3.3.1.tar.gz) = 3566097 bytes
-SHA1 (patch-configure) = 066d0e35d63f30ad9a892937af3a372fbea56936
+SHA1 (mlterm-3.3.2.tar.gz) = 035988a7e9440b3e44e9f0b210e4fe131d2056ee
+RMD160 (mlterm-3.3.2.tar.gz) = 32318d4482da82d893b89dc69c6893ffedb6d947
+Size (mlterm-3.3.2.tar.gz) = 3574269 bytes
+SHA1 (patch-configure) = 950194a8be2ebd7f3ed22c9ebaba545def6c7351
 SHA1 (patch-etc_font-fb) = 7ded1dbee083df4d78b6ebf42964f50262feb318
-SHA1 (patch-mlterm_ml__vt100__parser.c) = c440720ab84d192dfc75369f477229e2c7774f50
-SHA1 (patch-xwindow_x__screen.c) = 13599925ab6824b3700d84197765a7c611ca211f
+SHA1 (patch-xwindow_fb_x__display.c) = 4d877709bd2493c919c7d6c8c660966ee2411936
+SHA1 (patch-xwindow_fb_x__display.h) = 07b1d0f17995862c02fe8b4c69d32fc662802eb0
+SHA1 (patch-xwindow_fb_x__display__x68kgrf.c) = 2a3f0bb7f37bab3c1ee566e6d987f3666514e2d7
+SHA1 (patch-xwindow_fb_x__imagelib.c) = ba95c47740b8c6120405043ca9df15a56fe7bb9c
