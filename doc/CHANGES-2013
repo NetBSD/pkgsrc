@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4555 2013/12/24 15:21:38 tron Exp $
+$NetBSD: CHANGES-2013,v 1.4556 2013/12/25 16:33:27 tsutsui Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6758,3 +6758,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/transifex-client to 0.10 [taca 2013-12-24]
 	Updated net/exabgp to 3.2.19 [pettai 2013-12-24]
 	Updated chat/xchat to 2.8.8nb21 [tron 2013-12-24]
+	Updated x11/mlterm to 3.3.2 [tsutsui 2013-12-25]
