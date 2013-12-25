@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/15 22:22:44 pettai Exp $
-bin/dynamic-1.pl
-bin/dynamic-1.sh
+@comment $NetBSD: PLIST,v 1.2 2013/12/25 14:59:10 pettai Exp $
+bin/exabgp/dynamic-1.pl
+bin/exabgp/dynamic-1.sh
 bin/exabgp/exabgp
-bin/healthcheck.py
-bin/read-write.py
-bin/syslog-1.py
-bin/tcp-server
-bin/watchdog-1.pl
-bin/watchdog-1.sh
+bin/exabgp/healthcheck.py
+bin/exabgp/read-write.py
+bin/exabgp/syslog-1.py
+bin/exabgp/tcp-server
+bin/exabgp/watchdog-1.pl
+bin/exabgp/watchdog-1.sh
 ${PYSITELIB}/exabgp/__init__.py
 ${PYSITELIB}/exabgp/__init__.pyc
 ${PYSITELIB}/exabgp/__init__.pyo
