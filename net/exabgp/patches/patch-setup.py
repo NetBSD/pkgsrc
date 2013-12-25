@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2013/12/15 22:22:44 pettai Exp $
+$NetBSD: patch-setup.py,v 1.2 2013/12/25 14:59:10 pettai Exp $
 
 Fix installation to proper directories
 
@@ -10,7 +10,7 @@ Fix installation to proper directories
  	data_files=[
 -		('etc/exabgp',configuration('etc/exabgp')),
 -		('/usr/lib/systemd/system',configuration('etc/systemd')),
-+		('bin/',configuration('etc/exabgp')),
++		('bin/exabgp',configuration('etc/exabgp')),
 +	#	('/usr/lib/systemd/system',configuration('etc/systemd')),
  	],
  	classifiers=[
