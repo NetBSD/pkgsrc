@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/08/22 21:07:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/25 02:26:48 mef Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
@@ -261,6 +261,10 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Decoding/FCO_Wingdin
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Decoding/Latin1
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Decoding/StandardEncoding
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Decoding/Unicode
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Encoding/CEEncoding
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Encoding/ExpertEncoding
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Encoding/ExpertSubsetEncoding
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Encoding/NotDefEncoding
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Encoding/Wingdings
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/CenturySchL-Bold
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/CenturySchL-BoldItal
@@ -297,6 +301,7 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-Bo
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-BoldItal
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-Ital
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-Roma
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/IdiomSet/Pscript5Idiom
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIcidfmap
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIconfig
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIfontmap
