@@ -1,4 +1,6 @@
-$NetBSD: patch-gio_gfile.c,v 1.1 2013/12/25 11:04:28 tron Exp $
+$NetBSD: patch-gio_gfile.c,v 1.2 2013/12/25 11:47:09 tron Exp $
+
+GNOME bug report: https://bugzilla.gnome.org/show_bug.cgi?id=721034
 
 Fix build with SunStudio compiler: void function cannot return value
 
