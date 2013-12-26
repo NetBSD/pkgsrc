@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/10/09 15:42:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/12/26 14:14:56 ryoon Exp $
 bin/OmegaT
 share/OmegaT/OmegaT.jar
 share/OmegaT/lib/LanguageTool-data.jar
@@ -28,6 +28,7 @@ share/OmegaT/lib/morfologik-fsa-1.5.4.jar
 share/OmegaT/lib/morfologik-speller-1.5.4.jar
 share/OmegaT/lib/morfologik-stemming-1.5.4.jar
 share/OmegaT/lib/org.eclipse.jgit-2.1.0.201209190230-r.jar
+share/OmegaT/lib/orion-ssh2-214.jar
 share/OmegaT/lib/pdfbox-app-1.8.1.jar
 share/OmegaT/lib/segment-1.4.1.jar
 share/OmegaT/lib/sequence-library-1.0.2.jar
@@ -866,7 +867,7 @@ share/doc/OmegaT/it/appendix.website.html
 share/doc/OmegaT/it/chapter.about.OmegaT.html
 share/doc/OmegaT/it/chapter.dictionaries.html
 share/doc/OmegaT/it/chapter.file.filters.html
-share/doc/OmegaT/it/chapter.files.and.directories.html
+share/doc/OmegaT/it/chapter.files.and.folders.html
 share/doc/OmegaT/it/chapter.files.to.translate.html
 share/doc/OmegaT/it/chapter.formatted.text.html
 share/doc/OmegaT/it/chapter.glossaries.html
