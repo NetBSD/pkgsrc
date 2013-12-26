@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4557 2013/12/26 13:18:10 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4558 2013/12/26 13:22:13 ryoon Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6760,3 +6760,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated chat/xchat to 2.8.8nb21 [tron 2013-12-24]
 	Updated x11/mlterm to 3.3.2 [tsutsui 2013-12-25]
 	Updated www/seamonkey to 2.23 [ryoon 2013-12-26]
+	Updated www/seamonkey-l10n to 2.23 [ryoon 2013-12-26]
