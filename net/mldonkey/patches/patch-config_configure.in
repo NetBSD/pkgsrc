@@ -1,9 +1,8 @@
-$NetBSD: patch-config_configure.in,v 1.2 2013/12/21 10:42:29 jaapb Exp $
+$NetBSD: patch-config_configure.in,v 1.3 2013/12/26 12:02:39 jaapb Exp $
 
-Correct include paths for lablgtk 2.16; proper GD detection
 --- config/configure.in.orig	2012-08-05 15:49:02.000000000 +0000
 +++ config/configure.in
-@@ -929,7 +929,17 @@ if test "$GD" != "no"; then
+@@ -929,13 +929,30 @@ if test "$GD" != "no"; then
      GDMAJORVERSION=`$GDLIBCONFIG --majorversion`
      GDMINORVERSION=`$GDLIBCONFIG --minorversion`
      GDREVISION=`$GDLIBCONFIG --revision`
@@ -22,7 +21,20 @@ Correct include paths for lablgtk 2.16; proper GD detection
  	AC_MSG_RESULT($GDVERSION)
  	LIBGD=yes
      else
-@@ -1347,15 +1357,15 @@ if test "$GTK_CONFIG" = "no"; then
+ 	AC_MSG_RESULT(no (found $GDVERSION))
+ 	LIBGD=no
+     fi
++        fi
++        ;;
++      *)
++        AC_MSG_RESULT($GDVERSION)
++        LIBGD=yes
++        ;;
++    esac
+   else
+     LIBGD=yes
+   fi
+@@ -1347,15 +1364,15 @@ if test "$GTK_CONFIG" = "no"; then
       LABLGTK_CONFIG=no
  else
    AC_MSG_CHECKING(for native code $LABLGTK_NAME)
@@ -41,7 +53,7 @@ Correct include paths for lablgtk 2.16; proper GD detection
             echo "---------------------------------------------------------"
             echo "lablrsvg is not installed properly. See the INSTALL.txt"
             echo "file of mldonkey to see how to compile $LABLGTK_NAME. You"
-@@ -1376,7 +1386,7 @@ else
+@@ -1376,7 +1393,7 @@ else
    else
       AC_MSG_RESULT(no)
       LABLGTK_CONFIG=no
