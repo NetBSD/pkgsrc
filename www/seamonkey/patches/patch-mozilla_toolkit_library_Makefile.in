@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.1 2013/05/23 13:25:30 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.2 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2013-05-03 03:08:13.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2013-12-11 04:29:15.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -405,6 +405,7 @@ endif
+@@ -399,6 +399,7 @@ endif
  EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME_PATH,gkmedias,$(DIST)/lib)
  
  ifdef MOZ_WEBRTC
@@ -10,3 +10,14 @@ $NetBSD: patch-mozilla_toolkit_library_Makefile.in,v 1.1 2013/05/23 13:25:30 ryo
  ifdef MOZ_PEERCONNECTION
  COMPONENT_LIBS += peerconnection
  endif
+@@ -541,6 +542,10 @@ OS_LIBS += $(call EXPAND_LIBNAME,kvm)
+ EXTRA_DSO_LDOPTS += -Wl,--warn-unresolved-symbols
+ endif
+ 
++ifeq ($(OS_ARCH),FreeBSD)
++OS_LIBS += $(call EXPAND_LIBNAME,util)
++endif
++
+ ifeq ($(OS_ARCH),WINNT)
+ OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 version winspool comdlg32 imm32 msimg32 shlwapi psapi ws2_32 dbghelp rasapi32 rasdlg iphlpapi uxtheme setupapi secur32 sensorsapi portabledeviceguids windowscodecs wininet)
+ ifdef ACCESSIBILITY
