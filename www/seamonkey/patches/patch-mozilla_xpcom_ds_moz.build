@@ -1,16 +1,16 @@
-$NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.2 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_ds_moz.build,v 1.3 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/xpcom/ds/moz.build.orig	2013-10-29 01:21:14.000000000 +0000
+--- mozilla/xpcom/ds/moz.build.orig	2013-12-11 04:29:24.000000000 +0000
 +++ mozilla/xpcom/ds/moz.build
-@@ -95,7 +95,6 @@ CPP_SOURCES += [
+@@ -90,7 +90,6 @@ CPP_SOURCES += [
+     'nsSupportsArrayEnumerator.cpp',
      'nsSupportsPrimitives.cpp',
-     'nsUnicharBuffer.cpp',
      'nsVariant.cpp',
 -    'TimeStamp.cpp',
  ]
  
  if CONFIG['OS_ARCH'] == 'WINNT':
-@@ -113,6 +112,10 @@ elif CONFIG['OS_ARCH'] == 'Darwin':
+@@ -108,6 +107,10 @@ elif CONFIG['OS_ARCH'] == 'Darwin':
  else:
      error('No TimeStamp implementation on this platform.  Build will not succeed')
  

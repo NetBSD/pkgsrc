@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h,v 1.2 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: patch-mozilla_media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h,v 1.3 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h.orig	2013-10-29 01:21:04.000000000 +0000
+--- mozilla/media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h.orig	2013-12-11 04:28:54.000000000 +0000
 +++ mozilla/media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h
 @@ -30,12 +30,15 @@
   * $FreeBSD: src/sys/sys/queue.h,v 1.58 2004/04/07 04:19:49 imp Exp $
@@ -12,7 +12,7 @@ $NetBSD: patch-mozilla_media_mtransport_third__party_nrappkit_src_port_generic_i
 +#elif !defined(_SYS_QUEUE_H_)
  #define	_SYS_QUEUE_H_
  
--#ifndef DARWIN
+-#if !defined(__FreeBSD__) && !defined(DARWIN)
  #include <stddef.h>
 -#define __offsetof offsetof
 +

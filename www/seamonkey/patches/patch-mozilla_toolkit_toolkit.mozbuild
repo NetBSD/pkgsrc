@@ -1,12 +1,14 @@
-$NetBSD: patch-mozilla_toolkit_toolkit.mozbuild,v 1.1 2013/07/12 12:24:11 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_toolkit.mozbuild,v 1.2 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/toolkit/toolkit.mozbuild.orig	2013-06-20 04:35:23.000000000 +0000
+--- mozilla/toolkit/toolkit.mozbuild.orig	2013-12-11 04:29:23.000000000 +0000
 +++ mozilla/toolkit/toolkit.mozbuild
-@@ -46,7 +46,7 @@ if CONFIG['MOZ_UPDATER']:
-     if not CONFIG['MOZ_NATIVE_BZ2']:
-         add_tier_dir('platform', 'modules/libbz2')
+@@ -43,8 +43,8 @@ add_tier_dir('platform', [
+ if CONFIG['MOZ_AUTH_EXTENSION']:
+     add_tier_dir('platform', 'extensions/auth')
  
+-if CONFIG['MOZ_UPDATER']:
 -    add_tier_dir('platform', 'other-licenses/bsdiff')
++#if CONFIG['MOZ_UPDATER']:
 +#    add_tier_dir('platform', 'other-licenses/bsdiff')
  
  # Gecko/Core components.

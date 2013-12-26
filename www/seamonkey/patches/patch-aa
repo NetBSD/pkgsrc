@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: patch-aa,v 1.20 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/configure.in.orig	2013-10-29 01:20:42.000000000 +0000
+--- mozilla/configure.in.orig	2013-12-11 04:28:28.000000000 +0000
 +++ mozilla/configure.in
-@@ -2819,6 +2819,7 @@ EOF
+@@ -2752,6 +2752,7 @@ EOF
  #pragma GCC visibility push(hidden)
  #pragma GCC visibility push(default)
  #include <string.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
  #pragma GCC visibility pop
  
  __attribute__ ((visibility ("default"))) void Func() {
-@@ -2827,7 +2828,7 @@ __attribute__ ((visibility ("default")))
+@@ -2760,7 +2761,7 @@ __attribute__ ((visibility ("default")))
  }
  EOF
                         ac_cv_have_visibility_builtin_bug=no
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
                           ac_cv_have_visibility_builtin_bug=yes
                         else
                           if test `grep -c "@PLT" conftest.S` = 0; then
-@@ -3283,14 +3284,22 @@ fi
+@@ -3216,14 +3217,22 @@ fi
  AC_CACHE_CHECK(
      [for res_ninit()],
      ac_cv_func_res_ninit,
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
          [ac_cv_func_res_ninit=no])
      ])
  
-@@ -3941,6 +3950,14 @@ if test -n "$YASM"; then
+@@ -3874,6 +3883,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3968,11 +3985,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3901,11 +3918,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -73,8 +73,8 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4113,6 +4126,22 @@ if test -n "$MOZ_NATIVE_FFI"; then
- fi
+@@ -4062,6 +4075,22 @@ fi
+ AC_SUBST(MOZ_NATIVE_ICU)
  
  dnl ========================================================
 +dnl system icu support
@@ -96,26 +96,20 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
  dnl Java SDK support
  dnl ========================================================
  
-@@ -5256,7 +5285,7 @@ dnl --enable-webrtc to override.  Can di
- dnl the master list above.
- if test -n "$MOZ_WEBRTC"; then
-     case "$target" in
--    *-linux*|*-mingw*|*-darwin*|*-android*|*-linuxandroid*)
-+    *-linux*|*-mingw*|*-darwin*|*-android*|*-linuxandroid*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
-         dnl Leave enabled
-         ;;
-     *)
-@@ -5312,6 +5341,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5281,6 +5310,12 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VP8_ENCODER=1
      MOZ_VP8_ERROR_CONCEALMENT=1
  
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
 +
++    dnl with libv4l2 we can support more cameras
++    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
++
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5338,15 +5370,18 @@ AC_SUBST(MOZ_SRTP)
+@@ -5307,15 +5342,18 @@ AC_SUBST(MOZ_SRTP)
  
  dnl Use integers over floats for audio on B2G and Android, because audio
  dnl backends for those platforms don't support floats.
@@ -137,7 +131,7 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
  
  dnl ========================================================
  dnl = Disable Speech API code
-@@ -8402,7 +8437,7 @@ case "$OS_TARGET" in
+@@ -8276,7 +8314,7 @@ case "$OS_TARGET" in
        NECKO_WIFI=1
      fi
      ;;
@@ -146,7 +140,7 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
      NECKO_WIFI=1
      ;;
    Linux)
-@@ -9124,6 +9159,10 @@ if test -n "$INTEL_ARCHITECTURE"; then
+@@ -9005,6 +9043,14 @@ if test -n "$INTEL_ARCHITECTURE"; then
    fi
  fi
  
@@ -154,24 +148,10 @@ $NetBSD: patch-aa,v 1.19 2013/11/04 06:01:46 ryoon Exp $
 +   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
 +fi
 +
++if test -n "$MOZ_LIBV4L2_LIBS"; then
++   EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
++fi
++
  if test -n "$MOZ_WEBRTC"; then
     AC_MSG_RESULT("generating WebRTC Makefiles...")
  
-@@ -9419,15 +9458,14 @@ dist=$MOZ_BUILD_ROOT/dist
- ac_configure_args="$_SUBDIR_CONFIG_ARGS"
- ac_configure_args="$ac_configure_args --enable-threadsafe"
- # Switch to "$MOZ_BUILD_APP" != "browser" when enabling for desktop builds.
--if test "A" = "A"; then
-+#if test "A" = "A"; then
-     # The Internationalization API isn't on by default except in standalone JS
-     # engine builds.  Bugs to enable it in the browser:
-     #
-     #   Desktop:  bug 853301
-     #   Android:  bug 864843
-     #   B2G:      bug 866301
--    ac_configure_args="$ac_configure_args --disable-intl-api"
--fi
-+#fi
- if test "$BUILD_CTYPES"; then
-     # Build js-ctypes on the platforms we can.
-     ac_configure_args="$ac_configure_args --enable-ctypes"
