@@ -1,10 +1,8 @@
-$NetBSD: patch-mozilla_config_baseconfig.mk,v 1.3 2013/08/11 03:18:46 ryoon Exp $
+$NetBSD: patch-mozilla_config_baseconfig.mk,v 1.4 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/config/baseconfig.mk.orig	2013-08-04 03:05:18.000000000 +0000
+--- mozilla/config/baseconfig.mk.orig	2013-12-11 04:28:28.000000000 +0000
 +++ mozilla/config/baseconfig.mk
-@@ -1,9 +1,9 @@
- INCLUDED_AUTOCONF_MK = 1
- 
+@@ -1,7 +1,7 @@
 -includedir := $(includedir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -idldir = $(datadir)/idl/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -installdir = $(libdir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
