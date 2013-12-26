@@ -1,27 +1,9 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.8 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.9 2013/12/26 13:17:37 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2013-10-29 01:20:42.000000000 +0000
+--- mozilla/config/system-headers.orig	2013-12-11 04:28:28.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -469,6 +469,7 @@ IOKit/IOMessage.h
- IOKit/pwr_mgt/IOPMLib.h
- iomanip
- ios
-+iosfwd
- iostream
- iostream.h
- iterator
-@@ -1132,3 +1133,14 @@ kvm.h
- spawn.h
- err.h
- xlocale.h
-+#if MOZ_NATIVE_ICU==1
-+unicode/locid.h
-+unicode/numsys.h
-+unicode/ucal.h
-+unicode/ucol.h
-+unicode/udat.h
-+unicode/udatpg.h
-+unicode/uenum.h
-+unicode/unum.h
-+unicode/ustring.h
-+#endif
+@@ -1144,3 +1144,4 @@ unicode/unum.h
+ unicode/ustring.h
+ unicode/utypes.h
+ #endif
++libutil.h

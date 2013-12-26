@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2013/11/23 02:39:25 ryoon Exp $
+# $NetBSD: options.mk,v 1.28 2013/12/26 13:17:37 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail
@@ -54,8 +54,8 @@ CONFIGURE_ARGS+=	--enable-install-strip
 .if !empty(PKG_OPTIONS:Mmozilla-lightning)
 CONFIGURE_ARGS+=	--enable-calendar
 PLIST_SRC+=		PLIST.lightning
-XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/gdata-provider*.xpi
-XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/lightning*.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/gdata-provider*.xpi
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/mozilla/dist/xpi-stage/lightning*.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
 .endif

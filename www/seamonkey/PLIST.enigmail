@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.enigmail,v 1.9 2013/11/23 02:39:25 ryoon Exp $
+@comment $NetBSD: PLIST.enigmail,v 1.10 2013/12/26 13:17:37 ryoon Exp $
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigMsgCompFields.js
@@ -12,6 +12,7 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/install.rdf
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/commonFuncs.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailCommon.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/gpgAgentHandler.jsm
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/installGnuPG.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/keyManagement.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/mimeVerify.jsm
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/pipeConsole.jsm
@@ -19,3 +20,4 @@ lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subproce
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_unix.js
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_win.js
 lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/${OPSYS}_${TARGET_XPCOM_ABI}/lib/libsubprocess-${TARGET_XPCOM_ABI}.so
+lib/seamonkey/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/wrappers/gpg-agent-wrapper.sh
