@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 18:16:53 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/26 23:30:41 pettai Exp $
 #
 
 VER=		2.6
 DISTNAME=	DenyHosts-${VER}
 PKGNAME=	${PYPKGPREFIX}-denyhosts-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://denyhosts.sourceforge.net/
