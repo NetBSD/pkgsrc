@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.59 2013/12/21 10:42:29 jaapb Exp $
+$NetBSD: distinfo,v 1.60 2013/12/26 12:02:39 jaapb Exp $
 
 SHA1 (mldonkey-3.1.3.tar.bz2) = 424386f277e84df55a2cbab213fae60787e42c8b
 RMD160 (mldonkey-3.1.3.tar.bz2) = 2b640fbd9ac85918bf3ba0a51f86fabb6d862890
 Size (mldonkey-3.1.3.tar.bz2) = 2848964 bytes
 SHA1 (patch-config_Makefile.in) = a575c505c1f736bc3940790b43a6cf2083f29112
-SHA1 (patch-config_configure.in) = 222fced9433d1468203f7e987ad504642e8c47df
+SHA1 (patch-config_configure.in) = c10728fbdedf6af5f8694d92f25e80a05cb1b9c0
