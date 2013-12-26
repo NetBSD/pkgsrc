@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.22 2013/12/15 13:54:37 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.23 2013/12/26 13:12:05 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -106,7 +106,7 @@ SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 # Try to conflict with config/makefiles/xpidl/Makefile.in
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
-CONFIGURE_SCRIPT=	../mozilla-release/configure
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 PLIST_VARS+=	sps vorbis tremor glskia throwwrapper
 
