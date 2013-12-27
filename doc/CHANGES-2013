@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4561 2013/12/27 10:03:18 dholland Exp $
+$NetBSD: CHANGES-2013,v 1.4562 2013/12/27 15:57:08 ryoon Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6764,3 +6764,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated editors/OmegaT to 3.0.8 [ryoon 2013-12-26]
 	Updated converters/skf to 1.99.7 [obache 2013-12-27]
 	Updated graphics/py-Pillow to 2.2.1nb1 [dholland 2013-12-27]
+	Updated www/php-owncloud to 6.0.0a [ryoon 2013-12-27]
