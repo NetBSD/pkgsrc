@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/27 10:02:35 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/27 11:08:04 dholland Exp $
 #
 
 DISTNAME=	Pillow-2.2.1
@@ -19,6 +19,8 @@ PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 ALL_ENV+=	C_INCLUDE_PATH=${BUILDLINK_PREFIX.freetype2}/include
 ALL_ENV+=	LIBRARY_PATH=${BUILDLINK_PREFIX.freetype2}/lib
+
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
