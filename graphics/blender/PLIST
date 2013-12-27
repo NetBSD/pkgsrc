@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/10/12 22:11:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/12/27 01:59:42 dholland Exp $
 bin/blender
 share/blender/2.68/datafiles/fonts/bmonofont-i18n.ttf.gz
 share/blender/2.68/datafiles/fonts/droidsans.ttf.gz
@@ -474,7 +474,6 @@ share/blender/2.68/python/lib/python3.3/uuid.py
 share/blender/2.68/python/lib/python3.3/venv/__init__.py
 share/blender/2.68/python/lib/python3.3/venv/__main__.py
 share/blender/2.68/python/lib/python3.3/venv/scripts/posix/activate
-share/blender/2.68/python/lib/python3.3/venv/scripts/posix/pydoc
 share/blender/2.68/python/lib/python3.3/warnings.py
 share/blender/2.68/python/lib/python3.3/wave.py
 share/blender/2.68/python/lib/python3.3/weakref.py
