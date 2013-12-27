@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2013/11/22 14:34:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2013/12/27 15:56:38 ryoon Exp $
 #
 
-DISTNAME=	owncloud-5.0.13
+DISTNAME=	owncloud-6.0.0a
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
@@ -30,10 +30,26 @@ USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	bash:run pax perl:run
 
 OC_DIR=		share/owncloud
 INSTALLATION_DIRS=	${OC_DIR}
+
+REPLACE_BASH+=	3rdparty/doctrine/dbal/run-all.sh
+REPLACE_BASH+=	apps/*/*/*
+REPLACE_BASH+=	core/img/image-optimization.sh
+REPLACE_BASH+=	l10n/init.sh
+
+REPLACE_PERL+=	3rdparty/phpdocx/pdf/lib/ttf2ufm/src/*/*
+REPLACE_PERL+=	3rdparty/phpdocx/pdf/lib/ttf2ufm/src/*/*/*
+REPLACE_PERL+=	apps/*/*/*
+REPLACE_PERL+=	l10n/l10n.pl
+
+# for php interpreter
+CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/doctrine/dbal/bin/doctrine-dbal
+CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/dompdf/load_font.php
+CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/phpdocx/pdf/load_font.php
+CHECK_INTERPRETER_SKIP+=	${OC_DIR}/occ
 
 .include "../../mk/bsd.prefs.mk"
 
