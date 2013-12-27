@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2013/10/10 14:42:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2013/12/27 03:12:43 dholland Exp $
 #
 
 DISTNAME=	mlview-0.9.0
@@ -16,6 +16,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
+MAKE_JOBS_SAFE=		no
 
 GCONF_SCHEMAS=		mlview.schemas
 
