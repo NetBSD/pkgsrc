@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/07 12:56:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/27 10:02:35 dholland Exp $
 bin/pilconvert.py
 bin/pildriver.py
 bin/pilfile.py
@@ -254,6 +254,7 @@ ${PYSITELIB}/PIL/_imaging.so
 ${PYSITELIB}/PIL/_imagingcms.so
 ${PYSITELIB}/PIL/_imagingft.so
 ${PYSITELIB}/PIL/_imagingmath.so
+${PYSITELIB}/PIL/_imagingtk.so
 ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
