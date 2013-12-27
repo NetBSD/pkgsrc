@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/12/25 02:26:48 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/12/27 16:42:46 gdt Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
@@ -35,8 +35,6 @@ include/ghostscript/ierrors.h
 lib/libgs.so
 lib/libgs.so.9
 lib/libgs.so.${PKGVERSION}
-${PLIST.cups}libexec/cups/filter/gstopxl
-${PLIST.cups}libexec/cups/filter/gstoraster
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/font2c.1
@@ -75,9 +73,6 @@ man/man1/ps2pdf14.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
-${PLIST.cups}share/cups/model/pxlcolor.ppd
-${PLIST.cups}share/cups/model/pxlmono.ppd
-${PLIST.cups}share/examples/cups/gstoraster.convs
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFont/ArtifexBullet
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-H
