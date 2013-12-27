@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/12/16 15:28:28 apb Exp $
+$NetBSD: distinfo,v 1.3 2013/12/27 05:56:49 apb Exp $
 
-SHA1 (grepcidr-2.95.tgz) = a095bb2d4b90a197cbcfdbd5f39fdee26af43641
-RMD160 (grepcidr-2.95.tgz) = 1be2b1d8ccb051281a4537e9921afb89de6faec1
-Size (grepcidr-2.95.tgz) = 26224 bytes
+SHA1 (grepcidr-2.95-20131220/grepcidr-2.95.tgz) = 0302439c64b2d23e1d81c0650363d70acb7c0614
+RMD160 (grepcidr-2.95-20131220/grepcidr-2.95.tgz) = ca2411aa8bd1c225f67f147d14d8a5bed0922d12
+Size (grepcidr-2.95-20131220/grepcidr-2.95.tgz) = 16153 bytes
