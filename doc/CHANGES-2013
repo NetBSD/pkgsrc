@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4559 2013/12/26 14:15:22 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4560 2013/12/27 08:32:32 obache Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6762,3 +6762,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/seamonkey to 2.23 [ryoon 2013-12-26]
 	Updated www/seamonkey-l10n to 2.23 [ryoon 2013-12-26]
 	Updated editors/OmegaT to 3.0.8 [ryoon 2013-12-26]
+	Updated converters/skf to 1.99.7 [obache 2013-12-27]
