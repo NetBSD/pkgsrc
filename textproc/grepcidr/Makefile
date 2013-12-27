@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/12/16 15:28:28 apb Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/27 05:56:49 apb Exp $
 
 DISTNAME=	grepcidr-2.95
+PKREVISION=	1
+DIST_SUBDIR=	grepcidr-2.95-20131220
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.taugh.com/grepcidr-2/
 EXTRACT_SUFX=	.tgz
