@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/08/22 21:07:08 adam Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/27 16:42:46 gdt Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -26,6 +26,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-system-libtiff
+CONFIGURE_ARGS+=	--disable-cups
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
