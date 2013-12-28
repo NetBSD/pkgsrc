@@ -1,0 +1,26 @@
+$NetBSD: patch-java_configure,v 1.1 2013/12/28 08:52:17 obache Exp $
+
+* 64bit int type is available in these days, and redifinition produce troubles.
+
+--- java/configure.orig	2007-10-23 15:59:35.000000000 +0000
++++ java/configure
+@@ -2944,19 +2944,6 @@ fi
+ 
+ 
+ 
+-#================================================================
+-# Generic Settings
+-#================================================================
+-
+-# Data types
+-if uname | grep '^SunOS' > /dev/null
+-then
+-  MYDEFS='-Dint64_t=long\ long'
+-elif uname | grep '^CYGWIN' > /dev/null
+-then
+-  MYDEFS='-D__int64=long\ long'
+-fi
+-
+ # Export variables
+ 
+ 
