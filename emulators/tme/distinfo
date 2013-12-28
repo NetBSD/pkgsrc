@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2013/11/02 22:43:29 christos Exp $
+$NetBSD: distinfo,v 1.19 2013/12/28 19:16:47 martin Exp $
 
 SHA1 (tme-0.8.tar.gz) = dd4f3421c20ceed548c5328a21dbb26e80f46b9c
 RMD160 (tme-0.8.tar.gz) = 6bd505c5fa7810d37f436883383c4ba655df2ded
@@ -12,6 +12,10 @@ SHA1 (patch-af) = cd3ffe52d4d75d05394ca74c3f69052bfdc41989
 SHA1 (patch-host_bsd_bsd-bpf.c) = 02a94a141da7d1790969deb8624d3a219d3e64ed
 SHA1 (patch-host_posix_posix-serial.c) = b1e009d6432c49672ca07a16ced939c8a46ef6e2
 SHA1 (patch-ic_ieee754_ieee754-misc-auto.sh) = afeb7452ef64bcae71e4dbae21881cff12cb9d4f
+SHA1 (patch-ic_m68k_m6888x.c) = fe42dce7bf5abc69e2c9e15967d5e862ef651a0e
+SHA1 (patch-ic_m68k_m68k-insns-auto.sh) = c493b4c6b066135e093abd7482e0a1e99294848b
+SHA1 (patch-ic_m68k_m68k-m68k-insns.c) = 1a9d8e3d4e11c5710d1f67b65954d6e3de68d99f
+SHA1 (patch-ic_m68k_m68k-misc.c) = 7aeef098631196fe60b9940600cf90c86d1be375
 SHA1 (patch-machine_sun2_SUN2-MULTIBUS) = dc44d9c842277a2f4ff55b0200edbc990ee86669
 SHA1 (patch-machine_sun2_sun2-mainbus.c) = 91b901d37d5f9a72064831d440c4371b81857640
 SHA1 (patch-machine_sun3_SUN3-CARRERA) = 73b8f3a5a7c587aa726db4fa53844f2a0dc82a24
