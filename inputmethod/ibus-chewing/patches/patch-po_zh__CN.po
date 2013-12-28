@@ -1,0 +1,21 @@
+$NetBSD: patch-po_zh__CN.po,v 1.1 2013/12/28 04:59:36 obache Exp $
+
+* fixes initial default value
+
+--- po/zh_CN.po.orig	2013-12-16 16:31:12.000000000 +0000
++++ po/zh_CN.po
+@@ -4,12 +4,12 @@
+ # Peng Huang <shawn.p.huang@gmail.com>, 2008.
+ # leahliu <lliu@redhat.com>, 2012. #zanata
+ msgid   ""
+-msgstr  "Project-Id-Version: PACKAGE VERSION\n"
++msgstr  "Project-Id-Version: ibus-chewing 1.4.4\n"
+         "Report-Msgid-Bugs-To: \n"
+         "POT-Creation-Date: 2013-12-17 02:25+1000\n"
+         "PO-Revision-Date: 2012-11-28 08:19-0500\n"
+         "Last-Translator: leahliu <lliu@redhat.com>\n"
+-        "Language-Team: LANGUAGE <LL@li.org>\n"
++        "Language-Team: Simplfied Chinese\n"
+         "Language: zh-Hans-CN\n"
+         "MIME-Version: 1.0\n"
+         "Content-Type: text/plain; charset=UTF-8\n"
