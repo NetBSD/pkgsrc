@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2013/04/02 15:27:12 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2013/12/28 22:44:23 bsiegert Exp $
 
-(Very?) old dfly apparently doesn't have strtold.
+(Very?) old dfly apparently doesn't have strtold. Same for MirBSD.
 
 --- compat/strtold.c.orig	2007-06-12 14:35:09.000000000 +0000
 +++ compat/strtold.c
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.2 2013/04/02 15:27:12 dholland Exp $
  
  long double string_to_ld(const char *nptr, char **endptr)
  {
-+#if defined(__DragonFly__) && __DragonFly_version < 200000
++#if (defined(__DragonFly__) && __DragonFly_version < 200000) || defined(__MirBSD__)
 +	return strtod(nptr, endptr);
 +#else
  	return strtold(nptr, endptr);
