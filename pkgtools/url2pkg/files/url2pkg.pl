@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.22 2013/05/14 19:42:38 wiz Exp $
+# $NetBSD: url2pkg.pl,v 1.23 2013/12/28 16:46:29 ryoon Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -178,6 +178,9 @@ sub magic_perlmod() {
 		push(@build_vars, ["PERL5_MODULE_TYPE", "Module::Build"]);
 
 	} elsif (-f "${abs_wrksrc}/Makefile.PL") {
+		# To avoid fix_up_makefile error, generate Makefile previously.
+		# Ignore exit status (no "or die").
+		system("cd ${abs_wrksrc} && perl Makefile.PL");
 		open(DEPS, "cd ${abs_wrksrc} && perl -I${perllibdir} Makefile.PL |") or die;
 		while (defined(my $dep = <DEPS>)) {
 			chomp($dep);
