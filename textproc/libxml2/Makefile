@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2013/12/28 20:23:44 tron Exp $
+# $NetBSD: Makefile,v 1.128 2013/12/28 23:04:36 tron Exp $
 
 DISTNAME=	libxml2-2.9.1
 PKGREVISION=	1
@@ -43,12 +43,6 @@ SUBST_SED.cat+=	-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
 
 .if ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
-.include "../../mk/compiler.mk"
-
-.  if !empty(CC_VERSION:Mgcc-*)
-BUILDLINK_TRANSFORM+=	rename:-mt:-pthreads
-BUILDLINK_TRANSFORM+=	rename:-threads:-pthreads
-.  endif
 .endif
 
 .include "../../archivers/xz/buildlink3.mk"
