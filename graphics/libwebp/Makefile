@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/12/28 16:26:06 tron Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/28 17:18:25 bsiegert Exp $
 
 DISTNAME=	libwebp-0.3.1
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
-.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
+.if (!empty(MACHINE_PLATFORM:MSunOS-*-i386) || !empty(MACHINE_PLATFORM:MMirBSD-*-i386)) && !empty(CC_VERSION:Mgcc-[23]*)
 CPPFLAGS += -D__pic__
 .endif
 
