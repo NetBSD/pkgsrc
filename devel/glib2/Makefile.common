@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2013/12/10 05:18:46 obache Exp $
+# $NetBSD: Makefile.common,v 1.36 2013/12/28 14:41:55 tron Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -74,6 +74,10 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=missing-prototypes
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_mmap_fixed_mapped=yes
+.endif
+
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
