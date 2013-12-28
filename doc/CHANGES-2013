@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4563 2013/12/27 22:55:45 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4564 2013/12/28 02:54:13 obache Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6766,3 +6766,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/py-Pillow to 2.2.1nb1 [dholland 2013-12-27]
 	Updated www/php-owncloud to 6.0.0a [ryoon 2013-12-27]
 	Updated www/php-ja-wordpress to 3.8 [ryoon 2013-12-27]
+	Updated graphics/py-Pillow to 2.2.1nb2 [obache 2013-12-28]
