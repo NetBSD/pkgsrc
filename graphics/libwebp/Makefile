@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/12/28 17:18:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/28 23:03:39 tron Exp $
 
 DISTNAME=	libwebp-0.3.1
 CATEGORIES=	graphics
@@ -17,11 +17,6 @@ GNU_CONFIGURE=	yes
 # fix PR pkg/45934
 .if (!empty(MACHINE_PLATFORM:MSunOS-*-i386) || !empty(MACHINE_PLATFORM:MMirBSD-*-i386)) && !empty(CC_VERSION:Mgcc-[23]*)
 CPPFLAGS += -D__pic__
-.endif
-
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-*)
-BUILDLINK_TRANSFORM+=	rename:-mt:-pthreads
-BUILDLINK_TRANSFORM+=	rename:-threads:-pthreads
 .endif
 
 PKGCONFIG_OVERRIDE+=	src/libwebp.pc.in
