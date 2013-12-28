@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2013/11/25 23:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2013/12/28 20:23:44 tron Exp $
 
 DISTNAME=	libxml2-2.9.1
 PKGREVISION=	1
@@ -40,6 +40,16 @@ SUBST_STAGE.cat=	pre-configure
 SUBST_FILES.cat=	catalog.c xmlcatalog.c
 SUBST_SED.cat=	-e "s,@@SGML_DEFAULT_CATALOG@@,${SGML_DEFAULT_CATALOG},g"
 SUBST_SED.cat+=	-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
+
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
+.include "../../mk/compiler.mk"
+
+.  if !empty(CC_VERSION:Mgcc-*)
+BUILDLINK_TRANSFORM+=	rename:-mt:-pthreads
+BUILDLINK_TRANSFORM+=	rename:-threads:-pthreads
+.  endif
+.endif
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
