@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2013/12/26 12:02:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.73 2013/12/28 11:03:26 jaapb Exp $
 #
 
 .include "Makefile.common"
@@ -30,9 +30,6 @@ PKG_SHELL.${MLDONKEY_USER}=	${SH}
 FILES_SUBST+=		MLDONKEY_GROUP=${MLDONKEY_GROUP:Q}
 FILES_SUBST+=		MLDONKEY_HOME=${MLDONKEY_HOME:Q}
 FILES_SUBST+=		MLDONKEY_USER=${MLDONKEY_USER:Q}
-
-pre-configure:
-	cd ${WRKSRC}/config && autoconf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mlnet ${DESTDIR}${PREFIX}/libexec/mldonkey
