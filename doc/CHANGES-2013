@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4565 2013/12/28 05:00:52 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4566 2013/12/28 09:02:51 obache Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6768,3 +6768,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/php-ja-wordpress to 3.8 [ryoon 2013-12-27]
 	Updated graphics/py-Pillow to 2.2.1nb2 [obache 2013-12-28]
 	Updated inputmethod/ibus-chewing to 1.4.4 [obache 2013-12-28]
+	Updated inputmethod/ibus-table to 1.5.0nb1 [obache 2013-12-28]
