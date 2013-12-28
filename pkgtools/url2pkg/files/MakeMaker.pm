@@ -53,6 +53,13 @@ BEGIN {
 	@EXPORT = qw(WriteMakefile prompt);
 }
 
+# From lib/perl5/5.18.0/ExtUtils/MakeMaker.pm
+our $VERSION = '6.66';
+
+our $Verbose	= 0;	# exported
+our @EXPORT	= qw($Verbose $version);
+our @EXPORT_OK	= qw(&neatvalue);
+
 # Finds and returns the category a given package lies in.
 # If the package does not exist, C<undef> is returned.
 # If the package exists more than once, it is unspecified which
@@ -105,6 +112,10 @@ sub prompt(@) {
 	my ($message, $default) = @_;
 
 	return $default || "";
+}
+
+sub neatvalue {
+	return;
 }
 
 1;
