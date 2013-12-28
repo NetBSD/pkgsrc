@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2013/12/23 02:51:57 obache Exp $
+# $NetBSD: Makefile.common,v 1.6 2013/12/28 09:11:24 jperkin Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -64,7 +64,6 @@ CONFIGURE_ARGS+=	-optimized-qmake
 CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license
-CONFIGURE_ARGS+=	-reduce-relocations
 CONFIGURE_ARGS+=	-release
 CONFIGURE_ARGS+=	-accessibility
 CONFIGURE_ARGS+=	-fontconfig
@@ -87,6 +86,10 @@ CONFIGURE_ARGS+=	-no-sql-sqlite
 OPSYSVARS+=		CONFIGURE_ARGS
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS"
+CONFIGURE_ARGS+=	-reduce-relocations
+.endif
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 
