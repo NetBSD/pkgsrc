@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2013/12/26 12:02:39 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.49 2013/12/28 11:03:26 jaapb Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -33,6 +33,9 @@ UNLIMIT_RESOURCES=	stacksize
 # needs 3.10.1 or newer to work correctly on NetBSD/amd64
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10.1
 
+pre-configure:
+	cd ${WRKSRC}/config && autoconf
+	
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
