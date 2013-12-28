@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2013/12/10 14:48:26 adam Exp $
+# $NetBSD: options.mk,v 1.11 2013/12/28 19:50:34 hauke Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -16,6 +16,7 @@ PLIST_VARS+=	da_file da_LDAP
 PLIST_VARS+=	na_SMB
 PLIST_VARS+=	ta_kerberos
 PLIST_VARS+=	eacl_file_userip eacl_LDAP_group eacl_unix_group
+PLIST_VARS+=	ssl
 
 PKG_SUGGESTED_OPTIONS=	inet6 snmp ssl squid-backend-diskd squid-carp \
 		squid-pam-helper squid-unlinkd
@@ -115,6 +116,7 @@ CONFIGURE_ARGS+=	--disable-snmp
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
 .  include "../../security/openssl/buildlink3.mk"
+PLIST.ssl=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msquid-backend-aufs)

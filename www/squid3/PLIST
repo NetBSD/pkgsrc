@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/12/10 14:48:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/12/28 19:50:34 hauke Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -14,7 +14,7 @@ ${PLIST.diskd}libexec/diskd
 ${PLIST.eacl_file_userip}libexec/ext_file_userip_acl
 ${PLIST.eacl_LDAP_group}libexec/ext_ldap_group_acl
 ${PLIST.eacl_unix_group}libexec/ext_unix_group_acl
-libexec/cert_valid.pl
+${PLIST.ssl}libexec/cert_valid.pl
 libexec/helper-mux.pl
 libexec/log_db_daemon
 libexec/log_file_daemon
