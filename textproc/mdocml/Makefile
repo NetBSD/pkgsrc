@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/12/29 19:19:03 tron Exp $
+# $NetBSD: Makefile,v 1.40 2013/12/29 19:26:36 tron Exp $
 
 DISTNAME=	mdocml-1.12.2
 CATEGORIES=	textproc devel
@@ -21,8 +21,8 @@ SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# Solaris 10 and newer do not support static binaries
-.if ${OPSYS} == "SunOS"
+# Mac OS X and Solaris 10 and newer do not support static binaries.
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 MAKE_FLAGS+=	STATIC=
 .endif
 
