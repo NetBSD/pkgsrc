@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/15 16:20:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/29 12:20:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/will_paginate.rb
 ${GEM_LIBDIR}/lib/will_paginate/active_record.rb
 ${GEM_LIBDIR}/lib/will_paginate/array.rb
@@ -23,11 +22,11 @@ ${GEM_LIBDIR}/lib/will_paginate/view_helpers/link_renderer.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/link_renderer_base.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/merb.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/sinatra.rb
-${GEM_LIBDIR}/spec/ci.rb
 ${GEM_LIBDIR}/spec/collection_spec.rb
 ${GEM_LIBDIR}/spec/console
 ${GEM_LIBDIR}/spec/console_fixtures.rb
 ${GEM_LIBDIR}/spec/database.yml
+${GEM_LIBDIR}/spec/fake_rubygems.rb
 ${GEM_LIBDIR}/spec/finders/active_record_spec.rb
 ${GEM_LIBDIR}/spec/finders/activerecord_test_connector.rb
 ${GEM_LIBDIR}/spec/finders/data_mapper_spec.rb
