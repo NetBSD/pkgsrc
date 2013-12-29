@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/10/11 14:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2013/12/29 19:19:03 tron Exp $
 
 DISTNAME=	mdocml-1.12.2
 CATEGORIES=	textproc devel
@@ -25,6 +25,9 @@ SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
 .if ${OPSYS} == "SunOS"
 MAKE_FLAGS+=	STATIC=
 .endif
+
+post-extract:
+	${CP} -p ${FILESDIR}/*.c ${WRKSRC}
 
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
