@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.15 2013/05/16 05:04:56 richard Exp $
+# $NetBSD: Makefile.lib,v 1.16 2013/12/29 16:28:15 bsiegert Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -38,6 +38,11 @@ CONFIGURE_ARGS+=        --disable-egl
 
 .if !empty(PKGSRC_COMPILER:Mccc)
 CFLAGS+=	-D__FUNCTION__=__FILE__
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "MirBSD"
+BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 .endif
 
 pre-configure:
