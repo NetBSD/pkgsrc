@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.5 2011/09/20 19:11:54 bsiegert Exp $
+$NetBSD: patch-aq,v 1.6 2013/12/29 22:29:35 bsiegert Exp $
 
 --- poppler/TextOutputDev.cc.orig	Mon Jan 24 19:06:00 2011
 +++ poppler/TextOutputDev.cc
@@ -6,7 +6,7 @@ $NetBSD: patch-aq,v 1.5 2011/09/20 19:11:54 bsiegert Exp $
  #include "ICSupport.h"
  #endif
  
-+#if defined(__DragonFly__) || defined(__NetBSD__) || defined(__MirBSD__)
++#if defined(__DragonFly__) || defined(__NetBSD__)
 +#include <sys/param.h>
 +#if !(defined(__DragonFly__) && __DragonFly_version >= 200204) && !(defined(__NetBSD__) && (__NetBSD_Version__ >= 599002100 || (__NetBSD_Version__ >= 501000000 && __NetBSD_Version__ < 599000000)))
 +static double fmax(double x, double y) { if (isnan(x)) return y; if (isnan(y)) return x; return (x > y ? x : y);}
