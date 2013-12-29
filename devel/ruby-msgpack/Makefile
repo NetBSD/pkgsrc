@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/11/21 07:54:13 obache Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/29 06:49:30 obache Exp $
 
-DISTNAME=	msgpack-0.5.7
+DISTNAME=	msgpack-0.5.8
 CATEGORIES=	devel
 
 MAINTAINER=	obache@NetBSD.org
