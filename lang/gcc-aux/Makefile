@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2013/07/20 19:47:19 marino Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/29 19:16:53 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 DISTNAME=	gcc-${GCC_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	${DISTNAME}.tar.bz2
@@ -65,9 +65,7 @@ LINK_HEADER=		/usr/include/sys/link_elf.h
 
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(OS_VERSION:M5.99.*)
-   NSUFF=	6.0_DEV
-.elif !empty(OS_VERSION:M6.99.*)
+.if !empty(OS_VERSION:M6.99.*)
    NSUFF=	7.0_DEV
 .else
    NSUFF=	${OS_VERSION}
@@ -84,10 +82,10 @@ MY_CONFIGURE_ENV+=	LDFLAGS=-lm
 .endif
 .if ${MACHINE_ARCH} == "x86_64"
    OS_LABEL4VERS=	[NetBSD64]
-   BOOTSTRAP_TRIPLET=	x86_64-bootstrap-netbsd5.1/4.6.0
+   BOOTSTRAP_TRIPLET=	x86_64-aux-netbsd6.1/4.7.3
    BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NSUFF}
 .endif
-BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.netbsd.tar.bz2
+BOOTSTRAP_COMPILER=	gnat-bootstrap2.${MACHINE_ARCH}.netbsd.tar.bz2
 LINK_HEADER=		/usr/include/link_elf.h
 .endif
 
@@ -137,9 +135,12 @@ FULL_GNATGCC=${LOCALBASE}/gcc-aux/bin/ada
 INTENDED_COMPILER=BOOTSTRAP
 FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
 DISTFILES+= ${BOOTSTRAP_COMPILER}
-SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/ \
-				http://dragonlace.mirrors.ada.cx/src/
+SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/
 FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
+.  if ${OPSYS} == NetBSD
+MY_CONFIGURE_ENV+= LD_LIBRARY_PATH=${BOOTSTRAP_PREFIX}/lib
+EXTRA_LLP=:${BOOTSTRAP_PREFIX}/lib
+.  endif
 .endif
 
 
@@ -147,8 +148,8 @@ FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:$
 #DISTFILES+= \
 #  gnat-bootstrap.i386.dragonfly.tar.bz2 \
 #  gnat-bootstrap.x86_64.dragonfly.tar.bz2 \
-#  gnat-bootstrap.i386.netbsd.tar.bz2 \
-#  gnat-bootstrap.x86_64.netbsd.tar.bz2 \
+#  gnat-bootstrap2.i386.netbsd.tar.bz2 \
+#  gnat-bootstrap2.x86_64.netbsd.tar.bz2 \
 #  gnat-bootstrap.i386.solaris.tar.bz2
 
 
@@ -157,7 +158,7 @@ MY_CONFIGURE_ENV+=	CC=${FULL_GNATGCC}
 MY_CONFIGURE_ENV+=	PATH=${FULL_PATH}
 MY_MAKE_ENV=		PATH=${FULL_PATH}
 MY_MAKE_ENV+=		ICONVPREFIX=${PREFIX}
-MY_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc
+MY_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc${EXTRA_LLP}
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
 # the tool wrapped one.
@@ -331,10 +332,7 @@ test-c:
 
 
 do-install:
-	# This was install-strip, but a bug in 4.7.x prevents libobjc
-	# from installation.  Just install the unstripped version until
-	# it's fixed (Bug filed with GCC: 54720)
-	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install \
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip \
 	DESTDIR=${DESTDIR}
 
 
