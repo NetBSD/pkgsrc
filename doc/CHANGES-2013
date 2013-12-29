@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4570 2013/12/29 06:49:46 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4571 2013/12/29 12:11:18 taca Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6773,3 +6773,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated emulators/tme to 0.8nb23 [martin 2013-12-28]
 	Updated inputmethod/ibus-input-pad to 1.4.2 [obache 2013-12-29]
 	Updated devel/ruby-msgpack to 0.5.8 [obache 2013-12-29]
+	Updated www/squid3 to 3.4.1nb3 [taca 2013-12-29]
