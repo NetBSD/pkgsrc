@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/23 23:32:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2013/12/29 13:27:56 wiz Exp $
 
-SHA1 (AfterShotPro-1.0/AfterShotPro_i386.deb) = dd04b4d828b93d13388d3e73405b62d6dd912f33
-RMD160 (AfterShotPro-1.0/AfterShotPro_i386.deb) = 7c6854ad86af082efad2860b4d932e6c9c78144a
-Size (AfterShotPro-1.0/AfterShotPro_i386.deb) = 35535186 bytes
+SHA1 (AfterShotPro-1.1.0.30/AfterShotPro_i386.deb) = bb1b6af1c671ee5a048896f890a13a4a3022a059
+RMD160 (AfterShotPro-1.1.0.30/AfterShotPro_i386.deb) = 55bd1c5fc8e0eafad5538d8371c8fb73a90ad44c
+Size (AfterShotPro-1.1.0.30/AfterShotPro_i386.deb) = 73932006 bytes
