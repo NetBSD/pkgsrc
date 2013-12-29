@@ -738,6 +738,7 @@ xpm			Enable X PixMap image format support.
 xrandr			Enable Xrandr support.
 xrender			Enable Xrender support.
 xscreensaver-webcollage	Install webcollage screensaver.
+xscrnsaver		Enable X11 Screen Saver support.
 xterm-256color		Enable 256 color support.
 xterm-88color		Enable 88 color support.
 xterm-luit		Enable locale <> UTF encoding translation.
