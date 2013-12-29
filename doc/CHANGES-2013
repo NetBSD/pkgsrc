@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4568 2013/12/28 19:19:12 martin Exp $
+$NetBSD: CHANGES-2013,v 1.4569 2013/12/29 06:46:24 obache Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6771,3 +6771,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated inputmethod/ibus-table to 1.5.0nb1 [obache 2013-12-28]
 	Updated pkgtools/url2pkg to 2.18 [ryoon 2013-12-28]
 	Updated emulators/tme to 0.8nb23 [martin 2013-12-28]
+	Updated inputmethod/ibus-input-pad to 1.4.2 [obache 2013-12-29]
