@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2013/12/28 19:50:34 hauke Exp $
+# $NetBSD: Makefile,v 1.24 2013/12/29 12:10:45 taca Exp $
 
 DISTNAME=	squid-3.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PKGVERSION_NOREV:R}/ \
 		ftp://ftp.squid-cache.org/pub/squid/ \
@@ -31,6 +31,9 @@ CONFIGURE_ARGS+=	--enable-storeio=${SQUID_BACKENDS:Q}
 CONFIGURE_ARGS+=	--with-aio
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
+
+# Explicitly disable using CPU optimized instruction
+CONFIGURE_ARGS+=	--disable-arch-native
 
 BUILD_DEFS+=		VARBASE
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
