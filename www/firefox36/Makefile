@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/10/10 14:42:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2013/12/30 00:24:08 dholland Exp $
 
 .include "../../devel/xulrunner192/dist.mk"
 PKGNAME=	firefox36-${FIREFOX_VER}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
-COMMENT=	Web browser with support for extensions
+COMMENT=	Web browser with support for extensions (version 3.6.x)
 LICENSE=	mpl-1.1
 
 MOZILLA_DIR=	# empty
