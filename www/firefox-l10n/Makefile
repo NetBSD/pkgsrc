@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/12/17 13:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2013/12/30 00:24:07 dholland Exp $
 #
 
 FIREFOX_VER=	26.0
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
-COMMENT=	Language packs for www/firefox
+COMMENT=	Language packs for www/firefox (version 26.x)
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${XPI_FILES}
