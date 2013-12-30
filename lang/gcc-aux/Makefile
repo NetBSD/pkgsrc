@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/29 19:16:53 marino Exp $
+# $NetBSD: Makefile,v 1.13 2013/12/30 01:34:43 marino Exp $
 #
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
@@ -79,13 +79,14 @@ MY_CONFIGURE_ENV+=	LDFLAGS=-lm
    OS_LABEL4VERS=	[NetBSD]
    BOOTSTRAP_TRIPLET=	i386-bootstrap-netbsdelf5.1/4.6.0
    BLD_TARGET=		${MACHINE_ARCH}-aux-netbsdelf${NSUFF}
+   BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.netbsd.tar.bz2
 .endif
 .if ${MACHINE_ARCH} == "x86_64"
    OS_LABEL4VERS=	[NetBSD64]
    BOOTSTRAP_TRIPLET=	x86_64-aux-netbsd6.1/4.7.3
    BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NSUFF}
+   BOOTSTRAP_COMPILER=	gnat-bootstrap2.${MACHINE_ARCH}.netbsd.tar.bz2
 .endif
-BOOTSTRAP_COMPILER=	gnat-bootstrap2.${MACHINE_ARCH}.netbsd.tar.bz2
 LINK_HEADER=		/usr/include/link_elf.h
 .endif
 
@@ -137,7 +138,7 @@ FULL_GNATGCC=${BOOTSTRAP_PREFIX}/bin/gnatgcc
 DISTFILES+= ${BOOTSTRAP_COMPILER}
 SITES.${BOOTSTRAP_COMPILER}=	http://downloads.dragonlace.net/src/
 FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
-.  if ${OPSYS} == NetBSD
+.  if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == "x86_64"
 MY_CONFIGURE_ENV+= LD_LIBRARY_PATH=${BOOTSTRAP_PREFIX}/lib
 EXTRA_LLP=:${BOOTSTRAP_PREFIX}/lib
 .  endif
@@ -148,7 +149,7 @@ EXTRA_LLP=:${BOOTSTRAP_PREFIX}/lib
 #DISTFILES+= \
 #  gnat-bootstrap.i386.dragonfly.tar.bz2 \
 #  gnat-bootstrap.x86_64.dragonfly.tar.bz2 \
-#  gnat-bootstrap2.i386.netbsd.tar.bz2 \
+#  gnat-bootstrap.i386.netbsd.tar.bz2 \
 #  gnat-bootstrap2.x86_64.netbsd.tar.bz2 \
 #  gnat-bootstrap.i386.solaris.tar.bz2
 
