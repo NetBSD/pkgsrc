@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2013/09/30 03:40:14 ryoon Exp $
+$NetBSD: distinfo,v 1.33 2013/12/30 07:02:28 ryoon Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -157,6 +157,7 @@ SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_imageioJPEG.c) = 8502fc7da30
 SHA1 (patch-jdk_src_share_native_sun_awt_image_jpeg_jpegdecoder.c) = ca10ce2d79f11925b7ec52fc1b5dfad9b25ddddb
 SHA1 (patch-jdk_src_share_native_sun_security_ec_impl_ecc__impl.h) = 13aae05b649af0d1f908b0a9b6f60c55d8baa7d4
 SHA1 (patch-jdk_src_solaris_bin_ergo__i586.c) = 7b1d1c7f84e752ef7c53d5419dc3ab5213fec716
+SHA1 (patch-jdk_src_solaris_classes_sun_nio_ch_DefaultAsynchronousChannelProvider.java) = 86ce16bd53c85bc3830ef3f21d52f9a8107b5350
 SHA1 (patch-jdk_src_solaris_classes_sun_nio_fs_BsdFileSystemProvider.java) = b57411309b8d46de6a9ab3606d72690908989d50
 SHA1 (patch-jdk_src_solaris_native_java_net_NetworkInterface.c) = f65f616965c2e1149b72297d7c9b803d7adc4e8a
 SHA1 (patch-jdk_src_solaris_native_sun_awt_X11Color.c) = 928e9fbc11d8e64a69e27573efa13482acb62480
