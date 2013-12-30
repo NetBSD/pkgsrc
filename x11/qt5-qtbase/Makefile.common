@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2013/12/28 09:11:24 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.7 2013/12/30 06:37:11 ryoon Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -47,7 +47,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:build
+USE_TOOLS+=		gmake perl:build pkg-config
 
 CONFIG_SHELL=		${PERL5}
 
