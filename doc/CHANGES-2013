@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4576 2013/12/30 06:40:06 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4577 2013/12/30 07:03:13 ryoon Exp $
 
 **************************************************************
 ************** PKGSRC CURRENTLY FROZEN ***********************
@@ -6780,3 +6780,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/quilt to 0.61 [ryoon 2013-12-30]
 	Updated x11/qt5-qtbase to 5.2.0nb1 [ryoon 2013-12-30]
 	Updated x11/qt5-qtmultimedia to 5.2.0nb1 [ryoon 2013-12-30]
+	Updated lang/openjdk7 to 1.7.25nb3 [ryoon 2013-12-30]
