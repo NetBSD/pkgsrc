@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2008/01/08 08:28:59 apb Exp $
+$NetBSD: patch-aa,v 1.2 2013/12/30 04:21:58 ryoon Exp $
 
---- Makefile.in.orig	2008-01-07 19:25:20.000000000 +0200
+--- Makefile.in.orig	2013-12-08 09:40:42.000000000 +0000
 +++ Makefile.in
-@@ -272,7 +272,7 @@ Makefile : Makefile.in configure
+@@ -275,7 +275,7 @@ Makefile : Makefile.in configure
  	@echo "Please run ./configure"
  	@false
  
--compat_leftover := $(filter-out $(COMPAT),$(shell $(FIND) compat -maxdepth 1 -type f -perm +111))
+-compat_leftover := $(filter-out $(COMPAT),$(shell $(FIND) compat -type f -perm -0100))
 +compat_leftover := $(filter-out $(COMPAT),$(shell $(FIND) compat -maxdepth 1 -type f '(' -perm -100 -o -perm -010 -o -perm -001 ')'))
  
  .PHONY :: compat
