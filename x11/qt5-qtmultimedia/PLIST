@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/15 09:42:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/30 06:37:11 ryoon Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaQuick_p.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
@@ -253,6 +253,8 @@ qt5/lib/libQt5MultimediaQuick_p.la
 qt5/lib/libQt5MultimediaQuick_p.prl
 qt5/lib/libQt5MultimediaWidgets.la
 qt5/lib/libQt5MultimediaWidgets.prl
+qt5/lib/libqgsttools_p.la
+qt5/lib/libqgsttools_p.prl
 qt5/lib/pkgconfig/Qt5Multimedia.pc
 qt5/lib/pkgconfig/Qt5MultimediaQuick_p.pc
 qt5/lib/pkgconfig/Qt5MultimediaWidgets.pc
@@ -261,7 +263,10 @@ qt5/mkspecs/modules/qt_lib_multimedia_private.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri
-qt5/plugins/mediaservice/libqtmedia_audioengine.la
+qt5/plugins/mediaservice/libgstaudiodecoder.la
+qt5/plugins/mediaservice/libgstcamerabin.la
+qt5/plugins/mediaservice/libgstmediacapture.la
+qt5/plugins/mediaservice/libgstmediaplayer.la
 qt5/plugins/playlistformats/libqtmultimedia_m3u.la
 qt5/qml/QtAudioEngine/libdeclarative_audioengine.la
 qt5/qml/QtAudioEngine/plugins.qmltypes

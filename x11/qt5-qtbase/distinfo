@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/12/17 23:22:35 joerg Exp $
+$NetBSD: distinfo,v 1.5 2013/12/30 06:37:11 ryoon Exp $
 
 SHA1 (qt-everywhere-opensource-src-5.2.0.tar.xz) = 7d9d8cad4434bc200d9ed87b3c7cb39654a2f1b4
 RMD160 (qt-everywhere-opensource-src-5.2.0.tar.xz) = b2dd68f622fa7ff271ef621a7c7f17f2ecf7be9d
@@ -30,6 +30,13 @@ SHA1 (patch-qtdeclarative_examples_quick_customitems_painteditem_painteditem.pro
 SHA1 (patch-qtdeclarative_src_qml_jsruntime_qv4alloca__p.h) = 9a1a4bb03776e3e6331120933accd0cf46503533
 SHA1 (patch-qtdeclarative_src_qmldevtools_qmldevtools.pro) = 6f0e65eb6c4a5bfd05a603d9cbfc6fdc22e46d3b
 SHA1 (patch-qtdeclarative_tests_auto_qml_qjsengine_tst__qjsengine.cpp) = b1cc5a386dd0f1b3651adb9babee87be84221998
+SHA1 (patch-qtmultimedia_src_gsttools_qgstreamervideoinputdevicecontrol.cpp) = 9281d212f28dab5fece2f7a0cc9bddf0e58922dc
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_audiodecoder_qgstreameraudiodecoderserviceplugin.cpp) = ac97ed7ec63e3cfc060ce7e90dfe7f053f9dd851
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabincontrol.cpp) = e2b0022da1f523324159efdcd29237f82380aed8
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_camerabin_camerabinserviceplugin.cpp) = 4c5f0d3d5a0c6b3075232272abe00b467575194f
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediacapture_qgstreamercaptureserviceplugin.cpp) = 224a3097498d12284f10a9adb5a774356092f374
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediacapture_qgstreamerv4l2input.cpp) = 55aee0426b057461861605dadd4687932988bd78
+SHA1 (patch-qtmultimedia_src_plugins_gstreamer_mediaplayer_qgstreamerplayerserviceplugin.cpp) = 729d69245a1ab6fe9b01a63673102685b39d7add
 SHA1 (patch-qtquick1_tests_auto_declarative_qdeclarativeimage_tst__qdeclarativeimage.cpp) = b1efdea5596a76eeae37a70bd49bb7741a8b7c5f
 SHA1 (patch-qtscript_src_3rdparty_javascriptcore_JavaScriptCore_config.h) = 66dc22ee78727c84f1e82dc10bb342d514f8f9a0
 SHA1 (patch-qtscript_src_3rdparty_javascriptcore_JavaScriptCore_runtime_JSValue.h) = ee35790f58ec9cf4d1a370f5549d92b5a680f557
