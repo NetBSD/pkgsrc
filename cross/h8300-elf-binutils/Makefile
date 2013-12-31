@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/16 20:33:17 mef Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/31 00:55:14 mef Exp $
 
 DISTNAME=	binutils-2.19.1
 PKGNAME=	cross-h8300-elf-${DISTNAME}
@@ -44,8 +44,8 @@ post-install:
 		  ${DESTDIR}${PREFIX}/bin/"$$f" || exit 1; \
 	done
 # copy libiberty.a under the different name from compiler
-# PATH differs between clang and gcc:
-	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a; do \
+# PATH differs between clang and gcc: (and SunOS 5.11 places at amd64 instead of x86_64)
+	for d in amd64/libiberty.a ${MACHINE_ARCH}/libiberty.a libiberty.a; do \
 		if [ -f ${DESTDIR}${H8300_PREFIX}/lib/$$d ]; then \
 			${MV} ${DESTDIR}${H8300_PREFIX}/lib/$$d \
 			      ${DESTDIR}${H8300_PREFIX}/lib/libiberty_binutils.a; \
