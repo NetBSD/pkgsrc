@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.11 2013/06/02 06:12:28 ryoon Exp $
+# $NetBSD: icedtea-extras.mk,v 1.12 2013/12/31 17:11:36 abs Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			bsdtar
@@ -11,9 +11,10 @@ SITES.${ICEDTEA_TGZ}=		-http://icedtea.classpath.org/hg/icedtea7/archive/02bbff3
 DISTFILES+=			${ICEDTEA_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_TGZ}
 
-ICEDTEA_WEB=			icedtea-web-9e1f7dc48c20
-ICEDTEA_WEB_TGZ=		icedtea-web-9e1f7dc48c20.tar.bz2
-SITES.${ICEDTEA_WEB_TGZ}=	-http://icedtea.classpath.org/hg/icedtea-web/archive/9e1f7dc48c20.tar.bz2
+# Keep icedtea-web distfile in sync with www/icedtea-web/Makefile
+ICEDTEA_WEB=			icedtea-web-81dfc0552a1c
+ICEDTEA_WEB_TGZ=		icedtea-web-81dfc0552a1c.tar.bz2
+SITES.${ICEDTEA_WEB_TGZ}=	-http://icedtea.classpath.org/hg/icedtea-web/archive/81dfc0552a1c.tar.bz2
 DISTFILES+=			${ICEDTEA_WEB_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_WEB_TGZ}
 

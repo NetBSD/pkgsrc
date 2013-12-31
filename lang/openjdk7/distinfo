@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2013/12/30 07:02:28 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2013/12/31 17:11:36 abs Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -42,9 +42,9 @@ Size (openjdk7/bootstrap-openjdk-7.9.05_2.dfly-3.3-i386.tar.xz) = 21676584 bytes
 SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
 RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
 Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
-SHA1 (openjdk7/icedtea-web-9e1f7dc48c20.tar.bz2) = e213b628eef92ddd2fe11267e6159e0d7409e548
-RMD160 (openjdk7/icedtea-web-9e1f7dc48c20.tar.bz2) = c5d36a058072ec485903804dfe2928a12ecca909
-Size (openjdk7/icedtea-web-9e1f7dc48c20.tar.bz2) = 978193 bytes
+SHA1 (openjdk7/icedtea-web-81dfc0552a1c.tar.bz2) = e3a00a6a4a18b7c1044e8116f1b86e737c6504de
+RMD160 (openjdk7/icedtea-web-81dfc0552a1c.tar.bz2) = 0c3af827f9c63ba3a7c3f98bb708afd7da8b4b68
+Size (openjdk7/icedtea-web-81dfc0552a1c.tar.bz2) = 1051891 bytes
 SHA1 (openjdk7/icedtea7-02bbff3d71ff.tar.bz2) = ada3415834bfac083a84658157f7031a9ebc64fe
 RMD160 (openjdk7/icedtea7-02bbff3d71ff.tar.bz2) = 7b3d6f34bf1b20acd44bd8bd2094d3f2c6f576f5
 Size (openjdk7/icedtea7-02bbff3d71ff.tar.bz2) = 3796898 bytes
