@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4586 2013/12/31 11:37:48 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4587 2013/12/31 12:04:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6786,3 +6786,6 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated archivers/libzip to 0.11.2 [wiz 2013-12-31]
 	Updated devel/ruby-pkg-config to 1.1.5 [obache 2013-12-31]
 	Updated graphics/ruby-rcairo to 1.12.8 [obache 2013-12-31]
+	Updated www/squid3 to 3.4.2 [adam 2013-12-31]
+	Updated www/curl to 7.34.0 [adam 2013-12-31]
+	Updated www/py-django to 1.6.1 [adam 2013-12-31]
