@@ -1,0 +1,15 @@
+$NetBSD: patch-Project_GNU_Library_Makefile.am,v 1.1 2013/12/31 23:10:21 ryoon Exp $
+
+* At least NetBSD dislike -no-undefined option for libtool in this case
+
+--- Project/GNU/Library/Makefile.am.orig	2012-08-20 12:31:54.000000000 +0000
++++ Project/GNU/Library/Makefile.am
+@@ -26,7 +26,7 @@ libzen_la_SOURCES = \
+                        ../../../Source/ZenLib/Format/Http/Http_Request.cpp \
+                        ../../../Source/ZenLib/Format/Http/Http_Utils.cpp
+ 
+-libzen_la_LDFLAGS     = -no-undefined -version-info 0:0:0
++libzen_la_LDFLAGS     = -version-info 0:0:0
+ 
+ zenincludedir = $(includedir)/ZenLib
+ zeninclude_HEADERS = \
