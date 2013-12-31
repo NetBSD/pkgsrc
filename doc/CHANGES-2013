@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4583 2013/12/31 11:06:39 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4584 2013/12/31 11:07:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6783,3 +6783,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/tacacs-shrubbery to 4.0.4.27a [schwarz 2013-12-31]
 	Updated sysutils/bup to 0.25 [wiz 2013-12-31]
 	Updated textproc/mdocml to 1.12.3 [wiz 2013-12-31]
+	Updated archivers/libzip to 0.11.2 [wiz 2013-12-31]
