@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4594 2013/12/31 16:14:30 jakllsch Exp $
+$NetBSD: CHANGES-2013,v 1.4595 2013/12/31 16:49:08 christos Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6796,3 +6796,5 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/py-kombu to 3.0.8 [rodent 2013-12-31]
 	Updated devel/ucommon to 6.0.7 [rodent 2013-12-31]
 	Updated devel/gindent to 2.2.10 [jakllsch 2013-12-31]
+	Updated lang/sun-jre7 to 7.0.45 [christos 2013-12-31]
+	Updated lang/sun-jdk7 to 7.0.45 [christos 2013-12-31]
