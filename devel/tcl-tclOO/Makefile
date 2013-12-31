@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/11/16 21:01:26 asau Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/31 17:39:34 rodent Exp $
 #
 
 DISTNAME=	TclOO1.0.1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/TclOO/tcl-tclOO-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
 COMMENT=	Core for other TCL OO extensions and basic TCL OO framework
 LICENSE=	2-clause-bsd # with custom, non-effective terms, same as Tcl
