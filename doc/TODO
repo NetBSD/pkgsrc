@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12796 2013/12/31 14:12:37 rodent Exp $
+$NetBSD: TODO,v 1.12797 2013/12/31 17:09:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,6 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.0.2 [wip (audacity-devel)]
 	o autoconvert-0.3.16
 	o autogen-5.18.2
+	o automake-1.14.1
 	o avidemux-2.6
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.24 [wip]
@@ -415,7 +416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.16
+	o calibre-1.17
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -563,6 +564,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcompris-13.11
 	o gdal-1.9.2
 	o gdb-7.6 [wip]
+	o gdbm-1.11
 	o gdeskcal-1.01
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
@@ -614,6 +616,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.6.0
 	o gnuchess-6.1.1
 	o gnumeric112-1.12.9
 	o go-1.2
@@ -637,7 +640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gstreamer1-1.2.0
 	o gtar-1.27.1
 	o gtar-base-1.27.1
-	o gthumb-3.2.5
+	o gthumb-3.2.6
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
 	o gtk3-3.10
@@ -762,6 +765,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libvdpau-0.7
 	o libvirt-0.9.9
 	o libvpx-1.3.0
+	o libxcb-1.10
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o licq-1.3.8
@@ -784,6 +788,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.152
 	o manedit-1.2.1
 	o matchbox-panel-0.9.3
 	o mawk-1.3.4.20130803
@@ -792,6 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o meld-1.8.3
 	o memcached-1.4.17
 	o mergeant-0.67
+	o mess-0.152
 	o mesure-0.7.2
 	o metis-5.1.0
 	o mgetty+sendfax-1.1.35
@@ -804,7 +810,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mksh-47
 	o mkvtoolnix-6.6.0
 	o mnemosyne-2.2.1
-	o modular-xorg-server-1.14.5
+	o modular-xorg-server-1.15.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o moneyguru-2.6.3
 	o monit-5.6 [pkg/48465]
@@ -950,6 +956,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rdesktop-1.8.1
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
+	o realboy-0.2.2
 	o redis-2.8.0
 	o rep-gtk-0.90.8.1
 	o reposurgeon-2.43
@@ -1125,7 +1132,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20131221
+	o x264-devel-20131228
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
@@ -1136,6 +1143,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xentools43-4.3.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
+	o xextproto-7.3.0
 	o xf86-input-ws-1.3.0 [successor to openbsd-input-ws, only builds on OpenBSD]
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
