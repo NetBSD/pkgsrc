@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/31 23:19:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/31 23:21:08 ryoon Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
@@ -36,5 +36,5 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/libzen/buildlink3.mk"
+.include "../../devel/libzen/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
