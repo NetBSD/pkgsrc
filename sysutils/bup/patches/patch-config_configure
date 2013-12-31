@@ -1,25 +1,15 @@
-$NetBSD: patch-config_configure,v 1.1 2012/09/04 13:43:15 wiz Exp $
+$NetBSD: patch-config_configure,v 1.2 2013/12/31 11:03:12 wiz Exp $
 
-Use PYTHON from environment.
-Do not check for utimensat. It is found on NetBSD even though unusable
-for now (20120827).
+Use PYTHON passed through from Makefile.
 
---- config/configure.orig	2011-06-09 03:24:45.000000000 +0000
+--- config/configure.orig	2013-11-11 08:52:33.000000000 +0000
 +++ config/configure
-@@ -30,7 +30,7 @@ expr "$MAKE_VERSION" '>=' '3.81' || AC_F
- TLOG " ok"
- 
- TLOGN "checking the python"
--PYTHON=`acLookFor python`
-+[ -n "$PYTHON" ] || PYTHON=`acLookFor python`
- if [ -z "$PYTHON" ]; then
-     AC_FAIL " Cannot find python";
+@@ -42,7 +42,7 @@ if [ -z "$MAKE_VERSION" ]; then
  fi
-@@ -59,7 +59,6 @@ AC_CHECK_HEADERS unistd.h
- AC_CHECK_HEADERS linux/fs.h
- AC_CHECK_HEADERS sys/ioctl.h
+ expr "$MAKE_VERSION" '>=' '3.81' || AC_FAIL "ERROR: $MAKE must be >= version 3.81"
  
--AC_CHECK_FUNCS utimensat 
- AC_CHECK_FUNCS utimes
- AC_CHECK_FUNCS lutimes
+-if test -z "$(bup_find_prog python '')"; then
++if test -z "$(bup_find_prog python "$PYTHON")"; then
+     AC_FAIL "ERROR: unable to find python"
+ fi
  
