@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/12/31 00:48:48 mef Exp $
+# $NetBSD: Makefile,v 1.23 2013/12/31 00:56:17 mef Exp $
 
 DISTNAME=		binutils-2.23.2
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -47,7 +47,7 @@ post-install:
 	)
 	# Rename to avoid conflict to native and other cross assembler.
 	# and clang differs its path so, (the same as h8300-elf-binutils).
-	# (SunOS 5.1 places at amd64 instead of x86_64)
+	# (SunOS 5.11 places at amd64 instead of x86_64)
 	(cd ${DESTDIR}${PREFIX};				\
 	for d in amd64/libiberty.a ${MACHINE_ARCH}/libiberty.a libiberty.a;	\
 	  do if [ -f lib/$$d ]; then				\
