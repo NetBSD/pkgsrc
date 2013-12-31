@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4580 2013/12/31 10:21:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4581 2013/12/31 10:42:59 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6780,3 +6780,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated net/icinga-base to 1.9.4 [ryoon 2013-12-31]
 	Updated www/php-piwigo to 2.5.3 [ryoon 2013-12-31]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q4 branch [wiz 2013-12-31]
+	Updated net/tacacs-shrubbery to 4.0.4.27a [schwarz 2013-12-31]
