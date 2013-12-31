@@ -1,20 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2013/12/18 23:48:22 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/31 11:03:12 wiz Exp $
 
-DISTNAME=	bup-0.25rc1
-PKGREVISION=	3
+DISTNAME=	bup-0.25
 CATEGORIES=	sysutils
 MASTER_SITES=	# manually packaged since master site is git repository
 # and only available via https
-# https://github.com/apenwarr/bup/tarball/
+# https://github.com/bup/bup/releases/
 # doc tarball: switch to "man" branch before downloading
-# latest apenwarr doc tarball is for 0.24b
-# bup-man-0.24b.tar.gz
-# use lelutin one instead
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} lelutin-bup-7e0bc2e.zip
-# ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}.zip
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://github.com/apenwarr/bup
+HOMEPAGE=	http://github.com/bup/bup
 COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
 
@@ -22,9 +17,7 @@ DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-# needs changing on each update
-DOCDIR=		${WRKDIR}/lelutin-bup-7e0bc2e
-WRKSRC=		${WRKDIR}/apenwarr-bup-4525252
+DOCDIR=		${WRKDIR}/bup-man
 
 TEST_TARGET=	test
 
@@ -32,9 +25,10 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		bash gmake perl
 REPLACE_PERL=		format-subst.pl wvtestrun
 REPLACE_PYTHON+=	cmd/bloom-cmd.py
+REPLACE_PYTHON+=	cmd/cat-file-cmd.py
 REPLACE_PYTHON+=	cmd/daemon-cmd.py
 REPLACE_PYTHON+=	cmd/damage-cmd.py
 REPLACE_PYTHON+=	cmd/drecurse-cmd.py
@@ -85,6 +79,35 @@ REPLACE_PYTHON+=	lib/tornado/websocket.py
 REPLACE_PYTHON+=	lib/tornado/wsgi.py
 REPLACE_PYTHON+=	main.py
 REPLACE_PYTHON+=	wvtest.py
+
+REPLACE_PYTHON+=	t/hardlink-sets
+REPLACE_PYTHON+=	t/id-other-than
+REPLACE_PYTHON+=	t/mksock
+REPLACE_PYTHON+=	t/root-status
+REPLACE_PYTHON+=	t/unknown-owner
+
+SUBST_CLASSES+=		python-c
+SUBST_SED.python-c+=	-e 's,python -c,${PYTHONBIN} -c,'
+SUBST_STAGE.python-c=	pre-configure
+SUBST_FILES.python-c+=	t/lib.sh
+SUBST_FILES.python-c+=	t/test-meta.sh
+SUBST_MESSAGE.python-c=	Fixing python executable in tests.
+
+REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
+REPLACE_BASH+=		t/compare-trees
+REPLACE_BASH+=		t/configure-sampledata
+REPLACE_BASH+=		t/force-delete
+REPLACE_BASH+=		t/subtree-hash
+REPLACE_BASH+=		t/test-cat-file.sh
+REPLACE_BASH+=		t/test-command-without-init-fails.sh
+REPLACE_BASH+=		t/test-index-check-device.sh
+REPLACE_BASH+=		t/test-meta.sh
+REPLACE_BASH+=		t/test-redundant-saves.sh
+REPLACE_BASH+=		t/test-restore-single-file.sh
+REPLACE_BASH+=		t/test-rm-between-index-and-save.sh
+REPLACE_BASH+=		t/test-save-creates-no-unrefs.sh
+REPLACE_BASH+=		t/test.sh
+REPLACE_BASH+=		wvtest-bup.sh
 
 post-install:
 	${INSTALL_DATA} ${DOCDIR}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

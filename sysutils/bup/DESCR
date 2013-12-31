@@ -11,7 +11,7 @@ It uses the packfile format from git (the open source version control system),
 so you can access the stored data even if you don't like bup's user interface.
 
 Unlike git, it writes packfiles directly (instead of having a separate garbage
-collection/repacking stage) so it's fast even with gratuitously huge amounts of 
+collection/repacking stage) so it's fast even with gratuitously huge amounts of
 data. bup's improved index formats also allow you to track far more filenames
 than git (millions) and keep track of far more objects (hundreds or thousands of
 gigabytes).
