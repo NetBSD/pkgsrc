@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/01/05 20:16:49 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2013/12/31 05:44:29 ryoon Exp $
 
-To use concrete5 with Apache 2.4, you will need to perform the following steps.
+To use Piwigo with Apache 2.4, you will need to perform the following steps.
 
 1. Install www/apache24 and www/ap-php
 
@@ -13,7 +13,7 @@ To use concrete5 with Apache 2.4, you will need to perform the following steps.
 
 2. Install MySQL database server.
 
-	# cd databases/mysql51-server
+	# cd databases/mysql55-server
 	# make install
 
 3. Start MySQL server, and setup MySQL server
@@ -28,7 +28,7 @@ To use concrete5 with Apache 2.4, you will need to perform the following steps.
 	> create user piwigo identified by 'piwigo_password';
 	> quit
 
-6. Create database for concrete5
+6. Create database for Piwigo
 
 	$ mysql -u root -p
 	Enter password: YOUR_MYSQL_ROOT_PASSWORD
