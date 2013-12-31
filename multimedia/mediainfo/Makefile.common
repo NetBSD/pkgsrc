@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2013/12/31 23:19:46 ryoon Exp $
+# used by multimedia/libzen
+# used by multimedia/libmediainfo
+
+MIVER=			0.7.65
+
+DISTNAME=		mediainfo_${MIVER}_AllInclusive
+CATEGORIES=		multimedia
+MASTER_SITES=		http://mediaarea.net/download/source/mediainfo/${MIVER}/
+EXTRACT_SUFX=		.7z
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://mediaarea.net/en/MediaInfo
+COMMENT=		Utility to supply technical info about audio and video
+
+DISTINFO_FILE=          ${.CURDIR}/../../multimedia/mediainfo/distinfo
+FILESDIR=               ${.CURDIR}/../../multimedia/mediainfo/files
+PATCHDIR=               ${.CURDIR}/../../multimedia/mediainfo/patches
+
+WRKSRC=			${WRKDIR}

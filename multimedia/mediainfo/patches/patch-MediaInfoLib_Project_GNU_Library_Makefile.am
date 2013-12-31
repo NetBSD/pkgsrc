@@ -1,0 +1,12 @@
+$NetBSD: patch-MediaInfoLib_Project_GNU_Library_Makefile.am,v 1.1 2013/12/31 23:19:46 ryoon Exp $
+
+--- MediaInfoLib/Project/GNU/Library/Makefile.am.orig	2013-10-11 14:18:27.000000000 +0000
++++ MediaInfoLib/Project/GNU/Library/Makefile.am
+@@ -202,6 +202,6 @@ lib@MediaInfoLib_LibName@_la_SOURCES += 
+                        ../../../Source/ThirdParty/tinyxml2/tinyxml2.cpp
+ endif
+ 
+-lib@MediaInfoLib_LibName@_la_LDFLAGS     = -no-undefined -version-info 0:0:0
++lib@MediaInfoLib_LibName@_la_LDFLAGS     = -version-info 0:0:0
+ 
+ INCLUDES = -I../../../Source -I../../../../ZenLib/Source

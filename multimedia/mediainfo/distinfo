@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/02/23 02:33:46 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2013/12/31 23:19:46 ryoon Exp $
 
-SHA1 (MediaInfo_CLI_0.7.62_GNU_FromSource.tar.bz2) = 6b6cdd93dd526e5e70e1d556055a117a8cb8a9ca
-RMD160 (MediaInfo_CLI_0.7.62_GNU_FromSource.tar.bz2) = da83fbb9aef9e5ea2719fe66fa6bdff2e35eeb92
-Size (MediaInfo_CLI_0.7.62_GNU_FromSource.tar.bz2) = 1600592 bytes
+SHA1 (mediainfo_0.7.65_AllInclusive.7z) = 80d8b289e6ef9e11a68b960ccd709032452d9e1c
+RMD160 (mediainfo_0.7.65_AllInclusive.7z) = 35a6ad9ed28e15688597465640a427be4ea70651
+Size (mediainfo_0.7.65_AllInclusive.7z) = 2286326 bytes
+SHA1 (patch-MediaInfoLib_Project_GNU_Library_Makefile.am) = 358717fc6b0ee2f377f1c25db3abd04b3780864c
