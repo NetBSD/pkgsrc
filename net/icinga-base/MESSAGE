@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2013/12/31 03:24:25 ryoon Exp $
 
 Apache Configuration:
 You must add this in your httpd.conf file:
-  Include ${PKG_SYSCONFDIR}/cinga.conf
+  Include ${PKG_SYSCONFDIR}/icinga.conf
 
 You should add the ${ICINGA_USER} user to the group ${ICINGACMD_GROUP}.
 
