@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/31 19:56:19 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/31 20:02:38 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -24,4 +24,4 @@ ${PYSITELIB}/socketpool/pool.pyo
 ${PYSITELIB}/socketpool/util.py
 ${PYSITELIB}/socketpool/util.pyc
 ${PYSITELIB}/socketpool/util.pyo
-share/py-socketpool/README.rst
+share/doc/py-socketpool/README.rst
