@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/31 19:56:19 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/31 20:02:38 rodent Exp $
 
 DISTNAME=	socketpool-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,12 +13,12 @@ LICENSE=	unlicense OR mit
 
 USE_LANGUAGES=	# none
 
-SHAREDIR=		share/${PKGBASE:S/${PYPKGPREFIX}/py/1}
-INSTALLATION_DIRS+=	${SHAREDIR}
+DOCDIR=			share/doc/${PKGBASE:S/${PYPKGPREFIX}/py/1}
+INSTALLATION_DIRS+=	${DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${PREFIX}/socketpool/README.rst \
-		${DESTDIR}${PREFIX}/${SHAREDIR}
+		${DESTDIR}${PREFIX}/${DOCDIR}
 	${RM} -rf ${DESTDIR}${PREFIX}/socketpool
 
 .include "../../lang/python/egg.mk"
