@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/09/04 12:31:26 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/31 03:28:39 ryoon Exp $
 #
 
-DISTNAME=	icinga-1.8.4
+DISTNAME=	icinga-1.9.4
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	5
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icinga/}
 
@@ -85,6 +84,7 @@ pre-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/icinga.conf.dist ${DESTDIR}/${EGDIR}/icinga.conf
 
+.include "../../databases/libdbi/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"

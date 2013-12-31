@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2013/12/31 03:28:39 ryoon Exp $
 
-SHA1 (icinga-1.8.4.tar.gz) = 19ab6e28b99ce15cbb9e12085cbe6aa404bf1ef1
-RMD160 (icinga-1.8.4.tar.gz) = 3b5b204501d1617e6133c9e123bf6c2a3cd7f0be
-Size (icinga-1.8.4.tar.gz) = 7459130 bytes
-SHA1 (patch-Makefile.in) = 0d7e50b0f37fea847e652725af0b5d65ec7aa7b2
-SHA1 (patch-base_Makefile.in) = f79705b2d5ccf938868cc502cdbe293bb7cf1579
+SHA1 (icinga-1.9.4.tar.gz) = 4bcfb717d4fac94d16205f976ad54b92a1cf0c52
+RMD160 (icinga-1.9.4.tar.gz) = f118ef6e3f56764e47fc24304dff03c1a5d766e4
+Size (icinga-1.9.4.tar.gz) = 17082569 bytes
+SHA1 (patch-Makefile.in) = 0c3ed01f1e8b807710304f6b92011a44d3da0fda
+SHA1 (patch-base_Makefile.in) = 4aa962b3963c084074273255fa6107e2e1a28a7d
 SHA1 (patch-cgi_Makefile.in) = 44ca2f4129c594540ed06a7b3a16f1652591b30f
 SHA1 (patch-configure.in) = dec21d0e8d76f681b8839b547bd62c7377d25357
-SHA1 (patch-html_Makefile.in) = 5ad556b42a11c15b947e5901d1429862011d7de7
+SHA1 (patch-html_Makefile.in) = df715a3471ac44e9fcc24ee1a4375cd8a6c5ad05
 SHA1 (patch-module_idoutils_db_scripts_create__mysqldb.sh) = 789b05d620c3e4477fdb54efd649e409c98970a1
 SHA1 (patch-module_idoutils_db_scripts_create__oracledb.sh) = 92c2958aea1d407b7c9426c1a95b328947526264
 SHA1 (patch-module_idoutils_db_scripts_create__pgsqldb.sh) = 7bbbbcec4e3670c99297df8df1b6d795afad64db
