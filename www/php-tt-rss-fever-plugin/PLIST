@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/31 16:51:46 wiz Exp $
+share/tt-rss/plugins/fever/fever_api.php
+share/tt-rss/plugins/fever/index.php
+share/tt-rss/plugins/fever/init.php
