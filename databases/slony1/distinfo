@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2013/09/11 06:45:47 adam Exp $
+$NetBSD: distinfo,v 1.15 2013/12/31 12:09:52 adam Exp $
 
-SHA1 (slony1-2.2.0.tar.bz2) = c1adbe7594253c4ffa485dd3b8716994fcee7489
-RMD160 (slony1-2.2.0.tar.bz2) = 58c26fc54c37dd0563cc7b59b8973fc38e2f9eaa
-Size (slony1-2.2.0.tar.bz2) = 1467410 bytes
+SHA1 (slony1-2.2.1.tar.bz2) = 97ed5e9e47b2bf85cfbcb2fc56a45093bfede2e4
+RMD160 (slony1-2.2.1.tar.bz2) = e0c45e32521af6c066e18e74039b3aaa7ee19eb0
+Size (slony1-2.2.1.tar.bz2) = 1466866 bytes
 SHA1 (patch-aa) = 4d384c712e1ba42564eb13ef6a3d08b7360e2298
 SHA1 (patch-ab) = 8937bed61506b48fb15ba76ea30dcd06aa6bd760
