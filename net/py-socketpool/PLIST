@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/31 19:56:19 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/socketpool/__init__.py
+${PYSITELIB}/socketpool/__init__.pyc
+${PYSITELIB}/socketpool/__init__.pyo
+${PYSITELIB}/socketpool/backend_eventlet.py
+${PYSITELIB}/socketpool/backend_eventlet.pyc
+${PYSITELIB}/socketpool/backend_eventlet.pyo
+${PYSITELIB}/socketpool/backend_gevent.py
+${PYSITELIB}/socketpool/backend_gevent.pyc
+${PYSITELIB}/socketpool/backend_gevent.pyo
+${PYSITELIB}/socketpool/backend_thread.py
+${PYSITELIB}/socketpool/backend_thread.pyc
+${PYSITELIB}/socketpool/backend_thread.pyo
+${PYSITELIB}/socketpool/conn.py
+${PYSITELIB}/socketpool/conn.pyc
+${PYSITELIB}/socketpool/conn.pyo
+${PYSITELIB}/socketpool/pool.py
+${PYSITELIB}/socketpool/pool.pyc
+${PYSITELIB}/socketpool/pool.pyo
+${PYSITELIB}/socketpool/util.py
+${PYSITELIB}/socketpool/util.pyc
+${PYSITELIB}/socketpool/util.pyo
+share/py-socketpool/README.rst
