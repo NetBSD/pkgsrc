@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/12/31 03:28:39 ryoon Exp $
 
---- Makefile.in.orig	2013-01-13 22:18:37.000000000 +0000
+--- Makefile.in.orig	2013-12-13 12:54:34.000000000 +0000
 +++ Makefile.in
 @@ -38,7 +38,7 @@ CHECKRESULTDIR=@CHECKRESULTDIR@
  EXTCMDFILEDIR=@EXTCMDFILEDIR@
@@ -11,14 +11,16 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  BINDIR=@bindir@
  LIBDIR=@libdir@
  CGIDIR=@sbindir@
-@@ -368,13 +368,13 @@ install-unstripped:
+@@ -380,14 +380,14 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(STATEDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LIBEXECDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)/archives
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CHECKRESULTDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(STATEDIR)
 +	${BSD_INSTALL_LIB_DIR} $(DESTDIR)$(LIBEXECDIR)
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(LOGDIR)
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(LOGDIR)/archives
@@ -31,18 +33,25 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  	fi;
  
  	@echo ""
-@@ -411,23 +411,23 @@ install-basic:
+@@ -426,27 +426,27 @@ install-basic:
+ 	@echo ""
+ 
+ install-cgiconf:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/cgi.cfg $(DESTDIR)$(CFGDIR)/cgi.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/cgiauth.cfg $(DESTDIR)$(CFGDIR)/cgiauth.cfg
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CFGDIR)
++	${BSD_INSTALL_DATA} sample-config/cgi.cfg $(DESTDIR)$(CFGDIR)/cgi.cfg
++	${BSD_INSTALL_DATA} sample-config/cgiauth.cfg $(DESTDIR)$(CFGDIR)/cgiauth.cfg
  
  
- install-config:
+ install-config: install-cgiconf
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)/objects
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)/conf.d
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)/modules
 -	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/icinga.cfg $(DESTDIR)$(CFGDIR)/icinga.cfg
 -	$(INSTALL) -b -m 660 $(INSTALL_OPTS) sample-config/resource.cfg $(DESTDIR)$(CFGDIR)/resource.cfg
--	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/cgi.cfg $(DESTDIR)$(CFGDIR)/cgi.cfg
--	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/cgiauth.cfg $(DESTDIR)$(CFGDIR)/cgiauth.cfg
 -	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/templates.cfg $(DESTDIR)$(CFGDIR)/objects/templates.cfg
 -	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/commands.cfg $(DESTDIR)$(CFGDIR)/objects/commands.cfg
 -	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/contacts.cfg $(DESTDIR)$(CFGDIR)/objects/contacts.cfg
@@ -58,8 +67,6 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CFGDIR)/modules
 +	${BSD_INSTALL_DATA} sample-config/icinga.cfg $(DESTDIR)$(CFGDIR)/icinga.cfg
 +	${BSD_INSTALL_DATA} sample-config/resource.cfg $(DESTDIR)$(CFGDIR)/resource.cfg
-+	${BSD_INSTALL_DATA} sample-config/cgi.cfg $(DESTDIR)$(CFGDIR)/cgi.cfg
-+	${BSD_INSTALL_DATA} sample-config/cgiauth.cfg $(DESTDIR)$(CFGDIR)/cgiauth.cfg
 +	${BSD_INSTALL_DATA} sample-config/template-object/templates.cfg $(DESTDIR)$(CFGDIR)/objects/templates.cfg
 +	${BSD_INSTALL_DATA} sample-config/template-object/commands.cfg $(DESTDIR)$(CFGDIR)/objects/commands.cfg
 +	${BSD_INSTALL_DATA} sample-config/template-object/contacts.cfg $(DESTDIR)$(CFGDIR)/objects/contacts.cfg
@@ -72,12 +79,12 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  
  	@echo ""
  	@echo "*** Config files installed ***"
-@@ -438,14 +438,14 @@ install-config:
+@@ -457,14 +457,14 @@ install-config: install-cgiconf
  	@echo ""
  
  install-testconfig:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)/tests
-+	${BSD_INSTALL_DATA} $(DESTDIR)$(CFGDIR)/tests
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CFGDIR)/tests
  	for file in tests/etc/*.cfg; \
 -	do $(INSTALL) -b -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(CFGDIR)/tests; done
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(CFGDIR)/tests; done
@@ -85,13 +92,22 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  
  install-webconf:
 -	$(MKDIR) -p -m 775 $(DESTDIR)$(HTTPD_CONF)
--	$(INSTALL) -m 644 sample-config/httpd.conf $(DESTDIR)$(HTTPD_CONF)/icinga.conf
+-	$(INSTALL) -b -m 644 $(INSTALL_OPTS) sample-config/httpd.conf $(DESTDIR)$(HTTPDCONFFILE)
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTTPD_CONF)
-+	${BSD_INSTALL_DATA} sample-config/httpd.conf $(DESTDIR)$(HTTPD_CONF)/icinga.conf
++	${BSD_INSTALL_DATA} sample-config/httpd.conf $(DESTDIR)$(HTTPDCONFFILE)
  
  	@echo ""
  	@echo "*** Icinga/Apache conf file installed ***"
-@@ -480,11 +480,11 @@ install-idoutils:
+@@ -472,7 +472,7 @@ install-webconf:
+ 
+ install-webconf-auth:
+ 
+-	$(INSTALL) -b -m 644 $(INSTALL_OPTS) icinga.htpasswd $(DESTDIR)$(HTTPAUTHFILE)
++	${BSD_INSTALL_DATA} icinga.htpasswd $(DESTDIR)$(HTTPAUTHFILE)
+ 
+ 	@echo ""
+ 	@echo "*** Icinga http auth file installed ***"
+@@ -508,11 +508,11 @@ install-idoutils:
  install-init: install-daemoninit
  
  install-daemoninit:
@@ -106,7 +122,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  	fi
  
  	@echo ""
-@@ -493,26 +493,26 @@ install-daemoninit:
+@@ -521,26 +521,26 @@ install-daemoninit:
  
  
  install-commandmode:
@@ -147,7 +163,22 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  
  	@echo ""
  	@echo "*** Sample Eventhandlers installed ***"
-@@ -553,19 +553,19 @@ Prototype:
+@@ -550,10 +550,10 @@ install-eventhandlers:
+ install-classicui-standalone: install-cgis install-html install-cgiconf install-webconf
+ 
+ 	# make sure we keep all the needed dirs for data
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(STATEDIR)
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)/archives
+-	$(INSTALL) -m 775 $(COMMAND_OPTS) -d $(DESTDIR)$(EXTCMDFILEDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(STATEDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(LOGDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(LOGDIR)/archives
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(EXTCMDFILEDIR)
+ 
+ 	@echo ""
+ 	@echo "*** Icinga Classic UI Standalone installed ***"
+@@ -593,19 +593,19 @@ Prototype:
  	cd sample-config; \
  	for file in *.cfg; \
  	do \
