@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.7 2003/03/24 00:06:57 grant Exp $
+$NetBSD: patch-ab,v 1.8 2013/12/31 16:14:15 jakllsch Exp $
 
---- man/texinfo2man.c.orig	Fri Jan 18 06:28:51 2002
+--- man/texinfo2man.c.orig	2008-03-11 18:50:42.000000000 +0000
 +++ man/texinfo2man.c
-@@ -1,5 +1,11 @@
+@@ -1,6 +1,12 @@
 +#ifdef HAVE_CONFIG_H
 +#include "config.h"
 +#endif
 +
  #include <stdio.h>
+ #include <stdlib.h>
 +#ifdef HAVE_MALLOC_H
  #include <malloc.h>
 +#endif
