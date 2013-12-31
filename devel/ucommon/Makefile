@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/31 14:42:13 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/31 15:41:17 rodent Exp $
 #
 
 DISTNAME=	ucommon-6.0.7
@@ -20,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	commoncpp.pc.in
 PKGCONFIG_OVERRIDE+=	ucommon.pc.in
 
 .include "options.mk"
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

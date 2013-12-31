@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/26 22:57:53 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/31 15:41:17 rodent Exp $
 #
 
 DISTNAME=	libticables2-1.3.3
@@ -19,6 +19,8 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	ticables2.pc.in
 
 .include "options.mk"
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
