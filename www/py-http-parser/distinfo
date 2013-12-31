@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/31 19:32:32 rodent Exp $
+
+SHA1 (http-parser-0.8.3.tar.gz) = de2509e6b62d6beb191e0953d3b098ffac27fedd
+RMD160 (http-parser-0.8.3.tar.gz) = 5953b6a238917e14b1bf6c1e4f995fbac03463b5
+Size (http-parser-0.8.3.tar.gz) = 83040 bytes
