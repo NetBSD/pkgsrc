@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/12/31 16:51:46 wiz Exp $
+
+To use this, just go to the tt-rss Preferences and enable the 'fever'
+plugin; then set a password in the 'Preferences/Fever Emulation' section.
+
+===========================================================================
