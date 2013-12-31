@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4602 2013/12/31 17:31:54 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4603 2013/12/31 17:33:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6821,3 +6821,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated graphics/png to 1.6.8 [wiz 2013-12-31]
 	Updated devel/automake to 1.14.1 [wiz 2013-12-31]
 	Updated x11/glproto to 1.4.17 [wiz 2013-12-31]
+	Updated devel/gob2 to 2.0.20 [wiz 2013-12-31]
