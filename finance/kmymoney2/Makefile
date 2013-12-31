@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2013/10/19 09:07:04 adam Exp $
+# $NetBSD: Makefile,v 1.76 2013/12/31 13:53:46 hauke Exp $
 
 DISTNAME=	kmymoney2-1.0.5
 PKGREVISION=	23
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--enable-mt
 REPLACE_PERL+=	admin/fixuifiles
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

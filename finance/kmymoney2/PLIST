@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/12/10 17:50:23 marino Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/12/31 13:53:46 hauke Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -81,7 +81,6 @@ lib/libkmm_kdchart.la
 lib/libkmm_mymoney.la
 lib/libkmm_plugin.la
 man/man1/kmymoney2.1
-qt3/plugins/sqldrivers/libsqlite3.so
 share/applications/kde/kmymoney2.desktop
 share/doc/kde/HTML/en/kmymoney2/account_edit.png
 share/doc/kde/HTML/en/kmymoney2/account_options.png
