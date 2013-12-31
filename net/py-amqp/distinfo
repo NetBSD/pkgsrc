@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/31 14:02:07 rodent Exp $
+
+SHA1 (v1.3.3.tar.gz) = 56d8ba9929647d3ebc6cf55f529abe69e97656d6
+RMD160 (v1.3.3.tar.gz) = 3724d6a6bc739052dea10b47c81e6c0cc6ac109a
+Size (v1.3.3.tar.gz) = 75487 bytes
