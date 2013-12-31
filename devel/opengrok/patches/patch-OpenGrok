@@ -1,0 +1,44 @@
+$NetBSD: patch-OpenGrok,v 1.1 2013/12/31 22:56:12 ryoon Exp $
+
+--- OpenGrok.orig	2012-03-30 13:36:59.000000000 +0000
++++ OpenGrok
+@@ -121,7 +121,7 @@ DefaultInstanceConfiguration()
+     # operating systems, if you have any reasonably generic
+     # improvements please feel free to submit a patch.
+ 
+-    OPENGROK_INSTANCE_BASE="${OPENGROK_INSTANCE_BASE:-/var/opengrok}"
++    OPENGROK_INSTANCE_BASE="${OPENGROK_INSTANCE_BASE:-@PREFIX@/share/opengrok/var/opengrok}"
+ 
+     LOGGER_CONFIG_FILE="logging.properties"
+ 
+@@ -247,7 +247,7 @@ DefaultInstanceConfiguration()
+     WEBAPP_CONFIG=""
+     if [ -n "${OPENGROK_WEBAPP_CFGADDR}" ]; then
+         WEBAPP_CONFIG_ADDRESS=${OPENGROK_WEBAPP_CFGADDR}
+-	if [ "${OPENGROK_WEBAPP_CFGADDR}" == "none" ]; then
++	if [ "${OPENGROK_WEBAPP_CFGADDR}" = "none" ]; then
+ 	    WEBAPP_CONFIG_ADDRESS=""
+ 	fi
+     else
+@@ -262,15 +262,15 @@ DefaultInstanceConfiguration()
+     JAVA_OPTS="${JAVA_OPTS:--Xmx2048m}"
+ 
+     # OPTIONAL: Full Path to History Utilities
+-    HG="`Which hg`"
+-    CVS="`Which cvs`"
+-    SVN="`Which svn`"
++    HG="@PREFIX@/bin/hg"
++    CVS="/usr/bin/cvs"
++    SVN="@PREFIX@/bin/svn"
+     SCCS="`Which sccs`"
+     CLEARCASE="`Which cleartool`"
+-    GIT="`Which git`"
++    GIT="@PREFIX@/bin/git"
+     P4="`Which p4`"
+-    MTN="`Which mtn`"
+-    BZR="`Which bzr`"
++    MTN="@PREFIX@/bin/mtn"
++    BZR="@PREFIX@/bin/bzr"
+ 
+     # OPTIONAL: Override Built-in Properties
+     # Assumption: We should not set properties to the empty string

@@ -1,69 +1,66 @@
-# $NetBSD: Makefile,v 1.28 2013/12/01 10:18:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2013/12/31 22:56:12 ryoon Exp $
 #
 
-DISTNAME=	opengrok-0.8.1
-PKGREVISION=	12
+DISTNAME=	OpenGrok-0.12-rc5
+PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
 CATEGORIES=	devel
-MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+opengrok/files/
+MASTER_SITES=	-https://github.com/OpenGrok/OpenGrok/archive/0.12-rc5.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hub.opensolaris.org/bin/view/Project+opengrok/
+HOMEPAGE=	http://opengrok.github.io/OpenGrok/
 COMMENT=	Fast and usable source code search and cross reference engine
+LICENSE=	cddl-1.0
+
+FETCH_USING=	curl
+EXTRACT_USING=	bsdtar
 
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags
+DEPENDS+=	jflex-[0-9]*:../../devel/jflex
+DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+
+SUBST_CLASSES+=		vcs
+SUBST_FILES.vcs+=	OpenGrok
+SUBST_MESSAGE.vcs=	Set VCS program pathes.
+SUBST_STAGE.vcs=	pre-configure
+SUBST_VARS.vcs=		PREFIX
+
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf+=	web/WEB-INF/web.xml
+SUBST_MESSAGE.conf=	Set configuration.xml location
+SUBST_STAGE.conf=	pre-configure
+SUBST_VARS.conf=	PREFIX
 
 .include "options.mk"
 
-.if empty(PKG_OPTIONS:Mopengrok-build)
-NO_BUILD=	YES
-.endif
-
-USE_JAVA=	run
+USE_JAVA=	yes
 USE_JAVA2=	yes
 USE_TOOLS+=	unzip:run zip:run
 
 CONF_FILES=	${PREFIX}/share/examples/opengrok/paths.tsv \
-		${PREFIX}/share/opengrok/paths.tsv
+		${PREFIX}/share/opengrok/var/opengrok/paths.tsv
 
-SUBST_CLASSES+=		run
-SUBST_STAGE.run=	post-patch
-SUBST_FILES.run=	run.sh run-quiet.sh
-SUBST_SED.run=		-e "s|/usr/local/bin/ctags|${PREFIX}/bin/exctags|g"
-SUBST_SED.run+=		-e "s|java|${PKG_JAVA_HOME}/bin/java|g"
-SUBST_SED.run+=		-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_MESSAGE.run=	Fixing hardcoded paths.
-
-pre-build:
-	${CP} ${PREFIX}/lib/java/JFlex.jar ${WRKSRC}/lib
+INSTALLATION_DIRS+=	share/opengrok/bin \
+			share/opengrok/lib/lib \
+			share/examples/opengrok \
+			share/opengrok/var/opengrok
 
 do-build:
-	cd ${WRKSRC} && ${PREFIX}/bin/ant
-
-post-build:
-	${RM} -f ${WRKSRC}/lib/*.jar
-	${CP} ${WRKSRC}/dist/lib/*.jar ${WRKSRC}/lib
-	${CP} ${WRKSRC}/dist/opengrok.jar ${WRKSRC}
-	${CP} ${WRKSRC}/dist/source.war ${WRKSRC}
+	cd ${WRKSRC} && \
+		CLASSPATH=${PREFIX}/lib/java/JFlex.jar ${PREFIX}/bin/ant
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/opengrok
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/opengrok/lib
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/opengrok
-
+	${INSTALL_SCRIPT} ${WRKSRC}/OpenGrok \
+		${DESTDIR}${PREFIX}/share/opengrok/bin
 	${INSTALL_DATA} ${WRKSRC}/README.txt \
 		${DESTDIR}${PREFIX}/share/opengrok
-	${INSTALL_DATA} ${WRKSRC}/opengrok.jar \
-		${DESTDIR}${PREFIX}/share/opengrok
-	${INSTALL_DATA} ${WRKSRC}/source.war \
-		${DESTDIR}${PREFIX}/share/opengrok
-	${INSTALL_DATA} ${WRKSRC}/lib/*.jar \
+	${INSTALL_DATA} ${WRKSRC}/dist/opengrok.jar \
 		${DESTDIR}${PREFIX}/share/opengrok/lib
+	${INSTALL_DATA} ${WRKSRC}/dist/source.war \
+		${DESTDIR}${PREFIX}/share/opengrok/lib
+	${INSTALL_DATA} ${WRKSRC}/dist/lib/*.jar \
+		${DESTDIR}${PREFIX}/share/opengrok/lib/lib
 	${INSTALL_DATA} ${WRKSRC}/paths.tsv \
 		${DESTDIR}${PREFIX}/share/examples/opengrok
-	${INSTALL_SCRIPT} ${WRKSRC}/run.sh \
-		${DESTDIR}${PREFIX}/share/opengrok
-	${INSTALL_SCRIPT} ${WRKSRC}/run-quiet.sh \
-		${DESTDIR}${PREFIX}/share/opengrok
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2010/04/29 19:50:24 ahoka Exp $
+$NetBSD: distinfo,v 1.8 2013/12/31 22:56:12 ryoon Exp $
 
-SHA1 (opengrok-0.8.1.tar.gz) = e3c54c09d8f516a0af44e90283ffcff3a55b7ae6
-RMD160 (opengrok-0.8.1.tar.gz) = 3634ddb2731f7562441b22afaaa6d812b6baf51c
-Size (opengrok-0.8.1.tar.gz) = 6513865 bytes
-SHA1 (patch-aa) = 22c1e946fc90f7cfbc05ad97541eb3bbc2c03cfe
-SHA1 (patch-ab) = a5bb3931713207adaa6303eb533c2cddc39b8fb0
+SHA1 (OpenGrok-0.12-rc5.tar.gz) = 0e52ae39f9c470949c83cc4d9cf8a7c3f1610818
+RMD160 (OpenGrok-0.12-rc5.tar.gz) = d4163cac0b399b49ad810d2ff4bca0f9e32771cf
+Size (OpenGrok-0.12-rc5.tar.gz) = 1534049 bytes
+SHA1 (patch-OpenGrok) = 0771b0aec425538b9141addfa6c9a040b1562614
+SHA1 (patch-build.xml) = ff098c5c024c74c0ff59575d67b232d9425b5d21
+SHA1 (patch-web_WEB-INF_web.xml) = 1cae9b9e2d3863406a9cb0ca34f3d1693e276dc2

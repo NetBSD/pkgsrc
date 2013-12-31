@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 2010/04/29 19:50:24 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/12/31 22:56:12 ryoon Exp $
 share/examples/opengrok/paths.tsv
 share/opengrok/README.txt
-share/opengrok/lib/ant.jar
-share/opengrok/lib/bcel-5.1.jar
-share/opengrok/lib/jakarta-oro-2.0.8.jar
-share/opengrok/lib/jmxremote_optional.jar
-share/opengrok/lib/lucene-core-2.4.1.jar
-share/opengrok/lib/lucene-spellchecker-2.4.1.jar
-share/opengrok/lib/org.apache.commons.jrcs.diff.jar
-share/opengrok/lib/org.apache.commons.jrcs.rcs.jar
-share/opengrok/lib/swing-layout-0.9.jar
-share/opengrok/opengrok.jar
-share/opengrok/run-quiet.sh
-share/opengrok/run.sh
-share/opengrok/source.war
+share/opengrok/bin/OpenGrok
+share/opengrok/lib/lib/ant.jar
+share/opengrok/lib/lib/bcel-5.2.jar
+share/opengrok/lib/lib/jrcs.jar
+share/opengrok/lib/lib/lucene-analyzers-common-4.6.0.jar
+share/opengrok/lib/lib/lucene-core-4.6.0.jar
+share/opengrok/lib/lib/lucene-queryparser-4.6.0.jar
+share/opengrok/lib/lib/lucene-suggest-4.6.0.jar
+share/opengrok/lib/lib/servlet-api.jar
+share/opengrok/lib/lib/swing-layout-0.9.jar
+share/opengrok/lib/opengrok.jar
+share/opengrok/lib/source.war
+@pkgdir share/opengrok/var/opengrok
