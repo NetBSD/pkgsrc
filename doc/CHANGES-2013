@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4598 2013/12/31 17:17:17 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4599 2013/12/31 17:18:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6817,3 +6817,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Removed wm/ion [wiz 2013-12-31]
 	Removed x11/xf86-video-nvxbox [wiz 2013-12-31]
 	Removed x11/egtk [wiz 2013-12-31]
+	Removed cad/oct-wcalc [wiz 2013-12-31]
