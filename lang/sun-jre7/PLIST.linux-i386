@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.2 2013/07/04 12:25:31 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.3 2013/12/31 16:46:56 christos Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -192,7 +192,6 @@ java/sun-7/lib/i386/libnio.so
 java/sun-7/lib/i386/libnpjp2.so
 java/sun-7/lib/i386/libnpt.so
 java/sun-7/lib/i386/libprism-es2.so
-java/sun-7/lib/i386/librmi.so
 java/sun-7/lib/i386/libsctp.so
 java/sun-7/lib/i386/libsplashscreen.so
 java/sun-7/lib/i386/libsunec.so
@@ -266,7 +265,6 @@ java/sun-7/lib/security/javafx.policy
 java/sun-7/lib/security/javaws.policy
 java/sun-7/lib/security/local_policy.jar
 java/sun-7/lib/security/trusted.libraries
-java/sun-7/lib/servicetag/jdk_header.png
 java/sun-7/lib/sound.properties.default
 java/sun-7/lib/zi/Africa/Abidjan
 java/sun-7/lib/zi/Africa/Accra
