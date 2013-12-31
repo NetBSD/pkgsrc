@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4606 2013/12/31 17:47:30 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4607 2013/12/31 17:49:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6825,3 +6825,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated x11/xextproto to 7.3.0 [wiz 2013-12-31]
 	Updated www/surfraw to 2.2.9 [wiz 2013-12-31]
 	Updated misc/py-anki2 to 2.0.20 [wiz 2013-12-31]
+	Updated textproc/raptor2 to 2.0.12 [wiz 2013-12-31]
