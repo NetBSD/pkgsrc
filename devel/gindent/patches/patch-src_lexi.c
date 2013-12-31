@@ -1,8 +1,8 @@
-$NetBSD: patch-src_lexi.c,v 1.1 2012/04/17 17:42:33 joerg Exp $
+$NetBSD: patch-src_lexi.c,v 1.2 2013/12/31 16:14:15 jakllsch Exp $
 
---- src/lexi.c.orig	2012-04-17 16:05:19.000000000 +0000
+--- src/lexi.c.orig	2008-03-11 18:50:42.000000000 +0000
 +++ src/lexi.c
-@@ -192,9 +192,6 @@ templ_ty *is_reserved (register const ch
+@@ -211,9 +211,6 @@ templ_ty *is_reserved (const char *str, 
  #undef MIN_WORD_LENGTH
  #undef MAX_WORD_LENGTH
  
