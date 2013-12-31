@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/12/31 13:17:00 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/31 15:41:17 rodent Exp $
 
 VERSION=	1.1.1
 DISTNAME=	solarus-${VERSION}-src
@@ -14,6 +14,10 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/solarus-${VERSION}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/physfs/buildlink3.mk"
 LUA_VERSIONS_ACCEPTED=		51
