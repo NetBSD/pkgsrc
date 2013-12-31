@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4616 2013/12/31 22:56:52 ryoon Exp $
+$NetBSD: CHANGES-2013,v 1.4617 2013/12/31 23:11:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6835,3 +6835,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added net/py-socketpool version 0.5.3 [rodent 2013-12-31]
 	Updated devel/jflex to 1.4.3 [ryoon 2013-12-31]
 	Updated devel/opengrok to 0.12rc5 [ryoon 2013-12-31]
+	Added devel/libzen version 0.4.29 [ryoon 2013-12-31]
