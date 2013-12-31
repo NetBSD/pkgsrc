@@ -1,7 +1,0 @@
-$NetBSD: patch-ai,v 1.1 2005/01/08 18:50:35 minskim Exp $
-
---- Makefile.orig	2005-01-08 12:46:09.000000000 -0600
-+++ Makefile
-@@ -0,0 +1,2 @@
-+all install clean:
-+	cd netbsd && make $@

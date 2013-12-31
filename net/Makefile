@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.994 2013/12/31 14:03:22 rodent Exp $
+# $NetBSD: Makefile,v 1.995 2013/12/31 17:08:08 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -25,7 +25,6 @@ SUBDIR+=	aoe-vblade
 SUBDIR+=	apollo
 SUBDIR+=	argus
 SUBDIR+=	aria2
-SUBDIR+=	arla
 SUBDIR+=	arp-scan
 SUBDIR+=	arpd
 SUBDIR+=	arping
