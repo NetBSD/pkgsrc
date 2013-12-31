@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/12/31 23:10:21 ryoon Exp $
+
+SHA1 (libzen_0.4.29.tar.bz2) = 2d5bac0d39ef5eb622df1edf8521bb5ac073a3c1
+RMD160 (libzen_0.4.29.tar.bz2) = 573e2cf41f10fca27c77deeeb583c3df11d7753a
+Size (libzen_0.4.29.tar.bz2) = 101647 bytes
+SHA1 (patch-Project_GNU_Library_Makefile.am) = fffdcbe420939040f688c53ba333db75da1269bd
+SHA1 (patch-Project_GNU_Library_configure.ac) = b80dce0d8a650d0423b45a7456eec3e61f370223
