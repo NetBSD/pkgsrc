@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4590 2013/12/31 13:28:12 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.4591 2013/12/31 14:02:23 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6792,3 +6792,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated databases/slony1 to 2.2.1 [adam 2013-12-31]
 	Updated games/solarus to 1.1.1 [rodent 2013-12-31]
 	Updated parallel/py-billiard to 3.3.0.13 [rodent 2013-12-31]
+	Added net/py-amqp version 1.3.3 [rodent 2013-12-31]
