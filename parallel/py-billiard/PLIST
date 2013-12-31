@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/02 11:08:27 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/31 13:27:51 rodent Exp $
 ${PYSITELIB}/_billiard.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,9 +11,18 @@ ${PYSITELIB}/billiard/__init__.pyo
 ${PYSITELIB}/billiard/_connection.py
 ${PYSITELIB}/billiard/_connection.pyc
 ${PYSITELIB}/billiard/_connection.pyo
+${PYSITELIB}/billiard/_connection3.py
+${PYSITELIB}/billiard/_connection3.pyc
+${PYSITELIB}/billiard/_connection3.pyo
 ${PYSITELIB}/billiard/_ext.py
 ${PYSITELIB}/billiard/_ext.pyc
 ${PYSITELIB}/billiard/_ext.pyo
+${PYSITELIB}/billiard/_reduction.py
+${PYSITELIB}/billiard/_reduction.pyc
+${PYSITELIB}/billiard/_reduction.pyo
+${PYSITELIB}/billiard/_reduction3.py
+${PYSITELIB}/billiard/_reduction3.pyc
+${PYSITELIB}/billiard/_reduction3.pyo
 ${PYSITELIB}/billiard/_win.py
 ${PYSITELIB}/billiard/_win.pyc
 ${PYSITELIB}/billiard/_win.pyo
@@ -38,6 +47,9 @@ ${PYSITELIB}/billiard/einfo.pyo
 ${PYSITELIB}/billiard/exceptions.py
 ${PYSITELIB}/billiard/exceptions.pyc
 ${PYSITELIB}/billiard/exceptions.pyo
+${PYSITELIB}/billiard/five.py
+${PYSITELIB}/billiard/five.pyc
+${PYSITELIB}/billiard/five.pyo
 ${PYSITELIB}/billiard/forking.py
 ${PYSITELIB}/billiard/forking.pyc
 ${PYSITELIB}/billiard/forking.pyo
