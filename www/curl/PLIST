@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2013/10/17 07:56:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2013/12/31 11:48:03 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -68,6 +68,7 @@ man/man3/libcurl-multi.3
 man/man3/libcurl-share.3
 man/man3/libcurl-tutorial.3
 man/man3/libcurl.3
+share/aclocal/libcurl.m4
 share/doc/curl/FAQ
 share/doc/curl/MANUAL
 share/doc/curl/TheArtOfHttpScripting
