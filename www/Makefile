@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1007 2013/12/16 01:47:57 taca Exp $
+# $NetBSD: Makefile,v 1.1008 2013/12/31 16:52:09 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -551,6 +551,7 @@ SUBDIR+=	php-sugarcrm
 SUBDIR+=	php-tidy
 SUBDIR+=	php-tiki6
 SUBDIR+=	php-tt-rss
+SUBDIR+=	php-tt-rss-fever-plugin
 SUBDIR+=	php-uploadprogress
 SUBDIR+=	php-zendoptimizerplus
 SUBDIR+=	phraseanet
