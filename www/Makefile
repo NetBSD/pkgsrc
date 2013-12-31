@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1008 2013/12/31 16:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.1009 2013/12/31 19:33:29 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -607,6 +607,7 @@ SUBDIR+=	py-flask-wtf
 SUBDIR+=	py-flup
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
+SUBDIR+=	py-http-parser
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-mechanize
