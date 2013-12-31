@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4582 2013/12/31 11:03:33 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4583 2013/12/31 11:06:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6782,3 +6782,4 @@ Changes to the packages collection and infrastructure in 2013:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q4 branch [wiz 2013-12-31]
 	Updated net/tacacs-shrubbery to 4.0.4.27a [schwarz 2013-12-31]
 	Updated sysutils/bup to 0.25 [wiz 2013-12-31]
+	Updated textproc/mdocml to 1.12.3 [wiz 2013-12-31]
