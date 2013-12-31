@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12792 2013/12/30 04:22:28 ryoon Exp $
+$NetBSD: TODO,v 1.12793 2013/12/31 11:03:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o botan-1.10.5
 	o brasero-3.4.0
 	o bugzilla-3.6.12
-	o bup-0.25 [wiz]
 	o byacc-20130925
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
