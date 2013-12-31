@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4609 2013/12/31 17:59:24 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.4610 2013/12/31 18:04:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6828,3 +6828,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/raptor2 to 2.0.12 [wiz 2013-12-31]
 	Updated textproc/itstool to 2.0.2 [wiz 2013-12-31]
 	Added devel/py-greenlet version 0.4.1 [rodent 2013-12-31]
+	Updated devel/meld to 1.8.3 [wiz 2013-12-31]
