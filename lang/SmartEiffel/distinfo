@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2009/08/08 23:32:17 tnn Exp $
-
-SHA1 (SmartEiffel-2.0/se.tar.bz2) = 343747fc62460b43d5a00d58fab12c4f1542fb10
-RMD160 (SmartEiffel-2.0/se.tar.bz2) = 7429864c1f72ffdda8cc6b56e904c446e1303a8e
-Size (SmartEiffel-2.0/se.tar.bz2) = 4136823 bytes
-SHA1 (patch-aa) = 7133eec761eb939a97f6a028d407944d74573555
