@@ -1,6 +1,6 @@
-$NetBSD: patch-base_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+$NetBSD: patch-base_Makefile.in,v 1.2 2013/12/31 03:28:39 ryoon Exp $
 
---- base/Makefile.in.orig	2013-01-13 22:18:37.000000000 +0000
+--- base/Makefile.in.orig	2013-12-13 12:54:34.000000000 +0000
 +++ base/Makefile.in
 @@ -207,10 +207,10 @@ install-unstripped:
  	$(MAKE) install-basic
@@ -8,8 +8,8 @@ $NetBSD: patch-base_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  install-basic:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LIBDIR)
--	$(INSTALL) -m 774 $(INSTALL_OPTS) @icinga_name@ $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 774 $(INSTALL_OPTS) @icingastats_name@ $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 755 $(INSTALL_OPTS) @icinga_name@ $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 755 $(INSTALL_OPTS) @icingastats_name@ $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(BINDIR)
 +	${BSD_INSTALL_LIB_DIR} $(DESTDIR)$(LIBDIR)
 +	${BSD_INSTALL_PROGRAM} @icinga_name@ $(DESTDIR)$(BINDIR)
