@@ -2474,7 +2474,7 @@ src/etc, be sure the following items are present and properly configured:
 
     # ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime
 
- 6. /usr/src (system sources, e. g. for sysutils/aperture):
+ 6. /usr/src (system sources, rarely used by packages if at all:
 
     # ln -s ../disk1/cvs .
               # ln -s cvs/src-2.0 src
@@ -3000,12 +3000,12 @@ By default, resuming transfers in pkgsrc is disabled, but you can enable this
 feature by adding the option PKG_RESUME_TRANSFERS=YES into mk.conf. If, during
 a fetch step, an incomplete distfile is found, pkgsrc will try to resume it.
 
-You can also use a different program than the default ftp(1) by changing the
-FETCH_USING variable. You can specify the program by using of ftp, fetch, wget
-or curl. Alternatively, fetching can be disabled by using the value manual. A
-value of custom disables the system defaults and dependency tracking for the
-fetch program. In that case you have to provide FETCH_CMD, FETCH_BEFORE_ARGS,
-FETCH_RESUME_ARGS, FETCH_OUTPUT_ARGS, FETCH_AFTER_ARGS.
+You can also use a different program than the platform default program by
+changing the FETCH_USING variable. You can specify the program by using of ftp,
+fetch, wget or curl. Alternatively, fetching can be disabled by using the value
+manual. A value of custom disables the system defaults and dependency tracking
+for the fetch program. In that case you have to provide FETCH_CMD,
+FETCH_BEFORE_ARGS, FETCH_RESUME_ARGS, FETCH_OUTPUT_ARGS, FETCH_AFTER_ARGS.
 
 For example, if you want to use wget to download, you'll have to use something
 like:
