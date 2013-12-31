@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/12/12 12:45:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/31 17:50:23 wiz Exp $
 
-DISTNAME=	itstool-2.0.1
+DISTNAME=	itstool-2.0.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://files.itstool.org/itstool/
 EXTRACT_SUFX=	.tar.bz2
