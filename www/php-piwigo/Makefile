@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/07/12 10:45:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/31 05:51:31 ryoon Exp $
 #
 
-PWVER=		2.4.6
+PWVER=		2.5.3
 DISTNAME=	piwigo-${PWVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-http://piwigo.org/download/dlcounter.php?code=${PWVER}
 EXTRACT_SUFX=	.zip
