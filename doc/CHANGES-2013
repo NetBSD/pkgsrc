@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4596 2013/12/31 16:52:26 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4597 2013/12/31 17:10:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6799,3 +6799,20 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/sun-jre7 to 7.0.45 [christos 2013-12-31]
 	Updated lang/sun-jdk7 to 7.0.45 [christos 2013-12-31]
 	Added www/php-tt-rss-fever-plugin version 1.2 [wiz 2013-12-31]
+	Removed cross/i386-cygwin32 [wiz 2013-12-31]
+	Removed cross/i386-linux [wiz 2013-12-31]
+	Removed cross/i386-msdosdjgpp [wiz 2013-12-31]
+	Removed devel/cvsup [wiz 2013-12-31]
+	Removed devel/cvsup-gui [wiz 2013-12-31]
+	Removed lang/SmartEiffel [wiz 2013-12-31]
+	Removed lang/ezm3 [wiz 2013-12-31]
+	Removed lang/snobol [wiz 2013-12-31]
+	Removed mail/evolution-sharp [wiz 2013-12-31]
+	Removed math/octave-forge [wiz 2013-12-31]
+	Removed mbone/imm [wiz 2013-12-31]
+	Removed mbone/nte [wiz 2013-12-31]
+	Removed mbone/sdr [wiz 2013-12-31]
+	Removed print/teTeX3-texmfsrc [wiz 2013-12-31]
+	Removed sysutils/aperture [wiz 2013-12-31]
+	Removed wm/ion [wiz 2013-12-31]
+	Removed x11/xf86-video-nvxbox [wiz 2013-12-31]
