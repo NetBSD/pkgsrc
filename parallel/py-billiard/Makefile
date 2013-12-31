@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/31 13:27:51 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/31 15:47:24 rodent Exp $
 
 DISTNAME=	billiard-3.3.0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://github.com/celery/billiard
 COMMENT=	Python multiprocessing fork with improvements and bugfixes
 LICENSE=	modified-bsd
 
+USE_LANGUAGES+=	c
 REPLACE_PYTHON+=	funtests/setup.py funtests/tests/test_multiprocessing.py
 
 .include "../../lang/python/application.mk"
