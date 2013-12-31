@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2013/12/15 02:52:22 dholland Exp $
+# $NetBSD: Makefile,v 1.363 2013/12/31 17:08:08 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -7,7 +7,6 @@ SUBDIR+=	Cg-compiler
 SUBDIR+=	LuaJIT
 SUBDIR+=	LuaJIT2
 SUBDIR+=	STk
-SUBDIR+=	SmartEiffel
 SUBDIR+=	a60
 SUBDIR+=	abcl
 SUBDIR+=	algol68g
@@ -42,7 +41,6 @@ SUBDIR+=	embryo
 SUBDIR+=	erlang
 SUBDIR+=	erlang-doc
 SUBDIR+=	erlang-man
-SUBDIR+=	ezm3
 SUBDIR+=	f2c
 SUBDIR+=	ficl
 SUBDIR+=	focal
@@ -190,7 +188,6 @@ SUBDIR+=	sigscheme
 SUBDIR+=	siod
 SUBDIR+=	smalltalk
 SUBDIR+=	smlnj
-SUBDIR+=	snobol
 SUBDIR+=	spidermonkey
 SUBDIR+=	spl
 SUBDIR+=	squeak
