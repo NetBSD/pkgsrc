@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.prog.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: bsd.prog.mk,v 1.2 2013/12/31 19:10:20 dholland Exp $
 #	@(#)bsd.prog.mk	8.2 (Berkeley) 4/2/94
 
 .if !target(__initialized__)
@@ -52,48 +52,66 @@ CLEANFILES+=strings
 
 
 .if defined(PROG)
-SRCS?=		${PROG}.c
+PROGS?=		${PROG}
+.if defined(PROGNAME)
+PROGNAME.${PROG}?=${PROGNAME}
+.endif
+.if defined(SRCS)
+SRCS.${PROG}?=	${SRCS}
+.endif
+.if defined(DPSRCS)
+DPSRCS.${PROG}?=${DPSRCS}
+.endif
+.endif
 
-DPSRCS+=	${SRCS:M*.l:.l=.c} ${SRCS:M*.y:.y=.c}
-CLEANFILES+=	${DPSRCS}
+.if defined(PROGS)
+.for P in $(PROGS)
+SRCS.${P}?=	${P}.c
+
+DPSRCS.${P}+=	${SRCS.${P}:M*.l:.l=.c} ${SRCS.${P}:M*.y:.y=.c}
+CLEANFILES+=	${DPSRCS.${P}}
 .if defined(YHEADER)
-CLEANFILES+=	${SRCS:M*.y:.y=.h}
+CLEANFILES+=	${SRCS.${P}:M*.y:.y=.h}
 .endif
 
-.if !empty(SRCS:N*.h:N*.sh:N*.fth)
-OBJS+=		${SRCS:N*.h:N*.sh:N*.fth:R:S/$/.o/g}
-LOBJS+=		${LSRCS:.c=.ln} ${SRCS:M*.c:.c=.ln}
+.if !empty(SRCS.${P}:N*.h:N*.sh:N*.fth)
+OBJS.${P}+=	${SRCS.${P}:N*.h:N*.sh:N*.fth:R:S/$/.o/g}
+LOBJS.${P}+=	${LSRCS.${P}:.c=.ln} ${SRCS.${P}:M*.c:.c=.ln}
 .endif
 
-.if defined(OBJS) && !empty(OBJS)
-.NOPATH: ${OBJS}
+.if defined(OBJS.${P}) && !empty(OBJS.${P})
+.NOPATH: ${OBJS.${P}}
 .if defined(DESTDIR)
 
-${PROG}: ${LIBCRT0} ${DPSRCS} ${OBJS} ${LIBC} ${LIBCRTBEGIN} ${LIBCRTEND} ${DPADD}
-.if !commands(${PROG})
-	${CC} ${LDFLAGS} ${LDSTATIC} -o ${.TARGET} -nostdlib -Wl,-rpath-link,${DESTDIR}/usr/lib ${LIBCRT0} ${LIBCRTBEGIN} ${OBJS} ${LDADD} -L${DESTDIR}/usr/lib -lgcc -lc -lgcc ${LIBCRTEND}
+${P}: ${LIBCRT0} ${DPSRCS.${P}} ${OBJS.${P}} ${LIBC} ${LIBCRTBEGIN} ${LIBCRTEND} ${DPADD} ${DPADD.${P}}
+.if !commands(${PROG.${P}})
+	${CC} ${LDFLAGS} ${LDFLAGS.${P}} ${LDSTATIC} ${LDSTATIC.${P}} -o ${.TARGET} -nostdlib -Wl,-rpath-link,${DESTDIR}/usr/lib ${LIBCRT0} ${LIBCRTBEGIN} ${OBJS.${P}} ${LDADD.${P}} ${LDADD} -L${DESTDIR}/usr/lib -lgcc -lc -lgcc ${LIBCRTEND}
 .endif
 
 .else
 
-${PROG}: ${LIBCRT0} ${DPSRCS} ${OBJS} ${LIBC} ${LIBCRTBEGIN} ${LIBCRTEND} ${DPADD}
+${P}: ${LIBCRT0} ${DPSRCS.${P}} ${OBJS.${P}} ${LIBC} ${LIBCRTBEGIN} ${LIBCRTEND} ${DPADD} ${DPADD.${P}}
 .if !commands(${PROG})
-	${CC} ${LDFLAGS} ${LDSTATIC} -o ${.TARGET} ${OBJS} ${LDADD}
+	${CC} ${LDFLAGS} ${LDFLAGS.${P}} ${LDSTATIC} ${LDSTATIC.${P}} -o ${.TARGET} ${OBJS.${P}} ${LDADD.${P}} ${LDADD}
 .endif
 
 .endif	# defined(DESTDIR)
 .endif	# defined(OBJS) && !empty(OBJS)
 
-.if !defined(MAN)
-MAN=	${PROG}.1
-.endif	# !defined(MAN)
-.endif	# defined(PROG)
+.endfor	# P in PROGS
 
-realall: ${PROG} ${SCRIPTS}
+.if !defined(MAN)
+.for P in ${PROGS}
+MAN+=	${P}.1
+.endfor
+.endif	# !defined(MAN)
+.endif	# defined(PROGS)
+
+realall: ${PROGS} ${SCRIPTS}
 
 cleanprog:
 	rm -f a.out [Ee]rrs mklog core *.core \
-	    ${PROG} ${OBJS} ${LOBJS} ${CLEANFILES}
+	    ${PROGS} ${OBJS} ${LOBJS} ${CLEANFILES}
 
 .if defined(SRCS) && !target(afterdepend)
 afterdepend: .depend
@@ -103,23 +121,26 @@ afterdepend: .depend
 	    mv $$TMP .depend)
 .endif
 
-.if defined(PROG) && !target(proginstall)
-PROGNAME?=${PROG}
-
-proginstall:: ${DESTDIR}${BINDIR}/${PROGNAME}
-.PRECIOUS: ${DESTDIR}${BINDIR}/${PROGNAME}
-.if !defined(UPDATE)
-.PHONY: ${DESTDIR}${BINDIR}/${PROGNAME}
-.endif
+.if defined(PROGS) && !target(proginstall)
 
 __proginstall: .USE
 	${INSTALL} ${RENAME} ${PRESERVE} ${COPY} ${STRIPFLAG} ${INSTPRIV} \
 	    -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${.ALLSRC} ${.TARGET}
 
-.if !defined(BUILD) && !make(all) && !make(${PROG})
-${DESTDIR}${BINDIR}/${PROGNAME}: .MADE
+.for P in ${PROGS}
+PROGNAME.${P}?=${P}
+
+proginstall:: ${DESTDIR}${BINDIR}/${PROGNAME.${P}}
+.PRECIOUS: ${DESTDIR}${BINDIR}/${PROGNAME.${P}}
+.if !defined(UPDATE)
+.PHONY: ${DESTDIR}${BINDIR}/${PROGNAME.${P}}
 .endif
-${DESTDIR}${BINDIR}/${PROGNAME}: ${PROG} __proginstall
+
+.if !defined(BUILD) && !make(all) && !make(${P})
+${DESTDIR}${BINDIR}/${PROGNAME.${P}}: .MADE
+.endif
+${DESTDIR}${BINDIR}/${PROGNAME.${P}}: ${P} __proginstall
+.endfor
 .endif
 
 .if !target(proginstall)
