@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4611 2013/12/31 18:06:06 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4612 2013/12/31 19:11:08 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6830,3 +6830,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Added devel/py-greenlet version 0.4.1 [rodent 2013-12-31]
 	Updated devel/meld to 1.8.3 [wiz 2013-12-31]
 	Updated devel/dmake to 4.12.2 [wiz 2013-12-31]
+	Updated pkgtools/bootstrap-mk-files to 20131207 [dholland 2013-12-31]
