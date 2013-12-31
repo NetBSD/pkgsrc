@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/31 23:19:46 ryoon Exp $
+bin/libmediainfo-config
+lib/libmediainfo.la
+lib/pkgconfig/libmediainfo.pc
