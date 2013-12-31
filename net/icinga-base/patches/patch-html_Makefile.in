@@ -1,6 +1,6 @@
-$NetBSD: patch-html_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
+$NetBSD: patch-html_Makefile.in,v 1.2 2013/12/31 03:28:39 ryoon Exp $
 
---- html/Makefile.in.orig	2013-01-13 22:18:37.000000000 +0000
+--- html/Makefile.in.orig	2013-12-13 12:54:34.000000000 +0000
 +++ html/Makefile.in
 @@ -9,7 +9,7 @@ CFGDIR=@sysconfdir@
  BINDIR=@bindir@
@@ -11,7 +11,7 @@ $NetBSD: patch-html_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  CGILOGDIR=@CGILOGDIR@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -35,71 +35,71 @@ distclean: clean
+@@ -35,76 +35,76 @@ distclean: clean
  devclean: distclean
  
  install:
@@ -28,8 +28,11 @@ $NetBSD: patch-html_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images/logos
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui/theme
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui/theme/images
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui/themes
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base/images
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui/ui
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/jquery-ui-addon
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/js
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/ssi
 -	$(INSTALL) -m 444 $(INSTALL_OPTS) log/.htaccess $(DESTDIR)$(CGILOGDIR)
@@ -49,8 +52,11 @@ $NetBSD: patch-html_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images/logos
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui/theme
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui/theme/images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui/themes
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base/images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui/ui
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/jquery-ui-addon
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/js
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/ssi
 +	${BSD_INSTALL_DATA} log/.htaccess $(DESTDIR)$(CGILOGDIR)
@@ -99,15 +105,18 @@ $NetBSD: patch-html_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
  	for file in images/logos/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
- 	for file in jquery-ui/*.js; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui; done
- 	for file in jquery-ui/theme/*.css; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/theme; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/theme; done
- 	for file in jquery-ui/theme/images/*.png; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/theme/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/theme/images; done
+ 	for file in jquery-ui/ui/*.js; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/ui; done
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/ui; done
+ 	for file in jquery-ui/themes/base/*.css; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base; done
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base; done
+ 	for file in jquery-ui/themes/base/images/*.png; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base/images; done
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui/themes/base/images; done
+ 	for file in jquery-ui-addon/*.*; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/jquery-ui-addon; done
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/jquery-ui-addon; done
  	for file in js/*.js; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/js; done
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/js; done
@@ -118,11 +127,10 @@ $NetBSD: patch-html_Makefile.in,v 1.1 2013/03/02 04:08:27 ryoon Exp $
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/doxygen
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/doxygen/html
  	#for file in doxygen/*.*; \
--	#do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/doxygen; done
-+	#do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/doxygen; done
+ 	#do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/doxygen; done
  	for file in doxygen/html/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/doxygen/html; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/doxygen/html; done
++	do ${BSD_INSTALL_DATA_DIR} $$file $(DESTDIR)$(HTMLDIR)/doxygen/html; done
  
  install-unstripped:
  	$(MAKE) install
