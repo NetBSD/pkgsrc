@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4585 2013/12/31 11:32:24 obache Exp $
+$NetBSD: CHANGES-2013,v 1.4586 2013/12/31 11:37:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6785,3 +6785,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated textproc/mdocml to 1.12.3 [wiz 2013-12-31]
 	Updated archivers/libzip to 0.11.2 [wiz 2013-12-31]
 	Updated devel/ruby-pkg-config to 1.1.5 [obache 2013-12-31]
+	Updated graphics/ruby-rcairo to 1.12.8 [obache 2013-12-31]
