@@ -1,32 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2013/03/24 16:51:34 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/31 23:19:46 ryoon Exp $
 
-DISTNAME=		MediaInfo_CLI_0.7.62_GNU_FromSource
-PKGNAME=		mediainfo-0.7.62
-CATEGORIES=		multimedia
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mediainfo/}
-EXTRACT_SUFX=		.tar.bz2
+.include "../../multimedia/mediainfo/Makefile.common"
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://mediainfo.sourceforge.net/
-COMMENT=		Utility to supply technical info about audio and video
+PKGNAME=		${DISTNAME:S/mediainfo_/mediainfo-/S/_AllInclusive//}
 LICENSE=		gnu-lgpl-v3
 
-WRKSRC=			${WRKDIR}/MediaInfo_CLI_GNU_FromSource
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		autoconf automake gmake pkg-config
+USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
-OVERRIDE_DIRDEPTH=	4
-INSTALLATION_DIRS=	bin
+CONFIGURE_DIRS+=	MediaInfo/Project/GNU/CLI
 
-NO_CONFIGURE=		yes
+pre-configure:
+	cd ${WRKSRC}/${CONFIGURE_DIRS} && autoreconf -i
 
-do-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./CLI_Compile.sh
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/MediaInfo/Project/GNU/CLI/mediainfo \
-	    ${DESTDIR}${PREFIX}/bin/mediainfo
-
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../multimedia/libmediainfo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
