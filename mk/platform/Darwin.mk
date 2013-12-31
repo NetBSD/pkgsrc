@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.60 2013/11/24 10:13:41 tron Exp $
+# $NetBSD: Darwin.mk,v 1.61 2013/12/31 11:13:43 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -15,6 +15,7 @@
 # Snow Leopard	10.6.x	10.x.y	3.2+ (gcc 4.0.1 and 4.2.1)
 # Lion		10.7.x	11.x.y	4.1 (llvm gcc 4.2.1)
 # Mountain Lion	10.8.x	12.x.y	4.5 (llvm gcc 4.2.1)
+# Mavericks	10.9.x	13.x.y	5 (llvm clang 5.0)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
@@ -81,9 +82,9 @@ OSX_SDK_PATH!=	/usr/bin/xcrun --show-sdk-path 2>/dev/null || echo /nonexistent
 
 _OPSYS_SYSTEM_RPATH?=		/usr/lib
 _OPSYS_LIB_DIRS?=		/usr/lib
-.if exists(/usr/include)
+.if exists(/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=		/usr/include
-.elif exists(${OSX_SDK_PATH}/usr/include)
+.elif exists(${OSX_SDK_PATH}/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=		${OSX_SDK_PATH}/usr/include
 .endif
 
