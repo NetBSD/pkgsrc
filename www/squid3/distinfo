@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2013/12/10 14:48:26 adam Exp $
+$NetBSD: distinfo,v 1.18 2013/12/31 11:54:32 adam Exp $
 
-SHA1 (squid-3.4.1.tar.xz) = cbab66db759e6d533b22fe91907299e01e4da5ce
-RMD160 (squid-3.4.1.tar.xz) = 88a73b22505012b7543277e101a32475abc04bee
-Size (squid-3.4.1.tar.xz) = 2224312 bytes
+SHA1 (squid-3.4.2.tar.xz) = 2874ce2dbf578b22a3fe066138962b0c23e17cc2
+RMD160 (squid-3.4.2.tar.xz) = 7286ebfd5acb75384c8375c880bd883cd2890932
+Size (squid-3.4.2.tar.xz) = 2224616 bytes
 SHA1 (patch-compat_os_hpux.h) = f36b396282b1ee8ded7588519d266cced7dfdc40
 SHA1 (patch-compat_unsafe.h) = 89e6741432357a0523a43ef410d81bffcb263f81
 SHA1 (patch-configure) = 86400fd701a84eb174395755eec7b13cbfce55ec
