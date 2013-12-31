@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/06/27 01:36:25 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/31 14:42:13 rodent Exp $
 #
 
-DISTNAME=	ucommon-6.0.5
+DISTNAME=	ucommon-6.0.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=commonc++/}
 
