@@ -2254,16 +2254,16 @@ be read-only, some other must be writable. Some can be on remote filesystems
 (such as NFS) and some should be local. Some can be temporary filesystems,
 others must survive a sudden reboot.
 
-  * 10 GB for the distfiles (read-write, remote, temporary)
+  * 40 GB for the distfiles (read-write, remote, temporary)
 
-  * 10 GB for the binary packages (read-write, remote, permanent)
+  * 30 GB for the binary packages (read-write, remote, permanent)
 
-  * 400 MB for the pkgsrc tree (read-only, remote, permanent)
+  * 1 GB for the pkgsrc tree (read-only, remote, permanent)
 
   * 5 GB for LOCALBASE (read-write, local, temporary for pbulk, permanent for
     old-bulk)
 
-  * 5 GB for the log files (read-write, remote, permanent)
+  * 10 GB for the log files (read-write, remote, permanent)
 
   * 5 GB for temporary files (read-write, local, temporary)
 
@@ -2421,11 +2421,11 @@ rebuild them, and they can be used to debug these broken package builds later.
 
 7.3.5. Disk space requirements
 
-Currently, roughly the following requirements are valid for NetBSD 2.0/i386:
+Currently, roughly the following requirements are valid for NetBSD 6.99/amd64:
 
-  * 10 GB - distfiles (NFS ok)
+  * 40 GB - distfiles (NFS ok)
 
-  * 8 GB - full set of all binaries (NFS ok)
+  * 30 GB - full set of all binaries (NFS ok)
 
   * 5 GB - temp space for compiling (local disk recommended)
 
