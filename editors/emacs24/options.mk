@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/08/14 20:17:08 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2013/12/31 16:50:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=	dbus xft2 svg
@@ -7,9 +7,6 @@ PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk2 gtk3 motif xaw
 PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
-
-# remove after pkgsrc-2013Q4
-PKG_OPTIONS_LEGACY_OPTS=	gtk:gtk2
 
 .include "../../mk/bsd.options.mk"
 
