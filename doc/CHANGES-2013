@@ -1,8 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4579 2013/12/31 05:53:08 ryoon Exp $
-
-**************************************************************
-************** PKGSRC CURRENTLY FROZEN ***********************
-**************************************************************
+$NetBSD: CHANGES-2013,v 1.4580 2013/12/31 10:21:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6783,3 +6779,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated lang/openjdk7 to 1.7.25nb3 [ryoon 2013-12-30]
 	Updated net/icinga-base to 1.9.4 [ryoon 2013-12-31]
 	Updated www/php-piwigo to 2.5.3 [ryoon 2013-12-31]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2013Q4 branch [wiz 2013-12-31]
