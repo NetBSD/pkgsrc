@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/31 22:12:03 ryoon Exp $
 bin/jflex
 lib/java/JFlex.jar
 share/doc/jflex/COPYRIGHT
 share/doc/jflex/crossref.png
 share/doc/jflex/footnote.png
 share/doc/jflex/jflex_anttask.html
-share/doc/jflex/logo.gif
+share/doc/jflex/logo.png
 share/doc/jflex/manual.css
 share/doc/jflex/manual.html
 share/doc/jflex/manual.pdf
@@ -60,6 +60,18 @@ share/examples/jflex/java/java.flex
 share/examples/jflex/java/java12.cup
 share/examples/jflex/java/lexer-output.good
 share/examples/jflex/java/unicode.flex
+share/examples/jflex/pom.xml
+share/examples/jflex/simple-maven/README.txt
+share/examples/jflex/simple-maven/pom.xml
+share/examples/jflex/simple-maven/src/README
+share/examples/jflex/simple-maven/src/main/java/Utility.java
+share/examples/jflex/simple-maven/src/main/java/Yytoken.java
+share/examples/jflex/simple-maven/src/main/jflex/simple.flex
+share/examples/jflex/simple-maven/src/site/apt/usage.apt
+share/examples/jflex/simple-maven/src/site/site.xml
+share/examples/jflex/simple-maven/src/test/java/YylexTest.java
+share/examples/jflex/simple-maven/src/test/resources/output.good
+share/examples/jflex/simple-maven/src/test/resources/test.txt
 share/examples/jflex/simple/Makefile
 share/examples/jflex/simple/README
 share/examples/jflex/simple/Utility.java
@@ -67,8 +79,15 @@ share/examples/jflex/simple/Yytoken.java
 share/examples/jflex/simple/output.good
 share/examples/jflex/simple/simple.flex
 share/examples/jflex/simple/test.txt
+share/examples/jflex/standalone-maven/pom.xml
+share/examples/jflex/standalone-maven/src/main/jflex/standalone.flex
+share/examples/jflex/standalone-maven/src/test/java/de/jflex/example/standalone/SubstTest.java
+share/examples/jflex/standalone-maven/src/test/resources/sample.expected
+share/examples/jflex/standalone-maven/src/test/resources/sample.in
 share/examples/jflex/standalone/Makefile
 share/examples/jflex/standalone/README
 share/examples/jflex/standalone/build.xml
 share/examples/jflex/standalone/sample.inp
 share/examples/jflex/standalone/standalone.flex
+@pkgdir share/examples/jflex/standalone-maven/src/main/java
+@pkgdir share/examples/jflex/simple-maven/src/main/resources
