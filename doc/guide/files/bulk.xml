@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.11 2013/12/31 17:23:49 wiz Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.12 2013/12/31 19:27:06 dholland Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -66,15 +66,15 @@ temporary filesystems, others must survive a sudden reboot.</para>
 
 <itemizedlist>
 
-<listitem><para>10 GB for the distfiles (read-write, remote, temporary)</para></listitem>
+<listitem><para>40 GB for the distfiles (read-write, remote, temporary)</para></listitem>
 
-<listitem><para>10 GB for the binary packages (read-write, remote, permanent)</para></listitem>
+<listitem><para>30 GB for the binary packages (read-write, remote, permanent)</para></listitem>
 
-<listitem><para>400 MB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
+<listitem><para>1 GB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
 
 <listitem><para>5 GB for <filename>LOCALBASE</filename> (read-write, local, temporary for pbulk, permanent for old-bulk)</para></listitem>
 
-<listitem><para>5 GB for the log files (read-write, remote, permanent)</para></listitem>
+<listitem><para>10 GB for the log files (read-write, remote, permanent)</para></listitem>
 
 <listitem><para>5 GB for temporary files (read-write, local, temporary)</para></listitem>
 
@@ -329,15 +329,15 @@ fi
       <title>Disk space requirements</title>
 
       <para>Currently, roughly the following requirements are valid for
-      NetBSD 2.0/i386:</para>
+      NetBSD 6.99/amd64:</para>
 
       <itemizedlist>
 	<listitem>
-	  <para>10 GB - distfiles (NFS ok)</para>
+	  <para>40 GB - distfiles (NFS ok)</para>
 	</listitem>
 
 	<listitem>
-	  <para>8 GB - full set of all binaries (NFS ok)</para>
+	  <para>30 GB - full set of all binaries (NFS ok)</para>
 	</listitem>
 
 	<listitem>
