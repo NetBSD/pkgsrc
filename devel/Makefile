@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1825 2013/12/31 18:00:08 rodent Exp $
+# $NetBSD: Makefile,v 1.1826 2013/12/31 23:12:32 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -454,6 +454,7 @@ SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	libwnck3
 SUBDIR+=	libxenserver
+SUBDIR+=	libzen
 SUBDIR+=	lincvs
 SUBDIR+=	lmdbg
 SUBDIR+=	locktests
