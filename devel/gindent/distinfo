@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.10 2012/04/17 17:42:33 joerg Exp $
+$NetBSD: distinfo,v 1.11 2013/12/31 16:14:15 jakllsch Exp $
 
-SHA1 (indent-2.2.9.tar.gz) = 9329422a366a77fca64102282a3ec99c0dd47b83
-RMD160 (indent-2.2.9.tar.gz) = ed858ace1479236ce24725b42c8490095ce06ada
-Size (indent-2.2.9.tar.gz) = 678173 bytes
-SHA1 (patch-aa) = aadb9d20c6fa61840e6c9a66b9cab46ea1f4bcd3
-SHA1 (patch-ab) = 3feeab7810572653916e256645c7a7d8ec93764e
-SHA1 (patch-ac) = eed6b88a80202a03cb8eb33e639d43d0ee99fa91
-SHA1 (patch-src_lexi.c) = bda2219bca12321798330568255e57f2fb6892c1
+SHA1 (indent-2.2.10.tar.gz) = 20fa8a7a4af6670c3254c8b87020291c3db37ed1
+RMD160 (indent-2.2.10.tar.gz) = 66164db3f28ddc9726a56fb184795a335aac34b0
+Size (indent-2.2.10.tar.gz) = 702667 bytes
+SHA1 (patch-aa) = 4fec5c93c44b5635f828cba92e5b955379a39fc9
+SHA1 (patch-ab) = 99a3d46d1713042038deeba323ffe8ce37e3ce75
+SHA1 (patch-src_lexi.c) = 5c7270265ca58c6ce63dd11d2f7c84f0a7fc8812

@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2002/08/31 00:29:59 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2013/12/31 16:14:15 jakllsch Exp $
 
---- doc/Makefile.in.orig	Sat Aug 31 02:23:30 2002
+--- doc/Makefile.in.orig	2008-03-11 18:54:15.000000000 +0000
 +++ doc/Makefile.in
-@@ -103,7 +103,7 @@ TEXI2PDF = @TEXI2PDF@
- 
- info_TEXINFOS = indent.texinfo
- 
+@@ -163,7 +163,7 @@ build_vendor = @build_vendor@
+ builddir = @builddir@
+ datadir = @datadir@
+ datarootdir = @datarootdir@
 -docdir = $(prefix)/doc/@PACKAGE@
 +docdir = $(prefix)/share/doc/@PACKAGE@
  dvidir = $(docdir)
- psdir = $(docdir)
- pdfdir = $(docdir)
+ exec_prefix = @exec_prefix@
+ host = @host@
