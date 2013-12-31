@@ -1,0 +1,2 @@
+Socket pool is a simple socket pool that suports multiple factories and
+backends. It can easily be used by gevent, eventlet or any other library.
