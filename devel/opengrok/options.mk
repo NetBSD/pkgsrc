@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/10/25 18:11:16 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2013/12/31 22:56:12 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opengrok
 
-PKG_SUPPORTED_OPTIONS=	svn opengrok-build
+PKG_SUPPORTED_OPTIONS=	svn
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,18 +12,4 @@ PKG_SUPPORTED_OPTIONS=	svn opengrok-build
 .if !empty(PKG_OPTIONS:Msvn)
 .  include "../../devel/subversion-base/buildlink3.mk"
 BUILDLINK_API_DEPENDS.subversion-base+= subversion-base>=1.3.0
-.endif
-
-###
-### Rebuild OpenGrok
-###
-.if !empty(PKG_OPTIONS:Mopengrok-build)
-DEPENDS+=	jflex-[0-9]*:../../devel/jflex
-DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
-USE_JAVA=	yes
-
-OPENGROK_SOURCES=	${PKGNAME_NOREV}-src${EXTRACT_SUFX}
-DISTFILES+=		${OPENGROK_SOURCES}
-EXTRACT_ONLY+=		${OPENGROK_SOURCES}
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-src
 .endif
