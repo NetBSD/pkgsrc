@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4587 2013/12/31 12:04:37 adam Exp $
+$NetBSD: CHANGES-2013,v 1.4588 2013/12/31 12:10:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6789,3 +6789,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated www/squid3 to 3.4.2 [adam 2013-12-31]
 	Updated www/curl to 7.34.0 [adam 2013-12-31]
 	Updated www/py-django to 1.6.1 [adam 2013-12-31]
+	Updated databases/slony1 to 2.2.1 [adam 2013-12-31]
