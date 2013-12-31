@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/04/01 16:03:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/12/31 11:07:14 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 bin/ziptorrent
@@ -34,9 +34,11 @@ man/man3/zip_file_extra_field_set.3
 man/man3/zip_file_extra_fields_count.3
 man/man3/zip_file_extra_fields_count_by_id.3
 man/man3/zip_file_get_comment.3
+man/man3/zip_file_get_external_attributes.3
 man/man3/zip_file_rename.3
 man/man3/zip_file_replace.3
 man/man3/zip_file_set_comment.3
+man/man3/zip_file_set_external_attributes.3
 man/man3/zip_file_strerror.3
 man/man3/zip_fopen.3
 man/man3/zip_fopen_encrypted.3
