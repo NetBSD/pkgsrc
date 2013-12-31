@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:07 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/31 22:12:03 ryoon Exp $
 #
 
-DISTNAME=	jflex-1.4.1
+DISTNAME=	jflex-1.4.3
 CATEGORIES=	devel
 MASTER_SITES=	http://jflex.de/
 
