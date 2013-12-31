@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2013/09/11 07:57:35 obache Exp $
+# $NetBSD: Makefile,v 1.217 2013/12/31 23:22:20 ryoon Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -111,6 +111,7 @@ SUBDIR+=	libkate
 SUBDIR+=	libkcddb
 SUBDIR+=	libkcompactdisc
 SUBDIR+=	libmatroska
+SUBDIR+=	libmediainfo
 SUBDIR+=	libmp4v2
 SUBDIR+=	libmpeg2
 SUBDIR+=	libmpeg3
