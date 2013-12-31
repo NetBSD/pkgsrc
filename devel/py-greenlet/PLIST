@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/31 17:59:08 rodent Exp $
+${PYINC}/greenlet/greenlet.h
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/greenlet.so
