@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/05/08 15:20:41 obache Exp $
+$NetBSD: distinfo,v 1.7 2013/12/31 18:05:55 wiz Exp $
 
-SHA1 (dmake-v4.1-src-export.all-unknown-all.tar.gz) = 6262a38d58fdb69242ddfe663be9caada1882d64
-RMD160 (dmake-v4.1-src-export.all-unknown-all.tar.gz) = ba76d48a6057b6af01b8abd7c72cc7521f60a983
-Size (dmake-v4.1-src-export.all-unknown-all.tar.gz) = 473427 bytes
-SHA1 (patch-aa) = 589a7187dc7e83c84588fd5a110b790877693edb
-SHA1 (patch-ab) = 4d471356c5dd4ac28bcd09a97d770717045f8bcd
+SHA1 (dmake-4.12.2.tar.bz2) = 375a58b516020549951bb16a46b4d4e787cd1e51
+RMD160 (dmake-4.12.2.tar.bz2) = c7440f84999ed30a2879260f90f75196934ec0db
+Size (dmake-4.12.2.tar.bz2) = 461738 bytes
