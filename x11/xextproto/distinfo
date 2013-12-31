@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/06/03 18:39:08 wiz Exp $
+$NetBSD: distinfo,v 1.9 2013/12/31 17:34:27 wiz Exp $
 
-SHA1 (xextproto-7.2.1.tar.bz2) = f969e02009adf2d51fd1ba4583a859984728a461
-RMD160 (xextproto-7.2.1.tar.bz2) = bd57600da0f561d8e7eb70fc7916407b00cd8d4b
-Size (xextproto-7.2.1.tar.bz2) = 229282 bytes
+SHA1 (xextproto-7.3.0.tar.bz2) = b8d736342dcb73b71584d99a1cb9806d93c25ff8
+RMD160 (xextproto-7.3.0.tar.bz2) = 241a3050c149fc00d308723fed10eed837406359
+Size (xextproto-7.3.0.tar.bz2) = 229310 bytes
