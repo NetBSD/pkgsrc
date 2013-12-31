@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.574 2013/12/05 04:12:30 jnemeth Exp $
+# $NetBSD: Makefile,v 1.575 2013/12/31 17:08:08 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -144,7 +144,6 @@ SUBDIR+=	tcl-pdflib
 SUBDIR+=	teTeX
 SUBDIR+=	teTeX3-bin
 SUBDIR+=	teTeX3-texmf
-SUBDIR+=	teTeX3-texmfsrc
 SUBDIR+=	tex-2up
 SUBDIR+=	tex-2up-doc
 SUBDIR+=	tex-IEEEconf

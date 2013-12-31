@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2013/11/14 15:04:53 asau Exp $
+# $NetBSD: Makefile,v 1.259 2013/12/31 17:08:08 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -147,7 +147,6 @@ SUBDIR+=	newmat
 SUBDIR+=	nickle
 SUBDIR+=	ntl
 SUBDIR+=	octave
-SUBDIR+=	octave-forge
 SUBDIR+=	odepack
 SUBDIR+=	openaxiom
 SUBDIR+=	openfst

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:32 joerg Exp $
-lib/libevolutionglue.la
-lib/mono/evolution-sharp/evolution-sharp.dll
-lib/mono/gac/evolution-sharp/5.0.0.0__c46a23b774189844/evolution-sharp.dll
-lib/mono/gac/evolution-sharp/5.0.0.0__c46a23b774189844/evolution-sharp.dll.config
-lib/mono/gac/evolution-sharp/5.0.0.0__c46a23b774189844/evolution-sharp.dll.mdb
-lib/pkgconfig/evolution-sharp.pc
-share/gapi-2.0/evolution-api.xml

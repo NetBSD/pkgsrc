@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2013/11/18 06:43:03 mef Exp $
+# $NetBSD: Makefile,v 1.56 2013/12/31 17:08:08 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -28,9 +28,6 @@ SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc34
 SUBDIR+=	h8300-hms-binutils
 SUBDIR+=	h8300-hms-gcc
-SUBDIR+=	i386-cygwin32
-SUBDIR+=	i386-linux
-SUBDIR+=	i386-msdosdjgpp
 SUBDIR+=	icdprog
 #SUBDIR+=	libtool-base	# added here to keep pkglint happy
 SUBDIR+=	mingw
