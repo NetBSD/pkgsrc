@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4614 2013/12/31 19:56:34 rodent Exp $
+$NetBSD: CHANGES-2013,v 1.4615 2013/12/31 22:12:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -6833,3 +6833,4 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated pkgtools/bootstrap-mk-files to 20131207 [dholland 2013-12-31]
 	Added www/py-http-parser version 0.8.3 [rodent 2013-12-31]
 	Added net/py-socketpool version 0.5.3 [rodent 2013-12-31]
+	Updated devel/jflex to 1.4.3 [ryoon 2013-12-31]
