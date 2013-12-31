@@ -1,9 +1,0 @@
--- $NetBSD: loadpath.se.in,v 1.2 2000/02/25 17:58:00 jlam Exp $
---
-@PREFIX@/share/egtk/gdk
-@PREFIX@/share/egtk/gdk/se
-@PREFIX@/share/egtk/gdk/externals
-@PREFIX@/share/egtk/gtk
-@PREFIX@/share/egtk/gtk/se
-@PREFIX@/share/egtk/gtk/externals
-@PREFIX@/share/egtk/egtk
