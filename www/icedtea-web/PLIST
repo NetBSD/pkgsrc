@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/02 06:15:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/31 17:09:02 abs Exp $
 lib/IcedTeaPlugin.so
 lib/netscape/plugins/IcedTeaPlugin.so
-share/icedtea-web/about.jar
-share/icedtea-web/about.jnlp
 share/icedtea-web/javaws_splash.png
 share/icedtea-web/netx.jar
 share/icedtea-web/plugin.jar
