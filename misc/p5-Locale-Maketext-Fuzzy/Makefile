@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2013/05/31 12:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/01 03:23:49 ryoon Exp $
 #
 
-DISTNAME=		Locale-Maketext-Fuzzy-0.10
+DISTNAME=		Locale-Maketext-Fuzzy-0.11
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		5
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Locale/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Locale-Maketext-Fuzzy/
 COMMENT=		Maketext from already interpolated strings
+LICENSE=		cc0-1.0-universal
 
 DEPENDS+=		{perl>=5.8.0,p5-Locale-Maketext-[0-9]*}:../../misc/p5-Locale-Maketext
 
