@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/04/08 11:17:24 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/01 11:52:37 wiz Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
 PKGNAME=	${APACHE_PKG_PREFIX}-xslt2-${DIST_VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.mod-xslt2.com/software/archive/${DIST_VER}/
 
