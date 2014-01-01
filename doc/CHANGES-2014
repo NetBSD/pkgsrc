@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.27 2014/01/01 17:59:11 kleink Exp $
+$NetBSD: CHANGES-2014,v 1.28 2014/01/01 22:52:45 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -35,3 +35,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/py-passlib to 1.6.2 [kleink 2014-01-01]
 	Updated www/py-flask-wtf to 0.9.4 [kleink 2014-01-01]
 	Updated www/py-flask-login to 0.2.9 [kleink 2014-01-01]
+	Updated meta-pkgs/bulk-small to 20140101 [dholland 2014-01-01]
