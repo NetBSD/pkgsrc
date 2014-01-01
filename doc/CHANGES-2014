@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.15 2014/01/01 07:16:54 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.16 2014/01/01 07:51:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -16,3 +16,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/patch to 2.7.1 [ryoon 2014-01-01]
 	Added devel/py-newt version 0.52.16 [ryoon 2014-01-01]
 	Added misc/byobu version 5.69 [ryoon 2014-01-01]
+	Updated textproc/cabocha to 0.67 [obache 2014-01-01]
+	Updated textproc/p5-cabocha to 0.67 [obache 2014-01-01]
+	Updated textproc/py-cabocha to 0.67 [obache 2014-01-01]
+	Updated textproc/ruby-cabocha to 0.67 [obache 2014-01-01]
