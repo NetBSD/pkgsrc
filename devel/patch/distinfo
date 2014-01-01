@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/07/09 10:32:17 tron Exp $
+$NetBSD: distinfo,v 1.7 2014/01/01 05:32:27 ryoon Exp $
 
-SHA1 (patch-2.5.9.tar) = cef413b13e514344bab923f5addb286a574d86a7
-RMD160 (patch-2.5.9.tar) = 47f611840f16a4482af4742e63f24da5cd7ab5ee
-Size (patch-2.5.9.tar) = 950784 bytes
+SHA1 (patch-2.7.1.tar) = abf70cd7798af8421388a68139756f851d1e8e76
+RMD160 (patch-2.7.1.tar) = 70aa4f9590a7a63740c6af2355c7c2cb1560fbaa
+Size (patch-2.7.1.tar) = 4536320 bytes
