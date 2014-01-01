@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2013/06/04 22:16:58 tron Exp $
+# $NetBSD: Makefile,v 1.102 2014/01/01 19:47:30 christos Exp $
 #
 
 # XXX The version number is the last one before the agpl change.
@@ -19,9 +19,9 @@ PKG_SUGGESTED_OPTIONS+=		ghostscript-gpl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mghostscript-agpl)
+.if !empty(PKG_OPTIONS_VAR:Mghostscript-agpl)
 DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
-.elif !empty(PKG_OPTIONS:Mghostscript-gpl)
+.elif !empty(PKG_OPTIONS_VAR:Mghostscript-gpl)
 DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 .endif
 
