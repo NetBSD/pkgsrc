@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.19 2014/01/01 09:33:45 wen Exp $
+$NetBSD: CHANGES-2014,v 1.20 2014/01/01 11:15:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -23,3 +23,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/groonga to 3.1.1 [obache 2014-01-01]
 	Updated devel/p5-Import-Into to 1.002000 [wen 2014-01-01]
 	Updated devel/p5-Sub-Exporter-Progressive to 0.001011 [wen 2014-01-01]
+	Updated devel/git to 1.8.5.2 [adam 2014-01-01]
+	Updated devel/git-base to 1.8.5.2 [adam 2014-01-01]
+	Updated devel/git-docs to 1.8.5.2 [adam 2014-01-01]
+	Updated www/gitweb to 1.8.5.2 [adam 2014-01-01]
