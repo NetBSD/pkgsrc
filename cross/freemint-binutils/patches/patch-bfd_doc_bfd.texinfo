@@ -1,0 +1,26 @@
+$NetBSD: patch-bfd_doc_bfd.texinfo,v 1.1 2014/01/01 14:27:55 mef Exp $
+
+Interim fix for SunOS 5.11 (bulkbuild)
+  binutils-2.23.2/bfd/doc/bfd.texinfo:325: unknown command `colophon'
+  binutils-2.23.2/bfd/doc/bfd.texinfo:336: unknown command `cygnus'
+
+--- bfd/doc/bfd.texinfo~	2010-10-28 20:40:25.000000000 +0900
++++ bfd/doc/bfd.texinfo	2014-01-01 23:17:48.000000000 +0900
+@@ -322,7 +322,7 @@ All of BFD lives in one directory.
+ @printindex cp
+ 
+ @tex
+-% I think something like @colophon should be in texinfo.  In the
++% I think something like @@colophon should be in texinfo.  In the
+ % meantime:
+ \long\def\colophon{\hbox to0pt{}\vfill
+ \centerline{The body of this manual is set in}
+@@ -333,7 +333,7 @@ All of BFD lives in one directory.
+ \centerline{{\sl\fontname\tensl\/}}
+ \centerline{are used for emphasis.}\vfill}
+ \page\colophon
+-% Blame: doc@cygnus.com, 28mar91.
++% Blame: doc@@cygnus.com, 28mar91.
+ @end tex
+ 
+ @bye
