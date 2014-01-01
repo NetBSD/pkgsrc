@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/12/31 18:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/01 14:22:30 wiz Exp $
 
 DISTNAME=	dmake-4.12.2
 CATEGORIES=	devel
@@ -18,6 +18,10 @@ TEST_TARGET=	check
 INSTALLATION_DIRS=	bin share/dmake ${PKGMANDIR}/man1
 
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/dmake
+
+pre-test:
+	${SH} -c 'for a in 1 2 3 4 5 6 7 8 9 10 11 12;\
+	 do ${CHMOD} u+x ${WRKSRC}/tests/targets-$$a ;done'
 
 pre-install:
 	${INSTALL_MAN} ${WRKSRC}/man/dmake.tf \
