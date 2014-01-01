@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2013/12/15 19:50:19 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2014/01/01 08:48:47 obache Exp $
 #
 
-DISTNAME=	groonga-3.1.0
+DISTNAME=	groonga-3.1.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -43,17 +43,13 @@ OWN_DIRS+=		${VARBASE}/log/${PKGBASE}
 CHECK_WRKREF_SKIP+=	bin/groonga
 CHECK_INTERPRETER_SKIP+=	share/groonga/examples/*
 
-REPLACE_RUBY+=	data/munin/groonga_cpu_time
-REPLACE_RUBY+=	data/munin/groonga_disk
-REPLACE_RUBY+=	data/munin/groonga_n_records
-REPLACE_RUBY+=	data/munin/groonga_query_performance
-REPLACE_RUBY+=	data/munin/groonga_status
+REPLACE_RUBY+=	data/munin/groonga_cpu_time_
+REPLACE_RUBY+=	data/munin/groonga_disk_
+REPLACE_RUBY+=	data/munin/groonga_n_records_
+REPLACE_RUBY+=	data/munin/groonga_query_performance_
+REPLACE_RUBY+=	data/munin/groonga_status_
+REPLACE_RUBY+=	data/munin/groonga_throughput_
 .include "../../lang/ruby/replace.mk"
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-MAKE_ENV+=	CLANG_NO_OPT=-O0
-.endif
 
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
