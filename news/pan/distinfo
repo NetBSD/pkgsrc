@@ -1,6 +1,17 @@
-$NetBSD: distinfo,v 1.26 2013/07/17 07:41:44 wiz Exp $
+$NetBSD: distinfo,v 1.27 2014/01/01 12:10:00 wiz Exp $
 
 SHA1 (pan-0.139.tar.bz2) = 01ea0361a6d81489888e6abb075fd552999c3c60
 RMD160 (pan-0.139.tar.bz2) = e0e2963b2d11b362201639ca755ad9ae43581c2f
 Size (pan-0.139.tar.bz2) = 1523907 bytes
+SHA1 (patch-pan_data-impl_article-filter.cc) = 8d395673700dc10e0fca556fb6058b10de95ea9d
+SHA1 (patch-pan_data-impl_groups.cc) = 21da9a139bbc37d76f8364bc1d6003702c9f3ff9
+SHA1 (patch-pan_data-impl_rules-filter.cc) = 4d10677b204bb419b42ec369b2fbef6541572c1d
+SHA1 (patch-pan_general_log.cc) = ef37ec3af99236ff68328a60a1f2f7eaed232070
+SHA1 (patch-pan_general_log.h) = 981e7036c30ed56c554d501d625016499a559935
+SHA1 (patch-pan_gui_header-pane.cc) = f8e2b04d53c8c6495b14f826f95b1b3b74d2aebd
+SHA1 (patch-pan_gui_log-ui.cc) = e455ea6d165c315e0969a8199d0e4549958280bb
+SHA1 (patch-pan_usenet-utils_filter-info.cc) = 6049d198a3a5029429a8d4f9f0fd3fed0896ebfb
+SHA1 (patch-pan_usenet-utils_filter-info.h) = 23a2d86ee09cb36c805ca1b7c7c777e6daedb918
 SHA1 (patch-pan_usenet-utils_mime-utils.cc) = fb3703e8e5ddd24b337b583e3f4348358a0098f5
+SHA1 (patch-pan_usenet-utils_rules-info.h) = 8b150a171c69b434187535bd0b2f837938f40636
+SHA1 (patch-pan_usenet-utils_scorefile.cc) = 9cb7d4c9cf593beedebdf4972058bcdee51ee349
