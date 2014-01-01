@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/01 03:15:50 ryoon Exp $
+
+SHA1 (Crypt-X509-0.51.tar.gz) = 5c6bfeac0d2b6d98895c328db1ad07426d3b0105
+RMD160 (Crypt-X509-0.51.tar.gz) = 78bc9a2f3f38f3eecd6d04e3f014f152d7ccf3fb
+Size (Crypt-X509-0.51.tar.gz) = 21416 bytes
