@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/10/31 11:17:14 asau Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/01 02:48:31 ryoon Exp $
 #
 
-DISTNAME=	libgetopt-1.4.4
+DISTNAME=	libgetopt-1.4.5
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +16,8 @@ WRKSRC=		${WRKDIR}/libgetopt
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX" || ${OPSYS} == "HPUX" || ${OPSYS} == "OSF1"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX" || ${OPSYS} == "HPUX" || \
+	${OPSYS} == "OSF1" || ${OPSYS} == "Linux"
 CFLAGS+=	-DREPLACE_GETOPT
 .endif
 CFLAGS.OSF1+=	-I.	# stdio.h includes <getopt.h>, make sure it's our copy
