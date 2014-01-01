@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1828 2014/01/01 03:09:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.1829 2014/01/01 03:12:31 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1186,6 +1186,7 @@ SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Name
 SUBDIR+=	p5-Sub-Override
 SUBDIR+=	p5-Sub-Uplevel
+SUBDIR+=	p5-Symbol-Global-Name
 SUBDIR+=	p5-Syntax-Keyword-Junction
 SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
