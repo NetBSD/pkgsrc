@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1826 2013/12/31 23:12:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.1827 2014/01/01 03:07:13 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -699,6 +699,7 @@ SUBDIR+=	p5-Data-Dump
 SUBDIR+=	p5-Data-Dump-Streamer
 SUBDIR+=	p5-Data-Dumper-Concise
 SUBDIR+=	p5-Data-Dumper-Names
+SUBDIR+=	p5-Data-GUID
 SUBDIR+=	p5-Data-Hierarchy
 SUBDIR+=	p5-Data-Integer
 SUBDIR+=	p5-Data-MessagePack
