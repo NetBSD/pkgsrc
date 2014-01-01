@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/04/06 08:39:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/01 23:59:27 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.24.0
-PKGREVISION=	1
+DISTNAME=	mk-configure-0.25.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -14,9 +13,12 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	bmake-[0-9]*:../../devel/bmake
 
-USE_LANGUAGES=		# no languages
+USE_LANGUAGES=		c
 
-DOC_FILES=		doc/presentation.pdf
+BUILD_TARGET=		all all-doc
+INSTALL_TARGET=		install install-doc
+
+MAKE_PROGRAM=		${PREFIX}/bin/bmake
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} \
 			SYSCONFDIR=${PKG_SYSCONFDIR} \
@@ -24,15 +26,11 @@ MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} \
 
 AUTO_MKDIRS=		yes
 
-PKGDOCDIR=		share/doc/mk-configure
 EGDIR=			share/examples/mk-configure
 
-#TEST_TARGET=		test
+TEST_TARGET=		test
 
 post-install:
-.for i in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PREFIX}/${PKGDOCDIR}
-.endfor
 	cp -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
@@ -42,6 +40,10 @@ REPLACE_INTERPRETER+=	awk
 REPLACE.awk.old=	/usr/bin/awk
 REPLACE.awk.new=	/usr/xpg4/bin/awk
 REPLACE_FILES.awk=	mkc_check_version
+.endif
+
+.if ${OPSYS} != NetBSD && ${OPSYS} != FreeBSD && ${OPSYS} != OpenBSD && ${OPSYS} != DragonFly && ${OPSYS} != MirBSD
+DEPENDS+=	bmkdep-[0-9]*:../../devel/bmkdep
 .endif
 
 .include "../../mk/bsd.pkg.mk"
