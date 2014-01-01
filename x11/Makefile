@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.724 2013/12/31 17:17:17 wiz Exp $
+# $NetBSD: Makefile,v 1.725 2014/01/01 08:58:18 obache Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -48,7 +48,6 @@ SUBDIR+=	ede
 SUBDIR+=	editres
 SUBDIR+=	eekboard
 SUBDIR+=	efltk
-SUBDIR+=	egtk
 SUBDIR+=	elementary
 SUBDIR+=	elementary-icon-theme
 SUBDIR+=	enlightenment
