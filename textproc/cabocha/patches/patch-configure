@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.3 2014/01/01 07:49:32 obache Exp $
+
+* prevent to overwrite CFLAGS/CXXFLAGS
+
+--- configure.orig	2014-01-01 01:45:18.000000000 +0000
++++ configure
+@@ -17601,11 +17601,6 @@ ac_link='$CXX -o conftest$ac_exeext $CXX
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+ 
+-if test -n "$GCC"; then
+-   CFLAGS="-O3  -Wno-deprecated -Wall"
+-   CXXFLAGS="-O3 -Wno-deprecated -Wall"
+-fi
+-
+ 
+ # Check whether --with-charset was given.
+ if test "${with_charset+set}" = set; then :
