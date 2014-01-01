@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/04/08 11:17:21 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/01 11:52:33 wiz Exp $
 #
 
 # history: upstream renamed 0.11 to 0.1.1;
@@ -7,7 +7,7 @@
 VER=			0.5.4
 DISTNAME=		libssh-${VER}
 PKGNAME=		libssh-0.54
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		https://red.libssh.org/attachments/download/41/
 

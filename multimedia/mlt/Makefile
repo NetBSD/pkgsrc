@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2013/11/25 12:00:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/01 11:52:27 wiz Exp $
 
 DISTNAME=	mlt-0.8.6
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.sourceforge.net/project/mlt/mlt/
 

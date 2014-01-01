@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/11/07 12:35:42 markd Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/01 11:52:25 wiz Exp $
 
 DISTNAME=	kwordquiz-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	KDE flash card trainer
 

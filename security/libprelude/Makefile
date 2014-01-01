@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2013/07/12 10:45:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2014/01/01 11:52:02 wiz Exp $
 #
 
 COMMENT=	LibPrelude libraries and c++ easy bindings
-PKGREVISION=	7
+PKGREVISION=	8
 
 .include "../../security/libprelude/Makefile.common"
 

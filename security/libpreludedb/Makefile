@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2013/05/31 12:41:51 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/01 11:52:09 wiz Exp $
 #
 
 COMMENT=		LibPreludeDB libraries
-PKGREVISION=		5
+PKGREVISION=		6
 
 .include "../../security/libpreludedb/Makefile.common"
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/06/27 01:40:45 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/01 11:52:02 wiz Exp $
 
 DISTNAME=	libzrtpcpp-2.3.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=ccrtp/}
 

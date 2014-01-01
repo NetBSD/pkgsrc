@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/06/14 20:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/01 11:52:03 wiz Exp $
 
 DISTNAME=	libspectrum-1.1.1
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
 

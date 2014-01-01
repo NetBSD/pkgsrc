@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/10/19 09:07:00 adam Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/01 11:52:09 wiz Exp $
 #
 
 DISTNAME=	rhythmbox-2.99.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/2.99/}
 EXTRACT_SUFX=	.tar.xz

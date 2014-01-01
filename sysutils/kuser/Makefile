@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/11/20 20:04:40 adam Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/01 11:52:35 wiz Exp $
 
 DISTNAME=	kuser-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 COMMENT=	KDE user manager
 
