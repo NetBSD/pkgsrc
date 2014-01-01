@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2013/10/11 14:53:00 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2014/01/01 11:52:20 wiz Exp $
 #
 
 DISTNAME=		kphotoalbum-3.1.1
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		graphics
 MASTER_SITES=		http://ktown.kde.org/kphotoalbum/download/
 EXTRACT_SUFX=		.tar.bz2
