@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2009/05/09 13:22:55 joerg Exp $
+$NetBSD: distinfo,v 1.14 2014/01/01 03:03:01 ryoon Exp $
 
 SHA1 (speex-1.2rc1.tar.gz) = 52daa72572e844e5165315e208da539b2a55c5eb
 RMD160 (speex-1.2rc1.tar.gz) = 6f4a11ef910b0db9b820826bcac3da1b79cad3a1
 Size (speex-1.2rc1.tar.gz) = 1061882 bytes
 SHA1 (patch-ab) = 377ce413ee4a644327841597ba182f1b67e8eab8
+SHA1 (patch-libspeex_scal.c) = 25f6391b4500a35a04d4a5b12a3fb313778885f1
