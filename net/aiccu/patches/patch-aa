@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2007/01/18 14:42:17 ghen Exp $
+$NetBSD: patch-aa,v 1.6 2014/01/01 16:06:58 bsiegert Exp $
 
---- unix-console/Makefile.orig	2007-01-15 12:04:27.000000000 +0100
+--- unix-console/Makefile.orig	Mon Jan 15 11:04:04 2007
 +++ unix-console/Makefile
 @@ -26,25 +26,12 @@ CWARNS += -W -Wall -Wshadow -Wpointer-ar
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.5 2007/01/18 14:42:17 ghen Exp $
  SRCS	+= ../common/aiccu_freebsd4.c
  OBJS	+= ../common/aiccu_freebsd4.o
  CFLAGS	+= -pthread
-@@ -80,15 +67,15 @@ endif
+@@ -80,20 +67,29 @@ endif
  
  # NetBSD
  ifeq ($(shell uname | grep -c "NetBSD"),1)
@@ -58,3 +58,17 @@ $NetBSD: patch-aa,v 1.5 2007/01/18 14:42:17 ghen Exp $
  endif
  
  SRCS	+= ../common/aiccu_kame.c
+ OBJS	+= ../common/aiccu_kame.o
+ CFLAGS	+= -pthread -D_NETBSD_SOURCE
++endif
++
++# MirBSD
++ifeq ($(shell uname | grep -c "MirBSD"),1)
++CFLAGS	+= -D_OPENBSD -D HAS_IFHEAD
++CFLAGS	+= -D AICCU_TYPE="\"openbsd\""
++SRCS	+= ../common/aiccu_openbsd.c
++OBJS	+= ../common/aiccu_openbsd.o
++CFLAGS	+= -pthread
+ endif
+ 
+ # OpenBSD
