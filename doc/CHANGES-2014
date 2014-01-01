@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.24 2014/01/01 12:41:24 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.25 2014/01/01 13:56:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/libgcrypt to 1.6.0 [wiz 2014-01-01]
 	Updated news/pan to 0.139nb13 [wiz 2014-01-01]
 	Updated editors/OmegaT to 3.0.8.01 [ryoon 2014-01-01]
+	Updated devel/p5-Devel-GlobalDestruction to 0.12 [wen 2014-01-01]
