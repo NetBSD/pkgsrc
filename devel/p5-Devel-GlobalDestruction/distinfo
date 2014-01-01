@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2012/09/10 12:58:02 sno Exp $
+$NetBSD: distinfo,v 1.7 2014/01/01 09:43:29 wen Exp $
 
-SHA1 (Devel-GlobalDestruction-0.09.tar.gz) = 07b4d6e4d649efc7826b89ef57301f4289deef1e
-RMD160 (Devel-GlobalDestruction-0.09.tar.gz) = aecd9502ac3dd80f2b503df2fc445f3479a68944
-Size (Devel-GlobalDestruction-0.09.tar.gz) = 50675 bytes
+SHA1 (Devel-GlobalDestruction-0.12.tar.gz) = f45f72876d8534407ed2a39c06beada4901a3d4f
+RMD160 (Devel-GlobalDestruction-0.12.tar.gz) = c6d14238ababce8206bc2aed6c006729deaa7b59
+Size (Devel-GlobalDestruction-0.12.tar.gz) = 7803 bytes
