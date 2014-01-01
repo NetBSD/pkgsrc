@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_share_byobu_tests_byobu-time-notifications.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/share/byobu/tests/byobu-time-notifications.in.orig	2013-08-28 03:50:01.000000000 +0000
++++ usr/share/byobu/tests/byobu-time-notifications.in
+@@ -21,7 +21,7 @@
+ 
+ PKG=byobu
+ RUNS=100
+-[ -z "$BYOBU_PREFIX" ] && BYOBU_PREFIX="/usr"
++[ -z "$BYOBU_PREFIX" ] && BYOBU_PREFIX="@prefix@"
+ export BYOBU_PREFIX
+ 
+ loop() {
