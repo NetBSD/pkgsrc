@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.12 2014/01/01 04:00:51 jnemeth Exp $
+$NetBSD: CHANGES-2014,v 1.13 2014/01/01 05:32:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -13,3 +13,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/p5-Locale-Maketext-Fuzzy to 0.11 [ryoon 2014-01-01]
 	Updated devel/rt4 to 4.2.1 [ryoon 2014-01-01]
 	Updated textproc/mdoclint to 1.25 [jnemeth 2014-01-01]
+	Updated devel/patch to 2.7.1 [ryoon 2014-01-01]
