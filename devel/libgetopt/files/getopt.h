@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.h,v 1.7 2008/12/10 15:30:29 joerg Exp $	*/
+/*	$NetBSD: getopt.h,v 1.8 2014/01/01 02:48:31 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -64,7 +64,7 @@ int getopt_long(int, char * const *, const char *,
 
 /* On some platforms, this is in libc, but not in a system header */
 extern int optreset;
-#ifdef __sgi
+#if defined(__sgi) || defined(__GLIBC__)
 extern char *optarg;
 extern int opterr;
 extern int optind;
