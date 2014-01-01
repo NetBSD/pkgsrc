@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_lib_byobu_include_config.py.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/lib/byobu/include/config.py.in.orig	2013-12-06 13:39:33.000000000 +0000
++++ usr/lib/byobu/include/config.py.in
+@@ -52,7 +52,7 @@ BYOBU_CONFIG_DIR = os.getenv("BYOBU_CONF
+ BYOBU_RUN_DIR = os.getenv("BYOBU_RUN_DIR", HOME + "/.cache/byobu")
+ BYOBU_BACKEND = os.getenv("BYOBU_BACKEND", "tmux")
+ BYOBU_SOCKETDIR = os.getenv("SOCKETDIR", "/var/run/screen")
+-BYOBU_PREFIX = os.getenv("BYOBU_PREFIX", "/usr")
++BYOBU_PREFIX = os.getenv("BYOBU_PREFIX", "@prefix@")
+ SHARE = BYOBU_PREFIX + '/share/' + PKG
+ DOC = BYOBU_PREFIX + '/share/doc/' + PKG
+ if not os.path.exists(SHARE):

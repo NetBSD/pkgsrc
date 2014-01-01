@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_lib_byobu_include_toggle-utf8.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/lib/byobu/include/toggle-utf8.in.orig	2013-09-19 16:34:11.000000000 +0000
++++ usr/lib/byobu/include/toggle-utf8.in
+@@ -19,7 +19,7 @@
+ 
+ PKG="byobu"
+ [ -r "$HOME/.byoburc" ] && . "$HOME/.byoburc"
+-[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="/usr" || export BYOBU_PREFIX
++[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="@prefix@" || export BYOBU_PREFIX
+ . "${BYOBU_PREFIX}/lib/${PKG}/include/common"
+ [ -r "$BYOBU_CONFIG_DIR/statusrc" ] && . "$BYOBU_CONFIG_DIR/statusrc"
+ 
