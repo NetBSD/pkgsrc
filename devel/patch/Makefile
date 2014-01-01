@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2012/12/31 00:27:36 sbd Exp $
+# $NetBSD: Makefile,v 1.38 2014/01/01 05:32:27 ryoon Exp $
 
-DISTNAME=	patch-2.5.9
-PKGREVISION=	2
+DISTNAME=	patch-2.7.1
 CATEGORIES=	devel
 # We keep an uncompressed tar archive of the sources on
 # ${MASTER_SITE_LOCAL} so that we won't need gzcat to extract the
@@ -15,29 +14,27 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 COMMENT=	Patch files using diff output
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		awk
 
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
-INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin \
-			man1dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
 INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 do-patch:
-	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
+	${MV} ${WRKSRC}/src/pch.c ${WRKSRC}/src/pch.c.orig
 	${AWK} '/#include <pch.h>/{print $$0 "\n#include <sys/param.h>";next;}\
 		/^#if HAVE_SETMODE_DOS/					\
 		{gsub(/^#if HAVE_SETMODE_DOS/,"#if defined(HAVE_SETMODE_DOS) \\&\\& !(defined(BSD) \\&\\& BSD >= 199306) \\&\\& !defined(__INTERIX)");print $$0; next; } \
 		{print $$0;}'						\
-		< ${WRKSRC}/pch.c.orig 					\
-		> ${WRKSRC}/pch.c
+		< ${WRKSRC}/src/pch.c.orig 					\
+		> ${WRKSRC}/src/pch.c
 
 SYMLINKS	= bin/gpatch ${PKGGNUDIR}bin/patch \
 		man/man1/gpatch.1 ${PKGGNUDIR}${PKGMANDIR}/man1/patch.1
