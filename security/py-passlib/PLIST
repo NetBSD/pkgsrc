@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/05 17:42:19 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/01 17:46:20 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -152,6 +152,12 @@ ${PYSITELIB}/passlib/tests/test_ext_django.pyo
 ${PYSITELIB}/passlib/tests/test_handlers.py
 ${PYSITELIB}/passlib/tests/test_handlers.pyc
 ${PYSITELIB}/passlib/tests/test_handlers.pyo
+${PYSITELIB}/passlib/tests/test_handlers_bcrypt.py
+${PYSITELIB}/passlib/tests/test_handlers_bcrypt.pyc
+${PYSITELIB}/passlib/tests/test_handlers_bcrypt.pyo
+${PYSITELIB}/passlib/tests/test_handlers_django.py
+${PYSITELIB}/passlib/tests/test_handlers_django.pyc
+${PYSITELIB}/passlib/tests/test_handlers_django.pyo
 ${PYSITELIB}/passlib/tests/test_hosts.py
 ${PYSITELIB}/passlib/tests/test_hosts.pyc
 ${PYSITELIB}/passlib/tests/test_hosts.pyo
