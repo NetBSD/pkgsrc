@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/02/16 11:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/01 02:46:49 ryoon Exp $
 #
 
-DISTNAME=	supertuxkart-0.8-src
+DISTNAME=	supertuxkart-0.8.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supertuxkart/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,13 +12,12 @@ HOMEPAGE=	http://supertuxkart.sourceforge.net/
 COMMENT=	Free 3D kart racing game
 #LICENSE=	gnu-gpl-v3 AND Creative-Commons-Attribution AND Creative-Commons-BY-SA AND Creative-Commons-Sampling+ AND FreeArt License AND SoundSnap license AND Public Domain AND Image*After terms
 
-WRKSRC=			${WRKDIR}/SuperTuxKart-0.8
+WRKSRC=			${WRKDIR}/SuperTuxKart-0.8.1
 USE_CMAKE=		yes
 #USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
-CXXFLAGS+=	-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_JPEG_LIB_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_LIB_PNG_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_ZLIB_=1
@@ -34,7 +32,18 @@ SUBST_STAGE.dos_eol=	post-extract
 SUBST_FILES.dos_eol=	lib/irrlicht/source/Irrlicht/Makefile
 SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/os.cpp
 SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/COSOperator.cpp
+SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/CIrrDeviceLinux.cpp
 SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
+
+CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux"
+SUBST_CLASSES+=		js
+SUBST_STAGE.js=		pre-configure
+SUBST_MESSAGE.js=	Disable Linux joystick support.
+SUBST_FILES.js+=	lib/irrlicht/include/IrrCompileConfig.h
+SUBST_SED.js+=		-e '/define.*_IRR_COMPILE_WITH_JOYSTICK_EVENTS_/d'
+.endif
 
 # for irrlicht debugging
 #pre-build:
