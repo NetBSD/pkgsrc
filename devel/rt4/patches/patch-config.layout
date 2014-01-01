@@ -1,10 +1,10 @@
-$NetBSD: patch-config.layout,v 1.1 2013/04/21 13:59:34 ryoon Exp $
+$NetBSD: patch-config.layout,v 1.2 2014/01/01 03:31:50 ryoon Exp $
 
 * Add layout for pkgsrc.
 
---- config.layout.orig	2013-04-09 15:22:04.000000000 +0000
+--- config.layout.orig	2013-11-13 18:25:50.000000000 +0000
 +++ config.layout
-@@ -226,3 +226,27 @@
+@@ -215,6 +215,32 @@
    customlibdir:		${customdir}/lib
    customplugindir:  ${customdir}/plugins
  </Layout>
@@ -18,17 +18,22 @@ $NetBSD: patch-config.layout,v 1.1 2013/04/21 13:59:34 ryoon Exp $
 +  plugindir:		@RT4DIR@/plugins
 +  libdir:		@RT4DIR@/lib
 +  datadir:		@RT4DIR@/data
++  htmldir:		${datadir}/html
 +  fontdir:		${datadir}/fonts
 +  lexdir:		${datadir}/po
-+  htmldir:		${datadir}/html
 +  manualdir:		${datadir}/docs
 +  localstatedir:	@RT4DIR@/var
 +  logfiledir:		${localstatedir}/log
 +  masonstatedir:	${localstatedir}/mason_data
 +  sessionstatedir:	${localstatedir}/session_data
++  staticdir:	${datadir}/static
 +  customdir:		@RT4DIR@/local
 +  custometcdir:		${customdir}/etc
 +  customhtmldir:	${customdir}/html
 +  customlexdir:		${customdir}/po
 +  customlibdir:		${customdir}/lib
++  customstaticdir:	${customdir}/static
 +</Layout>
+ <Layout vessel>
+   prefix:		/opt/rt4
+   exec_prefix:		${prefix}

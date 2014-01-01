@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/04/21 13:59:34 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2014/01/01 03:31:50 ryoon Exp $
 
 To use RT 4, you will need to perform the following steps.
 
@@ -34,6 +34,12 @@ To use RT 4, you will need to perform the following steps.
 6. Run rt-server for configuration.
 
 	$ sudo -u www ${PREFIX}/share/rt4/sbin/rt-server --port 8080
+
+   If you configure RT from non-localhost web browser, you should add
+   the following line to your ${PREFIX}/share/rt4/etc/RT_SiteConfig.pm
+   before run of rt-server.
+
+	Set( $WebDomain, 'your-rt-hostname' );
 
 7. Access http://localhost:8080/ and setup RT 4. After setting up, kill
    rt-server with Ctrl-C.

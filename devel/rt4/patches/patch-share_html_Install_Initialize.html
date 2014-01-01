@@ -1,0 +1,15 @@
+$NetBSD: patch-share_html_Install_Initialize.html,v 1.1 2014/01/01 03:31:50 ryoon Exp $
+
+From upstream, https://github.com/bestpractical/rt/commit/b4517c1.patch
+Fix installation finish fail.
+
+--- share/html/Install/Initialize.html.orig	2013-11-13 18:25:50.000000000 +0000
++++ share/html/Install/Initialize.html
+@@ -119,6 +119,7 @@ if ( $Run ) {
+                 $RT::Handle->dbh( undef );
+                 RT::ConnectToDatabase();
+                 RT::InitLogging();
++		RT::InitClasses();
+                 ($status, $msg) = $RT::Handle->InsertInitialData;
+             }
+             elsif ( $action eq 'insert' ) {
