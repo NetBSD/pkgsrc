@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.13 2014/01/01 05:32:57 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.14 2014/01/01 06:56:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/rt4 to 4.2.1 [ryoon 2014-01-01]
 	Updated textproc/mdoclint to 1.25 [jnemeth 2014-01-01]
 	Updated devel/patch to 2.7.1 [ryoon 2014-01-01]
+	Added devel/py-newt version 0.52.16 [ryoon 2014-01-01]
