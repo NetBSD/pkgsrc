@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12813 2014/01/01 11:50:08 wiz Exp $
+$NetBSD: TODO,v 1.12814 2014/01/01 12:58:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-7.6.3
-	o abcmidi-20130430
+	o abcmidi-20131225
 	o abiword-3.0
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.8.0
@@ -372,11 +372,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
+	o apache-ant-1.9.3
 	o apache22-2.2.26
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o argtable-2.9
-	o aria2-1.18.1
+	o aria2-1.18.2
 	o arirang-1.70
 	o arnold-20040104
 	o asapm-3.1
@@ -421,6 +422,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdialog-1.2.20130928
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
+	o cdrtools-3.01a20
 	o cfitsio-3.350
 	o chasen-2.4.5
 	o cheese-2.32.0 [GNOME 2.32]
@@ -462,6 +464,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.8
 	o dar-2.4.11
 	o darcs-2.4
+	o darktable-1.4
 	o dasher-4.11
 	o dbench-4.0
 	o dcc-1.3.147 [ask OWNER first]
@@ -474,10 +477,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o diffstat-1.58
 	o doclifter-2.13
 	o dolphin-4.0.2
+	o doxygen-1.8.6
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2013.59
 	o drupal-7.24
+	o dvtm-0.10
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o echinus-0.4.9
@@ -510,7 +515,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.3.11 [etm successor]
+	o etm2-2.3.19 [etm successor]
 	o ettercap-0.7.6
 	o evince-3.8.3
 	o evolution-3.0.0
@@ -761,6 +766,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libxcb-1.10
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
+	o libxmp-4.2.1
 	o licq-1.3.8
 	o liferea-1.10.3
 	o lincvs-2.1.4 [now called CrossVC]
@@ -784,7 +790,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mame-0.152
 	o manedit-1.2.1
 	o matchbox-panel-0.9.3
-	o mawk-1.3.4.20130803
+	o mawk-1.3.4.20131226
 	o mc-4.8.9
 	o mcsim-5.5.0
 	o memcached-1.4.17
@@ -796,6 +802,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o midori-0.5
 	o milkytracker-0.90.85
 	o mined-2013.23
+	o minicom-2.7
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mknmz-wwwoffle-0.7.2
@@ -813,7 +820,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.0
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
-	o mpg123-1.16.0
+	o mpg123-1.17.0
 	o mserv-devel-0.41
 	o mu-0.9.9.5
 	o multitail-6.0
@@ -888,6 +895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.11
+	o phpmyadmin-4.1.3
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
