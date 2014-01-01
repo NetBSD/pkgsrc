@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_bin_byobu-launcher-install.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/bin/byobu-launcher-install.in.orig	2013-08-28 03:50:01.000000000 +0000
++++ usr/bin/byobu-launcher-install.in
+@@ -20,7 +20,7 @@
+ 
+ PKG="byobu"
+ [ -r "$HOME/.byoburc" ] && . "$HOME/.byoburc"
+-[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="/usr" || export BYOBU_PREFIX
++[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="@prefix@" || export BYOBU_PREFIX
+ . "${BYOBU_PREFIX}/lib/${PKG}/include/common"
+ 
+ FLAG="$BYOBU_CONFIG_DIR/no-logout-on-detach"

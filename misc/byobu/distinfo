@@ -1,0 +1,37 @@
+$NetBSD: distinfo,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+SHA1 (byobu_5.69.orig.tar.gz) = 28823d25563e4356ac7dde7726d7dc68fb01ead8
+RMD160 (byobu_5.69.orig.tar.gz) = 27821ebd0fd4b83bc785005a1fd1971866962788
+Size (byobu_5.69.orig.tar.gz) = 635271 bytes
+SHA1 (patch-configure.ac) = 21cac29e1c4c2fed7c6829c344cbe0e63f587fef
+SHA1 (patch-etc_profile.d_Z97-byobu.sh.in) = ffcee02f275d8cc7ac3d0d68341732970ba6574f
+SHA1 (patch-usr_bin_byobu-config.in) = 6bb580db2ed61960a3c338a95d15522d194735c1
+SHA1 (patch-usr_bin_byobu-ctrl-a.in) = 8ff863de7d232f086c87120e8e159bdcf85165bc
+SHA1 (patch-usr_bin_byobu-disable-prompt.in) = 9e903639ab4611141d0172c1c514a3152559a198
+SHA1 (patch-usr_bin_byobu-disable.in) = f21719a475d5470a9297db8c7c418ee37a1ea473
+SHA1 (patch-usr_bin_byobu-enable-prompt.in) = c20bd9062e6b5edb4c4a397ffeabdebb1b5edd65
+SHA1 (patch-usr_bin_byobu-enable.in) = bd16e003838bab3e2738283bec99bf1d67ea7b2b
+SHA1 (patch-usr_bin_byobu-export.in) = 6ccc71f97b6e5c5577f561c099001e581a9100be
+SHA1 (patch-usr_bin_byobu-janitor.in) = 19b5839576984ff4521a487761d49e3abe989402
+SHA1 (patch-usr_bin_byobu-launch.in) = 0741804991233730f695ae5549bb2914897ba14a
+SHA1 (patch-usr_bin_byobu-launcher-install.in) = b9c22c556912f6661a4020788245bbd3c3a7ab3b
+SHA1 (patch-usr_bin_byobu-launcher-uninstall.in) = e91e4af5c34958a2c53d5a87b7807dfc27c4061f
+SHA1 (patch-usr_bin_byobu-launcher.in) = 7dcede2dafe7d811f91890dea437b8f6bb07a6cf
+SHA1 (patch-usr_bin_byobu-layout.in) = 390b69eb7d760d8a0cacd878e41c7d3a3e190219
+SHA1 (patch-usr_bin_byobu-prompt.in) = c4e2fbd007d0b01c1c7cd15ae661c5e84f269c5d
+SHA1 (patch-usr_bin_byobu-quiet.in) = 1f9f1eb6f60ad455c337794e53b45d9018d5d300
+SHA1 (patch-usr_bin_byobu-reconnect-sockets.in) = 54d1704528b6f571c905c485fdd9c5b5ba7589d7
+SHA1 (patch-usr_bin_byobu-select-backend.in) = aedd6141e8620725311fad63595d8049e5df03ec
+SHA1 (patch-usr_bin_byobu-select-profile.in) = 95267ce4fbaeb0f4af96155d6c651963216604d5
+SHA1 (patch-usr_bin_byobu-select-session.in) = 7d2eb8fdb1a1c0e5240f78cb2276a4ed817cbc82
+SHA1 (patch-usr_bin_byobu-shell.in) = 2bda6c565cbbe390101c7944f31c8cdf4eb78a72
+SHA1 (patch-usr_bin_byobu-silent.in) = 681e61b1b49f26f87c529bf9f5d6e737b1f4c909
+SHA1 (patch-usr_bin_byobu-status-detail.in) = 3213db863ffec32f58cff11e152ee28b55240998
+SHA1 (patch-usr_bin_byobu-status.in) = fcf9cdfb58d9cad79753d5c8b8e520356e4ac8e4
+SHA1 (patch-usr_bin_byobu-ugraph.in) = 6b035b71421504ec84f7a2d153fe39138c904d12
+SHA1 (patch-usr_bin_byobu-ulevel.in) = b8574cfc4f4b3e6e577dc962b3d5ec60c1d4f5b4
+SHA1 (patch-usr_bin_byobu.in) = 659043e79a14a65005fb9ad5a36666a237028a80
+SHA1 (patch-usr_lib_byobu_include_config.py.in) = 8a7f3f27473ea0bbd028a42074ba2275a293b102
+SHA1 (patch-usr_lib_byobu_include_dirs.in) = 13091758e7f86982ff304fd7a9771a94ed9af0b6
+SHA1 (patch-usr_lib_byobu_include_toggle-utf8.in) = 1ac7f90223605b1dc94995bc80fde102be83090d
+SHA1 (patch-usr_share_byobu_tests_byobu-time-notifications.in) = 553aa4db17d4d835a0df20541ffb6e50dce1d519
