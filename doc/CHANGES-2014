@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.28 2014/01/01 22:52:45 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.29 2014/01/01 23:23:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -36,3 +36,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-wtf to 0.9.4 [kleink 2014-01-01]
 	Updated www/py-flask-login to 0.2.9 [kleink 2014-01-01]
 	Updated meta-pkgs/bulk-small to 20140101 [dholland 2014-01-01]
+	Updated graphics/GraphicsMagick to 1.3.19 [adam 2014-01-01]
+	Updated graphics/p5-GraphicsMagick to 1.3.19 [adam 2014-01-01]
