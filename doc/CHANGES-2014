@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.23 2014/01/01 12:10:09 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.24 2014/01/01 12:41:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -29,3 +29,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/gitweb to 1.8.5.2 [adam 2014-01-01]
 	Updated security/libgcrypt to 1.6.0 [wiz 2014-01-01]
 	Updated news/pan to 0.139nb13 [wiz 2014-01-01]
+	Updated editors/OmegaT to 3.0.8.01 [ryoon 2014-01-01]
