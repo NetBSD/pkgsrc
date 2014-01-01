@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/05/31 12:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/01 09:20:33 wen Exp $
 #
 
-DISTNAME=	Import-Into-1.001000
+DISTNAME=	Import-Into-1.002000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTROUT/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Import-Into/
