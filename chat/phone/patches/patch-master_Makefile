@@ -1,20 +1,18 @@
-$NetBSD: patch-master_Makefile,v 1.1 2013/12/16 06:42:20 dholland Exp $
+$NetBSD: patch-master_Makefile,v 1.2 2014/01/01 23:52:32 dholland Exp $
 
 Configure for pkgsrc.
 
---- master/Makefile.orig	2013-01-01 23:59:38.000000000 +0000
+--- master/Makefile.orig	2013-01-02 23:00:43.000000000 +0000
 +++ master/Makefile
-@@ -23,8 +23,10 @@
- #OFLAG= -O
+@@ -24,7 +24,9 @@
  OFLAG= -g
  #INETD= -DINETD
--#FORK=-DFORK
--CFLAGS  = $(OFLAG) $(INETD) $(FORK) -DSERVICES -DDPATH=\"/u/christos/phone/conv/convd\"
-+FORK=-DFORK
+ FORK=-DFORK
+-CFLAGS	= $(OFLAG) $(INETD) $(FORK) -DSERVICES -DDPATH=\"/u/christos/phone/conv/convd\"
 +# not -DSERVICES
-+CFLAGS  = $(OFLAG) $(INETD) $(FORK) -DDPATH=\"${PREFIX}/libexec/convd\"
++CFLAGS	= $(OFLAG) $(INETD) $(FORK) -DDPATH=\"${PREFIX}/libexec/convd\"
 +CFLAGS+= -DNO_WHO
- CFLAGS+= -std=gnu99  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wno-sign-compare  -Wno-traditional  -Wa,--fatal-warnings -Wreturn-type -Wswitch -Wshadow -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -Wno-sign-compare -Wold-style-definition -Wsign-compare -Wformat=2   -Wno-format-zero-length  -Werror
+ CFLAGS+= -std=gnu99  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -Wno-sign-compare  -Wno-traditional	 -Wa,--fatal-warnings -Wreturn-type -Wswitch -Wshadow -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -Wno-sign-compare -Wold-style-definition -Wsign-compare -Wformat=2   -Wno-format-zero-length  -Werror
  
  
 @@ -41,7 +43,7 @@ OBJS	= child.o daemon.o dopage.o forward
