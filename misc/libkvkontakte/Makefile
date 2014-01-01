@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/11/10 03:19:27 markd Exp $
+# $NetBSD: Makefile,v 1.20 2014/01/01 11:52:04 wiz Exp $
 #
 
 PKGNAME=	libkvkontakte-3.5.0
 DISTNAME=	digikam-3.5.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

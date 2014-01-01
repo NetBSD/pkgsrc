@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2013/02/06 23:21:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/01 11:52:10 wiz Exp $
 #
 
 DISTNAME=	telepathy-idle-0.1.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-idle/
 
