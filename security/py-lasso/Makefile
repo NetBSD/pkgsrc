@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/05/31 12:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/01 11:52:34 wiz Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 COMMENT=	Libery Alliance Single Sign On binding for Python
 
 .include "../../lang/python/pyversion.mk"

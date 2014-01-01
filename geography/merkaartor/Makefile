@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2013/09/01 12:14:06 obache Exp $
+# $NetBSD: Makefile,v 1.48 2014/01/01 11:52:18 wiz Exp $
 #
 
 DISTNAME=	merkaartor-0.17.2
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	geography
 MASTER_SITES=	http://merkaartor.be/attachments/download/253/
 EXTRACT_SUFX=	.tar.bz2

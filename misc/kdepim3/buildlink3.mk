@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2013/10/09 17:39:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2014/01/01 11:52:05 wiz Exp $
 
 BUILDLINK_TREE+=	kdepim
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdepim
 KDEPIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdepim+=	kdepim>=3.5.0nb1
-BUILDLINK_ABI_DEPENDS.kdepim+=	kdepim>=3.5.10nb31
+BUILDLINK_ABI_DEPENDS.kdepim+=	kdepim>=3.5.10nb33
 BUILDLINK_PKGSRCDIR.kdepim?=	../../misc/kdepim3
 
 pkgbase := kdepim

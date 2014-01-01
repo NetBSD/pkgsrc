@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/02/06 23:23:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/01 11:52:32 wiz Exp $
 #
 
 VERSION=	0.7.0
 DISTNAME=	gnupg-pkcs11-scd-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnupg-pkcs11/gnupg-pkcs11-scd/${VERSION}/}
 EXTRACT_SUFX=	.tar.bz2

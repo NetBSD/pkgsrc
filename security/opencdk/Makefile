@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/10/23 18:16:37 asau Exp $
+# $NetBSD: Makefile,v 1.37 2014/01/01 11:52:02 wiz Exp $
 
 DISTNAME=	opencdk-0.6.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/attic/opencdk/
 EXTRACT_SUFX=	.tar.bz2

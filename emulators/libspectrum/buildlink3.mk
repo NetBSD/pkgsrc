@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2012/09/15 10:04:32 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2014/01/01 11:52:03 wiz Exp $
 
 BUILDLINK_TREE+=	libspectrum
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libspectrum
 LIBSPECTRUM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libspectrum+=		libspectrum>=0.2.2
-BUILDLINK_ABI_DEPENDS.libspectrum+=	libspectrum>=1.0.0nb5
+BUILDLINK_ABI_DEPENDS.libspectrum+=	libspectrum>=1.1.1nb1
 BUILDLINK_PKGSRCDIR.libspectrum?=	../../emulators/libspectrum
 
 .include "../../archivers/bzip2/buildlink3.mk"

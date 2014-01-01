@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/12/03 01:30:06 mef Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/01 11:52:13 wiz Exp $
 
 DISTNAME=	libhid-0.2.16
 
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://sourceforge.net/projects/salix-sbo/files/13.37/libhid/
 LICENSE=	gnu-gpl-v2

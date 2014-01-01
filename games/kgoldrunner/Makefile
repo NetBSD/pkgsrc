@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/11/07 11:35:49 markd Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/01 11:52:16 wiz Exp $
 
 DISTNAME=	kgoldrunner-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	games
 COMMENT=	action game where the hero runs through a maze
 
