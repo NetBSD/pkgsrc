@@ -1,9 +1,8 @@
-$NetBSD: patch-config.mak.uname,v 1.1 2013/09/09 13:54:44 wiz Exp $
+$NetBSD: patch-config.mak.uname,v 1.2 2014/01/01 16:05:51 bsiegert Exp $
 
-
---- config.mak.uname.orig	2013-03-14 04:15:22.000000000 +0900
-+++ config.mak.uname	2013-04-08 19:11:58.000000000 +0900
-@@ -101,7 +101,7 @@
+--- config.mak.uname.orig	Tue Dec  3 19:34:59 2013
++++ config.mak.uname
+@@ -101,7 +101,7 @@ endif
  ifeq ($(uname_S),SunOS)
  	NEEDS_SOCKET = YesPlease
  	NEEDS_NSL = YesPlease
@@ -12,7 +11,7 @@ $NetBSD: patch-config.mak.uname,v 1.1 2013/09/09 13:54:44 wiz Exp $
  	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
  	NO_STRCASESTR = YesPlease
  	NO_MEMMEM = YesPlease
-@@ -144,8 +144,6 @@
+@@ -144,8 +144,6 @@ ifeq ($(uname_S),SunOS)
  		NO_STRTOUMAX = YesPlease
  		GIT_TEST_CMP = cmp
  	endif
@@ -21,3 +20,17 @@ $NetBSD: patch-config.mak.uname,v 1.1 2013/09/09 13:54:44 wiz Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
  endif
  ifeq ($(uname_O),Cygwin)
+@@ -196,6 +194,13 @@ ifeq ($(uname_S),OpenBSD)
+ 	NEEDS_LIBICONV = YesPlease
+ 	BASIC_CFLAGS += -I/usr/local/include
+ 	BASIC_LDFLAGS += -L/usr/local/lib
++	HAVE_PATHS_H = YesPlease
++endif
++ifeq ($(uname_S),MirBSD)
++	NO_STRCASESTR = YesPlease
++	NO_MEMMEM = YesPlease
++	USE_ST_TIMESPEC = YesPlease
++	NEEDS_LIBICONV = YesPlease
+ 	HAVE_PATHS_H = YesPlease
+ endif
+ ifeq ($(uname_S),NetBSD)
