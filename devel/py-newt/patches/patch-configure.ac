@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.ac,v 1.1 2014/01/01 06:55:23 ryoon Exp $
+
+* For newer Autotools
+* Detect Python version in another way
+
+--- configure.ac.orig	2013-08-06 15:46:42.000000000 +0000
++++ configure.ac
+@@ -1,4 +1,4 @@
+-AC_INIT([newt_pr.h])
++AC_INIT([newt_pr.h], 0.52.16)
+ 
+ PACKAGE=newt
+ VERSION=$(awk '/^Version: / {print $2}' $srcdir/newt.spec)
+@@ -60,7 +60,8 @@ if test "x$with_python" = "xno"; then
+   AC_MSG_RESULT([skipped])
+   PYTHONVERS=
+ else
+-  PYTHONVERS=$(ls /usr/include/python2.*/Python.h 2> /dev/null | sed 's|/usr/include/\([[^/]]*\)/Python.h|\1|g' | tr '\n' ' ')
++  AM_PATH_PYTHON([2.5],, [:])
++  PYTHONVERS=${PYTHON_VERSION}
+   AC_MSG_RESULT([$PYTHONVERS])
+ fi
+ AC_SUBST([PYTHONVERS])
