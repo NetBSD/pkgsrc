@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.489 2013/12/14 09:16:05 obache Exp $
+# $NetBSD: Makefile,v 1.490 2014/01/01 03:16:22 ryoon Exp $
 #
 
 COMMENT=	Security tools
@@ -238,6 +238,7 @@ SUBDIR+=	p5-Crypt-SSLeay
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Crypt-URandom
+SUBDIR+=	p5-Crypt-X509
 SUBDIR+=	p5-Dancer-Plugin-Auth-RBAC
 SUBDIR+=	p5-Data-SimplePassword
 SUBDIR+=	p5-Digest
