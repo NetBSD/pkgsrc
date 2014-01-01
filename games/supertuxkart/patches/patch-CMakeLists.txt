@@ -1,11 +1,20 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/01/06 15:16:20 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2014/01/01 02:46:49 ryoon Exp $
 
 * Link to system libraries
 
---- CMakeLists.txt.orig	2012-12-10 23:21:40.000000000 +0000
+--- CMakeLists.txt.orig	2013-11-24 21:54:13.000000000 +0000
 +++ CMakeLists.txt
-@@ -196,7 +196,11 @@ target_link_libraries(supertuxkart
-     ${IRRLICHT_LIBRARY}
+@@ -3,7 +3,7 @@ project(SuperTuxKart)
+ set(PROJECT_VERSION "0.8.1")
+ 
+ cmake_minimum_required(VERSION 2.8.1)
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
++set (CMAKE_MODULE_PATH "/usr/tmp/pkgsrc/games/supertuxkart/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
+ 
+ include(BuildTypeSTKRelease)
+ if (NOT CMAKE_BUILD_TYPE)
+@@ -231,7 +231,11 @@ target_link_libraries(supertuxkart
+     ${OGGVORBIS_LIBRARIES}
      ${IRRLICHT_XF86VM_LIBRARY}
      ${OPENAL_LIBRARY}
 -    ${OPENGL_LIBRARIES})
@@ -15,5 +24,5 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2013/01/06 15:16:20 ryoon Exp $
 +    bz2
 +    z)
  
- if(USE_FRIBIDI)
-     target_link_libraries(supertuxkart ${FRIBIDI_LIBRARIES})
+ if(APPLE)
+     # In theory it would be cleaner to let CMake detect the right dependencies. In practice, this means that if a OSX user has

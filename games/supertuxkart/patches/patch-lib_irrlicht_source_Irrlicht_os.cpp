@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_irrlicht_source_Irrlicht_os.cpp,v 1.1 2013/01/06 15:16:20 ryoon Exp $
+$NetBSD: patch-lib_irrlicht_source_Irrlicht_os.cpp,v 1.2 2014/01/01 02:46:49 ryoon Exp $
 
 * Fix build on NetBSD and OpenBSD
 
---- lib/irrlicht/source/Irrlicht/os.cpp.orig	Sun Jan  6 09:39:08 2013
+--- lib/irrlicht/source/Irrlicht/os.cpp.orig	2013-12-31 07:04:37.000000000 +0000
 +++ lib/irrlicht/source/Irrlicht/os.cpp
 @@ -22,10 +22,14 @@
  	#include <libkern/OSByteOrder.h>
