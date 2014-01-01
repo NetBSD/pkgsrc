@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1829 2014/01/01 03:12:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.1830 2014/01/01 06:56:06 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1460,6 +1460,7 @@ SUBDIR+=	py-mako
 SUBDIR+=	py-mock
 SUBDIR+=	py-msgpack
 SUBDIR+=	py-multiprocessing
+SUBDIR+=	py-newt
 SUBDIR+=	py-nose
 SUBDIR+=	py-open-vcdiff
 SUBDIR+=	py-ordereddict
