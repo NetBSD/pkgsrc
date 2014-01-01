@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2013/12/12 04:59:11 obache Exp $
+# $NetBSD: Makefile,v 1.414 2014/01/01 07:16:34 ryoon Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -22,6 +22,7 @@ SUBDIR+=	brs
 SUBDIR+=	bsdiff
 SUBDIR+=	bsdstats
 SUBDIR+=	buffer
+SUBDIR+=	byobu
 SUBDIR+=	calibre
 SUBDIR+=	celestia
 SUBDIR+=	chipmunk
