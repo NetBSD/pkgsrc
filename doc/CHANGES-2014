@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.16 2014/01/01 07:51:04 obache Exp $
+$NetBSD: CHANGES-2014,v 1.17 2014/01/01 08:49:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -20,3 +20,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-cabocha to 0.67 [obache 2014-01-01]
 	Updated textproc/py-cabocha to 0.67 [obache 2014-01-01]
 	Updated textproc/ruby-cabocha to 0.67 [obache 2014-01-01]
+	Updated textproc/groonga to 3.1.1 [obache 2014-01-01]
