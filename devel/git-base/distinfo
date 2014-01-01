@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2014/01/01 11:14:38 adam Exp $
+$NetBSD: distinfo,v 1.8 2014/01/01 16:05:51 bsiegert Exp $
 
 SHA1 (git-1.8.5.2.tar.gz) = 3a09d6d5d4e31c702f17e664a527b4c2f6e84faf
 RMD160 (git-1.8.5.2.tar.gz) = 0bbfd241bdb60c3b5e2ca74c06257187f9427b91
@@ -10,5 +10,6 @@ SHA1 (patch-af) = d4741caeaed3ef6cfabf415f9fdbc95968307131
 SHA1 (patch-ag) = 4f0b9a5745203ea7ef369c8272b3ea7c644762f0
 SHA1 (patch-ah) = f22a2160631fb624e9e20616c68ad1a4aa2bebc7
 SHA1 (patch-ai) = 56b63d4790a11f5eb128186ad5efdd1bcf102f2e
-SHA1 (patch-config.mak.uname) = e7fa7a91d4d9dd6793d752b1833f97fcaea236b1
+SHA1 (patch-config.mak.uname) = 6321f0e0d941d04fdd378b2341c2ba1c938441a3
+SHA1 (patch-git-compat-util.h) = 788800c9972faadef40ad7ef795ed72305bfa292
 SHA1 (patch-wrapper.c) = d8252c63cca9a134fca3f8f6f28663f563c7b4bc
