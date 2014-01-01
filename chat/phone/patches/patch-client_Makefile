@@ -1,4 +1,4 @@
-$NetBSD: patch-client_Makefile,v 1.1 2013/12/16 06:42:20 dholland Exp $
+$NetBSD: patch-client_Makefile,v 1.2 2014/01/01 23:52:32 dholland Exp $
 
 Configure for pkgsrc.
 
@@ -7,7 +7,7 @@ Configure for pkgsrc.
 @@ -25,7 +25,7 @@ LIBS   = -lcurses -ltermlib #-lresolv
  
  LPR    = lpr 
- #RDEST  = /usr/ucb/phone
+ #RDEST	= /usr/ucb/phone
 -RDEST  = /usr/local/bin/phone
 +RDEST  = ${PREFIX}/bin/phone
  

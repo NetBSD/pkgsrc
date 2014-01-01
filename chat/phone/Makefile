@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/12/16 06:42:20 dholland Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/01 23:52:32 dholland Exp $
 
 DISTNAME=	phone-2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.astron.com/pub/phone/
+DIST_SUBDIR=	phone-2.0nb1
 
 MAINTAINER=	christos@NetBSD.org
 HOMEPAGE=	ftp://ftp.astron.com/pub/phone/
