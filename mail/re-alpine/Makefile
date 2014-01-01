@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/06 23:22:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/01 16:10:09 bsiegert Exp $
 #
 
 DISTNAME=	re-alpine-2.02
@@ -30,8 +30,17 @@ USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE=         no
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+.include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M4.99.*) && empty(OS_VERSION:M[5-9]*)
 CONFIGURE_ARGS+= --without-pthread
+.endif
+
+.if ${OPSYS} == "MirBSD"
+SUBST_CLASSES+=			mirbsd
+SUBST_STAGE.mirbsd=		pre-configure
+SUBST_FILES.mirbsd=		configure
+SUBST_SED.mirbsd=		-e 's,\*-\*-openbsd,*-*-mirbsd,g'
 .endif
 
 do-install:
