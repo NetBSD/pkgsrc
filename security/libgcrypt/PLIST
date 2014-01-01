@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2008/10/14 11:33:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/01/01 11:49:59 wiz Exp $
 bin/dumpsexp
 bin/hmac256
 bin/libgcrypt-config
-include/gcrypt-module.h
+bin/mpicalc
 include/gcrypt.h
 info/gcrypt.info
 lib/libgcrypt.la
+man/man1/hmac256.1
 share/aclocal/libgcrypt.m4
