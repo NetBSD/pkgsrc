@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2013/09/05 19:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2014/01/01 16:04:25 bsiegert Exp $
 
 DISTNAME=	IO-Socket-SSL-1.953
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,15 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IO/Socket/SSL/.packlist
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "MirBSD"
+SUBST_CLASSES+=			openssl
+SUBST_STAGE.openssl=		pre-configure
+SUBST_MESSAGE.openssl=		Adapting minimum OpenSSL version.
+SUBST_FILES.openssl=		Makefile.PL
+SUBST_SED.openssl=		-e 's/openssl < 0x00908000/openssl < 0x00907000/'
+.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
