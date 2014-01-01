@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2013/12/09 14:17:54 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/01 11:14:38 adam Exp $
 
 .include "../../devel/git/Makefile.version"
 
 DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
