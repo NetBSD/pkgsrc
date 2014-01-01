@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/01 23:46:38 tonnerre Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/01 23:55:22 tonnerre Exp $
 
 DISTNAME=		puppet-3.1.1
 PKGREVISION=		1
@@ -8,7 +8,7 @@ CATEGORIES=		sysutils
 MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
-LICENSE=		gnu-gpl-v2
+LICENSE=		apache-2.0
 
 DEPENDS+=		${RUBY_PKGPREFIX}-facter>=1.6.18:../../sysutils/ruby-facter
 DEPENDS+=		${RUBY_PKGPREFIX}-hiera>=1.0.0:../../databases/ruby-hiera
