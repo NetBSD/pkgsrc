@@ -1,0 +1,29 @@
+$NetBSD: patch-ae,v 1.3 2014/01/01 23:46:38 tonnerre Exp $
+
+Fix detection of useradd user management under NetBSD.
+
+NetBSD doesn't have chage but can use the -e and -f flags to passwd to
+achieve the same.
+
+--- lib/puppet/provider/user/useradd.rb.orig	2014-01-01 23:22:45.000000000 +0000
++++ lib/puppet/provider/user/useradd.rb
+@@ -5,13 +5,16 @@ Puppet::Type.type(:user).provide :userad
+     install Ruby's shadow password library (often known as `ruby-libshadow`)
+     if you wish to manage user passwords."
+ 
+-  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage"
++  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage" unless %w{NetBSD}.include? Facter.value(:operatingsystem)
++  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "passwd" if %w{NetBSD}.include? Facter.value(:operatingsystem)
+ 
+   options :home, :flag => "-d", :method => :dir
+   options :comment, :method => :gecos
+   options :groups, :flag => "-G"
+-  options :password_min_age, :flag => "-m"
+-  options :password_max_age, :flag => "-M"
++  options :password_min_age, :flag => "-m" unless %w{NetBSD}.include? Facter.value(:operatingsystem)
++  options :password_max_age, :flag => "-M" unless %w{NetBSD}.include? Facter.value(:operatingsystem)
++  options :password_min_age, :flag => "-e" if %w{NetBSD}.include? Facter.value(:operatingsystem)
++  options :password_max_age, :flag => "-f" if %w{NetBSD}.include? Facter.value(:operatingsystem)
+ 
+   verify :gid, "GID must be an integer" do |value|
+     value.is_a? Integer

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/04/10 21:10:54 tonnerre Exp $
+$NetBSD: distinfo,v 1.9 2014/01/01 23:46:38 tonnerre Exp $
 
 SHA1 (puppet-3.1.1.gem) = 4f6adf79ab3ff5204178102375e79ca9e486042d
 RMD160 (puppet-3.1.1.gem) = 59cb6269f5cf0bcb89f643cb9ed211ab1640ff1d
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 153dcff431d6c642872d3aa2118bc2505c996e94
 SHA1 (patch-ab) = bc90687cd03181211b6fe3d6f056e653334d96a9
 SHA1 (patch-ac) = eda614eeee25b18ab36335fc7147fbe7ab770249
 SHA1 (patch-ad) = 7feaab50c3c8ce2ed350dac3222fdf1bd2b34191
+SHA1 (patch-ae) = 2bd3354b9cf0ccc2366e66a6022c341c6a8472de
