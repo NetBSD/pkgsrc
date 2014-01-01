@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_bin_byobu-select-profile.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/bin/byobu-select-profile.in.orig	2013-11-06 15:18:05.000000000 +0000
++++ usr/bin/byobu-select-profile.in
+@@ -24,7 +24,7 @@
+ 
+ PKG="byobu"
+ [ -r "$HOME/.byoburc" ] && . "$HOME/.byoburc"
+-[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="/usr" || export BYOBU_PREFIX
++[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="@prefix@" || export BYOBU_PREFIX
+ . "${BYOBU_PREFIX}/lib/${PKG}/include/common"
+ 
+ TEXTDOMAIN="$PKG"

@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_bin_byobu-config.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/bin/byobu-config.in.orig	2013-12-17 01:48:21.000000000 +0000
++++ usr/bin/byobu-config.in
+@@ -18,7 +18,7 @@
+ #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ PKG="byobu"
+-[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="/usr" || export BYOBU_PREFIX
++[ -z "${BYOBU_PREFIX}" ] && export BYOBU_PREFIX="@prefix@" || export BYOBU_PREFIX
+ . "${BYOBU_PREFIX}/lib/${PKG}/include/common"
+ 
+ ${BYOBU_PYTHON} "${BYOBU_PREFIX}/lib/${PKG}/include/config.py"

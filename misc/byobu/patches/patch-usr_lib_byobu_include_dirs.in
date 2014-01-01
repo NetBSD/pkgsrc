@@ -1,0 +1,13 @@
+$NetBSD: patch-usr_lib_byobu_include_dirs.in,v 1.1 2014/01/01 07:15:58 ryoon Exp $
+
+--- usr/lib/byobu/include/dirs.in.orig	2013-08-28 03:50:01.000000000 +0000
++++ usr/lib/byobu/include/dirs.in
+@@ -22,7 +22,7 @@ PKG="byobu"
+ 
+ # Some users build and install byobu themselves, rather than from a distro
+ [ -r "$HOME/.byoburc" ] && . "$HOME/.byoburc"
+-[ -n "$BYOBU_PREFIX" ] || BYOBU_PREFIX="/usr"
++[ -n "$BYOBU_PREFIX" ] || BYOBU_PREFIX="@prefix@"
+ 
+ # Create and export the user configuration directory
+ if [ -d "$BYOBU_CONFIG_DIR" ]; then
