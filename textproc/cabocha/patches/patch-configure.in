@@ -1,0 +1,18 @@
+$NetBSD: patch-configure.in,v 1.1 2014/01/01 07:49:32 obache Exp $
+
+* prevent to overwrite CFLAGS/CXXFLAGS
+
+--- configure.in.orig	2013-12-30 15:20:11.000000000 +0000
++++ configure.in
+@@ -49,11 +49,6 @@ AC_CHECK_FUNCS(opendir)
+ AC_CHECK_FUNCS(snprintf)
+ AC_LANG(C++)
+ 
+-if test -n "$GCC"; then
+-   CFLAGS="-O3  -Wno-deprecated -Wall"
+-   CXXFLAGS="-O3 -Wno-deprecated -Wall"
+-fi
+-
+ AC_ARG_WITH(
+     charset,
+      [  --with-charset=charset  set default charset (EUC-JP|CP932|UTF8))],
