@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.191 2014/01/01 11:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.192 2014/01/02 01:25:49 ryoon Exp $
 
-DISTNAME=		gnucash-2.4.13
-PKGREVISION=		6
+DISTNAME=		gnucash-2.6.0
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,7 +23,8 @@ INFO_FILES=		YES
 
 CONFIGURE_ARGS+=	--with-html-engine=webkit
 CONFIGURE_ARGS+=	--disable-dbi
-CONFIGURE_ARGS+=	--enable-python-bindings
+CONFIGURE_ARGS+=	--enable-python
+CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 
 REPLACE_PERL+=		src/quotes/gnc-fq-dump
 REPLACE_PERL+=		packaging/win32/exetype.pl
@@ -33,30 +33,12 @@ REPLACE_PERL+=		src/quotes/Quote_example.pl
 
 PY_PATCHPLIST=		yes
 
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-
 PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gnucash
 
-GCONF_SCHEMAS+=	apps_gnucash_history.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_commodities.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_common.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_print_checks.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_prices.schemas
-GCONF_SCHEMAS+=	apps_gnucash_warnings.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_reconcile.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_totd.schemas
-GCONF_SCHEMAS+=	apps_gnucash_general.schemas
-GCONF_SCHEMAS+=	apps_gnucash_window_pages_account_tree.schemas
-GCONF_SCHEMAS+=	apps_gnucash_window_pages_register.schemas
-GCONF_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
-#GCONF_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
-GCONF_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
-
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../finance/libofx/buildlink3.mk"
