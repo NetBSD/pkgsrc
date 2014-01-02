@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/11/08 13:11:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/01/02 19:52:16 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -49,6 +49,7 @@ lib/libxcb-xevie.la
 lib/libxcb-xf86dri.la
 lib/libxcb-xfixes.la
 lib/libxcb-xinerama.la
+lib/libxcb-xkb.la
 lib/libxcb-xprint.la
 lib/libxcb-xtest.la
 lib/libxcb-xv.la
@@ -73,6 +74,7 @@ lib/pkgconfig/xcb-xevie.pc
 lib/pkgconfig/xcb-xf86dri.pc
 lib/pkgconfig/xcb-xfixes.pc
 lib/pkgconfig/xcb-xinerama.pc
+lib/pkgconfig/xcb-xkb.pc
 lib/pkgconfig/xcb-xprint.pc
 lib/pkgconfig/xcb-xtest.pc
 lib/pkgconfig/xcb-xv.pc
@@ -314,7 +316,7 @@ man/man3/xcb_free_gc.3
 man/man3/xcb_free_gc_checked.3
 man/man3/xcb_free_pixmap.3
 man/man3/xcb_free_pixmap_checked.3
-man/man3/xcb_ge_event_t.3
+man/man3/xcb_ge_generic_event_t.3
 man/man3/xcb_get_atom_name.3
 man/man3/xcb_get_atom_name_name.3
 man/man3/xcb_get_atom_name_name_end.3
@@ -2144,23 +2146,6 @@ man/man3/xcb_xkb_get_device_info_name_end.3
 man/man3/xcb_xkb_get_device_info_name_length.3
 man/man3/xcb_xkb_get_device_info_reply.3
 man/man3/xcb_xkb_get_device_info_unchecked.3
-man/man3/xcb_xkb_get_geometry.3
-man/man3/xcb_xkb_get_geometry_colors_iterator.3
-man/man3/xcb_xkb_get_geometry_colors_length.3
-man/man3/xcb_xkb_get_geometry_doodads_iterator.3
-man/man3/xcb_xkb_get_geometry_doodads_length.3
-man/man3/xcb_xkb_get_geometry_key_aliases.3
-man/man3/xcb_xkb_get_geometry_key_aliases_iterator.3
-man/man3/xcb_xkb_get_geometry_key_aliases_length.3
-man/man3/xcb_xkb_get_geometry_label_font.3
-man/man3/xcb_xkb_get_geometry_properties_iterator.3
-man/man3/xcb_xkb_get_geometry_properties_length.3
-man/man3/xcb_xkb_get_geometry_reply.3
-man/man3/xcb_xkb_get_geometry_sections_iterator.3
-man/man3/xcb_xkb_get_geometry_sections_length.3
-man/man3/xcb_xkb_get_geometry_shapes_iterator.3
-man/man3/xcb_xkb_get_geometry_shapes_length.3
-man/man3/xcb_xkb_get_geometry_unchecked.3
 man/man3/xcb_xkb_get_indicator_map.3
 man/man3/xcb_xkb_get_indicator_map_maps.3
 man/man3/xcb_xkb_get_indicator_map_maps_iterator.3
@@ -2224,8 +2209,6 @@ man/man3/xcb_xkb_set_debugging_flags_reply.3
 man/man3/xcb_xkb_set_debugging_flags_unchecked.3
 man/man3/xcb_xkb_set_device_info.3
 man/man3/xcb_xkb_set_device_info_checked.3
-man/man3/xcb_xkb_set_geometry.3
-man/man3/xcb_xkb_set_geometry_checked.3
 man/man3/xcb_xkb_set_indicator_map.3
 man/man3/xcb_xkb_set_indicator_map_checked.3
 man/man3/xcb_xkb_set_map.3
