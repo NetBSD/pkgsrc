@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.35 2013/05/21 14:43:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2014/01/02 18:26:36 wiz Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
-${PLIST.latex}share/doc/doxygen/examples/Makefile
-${PLIST.latex}share/doc/doxygen/examples/Makefile.in
-${PLIST.latex}share/doc/doxygen/examples/Makefile.win.in
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc.cfg
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc.h
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc/html/afterdoc_8h_source.html
