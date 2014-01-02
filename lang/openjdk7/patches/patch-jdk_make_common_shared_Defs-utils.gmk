@@ -1,14 +1,34 @@
-$NetBSD: patch-jdk_make_common_shared_Defs-utils.gmk,v 1.1 2013/06/15 09:31:06 jperkin Exp $
+$NetBSD: patch-jdk_make_common_shared_Defs-utils.gmk,v 1.2 2014/01/02 01:16:35 ryoon Exp $
 
 Use pkgsrc zip commands.
 
---- jdk/make/common/shared/Defs-utils.gmk.orig	2013-03-10 22:22:12.950670029 +0000
+--- jdk/make/common/shared/Defs-utils.gmk.orig	2014-01-01 05:53:33.000000000 +0000
 +++ jdk/make/common/shared/Defs-utils.gmk
-@@ -254,3 +254,7 @@ ifeq ($(PLATFORM), macosx)
-   # Builtin shell command, no -e option needed
+@@ -259,6 +259,10 @@ ifeq ($(PLATFORM), macosx) 
    ECHO         = echo
  endif
-+
+ 
 +ZIPEXE     = $(PKGSRC_ZIPEXE)
 +UNZIP      = $(PKGSRC_UNZIP)
 +UNZIPSFX   = $(PKGSRC_UNZIPSFX)
++
+ # BSD specific
+ ifeq ($(PLATFORM),bsd)
+   BASENAME     = $(UTILS_USR_BIN_PATH)basename
+@@ -286,7 +290,14 @@ ifeq ($(PLATFORM),bsd)
+   endif
+   ifeq ($(OS_VENDOR), NetBSD)
+     NAWK       = $(UTILS_USR_BIN_PATH)awk
+-    ZIPEXE     = $(UTILS_DEVTOOL_PATH)zip
+-    UNZIP      = $(UTILS_DEVTOOL_PATH)unzip
++    ZIPEXE     = $(PKGSRC_ZIPEXE)
++    UNZIP      = $(PKGSRC_UNZIP)
++    UNZIPSFX   = $(PKGSRC_UNZIPSFX)
++  endif
++  ifeq ($(OS_VENDOR), DragonFlyBSD)
++    NAWK       = $(UTILS_USR_BIN_PATH)awk
++    ZIPEXE     = $(PKGSRC_ZIPEXE)
++    UNZIP      = $(PKGSRC_UNZIP)
++    UNZIPSFX   = $(PKGSRC_UNZIPSFX)
+   endif
+ endif

@@ -1,11 +1,11 @@
-$NetBSD: patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp,v 1.1 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp,v 1.2 2014/01/02 01:16:35 ryoon Exp $
 
 GCC support.
 
---- hotspot/src/os_cpu/solaris_x86/vm/os_solaris_x86.cpp.orig	2012-08-10 16:24:45.000000000 +0000
+--- hotspot/src/os_cpu/solaris_x86/vm/os_solaris_x86.cpp.orig	2014-01-01 05:50:05.000000000 +0000
 +++ hotspot/src/os_cpu/solaris_x86/vm/os_solaris_x86.cpp
-@@ -237,7 +237,22 @@ frame os::get_sender_for_C_frame(frame*
-   return frame(fr->sender_sp(), fr->link(), fr->sender_pc());
+@@ -241,7 +241,22 @@ address os::current_stack_pointer() {
+   return (address)_get_current_sp();
  }
  
 +#ifdef AMD64
@@ -27,7 +27,7 @@ GCC support.
  
  frame os::current_frame() {
    intptr_t* fp = _get_current_fp();  // it's inlined so want current fp
-@@ -951,6 +966,11 @@ add_func_t*          os::atomic_add_func
+@@ -937,7 +952,12 @@ add_func_t*          os::atomic_add_func
  extern "C" void _solaris_raw_setup_fpu(address ptr);
  void os::setup_fpu() {
    address fpu_cntrl = StubRoutines::addr_fpu_cntrl_wrd_std();
@@ -39,3 +39,4 @@ GCC support.
 +#endif
  }
  #endif // AMD64
+ 

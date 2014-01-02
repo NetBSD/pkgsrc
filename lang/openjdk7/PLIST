@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/07/04 14:13:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/01/02 01:16:35 ryoon Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -386,7 +386,6 @@ java/openjdk7/jre/lib/${ARCH}/libjdwp.so
 java/openjdk7/jre/lib/${ARCH}/libjpeg.so
 java/openjdk7/jre/lib/${ARCH}/libjsdt.diz
 java/openjdk7/jre/lib/${ARCH}/libjsdt.so
-java/openjdk7/jre/lib/${ARCH}/libjsig.diz
 java/openjdk7/jre/lib/${ARCH}/libjsig.so
 java/openjdk7/jre/lib/${ARCH}/libjsound.so
 java/openjdk7/jre/lib/${ARCH}/liblcms.so
@@ -397,8 +396,6 @@ java/openjdk7/jre/lib/${ARCH}/libnet.so
 java/openjdk7/jre/lib/${ARCH}/libnio.so
 java/openjdk7/jre/lib/${ARCH}/libnpt.diz
 java/openjdk7/jre/lib/${ARCH}/libnpt.so
-java/openjdk7/jre/lib/${ARCH}/librmi.so
-java/openjdk7/jre/lib/${ARCH}/libsaproc.diz
 java/openjdk7/jre/lib/${ARCH}/libsaproc.so
 java/openjdk7/jre/lib/${ARCH}/libsplashscreen.so
 java/openjdk7/jre/lib/${ARCH}/libsunec.so
@@ -407,9 +404,7 @@ java/openjdk7/jre/lib/${ARCH}/libverify.diz
 java/openjdk7/jre/lib/${ARCH}/libverify.so
 java/openjdk7/jre/lib/${ARCH}/libzip.so
 java/openjdk7/jre/lib/${ARCH}/server/Xusage.txt
-java/openjdk7/jre/lib/${ARCH}/server/libjsig.diz
 java/openjdk7/jre/lib/${ARCH}/server/libjsig.so
-java/openjdk7/jre/lib/${ARCH}/server/libjvm.diz
 java/openjdk7/jre/lib/${ARCH}/server/libjvm.so
 java/openjdk7/jre/lib/${ARCH}/xawt/libmawt.so
 java/openjdk7/jre/lib/applet/.keep
@@ -463,7 +458,6 @@ java/openjdk7/jre/lib/security/cacerts
 java/openjdk7/jre/lib/security/java.policy
 java/openjdk7/jre/lib/security/java.security
 java/openjdk7/jre/lib/security/local_policy.jar
-java/openjdk7/jre/lib/servicetag/jdk_header.png
 java/openjdk7/jre/lib/sound.properties
 java/openjdk7/jre/lib/zi/Africa/Abidjan
 java/openjdk7/jre/lib/zi/Africa/Accra
@@ -951,7 +945,6 @@ java/openjdk7/man/ja_JP.UTF-8/man1/jsadebugd.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstack.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstat.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstatd.1
-java/openjdk7/man/ja_JP.UTF-8/man1/jvisualvm.1
 java/openjdk7/man/ja_JP.UTF-8/man1/keytool.1
 java/openjdk7/man/ja_JP.UTF-8/man1/native2ascii.1
 java/openjdk7/man/ja_JP.UTF-8/man1/orbd.1
@@ -991,7 +984,6 @@ java/openjdk7/man/man1/jsadebugd.1
 java/openjdk7/man/man1/jstack.1
 java/openjdk7/man/man1/jstat.1
 java/openjdk7/man/man1/jstatd.1
-java/openjdk7/man/man1/jvisualvm.1
 java/openjdk7/man/man1/keytool.1
 java/openjdk7/man/man1/native2ascii.1
 java/openjdk7/man/man1/orbd.1
