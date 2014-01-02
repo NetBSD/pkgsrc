@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/11/08 21:17:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/01/02 19:07:19 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -62,6 +62,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_channel_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_channel_sup_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_client_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_command_assembler.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_connection_helper_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_connection_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_control_main.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_ctl_usage.beam
@@ -84,7 +85,6 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_framing_amqp_0_8.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_framing_amqp_0_9_1.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_guid.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_heartbeat.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_intermediate_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_limiter.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_log.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_memory_monitor.beam
@@ -113,10 +113,12 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_parameter_validation.be
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins_main.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins_usage.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_policies.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_policy.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_policy_validator.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_prelaunch.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_queue_collector.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_queue_decorator.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_queue_index.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_reader.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_registry.beam
@@ -157,7 +159,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_framing.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_msg_store.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/README
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp_client-3.1.5.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp_client-0.0.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-0.5.0-rmq${PKGVERSION}-git4b93c2d.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/eldap-${PKGVERSION}-gite309de4.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/mochiweb-2.7.0-rmq${PKGVERSION}-git680dba8.ez
@@ -199,3 +201,4 @@ sbin/rabbitmq-plugins
 sbin/rabbitmq-server
 sbin/rabbitmqctl
 share/examples/rabbitmq/rabbitmq-env.conf
+share/examples/rabbitmq/rabbitmq.config.example
