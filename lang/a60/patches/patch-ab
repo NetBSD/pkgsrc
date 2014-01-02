@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/15 21:21:45 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2014/01/02 04:05:33 dholland Exp $
+
+Add info dir information.
 
 --- RRA60.info.orig	Tue May 15 16:54:51 2001
 +++ RRA60.info
