@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2013/07/15 01:05:21 obache Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/02 12:19:00 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.json-glib
 PKG_SUPPORTED_OPTIONS=	introspection nls tests
-PKG_SUGGESTED_OPTIONS+=	nls tests
+PKG_SUGGESTED_OPTIONS+=	introspection nls tests
 PLIST_VARS+=		introspection nls
 
 .include "../../mk/bsd.options.mk"
