@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.59 2014/01/02 17:58:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.60 2014/01/02 18:26:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/cdrtools to 3.01alpha20 [wiz 2014-01-02]
 	Updated converters/py-chardet to 2.2.1 [wiz 2014-01-02]
 	Updated textproc/py-sphinx to 1.2 [wiz 2014-01-02]
+	Updated devel/doxygen to 1.8.6 [wiz 2014-01-02]
