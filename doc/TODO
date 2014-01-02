@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12824 2014/01/02 18:26:45 wiz Exp $
+$NetBSD: TODO,v 1.12825 2014/01/02 18:28:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -879,7 +879,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pbzip2-1.1.6
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
-	o pcre-8.34
 	o pdmenu-1.2.87
 	o pen-0.17.3
 	o pessulus-2.30.3 [GNOME 2.28]
