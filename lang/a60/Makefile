@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/02 04:08:09 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/02 04:09:11 dholland Exp $
 
 DISTNAME=	a60-0.20a
 PKGREVISION=	1
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/algol60/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Algol 60 interpreter
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 
