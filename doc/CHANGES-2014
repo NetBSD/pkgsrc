@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.47 2014/01/02 14:53:17 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.48 2014/01/02 15:12:37 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Renamed audio/opus to audio/libopus [ryoon 2014-01-02]
 	Updated audio/libopus to 1.1 [ryoon 2014-01-02]
 	Updated audio/opus-tools to 0.1.8 [ryoon 2014-01-02]
+	Updated net/rdesktop to 1.8.1 [prlw1 2014-01-02]
