@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/13 17:41:34 mspo Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/02 17:26:19 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -23,6 +23,7 @@ share/examples/redis/tests/integration/redis-cli.tcl
 share/examples/redis/tests/integration/replication-2.tcl
 share/examples/redis/tests/integration/replication-3.tcl
 share/examples/redis/tests/integration/replication-4.tcl
+share/examples/redis/tests/integration/replication-psync.tcl
 share/examples/redis/tests/integration/replication.tcl
 share/examples/redis/tests/support/redis.tcl
 share/examples/redis/tests/support/server.tcl
@@ -40,6 +41,7 @@ share/examples/redis/tests/unit/expire.tcl
 share/examples/redis/tests/unit/introspection.tcl
 share/examples/redis/tests/unit/limits.tcl
 share/examples/redis/tests/unit/maxmemory.tcl
+share/examples/redis/tests/unit/memefficiency.tcl
 share/examples/redis/tests/unit/multi.tcl
 share/examples/redis/tests/unit/obuf-limits.tcl
 share/examples/redis/tests/unit/other.tcl
@@ -47,6 +49,7 @@ share/examples/redis/tests/unit/printver.tcl
 share/examples/redis/tests/unit/protocol.tcl
 share/examples/redis/tests/unit/pubsub.tcl
 share/examples/redis/tests/unit/quit.tcl
+share/examples/redis/tests/unit/scan.tcl
 share/examples/redis/tests/unit/scripting.tcl
 share/examples/redis/tests/unit/slowlog.tcl
 share/examples/redis/tests/unit/sort.tcl

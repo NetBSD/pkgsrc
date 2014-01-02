@@ -1,5 +1,6 @@
-$NetBSD: patch-src_object.c,v 1.1 2014/01/01 16:08:24 bsiegert Exp $
+$NetBSD: patch-src_object.c,v 1.2 2014/01/02 17:26:19 fhajny Exp $
 
+Add MirBSD support.
 --- src/object.c.orig	Wed Aug 28 09:36:00 2013
 +++ src/object.c
 @@ -450,7 +450,11 @@ int getLongDoubleFromObject(robj *o, lon
