@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/10 14:41:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/02 06:12:50 dholland Exp $
 
 DISTNAME=	gmpc-alarm-11.8.16
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config
+USE_TOOLS+=	intltool msgfmt pkg-config
 
 .include "../../audio/gmpc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
