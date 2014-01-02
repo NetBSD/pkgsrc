@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2012/10/20 13:14:48 wiz Exp $
-bin/chardetect.py
+@comment $NetBSD: PLIST,v 1.7 2014/01/02 17:55:40 wiz Exp $
+bin/chardetect
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/chardet/__init__.py
 ${PYSITELIB}/chardet/__init__.pyc
@@ -13,6 +14,9 @@ ${PYSITELIB}/chardet/big5freq.pyo
 ${PYSITELIB}/chardet/big5prober.py
 ${PYSITELIB}/chardet/big5prober.pyc
 ${PYSITELIB}/chardet/big5prober.pyo
+${PYSITELIB}/chardet/chardetect.py
+${PYSITELIB}/chardet/chardetect.pyc
+${PYSITELIB}/chardet/chardetect.pyo
 ${PYSITELIB}/chardet/chardistribution.py
 ${PYSITELIB}/chardet/chardistribution.pyc
 ${PYSITELIB}/chardet/chardistribution.pyo
@@ -25,9 +29,15 @@ ${PYSITELIB}/chardet/charsetprober.pyo
 ${PYSITELIB}/chardet/codingstatemachine.py
 ${PYSITELIB}/chardet/codingstatemachine.pyc
 ${PYSITELIB}/chardet/codingstatemachine.pyo
+${PYSITELIB}/chardet/compat.py
+${PYSITELIB}/chardet/compat.pyc
+${PYSITELIB}/chardet/compat.pyo
 ${PYSITELIB}/chardet/constants.py
 ${PYSITELIB}/chardet/constants.pyc
 ${PYSITELIB}/chardet/constants.pyo
+${PYSITELIB}/chardet/cp949prober.py
+${PYSITELIB}/chardet/cp949prober.pyc
+${PYSITELIB}/chardet/cp949prober.pyo
 ${PYSITELIB}/chardet/escprober.py
 ${PYSITELIB}/chardet/escprober.pyc
 ${PYSITELIB}/chardet/escprober.pyo
