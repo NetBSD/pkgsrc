@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.53 2014/01/02 16:35:08 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.54 2014/01/02 16:40:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -62,3 +62,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Method-Signatures to 20131010 [schmonz 2014-01-02]
 	Updated devel/p5-Ouch to 0.0408 [schmonz 2014-01-02]
 	Updated devel/p5-Path-Class to 0.33 [schmonz 2014-01-02]
+	Updated devel/p5-Test-BDD-Cucumber to 0.17 [schmonz 2014-01-02]
