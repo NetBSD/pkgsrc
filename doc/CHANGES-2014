@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.55 2014/01/02 17:11:22 fhajny Exp $
+$NetBSD: CHANGES-2014,v 1.56 2014/01/02 17:26:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-Path-Class to 0.33 [schmonz 2014-01-02]
 	Updated devel/p5-Test-BDD-Cucumber to 0.17 [schmonz 2014-01-02]
 	Updated databases/couchdb to 1.5.0 [root 2014-01-02]
+	Updated databases/redis to 2.8.3 [root 2014-01-02]
