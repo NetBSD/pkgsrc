@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/02 04:08:03 dholland Exp $
 bin/a60
 info/RRA60.info
 info/a60.info
 man/man1/a60.1
 share/a60/a60-mkc.inc
-share/doc/a60/a60.ps
 share/doc/a60/RRA60.ps
+share/doc/a60/a60.ps
 share/examples/a60/321.a60
 share/examples/a60/README
 share/examples/a60/inout.a60
