@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.71 2014/01/02 19:44:26 jaapb Exp $
+$NetBSD: CHANGES-2014,v 1.72 2014/01/02 19:52:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -80,3 +80,6 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/rabbitmq to 3.2.2 [root 2014-01-02]
 	Updated audio/libmpdclient to 2.9 [wiz 2014-01-02]
 	Updated net/choqok to 1.4 [jaapb 2014-01-02]
+	Updated x11/xcb-proto to 1.10 [wiz 2014-01-02]
+	Updated x11/py-xcbgen to 1.10 [wiz 2014-01-02]
+	Updated x11/libxcb to 1.10 [wiz 2014-01-02]
