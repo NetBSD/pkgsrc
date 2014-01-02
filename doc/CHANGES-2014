@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.37 2014/01/02 07:34:29 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.38 2014/01/02 07:58:48 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/a60 to 0.20anb1 [dholland 2014-01-02]
 	Updated audio/milkytracker to 0.90.80nb2 [dholland 2014-01-02]
 	Updated graphics/urt to 3.1b1nb16 [dholland 2014-01-02]
+	Updated chat/ircII to 20131230 [mrg 2014-01-02]
