@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/03/15 23:34:44 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/02 00:50:07 dholland Exp $
 #
 
 DISTNAME=	zkt-1.1.2
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-bind_util_path=/usr/sbin
 # this one will fail to build due to conflict in that case.
 
 .if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--enable-bind_util_path=${PREFIX}/sbin
+CONFIGURE_ARGS+=	--enable-bind_util_path=${BUILDLINK_PREFIX.bind}/sbin
 .include "../../net/bind99/buildlink3.mk"
 .endif
 
