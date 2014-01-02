@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2012/01/31 11:53:52 ryoon Exp $
+$NetBSD: patch-ac,v 1.4 2014/01/02 15:18:01 ryoon Exp $
 
---- examples.mk.orig	2012-01-27 18:36:39.000000000 +0000
+--- examples.mk.orig	2013-12-17 17:05:28.000000000 +0000
 +++ examples.mk
-@@ -178,7 +178,7 @@ BINS-$(NOT_MSVS)           += $(addprefi
- 
+@@ -192,7 +192,7 @@ BINS-$(NOT_MSVS)           += $(addprefi
  # Instantiate linker template for all examples.
  CODEC_LIB=$(if $(CONFIG_DEBUG_LIBS),vpx_g,vpx)
--CODEC_LIB_SUF=$(if $(CONFIG_SHARED),.so,.a)
-+CODEC_LIB_SUF=$(if $(CONFIG_SHARED),.so,.la)
+ SHARED_LIB_SUF=$(if $(filter darwin%,$(TGT_OS)),.dylib,.so)
+-CODEC_LIB_SUF=$(if $(CONFIG_SHARED),$(SHARED_LIB_SUF),.a)
++CODEC_LIB_SUF=$(if $(CONFIG_SHARED),$(SHARED_LIB_SUF),.la)
  $(foreach bin,$(BINS-yes),\
      $(if $(BUILD_OBJS),$(eval $(bin):\
          $(LIB_PATH)/lib$(CODEC_LIB)$(CODEC_LIB_SUF)))\

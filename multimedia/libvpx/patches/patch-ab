@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2012/01/31 11:53:52 ryoon Exp $
+$NetBSD: patch-ab,v 1.5 2014/01/02 15:18:01 ryoon Exp $
 
---- libs.mk.orig	2012-01-27 18:36:39.000000000 +0000
+--- libs.mk.orig	2013-12-17 17:05:28.000000000 +0000
 +++ libs.mk
-@@ -188,8 +188,8 @@ endif
+@@ -259,8 +259,8 @@ endif
  else
  LIBVPX_OBJS=$(call objs,$(CODEC_SRCS))
  OBJS-$(BUILD_LIBVPX) += $(LIBVPX_OBJS)
@@ -11,5 +11,5 @@ $NetBSD: patch-ab,v 1.4 2012/01/31 11:53:52 ryoon Exp $
 +LIBS-$(if $(BUILD_LIBVPX),$(CONFIG_STATIC)) += $(BUILD_PFX)libvpx.a
 +$(BUILD_PFX)libvpx.a: $(LIBVPX_OBJS)
  
+ 
  BUILD_LIBVPX_SO         := $(if $(BUILD_LIBVPX),$(CONFIG_SHARED))
- LIBVPX_SO               := libvpx.so.$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)
