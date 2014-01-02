@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.39 2014/01/02 08:39:20 obache Exp $
+$NetBSD: CHANGES-2014,v 1.40 2014/01/02 08:39:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -48,3 +48,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/urt to 3.1b1nb16 [dholland 2014-01-02]
 	Updated chat/ircII to 20131230 [mrg 2014-01-02]
 	Updated graphics/cogl to 1.14.0nb4 [obache 2014-01-02]
+	Updated emulators/suse131_x11 to 13.1nb1 [obache 2014-01-02]
