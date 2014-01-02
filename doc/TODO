@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12816 2014/01/02 13:14:29 ryoon Exp $
+$NetBSD: TODO,v 1.12817 2014/01/02 15:12:37 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -948,7 +948,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o raine-0.61.1
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdesktop-1.8.1
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
 	o realboy-0.2.2
