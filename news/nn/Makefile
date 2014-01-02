@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2013/05/18 11:15:00 mlelstv Exp $
+# $NetBSD: Makefile,v 1.44 2014/01/02 08:00:32 dholland Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.nndev.org/
 COMMENT=	NN newsreader
 
 PKG_SYSCONFSUBDIR=	nntp
+
+TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -29,10 +31,6 @@ MFILE=		m-i80386.h
 MFILE=         m-mipsel.h
 .else
 MFILE=		m-${LOWER_ARCH}.h
-.endif
-
-.if ${OPSYS} == "DragonFly" || !empty(CC_VERSION:Mgcc*)
-CPP+=		-traditional
 .endif
 
 .if ${OPSYS} == "IRIX"
