@@ -1,19 +1,46 @@
-$NetBSD: patch-ah,v 1.4 2006/05/11 14:46:35 joerg Exp $
+$NetBSD: patch-ah,v 1.5 2014/01/02 07:34:11 dholland Exp $
+
+- use standard headers
+- don't declare own errno
+- don't use sys_errlist
+- don't use mktemp
+- avoid void main
+- use c89
 
 --- tools/into.c.orig	1992-04-30 14:10:15.000000000 +0000
 +++ tools/into.c
-@@ -40,8 +40,9 @@ static char temp[] = "intoXXXXXXXX";
+@@ -27,6 +27,7 @@
+ 
+ #include "rle_config.h"
+ #include <stdio.h>
++#include <string.h>
+ #include <errno.h>
+ #include <sys/types.h>
+ #include <sys/param.h>			/* for MAXPATHLEN */
+@@ -40,19 +41,14 @@ static char temp[] = "intoXXXXXXXX";
  static char buf[MAXPATHLEN+1];
  short forceflg;				/* overwrite an unwritable file? */
  
 -extern int errno;
-+#ifndef BSD
- extern char *sys_errlist[];
-+#endif
+-extern char *sys_errlist[];
+-
+-void
+-main(argc, argv)
+-int argc;
+-char **argv;
++int
++main(int argc, char **argv)
+ {
+     char *cp;
+     int c;
+     FILE * outf;
+     char iobuf[BUFSIZ];
+-    int size;
++    int size, fd;
  
- void
- main(argc, argv)
-@@ -72,7 +73,7 @@ char **argv;
+     /* Don't allow files named "-f" in order to catch common error */
+     if (argc >= 2 && !strcmp(argv[1], "-f"))
+@@ -72,7 +68,7 @@ char **argv;
  	exit(1);
      }
  
@@ -22,3 +49,35 @@ $NetBSD: patch-ah,v 1.4 2006/05/11 14:46:35 joerg Exp $
      {
  	c = *++cp;
  	*cp = 0;
+@@ -82,9 +78,9 @@ char **argv;
+     }
+     else
+ 	strcpy( buf, temp );
+-    mktemp( buf );
++    fd = mkstemp( buf );
+ 
+-    if ( (outf = fopen( buf, "w" )) == NULL )
++    if ( fd < 0 || (outf = fdopen( fd, "w" )) == NULL )
+     {
+ 	perror(buf);
+ 	exit(1);
+@@ -103,7 +99,7 @@ char **argv;
+     if (ferror(outf))
+     {
+ 	fprintf(stderr, "into: %s, \"%s\" not modified\n",
+-	    sys_errlist[errno], argv[1]);
++	    strerror(errno), argv[1]);
+ 	unlink(buf);
+ 	exit(1);
+     }
+@@ -118,8 +114,8 @@ char **argv;
+ }
+ 
+ #ifdef NEED_RENAME
+-rename( file1, file2 )
+-char *file1, *file2;
++int
++rename( char *file1, char *file2 )
+ {
+     struct stat st;
+ 
