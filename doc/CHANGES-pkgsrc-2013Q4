@@ -1,7 +1,15 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.1 2013/12/31 10:20:23 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.2 2014/01/02 22:29:50 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
 
 Created pkgsrc-2013Q4 branch [wiz 2013-12-31]
 
+Pullup ticket #4279 - requested by dholland
+chat/phone: build fix patch
+Pullup ticket #4280 - requested by dholland
+news/pan: build fix patch
+Pullup ticket #4281 - requested by obache
+graphics/cogl: bug fix patch
+Pullup ticket #4282 - requested by obache
+emulators/suse131_x11: bug fix update
