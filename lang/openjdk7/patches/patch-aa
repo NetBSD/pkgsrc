@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.9 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-aa,v 1.10 2014/01/02 01:16:35 ryoon Exp $
 
 DragonFly support.
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2013-05-29 03:57:57.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2014-01-01 05:50:05.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -131,8 +131,11 @@
+@@ -126,8 +126,11 @@
  # include <inttypes.h>
  # include <sys/ioctl.h>
  
@@ -17,39 +17,17 @@ DragonFly support.
  #endif
  
  #ifdef __APPLE__
-@@ -342,7 +345,12 @@ void os::Bsd::initialize_system_info() {
-   int mib[2];
+@@ -340,6 +343,7 @@ void os::Bsd::initialize_system_info() {
    size_t len;
    int cpu_val;
-+#ifdef HW_USERMEM64
-+  uint64_t mem_val;
-+#else
-   u_long mem_val;
-+#endif
+   julong mem_val;
 +  struct rlimit limits;
  
    /* get processors count via hw.ncpus sysctl */
    mib[0] = CTL_HW;
-@@ -359,21 +367,26 @@ void os::Bsd::initialize_system_info() {
-    * instead of hw.physmem because we need size of allocatable memory
-    */
-   mib[0] = CTL_HW;
-+#ifdef HW_USERMEM64
-+  mib[1] = HW_USERMEM64;
-+#else
-   mib[1] = HW_USERMEM;
-+#endif
-   len = sizeof(mem_val);
--  if (sysctl(mib, 2, &mem_val, &len, NULL, 0) != -1)
-+  if (sysctl(mib, 2, &mem_val, &len, NULL, 0) != -1) {
-        _physical_memory = mem_val;
--  else
-+#ifdef HW_USERMEM64
-+       if (_physical_memory < mem_val)
-+           _physical_memory = (julong)-1;
-+#endif
-+  } else
+@@ -370,14 +374,11 @@ void os::Bsd::initialize_system_info() {
         _physical_memory = 256*1024*1024;       // fallback (XXXBSD?)
+   }
  
 -#ifdef __OpenBSD__
 -  {
@@ -67,7 +45,7 @@ DragonFly support.
  #endif
  }
  #else
-@@ -2165,7 +2178,9 @@ void * os::dll_load(const char *filename
+@@ -2222,7 +2223,9 @@ void * os::dll_load(const char *filename
      {EM_PPC,         EM_PPC,     ELFCLASS32, ELFDATA2MSB, (char*)"Power PC 32"},
      {EM_PPC64,       EM_PPC64,   ELFCLASS64, ELFDATA2MSB, (char*)"Power PC 64"},
      {EM_ARM,         EM_ARM,     ELFCLASS32,   ELFDATA2LSB, (char*)"ARM"},
@@ -77,16 +55,16 @@ DragonFly support.
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -3668,7 +3683,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -3880,7 +3883,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
+   return (ret == 0) ? OS_OK : OS_ERR;
  #elif defined(__APPLE__) || defined(__NetBSD__)
-   struct sched_param sp;
-@@ -3696,7 +3711,7 @@ OSReturn os::get_native_priority(const T
+@@ -3909,7 +3912,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;

@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.4 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-al,v 1.5 2014/01/02 01:16:35 ryoon Exp $
 
 DragonFly support.
 
---- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2013-06-01 14:10:31.000000000 +0000
+--- jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java.orig	2014-01-01 05:53:43.000000000 +0000
 +++ jdk/src/solaris/classes/sun/nio/fs/DefaultFileSystemProvider.java
 @@ -28,6 +28,8 @@ package sun.nio.fs;
  import java.nio.file.spi.FileSystemProvider;
@@ -28,20 +28,22 @@ DragonFly support.
      @SuppressWarnings("unchecked")
      private static FileSystemProvider createProvider(final String cn) {
          return AccessController
-@@ -64,11 +74,15 @@ public class DefaultFileSystemProvider {
+@@ -64,13 +74,17 @@ public class DefaultFileSystemProvider {
      public static FileSystemProvider create() {
          String osname = AccessController
              .doPrivileged(new GetPropertyAction("os.name"));
-+        String fileSystemProvider = System
-+            .getProperty("java.nio.file.spi.DefaultFileSystemProvider");
-+        if (validFileSystemProviders.contains(fileSystemProvider))
-+            return createProvider(fileSystemProvider);
++	String fileSystemProvider = System
++	    .getProperty("java.nio.file.spi.DefaultFileSystemProvider");
++	if (validFileSystemProviders.contains(fileSystemProvider))
++	    return createProvider(fileSystemProvider);
          if (osname.equals("SunOS"))
              return createProvider("sun.nio.fs.SolarisFileSystemProvider");
          if (osname.equals("Linux"))
              return createProvider("sun.nio.fs.LinuxFileSystemProvider");
--        if (osname.endsWith("BSD") || osname.equals("Darwin") || osname.contains("OS X"))
-+        if (osname.endsWith("BSD") || osname.equals("Darwin") || osname.contains("OS X") || osname.equals("DragonFly"))
+         if (osname.equals("Darwin") || osname.contains("OS X"))
+             return createProvider("sun.nio.fs.MacOSXFileSystemProvider");
+-        if (osname.endsWith("BSD"))
++        if (osname.endsWith("BSD") || osname.equals("DragonFly"))
              return createProvider("sun.nio.fs.BsdFileSystemProvider");
          throw new AssertionError("Platform not recognized");
      }
