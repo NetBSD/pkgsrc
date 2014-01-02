@@ -1,13 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/12/11 10:29:00 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/01/02 14:43:21 ryoon Exp $
 
-BUILDLINK_TREE+=	opus
+BUILDLINK_TREE+=	libopus
 
-.if !defined(OPUS_BUILDLINK3_MK)
-OPUS_BUILDLINK3_MK:=
+.if !defined(LIBOPUS_BUILDLINK3_MK)
+LIBOPUS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.opus+=	opus>=1.0.1
-BUILDLINK_ABI_DEPENDS.opus+=	opus>=1.0.2
-BUILDLINK_PKGSRCDIR.opus?=	../../audio/libopus
-.endif	# OPUS_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.libopus+=	libopus>=1.1
+BUILDLINK_PKGSRCDIR.libopus?=	../../audio/libopus
+.endif	# LIBOPUS_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-opus
+BUILDLINK_TREE+=	-libopus
