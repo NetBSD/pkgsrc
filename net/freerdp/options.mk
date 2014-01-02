@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2013/10/07 12:53:20 obache Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/02 15:49:38 prlw1 Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freerdp
-PKG_SUPPORTED_OPTIONS=	alsa cups ffmpeg pcsc pulseaudio
+PKG_SUPPORTED_OPTIONS=	alsa cups ffmpeg pcsc pulseaudio debug
 PKG_SUGGESTED_OPTIONS=	alsa cups ffmpeg
 
 .include "../../mk/bsd.options.mk"
@@ -53,6 +53,7 @@ PLIST.pcsc=	yes
 .else
 CMAKE_ARGS+=	-DWITH_PCSC=OFF
 .endif
+
 ###
 ### PulseAudio support
 ###
@@ -62,4 +63,20 @@ CMAKE_ARGS+=	-DWITH_PULSEAUDIO=ON
 PLIST.pulseaudio=	yes
 .else
 CMAKE_ARGS+=	-DWITH_PULSEAUDIO=OFF
+.endif
+
+###
+### Debug support
+###
+.if !empty(PKG_OPTIONS:Mdebug)
+CMAKE_ARGS+=	-DWITH_DEBUG=ON
+#CMAKE_ARGS+=	-DWITH_DEBUG_TRANSPORT=ON
+CMAKE_ARGS+=	-DWITH_DEBUG_CHANNELS=ON
+CMAKE_ARGS+=	-DWITH_DEBUG_SVC=ON
+CMAKE_ARGS+=	-DWITH_DEBUG_DVC=ON
+CMAKE_ARGS+=	-DWITH_DEBUG_NEGO=ON
+CMAKE_ARGS+=	-DWITH_DEBUG_REDIR=ON
+CMAKE_ARGS+=	-DWITH_DEBUG_GDI=ON
+.else
+CMAKE_ARGS+=	-DWITH_DEBUG=OFF
 .endif
