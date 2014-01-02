@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12832 2014/01/02 19:42:16 wiz Exp $
+$NetBSD: TODO,v 1.12833 2014/01/02 19:52:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -751,7 +751,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libv4l-0.8.5
 	o libvdpau-0.7
 	o libvirt-0.9.9
-	o libxcb-1.10
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o libxmp-4.2.1
@@ -1111,7 +1110,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xboard-4.7.0
-	o xcb-proto-1.10
 	o xcmsdb-1.0.4 [unpackaged]
 	o xemacs-current-21.5.31
 	o xentools43-4.3.0
