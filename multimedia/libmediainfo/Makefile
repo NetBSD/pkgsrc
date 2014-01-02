@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/31 23:21:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/02 08:31:39 obache Exp $
 
 .include "../../multimedia/mediainfo/Makefile.common"
 
@@ -19,8 +19,9 @@ REPLACE_SH=		MediaInfoLib/Project/GNU/Library/libmediainfo-config.in
 
 PKGCONFIG_OVERRIDE+=	MediaInfoLib/Project/GNU/Library/libmediainfo.pc.in
 
+.include "../../mk/bsd.prefs.mk"
 # Enable shared library
-.if empty(SHLIB_TYPE:Mnone)
+.if empty(_OPSYS_SHLIB_TYPE:Mnone)
 CONFIGURE_ARGS+=	--enable-shared
 .endif
 
