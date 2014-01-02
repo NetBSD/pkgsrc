@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/10/18 11:41:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/02 15:44:10 jperkin Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -8,7 +8,11 @@ PKGREVISION=	3
 USE_TOOLS+=	pax
 
 DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2-[0-9]*:../../www/php-phrasea2
+.if ${PHP_PKG_PREFIX} >= 55
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
+.else
 DEPENDS+=	${PHP_PKG_PREFIX}-apc-[0-9]*:../../www/php-apc
+.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
