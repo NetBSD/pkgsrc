@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/28 10:48:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/01/02 17:58:22 wiz Exp $
 bin/sphinx-apidoc
 bin/sphinx-autogen
 bin/sphinx-build
@@ -64,6 +64,9 @@ ${PYSITELIB}/sphinx/builders/text.pyo
 ${PYSITELIB}/sphinx/builders/websupport.py
 ${PYSITELIB}/sphinx/builders/websupport.pyc
 ${PYSITELIB}/sphinx/builders/websupport.pyo
+${PYSITELIB}/sphinx/builders/xml.py
+${PYSITELIB}/sphinx/builders/xml.pyc
+${PYSITELIB}/sphinx/builders/xml.pyo
 ${PYSITELIB}/sphinx/cmdline.py
 ${PYSITELIB}/sphinx/cmdline.pyc
 ${PYSITELIB}/sphinx/cmdline.pyo
@@ -145,6 +148,9 @@ ${PYSITELIB}/sphinx/ext/intersphinx.pyo
 ${PYSITELIB}/sphinx/ext/jsmath.py
 ${PYSITELIB}/sphinx/ext/jsmath.pyc
 ${PYSITELIB}/sphinx/ext/jsmath.pyo
+${PYSITELIB}/sphinx/ext/linkcode.py
+${PYSITELIB}/sphinx/ext/linkcode.pyc
+${PYSITELIB}/sphinx/ext/linkcode.pyo
 ${PYSITELIB}/sphinx/ext/mathbase.py
 ${PYSITELIB}/sphinx/ext/mathbase.pyc
 ${PYSITELIB}/sphinx/ext/mathbase.pyo
@@ -157,9 +163,6 @@ ${PYSITELIB}/sphinx/ext/oldcmarkup.pyo
 ${PYSITELIB}/sphinx/ext/pngmath.py
 ${PYSITELIB}/sphinx/ext/pngmath.pyc
 ${PYSITELIB}/sphinx/ext/pngmath.pyo
-${PYSITELIB}/sphinx/ext/refcounting.py
-${PYSITELIB}/sphinx/ext/refcounting.pyc
-${PYSITELIB}/sphinx/ext/refcounting.pyo
 ${PYSITELIB}/sphinx/ext/todo.py
 ${PYSITELIB}/sphinx/ext/todo.pyc
 ${PYSITELIB}/sphinx/ext/todo.pyo
@@ -172,6 +175,7 @@ ${PYSITELIB}/sphinx/highlighting.pyo
 ${PYSITELIB}/sphinx/jinja2glue.py
 ${PYSITELIB}/sphinx/jinja2glue.pyc
 ${PYSITELIB}/sphinx/jinja2glue.pyo
+${PYSITELIB}/sphinx/locale/.tx/config
 ${PYSITELIB}/sphinx/locale/__init__.py
 ${PYSITELIB}/sphinx/locale/__init__.pyc
 ${PYSITELIB}/sphinx/locale/__init__.pyo
@@ -196,6 +200,9 @@ ${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/et/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/et/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/et/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/eu/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/eu/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/eu/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/fa/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/fa/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/fa/LC_MESSAGES/sphinx.po
@@ -205,9 +212,18 @@ ${PYSITELIB}/sphinx/locale/fi/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/he/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/he/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/he/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/hr/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/hr/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/hr/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/hu/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/hu/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/hu/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/id/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/id/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/id/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/it/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/it/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/it/LC_MESSAGES/sphinx.po
@@ -223,6 +239,12 @@ ${PYSITELIB}/sphinx/locale/lt/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/lv/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/lv/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/lv/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/mk/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/mk/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/mk/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/nb_NO/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/nb_NO/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/nb_NO/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ne/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ne/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ne/LC_MESSAGES/sphinx.po
@@ -238,6 +260,12 @@ ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ru/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ru/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ru/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/si/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/si/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/si/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/sk/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/sk/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/sk/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.po
@@ -359,7 +387,7 @@ ${PYSITELIB}/sphinx/themes/basic/static/websupport.js
 ${PYSITELIB}/sphinx/themes/basic/theme.conf
 ${PYSITELIB}/sphinx/themes/default/layout.html
 ${PYSITELIB}/sphinx/themes/default/static/default.css_t
-${PYSITELIB}/sphinx/themes/default/static/sidebar.js
+${PYSITELIB}/sphinx/themes/default/static/sidebar.js_t
 ${PYSITELIB}/sphinx/themes/default/theme.conf
 ${PYSITELIB}/sphinx/themes/epub/epub-cover.html
 ${PYSITELIB}/sphinx/themes/epub/layout.html
@@ -377,6 +405,7 @@ ${PYSITELIB}/sphinx/themes/nature/theme.conf
 ${PYSITELIB}/sphinx/themes/pyramid/layout.html
 ${PYSITELIB}/sphinx/themes/pyramid/static/dialog-note.png
 ${PYSITELIB}/sphinx/themes/pyramid/static/dialog-seealso.png
+${PYSITELIB}/sphinx/themes/pyramid/static/dialog-todo.png
 ${PYSITELIB}/sphinx/themes/pyramid/static/dialog-topic.png
 ${PYSITELIB}/sphinx/themes/pyramid/static/dialog-warning.png
 ${PYSITELIB}/sphinx/themes/pyramid/static/epub.css
@@ -410,6 +439,9 @@ ${PYSITELIB}/sphinx/themes/traditional/theme.conf
 ${PYSITELIB}/sphinx/theming.py
 ${PYSITELIB}/sphinx/theming.pyc
 ${PYSITELIB}/sphinx/theming.pyo
+${PYSITELIB}/sphinx/transforms.py
+${PYSITELIB}/sphinx/transforms.pyc
+${PYSITELIB}/sphinx/transforms.pyo
 ${PYSITELIB}/sphinx/util/__init__.py
 ${PYSITELIB}/sphinx/util/__init__.pyc
 ${PYSITELIB}/sphinx/util/__init__.pyo
@@ -518,3 +550,6 @@ ${PYSITELIB}/sphinx/writers/text.pyo
 ${PYSITELIB}/sphinx/writers/websupport.py
 ${PYSITELIB}/sphinx/writers/websupport.pyc
 ${PYSITELIB}/sphinx/writers/websupport.pyo
+${PYSITELIB}/sphinx/writers/xml.py
+${PYSITELIB}/sphinx/writers/xml.pyc
+${PYSITELIB}/sphinx/writers/xml.pyo
