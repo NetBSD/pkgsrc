@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2014/01/01 11:49:59 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2014/01/02 15:56:11 richard Exp $
 
 DISTNAME=	libgcrypt-1.6.0
 CATEGORIES=	security
@@ -22,6 +22,8 @@ TEXINFO_REQD=		4.0
 INFO_FILES=		yes # PLIST
 
 .include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS.SunOS+=	-Wa,--divide
 
 .if empty(MACHINE_PLATFORM:MNetBSD-*-i386) && \
     empty(MACHINE_PLATFORM:MNetBSD-*-alpha) && \
