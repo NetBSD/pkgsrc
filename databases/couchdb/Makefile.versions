@@ -1,7 +1,11 @@
-# $NetBSD: Makefile.versions,v 1.1 2013/09/09 13:39:10 fhajny Exp $
+# $NetBSD: Makefile.versions,v 1.2 2014/01/02 17:10:22 fhajny Exp $
 
 _VERSIONS=					\
 	couch_dbupdates	0.1			\
+	couch_index	0.1			\
+	couch_mrview	0.1			\
+	couch_plugins	0.1			\
+	couch_replicator	0.1		\
 	ejson		0.1.0			\
 	ibrowse		2.2.0			\
 	mochiweb	1.4.1			\

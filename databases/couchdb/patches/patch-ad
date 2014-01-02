@@ -1,15 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2011/07/27 19:20:57 fhajny Exp $
+$NetBSD: patch-ad,v 1.2 2014/01/02 17:10:23 fhajny Exp $
 
-Fix default PID file location in script.
-
---- bin/couchdb.tpl.in.orig	2010-06-25 18:50:03.000000000 +0000
+Set pkgsrc standard paths.
+--- bin/couchdb.tpl.in.orig	2013-10-20 09:38:19.000000000 +0000
 +++ bin/couchdb.tpl.in
-@@ -22,7 +22,7 @@ INTERACTIVE=false
- KILL=false
+@@ -28,7 +28,7 @@ KILL=false
+ PLUGINS_DIR=%locallibdir%/plugins
  LOCAL_CONFIG_DIR=%localconfdir%/local.d
  LOCAL_CONFIG_FILE=%localconfdir%/%localini%
 -PID_FILE=%localstatedir%/run/couchdb/couchdb.pid
-+PID_FILE=@RUNDIR@/couchdb.pid
++PID_FILE=@COUCH_RUNDIR@/couchdb.pid
  RECURSED=false
  RESET_CONFIG=true
  RESPAWN_TIMEOUT=0
