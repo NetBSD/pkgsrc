@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2010/08/21 14:16:18 asau Exp $
+$NetBSD: distinfo,v 1.7 2014/01/02 04:18:49 dholland Exp $
 
 SHA1 (kali-0.52.2.tar.gz) = 85e2fe2f2d01c867ab15a513a4ec7313ebd5155e
 RMD160 (kali-0.52.2.tar.gz) = 012889783fcc2247130d3705ca7c9423cc0e5ac3
 Size (kali-0.52.2.tar.gz) = 1065604 bytes
-SHA1 (patch-aa) = 7c8cf832e00eadd0fc88826cb8390665d1b03e92
+SHA1 (patch-aa) = 00993a9420db03c08d8089ea1a7022ce3b71f071
