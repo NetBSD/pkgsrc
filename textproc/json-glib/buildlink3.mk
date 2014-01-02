@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2013/07/15 01:05:21 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2014/01/02 12:19:00 obache Exp $
 #
 
 BUILDLINK_TREE+=	json-glib
@@ -18,7 +18,6 @@ pkgbase := json-glib
 .include "../../devel/gettext-lib/buildlink3.mk"
 .endif
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .endif # JSON_GLIB_BUILDLINK3_MK
 
