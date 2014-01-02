@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.32 2014/01/02 00:19:37 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.33 2014/01/02 01:17:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -41,3 +41,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated chat/phone to 2.0nb1 [dholland 2014-01-01]
 	Updated devel/mk-configure to 0.25.0 [cheusov 2014-01-01]
 	Updated devel/bmkdep to 20131215 [cheusov 2014-01-02]
+	Updated lang/openjdk7 to 1.7.45 [ryoon 2014-01-02]
