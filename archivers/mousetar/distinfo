@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/03/09 06:14:39 sbd Exp $
+$NetBSD: distinfo,v 1.7 2014/01/02 03:24:47 dholland Exp $
 
 SHA1 (tar.c) = 0fcce941a7e5beee2646b3b7d7dee5d6cf22f455
 RMD160 (tar.c) = 78561e1ef3a55f1b77c8949a7b7a6efb4904d7ef
@@ -6,4 +6,4 @@ Size (tar.c) = 286925 bytes
 SHA1 (tar.man) = a43498f78f3122edf1970a471c9bd313c0ace2f1
 RMD160 (tar.man) = 3a295603a2381ea8417b4ce77b73b50ca42fd5e6
 Size (tar.man) = 49336 bytes
-SHA1 (patch-aa) = 8d1b0d31f1eabb3bc6528579cca8df50d4f6066d
+SHA1 (patch-aa) = 6a1e99e27c2a825b22de92327bb639e31a032168
