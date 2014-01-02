@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-aa,v 1.13 2014/01/02 08:00:32 dholland Exp $
 
 --- Makefile.orig	2005-10-26 06:08:03.000000000 +0200
 +++ Makefile	2006-10-14 19:35:24.000000000 +0200
-@@ -18,16 +18,16 @@
+@@ -18,16 +18,17 @@
  #
  # Use /lib/cpp or /usr/ccs/lib/cpp for CPP on Solaris or SVR4 machines.
  
@@ -13,6 +13,7 @@ $NetBSD: patch-aa,v 1.12 2006/10/14 19:33:45 schwarz Exp $
 +#CPP =		$(CC) -E
  #CPP =		/lib/cpp
  #CPP =		/usr/bin/cpp -no-cpp-precomp	# for MacOS X
++CPP =		tradcpp
  
 -CFLAGS =	-O # -g -Wall -ansi -pedantic
 +#CFLAGS =	-O # -g -Wall -ansi -pedantic
