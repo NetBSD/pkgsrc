@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.31 2014/01/01 23:59:40 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.32 2014/01/02 00:19:37 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -40,3 +40,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/p5-GraphicsMagick to 1.3.19 [adam 2014-01-01]
 	Updated chat/phone to 2.0nb1 [dholland 2014-01-01]
 	Updated devel/mk-configure to 0.25.0 [cheusov 2014-01-01]
+	Updated devel/bmkdep to 20131215 [cheusov 2014-01-02]
