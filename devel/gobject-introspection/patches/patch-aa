@@ -1,8 +1,30 @@
-$NetBSD: patch-aa,v 1.1 2011/01/12 20:23:34 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2014/01/02 12:32:19 obache Exp $
 
---- giscanner/ast.py.orig	2010-10-23 17:23:57.000000000 +0000
+--- giscanner/ast.py.orig	2013-07-10 16:13:23.000000000 +0000
 +++ giscanner/ast.py
-@@ -278,7 +278,7 @@ type_names['FILE*'] = TYPE_ANY
+@@ -277,13 +277,21 @@ type_names['void'] = TYPE_NONE
+ type_names['signed long long'] = TYPE_LONG_LONG
+ # C99 stdint exact width types
+ type_names['int8_t'] = TYPE_INT8
++type_names['__int8_t'] = TYPE_INT8
+ type_names['uint8_t'] = TYPE_UINT8
++type_names['__uint8_t'] = TYPE_UINT8
+ type_names['int16_t'] = TYPE_INT16
++type_names['__int16_t'] = TYPE_INT16
+ type_names['uint16_t'] = TYPE_UINT16
++type_names['__uint16_t'] = TYPE_UINT16
+ type_names['int32_t'] = TYPE_INT32
++type_names['__int32_t'] = TYPE_INT32
+ type_names['uint32_t'] = TYPE_UINT32
++type_names['__uint32_t'] = TYPE_UINT32
+ type_names['int64_t'] = TYPE_INT64
++type_names['__int64_t'] = TYPE_INT64
+ type_names['uint64_t'] = TYPE_UINT64
++type_names['__uint64_t'] = TYPE_UINT64
+ 
+ # A few additional GLib type aliases
+ type_names['guchar'] = TYPE_UINT8
+@@ -319,7 +327,7 @@ type_names['FILE*'] = TYPE_ANY
  # the relevant methods, but on the other hand, since these types are just
  # integers it's easy enough to expand them.
  type_names['size_t'] = type_names['gsize']
