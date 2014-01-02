@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.44 2014/01/02 13:14:29 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.45 2014/01/02 14:49:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/json-glib to 0.16.2 [obache 2014-01-02]
 	Updated devel/gobject-introspection to 1.38.0nb1 [obache 2014-01-02]
 	Updated devel/reposurgeon to 2.43 [ryoon 2014-01-02]
+	Renamed audio/opus to audio/libopus [ryoon 2014-01-02]
