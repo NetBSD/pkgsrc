@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.59 2013/07/29 18:16:53 wiz Exp $
+$NetBSD: distinfo,v 1.60 2014/01/02 01:25:49 ryoon Exp $
 
-SHA1 (gnucash-2.4.13.tar.bz2) = cd28d4e7d84d71ade56173734d634ccadc59ed81
-RMD160 (gnucash-2.4.13.tar.bz2) = 5d6c9dc836ccdf7b4613523004bb5a297eb70f97
-Size (gnucash-2.4.13.tar.bz2) = 9400405 bytes
-SHA1 (patch-configure) = a7fb5175e4f79a30da8b7e64d6f1a3ecd458fad8
+SHA1 (gnucash-2.6.0.tar.bz2) = 9715468bbe9e4cef6559bfa9825d51ac10d6ff84
+RMD160 (gnucash-2.6.0.tar.bz2) = 157279328ed614fa9ee020348525c3b210881007
+Size (gnucash-2.6.0.tar.bz2) = 10691364 bytes
 SHA1 (patch-src_scm_price-quotes.scm) = 59273628b7271ed639a97636b76958baa45ef104
