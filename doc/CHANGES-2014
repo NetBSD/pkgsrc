@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.35 2014/01/02 04:09:26 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.36 2014/01/02 06:46:00 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -44,3 +44,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/openjdk7 to 1.7.45 [ryoon 2014-01-02]
 	Updated finance/gnucash to 2.6.0 [ryoon 2014-01-02]
 	Updated lang/a60 to 0.20anb1 [dholland 2014-01-02]
+	Updated audio/milkytracker to 0.90.80nb2 [dholland 2014-01-02]
