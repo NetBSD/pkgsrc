@@ -1,17 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2013/06/13 17:41:34 mspo Exp $
+$NetBSD: patch-ab,v 1.2 2014/01/02 17:26:19 fhajny Exp $
 
-* Add DESTDIR support.
-
---- src/Makefile.orig	2012-12-03 11:53:09.000000000 +0000
+Add DESTDIR support.
+--- src/Makefile.orig	2013-12-11 14:31:57.000000000 +0000
 +++ src/Makefile
-@@ -81,8 +81,8 @@ REDIS_LD=$(QUIET_LINK)$(CC) $(FINAL_LDFL
- REDIS_INSTALL=$(QUIET_INSTALL)$(INSTALL)
+@@ -23,8 +23,8 @@ WARN=-Wall
+ OPT=$(OPTIMIZATION)
  
  PREFIX?=/usr/local
--INSTALL_BIN= $(PREFIX)/bin
--INSTALL= cp -pf
-+INSTALL_BIN= $(DESTDIR)$(PREFIX)/bin
-+INSTALL= $(BSD_INSTALL_PROGRAM)
+-INSTALL_BIN=$(PREFIX)/bin
+-INSTALL=install
++INSTALL_BIN=$(DESTDIR)$(PREFIX)/bin
++INSTALL=$(BSD_INSTALL_PROGRAM)
  
- CCCOLOR="\033[34m"
- LINKCOLOR="\033[34;1m"
+ # Default allocator
+ ifeq ($(uname_S),Linux)
