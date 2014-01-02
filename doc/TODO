@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12831 2014/01/02 19:02:03 wiz Exp $
+$NetBSD: TODO,v 1.12832 2014/01/02 19:42:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -735,7 +735,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
-	o libmpdclient-2.9
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
