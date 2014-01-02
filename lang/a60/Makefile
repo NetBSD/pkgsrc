@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/04/06 20:27:21 rodent Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/02 04:02:59 dholland Exp $
 
 DISTNAME=	a60-0.20a
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/algol60/
 
