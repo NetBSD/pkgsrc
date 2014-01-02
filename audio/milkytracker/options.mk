@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/08/27 22:50:16 ahoka Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/02 06:34:14 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.milkytracker
 #PKG_SUPPORTED_OPTIONS=	alsa jack
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--without-alsa
 
 .if !empty(PKG_OPTIONS:Mjack)
 .include "../../audio/jack/buildlink3.mk"
-  CONFIGURE_ARGS+= 	--with-jack
+CONFIGURE_ARGS+=	--with-jack
 .else
-  CONFIGURE_ARGS+=	--without-jack
+CONFIGURE_ARGS+=	--without-jack
 .endif
