@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/12/08 16:33:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/02 00:19:22 cheusov Exp $
 
-DISTNAME=	bmkdep-20131009
+DISTNAME=	bmkdep-20131215
 CATEGORIES=	devel
 MASTER_SITES=	http://bmkdep.googlecode.com/files/
 
@@ -8,8 +8,6 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/bmkdep/
 COMMENT=	NetBSD version of mkdep(1)
 LICENSE=	2-clause-bsd
-
-CPPFLAGS=	-Dlint=
 
 MAKE_ENV=	BINOWN=${BINOWN} BINGRP=${BINGRP} \
 		MANOWN=${MANOWN} MANGRP=${MANGRP} \
