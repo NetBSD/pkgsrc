@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/01 22:52:14 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/02 04:56:13 dholland Exp $
 
 DISTNAME=	bulk-small-20140101
 CATEGORIES=	meta-pkgs
@@ -47,6 +47,10 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 #
 # 1. Applications. These should be either very small or very widely used,
 # or preferably both; all others should go in bulk-medium.
+#
+# Please do not "fix" the emacs reference by updating it to emacs23 or
+# newer, as those versions of emacs take longer to build than this
+# entire package's time budget.
 #
 BUILD_DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 BUILD_DEPENDS+=	irssi-[0-9]*:../../chat/irssi
