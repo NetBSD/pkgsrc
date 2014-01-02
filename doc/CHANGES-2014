@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.66 2014/01/02 18:58:33 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.67 2014/01/02 18:59:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -75,3 +75,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated misc/goffice0.10 to 0.10.9 [wiz 2014-01-02]
 	Updated math/gnumeric112 to 1.12.9 [wiz 2014-01-02]
 	Updated net/gupnp to 0.20.9 [wiz 2014-01-02]
+	Updated graphics/hicolor-icon-theme to 0.13 [wiz 2014-01-02]
