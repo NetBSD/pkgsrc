@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2013/04/10 21:10:55 tonnerre Exp $
+$NetBSD: patch-ad,v 1.4 2014/01/02 01:41:48 tonnerre Exp $
 
 Add NetBSD and update support to the pkgin provider.
 
@@ -12,7 +12,7 @@ Add NetBSD and update support to the pkgin provider.
 +  defaultfor :operatingsystem => [:dragonfly, :netbsd]
  
 -  has_feature :installable, :uninstallable
-+  has_feature :installable, :uninstallable, :versionable, :upgradeable
++  has_feature :installable, :uninstallable, :upgradeable
  
    def self.parse_pkgin_line(package, force_status=nil)
  
