@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.51 2014/01/02 16:27:21 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.52 2014/01/02 16:32:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -60,3 +60,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/libvpx to 1.3.0 [ryoon 2014-01-02]
 	Updated devel/p5-Clone to 0.36 [schmonz 2014-01-02]
 	Updated devel/p5-Method-Signatures to 20131010 [schmonz 2014-01-02]
+	Updated devel/p5-Ouch to 0.0408 [schmonz 2014-01-02]
