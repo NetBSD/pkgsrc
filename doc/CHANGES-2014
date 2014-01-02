@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.73 2014/01/02 19:57:48 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.74 2014/01/02 20:26:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -84,3 +84,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/py-xcbgen to 1.10 [wiz 2014-01-02]
 	Updated x11/libxcb to 1.10 [wiz 2014-01-02]
 	Updated lang/lua52 to 5.2.3 [wiz 2014-01-02]
+	Updated databases/dbfsak to 4.6 [adam 2014-01-02]
