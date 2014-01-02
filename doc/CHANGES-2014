@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.62 2014/01/02 18:34:59 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.63 2014/01/02 18:36:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -71,3 +71,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/doxygen to 1.8.6 [wiz 2014-01-02]
 	Updated devel/pcre to 8.34 [wiz 2014-01-02]
 	Updated devel/memcached to 1.4.17 [wiz 2014-01-02]
+	Updated www/serf to 1.3.3 [wiz 2014-01-02]
