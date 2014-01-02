@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.19 2010/05/10 14:58:21 mrg Exp $
+$NetBSD: patch-ab,v 1.20 2014/01/02 09:02:22 mrg Exp $
 
---- Makefile.boot.orig	2010-05-09 19:24:30.000000000 -0700
-+++ Makefile.boot	2010-05-09 20:12:09.000000000 -0700
-@@ -4,7 +4,6 @@
- # see Makefile for a list of compile options that may be placed in CFLAGS.
+--- Makefile.boot.orig	2014-01-01 23:59:54.000000000 -0800
++++ Makefile.boot	2014-01-02 00:02:15.000000000 -0800
+@@ -5,7 +5,9 @@
  
  CC=	cc
--CFLAGS=	-O -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+ OPT=	-O
++OPT=
+ LARGE_CFLAGS=	-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
++LARGE_CFLAGS=
+ LOCAL_CFLAGS=	-DNO_LUA_SUPPORT
+ CFLAGS=	$(OPT) $(LARGE_CFLAGS) $(LOCAL_CFLAGS)
  
- GROFF=	groff -Tascii
- CRYPTOLIBDIR=	# -L/usr/local/lib
