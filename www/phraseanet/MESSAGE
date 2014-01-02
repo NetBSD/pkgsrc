@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2013/04/08 11:17:25 rodent Exp $
+$NetBSD: MESSAGE,v 1.3 2014/01/02 15:44:10 jperkin Exp $
 
 You will need to make Phraseanet accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
@@ -7,7 +7,9 @@ If you are running Apache then you may add the following lines to httpd.conf:
         Include ${PKG_SYSCONFDIR}/phrasea.conf
 
 You will also need to enable the following modules in ${PKG_SYSCONFDIR}/php.ini
-  extension=apc.so
+
+  extension=apc.so     # for PHP 5.4 and lower
+  extension=opcache.so # for PHP 5.5+
   extension=mbstring.so
   extension=gettext.so
   extension=phrasea2.so
