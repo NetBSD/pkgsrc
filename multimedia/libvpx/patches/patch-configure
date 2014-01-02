@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.1 2012/02/28 14:12:05 martin Exp $
+$NetBSD: patch-configure,v 1.2 2014/01/02 15:18:01 ryoon Exp $
 
---- configure.orig	2012-02-28 11:02:34.000000000 +0100
-+++ configure	2012-02-28 14:57:32.000000000 +0100
-@@ -101,6 +101,7 @@ all_platforms="${all_platforms} ppc32-li
+--- configure.orig	2013-12-17 17:05:28.000000000 +0000
++++ configure
+@@ -108,6 +108,7 @@ all_platforms="${all_platforms} ppc32-li
  all_platforms="${all_platforms} ppc64-darwin8-gcc"
  all_platforms="${all_platforms} ppc64-darwin9-gcc"
  all_platforms="${all_platforms} ppc64-linux-gcc"
 +all_platforms="${all_platforms} sparc-linux-gcc"
  all_platforms="${all_platforms} sparc-solaris-gcc"
+ all_platforms="${all_platforms} x86-android-gcc"
  all_platforms="${all_platforms} x86-darwin8-gcc"
- all_platforms="${all_platforms} x86-darwin8-icc"
