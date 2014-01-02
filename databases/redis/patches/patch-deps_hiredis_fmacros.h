@@ -1,5 +1,6 @@
-$NetBSD: patch-deps_hiredis_fmacros.h,v 1.1 2014/01/01 16:08:24 bsiegert Exp $
+$NetBSD: patch-deps_hiredis_fmacros.h,v 1.2 2014/01/02 17:26:19 fhajny Exp $
 
+Add MirBSD support.
 --- deps/hiredis/fmacros.h.orig	Wed Aug 28 09:36:00 2013
 +++ deps/hiredis/fmacros.h
 @@ -7,6 +7,7 @@
