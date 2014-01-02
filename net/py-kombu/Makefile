@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/31 14:12:17 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/02 04:49:16 dholland Exp $
 #
 
 DISTNAME=	kombu-3.0.8
@@ -14,7 +14,9 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	33 27 26
+PYTHON_VERSIONS_ACCEPTED=	27 26
+# py-amqp does not currently support py33; disable for now
+#PYTHON_VERSIONS_ACCEPTED+=	33
 REPLACE_PYTHON+=	kombu/tests/test_serialization.py
 
 DEPENDS+=	${PYPKGPREFIX}-amqp>=1.3.3:../../net/py-amqp
