@@ -1,10 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2013/04/24 12:22:38 jperkin Exp $
+$NetBSD: patch-aa,v 1.6 2014/01/02 17:10:23 fhajny Exp $
 
 Set pkgsrc standard paths.
-
---- configure.orig	2013-03-30 14:46:50.000000000 +0000
+--- configure.orig	2013-10-20 09:38:47.000000000 +0000
 +++ configure
-@@ -646,6 +646,7 @@ localstatelogdir
+@@ -647,6 +647,7 @@ localstatelogdir
  localstatelibdir
  locallibdir
  localdocdir
@@ -12,7 +11,7 @@ Set pkgsrc standard paths.
  localdatadir
  localconfdir
  bug_uri
-@@ -18288,7 +18289,7 @@ fi
+@@ -18326,7 +18327,7 @@ fi
  done
  test -n "$CURL_CONFIG" || CURL_CONFIG="no"
  
@@ -21,7 +20,7 @@ Set pkgsrc standard paths.
  
        :
  
-@@ -18300,7 +18301,7 @@ $as_echo "$as_me: WARNING: You will be u
+@@ -18338,7 +18339,7 @@ $as_echo "$as_me: WARNING: You will be u
  
  else
  
@@ -30,7 +29,7 @@ Set pkgsrc standard paths.
  
  	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
  
-@@ -18310,7 +18311,7 @@ else
+@@ -18348,7 +18349,7 @@ else
  
  fi
  
@@ -39,25 +38,26 @@ Set pkgsrc standard paths.
  
  	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
  
-@@ -19116,13 +19117,15 @@ localdatadir=${datadir}/${package_identi
+@@ -19153,13 +19154,15 @@ localdatadir=${datadir}/${package_identi
  
  localdocdir=${datadir}/doc/${package_identifier}
  
-+localegdir=@EGDIR@
++localegdir=@COUCH_EGDIR@
 +
  locallibdir=${libdir}/${package_identifier}
  
 -localstatelibdir=${localstatedir}/lib/${package_identifier}
-+localstatelibdir=${localstatedir}/db/${package_identifier}
++localstatelibdir=@COUCH_DBDIR@
  
- localstatelogdir=${localstatedir}/log/${package_identifier}
+-localstatelogdir=${localstatedir}/log/${package_identifier}
++localstatelogdir=@COUCH_LOGDIR@
  
 -localstaterundir=${localstatedir}/run/${package_identifier}
-+localstaterundir=@RUNDIR@
++localstaterundir=@COUCH_RUNDIR@
  
+ erlangversion=${erlangversion}
  
- # On Windows we install directly into our erlang distribution.
-@@ -19132,9 +19135,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+@@ -19174,9 +19177,9 @@ if test x${IS_WINDOWS} = xTRUE; then
      localerlanglibdir=${libdir}
  
  else
