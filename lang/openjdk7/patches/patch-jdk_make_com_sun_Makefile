@@ -1,8 +1,8 @@
-$NetBSD: patch-jdk_make_com_sun_Makefile,v 1.1 2013/06/02 06:12:28 ryoon Exp $
+$NetBSD: patch-jdk_make_com_sun_Makefile,v 1.2 2014/01/02 01:16:35 ryoon Exp $
 
 * From rhino.patch.
 
---- jdk/make/com/sun/Makefile.orig	2012-08-10 17:21:29.000000000 +0000
+--- jdk/make/com/sun/Makefile.orig	2014-01-01 05:53:33.000000000 +0000
 +++ jdk/make/com/sun/Makefile
 @@ -31,13 +31,6 @@ BUILDDIR = ../..
  PRODUCT = sun
@@ -22,8 +22,8 @@ $NetBSD: patch-jdk_make_com_sun_Makefile,v 1.1 2013/06/02 06:12:28 ryoon Exp $
  SUBDIRS_desktop    = image
  SUBDIRS_enterprise = crypto/provider jndi \
                       org rowset net/httpserver
--SUBDIRS_misc       = $(SCRIPT_SUBDIR) tracing servicetag nio demo
-+SUBDIRS_misc       = script tracing servicetag nio demo
+-SUBDIRS_misc       = $(SCRIPT_SUBDIR) tracing nio demo
++SUBDIRS_misc       = script tracing nio demo
  
  # Omit mirror since it's built with the apt tool.
  SUBDIRS_tools      = tools
