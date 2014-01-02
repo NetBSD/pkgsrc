@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2013/11/08 13:11:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/02 19:52:16 wiz Exp $
 
-DISTNAME=	libxcb-1.9.3
+DISTNAME=	libxcb-1.10
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -50,6 +50,7 @@ PKGCONFIG_OVERRIDE+=	xcb-xevie.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xf86dri.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xfixes.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xinerama.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-xkb.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xprint.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xtest.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xv.pc.in
