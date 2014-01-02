@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2013/04/28 03:38:25 dholland Exp $
+$NetBSD: distinfo,v 1.7 2014/01/02 07:45:14 dholland Exp $
 
 SHA1 (p2c-1.20.tar.Z) = 797c5394d50567d5195548d3919c5a66ab90f680
 RMD160 (p2c-1.20.tar.Z) = 9917ef3f501b1506f2992d572f439398862fba4c
 Size (p2c-1.20.tar.Z) = 579294 bytes
-SHA1 (patch-aa) = 86c1edd87984b0bac7ed422f3437ac9c555075e4
+SHA1 (patch-aa) = 0d8e0c2213d25728abb1230cbfca8c25a2ea86c6
 SHA1 (patch-ab) = ceeda201cff0dfb975fec7f489fdaaca94984935
 SHA1 (patch-ac) = d169a0c722bebd53f9de25c0f6e208236650939a
 SHA1 (patch-ad) = f2ecb3a2f0cf51024b221e02eb92b9e517455d93
