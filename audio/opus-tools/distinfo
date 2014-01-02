@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/01/20 20:10:51 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2014/01/02 14:52:10 ryoon Exp $
 
-SHA1 (opus-tools-0.1.6.tar.gz) = 305eb5eed76ddc0b5f12605a8b549638afc15885
-RMD160 (opus-tools-0.1.6.tar.gz) = b545e1c8602f6ab0ab105d1f8c23c66f891bf2ce
-Size (opus-tools-0.1.6.tar.gz) = 306902 bytes
-SHA1 (patch-configure.ac) = 50793b0b5b3ee53a5e8ecd4895d1b0d3865bdc1d
+SHA1 (opus-tools-0.1.8.tar.gz) = 71e3cf393399af0231d86434923093ca79eea8ab
+RMD160 (opus-tools-0.1.8.tar.gz) = 62e8034f0142fd2cc63fc0bd9eb6c1cac7709bcc
+Size (opus-tools-0.1.8.tar.gz) = 388711 bytes
+SHA1 (patch-configure.ac) = 0248fe49b394c94f26bf8516a6b10e212531431e
