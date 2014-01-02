@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/27 23:35:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/02 18:50:03 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -88,6 +88,9 @@ include/libspreadsheet-1.12/spreadsheet/rendered-value.h
 include/libspreadsheet-1.12/spreadsheet/search.h
 include/libspreadsheet-1.12/spreadsheet/selection.h
 include/libspreadsheet-1.12/spreadsheet/session.h
+include/libspreadsheet-1.12/spreadsheet/sf-bessel.h
+include/libspreadsheet-1.12/spreadsheet/sf-gamma.h
+include/libspreadsheet-1.12/spreadsheet/sf-trig.h
 include/libspreadsheet-1.12/spreadsheet/sheet-autofill.h
 include/libspreadsheet-1.12/spreadsheet/sheet-control-gui-priv.h
 include/libspreadsheet-1.12/spreadsheet/sheet-control-gui.h
