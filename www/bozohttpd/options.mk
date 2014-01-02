@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/03/07 22:00:43 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/02 09:02:22 mrg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bozohttpd
 PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd
@@ -11,3 +11,7 @@ PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd
 .if !empty(PKG_OPTIONS:Mbozohttpd-do-htpasswd)
 CPPFLAGS+=	-DDO_HTPASSWD
 .endif
+
+###
+### Support for lua -- missing
+###
