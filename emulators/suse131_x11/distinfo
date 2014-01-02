@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/12/05 11:42:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2014/01/02 08:34:26 obache Exp $
 
 SHA1 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = 7ae5e9e9b7a86221ddb5dc3bb7699133a65313d2
 RMD160 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = f9b31a84204ba4989f92de331612ed60fffdfe77
@@ -201,6 +201,12 @@ Size (suse131/libXt6-1.1.4-2.1.2.i586.rpm) = 147688 bytes
 SHA1 (suse131/libXt6-1.1.4-2.1.2.x86_64.rpm) = 56ee4b1d397b6072783a5d663e9cf6eae5e3aa68
 RMD160 (suse131/libXt6-1.1.4-2.1.2.x86_64.rpm) = 2b28f9a2f1b3de19fb43f9e0c196917398d80dc4
 Size (suse131/libXt6-1.1.4-2.1.2.x86_64.rpm) = 155339 bytes
+SHA1 (suse131/libXtst6-1.2.2-2.1.2.i586.rpm) = d9a98443750b79b9186abdc70b24136ae84b58cf
+RMD160 (suse131/libXtst6-1.2.2-2.1.2.i586.rpm) = 19274e2b9de62804ed50a8c654d4f87d6a29e334
+Size (suse131/libXtst6-1.2.2-2.1.2.i586.rpm) = 12317 bytes
+SHA1 (suse131/libXtst6-1.2.2-2.1.2.x86_64.rpm) = 5188b8941cc5ac5e419b64fcb31aca532f46c779
+RMD160 (suse131/libXtst6-1.2.2-2.1.2.x86_64.rpm) = a7bf001c014e08ff87643cf7ec2f6ecfd60f7791
+Size (suse131/libXtst6-1.2.2-2.1.2.x86_64.rpm) = 12611 bytes
 SHA1 (suse131/libXv1-1.0.10-2.1.2.i586.rpm) = 32885e2efa72ab29af97d9dbaaaebf95149abaee
 RMD160 (suse131/libXv1-1.0.10-2.1.2.i586.rpm) = 45b5aec40d1a4a64d18f5f642adc21a9b2037d33
 Size (suse131/libXv1-1.0.10-2.1.2.i586.rpm) = 12034 bytes
