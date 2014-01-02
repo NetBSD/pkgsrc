@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/03 11:24:39 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/02 02:40:18 dholland Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT:Q}
 CONFIGURE_ARGS+=	--with-regex
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 || \
 	${MACHINE_ARCH} == x86_64
