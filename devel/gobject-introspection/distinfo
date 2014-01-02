@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2013/12/08 13:28:27 prlw1 Exp $
+$NetBSD: distinfo,v 1.18 2014/01/02 12:32:19 obache Exp $
 
 SHA1 (gobject-introspection-1.38.0.tar.xz) = 51f3053f6b806efea41a38ea13d2e6ce494cf7af
 RMD160 (gobject-introspection-1.38.0.tar.xz) = f01089754ce1586c8517ab0fafeb1f96843a8d5c
 Size (gobject-introspection-1.38.0.tar.xz) = 1226324 bytes
-SHA1 (patch-aa) = d7ebe6a0c81694fb537dc9cb67286fb9a0d60a9b
+SHA1 (patch-aa) = 8763e49eae92952f8534ea668bfef1a26f9c0c26
 SHA1 (patch-ac) = 52174e01aa90a5cf75cfe2f255826c1e46f8e183
 SHA1 (patch-giscanner_dumper.py) = f2acdc734b7b93429e3179ffaf53c94c0e16e819
 SHA1 (patch-giscanner_scannerlexer.l) = 371bf94fd9e4d76ab78c2d14d7dc41da83c1aa35
