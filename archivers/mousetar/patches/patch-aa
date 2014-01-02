@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/03/09 06:14:39 sbd Exp $
+$NetBSD: patch-aa,v 1.5 2014/01/02 03:24:47 dholland Exp $
 
 --- tar.c.orig	2012-03-09 06:07:25.071601044 +0000
 +++ tar.c
@@ -16,10 +16,10 @@ $NetBSD: patch-aa,v 1.4 2012/03/09 06:14:39 sbd Exp $
  #include <sys/file.h>
  #include <sys/stat.h>
  #include <sys/time.h>
-+#if defined(__linux__)
++#if 0
  #include <sys/dir.h>
 +#else
-+#include <sys/dirent.h>
++
 +#endif
 +#include <dirent.h>
  #include <unistd.h>
