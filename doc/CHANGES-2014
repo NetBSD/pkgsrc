@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.42 2014/01/02 12:19:16 obache Exp $
+$NetBSD: CHANGES-2014,v 1.43 2014/01/02 12:32:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -51,3 +51,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_x11 to 13.1nb1 [obache 2014-01-02]
 	Updated www/bozohttpd to 20140102 [mrg 2014-01-02]
 	Updated textproc/json-glib to 0.16.2 [obache 2014-01-02]
+	Updated devel/gobject-introspection to 1.38.0nb1 [obache 2014-01-02]
