@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.61 2014/01/02 18:28:32 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.62 2014/01/02 18:34:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -70,3 +70,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/py-sphinx to 1.2 [wiz 2014-01-02]
 	Updated devel/doxygen to 1.8.6 [wiz 2014-01-02]
 	Updated devel/pcre to 8.34 [wiz 2014-01-02]
+	Updated devel/memcached to 1.4.17 [wiz 2014-01-02]
