@@ -1,11 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.1 2012/09/16 14:17:54 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/01/02 14:52:10 ryoon Exp $
 
 * Disable opusdec's direct audio output
 
---- configure.ac.orig	2012-09-04 17:33:39.000000000 +0000
+--- configure.ac.orig	2013-12-06 02:31:11.000000000 +0000
 +++ configure.ac
-@@ -165,18 +165,18 @@ then
- fi
+@@ -145,18 +145,18 @@ AS_IF([test "$HAVE_PKG_CONFIG" = "yes"],
+  ])
  
  dnl check for OSS
 -HAVE_OSS=no
@@ -20,16 +20,15 @@ $NetBSD: patch-configure.ac,v 1.1 2012/09/16 14:17:54 ryoon Exp $
 +dnl ])
  
  dnl check for sndio
--HAVE_SNDIO=no
 -AC_CHECK_LIB([sndio], [sio_open])
--if test "x$ac_cv_lib_sndio_sio_open" = "xyes"; then
--  HAVE_SNDIO=yes
--fi
-+dnl HAVE_SNDIO=no
 +dnl AC_CHECK_LIB([sndio], [sio_open])
-+dnl if test "x$ac_cv_lib_sndio_sio_open" = "xyes"; then
-+dnl   HAVE_SNDIO=yes
+ 
+-if test "$HAVE_OSS" != "yes" && test "$ac_cv_lib_sndio_sio_open" != "yes"; then
+-  AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])
+-fi
++dnl if test "$HAVE_OSS" != "yes" && test "$ac_cv_lib_sndio_sio_open" != "yes"; then
++dnl   AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])
 +dnl fi
  
- if test "x$HAVE_OSS" != "xyes" && test "x$HAVE_SNDIO" != "xyes"; then
-   AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])
+ dnl check for flac
+ AC_ARG_WITH([flac],

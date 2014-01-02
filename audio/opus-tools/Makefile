@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/10/23 17:11:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/02 14:52:10 ryoon Exp $
 #
 
-DISTNAME=	opus-tools-0.1.6
+DISTNAME=	opus-tools-0.1.8
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/opus/
 
@@ -19,6 +19,7 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
