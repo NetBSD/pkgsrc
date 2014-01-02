@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2013/11/16 07:22:58 shattered Exp $
+$NetBSD: distinfo,v 1.9 2014/01/02 13:14:05 ryoon Exp $
 
-SHA1 (reposurgeon-2.41.tar.gz) = 5fd89a45b7a86f4cda28eccc791cca9199ad764d
-RMD160 (reposurgeon-2.41.tar.gz) = ae2d70d3f590aefb22e87ecbb0b60d09cd7ecc98
-Size (reposurgeon-2.41.tar.gz) = 150881 bytes
+SHA1 (reposurgeon-2.43.tar.gz) = 2a3bab2ecc6670d2e0b12a2b3822d9de61c59434
+RMD160 (reposurgeon-2.43.tar.gz) = 94d3818bfbc548e3f355276a54d374ccc193fafe
+Size (reposurgeon-2.43.tar.gz) = 152357 bytes
