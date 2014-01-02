@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 20:11:47 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/02 07:45:14 dholland Exp $
 
 DISTNAME=	p2c-1.20
 PKGREVISION=	1
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v1
 
 WRKSRC=		${WRKDIR}/src
 CFLAGS+=	-Dunix=1
-
-INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 

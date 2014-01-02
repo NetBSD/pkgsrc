@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2013/04/28 03:38:25 dholland Exp $
+$NetBSD: patch-aa,v 1.4 2014/01/02 07:45:14 dholland Exp $
 
  - configure for pkgsrc
  - use ranlib properly
  - fix install permissions
  - honor PKGMANDIR
  - support MAKE_JOBS
+ - destdir support
 
 --- Makefile.orig	1991-04-24 20:30:37.000000000 +0000
 +++ Makefile
@@ -60,7 +61,7 @@ $NetBSD: patch-aa,v 1.3 2013/04/28 03:38:25 dholland Exp $
  proto: $(PROTOS)
  
  
-@@ -129,7 +129,8 @@ p2c.cat: p2c.man.inst
+@@ -129,62 +129,63 @@ p2c.cat: p2c.man.inst
  #  Third, execute "make install" to compile and set things up.
  # (You may need to have a system operator do these steps for you.)
  
@@ -70,50 +71,94 @@ $NetBSD: patch-aa,v 1.3 2013/04/28 03:38:25 dholland Exp $
  
  newhome:
  	rm -f trans.o     # force trans.c to be recompiled (if HOMEDIR changes)
-@@ -156,35 +157,35 @@ makedirs:
- 	if [ ! -d $(INCDIR) ]; then mkdir $(INCDIR); fi
  
- $(BINDIR)/p2c: p2c
+ install: proto \
+ 	makedirs \
+-	$(BINDIR)/p2c         \
+-	$(LIBDIR)/libp2c.a    \
+-	$(MANDIR)/p2c.1	      \
+-	$(INCDIR)/p2c.h	      \
+-	$(HOMEDIR)/p2crc      \
+-	$(HOMEDIR)/loc.p2crc  \
+-	$(HOMEDIR)/system.imp \
+-	$(HOMEDIR)/system.m2  \
+-	$(HOMEDIR)/turbo.imp  \
+-	$(HOMEDIR)/string.pas
++	$(DESTDIR)$(BINDIR)/p2c         \
++	$(DESTDIR)$(LIBDIR)/libp2c.a    \
++	$(DESTDIR)$(MANDIR)/p2c.1	\
++	$(DESTDIR)$(INCDIR)/p2c.h	\
++	$(DESTDIR)$(HOMEDIR)/p2crc      \
++	$(DESTDIR)$(HOMEDIR)/loc.p2crc  \
++	$(DESTDIR)$(HOMEDIR)/system.imp \
++	$(DESTDIR)$(HOMEDIR)/system.m2  \
++	$(DESTDIR)$(HOMEDIR)/turbo.imp  \
++	$(DESTDIR)$(HOMEDIR)/string.pas
+ 
+ SHELL=/bin/sh
+ makedirs:
+-	if [ ! -d $(HOMEDIR) ]; then mkdir $(HOMEDIR); fi
+-	if [ ! -d $(BINDIR) ]; then mkdir $(BINDIR); fi
+-	if [ ! -d $(LIBDIR) ]; then mkdir $(LIBDIR); fi
+-	if [ ! -d $(MANDIR) ]; then mkdir $(MANDIR); fi
+-	if [ ! -d $(INCDIR) ]; then mkdir $(INCDIR); fi
++	if [ ! -d $(DESTDIR)$(HOMEDIR) ]; then mkdir $(DESTDIR)$(HOMEDIR); fi
++	if [ ! -d $(DESTDIR)$(BINDIR) ]; then mkdir $(DESTDIR)$(BINDIR); fi
++	if [ ! -d $(DESTDIR)$(LIBDIR) ]; then mkdir $(DESTDIR)$(LIBDIR); fi
++	if [ ! -d $(DESTDIR)$(MANDIR) ]; then mkdir $(DESTDIR)$(MANDIR); fi
++	if [ ! -d $(DESTDIR)$(INCDIR) ]; then mkdir $(DESTDIR)$(INCDIR); fi
+ 
+-$(BINDIR)/p2c: p2c
 -	$(COPY)  p2c          $(BINDIR)/p2c
-+	$(COPYBIN)  p2c          $(BINDIR)/p2c
++$(DESTDIR)$(BINDIR)/p2c: p2c
++	$(COPYBIN)  p2c          $(DESTDIR)$(BINDIR)/p2c
  
- $(LIBDIR)/libp2c.a: libp2c.a
+-$(LIBDIR)/libp2c.a: libp2c.a
 -	$(COPY)  libp2c.a     $(LIBDIR)/libp2c.a
 -	if [ -f /usr/bin/ranlib -o -f /bin/ranlib ]; then ranlib $(LIBDIR)/libp2c.a; fi
-+	$(COPYDATA)  libp2c.a     $(LIBDIR)/libp2c.a
-+	ranlib $(LIBDIR)/libp2c.a || true
++$(DESTDIR)$(LIBDIR)/libp2c.a: libp2c.a
++	$(COPYDATA)  libp2c.a     $(DESTDIR)$(LIBDIR)/libp2c.a
++	ranlib $(DESTDIR)$(LIBDIR)/libp2c.a || true
  
- $(MANDIR)/p2c.1: $(MANFILE)
+-$(MANDIR)/p2c.1: $(MANFILE)
 -	$(COPY)  $(MANFILE)   $(MANDIR)/p2c.1
-+	$(COPYDATA)  $(MANFILE)   $(MANDIR)/p2c.1
++$(DESTDIR)$(MANDIR)/p2c.1: $(MANFILE)
++	$(COPYDATA)  $(MANFILE)   $(DESTDIR)$(MANDIR)/p2c.1
  
- $(INCDIR)/p2c.h: p2c.h
+-$(INCDIR)/p2c.h: p2c.h
 -	$(COPY)  p2c.h        $(INCDIR)/p2c.h
-+	$(COPYDATA)  p2c.h        $(INCDIR)/p2c.h
++$(DESTDIR)$(INCDIR)/p2c.h: p2c.h
++	$(COPYDATA)  p2c.h        $(DESTDIR)$(INCDIR)/p2c.h
  
- $(HOMEDIR)/p2crc: sys.p2crc
+-$(HOMEDIR)/p2crc: sys.p2crc
 -	$(COPY)  sys.p2crc    $(HOMEDIR)/p2crc
-+	$(COPYDATA)  sys.p2crc    $(HOMEDIR)/p2crc
++$(DESTDIR)$(HOMEDIR)/p2crc: sys.p2crc
++	$(COPYDATA)  sys.p2crc    $(DESTDIR)$(HOMEDIR)/p2crc
  
- $(HOMEDIR)/loc.p2crc: loc.p2crc
+-$(HOMEDIR)/loc.p2crc: loc.p2crc
 -	$(COPY)  loc.p2crc    $(HOMEDIR)/loc.p2crc
-+	$(COPYDATA)  loc.p2crc    $(HOMEDIR)/loc.p2crc
++$(DESTDIR)$(HOMEDIR)/loc.p2crc: loc.p2crc
++	$(COPYDATA)  loc.p2crc    $(DESTDIR)$(HOMEDIR)/loc.p2crc
  
- $(HOMEDIR)/system.imp: system.imp
+-$(HOMEDIR)/system.imp: system.imp
 -	$(COPY)  system.imp   $(HOMEDIR)/system.imp
-+	$(COPYDATA)  system.imp   $(HOMEDIR)/system.imp
++$(DESTDIR)$(HOMEDIR)/system.imp: system.imp
++	$(COPYDATA)  system.imp   $(DESTDIR)$(HOMEDIR)/system.imp
  
- $(HOMEDIR)/system.m2: system.m2
+-$(HOMEDIR)/system.m2: system.m2
 -	$(COPY)  system.m2    $(HOMEDIR)/system.m2
-+	$(COPYDATA)  system.m2    $(HOMEDIR)/system.m2
++$(DESTDIR)$(HOMEDIR)/system.m2: system.m2
++	$(COPYDATA)  system.m2    $(DESTDIR)$(HOMEDIR)/system.m2
  
- $(HOMEDIR)/turbo.imp: turbo.imp
+-$(HOMEDIR)/turbo.imp: turbo.imp
 -	$(COPY)  turbo.imp    $(HOMEDIR)/turbo.imp
-+	$(COPYDATA)  turbo.imp    $(HOMEDIR)/turbo.imp
++$(DESTDIR)$(HOMEDIR)/turbo.imp: turbo.imp
++	$(COPYDATA)  turbo.imp    $(DESTDIR)$(HOMEDIR)/turbo.imp
  
- $(HOMEDIR)/string.pas: string.pas
+-$(HOMEDIR)/string.pas: string.pas
 -	$(COPY)  string.pas   $(HOMEDIR)/string.pas
-+	$(COPYDATA)  string.pas   $(HOMEDIR)/string.pas
++$(DESTDIR)$(HOMEDIR)/string.pas: string.pas
++	$(COPYDATA)  string.pas   $(DESTDIR)$(HOMEDIR)/string.pas
  
  
  
