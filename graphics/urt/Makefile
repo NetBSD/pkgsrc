@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2013/02/16 11:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2014/01/02 07:34:11 dholland Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.iastate.edu/pub/utah-raster/
 DISTFILES=	urt-3.1b.tar.Z urt-doc.tar.Z urt-img.tar.Z
