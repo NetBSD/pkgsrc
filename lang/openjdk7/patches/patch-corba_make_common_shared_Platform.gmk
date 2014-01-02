@@ -1,10 +1,10 @@
-$NetBSD: patch-corba_make_common_shared_Platform.gmk,v 1.2 2013/06/23 17:39:43 jperkin Exp $
+$NetBSD: patch-corba_make_common_shared_Platform.gmk,v 1.3 2014/01/02 01:16:35 ryoon Exp $
 
 Avoid warnings when building in a zone.
 
 Disable multiarch support.
 
---- corba/make/common/shared/Platform.gmk.orig	2013-06-21 13:12:15.317583446 +0000
+--- corba/make/common/shared/Platform.gmk.orig	2014-01-01 05:49:21.000000000 +0000
 +++ corba/make/common/shared/Platform.gmk
 @@ -115,7 +115,7 @@ ifeq ($(SYSTEM_UNAME), SunOS)
      ARCH := $(shell isainfo -n)
@@ -24,3 +24,29 @@ Disable multiarch support.
  endif
  
  # Platform settings specific to Linux
+@@ -238,6 +238,13 @@ ifeq ($(SYSTEM_UNAME), FreeBSD)
+   REQUIRED_OS_VERSION = 6.0
+ endif
+ 
++ifeq ($(SYSTEM_UNAME), DragonFly)
++  PLATFORM = bsd
++  OS_NAME = dragonfly
++  OS_VENDOR = DragonFlyBSD
++  REQUIRED_OS_VERSION = 2.4
++endif
++
+ ifeq ($(SYSTEM_UNAME), Darwin)
+   PLATFORM = bsd
+   OS_NAME = darwin
+@@ -318,9 +325,9 @@ ifeq ($(PLATFORM), bsd)
+   REQUIRED_FREE_SPACE=1500000
+   # How much RAM does this machine have:
+   ifeq ($(OS_VENDOR), OpenBSD)
+-    MB_OF_MEMORY=$(shell sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
++    MB_OF_MEMORY=$(shell /sbin/sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
+   else
+-    MB_OF_MEMORY=$(shell (sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
++    MB_OF_MEMORY=$(shell (/sbin/sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
+   endif
+ endif
+ 

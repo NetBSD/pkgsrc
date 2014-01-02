@@ -1,12 +1,12 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.2 2013/06/23 17:39:43 jperkin Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_gcc.make,v 1.3 2014/01/02 01:16:35 ryoon Exp $
 
 GCC support.
 
 Disable SunOS multiarch.
 
---- hotspot/make/solaris/makefiles/gcc.make.orig	2012-08-10 16:23:14.000000000 +0000
+--- hotspot/make/solaris/makefiles/gcc.make.orig	2014-01-01 05:50:04.000000000 +0000
 +++ hotspot/make/solaris/makefiles/gcc.make
-@@ -66,11 +66,23 @@ VM_PICFLAG/LIBJVM = $(PICFLAG)
+@@ -70,11 +70,23 @@ VM_PICFLAG/LIBJVM = $(PICFLAG)
  VM_PICFLAG/AOUT   =
  VM_PICFLAG        = $(VM_PICFLAG/$(LINK_INTO))
  
@@ -30,7 +30,7 @@ Disable SunOS multiarch.
  
  ARCHFLAG = $(ARCHFLAG/$(BUILDARCH))
  
-@@ -82,7 +94,8 @@ ARCHFLAG/amd64   = -m64 -march=k8
+@@ -86,7 +98,8 @@ ARCHFLAG/amd64   = -m64 -march=k8
  
  # Optional sub-directory in /usr/lib where BUILDARCH libraries are kept.
  ISA_DIR=$(ISA_DIR/$(BUILDARCH))
@@ -40,7 +40,7 @@ Disable SunOS multiarch.
  ISA_DIR/i486=
  ISA_DIR/sparcv9=/64
  
-@@ -103,6 +116,11 @@ ifdef CC_INTERP
+@@ -107,6 +120,11 @@ ifdef CC_INTERP
    CFLAGS += -DCC_INTERP
  endif
  
@@ -52,7 +52,7 @@ Disable SunOS multiarch.
  # Keep temporary files (.ii, .s)
  ifdef NEED_ASM
    CFLAGS += -save-temps
-@@ -113,9 +131,18 @@ endif
+@@ -117,9 +135,18 @@ endif
  
  # Compiler warnings are treated as errors 
  WARNINGS_ARE_ERRORS = -Werror 
@@ -74,7 +74,7 @@ Disable SunOS multiarch.
  # Special cases 
  CFLAGS_WARN/BYFILE = $(CFLAGS_WARN/$@)$(CFLAGS_WARN/DEFAULT$(CFLAGS_WARN/$@))  
  
-@@ -173,7 +200,7 @@ MAPFLAG = -Xlinker -M -Xlinker FILENAME
+@@ -177,7 +204,7 @@ MAPFLAG = -Xlinker -M -Xlinker FILENAME 
  endif 
  
  # Use $(SONAMEFLAG:SONAME=soname) to specify the intrinsic name of a shared obj
@@ -83,7 +83,7 @@ Disable SunOS multiarch.
  
  # Build shared library
  SHARED_FLAG = -shared
-@@ -181,17 +208,34 @@ SHARED_FLAG = -shared
+@@ -185,15 +212,32 @@ SHARED_FLAG = -shared
  #------------------------------------------------------------------------
  # Debug flags
  
@@ -128,5 +128,3 @@ Disable SunOS multiarch.
 +ifdef MINIMIZE_RAM_USAGE
 +  CFLAGS += -DMINIMIZE_RAM_USAGE
 +endif
- 
- MCS = /usr/ccs/bin/mcs

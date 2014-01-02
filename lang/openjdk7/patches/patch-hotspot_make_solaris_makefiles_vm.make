@@ -1,8 +1,8 @@
-$NetBSD: patch-hotspot_make_solaris_makefiles_vm.make,v 1.1 2013/06/15 09:31:05 jperkin Exp $
+$NetBSD: patch-hotspot_make_solaris_makefiles_vm.make,v 1.2 2014/01/02 01:16:35 ryoon Exp $
 
 GCC support.
 
---- hotspot/make/solaris/makefiles/vm.make.orig	2013-02-19 23:21:59.000000000 +0000
+--- hotspot/make/solaris/makefiles/vm.make.orig	2014-01-01 05:50:04.000000000 +0000
 +++ hotspot/make/solaris/makefiles/vm.make
 @@ -59,7 +59,11 @@ INCLUDES += $(Src_Dirs_I:%=-I%)
  ifeq ($(ENABLE_FULL_DEBUG_SYMBOLS),1)
@@ -17,7 +17,7 @@ GCC support.
  else
    ifeq (${VERSION}, debug)
      SYMFLAG = -g
-@@ -132,7 +136,7 @@ LIBS += -ldl -lthread -lsocket $(LIBM) -
+@@ -137,7 +141,7 @@ LIBS += -ldl -lthread -lsocket $(LIBM) -
  endif # 502
  endif # 505
  else
@@ -25,8 +25,8 @@ GCC support.
 +LIBS += -lsocket -lsched -ldl $(LIBM) -lthread -lc
  endif # sparcWorks
  
- ifeq ("${Platform_arch}", "sparc")
-@@ -268,16 +272,19 @@ ifeq ($(LINK_INTO),AOUT)
+ LIBS += -lkstat
+@@ -271,16 +275,19 @@ ifeq ($(LINK_INTO),AOUT)
    LIBS_VM                  = $(LIBS)
  else
    LIBJVM.o                 = $(JVM_OBJ_FILES)
