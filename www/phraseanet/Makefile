@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/02 15:44:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/03 08:47:51 obache Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -7,8 +7,10 @@ PKGREVISION=	3
 
 USE_TOOLS+=	pax
 
+.include "../../lang/php/phpversion.mk"
+
 DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2-[0-9]*:../../www/php-phrasea2
-.if ${PHP_PKG_PREFIX} >= 55
+.if ${PKG_PHP_VERSION} >= 55
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
 .else
 DEPENDS+=	${PHP_PKG_PREFIX}-apc-[0-9]*:../../www/php-apc
@@ -79,6 +81,5 @@ do-install:
 	       -e "s|@VARBASE@|${VARBASE}|g" ${FILESDIR}/phrasea.conf >	\
 		${DESTDIR}${PREFIX}/share/examples/phraseanet/phrasea.conf
 
-.include "../../lang/php/phpversion.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
