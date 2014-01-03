@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2013/10/10 14:41:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2014/01/03 12:35:06 obache Exp $
 #
 
-DISTNAME=	clutter-gst-2.0.4
-PKGREVISION=	2
+DISTNAME=	clutter-gst-2.0.8
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter-gst/2.0/}
 EXTRACT_SUFX=	.tar.xz

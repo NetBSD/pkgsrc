@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2013/07/22 12:53:05 obache Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/03 12:35:06 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter-gst
 PKG_SUPPORTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	introspection
 
 .include "../../mk/bsd.options.mk"
 
