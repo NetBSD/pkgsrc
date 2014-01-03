@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/09/09 13:54:44 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/03 17:31:25 richard Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.git
 PKG_SUPPORTED_OPTIONS=	python
@@ -13,7 +13,7 @@ PLIST_VARS+=		python
 
 .if !empty(PKG_OPTIONS:Mpython)
 PY_PATCHPLIST=	yes
-MAKE_FLAGS+=	PYTHON_PATH=${PYTHONBIN}
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 PLIST.python=		yes
 # not executable
 CHECK_INTERPRETER_SKIP+= ${PYSITELIB}/git_remote_helpers/*.py
