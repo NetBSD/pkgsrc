@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/01/03 03:49:00 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/03 03:50:26 rodent Exp $
 
 DISTNAME=	iniparse-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	python textproc
 MASTER_SITES=	http://iniparse.googlecode.com/files/
 
 MAINTAINER=	rodent@NetBSD.org
