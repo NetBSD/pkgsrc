@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.114 2013/09/15 16:26:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.115 2014/01/03 02:28:11 schmonz Exp $
 #
 
-DISTNAME=		ikiwiki_3.20130904.1
-PKGREVISION=		1
+DISTNAME=		ikiwiki_3.20140102
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
@@ -66,6 +65,7 @@ TEST_TARGET=		test
 .include "options.mk"
 
 pre-configure:
+	rm -f ${WRKSRC}/doc/examples/blog/posts/Test.html
 	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
 
 .include "../../mk/bsd.prefs.mk"
