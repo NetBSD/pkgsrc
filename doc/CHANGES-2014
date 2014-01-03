@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.78 2014/01/03 03:49:10 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.79 2014/01/03 04:06:32 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/ikiwiki to 3.20140102 [schmonz 2014-01-03]
 	Added www/py-flask-bootstrap version 3.0.3.1 [rodent 2014-01-03]
 	Added textproc/py-iniparse version 0.4 [rodent 2014-01-03]
+	Added devel/py-memcached version 1.53 [rodent 2014-01-03]
