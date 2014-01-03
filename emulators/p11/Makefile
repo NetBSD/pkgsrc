@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 12:55:16 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/01/03 04:30:26 dholland Exp $
 #
 
 DISTNAME=	p11-2.10i
@@ -29,8 +29,8 @@ PLIST.tap=		yes
 PLIST.tun=		yes
 .endif
 
-# Force the bpf, tun, and tap epp backends to be built on DragonFly.
-.if ${OPSYS} == "DragonFly"
+# Force the bpf, tun, and tap epp backends to be built on DragonFly and fbsd.
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 PLIST.tap=		yes
 PLIST.tun=		yes
 CONFIGURE_ENV+=		ac_cv_epp_bpf=yes ac_cv_epp_tun=yes ac_cv_epp_tap=yes
