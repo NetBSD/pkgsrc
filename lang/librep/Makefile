@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.60 2013/07/15 02:02:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2014/01/03 05:01:36 ryoon Exp $
 #
 
-DISTNAME=		librep-0.91.0
-PKGREVISION=		4
+DISTNAME=		librep-0.92.3
 CATEGORIES=		lang devel
-MASTER_SITES=		http://download.tuxfamily.org/sawfish/librep/
+MASTER_SITES=		http://download.tuxfamily.org/librep/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://librep.sourceforge.net/
+HOMEPAGE=		http://sawfish.wikia.com/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
 USE_TOOLS+=		gmake makeinfo
@@ -17,8 +16,6 @@ USE_LIBTOOL=		yes
 DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
 INFO_FILES=		yes
 PKGCONFIG_OVERRIDE=	librep.pc.in
-
-REP_LIBTOOL=		${PREFIX}/lib/rep/${MACHINE_GNU_PLATFORM}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
@@ -35,10 +32,6 @@ REPLACE_INTERPRETER+=	rep
 REPLACE.rep.old=	.*/bin/rep
 REPLACE.rep.new=	${PREFIX}/bin/rep
 REPLACE_FILES.rep=	src/rep-xgettext.jl
-
-post-install:
-	${RM} -f ${DESTDIR}${REP_LIBTOOL}
-	${LN} -s ${PKG_LIBTOOL} ${DESTDIR}${REP_LIBTOOL}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
