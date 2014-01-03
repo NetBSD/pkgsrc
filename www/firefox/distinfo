@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.127 2013/12/15 13:54:37 ryoon Exp $
+$NetBSD: distinfo,v 1.128 2014/01/03 14:30:28 martin Exp $
 
 SHA1 (firefox-26.0.source.tar.bz2) = f7c6642d6f62aea8d4eced48dd27aba0634edcd5
 RMD160 (firefox-26.0.source.tar.bz2) = cb791da22377519db44164bedd64254dc839e2b8
@@ -28,6 +28,7 @@ SHA1 (patch-extensions_auth_nsAuthGSSAPI.cpp) = 548886fc4a86a988f3f91650061ddc04
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 1f841becb14483909e05f179f4dce53a7d5b1bd1
 SHA1 (patch-gfx__skia__include__core__SkPreConfig.h) = 6f99cf0eb5d4617d529c378707f537bc1e5cb28f
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
+SHA1 (patch-gfx_layers_BufferUnrotate.cpp) = 18e2c864ac8510034f4a2ff47395f2119a69288c
 SHA1 (patch-gfx_skia_moz.build) = 72a4c39ce367ed25cbfef17283e87db10142163e
 SHA1 (patch-gfx_skia_src_utils_SkThreadUtils__pthread__linux.cpp) = 916d61bd9613df0fe2b6cfd0d6b1e49ffc40da5f
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e5df11499b1ec14e1d4c9a1408c0611d1c4e0574
