@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.76 2014/01/03 02:29:32 schmonz Exp $
+$NetBSD: CHANGES-2014,v 1.77 2014/01/03 03:34:34 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -87,3 +87,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated databases/dbfsak to 4.6 [adam 2014-01-02]
 	Updated devel/mercurial to 2.8.2 [wiz 2014-01-02]
 	Updated www/ikiwiki to 3.20140102 [schmonz 2014-01-03]
+	Added www/py-flask-bootstrap version 3.0.3.1 [rodent 2014-01-03]
