@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.6 2013/09/04 17:22:13 prlw1 Exp $
+# $NetBSD: options.mk,v 1.7 2014/01/03 12:34:14 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
 PKG_SUPPORTED_OPTIONS=	introspection x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUGGESTED_OPTIONS=	introspection x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -28,7 +28,9 @@ BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=7.0
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXfixes+=	libXfixes>=3
 .include "../../x11/libXfixes/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXcomposite+=	libXcomposite>=0.4
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
