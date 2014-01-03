@@ -1,0 +1,15 @@
+$NetBSD: patch-themes_Makefile.in,v 1.1 2014/01/03 05:07:07 ryoon Exp $
+
+* StyleTab.tar.gz is compressed by gzip
+
+--- themes/Makefile.in.orig	2013-09-25 18:50:08.000000000 +0000
++++ themes/Makefile.in
+@@ -55,7 +55,7 @@ install : all installdirs
+ 	done
+ 	@# Don't use tar for StyleTab. It's not compression, but tar
+ 	@# itself slows in librep.
+-	cd $(DESTDIR)$(themedir) && tar xf StyleTab.tar.gz && rm StyleTab.tar.gz
++	cd $(DESTDIR)$(themedir) && tar zxf StyleTab.tar.gz && rm StyleTab.tar.gz
+ 
+ installdirs : $(top_srcdir)/mkinstalldirs
+ 	$(SHELL) $< $(DESTDIR)$(themedir)
