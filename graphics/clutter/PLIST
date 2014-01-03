@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/07/15 01:25:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/03 12:34:14 obache Exp $
 include/clutter-1.0/cally/cally-actor.h
 include/clutter-1.0/cally/cally-clone.h
 include/clutter-1.0/cally/cally-factory.h
@@ -176,10 +176,13 @@ share/gtk-doc/html/cally/ix01.html
 share/gtk-doc/html/cally/ix02.html
 share/gtk-doc/html/cally/ix03.html
 share/gtk-doc/html/cally/ix04.html
+share/gtk-doc/html/cally/left-insensitive.png
 share/gtk-doc/html/cally/left.png
 share/gtk-doc/html/cally/license.html
+share/gtk-doc/html/cally/right-insensitive.png
 share/gtk-doc/html/cally/right.png
 share/gtk-doc/html/cally/style.css
+share/gtk-doc/html/cally/up-insensitive.png
 share/gtk-doc/html/cally/up.png
 share/gtk-doc/html/clutter/ClutterAction.html
 share/gtk-doc/html/clutter/ClutterActor.html
@@ -299,6 +302,7 @@ share/gtk-doc/html/clutter/clutter-Utilities.html
 share/gtk-doc/html/clutter/clutter-Value-intervals.html
 share/gtk-doc/html/clutter/clutter-Versioning-Macros.html
 share/gtk-doc/html/clutter/clutter-Wayland-compositor-specific-support.html
+share/gtk-doc/html/clutter/clutter-Wayland-specific-support.html
 share/gtk-doc/html/clutter/clutter-Win32-Specific-Support.html
 share/gtk-doc/html/clutter/clutter-X11-Specific-Support.html
 share/gtk-doc/html/clutter/clutter-overview.html
@@ -335,6 +339,7 @@ share/gtk-doc/html/clutter/ix11.html
 share/gtk-doc/html/clutter/ix12.html
 share/gtk-doc/html/clutter/ix13.html
 share/gtk-doc/html/clutter/ix14.html
+share/gtk-doc/html/clutter/left-insensitive.png
 share/gtk-doc/html/clutter/left.png
 share/gtk-doc/html/clutter/license.html
 share/gtk-doc/html/clutter/migrating-ClutterAnimation.html
@@ -345,12 +350,15 @@ share/gtk-doc/html/clutter/migration.html
 share/gtk-doc/html/clutter/offscreen-redirect.png
 share/gtk-doc/html/clutter/path-alpha-func.png
 share/gtk-doc/html/clutter/pt09.html
+share/gtk-doc/html/clutter/right-insensitive.png
 share/gtk-doc/html/clutter/right.png
 share/gtk-doc/html/clutter/running-clutter.html
 share/gtk-doc/html/clutter/style.css
 share/gtk-doc/html/clutter/table-layout.png
+share/gtk-doc/html/clutter/up-insensitive.png
 share/gtk-doc/html/clutter/up.png
 share/gtk-doc/html/clutter/using-cairo.html
+share/locale/an/LC_MESSAGES/clutter-1.0.mo
 share/locale/ar/LC_MESSAGES/clutter-1.0.mo
 share/locale/as/LC_MESSAGES/clutter-1.0.mo
 share/locale/ast/LC_MESSAGES/clutter-1.0.mo
@@ -372,6 +380,7 @@ share/locale/fr/LC_MESSAGES/clutter-1.0.mo
 share/locale/gl/LC_MESSAGES/clutter-1.0.mo
 share/locale/he/LC_MESSAGES/clutter-1.0.mo
 share/locale/hi/LC_MESSAGES/clutter-1.0.mo
+share/locale/hu/LC_MESSAGES/clutter-1.0.mo
 share/locale/id/LC_MESSAGES/clutter-1.0.mo
 share/locale/it/LC_MESSAGES/clutter-1.0.mo
 share/locale/ja/LC_MESSAGES/clutter-1.0.mo
@@ -398,7 +407,6 @@ share/locale/sr@latin/LC_MESSAGES/clutter-1.0.mo
 share/locale/sv/LC_MESSAGES/clutter-1.0.mo
 share/locale/ta/LC_MESSAGES/clutter-1.0.mo
 share/locale/te/LC_MESSAGES/clutter-1.0.mo
-share/locale/tg/LC_MESSAGES/clutter-1.0.mo
 share/locale/tr/LC_MESSAGES/clutter-1.0.mo
 share/locale/ug/LC_MESSAGES/clutter-1.0.mo
 share/locale/uk/LC_MESSAGES/clutter-1.0.mo
