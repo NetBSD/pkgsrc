@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/21 16:56:51 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/03 05:03:51 ryoon Exp $
 include/rep-gtk/rep-gtk.h
 lib/pkgconfig/rep-gtk.pc
-lib/rep/${MACHINE_GNU_PLATFORM}/gui/gtk-2/gtk.la
-lib/rep/${MACHINE_GNU_PLATFORM}/gui/gtk-2/types.la
+lib/rep/gui/gtk-2/gtk.la
