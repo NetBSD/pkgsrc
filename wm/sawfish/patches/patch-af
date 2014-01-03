@@ -1,34 +1,26 @@
-$NetBSD: patch-af,v 1.1 2010/08/21 17:33:11 asau Exp $
+$NetBSD: patch-af,v 1.2 2014/01/03 05:06:40 ryoon Exp $
 
 Honour MANDIR.
 
---- man/Makefile.in.orig	2010-06-21 22:46:18.000000000 +0400
-+++ man/Makefile.in	2010-08-21 21:24:42.000000000 +0400
-@@ -23,6 +23,7 @@
- top_builddir=..
- top_srcdir=@top_srcdir@
- srcdir=@srcdir@
-+mandir=@mandir@
- VPATH=@srcdir@:@top_srcdir@
- 
- SRCS = sawfish.texi news.texi faq.texi
-@@ -58,16 +59,16 @@
+--- man/Makefile.in.orig	2013-09-25 18:50:08.000000000 +0000
++++ man/Makefile.in
+@@ -57,16 +57,16 @@ install : sawfish.info installdirs
  	-install-info --info-dir=$(DESTDIR)$(infodir) sawfish.info
  	for f in sawfish*.1; do \
  		gzip $$f -c > $$f.gz; \
 -		$(INSTALL_DATA) $$f.gz $(DESTDIR)$(prefix)/share/man/man1/; \
-+		$(INSTALL_DATA) $$f.gz $(DESTDIR)$(mandir)/man1/; \
++		$(INSTALL_DATA) $$f.gz $(DESTDIR)$(prefix)/${PKGMANDIR}/man1/; \
  	done
  
- installdirs : mkinstalldirs
+ installdirs : $(top_srcdir)/mkinstalldirs
  	$(SHELL) $< $(DESTDIR)$(infodir)
 -	$(SHELL) $< $(DESTDIR)$(prefix)/share/man/man1/
-+	$(SHELL) $< $(DESTDIR)$(mandir)/man1
++	$(SHELL) $< $(DESTDIR)$(prefix)/${PKGMANDIR}/man1/
  
  uninstall :
  	rm -f $(DESTDIR)$(infodir)/sawfish.info*
 -	rm -f $(DESTDIR)$(prefix)/share/man/man1/sawfish*
-+	rm -f $(DESTDIR)$(mandir)/sawfish*
++	rm -f $(DESTDIR)$(prefix)/${PKGMANDIR}/man1/sawfish*
  	-install-info --remove --info-dir=$(DESTDIR)$(infodir) sawfish.info
  
  clean :
