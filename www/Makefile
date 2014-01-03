@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1009 2013/12/31 19:33:29 rodent Exp $
+# $NetBSD: Makefile,v 1.1010 2014/01/03 03:35:24 rodent Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -592,6 +592,7 @@ SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
 SUBDIR+=	py-flask-assets
 SUBDIR+=	py-flask-babelex
+SUBDIR+=	py-flask-bootstrap
 SUBDIR+=	py-flask-cache
 SUBDIR+=	py-flask-flatpages
 SUBDIR+=	py-flask-frozen
