@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/07/15 02:06:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/03 12:35:06 obache Exp $
 include/clutter-gst-2.0/clutter-gst/clutter-gst-enum-types.h
 include/clutter-gst-2.0/clutter-gst/clutter-gst-player.h
 include/clutter-gst-2.0/clutter-gst/clutter-gst-types.h
@@ -23,8 +23,11 @@ share/gtk-doc/html/clutter-gst/clutter-gst.devhelp2
 share/gtk-doc/html/clutter-gst/home.png
 share/gtk-doc/html/clutter-gst/index.html
 share/gtk-doc/html/clutter-gst/index.sgml
+share/gtk-doc/html/clutter-gst/left-insensitive.png
 share/gtk-doc/html/clutter-gst/left.png
 share/gtk-doc/html/clutter-gst/license.html
+share/gtk-doc/html/clutter-gst/right-insensitive.png
 share/gtk-doc/html/clutter-gst/right.png
 share/gtk-doc/html/clutter-gst/style.css
+share/gtk-doc/html/clutter-gst/up-insensitive.png
 share/gtk-doc/html/clutter-gst/up.png
