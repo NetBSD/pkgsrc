@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/03 03:34:00 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flask_bootstrap/__init__.py
+${PYSITELIB}/flask_bootstrap/__init__.pyc
+${PYSITELIB}/flask_bootstrap/__init__.pyo
+${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.css
+${PYSITELIB}/flask_bootstrap/static/css/bootstrap-theme.min.css
+${PYSITELIB}/flask_bootstrap/static/css/bootstrap.css
+${PYSITELIB}/flask_bootstrap/static/css/bootstrap.min.css
+${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.eot
+${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.svg
+${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.ttf
+${PYSITELIB}/flask_bootstrap/static/fonts/glyphicons-halflings-regular.woff
+${PYSITELIB}/flask_bootstrap/static/jquery.js
+${PYSITELIB}/flask_bootstrap/static/jquery.min.js
+${PYSITELIB}/flask_bootstrap/static/js/bootstrap.js
+${PYSITELIB}/flask_bootstrap/static/js/bootstrap.min.js
+${PYSITELIB}/flask_bootstrap/templates/bootstrap/base.html
+${PYSITELIB}/flask_bootstrap/templates/bootstrap/fixes.html
+${PYSITELIB}/flask_bootstrap/templates/bootstrap/google.html
+${PYSITELIB}/flask_bootstrap/templates/bootstrap/wtf.html
