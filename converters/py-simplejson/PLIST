@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2012/06/03 22:24:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/01/03 06:11:46 rodent Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/simplejson/__init__.py
 ${PYSITELIB}/simplejson/__init__.pyc
 ${PYSITELIB}/simplejson/__init__.pyo
 ${PYSITELIB}/simplejson/_speedups.so
+${PYSITELIB}/simplejson/compat.py
+${PYSITELIB}/simplejson/compat.pyc
+${PYSITELIB}/simplejson/compat.pyo
 ${PYSITELIB}/simplejson/decoder.py
 ${PYSITELIB}/simplejson/decoder.pyc
 ${PYSITELIB}/simplejson/decoder.pyo
@@ -52,6 +55,9 @@ ${PYSITELIB}/simplejson/tests/test_fail.pyo
 ${PYSITELIB}/simplejson/tests/test_float.py
 ${PYSITELIB}/simplejson/tests/test_float.pyc
 ${PYSITELIB}/simplejson/tests/test_float.pyo
+${PYSITELIB}/simplejson/tests/test_for_json.py
+${PYSITELIB}/simplejson/tests/test_for_json.pyc
+${PYSITELIB}/simplejson/tests/test_for_json.pyo
 ${PYSITELIB}/simplejson/tests/test_indent.py
 ${PYSITELIB}/simplejson/tests/test_indent.pyc
 ${PYSITELIB}/simplejson/tests/test_indent.pyo
@@ -82,6 +88,9 @@ ${PYSITELIB}/simplejson/tests/test_separators.pyo
 ${PYSITELIB}/simplejson/tests/test_speedups.py
 ${PYSITELIB}/simplejson/tests/test_speedups.pyc
 ${PYSITELIB}/simplejson/tests/test_speedups.pyo
+${PYSITELIB}/simplejson/tests/test_tool.py
+${PYSITELIB}/simplejson/tests/test_tool.pyc
+${PYSITELIB}/simplejson/tests/test_tool.pyo
 ${PYSITELIB}/simplejson/tests/test_tuple.py
 ${PYSITELIB}/simplejson/tests/test_tuple.pyc
 ${PYSITELIB}/simplejson/tests/test_tuple.pyo
