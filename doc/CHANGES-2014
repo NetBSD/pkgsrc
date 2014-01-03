@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.75 2014/01/02 23:51:53 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.76 2014/01/03 02:29:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/lua52 to 5.2.3 [wiz 2014-01-02]
 	Updated databases/dbfsak to 4.6 [adam 2014-01-02]
 	Updated devel/mercurial to 2.8.2 [wiz 2014-01-02]
+	Updated www/ikiwiki to 3.20140102 [schmonz 2014-01-03]
