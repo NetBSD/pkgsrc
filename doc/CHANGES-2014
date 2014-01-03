@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.80 2014/01/03 05:02:08 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.81 2014/01/03 05:04:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -91,3 +91,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added textproc/py-iniparse version 0.4 [rodent 2014-01-03]
 	Added devel/py-memcached version 1.53 [rodent 2014-01-03]
 	Updated lang/librep to 0.92.3 [ryoon 2014-01-03]
+	Updated x11/rep-gtk2 to 0.90.8.1 [ryoon 2014-01-03]
