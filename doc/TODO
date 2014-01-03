@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12839 2014/01/03 06:12:02 rodent Exp $
+$NetBSD: TODO,v 1.12840 2014/01/03 07:12:54 mef Exp $
 
 Suggested new packages
 ======================
@@ -1167,6 +1167,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
+	o zeromq-4.0.3
 	o zile-2.4.9
 	o zim-0.60
 	o zoom-1.1.3
