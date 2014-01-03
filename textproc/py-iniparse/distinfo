@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/03 03:49:00 rodent Exp $
+
+SHA1 (iniparse-0.4.tar.gz) = 2b2af8a19f3e5c212c27d7c524cd748fa0b38650
+RMD160 (iniparse-0.4.tar.gz) = f4cb5edc035e787acea428a7d21343d986f85f5c
+Size (iniparse-0.4.tar.gz) = 31278 bytes
