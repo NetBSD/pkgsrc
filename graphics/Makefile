@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2013/12/07 12:58:18 obache Exp $
+# $NetBSD: Makefile,v 1.666 2014/01/04 13:43:56 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -51,6 +51,7 @@ SUBDIR+=	claraocr
 SUBDIR+=	clutter
 SUBDIR+=	clutter-box2d
 SUBDIR+=	clutter-gtk
+SUBDIR+=	clutter-gtk0.10
 SUBDIR+=	clutter-mx
 SUBDIR+=	cnxtview
 SUBDIR+=	cogl
