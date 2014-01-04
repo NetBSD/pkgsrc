@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1831 2014/01/03 04:07:54 rodent Exp $
+# $NetBSD: Makefile,v 1.1832 2014/01/04 09:31:47 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1137,6 +1137,7 @@ SUBDIR+=	p5-Regexp-Assemble
 SUBDIR+=	p5-Regexp-MatchContext
 SUBDIR+=	p5-Regexp-Parser
 SUBDIR+=	p5-Regexp-Shellish
+SUBDIR+=	p5-Return-MultiLevel
 SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-Role-Basic
 SUBDIR+=	p5-Role-HasMessage
