@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.138 2014/01/03 12:36:31 obache Exp $
+# $NetBSD: Makefile,v 1.139 2014/01/04 13:46:55 obache Exp $
 
 DISTNAME=		gnome-games-2.32.1
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.32/}
 EXTRACT_SUFX=		.tar.bz2
@@ -66,8 +66,7 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../graphics/librsvg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.clutter+= clutter>=1.0
 .include "../../graphics/clutter/buildlink3.mk"
-BUILDLINK_API_DEPENDS.clutter-gtk+= clutter-gtk>=0.10
-.include "../../graphics/clutter-gtk/buildlink3.mk"
+.include "../../graphics/clutter-gtk0.10/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/omf-scrollkeeper.mk"
