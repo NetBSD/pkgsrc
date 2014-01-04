@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2013/12/30 06:37:11 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2014/01/04 23:46:26 joerg Exp $
 # used by x11/qt5-dbus/Makefile
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
@@ -189,7 +189,8 @@ pre-configure: remove-3rdparty-libs set-qmake-conf
 	&& empty(PKGPATH:Mx11/qt5-mysql) && empty(PKGPATH:Mx11/qt5-psql) \
 	&& empty(PKGPATH:Mx11/qt5-odbc)
 post-configure:
-	cd ${WRKSRC}/${BUILD_DIRS} && ${QTPREFIX}/bin/qmake -o Makefile
+	cd ${WRKSRC}/${BUILD_DIRS} && \
+	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} ${QTPREFIX}/bin/qmake -o Makefile
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
