@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.88 2014/01/03 16:03:46 wen Exp $
+$NetBSD: CHANGES-2014,v 1.89 2014/01/04 09:33:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -99,3 +99,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/clutter to 1.16.2 [obache 2014-01-03]
 	Updated multimedia/clutter-gst to 2.0.8 [obache 2014-01-03]
 	Updated www/p5-Dancer to 1.3120 [wen 2014-01-03]
+	Added devel/p5-Return-MultiLevel version 0.03 [wen 2014-01-04]
