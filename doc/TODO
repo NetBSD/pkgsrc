@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12842 2014/01/03 12:37:46 obache Exp $
+$NetBSD: TODO,v 1.12843 2014/01/04 09:58:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.17
+	o calibre-1.18
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -497,7 +497,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elftoolchain-0.6.1 [pkg/48227]
-	o elm-me-2.5plalpha34
+	o elm-me-2.5plalpha35
 	o emacs-muse-3.20
 	o emerillon-0.1.90
 	o enlightenment-0.18
@@ -1035,7 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texlive-2012
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
-	o tightvnc-2.0.95
+	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tk-8.6 [it is incompatible with ruby-tk]
 	o tkgate-1.8.7
