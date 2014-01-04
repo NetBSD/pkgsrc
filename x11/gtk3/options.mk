@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/05/11 19:49:15 riastradh Exp $
+# $NetBSD: options.mk,v 1.6 2014/01/04 16:21:00 prlw1 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS=	gtk3-atk-bridge cups debug
@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--enable-quartz-backend
 PLIST.quartz=		yes
 .else
-CONFIGURE_ARGS+=	--with-xinput=xfree
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 PLIST.x11=		yes
