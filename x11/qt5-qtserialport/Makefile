@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/12/13 14:38:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/04 11:58:40 wiz Exp $
 
 PKGNAME=	qt5-qtserialport-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for Serial Port
 
 .include "../../x11/qt5-qtbase/Makefile.common"
