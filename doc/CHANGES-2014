@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.95 2014/01/04 14:24:15 wen Exp $
+$NetBSD: CHANGES-2014,v 1.96 2014/01/04 16:50:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -106,3 +106,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/clutter-gtk to 1.4.4 [obache 2014-01-04]
 	Updated www/py-uwsgi to 1.4.10 [rodent 2014-01-04]
 	Updated devel/p5-Log-Dispatch-Array to 1.003 [wen 2014-01-04]
+	Updated textproc/mdoclint to 1.26 [wiz 2014-01-04]
