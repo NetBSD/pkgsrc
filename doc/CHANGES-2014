@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.93 2014/01/04 13:49:32 obache Exp $
+$NetBSD: CHANGES-2014,v 1.94 2014/01/04 13:56:23 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/easytag to 2.1.9 [wiz 2014-01-04]
 	Added graphics/clutter-gtk0.10 version 0.10.8 [obache 2014-01-04]
 	Updated graphics/clutter-gtk to 1.4.4 [obache 2014-01-04]
+	Updated www/py-uwsgi to 1.4.10 [rodent 2014-01-04]
