@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Helpers.cpp,v 1.3 2014/01/02 22:18:37 wiz Exp $
+$NetBSD: patch-src_Helpers.cpp,v 1.4 2014/01/04 15:11:43 wiz Exp $
+
+http://sourceforge.net/p/mp3diags/code/279/
 
 --- src/Helpers.cpp.orig	2011-09-10 17:51:46.000000000 +0000
 +++ src/Helpers.cpp

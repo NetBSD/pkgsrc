@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.14 2014/01/02 22:18:37 wiz Exp $
+$NetBSD: distinfo,v 1.15 2014/01/04 15:11:43 wiz Exp $
 
 SHA1 (MP3Diags-1.0.12.079.tar.gz) = dfcdda867215a22820f935e81aa5bb61c4d5fb81
 RMD160 (MP3Diags-1.0.12.079.tar.gz) = 1bf10a9f18f090f365aa8d82801c218e6c651fa0
 Size (MP3Diags-1.0.12.079.tar.gz) = 959757 bytes
 SHA1 (patch-aa) = 679dcb25b6acfc9c2fcb6076a467477cb03058bb
-SHA1 (patch-src_FileRenamerDlgImpl.h) = 9448a5b364fd75119b34e82ca906eba2dd7dc960
-SHA1 (patch-src_Helpers.cpp) = 76b9259a10e19cdd20985c0238e26f69d0ac3730
-SHA1 (patch-src_Helpers.h) = 8f65908564d7d8708f12bcd57f3ed46520dad1ec
-SHA1 (patch-src_Notes.h) = 63c5f620a5c5caca4ad6b9aab3b3ab3c2f57ad30
+SHA1 (patch-src_FileRenamerDlgImpl.h) = 8520f3ae85a2f34f9f9ebd5f744e3be1f8d476c2
+SHA1 (patch-src_Helpers.cpp) = a4a0188663a69bee55d7529cafcb020b3cb189ad
+SHA1 (patch-src_Helpers.h) = 1d5304f18225623ab9192aec52b72710be5e98cf
+SHA1 (patch-src_Notes.h) = fe707d30093bb1140e3acc29631bbd65c40a3622
 SHA1 (patch-src_fstream__unicode.cpp) = 5a78606369119880c65937373eec55581fc77c2a
 SHA1 (patch-src_fstream__unicode.h) = 068d7bdf3a04f27973769a21effd9814c9c8245b
