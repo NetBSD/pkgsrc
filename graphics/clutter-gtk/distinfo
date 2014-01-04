@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/02/02 17:27:19 drochner Exp $
+$NetBSD: distinfo,v 1.8 2014/01/04 13:47:38 obache Exp $
 
-SHA1 (clutter-gtk-0.10.8.tar.gz) = 91dc92c06ab6feff4d99d3bf5cce374c48a2f14b
-RMD160 (clutter-gtk-0.10.8.tar.gz) = 6c24adcd11029d8d5172af28a9429238d009b9b4
-Size (clutter-gtk-0.10.8.tar.gz) = 391461 bytes
-SHA1 (patch-aa) = c7caf95a3a361370193f3810904a62de2d1d7048
+SHA1 (clutter-gtk-1.4.4.tar.xz) = 15fa002070671eca0f14e2b7c9c0580b6393f14d
+RMD160 (clutter-gtk-1.4.4.tar.xz) = 153055783b91dd9487e264cc4198c8b2fc7e438c
+Size (clutter-gtk-1.4.4.tar.xz) = 311192 bytes
