@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/12/13 14:38:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/04 11:58:39 wiz Exp $
 
 DISTNAME=	qt5-${QTVERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	# none
 

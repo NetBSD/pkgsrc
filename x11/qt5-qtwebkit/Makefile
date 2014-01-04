@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/01/01 11:52:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/04 11:58:40 wiz Exp $
 
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt5 WebView module
 
 .include "../../x11/qt5-qtbase/Makefile.common"
