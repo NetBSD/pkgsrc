@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/12/13 14:38:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/04 11:58:39 wiz Exp $
 
 PKGNAME=	qt5-mysql-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 MySQL plugin
 
 .include "../../x11/qt5-qtbase/Makefile.common"
