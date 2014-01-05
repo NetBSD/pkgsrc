@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/21 14:34:38 imil Exp $
+$NetBSD: distinfo,v 1.2 2014/01/05 17:47:10 rodent Exp $
 
-SHA1 (v1.2.1.zip) = 00fd36fdcc8183a37862a9b7effb9cbd3f3b2105
-RMD160 (v1.2.1.zip) = fd413b705b1308ecf6f33711b365019bda04eba3
-Size (v1.2.1.zip) = 586193 bytes
+SHA1 (v2.1.0.tar.gz) = 491ca9b89fb4a1c3c8dbbee14609d66b7e70b0ff
+RMD160 (v2.1.0.tar.gz) = db33a2f3170798f78fe9d5c34f67ab8f002fd883
+Size (v2.1.0.tar.gz) = 609754 bytes
