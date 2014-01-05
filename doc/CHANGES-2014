@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.118 2014/01/05 21:33:25 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.119 2014/01/05 21:41:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -130,3 +130,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/qof to 0.7.5nb15 [wiz 2014-01-05]
 	Updated ham/gnuradio-core-docs to 3.3.0nb19 [wiz 2014-01-05]
 	Updated ham/usrp-docs to 3.3.0nb11 [wiz 2014-01-05]
+	Updated security/oath-toolkit to 2.4.0nb2 [wiz 2014-01-05]
