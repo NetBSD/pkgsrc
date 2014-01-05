@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/12/11 15:45:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/05 09:15:06 richard Exp $
 
 DISTNAME=	fltk-1.3.2-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://fltk.org/pub/fltk/${VERS}/
 
@@ -12,6 +13,56 @@ COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
 
 CONFLICTS=		fltk-1.[012].*
+
+DIST_SUBDIR=	fltk13
+
+#TigerVNC requires FLTK 1.3.0 (or later). Although it will build and work
+#with plain 1.3.0, to get full functionality and the best behaviour the
+#following patches are needed
+
+# Export dead key information from FLTK to the apps
+# http://www.fltk.org/str.php?L2599
+PATCHFILES=		fltk-1_v4.3.x-keyboard-x11.patch	\
+				fltk-1_v4.3.x-keyboard-win32.patch	\
+				fltk-1_v6.3.x-keyboard-osx.patch
+PATCH_SITES=	http://www.fltk.org/strfiles/2599/
+
+# Notify applications of changes to the clipboard
+# http://www.fltk.org/str.php?L2636
+PATCHFILES+=	fltk-1.3.x-clipboard.patch	\
+				fltk-1_v5.3.x-clipboard-x11.patch	\
+				fltk-1_v3.3.x-clipboard-win32-fix.patch	\
+				fltk-1_v2.3.x-clipboard-win32.patch	\
+				fltk-1_v2.3.x-clipboard-osx.patch
+PATCH_SITES+=	http://www.fltk.org/strfiles/2636/
+
+# Ability to convert a Fl_Pixmap to a Fl_RGB_Image
+# http://www.fltk.org/str.php?L2659
+PATCHFILES+=	pixmap_v2.patch
+PATCH_SITES+=	http://www.fltk.org/strfiles/2659/
+
+# Support for custom cursors
+# http://www.fltk.org/str.php?L2660
+PATCHFILES+=	fltk-1_v5.3.x-cursor.patch
+PATCH_SITES+=	http://www.fltk.org/strfiles/2660/
+
+# Improve modality interaction with WM
+# http://www.fltk.org/str.php?L2802
+PATCHFILES+=	fltk-1_v2.3.0-modal.patch
+PATCH_SITES+=	http://www.fltk.org/strfiles/2802/
+
+# Window icons
+# http://www.fltk.org/str.php?L2816
+PATCHFILES+=	fltk-1_v3.3.0-icons.patch
+PATCH_SITES+=	http://www.fltk.org/strfiles/2816/
+
+# Multihead
+# http://fltk.org/str.php?L2860
+PATCHFILES+=	fltk-1.3.x-screen_num.patch	\
+				fltk-1_v3.3.x-multihead.patch
+PATCH_SITES+=	http://www.fltk.org/strfiles/2860/
+
+PATCH_DIST_STRIP= -p1
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
