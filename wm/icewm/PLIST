@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:18:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/01/05 12:29:33 ryoon Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -328,5 +328,4 @@ share/locale/tr/LC_MESSAGES/icewm.mo
 share/locale/uk/LC_MESSAGES/icewm.mo
 share/locale/vi/LC_MESSAGES/icewm.mo
 share/locale/zh_CN/LC_MESSAGES/icewm.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 share/locale/zh_TW/LC_MESSAGES/icewm.mo

@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.10 2013/08/18 21:29:08 wiz Exp $
+$NetBSD: patch-ad,v 1.11 2014/01/05 12:29:33 ryoon Exp $
 
---- src/Makefile.in.orig	2008-01-05 07:34:24.000000000 +0000
+* -lfontconfig part: Fix link on NetBSD/evbearmv6-hf-el
+
+--- src/Makefile.in.orig	2009-11-08 18:59:46.000000000 +0000
 +++ src/Makefile.in
-@@ -33,7 +33,7 @@ DEFS =          @DEFS@ \
+@@ -33,14 +33,14 @@ DEFS =          @DEFS@ \
                  -DICEWMBGEXE='"icewmbg$(EXEEXT)"' \
                  -DICESMEXE='"icewm-session$(EXEEXT)"' \
                  -DICEHELPEXE='"icehelp$(EXEEXT)"' \
@@ -11,3 +13,11 @@ $NetBSD: patch-ad,v 1.10 2013/08/18 21:29:08 wiz Exp $
  
  CXXFLAGS =      @CXXFLAGS@ $(DEBUG) $(DEFS) \
  	        @CORE_CFLAGS@ @IMAGE_CFLAGS@ @AUDIO_CFLAGS@ # `fc-config --cflags`
+ LFLAGS =	@LDFLAGS@
+ LIBS =          @LIBS@
+ 
+-CORE_LIBS =     @CORE_LIBS@ # `fc-config --libs`
++CORE_LIBS =     @CORE_LIBS@ -lfontconfig # `fc-config --libs`
+ IMAGE_LIBS =    @IMAGE_LIBS@
+ AUDIO_LIBS =    @AUDIO_LIBS@
+ GNOME1_LIBS =    @GNOME1_LIBS@
