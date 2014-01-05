@@ -1,0 +1,3 @@
+Uliweb is a full-stacked Python based web framework. It has three
+main design goals, they are: reusability, configurability, and
+replaceability. All the functionalities revolve around these goals.
