@@ -1,0 +1,8 @@
+uwsgitop is a top-like command that uses the stats server. Run your uWSGI server
+with the stats server enabled. Ex.:
+
+uwsgi --module myapp --socket :3030 --stats /tmp/stats.socket
+
+Then, connect uwsgitop to the stats socket:
+
+uwsgitop /tmp/stats.socket
