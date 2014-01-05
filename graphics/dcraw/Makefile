@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2013/11/03 16:02:26 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2014/01/05 15:12:11 wiz Exp $
+#
+# Changes can be found in the RCS file at
+# http://www.cybercom.net/~dcoffin/dcraw/RCS/dcraw.c,v
 
 DISTNAME=	dcraw-9.19
 CATEGORIES=	graphics
