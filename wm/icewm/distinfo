@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.38 2013/08/18 21:29:37 wiz Exp $
+$NetBSD: distinfo,v 1.39 2014/01/05 12:29:33 ryoon Exp $
 
-SHA1 (icewm-1.2.35.tar.gz) = a0174901ca89aa091a58efedfec1536c5e477210
-RMD160 (icewm-1.2.35.tar.gz) = 19b044d9f88f860d3e25a3f419404e106162f40b
-Size (icewm-1.2.35.tar.gz) = 831087 bytes
-SHA1 (patch-aa) = 54ee3fe3ecf520977b208472d99a218e590537ce
-SHA1 (patch-ad) = e2f1e92b95f43bb2efdd5a5a4eab44d43f61a91b
+SHA1 (icewm-1.2.38pre2.tar.gz) = e0fa0ac454c8a7bbe850f114e9a0a82082516da3
+RMD160 (icewm-1.2.38pre2.tar.gz) = e2b3fefdae7e1d368920e84d175058e3fe7c8d93
+Size (icewm-1.2.38pre2.tar.gz) = 854190 bytes
+SHA1 (patch-aa) = f8293eb29bffc657e6ae322a944c9c7416ce6687
+SHA1 (patch-ad) = 04dbb91c1486d6aa493fffa2661f330347153fe5
 SHA1 (patch-aj) = aa357c56d3165f36a347133cf11cc299438617e9
 SHA1 (patch-ak) = 8f96d98019071522cd8a9196a029842410e4ede1
 SHA1 (patch-src_apppstatus.cc) = ea685b05bdcc7169b8f830409c4948c7ee9092a3
 SHA1 (patch-src_base.h) = cd869fd68b2d169fcded97662212e7eccee9c83c
 SHA1 (patch-src_yarray.h) = c1e96402396bf6120a286e01c57b7202b4a3b9fb
+SHA1 (patch-src_ypixbuf.cc) = 6ecc2f9b76a2bf0589ae9ea98733f61a49f9afd1
