@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/01 11:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/05 06:07:46 dholland Exp $
 #
 
 DISTNAME=	grilo-0.2.6
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	pkg-config intltool msgfmt
 USE_LANGUAGES=	c99
 SET_LIBDIR=	yes
 
