@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.2.1 2014/01/02 22:29:19 tron Exp $
+$NetBSD: distinfo,v 1.1.2.2 2014/01/05 20:20:47 spz Exp $
 
 SHA1 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = 7ae5e9e9b7a86221ddb5dc3bb7699133a65313d2
 RMD160 (suse131/libFS6-1.0.5-2.1.2.i586.rpm) = f9b31a84204ba4989f92de331612ed60fffdfe77
@@ -243,12 +243,12 @@ Size (suse131/liboldX6-1.0.1-8.1.2.i586.rpm) = 7371 bytes
 SHA1 (suse131/liboldX6-1.0.1-8.1.2.x86_64.rpm) = 80c1b7fcf9cfbd186579b42a6ddd5451e3a0f868
 RMD160 (suse131/liboldX6-1.0.1-8.1.2.x86_64.rpm) = 709dc4cb5b39327aeaee7cf50d330fa62913b6c5
 Size (suse131/liboldX6-1.0.1-8.1.2.x86_64.rpm) = 7537 bytes
-SHA1 (suse131/libpixman-1-0-0.30.2-2.2.1.i586.rpm) = 41a04b451c0738202c4a57141cf87c6169c40644
-RMD160 (suse131/libpixman-1-0-0.30.2-2.2.1.i586.rpm) = 60d1e327c2a900bf9ad254c0857888f151834b3b
-Size (suse131/libpixman-1-0-0.30.2-2.2.1.i586.rpm) = 227938 bytes
-SHA1 (suse131/libpixman-1-0-0.30.2-2.2.1.x86_64.rpm) = d5ae8966b931bf0a9a073b38ad3529d56073f6fa
-RMD160 (suse131/libpixman-1-0-0.30.2-2.2.1.x86_64.rpm) = 3ee1fd90aa8357fd82321b24c1ba40842c8b06d1
-Size (suse131/libpixman-1-0-0.30.2-2.2.1.x86_64.rpm) = 238527 bytes
+SHA1 (suse131/libpixman-1-0-0.30.2-2.5.1.i586.rpm) = 80d4d85dab7fc9adc52a93e1c220628dd50aa5f1
+RMD160 (suse131/libpixman-1-0-0.30.2-2.5.1.i586.rpm) = cc960b9bb7fe834b68fdf295cc76d0385430b577
+Size (suse131/libpixman-1-0-0.30.2-2.5.1.i586.rpm) = 228100 bytes
+SHA1 (suse131/libpixman-1-0-0.30.2-2.5.1.x86_64.rpm) = c145e60b292d229717b395cf963cb6d8ec9d67d9
+RMD160 (suse131/libpixman-1-0-0.30.2-2.5.1.x86_64.rpm) = 9820408b0c75cf6b652b7bc31c1e5f3f2d2d6c5b
+Size (suse131/libpixman-1-0-0.30.2-2.5.1.x86_64.rpm) = 238856 bytes
 SHA1 (suse131/libxcb-dri2-0-1.9.1-3.1.2.i586.rpm) = ce3608c9fc8977d1d4cc6739cec35ffeed0b5177
 RMD160 (suse131/libxcb-dri2-0-1.9.1-3.1.2.i586.rpm) = 0c64b853810dfd6a5599c00254c021b21446066e
 Size (suse131/libxcb-dri2-0-1.9.1-3.1.2.i586.rpm) = 11085 bytes
