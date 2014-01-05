@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/03/15 08:10:04 plunky Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/05 20:01:42 wiz Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -42,10 +42,10 @@ share/doc/openobex/html/ftv2vertline.png
 share/doc/openobex/html/functions.html
 share/doc/openobex/html/functions_vars.html
 share/doc/openobex/html/globals.html
-share/doc/openobex/html/globals_0x66.html
-share/doc/openobex/html/globals_0x69.html
-share/doc/openobex/html/globals_0x6f.html
-share/doc/openobex/html/globals_0x74.html
+share/doc/openobex/html/globals_f.html
+share/doc/openobex/html/globals_i.html
+share/doc/openobex/html/globals_o.html
+share/doc/openobex/html/globals_t.html
 share/doc/openobex/html/globals_defs.html
 share/doc/openobex/html/globals_enum.html
 share/doc/openobex/html/globals_eval.html
