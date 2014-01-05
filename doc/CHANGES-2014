@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.99 2014/01/05 09:04:55 obache Exp $
+$NetBSD: CHANGES-2014,v 1.100 2014/01/05 09:06:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -110,3 +110,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/py-serial to 2.6nb1 [wiz 2014-01-04]
 	Updated lang/onyx to 5.1.2nb2 [dholland 2014-01-05]
 	Added graphics/ruby-gnome2-clutter version 2.0.2 [obache 2014-01-05]
+	Added graphics/ruby-gnome2-clutter-gtk version 2.0.2 [obache 2014-01-05]
