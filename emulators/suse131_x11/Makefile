@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.2.1 2014/01/02 22:29:19 tron Exp $
+# $NetBSD: Makefile,v 1.1.2.2 2014/01/05 20:20:47 spz Exp $
 
 DISTNAME=	suse_x11-${SUSE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 RPMPKGS+=	libFS6-1.0.5-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libICE6-1.0.8-7.1.2.${SUSE_ARCH}
@@ -44,7 +44,7 @@ RPMPKGS+=	libdmx1-1.1.3-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libfontenc1-1.1.2-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	liblbxutil1-1.1.0-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	liboldX6-1.0.1-8.1.2.${SUSE_ARCH}
-RPMPKGS+=	libpixman-1-0-0.30.2-2.2.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libpixman-1-0-0.30.2-2.5.1.${SUSE_ARCH}
 RPMPKGS+=	libxcb1-1.9.1-3.1.2.${SUSE_ARCH}
 RPMPKGS+=	libxcb-dri2-0-1.9.1-3.1.2.${SUSE_ARCH}
 RPMPKGS+=	libxcb-glx0-1.9.1-3.1.2.${SUSE_ARCH}
