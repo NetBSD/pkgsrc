@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.101 2014/01/05 09:16:14 obache Exp $
+$NetBSD: CHANGES-2014,v 1.102 2014/01/05 09:26:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -112,3 +112,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added graphics/ruby-gnome2-clutter version 2.0.2 [obache 2014-01-05]
 	Added graphics/ruby-gnome2-clutter-gtk version 2.0.2 [obache 2014-01-05]
 	Added multimedia/ruby-gnome2-clutter-gstreamer version 2.0.2 [obache 2014-01-05]
+	Updated meta-pkgs/ruby-gnome2 to 2.0.2nb1 [obache 2014-01-05]
