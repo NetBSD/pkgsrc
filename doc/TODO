@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12844 2014/01/05 12:34:08 ryoon Exp $
+$NetBSD: TODO,v 1.12845 2014/01/05 14:47:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -453,6 +453,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csound5-5.13
 	o cups-1.7.0
+	o cvs-fast-export-1.2
 	o cvs2p4-2.5.5 [schmonz]
 	o cwm-5.1
 	o cygwin_lib-1.5.24.2
@@ -512,7 +513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-891
-	o etm2-2.3.19 [etm successor]
+	o etm2-2.3.20 [etm successor]
 	o ettercap-0.7.6
 	o evince-3.8.3
 	o evolution-3.0.0
@@ -588,6 +589,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.8.4
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
+	o gnome-commander-1.2.8.16
 	o gnome-control-center-3.8.3
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
@@ -755,6 +757,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libxmp-4.2.1
 	o licq-1.3.8
 	o liferea-1.10.3
+	o lilypond-2.18.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lldpd-0.7.7 [wip, perl module path]
@@ -895,6 +898,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o popa3d-1.0.3
 	o poppass-4.0.14
+	o poppler-0.24.5
 	o postal-0.72
 	o postgresql-postgis-2.1.0
 	o powermanga-0.91
@@ -917,6 +921,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-httplib2-0.8
 	o py-moin-1.9.7
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
+	o py-pytz-2013.9
+	o py-setuptools-1.11
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
 	o py-qt5-5.1.1
@@ -953,9 +959,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.44.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.0.12
+	o samba-4.0.13
 	o samba-4.1.0 [wip]
-	o samba-4.1.1
+	o samba-4.1.3
 	o sane-1.0.24
 	o sarg-2.2.5
 	o scew-0.4.0
@@ -1032,6 +1038,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tesseract-3.02.02
 	o tetrinetx-1.40c
 	o texlive-2012
+	o texmaker-4.1.1 [wip]
 	o texworks-0.4.5
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
@@ -1089,7 +1096,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o weechat-0.4.2
 	o windowlab-1.40
 	o wine-1.6.1 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
-	o wine-devel-1.7.9 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
+	o wine-devel-1.7.10 [wait until NetBSD gains OSS 4 [kern/46611] or bring OSS 3 support back]
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wml-2.0.11
@@ -1102,7 +1109,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxGTK-3.0
 	o wxRemind-101
 	o wyrd-1.4.6
-	o x264-devel-20131228
+	o x264-devel-20140104
 	o xanalyser-1.30
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
