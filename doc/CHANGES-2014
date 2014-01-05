@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.112 2014/01/05 20:01:51 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.113 2014/01/05 20:10:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -124,3 +124,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/py-requests to 2.1.0 [rodent 2014-01-05]
 	Updated audio/libopus to 1.1nb1 [wiz 2014-01-05]
 	Updated comms/openobex to 1.7nb1 [wiz 2014-01-05]
+	Updated converters/libcdr to 0.0.6nb3 [wiz 2014-01-05]
