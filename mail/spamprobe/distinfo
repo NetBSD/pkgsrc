@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2013/05/28 19:03:09 joerg Exp $
+$NetBSD: distinfo,v 1.17.6.1 2014/01/05 20:39:43 spz Exp $
 
 SHA1 (spamprobe-1.4d.tar.gz) = fbcd65eb21097cd860d5e5ee2c4c2524c717a237
 RMD160 (spamprobe-1.4d.tar.gz) = 4a9e098b92e6900d8b03d7ed5e8d052f2b2e8c56
@@ -9,3 +9,4 @@ SHA1 (patch-src_includes_LRUCache.h) = 2e1eadf262b0de7965155c6dba794f92247397fc
 SHA1 (patch-src_includes_MultiLineSubString.h) = bd6def3ef4e261ee4fe56d58447c89d7fce8e9e3
 SHA1 (patch-src_includes_Ref.h) = 767c0cecc4431dc7384fc43aa4905eb148ef178e
 SHA1 (patch-src_includes_util.h) = 5c7f02ac7f3852c6d751afd07df752cef7a1f06e
+SHA1 (patch-src_parser_GifParser.cc) = 0d3d44cdae38de9443f4b092ba5d82b38fb2cae3
