@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.860 2013/10/12 18:09:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.861 2014/01/05 11:26:06 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4478,8 +4478,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			} elsif ($value =~ m"^([0-9A-Za-z]+)://([^/]+)(.*)$") {
 				my ($scheme, $host, $abs_path) = ($1, $2, $3);
 
-				if ($scheme ne "ftp" && $scheme ne "http" && $scheme ne "gopher") {
-					$line->log_warning("\"${value}\" is not a valid URL. Only http, ftp and gopher URLs are allowed here.");
+				if ($scheme ne "ftp" && $scheme ne "http" && $scheme ne "https" && $scheme ne "gopher") {
+					$line->log_warning("\"${value}\" is not a valid URL. Only ftp, gopher, http, and https URLs are allowed here.");
 
 				} elsif ($abs_path eq "") {
 					$line->log_note("For consistency, please add a trailing slash to \"${value}\".");
@@ -5137,6 +5137,7 @@ sub checklines_mk($) {
 
 		} elsif ($varcanon eq "USE_TOOLS") {
 			foreach my $tool (split(qr"\s+", $line->get("value"))) {
+				$tool =~ s/:(build|run)//;
 				$mkctx_tools->{$tool} = true;
 				$opt_debug_misc and $line->log_debug("${tool} is added to USE_TOOLS.");
 			}
