@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/06/20 09:12:13 obache Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/05 09:21:11 obache Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
+PKGREVISION=	1
 COMMENT=	Set of Ruby language bindings for GNOME2
 CATEGORIES=	meta-pkgs gnome
 
@@ -11,10 +12,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel/ruby-gnome2-gobject-introspection
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-cairo-gobject>=${VERSION}:../../graphics/ruby-gnome2-cairo-gobject
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter>=${VERSION}:../../graphics/ruby-gnome2-clutter
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter-gtk>=${VERSION}:../../graphics/ruby-gnome2-clutter-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdk3>=${VERSION}:../../graphics/ruby-gnome2-gdk3
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-goocanvas>=${VERSION}:../../graphics/ruby-gnome2-goocanvas
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg>=${VERSION}:../../graphics/ruby-gnome2-rsvg
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter-gstreamer>=${VERSION}:../../multimedia/ruby-gnome2-clutter-gstreamer
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gstreamer>=${VERSION}:../../multimedia/ruby-gnome2-gstreamer
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-poppler>=${VERSION}:../../print/ruby-gnome2-poppler
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-webkit-gtk>=${VERSION}:../../www/ruby-gnome2-webkit-gtk
