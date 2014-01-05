@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.106 2014/01/05 12:32:26 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.107 2014/01/05 12:34:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/pkglint to 4.134 [wiz 2014-01-05]
 	Updated wm/icewm to 1.2.38pre2 [ryoon 2014-01-05]
 	Updated wm/icewm-imlib to 1.2.38pre2 [ryoon 2014-01-05]
+	Added wm/icewm13 version 1.3.8 [ryoon 2014-01-05]
