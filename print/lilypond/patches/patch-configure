@@ -1,10 +1,12 @@
-$NetBSD: patch-configure,v 1.1 2012/12/25 15:30:14 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2014/01/05 22:29:47 wiz Exp $
 
 Disable c/c++ version check; it fails e.g. with clang emulating gcc.
+Allow more metapost versions than upstream until pkgsrc contains
+a new enough metapost.
 
---- configure.orig	2012-12-25 15:26:16.000000000 +0000
+--- configure.orig	2013-11-24 12:24:16.000000000 +0000
 +++ configure
-@@ -4485,7 +4485,7 @@ $as_echo_n "checking $r version... " >&6
+@@ -5297,7 +5297,7 @@ $as_echo_n "checking $r version... " >&6
  `
      { $as_echo "$as_me:$LINENO: result: $ver" >&5
  $as_echo "$ver" >&6; }
@@ -13,7 +15,7 @@ Disable c/c++ version check; it fails e.g. with clang emulating gcc.
  
      eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 3.4 (installed: $ver)"\"`\"
  
-@@ -4978,7 +4978,7 @@ $as_echo_n "checking $r version... " >&6
+@@ -5814,7 +5814,7 @@ $as_echo_n "checking $r version... " >&6
  `
      { $as_echo "$as_me:$LINENO: result: $ver" >&5
  $as_echo "$ver" >&6; }
@@ -22,3 +24,18 @@ Disable c/c++ version check; it fails e.g. with clang emulating gcc.
  
      eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 3.4 (installed: $ver)"\"`\"
  
+@@ -8087,11 +8087,11 @@ $as_echo "$ver" >&6; }
+     {printf "%.0f\n", $1*1000000 + $2*1000 + three}'
+ `
+ 	# Avoid buggy metapost versions: 1.600 <= x < 1.803
+-	if test "$num" -ge "1600000" -a "$num" -lt "1803000"; then
++	#if test "$num" -ge "1600000" -a "$num" -lt "1803000"; then
+ 
+-    eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""mpost (due to a bug in metapost, versions 1.600 <= x < 1.803 are not supported; installed: $ver)"\"`\"
++    #eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""mpost (due to a bug in metapost, versions 1.600 <= x < 1.803 are not supported; installed: $ver)"\"`\"
+ 
+-	fi
++	#fi
+     fi
+ 
+     { $as_echo "$as_me:$LINENO: checking for working metafont mode" >&5

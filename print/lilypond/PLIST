@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/01/25 11:32:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/01/05 22:29:47 wiz Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -243,6 +243,7 @@ share/lilypond/${PKGVERSION}/python/rational.py
 share/lilypond/${PKGVERSION}/python/rational.pyc
 share/lilypond/${PKGVERSION}/python/safeeval.py
 share/lilypond/${PKGVERSION}/python/safeeval.pyc
+share/lilypond/${PKGVERSION}/scm/accreg.scm
 share/lilypond/${PKGVERSION}/scm/auto-beam.scm
 share/lilypond/${PKGVERSION}/scm/autochange.scm
 share/lilypond/${PKGVERSION}/scm/backend-library.scm
@@ -321,7 +322,9 @@ share/lilypond/${PKGVERSION}/scm/predefined-fretboards.scm
 share/lilypond/${PKGVERSION}/scm/ps-to-png.scm
 share/lilypond/${PKGVERSION}/scm/safe-lily.scm
 share/lilypond/${PKGVERSION}/scm/safe-utility-defs.scm
+share/lilypond/${PKGVERSION}/scm/scheme-engravers.scm
 share/lilypond/${PKGVERSION}/scm/script.scm
+share/lilypond/${PKGVERSION}/scm/skyline.scm
 share/lilypond/${PKGVERSION}/scm/song-util.scm
 share/lilypond/${PKGVERSION}/scm/song.scm
 share/lilypond/${PKGVERSION}/scm/standalone.scm
@@ -341,6 +344,7 @@ share/lilypond/${PKGVERSION}/vim/indent/lilypond.vim
 share/lilypond/${PKGVERSION}/vim/syntax/lilypond-words
 share/lilypond/${PKGVERSION}/vim/syntax/lilypond-words.vim
 share/lilypond/${PKGVERSION}/vim/syntax/lilypond.vim
+share/locale/ca/LC_MESSAGES/lilypond.mo
 share/locale/cs/LC_MESSAGES/lilypond.mo
 share/locale/da/LC_MESSAGES/lilypond.mo
 share/locale/de/LC_MESSAGES/lilypond.mo
