@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.117 2014/01/05 21:23:07 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.118 2014/01/05 21:33:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -129,3 +129,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cross/avr-libc to 1.8.0nb1 [wiz 2014-01-05]
 	Updated devel/qof to 0.7.5nb15 [wiz 2014-01-05]
 	Updated ham/gnuradio-core-docs to 3.3.0nb19 [wiz 2014-01-05]
+	Updated ham/usrp-docs to 3.3.0nb11 [wiz 2014-01-05]
