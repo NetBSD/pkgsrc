@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2014/01/05 09:15:06 richard Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/05 10:12:31 richard Exp $
 
 DISTNAME=	fltk-1.3.2-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://fltk.org/pub/fltk/${VERS}/
 
@@ -118,6 +118,7 @@ CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
