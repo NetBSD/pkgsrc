@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/01 03:31:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/05 20:46:26 wiz Exp $
 
 DISTNAME=	rt-4.2.1
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -172,5 +172,6 @@ CONF_FILES_PERMS=	share/rt4/etc/RT_SiteConfig.pm.dist \
 post-install:
 	mv ${DESTDIR}${PREFIX}/share/rt4/etc/RT_SiteConfig.pm \
 		${DESTDIR}${PREFIX}/share/rt4/etc/RT_SiteConfig.pm.dist
+	rm ${DESTDIR}${PREFIX}/share/rt4/data/html/Install/Initialize.html.orig
 
 .include "../../mk/bsd.pkg.mk"
