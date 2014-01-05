@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2012/11/21 00:47:52 gdt Exp $
+# $NetBSD: options.mk,v 1.9 2014/01/05 10:57:11 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--with-fltk=${PREFIX}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 CONFIGURE_ENV+=		Xincroot=${X11BASE}/include
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--graphic=none
