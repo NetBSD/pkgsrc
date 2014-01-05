@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.105 2014/01/05 11:26:15 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.106 2014/01/05 12:32:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -116,3 +116,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/suse131_openssl to 13.1nb1 [obache 2014-01-05]
 	Updated emulators/suse131_x11 to 13.1nb2 [obache 2014-01-05]
 	Updated pkgtools/pkglint to 4.134 [wiz 2014-01-05]
+	Updated wm/icewm to 1.2.38pre2 [ryoon 2014-01-05]
+	Updated wm/icewm-imlib to 1.2.38pre2 [ryoon 2014-01-05]
