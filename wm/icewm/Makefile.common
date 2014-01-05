@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.66 2012/10/08 12:42:20 asau Exp $
+# $NetBSD: Makefile.common,v 1.67 2014/01/05 12:29:33 ryoon Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
 
-DISTNAME=		icewm-1.2.35
-PKGREVISION=		1
+DISTNAME=		icewm-1.2.38pre2
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
@@ -77,5 +76,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DESTDIR}${HTMLDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
