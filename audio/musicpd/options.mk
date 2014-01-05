@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.19 2012/06/12 15:45:54 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2014/01/05 23:18:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	audiofile bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libwildmidi mikmod modplug musepack musicpd-lastfm ogg shout sqlite3 wavpack zziplib
+PKG_SUPPORTED_OPTIONS=	audiofile bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libwildmidi mikmod modplug musepack musicpd-lastfm ogg pulseaudio shout sqlite3 wavpack zziplib
 PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 inet6 libao musepack ogg
 
 PKG_OPTIONS_LEGACY_OPTS=	libmikmod:mikmod
@@ -150,6 +150,13 @@ CONFIGURE_ARGS+=	--disable-lastfm
 CONFIGURE_ARGS+=	--enable-vorbis
 .else
 CONFIGURE_ARGS+=	--disable-vorbis
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.  include "../../audio/pulseaudio/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-pulse
+.else
+CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mshout)
