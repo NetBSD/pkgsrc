@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.98 2014/01/05 04:10:20 dholland Exp $
+$NetBSD: CHANGES-2014,v 1.99 2014/01/05 09:04:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -109,3 +109,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/mdoclint to 1.26 [wiz 2014-01-04]
 	Updated comms/py-serial to 2.6nb1 [wiz 2014-01-04]
 	Updated lang/onyx to 5.1.2nb2 [dholland 2014-01-05]
+	Added graphics/ruby-gnome2-clutter version 2.0.2 [obache 2014-01-05]
