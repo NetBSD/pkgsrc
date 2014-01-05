@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.2 2014/01/02 22:29:50 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.3 2014/01/05 21:05:24 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -13,3 +13,11 @@ Pullup ticket #4281 - requested by obache
 graphics/cogl: bug fix patch
 Pullup ticket #4282 - requested by obache
 emulators/suse131_x11: bug fix update
+Pullup ticket #4283 - requested by obache
+emulators/suse131_openssl: security update
+Pullup ticket #4284 - requested by obache
+emulators/suse131_x11: security update
+Pullup ticket #4285 - requested by htodd
+mail/spamprobe: build fix
+Pullup ticket #4286 - requested by bsiegert
+lang/go: functionality update
