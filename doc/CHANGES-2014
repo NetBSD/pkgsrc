@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.122 2014/01/05 22:29:57 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.123 2014/01/05 23:18:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated wm/sawfish to 1.10nb1 [wiz 2014-01-05]
 	Updated sysutils/cdrtools to 3.01alpha21 [wiz 2014-01-05]
 	Updated print/lilypond to 2.18.0 [wiz 2014-01-05]
+	Updated audio/musicpd to 0.17.5nb2 [wiz 2014-01-05]
