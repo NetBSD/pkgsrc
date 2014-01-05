@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1010 2014/01/03 03:35:24 rodent Exp $
+# $NetBSD: Makefile,v 1.1011 2014/01/05 12:48:38 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -624,6 +624,7 @@ SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-tornado
+SUBDIR+=	py-uliweb
 SUBDIR+=	py-uwsgi
 SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
