@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/23 15:01:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/05 17:47:10 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -41,6 +41,9 @@ ${PYSITELIB}/requests/packages/__init__.pyo
 ${PYSITELIB}/requests/packages/charade/__init__.py
 ${PYSITELIB}/requests/packages/charade/__init__.pyc
 ${PYSITELIB}/requests/packages/charade/__init__.pyo
+${PYSITELIB}/requests/packages/charade/__main__.py
+${PYSITELIB}/requests/packages/charade/__main__.pyc
+${PYSITELIB}/requests/packages/charade/__main__.pyo
 ${PYSITELIB}/requests/packages/charade/big5freq.py
 ${PYSITELIB}/requests/packages/charade/big5freq.pyc
 ${PYSITELIB}/requests/packages/charade/big5freq.pyo
@@ -155,6 +158,9 @@ ${PYSITELIB}/requests/packages/urllib3/__init__.pyo
 ${PYSITELIB}/requests/packages/urllib3/_collections.py
 ${PYSITELIB}/requests/packages/urllib3/_collections.pyc
 ${PYSITELIB}/requests/packages/urllib3/_collections.pyo
+${PYSITELIB}/requests/packages/urllib3/connection.py
+${PYSITELIB}/requests/packages/urllib3/connection.pyc
+${PYSITELIB}/requests/packages/urllib3/connection.pyo
 ${PYSITELIB}/requests/packages/urllib3/connectionpool.py
 ${PYSITELIB}/requests/packages/urllib3/connectionpool.pyc
 ${PYSITELIB}/requests/packages/urllib3/connectionpool.pyo
@@ -170,6 +176,9 @@ ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.pyo
 ${PYSITELIB}/requests/packages/urllib3/exceptions.py
 ${PYSITELIB}/requests/packages/urllib3/exceptions.pyc
 ${PYSITELIB}/requests/packages/urllib3/exceptions.pyo
+${PYSITELIB}/requests/packages/urllib3/fields.py
+${PYSITELIB}/requests/packages/urllib3/fields.pyc
+${PYSITELIB}/requests/packages/urllib3/fields.pyo
 ${PYSITELIB}/requests/packages/urllib3/filepost.py
 ${PYSITELIB}/requests/packages/urllib3/filepost.pyc
 ${PYSITELIB}/requests/packages/urllib3/filepost.pyo
@@ -185,6 +194,9 @@ ${PYSITELIB}/requests/packages/urllib3/packages/six.pyo
 ${PYSITELIB}/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py
 ${PYSITELIB}/requests/packages/urllib3/packages/ssl_match_hostname/__init__.pyc
 ${PYSITELIB}/requests/packages/urllib3/packages/ssl_match_hostname/__init__.pyo
+${PYSITELIB}/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py
+${PYSITELIB}/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.pyc
+${PYSITELIB}/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.pyo
 ${PYSITELIB}/requests/packages/urllib3/poolmanager.py
 ${PYSITELIB}/requests/packages/urllib3/poolmanager.pyc
 ${PYSITELIB}/requests/packages/urllib3/poolmanager.pyo
