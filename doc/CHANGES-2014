@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.120 2014/01/05 21:47:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.121 2014/01/05 22:03:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -132,3 +132,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated ham/usrp-docs to 3.3.0nb11 [wiz 2014-01-05]
 	Updated security/oath-toolkit to 2.4.0nb2 [wiz 2014-01-05]
 	Updated wm/sawfish to 1.10nb1 [wiz 2014-01-05]
+	Updated sysutils/cdrtools to 3.01alpha21 [wiz 2014-01-05]
