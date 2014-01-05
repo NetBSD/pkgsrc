@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/10/02 20:11:46 asau Exp $
+# $NetBSD: Makefile,v 1.27 2014/01/05 04:10:06 dholland Exp $
 
 DISTNAME=	onyx-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.canonware.com/download/onyx/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,6 +32,7 @@ post-install:
 	strip ${DESTDIR}${PREFIX}/bin/onyx
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if ${PTHREAD_TYPE} == "pth"
