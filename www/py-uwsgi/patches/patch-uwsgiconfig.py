@@ -1,5 +1,5 @@
---- uwsgiconfig.py.orig	2013-08-23 12:51:18.000000000 +0000
-+++ uwsgiconfig.py
+$NetBSD: patch-uwsgiconfig.py,v 1.7 2014/01/05 03:46:11 rodent Exp $
+
 --- uwsgiconfig.py.orig	2013-08-23 12:51:18.000000000 +0000
 +++ uwsgiconfig.py
 @@ -635,6 +635,8 @@ class uConf(object):
