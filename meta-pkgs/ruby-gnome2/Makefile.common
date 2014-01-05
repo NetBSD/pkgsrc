@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2013/08/21 01:47:54 obache Exp $
+# $NetBSD: Makefile.common,v 1.38 2014/01/05 09:21:11 obache Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -6,10 +6,13 @@
 # used by devel/ruby-gnome2-gobject-introspection/Makefile
 # used by devel/ruby-gnome2-pango/Makefile
 # used by graphics/ruby-gnome2-cairo-gobject/Makefile
+# used by graphics/ruby-gnome2-clutter/Makefile
+# used by graphics/ruby-gnome2-clutter-gtk/Makefile
 # used by graphics/ruby-gnome2-gdk3/Makefile
 # used by graphics/ruby-gnome2-gdkpixbuf/Makefile
 # used by graphics/ruby-gnome2-goocanvas/Makefile
 # used by graphics/ruby-gnome2-rsvg/Makefile
+# used by multimedia/ruby-gnome2-clutter-gstreamer/Makefile
 # used by multimedia/ruby-gnome2-gstreamer/Makefile
 # used by print/ruby-gnome2-poppler/Makefile
 # used by www/ruby-gnome2-webkit-gtk/Makefile
