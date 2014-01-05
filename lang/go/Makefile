@@ -1,15 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2013/12/15 21:50:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2014/01/05 21:04:20 spz Exp $
 
 DISTNAME=	go1.2.src
 PKGNAME=	go-1.2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://go.googlecode.com/files/
+PATCH_SITES=	https://codereview.appspot.com/download/
 FETCH_USING?=	curl
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	http://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
+
+# Fixes Unix domain socket handling under NetBSD/current
+PATCHFILES=	issue46420044_60001.diff
+PATCH_DIST_STRIP=-p1
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
