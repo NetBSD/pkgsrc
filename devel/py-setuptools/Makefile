@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2013/11/04 21:33:08 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2014/01/06 14:42:34 wiz Exp $
 
-EGG_VERSION=		1.3
+EGG_VERSION=		2.0.2
 DISTNAME=		setuptools-${EGG_VERSION}
 EGG_NAME=		setuptools-${EGG_VERSION}
 PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
