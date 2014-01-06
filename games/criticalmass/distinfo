@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2013/06/16 20:40:40 joerg Exp $
+$NetBSD: distinfo,v 1.12 2014/01/06 17:08:20 dholland Exp $
 
 SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
@@ -26,7 +26,7 @@ SHA1 (patch-tinyxml_tinyxmlparser.cpp) = 236ff1cbd6fe83045df28022a6b02f9f65da4ee
 SHA1 (patch-tools_Packer.cpp) = 06f2ce956fd627ef2293c3650238996b3f800d4c
 SHA1 (patch-utils_Config.cpp) = 9f146ad01fbea62270a20c5f9ed5a1e70a6c60ce
 SHA1 (patch-utils_Config.hpp) = c2bdaceef30711421c0c77ad680d01cb062f16a9
-SHA1 (patch-utils_FindHash.hpp) = b98aac8e4008adeb51fa9c0d3a08d10b44633b4f
+SHA1 (patch-utils_FindHash.hpp) = 0164c7b802be3fa50dcfcd0545a8d56743762d1e
 SHA1 (patch-utils_ResourceCache.hpp) = e127f87ae94e6f9260f130bb22cdb92a8650d496
 SHA1 (patch-utils_ResourceManager.cpp) = 3234b06c4b5a448aba2e3902deaba501033af88f
 SHA1 (patch-utils_ResourceManager.hpp) = 8f29cfb3bf2aa1844f5987abddf854594b229f5c
