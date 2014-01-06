@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2013/11/13 19:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2014/01/06 14:36:57 wiz Exp $
 
-DISTNAME=	pytz-2013.8
+DISTNAME=	pytz-2013.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pytz/
