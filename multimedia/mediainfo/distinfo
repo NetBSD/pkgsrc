@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2013/12/31 23:19:46 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2014/01/06 22:14:29 joerg Exp $
 
 SHA1 (mediainfo_0.7.65_AllInclusive.7z) = 80d8b289e6ef9e11a68b960ccd709032452d9e1c
 RMD160 (mediainfo_0.7.65_AllInclusive.7z) = 35a6ad9ed28e15688597465640a427be4ea70651
 Size (mediainfo_0.7.65_AllInclusive.7z) = 2286326 bytes
 SHA1 (patch-MediaInfoLib_Project_GNU_Library_Makefile.am) = 358717fc6b0ee2f377f1c25db3abd04b3780864c
+SHA1 (patch-MediaInfoLib_Source_MediaInfo_Text_File__Ttml.h) = 32db4507a8adde2ad7cfe7acfb764bf1b613f8bf
