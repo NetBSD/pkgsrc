@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/11/03 15:59:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/01/06 14:42:34 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/_markerlib/__init__.py
 ${PYSITELIB}/_markerlib/__init__.pyc
@@ -22,21 +22,6 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
-${PYSITELIB}/setuptools/_backport/__init__.py
-${PYSITELIB}/setuptools/_backport/__init__.pyc
-${PYSITELIB}/setuptools/_backport/__init__.pyo
-${PYSITELIB}/setuptools/_backport/hashlib/__init__.py
-${PYSITELIB}/setuptools/_backport/hashlib/__init__.pyc
-${PYSITELIB}/setuptools/_backport/hashlib/__init__.pyo
-${PYSITELIB}/setuptools/_backport/hashlib/_sha.py
-${PYSITELIB}/setuptools/_backport/hashlib/_sha.pyc
-${PYSITELIB}/setuptools/_backport/hashlib/_sha.pyo
-${PYSITELIB}/setuptools/_backport/hashlib/_sha256.py
-${PYSITELIB}/setuptools/_backport/hashlib/_sha256.pyc
-${PYSITELIB}/setuptools/_backport/hashlib/_sha256.pyo
-${PYSITELIB}/setuptools/_backport/hashlib/_sha512.py
-${PYSITELIB}/setuptools/_backport/hashlib/_sha512.pyc
-${PYSITELIB}/setuptools/_backport/hashlib/_sha512.pyo
 ${PYSITELIB}/setuptools/archive_util.py
 ${PYSITELIB}/setuptools/archive_util.pyc
 ${PYSITELIB}/setuptools/archive_util.pyo
@@ -100,9 +85,6 @@ ${PYSITELIB}/setuptools/command/setopt.pyo
 ${PYSITELIB}/setuptools/command/test.py
 ${PYSITELIB}/setuptools/command/test.pyc
 ${PYSITELIB}/setuptools/command/test.pyo
-${PYSITELIB}/setuptools/command/upload.py
-${PYSITELIB}/setuptools/command/upload.pyc
-${PYSITELIB}/setuptools/command/upload.pyo
 ${PYSITELIB}/setuptools/command/upload_docs.py
 ${PYSITELIB}/setuptools/command/upload_docs.pyc
 ${PYSITELIB}/setuptools/command/upload_docs.pyo
@@ -118,18 +100,21 @@ ${PYSITELIB}/setuptools/dist.pyo
 ${PYSITELIB}/setuptools/extension.py
 ${PYSITELIB}/setuptools/extension.pyc
 ${PYSITELIB}/setuptools/extension.pyo
+${PYSITELIB}/setuptools/lib2to3_ex.py
+${PYSITELIB}/setuptools/lib2to3_ex.pyc
+${PYSITELIB}/setuptools/lib2to3_ex.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
-${PYSITELIB}/setuptools/py24compat.py
-${PYSITELIB}/setuptools/py24compat.pyc
-${PYSITELIB}/setuptools/py24compat.pyo
 ${PYSITELIB}/setuptools/py26compat.py
 ${PYSITELIB}/setuptools/py26compat.pyc
 ${PYSITELIB}/setuptools/py26compat.pyo
 ${PYSITELIB}/setuptools/py27compat.py
 ${PYSITELIB}/setuptools/py27compat.pyc
 ${PYSITELIB}/setuptools/py27compat.pyo
+${PYSITELIB}/setuptools/py31compat.py
+${PYSITELIB}/setuptools/py31compat.pyc
+${PYSITELIB}/setuptools/py31compat.pyo
 ${PYSITELIB}/setuptools/sandbox.py
 ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
