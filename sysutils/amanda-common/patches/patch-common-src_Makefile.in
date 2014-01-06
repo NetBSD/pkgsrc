@@ -1,0 +1,12 @@
+$NetBSD: patch-common-src_Makefile.in,v 1.1 2014/01/06 22:15:06 joerg Exp $
+
+--- common-src/Makefile.in.orig	2014-01-05 23:13:17.000000000 +0000
++++ common-src/Makefile.in
+@@ -1704,6 +1704,7 @@ genversion_SOURCES = genversion.c svn-in
+ genversion_LDADD = $(libamanda_la_LIBADD)	\
+ 	../gnulib/libgnu.la
+ 
++genversion.la: genversion.h
+ 
+ # these are used for testing only:
+ TEST_PROGS = file bsdsecurity
