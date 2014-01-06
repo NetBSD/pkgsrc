@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2014/01/01 11:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2014/01/06 22:12:22 joerg Exp $
 
 DISTNAME=	anjuta-3.10.0
 PKGREVISION=	5
@@ -63,7 +63,9 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD" && !exists(/var/shm)
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
+.endif
 
 .include "../../databases/libgda/buildlink3.mk"
 #.include "../../devel/devhelp/buildlink3.mk"
