@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2013/10/10 14:42:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/06 04:44:16 rodent Exp $
 
-DISTNAME=	yabause-0.9.12
-PKGREVISION=	6
+DISTNAME=	yabause-0.9.13
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yabause/}
 
@@ -18,8 +17,6 @@ CONFIGURE_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
 
 .include "options.mk"
 
-.include "../../graphics/glut/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
