@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.125 2014/01/06 04:45:40 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.126 2014/01/06 14:32:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated audio/musicpd to 0.17.5nb2 [wiz 2014-01-05]
 	Updated mail/alpine to 2.11 [htodd 2014-01-06]
 	Updated emulators/yabause to 0.9.13 [rodent 2014-01-06]
+	Updated print/poppler to 0.24.5 [wiz 2014-01-06]
