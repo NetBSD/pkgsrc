@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/02/12 09:50:56 wiz Exp $
+$NetBSD: distinfo,v 1.7 2014/01/06 04:44:16 rodent Exp $
 
-SHA1 (yabause-0.9.12.tar.gz) = 72739cb3b652bbca68ca6309bcadf7e6989e587a
-RMD160 (yabause-0.9.12.tar.gz) = 5fc101240f45f8ad084ea9ed63a3a0169612f14c
-Size (yabause-0.9.12.tar.gz) = 2199145 bytes
+SHA1 (yabause-0.9.13.tar.gz) = ecba2399a1cae8b641b726a828c393655975fcdf
+RMD160 (yabause-0.9.13.tar.gz) = 73b3fa5a8550012aed7abae3c1ee7825fd7ea23e
+Size (yabause-0.9.13.tar.gz) = 1635104 bytes
