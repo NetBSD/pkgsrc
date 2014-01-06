@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2014/01/05 21:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2014/01/06 09:19:25 wiz Exp $
 
 DISTNAME=	kmymoney2-1.0.5
 PKGREVISION=	25
@@ -11,7 +11,7 @@ HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for KDE
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake msgfmt perl pkg-config bash
+USE_TOOLS+=		gmake msgfmt perl pkg-config bash gsed
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -45,5 +45,4 @@ REPLACE_PERL+=	admin/fixuifiles
 BUILDLINK_ABI_DEPENDS.qt3-libs+=	qt3-libs>=3.3.8nb9
 .endif
 .include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
