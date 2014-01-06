@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/10/10 14:42:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/06 19:49:19 dholland Exp $
 #
 
 DISTNAME=	Todo-0.1.2
@@ -13,7 +13,7 @@ COMMENT=	DeforaOS desktop todo list
 
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config xgettext
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
