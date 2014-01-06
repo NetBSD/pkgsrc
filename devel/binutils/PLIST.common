@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.21 2013/04/12 08:27:15 mef Exp $
+@comment $NetBSD: PLIST.common,v 1.22 2014/01/06 14:58:41 wiz Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -71,7 +71,6 @@ info/binutils.info
 ${PLIST.gprof}info/gprof.info
 info/ld.info
 lib/libbfd.la
-lib/libiberty.a
 lib/libopcodes.la
 man/man1/gaddr2line.1
 man/man1/gar.1
@@ -124,6 +123,7 @@ share/locale/fr/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/ga/LC_MESSAGES/gprof.mo
 share/locale/ga/LC_MESSAGES/ld.mo
 share/locale/ga/LC_MESSAGES/opcodes.mo
+share/locale/hr/LC_MESSAGES/binutils.mo
 ${PLIST.gprof}share/locale/id/LC_MESSAGES/gprof.mo
 share/locale/id/LC_MESSAGES/bfd.mo
 share/locale/id/LC_MESSAGES/binutils.mo
