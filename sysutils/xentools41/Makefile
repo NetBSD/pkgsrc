@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/11/29 19:31:47 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2014/01/06 22:15:31 joerg Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -173,7 +173,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKDIR}/xm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" && !exists(/var/shm)
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
