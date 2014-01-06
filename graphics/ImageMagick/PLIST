@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2013/08/27 08:13:57 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.79 2014/01/06 19:48:15 wiz Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -1172,7 +1172,6 @@ share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/incantation.msl
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/locale.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/log.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/magic.xml
-share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/mgk.c
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/mime.xml
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/piechart.mvg
 share/doc/ImageMagick-${IM_MAJOR_LIB_VER}/www/source/piechart.svg
