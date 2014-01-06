@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.123 2014/01/05 23:18:58 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.124 2014/01/06 04:10:37 htodd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -135,3 +135,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/cdrtools to 3.01alpha21 [wiz 2014-01-05]
 	Updated print/lilypond to 2.18.0 [wiz 2014-01-05]
 	Updated audio/musicpd to 0.17.5nb2 [wiz 2014-01-05]
+	Updated mail/alpine to 2.11 [htodd 2014-01-06]
