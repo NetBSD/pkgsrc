@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.127 2014/01/06 14:37:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.128 2014/01/06 14:42:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -139,3 +139,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/yabause to 0.9.13 [rodent 2014-01-06]
 	Updated print/poppler to 0.24.5 [wiz 2014-01-06]
 	Updated time/py-pytz to 2013.9 [wiz 2014-01-06]
+	Updated devel/py-setuptools to 2.0.2 [wiz 2014-01-06]
