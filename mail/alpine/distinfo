@@ -1,17 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/10/10 19:45:49 markd Exp $
+$NetBSD: distinfo,v 1.19 2014/01/06 03:52:38 htodd Exp $
 
-SHA1 (alpine-2.00a/alpine-2.00.tar.bz2) = dcbd3c5419954f484ccf706feaba31ce48cdebc4
-RMD160 (alpine-2.00a/alpine-2.00.tar.bz2) = 9e67704b23b3973d8b878e65ad9e6f5026c10d13
-Size (alpine-2.00a/alpine-2.00.tar.bz2) = 5222673 bytes
-SHA1 (alpine-2.00a/fancy.patch.gz) = 2622d3e86a76908bf4d1ca63501c6dac75563348
-RMD160 (alpine-2.00a/fancy.patch.gz) = b877b97fd88fa73a8428d288f929579560faec4e
-Size (alpine-2.00a/fancy.patch.gz) = 24556 bytes
-SHA1 (alpine-2.00a/maildir.patch.gz) = 86b66c2f92e49b2edb11fa944ed9bc1089176613
-RMD160 (alpine-2.00a/maildir.patch.gz) = ed700c492479260964f804a08e6b86863cd37e52
-Size (alpine-2.00a/maildir.patch.gz) = 32216 bytes
-SHA1 (alpine-2.00a/searchheader.patch.gz) = 1c8dfaefa9a9ed502da454b5d1334c94bc1873c4
-RMD160 (alpine-2.00a/searchheader.patch.gz) = cc1b2c3cf4cbceaf62e1c0378f5edf6bee619581
-Size (alpine-2.00a/searchheader.patch.gz) = 1708 bytes
+SHA1 (alpine-2.11.tar.xz) = 656556f5d2e5ec7e3680d1760cd02aa3a0072c46
+RMD160 (alpine-2.11.tar.xz) = ea4b2d87500d1aa1b424033ec3263e3cf3c53814
+Size (alpine-2.11.tar.xz) = 4403188 bytes
 SHA1 (patch-aa) = c306613a297d61591d577b6968a31fc85b03f852
 SHA1 (patch-ab) = f0983d8c0123b06a2970eb2736b04afad1502450
 SHA1 (patch-imap_src_c-client_auth_gss.c) = 622b18f03074f87036f5469323125b4c855d9ce5

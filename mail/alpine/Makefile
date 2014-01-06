@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.32 2013/02/06 23:22:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/06 03:52:38 htodd Exp $
 #
 
-DISTNAME=	alpine-2.00
-PKGREVISION=	9
+DISTNAME=	alpine-2.11
+PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
-DIST_SUBDIR=	alpine-2.00a
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://patches.freeiz.com/alpine/release/src/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.washington.edu/alpine/
+HOMEPAGE=	http://patches.freeiz.com/alpine/release/
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	apache-2.0
-
-.include "options.mk"
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-ssl-dir=${SSLBASE}
@@ -29,6 +26,8 @@ USE_LIBTOOL=	yes
 
 MAKE_JOBS_SAFE=         no
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M4.99.*) && empty(OS_VERSION:M[5-9]*)
 CONFIGURE_ARGS+= --without-pthread
