@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.129 2014/01/06 14:58:49 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.130 2014/01/06 17:47:17 tez Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -141,3 +141,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/py-pytz to 2013.9 [wiz 2014-01-06]
 	Updated devel/py-setuptools to 2.0.2 [wiz 2014-01-06]
 	Updated devel/binutils to 2.24 [wiz 2014-01-06]
+	Updated textproc/mdocml to 1.12.3nb1 [tez 2014-01-06]
