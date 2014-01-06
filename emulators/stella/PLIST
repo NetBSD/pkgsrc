@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/09/02 18:35:19 dholland Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/01/06 23:42:38 dholland Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -14,6 +14,8 @@ share/doc/stella/graphics/chucky_cheese.png
 share/doc/stella/graphics/circuit.png
 share/doc/stella/graphics/commandmenu.png
 share/doc/stella/graphics/console.png
+share/doc/stella/graphics/debugger_bankcomplex.png
+share/doc/stella/graphics/debugger_banksimple.png
 share/doc/stella/graphics/debugger_bpstatus.png
 share/doc/stella/graphics/debugger_cpuregs.png
 share/doc/stella/graphics/debugger_dataops.png
@@ -37,6 +39,7 @@ share/doc/stella/graphics/jr_pacman.png
 share/doc/stella/graphics/launcher.png
 share/doc/stella/graphics/launcher_filter.png
 share/doc/stella/graphics/launcher_options_files.png
+share/doc/stella/graphics/launcher_options_snapshots.png
 share/doc/stella/graphics/launcher_override.png
 share/doc/stella/graphics/logs.png
 share/doc/stella/graphics/options.png
