@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/07 09:01:46 minskim Exp $
+share/texmf-dist/doc/latex/xifthen/README
+share/texmf-dist/doc/latex/xifthen/xifthen.pdf
+share/texmf-dist/doc/latex/xifthen/xifthen.tex
