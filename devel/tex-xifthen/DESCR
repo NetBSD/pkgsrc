@@ -1,0 +1,7 @@
+This package extends the ifthen package by implementing new
+commands to go within the first argument of \ifthenelse: to
+test whether a string is void or not, if a command is defined
+or equivalent to another. The package also enables use of
+complex expressions as introduced by the package calc, together
+with the ability of defining new commands to handle complex
+tests. The package requires e-TeX features.
