@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2014/01/02 09:02:22 mrg Exp $
+# $NetBSD: Makefile,v 1.79 2014/01/07 19:35:28 jperkin Exp $
 #
 
 DISTNAME=	bozohttpd-20140102
@@ -26,6 +26,8 @@ SUBST_FILES.paths=	bozohttpd.8
 SUBST_SED.paths=	-e "s|/usr/pkg/|"${PREFIX:Q}"/|g"
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bozohttpd ${DESTDIR}${PREFIX}/libexec
