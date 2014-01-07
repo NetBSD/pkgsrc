@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.138 2014/01/07 14:09:05 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.139 2014/01/07 15:15:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated cad/verilog to 0.9.7 [mef 2014-01-07]
 	Updated devel/p5-File-ConfigDir to 0.011 [wiz 2014-01-07]
 	Updated devel/p5-MooX-File-ConfigDir to 0.003 [wiz 2014-01-07]
+	Updated graphics/graphviz to 2.34.0nb4 [wiz 2014-01-07]
