@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/04/13 14:19:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/01/07 09:43:54 mef Exp $
 bin/iverilog
 bin/iverilog-vpi
 bin/vvp
@@ -35,3 +35,5 @@ lib/libvpi.a
 man/man1/iverilog-vpi.1
 man/man1/iverilog.1
 man/man1/vvp.1
+share/ivl/QUICK_START.txt
+share/ivl/README.txt

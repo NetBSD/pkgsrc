@@ -1,0 +1,29 @@
+$NetBSD: patch-vpi_Makefile,v 1.1 2014/01/07 09:43:54 mef Exp $
+
+Fix DESTDIR (before SUBST in Makefile is executed)
+
+--- vpi/Makefile.in~	2013-08-20 04:10:31.000000000 +0900
++++ vpi/Makefile.in	2013-12-20 21:58:51.000000000 +0900
+@@ -133,19 +133,19 @@ $(vpidir)/system.vpi: ./system.vpi
+ 	$(INSTALL_PROGRAM) ./system.vpi "$(DESTDIR)$(vpidir)/system.vpi"
+ 
+ $(vpidir)/system.sft: system.sft
+-	$(INSTALL_DATA) $< "$(DESTDIR)$@"
++	$(INSTALL_DATA) $< "$@"
+ 
+ $(vpidir)/va_math.vpi: ./va_math.vpi
+ 	$(INSTALL_PROGRAM) ./va_math.vpi "$(DESTDIR)$(vpidir)/va_math.vpi"
+ 
+ $(vpidir)/va_math.sft: va_math.sft
+-	$(INSTALL_DATA) $< "$(DESTDIR)$@"
++	$(INSTALL_DATA) $< "$@"
+ 
+ $(vpidir)/v2005_math.vpi: ./v2005_math.vpi
+ 	$(INSTALL_PROGRAM) ./v2005_math.vpi "$(DESTDIR)$(vpidir)/v2005_math.vpi"
+ 
+ $(vpidir)/v2005_math.sft: v2005_math.sft
+-	$(INSTALL_DATA) $< "$(DESTDIR)$@"
++	$(INSTALL_DATA) $< "$@"
+ 
+ installdirs: $(srcdir)/../mkinstalldirs
+ 	$(srcdir)/../mkinstalldirs "$(DESTDIR)$(libdir)" "$(DESTDIR)$(vpidir)"
