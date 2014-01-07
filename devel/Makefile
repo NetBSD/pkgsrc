@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1832 2014/01/04 09:31:47 wen Exp $
+# $NetBSD: Makefile,v 1.1833 2014/01/07 09:03:37 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1713,6 +1713,8 @@ SUBDIR+=	tex-multido
 SUBDIR+=	tex-multido-doc
 SUBDIR+=	tex-pst-uml
 SUBDIR+=	tex-pst-uml-doc
+SUBDIR+=	tex-xifthen
+SUBDIR+=	tex-xifthen-doc
 SUBDIR+=	tig
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
