@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/10/21 17:49:37 sno Exp $
+$NetBSD: distinfo,v 1.4 2014/01/07 14:04:42 wiz Exp $
 
-SHA1 (File-ConfigDir-0.008.tar.gz) = 63bc8b9eadd8fb8e96d8311b8c63b3d3257646f2
-RMD160 (File-ConfigDir-0.008.tar.gz) = 46e994bda4bea32f0a2799ad1f66be65925f2ecb
-Size (File-ConfigDir-0.008.tar.gz) = 8907 bytes
+SHA1 (File-ConfigDir-0.011.tar.gz) = a85a712f67f89eaad2680fb2e7e613633beeab89
+RMD160 (File-ConfigDir-0.011.tar.gz) = 1c953f1189ca0424cddbb6bedc355e1fb27f3122
+Size (File-ConfigDir-0.011.tar.gz) = 8981 bytes
