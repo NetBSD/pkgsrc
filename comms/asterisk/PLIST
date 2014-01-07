@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/07/21 06:55:53 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/07 11:07:03 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -2305,6 +2305,8 @@ libexec/agi-bin/eagi-sphinx-test
 libexec/agi-bin/eagi-test
 libexec/agi-bin/jukebox.agi
 ${PLIST.webvmail}libexec/cgi-bin/vmail
+man/man8/astdb2bdb.8
+man/man8/astdb2sqlite3.8
 man/man8/asterisk.8
 man/man8/astgenkey.8
 man/man8/autosupport.8
