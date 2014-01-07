@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.36 2014/01/05 06:28:32 ryoon Exp $
+$NetBSD: distinfo,v 1.37 2014/01/07 07:27:39 abs Exp $
 
+SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
+RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
+Size (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
 SHA1 (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = d9e3e83dd9664cfe1dcd4841c082db3f559af922
 RMD160 (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = a23e122b76b3dfed5be7bef3388041649df0b346
 Size (openjdk7/apache-ant-1.8.4-bin.tar.bz2) = 4257152 bytes
