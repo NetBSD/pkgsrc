@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.3 2013/12/31 16:46:56 christos Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.4 2014/01/07 18:25:17 jperkin Exp $
 bin/sun7-java
 bin/sun7-javaws
 bin/sun7-keytool
@@ -95,6 +95,7 @@ java/sun-7/lib/content-types.properties.default
 java/sun-7/lib/currency.data
 java/sun-7/lib/deploy.jar
 java/sun-7/lib/deploy/MixedCodeMainDialog.ui
+java/sun-7/lib/deploy/MixedCodeMainDialogJs.ui
 java/sun-7/lib/deploy/cautionshield.icns
 java/sun-7/lib/deploy/ffjcext.zip
 java/sun-7/lib/deploy/java-icon.ico
@@ -229,7 +230,6 @@ java/sun-7/lib/i386/libnet.so
 java/sun-7/lib/i386/libnio.so
 java/sun-7/lib/i386/libnpjp2.so
 java/sun-7/lib/i386/libnpt.so
-java/sun-7/lib/i386/librmi.so
 java/sun-7/lib/i386/libsctp.so
 java/sun-7/lib/i386/libsplashscreen.so
 java/sun-7/lib/i386/libsunec.so
@@ -261,6 +261,8 @@ java/sun-7/lib/images/icons/sun-java_LowContrast.png
 java/sun-7/lib/javaws.jar
 java/sun-7/lib/jce.jar
 java/sun-7/lib/jfr.jar
+java/sun-7/lib/jfr/default.jfc
+java/sun-7/lib/jfr/profile.jfc
 java/sun-7/lib/jsse.jar
 java/sun-7/lib/jvm.hprof.txt
 java/sun-7/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
