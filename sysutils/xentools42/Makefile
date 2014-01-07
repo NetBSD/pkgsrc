@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/08 19:17:56 riz Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/07 12:59:35 prlw1 Exp $
 #
 
 VERSION=	4.2.3
@@ -230,7 +230,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xend-config.sxp.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" && !exists(/var/shm)
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
