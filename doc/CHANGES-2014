@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.135 2014/01/07 09:03:37 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.136 2014/01/07 09:46:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -149,3 +149,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-mdframed-doc version 1.9b [minskim 2014-01-07]
 	Added devel/tex-xifthen version 1.3 [minskim 2014-01-07]
 	Added devel/tex-xifthen-doc version 1.3 [minskim 2014-01-07]
+	Updated cad/verilog to 0.9.7 [mef 2014-01-07]
