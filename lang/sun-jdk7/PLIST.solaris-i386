@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.2 2013/09/09 08:38:06 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.3 2014/01/07 19:18:46 jperkin Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -121,6 +121,7 @@ java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-text.xml
 java/sun-7/lib/visualvm/platform/config/ModuleAutoDeps/org-openide-util.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-api-annotations-common.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-api-progress.xml
+java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-api-search.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-api-visual.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-core-execution.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-core-io-ui.xml
@@ -145,6 +146,7 @@ java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-options-key
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-print.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-progress-ui.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-queries.xml
+java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-sampler.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-sendopts.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-settings.xml
 java/sun-7/lib/visualvm/platform/config/Modules/org-netbeans-modules-spi-actions.xml
@@ -193,6 +195,8 @@ java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-annotations-com
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-annotations-common_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-progress_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-progress_zh_CN.jar
+java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-search_ja.jar
+java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-search_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-visual_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-api-visual_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-core-execution_ja.jar
@@ -241,6 +245,8 @@ java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-progress-ui
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-progress-ui_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-queries_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-queries_zh_CN.jar
+java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-sampler_ja.jar
+java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-sampler_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-sendopts_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-sendopts_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-netbeans-modules-settings_ja.jar
@@ -283,6 +289,7 @@ java/sun-7/lib/visualvm/platform/modules/locale/org-openide-windows_ja.jar
 java/sun-7/lib/visualvm/platform/modules/locale/org-openide-windows_zh_CN.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-api-annotations-common.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-api-progress.jar
+java/sun-7/lib/visualvm/platform/modules/org-netbeans-api-search.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-api-visual.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-core-execution.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-core-io-ui.jar
@@ -307,6 +314,7 @@ java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-options-keymap.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-print.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-progress-ui.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-queries.jar
+java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-sampler.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-sendopts.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-settings.jar
 java/sun-7/lib/visualvm/platform/modules/org-netbeans-modules-spi-actions.jar
@@ -329,6 +337,7 @@ java/sun-7/lib/visualvm/platform/modules/org-openide-util-enumerations.jar
 java/sun-7/lib/visualvm/platform/modules/org-openide-windows.jar
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-api-annotations-common.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-api-progress.xml
+java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-api-search.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-api-visual.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-bootstrap.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-core-execution.xml
@@ -355,6 +364,7 @@ java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-options-ke
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-print.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-progress-ui.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-queries.xml
+java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-sampler.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-sendopts.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-settings.xml
 java/sun-7/lib/visualvm/platform/update_tracking/org-netbeans-modules-spi-actions.xml
@@ -391,9 +401,12 @@ java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-he
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-oql.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-selector-api.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-selector-ui.xml
+java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-snaptracer.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-utilities.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler.xml
+java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/solaris-amd64/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/solaris-i386/libprofilerinterface.so
+java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/solaris-amd64/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/solaris-i386/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/jfluid-server-15.jar
 java/sun-7/lib/visualvm/profiler/lib/jfluid-server.jar
@@ -419,6 +432,8 @@ java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-se
 java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-api_zh_CN.jar
 java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-ui_ja.jar
 java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-selector-ui_zh_CN.jar
+java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-snaptracer_ja.jar
+java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-snaptracer_zh_CN.jar
 java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-utilities_ja.jar
 java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler-utilities_zh_CN.jar
 java/sun-7/lib/visualvm/profiler/modules/locale/org-netbeans-modules-profiler_ja.jar
@@ -433,6 +448,7 @@ java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-heapwalke
 java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-oql.jar
 java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-selector-api.jar
 java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-selector-ui.jar
+java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-snaptracer.jar
 java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler-utilities.jar
 java/sun-7/lib/visualvm/profiler/modules/org-netbeans-modules-profiler.jar
 java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-lib-profiler-charts.xml
@@ -445,6 +461,7 @@ java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-h
 java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-oql.xml
 java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-selector-api.xml
 java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-selector-ui.xml
+java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-snaptracer.xml
 java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler-utilities.xml
 java/sun-7/lib/visualvm/profiler/update_tracking/org-netbeans-modules-profiler.xml
 java/sun-7/lib/visualvm/visualvm/.lastModified
