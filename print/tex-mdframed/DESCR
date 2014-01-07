@@ -1,0 +1,4 @@
+The package develops the facilities of framed in providing
+breakable framed and coloured boxes. The user may instruct the
+package to perform its operations using default LaTeX commands,
+PStricks or TikZ.
