@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1833 2014/01/07 09:03:37 minskim Exp $
+# $NetBSD: Makefile,v 1.1834 2014/01/07 23:10:33 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -241,6 +241,7 @@ SUBDIR+=	git
 SUBDIR+=	git-base
 SUBDIR+=	git-docs
 SUBDIR+=	git-gitk
+SUBDIR+=	git-svn
 SUBDIR+=	gitolite
 SUBDIR+=	glade
 SUBDIR+=	glade3
