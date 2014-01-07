@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/07 08:25:14 minskim Exp $
+share/texmf-dist/doc/latex/mdframed/README.txt
+share/texmf-dist/doc/latex/mdframed/ctan-lion.png
+share/texmf-dist/doc/latex/mdframed/mdframed-example-default.pdf
+share/texmf-dist/doc/latex/mdframed/mdframed-example-default.tex
+share/texmf-dist/doc/latex/mdframed/mdframed-example-pstricks.pdf
+share/texmf-dist/doc/latex/mdframed/mdframed-example-pstricks.tex
+share/texmf-dist/doc/latex/mdframed/mdframed-example-texsx.pdf
+share/texmf-dist/doc/latex/mdframed/mdframed-example-texsx.tex
+share/texmf-dist/doc/latex/mdframed/mdframed-example-tikz.pdf
+share/texmf-dist/doc/latex/mdframed/mdframed-example-tikz.tex
+share/texmf-dist/doc/latex/mdframed/mdframed.pdf
