@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2013/07/22 06:34:53 wiz Exp $
+$NetBSD: distinfo,v 1.19.4.1 2014/01/07 17:11:53 tron Exp $
 
 SHA1 (libXfont-1.4.6.tar.bz2) = 356512420fa8573a541450b957526dfd151b4870
 RMD160 (libXfont-1.4.6.tar.bz2) = 6c284e2d50638753e43f7dae09a5d4b80c660920
 Size (libXfont-1.4.6.tar.bz2) = 489067 bytes
+SHA1 (patch-src_bitmap_bdfread.c) = 199f221e01faf2393212452d0180788c0a4ffaff
