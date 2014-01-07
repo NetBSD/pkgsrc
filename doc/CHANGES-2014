@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.141 2014/01/07 20:09:27 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.142 2014/01/07 20:57:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/graphviz to 2.34.0nb4 [wiz 2014-01-07]
 	Updated devel/p5-Data-Printer to 0.35nb1 [wiz 2014-01-07]
 	Updated x11/libXfont to 1.4.7 [wiz 2014-01-07]
+	Updated comms/asterisk to 11.7.0 [jnemeth 2014-01-07]
