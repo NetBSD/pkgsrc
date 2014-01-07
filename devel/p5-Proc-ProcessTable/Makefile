@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/05/31 12:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/07 19:40:41 jperkin Exp $
 #
 
 DISTNAME=		Proc-ProcessTable-0.45
@@ -16,6 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 REPLACE_PERL=		example.pl
 
 PERL5_PACKLIST=		auto/Proc/ProcessTable/.packlist
+
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
