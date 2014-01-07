@@ -1,4 +1,4 @@
-# $NetBSD: common,v 1.2 2013/03/06 16:58:57 jperkin Exp $
+# $NetBSD: common,v 1.3 2014/01/07 19:18:46 jperkin Exp $
 
 COPYRIGHT
 LICENSE
@@ -28,6 +28,7 @@ bin/servertool
 bin/tnameserv
 bin/unpack200
 jre
+lib/*/jli
 lib/jexec
 man/ja
 man/ja_JP.PCK/man1/java.1
