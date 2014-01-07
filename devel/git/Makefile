@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/09/11 01:26:00 obache Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/07 14:59:04 wiz Exp $
 
 .include "../../devel/git/Makefile.version"
 
@@ -10,8 +10,9 @@ MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GIT version control suite meta-package
+LICENSE=	gnu-gpl-v2
 
-SUPERSEDES+=	scmgit-[0-8]*
+SUPERSEDES+=	scmgit-[0-9]*
 
 META_PACKAGE=	yes
 
