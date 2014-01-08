@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 12:55:12 asau Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/08 10:37:38 jperkin Exp $
 #
 
 DISTNAME=		fceu-0.98.13.src
@@ -35,5 +35,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/fceu
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
