@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12857 2014/01/08 10:36:58 wiz Exp $
+$NetBSD: TODO,v 1.12858 2014/01/08 15:14:35 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o diffstat-1.58
 	o doclifter-2.13
 	o dolphin-4.0.2
-	o dos2unix-6.0.4
 	o dri-7.8.2 [wip]
 	o drivel-3.0.3
 	o dropbear-2013.59
