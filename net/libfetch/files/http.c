@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.34 2014/01/07 23:25:12 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.35 2014/01/08 20:25:34 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -752,7 +752,7 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 		/* fetch_connect() has already set an error code */
 		return (NULL);
 	if (strcasecmp(URL->scheme, SCHEME_HTTPS) == 0 &&
-	    fetch_ssl(conn, verbose) == -1) {
+	    fetch_ssl(conn, URL, verbose) == -1) {
 		fetch_close(conn);
 		/* grrr */
 #ifdef EAUTH
