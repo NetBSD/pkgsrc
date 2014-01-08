@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2008/11/20 13:45:29 hauke Exp $
+$NetBSD: patch-ra.sh,v 1.1.2.2 2014/01/08 18:53:27 tron Exp $
 
---- ra.sh.orig	2008-06-05 02:08:07.000000000 +0200
+--- ra.sh.orig	2010-12-13 03:42:49.000000000 +0000
 +++ ra.sh
-@@ -30,7 +30,7 @@ EDITOR=${EDITOR:-vi}
+@@ -31,7 +31,7 @@ EDITOR=${EDITOR:-vi}
  PAGER=${PAGER:-cat}
  USER=${SUDO_USER:-$USER}
  TMPDIR="${TMPDIR:=/tmp}"
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.8 2008/11/20 13:45:29 hauke Exp $
  FSDIFFROOT="."
  DEFAULTWORKDIR="/"
  FLAG="_RADMIND_DIR/client/.RadmindRunning"
-@@ -42,7 +42,7 @@ VERSION=_RADMIND_VERSION
+@@ -46,7 +46,7 @@ NETOPTS=
  PREAPPLY="_RADMIND_PREAPPLY"
  POSTAPPLY="_RADMIND_POSTAPPLY"
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.8 2008/11/20 13:45:29 hauke Exp $
  RETRY=10
  
  MKTEMP="_RADMIND_MKTEMP"
-@@ -58,14 +58,6 @@ fi
+@@ -62,14 +62,6 @@ fi
  LTMP="${RASHTMP}/lapply.out"
  FTMP="${RASHTMP}/fsdiff.out"
  

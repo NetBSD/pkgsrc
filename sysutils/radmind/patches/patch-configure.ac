@@ -1,0 +1,12 @@
+$NetBSD: patch-configure.ac,v 1.1.2.2 2014/01/08 18:53:27 tron Exp $
+
+--- configure.ac.orig	2010-12-13 03:43:38.000000000 +0000
++++ configure.ac
+@@ -44,6 +44,7 @@ AC_SYS_LARGEFILE
+ 
+ # Check sizes
+ AC_CHECK_SIZEOF(off_t)
++AC_CHECK_SIZEOF(time_t)
+ 
+ # Checks for libraries.
+ AC_CHECK_LIB(c, inet_aton, libc_inet_aton=yes) 
