@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.33 2013/06/09 02:11:34 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2014/01/08 16:32:30 ryoon Exp $
 
-SHA1 (aria2-1.17.1.tar.bz2) = a40730013501554cdb0ce2b56a919f3ee971c06e
-RMD160 (aria2-1.17.1.tar.bz2) = bab446a216fb450c8048587ab3bad24a1c383e73
-Size (aria2-1.17.1.tar.bz2) = 2228357 bytes
-SHA1 (patch-configure) = 9e962d552653eb221d7377a0789ac4675a5d5893
-SHA1 (patch-configure.ac) = 64e3dfe642dde9b7cd78314dd18b421b41676f08
-SHA1 (patch-src_IndexedList.h) = 098aa2110ff666255826110b3272a714128eb0e7
+SHA1 (aria2-1.18.2.tar.bz2) = 2f04a17567e6b793420a517b3fb0511f12c76289
+RMD160 (aria2-1.18.2.tar.bz2) = 9abeeecf7327211fce63f1a1fb49fe895fa39923
+Size (aria2-1.18.2.tar.bz2) = 2099416 bytes
+SHA1 (patch-configure) = 2c65fb587d9c52518104f3f1c1ad9102a6e107be
