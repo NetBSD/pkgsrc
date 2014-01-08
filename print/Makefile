@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.576 2014/01/07 08:26:42 minskim Exp $
+# $NetBSD: Makefile,v 1.577 2014/01/08 02:03:51 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -607,6 +607,8 @@ SUBDIR+=	tex-rotating-doc
 SUBDIR+=	tex-ruhyphen
 SUBDIR+=	tex-sansmath
 SUBDIR+=	tex-sansmath-doc
+SUBDIR+=	tex-sauerj
+SUBDIR+=	tex-sauerj-doc
 SUBDIR+=	tex-secdot
 SUBDIR+=	tex-secdot-doc
 SUBDIR+=	tex-section
