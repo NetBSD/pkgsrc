@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/08 04:47:18 minskim Exp $
+share/texmf-dist/tex/latex/tufte-latex/tufte-book.cls
+share/texmf-dist/tex/latex/tufte-latex/tufte-common.def
+share/texmf-dist/tex/latex/tufte-latex/tufte-handout.cls
