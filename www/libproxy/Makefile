@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/05/31 10:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/08 09:57:30 jperkin Exp $
 
 DISTNAME=	libproxy-0.4.11
 CATEGORIES=	www gnome
@@ -26,6 +26,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
 PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
 PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
