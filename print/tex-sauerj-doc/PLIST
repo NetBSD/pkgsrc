@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/08 02:01:46 minskim Exp $
+share/texmf-dist/doc/latex/sauerj/README
+share/texmf-dist/doc/latex/sauerj/collect.pdf
+share/texmf-dist/doc/latex/sauerj/metainfo.pdf
+share/texmf-dist/doc/latex/sauerj/optparams.pdf
+share/texmf-dist/doc/latex/sauerj/parcolumns.pdf
+share/texmf-dist/doc/latex/sauerj/processkv.pdf
+share/texmf-dist/doc/latex/sauerj/zahl2string.pdf
