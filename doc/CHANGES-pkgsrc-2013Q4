@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.4 2014/01/07 19:50:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.5 2014/01/08 18:54:26 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -25,3 +25,5 @@ Pullup ticket #4287 - requested by wiz
 x11/libXfont: security patch
 Pullup ticket #4288 - requested by wiz
 graphics/graphviz: security patch
+Pullup ticket #4289 - requested by hauke
+sysutils/radmind: bug fix patch
