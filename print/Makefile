@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.577 2014/01/08 02:03:51 minskim Exp $
+# $NetBSD: Makefile,v 1.578 2014/01/08 04:43:40 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -479,6 +479,8 @@ SUBDIR+=	tex-lazylist
 SUBDIR+=	tex-lazylist-doc
 SUBDIR+=	tex-leaflet
 SUBDIR+=	tex-leaflet-doc
+SUBDIR+=	tex-lipsum
+SUBDIR+=	tex-lipsum-doc
 SUBDIR+=	tex-listing
 SUBDIR+=	tex-listing-doc
 SUBDIR+=	tex-listings
