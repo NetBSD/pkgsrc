@@ -1,0 +1,20 @@
+BD+ is a part of the Blu-ray Disc DRM system. This library provides
+an open source implementation of the standard.
+
+This library is not complete, in that it will never be complete
+and will always require updates to stay up to date with the latest
+Bluray disks released.
+
+The general flow on this library is that the higher level 'player'
+code will call us if there exist a "BDSVM/00000.svm" file on the
+disk. If this is the case it will call bdplus_init(), connect the
+library with other parts of BluRay player and call bdplus_start().
+
+BD+ VM executes the DLX assembled code inside the SVM file.  This
+will perform thousands of AES, SHA, file reads and detailed memory
+checks to guess the authenticity of the player.
+
+If all goes well, the SVM will eventually spit out a 'conversion
+table'. This is a large table (usually about 1-2MB but it varies)
+which contains offsets into the M2TS video file. (usually the main
+title).
