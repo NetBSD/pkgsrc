@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12856 2014/01/08 01:34:29 rodent Exp $
+$NetBSD: TODO,v 1.12857 2014/01/08 10:36:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,6 +433,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cinepaint-1.3
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clang-3.4
 	o classpath-0.98
 	o cmake-fedora-1.0.5
 	o colorize-0.3.4
@@ -504,8 +505,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o enlightenment-0.18
 	o eog-plugins-3.6.1
 	o epiphany-extensions-3.2.0
-	o eric4-4.5.13
-	o eric5-5.3.8
+	o eric4-4.5.18
+	o eric5-5.4.0
 	o erlang-16.2
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
@@ -583,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o glom-1.14.2 [GNOME 2.26]
 	o glu-10.0
+	o glusterfs-3.4.2
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.10.1
@@ -665,6 +667,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o honeyd-1.5c
 	o horde-5.1.5
 	o html2wml-0.4.11
+	o htmldoc-1.8.28
 	o htop-1.0.2
 	o httptunnel-3.3
 	o hugin-2012.0.0
@@ -696,7 +699,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kapooka-0.3
 	o kbiff-4.0
 	o kdbg-2.5.4
-	o kde4-4.11.4
+	o kde4-4.11.5
 	o kdenlive-0.9.6
 	o kdevelop-4.6.0
 	o kdrill-6.5
@@ -798,7 +801,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mnemosyne-2.2.1
 	o modular-xorg-server-1.15.0
 	o molden-4.8 [after which PR 40252 can be closed]
-	o moneyguru-2.6.3
+	o moneyguru-2.7.1
 	o monit-5.6 [pkg/48465]
 	o mono-3.2.5
 	o moserial-2.30.0 [GNOME 2.30]
@@ -884,7 +887,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-sugarcrm-6.5.16
 	o php-tiki6-6.10
 	o php-tt-rss-1.11
-	o phpmyadmin-4.1.3
+	o phpmyadmin-4.1.4
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -910,6 +913,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pspp-0.8.1
 	o pstoedit-3.61
 	o pulseaudio-4.0 [hal support is dropped]
+	o puzzle-10108
 	o pv-1.2.0
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -958,7 +962,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rudiments-0.44.1
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
-	o samba-4.0.13
+	o samba-4.0.14
 	o samba-4.1.0 [wip]
 	o samba-4.1.3
 	o sane-1.0.24
@@ -1025,6 +1029,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
+	o tcpreplay-4.0.0
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tds-1.6.2
