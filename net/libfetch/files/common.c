@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.28 2014/01/07 23:30:03 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.29 2014/01/08 20:25:34 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -431,7 +431,7 @@ fetch_cache_put(conn_t *conn, int (*closecb)(conn_t *))
  * Enable SSL on a connection.
  */
 int
-fetch_ssl(conn_t *conn, int verbose)
+fetch_ssl(conn_t *conn, const struct url *URL, int verbose)
 {
 
 #ifdef WITH_SSL
@@ -454,7 +454,7 @@ fetch_ssl(conn_t *conn, int verbose)
 	}
 	SSL_set_fd(conn->ssl, conn->sd);
 #if OPENSSL_VERSION_NUMBER >= 0x0090806fL && !defined(OPENSSL_NO_TLSEXT)
-	if (!SSL_set_tlsext_host_name(conn->ssl, URL->host)) {
+	if (!SSL_set_tlsext_host_name(conn->ssl, (char *)(uintptr_t)URL->host)) {
 		fprintf(stderr,
 		    "TLS server name indication extension failed for host %s\n",
 		    URL->host);
