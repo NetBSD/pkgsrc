@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2007/08/23 14:10:29 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.1.2.2 2014/01/08 18:53:27 tron Exp $
 
---- Makefile.in.orig	2007-06-18 23:02:05.000000000 +0200
+--- Makefile.in.orig	2010-12-13 03:43:49.000000000 +0000
 +++ Makefile.in
-@@ -253,6 +253,8 @@ rash : FRC
+@@ -269,6 +269,8 @@ rash : FRC
  	    -e 's@_RADMIND_MAIL_DOMAIN@${RADMIND_MAIL_DOMAIN}@g' \
  	    -e 's@_RADMIND_COMMANDFILE@${COMMANDFILE}@g' \
  	    -e 's@_RADMIND_VERSION@$(shell cat VERSION)@g' \
