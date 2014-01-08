@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2014/01/07 07:27:39 abs Exp $
+$NetBSD: distinfo,v 1.38 2014/01/08 13:09:38 jperkin Exp $
 
 SHA1 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
 RMD160 (openjdk7/UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
@@ -108,7 +108,7 @@ SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 8a034088ca3c9f5a625849
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = d72c16b90479c5df0dc33f3b30916b0552dcc17a
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_atomic__solaris__x86.inline.hpp) = 2bf9147643be4ac711d1bf94eb0e6ae4abad20c6
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_orderAccess__solaris__x86.inline.hpp) = 82818bc8d8fee46403b88cf52a7c978b5ea0005c
-SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp) = 3b97d40cd82b807acb45227935f0c7a58fdf7b89
+SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_os__solaris__x86.cpp) = b2ffc4679a4abe581c6ef3aef630b6570e5cfc41
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_prefetch__solaris__x86.inline.hpp) = 5679710d8dc743b5e9820057cc1800471c6ac40b
 SHA1 (patch-hotspot_src_os__cpu_solaris__x86_vm_threadLS__solaris__x86.hpp) = 062a3cf87793867b68d497b75f5fef55ed6e1666
 SHA1 (patch-hotspot_src_os_posix_vm_os__posix.cpp) = da6017447c5537048fcf04198c400f96568dc6e2
@@ -116,6 +116,7 @@ SHA1 (patch-hotspot_src_os_solaris_dtrace_jhelper.d) = 43ae9934ce7cf477f7968bcf9
 SHA1 (patch-hotspot_src_os_solaris_vm_decoder__solaris.cpp) = 3be8a96525ead1df18a40b18dccfad4ef2765d47
 SHA1 (patch-hotspot_src_os_solaris_vm_os__solaris.cpp) = ea09ffd080fcf4c12b0b69cb622ee3945000cb68
 SHA1 (patch-hotspot_src_share_vm_utilities_globalDefinitions__gcc.hpp) = fe40909864fc561495b1e15a5bc6c7c6373830b2
+SHA1 (patch-hotspot_src_share_vm_utilities_hashtable.cpp) = 30084c64570e420fbda8fbd36fcd4aa2641eab8e
 SHA1 (patch-jdk_make_com_sun_Makefile) = 5826c64eb1971d69e8b874d6b8a60d25e0d02c5b
 SHA1 (patch-jdk_make_com_sun_java_pack_Makefile) = bb258d4c2235ea780810d980b84b90a0380f3b46
 SHA1 (patch-jdk_make_com_sun_jmx_Makefile) = 65fa2d6191311766cdb5d9933d760cae7955f664
