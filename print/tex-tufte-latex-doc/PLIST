@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/08 04:47:35 minskim Exp $
+share/texmf-dist/doc/latex/tufte-latex/History.txt
+share/texmf-dist/doc/latex/tufte-latex/README.txt
+share/texmf-dist/doc/latex/tufte-latex/graphics/be-contents.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/be-title.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/ei-contents.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/ei-title.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/helix.asy
+share/texmf-dist/doc/latex/tufte-latex/graphics/helix.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/hilbertcurves.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/hilbertrecursive.tex
+share/texmf-dist/doc/latex/tufte-latex/graphics/nasa_vision_sm.png
+share/texmf-dist/doc/latex/tufte-latex/graphics/satir_graph.png
+share/texmf-dist/doc/latex/tufte-latex/graphics/sine.asy
+share/texmf-dist/doc/latex/tufte-latex/graphics/sine.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/sine2.asy
+share/texmf-dist/doc/latex/tufte-latex/graphics/sine2.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/vdqi-contents.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/vdqi-title.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/ve-contents.pdf
+share/texmf-dist/doc/latex/tufte-latex/graphics/ve-title.pdf
+share/texmf-dist/doc/latex/tufte-latex/sample-book.pdf
+share/texmf-dist/doc/latex/tufte-latex/sample-book.tex
+share/texmf-dist/doc/latex/tufte-latex/sample-handout.bib
+share/texmf-dist/doc/latex/tufte-latex/sample-handout.pdf
+share/texmf-dist/doc/latex/tufte-latex/sample-handout.tex
