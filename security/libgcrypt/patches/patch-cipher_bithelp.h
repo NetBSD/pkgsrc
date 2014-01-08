@@ -1,6 +1,7 @@
-$NetBSD: patch-cipher_bithelp.h,v 1.1 2014/01/08 09:01:39 obache Exp $
+$NetBSD: patch-cipher_bithelp.h,v 1.2 2014/01/08 09:38:23 obache Exp $
 
 * NetBSD has bswap32 and bswap64 as macros.
+  https://bugs.g10code.com/gnupg/msg4936
 
 --- cipher/bithelp.h.orig	2013-12-09 07:48:50.000000000 +0000
 +++ cipher/bithelp.h
