@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2014/01/08 04:43:40 minskim Exp $
+# $NetBSD: Makefile,v 1.579 2014/01/08 04:49:50 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -695,6 +695,8 @@ SUBDIR+=	tex-tpslifonts
 SUBDIR+=	tex-tpslifonts-doc
 SUBDIR+=	tex-truncate
 SUBDIR+=	tex-truncate-doc
+SUBDIR+=	tex-tufte-latex
+SUBDIR+=	tex-tufte-latex-doc
 SUBDIR+=	tex-twoinone
 SUBDIR+=	tex-twoinone-doc
 SUBDIR+=	tex-type1cm
