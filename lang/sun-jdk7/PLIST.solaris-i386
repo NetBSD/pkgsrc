@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.3 2014/01/07 19:18:46 jperkin Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.4 2014/01/08 11:05:57 jperkin Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -404,9 +404,7 @@ java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-se
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-snaptracer.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-utilities.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler.xml
-java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/solaris-amd64/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/solaris-i386/libprofilerinterface.so
-java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/solaris-amd64/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/solaris-i386/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/jfluid-server-15.jar
 java/sun-7/lib/visualvm/profiler/lib/jfluid-server.jar
