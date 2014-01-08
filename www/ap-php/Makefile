@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2012/10/28 06:30:05 asau Exp $
+# $NetBSD: Makefile,v 1.29 2014/01/08 10:13:44 jperkin Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_BASE_VERS}
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 
 CONFLICTS=		ap-php-[0-9]*
 
-USE_TOOLS+=		lex
+USE_TOOLS+=		lex pkg-config
 
 APACHE_MODULE=		YES
 
