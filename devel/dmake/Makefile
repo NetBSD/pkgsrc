@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/01/01 14:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/08 21:47:55 wiz Exp $
 
 DISTNAME=	dmake-4.12.2
 CATEGORIES=	devel
@@ -10,14 +10,19 @@ HOMEPAGE=	http://code.google.com/a/apache-extras.org/p/dmake
 COMMENT=	Portable make supported by many platforms
 LICENSE=	gnu-gpl-v1
 
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/dmake
 
-GNU_CONFIGURE=	yes
-
-TEST_TARGET=	check
-
+TEST_TARGET=		check
 INSTALLATION_DIRS=	bin share/dmake ${PKGMANDIR}/man1
 
-CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/dmake
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+PLIST_SUBST+=	STARTUPOS=solaris
+.else
+PLIST_SUBST+=	STARTUPOS=linux
+.endif
 
 pre-test:
 	${SH} -c 'for a in 1 2 3 4 5 6 7 8 9 10 11 12;\
