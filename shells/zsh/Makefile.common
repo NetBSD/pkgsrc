@@ -1,13 +1,10 @@
-# $NetBSD: Makefile.common,v 1.71 2013/05/10 01:17:33 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.72 2014/01/08 16:30:01 ryoon Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
-MASTER_SITES=	ftp://mirrors.dotsrc.org/zsh/ \
-		ftp://ftp.fu-berlin.de/pub/unix/shells/zsh/ \
-		http://www.math.technion.ac.il/pub/zsh/ \
-		ftp://ftp.zsh.org/zsh/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	${ZSH_MAINTAINER}
@@ -99,7 +96,7 @@ PLIST.terminfo=	yes
 .endif
 
 ### curses
-.if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*)
+.if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*) && empty(MACHINE_PLATFORM:MGNUkFreeBSD-[0-9]*)
 CHECK_BUILTIN.curses=	yes
 .include "../../mk/curses.builtin.mk"
 .if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
