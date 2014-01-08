@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/08 02:01:23 minskim Exp $
+share/texmf-dist/tex/latex/sauerj/collect.sty
+share/texmf-dist/tex/latex/sauerj/metainfo.sty
+share/texmf-dist/tex/latex/sauerj/optparams.sty
+share/texmf-dist/tex/latex/sauerj/parcolumns.sty
+share/texmf-dist/tex/latex/sauerj/processkv.sty
+share/texmf-dist/tex/latex/sauerj/zahl2string.sty
