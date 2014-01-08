@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.146 2014/01/08 04:43:40 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.147 2014/01/08 04:49:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -162,3 +162,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-sauerj-doc version 2013 [minskim 2014-01-08]
 	Added print/tex-lipsum version 1.2 [minskim 2014-01-08]
 	Added print/tex-lipsum-doc version 1.2 [minskim 2014-01-08]
+	Added print/tex-tufte-latex version 3.5.0 [minskim 2014-01-08]
+	Added print/tex-tufte-latex-doc version 3.5.0 [minskim 2014-01-08]
