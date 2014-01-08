@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/01/08 14:59:15 ryoon Exp $
+
+To use Starbug1, you will need to perform the following steps.
+
+1. Install Apache httpd server, for example www/apache24.
+
+2. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	LoadModule cgid_module lib/httpd/mod_cgid.so
+	Alias /starbug1 /usr/pkg/share/starbug1
+	<Directory "/usr/pkg/share/starbug1">
+		ErrorDocument 500 /starbug1/error.html
+		AddHandler cgi-script .cgi
+		Options +ExecCGI
+		DirectoryIndex index.cgi
+		Require all granted
+	</Directory>
+
+3. Start apache httpd.
+
+4. Access http://localhost/starbug1/ and setup it.
+===========================================================================
