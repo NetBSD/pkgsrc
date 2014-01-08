@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/01/08 11:54:04 hauke Exp $
+# $NetBSD: Makefile,v 1.34 2014/01/08 12:11:39 hauke Exp $
 #
 
 DISTNAME=	radmind-1.14.1
@@ -18,6 +18,8 @@ CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
 # XXX configure script checks for path to echo, which pkgsrc does not
 # provide, so we need to side-step {echopath}.
 CONFIGURE_ENV+= 	ac_cv_path_echopath=${TOOLS_ECHO:Q}
+
+MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=		all man rash
 RADMINDDIR=		${VARBASE}/radmind
