@@ -1,13 +1,29 @@
-$NetBSD: patch-configure,v 1.1 2013/06/09 02:11:34 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2014/01/08 16:32:30 ryoon Exp $
 
---- configure.orig	2013-05-26 07:24:31.000000000 +0000
+--- configure.orig	2013-12-26 15:44:21.000000000 +0000
 +++ configure
-@@ -19195,7 +19195,7 @@ See \`config.log' for more details" "$LI
+@@ -19872,13 +19872,13 @@ See \`config.log' for more details" "$LI
  fi
  
  use_md=""
--if test "x$have_osx" == "xyes"; then
-+if test "x$have_osx" = "xyes"; then
+-if test "x$have_appletls" == "xyes"; then
++if test "x$have_appletls" = "xyes"; then
    use_md="apple"
  
  $as_echo "#define USE_APPLE_MD 1" >>confdefs.h
+ 
+ else
+-  if test "x$have_wintls" == "xyes"; then
++  if test "x$have_wintls" = "xyes"; then
+     use_md="windows"
+ 
+ $as_echo "#define USE_WINDOWS_MD 1" >>confdefs.h
+@@ -19913,7 +19913,7 @@ $as_echo "#define USE_INTERNAL_MD 1" >>c
+ fi
+ 
+ # Define variables based on the result of the checks for libraries.
+-if test "x$have_appletls" = "xyes" || test "x$have_wintls" == "xyes" || test "x$have_libgnutls" = "xyes" || test "x$have_openssl" = "xyes"; then
++if test "x$have_appletls" = "xyes" || test "x$have_wintls" = "xyes" || test "x$have_libgnutls" = "xyes" || test "x$have_openssl" = "xyes"; then
+   have_ssl="yes"
+ 
+ $as_echo "#define ENABLE_SSL 1" >>confdefs.h
