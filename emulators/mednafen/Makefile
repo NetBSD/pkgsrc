@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 12:55:15 asau Exp $
+# $NetBSD: Makefile,v 1.20 2014/01/08 10:43:02 jperkin Exp $
 #
 
 DISTNAME=	mednafen-0.8.D.3
@@ -42,6 +42,7 @@ post-install:
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
