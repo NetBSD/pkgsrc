@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.151 2014/01/08 07:20:11 wen Exp $
+$NetBSD: CHANGES-2014,v 1.152 2014/01/08 07:28:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/p5-Mojolicious to 4.66 [wen 2014-01-08]
 	Updated devel/p5-Moose to 2.1200 [wen 2014-01-08]
 	Added devel/p5-MouseX-Getopt version 0.34 [wen 2014-01-08]
+	Updated devel/p5-MooseX-App-Cmd to 0.27 [wen 2014-01-08]
