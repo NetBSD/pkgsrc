@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.153 2014/01/08 15:00:33 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.154 2014/01/08 15:14:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -170,3 +170,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/p5-MouseX-Getopt version 0.34 [wen 2014-01-08]
 	Updated devel/p5-MooseX-App-Cmd to 0.27 [wen 2014-01-08]
 	Added devel/startbug1 version 1.6.01 [ryoon 2014-01-08]
+	Updated converters/dos2unix to 6.0.4 [ryoon 2014-01-08]
