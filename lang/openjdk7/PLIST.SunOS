@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2013/06/23 17:39:43 jperkin Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2014/01/08 13:09:38 jperkin Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -431,7 +431,6 @@ java/openjdk7/jre/lib/${ARCH}/libnet.so
 java/openjdk7/jre/lib/${ARCH}/libnio.so
 java/openjdk7/jre/lib/${ARCH}/libnpt.diz
 java/openjdk7/jre/lib/${ARCH}/libnpt.so
-java/openjdk7/jre/lib/${ARCH}/librmi.so
 java/openjdk7/jre/lib/${ARCH}/libsaproc.diz
 java/openjdk7/jre/lib/${ARCH}/libsaproc.so
 java/openjdk7/jre/lib/${ARCH}/libsctp.so
@@ -486,7 +485,6 @@ java/openjdk7/jre/lib/security/java.policy
 java/openjdk7/jre/lib/security/java.security
 java/openjdk7/jre/lib/security/local_policy.jar
 java/openjdk7/jre/lib/security/sunpkcs11-solaris.cfg
-java/openjdk7/jre/lib/servicetag/jdk_header.png
 java/openjdk7/jre/lib/sound.properties
 java/openjdk7/jre/lib/zi/Africa/Abidjan
 java/openjdk7/jre/lib/zi/Africa/Accra
@@ -730,6 +728,7 @@ java/openjdk7/jre/lib/zi/Asia/Kamchatka
 java/openjdk7/jre/lib/zi/Asia/Karachi
 java/openjdk7/jre/lib/zi/Asia/Kashgar
 java/openjdk7/jre/lib/zi/Asia/Kathmandu
+java/openjdk7/jre/lib/zi/Asia/Khandyga
 java/openjdk7/jre/lib/zi/Asia/Kolkata
 java/openjdk7/jre/lib/zi/Asia/Krasnoyarsk
 java/openjdk7/jre/lib/zi/Asia/Kuala_Lumpur
@@ -768,6 +767,7 @@ java/openjdk7/jre/lib/zi/Asia/Thimphu
 java/openjdk7/jre/lib/zi/Asia/Tokyo
 java/openjdk7/jre/lib/zi/Asia/Ulaanbaatar
 java/openjdk7/jre/lib/zi/Asia/Urumqi
+java/openjdk7/jre/lib/zi/Asia/Ust-Nera
 java/openjdk7/jre/lib/zi/Asia/Vientiane
 java/openjdk7/jre/lib/zi/Asia/Vladivostok
 java/openjdk7/jre/lib/zi/Asia/Yakutsk
@@ -943,6 +943,7 @@ java/openjdk7/jre/lib/zi/SystemV/YST9YDT
 java/openjdk7/jre/lib/zi/WET
 java/openjdk7/jre/lib/zi/ZoneInfoMappings
 java/openjdk7/lib/ct.sym
+java/openjdk7/lib/${ARCH}/jli/libjli.so
 java/openjdk7/lib/ir.idl
 java/openjdk7/lib/jconsole.jar
 java/openjdk7/lib/orb.idl
@@ -971,7 +972,6 @@ java/openjdk7/man/ja_JP.UTF-8/man1/jsadebugd.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstack.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstat.1
 java/openjdk7/man/ja_JP.UTF-8/man1/jstatd.1
-java/openjdk7/man/ja_JP.UTF-8/man1/jvisualvm.1
 java/openjdk7/man/ja_JP.UTF-8/man1/keytool.1
 java/openjdk7/man/ja_JP.UTF-8/man1/native2ascii.1
 java/openjdk7/man/ja_JP.UTF-8/man1/orbd.1
@@ -1011,7 +1011,6 @@ java/openjdk7/man/man1/jsadebugd.1
 java/openjdk7/man/man1/jstack.1
 java/openjdk7/man/man1/jstat.1
 java/openjdk7/man/man1/jstatd.1
-java/openjdk7/man/man1/jvisualvm.1
 java/openjdk7/man/man1/keytool.1
 java/openjdk7/man/man1/native2ascii.1
 java/openjdk7/man/man1/orbd.1
