@@ -1,11 +1,20 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2012/04/11 17:45:39 ryoon Exp $
+$NetBSD: patch-Makefile,v 1.2 2014/01/08 15:14:03 ryoon Exp $
 
 * install man pages to ${PREFIX}/man
 * do not generate ps, pdf, and html documents
 
---- Makefile.orig	2012-03-10 08:04:59.000000000 +0000
+--- Makefile.orig	2013-11-26 22:56:57.000000000 +0000
 +++ Makefile
-@@ -70,7 +70,7 @@ datadir		= $(datarootdir)
+@@ -35,7 +35,7 @@
+ 
+ include version.mk
+ 
+-.PHONY: man txt html pdf mofiles tags merge
++.PHONY: man txt html pdf mofiles tags merge
+ 
+ CC		?= gcc
+ CPP		?= cpp
+@@ -80,7 +80,7 @@ datadir		= $(datarootdir)
  docsubdir	= $(PACKAGE)-$(DOS2UNIX_VERSION)
  docdir		= $(datarootdir)/doc/$(docsubdir)
  localedir	= $(datarootdir)/locale
@@ -14,7 +23,7 @@ $NetBSD: patch-Makefile,v 1.1.1.1 2012/04/11 17:45:39 ryoon Exp $
  man1dir		= $(mandir)/man1
  manext		= .1
  man1ext		= .1
-@@ -321,11 +321,11 @@ else
+@@ -465,11 +465,11 @@ else
  	cd $(DESTDIR)$(man1dir); $(LINK_MAN) $(PACKAGE).1 $(UNIX2DOS).1
  	cd $(DESTDIR)$(man1dir); $(LINK_MAN) $(PACKAGE).1 $(UNIX2MAC).1
  endif
@@ -28,6 +37,19 @@ $NetBSD: patch-Makefile,v 1.1.1.1 2012/04/11 17:45:39 ryoon Exp $
 +	$(foreach manfile, $(MANFILES), cd $(DESTDIR)$(prefix)/$(dir $(manfile)) ; $(LINK_MAN) $(PACKAGE).1 $(MAC2UNIX).1 ;)
 +	$(foreach manfile, $(MANFILES), cd $(DESTDIR)$(prefix)/$(dir $(manfile)) ; $(LINK_MAN) $(PACKAGE).1 $(UNIX2DOS).1 ;)
 +	$(foreach manfile, $(MANFILES), cd $(DESTDIR)$(prefix)/$(dir $(manfile)) ; $(LINK_MAN) $(PACKAGE).1 $(UNIX2MAC).1 ;)
- ifdef ENABLE_NLS
- 	@echo "-- install-mo"
- 	$(foreach mofile, $(MOFILES), $(MKDIR) -p -m 755 $(DESTDIR)$(localedir)/$(basename $(notdir $(mofile)))/LC_MESSAGES ;)
+ 	$(foreach manfile, $(MANFILES_NONLATIN), $(MKDIR) -p -m 755 $(DESTDIR)$(datarootdir)/$(subst nonlatin/,,$(dir $(manfile))) ;)
+ 	$(foreach manfile, $(MANFILES_NONLATIN), $(INSTALL) -m 644 $(manfile) $(DESTDIR)$(datarootdir)/$(subst nonlatin/,,$(dir $(manfile))) ;)
+ 	$(foreach manfile, $(MANFILES_NONLATIN), cd $(DESTDIR)$(datarootdir)/$(subst nonlatin/,,$(dir $(manfile))) ; $(LINK_MAN) $(PACKAGE).1 $(MAC2UNIX).1 ;)
+@@ -494,12 +494,6 @@ install-doc: $(INSTALL_OBJS_DOC)
+ 	$(foreach txtfile, $(wildcard man/*/man1/*.txt), $(INSTALL) -m 644 $(txtfile) $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(txtfile),)) ;)
+ 	$(foreach htmlfile, $(wildcard man/*/man1/*.$(HTMLEXT)), $(MKDIR) -p -m 755 $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(htmlfile),)) ;)
+ 	$(foreach htmlfile, $(wildcard man/*/man1/*.$(HTMLEXT)), $(INSTALL) -m 644 $(htmlfile) $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(htmlfile),)) ;)
+-	$(foreach pdffile, $(wildcard man/*/man1/*.pdf), $(MKDIR) -p -m 755 $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(pdffile),)) ;)
+-	$(foreach pdffile, $(wildcard man/*/man1/*.pdf), $(INSTALL) -m 644 $(pdffile) $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(pdffile),)) ;)
+-	$(foreach pdffile, $(wildcard man/man1/*.pdf), $(INSTALL) -m 644 $(pdffile) $(DESTDIR)$(docdir) ;)
+-	$(foreach psfile, $(wildcard man/*/man1/*.ps), $(MKDIR) -p -m 755 $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(psfile),)) ;)
+-	$(foreach psfile, $(wildcard man/*/man1/*.ps), $(INSTALL) -m 644 $(psfile) $(DESTDIR)$(docdir)/$(word 2,$(subst /, ,$(psfile),)) ;)
+-	$(foreach psfile, $(wildcard man/man1/*.ps), $(INSTALL) -m 644 $(psfile) $(DESTDIR)$(docdir) ;)
+ 	$(foreach txtfile, $(wildcard man/nonlatin/*/man1/*.txt), $(MKDIR) -p -m 755 $(DESTDIR)$(docdir)/$(word 3,$(subst /, ,$(txtfile),)) ;)
+ 	$(foreach txtfile, $(wildcard man/nonlatin/*/man1/*.txt), $(INSTALL) -m 644 $(txtfile) $(DESTDIR)$(docdir)/$(word 3,$(subst /, ,$(txtfile),)) ;)
+ 	$(foreach htmlfile, $(wildcard man/nonlatin/*/man1/*.$(HTMLEXT)), $(MKDIR) -p -m 755 $(DESTDIR)$(docdir)/$(word 3,$(subst /, ,$(htmlfile),)) ;)
