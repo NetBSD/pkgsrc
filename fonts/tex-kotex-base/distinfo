@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/11/29 20:35:32 minskim Exp $
+$NetBSD: distinfo,v 1.6 2014/01/08 05:12:08 minskim Exp $
 
-SHA1 (tex-kotex-base-0.3-1/kotex-base.tar.xz) = 66b062cde4cc3507084f6e1ce6b293d4ea06c175
-RMD160 (tex-kotex-base-0.3-1/kotex-base.tar.xz) = c41d02da4382c764fbf09c439965ac351f0f6c5e
-Size (tex-kotex-base-0.3-1/kotex-base.tar.xz) = 47015352 bytes
+SHA1 (tex-kotex-base-0.3-4/kotex-base.tar.xz) = 5a1e4f5be2c9ad846e6fd20014c996d716d572a3
+RMD160 (tex-kotex-base-0.3-4/kotex-base.tar.xz) = e95e74bcf3e6d34179f142c1f8ce185e1bae3125
+Size (tex-kotex-base-0.3-4/kotex-base.tar.xz) = 47155808 bytes
