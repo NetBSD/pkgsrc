@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.155 2014/01/08 16:30:30 ryoon Exp $
+$NetBSD: CHANGES-2014,v 1.156 2014/01/08 16:33:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -172,3 +172,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/startbug1 version 1.6.01 [ryoon 2014-01-08]
 	Updated converters/dos2unix to 6.0.4 [ryoon 2014-01-08]
 	Updated shells/zsh to 5.0.5 [ryoon 2014-01-08]
+	Updated net/aria2 to 1.18.2 [ryoon 2014-01-08]
