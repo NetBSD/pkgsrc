@@ -1,0 +1,6 @@
+The bundle consists of: a tool for collecting text for later
+re-use, a tool for typesetting the "meta-information" within a
+text, a tool for use in constructing macros with multiple
+optional parameters, a package for multiple column parallel
+texts, a tool for processing key-value structured lists, and
+macros for typesetting a number as a German-language string.
