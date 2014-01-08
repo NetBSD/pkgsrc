@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.145 2014/01/08 02:03:51 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.146 2014/01/08 04:43:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -160,3 +160,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated comms/asterisk18 to 1.8.25.0 [jnemeth 2014-01-07]
 	Added print/tex-sauerj version 2013 [minskim 2014-01-08]
 	Added print/tex-sauerj-doc version 2013 [minskim 2014-01-08]
+	Added print/tex-lipsum version 1.2 [minskim 2014-01-08]
+	Added print/tex-lipsum-doc version 1.2 [minskim 2014-01-08]
