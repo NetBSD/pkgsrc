@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/10 00:24:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/08 05:12:08 minskim Exp $
 share/texmf-dist/fonts/afm/kotex-base/gothic/outgtb00.afm
 share/texmf-dist/fonts/afm/kotex-base/gothic/outgtb01.afm
 share/texmf-dist/fonts/afm/kotex-base/gothic/outgtb02.afm
@@ -6357,5 +6357,10 @@ share/texmf-dist/tex/latex/kotex-base/utf/LUCutbt.fd
 share/texmf-dist/tex/latex/kotex-base/utf/LUCutgr.fd
 share/texmf-dist/tex/latex/kotex-base/utf/LUCutgt.fd
 share/texmf-dist/tex/latex/kotex-base/utf/LUCuttz.fd
+share/texmf-dist/tex/latex/kotex-base/utf/c70utbt.fd
+share/texmf-dist/tex/latex/kotex-base/utf/c70utgr.fd
+share/texmf-dist/tex/latex/kotex-base/utf/c70utgt.fd
+share/texmf-dist/tex/latex/kotex-base/utf/c70uttz.fd
+share/texmf-dist/tex/latex/kotex-base/utf/dhucs-untype1.sty
 share/texmf-dist/tex/latex/kotex-base/utf/hfontspec.ut
 share/texmf-dist/tex/latex/kotex-base/utf/oblivoir/hfontspec.obut
