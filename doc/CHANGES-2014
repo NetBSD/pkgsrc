@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.157 2014/01/08 20:56:19 tron Exp $
+$NetBSD: CHANGES-2014,v 1.158 2014/01/08 23:05:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -174,3 +174,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated shells/zsh to 5.0.5 [ryoon 2014-01-08]
 	Updated net/aria2 to 1.18.2 [ryoon 2014-01-08]
 	Updated net/cacti to 0.8.8b [tron 2014-01-08]
+	Added multimedia/libaacs version 0.7.0 [wiz 2014-01-08]
