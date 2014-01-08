@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.148 2014/01/08 05:13:32 minskim Exp $
+$NetBSD: CHANGES-2014,v 1.149 2014/01/08 06:22:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -165,3 +165,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added print/tex-tufte-latex version 3.5.0 [minskim 2014-01-08]
 	Added print/tex-tufte-latex-doc version 3.5.0 [minskim 2014-01-08]
 	Updated fonts/tex-kotex-base to 0.3nb1 [minskim 2014-01-08]
+	Updated www/p5-Mojolicious to 4.66 [wen 2014-01-08]
