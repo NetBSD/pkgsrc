@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/31 18:05:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/01/08 21:47:55 wiz Exp $
 bin/dmake
 man/man1/dmake.1
 share/dmake/startup/config.mk
 share/dmake/startup/startup.mk
-share/dmake/startup/unix/linux/macros.mk
+share/dmake/startup/unix/${STARTUPOS}/macros.mk
 share/dmake/startup/unix/macros.mk
 share/dmake/startup/unix/recipes.mk
