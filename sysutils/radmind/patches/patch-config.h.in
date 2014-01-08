@@ -1,0 +1,15 @@
+$NetBSD: patch-config.h.in,v 1.1.2.2 2014/01/08 18:53:27 tron Exp $
+
+--- config.h.in.orig	2010-12-13 03:42:49.000000000 +0000
++++ config.h.in
+@@ -1,6 +1,9 @@
+-/* Size of off_T */
++/* Size of off_t */
+ #undef SIZEOF_OFF_T
+ 
++/* Size of time_t */
++#undef SIZEOF_TIME_T
++
+ /* Version number of package */
+ #undef VERSION
+ 

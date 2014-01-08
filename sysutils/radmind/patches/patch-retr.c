@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2007/09/04 11:55:44 hauke Exp $
+$NetBSD: patch-retr.c,v 1.1.2.2 2014/01/08 18:53:27 tron Exp $
 
---- retr.c.orig	2007-07-11 05:01:42.000000000 +0200
+--- retr.c.orig	2010-12-13 03:42:49.000000000 +0000
 +++ retr.c
 @@ -47,7 +47,6 @@ extern int		verbose;
  extern int		showprogress;

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2010/11/29 15:24:23 hauke Exp $
+$NetBSD: patch-libsnet_snet.c,v 1.1.2.2 2014/01/08 18:53:27 tron Exp $
 
---- libsnet/snet.c.orig	2010-11-28 20:37:52.000000000 +0000
+--- libsnet/snet.c.orig	2010-12-13 03:43:00.000000000 +0000
 +++ libsnet/snet.c
 @@ -792,7 +792,6 @@ snet_read1( sn, buf, len, tv )
      fd_set		fds;
