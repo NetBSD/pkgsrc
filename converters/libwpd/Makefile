@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/08/24 21:50:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.29 2014/01/08 10:19:16 jperkin Exp $
 
 DISTNAME=	libwpd-0.9.9
 CATEGORIES=	converters
@@ -23,4 +23,5 @@ PKGCONFIG_OVERRIDE+=	libwpd-0.9.pc.in libwpd-stream-0.9.pc.in
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-private-field
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
