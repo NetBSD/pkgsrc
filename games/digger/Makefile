@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/10/10 00:07:23 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/09 14:50:09 jperkin Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -26,4 +26,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/digger ${DESTDIR}${PREFIX}/bin/digger
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
