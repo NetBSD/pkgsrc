@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/10/28 04:15:11 asau Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/09 14:38:33 jperkin Exp $
 
 DISTNAME=	minisat-2.2.0
 CATEGORIES=	math
@@ -23,4 +23,5 @@ do-install:
 	$(INSTALL_PROGRAM) $(WRKSRC)/simp/minisat \
 		$(DESTDIR)$(PREFIX)/bin/minisat
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
