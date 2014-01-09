@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/10/10 14:42:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/09 11:38:27 jperkin Exp $
 #
 
 DISTNAME=	libgxps-0.2.2
@@ -32,4 +32,5 @@ pre-configure:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
