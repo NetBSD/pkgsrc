@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/09/04 12:31:24 obache Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/09 10:39:18 jperkin Exp $
 
 DISTNAME=	libpuzzle-0.11
 PKGREVISION=	12
@@ -26,5 +26,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/THANKS ${DESTDIR}${EGDIR}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
