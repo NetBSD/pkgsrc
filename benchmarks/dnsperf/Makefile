@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/30 20:31:18 tron Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/09 11:37:31 jperkin Exp $
 
 DISTNAME=	dnsperf-src-2.0.0.0-1
 PKGNAME=	dnsperf-2.0.0.0
@@ -20,4 +20,5 @@ USE_BUILTIN.bind=	no
 REPLACE_SH+=	resperf-report
 
 .include "../../net/bind99/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
