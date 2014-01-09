@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 08:09:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/09 14:44:32 jperkin Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,5 +14,6 @@ LICENSE=	modified-bsd
 PYDISTUTILSPKG=	yes
 
 .include "../../devel/libmemcached/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/12/12 10:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/09 14:51:55 jperkin Exp $
 #
 
 DISTNAME=		REminiscence-0.1.6
@@ -25,8 +25,6 @@ DEFINES+=        -DSYS_LITTLE_ENDIAN
 PKG_FAIL_REASON+=	"Unknown endianness."
 .endif
 
-.include "../../devel/SDL/buildlink3.mk"
-
 INSTALLATION_DIRS=	bin share/doc/REminiscence
 
 do-install:
@@ -34,4 +32,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/REminiscence
 
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
