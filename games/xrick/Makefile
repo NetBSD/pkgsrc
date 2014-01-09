@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/06 11:55:02 asau Exp $
+# $NetBSD: Makefile,v 1.25 2014/01/09 14:47:10 jperkin Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -37,4 +37,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data.zip ${DESTDIR}${PREFIX}/share/xrick
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
