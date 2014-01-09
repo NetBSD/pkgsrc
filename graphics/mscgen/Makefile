@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/09/04 12:31:25 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/09 10:42:22 jperkin Exp $
 #
 
 DISTNAME=		mscgen-src-0.20
@@ -20,5 +20,6 @@ USE_TOOLS+=		gmake pkg-config
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
