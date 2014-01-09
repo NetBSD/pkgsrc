@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:41:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/09 14:42:54 jperkin Exp $
 #
 
 DISTNAME=	cdrkit-1.1.9
@@ -19,5 +19,7 @@ CMAKE_ARGS+=	-DMANSUBDIR=${PKGMANDIR}
 
 REPLACE_PERL=	3rd-party/dirsplit/dirsplit
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
