@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/09/05 15:29:05 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2014/01/09 19:03:08 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.10.2
@@ -55,7 +55,6 @@ SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 
 PLIST_SRC=		${PKGDIR}/PLIST.common
 .if ${OPSYS} == "Darwin"
-# XXX this is not recorded in distinfo
 DISTNAME=		PyQt-mac-gpl-${PYQT_VERSION}
 .else
 DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
