@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.996 2013/12/31 19:57:16 rodent Exp $
+# $NetBSD: Makefile,v 1.997 2014/01/09 12:32:01 jperkin Exp $
 #
 
 COMMENT=	Networking tools
@@ -404,7 +404,6 @@ SUBDIR+=	p5-Net-Bind
 SUBDIR+=	p5-Net-Bonjour
 SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-CIDR-Set
-SUBDIR+=	p5-Net-CUPS
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DHCP
 SUBDIR+=	p5-Net-DNS
