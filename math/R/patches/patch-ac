@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.30 2013/08/13 19:53:30 markd Exp $
+$NetBSD: patch-ac,v 1.31 2014/01/09 13:52:41 jperkin Exp $
+
+Do not include system paths in R_LD_LIBRARY_PATH.
 
 --- configure.orig	2013-05-08 22:06:02.000000000 +0000
 +++ configure
@@ -20,6 +22,15 @@ $NetBSD: patch-ac,v 1.30 2013/08/13 19:53:30 markd Exp $
    LTOALL=-flto
  fi
  
+@@ -20375,7 +20375,7 @@ case "${host_os}" in
+     ## look-up sequence. Such automatic override has proven to break things
+     ## like system frameworks (e.g. ImageIO or OpenGL framework).
+     ;;
+-  *)
++  donotuse*)
+     for arg in ${LDFLAGS}; do
+       case "${arg}" in
+         -L*)
 @@ -23015,6 +23015,11 @@ fi
  	  done
  	  ;;
