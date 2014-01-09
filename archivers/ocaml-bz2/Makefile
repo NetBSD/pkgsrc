@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/16 15:31:40 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/09 14:26:17 jperkin Exp $
 
 PKGNAME=	ocaml-bz2-${VERSION}
 DISTNAME=	camlbz2-${VERSION}
@@ -25,6 +25,7 @@ PLIST_VARS+=	opt
 PLIST.opt=	yes
 .endif
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
