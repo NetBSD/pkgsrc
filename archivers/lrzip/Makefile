@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/14 18:39:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/09 15:34:02 jperkin Exp $
 
 DISTNAME=	lrzip-0.616
 PKGREVISION=	1
@@ -20,5 +20,7 @@ PKGCONFIG_OVERRIDE+=	lrzip.pc.in
 
 REPLACE_BASH+=	lrztar
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
