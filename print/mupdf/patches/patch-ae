@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.2 2012/08/21 19:50:54 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2014/01/09 14:25:23 mef Exp $
 
-avoid namespace conflict on NetBSD
+Avoid namespace conflicts with bswap(3).
 
---- fitz/crypt_sha2.c.orig	2012-08-16 13:55:20.000000000 +0000
-+++ fitz/crypt_sha2.c
+--- source/fitz/crypt-sha2.c.orig	2013-08-14 12:41:20.000000000 +0000
++++ source/fitz/crypt-sha2.c
 @@ -17,7 +17,7 @@ static inline int isbigendian(void)
  	return *(char*)&one == 0;
  }
@@ -66,7 +66,7 @@ avoid namespace conflict on NetBSD
 +	context->buffer.u64[15] = mup_bswap64(context->count[0]);
  	transform512(context->state, context->buffer.u64);
  
- 	for (j = 0; j < 16; j++)
+ 	for (j = 0; j < 8; j++)
 -		((uint64_t *)digest)[j] = bswap64(context->state[j]);
 +		((uint64_t *)digest)[j] = mup_bswap64(context->state[j]);
  	memset(context, 0, sizeof(fz_sha512));

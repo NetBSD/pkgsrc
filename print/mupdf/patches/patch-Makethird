@@ -1,0 +1,15 @@
+$NetBSD: patch-Makethird,v 1.1 2014/01/09 14:25:23 mef Exp $
+
+libcurl (www/curl) support. By default mupdf can be installed with curl
+support *only* building it in ${WRKSRC}/thirdparty.
+
+--- Makethird.orig	2013-08-14 12:41:20.000000000 +0000
++++ Makethird
+@@ -444,5 +444,6 @@ $(CURL_OUT)/%.o: $(CURL_DIR)/lib/%.c	| $
+ CURL_CFLAGS := -I$(CURL_DIR)/include
+ CURL_LIBS := $(SYS_CURL_DEPS)
+ else
+-NOCURL := yes
++CURL_CFLAGS := $(SYS_CURL_CFLAGS)
++CURL_LIBS := $(SYS_CURL_LIBS) $(SYS_CURL_DEPS)
+ endif
