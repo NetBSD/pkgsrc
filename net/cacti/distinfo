@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.3 2012/12/12 10:48:43 wiz Exp $
+$NetBSD: distinfo,v 1.3.10.1 2014/01/09 23:14:33 spz Exp $
 
-SHA1 (cacti-0.8.8a.tar.gz) = e66f5fde96b28b273a9e62f79f8a7bb8827812c2
-RMD160 (cacti-0.8.8a.tar.gz) = 1462a71af844810a3451c24fd733b3f2351b75df
-Size (cacti-0.8.8a.tar.gz) = 2273280 bytes
+SHA1 (cacti-0.8.8b.tar.gz) = 84979416ae08d586064328d6451a3108b74a3b06
+RMD160 (cacti-0.8.8b.tar.gz) = a2c88961565c6b5d593b4f2603514139800c9145
+Size (cacti-0.8.8b.tar.gz) = 2272130 bytes
 SHA1 (patch-cacti.sql) = 37e18026c4136630d939ab5a7a4d6336bf166282
+SHA1 (patch-host.php) = 679fd76c81a719d949e023cecc4cc0c47ac6acf4
 SHA1 (patch-include_global.php) = fb0d2f15596b051c60ed6032ecb9038315b7c663
 SHA1 (patch-include_global__settings.php) = 54ffd0c3fc9d927595b1568a874c45a4a6033f7b
-SHA1 (patch-install_index.php) = 84b25c39a4ce1bc6144cffcdb9e32bf257cfcae6
+SHA1 (patch-install_index.php) = e5ee36159968e1ca160aba953e02b9e80a2eb5d9
+SHA1 (patch-lib_api_device.php) = 0a2d495a0245c8957bfd5214a5e79dbb31f135c4
