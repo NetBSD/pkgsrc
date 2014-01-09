@@ -1,0 +1,3 @@
+talloc is a hierarchical pool based memory allocator with destructors.
+It is the core memory allocator used in Samba, and has made a huge
+difference in many aspects of Samba4 development.
