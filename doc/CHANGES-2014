@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.176 2014/01/09 12:33:20 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.177 2014/01/09 12:50:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added devel/talloc version 2.1.0 [wiz 2014-01-09]
 	Added mail/notmuch version 0.17 [wiz 2014-01-09]
 	Removed net/p5-Net-CUPS [jperkin 2014-01-09]
+	Updated x11/libdrm to 2.4.51 [wiz 2014-01-09]
