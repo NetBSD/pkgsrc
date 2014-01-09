@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/07/05 16:53:29 sno Exp $
+$NetBSD: distinfo,v 1.3 2014/01/09 07:42:20 wen Exp $
 
-SHA1 (MooseX-Types-Perl-0.101341.tar.gz) = f1e50a63bf3918555300de850e3748bad5c843a8
-RMD160 (MooseX-Types-Perl-0.101341.tar.gz) = 143abaa91cfaa1df911410cfbd9ba8aaf451af01
-Size (MooseX-Types-Perl-0.101341.tar.gz) = 11482 bytes
+SHA1 (MooseX-Types-Perl-0.101342.tar.gz) = c2a3319c3e38bba4cf5d30e59f93585e640802a5
+RMD160 (MooseX-Types-Perl-0.101342.tar.gz) = 4adf45fe250e2b718e57c07e86dcabb132d5f659
+Size (MooseX-Types-Perl-0.101342.tar.gz) = 13897 bytes
