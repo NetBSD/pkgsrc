@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2013/10/10 14:42:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2014/01/09 23:14:33 spz Exp $
 #
 
-DISTNAME=		cacti-0.8.8a
-PKGREVISION=		8
+DISTNAME=		cacti-0.8.8b
 CATEGORIES=		net
 MASTER_SITES=		http://www.cacti.net/downloads/
 
