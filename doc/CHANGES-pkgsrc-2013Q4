@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.5 2014/01/08 18:54:26 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.6 2014/01/09 21:00:32 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -27,3 +27,5 @@ Pullup ticket #4288 - requested by wiz
 graphics/graphviz: security patch
 Pullup ticket #4289 - requested by hauke
 sysutils/radmind: bug fix patch
+Pullup ticket #4291 - requested by fhajny
+lang/ruby200-base: bug fix patch
