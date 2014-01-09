@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2012/09/12 00:24:41 asau Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/09 13:05:20 wiz Exp $
 
 DISTNAME=	libcddb-1.3.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcddb/}
 EXTRACT_SUFX=	.tar.bz2
