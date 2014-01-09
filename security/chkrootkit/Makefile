@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/06/16 10:11:58 shattered Exp $
+# $NetBSD: Makefile,v 1.21 2014/01/09 11:49:00 jperkin Exp $
 #
 
 DISTNAME=		chkrootkit-0.49
@@ -40,11 +40,6 @@ PROGRAMS+=	check_wtmpx
 PLIST.wtmpx=	yes
 CFLAGS+=	-DSOLARIS2
 LDFLAGS+=	-lsocket
-.  if empty(CC_VERSION:Mgcc-*)
-MAKE_ENV+=	STATIC="-B static"
-.  else
-MAKE_ENV+=	STATIC="-static"
-.  endif
 .else
 MAKE_ENV+=	STATIC="-static"
 .endif
