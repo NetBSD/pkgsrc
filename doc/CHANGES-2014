@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.171 2014/01/09 08:04:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.172 2014/01/09 11:00:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Types-Structured to 0.30 [wen 2014-01-09]
 	Updated devel/p5-MooseX-Types-URI to 0.05 [wen 2014-01-09]
 	Updated time/p5-DateTime to 1.06 [wen 2014-01-09]
+	Updated devel/libnet10 to 1.0.2anb2 [jperkin 2014-01-09]
