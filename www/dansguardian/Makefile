@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/07/12 10:45:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/09 14:31:00 jperkin Exp $
 
 DISTNAME=	dansguardian-${VERSION}.source
 PKGNAME=	dansguardian-${VERSION}
@@ -189,5 +189,6 @@ show-conffiles:
 
 USE_LANGUAGES=	c c++
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

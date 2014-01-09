@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/01 11:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/09 14:29:31 jperkin Exp $
 #
 
 # history: upstream renamed 0.11 to 0.1.1;
@@ -31,4 +31,5 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
