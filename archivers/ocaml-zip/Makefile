@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/04/03 12:29:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/09 14:27:05 jperkin Exp $
 #
 
 PKGNAME=	ocaml-zip-${VERSION}
@@ -24,6 +24,7 @@ BUILD_TARGET+=	allopt
 PLIST.opt=	yes
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
