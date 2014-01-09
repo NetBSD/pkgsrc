@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/09/04 12:31:25 obache Exp $
+# $NetBSD: Makefile,v 1.50 2014/01/09 11:19:25 jperkin Exp $
 
 DISTNAME=	fly-1.6.5
 PKGREVISION=	21
@@ -35,5 +35,6 @@ do-install:
 	cd ${WRKSRC}/examples; ${INSTALL_DATA} * \
 		${DESTDIR}${PREFIX}/share/examples/fly
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
