@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/10/08 09:57:31 asau Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/09 11:16:18 jperkin Exp $
 #
 
 DISTNAME=	multitail-4.0.6
+PKGREVISION=	1
 CATEGORIES=	misc sysutils
 MASTER_SITES=	http://www.vanheusden.com/multitail/
 EXTRACT_SUFX=	.tgz
@@ -16,6 +17,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
 
 CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
 		${PKG_SYSCONFDIR:Q}/multitail.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-lutil
+LDFLAGS+=		-lsocket -lnsl
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/multitail ${DESTDIR}${PREFIX:Q}/bin/
