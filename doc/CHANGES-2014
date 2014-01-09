@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.169 2014/01/09 07:52:37 wen Exp $
+$NetBSD: CHANGES-2014,v 1.170 2014/01/09 07:57:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Types-Perl to 0.101342 [wen 2014-01-09]
 	Updated devel/p5-MooseX-Types-Stringlike to 0.002 [wen 2014-01-09]
 	Updated devel/p5-MooseX-Types-Structured to 0.30 [wen 2014-01-09]
+	Updated devel/p5-MooseX-Types-URI to 0.05 [wen 2014-01-09]
