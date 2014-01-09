@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/02/16 11:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2014/01/09 16:55:16 jperkin Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_src
@@ -27,6 +27,15 @@ SCONS_ARGS+=		usePortAudio=0
 SCONS_ARGS+=		buildInterfaces=0
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		strip
+SUBST_STAGE.strip=	pre-build
+SUBST_FILES.strip=	install.py installer/misc/mkpackage.py
+SUBST_SED.strip=	-e 's/--strip-unneeded//g'
+.endif
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS} ${SCONS_ARGS}

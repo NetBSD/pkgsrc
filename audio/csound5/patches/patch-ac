@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
+$NetBSD: patch-ac,v 1.7 2014/01/09 16:55:16 jperkin Exp $
 
 --- SConstruct.orig	2006-03-15 15:22:43.000000000 +0000
 +++ SConstruct
-@@ -50,6 +50,10 @@ def today():
+@@ -50,6 +50,12 @@ def today():
  def getPlatform():
      if sys.platform[:5] == 'linux':
          return 'linux'
@@ -10,10 +10,12 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
 +        return 'netbsd'
 +    elif sys.platform[:9] == 'dragonfly':
 +        return 'dragonfly'
++    elif sys.platform[:6] == 'sunos5':
++        return 'sunos5'
      elif sys.platform[:3] == 'win':
          return 'mingw'
      elif sys.platform[:6] == 'darwin':
-@@ -207,7 +211,7 @@ opts.Add('buildOSXGUI',
+@@ -207,7 +213,7 @@ opts.Add('buildOSXGUI',
  # This section also sets up customized options for third-party libraries, which
  # should take priority over default options.
  
@@ -22,7 +24,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
  
  customCPPPATH = commonEnvironment['customCPPPATH']
  commonEnvironment.Prepend(CPPPATH = customCPPPATH)
-@@ -285,11 +289,11 @@ if commonEnvironment['MSVC'] == '0':
+@@ -285,11 +291,11 @@ if commonEnvironment['MSVC'] == '0':
  
  if getPlatform() == 'linux':
      commonEnvironment.Append(CCFLAGS = "-DLINUX")
@@ -37,11 +39,11 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
  elif getPlatform() == 'darwin':
      commonEnvironment.Append(CCFLAGS = "-DMACOSX")
      commonEnvironment.Append(CPPPATH = '/usr/local/include')
-@@ -335,6 +339,15 @@ elif getPlatform() == 'mingw':
+@@ -335,6 +341,15 @@ elif getPlatform() == 'mingw':
      pythonLinkFlags = []
      pythonLibraryPath = []
      pythonLibs = ['python%s' % commonEnvironment['pythonVersion'].replace('.', '')]
-+elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
++elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
 +    commonEnvironment.Append(CCFLAGS = Split(os.environ['CFLAGS']))
 +    commonEnvironment.Append(CXXFLAGS = Split(os.environ['CXXFLAGS']))
 +    commonEnvironment.Append(LINKFLAGS = Split(os.environ['LDFLAGS']))
@@ -53,20 +55,20 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
  
  # Check for prerequisites.
  # We check only for headers; checking for libs may fail
-@@ -485,7 +498,7 @@ def buildzip(env, target, source):
+@@ -485,7 +500,7 @@ def buildzip(env, target, source):
  # library version is CS_VERSION.CS_APIVERSION
  csoundLibraryVersion = '5.1'
  csoundLibraryName = 'csound'
 -if getPlatform() == 'linux' and commonEnvironment['useDouble'] != '0':
-+if (getPlatform() == 'linux' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly') and commonEnvironment['useDouble'] != '0':
++if (getPlatform() == 'linux' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5') and commonEnvironment['useDouble'] != '0':
      csoundLibraryName += '64'
  # flags for linking with the Csound library
  libCsoundLinkFlags = []
-@@ -526,6 +539,12 @@ if commonEnvironment['buildRelease'] !=
+@@ -526,6 +541,12 @@ if commonEnvironment['buildRelease'] !=
              tmp += '64'
          s = '-DCS_DEFAULT_PLUGINDIR=\\"%s\\"' % tmp
          csoundLibraryEnvironment.Append(CPPFLAGS = [s])
-+    if getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
++    if getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
 +        tmp = '%s/lib/csound5/plugins' % commonEnvironment['prefix']
 +        if commonEnvironment['useDouble'] != '0':
 +            tmp += '64'
@@ -75,7 +77,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
  csoundDynamicLibraryEnvironment = csoundLibraryEnvironment.Copy()
  csoundDynamicLibraryEnvironment.Append(LIBS = ['sndfile'])
  if getPlatform() == 'mingw':
-@@ -550,6 +569,11 @@ if getPlatform() == 'mingw':
+@@ -550,6 +571,11 @@ if getPlatform() == 'mingw':
      csoundDynamicLibraryEnvironment['ENV']['PATH'] = os.environ['PATH']
  elif getPlatform() == 'linux':
      csoundDynamicLibraryEnvironment.Append(LIBS = ['dl', 'm', 'pthread'])
@@ -87,7 +89,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
  csoundInterfacesEnvironment = csoundDynamicLibraryEnvironment.Copy()
  
  if buildOSXFramework:
-@@ -776,9 +800,17 @@ else:
+@@ -776,9 +802,17 @@ else:
          csoundProgramEnvironment.Append(LIBS = ['dl'])
          vstEnvironment.Append(LIBS = ['dl'])
          guiProgramEnvironment.Append(LIBS = ['dl'])
@@ -108,16 +110,16 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      if getPlatform() == 'darwin':
          csoundProgramEnvironment.Append(LINKFLAGS = Split('''
              -framework Carbon -framework CoreAudio -framework CoreMidi
-@@ -989,7 +1021,7 @@ makePlugin(pluginEnvironment, 'stdopcod'
+@@ -989,7 +1023,7 @@ makePlugin(pluginEnvironment, 'stdopcod'
  pluginLibraries.append('opcodes.dir')
  MacOSX_InstallPlugin('opcodes.dir')
  
 -if getPlatform() == 'linux' or getPlatform() == 'darwin':
-+if getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
++if getPlatform() == 'linux' or getPlatform() == 'darwin' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
      makePlugin(pluginEnvironment, 'control', ['Opcodes/control.c'])
  makePlugin(pluginEnvironment, 'ftest', ['Opcodes/ftest.c'])
  makePlugin(pluginEnvironment, 'mixer', ['Opcodes/mixer.cpp'])
-@@ -1042,6 +1074,13 @@ else:
+@@ -1042,6 +1076,13 @@ else:
              -framework Carbon -framework CoreAudio -framework CoreMidi
              -framework ApplicationServices
          '''))
@@ -131,7 +133,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      makePlugin(widgetsEnvironment, 'widgets',
                 ['InOut/FL_graph.cpp', 'InOut/winFLTK.c', 'InOut/widgets.cpp'])
  
-@@ -1060,7 +1099,11 @@ if not (commonEnvironment['useALSA'] ==
+@@ -1060,7 +1101,11 @@ if not (commonEnvironment['useALSA'] ==
  else:
      print "CONFIGURATION DECISION: Building ALSA plugin."
      alsaEnvironment = pluginEnvironment.Copy()
@@ -144,16 +146,16 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      makePlugin(alsaEnvironment, 'rtalsa', ['InOut/rtalsa.c'])
  
  if getPlatform() == 'mingw':
-@@ -1082,6 +1125,8 @@ else:
+@@ -1082,6 +1127,8 @@ else:
      elif getPlatform() == 'mingw':
          portaudioEnvironment.Append(LIBS = ['winmm', 'dsound'])
          portaudioEnvironment.Append(LIBS = csoundWindowsLibraries)
-+    elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
++    elif getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
 +        portaudioEnvironment.ParseConfig('pkg-config --cflags --libs portaudio-2.0')
      makePlugin(portaudioEnvironment, 'rtpa', ['InOut/rtpa.c'])
  
  if not (commonEnvironment['useJack'] == '1' and jackFound):
-@@ -1091,6 +1136,9 @@ else:
+@@ -1091,6 +1138,9 @@ else:
      jackEnvironment = pluginEnvironment.Copy()
      if getPlatform() == 'linux':
          jackEnvironment.Append(LIBS = ['jack', 'asound', 'pthread'])
@@ -163,7 +165,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      else:
          jackEnvironment.Append(LIBS = ['jack', 'pthread'])
      makePlugin(jackEnvironment, 'rtjack', ['InOut/rtjack.c'])
-@@ -1100,7 +1148,11 @@ if not (commonEnvironment['useOSC'] == '
+@@ -1100,7 +1150,11 @@ if not (commonEnvironment['useOSC'] == '
  else:
      print "CONFIGURATION DECISION: Building OSC plugin."
      oscEnvironment = pluginEnvironment.Copy()
@@ -176,7 +178,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      if getPlatform() == 'mingw':
          oscEnvironment.Append(LIBS = csoundWindowsLibraries)
          oscEnvironment.Append(SHLINKFLAGS = ['-Wl,--enable-stdcall-fixup'])
-@@ -1118,8 +1170,10 @@ else:
+@@ -1118,8 +1172,10 @@ else:
          fluidEnvironment.Append(CPPFLAGS = ['-DFLUIDSYNTH_NOT_A_DLL'])
          fluidEnvironment.Append(LIBS = ['winmm', 'dsound'])
          fluidEnvironment.Append(LIBS = csoundWindowsLibraries)
@@ -188,7 +190,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      makePlugin(fluidEnvironment, 'fluidOpcodes',
                 ['Opcodes/fluidOpcodes/fluidOpcodes.c'])
  
-@@ -1237,6 +1291,13 @@ else:
+@@ -1237,6 +1293,13 @@ else:
          guiProgramEnvironment.Prepend(LINKFLAGS = ['-mwindows'])
          vstEnvironment.Append(LIBS = ['fltk_images', 'fltk'])
          guiProgramEnvironment.Append(LINKFLAGS = '-mwindows')
@@ -202,7 +204,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      guiProgramEnvironment.Prepend(LIBS = ['_CsoundVST'])
      for option in vstEnvironment['CCFLAGS']:
          if string.find(option, '-D') == 0:
-@@ -1420,8 +1481,10 @@ else:
+@@ -1420,8 +1483,10 @@ else:
          stkEnvironment.Append(LIBS = ['stdc++'])
      if getPlatform() == 'mingw':
          stkEnvironment.Append(LIBS = csoundWindowsLibraries)
@@ -214,7 +216,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      # This is the one that actually defines the opcodes.
      # They are straight wrappers, as simple as possible.
      stk = makePlugin(stkEnvironment, 'stk', ['Opcodes/stk/stkOpcodes.cpp'])
-@@ -1443,6 +1506,8 @@ else:
+@@ -1443,6 +1508,8 @@ else:
      elif getPlatform() == 'mingw':
          pyEnvironment['ENV']['PATH'] = os.environ['PATH']
          pyEnvironment.Append(SHLINKFLAGS = '--no-export-all-symbols')
@@ -223,16 +225,16 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      pythonOpcodes = makePlugin(pyEnvironment, 'py',
                                 ['Opcodes/py/pythonopcodes.c'])
      if getPlatform() == 'mingw' and pythonLibs[0] < 'python24':
-@@ -1461,7 +1526,7 @@ if commonEnvironment['buildPDClass']=='1
+@@ -1461,7 +1528,7 @@ if commonEnvironment['buildPDClass']=='1
          pdClass = pdClassEnvironment.Program(
              'csoundapi~.pd_darwin',
              'frontends/csoundapi_tilde/csoundapi_tilde.c')
 -    elif getPlatform() == 'linux':
-+    elif getPlatform() == 'linux' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly':
++    elif getPlatform() == 'linux' or getPlatform() == 'netbsd' or getPlatform() == 'dragonfly' or getPlatform() == 'sunos5':
          pdClass = pdClassEnvironment.SharedLibrary(
              'csoundapi~.pd_linux',
              'frontends/csoundapi_tilde/csoundapi_tilde.c',
-@@ -1493,6 +1558,11 @@ if commonEnvironment['buildTclcsound'] =
+@@ -1493,6 +1560,11 @@ if commonEnvironment['buildTclcsound'] =
          '''))
      elif getPlatform() == 'linux':
          csTclEnvironment.Append(LIBS = ['tcl8.4', 'tk8.4', 'dl', 'pthread'])
@@ -244,7 +246,7 @@ $NetBSD: patch-ac,v 1.6 2012/06/27 21:26:28 sbd Exp $
      elif getPlatform() == 'mingw':
          csTclEnvironment.Append(LIBS = ['tcl84', 'tk84'])
          csTclEnvironment.Append(LIBS = csoundWindowsLibraries)
-@@ -1591,18 +1661,18 @@ else:
+@@ -1591,18 +1663,18 @@ else:
  
  PREFIX = commonEnvironment['prefix']
  
