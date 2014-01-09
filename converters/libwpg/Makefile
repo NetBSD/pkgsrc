@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/05/31 12:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/09 09:33:55 jperkin Exp $
 
 DISTNAME=	libwpg-0.2.0
 PKGREVISION=	2
@@ -27,4 +27,5 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .endif
 
 .include "../../converters/libwpd/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
