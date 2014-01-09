@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/05/31 12:41:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/09 09:32:21 jperkin Exp $
 #
 
 DISTNAME=	gift-0.11.8.1
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--enable-libmagic
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/lib/libgift.pc.in
 
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
