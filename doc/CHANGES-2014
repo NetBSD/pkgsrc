@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.162 2014/01/09 07:13:11 wen Exp $
+$NetBSD: CHANGES-2014,v 1.163 2014/01/09 07:18:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -179,3 +179,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated fonts/ghostscript-cidfonts to 20000901nb5 [mef 2014-01-09]
 	Updated devel/p5-MooseX-Getopt to 0.59 [wen 2014-01-09]
 	Updated devel/p5-MooseX-Method-Signatures to 0.47 [wen 2014-01-09]
+	Updated devel/p5-MooseX-Types to 0.41 [wen 2014-01-09]
