@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/02/22 21:12:25 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2014/01/09 11:00:14 jperkin Exp $
 
 SHA1 (libnet-1.0.2a.tar.gz) = 804eaf43bb90f93e505d46a9668c914a112bf136
 RMD160 (libnet-1.0.2a.tar.gz) = 43dd2edc31e56b42792727b88d81342dc26d3308
@@ -6,5 +6,5 @@ Size (libnet-1.0.2a.tar.gz) = 140191 bytes
 SHA1 (patch-aa) = fa71db191c421aa1b36d1107236645fdde0bc8f9
 SHA1 (patch-ab) = 56a2cb8b214529fdaacdbc6154ec2fc88edfa1c8
 SHA1 (patch-ac) = 73c68c9e6ca1dfc751cf8d5b00444fa38ae87e70
-SHA1 (patch-ad) = 44256848f62919540893913469d88f5a7177d742
+SHA1 (patch-ad) = 237a8caae854df28790b3038c0b782b95b336004
 SHA1 (patch-ae) = 12777de08a91b76d1b0194b39551215bab74222f

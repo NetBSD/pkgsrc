@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:18 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/09 11:00:14 jperkin Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
 PKGNAME=	${DISTNAME:S/libnet/libnet10/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/deprecated/
 
@@ -22,11 +22,11 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBNET_CONFIG_CFLAGS="-I${PREFIX}/include/libnet10" \
 		LIBNET_CONFIG_LIBS=${LDFLAGS:M*:Q}
 
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	pre-configure
-SUBST_FILES.man=	Makefile.in
-SUBST_SED.man=		-e 's,@MAN_PREFIX@,${PREFIX}/${PKGMANDIR}/man3,g'
-SUBST_MESSAGE.man=	Fixing path to man files.
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	Makefile.in libnet-config.in
+SUBST_SED.vars=		-e 's,@MAN_PREFIX@,${PREFIX}/${PKGMANDIR}/man3,g'
+SUBST_SED.vars+=	-e 's!@COMPILER_RPATH_FLAG@!${COMPILER_RPATH_FLAG}!g'
 
 INSTALLATION_DIRS=	bin lib share/examples ${PKGMANDIR}/man3
 
