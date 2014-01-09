@@ -1,9 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2006/06/25 00:01:44 hubertf Exp $
+$NetBSD: patch-aa,v 1.7 2014/01/09 11:16:18 jperkin Exp $
 
---- Makefile.orig	2006-06-12 21:45:57.000000000 +0200
+Fix path to config file.
+
+--- Makefile.orig	2006-06-12 19:45:57.000000000 +0000
 +++ Makefile
-@@ -4,7 +4,7 @@ DESTDIR=/
- CONFIG_FILE=$(DESTDIR)/etc/multitail.conf
+@@ -1,10 +1,10 @@
+ include version
+ 
+ DESTDIR=/
+-CONFIG_FILE=$(DESTDIR)/etc/multitail.conf
++CONFIG_FILE=${PKG_SYSCONFDIR}/multitail.conf
  
  DEBUG=-g #  -D_DEBUG  -W -pedantic # -pg #-fprofile-arcs
 -LDFLAGS=-lpanel -lncurses -lutil -lm $(DEBUG)
