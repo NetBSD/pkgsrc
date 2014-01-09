@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2013/12/25 12:12:36 mef Exp $
+# $NetBSD: Makefile,v 1.20 2014/01/09 00:46:25 mef Exp $
 
 DISTNAME=	ghostscript-cidfonts-20000901
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,6 +25,12 @@ FILES_SUBST+=		GS_RESOURCEDIR=${GS_RESOURCEDIR:Q}
 FILES_SUBST+=		PKG_INFO=${PKG_INFO:Q}
 
 REQD_DIRS=		${GS_RESOURCEDIR} ${GS_RESOURCEDIR}/CIDFont
+
+.if   !empty(PKG_OPTIONS.gs_type:Mghostscript-gpl)
+. include       "../../print/ghostscript-gpl/Makefile.common"
+.else
+. include       "../../print/ghostscript-agpl/Makefile.common"
+.endif
 
 do-install:	# nothing
 
