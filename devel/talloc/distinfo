@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/09 11:57:04 wiz Exp $
+
+SHA1 (talloc-2.1.0.tar.gz) = d079597f3f02a7ca3716645728a8a46016a1dd7d
+RMD160 (talloc-2.1.0.tar.gz) = 89f56c902cc48e6359264836bec04714e7a4f7f8
+Size (talloc-2.1.0.tar.gz) = 416097 bytes
