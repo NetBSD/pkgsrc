@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.2 2013/09/10 14:41:18 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2014/01/09 15:45:18 jperkin Exp $
+
+cfmakeraw compatability for SunOS.
 
 --- lpstyl.c.orig	1999-03-31 09:05:21.000000000 +0000
 +++ lpstyl.c
-@@ -1015,10 +1015,13 @@ size_t readFileScanline(char *bufK, char
+@@ -443,7 +443,15 @@ int main(int argc, char **argv)
+ 		struct termios t;
+ 		
+ 		tcgetattr(1, &t);
++#ifdef __sun
++		t.c_iflag &= ~(IMAXBEL|IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL|IXON);
++		t.c_oflag &= ~OPOST;
++		t.c_lflag &= ~(ECHO|ECHONL|ICANON|ISIG|IEXTEN);
++		t.c_cflag &= ~(CSIZE|PARENB);
++		t.c_cflag |= CS8;
++#else
+ 		cfmakeraw(&t);
++#endif
+ 		cfsetispeed(&t, B57600);
+ 		cfsetospeed(&t, B57600);
+ 		if(tcsetattr(1, TCSAFLUSH, &t) == -1)
+@@ -1015,10 +1023,13 @@ size_t readFileScanline(char *bufK, char
  					if((i & 0x03) == 0)
  					{
  						/* write the output */
@@ -20,7 +38,7 @@ $NetBSD: patch-aa,v 1.2 2013/09/10 14:41:18 joerg Exp $
  						cmyk = 0;
  					}
  				}
-@@ -1031,10 +1034,10 @@ size_t readFileScanline(char *bufK, char
+@@ -1031,10 +1042,10 @@ size_t readFileScanline(char *bufK, char
  				}
  				
  				/* write the final part */
@@ -35,7 +53,7 @@ $NetBSD: patch-aa,v 1.2 2013/09/10 14:41:18 joerg Exp $
  			}
  			else
  			{
-@@ -1327,7 +1330,7 @@ void sendEncodedData(unsigned char *buff
+@@ -1327,7 +1338,7 @@ void sendEncodedData(unsigned char *buff
  
  	if(verbose)
  	{
@@ -44,7 +62,7 @@ $NetBSD: patch-aa,v 1.2 2013/09/10 14:41:18 joerg Exp $
  				ProcName, size);
  	}	
  	begin[0] = 'G';
-@@ -1827,7 +1830,8 @@ void waitStatus(int stat, int canHandleP
+@@ -1827,7 +1838,8 @@ void waitStatus(int stat, int canHandleP
  static int inputBack = -1;
  size_t inputRead(void *buffer, size_t size)
  {
