@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.164 2014/01/09 07:23:02 wen Exp $
+$NetBSD: CHANGES-2014,v 1.165 2014/01/09 07:32:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -181,3 +181,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/p5-MooseX-Method-Signatures to 0.47 [wen 2014-01-09]
 	Updated devel/p5-MooseX-Types to 0.41 [wen 2014-01-09]
 	Updated devel/p5-MooseX-Types-Common to 0.001012 [wen 2014-01-09]
+	Updated devel/p5-MooseX-Types-JSON to 0.03 [wen 2014-01-09]
