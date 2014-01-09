@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/09/04 12:31:24 obache Exp $
+# $NetBSD: Makefile,v 1.36 2014/01/09 10:33:19 jperkin Exp $
 
 DISTNAME=	gdchart0.11.5dev
 PKGNAME=	gdchart-0.11.5
@@ -40,6 +40,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/gdc_pie_samp.c \
 		${DESTDIR}${PREFIX}/share/examples/gdchart
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
