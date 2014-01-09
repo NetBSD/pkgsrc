@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.179 2014/01/09 14:26:58 mef Exp $
+$NetBSD: CHANGES-2014,v 1.180 2014/01/09 23:49:53 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -174,6 +174,7 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated shells/zsh to 5.0.5 [ryoon 2014-01-08]
 	Updated net/aria2 to 1.18.2 [ryoon 2014-01-08]
 	Updated net/cacti to 0.8.8b [tron 2014-01-08]
+	Updated net/rabbitmq to 3.2.2nb1 [dholland 2014-01-08]
 	Added multimedia/libaacs version 0.7.0 [wiz 2014-01-08]
 	Added multimedia/libbdplus version 0.1.0 [wiz 2014-01-08]
 	Updated fonts/ghostscript-cidfonts to 20000901nb5 [mef 2014-01-09]
