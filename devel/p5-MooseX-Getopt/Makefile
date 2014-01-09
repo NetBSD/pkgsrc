@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2013/10/02 14:38:16 wen Exp $
+# $NetBSD: Makefile,v 1.26 2014/01/09 06:54:03 wen Exp $
 #
 
-DISTNAME=	MooseX-Getopt-0.58
+DISTNAME=	MooseX-Getopt-0.59
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
@@ -12,8 +12,9 @@ COMMENT=	Perl 5 Moose role for processing command line options
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Getopt-Long-Descriptive>=0.081:../../devel/p5-Getopt-Long-Descriptive
-DEPENDS+=	p5-Moose>=0.56:../../devel/p5-Moose
+DEPENDS+=	p5-Moose>=0:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
+DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 
 BUILD_DEPENDS+=	p5-Path-Tiny>=0.009:../../filesystems/p5-Path-Tiny
 BUILD_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
