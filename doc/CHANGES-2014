@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.173 2014/01/09 11:16:26 jperkin Exp $
+$NetBSD: CHANGES-2014,v 1.174 2014/01/09 12:02:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -190,3 +190,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated time/p5-DateTime to 1.06 [wen 2014-01-09]
 	Updated devel/libnet10 to 1.0.2anb2 [jperkin 2014-01-09]
 	Updated misc/multitail to 4.0.6nb1 [jperkin 2014-01-09]
+	Added devel/talloc version 2.1.0 [wiz 2014-01-09]
