@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/07 14:22:52 mef Exp $
-share/ghostscript/${PKGVERSION}/Resource/Font/GothicBBB-Medium-H
-share/ghostscript/${PKGVERSION}/Resource/Font/GothicBBB-Medium-EUC-H
-share/ghostscript/${PKGVERSION}/Resource/Font/Ryumin-Light-EUC-H
-share/ghostscript/${PKGVERSION}/Resource/Font/Ryumin-Light-H
-share/ghostscript/${PKGVERSION}/Resource/Font/Ryumin-Light-Identity-H
-share/ghostscript/${PKGVERSION}/Resource/Init/cidfmap
+@comment $NetBSD: PLIST,v 1.2 2014/01/09 08:08:55 mef Exp $
+share/ghostscript/${PKGVERSION_NOREV}/Resource/Font/GothicBBB-Medium-H
+share/ghostscript/${PKGVERSION_NOREV}/Resource/Font/GothicBBB-Medium-EUC-H
+share/ghostscript/${PKGVERSION_NOREV}/Resource/Font/Ryumin-Light-EUC-H
+share/ghostscript/${PKGVERSION_NOREV}/Resource/Font/Ryumin-Light-H
+share/ghostscript/${PKGVERSION_NOREV}/Resource/Font/Ryumin-Light-Identity-H
+share/ghostscript/${PKGVERSION_NOREV}/Resource/Init/cidfmap
