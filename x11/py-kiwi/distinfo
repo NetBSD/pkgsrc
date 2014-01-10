@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/02/04 10:36:53 obache Exp $
+$NetBSD: distinfo,v 1.3 2014/01/10 14:43:36 jperkin Exp $
 
 SHA1 (kiwi-1.9.29.tar.bz2) = 500dd0ca8c2afd5c37ee247f70ce6116e84c8247
 RMD160 (kiwi-1.9.29.tar.bz2) = 8ccd6e870feff191d165909a88b8609cbfb8bcb8
 Size (kiwi-1.9.29.tar.bz2) = 561545 bytes
+SHA1 (patch-kiwi_dist.py) = ae71526c8ed204d6639ff5e9b9f7c800adc962f1
