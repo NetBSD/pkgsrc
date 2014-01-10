@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/10/10 14:42:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2014/01/10 14:43:36 jperkin Exp $
 #
 
 DISTNAME=	kiwi-1.9.29
@@ -19,8 +19,9 @@ USE_TOOLS+=		msgfmt
 
 SUBST_CLASSES+=		localedir
 SUBST_STAGE.localedir=	pre-configure
-SUBST_FILES.localedir=	setup.py
+SUBST_FILES.localedir=	setup.py kiwi/dist.py
 SUBST_SED.localedir=	-e 's|share/locale|${PKGLOCALEDIR}/locale|'
+SUBST_VARS.localedir=	PKGLOCALEDIR
 
 # tarball contains neither api nor howto.
 post-install:
