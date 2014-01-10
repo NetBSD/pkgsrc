@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/10 22:43:33 cheusov Exp $
+bin/dsh
+man/ja/man1/dsh.1
+man/ja/man5/dsh.conf.5
+man/man1/dsh.1
+man/man5/dsh.conf.5
+share/examples/dsh/dsh.conf
+share/locale/ja/LC_MESSAGES/dsh.mo
