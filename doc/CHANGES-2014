@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.182 2014/01/10 01:49:25 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.183 2014/01/10 02:12:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -199,3 +199,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated print/mupdf to 1.3 [mef 2014-01-09]
 	Updated lang/ghc-bootstrap to 6.8.3nb1 [dholland 2014-01-09]
 	Added www/py-flask-babel version 0.9 [rodent 2014-01-10]
+	Updated editors/emacs-snapshot to 24.3.50.20140101 [minskim 2014-01-10]
