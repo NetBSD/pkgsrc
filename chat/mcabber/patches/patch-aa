@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2014/01/10 09:50:42 wiz Exp $
+
+Handle correctly panel on NetBSD, not sure it is correct in general
+
+--- mcabber/screen.h.orig	2012-12-02 13:27:32.000000000 +0000
++++ mcabber/screen.h
+@@ -7,14 +7,12 @@
+ 
+ #if HAVE_NCURSESW_NCURSES_H
+ # include <ncursesw/ncurses.h>
+-# include <ncursesw/panel.h>
+ #elif HAVE_NCURSES_NCURSES_H
+ # include <ncurses/ncurses.h>
+-# include <ncurses/panel.h>
+ #else
+ # include <ncurses.h>
+-# include <panel.h>
+ #endif
++# include <panel.h>
+ 
+ #if defined(WITH_ENCHANT) || defined(WITH_ASPELL)
+ void spellcheck_init(void);

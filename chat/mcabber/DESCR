@@ -1,0 +1,3 @@
+mcabber is a small Jabber console client, it supports SSL, OTR,
+MUC, history logging, commands completion and external actions
+triggers.
