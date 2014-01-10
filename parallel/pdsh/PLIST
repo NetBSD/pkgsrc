@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/10 21:30:09 cheusov Exp $
+bin/dshbak
+bin/pdcp
+bin/pdsh
+bin/rpdcp
+lib/pdsh/dshgroup.la
+lib/pdsh/execcmd.la
+lib/pdsh/machines.la
+lib/pdsh/sshcmd.la
+lib/pdsh/xrcmd.la
+man/man1/dshbak.1
+man/man1/pdcp.1
+man/man1/pdsh.1
+man/man1/rpdcp.1
