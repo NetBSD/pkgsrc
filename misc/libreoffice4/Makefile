@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/01 11:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/10 20:07:50 joerg Exp $
 
 VER=		4.1.3.2
 DISTNAME=	libreoffice-${VER}
@@ -213,6 +213,8 @@ CONFIGURE_ARGS+=	--without-system-jfreereport
 # internal sane should be used for effective developement.
 CONFIGURE_ARGS+=	--without-system-sane
 CONFIGURE_ARGS+=	--without-system-servlet-api
+# sbin might not be in PATH
+CONFIGURE_ARGS+=	SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
 
 # more REPLACE_PERL are needed.
 REPLACE_PERL=	sd/res/webview/editpic.pl
