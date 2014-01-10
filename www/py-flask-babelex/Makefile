@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/27 18:27:33 kleink Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/10 01:51:54 rodent Exp $
 
 DISTNAME=	Flask-BabelEx-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-BabelEx/
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	https://github.com/mrjoes/flask-babelex/
-COMMENT=	Adds i18n/l10n support to Flask applications
+COMMENT=	Adds i18n and l10n support for Flask based on Babel and pytz
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
