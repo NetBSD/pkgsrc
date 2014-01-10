@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/11/30 16:25:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/10 12:00:58 jperkin Exp $
 
 DISTNAME=	db-4.6.21
 PKGNAME=	${DISTNAME:S/db/db46/}
@@ -21,7 +21,6 @@ CONFIGURE_DIRS=		build_unix
 CONFIGURE_SCRIPT=	../dist/configure
 
 CONFIGURE_ARGS+=	--enable-cxx
-CONFIGURE_ARGS+=	--enable-rpc
 CONFIGURE_ARGS+=	--enable-compat185
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db46
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db46_,
@@ -51,6 +50,13 @@ PTHREAD_OPTS+=		native
 .endif
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		rpc
+
+.if ${OS_VARIANT} != "SmartOS"
+CONFIGURE_ARGS+=	--enable-rpc
+PLIST.rpc=		yes
+.endif
 
 .if ${OPSYS} == "MirBSD"
 PLIST_SRC=		PLIST.${OPSYS}
