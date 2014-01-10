@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.38 2013/12/06 12:02:46 wiz Exp $
+$NetBSD: distinfo,v 1.39 2014/01/10 09:40:44 pho Exp $
 
 SHA1 (bison-3.0.2.tar.xz) = aeb1e3544007124009e5203afe86a5676580d444
 RMD160 (bison-3.0.2.tar.xz) = 0a945ce5710a79332fbe594255305f244c24dd74
 Size (bison-3.0.2.tar.xz) = 1927296 bytes
+SHA1 (patch-Makefile.in) = 3baa1974d877e921c88b30c730739f8350599060
 SHA1 (patch-lib_isnan.c) = c5d2603447064c95e8bbc75a24c09366b752bad6

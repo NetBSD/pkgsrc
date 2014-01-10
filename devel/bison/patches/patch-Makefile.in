@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile.in,v 1.3 2014/01/10 09:40:44 pho Exp $
+
+As we don't have a separate directory for builddir, AM_CPPFLAGS gets
+resolved to "-I. -Ilib -I. -I./lib". This causes a trouble with some C
+preprocessors because headers like lib/unistd.in.h use "#include_next"
+directive and they all result in an infinite recursion. I think the
+semantics of the combination of duplicate -I and "#include_next" is
+not defined but I'm not sure.
+
+--- Makefile.in.orig	2013-12-05 13:58:54.000000000 +0000
++++ Makefile.in
+@@ -2191,7 +2191,7 @@ AM_YFLAGS = -d -v -Werror -Wall -Wno-yac
+ # Initialization before completion by local.mk's.
+ AM_CFLAGS = $(WARN_CFLAGS)
+ # Find builddir/src/scan-code.c etc.
+-AM_CPPFLAGS = -I. -Ilib -I$(top_srcdir) -I$(top_srcdir)/lib
++AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/lib
+ 
+ # The BUILT_SOURCES created by this Makefile snippet are not used via #include
+ # statements but through direct file reference. Therefore this snippet must be
