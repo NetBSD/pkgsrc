@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2013/07/12 10:44:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/10 20:02:08 joerg Exp $
 #
 
 DISTNAME=	apache-cassandra-${CASSANDRA_VER}
 PKGNAME=	apache-cassandra-${CASSANDRA_VER:S/-//}
 PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
+#MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
+MASTER_SITES=	http://archive.apache.org/dist/cassandra/1.2.4/
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	tonnerre@NetBSD.org
