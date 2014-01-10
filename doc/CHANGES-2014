@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.186 2014/01/10 09:51:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.187 2014/01/10 13:16:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -203,3 +203,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/ucommon to 6.1.0 [rodent 2014-01-10]
 	Updated net/libzrtpcpp to 4.1.2 [rodent 2014-01-10]
 	Added chat/mcabber version 0.10.2 [wiz 2014-01-10]
+	Updated textproc/py-xlrd to 0.9.2 [adam 2014-01-10]
