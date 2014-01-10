@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/02/15 19:33:26 hans Exp $
+$NetBSD: distinfo,v 1.10 2014/01/10 20:01:02 joerg Exp $
 
 SHA1 (30375-akode-2.0.2.tar.bz2) = 10ad1e335bc53c2a90d133b493568324514c729c
 RMD160 (30375-akode-2.0.2.tar.bz2) = fa0322367d8e24e541007d3f9e508c3c31370d96
@@ -20,4 +20,4 @@ SHA1 (patch-akode-lib-fast_resampler.cpp) = d244060bf2ab0035296ef96ab7f20460230f
 SHA1 (patch-akode-lib-volumefilter.cpp) = b070ec761fbb4fe34376f57b953fdc5529cf3068
 SHA1 (patch-akode_plugins_sun__sink_sun__sink.cpp) = 1c6019f0b27b0a910f9e5126605a5dc5317b7e15
 SHA1 (patch-al) = b910d7a82a1a341e8b3929e09f6d16470bdbb34f
-SHA1 (patch-am) = bea0c2195a15cafdb9f7c5b3f469cb11e118a079
+SHA1 (patch-am) = 4dfe0ef9dfb74ea9c4d2c02801860e307484c148
