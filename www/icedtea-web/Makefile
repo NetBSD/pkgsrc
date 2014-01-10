@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/01/01 11:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2014/01/10 20:08:16 joerg Exp $
 
 # Keep icedtea-web distfile in sync with lang/openjdk7/icedtea-extras.mk
 DISTNAME=	icedtea-web-81dfc0552a1c
@@ -15,7 +15,7 @@ COMMENT=	Java browser plugin and Web Start launcher
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoconf automake gmake gsed perl pkg-config zip
+USE_TOOLS+=		autoconf automake bash gmake gsed perl pkg-config zip
 LICENSE=		gnu-gpl-v2
 
 REPLACE_PERL=		javac.in
