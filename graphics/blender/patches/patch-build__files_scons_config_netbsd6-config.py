@@ -1,8 +1,8 @@
-$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.2 2013/01/02 02:22:08 ryoon Exp $
+$NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.3 2014/01/10 20:06:46 joerg Exp $
 
 * config file for NetBSD 6
 
---- build_files/scons/config/netbsd6-config.py.orig	2012-12-22 20:01:05.000000000 +0000
+--- build_files/scons/config/netbsd6-config.py.orig	2013-11-20 14:12:04.000000000 +0000
 +++ build_files/scons/config/netbsd6-config.py
 @@ -0,0 +1,227 @@
 +CC = 'gcc'
@@ -185,7 +185,7 @@ $NetBSD: patch-build__files_scons_config_netbsd6-config.py,v 1.2 2013/01/02 02:2
 +BF_BOOST_LIB_INTERNATIONAL = 'boost_locale'
 +BF_BOOST_LIBPATH = BF_BOOST + '/lib'
 +
-+WITH_BF_OPENMP = True
++WITH_BF_OPENMP = False
 +
 +WITH_GHOST_XDND = False
 +
