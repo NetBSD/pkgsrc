@@ -1,16 +1,33 @@
-$NetBSD: distinfo,v 1.38 2013/10/12 22:11:00 ryoon Exp $
+$NetBSD: distinfo,v 1.39 2014/01/10 20:06:46 joerg Exp $
 
-SHA1 (blender-2.68a.tar.gz) = b01e73b560c791f5a6086deaed6072ef5f8dd3b3
-RMD160 (blender-2.68a.tar.gz) = ee451f735f0814e067f178097d95eb5d89592fee
-Size (blender-2.68a.tar.gz) = 40042207 bytes
-SHA1 (patch-ab) = 2541584b0a4317f32558f581649a8c5c9ac427b7
-SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 520fa968b4f1f9f10adb1055803e05dafc96f0fe
+SHA1 (blender-2.69.tar.gz) = 9500410d2457d99e685ca506bec12851454dc5d4
+RMD160 (blender-2.69.tar.gz) = 27997d071a767630baeaddc0017e19dccb99b1a9
+Size (blender-2.69.tar.gz) = 41274518 bytes
+SHA1 (patch-ab) = f752ba279aed273bb5c93ede64c2d7292f33fd83
+SHA1 (patch-build__files_scons_config_netbsd6-config.py) = a2ef239cc40430a5eaafd006b423e7f70ac9ee80
 SHA1 (patch-build__files_scons_tools_btools.py) = 09fe67666091daafcf586aa70dc19fa6964b2098
 SHA1 (patch-doc_python__api_sphinx__doc__gen.sh) = 52c9ee0e0c73b9b9628a3d82292a9588ff0060da
+SHA1 (patch-extern_carve_lib_triangulator.cpp) = ad539e2f04a3b181504c4a9135f106189fccbda0
 SHA1 (patch-extern_libmv_libmv_numeric_numeric.h) = 37649c996eda56c2a6e0776b9933df28fac645e3
 SHA1 (patch-extern_libmv_libmv_tracking_brute__region__tracker.cc) = be5fe12d44221bde94326cccb30316bcf29f9aba
+SHA1 (patch-extern_libmv_third__party_ceres_internal_ceres_collections__port.h) = 5a276e652ad222aca3ff626da4b4850e5043672c
 SHA1 (patch-extern_libmv_third__party_glog_src_config.h) = d889d56d47167222ab54fad1c8f87c7ddb02852a
 SHA1 (patch-extern_libmv_third__party_glog_src_config__netbsd.h) = 423dda12bb5871f810938666c0267ac73b3f856e
 SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef0529fe56b3e857685fbc5d1f
+SHA1 (patch-extern_rangetree_range__tree.hh) = 976881b9caad67a2cfb24039652e887867fa6cc0
+SHA1 (patch-intern_cycles_util_util__types.h) = 85624299d7b3ed354ba06406c9022393a448ad54
 SHA1 (patch-intern_ghost_SConscript) = 84dad76663e6dfc3bd6636fe8924921fe04caa2f
+SHA1 (patch-intern_itasc_Armature.cpp) = ee841eff87e7cb85657868246285644994263fa2
+SHA1 (patch-intern_itasc_kdl_frameacc.hpp) = 06c5b13e889968b87513ff8ad7952b34173147de
+SHA1 (patch-intern_itasc_kdl_frames.hpp) = afcf3d74e50e12d4b8b2efd9b6d2fdfbee8fc629
+SHA1 (patch-intern_itasc_kdl_framevel.hpp) = fbf4accd352be468d3bdc039e315a86ce42010bd
+SHA1 (patch-intern_itasc_kdl_jacobian.hpp) = 490f67d9938e321b41c4bd93ccca06fe0c2d920a
+SHA1 (patch-intern_itasc_kdl_jntarray.hpp) = ff1b5befef08c8a7eb7f542a01305854b303156d
+SHA1 (patch-intern_itasc_kdl_jntarrayacc.hpp) = 05088dc8422c7fef2c7d80fd32547e8c46fb1158
+SHA1 (patch-intern_itasc_kdl_jntarrayvel.hpp) = 5673396e00d984448543959064a0d44e23baa09b
+SHA1 (patch-intern_itasc_kdl_tree.cpp) = 15d3b38b8a936c40726407ec17ee4c2dc7e0ac53
+SHA1 (patch-intern_itasc_kdl_tree.hpp) = 776b17eb67e4a619539d41c680b221d3c6f57dc8
+SHA1 (patch-intern_itasc_kdl_treefksolverpos__recursive.cpp) = bed5ba3ac0578161f35b561a6d4d1595ca085b88
+SHA1 (patch-intern_itasc_kdl_treefksolverpos__recursive.hpp) = da02d9c1bfe1f5825b1afded32ac1b1400613c08
+SHA1 (patch-intern_itasc_kdl_treejnttojacsolver.cpp) = bde39ea3c0b56cfbc7836cf5a30b94b7adbdfaff
 SHA1 (patch-user-config.py) = a3cf1a22185496f13b068a31d4b9638c8821f941

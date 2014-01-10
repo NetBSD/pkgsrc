@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2013/12/27 01:59:42 dholland Exp $
+# $NetBSD: Makefile,v 1.101 2014/01/10 20:06:46 joerg Exp $
 
-DISTNAME=	blender-2.68a
-PKGREVISION=	3
+DISTNAME=	blender-2.69
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -24,11 +23,8 @@ FIND_PREFIX:=		SCONSDIR=scons
 
 INSTALLATION_DIRS=	bin share/blender
 
-.if ${OPSYS} == "NetBSD"
-# This doesn't seem right...
-.if !empty(OS_VERSION:M6.99.*) || !empty(OS_VERSION:M7.*)
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
 LDFLAGS+=	-lexecinfo
-.endif
 .endif
 
 # To pass LDFLAGS to compiler/linker
@@ -68,8 +64,8 @@ do-build:
 
 # build is done in install phase.
 do-install:
-	cd ${WRKSRC} && \
-		${SCONSDIR}/bin/scons ${SCONS_ARGS}
+	cd ${WRKSRC:Q} && ${PKGSRC_SETENV} ${MAKE_ENV}			\
+		${SCONSDIR}/bin/scons ${SCONS_ARGS} ${_MAKE_JOBS}
 
 CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py \
 			share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/python/lib/python3.3/venv/scripts/posix/pydoc

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.11 2013/10/12 22:11:00 ryoon Exp $
+$NetBSD: patch-ab,v 1.12 2014/01/10 20:06:46 joerg Exp $
 
---- source/blender/blenlib/intern/storage.c.orig	2013-04-25 16:35:57.000000000 +0000
+--- source/blender/blenlib/intern/storage.c.orig	2013-08-20 08:33:04.000000000 +0000
 +++ source/blender/blenlib/intern/storage.c
 @@ -42,13 +42,13 @@
  #include <time.h>
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.11 2013/10/12 22:11:00 ryoon Exp $
 -#if defined(__sun__) || defined(__sun) || defined(__NetBSD__)
 +#if defined(__sun__) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  #  include <sys/statvfs.h> /* Other modern unix os's should probably use this also */
- #elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
+ #elif !defined(__FreeBSD__) && !defined(__linux__) && (defined(__sparc) || defined(__sparc__))
  #  include <sys/statfs.h>
  #endif
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.11 2013/10/12 22:11:00 ryoon Exp $
  #  include <sys/param.h>
  #  include <sys/mount.h>
  #endif
-@@ -173,7 +173,7 @@ double BLI_dir_free_space(const char *di
+@@ -172,7 +172,7 @@ double BLI_dir_free_space(const char *di
  	return (double) (freec * bytesps * sectorspc);
  #else
  
@@ -27,12 +27,12 @@ $NetBSD: patch-ab,v 1.11 2013/10/12 22:11:00 ryoon Exp $
  	struct statvfs disk;
  #else
  	struct statfs disk;
-@@ -198,7 +198,7 @@ double BLI_dir_free_space(const char *di
+@@ -197,7 +197,7 @@ double BLI_dir_free_space(const char *di
  	if (statfs(name, &disk)) return(-1);
  #endif
  
 -#if defined(__sun__) || defined(__sun) || defined(__NetBSD__)
 +#if defined(__sun__) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  	if (statvfs(name, &disk)) return(-1);
- #elif !defined(__FreeBSD__) && !defined(linux) && (defined(__sparc) || defined(__sparc__))
+ #elif !defined(__FreeBSD__) && !defined(__linux__) && (defined(__sparc) || defined(__sparc__))
  	/* WARNING - This may not be supported by geeneric unix os's - Campbell */
