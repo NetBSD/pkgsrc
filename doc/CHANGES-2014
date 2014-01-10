@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.190 2014/01/10 21:31:07 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.191 2014/01/10 22:32:07 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated security/openssl to 1.0.1f [tron 2014-01-10]
 	Updated graphics/blender to 2.69 [joerg 2014-01-10]
 	Added parallel/pdsh version 2.29 [cheusov 2014-01-10]
+	Added devel/libdshconfig version 0.20.13 [cheusov 2014-01-10]
