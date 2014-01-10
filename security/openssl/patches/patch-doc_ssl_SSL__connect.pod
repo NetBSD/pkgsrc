@@ -1,18 +1,12 @@
-$NetBSD: patch-doc_ssl_SSL__connect.pod,v 1.1 2013/06/01 08:03:55 sbd Exp $
+$NetBSD: patch-doc_ssl_SSL__connect.pod,v 1.1.6.1 2014/01/10 18:00:40 spz Exp $
 
 Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
 
---- doc/ssl/SSL_connect.pod.orig	2013-02-11 15:02:48.000000000 +0000
-+++ doc/ssl/SSL_connect.pod
-@@ -41,18 +41,18 @@ The following return values can occur:
+--- doc/ssl/SSL_connect.pod.orig	2014-01-06 13:47:42.000000000 +0000
++++ doc/ssl/SSL_connect.pod	2014-01-10 13:30:56.000000000 +0000
+@@ -41,13 +41,13 @@
  
  =over 4
- 
--=item 1
-+=item Z<>1
- 
- The TLS/SSL handshake was successfully completed, a TLS/SSL connection has been
- established.
  
 -=item 0
 +=item Z<>0
@@ -21,8 +15,8 @@ Fix openssl pod docs to work with the very picky pod2man from perl-5.18.0.
  by the specifications of the TLS/SSL protocol. Call SSL_get_error() with the
  return value B<ret> to find out the reason.
  
--=item E<lt>0
-+=item Z<>E<lt>0
+-=item 1
++=item Z<>1
  
- The TLS/SSL handshake was not successful, because a fatal error occurred either
- at the protocol level or a connection failure occurred. The shutdown was
+ The TLS/SSL handshake was successfully completed, a TLS/SSL connection has been
+ established.
