@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2013/10/21 18:51:57 drochner Exp $
+# $NetBSD: Makefile,v 1.49 2014/01/10 14:06:49 jperkin Exp $
 
 DISTNAME=	gdl-3.10.0
 PKGREVISION=	2
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl intltool msgfmt gmake
 
+USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	gdl-3.0.pc.in
 
 .include "../../textproc/libxml2/buildlink3.mk"
