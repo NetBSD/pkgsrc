@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2014/01/10 21:30:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/10 22:45:11 cheusov Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
 
 SUBDIR+=	clusterit
 SUBDIR+=	dqs
+SUBDIR+=	dsh
 SUBDIR+=	ganglia-monitor-core
 SUBDIR+=	gridscheduler
 SUBDIR+=	hwloc
