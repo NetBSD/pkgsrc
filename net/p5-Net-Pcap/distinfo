@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/08/24 20:07:42 he Exp $
+$NetBSD: distinfo,v 1.6 2014/01/10 15:40:28 jperkin Exp $
 
 SHA1 (Net-Pcap-0.16.tar.gz) = 19093760cce2830c16c1a081a7dc324cfe043c9b
 RMD160 (Net-Pcap-0.16.tar.gz) = 12cb441018c37244f58b6647ab6047c4d7443449
 Size (Net-Pcap-0.16.tar.gz) = 82023 bytes
+SHA1 (patch-Makefile.PL) = 2a6e58e17d68fc75f1a40dbe2155b3b08ad2878e
 SHA1 (patch-aa) = bbb5a5129b6f07f3ade687f2e1405d34726bdbb7
