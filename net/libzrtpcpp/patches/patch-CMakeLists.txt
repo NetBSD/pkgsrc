@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2013/04/17 00:55:36 rodent Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2014/01/10 02:58:52 rodent Exp $
 
 Don't set LIB_SUFFIX for pkgsrc. LIBDIRNAME is set via CMAKE_ARGS.
 
---- CMakeLists.txt.orig	2012-10-17 13:16:16.000000000 +0000
+--- CMakeLists.txt.orig	2013-11-23 12:30:36.000000000 +0000
 +++ CMakeLists.txt
-@@ -71,18 +71,6 @@ endif()
- enable_arg(ccrtp true "Enable GNU ccRTP support for GNU ZRTP")
- args_help()
+@@ -80,18 +80,6 @@ include(CheckLibraryExists)
+ include(CheckIncludeFiles)
+ include(CheckFunctionExists)
  
 -if (NOT LIB_SUFFIX)
 -    set(LIBDIRNAME "lib")
@@ -20,6 +20,6 @@ Don't set LIB_SUFFIX for pkgsrc. LIBDIRNAME is set via CMAKE_ARGS.
 -    set(LIBDIRNAME "lib${LIB_SUFFIX}")
 -endif()
 -
- # setup the Thread include and lib
- find_package(Threads)
- if(CMAKE_HAVE_PTHREAD_H)
+ check_include_files(stdlib.h HAVE_STDLIB_H)
+ check_include_files(string.h HAVE_STRING_H)
+ 

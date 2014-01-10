@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2014/01/01 11:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/10 02:58:51 rodent Exp $
 
-DISTNAME=	libzrtpcpp-2.3.3
-PKGREVISION=	1
+DISTNAME=	V4.1.2
+PKGNAME=	libzrtpcpp${DISTNAME:S/V/-/1}
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNU:=ccrtp/}
+MASTER_SITES=	https://github.com/wernerd/ZRTPCPP/archive/
+FETCH_USING=	curl
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://wiki.gnutelephony.org/
 COMMENT=	ZRTP extension for GNU ccRTP
 LICENSE=	gnu-gpl-v3
 
+WRKSRC=		${WRKDIR}/ZRTPCPP-${PKGVERSION_NOREV}
+
 USE_PKGLOCALEDIR=	yes
+GCC_REQD+=		4.7
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
