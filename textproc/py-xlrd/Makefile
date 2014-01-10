@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2013/01/19 09:22:36 obache Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/10 11:14:31 adam Exp $
 
-DISTNAME=		xlrd-0.8.0
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		textproc python
-MASTER_SITES=		http://pypi.python.org/packages/source/x/xlrd/
+DISTNAME=	xlrd-0.9.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
+MASTER_SITES=	http://pypi.python.org/packages/source/x/xlrd/
 
-MAINTAINER=		obache@NetBSD.org
-HOMEPAGE=		http://www.lexicon.net/sjmachin/xlrd.htm
-COMMENT=		Python library to extract data from Microsoft Excel spread sheet files
-LICENSE=		modified-bsd
+MAINTAINER=	obache@NetBSD.org
+HOMEPAGE=	http://www.lexicon.net/sjmachin/xlrd.htm
+COMMENT=	Python library to extract data from Microsoft Excel spreadsheet files
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=		#none
 
