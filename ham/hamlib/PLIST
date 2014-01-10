@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/06/11 00:17:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/01/10 11:14:44 jperkin Exp $
 bin/rigctl
 bin/rigctld
 bin/rigmem
@@ -38,8 +38,8 @@ lib/hamlib/hamlib-prm80.la
 lib/hamlib/hamlib-racal.la
 lib/hamlib/hamlib-rft.la
 lib/hamlib/hamlib-rotorez.la
-lib/hamlib/hamlib-rpcrig.la
-lib/hamlib/hamlib-rpcrot.la
+${PLIST.rpc}lib/hamlib/hamlib-rpcrig.la
+${PLIST.rpc}lib/hamlib/hamlib-rpcrot.la
 lib/hamlib/hamlib-rs.la
 lib/hamlib/hamlib-sartek.la
 lib/hamlib/hamlib-skanti.la
@@ -62,8 +62,8 @@ man/man1/rigswr.1
 man/man1/rotctl.1
 man/man8/rigctld.8
 man/man8/rotctld.8
-man/man8/rpc.rigd.8
-man/man8/rpc.rotd.8
-sbin/rpc.rigd
-sbin/rpc.rotd
+${PLIST.rpc}man/man8/rpc.rigd.8
+${PLIST.rpc}man/man8/rpc.rotd.8
+${PLIST.rpc}sbin/rpc.rigd
+${PLIST.rpc}sbin/rpc.rotd
 share/aclocal/hamlib.m4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/05/31 12:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/10 11:14:44 jperkin Exp $
 #
 
 DISTNAME=	hamlib-1.2.15.3
@@ -22,6 +22,16 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=--without-tcl-binding \
 		--without-perl-binding \
 		--without-python-binding
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	rpc
+
+.if ${OS_VARIANT} == "SmartOS"
+CONFIGURE_ARGS+=	--without-rpc-backends
+.else
+PLIST.rpc=	yes
+.endif
 
 # The configure script is broken. It even requires a Python interpreter
 # when none is needed.
