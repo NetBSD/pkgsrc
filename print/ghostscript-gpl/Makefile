@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/10/05 05:13:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/10 21:49:22 joerg Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ghostscript.sourceforge.net/
 COMMENT=	Postscript interpreter
+
+# iconfig.c compiled before gconfig.h is created
+MAKE_JOBS_SAFE=no
 
 # Plus adobe verbatim for Resources/CMap.
 LICENSE=	gnu-gpl-v3
