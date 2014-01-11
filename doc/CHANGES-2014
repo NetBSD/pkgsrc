@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.198 2014/01/11 21:15:18 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.199 2014/01/11 22:43:56 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -223,3 +223,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/deforaos-libsystem to 0.1.7 [khorben 2014-01-11]
 	Updated x11/deforaos-libsystem to 0.1.0 [khorben 2014-01-11]
 	Updated sysutils/deforaos-browser to 0.4.13 [khorben 2014-01-11]
+	Updated graphics/gnome-icon-theme to 3.10.0 [prlw1 2014-01-11]
