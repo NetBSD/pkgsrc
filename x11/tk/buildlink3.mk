@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2013/06/06 12:53:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2014/01/11 14:41:05 adam Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -6,16 +6,16 @@ BUILDLINK_TREE+=	tk
 TK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tk+=	tk>=8.5.7
-BUILDLINK_ABI_DEPENDS.tk+=	tk>=8.5.14nb3
+BUILDLINK_ABI_DEPENDS.tk+=	tk>=8.6.1
 BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk
 
 BUILDLINK_FILES.tk+=	bin/wish*
 #
-# Make "-ltk" and "-ltk8.5" resolve into "-ltk85", so that we don't
+# Make "-ltk" and "-ltk8.6" resolve into "-ltk86", so that we don't
 # need to patch so many Makefiles.
 #
-BUILDLINK_TRANSFORM+=	l:tk:tk85
-BUILDLINK_TRANSFORM+=	l:tk8.5:tk85
+BUILDLINK_TRANSFORM+=	l:tk:tk86
+BUILDLINK_TRANSFORM+=	l:tk8.6:tk86
 
 TKCONFIG_SH?=	${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 

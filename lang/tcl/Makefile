@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2012/11/24 21:38:49 adam Exp $
+# $NetBSD: Makefile,v 1.72 2014/01/11 14:41:05 adam Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -15,11 +16,12 @@ LICENSE=	2-clause-bsd
 WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 INSTALL_TARGET=		install
+
+CHECK_PORTABILITY_SKIP=	win/configure
 
 # The test target gives better results when not run as root.
 TEST_TARGET=		test
