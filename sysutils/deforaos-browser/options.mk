@@ -1,4 +1,5 @@
-# $NetBSD: options.mk,v 1.1 2012/12/17 00:19:58 khorben Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/11 21:11:53 khorben Exp $
+#
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.deforaos-browser
 PKG_SUPPORTED_OPTIONS=	embedded
