@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2013/12/15 08:29:07 markd Exp $
+$NetBSD: distinfo,v 1.49 2014/01/11 17:48:52 wiz Exp $
 
 SHA1 (inkscape-0.48.4.tar.bz2) = 5f26f6ad191d1e7c2a9fb69a438722beb172224c
 RMD160 (inkscape-0.48.4.tar.bz2) = b089ced7694a9803fac8588d93e7e6239c71d3e8
@@ -13,9 +13,10 @@ SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
 SHA1 (patch-ah) = 6da5e0651b583f925debed97faaf6800f88463da
 SHA1 (patch-ai) = 1cd8e744848d6b52ffb4f07922e09689b5e43f61
 SHA1 (patch-aj) = 8564ee2d4e884dc31e4ad4232267f6fad09f71ee
-SHA1 (patch-ap) = cd29bd178dc2c6c9456bc09d6663d6a25acc7da1
+SHA1 (patch-ap) = 134a47053020547703906140ff744e875ca1284f
 SHA1 (patch-aq) = dd307f598741cd5f0ff35eb06dff7c685752a979
 SHA1 (patch-src_2geom_basic-intersection.cpp) = 743b13293191a74d4c0c22231e5ed7866219dfee
+SHA1 (patch-src_2geom_sbasis.h) = 483353f56f7fb01ca8c76241aca5e63d0513aba5
 SHA1 (patch-src_2geom_solve-bezier-parametric.cpp) = 71cca994451b1e7d5aba625600089d1e4a47888e
 SHA1 (patch-src_Makefile.in) = 4c07142f3a554a01d4c2b352df27c0a83ac4352b
 SHA1 (patch-src_color-profile.cpp) = 14932b25ed333925518d5140b3691a29e155cd9a
@@ -25,7 +26,13 @@ SHA1 (patch-src_dom_io_domstream.h) = 9325fc9d211eb3349628a736283ed0c475399a8b
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 02742a022a8a55852d7f0a39969153bf7f24f17e
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9e9e76049b9fdcc5192e225b4b477a104902894b
 SHA1 (patch-src_libnrtype_FontFactory.h) = 282e6ea4da7bb40c5ba8c861fdbe303259d3e864
+SHA1 (patch-src_libnrtype_Layout-TNG-OutIter.cpp) = 28870d9970946b629657f1663cbe8b325ef42b69
 SHA1 (patch-src_libvpsc_csolve__VPSC.h) = 33aa27678fa9e802af6ab95b9ea28b69d822c4cb
+SHA1 (patch-src_live__effects_lpe-perp__bisector.h) = 08c911a629d1f247bddd001716ae9b0b04a2e357
+SHA1 (patch-src_remove-last.h) = 7ae01e509216680c063bbd8acdc0fb697ebf8552
+SHA1 (patch-src_sp-item-rm-unsatisfied-cns.cpp) = 40e25393233a18372ee86655e3730a7a87701a9b
+SHA1 (patch-src_trace_siox.cpp) = 1b91dd39a07dea9de34646e37ff11cca14abae24
 SHA1 (patch-src_ui_dialog_inkscape-preferences.cpp) = f95af6d326ddf7512b67f68efe0b23bc3ebe651e
+SHA1 (patch-src_ui_tool_node.h) = 18237624e07881cf9985b0a6f2c75bbc082bede6
 SHA1 (patch-src_ui_widget_registered-widget.h) = a5c16bcd28a015959121ed8b92423762f182a71b
 SHA1 (patch-src_widgets_desktop-widget.h) = 6528b3105590bfa8b5d33d428aa8c9cbc3561225
