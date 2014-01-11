@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.196 2014/01/11 20:54:26 khorben Exp $
+$NetBSD: CHANGES-2014,v 1.197 2014/01/11 21:02:32 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -221,3 +221,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/php55 to 5.5.8 [taca 2014-01-11]
 	Updated www/drupal7 to 7.25 [taca 2014-01-11]
 	Updated devel/deforaos-libsystem to 0.1.7 [khorben 2014-01-11]
+	Updated x11/deforaos-libsystem to 0.1.0 [khorben 2014-01-11]
