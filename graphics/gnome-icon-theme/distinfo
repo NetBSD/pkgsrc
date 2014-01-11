@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2010/06/05 10:05:39 wiz Exp $
+$NetBSD: distinfo,v 1.27 2014/01/11 22:43:34 prlw1 Exp $
 
-SHA1 (gnome-icon-theme-2.30.3.tar.bz2) = 41c2c43480376f784f21487727e6c726ed60addf
-RMD160 (gnome-icon-theme-2.30.3.tar.bz2) = ffdd45c00ddff4854a4b979c539d9f12ed2dff6f
-Size (gnome-icon-theme-2.30.3.tar.bz2) = 15984407 bytes
+SHA1 (gnome-icon-theme-3.10.0.tar.xz) = 45fac73ad9852ce25b45cf82e75a1ed4860f090b
+RMD160 (gnome-icon-theme-3.10.0.tar.xz) = 2d7f1945a40d87b201e868d599e7ddd3b57eb251
+Size (gnome-icon-theme-3.10.0.tar.xz) = 16114116 bytes
