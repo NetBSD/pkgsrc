@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2013/01/31 21:45:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/11 10:52:46 adam Exp $
 share/aclocal/codeset.m4
 share/aclocal/exported.m4
+share/aclocal/extern-inline.m4
 share/aclocal/fcntl-o.m4
 share/aclocal/gettext.m4
 share/aclocal/glibc2.m4
