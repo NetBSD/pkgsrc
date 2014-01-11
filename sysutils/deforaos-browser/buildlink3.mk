@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2013/10/10 14:41:51 ryoon Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.8 2014/01/11 21:11:53 khorben Exp $
 
 BUILDLINK_TREE+=	deforaos-browser
 
