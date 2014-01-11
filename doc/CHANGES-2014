@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.192 2014/01/11 13:11:21 adam Exp $
+$NetBSD: CHANGES-2014,v 1.193 2014/01/11 16:32:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -215,3 +215,5 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/gettext-tools to 0.18.3.2 [adam 2014-01-11]
 	Updated textproc/grep to 2.16 [adam 2014-01-11]
 	Updated emulators/qemu to 1.6.2 [adam 2014-01-11]
+	Updated lang/tcl to 8.6.1 [adam 2014-01-11]
+	Updated x11/tk to 8.6.1 [adam 2013-01-11]
