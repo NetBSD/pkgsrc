@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/11 12:29:39 obache Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/11 12:32:25 obache Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
@@ -20,7 +20,6 @@ DEPENDS+=	ghostscript-cidfonts>=20000901nb3:../../fonts/ghostscript-cidfonts
 BUILD_DEFS+=	GS_CIDFMAP
 # used in options.mk to switch adobe or ttf
 SUBST_VARS=	GCR_INSTALL_TYPE
-PLIST_SUBST=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 # Set following two variables and buildlink appropriate fonts
 # GS_CIDFMAP
