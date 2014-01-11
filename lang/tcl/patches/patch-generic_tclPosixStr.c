@@ -1,24 +1,24 @@
-$NetBSD: patch-generic_tclPosixStr.c,v 1.2 2012/08/21 21:31:47 marino Exp $
+$NetBSD: patch-generic_tclPosixStr.c,v 1.3 2014/01/11 14:41:05 adam Exp $
 
 Carried over from TCL 8.4
 
---- generic/tclPosixStr.c.orig	2012-07-16 11:57:05.000000000 +0000
+--- generic/tclPosixStr.c.orig	2013-09-19 19:04:14.000000000 +0000
 +++ generic/tclPosixStr.c
-@@ -335,7 +335,7 @@ Tcl_ErrnoId(void)
- #if defined(EOPNOTSUPP) &&  (!defined(ENOTSUP) || (ENOTSUP != EOPNOTSUPP))
-     case EOPNOTSUPP: return "EOPNOTSUPP";
+@@ -344,7 +344,7 @@ Tcl_ErrnoId(void)
+ #ifdef EOTHER
+     case EOTHER: return "EOTHER";
  #endif
 -#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL))
 +#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL)) && (!defined(ERANGE) || (EOVERFLOW != ERANGE))
      case EOVERFLOW: return "EOVERFLOW";
  #endif
- #ifdef EPERM
-@@ -783,7 +783,7 @@ Tcl_ErrnoMsg(
- #if defined(EOPNOTSUPP) &&  (!defined(ENOTSUP) || (ENOTSUP != EOPNOTSUPP))
-     case EOPNOTSUPP: return "operation not supported on socket";
+ #ifdef EOWNERDEAD
+@@ -804,7 +804,7 @@ Tcl_ErrnoMsg(
+ #ifdef EOTHER
+     case EOTHER: return "other error";
  #endif
 -#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL))
 +#if defined(EOVERFLOW) && (!defined(EFBIG) || (EOVERFLOW != EFBIG)) && (!defined(EINVAL) || (EOVERFLOW != EINVAL)) && (!defined(ERANGE) || (EOVERFLOW != ERANGE))
      case EOVERFLOW: return "file too big";
  #endif
- #ifdef EPERM
+ #ifdef EOWNERDEAD
