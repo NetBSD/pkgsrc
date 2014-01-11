@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/09/07 17:37:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/11 23:13:44 prlw1 Exp $
 
-DISTNAME=		gnome-icon-theme-symbolic-3.8.3
+DISTNAME=		gnome-icon-theme-symbolic-3.10.1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme-symbolic/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -21,4 +21,5 @@ PKGCONFIG_OVERRIDE+=	gnome-icon-theme-symbolic.pc.in
 BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
