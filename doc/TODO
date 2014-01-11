@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12866 2014/01/11 16:32:55 adam Exp $
+$NetBSD: TODO,v 1.12867 2014/01/11 22:40:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-2.6.0
 	o c4-1.10 [schmonz]
 	o cal3d-0.11.0
-	o calibre-1.18
+	o calibre-1.19
 	o calligra-2.4.3 [in wip; koffice successor]
 	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -509,7 +509,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o epiphany-extensions-3.2.0
 	o eric4-4.5.18
 	o eric5-5.4.0
-	o erlang-16.2
+	o erlang-16B03
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
 	o et-2.60
@@ -741,6 +741,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libmcs-0.7.2
+	o libmikmod-3.3.5
 	o libnasl-2.3.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpcap-1.5.1
@@ -962,7 +963,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sablecc-3.7
 	o samba-4.0.14
 	o samba-4.1.0 [wip]
-	o samba-4.1.3
+	o samba-4.1.4
 	o sane-1.0.24
 	o sarg-2.2.5
 	o scew-0.4.0
