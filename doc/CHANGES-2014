@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.191 2014/01/10 22:32:07 cheusov Exp $
+$NetBSD: CHANGES-2014,v 1.192 2014/01/11 13:11:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -208,3 +208,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/blender to 2.69 [joerg 2014-01-10]
 	Added parallel/pdsh version 2.29 [cheusov 2014-01-10]
 	Added devel/libdshconfig version 0.20.13 [cheusov 2014-01-10]
+	Updated devel/gettext to 0.18.3.2 [adam 2014-01-11]
+	Updated devel/gettext-asprintf to 0.18.3.2 [adam 2014-01-11]
+	Updated devel/gettext-lib to 0.18.3.2 [adam 2014-01-11]
+	Updated devel/gettext-m4 to 0.18.3.2 [adam 2014-01-11]
+	Updated devel/gettext-tools to 0.18.3.2 [adam 2014-01-11]
+	Updated textproc/grep to 2.16 [adam 2014-01-11]
+	Updated emulators/qemu to 1.6.2 [adam 2014-01-11]
