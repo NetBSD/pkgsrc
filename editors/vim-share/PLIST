@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2013/10/07 19:26:28 morr Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/01/11 23:24:03 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -339,6 +339,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/ishd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/j.vim
 share/vim/${VIM_SUBDIR}/ftplugin/java.vim
 share/vim/${VIM_SUBDIR}/ftplugin/javascript.vim
+share/vim/${VIM_SUBDIR}/ftplugin/jproperties.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jsp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/kconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/kwt.vim
@@ -667,6 +668,7 @@ share/vim/${VIM_SUBDIR}/syntax/apache.vim
 share/vim/${VIM_SUBDIR}/syntax/apachestyle.vim
 share/vim/${VIM_SUBDIR}/syntax/aptconf.vim
 share/vim/${VIM_SUBDIR}/syntax/arch.vim
+share/vim/${VIM_SUBDIR}/syntax/arduino.vim
 share/vim/${VIM_SUBDIR}/syntax/art.vim
 share/vim/${VIM_SUBDIR}/syntax/asciidoc.vim
 share/vim/${VIM_SUBDIR}/syntax/asm.vim
@@ -937,6 +939,7 @@ share/vim/${VIM_SUBDIR}/syntax/mf.vim
 share/vim/${VIM_SUBDIR}/syntax/mgl.vim
 share/vim/${VIM_SUBDIR}/syntax/mgp.vim
 share/vim/${VIM_SUBDIR}/syntax/mib.vim
+share/vim/${VIM_SUBDIR}/syntax/mix.vim
 share/vim/${VIM_SUBDIR}/syntax/mma.vim
 share/vim/${VIM_SUBDIR}/syntax/mmix.vim
 share/vim/${VIM_SUBDIR}/syntax/mmp.vim
