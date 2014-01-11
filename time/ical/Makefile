@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2013/06/06 12:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/01/11 14:42:06 adam Exp $
 
 VER=		3.0.2
 DISTNAME=	ical-${VER}
 EXTRACT_SUFFIX=	.tar.gz
 #PKGREVISION=	1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time
 MASTER_SITES=	https://launchpad.net/ical-tcl/3.x/${VER}/+download/
 FETCH_USING=	curl

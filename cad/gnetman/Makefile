@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2013/06/06 12:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/11 14:42:01 adam Exp $
 #
 
 DISTNAME=		gnetman-11Feb05
 PKGNAME=		gnetman-20050211
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		cad
 MASTER_SITES=		http://www.viasic.com/opensource/
 

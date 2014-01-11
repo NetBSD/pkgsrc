@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2013/07/15 02:02:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2014/01/11 14:42:02 adam Exp $
 #
 
 DISTNAME=	i2cb-6.0_ALPHA
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

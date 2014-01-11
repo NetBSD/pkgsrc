@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2013/06/06 12:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2014/01/11 14:42:02 adam Exp $
 
 DISTNAME=	uudeview-0.5.20
 PKGNAME=	xdeview-0.5.20
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 

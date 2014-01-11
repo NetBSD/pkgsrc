@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2013/06/06 12:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2014/01/11 14:42:01 adam Exp $
 #
 
 DISTNAME=	itcl3.4.1
 PKGNAME=	${DISTNAME:S/itcl/tcl-itcl-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=incrtcl/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/01/01 06:55:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/11 14:42:03 adam Exp $
 
 DISTNAME=	newt-0.52.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/n/e/newt/
 
