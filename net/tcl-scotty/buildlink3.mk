@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:12 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2014/01/11 14:42:01 adam Exp $
 
 BUILDLINK_TREE+=	tcl-scotty
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tcl-scotty
 TCL_SCOTTY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tcl-scotty+=	tcl-scotty>=2.1.11
-BUILDLINK_ABI_DEPENDS.tcl-scotty+=	tcl-scotty>=2.1.11nb4
+BUILDLINK_ABI_DEPENDS.tcl-scotty+=	tcl-scotty>=2.1.11nb9
 BUILDLINK_PKGSRCDIR.tcl-scotty?=	../../net/tcl-scotty
 
 .include "../../lang/tcl/buildlink3.mk"

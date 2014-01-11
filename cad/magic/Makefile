@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2013/07/15 02:02:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2014/01/11 14:42:01 adam Exp $
 #
 
 DISTNAME=	magic-7.5.188
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/magic/archive/
 EXTRACT_SUFX=	.tgz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2013/08/30 22:36:51 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2014/01/11 14:42:04 adam Exp $
 
 DISTNAME=		sather-1.2.3
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=sather/}
 

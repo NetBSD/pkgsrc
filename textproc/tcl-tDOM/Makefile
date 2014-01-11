@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:57:03 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/11 14:42:06 adam Exp $
 #
 
 DISTNAME=	tDOM-0.8.3
 PKGNAME=	tcl-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://cloud.github.com/downloads/tDOM/tdom/
 EXTRACT_SUFX=	.tgz
