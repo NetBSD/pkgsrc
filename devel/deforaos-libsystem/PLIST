@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/16 23:55:22 khorben Exp $
-bin/AppBroker
+@comment $NetBSD: PLIST,v 1.2 2014/01/11 20:53:15 khorben Exp $
 include/System.h
-include/System/appclient.h
-include/System/appserver.h
 include/System/array.h
 include/System/buffer.h
 include/System/config.h
@@ -15,8 +12,32 @@ include/System/parser.h
 include/System/plugin.h
 include/System/string.h
 include/System/token.h
+include/System/variable.h
 lib/libSystem.a
 lib/libSystem.so
 lib/libSystem.so.0
 lib/libSystem.so.0.0
 lib/pkgconfig/libSystem.pc
+share/gtk-doc/html/libSystem/api-index-full.html
+share/gtk-doc/html/libSystem/ch01.html
+share/gtk-doc/html/libSystem/deprecated-api-index.html
+share/gtk-doc/html/libSystem/home.png
+share/gtk-doc/html/libSystem/index.html
+share/gtk-doc/html/libSystem/index.sgml
+share/gtk-doc/html/libSystem/left.png
+share/gtk-doc/html/libSystem/libSystem-array.html
+share/gtk-doc/html/libSystem/libSystem-buffer.html
+share/gtk-doc/html/libSystem/libSystem-config.html
+share/gtk-doc/html/libSystem/libSystem-error.html
+share/gtk-doc/html/libSystem/libSystem-event.html
+share/gtk-doc/html/libSystem/libSystem-file.html
+share/gtk-doc/html/libSystem/libSystem-hash.html
+share/gtk-doc/html/libSystem/libSystem-object.html
+share/gtk-doc/html/libSystem/libSystem-parser.html
+share/gtk-doc/html/libSystem/libSystem-plugin.html
+share/gtk-doc/html/libSystem/libSystem-string.html
+share/gtk-doc/html/libSystem/libSystem-token.html
+share/gtk-doc/html/libSystem/libSystem.devhelp2
+share/gtk-doc/html/libSystem/right.png
+share/gtk-doc/html/libSystem/style.css
+share/gtk-doc/html/libSystem/up.png
