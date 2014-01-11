@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/10/02 20:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/11 14:42:00 adam Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
 PKGNAME=		libtcl-nothread-8.4.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcl/}
 
