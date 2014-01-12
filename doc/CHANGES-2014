@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.201 2014/01/11 23:26:03 morr Exp $
+$NetBSD: CHANGES-2014,v 1.202 2014/01/12 00:24:21 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -226,3 +226,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated graphics/gnome-icon-theme to 3.10.0 [prlw1 2014-01-11]
 	Updated graphics/gnome-icon-theme-symbolic to 3.10.1 [prlw1 2014-01-11]
 	Updated editors/vim-share to 7.4.141 [morr 2014-01-11]
+	Updated graphics/gdk-pixbuf2 to 2.30.2 [prlw1 2014-01-12]
