@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.209 2014/01/12 11:41:55 wen Exp $
+$NetBSD: CHANGES-2014,v 1.210 2014/01/12 15:02:02 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -234,3 +234,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated textproc/p5-Pod-Elemental to 0.102364 [wen 2014-01-12]
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200000 [wen 2014-01-12]
 	Updated textproc/p5-Pod-POM to 0.29 [wen 2014-01-12]
+	Added devel/concurrencykit version 0.3.3 [mspo 2014-01-12]
