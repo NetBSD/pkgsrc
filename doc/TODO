@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12867 2014/01/11 22:40:31 wiz Exp $
+$NetBSD: TODO,v 1.12868 2014/01/12 03:27:25 mef Exp $
 
 Suggested new packages
 ======================
@@ -575,6 +575,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.20.4
 	o gfract-0.33
+	o ghostscript-gpl-9.06 [wip]
 	o gitolite-3.5.3.1
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
