@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/11/24 04:06:01 wen Exp $
+$NetBSD: distinfo,v 1.3 2014/01/12 10:46:56 wen Exp $
 
-SHA1 (Pod-Elemental-PerlMunger-0.093333.tar.gz) = 76a32f71908de3832e2bca70672c8f217c845276
-RMD160 (Pod-Elemental-PerlMunger-0.093333.tar.gz) = a02d81360c88110832e643166571fb56df6cae1d
-Size (Pod-Elemental-PerlMunger-0.093333.tar.gz) = 14456 bytes
+SHA1 (Pod-Elemental-PerlMunger-0.200000.tar.gz) = 5a2b4530821478e8e7d98750091ef7f781253a8a
+RMD160 (Pod-Elemental-PerlMunger-0.200000.tar.gz) = 4ea5c17135a3a21e0e3a339b38e3ce9b7f22db93
+Size (Pod-Elemental-PerlMunger-0.200000.tar.gz) = 15606 bytes
