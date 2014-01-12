@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1838 2014/01/10 22:30:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.1839 2014/01/12 15:00:45 mspo Exp $
 #
 
 COMMENT=	Development utilities
@@ -123,6 +123,7 @@ SUBDIR+=	cogito
 SUBDIR+=	colordiff
 SUBDIR+=	compiz-bcop
 SUBDIR+=	compizconfig-backend-gconf
+SUBDIR+=	concurrencykit
 SUBDIR+=	confuse
 SUBDIR+=	cook
 SUBDIR+=	cppcheck
