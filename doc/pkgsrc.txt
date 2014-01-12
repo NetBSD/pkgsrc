@@ -3569,7 +3569,7 @@ If the default Python versions are not supported by the software, set the
 PYTHON_VERSIONS_ACCEPTED variable to the Python versions the software is known
 to work with, from the most recent to the older one, e.g.
 
-PYTHON_VERSIONS_ACCEPTED=       31 27 26
+PYTHON_VERSIONS_ACCEPTED=       33 27 26
 
 If the packaged software is a Python module, include "../../lang/python/
 extension.mk". In this case, the package directory should be called "
