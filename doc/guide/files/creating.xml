@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.13 2013/10/12 11:58:49 rillig Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.14 2014/01/12 09:43:30 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -152,7 +152,7 @@ If the default Python versions are not supported by the software, set the
 the software is known to work with, from the most recent to the older
 one, e.g.
 <programlisting>
-PYTHON_VERSIONS_ACCEPTED=       31 27 26
+PYTHON_VERSIONS_ACCEPTED=       33 27 26
 </programlisting></para>
 
 <para>
