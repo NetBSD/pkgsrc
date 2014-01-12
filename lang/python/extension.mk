@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.35 2013/11/10 13:05:54 obache Exp $
+# $NetBSD: extension.mk,v 1.36 2014/01/12 09:01:50 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -61,9 +61,9 @@ INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
 PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 .endif
 
-# prepare Python>=32 bytecode file location change
+# prepare Python>=3.2 bytecode file location change
 # http://www.python.org/dev/peps/pep-3147/
-.if empty(_PYTHON_VERSION:M2?) && ${_PYTHON_VERSION} != "31"
+.if empty(_PYTHON_VERSION:M2?)
 PY_PEP3147?=	yes
 .endif
 .if defined(PY_PEP3147) && !empty(PY_PEP3147:M[yY][eE][sS])
