@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.997 2014/01/09 12:32:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.998 2014/01/12 15:07:11 mspo Exp $
 #
 
 COMMENT=	Networking tools
@@ -345,6 +345,7 @@ SUBDIR+=	netbsd-iscsi-initiator
 SUBDIR+=	netbsd-iscsi-target
 SUBDIR+=	netcat
 SUBDIR+=	netcat6
+SUBDIR+=	netcat-openbsd
 SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
