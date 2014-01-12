@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12869 2014/01/12 15:31:05 darcy Exp $
+$NetBSD: TODO,v 1.12870 2014/01/12 16:33:24 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -297,10 +297,6 @@ Suggested new packages
 	softether
 	http://www.softether.org/
 	VPN packages, aiming to be a better replacement for openvpn
-
-	node-js
-	http://nodejs.org/
-	Evented I/O for V8 javascript
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
