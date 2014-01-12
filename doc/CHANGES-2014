@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.206 2014/01/12 10:37:49 wen Exp $
+$NetBSD: CHANGES-2014,v 1.207 2014/01/12 10:43:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -231,3 +231,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated filesystems/p5-Path-Tiny to 0.051 [wen 2014-01-12]
 	Updated textproc/p5-String-Truncate to 1.100601 [wen 2014-01-12]
 	Updated textproc/p5-String-CRC32 to 1.5 [wen 2014-01-12]
+	Updated textproc/p5-Pod-Elemental to 0.102364 [wen 2014-01-12]
