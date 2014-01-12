@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2013/10/31 23:38:30 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/12 09:01:51 wiz Exp $
 
-DISTNAME=	bulk-medium-20131031
+DISTNAME=	bulk-medium-20140112
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -92,7 +92,6 @@ BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
 BUILD_DEPENDS+=	openjdk7-bin-[0-9]*:../../lang/openjdk7-bin
 BUILD_DEPENDS+=	python26-[0-9]*:../../lang/python26
-BUILD_DEPENDS+=	python32-[0-9]*:../../lang/python32
 BUILD_DEPENDS+=	python33-[0-9]*:../../lang/python33
 BUILD_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 BUILD_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
