@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/11/08 20:45:28 spz Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/12 22:22:25 spz Exp $
 #
 
 DISTNAME=	roller-weblogger-${ROLLER_VER}-for-tomcat
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	fastjar-[0-9]*:../../archivers/fastjar
 
 USE_JAVA=	run
 USE_JAVA2=	1.5
-ROLLER_VER=	5.0.2
+ROLLER_VER=	5.0.3
 
 PLIST_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV:Q}
 
