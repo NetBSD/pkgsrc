@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/27 19:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/12 09:41:07 wiz Exp $
 #
 
 # any of ~* is fine, they are the same and just there for Ubuntu
@@ -25,7 +25,6 @@ USE_LANGUAGES=	c
 USE_TOOLS=	pax
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_ACCEPTED=	32
 PY_PATCHPLIST=			yes
 REPLACE_PYTHON=			src/run.py
 
