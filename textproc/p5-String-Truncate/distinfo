@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/08/08 10:24:13 sno Exp $
+$NetBSD: distinfo,v 1.2 2014/01/12 10:30:51 wen Exp $
 
-SHA1 (String-Truncate-1.100600.tar.gz) = 454576c4a2ecbe0e39477c1b3f322737fe8f325b
-RMD160 (String-Truncate-1.100600.tar.gz) = 4dc434c587a15dffd75f62e0c791d8045d2c5bc3
-Size (String-Truncate-1.100600.tar.gz) = 14489 bytes
+SHA1 (String-Truncate-1.100601.tar.gz) = 9e45a5b45dd3e017e4728e082b72997987c87170
+RMD160 (String-Truncate-1.100601.tar.gz) = 23a70ce86e76e28c4648b457c4552ae861542b33
+Size (String-Truncate-1.100601.tar.gz) = 16470 bytes
