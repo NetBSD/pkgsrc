@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.205 2014/01/12 10:31:57 wen Exp $
+$NetBSD: CHANGES-2014,v 1.206 2014/01/12 10:37:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -230,3 +230,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Removed lang/python32 successor lang/python33 [wiz 2014-01-12]
 	Updated filesystems/p5-Path-Tiny to 0.051 [wen 2014-01-12]
 	Updated textproc/p5-String-Truncate to 1.100601 [wen 2014-01-12]
+	Updated textproc/p5-String-CRC32 to 1.5 [wen 2014-01-12]
