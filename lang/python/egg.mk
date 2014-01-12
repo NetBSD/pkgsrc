@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.15 2012/12/10 03:15:48 tsarna Exp $
+# $NetBSD: egg.mk,v 1.16 2014/01/12 09:01:50 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -36,7 +36,7 @@ _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 _PYSETUPTOOLSINSTALLARGS+=	--root=/
 .endif
 
-.if ${_PYTHON_VERSION} == "31" || ${_PYTHON_VERSION} == "32" || ${_PYTHON_VERSION} == "33"
+.if ${_PYTHON_VERSION} == "33"
 DEPENDS+=	${PYPKGPREFIX}-distribute-[0-9]*:../../devel/py-distribute
 .else
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c9:../../devel/py-setuptools
