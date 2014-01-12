@@ -1,0 +1,22 @@
+$NetBSD: patch-sntp_loc_pkgsrc,v 1.1 2014/01/12 17:01:02 spz Exp $
+
+--- sntp/loc/pkgsrc.orig	2014-01-12 16:25:16.000000000 +0000
++++ sntp/loc/pkgsrc
+@@ -0,0 +1,17 @@
++# pkgsrc installation and man page suffixes
++MAN
++ntp-keygen,sbin,8
++ntp-wait,sbin,8
++ntpd,sbin,8
++ntpdate,sbin,8
++ntpdc,sbin,8
++ntpdsim,sbin,8
++ntpq,sbin,8
++ntpsnmpd,sbin,8
++ntpsweep,noinst,8
++ntptrace,sbin,8
++sntp,bin,1
++ntptime,sbin,8
++calc_tickadj,sbin,8
++tickadj,sbin,8
++timetrim,sbin,8
