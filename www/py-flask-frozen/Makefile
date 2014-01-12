@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/08/04 13:11:18 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/12 09:45:24 wiz Exp $
 
 DISTNAME=	Frozen-Flask-0.11
 PKGNAME=	${PYPKGPREFIX}-flask-frozen-0.11
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 EGG_NAME=	${DISTNAME:S/-/_/}
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	31 32
 
 USE_LANGUAGES=	# empty
 

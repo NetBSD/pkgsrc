@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/01 17:56:43 kleink Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/12 09:45:24 wiz Exp $
 
 DISTNAME=	Flask-Login-0.2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,6 @@ LICENSE=	mit
 USE_LANGUAGES=	# empty
 
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	31 32
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
