@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/12 15:06:37 mspo Exp $
+
+SHA1 (msporleder-netcat-openbsd-126d9bb.tar.gz) = f84ec6215f8db920e96ac4c5825333c96c28921c
+RMD160 (msporleder-netcat-openbsd-126d9bb.tar.gz) = 527afd98b1a2ac52a7b72933f652a7a296446883
+Size (msporleder-netcat-openbsd-126d9bb.tar.gz) = 19537 bytes
