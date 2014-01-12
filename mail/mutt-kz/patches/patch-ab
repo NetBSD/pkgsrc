@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 2014/01/12 17:43:37 wiz Exp $
+
+--- Makefile.in.orig	2013-12-06 13:34:26.000000000 +0000
++++ Makefile.in
+@@ -124,7 +124,7 @@ am__mutt_SOURCES_DIST = addrbook.c alias
+ 	editmsg.c mbyte.c url.c ascii.c crypt-mod.c crypt-mod.h \
+ 	safe_asprintf.c mutt_notmuch.c mutt_notmuch.h sidebar.c
+ @BUILD_NOTMUCH_TRUE@am__objects_1 = mutt_notmuch.$(OBJEXT)
+-am_mutt_OBJECTS = addrbook.$(OBJEXT) alias.$(OBJEXT) attach.$(OBJEXT) \
++am_mutt_OBJECTS = mvchgat.$(OBJEXT) addrbook.$(OBJEXT) alias.$(OBJEXT) attach.$(OBJEXT) \
+ 	base64.$(OBJEXT) browser.$(OBJEXT) buffy.$(OBJEXT) \
+ 	color.$(OBJEXT) crypt.$(OBJEXT) cryptglue.$(OBJEXT) \
+ 	commands.$(OBJEXT) complete.$(OBJEXT) compose.$(OBJEXT) \
+@@ -342,7 +342,7 @@ DATADIRNAME = @DATADIRNAME@
+ DBX = @DBX@
+ DEBUGGER = @DEBUGGER@
+ DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" \
+-	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(datadir)/locale\" \
++	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(localedir)\" \
+ 	-DHAVE_CONFIG_H=1
+ 
+ DEPDIR = @DEPDIR@
+@@ -803,6 +803,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rfc2231.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rfc3676.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rfc822.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mvchgat.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/safe_asprintf.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/score.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/send.Po@am__quote@
+@@ -1331,11 +1332,6 @@ install-exec-hook:
+ 		rm -f $(DESTDIR)$(bindir)/mutt.dotlock ;		\
+ 		ln -sf $(DESTDIR)$(bindir)/mutt_dotlock $(DESTDIR)$(bindir)/mutt.dotlock ; \
+ 	fi
+-	if test -f $(DESTDIR)$(bindir)/mutt_dotlock && test x@DOTLOCK_GROUP@ != x ; then \
+-		chgrp @DOTLOCK_GROUP@ $(DESTDIR)$(bindir)/mutt_dotlock && \
+-		chmod @DOTLOCK_PERMISSION@ $(DESTDIR)$(bindir)/mutt_dotlock || \
+-		{ echo "Can't fix mutt_dotlock's permissions!  This is required to lock mailboxes in the mail spool directory." >&2 ; exit 1 ; } \
+-	fi
+ 
+ install-data-local:
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir)
