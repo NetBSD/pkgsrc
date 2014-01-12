@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.74 2013/07/15 02:02:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2014/01/12 17:01:02 spz Exp $
 #
 
-DISTNAME=	ntp-4.2.4p8
-PKGREVISION=	5
+DISTNAME=	ntp-dev-4.2.7p410
 CATEGORIES=	net time
-MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
+MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ntp.org/
@@ -19,6 +18,7 @@ USE_LIBTOOL=	YES
 USE_TOOLS+=	pax perl:run
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--with-locfile=loc/pkgsrc
 CONFIGURE_ENV+=	  PATH_PERL=${PERL5}
 
 DOCDIR=		${DESTDIR}${PREFIX}/share/doc/ntp4
@@ -41,13 +41,11 @@ post-install:
 
 PLIST_VARS+=	ntptime tickadj timetrim
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PLIST.ntptime=		yes
 PLIST.tickadj=		yes
 .elif ${OPSYS} == "IRIX"
 PLIST.timetrim=		yes
-.elif ${OPSYS} == "SunOS"
-PLIST.ntptime=		yes
 .endif
 
 # chroot jail support

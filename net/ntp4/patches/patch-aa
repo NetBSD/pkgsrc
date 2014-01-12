@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2009/12/21 14:48:21 tnn Exp $
+$NetBSD: patch-aa,v 1.11 2014/01/12 17:01:02 spz Exp $
 
---- include/ntp_syscall.h.orig	2004-02-25 05:57:56.000000000 +0000
+--- include/ntp_syscall.h.orig	2011-03-31 10:03:53.000000000 +0000
 +++ include/ntp_syscall.h
-@@ -14,6 +14,14 @@
+@@ -10,6 +10,14 @@
  # include <sys/timex.h>
  #endif
  
@@ -15,5 +15,5 @@ $NetBSD: patch-aa,v 1.10 2009/12/21 14:48:21 tnn Exp $
 +#endif
 +
  #ifndef NTP_SYSCALLS_LIBC
- #ifdef NTP_SYSCALLS_STD
- # define ntp_adjtime(t)		syscall(SYS_ntp_adjtime, (t))
+ # ifdef NTP_SYSCALLS_STD
+ #  define ntp_adjtime(t)	syscall(SYS_ntp_adjtime, (t))
