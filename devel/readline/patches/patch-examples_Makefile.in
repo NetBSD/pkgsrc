@@ -1,0 +1,54 @@
+$NetBSD: patch-examples_Makefile.in,v 1.1 2014/01/12 13:30:25 chopps Exp $
+
+Patch to link correctly against libtool built libs.
+
+--- examples/Makefile.in.orig	2010-12-28 20:55:32.000000000 +0000
++++ examples/Makefile.in
+@@ -58,8 +58,8 @@ LDFLAGS = -g -L.. @LDFLAGS@
+ 
+ PURIFY = @PURIFY@
+ 
+-READLINE_LIB = ../libreadline.a
+-HISTORY_LIB = ../libhistory.a
++READLINE_LIB = ../libreadline.la
++HISTORY_LIB = ../libhistory.la
+ 
+ TERMCAP_LIB = @TERMCAP_LIB@
+ 
+@@ -96,28 +96,28 @@ uninstall:
+ 	-rmdir $(DESTDIR)$(installdir)
+ 
+ rl$(EXEEXT): rl.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rl.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rl.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ rlcat$(EXEEXT): rlcat.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rlcat.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rlcat.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ rlevent$(EXEEXT): rlevent.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rlevent.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rlevent.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ fileman$(EXEEXT): fileman.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ fileman.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ fileman.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ rltest$(EXEEXT): rltest.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rltest.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rltest.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ rlptytest$(EXEEXT): rlptytest.o $(READLINE_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ rlptytest.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ rlptytest.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ rlversion$(EXEEXT): rlversion.o $(READLINE_LIB)
+-	$(CC) $(LDFLAGS) -o $@ rlversion.o $(READLINE_LIB) $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ rlversion.o $(READLINE_LIB) $(TERMCAP_LIB)
+ 
+ histexamp$(EXEEXT): histexamp.o $(HISTORY_LIB)
+-	$(PURIFY) $(CC) $(LDFLAGS) -o $@ histexamp.o -lhistory $(TERMCAP_LIB)
++	$(LIBTOOL) --mode=link $(PURIFY) $(CC) $(LDFLAGS) -o $@ histexamp.o $(HISTORY_LIB) $(TERMCAP_LIB)
+ 
+ clean mostlyclean:
+ 	$(RM) $(OBJECTS)
