@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.31 2014/01/09 13:52:41 jperkin Exp $
+$NetBSD: patch-ac,v 1.32 2014/01/13 11:25:54 jperkin Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 
@@ -205,3 +205,12 @@ Do not include system paths in R_LD_LIBRARY_PATH.
  void F77_SYMBOL(xerbla)(char *srname, int *info)
  {}
  void blas_set () {
+@@ -38085,7 +38116,7 @@ case "${host_os}" in
+     r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
+     ;;
+   solaris*)
+-    r_ld_library_defaults="/usr/lib:/lib"
++    r_ld_library_defaults="/usr/lib:/lib:/usr/lib/amd64:/lib/amd64:/usr/lib/64:/lib/64"
+     ;;
+   darwin*)
+     r_ld_library_defaults="/usr/X11R6/lib"
