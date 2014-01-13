@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.213 2014/01/12 17:44:06 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.214 2014/01/13 02:20:11 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -238,3 +238,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Added net/netcat-openbsd version 1 [mspo 2014-01-12]
 	updated net/ntp4 to ntp-dev-4.2.7p410 [spz 2014-01-12]
 	Added mail/mutt-kz version 1.5.22.1rc1 [wiz 2014-01-12]
+	Updated wm/awesome to 3.5.1nb3 [dholland 2014-01-13]
