@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2014/01/06 14:58:41 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2014/01/13 15:06:55 ryoon Exp $
 
 DISTNAME=	binutils-2.24
 CATEGORIES=	devel
@@ -21,6 +21,14 @@ REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+
+# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
+	empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
+USE_TOOLS+=		ksh
+CONFIG_SHELL=		ksh
+.endif
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
