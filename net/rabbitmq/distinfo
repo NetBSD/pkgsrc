@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2014/01/02 19:07:19 fhajny Exp $
+$NetBSD: distinfo,v 1.14 2014/01/13 12:10:23 fhajny Exp $
 
 SHA1 (rabbitmq-server-3.2.2.tar.gz) = c5de766fa9250a80080140269847416ed45fe053
 RMD160 (rabbitmq-server-3.2.2.tar.gz) = 6b59eb2a03e6e64e2938c74d6ba9686879652a0c
 Size (rabbitmq-server-3.2.2.tar.gz) = 3583974 bytes
 SHA1 (patch-aa) = 16a822321caacb0e4588791ec4dc1e909d0be4de
+SHA1 (patch-plugins-src_do-package.mk) = c1f4a6422a9cb7bac4e1d6bdb671a87a16f73764
