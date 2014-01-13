@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/07/15 09:24:57 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2014/01/13 09:59:16 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -37,7 +37,8 @@ PKG_SUGGESTED_OPTIONS+=		64bitnone
 PKG_SUGGESTED_OPTIONS+=		64bitauto
 .endif
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS" 
+# Note: dtrace command on Darwin lacks required -G option
+.if ${OPSYS} == "SunOS" 
 PKG_SUGGESTED_OPTIONS+=		dtrace
 .endif
 
