@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2014/01/13 12:37:51 obache Exp $
+# $NetBSD: Makefile,v 1.95 2014/01/13 12:44:12 obache Exp $
 
 DISTNAME=		gnome-icon-theme-3.10.0
 CATEGORIES=		graphics gnome
@@ -46,6 +46,7 @@ post-install:
 	${LIBRSVGDIR}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 48 -h 48 -o ${DESTDIR}${PREFIX}/share/icons/gnome/48x48/places/start-here.png
 	${LIBRSVGDIR}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 256 -h 256 -o ${DESTDIR}${PREFIX}/share/icons/gnome/256x256/places/start-here.png
 
+BUILDLINK_DEPMETHOD.gettext-lib=	build
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
