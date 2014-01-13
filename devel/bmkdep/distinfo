@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/01/02 00:19:22 cheusov Exp $
+$NetBSD: distinfo,v 1.5 2014/01/13 00:01:12 cheusov Exp $
 
 SHA1 (bmkdep-20131215.tar.gz) = 6bfea86a97f71ec53374dcf9ca20e3785a468194
 RMD160 (bmkdep-20131215.tar.gz) = 3834c6593c78e48e118390c465b02209cc252686
 Size (bmkdep-20131215.tar.gz) = 7570 bytes
+SHA1 (patch-mkdep.c) = cb6715b26d38d12929b118b68aa90e8914fe4564
