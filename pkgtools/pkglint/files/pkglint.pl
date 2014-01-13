@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.861 2014/01/05 11:26:06 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.862 2014/01/13 01:54:52 cheusov Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -291,7 +291,7 @@ our $program		= $0;
 # Commonly used regular expressions.
 #
 
-use constant regex_dependency_gt => qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d])+)>=(\d[^-]*)$";
+use constant regex_dependency_lge => qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d])+)[<>]=?(\d[^-*?\[\]]*)$";
 use constant regex_dependency_wildcard
 				=> qr"^((?:\$\{[\w_]+\}|[\w_\.]|-[^\d\[])+)-(?:\[0-9\]\*|\d[^-]*)$";
 use constant regex_gnu_configure_volatile_vars
@@ -3959,7 +3959,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 "foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.");
 
 				} else {
-					$line->log_warning("Unknown dependency pattern \"${value}\".");
+					$line->log_error("Unknown dependency pattern \"${value}\".");
 				}
 
 			} elsif ($value =~ m"\{") {
@@ -3997,12 +3997,12 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 				}
 
-				if ($pattern =~ regex_dependency_gt) {
+				if ($pattern =~ regex_dependency_lge) {
 #				($abi_pkg, $abi_version) = ($1, $2);
 				} elsif ($pattern =~ regex_dependency_wildcard) {
 #				($abi_pkg) = ($1);
 				} else {
-					$line->log_warning("Unknown dependency pattern \"${pattern}\".");
+					$line->log_error("Unknown dependency pattern \"${pattern}\".");
 				}
 
 			} elsif ($value =~ m":\.\./[^/]+$") {
@@ -5621,7 +5621,7 @@ sub checklines_buildlink3_mk_pre2009($$) {
 
 			if ($varname eq "BUILDLINK_ABI_DEPENDS.${bl_pkgbase}") {
 				$abi_line = $line;
-				if ($value =~ regex_dependency_gt) {
+				if ($value =~ regex_dependency_lge) {
 					($abi_pkg, $abi_version) = ($1, $2);
 				} elsif ($value =~ regex_dependency_wildcard) {
 					($abi_pkg) = ($1);
@@ -5632,7 +5632,7 @@ sub checklines_buildlink3_mk_pre2009($$) {
 			}
 			if ($varname eq "BUILDLINK_API_DEPENDS.${bl_pkgbase}") {
 				$api_line = $line;
-				if ($value =~ regex_dependency_gt) {
+				if ($value =~ regex_dependency_lge) {
 					($api_pkg, $api_version) = ($1, $2);
 				} elsif ($value =~ regex_dependency_wildcard) {
 					($api_pkg) = ($1);
@@ -5781,7 +5781,7 @@ sub checklines_buildlink3_mk_2009($$$) {
 
 			if ($varname eq "BUILDLINK_ABI_DEPENDS.${bl_pkgbase}") {
 				$abi_line = $line;
-				if ($value =~ regex_dependency_gt) {
+				if ($value =~ regex_dependency_lge) {
 					($abi_pkg, $abi_version) = ($1, $2);
 				} elsif ($value =~ regex_dependency_wildcard) {
 					($abi_pkg) = ($1);
@@ -5792,7 +5792,7 @@ sub checklines_buildlink3_mk_2009($$$) {
 			}
 			if ($varname eq "BUILDLINK_API_DEPENDS.${bl_pkgbase}") {
 				$api_line = $line;
-				if ($value =~ regex_dependency_gt) {
+				if ($value =~ regex_dependency_lge) {
 					($api_pkg, $api_version) = ($1, $2);
 				} elsif ($value =~ regex_dependency_wildcard) {
 					($api_pkg) = ($1);
