@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/12/20 14:36:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/13 13:07:51 jperkin Exp $
 #
 
 DISTNAME=	node-v0.10.24
@@ -62,4 +62,5 @@ pre-install:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
