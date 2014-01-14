@@ -1,21 +1,21 @@
-$NetBSD: patch-am,v 1.9 2013/10/20 17:57:32 joerg Exp $
+$NetBSD: patch-am,v 1.10 2014/01/14 10:21:39 markd Exp $
 
 Pkgsrc stuff
 GridEngine dev mailing list patch for "nbsd-1" issue
 ArchLinux static crypto also needs libz.a
 
---- source/aimk.orig	2011-11-28 23:06:13.000000000 +0000
+--- source/aimk.orig	2013-10-28 16:22:52.000000000 +0000
 +++ source/aimk
-@@ -961,7 +961,7 @@ if ( $SYSTEM_LIBS != 1 ) then
+@@ -937,7 +937,7 @@ if ( $SYSTEM_LIBS != 1 ) then
     # we generate a berkeley db shared lib, so we need bdb include and lib path
     set CFLAGS        = "-I$BERKELEYDB_HOME/include/${BDB_INCLUDE_SUBDIR} $CFLAGS"
-    set LFLAGS        = "-L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} $LFLAGS"
--   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR}"
-+   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} ${COMPILER_RPATH_FLAG}$BERKELEYDB_HOME/lib"
+    set LFLAGS        = "-L$BERKELEYDB_HOME/lib${BDB_LIB_SUFFIX} $LFLAGS"
+-   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib${BDB_LIB_SUFFIX}"
++   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib${BDB_LIB_SUFFIX} ${COMPILER_RPATH_FLAG}$BERKELEYDB_HOME/lib"
  endif
  set CFLAGS = "$CFLAGS -DSPOOLING_$SPOOLING_METHOD $SECFLAGS"
  
-@@ -1213,9 +1213,9 @@ case DARWIN_PPC:
+@@ -1185,9 +1185,9 @@ case DARWIN_PPC:
  
     set XMTDEF   = ""
     set XMTINCD  = "$XMTINCD -I$MOTIFHOME/include"
@@ -23,11 +23,11 @@ ArchLinux static crypto also needs libz.a
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-DNeedFunctionPrototypes -DNeedVarargsPrototypes -Wno-error $XMTDEF $XINCD"
 -   set XLIBD    = "-L$MOTIFHOME/lib -L/usr/X11R6/lib"
-+   set XLIBD    = "-L$MOTIFHOME/lib -R${MOTIFHOME}/lib -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib"
-    set XLIBS    = "-lXm -lXpm -lXt -lXext -lX11 -lSM -lICE"
++   set XLIBD    = "-L$MOTIFHOME/lib ${COMPILER_RPATH_FLAG}${MOTIFHOME}/lib -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib"
+    set XLIBS    = "-lXm -lXt -lXext -lX11 -lSM -lICE"
     if ("$ADOC" == 1) then
        set CFLAGS = "$CFLAGS -Wno-error"
-@@ -1263,7 +1263,7 @@ case FREEBSD_*:
+@@ -1234,7 +1234,7 @@ case FREEBSD_*:
     set DLLIB	 = ""
     set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
     set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
@@ -36,7 +36,7 @@ ArchLinux static crypto also needs libz.a
     set NOERR_CFLAG = "-Wno-error"
     set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
     set LIBS     = "$LIBS -lkvm"
-@@ -1273,9 +1273,9 @@ case FREEBSD_*:
+@@ -1244,9 +1244,9 @@ case FREEBSD_*:
     set AUTHLIBS = "-lcrypt -lpam"
   
     set XMTDEF   = ""
@@ -44,58 +44,32 @@ ArchLinux static crypto also needs libz.a
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
 -   set XLIBD    = "-L/usr/X11R6/lib"
-+   set XLIBD    = "-L${X11BASE}/lib ${COMPILER_RPATH_FLAGS}${X11BASE}/lib"
++   set XLIBD    = "-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib"
     set XLFLAGS  = "$XLIBD"
-    set XLIBS    = " -Xlinker -lXm -Xlinker -Bdynamic -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
-    set RM	= "rm -f"
-@@ -1294,9 +1294,9 @@ case NETBSD_*:
-    set DLLIB    = ""
-    set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
-    set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
--   set CFLAGS   = "$OFLAG -Wall -DNETBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I/usr/X11R6/include"
-+   set CFLAGS   = "$OFLAG -Wall -DNETBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I${X11BASE}/include"
-    set NOERR_CFLAG = "-Wno-error"
--   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
-+   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic -L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib"
-    set LIBS     = "$LIBS -lkvm"
-    set SHAREDLD = $CC
-    set SHARED_CFLAGS = "-fPIC"
-@@ -1304,9 +1304,9 @@ case NETBSD_*:
+    set XLIBS    = " -Xlinker -lXm -Xlinker -Bdynamic -lXt -lXext -lX11 -lSM -lICE -lXp"
+    set JAVA_ARCH = "linux"
+@@ -1275,9 +1275,9 @@ case NETBSD_*:
     set AUTHLIBS = "-lcrypt -lpam"
  
     set XMTDEF   = ""
--   set XINCD    = "$XMTINCD $XINCD -I/usr/X11/include -I/usr/pkg/include"
+-   set XINCD    = "$XMTINCD $XINCD -I/usr/X11R7/include -I/usr/pkg/include"
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
--   set XLIBD    = "-L/usr/X11R6/lib -R/usr/X11R6/lib -L/usr/pkg/lib -R /usr/pkg/lib"
+-   set XLIBD    = "-L/usr/X11R7/lib -R/usr/X11R7/lib -L/usr/pkg/lib -R /usr/pkg/lib"
 +   set XLIBD    = "-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib"
     set XLFLAGS  = "$XLIBD"
-    set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
-    set RM       = "rm -f"
-@@ -1508,6 +1508,8 @@ case LINUXSPARC64:
+    set XLIBS    = " -lXm -lXt -lXext -lX11 -lSM -lICE -lXp"
+    set JAVA_ARCH = "netbsd"
+@@ -1499,6 +1499,8 @@ case LINUX*:
        set DEBUG_FLAG = "$DEBUG_FLAG -fprofile-arcs -ftest-coverage"
     endif
  
-+   set SECLIBS_STATIC = "$SECLIBS_STATIC /usr/lib/libz.a"
++   set SECLIBS_STATIC = "-lssl -lcrypto"
 +
     if ( -f /lib/libc.so.6 ) then
        strings /lib/libc.so.6 | grep "GNU C Library" | grep '2.[234]' >& /dev/null
        if ($status == 0) then
-@@ -2103,6 +2105,13 @@ else
-   set LIBS_DIR = ${SDIR}
- endif
- 
-+
-+# we set SGE_ARCH_STRING down here because the sed command above
-+# would mess up the quotes around buildarch
-+set ARCH_STRING = SGE_ARCH_STRING='\"'${buildarch}'\"'
-+set CFLAGS = "-D$ARCH_STRING $CFLAGS"
-+set DEPEND_FLAGS = "-D$ARCH_STRING $DEPEND_FLAGS"
-+ 
- if ( $JNI == 1 ) then
- 
-    if ( "${JAVA_HOME}/${JAVA_INCL}" != /usr/include ) then
-@@ -2797,6 +2806,7 @@ if ( "$QMON" == 1 ) then
+@@ -2627,6 +2629,7 @@ if ( "$QMON" == 1 ) then
     else
        set FT_INC = ""
     endif
