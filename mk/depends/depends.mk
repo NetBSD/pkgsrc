@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.17 2014/01/14 10:52:12 cheusov Exp $
+# $NetBSD: depends.mk,v 1.18 2014/01/14 12:28:47 cheusov Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -6,7 +6,6 @@
 ### depends is a public target to install missing dependencies for
 ### the package.
 ###
-_DEPENDS_TARGETS+=	sanity-check-depends
 _DEPENDS_TARGETS+=	acquire-depends-lock
 _DEPENDS_TARGETS+=	${_COOKIE.depends}
 _DEPENDS_TARGETS+=	release-depends-lock
@@ -63,26 +62,3 @@ depends-message:
 .PHONY: pre-depends-hook
 pre-depends-hook:
 	@${DO_NADA}
-
-######################################################################
-### sanity-check-depends (PRIVATE)
-######################################################################
-### sanity-check-depends is a private target to check that DEPENDS,
-### TOOL_DEPENDS, BUILD_DEPENDS and CONFLICTS contain correct values
-###
-
-_SANITY_CHECK_DEPENDS_CMD=${AWK} '        \
-  match($$1, /[<>][^,{}]*[*?\[\]]/) {   \
-    sub(/:[^{}]*$$/, "", $$1);            \
-    print "Incorrect dependency: " $$1;   \
-    ex=1                                  \
-  } \
-  END { exit ex }'
-
-.PHONY: sanity-check-depends
-sanity-check-depends: 
-	@{ ${DEPENDS:@.temp.@echo '${.temp.}';@} \
-	   ${BUILD_DEPENDS:@.temp.@echo '${.temp.}';@} \
-	   ${TOOL_DEPENDS:@.temp.@echo '${.temp.}';@} \
-	   ${CONFLICTS:@.temp.@echo '${.temp.}';@} \
-	} | ${_SANITY_CHECK_DEPENDS_CMD}
