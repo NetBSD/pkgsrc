@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.227 2014/01/14 19:17:01 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.228 2014/01/14 19:33:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/git-base to 1.8.5.2nb2 [wiz 2014-01-14]
 	Updated x11/libxkbcommon to 0.3.2nb2 [wiz 2014-01-14]
 	Updated lang/gcc47 to 4.7.3nb2 [wiz 2014-01-14]
+	Updated lang/gcc48 to 4.8.2nb1 [wiz 2014-01-14]
