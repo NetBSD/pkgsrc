@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/03/08 13:04:32 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/14 01:16:28 cheusov Exp $
 bin/nih
 bin/pkg_status
 bin/pkg_update_plan
@@ -8,7 +8,7 @@ libexec/nih/cmp2hr
 libexec/nih/pkg_create_fake
 man/man1/nih.1
 man/man1/pkg_update_plan.1
-share/doc/pkgnih/COPYRIGHT
+share/doc/pkgnih/LICENSE
 share/doc/pkgnih/NEWS
 share/doc/pkgnih/README
 share/doc/pkgnih/TODO
