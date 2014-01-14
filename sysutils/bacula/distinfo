@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.48 2013/11/06 16:00:05 joerg Exp $
+$NetBSD: distinfo,v 1.49 2014/01/14 10:58:17 markd Exp $
 
-SHA1 (bacula-5.2.12.tar.gz) = c53cdd185f5f4075ddcca0971953319a94276c84
-RMD160 (bacula-5.2.12.tar.gz) = dd5b9f457a524acd9cdbbe0c4842670c4ee5bd5a
-Size (bacula-5.2.12.tar.gz) = 4147847 bytes
+SHA1 (bacula-5.2.13.tar.gz) = 30b1eb2efb515138807163d046f675eaa29fad1c
+RMD160 (bacula-5.2.13.tar.gz) = bcc168143c0eec5cb5e983f765935534379f4fcf
+Size (bacula-5.2.13.tar.gz) = 4243395 bytes
 SHA1 (patch-ac) = 4ba89bcf49ce82b527edc789e2b17a781cb8622e
 SHA1 (patch-ad) = ce6bc29858d13dff1a0301db95f9bfedf3e66b01
 SHA1 (patch-ah) = 06452df1449ed6f06af00ed2cf9d736c40044dfb
@@ -10,7 +10,7 @@ SHA1 (patch-ai) = 388e075e7ec54fb377ee9dbe8338c667efb256ee
 SHA1 (patch-aj) = 125d1503406474fec32e737068328cdfa718f5c2
 SHA1 (patch-am) = 28536d3f0de81940773749c3704ad7aca86d374d
 SHA1 (patch-configure) = 710d6e4370099a5d6d23d1297864af01abcdae83
-SHA1 (patch-src_console_conio.c) = 281d1f4c972744a936733f2a0003c6b0f993904d
+SHA1 (patch-src_console_conio.c) = 2c750c48b45091066edc4aa9c88f494a6c892ce4
 SHA1 (patch-src_dird_Makefile.in) = fdce18aca972f26f16af90283756cd5bf5ad5831
 SHA1 (patch-src_filed_Makefile.in) = c88ee648ef33c3f7c3a02b77b1d3fc3da8da088d
 SHA1 (patch-src_findlib_attribs.c) = a0917e500d7e937164cf59917cabd992512acd1d
@@ -20,4 +20,4 @@ SHA1 (patch-src_plugins_fd_Makefile.in) = f1316cdbb66d9bc55d8adbd4b0bbde01443ccd
 SHA1 (patch-src_plugins_fd_fd__common.h) = 7c8419d4fa7f1fe8a07e2bc2720a4903ff324135
 SHA1 (patch-src_qt-console_bat.pro.in) = 8df9381c0b35b5a3dcd237f8c017ae21d88c79ad
 SHA1 (patch-src_stored_Makefile.in) = 5bee8ea8a7c288a1e4baf372ef79da34c9e35284
-SHA1 (patch-src_tools_Makefile.in) = 9fbc8d0f71f34217ea29f6ae04cbd927d5ac275b
+SHA1 (patch-src_tools_Makefile.in) = dca0472c31ced76b8d5a357ef968ddc3f93faf5b
