@@ -1,10 +1,10 @@
-$NetBSD: patch-source-utilbin_Makefile,v 1.1 2012/04/15 04:07:21 markd Exp $
+$NetBSD: patch-source-utilbin_Makefile,v 1.2 2014/01/14 10:21:39 markd Exp $
 
 Add LDFLAGS
 replace $(COMMLISTSLIB) with -lcommlists so that pkgsrc wrapper
 doesnt reorder.
 
---- source/utilbin/Makefile.orig	2009-02-11 09:27:33.000000000 +0000
+--- source/utilbin/Makefile.orig	2013-10-28 16:22:54.000000000 +0000
 +++ source/utilbin/Makefile
 @@ -118,14 +118,14 @@ gethostbyaddr.o:	$(UTILBIN_DIR)/gethostb
  
@@ -59,9 +59,9 @@ doesnt reorder.
 @@ -188,7 +188,7 @@ signals.o:	$(UTILBIN_DIR)/signals.c
  
  #---------------------------------------------------------------------
- loadcheck: loadcheck.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(COMMLISTSLIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(CULLLIB)
--	$(CC) -o $@ $(LFLAGS) loadcheck.o version.o -lsgeobj -lsgeobjd -lcull -luti $(WINGRIDLIB) $(COMMLISTSLIB) $(LOADAVGLIBS) $(LIBS)
-+	$(CC) -o $@ $(LFLAGS) loadcheck.o version.o -lsgeobj -lsgeobjd -lcull -luti $(WINGRIDLIB) -lcommlists $(LOADAVGLIBS) $(LIBS)
+ loadcheck: loadcheck.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(COMMLISTSLIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(CULLLIB) binding_support.o
+-	$(CC) -o $@ $(LFLAGS) loadcheck.o version.o binding_support.o $(SGEOBJLIB) $(SGEOBJDLIB) $(CULLLIB) $(UTILIB) $(WINGRIDLIB) $(COMMLISTSLIB) $(LOADAVGLIBS) $(HWLOCLIB) $(LIBS)
++	$(CC) -o $@ $(LFLAGS) loadcheck.o version.o binding_support.o $(SGEOBJLIB) $(SGEOBJDLIB) $(CULLLIB) $(UTILIB) $(WINGRIDLIB) -lcommlists $(LOADAVGLIBS) $(HWLOCLIB) $(LIBS)
  
  loadcheck.o: $(UTILBIN_DIR)/loadcheck.c
  	$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/loadcheck.c
@@ -91,8 +91,8 @@ doesnt reorder.
  		$(CC) $(CFLAGS) $(MEMCFLAG) $(GCC_NODUPLWARN) -c $(UTILBIN_DIR)/fstype.c
  #---------------------------------------------------------------------
  spooldefaults:   spooldefaults.o  version.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLCLIB) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(WINGRIDLIB_DEP) $(UTILIB) 
--		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) $(DLLIB) $(SLIBS) $(LIBS)
-+		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o $(LDFLAGS) -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) $(DLLIB) $(SLIBS) $(LIBS)
+-		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti $(SECLIB) $(WINGRIDLIB) $(DLLIB) $(SLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o $(LDFLAGS) -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti $(SECLIB) $(WINGRIDLIB) $(DLLIB) $(SLIBS) $(LIBS)
  
  spooldefaults.o: $(UTILBIN_DIR)/spooldefaults.c
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooldefaults.c
@@ -109,8 +109,8 @@ doesnt reorder.
  
  #---------------------------------------------------------------------
  spooledit: spooledit.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(WINGRIDLIB_DEP) $(UTILIB)  
--		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
-+		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o $(LDFLAGS) -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
+-		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti $(SECLIB) $(WINGRIDLIB) -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o $(LDFLAGS) -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti $(SECLIB) $(WINGRIDLIB) -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
  
  spooledit.o: $(UTILBIN_DIR)/spooledit.c
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooledit.c
@@ -118,8 +118,8 @@ doesnt reorder.
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/valid_jvmlib.c
  
  #---------------------------------------------------------------------
--AUTHUSER_ADD_LIBS = -luti $(COMMLISTSLIB) $(DLLIB)
-+AUTHUSER_ADD_LIBS = -luti -lcommlists $(DLLIB)
+-AUTHUSER_ADD_LIBS = $(UTILIB) $(COMMLISTSLIB) $(DLLIB)
++AUTHUSER_ADD_LIBS = $(UTILIB) -lcommlists $(DLLIB)
  
  authuser: authuser.o juti.o $(UTILIB) $(COMMLISTSLIB)
  	$(CC) -o authuser $(LFLAGS) authuser.o juti.o $(AUTHLIBS) $(AUTHUSER_ADD_LIBS) $(LIBS)

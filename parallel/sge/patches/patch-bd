@@ -1,11 +1,11 @@
-$NetBSD: patch-bd,v 1.5 2012/03/20 17:07:43 asau Exp $
+$NetBSD: patch-bd,v 1.6 2014/01/14 10:21:39 markd Exp $
 
 Exclude Java files.
 DESTDIR support.
 
---- source/scripts/distinst.orig	2011-11-28 23:06:15.000000000 +0000
+--- source/scripts/distinst.orig	2013-10-28 16:22:54.000000000 +0000
 +++ source/scripts/distinst
-@@ -79,13 +79,13 @@ DRMAA_SHARED_LIBRARIES="libdrmaa"
+@@ -85,13 +85,13 @@ DRMAA_SHARED_LIBRARIES="libdrmaa"
  # The last number listed here will be the verson linked from libdrmaa.so
  DRMAA_SHARED_LIB_VERSIONS="1.0"
  DRMAA_HEADER_FILES="libs/japi/drmaa.h"
@@ -23,7 +23,7 @@ DESTDIR support.
  JAVA_LIBRARIES="${DRMAAJ_FILES} ${JUTIJ_FILES} ${JGDIJ_FILES} ${JJSV_FILES}"
  
  PVMSOURCES="start_pvm.c stop_pvm.c slave.c master.c spmd.c Makefile"
-@@ -544,11 +544,11 @@ while [ $# -ge 1 ]; do
+@@ -550,11 +550,11 @@ while [ $# -ge 1 ]; do
           echo Please set variable SGE_ROOT. Installation failed.
           exit 1
        fi
@@ -38,7 +38,7 @@ DESTDIR support.
        localinst=true
        ;;
     -mansrc)
-@@ -927,13 +927,16 @@ if [ $instcommon = true ]; then
+@@ -934,7 +934,6 @@ if [ $instcommon = true ]; then
                          $DEST_SGE_ROOT/util/sgeCA/*.cnf \
                          $DEST_SGE_ROOT/util/sgeSMF/*.xml \
                          $DEST_SGE_ROOT/util/sgeSMF/sge_smf_support.sh \
@@ -46,27 +46,28 @@ DESTDIR support.
                          $DEST_SGE_ROOT/util/resources/calendars/* \
                          $DEST_SGE_ROOT/util/resources/centry/* \
                          $DEST_SGE_ROOT/util/resources/pe/* \
-                         $DEST_SGE_ROOT/util/resources/schemas/*/* \
-                         $DEST_SGE_ROOT/util/resources/usersets/*
- 
-+      if test -f $DEST_SGE_ROOT/util/DetectJvmLibrary.jar; then
-+	  Execute chmod 644 $DEST_SGE_ROOT/util/DetectJvmLibrary.jar;
-+      fi
+@@ -942,6 +941,10 @@ if [ $instcommon = true ]; then
+                         $DEST_SGE_ROOT/util/resources/usersets/* \
+                         $DEST_SGE_ROOT/util/resources/jsv/jsv_include*
+    fi
 +
-       Execute chmod 755 $DEST_SGE_ROOT/util/resources/jsv/jsv.sh \
-                         $DEST_SGE_ROOT/util/resources/jsv/jjsv.sh \
-                         $DEST_SGE_ROOT/util/resources/jsv/jsv.pl \
-@@ -951,8 +954,7 @@ if [ $instcommon = true ]; then
++   if test -f $DEST_SGE_ROOT/util/DetectJvmLibrary.jar; then
++         Execute chmod 644 $DEST_SGE_ROOT/util/DetectJvmLibrary.jar;
++   fi
+    
+    if [ $instexamples = true ]; then
+       echo Installing \"examples\"
+@@ -954,8 +957,7 @@ if [ $instcommon = true ]; then
        Execute cp libs/japi/example.c $DEST_SGE_ROOT/examples/drmaa
        Execute cp libs/japi/howto/*.c $DEST_SGE_ROOT/examples/drmaa
        MakeDir examples/drmaa/ruby
 -      Execute mv $DEST_SGE_ROOT/util/resources/drmaa4ruby/samples/* $DEST_SGE_ROOT/examples/drmaa/ruby
 -      Execute rmdir $DEST_SGE_ROOT/util/resources/drmaa4ruby/samples
 +      Execute cp -r dist/util/resources/drmaa4ruby/samples/* $DEST_SGE_ROOT/examples/drmaa/ruby
+       Execute chmod 755 $DEST_SGE_ROOT/examples/drmaa/ruby/*.rb \
+                         $DEST_SGE_ROOT/examples/drmaa/ruby/flow/*.rb
        Cleanup examples
-    fi
- 
-@@ -1117,9 +1119,6 @@ if [ $instcommon = true ]; then
+@@ -1123,9 +1125,6 @@ if [ $instcommon = true ]; then
  
        if [ -f CLASSES/herd/herd.jar ]; then
           Execute cp CLASSES/herd/herd.jar $DEST_SGE_ROOT/lib/herd.jar
@@ -76,7 +77,7 @@ DESTDIR support.
        fi
     fi
  
-@@ -1276,7 +1275,9 @@ if [ $instguiinst = true ]; then
+@@ -1318,7 +1317,9 @@ if [ $instguiinst = true ]; then
        echo "Installing \"start_gui_installer\" and \"/util/gui-installer\""
        Execute mkdir -p $DEST_SGE_ROOT/util/gui-installer/html/en/help
        Execute mkdir -p $DEST_SGE_ROOT/util/gui-installer/templates
