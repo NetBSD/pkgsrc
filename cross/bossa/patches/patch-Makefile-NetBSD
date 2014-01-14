@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile-NetBSD,v 1.1 2014/01/14 15:36:59 reinoud Exp $
+
+# Patching for NetBSD serial port detection code
+
+--- /usr/tmp/pkgsrc-aspire/comms/bossa/work/b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901/Makefile.orig	2012-04-08 13:55:52.000000000 +0000
++++ /usr/tmp/pkgsrc-aspire/comms/bossa/work/b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901/Makefile
+@@ -75,6 +75,20 @@ install: strip
+ endif
+ 
+ #
++# NetBSD rules
++#
++ifeq ($(OS),NetBSD)
++COMMON_SRCS+=PosixSerialPort.cpp NetBSDPortFactory.cpp
++COMMON_LIBS=-Wl,--as-needed
++WX_LIBS+=-lX11
++
++MACHINE:=$(shell uname -m)
++
++install: strip
++	tar cvzf $(BINDIR)/bossa-$(MACHINE)-$(VERSION).tgz -C $(BINDIR) bossa$(EXE) bossac$(EXE) bossash$(EXE)
++endif
++
++#
+ # OS X rules
+ #
+ ifeq ($(OS),Darwin)
