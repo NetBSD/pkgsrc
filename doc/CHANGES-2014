@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.221 2014/01/14 11:06:13 markd Exp $
+$NetBSD: CHANGES-2014,v 1.222 2014/01/14 12:12:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -254,3 +254,26 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated sysutils/bacula-qt-console to 5.2.13 [markd 2014-01-14]
 	Updated sysutils/bacula-tray-monitor to 5.2.13 [markd 2014-01-14]
 	Updated sysutils/bacula-wx-console to 5.2.13 [markd 2014-01-14]
+	Updated meta-pkgs/ruby-gnome2 to 2.1.0 [obache 2014-01-14]
+	Updated devel/ruby-gnome2-atk to 2.1.0 [obache 2014-01-14]
+	Updated devel/ruby-gnome2-gio to 2.1.0 [obache 2014-01-14]
+	Updated devel/ruby-gnome2-glib to 2.1.0 [obache 2014-01-14]
+	Updated devel/ruby-gnome2-gobject-introspection to 2.1.0 [obache 2014-01-14]
+	Updated devel/ruby-gnome2-pango to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-cairo-gobject to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-clutter to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-clutter-gtk to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-gdk3 to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-goocanvas to 2.1.0 [obache 2014-01-14]
+	Updated graphics/ruby-gnome2-rsvg to 2.1.0 [obache 2014-01-14]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 2.1.0 [obache 2014-01-14]
+	Updated multimedia/ruby-gnome2-gstreamer to 2.1.0 [obache 2014-01-14]
+	Updated print/ruby-gnome2-poppler to 2.1.0 [obache 2014-01-14]
+	Updated www/ruby-gnome2-webkit-gtk to 2.1.0 [obache 2014-01-14]
+	Updated www/ruby-gnome2-webkit-gtk2 to 2.1.0 [obache 2014-01-14]
+	Updated x11/ruby-gnome2-gtk to 2.1.0 [obache 2014-01-14]
+	Updated x11/ruby-gnome2-gtk3 to 2.1.0 [obache 2014-01-14]
+	Updated x11/ruby-gnome2-vte to 2.1.0 [obache 2014-01-14]
+	Updated x11/ruby-gnome2-gtksourceview2 to 2.1.0 [obache 2014-01-14]
+	Updated x11/ruby-gnome2-gtksourceview3 to 2.1.0 [obache 2014-01-14]
