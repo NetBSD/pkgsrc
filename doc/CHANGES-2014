@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.222 2014/01/14 12:12:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.223 2014/01/14 14:28:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated x11/ruby-gnome2-vte to 2.1.0 [obache 2014-01-14]
 	Updated x11/ruby-gnome2-gtksourceview2 to 2.1.0 [obache 2014-01-14]
 	Updated x11/ruby-gnome2-gtksourceview3 to 2.1.0 [obache 2014-01-14]
+	Updated multimedia/libass to 0.10.2nb1 [jperkin 2014-01-14]
