@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.9 2014/01/14 10:30:54 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.10 2014/01/14 10:53:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -41,3 +41,5 @@ Pullup ticket #4296 - requested by taca
 net/bind99: security update
 Pullup ticket #4297 - requested by obache
 net/mikutter: bug fix update
+Pullup ticket #4298 - requested by drochner
+graphics/graphviz: security patch
