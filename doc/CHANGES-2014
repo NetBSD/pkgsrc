@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.225 2014/01/14 18:50:03 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.226 2014/01/14 19:11:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -280,3 +280,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated multimedia/libass to 0.10.2nb1 [jperkin 2014-01-14]
 	Added cross/bossa version bossa-20140109 [reinoud 2013-01-14]
 	Updated devel/git-base to 1.8.5.2nb2 [wiz 2014-01-14]
+	Updated x11/libxkbcommon to 0.3.2nb2 [wiz 2014-01-14]
