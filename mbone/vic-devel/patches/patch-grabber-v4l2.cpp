@@ -1,3 +1,5 @@
+$NetBSD: patch-grabber-v4l2.cpp,v 1.2 2014/01/14 17:07:37 prlw1 Exp $
+
 --- video/grabber-v4l2.cpp.orig	2008-12-13 22:12:50.000000000 +0000
 +++ video/grabber-v4l2.cpp	2008-12-13 22:14:26.000000000 +0000
 @@ -34,7 +34,9 @@

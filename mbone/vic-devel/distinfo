@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/03/02 18:01:05 joerg Exp $
+$NetBSD: distinfo,v 1.5 2014/01/14 17:07:37 prlw1 Exp $
 
 SHA1 (vic-2.8ucl1.4.0_ov511.diff.gz) = 46faceb1d926820e41ffda71228f63959747a73e
 RMD160 (vic-2.8ucl1.4.0_ov511.diff.gz) = b60a9d3f5764cc4528dffbf5e9465301d71723de
@@ -6,12 +6,14 @@ Size (vic-2.8ucl1.4.0_ov511.diff.gz) = 8646 bytes
 SHA1 (vic-2.8ucl1.4.0beta-4337.tgz) = 6c15491fa5bdfaedf94731094f8952ed3ff027bb
 RMD160 (vic-2.8ucl1.4.0beta-4337.tgz) = 631b18fe036c289e5622722e521af2c9735c63da
 Size (vic-2.8ucl1.4.0beta-4337.tgz) = 9345775 bytes
-SHA1 (patch-Makefile.in) = 417c540eb903ace3c5859f21d92556494d52c30d
+SHA1 (patch-Makefile.in) = 9f913eee4a9b9bfbf6e5735f04af97cdba92d297
+SHA1 (patch-codec_tmndec_store.c) = 65b7aa01864f428088788b0311a2c88dc7a46914
 SHA1 (patch-color-swscale.cpp) = 0796262c5db74cc354ce7f55ae246c489f5c9b33
 SHA1 (patch-configure) = 509e31f0e0c1037701d7f012569ac5e5e1e4c033
 SHA1 (patch-crypt-rijndael.cpp) = 5dfda8c17c91fa5f6b2df24d4e1ed93bc4ae5b87
-SHA1 (patch-grabber-v4l2.cpp) = e9ef03d31f336976e220291646028916712e71a7
+SHA1 (patch-grabber-v4l2.cpp) = b62fcfdfee0aa7f9515ce1d9ee65b9211873deb7
 SHA1 (patch-main.cpp) = 671cda41595f1f5c001b089ee04b5c84f559330a
 SHA1 (patch-tcl_tcl2cpp_tcl2cpp.c) = 90d7f66a06dfdefebb058da6e688aecb965e3925
+SHA1 (patch-tkStripchart.c) = ab02270a2801684d6d915d268651262e068a9c5c
 SHA1 (patch-ui-ctrlmenu.tcl) = b81763c2642f3d1eb828cbac4e687c7bf9bc1ba2
 SHA1 (patch-ui-resource.tcl) = 1763779af32de2d19b4352eb7174f9edd9f7be16
