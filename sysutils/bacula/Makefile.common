@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.63 2013/11/06 16:00:05 joerg Exp $
+# $NetBSD: Makefile.common,v 1.64 2014/01/14 10:58:17 markd Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
 # used by sysutils/bacula-wx-console/Makefile
 
-DISTNAME=	bacula-5.2.12
+DISTNAME=	bacula-5.2.13
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 
