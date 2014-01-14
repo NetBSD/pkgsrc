@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2013/09/21 15:57:50 taca Exp $
+$NetBSD: patch-ad,v 1.7.4.1 2014/01/14 09:30:30 tron Exp $
 
---- configure.orig	2013-09-05 05:40:13.000000000 +0000
+--- configure.orig	2013-12-20 00:31:35.000000000 +0000
 +++ configure
 @@ -14354,6 +14354,8 @@ case $host in
  	use_threads=false ;;
@@ -23,7 +23,7 @@ $NetBSD: patch-ad,v 1.7 2013/09/21 15:57:50 taca Exp $
  		case "$host" in
  		*) LIBTOOL_ALLOW_UNDEFINED= ;;
  		esac
-@@ -18892,7 +18894,7 @@ $as_echo "no" >&6; }
+@@ -18903,7 +18905,7 @@ $as_echo "no" >&6; }
  	fi
  	if test -n "-L$use_dlz_postgres_lib -lpq"
  	then
