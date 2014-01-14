@@ -1,19 +1,19 @@
-$NetBSD: patch-src_console_conio.c,v 1.1 2012/10/06 17:54:53 christos Exp $
+$NetBSD: patch-src_console_conio.c,v 1.2 2014/01/14 10:58:17 markd Exp $
 
 - need termios.h, our term.h does not include it
 - t_insert_line and t_delete_line are macros in term.h; undef them
 
---- src/console/conio.c.orig	2012-09-13 04:51:19.000000000 -0400
-+++ src/console/conio.c	2012-10-05 11:29:38.000000000 -0400
-@@ -61,6 +61,7 @@
+--- src/console/conio.c.orig	2013-02-19 19:21:35.000000000 +0000
++++ src/console/conio.c
+@@ -64,6 +64,7 @@
  
- #endif
+ #ifdef HAVE_CONIO
  
 +#include <termios.h>
  #include <curses.h>
  #include <term.h>
  
-@@ -245,7 +246,9 @@
+@@ -250,7 +251,9 @@ static char * getnext(void);
  static char * getprev(void);
  static void putline(char *newl, int newlen);
  static void t_honk_horn(void);

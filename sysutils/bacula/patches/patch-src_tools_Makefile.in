@@ -1,20 +1,20 @@
-$NetBSD: patch-src_tools_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
+$NetBSD: patch-src_tools_Makefile.in,v 1.2 2014/01/14 10:58:17 markd Exp $
 
 - use the .la files for linking
 - remove tests that don't link (using functions not in libraries)
 
---- src/tools/Makefile.in.orig	2012-09-13 04:51:19.000000000 -0400
-+++ src/tools/Makefile.in	2012-10-05 11:13:02.000000000 -0400
-@@ -37,7 +37,7 @@
+--- src/tools/Makefile.in.orig	2013-02-19 19:21:35.000000000 +0000
++++ src/tools/Makefile.in
+@@ -35,7 +35,7 @@ EXTRAOBJS = @OBJLIST@
  DIRCONFOBJS = ../dird/dird_conf.o ../dird/ua_acl.o ../dird/run_conf.o ../dird/inc_conf.o
  
  NODIRTOOLS = bsmtp
--DIRTOOLS = bsmtp dbcheck drivetype fstype testfind testls bregex bwild bbatch bregtest bvfs_test ing_test bpluginfo
-+DIRTOOLS = bsmtp dbcheck drivetype fstype testfind bregex bwild bbatch bregtest ing_test bpluginfo
+-DIRTOOLS = bsmtp dbcheck drivetype fstype testfind testls bregex bwild bbatch bregtest bvfs_test ing_test bpluginfo timelimit
++DIRTOOLS = bsmtp dbcheck drivetype fstype testfind bregex bwild bbatch bregtest ing_test bpluginfo timelimit
  TOOLS = $(@DIR_TOOLS@)
  
  INSNODIRTOOLS = bsmtp
-@@ -58,22 +58,22 @@
+@@ -56,22 +56,22 @@ all: Makefile $(TOOLS) gigaslam grow
  	@echo " "
  
  bsmtp: Makefile bsmtp.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)	    
@@ -42,7 +42,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
  	  $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  dird_conf.o: ../dird/dird_conf.c
-@@ -91,34 +91,34 @@
+@@ -93,34 +93,34 @@ timelimit: timelimit.o
  testfind: Makefile ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
  	  ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) $(FINDOBJS)
  	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -o $@ $(FINDOBJS) -L. -L../lib -L../findlib \
@@ -84,7 +84,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
  
  cats_test.o: cats_test.c
  	echo "Compiling $<"
-@@ -126,7 +126,7 @@
+@@ -128,7 +128,7 @@ cats_test.o: cats_test.c
  
  cats_test: Makefile ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) cats_test.o
  	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -L../cats -L. -L../lib -L../findlib -o $@ cats_test.o  \
@@ -93,7 +93,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.1 2012/10/06 17:54:53 christos Exp $
  
  gigaslam.o: gigaslam.c
  	$(CXX) $(CFLAGS) -c $<	
-@@ -135,13 +135,13 @@
+@@ -137,13 +137,13 @@ gigaslam: gigaslam.o
  	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -o $@ gigaslam.o
  
  grow: Makefile grow.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
