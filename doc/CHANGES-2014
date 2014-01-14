@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.216 2014/01/13 17:31:45 taca Exp $
+$NetBSD: CHANGES-2014,v 1.217 2014/01/14 01:09:58 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -243,3 +243,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated net/bind96 to 9.6.3.1.ESV.10pl2 [taca 2014-01-13]
 	Updated net/bind98 to 9.8.6pl2 [taca 2014-01-13]
 	Updated net/bind99 to 9.9.4pl2 [taca 2014-01-13]
+	Updated pkgtools/pkg_summary-utils to 0.63.0 [cheusov 2014-01-14]
