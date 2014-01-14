@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.17 2013/10/20 17:57:32 joerg Exp $
+$NetBSD: distinfo,v 1.18 2014/01/14 10:21:39 markd Exp $
 
-SHA1 (sge-8.0.0d.tar.gz) = e7500bbeec4075d054410f7465011efb61e93def
-RMD160 (sge-8.0.0d.tar.gz) = aa83db459f4bbbebd7d2cc81290b7b8cb0818210
-Size (sge-8.0.0d.tar.gz) = 12289130 bytes
-SHA1 (patch-ad) = 004600f060b5fcacd91ba68808686c0a679889f6
+SHA1 (sge-8.1.6.tar.gz) = 8348a543c736ed4f1c36cf1e8242eeb1a61033df
+RMD160 (sge-8.1.6.tar.gz) = 231f4d100722c7a99a92e0b9b989125e5d15f295
+Size (sge-8.1.6.tar.gz) = 11875229 bytes
+SHA1 (patch-ad) = 8a1c2aa9245bee66068073df7a5434ca37de03c7
 SHA1 (patch-ag) = 57eb4296e531f3a47b95c8842e0db0575870dcf0
-SHA1 (patch-am) = d361698129c0396ee224d48872d680b7084c2a1e
-SHA1 (patch-at) = d29e29e4915f8015618a4ebc5b17231c2bcc4bf5
-SHA1 (patch-bd) = aae1bdccfb81712c504b3add8b9728a2bcf3d1dd
-SHA1 (patch-bl) = f04f92c1a1c69443e9336f9fcbe7d988001f6681
+SHA1 (patch-am) = 143ce85347f3653481d516142f205b7110b9f64d
+SHA1 (patch-at) = 09b861e761f1e49fcd940b95d89b072c83e5c160
+SHA1 (patch-bd) = ec95d0a167c933607843894e4a62822474723b2f
 SHA1 (patch-bm) = 524268d07060fac00a2648e7c63377f965377c9d
 SHA1 (patch-daemons_common_procfs.c) = cdcbf58cb3278d5bc718fd235aaa76a10e938002
-SHA1 (patch-source-utilbin_Makefile) = b01de3925fd6795ee9bd0ad1c1bed7dfb2ed4d92
+SHA1 (patch-source-utilbin_Makefile) = 0a6fa06e71140ed8e74ebe0e5e37a4a3a515391b
 SHA1 (patch-source_3rdparty_sge_depend_def.h) = 92ad1ef5d0cf237fa083a262d38c67828593f679
-SHA1 (patch-source_libs_uti_sge__loadmem.c) = 46014f5a1294bfbcbe71e1c79cca3b8c5eb54e6f
+SHA1 (patch-source_libs_comm_cl_ssl_framework.c) = 230c2a510b52516d9eea934b8c797141167a0b6d
+SHA1 (patch-source_libs_uti_sge__loadmem.c) = d781009ee8efbfa210a698c885f0aab51ae96818

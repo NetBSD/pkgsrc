@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2012/03/20 17:07:43 asau Exp $
+$NetBSD: patch-ad,v 1.5 2014/01/14 10:21:39 markd Exp $
 
---- source/daemons/shepherd/Makefile.orig	2011-11-29 03:06:13.000000000 +0400
-+++ source/daemons/shepherd/Makefile	2012-02-20 19:55:03.000000000 +0400
-@@ -64,7 +64,7 @@
+--- source/daemons/shepherd/Makefile.orig	2013-10-28 16:22:53.000000000 +0000
++++ source/daemons/shepherd/Makefile
+@@ -65,7 +65,7 @@ SHEPHERD_OBJS = $(SHEPHERD_SRC:.c=.o) sg
  
  SHEPHERD_ADD_OBJS = $(SHEPHERD_ADD_SRC:.c=.o) 
  
--SHEPHERD_ADD_LIBS = -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm_static -lcommlists -luti $(WINGRIDLIB_STATIC) $(DLLIB)
-+SHEPHERD_ADD_LIBS = -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) $(DLLIB)
+-SHEPHERD_ADD_LIBS = -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm_static -lcommlists -luti -luti2 $(HWLOCLIB) $(WINGRIDLIB_STATIC) $(DLLIB)
++SHEPHERD_ADD_LIBS = -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti -luti2 $(HWLOCLIB) $(WINGRIDLIB_STATIC) $(DLLIB)
  
- SHEPHERD_LIB_DEPENDS = $(GDILIB) $(SGEOBJDLIB) $(SGEOBJLIB) $(KRBLIBS) $(CULLLIB) $(COMMLIB) $(COMMLISTSLIB) $(COMMLIB_STATIC) $(UTILIB) $(WINGRIDLIB_DEP)  
+ SHEPHERD_LIB_DEPENDS = $(GDILIB) $(SGEOBJDLIB) $(SGEOBJLIB) $(KRBLIBS) $(CULLLIB) $(COMMLIB) $(COMMLISTSLIB) $(COMMLIB_STATIC) $(UTILIB) $(UTI2LIB) $(WINGRIDLIB_DEP)  
  

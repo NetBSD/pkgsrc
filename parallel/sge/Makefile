@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2014/01/11 14:42:05 adam Exp $
+# $NetBSD: Makefile,v 1.58 2014/01/14 10:21:39 markd Exp $
 #
 
-DISTNAME=		sge-8.0.0d
-PKGNAME=		sge-8.0.0.4
-PKGREVISION=		8
+DISTNAME=		sge-8.1.6
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.0.0d/
+MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.1.6/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://arc.liv.ac.uk/trac/SGE
@@ -47,6 +45,10 @@ REPLACE.tclsh.old=	.*tclsh
 REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh=	source/dist/util/resources/jsv/jsv.tcl
 REPLACE_PERL+=		source/dist/util/resources/jsv/jsv.pl
+REPLACE_PERL+=		source/dist/util/resources/scripts/qsched
+REPLACE_PERL+=		source/dist/util/resources/scripts/process-scheduler-log
+REPLACE_PERL+=		source/dist/util/resources/scripts/jobstats
+REPLACE_PERL+=		source/dist/util/resources/wrappers/rshd-wrapper
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -78,7 +80,7 @@ SGE_BUILDARCH_cmd=	${ECHO} "${SGE_ARCH}" | ${TR} a-z A-Z
 SGE_ARCH=		darwin
 SGE_BUILDARCH=		DARWIN
 .elif ${OPSYS} == "Linux"
-AIMK+=			-no-dump
+#AIMK+=			-no-dump
 .  if ${MACHINE_ARCH} == "i386"
 SGE_ARCH=		lx-x86
 SGE_BUILDARCH=		LINUX86
@@ -143,9 +145,7 @@ do-build:
 	cd ${WRKSRC}/source && ${AIMK} ${JAVA_ARGS} -no-hwloc
 	cd ${WRKSRC}/source && ${AIMK} ${JAVA_ARGS} -no-hwloc -man
 
-CHECK_INTERPRETER_SKIP=	sge/bin/process-scheduler-log \
-			sge/bin/qsched \
-			sge/bin/status \
+CHECK_INTERPRETER_SKIP=	sge/bin/qstatus \
 			sge/ckpt/cpr_* \
 			sge/examples/drmaa/ruby/* \
 			sge/hadoop/pestart.sh \
@@ -155,8 +155,8 @@ CHECK_INTERPRETER_SKIP=	sge/bin/process-scheduler-log \
 			sge/mpi/myrinet/* \
 			sge/util/resources/drmaa4ruby/* \
 			sge/util/resources/drmaa4ruby/samples/* \
-			sge/util/resources/loadsensors/interix-loadsensor.sh \
-			sge/util/resources/wrappers/rshd-wrapper
+			sge/util/resources/jsv/jsv.sh \
+			sge/util/resources/loadsensors/interix-loadsensor.sh
 
 do-install:
 	${MKDIR} ${DESTDIR}${SGE_ROOT}
