@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/14 15:36:59 reinoud Exp $
+bin/bossa
+bin/bossac
+bin/bossash
