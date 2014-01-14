@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2013/03/08 13:04:32 cheusov Exp $
+$NetBSD: distinfo,v 1.10 2014/01/14 01:16:28 cheusov Exp $
 
-SHA1 (pkgnih-0.11.0.tar.gz) = 57ee38059d55e2568a1465c62df22bbddc55ba9a
-RMD160 (pkgnih-0.11.0.tar.gz) = 7363f411571f1afa81ab1e91d9fb654b42b05e62
-Size (pkgnih-0.11.0.tar.gz) = 36747 bytes
+SHA1 (pkgnih-0.12.0.tar.gz) = 960bccb2150603041b64103dcde53778c80798f1
+RMD160 (pkgnih-0.12.0.tar.gz) = 99331f162ce11008e854df504157b6984c705c0a
+Size (pkgnih-0.12.0.tar.gz) = 49597 bytes
