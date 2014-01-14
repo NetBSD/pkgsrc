@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1839 2014/01/12 15:00:45 mspo Exp $
+# $NetBSD: Makefile,v 1.1840 2014/01/14 19:44:11 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -841,7 +841,6 @@ SUBDIR+=	p5-File-chdir
 SUBDIR+=	p5-File-pushd
 SUBDIR+=	p5-FileHandle-Fmode
 SUBDIR+=	p5-FileHandle-Unget
-SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-Filesys-Notify-Simple
 SUBDIR+=	p5-FindBin-libs
 SUBDIR+=	p5-Format-Human-Bytes

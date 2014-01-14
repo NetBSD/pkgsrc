@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.231 2014/01/14 19:38:26 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.232 2014/01/14 19:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -286,3 +286,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated lang/gcc48-libs to 4.8.2nb2 [wiz 2014-01-14]
 	Updated www/neon to 0.30.0nb1 [wiz 2014-01-14]
 	Updated audio/libaudiofile to 0.3.6nb1 [wiz 2014-01-14]
+	Removed devel/p5-FileKGlob [wiz 2014-01-14]
