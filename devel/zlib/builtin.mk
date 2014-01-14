@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2013/12/11 07:11:40 richard Exp $
+# $NetBSD: builtin.mk,v 1.12 2014/01/14 20:34:49 bsiegert Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -37,7 +37,8 @@ BUILTIN_VERSION.zlib!=							\
 			print vers;					\
 		}							\
 	' ${H_ZLIB:Q}
-BUILTIN_PKG.zlib=	zlib-${BUILTIN_VERSION.zlib}
+BUILTIN_PKG.zlib=      zlib-${BUILTIN_VERSION.zlib:C/-[A-Za-z]*//}
+
 .endif
 MAKEVARS+=	BUILTIN_PKG.zlib
 
