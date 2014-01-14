@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.220 2014/01/14 08:42:18 obache Exp $
+$NetBSD: CHANGES-2014,v 1.221 2014/01/14 11:06:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -247,3 +247,10 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated pkgtools/nih to 0.12.0 [cheusov 2014-01-14]
 	Updated net/mikutter to 0.2.2.1476 [obache 2014-01-14]
 	Updated www/ruby-faraday to 0.8.9 [obache 2014-01-14]
+	Updated editors/texworks to 0.4.5 [markd 2014-01-14]
+	Updated parallel/sge to 8.1.6 [markd 2014-01-14]
+	Updated sysutils/bacula to 5.2.13 [markd 2014-01-14]
+	Updated sysutils/bacula-clientonly to 5.2.13 [markd 2014-01-14]
+	Updated sysutils/bacula-qt-console to 5.2.13 [markd 2014-01-14]
+	Updated sysutils/bacula-tray-monitor to 5.2.13 [markd 2014-01-14]
+	Updated sysutils/bacula-wx-console to 5.2.13 [markd 2014-01-14]
