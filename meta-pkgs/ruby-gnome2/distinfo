@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.38 2013/06/20 17:16:06 taca Exp $
+$NetBSD: distinfo,v 1.39 2014/01/14 12:01:51 obache Exp $
 
-SHA1 (ruby-gnome2-all-2.0.2.tar.gz) = 4713b11909fe6f52c3164cfe88eadeaeed261e93
-RMD160 (ruby-gnome2-all-2.0.2.tar.gz) = ad7781ab68ccca373d1e56050255f63417db0675
-Size (ruby-gnome2-all-2.0.2.tar.gz) = 1674872 bytes
-SHA1 (patch-glib2_ext_glib2_rbglib.c) = 96020dc24dae210fb0ae06aefce0810393af1f88
-SHA1 (patch-glib2_ext_glib2_rbglib__utils.c) = 85210204e6d2fe31f6dcf1f9d918856ab4d61d08
-SHA1 (patch-glib2_ext_glib2_rbgobj__object.c) = 9c4e6cbb21ff3d7c67cf2371ad832bffbe994a94
-SHA1 (patch-glib2_ext_glib2_rbgobject.c) = f7923f1b2dd01754322dc5cf5f96aa2c3d363c3b
-SHA1 (patch-glib2_ext_glib2_rbgutil.c) = b223b9f762b33f6e39b572f283ee6538e0d09a07
+SHA1 (ruby-gnome2-all-2.1.0.tar.gz) = 04d3c55c3be4368b15399369c9b61bbd0112f443
+RMD160 (ruby-gnome2-all-2.1.0.tar.gz) = b25cb398434b09af89f3fc156ba522cec9a7d4de
+Size (ruby-gnome2-all-2.1.0.tar.gz) = 1754946 bytes
 SHA1 (patch-glib2_lib_mkmf-gnome2.rb) = 7ea9f2066aae905e64d8477f500245e3e3b5df9e
-SHA1 (patch-gobject-introspection_ext_gobject-introspection_rb-gi-function-info.c) = 088cecdecd7a2158dbd560f72660c13c42886c29
-SHA1 (patch-gobject-introspection_ext_gobject-introspection_rb-gi-struct-info.c) = d16351c0bdb4ad26a3c1ffb9c29478b0d0d45c10
