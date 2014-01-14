@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2014/01/02 01:16:35 ryoon Exp $
+$NetBSD: patch-aa,v 1.11 2014/01/14 17:24:42 abs Exp $
 
 DragonFly support.
+Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 
 --- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2014-01-01 05:50:05.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
@@ -55,7 +56,41 @@ DragonFly support.
      {EM_ALPHA,       EM_ALPHA,   ELFCLASS64, ELFDATA2LSB, (char*)"Alpha"},
      {EM_MIPS_RS3_LE, EM_MIPS_RS3_LE, ELFCLASS32, ELFDATA2LSB, (char*)"MIPSel"},
      {EM_MIPS,        EM_MIPS,    ELFCLASS32, ELFDATA2MSB, (char*)"MIPS"},
-@@ -3880,7 +3883,7 @@ OSReturn os::set_native_priority(Thread*
+@@ -2818,6 +2821,33 @@ bool Semaphore::timedwait(unsigned int s
+ 
+ #else
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 699000400)
++static inline int sem_timedwait(sem_t *sem, struct timespec *ts) {
++  struct timespec onems = { 0, 1000000 };
++  struct timespec total = { 0, 0 };
++  struct timespec unslept;
++  struct timespec elapsed;
++  struct timespec tmp;
++
++  while (timespeccmp(ts, &total, >)) {
++    if (sem_trywait(sem) == 0)
++      return 0;
++
++    if (errno != EAGAIN)
++      return -1;
++
++    (void)nanosleep(&onems, &unslept);
++
++    timespecsub(&onems, &unslept, &elapsed);
++    timespecadd(&total, &elapsed, &tmp);
++    total.tv_sec = tmp.tv_sec;
++    total.tv_nsec = tmp.tv_nsec;
++  }
++  errno = ETIMEDOUT;
++  return -1;
++}
++#endif /* __NetBSD__ */
++
+ bool Semaphore::trywait() {
+   return sem_trywait(&_semaphore) == 0;
+ }
+@@ -3880,7 +3910,7 @@ OSReturn os::set_native_priority(Thread*
  #ifdef __OpenBSD__
    // OpenBSD pthread_setprio starves low priority threads
    return OS_OK;
@@ -64,7 +99,7 @@ DragonFly support.
    int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
    return (ret == 0) ? OS_OK : OS_ERR;
  #elif defined(__APPLE__) || defined(__NetBSD__)
-@@ -3909,7 +3912,7 @@ OSReturn os::get_native_priority(const T
+@@ -3909,7 +3939,7 @@ OSReturn os::get_native_priority(const T
    }
  
    errno = 0;

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/08/21 22:57:54 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2014/01/14 17:24:42 abs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
 PKG_SUPPORTED_OPTIONS=		sun-jre-jce # jdk-zero-vm
@@ -16,7 +16,7 @@ EXTRACT_ONLY+=	${JCE_DISTFILE}
 PLIST.jce=	yes
 USE_TOOLS+=	pax
 #
-.if !exists(${DISTDIR}/${DIST_SUBDIR}/${JCE_DISTFILE})
+.  if !exists(${DISTDIR}/${DIST_SUBDIR}/${JCE_DISTFILE})
 FETCH_MESSAGE+= "Please download the Java(TM) Cryptography Extension (JCE) Unlimited"
 FETCH_MESSAGE+= "Strength Jurisdiction Policy Files 7 '${JCE_DISTFILE}' from:"
 FETCH_MESSAGE+= "	http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
@@ -24,7 +24,7 @@ FETCH_MESSAGE+= " and place it in:"
 FETCH_MESSAGE+= "       ${DISTDIR}/${DIST_SUBDIR}/${JCE_DISTFILE}"
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Then resume this build by running '"${MAKE:Q}"' again."
-.endif
+.  endif
 #
 post-install:
 	cd ${WRKDIR}/UnlimitedJCEPolicy && pax -rw -pp . ${DESTDIR}${JAVA_HOME}/jre/lib/security
