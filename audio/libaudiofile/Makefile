@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2013/03/07 17:03:11 adam Exp $
+# $NetBSD: Makefile,v 1.60 2014/01/14 19:38:18 wiz Exp $
 
 DISTNAME=	audiofile-0.3.6
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.68k.org/~michael/audiofile/
 
@@ -20,6 +21,14 @@ PKGCONFIG_OVERRIDE=	audiofile.pc.in
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
 INSTALLATION_DIRS=	${DOCDIR}
+
+post-build:
+	cd ${WRKSRC}/docs && \
+	for i in af*3; do \
+		if grep -q '^.so ' $$i >/dev/null; then \
+			sed -e "s_.so _.so man3/_" $$i > $$i.new && mv $$i.new $$i; \
+		fi; \
+	done
 
 post-install:
 	cd ${WRKSRC}/docs && ${INSTALL_DATA} af* sf* ${DESTDIR}${DOCDIR}
