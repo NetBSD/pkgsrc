@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/10 14:42:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/15 13:52:43 joerg Exp $
 
 DISTNAME=	ruby-libnotify-0.5.1
 PKGNAME=	${DISTNAME:S/ruby/${RUBY_PKGPREFIX}/}
@@ -12,6 +12,8 @@ COMMENT=	Ruby binding for libnotify
 LICENSE=	gnu-lgpl-v2.1
 
 USE_RUBY_SETUP=	yes
+
+RUBY_VERSION_SUPPORTED=	193 200
 
 .include "../../x11/ruby-gnome2-gtk/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
