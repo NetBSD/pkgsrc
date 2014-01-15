@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/01/15 13:51:23 joerg Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -22,6 +22,10 @@ DISTINFO_FILE=	${.CURDIR}/../../devel/poco/distinfo
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+# Various places have:
+# error: unable to open output file '.../poco-1.4.2p1-all/Foundation/obj/NetBSD/amd64/debug_shared/Ascii.o'
+MAKE_JOBS_SAFE=	no
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --omit=Data
 # don't use the bundled versions of SQLite, zlib, etc..
