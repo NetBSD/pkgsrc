@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.232 2014/01/14 19:44:11 wiz Exp $
+$NetBSD: CHANGES-2014,v 1.233 2014/01/15 09:21:13 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -287,3 +287,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/neon to 0.30.0nb1 [wiz 2014-01-14]
 	Updated audio/libaudiofile to 0.3.6nb1 [wiz 2014-01-14]
 	Removed devel/p5-FileKGlob [wiz 2014-01-14]
+	Updated www/py-flask-security to 1.7.1 [kleink 2014-01-15]
