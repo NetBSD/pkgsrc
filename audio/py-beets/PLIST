@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/12/04 16:58:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/15 16:17:23 drochner Exp $
 bin/beet
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -93,6 +93,9 @@ ${PYSITELIB}/beetsplug/discogs.pyo
 ${PYSITELIB}/beetsplug/duplicates.py
 ${PYSITELIB}/beetsplug/duplicates.pyc
 ${PYSITELIB}/beetsplug/duplicates.pyo
+${PYSITELIB}/beetsplug/echonest.py
+${PYSITELIB}/beetsplug/echonest.pyc
+${PYSITELIB}/beetsplug/echonest.pyo
 ${PYSITELIB}/beetsplug/echonest_tempo.py
 ${PYSITELIB}/beetsplug/echonest_tempo.pyc
 ${PYSITELIB}/beetsplug/echonest_tempo.pyo
@@ -140,6 +143,9 @@ ${PYSITELIB}/beetsplug/mbsync.pyo
 ${PYSITELIB}/beetsplug/missing.py
 ${PYSITELIB}/beetsplug/missing.pyc
 ${PYSITELIB}/beetsplug/missing.pyo
+${PYSITELIB}/beetsplug/mpdstats.py
+${PYSITELIB}/beetsplug/mpdstats.pyc
+${PYSITELIB}/beetsplug/mpdstats.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo
