@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.237 2014/01/15 17:34:21 drochner Exp $
+$NetBSD: CHANGES-2014,v 1.238 2014/01/15 18:26:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated devel/eric4 to 4.5.18 [drochner 2014-01-15]
 	Updated graphics/gdk-pixbuf2 to 2.30.3 [drochner 2014-01-15]
 	Updated mail/claws-mail to 3.9.3 [drochner 2014-01-15]
+	Updated emulators/qemu to 1.7.0 [wiz 2014-01-15]
