@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.11 2014/01/15 12:45:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2013Q4,v 1.1.2.12 2014/01/15 22:08:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2013Q4 branch:
@@ -45,3 +45,7 @@ Pullup ticket #4298 - requested by drochner
 graphics/graphviz: security patch
 Pullup ticket #4300 - requested by obache
 multimedia/adobe-flash-plugin11: security update
+Pullup ticket #4301 - requested by ryoon
+devel/nss: security update
+Pullup ticket #4302 - requested by jperkin
+graphics/graphviz: build fix
