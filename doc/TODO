@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12873 2014/01/15 12:04:09 obache Exp $
+$NetBSD: TODO,v 1.12874 2014/01/15 13:06:32 gdt Exp $
 
 Suggested new packages
 ======================
@@ -405,6 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bioperl-1.5.0
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o boehm-gc-7.4.0 [at https://github.com/ivmai/bdwgc/releases/tag/gc7_4_0]
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
