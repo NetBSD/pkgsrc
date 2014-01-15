@@ -1,4 +1,4 @@
-/* $NetBSD: pbulk.h,v 1.4 2012/11/23 12:13:35 joerg Exp $ */
+/* $NetBSD: pbulk.h,v 1.5 2014/01/15 13:52:10 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -52,11 +52,9 @@ struct signal_event {
 };
 
 #if defined(__GNUC__) && __GNUC__ >= 2
-char		*xasprintf(const char *, ...)
-			   __attribute__((__format__(__printf__, 1, 2)));
-#else
-char		*xasprintf(const char *, ...);
+__attribute__((__format__(__printf__, 1, 2)))
 #endif
+char		*xasprintf(const char *, ...);
 
 void		 event_init(void);
 void		 event_add(struct event *, int, int, int,
