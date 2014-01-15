@@ -1,9 +1,9 @@
-$NetBSD: patch-slirp_tcp__subr.c,v 1.5 2013/07/09 17:00:58 tsutsui Exp $
+$NetBSD: patch-slirp_tcp__subr.c,v 1.6 2014/01/15 18:26:20 wiz Exp $
 
---- slirp/tcp_subr.c.orig	2013-06-26 21:47:29.000000000 +0000
+--- slirp/tcp_subr.c.orig	2013-11-27 22:15:55.000000000 +0000
 +++ slirp/tcp_subr.c
-@@ -341,6 +341,8 @@ int tcp_fconnect(struct socket *so)
-     qemu_setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+@@ -340,6 +340,8 @@ int tcp_fconnect(struct socket *so)
+     socket_set_fast_reuse(s);
      opt = 1;
      qemu_setsockopt(s, SOL_SOCKET, SO_OOBINLINE, &opt, sizeof(opt));
 +    opt = 1;

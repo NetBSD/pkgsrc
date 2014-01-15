@@ -1,8 +1,8 @@
-$NetBSD: patch-util_hbitmap.c,v 1.2 2013/07/09 17:00:58 tsutsui Exp $
+$NetBSD: patch-util_hbitmap.c,v 1.3 2014/01/15 18:26:20 wiz Exp $
 
 Avoid conflicts against popcountl(3) in NetBSD's libc.
 
---- util/hbitmap.c.orig	2013-06-26 21:47:30.000000000 +0000
+--- util/hbitmap.c.orig	2013-11-27 22:15:55.000000000 +0000
 +++ util/hbitmap.c
 @@ -92,7 +92,7 @@ struct HBitmap {
      unsigned long *levels[HBITMAP_LEVELS];
