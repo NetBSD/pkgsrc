@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12875 2014/01/15 14:39:34 ryoon Exp $
+$NetBSD: TODO,v 1.12876 2014/01/15 17:34:21 drochner Exp $
 
 Suggested new packages
 ======================
@@ -418,7 +418,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calibre-1.19
 	o calligra-2.4.3 [in wip; koffice successor]
-	o capc-calc-2.12.4.11
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccrtp-2.0.7
 	o cddbd-1.5.2
@@ -508,7 +507,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o enlightenment-0.18
 	o eog-plugins-3.6.1
 	o epiphany-extensions-3.2.0
-	o eric4-4.5.18
 	o eric5-5.4.0
 	o erlang-16B03
 	o esh-0.8.5
