@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2013/08/16 21:20:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2014/01/15 18:26:20 wiz Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -59,6 +59,7 @@ share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
 share/doc/qemu/qmp-commands.txt
 share/examples/qemu/target-x86_64.conf
+share/qemu/QEMU,tcx.bin
 share/qemu/acpi-dsdt.aml
 share/qemu/bamboo.dtb
 share/qemu/bios.bin
@@ -71,6 +72,7 @@ share/qemu/efi-virtio.rom
 share/qemu/keymaps/ar
 share/qemu/keymaps/bepo
 share/qemu/keymaps/common
+share/qemu/keymaps/cz
 share/qemu/keymaps/da
 share/qemu/keymaps/de
 share/qemu/keymaps/de-ch
