@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2007/08/03 02:34:37 smb Exp $
+$NetBSD: patch-ab,v 1.2 2014/01/15 17:19:30 drochner Exp $
 
---- po/Makefile.in.in.orig	2006-08-28 02:07:05.000000000 -0500
-+++ po/Makefile.in.in	2006-10-11 09:52:32.000000000 -0500
-@@ -30,7 +30,7 @@
- 
- INSTALL = @INSTALL@
- INSTALL_DATA = @INSTALL_DATA@
+--- po/Makefile.in.in.orig	2013-12-14 10:15:08.000000000 +0000
++++ po/Makefile.in.in
+@@ -40,8 +40,8 @@ INSTALL_DATA = @INSTALL_DATA@
+ # In automake >= 1.10, @mkdir_p@ is derived from ${MKDIR_P}, which is defined
+ # either as "/path/to/mkdir -p" or ".../install-sh -c -d". For these automake
+ # versions, $(mkinstalldirs) and $(install_sh) are unused.
 -mkinstalldirs = $(SHELL) @install_sh@ -d
+-install_sh = $(SHELL) @install_sh@
 +mkinstalldirs = @install_sh@ -d
++install_sh = @install_sh@
+ MKDIR_P = @MKDIR_P@
  mkdir_p = @mkdir_p@
  
- GMSGFMT_ = @GMSGFMT@
