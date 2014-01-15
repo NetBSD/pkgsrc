@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2014/01/15 16:23:31 drochner Exp $
 
---- Makefile.orig	2008-02-24 08:58:36.000000000 +0100
+--- Makefile.orig	2013-09-01 23:02:02.000000000 +0000
 +++ Makefile
 @@ -585,7 +585,7 @@ HAVE_UNUSED=
  
@@ -9,9 +9,9 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
 -INCDIR= /usr/include
 +INCDIR= ${PREFIX}/include
  
- # Where to install calc realted things
+ # Where to install calc related things
  #
-@@ -612,15 +612,15 @@ INCDIR= /usr/include
+@@ -624,15 +624,15 @@ INCDIR= /usr/include
  #
  #BINDIR= /usr/local/bin
  #BINDIR= /dev/env/DJDIR/bin
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  
  # NOTE: Do not set CALC_INCDIR to /usr/include or /usr/local/include!!!
  #	Always be sure that the CALC_INCDIR path ends in /calc to avoid
-@@ -698,7 +698,7 @@ T=
+@@ -710,7 +710,7 @@ T=
  #MANDIR=
  #MANDIR= /usr/local/man/man1
  #MANDIR= /usr/man/man1
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #MANDIR= /dev/env/DJDIR/man/man1
  #MANDIR= /usr/man/u_man/man1
  #MANDIR= /usr/contrib/man/man1
-@@ -709,7 +709,7 @@ MANDIR= /usr/share/man/man1
+@@ -721,7 +721,7 @@ MANDIR= /usr/share/man/man1
  #
  # Use CATDIR= to disable installation of the calc cat (formatted) page.
  #
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #CATDIR= /usr/local/man/cat1
  #CATDIR= /usr/local/catman/cat1
  #CATDIR= /usr/man/cat1
-@@ -730,9 +730,9 @@ MANEXT= 1
+@@ -742,9 +742,9 @@ MANEXT= 1
  #
  # This is ignored if CATDIR is empty.
  #
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #CATEXT= l
  
  # how to format a man page
-@@ -758,8 +758,8 @@ CATEXT= 1
+@@ -770,8 +770,8 @@ CATEXT= 1
  # and CATDIR to empty and ignore the NROFF, NROFF_ARG and MANMAKE
  # lines below.
  #
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #NROFF= groff
  NROFF_ARG= -man
  #NROFF_ARG= -mandoc
-@@ -825,13 +825,14 @@ CALCRC= ${CALC_SHAREDIR}/startup:~/.calc
+@@ -837,13 +837,14 @@ CALCRC= ${CALC_SHAREDIR}/startup:~/.calc
  #
  # If in doubt, set USE_READLINE, READLINE_LIB and READLINE_INCLUDE to nothing.
  #
@@ -89,7 +89,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #READLINE_EXTRAS= -lhistory -lncurses
  #
  #READLINE_LIB= -L/usr/gnu/lib -lreadline
-@@ -884,7 +885,7 @@ CALCPAGER= less
+@@ -896,7 +897,7 @@ CALCPAGER= less
  #
  #DEBUG= -O3
  #DEBUG= -O3 -g
@@ -98,8 +98,8 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #DEBUG= -O3 -ipa
  #DEBUG= -O3 -g3 -ipa
  
-@@ -1360,10 +1361,10 @@ CC= ${PURIFY} ${LCC} ${CCWERR}
- # LDFLAGS for ${CC} in linking calc progs other than intermediate progs
+@@ -1409,10 +1410,10 @@ CC= ${PURIFY} ${LCC} ${CCWERR}
+ # LDFLAGS for ${CC} in linking calc programs other than intermediate programs
  #
  ICFLAGS= ${COMMON_CFLAGS} ${CC_STATIC}
 -CFLAGS= ${ICFLAGS} ${CCOPT}
@@ -111,7 +111,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #
  #if 0	/* start of skip for non-Gnu makefiles */
  endif
-@@ -1375,7 +1376,7 @@ endif
+@@ -1470,7 +1471,7 @@ endif
  # NOTE: This is the default generic host target.  Used when no other
  #	host target matches.
  
@@ -120,7 +120,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  #
  BLD_TYPE= calc-static-only
  #
-@@ -1421,7 +1422,7 @@ ICFLAGS= ${COMMON_CFLAGS} ${CC_STATIC}
+@@ -1516,7 +1517,7 @@ ICFLAGS= ${COMMON_CFLAGS} ${CC_STATIC}
  else
  ICFLAGS= ${COMMON_CFLAGS} ${CC_SHARE}
  endif
@@ -129,7 +129,7 @@ $NetBSD: patch-aa,v 1.8 2008/05/05 18:54:05 drochner Exp $
  
  # Required flags to link files for calc
  #
-@@ -4394,9 +4395,9 @@ endif
+@@ -4511,9 +4512,9 @@ endif
  	${Q}# NOTE: The this makefile installs libcustcalc${LIB_EXT_VERSION}
  	${Q}#       because we only want to perform one ${LDCONFIG} for both
  	${Q}#       libcalc${LIB_EXT_VERSION} and libcustcalc${LIB_EXT_VERSION}.
