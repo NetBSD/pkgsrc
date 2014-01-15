@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.14 2012/11/23 12:13:35 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.15 2014/01/15 13:52:10 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009, 2011 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -66,6 +66,9 @@ static char *scan_output_content;
 
 static TAILQ_HEAD(, build_job) buildable_jobs;
 
+#if defined(__GNUC__) && __GNUC__ >= 2
+__attribute__((__format__(__printf__, 1, 2)))
+#endif
 static void
 ts_printf(const char *fmt, ...)
 {
