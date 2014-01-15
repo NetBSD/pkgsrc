@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/12/04 16:58:17 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/15 16:17:23 drochner Exp $
 #
 
-DISTNAME=	v1.3.1
+DISTNAME=	v1.3.2
 PKGNAME=	beets-${DISTNAME:S/v//}
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/sampsyo/beets/archive/
