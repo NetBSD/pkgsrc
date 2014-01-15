@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12877 2014/01/15 18:26:31 wiz Exp $
+$NetBSD: TODO,v 1.12878 2014/01/15 20:15:12 gdt Exp $
 
 Suggested new packages
 ======================
@@ -921,6 +921,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnosis-1.2.2
 	o py-httplib2-0.8
 	o py-moin-1.9.7
+	o py-pexpect 3.0
 	o py-pycha-0.7.0 [wait for fix to regression with bin/chavier - richard]
 	o py-sip-4.15.1 [don't update until pyqt3 and KDE problems are fixed -- still there in 4.15.1]
 	o py-qt4-4.10.3 [needs py-sip-4.15, see above]
