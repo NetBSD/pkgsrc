@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2013/07/24 15:26:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/01/15 17:19:30 drochner Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -79,6 +79,7 @@ include/claws-mail/expldifdlg.h
 include/claws-mail/export.h
 include/claws-mail/exporthtml.h
 include/claws-mail/exportldif.h
+include/claws-mail/file_checker.h
 include/claws-mail/filtering.h
 include/claws-mail/folder.h
 include/claws-mail/folder_item_prefs.h
