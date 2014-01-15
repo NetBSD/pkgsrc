@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/08/13 17:39:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/15 16:26:25 drochner Exp $
 bin/eric4
 bin/eric4_api
 bin/eric4_compare
@@ -259,10 +259,20 @@ ${PYSITELIB}/eric4/DesignerTemplates/dialogbuttonsbottomcenter4.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/dialogbuttonsright.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/dialogbuttonsright4.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/mainwindow4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qdockwidget4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qframe4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qgroupbox4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qmdiarea4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qscrollarea4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qstackedwidget4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qtabwidget4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/qtoolbox4.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/tabdialog.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/widget.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/widget4.tmpl
 ${PYSITELIB}/eric4/DesignerTemplates/wizard.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/wizard4.tmpl
+${PYSITELIB}/eric4/DesignerTemplates/wizardpage4.tmpl
 ${PYSITELIB}/eric4/Documentation/Help/source.qch
 ${PYSITELIB}/eric4/Documentation/LICENSE.GPL3
 ${PYSITELIB}/eric4/Documentation/README-MacOSX.txt
@@ -657,7 +667,6 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.QtP
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.ShellPage.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.TasksPage.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.TemplatesPage.html
-${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.TerminalPage.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.TrayStarterPage.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.VcsPage.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.Preferences.ConfigurationPages.ViewmanagerPage.html
@@ -749,7 +758,6 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.Shell.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.ShellHistoryDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.SpellChecker.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.SpellCheckingDialog.html
-${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.Terminal.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.TypingCompleters.CompleterBase.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.TypingCompleters.CompleterPython.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.QScintilla.TypingCompleters.CompleterRuby.html
@@ -1849,8 +1857,6 @@ ${PYSITELIB}/eric4/Preferences/ConfigurationPages/TasksPage.py
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/TasksPage.pyc
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/TemplatesPage.py
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/TemplatesPage.pyc
-${PYSITELIB}/eric4/Preferences/ConfigurationPages/TerminalPage.py
-${PYSITELIB}/eric4/Preferences/ConfigurationPages/TerminalPage.pyc
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/TrayStarterPage.py
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/TrayStarterPage.pyc
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_ApplicationPage.py
@@ -1936,8 +1942,6 @@ ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TasksPage.py
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TasksPage.pyc
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TemplatesPage.py
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TemplatesPage.pyc
-${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TerminalPage.py
-${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TerminalPage.pyc
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TrayStarterPage.py
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_TrayStarterPage.pyc
 ${PYSITELIB}/eric4/Preferences/ConfigurationPages/Ui_VcsPage.py
@@ -2178,8 +2182,6 @@ ${PYSITELIB}/eric4/QScintilla/SpellChecker.py
 ${PYSITELIB}/eric4/QScintilla/SpellChecker.pyc
 ${PYSITELIB}/eric4/QScintilla/SpellCheckingDialog.py
 ${PYSITELIB}/eric4/QScintilla/SpellCheckingDialog.pyc
-${PYSITELIB}/eric4/QScintilla/Terminal.py
-${PYSITELIB}/eric4/QScintilla/Terminal.pyc
 ${PYSITELIB}/eric4/QScintilla/TypingCompleters/CompleterBase.py
 ${PYSITELIB}/eric4/QScintilla/TypingCompleters/CompleterBase.pyc
 ${PYSITELIB}/eric4/QScintilla/TypingCompleters/CompleterPython.py
