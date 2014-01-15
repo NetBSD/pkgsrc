@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/08/23 16:52:27 kleink Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/15 09:20:15 kleink Exp $
 
-DISTNAME=	Flask-Security-1.6.9
+DISTNAME=	Flask-Security-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Security/
@@ -11,6 +11,8 @@ COMMENT=	Simple security for Flask apps
 LICENSE=	mit
 
 USE_LANGUAGES=	# empty
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 EGG_NAME=	${DISTNAME:S/-/_/}
 
