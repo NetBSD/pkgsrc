@@ -1,4 +1,4 @@
-# $NetBSD: gmake.mk,v 1.3 2013/06/12 20:37:43 riastradh Exp $
+# $NetBSD: gmake.mk,v 1.4 2014/01/15 06:53:06 ryoon Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,6 +62,13 @@ _TOOLS_USE_PKGSRC.gmake!=						\
 .    endfor
 .  endif
 MAKEVARS+=	_TOOLS_USE_PKGSRC.gmake
+.endif
+
+.if defined(_TOOLS_USE_PKGSRC.gmake) && !empty(_TOOLS_USE_PKGSRC.gmake)
+.  if !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
+TOOLS_FIND_PREFIX+=	GMAKEDIR=gmake
+TOOLS_PLATFORM.gmake=	${GMAKEDIR}/bin/gmake
+.  endif
 .endif
 
 # XXX Kludge to prevent pkgsrc's internal variable TARGET_ARCH for
