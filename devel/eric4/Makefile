@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2013/06/06 12:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2014/01/15 16:26:25 drochner Exp $
 #
 
-VERS=			4.5.6
+VERS=			4.5.18
 DISTNAME=		eric4-${VERS}
-PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
+EXTRACT_USING=		gtar
 
 MAINTAINER=		helgoman@users.sourceforge.net
 HOMEPAGE=		http://eric-ide.python-projects.org/index.html
