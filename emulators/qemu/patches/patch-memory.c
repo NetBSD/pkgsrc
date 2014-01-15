@@ -1,6 +1,6 @@
-$NetBSD: patch-memory.c,v 1.7 2013/10/13 12:37:58 ryoon Exp $
+$NetBSD: patch-memory.c,v 1.8 2014/01/15 18:26:20 wiz Exp $
 
---- memory.c.orig	2013-10-09 19:20:32.000000000 +0000
+--- memory.c.orig	2013-11-27 22:15:55.000000000 +0000
 +++ memory.c
 @@ -404,7 +404,7 @@ static void memory_region_read_accessor(
      if (mr->flush_coalesced_mmio) {
