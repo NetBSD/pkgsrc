@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.235 2014/01/15 11:33:00 obache Exp $
+$NetBSD: CHANGES-2014,v 1.236 2014/01/15 14:39:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -290,3 +290,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated www/py-flask-security to 1.7.1 [kleink 2014-01-15]
 	Updated multimedia/ffmpeg2 to 2.1.2 [adam 2014-01-15]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.335 [obache 2014-01-15]
+	Updated devel/nss to 3.15.4 [ryoon 2014-01-15]
