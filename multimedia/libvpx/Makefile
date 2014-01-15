@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/01/10 08:43:42 pho Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/15 05:53:52 ryoon Exp $
 
 DISTNAME=	libvpx_1.3.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -10,6 +10,9 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/webm/
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
+
+# PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code.
+GCC_REQD=	4.4
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -95,10 +98,23 @@ CONFIGURE_ENV+=		RTCD_OPTIONS='--disable-sse2 --disable-sse3 --disable-ssse3 --d
 CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .endif
 
+# Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
+.if !empty(MACHINE_PLATFORM:MSunOS-5.10*)
+BUILD_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
+FIND_PREFIX:=		GTRDIR=coreutils
+.include "../../mk/find-prefix.mk"
+TOOLS_PLATFORM.tr=	${GTRDIR}/bin/gtr
+.endif
+
 BUILD_TARGET=	# none
 
 post-extract:
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
+# PR pkg/48508: newer gas from binutils is required to compile ssse3 code.
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || !empty(MACHINE_PLATFORM:MSunOS-5.10*)
+.include "../../devel/binutils/buildlink3.mk"
+.include "../../devel/binutils/override-as.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
