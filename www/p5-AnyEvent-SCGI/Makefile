@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/31 12:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/15 15:12:56 morr Exp $
 
 DISTNAME=	AnyEvent-SCGI-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/AnyEvent/SCGI/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+MAKE_ENV+=		PERL5_CPANPLUS_IS_RUNNING=1
 
 DEPENDS+=	p5-AnyEvent>=5.2:../../devel/p5-AnyEvent
 # Recommended
