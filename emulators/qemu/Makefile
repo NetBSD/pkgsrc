@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2014/01/11 13:08:59 adam Exp $
+# $NetBSD: Makefile,v 1.121 2014/01/15 18:26:20 wiz Exp $
 
-DISTNAME=	qemu-1.6.2
+DISTNAME=	qemu-1.7.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,9 +1,9 @@
-$NetBSD: patch-hw_display_omap__dss.c,v 1.1 2013/07/09 17:00:58 tsutsui Exp $
+$NetBSD: patch-hw_display_omap__dss.c,v 1.2 2014/01/15 18:26:20 wiz Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
 
---- hw/display/omap_dss.c.orig	2013-06-26 21:47:29.000000000 +0000
+--- hw/display/omap_dss.c.orig	2013-11-27 22:15:55.000000000 +0000
 +++ hw/display/omap_dss.c
 @@ -791,18 +791,18 @@ static void omap_rfbi_write(void *opaque
          break;
