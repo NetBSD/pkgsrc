@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2014,v 1.240 2014/01/16 02:24:14 rodent Exp $
+$NetBSD: CHANGES-2014,v 1.241 2014/01/16 02:44:59 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2014:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2014:
 	Updated emulators/qemu to 1.7.0 [wiz 2014-01-15]
 	Updated devel/py-pexpect to 2.4 [gdt 2014-01-15]
 	Updated converters/py-simplejson to 3.3.2 [rodent 2014-01-16]
+	Updated devel/py-pip to 1.5 [rodent 2014-01-16]
