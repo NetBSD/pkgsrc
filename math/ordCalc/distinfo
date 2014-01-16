@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2013/07/19 12:53:09 joerg Exp $
+$NetBSD: distinfo,v 1.8 2014/01/16 18:09:46 asau Exp $
 
 SHA1 (ordCalc_0.2.tar.bz2) = 6b3e1e5b714cc50d1e2c48b8f06b8dd41fbde134
 RMD160 (ordCalc_0.2.tar.bz2) = caf9c89a2a54fe3e5414cb7f1e1a4e1d4aad0397
@@ -13,3 +13,4 @@ SHA1 (patch-src_mn.cpp) = da8ff526d95f171566d0cd8061a1439975342554
 SHA1 (patch-src_ordBase.h) = ad3c896fbbea6b40ef6f734c1f212dff49856d9a
 SHA1 (patch-src_ordinal.h) = e1dde6caf141c82b7f740ce18280be6507bacd9e
 SHA1 (patch-src_parse.cpp) = 1e7602a33edd62f4d5a119c2e35062499c07d70e
+SHA1 (patch-src_parse.y) = 1339048b37f2bc5e5dfc45256578a1991c53e247
